@@ -6,8 +6,8 @@ n.d(t, {
 });
 var r = n(524437),
     i = n(900089),
-    s = n(470734),
-    l = n(2150),
+    l = n(470734),
+    s = n(2150),
     o = n(981631);
 n(973005);
 var a = n(388032);
@@ -18,17 +18,17 @@ function c(e) {
         highlightColor: (function (e) {
             switch (e) {
                 case (0, i.Fw)('PRIMARY_400'):
-                    return l.q.ACCENT;
+                    return s.q.ACCENT;
                 case (0, i.Fw)('GREEN_360'):
-                    return l.q.GREEN;
+                    return s.q.GREEN;
                 case (0, i.Fw)('YELLOW_360'):
-                    return l.q.YELLOW;
+                    return s.q.YELLOW;
                 case (0, i.Fw)('ORANGE_345'):
-                    return l.q.ORANGE;
+                    return s.q.ORANGE;
                 case (0, i.Fw)('RED_400'):
-                    return l.q.RED;
+                    return s.q.RED;
                 default:
-                    return l.q.NONE;
+                    return s.q.NONE;
             }
         })(e.color),
         value: e.value,
@@ -74,7 +74,7 @@ function u() {
 }
 function d() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        t = (0, s.U2)('generateContentFilterHighlightedOptions');
+        t = (0, l.U2)('generateContentFilterHighlightedOptions');
     return [
         {
             name: a.intl.string(a.t.iHuPEx),

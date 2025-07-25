@@ -1,8 +1,8 @@
 let r;
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => C });
 var i,
-    s = n(442837),
-    l = n(544891),
+    l = n(442837),
+    s = n(544891),
     o = n(570140),
     a = n(333023),
     c = n(384278),
@@ -23,7 +23,7 @@ function g(e, t, n) {
         e
     );
 }
-function b(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,16 +39,16 @@ function b(e) {
     }
     return e;
 }
-let m = 10 * u.Z.Millis.SECOND,
-    v = {},
-    h = Object.freeze({});
+let b = 10 * u.Z.Millis.SECOND,
+    h = {},
+    v = Object.freeze({});
 function O(e) {
     var t;
-    return null != (t = v[e]) ? t : h;
+    return null != (t = h[e]) ? t : v;
 }
 function y(e) {
     let { channelId: t, userId: n } = e,
-        r = b({}, O(t));
+        r = m({}, O(t));
     (clearTimeout(r[n]),
         (r[n] = setTimeout(() => {
             o.Z.dispatch({
@@ -56,20 +56,20 @@ function y(e) {
                 channelId: t,
                 userId: n
             });
-        }, m)),
-        (v[t] = r));
+        }, b)),
+        (h[t] = r));
 }
 function E(e) {
     let { channelId: t, userId: n } = e,
-        r = v[t];
+        r = h[t];
     if (null == r || null == r[n]) return !1;
-    let i = b({}, r);
-    (clearTimeout(i[n]), delete i[n], (v[t] = i));
+    let i = m({}, r);
+    (clearTimeout(i[n]), delete i[n], (h[t] = i));
 }
 function S() {
-    v = {};
+    h = {};
 }
-class j extends (i = s.ZP.Store) {
+class j extends (i = l.ZP.Store) {
     getTypingUsers(e) {
         return O(e);
     }
@@ -78,7 +78,7 @@ class j extends (i = s.ZP.Store) {
     }
 }
 g(j, 'displayName', 'TypingStore');
-let x = new j(o.Z, {
+let C = new j(o.Z, {
     TYPING_START: y,
     TYPING_STOP: E,
     TYPING_START_LOCAL: function (e) {
@@ -87,8 +87,8 @@ let x = new j(o.Z, {
         if (null == n || t === a.V) return !1;
         null != r && r.channelId !== t && (null != r.timeout && clearTimeout(r.timeout), (r = null));
         let i = Date.now(),
-            s = 0.8 * m;
-        if (null != r && (null != r.timeout || r.prevSend + s > i)) return !1;
+            l = 0.8 * b;
+        if (null != r && (null != r.timeout || r.prevSend + l > i)) return !1;
         let { delayMs: u } = (0, c.M1)('typing_store'),
             g = setTimeout(
                 () => {
@@ -99,9 +99,9 @@ let x = new j(o.Z, {
                         ((r.timeout = null),
                         (function (e) {
                             let t = O(e);
-                            return t === h ? 0 : Object.keys(t).length;
+                            return t === v ? 0 : Object.keys(t).length;
                         })(t) > 5 ||
-                            l.tn
+                            s.tn
                                 .post({
                                     url: p.ANM.TYPING(t),
                                     oldFormErrors: !0,
@@ -111,7 +111,7 @@ let x = new j(o.Z, {
                                     if (200 === e.status) {
                                         var n, r;
                                         let i = null != (n = e.body.message_send_cooldown_ms) ? n : 0,
-                                            s = null != (r = e.body.thread_create_cooldown_ms) ? r : 0;
+                                            l = null != (r = e.body.thread_create_cooldown_ms) ? r : 0;
                                         (i > 0 &&
                                             o.Z.dispatch({
                                                 type: 'SLOWMODE_SET_COOLDOWN',
@@ -119,17 +119,17 @@ let x = new j(o.Z, {
                                                 slowmodeType: f.S.SendMessage,
                                                 cooldownMs: i
                                             }),
-                                            s > 0 &&
+                                            l > 0 &&
                                                 o.Z.dispatch({
                                                     type: 'SLOWMODE_SET_COOLDOWN',
                                                     channelId: t,
                                                     slowmodeType: f.S.CreateThread,
-                                                    cooldownMs: s
+                                                    cooldownMs: l
                                                 }));
                                     }
                                 }));
                 },
-                null == r || r.prevSend > i - 2 * s ? u : 0
+                null == r || r.prevSend > i - 2 * l ? u : 0
             );
         return (
             (r = {

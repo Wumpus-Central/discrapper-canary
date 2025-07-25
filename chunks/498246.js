@@ -28,14 +28,14 @@ e.exports = function (e) {
                 }
                 return c.apply(e, a(u, arguments));
             },
-            _ = r(0, c.length - u.length),
-            f = [],
+            f = r(0, c.length - u.length),
+            _ = [],
             p = 0;
-        p < _;
+        p < f;
         p++
     )
-        f[p] = '$' + p;
-    if (((l = Function('binder', 'return function (' + s(f, ',') + '){ return binder.apply(this,arguments); }')(d)), c.prototype)) {
+        _[p] = '$' + p;
+    if (((l = Function('binder', 'return function (' + s(_, ',') + '){ return binder.apply(this,arguments); }')(d)), c.prototype)) {
         var h = function () {};
         ((h.prototype = c.prototype), (l.prototype = new h()), (h.prototype = null));
     }

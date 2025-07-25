@@ -35,9 +35,9 @@ function d(e) {
     }
     return e;
 }
-let _ = 10000000000000;
-function f(e) {
-    if (null == e) return _;
+let f = 10000000000000;
+function _(e) {
+    if (null == e) return f;
     try {
         return new Date(e).getTime();
     } catch (t) {
@@ -45,7 +45,7 @@ function f(e) {
     }
 }
 function p(e) {
-    return f(e.dueAt) - f(e.savedAt);
+    return _(e.dueAt) - _(e.savedAt);
 }
 let h = new a.h(
         (e) => {

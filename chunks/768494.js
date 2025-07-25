@@ -1,5 +1,5 @@
 (n.d(t, {
-    Cb: () => _,
+    Cb: () => f,
     Hv: () => y,
     JD: () => b,
     VY: () => m,
@@ -66,10 +66,10 @@ function d(e, t) {
         e
     );
 }
-var _ = (function (e) {
+var f = (function (e) {
     return ((e[(e.EXPLICIT = 1)] = 'EXPLICIT'), (e[(e.GORE = 2)] = 'GORE'), e);
 })({});
-function f(e) {
+function _(e) {
     return {
         version: e.version,
         flags: e.flags
@@ -89,7 +89,7 @@ function h(e) {
         placeholderVersion: e.placeholder_version,
         contentType: e.content_type,
         loadingState: e.loading_state,
-        contentScanMetadata: null != e.content_scan_metadata ? f(e.content_scan_metadata) : void 0,
+        contentScanMetadata: null != e.content_scan_metadata ? _(e.content_scan_metadata) : void 0,
         flags: null != (t = e.flags) ? t : 0
     };
 }

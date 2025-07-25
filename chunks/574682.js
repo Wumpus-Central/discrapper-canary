@@ -7,5 +7,6 @@ e.exports = {
     activityContainer: 'activityContainer_a62174',
     activityContainerNoMargin: 'activityContainerNoMargin_a62174',
     buttonSection: 'buttonSection_a62174',
-    contextlessHeader: 'contextlessHeader_a62174'
+    contextlessHeader: 'contextlessHeader_a62174',
+    contextlessInviteButtonIcon: 'contextlessInviteButtonIcon_a62174'
 };

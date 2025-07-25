@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => v }), n(388685));
+(n.d(t, { Z: () => h }), n(388685));
 var r,
     i,
-    s,
-    l = n(442837),
+    l,
+    s = n(442837),
     o = n(570140);
 let a = {},
     c = null,
@@ -11,10 +11,10 @@ let a = {},
     f = !1,
     p = null,
     g = null;
-function b() {
+function m() {
     f = !0;
 }
-class m extends (r = l.ZP.Store) {
+class b extends (r = s.ZP.Store) {
     getAppliedGuildBoostsForGuild(e) {
         return null != a[e] ? a[e].subscriptions : null;
     }
@@ -43,16 +43,16 @@ class m extends (r = l.ZP.Store) {
         return d;
     }
 }
-((s = 'AppliedGuildBoostStore'),
-    (i = 'displayName') in m
-        ? Object.defineProperty(m, i, {
-              value: s,
+((l = 'AppliedGuildBoostStore'),
+    (i = 'displayName') in b
+        ? Object.defineProperty(b, i, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (m[i] = s));
-let v = new m(o.Z, {
+        : (b[i] = l));
+let h = new b(o.Z, {
     GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function (e) {
         let { guildId: t, appliedBoosts: n } = e;
         a[t] = {
@@ -68,8 +68,8 @@ let v = new m(o.Z, {
         let { endsAt: t } = e;
         c = t;
     },
-    GUILD_UNAPPLY_BOOST_START: b,
-    GUILD_APPLY_BOOST_START: b,
+    GUILD_UNAPPLY_BOOST_START: m,
+    GUILD_APPLY_BOOST_START: m,
     GUILD_APPLY_BOOST_SUCCESS: function (e) {
         let { appliedGuildBoost: t } = e,
             n = new Set(t.map((e) => e.id));

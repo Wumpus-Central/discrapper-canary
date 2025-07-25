@@ -8,8 +8,8 @@ var r = n(392711),
     c = n(306680),
     u = n(626135),
     d = n(709054),
-    _ = n(981631),
-    f = n(490897);
+    f = n(981631),
+    _ = n(490897);
 function p(e, t, n) {
     let r = i()
         .flatMap(e, (e) => {
@@ -25,23 +25,23 @@ function p(e, t, n) {
         })
         .map((e) => ({
             channelId: e,
-            readStateType: f.W.CHANNEL,
+            readStateType: _.W.CHANNEL,
             messageId: c.ZP.lastMessageId(e)
         }));
     return (
         e.forEach((e) => {
             (r.push({
                 channelId: d.default.cast(e),
-                readStateType: f.W.GUILD_EVENT,
-                messageId: c.ZP.lastMessageId(e, f.W.GUILD_EVENT)
+                readStateType: _.W.GUILD_EVENT,
+                messageId: c.ZP.lastMessageId(e, _.W.GUILD_EVENT)
             }),
                 r.push({
                     channelId: d.default.cast(e),
-                    readStateType: f.W.GUILD_ONBOARDING_QUESTION,
+                    readStateType: _.W.GUILD_ONBOARDING_QUESTION,
                     messageId: o.Z.ackIdForGuild(e)
                 }));
         }),
-        u.default.track(_.rMx.MARK_AS_READ, {
+        u.default.track(f.rMx.MARK_AS_READ, {
             source: t,
             type: 'guild'
         }),

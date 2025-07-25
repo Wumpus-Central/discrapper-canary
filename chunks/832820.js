@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(962293),
     u = n(328908),
     d = n(992970),
-    _ = n(317951),
-    f = n(135793),
+    f = n(317951),
+    _ = n(135793),
     p = n(883998),
     h = n(576645),
     m = n(981631),
@@ -33,7 +33,7 @@ let y = function (e) {
     let { channel: t } = e,
         n = (0, u.z8)(t.id),
         l = (0, u.OG)(t.id),
-        { entitlement: y, numPotions: O } = (0, h.t6)(_.D1),
+        { entitlement: y, numPotions: O } = (0, h.t6)(f.D1),
         v = i.useCallback(
             (e) => {
                 (0, u.Hi)(e, t.id);
@@ -62,7 +62,7 @@ let y = function (e) {
             [v]
         ),
         w = i.useCallback(() => {
-            (0, f.s)({
+            (0, _.s)({
                 channelId: t.id,
                 onRedeem: () => {},
                 buttonUseState: 'apply',

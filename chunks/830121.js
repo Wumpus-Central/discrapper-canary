@@ -23,8 +23,8 @@ var r,
     c,
     u,
     d,
-    _ = n(512722),
-    f = n.n(_),
+    f = n(512722),
+    _ = n.n(f),
     p = n(159635),
     h = n.n(p),
     m = n(729594),
@@ -82,7 +82,7 @@ function q(e) {
 }
 let X = (e) => e.replaceAll(J, ' $2 '),
     Q = null == (a = h().defaultRules.link) || null == (i = a.match) || null == (r = i.regex) ? void 0 : r.source;
-(f()(Q, 'SimpleMarkdown link regex is not set.'), '^' === Q[0] && (Q = Q.substring(1)));
+(_()(Q, 'SimpleMarkdown link regex is not set.'), '^' === Q[0] && (Q = Q.substring(1)));
 let J = RegExp(Q, 'g');
 function $(e, t) {
     var n;
@@ -181,15 +181,15 @@ function ea(e) {
             } else u(t, d[2]);
         }
         (null == c ? void 0 : c.match(C)) != null && u(T.g.CHANNEL_LINK, c.replace('/channels/', ''));
-        let _ = en(r.pathname);
-        if ((null != _ && u(T.g.EVENT, ''.concat(_.guildId, '-').concat(_.guildEventId) + (null != _.recurrenceId ? '-'.concat(_.recurrenceId) : '')), null != (null == c ? void 0 : c.match(j)) && null != r.query)) {
+        let f = en(r.pathname);
+        if ((null != f && u(T.g.EVENT, ''.concat(f.guildId, '-').concat(f.guildEventId) + (null != f.recurrenceId ? '-'.concat(f.recurrenceId) : '')), null != (null == c ? void 0 : c.match(j)) && null != r.query)) {
             let e = (0, y.y)(r.query),
                 t = e.clientId;
             null == t || '' === t || (null == (a = e.scopes) ? void 0 : a.some((e) => e !== g.x.APPLICATIONS_COMMANDS)) || u(T.g.APP_OAUTH2_LINK, t);
         }
-        let f = null == c ? void 0 : c.match(w);
-        if (null != f) {
-            let e = f[2];
+        let _ = null == c ? void 0 : c.match(w);
+        if (null != _) {
+            let e = _[2];
             u(T.g.APP_DIRECTORY_PROFILE, e);
         }
         let p = null == c ? void 0 : c.match(D);

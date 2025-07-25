@@ -21,7 +21,7 @@ var r = n(379649),
     c = n(70956),
     u = n(295141),
     d = n(981631);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -157,7 +157,7 @@ async function T(e) {
     return (
         l.default.track(
             d.rMx.ROLE_SUBSCRIPTION_LISTING_CREATED,
-            f(
+            _(
                 {
                     role_subscription_listing_id: c.id,
                     role_subscription_group_listing_id: n,

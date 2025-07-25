@@ -22,10 +22,10 @@ let c = new Set(),
 function d() {
     c.clear();
 }
-function _(e) {
+function f(e) {
     c.delete(e.guild.id);
 }
-function f(e) {
+function _(e) {
     (null == u[e.guildId] && (u[e.guildId] = {}), (u[e.guildId][e.id] = e.status));
 }
 function p(e) {
@@ -39,10 +39,10 @@ class h extends (r = a.ZP.Store) {
 }
 l(h, 'displayName', 'ChannelStatusStore');
 let m = new h(o.Z, {
-    GUILD_CREATE: _,
-    GUILD_DELETE: _,
+    GUILD_CREATE: f,
+    GUILD_DELETE: f,
     CONNECTION_RESUMED: d,
     CONNECTION_OPEN: d,
-    VOICE_CHANNEL_STATUS_UPDATE: f,
+    VOICE_CHANNEL_STATUS_UPDATE: _,
     CHANNEL_STATUSES: p
 });

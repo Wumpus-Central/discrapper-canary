@@ -7,8 +7,8 @@ var a,
     c = n(266454),
     u = n(238514),
     d = n(781391),
-    _ = n(210887),
-    f = n(740492),
+    f = n(210887),
+    _ = n(740492),
     p = n(695346),
     h = n(581883),
     m = n(131704),
@@ -84,7 +84,7 @@ let L = () => {
     M = () => {
         if (!u.Z.shouldSync('appearance') || (0, v.zu)()) return !1;
         let e = p.L1.getSetting().backgroundGradientPresetId;
-        if ((f.ZP.useSystemTheme === T.KW.ON && null != e && (0, d.hi)(T.KW.OFF), null == e)) {
+        if ((_.ZP.useSystemTheme === T.KW.ON && null != e && (0, d.hi)(T.KW.OFF), null == e)) {
             null != r && (r = void 0);
             return;
         }
@@ -94,7 +94,7 @@ let L = () => {
     };
 class k extends (a = o.ZP.PersistedStore) {
     initialize(e) {
-        (null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? I.qt[e.gradientPresetId] : void 0), this.waitFor(E.default, _.Z, g.Z, u.Z, h.Z), this.syncWith([E.default], L), this.syncWith([u.Z], x));
+        (null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? I.qt[e.gradientPresetId] : void 0), this.waitFor(E.default, f.Z, g.Z, u.Z, h.Z), this.syncWith([E.default], L), this.syncWith([u.Z], x));
     }
     getState() {
         return A ? {} : { gradientPresetId: null == r ? void 0 : r.id };

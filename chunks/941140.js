@@ -37,7 +37,7 @@ let d = {
         t.forEach((e) => {
             (e.required ? u : d).push(e);
         });
-        let _ =
+        let f =
                 u.length > 0
                     ? (0, o.HI)({
                           query: i,
@@ -57,7 +57,7 @@ let d = {
                           key: 'required-options'
                       })
                     : null,
-            f =
+            _ =
                 d.length > 0
                     ? (0, o.HI)({
                           query: i,
@@ -79,7 +79,7 @@ let d = {
                       })
                     : null;
         return (0, r.jsxs)(r.Fragment, {
-            children: [_, f]
+            children: [f, _]
         });
     },
     onSelect(e) {

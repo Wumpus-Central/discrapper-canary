@@ -8,8 +8,8 @@ var r,
     c = n(933557),
     u = n(710845),
     d = n(811627),
-    _ = n(863065),
-    f = n(691294),
+    f = n(863065),
+    _ = n(691294),
     p = n(460181),
     h = n(474873),
     m = n(135906),
@@ -237,7 +237,7 @@ async function X(e, t, n, r, i) {
         }),
         z = W,
         X = W;
-    if (((r.banner = await (0, _.K)()), !Z)) {
+    if (((r.banner = await (0, f.K)()), !Z)) {
         null != i.sound && !1 !== i.playSoundIfDisabled && (q(i.sound, null != (a = i.volume) ? a : 1, i.soundpack), (r.ping = !0), i.omitViewTracking || I.default.track(C.rMx.NOTIFICATION_ACTION, P({ action: 'VIEW' }, r)));
         return;
     }
@@ -248,7 +248,7 @@ async function X(e, t, n, r, i) {
             var n;
             (null == (n = i.onShown) || n.call(i), i.omitViewTracking || (I.default.track(C.rMx.NOTIFICATION_ACTION, P({ action: 'VIEW' }, t)), I.default.track(C.rMx.NOTIFICATION_VIEWED, X)), j && setTimeout(() => e.close(), 5000));
         };
-    if ((null == i.sound || J || (q(i.sound, null != (s = i.volume) ? s : 1, i.soundpack), (r.ping = !0)), i.isUserAvatar && null != e && (e = await (0, f.D)(e)), L && b.Z.taskbarFlash && N.ZP.flashFrame(!0), G)) {
+    if ((null == i.sound || J || (q(i.sound, null != (s = i.volume) ? s : 1, i.soundpack), (r.ping = !0)), i.isUserAvatar && null != e && (e = await (0, _.D)(e)), L && b.Z.taskbarFlash && N.ZP.flashFrame(!0), G)) {
         let a = {
             title: t,
             body: n

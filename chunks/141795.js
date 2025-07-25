@@ -16,8 +16,8 @@ var r = n(392711),
     c = n(719755),
     u = n(873186),
     d = n(740492),
-    _ = n(866960),
-    f = n(626135),
+    f = n(866960),
+    _ = n(626135),
     p = n(510990),
     h = n(70956),
     m = n(931619),
@@ -447,22 +447,22 @@ class D extends b.ZP {
     }
     trackUploadStart() {
         var e;
-        f.default.track(O.rMx.ATTACHMENT_UPLOAD_STARTED, {
+        _.default.track(O.rMx.ATTACHMENT_UPLOAD_STARTED, {
             file_size: this.currentSize,
             mime_type: null != (e = this.mimeType) ? e : 'unknown',
             video_upload_quality: d.ZP.videoUploadQuality,
             data_saving_mode: d.ZP.dataSavingMode,
             low_quality_image_mode: d.ZP.dataSavingMode,
             channel_id: this.channelId,
-            connection_type: _.Z.getType(),
-            effective_connection_speed: _.Z.getEffectiveConnectionSpeed(),
-            service_provider: _.Z.getServiceProvider()
+            connection_type: f.Z.getType(),
+            effective_connection_speed: f.Z.getEffectiveConnectionSpeed(),
+            service_provider: f.Z.getServiceProvider()
         });
     }
     trackUploadFinished(e) {
         var t, n, r, i, a;
         let o = null != this.startTime ? performance.now() - this.startTime : -1;
-        f.default.track(O.rMx.ATTACHMENT_UPLOAD_FINISHED, {
+        _.default.track(O.rMx.ATTACHMENT_UPLOAD_FINISHED, {
             duration_ms: o,
             file_size: this.currentSize,
             pre_compression_file_size: this.preCompressionSize,
@@ -509,9 +509,9 @@ class D extends b.ZP {
             upload_resumption_reason: this.uploadAnalytics.uploadResumptionReason,
             upload_resumption_position: this.uploadAnalytics.uploadResumptionPosition,
             upload_resumption_check_time_ms: this.uploadAnalytics.timing.resumptionCheckTimeMs,
-            connection_type: _.Z.getType(),
-            effective_connection_speed: _.Z.getEffectiveConnectionSpeed(),
-            service_provider: _.Z.getServiceProvider()
+            connection_type: f.Z.getType(),
+            effective_connection_speed: f.Z.getEffectiveConnectionSpeed(),
+            service_provider: f.Z.getServiceProvider()
         });
     }
     constructor(e, t, n, r) {

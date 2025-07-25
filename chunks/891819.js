@@ -56,18 +56,18 @@ function d(e, t) {
         e
     );
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -119,7 +119,7 @@ function g(e) {
         render() {
             let t = this.props,
                 { style: n } = t,
-                i = _(t, ['style']),
+                i = f(t, ['style']),
                 { loaded: a, cached: o } = this.state;
             return (a || null == n || (n = d(c({}, n), { backgroundImage: m(o) })), (0, r.jsx)(e, c({ style: n }, i)));
         }

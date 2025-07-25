@@ -1,7 +1,7 @@
-n.d(t, { U: () => s });
+n.d(t, { U: () => l });
 var r = n(442837),
     i = n(594174);
-function s() {
+function l() {
     return (
         !1 ===
         (0, r.e7)([i.default], () => {

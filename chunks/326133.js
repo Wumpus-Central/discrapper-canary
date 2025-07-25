@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(595519),
     d = n(317381),
-    _ = n(16609),
-    f = n(588468),
+    f = n(16609),
+    _ = n(588468),
     p = n(30465),
     h = n(313201),
     m = n(314910),
@@ -112,7 +112,7 @@ let P = 490,
             V = i.useRef(null),
             [F, Z, H] = (0, O.Z)(N(S({}, e), { guild: B }), t, V),
             Y = (null == (n = k.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
-            W = (0, f.DJ)(F.selectedIndex);
+            W = (0, _.DJ)(F.selectedIndex);
         (0, p.KR)(G, F.isVisible, W);
         let K = (0, y.Z)({
                 editorHeight: j,
@@ -124,7 +124,7 @@ let P = 490,
                 () => {
                     let e = d.ZP.getSelfEmbeddedActivityForChannel(M.id),
                         t = d.ZP.getActivityPanelMode();
-                    return (0, u.l5)(M) && null != e && (0, _.p)(e.location) === M.id && t === v.Ez.PANEL;
+                    return (0, u.l5)(M) && null != e && (0, f.p)(e.location) === M.id && t === v.Ez.PANEL;
                 },
                 [M]
             ),
@@ -161,7 +161,7 @@ let P = 490,
         null != K && (J = (null == (T = k.autocomplete) ? void 0 : T.small) ? L : (null == (A = F.query) ? void 0 : A.type) === b.eq.EMOJIS_AND_STICKERS ? w : D);
         let $ = Math.min(0.5 * window.innerHeight, j);
         J = Math.min(window.innerHeight - x - $, J);
-        let ee = (0, r.jsx)(f.ZP, {
+        let ee = (0, r.jsx)(_.ZP, {
             id: G,
             className: o()(I.autocomplete, Q),
             innerClassName: I.autocompleteInner,
@@ -189,7 +189,7 @@ let P = 490,
                                     className: I.scroller,
                                     style: { maxHeight: J },
                                     role: 'listbox',
-                                    'aria-labelledby': (0, f.rp)(G),
+                                    'aria-labelledby': (0, _.rp)(G),
                                     children: X
                                 }
                             )

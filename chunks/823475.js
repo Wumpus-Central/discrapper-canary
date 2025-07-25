@@ -1,4 +1,4 @@
-n.d(t, { I: () => f });
+n.d(t, { I: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(692547),
@@ -60,14 +60,14 @@ function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -76,14 +76,14 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let f = (e) => {
+let _ = (e) => {
     var t,
         n,
-        { size: s = 'md', width: c, height: _, color: f = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = '' } = e,
+        { size: s = 'md', width: c, height: f, color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = '' } = e,
         h = d(e, ['size', 'width', 'height', 'color', 'colorClass']);
     let m = (0, o.m)(s),
         g = null != (t = null == m ? void 0 : m.width) ? t : c,
-        E = null != (n = null == m ? void 0 : m.height) ? n : _;
+        E = null != (n = null == m ? void 0 : m.height) ? n : f;
     return (0, r.jsxs)(
         'svg',
         u(l({}, (0, a.Z)(h)), {
@@ -95,12 +95,12 @@ let f = (e) => {
             children: [
                 (0, r.jsx)('path', {
                     d: 'M11.53 11A9.53 9.53 0 0 0 2 20.53c0 .81.66 1.47 1.47 1.47h.22c.24 0 .44-.17.5-.4.29-1.12.84-2.17 1.32-2.91.14-.21.43-.1.4.15l-.25 2.61c-.03.3.2.55.5.55h7.63c.12 0 .17-.31.06-.36C12.82 21.14 12 20.22 12 19a3 3 0 0 1 3-3h5.02c.38 0 .61-.4.4-.72A9.52 9.52 0 0 0 12.47 11h-.94ZM12 10a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z',
-                    fill: 'string' == typeof f ? f : f.css,
+                    fill: 'string' == typeof _ ? _ : _.css,
                     className: p
                 }),
                 (0, r.jsx)('path', {
                     d: 'M15 18a1 1 0 1 0 0 2h8a1 1 0 0 0 0-2h-8Z',
-                    fill: 'string' == typeof f ? f : f.css,
+                    fill: 'string' == typeof _ ? _ : _.css,
                     className: p
                 })
             ]

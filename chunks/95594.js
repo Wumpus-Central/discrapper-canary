@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+(n.d(t, { Z: () => f }), n(388685));
 var r = n(73800),
     i = n(663507),
     a = n(924428),
@@ -64,8 +64,8 @@ let d = Object.freeze({
         coordinates: {}
     }
 });
-function _(e) {
-    let { sections: t, columns: n, getItemKey: s, getItemHeight: c, getSectionHeight: _, chunkSize: f = 250, getScrollerState: p, maxBufferWidth: h, itemGutter: m, removeEdgeItemGutters: g, sectionGutter: E, padding: b, paddingVertical: y, paddingHorizontal: O, dir: v } = e,
+function f(e) {
+    let { sections: t, columns: n, getItemKey: s, getItemHeight: c, getSectionHeight: f, chunkSize: _ = 250, getScrollerState: p, maxBufferWidth: h, itemGutter: m, removeEdgeItemGutters: g, sectionGutter: E, padding: b, paddingVertical: y, paddingHorizontal: O, dir: v } = e,
         I = (0, a.Z)(),
         T = (0, r.useRef)(d),
         [S] = (0, r.useState)(() => new i.ZP()),
@@ -78,7 +78,7 @@ function _(e) {
             chunkEnd: w,
             forceUpdateOnChunkChange: D
         } = (0, o.Z)({
-            chunkSize: f,
+            chunkSize: _,
             getScrollerState: p,
             forceUpdate: I
         });
@@ -92,7 +92,7 @@ function _(e) {
                           columns: n,
                           getItemKey: s,
                           getItemHeight: c,
-                          getSectionHeight: _,
+                          getSectionHeight: f,
                           bufferWidth: N,
                           itemGutter: m,
                           removeEdgeItemGutters: g,
@@ -103,9 +103,9 @@ function _(e) {
                           marginLeft: C / 2,
                           dir: v
                       }),
-                      S.computeVisibleSections(Math.max(0, P * f), w * f),
+                      S.computeVisibleSections(Math.max(0, P * _), w * _),
                       S.getState()),
-            [R, S, t, n, s, c, _, P, w, f, m, g, E, b, y, O, N, v]
+            [R, S, t, n, s, c, f, P, w, _, m, g, E, b, y, O, N, v]
         )),
         u(l({}, T.current), {
             masonryComputer: S,

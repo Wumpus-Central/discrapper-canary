@@ -1,12 +1,12 @@
 n.d(t, { c: () => o });
 var r = n(544891),
     i = n(570140),
-    s = n(594174),
-    l = n(981631);
+    l = n(594174),
+    s = n(981631);
 async function o(e, t) {
     try {
         let n = await r.tn.put({
-            url: l.ANM.USER_SET_GUILD_IDENTITY,
+            url: s.ANM.USER_SET_GUILD_IDENTITY,
             body: {
                 identity_guild_id: e,
                 identity_enabled: t
@@ -41,7 +41,7 @@ async function o(e, t) {
                                 }));
                         }
                         return e;
-                    })({}, s.default.getCurrentUser(), n.body)
+                    })({}, l.default.getCurrentUser(), n.body)
                 }),
             n
         );

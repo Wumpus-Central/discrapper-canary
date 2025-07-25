@@ -100,6 +100,7 @@ function O(e) {
                 return (0, i.jsx)(
                     a.zx,
                     {
+                        'data-migration-pending': !0,
                         id: ''.concat(t, '-').concat(r),
                         onClick: (e) => {
                             (e.stopPropagation(),

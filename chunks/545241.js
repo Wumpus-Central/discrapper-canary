@@ -30,11 +30,11 @@ e.exports = function (e) {
             begin: '\\^' + n
         },
         d = e.COMMENT('\\^\\{', '\\}'),
-        _ = {
+        f = {
             className: 'symbol',
             begin: '[:]{1,2}' + n
         },
-        f = {
+        _ = {
             begin: '\\(',
             end: '\\)'
         },
@@ -49,16 +49,16 @@ e.exports = function (e) {
             begin: n,
             starts: p
         },
-        m = [f, o, u, d, s, _, c, a, l, i];
+        m = [_, o, u, d, s, f, c, a, l, i];
     return (
-        (f.contains = [e.COMMENT('comment', ''), h, p]),
+        (_.contains = [e.COMMENT('comment', ''), h, p]),
         (p.contains = m),
         (c.contains = m),
         {
             name: 'Hy',
             aliases: ['hylang'],
             illegal: /\S/,
-            contains: [e.SHEBANG(), f, o, u, d, s, _, c, a, l]
+            contains: [e.SHEBANG(), _, o, u, d, s, f, c, a, l]
         }
     );
 };

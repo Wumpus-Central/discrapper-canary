@@ -12,8 +12,8 @@ var r = n(544891),
 let c = 5000,
     u = 3,
     d = 1000,
-    _ = 1001,
-    f = 1002;
+    f = 1001,
+    _ = 1002;
 async function p(e, t) {
     let n,
         s = performance.now(),
@@ -34,7 +34,7 @@ async function p(e, t) {
     }
     let g = async (t) =>
             p >= u
-                ? (m.push(f),
+                ? (m.push(_),
                   b({ error: !0 }),
                   i.Z.dispatch({
                       type: 'APPLICATION_COMMAND_INDEX_FETCH_FAILURE',
@@ -63,7 +63,7 @@ async function p(e, t) {
                     (n) => {
                         var r;
                         if (t.signal.aborted) {
-                            (m.push(_), b({ error: !0 }));
+                            (m.push(f), b({ error: !0 }));
                             return;
                         }
                         return 429 === n.status

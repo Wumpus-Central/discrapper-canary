@@ -1,77 +1,126 @@
-(n.d(t, { Z: () => S }), n(388685));
+(n.d(t, { Z: () => I }), n(388685));
 var r = n(255367),
     i = n(73800),
-    l = n(91192),
-    o = n(442837),
-    a = n(481060),
-    s = n(377171),
-    c = n(276952),
-    u = n(682662),
-    d = n(593364),
-    h = n(178088),
-    p = n(306680),
-    f = n(944486),
-    g = n(594174),
-    m = n(821020),
-    b = n(370774),
-    _ = n(128008),
-    O = n(961040),
-    y = n(932711),
-    v = n(981631),
-    C = n(490897),
-    j = n(522458);
-function E() {
-    let e = (0, o.e7)([g.default], () => g.default.getCurrentUser());
-    return (0, o.e7)([p.ZP], () => (null == e ? void 0 : e.id) != null && p.ZP.getMentionCount(e.id, C.W.NOTIFICATION_CENTER) > 0);
+    l = n(120356),
+    o = n.n(l),
+    a = n(91192),
+    s = n(442837),
+    c = n(481060),
+    u = n(377171),
+    d = n(276952),
+    h = n(682662),
+    p = n(178088),
+    f = n(306680),
+    g = n(944486),
+    m = n(594174),
+    b = n(821020),
+    _ = n(370774),
+    O = n(128008),
+    y = n(961040),
+    v = n(932711),
+    C = n(981631),
+    j = n(490897),
+    E = n(522458);
+function x() {
+    let e = (0, s.e7)([m.default], () => m.default.getCurrentUser());
+    return (0, s.e7)([f.ZP], () => (null == e ? void 0 : e.id) != null && f.ZP.getMentionCount(e.id, j.W.NOTIFICATION_CENTER) > 0);
 }
-function x(e) {
+function S(e) {
     var t, n;
-    let { onClick: h, selectedOverride: p = !1, popoutProps: g, ref: _ } = e,
-        O = (0, l.Ie)('notifications-inbox'),
-        [C, x] = i.useState(!1),
-        S = (0, b.D)(),
+    let { onClick: l, selectedOverride: p = !1, popoutProps: f, ref: m } = e,
+        O = (0, a.Ie)('notifications-inbox'),
+        [y, j] = i.useState(!1),
+        S = (0, _.D)(),
         I = p || S,
-        { unreadRecentMentionsCount: P, unreadChannelIds: N } = (0, b.O4)(),
-        { notificationCenterVariant: w } = m.Lk.useExperiment({ location: 'NotificationsInboxButtonInner' }),
-        Z = E(),
-        T =
-            w === m.jP.LEGACY
-                ? Z
-                    ? (0, r.jsx)(a.fWl, {
-                          style: {
-                              height: 12,
-                              width: 12,
-                              top: -2,
-                              left: -2,
-                              position: 'relative'
-                          },
-                          color: s.Z.STATUS_DANGER
-                      })
-                    : null
-                : P > 0
-                  ? (0, d.N)(P)
-                  : null,
-        A = w === m.jP.LEGACY ? a.xx7 : a.Dkj,
-        R = (0, o.e7)([f.Z], () => f.Z.getChannelId()),
-        D = i.useMemo(() => {
-            if (w === m.jP.SIDEBAR) return v.Z5c.NOTIFICATIONS_INBOX(null != R ? R : void 0);
-        }, [w, R]);
-    return (0, r.jsxs)(u.H, {
-        ref: _,
+        { notificationCenterVariant: P } = b.Lk.useExperiment({ location: 'NotificationsInboxButtonInner' }),
+        {
+            badge: N,
+            badgeDimensions: w,
+            unreadChannelsCount: Z
+        } = (function (e) {
+            let { notificationCenterVariant: t } = b.Lk.useExperiment({ location: 'NotificationsInboxButtonInner' }),
+                { unreadRecentMentionsCount: n, unreadChannelIds: i } = (0, _.O4)(),
+                l = x();
+            if (t === b.jP.LEGACY)
+                return {
+                    badge: l
+                        ? (0, r.jsx)(c.fWl, {
+                              style: {
+                                  height: 13,
+                                  width: 13,
+                                  position: 'relative'
+                              },
+                              color: u.Z.STATUS_DANGER
+                          })
+                        : null,
+                    unreadChannelsCount: 0,
+                    badgeDimensions: {
+                        height: 13,
+                        width: 13
+                    }
+                };
+            let { badge: a, dimensions: s } = (function (e, t, n) {
+                if (e > 0)
+                    return {
+                        badge: (0, r.jsx)(c.mAB, {
+                            count: e,
+                            className: E.badgeTransition
+                        }),
+                        dimensions: {
+                            height: 16,
+                            width: (0, c.OVM)(e)
+                        }
+                    };
+                if (t > 0) {
+                    let e = (0, c.OVM)(t) - 3;
+                    return {
+                        badge: (0, r.jsx)(c.mAB, {
+                            count: t,
+                            style: {
+                                width: e,
+                                lineHeight: 13,
+                                height: 13,
+                                minHeight: 13,
+                                minWidth: 13
+                            },
+                            className: o()(E.badgeTransition, E.grayBadge, { [E.selected]: n })
+                        }),
+                        dimensions: {
+                            height: 13,
+                            width: e
+                        }
+                    };
+                }
+                return { badge: null };
+            })(n, i.length, e);
+            return {
+                badge: a,
+                unreadChannelsCount: i.length,
+                badgeDimensions: s
+            };
+        })(I),
+        T = P === b.jP.LEGACY ? c.xx7 : c.Dkj,
+        A = (0, s.e7)([g.Z], () => g.Z.getChannelId()),
+        R = i.useMemo(() => {
+            if (P === b.jP.SIDEBAR) return C.Z5c.NOTIFICATIONS_INBOX(null != A ? A : void 0);
+        }, [P, A]);
+    return (0, r.jsxs)(h.H, {
+        ref: m,
         children: [
-            (0, r.jsx)(c.Z, {
-                selected: I && w === m.jP.SIDEBAR,
-                hovered: C && w === m.jP.SIDEBAR,
-                unread: N.length > 0,
-                className: j.pill,
-                disabled: w === m.jP.LEGACY
+            (0, r.jsx)(d.Z, {
+                selected: I && P === b.jP.SIDEBAR,
+                hovered: y && P === b.jP.SIDEBAR,
+                unread: Z > 0,
+                className: E.pill,
+                disabled: P === b.jP.LEGACY
             }),
-            (0, r.jsx)(y.Z, {
-                children: (0, r.jsx)(a.aRk, {
-                    selected: I || C,
-                    lowerBadge: T,
+            (0, r.jsx)(v.Z, {
+                children: (0, r.jsx)(c.aRk, {
+                    selected: I || y,
+                    lowerBadge: N,
+                    lowerBadgeSize: w,
                     children: (0, r.jsx)(
-                        a.LYs,
+                        c.LYs,
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -96,18 +145,18 @@ function x(e) {
                                     }));
                             }
                             return e;
-                        })({}, O, g)),
+                        })({}, O, f)),
                         (n = n =
                             {
-                                onClick: h,
-                                to: D,
-                                selected: I || C,
-                                onMouseEnter: () => x(!0),
-                                onMouseLeave: () => x(!1),
-                                children: (0, r.jsx)(A, {
+                                onClick: l,
+                                to: R,
+                                selected: I || y,
+                                onMouseEnter: () => j(!0),
+                                onMouseLeave: () => j(!1),
+                                children: (0, r.jsx)(T, {
                                     size: 'custom',
                                     color: 'currentColor',
-                                    className: j.notificationsIcon,
+                                    className: E.notificationsIcon,
                                     width: 20,
                                     height: 20
                                 })
@@ -131,20 +180,20 @@ function x(e) {
         ]
     });
 }
-function S() {
+function I() {
     let e = i.useRef(null),
-        { notificationCenterVariant: t } = m.Lk.useExperiment({ location: 'NotificationsInboxButton' }),
-        n = E(),
-        l = (0, _.m)();
-    return t === m.jP.SIDEBAR
-        ? (0, r.jsx)(x, {})
-        : t === m.jP.POPOUT
-          ? (0, r.jsx)(O.Z, {
+        { notificationCenterVariant: t } = b.Lk.useExperiment({ location: 'NotificationsInboxButton' }),
+        n = x(),
+        l = (0, O.m)();
+    return t === b.jP.SIDEBAR
+        ? (0, r.jsx)(S, {})
+        : t === b.jP.POPOUT
+          ? (0, r.jsx)(y.Z, {
                 targetElementRef: e,
                 popoutPosition: 'right',
                 popoutAlign: 'bottom',
                 children: (t, n, i) =>
-                    (0, r.jsx)(x, {
+                    (0, r.jsx)(S, {
                         ref: e,
                         selectedOverride: n,
                         onClick: () => {
@@ -153,16 +202,16 @@ function S() {
                         popoutProps: i
                     })
             })
-          : t === m.jP.LEGACY
-            ? (0, r.jsx)(h.k, {
+          : t === b.jP.LEGACY
+            ? (0, r.jsx)(p.k, {
                   spacing: 0,
                   badgeState: { badgeForYou: n },
                   targetElementRef: e,
                   popoutPosition: 'right',
                   popoutAlign: 'top',
-                  dialogClassName: j.positionLayer,
+                  dialogClassName: E.positionLayer,
                   children: (t, n, i) =>
-                      (0, r.jsx)(x, {
+                      (0, r.jsx)(S, {
                           ref: e,
                           selectedOverride: n,
                           onClick: () => {

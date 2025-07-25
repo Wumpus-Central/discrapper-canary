@@ -8,24 +8,24 @@ var i = n(120356),
     l = n(388032),
     c = n(879027);
 function u(e) {
-    let { price: t, currency: n, intervalType: i, className: u, intervalCount: d = 1, isPrepaidPaymentSource: _ = !1 } = e,
-        f = (0, o.T4)(t, n),
+    let { price: t, currency: n, intervalType: i, className: u, intervalCount: d = 1, isPrepaidPaymentSource: f = !1 } = e,
+        _ = (0, o.T4)(t, n),
         p = null;
     return (
         i === s.rV.YEAR
-            ? (p = l.intl.format(l.t['3U719v'], { price: f }))
+            ? (p = l.intl.format(l.t['3U719v'], { price: _ }))
             : i === s.rV.MONTH && 1 === d
-              ? (p = l.intl.format(l.t.NkR7BQ, { price: f }))
+              ? (p = l.intl.format(l.t.NkR7BQ, { price: _ }))
               : i === s.rV.MONTH &&
                 d > 1 &&
                 (p = l.intl.format(l.t.CNAGg4, {
-                    price: f,
+                    price: _,
                     intervalCount: d
                 })),
         (0, r.jsx)('div', {
             className: a()(c.pricePerInterval, u),
             'data-testid': 'PricePerInterval-'.concat(n),
-            children: null == i || _ ? (0, r.jsx)('strong', { children: f }) : p
+            children: null == i || f ? (0, r.jsx)('strong', { children: _ }) : p
         })
     );
 }

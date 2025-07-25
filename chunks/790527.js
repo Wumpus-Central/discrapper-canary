@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(355467),
     d = n(100527),
-    _ = n(906732),
-    f = n(688465),
+    f = n(906732),
+    _ = n(688465),
     p = n(678558),
     h = n(626135),
     m = n(74538),
@@ -62,13 +62,13 @@ function w(e) {
     var t,
         n,
         a,
-        { title: R, type: w, guildBoostProps: D, analyticsSource: L, analyticsLocation: x, body: M, context: k, glowUp: j, modalClassName: U, modalContentClassName: G, artContainerClassName: B, artClassName: V, headerClassName: F, bodyClassName: Z, transitionState: H, onClose: Y, onSubscribeClick: W, onSubscribeFinish: K, onSecondaryClick: z, secondaryCTA: q, secondaryCTAClassName: X, subscribeButtonText: Q, showNewBadge: J = !1, showBetaBadge: $ = !1, enableArtBoxShadow: ee = !0, subscriptionTier: et = I.Si.TIER_2, isLoading: en = !1, hideBackButton: er, backButtonText: ei, showEnhancedUpsell: ea, useSubscribeButtonGradient: eo, subscribeButtonClassname: es, hidePremiumOfferUpsell: el, children: ec, LeadingComponent: eu, backgroundElements: ed, smallText: e_ = !1, footerClassName: ef } = e,
+        { title: R, type: w, guildBoostProps: D, analyticsSource: L, analyticsLocation: x, body: M, context: k, glowUp: j, modalClassName: U, modalContentClassName: G, artContainerClassName: B, artClassName: V, headerClassName: F, bodyClassName: Z, transitionState: H, onClose: Y, onSubscribeClick: W, onSubscribeFinish: K, onSecondaryClick: z, secondaryCTA: q, secondaryCTAClassName: X, subscribeButtonText: Q, showNewBadge: J = !1, showBetaBadge: $ = !1, enableArtBoxShadow: ee = !0, subscriptionTier: et = I.Si.TIER_2, isLoading: en = !1, hideBackButton: er, backButtonText: ei, showEnhancedUpsell: ea, useSubscribeButtonGradient: eo, subscribeButtonClassname: es, hidePremiumOfferUpsell: el, children: ec, LeadingComponent: eu, backgroundElements: ed, smallText: ef = !1, footerClassName: e_ } = e,
         ep = C(e, ['title', 'type', 'guildBoostProps', 'analyticsSource', 'analyticsLocation', 'body', 'context', 'glowUp', 'modalClassName', 'modalContentClassName', 'artContainerClassName', 'artClassName', 'headerClassName', 'bodyClassName', 'transitionState', 'onClose', 'onSubscribeClick', 'onSubscribeFinish', 'onSecondaryClick', 'secondaryCTA', 'secondaryCTAClassName', 'subscribeButtonText', 'showNewBadge', 'showBetaBadge', 'enableArtBoxShadow', 'subscriptionTier', 'isLoading', 'hideBackButton', 'backButtonText', 'showEnhancedUpsell', 'useSubscribeButtonGradient', 'subscribeButtonClassname', 'hidePremiumOfferUpsell', 'children', 'LeadingComponent', 'backgroundElements', 'smallText', 'footerClassName']);
     let eh = null != D,
         em = (0, b.N)(),
         eg = (0, E.Ng)(),
         eE = !el && ((null == em || null == (t = em.subscription_trial) ? void 0 : t.sku_id) === et || (0, E.Wp)(eg, et)) && !eh,
-        { analyticsLocations: eb } = (0, _.ZP)(d.Z.PREMIUM_UPSELL_MODAL),
+        { analyticsLocations: eb } = (0, f.ZP)(d.Z.PREMIUM_UPSELL_MODAL),
         ey = {
             analyticsLocation: x,
             analyticsLocations: eb,
@@ -192,12 +192,12 @@ function w(e) {
                                             (0, r.jsxs)(c.X6q, {
                                                 className: o()(A.header, { [A.enhancedHeader]: ea }, F),
                                                 variant: 'heading-xl/bold',
-                                                children: [R, $ ? (0, r.jsx)(f.Z, { className: A.betaTag }) : null]
+                                                children: [R, $ ? (0, r.jsx)(_.Z, { className: A.betaTag }) : null]
                                             }),
                                             eI ? (0, r.jsx)(v.Z, { affinities: ev }) : void 0,
                                             ec,
                                             (0, r.jsx)(c.Text, {
-                                                variant: e_ ? 'text-sm/normal' : 'text-md/normal',
+                                                variant: ef ? 'text-sm/normal' : 'text-md/normal',
                                                 className: o()(Z, A.subHeader),
                                                 children: M
                                             })
@@ -207,7 +207,7 @@ function w(e) {
                             })
                 }),
                 (0, r.jsxs)(c.mzw, {
-                    className: o()(A.footer, ef, { [A.enhancedFooter]: ea }),
+                    className: o()(A.footer, e_, { [A.enhancedFooter]: ea }),
                     children: [
                         (0, r.jsxs)('div', {
                             className: o()(A.primaryActions, { [A.enhancedPrimaryActions]: ea }),

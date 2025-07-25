@@ -89,13 +89,13 @@ let D = r.memo(function (e) {
             }
             return r;
         })(e, ['message', 'compact', 'className', 'onContextMenu', 'onClick', 'hideSimpleEmbedContent', 'channel', 'isGroupStart', 'animateAvatar', 'subscribeToComponentDispatch', 'renderThreadAccessory', 'trackAnnouncementViews']),
-        G = r.type === A.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
-        V = r.isFirstMessageInForumPost(L),
+        V = r.type === A.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
+        G = r.isFirstMessageInForumPost(L),
         B = (0, d.A)((null != (n = r.editedTimestamp) ? n : r.timestamp).valueOf()),
         { content: H, hasSpoilerEmbeds: W } = (0, g.Z)(r, {
             hideSimpleEmbedContent: M,
-            allowList: V || B,
-            allowHeading: V || B,
+            allowList: G || B,
+            allowHeading: G || B,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
@@ -122,9 +122,9 @@ let D = r.memo(function (e) {
                 compact: l,
                 className: o()(D, {
                     [y.ephemeral]: (0, E.Pv)(r),
-                    [y.disableInteraction]: G
+                    [y.disableInteraction]: V
                 }),
-                disableInteraction: G,
+                disableInteraction: V,
                 childrenRepliedMessage: (0, R.Z)(r, L, z, Y, l),
                 childrenExecutedCommand: (0, m.Z)(r, L, l),
                 childrenHeader: (0, f.Z)(
@@ -136,7 +136,7 @@ let D = r.memo(function (e) {
                 ),
                 childrenAccessories: e.hideAccessories ? void 0 : (0, S.Q)(e, W),
                 childrenMessageContent: (0, T.Z)(e, H),
-                childrenSystemMessage: (0, N.Z)(P(b({}, e), { disableInteraction: G })),
+                childrenSystemMessage: (0, N.Z)(P(b({}, e), { disableInteraction: V })),
                 onContextMenu: v,
                 onClick: U,
                 hasThread: w && null != q && r.hasFlag(A.iLy.HAS_THREAD),

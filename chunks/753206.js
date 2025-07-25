@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(255367),
     i = n(73800),
-    s = n(120356),
-    l = n.n(s),
+    l = n(120356),
+    s = n.n(l),
     o = n(628238),
     a = n(750030),
     c = n(492593),
@@ -12,17 +12,17 @@ var r = n(255367),
     p = n(30804);
 let g = i.memo(function (e) {
     var t;
-    let { message: n, channel: s, compact: g, className: b, isGroupStart: m, hideSimpleEmbedContent: v = !0, disableInteraction: h, previewGuildId: O, preview: y, author: E } = e,
+    let { message: n, channel: l, compact: g, className: m, isGroupStart: b, hideSimpleEmbedContent: h = !0, disableInteraction: v, previewGuildId: O, preview: y, author: E } = e,
         S = null != O ? O : (0, a.k)(n),
         j = (0, o.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
-        { content: x } = (0, u.Z)(n, {
-            hideSimpleEmbedContent: v,
+        { content: C } = (0, u.Z)(n, {
+            hideSimpleEmbedContent: h,
             allowList: j,
             allowHeading: j,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
-        C = i.useMemo(() => {
+        _ = i.useMemo(() => {
             var t, n;
             return (0, f.Z)(
                 ((t = (function (e) {
@@ -52,7 +52,7 @@ let g = i.memo(function (e) {
                 })({}, e)),
                 (n = n =
                     {
-                        channel: s,
+                        channel: l,
                         guildId: S
                     }),
                 Object.getOwnPropertyDescriptors
@@ -69,17 +69,17 @@ let g = i.memo(function (e) {
                       }),
                 t)
             );
-        }, [e, s, S]);
+        }, [e, l, S]);
     return (0, r.jsx)(c.Z, {
         compact: g,
-        className: l()(b, {
+        className: s()(m, {
             [p.message]: !0,
             [p.cozyMessage]: !g,
-            [p.groupStart]: m
+            [p.groupStart]: b
         }),
-        childrenHeader: C,
-        childrenMessageContent: (0, d.Z)(e, x),
-        disableInteraction: h,
+        childrenHeader: _,
+        childrenMessageContent: (0, d.Z)(e, C),
+        disableInteraction: v,
         author: E,
         preview: y
     });

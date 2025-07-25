@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(442837),
     u = n(692547),
     d = n(481060),
-    _ = n(239091),
-    f = n(607070),
+    f = n(239091),
+    _ = n(607070),
     p = n(134433),
     h = n(111028),
     m = n(91218),
@@ -101,11 +101,11 @@ let N = i.forwardRef(function (e, t) {
             size: 16,
             guildId: w
         }),
-        U = (0, c.e7)([f.Z], () => f.Z.roleStyle),
+        U = (0, c.e7)([_.Z], () => _.Z.roleStyle),
         G = (null == (a = R.tags) ? void 0 : a.guild_connections) === null,
         B = i.useCallback(
             (e) => {
-                (0, _.jW)(e, async () => {
+                (0, f.jW)(e, async () => {
                     let { default: e } = await n.e('5396').then(n.bind(n, 731646));
                     return (t) =>
                         (0, r.jsx)(

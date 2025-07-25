@@ -1,4 +1,7 @@
-n.d(t, { QK: () => o });
+n.d(t, {
+    QK: () => a,
+    u$: () => i
+});
 let r = (0, n(818083).B)({
         kind: 'user',
         id: '2025-06_contextless_frames',
@@ -12,7 +15,11 @@ let r = (0, n(818083).B)({
             }
         ]
     }),
-    o = function (e) {
+    i = function (e) {
+        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+        return r.useExperiment({ location: e }, { autoTrackExposure: t });
+    },
+    a = function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         return r.getCurrentConfig({ location: e }, { autoTrackExposure: t });
     };

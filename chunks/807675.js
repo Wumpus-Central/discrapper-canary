@@ -1,6 +1,6 @@
 (n.d(t, {
     K: () => d,
-    y: () => f
+    y: () => _
 }),
     n(539854),
     n(35282));
@@ -16,18 +16,18 @@ function d(e) {
     let t = e.filter((e) => !c.up.includes(e));
     return (t.includes(i.x.BOT) && !t.includes(i.x.APPLICATIONS_COMMANDS) && t.push(i.x.APPLICATIONS_COMMANDS), t);
 }
-function _(e) {
+function f(e) {
     if (![u.ME, u.I_8, u.o_z].includes(e)) return null != e ? e : void 0;
 }
-function f(e) {
+function _(e) {
     var t, n, i, c, u;
     let d = (0, r.parse)(e, { arrayFormat: 'bracket' }),
-        f = l.Hn;
+        _ = l.Hn;
     try {
-        f = a.vB(null != d.permissions && '' !== d.permissions ? d.permissions : '0');
+        _ = a.vB(null != d.permissions && '' !== d.permissions ? d.permissions : '0');
     } catch (e) {}
     let p = d.channel_id,
-        h = _(null != (i = null != (n = d.guild_id) ? n : null == (t = o.Z.getChannel(p)) ? void 0 : t.guild_id) ? i : s.Z.getGuildId());
+        h = f(null != (i = null != (n = d.guild_id) ? n : null == (t = o.Z.getChannel(p)) ? void 0 : t.guild_id) ? i : s.Z.getGuildId());
     return {
         clientId: null != (c = d.client_id) ? c : '',
         scopes: (null != (u = d.scope) ? u : '').split(' ').filter((e) => e.length > 0),
@@ -36,7 +36,7 @@ function f(e) {
         codeChallenge: d.code_challenge,
         codeChallengeMethod: d.code_challenge_method,
         state: d.state,
-        permissions: f,
+        permissions: _,
         channelId: p,
         guildId: h,
         prompt: d.prompt,

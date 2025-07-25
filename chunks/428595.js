@@ -8,8 +8,8 @@ var r = n(392711),
     c = n(402235),
     u = n(11637),
     d = n(592125),
-    _ = n(485386),
-    f = n(430824),
+    f = n(485386),
+    _ = n(430824),
     p = n(594174),
     h = n(5192),
     m = n(51144),
@@ -109,7 +109,7 @@ let F = (e) => {
         let t = d.Z.getChannel(e);
         return null == t ? void 0 : t.getGuildId();
     },
-    Z = (e) => (null != e.guildId ? f.Z.getGuild(e.guildId) : null != e.channelId ? f.Z.getGuild(F(e.channelId)) : null),
+    Z = (e) => (null != e.guildId ? _.Z.getGuild(e.guildId) : null != e.channelId ? _.Z.getGuild(F(e.channelId)) : null),
     H = {
         newline: o().defaultRules.newline,
         paragraph: o().defaultRules.paragraph,
@@ -242,20 +242,20 @@ let F = (e) => {
                         id: s
                     };
                 let u = Z(n),
-                    d = null != u ? _.Z.getRole(u.id, s) : null;
+                    d = null != u ? f.Z.getRole(u.id, s) : null;
                 if (null == d)
                     return {
                         type: 'text',
                         content: '@'.concat(w.intl.string(w.t['YV4F/v']))
                     };
-                let f = (0, c.zI)(null == u ? void 0 : u.id, d) && !(0, l.Gr)(d);
+                let _ = (0, c.zI)(null == u ? void 0 : u.id, d) && !(0, l.Gr)(d);
                 return {
                     type: 'mention',
                     channelId: n.channelId,
                     guildId: null != u ? u.id : null,
                     roleId: s,
                     roleColor: d.color,
-                    roleColors: f
+                    roleColors: _
                         ? {
                               primaryColor: null == (r = d.colors) ? void 0 : r.primary_color,
                               secondaryColor: null == (i = d.colors) ? void 0 : i.secondary_color,

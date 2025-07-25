@@ -21,7 +21,7 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function _(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -59,7 +59,7 @@ function p(e, t) {
 }
 function h(e) {
     var { label: t, onAction: n, icon: d } = e,
-        p = f(e, ['label', 'onAction', 'icon']);
+        p = _(e, ['label', 'onAction', 'icon']);
     let { analyticsLocations: h } = (0, o.ZP)(),
         { context: m } = (0, s.KZ)(),
         g = (0, a.Aq)(),
@@ -70,7 +70,7 @@ function h(e) {
         action: () => {
             (null == n || n(),
                 (0, l.openUserProfileModal)(
-                    _(
+                    f(
                         {
                             sourceAnalyticsLocations: h,
                             appContext: E

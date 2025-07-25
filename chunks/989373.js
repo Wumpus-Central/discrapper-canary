@@ -19,8 +19,8 @@ n(371467);
 var g = n(41534),
     h = n(554370),
     y = n(371651),
-    E = n(610394),
-    O = n(757744),
+    O = n(610394),
+    E = n(757744),
     I = n(981631);
 let C = new u.Z('AppOverlay');
 async function S(e, t) {
@@ -58,13 +58,13 @@ let P = o.memo(function (e) {
                     return !b.isPlatformEmbedded || (null != e && e !== v.UNSET_PID);
                 }),
                 [g, h] = o.useState(m),
-                [O, C] = o.useState(!1),
+                [E, C] = o.useState(!1),
                 P = o.useCallback(() => {
                     let e = (0, v.getPID)(),
                         n = null != _.Z.getVoiceChannelId();
                     (a.Z.track(I.rMx.OVERLAY_INITIALIZED, {
                         voice_widget_connected: n,
-                        text_widget_connected: E.ZP.isPinned(I.Odu.TEXT),
+                        text_widget_connected: O.ZP.isPinned(I.Odu.TEXT),
                         overlay_render_method: l.gl[y.default.getOverlayMethod(e)],
                         unpinned_widget_types: f.Z.getAllUnpinnedPinnedWidgets(t)
                     }),
@@ -73,10 +73,10 @@ let P = o.memo(function (e) {
             (0, c.Ng)(() => {
                 let e = (e) => {
                     let t = null != n ? n : window;
-                    e.data === E.Il &&
+                    e.data === O.Il &&
                         t.requestAnimationFrame(() => {
                             t.requestAnimationFrame(() => {
-                                window.parent.postMessage(E.A8, '*');
+                                window.parent.postMessage(O.A8, '*');
                             });
                         });
                 };
@@ -117,9 +117,9 @@ let P = o.memo(function (e) {
                 (0, c.zq)(() => {
                     null != d.current && d.current();
                 }),
-                O
+                E
             );
-        })(n, O.$S),
+        })(n, E.$S),
         m = (0, v.getPID)(),
         g = (0, i.e7)([p.default], () => p.default.isInputLocked(m), [m]);
     return u

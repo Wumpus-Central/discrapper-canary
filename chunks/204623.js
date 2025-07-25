@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(336317),
     u = n(755721),
     d = n(481060),
-    _ = n(596454),
-    f = n(406128),
+    f = n(596454),
+    _ = n(406128),
     p = n(451478),
     h = n(176354),
     m = n(63063),
@@ -55,7 +55,7 @@ class S extends i.PureComponent {
                     children: [
                         O.intl.string(O.t['4tRjHB']),
                         ' ',
-                        (0, r.jsx)(_.Z, {
+                        (0, r.jsx)(f.Z, {
                             src: h.ZP.getURL(c.Z.convert.fromCodePoint('1f44c')),
                             emojiName: ':ok_hand:',
                             animated: !1
@@ -72,7 +72,7 @@ class S extends i.PureComponent {
             children: [
                 (0, r.jsx)(s.ql, { children: (0, r.jsx)('html', { className: (0, d.QeD)(y.BRd.DARK) }) }),
                 (0, r.jsx)(T, { type: this.getPlatform() }),
-                (0, r.jsx)(f.Z, {
+                (0, r.jsx)(_.Z, {
                     title: O.intl.string(O.t['3h+n+/']),
                     note: e,
                     action: t

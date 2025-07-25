@@ -12,8 +12,8 @@ var i = n(120356),
     c = n(213734),
     u = n(37148),
     d = n(481060),
-    _ = n(252618),
-    f = n(981631),
+    f = n(252618),
+    _ = n(981631),
     p = n(388032),
     h = n(484618);
 function m(e, t, n) {
@@ -91,9 +91,9 @@ function O(e, t) {
 function v(e) {
     let { children: t, removeChildWrapper: n, wrapperClassName: i } = e;
     return (
-        (0, _.Tt)({ location: p.intl.string(p.t['3S249/']) }),
+        (0, f.Tt)({ location: p.intl.string(p.t['3S249/']) }),
         (0, r.jsx)(d.f6W, {
-            theme: f.BRd.DARK,
+            theme: _.BRd.DARK,
             children: (e) =>
                 (0, r.jsx)('div', {
                     className: a()(e, h.oauth2PageWrapper, i),

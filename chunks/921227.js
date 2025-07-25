@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(897037),
     u = n(388032),
     d = n(165005);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -98,7 +98,7 @@ function E(e, t) {
 }
 function b(e) {
     var t,
-        { className: n, inputClassName: a, disabled: l = !1, editable: _, inputRef: p, prefixElement: g, focusProps: b, name: y = '', type: O = 'text', placeholder: v = '', maxLength: I = 999, value: T, defaultValue: S, minLength: A, error: N, defaultDirty: C = !1 } = e,
+        { className: n, inputClassName: a, disabled: l = !1, editable: f, inputRef: p, prefixElement: g, focusProps: b, name: y = '', type: O = 'text', placeholder: v = '', maxLength: I = 999, value: T, defaultValue: S, minLength: A, error: N, defaultDirty: C = !1 } = e,
         R = m(e, ['className', 'inputClassName', 'disabled', 'editable', 'inputRef', 'prefixElement', 'focusProps', 'name', 'type', 'placeholder', 'maxLength', 'value', 'defaultValue', 'minLength', 'error', 'defaultDirty']);
     let [P, w] = i.useState(C),
         D = E(T, S),
@@ -125,20 +125,20 @@ function b(e) {
             null != g && g,
             (0, r.jsx)(
                 s.t,
-                h(f({}, b), {
+                h(_({}, b), {
                     children: (0, r.jsx)(
                         'input',
                         h(
-                            f(
+                            _(
                                 {
                                     name: y,
                                     className: o()(d.input, a, {
                                         [d.error]: j,
                                         [d.disabled]: l,
-                                        [d.editable]: _
+                                        [d.editable]: f
                                     }),
                                     disabled: l,
-                                    readOnly: !1 === _ || void 0,
+                                    readOnly: !1 === f || void 0,
                                     type: O,
                                     placeholder: v,
                                     maxLength: I,

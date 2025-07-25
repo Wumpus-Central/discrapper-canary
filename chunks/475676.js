@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(443487),
     u = n(314897),
     d = n(594174),
-    _ = n(626135),
-    f = n(5192),
+    f = n(626135),
+    _ = n(5192),
     p = n(873128),
     h = n(246627),
     m = n(709737),
@@ -48,14 +48,14 @@ function T(e) {
         r = null == t ? void 0 : t.leaderboard_id;
     i.useEffect(() => {
         null != r &&
-            _.default.track(b.rMx.LEADERBOARD_MEMBERLIST_CARD_VIEWED, {
+            f.default.track(b.rMx.LEADERBOARD_MEMBERLIST_CARD_VIEWED, {
                 leaderboard_id: r,
                 guild_id: n
             });
     }, [r, n]);
 }
 function S(e) {
-    var t, n, _, E, b;
+    var t, n, f, E, b;
     let y,
         { selected: v, channel: S, entry: N } = e,
         C = S.guild_id,
@@ -78,7 +78,7 @@ function S(e) {
             return [n, r];
         }, [R, P, w]),
         x = (0, a.e7)([d.default], () => d.default.getUser(null == D ? void 0 : D.userId)),
-        M = f.ZP.getName(C, void 0, x);
+        M = _.ZP.getName(C, void 0, x);
     T({
         leaderboard: R,
         guildId: C
@@ -91,7 +91,7 @@ function S(e) {
             selected: v
         });
     let { sort_by_statistic_id: j } = R.guild_settings,
-        U = null != (b = null == L || null == (_ = L.statistics) || null == (n = _[j]) ? void 0 : n.value) ? b : 0,
+        U = null != (b = null == L || null == (f = L.statistics) || null == (n = f[j]) ? void 0 : n.value) ? b : 0,
         { currentRank: G } = D;
     return (
         (y =

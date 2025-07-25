@@ -99,27 +99,27 @@ e.exports = {
                 return '%26%23' + parseInt(e.slice(2), 16) + '%3B';
             });
         for (var l = '', c = 0; c < s.length; c += u) {
-            for (var d = s.length >= u ? s.slice(c, c + u) : s, _ = [], f = 0; f < d.length; ++f) {
-                var p = d.charCodeAt(f);
+            for (var d = s.length >= u ? s.slice(c, c + u) : s, f = [], _ = 0; _ < d.length; ++_) {
+                var p = d.charCodeAt(_);
                 if (45 === p || 46 === p || 95 === p || 126 === p || (p >= 48 && p <= 57) || (p >= 65 && p <= 90) || (p >= 97 && p <= 122) || (a === r.RFC1738 && (40 === p || 41 === p))) {
-                    _[_.length] = d.charAt(f);
+                    f[f.length] = d.charAt(_);
                     continue;
                 }
                 if (p < 128) {
-                    _[_.length] = o[p];
+                    f[f.length] = o[p];
                     continue;
                 }
                 if (p < 2048) {
-                    _[_.length] = o[192 | (p >> 6)] + o[128 | (63 & p)];
+                    f[f.length] = o[192 | (p >> 6)] + o[128 | (63 & p)];
                     continue;
                 }
                 if (p < 55296 || p >= 57344) {
-                    _[_.length] = o[224 | (p >> 12)] + o[128 | ((p >> 6) & 63)] + o[128 | (63 & p)];
+                    f[f.length] = o[224 | (p >> 12)] + o[128 | ((p >> 6) & 63)] + o[128 | (63 & p)];
                     continue;
                 }
-                ((f += 1), (p = 65536 + (((1023 & p) << 10) | (1023 & d.charCodeAt(f)))), (_[_.length] = o[240 | (p >> 18)] + o[128 | ((p >> 12) & 63)] + o[128 | ((p >> 6) & 63)] + o[128 | (63 & p)]));
+                ((_ += 1), (p = 65536 + (((1023 & p) << 10) | (1023 & d.charCodeAt(_)))), (f[f.length] = o[240 | (p >> 18)] + o[128 | ((p >> 12) & 63)] + o[128 | ((p >> 6) & 63)] + o[128 | (63 & p)]));
             }
-            l += _.join('');
+            l += f.join('');
         }
         return l;
     },

@@ -1,6 +1,6 @@
 n.d(t, {
     A6: () => d,
-    Ll: () => _,
+    Ll: () => f,
     Zp: () => u
 });
 var r = n(442837),
@@ -21,6 +21,6 @@ function u() {
 function d() {
     return (0, r.e7)([o.Z, s.ZP, a.Z], () => c(o.Z, s.ZP, a.Z));
 }
-function _() {
+function f() {
     return d() ? l.BRd.DARK : void 0;
 }

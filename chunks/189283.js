@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function _(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,7 +53,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -90,15 +90,15 @@ function E(e) {
     return 'pill' === e ? u.pillItemText : void 0;
 }
 function b(e) {
-    let { option: t, selected: n, onClick: a, look: d, className: f, disabled: h = !1, tooltip: b, tooltipAriaLabel: y } = e,
+    let { option: t, selected: n, onClick: a, look: d, className: _, disabled: h = !1, tooltip: b, tooltipAriaLabel: y } = e,
         O = i.useCallback((e) => a(t, e), [a, t]),
         v = (e) =>
             (0, r.jsx)(
                 s.P,
                 p(
-                    _(
+                    f(
                         {
-                            className: o()(m(d), f, {
+                            className: o()(m(d), _, {
                                 [g(d)]: n,
                                 [u.disabled]: h
                             }),
@@ -128,7 +128,7 @@ function b(e) {
 }
 function y(e) {
     let { options: t, value: n, onChange: a, look: s = 'tab', className: l, optionClassName: c, disabled: d = !1 } = e,
-        _ = i.useCallback(
+        f = i.useCallback(
             (e) => {
                 var t;
                 let i = n === e.value;
@@ -151,6 +151,6 @@ function y(e) {
         );
     return (0, r.jsx)('div', {
         className: o()(h(s), l, { [u.disabledContainer]: d }),
-        children: t.map(_)
+        children: t.map(f)
     });
 }

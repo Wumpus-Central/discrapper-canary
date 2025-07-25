@@ -8,8 +8,8 @@ var r,
     c = n(778877),
     u = n(592125),
     d = n(430824),
-    _ = n(981631);
-function f(e, t, n) {
+    f = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -77,7 +77,7 @@ function C(e) {
     (null != e && null == h[e] && m(e), (I = e));
 }
 function R() {
-    ((O = !0), null != I && (0, l.g)(I) === _.aib.CHANNEL && (0, c.a)({ location: 'SearchStore_handleConnectionOpen' }) && C(_.aib.DMS));
+    ((O = !0), null != I && (0, l.g)(I) === f.aib.CHANNEL && (0, c.a)({ location: 'SearchStore_handleConnectionOpen' }) && C(f.aib.DMS));
 }
 function P(e) {
     let { guildId: t, channelId: n } = e;
@@ -87,7 +87,7 @@ function P(e) {
                 location: 'SearchStore_handleChannelSelect',
                 autoTrackExposure: O
             })
-          ? C(_.aib.DMS)
+          ? C(f.aib.DMS)
           : C(n);
 }
 function w(e) {
@@ -165,7 +165,7 @@ class G extends (r = i.ZP.Store) {
         return null != e && null != h[e];
     }
 }
-f(G, 'displayName', 'SearchStore');
+_(G, 'displayName', 'SearchStore');
 let B = new G(o.Z, {
     CONNECTION_OPEN: R,
     SEARCH_RESULTS_QUERY_UPDATE: U,

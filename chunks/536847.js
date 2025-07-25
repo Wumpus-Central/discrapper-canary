@@ -9,8 +9,8 @@ var i = n(657707),
     c = n(507962),
     u = n(231338),
     d = n(388032),
-    _ = n(531864);
-let f = (e, t) => (e === t ? _.themePillItemSelected : void 0);
+    f = n(531864);
+let _ = (e, t) => (e === t ? f.themePillItemSelected : void 0);
 function p() {
     let e = (0, a.e7)([s.Z], () => s.Z.theme),
         t = (0, o.wjy)(e) ? u.BR.DARK : u.BR.LIGHT,
@@ -19,17 +19,17 @@ function p() {
                 name: d.intl.string(d.t.b8Cei4),
                 value: u.BR.DARK,
                 icon: i.Z6G,
-                className: f(t, u.BR.DARK)
+                className: _(t, u.BR.DARK)
             },
             {
                 name: d.intl.string(d.t.K2sFfn),
                 value: u.BR.LIGHT,
                 icon: i.chG,
-                className: f(t, u.BR.LIGHT)
+                className: _(t, u.BR.LIGHT)
             }
         ];
     return (0, r.jsx)(o.sY7, {
-        className: _.themeSelector,
+        className: f.themeSelector,
         options: n,
         value: t,
         onChange: (e) => {

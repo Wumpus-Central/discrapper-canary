@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r,
     i = n(442837),
     a = n(433517),
@@ -23,7 +23,7 @@ function d(e) {
     let { guildId: t } = e;
     ((u[t] = !0), a.K.set(c, u));
 }
-class _ extends (r = i.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     initialize() {
         var e;
         u = null != (e = a.K.get(c)) ? e : u;
@@ -32,5 +32,5 @@ class _ extends (r = i.ZP.Store) {
         return !(null == e || (0, s.dl)()) && (u[e] || !1);
     }
 }
-l(_, 'displayName', 'GuildNSFWAgreeStore');
-let f = new _(o.Z, { GUILD_NSFW_AGREE: d });
+l(f, 'displayName', 'GuildNSFWAgreeStore');
+let _ = new f(o.Z, { GUILD_NSFW_AGREE: d });

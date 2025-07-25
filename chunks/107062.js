@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(841784),
     u = n(429589),
     d = n(499254),
-    _ = n(827498),
-    f = n(541716),
+    f = n(827498),
+    _ = n(541716),
     p = n(706454),
     h = n(823379),
     m = n(5192),
@@ -91,7 +91,7 @@ let R = (e, t) =>
             B = (0, a.e7)([p.default], () => p.default.locale),
             { displayParticipants: V, participant1: F, participant2: Z, numOtherParticipants: H } = (0, E.Z)(n, 3),
             Y = () => {
-                d.__(_._b.TEXT, f.Ie.NORMAL, { applicationId: n.extra.application_id });
+                d.__(f._b.TEXT, _.Ie.NORMAL, { applicationId: n.extra.application_id });
             },
             W = i.useCallback(
                 (e) => {

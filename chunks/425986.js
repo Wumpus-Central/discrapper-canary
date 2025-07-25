@@ -1,5 +1,5 @@
 n.d(t, {
-    M: () => _,
+    M: () => f,
     Z: () => T
 });
 var r,
@@ -59,10 +59,10 @@ function d(e, t) {
         e
     );
 }
-var _ = (function (e) {
+var f = (function (e) {
     return ((e[(e.FETCHING = 0)] = 'FETCHING'), (e[(e.FETCHED = 1)] = 'FETCHED'), (e[(e.ERROR = 2)] = 'ERROR'), e);
 })({});
-let f = [],
+let _ = [],
     p = {},
     h = {},
     m = {};
@@ -136,7 +136,7 @@ class I extends (r = o.ZP.Store) {
                     })
                 ])
             ? t
-            : f;
+            : _;
     }
 }
 l(I, 'displayName', void 0);

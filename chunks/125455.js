@@ -1,4 +1,4 @@
-n.d(t, { e: () => f });
+n.d(t, { e: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(692547),
@@ -60,14 +60,14 @@ function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -76,14 +76,14 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let f = (e) => {
+let _ = (e) => {
     var t,
         n,
-        { size: s = 'md', width: c, height: _, color: f = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = '' } = e,
+        { size: s = 'md', width: c, height: f, color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = '' } = e,
         h = d(e, ['size', 'width', 'height', 'color', 'colorClass']);
     let m = (0, o.m)(s),
         g = null != (t = null == m ? void 0 : m.width) ? t : c,
-        E = null != (n = null == m ? void 0 : m.height) ? n : _;
+        E = null != (n = null == m ? void 0 : m.height) ? n : f;
     return (0, r.jsx)(
         'svg',
         u(l({}, (0, a.Z)(h)), {
@@ -93,7 +93,7 @@ let f = (e) => {
             fill: 'none',
             viewBox: '0 0 24 24',
             children: (0, r.jsx)('path', {
-                fill: 'string' == typeof f ? f : f.css,
+                fill: 'string' == typeof _ ? _ : _.css,
                 fillRule: 'evenodd',
                 d: 'M10.56 1.1c-.46.05-.7.53-.64.98.18 1.16-.19 2.2-.98 2.53-.8.33-1.79-.15-2.49-1.1-.27-.36-.78-.52-1.14-.24-.77.59-1.45 1.27-2.04 2.04-.28.36-.12.87.24 1.14.96.7 1.43 1.7 1.1 2.49-.33.8-1.37 1.16-2.53.98-.45-.07-.93.18-.99.64a11.1 11.1 0 0 0 0 2.88c.06.46.54.7.99.64 1.16-.18 2.2.19 2.53.98.33.8-.14 1.79-1.1 2.49-.36.27-.52.78-.24 1.14.59.77 1.27 1.45 2.04 2.04.36.28.87.12 1.14-.24.7-.95 1.7-1.43 2.49-1.1.8.33 1.16 1.37.98 2.53-.07.45.18.93.64.99a11.1 11.1 0 0 0 2.88 0c.46-.06.7-.54.64-.99-.18-1.16.19-2.2.98-2.53.8-.33 1.79.14 2.49 1.1.27.36.78.52 1.14.24.77-.59 1.45-1.27 2.04-2.04.28-.36.12-.87-.24-1.14-.96-.7-1.43-1.7-1.1-2.49.33-.8 1.37-1.16 2.53-.98.45.07.93-.18.99-.64a11.1 11.1 0 0 0 0-2.88c-.06-.46-.54-.7-.99-.64-1.16.18-2.2-.19-2.53-.98-.33-.8.14-1.79 1.1-2.49.36-.27.52-.78.24-1.14a11.07 11.07 0 0 0-2.04-2.04c-.36-.28-.87-.12-1.14.24-.7.96-1.7 1.43-2.49 1.1-.8-.33-1.16-1.37-.98-2.53.07-.45-.18-.93-.64-.99a11.1 11.1 0 0 0-2.88 0ZM16 12a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z',
                 clipRule: 'evenodd',

@@ -9,8 +9,8 @@ var a = n(213919),
     c = n(627420),
     u = n(347016),
     d = n(781272),
-    _ = n(579806),
-    f = n(627845),
+    f = n(579806),
+    _ = n(627845),
     p = n(675896);
 n(308765);
 var h = n(109117),
@@ -24,11 +24,11 @@ var g = n(981631);
             .then(n.bind(n, 353182))
             .then((e) => e.init()),
     (0, c.yR)(d.Z),
-    (0, o.Y)(a, _.Z),
+    (0, o.Y)(a, f.Z),
     l.ZP.Emitter.injectBatchEmitChanges(s.j),
     (l.ZP.PersistedStore.disableWrites = __OVERLAY__),
     l.ZP.initialize());
 let E = window.GLOBAL_ENV.RELEASE_CHANNEL,
-    b = '423041',
-    y = '208575e540dc5dac76c2d9604a7d58b4d0299d08';
-(new m.Z().log('[BUILD INFO] Release Channel: '.concat(E, ', Build Number: ').concat(b, ', Version Hash: ').concat(y)), i.Z.setTags({ appContext: g.e3s }), f.Z.initBasic(), p.Z.init(), u.d.init(), h.S1());
+    b = '423151',
+    y = '35810c1909f0a8386bf7324c15b1aa389b628702';
+(new m.Z().log('[BUILD INFO] Release Channel: '.concat(E, ', Build Number: ').concat(b, ', Version Hash: ').concat(y)), i.Z.setTags({ appContext: g.e3s }), _.Z.initBasic(), p.Z.init(), u.d.init(), h.S1());

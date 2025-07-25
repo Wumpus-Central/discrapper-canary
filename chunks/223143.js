@@ -1,5 +1,5 @@
 (n.d(t, {
-    ZP: () => _,
+    ZP: () => f,
     c7: () => d
 }),
     n(388685));
@@ -38,11 +38,11 @@ function d() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = (0, s.hv)('useFetchPurchases'),
-        [l, c, u, d, _, f] = (0, i.Wu)([o.Z], () => [o.Z.isFetching, o.Z.isClaiming, o.Z.fetchError, o.Z.claimError, o.Z.purchases, o.Z.hasPreviouslyFetched]),
+        [l, c, u, d, f, _] = (0, i.Wu)([o.Z], () => [o.Z.isFetching, o.Z.isClaiming, o.Z.fetchError, o.Z.claimError, o.Z.purchases, o.Z.hasPreviouslyFetched]),
         p = (0, r.useRef)(o.Z.hasPreviouslyFetched);
     (0, r.useEffect)(() => {
-        p.current = f;
-    }, [f]);
+        p.current = _;
+    }, [_]);
     let h = (0, r.useRef)(o.Z.fetchError);
     return (
         (0, r.useEffect)(() => {
@@ -60,12 +60,12 @@ function d() {
             fetchPurchasesError: u,
             claimError: d,
             isFetching: l,
-            purchases: _,
-            hasPreviouslyFetched: f
+            purchases: f,
+            hasPreviouslyFetched: _
         }
     );
 }
-function _(e, t) {
+function f(e, t) {
     let n = null == e ? void 0 : e.paymentGateway,
         {
             isFetching: r,
@@ -81,14 +81,14 @@ function _(e, t) {
             },
             t
         ),
-        { isClaiming: s, fetchPurchasesError: c, claimError: u, isFetching: _, purchases: f, hasPreviouslyFetched: p } = d(null == e ? void 0 : e.stalePurchasesOK, null == e ? void 0 : e.location);
+        { isClaiming: s, fetchPurchasesError: c, claimError: u, isFetching: f, purchases: _, hasPreviouslyFetched: p } = d(null == e ? void 0 : e.stalePurchasesOK, null == e ? void 0 : e.location);
     return {
-        isFetching: r || _,
+        isFetching: r || f,
         isFetchingCategories: r,
-        isFetchingPurchases: _,
+        isFetchingPurchases: f,
         isClaiming: s,
         categories: i,
-        purchases: f,
+        purchases: _,
         fetchCategoriesError: a,
         fetchPurchasesError: c,
         claimError: u,

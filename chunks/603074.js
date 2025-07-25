@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(100527),
     u = n(906732),
     d = n(28546),
-    _ = n(675478),
-    f = n(208049),
+    f = n(675478),
+    _ = n(208049),
     p = n(763296),
     h = n(526617),
     m = n(268365);
@@ -19,7 +19,7 @@ function g(e) {
         { analyticsLocations: P } = (0, u.ZP)(c.Z.SOUNDBOARD_POPOUT);
     return (
         i.useEffect(() => {
-            (f.w(), _.DZ.loadIfNecessary(), T || (0, d.ql)(''));
+            (_.w(), f.DZ.loadIfNecessary(), T || (0, d.ql)(''));
         }, [T]),
         (0, r.jsx)(u.Gt, {
             value: P,

@@ -8,8 +8,8 @@ var r,
     c = n(570140),
     u = n(503438),
     d = n(768419),
-    _ = n(695346),
-    f = n(581883),
+    f = n(695346),
+    _ = n(581883),
     p = n(630388),
     h = n(780570),
     m = n(77498),
@@ -47,7 +47,7 @@ function x(e) {
 }
 function M(e) {
     let t = m.Z.getGameByName(e);
-    return null != t ? x(t.id) : _.G6.getSetting();
+    return null != t ? x(t.id) : f.G6.getSetting();
 }
 function k(e) {
     var t;
@@ -73,7 +73,7 @@ function U() {
     if (((N = null != (e = g.Z.getIdleSince()) ? e : 0), (R = g.Z.isAFK()), P)) S = A;
     else if (T) S = v.Skl.INVISIBLE;
     else {
-        let e = _.co.getSetting();
+        let e = f.co.getSetting();
         S = e !== v.Skl.UNKNOWN ? e : v.Skl.ONLINE;
     }
     S === v.Skl.ONLINE && N > 0 && (S = v.Skl.IDLE);
@@ -103,7 +103,7 @@ function F() {
 }
 class Z extends (r = l.ZP.Store) {
     initialize() {
-        (this.waitFor(g.Z, f.Z, b.Z, O.Z, E.Z, m.Z), this.syncWith([b.Z], U));
+        (this.waitFor(g.Z, _.Z, b.Z, O.Z, E.Z, m.Z), this.syncWith([b.Z], U));
     }
     getLocalPresence() {
         return {

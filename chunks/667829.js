@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(218887),
     u = n.n(c),
     d = n(729594),
-    _ = n(873546),
-    f = n(430742),
+    f = n(873546),
+    _ = n(430742),
     p = n(166459),
     h = n(911969),
     m = n(476326),
@@ -136,7 +136,7 @@ class k extends i.Component {
             focused: !0,
             submitting: !1
         }),
-            f.Z.saveDraft(e.id, '', t.drafts.type));
+            _.Z.saveDraft(e.id, '', t.drafts.type));
     }
     getCurrentWord() {
         var e;
@@ -199,7 +199,7 @@ class k extends i.Component {
     }
     render() {
         var e, t, n, i, a, s;
-        let { textValue: l, richValue: c, disabled: u, onChange: d, onKeyDown: f, onResize: p, onSubmit: h, channel: m, type: g, useSlate: E, spellcheckEnabled: b, useNewSlashCommands: O, canOnlyUseTextCommands: T, className: N, id: R, required: w, maxCharacterCount: L, allowNewLines: M, 'aria-describedby': k, 'aria-labelledby': j, accessibilityLabel: U } = this.props,
+        let { textValue: l, richValue: c, disabled: u, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, useSlate: E, spellcheckEnabled: b, useNewSlashCommands: O, canOnlyUseTextCommands: T, className: N, id: R, required: w, maxCharacterCount: L, allowNewLines: M, 'aria-describedby': k, 'aria-labelledby': j, accessibilityLabel: U } = this.props,
             { submitting: G, popup: B } = this.state,
             V = {
                 channel: m,
@@ -225,7 +225,7 @@ class k extends i.Component {
                 allowNewLines: M,
                 onChange: d,
                 onResize: p,
-                onKeyDown: f,
+                onKeyDown: _,
                 onSubmit: h,
                 textAreaPaddingClassName: o()({
                     [P.textAreaForPostCreation]: g === v.Ie.CREATE_FORUM_POST,
@@ -235,7 +235,7 @@ class k extends i.Component {
                 }),
                 spellcheckEnabled: b,
                 useNewSlashCommands: O,
-                disableAutoFocus: _.tq || (null != (n = g.disableAutoFocus) && n),
+                disableAutoFocus: f.tq || (null != (n = g.disableAutoFocus) && n),
                 disableEnterToSubmit: null != (i = null == (e = g.submit) ? void 0 : e.disableEnterToSubmit) && i,
                 'aria-controls': null != (a = B.id) ? a : void 0,
                 'aria-haspopup': 'listbox',
@@ -322,7 +322,7 @@ class k extends i.Component {
                 return null == (e = (t = this.props).onHideAutocomplete) ? void 0 : e.call(t);
             }),
             w(this, 'handleSaveCurrentText', (e) => {
-                f.Z.saveDraft(e, this.props.textValue, this.props.type.drafts.type);
+                _.Z.saveDraft(e, this.props.textValue, this.props.type.drafts.type);
             }),
             w(this, 'handleClearText', () => {
                 var e, t;

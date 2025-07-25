@@ -1,5 +1,5 @@
 (n.d(t, {
-    C: () => f,
+    C: () => _,
     u: () => h
 }),
     n(388685));
@@ -12,8 +12,8 @@ var r = n(149765),
     c = n(637853),
     u = n(290511),
     d = n(981631),
-    _ = n(388032);
-async function f(e, t) {
+    f = n(388032);
+async function _(e, t) {
     return (
         null == e ||
         (await p(e, t, {
@@ -29,11 +29,11 @@ async function p(e, t, n) {
     let a = null != i && (null == (r = i.features) ? void 0 : r.has(d.oNc.GUILD_ONBOARDING));
     if (!a) return !0;
     a && l.Z.shouldFetchPrompts(e) && (await (0, s.eM)(e));
-    let _ = l.Z.getDefaultChannelIds(e),
-        [f, p] = (0, c.d9)(e, _);
-    if (!_.includes(t)) return !0;
+    let f = l.Z.getDefaultChannelIds(e),
+        [_, p] = (0, c.d9)(e, f);
+    if (!f.includes(t)) return !0;
     let h = n.removingView && p.length - 1 < u.md,
-        m = (n.removingChat || n.removingView) && f.length - 1 < u.X;
+        m = (n.removingChat || n.removingView) && _.length - 1 < u.X;
     return !h && !m;
 }
 async function h(e, t, n) {
@@ -51,8 +51,8 @@ async function h(e, t, n) {
         (!c.removingChat && !c.removingView) ||
             !!(await p(o, e.id, c)) ||
             (i.Z.show({
-                title: _.intl.string(_.t.ut7sq6),
-                body: _.intl.format(_.t['Zaz+ur'], {
+                title: f.intl.string(f.t.ut7sq6),
+                body: f.intl.format(f.t['Zaz+ur'], {
                     onClick: () => {
                         (i.Z.close(), a.Z.open(o, d.pNK.ONBOARDING));
                     }

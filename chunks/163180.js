@@ -37,13 +37,13 @@ e.exports = function (e) {
             relevance: 0
         },
         d = { begin: n },
-        _ = {
+        f = {
             begin: '\\(',
             end: '\\)',
             contains: ['self', i, o, a, u]
         },
-        f = {
-            contains: [a, o, l, c, _, u],
+        _ = {
+            contains: [a, o, l, c, f, u],
             variants: [
                 {
                     begin: "['`]\\(",
@@ -82,11 +82,11 @@ e.exports = function (e) {
             },
             m
         ]),
-        (m.contains = [f, p, h, i, a, o, s, l, c, d, u]),
+        (m.contains = [_, p, h, i, a, o, s, l, c, d, u]),
         {
             name: 'Lisp',
             illegal: /\S/,
-            contains: [a, e.SHEBANG(), i, o, s, f, p, h, u]
+            contains: [a, e.SHEBANG(), i, o, s, _, p, h, u]
         }
     );
 };

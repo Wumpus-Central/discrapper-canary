@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var r,
     i = n(442837),
-    s = n(570140);
-function l(e, t, n) {
+    l = n(570140);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,8 +35,8 @@ class c extends (r = i.ZP.PersistedStore) {
         return o;
     }
 }
-(l(c, 'displayName', 'ChannelListVoiceCategoryStore'), l(c, 'persistKey', 'ChannelListVoiceCategoryStore'));
-let u = new c(s.Z, {
+(s(c, 'displayName', 'ChannelListVoiceCategoryStore'), s(c, 'persistKey', 'ChannelListVoiceCategoryStore'));
+let u = new c(l.Z, {
     VOICE_CATEGORY_COLLAPSE: a,
     VOICE_CATEGORY_EXPAND: a
 });

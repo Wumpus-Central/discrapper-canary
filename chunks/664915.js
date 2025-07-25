@@ -32,11 +32,11 @@ function d(e) {
     let { folderId: t, expanded: n } = e;
     ((l = new Set(l)), n ? l.add(t) : l.has(t) && l.delete(t));
 }
-function _() {
+function f() {
     if (0 === l.size) return !1;
     l = new Set();
 }
-class f extends (r = i.ZP.PersistedStore) {
+class _ extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         (null != e && (l = new Set(e.expandedFolders)), this.waitFor(o.Z));
     }
@@ -50,10 +50,10 @@ class f extends (r = i.ZP.PersistedStore) {
         return l.has(e);
     }
 }
-(s(f, 'displayName', 'ExpandedGuildFolderStore'), s(f, 'persistKey', 'ExpandedGuildFolderStore'));
-let p = new f(a.Z, {
+(s(_, 'displayName', 'ExpandedGuildFolderStore'), s(_, 'persistKey', 'ExpandedGuildFolderStore'));
+let p = new _(a.Z, {
     TOGGLE_GUILD_FOLDER_EXPAND: u,
     SET_GUILD_FOLDER_EXPANDED: d,
     USER_SETTINGS_PROTO_UPDATE: c,
-    GUILD_FOLDER_COLLAPSE: _
+    GUILD_FOLDER_COLLAPSE: f
 });

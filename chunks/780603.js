@@ -11,10 +11,10 @@ function s(e, t) {
         c,
         u,
         d,
-        _,
         f,
+        _,
         p = (0, o.j)(),
-        h = (0, a.Z)(null != (n = null != (s = null != (l = null != (c = null == t ? void 0 : t.weekStartsOn) ? c : null == t || null == (u = t.locale) || null == (d = u.options) ? void 0 : d.weekStartsOn) ? l : p.weekStartsOn) ? s : null == (_ = p.locale) || null == (f = _.options) ? void 0 : f.weekStartsOn) ? n : 0);
+        h = (0, a.Z)(null != (n = null != (s = null != (l = null != (c = null == t ? void 0 : t.weekStartsOn) ? c : null == t || null == (u = t.locale) || null == (d = u.options) ? void 0 : d.weekStartsOn) ? l : p.weekStartsOn) ? s : null == (f = p.locale) || null == (_ = f.options) ? void 0 : _.weekStartsOn) ? n : 0);
     if (!(h >= 0 && h <= 6)) throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
     var m = (0, r.default)(e),
         g = m.getUTCDay(),

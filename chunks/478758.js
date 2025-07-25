@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(539854));
+(n.d(t, { Z: () => _ }), n(539854));
 var r = n(255367);
 n(73800);
 var i = n(392711),
@@ -22,17 +22,17 @@ let u = 99,
                   })
               });
     },
-    _ = (0, s.Z)(d),
-    f = (e) => {
+    f = (0, s.Z)(d),
+    _ = (e) => {
         let { partySize: t, members: n, minAvatarsShown: i = 1, maxAvatarsShown: o = 2, guildId: s } = e,
-            { totalSize: d, knownSize: f } = t;
+            { totalSize: d, knownSize: _ } = t;
         if (d < i) return null;
         let p = a()(n)
                 .filter(l.lm)
                 .take(o)
                 .map((e) =>
                     (0, r.jsx)(
-                        _,
+                        f,
                         {
                             member: e,
                             guildId: s
@@ -41,11 +41,11 @@ let u = 99,
                     )
                 )
                 .value(),
-            h = d - f;
+            h = d - _;
         for (let e = 0; e < h && p.length < o; e++)
             p.push(
                 (0, r.jsx)(
-                    _,
+                    f,
                     {
                         empty: !0,
                         guildId: s
@@ -58,7 +58,7 @@ let u = 99,
             let e = n[o];
             p.push(
                 (0, r.jsx)(
-                    _,
+                    f,
                     {
                         member: e,
                         guildId: s

@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(871499),
     u = n(388032),
     d = n(321575);
-function _(e) {
+function f(e) {
     let { className: t, isVertical: n } = e;
     return (0, r.jsxs)('div', {
         className: d.iconContainer,
@@ -26,7 +26,7 @@ function _(e) {
         ]
     });
 }
-function f(e) {
+function _(e) {
     let { className: t, isVertical: n } = e;
     return (0, r.jsxs)('div', {
         className: d.iconContainer,
@@ -54,11 +54,11 @@ function p(e) {
         (e) => {
             let { className: t } = e;
             return a
-                ? (0, r.jsx)(f, {
+                ? (0, r.jsx)(_, {
                       className: t,
                       isVertical: s
                   })
-                : (0, r.jsx)(_, {
+                : (0, r.jsx)(f, {
                       className: t,
                       isVertical: s
                   });

@@ -61,12 +61,12 @@ function u(e, t) {
 var d = (function (e) {
     return ((e[(e.NotResolved = 0)] = 'NotResolved'), (e[(e.Resolving = 1)] = 'Resolving'), (e[(e.Resolved = 2)] = 'Resolved'), (e[(e.Invalid = 3)] = 'Invalid'), e);
 })({});
-let _ = 0,
-    f = null,
+let f = 0,
+    _ = null,
     p = {};
 function h() {
-    0 === _ &&
-        ((_ = 1),
+    0 === f &&
+        ((f = 1),
         (0, o.Ce)().then((e) => {
             a.Z.dispatch({
                 type: 'CURRENT_BUILD_OVERRIDE_RESOLVED',
@@ -76,7 +76,7 @@ function h() {
 }
 function m(e) {
     let { overrides: t } = e;
-    ((_ = 2), (f = t));
+    ((f = 2), (_ = t));
 }
 function g(e) {
     if (e in p) return;
@@ -121,8 +121,8 @@ class b extends (r = i.ZP.Store) {
         return (
             h(),
             {
-                state: _,
-                overrides: f
+                state: f,
+                overrides: _
             }
         );
     }

@@ -19,8 +19,8 @@ var r = n(683860),
     c = n(703558),
     u = n(496675),
     d = n(117530),
-    _ = n(709054),
-    f = n(660189),
+    f = n(709054),
+    _ = n(660189),
     p = n(559241),
     h = n(474387),
     m = n(702225),
@@ -110,7 +110,7 @@ function C(e, t) {
     return Object.keys(i.Z.getThreadsForParent(e, t)).length;
 }
 function R(e) {
-    let { loaded: t, firstMessage: n } = f.Z.getMessage(e);
+    let { loaded: t, firstMessage: n } = _.Z.getMessage(e);
     return t ? n : null;
 }
 function P(e) {
@@ -165,8 +165,8 @@ function x(e) {
 }
 function M(e) {
     var t, n, r, i, c, u, d;
-    let { channelId: f, sessionId: p } = e,
-        m = l.Z.getChannel(f);
+    let { channelId: _, sessionId: p } = e,
+        m = l.Z.getChannel(_);
     if (null == m || !m.isForumPost()) return null;
     let g = l.Z.getChannel(m.parent_id);
     return null != g && g.isForumLikeChannel()
@@ -179,14 +179,14 @@ function M(e) {
                   })
               ),
               {
-                  thread_approximate_member_count: o.Z.getMemberCount(f),
-                  thread_approximate_message_count: s.Z.getCount(f),
+                  thread_approximate_member_count: o.Z.getMemberCount(_),
+                  thread_approximate_message_count: s.Z.getCount(_),
                   thread_archived: (null == (t = m.threadMetadata) ? void 0 : t.archived) === !0,
                   thread_locked: null != (u = null == (n = m.threadMetadata) ? void 0 : n.locked) && u,
                   thread_auto_archive_duration_minutes: null != (d = null == (r = m.threadMetadata) ? void 0 : r.autoArchiveDuration) ? d : 0,
-                  thread_approximate_creation_date: _.default.extractTimestamp(f),
+                  thread_approximate_creation_date: f.default.extractTimestamp(_),
                   forum_post_id: m.id,
-                  forum_post_first_message_id: _.default.castChannelIdAsMessageId(m.id),
+                  forum_post_first_message_id: f.default.castChannelIdAsMessageId(m.id),
                   forum_post_num_reactions: w(m.id),
                   forum_post_num_unique_reactions: P(m.id),
                   forum_post_applied_tag_ids: D(m.id),

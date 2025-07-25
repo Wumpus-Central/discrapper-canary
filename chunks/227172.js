@@ -11,8 +11,8 @@ var r = n(255367),
     c = n(841784),
     u = n(420660),
     d = n(429589),
-    _ = n(757182),
-    f = n(706454),
+    f = n(757182),
+    _ = n(706454),
     p = n(374129),
     h = n(639351),
     m = n(823379),
@@ -75,7 +75,7 @@ let x = {
             { largeImage: j } = (0, g.rv)({ entry: n }),
             { user: U, details: G, appName: B, activity: V } = (0, R.n)(n),
             { primaryColor: F, secondaryColor: Z } = (0, T.Z)(null == j ? void 0 : j.src),
-            H = (0, o.e7)([f.default], () => f.default.locale),
+            H = (0, o.e7)([_.default], () => _.default.locale),
             { streamPreviewUrl: Y, stream: W } = (0, b.Z)(n),
             { displayParticipants: K, participant1: z, participant2: q, numOtherParticipants: X } = (0, E.Z)(n, 3),
             Q = n.extra.platform,
@@ -152,7 +152,7 @@ let x = {
                       })
                     : null,
                 (0, u.Z)(V)
-                    ? (0, r.jsx)(_.Z, {
+                    ? (0, r.jsx)(f.Z, {
                           activity: V,
                           ButtonComponent: (e) => (0, r.jsx)(N.Ll, L({ IconComponent: s.tEF }, e))
                       })

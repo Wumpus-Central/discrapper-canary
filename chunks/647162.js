@@ -1,6 +1,6 @@
 (n.d(t, {
     KV: () => p,
-    PY: () => f,
+    PY: () => _,
     Wo: () => h,
     iy: () => E,
     yp: () => m
@@ -17,8 +17,8 @@ var r = n(763472),
     c = n(768419),
     u = n(616922),
     d = n(981631);
-let _ = 30 * o.Z.Millis.SECOND;
-function f(e) {
+let f = 30 * o.Z.Millis.SECOND;
+function _(e) {
     return null != e.getActiveSocketAndDevice() || l.Z.isProtocolRegistered();
 }
 function p() {
@@ -39,7 +39,7 @@ function p() {
     return new Promise((e, n) => {
         let r = setTimeout(() => {
                 (c.Z.removeChangeListener(i), n(Error('timeout launching spotify')));
-            }, _),
+            }, f),
             i = () => {
                 for (let { socket: n, device: a } of c.Z.getPlayableComputerDevices())
                     null == t.find((e) => e.device.id === a.id) &&

@@ -14,7 +14,7 @@ var r = n(373793),
     c = n(630388),
     u = n(358085),
     d = n(981631);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +38,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -71,14 +71,14 @@ class m extends i.Z {
         return (0, c.yE)(this.flags, e);
     }
     constructor(e) {
-        var t, n, r, i, a, o, s, l, c, u, f, p, h;
-        (super(), _(this, 'type', void 0), _(this, 'content', void 0), _(this, 'attachments', void 0), _(this, 'embeds', void 0), _(this, 'timestamp', void 0), _(this, 'editedTimestamp', void 0), _(this, 'flags', void 0), _(this, 'components', void 0), _(this, 'codedLinks', void 0), _(this, 'stickers', void 0), _(this, 'stickerItems', void 0), _(this, 'soundboardSounds', void 0), (this.type = null != (t = e.type) ? t : d.uaV.DEFAULT), (this.content = null != (n = e.content) ? n : ''), (this.attachments = null != (r = e.attachments) ? r : []), (this.embeds = null != (i = e.embeds) ? i : []), (this.timestamp = null != (a = e.timestamp) ? a : new Date()), (this.editedTimestamp = null != (o = e.editedTimestamp) ? o : null), (this.flags = null != (s = e.flags) ? s : 0), (this.components = null != (l = e.components) ? l : []), (this.codedLinks = null != (c = e.codedLinks) ? c : []), (this.stickers = null != (u = e.stickers) ? u : []), (this.stickerItems = null != (p = null != (f = e.sticker_items) ? f : e.stickerItems) ? p : []), (this.soundboardSounds = null != (h = e.soundboard_sounds) ? h : e.soundboardSounds));
+        var t, n, r, i, a, o, s, l, c, u, _, p, h;
+        (super(), f(this, 'type', void 0), f(this, 'content', void 0), f(this, 'attachments', void 0), f(this, 'embeds', void 0), f(this, 'timestamp', void 0), f(this, 'editedTimestamp', void 0), f(this, 'flags', void 0), f(this, 'components', void 0), f(this, 'codedLinks', void 0), f(this, 'stickers', void 0), f(this, 'stickerItems', void 0), f(this, 'soundboardSounds', void 0), (this.type = null != (t = e.type) ? t : d.uaV.DEFAULT), (this.content = null != (n = e.content) ? n : ''), (this.attachments = null != (r = e.attachments) ? r : []), (this.embeds = null != (i = e.embeds) ? i : []), (this.timestamp = null != (a = e.timestamp) ? a : new Date()), (this.editedTimestamp = null != (o = e.editedTimestamp) ? o : null), (this.flags = null != (s = e.flags) ? s : 0), (this.components = null != (l = e.components) ? l : []), (this.codedLinks = null != (c = e.codedLinks) ? c : []), (this.stickers = null != (u = e.stickers) ? u : []), (this.stickerItems = null != (p = null != (_ = e.sticker_items) ? _ : e.stickerItems) ? p : []), (this.soundboardSounds = null != (h = e.soundboard_sounds) ? h : e.soundboardSounds));
     }
 }
 class g extends i.Z {
     constructor(e) {
         var t;
-        (super(), _(this, 'message', void 0), _(this, 'moderatorReport', void 0), (this.message = new m(e.message)), (this.moderatorReport = null != (t = e.moderator_report) ? t : null));
+        (super(), f(this, 'message', void 0), f(this, 'moderatorReport', void 0), (this.message = new m(e.message)), (this.moderatorReport = null != (t = e.moderator_report) ? t : null));
     }
 }
 class E extends m {
@@ -114,10 +114,10 @@ class E extends m {
                         if (t && o.me) return o;
                         let e = t && o.me_burst ? o.burst_count : o.burst_count + 1,
                             r = null != o.burst_colors && o.burst_colors.length > 0 ? o.burst_colors : n;
-                        o = h(f({}, o), {
+                        o = h(_({}, o), {
                             me_burst: !!t || o.me_burst,
                             burst_count: e,
-                            count_details: h(f({}, o.count_details), { burst: e }),
+                            count_details: h(_({}, o.count_details), { burst: e }),
                             burst_colors: r,
                             themedBurstColors: (0, a.u)({
                                 colors: r,
@@ -125,19 +125,19 @@ class E extends m {
                             })
                         });
                     } else if (r === s.O.VOTE) {
-                        var d, _;
-                        let e = null != (_ = null == (d = o.count_details) ? void 0 : d.vote) ? _ : 0,
+                        var d, f;
+                        let e = null != (f = null == (d = o.count_details) ? void 0 : d.vote) ? f : 0,
                             n = t && o.me_vote ? e : e + 1;
-                        o = h(f({}, o), {
-                            count_details: h(f({}, o.count_details), { vote: n }),
+                        o = h(_({}, o), {
+                            count_details: h(_({}, o.count_details), { vote: n }),
                             me_vote: !!t || o.me_vote
                         });
                     } else {
                         if (t && o.me_burst) return o;
                         let e = t && o.me ? o.count : o.count + 1;
-                        o = h(f({}, o), {
+                        o = h(_({}, o), {
                             count: e,
-                            count_details: h(f({}, o.count_details), { normal: e }),
+                            count_details: h(_({}, o.count_details), { normal: e }),
                             me: !!t || o.me
                         });
                     }
@@ -207,36 +207,36 @@ class E extends m {
                 if ((0, l.ir)(t.emoji, e)) {
                     if (o === s.O.BURST) {
                         let e = a && !t.me_burst ? t.burst_count : t.burst_count - 1;
-                        t = h(f({}, t), {
+                        t = h(_({}, t), {
                             burst_count: e,
                             me_burst: !a && t.me_burst,
-                            count_details: h(f({}, t.count_details), { burst: e })
+                            count_details: h(_({}, t.count_details), { burst: e })
                         });
                     } else if (o === s.O.VOTE) {
                         var r, i;
                         let e = null != (i = null == (r = t.count_details) ? void 0 : r.vote) ? i : 0,
                             n = a && !t.me_vote ? e : e - 1;
-                        t = h(f({}, t), {
-                            count_details: h(f({}, t.count_details), { vote: n }),
+                        t = h(_({}, t), {
+                            count_details: h(_({}, t.count_details), { vote: n }),
                             me_vote: !a && t.me_vote
                         });
                     } else {
                         let e = a && !t.me ? t.count : t.count - 1;
-                        t = h(f({}, t), {
+                        t = h(_({}, t), {
                             count: e,
                             me: !a && t.me,
-                            count_details: h(f({}, t.count_details), { normal: e })
+                            count_details: h(_({}, t.count_details), { normal: e })
                         });
                     }
                     c = n;
                 }
                 return t;
             }),
-            { count: d, burst_count: _, count_details: p } = null != (t = u[c]) ? t : {},
+            { count: d, burst_count: f, count_details: p } = null != (t = u[c]) ? t : {},
             m = null != (n = null == p ? void 0 : p.normal) ? n : 0,
             g = null != (r = null == p ? void 0 : p.burst) ? r : 0,
             E = null != (i = null == p ? void 0 : p.vote) ? i : 0;
-        return (-1 !== c && d <= 0 && _ <= 0 && m <= 0 && g <= 0 && E <= 0 && u.splice(c, 1), this.set('reactions', u));
+        return (-1 !== c && d <= 0 && f <= 0 && m <= 0 && g <= 0 && E <= 0 && u.splice(c, 1), this.set('reactions', u));
     }
     removeReactionsForEmoji(e) {
         return this.set(
@@ -270,7 +270,7 @@ class E extends m {
         return (null == (n = this.interactionMetadata) ? void 0 : n.user.id) === e && 1 === Object.keys(a).length && r.Y.USER_INSTALL in a;
     }
     toJS() {
-        return h(f({}, this), {
+        return h(_({}, this), {
             webkhook_id: this.webhookId,
             edited_timestamp: this.editedTimestamp,
             mention_everyone: this.mentionEveryone
@@ -281,7 +281,7 @@ class E extends m {
     }
     constructor(e) {
         var t, n, r;
-        (super(e), _(this, 'id', void 0), _(this, 'channel_id', void 0), _(this, 'author', void 0), _(this, 'bot', void 0), _(this, 'customRenderedContent', void 0), _(this, 'pinned', void 0), _(this, 'mentions', void 0), _(this, 'mentionRoles', void 0), _(this, 'mentionChannels', void 0), _(this, 'mentionEveryone', void 0), _(this, 'mentioned', void 0), _(this, 'tts', void 0), _(this, 'giftCodes', void 0), _(this, 'state', void 0), _(this, 'nonce', void 0), _(this, 'blocked', void 0), _(this, 'ignored', void 0), _(this, 'call', void 0), _(this, 'webhookId', void 0), _(this, 'reactions', void 0), _(this, 'applicationId', void 0), _(this, 'application', void 0), _(this, 'activity', void 0), _(this, 'activityInstance', void 0), _(this, 'interaction', void 0), _(this, 'interactionData', void 0), _(this, 'interactionMetadata', void 0), _(this, 'interactionError', void 0), _(this, 'messageReference', void 0), _(this, 'isSearchHit', void 0), _(this, 'roleSubscriptionData', void 0), _(this, 'purchaseNotification', void 0), _(this, 'poll', void 0), _(this, 'potions', void 0), _(this, 'loggingName', void 0), _(this, 'referralTrialOfferId', void 0), _(this, 'giftInfo', void 0), _(this, 'giftingPrompt', void 0), _(this, 'messageSnapshots', void 0), _(this, 'isUnsupported', void 0), _(this, 'changelogId', void 0), _(this, 'chatWallpaperInfo', void 0), _(this, 'colorString', void 0), _(this, 'nick', void 0), (this.id = e.id), (this.channel_id = e.channel_id), (this.author = e.author), (this.customRenderedContent = e.customRenderedContent), (this.mentions = e.mentions || []), (this.mentionRoles = e.mentionRoles || []), (this.mentionChannels = e.mentionChannels || []), (this.mentioned = e.mentioned || !1), (this.pinned = e.pinned || !1), (this.mentionEveryone = e.mentionEveryone || !1), (this.tts = e.tts || !1), (this.giftCodes = e.giftCodes || []), (this.state = e.state || d.yb.SENT), (this.nonce = null != (t = e.nonce) ? t : void 0), (this.blocked = e.blocked || !1), (this.ignored = e.ignored || !1), (this.call = e.call || null), (this.bot = e.bot || !1), (this.webhookId = e.webhookId || null), (this.reactions = e.reactions || []), (this.applicationId = e.application_id || e.applicationId || null), (this.application = e.application || null), (this.activity = e.activity || null), (this.activityInstance = e.activity_instance || e.activityInstance || null), (this.messageReference = e.messageReference || null), (this.isSearchHit = e.hit || e.isSearchHit || !1), (this.loggingName = e.loggingName || null), (this.colorString = e.colorString), (this.nick = e.nick), (this.interaction = e.interaction || null), (this.interactionData = e.interactionData || null), (this.interactionMetadata = e.interactionMetadata || null), (this.interactionError = e.interactionError || null), (this.roleSubscriptionData = e.roleSubscriptionData), (this.purchaseNotification = e.purchaseNotification), (this.poll = e.poll), (this.potions = e.potions), (this.referralTrialOfferId = e.referralTrialOfferId || null), (this.giftInfo = null != (n = e.gift_info) ? n : e.giftInfo), (this.giftingPrompt = e.giftingPrompt || null), (this.messageSnapshots = e.messageSnapshots || []), (this.isUnsupported = e.isUnsupported || !1), (this.changelogId = null != (r = e.changelog_id) ? r : e.changelogId || null), (this.chatWallpaperInfo = e.chatWallpaperInfo || null));
+        (super(e), f(this, 'id', void 0), f(this, 'channel_id', void 0), f(this, 'author', void 0), f(this, 'bot', void 0), f(this, 'customRenderedContent', void 0), f(this, 'pinned', void 0), f(this, 'mentions', void 0), f(this, 'mentionRoles', void 0), f(this, 'mentionChannels', void 0), f(this, 'mentionEveryone', void 0), f(this, 'mentioned', void 0), f(this, 'tts', void 0), f(this, 'giftCodes', void 0), f(this, 'state', void 0), f(this, 'nonce', void 0), f(this, 'blocked', void 0), f(this, 'ignored', void 0), f(this, 'call', void 0), f(this, 'webhookId', void 0), f(this, 'reactions', void 0), f(this, 'applicationId', void 0), f(this, 'application', void 0), f(this, 'activity', void 0), f(this, 'activityInstance', void 0), f(this, 'interaction', void 0), f(this, 'interactionData', void 0), f(this, 'interactionMetadata', void 0), f(this, 'interactionError', void 0), f(this, 'messageReference', void 0), f(this, 'isSearchHit', void 0), f(this, 'roleSubscriptionData', void 0), f(this, 'purchaseNotification', void 0), f(this, 'poll', void 0), f(this, 'potions', void 0), f(this, 'loggingName', void 0), f(this, 'referralTrialOfferId', void 0), f(this, 'giftInfo', void 0), f(this, 'giftingPrompt', void 0), f(this, 'messageSnapshots', void 0), f(this, 'isUnsupported', void 0), f(this, 'changelogId', void 0), f(this, 'chatWallpaperInfo', void 0), f(this, 'colorString', void 0), f(this, 'nick', void 0), (this.id = e.id), (this.channel_id = e.channel_id), (this.author = e.author), (this.customRenderedContent = e.customRenderedContent), (this.mentions = e.mentions || []), (this.mentionRoles = e.mentionRoles || []), (this.mentionChannels = e.mentionChannels || []), (this.mentioned = e.mentioned || !1), (this.pinned = e.pinned || !1), (this.mentionEveryone = e.mentionEveryone || !1), (this.tts = e.tts || !1), (this.giftCodes = e.giftCodes || []), (this.state = e.state || d.yb.SENT), (this.nonce = null != (t = e.nonce) ? t : void 0), (this.blocked = e.blocked || !1), (this.ignored = e.ignored || !1), (this.call = e.call || null), (this.bot = e.bot || !1), (this.webhookId = e.webhookId || null), (this.reactions = e.reactions || []), (this.applicationId = e.application_id || e.applicationId || null), (this.application = e.application || null), (this.activity = e.activity || null), (this.activityInstance = e.activity_instance || e.activityInstance || null), (this.messageReference = e.messageReference || null), (this.isSearchHit = e.hit || e.isSearchHit || !1), (this.loggingName = e.loggingName || null), (this.colorString = e.colorString), (this.nick = e.nick), (this.interaction = e.interaction || null), (this.interactionData = e.interactionData || null), (this.interactionMetadata = e.interactionMetadata || null), (this.interactionError = e.interactionError || null), (this.roleSubscriptionData = e.roleSubscriptionData), (this.purchaseNotification = e.purchaseNotification), (this.poll = e.poll), (this.potions = e.potions), (this.referralTrialOfferId = e.referralTrialOfferId || null), (this.giftInfo = null != (n = e.gift_info) ? n : e.giftInfo), (this.giftingPrompt = e.giftingPrompt || null), (this.messageSnapshots = e.messageSnapshots || []), (this.isUnsupported = e.isUnsupported || !1), (this.changelogId = null != (r = e.changelog_id) ? r : e.changelogId || null), (this.chatWallpaperInfo = e.chatWallpaperInfo || null));
     }
 }
 let b = E;

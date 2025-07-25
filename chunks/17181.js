@@ -12,8 +12,8 @@ var r = n(512722),
     c = n(745752),
     u = n(819553),
     d = n(679240),
-    _ = n(981631),
-    f = n(176505);
+    f = n(981631),
+    _ = n(176505);
 let p = {};
 function h(e) {
     var t;
@@ -26,13 +26,13 @@ async function g(e) {
     let { guildId: t, returnChannelId: n, isPreview: r = !1 } = e;
     ((0, a.pTH)(), i()(null == p[t], 'should not double-join guilds'));
     let l = await (0, o.V)(t);
-    if (l.features.has(_.oNc.COMMUNITY)) {
+    if (l.features.has(f.oNc.COMMUNITY)) {
         if (r) (0, c.I1)(t);
         else {
-            if (!l.features.has(_.oNc.GUILD_ONBOARDING)) return;
+            if (!l.features.has(f.oNc.GUILD_ONBOARDING)) return;
             await (0, c.rK)(t);
         }
-        u.ZP.shouldShowOnboarding(t) && (await E(t), null != n && (0, s.uL)(_.Z5c.CHANNEL(t, n)));
+        u.ZP.shouldShowOnboarding(t) && (await E(t), null != n && (0, s.uL)(f.Z5c.CHANNEL(t, n)));
     }
 }
 function E(e) {
@@ -41,7 +41,7 @@ function E(e) {
             (0, d.x)(e).then(() => {
                 (h(e), l.Z.finishOnboarding(e));
             }),
-            (0, s.uL)(_.Z5c.CHANNEL(e, f.oC.GUILD_ONBOARDING)));
+            (0, s.uL)(f.Z5c.CHANNEL(e, _.oC.GUILD_ONBOARDING)));
     });
 }
 function b(e) {

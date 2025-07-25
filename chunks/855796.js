@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(544891),
     i = n(780384),
     a = n(668781),
@@ -39,7 +39,7 @@ async function d(e) {
         c(e);
     }
 }
-let _ = {
+let f = {
     removeGameFriend: async function (e) {
         let { userId: t, applicationId: n } = e;
         await d({

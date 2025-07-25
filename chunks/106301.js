@@ -6,7 +6,7 @@ var o,
     c = n(442837),
     u = n(570140),
     d = n(981631);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,7 +30,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -112,7 +112,7 @@ function v(e) {
 }
 class I extends (o = c.ZP.PersistedStore) {
     initialize(e) {
-        m = f({}, g(), null != e ? e : {});
+        m = _({}, g(), null != e ? e : {});
     }
     getState() {
         return m;
@@ -133,7 +133,7 @@ class I extends (o = c.ZP.PersistedStore) {
         return null == r ? null : a;
     }
 }
-(_(I, 'displayName', 'HangStatusStore'), _(I, 'persistKey', 'HangStatusStore'));
+(f(I, 'displayName', 'HangStatusStore'), f(I, 'persistKey', 'HangStatusStore'));
 let T = new I(u.Z, {
     LOGOUT: E,
     UPDATE_HANG_STATUS: b,

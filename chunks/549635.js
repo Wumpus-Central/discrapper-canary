@@ -13,8 +13,8 @@ var r = n(255367),
     c = n(524444),
     u = n(52824),
     d = n(630388),
-    _ = n(589530),
-    f = n(591759),
+    f = n(589530),
+    _ = n(591759),
     p = n(212459),
     h = n(116475),
     m = n(986261);
@@ -99,17 +99,17 @@ function I(e, t) {
     });
 }
 function T(e) {
-    let t = f.Z.toURLSafe(e);
+    let t = _.Z.toURLSafe(e);
     return null == t ? null : (t.searchParams.append('format', 'webp'), t.toString());
 }
 function S(e) {
     let t,
         { media: n, obscured: i = !1, maxWidth: a, maxHeight: l, onContextMenu: u } = e,
-        { width: d, height: f, url: g, proxyUrl: b, alt: v, type: I, maxWidth: S, maxHeight: A } = n,
+        { width: d, height: _, url: g, proxyUrl: b, alt: v, type: I, maxWidth: S, maxHeight: A } = n,
         C = O(n, ['width', 'height', 'url', 'proxyUrl', 'alt', 'type', 'maxWidth', 'maxHeight']),
         { zoomed: R } = (0, p.Y)(),
         P = N(R, g, b),
-        w = null != d && 0 !== d && null != f && 0 !== f;
+        w = null != d && 0 !== d && null != _ && 0 !== _;
     if ('VIDEO' === I && w && null != b) {
         var D;
         let e = T(b);
@@ -120,16 +120,16 @@ function S(e) {
             y(E({}, C), {
                 src: P,
                 width: d,
-                height: f,
+                height: _,
                 maxWidth: a,
                 maxHeight: l,
                 poster: e,
                 naturalWidth: d,
-                naturalHeight: f,
-                volume: _.FC,
-                autoMute: _.rs,
-                onVolumeChange: _.jA,
-                onMute: _.Zj,
+                naturalHeight: _,
+                volume: f.FC,
+                autoMute: f.rs,
+                onVolumeChange: f.jA,
+                onMute: f.Zj,
                 renderLinkComponent: t,
                 autoPlay: !i,
                 alt: v,
@@ -146,7 +146,7 @@ function S(e) {
                       y(E({}, C), {
                           src: P,
                           width: d,
-                          height: f,
+                          height: _,
                           maxWidth: a,
                           maxHeight: l,
                           useFullWidth: !0,
@@ -173,7 +173,7 @@ function S(e) {
 }
 let A = i.memo(S);
 function N(e, t, n) {
-    return e && f.Z.isDiscordAssetUrl(t)
+    return e && _.Z.isDiscordAssetUrl(t)
         ? (0, l.s$)(t)
         : (0, u.q)({
               proxyURL: n,

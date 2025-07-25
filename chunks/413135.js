@@ -12,7 +12,7 @@ function l(e) {
 function c(e, t, n) {
     if ('number' == typeof e) {
         if ('string' == typeof t) throw TypeError('The "string" argument must be of type string. Received type number');
-        return f(e);
+        return _(e);
     }
     return u(e, t, n);
 }
@@ -33,10 +33,10 @@ function d(e) {
     if ('number' != typeof e) throw TypeError('"size" argument must be of type number');
     if (e < 0) throw RangeError('The value "' + e + '" is invalid for option "size"');
 }
-function _(e, t, n) {
+function f(e, t, n) {
     return (d(e), e <= 0) ? l(e) : void 0 !== t ? ('string' == typeof n ? l(e).fill(t, n) : l(e).fill(t)) : l(e);
 }
-function f(e) {
+function _(e) {
     return (d(e), l(e < 0 ? 0 : 0 | E(e)));
 }
 function p(e, t) {
@@ -169,8 +169,8 @@ function T(e, t, n, r, i) {
             } else (-1 !== u && (a -= a - u), (u = -1));
     } else
         for (n + l > s && (n = s - l), a = n; a >= 0; a--) {
-            for (var d = !0, _ = 0; _ < l; _++)
-                if (c(e, a + _) !== c(t, _)) {
+            for (var d = !0, f = 0; f < l; f++)
+                if (c(e, a + f) !== c(t, f)) {
                     d = !1;
                     break;
                 }
@@ -271,13 +271,13 @@ function D(e, t, n) {
     Object.setPrototypeOf(c.prototype, Uint8Array.prototype),
     Object.setPrototypeOf(c, Uint8Array),
     (c.alloc = function (e, t, n) {
-        return _(e, t, n);
+        return f(e, t, n);
     }),
     (c.allocUnsafe = function (e) {
-        return f(e);
+        return _(e);
     }),
     (c.allocUnsafeSlow = function (e) {
-        return f(e);
+        return _(e);
     }),
     (c.isBuffer = function (e) {
         return null != e && !0 === e._isBuffer && e !== c.prototype;

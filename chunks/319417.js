@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -39,4 +39,4 @@ function d(e) {
         ]
     });
 }
-let _ = i.memo(d);
+let f = i.memo(d);

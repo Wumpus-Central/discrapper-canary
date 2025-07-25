@@ -8,8 +8,8 @@ var r,
     c = n(592125),
     u = n(70956),
     d = n(709054),
-    _ = n(977258),
-    f = n(819553),
+    f = n(977258),
+    _ = n(819553),
     p = n(290511);
 function h(e, t, n) {
     return (
@@ -93,7 +93,7 @@ function A(e, t, n) {
 function N(e) {
     let { guildId: t, prompts: n, defaultChannelIds: r, enabled: i, responses: a, onboardingPromptsSeen: o, onboardingResponsesSeen: s, mode: l, belowRequirements: c } = e;
     v = !1;
-    let u = f.ZP.getOnboardingStatus(t) === f.uX.READY,
+    let u = _.ZP.getOnboardingStatus(t) === _.uX.READY,
         d = A(n, o, s);
     ((b[t] = {
         enabled: i,
@@ -101,7 +101,7 @@ function N(e) {
         belowRequirements: c,
         prompts: d,
         onboardingPrompts: d.filter((e) => e.inOnboarding),
-        defaultChannelIds: r.filter((e) => (0, _.s)(t, e)),
+        defaultChannelIds: r.filter((e) => (0, f.s)(t, e)),
         responses: u ? [] : a,
         onboardingPromptsSeen: o,
         onboardingResponsesSeen: s
@@ -115,9 +115,9 @@ function C() {
 function R(e) {
     var t, n, r, i, a, o, s, l, c;
     let { guildId: u, updates: d } = e,
-        _ = null != (a = null != (i = d.onboardingPromptsSeen) ? i : null == (t = b[u]) ? void 0 : t.onboardingPromptsSeen) ? a : {},
-        f = null != (s = null != (o = d.onboardingResponsesSeen) ? o : null == (n = b[u]) ? void 0 : n.onboardingResponsesSeen) ? s : {},
-        p = A(null != (c = null != (l = d.prompts) ? l : null == (r = b[u]) ? void 0 : r.prompts) ? c : [], _, f);
+        f = null != (a = null != (i = d.onboardingPromptsSeen) ? i : null == (t = b[u]) ? void 0 : t.onboardingPromptsSeen) ? a : {},
+        _ = null != (s = null != (o = d.onboardingResponsesSeen) ? o : null == (n = b[u]) ? void 0 : n.onboardingResponsesSeen) ? s : {},
+        p = A(null != (c = null != (l = d.prompts) ? l : null == (r = b[u]) ? void 0 : r.prompts) ? c : [], f, _);
     b[u] = E(m({}, b[u], d), { prompts: p });
 }
 function P(e) {
@@ -164,7 +164,7 @@ let M = [],
     j = [];
 class U extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z, f.ZP, l.Z);
+        this.waitFor(c.Z, _.ZP, l.Z);
     }
     getOnboardingPromptsForOnboarding(e) {
         var t, n;

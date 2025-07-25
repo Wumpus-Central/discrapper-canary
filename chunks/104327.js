@@ -10,7 +10,6 @@ e.exports = {
     selectPlanTotalRow: 'selectPlanTotalRow_d947e6',
     planSelectSeparator: 'planSelectSeparator_d947e6',
     trialPlanSelectHeader: 'trialPlanSelectHeader_d947e6',
-    legacyPricingNotice: 'legacyPricingNotice_d947e6',
     customGiftMessageWrapper: 'customGiftMessageWrapper_d947e6',
     customGiftMessage: 'customGiftMessage_d947e6',
     selectGiftTitle: 'selectGiftTitle_d947e6',

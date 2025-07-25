@@ -56,8 +56,8 @@ function d(e, t) {
         e
     );
 }
-let _ = new Map(),
-    f = new Map();
+let f = new Map(),
+    _ = new Map();
 function p(e) {
     return [s.BP, e.query, s.t0, e.categoryId, s.KL, e.languageCode].join('-');
 }
@@ -81,16 +81,16 @@ class h {
 function m(e) {
     var t;
     let n = p(e),
-        r = null != (t = _.get(n)) ? t : new h({ query: e.query });
-    return (_.set(n, r), r);
+        r = null != (t = f.get(n)) ? t : new h({ query: e.query });
+    return (f.set(n, r), r);
 }
 function g(e, t) {
     let n = p(e),
-        r = _.get(n);
+        r = f.get(n);
     return null != r ? t(r) : null;
 }
 function E() {
-    (_.clear(), f.clear());
+    (f.clear(), _.clear());
 }
 function b(e) {
     let { query: t, categoryId: n, languageCode: r, reset: i } = e,
@@ -99,7 +99,7 @@ function b(e) {
             categoryId: n,
             languageCode: r
         });
-    (i && _.delete(a),
+    (i && f.delete(a),
         m({
             query: t,
             categoryId: n,
@@ -117,7 +117,7 @@ function y(e) {
         guilds: a
     }),
         a.forEach((e) => {
-            f.set(e.id, e);
+            _.set(e.id, e);
         }));
 }
 function O(e) {
@@ -131,16 +131,16 @@ function O(e) {
 function v(e) {
     let { ignoreQueries: t } = e,
         n = new Set(t);
-    _.forEach((e, t) => {
-        null != e.query && (n.has(e.query) || _.delete(t));
+    f.forEach((e, t) => {
+        null != e.query && (n.has(e.query) || f.delete(t));
     });
 }
 function I(e) {
     var t, n;
     let { guildId: r, profile: i } = e,
-        a = f.get(r);
+        a = _.get(r);
     if (null == a) return !1;
-    f.set(
+    _.set(
         r,
         d(c({}, a), {
             memberCount: null != (t = i.memberCount) ? t : a.memberCount,
@@ -150,7 +150,7 @@ function I(e) {
 }
 class T extends (r = i.ZP.Store) {
     getGuild(e) {
-        return f.get(e);
+        return _.get(e);
     }
     getGuildIds(e) {
         return g(e, (e) => e.guildIds);

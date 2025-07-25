@@ -30,8 +30,8 @@ function k(e) {
     var t;
     let { isFetchingCategories: r, isFullScreen: k, scrollerRef: I, tab: N } = e,
         A = (0, d.sp)(),
-        B = null != (t = null == A ? void 0 : A.sessionId) ? t : '',
-        { noCache: w, includeUnpublished: R } = (0, _.Z)(),
+        w = null != (t = null == A ? void 0 : A.sessionId) ? t : '',
+        { noCache: B, includeUnpublished: R } = (0, _.Z)(),
         Z = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
         D = (0, o.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
         [F, M] = l.useState(1),
@@ -54,7 +54,7 @@ function k(e) {
             }
         }, [N, V]),
         q = (0, f.a)(),
-        K = l.useMemo(
+        Y = l.useMemo(
             () =>
                 q(
                     D.filter((e) => {
@@ -64,28 +64,28 @@ function k(e) {
                 ),
             [D, G, q]
         ),
-        Y = (0, g.l)(K);
+        K = (0, g.l)(Y);
     return (l.useEffect(() => {
         (0, h.n)({
-            sessionId: B,
+            sessionId: w,
             checkpoint: h.a.SHOP_MOUNTED,
             tab: N,
             isFullScreen: k,
             unpublishedCategoriesShown: R,
-            cacheDisabled: w
+            cacheDisabled: B
         });
     }, []),
     l.useEffect(() => {
         r ||
             (0, h.n)({
-                sessionId: B,
+                sessionId: w,
                 checkpoint: h.a.SHOP_RENDERED,
                 tab: N,
                 isFullScreen: k,
                 unpublishedCategoriesShown: R,
-                cacheDisabled: w
+                cacheDisabled: B
             });
-    }, [B, k, R, w, r, N]),
+    }, [w, k, R, B, r, N]),
     r || null == Z)
         ? (0, n.jsx)(b.Z, {})
         : (0, n.jsxs)(n.Fragment, {
@@ -100,7 +100,7 @@ function k(e) {
                   }),
                   (0, n.jsx)('div', {
                       className: v.products,
-                      children: Y.slice(40 * (F - 1), 40 * F).map((e, t) => {
+                      children: K.slice(40 * (F - 1), 40 * F).map((e, t) => {
                           let r = p.Z.getCategory(e.categorySkuId);
                           return null == r
                               ? null
@@ -123,13 +123,13 @@ function k(e) {
                                 );
                       })
                   }),
-                  Y.length > 40 &&
+                  K.length > 40 &&
                       (0, n.jsx)('div', {
                           className: v.paginationContainer,
                           children: (0, n.jsx)('div', {
                               children: (0, n.jsx)(s.DsT, {
                                   currentPage: F,
-                                  totalCount: Y.length,
+                                  totalCount: K.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {
                                       (M(e), H());

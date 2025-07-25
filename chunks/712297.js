@@ -8,7 +8,7 @@ var r = n(73800),
     c = n(855775),
     u = n(55563),
     d = n(474936);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -66,14 +66,14 @@ function m() {
         previewErrorsById: e,
         setErrorById: r.useCallback(
             (e, n) => {
-                t((t) => h(f({}, t), { [e]: n }));
+                t((t) => h(_({}, t), { [e]: n }));
             },
             [t]
         )
     };
 }
 function g(e) {
-    let { applicationId: t, skuIDs: n, currentPaymentSourceId: _, isGift: f, excludeSKUPurchasePreviews: p = !1 } = e,
+    let { applicationId: t, skuIDs: n, currentPaymentSourceId: f, isGift: _, excludeSKUPurchasePreviews: p = !1 } = e,
         h = r.useMemo(() => n.filter((e) => !d.YQ.includes(e)), [JSON.stringify(n)]),
         g = (0, i.e7)([u.Z], () => h.every((e) => !u.Z.isFetching(e) && null != u.Z.get(e))),
         { previewErrorsById: E, setErrorById: b } = m(),
@@ -110,10 +110,10 @@ function g(e) {
             if (!p)
                 for (let e of h)
                     c.Z.isFetchingSKU(e) ||
-                        (0, a.x2)(t, e, _, { isGift: f }).catch((t) => {
+                        (0, a.x2)(t, e, f, { isGift: _ }).catch((t) => {
                             t instanceof o.HF && (t.code === s.SM.BILLING_BUNDLE_ALREADY_PURCHASED || t.code === s.SM.BILLING_BUNDLE_PARTIALLY_OWNED || t.code === s.SM.INVALID_BILLING_ADDRESS) && b(e, t);
                         });
-        }, [t, h, _, f, b, p]),
+        }, [t, h, f, _, b, p]),
         {
             hasFetchedSkus: g,
             skusById: y,

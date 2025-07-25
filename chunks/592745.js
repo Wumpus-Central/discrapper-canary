@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+(n.d(t, { Z: () => _ }), n(388685));
 var r,
     i = n(442837),
     a = n(570140);
@@ -29,7 +29,7 @@ function d(e) {
     let { applicationId: t } = e;
     s.delete(t);
 }
-class _ extends (r = i.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     get launchingGames() {
         return s;
     }
@@ -47,8 +47,8 @@ class _ extends (r = i.ZP.Store) {
               !1);
     }
 }
-o(_, 'displayName', 'LaunchableGameStore');
-let f = new _(a.Z, {
+o(f, 'displayName', 'LaunchableGameStore');
+let _ = new f(a.Z, {
     GAME_LAUNCHABLE_UPDATE: c,
     GAME_CLOUD_SYNC_START: u,
     GAME_LAUNCH_START: u,

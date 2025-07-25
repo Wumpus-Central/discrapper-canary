@@ -1,16 +1,16 @@
-(n.d(t, { Z: () => s }), n(388685));
+(n.d(t, { Z: () => l }), n(388685));
 var r = n(73800),
     i = n(586739);
-let s = function () {
+let l = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { refreshOnDepChange: t } = e,
-        [n, s] = r.useState([]),
-        [l, o] = r.useState(!0),
+        [n, l] = r.useState([]),
+        [s, o] = r.useState(!0),
         a = async () => {
             o(!0);
             try {
                 let e = await i.Z.fetchTeams(!0);
-                s(e.body);
+                l(e.body);
             } catch (e) {}
             o(!1);
         },
@@ -21,7 +21,7 @@ let s = function () {
         }, [t]),
         {
             teams: n,
-            loading: l,
+            loading: s,
             refresh: a
         }
     );

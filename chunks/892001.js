@@ -12,8 +12,8 @@ var r = n(481060),
     c = n(594174),
     u = n(9161),
     d = n(484459);
-let _ = (0, r.pxk)(r.EFr.SIZE_120),
-    f = new s.Z('UserProfileModalActionCreators'),
+let f = (0, r.pxk)(r.EFr.SIZE_120),
+    _ = new s.Z('UserProfileModalActionCreators'),
     p = async (e) => {
         let t = l.default.getId() === e,
             { recentActivityTabEnabled: n } = (0, u.x)({ location: 'UserProfileModalActionCreators' });
@@ -21,11 +21,11 @@ let _ = (0, r.pxk)(r.EFr.SIZE_120),
             try {
                 await (0, o.Z)(e);
             } catch (t) {
-                f.log('Failed to fetch content inventory outbox for '.concat(e, ':'), t);
+                _.log('Failed to fetch content inventory outbox for '.concat(e, ':'), t);
             }
     };
 async function h(e) {
-    let { userId: t, guildId: n, channelId: r, messageId: o, roleId: s, sessionId: l, joinRequestId: u, section: f, subsection: h, showGuildProfile: m, hideRestrictedProfile: g, sourceAnalyticsLocations: E, appContext: b, customStatusPrompt: y = null, disableActionsForPreview: O = !1 } = e,
+    let { userId: t, guildId: n, channelId: r, messageId: o, roleId: s, sessionId: l, joinRequestId: u, section: _, subsection: h, showGuildProfile: m, hideRestrictedProfile: g, sourceAnalyticsLocations: E, appContext: b, customStatusPrompt: y = null, disableActionsForPreview: O = !1 } = e,
         v = c.default.getUser(t);
     (p(t),
         null == v
@@ -37,7 +37,7 @@ async function h(e) {
                   withMutualGuilds: !0,
                   joinRequestId: u
               })
-            : (0, d.Z)(v.id, v.getAvatarURL(void 0, _), {
+            : (0, d.Z)(v.id, v.getAvatarURL(void 0, f), {
                   type: 'modal',
                   guildId: m && null != n ? n : void 0,
                   withMutualFriendsCount: !v.bot,
@@ -55,7 +55,7 @@ async function h(e) {
             sessionId: null != l ? l : void 0,
             openedAt: Date.now(),
             customStatusPrompt: y,
-            section: f,
+            section: _,
             subsection: h,
             showGuildProfile: m,
             hideRestrictedProfile: g,

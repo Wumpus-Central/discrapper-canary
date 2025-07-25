@@ -13,9 +13,9 @@ function o(e, t = {}) {
             c = 0,
             u = ' > ',
             d = u.length,
-            _ = Array.isArray(t) ? t : t.keyAttrs,
-            f = (!Array.isArray(t) && t.maxStringLength) || a;
-        for (; r && l++ < i && ((n = s(r, _)), 'html' !== n && (!(l > 1) || !(c + o.length * d + n.length >= f))); ) (o.push(n), (c += n.length), (r = r.parentNode));
+            f = Array.isArray(t) ? t : t.keyAttrs,
+            _ = (!Array.isArray(t) && t.maxStringLength) || a;
+        for (; r && l++ < i && ((n = s(r, f)), 'html' !== n && (!(l > 1) || !(c + o.length * d + n.length >= _))); ) (o.push(n), (c += n.length), (r = r.parentNode));
         return o.reverse().join(u);
     } catch (e) {
         return '<unknown>';

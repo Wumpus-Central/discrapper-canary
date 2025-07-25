@@ -8,8 +8,8 @@ var r,
     c = n(314897),
     u = n(594174),
     d = n(630388),
-    _ = n(358085),
-    f = n(894694),
+    f = n(358085),
+    _ = n(894694),
     p = n(356659),
     h = n(981631),
     m = n(37113);
@@ -111,9 +111,9 @@ async function x() {
 function M(e) {
     let { classification: t } = e,
         n = L.hardwareClassification;
-    ((L.hardwareClassificationVersion = p.WM), (L.hardwareClassification = t), L.hardwareClassification === f.x.MEETS_AUTO_ENABLE && n !== f.x.MEETS_AUTO_ENABLE && (L.clipsSettings.clipsEnabled = !0));
+    ((L.hardwareClassificationVersion = p.WM), (L.hardwareClassification = t), L.hardwareClassification === _.x.MEETS_AUTO_ENABLE && n !== _.x.MEETS_AUTO_ENABLE && (L.clipsSettings.clipsEnabled = !0));
     let r = L.hardwareClassificationForDecoupled;
-    ((L.hardwareClassificationForDecoupled = t), L.hardwareClassificationForDecoupled === f.x.MEETS_AUTO_ENABLE && r !== f.x.MEETS_AUTO_ENABLE && L.clipsSettings.clipsEnabled && (L.clipsSettings.decoupledClipsEnabled = !0));
+    ((L.hardwareClassificationForDecoupled = t), L.hardwareClassificationForDecoupled === _.x.MEETS_AUTO_ENABLE && r !== _.x.MEETS_AUTO_ENABLE && L.clipsSettings.clipsEnabled && (L.clipsSettings.decoupledClipsEnabled = !0));
 }
 function k(e) {
     let { clip: t } = e;
@@ -328,7 +328,7 @@ class er extends (r = i.ZP.DeviceSettingsStore) {
     }
     isDecoupledGameClippingEnabled() {
         var e, t;
-        return null != (t = null == (e = u.default.getCurrentUser()) ? void 0 : e.isStaff()) && t && (0, _.isWindows)();
+        return null != (t = null == (e = u.default.getCurrentUser()) ? void 0 : e.isStaff()) && t && (0, f.isWindows)();
     }
     hasClips() {
         return L.hasClips;

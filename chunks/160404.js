@@ -8,8 +8,8 @@ var r,
     c = n(251625),
     u = n(709054),
     d = n(225675),
-    _ = n(981631),
-    f = n(526761);
+    f = n(981631),
+    _ = n(526761);
 function p(e, t, n) {
     return (
         t in e
@@ -88,7 +88,7 @@ function v(e) {
         u.default.keys(r).forEach((e) => {
             var t;
             let n = r[e];
-            l.yE(null != (t = n.flags) ? t : 0, f.ic.OPT_IN_ENABLED) ? a.add(e) : a.delete(e);
+            l.yE(null != (t = n.flags) ? t : 0, _.ic.OPT_IN_ENABLED) ? a.add(e) : a.delete(e);
         }),
         (i.optInChannels = a),
         !0
@@ -177,17 +177,17 @@ class S extends (r = i.ZP.Store) {
         return null == t ? null : t.type;
     }
     getBackNavigationSection(e) {
-        if (null == e) return _.pNK.ROLES;
+        if (null == e) return f.pNK.ROLES;
         let t = E[e];
-        if (null == t) return _.pNK.ROLES;
+        if (null == t) return f.pNK.ROLES;
         switch (t.type) {
             case d.z.ROLES:
             case d.z.SERVER_SHOP:
                 return t.returnToSection;
             case d.z.NEW_MEMBER:
-                return _.pNK.ONBOARDING;
+                return f.pNK.ONBOARDING;
             default:
-                return _.pNK.ROLES;
+                return f.pNK.ROLES;
         }
     }
 }

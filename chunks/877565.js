@@ -1,5 +1,5 @@
 n.d(t, {
-    HI: () => _,
+    HI: () => f,
     gm: () => d
 });
 var r = n(255367),
@@ -72,8 +72,8 @@ function d(e) {
         'autocomplete-title-'.concat(u)
     );
 }
-function _(e) {
-    let { query: t, selectedIndex: n, autocompletes: a, onHover: o, onClick: s, titleWithQuery: c, titleWithoutQuery: _, Component: f, getProps: p, getQuery: h, key: m, indexOffset: g = 0, headerClassName: E, headerTrailingContent: b, footer: y } = e;
+function f(e) {
+    let { query: t, selectedIndex: n, autocompletes: a, onHover: o, onClick: s, titleWithQuery: c, titleWithoutQuery: f, Component: _, getProps: p, getQuery: h, key: m, indexOffset: g = 0, headerClassName: E, headerTrailingContent: b, footer: y } = e;
     if (null == y && (null == a || 0 === a.length)) return null;
     let O =
         null == a
@@ -82,7 +82,7 @@ function _(e) {
                   let r = t + g,
                       a = p(e, r);
                   return (0, i.createElement)(
-                      f,
+                      _,
                       u(
                           l(
                               {
@@ -101,10 +101,10 @@ function _(e) {
         i.Fragment,
         {
             children: [
-                null != c && null != _
+                null != c && null != f
                     ? d({
                           titleWithQuery: c,
-                          titleWithoutQuery: _,
+                          titleWithoutQuery: f,
                           query: t,
                           getQuery: h,
                           headerClassName: E,

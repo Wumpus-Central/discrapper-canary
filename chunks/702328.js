@@ -73,7 +73,10 @@ let H = () => {
         { home: eb, whatsNew: ex, bestOfNitro: e_, plans: ej, compare: eE } = eh,
         eO = em ? V : G,
         eC = (0, i.jsxs)('div', {
-            className: a()(eO.container, eO.responsiveContainer, { [eO.containerBackground]: em || K }),
+            className: a()(eO.container, eO.responsiveContainer, {
+                [eO.containerBackground]: em || K,
+                [V.fadeInFromTop]: !W && em
+            }),
             'data-cy': 'tier-0-marketing-page',
             children: [
                 em &&

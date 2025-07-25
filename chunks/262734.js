@@ -1,63 +1,65 @@
-(n.d(t, { Z: () => y }), n(388685));
+(n.d(t, { Z: () => I }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     a = n.n(l),
-    o = n(481060),
-    s = n(350810),
-    c = n(988980),
-    u = n(835473),
-    d = n(871499),
-    p = n(510839),
-    h = n(214143),
-    f = n(610278),
-    g = n(408491),
-    m = n(981631),
-    b = n(918559),
-    _ = n(388032),
-    O = n(574682);
-let E = {
-    [b.MI.NO_CHAT]: O.noChat,
-    [b.MI.RESIZABLE]: O.resizable
+    o = n(755721),
+    s = n(481060),
+    c = n(350810),
+    u = n(988980),
+    d = n(835473),
+    p = n(871499),
+    h = n(786915),
+    f = n(510839),
+    g = n(214143),
+    m = n(610278),
+    b = n(408491),
+    _ = n(981631),
+    O = n(918559),
+    E = n(388032),
+    y = n(574682);
+let v = {
+    [O.MI.NO_CHAT]: y.noChat,
+    [O.MI.RESIZABLE]: y.resizable
 };
-function y(e) {
+function I(e) {
     let { frame: t } = e,
-        n = (0, u.q)(t.applicationId),
-        l = (0, s.Z)(),
-        y = i.useRef(null),
-        v = i.useRef(null),
-        [I, C] = i.useState({
+        n = (0, d.q)(t.applicationId),
+        l = (0, c.Z)(),
+        I = i.useRef(null),
+        C = i.useRef(null),
+        [S, N] = i.useState({
             width: 0,
             height: 0
         }),
-        S = i.useCallback(() => {
-            (0, p.eU)({
+        T = i.useCallback(() => {
+            (0, f.eU)({
                 applicationId: t.applicationId,
-                layoutMode: g.U.PIP
+                layoutMode: b.U.PIP
             });
         }, [t.applicationId]),
-        N = i.useCallback(() => {
-            (0, p.xT)({ applicationId: t.applicationId });
+        P = i.useCallback(() => {
+            (0, f.xT)({ applicationId: t.applicationId });
         }, [t.applicationId]);
     (i.useLayoutEffect(() => {
-        if (null == v.current) return;
+        if (null == C.current) return;
         let e = new ResizeObserver(() => {
             var e, t, n, r;
-            C({
-                width: null != (n = null == (e = v.current) ? void 0 : e.clientWidth) ? n : 0,
-                height: null != (r = null == (t = v.current) ? void 0 : t.clientHeight) ? r : 0
+            N({
+                width: null != (n = null == (e = C.current) ? void 0 : e.clientWidth) ? n : 0,
+                height: null != (r = null == (t = C.current) ? void 0 : t.clientHeight) ? r : 0
             });
         });
-        return (e.observe(v.current), () => e.disconnect());
+        return (e.observe(C.current), () => e.disconnect());
     }, []),
         i.useEffect(() => {
             let e = (e) => {
-                null == y.current ||
-                    y.current.contains(e.target) ||
+                null == I.current ||
+                    I.current.contains(e.target) ||
                     l ||
-                    (0, p.eU)({
+                    (0, f.eU)({
                         applicationId: t.applicationId,
-                        layoutMode: g.U.PIP
+                        layoutMode: b.U.PIP
                     });
             };
             return (
@@ -67,62 +69,73 @@ function y(e) {
                 }
             );
         }, [t.applicationId, l]));
-    let T = I.width / Math.max(I.height, 1) < b.I0,
-        P = 0,
-        j = 0,
-        x = (0, c.Z)(null == n ? void 0 : n.id);
-    if (!x) {
-        let e = I.width,
-            t = I.height;
-        T ? ((t = I.width / b.I0) > I.height && (e = (t = I.height) * b.I0), (j = (I.height - t) / 2)) : ((e = Math.min(I.height * b.I0)) > I.width && (t = (e = I.width) / b.I0), (P = (I.width - e) / 2));
+    let j = S.width / Math.max(S.height, 1) < O.I0,
+        x = 0,
+        A = 0,
+        Z = (0, u.Z)(null == n ? void 0 : n.id);
+    if (!Z) {
+        let e = S.width,
+            t = S.height;
+        j ? ((t = S.width / O.I0) > S.height && (e = (t = S.height) * O.I0), (A = (S.height - t) / 2)) : ((e = Math.min(S.height * O.I0)) > S.width && (t = (e = S.width) / O.I0), (x = (S.width - e) / 2));
     }
-    let A = b.MI.NO_CHAT;
+    let w = O.MI.NO_CHAT;
     if (null == n) return null;
-    let Z = (0, f.ro)(t);
-    return (0, r.jsx)(o.f6W, {
-        theme: m.BRd.DARK,
+    let L = (0, m.ro)(t);
+    return (0, r.jsx)(s.f6W, {
+        theme: _.BRd.DARK,
         children: (e) =>
             (0, r.jsxs)('div', {
-                className: a()(O.wrapper, E[A], e),
-                ref: y,
+                className: a()(y.wrapper, v[w], e),
+                ref: I,
                 style: {},
                 children: [
                     (0, r.jsx)('div', {
-                        className: O.contextlessHeader,
+                        className: y.contextlessHeader,
                         children: (0, r.jsxs)('div', {
-                            className: O.buttonSection,
+                            className: y.buttonSection,
                             children: [
-                                (0, r.jsx)(d.d, {
+                                (0, r.jsx)(p.d, {
                                     isTrayButton: !0,
-                                    label: _.intl.string(_.t.brPQ5e),
-                                    onClick: S,
-                                    iconComponent: o.dOc,
+                                    label: E.intl.string(E.t.brPQ5e),
+                                    onClick: T,
+                                    iconComponent: s.dOc,
                                     themeable: !0
                                 }),
-                                (0, r.jsx)(d.d, {
+                                (0, r.jsx)(h.Z, {
+                                    appContext: _.IlC.APP,
+                                    applicationId: n.id,
+                                    shouldPrioritizeGroupPlusIcon: !0,
+                                    iconClassName: y.contextlessInviteButtonIcon,
+                                    isRichPresenceInvite: !0,
+                                    size: o.zx.Sizes.SMALL,
+                                    look: o.zx.Looks.FILLED,
+                                    buttonText: E.intl.string(E.t['6F9ivr']),
+                                    color: o.zx.Colors.PRIMARY
+                                }),
+                                (0, r.jsx)(p.d, {
                                     isTrayButton: !0,
-                                    label: _.intl.string(_.t.cpT0Cg),
-                                    onClick: N,
-                                    iconComponent: o.Dio,
+                                    label: E.intl.string(E.t.cpT0Cg),
+                                    onClick: P,
+                                    iconComponent: s.Dio,
                                     themeable: !0
                                 })
                             ]
                         })
                     }),
                     (0, r.jsx)('div', {
-                        className: O.activityPanelContainer,
+                        className: y.activityPanelContainer,
                         children: (0, r.jsx)('div', {
-                            className: a()(O.activityContainer, { [O.activityContainerNoMargin]: x }),
+                            className: a()(y.activityContainer, { [y.activityContainerNoMargin]: Z }),
                             style: {
-                                paddingLeft: P,
-                                paddingRight: P,
-                                paddingTop: j,
-                                paddingBottom: j
+                                paddingLeft: x,
+                                paddingRight: x,
+                                paddingTop: A,
+                                paddingBottom: A
                             },
-                            ref: v,
-                            children: (0, r.jsx)(h.Z, {
-                                className: O.iframe,
-                                embedId: Z
+                            ref: C,
+                            children: (0, r.jsx)(g.Z, {
+                                className: y.iframe,
+                                embedId: L
                             })
                         })
                     })

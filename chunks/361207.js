@@ -13,8 +13,8 @@ let l = 'Ubuntu',
     c = 'Debian',
     u = 'Fedora',
     d = 'Red Hat',
-    _ = 'SuSE',
-    f = 'Linux',
+    f = 'SuSE',
+    _ = 'Linux',
     p = 'OS X',
     h = 'win',
     m = 'osx',
@@ -34,7 +34,7 @@ function b() {
                   var e;
                   return null == (e = i().os) ? void 0 : e.family;
               })();
-    return null == e ? h : -1 !== e.indexOf(l) || -1 !== e.indexOf(c) || -1 !== e.indexOf(u) || -1 !== e.indexOf(d) || -1 !== e.indexOf(_) || -1 !== e.indexOf(f) ? g : -1 !== e.indexOf(p) ? m : h;
+    return null == e ? h : -1 !== e.indexOf(l) || -1 !== e.indexOf(c) || -1 !== e.indexOf(u) || -1 !== e.indexOf(d) || -1 !== e.indexOf(f) || -1 !== e.indexOf(_) ? g : -1 !== e.indexOf(p) ? m : h;
 }
 function y(e) {
     return {

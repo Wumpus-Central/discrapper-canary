@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(355467),
     d = n(230711),
-    _ = n(436774),
-    f = n(78839),
+    f = n(436774),
+    _ = n(78839),
     p = n(74538),
     h = n(543241),
     m = n(981631),
@@ -21,9 +21,9 @@ let y = 'premiumRetentionEmojiPickerNotice',
     v = (e) => {
         let { closePopout: t, channel: n } = e,
             [a, v] = i.useState(!1),
-            { subscription: I, hasFetchedSubscriptions: T } = (0, s.cj)([f.Z], () => ({
-                subscription: f.Z.getPremiumSubscription(),
-                hasFetchedSubscriptions: f.Z.hasFetchedSubscriptions()
+            { subscription: I, hasFetchedSubscriptions: T } = (0, s.cj)([_.Z], () => ({
+                subscription: _.Z.getPremiumSubscription(),
+                hasFetchedSubscriptions: _.Z.hasFetchedSubscriptions()
             }));
         if (
             (i.useEffect(() => {
@@ -35,7 +35,7 @@ let y = 'premiumRetentionEmojiPickerNotice',
         let S = I.status === m.O0b.PAST_DUE ? (0, p.lY)(I).expiresDate : o()(I.currentPeriodStart).add(g.gh),
             A = ''.concat(I.id, ':').concat(S.toISOString());
         if (O === A) return null;
-        let N = p.ZP.getPremiumType(I.planId) === g.p9.TIER_0 ? _.JX.PREMIUM_TIER_0 : p.ZP.getPremiumType(I.planId) === g.p9.TIER_1 ? _.JX.PREMIUM_TIER_1 : _.JX.PREMIUM_TIER_2;
+        let N = p.ZP.getPremiumType(I.planId) === g.p9.TIER_0 ? f.JX.PREMIUM_TIER_0 : p.ZP.getPremiumType(I.planId) === g.p9.TIER_1 ? f.JX.PREMIUM_TIER_1 : f.JX.PREMIUM_TIER_2;
         return (0, r.jsxs)('div', {
             className: b.premiumRetentionNotice,
             children: [

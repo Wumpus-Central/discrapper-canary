@@ -63,7 +63,7 @@ function d(e) {
                   a.map((e, t) => {
                       let { icon: n, text: i } = e;
                       return (0, r.jsx)(
-                          _,
+                          f,
                           {
                               icon: n,
                               text: i
@@ -74,7 +74,7 @@ function d(e) {
               ]
           });
 }
-function _(e) {
+function f(e) {
     let { icon: t, text: n } = e;
     return (0, r.jsxs)('div', {
         className: u.entry,

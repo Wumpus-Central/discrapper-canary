@@ -1,7 +1,7 @@
 n.d(t, {
     D1: () => d,
     IK: () => u,
-    V6: () => _
+    V6: () => f
 });
 var r = n(615287),
     i = n(960048);
@@ -81,7 +81,7 @@ function d(e) {
         n = arguments.length > 2 ? arguments[2] : void 0;
     i.Z.captureException(e, c(t, n));
 }
-function _(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
     return i.Z.captureCrash(e, c(t, n));

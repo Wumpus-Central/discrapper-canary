@@ -27,17 +27,17 @@ function d(e) {
         r = n === o.d.FirstThreadMessage ? c : l;
     null != r[t] && delete r[t];
 }
-function _() {
+function f() {
     ((l = {}), (c = {}));
 }
-class f extends (r = i.ZP.Store) {
+class _ extends (r = i.ZP.Store) {
     getStickerPreview(e, t) {
         return (t === o.d.FirstThreadMessage ? c : l)[e];
     }
 }
-s(f, 'displayName', 'StickerMessagePreviewStore');
-let p = new f(a.Z, {
+s(_, 'displayName', 'StickerMessagePreviewStore');
+let p = new _(a.Z, {
     ADD_STICKER_PREVIEW: u,
     CLEAR_STICKER_PREVIEW: d,
-    LOGOUT: _
+    LOGOUT: f
 });

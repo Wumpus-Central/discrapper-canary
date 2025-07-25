@@ -8,8 +8,8 @@ var r = n(358221),
     c = n(458725),
     u = n(442741),
     d = n(150457),
-    _ = n(981631);
-function f(e, t, n) {
+    f = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -42,15 +42,15 @@ let h = 20 * s.Z.Millis.SECOND,
     m = {
         getActiveErrors: () => {
             let e = a.Z.getCurrentUserActiveStream();
-            if (null == e || e.state === _.jm8.PAUSED || 0 === a.Z.getViewerIds(e).length) return null;
+            if (null == e || e.state === f.jm8.PAUSED || 0 === a.Z.getViewerIds(e).length) return null;
             let t = (0, i.V9)(e),
                 n = o.Z.getRTCConnection(t);
             if (null == n) return null;
             let s = n.getMediaEngineConnectionId();
             if (null == s) return null;
-            let f = o.Z.getLastNonZeroRemoteVideoSinkWantsTime(t);
+            let _ = o.Z.getLastNonZeroRemoteVideoSinkWantsTime(t);
             if (
-                (null != f && performance.now() - f < h) ||
+                (null != _ && performance.now() - _ < h) ||
                 Object.entries(n.getRemoteVideoSinkWants()).every((e) => {
                     let [t, n] = e;
                     return 'any' === t || 0 === n;

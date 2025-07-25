@@ -12,8 +12,8 @@ var r,
     c = n(585483),
     u = n(709054),
     d = n(592125),
-    _ = n(496675),
-    f = n(768119),
+    f = n(496675),
+    _ = n(768119),
     p = n(944486),
     h = n(914010),
     m = n(594174),
@@ -146,7 +146,7 @@ function V() {
         let n = A[t];
         if (n.type === l.tI.VIEW_THREAD || n.type === l.tI.VIEW_CHANNEL) {
             let r = d.Z.getChannel(n.channelId);
-            (null != r && _.Z.can(b.Pl.VIEW_CHANNEL, r)) || (delete A[t], (e = !0));
+            (null != r && f.Z.can(b.Pl.VIEW_CHANNEL, r)) || (delete A[t], (e = !0));
         }
     }
     return e;
@@ -157,7 +157,7 @@ function F(e) {
     null != n && delete A[n];
 }
 function Z() {
-    let e = f.Z.getCurrentSearchId();
+    let e = _.Z.getCurrentSearchId();
     if (null == e) return !1;
     let t = s.Z.hasSearchState(e);
     if (S === t) return !1;
@@ -172,7 +172,7 @@ class Y extends (r = a.ZP.PersistedStore) {
             var t, n, r, i, a;
             ((v = null != (t = e.isMembersOpen) && t), (I = null != (n = e.isSummariesOpen) && n), (T = null == (r = e.isProfileOpen) || r), (A = null != (i = e.sidebars) ? i : {}), (N = null != (a = e.guildSidebars) ? a : {}));
         }
-        (this.syncWith([s.Z, f.Z], Z), this.syncWith([_.Z], V), this.waitFor(f.Z, s.Z));
+        (this.syncWith([s.Z, _.Z], Z), this.syncWith([f.Z], V), this.waitFor(_.Z, s.Z));
     }
     getState() {
         return {

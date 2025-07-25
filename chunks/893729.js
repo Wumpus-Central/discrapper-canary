@@ -1,8 +1,8 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => v });
 var r = n(255367),
     i = n(73800),
-    s = n(120356),
-    l = n.n(s),
+    l = n(120356),
+    s = n.n(l),
     o = n(442837),
     a = n(481060),
     c = n(518738),
@@ -11,16 +11,16 @@ var r = n(255367),
     f = n(753206),
     p = n(594174),
     g = n(5192),
-    b = n(981631),
-    m = n(388032),
-    v = n(264700);
-function h(e) {
+    m = n(981631),
+    b = n(388032),
+    h = n(264700);
+function v(e) {
     var t;
-    let { guildId: n, role: s, theme: h, content: O = m.intl.string(m.t['6OSasb']), className: y } = e,
+    let { guildId: n, role: l, theme: v, content: O = b.intl.string(b.t['6OSasb']), className: y } = e,
         E = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
         S = g.ZP.useName(n, null, E),
-        j = (0, c.Kz)(s),
-        x = i.useMemo(() => {
+        j = (0, c.Kz)(l),
+        C = i.useMemo(() => {
             var e, t;
             return (0, u.e5)(
                 ((e = (function (e) {
@@ -61,7 +61,7 @@ function h(e) {
                 )),
                 (t = t =
                     {
-                        state: b.yb.SENT,
+                        state: m.yb.SENT,
                         id: '0'
                     }),
                 Object.getOwnPropertyDescriptors
@@ -79,20 +79,20 @@ function h(e) {
                 e)
             );
         }, [E, O]),
-        C = {
+        _ = {
             nick: S,
-            colorString: null != (t = s.colorString) ? t : void 0
+            colorString: null != (t = l.colorString) ? t : void 0
         };
     return (0, r.jsx)(a.f6W, {
-        theme: h,
+        theme: v,
         children: (e) =>
             (0, r.jsx)('div', {
-                className: l()(e, v.container, y),
+                className: s()(e, h.container, y),
                 children: (0, r.jsx)(f.Z, {
                     hideTimestamp: !0,
-                    author: C,
+                    author: _,
                     roleIcon: j,
-                    message: x,
+                    message: C,
                     isGroupStart: !0,
                     disableInteraction: !0
                 })

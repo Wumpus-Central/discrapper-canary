@@ -1,5 +1,5 @@
 n.d(t, {
-    I: () => _,
+    I: () => f,
     Z: () => h
 });
 var r = n(570140),
@@ -14,7 +14,7 @@ let d = () => {
         let e = !0;
         return n(451478).Z.isFocused();
     },
-    _ = function (e) {
+    f = function (e) {
         let t =
                 arguments.length > 1 && void 0 !== arguments[1]
                     ? arguments[1]
@@ -42,7 +42,7 @@ let d = () => {
                     boundingRect: t
                 }));
     },
-    f = (e, t) => {
+    _ = (e, t) => {
         let n = l.HZ.getCurrentConfig({ location: 'TriggerConfetti' }, { autoTrackExposure: !1 }).canSeeConfetti;
         return o.Z.confettiMode || t
             ? n
@@ -106,10 +106,10 @@ let d = () => {
             o = arguments.length > 3 ? arguments[3] : void 0;
         if (!d()) return;
         let l = (0, c.Eq)(e),
-            _ = (null == l || null == (t = l.emoji) ? void 0 : t[0].id) == null,
-            { shouldPlay: p, failureReason: h } = f(e, i);
+            f = (null == l || null == (t = l.emoji) ? void 0 : t[0].id) == null,
+            { shouldPlay: p, failureReason: h } = _(e, i);
         (a.default.track(u.rMx.CONFETTI_POTION_TRIGGERED, {
-            emoji_type: _ ? s.aK.Unicode : s.aK.UserCreated,
+            emoji_type: f ? s.aK.Unicode : s.aK.UserCreated,
             will_play: p,
             failure_reason: h,
             location: o

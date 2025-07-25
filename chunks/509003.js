@@ -1,9 +1,9 @@
 (n.d(t, {
     I8: () => p,
-    ON: () => f,
+    ON: () => _,
     sD: () => h,
     x3: () => c,
-    yA: () => _
+    yA: () => f
 }),
     n(49124));
 var r = n(392711),
@@ -58,12 +58,12 @@ function u(e) {
           };
 }
 function d(e, t) {
-    return e.distributor === o.GQo.ROBLOX && _(u(e), t);
-}
-function _(e, t) {
-    return (null == e && null != t) || (null != e && null == t) || (null != e && null != t && !i().isEqual(e, t));
+    return e.distributor === o.GQo.ROBLOX && f(u(e), t);
 }
 function f(e, t) {
+    return (null == e && null != t) || (null != e && null == t) || (null != e && null != t && !i().isEqual(e, t));
+}
+function _(e, t) {
     let n = l({}, e);
     if (d(e, t)) {
         if (null == t) ((n.gameMetadata = void 0), (n.sku = void 0));

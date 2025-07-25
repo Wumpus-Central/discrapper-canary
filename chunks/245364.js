@@ -72,7 +72,7 @@
         return i;
     }
     function l(e, t) {
-        return c(e) || u(e, t) || d(e, t) || f();
+        return c(e) || u(e, t) || d(e, t) || _();
     }
     function c(e) {
         if (Array.isArray(e)) return e;
@@ -101,18 +101,18 @@
     }
     function d(e, t) {
         if (e) {
-            if ('string' == typeof e) return _(e, t);
+            if ('string' == typeof e) return f(e, t);
             var n = Object.prototype.toString.call(e).slice(8, -1);
             if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
-            if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _(e, t);
+            if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return f(e, t);
         }
     }
-    function _(e, t) {
+    function f(e, t) {
         (null == t || t > e.length) && (t = e.length);
         for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
         return r;
     }
-    function f() {
+    function _() {
         throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
     }
     function p(e) {
@@ -234,11 +234,11 @@
             var u = Object.keys(s);
             if (u.length !== a.length) return !1;
             var d = t,
-                _ = n,
-                f = function (t) {
-                    return e(d[t], _[t]);
+                f = n,
+                _ = function (t) {
+                    return e(d[t], f[t]);
                 };
-            return u.every(f);
+            return u.every(_);
         },
         R = function (e, t, n) {
             return T(e)
@@ -418,9 +418,9 @@
                     2
                 ),
                 d = u[0],
-                _ = u[1],
-                f = function (e, t) {
-                    _(function (n) {
+                f = u[1],
+                _ = function (e, t) {
+                    f(function (n) {
                         return n.stripe && n.checkoutSdk
                             ? n
                             : {
@@ -440,7 +440,7 @@
                               !p.current &&
                               ((p.current = !0),
                               a.stripe.initCheckout(r).then(function (e) {
-                                  e && (f(a.stripe, e), e.on('change', c));
+                                  e && (_(a.stripe, e), e.on('change', c));
                               }))
                             : a.stripePromise.then(function (t) {
                                   t &&
@@ -448,7 +448,7 @@
                                       !p.current &&
                                       ((p.current = !0),
                                       t.initCheckout(r).then(function (e) {
-                                          e && (f(t, e), e.on('change', c));
+                                          e && (_(t, e), e.on('change', c));
                                       }));
                               }),
                         function () {
@@ -530,8 +530,8 @@
                         c = n.options,
                         u = void 0 === c ? {} : c,
                         d = n.onBlur,
-                        _ = n.onFocus,
-                        f = n.onReady,
+                        f = n.onFocus,
+                        _ = n.onReady,
                         p = n.onChange,
                         h = n.onEscape,
                         m = n.onClick,
@@ -551,7 +551,7 @@
                         L = t.useRef(null),
                         x = t.useRef(null);
                     (v(w, 'blur', d),
-                        v(w, 'focus', _),
+                        v(w, 'focus', f),
                         v(w, 'escape', h),
                         v(w, 'click', m),
                         v(w, 'loaderror', g),
@@ -562,12 +562,12 @@
                         v(w, 'shippingaddresschange', T),
                         v(w, 'shippingratechange', S),
                         v(w, 'change', p),
-                        f &&
+                        _ &&
                             (i =
                                 'expressCheckout' === e
-                                    ? f
+                                    ? _
                                     : function () {
-                                          f(w);
+                                          _(w);
                                       }),
                         v(w, 'ready', i),
                         t.useLayoutEffect(
@@ -726,23 +726,23 @@
                     },
                     [s]
                 ));
-            var _ = I(n);
+            var f = I(n);
             t.useEffect(
                 function () {
-                    null !== _ && _ !== n && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the `stripe` prop after setting it.');
+                    null !== f && f !== n && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the `stripe` prop after setting it.');
                 },
-                [_, n]
+                [f, n]
             );
-            var f = I(r);
+            var _ = I(r);
             return (
                 t.useEffect(
                     function () {
-                        if (null != f) {
+                        if (null != _) {
                             if (null == r) return void console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot unset options after setting them.');
-                            (void 0 === r.clientSecret && void 0 === r.fetchClientSecret && console.warn('Invalid props passed to EmbeddedCheckoutProvider: You must provide one of either `options.fetchClientSecret` or `options.clientSecret`.'), null != f.clientSecret && r.clientSecret !== f.clientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the client secret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != f.fetchClientSecret && r.fetchClientSecret !== f.fetchClientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change fetchClientSecret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != f.onComplete && r.onComplete !== f.onComplete && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onComplete option after setting it.'), null != f.onShippingDetailsChange && r.onShippingDetailsChange !== f.onShippingDetailsChange && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onShippingDetailsChange option after setting it.'), null != f.onLineItemsChange && r.onLineItemsChange !== f.onLineItemsChange && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onLineItemsChange option after setting it.'));
+                            (void 0 === r.clientSecret && void 0 === r.fetchClientSecret && console.warn('Invalid props passed to EmbeddedCheckoutProvider: You must provide one of either `options.fetchClientSecret` or `options.clientSecret`.'), null != _.clientSecret && r.clientSecret !== _.clientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the client secret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != _.fetchClientSecret && r.fetchClientSecret !== _.fetchClientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change fetchClientSecret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != _.onComplete && r.onComplete !== _.onComplete && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onComplete option after setting it.'), null != _.onShippingDetailsChange && r.onShippingDetailsChange !== _.onShippingDetailsChange && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onShippingDetailsChange option after setting it.'), null != _.onLineItemsChange && r.onLineItemsChange !== _.onLineItemsChange && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onLineItemsChange option after setting it.'));
                         }
                     },
-                    [f, r]
+                    [_, r]
                 ),
                 t.createElement(ee.Provider, { value: u }, i)
             );
@@ -794,8 +794,8 @@
         ec = J('card', $),
         eu = J('cardNumber', $),
         ed = J('cardExpiry', $),
-        e_ = J('cardCvc', $),
-        ef = J('fpxBank', $),
+        ef = J('cardCvc', $),
+        e_ = J('fpxBank', $),
         ep = J('iban', $),
         eh = J('idealBank', $),
         em = J('p24Bank', $),
@@ -810,5 +810,5 @@
         eS = J('paymentMethodMessaging', $),
         eA = J('affirmMessage', $),
         eN = J('afterpayClearpayMessage', $);
-    ((e.AddressElement = eI), (e.AffirmMessageElement = eA), (e.AfterpayClearpayMessageElement = eN), (e.AuBankAccountElement = el), (e.CardCvcElement = e_), (e.CardElement = ec), (e.CardExpiryElement = ed), (e.CardNumberElement = eu), (e.CheckoutProvider = W), (e.CurrencySelectorElement = ey), (e.Elements = k), (e.ElementsConsumer = G), (e.EmbeddedCheckout = eo), (e.EmbeddedCheckoutProvider = er), (e.EpsBankElement = eg), (e.ExpressCheckoutElement = eb), (e.FpxBankElement = ef), (e.IbanElement = ep), (e.IdealBankElement = eh), (e.LinkAuthenticationElement = ev), (e.P24BankElement = em), (e.PaymentElement = eE), (e.PaymentMethodMessagingElement = eS), (e.PaymentRequestButtonElement = eO), (e.ShippingAddressElement = eT), (e.useCheckout = q), (e.useElements = U), (e.useStripe = es));
+    ((e.AddressElement = eI), (e.AffirmMessageElement = eA), (e.AfterpayClearpayMessageElement = eN), (e.AuBankAccountElement = el), (e.CardCvcElement = ef), (e.CardElement = ec), (e.CardExpiryElement = ed), (e.CardNumberElement = eu), (e.CheckoutProvider = W), (e.CurrencySelectorElement = ey), (e.Elements = k), (e.ElementsConsumer = G), (e.EmbeddedCheckout = eo), (e.EmbeddedCheckoutProvider = er), (e.EpsBankElement = eg), (e.ExpressCheckoutElement = eb), (e.FpxBankElement = e_), (e.IbanElement = ep), (e.IdealBankElement = eh), (e.LinkAuthenticationElement = ev), (e.P24BankElement = em), (e.PaymentElement = eE), (e.PaymentMethodMessagingElement = eS), (e.PaymentRequestButtonElement = eO), (e.ShippingAddressElement = eT), (e.useCheckout = q), (e.useElements = U), (e.useStripe = es));
 });

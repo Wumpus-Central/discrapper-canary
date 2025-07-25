@@ -27,17 +27,17 @@ function u(e, t) {
 function d(e) {
     return 'string' == typeof e ? (t) => e.replace('%d', ''.concat(t)) : e;
 }
-function _(e, t, n) {
+function f(e, t, n) {
     return e < 12 ? (n ? 'am' : 'AM') : n ? 'pm' : 'PM';
 }
-function f() {
+function _() {
     let {
         months: e,
         monthsShort: t,
         weekdays: n,
         weekdaysShort: r,
         weekdaysMin: a,
-        meridiem: o = _,
+        meridiem: o = f,
         ordinal: s,
         longDateFormat: l,
         week: c = {
@@ -71,7 +71,7 @@ function p(e, t) {
 }
 function h(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        r = null != t ? t : f();
+        r = null != t ? t : _();
     (void 0 !== t || n || !o.Z.getCurrentConfig({ location: 'makeDateFormatter' }).enableSystemFormatter) && (e = p(e, r));
     let i = [],
         a = {
@@ -294,8 +294,8 @@ function h(e, t) {
                 (l('d.valueOf()'), u(1));
                 continue;
             case 'L':
-                var d, _;
-                let t = null != (_ = null == (d = /^L(?:TS?|L*(?: LTS?)?)/.exec(s)) ? void 0 : d[0]) ? _ : 'L';
+                var d, f;
+                let t = null != (f = null == (d = /^L(?:TS?|L*(?: LTS?)?)/.exec(s)) ? void 0 : d[0]) ? f : 'L';
                 (r.longFormatters.push(c(t)), l('localeData.longFormatters['.concat(r.longFormatters.length - 1, '](d)')), u(t.length));
                 continue;
             case '[':

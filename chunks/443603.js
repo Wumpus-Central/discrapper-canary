@@ -6,13 +6,13 @@ var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(42133),
+    s = n(652141),
     l = n(755721),
     c = n(481060),
     u = n(686546),
     d = n(855981),
-    _ = n(55543),
-    f = n(504684);
+    f = n(55543),
+    _ = n(504684);
 function p(e, t, n) {
     return (
         t in e
@@ -99,16 +99,16 @@ function O(e) {
             let { component: t } = e;
             return null != R
                 ? (0, r.jsxs)('div', {
-                      className: f.buttonContent,
+                      className: _.buttonContent,
                       children: [
                           (0, r.jsx)(u.ZP, {
-                              className: f.iconMask,
+                              className: _.iconMask,
                               mask: u.QS.CHAT_INPUT_BUTTON_NOTIFICATION,
                               width: b,
                               height: b,
                               children: t
                           }),
-                          (0, r.jsx)('span', { className: f.notificationDot })
+                          (0, r.jsx)('span', { className: _.notificationDot })
                       ]
                   })
                 : t;
@@ -121,10 +121,10 @@ function O(e) {
         'aria-haspopup': D,
         'aria-controls': L,
         disabled: n,
-        className: o()(t, { [f.active]: v }),
-        innerClassName: o()(f.button, i, {
-            [f.pulseButton]: N,
-            [f.noHover]: x
+        className: o()(t, { [_.active]: v }),
+        innerClassName: o()(_.button, i, {
+            [_.pulseButton]: N,
+            [_.noHover]: x
         }),
         onClick: O,
         onMouseEnter: I,
@@ -145,7 +145,7 @@ function O(e) {
                           s.animated.div,
                           {
                               style: e,
-                              className: o()(f.buttonWrapper, a),
+                              className: o()(_.buttonWrapper, a),
                               children: k({ component: E })
                           },
                           i
@@ -155,10 +155,10 @@ function O(e) {
                             s.animated.div,
                             {
                                 style: e,
-                                className: o()(f.buttonWrapper, a),
+                                className: o()(_.buttonWrapper, a),
                                 children: k({
                                     component: (0, r.jsx)(m, {
-                                        className: o()(f.icon, p, { [f.pulseIcon]: N }),
+                                        className: o()(_.icon, p, { [_.pulseIcon]: N }),
                                         color: 'currentColor'
                                     })
                                 })
@@ -169,8 +169,8 @@ function O(e) {
             }),
             C &&
                 (0, r.jsxs)('div', {
-                    className: f.sparkleContainer,
-                    children: [(0, r.jsx)(_.Z, { className: f.sparkleStar }), (0, r.jsx)(d.Z, { className: f.sparklePlus })]
+                    className: _.sparkleContainer,
+                    children: [(0, r.jsx)(f.Z, { className: _.sparkleStar }), (0, r.jsx)(d.Z, { className: _.sparklePlus })]
                 })
         ]
     });

@@ -20,8 +20,8 @@ var i,
     c = n(442837),
     u = n(433517),
     d = n(570140),
-    _ = n(615287),
-    f = n(593472),
+    f = n(615287),
+    _ = n(593472),
     p = n(726542),
     h = n(439849),
     m = n(710845),
@@ -232,8 +232,8 @@ let F = new m.Z('RunningGameStore'),
     ec = {},
     eu = new Set(),
     ed = new Set(),
-    e_ = null,
     ef = null,
+    e_ = null,
     ep = new Map(),
     eh = new Map();
 function em(e, t, n) {
@@ -326,14 +326,14 @@ function eS(e) {
             source: M.d.LAUNCHER,
             enabledOOP: !1,
             enabledLegacy: !1,
-            overlayMethod: _.gl.Disabled
+            overlayMethod: f.gl.Disabled
         };
     if ('pid' in e && !v.Z.acquireLock(e.pid))
         return {
             source: M.d.GLOBAL_OVERLAY_LOCK_FAILED,
             enabledOOP: !1,
             enabledLegacy: !1,
-            overlayMethod: _.gl.Disabled
+            overlayMethod: f.gl.Disabled
         };
     let i = n.getGameByName(e.name);
     if (null != i) {
@@ -343,7 +343,7 @@ function eS(e) {
                 source: M.d.LIBRARY_APPLICATION,
                 enabledOOP: e.isOverlayV3Enabled(),
                 enabledLegacy: e.isLegacyOverlayEnabled(),
-                overlayMethod: _.gl.Disabled
+                overlayMethod: f.gl.Disabled
             };
     }
     let a = (0, O.NW)('getRawOverlayGameStatus') && (0, x.supportsOutOfProcess)() && !t,
@@ -355,32 +355,32 @@ function eS(e) {
     if (null != c || null != u) {
         let e = null != u ? u : l,
             t = null != c ? c : s,
-            n = e ? _.gl.OutOfProcess : _.gl.Hook;
+            n = e ? f.gl.OutOfProcess : f.gl.Hook;
         return {
             source: e && !o ? M.d.OOP_DEFAULT : M.d.USER_OVERRIDE,
             enabledOOP: e,
             enabledLegacy: t,
-            overlayMethod: l ? n : _.gl.Hook
+            overlayMethod: l ? n : f.gl.Hook
         };
     }
     let d = null == e.id ? null : ea[e.id];
     if (null != d) {
-        var f, p;
-        let e = null != (f = d.enabledOOP) ? f : l,
+        var _, p;
+        let e = null != (_ = d.enabledOOP) ? _ : l,
             t = null != (p = d.enabled) ? p : s,
-            n = e ? _.gl.OutOfProcess : _.gl.Hook;
+            n = e ? f.gl.OutOfProcess : f.gl.Hook;
         return {
             source: e && !o ? M.d.OOP_DEFAULT_DATABASE : M.d.DATABASE,
             enabledOOP: e,
             enabledLegacy: t,
-            overlayMethod: l ? n : _.gl.Hook
+            overlayMethod: l ? n : f.gl.Hook
         };
     }
     return {
         source: M.d.DEFAULT,
         enabledOOP: H || l,
         enabledLegacy: H,
-        overlayMethod: l ? _.gl.OutOfProcess : _.gl.Disabled
+        overlayMethod: l ? f.gl.OutOfProcess : f.gl.Disabled
     };
 }
 function eA(e) {
@@ -535,10 +535,10 @@ function eW() {
     eL();
 }
 function eK(e) {
-    ((e_ = e.level), (ef = e.intervalSeconds));
+    ((ef = e.level), (e_ = e.intervalSeconds));
 }
 function ez() {
-    ((e_ = null), (ef = null), eu.clear());
+    ((ef = null), (e_ = null), eu.clear());
 }
 function eq(e) {
     let t = e.processes
@@ -559,8 +559,8 @@ function eq(e) {
         C.default.track(k.rMx.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
             keywords: K,
             paths: t,
-            debugging_level: e_,
-            interval_seconds: ef
+            debugging_level: ef,
+            interval_seconds: e_
         });
 }
 function eX(e) {
@@ -635,14 +635,14 @@ function e1() {
         for (let e of n) {
             var a, o, s, l;
             let t = eT(e),
-                n = (i && !t) || f.r.enabledOOP,
-                r = null != (a = e.overlay) ? a : f.r.enabled;
+                n = (i && !t) || _.r.enabledOOP,
+                r = null != (a = e.overlay) ? a : _.r.enabled;
             ea[e.id] = {
-                compatibilityHook: null != (o = e.overlayCompatibilityHook) ? o : f.r.compatibilityHook,
-                warn: null != (s = e.overlayWarn) ? s : f.r.warn,
+                compatibilityHook: null != (o = e.overlayCompatibilityHook) ? o : _.r.compatibilityHook,
+                warn: null != (s = e.overlayWarn) ? s : _.r.warn,
                 enabled: r,
                 enabledOOP: n,
-                allowHook: null != (l = e.hook) ? l : f.r.allowHook,
+                allowHook: null != (l = e.hook) ? l : _.r.allowHook,
                 supportsOutOfProcessOverlay: e.supportsOutOfProcessOverlay
             };
         }

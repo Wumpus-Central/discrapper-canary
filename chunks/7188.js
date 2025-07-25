@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(795318),
     u = n(686546),
     d = n(544384),
-    _ = n(76021),
-    f = n(592125),
+    f = n(76021),
+    _ = n(592125),
     p = n(594174),
     h = n(834348),
     m = n(74538),
@@ -119,10 +119,10 @@ function D(e) {
     let I = i.useRef(null),
         { parentAnalyticsLocation: T } = (0, s.ZP)(),
         A = (0, a.e7)([p.default], () => m.ZP.isPremium(p.default.getCurrentUser(), O.p9.TIER_1)),
-        R = (0, a.e7)([f.Z], () => f.Z.getChannel(null == n ? void 0 : n.channelId)),
+        R = (0, a.e7)([_.Z], () => _.Z.getChannel(null == n ? void 0 : n.channelId)),
         D = i.useMemo(() => (null != n ? [n] : []), [n]),
         L = i.useCallback(() => {
-            null != R && (0, _.Z)(R.getGuildId(), R.id, b.jXE.STREAM_SETTINGS);
+            null != R && (0, f.Z)(R.getGuildId(), R.id, b.jXE.STREAM_SETTINGS);
         }, [R]);
     if (null == n || null == R) return null;
     let x = P;

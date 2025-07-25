@@ -150,8 +150,8 @@ function A(e) {
     let { isFullScreen: t, isLayer: r, onClose: i, selectedTab: f, handleTransition: g } = e,
         x = (0, p.ZP)(),
         A = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
-        B = (null == A ? void 0 : A.isStaff()) || (null == A ? void 0 : A.isStaffPersonal()) || !1,
-        { enabled: w } = (0, _.WX)({ location: 'collectibles_shop_header_bar' }),
+        w = (null == A ? void 0 : A.isStaff()) || (null == A ? void 0 : A.isStaffPersonal()) || !1,
+        { enabled: B } = (0, _.WX)({ location: 'collectibles_shop_header_bar' }),
         R = (0, y.S)('collectibles_shop_header_bar'),
         Z = [
             {
@@ -163,7 +163,7 @@ function A(e) {
                 displayText: R ? L.intl.string(L.t.Ah5sJi) : L.intl.string(L.t.xFcotb)
             }
         ];
-    w &&
+    B &&
         Z.push({
             tab: T.AW.ORBS,
             displayText: L.intl.string(L.t.EBYkzs)
@@ -186,8 +186,8 @@ function A(e) {
             (0, n.jsxs)(h.Z, {
                 disableDoubleClick: !0,
                 className: o()(e, k.headerBar, { [k.fullscreenHeaderBar]: t }),
-                innerClassname: w ? k.headerBarInner : void 0,
-                toolbar: t || !B ? null : (0, n.jsx)(l.Fragment, {}),
+                innerClassname: B ? k.headerBarInner : void 0,
+                toolbar: t || !w ? null : (0, n.jsx)(l.Fragment, {}),
                 children: [
                     (0, n.jsxs)(c.P3F, {
                         className: k.shopHomeLink,
@@ -222,7 +222,7 @@ function A(e) {
                                   );
                         })
                     }),
-                    (w || t || H) &&
+                    (B || t || H) &&
                         (0, n.jsxs)('div', {
                             className: k.alignedRightContent,
                             children: [
@@ -231,7 +231,7 @@ function A(e) {
                                         handleTransition: g,
                                         selectedTab: f
                                     }),
-                                w &&
+                                B &&
                                     (0, n.jsx)(C.V9, {
                                         anchorPillType: t ? 'SHOP_FULLSCREEN' : 'SHOP',
                                         analyticsPage: F,

@@ -59,19 +59,19 @@ let c = function (e) {
             c,
             u,
             d,
-            { color: _ } = n,
-            f = s(n, ['color']);
+            { color: f } = n,
+            _ = s(n, ['color']);
         let p = 'currentColor';
-        null != _ && (p = 'string' != typeof _ && 'css' in _ ? _.css : _);
-        let h = null != (a = f.size) ? a : 'md',
+        null != f && (p = 'string' != typeof f && 'css' in f ? f.css : f);
+        let h = null != (a = _.size) ? a : 'md',
             m = (0, i.m)(h),
             g = {
                 color: p,
-                width: null != (c = null != (l = null == m ? void 0 : m.width) ? l : f.width) ? c : 24,
-                height: null != (d = null != (u = null == m ? void 0 : m.height) ? u : f.height) ? d : 24,
-                foreground: f.colorClass
+                width: null != (c = null != (l = null == m ? void 0 : m.width) ? l : _.width) ? c : 24,
+                height: null != (d = null != (u = null == m ? void 0 : m.height) ? u : _.height) ? d : 24,
+                foreground: _.colorClass
             };
-        for (let [e, n] of Object.entries(t)) null != f[e] && (g[n] = f[e]);
-        return (0, r.jsx)(e, o({}, f, g));
+        for (let [e, n] of Object.entries(t)) null != _[e] && (g[n] = _[e]);
+        return (0, r.jsx)(e, o({}, _, g));
     };
 };

@@ -50,7 +50,7 @@ function u(e, t, n, r) {
 function d() {
     if (!this.fired) return (this.target.removeListener(this.type, this.wrapFn), (this.fired = !0), 0 == arguments.length) ? this.listener.call(this.target) : this.listener.apply(this.target, arguments);
 }
-function _(e, t, n) {
+function f(e, t, n) {
     var r = {
             fired: !1,
             wrapFn: void 0,
@@ -61,7 +61,7 @@ function _(e, t, n) {
         i = d.bind(r);
     return ((i.listener = n), (r.wrapFn = i), i);
 }
-function f(e, t, n) {
+function _(e, t, n) {
     var r = e._events;
     if (void 0 === r) return [];
     var i = r[t];
@@ -156,10 +156,10 @@ function y(e, t, n, r) {
         return u(this, e, t, !0);
     }),
     (o.prototype.once = function (e, t) {
-        return (l(t), this.on(e, _(this, e, t)), this);
+        return (l(t), this.on(e, f(this, e, t)), this);
     }),
     (o.prototype.prependOnceListener = function (e, t) {
-        return (l(t), this.prependListener(e, _(this, e, t)), this);
+        return (l(t), this.prependListener(e, f(this, e, t)), this);
     }),
     (o.prototype.removeListener = function (e, t) {
         var n, r, i, a, o;
@@ -192,10 +192,10 @@ function y(e, t, n, r) {
         return this;
     }),
     (o.prototype.listeners = function (e) {
-        return f(this, e, !0);
+        return _(this, e, !0);
     }),
     (o.prototype.rawListeners = function (e) {
-        return f(this, e, !1);
+        return _(this, e, !1);
     }),
     (o.listenerCount = function (e, t) {
         return 'function' == typeof e.listenerCount ? e.listenerCount(t) : p.call(e, t);

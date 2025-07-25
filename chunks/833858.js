@@ -1,7 +1,7 @@
 n.d(t, {
     O8: () => p,
-    V: () => _,
-    tV: () => f
+    V: () => f,
+    tV: () => _
 });
 var r = n(981631),
     i = n(388032),
@@ -12,7 +12,7 @@ var r = n(981631),
     c = n(485686),
     u = n(400976),
     d = n(443909);
-let _ = () => ({
+let f = () => ({
         [r.tNA.CHILLING]: {
             title: i.intl.string(i.t['vkpn7+']),
             icon: o,
@@ -49,12 +49,12 @@ let _ = () => ({
             color: '#7C5571'
         }
     }),
-    f = (e) => {
+    _ = (e) => {
         if ((null == e ? void 0 : e.type) !== r.IIU.HANG_STATUS || (null == e ? void 0 : e.state) == null) return null;
         let t = e.state;
-        return t === r.tNA.CUSTOM ? null : _()[t];
+        return t === r.tNA.CUSTOM ? null : f()[t];
     },
     p = (e) => {
         var t;
-        return ((null == e ? void 0 : e.state) != null ? e.state : null) === r.tNA.CUSTOM ? (null == e ? void 0 : e.details) : null == (t = f(e)) ? void 0 : t.title;
+        return ((null == e ? void 0 : e.state) != null ? e.state : null) === r.tNA.CUSTOM ? (null == e ? void 0 : e.details) : null == (t = _(e)) ? void 0 : t.title;
     };

@@ -27,10 +27,10 @@ function d(e, t, n) {
         e
     );
 }
-let _ = 'default',
-    f = 0.6,
+let f = 'default',
+    _ = 0.6,
     p = /^( Device)?( \([^()]+\))+$/,
-    h = _;
+    h = f;
 function m(e, t) {
     return !!t.startsWith(e) && null != t.substring(e.length).match(p);
 }
@@ -49,7 +49,7 @@ async function E() {
                     .findIndex((e) => e.id === l.Z.getOutputDeviceId()),
                 o = n[l.Z.getOutputDeviceId()];
             if (null == o) {
-                h = _;
+                h = f;
                 return;
             }
             let s = t.filter((e) => 'audiooutput' === e.kind && 'communications' !== e.deviceId),
@@ -58,13 +58,13 @@ async function E() {
                 h = c.deviceId;
                 return;
             }
-            if (((c = i()(s).maxBy((e) => (0, a.stringSimilarity)(e.label, o.name))), null == c || (0, a.stringSimilarity)(c.label, o.name) < f)) {
-                h = _;
+            if (((c = i()(s).maxBy((e) => (0, a.stringSimilarity)(e.label, o.name))), null == c || (0, a.stringSimilarity)(c.label, o.name) < _)) {
+                h = f;
                 return;
             }
             h = c.deviceId;
         } catch (e) {
-            h = _;
+            h = f;
         }
 }
 c.isPlatformEmbedded && (l.Z.addChangeListener(E), E());
@@ -120,7 +120,7 @@ let b = class {
                           let r = new Audio();
                           ((r.src = n(451343)('./'.concat(this.name, '.mp3'))),
                               (r.onloadeddata = () => {
-                                  ((r.volume = Math.min((l.Z.getOutputVolume() / 100) * this._volume, 1)), c.isPlatformEmbedded && r.setSinkId(this.outputChannel === u.w.DEFAULT ? _ : h), e(r));
+                                  ((r.volume = Math.min((l.Z.getOutputVolume() / 100) * this._volume, 1)), c.isPlatformEmbedded && r.setSinkId(this.outputChannel === u.w.DEFAULT ? f : h), e(r));
                               }),
                               (r.onerror = () => t(Error('could not play audio'))),
                               (r.onended = () => this.destroyAudio()),

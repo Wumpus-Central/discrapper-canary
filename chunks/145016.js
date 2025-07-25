@@ -28,8 +28,8 @@ let c = {
     },
     u = new o.ZP(c),
     d = new o.ZP(c),
-    _ = new o.ZP(c);
-function f(e) {
+    f = new o.ZP(c);
+function _(e) {
     let { id: t } = e;
     u.track(t);
 }
@@ -39,17 +39,17 @@ function p(e) {
 }
 function h(e) {
     let { id: t } = e;
-    _.track(t);
+    f.track(t);
 }
 class m extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (this.waitFor(s.Z), (null == e ? void 0 : e.inputDeviceFrecency) != null && u.overwriteHistory(e.inputDeviceFrecency), (null == e ? void 0 : e.outputDeviceFrecency) != null && d.overwriteHistory(e.outputDeviceFrecency), (null == e ? void 0 : e.videoDeviceFrecency) != null && _.overwriteHistory(e.videoDeviceFrecency));
+        (this.waitFor(s.Z), (null == e ? void 0 : e.inputDeviceFrecency) != null && u.overwriteHistory(e.inputDeviceFrecency), (null == e ? void 0 : e.outputDeviceFrecency) != null && d.overwriteHistory(e.outputDeviceFrecency), (null == e ? void 0 : e.videoDeviceFrecency) != null && f.overwriteHistory(e.videoDeviceFrecency));
     }
     getState() {
         return {
             inputDeviceFrecency: u.usageHistory,
             outputDeviceFrecency: d.usageHistory,
-            videoDeviceFrecency: _.usageHistory
+            videoDeviceFrecency: f.usageHistory
         };
     }
     getInputDeviceIdsSortedByFrecency() {
@@ -59,12 +59,12 @@ class m extends (r = i.ZP.PersistedStore) {
         return d.frequently;
     }
     getVideoDeviceIdsSortedByFrecency() {
-        return _.frequently;
+        return f.frequently;
     }
 }
 (l(m, 'displayName', 'DeviceFrecencyStore'), l(m, 'persistKey', 'DeviceFrecencyStore'));
 let g = new m(a.Z, {
-    AUDIO_SET_INPUT_DEVICE: f,
+    AUDIO_SET_INPUT_DEVICE: _,
     AUDIO_SET_OUTPUT_DEVICE: p,
     MEDIA_ENGINE_SET_VIDEO_DEVICE: h
 });

@@ -1,4 +1,4 @@
-(n.d(t, { E: () => f }), n(388685), n(539854));
+(n.d(t, { E: () => _ }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     a = n(658722),
@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,17 +57,17 @@ function _(e, t) {
         e
     );
 }
-class f extends i.PureComponent {
+class _ extends i.PureComponent {
     render() {
         let { label: e, value: t, popoutProps: n, renderValue: i, className: a } = this.props;
         return (0, r.jsx)(
             s.yRy,
-            _(u({ targetElementRef: this.ref }, n), {
+            f(u({ targetElementRef: this.ref }, n), {
                 renderPopout: this.renderPopout,
                 children: (n) =>
                     (0, r.jsx)(
                         s.P3F,
-                        _(u({ innerRef: this.ref }, n), {
+                        f(u({ innerRef: this.ref }, n), {
                             className: a,
                             children: (0, r.jsx)(l.F, {
                                 label: e,

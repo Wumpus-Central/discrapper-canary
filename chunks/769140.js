@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(872810),
     u = n(110924),
     d = n(833664),
-    _ = n(579630),
-    f = n(622822),
+    f = n(579630),
+    _ = n(622822),
     p = n(100527),
     h = n(906732),
     m = n(194082),
@@ -51,7 +51,7 @@ function V(e) {
                   })
                 : []
         ),
-        z = (0, o.e7)([I.Z], () => I.Z.findActivity(t.id, (e) => (0, d.Z)(e) && !(0, _.Z)(e))),
+        z = (0, o.e7)([I.Z], () => I.Z.findActivity(t.id, (e) => (0, d.Z)(e) && !(0, f.Z)(e))),
         { analyticsLocations: q } = (0, h.ZP)(p.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         X = (0, S.Z)({
             display: 'live',
@@ -66,7 +66,7 @@ function V(e) {
         }),
         { previewUrl: J, isLoading: $ } = (0, E.Z)(null == i ? void 0 : i.guildId, null == i ? void 0 : i.channelId, null == i ? void 0 : i.ownerId),
         [ee, et] = (0, b.wq)(W),
-        en = (0, f.Kt)() && (0, f.zd)(null == W ? void 0 : W.id),
+        en = (0, _.Kt)() && (0, _.zd)(null == W ? void 0 : W.id),
         er = (0, o.e7)([v.Z], () => null != W && !en && v.Z.canBasicChannel(M.S7T.CONNECT, W)),
         ei = (0, u.Z)($ ? null : J),
         ea = $ || null == J ? ei : J;

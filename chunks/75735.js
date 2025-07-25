@@ -91,12 +91,12 @@ let u = {
                 let n = 'enable' === e ? 'hover_disabled' : 'hover_enabled';
                 t.current.play(n);
             }, [e]),
-            _ = i.useCallback(() => {
+            f = i.useCallback(() => {
                 if (null == t.current) return;
                 let n = 'enable' === e ? 'hover_disabled' : 'hover_enabled';
                 t.current.stopIfPlaying(n);
             }, [e]),
-            f = i.useCallback(
+            _ = i.useCallback(
                 (e) =>
                     (0, r.jsx)(
                         a.L,
@@ -113,7 +113,7 @@ let u = {
             events: {
                 onClick: l,
                 onMouseEnter: d,
-                onMouseLeave: _
+                onMouseLeave: f
             },
             play: l,
             getDuration: i.useCallback(() => {
@@ -124,6 +124,6 @@ let u = {
                 var e, n;
                 return null != (n = null == (e = t.current) ? void 0 : e.getCurrentFrame()) ? n : null;
             }, []),
-            Component: f
+            Component: _
         };
     };

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(685072),
@@ -54,12 +54,12 @@ function d(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let _ = function (e) {
+let f = function (e) {
     var { iconComponent: t } = e,
         n = u(e, ['iconComponent']);
     let { changeLeaveCallAndActivityIcons: l } = (0, o.A)({ location: 'DisconnectButton' }),
-        { Component: d, events: _ } = (0, i.K)();
-    function f() {
+        { Component: d, events: f } = (0, i.K)();
+    function _() {
         return null != t ? t : l ? a.PBZ : d;
     }
     return (0, r.jsx)(
@@ -68,9 +68,9 @@ let _ = function (e) {
             {
                 isTrayButton: !1,
                 color: 'disconnect',
-                iconComponent: f()
+                iconComponent: _()
             },
-            _,
+            f,
             n
         )
     );

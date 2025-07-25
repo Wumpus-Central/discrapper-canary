@@ -14,7 +14,7 @@ function s(e) {
         d = r.useCallback(() => {
             s && (null == n || n(c.current), l(!1));
         }, [n, s]),
-        _ = r.useCallback(
+        f = r.useCallback(
             async (e, t, n) => {
                 (l(!0), (c.current = t));
                 try {
@@ -33,7 +33,7 @@ function s(e) {
         }, [u, d]),
         {
             isUpdating: s,
-            updateChatWallpaper: _
+            updateChatWallpaper: f
         }
     );
 }

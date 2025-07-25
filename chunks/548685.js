@@ -30,7 +30,7 @@ let P = (e) => {
         I = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         N = h.ZP.canUseCollectibles(I),
         A = (0, _.s)('useShopHomeSorting') && k === y.AW.HOME,
-        { sortType: B, setSortType: w, sortedItems: R, sortOptions: Z, shuffleProducts: D, showRecommendationOption: F } = (0, C.N)(i, N),
+        { sortType: w, setSortType: B, sortedItems: R, sortOptions: Z, shuffleProducts: D, showRecommendationOption: F } = (0, C.N)(i, N),
         M = (0, S.St)(R),
         H = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
         W = (0, a.e7)([p.Z], () => p.Z.isFocused()),
@@ -38,19 +38,19 @@ let P = (e) => {
         { animationPhase: U, startAnimation: z } = (0, E.y)(),
         G = (0, b.sp)(),
         q = null != (t = null == G ? void 0 : G.sessionId) ? t : '',
-        K = l.useRef(null),
-        Y = l.useCallback(
+        Y = l.useRef(null),
+        K = l.useCallback(
             (e) => {
                 (z({
                     isShuffling: !1,
-                    onOutroComplete: () => w(e)
+                    onOutroComplete: () => B(e)
                 }),
                     f.default.track(x.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: q,
                         sort_type: e
                     }));
             },
-            [z, w, q]
+            [z, B, q]
         );
     return null == I
         ? null
@@ -137,9 +137,9 @@ let P = (e) => {
                                               }),
                                               (0, n.jsx)(s.PhF, {
                                                   options: Z,
-                                                  select: Y,
+                                                  select: K,
                                                   className: T.sortSelect,
-                                                  isSelected: (e) => e === B,
+                                                  isSelected: (e) => e === w,
                                                   serialize: (e) => e
                                               })
                                           ]
@@ -149,12 +149,12 @@ let P = (e) => {
                                           ? (0, n.jsx)(s.zxk, {
                                                 variant: 'secondary',
                                                 text: j.intl.string(j.t.X3tnc3),
-                                                buttonRef: K,
+                                                buttonRef: Y,
                                                 onClick: () => {
                                                     (z({
                                                         isShuffling: !0,
                                                         onOutroComplete: D,
-                                                        returnRef: K
+                                                        returnRef: Y
                                                     }),
                                                         f.default.track(x.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: q }));
                                                 },

@@ -8,8 +8,8 @@ var r,
     c = n(570140),
     u = n(786761),
     d = n(455199),
-    _ = n(601070),
-    f = n(569471),
+    f = n(601070),
+    _ = n(569471),
     p = n(723170),
     h = n(23750),
     m = n(592125),
@@ -48,8 +48,8 @@ let R = {},
     j = !0;
 function U() {
     let e = y.ZP.getFlattenedGuildIds().flatMap((e) => g.ZP.getSelectableChannelIds(e)),
-        t = _.Z.getAllActiveJoinedThreads(),
-        n = (e) => !!A.TPd.GUILD_TEXTUAL.has(e.type) && (O.ZP.allowAllMessages(e) || (0, p.J)(e, f.Z, O.ZP, m.Z) === N.iN.ALL_MESSAGES),
+        t = f.Z.getAllActiveJoinedThreads(),
+        n = (e) => !!A.TPd.GUILD_TEXTUAL.has(e.type) && (O.ZP.allowAllMessages(e) || (0, p.J)(e, _.Z, O.ZP, m.Z) === N.iN.ALL_MESSAGES),
         r = [];
     for (let t of e) {
         let e = m.Z.getBasicChannel(t);
@@ -239,7 +239,7 @@ function ea() {
 }
 class eo extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(y.ZP, g.ZP, m.Z, b.ZP, _.Z, f.Z, O.ZP, E.Z, d.ZP);
+        this.waitFor(y.ZP, g.ZP, m.Z, b.ZP, f.Z, _.Z, O.ZP, E.Z, d.ZP);
     }
     canLoadMore(e) {
         let { preload: t } = e;

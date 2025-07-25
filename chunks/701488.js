@@ -14,12 +14,12 @@
     S4: () => I,
     Si: () => g,
     Ws: () => v,
-    Zc: () => f,
+    Zc: () => _,
     cE: () => N,
     cc: () => a,
     d: () => o,
     eB: () => E,
-    jT: () => _,
+    jT: () => f,
     qm: () => l,
     um: () => A,
     wP: () => P,
@@ -36,8 +36,8 @@ let a = 160,
     c = '755600276941176913',
     u = '880218832743055411',
     d = '1050941315912835122',
-    _ = '880218394199220334',
-    f = '755827207812677713',
+    f = '880218394199220334',
+    _ = '755827207812677713',
     p = '1011683823555199066',
     h = '1234546995360694434',
     m = '1214629548377768066',
@@ -60,8 +60,8 @@ var O = (function (e) {
     T = (function (e) {
         return ((e[(e.UNLOCKED = 1)] = 'UNLOCKED'), (e[(e.PORTRAIT = 2)] = 'PORTRAIT'), (e[(e.LANDSCAPE = 3)] = 'LANDSCAPE'), e);
     })({});
-let S = new Set([c, u, d, _]),
-    A = new Set([u, d, _]);
+let S = new Set([c, u, d, f]),
+    A = new Set([u, d, f]);
 var N = (function (e) {
     return ((e[(e.FOCUSED = 0)] = 'FOCUSED'), (e[(e.PIP = 1)] = 'PIP'), (e[(e.GRID = 2)] = 'GRID'), e);
 })({});

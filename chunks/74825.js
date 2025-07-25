@@ -557,8 +557,8 @@ e.exports = function (e) {
         c = s,
         u = '[\\w-]+',
         d = '(' + u + '|@\\{' + u + '\\})',
-        _ = [],
         f = [],
+        _ = [],
         p = function (e) {
             return {
                 className: 'string',
@@ -580,11 +580,11 @@ e.exports = function (e) {
         g = {
             begin: '\\(',
             end: '\\)',
-            contains: f,
+            contains: _,
             keywords: m,
             relevance: 0
         };
-    f.push(
+    _.push(
         e.C_LINE_COMMENT_MODE,
         e.C_BLOCK_COMMENT_MODE,
         p("'"),
@@ -614,15 +614,15 @@ e.exports = function (e) {
         { beginKeywords: 'and not' },
         l.FUNCTION_DISPATCH
     );
-    let E = f.concat({
+    let E = _.concat({
             begin: /\{/,
             end: /\}/,
-            contains: _
+            contains: f
         }),
         b = {
             beginKeywords: 'when',
             endsWithParent: !0,
-            contains: [{ beginKeywords: 'and not' }].concat(f)
+            contains: [{ beginKeywords: 'and not' }].concat(_)
         },
         y = {
             begin: d + '\\s*:',
@@ -640,7 +640,7 @@ e.exports = function (e) {
                         endsWithParent: !0,
                         illegal: '[<=$]',
                         relevance: 0,
-                        contains: f
+                        contains: _
                     }
                 }
             ]
@@ -652,7 +652,7 @@ e.exports = function (e) {
                 end: '[;{}]',
                 keywords: m,
                 returnEnd: !0,
-                contains: f,
+                contains: _,
                 relevance: 0
             }
         },
@@ -726,12 +726,12 @@ e.exports = function (e) {
             contains: [I]
         };
     return (
-        _.push(e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, O, v, T, y, I, b, l.FUNCTION_DISPATCH),
+        f.push(e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, O, v, T, y, I, b, l.FUNCTION_DISPATCH),
         {
             name: 'Less',
             case_insensitive: !0,
             illegal: '[=>\'/<($"]',
-            contains: _
+            contains: f
         }
     );
 };

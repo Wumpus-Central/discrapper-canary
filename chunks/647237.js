@@ -7,14 +7,14 @@ var r = n(745872),
     c = s('String.prototype.slice'),
     u = l(/^0b[01]+$/i),
     d = l(/^0o[0-7]+$/i),
-    _ = l(/^[-+]0x[0-9a-f]+$/i),
-    f = l(new i('[\x85\u200B\uFFFE]', 'g')),
+    f = l(/^[-+]0x[0-9a-f]+$/i),
+    _ = l(new i('[\x85\u200B\uFFFE]', 'g')),
     p = n(943863);
 e.exports = function e(t) {
     if ('string' != typeof t) throw new a('Assertion failed: `argument` is not a String');
     if (u(t)) return +o(c(t, 2), 2);
     if (d(t)) return +o(c(t, 2), 8);
-    if (f(t) || _(t)) return NaN;
+    if (_(t) || f(t)) return NaN;
     var n = p(t);
     return n !== t ? e(n) : +t;
 };

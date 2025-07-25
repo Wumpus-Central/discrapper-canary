@@ -57,18 +57,18 @@ function d(e, t) {
         e
     );
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,14 +78,14 @@ function f(e, t) {
     return i;
 }
 let p = function (e) {
-    var { subscriptionTier: t, onClick: n, postSuccessGuild: l, onSubscribeModalClose: u, premiumModalAnalyticsLocation: f, applicationId: p, confirmationFooter: h, paymentModalBanner: m, buttonTextOverride: g } = e,
-        E = _(e, ['subscriptionTier', 'onClick', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'applicationId', 'confirmationFooter', 'paymentModalBanner', 'buttonTextOverride']);
+    var { subscriptionTier: t, onClick: n, postSuccessGuild: l, onSubscribeModalClose: u, premiumModalAnalyticsLocation: _, applicationId: p, confirmationFooter: h, paymentModalBanner: m, buttonTextOverride: g } = e,
+        E = f(e, ['subscriptionTier', 'onClick', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'applicationId', 'confirmationFooter', 'paymentModalBanner', 'buttonTextOverride']);
     let b = {
             onClick: n,
             subscriptionTier: t,
             postSuccessGuild: l,
             onSubscribeModalClose: u,
-            premiumModalAnalyticsLocation: f,
+            premiumModalAnalyticsLocation: _,
             applicationId: p,
             confirmationFooter: h,
             paymentModalBanner: m
@@ -100,7 +100,7 @@ let p = function (e) {
             children: (e) => {
                 let { onClick: t } = e,
                     { variant: n } = E,
-                    o = _(E, ['variant']);
+                    o = f(E, ['variant']);
                 return (0, r.jsx)(
                     i.z,
                     c(

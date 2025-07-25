@@ -8,8 +8,8 @@ var r,
     c = n(710845),
     u = n(569545),
     d = n(581883),
-    _ = n(314897),
-    f = n(523746),
+    f = n(314897),
+    _ = n(523746),
     p = n(592125),
     h = n(131951),
     m = n(19780),
@@ -103,7 +103,7 @@ function W(e) {
 function K(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
-        if (_.default.getId() !== t.userId) return e;
+        if (f.default.getId() !== t.userId) return e;
         if (t.sessionId === L) {
             if (null != k) return (P.verbose('Ignoring voice state for own session due to VSU lock on channel:', k), e);
             I.GC.setState({
@@ -150,7 +150,7 @@ function Q(e) {
     e.willReconnect && (null != e.streamKey ? I.Wb.streamPing(e.streamKey) : I.Wb.voiceServerPing());
 }
 function J(e) {
-    return ((0, O.isIOS)() ? (_.default.isAuthenticated() && (M === A.$7l.INACTIVE && e.state === A.$7l.BACKGROUND && null == I.GC.channelId ? I.Wb.close(!0) : M === A.$7l.BACKGROUND && e.state === A.$7l.ACTIVE && I.Wb.isClosed() && (T.Y(!1), I.Wb.connect())), (M = e.state)) : e.state === A.$7l.ACTIVE && (T.Y(!1), _.default.isAuthenticated() && I.Wb.resetBackoff('App state is active')), !1);
+    return ((0, O.isIOS)() ? (f.default.isAuthenticated() && (M === A.$7l.INACTIVE && e.state === A.$7l.BACKGROUND && null == I.GC.channelId ? I.Wb.close(!0) : M === A.$7l.BACKGROUND && e.state === A.$7l.ACTIVE && I.Wb.isClosed() && (T.Y(!1), I.Wb.connect())), (M = e.state)) : e.state === A.$7l.ACTIVE && (T.Y(!1), f.default.isAuthenticated() && I.Wb.resetBackoff('App state is active')), !1);
 }
 function $() {
     return (I.GC.update(), !1);
@@ -218,13 +218,13 @@ function el() {
         .forEach((e) => es(e));
 }
 function ec() {
-    return y.Z.getAllActiveStreamKeys().find((e) => (0, u.my)(e).ownerId === _.default.getId());
+    return y.Z.getAllActiveStreamKeys().find((e) => (0, u.my)(e).ownerId === f.default.getId());
 }
 function eu(e) {
     let { streamType: t, guildId: n, channelId: r } = e;
     if (I.Wb.isSessionEstablished()) {
         var i, a;
-        let e = null != n ? (null == (i = p.Z.getChannel(r)) ? void 0 : i.rtcRegion) : null == (a = f.Z.getCall(r)) ? void 0 : a.region;
+        let e = null != n ? (null == (i = p.Z.getChannel(r)) ? void 0 : i.rtcRegion) : null == (a = _.Z.getCall(r)) ? void 0 : a.region;
         I.Wb.streamCreate(t, n, r, null != e ? e : g.Z.getPreferredRegion());
     }
     return !1;
@@ -233,11 +233,11 @@ function ed(e) {
     let { streamKey: t, paused: n } = e;
     I.Wb.isSessionEstablished() && I.Wb.streamSetPaused(t, n);
 }
-function e_(e) {
+function ef(e) {
     let { streamKey: t, allowMultiple: n } = e;
     return (I.Wb.isSessionEstablished() && (n || el(), I.Wb.streamWatch(t)), !1);
 }
-function ef(e) {
+function e_(e) {
     let { streamKey: t } = e;
     return (es(t), Y(), !1);
 }
@@ -257,7 +257,7 @@ function eg(e) {
 }
 class eE extends (r = o.ZP.Store) {
     initialize() {
-        (this.waitFor(_.default, E.Z, p.Z, f.Z, d.Z), this.syncWith([h.Z], $), this.syncWith([b.Z], ee));
+        (this.waitFor(f.default, E.Z, p.Z, _.Z, d.Z), this.syncWith([h.Z], $), this.syncWith([b.Z], ee));
     }
     getSocket() {
         return I.Wb;
@@ -300,8 +300,8 @@ let eb = new eE(s.Z, {
     CALL_CONNECT_MULTIPLE: ea,
     STREAM_CREATE: Y,
     STREAM_START: eu,
-    STREAM_WATCH: e_,
-    STREAM_STOP: ef,
+    STREAM_WATCH: ef,
+    STREAM_STOP: e_,
     STREAM_SET_PAUSED: ed,
     PUSH_NOTIFICATION_CLICK: ep,
     REQUEST_FORUM_UNREADS: eh,

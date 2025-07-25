@@ -30,12 +30,12 @@ function v(e) {
             var e;
             null == v || null == (e = v.current) || e.scrollToTop({ animate: !0 });
         }, [v]),
-        B = null == P ? void 0 : P.join('');
+        w = null == P ? void 0 : P.join('');
     l.useEffect(() => {
         A();
-    }, [B, A]);
-    let w = (0, p.a)(),
-        R = l.useMemo(() => w(N), [w, N]);
+    }, [w, A]);
+    let B = (0, p.a)(),
+        R = l.useMemo(() => B(N), [B, N]);
     l.useEffect(() => {
         r ||
             (0, h.n)({

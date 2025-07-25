@@ -13,8 +13,8 @@ var r = n(255367),
     c = n(442837),
     u = n(481060),
     d = n(809206),
-    _ = n(230711),
-    f = n(607070),
+    f = n(230711),
+    _ = n(607070),
     p = n(235400),
     h = n(204418),
     m = n(975298),
@@ -99,7 +99,7 @@ function H() {
     return (0, d.Mn)(t).finally(d.si);
 }
 function Y() {
-    _.Z.open(M.oAB.PREMIUM, null, {});
+    f.Z.open(M.oAB.PREMIUM, null, {});
 }
 function W(e) {
     let { product: t, isFetching: n } = (0, g.T)(e),
@@ -114,11 +114,11 @@ function W(e) {
 }
 function K(e) {
     var t;
-    let { transitionState: n, onClose: a, quest: l, location: d, reward: _, decoration: p, onUseNow: h, preview: m } = e,
+    let { transitionState: n, onClose: a, quest: l, location: d, reward: f, decoration: p, onUseNow: h, preview: m } = e,
         g = i.useRef(null),
         [b, y] = i.useState(null),
         O = i.useRef(new s.qA()),
-        v = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
+        v = (0, c.e7)([_.Z], () => _.Z.useReducedMotion),
         I = (0, c.e7)([T.default], () => T.default.getCurrentUser()),
         S = (null == (t = l.userStatus) ? void 0 : t.claimedAt) != null,
         [N, R] = i.useState(!0 === m || S ? 'claimed' : 'loading');
@@ -132,7 +132,7 @@ function K(e) {
     let P = () => {
             (R('applying'), h().finally(a));
         },
-        w = !0 === m && null === p && (null == _ ? void 0 : _.skuId) !== '',
+        w = !0 === m && null === p && (null == f ? void 0 : f.skuId) !== '',
         D = null == p && !0 !== m,
         x = null == I || D || w || 'loading' === N,
         M = !v && !S && 'claimed' === N;
@@ -204,9 +204,9 @@ function q(e) {
         l = (0, P.fh)(t, P.eC.REWARD).url,
         c = (0, R.f$)(t.config),
         { fractionalState: d } = (0, m.Z)(),
-        _ = d === j.a$.FP_ONLY,
-        f = (0, N.Qy)(t.config),
-        p = c && !_;
+        f = d === j.a$.FP_ONLY,
+        _ = (0, N.Qy)(t.config),
+        p = c && !f;
     return (0, r.jsxs)('div', {
         className: G.claimedRootContainer,
         children: [
@@ -256,7 +256,7 @@ function q(e) {
                             variant: 'text-sm/normal',
                             color: 'text-default',
                             className: G.text,
-                            children: f
+                            children: _
                         }),
                         (0, r.jsx)(u.zxk, {
                             variant: 'primary',
@@ -285,7 +285,7 @@ function X(e) {
     var t, n;
     let { quest: a, location: o, onClose: s, transitionState: l, preview: c } = e,
         u = i.useMemo(() => (0, R.xn)(a.config), [a]),
-        [d, _] = W(null != (n = null == u ? void 0 : u.skuId) ? n : null);
+        [d, f] = W(null != (n = null == u ? void 0 : u.skuId) ? n : null);
     return null == u
         ? null
         : (null == (t = a.userStatus) ? void 0 : t.claimedAt) != null
@@ -303,7 +303,7 @@ function X(e) {
                 location: o,
                 reward: u,
                 decoration: d,
-                onUseNow: _,
+                onUseNow: f,
                 preview: c
             });
 }

@@ -70,8 +70,8 @@ function u(e) {
         o = e.availableFormats,
         u = e.timeFormats,
         d = e.dateFormats,
-        _ = e.medium,
-        f = [],
+        f = e.medium,
+        _ = [],
         p = [],
         h = [];
     function m(e, t) {
@@ -79,15 +79,16 @@ function u(e) {
             r = Array((e.match(/E/g) || []).length + 1);
         return (n.length > 2 && (t = t.replace(/(M|L)+/, n.join('$1'))), r.length > 2 && (t = t.replace(/([Eec])+/, r.join('$1'))), t);
     }
-    for (t in o) o.hasOwnProperty(t) && (r = c((n = m(t, o[t])))) && (f.push(r), s(r) ? h.push(n) : l(r) && p.push(n));
+    for (t in o) o.hasOwnProperty(t) && (r = c((n = m(t, o[t])))) && (_.push(r), s(r) ? h.push(n) : l(r) && p.push(n));
     for (i = 0; i < p.length; i += 1)
         for (a = 0; a < h.length; a += 1)
             (r = c(
-                (n = _.replace('{0}', p[i])
+                (n = f
+                    .replace('{0}', p[i])
                     .replace('{1}', h[a])
                     .replace(/^[,\s]+|[,\s]+$/gi, ''))
-            )) && f.push(r);
-    for (t in u) u.hasOwnProperty(t) && (r = c((n = m(t, u[t])))) && f.push(r);
-    for (t in d) d.hasOwnProperty(t) && (r = c((n = m(t, d[t])))) && f.push(r);
-    return f;
+            )) && _.push(r);
+    for (t in u) u.hasOwnProperty(t) && (r = c((n = m(t, u[t])))) && _.push(r);
+    for (t in d) d.hasOwnProperty(t) && (r = c((n = m(t, d[t])))) && _.push(r);
+    return _;
 }

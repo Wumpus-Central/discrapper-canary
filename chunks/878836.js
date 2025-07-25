@@ -8,7 +8,7 @@ var r = n(73800),
     c = n(947673),
     u = n(720452),
     d = n(561448);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,14 +32,14 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
 }
 let p = (e) => {
     let { onSetupError: t } = e,
-        [n, _] = r.useState(void 0),
+        [n, f] = r.useState(void 0),
         [p, h] = r.useState(null),
         [m, g] = r.useState(!0),
         [E, b] = r.useState([]),
@@ -55,7 +55,7 @@ let p = (e) => {
             b((0, d.lS)(r, n));
             try {
                 let e = await (0, c.V)(r);
-                _(e);
+                f(e);
             } catch (e) {
                 (h(e), null != t && t(e), (0, a.SQ)(e));
             }
@@ -73,7 +73,7 @@ let p = (e) => {
             () =>
                 m
                     ? null
-                    : f(
+                    : _(
                           { clientSecret: n },
                           {
                               appearance: {

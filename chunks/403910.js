@@ -1,7 +1,7 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => l });
 var r = n(442837),
     i = n(339085);
-let s = function (e, t) {
+let l = function (e, t) {
     return (0, r.e7)(
         [i.ZP],
         () => {

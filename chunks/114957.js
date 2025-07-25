@@ -8,7 +8,7 @@ var r = n(224706),
     c = n(283595),
     u = n(70956),
     d = n(358085);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-class f extends a.Z {
+class _ extends a.Z {
     handlePostConnectionOpen() {
         ((0, d.isDesktop)() || (0, o.l)() || s.d.getCurrentConfig({ location: 'DetectableGamesManager.handlePostConnectionOpen' }).enabled) && (c.Z.fetched || (0, i.b8)(), r.Z.getDetectableGames(), (this.intervalId = setInterval(r.Z.getDetectableGames, l.Z.detectableGamesTtl + Math.random() * u.Z.Millis.HOUR)));
     }
@@ -29,7 +29,7 @@ class f extends a.Z {
         null != this.intervalId && (clearInterval(this.intervalId), (this.intervalId = void 0));
     }
     constructor(...e) {
-        (super(...e), _(this, 'intervalId', void 0), _(this, 'actions', { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() }));
+        (super(...e), f(this, 'intervalId', void 0), f(this, 'actions', { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() }));
     }
 }
-let p = new f();
+let p = new _();

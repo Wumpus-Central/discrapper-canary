@@ -43,11 +43,11 @@ let u = {
         notifyMessagesInSelectedChannel: !1
     },
     d = u;
-function _(e) {
+function f(e) {
     let { desktopType: t } = e;
     d.desktopType = t;
 }
-function f(e) {
+function _(e) {
     let { sounds: t } = e;
     d.disabledSounds = t;
 }
@@ -72,7 +72,7 @@ function E(e) {
 }
 function b(e) {
     let { enabled: t } = e;
-    t === s.$Ab.BLOCKED ? _({ desktopType: s.qrD.NEVER }) : t === s.$Ab.ENABLED && _({ desktopType: s.qrD.ALL });
+    t === s.$Ab.BLOCKED ? f({ desktopType: s.qrD.NEVER }) : t === s.$Ab.ENABLED && f({ desktopType: s.qrD.ALL });
 }
 class y extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
@@ -115,9 +115,9 @@ class y extends (r = i.ZP.DeviceSettingsStore) {
         }
     ]));
 let O = new y(a.Z, {
-    NOTIFICATIONS_SET_DESKTOP_TYPE: _,
+    NOTIFICATIONS_SET_DESKTOP_TYPE: f,
     NOTIFICATIONS_SET_TTS_TYPE: h,
-    NOTIFICATIONS_SET_DISABLED_SOUNDS: f,
+    NOTIFICATIONS_SET_DISABLED_SOUNDS: _,
     NOTIFICATIONS_TOGGLE_ALL_DISABLED: p,
     NOTIFICATIONS_SET_PERMISSION_STATE: b,
     NOTIFICATIONS_SET_DISABLE_UNREAD_BADGE: m,

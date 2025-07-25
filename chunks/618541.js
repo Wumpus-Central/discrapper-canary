@@ -19,16 +19,16 @@ function d(e, t, n) {
         e
     );
 }
-let _ = null,
-    f = null,
+let f = null,
+    _ = null,
     p = null;
 function h(e) {
     let { client: t } = e;
-    _ = t;
+    f = t;
 }
 function m(e) {
     let { paypalClient: t } = e;
-    f = t;
+    _ = t;
 }
 function g(e) {
     let { venmoClient: t } = e;
@@ -49,7 +49,7 @@ function b(e) {
     t === u.HeQ.PAYPAL && (r = n);
 }
 function y() {
-    f = null;
+    _ = null;
 }
 function O() {
     p = null;
@@ -66,10 +66,10 @@ function O() {
     });
 class v extends (a = o.ZP.Store) {
     getClient() {
-        return _;
+        return f;
     }
     getPayPalClient() {
-        return f;
+        return _;
     }
     getVenmoClient() {
         return p;

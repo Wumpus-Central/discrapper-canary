@@ -7,16 +7,16 @@ var r = n(620014),
     c = n(207757),
     u = n(556868),
     d = 1,
-    _ = '[object Arguments]',
-    f = '[object Array]',
+    f = '[object Arguments]',
+    _ = '[object Array]',
     p = '[object Object]',
     h = Object.prototype.hasOwnProperty;
 e.exports = function (e, t, n, m, g, E) {
     var b = l(e),
         y = l(t),
-        O = b ? f : s(e),
-        v = y ? f : s(t);
-    ((O = O == _ ? p : O), (v = v == _ ? p : v));
+        O = b ? _ : s(e),
+        v = y ? _ : s(t);
+    ((O = O == f ? p : O), (v = v == f ? p : v));
     var I = O == p,
         T = v == p,
         S = O == v;

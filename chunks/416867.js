@@ -2,39 +2,39 @@ n.d(t, { B: () => d });
 var r = n(255367);
 n(73800);
 var i = n(755721),
-    s = n(481060),
-    l = n(313201),
+    l = n(481060),
+    s = n(313201),
     o = n(192635),
     a = n(388032),
     c = n(274970);
 function u(e) {
     let { transitionState: t, Icon: n, title: u, body: d, onClose: f } = e,
-        p = (0, l.Dt)();
-    return (0, r.jsxs)(s.Y0X, {
+        p = (0, s.Dt)();
+    return (0, r.jsxs)(l.Y0X, {
         className: c.container,
         transitionState: t,
         'aria-labelledby': p,
         parentComponent: 'ActionCompletedSuccessModal',
         children: [
-            (0, r.jsxs)(s.hzk, {
+            (0, r.jsxs)(l.hzk, {
                 children: [
                     (0, r.jsx)(o.Z, { Icon: n }),
-                    (0, r.jsx)(s.LZC, { size: 24 }),
-                    (0, r.jsx)(s.X6q, {
+                    (0, r.jsx)(l.LZC, { size: 24 }),
+                    (0, r.jsx)(l.X6q, {
                         id: p,
                         className: c.__invalid_title,
                         variant: 'heading-xl/semibold',
                         children: u
                     }),
-                    (0, r.jsx)(s.LZC, { size: 8 }),
-                    (0, r.jsx)(s.Text, {
+                    (0, r.jsx)(l.LZC, { size: 8 }),
+                    (0, r.jsx)(l.Text, {
                         className: c.body,
                         variant: 'text-sm/normal',
                         children: d
                     })
                 ]
             }),
-            (0, r.jsx)(s.LZC, { size: 24 }),
+            (0, r.jsx)(l.LZC, { size: 24 }),
             (0, r.jsx)(i.zx, {
                 size: i.zx.Sizes.MEDIUM,
                 grow: !1,
@@ -45,7 +45,7 @@ function u(e) {
     });
 }
 function d(e) {
-    (0, s.h7j)((t) =>
+    (0, l.h7j)((t) =>
         (0, r.jsx)(
             u,
             (function (e) {

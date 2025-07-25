@@ -1,6 +1,6 @@
 (n.d(t, {
-    QH: () => s,
-    Z7: () => l,
+    QH: () => l,
+    Z7: () => s,
     yN: () => i
 }),
     n(781311));
@@ -12,9 +12,9 @@ let r = (0, n(972959).H)(() => ({
 function i(e) {
     r.setState({ query: e });
 }
-function s(e) {
+function l(e) {
     r.setState({ isActive: e });
 }
-function l() {
+function s() {
     return r.useField('query');
 }

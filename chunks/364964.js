@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => f }), n(388685), n(35282), n(415506), n(704826));
+(n.r(t), n.d(t, { default: () => _ }), n(388685), n(35282), n(415506), n(704826));
 var r = n(466332),
     i = n(392711),
     a = n.n(i),
@@ -17,10 +17,10 @@ for (let e of u) {
     if ((d.set(e, e), null != n)) for (let t of n) d.set(t.toLowerCase(), e);
 }
 for (let [e, t] of d) if (null == e.match(c)) throw Error('Language name does not match regex: '.concat(e));
-function _(e) {
+function f(e) {
     return d.get(e.toLowerCase());
 }
-let f = {
+let _ = {
         highlight(e, t, n) {
             if (!h(t, e)) return null;
             Date.now();
@@ -32,7 +32,7 @@ let f = {
         },
         hasLanguage: (e) => null != r.Z.getLanguage(e),
         isKnownLanguage: (e) => d.has(e.toLowerCase()),
-        resolveLanguageName: _
+        resolveLanguageName: f
     },
     p = a().repeat('/', 15);
 function h(e, t) {
@@ -44,7 +44,7 @@ function h(e, t) {
         let e = t.match(/[/]/g);
         if (null != e && (n += e.length) > 30) return !1;
     }
-    let r = _(t);
+    let r = f(t);
     if (null != r && l.has(r)) {
         var i;
         let t = e.replace(/\s*/g, '').match(s);

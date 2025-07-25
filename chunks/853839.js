@@ -7,8 +7,8 @@ var r = n(98405),
     c = n(117895).f,
     u = n(556585),
     d = n(573078),
-    _ = n(77025),
-    f = n(170322),
+    f = n(77025),
+    _ = n(170322),
     p = n(179122),
     h = n(266101),
     m = n(759319),
@@ -35,10 +35,10 @@ var r = n(98405),
     R = b.getterFor(v),
     P = 'stack' in new T(v),
     w = function (e) {
-        return _(g, e) && g[e].m ? g[e].c : 0;
+        return f(g, e) && g[e].m ? g[e].c : 0;
     },
     D = function () {
-        f(this, L);
+        _(this, L);
         var e = arguments.length,
             t = m(e < 1 ? void 0 : arguments[0]),
             n = m(e < 2 ? void 0 : arguments[1], 'Error'),
@@ -108,9 +108,9 @@ U &&
         })
     ),
 g))
-    if (_(g, Z)) {
+    if (f(g, Z)) {
         var H = g[Z],
             Y = H.s,
             W = l(6, H.c);
-        (_(V, Y) || c(V, Y, W), _(F, Y) || c(F, Y, W));
+        (f(V, Y) || c(V, Y, W), f(F, Y) || c(F, Y, W));
     }

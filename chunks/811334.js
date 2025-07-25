@@ -1,8 +1,8 @@
 n.d(t, {
-    B1: () => f,
+    B1: () => _,
     P7: () => g,
     UN: () => h,
-    Z9: () => _,
+    Z9: () => f,
     aO: () => d,
     az: () => m,
     i$: () => p
@@ -23,14 +23,14 @@ function d(e) {
         children: t
     });
 }
-function _(e) {
+function f(e) {
     let { children: t } = e;
     return (0, r.jsx)('div', {
         className: u.header,
         children: t
     });
 }
-function f(e) {
+function _(e) {
     let { label: t, value: n, className: i } = e;
     return (0, r.jsxs)('div', {
         className: a()(u.row, i),
@@ -47,19 +47,19 @@ function f(e) {
     });
 }
 function p(e) {
-    let { label: t, value: n, discounts: i, originalAmount: a, interval: d, currency: _, className: p, intervalCount: h, inTrialPeriod: m } = e,
+    let { label: t, value: n, discounts: i, originalAmount: a, interval: d, currency: f, className: p, intervalCount: h, inTrialPeriod: m } = e,
         g = (e) => (null != i ? i.find((t) => t.type === e) : null),
         E = g(s.eW.SUBSCRIPTION_PLAN),
         b = g(s.eW.ENTITLEMENT),
         y = null != E ? Math.floor((E.amount / a) * 100) : null,
-        O = (0, l.T4)(a, _);
+        O = (0, l.T4)(a, f);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(f, {
+            (0, r.jsx)(_, {
                 label: t,
                 value: (0, r.jsxs)(r.Fragment, {
                     children: [
-                        m ? c.intl.formatToPlainString(c.t.hXcaLS, { price: (0, l.T4)(0, _) }) : n,
+                        m ? c.intl.formatToPlainString(c.t.hXcaLS, { price: (0, l.T4)(0, f) }) : n,
                         null != y
                             ? (0, r.jsxs)('div', {
                                   className: u.rowPercentDiscount,

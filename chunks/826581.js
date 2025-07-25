@@ -8,8 +8,8 @@ var r,
     c = n(594174),
     u = n(70956),
     d = n(881952),
-    _ = n(246364),
-    f = n(937111);
+    f = n(246364),
+    _ = n(937111);
 function p(e, t, n) {
     return (
         t in e
@@ -73,11 +73,11 @@ function v(e, t) {
 }
 function I(e, t, n) {
     if (t !== n && null != t) {
-        if (t === _.wB.SUBMITTED) {
+        if (t === f.wB.SUBMITTED) {
             let t = O(e);
             v(e, t + 1);
         }
-        if (n === _.wB.SUBMITTED) {
+        if (n === f.wB.SUBMITTED) {
             let t = O(e);
             v(e, Math.max(0, t - 1));
         }
@@ -94,7 +94,7 @@ function A() {
 function N(e) {
     let { status: t, requests: n, total: r, guildId: i } = e;
     ((S = !1),
-        t === _.wB.SUBMITTED && v(i, r),
+        t === f.wB.SUBMITTED && v(i, r),
         n.forEach((e) => {
             j(e);
         }));
@@ -123,7 +123,7 @@ function j(e) {
 function U(e) {
     var t;
     let { guildId: n, request: r } = e,
-        i = (0, f.j)(r),
+        i = (0, _.j)(r),
         a = c.default.getCurrentUser();
     if (null == a || i.userId === a.id) return !1;
     let o = null == (t = M(i.joinRequestId)) ? void 0 : t.applicationStatus;
@@ -136,7 +136,7 @@ function G(e) {
 }
 function B(e) {
     let { guildId: t, action: n } = e;
-    (D.values(P(t, _.wB.SUBMITTED)).forEach((e) => {
+    (D.values(P(t, f.wB.SUBMITTED)).forEach((e) => {
         j(g(h({}, e), { applicationStatus: n }));
     }),
         v(t, 0));
@@ -152,7 +152,7 @@ function H(e) {
     let { guildId: n, sortOrder: r } = e;
     if (r === Z[n]) return;
     Z[n] = r;
-    let i = null != (t = V[n]) ? t : _.wB.SUBMITTED;
+    let i = null != (t = V[n]) ? t : f.wB.SUBMITTED;
     'REVIEW_APPLICATION' !== i && ((0, d.bk)(i) && x.clear(), (0, d.Nd)(i) && L.clear());
 }
 let Y = {};
@@ -183,12 +183,12 @@ class q extends (r = o.ZP.Store) {
     }
     getSelectedApplicationTab(e) {
         var t;
-        let n = _.wB.SUBMITTED;
+        let n = f.wB.SUBMITTED;
         return null != (t = V[e]) ? t : n;
     }
     getSelectedSortOrder(e) {
         var t;
-        return null != (t = Z[e]) ? t : _.Nw.TIMESTAMP_DESC;
+        return null != (t = Z[e]) ? t : f.Nw.TIMESTAMP_DESC;
     }
     getSelectedGuildJoinRequest(e) {
         let t = Y[e];

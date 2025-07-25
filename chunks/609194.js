@@ -22,10 +22,10 @@ function u(e, t, n) {
 var d = (function (e) {
         return ((e.PRIMARY = 'primary'), (e.SECONDARY = 'secondary'), (e.WARNING = 'warning'), (e.ERROR = 'error'), e);
     })(d || {}),
-    _ = (function (e) {
+    f = (function (e) {
         return ((e.SMALL = 'small'), (e.LARGE = 'large'), (e.NONE = 'none'), e);
-    })(_ || {});
-let f = {
+    })(f || {});
+let _ = {
         primary: c.colorPrimary,
         secondary: c.colorSecondary,
         warning: c.colorWarning,
@@ -40,7 +40,7 @@ class h extends (r = a.PureComponent) {
     render() {
         let { icon: e, color: t, children: n, iconSize: r, className: a, iconClassName: o } = this.props;
         return (0, i.jsxs)(l.Z, {
-            className: s()(c.note, f[t], a),
+            className: s()(c.note, _[t], a),
             align: l.Z.Align.CENTER,
             children: [
                 (0, i.jsx)(e, {
@@ -52,5 +52,5 @@ class h extends (r = a.PureComponent) {
         });
     }
 }
-(u(h, 'Colors', d), u(h, 'Sizes', _));
+(u(h, 'Colors', d), u(h, 'Sizes', f));
 let m = h;

@@ -1,10 +1,10 @@
 n.d(t, {
     Iw: () => h,
     On: () => p,
-    Yk: () => f,
+    Yk: () => _,
     cQ: () => u,
     ev: () => c,
-    m1: () => _,
+    m1: () => f,
     n8: () => d
 });
 var r = n(367907),
@@ -48,7 +48,7 @@ let c = (e) => {
     d = () => {
         i.default.track(o.rMx.SEARCH_STARTED, { search_type: o.aib.STICKER });
     },
-    _ = (e, t, n) => {
+    f = (e, t, n) => {
         r.ZP.trackWithMetadata(o.rMx.SEARCH_RESULT_VIEWED, {
             search_type: o.aib.STICKER,
             total_results: t,
@@ -56,7 +56,7 @@ let c = (e) => {
             is_suggestion: n
         });
     },
-    f = (e, t, n) => {
+    _ = (e, t, n) => {
         let i,
             { sticker: s } = e;
         (s.type === a.n0.GUILD && (i = s.guild_id),

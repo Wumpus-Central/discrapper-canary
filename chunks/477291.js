@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -57,7 +57,7 @@ function d(e, t) {
         e
     );
 }
-function _(e, t, n) {
+function f(e, t, n) {
     var r;
     let { rating: o, problem: l, feedback: c } = n;
     ((0, a.Z)({
@@ -71,7 +71,7 @@ function _(e, t, n) {
     }),
         (0, i.showToast)((0, i.createToast)(s.intl.string(s.t['d9+vQ0']), i.ToastType.SUCCESS)));
 }
-function f(e) {
+function _(e) {
     let { summary: t, channel: a, rating: s } = e;
     null != t &&
         (s === o.aZ.BAD
@@ -81,12 +81,12 @@ function f(e) {
                       (0, r.jsx)(
                           e,
                           d(c({}, n), {
-                              onSubmit: (e) => _(t, a, e),
+                              onSubmit: (e) => f(t, a, e),
                               startRating: s
                           })
                       );
               })
-            : _(t, a, {
+            : f(t, a, {
                   rating: s,
                   problem: null,
                   feedback: '',

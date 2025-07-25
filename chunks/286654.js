@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function _(e, t) {
         e
     );
 }
-function f(e, t, i, o) {
+function _(e, t, i, o) {
     let c = s.default.getCurrentUser();
     (null != t || l.ZP.canUseCustomCallSounds(c)) &&
         (0, a.jW)(e, async () => {
@@ -65,7 +65,7 @@ function f(e, t, i, o) {
             return (n) =>
                 (0, r.jsx)(
                     e,
-                    _(u({}, n), {
+                    f(u({}, n), {
                         soundGuild: t,
                         activeCallGuildId: o,
                         sound: i
@@ -79,7 +79,7 @@ function p(e, t) {
             n.stopPropagation();
             let r = o.Z.getGuild(e.guildId),
                 i = s.default.getCurrentUser();
-            (null != r || l.ZP.canUseCustomCallSounds(i)) && f(n, r, e, t);
+            (null != r || l.ZP.canUseCustomCallSounds(i)) && _(n, r, e, t);
         },
         [e, t]
     );

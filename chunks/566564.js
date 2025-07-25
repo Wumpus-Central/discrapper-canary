@@ -107,7 +107,7 @@ let L = (e) => {
                     })
                 ]
             });
-        let B = (e, t) => {
+        let w = (e, t) => {
             if (null == e) return null;
             let l = null;
             switch (e.type) {
@@ -190,7 +190,7 @@ let L = (e) => {
                 t
             );
         };
-        return (0, n.jsx)(n.Fragment, { children: I.map((e, t) => B(e, t)) });
+        return (0, n.jsx)(n.Fragment, { children: I.map((e, t) => w(e, t)) });
     },
     k = (e) => {
         let { isFullScreen: t, handleTransition: r, tab: i, transitionState: a } = e,
@@ -253,7 +253,7 @@ let L = (e) => {
                                                             collectibles_shop_session_id: null == _ ? void 0 : _.sessionId,
                                                             page_type: i,
                                                             page_category: i === x.AW.HOME || null == _ ? void 0 : _.pageCategory,
-                                                            cta_name: 'shop the whole shop button'
+                                                            cta_name: 'browse the shop button'
                                                         }));
                                                 },
                                                 fullWidth: !0

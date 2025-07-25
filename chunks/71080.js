@@ -1,8 +1,8 @@
 n.d(t, {
     EQ: () => d,
-    IG: () => f,
+    IG: () => _,
     aC: () => c,
-    kf: () => _,
+    kf: () => f,
     m$: () => u
 });
 var r = n(230711),
@@ -18,8 +18,8 @@ var r = n(230711),
         return ((e[(e.ROLES = 0)] = 'ROLES'), (e[(e.MEMBERS = 1)] = 'MEMBERS'), (e[(e.USERS = 2)] = 'USERS'), (e[(e.GUILDS = 3)] = 'GUILDS'), e);
     })({});
 let d = 20,
-    _ = 'channelPermissionSettingsAdvancedModeOn';
-function f(e, t, n, c) {
+    f = 'channelPermissionSettingsAdvancedModeOn';
+function _(e, t, n, c) {
     let u = e.type;
     return {
         [s.Plq.VIEW_CHANNEL.toString()]: {

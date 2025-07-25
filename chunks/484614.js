@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r,
     i = n(255367),
-    s = n(73800),
-    l = n(846519),
+    l = n(73800),
+    s = n(846519),
     o = n(755721),
     a = n(481060),
     c = n(572004),
@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-class f extends (r = s.PureComponent) {
+class f extends (r = l.PureComponent) {
     componentWillUnmount() {
         this._timeout.stop();
     }
@@ -28,7 +28,7 @@ class f extends (r = s.PureComponent) {
         var e, t;
         let { text: n } = this.props,
             { mode: r } = this.state,
-            s = r === a.kO8.Modes.SUCCESS ? u.intl.string(u.t['t5VZ8/']) : n;
+            l = r === a.kO8.Modes.SUCCESS ? u.intl.string(u.t['t5VZ8/']) : n;
         return (0, i.jsx)(
             a.kO8,
             ((e = (function (e) {
@@ -51,7 +51,7 @@ class f extends (r = s.PureComponent) {
                 {
                     onCopy: this.handleCopy,
                     mode: r,
-                    text: s,
+                    text: l,
                     supportsCopy: c.wS
                 }),
             Object.getOwnPropertyDescriptors
@@ -90,7 +90,7 @@ class f extends (r = s.PureComponent) {
         }
     }
     constructor(e) {
-        (super(e), d(this, '_timeout', void 0), (this.state = { mode: a.kO8.Modes.DEFAULT }), (this._timeout = new l.V7()), (this.handleCopy = this.handleCopy.bind(this)));
+        (super(e), d(this, '_timeout', void 0), (this.state = { mode: a.kO8.Modes.DEFAULT }), (this._timeout = new s.V7()), (this.handleCopy = this.handleCopy.bind(this)));
     }
 }
 d(f, 'defaultProps', { delay: 1000 });

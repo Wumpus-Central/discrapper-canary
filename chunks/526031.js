@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(906732),
     u = n(765585),
     d = n(429467),
-    _ = n(921944),
-    f = n(388032),
+    f = n(921944),
+    _ = n(388032),
     p = n(385255);
 function h(e, t, n) {
     return (
@@ -68,7 +68,7 @@ function b(e) {
         { analyticsLocations: g } = (0, c.ZP)(l.Z.CUSTOM_STATUS_TAGS_COACHMARK),
         b = () => {
             (null == h || h(),
-                t(_.L.TAKE_ACTION),
+                t(f.L.TAKE_ACTION),
                 (0, s.ZDy)(async () => {
                     let { default: e } = await n.e('31649').then(n.bind(n, 475613)),
                         t = (0, d.Z)();
@@ -90,20 +90,20 @@ function b(e) {
         tryItText: (0, r.jsx)(s.Text, {
             variant: 'text-xs/semibold',
             color: 'always-white',
-            children: f.intl.string(f.t.RzWDqa)
+            children: _.intl.string(_.t.RzWDqa)
         }),
         tryItButtonColor: o.Tt.BRAND,
         onTryFeature: b,
         header: (0, r.jsx)(s.X6q, {
             variant: 'heading-sm/bold',
             color: 'text-primary',
-            children: f.intl.string(f.t.jrzHRk)
+            children: _.intl.string(_.t.jrzHRk)
         }),
         body: (0, r.jsx)(s.Text, {
             variant: 'text-xs/normal',
             color: 'text-secondary',
             className: p.body,
-            children: f.intl.string(f.t.hA60Ul)
+            children: _.intl.string(_.t.hA60Ul)
         }),
         position: 'top',
         align: 'center',
@@ -112,14 +112,14 @@ function b(e) {
         pointerClassName: p.pointer,
         dismissIcon: (0, r.jsx)(i.D, { size: 'xs' }),
         dismissIconClassName: p.dismissIcon,
-        onDismissIconClick: () => t(_.L.USER_DISMISS)
+        onDismissIconClick: () => t(f.L.USER_DISMISS)
     });
 }
 function y(e) {
     let { children: t, markAsDismissed: n, targetElementRef: i, onTryFeature: a, positionKey: o } = e;
     return (0, r.jsx)(s.yRy, {
         targetElementRef: i,
-        onRequestClose: () => n(_.L.INDIRECT_ACTION),
+        onRequestClose: () => n(f.L.INDIRECT_ACTION),
         position: 'top',
         align: 'center',
         shouldShow: !0,

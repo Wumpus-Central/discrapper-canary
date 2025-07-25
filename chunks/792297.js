@@ -12,13 +12,13 @@ var r = n(255367),
     c = n(730606),
     u = n(369171),
     d = n(179963);
-let _ = 24,
-    f = 36,
+let f = 24,
+    _ = 36,
     p = 76,
     h = 88,
     m = 272;
 function g(e, t) {
-    let n = window.innerWidth - (e ? p : _) * 2,
+    let n = window.innerWidth - (e ? p : f) * 2,
         r = window.innerHeight - 2 * h;
     if (!(0, l._H)(t))
         return {
@@ -27,7 +27,7 @@ function g(e, t) {
         };
     let { width: i, height: a } = t,
         o = window.innerWidth - 2 * m,
-        s = window.innerHeight - (e ? h : f) * 2,
+        s = window.innerHeight - (e ? h : _) * 2,
         c = (0, l.Tj)({
             width: i,
             height: a,
@@ -45,11 +45,11 @@ function g(e, t) {
 function E(e) {
     let { items: t, currentIndex: n, children: a } = e,
         l = t[n],
-        _ = g(t.length > 1, {
+        f = g(t.length > 1, {
             width: l.width,
             height: l.height
         }),
-        [f, p] = i.useState(0);
+        [_, p] = i.useState(0);
     return (
         i.useEffect(() => {
             let e = () => p((e) => e + 1);
@@ -69,7 +69,7 @@ function E(e) {
                     'div',
                     {
                         className: o()(d.mediaArea, e),
-                        children: _.width > 0 && _.height > 0 && a(_.width, _.height)
+                        children: f.width > 0 && f.height > 0 && a(f.width, f.height)
                     },
                     l.url
                 )

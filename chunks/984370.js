@@ -1,6 +1,6 @@
 (n.d(t, {
     O: () => g,
-    Z: () => b
+    Z: () => P
 }),
     n(35282));
 var r = n(255367);
@@ -15,8 +15,8 @@ var i = n(873546),
     d = n(2818),
     _ = n(954551),
     E = n(208450),
-    I = n(975146),
-    O = n(979651),
+    O = n(975146),
+    I = n(979651),
     p = n(358085),
     T = n(998502),
     S = n(665149),
@@ -74,9 +74,9 @@ async function g(e) {
     }
 }
 function y(e) {
-    let { children: t, className: n, channelId: o, channelType: c, guildId: p, innerClassname: T, transparent: m = !1, showToolbar: R = !0, toolbar: y, mobileToolbar: C, 'aria-label': P, 'aria-labelledby': b, scrollable: h, role: D, hideSearch: U, showDivider: M, disableDoubleClick: v } = e,
+    let { children: t, className: n, channelId: o, channelType: c, guildId: p, innerClassname: T, transparent: m = !1, showToolbar: R = !0, toolbar: y, mobileToolbar: C, 'aria-label': b, 'aria-labelledby': P, scrollable: h, role: D, hideSearch: U, showDivider: M, disableDoubleClick: v } = e,
         Z = null == o || (0, f.AB)(o) ? null : o,
-        L = (0, l.e7)([O.Z], () => O.Z.isInChannel(Z) || !1),
+        L = (0, l.e7)([I.Z], () => I.Z.isInChannel(Z) || !1),
         j = (0, l.e7)([s.Z], () => null != Z && s.Z.getParticipantsListOpen(Z)),
         { enabled: k, inInbox: x } = d.Z.useExperiment({ location: 'HeaderBar' }),
         { hasParticipantsPanel: F } = (0, u.Z)({ location: 'HeaderBar' });
@@ -101,7 +101,7 @@ function y(e) {
                               c === N.d4z.GROUP_DM &&
                               (0, r.jsxs)('div', {
                                   className: A.controlButtonWrapper,
-                                  children: [(0, r.jsx)(S.ZP.Divider, {}), (0, r.jsx)(I.Z, { onClick: () => a.Z.toggleParticipantsList(Z, !j) })]
+                                  children: [(0, r.jsx)(S.ZP.Divider, {}), (0, r.jsx)(O.Z, { onClick: () => a.Z.toggleParticipantsList(Z, !j) })]
                               })
                       ]
                   });
@@ -109,8 +109,8 @@ function y(e) {
         transparent: m,
         showToolbar: R,
         onDoubleClick: () => g(v),
-        'aria-label': P,
-        'aria-labelledby': b,
+        'aria-label': b,
+        'aria-labelledby': P,
         role: D,
         scrollable: h,
         children: t
@@ -127,7 +127,7 @@ function C(e) {
         children: t
     });
 }
-function P(e) {
+function b(e) {
     var { isAuthenticated: t = !0 } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -154,5 +154,5 @@ function P(e) {
         children: t ? (0, r.jsx)(y, R(m({}, n), { className: n.className })) : (0, r.jsx)(C, R(m({}, n), { className: n.className }))
     });
 }
-((P.Title = S.ZP.Title), (P.Icon = S.ZP.Icon), (P.ChannelIcon = S.ZP.ChannelIcon), (P.Divider = S.ZP.Divider), (P.Caret = S.ZP.Caret));
-let b = P;
+((b.Title = S.ZP.Title), (b.Icon = S.ZP.Icon), (b.ChannelIcon = S.ZP.ChannelIcon), (b.Divider = S.ZP.Divider), (b.Caret = S.ZP.Caret));
+let P = b;

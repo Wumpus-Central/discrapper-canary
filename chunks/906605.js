@@ -1,8 +1,8 @@
 (n.d(t, {
-    Sc: () => f,
+    Sc: () => _,
     UP: () => p,
     Zx: () => d,
-    _s: () => _
+    _s: () => f
 }),
     n(388685));
 var r = n(570140),
@@ -15,7 +15,7 @@ var r = n(570140),
     u = n(981631);
 function d(e, t) {
     var n;
-    if (null == e) return void f(t);
+    if (null == e) return void _(t);
     (r.Z.dispatch({
         type: 'UPDATE_HANG_STATUS',
         status: e,
@@ -28,9 +28,9 @@ function d(e, t) {
             media_session_id: o.Z.getMediaSessionId()
         }));
 }
-function _(e, t, n) {
+function f(e, t, n) {
     var i;
-    if ('' === e || null == t) return void f(n);
+    if ('' === e || null == t) return void _(n);
     (r.Z.dispatch({
         type: 'UPDATE_HANG_STATUS_CUSTOM',
         emoji: t,
@@ -44,7 +44,7 @@ function _(e, t, n) {
             media_session_id: o.Z.getMediaSessionId()
         }));
 }
-function f(e) {
+function _(e) {
     var t;
     (r.Z.dispatch({
         type: 'CLEAR_HANG_STATUS',

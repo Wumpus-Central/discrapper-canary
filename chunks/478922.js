@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function _(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,7 +53,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -82,7 +82,7 @@ function m(e, t) {
 function g(e, t, n) {
     let a = (0, c.G6)(e),
         d = new Map(),
-        f = new n((e) => {
+        _ = new n((e) => {
             e.forEach((e) => {
                 var t;
                 let { target: n } = e;
@@ -148,13 +148,13 @@ function g(e, t, n) {
             ref: K,
             key: 'container',
             onUpdate: es,
-            resizeObserver: f,
+            resizeObserver: _,
             listenerMap: d
         }),
             (0, i.useImperativeHandle)(
                 m,
                 () =>
-                    _(
+                    f(
                         {
                             getScrollerNode: () => K.current,
                             getItemGrid: ea,
@@ -183,7 +183,7 @@ function g(e, t, n) {
             (0, r.jsxs)(
                 'div',
                 p(
-                    _(
+                    f(
                         {
                             ref: K,
                             onScroll: el,
@@ -217,8 +217,8 @@ function g(e, t, n) {
                                                 return null != i && null != a
                                                     ? (0, r.jsxs)(
                                                           'div',
-                                                          p(_({}, s), {
-                                                              style: _({}, i, null != (t = null == s ? void 0 : s.style) ? t : {}),
+                                                          p(f({}, s), {
+                                                              style: f({}, i, null != (t = null == s ? void 0 : s.style) ? t : {}),
                                                               children: [
                                                                   null != A && null != o && A(n, o, e),
                                                                   a.map((e) => {

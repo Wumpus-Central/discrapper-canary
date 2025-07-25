@@ -16,8 +16,8 @@ var r = n(392711),
     u = n(691424),
     d = n(428595);
 n(454585);
-var _ = n(364458);
-let f = (0, _.Z)([
+var f = n(364458);
+let _ = (0, f.Z)([
         d.Z.PROFILE_BIO_RULES,
         (0, u.Z)({
             enableBuildOverrides: !1,
@@ -25,7 +25,7 @@ let f = (0, _.Z)([
         })
     ]),
     p = new (o())({ max: 2000 }),
-    h = c.w4(f),
+    h = c.w4(_),
     m = void 0;
 function g(e) {
     let t = p.get(e);
@@ -34,7 +34,7 @@ function g(e) {
 function E(e) {
     if (0 === e.trim().length) return null;
     let t = g(e);
-    return l().reactFor(l().ruleOutput(f, 'react'))(t);
+    return l().reactFor(l().ruleOutput(_, 'react'))(t);
 }
 let b = ['link', 'url', 'autolink', 'customEmoji', 'emoji', 'commandMention'],
-    y = c.w4((0, _.Z)([i().omit(f, b), { emoji: { react: () => null } }]));
+    y = c.w4((0, f.Z)([i().omit(_, b), { emoji: { react: () => null } }]));

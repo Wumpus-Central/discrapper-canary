@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => c }), n(388685));
 var r,
     i = n(442837),
-    s = n(570140);
-function l(e, t, n) {
+    l = n(570140);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,8 +27,8 @@ class a extends (r = i.ZP.PersistedStore) {
         return { guilds: o };
     }
 }
-(l(a, 'displayName', 'RecentlyActiveCollapseStore'), l(a, 'persistKey', 'RecentlyActiveCollapseStore'));
-let c = new a(s.Z, {
+(s(a, 'displayName', 'RecentlyActiveCollapseStore'), s(a, 'persistKey', 'RecentlyActiveCollapseStore'));
+let c = new a(l.Z, {
     SET_RECENTLY_ACTIVE_COLLAPSED: function (e) {
         let { guildId: t, collapsed: n } = e;
         n ? o.add(t) : o.delete(t);

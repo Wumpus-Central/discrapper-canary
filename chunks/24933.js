@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r,
     i = n(442837),
     a = n(570140);
@@ -50,4 +50,4 @@ class d extends (r = i.ZP.PersistedStore) {
     }
 }
 (o(d, 'displayName', 'ActivityShelfStore'), o(d, 'persistKey', 'ActivityShelfStore'));
-let _ = new d(a.Z, { LOGOUT: u });
+let f = new d(a.Z, { LOGOUT: u });

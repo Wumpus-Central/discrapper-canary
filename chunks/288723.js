@@ -22,9 +22,9 @@ let d = {
         if (!t.modifiersData[a]._skip) {
             for (
                 var d = n.mainAxis,
-                    _ = void 0 === d || d,
-                    f = n.altAxis,
-                    p = void 0 === f || f,
+                    f = void 0 === d || d,
+                    _ = n.altAxis,
+                    p = void 0 === _ || _,
                     h = n.fallbackPlacements,
                     m = n.padding,
                     g = n.boundary,
@@ -77,7 +77,7 @@ let d = {
                 var V = (0, r.Z)(B),
                     F = [];
                 if (
-                    (_ && F.push(G[M] <= 0),
+                    (f && F.push(G[M] <= 0),
                     p && F.push(G[B] <= 0, G[V] <= 0),
                     F.every(function (e) {
                         return e;

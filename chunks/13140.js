@@ -22,7 +22,7 @@ var r = n(921738),
     c = n(358085),
     u = n(378799),
     d = n(981631);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -233,8 +233,8 @@ function k(e) {
         ? []
         : e.reduce((e, n) => {
               let r = A(n),
-                  i = f({}, t);
-              if (null == r) return (e.push(h(f({}, i), { combo: n })), e);
+                  i = _({}, t);
+              if (null == r) return (e.push(h(_({}, i), { combo: n })), e);
               if (L.test(r) && x(r)) return ((t[M(r)] = !0), e.map((e) => ((e[M(r)] = !0), e)));
               {
                   let t = N(r, d.CgE.BROWSER);

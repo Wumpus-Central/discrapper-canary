@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(906732),
     u = n(104494),
     d = n(639119),
-    _ = n(165583),
-    f = n(626135),
+    f = n(165583),
+    _ = n(626135),
     p = n(74538),
     h = n(45521),
     m = n(251159),
@@ -24,7 +24,7 @@ let v = () => (0, h.f)(!1),
         let { onLearnMore: h } = e,
             { analyticsLocations: I } = (0, c.ZP)(l.Z.PREMIUM_UPSELL);
         i.useEffect(() => {
-            f.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, {
+            _.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, {
                 location_section: g.jXE.STICKER_PICKER_UPSELL,
                 type: E.cd.STICKER_PICKER_UPSELL,
                 location_stack: I
@@ -38,7 +38,7 @@ let v = () => (0, h.f)(!1),
             className: o()(y.upsellWrapper, { [y.unifyTrialUpsell]: N }),
             children: [
                 N
-                    ? (0, r.jsx)(_.ZP, {
+                    ? (0, r.jsx)(f.ZP, {
                           trialOffer: T,
                           discountOffer: S,
                           onClose: v,

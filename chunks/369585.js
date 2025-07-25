@@ -12,8 +12,8 @@ var i = n(120356),
     c = n(374415),
     u = n(185033),
     d = n(388032),
-    _ = n(946598);
-function f(e, t, n) {
+    f = n(946598);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -90,15 +90,15 @@ function b(e) {
     return null == t && n.length < 1
         ? null
         : (0, r.jsxs)('footer', {
-              className: a()(_.actionBar, _.section),
+              className: a()(f.actionBar, f.section),
               children: [
                   null != t &&
                       (0, r.jsx)('div', {
-                          className: _.actionBarLeading,
+                          className: f.actionBarLeading,
                           children: t
                       }),
                   (0, r.jsx)('div', {
-                      className: a()(_.actionBarTrailing, { [_.actionBarTrailingFullWidth]: i }),
+                      className: a()(f.actionBarTrailing, { [f.actionBarTrailingFullWidth]: i }),
                       children: (0, r.jsx)(c.h, {
                           fullWidth: i,
                           children: null == n ? void 0 : n.map((e, t) => (0, r.jsx)(l.z, p({}, e), t))

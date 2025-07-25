@@ -3,8 +3,8 @@ let r;
     n.d(t, {
         DEV_PID: () => p,
         OVERLAY_DEFAULT_RESOLUTION: () => d,
-        OVERLAY_LAYOUT_ID: () => f,
-        OVERLAY_MIN_RESOLUTION: () => _,
+        OVERLAY_LAYOUT_ID: () => _,
+        OVERLAY_MIN_RESOLUTION: () => f,
         OVERLAY_VERSION: () => u,
         UNSET_PID: () => h,
         getPID: () => g,
@@ -34,11 +34,11 @@ let u = 2,
         width: 3840,
         height: 2160
     },
-    _ = {
+    f = {
         width: 768,
         height: 432
     },
-    f = 'overlay_default',
+    _ = 'overlay_default',
     p = -2,
     h = -1,
     m = !1;
@@ -66,7 +66,7 @@ function O(e) {
     });
 }
 function v(e) {
-    return !o.isPlatformEmbedded || (e.width >= _.width && e.height >= _.height);
+    return !o.isPlatformEmbedded || (e.width >= f.width && e.height >= f.height);
 }
 function I(e) {
     m = e;

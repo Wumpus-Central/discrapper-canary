@@ -3,13 +3,13 @@ var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(42133),
+    s = n(652141),
     l = n(793030),
     c = n(442837),
     u = n(755721),
     d = n(481060),
-    _ = n(434650),
-    f = n(100527),
+    f = n(434650),
+    _ = n(100527),
     p = n(906732),
     h = n(879892),
     m = n(245004),
@@ -101,7 +101,7 @@ function M(e) {
                 });
         }, [t, l]),
         j = i.useCallback(() => {
-            (a(), (0, T.Z)(t, f.Z.GUILD_POWERUPS_MARKETING, n.skuId));
+            (a(), (0, T.Z)(t, _.Z.GUILD_POWERUPS_MARKETING, n.skuId));
         }, [t, n.skuId, a]),
         U = {
             tension: 400,
@@ -125,7 +125,7 @@ function M(e) {
         F = i.useCallback((e) => {
             e && y(!0);
         }, []),
-        Z = (0, _.O)(F),
+        Z = (0, f.O)(F),
         H = (0, O.Z)(n, w);
     return (0, r.jsxs)('div', {
         className: o()(P.topPerksCard, P.animatedTopPerksCard, R.powerupCard, { [P.animate]: b }),

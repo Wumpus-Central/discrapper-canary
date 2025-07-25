@@ -18,8 +18,8 @@ var i = n(952265),
     c = n(513449),
     u = n(930180),
     d = n(981631),
-    _ = n(602091);
-function f(e, t, n) {
+    f = n(602091);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -83,7 +83,7 @@ function E(e, t) {
             let { default: t } = await Promise.all([n.e('82758'), n.e('24231')]).then(n.bind(n, 581355));
             return (n) => (0, r.jsx)(t, m(p({}, n), { channel: e }));
         },
-        { contextKey: t === d.IlC.POPOUT ? _.u1 : _.z1 }
+        { contextKey: t === d.IlC.POPOUT ? f.u1 : f.z1 }
     );
 }
 function b(e) {
@@ -98,7 +98,7 @@ function y(e, t) {
             let { default: t } = await n.e('2634').then(n.bind(n, 548841));
             return (n) => (0, r.jsx)(t, m(p({}, n), { channel: e }));
         },
-        { contextKey: t === d.IlC.POPOUT ? _.u1 : _.z1 }
+        { contextKey: t === d.IlC.POPOUT ? f.u1 : f.z1 }
     );
 }
 function O(e) {}
@@ -124,7 +124,7 @@ function T(e, t) {
             let { default: t } = await n.e('85885').then(n.bind(n, 124779));
             return (n) => (0, r.jsx)(t, m(p({}, n), { channel: e }));
         },
-        { contextKey: t === d.IlC.POPOUT ? _.u1 : _.z1 }
+        { contextKey: t === d.IlC.POPOUT ? f.u1 : f.z1 }
     );
 }
 function S(e) {

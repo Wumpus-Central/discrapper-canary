@@ -28,8 +28,8 @@ var i = n(120356),
     c = n(905656),
     u = n(600164),
     d = n(313201),
-    _ = n(565138),
-    f = n(361207),
+    f = n(565138),
+    _ = n(361207),
     p = n(63063),
     h = n(981631),
     m = n(388032),
@@ -143,7 +143,7 @@ let N = (e) => {
     },
     C = (e) => {
         let { guild: t, size: n, animate: i = !1, className: a } = e;
-        return (0, r.jsx)(_.Z, {
+        return (0, r.jsx)(f.Z, {
             active: !0,
             guild: t,
             size: n,
@@ -151,7 +151,7 @@ let N = (e) => {
             className: a
         });
     };
-C.Sizes = _.Z.Sizes;
+C.Sizes = f.Z.Sizes;
 let R = (e) => {
     let { className: t, channel: n, size: i } = e;
     return (0, r.jsx)(v, {
@@ -163,7 +163,7 @@ let R = (e) => {
 };
 R.Sizes = s.EFr;
 let P = (e) => {
-        let { label: t, error: n, placeholder: i, value: l, className: c, inputClassName: u, setRef: _, type: f = 'text', onChange: p, autoComplete: h, autoFocus: m, maxLength: E, spellCheck: b, name: y, description: O, required: v, onFocus: I, onBlur: T } = e,
+        let { label: t, error: n, placeholder: i, value: l, className: c, inputClassName: u, setRef: f, type: _ = 'text', onChange: p, autoComplete: h, autoFocus: m, maxLength: E, spellCheck: b, name: y, description: O, required: v, onFocus: I, onBlur: T } = e,
             S = (0, d.Dt)();
         return (0, r.jsxs)(s.xJW, {
             title: t,
@@ -175,9 +175,9 @@ let P = (e) => {
             children: [
                 (0, r.jsx)(o.Is, {
                     name: y,
-                    type: f,
+                    type: _,
                     value: l,
-                    inputRef: _,
+                    inputRef: f,
                     placeholder: i,
                     inputClassName: a()(u, { [g.inputError]: null != n }),
                     'aria-label': t,
@@ -300,8 +300,8 @@ let P = (e) => {
             className: t,
             children: [
                 (0, r.jsx)(o.zx, {
-                    onClick: () => window.open((0, f.t3)()),
-                    children: m.intl.format(m.t.JoS1i4, { platform: (0, f.DW)() })
+                    onClick: () => window.open((0, _.t3)()),
+                    children: m.intl.format(m.t.JoS1i4, { platform: (0, _.DW)() })
                 }),
                 (0, r.jsx)(D, {
                     className: g.downloadButtonSubtext,

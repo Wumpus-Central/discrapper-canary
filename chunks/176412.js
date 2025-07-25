@@ -1,7 +1,7 @@
 n.d(t, {
-    Bm: () => C,
-    P7: () => T,
-    X: () => D,
+    Bm: () => M,
+    P7: () => D,
+    X: () => T,
     ae: () => j
 });
 var i,
@@ -16,16 +16,16 @@ var i,
     p = n(542094),
     f = n(513202),
     v = n(367907),
-    b = n(213459),
-    y = n(895924),
+    y = n(213459),
+    b = n(895924),
     m = n(691424),
     E = n(428595),
-    g = n(364458),
-    O = n(585483),
-    Z = n(499254),
-    h = n(541099),
-    _ = n(827498),
-    P = n(346683),
+    O = n(364458),
+    Z = n(585483),
+    h = n(499254),
+    g = n(541099),
+    P = n(827498),
+    _ = n(346683),
     w = n(981631),
     A = n(388032);
 let I =
@@ -69,7 +69,7 @@ let I =
               }),
         i),
     S = u().pick(
-        (0, g.Z)([
+        (0, O.Z)([
             E.Z.RULES,
             { commandMention: I },
             (0, m.Z)({
@@ -80,29 +80,29 @@ let I =
         ['commandMention', 'customEmoji', 'em', 'emoji', 'emoticon', 'highlight', 'inlineCode', 'looseEm', 's', 'strong', 'text', 'timestamp', 'u', 'spoiler']
     ),
     j = c.w4(S);
-function T(e) {
-    let { context: t, application: n, location: i, sectionName: r, commandName: o, autoDismissOnClick: u = !0, launchingComponentId: c, submitting: m = !1, fetchesApplication: E = !0, onConfirmActivityLaunchChecksAlertOpen: g } = e,
-        O = (0, s.O)(),
+function D(e) {
+    let { context: t, application: n, location: i, sectionName: r, commandName: o, autoDismissOnClick: u = !0, launchingComponentId: c, submitting: m = !1, fetchesApplication: E = !0, onConfirmActivityLaunchChecksAlertOpen: O } = e,
+        Z = (0, s.O)(),
         I = (0, p.Qv)({
             context: t,
             applicationId: n.id,
             fetchesApplication: E
         }),
-        S = (0, P.Q)(I),
-        j = (0, a.e7)([h.Z], () => h.Z.entrypoint()),
-        T = l.useMemo(() => {
+        S = (0, _.Q)(I),
+        j = (0, a.e7)([g.Z], () => g.Z.entrypoint()),
+        D = l.useMemo(() => {
             var e, i, r;
-            if ('channel' !== t.type) return null != (r = null == (e = n.bot) ? void 0 : e.id) ? r : null == (i = (0, b.If)(t, n.id).descriptor) ? void 0 : i.botId;
+            if ('channel' !== t.type) return null != (r = null == (e = n.bot) ? void 0 : e.id) ? r : null == (i = (0, y.If)(t, n.id).descriptor) ? void 0 : i.botId;
         }, [t, n.id, n.bot]),
-        C = (0, p.w1)({
+        M = (0, p.w1)({
             application: n,
-            botUserIdForAppDM: T,
+            botUserIdForAppDM: D,
             embeddedActivitiesManager: f.Z,
             context: t,
-            locationObject: O.location,
+            locationObject: Z.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
-                (u && Z.yT(_.ti.ACTIVITY),
+                (u && h.yT(P.ti.ACTIVITY),
                     (0, v.yw)(w.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: t,
@@ -112,26 +112,26 @@ function T(e) {
                     }));
             },
             launchingComponentId: c,
-            commandOrigin: y.bB.APPLICATION_LAUNCHER,
+            commandOrigin: b.bB.APPLICATION_LAUNCHER,
             sectionName: r,
             source: j,
             fetchesApplication: E,
-            onConfirmActivityLaunchChecksAlertOpen: g
+            onConfirmActivityLaunchChecksAlertOpen: O
         }),
-        D = d.Tt.BRAND,
-        M = null != o ? o : A.intl.string(A.t.zKX8Nj);
+        T = d.Tt.BRAND,
+        L = null != o ? o : A.intl.string(A.t.zKX8Nj);
     return (
-        S === p.JS.JOIN ? ((D = d.Tt.GREEN), (M = A.intl.string(A.t.d9PsMj))) : S !== p.JS.LEAVE || m || ((D = d.Tt.RED), (M = A.intl.string(A.t['Hi1/aW']))),
+        S === p.JS.JOIN ? ((T = d.Tt.GREEN), (L = A.intl.string(A.t.d9PsMj))) : S !== p.JS.LEAVE || m || ((T = d.Tt.RED), (L = A.intl.string(A.t['Hi1/aW']))),
         {
-            onActivityItemSelected: C,
+            onActivityItemSelected: M,
             activityAction: S,
-            buttonColor: D,
-            buttonText: M
+            buttonColor: T,
+            buttonText: L
         }
     );
 }
-function C(e, t) {
-    let n = h.Z.entrypoint(),
+function M(e, t) {
+    let n = g.Z.entrypoint(),
         i = l.useMemo(
             () =>
                 (0, o.debounce)(
@@ -153,6 +153,6 @@ function C(e, t) {
         null != e && i(e, n);
     }, [e, t, n, i]);
 }
-function D(e) {
-    O.S.dispatchToLastSubscribed(w.CkL.OPEN_APP_LAUNCHER, { applicationId: e });
+function T(e) {
+    Z.S.dispatchToLastSubscribed(w.CkL.OPEN_APP_LAUNCHER, { applicationId: e });
 }

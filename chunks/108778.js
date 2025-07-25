@@ -8,6 +8,6 @@ e.exports = function (e, t, n, s) {
         u = r(l);
     if (c < s) return u * i(c / s / t) * s * t;
     var d = (1 + t / o) * c,
-        _ = d - (d - c);
-    return _ > n || _ != _ ? (1 / 0) * u : u * _;
+        f = d - (d - c);
+    return f > n || f != f ? (1 / 0) * u : u * f;
 };

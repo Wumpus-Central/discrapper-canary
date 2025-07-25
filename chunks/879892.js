@@ -9,8 +9,8 @@ var i = n(481060),
     c = n(314884),
     u = n(509545),
     d = n(626135),
-    _ = n(267642),
-    f = n(852679),
+    f = n(267642),
+    _ = n(852679),
     p = n(981631);
 function h(e, t, n) {
     return (
@@ -104,7 +104,7 @@ async function v(e) {
         );
     let x = [];
     (u.Z.isLoadedForPremiumSKUs() || x.push((0, s.Y2)()), c.Z.hasFetched || (x.push(a.jg()), x.push((0, o.X8)())), x.length > 0 && (await Promise.allSettled(x)));
-    let M = (0, _.vx)(c.Z.boostSlots),
+    let M = (0, f.vx)(c.Z.boostSlots),
         k = M.length,
         j = (e) => {
             (null == v || v(), null == N || N(e));
@@ -122,7 +122,7 @@ async function v(e) {
         (1 === k ? (e = M.slice(0, 1)) : null != y && (e = M.slice(0, y)),
             await (0, i.ZDy)(
                 async () => {
-                    let { default: t } = await Promise.all([n.e('22646'), n.e('30419'), n.e('49027')]).then(n.bind(n, 760558));
+                    let { default: t } = await Promise.all([n.e('22646'), n.e('30419'), n.e('66200')]).then(n.bind(n, 760558));
                     return (n) => {
                         var { onClose: i } = n,
                             a = b(n, ['onClose']);
@@ -148,7 +148,7 @@ async function v(e) {
                 }
             ));
     } else
-        (0, f.Z)({
+        (0, _.Z)({
             analyticsLocations: t,
             analyticsLocation: h,
             analyticsSourceLocation: g,

@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,12 +47,12 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -113,14 +113,14 @@ function v(e, t, n) {
 }
 function I(e, t) {
     let n,
-        { toValueMin: i, toValueMax: a, tension: o = 0, friction: s = 0, loop: l, reverse: c, invert: u, callback: _, type: h = 'spring', shouldLoop: m, durationMin: g, durationMax: E } = t,
+        { toValueMin: i, toValueMax: a, tension: o = 0, friction: s = 0, loop: l, reverse: c, invert: u, callback: f, type: h = 'spring', shouldLoop: m, durationMin: g, durationMax: E } = t,
         b = p(t, ['toValueMin', 'toValueMax', 'tension', 'friction', 'loop', 'reverse', 'invert', 'callback', 'type', 'shouldLoop', 'durationMin', 'durationMax']),
         y = e._value,
         O = v(t.duration, g, E),
         T = v(t.toValue, i, a),
         S = r[h](
             e,
-            f(d({}, b), {
+            _(d({}, b), {
                 toValue: T,
                 tension: o,
                 friction: s,
@@ -132,7 +132,7 @@ function I(e, t) {
         let i = v(t.duration, g, E);
         ((n = r[h](
             e,
-            f(d({}, b), {
+            _(d({}, b), {
                 toValue: c ? y : -T,
                 tension: o,
                 friction: s,
@@ -143,9 +143,9 @@ function I(e, t) {
     }
     l
         ? A.start(() => {
-              (!m || (m && m())) && (_ ? _(I.bind(null, e, t)) : I(e, t));
+              (!m || (m && m())) && (f ? f(I.bind(null, e, t)) : I(e, t));
           })
-        : A.start(_);
+        : A.start(f);
 }
 function T(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
@@ -156,7 +156,7 @@ function T(e) {
 }
 r.inject.ApplyAnimatedValues(y, (e) => e);
 let S = { CLAMP: 'clamp' },
-    A = f(d({}, r), {
+    A = _(d({}, r), {
         Easing: a(),
         accelerate: O,
         animate: I,

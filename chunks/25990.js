@@ -1,4 +1,4 @@
-let r, i, a, o, s, l, c, u, d, _, f, p, h, m, g, E, b;
+let r, i, a, o, s, l, c, u, d, f, _, p, h, m, g, E, b;
 (n.d(t, { Z: () => ed }), n(704826), n(35282));
 var y,
     O = n(979554),
@@ -48,7 +48,7 @@ function x(e) {
 }
 function M(e) {
     let { legacyUsernameDisabled: t } = e;
-    f = t;
+    _ = t;
 }
 function k(e) {
     let { avatarDecoration: t } = e;
@@ -84,7 +84,7 @@ function Z(e) {
 }
 function H(e) {
     let { themeColors: t } = e;
-    _ = t;
+    f = t;
 }
 function Y(e) {
     let { primaryGuildId: t } = e;
@@ -127,7 +127,7 @@ function et() {
     ((r = void 0), (i = void 0), (a = void 0), (o = void 0), (s = void 0));
 }
 function en() {
-    ((l = void 0), (c = void 0), (u = void 0), (d = void 0), (_ = void 0), (o = void 0));
+    ((l = void 0), (c = void 0), (u = void 0), (d = void 0), (f = void 0), (o = void 0));
 }
 function er() {
     ((m = void 0), (g = void 0), (E = void 0), (b = void 0), (h = void 0));
@@ -136,7 +136,7 @@ function ei() {
     a = void 0;
 }
 function ea() {
-    f = void 0;
+    _ = void 0;
 }
 function eo() {
     p = void 0;
@@ -154,7 +154,7 @@ class eu extends (y = v.ZP.Store) {
         return N;
     }
     showNotice() {
-        return void 0 !== r || void 0 !== l || void 0 !== c || void 0 !== u || void 0 !== d || void 0 !== _ || void 0 !== a || void 0 !== o || void 0 !== i || void 0 !== s || void 0 !== f || void 0 !== p;
+        return void 0 !== r || void 0 !== l || void 0 !== c || void 0 !== u || void 0 !== d || void 0 !== f || void 0 !== a || void 0 !== o || void 0 !== i || void 0 !== s || void 0 !== _ || void 0 !== p;
     }
     getIsSubmitDisabled() {
         return void 0 !== c && ec(c) > T.tPV;
@@ -178,7 +178,7 @@ class eu extends (y = v.ZP.Store) {
         return d;
     }
     getPendingThemeColors() {
-        return _;
+        return f;
     }
     getPendingAvatarDecoration() {
         return a;
@@ -196,12 +196,12 @@ class eu extends (y = v.ZP.Store) {
             pendingBio: c,
             pendingPronouns: u,
             pendingAccentColor: d,
-            pendingThemeColors: _,
+            pendingThemeColors: f,
             pendingAvatarDecoration: a,
             pendingProfileEffectId: o,
             pendingGlobalName: i,
             pendingNameplate: s,
-            pendingLegacyUsernameDisabled: f,
+            pendingLegacyUsernameDisabled: _,
             pendingPrimaryGuildId: p
         };
     }

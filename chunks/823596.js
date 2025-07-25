@@ -1,5 +1,5 @@
 (n.d(t, {
-    IF: () => f,
+    IF: () => _,
     LU: () => c,
     Rt: () => h,
     hW: () => u,
@@ -64,8 +64,8 @@ function l(e, t) {
 let c = [12, 25, 50, 100],
     u = 7,
     d = 5,
-    _ = 250;
-function f() {
+    f = 250;
+function _() {
     return {
         pageSize: c[0],
         currentPage: 1,
@@ -75,11 +75,11 @@ function f() {
     };
 }
 function p(e) {
-    return Math.max(e.pageSize * d, _);
+    return Math.max(e.pageSize * d, f);
 }
 class h {
     reset() {
-        ((this._paginationState = f()), (this._sortedMemberIds = []), (this._cachedPaginationChunks = {}), (this._version += 1));
+        ((this._paginationState = _()), (this._sortedMemberIds = []), (this._cachedPaginationChunks = {}), (this._version += 1));
     }
     isMemberOnCurrentPage(e) {
         var t;
@@ -153,7 +153,7 @@ class h {
                 return (null == e[r] && (e[r] = []), e[r].push(t), e);
             }),
             (this.guildId = e),
-            (this._paginationState = f()),
+            (this._paginationState = _()),
             (this._version = 0));
         let [n, r] = this._initPaginationFromRawMembers(t);
         ((this._sortedMemberIds = n), (this._cachedPaginationChunks = r), (this._version += 1));

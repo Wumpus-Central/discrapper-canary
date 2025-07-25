@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(239091),
@@ -57,7 +57,7 @@ function d(e, t) {
         e
     );
 }
-let _ = {
+let f = {
     handleUserContextMenu(e, t, a, o) {
         let l = s.Z.getChannel(t);
         null != l &&
@@ -75,8 +75,8 @@ let _ = {
             });
     },
     react(e, t, n) {
-        let { userId: i, channelId: s, parsedUserId: l, roleId: u, roleName: _, viewingChannelId: f } = e;
-        return null == i && (null != u || '@everyone' === _ || '@here' === _)
+        let { userId: i, channelId: s, parsedUserId: l, roleId: u, roleName: f, viewingChannelId: _ } = e;
+        return null == i && (null != u || '@everyone' === f || '@here' === f)
             ? (0, r.jsx)(a.Z, d(c({ inlinePreview: n.formatInline }, e), { children: t(e.content, n) }), n.key)
             : (0, r.jsx)(
                   o.Z,
@@ -84,7 +84,7 @@ let _ = {
                       className: 'mention',
                       userId: i,
                       channelId: s,
-                      viewingChannelId: f,
+                      viewingChannelId: _,
                       parsedUserId: l,
                       content: t(e.content, n),
                       inlinePreview: n.noStyleAndInteraction

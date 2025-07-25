@@ -8,7 +8,7 @@ var r,
     c = n(481060),
     u = n(388032),
     d = n(449101);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -41,7 +41,7 @@ let p = 100,
     h = 'search';
 class m extends (r = a.Component) {
     render() {
-        let { autoFocus: e, label: t, placeholder: n, searchTerm: r, inputClassName: a, className: o, onChange: _, onFocus: f, onBlur: m, onKeyPress: g, autoComplete: E, forwardedRef: b, closeIconClassName: y, searchIconClassName: O, cta: v } = this.props,
+        let { autoFocus: e, label: t, placeholder: n, searchTerm: r, inputClassName: a, className: o, onChange: f, onFocus: _, onBlur: m, onKeyPress: g, autoComplete: E, forwardedRef: b, closeIconClassName: y, searchIconClassName: O, cta: v } = this.props,
             I = null != r && r.length > 0,
             T = null != b ? b : this._textInputRef;
         return (0, i.jsx)(c.tEY, {
@@ -58,8 +58,8 @@ class m extends (r = a.Component) {
                         maxLength: p,
                         className: d.searchBoxInputWrapper,
                         inputClassName: s()(d.searchBoxInput, a),
-                        onChange: _,
-                        onFocus: f,
+                        onChange: f,
+                        onFocus: _,
                         onBlur: m,
                         onKeyPress: g,
                         value: I ? r : '',
@@ -99,14 +99,14 @@ class m extends (r = a.Component) {
     }
     constructor(...e) {
         (super(...e),
-            _(this, '_textInputRef', a.createRef()),
-            _(this, '_containerRef', a.createRef()),
-            _(this, 'handleClear', () => {
+            f(this, '_textInputRef', a.createRef()),
+            f(this, '_containerRef', a.createRef()),
+            f(this, 'handleClear', () => {
                 let { onClear: e, forwardedRef: t } = this.props,
                     { current: n } = null != t ? t : this._textInputRef;
                 (null != n && n.focus(), null != e && e());
             }));
     }
 }
-_(m, 'defaultProps', { autoComplete: !1 });
-let g = a.forwardRef((e, t) => (0, i.jsx)(m, f({ forwardedRef: t }, e)));
+f(m, 'defaultProps', { autoComplete: !1 });
+let g = a.forwardRef((e, t) => (0, i.jsx)(m, _({ forwardedRef: t }, e)));

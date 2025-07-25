@@ -3,13 +3,13 @@ var r = n(255367),
     i = n(73800),
     a = n(512722),
     o = n.n(a),
-    s = n(42133),
+    s = n(652141),
     l = n(278074),
     c = n(979554),
     u = n(399606),
     d = n(481060),
-    _ = n(876917),
-    f = n(594174),
+    f = n(876917),
+    _ = n(594174),
     p = n(508925),
     h = n(616066),
     m = n(216541),
@@ -72,15 +72,15 @@ let T = (e) => {
         let { product: t, pairedProduct: n } = e,
             [i] = t.items,
             a = null == n ? void 0 : n.items[0],
-            s = (0, u.e7)([f.default], () => {
-                let e = f.default.getCurrentUser();
+            s = (0, u.e7)([_.default], () => {
+                let e = _.default.getCurrentUser();
                 return (o()(null != e, 'User cannot be undefined'), e);
             });
         return (0, l.EQ)(t.type)
             .with(c.Z.PROFILE_EFFECT, () =>
                 (0, r.jsx)('div', {
                     className: b.profileEffectShopPreview,
-                    children: (0, r.jsx)(_.Z, {
+                    children: (0, r.jsx)(f.Z, {
                         forCollectedModal: !0,
                         profileEffectId: i.id
                     })

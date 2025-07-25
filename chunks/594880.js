@@ -1,6 +1,7 @@
 n.r(
     (e.exports = {
         container: 'container_f48ee4',
+        fadeInFromTop: 'fadeInFromTop_f48ee4',
         containerBackground: 'containerBackground_f48ee4',
         responsiveContainer: 'responsiveContainer_f48ee4',
         sectionsContainer: 'sectionsContainer_f48ee4',

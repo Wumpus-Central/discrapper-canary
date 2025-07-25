@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(355467),
     d = n(269128),
-    _ = n(720452),
-    f = n(502109),
+    f = n(720452),
+    _ = n(502109),
     p = n(710845),
     h = n(219929),
     m = n(985754),
@@ -123,30 +123,23 @@ class w extends i.PureComponent {
     }
     createPaymentButtons(e) {
         return e.map((e) => {
-            var t, n;
-            let i = C[e],
-                a = m.Wo[e](),
-                s = null == (t = this.props.localizedPromo) ? void 0 : t.paymentSourceTypes.includes(e),
-                u = null == this.props.paymentSourceTypeRestrictions || (null == (n = this.props.paymentSourceTypeRestrictions) ? void 0 : n.includes(e));
+            var t;
+            let n = C[e],
+                i = m.W[e](),
+                a = null == this.props.paymentSourceTypeRestrictions || (null == (t = this.props.paymentSourceTypeRestrictions) ? void 0 : t.includes(e));
             return (0, r.jsx)(
                 l.zx,
                 {
                     onClick: () => this.props.onChooseType(e),
-                    disabled: !u,
+                    disabled: !a,
                     children: (0, r.jsxs)('div', {
                         className: o()(v.flex, v.alignCenter),
                         children: [
                             (0, r.jsx)(h.ZP, {
                                 className: O.buttonIcon,
-                                type: i
+                                type: n
                             }),
-                            a,
-                            s &&
-                                (0, r.jsx)(c.IGR, {
-                                    text: y.intl.string(y.t.y2b7CA),
-                                    className: O.newPaymentBadge,
-                                    disableColor: !0
-                                })
+                            i
                         ]
                     })
                 },
@@ -173,7 +166,7 @@ class w extends i.PureComponent {
                         onPaymentRequestFailure: n
                     },
                     a = ''.concat(e, '-').concat(t);
-                return 'applePay' === e ? (0, r.jsx)(f.Ch, T({}, m, i), a) : (0, r.jsx)(f.Tr, T({}, m, i), a);
+                return 'applePay' === e ? (0, r.jsx)(_.Ch, T({}, m, i), a) : (0, r.jsx)(_.Tr, T({}, m, i), a);
             }),
             E = [],
             b = [],
@@ -181,14 +174,14 @@ class w extends i.PureComponent {
         if (l)
             E.push(
                 ...this.createPaymentButtons(
-                    (0, _.Q)({
+                    (0, f.Q)({
                         ipCountryCode: 'ALL',
                         location: P
                     }).countryPaymentMethods
                 )
             );
         else {
-            let { countryPaymentMethods: e, remainingPaymentMethods: t } = (0, _.Q)({
+            let { countryPaymentMethods: e, remainingPaymentMethods: t } = (0, f.Q)({
                 ipCountryCode: s,
                 location: P
             });
@@ -251,6 +244,5 @@ class w extends i.PureComponent {
 }
 let D = s.ZP.connectStores([g.Z], () => ({
     ipCountryCode: g.Z.ipCountryCode,
-    ipCountryCodeHasError: g.Z.ipCountryCodeHasError,
-    localizedPromo: g.Z.localizedPricingPromo
+    ipCountryCodeHasError: g.Z.ipCountryCodeHasError
 }))(w);

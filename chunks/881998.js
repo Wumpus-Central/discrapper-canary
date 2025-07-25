@@ -25,14 +25,14 @@ var u = (function (e) {
     return ((e.NOT_FETCHED = 'NOT_FETCHED'), (e.FETCHING = 'FETCHING'), (e.FETCHED = 'FETCHED'), e);
 })({});
 let d = null,
-    _ = null,
-    f = 'NOT_FETCHED';
+    f = null,
+    _ = 'NOT_FETCHED';
 function p() {
-    f = 'FETCHING';
+    _ = 'FETCHING';
 }
 function h(e) {
     var t;
-    ((f = 'FETCHED'), (_ = null != (t = null == (d = e.apps) ? void 0 : d.filter((e) => null == e.application.parent_id)) ? t : null));
+    ((_ = 'FETCHED'), (f = null != (t = null == (d = e.apps) ? void 0 : d.filter((e) => null == e.application.parent_id)) ? t : null));
 }
 class m extends (r = i.ZP.Store) {
     initialize() {
@@ -42,10 +42,10 @@ class m extends (r = i.ZP.Store) {
         return d;
     }
     getNonChildrenApps() {
-        return _;
+        return f;
     }
     getFetchState() {
-        return f;
+        return _;
     }
 }
 c(m, 'displayName', 'AuthorizedAppsStore');

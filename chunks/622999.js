@@ -1,11 +1,11 @@
 let r;
 (n.d(t, {
     XZ: () => p,
-    az: () => f,
+    az: () => _,
     d2: () => d,
     eH: () => u,
     oe: () => h,
-    rI: () => _
+    rI: () => f
 }),
     n(35282),
     n(388685));
@@ -39,10 +39,10 @@ let l = new o.Z('StripeUtils'),
 function d() {
     return null != r ? Promise.resolve(r) : (0, i.loadStripe)(s.Ai1.STRIPE.KEY).then((e) => ((r = e), e));
 }
-function _() {
+function f() {
     return null == s.Ai1.STRIPE.KEY ? (l.warn('getStripeClientMode() called before PaymentSettings.STRIPE.KEY initialized: ', s.Ai1.STRIPE.KEY), 'unknown') : s.Ai1.STRIPE.KEY.startsWith('pk_live') ? 'live' : s.Ai1.STRIPE.KEY.startsWith('pk_test') ? 'test' : (l.warn('Unexpected value for Stripe public key: ', s.Ai1.STRIPE.KEY), 'unknown');
 }
-function f(e) {
+function _(e) {
     var t, n, r, i, a, o, s, l;
     let { billing_details: c } = e,
         u = null != (t = c.address) ? t : {},

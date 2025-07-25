@@ -1,7 +1,7 @@
 n.d(t, {
-    Ku: () => f,
+    Ku: () => _,
     MV: () => p,
-    ZP: () => _
+    ZP: () => f
 });
 var r = n(73800),
     i = n(97519),
@@ -12,8 +12,8 @@ var r = n(73800),
     c = n(146085),
     u = n(643632);
 let d = (0, i.U)((e) => ({ isOnStartStageScreen: !0 })),
-    _ = d;
-function f(e) {
+    f = d;
+function _(e) {
     (0, a.j)(() => d.setState({ isOnStartStageScreen: e }));
 }
 function p(e) {
@@ -22,6 +22,6 @@ function p(e) {
         i = (0, u.Z)(e.id),
         a = n && !i;
     r.useEffect(() => {
-        t ? a || f(!1) : f(a);
+        t ? a || _(!1) : _(a);
     }, [t, a]);
 }

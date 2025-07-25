@@ -7,8 +7,8 @@ var r = n(444675),
     c = Symbol.for('react.consumer'),
     u = Symbol.for('react.context'),
     d = Symbol.for('react.forward_ref'),
-    _ = Symbol.for('react.suspense'),
-    f = Symbol.for('react.memo'),
+    f = Symbol.for('react.suspense'),
+    _ = Symbol.for('react.memo'),
     p = Symbol.for('react.lazy'),
     h = Symbol.iterator;
 function m(e) {
@@ -236,7 +236,7 @@ function G() {}
     (t.Profiler = l),
     (t.PureComponent = v),
     (t.StrictMode = s),
-    (t.Suspense = _),
+    (t.Suspense = f),
     (t.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE = S),
     (t.act = function () {
         throw Error('act(...) is not supported in production builds of React.');
@@ -313,7 +313,7 @@ function G() {}
     }),
     (t.memo = function (e, t) {
         return {
-            $$typeof: f,
+            $$typeof: _,
             type: e,
             compare: void 0 === t ? null : t
         };

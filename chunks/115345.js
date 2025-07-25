@@ -18,8 +18,8 @@ var r = n(73800),
     c = n(668781),
     u = n(87051),
     d = n(181945),
-    _ = n(149071),
-    f = n(516373),
+    f = n(149071),
+    _ = n(516373),
     p = n(480294),
     h = n(650774),
     m = n(888369),
@@ -95,7 +95,7 @@ function j(e, t) {
 function U(e, t) {
     let [n, i] = r.useState(R.nf),
         [a, s] = r.useState({});
-    (0, f.D)();
+    (0, _.D)();
     let l = (0, o.Wu)([g.Z], () => g.Z.getGuildsArray()),
         c = r.useCallback(() => {
             let r = {};
@@ -286,7 +286,7 @@ function Y(e) {
 }
 async function W(e) {
     (await K(() => z()), await K(() => u.Z.setAccountFlag(C.c.USE_NEW_NOTIFICATIONS, !0)));
-    let t = await K(() => _.Z.saveUserGuildSettingsBulk(e));
+    let t = await K(() => f.Z.saveUserGuildSettingsBulk(e));
     (l.Z.dispatch({
         type: 'USER_GUILD_SETTINGS_FULL_UPDATE',
         userGuildSettings: t
@@ -344,7 +344,7 @@ function Q(e) {
         o = a().keyBy(null != (n = e.message_sends) ? n : [], 'channel_id');
     return (null != (r = e.channel_opens) ? r : [])
         .map((e) => {
-            var t, n, r, a, s, l, c, u, d, _, f;
+            var t, n, r, a, s, l, c, u, d, f, _;
             let p = null != (t = i[e.channel_id]) ? t : {},
                 h = null != (n = o[e.channel_id]) ? n : {};
             return {
@@ -356,8 +356,8 @@ function Q(e) {
                 num_messages: Number(null != (c = null == h ? void 0 : h.num_messages) ? c : 0),
                 num_year_voice_joins: Number(null != (u = null == p ? void 0 : p.year_opens) ? u : 0),
                 num_month_voice_joins: Number(null != (d = null == p ? void 0 : p.one_month_opens) ? d : 0),
-                num_three_month_voice_joins: Number(null != (_ = null == p ? void 0 : p.three_month_opens) ? _ : 0),
-                num_six_month_voice_joins: Number(null != (f = null == p ? void 0 : p.six_month_opens) ? f : 0)
+                num_three_month_voice_joins: Number(null != (f = null == p ? void 0 : p.three_month_opens) ? f : 0),
+                num_six_month_voice_joins: Number(null != (_ = null == p ? void 0 : p.six_month_opens) ? _ : 0)
             };
         })
         .filter(v.lm);
