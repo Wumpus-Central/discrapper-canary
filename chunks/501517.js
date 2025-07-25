@@ -1,16 +1,16 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => r });
 var i = n(544891),
-    r = n(981631);
-let l = {
+    l = n(981631);
+let r = {
     resolveFlag: (e) =>
         i.tn.post({
-            url: r.ANM.MODERATOR_REPORT_CLOSE(e),
+            url: l.ANM.MODERATOR_REPORT_CLOSE(e),
             body: {},
             rejectWithError: !0
         }),
     reopenModReport: (e) =>
         i.tn.put({
-            url: r.ANM.REPORT_TO_MOD_REOPEN(e),
+            url: l.ANM.REPORT_TO_MOD_REOPEN(e),
             rejectWithError: !0
         })
 };

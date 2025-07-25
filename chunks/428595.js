@@ -362,7 +362,7 @@ let F = (e) => {
         },
         gameMention: {
             order: o().defaultRules.text.order,
-            requiredFirstCharacters: ['<'],
+            requiredFirstCharacters: ['<', '@', '$'],
             match: (e, t) => (t.allowGameMentions ? /^<@\$(\d+)>/.exec(e) : null),
             parse: (e, t, n) => ({
                 type: 'gameMention',

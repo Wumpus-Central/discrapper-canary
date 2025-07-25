@@ -137,11 +137,12 @@ function O(e, t) {
     let { mode: n, start: r, allowBlockQuotePrefix: i = !1, preventEmojiSurrogates: h = !1 } = null != t ? t : {};
     if (p.LC.isText(e)) return v(e.text, t);
     switch (e.type) {
+        case 'gameMentionInput':
+        case 'testInlineVoid':
+            return '';
         case 'line':
         case 'testInline':
             return y(e.children, t);
-        case 'testInlineVoid':
-            return '';
         case 'blockQuote': {
             let n = y(e.children, t),
                 a = null != r && 1 === r.path.length && 0 === r.path[0] && 0 === r.offset;
@@ -199,6 +200,8 @@ function O(e, t) {
             return '</'.concat(e.commandName, ':').concat(e.commandId, '>');
         case 'timestamp':
             return (0, o.He)(e.parsed.timestamp, e.parsed.format);
+        case 'gameMention':
+            return '<@$'.concat(e.applicationId, '>');
         case 'applicationCommand':
             return y(
                 e.children,

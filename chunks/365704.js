@@ -1,6 +1,6 @@
 n.d(t, {
-    R: () => p,
-    W: () => h
+    R: () => h,
+    W: () => m
 });
 var r = n(590921),
     i = n(521090),
@@ -8,21 +8,23 @@ var r = n(590921),
     o = n(116364),
     s = n(941140),
     l = n(341561),
-    c = n(277981),
-    u = n(420001),
-    d = n(65090),
-    _ = n(591236),
-    f = n(233577);
-let p = [r.eq.CHOICES, r.eq.GIFS, r.eq.STICKERS, r.eq.COMMAND_OPTIONS, r.eq.EMOJIS_AND_STICKERS, r.eq.REACTIONS, r.eq.CHANNELS, r.eq.MENTIONS, r.eq.COMMANDS, r.eq.LEGACY_COMMANDS],
-    h = {
+    c = n(707973),
+    u = n(277981),
+    d = n(420001),
+    _ = n(65090),
+    f = n(591236),
+    p = n(233577);
+let h = [r.eq.CHOICES, r.eq.GAME, r.eq.GIFS, r.eq.STICKERS, r.eq.COMMAND_OPTIONS, r.eq.EMOJIS_AND_STICKERS, r.eq.REACTIONS, r.eq.CHANNELS, r.eq.MENTIONS, r.eq.COMMANDS, r.eq.LEGACY_COMMANDS],
+    m = {
         [r.eq.CHANNELS]: i.Z,
         [r.eq.COMMANDS]: a.Z,
         [r.eq.COMMAND_OPTIONS]: s.Z,
         [r.eq.CHOICES]: o.Z,
         [r.eq.EMOJIS_AND_STICKERS]: l.Z,
-        [r.eq.STICKERS]: f.Z,
-        [r.eq.GIFS]: c.Z,
-        [r.eq.LEGACY_COMMANDS]: u.Z,
-        [r.eq.MENTIONS]: d.Z,
-        [r.eq.REACTIONS]: _.Z
+        [r.eq.STICKERS]: p.Z,
+        [r.eq.GIFS]: u.Z,
+        [r.eq.LEGACY_COMMANDS]: d.Z,
+        [r.eq.MENTIONS]: _.Z,
+        [r.eq.REACTIONS]: f.Z,
+        [r.eq.GAME]: c.Z
     };

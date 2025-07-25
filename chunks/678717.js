@@ -1,4 +1,4 @@
-(a.r(t), a.d(t, { default: () => ec }), a(539854), a(388685));
+(a.r(t), a.d(t, { default: () => ed }), a(539854), a(388685));
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -31,32 +31,33 @@ var _ = a(392750),
     I = a(272193),
     R = a(685560),
     k = a(735959),
-    A = a(572444),
-    Z = a(246992),
-    D = a(484662),
-    L = a(496025),
-    M = a(442954),
-    U = a(633001),
-    F = a(702904),
-    B = a(178821),
-    z = a(891401),
-    G = a(958328),
-    V = a(315384),
-    H = a(514866),
-    W = a(763577),
-    K = a(384207),
-    X = a(264603),
-    Y = a(678639),
-    J = a(771751),
-    q = a(596768),
-    $ = a(56706),
-    Q = a(260950),
-    ee = a(621060),
-    et = a(981631),
-    ea = a(388032),
-    en = a(736967),
-    er = a(616257);
-function el(e) {
+    Z = a(572444),
+    A = a(636500),
+    D = a(246992),
+    L = a(484662),
+    M = a(496025),
+    U = a(442954),
+    F = a(925124),
+    B = a(633001),
+    z = a(702904),
+    G = a(178821),
+    V = a(891401),
+    H = a(958328),
+    W = a(315384),
+    K = a(514866),
+    X = a(763577),
+    Y = a(384207),
+    J = a(264603),
+    q = a(678639),
+    $ = a(596768),
+    Q = a(56706),
+    ee = a(260950),
+    et = a(621060),
+    ea = a(981631),
+    en = a(388032),
+    er = a(736967),
+    el = a(616257);
+function ei(e) {
     let { resizableNode: t, onResize: a, onResizeEnd: r } = e,
         l = (0, d.Z)({
             minDimension: j.h,
@@ -67,10 +68,10 @@ function el(e) {
         });
     return (0, n.jsx)('div', {
         onMouseDown: l,
-        className: en.resizeHandle
+        className: er.resizeHandle
     });
 }
-function ei(e) {
+function es(e) {
     var t;
     let { isPopout: a = !1 } = e,
         l = r.useMemo(() => {
@@ -78,25 +79,25 @@ function ei(e) {
                 {
                     id: 'analytics',
                     name: 'Analytics',
-                    group: ee.v0.EXPERIMENTS,
+                    group: et.v0.EXPERIMENTS,
                     render: () => (0, n.jsx)(y.Z, {})
                 },
                 {
                     id: 'triggers',
                     name: 'Triggers',
-                    group: ee.v0.EXPERIMENTS,
-                    render: () => (0, n.jsx)(q.Z, {})
+                    group: et.v0.EXPERIMENTS,
+                    render: () => (0, n.jsx)($.Z, {})
                 },
                 {
                     id: 'stores',
                     name: 'Stores',
-                    group: ee.v0.EVENTS,
-                    render: () => (0, n.jsx)(Y.Z, {})
+                    group: et.v0.EVENTS,
+                    render: () => (0, n.jsx)(q.Z, {})
                 },
                 {
                     id: 'dispatcher',
                     name: 'Dispatcher',
-                    group: ee.v0.EVENTS,
+                    group: et.v0.EVENTS,
                     render: () => (0, n.jsx)(T.Z, {})
                 }
             ];
@@ -105,184 +106,190 @@ function ei(e) {
                     (e.push({
                         id: 'shop',
                         name: 'Shop',
-                        group: ee.v0.BILLING,
-                        render: () => (0, n.jsx)(K.C, {})
+                        group: et.v0.BILLING,
+                        render: () => (0, n.jsx)(Y.C, {})
                     }),
                     e.push({
                         id: 'quick_actions',
                         name: 'Quick Actions',
-                        group: ee.v0.NONE,
-                        render: () => (0, n.jsx)(H.Z, {})
+                        group: et.v0.NONE,
+                        render: () => (0, n.jsx)(K.Z, {})
                     }),
                     e.push({
                         id: 'end_to_end_encryption',
                         name: 'E2EE',
-                        group: ee.v0.DEVELOPMENT,
+                        group: et.v0.DEVELOPMENT,
                         render: () => (0, n.jsx)(E.Z, {})
                     }),
                     e.push({
                         id: 'performance',
                         name: 'Performance',
-                        group: ee.v0.DEVELOPMENT,
-                        render: () => (0, n.jsx)(B.ZP, {})
+                        group: et.v0.DEVELOPMENT,
+                        render: () => (0, n.jsx)(G.ZP, {})
                     }),
                     e.push({
                         id: 'feedback',
                         name: 'Feedback',
-                        group: ee.v0.USERS,
+                        group: et.v0.USERS,
                         render: () => (0, n.jsx)(S.Z, {})
                     }),
                     e.push({
                         id: 'overlay',
                         name: 'Overlay v3',
-                        group: ee.v0.GAMES,
-                        render: () => (0, n.jsx)(U.Z, {})
+                        group: et.v0.GAMES,
+                        render: () => (0, n.jsx)(B.Z, {})
                     }),
                     e.push({
                         id: 'slayer_sdk',
                         name: 'Slayer SDK',
-                        group: ee.v0.GAMES,
-                        render: () => (0, n.jsx)(X.Z, {})
+                        group: et.v0.GAMES,
+                        render: () => (0, n.jsx)(J.Z, {})
                     })),
                 e.push({
                     id: 'rive',
                     name: 'Rive',
-                    group: ee.v0.UI,
-                    render: () => (0, n.jsx)(W.Z, {})
+                    group: et.v0.UI,
+                    render: () => (0, n.jsx)(X.Z, {})
                 }),
                 e.push({
                     id: 'intl',
                     name: 'Intl',
-                    group: ee.v0.UI,
+                    group: et.v0.UI,
                     render: () => (0, n.jsx)(k.Z, {})
                 }),
                 e.push({
                     id: 'colors',
                     name: 'Colors',
-                    group: ee.v0.UI,
+                    group: et.v0.UI,
                     render: () => (0, n.jsx)(C.Z, {})
                 }),
                 e.push({
                     id: 'design_toggles',
                     name: 'Design Toggles',
-                    group: ee.v0.UI,
+                    group: et.v0.UI,
                     render: () => (0, n.jsx)(N.Z, {})
                 }),
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
-                    group: ee.v0.DEVELOPMENT,
+                    group: et.v0.DEVELOPMENT,
                     render: () => (0, n.jsx)(w.Z, { devSettingsCategory: g.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
                     name: 'Messaging',
-                    group: ee.v0.USERS,
-                    render: () => (0, n.jsx)(L.Z, {})
+                    group: et.v0.USERS,
+                    render: () => (0, n.jsx)(M.Z, {})
                 }),
                 e.push({
                     id: 'reporting',
                     name: 'Reporting',
-                    group: ee.v0.EXPERIMENTS,
+                    group: et.v0.EXPERIMENTS,
                     render: () => (0, n.jsx)(w.Z, { devSettingsCategory: g.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
                     name: 'Permissions',
-                    group: ee.v0.USERS,
-                    render: () => (0, n.jsx)(G.Z, {})
+                    group: et.v0.USERS,
+                    render: () => (0, n.jsx)(H.Z, {})
                 }),
                 e.push({
                     id: 'modals',
                     name: 'Modals',
-                    group: ee.v0.UI,
-                    render: () => (0, n.jsx)(M.Z, {})
+                    group: et.v0.UI,
+                    render: () => (0, n.jsx)(U.Z, {})
                 }),
                 e.push({
                     id: 'layers',
                     name: 'Layers',
-                    group: ee.v0.UI,
-                    render: () => (0, n.jsx)(D.Z, {})
+                    group: et.v0.UI,
+                    render: () => (0, n.jsx)(L.Z, {})
                 }),
                 e.push({
                     id: 'affinity',
                     name: 'Affinity',
-                    group: ee.v0.USERS,
+                    group: et.v0.USERS,
                     render: () => (0, n.jsx)(_.Z, {})
                 }),
                 b.Z.isDeveloper &&
                     e.push({
                         id: 'content_inventory',
                         name: 'Content Inventory',
-                        group: ee.v0.USERS,
+                        group: et.v0.USERS,
                         render: () => (0, n.jsx)(m.Z, {})
                     }),
                 e.push({
                     id: 'dcf',
                     name: 'DCF',
-                    group: ee.v0.EXPERIMENTS,
+                    group: et.v0.EXPERIMENTS,
                     render: () => (0, n.jsx)(O.Z, {})
                 }),
                 e.push({
                     id: 'perks',
                     name: 'Perks',
-                    group: ee.v0.PREMIUM,
-                    render: () => (0, n.jsx)(z.Z, {})
+                    group: et.v0.PREMIUM,
+                    render: () => (0, n.jsx)(V.Z, {})
                 }),
                 e.push({
                     id: 'potions',
                     name: 'Potions',
-                    group: ee.v0.PREMIUM,
-                    render: () => (0, n.jsx)(V.Z, {})
+                    group: et.v0.PREMIUM,
+                    render: () => (0, n.jsx)(W.Z, {})
                 }),
                 window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith('staging') &&
                     (e.push({
-                        id: 'trials',
-                        name: 'Trials',
-                        group: ee.v0.PREMIUM,
-                        render: () => (0, n.jsx)(J.Z, {})
+                        id: 'offers',
+                        name: 'Offers',
+                        group: et.v0.PREMIUM,
+                        render: () => (0, n.jsx)(F.Z, {})
                     }),
                     e.push({
                         id: 'payments',
                         name: 'Payments',
-                        group: ee.v0.BILLING,
-                        render: () => (0, n.jsx)(F.Z, {})
+                        group: et.v0.BILLING,
+                        render: () => (0, n.jsx)(z.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',
                         name: 'Subscriptions',
-                        group: ee.v0.PREMIUM,
-                        render: () => (0, n.jsx)(Q.Z, {})
+                        group: et.v0.PREMIUM,
+                        render: () => (0, n.jsx)(ee.Z, {})
                     }),
                     e.push({
                         id: 'fractional_nitro',
                         name: 'Fractional Nitro',
-                        group: ee.v0.PREMIUM,
+                        group: et.v0.PREMIUM,
                         render: () => (0, n.jsx)(P.Z, {})
                     })),
                 e.push({
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
-                    group: ee.v0.PREMIUM,
+                    group: et.v0.PREMIUM,
                     render: () => (0, n.jsx)(I.Z, {})
                 }),
                 e.push({
                     id: 'voice_filters',
                     name: 'Voice Filters',
-                    group: ee.v0.AUDIO_VIDEO,
-                    render: () => (0, n.jsx)($.Z, {})
+                    group: et.v0.AUDIO_VIDEO,
+                    render: () => (0, n.jsx)(Q.Z, {})
                 }),
                 e.push({
                     id: 'krisp_tester',
                     name: 'Krisp Tester',
-                    group: ee.v0.AUDIO_VIDEO,
-                    render: () => (0, n.jsx)(A.Z, {})
+                    group: et.v0.AUDIO_VIDEO,
+                    render: () => (0, n.jsx)(Z.Z, {})
                 }),
                 e.push({
                     id: 'skill_trees',
                     name: 'Skill Trees',
-                    group: ee.v0.GUILDS,
+                    group: et.v0.GUILDS,
                     render: () => (0, n.jsx)(R.Z, {})
+                }),
+                e.push({
+                    id: 'language',
+                    name: 'Language',
+                    group: et.v0.UI,
+                    render: () => (0, n.jsx)(A.Z, {})
                 }),
                 e
             );
@@ -291,7 +298,7 @@ function ei(e) {
             TabBar: i,
             renderSelectedTab: o,
             selectedTabId: d
-        } = (0, ee.ZP)(
+        } = (0, et.ZP)(
             {
                 tabs: l,
                 initialSelectedTabId: null != (t = j.Z.lastOpenTabId) ? t : void 0,
@@ -307,10 +314,10 @@ function ei(e) {
             name: s.ImpressionNames.VIEW_PANEL_DEVTOOLS,
             properties: { panel: d }
         }),
-        (0, n.jsxs)(Z.Gk, {
+        (0, n.jsxs)(D.Gk, {
             children: [
                 (0, n.jsxs)(x.ZP, {
-                    className: er.headerBar,
+                    className: el.headerBar,
                     toolbar: a
                         ? null
                         : (0, n.jsxs)(n.Fragment, {
@@ -320,13 +327,13 @@ function ei(e) {
                                       tooltip: 'Pop Out',
                                       onClick: () => {
                                           (0, h.bA)(
-                                              et.KJ3.DEVTOOLS_POPOUT,
+                                              ea.KJ3.DEVTOOLS_POPOUT,
                                               () =>
                                                   (0, n.jsx)(p.Z, {
-                                                      windowKey: et.KJ3.DEVTOOLS_POPOUT,
+                                                      windowKey: ea.KJ3.DEVTOOLS_POPOUT,
                                                       title: 'DevTools',
                                                       withTitleBar: !0,
-                                                      children: (0, n.jsx)(ec, {
+                                                      children: (0, n.jsx)(ed, {
                                                           mobile: !1,
                                                           isPopout: !0
                                                       })
@@ -340,7 +347,7 @@ function ei(e) {
                                   }),
                                   (0, n.jsx)(x.ZP.Icon, {
                                       icon: c.Dio,
-                                      tooltip: ea.intl.string(ea.t.cpT0Cg),
+                                      tooltip: en.intl.string(en.t.cpT0Cg),
                                       onClick: v.SO
                                   })
                               ]
@@ -355,12 +362,12 @@ function ei(e) {
                 }),
                 (0, n.jsx)(i, {}),
                 o(),
-                (0, n.jsx)(Z.Br, { className: en.layerContainer })
+                (0, n.jsx)(D.Br, { className: er.layerContainer })
             ]
         })
     );
 }
-function es() {
+function eo() {
     let e = r.useRef(null),
         t = (0, o.e7)([j.Z], () => j.Z.sidebarWidth),
         [a, l] = r.useState(null),
@@ -372,40 +379,40 @@ function es() {
         ? null
         : (0, n.jsxs)('div', {
               ref: e,
-              className: en.container,
+              className: er.container,
               style: {
                   minWidth: j.h,
                   width: a
               },
               'data-app-right-panel': !0,
               children: [
-                  (0, n.jsx)(el, {
+                  (0, n.jsx)(ei, {
                       resizableNode: e,
                       onResize: l,
                       onResizeEnd: i
                   }),
                   (0, n.jsx)('div', {
-                      className: en.sidebarContent,
-                      children: (0, n.jsx)(ei, {})
+                      className: er.sidebarContent,
+                      children: (0, n.jsx)(es, {})
                   })
               ]
           });
 }
-function eo() {
+function ec() {
     return (0, o.e7)([j.Z], () => j.Z.displayTools)
         ? (0, n.jsx)('div', {
-              className: i()(en.container, en.mobileContainerExpanded),
+              className: i()(er.container, er.mobileContainerExpanded),
               children: (0, n.jsx)('div', {
-                  className: en.sidebarContent,
-                  children: (0, n.jsx)(ei, {})
+                  className: er.sidebarContent,
+                  children: (0, n.jsx)(es, {})
               })
           })
         : (0, n.jsx)('div', {
-              className: en.container,
+              className: er.container,
               children: (0, n.jsx)(c.P3F, {
                   onClick: v.SO,
                   children: (0, n.jsxs)(x.ZP, {
-                      className: i()(er.headerBar, en.mobileHeaderCollapsed),
+                      className: i()(el.headerBar, er.mobileHeaderCollapsed),
                       toolbar: (0, n.jsx)(f.Z, { direction: f.Z.Directions.UP }),
                       children: [
                           (0, n.jsx)(x.ZP.Icon, {
@@ -418,14 +425,14 @@ function eo() {
               })
           });
 }
-function ec(e) {
+function ed(e) {
     let { mobile: t, isPopout: a = !1 } = e;
     return t
-        ? (0, n.jsx)(eo, {})
+        ? (0, n.jsx)(ec, {})
         : a
           ? (0, n.jsx)('div', {
-                className: en.popoutContainer,
-                children: (0, n.jsx)(ei, { isPopout: !0 })
+                className: er.popoutContainer,
+                children: (0, n.jsx)(es, { isPopout: !0 })
             })
-          : (0, n.jsx)(es, {});
+          : (0, n.jsx)(eo, {});
 }

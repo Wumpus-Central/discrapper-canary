@@ -1,64 +1,64 @@
-n.d(e, { Z: () => f });
+n.d(t, { Z: () => m });
 var i = n(255367);
 n(73800);
-var o = n(442837),
-    r = n(755721),
-    a = n(481060),
+var a = n(442837),
+    o = n(755721),
+    r = n(481060),
     l = n(906732),
     c = n(48217),
     s = n(26323),
-    u = n(430824),
-    d = n(914010),
-    _ = n(981631),
-    g = n(30513),
-    m = n(388032),
-    h = n(273233);
-function f(t) {
-    let { analyticsSection: e, analyticsPage: n, isGIF: f, banner: p } = t,
-        x = (0, o.e7)([d.Z], () => d.Z.getGuildId()),
-        b = (0, o.e7)([u.Z], () => u.Z.getGuild(x)),
-        { analyticsLocations: y } = (0, l.ZP)();
-    return null == b || b.features.has(_.oNc.ANIMATED_BANNER) || (!f && b.features.has(_.oNc.BANNER))
+    d = n(430824),
+    u = n(914010),
+    f = n(981631),
+    _ = n(30513),
+    g = n(388032),
+    p = n(273233);
+function m(e) {
+    let { analyticsSection: t, analyticsPage: n, isGIF: m, banner: N } = e,
+        x = (0, a.e7)([u.Z], () => u.Z.getGuildId()),
+        h = (0, a.e7)([d.Z], () => d.Z.getGuild(x)),
+        { analyticsLocations: A } = (0, l.ZP)();
+    return null == h || h.features.has(f.oNc.ANIMATED_BANNER) || (!m && h.features.has(f.oNc.BANNER))
         ? null
         : (0, i.jsxs)('div', {
-              className: h.container,
+              className: p.container,
               children: [
-                  (0, i.jsx)(a.$Eu, {
-                      color: a.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                      className: h.guildBoostingIcon
+                  (0, i.jsx)(r.$Eu, {
+                      color: r.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                      className: p.guildBoostingIcon
                   }),
-                  (0, i.jsx)(a.Text, {
+                  (0, i.jsx)(r.Text, {
                       color: 'header-primary',
                       variant: 'text-sm/semibold',
-                      children: m.intl.string(m.t['56M7xc'])
+                      children: g.intl.string(g.t['56M7xc'])
                   }),
-                  (0, i.jsx)(r.zx, {
-                      look: r.zx.Looks.LINK,
-                      color: r.zx.Colors.LINK,
-                      className: h.subscribeButton,
+                  (0, i.jsx)(o.zx, {
+                      look: o.zx.Looks.LINK,
+                      color: o.zx.Colors.LINK,
+                      className: p.subscribeButton,
                       onClick: () => {
-                          if (null == b) return;
-                          let t = {
-                              section: e,
+                          if (null == h) return;
+                          let e = {
+                              section: t,
                               page: n,
-                              object: _.qAy.UPSELL_HEADER
+                              object: f.qAy.UPSELL_HEADER
                           };
-                          null != p
+                          null != N
                               ? (0, c.c)({
-                                    analyticsLocations: y,
-                                    analyticsLocation: t,
-                                    guild: b,
-                                    isGIF: f,
-                                    banner: p
+                                    analyticsLocations: A,
+                                    analyticsLocation: e,
+                                    guild: h,
+                                    isGIF: m,
+                                    banner: N
                                 })
                               : (0, s.Z)({
-                                    analyticsLocations: y,
-                                    analyticsSourceLocation: t,
-                                    guild: b,
-                                    perks: f ? (0, g.zC)() : (0, g.XO)()
+                                    analyticsLocations: A,
+                                    analyticsSourceLocation: e,
+                                    guild: h,
+                                    perks: m ? (0, _.zC)() : (0, _.XO)()
                                 });
                       },
-                      children: m.intl.string(m.t.WUHdZW)
+                      children: g.intl.string(g.t.WUHdZW)
                   })
               ]
           });

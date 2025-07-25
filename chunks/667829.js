@@ -152,6 +152,14 @@ class k extends i.Component {
         let r = this.ref.current;
         return null == r ? void 0 : r.insertAutocomplete(e, t, n);
     }
+    insertInlineAutocompleteElement(e) {
+        let t = this.ref.current;
+        return null == t ? void 0 : t.insertInlineAutocompleteInput(e);
+    }
+    replaceInlineAutocompleteInput(e, t, n) {
+        let r = this.ref.current;
+        return null == r ? void 0 : r.replaceInlineAutocompleteInput(e, t, n);
+    }
     getCurrentCommandOption() {
         var e, t;
         let n = this.ref.current;

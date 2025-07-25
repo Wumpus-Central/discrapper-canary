@@ -1,31 +1,33 @@
 (n.d(t, {
-    FW: () => u,
-    fZ: () => _,
-    py: () => f
+    FW: () => _,
+    fZ: () => p,
+    py: () => h
 }),
     n(388685),
     n(415506));
-var r = n(911969),
-    i = n(581364),
-    a = n(752305),
-    o = n(255963),
-    s = n(365704),
-    l = n(590921),
-    c = n(185923);
-function u(e) {
+var r = n(512722),
+    i = n.n(r),
+    a = n(911969),
+    o = n(581364),
+    s = n(752305),
+    l = n(255963),
+    c = n(365704),
+    u = n(590921),
+    d = n(185923);
+function _(e) {
     var t;
-    let { activeCommandOption: n, canMentionUsers: o = !0, canMentionRoles: s = !0, canMentionChannels: c = !0, canMentionEveryone: u, useNewSlashCommands: d, canOnlyUseTextCommands: _, canSendStickers: f, canSendSoundmoji: p, hideMentionDescription: h, hidePersonalInformation: m, type: g, emojiIntention: E, editorRef: b, onSendMessage: y, onSendSticker: O, setValue: v } = e,
+    let { activeCommandOption: n, canMentionUsers: r = !0, canMentionRoles: i = !0, canMentionChannels: l = !0, canMentionEveryone: c, useNewSlashCommands: d, canOnlyUseTextCommands: _, canSendStickers: f, canSendSoundmoji: p, hideMentionDescription: h, hidePersonalInformation: m, type: g, emojiIntention: E, editorRef: b, onSendMessage: y, onSendSticker: O, setValue: v } = e,
         I = {
             mentions: {
-                channel: l.nS.DENY,
-                global: l.VV.DENY,
-                role: l.Fw.DENY,
-                user: l.h3.DENY
+                channel: u.nS.DENY,
+                global: u.VV.DENY,
+                role: u.Fw.DENY,
+                user: u.h3.DENY
             },
-            commands: l.L8.DISABLED,
+            commands: u.L8.DISABLED,
             allowStickers: !0 === f,
             allowSoundmoji: !0 === p,
-            forNonStringCommandOption: null != n && n.type !== r.jw.STRING,
+            forNonStringCommandOption: null != n && n.type !== a.jw.STRING,
             hideMentionDescription: !0 === h,
             hidePersonalInformation: !0 === m,
             chatInputType: g,
@@ -37,7 +39,15 @@ function u(e) {
                 null == (n = b.current) || n.insertAutocomplete(e, null != t ? t : e);
             },
             replaceText: (e, t) => {
-                v(e, null != t ? t : (0, a.JM)(e));
+                v(e, null != t ? t : (0, s.JM)(e));
+            },
+            insertAutocompleteInput: (e) => {
+                var t;
+                null == (t = b.current) || t.insertInlineAutocompleteElement(e);
+            },
+            replaceInlineInput: (e, t, n) => {
+                var r;
+                null == (r = b.current) || r.replaceInlineAutocompleteInput(e, t, null != n ? n : t);
             },
             getCommandOptionValues: () => {
                 var e;
@@ -45,47 +55,47 @@ function u(e) {
             }
         };
     if (null != n) {
-        let e = (0, i.$z)(n);
-        (e.canMentionChannels && (I.mentions.channel = l.nS.ALLOW_SELECTABLE), e.canMentionEveryone && (I.mentions.global = e.canMentionHere ? l.VV.ALLOW_EVERYONE_OR_HERE : l.VV.ALLOW_EVERYONE), e.canMentionRoles && (I.mentions.role = e.canMentionNonMentionableRoles ? l.Fw.ALLOW_ALL : l.Fw.ALLOW_MENTIONABLE), e.canMentionUsers && (I.mentions.user = e.canMentionAnyGuildUser ? l.h3.ALLOW_GUILD : l.h3.ALLOW_CHANNEL), (I.hideMentionDescription = !0));
-    } else (c && (I.mentions.channel = l.nS.ALLOW_SELECTABLE), s && (I.mentions.role = l.Fw.ALLOW_MENTIONABLE), o && (I.mentions.user = l.h3.ALLOW_CHANNEL), u && (I.mentions.global = l.VV.ALLOW_EVERYONE_OR_HERE));
-    return ((null == (t = g.commands) ? void 0 : t.enabled) && (d ? (I.commands = _ ? l.L8.NEW_TEXT_ONLY : l.L8.NEW) : (I.commands = l.L8.OLD_BUILT_INS)), null != n && null != n.channelTypes && (I.allowedChannelTypes = n.channelTypes), I);
+        let e = (0, o.$z)(n);
+        (e.canMentionChannels && (I.mentions.channel = u.nS.ALLOW_SELECTABLE), e.canMentionEveryone && (I.mentions.global = e.canMentionHere ? u.VV.ALLOW_EVERYONE_OR_HERE : u.VV.ALLOW_EVERYONE), e.canMentionRoles && (I.mentions.role = e.canMentionNonMentionableRoles ? u.Fw.ALLOW_ALL : u.Fw.ALLOW_MENTIONABLE), e.canMentionUsers && (I.mentions.user = e.canMentionAnyGuildUser ? u.h3.ALLOW_GUILD : u.h3.ALLOW_CHANNEL), (I.hideMentionDescription = !0));
+    } else (l && (I.mentions.channel = u.nS.ALLOW_SELECTABLE), i && (I.mentions.role = u.Fw.ALLOW_MENTIONABLE), r && (I.mentions.user = u.h3.ALLOW_CHANNEL), c && (I.mentions.global = u.VV.ALLOW_EVERYONE_OR_HERE));
+    return ((null == (t = g.commands) ? void 0 : t.enabled) && (d ? (I.commands = _ ? u.L8.NEW_TEXT_ONLY : u.L8.NEW) : (I.commands = u.L8.OLD_BUILT_INS)), null != n && null != n.channelTypes && (I.allowedChannelTypes = n.channelTypes), I);
 }
-function d(e) {
+function f(e) {
     let { type: t, channel: n, guild: r, query: i, isAtStart: a, options: o } = e,
-        l = s.W[t];
-    if (null != l.sentinel) {
-        if (!i.startsWith(l.sentinel)) return !1;
-        i = i.substring(l.sentinel.length);
+        s = c.W[t];
+    if (null != s.sentinel) {
+        if (!i.startsWith(s.sentinel)) return !1;
+        i = i.substring(s.sentinel.length);
     }
-    return null == l.matches || !!l.matches(n, r, i, a, o);
+    return null == s.matches || !!s.matches(n, r, i, a, o);
 }
-function _(e) {
-    let { channel: t, guild: n, options: r, currentWord: i, currentWordIsAtStart: a, textValue: u, optionText: _ } = e,
-        f = null;
-    for (let e of s.R) {
-        var p, h, m, g, E, b;
-        let y = s.W[e];
-        if (e === l.eq.GIFS || e === l.eq.CHOICES) {
-            if (r.commands === l.L8.OLD_BUILT_INS) {
+function p(e) {
+    let { channel: t, guild: n, options: r, currentWord: a, currentWordIsAtStart: o, textValue: s, optionText: _, parentAutocompleteInputType: p, parentAutocompleteInputValue: h } = e,
+        m = null;
+    for (let e of c.R) {
+        var g, E, b, y, O, v;
+        let I = c.W[e];
+        if (e === u.eq.GIFS || e === u.eq.CHOICES) {
+            if (r.commands === u.L8.OLD_BUILT_INS) {
                 if (
-                    d({
+                    f({
                         type: e,
                         channel: t,
                         guild: n,
-                        query: u,
+                        query: s,
                         isAtStart: !1,
                         options: r
                     })
                 ) {
-                    f = {
+                    m = {
                         type: e,
-                        typeInfo: y,
-                        query: u
+                        typeInfo: I,
+                        query: s
                     };
                     break;
                 }
             } else if (
-                d({
+                f({
                     type: e,
                     channel: t,
                     guild: n,
@@ -96,12 +106,12 @@ function _(e) {
             )
                 return {
                     type: e,
-                    typeInfo: y,
+                    typeInfo: I,
                     query: _
                 };
-        } else if (e === l.eq.STICKERS) {
+        } else if (e === u.eq.STICKERS) {
             if (
-                d({
+                f({
                     type: e,
                     channel: t,
                     guild: n,
@@ -112,110 +122,118 @@ function _(e) {
             )
                 return {
                     type: e,
-                    typeInfo: y,
+                    typeInfo: I,
                     query: _
                 };
-        } else if (e === l.eq.COMMANDS && r.commands !== l.L8.OLD_BUILT_INS) {
+        } else if (e === u.eq.COMMANDS && r.commands !== u.L8.OLD_BUILT_INS) {
             if (
-                d({
+                f({
                     type: e,
                     channel: t,
                     guild: n,
-                    query: u,
+                    query: s,
                     isAtStart: !0,
                     options: r
                 })
             ) {
-                f = {
+                m = {
                     type: e,
-                    typeInfo: y,
-                    query: u.substring(null != (h = null == (p = y.sentinel) ? void 0 : p.length) ? h : 0)
+                    typeInfo: I,
+                    query: s.substring(null != (E = null == (g = I.sentinel) ? void 0 : g.length) ? E : 0)
                 };
                 break;
             }
-        } else if (e === l.eq.LEGACY_COMMANDS) {
+        } else if (e === u.eq.LEGACY_COMMANDS) {
             if (
-                d({
+                f({
                     type: e,
                     channel: t,
                     guild: n,
-                    query: u,
-                    isAtStart: a,
+                    query: s,
+                    isAtStart: o,
                     options: r
                 })
             ) {
-                f = {
+                m = {
                     type: e,
-                    typeInfo: y,
-                    query: u
+                    typeInfo: I,
+                    query: s
                 };
                 break;
             }
-        } else if (e === l.eq.EMOJIS_AND_STICKERS) {
+        } else if (e === u.eq.EMOJIS_AND_STICKERS) {
             if (
-                (null != i && i.length > 0 && (0, o.x)(c.qR.AutocompleteTyped),
-                null != i &&
-                    d({
+                (null != a && a.length > 0 && (0, l.x)(d.qR.AutocompleteTyped),
+                null != a &&
+                    f({
                         type: e,
                         channel: t,
                         guild: n,
-                        query: i,
-                        isAtStart: a,
+                        query: a,
+                        isAtStart: o,
                         options: r
                     }))
             ) {
-                f = {
+                m = {
                     type: e,
-                    typeInfo: y,
-                    query: i.substring(null != (g = null == (m = y.sentinel) ? void 0 : m.length) ? g : 0)
+                    typeInfo: I,
+                    query: a.substring(null != (y = null == (b = I.sentinel) ? void 0 : b.length) ? y : 0)
                 };
                 break;
             }
-        } else if (
-            null != i &&
-            d({
+        } else if (null != I.autocompleteInputElementType)
+            I.autocompleteInputElementType === p &&
+                (i()(null != h, "parentAutocompleteInputValue is null, but we're in an inline autocomplete object"),
+                (m = {
+                    type: e,
+                    typeInfo: I,
+                    query: h
+                }));
+        else if (
+            null != a &&
+            f({
                 type: e,
                 channel: t,
                 guild: n,
-                query: i,
-                isAtStart: a,
+                query: a,
+                isAtStart: o,
                 options: r
             })
         ) {
-            f = {
+            m = {
                 type: e,
-                typeInfo: y,
-                query: i.substring(null != (b = null == (E = y.sentinel) ? void 0 : E.length) ? b : 0)
+                typeInfo: I,
+                query: a.substring(null != (v = null == (O = I.sentinel) ? void 0 : O.length) ? v : 0)
             };
             break;
         }
     }
-    return null == f ? null : ((f.query = f.query.toLocaleLowerCase()), f);
+    return null == m ? null : ((m.query = m.query.toLocaleLowerCase()), m);
 }
-function f(e, t) {
+function h(e, t) {
     let n;
     if (null == t || null == e) return null;
-    if (null != e.choices || e.autocomplete) n = l.eq.CHOICES;
+    if (null != e.choices || e.autocomplete) n = u.eq.CHOICES;
     else
         switch (e.type) {
-            case r.jw.BOOLEAN:
-                n = l.eq.CHOICES;
+            case a.jw.BOOLEAN:
+                n = u.eq.CHOICES;
                 break;
-            case r.jw.CHANNEL:
-                n = l.eq.CHANNELS;
+            case a.jw.CHANNEL:
+                n = u.eq.CHANNELS;
                 break;
-            case r.jw.ROLE:
-            case r.jw.USER:
-            case r.jw.MENTIONABLE:
-                n = l.eq.MENTIONS;
+            case a.jw.ROLE:
+            case a.jw.USER:
+            case a.jw.MENTIONABLE:
+                n = u.eq.MENTIONS;
                 break;
             default:
                 return null;
         }
-    let i = s.W[n];
+    let r = c.W[n];
     return {
         type: n,
-        typeInfo: i,
+        typeInfo: r,
         query: t
     };
 }

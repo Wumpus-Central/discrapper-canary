@@ -125,6 +125,8 @@ class v extends i.PureComponent {
             this._insertText(e, i, a, n);
         }
     }
+    insertInlineAutocompleteInput(e) {}
+    replaceInlineAutocompleteInput(e, t, n) {}
     insertText(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
             r = this._ref;

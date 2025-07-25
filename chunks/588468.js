@@ -1,6 +1,6 @@
 (n.d(t, {
     DJ: () => B,
-    ZP: () => ea,
+    ZP: () => eo,
     rp: () => V
 }),
     n(415506),
@@ -434,7 +434,24 @@ class er extends Z {
         return (0, i.jsx)(y.Z, M({}, this.props));
     }
 }
-class ei extends (r = a.PureComponent) {
+class ei extends Z {
+    renderContent() {
+        let { game: e } = this.props,
+            t = (0, i.jsx)('img', {
+                alt: '',
+                className: L.icon,
+                src: N.ZP.getApplicationIconURL({
+                    id: e.id,
+                    icon: e.icon,
+                    size: 32
+                })
+            });
+        return (0, i.jsxs)(R.RX, {
+            children: [(0, i.jsx)(R.Tw, { children: t }), (0, i.jsx)(R.z5, { children: (0, i.jsx)(R.BR, { children: e.name }) })]
+        });
+    }
+}
+class ea extends (r = a.PureComponent) {
     render() {
         let e = this.props,
             { children: t, className: n, innerClassName: r, id: o } = e,
@@ -450,5 +467,5 @@ class ei extends (r = a.PureComponent) {
             : null;
     }
 }
-(x(ei, 'Generic', H), x(ei, 'Loading', Y), x(ei, 'Title', W), x(ei, 'Divider', K), x(ei, 'User', z), x(ei, 'Role', q), x(ei, 'Channel', X), x(ei, 'Command', Q), x(ei, 'NewCommand', J), x(ei, 'Emoji', $), x(ei, 'GIFIntegration', et), x(ei, 'Sticker', ee), x(ei, 'EmojiUpsell', en), x(ei, 'Soundmoji', er));
-let ea = ei;
+(x(ea, 'Generic', H), x(ea, 'Loading', Y), x(ea, 'Title', W), x(ea, 'Divider', K), x(ea, 'User', z), x(ea, 'Role', q), x(ea, 'Channel', X), x(ea, 'Command', Q), x(ea, 'NewCommand', J), x(ea, 'Emoji', $), x(ea, 'GIFIntegration', et), x(ea, 'Sticker', ee), x(ea, 'EmojiUpsell', en), x(ea, 'Soundmoji', er), x(ea, 'Game', ei));
+let eo = ea;

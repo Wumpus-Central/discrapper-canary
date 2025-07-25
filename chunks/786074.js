@@ -12,5 +12,11 @@ let a = {
         text: '@here',
         description: i.intl.string(i.t.OE6mOz)
     }),
+    MENTION_GAME: () => ({
+        test: 'game',
+        text: '@game',
+        inlineAutocompleteType: 'gameMentionInput',
+        description: i.intl.string(i.t['1kR88/'])
+    }),
     LAUNCHABLE_APPLICATIONS: () => r.Z.launchableApplicationViewItems
 };

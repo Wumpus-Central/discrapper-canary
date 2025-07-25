@@ -7,23 +7,23 @@ var r = a(481060),
     s = a(918714),
     o = a(852758),
     c = a(308569),
-    d = a(616257),
-    u = a(173166);
+    d = a(546147),
+    u = a(616257);
 function m() {
     return (0, n.jsx)(r.zJl, {
-        className: d.panel,
+        className: u.panel,
         children: (0, n.jsxs)('div', {
-            className: u.panelInner,
+            className: d.panelInner,
             children: [
                 (0, n.jsxs)('section', {
-                    className: u.section,
+                    className: d.section,
                     children: [
                         (0, n.jsx)(r.X6q, {
                             variant: 'heading-md/semibold',
                             children: 'Verification Layer'
                         }),
                         (0, n.jsx)('div', {
-                            className: u.inputRow,
+                            className: d.inputRow,
                             children: (0, n.jsx)(r.zxk, {
                                 variant: 'primary',
                                 text: 'Open Verification Layer',
@@ -38,14 +38,14 @@ function m() {
                     ]
                 }),
                 (0, n.jsxs)('section', {
-                    className: u.section,
+                    className: d.section,
                     children: [
                         (0, n.jsx)(r.X6q, {
                             variant: 'heading-md/semibold',
                             children: 'Safety Flow'
                         }),
                         (0, n.jsx)('div', {
-                            className: u.inputRow,
+                            className: d.inputRow,
                             children: (0, n.jsx)(r.zxk, {
                                 variant: 'primary',
                                 text: 'Open Safety Flow',
@@ -60,14 +60,14 @@ function m() {
                     ]
                 }),
                 (0, n.jsxs)('section', {
-                    className: u.section,
+                    className: d.section,
                     children: [
                         (0, n.jsx)(r.X6q, {
                             variant: 'heading-md/semibold',
                             children: 'Layer Controls'
                         }),
                         (0, n.jsx)('div', {
-                            className: u.inputRow,
+                            className: d.inputRow,
                             children: (0, n.jsx)(r.zxk, {
                                 variant: 'primary',
                                 text: 'Close All Layers',

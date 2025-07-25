@@ -152,6 +152,22 @@ let p = _(u({}, a.ML, o.F3), {
                 ? n
                 : null;
         },
+        getParentOfType(e, t, n) {
+            var r;
+            return null !=
+                (r = p.above(e, {
+                    at: t,
+                    match: (e) => m.isElement(e) && (Array.isArray(n) ? n.includes(e.type) : e.type === n),
+                    mode: 'lowest'
+                }))
+                ? r
+                : null;
+        },
+        getSelectedParentOfType(e, t) {
+            if (null == e.selection) return null;
+            let n = y.toPoint(e.selection);
+            return null == n ? null : p.getParentOfType(e, n, t);
+        },
         getSelectedVoid(e) {
             let t;
             if (null == e.selection) return null;

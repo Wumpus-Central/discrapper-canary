@@ -1,7 +1,7 @@
 (n.d(t, {
-    Gg: () => O,
-    KH: () => E,
-    ZP: () => g
+    Gg: () => v,
+    KH: () => b,
+    ZP: () => E
 }),
     n(388685),
     n(583741),
@@ -18,12 +18,13 @@ var r = n(512722),
     d = n(436660),
     _ = n(887490);
 let f = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\ |\\\\|\\"|(?!")\w)+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
-    p = new Set(['emoji', 'customEmoji', 'textMention', 'userMention', 'roleMention', 'channelMention', 'staticRouteLink', 'soundboard', 'timestamp']),
-    h = new Set(['line', 'blockQuote']),
-    m = new Set(['applicationCommandOption']);
-function g(e, t, n) {
+    p = new Set(['emoji', 'customEmoji', 'textMention', 'userMention', 'roleMention', 'channelMention', 'staticRouteLink', 'soundboard', 'timestamp', 'gameMention']),
+    h = new Set(['gameMentionInput']),
+    m = new Set(['line', 'blockQuote']),
+    g = new Set(['applicationCommandOption']);
+function E(e, t, n) {
     let { isInline: r, isVoid: i, onChange: a } = e;
-    ((e.isVoid = (e) => !!p.has(e.type) || i(e)), (e.isInline = (e) => !!p.has(e.type) || r(e)));
+    ((e.isVoid = (e) => !!p.has(e.type) || i(e)), (e.isInline = (e) => !!(p.has(e.type) || h.has(e.type)) || r(e)));
     let o = null,
         s = !0;
     return (
@@ -31,7 +32,7 @@ function g(e, t, n) {
             let r = _.bN.richValue(e);
             ((r !== o || e.previewMarkdown !== s) &&
                 (l.T.withMergedEntry(e, () => {
-                    _.bN.withoutNormalizing(e, () => E(e, t, n));
+                    _.bN.withoutNormalizing(e, () => b(e, t, n));
                 }),
                 (o = r),
                 (s = e.previewMarkdown)),
@@ -40,28 +41,28 @@ function g(e, t, n) {
         e
     );
 }
-function E(e, t, n) {
+function b(e, t, n) {
     let r = _.bN.areStylesDisabled(e);
     for (let i of _.bN.blocks(e))
-        if (h.has(i[0].type)) r ? y(e, i, !0, null) : b(e, i, t, n);
+        if (m.has(i[0].type)) r ? O(e, i, !0, null) : y(e, i, t, n);
         else {
             let [a, o] = i;
             for (let i = a.children.length - 1; i >= 0; i--) {
                 let s = a.children[i];
-                if (m.has(s.type)) {
+                if (g.has(s.type)) {
                     let a = [s, _.C0.child(o, i)];
-                    r ? y(e, a, !0, null) : b(e, a, t, n);
+                    r ? O(e, a, !0, null) : y(e, a, t, n);
                 }
             }
         }
 }
-function b(e, t, n, r) {
+function y(e, t, n, r) {
     var i;
     let a = 'line' === t[0].type && (null == (i = t[0].codeBlockState) ? void 0 : i.isInCodeBlock) === !0,
         o = _.q.markdown(t[0], n);
-    (y(e, t, a, o) && ((t = _.q.updateElement(e, t)), (o = _.q.markdown(t[0], n))), a || (O(e, t, r, o) && ((t = _.q.updateElement(e, t)), (o = _.q.markdown(t[0], n))), v(e, t, n, r, o)));
+    (O(e, t, a, o) && ((t = _.q.updateElement(e, t)), (o = _.q.markdown(t[0], n))), a || (v(e, t, r, o) && ((t = _.q.updateElement(e, t)), (o = _.q.markdown(t[0], n))), I(e, t, n, r, o)));
 }
-function y(e, t, n, r) {
+function O(e, t, n, r) {
     let [i, a] = t,
         o = !1;
     for (let t = i.children.length - 1; t >= 0; t--) {
@@ -98,7 +99,7 @@ function y(e, t, n, r) {
                     path: _.C0.child(i, 0),
                     offset: 0
                 };
-            (n || (null != r && T(e, a, l, r))) &&
+            (n || (null != r && S(e, a, l, r))) &&
                 (d.Q.voidToText(
                     e,
                     (0, u.sg)(s, {
@@ -112,7 +113,7 @@ function y(e, t, n, r) {
     }
     return o;
 }
-function O(e, t, n, r) {
+function v(e, t, n, r) {
     let i = t[1],
         a = !1,
         o = [...r.entries].reverse();
@@ -197,10 +198,17 @@ function O(e, t, n, r) {
                     children: [{ text: '' }]
                 };
                 break;
+            case 'gameMention':
+                l = {
+                    type: 'gameMention',
+                    applicationId: u.data.id,
+                    children: [{ text: '' }]
+                };
+                break;
             default:
                 continue;
         }
-        if (!S(n, t[0], l)) continue;
+        if (!A(n, t[0], l)) continue;
         let f = (0, c.t)(e, i, r.serializedChildren, u.start),
             p = (0, c.t)(e, i, r.serializedChildren, u.start + u.text.length);
         (d.Q.textToVoid(e, l, {
@@ -211,7 +219,7 @@ function O(e, t, n, r) {
     }
     return a;
 }
-function v(e, t, n, r, i) {
+function I(e, t, n, r, i) {
     let [a, o] = t,
         l = !1;
     for (let c = a.children.length - 1; c >= 0; c--) {
@@ -226,7 +234,7 @@ function v(e, t, n, r, i) {
                 continue;
             }
             if (
-                T(
+                S(
                     e,
                     o,
                     {
@@ -238,7 +246,7 @@ function v(e, t, n, r, i) {
             )
                 continue;
             let a = (0, s.i)(u[0], n, r);
-            null != a && S(r, t[0], a)
+            null != a && A(r, t[0], a)
                 ? h.push({
                       index: u.index,
                       length: u[0].length,
@@ -246,11 +254,11 @@ function v(e, t, n, r, i) {
                   })
                 : (f.lastIndex = u.index + 1);
         }
-        for (let t of h.reverse()) (I(e, [d, _.C0.child(o, c)], t.index, t.length, t.node), (l = !0));
+        for (let t of h.reverse()) (T(e, [d, _.C0.child(o, c)], t.index, t.length, t.node), (l = !0));
     }
     return l;
 }
-function I(e, t, n, r, a) {
+function T(e, t, n, r, a) {
     let [o, s] = t,
         l = {
             path: s,
@@ -267,7 +275,7 @@ function I(e, t, n, r, a) {
             focus: c
         }));
 }
-function T(e, t, n, r) {
+function S(e, t, n, r) {
     let i = 0;
     for (let [r, a] of _.bN.nodes(e, {
         at: {
@@ -285,7 +293,7 @@ function T(e, t, n, r) {
     }
     return !1;
 }
-function S(e, t, n) {
+function A(e, t, n) {
     if ('applicationCommandOption' !== t.type) return !0;
     switch (t.optionType) {
         case a.jw.CHANNEL:

@@ -141,6 +141,6 @@ let E = {
             s = t[i],
             l = n[i - t.length],
             c = r[i - t.length - n.length];
-        return (null != s ? a.insertText(f(s.user, o, a.hidePersonalInformation), p(s.user)) : null != l ? a.insertText(h(l)) : null != c && a.insertText(m(c), g(c)), { type: u.z2.MENTION });
+        return (null != s ? a.insertText(f(s.user, o, a.hidePersonalInformation), p(s.user)) : null != l ? (null != l.inlineAutocompleteType ? a.insertAutocompleteInput(l.inlineAutocompleteType) : a.insertText(h(l))) : null != c && a.insertText(m(c), g(c)), { type: u.z2.MENTION });
     }
 };

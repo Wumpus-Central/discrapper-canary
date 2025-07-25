@@ -11,5 +11,6 @@ e.exports = {
     attachmentFilename: 'attachmentFilename__1464f',
     selectedPill: 'selectedPill__1464f',
     erroredPill: 'erroredPill__1464f',
-    newLine: 'newLine__1464f'
+    newLine: 'newLine__1464f',
+    inlineFlex: 'inlineFlex__1464f'
 };

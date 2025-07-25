@@ -87,7 +87,7 @@ let v = new c.Z('MarkdownToSlate'),
         roleMention: { type: 'inlineObject' },
         commandMention: { type: 'inlineObject' },
         channelMention: { type: 'inlineObject' },
-        gameMention: { type: 'skip' },
+        gameMention: { type: 'inlineObject' },
         silentPrefix: {
             type: 'inlineStyle',
             before: '@silent',
@@ -281,7 +281,8 @@ function U(e, t, n) {
             returnMentionIds: !0,
             disableAutoBlockNewlines: !0,
             guildId: t,
-            isSlate: !0
+            isSlate: !0,
+            allowGameMentions: !0
         },
         a = n ? x : L,
         o = n ? j : k,
@@ -405,6 +406,17 @@ function V(e, t, n, r, a) {
                 originalStart: r,
                 attributes: [s],
                 data: { id: o }
+            });
+        }
+        case 'gameMention': {
+            let { applicationId: i } = n;
+            return Y({
+                result: e,
+                sourceText: t,
+                text: l[0],
+                originalStart: r,
+                attributes: [s],
+                data: { id: i }
             });
         }
         case 'staticRouteLink':

@@ -1,133 +1,133 @@
-(r.d(t, {
-    G: () => g,
-    Z: () => j
+(n.d(t, {
+    G: () => T,
+    Z: () => N
 }),
-    r(388685),
-    r(539854));
-var n = r(442837),
-    l = r(963374),
-    a = r(735020),
-    i = r(627050),
-    c = r(905405),
-    o = r(786761),
-    s = r(937889),
-    u = r(903488),
-    b = r(416638),
-    f = r(23750),
-    p = r(699516),
-    d = r(768119);
+    n(388685),
+    n(539854));
+var r = n(442837),
+    i = n(963374),
+    l = n(735020),
+    a = n(627050),
+    o = n(905405),
+    c = n(786761),
+    s = n(937889),
+    u = n(903488),
+    d = n(416638),
+    _ = n(23750),
+    E = n(699516),
+    I = n(768119);
 function O(e, t) {
-    let [r] = t,
-        n = r.getMessage(e.id, e.channel_id);
+    let [n] = t,
+        r = n.getMessage(e.id, e.channel_id);
     return (
-        null != n &&
+        null != r &&
             (e = e.merge({
-                attachments: n.attachments,
-                embeds: n.embeds
+                attachments: r.attachments,
+                embeds: r.embeds
             })),
         e
     );
 }
-function y(e) {
-    return (0, n.e7)(
-        [p.Z],
+function p(e) {
+    return (0, r.e7)(
+        [E.Z],
         () => {
             let t = 0,
-                r = 0;
+                n = 0;
             return [
                 e.map((e) =>
                     e.filter((e) => {
-                        let n = p.Z.isBlockedForMessage(e),
-                            l = p.Z.isIgnoredForMessage(e);
-                        return (n && e.isSearchHit ? t++ : l && e.isSearchHit && r++, (!n && !l) || e.isSearchHit);
+                        let r = E.Z.isBlockedForMessage(e),
+                            i = E.Z.isIgnoredForMessage(e);
+                        return (r && e.isSearchHit ? t++ : i && e.isSearchHit && n++, (!r && !i) || e.isSearchHit);
                     })
                 ),
                 t,
-                r
+                n
             ];
         },
         [e],
-        n.pF
+        r.pF
     );
 }
-function g(e) {
-    let t = (0, c.p)(),
-        [r, i, o] = y(
-            (0, n.e7)(
-                [d.Z, u.Z, a.Z],
+function T(e) {
+    let t = (0, o.p)(),
+        [n, a, c] = p(
+            (0, r.e7)(
+                [I.Z, u.Z, l.Z],
                 () => {
-                    var r;
-                    let n = (0, b.WJ)(e),
-                        i = d.Z.getSearchResultsQuery(n),
-                        c = u.Z.getMessages(n);
-                    if (null == c || 0 === c.length) return [];
-                    let o = (0, l.nC)(null != (r = null == i ? void 0 : i.content) ? r : ''),
-                        p = [];
+                    var n;
+                    let r = (0, d.WJ)(e),
+                        a = I.Z.getSearchResultsQuery(r),
+                        o = u.Z.getMessages(r);
+                    if (null == o || 0 === o.length) return [];
+                    let c = (0, i.nC)(null != (n = null == a ? void 0 : a.content) ? n : ''),
+                        E = [];
                     return (
-                        c.forEach((e) => {
-                            let r = new f.ZP(e);
-                            ((r = O(r, [a.Z])).set(
+                        o.forEach((e) => {
+                            let n = new _.ZP(e);
+                            ((n = O(n, [l.Z])).set(
                                 'customRenderedContent',
-                                (0, s.ZP)(r, {
-                                    postProcessor: o,
+                                (0, s.ZP)(n, {
+                                    postProcessor: c,
                                     allowHeading: !0,
                                     allowList: !0,
                                     shouldFilterKeywords: t
                                 })
                             ),
-                                p.push([r]));
+                                E.push([n]));
                         }),
-                        p
+                        E
                     );
                 },
                 [e, t],
-                n.pF
+                r.pF
             )
         );
     return {
-        searchResults: r,
-        blockCount: i,
-        ignoreCount: o
+        searchResults: n,
+        blockCount: a,
+        ignoreCount: c
     };
 }
-let m = [];
-function j(e) {
-    let t = (0, c.p)(),
-        r = i.d.useExperiment({ location: 'useMessageRenderedContent' }).enabled,
-        [b, f, p] = y(
-            (0, n.e7)(
-                [d.Z, u.Z, a.Z],
+let S = [];
+function N(e) {
+    let t = (0, o.p)(),
+        n = a.d.useExperiment({ location: 'useMessageRenderedContent' }).enabled,
+        [d, _, E] = p(
+            (0, r.e7)(
+                [I.Z, u.Z, l.Z],
                 () => {
-                    var n;
-                    let i = d.Z.getSearchResultsQuery(e),
-                        c = u.Z.getRawMessages(e);
-                    if (null == i || null == c) return m;
-                    let b = (0, l.nC)(null != (n = i.content) ? n : '');
-                    return c.map((e) =>
+                    var r;
+                    let a = I.Z.getSearchResultsQuery(e),
+                        o = u.Z.getRawMessages(e);
+                    if (null == a || null == o) return S;
+                    let d = (0, i.nC)(null != (r = a.content) ? r : '');
+                    return o.map((e) =>
                         e.map((e) => {
-                            let n = O((0, o.e5)(e), [a.Z]);
-                            return n.isSearchHit
-                                ? n.set(
+                            let r = O((0, c.e5)(e), [l.Z]);
+                            return r.isSearchHit
+                                ? r.set(
                                       'customRenderedContent',
-                                      (0, s.ZP)(n, {
-                                          postProcessor: b,
+                                      (0, s.ZP)(r, {
+                                          postProcessor: d,
                                           allowHeading: !0,
                                           allowList: !0,
-                                          allowGameMentions: r,
+                                          allowGameMentions: n,
                                           shouldFilterKeywords: t
                                       })
                                   )
-                                : n;
+                                : r;
                         })
                     );
                 },
-                [e, t, r],
-                n.pF
+                [e, t, n],
+                r.pF
             )
         );
     return {
-        searchResults: b,
-        blockCount: f,
-        ignoreCount: p
+        searchResults: d,
+        blockCount: _,
+        ignoreCount: E
     };
 }

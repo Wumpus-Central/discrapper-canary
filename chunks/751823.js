@@ -1,5 +1,5 @@
-n.d(t, { L: () => o });
-let o = (0, n(987170).Z)({
+n.d(t, { L: () => r });
+let r = (0, n(987170).Z)({
     kind: 'user',
     id: '2025-07_avholdout',
     label: 'AV Holdout - H2 2025',

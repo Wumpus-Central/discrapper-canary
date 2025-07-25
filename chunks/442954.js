@@ -6,8 +6,8 @@ var n = a(255367),
     s = a(585483),
     o = a(246992),
     c = a(981631),
-    d = a(616257),
-    u = a(173166);
+    d = a(546147),
+    u = a(616257);
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {},
@@ -56,22 +56,22 @@ function p() {
         ),
         [t, a] = r.useState(e[0].value);
     return (0, n.jsx)(l.zJl, {
-        className: d.panel,
+        className: u.panel,
         children: (0, n.jsxs)('div', {
-            className: u.panelInner,
+            className: d.panelInner,
             children: [
                 (0, n.jsxs)('section', {
-                    className: u.section,
+                    className: d.section,
                     children: [
                         (0, n.jsx)(l.X6q, {
                             variant: 'heading-md/semibold',
                             children: 'Open a Modal'
                         }),
                         (0, n.jsxs)('div', {
-                            className: u.inputRow,
+                            className: d.inputRow,
                             children: [
                                 (0, n.jsx)(l.PhF, {
-                                    className: u.input,
+                                    className: d.input,
                                     options: e,
                                     isSelected: (e) => t === e,
                                     serialize: (e) => e,
@@ -88,14 +88,14 @@ function p() {
                     ]
                 }),
                 (0, n.jsxs)('section', {
-                    className: u.section,
+                    className: d.section,
                     children: [
                         (0, n.jsx)(l.X6q, {
                             variant: 'heading-md/semibold',
                             children: 'Wow moment'
                         }),
                         (0, n.jsx)('div', {
-                            className: u.inputRow,
+                            className: d.inputRow,
                             children: (0, n.jsx)(l.zxk, {
                                 variant: 'primary',
                                 text: 'Open',
