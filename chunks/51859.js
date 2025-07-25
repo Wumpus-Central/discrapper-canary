@@ -2,14 +2,14 @@
 var r = n(255367),
     o = n(73800),
     i = n(831209),
-    l = n(494497),
-    s = n(793030),
+    s = n(494497),
+    l = n(793030),
     a = n(481060),
     c = n(158638),
     u = n(973772),
     d = n(838968),
-    m = n(262212),
-    p = n(795338),
+    p = n(262212),
+    m = n(795338),
     f = n(279604),
     _ = n(279475),
     x = n(535396),
@@ -23,13 +23,13 @@ function b(e) {
         C = (0, u.Z)(t, n).type !== x.A3.INACTIVE,
         I = (0, _.d)(C),
         N = (0, c.g1)(t, 'GuildPowerupPerkCard'),
-        Z = n.skuId === l.A$;
+        Z = n.skuId === s.A$;
     return (0, r.jsxs)(d.Z, {
         onHover: (e) => h(e),
         guildId: t,
         powerup: n,
         children: [
-            (0, r.jsx)(p.m, {
+            (0, r.jsx)(m.m, {
                 className: g.image,
                 powerup: n,
                 isHovering: E
@@ -41,13 +41,13 @@ function b(e) {
                         children: [
                             (0, r.jsx)('div', {
                                 className: g.headerContainer,
-                                children: (0, r.jsx)(s.X6, {
+                                children: (0, r.jsx)(l.X6, {
                                     color: I,
                                     variant: 'heading-md/bold',
                                     children: n.title
                                 })
                             }),
-                            (0, r.jsx)(s.xv, {
+                            (0, r.jsx)(l.xv, {
                                 className: g.description,
                                 color: I,
                                 variant: 'text-sm/medium',
@@ -63,7 +63,7 @@ function b(e) {
             }),
             (0, r.jsx)('div', {
                 className: g.buttonContainer,
-                children: (0, r.jsx)(m.ZP, {
+                children: (0, r.jsx)(p.ZP, {
                     guildId: t,
                     powerup: n,
                     onError: j

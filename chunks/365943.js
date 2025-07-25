@@ -1,4 +1,4 @@
-n.d(t, { r: () => m });
+n.d(t, { t: () => m });
 var r = n(544891),
     i = n(570140),
     a = n(479531),
@@ -88,7 +88,7 @@ let h = (e) => {
     },
     m = async function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (!(!e && s.Z.hasFetched()) && !s.Z.isFetchingAll && s.Z.canFetch()) {
+        if (!s.Z.isFetchingAll && (e || s.Z.canFetch())) {
             i.Z.dispatch({ type: 'PROFILE_EFFECTS_FETCH_ALL' });
             try {
                 let { body: e } = await r.tn.get({

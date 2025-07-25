@@ -12,7 +12,7 @@ var n = r(255367),
     f = r(906732),
     g = r(977395),
     h = r(214852),
-    b = r(290026),
+    b = r(238359),
     m = r(511050),
     _ = r(819640),
     C = r(594174),
@@ -59,8 +59,8 @@ let R = (e) => {
             [i, B]
         );
         let { onClose: Z } = (0, k.Db)(),
-            { currentTab: F, hasFilters: D } = (0, j.S)(),
-            M = l.useMemo(() => (r === N.AW.HOME && F && D() ? F : r), [r, F, D]),
+            { currentTab: D, hasFilters: F } = (0, j.S)(),
+            M = l.useMemo(() => (r === N.AW.HOME && D && F() ? D : r), [r, D, F]),
             { categories: H, refreshCategories: W } = (0, S.ZP)(
                 {
                     location: 'CollectiblesShop.web',
@@ -72,7 +72,7 @@ let R = (e) => {
                     isFullScreen: t
                 }
             );
-        (0, b.P)();
+        (0, b.D)();
         let V = (0, y.O)(H),
             [U, z] = l.useState(),
             G = (0, s.e7)([v.Z], () => {

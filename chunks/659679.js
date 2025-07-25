@@ -3,14 +3,14 @@ var r = n(255367);
 n(73800);
 var o = n(793030),
     i = n(442837),
-    l = n(481060),
-    s = n(834129),
+    s = n(481060),
+    l = n(834129),
     a = n(271383),
     c = n(709054),
     u = n(884902),
     d = n(93841),
-    m = n(388032),
-    p = n(326319);
+    p = n(388032),
+    m = n(326319);
 function f(e) {
     let { boost: t } = e,
         n = new Date(c.default.extractTimestamp(t.id)),
@@ -32,24 +32,24 @@ function f(e) {
             [t]
         ),
         v = (0, u.X7)(t.guildId, t.userId, x);
-    return (0, r.jsx)(s.Z, {
-        className: p.systemMessageContainer,
-        contentClassName: p.systemMessageContent,
-        iconNode: (0, r.jsx)(l.$Eu, {
-            className: p.icon,
+    return (0, r.jsx)(l.Z, {
+        className: m.systemMessageContainer,
+        contentClassName: m.systemMessageContent,
+        iconNode: (0, r.jsx)(s.$Eu, {
+            className: m.icon,
             color: 'currentColor',
             size: 'sm'
         }),
-        iconContainerClassName: p.iconContainer,
-        timestampClassName: p.timestamp,
+        iconContainerClassName: m.iconContainer,
+        timestampClassName: m.timestamp,
         timestamp: n,
         timestampFormat: 'L',
         compact: !0,
         children: (0, r.jsxs)('span', {
-            className: p.boostMessage,
+            className: m.boostMessage,
             children: [
-                (0, r.jsx)(l.PUh, {
-                    className: p.boostMessageUser,
+                (0, r.jsx)(s.PUh, {
+                    className: m.boostMessageUser,
                     variant: 'text-md/semibold',
                     name: f,
                     color: null != _ ? _ : void 0,
@@ -58,7 +58,7 @@ function f(e) {
                 (0, r.jsx)(o.xv, {
                     variant: 'text-md/medium',
                     lineClamp: 1,
-                    children: m.intl.string(d.default.plwH8f)
+                    children: p.intl.string(d.default.plwH8f)
                 })
             ]
         })

@@ -2,14 +2,14 @@
 var r = n(255367),
     o = n(73800),
     i = n(120356),
-    l = n.n(i),
-    s = n(793030),
+    s = n.n(i),
+    l = n(793030),
     a = n(481060),
     c = n(808189),
     u = n(973772),
     d = n(838968),
-    m = n(262212),
-    p = n(279604),
+    p = n(262212),
+    m = n(279604),
     f = n(279475),
     _ = n(535396),
     x = n(981631),
@@ -25,9 +25,9 @@ function E(e) {
         (0, r.jsxs)('div', {
             className: b.progressContainer,
             children: [
-                (0, r.jsx)('div', { className: l()(b.progress, b[i], b[t]) }),
+                (0, r.jsx)('div', { className: s()(b.progress, b[i], b[t]) }),
                 (0, r.jsx)('div', {
-                    className: l()(b.boostContainer, j.boostProgressBackground, {
+                    className: s()(b.boostContainer, j.boostProgressBackground, {
                         [b.boostContainerActive]: n,
                         [j.active]: n
                     }),
@@ -43,7 +43,7 @@ function E(e) {
 function h(e) {
     let { isActive: t, index: n } = e,
         i = (0, f.d)(t),
-        l = (0, f.u)(t),
+        s = (0, f.u)(t),
         a = o.useMemo(() => {
             let e = c.C[n];
             if (null == e) return [];
@@ -57,10 +57,10 @@ function h(e) {
                               className: b.perkRow,
                               children: [
                                   (0, r.jsx)(e.icon, {
-                                      color: l,
+                                      color: s,
                                       size: 'sm'
                                   }),
-                                  (0, r.jsx)(s.xv, {
+                                  (0, r.jsx)(l.xv, {
                                       className: b.perkText,
                                       color: i,
                                       variant: 'text-sm/medium',
@@ -71,14 +71,14 @@ function h(e) {
                           'perk-'.concat(n, '-').concat(t)
                       )
                   );
-        }, [n, l, i]);
+        }, [n, s, i]);
     return (0, r.jsxs)('div', {
         className: b.perkRowContainer,
         children: [
             a,
             (0, r.jsx)('div', {
                 className: b.perkRow,
-                children: (0, r.jsx)(s.xv, {
+                children: (0, r.jsx)(l.xv, {
                     color: i,
                     variant: 'text-sm/medium',
                     children: g.intl.string(v.default.nIj3LS)
@@ -88,14 +88,14 @@ function h(e) {
     });
 }
 function C(e) {
-    let { guildId: t, index: n, powerup: i, nextPowerup: l } = e,
+    let { guildId: t, index: n, powerup: i, nextPowerup: s } = e,
         a = (0, u.Z)(t, i),
-        c = (0, u.Z)(t, l),
+        c = (0, u.Z)(t, s),
         x = a.type !== _.A3.INACTIVE,
         v = c.type !== _.A3.INACTIVE,
         g = a.type === _.A3.TIER_OVERRIDE_ACTIVATED,
         [C, I] = o.useState(void 0);
-    (0, p.KT)(C);
+    (0, m.KT)(C);
     let N = (0, f.d)(x);
     return (0, r.jsxs)(d.Z, {
         guildId: t,
@@ -103,14 +103,14 @@ function C(e) {
         className: b.card,
         children: [
             (0, r.jsx)(E, {
-                position: 0 === n ? 'start' : null == l ? 'end' : 'middle',
+                position: 0 === n ? 'start' : null == s ? 'end' : 'middle',
                 active: x,
-                nextActive: null != l ? v : void 0
+                nextActive: null != s ? v : void 0
             }),
             (0, r.jsxs)('div', {
                 className: j.contentContainer,
                 children: [
-                    (0, r.jsx)(s.X6, {
+                    (0, r.jsx)(l.X6, {
                         variant: 'heading-md/bold',
                         color: N,
                         children: i.title
@@ -130,7 +130,7 @@ function C(e) {
             !g &&
                 (0, r.jsx)('div', {
                     className: j.buttonContainer,
-                    children: (0, r.jsx)(m.ZP, {
+                    children: (0, r.jsx)(p.ZP, {
                         guildId: t,
                         powerup: i,
                         onError: I

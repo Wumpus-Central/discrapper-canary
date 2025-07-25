@@ -3,14 +3,14 @@ var r = n(255367);
 n(73800);
 var o = n(793030),
     i = n(442837),
-    l = n(755721),
-    s = n(481060),
+    s = n(755721),
+    l = n(481060),
     a = n(678558),
     c = n(343649),
     u = n(430824),
     d = n(63063),
-    m = n(317169),
-    p = n(639660),
+    p = n(317169),
+    m = n(639660),
     f = n(767218),
     _ = n(981631),
     x = n(93841),
@@ -19,7 +19,7 @@ var o = n(793030),
 function b(e) {
     let { guildId: t } = e,
         n = (0, i.e7)([u.Z], () => u.Z.getGuild(t)),
-        { available: b, spent: j, total: E } = (0, m.Z)(t);
+        { available: b, spent: j, total: E } = (0, p.Z)(t);
     if (null != n)
         return (0, r.jsxs)('div', {
             className: g.container,
@@ -63,16 +63,16 @@ function b(e) {
                         page: _.ZY5.GUILD_POWERUPS_OVERVIEW,
                         section: _.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR
                     },
-                    color: l.Tt.CUSTOM,
-                    size: l.Ph.LARGE,
+                    color: s.Tt.CUSTOM,
+                    size: s.Ph.LARGE,
                     intent: c.P.NONE,
-                    icon: (0, r.jsx)(s.$Eu, {
+                    icon: (0, r.jsx)(l.$Eu, {
                         className: g.boostButtonIcon,
                         size: 'sm',
-                        color: s.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK
+                        color: l.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK
                     })
                 }),
-                (0, r.jsx)(p.Z, { guildId: t })
+                (0, r.jsx)(m.Z, { guildId: t })
             ]
         });
 }

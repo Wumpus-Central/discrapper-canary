@@ -2,7 +2,7 @@
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    a = n(44876),
+    a = n(365943),
     o = n(594174),
     s = n(788111),
     c = n(60577),
@@ -42,7 +42,9 @@ function m(e) {
         g = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
         b = (0, c.Z)(),
         [_, y] = (0, s.Z)(n);
-    return ((0, a.k)(),
+    return (i.useEffect(() => {
+        (0, a.t)();
+    }, []),
     i.useEffect(() => {
         (0, u.Z)(null != m ? m : n, {
             type: 'sidebar',

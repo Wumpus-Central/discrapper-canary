@@ -1,4 +1,4 @@
-r.d(t, { Z: () => N });
+r.d(t, { Z: () => Z });
 var n = r(255367);
 r(73800);
 var i = r(392711),
@@ -18,8 +18,8 @@ var i = r(392711),
     x = r(706454),
     j = r(695346),
     y = r(265159),
-    O = r(25990),
-    v = r(594174),
+    v = r(25990),
+    O = r(594174),
     P = r(55935),
     _ = r(74538),
     E = r(388032),
@@ -49,20 +49,20 @@ function w(e) {
     }
     return e;
 }
-let S = (e) => {
+let I = (e) => {
         let { effectIsOwned: t, pendingProfileEffectRecord: r, product: d, purchase: f } = e,
-            m = (0, l.e7)([v.default], () => v.default.getCurrentUser()),
+            m = (0, l.e7)([O.default], () => O.default.getCurrentUser()),
             g = (0, l.e7)([s.Z], () => s.Z.getProduct(null == r ? void 0 : r.skuId)),
             h = (0, l.e7)([x.default], () => x.default.locale),
             b = _.ZP.canUseCollectibles(m),
             j = (0, c.qS)(f),
             y = (0, c.G1)(d),
-            O = !b && j,
+            v = !b && j,
             w = (null == f ? void 0 : f.expiresAt) != null ? (0, P.TD)(Date.now(), f.expiresAt) : null,
-            S = (0, u.a)(f),
-            N = (0, a.k)(g),
-            Z = (0, p.M)(!y || b),
-            D = I(O, y, b, Z);
+            I = (0, u.a)(f),
+            Z = (0, a.k)(g),
+            N = (0, p.M)(!y || b),
+            D = S(v, y, b, N);
         return null != r
             ? (0, n.jsx)('div', {
                   className: t ? C.effectDescriptionNoGradient : C.effectDescriptionBorderWithGradient,
@@ -73,7 +73,7 @@ let S = (e) => {
                               color: 'header-primary',
                               variant: 'text-sm/semibold',
                               className: C.effectName,
-                              children: (0, i.isEmpty)(S) ? N : S
+                              children: (0, i.isEmpty)(I) ? Z : I
                           }),
                           null != f
                               ? null
@@ -131,28 +131,28 @@ let S = (e) => {
               })
             : null;
     },
-    I = (e, t, r, n) => (e ? E.intl.string(E.t['1UPza2']) : t && r ? E.intl.string(E.t.hmyYKy) : t && !r ? (n ? E.intl.string(E.t.meldu7) : E.intl.string(E.t.JtAKws)) : E.intl.string(E.t.fEGjVV)),
-    N = (e) => {
+    S = (e, t, r, n) => (e ? E.intl.string(E.t['1UPza2']) : t && r ? E.intl.string(E.t.hmyYKy) : t && !r ? (n ? E.intl.string(E.t.meldu7) : E.intl.string(E.t.JtAKws)) : E.intl.string(E.t.fEGjVV)),
+    Z = (e) => {
         var t, r, i;
         let { user: o, pendingProfileEffectRecord: s, canApplySelectedChange: c, product: a, purchase: u, guild: p } = e,
             {
                 pendingGlobalName: x,
-                pendingNickname: v,
+                pendingNickname: O,
                 pendingPronouns: P,
                 pendingBio: E,
-                pendingBanner: I,
-                pendingAvatar: N,
-                pendingAvatarDecoration: Z,
+                pendingBanner: S,
+                pendingAvatar: Z,
+                pendingAvatarDecoration: N,
                 pendingThemeColors: D,
                 pendingAccentColor: k
-            } = (0, l.cj)([d.Z, O.Z], () =>
+            } = (0, l.cj)([d.Z, v.Z], () =>
                 w(
                     {
                         pendingNickname: void 0,
                         pendingGlobalName: void 0,
                         pendingAccentColor: void 0
                     },
-                    null != p ? d.Z.getAllPending() : O.Z.getAllPending()
+                    null != p ? d.Z.getAllPending() : v.Z.getAllPending()
                 )
             ),
             A = _.ZP.isPremium(o),
@@ -163,16 +163,16 @@ let S = (e) => {
                 user: o,
                 guild: p,
                 pendingGlobalName: x,
-                pendingNickname: v,
+                pendingNickname: O,
                 pendingPronouns: P,
                 pendingBio: j.dN.useSetting() && null != E ? f.ZP.parse(void 0, E).content : E,
-                pendingBanner: I,
+                pendingBanner: S,
                 useLargeBanner: !0,
                 pendingAvatar: (0, g.SD)({
                     userId: o.id,
-                    image: N
+                    image: Z
                 }),
-                pendingAvatarDecoration: Z,
+                pendingAvatarDecoration: N,
                 pendingThemeColors: D,
                 pendingAccentColor: k,
                 pendingProfileEffectId: null != (t = null == s ? void 0 : s.id) ? t : null,
@@ -207,7 +207,7 @@ let S = (e) => {
                     r)
                 ),
                 !1,
-                (0, n.jsx)(S, {
+                (0, n.jsx)(I, {
                     effectIsOwned: c,
                     pendingProfileEffectRecord: s,
                     product: a,

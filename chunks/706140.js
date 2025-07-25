@@ -2,7 +2,8 @@ n.d(t, {
     EM: () => O,
     Tt: () => v,
     cv: () => y,
-    sx: () => I
+    sx: () => I,
+    zH: () => T
 });
 var r = n(73800),
     i = n(442837),
@@ -125,7 +126,7 @@ function v(e, t, n) {
         o = (0, i.e7)([l.Z], () => l.Z.getGuildId()),
         c = null;
     return (
-        null != e && (c = T(!(0, h.Bh)(e), a, t) ? e : null),
+        null != e && (c = S(!(0, h.Bh)(e), a, t) ? e : null),
         [
             b(c, o, n),
             r.useCallback(
@@ -166,6 +167,29 @@ function I(e, t, n, a) {
     );
 }
 function T(e, t, n) {
+    let a = (0, i.e7)([s.Z], () => s.Z.getGuildDismissedContentState(t)),
+        o = (0, h.ig)(e),
+        l = null;
+    return (
+        s.Z.hasLoaded(g.yP.PRELOADED_USER_SETTINGS) ? (l = o.find((e) => null == a || null == a[e] || !1 === a[e].dismissed)) : null != a && (l = o.find((e) => null == a[e] || !1 === a[e].dismissed)),
+        [
+            b(l, t, n),
+            r.useCallback(
+                (e, r) => {
+                    null != l &&
+                        (0, f.wE)(l, t, {
+                            dismissAction: e,
+                            groupName: n,
+                            guildId: t,
+                            forceTrack: r
+                        });
+                },
+                [l, n, t]
+            )
+        ]
+    );
+}
+function S(e, t, n) {
     let r = null != t ? (Number.isNaN(Number(t)) ? void 0 : Number(t)) : void 0,
         i = void 0 === r ? 0 : r + n.cooldownDurationMs,
         a = Date.now(),

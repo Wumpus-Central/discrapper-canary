@@ -45,7 +45,7 @@ let Z = {
         type: s.z.HERO,
         categoryStoreListingId: ''
     },
-    F = (e) => {
+    D = (e) => {
         var t, r, n, l;
         return null == e
             ? Z
@@ -67,7 +67,7 @@ let Z = {
                   logoConfig: e.heroLogoDisplayConfig
               };
     },
-    D = (e) => {
+    F = (e) => {
         let { isResponsive: t, heroBannerOverrides: r } = e;
         return (0, n.jsxs)('div', {
             className: o()(R.heroBannerSheenContainer, { [R.responsive]: t }),
@@ -97,7 +97,7 @@ let Z = {
             z = (0, x.u)(),
             G = (0, v.sp)(),
             { showBetaTag: q } = m.Z.useExperiment({ location: 'collectible_hero_block' }),
-            K = l.useMemo(() => (null != S ? S : F(s)), [S, s]),
+            K = l.useMemo(() => (null != S ? S : D(s)), [S, s]),
             { isPreviewingStaticBanner: Y, bannerOverrides: X, bannerStyleOverrides: J, logoStyleOverrides: Q, heroLogo: $, heroBannerStatic: ee, heroBannerAnimated: et } = (0, I.hr)(K),
             er = null == X ? void 0 : X.heroBanner,
             en = null != (t = null == J ? void 0 : J.responsive) && t,
@@ -130,7 +130,7 @@ let Z = {
                                     }),
                               (null == J ? void 0 : J.hideSideShadow) === !0
                                   ? null
-                                  : (0, n.jsx)(D, {
+                                  : (0, n.jsx)(F, {
                                         heroBannerOverrides: er,
                                         isResponsive: en
                                     })
