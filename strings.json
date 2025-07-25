@@ -12657,6 +12657,7 @@
   "nE8hSU": "Members with this permission can use @everyone or @here to ping all members **in this channel**. They can also @mention all roles, even if the role's \"Allow anyone to mention this role\" permission is disabled.",
   "CocrMD": "Members with this permission can use @everyone or @here to ping all members. They can also @mention all roles, even if the role's \"Allow anyone to mention this role\" permission is disabled.",
   "VDUAHB": "Mention @everyone when a Stage starts",
+  "1kR88/": "Notify users who played a specific game in the last 60 days",
   "OE6mOz": "Notify everyone online who has permission to view this channel.",
   "iX9SFB": "Notify members online in this channel.",
   "nCN+3N": "Notify all online thread participants.",
