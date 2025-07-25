@@ -26,10 +26,10 @@ var i = n(772848),
     _ = n(626135),
     p = n(954824),
     h = n(617136),
-    m = n(272008),
-    g = n(569984),
-    E = n(497505),
-    b = n(918701),
+    m = n(509212),
+    g = n(272008),
+    E = n(569984),
+    b = n(497505),
     y = n(184299),
     O = n(66340),
     v = n(862847),
@@ -196,7 +196,7 @@ function F() {
         utmSourceCurrent: M,
         utmMediumCurrent: x,
         utmCampaignCurrent: t,
-        utmContentCurrent: Object.keys(E.jn).find((t) => E.jn[t] === e)
+        utmContentCurrent: Object.keys(b.jn).find((t) => b.jn[t] === e)
     });
     let n = null != t ? '#'.concat(t) : '';
     (c.Z.setState({ selectedTab: R.GlobalDiscoveryTab.QUESTS }), (0, l.xf)(), (0, d.uL)(C.Z5c.QUEST_HOME + n));
@@ -219,9 +219,9 @@ function Y(e) {
     var t;
     let { quest: n, questContent: a, sourceQuestContent: o, sourceQuestContentCTA: l, autoplay: c = !0, skipEnrollmentCheck: u = !1 } = e,
         d = (0, i.Z)();
-    if ((0, O.D)(N.dr.VIDEO_MODAL) && !u && (null == (t = n.userStatus) ? void 0 : t.enrolledAt) == null && !(0, b.zi)(n)) {
-        g.Z.isEnrolling(n.id) ||
-            (0, m.AH)(n.id, {
+    if ((0, O.D)(N.dr.VIDEO_MODAL) && !u && (null == (t = n.userStatus) ? void 0 : t.enrolledAt) == null && !(0, m.zi)(n)) {
+        E.Z.isEnrolling(n.id) ||
+            (0, g.AH)(n.id, {
                 questContent: a,
                 questContentCTA: h.jZ.ACCEPT_QUEST,
                 sourceQuestContent: o
@@ -229,7 +229,7 @@ function Y(e) {
         let e = y.ZP.getState().getVideoProgress(n.id);
         null != e &&
             e.timestampSec > 1 &&
-            ((0, m.lx)(n.id),
+            ((0, g.lx)(n.id),
             _.default.track(C.rMx.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
                 quest_id: n.id,
                 source_quest_content: (0, h._b)(o),
@@ -253,10 +253,10 @@ function Y(e) {
                 );
         },
         {
-            modalKey: (0, b.u7)(n.id),
+            modalKey: (0, m.u7)(n.id),
             backdropStyle: s.fCB.IMMERSIVE,
             onCloseCallback: () =>
-                (0, b.Mo)({
+                (0, m.Mo)({
                     questId: n.id,
                     sourceQuestContent: o,
                     videoSessionId: d
