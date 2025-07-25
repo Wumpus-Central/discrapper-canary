@@ -32779,12 +32779,6 @@ body .headerAnimation_b54a5b {
     display: none
 }
 
-.newPaymentBadge__92b20 {
-    background-color: var(--white-500);
-    color: var(--brand-500);
-    margin-left: 5px
-}
-
 .SeparatorLower__92b20,
 .SeparatorUpper__92b20 {
     background: var(--border-subtle);
@@ -37636,32 +37630,6 @@ body .headerAnimation_b54a5b {
     cursor: pointer;
     display: inline;
     text-decoration: underline
-}
-
-.noticeRoot_b956e9 {
-    align-items: center;
-    background-color: var(--background-base-lower);
-    border-radius: 4px;
-    font-size: 14px;
-    line-height: 18px;
-    padding: 8px 16px
-}
-
-.iconContainer_b956e9,
-.noticeRoot_b956e9 {
-    display: flex
-}
-
-.infoIcon_b956e9 {
-    color: var(--yellow-300);
-    height: 14px;
-    margin-right: 6px;
-    width: 14px
-}
-
-.text_b956e9 {
-    color: var(--interactive-normal);
-    flex-grow: 1
 }
 
 .pricePerInterval_b39acb {
