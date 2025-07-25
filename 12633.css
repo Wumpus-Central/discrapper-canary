@@ -41039,13 +41039,10 @@ div.modalOverrideBody__34eac {
     }
 }
 
-.buttonWrapper__24af7 {
-    cursor: pointer
-}
-
 .button__24af7 {
     align-items: center;
     color: var(--interactive-normal);
+    cursor: pointer;
     display: flex;
     justify-content: center
 }
@@ -41056,6 +41053,11 @@ div.modalOverrideBody__34eac {
 
 .button__24af7:active {
     color: var(--interactive-active)
+}
+
+.button__24af7.disabled__24af7 {
+    cursor: not-allowed;
+    opacity: .5
 }
 
 .align-chat-input .button__24af7:not(.noHover__24af7) {
@@ -41255,7 +41257,8 @@ div.modalOverrideBody__34eac {
     z-index: 2
 }
 
-.disabled_aa63ab {
+.button_aa63ab>.disabled_aa63ab {
+    color: var(--interactive-muted);
     cursor: not-allowed
 }
 
@@ -41282,7 +41285,7 @@ div.modalOverrideBody__34eac {
     width: 20px !important
 }
 
-.innerButton_aa63ab {
+.button_aa63ab {
     box-sizing: border-box;
     margin-left: 0;
     margin-right: 0;
@@ -41291,13 +41294,7 @@ div.modalOverrideBody__34eac {
     padding: 4px
 }
 
-.buttonContainer_aa63ab button:disabled {
-    opacity: 1
-}
-
-.buttonChild_aa63ab,
-.button_aa63ab[disabled]>.innerButton_aa63ab>.buttonChild_aa63ab {
-    color: var(--interactive-muted);
+.buttonChild_aa63ab {
     transition: color .25s ease-in-out
 }
 
@@ -41327,7 +41324,7 @@ div.modalOverrideBody__34eac {
     color: var(--brand-600)
 }
 
-.reduce-motion .innerButton_aa63ab {
+.reduce-motion .button_aa63ab {
     transition: unset
 }
 
