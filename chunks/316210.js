@@ -4,35 +4,35 @@ var r = n(255367),
     a = n(481060),
     o = n(600164),
     i = n(63063),
-    l = n(497505),
-    c = n(918701),
+    l = n(509212),
+    c = n(497505),
     d = n(981631),
     m = n(388032),
     u = n(698657),
     x = n(708901);
 let f = (e) => {
     switch (e) {
-        case l.jn.QUEST_BAR:
-        case l.jn.QUEST_BAR_V2:
+        case c.jn.QUEST_BAR:
+        case c.jn.QUEST_BAR_V2:
             return {
                 location: !0,
                 age: !0,
                 activity: !0
             };
-        case l.jn.ACTIVITY_PANEL:
-        case l.jn.QUESTS_EMBED:
-        case l.jn.QUEST_LIVE_STREAM:
+        case c.jn.ACTIVITY_PANEL:
+        case c.jn.QUESTS_EMBED:
+        case c.jn.QUEST_LIVE_STREAM:
             return { activity: !0 };
         default:
             return;
     }
 };
 function g(e) {
-    let { transitionState: t, onClose: n, questContent: l, quest: g } = e,
-        p = f(l),
+    let { transitionState: t, onClose: n, questContent: c, quest: g } = e,
+        p = f(c),
         _ = s.useMemo(() => {
             var e;
-            return (0, c.Fs)({
+            return (0, l.Fs)({
                 isTargetedDisclosure: null != p,
                 gamePublisher: g.config.messages.gamePublisher,
                 gameTitle: g.config.messages.gameTitle,

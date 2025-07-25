@@ -10,13 +10,13 @@ var r = n(255367),
     d = n(70097),
     f = n(451478),
     _ = n(617136),
-    p = n(918701),
+    p = n(509212),
     h = n(475595),
     m = n(566078),
     g = n(18578),
     E = n(352084),
-    b = n(78826),
-    y = n(341907),
+    b = n(110560),
+    y = n(78826),
     O = n(388032),
     v = n(734506);
 let I = function (e) {
@@ -38,7 +38,7 @@ let I = function (e) {
                         questContentCTA: _.jZ.REWARD_LEARN_MORE,
                         sourceQuestContent: S
                     }),
-                    (0, y.navigateToQuestHome)({
+                    (0, b.navigateToQuestHome)({
                         fromContent: e.questContent,
                         questId: a.id
                     }),
@@ -60,7 +60,7 @@ let I = function (e) {
             }
         }, [I, P, R]),
         (t = M
-            ? (0, r.jsx)(b.Fl, {
+            ? (0, r.jsx)(y.Fl, {
                   id: 'QuestRewardTile_rewardTileNitro',
                   children: (e) =>
                       (0, r.jsx)(E.Z, {
@@ -88,7 +88,7 @@ let I = function (e) {
                     onLoadComplete: e.onLoadComplete
                 })
               : P.isAnimated
-                ? (0, r.jsx)(b.Fl, {
+                ? (0, r.jsx)(y.Fl, {
                       id: 'QuestRewardTile_rewardTileAnimated',
                       children: (t) => {
                           var n;
@@ -110,7 +110,7 @@ let I = function (e) {
                           });
                       }
                   })
-                : (0, r.jsx)(b.Fl, {
+                : (0, r.jsx)(y.Fl, {
                       id: 'QuestRewardTile_rewardTileStatic',
                       children: (t) =>
                           (0, r.jsx)('img', {

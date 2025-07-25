@@ -9,9 +9,9 @@ var a = t(255367),
     c = t(607070),
     u = t(530618),
     C = t(70097),
-    h = t(272008),
-    m = t(497505),
-    f = t(918701),
+    h = t(509212),
+    m = t(272008),
+    f = t(497505),
     g = t(475595),
     x = t(566078),
     j = t(602667),
@@ -23,7 +23,7 @@ var a = t(255367),
     R = t(502896);
 function A(e) {
     var n;
-    let { transitionState: t, onClose: o, quest: C, location: f, reward: g, sourceQuestContent: j } = e,
+    let { transitionState: t, onClose: o, quest: C, location: h, reward: g, sourceQuestContent: j } = e,
         v = r.useRef(null),
         [p, N] = r.useState(null),
         A = r.useRef(new i.qA()),
@@ -33,12 +33,12 @@ function A(e) {
     r.useEffect(() => {
         if (!S) {
             let e = x.r.build(C.config),
-                n = e.rewardPlatforms.length > 0 ? e.rewardPlatforms[0] : m.y$.CROSS_PLATFORM;
-            (0, h.QB)(C.id, n, f)
+                n = e.rewardPlatforms.length > 0 ? e.rewardPlatforms[0] : f.y$.CROSS_PLATFORM;
+            (0, m.QB)(C.id, n, h)
                 .then(() => q('claimed'))
                 .catch(() => q('error'));
         }
-    }, [C, f, S]);
+    }, [C, h, S]);
     let I = 'loading' === k;
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -62,7 +62,7 @@ function A(e) {
                           : (0, a.jsx)(M, {
                                 quest: C,
                                 rewardName: g.messages.name,
-                                location: f,
+                                location: h,
                                 useReducedMotion: y,
                                 onClose: o,
                                 sourceQuestContent: j
@@ -151,12 +151,12 @@ function M(e) {
 }
 function y(e) {
     let { quest: n, location: t, onClose: o, transitionState: s, sourceQuestContent: i } = e,
-        d = r.useMemo(() => (0, f.K)(n.config), [n]);
+        d = r.useMemo(() => (0, h.K)(n.config), [n]);
     return null == d
         ? null
         : (0, a.jsx)(j.A, {
               questOrQuests: n,
-              questContent: m.jn.REWARD_MODAL,
+              questContent: f.jn.REWARD_MODAL,
               sourceQuestContent: i,
               overrideVisibility: !0,
               children: () =>

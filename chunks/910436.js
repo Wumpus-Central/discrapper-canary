@@ -8,8 +8,8 @@ var i = n(287734),
     s = n(503438),
     c = n(802856),
     u = n(420660),
-    d = n(497505),
-    p = n(918701),
+    d = n(509212),
+    p = n(497505),
     h = n(23404),
     f = n(81063),
     g = n(761282),
@@ -174,7 +174,7 @@ function E(e) {
                             )
                         )
                       : (0, c.Z)(x) && P((0, r.jsx)(m.Z.XboxSection, { title: A.name }, 'xbox-'.concat(null != (T = x.session_id) ? T : t)));
-            null != E && null != A && (0, p._D)(x, E) && (null == E.userStatus || !(0, p.zE)(E.userStatus, d.jn.ACTIVITY_PANEL)) && P((0, r.jsx)(h.Z, { quest: E }, 'quest-'.concat(E.id, '-').concat(null != (j = x.session_id) ? j : t)));
+            null != E && null != A && (0, d._D)(x, E) && (null == E.userStatus || !(0, d.zE)(E.userStatus, p.jn.ACTIVITY_PANEL)) && P((0, r.jsx)(h.Z, { quest: E }, 'quest-'.concat(E.id, '-').concat(null != (j = x.session_id) ? j : t)));
         }),
         T.length > 0 ? (0, r.jsx)(m.Z.Body, { children: T }) : null
     );

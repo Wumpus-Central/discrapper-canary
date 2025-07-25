@@ -15,7 +15,5 @@ e.exports = {
     fullEmojisContainer: 'fullEmojisContainer__2485e',
     emoji: 'emoji__2485e',
     extraEmojiCount: 'extraEmojiCount__2485e',
-    viewServerButton: 'viewServerButton__2485e',
-    viewServerButtonText: 'viewServerButtonText__2485e',
-    roundedEdges: 'roundedEdges__2485e'
+    viewServerButtonContainer: 'viewServerButtonContainer__2485e'
 };

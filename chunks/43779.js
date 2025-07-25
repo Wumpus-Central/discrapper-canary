@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(393238),
     d = n(607070),
     p = n(960919),
-    m = n(113434),
-    f = n(918701),
+    m = n(509212),
+    f = n(113434),
     g = n(566078),
     x = n(472144),
     h = n(644646),
@@ -77,10 +77,10 @@ function w(e) {
         }),
         z = (null == (n = P.userStatus) ? void 0 : n.completedAt) != null,
         F = (null == (s = P.userStatus) ? void 0 : s.claimedAt) != null,
-        X = (0, f.xN)(P.config),
-        K = (0, f.LM)(P.config),
-        { completedRatio: Y, completedRatioDisplay: G } = (0, m.I)(P),
-        J = (0, m.Bd)(P, q),
+        X = (0, m.xN)(P.config),
+        K = (0, m.LM)(P.config),
+        { completedRatio: Y, completedRatioDisplay: G } = (0, f.I)(P),
+        J = (0, f.Bd)(P, q),
         $ = o.useMemo(
             () =>
                 F && X
@@ -168,7 +168,7 @@ function w(e) {
                                                   quest: P,
                                                   size: 76,
                                                   percentComplete: Y,
-                                                  percentCompleteText: N && !(0, f.zi)(P) ? G : void 0,
+                                                  percentCompleteText: N && !(0, m.zi)(P) ? G : void 0,
                                                   children: (0, r.jsx)('div', {
                                                       className: O.circularRewardTileWrapper,
                                                       children: (0, r.jsx)(h.Z, {

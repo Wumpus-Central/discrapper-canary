@@ -1,26 +1,26 @@
 n.d(t, { Z: () => f });
-var r = n(255367);
+var i = n(255367);
 n(73800);
-var i = n(442837),
+var r = n(442837),
     l = n(828214),
-    o = n(287734),
-    c = n(208049),
-    a = n(893663),
+    a = n(287734),
+    o = n(208049),
+    c = n(893663),
     s = n(496675),
     u = n(944486),
     d = n(981631),
     Z = n(388032);
 function f(e, t) {
-    let n = (0, i.e7)([s.Z], () => s.Z.can(d.Plq.CONNECT, e), [e]),
-        f = (0, i.e7)([u.Z], () => u.Z.getVoiceChannelId()),
-        b = (0, a.tT)(t),
-        j = f === e.id;
-    return e.isGuildVocal() && n && null != b && !j
-        ? (0, r.jsx)(l.sN, {
+    let n = (0, r.e7)([s.Z], () => s.Z.can(d.Plq.CONNECT, e), [e]),
+        f = (0, r.e7)([u.Z], () => u.Z.getVoiceChannelId()),
+        g = (0, c.tT)(t),
+        h = f === e.id;
+    return e.isGuildVocal() && n && null != g && !h
+        ? (0, i.jsx)(l.sN, {
               id: 'join-muted-custom-join-sound',
               label: Z.intl.string(Z.t.saLMWV),
               action: () => {
-                  ((0, c.Db)(e.id), o.default.selectVoiceChannel(e.id));
+                  ((0, o.Db)(e.id), a.default.selectVoiceChannel(e.id));
               }
           })
         : null;

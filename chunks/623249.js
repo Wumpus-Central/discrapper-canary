@@ -16,9 +16,9 @@ var r = n(255367),
     m = n(210887),
     f = n(617136),
     g = n(915750),
-    x = n(113434),
-    h = n(497505),
-    b = n(918701),
+    x = n(509212),
+    h = n(113434),
+    b = n(497505),
     j = n(475595),
     _ = n(667105),
     v = n(981631),
@@ -53,10 +53,10 @@ function E(e) {
 function w(e) {
     var t;
     let { questId: n, errorHints: s, transitionState: w, onClose: T, sourceQuestContent: P } = e,
-        A = (0, x.sf)(n);
+        A = (0, h.sf)(n);
     null == A && T();
     let [N, R] = (0, o.useState)(s),
-        B = (0, x.KX)(),
+        B = (0, h.KX)(),
         k = (0, f.O5)(),
         I = null == (t = (0, g.WD)()) ? void 0 : t.getId(),
         q = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
@@ -65,16 +65,16 @@ function w(e) {
             className: C.colorTransition
         }),
         Q = N.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
-        V = (0, b.Bz)(A),
+        V = (0, x.Bz)(A),
         L = (0, i.e7)([m.Z], () => m.Z.getState().theme),
         M = (0, l.wj)(L) ? v.BRd.DARK : v.BRd.LIGHT,
-        { startConsoleQuest: W, startingConsoleQuest: Z } = (0, x.GI)({
+        { startConsoleQuest: W, startingConsoleQuest: Z } = (0, h.GI)({
             questId: A.id,
             beforeRequest: () => {
                 (D.startAnimation(),
                     k({
                         questId: A.id,
-                        questContent: h.jn.CONNECTIONS_MODAL,
+                        questContent: b.jn.CONNECTIONS_MODAL,
                         questContentCTA: f.jZ.DEFIBRILLATOR,
                         sourceQuestContent: P
                     }));
@@ -225,10 +225,10 @@ function w(e) {
                         text: y.intl.string(y.t['qiS+xs']),
                         onClick: () => {
                             (T(),
-                                (0, b.V$)(
+                                (0, x.V$)(
                                     { quest: A },
                                     {
-                                        content: h.jn.CONNECTIONS_MODAL,
+                                        content: b.jn.CONNECTIONS_MODAL,
                                         ctaContent: f.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
                                         impressionId: I,
                                         sourceQuestContent: P

@@ -1,72 +1,72 @@
 n.d(t, { Z: () => u });
-var r = n(255367);
+var i = n(255367);
 n(73800);
-var i = n(442837),
+var r = n(442837),
     l = n(481060),
-    o = n(471253),
-    c = n(146085),
-    a = n(496675),
+    a = n(471253),
+    o = n(146085),
+    c = n(496675),
     s = n(388032);
 function u(e, t) {
-    let n = (0, i.e7)([a.Z], () => a.Z.can(c.yP, e), [e]);
+    let n = (0, r.e7)([c.Z], () => c.Z.can(o.yP, e), [e]);
     return null != t && n
-        ? (0, r.jsx)(l.sNh, {
+        ? (0, i.jsx)(l.sNh, {
               id: 'end-stage',
               label: s.intl.string(s.t.saZaRU),
               color: 'danger',
               action: function () {
                   (0, l.h7j)((t) => {
-                      var n, i;
-                      return (0, r.jsx)(
+                      var n, r;
+                      return (0, i.jsx)(
                           l.ConfirmModal,
                           ((n = (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
-                                      r = Object.keys(n);
+                                      i = Object.keys(n);
                                   ('function' == typeof Object.getOwnPropertySymbols &&
-                                      (r = r.concat(
+                                      (i = i.concat(
                                           Object.getOwnPropertySymbols(n).filter(function (e) {
                                               return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                           })
                                       )),
-                                      r.forEach(function (t) {
-                                          var r;
-                                          ((r = n[t]),
+                                      i.forEach(function (t) {
+                                          var i;
+                                          ((i = n[t]),
                                               t in e
                                                   ? Object.defineProperty(e, t, {
-                                                        value: r,
+                                                        value: i,
                                                         enumerable: !0,
                                                         configurable: !0,
                                                         writable: !0
                                                     })
-                                                  : (e[t] = r));
+                                                  : (e[t] = i));
                                       }));
                               }
                               return e;
                           })({}, t)),
-                          (i = i =
+                          (r = r =
                               {
                                   header: s.intl.string(s.t.gW9je3),
                                   confirmText: s.intl.string(s.t.saZaRU),
                                   cancelText: s.intl.string(s.t['ETE/oK']),
-                                  onConfirm: () => (0, o.NZ)(e),
-                                  children: (0, r.jsx)(l.Text, {
+                                  onConfirm: () => (0, a.NZ)(e),
+                                  children: (0, i.jsx)(l.Text, {
                                       variant: 'text-md/normal',
                                       color: 'header-secondary',
                                       children: s.intl.string(s.t.mT7jwM)
                                   })
                               }),
                           Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                              ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                               : (function (e, t) {
                                     var n = Object.keys(e);
                                     if (Object.getOwnPropertySymbols) {
-                                        var r = Object.getOwnPropertySymbols(e);
-                                        n.push.apply(n, r);
+                                        var i = Object.getOwnPropertySymbols(e);
+                                        n.push.apply(n, i);
                                     }
                                     return n;
-                                })(Object(i)).forEach(function (e) {
-                                    Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                                })(Object(r)).forEach(function (e) {
+                                    Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                                 }),
                           n)
                       );

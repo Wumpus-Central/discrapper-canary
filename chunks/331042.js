@@ -24,8 +24,8 @@ var r = n(255367),
     y = n(286961),
     O = n(300284),
     v = n(642619),
-    I = n(824393),
-    T = n(341907),
+    I = n(110560),
+    T = n(824393),
     S = n(350327),
     A = n(507808),
     N = n(594174),
@@ -59,7 +59,7 @@ var r = n(255367),
 let et = 880,
     en = (e) => (null != e ? $.intl.format($.t['4kp0AA'], { itemName: e }) : null),
     er = (e) => {
-        let { product: t, onClose: n, confettiTarget: a, confettiCanvas: o, hideConfetti: s = !1, analyticsLocations: l, overrideTitle: _, overrideDescription: g, selectedVariantIndex: E, shouldShowPromotionalExperience: O, itemConsumed: v = !0, purchaseType: T = q.o8.FIAT } = e,
+        let { product: t, onClose: n, confettiTarget: a, confettiCanvas: o, hideConfetti: s = !1, analyticsLocations: l, overrideTitle: _, overrideDescription: g, selectedVariantIndex: E, shouldShowPromotionalExperience: O, itemConsumed: v = !0, purchaseType: I = q.o8.FIAT } = e,
             S = (0, x.o)('CollectiblesCollectedModal'),
             A = (0, W.W)(t, E),
             C = (0, d.e7)([N.default], () => {
@@ -82,11 +82,11 @@ let et = 880,
             if (A.skuId === u.a.PREMIUM_TIER_2_3_DAY) {
                 let e = $.intl.formatToPlainString($.t['Cz1G9/'], { days: 3 });
                 return v
-                    ? (0, r.jsx)(I.j, {
+                    ? (0, r.jsx)(T.j, {
                           duration: e,
                           onClose: n
                       })
-                    : (0, r.jsx)(I.h, {
+                    : (0, r.jsx)(T.h, {
                           duration: e,
                           onClose: n
                       });
@@ -124,7 +124,7 @@ let et = 880,
                         overrideDescription: g,
                         selectedVariantIndex: E,
                         shouldShowPromotionalExperience: O,
-                        purchaseType: T
+                        purchaseType: I
                     }),
                     (0, r.jsx)(f.olH, {
                         onClick: n,
@@ -168,8 +168,8 @@ let et = 880,
                 onSuccess: o,
                 onError: o
             }),
-            { firstAvatarDecoration: I, firstProfileEffect: N } = (0, U.Rj)(n),
-            C = (0, L.x6)(n) ? null != I && null != N : null != I || null != N || n.type === c.Z.NAMEPLATE;
+            { firstAvatarDecoration: T, firstProfileEffect: N } = (0, U.Rj)(n),
+            C = (0, L.x6)(n) ? null != T && null != N : null != T || null != N || n.type === c.Z.NAMEPLATE;
         i.useEffect(() => {
             q.Vt.ORB_PROFILE_BADGE === n.skuId && (0, S.Ls)([(0, Y.X)()], ei);
         }, [n.skuId]);
@@ -235,7 +235,7 @@ let et = 880,
                                                   sectionType: X.jXE.ORBS_BADGE_REDEMPTION_MODAL,
                                                   ctaObject: X.qAy.CTA_TO_QUEST_HOME
                                               }),
-                                              (0, T.navigateToQuestHome)());
+                                              (0, I.navigateToQuestHome)());
                                       }
                                   })
                               ]

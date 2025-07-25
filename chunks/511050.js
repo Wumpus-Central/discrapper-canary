@@ -5,8 +5,8 @@ r.d(t, {
 var n = r(73800),
     a = r(442837),
     l = r(710845),
-    i = r(569984),
-    o = r(918701),
+    i = r(509212),
+    o = r(569984),
     u = r(751648),
     c = r(23547),
     s = r(822857),
@@ -17,11 +17,11 @@ let f = new l.Z('VirtualCurrency'),
         let { location: t } = e,
             { enabled: r } = (0, s.WX)({ location: t }),
             l = (0, a.e7)(
-                [i.Z],
+                [o.Z],
                 () => {
                     if (!r) return null;
-                    let e = i.Z.getQuest(b.V6);
-                    return null == e ? null : (0, o.LM)(e.config);
+                    let e = o.Z.getQuest(b.V6);
+                    return null == e ? null : (0, i.LM)(e.config);
                 },
                 [r]
             ),

@@ -6,8 +6,8 @@ var T,
     N = n(887003),
     C = n(442837),
     R = n(570140),
-    P = n(497505),
-    w = n(918701),
+    P = n(509212),
+    w = n(497505),
     D = n(184299),
     L = n(5881),
     x = n(46140);
@@ -126,7 +126,7 @@ function J(e) {
     let { quests: t, excludedQuests: n, questEnrollmentBlockedUntil: i } = e;
     ((c = Date.now()), (r = !1), (o = new Map()));
     let a = new Map();
-    for (let e of t) (o.set(e.id, e), a.set(e.id, (0, w.zi)(e)), e.targetedContent.includes(P.jn.QUEST_BAR) && (0, L.T)({ location: x.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')')));
+    for (let e of t) (o.set(e.id, e), a.set(e.id, (0, P.zi)(e)), e.targetedContent.includes(w.jn.QUEST_BAR) && (0, L.T)({ location: x.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')')));
     for (let e of ((v = a), (s = new Map()), n)) s.set(e.id, e);
     (ew(), (I = null != i ? new Date(i) : null));
 }
@@ -236,11 +236,11 @@ function ev(e) {
     let { user_status: t } = e,
         n = (0, L.T)({ location: x.dr.QUESTS_STORE });
     n.log('Received user status update for '.concat(t.quest_id), t);
-    let r = (0, w.U3)(t);
+    let r = (0, P.U3)(t);
     H(t.quest_id, { userStatus: r });
     let i = o.get(t.quest_id);
     if (null != i) {
-        let e = (0, w.zi)(i);
+        let e = (0, P.zi)(i);
         v.get(t.quest_id) !== e && (v = new Map(v).set(t.quest_id, e));
     }
     0 === Object.keys(r.progress).length && G.has(r.questId) && (n.log('Removing optimistic progress for '.concat(r.questId)), G.delete(r.questId));
@@ -250,7 +250,7 @@ function eI(e) {
     (H(t.questId, { userStatus: t }), null == t.claimedAt && (m = new Map(m)).delete(t.questId), null == t.enrolledAt && ((y = new Map(y)).delete(t.questId), D.ZP.getState().resetQuest(t.questId)));
     let n = o.get(t.questId);
     if (null != n) {
-        let e = (0, w.zi)(n);
+        let e = (0, P.zi)(n);
         v.get(t.questId) !== e && (v = new Map(v).set(t.questId, e));
     }
 }
@@ -291,7 +291,7 @@ function eP() {
     let e = !1,
         t = new Map(v);
     (o.forEach((n, r) => {
-        !0 !== t.get(r) && ((0, w.zi)(n) ? (t.set(r, !0), (e = !0)) : t.has(r) || t.set(r, !1));
+        !0 !== t.get(r) && ((0, P.zi)(n) ? (t.set(r, !0), (e = !0)) : t.has(r) || t.set(r, !1));
     }),
         e && ((v = t), eM.emitChange()));
 }

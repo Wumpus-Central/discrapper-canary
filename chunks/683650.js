@@ -11,8 +11,8 @@ var o = n(120356),
     l = n(481060),
     c = n(617136),
     u = n(497505),
-    d = n(266843),
-    m = n(341907),
+    d = n(110560),
+    m = n(266843),
     p = n(46140),
     h = n(388032),
     x = n(444879),
@@ -24,7 +24,7 @@ function j() {
             className: x.button,
             color: a.Tt.BRAND,
             onClick: () => {
-                (0, m.navigateToQuestHome)({ fromContent: u.jn.QUESTS_EMBED });
+                (0, d.navigateToQuestHome)({ fromContent: u.jn.QUESTS_EMBED });
             },
             children: h.intl.string(h.t.GURBQk)
         })
@@ -33,7 +33,7 @@ function j() {
 var C = (((r = {}).NOT_FOUND = 'not_found'), (r.MOBILE_ONLY = 'mobile_only'), r);
 function f(e) {
     let { questId: t, reason: n = 'not_found' } = e,
-        { containerRef: r, size: o } = (0, d.h)();
+        { containerRef: r, size: o } = (0, m.h)();
     return (
         (0, c.Zk)(p.V_.UNKNOWN_QUEST, t),
         (0, s.jsxs)('div', {

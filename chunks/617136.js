@@ -22,9 +22,9 @@ var r = n(73800),
     d = n(626135),
     f = n(358085),
     _ = n(915750),
-    p = n(569984),
-    h = n(497505),
-    m = n(918701),
+    p = n(509212),
+    h = n(569984),
+    m = n(497505),
     g = n(977156),
     E = n(566078),
     b = n(46140),
@@ -81,11 +81,11 @@ function T(e, t) {
         e
     );
 }
-let S = Object.keys(h.jn),
+let S = Object.keys(m.jn),
     A = new Set([y.rMx.QUEST_CONTENT_VIEWED, y.rMx.QUEST_CONTENT_CLICKED]);
 function N(e) {
     var t;
-    return null != (t = S.find((t) => h.jn[t] === e)) ? t : '';
+    return null != (t = S.find((t) => m.jn[t] === e)) ? t : '';
 }
 function C(e) {
     var t, n, r;
@@ -111,9 +111,9 @@ function P(e, t, n) {
 }
 function w(e) {
     let { questId: t, event: n, properties: r, trackGuildAndChannelMetadata: i = !1, shouldExtendSession: a = !1, sourceQuestContent: o } = e,
-        l = p.Z.quests.get(t);
+        l = h.Z.quests.get(t);
     if (null == l || ((0, g.X7)({ location: b.dr.QUEST_PREVIEW_TOOL }) && u.Z.getLayers().includes(y.S9g.USER_SETTINGS))) return;
-    let f = v({}, R(l, a), (0, m.qe)(t, o), r);
+    let f = v({}, R(l, a), (0, p.qe)(t, o), r);
     if ((c.default.isLoggingAnalyticsEvents && console.info('[Quest] AnalyticsUtils.track', n, f), l.preview)) return;
     let _ = A.has(n);
     if (i) return s.ZP.trackWithMetadata(n, f, _);
@@ -124,8 +124,8 @@ var D = (function (e) {
 })({});
 async function L(e) {
     let { questId: t, questContent: n, questContentCTA: r, questContentPosition: o, questContentRowIndex: s, impressionId: c, trackGuildAndChannelMetadata: u = !1, sourceQuestContent: d } = e,
-        _ = p.Z.getQuest(t),
-        h = await (0, a.S)();
+        _ = h.Z.getQuest(t),
+        m = await (0, a.S)();
     w({
         questId: t,
         event: y.rMx.QUEST_CONTENT_CLICKED,
@@ -133,11 +133,11 @@ async function L(e) {
             cta_name: r,
             quest_status: null != _ ? C(_) : null,
             impression_id: c,
-            android_advertising_id: null != h && (0, f.isAndroid)() ? h.advertisingId : null,
+            android_advertising_id: null != m && (0, f.isAndroid)() ? m.advertisingId : null,
             click_id: (0, i.Z)()
         }),
         trackGuildAndChannelMetadata: u,
-        shouldExtendSession: (0, m.VB)(n),
+        shouldExtendSession: (0, p.VB)(n),
         sourceQuestContent: d
     });
 }
@@ -173,7 +173,7 @@ function k() {
     return r.useCallback(
         (t) => {
             let { questId: n, questContent: r, questContentCTA: o, questContentPosition: s, questContentRowIndex: c, trackGuildAndChannelMetadata: u = !1, sourceQuestContent: d } = t,
-                _ = p.Z.getQuest(n);
+                _ = h.Z.getQuest(n);
             (0, a.S)().then((t) => {
                 e({
                     questId: n,
@@ -185,7 +185,7 @@ function k() {
                         android_advertising_id: null != t && (0, f.isAndroid)() ? t.advertisingId : null
                     }),
                     trackGuildAndChannelMetadata: u,
-                    shouldExtendSession: (0, m.VB)(r),
+                    shouldExtendSession: (0, p.VB)(r),
                     sourceQuestContent: d
                 });
             });

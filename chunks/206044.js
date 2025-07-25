@@ -13,9 +13,9 @@ var r = n(255367),
     h = n(448986),
     x = n(572004),
     g = n(617136),
-    j = n(113434),
-    C = n(497505),
-    f = n(918701),
+    j = n(509212),
+    C = n(113434),
+    f = n(497505),
     b = n(566078),
     v = n(685613),
     y = n(611855),
@@ -101,7 +101,7 @@ let I = (0, a.animated)(d.CJ0),
                 e.stop();
             };
         }, []);
-        let j = () => {
+        let C = () => {
             (h({
                 questId: t.id,
                 questContent: n,
@@ -109,7 +109,7 @@ let I = (0, a.animated)(d.CJ0),
                 questContentPosition: o,
                 sourceQuestContent: i
             }),
-                (0, x.JG)((0, f.Rs)(t.id), () => {
+                (0, x.JG)((0, j.Rs)(t.id), () => {
                     (m(!0), p.current.start(1000, () => m(!1)));
                 }));
         };
@@ -125,7 +125,7 @@ let I = (0, a.animated)(d.CJ0),
                         className: w.shareButton,
                         color: u.zx.Colors.PRIMARY,
                         size: u.zx.Sizes.SMALL,
-                        onClick: j,
+                        onClick: C,
                         children: P.intl.string(P.t['5Z6rz8'])
                     })
                 )
@@ -133,7 +133,7 @@ let I = (0, a.animated)(d.CJ0),
     },
     M = (e) => {
         var t;
-        let { isQuestExpired: n, quest: o, location: c, size: u, expansionSpring: x, isAnimating: f, isExpanded: M, contentPosition: A, toggleExpanded: Q, sourceQuestContent: Z } = e,
+        let { isQuestExpired: n, quest: o, location: c, size: u, expansionSpring: x, isAnimating: j, isExpanded: M, contentPosition: A, toggleExpanded: Q, sourceQuestContent: Z } = e,
             { ref: L, height: k } = (0, m.ZP)(),
             [B, U] = s.useState(null),
             [G, W] = s.useState(null),
@@ -143,12 +143,12 @@ let I = (0, a.animated)(d.CJ0),
             }),
             z = (0, p.y)(F),
             X = (0, E.uq)(c),
-            H = c === C.jn.QUESTS_EMBED,
-            Y = (0, j.t5)(o, q.dr.QUESTS_CARD, c, Z),
+            H = c === f.jn.QUESTS_EMBED,
+            Y = (0, C.t5)(o, q.dr.QUESTS_CARD, c, Z),
             V = (null == (t = o.userStatus) ? void 0 : t.completedAt) != null,
             J = (0, g.O5)(),
-            K = (0, j.B6)(o.config.expiresAt),
-            $ = (0, j.B6)(b.r.build(o.config).rewardsExpireAt),
+            K = (0, C.B6)(o.config.expiresAt),
+            $ = (0, C.B6)(b.r.build(o.config).rewardsExpireAt),
             ee = s.useMemo(() => null != o.config.cosponsorMetadata, [o]),
             et = (e) => {
                 (e.stopPropagation(),
@@ -211,9 +211,9 @@ let I = (0, a.animated)(d.CJ0),
                                                 range: [0, 1],
                                                 output: [1, 0]
                                             }),
-                                            visibility: f || !M ? 'inherit' : 'hidden'
+                                            visibility: j || !M ? 'inherit' : 'hidden'
                                         },
-                                        'aria-hidden': !f && M,
+                                        'aria-hidden': !j && M,
                                         children: (0, r.jsxs)(d.kL8, {
                                             'aria-label': P.intl.string(P.t.dcl9MT),
                                             onClick: et,
@@ -258,9 +258,9 @@ let I = (0, a.animated)(d.CJ0),
                                             range: [0, 1],
                                             output: [0, 1]
                                         }),
-                                        visibility: f || M ? 'inherit' : 'hidden'
+                                        visibility: j || M ? 'inherit' : 'hidden'
                                     },
-                                    'aria-hidden': !f && !M,
+                                    'aria-hidden': !j && !M,
                                     children: [
                                         (0, r.jsxs)('div', {
                                             className: w.headerExpandedWrapper,
@@ -336,9 +336,9 @@ let I = (0, a.animated)(d.CJ0),
                                         (0, r.jsx)(a.animated.div, {
                                             style: {
                                                 opacity: x,
-                                                visibility: f || M ? 'inherit' : 'hidden'
+                                                visibility: j || M ? 'inherit' : 'hidden'
                                             },
-                                            'aria-hidden': !f && !M,
+                                            'aria-hidden': !j && !M,
                                             children: (0, r.jsx)(
                                                 d.P3F,
                                                 _(R({}, e), {

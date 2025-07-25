@@ -11,9 +11,9 @@ var r = n(255367),
     p = n(617136),
     m = n(915750),
     f = n(111382),
-    g = n(113434),
-    x = n(497505),
-    h = n(918701),
+    g = n(509212),
+    x = n(113434),
+    h = n(497505),
     b = n(667105),
     j = n(585857),
     _ = n(795057),
@@ -30,7 +30,7 @@ function C(e) {
 function O(e) {
     let { quest: t, useReducedMotion: n } = e,
         s = (0, f.n)(),
-        l = (0, b.k3)(t.id, x.jn.QUEST_BAR_V2, x.jn.QUEST_BAR_V2),
+        l = (0, b.k3)(t.id, h.jn.QUEST_BAR_V2, h.jn.QUEST_BAR_V2),
         u = (0, b.g2)({ useReducedMotion: n }),
         j = (0, p.O5)(),
         _ = (0, m.aM)(),
@@ -38,14 +38,14 @@ function O(e) {
             errorHints: O,
             startingConsoleQuest: E,
             startConsoleQuest: w
-        } = (0, g.GI)({
+        } = (0, x.GI)({
             questId: t.id,
             beforeRequest: () => {
                 (j({
                     questId: t.id,
-                    questContent: x.jn.QUEST_BAR_V2,
+                    questContent: h.jn.QUEST_BAR_V2,
                     questContentCTA: p.jZ.DEFIBRILLATOR,
-                    sourceQuestContent: x.jn.QUEST_BAR_V2
+                    sourceQuestContent: h.jn.QUEST_BAR_V2
                 }),
                     u.startAnimation());
             },
@@ -62,24 +62,24 @@ function O(e) {
                               children: O.map((e, n) => {
                                   if (e.type === i.K.EXPIRED_CREDENTIAL && s) {
                                       let o = d.Z.getAccount(e.connected_account_id, e.connected_account_type),
-                                          s = (0, h.C9)(e),
-                                          a = (0, h._j)(e);
+                                          s = (0, g.C9)(e),
+                                          a = (0, g._j)(e);
                                       return (0, r.jsx)(
                                           C,
                                           {
                                               children: v.intl.format(s, {
                                                   account_name: null == o ? void 0 : o.name,
                                                   onClick: () => {
-                                                      (0, h.fY)(
+                                                      (0, g.fY)(
                                                           {
                                                               quest: t,
                                                               platformType: a
                                                           },
                                                           {
-                                                              content: x.jn.QUEST_BAR,
+                                                              content: h.jn.QUEST_BAR,
                                                               ctaContent: p.jZ.DEFIBRILLATOR_RECONNECT_CONSOLE,
                                                               impressionId: _,
-                                                              sourceQuestContent: x.jn.QUEST_BAR_V2
+                                                              sourceQuestContent: h.jn.QUEST_BAR_V2
                                                           }
                                                       );
                                                   }
@@ -134,8 +134,8 @@ function O(e) {
 let E = function (e) {
     let { quest: t, taskDetails: n } = e,
         s = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-        a = (0, g.z6)(),
-        i = o.useMemo(() => (0, h.B3)(t).filter((e) => a.xboxAndPlaystationAccounts.find((t) => t.type === e)), [a.xboxAndPlaystationAccounts, t]),
+        a = (0, x.z6)(),
+        i = o.useMemo(() => (0, g.B3)(t).filter((e) => a.xboxAndPlaystationAccounts.find((t) => t.type === e)), [a.xboxAndPlaystationAccounts, t]),
         {
             steps: c,
             hasConnectedAccounts: d,
@@ -144,7 +144,7 @@ let E = function (e) {
         } = o.useMemo(() => {
             var e;
             let o = i.length > 0,
-                s = o && (0, h.Bz)(t),
+                s = o && (0, g.Bz)(t),
                 l = t.config.messages.gameTitle,
                 c = (null == (e = t.userStatus) ? void 0 : e.completedAt) != null;
             return {
@@ -182,7 +182,7 @@ let E = function (e) {
                                 (n = n =
                                     {
                                         quest: t,
-                                        sourceQuestContent: x.jn.QUEST_BAR_V2
+                                        sourceQuestContent: h.jn.QUEST_BAR_V2
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))

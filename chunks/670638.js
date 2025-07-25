@@ -10,12 +10,12 @@ var r = n(255367),
     d = n(63063),
     m = n(617136),
     p = n(915750),
-    h = n(272008),
-    x = n(113434),
-    g = n(569984),
-    j = n(497505),
-    C = n(918701),
-    f = n(341907),
+    h = n(509212),
+    x = n(272008),
+    g = n(113434),
+    j = n(569984),
+    C = n(497505),
+    f = n(110560),
     b = n(46140),
     v = n(981631),
     y = n(231338),
@@ -65,16 +65,16 @@ function T(e, t) {
 }
 function E(e) {
     var t;
-    let n = (0, o.e7)([g.Z], () => g.Z.questDeliveryOverride, []),
-        c = (0, C.GN)(e.questContent),
-        N = [j.jn.QUEST_BAR_V2, j.jn.QUEST_BAR].includes(e.questContent),
+    let n = (0, o.e7)([j.Z], () => j.Z.questDeliveryOverride, []),
+        c = (0, h.GN)(e.questContent),
+        N = [C.jn.QUEST_BAR_V2, C.jn.QUEST_BAR].includes(e.questContent),
         T = (0, m.O5)(),
         E = (0, p.aM)(),
-        q = (0, x.Yj)(e.quest),
-        { handleComplete: S, handleProgress: P, handleResetDismissibilityClick: w, handleResetStatusClick: R, handleOverrideDeliveryClick: _ } = (0, x.kJ)(e.quest.id),
+        q = (0, g.Yj)(e.quest),
+        { handleComplete: S, handleProgress: P, handleResetDismissibilityClick: w, handleResetStatusClick: R, handleOverrideDeliveryClick: _ } = (0, g.kJ)(e.quest.id),
         I = s.useCallback(() => {
             if (e.quest.id === b.V6) return void window.open(d.Z.getArticleURL(v.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
-            (0, C.nc)(e.quest, {
+            (0, h.nc)(e.quest, {
                 content: e.questContent,
                 ctaContent: m.jZ.CONTEXT_MENU_OPEN_GAME_LINK,
                 impressionId: E,
@@ -82,7 +82,7 @@ function E(e) {
             });
         }, [E, e.quest, e.questContent, e.sourceQuestContent]),
         D = s.useCallback(() => {
-            ((0, C.f2)(e.quest.id, {
+            ((0, h.f2)(e.quest.id, {
                 content: e.questContent,
                 position: e.questContentPosition,
                 ctaContent: m.jZ.CONTEXT_MENU_COPY_LINK,
@@ -92,7 +92,7 @@ function E(e) {
                 (0, i.showToast)((0, i.createToast)(O.intl.string(O.t['+5kSoa']), i.ToastType.SUCCESS)));
         }, [E, e.quest.id, e.questContent, e.questContentPosition, e.sourceQuestContent]),
         M = (e) => (0, i.showToast)((0, i.createToast)(new l.Z(e, e.status).message, i.ToastType.FAILURE)),
-        A = () => (0, h.is)(e.quest.id).catch(M),
+        A = () => (0, x.is)(e.quest.id).catch(M),
         Q = s.useMemo(
             () =>
                 (0, r.jsx)(i.S89, {
@@ -184,7 +184,7 @@ function E(e) {
                                         questContentCTA: m.jZ.CONTEXT_MENU_HIDE_CONTENT,
                                         sourceQuestContent: e.sourceQuestContent
                                     }),
-                                        (0, C.GN)(e.questContent) && ((0, h.gl)(e.quest.id, e.questContent), N && (0, f.maybeShowSurveyForQuest)(e.quest)));
+                                        (0, h.GN)(e.questContent) && ((0, x.gl)(e.quest.id, e.questContent), N && (0, f.maybeShowSurveyForQuest)(e.quest)));
                                 },
                                 subtext: O.intl.string(O.t['1u3YPD'])
                             })
@@ -223,7 +223,7 @@ function E(e) {
                                 label: 'Complete Quest',
                                 action: S
                             }),
-                            (0, C.$J)(e.quest) &&
+                            (0, h.$J)(e.quest) &&
                                 (0, r.jsxs)(i.sNh, {
                                     id: 'console',
                                     label: 'Console Heartbeat',
@@ -231,12 +231,12 @@ function E(e) {
                                         (0, r.jsx)(i.sNh, {
                                             disabled: !0,
                                             id: 'status',
-                                            label: 'Status: '.concat((0, C.Bz)(e.quest) ? 'alive' : 'dead')
+                                            label: 'Status: '.concat((0, h.Bz)(e.quest) ? 'alive' : 'dead')
                                         }),
                                         (0, r.jsx)(i.sNh, {
                                             id: 'start',
                                             label: 'Start heartbeat (cheatmode)',
-                                            action: () => (0, h.CS)(e.quest.id, !0).catch(M)
+                                            action: () => (0, x.CS)(e.quest.id, !0).catch(M)
                                         }),
                                         (0, r.jsx)(i.sNh, {
                                             id: 'stop',

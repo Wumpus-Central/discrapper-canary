@@ -13,10 +13,10 @@ var r = n(442837),
     p = n(221292),
     m = n(687158),
     b = n(316027),
-    x = n(502762),
-    _ = n(848780),
-    y = n(907179),
-    h = n(228168),
+    _ = n(502762),
+    x = n(848780),
+    h = n(907179),
+    y = n(228168),
     g = n(981631),
     j = n(388032),
     I = n(247787);
@@ -85,10 +85,10 @@ function O(e) {
                 className: I.root,
                 'aria-label': k,
                 parentComponent: 'RestrictedUserProfileModalV2',
-                children: (0, o.jsxs)(x.Z, {
+                children: (0, o.jsxs)(_.Z, {
                     user: t,
                     displayProfile: D,
-                    themeType: h.lY.MODAL_V2,
+                    themeType: y.lY.MODAL_V2,
                     children: [
                         (0, o.jsx)('div', { className: I.background }),
                         (0, o.jsxs)('div', {
@@ -133,7 +133,7 @@ function O(e) {
                                 (0, o.jsxs)(c.Kqy, {
                                     align: 'center',
                                     children: [
-                                        (0, o.jsx)(y.Z, {
+                                        (0, o.jsx)(h.Z, {
                                             size: i.Ph.MEDIUM,
                                             isBlocked: S,
                                             onClick: () => {
@@ -149,7 +149,7 @@ function O(e) {
                                                     ));
                                             }
                                         }),
-                                        (0, o.jsx)(_.Z, {
+                                        (0, o.jsx)(x.Z, {
                                             userId: t.id,
                                             onClick: () => {
                                                 (C(),

@@ -1,10 +1,10 @@
-(n.d(t, { Z: () => c }), n(255367), n(73800));
-var r = n(442837);
+(n.d(t, { Z: () => o }), n(255367), n(73800));
+var i = n(442837);
 n(481060);
-var i = n(615287),
+var r = n(615287),
     l = n(32300),
-    o = n(371651);
-function c() {
-    return ((0, l.XE)('channel_context_menu'), (0, r.e7)([o.default], () => o.default.getForcedRenderMode()) === i.R5.OUT_OF_PROCESS_V3 || i.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION, null);
+    a = n(371651);
+function o() {
+    return ((0, l.XE)('channel_context_menu'), (0, i.e7)([a.default], () => a.default.getForcedRenderMode()) === r.R5.OUT_OF_PROCESS_V3 || r.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION, null);
 }
 n(398269);

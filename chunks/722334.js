@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(626135),
     u = n(617136),
     d = n(497505),
-    p = n(266843),
-    m = n(341907),
+    p = n(110560),
+    m = n(266843),
     f = n(46140),
     g = n(981631),
     _ = n(388032),
@@ -24,7 +24,7 @@ function E(e) {
             className: h.button,
             color: o.Tt.BRAND,
             onClick: () => {
-                ((0, m.navigateToQuestHome)({ fromContent: d.jn.EXCLUDED_QUEST_EMBED }),
+                ((0, p.navigateToQuestHome)({ fromContent: d.jn.EXCLUDED_QUEST_EMBED }),
                     c.default.track(
                         g.rMx.QUEST_CONTENT_CLICKED,
                         (function (e) {
@@ -68,7 +68,7 @@ function E(e) {
 }
 function C(e) {
     let { questId: t } = e,
-        { containerRef: n, size: i } = (0, p.h)();
+        { containerRef: n, size: i } = (0, m.h)();
     return (
         (0, u.Zk)(f.V_.EXCLUDED_QUEST, t),
         (0, r.jsxs)('div', {

@@ -349,6 +349,10 @@ let V = {
     [m.rMx.MODERATOR_QUEUE_ACTION]: {
         throttlePeriod: R,
         throttleKeys: (e) => [e.guild_id]
+    },
+    [m.rMx.NOTIFICATION_PERMISSION_STATUS]: {
+        throttlePeriod: 12 * x,
+        throttleKeys: (e) => [e.os_enabled, e.notification_authorization_status, e.foreground_app_enabled, e.background_app_enabled]
     }
 };
 function F(e) {

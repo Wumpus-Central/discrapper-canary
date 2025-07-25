@@ -163,8 +163,8 @@ class ev extends d.Z {
         (null != i && this._cleanupSocket(), (i = this._socket = new X.Z(this.endpoint, this.context)).on(X.V.Connecting, this._handleConnecting.bind(this, i)), i.on(X.V.Connect, this._handleConnect.bind(this, i)), i.on(X.V.Disconnect, this._handleDisconnect.bind(this, i)), i.on(X.V.Resuming, this._handleResuming.bind(this, i)), i.on(X.V.Ready, this._handleReady.bind(this, i)), i.on(X.V.Speaking, this._handleSpeaking.bind(this, i)), i.on(X.V.Video, this._handleVideo.bind(this, i)), i.on(X.V.Ping, this._handleControlPing.bind(this)), i.on(X.V.ClientDisconnect, this._handleClientDisconnect.bind(this)), i.on(X.V.ClientConnect, this._handleClientConnect.bind(this)), i.on(X.V.Codecs, this._handleCodecs.bind(this)), i.on(X.V.MediaSessionId, this._handleMediaSessionId.bind(this)), i.on(X.V.MediaSinkWants, this._handleMediaSinkWants.bind(this)), i.on(X.V.VoiceBackendVersion, this._handleCodeVersion.bind(this)), i.on(X.V.KeyframeInterval, this._handleKeyframeInterval.bind(this)), i.on(X.V.Flags, this.handleFlags.bind(this)), i.on(X.V.Platform, this.handlePlatform.bind(this)), i.on(X.V.BandwidthEstimationExperiment, this._handleBandwidthEstimationExperiment.bind(this)), i.on(X.V.SecureFramesInit, this._handleSecureFramesInit.bind(this)), i.on(X.V.SecureFramesPrepareTransition, this._handleSecureFramesPrepareTransition.bind(this)), i.on(X.V.SecureFramesPrepareEpoch, this._handleSecureFramesPrepareEpoch.bind(this)), i.on(X.V.SecureFramesExecuteTransition, this._handleSecureFramesExecuteTransition.bind(this)), i.on(X.V.MLSExternalSenderPackage, this._handleMLSExternalSenderPackage.bind(this)), i.on(X.V.MLSProposals, this._handleMLSProposals.bind(this, i)), i.on(X.V.MLSPrepareCommitTransition, this._handleMLSPrepareCommitTransition.bind(this)), i.on(X.V.MLSWelcome, this._handleMLSWelcome.bind(this)), (this._connectStartTime = (0, _.zO)()), this._connectCount++, (this._connecting = !0), null != i && this._socket === i && (this._trackVoiceConnectionConnecting(), (this._encountered_socket_failure = !1), i.connect()));
     }
     destroy() {
-        var e, t, n, r, i, a, o;
-        if ((this.logger.info('Destroy RTCConnection'), F.Z.removeOnlineCallback(this._handleNetworkOnline), F.Z.removeOfflineCallback(this._handleNetworkOffline), (0, Z.isDesktop)() && (null == (a = (o = this).powerMonitorListener) || a.call(o)), ea.w.off(ea.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged), ea.w.off(ea.e.WindowVisibilityChanged, this.windowVisibilityChanged), this._backoff.cancel(), this._cleanupSocket(), null == (e = this._voiceQuality) || e.stop(), (this._voiceQuality = null), clearInterval(this._voiceQualityPeriodicStatsInterval), (this._voiceQualityPeriodicStatsInterval = null), (this._voiceQualityPeriodicStatsSequenceId = 0), null == (t = this._systemResponsiveness) || t.stop(), (this._systemResponsiveness = null), (this._noiseCancellationError = 0), null == (n = this._voiceDuration) || n.stop(), (this._voiceDuration = null), null == (r = this._videoQuality) || r.stop(), (this._videoQuality = null), (this._videoHealthManager = null), (this._secureFramesState = null), null == (i = this._localMediaSinkWantsManager) || i.reset(), null != this._connection)) {
+        var e, t, n, r, i, a, o, s;
+        if ((this.logger.info('Destroy RTCConnection'), F.Z.removeOnlineCallback(this._handleNetworkOnline), F.Z.removeOfflineCallback(this._handleNetworkOffline), (0, Z.isDesktop)() && (null == (o = (s = this).powerMonitorListener) || o.call(s)), ea.w.off(ea.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged), ea.w.off(ea.e.WindowVisibilityChanged, this.windowVisibilityChanged), this._backoff.cancel(), this._cleanupSocket(), null == (e = this._voiceQuality) || e.stop(), null == (t = this._voiceQuality) || t.removeAllListeners(), (this._voiceQuality = null), clearInterval(this._voiceQualityPeriodicStatsInterval), (this._voiceQualityPeriodicStatsInterval = null), (this._voiceQualityPeriodicStatsSequenceId = 0), null == (n = this._systemResponsiveness) || n.stop(), (this._systemResponsiveness = null), (this._noiseCancellationError = 0), null == (r = this._voiceDuration) || r.stop(), (this._voiceDuration = null), null == (i = this._videoQuality) || i.stop(), (this._videoQuality = null), (this._videoHealthManager = null), (this._secureFramesState = null), null == (a = this._localMediaSinkWantsManager) || a.reset(), null != this._connection)) {
             let e = this._connection;
             ((this._connection = null), e.destroy());
         }
@@ -614,9 +614,9 @@ class ev extends d.Z {
                 )
             );
         (d.setUseElectronVideo(l.supports(es.AN.ELECTRON_VIDEO)), x.Z.supports(es.AN.IMAGE_QUALITY_MEASUREMENT) && d.setVideoQualityMeasurement('imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec'));
-        let p = ['unk'];
-        (this.context === es.Yn.STREAM && (p.push('nvRelaxRc=250'), p.push('nvNewPresets')),
-            d.setVideoEncoderExperiments(p.join(',')),
+        let h = ['unk'];
+        (this.context === es.Yn.STREAM && (h.push('nvRelaxRc=250'), h.push('nvNewPresets')),
+            d.setVideoEncoderExperiments(h.join(',')),
             d.on(f.Sh.Speaking, (e, t, n) => {
                 (this.userId === e && this.sendSpeaking(t, n), this.emit(z.z.Speaking, eO(e), t));
             }),
@@ -650,7 +650,27 @@ class ev extends d.Z {
             }),
             d.on(f.Sh.Connected, (r, i) => {
                 if ((this.logger.info('RTC connected to media server: '.concat(t, ':').concat(n)), e !== this._socket)) return void this.logger.warn('Socket mismatch, disconnecting');
-                switch (((this._voiceQuality = new ei.Z(d)), this._voiceQuality.start(), (this._voiceQualityPeriodicStatsSequenceId = 0), (this._voiceQualityPeriodicStatsInterval = setInterval(this._handleVoiceQualityPeriodicsStats, 300000)), (this._systemResponsiveness = new ee.Z(d)), this._systemResponsiveness.start(), (this._systemResources = new $.Z()), this._systemResources.setLastBattery(), (this._noiseCancellationError = 0), (this._voiceDuration = new er.Z(this.userId, d)), this._voiceDuration.start(d.getSelfMute(), d.getVoiceFilterId()), (this.protocol = r), r)) {
+                switch (
+                    ((this._voiceQuality = new ei.Z(d)),
+                    this._voiceQuality.start(),
+                    this._voiceQuality.on(ei.B.InputDeviceSampleRateChanged, (e) => {
+                        p.Z.dispatch({
+                            type: 'AUDIO_INPUT_DEVICE_SAMPLE_RATE_CHANGED',
+                            sampleRate: e
+                        });
+                    }),
+                    (this._voiceQualityPeriodicStatsSequenceId = 0),
+                    (this._voiceQualityPeriodicStatsInterval = setInterval(this._handleVoiceQualityPeriodicsStats, 300000)),
+                    (this._systemResponsiveness = new ee.Z(d)),
+                    this._systemResponsiveness.start(),
+                    (this._systemResources = new $.Z()),
+                    this._systemResources.setLastBattery(),
+                    (this._noiseCancellationError = 0),
+                    (this._voiceDuration = new er.Z(this.userId, d)),
+                    this._voiceDuration.start(d.getSelfMute(), d.getVoiceFilterId()),
+                    (this.protocol = r),
+                    r)
+                ) {
                     case 'udp':
                         (this.logger.info('Sending UDP info to RTC server.', i, this._selectedExperiments),
                             e.once(X.V.Encryption, (e, t) => {
@@ -1290,6 +1310,10 @@ class ev extends d.Z {
         var e;
         let t = x.Z.getVideoDeviceId();
         return null == (e = x.Z.getVideoDevices()[t]) ? void 0 : e.name;
+    }
+    getInputDeviceSampleRate() {
+        var e, t;
+        return null != (t = null == (e = this._voiceQuality) ? void 0 : e.getAudioDeviceStats().input_device_session_sample_rate) ? t : null;
     }
     getGoLiveSource() {
         return x.Z.getGoLiveSource();

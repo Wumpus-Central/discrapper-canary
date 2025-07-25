@@ -21,7 +21,7 @@ var r = n(873546),
     v = n(754688),
     I = n(336197),
     T = n(977156),
-    S = n(341907),
+    S = n(110560),
     A = n(540709),
     N = n(881706),
     C = n(701190),
@@ -177,7 +177,7 @@ function B(e) {
         return (e) => (
             null == e || e.preventDefault(),
             Promise.resolve()
-                .then(n.bind(n, 341907))
+                .then(n.bind(n, 110560))
                 .then((e) => {
                     let { navigateToQuestHome: t } = e;
                     t({

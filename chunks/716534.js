@@ -176,7 +176,7 @@ function Q(e) {
         ti = i.useMemo(() => (em && null != eH ? eH : eN && null != eW ? eW : void 0), [eN, em, eH, eW]);
     if (
         (i.useEffect(() => {
-            eD && null != eX ? eS(eX) : null != eH && eS(eH);
+            eD ? eS(eX) : eS(eH);
         }, [eD, eS, eX, eH]),
         null != e$)
     );

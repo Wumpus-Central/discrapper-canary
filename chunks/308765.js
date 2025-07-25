@@ -472,6 +472,11 @@ let i = {
         inlineRequire: () => n(838611).Z,
         neverLoadBeforeConnectionOpen: !0,
         hasStoreChangeListeners: !0
+    },
+    KrispBVCDeviceManager: {
+        actions: ['AUDIO_SET_INPUT_DEVICE', 'MEDIA_ENGINE_DEVICES', 'RTC_CONNECTION_STATE', 'AUDIO_INPUT_DEVICE_SAMPLE_RATE_CHANGED'],
+        inlineRequire: () => n(550856).Z,
+        neverLoadBeforeConnectionOpen: !0
     }
 };
 (0, r.j)(i);

@@ -3011,6 +3011,7 @@ var nm = (function (e) {
             (e.CLIENT_AD_HEARTBEAT = 'client_ad_heartbeat'),
             (e.ATT_ELIGIBILITY_CHECKED = 'att_eligibility_checked'),
             (e.ATT_APP_STATE_CHECKED = 'att_app_state_checked'),
+            (e.ATT_APP_STATE_CHECKED_OVERRIDE = 'att_app_state_checked_override'),
             (e.ATT_PROMPT_ERROR = 'att_prompt_error'),
             (e.HEADLESS_TASK_INVOKED = 'headless_task_invoked'),
             (e.HEADLESS_TASK_COMPLETED = 'headless_task_completed'),

@@ -96,7 +96,7 @@ function x(e) {
                   onPaymentSourceChange: (e) => ea(null != e ? e.id : null),
                   handlePaymentSourceAdd: () => x(E.h8.ADD_PAYMENT_STEPS)
               })))
-            : ((eK = eE ? null == eh : null != eD && ef === P.GZ.SUBSCRIPTION && ej && !eD.canRedeemTrial()),
+            : ((eK = null == eh || (!eE && null != eD && ef === P.GZ.SUBSCRIPTION && ej && !eD.canRedeemTrial())),
               null == W || em || eE
                   ? (o()(null != en, 'Expected plan to be selected'),
                     (a = (0, r.jsx)(f.Z, {

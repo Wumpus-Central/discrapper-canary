@@ -11,10 +11,10 @@ var r = n(255367),
     m = n(210887),
     f = n(617136),
     p = n(915750),
-    v = n(113434),
-    g = n(569984),
-    b = n(497505),
-    E = n(918701),
+    v = n(509212),
+    g = n(113434),
+    b = n(569984),
+    E = n(497505),
     O = n(475595),
     C = n(566078),
     h = n(164495),
@@ -74,22 +74,22 @@ function A(e, t) {
 }
 function L(e) {
     var t, n, o;
-    let { transitionState: g, onClose: j, quest: T, autoplay: L, videoSessionId: R, impressionRef: M, parentModalOpenStartClockTime: V, sourceQuestContent: B } = e,
-        F = (0, E.il)(T),
-        Z = (0, v.tP)(T),
+    let { transitionState: b, onClose: j, quest: T, autoplay: L, videoSessionId: R, impressionRef: M, parentModalOpenStartClockTime: V, sourceQuestContent: B } = e,
+        F = (0, v.il)(T),
+        Z = (0, g.tP)(T),
         q = (0, a.e7)([m.Z], () => m.Z.getState().theme),
         U = (0, s.wj)(q) ? N.BRd.DARK : N.BRd.LIGHT,
         Q = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
         G = (0, p.aM)(),
         [Y, z] = l.useState(F.progressSeconds),
         [H, K] = l.useState(!1),
-        { completedRatio: X, completedRatioDisplay: W } = (0, v.I)(T),
+        { completedRatio: X, completedRatioDisplay: W } = (0, g.I)(T),
         [$, J] = (0, _.G6)(k.intl.string(k.t.RDE0SU), k.intl.string(k.t['+5kSoa']), 1700),
-        ee = null != (0, E.LM)(T.config),
+        ee = null != (0, v.LM)(T.config),
         et = (null == (t = T.userStatus) ? void 0 : t.claimedAt) != null ? (ee ? k.intl.string(k.t.WYchdX) : k.intl.string(k.t.vTgCW1)) : k.intl.string(k.t.cfY4PD),
         en = l.useCallback(() => {
-            ((0, E.f2)(T.id, {
-                content: b.jn.VIDEO_MODAL,
+            ((0, v.f2)(T.id, {
+                content: E.jn.VIDEO_MODAL,
                 ctaContent: f.jZ.COPY_QUEST_URL,
                 impressionId: G,
                 sourceQuestContent: B
@@ -101,8 +101,8 @@ function L(e) {
                 let e = C.r.build(T.config).application.link;
                 (await (0, _.qP)(e)) && j();
             }
-            (0, E.nc)(T, {
-                content: b.jn.VIDEO_MODAL,
+            (0, v.nc)(T, {
+                content: E.jn.VIDEO_MODAL,
                 ctaContent: f.jZ.OPEN_GAME_LINK,
                 impressionId: G,
                 sourceQuestContent: B
@@ -111,7 +111,7 @@ function L(e) {
         el = l.useMemo(() => C.r.build(T.config).defaultRewardName, [T]),
         eo = k.intl.formatToPlainString(k.t['12IWPz'], { rewardName: el });
     return (0, r.jsx)(u.Y0X, {
-        transitionState: g,
+        transitionState: b,
         size: u.CgR.DYNAMIC,
         className: I.modalRoot,
         parentComponent: 'Modal',
@@ -178,7 +178,7 @@ function L(e) {
                                                         children: (0, r.jsx)(y.Z, {
                                                             className: I.questProgressRewardTile,
                                                             quest: T,
-                                                            questContent: b.jn.VIDEO_MODAL,
+                                                            questContent: E.jn.VIDEO_MODAL,
                                                             autoplay: !1,
                                                             location: P.dr.VIDEO_MODAL,
                                                             sourceQuestContent: B
@@ -192,7 +192,7 @@ function L(e) {
                         (0, r.jsx)(D.Z, {
                             quest: T,
                             videoSessionId: R,
-                            parentTransitionState: g,
+                            parentTransitionState: b,
                             onOptimisticProgressUpdate: z,
                             autoplay: L,
                             performanceClockStartTime: V,
@@ -228,9 +228,9 @@ function L(e) {
                                             disabled: (null == (o = T.userStatus) ? void 0 : o.completedAt) == null,
                                             ctaLabel: et,
                                             onClick: () => {
-                                                ((0, E.xN)(T.config) || (0, E.Bg)(T.config)) && j();
+                                                ((0, v.xN)(T.config) || (0, v.Bg)(T.config)) && j();
                                             },
-                                            questContent: b.jn.VIDEO_MODAL,
+                                            questContent: E.jn.VIDEO_MODAL,
                                             sourceQuestContent: B
                                         })
                                     ]
@@ -264,12 +264,12 @@ function R(e) {
             }
             return l;
         })(e, ['questId', 'overrideQuest', 'autoplay', 'openStartClockTime']);
-    let s = (0, a.e7)([g.Z], () => g.Z.getQuest(t)),
+    let s = (0, a.e7)([b.Z], () => b.Z.getQuest(t)),
         c = null != n ? n : s;
     return null != c
         ? (0, r.jsx)(j.A, {
               questOrQuests: c,
-              questContent: b.jn.VIDEO_MODAL,
+              questContent: E.jn.VIDEO_MODAL,
               minViewTimeSeconds: T.zw,
               trackGuildAndChannelMetadata: !0,
               sourceQuestContent: i.sourceQuestContent,

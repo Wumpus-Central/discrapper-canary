@@ -20,8 +20,8 @@ var r = n(255367),
     f = n(797614),
     _ = n(358085),
     p = n(617136),
-    h = n(569984),
-    m = n(918701),
+    h = n(509212),
+    m = n(569984),
     g = n(882198),
     E = n(5881),
     b = n(981631);
@@ -91,7 +91,7 @@ class R {
     getQuestContentPosition() {
         return this.questContentPosition;
     }
-    constructor({ questOrQuests: e, questContent: t, triggeredByStatusChange: n, trackGuildAndChannelMetadata: r, questContentPosition: i, questContentRowIndex: s, minViewTimeSeconds: l = S, isQuestEnrollmentBlocked: c, sourceQuestContent: h }) {
+    constructor({ questOrQuests: e, questContent: t, triggeredByStatusChange: n, trackGuildAndChannelMetadata: r, questContentPosition: i, questContentRowIndex: s, minViewTimeSeconds: l = S, isQuestEnrollmentBlocked: c, sourceQuestContent: m }) {
         var v = this;
         (y(this, 'id', void 0),
             y(this, 'quests', void 0),
@@ -118,10 +118,10 @@ class R {
                         { impressionId: this.id }
                     );
                     let t = !1,
-                        n = (0, m.Zp)(this.questContent);
+                        n = (0, h.Zp)(this.questContent);
                     if (null != n) {
                         let r = C(e.id, n);
-                        (t = !N.has(r) && (0, m.VB)(this.questContent)) && N.add(r);
+                        (t = !N.has(r) && (0, h.VB)(this.questContent)) && N.add(r);
                     }
                     let r = O(
                         {
@@ -177,7 +177,7 @@ class R {
             }),
             y(this, 'commonProperties', (e) =>
                 O(
-                    I(O({ impression_id: this.id }, (0, m.qe)(e.id, this.questContent)), {
+                    I(O({ impression_id: this.id }, (0, h.qe)(e.id, this.questContent)), {
                         is_quest_enrollment_blocked: this.isQuestEnrollmentBlocked,
                         quest_status: (0, p.uk)(e)
                     }),
@@ -236,7 +236,7 @@ class R {
             (this.triggeredByStatusChange = n),
             (this.questContentRowIndex = s),
             (this.isQuestEnrollmentBlocked = c),
-            (this.sourceQuestContent = h));
+            (this.sourceQuestContent = m));
     }
 }
 let P = (e, t) => {
@@ -266,7 +266,7 @@ function M(e) {
     let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c, sourceQuestContent: u } = e,
         d = w(e.questOrQuests),
         f = i.useRef(null),
-        _ = (0, s.e7)([h.Z], () => null != h.Z.questEnrollmentBlockedUntil, []);
+        _ = (0, s.e7)([m.Z], () => null != m.Z.questEnrollmentBlockedUntil, []);
     return (
         (0, l.ZP)(() => () => {
             null != f.current && f.current.stop();

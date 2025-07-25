@@ -36,8 +36,8 @@ function f(e) {
 }
 function p(e) {
     var t, n, l;
-    let { user: a, currentUser: s, displayProfile: d, guildId: p, channelId: m, items: b, initialSection: x, initialSubsection: _, onClose: y } = e,
-        { trackUserProfileAction: h } = (0, c.KZ)(),
+    let { user: a, currentUser: s, displayProfile: d, guildId: p, channelId: m, items: b, initialSection: _, initialSubsection: x, onClose: h } = e,
+        { trackUserProfileAction: y } = (0, c.KZ)(),
         [{ section: g, subsection: j, text: I }, v] = r.useState(
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -68,12 +68,12 @@ function p(e) {
                 null !=
                     (t = b.find((e) => {
                         let { section: t } = e;
-                        return t === x;
+                        return t === _;
                     }))
                     ? t
                     : b[0]
             )),
-            (l = l = { subsection: _ }),
+            (l = l = { subsection: x }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                 : (function (e, t) {
@@ -101,7 +101,7 @@ function p(e) {
                     look: 'custom',
                     selectedItem: g,
                     onItemSelect: (e) => {
-                        (h({
+                        (y({
                             action: 'PRESS_SECTION',
                             section: e
                         }),
@@ -136,7 +136,7 @@ function p(e) {
                     channelId: m,
                     section: g,
                     subsection: j,
-                    onClose: y
+                    onClose: h
                 })
             })
         ]

@@ -4,11 +4,11 @@ var r = n(255367),
     s = n(120356),
     a = n.n(s),
     i = n(617136),
-    l = n(113434),
-    c = n(497505),
-    u = n(918701),
+    l = n(509212),
+    c = n(113434),
+    u = n(497505),
     d = n(602667),
-    p = n(341907),
+    p = n(110560),
     m = n(672188),
     f = n(466962),
     g = n(439826),
@@ -17,11 +17,11 @@ var r = n(255367),
     b = n(168989);
 function j(e) {
     var t, n;
-    let { quest: s, className: c, questContent: d, contentPosition: j, rowIndex: _, impressionRef: v, sourceQuestContent: y } = e,
+    let { quest: s, className: u, questContent: d, contentPosition: j, rowIndex: _, impressionRef: v, sourceQuestContent: y } = e,
         [C, O] = o.useState(!1),
         [E, w] = o.useState([]),
-        S = (0, l.qb)(s),
-        T = o.useMemo(() => (0, u.q8)(s), [s]),
+        S = (0, c.qb)(s),
+        T = o.useMemo(() => (0, l.q8)(s), [s]),
         P = (0, i._F)(),
         A = o.useCallback(() => {
             (O(!0),
@@ -66,7 +66,7 @@ function j(e) {
         ref: (e) => {
             ((v.current = e), (B.current = e));
         },
-        className: a()(b.container, c),
+        className: a()(b.container, u),
         onMouseEnter: A,
         onMouseLeave: N,
         onFocus: A,
@@ -99,7 +99,7 @@ function _(e) {
         questContent: e.questContent,
         questContentPosition: e.contentPosition,
         questContentRowIndex: e.rowIndex,
-        trackGuildAndChannelMetadata: e.questContent === c.jn.QUESTS_EMBED,
+        trackGuildAndChannelMetadata: e.questContent === u.jn.QUESTS_EMBED,
         sourceQuestContent: e.sourceQuestContent,
         children: (t) => {
             var n, o;
