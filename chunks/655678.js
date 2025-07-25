@@ -22,7 +22,7 @@ function p(e, t) {
               className: o()(d.CT, _.buttonContainer),
               ref: t,
               children: (0, r.jsx)(u.Z, {
-                  innerClassName: o()(_.button, _.messageConfettiButton),
+                  className: o()(_.button, _.messageConfettiButton),
                   childClassName: o()(_.messageConfettiIcon, { [_.active]: p }),
                   onClick: h,
                   isActive: p,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => H });
+n.d(t, { Z: () => V });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -171,7 +171,7 @@ function G(e) {
         n = t ? p.iWm : p.jje;
     return (0, r.jsx)(n, D({}, e));
 }
-function H(e) {
+function V(e) {
     var t;
     let n,
         { message: l, channel: o } = e,
@@ -198,7 +198,7 @@ function H(e) {
             ),
             [f, o, l.id]
         ),
-        H = i.useMemo(
+        V = i.useMemo(
             () => (e) => (
                 s()(null != o, 'ExecutedCommand: channel cannot be null'),
                 (0, r.jsx)(
@@ -212,9 +212,9 @@ function H(e) {
             ),
             [o, l.id, l.interactionData]
         ),
-        V = (0, x.t0)(l),
-        z = (null == V ? void 0 : V.type) === m.B8.APPLICATION_COMMAND && null != V.target_user ? new y.Z(V.target_user) : null,
-        W = (null == V ? void 0 : V.type) === m.B8.APPLICATION_COMMAND && null != l.messageReference && null != e.renderTargetMessage,
+        H = (0, x.t0)(l),
+        z = (null == H ? void 0 : H.type) === m.B8.APPLICATION_COMMAND && null != H.target_user ? new y.Z(H.target_user) : null,
+        W = (null == H ? void 0 : H.type) === m.B8.APPLICATION_COMMAND && null != l.messageReference && null != e.renderTargetMessage,
         K = (0, N.Sw)(null == (t = l.interaction) ? void 0 : t.user, o),
         Y = (0, N.Sw)(z, o),
         X = i.useMemo(() => (e.compact ? (0, w.Z)((0, T.vc)(u()(), 'LT')) : null), [e.compact]),
@@ -325,7 +325,7 @@ function H(e) {
                             }
                         }
                     });
-                })(e, H, P);
+                })(e, V, P);
                 return (0, r.jsx)(i.Fragment, { children: t }, 'command');
             }
         })),

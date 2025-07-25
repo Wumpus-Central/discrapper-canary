@@ -39,7 +39,7 @@ var r = n(255367),
     F = n(590433),
     B = n(388032),
     G = n(860918);
-function H(e) {
+function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,7 +64,7 @@ function H(e) {
     }
     return e;
 }
-function V(e, t) {
+function H(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -133,7 +133,7 @@ function K(e, t, n) {
             return (i) =>
                 (0, r.jsx)(
                     v.Z,
-                    V(H({}, i), {
+                    H(V({}, i), {
                         user: t,
                         currentUser: n,
                         guildId: e.guild_id,
@@ -161,7 +161,7 @@ function q(e, t) {
         case _.d.DELETE_USER_MESSAGE:
             return (0, r.jsx)(
                 p.XHJ,
-                H(
+                V(
                     {
                         size: 'xs',
                         color: 'currentColor',
@@ -173,7 +173,7 @@ function q(e, t) {
         case _.d.SET_COMPLETED:
             return (0, r.jsx)(
                 p.dz2,
-                H(
+                V(
                     {
                         size: 'xs',
                         color: 'currentColor',
@@ -185,7 +185,7 @@ function q(e, t) {
         case _.d.SUBMIT_FEEDBACK:
             return (0, r.jsx)(
                 p.U65,
-                H(
+                V(
                     {
                         size: 'xs',
                         color: 'currentColor',
@@ -265,7 +265,7 @@ let $ = i.memo(function (e) {
         c = K(i, n.author),
         u = (0, T.ZP)(n),
         d = (0, A.CF)(
-            H(
+            V(
                 {
                     message: n,
                     channel: i,
@@ -283,7 +283,7 @@ let $ = i.memo(function (e) {
     if (null != m) {
         let e = (0, T.ij)(m, i),
             r = (0, A.CF)(
-                H(
+                V(
                     {
                         message: n,
                         channel: i,
@@ -411,7 +411,7 @@ function ee(e) {
                         className: a()(G.messageContent, { [G.compact]: l }),
                         children: (0, r.jsx)(
                             P.Z,
-                            V(H({}, N), {
+                            H(V({}, N), {
                                 message: o,
                                 channel: ee,
                                 content: ed,

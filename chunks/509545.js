@@ -127,7 +127,7 @@ class C extends (r = i.ZP.Store) {
         return e.every((e) => this.isLoadedForSKU(e));
     }
     isFetchingForPremiumSKUs() {
-        return u.YQ.map((e) => this.isFetchingForSKU(e)).includes(!0);
+        return u.YQ.some((e) => this.isFetchingForSKU(e));
     }
     isLoadedForPremiumSKUs() {
         return u.YQ.every((e) => this.isLoadedForSKU(e));

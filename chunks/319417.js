@@ -18,7 +18,6 @@ function d(e) {
                     className: u.buttonContainer,
                     children: (0, r.jsx)(l.Z, {
                         className: u.button,
-                        innerClassName: u.innerButton,
                         childClassName: o()(u.buttonChild, {
                             [u.disabled]: n,
                             [u.activeButtonChild]: !n

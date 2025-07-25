@@ -1,58 +1,63 @@
-n.d(t, { Z: () => b });
-var r = n(255367);
-n(73800);
-var i = n(704215),
-    l = n(780384),
-    a = n(755721),
-    o = n(481060),
-    s = n(410030),
-    c = n(100527),
-    u = n(906732),
-    d = n(765585),
-    p = n(703656),
-    h = n(335131),
-    f = n(981631),
-    g = n(388032),
-    m = n(20080);
-let b = (e) => {
-    let { displayOptions: t } = e,
-        { analyticsLocations: n } = (0, u.ZP)(c.Z.HOME_PAGE_SHOP_TAB),
-        b = (0, s.ZP)(),
-        _ = (0, l.wj)(b) ? t.assetDark : t.assetLight;
-    return (0, r.jsx)(d.Z, {
-        dismissibleContent: i.z.COLLECTIBLES_SHOP_ENTRY_MARKETING,
-        inlineArt: !0,
-        tryItText: (0, r.jsx)(o.Text, {
-            variant: 'text-sm/medium',
-            color: 'always-white',
-            children: g.intl.string(g.t.fYfGgI)
-        }),
-        onTryFeature: () => {
-            ((0, p.uL)(f.Z5c.COLLECTIBLES_SHOP),
-                (0, h.mK)({
-                    openInLayer: !1,
-                    analyticsLocations: n,
-                    analyticsSource: c.Z.HOME_PAGE_SHOP_TAB
-                }));
-        },
-        header: (0, r.jsx)(o.X6q, {
-            variant: 'heading-md/extrabold',
-            children: t.title()
-        }),
-        body: (0, r.jsx)(o.Text, {
-            variant: 'text-sm/medium',
-            children: t.body()
-        }),
-        position: 'right',
-        align: 'top',
-        hideDismissButton: !0,
-        contentClassName: m.contentOverlay,
-        pointerClassName: m.pointerClassName,
-        tryItButtonColor: a.zx.Colors.BRAND,
-        art: (0, r.jsx)('img', {
-            className: m.art,
-            src: _,
-            alt: ''
+n.d(t, { Z: () => g });
+var r = n(255367),
+    i = n(73800),
+    l = n(907862),
+    a = n(780384),
+    o = n(410030),
+    s = n(100527),
+    c = n(906732),
+    u = n(703656),
+    d = n(335131),
+    p = n(981631),
+    h = n(388032),
+    f = n(20080);
+let g = (e) => {
+    let { displayOptions: t, targetElementRef: n, onRequestClose: g, onClick: m } = e,
+        { analyticsLocations: b } = (0, c.ZP)(s.Z.HOME_PAGE_SHOP_TAB),
+        _ = (0, o.ZP)(),
+        O = (0, a.wj)(_) ? t.assetDark : t.assetLight,
+        E = i.useRef(g);
+    return (
+        (E.current = g),
+        i.useEffect(
+            () => () => {
+                var e;
+                null == (e = E.current) || e.call(E);
+            },
+            []
+        ),
+        (0, r.jsx)(l.J2, {
+            targetElementRef: n,
+            position: 'right',
+            align: 'top',
+            size: 'md',
+            caretConfig: {
+                position: 'left',
+                align: 'start'
+            },
+            title: t.title(),
+            body: t.body(),
+            asset: (0, r.jsx)('img', {
+                className: f.art,
+                src: O,
+                alt: ''
+            }),
+            actions: [
+                {
+                    text: h.intl.string(h.t.fYfGgI),
+                    variant: 'primary',
+                    onClick: () => {
+                        (null == m || m(),
+                            (0, u.uL)(p.Z5c.COLLECTIBLES_SHOP),
+                            (0, d.mK)({
+                                openInLayer: !1,
+                                analyticsLocations: b,
+                                analyticsSource: s.Z.HOME_PAGE_SHOP_TAB
+                            }));
+                    }
+                }
+            ],
+            onRequestClose: g
         })
-    });
+    );
 };

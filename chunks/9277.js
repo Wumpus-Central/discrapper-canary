@@ -109,7 +109,7 @@ function I(e, t) {
                     ),
                     {
                         children: (0, r.jsx)(p.Z, {
-                            innerClassName: E.button,
+                            className: E.button,
                             onMouseEnter: w.onMouseEnter,
                             onMouseLeave: w.onMouseLeave,
                             onClick: () => {

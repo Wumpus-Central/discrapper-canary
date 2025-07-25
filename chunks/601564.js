@@ -1,6 +1,6 @@
 (n.r(t),
     n.d(t, {
-        default: () => x,
+        default: () => A,
         getPageSize: () => P
     }),
     n(388685),
@@ -146,4 +146,4 @@ class j extends i.PureComponent {
             ));
     }
 }
-let x = (0, a.EN)((0, d.Z)((0, p.Z)(j)));
+let A = (0, a.EN)((0, d.Z)((0, p.Z)(j)));

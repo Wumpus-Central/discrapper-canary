@@ -1,6 +1,6 @@
 (n.d(t, {
-    $: () => y,
-    s: () => O
+    $: () => v,
+    s: () => x
 }),
     n(953529));
 var r = n(255367),
@@ -8,144 +8,108 @@ var r = n(255367),
     l = n(120356),
     a = n.n(l),
     o = n(470167),
-    s = n(755721),
-    c = n(481060),
-    u = n(572691),
-    d = n(313201),
-    p = n(70097),
-    m = n(406432),
-    f = n(584656),
-    g = n(247206),
-    _ = n(470734),
-    h = n(719548),
-    b = n(388032),
-    E = n(580297);
-let C = (e) => {
+    s = n(82659),
+    c = n(572691),
+    u = n(70097),
+    d = n(406432),
+    p = n(584656),
+    m = n(247206),
+    f = n(470734),
+    g = n(719548),
+    _ = n(388032),
+    h = n(580297);
+let b = (e) => {
         let { attachment: t } = e,
             { url: n, description: i } = t;
         return null == n
             ? null
-            : (0, r.jsx)(v, {
+            : (0, r.jsx)(C, {
                   url: n,
                   description: i
               });
     },
-    x = (e) => {
+    E = (e) => {
         var t, n, i;
         let { embed: l } = e;
-        if (!h.n2.has(l.type)) return null;
+        if (!g.n2.has(l.type)) return null;
         let a = void 0 !== l.video && l.type !== o.h.GIFV ? l.video.url : null != (i = null == (t = l.thumbnail) ? void 0 : t.url) ? i : null == (n = l.image) ? void 0 : n.url;
-        return null == a ? null : (0, r.jsx)(v, { url: a });
+        return null == a ? null : (0, r.jsx)(C, { url: a });
     },
-    v = (e) => {
+    C = (e) => {
         let { url: t, description: n } = e,
-            i = (0, m.cb)(t);
+            i = (0, d.cb)(t);
         return (0, r.jsx)('div', {
-            className: E.mediaContainer,
+            className: h.mediaContainer,
             children: i
-                ? (0, r.jsx)(p.Z, {
-                      className: a()(E.video, E.media),
+                ? (0, r.jsx)(u.Z, {
+                      className: a()(h.video, h.media),
                       controls: !0,
                       src: t
                   })
                 : (0, r.jsx)('img', {
-                      className: a()(E.image, E.media),
+                      className: a()(h.image, h.media),
                       src: t,
                       alt: n
                   })
         });
     };
-function O(e) {
-    (u.Z.pop(),
-        (0, f.t)({
+function x(e) {
+    (c.Z.pop(),
+        (0, p.t)({
             id: 'explicit-media-false-positive-modal',
-            text: b.intl.string(b.t.gFsTKi)
+            text: _.intl.string(_.t.gFsTKi)
         }),
         e());
 }
-function y(e) {
-    let { channelId: t, messageId: n, isReportFalsePositiveLoading: l, analyticsContext: a, attachmentPreview: o, embedPreview: u, onConfirmPress: p, transitionState: m, onClose: f } = e,
-        h = (0, d.Dt)(),
-        v = (0, _.pn)('ExplicitMediaFalsePositiveModal'),
-        O = i.useCallback(() => {
-            ((0, g.aP)({
-                action: g.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
+function v(e) {
+    let { channelId: t, messageId: n, isReportFalsePositiveLoading: l, analyticsContext: a, attachmentPreview: o, embedPreview: c, onConfirmPress: u, transitionState: d, onClose: p } = e,
+        g = (0, f.pn)('ExplicitMediaFalsePositiveModal'),
+        h = i.useCallback(() => {
+            ((0, m.aP)({
+                action: m.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
                 channelId: t,
                 messageId: n,
                 context: a
             }),
-                f());
-        }, [t, n, a, f]),
-        y = i.useCallback(() => {
-            (null == p || p(),
-                (0, g.aP)({
-                    action: g.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
+                p());
+        }, [t, n, a, p]),
+        C = i.useCallback(() => {
+            (null == u || u(),
+                (0, m.aP)({
+                    action: m.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
                     channelId: t,
                     messageId: n,
                     context: a
                 }));
-        }, [t, n, a, p]);
+        }, [t, n, a, u]);
     i.useEffect(() => {
-        (0, g.aP)({
-            action: g.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
+        (0, m.aP)({
+            action: m.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
             channelId: t,
             messageId: n,
             context: a
         });
     }, [t, n, a]);
-    let j = i.useMemo(() => (v ? b.intl.string(b.t['z4du/P']) : b.intl.string(b.t.gg5Dp6)), [v]);
-    return (0, r.jsxs)(c.Y0X, {
-        transitionState: m,
-        'aria-labelledby': h,
-        size: c.CgR.SMALL,
-        parentComponent: 'ExplicitMediaFalsePositiveModal',
-        children: [
-            (0, r.jsxs)(c.hzk, {
-                children: [
-                    (0, r.jsx)(c.olH, {
-                        onClick: O,
-                        className: E.closeButton
-                    }),
-                    (0, r.jsx)(c.X6q, {
-                        id: h,
-                        variant: 'heading-lg/semibold',
-                        color: 'header-primary',
-                        className: E.header,
-                        children: b.intl.string(b.t.TPpVkJ)
-                    }),
-                    (0, r.jsx)(c.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'header-secondary',
-                        className: E.subheader,
-                        children: j
-                    }),
-                    null != o && (0, r.jsx)(C, { attachment: o }),
-                    null != u && (0, r.jsx)(x, { embed: u })
-                ]
-            }),
-            (0, r.jsxs)(c.mzw, {
-                children: [
-                    (0, r.jsx)('div', {
-                        'data-button-hoisted-classname-wrapper': !0,
-                        className: E.button,
-                        children: (0, r.jsx)(c.zxk, {
-                            variant: 'primary',
-                            text: b.intl.string(b.t['cY+Ooa']),
-                            disabled: l,
-                            loading: l,
-                            onClick: y
-                        })
-                    }),
-                    (0, r.jsx)(s.zx, {
-                        className: E.button,
-                        disabled: l,
-                        color: s.zx.Colors.TRANSPARENT,
-                        size: s.zx.Sizes.MEDIUM,
-                        onClick: O,
-                        children: b.intl.string(b.t['ETE/oK'])
-                    })
-                ]
-            })
-        ]
+    let x = i.useMemo(() => (g ? _.intl.string(_.t['z4du/P']) : _.intl.string(_.t.gg5Dp6)), [g]);
+    return (0, r.jsxs)(s.Modal, {
+        transitionState: d,
+        onClose: p,
+        title: _.intl.string(_.t.TPpVkJ),
+        subtitle: x,
+        actions: [
+            {
+                text: _.intl.string(_.t['ETE/oK']),
+                onClick: h,
+                variant: 'secondary',
+                disabled: l
+            },
+            {
+                text: _.intl.string(_.t['cY+Ooa']),
+                onClick: C,
+                loading: l,
+                disabled: l
+            }
+        ],
+        children: [null != o && (0, r.jsx)(b, { attachment: o }), null != c && (0, r.jsx)(E, { embed: c })]
     });
 }

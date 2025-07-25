@@ -35,7 +35,7 @@ function _(e) {
         T = (0, f.n)((e) => e.clipsButtonRef),
         P = (0, f.n)((e) => e.setClipsButtonRef),
         j = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
-        { preventIdle: x, allowIdle: A } = (0, s.Y)('animation');
+        { preventIdle: A, allowIdle: x } = (0, s.Y)('animation');
     function Z() {
         (0, a.ZDy)(
             async () => {
@@ -73,7 +73,7 @@ function _(e) {
             { modalKey: m.Qr }
         );
     }
-    return (i.useEffect(() => (S ? x() : A(), () => A()), [S, x, A]), E && O && y)
+    return (i.useEffect(() => (S ? A() : x(), () => x()), [S, A, x]), E && O && y)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   null != T &&

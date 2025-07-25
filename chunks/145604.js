@@ -26,8 +26,8 @@ var r = n(255367),
     T = n(829907),
     P = n(509003),
     j = n(427679),
-    x = n(695346),
-    A = n(592125),
+    A = n(695346),
+    x = n(592125),
     Z = n(77498),
     w = n(271383),
     L = n(430824),
@@ -143,7 +143,7 @@ class J extends i.PureComponent {
             let e = Z.Z.getGameByName(w.name),
                 c = _.ZP.getOverrideForGame(w),
                 u = L.Z.getGuildIds(),
-                p = x.SE.getSetting(),
+                p = A.SE.getSetting(),
                 f = u.filter((e) => !p.includes(e)).slice(0, 200),
                 g = null;
             g = null != c ? 'custom_override' : null != e ? 'verified_game' : 'launcher';
@@ -179,7 +179,7 @@ class J extends i.PureComponent {
                         is_overlay_game_source: m,
                         fullscreen_type: null != n ? s.Jx[n] : s.Jx.UNKNOWN.toString(),
                         overlay_method: o.gl[j],
-                        activity_status_enabled: x.G6.getSetting(),
+                        activity_status_enabled: A.G6.getSetting(),
                         activity_status_shared_guilds: f,
                         current_user_status: G.Z.getStatus(),
                         game_detection_enabled: (0, _.ik)(w),
@@ -214,7 +214,7 @@ class J extends i.PureComponent {
                             video_input_type: e,
                             video_toggle_source: __OVERLAY__ ? 'overlay' : 'app',
                             enabled_inputs: t,
-                            preview_enabled: x.qF.getSetting()
+                            preview_enabled: A.qF.getSetting()
                         },
                         n,
                         this.getGameMetadata(),
@@ -224,7 +224,7 @@ class J extends i.PureComponent {
         }
         if (B && null != M && (!e.connected || M !== e.selectedChannelId || U !== e.selectedGuildId)) {
             let t = e.selectedChannelId,
-                n = A.Z.getChannel(t),
+                n = x.Z.getChannel(t),
                 r = L.Z.getGuild(null == n ? void 0 : n.getGuildId());
             if (null != t && null != n && null != r && r.publicUpdatesChannelId === t) {
                 let e = D.Z.getMessages(t),
@@ -267,10 +267,10 @@ class J extends i.PureComponent {
 }
 function $() {
     let [e, t] = (0, l.Wu)([M.Z], () => [M.Z.getVoiceChannelId(), M.Z.getChannelId()], []),
-        n = (0, l.e7)([A.Z], () => A.Z.getChannel(t), [t]),
+        n = (0, l.e7)([x.Z], () => x.Z.getChannel(t), [t]),
         a = (0, l.e7)([g.Z], () => (null == n ? void 0 : n.id) != null && g.Z.getChatOpen(n.id), [n]),
         o = null == n ? void 0 : n.nsfw,
-        s = (0, l.e7)([A.Z], () => A.Z.getChannel(e), [e]),
+        s = (0, l.e7)([x.Z], () => x.Z.getChannel(e), [e]),
         f = (0, l.e7)([U.Z], () => U.Z.getGuildId(), []),
         m = (0, l.e7)([L.Z], () => L.Z.getGuild(f), [f]),
         b = (0, l.e7)([V.default], () => V.default.getCurrentUser(), []),
@@ -287,7 +287,7 @@ function $() {
         N = (0, l.e7)([O.Z], () => O.Z.isConnected(), []),
         [T, P] = (0, l.Wu)([R.Z], () => [R.Z.isVideoEnabled(), R.Z.isScreenSharing()], []),
         j = (0, l.e7)([G.Z], () => G.Z.getPrimaryActivity(), []),
-        x = (0, l.e7)([_.ZP], () => _.ZP.getCurrentGameForAnalytics(), []),
+        A = (0, l.e7)([_.ZP], () => _.ZP.getCurrentGameForAnalytics(), []),
         Z = (0, E.Z)(f),
         D = (0, l.e7)([I.Z], () => I.Z.getMessageRequestsCount(), []),
         k = {
@@ -303,12 +303,12 @@ function $() {
             voiceChannelGuildId: null == s ? void 0 : s.getGuildId(),
             voiceChannelType: null == s ? void 0 : s.type,
             voiceChannelBitrate: null == s ? void 0 : s.bitrate,
-            runningGame: x,
-            runningGamePid: null != x ? x.pid : null,
+            runningGame: A,
+            runningGamePid: null != A ? A.pid : null,
             gamePlatform: (0, c.Z)(j),
             gameName: null != j ? j.name : null,
             gameId: null != j ? j.application_id : null,
-            gameExeName: null != x ? x.exeName : null,
+            gameExeName: null != A ? A.exeName : null,
             hasPreviewEnabled: null == m ? void 0 : m.features.has(q.oNc.PREVIEW_ENABLED),
             isMemberPending: y,
             postableChannelCount: Z,
@@ -322,7 +322,7 @@ function $() {
     let { connected: Y, friendsTabSection: K, homeLink: X, isMemberPending: $, selectedChannelId: ee, selectedGuildId: et } = k;
     (i.useEffect(() => {
         if (Y && null != ee) {
-            let e = (0, d.K)(A.Z.getChannel(ee), !0);
+            let e = (0, d.K)(x.Z.getChannel(ee), !0);
             ((0, u.yw)(q.rMx.CHANNEL_OPENED, Q({}, e, (0, u.$H)(ee))), (0, p.a)(q.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: ee }), z.current.isTextInVoice && (0, u.yw)(q.rMx.TEXT_IN_VOICE_OPENED, { channel_is_nsfw: z.current.isNSFWChannel }));
         }
     }, [Y, ee]),

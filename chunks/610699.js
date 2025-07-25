@@ -177,27 +177,27 @@ function k(e) {
                 }));
         }, [a, o, k, u]),
         G = a.state === A.r2o.ACCEPTING,
-        H = null != x;
+        V = null != x;
     if (null == x) {
         if (null == a.guild) return (0, r.jsx)(P.Z, {});
         x = (0, N.Qs)(a.guild);
     }
-    let V = (H && !D) || (H && T);
-    return (H && T && (l = Z.intl.string(Z.t.wJNK8P)), D || (l = Z.intl.string(Z.t.hHGrW1)), null == a.code || '' === a.code || null == v)
+    let H = (V && !D) || (V && T);
+    return (V && T && (l = Z.intl.string(Z.t.wJNK8P)), D || (l = Z.intl.string(Z.t.hHGrW1)), null == a.code || '' === a.code || null == v)
         ? null
         : (0, r.jsx)(f.Gt, {
               value: k,
               children: (0, r.jsx)(M, {
                   app: v,
                   activityUsers: F,
-                  isMember: H,
+                  isMember: V,
                   channel: L,
                   guild: x,
                   members: g,
                   membersOnline: _,
                   isActivityActive: R,
                   submitting: G,
-                  isDisabled: V,
+                  isDisabled: H,
                   tooltip: l,
                   handleAcceptInvite: B,
                   onView: E

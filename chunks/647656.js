@@ -101,8 +101,8 @@ let _ = ['349134787773988865'],
                 null != v && (0, u.g)(v) && y && (I |= (0, s.ZW)(I));
                 let C = (0, s.S5)(a, y);
                 (C > 0 && (a.flags = C | I), delete a.instance, null == (t = a.party) || delete t.privacy);
-                let { assets: S, party: N, secrets: T, timestamps: P, buttons: j, type: x } = a;
-                if ((null == x && (a.type = b.IIU.PLAYING), null != T)) {
+                let { assets: S, party: N, secrets: T, timestamps: P, buttons: j, type: A } = a;
+                if ((null == A && (a.type = b.IIU.PLAYING), null != T)) {
                     let e = i()
                         .values(T)
                         .filter((e) => !!e);

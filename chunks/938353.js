@@ -49,8 +49,8 @@ var r,
     F = n(187506),
     B = n(954654),
     G = n(41776),
-    H = n(628238),
-    V = n(454585),
+    V = n(628238),
+    H = n(454585),
     z = n(768494),
     W = n(124347),
     K = n(976853),
@@ -103,8 +103,8 @@ var r,
     eF = n(319323),
     eB = n(884182),
     eG = n(546432),
-    eH = n(920888),
-    eV = n(328966),
+    eV = n(920888),
+    eH = n(328966),
     ez = n(963206),
     eW = n(817384),
     eK = n(981631),
@@ -372,7 +372,7 @@ class e8 extends (r = l.Component) {
         let { disableReactionCreates: t, disableReactionReads: n, disableReactionUpdates: r, isLurking: l, isGuest: a, isPendingMember: o, channel: s, forceAddReactions: c } = this.props;
         return n
             ? null
-            : (0, i.jsx)(eH.Z, {
+            : (0, i.jsx)(eV.Z, {
                   message: e,
                   channel: s,
                   disableReactionCreates: t,
@@ -677,10 +677,10 @@ class e8 extends (r = l.Component) {
         if (e.messageSnapshots.length > 0 && !(0, et.Gi)(e, this.props.channel)) return (0, i.jsx)(A.Z, { message: e });
     }
     renderEditedTag(e, t) {
-        return (0, i.jsx)(eV.Z, {
+        return (0, i.jsx)(eH.Z, {
             message: e,
             compact: t,
-            location: eV.H.AFTER_ACCESSORIES
+            location: eH.H.AFTER_ACCESSORIES
         });
     }
     render() {
@@ -772,10 +772,10 @@ class e8 extends (r = l.Component) {
                           e.id
                       );
             }),
-            eJ(this, 'renderEmbedTitle', (e, t) => (e.type === eK.hBH.RICH ? V.Z.parseEmbedTitle(t, !0, { channelId: this.props.channel.id }) : t)),
+            eJ(this, 'renderEmbedTitle', (e, t) => (e.type === eK.hBH.RICH ? H.Z.parseEmbedTitle(t, !0, { channelId: this.props.channel.id }) : t)),
             eJ(this, 'renderEmbedDescription', (e, t, n) =>
                 e.type === eK.hBH.RICH
-                    ? V.Z.parse(t, !0, {
+                    ? H.Z.parse(t, !0, {
                           channelId: this.props.channel.id,
                           allowLinks: !0,
                           allowEmojiLinks: !0,
@@ -841,7 +841,7 @@ function e6(e) {
             isActiveChannelOrUnarchivableThread: v,
             isAutomodQuarantined: C
         }),
-        P = (0, H.A)((null != (t = r.editedTimestamp) ? t : r.timestamp).valueOf()),
+        P = (0, V.A)((null != (t = r.editedTimestamp) ? t : r.timestamp).valueOf()),
         A = (0, K.Z)(null == n ? void 0 : n.id),
         w = (0, q.Z)(r),
         Z = (0, T.v)(r),
@@ -916,7 +916,7 @@ let e4 = (e) => {
         m = ec.RS.useSetting(),
         f = ec.NA.useSetting(),
         g = ec.QK.useSetting(),
-        _ = (0, H.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
+        _ = (0, V.A)((null != (t = n.editedTimestamp) ? t : n.timestamp).valueOf()),
         h = (0, K.Z)(null == r ? void 0 : r.id),
         b = (0, T.v)(n),
         E = (0, ev.ro)(n.id, n.channel_id),

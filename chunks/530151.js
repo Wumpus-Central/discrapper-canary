@@ -26,8 +26,8 @@ var r = n(255367),
     T = n(283595),
     P = n(417363),
     j = n(941128),
-    x = n(451478),
-    A = n(424218),
+    A = n(451478),
+    x = n(424218),
     Z = n(780570),
     w = n(353042),
     L = n(86826),
@@ -84,7 +84,7 @@ function V(e, t) {
         case R.f07.ALLOCATING_DISK:
             return ''.concat(e);
         default:
-            return (0, A.BU)(e, { useKibibytes: !0 });
+            return (0, x.BU)(e, { useKibibytes: !0 });
     }
 }
 let H = {
@@ -333,8 +333,8 @@ class W extends i.PureComponent {
                     ? D.intl.string(D.t['+pfsFR'])
                     : D.intl.formatToPlainString(D.t['+feX8f'], {
                           percent: l,
-                          progress: (0, A.BU)(n),
-                          total: (0, A.BU)(r)
+                          progress: (0, x.BU)(n),
+                          total: (0, x.BU)(r)
                       });
         return this.renderBody({
             message: a,
@@ -648,10 +648,10 @@ function $(e, t, n, r) {
     }, []);
 }
 let ee = (0, O.Z)(
-    c.ZP.connectStores([E.Z, P.Z, j.Z, N.Z, x.Z], () => ({
+    c.ZP.connectStores([E.Z, P.Z, j.Z, N.Z, A.Z], () => ({
         applications: [...$(j.Z.activeItems, !1, E.Z, P.Z), ...$(j.Z.finishedItems, !0, E.Z, P.Z)],
         paused: j.Z.paused,
-        isFocused: x.Z.isFocused(),
+        isFocused: A.Z.isFocused(),
         theme: N.Z.theme
     }))((0, _.Z)(J))
 );

@@ -26,7 +26,7 @@ function C() {
         { tabs: S, selectedTab: N, setSelectedTab: T } = (0, b.Y)(),
         P = (0, h.lg)(N),
         j = !E.MU.has(N),
-        { searchQuery: x, onSearchTextChange: A, onClearSearch: Z, onSearchSubmit: w, isSearchVisible: L } = (0, m.H)({ loadId: e.current }),
+        { searchQuery: A, onSearchTextChange: x, onClearSearch: Z, onSearchSubmit: w, isSearchVisible: L } = (0, m.H)({ loadId: e.current }),
         R = f.Z.useField('searchBarState'),
         {
             onTabsAvailableWidthChange: D,
@@ -35,7 +35,7 @@ function C() {
             tabsClassName: U
         } = (0, o.U)({
             isSearchBarVisible: j,
-            isSearchBarEmpty: '' === x.trim(),
+            isSearchBarEmpty: '' === A.trim(),
             searchBarState: R,
             setSearchBarState: (e) => f.Z.setState({ searchBarState: e })
         }),
@@ -101,9 +101,9 @@ function C() {
                             }),
                         j &&
                             (0, r.jsx)(u.Z, {
-                                query: x,
+                                query: A,
                                 placeholder: v.intl.string(v.t['5h0QOD']),
-                                onTextChange: A,
+                                onTextChange: x,
                                 onClear: Z,
                                 onSubmit: w,
                                 onCollapsedClick: k,

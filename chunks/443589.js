@@ -30,7 +30,7 @@ let T = {
 function P(e) {
     let { recipientUser: t, giftIntentType: n, analyticsPage: l, shouldHighlight: P } = e,
         { analyticsLocations: j } = (0, d.ZP)(),
-        { isHovered: x, setIsHovered: A, onMouseEnter: Z, onMouseLeave: w } = (0, f.Z)(200, 300),
+        { isHovered: A, setIsHovered: x, onMouseEnter: Z, onMouseLeave: w } = (0, f.Z)(200, 300),
         { enableEmojiCTA: L } = _.w.useExperiment({ location: 'GiftIntentActionButton' }, { autoTrackExposure: !1 });
     i.useEffect(() => {
         let e = g.Z.getUserAffinity(t.id);
@@ -116,12 +116,12 @@ function P(e) {
         animation: u.yRy.Animation.FADE,
         nudgeAlignIntoViewport: !1,
         closeOnScroll: !0,
-        shouldShow: x,
+        shouldShow: A,
         position: 'right',
         align: 'top',
         spacing: 9,
         onRequestClose: () => {
-            A(!1);
+            x(!1);
         },
         renderPopout: (e) =>
             (0, r.jsx)(y.Z, {

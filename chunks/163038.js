@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => H }), n(388685));
+(n.d(t, { Z: () => V }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(793030),
@@ -226,7 +226,7 @@ function G(e) {
               c
           );
 }
-function H(e) {
+function V(e) {
     let { message: t } = e;
     return (0, r.jsx)(r.Fragment, {
         children: t.messageSnapshots.map((e, n) =>

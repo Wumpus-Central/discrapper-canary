@@ -79,8 +79,8 @@ function M(e, t) {
 function U(e) {
     var t, n, l, U;
     let { embedUrl: F, message: B, channel: G } = e,
-        H = i.useRef(null),
         V = i.useRef(null),
+        H = i.useRef(null),
         z = (0, A.J)(F, B),
         { setPopout: W } = (0, x.Z)(B.id, Z.d$),
         K = (0, C.qo)(B, G, W, !0),
@@ -207,7 +207,7 @@ function U(e) {
                             null != z.authorId &&
                                 null != eg &&
                                 (0, r.jsx)(O.Z, {
-                                    targetElementRef: V,
+                                    targetElementRef: H,
                                     userId: z.authorId,
                                     guildId: z.guildId,
                                     channelId: G.id,
@@ -223,7 +223,7 @@ function U(e) {
                                             children: (0, r.jsx)(
                                                 d.qEK,
                                                 M(k({}, e), {
-                                                    ref: V,
+                                                    ref: H,
                                                     size: d.EFr.SIZE_40,
                                                     src: eg,
                                                     'aria-label': R.intl.string(R.t.KXz3XF),
@@ -273,7 +273,7 @@ function U(e) {
                                                         : (0, r.jsx)(
                                                               O.Z,
                                                               {
-                                                                  targetElementRef: H,
+                                                                  targetElementRef: V,
                                                                   userId: z.authorId,
                                                                   guildId: z.guildId,
                                                                   channelId: G.id,
@@ -285,7 +285,7 @@ function U(e) {
                                                                       (0, r.jsx)(
                                                                           d.rz2,
                                                                           M(k({}, e), {
-                                                                              ref: H,
+                                                                              ref: V,
                                                                               name: z.authorName,
                                                                               color: ei,
                                                                               roleColors: eo,

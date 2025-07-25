@@ -115,7 +115,7 @@ function y(e) {
                 b(
                     g(
                         b(g({}, e), {
-                            innerClassName: h.button,
+                            className: h.button,
                             isActive: !1,
                             'aria-label': p.intl.string(p.t.Z1RnTk),
                             'aria-haspopup': 'dialog',

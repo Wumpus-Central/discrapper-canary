@@ -150,23 +150,23 @@ function P(e, t) {
         A = h.layout_type,
         w = N(e, t, { formattedExpirationLabel: p });
     if (null == w) return;
-    let { canTapAnswers: Z, canRemoveVote: R, canShowVoteCounts: L, canSubmitVote: D, expirationLabel: k = y.intl.string(y.t['e+J3JS']), hasSelectedAnswer: M, hasVoted: U, isEditingVote: F, isExpired: B, isInteractive: G, reactions: H, selectedAnswerIds: V, submitting: z, tapShouldOpenVotersModal: W, showResults: K } = w,
-        Y = (0, b.cZ)(H),
+    let { canTapAnswers: Z, canRemoveVote: R, canShowVoteCounts: L, canSubmitVote: D, expirationLabel: k = y.intl.string(y.t['e+J3JS']), hasSelectedAnswer: M, hasVoted: U, isEditingVote: F, isExpired: B, isInteractive: G, reactions: V, selectedAnswerIds: H, submitting: z, tapShouldOpenVotersModal: W, showResults: K } = w,
+        Y = (0, b.cZ)(V),
         X = y.intl.formatToPlainString(y.t.XRkuoa, { count: Y.toLocaleString() }),
         q = Math.max(
             ...P.map((e) => {
                 var t, n;
-                let r = I(H, ''.concat(e.answer_id));
+                let r = I(V, ''.concat(e.answer_id));
                 return null != (n = null == r || null == (t = r.count_details) ? void 0 : t.vote) ? n : 0;
             })
         ),
         Q = P.map((e) => {
             var t, n, l;
             let s = ''.concat(e.answer_id),
-                u = I(H, s),
+                u = I(V, s),
                 d = null != (n = null == u || null == (t = u.count_details) ? void 0 : t.vote) ? n : 0,
                 p = 0 === Y ? 0 : d / Y,
-                m = V.has(s),
+                m = H.has(s),
                 _ = d >= q && 0 !== d,
                 h = U && null != (l = null == u ? void 0 : u.me_vote) && l,
                 b = S({

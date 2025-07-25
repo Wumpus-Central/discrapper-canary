@@ -92,7 +92,7 @@ function j(e) {
         F = 'linear-gradient(45deg, '.concat(M, ', ').concat(U, ')'),
         B = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
         G = l.useRef(!1),
-        H = (0, d.O)(
+        V = (0, d.O)(
             (e) => {
                 if (!1 === G.current && e) {
                     var t;
@@ -101,7 +101,7 @@ function j(e) {
             },
             void 0
         ),
-        V =
+        H =
             _.wS && null != w
                 ? (0, i.jsx)(c.zx, {
                       look: c.zx.Looks.BLANK,
@@ -152,7 +152,7 @@ function j(e) {
                 };
         }, [k, L]);
     return (0, i.jsxs)('div', {
-        ref: H,
+        ref: V,
         className: C.embed,
         children: [
             Y &&
@@ -197,7 +197,7 @@ function j(e) {
                                             color: 'none',
                                             children: j
                                         }),
-                                        null != V ? V : z
+                                        null != H ? H : z
                                     ]
                                 }),
                             (0, i.jsxs)('div', {
@@ -230,7 +230,7 @@ function j(e) {
                                             })
                                         ]
                                     }),
-                                    null == j && (null != V ? V : z)
+                                    null == j && (null != H ? H : z)
                                 ]
                             }),
                             R.length > 0 &&

@@ -56,7 +56,7 @@ function v(e) {
     let B = null != v.channel ? (0, p.jD)(v.channel) : null,
         G = _.ZP.getName(D);
     F && !R ? (l = k ? C.intl.string(C.t.oBLoZG) : C.intl.formatToPlainString(C.t['0QJmAw'], { name: G })) : ((t = C.intl.string(C.t['I6JG4+'])), (n = d.Z.Button.Colors.GREEN), Z && ((t = C.intl.string(C.t['Q1W99/'])), (n = d.Z.Button.Colors.PRIMARY)), (l = k ? C.intl.string(C.t['4hyaHh']) : C.intl.formatToPlainString(C.t.QmlLEh, { name: G })));
-    let H = N === y.id && null != B ? (0, r.jsx)(d.Z.Channel, { channel: B }) : C.intl.formatToPlainString(C.t.u0vaDA, { guildName: y.name });
+    let V = N === y.id && null != B ? (0, r.jsx)(d.Z.Channel, { channel: B }) : C.intl.formatToPlainString(C.t.u0vaDA, { guildName: y.name });
     return (0, r.jsxs)(d.Z, {
         children: [
             (0, r.jsx)(d.Z.Header, { text: C.intl.string(C.t['wS+5WV']) }),
@@ -72,7 +72,7 @@ function v(e) {
                             (0, r.jsx)(d.Z.Info, {
                                 title: l,
                                 onClick: F && R ? U : void 0,
-                                children: H
+                                children: V
                             })
                         ]
                     }),

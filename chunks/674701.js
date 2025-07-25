@@ -50,21 +50,21 @@ function L(e) {
             }
         });
     }, [t, n]);
-    let H = () => (t === T.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t['L2s/Nz'], { numberOfYears: G }) : (0, y.Ou)(t)),
-        V = 'coachmark' === n,
-        z = V ? Z.innerContentCoachmark : Z.innerContent,
-        W = V ? Z.recipientUserAvatarCoachmark : Z.recipientUserAvatar,
-        K = V ? Z.currentUserAvatarCoachmark : Z.currentUserAvatar,
-        Y = V ? Z.subHeaderTextCoachmark : Z.subHeaderText,
-        X = V ? d.zx.Colors.BRAND : d.zx.Colors.WHITE,
-        q = V ? u.Z.colors.WHITE : u.Z.colors.BG_BRAND,
-        Q = V ? Z.buttonTextPrimaryCoachmark : Z.buttonTextPrimary,
-        J = V ? Z.buttonSecondaryCoachmark : Z.buttonSecondary,
-        $ = V ? Z.buttonTextSecondaryCoachmark : Z.buttonTextSecondary;
+    let V = () => (t === T.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t['L2s/Nz'], { numberOfYears: G }) : (0, y.Ou)(t)),
+        H = 'coachmark' === n,
+        z = H ? Z.innerContentCoachmark : Z.innerContent,
+        W = H ? Z.recipientUserAvatarCoachmark : Z.recipientUserAvatar,
+        K = H ? Z.currentUserAvatarCoachmark : Z.currentUserAvatar,
+        Y = H ? Z.subHeaderTextCoachmark : Z.subHeaderText,
+        X = H ? d.zx.Colors.BRAND : d.zx.Colors.WHITE,
+        q = H ? u.Z.colors.WHITE : u.Z.colors.BG_BRAND,
+        Q = H ? Z.buttonTextPrimaryCoachmark : Z.buttonTextPrimary,
+        J = H ? Z.buttonSecondaryCoachmark : Z.buttonSecondary,
+        $ = H ? Z.buttonTextSecondaryCoachmark : Z.buttonTextSecondary;
     return (0, i.jsx)('div', {
         className: o()(Z.content, {
             [Z.outerGlow]: M,
-            [Z.contentCoachmark]: V
+            [Z.contentCoachmark]: H
         }),
         onMouseEnter: a,
         onMouseLeave: R,
@@ -97,7 +97,7 @@ function L(e) {
                             children: [
                                 (0, i.jsx)(p.Text, {
                                     variant: 'text-md/medium',
-                                    color: V ? 'header-primary' : 'always-white',
+                                    color: H ? 'header-primary' : 'always-white',
                                     lineClamp: 3,
                                     children: t === T.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.BWJvAA, { friendUserName: O.ZP.getName(r) }) : (0, y.Ou)(t)
                                 }),
@@ -173,7 +173,7 @@ function L(e) {
                                         object: N.qAy.BUTTON_CTA,
                                         objectType: N.Qqv.GIFT
                                     },
-                                    giftMessage: H()
+                                    giftMessage: V()
                                 });
                             },
                             size: d.zx.Sizes.MEDIUM,

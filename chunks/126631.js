@@ -64,8 +64,7 @@ function x(e) {
                                 shouldRefocus: !0
                             });
                         });
-                    },
-                    parseCustomEmojisForCharCount: !0
+                    }
                 }),
                 (0, i.jsx)(s.nn4, {
                     id: b,

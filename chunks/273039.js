@@ -1,32 +1,32 @@
-(t.d(n, { Z: () => c }), t(388685));
-var l = t(255367),
-    i = t(73800),
-    o = t(120356),
-    r = t.n(o),
-    a = t(225433),
-    s = t(872194);
+(n.d(t, { Z: () => c }), n(388685));
+var i = n(255367),
+    r = n(73800),
+    l = n(120356),
+    o = n.n(l),
+    s = n(225433),
+    a = n(872194);
 function c(e) {
-    let { hasSetEmoji: n, onClick: t, children: o, className: c, buttonClassName: u, look: d } = e,
-        [m, f] = i.useState(!1),
-        j = i.useCallback(() => {
-            (t(), f(!1));
-        }, [t, f]);
-    return (0, l.jsxs)('div', {
-        className: r()(s.container, c),
+    let { hasSetEmoji: t, onClick: n, children: l, className: c, buttonClassName: d, look: u } = e,
+        [m, j] = r.useState(!1),
+        v = r.useCallback(() => {
+            (n(), j(!1));
+        }, [n, j]);
+    return (0, i.jsxs)('div', {
+        className: o()(a.container, c),
         onMouseEnter: () => {
-            if (n) return void f(!0);
-            f(!1);
+            if (t) return void j(!0);
+            j(!1);
         },
         onMouseLeave: () => {
-            f(!1);
+            j(!1);
         },
         children: [
-            o,
-            n && m
-                ? (0, l.jsx)(a.Z, {
-                      onClick: j,
-                      className: r()(s.removeButton, u),
-                      look: d
+            l,
+            t && m
+                ? (0, i.jsx)(s.Z, {
+                      onClick: v,
+                      className: o()(a.removeButton, d),
+                      look: u
                   })
                 : null
         ]

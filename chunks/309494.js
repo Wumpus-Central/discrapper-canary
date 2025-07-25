@@ -1,26 +1,24 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
-    a = n(755721),
-    l = n(481060),
-    o = n(320161),
-    c = n(572004),
-    d = n(51144),
-    u = n(785717),
-    m = n(475413),
-    p = n(388032),
-    g = n(517895);
-function h(e) {
+    a = n(481060),
+    l = n(320161),
+    o = n(572004),
+    c = n(51144),
+    d = n(785717),
+    u = n(388032),
+    m = n(927754);
+function p(e) {
     let { user: t, isHovering: n } = e,
-        { trackUserProfileAction: r } = (0, u.KZ)();
-    return c.wS
-        ? (0, i.jsx)(o.Z, {
-              text: p.intl.string(p.t.y5MwJy),
+        { trackUserProfileAction: r } = (0, d.KZ)();
+    return o.wS
+        ? (0, i.jsx)(l.Z, {
+              text: u.intl.string(u.t.y5MwJy),
               delay: 0,
               'aria-label': !1,
-              copyValue: d.ZP.getUserTag(t, {
+              copyValue: c.ZP.getUserTag(t, {
                   decoration: 'never',
                   identifiable: 'always'
               }),
@@ -28,7 +26,7 @@ function h(e) {
               children: (e) => {
                   var t, r;
                   return (0, i.jsx)(
-                      m.kF,
+                      a.P3F,
                       ((t = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
@@ -56,15 +54,9 @@ function h(e) {
                       })({}, e)),
                       (r = r =
                           {
-                              className: s()(g.hover, { [g.visible]: n }),
-                              innerClassName: g.hover,
-                              look: a.zx.Looks.BLANK,
-                              size: a.zx.Sizes.NONE,
-                              color: g.hoverColor,
-                              themeColor: 'none',
-                              grow: !1,
-                              'aria-label': p.intl.string(p.t.y5MwJy),
-                              children: (0, i.jsx)(l.TIy, {
+                              className: s()(m.copyButton, { [m.visible]: n }),
+                              'aria-label': u.intl.string(u.t.y5MwJy),
+                              children: (0, i.jsx)(a.TIy, {
                                   size: 'xs',
                                   color: 'currentColor'
                               })

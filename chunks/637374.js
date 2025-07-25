@@ -66,7 +66,7 @@ function G(e) {
     }
     return e;
 }
-function H(e, t) {
+function V(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -84,7 +84,7 @@ function H(e, t) {
         e
     );
 }
-function V(e) {
+function H(e) {
     let { onClick: t, libraryApplication: n } = e;
     return (0, r.jsxs)(d.P3F, {
         className: F.libraryLink,
@@ -143,7 +143,7 @@ class W extends i.Component {
         let {
             analyticsContext: { location: e }
         } = this.props;
-        return H(G({}, e), { section: k.jXE.GIFT_CODE_EMBED });
+        return V(G({}, e), { section: k.jXE.GIFT_CODE_EMBED });
     }
     renderActions(e) {
         let { libraryApplication: t } = this.props;
@@ -155,7 +155,7 @@ class W extends i.Component {
                         this.renderButton(e),
                         null == t || e.isSubscription
                             ? null
-                            : (0, r.jsx)(V, {
+                            : (0, r.jsx)(H, {
                                   onClick: this.handleViewLibrary,
                                   libraryApplication: t
                               })
@@ -189,7 +189,7 @@ class W extends i.Component {
             (e.redeemed || a || e.isClaimed || !n.verified) && ((l.color = u.zx.Colors.BRAND), (l.disabled = !0)),
             (0, r.jsx)(
                 u.zx,
-                H(G({}, l), {
+                V(G({}, l), {
                     className: (0, h.mO)(e) ? F.collectiblesAcceptButton : null,
                     size: u.zx.Sizes.SMALL,
                     children: e.redeemed ? U.intl.string(U.t.BTihoq) : null != e.giftStyle ? U.intl.string(U.t.TiZFqa) : U.intl.string(U.t.bUvv1d)
@@ -330,7 +330,7 @@ class W extends i.Component {
                     e.stopPropagation(),
                     A.default.track(k.rMx.OPEN_MODAL, {
                         type: 'gift_accept',
-                        location: H(G({}, this.analyticsLocation), { object: k.qAy.BUTTON_CTA })
+                        location: V(G({}, this.analyticsLocation), { object: k.qAy.BUTTON_CTA })
                     }));
                 let a = i !== k.uaV.CUSTOM_GIFT ? void 0 : r;
                 (0, C.V)({

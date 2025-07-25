@@ -1,5 +1,5 @@
 (n.d(t, {
-    Z: () => H,
+    Z: () => V,
     n: () => D
 }),
     n(415506),
@@ -338,7 +338,7 @@ async function G(e) {
             i()(!1, 'Unknown poll action type: '.concat(r));
     }
 }
-let H = {
+let V = {
     handlePollAnswerTapped: function (e) {
         var t,
             n,

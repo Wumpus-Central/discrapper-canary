@@ -39,8 +39,8 @@ var r = n(255367),
     F = n(358085),
     B = n(804739),
     G = n(758371),
-    H = n(276852),
-    V = n(984211),
+    V = n(276852),
+    H = n(984211),
     z = n(620662),
     W = n(994339),
     K = n(275920),
@@ -191,7 +191,7 @@ function eo(e) {
         return (0, r.jsx)(m.W, {
             header: y,
             title: e,
-            iconSrc: null != (o = (0, H.Z)(h, c.id)) ? o : void 0,
+            iconSrc: null != (o = (0, V.Z)(h, c.id)) ? o : void 0,
             info: u,
             actions: v,
             onClickContent: O,
@@ -309,7 +309,7 @@ function eu(e) {
             bot: L
         }),
         { staticBannerSrc: k, videoBannerSrc: U, bannerAspectRatio: B } = (0, _.E)(O),
-        H = !(0, W.Z)(w, T, O.id),
+        V = !(0, W.Z)(w, T, O.id),
         Y = er(T),
         q = (0, o.e7)([A.Z], () => A.Z.getGameByName(O.name), [O.name]),
         { openGameProfileModal: Q, isGameLaunchable: $ } = es(O.id, T.author.id),
@@ -337,7 +337,7 @@ function eu(e) {
         ep = (function (e) {
             let { presenceActivity: t, currentUserPresenceActivity: n, currentUserId: r, message: i, application: l, isEmbeddedApplication: a, isFrameApplication: o, isGameLaunchable: s } = e;
             if (i.author.id === r || !(0, W.Z)(t, i, l.id)) return !1;
-            let c = (0, V._)(t);
+            let c = (0, H._)(t);
             return !(!el(c) || ei(c) || ea(n, t) || er(i)) && ((!!a && !!o) || (!!F.isPlatformEmbedded && !!s));
         })({
             presenceActivity: w,
@@ -354,7 +354,7 @@ function eu(e) {
         eg = (function (e, t, n, r) {
             var i;
             if (t.author.id === r || !(0, W.Z)(e, t, n.id) || (null == (i = t.activity) ? void 0 : i.type) !== J.mFx.JOIN_REQUEST || !(0, z.Z)(e, J.xjy.JOIN)) return !1;
-            let l = (0, V._)(e);
+            let l = (0, H._)(e);
             return !(!el(l) || ei(l));
         })(w, T, O, j),
         e_ = i.useMemo(
@@ -450,8 +450,8 @@ function eu(e) {
         eE = i.useMemo(() => (null != Q ? Q : null != en ? en : null != eb && R ? eb : void 0), [R, Q, en, eb]),
         eC = i.useMemo(() => {
             let e = [];
-            return (H || null == e_ ? H && null != eh && e.push(eh) : e.push(e_), e);
-        }, [eh, H, e_]),
+            return (V || null == e_ ? V && null != eh && e.push(eh) : e.push(e_), e);
+        }, [eh, V, e_]),
         ex = (0, G.dQ)(O.name, null == (t = T.activity) ? void 0 : t.type),
         ev = (0, v.N)(O.id).some((e) => (0, E.ig)(e) === l.o.GLOBAL)
             ? (0, r.jsxs)(r.Fragment, {
@@ -465,7 +465,7 @@ function eu(e) {
               })
             : null,
         eO = (0, r.jsx)(ec, { presenceActivity: w });
-    if (H) {
+    if (V) {
         let e = (0, r.jsx)(s.Text, {
             variant: 'text-xs/medium',
             className: et.description,
@@ -518,7 +518,7 @@ function eu(e) {
             className: et.tagline,
             color: 'none',
             lineClamp: 2,
-            children: [Y ? (0, G.$v)(T, O, y, j, H) : ej, Y ? null : ev]
+            children: [Y ? (0, G.$v)(T, O, y, j, V) : ej, Y ? null : ev]
         }),
         eS = (0, r.jsxs)('div', {
             className: et.info,
@@ -575,7 +575,7 @@ function ed(e) {
             },
             [f]
         ),
-        { partySize: b, maxPartySize: E } = (0, V._)(f),
+        { partySize: b, maxPartySize: E } = (0, H._)(f),
         C = i.useMemo(
             () =>
                 h.map((e) => {

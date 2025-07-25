@@ -43,15 +43,15 @@ function y(e) {
         F = (0, b.Z)(P.id),
         B = U === N.id,
         G = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
-        H = (null == G ? void 0 : G.id) === N.author.id,
-        V = (0, u.m)(x.p9.TIER_2),
+        V = (null == G ? void 0 : G.id) === N.author.id,
+        H = (0, u.m)(x.p9.TIER_2),
         z = _.t(P);
     return (i.useEffect(() => {
         null == k && g.Z.shouldFetchWallpapers && h.k9();
     }, [k]),
     null == w)
         ? null
-        : ((I = H
+        : ((I = V
               ? v.intl.format(v.t.z847Tk, { wallpaper_name: null != (n = null == k ? void 0 : k.label) ? n : v.intl.string(v.t['UQMV/P']) })
               : v.intl.format(v.t['+lKndX'], {
                     username: null == L ? void 0 : L.nick,
@@ -61,8 +61,8 @@ function y(e) {
               ? D || R
                   ? z && B
                       ? (S = v.intl.formatToPlainString(v.t.PzTpVV, { wallpaperName: null != (j = null == k ? void 0 : k.label) ? j : v.intl.string(v.t['UQMV/P']) }))
-                      : H ||
-                        V ||
+                      : V ||
+                        H ||
                         !B ||
                         (S = v.intl.format(v.t.JwUhHh, {
                             onClickNitro: () => {
@@ -73,7 +73,7 @@ function y(e) {
               : (S = v.intl.string(v.t['6JSOu7'])),
           (null == F ? void 0 : F.isViewable) &&
               B &&
-              !H &&
+              !V &&
               (T = (0, r.jsx)(a.zx, {
                   className: O.action,
                   onClick: () => {

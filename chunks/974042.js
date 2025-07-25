@@ -247,18 +247,18 @@ class j {
         (v(this, '_rows', void 0), (this._rows = e));
     }
 }
-let x = !0,
-    A = !1,
+let A = !0,
+    x = !1,
     Z = E.pJs.ONLINE,
     w = new j(),
     L = !0,
     R = !1;
 function D() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    x && (e || (Z !== E.pJs.ONLINE && Z !== E.pJs.ADD_FRIEND)) && !A && ((x = !1), (A = !0), s.Z.fetchRelationships());
+    A && (e || (Z !== E.pJs.ONLINE && Z !== E.pJs.ADD_FRIEND)) && !x && ((A = !1), (x = !0), s.Z.fetchRelationships());
 }
 function k() {
-    if (((x = !0), L ? (A = !1) : D(), (w = w.reset()), R)) return;
+    if (((A = !0), L ? (x = !1) : D(), (w = w.reset()), R)) return;
     let e = w.getRelationshipCounts();
     Z = 0 === e[E.OGo.FRIEND] ? (0 !== e[E.OGo.PENDING_INCOMING] ? E.pJs.PENDING : E.pJs.ADD_FRIEND) : E.pJs.ONLINE;
 }
@@ -276,7 +276,7 @@ class G extends (r = a.ZP.Store) {
     }
     getState() {
         return {
-            fetching: A,
+            fetching: x,
             section: Z,
             rows: w
         };
@@ -295,10 +295,10 @@ let B = new G(o.Z, {
         return ((L = null != t), M(), !L);
     },
     LOAD_RELATIONSHIPS_SUCCESS: function () {
-        A = !1;
+        x = !1;
     },
     LOAD_RELATIONSHIPS_FAILURE: function () {
-        ((x = !0), (A = !0));
+        ((A = !0), (x = !0));
     },
     FRIENDS_SET_INITIAL_SECTION: function (e) {
         ((Z = e.section), (R = !0));

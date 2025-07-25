@@ -76,7 +76,7 @@ function R(e, t) {
 }
 function P(e) {
     return (0, r.jsx)(y.Z, {
-        innerClassName: S.button,
+        className: S.button,
         'aria-label': I.intl.string(I.t.Z1RnTk),
         isActive: !1,
         noHover: !0,
@@ -103,7 +103,7 @@ function w(e) {
         R(
             N(
                 {
-                    innerClassName: S.button,
+                    className: S.button,
                     'aria-label': I.intl.string(I.t.Z1RnTk),
                     isActive: !1,
                     noHover: !0,

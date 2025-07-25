@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => V }), n(953529), n(388685));
+(n.d(t, { Z: () => H }), n(953529), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -210,7 +210,7 @@ let B = (e) => {
             M = y.ZP.canUseCustomStickersEverywhere(k),
             B = (0, o.e7)([x.Z], () => x.Z.getGuild(n.guild_id)),
             G = null != B,
-            [H, V] = i.useState(!1),
+            [V, H] = i.useState(!1),
             [z, W] = i.useState(null),
             K = i.useMemo(
                 () => ({
@@ -330,7 +330,7 @@ let B = (e) => {
                                               children: [
                                                   (0, r.jsx)(c.P3F, {
                                                       onClick: () => {
-                                                          (E(), V(!H));
+                                                          (E(), H(!V));
                                                       },
                                                       className: R.showMoreEmojis,
                                                       children: (0, r.jsxs)(m.Z, {
@@ -344,12 +344,12 @@ let B = (e) => {
                                                               (0, r.jsx)(c.CJ0, {
                                                                   size: 'md',
                                                                   color: 'currentColor',
-                                                                  className: a()(R.showMoreEmojisArrow, { [R.showMoreEmojisArrowCollapsed]: !H })
+                                                                  className: a()(R.showMoreEmojisArrow, { [R.showMoreEmojisArrowCollapsed]: !V })
                                                               })
                                                           ]
                                                       })
                                                   }),
-                                                  H &&
+                                                  V &&
                                                       (0, r.jsx)(m.Z, {
                                                           wrap: m.Z.Wrap.WRAP,
                                                           align: m.Z.Align.START,
@@ -423,7 +423,7 @@ let B = (e) => {
               })
             : (0, r.jsx)(b.SE, { className: Z.popoutLoader });
     };
-function H(e) {
+function V(e) {
     let { channel: t, closePopout: n, sticker: i } = e;
     return (0, r.jsx)(b.W_, {
         className: Z.popoutContent,
@@ -437,7 +437,7 @@ function H(e) {
         })
     });
 }
-let V = (e) => {
+let H = (e) => {
     let { renderableSticker: t, channel: n, closePopout: i, refreshPositionKey: l } = e,
         [a, o] = (0, j.XW)(t, !0);
     return null != a && (0, S.jl)(a)
@@ -456,7 +456,7 @@ let V = (e) => {
             })
           : o
             ? o && null == a
-                ? (0, r.jsx)(H, {
+                ? (0, r.jsx)(V, {
                       channel: n,
                       closePopout: i,
                       sticker: t

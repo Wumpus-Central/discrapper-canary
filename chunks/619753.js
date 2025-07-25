@@ -134,16 +134,16 @@ let F = i.memo(function (e) {
             let t = A.current[e];
             null == t || t.jumpTo();
         }, []),
-        H = (0, o.ZP)({
+        V = (0, o.ZP)({
             navId: 'search-results',
             itemCount: R,
             focusedIndex: 0,
             setFocus: F,
             onSelect: B
         }),
-        V = N.Z.getSearchResultsQuery(l),
+        H = N.Z.getSearchResultsQuery(l),
         z = (0, w.k)(l) === L.aib.FAVORITES,
-        W = (0, d.nC)(null != (t = null == V ? void 0 : V.content) ? t : ''),
+        W = (0, d.nC)(null != (t = null == H ? void 0 : H.content) ? t : ''),
         K = P.map((e) => {
             let { channel: t, results: n, startIndex: i } = e;
             return (0, r.jsx)(
@@ -160,7 +160,7 @@ let F = i.memo(function (e) {
                     renderEmbeds: a,
                     offset: x,
                     jumpToMessage: S,
-                    listNavigator: H,
+                    listNavigator: V,
                     favoriteSearch: z
                 },
                 ''.concat(t.id, '-').concat(i)
@@ -177,7 +177,7 @@ let F = i.memo(function (e) {
         children: [
             (0, r.jsx)(
                 'div',
-                U(M({ ref: Y }, H.getContainerProps(), X), {
+                U(M({ ref: Y }, V.getContainerProps(), X), {
                     'aria-busy': y,
                     children: K
                 })
@@ -250,15 +250,15 @@ function G(e) {
             let t = j.Z.getChannel(e);
             null != t && (S.Z.can(L.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, x.Kh)(t.id);
         }, []),
-        H = null != a ? (0, m.F6)(a, A.default, T.Z, !1) : '???',
-        V = Z && null != a.guild_id ? (null == (t = I.Z.getGuild(a.guild_id)) ? void 0 : t.name) : null,
+        V = null != a ? (0, m.F6)(a, A.default, T.Z, !1) : '???',
+        H = Z && null != a.guild_id ? (null == (t = I.Z.getGuild(a.guild_id)) ? void 0 : t.name) : null,
         z = (null == a ? void 0 : a.parent_id) != null ? j.Z.getChannel(a.parent_id) : null,
         W = null != (n = null == z ? void 0 : z.name) ? n : null,
         K = null != (l = (0, f.KS)(a)) ? l : s.VL1,
         Y = S.Z.can(L.Plq.MANAGE_MESSAGES, a),
         { content: X } = (0, b.ZP)(
             {
-                content: H,
+                content: V,
                 embeds: []
             },
             {
@@ -272,7 +272,7 @@ function G(e) {
         let e = q.current;
         null != e && null != e.offsetWidth && null != e.scrollWidth && J(e.offsetWidth < e.scrollWidth);
     }, []);
-    let $ = [H, W, V].filter((e) => null != e).join(', ');
+    let $ = [V, W, H].filter((e) => null != e).join(', ');
     return (0, r.jsx)(g.aQ.Provider, {
         value: (0, h.Z)(D, Y),
         children: (0, r.jsxs)('ul', {
@@ -291,7 +291,7 @@ function G(e) {
                                 color: 'currentColor'
                             }),
                             (0, r.jsx)(s.ua7, {
-                                text: H,
+                                text: V,
                                 shouldShow: Q,
                                 children: (e) =>
                                     (0, r.jsxs)(
@@ -299,7 +299,7 @@ function G(e) {
                                         U(M({}, e), {
                                             ref: q,
                                             className: k.channelNameText,
-                                            children: [Z && null !== V && ''.concat(V, ' : '), X]
+                                            children: [Z && null !== H && ''.concat(H, ' : '), X]
                                         })
                                     )
                             }),
