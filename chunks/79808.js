@@ -1,51 +1,51 @@
 (n.d(t, { Z: () => m }), n(388685));
-var a = n(255367),
-    i = n(73800),
+var i = n(255367),
+    a = n(73800),
     o = n(120356),
     s = n.n(o),
-    r = n(873546),
-    l = n(636298),
+    l = n(873546),
+    r = n(636298),
     c = n(404975),
-    d = n(178167),
-    u = n(59662),
+    u = n(178167),
+    d = n(59662),
     f = n(254204);
 function m(e) {
-    let { tree: t, initialPanel: n, onClose: o, sidebarHeader: m, sidebarFooter: h } = e,
-        [x, v] = i.useState(!0),
-        [b, j] = i.useState([n]),
-        [p, g] = i.useState(0),
-        N = i.useMemo(
+    let { tree: t, initialPanel: n, onClose: o, sidebarHeader: m, sidebarFooter: v } = e,
+        [x, g] = a.useState(!0),
+        [b, h] = a.useState([n]),
+        [j, p] = a.useState(0),
+        N = a.useMemo(
             () => ({
                 history: b,
-                activeIndex: p,
+                activeIndex: j,
                 showNavigationMobile: x,
                 forward() {
-                    g(Math.min(p + 1, b.length - 1));
+                    p(Math.min(j + 1, b.length - 1));
                 },
                 back() {
-                    g(Math.max(p - 1, 0));
+                    p(Math.max(j - 1, 0));
                 },
                 pushPanel(e) {
-                    (j([...b.slice(0, p + 1), e]), g(p + 1));
+                    (h([...b.slice(0, j + 1), e]), p(j + 1));
                 }
             }),
-            [p, b, x]
+            [j, b, x]
         );
-    return (0, a.jsx)(u.j.Provider, {
+    return (0, i.jsx)(d.j.Provider, {
         value: N,
-        children: (0, a.jsxs)('div', {
-            className: s()(f.container, { [f.mobile]: r.tq }),
+        children: (0, i.jsxs)('div', {
+            className: s()(f.container, { [f.mobile]: l.tq }),
             children: [
-                (0, a.jsx)(d.d, { onClose: o }),
-                (0, a.jsx)(c.P, {
+                (0, i.jsx)(u.d, { onClose: o }),
+                (0, i.jsx)(c.P, {
                     tree: t,
                     header: m,
-                    footer: h
+                    footer: v
                 }),
-                (0, a.jsx)(l.Z, {
+                (0, i.jsx)(r.Z, {
                     onClose: o,
-                    setShowNavigationMobile: v,
-                    setting: b[p]
+                    setShowNavigationMobile: g,
+                    setting: b[j]
                 })
             ]
         })

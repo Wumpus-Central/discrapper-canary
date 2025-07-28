@@ -96,8 +96,8 @@ function _() {
             krispModels: E,
             krispModelOverride: S,
             inputMode: P,
-            echoCancellation: w,
-            autoThreshold: I,
+            echoCancellation: I,
+            autoThreshold: w,
             vadUseKrisp: R,
             vadKrispActivationThreshold: k,
             noiseCancellation: A,
@@ -233,12 +233,12 @@ function _() {
                                     tag: c.RB0.H3,
                                     children: (0, n.jsx)(c.j7V, {
                                         hideBorder: !0,
-                                        value: I,
+                                        value: w,
                                         onChange: (e) => d.Z.setMode(b.pM.VOICE_ACTIVITY, { autoThreshold: e }),
                                         children: 'Auto Threshold'
                                     })
                                 }),
-                                I &&
+                                w &&
                                     (0, n.jsxs)(n.Fragment, {
                                         children: [
                                             (0, n.jsx)(c.hjN, {
@@ -270,7 +270,7 @@ function _() {
                         tag: c.RB0.H3,
                         children: (0, n.jsx)(c.j7V, {
                             hideBorder: !0,
-                            value: w,
+                            value: I,
                             onChange: (e) => d.Z.setEchoCancellation(e),
                             children: 'Echo Cancellation'
                         })
@@ -305,7 +305,7 @@ function _() {
                                                       audioBuffer: l,
                                                       createdAt: Date.now(),
                                                       suppression: U,
-                                                      echoCancellation: w,
+                                                      echoCancellation: I,
                                                       krispSuppressionLevel: j
                                                   }
                                               ]);

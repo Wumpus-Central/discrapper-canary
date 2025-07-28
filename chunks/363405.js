@@ -3,5 +3,6 @@ e.exports = {
     invoiceTable: 'invoiceTable__968a4',
     cancelImage: 'cancelImage__968a4',
     invoiceCancelRow: 'invoiceCancelRow__968a4',
-    error: 'error__968a4'
+    error: 'error__968a4',
+    textButton: 'textButton__968a4'
 };

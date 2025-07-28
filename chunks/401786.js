@@ -59,16 +59,20 @@ function P(e) {
                     ? null
                     : (0, i.jsxs)(o.mzw, {
                           justify: g.Z.Justify.START,
+                          align: g.Z.Align.CENTER,
                           children: [
                               (0, i.jsx)(o.zxk, {
                                   variant: 'primary',
                                   text: y.intl.string(y.t.PDTjLC),
                                   onClick: s
                               }),
-                              (0, i.jsx)(o.Avr, {
-                                  variant: 'primary',
-                                  text: y.intl.string(y.t['ETE/oK']),
-                                  onClick: a
+                              (0, i.jsx)('div', {
+                                  className: A.textButton,
+                                  children: (0, i.jsx)(o.Avr, {
+                                      variant: 'primary',
+                                      text: y.intl.string(y.t['ETE/oK']),
+                                      onClick: a
+                                  })
                               })
                           ]
                       })

@@ -75,8 +75,8 @@ function y(e) {
     var t, a, l, h, y, C, O;
     let { subscription: N, onUpdated: T } = e,
         [E, S] = r.useState(!1),
-        [P, w] = r.useState(!1),
-        [I, R] = r.useState(!1),
+        [P, I] = r.useState(!1),
+        [w, R] = r.useState(!1),
         [k, A] = r.useState(!1),
         [Z, D] = r.useState(null),
         L = (e) => ((null == e && (e = N.status), e in j) ? j[e] : 'Unknown status '.concat(e)),
@@ -210,7 +210,7 @@ function y(e) {
                     children: [
                         (0, n.jsxs)(o.P3F, {
                             onClick: () => {
-                                R(!I);
+                                R(!w);
                             },
                             className: v.collapsablePaneHeader,
                             children: [
@@ -220,10 +220,10 @@ function y(e) {
                                         children: 'Trial Info'
                                     })
                                 }),
-                                (0, n.jsx)(c.Z, { direction: I ? c.Z.Directions.UP : c.Z.Directions.DOWN })
+                                (0, n.jsx)(c.Z, { direction: w ? c.Z.Directions.UP : c.Z.Directions.DOWN })
                             ]
                         }),
-                        I &&
+                        w &&
                             (0, n.jsxs)('ul', {
                                 className: v.collapsiblePaneList,
                                 children: [
@@ -355,7 +355,7 @@ function y(e) {
                 children: [
                     (0, n.jsxs)(o.P3F, {
                         onClick: () => {
-                            w(!P);
+                            I(!P);
                         },
                         className: v.collapsablePaneHeader,
                         children: [

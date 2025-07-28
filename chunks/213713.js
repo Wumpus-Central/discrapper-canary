@@ -26,12 +26,12 @@ var n = a(255367),
     E = a(650613),
     S = a(789086),
     P = a(206583),
-    w = a(403542),
-    I = a(616257);
+    I = a(403542),
+    w = a(616257);
 let R = [
     {
         key: 'type',
-        cellClassName: i()(w.cell, w.cellType),
+        cellClassName: i()(I.cell, I.cellType),
         render(e) {
             let { type: t } = e;
             return (0, n.jsx)(x.Text, {
@@ -42,7 +42,7 @@ let R = [
     },
     {
         key: 'count',
-        cellClassName: i()(w.cell, w.cellCount),
+        cellClassName: i()(I.cell, I.cellCount),
         render(e) {
             let { entries: t } = e;
             return (0, n.jsx)('div', {
@@ -55,7 +55,7 @@ let R = [
     },
     {
         key: 'only?',
-        cellClassName: w.cell,
+        cellClassName: I.cell,
         render(e) {
             let { type: t } = e;
             return (0, n.jsx)(k, { type: t });
@@ -128,9 +128,9 @@ function A() {
         U = (0, b.Z)(M).filter(y.lm),
         F = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
     return (0, n.jsx)('div', {
-        className: I.panel,
+        className: w.panel,
         children: (0, n.jsxs)(x.zJl, {
-            className: w.content,
+            className: I.content,
             children: [
                 (0, n.jsxs)(x.hjN, {
                     children: [

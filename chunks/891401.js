@@ -98,8 +98,8 @@ function N() {
             [null == l ? void 0 : l.wallpaperId]
         ),
         T = r.useCallback(() => E(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        w = r.useCallback(() => P(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        I = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        I = r.useCallback(() => P(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        w = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         R = r.useCallback(
             (e) => {
                 null != s && (0, p.i)(s, { token_mix_amount: Math.round(e) });
@@ -241,7 +241,7 @@ function N() {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
-                                    onClick: w,
+                                    onClick: I,
                                     className: _.removeButton
                                 })
                             ]
@@ -311,7 +311,7 @@ function N() {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
-                                    onClick: I,
+                                    onClick: w,
                                     className: _.removeButton
                                 })
                             ]

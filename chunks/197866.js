@@ -8,6 +8,5 @@ e.exports = {
     appIcon: 'appIcon__727be',
     description: 'description__727be',
     openStoreButton: 'openStoreButton__727be',
-    skuPurchaseButtons: 'skuPurchaseButtons__727be',
-    viewDetailsButton: 'viewDetailsButton__727be'
+    skuPurchaseButtons: 'skuPurchaseButtons__727be'
 };

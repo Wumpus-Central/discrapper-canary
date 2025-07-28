@@ -333,7 +333,6 @@ var r = (function (e) {
         (e.COLLECTIBLES_EXPIRY_MODAL = 'collectibles expiry modal'),
         (e.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL = 'collectibles gift customization modal'),
         (e.COLLECTIBLES_MOBILE_GIFT_MODAL = 'collectibles mobile gift modal'),
-        (e.PREMIUM_SUBSCRIPTION_APRIL_CAMPAIGN_MODAL = 'premium subscription april campaign modal'),
         (e.PREMIUM_BILLING_INFO = 'premium billing info'),
         (e.PREMIUM_SUBSCRIPTION_DETAILS = 'premium subscription details'),
         (e.APP_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE = 'application subscription payment source with invoice'),

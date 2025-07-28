@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => p }), a(642613), a(388685));
+(a.d(t, { Z: () => x }), a(642613), a(388685));
 var n = a(255367),
     r = a(73800),
     l = a(481060),
@@ -8,45 +8,44 @@ var n = a(255367),
     c = a(981631),
     d = a(546147),
     u = a(616257);
-function m(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var a = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(a);
-        ('function' == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(a).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(a, e).enumerable;
-                })
-            )),
-            n.forEach(function (t) {
-                var n;
-                ((n = a[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: n,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = n));
-            }));
-    }
-    return e;
-}
-let x = {
-    PremiumSubscriptionAprilMarketingDecoModal: async () => {
-        let { default: e } = await a.e('18327').then(a.bind(a, 731433));
-        return (t) => (0, n.jsx)(e, m({}, t));
-    },
+let m = {
     CollectiblesExpiryModal: async () => {
         let { default: e } = await a.e('77370').then(a.bind(a, 83950));
-        return (t) => (0, n.jsx)(e, m({}, t));
+        return (t) =>
+            (0, n.jsx)(
+                e,
+                (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var a = null != arguments[t] ? arguments[t] : {},
+                            n = Object.keys(a);
+                        ('function' == typeof Object.getOwnPropertySymbols &&
+                            (n = n.concat(
+                                Object.getOwnPropertySymbols(a).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(a, e).enumerable;
+                                })
+                            )),
+                            n.forEach(function (t) {
+                                var n;
+                                ((n = a[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: n,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = n));
+                            }));
+                    }
+                    return e;
+                })({}, t)
+            );
     }
 };
-function p() {
+function x() {
     let e = r.useMemo(
             () =>
-                Object.keys(x)
+                Object.keys(m)
                     .map((e) => ({
                         label: e,
                         value: e
@@ -81,7 +80,7 @@ function p() {
                                 (0, n.jsx)(l.zxk, {
                                     variant: 'primary',
                                     text: 'Open',
-                                    onClick: () => (0, l.ZDy)(x[t])
+                                    onClick: () => (0, l.ZDy)(m[t])
                                 })
                             ]
                         })

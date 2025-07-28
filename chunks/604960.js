@@ -1,16 +1,16 @@
 (n.r(t), n.d(t, { default: () => c }));
-var a = n(255367);
+var i = n(255367);
 n(73800);
-var i = n(37234),
+var a = n(37234),
     o = n(79808),
     s = n(604227),
-    r = n(908820),
-    l = n(640896);
+    l = n(92959),
+    r = n(640896);
 function c() {
-    return (0, a.jsx)(o.Z, {
-        onClose: i.xf,
-        tree: l.Z,
+    return (0, i.jsx)(o.Z, {
+        onClose: a.xf,
+        tree: r.Z,
         sidebarFooter: s.Z,
-        initialPanel: r.Z
+        initialPanel: l.Z
     });
 }

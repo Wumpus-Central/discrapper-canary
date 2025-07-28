@@ -49,7 +49,7 @@ function P(e) {
         children: (0, n.jsx)('dl', { children: t })
     });
 }
-function w(e) {
+function I(e) {
     let { name: t, children: a, copyValue: l } = e,
         [i, s] = r.useState(!1);
     return (
@@ -85,7 +85,7 @@ function w(e) {
         })
     );
 }
-let I = new Set(['client_performance_cpu', 'client_performance_memory']),
+let w = new Set(['client_performance_cpu', 'client_performance_memory']),
     R = (e, t, a) => {
         let n = e.filter((e) => e.event === t);
         if (0 === n.length)
@@ -222,13 +222,13 @@ let I = new Set(['client_performance_cpu', 'client_performance_memory']),
                         (0, n.jsx)(P, {
                             children: Object.entries(a).map((e) => {
                                 let [a, r] = e,
-                                    l = I.has(a) ? R(c, t, a) : null;
+                                    l = w.has(a) ? R(c, t, a) : null;
                                 return (0, n.jsxs)(
                                     'div',
                                     {
                                         children: [
                                             (0, n.jsx)(
-                                                w,
+                                                I,
                                                 {
                                                     name: ''.concat(a, ':'),
                                                     copyValue: { [a]: r || null },
@@ -245,7 +245,7 @@ let I = new Set(['client_performance_cpu', 'client_performance_memory']),
                                             null !== l &&
                                                 null !== l.average &&
                                                 (0, n.jsx)(
-                                                    w,
+                                                    I,
                                                     {
                                                         name: ''.concat(a, '_avg:'),
                                                         copyValue: { [a]: r || null },
@@ -318,7 +318,7 @@ function D() {
         }),
         [f, v] = r.useState(void 0),
         _ = b.find((e) => e.key === f),
-        { TabBar: P, renderSelectedTab: w } = (0, O.ZP)({ tabs: k }, []);
+        { TabBar: P, renderSelectedTab: I } = (0, O.ZP)({ tabs: k }, []);
     return (0, n.jsxs)('div', {
         ref: e,
         className: i()(E.panel, T.panel),
@@ -383,7 +383,7 @@ function D() {
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [
                         (0, n.jsx)(P, {}),
-                        w({
+                        I({
                             loggedEvent: _,
                             onClose: () => v(void 0),
                             filteredEvents: b

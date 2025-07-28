@@ -1,42 +1,42 @@
 (n.d(t, { P: () => f }), n(35282));
-var a = n(255367),
-    i = n(120356),
-    o = n.n(i),
+var i = n(255367),
+    a = n(120356),
+    o = n.n(a),
     s = n(873546),
-    r = n(481060),
-    l = n(59662),
+    l = n(481060),
+    r = n(59662),
     c = n(829210),
-    d = n(388032),
-    u = n(476523);
+    u = n(388032),
+    d = n(476523);
 function f(e) {
-    let { tree: t, header: n, footer: i } = e,
-        { showNavigationMobile: f } = (0, l.t)();
-    return (0, a.jsxs)('div', {
-        className: o()(u.sidebar, {
-            [u.mobile]: s.tq,
-            [u.mobileNavigationOpen]: f
+    let { tree: t, header: n, footer: a } = e,
+        { showNavigationMobile: f } = (0, r.t)();
+    return (0, i.jsxs)('div', {
+        className: o()(d.sidebar, {
+            [d.mobile]: s.tq,
+            [d.mobileNavigationOpen]: f
         }),
         children: [
-            null != n && (0, a.jsx)(n, {}),
-            (0, a.jsx)(r.E1j, {
-                placeholder: d.intl.string(d.t['5h0QOD']),
+            null != n && (0, i.jsx)(n, {}),
+            (0, i.jsx)(l.E1j, {
+                placeholder: u.intl.string(u.t['5h0QOD']),
                 query: '',
                 onChange: () => {},
-                size: r.E1j.Sizes.MEDIUM,
-                className: u.search
+                size: l.E1j.Sizes.MEDIUM,
+                className: d.search
             }),
-            (0, a.jsx)(r.zJl, {
-                className: u.navScroller,
+            (0, i.jsx)(l.zJl, {
+                className: d.navScroller,
                 fade: !0,
-                children: (0, a.jsx)('nav', {
-                    className: u.nav,
-                    children: (0, a.jsx)('ul', { children: t.root.data.layout.map((e) => (0, a.jsx)('li', { children: (0, a.jsx)(c.Z, { node: e }) }, e.key)) })
+                children: (0, i.jsx)('nav', {
+                    className: d.nav,
+                    children: (0, i.jsx)('ul', { children: t.root.data.layout.map((e) => (0, i.jsx)('li', { children: (0, i.jsx)(c.Z, { node: e }) }, e.key)) })
                 })
             }),
-            null != i &&
-                (0, a.jsx)('footer', {
-                    className: u.footer,
-                    children: (0, a.jsx)(i, {})
+            null != a &&
+                (0, i.jsx)('footer', {
+                    className: d.footer,
+                    children: (0, i.jsx)(a, {})
                 })
         ]
     });

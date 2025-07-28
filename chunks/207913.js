@@ -101,6 +101,7 @@ function V(e) {
         }),
         T = (0, r.jsx)('div', {
             className: U.usernameTagContainer,
+            inert: !0,
             children: (0, r.jsx)(v.Z, {
                 channel: n,
                 message: t,
@@ -204,6 +205,7 @@ function V(e) {
                                     direction: 'horizontal',
                                     align: 'center',
                                     gap: 4,
+                                    inert: !0,
                                     className: o()(U.channelName, {
                                         [U.unread]: s,
                                         [U.selected]: a
@@ -258,6 +260,7 @@ function F(e) {
     return (0, r.jsxs)(u.Kqy, {
         direction: 'horizontal',
         gap: 4,
+        inert: !0,
         children: [
             (0, r.jsx)(h.ZP, {
                 users: n,
@@ -356,6 +359,7 @@ function z(e) {
         direction: 'horizontal',
         gap: 4,
         align: 'center',
+        inert: !0,
         children: [
             null != c &&
                 (0, r.jsx)(c, {

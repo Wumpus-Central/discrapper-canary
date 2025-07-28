@@ -102,10 +102,10 @@ function _() {
         C();
     }, [C]);
     let P = (e) => e.filter((e) => null != e.endsAt && e.endsAt > new Date() && e.type === p.qc2.FRACTIONAL_REDEMPTION),
-        w = (e) => e.filter((e) => Object.values(s.a).includes(e.skuId) && null == e.startsAt);
+        I = (e) => e.filter((e) => Object.values(s.a).includes(e.skuId) && null == e.startsAt);
     return (
         r.useEffect(() => {
-            (v(P(E)), y(w(E)));
+            (v(P(E)), y(I(E)));
         }, [E]),
         (0, n.jsx)(c.zJl, {
             className: f.panel,
