@@ -222,7 +222,7 @@ function p(A, e, t) {
         let t = setTimeout(async () => {
             let e = null;
             try {
-                let t = await A.makeRequest();
+                let t = await A.makeRequest({ rejectWithError: !1 });
                 e = null == t ? void 0 : t.body;
             } catch (A) {
                 e = null;

@@ -15,6 +15,6 @@ let c = new a.Z({
         (0, r.showToast)((0, r.createToast)(l.intl.string(l.t.pqvKWF), r.ToastType.FAILURE));
     },
     onTokenSet() {
-        (0, r.Mr3)(o.Ui);
+        ((0, r.Mr3)(o.Ui), (0, r.Mr3)(o._5));
     }
 });

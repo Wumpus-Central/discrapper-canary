@@ -1,107 +1,107 @@
-(n.d(t, { Z: () => h }), n(388685));
-var r = n(255367),
-    s = n(73800),
-    i = n(120356),
-    l = n.n(i),
-    a = n(652141),
-    o = n(481060),
-    c = n(144114),
-    u = n(317175),
-    d = n(764731);
-function h(e) {
-    let { show: t, alpha2: n, countryCode: i } = e,
-        h = s.useRef(null),
+(r.d(t, { Z: () => d }), r(388685));
+var n = r(255367),
+    s = r(73800),
+    i = r(120356),
+    l = r.n(i),
+    o = r(652141),
+    a = r(481060),
+    c = r(144114),
+    u = r(317175),
+    h = r(764731);
+function d(e) {
+    let { show: t, alpha2: r, countryCode: i } = e,
+        d = s.useRef(null),
         p = s.useRef(null),
         [m, f] = s.useState(0),
-        [x, g] = s.useState(!1);
+        [g, b] = s.useState(!1);
     s.useEffect(() => {
         function e() {
-            var e, n;
-            f(t && null != (n = null == (e = p.current) ? void 0 : e.getBoundingClientRect().width) ? n : 0);
+            var e, r;
+            f(t && null != (r = null == (e = p.current) ? void 0 : e.getBoundingClientRect().width) ? r : 0);
         }
         return (e(), window.addEventListener('resize', e), () => window.removeEventListener('resize', e));
-    }, [t, n, i]);
-    let j = (0, o.q_F)({
+    }, [t, r, i]);
+    let j = (0, a.q_F)({
             width: ''.concat(m, 'px'),
             onStart: () => {
-                g(!0);
+                b(!0);
             },
             onRest: () => {
-                g(!1);
+                b(!1);
             }
         }),
-        v = (e) => {
+        y = (e) => {
             c.Z.setCountryCode(e);
         };
-    return (0, r.jsx)(o.yRy, {
-        targetElementRef: h,
+    return (0, n.jsx)(a.yRy, {
+        targetElementRef: d,
         position: 'top',
         renderPopout: (e) =>
-            (0, r.jsx)(u.Z, {
-                className: d.popout,
+            (0, n.jsx)(u.Z, {
+                className: h.popout,
                 onClick: (t) => {
-                    (v(t), e.closePopout());
+                    (y(t), e.closePopout());
                 }
             }),
         children: (e) => {
             var s, c;
-            return (0, r.jsx)('div', {
-                className: l()(d.outerContainer, { [d.hidden]: !(t || x) }),
-                ref: h,
-                children: (0, r.jsx)(a.animated.div, {
-                    className: d.container,
+            return (0, n.jsx)('div', {
+                className: l()(h.outerContainer, { [h.hidden]: !(t || g) }),
+                ref: d,
+                children: (0, n.jsx)(o.animated.div, {
+                    className: h.container,
                     style: j,
-                    children: (0, r.jsxs)('div', {
-                        className: d.innerContainer,
+                    children: (0, n.jsxs)('div', {
+                        className: h.innerContainer,
                         ref: p,
                         children: [
-                            (0, r.jsxs)(
-                                o.P3F,
+                            (0, n.jsxs)(
+                                a.P3F,
                                 ((s = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
-                                        var n = null != arguments[t] ? arguments[t] : {},
-                                            r = Object.keys(n);
+                                        var r = null != arguments[t] ? arguments[t] : {},
+                                            n = Object.keys(r);
                                         ('function' == typeof Object.getOwnPropertySymbols &&
-                                            (r = r.concat(
-                                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                            (n = n.concat(
+                                                Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                                 })
                                             )),
-                                            r.forEach(function (t) {
-                                                var r;
-                                                ((r = n[t]),
+                                            n.forEach(function (t) {
+                                                var n;
+                                                ((n = r[t]),
                                                     t in e
                                                         ? Object.defineProperty(e, t, {
-                                                              value: r,
+                                                              value: n,
                                                               enumerable: !0,
                                                               configurable: !0,
                                                               writable: !0
                                                           })
-                                                        : (e[t] = r));
+                                                        : (e[t] = n));
                                             }));
                                     }
                                     return e;
                                 })({}, e)),
                                 (c = c =
                                     {
-                                        className: d.countryCode,
-                                        children: [n, ' ', i]
+                                        className: h.countryCode,
+                                        children: [r, ' ', i]
                                     }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(c))
                                     : (function (e, t) {
-                                          var n = Object.keys(e);
+                                          var r = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
-                                              var r = Object.getOwnPropertySymbols(e);
-                                              n.push.apply(n, r);
+                                              var n = Object.getOwnPropertySymbols(e);
+                                              r.push.apply(r, n);
                                           }
-                                          return n;
+                                          return r;
                                       })(Object(c)).forEach(function (e) {
                                           Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(c, e));
                                       }),
                                 s)
                             ),
-                            (0, r.jsx)('div', { className: d.separator })
+                            (0, n.jsx)('div', { className: h.separator })
                         ]
                     })
                 })

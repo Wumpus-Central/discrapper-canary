@@ -1,44 +1,44 @@
-n.d(t, { Z: () => h });
-var r = n(255367);
-n(73800);
-var s = n(755721),
-    i = n(481060),
-    l = n(600164),
-    a = n(7557),
-    o = n(388905),
-    c = n(388032),
-    u = n(621198),
-    d = n(20493);
-function h(e) {
-    let { title: t, subtitle: n, error: h, onSubmit: p, onCancel: m } = e;
-    return (0, r.jsxs)(l.Z, {
+r.d(t, { Z: () => d });
+var n = r(255367);
+r(73800);
+var s = r(755721),
+    i = r(481060),
+    l = r(600164),
+    o = r(7557),
+    a = r(388905),
+    c = r(388032),
+    u = r(621198),
+    h = r(20493);
+function d(e) {
+    let { title: t, subtitle: r, error: d, onSubmit: p, onCancel: m } = e;
+    return (0, n.jsxs)(l.Z, {
         direction: l.Z.Direction.VERTICAL,
         children: [
-            (0, r.jsx)(o.Dx, {
-                className: d.marginBottom8,
+            (0, n.jsx)(a.Dx, {
+                className: h.marginBottom8,
                 children: t
             }),
-            (0, r.jsx)(o.DK, {
+            (0, n.jsx)(a.DK, {
                 className: u.subTitle,
-                children: n
+                children: r
             }),
-            (0, r.jsxs)('div', {
+            (0, n.jsxs)('div', {
                 children: [
-                    (0, r.jsx)(a.Z, {
+                    (0, n.jsx)(o.Z, {
                         inputClassName: u.codeInput,
                         onSubmit: p
                     }),
-                    null != h
-                        ? (0, r.jsx)(i.Text, {
+                    null != d
+                        ? (0, n.jsx)(i.Text, {
                               className: u.error,
                               variant: 'text-sm/normal',
-                              children: h
+                              children: d
                           })
                         : null
                 ]
             }),
             null != m &&
-                (0, r.jsx)(s.zx, {
+                (0, n.jsx)(s.zx, {
                     className: u.button,
                     onClick: m,
                     color: s.zx.Colors.PRIMARY,

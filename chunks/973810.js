@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => m }), n(388685), n(49124));
 var l = n(255367),
     r = n(73800),
-    s = n(849055),
-    i = n(544891),
+    i = n(849055),
+    s = n(544891),
     a = n(481060),
     o = n(358085),
     d = n(960048),
@@ -11,13 +11,13 @@ var l = n(255367),
     h = n(981631),
     f = n(388032);
 function m(e) {
-    let { mfaChallenge: t, finish: n, setSlide: m, onClose: g } = e,
-        [x, p] = r.useState(!1),
+    let { mfaChallenge: t, finish: n, setSlide: m, onClose: g, headerAlignStart: x } = e,
+        [p, S] = r.useState(!1),
         [j, b] = r.useState(null),
         { challenge: y } = t.methods.find((e) => 'webauthn' === e.type),
-        S = async () => {
-            (p(!0), b(null));
-            let e = o.isPlatformEmbedded && c.ZP.supportsFeature(h.eRX.WEBAUTHN) ? c.ZP.webAuthnAuthenticate(y) : s.U2(JSON.parse(y)).then((e) => JSON.stringify(e)),
+        v = async () => {
+            (S(!0), b(null));
+            let e = o.isPlatformEmbedded && c.ZP.supportsFeature(h.eRX.WEBAUTHN) ? c.ZP.webAuthnAuthenticate(y) : i.U2(JSON.parse(y)).then((e) => JSON.stringify(e)),
                 t = async (e) => {
                     try {
                         await n({
@@ -25,7 +25,7 @@ function m(e) {
                             data: e
                         });
                     } catch (e) {
-                        e instanceof i.Pd ? b(f.intl.string(f.t.xSCvBQ)) : b(e.message);
+                        e instanceof s.Pd ? b(f.intl.string(f.t.xSCvBQ)) : b(e.message);
                     }
                 };
             try {
@@ -34,12 +34,15 @@ function m(e) {
             } catch (e) {
                 (d.Z.captureException(e), b(f.intl.string(f.t.xSCvBQ)));
             } finally {
-                p(!1);
+                S(!1);
             }
         };
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(u.Z.SlideHeader, { onClose: g }),
+            (0, l.jsx)(u.Z.SlideHeader, {
+                onClose: g,
+                headerAlignStart: x
+            }),
             null != j && (0, l.jsx)(u.Z.SlideContent, { children: (0, l.jsx)(u.Z.SlideError, { error: j }) }),
             (0, l.jsx)(u.Z.SlideFooter, {
                 mfaChallenge: t,
@@ -47,8 +50,8 @@ function m(e) {
                 leadingButton: (0, l.jsx)(a.zxk, {
                     variant: 'primary',
                     text: f.intl.string(f.t.Xr3Ekp),
-                    loading: x,
-                    onClick: S,
+                    loading: p,
+                    onClick: v,
                     fullWidth: !0
                 })
             })

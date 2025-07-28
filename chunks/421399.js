@@ -86,7 +86,7 @@ function D(e) {
 }
 function k(e) {
     var t;
-    let { author: n, message: r, channel: s, userOverride: f, compact: L = !1, withMentionPrefix: k = !1, showPopout: M = !1, hideGuildTag: B = !1, hideSystemTag: G = !1, className: F, onClick: U, onContextMenu: z, onPopoutRequestClose: V, renderPopout: K, renderRemixTag: H = !1, decorations: W, previewGuildId: q, subscribeToGroupId: Y } = e,
+    let { author: n, message: r, channel: s, userOverride: f, compact: L = !1, withMentionPrefix: k = !1, showPopout: M = !1, hideGuildTag: B = !1, hideSystemTag: G = !1, className: U, onClick: F, onContextMenu: z, onPopoutRequestClose: V, renderPopout: H, renderRemixTag: K = !1, decorations: W, previewGuildId: q, subscribeToGroupId: Y } = e,
         J = l.useRef(null),
         X = l.useContext(E.Z),
         Q = null != (t = null == s ? void 0 : s.guild_id) ? t : X,
@@ -123,7 +123,7 @@ function k(e) {
             style: (() => {
                 if (ea) return em && null != er ? w(R({}, ef), { textDecorationColor: null == er ? void 0 : er.primaryColor }) : null != en ? { color: en } : void 0;
             })(),
-            onClick: U,
+            onClick: F,
             onContextMenu: z,
             children: eb
                 ? (0, i.jsx)(x.Z, {
@@ -148,11 +148,11 @@ function k(e) {
         ),
         eI = null != f ? f : r.author,
         ej =
-            null != K && null != M
+            null != H && null != M
                 ? (0, i.jsx)(y.Z, {
                       targetElementRef: J,
                       user: eI,
-                      renderPopout: K,
+                      renderPopout: H,
                       shouldShow: M,
                       shouldPreload: eh,
                       position: o.tq ? 'window_center' : 'right',
@@ -201,7 +201,7 @@ function k(e) {
                                               n,
                                               eE
                                           ),
-                                          { className: a()(eE.className, Z.clickable, F) }
+                                          { className: a()(eE.className, Z.clickable, U) }
                                       )
                                   ),
                                   ev
@@ -210,7 +210,7 @@ function k(e) {
                       }
                   })
                 : (0, i.jsxs)(i.Fragment, {
-                      children: [(0, i.jsx)(h.P3F, w(R({}, eE), { className: a()(eE.className, F) })), ev]
+                      children: [(0, i.jsx)(h.P3F, w(R({}, eE), { className: a()(eE.className, U) })), ev]
                   }),
         eO = null != W ? W[0] : null,
         ey = null != W ? W[1] : null;
@@ -242,7 +242,7 @@ function k(e) {
                 }),
             null != ey ? ey : null,
             null == eO || G || L ? null : eO,
-            null != r && (0, A.f)(r) && eo && H ? (0, i.jsx)(D, {}) : null
+            null != r && (0, A.f)(r) && eo && K ? (0, i.jsx)(D, {}) : null
         ]
     });
 }

@@ -4,8 +4,8 @@ var r,
     l = n(73800),
     o = n(120356),
     a = n.n(o),
-    s = n(873546),
-    c = n(442837),
+    s = n(442837),
+    c = n(257465),
     u = n(481060),
     d = n(239091),
     h = n(134616),
@@ -113,7 +113,7 @@ class V extends (r = l.Component) {
     }
 }
 M(V, 'defaultProps', { unread: !1 });
-let F = c.ZP.connectStores([j.ZP, y.Z], (e) => {
+let F = s.ZP.connectStores([j.ZP, y.Z], (e) => {
         let { channel: t } = e;
         return {
             unread: j.ZP.hasUnread(t.id),
@@ -122,20 +122,20 @@ let F = c.ZP.connectStores([j.ZP, y.Z], (e) => {
             category: y.Z.getChannel(t.parent_id)
         };
     })(V),
-    H = c.ZP.connectStores([S.ZP], (e) => {
+    H = s.ZP.connectStores([S.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
         return { voiceStates: S.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(V),
-    z = c.ZP.connectStores([C.default], (e) => {
+    z = s.ZP.connectStores([C.default], (e) => {
         let { guild: t } = e;
         return { unread: C.default.hasUnread(t.id) };
     })(Z.ic),
-    W = c.ZP.connectStores([j.ZP], (e) => {
+    W = s.ZP.connectStores([j.ZP], (e) => {
         let { channel: t } = e;
         return { mentions: j.ZP.getMentionCount(t.id) };
     })(Z.PZ),
-    K = c.ZP.connectStores([y.Z, j.ZP], (e) => {
+    K = s.ZP.connectStores([y.Z, j.ZP], (e) => {
         let { user: t } = e,
             n = y.Z.getDMFromUserId(t.id);
         return { mentions: null != n ? j.ZP.getMentionCount(n) : 0 };
@@ -258,15 +258,13 @@ class q extends l.PureComponent {
         return t ? null : (0, i.jsx)(T.Z, { hasQuery: e.length > 0 && n.length > 0 });
     }
     render() {
-        return (0, i.jsx)(u.Y0X, {
+        return (0, i.jsx)(c.I, {
             'aria-label': D.intl.string(D.t.ZvKwYW),
-            size: u.CgR.DYNAMIC,
+            size: 'lg',
             transitionState: this.props.transitionState,
-            className: a()(L.container, s.tq && L.mobileContainer),
-            fullscreenOnMobile: !1,
-            parentComponent: 'QuickSwitcher',
+            onClose: this.props.onClose,
             children: (0, i.jsxs)('div', {
-                className: a()(L.quickswitcher, s.tq && L.mobileQuickswitcher),
+                className: L.quickswitcher,
                 onMouseMove: this.handleMouseMove,
                 children: [this.renderInput(), this.renderResults(), this.renderProtip(), this.renderTutorial()]
             })
@@ -587,7 +585,7 @@ class q extends l.PureComponent {
     }
 }
 function X(e) {
-    let t = (0, c.cj)([w.Z], () => w.Z.getProps()),
+    let t = (0, s.cj)([w.Z], () => w.Z.getProps()),
         n = (0, O.Pt)(),
         r = A.Z.useExperiment({ location: 'QuickSwitcher' }).enabled,
         o = l.useMemo(

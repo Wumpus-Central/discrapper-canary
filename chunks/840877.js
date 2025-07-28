@@ -25,7 +25,7 @@ class c {
     async fetch(e, t, n) {
         if (!this.isCanceled)
             try {
-                let i = await this.makeRequest();
+                let i = await this.makeRequest({ rejectWithError: !1 });
                 if (null == i || this.isCanceled) return;
                 if (200 === i.status) e(i);
                 else if (202 === i.status) {
@@ -63,15 +63,16 @@ class u extends c {
                 throw Error('[SearchFetcher] Unhandled search type: '.concat(this.searchType));
         }
     }
-    makeRequest() {
-        let e = this.getEndpoint();
-        return null == e
+    makeRequest(e) {
+        let { rejectWithError: t } = e,
+            n = this.getEndpoint();
+        return null == n
             ? null
             : i.tn.get({
-                  url: e,
+                  url: n,
                   query: r.stringify(this.query),
                   oldFormErrors: !0,
-                  rejectWithError: !1
+                  rejectWithError: t
               });
     }
 }
@@ -92,15 +93,16 @@ class d extends c {
                 throw Error('[SearchFetcher] Unhandled search type: '.concat(this.searchType));
         }
     }
-    makeRequest() {
-        let e = this.getEndpoint();
-        return null == e
+    makeRequest(e) {
+        let { rejectWithError: t } = e,
+            n = this.getEndpoint();
+        return null == n
             ? null
             : i.tn.post({
-                  url: e,
+                  url: n,
                   body: this.payload,
                   oldFormErrors: !0,
-                  rejectWithError: !1
+                  rejectWithError: t
               });
     }
     constructor(e, t, n, r) {

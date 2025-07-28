@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => H }), n(997841), n(388685));
+(n.d(t, { Z: () => K }), n(997841), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -37,7 +37,7 @@ var r = n(255367),
     M = n(436620),
     B = n(388032),
     G = n(20493);
-function F(e, t, n) {
+function U(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,16 +51,16 @@ function F(e, t, n) {
     );
 }
 c.ZP.initialize();
-let U = 'Accept Invite Page',
+let F = 'Accept Invite Page',
     z = {
         REGISTER: 'register',
         LOGIN: 'login'
     };
 async function V(e) {
-    let { invite: t } = await d.ZP.resolveInvite(e, U);
+    let { invite: t } = await d.ZP.resolveInvite(e, F);
     null != t && (0, g.A)(t);
 }
-class K extends i.PureComponent {
+class H extends i.PureComponent {
     componentDidMount() {
         let { isUnderage: e, login: t, inviteKey: n } = this.props;
         if ((N.default.track(L.rMx.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, j.e)('invite'), !M.KO)) {
@@ -86,7 +86,7 @@ class K extends i.PureComponent {
             }
             d.ZP.acceptInvite({
                 inviteKey: l,
-                context: this.getAcceptInviteContext(U),
+                context: this.getAcceptInviteContext(F),
                 skipOnboarding: !0,
                 callback: this.handleContinue
             });
@@ -135,7 +135,7 @@ class K extends i.PureComponent {
                             })
                         )),
                         r.forEach(function (t) {
-                            F(e, t, n[t]);
+                            U(e, t, n[t]);
                         }));
                 }
                 return e;
@@ -291,21 +291,21 @@ class K extends i.PureComponent {
         var t;
         (super(...e),
             (t = this),
-            F(this, 'state', { error: null }),
-            F(this, 'getAcceptInviteContext', (e) => d.ZP.getInviteContext(e, this.props.invite)),
-            F(this, 'handleContinue', (e) => {
+            U(this, 'state', { error: null }),
+            U(this, 'getAcceptInviteContext', (e) => d.ZP.getInviteContext(e, this.props.invite)),
+            U(this, 'handleContinue', (e) => {
                 let { invite: t, transitionTo: n } = this.props;
                 if (null != t.channel || (null == e ? void 0 : e.channel) != null) {
                     var r;
                     (null == (r = t.guild) ? void 0 : r.id) != null ? n(L.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : d.ZP.transitionToInvite(null != e ? e : t, n);
                 }
             }),
-            F(this, 'handleAccept', () => {
+            U(this, 'handleAccept', () => {
                 this.setState({ error: null });
                 let e = this.getInviteKey();
                 d.ZP.acceptInvite({
                     inviteKey: e,
-                    context: this.getAcceptInviteContext(U),
+                    context: this.getAcceptInviteContext(F),
                     skipOnboarding: !0,
                     callback: (t) => {
                         ((0, g.A)(t), null != t.channel && d.ZP.openApp(e, t.channel.id));
@@ -328,11 +328,11 @@ class K extends i.PureComponent {
                         });
                 });
             }),
-            F(this, 'handleDefaultTransition', () => {
+            U(this, 'handleDefaultTransition', () => {
                 let { defaultRoute: e, transitionTo: t } = this.props;
                 t(e);
             }),
-            F(this, 'renderButton', function (e) {
+            U(this, 'renderButton', function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : t.handleDefaultTransition,
                     { invite: i } = t.props,
                     l = null != i.stage_instance || null != i.guild_scheduled_event;
@@ -347,7 +347,7 @@ class K extends i.PureComponent {
             }));
     }
 }
-let H = c.ZP.connectStores([S.Z, y.Z, O.default, x.Z, p.Z], (e) => {
+let K = c.ZP.connectStores([S.Z, y.Z, O.default, x.Z, p.Z], (e) => {
     var t;
     let { inviteKey: n } = e;
     return {
@@ -357,4 +357,4 @@ let H = c.ZP.connectStores([S.Z, y.Z, O.default, x.Z, p.Z], (e) => {
         defaultRoute: y.Z.defaultRoute,
         isUnderage: p.Z.isUnderageAnonymous()
     };
-})(K);
+})(H);

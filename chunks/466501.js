@@ -1,74 +1,43 @@
-(i.d(t, { default: () => j }), i(953529));
-var r = i(255367),
-    n = i(73800),
-    l = i(481060),
-    c = i(651711),
-    a = i(434404),
-    o = i(202858),
-    s = i(587431),
-    d = i(400842),
-    b = i(271267),
-    u = i(981631),
-    g = i(388032),
-    y = i(280086),
-    p = i(653904);
-function h() {
-    return (0, r.jsxs)('div', {
-        className: y.eligibilityHeader,
-        children: [
-            (0, r.jsx)(l.X6q, {
-                className: y.eligibilityHeaderText,
-                variant: 'heading-lg/extrabold',
-                color: 'header-primary',
-                children: g.intl.string(g.t['3s47iI'])
-            }),
-            (0, r.jsx)('img', {
-                className: y.eligibilityHeaderImage,
-                src: p,
-                alt: ''
-            }),
-            (0, r.jsx)(l.olH, {
-                className: y.eligibilityHeaderCloseButton,
-                onClick: () => {
-                    (0, l.Mr3)(b.Q);
-                }
-            })
-        ]
-    });
-}
+(n.d(t, { default: () => y }), n(953529));
+var r = n(255367),
+    i = n(73800),
+    c = n(82659),
+    l = n(481060),
+    o = n(651711),
+    s = n(434404),
+    a = n(202858),
+    u = n(587431),
+    b = n(400842),
+    d = n(271267),
+    h = n(981631),
+    p = n(388032);
 function f(e) {
-    let { eligibility: t, eligibilityLoading: i, eligibilityError: g, guildId: p, onEligibilityBecameStale: h } = e,
-        f = n.useMemo(
+    let { eligibility: t, eligibilityLoading: n, eligibilityError: c, guildId: p, onEligibilityBecameStale: f } = e,
+        y = i.useMemo(
             () => ({
-                onEligibilityBecameStale: h,
+                onEligibilityBecameStale: f,
                 sortedByIneligible: !0,
                 actions: {
-                    onEnableMFAClick: o.ZP.enableMFA,
+                    onEnableMFAClick: a.ZP.enableMFA,
                     onRequireModeratorMFAClick: () => {
-                        ((0, l.Mr3)(b.Q), a.Z.open(p, u.pNK.SAFETY, void 0, u.KsC.SAFETY_PERMISSIONS));
+                        ((0, l.Mr3)(d.Q), s.Z.open(p, h.pNK.SAFETY, void 0, h.KsC.SAFETY_PERMISSIONS));
                     }
                 }
             }),
-            [p, h]
+            [p, f]
         ),
-        j = (0, c.Z)(t, f);
-    return null != g
-        ? (0, r.jsx)('div', {
-              className: y.paddedContainer,
-              children: (0, r.jsx)(s.Z, { children: g.message })
-          })
-        : null == j || i
-          ? (0, r.jsx)('div', {
-                className: y.paddedContainer,
-                children: (0, r.jsx)(l.$jN, {})
-            })
+        j = (0, o.Z)(t, y);
+    return null != c
+        ? (0, r.jsx)('div', { children: (0, r.jsx)(u.Z, { children: c.message }) })
+        : null == j || n
+          ? (0, r.jsx)('div', { children: (0, r.jsx)(l.$jN, {}) })
           : (0, r.jsx)('div', {
                 children: j.map((e, t) =>
                     (0, r.jsxs)(
-                        n.Fragment,
+                        i.Fragment,
                         {
                             children: [
-                                (0, r.jsx)(d.d, {
+                                (0, r.jsx)(b.d, {
                                     name: e.checked ? e.checkedLabel : e.uncheckedLabel,
                                     description: e.description,
                                     checked: e.checked,
@@ -83,24 +52,21 @@ function f(e) {
                 )
             });
 }
-function j(e) {
-    let { eligibility: t, eligibilityLoading: i, eligibilityError: n, refreshEligibility: c, guildId: a, transitionState: o } = e;
-    return (0, r.jsxs)(l.Y0X, {
-        className: y.eligibilityModal,
-        size: l.CgR.MEDIUM,
-        transitionState: o,
-        parentComponent: 'EligibilityChecklistModal',
-        children: [
-            (0, r.jsx)(h, {}),
-            (0, r.jsx)(l.hzk, {
-                children: (0, r.jsx)(f, {
-                    eligibility: t,
-                    eligibilityLoading: i,
-                    eligibilityError: n,
-                    guildId: a,
-                    onEligibilityBecameStale: c
-                })
-            })
-        ]
+function y(e) {
+    let { eligibility: t, eligibilityLoading: n, eligibilityError: i, refreshEligibility: o, guildId: s, transitionState: a } = e;
+    return (0, r.jsx)(c.Modal, {
+        transitionState: a,
+        title: p.intl.string(p.t['3s47iI']),
+        actions: [],
+        onClose: async () => {
+            await (0, l.Mr3)(d.Q);
+        },
+        children: (0, r.jsx)(f, {
+            eligibility: t,
+            eligibilityLoading: n,
+            eligibilityError: i,
+            guildId: s,
+            onEligibilityBecameStale: o
+        })
     });
 }

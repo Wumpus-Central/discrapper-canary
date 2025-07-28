@@ -1,19 +1,19 @@
 (n.d(t, {
     Gz: () => a,
     P0: () => d,
-    gH: () => i,
-    tL: () => s,
+    gH: () => s,
+    tL: () => i,
     th: () => r
 }),
     n(415506));
 var l = n(544891);
 let r = 8,
-    s = 11,
-    i = 6,
+    i = 11,
+    s = 6,
     a = 6;
 async function o(e) {
     let { ticket: t, mfaType: n, data: r } = e,
-        s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+        i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
     try {
         return (
             await l.tn.post({
@@ -23,13 +23,13 @@ async function o(e) {
                     mfa_type: n,
                     data: r
                 },
-                retries: s,
+                retries: i,
                 rejectWithError: !1
             })
         ).body;
     } catch (e) {
-        var i;
-        if (null == (i = e.body) ? void 0 : i.message) throw Error(e.body.message);
+        var s;
+        if (null == (s = e.body) ? void 0 : s.message) throw Error(e.body.message);
         throw e;
     }
 }
