@@ -1,16 +1,17 @@
-n.d(t, {
-    Gn: () => g,
-    QQ: () => h,
-    QY: () => C,
+(n.d(t, {
+    Gn: () => C,
+    QY: () => p,
     Vj: () => _,
-    Vs: () => S,
-    h7: () => O,
-    j8: () => E,
-    qt: () => I,
-    u$: () => p,
+    Vs: () => O,
+    j8: () => h,
+    mk: () => S,
+    qt: () => E,
+    u$: () => I,
+    uJ: () => g,
     yC: () => d,
     zH: () => u
-});
+}),
+    n(415506));
 var i = n(570140),
     r = n(861262),
     l = n(187462),
@@ -107,13 +108,7 @@ function u(e) {
 function _(e) {
     return null == e.sort_by || null == e.sort_order ? c.QIO.NEWEST : 'relevance' === e.sort_by ? c.QIO.MOST_RELEVANT : 'asc' === e.sort_order ? c.QIO.OLDEST : c.QIO.NEWEST;
 }
-function h(e) {
-    i.Z.dispatch({
-        type: 'SEARCH_CLEAR_HISTORY',
-        searchId: e
-    });
-}
-function E(e, t) {
+function h(e, t) {
     null != e &&
         i.Z.dispatch({
             type: 'SEARCH_EDITOR_STATE_CHANGE',
@@ -121,7 +116,7 @@ function E(e, t) {
             editorState: t
         });
 }
-function I(e) {
+function E(e) {
     i.Z.wait(() =>
         i.Z.dispatch({
             type: 'SEARCH_EDITOR_STATE_CLEAR',
@@ -129,7 +124,7 @@ function I(e) {
         })
     );
 }
-function p(e, t, n) {
+function I(e, t, n) {
     null != e &&
         i.Z.dispatch({
             type: 'SEARCH_AUTOCOMPLETE_QUERY_UPDATE',
@@ -138,27 +133,33 @@ function p(e, t, n) {
             cursorScope: n
         });
 }
-function C(e, t) {
+function p(e, t) {
     i.Z.dispatch({
         type: 'SEARCH_SET_SHOW_BLOCKED_RESULTS',
         searchId: e,
         showBlocked: t
     });
 }
-function g(e) {
+function C(e) {
     i.Z.dispatch({
         type: 'SEARCH_SET_SHOW_NO_RESULTS_ALT',
         searchId: e
     });
 }
-function O(e, t) {
+function g(e, t) {
     i.Z.dispatch({
-        type: 'SEARCH_ADD_HISTORY',
+        type: 'SEARCH_HISTORY_WEB_ADD_ITEM',
         searchId: e,
         query: t
     });
 }
-function S(e, t, n, r) {
+function S(e) {
+    i.Z.dispatch({
+        type: 'SEARCH_HISTORY_WEB_CLEAR_ITEMS',
+        searchId: e
+    });
+}
+function O(e, t, n, r) {
     i.Z.dispatch({
         type: 'SEARCH_RESULTS_QUERY_UPDATE',
         searchId: e,

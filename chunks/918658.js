@@ -18,8 +18,8 @@ var i = n(255367),
     p = n(703656),
     C = n(944486),
     g = n(914010),
-    O = n(671533),
-    S = n(259580),
+    S = n(671533),
+    O = n(259580),
     T = n(358085),
     f = n(962086),
     N = n(160404),
@@ -92,10 +92,10 @@ function M() {
                 onClick: () => k({ backToSettings: !0 }),
                 className: D.backButton,
                 children: [
-                    (0, i.jsx)(O.Z, {
+                    (0, i.jsx)(S.Z, {
                         width: 16,
                         height: 16,
-                        direction: O.Z.Directions.LEFT,
+                        direction: S.Z.Directions.LEFT,
                         className: D.backArrow
                     }),
                     M
@@ -127,10 +127,10 @@ function M() {
                                       buttonRef: e,
                                       children: [
                                           L,
-                                          (0, i.jsx)(S.Z, {
+                                          (0, i.jsx)(O.Z, {
                                               width: 16,
                                               height: 16,
-                                              direction: S.Z.Directions.DOWN,
+                                              direction: O.Z.Directions.DOWN,
                                               className: D.selectCaret
                                           })
                                       ]

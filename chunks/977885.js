@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => d }), r(388685));
+(r.d(t, { Z: () => p }), r(388685), r(415506));
 var n = r(392711),
     s = r.n(n),
     l = r(570140),
@@ -8,7 +8,10 @@ var n = r(392711),
     c = r(961216),
     u = r(416638),
     h = r(981631);
-let d = {
+function d() {
+    return !1;
+}
+let p = {
     fetchMessages: function (e) {
         let { searchContext: t, searchTabs: r, searchQueryString: n, pagination: d, trackExactTotalHits: p, getId: f, getLimit: g, onFetchStart: m, onFetchSuccess: S, searchMode: _ = h.QIO.NEWEST } = e,
             y = o.kG(n),
@@ -60,11 +63,11 @@ let d = {
                 searchQueryString: n,
                 searchQuery: x
             });
-        let C = r.map((e) => f(e));
+        let v = r.map((e) => f(e));
         return (
             l.Z.dispatch({
                 type: 'SEARCH_MESSAGES_START',
-                ids: C
+                ids: v
             }),
             O.fetch(
                 (e) => {
@@ -119,13 +122,13 @@ let d = {
                 () => {
                     l.Z.dispatch({
                         type: 'SEARCH_MESSAGES_INDEXING',
-                        ids: C
+                        ids: v
                     });
                 },
                 (e) => {
                     l.Z.dispatch({
                         type: 'SEARCH_MESSAGES_FAILURE',
-                        ids: C,
+                        ids: v,
                         error: e
                     });
                 }
@@ -145,29 +148,14 @@ let d = {
             id: e
         });
     },
-    addSearchHistoryItem: function (e, t) {
-        if (e.type !== h.aib.DMS && e.type !== h.aib.GUILD) return;
-        let r = (0, u.Tm)(e);
-        l.Z.dispatch({
-            type: 'SEARCH_HISTORY_ADD_ITEM',
-            id: r,
-            item: t
-        });
+    addNativeSearchHistoryItem: function (e, t) {
+        1;
     },
-    removeSearchHistoryItem: function (e, t) {
-        let r = (0, u.Tm)(e);
-        l.Z.dispatch({
-            type: 'SEARCH_HISTORY_REMOVE_ITEM',
-            id: r,
-            item: t
-        });
+    removeNativeSearchHistoryItem: function (e, t) {
+        1;
     },
-    clearSearchHistory: function (e) {
-        let t = (0, u.Tm)(e);
-        l.Z.dispatch({
-            type: 'SEARCH_HISTORY_CLEAR_ITEMS',
-            id: t
-        });
+    clearNativeSearchHistory: function (e) {
+        1;
     },
     openSearchScreen: function (e) {
         let t = (0, u.WJ)(e);

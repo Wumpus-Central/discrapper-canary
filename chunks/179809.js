@@ -17,12 +17,12 @@ var r = n(255367),
     _ = n(276952),
     O = n(199540),
     y = n(40153),
-    v = n(252686),
-    C = n(682662),
+    C = n(252686),
+    v = n(682662),
     j = n(662146),
     E = n(981631),
-    x = n(388032),
-    S = n(728492),
+    S = n(388032),
+    x = n(728492),
     I = n(335426);
 let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
     N = (0, s.animated)(h.Kqy),
@@ -59,7 +59,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 },
                 [M, s]
             ),
-            er = null != z && '' !== z ? z : null != T && '' !== T ? T : x.intl.string(x.t.xV9hVl),
+            er = null != z && '' !== z ? z : null != T && '' !== T ? T : S.intl.string(S.t.xV9hVl),
             ei = (0, c.Ie)(''.concat(H)),
             el = 'folder-items-'.concat(H),
             eo = (function (e) {
@@ -75,7 +75,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 config: { duration: P }
             }),
             es = i.useCallback((e) => (null == n ? void 0 : n(H, e)), [n, H]),
-            ec = (0, r.jsxs)(C.H, {
+            ec = (0, r.jsxs)(v.H, {
                 children: [
                     (0, r.jsx)(_.Z, {
                         disabled: $ || s,
@@ -95,13 +95,13 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                       ee(e);
                                   }
                                 : void 0,
-                            className: o()(S.folderHeader, {
-                                [S.folderHeaderSmall]: 'icon' === G || J,
+                            className: o()(x.folderHeader, {
+                                [x.folderHeaderSmall]: 'icon' === G || J,
                                 [I.wobble]: !$ && q && !s
                             }),
                             'data-dnd-name': er,
                             children: $
-                                ? (0, r.jsx)(v.Z, { isFolder: !0 })
+                                ? (0, r.jsx)(C.Z, { isFolder: !0 })
                                 : (0, r.jsx)(O.Z, {
                                       folderNode: t,
                                       expanded: s,
@@ -135,14 +135,14 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
             ed = eu === E.Wyy ? void 0 : (0, u.Rf)(eu);
         return (0, r.jsxs)('div', {
             ref: es,
-            className: o()(S.folderGroup, {
-                [S.isExpanded]: s,
-                [S.isHovering]: Q
+            className: o()(x.folderGroup, {
+                [x.isExpanded]: s,
+                [x.isHovering]: Q
             }),
             style: { '--custom-folder-color': null != ed ? ed : '' },
             'data-drop-hovering': q,
             children: [
-                !$ && s && (0, r.jsx)('span', { className: S.folderGroupBackground }),
+                !$ && s && (0, r.jsx)('span', { className: x.folderGroupBackground }),
                 ec,
                 ea((e, n, i) => {
                     let { key: l } = i;
@@ -155,7 +155,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                 role: 'group',
                                 as: 'ul',
                                 gap: 'xs',
-                                className: S.folderGuildsList,
+                                className: x.folderGuildsList,
                                 style: { height: e.height.to((e) => e * eo) },
                                 'aria-label': t.name,
                                 children: W.map((t, n) => U(t, n, W.length, e.height))

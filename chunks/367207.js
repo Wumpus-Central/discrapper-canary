@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(415506), n(388685));
+(n.d(t, { Z: () => v }), n(415506), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -62,7 +62,7 @@ function y(e, t) {
         e
     );
 }
-class v extends o.Z {
+class C extends o.Z {
     _initialize() {
         __OVERLAY__ ? l.Z.subscribe('PREMIUM_PAYMENT_MODAL_OPEN', this._handlePremiumPaymentModalOpen) : (l.Z.subscribe('PREMIUM_PAYMENT_MODAL_CLOSE', this._handlePremiumPaymentModalClose), l.Z.subscribe('MESSAGE_LENGTH_UPSELL', this.handleMessageLengthUpsell), l.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchPremiumOffer), l.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchCheckoutRecovery), l.Z.subscribe('POST_CONNECTION_OPEN', this._maybeFetchUserAffinities), l.Z.subscribe('POST_CONNECTION_OPEN', this._trackCustomNotificationSoundsExposure));
     }
@@ -155,4 +155,4 @@ class v extends o.Z {
             }));
     }
 }
-let C = new v();
+let v = new C();

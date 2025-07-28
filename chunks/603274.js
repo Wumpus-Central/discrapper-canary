@@ -18,12 +18,12 @@ var i = n(120356),
     _ = n(938475),
     O = n(823379),
     y = n(709054),
-    v = n(853856),
-    C = n(981631),
+    C = n(853856),
+    v = n(981631),
     j = n(388032),
     E = n(714509),
-    x = n(375613);
-function S(e, t) {
+    S = n(375613);
+function x(e, t) {
     return 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
@@ -42,15 +42,15 @@ function S(e, t) {
           });
 }
 function I() {
-    let e = (0, s.Wu)([v.Z, m.Z], () =>
+    let e = (0, s.Wu)([C.Z, m.Z], () =>
             y.default
-                .keys(v.Z.getFavoriteChannels())
+                .keys(C.Z.getFavoriteChannels())
                 .map((e) => m.Z.getChannel(e))
                 .filter(O.lm)
         ),
         t = e.map((e) => e.id),
-        n = e.filter((e) => e.type === C.d4z.GUILD_VOICE),
-        i = e.filter((e) => e.type === C.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
+        n = e.filter((e) => e.type === v.d4z.GUILD_VOICE),
+        i = e.filter((e) => e.type === v.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
         l = (0, s.Wu)(
             [_.ZP],
             () =>
@@ -77,7 +77,7 @@ function I() {
             for (let t of i) e += p.Z.getParticipantCount(t, f.pV.AUDIENCE);
             return e;
         }),
-        x = (0, s.Wu)(
+        S = (0, s.Wu)(
             [g.Z],
             () =>
                 g.Z.getAllApplicationStreams()
@@ -99,10 +99,10 @@ function I() {
             [t]
         ),
         P = (0, s.Wu)([b.default], () => I.map((e) => b.default.getUser(e)), [I]),
-        N = (0, s.Wu)([b.default], () => x.map((e) => b.default.getUser(e)), [x]),
-        w = S(
+        N = (0, s.Wu)([b.default], () => S.map((e) => b.default.getUser(e)), [S]),
+        w = x(
             c.gj8,
-            l.filter((e) => !x.includes(e.id) && !I.includes(e.id))
+            l.filter((e) => !S.includes(e.id) && !I.includes(e.id))
         ),
         Z =
             0 === o.length
@@ -137,12 +137,12 @@ function I() {
                           })
                       ]
                   }),
-        T = S(
+        T = x(
             c.hGI,
             N.filter((e) => null != e && !I.includes(e.id))
         ),
         { enabled: A } = u.c.useExperiment({ location: 'FavoritesTooltip' }, { autoTrackExposure: !0 }),
-        R = S(A ? c.iWm : c.nG3, P);
+        R = x(A ? c.iWm : c.nG3, P);
     return (0, r.jsxs)(r.Fragment, {
         children: [Z, w, T, R]
     });
@@ -169,7 +169,7 @@ function N(e) {
         position: 'right',
         text: (0, r.jsx)(P, {}),
         'aria-label': t,
-        tooltipClassName: x.listItemTooltip,
+        tooltipClassName: S.listItemTooltip,
         onTooltipShow: n,
         children: (e) => {
             var t, n;

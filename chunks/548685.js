@@ -15,8 +15,8 @@ var n = r(255367),
     b = r(381585),
     m = r(597688),
     _ = r(315066),
-    C = r(243126),
-    O = r(38900),
+    O = r(243126),
+    C = r(38900),
     v = r(709999),
     E = r(328626),
     S = r(619899),
@@ -30,7 +30,7 @@ let P = (e) => {
         I = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         N = h.ZP.canUseCollectibles(I),
         A = (0, _.s)('useShopHomeSorting') && k === y.AW.HOME,
-        { sortType: w, setSortType: B, sortedItems: R, sortOptions: Z, shuffleProducts: D, showRecommendationOption: F } = (0, C.N)(i, N),
+        { sortType: w, setSortType: B, sortedItems: R, sortOptions: Z, shuffleProducts: D, showRecommendationOption: F } = (0, O.N)(i, N),
         M = (0, S.St)(R),
         H = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
         W = (0, a.e7)([p.Z], () => p.Z.isFocused()),
@@ -172,7 +172,7 @@ let P = (e) => {
                   (0, n.jsx)('div', {
                       className: T.feed,
                       children: r
-                          ? (0, n.jsx)(n.Fragment, { children: [...Array(12)].map((e, t) => (0, n.jsx)(O.K, {}, t + 1)) })
+                          ? (0, n.jsx)(n.Fragment, { children: [...Array(12)].map((e, t) => (0, n.jsx)(C.K, {}, t + 1)) })
                           : M.slice(0, L).map((e, t) => {
                                 let r,
                                     l = m.Z.getCategoryForProduct(e.skuId);

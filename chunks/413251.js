@@ -7,21 +7,10 @@ var r = n(73800),
     s = n(881998);
 function c(e) {
     let t = (null == e ? void 0 : e.require_application_authorization) ? e.application_id : null,
-        n = (0, i.e7)([s.Z], () => s.Z.getFetchState()),
-        c = (0, i.e7)([s.Z], () => {
-            var e, n;
-            return null != t &&
-                null !=
-                    (n =
-                        null == (e = s.Z.getApps())
-                            ? void 0
-                            : e.find((e) => {
-                                  let { application: n } = e;
-                                  return n.id === t;
-                              }))
-                ? n
-                : null;
-        }),
+        { authorizationsFetchState: n, applicationOAuth2Token: c } = (0, i.cj)([s.Z], () => ({
+            authorizationsFetchState: s.Z.getFetchState(),
+            applicationOAuth2Token: s.Z.getNewestTokenForApplication(t)
+        })),
         u = (0, i.e7)([o.Z], () => o.Z.getApplication(t)),
         d = (0, i.e7)([o.Z], () => o.Z.getApplication(null == u ? void 0 : u.parentId));
     ((0, r.useEffect)(() => {

@@ -12,8 +12,6 @@ e.exports = {
     startTime: 'startTime_e2d7b8',
     stageIcon: 'stageIcon_e2d7b8',
     userNames: 'userNames_e2d7b8',
-    rsvpButton: 'rsvpButton_e2d7b8',
-    buttonIcon: 'buttonIcon_e2d7b8',
     closeIcon: 'closeIcon_e2d7b8',
     details: 'details_e2d7b8'
 };

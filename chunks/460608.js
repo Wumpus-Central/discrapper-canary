@@ -1,9 +1,9 @@
-(n.d(t, { Z: () => g }), n(642613), n(388685));
+(n.d(t, { Z: () => b }), n(642613), n(388685));
 var r = n(255367),
     o = n(73800),
     i = n(597312),
-    s = n(793030),
-    l = n(442837),
+    l = n(793030),
+    s = n(442837),
     a = n(179360),
     c = n(616780),
     u = n(899667),
@@ -14,9 +14,9 @@ var r = n(255367),
     _ = n(659679),
     x = n(388032),
     v = n(211886);
-function g(e) {
+function b(e) {
     let { guildId: t } = e,
-        n = (0, l.Wu)(
+        n = (0, s.Wu)(
             [u.Z],
             () => {
                 var e;
@@ -24,37 +24,37 @@ function g(e) {
             },
             [t]
         ),
-        g = o.useMemo(() => n.sort((e, t) => (f.default.extractTimestamp(e.id) < f.default.extractTimestamp(t.id) ? 1 : -1)), [n]),
-        b = (0, l.Wu)(
+        b = o.useMemo(() => n.sort((e, t) => (f.default.extractTimestamp(e.id) < f.default.extractTimestamp(t.id) ? 1 : -1)), [n]),
+        g = (0, s.Wu)(
             [p.ZP],
             () => {
                 let e = new Set();
                 return (
-                    g.forEach((n) => {
+                    b.forEach((n) => {
                         null == p.ZP.getMember(t, n.userId) && e.add(n.userId);
                     }),
                     Array.from(e)
                 );
             },
-            [t, g]
+            [t, b]
         );
     o.useEffect(() => {
-        b.length > 0 && b.forEach((e) => d.Z.requestMember(t, e));
-    }, [t, b]);
-    let j = o.useMemo(() => (b.length > 0 ? { [t]: b } : {}), [t, b]);
+        g.length > 0 && g.forEach((e) => d.Z.requestMember(t, e));
+    }, [t, g]);
+    let j = o.useMemo(() => (g.length > 0 ? { [t]: g } : {}), [t, g]);
     (0, c.$)(j);
-    let E = (0, l.e7)([m.Z], () => {
+    let E = (0, s.e7)([m.Z], () => {
         var e;
         return null == (e = m.Z.getGuild(t)) ? void 0 : e.premiumSubscriberCount;
     });
     return (o.useEffect(() => {
         E !== n.length && (0, a.C0)(t);
     }, [t, E, n.length]),
-    0 === g.length)
+    0 === b.length)
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(s.X6, {
+                  (0, r.jsx)(l.X6, {
                       className: v.header,
                       variant: 'eyebrow',
                       color: 'text-secondary',
@@ -63,7 +63,7 @@ function g(e) {
                   (0, r.jsx)(i.zJ, {
                       className: v.container,
                       fade: !0,
-                      children: g.map((e, t) => (0, r.jsx)(_.Z, { boost: e }, 'boost-activity-'.concat(t)))
+                      children: b.map((e, t) => (0, r.jsx)(_.Z, { boost: e }, 'boost-activity-'.concat(t)))
                   })
               ]
           });

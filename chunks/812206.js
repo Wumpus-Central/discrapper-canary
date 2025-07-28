@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => K }), n(388685), n(642613), n(539854));
+(n.d(t, { Z: () => z }), n(388685), n(642613), n(539854));
 var r,
     i = n(442837),
     a = n(570140),
@@ -224,7 +224,11 @@ function Z(e) {
         });
 }
 function H(e) {
-    e.apps.forEach((e) => {
+    let { application: t } = e;
+    b(o.ZP.createFromServer(t));
+}
+function Y(e) {
+    e.tokens.forEach((e) => {
         b(o.ZP.createFromServer(e.application));
         let t = e.application.bot;
         null != t &&
@@ -234,12 +238,12 @@ function H(e) {
             });
     });
 }
-function Y(e) {
+function W(e) {
     e.items.forEach((e) => {
         null != e.application && b(o.ZP.createFromServer(e.application));
     });
 }
-class W extends (r = i.ZP.PersistedStore) {
+class K extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if (null != e && 'object' == typeof e.botUserIdToAppUsage)
             for (let t in e.botUserIdToAppUsage) {
@@ -299,8 +303,8 @@ class W extends (r = i.ZP.PersistedStore) {
         if (null != e) return null == (t = g.botUserIdToAppUsage[e]) ? void 0 : t.applicationId;
     }
 }
-(s(W, 'displayName', 'ApplicationStore'), s(W, 'persistKey', 'ApplicationStore'));
-let K = new W(a.Z, {
+(s(K, 'displayName', 'ApplicationStore'), s(K, 'persistKey', 'ApplicationStore'));
+let z = new K(a.Z, {
     LOGOUT: y,
     OVERLAY_INITIALIZE: O,
     APPLICATION_FETCH: v,
@@ -324,6 +328,7 @@ let K = new W(a.Z, {
     APP_RECOMMENDATIONS_FETCH_RECOMMENDATIONS_SUCCESS: w,
     USER_PROFILE_FETCH_SUCCESS: D,
     APP_DM_OPEN: L,
-    USER_AUTHORIZED_APPS_UPDATE: H,
-    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: Y
+    USER_AUTHORIZED_APPS_UPDATE: Y,
+    LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: W,
+    OAUTH2_TOKEN_CREATE: H
 });

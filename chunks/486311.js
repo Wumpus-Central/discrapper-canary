@@ -17,7 +17,7 @@ var r = n(255367),
     _ = n(93841),
     O = n(388032),
     y = n(388298);
-function v(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function v(e) {
     }
     return e;
 }
-let C = {
+let v = {
         animation: {
             BEG: 0,
             END: 75
@@ -59,22 +59,22 @@ let C = {
                 var e;
                 ((0, h.jd)(t), (0, f.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW), null == j || null == (e = j.popout) || e.markAsDismissed(b.L.INDIRECT_ACTION));
             }, [t, j]),
-            x = i.useCallback(() => {
+            S = i.useCallback(() => {
                 var e;
                 switch (null == j || null == (e = j.popout) ? void 0 : e.type) {
                     case p.J.LEVEL_REACHED:
-                        return (0, r.jsx)(g.jG, v({ guildId: t }, j.popout));
+                        return (0, r.jsx)(g.jG, C({ guildId: t }, j.popout));
                     case p.J.PERKS_AVAILABLE:
-                        return (0, r.jsx)(g.$h, v({ guildId: t }, j.popout));
+                        return (0, r.jsx)(g.$h, C({ guildId: t }, j.popout));
                     case p.J.PERKS_PURCHASABLE:
-                        return (0, r.jsx)(g.yI, v({ guildId: t }, j.popout));
+                        return (0, r.jsx)(g.yI, C({ guildId: t }, j.popout));
                     case p.J.NEW_PERK_AVAILABLE:
-                        return (0, r.jsx)(g.cO, v({ guildId: t }, j.popout));
+                        return (0, r.jsx)(g.cO, C({ guildId: t }, j.popout));
                     default:
                         return (0, r.jsx)('div', {});
                 }
             }, [t, null == j ? void 0 : j.popout]),
-            S = (0, s.s9z)(s.JQI),
+            x = (0, s.s9z)(s.JQI),
             I = (0, a.e7)([d.Z], () => d.Z.hasLayers()),
             [P, N] = i.useState(null),
             w = null == P ? 'animation' : 'LOOP';
@@ -87,16 +87,16 @@ let C = {
             T = i.useRef(null);
         return (0, r.jsx)(s.yRy, {
             targetElementRef: T,
-            shouldShow: (null == j ? void 0 : j.popout) != null && !(S || I),
+            shouldShow: (null == j ? void 0 : j.popout) != null && !(x || I),
             nudgeAlignIntoViewport: !0,
             animationPosition: 'bottom',
             position: 'right',
-            renderPopout: x,
+            renderPopout: S,
             children: (e) => {
                 var i, a;
                 return (0, r.jsx)(
                     u.m,
-                    ((i = v({}, e)),
+                    ((i = C({}, e)),
                     (a = a =
                         {
                             ref: T,
@@ -115,7 +115,7 @@ let C = {
                                     children: (0, r.jsx)(s.kci, {
                                         nextScene: w,
                                         className: y.lottie,
-                                        sceneSegments: C,
+                                        sceneSegments: v,
                                         importData: () => n.e('50821').then(n.t.bind(n, 548421, 19)),
                                         onScenePlay: Z,
                                         rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }

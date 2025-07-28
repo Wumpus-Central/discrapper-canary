@@ -1,63 +1,60 @@
-(t.d(i, { d: () => b }), t(953529));
-var n = t(255367);
-t(73800);
-var r = t(120356),
-    l = t.n(r),
-    c = t(692547),
-    o = t(755721),
-    a = t(481060);
-t(651711);
-var s = t(551556);
-t(388032);
-var d = t(719677);
-(t(347157), t(177266));
-let b = (e) => {
-    let { name: i, description: t, checked: r, actionLabel: b, actionHandler: u } = e,
-        g = null;
+(i.d(t, { d: () => d }), i(953529));
+var r = i(255367);
+i(73800);
+var n = i(120356),
+    l = i.n(n),
+    c = i(692547),
+    a = i(481060);
+i(651711);
+var o = i(551556);
+i(388032);
+var s = i(719677);
+(i(347157), i(177266));
+let d = (e) => {
+    let { name: t, description: i, checked: n, actionLabel: d, actionHandler: b } = e,
+        u = null;
     return (
-        (g = r
-            ? (0, n.jsx)(s.Z, {
+        (u = n
+            ? (0, r.jsx)(o.Z, {
                   width: 20,
                   height: 20
               })
-            : (0, n.jsx)(a.k$p, {
+            : (0, r.jsx)(a.k$p, {
                   size: 'custom',
-                  color: c.Z.unsafe_rawColors.RED_400.css,
+                  color: c.Z.colors.STATUS_DANGER.css,
                   width: 20,
                   height: 20
               })),
-        (0, n.jsxs)('div', {
-            className: d.checklistItem,
+        (0, r.jsxs)('div', {
+            className: s.checklistItem,
             children: [
-                (0, n.jsx)('div', {
-                    className: d.checklistIcon,
-                    children: g
+                (0, r.jsx)('div', {
+                    className: s.checklistIcon,
+                    children: u
                 }),
-                (0, n.jsxs)('div', {
-                    className: l()(d.__invalid_checklistText, r && d.ineligibleRow),
+                (0, r.jsxs)('div', {
+                    className: l()(s.__invalid_checklistText, n && s.ineligibleRow),
                     children: [
-                        (0, n.jsx)(a.X6q, {
+                        (0, r.jsx)(a.X6q, {
                             variant: 'heading-md/semibold',
-                            className: d.checklistItemName,
-                            children: i
+                            className: s.checklistItemName,
+                            children: t
                         }),
-                        (0, n.jsx)(a.Text, {
+                        (0, r.jsx)(a.Text, {
                             color: 'interactive-normal',
                             variant: 'text-sm/normal',
-                            children: t
+                            children: i
                         })
                     ]
                 }),
-                null != b &&
-                    (0, n.jsx)('div', {
-                        className: d.eligibilityActionContainer,
-                        children: (0, n.jsx)(o.zx, {
-                            className: d.eligibilityActionButton,
-                            look: o.iL.OUTLINED,
-                            color: o.Tt.PRIMARY,
-                            onClick: u,
-                            grow: !0,
-                            children: b
+                null != d &&
+                    (0, r.jsx)('div', {
+                        className: s.eligibilityActionContainer,
+                        children: (0, r.jsx)(a.zxk, {
+                            variant: 'primary',
+                            onClick: b,
+                            text: d,
+                            size: 'sm'
                         })
                     })
             ]

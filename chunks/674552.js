@@ -65,12 +65,12 @@ function b(e) {
         { audio: n, video: r, screenshare: i, isCurrentUserConnected: l, liveStage: a, activeEvent: s, activity: c } = e;
     if (s) t = o.Que;
     else if (a) t = o.ewx;
-    else if (c) t = m;
     else if (i) t = o.pzj;
     else if (r) t = o.Odl;
+    else if (n) t = o.gj8;
     else {
-        if (!n) return null;
-        t = o.gj8;
+        if (!c) return null;
+        t = m;
     }
     return O({
         icon: t,

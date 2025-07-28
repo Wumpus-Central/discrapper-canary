@@ -36,8 +36,8 @@ function O(e) {
             }
             return o;
         })(e, ['guildId', 'powerup']);
-    let v = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
-        x = o.useRef(null),
+    let x = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
+        v = o.useRef(null),
         C = o.useRef(new i.qA()),
         [h, P] = o.useState(null),
         _ = f.uc.has(y.skuId);
@@ -90,7 +90,7 @@ function O(e) {
                                 scrollbarType: 'none',
                                 children: (0, r.jsxs)('div', {
                                     className: j.container,
-                                    ref: x,
+                                    ref: v,
                                     children: [
                                         (0, r.jsx)(p.m, {
                                             className: j.image,
@@ -134,9 +134,9 @@ function O(e) {
                                 className: j.close,
                                 onClick: g.onClose
                             }),
-                            !v &&
+                            !x &&
                                 (0, r.jsx)(c.Z, {
-                                    confettiTarget: x.current,
+                                    confettiTarget: v.current,
                                     confettiCanvas: h,
                                     sprites: (0, u.vK)()
                                 })

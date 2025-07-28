@@ -1,6 +1,6 @@
 (n.d(t, {
     X: () => Z,
-    Z: () => L
+    Z: () => k
 }),
     n(953529),
     n(388685),
@@ -530,7 +530,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
             ]
         });
     },
-    L = () => {
+    k = () => {
         let e = (0, a.e7)([y.Z], () => y.Z.getGuild());
         return null == e ? null : e.features.has(I.oNc.COMMUNITY) ? (0, r.jsx)(A, {}) : (0, r.jsx)(C.Z, { guild: e });
     };

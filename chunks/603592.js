@@ -11,12 +11,12 @@ var r = n(255367),
     h = n(329922);
 let p = i.forwardRef(function (e, t) {
     var n, l;
-    let { id: p, onClick: f, onContextMenu: g, icon: m, selected: b, tooltip: _, upperBadge: O, lowerBadge: y, lowerBadgeSize: v, showPill: C = !0, className: j, 'aria-label': E, children: x, onMouseEnter: S, onMouseLeave: I, onMouseDown: P } = e,
+    let { id: p, onClick: f, onContextMenu: g, icon: m, selected: b, tooltip: _, upperBadge: O, lowerBadge: y, lowerBadgeSize: C, showPill: v = !0, className: j, 'aria-label': E, children: S, onMouseEnter: x, onMouseLeave: I, onMouseDown: P } = e,
         N = (0, a.Ie)(p),
         [w, Z] = i.useState(!1);
     return (0, r.jsxs)(u.H, {
         children: [
-            C
+            v
                 ? (0, r.jsx)('div', {
                       className: h.pill,
                       children: (0, r.jsx)(c.Z, {
@@ -32,7 +32,7 @@ let p = i.forwardRef(function (e, t) {
                     selected: !0,
                     upperBadge: O,
                     lowerBadge: y,
-                    lowerBadgeSize: v,
+                    lowerBadgeSize: C,
                     children: (0, r.jsx)(
                         s.P3F,
                         ((n = (function (e) {
@@ -63,7 +63,7 @@ let p = i.forwardRef(function (e, t) {
                             {
                                 innerRef: t,
                                 onMouseEnter: () => {
-                                    (null == S || S(), Z(!0));
+                                    (null == x || x(), Z(!0));
                                 },
                                 onMouseLeave: () => {
                                     (null == I || I(), Z(!1));
@@ -103,7 +103,7 @@ let p = i.forwardRef(function (e, t) {
                     )
                 })
             }),
-            x
+            S
         ]
     });
 });

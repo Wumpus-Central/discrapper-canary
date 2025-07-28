@@ -38,8 +38,8 @@ function R(e) {
             p.Z.closeGuildSidebar(t);
         }, [t]),
         A = !1 == !!(null == n ? void 0 : n.features.has(S.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
-        L = (0, a.e7)([b.Z], () => b.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
-        k = i.useCallback(
+        k = (0, a.e7)([b.Z], () => b.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
+        L = i.useCallback(
             (e) => {
                 null != e &&
                     (0, f.openUserProfileModal)({
@@ -56,7 +56,7 @@ function R(e) {
             null == (e = M.current) || e.resetSearchText();
         }, []);
     if (null == n) return null;
-    let U = (0, y.xb)(!1, !1, L);
+    let U = (0, y.xb)(!1, !1, k);
     return (0, r.jsxs)(d.Gt, {
         value: l,
         children: [
@@ -104,7 +104,7 @@ function R(e) {
                                                                       guild: n,
                                                                       searchState: U,
                                                                       compact: !0,
-                                                                      onSelectRow: k,
+                                                                      onSelectRow: L,
                                                                       onResetForNewMembers: G
                                                                   }),
                                                                   U !== y.po.SUCCESS_STILL_INDEXING && (0, r.jsx)(N.Z, { guildId: n.id })

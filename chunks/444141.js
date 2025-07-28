@@ -4,8 +4,8 @@ var l = t(255367),
     i = t(906732),
     o = t(5192),
     s = t(785717),
-    a = t(892001),
-    c = t(687158),
+    c = t(892001),
+    a = t(687158),
     u = t(388032);
 function d(e) {
     for (var n = 1; n < arguments.length; n++) {
@@ -51,10 +51,10 @@ function f(e, n) {
     );
 }
 function p(e) {
-    let { user: n, guildId: t, channelId: p, displayProfile: g, onClose: v } = e,
-        { analyticsLocations: j, sourceAnalyticsLocations: h } = (0, i.ZP)(),
+    let { user: n, guildId: t, channelId: p, displayProfile: g, onClose: j } = e,
+        { analyticsLocations: v, sourceAnalyticsLocations: h } = (0, i.ZP)(),
         { context: m, trackUserProfileAction: b } = (0, s.KZ)(),
-        x = (0, c.ZP)(n.id, t);
+        x = (0, a.ZP)(n.id, t);
     return (null == x ? void 0 : x.guildId) == null || null == m
         ? null
         : (null == g ? void 0 : g.guildId) != null
@@ -63,8 +63,8 @@ function p(e) {
                 label: u.intl.string(u.t.GISTtb),
                 subtext: u.intl.formatToPlainString(u.t['mn/nW1'], { displayName: o.ZP.getName(void 0, void 0, n) }),
                 action: () => {
-                    (null == v || v(),
-                        (0, a.openUserProfileModal)(
+                    (null == j || j(),
+                        (0, c.openUserProfileModal)(
                             f(d({}, m), {
                                 showGuildProfile: !1,
                                 sourceAnalyticsLocations: h
@@ -74,7 +74,7 @@ function p(e) {
                             d(
                                 {
                                     action: 'PRESS_VIEW_MAIN_PROFILE',
-                                    analyticsLocations: j
+                                    analyticsLocations: v
                                 },
                                 m
                             )
@@ -86,8 +86,8 @@ function p(e) {
                 label: u.intl.string(u.t.DisZzM),
                 subtext: u.intl.formatToPlainString(u.t['mn/nW1'], { displayName: o.ZP.getName(t, p, n) }),
                 action: () => {
-                    (null == v || v(),
-                        (0, a.openUserProfileModal)(
+                    (null == j || j(),
+                        (0, c.openUserProfileModal)(
                             f(d({}, m), {
                                 showGuildProfile: !0,
                                 sourceAnalyticsLocations: h
@@ -97,7 +97,7 @@ function p(e) {
                             d(
                                 {
                                     action: 'PRESS_VIEW_SERVER_PROFILE',
-                                    analyticsLocations: j
+                                    analyticsLocations: v
                                 },
                                 m
                             )

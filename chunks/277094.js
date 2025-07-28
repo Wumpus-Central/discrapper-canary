@@ -13,7 +13,7 @@ var c = t(755721),
 function f(e) {
     let { user: n, currentUser: t, guildId: f, relationshipType: p, onClose: m } = e,
         { newestAnalyticsLocation: I } = (0, a.ZP)(),
-        { gameFriends: h, hasOutgoingPendingGameFriends: b, hasIncomingPendingGameFriends: x } = (0, s.H)({ userId: n.id });
+        { gameFriends: h, hasOutgoingPendingGameFriends: x, hasIncomingPendingGameFriends: b } = (0, s.H)({ userId: n.id });
     if (p === u.OGo.BLOCKED) return null;
     if (n.id === t.id)
         return (0, o.jsx)('div', {
@@ -53,7 +53,7 @@ function f(e) {
                 })
             ]
         });
-    let y = h.length > 0 || b || x;
+    let y = h.length > 0 || x || b;
     return p === u.OGo.NONE && y
         ? (0, o.jsxs)('div', {
               className: _.container,
@@ -64,8 +64,8 @@ function f(e) {
                       analyticsLocation: I,
                       gameFriends: h,
                       shouldShowTooltip: !0,
-                      hasIncomingPendingGameFriends: x,
-                      hasOutgoingPendingGameFriends: b
+                      hasIncomingPendingGameFriends: b,
+                      hasOutgoingPendingGameFriends: x
                   }),
                   (0, o.jsx)(d.Z, {
                       type: 'text',

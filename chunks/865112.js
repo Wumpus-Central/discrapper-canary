@@ -2,8 +2,8 @@ n.d(t, {
     RB: () => j,
     VH: () => y,
     Vi: () => E,
-    Vu: () => x,
-    q7: () => C
+    Vu: () => S,
+    q7: () => v
 });
 var r = n(692547),
     i = n(497089),
@@ -39,7 +39,7 @@ let O = {
         ADD_FRIEND: o,
         FIRST_MESSAGE: m
     },
-    v = (e) => {
+    C = (e) => {
         switch (e.item_enum) {
             case i.AM.ADD_FRIEND:
                 return 'ADD_FRIEND';
@@ -53,10 +53,10 @@ let O = {
                 return 'NOTIFICATION_CENTER';
         }
     },
-    C = (e) => {
+    v = (e) => {
         switch (e.type) {
             case 'lifecycle_item':
-                return v(e);
+                return C(e);
             case 'missed_messages':
                 return 'MISSED_MESSAGES';
             case 'friend_request_reminder':
@@ -110,7 +110,7 @@ let O = {
                 return null;
         }
     },
-    x = (e) => {
+    S = (e) => {
         switch (e.item_enum) {
             case i.AM.UPDATE_PROFILE:
                 return l.Y9;

@@ -481,32 +481,36 @@ async function z(e) {
     try {
         let o = await (0, l.Gg)(),
             g = await (0, s.Gy)(),
-            E = (
+            b = (
                 await i.tn.get({
                     url: I.ANM.QUEST_FETCH_QUEST_TO_DELIVER(e, null == o ? void 0 : o.uuid, g.uuid),
                     rejectWithError: !1
                 })
             ).body,
-            b = E.quest,
-            y = null != b ? (0, m.q6)(b) : void 0;
-        (a.Z.dispatch({
-            type: 'QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS',
-            quest: y,
-            adDecisionData: {
-                ad_id: null == (t = E.ad_identifiers) ? void 0 : t.ad_id,
-                adset_id: null == (n = E.ad_identifiers) ? void 0 : n.adset_id,
-                ad_set_id: null == (r = E.ad_identifiers) ? void 0 : r.ad_set_id,
-                campaign_id: null == (u = E.ad_identifiers) ? void 0 : u.campaign_id,
-                creative_id: null == (f = E.ad_identifiers) ? void 0 : f.creative_id,
-                creative_type: null == (_ = E.ad_identifiers) ? void 0 : _.creative_type,
-                decision_id: E.request_id,
-                is_targeted: null != E.ad_identifiers,
-                metadata_raw: E.metadata_raw
-            },
-            placement: e
-        }),
+            y = b.quest,
+            O = null != y ? (0, m.q6)(y) : void 0;
+        if (
+            (a.Z.dispatch({
+                type: 'QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS',
+                quest: O,
+                adDecisionData: {
+                    ad_id: null == (t = b.ad_identifiers) ? void 0 : t.ad_id,
+                    adset_id: null == (n = b.ad_identifiers) ? void 0 : n.adset_id,
+                    ad_set_id: null == (r = b.ad_identifiers) ? void 0 : r.ad_set_id,
+                    campaign_id: null == (u = b.ad_identifiers) ? void 0 : u.campaign_id,
+                    creative_id: null == (f = b.ad_identifiers) ? void 0 : f.creative_id,
+                    creative_type: null == (_ = b.ad_identifiers) ? void 0 : _.creative_type,
+                    decision_id: b.request_id,
+                    is_targeted: null != b.ad_identifiers,
+                    metadata_raw: b.metadata_raw
+                },
+                placement: e
+            }),
             h.Z.recordQuestRequestApiResponse('/quests/decision', { wasSuccessful: !0 }),
-            null != y && (p.Z.startTracking(y.id), d.default.track(I.rMx.QUEST_DECISION_RECEIVED, C(A({}, (0, c.Z)()), { quest_id: y.id }))));
+            null == O)
+        )
+            return;
+        (e === E.Ok.DESKTOP_ACCOUNT_PANEL_AREA && p.Z.startTracking(O.id), d.default.track(I.rMx.QUEST_DECISION_RECEIVED, C(A({}, (0, c.Z)()), { quest_id: O.id })));
     } catch (t) {
         (h.Z.recordQuestRequestApiResponse('/quests/decision', { wasSuccessful: !1 }),
             d.default.track(

@@ -90,7 +90,7 @@ class P extends i.PureComponent {
 }
 let w = i.forwardRef((e, t) => {
     let n,
-        { log: l, className: o, expanded: f, guildId: _, guild: w, onChannelContextMenu: R, onContentClick: Z, onHeaderClick: D, onTargetContextMenu: A, onUserContextMenu: L, theme: k } = e,
+        { log: l, className: o, expanded: f, guildId: _, guild: w, onChannelContextMenu: R, onContentClick: Z, onHeaderClick: D, onTargetContextMenu: A, onUserContextMenu: k, theme: L } = e,
         M = i.useRef(null),
         G = (function () {
             let { changes: e } = l;
@@ -170,7 +170,7 @@ let w = i.forwardRef((e, t) => {
                                         if (null != n) {
                                             let e = u.Z.get(n);
                                             if (null != e) {
-                                                let t = (0, c.wj)(k) ? e.icon.darkSVG : e.icon.lightSVG;
+                                                let t = (0, c.wj)(L) ? e.icon.darkSVG : e.icon.lightSVG;
                                                 return (0, r.jsx)(d.qEK, {
                                                     className: E.avatar,
                                                     src: t,
@@ -203,7 +203,7 @@ let w = i.forwardRef((e, t) => {
                                                                               P,
                                                                               {
                                                                                   user: l.user,
-                                                                                  onContextMenu: L
+                                                                                  onContextMenu: k
                                                                               },
                                                                               t
                                                                           );

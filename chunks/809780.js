@@ -24,12 +24,12 @@ var r,
     _ = n(181945),
     O = n(220444),
     y = n(601070),
-    v = n(344185),
-    C = n(569471),
+    C = n(344185),
+    v = n(569471),
     j = n(723170),
     E = n(675478),
-    x = n(581883),
-    S = n(131704),
+    S = n(581883),
+    x = n(131704),
     I = n(592125),
     P = n(984933),
     N = n(731290),
@@ -120,7 +120,7 @@ class K extends o.EventEmitter {
                 hasLoadedAnything: !0
             });
         if ('forum' === e.type) {
-            let t = v.Z.hasLoaded(e.guildId);
+            let t = C.Z.hasLoaded(e.guildId);
             return F(V({}, e), {
                 isFullyLoaded: t,
                 hasLoadedAnything: !0
@@ -313,7 +313,7 @@ class K extends o.EventEmitter {
                 e.length !== this.state.channels.length && this.setState({ channels: e });
             }),
             (this.handleJoinedThreadsStoreChange = () => {
-                let e = this.state.channels.filter((e) => !C.Z.isMuted(e.channelId));
+                let e = this.state.channels.filter((e) => !v.Z.isMuted(e.channelId));
                 e.length !== this.state.channels.length && this.setState({ channels: e });
             }),
             (this.handleActiveThreadsStoreChange = () => {
@@ -321,7 +321,7 @@ class K extends o.EventEmitter {
                     if ('forum' !== e.type) return e;
                     {
                         if (!e.hasLoadedAnything) return e;
-                        let t = v.Z.hasLoaded(e.guildId);
+                        let t = C.Z.hasLoaded(e.guildId);
                         return F(V({}, e), {
                             isFullyLoaded: t,
                             hasLoadedAnything: !0
@@ -353,7 +353,7 @@ function q() {
     let e = (function () {
             var e, t;
             let n = {},
-                r = null != (t = null == (e = x.Z.settings.guilds) ? void 0 : e.guilds) ? t : {};
+                r = null != (t = null == (e = S.Z.settings.guilds) ? void 0 : e.guilds) ? t : {};
             for (let e in r)
                 for (let t in r[e].channels) {
                     let i = I.Z.getChannel(t);
@@ -398,7 +398,7 @@ function q() {
 function X(e, t, n, r) {
     if (null == r) return;
     let i = I.Z.getChannel(r);
-    if (null == i || (!S.Ec.has(i.type) && D.ZP.isGuildOrCategoryOrChannelMuted(n, i.id))) return;
+    if (null == i || (!x.Ec.has(i.type) && D.ZP.isGuildOrCategoryOrChannelMuted(n, i.id))) return;
     if (i.isPrivate()) {
         if (0 === A.ZP.getMentionCount(r)) return;
     } else if (!(0, O.d)(i) && 0 === A.ZP.getMentionCount(r)) return;
@@ -493,8 +493,8 @@ function $(e) {
         }, [null == a ? void 0 : a.channels, null == a ? void 0 : a.loadState]),
         l.useEffect(() => (Z.Z.addChangeListener(t.reloadMessages), () => Z.Z.removeChangeListener(t.reloadMessages)), [t.reloadMessages]),
         l.useEffect(() => (D.ZP.addChangeListener(t.handleUserGuildSettingsStoreChange), () => D.ZP.removeChangeListener(t.handleUserGuildSettingsStoreChange)), [t]),
-        l.useEffect(() => (C.Z.addChangeListener(t.handleJoinedThreadsStoreChange), () => C.Z.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]),
-        l.useEffect(() => (v.Z.addChangeListener(t.handleActiveThreadsStoreChange), () => v.Z.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]),
+        l.useEffect(() => (v.Z.addChangeListener(t.handleJoinedThreadsStoreChange), () => v.Z.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]),
+        l.useEffect(() => (C.Z.addChangeListener(t.handleActiveThreadsStoreChange), () => C.Z.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]),
         [a, t]
     );
 }

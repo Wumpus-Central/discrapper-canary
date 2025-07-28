@@ -124,7 +124,7 @@ function R(e) {
                                               })
                                     ]
                                 }),
-                                (0, r.jsxs)('header', {
+                                (0, r.jsxs)('div', {
                                     className: A.header,
                                     children: [
                                         (0, r.jsx)(C.Z, {
@@ -139,7 +139,7 @@ function R(e) {
                                             className: A.toast
                                         }),
                                         (0, r.jsx)(y.Z, {
-                                            location: 'UserProfileSiebar',
+                                            location: 'UserProfileSidebar',
                                             user: t,
                                             displayProfile: D,
                                             channelId: R.id,
@@ -147,7 +147,7 @@ function R(e) {
                                             onOpenProfile: M ? void 0 : z
                                         }),
                                         (0, r.jsx)(P.Z, {
-                                            location: 'UserProfileSiebar',
+                                            location: 'UserProfileSidebar',
                                             user: t,
                                             channelId: R.id,
                                             themeType: T.lY.SIDEBAR,
@@ -170,7 +170,7 @@ function R(e) {
                             ]
                         }),
                         !M &&
-                            (0, r.jsx)('footer', {
+                            (0, r.jsx)('div', {
                                 className: A.footer,
                                 children: (0, r.jsx)(o.zx, {
                                     fullWidth: !0,

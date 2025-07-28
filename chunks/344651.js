@@ -1136,6 +1136,21 @@ function J(e) {
             unavailable: e.unavailable
         });
     }),
+    H(['OAUTH2_TOKEN_CREATE'], (e) => {
+        z({
+            type: 'OAUTH2_TOKEN_CREATE',
+            id: e.id,
+            scopes: e.scopes,
+            application: e.application
+        });
+    }),
+    H(['OAUTH2_TOKEN_DELETE'], (e) => {
+        z({
+            type: 'OAUTH2_TOKEN_DELETE',
+            id: e.id,
+            applicationId: e.application_id
+        });
+    }),
     H(['OAUTH2_TOKEN_REVOKE'], (e) => {
         z({
             type: 'OAUTH2_TOKEN_REVOKE',

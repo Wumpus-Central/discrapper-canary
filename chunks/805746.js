@@ -14,10 +14,7 @@ var r = n(255367),
 let b = (e) => {
     let { application: t, reportId: n } = e,
         [b, g] = a.useState(!1),
-        x = (0, i.e7)([m.Z], () => {
-            let e = m.Z.getApps();
-            return null != e ? e.find((e) => e.application.id === t.id) : null;
-        });
+        x = (0, i.e7)([m.Z], () => m.Z.getNewestTokenForApplication(t.id));
     a.useEffect(() => {
         null != x && g(!0);
     }, [x]);

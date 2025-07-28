@@ -17,17 +17,17 @@ var r = n(255367),
     _ = n(823379),
     O = n(355363),
     y = n(449932),
-    v = n(561788),
-    C = n(876548),
+    C = n(561788),
+    v = n(876548),
     j = n(543432),
     E = n(981631),
-    x = n(388032),
-    S = n(642317),
+    S = n(388032),
+    x = n(642317),
     I = n(656855);
 function P(e) {
     var t, l;
     let { channel: o, guild: p, onAction: f, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: O } = e,
-        v = i.useMemo(() => {
+        C = i.useMemo(() => {
             var e;
             return null == g || g.length > 50
                 ? {}
@@ -42,9 +42,9 @@ function P(e) {
                               : []
                   };
         }, [o, g]);
-    (0, c.$)(v);
-    let C = (0, u.ZP)(o),
-        j = Array.from((0, u.uF)(C).values()),
+    (0, c.$)(C);
+    let v = (0, u.ZP)(o),
+        j = Array.from((0, u.uF)(v).values()),
         I = null != (t = null == g ? void 0 : g.filter(_.lm)) ? t : [],
         P = (e) => (t) => ([E.IIU.PLAYING, E.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === E.IIU.LISTENING,
         w = (0, a.e7)(
@@ -76,14 +76,14 @@ function P(e) {
     return w.length + j.length === 0
         ? null
         : (0, r.jsxs)(s.Ttm, {
-              className: S.container,
+              className: x.container,
               children: [
                   (0, r.jsx)(N, {
                       channel: o,
                       isChannelSelected: b,
                       voiceStatesCount: null != (l = null == g ? void 0 : g.length) ? l : 0
                   }),
-                  (0, r.jsx)('div', { className: S.headerDivider }),
+                  (0, r.jsx)('div', { className: x.headerDivider }),
                   j.map((e, t) => {
                       var n;
                       return (0, r.jsx)(
@@ -113,13 +113,13 @@ function P(e) {
                   O &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)('div', { className: S.headerDivider }),
+                              (0, r.jsx)('div', { className: x.headerDivider }),
                               (0, r.jsx)('div', {
-                                  className: S.settingNudgeText,
+                                  className: x.settingNudgeText,
                                   children: (0, r.jsx)(s.Text, {
                                       variant: 'text-xs/normal',
                                       tag: 'span',
-                                      children: x.intl.format(x.t.ePyoY2, {
+                                      children: S.intl.format(S.t.ePyoY2, {
                                           onClick: () => {
                                               (0, s.ZDy)(async () => {
                                                   let { default: e } = await n.e('59500').then(n.bind(n, 241420));
@@ -192,11 +192,11 @@ function N(e) {
     return null == (0, p.KS)(t, u)
         ? null
         : (0, r.jsxs)('div', {
-              className: o()(S.popoutHeaderContainer, I.popoutHeaderContainer),
+              className: o()(x.popoutHeaderContainer, I.popoutHeaderContainer),
               children: [
-                  (0, r.jsx)(v.Z, { channel: t }),
+                  (0, r.jsx)(C.Z, { channel: t }),
                   c
-                      ? (0, r.jsx)(C.Z, {
+                      ? (0, r.jsx)(v.Z, {
                             userCount: i,
                             video: s,
                             channel: t

@@ -34,7 +34,7 @@ function w(e) {
         Z = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
         D = null != R && (0, b.eM)(R, Z),
         { loading: A } = (0, c.H)(t),
-        [L, k] = i.useState(n ? 'manage_listings' : 'payment');
+        [k, L] = i.useState(n ? 'manage_listings' : 'payment');
     (0, m.P)(R);
     let M = i.useCallback(() => {
         if (null == R) return;
@@ -71,8 +71,8 @@ function w(e) {
             look: 'brand',
             className: P.tabBar,
             'aria-label': T.intl.string(T.t.X6h2g4),
-            selectedItem: L,
-            onItemSelect: k,
+            selectedItem: k,
+            onItemSelect: L,
             children: [
                 (0, r.jsx)(u.Z, {
                     id: 'basic_info',
@@ -107,14 +107,14 @@ function w(e) {
                     : null
             ]
         }),
-        B = (0, l.EQ)(L)
+        B = (0, l.EQ)(k)
             .with('basic_info', () => (0, r.jsx)(C.Z, { guildId: t }))
             .with('manage_listings', () => (0, r.jsx)(N.Z, { guildId: t }))
             .with('payment', () => (0, r.jsx)(I.Z, { guildId: t }))
             .exhaustive(),
         F = w
             ? (0, r.jsx)(o.njP.Panel, {
-                  id: L,
+                  id: k,
                   children: B
               })
             : (0, r.jsx)(o.$jN, {});

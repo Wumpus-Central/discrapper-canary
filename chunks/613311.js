@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(695103),
     U = n(451478),
     G = n(626135),
-    B = n(572004),
-    V = n(630388),
+    V = n(572004),
+    B = n(630388),
     H = n(937615),
     F = n(73346),
     z = n(3570),
@@ -446,7 +446,7 @@ class ep extends i.PureComponent {
                 var e;
                 let { location: t } = this.props,
                     n = ((e = t.pathname), ''.concat(location.protocol, '//').concat(location.host).concat(e));
-                (0, B.JG)(n, () =>
+                (0, V.JG)(n, () =>
                     this.setState({ showLinkCopied: !0 }, () => {
                         this.showCopyLinkTextTimeout.start(1500, () => {
                             this.setState({ showLinkCopied: !1 });
@@ -613,7 +613,7 @@ let eh = (0, _.Z)(
                 if (null == l) throw Error('Needs applicationId or skuId');
                 (null != (r = y.Z.getApplication(l)) && (t = r.destinationSkuId), (n = null != t ? D.Z.get(t) : null));
             }
-            (null == n ? void 0 : n.flags) != null && (0, V.yE)(n.flags, el.l4R.STICKER_PACK) && (n = null);
+            (null == n ? void 0 : n.flags) != null && (0, B.yE)(n.flags, el.l4R.STICKER_PACK) && (n = null);
             let c = null != l && (M.Z.inTestModeForApplication(l) || E.Z.inDevModeForApplication(l));
             return {
                 skuId: t,

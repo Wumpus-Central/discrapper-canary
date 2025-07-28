@@ -5,21 +5,21 @@ var r = t(442837),
     i = t(481060),
     o = t(468363),
     s = t(353647),
-    a = t(158776),
-    c = t(885110),
+    c = t(158776),
+    a = t(885110),
     u = t(63063),
     d = t(209698),
     f = t(369566),
     p = t(29899),
     g = t(678738),
-    v = t(151545),
-    j = t(744802),
+    j = t(151545),
+    v = t(744802),
     h = t(493043),
     m = t(864141),
     b = t(228168),
     x = t(981631),
-    O = t(388032),
-    y = t(316879),
+    y = t(388032),
+    O = t(316879),
     Z = t(301150);
 function I(e) {
     let { user: n, currentUser: t, displayProfile: I, guildId: P, subsection: E, onClose: T } = e,
@@ -32,24 +32,24 @@ function I(e) {
         }),
         M = (0, r.e7)([s.Z], () => s.Z.isFetchingUserOutbox(n.id)),
         U = n.id === t.id,
-        L = (0, r.e7)([c.Z, a.Z], () => {
-            let e = U ? c.Z.getStatus() : a.Z.getStatus(n.id);
+        D = (0, r.e7)([a.Z, c.Z], () => {
+            let e = U ? a.Z.getStatus() : c.Z.getStatus(n.id);
             return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
-        D = A.length > 0 || null != w,
+        L = A.length > 0 || null != w,
         B = S && null == w && null == R && null != _,
-        k = !L && (D || B),
+        k = !D && (L || B),
         G = C.length > 0;
     return k || G || !M
         ? (0, l.jsxs)(i.zJl, {
-              className: y.scroller,
+              className: O.scroller,
               fade: !0,
               children: [
                   k
                       ? (0, l.jsx)(g.Z, {
-                            'aria-label': O.intl.string(O.t.J6STd3),
+                            'aria-label': y.intl.string(y.t.J6STd3),
                             children: (0, l.jsxs)('ul', {
-                                className: y.activityList,
+                                className: O.activityList,
                                 children: [
                                     !N &&
                                         B &&
@@ -76,7 +76,7 @@ function I(e) {
                                         (0, l.jsx)(
                                             'li',
                                             {
-                                                children: (0, l.jsx)(v.Z, {
+                                                children: (0, l.jsx)(j.Z, {
                                                     user: n,
                                                     currentUser: t,
                                                     activity: e,
@@ -93,9 +93,9 @@ function I(e) {
                       : null,
                   G
                       ? (0, l.jsx)(g.Z, {
-                            heading: O.intl.string(O.t.M0zgnZ),
+                            heading: y.intl.string(y.t.M0zgnZ),
                             introText: U
-                                ? O.intl.format(O.t['4bk9Ag'], {
+                                ? y.intl.format(y.t['4bk9Ag'], {
                                       learnMoreHook: (e, n) =>
                                           (0, l.jsx)(
                                               i.eee,
@@ -109,12 +109,12 @@ function I(e) {
                                 : void 0,
                             scrollIntoView: E === b.Tb.RECENT_ACTIVITY,
                             children: (0, l.jsx)('ul', {
-                                className: y.activityList,
+                                className: O.activityList,
                                 children: C.map((e) =>
                                     (0, l.jsx)(
                                         'li',
                                         {
-                                            children: (0, l.jsx)(j.Z, {
+                                            children: (0, l.jsx)(v.Z, {
                                                 location: 'UserProfileModalActivity',
                                                 user: n,
                                                 currentUser: t,

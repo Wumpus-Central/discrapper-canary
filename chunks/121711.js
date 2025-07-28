@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(466962),
     U = n(452081),
     G = n(46140),
-    B = n(981631),
-    V = n(215023),
+    V = n(981631),
+    B = n(215023),
     H = n(388032),
     F = n(87671),
     z = n(13299),
@@ -109,8 +109,8 @@ let q = function () {
     let { enabled: z } = (0, N.WX)({ location: G.dr.QUEST_HOME_DESKTOP }),
         { showBetaTag: W } = S.Z.useExperiment({ location: G.dr.QUEST_HOME_DESKTOP }),
         Y = i.useCallback(() => {
-            if (z) return void window.open(B.EYA.PAID_TERMS_ORBS);
-            window.open(j.Z.getArticleURL(B.BhN.QUESTS_LEARN_MORE));
+            if (z) return void window.open(V.EYA.PAID_TERMS_ORBS);
+            window.open(j.Z.getArticleURL(V.BhN.QUESTS_LEARN_MORE));
         }, [z]);
     (0, g.Tt)({ location: H.intl.string(H.t.JALI2N) });
     let q = z ? H.intl.format(H.t.BCBIlp, {}) : H.intl.format(H.t.lmMBf3, {}),
@@ -133,18 +133,18 @@ let q = function () {
                                   tabs: n,
                                   icon: u.qDn,
                                   children: (0, r.jsx)(T.V9, {
-                                      analyticsPage: B.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                                      analyticsPage: V.ZY5.GLOBAL_DISCOVERY_QUESTS,
                                       cardAlignment: T.ek.END,
                                       ctaText: H.intl.string(H.t['J+vlIS']),
                                       ctaOnClick: () => {
                                           ((0, C.Y)({
-                                              pageType: B.ZY5.GLOBAL_DISCOVERY_QUESTS,
-                                              sectionType: B.jXE.ORBS_BALANCE_MENU,
-                                              ctaObject: B.qAy.CTA_TO_ORBS_SHOP
+                                              pageType: V.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                                              sectionType: V.jXE.ORBS_BALANCE_MENU,
+                                              ctaObject: V.qAy.CTA_TO_ORBS_SHOP
                                           }),
                                               (0, f.mK)({
                                                   openInLayer: !1,
-                                                  tab: V.AW.ORBS,
+                                                  tab: B.AW.ORBS,
                                                   analyticsLocations: [],
                                                   analyticsSource: p.Z.ORBS_BALANCE_MENU
                                               }));
@@ -164,7 +164,7 @@ let q = function () {
                                                     onClick: () =>
                                                         (0, f.mK)({
                                                             openInLayer: !1,
-                                                            tab: V.AW.ORBS,
+                                                            tab: B.AW.ORBS,
                                                             analyticsLocations: [],
                                                             analyticsSource: p.Z.INTRO_TO_ORBS_QUEST_BANNER
                                                         })

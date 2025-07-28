@@ -15,8 +15,8 @@ var i = n(255367),
     p = n(492593),
     C = n(453687),
     g = n(25015),
-    O = n(689674),
-    S = n(438075),
+    S = n(689674),
+    O = n(438075),
     T = n(963550),
     f = n(845080),
     N = n(295790),
@@ -108,7 +108,7 @@ let D = r.memo(function (e) {
             guildId: L.guild_id,
             roleId: X.iconRoleId
         }),
-        J = (0, O.Z)({
+        J = (0, S.Z)({
             message: r,
             channel: L,
             enabled: x
@@ -134,7 +134,7 @@ let D = r.memo(function (e) {
                         roleIcon: Q
                     })
                 ),
-                childrenAccessories: e.hideAccessories ? void 0 : (0, S.Q)(e, W),
+                childrenAccessories: e.hideAccessories ? void 0 : (0, O.Q)(e, W),
                 childrenMessageContent: (0, T.Z)(e, H),
                 childrenSystemMessage: (0, N.Z)(P(b({}, e), { disableInteraction: V })),
                 onContextMenu: v,

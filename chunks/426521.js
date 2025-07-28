@@ -17,12 +17,12 @@ var r = n(255367),
     _ = n(626135),
     O = n(709054),
     y = n(591759),
-    v = n(833592),
-    C = n(497089),
+    C = n(833592),
+    v = n(497089),
     j = n(178480),
     E = n(418316),
-    x = n(382865),
-    S = n(526146),
+    S = n(382865),
+    x = n(526146),
     I = n(400565),
     P = n(148789),
     N = n(11825),
@@ -102,9 +102,9 @@ let U = i.memo(function (e) {
         var t;
         let { item: l, ackedBeforeId: s } = e,
             { analyticsLocations: u } = (0, c.ZP)(),
-            p = (0, S.I)(l, s),
+            p = (0, x.I)(l, s),
             g = i.useCallback(async () => {
-                if ((p || (0, v.wt)(l), null != l.item_enum && l.item_enum === C.AM.FIND_FRIENDS))
+                if ((p || (0, C.wt)(l), null != l.item_enum && l.item_enum === v.AM.FIND_FRIENDS))
                     return void (0, o.ZDy)(async () => {
                         let { default: e } = await n.e('6074').then(n.bind(n, 443189));
                         return (t) =>
@@ -155,7 +155,7 @@ let U = i.memo(function (e) {
                         } else await (0, d.Z)(r);
                     }
                     _.default.track(w.rMx.NOTIFICATION_CENTER_ACTION, {
-                        action_type: C.ud.CLICKED,
+                        action_type: v.ud.CLICKED,
                         notification_center_id: l.id,
                         item_type: l.type,
                         acked: p
@@ -163,16 +163,16 @@ let U = i.memo(function (e) {
                 }
             }, [l, p, u]),
             m = null;
-        l.type === C.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user
+        l.type === v.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user
             ? (m = (0, r.jsx)(P.Z, { userId: l.other_user.id }))
-            : l.type === C.O7.INCOMING_GAME_FRIEND_REQUESTS &&
+            : l.type === v.O7.INCOMING_GAME_FRIEND_REQUESTS &&
               null != l.other_user &&
               (m = (0, r.jsx)(P.Z, {
                   userId: l.other_user.id,
                   applicationId: l.applicationId
               }));
         let b = null != l.local_id,
-            x = (0, E.Z)({
+            S = (0, E.Z)({
                 item: l,
                 renderApplication: (e) => (0, r.jsx)(k, { applicationId: e })
             }),
@@ -191,7 +191,7 @@ let U = i.memo(function (e) {
                 (0, r.jsxs)(o.kL8, {
                     className: T.rowContent,
                     focusProps: { offset: 4 },
-                    'aria-label': x,
+                    'aria-label': S,
                     onClick: g,
                     children: [
                         p ? null : (0, r.jsx)('div', { className: T.unread }),
@@ -203,7 +203,7 @@ let U = i.memo(function (e) {
                                 (0, r.jsxs)(o.Text, {
                                     variant: 'text-md/normal',
                                     color: p ? 'text-muted' : 'text-default',
-                                    children: ['string' != typeof x ? x : h.Z.parse(x), R]
+                                    children: ['string' != typeof S ? S : h.Z.parse(S), R]
                                 }),
                                 (null == (t = l.message) ? void 0 : t.content) != null ? (0, r.jsx)(D, { item: l }) : null,
                                 null != l.callout ? (0, r.jsx)(L, { item: l }) : null,
@@ -225,7 +225,7 @@ let U = i.memo(function (e) {
         let { items: t } = e,
             n = g.d$.useSetting();
         return (
-            (0, x.c)(t),
+            (0, S.c)(t),
             (0, r.jsx)(r.Fragment, {
                 children: t.map((e) =>
                     (0, r.jsx)(

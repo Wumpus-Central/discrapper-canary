@@ -17,12 +17,12 @@ var r = n(255367),
     _ = n(938475),
     O = n(714794),
     y = n(876548),
-    v = n(25601),
-    C = n(207055),
+    C = n(25601),
+    v = n(207055),
     j = n(981631),
     E = n(124368),
-    x = n(388032),
-    S = n(915887),
+    S = n(388032),
+    x = n(915887),
     I = n(768107),
     P = n(995453);
 function N(e) {
@@ -200,16 +200,16 @@ let T = i.memo(function (e) {
         K = i.useRef(null),
         Y =
             M > 0
-                ? x.intl.formatToPlainString(x.t['ZL7+Iy'], {
+                ? S.intl.formatToPlainString(S.t['ZL7+Iy'], {
                       channelName: t.name,
                       mentionCount: M
                   })
                 : L
-                  ? x.intl.formatToPlainString(x.t.YlVvmZ, { channelName: t.name })
-                  : x.intl.formatToPlainString(x.t['0nZpiI'], { channelName: t.name });
+                  ? S.intl.formatToPlainString(S.t.YlVvmZ, { channelName: t.name })
+                  : S.intl.formatToPlainString(S.t['0nZpiI'], { channelName: t.name });
     return (0, r.jsxs)('li', {
         role: z,
-        className: o()(S.containerDefault, { [S.selected]: l }),
+        className: o()(x.containerDefault, { [x.selected]: l }),
         children: [
             (0, r.jsx)(Z, { withGuildIcon: A }),
             T
@@ -228,7 +228,7 @@ let T = i.memo(function (e) {
                     right: 4
                 },
                 children: (0, r.jsxs)('div', {
-                    className: o()(S.iconVisibility, I.wrapper, I.typeThread, {
+                    className: o()(x.iconVisibility, I.wrapper, I.typeThread, {
                         [I.modeSelected]: l,
                         [I.modeMuted]: !l && U,
                         [I.modeUnreadImportant]: !U && !l && L,
@@ -265,7 +265,7 @@ let T = i.memo(function (e) {
                                                       })
                                                     : null,
                                                 (0, O.Z)(M)
-                                                    ? (0, r.jsx)(v.Z, {
+                                                    ? (0, r.jsx)(C.Z, {
                                                           mentionsCount: M,
                                                           isMentionLowImportance: k
                                                       })
@@ -279,7 +279,7 @@ let T = i.memo(function (e) {
                     ]
                 })
             }),
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(v.Z, {
                 channel: t,
                 collapsed: !P,
                 collapsedMax: 6,

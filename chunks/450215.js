@@ -27,10 +27,10 @@ function C(e) {
         R = (0, c.e7)([f.Z], () => f.Z.getSubscriptionListing(P)),
         Z = null == R,
         [D, A] = i.useState(Z),
-        L = null == R ? void 0 : R.subscription_plans[0],
-        k = null != (t = null == R ? void 0 : R.published) && t,
+        k = null == R ? void 0 : R.subscription_plans[0],
+        L = null != (t = null == R ? void 0 : R.published) && t,
         M = null != (n = null == R ? void 0 : R.archived) && n,
-        G = !M && !k && void 0 !== R,
+        G = !M && !L && void 0 !== R,
         U = void 0 === R,
         B = (0, h.mY)(),
         [F] = b._T(P),
@@ -93,11 +93,11 @@ function C(e) {
                                             text: O.intl.string(O.t.aiwXen),
                                             className: y.unsavedBadge
                                         }),
-                                    null != L &&
+                                    null != k &&
                                         (0, r.jsxs)(d.Text, {
                                             color: 'interactive-normal',
                                             variant: 'text-sm/normal',
-                                            children: [(0, m.T4)(L.price, L.currency), '/', (0, g.JE)(L)]
+                                            children: [(0, m.T4)(k.price, k.currency), '/', (0, g.JE)(k)]
                                         })
                                 ]
                             })

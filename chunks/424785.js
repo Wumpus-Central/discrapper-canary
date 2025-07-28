@@ -17,12 +17,12 @@ var r = n(255367),
     _ = n(378844),
     O = n(359110),
     y = n(922482),
-    v = n(431328),
-    C = n(501655),
+    C = n(431328),
+    v = n(501655),
     j = n(427679),
     E = n(368442),
-    x = n(201469),
-    S = n(680089),
+    S = n(201469),
+    x = n(680089),
     I = n(592125),
     P = n(430824),
     N = n(607744),
@@ -121,8 +121,8 @@ class K extends D.ZP {
     }
     render() {
         let { channel: e, selected: t, connected: n, locked: i, connectChannelDropTarget: l, connectChannelDragSource: a, connectUserDropTarget: c, connectDragPreview: u, canReorderChannel: d, canMoveMembers: h, stageInstance: f, isSubscriptionGated: g, needSubscriptionToAccess: m, unread: b, resolvedUnreadSetting: _, mentionCount: O, isFavoriteSuggestion: y } = this.props,
-            { shouldShowGuildVerificationPopout: v } = this.state,
-            C = this.getVoiceStatesCount(),
+            { shouldShowGuildVerificationPopout: C } = this.state,
+            v = this.getVoiceStatesCount(),
             j = (0, r.jsxs)('li', {
                 className: o()(this.getModeClass(), { [V.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
@@ -133,7 +133,7 @@ class K extends D.ZP {
                         renderPopout: this.renderPopout,
                         spacing: 0,
                         onRequestClose: this.closeGuildVerificationPopout,
-                        shouldShow: v,
+                        shouldShow: C,
                         children: () =>
                             (0, r.jsx)(s.ua7, {
                                 text: this.getTooltipText(),
@@ -186,7 +186,7 @@ class K extends D.ZP {
                                                         channel: e,
                                                         unread: b,
                                                         mentionCount: O,
-                                                        userCount: C,
+                                                        userCount: v,
                                                         isSubscriptionGated: g,
                                                         needSubscriptionToAccess: m
                                                     })
@@ -306,10 +306,10 @@ function q(e) {
                 unverifiedAccount: !r.canChat
             };
         }),
-        h = (0, a.e7)([S.Z], () => S.Z.isCollapsed(n.parent_id)),
-        p = (0, x.ZP)(n.id),
+        h = (0, a.e7)([x.Z], () => x.Z.isCollapsed(n.parent_id)),
+        p = (0, S.ZP)(n.id),
         f = (0, a.e7)([j.Z], () => j.Z.getStageInstanceByChannel(n.id), [n.id]),
-        g = (0, v.Rk)(n.id, C.pV.AUDIENCE),
+        g = (0, C.Rk)(n.id, v.pV.AUDIENCE),
         { isSubscriptionGated: m, needSubscriptionToAccess: _ } = (0, b.Z)(n.id),
         O = (0, a.e7)([T.ZP], () => T.ZP.isFavorite(t.id, n.id)),
         y = (0, E.xJ)(n.id),

@@ -15,8 +15,8 @@ var n = r(255367),
     b = r(38900),
     m = r(709999),
     _ = r(81136),
-    C = r(501638),
-    O = r(538314);
+    O = r(501638),
+    C = r(538314);
 function v(e) {
     var t;
     let { isFetchingCategories: r, isFullScreen: i, scrollerRef: v, tab: E } = e,
@@ -66,11 +66,11 @@ function v(e) {
         (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsxs)('div', {
-                    className: o()({ [O.productsEmpty]: U }),
+                    className: o()({ [C.productsEmpty]: U }),
                     children: [
-                        U && (0, n.jsx)(C.Z, {}),
+                        U && (0, n.jsx)(O.Z, {}),
                         (0, n.jsxs)('div', {
-                            className: o()(O.products, { [O.loadIn]: H }),
+                            className: o()(C.products, { [C.loadIn]: H }),
                             ref: Z,
                             children: [
                                 V && [...Array(M)].map((e, t) => (0, n.jsx)(b.K, {}, t)),
@@ -103,7 +103,7 @@ function v(e) {
                 }),
                 k > M &&
                     (0, n.jsx)('div', {
-                        className: O.paginationContainer,
+                        className: C.paginationContainer,
                         children: (0, n.jsx)('div', {
                             children: (0, n.jsx)(s.DsT, {
                                 currentPage: L,

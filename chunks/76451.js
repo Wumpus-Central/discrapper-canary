@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => P,
-    _: () => S
+    _: () => T
 }),
     n(388685));
 var r = n(255367),
@@ -35,11 +35,11 @@ let y = {
         scale: 1,
         opacity: 1
     },
-    N = {
+    S = {
         tension: 2400,
         friction: 52
     };
-function S(e) {
+function T(e) {
     let { channelId: t, onClick: n, onClose: a, onMouseEnter: s } = e,
         u = i.useRef(null),
         m = (0, o.e7)([f.Z], () => f.Z.getChannel(t), [t]);
@@ -79,7 +79,7 @@ function S(e) {
         })
     );
 }
-function T(e) {
+function N(e) {
     let { channelId: t, closePopout: n } = e,
         [a, l] = i.useState(!1),
         { reducedMotion: d } = i.useContext(c.Sfi),
@@ -87,7 +87,7 @@ function T(e) {
             {
                 from: d.enabled ? O : y,
                 to: w,
-                config: N
+                config: S
             },
             'animate-always'
         ),
@@ -105,7 +105,7 @@ function T(e) {
             paddingFix: !1,
             fade: !0,
             children: [
-                (0, r.jsx)(S, {
+                (0, r.jsx)(T, {
                     channelId: t,
                     onClick: () => {
                         l(!0);
@@ -165,12 +165,12 @@ function P(e) {
                               })
                       ]
                   })
-                : (0, r.jsx)(S, {
+                : (0, r.jsx)(T, {
                       onMouseEnter: d,
                       channelId: t
                   }),
             n &&
-                (0, r.jsx)(T, {
+                (0, r.jsx)(N, {
                     channelId: t,
                     closePopout: () => {
                         a(!1);

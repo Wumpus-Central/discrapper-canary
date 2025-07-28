@@ -4,30 +4,30 @@ var l = t(255367),
     i = t(442837),
     o = t(481060),
     s = t(34854),
-    a = t(531301),
-    c = t(246946),
+    c = t(531301),
+    a = t(246946),
     u = t(981631),
     d = t(388032),
     f = t(343074);
 function p(e) {
     let { autoFocus: n = !1, className: t, userId: p, onUpdate: g } = e,
-        v = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        { loading: j, note: h } = (0, a.Z)(p),
+        j = (0, i.e7)([a.Z], () => a.Z.hidePersonalInformation),
+        { loading: v, note: h } = (0, c.Z)(p),
         m = r.useRef(null);
     return (r.useEffect(() => {
-        if (!n || v) return;
+        if (!n || j) return;
         let e = m.current;
         (null == e ? void 0 : e.selectionStart) != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
-    }, [n, v]),
-    v)
+    }, [n, j]),
+    j)
         ? null
         : (0, l.jsx)('div', {
               className: t,
               children: (0, l.jsx)(o.lcI, {
                   ref: m,
                   className: f.textarea,
-                  disabled: j,
-                  placeholder: j ? d.intl.string(d.t['WLKx//']) : d.intl.string(d.t.VBhOe3),
+                  disabled: v,
+                  placeholder: v ? d.intl.string(d.t['WLKx//']) : d.intl.string(d.t.VBhOe3),
                   'aria-label': d.intl.string(d.t.PbMNh4),
                   onBlur: (e) => {
                       let n = e.currentTarget.value;

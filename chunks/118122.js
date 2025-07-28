@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(981631),
     O = n(675999),
     y = n(388032),
-    v = n(176330);
-let C = {
+    C = n(176330);
+let v = {
     origin: {
         x: -16,
         y: 0
@@ -68,8 +68,8 @@ function E(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         a = (0, l.Wu)([f.Z], () => f.Z.getGuildsArray()),
         E = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
-        x = i.useMemo(() => a.some((e) => (0, p.eM)(e, E)), [a, E]),
-        S = (0, o.s9z)((e) => (0, o.DEQ)(e, O.PU)),
+        S = i.useMemo(() => a.some((e) => (0, p.eM)(e, E)), [a, E]),
+        x = (0, o.s9z)((e) => (0, o.DEQ)(e, O.PU)),
         { analyticsLocations: I } = (0, s.ZP)(),
         P = (0, r.jsx)(b.Z, {
             showPill: !1,
@@ -86,7 +86,7 @@ function E(e) {
                       })
                     : c.Z.openCreateGuildModal({ location: 'Guild List' });
             },
-            selected: S,
+            selected: x,
             onContextMenu: j,
             tooltip: y.intl.string(y.t.l5WIbW),
             icon: o.oFk
@@ -94,10 +94,10 @@ function E(e) {
     return t
         ? P
         : (0, r.jsx)('div', {
-              className: v.tutorialContainer,
+              className: C.tutorialContainer,
               children: (0, r.jsxs)(h.Z, {
-                  tutorialId: x ? 'create-more-servers' : 'create-first-server',
-                  inlineSpecs: C,
+                  tutorialId: S ? 'create-more-servers' : 'create-first-server',
+                  inlineSpecs: v,
                   position: 'right',
                   children: [
                       P,

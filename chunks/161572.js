@@ -8,7 +8,7 @@ var i = n(837411),
 function l(e) {
     let { user: t, guildId: n, channelId: l, onClose: c, appContext: u, disableAutoFocus: d = !1 } = e,
         f = (0, i.Z)(t.id, n);
-    return (0, r.jsxs)('footer', {
+    return (0, r.jsxs)('div', {
         className: s.footer,
         children: [
             f &&

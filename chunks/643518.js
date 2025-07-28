@@ -14,9 +14,9 @@ var o = t(442837),
     m = t(388032);
 function I(e) {
     let { user: n, currentUser: t, guildId: I, initialSubsection: h } = e,
-        { voiceActivityStatusEnabled: b } = (0, c.U)({ location: 'useUserProfileModalTabBarItems' }),
-        { live: x, recent: y, stream: v, outbox: Z } = (0, d.Z)(n.id),
-        { voiceChannel: g, voiceActivity: j } = (0, s.Z)({
+        { voiceActivityStatusEnabled: x } = (0, c.U)({ location: 'useUserProfileModalTabBarItems' }),
+        { live: b, recent: y, stream: v, outbox: j } = (0, d.Z)(n.id),
+        { voiceChannel: Z, voiceActivity: g } = (0, s.Z)({
             userId: n.id,
             guildId: I
         }),
@@ -25,38 +25,38 @@ function I(e) {
             let e = A ? a.Z.getStatus() : i.Z.getStatus(n.id);
             return e === p.Skl.OFFLINE || e === p.Skl.INVISIBLE;
         }),
-        N = null != v || x.length > 0,
+        N = null != v || b.length > 0,
         C = y.length > 0,
         { mutualFriendsCount: P, mutualGuilds: T } = (0, l.Z)(n),
         w = null == T ? void 0 : T.length,
-        S = (0, r.Z)(n),
-        E = [
+        E = (0, r.Z)(n),
+        S = [
             {
                 section: f.oh.USER_INFO,
                 text: m.intl.string(m.t.jGoPJS)
             }
         ];
     return (
-        !O && (N || (b && null == v && null == j && null != g))
-            ? E.push({
+        !O && (N || (x && null == v && null == g && null != Z))
+            ? S.push({
                   section: f.oh.ACTIVITY,
                   text: m.intl.string(m.t.chq59f)
               })
-            : (C || (null == Z && h === f.Tb.RECENT_ACTIVITY)) &&
-              E.push({
+            : (C || (null == j && h === f.Tb.RECENT_ACTIVITY)) &&
+              S.push({
                   section: f.oh.ACTIVITY,
                   text: m.intl.string(m.t.chq59f)
               }),
         !A &&
-            S &&
-            (E.push({
+            E &&
+            (S.push({
                 section: f.oh.MUTUAL_FRIENDS,
                 text: (0, u.Z)(P)
             }),
-            E.push({
+            S.push({
                 section: f.oh.MUTUAL_GUILDS,
                 text: (0, _.Z)(w)
             })),
-        E
+        S
     );
 }

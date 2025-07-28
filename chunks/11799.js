@@ -16,8 +16,8 @@ let h = (e) => {
             {
                 initialized: O,
                 loading: y,
-                items: v,
-                hasMore: C,
+                items: C,
+                hasMore: v,
                 cursor: j,
                 errored: E
             } = (0, i.cj)([c.Z], () => ({
@@ -28,7 +28,7 @@ let h = (e) => {
                 cursor: c.Z.cursor,
                 errored: c.Z.errored
             })),
-            { roleFilter: x, everyoneFilter: S } = (0, i.cj)([a.ZP], () => ({
+            { roleFilter: S, everyoneFilter: x } = (0, i.cj)([a.ZP], () => ({
                 everyoneFilter: a.ZP.everyoneFilter,
                 roleFilter: a.ZP.roleFilter
             }));
@@ -39,9 +39,9 @@ let h = (e) => {
         let I = (0, o.Z)();
         (r.useEffect(
             () => () => {
-                h ? !I() && (E || v.length > 100) && (0, s.jF)() : n && v.length > 100 && (0, s.jF)();
+                h ? !I() && (E || C.length > 100) && (0, s.jF)() : n && C.length > 100 && (0, s.jF)();
             },
-            [n, v, h, I, E]
+            [n, C, h, I, E]
         ),
             r.useEffect(() => {
                 let e = g && t;
@@ -49,15 +49,15 @@ let h = (e) => {
                     (0, s.jk)({
                         limit: null != f ? f : p ? 8 : 20,
                         with_mentions: p,
-                        roles_filter: x,
-                        everyone_filter: S
+                        roles_filter: S,
+                        everyone_filter: x
                     });
-            }, [O, g, t, p, x, S, f]));
+            }, [O, g, t, p, S, x, f]));
         let P = r.useCallback(
             async (e) => {
                 !m.current &&
                     O &&
-                    C &&
+                    v &&
                     null != j &&
                     (e || !E) &&
                     ((m.current = !0),
@@ -66,8 +66,8 @@ let h = (e) => {
                         {
                             after: j,
                             with_mentions: p,
-                            roles_filter: x,
-                            everyone_filter: S,
+                            roles_filter: S,
+                            everyone_filter: x,
                             limit: p ? 8 : 20
                         },
                         () => {
@@ -76,13 +76,13 @@ let h = (e) => {
                     ),
                     _(!1));
             },
-            [O, C, j, E, p, x, S]
+            [O, v, j, E, p, S, x]
         );
         return {
             initialized: O,
             loading: y,
-            items: v,
-            hasMore: C,
+            items: C,
+            hasMore: v,
             loadMore: P,
             loadingMore: b,
             setReadNotifItemToAcked: (e) => {

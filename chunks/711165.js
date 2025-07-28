@@ -17,12 +17,12 @@ var r = n(255367),
     _ = n(74365),
     O = n(618857),
     y = n(695346),
-    v = n(23750),
-    C = n(592125),
+    C = n(23750),
+    v = n(592125),
     j = n(594174),
     E = n(823379),
-    x = n(324081),
-    S = n(240126),
+    S = n(324081),
+    x = n(240126),
     I = n(791914),
     P = n(981631),
     N = n(388032),
@@ -61,7 +61,7 @@ function A() {
     return n
         ? (0, r.jsx)(h.$jN, { className: w.loadingPlaceholder })
         : 0 === t.length
-          ? (0, r.jsx)(S.Z, {
+          ? (0, r.jsx)(x.Z, {
                 Icon: h.T39,
                 header: N.intl.string(N.t.aJQZfX),
                 tip: N.intl.string(N.t.rCN4pK)
@@ -152,7 +152,7 @@ function R(e) {
             () =>
                 t.reduce((e, t) => {
                     var n, r;
-                    let i = C.Z.getChannel(t.scheduledMessage.channelId);
+                    let i = v.Z.getChannel(t.scheduledMessage.channelId);
                     return (
                         null == i ||
                             (e[i.id] = {
@@ -173,7 +173,7 @@ function R(e) {
                 {
                     className: w.channelRow,
                     children: [
-                        (0, r.jsx)(x.Z, {
+                        (0, r.jsx)(S.Z, {
                             channel: n,
                             gotoChannel: () => (0, g.uL)(P.Z5c.CHANNEL(n.getGuildId(), n.id)),
                             children: null
@@ -199,7 +199,7 @@ function R(e) {
 }
 let D = i.memo(function (e) {
     let { scheduledMessage: t, channel: n, isPendingDeletion: l } = e,
-        a = new v.ZP({
+        a = new C.ZP({
             id: t.scheduledMessageId,
             content: t.scheduledMessage.content,
             author: j.default.getUser(t.userId),

@@ -20,7 +20,7 @@ function f(e) {
         : p.intl.format(l, { username: t });
 }
 function g(e) {
-    var t, n, r, g, m, b, _, O, y, v, C, j, E, x, S;
+    var t, n, r, g, m, b, _, O, y, C, v, j, E, S, x;
     let { item: I, renderApplication: P } = e,
         N = null != (r = null == (t = I.other_user) ? void 0 : t.id) ? r : h.lds,
         w = u.ZP.getName(s.default.getUser(null == (n = I.other_user) ? void 0 : n.id)),
@@ -36,7 +36,7 @@ function g(e) {
                 count: R
             });
         case d.O7.MOBILE_NATIVE_UPDATE_AVAILABLE:
-            let D = null != (C = null == (v = I.local_id) ? void 0 : v.split('_').pop()) ? C : 'unknown';
+            let D = null != (v = null == (C = I.local_id) ? void 0 : C.split('_').pop()) ? v : 'unknown';
             return 'Update to build '.concat(D, ' available!');
         case d.DY.FRIEND_SUGGESTION_CREATED:
             return (a.Z.getRelationshipType(N), h.OGo.PENDING_OUTGOING, null != (j = I.body) ? j : '');
@@ -47,8 +47,8 @@ function g(e) {
                 U = null == (E = o.Z.getGuild(null == M ? void 0 : M.guild_id)) ? void 0 : E.name,
                 G = (0, l.Z2)(null != M ? M : void 0);
             return (0, c.Ew)(U) || (0, c.Ew)(k) || !G
-                ? null != (x = I.body)
-                    ? x
+                ? null != (S = I.body)
+                    ? S
                     : ''
                 : p.intl.format(p.t.AyvfXV, {
                       event_name: k,
@@ -101,5 +101,5 @@ function g(e) {
                 applicationName: () => P(Z)
             });
     }
-    return null != (S = I.body) ? S : '';
+    return null != (x = I.body) ? x : '';
 }

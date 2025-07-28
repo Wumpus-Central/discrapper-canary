@@ -1,68 +1,68 @@
-(n.d(t, { Z: () => d }), n(388685));
+(n.d(t, { Z: () => u }), n(388685));
 var r = n(255367),
-    o = n(73800),
-    a = n(481060),
-    s = n(927160),
-    i = n(203377),
-    l = n(93841),
+    a = n(73800),
+    o = n(481060),
+    l = n(927160),
+    s = n(203377),
+    i = n(93841),
     c = n(388032),
-    u = n(606055);
-function d() {
-    let [e, t] = o.useState('');
+    d = n(606055);
+function u() {
+    let [e, t] = a.useState('');
     return (0, r.jsxs)('div', {
-        className: u.container,
+        className: d.container,
         children: [
             (0, r.jsxs)('div', {
-                className: u.demo,
+                className: d.demo,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: u.previewCard,
+                        className: d.previewCard,
                         children: [
                             (0, r.jsx)('div', {
-                                className: u.avatar,
-                                children: (0, r.jsx)(a.gw7, {
+                                className: d.avatar,
+                                children: (0, r.jsx)(o.gw7, {
                                     size: 'custom',
                                     width: 24,
                                     height: 24
                                 })
                             }),
                             (0, r.jsxs)('div', {
-                                className: u.previewCardMessage,
+                                className: d.previewCardMessage,
                                 children: [
                                     (0, r.jsxs)('div', {
-                                        className: u.messageHeaderSkeleton,
-                                        children: [(0, r.jsx)('div', { className: u.usernameSkeleton }), (0, r.jsx)('div', { className: u.timestampSkeleton })]
+                                        className: d.messageHeaderSkeleton,
+                                        children: [(0, r.jsx)('div', { className: d.usernameSkeleton }), (0, r.jsx)('div', { className: d.timestampSkeleton })]
                                     }),
                                     (0, r.jsxs)('div', {
-                                        className: u.previewCardUrl,
+                                        className: d.previewCardUrl,
                                         children: [
-                                            (0, r.jsx)(a.Text, {
+                                            (0, r.jsx)(o.Text, {
                                                 variant: 'text-sm/medium',
                                                 color: 'text-tertiary',
-                                                className: u.baseUrl,
-                                                children: ''.concat(i.mf, '/')
+                                                className: d.baseUrl,
+                                                children: ''.concat(s.mf, '/')
                                             }),
-                                            (0, r.jsx)(a.Text, {
+                                            (0, r.jsx)(o.Text, {
                                                 variant: 'text-sm/medium',
                                                 color: 'text-link',
-                                                className: u.vanityCode,
+                                                className: d.vanityCode,
                                                 children: e
                                             })
                                         ]
                                     }),
                                     (0, r.jsxs)('div', {
-                                        className: u.messageEmbed,
+                                        className: d.messageEmbed,
                                         children: [
-                                            (0, r.jsx)('div', { className: u.messageEmbedHeaderSkeleton }),
+                                            (0, r.jsx)('div', { className: d.messageEmbedHeaderSkeleton }),
                                             (0, r.jsxs)('div', {
-                                                className: u.messageEmbedContent,
+                                                className: d.messageEmbedContent,
                                                 children: [
-                                                    (0, r.jsx)('div', { className: u.messageEmbedContentIconSkeleton }),
+                                                    (0, r.jsx)('div', { className: d.messageEmbedContentIconSkeleton }),
                                                     (0, r.jsxs)('div', {
-                                                        className: u.messageEmbedContentLines,
-                                                        children: [(0, r.jsx)('div', { className: u.messageEmbedContenPrimaryLineSkeleton }), (0, r.jsx)('div', { className: u.messageEmbedContentSecondaryLineSkeleton })]
+                                                        className: d.messageEmbedContentLines,
+                                                        children: [(0, r.jsx)('div', { className: d.messageEmbedContenPrimaryLineSkeleton }), (0, r.jsx)('div', { className: d.messageEmbedContentSecondaryLineSkeleton })]
                                                     }),
-                                                    (0, r.jsx)('div', { className: u.messageEmbedContentActionSkeleton })
+                                                    (0, r.jsx)('div', { className: d.messageEmbedContentActionSkeleton })
                                                 ]
                                             })
                                         ]
@@ -71,19 +71,19 @@ function d() {
                             })
                         ]
                     }),
-                    (0, r.jsx)(s.Z, {
+                    (0, r.jsx)(l.Z, {
                         autoFocus: !0,
                         value: e,
                         onChange: t,
-                        className: u.vanityUrlInput
+                        className: d.vanityUrlInput
                     })
                 ]
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-tertiary',
-                className: u.disclaimer,
-                children: c.intl.string(l.default.u5iNb2)
+                className: d.disclaimer,
+                children: c.intl.string(i.default.u5iNb2)
             })
         ]
     });

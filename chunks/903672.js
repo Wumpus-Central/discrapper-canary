@@ -17,12 +17,12 @@ var r = n(255367),
     _ = n(216789),
     O = n(695346),
     y = n(592125),
-    v = n(731290),
-    C = n(944486),
+    C = n(731290),
+    v = n(944486),
     j = n(455199),
     E = n(655354),
-    x = n(999671),
-    S = n(324081),
+    S = n(999671),
+    x = n(324081),
     I = n(240126),
     P = n(791914),
     N = n(981631),
@@ -43,14 +43,14 @@ function A(e, t, n) {
 }
 function R(e) {
     let { setTab: t, onJump: n, badgeState: l, closePopout: c } = e,
-        f = (0, a.e7)([y.Z, C.Z], () => y.Z.getChannel(C.Z.getChannelId())),
+        f = (0, a.e7)([y.Z, v.Z], () => y.Z.getChannel(v.Z.getChannelId())),
         {
             messages: g,
             hasMore: b,
             loading: O,
-            guildFilter: v,
+            guildFilter: C,
             roleFilter: E,
-            everyoneFilter: S
+            everyoneFilter: x
         } = (0, a.cj)([j.ZP], () => ({
             messages: j.ZP.getMentions(),
             hasMore: j.ZP.hasMore,
@@ -60,13 +60,13 @@ function R(e) {
             everyoneFilter: j.ZP.everyoneFilter
         })),
         I = (0, _.Us)({ location: 'RecentMentions' }),
-        T = (0, p.Z)(v),
+        T = (0, p.Z)(C),
         R = (0, p.Z)(E),
-        L = (0, p.Z)(S);
+        L = (0, p.Z)(x);
     (i.useEffect(() => {
         if (!j.ZP.hasLoadedEver) return void A(f, !0);
-        ((null != T && v !== T) || (null != R && E !== R) || (null != L && S !== L)) && A(f, !0);
-    }, [T, v, R, E, L, S, f, !0]),
+        ((null != T && C !== T) || (null != R && E !== R) || (null != L && x !== L)) && A(f, !0);
+    }, [T, C, R, E, L, x, f, !0]),
         (0, h.ZP)(() => {
             (null == g ? void 0 : g.some(m.k5)) && (u.Z.clearMentions(), A(f, !0));
         }),
@@ -83,7 +83,7 @@ function R(e) {
                 setTab: t,
                 badgeState: l,
                 closePopout: c,
-                children: (0, r.jsx)(x.Z, {})
+                children: (0, r.jsx)(S.Z, {})
             }),
         [!0, t, l, c]
     );
@@ -129,12 +129,12 @@ function L(e) {
     if (null == t) return null;
     let l = y.Z.getChannel(t.channel_id);
     if (null == l || ((0, g.aC)(l) && (0, f.sf)())) return null;
-    let o = v.Z.didAgree(l.getGuildId()),
+    let o = C.Z.didAgree(l.getGuildId()),
         a = !!(0, g.aC)(l) && !o;
     return (0, r.jsxs)('div', {
         className: Z.container,
         children: [
-            (0, r.jsx)(S.Z, {
+            (0, r.jsx)(x.Z, {
                 channel: l,
                 gotoChannel: n,
                 children:

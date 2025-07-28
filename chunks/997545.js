@@ -171,8 +171,10 @@ class x extends _.Z {
                     return;
                 }
                 if (null == a) throw Error('Invalid transport info');
+                this.transportInfo = a;
                 let { protocol: o, address: s, port: l } = a;
                 (this.logger.info('Connected with local address '.concat(s, ':').concat(l, ' and protocol: ').concat(o)),
+                    (this.onConnectStarted = performance.now()),
                     r((r) => {
                         this.logger.info('Available codecs: '.concat(JSON.stringify(r)));
                         let i = (0, g.DY)(this.experimentFlags);
@@ -977,6 +979,8 @@ class x extends _.Z {
             I(this, 'lastPreparedTransitionId', -1),
             I(this, 'lastExecutedTransitionId', -1),
             I(this, 'logger', void 0),
+            I(this, 'transportInfo', void 0),
+            I(this, 'onConnectStarted', void 0),
             I(this, 'handleSpeakingNative', (e, t) => {
                 let n = v.Dg.NONE;
                 ((n = 'boolean' == typeof t ? (t ? v.Dg.VOICE : v.Dg.NONE) : t), this.handleSpeakingFlags(e, n));

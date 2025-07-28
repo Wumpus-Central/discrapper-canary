@@ -26,8 +26,8 @@ var n = r(255367),
     x = r(496675),
     E = r(933429),
     O = r(451478),
-    C = r(626135),
-    v = r(585483),
+    v = r(626135),
+    C = r(585483),
     j = r(981631),
     R = r(388032),
     I = r(555565);
@@ -136,18 +136,18 @@ class M extends s.PureComponent {
             }));
     }
 }
-let Z = u.ZP.connectStores([x.Z], (e) => {
+let k = u.ZP.connectStores([x.Z], (e) => {
     let { channel: t } = e;
     return { canManageMessages: null != t && x.Z.can(j.Plq.MANAGE_MESSAGES, t) };
 })(M);
-function k(e) {
+function Z(e) {
     let { analyticsName: t, items: r, hasMore: l, loading: i, loadMore: p, renderHeader: m, renderEmptyState: S, renderItem: _, getProTip: y, scrollerClassName: b, className: x, listName: N } = e,
         A = s.useRef(null),
         M = (0, f.Z)(N, A),
-        Z = (0, u.e7)([E.ZP], () => E.ZP.hasNotice()),
-        k = (0, u.e7)([O.Z], () => O.Z.windowSize());
+        k = (0, u.e7)([E.ZP], () => E.ZP.hasNotice()),
+        Z = (0, u.e7)([O.Z], () => O.Z.windowSize());
     (s.useEffect(() => {
-        C.default.track(j.rMx.OPEN_POPOUT, { type: t });
+        v.default.track(j.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
         s.useEffect(() => {
             function e() {
@@ -159,10 +159,10 @@ function k(e) {
                 null == (e = A.current) || e.scrollPageDown({ animate: !0 });
             }
             return (
-                v.S.subscribe(j.CkL.SCROLL_PAGE_DOWN, t),
-                v.S.subscribe(j.CkL.SCROLL_PAGE_UP, e),
+                C.S.subscribe(j.CkL.SCROLL_PAGE_DOWN, t),
+                C.S.subscribe(j.CkL.SCROLL_PAGE_UP, e),
                 () => {
-                    (v.S.unsubscribe(j.CkL.SCROLL_PAGE_DOWN, t), v.S.unsubscribe(j.CkL.SCROLL_PAGE_UP, e));
+                    (C.S.unsubscribe(j.CkL.SCROLL_PAGE_DOWN, t), C.S.unsubscribe(j.CkL.SCROLL_PAGE_UP, e));
                 }
             );
         }, []));
@@ -234,8 +234,8 @@ function k(e) {
                       })
                   })
                 : null,
-        U = { maxHeight: k.height - 43 - 25 - 48 };
-    Z && (U.maxHeight -= 40);
+        U = { maxHeight: Z.height - 43 - 25 - 48 };
+    k && (U.maxHeight -= 40);
     let W = null != p && l;
     return (0, n.jsx)('div', {
         className: a()(x, I.messagesPopoutWrap),
@@ -322,7 +322,7 @@ function k(e) {
     });
 }
 function w(e) {
-    let { analyticsName: t, onFetch: r, channel: l, messages: a, hasMore: i, loading: o, loadMore: c, onJump: h, canCloseAllMessages: d = !1, renderHeader: f, renderEmptyState: g, renderMessage: x, getProTip: E, scrollerClassName: O, className: C, onCloseMessage: v, listName: R } = e,
+    let { analyticsName: t, onFetch: r, channel: l, messages: a, hasMore: i, loading: o, loadMore: c, onJump: h, canCloseAllMessages: d = !1, renderHeader: f, renderEmptyState: g, renderMessage: x, getProTip: E, scrollerClassName: O, className: v, onCloseMessage: C, listName: R } = e,
         T = (0, u.e7)([b.Z], () => {
             let e = null != l ? b.Z.getMessages(l.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
@@ -347,8 +347,8 @@ function w(e) {
                   })),
         [a, l]
     );
-    return (0, n.jsx)(k, {
-        className: C,
+    return (0, n.jsx)(Z, {
+        className: v,
         scrollerClassName: O,
         items: N,
         loading: o,
@@ -376,13 +376,13 @@ function w(e) {
                                       message: t,
                                       channel: r
                                   }),
-                                  (0, n.jsx)(Z, {
+                                  (0, n.jsx)(k, {
                                       channel: l,
                                       message: t,
                                       jumping: T,
                                       canCloseAllMessages: d,
                                       jumpTo: P,
-                                      onCloseMessage: v
+                                      onCloseMessage: C
                                   })
                               ]
                           },

@@ -1,4 +1,4 @@
-n.d(t, { q: () => N });
+n.d(t, { q: () => S });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -104,7 +104,7 @@ function w(e) {
               text: n
           });
 }
-function N() {
+function S() {
     let e = i.useRef(null);
     return (0, r.jsxs)(o.Kqy, {
         className: y.container,

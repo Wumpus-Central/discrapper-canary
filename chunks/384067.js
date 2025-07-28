@@ -15,8 +15,8 @@ var n = r(255367),
 let b = (e) => {
     var t, r, i;
     let { wideBannerBlock: b, handleTransition: m, tab: _ } = e,
-        C = null == (t = u.Z.getCategoryByStoreListingId(b.categoryStoreListingId)) ? void 0 : t.skuId,
-        O = l.useRef(null),
+        O = null == (t = u.Z.getCategoryByStoreListingId(b.categoryStoreListingId)) ? void 0 : t.skuId,
+        C = l.useRef(null),
         v = l.useRef(null),
         [E, S] = l.useState();
     l.useEffect(() => {
@@ -32,17 +32,17 @@ let b = (e) => {
             }
         );
     }, []);
-    let y = null != C ? C : '',
+    let y = null != O ? O : '',
         { handleCardVisibilityChange: x } = (0, d.E)(y, 'home', 'marketing wide banner'),
         j = b.bannerUrl;
     if (null == j) return null;
     let T = _ === p.AW.ORBS;
     return (0, n.jsx)(a.$, {
-        innerRef: O,
+        innerRef: C,
         onChange: x,
         threshold: 0,
         children: (0, n.jsxs)('div', {
-            ref: O,
+            ref: C,
             className: o()(h.row, h.between, h.bannerBlockContainer, h.centeredSection, { [h.extraRounded]: T }),
             children: [
                 (0, n.jsx)('div', {

@@ -1,4 +1,4 @@
-(n.d(t, { j: () => v }), n(388685));
+(n.d(t, { j: () => C }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -17,9 +17,9 @@ var r = n(255367),
     _ = n(981631),
     O = n(921944),
     y = n(46140);
-let v = (e) => {
-    let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: v } = e,
-        [C, j] = (0, i.useState)(!1),
+let C = (e) => {
+    let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: C } = e,
+        [v, j] = (0, i.useState)(!1),
         E = (function (e) {
             let { isForceShowSharingPopout: t } = e,
                 { isEnabled: n, showActivitySharingIndicatorWhenSharing: r } = (0, m.D)('SharingPrivacyPopout'),
@@ -36,21 +36,21 @@ let v = (e) => {
             }
             return null;
         })({ isForceShowSharingPopout: n }),
-        x = (0, i.useRef)(null);
+        S = (0, i.useRef)(null);
     return ((0, i.useEffect)(() => {
         n && g.default.track(_.rMx.OPEN_POPOUT, { type: 'SharingPrivacyPopout' });
     }, [n]),
-    null != E || C)
+    null != E || v)
         ? (0, r.jsx)(c.ZP, {
               contentTypes: n ? [] : [o.z.SHARE_ACTIVITY_COACHMARK_V2],
               children: (e) => {
                   let { visibleContent: i } = e;
                   if (i === o.z.SHARE_ACTIVITY_COACHMARK_V2 || n) {
                       let e = () => {
-                          ((0, s.Q3)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: O.L.USER_DISMISS }), v(!1), j(!1));
+                          ((0, s.Q3)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: O.L.USER_DISMISS }), C(!1), j(!1));
                       };
                       return (0, r.jsx)(a.yRy, {
-                          targetElementRef: x,
+                          targetElementRef: S,
                           shouldShow: !0,
                           spacing: 10,
                           position: 'top',
@@ -66,7 +66,7 @@ let v = (e) => {
                           },
                           children: () =>
                               (0, r.jsx)(a.P3F, {
-                                  innerRef: x,
+                                  innerRef: S,
                                   onClick: e,
                                   children: t
                               })

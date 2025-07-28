@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(761700),
     U = n(11352),
     G = n(304445),
-    B = n(984802),
-    V = n(344185),
+    V = n(984802),
+    B = n(344185),
     H = n(155409),
     F = n(10401),
     z = n(970731),
@@ -475,7 +475,7 @@ function eS(e) {
         [m, b, x] = (0, d.Wu)([ee.Z], () => [ee.Z.can(ep.Plq.MANAGE_GUILD, o), ee.Z.can(ep.Plq.MANAGE_ROLES, o), ee.Z.can(ep.Plq.MANAGE_THREADS, o)]),
         L = (0, d.e7)([q.Z], () => q.Z.isUnavailable(n)),
         R = (0, d.e7)([er.default], () => er.default.getCurrentUser()),
-        G = (0, B.Ll)(),
+        G = (0, V.Ll)(),
         H = (0, d.e7)([W.Z], () => (null != G ? G : W.Z.theme)),
         { enableStudyGroup: z } = (0, w.s)(o),
         X = (0, C.ZP)((e) => e.currentlyShown.has(p.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
@@ -503,7 +503,7 @@ function eS(e) {
         ex = (0, d.e7)([Y.Z], () => Y.Z.getChannel(a)),
         { isPopoutOpen: eZ } = (0, T.y)(),
         ew = null != (t = null == o ? void 0 : o.features.has(ep.oNc.COMMUNITY)) && t,
-        eL = (0, d.e7)([V.Z], () => !s().isEmpty(V.Z.getThreadsForGuild(n))),
+        eL = (0, d.e7)([B.Z], () => !s().isEmpty(B.Z.getThreadsForGuild(n))),
         eR = ei.ZP.isNewUser(R),
         eD = ea && !eR;
     (0, P.Z)(o);
@@ -511,8 +511,8 @@ function eS(e) {
         eM = (0, D.Z)(n),
         eU = (0, j.Z)(n),
         eG = (0, d.e7)([en.Z], () => en.Z.getChannelId()),
-        eB = (0, d.e7)([et.Z], () => et.Z.desyncedVoiceStatesCount),
-        eV = U.Y.useExperiment({ location: 'GuildSidebar' }, { autoTrackExposure: !0 }).enabled,
+        eV = (0, d.e7)([et.Z], () => et.Z.desyncedVoiceStatesCount),
+        eB = U.Y.useExperiment({ location: 'GuildSidebar' }, { autoTrackExposure: !0 }).enabled,
         eH = (0, k.Z)(n),
         eF = (0, M.Z)(null == R ? void 0 : R.id, n) && (null == o ? void 0 : o.premiumProgressBarEnabled) === !1;
     return (0, r.jsx)(eC, {
@@ -525,7 +525,7 @@ function eS(e) {
         selectedVoiceChannelId: g,
         voiceStates: c,
         rtcConnectedChannelId: eG,
-        rtcDesyncedVoiceStatesCount: eB,
+        rtcDesyncedVoiceStatesCount: eV,
         isUnavailable: L,
         theme: H,
         user: R,
@@ -551,7 +551,7 @@ function eS(e) {
         headerAnalyticsLocations: ec,
         isTutorialHighlightDismissed: ek,
         shouldRenderBurstCoachmark: eD,
-        shouldRenderCustomNotificationSoundsCoachmark: eV,
+        shouldRenderCustomNotificationSoundsCoachmark: eB,
         shouldRenderGuildPowerupPerkCoachmark: !1 === eH,
         shouldRenderBoosterEnhancedRoleColorsCoachmark: eF
     });

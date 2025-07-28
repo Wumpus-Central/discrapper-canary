@@ -50,14 +50,14 @@ function b(e, t, n) {
 }
 let _ = i.memo(function (e) {
     let { sectionIndex: t, guildChannels: n, guildChannelsVersion: h, voiceStates: p, guildId: m, selectedChannelId: b, selectedVoiceChannelId: _, optInEnabled: O } = e,
-        { hasDivider: y, canHaveVoiceSummary: v } = i.useMemo(() => (0, d.ie)(n, O, t), [n, O, t, h]),
-        C = i.useMemo(() => (t === u.wZ ? null : n.getCategoryFromSection(t)), [n, t, h]),
+        { hasDivider: y, canHaveVoiceSummary: C } = i.useMemo(() => (0, d.ie)(n, O, t), [n, O, t, h]),
+        v = i.useMemo(() => (t === u.wZ ? null : n.getCategoryFromSection(t)), [n, t, h]),
         j = (0, a.DM)(m),
         E = (0, l.Wu)(
             [s.ZP],
             () => {
-                if (null == C || !C.isCollapsed || !v) return [];
-                let e = C.getChannelRecords(),
+                if (null == v || !v.isCollapsed || !C) return [];
+                let e = v.getChannelRecords(),
                     t = [];
                 for (let n of e) {
                     if (!n.isGuildVocal()) continue;
@@ -66,9 +66,9 @@ let _ = i.memo(function (e) {
                 }
                 return t;
             },
-            [C, v, m, j]
+            [v, C, m, j]
         ),
-        x = i.useMemo(
+        S = i.useMemo(
             () =>
                 (0, c.c4)({
                     channels: E,
@@ -83,22 +83,22 @@ let _ = i.memo(function (e) {
             guildChannels: n,
             guildChannelsVersion: h
         });
-    let S = y ? (0, r.jsx)('div', { className: f.sectionDivider }) : null;
-    return v && 0 !== x.length
+    let x = y ? (0, r.jsx)('div', { className: f.sectionDivider }) : null;
+    return C && 0 !== S.length
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)('div', {
                       className: f.voiceUserSummary,
                       children: (0, r.jsx)(o.ZP, {
                           renderIcon: !0,
-                          users: x,
+                          users: S,
                           max: 8,
                           showUserPopout: !0,
                           guildId: m
                       })
                   }),
-                  S
+                  x
               ]
           })
-        : S;
+        : x;
 });

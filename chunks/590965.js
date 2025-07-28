@@ -44,20 +44,20 @@ function y(e) {
     }
     return e;
 }
-let v = b.IlC.APP,
-    C = !1,
+let C = b.IlC.APP,
+    v = !1,
     j = !1,
     E = [];
-function x() {
-    C = !0;
+function S() {
+    v = !0;
 }
-class S extends (i = l.ZP.Store) {
+class x extends (i = l.ZP.Store) {
     initialize() {
         this.waitFor(d.Z, h.Z, f.default);
     }
     isOpen() {
         let e = __OVERLAY__ ? b.IlC.OVERLAY : b.IlC.APP;
-        return !!(C && E.length > 0 && v === e);
+        return !!(v && E.length > 0 && C === e);
     }
     getProps() {
         return {
@@ -67,12 +67,12 @@ class S extends (i = l.ZP.Store) {
         };
     }
 }
-O(S, 'displayName', 'InviteModalStore');
-let I = new S(o.Z, {
-    OVERLAY_INITIALIZE: x,
-    CONNECTION_OPEN: x,
+O(x, 'displayName', 'InviteModalStore');
+let I = new x(o.Z, {
+    OVERLAY_INITIALIZE: S,
+    CONNECTION_OPEN: S,
     CONNECTION_CLOSED: function () {
-        C = !1;
+        v = !1;
     },
     INVITE_MODAL_OPEN: function (e) {
         let t = e.invite;
@@ -105,7 +105,7 @@ let I = new S(o.Z, {
             })
         )
             return !1;
-        ((v = e.context), (j = !1));
+        ((C = e.context), (j = !1));
         let n = (function (e) {
             let { approximate_member_count: t, approximate_presence_count: n, code: r, state: i, target_type: l, target_user: o, target_application: a, stage_instance: s, type: c, channel: u, guild: d, is_nickname_changeable: h } = e,
                 p = {

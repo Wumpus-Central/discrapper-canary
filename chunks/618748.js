@@ -33,7 +33,7 @@ var i = n(442837),
     Z = n(829857),
     D = n(388032),
     A = n(173409);
-function L(e) {
+function k(e) {
     let { application: t, guild: n } = e,
         l = (0, j.YB)(n.id),
         s = (0, j.qi)(n.id),
@@ -89,7 +89,7 @@ function L(e) {
         ];
     return (0, r.jsx)(E.Z, { children: m });
 }
-function k(e) {
+function L(e) {
     let { application: t } = e,
         { teams: n } = (0, g.Z)({ refreshOnDepChange: !1 }),
         i = n.find((e) => {
@@ -181,7 +181,7 @@ function G(e) {
                         children: D.intl.string(D.t.KyGv0t)
                     }),
                     (0, r.jsx)(y.Z, { guild: n }),
-                    c && (0, r.jsx)(k, { application: a }),
+                    c && (0, r.jsx)(L, { application: a }),
                     (0, r.jsxs)('div', {
                         className: A.tabBarContainer,
                         children: [
@@ -244,7 +244,7 @@ function G(e) {
                     t
                 ]
             }),
-            (0, r.jsx)(L, {
+            (0, r.jsx)(k, {
                 application: a,
                 guild: n
             })

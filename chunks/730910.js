@@ -81,8 +81,8 @@ function A(e) {
         D = (0, s.e7)([O.Z], () => O.Z.getCurrentPage()),
         A = (0, C.Z)(f),
         {
-            hasChanges: L,
-            hasConfiguredAnythingForCurrentStep: k,
+            hasChanges: k,
+            hasConfiguredAnythingForCurrentStep: L,
             hasErrors: M
         } = (0, s.cj)([O.Z], () => ({
             hasChanges: O.Z.hasChanges(),
@@ -130,7 +130,7 @@ function A(e) {
     let K = D === y.xh[y.xh.length - 1],
         X = async () => {
             let e = _.Z.advancedMode;
-            if (L)
+            if (k)
                 try {
                     if (D === y.PG.DEFAULT_CHANNELS) await (0, h.DO)(t).then(() => (e ? (0, v.rS)(t, { ignoreDefaultPrompt: !0 }) : Promise.resolve()));
                     else if (D === y.PG.CUSTOMIZATION_QUESTIONS) await (0, v.rS)(t, { ignoreDefaultPrompt: !0 });
@@ -149,7 +149,7 @@ function A(e) {
                 Z(R({}, (0, m.hH)(f)), {
                     step: y.PG[D],
                     back: !1,
-                    skip: !L
+                    skip: !k
                 })
             ),
                 (0, x.Nb)((0, y.lg)(D)),
@@ -182,8 +182,8 @@ function A(e) {
         }),
         ee = (0, r.jsx)(d.zxk, {
             size: 'sm',
-            variant: k ? 'primary' : 'secondary',
-            text: k ? P.intl.string(P.t.PDTjLC) : P.intl.string(P.t['5WxrcX']),
+            variant: L ? 'primary' : 'secondary',
+            text: L ? P.intl.string(P.t.PDTjLC) : P.intl.string(P.t['5WxrcX']),
             icon: d.ZSh,
             iconPosition: 'end',
             onClick: q,

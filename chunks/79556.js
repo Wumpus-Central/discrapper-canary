@@ -17,12 +17,12 @@ var r = n(255367),
     _ = n(340541),
     O = n(22082),
     y = n(665906),
-    v = n(592125),
-    C = n(430824),
+    C = n(592125),
+    v = n(430824),
     j = n(496675),
     E = n(306680),
-    x = n(9156),
-    S = n(594174),
+    S = n(9156),
+    x = n(594174),
     I = n(109446),
     P = n(98597),
     N = n(648501),
@@ -95,9 +95,9 @@ class k extends P.ZP {
               });
     }
     render() {
-        let { channel: e, guild: t, selected: n, muted: i, unread: l, hasActiveThreads: a, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: p, canReorderChannel: f, isSubscriptionGated: b, isFavoriteSuggestion: O, subtitle: y, forceTopLevelThread: v, embeddedApps: C, resolvedUnreadSetting: j, withGuildIcon: E, enableActivities: x } = this.props,
-            S = (0, _.jW)({ location: 'text_channel' }).entrypoints,
-            I = x && null != C && C.length > 0,
+        let { channel: e, guild: t, selected: n, muted: i, unread: l, hasActiveThreads: a, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: p, canReorderChannel: f, isSubscriptionGated: b, isFavoriteSuggestion: O, subtitle: y, forceTopLevelThread: C, embeddedApps: v, resolvedUnreadSetting: j, withGuildIcon: E, enableActivities: S } = this.props,
+            x = (0, _.jW)({ location: 'text_channel' }).entrypoints,
+            I = S && null != v && v.length > 0,
             P = (0, m.D)(y),
             N = (0, r.jsx)('li', {
                 className: o()(this.getClassName(), {
@@ -131,7 +131,7 @@ class k extends P.ZP {
                             onContextMenu: this.handleContextMenu,
                             connectDragPreview: f ? p : null,
                             isFavoriteSuggestion: O,
-                            channelTypeOverride: v ? T.d4z.GUILD_TEXT : void 0,
+                            channelTypeOverride: C ? T.d4z.GUILD_TEXT : void 0,
                             resolvedUnreadSetting: j,
                             withGuildIcon: E,
                             'aria-label': (0, g.ZP)({
@@ -149,8 +149,8 @@ class k extends P.ZP {
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             this.renderChannelInfo(),
-                                            S && this.renderOptionsButton({ onContextMenu: this.handleContextMenu }),
-                                            !S &&
+                                            x && this.renderOptionsButton({ onContextMenu: this.handleContextMenu }),
+                                            !x &&
                                                 (0, r.jsxs)(r.Fragment, {
                                                     children: [this.renderInviteButton(), this.renderEditButton()]
                                                 })
@@ -226,7 +226,7 @@ class k extends P.ZP {
                             );
                     });
                 if (t.type === T.d4z.DM) {
-                    let i = S.default.getUser(t.getRecipientId());
+                    let i = x.default.getUser(t.getRecipientId());
                     null != i &&
                         (0, u.jW)(e, async () => {
                             let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('53912'), n.e('56826'), n.e('45903')]).then(n.bind(n, 131404));
@@ -247,7 +247,7 @@ class k extends P.ZP {
                         let { default: e } = await n.e('86715').then(n.bind(n, 466676));
                         return (n) => (0, r.jsx)(e, M(L({}, n), { channel: t }));
                     });
-                let i = C.Z.getGuild(t.getGuildId());
+                let i = v.Z.getGuild(t.getGuildId());
                 null != i &&
                     (0, u.jW)(e, async () => {
                         let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('44011')]).then(n.bind(n, 373651));
@@ -272,21 +272,21 @@ function G(e) {
             ackMessageId: E.ZP.ackMessageId(t.id),
             isLowImportanceMention: E.ZP.getIsMentionLowImportance(t.id)
         })),
-        g = (0, a.e7)([x.ZP], () => x.ZP.resolveUnreadSetting(t)),
-        m = (0, a.cj)([v.Z, j.Z], () => {
-            let e = v.Z.getChannel(t.parent_id);
+        g = (0, a.e7)([S.ZP], () => S.ZP.resolveUnreadSetting(t)),
+        m = (0, a.cj)([C.Z, j.Z], () => {
+            let e = C.Z.getChannel(t.parent_id);
             return {
                 canManageChannel: j.Z.can(T.Plq.MANAGE_CHANNELS, t),
                 canReorderChannel: !0 !== i && (n.id === A._ || (null != e ? j.Z.can(T.Plq.MANAGE_CHANNELS, e) : j.Z.can(T.Plq.MANAGE_CHANNELS, n)))
             };
         }),
         _ = (0, a.e7)([O.Z], () => O.Z.shouldIndicateNewChannel(n.id, t.id)),
-        { needSubscriptionToAccess: C, isSubscriptionGated: I } = (0, b.Z)(t.id),
-        P = (0, a.e7)([x.ZP], () => x.ZP.isFavorite(n.id, t.id)),
+        { needSubscriptionToAccess: v, isSubscriptionGated: I } = (0, b.Z)(t.id),
+        P = (0, a.e7)([S.ZP], () => S.ZP.isFavorite(n.id, t.id)),
         w = (0, a.e7)(
-            [S.default],
+            [x.default],
             () => {
-                let e = S.default.getCurrentUser();
+                let e = x.default.getCurrentUser();
                 return null != e && (!(0, f.aC)(t) || e.nsfwAllowed);
             },
             [t]
@@ -297,7 +297,7 @@ function G(e) {
             isChannelCollapsed: !1,
             isChannelSelected: s,
             isSubscriptionGated: I,
-            needSubscriptionToAccess: C,
+            needSubscriptionToAccess: v,
             isNewChannel: _,
             muted: o,
             enableActivities: Z,
@@ -310,7 +310,7 @@ function G(e) {
             hasActiveThreads: c,
             hasMoreActiveThreads: u,
             isSubscriptionGated: I,
-            needSubscriptionToAccess: C,
+            needSubscriptionToAccess: v,
             isNewChannel: _ && e.canBeNewChannel,
             isFavoriteSuggestion: l && !P,
             canShowThreadPreviewForUser: w,

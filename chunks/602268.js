@@ -18,7 +18,6 @@ e.exports = {
     pickerGrid: 'pickerGrid__69ef9',
     pickerItem: 'pickerItem__69ef9',
     pickerItemSelected: 'pickerItemSelected__69ef9',
-    lockedPickerItem: 'lockedPickerItem__69ef9',
     disabledForm: 'disabledForm__69ef9',
     sidebarContainer: 'sidebarContainer__69ef9'
 };

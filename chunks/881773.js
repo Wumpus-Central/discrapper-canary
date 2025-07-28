@@ -170,7 +170,7 @@ function _(e) {
         Q = (0, s.e7)([m.Z], () => m.Z.keyboardModeEnabled),
         [G, Y] = l.useState(V ? 0 : R),
         [z, H] = l.useState(!1),
-        [K, X] = l.useState(!1),
+        [X, K] = l.useState(!1),
         [{ volumeAnimSpring: W }, $] = (0, d.q_F)(() => ({
             from: { volumeAnimSpring: 0 },
             config: {
@@ -228,14 +228,14 @@ function _(e) {
         l.useEffect(
             () => (
                 $({
-                    volumeAnimSpring: K || z ? 1 : 0,
+                    volumeAnimSpring: X || z ? 1 : 0,
                     immediate: U
                 }),
                 () => {
                     W.stop();
                 }
             ),
-            [K, z, $, U, W]
+            [X, z, $, U, W]
         ),
         l.useEffect(
             () => (
@@ -344,10 +344,10 @@ function _(e) {
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: (e) => {
-                                        (ee(e), M(e), L(e), K && (X(!1), A(!1)), V && e > 0 && B(!1));
+                                        (ee(e), M(e), L(e), X && (K(!1), A(!1)), V && e > 0 && B(!1));
                                     },
                                     asValueChanges: (e) => {
-                                        (ee(e), K || (X(!0), A(!0)));
+                                        (ee(e), X || (K(!0), A(!0)));
                                     },
                                     fillStyles: { backgroundColor: c.Z.colors.WHITE.css },
                                     orientation: 'horizontal',

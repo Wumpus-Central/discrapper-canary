@@ -17,12 +17,12 @@ var r,
     _ = n(313201),
     O = n(991346),
     y = n(592125),
-    v = n(888369),
-    C = n(430824),
+    C = n(888369),
+    v = n(430824),
     j = n(306680),
     E = n(944486),
-    x = n(938475),
-    S = n(483360),
+    S = n(938475),
+    x = n(483360),
     I = n(585483),
     P = n(63063),
     N = n(51596),
@@ -100,7 +100,7 @@ let G = { bottom: 10 },
         });
 class V extends (r = l.Component) {
     render() {
-        let e = C.Z.getGuild(this.props.channel.guild_id);
+        let e = v.Z.getGuild(this.props.channel.guild_id);
         return (0, i.jsx)(
             Z.$W,
             U(k({}, this.props), {
@@ -122,14 +122,14 @@ let F = c.ZP.connectStores([j.ZP, y.Z], (e) => {
             category: y.Z.getChannel(t.parent_id)
         };
     })(V),
-    H = c.ZP.connectStores([x.ZP], (e) => {
+    H = c.ZP.connectStores([S.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
-        return { voiceStates: x.ZP.getVoiceStates(t.guild_id)[t.id] };
+        return { voiceStates: S.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(V),
-    z = c.ZP.connectStores([v.default], (e) => {
+    z = c.ZP.connectStores([C.default], (e) => {
         let { guild: t } = e;
-        return { unread: v.default.hasUnread(t.id) };
+        return { unread: C.default.hasUnread(t.id) };
     })(Z.ic),
     W = c.ZP.connectStores([j.ZP], (e) => {
         let { channel: t } = e;
@@ -314,7 +314,7 @@ class q extends l.PureComponent {
                     case f.h8.TEXT_CHANNEL:
                     case f.h8.VOICE_CHANNEL:
                         let r = t.record,
-                            l = C.Z.getGuild(r.getGuildId());
+                            l = v.Z.getGuild(r.getGuildId());
                         if (null == l) return;
                         switch (r.type) {
                             case R.d4z.GUILD_TEXT:
@@ -617,7 +617,7 @@ function X(e) {
                 searchableTitles: [D.intl.string(D.t['3D5yo6'])],
                 path: R.Z5c.SETTINGS('account')
             }),
-                (0, S.gF)(e));
+                (0, x.gF)(e));
         }, [o, r]),
         (0, i.jsx)(q, k({}, t, e))
     );

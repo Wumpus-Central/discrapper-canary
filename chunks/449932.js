@@ -18,7 +18,7 @@ var i = n(120356),
     _ = n(51144),
     O = n(754231),
     y = n(302708);
-function v(e) {
+function C(e) {
     let { guildId: t, member: n, className: i } = e,
         o = null != n.member ? (0, b.CA)(n.member) : null;
     return (0, r.jsx)(s.ua7, {
@@ -65,7 +65,7 @@ function v(e) {
         }
     });
 }
-function C(e) {
+function v(e) {
     let { members: t, guildId: n } = e;
     return (0, r.jsx)(p.Z, {
         className: y.partyMembers,
@@ -74,7 +74,7 @@ function C(e) {
         max: 6,
         renderUser: (e, t, i) =>
             (0, r.jsx)(
-                v,
+                C,
                 {
                     guildId: n,
                     member: e,
@@ -105,14 +105,14 @@ let j = (e) => {
             }
         });
     if (null == _) return null;
-    let v = p || (0, u.Z)(n),
+    let C = p || (0, u.Z)(n),
         j = (0, f.vd)(t.type);
     return (0, r.jsxs)('div', {
         className: y.activity,
         children: [
             (0, r.jsx)('div', {
                 className: y.channelActivityContainer,
-                children: v
+                children: C
                     ? (0, r.jsx)(O.Z, {
                           activity: n,
                           embeddedApp: l,
@@ -132,7 +132,7 @@ let j = (e) => {
                           renderHeaderAccessory:
                               null != i
                                   ? () =>
-                                        (0, r.jsx)(C, {
+                                        (0, r.jsx)(v, {
                                             guildId: t.guild_id,
                                             members: i
                                         })

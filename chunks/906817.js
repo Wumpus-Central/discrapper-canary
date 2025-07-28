@@ -52,15 +52,15 @@ function b(e, t) {
 let _ = i.memo(function (e) {
     let { sectionIndex: t, guild: n, guildChannels: m, guildChannelsVersion: b, selectedChannelId: _, disableManageChannels: O } = e,
         { isFavoritesPerk: y } = (0, a.z)('ChannelListSection'),
-        v = i.useCallback(() => {
+        C = i.useCallback(() => {
             let e = m.getCategoryFromSection(m.recentsSectionNumber);
             if (null == e) return;
             let t = null,
                 r = e.getShownChannelAndThreadIds();
             (null != _ && r.includes(_) && (t = (0, s.KY)(m)), (0, s.Uo)(n.id, r, t));
         }, [n.id, _, m, b]),
-        { density: C } = (0, l.TCT)(),
-        j = 'compact' === C ? 8 : h.$k;
+        { density: v } = (0, l.TCT)(),
+        j = 'compact' === v ? 8 : h.$k;
     switch (t) {
         case u.wZ:
             return (0, r.jsx)('div', { style: { height: j } });
@@ -72,7 +72,7 @@ let _ = i.memo(function (e) {
         case m.recentsSectionNumber:
             return (0, r.jsx)(d.P, {
                 name: f.intl.string(f.t.gKcrqK),
-                onDismiss: v
+                onDismiss: C
             });
         case m.voiceChannelsSectionNumber: {
             var E;

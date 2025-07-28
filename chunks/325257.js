@@ -17,12 +17,12 @@ var r = n(255367),
     _ = n(703656),
     O = n(769654),
     y = n(601964),
-    v = n(271383),
-    C = n(771845),
+    C = n(271383),
+    v = n(771845),
     j = n(727258),
     E = n(276952),
-    x = n(249792),
-    S = n(40153),
+    S = n(249792),
+    x = n(40153),
     I = n(593618),
     P = n(252686),
     N = n(682662),
@@ -106,7 +106,7 @@ let k = i.memo(function (e) {
                 }
             ),
             end() {
-                (null == V || V(), (0, g.V1)(C.ZP.getCompatibleGuildFolders()));
+                (null == V || V(), (0, g.V1)(v.ZP.getCompatibleGuildFolders()));
             },
             collect: (e) => ({ dragging: e.isDragging() })
         }),
@@ -115,9 +115,9 @@ let k = i.memo(function (e) {
         em = !ee && ef,
         [eb, e_] = i.useState(!1),
         [eO, ey] = i.useState(!1),
-        [ev] = i.useState(() => new d.sW(70, () => ey(!0)));
-    i.useEffect(() => () => ev.cancel(), [ev]);
-    let eC = i.useCallback(() => {
+        [eC] = i.useState(() => new d.sW(70, () => ey(!0)));
+    i.useEffect(() => () => eC.cancel(), [eC]);
+    let ev = i.useCallback(() => {
             if (null != F) return void (0, _.uL)(F, { state: L });
             (0, O.X)(eo, { state: L });
         }, [eo, F]),
@@ -126,14 +126,14 @@ let k = i.memo(function (e) {
             let e = (0, b.V)(H.id);
             null != e && p.Z.preload(H.id, e);
         }, [F, H, q, et]),
-        eE = (0, u.e7)([v.ZP], () => v.ZP.isCurrentUserGuest(eo)),
-        ex = i.useCallback(
+        eE = (0, u.e7)([C.ZP], () => C.ZP.isCurrentUserGuest(eo)),
+        eS = i.useCallback(
             (e) => {
                 null == H || eE || J(e, H);
             },
             [H, J, eE]
         ),
-        eS = i.useCallback(
+        ex = i.useCallback(
             (e) => {
                 if ('ArrowLeft' === e.key && null != ea) {
                     var t;
@@ -144,10 +144,10 @@ let k = i.memo(function (e) {
         ),
         eI = i.useCallback(
             (e) => {
-                if (e) return void ev.delay();
-                (ev.cancel(), ey(!1));
+                if (e) return void eC.delay();
+                (eC.cancel(), ey(!1));
             },
-            [ev]
+            [eC]
         ),
         eP = i.useCallback(
             (e) => {
@@ -159,7 +159,7 @@ let k = i.memo(function (e) {
     if (null == H) return null;
     let ew =
             eO || eb
-                ? (0, r.jsx)(x.Z, {
+                ? (0, r.jsx)(S.Z, {
                       guild: H,
                       show: eO,
                       active: W,
@@ -180,7 +180,7 @@ let k = i.memo(function (e) {
                                       mentions: X
                                   }),
                                   name: H.name,
-                                  onClick: eC,
+                                  onClick: ev,
                                   onMouseEnter: function () {
                                       ee || eg(!0);
                                   },
@@ -188,8 +188,8 @@ let k = i.memo(function (e) {
                                       ee || eg(!1);
                                   },
                                   onMouseDown: ej,
-                                  onContextMenu: ex,
-                                  onKeyDown: eS,
+                                  onContextMenu: eS,
+                                  onKeyDown: ex,
                                   icon: (0, y.EB)(H, 2 * eN, em && z, !0),
                                   selected: W || em
                               },
@@ -203,7 +203,7 @@ let k = i.memo(function (e) {
                       )
                   ),
         eZ = ed
-            ? (0, r.jsx)(S.OG, { children: (0, r.jsx)(P.Z, {}) })
+            ? (0, r.jsx)(x.OG, { children: (0, r.jsx)(P.Z, {}) })
             : (0, r.jsx)(s.animated.div, {
                   ref: $
                       ? (e) => {
@@ -242,7 +242,7 @@ let k = i.memo(function (e) {
                 children: eZ
             }),
             $
-                ? (0, r.jsx)(S.ZP, {
+                ? (0, r.jsx)(x.ZP, {
                       name: H.name,
                       targetNode: U,
                       onDragOverChanged: eI

@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(709054),
     O = n(981631),
     y = n(124368),
-    v = n(388032),
-    C = n(571658);
+    C = n(388032),
+    v = n(571658);
 function j(e) {
     let { channel: t } = e,
         l = (0, a.Wu)([d.Z, g.ZP, f.Z], () => {
@@ -42,13 +42,13 @@ function j(e) {
             (0, h.q)();
         }, []),
         (0, r.jsxs)('div', {
-            className: C.popout,
+            className: v.popout,
             children: [
                 (0, r.jsx)(s.Text, {
-                    className: C.title,
+                    className: v.title,
                     variant: 'text-xs/bold',
                     color: 'header-secondary',
-                    children: t.isForumLikeChannel() ? v.intl.string(v.t.ioVdOz) : v.intl.string(v.t.VNYs2t)
+                    children: t.isForumLikeChannel() ? C.intl.string(C.t.ioVdOz) : C.intl.string(C.t.VNYs2t)
                 }),
                 l
                     .slice(0, t.isForumLikeChannel() ? l.length : c)
@@ -56,7 +56,7 @@ function j(e) {
                     .filter((e) => i.isValidElement(e))
                     .slice(0, c),
                 (0, r.jsx)(s.P3F, {
-                    className: C.more,
+                    className: v.more,
                     onClick: () => {
                         t.isForumLikeChannel()
                             ? (0, u.Kh)(t.id)
@@ -96,7 +96,7 @@ function j(e) {
                     children: (0, r.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: v.intl.string(v.t['4qdZ9/'])
+                        children: C.intl.string(C.t['4qdZ9/'])
                     })
                 })
             ]
@@ -108,35 +108,35 @@ function E(e) {
         n = (0, a.e7)([m.default], () => m.default.getUser(t.ownerId)),
         i = (0, h.Ok)(t);
     return (0, r.jsxs)(s.P3F, {
-        className: C.row,
+        className: v.row,
         onClick: (e) => {
             (0, p.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, y.on.POPOUT);
         },
         children: [
             null == n
                 ? (0, r.jsx)('img', {
-                      className: C.avatar,
+                      className: v.avatar,
                       src: b.ZP.getDefaultAvatarURL(void 0, void 0),
                       alt: ''
                   })
                 : (0, r.jsx)(c.Z, {
-                      className: C.avatar,
+                      className: v.avatar,
                       user: n,
                       size: s.EFr.SIZE_16
                   }),
             (0, r.jsx)(s.Text, {
-                className: C.name,
+                className: v.name,
                 variant: 'text-sm/normal',
                 color: 'none',
                 children: t.name
             }),
             (0, r.jsxs)(s.Text, {
-                className: C.timestamp,
+                className: v.timestamp,
                 variant: 'text-sm/normal',
                 color: 'none',
                 children: [
                     (0, r.jsx)('span', {
-                        className: C.bullet,
+                        className: v.bullet,
                         children: '\u2022'
                     }),
                     (0, h.Ye)(i)

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => B }), n(415506), n(388685));
+(n.d(t, { Z: () => V }), n(415506), n(388685));
 var r,
     i = n(255367),
     l = n(73800),
@@ -455,7 +455,7 @@ class G extends (r = l.PureComponent) {
             }));
     }
 }
-function B(e) {
+function V(e) {
     let t = l.useContext(C.AnalyticsContext),
         n = (0, s.TH)(),
         {

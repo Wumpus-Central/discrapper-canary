@@ -17,12 +17,12 @@ var r,
     _ = n(306680),
     O = n(944486),
     y = n(594174),
-    v = n(451478),
-    C = n(276952),
+    C = n(451478),
+    v = n(276952),
     j = n(682662),
     E = n(662146),
-    x = n(674552),
-    S = n(981631),
+    S = n(674552),
+    x = n(981631),
     I = n(388032),
     P = n(223203);
 function N(e, t, n) {
@@ -93,7 +93,7 @@ class R extends (r = l.PureComponent) {
         (e(),
             t
                 .update({
-                    immediate: !v.Z.isFocused(),
+                    immediate: !C.Z.isFocused(),
                     height: 1,
                     opacity: 1,
                     scale: 1,
@@ -119,7 +119,7 @@ class R extends (r = l.PureComponent) {
         this.setState({ animating: !0 }, () =>
             t
                 .update({
-                    immediate: !v.Z.isFocused(),
+                    immediate: !C.Z.isFocused(),
                     height: 0,
                     opacity: 0,
                     scale: 0,
@@ -144,7 +144,7 @@ class R extends (r = l.PureComponent) {
     }
     getChannelIcon() {
         let { channel: e } = this.props,
-            t = e.type === S.d4z.DM ? y.default.getUser(e.getRecipientId()) : null;
+            t = e.type === x.d4z.DM ? y.default.getUser(e.getRecipientId()) : null;
         return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
     }
     render() {
@@ -155,7 +155,7 @@ class R extends (r = l.PureComponent) {
             style: this.getAnimatedStyle(),
             children: (0, i.jsxs)(j.H, {
                 children: [
-                    (0, i.jsx)(C.Z, {
+                    (0, i.jsx)(v.Z, {
                         hovered: !m && f,
                         selected: !m && n,
                         unread: !m && d,
@@ -167,8 +167,8 @@ class R extends (r = l.PureComponent) {
                         children: (0, i.jsx)(c.aRk, {
                             rounded: !0,
                             selected: !1,
-                            lowerBadge: r > 0 ? (0, x.Ne)(r, void 0, !0) : null,
-                            upperBadge: (0, x.Or)({
+                            lowerBadge: r > 0 ? (0, S.Ne)(r, void 0, !0) : null,
+                            upperBadge: (0, S.Or)({
                                 audio: l,
                                 video: a,
                                 screenshare: s,
@@ -179,7 +179,7 @@ class R extends (r = l.PureComponent) {
                                 c.LYs,
                                 w(
                                     {
-                                        to: S.Z5c.CHANNEL(S.ME, e.id),
+                                        to: x.Z5c.CHANNEL(x.ME, e.id),
                                         onMouseEnter: () => this.setState({ hovered: !0 }),
                                         onMouseLeave: () => this.setState({ hovered: !1 }),
                                         selected: n || f,
@@ -226,7 +226,7 @@ class R extends (r = l.PureComponent) {
             }),
             N(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
-                    r = t.type === S.d4z.DM ? y.default.getUser(t.getRecipientId()) : null;
+                    r = t.type === x.d4z.DM ? y.default.getUser(t.getRecipientId()) : null;
                 null != r
                     ? (0, u.jW)(e, async () => {
                           let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('53912'), n.e('56826'), n.e('45903')]).then(n.bind(n, 131404));
@@ -264,16 +264,16 @@ let D = l.forwardRef(function (e, t) {
         r = (0, p.ZP)(e.channel),
         l = (0, a.Ie)(n, 2),
         o = (0, s.e7)([b.Z], () => b.Z.getChannelId(), []),
-        u = (0, s.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : S.WtW.VOICE), [o]),
+        u = (0, s.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : x.WtW.VOICE), [o]),
         h = (0, s.e7)([m.Z], () => m.Z.getAllApplicationStreamsForChannel(n).length > 0),
         g = (0, s.e7)([O.Z], () => O.Z.getChannelId(), []),
         y = (0, s.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
-        { isFacepileEnabled: v } = f.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
-        C = o === n,
+        { isFacepileEnabled: C } = f.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
+        v = o === n,
         j = !1,
         E = !1;
-    C && ((j = u === S.WtW.VOICE), (E = u === S.WtW.VIDEO));
-    let x = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE);
+    v && ((j = u === x.WtW.VOICE), (E = u === x.WtW.VIDEO));
+    let S = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, i.jsx)(
         R,
         Z(w({}, e), {
@@ -285,9 +285,9 @@ let D = l.forwardRef(function (e, t) {
             audio: j,
             video: E,
             stream: h,
-            isCurrentUserInThisDMCall: C,
-            isGDMFacepileEnabled: v,
-            size: x,
+            isCurrentUserInThisDMCall: v,
+            isGDMFacepileEnabled: C,
+            size: S,
             treeItemProps: l
         })
     );

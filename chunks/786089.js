@@ -33,8 +33,8 @@ let P = (0, i.memo)(function (e) {
         M = (0, i.useRef)(null),
         U = (0, i.useRef)(null),
         G = (0, i.useRef)(null),
-        B = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
-        { ref: V, height: H = 0 } = (0, p.ZP)(),
+        V = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
+        { ref: B, height: H = 0 } = (0, p.ZP)(),
         F = (0, h.ZP)(),
         z = (0, O.B6)(null == (t = x.userStatus) ? void 0 : t.claimedAt, {
             month: 'numeric',
@@ -132,7 +132,7 @@ let P = (0, i.memo)(function (e) {
                   onMouseLeave: es,
                   className: a()(T.container, { [T.hovered]: Z }),
                   children: [
-                      null != B &&
+                      null != V &&
                           q &&
                           null != J &&
                           (0, r.jsx)('div', {
@@ -141,7 +141,7 @@ let P = (0, i.memo)(function (e) {
                               style: { top: L },
                               children: (0, r.jsx)(f.Z, {
                                   avatarDecorationOverride: J,
-                                  user: B,
+                                  user: V,
                                   guildId: null
                               })
                           }),
@@ -182,7 +182,7 @@ let P = (0, i.memo)(function (e) {
                           })
                       }),
                       (0, r.jsxs)('div', {
-                          ref: V,
+                          ref: B,
                           className: T.details,
                           children: [
                               (0, r.jsx)(d.X6q, {

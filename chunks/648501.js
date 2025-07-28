@@ -18,12 +18,12 @@ var i = n(442837),
     _ = n(714794),
     O = n(355363),
     y = n(687352),
-    v = n(876548),
-    C = n(25601),
+    C = n(876548),
+    v = n(25601),
     j = n(981631),
     E = n(490897),
-    x = n(388032),
-    S = n(990252);
+    S = n(388032),
+    x = n(990252);
 function I(e) {
     var t;
     let { channel: n, isChannelSelected: I, isChannelCollapsed: P, voiceStates: N, enableConnectedUserLimit: w, enableActivities: Z, isSubscriptionGated: T, needSubscriptionToAccess: A, isNewChannel: R, muted: D, resolvedUnreadSetting: L } = e,
@@ -46,22 +46,22 @@ function I(e) {
             return null != (t = null == (e = h.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(j.oNc.COMMUNITY)) && t;
         });
     if ((0, _.Z)(M))
-        return (0, r.jsx)(C.Z, {
+        return (0, r.jsx)(v.Z, {
             mentionsCount: M,
             isMentionLowImportance: k
         });
     if ((0, c.O)(T)) return (0, r.jsx)(c.Z, { locked: A });
     if (R)
         return (0, r.jsx)(o.IGR, {
-            text: x.intl.string(x.t.y2b7CA),
+            text: S.intl.string(S.t.y2b7CA),
             color: l.Z.unsafe_rawColors.BRAND_260.css,
-            className: S.newChannel
+            className: x.newChannel
         });
     if (!D && L === E.i.ALL_MESSAGES && n.isForumLikeChannel() && null != H && H > 0)
         return (0, r.jsx)(o.Text, {
             variant: 'text-xs/semibold',
             color: 'text-brand',
-            children: x.intl.format(x.t.GkAbqa, { count: (0, o.NGo)(H) })
+            children: S.intl.format(S.t.GkAbqa, { count: (0, o.NGo)(H) })
         });
     if (!D && n.isForumLikeChannel() && null != z && z > 0)
         return (0, r.jsx)(o.Text, {
@@ -71,14 +71,14 @@ function I(e) {
         });
     let K = null != (t = null == N ? void 0 : N.length) ? t : 0;
     return null != w && w && F
-        ? (0, r.jsx)(v.Z, {
+        ? (0, r.jsx)(C.Z, {
               userCount: K,
               video: B || V,
               channel: n
           })
         : P && (0, m.a)(N) && W
           ? (0, r.jsx)(o.IGR, {
-                text: x.intl.string(x.t.dI3q4u),
+                text: S.intl.string(S.t.dI3q4u),
                 color: l.Z.unsafe_rawColors.RED_400.css
             })
           : null != Z && Z && (0, b.u)(U)

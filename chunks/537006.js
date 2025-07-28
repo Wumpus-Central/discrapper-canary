@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => w });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -9,71 +9,72 @@ var r = n(255367),
     u = n(481060),
     d = n(906732),
     f = n(335131),
-    _ = n(211644),
-    p = n(266454),
-    h = n(605236),
-    m = n(767714),
-    g = n(703656),
-    E = n(914010),
-    b = n(785717),
-    y = n(652853),
-    O = n(475413),
-    v = n(228168),
-    I = n(981631),
-    T = n(921944),
-    S = n(474936),
-    A = n(388032),
-    N = n(869310);
-function C(e) {
+    _ = n(313201),
+    p = n(211644),
+    h = n(266454),
+    m = n(605236),
+    g = n(767714),
+    E = n(703656),
+    b = n(914010),
+    y = n(785717),
+    O = n(652853),
+    v = n(475413),
+    I = n(228168),
+    T = n(981631),
+    S = n(921944),
+    A = n(474936),
+    N = n(388032),
+    C = n(869310);
+function R(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(u.P3F, {
-        'aria-label': A.intl.string(A.t.WAI6xs),
+        'aria-label': N.intl.string(N.t.WAI6xs),
         onClick: t,
-        className: N.upsellCloseIconWrapper,
+        className: C.upsellCloseIconWrapper,
         children: (0, r.jsx)(u.Dio, {
             size: 'xs',
-            className: N.upsellCloseIcon,
+            className: C.upsellCloseIcon,
             color: 'currentColor'
         })
     });
 }
-function R(e) {
+function P(e) {
     let { tiny: t, isPremiumUser: n, onInteraction: i } = e,
         { analyticsLocations: a, newestAnalyticsLocation: o } = (0, d.ZP)(),
-        { trackUserProfileAction: s } = (0, b.KZ)();
+        { trackUserProfileAction: s } = (0, y.KZ)();
     return (0, r.jsxs)('div', {
-        className: N.upsellButtons,
+        className: C.upsellButtons,
         children: [
             (0, r.jsx)('div', {
-                className: N.upsellButtonWrapper,
+                className: C.upsellButtonWrapper,
                 children: n
                     ? (0, r.jsxs)(u.gtL, {
                           onlyShineOnHover: !0,
                           size: t ? c.zx.Sizes.TINY : c.zx.Sizes.SMALL,
                           look: c.zx.Looks.FILLED,
                           color: c.zx.Colors.PRIMARY,
-                          className: N.upsellButton,
-                          innerClassName: N.viewPremiumPerksButtonInner,
-                          buttonShineClassName: N.viewPremiumPerksButtonShine,
+                          className: C.upsellButton,
+                          innerClassName: C.viewPremiumPerksButtonInner,
+                          buttonShineClassName: C.viewPremiumPerksButtonShine,
                           onClick: () => {
-                              (s({ action: v.yM.VIEW_PREMIUM_PERKS }), (0, g.uL)(I.Z5c.APPLICATION_STORE), null == i || i());
+                              (s({ action: I.yM.VIEW_PREMIUM_PERKS }), (0, E.uL)(T.Z5c.APPLICATION_STORE), null == i || i());
                           },
                           children: [
                               (0, r.jsx)(u.SrA, {
                                   size: 'xs',
                                   color: 'currentColor'
                               }),
-                              A.intl.string(A.t['0Q61kJ'])
+                              N.intl.string(N.t['0Q61kJ'])
                           ]
                       })
-                    : (0, r.jsx)(m.Z, {
+                    : (0, r.jsx)(g.Z, {
                           onClick: () => {
-                              (s({ action: v.yM.GET_PREMIUM }), null == i || i());
+                              (s({ action: I.yM.GET_PREMIUM }), null == i || i());
                           },
-                          textOptions: { textOverride: A.intl.string(A.t.x6rkDg) },
-                          subscriptionTier: S.Si.TIER_2,
-                          premiumModalAnalyticsLocation: { section: I.jXE.USER_PROFILE },
-                          className: N.upsellButton,
+                          textOptions: { textOverride: N.intl.string(N.t.x6rkDg) },
+                          subscriptionTier: A.Si.TIER_2,
+                          premiumModalAnalyticsLocation: { section: T.jXE.USER_PROFILE },
+                          className: C.upsellButton,
                           size: t ? c.zx.Sizes.TINY : c.zx.Sizes.SMALL,
                           look: c.zx.Looks.FILLED,
                           color: c.zx.Colors.PRIMARY,
@@ -81,16 +82,16 @@ function R(e) {
                       })
             }),
             (0, r.jsx)('div', {
-                className: N.upsellButtonWrapper,
-                children: (0, r.jsx)(O.tG, {
+                className: C.upsellButtonWrapper,
+                children: (0, r.jsx)(v.tG, {
                     icon: u.EOn,
-                    action: v.yM.VISIT_SHOP,
-                    text: A.intl.string(A.t.b2d0Nz),
+                    action: I.yM.VISIT_SHOP,
+                    text: N.intl.string(N.t.b2d0Nz),
                     look: c.zx.Looks.FILLED,
                     color: c.zx.Colors.PRIMARY,
                     themeColor: 'none',
                     size: t ? c.zx.Sizes.TINY : c.zx.Sizes.SMALL,
-                    className: N.upsellButton,
+                    className: C.upsellButton,
                     onClick: () => {
                         ((0, f.mK)({
                             analyticsLocations: a,
@@ -104,69 +105,71 @@ function R(e) {
         ]
     });
 }
-function P(e) {
+function w(e) {
     let { isPremiumUser: t, onInteraction: n, className: a } = e,
-        { themeType: c } = (0, y.z)(),
-        d = c === v.lY.MODAL,
-        f = (0, p.Nj)(l.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS),
-        m = (0, s.e7)([E.Z], () => E.Z.getGuildId());
+        c = (0, _.Dt)(),
+        { themeType: d } = (0, O.z)(),
+        f = d === I.lY.MODAL,
+        g = (0, h.Nj)(l.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS),
+        E = (0, s.e7)([b.Z], () => b.Z.getGuildId());
     if (
         (i.useEffect(() => {
-            if (!f)
+            if (!g)
                 return (
-                    (0, h.kk)(l.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS),
+                    (0, m.kk)(l.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS),
                     () => {
-                        (0, _.gE)({ content: l.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS }, !1);
+                        (0, p.gE)({ content: l.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS }, !1);
                     }
                 );
-        }, [f]),
-        f)
+        }, [g]),
+        g)
     )
         return null;
-    let g = (0, r.jsx)('div', {
-            children: (0, r.jsx)(u.Text, {
-                variant: 'text-sm/normal',
-                children: A.intl.string(A.t.EIYbj4)
-            })
+    let y = (0, r.jsx)(u.X6q, {
+            variant: 'text-sm/normal',
+            id: c,
+            children: N.intl.string(N.t.EIYbj4)
         }),
-        b = (0, r.jsx)(C, {
+        v = (0, r.jsx)(R, {
             onClose: () => {
-                (0, p.Q3)(l.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS, {
-                    dismissAction: T.L.USER_DISMISS,
-                    guildId: m,
+                (0, h.Q3)(l.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS, {
+                    dismissAction: S.L.USER_DISMISS,
+                    guildId: E,
                     forceTrack: !0
                 });
             }
         }),
-        O = (0, r.jsx)(R, {
+        T = (0, r.jsx)(P, {
             isPremiumUser: t,
             onInteraction: n,
-            tiny: d
+            tiny: f
         });
-    return d
-        ? (0, r.jsx)('div', {
-              className: o()(N.upsellContainer, a),
+    return f
+        ? (0, r.jsx)('aside', {
+              className: o()(C.upsellContainer, a),
+              'aria-labelledby': c,
               children: (0, r.jsxs)('div', {
-                  className: o()(N.upsellContent, N.upsellRowContent),
+                  className: o()(C.upsellContent, C.upsellRowContent),
                   children: [
-                      g,
+                      y,
                       (0, r.jsxs)('div', {
-                          className: N.upsellRowRight,
-                          children: [(0, r.jsx)('div', { children: O }), (0, r.jsx)('div', { children: b })]
+                          className: C.upsellRowRight,
+                          children: [(0, r.jsx)('div', { children: T }), (0, r.jsx)('div', { children: v })]
                       })
                   ]
               })
           })
-        : (0, r.jsx)('div', {
-              className: o()(N.upsellContainer, a),
+        : (0, r.jsx)('aside', {
+              className: o()(C.upsellContainer, a),
+              'aria-labelledby': c,
               children: (0, r.jsxs)('div', {
-                  className: o()(N.upsellContent, N.upsellDefaultContent),
+                  className: o()(C.upsellContent, C.upsellDefaultContent),
                   children: [
                       (0, r.jsxs)('div', {
-                          className: N.upsellHeader,
-                          children: [g, (0, r.jsx)('div', { children: b })]
+                          className: C.upsellHeader,
+                          children: [y, (0, r.jsx)('div', { children: v })]
                       }),
-                      O
+                      T
                   ]
               })
           });

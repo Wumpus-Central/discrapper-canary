@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => k }), n(781311), n(539338), n(388685));
+(n.d(t, { Z: () => L }), n(781311), n(539338), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -73,8 +73,8 @@ function A(e, t) {
         e
     );
 }
-let L = 'DRAGGABLE_ROLE';
-function k(e) {
+let k = 'DRAGGABLE_ROLE';
+function L(e) {
     let { setEditRoleId: t, guild: n, everyoneRole: l, otherRoles: s, setSelectedSection: a, renderHeader: o, headerHeight: c, query: u } = e,
         m = (0, d.e7)([N.Z], () => N.Z.getRoleMemberCount(n.id), [n.id]),
         g = (0, d.e7)([O.Z], () => O.Z.getHighestRole(n), [n]),
@@ -146,11 +146,11 @@ function G(e) {
     var t, l, c;
     let { role: d, guild: u, highestRole: p, currentPosition: h, memberCount: j, onDragStart: _, onDragReset: O, onDragComplete: y, disableHover: C, disableDrag: N, setEditRoleId: I, setSelectedSection: S } = e,
         P = (0, E.T)(u, p, d),
-        k = null != P,
+        L = null != P,
         [M, G] = i.useState(!1),
         B = i.useMemo(
             () => ({
-                type: L,
+                type: k,
                 item: () => (
                     _(d.id),
                     {
@@ -158,7 +158,7 @@ function G(e) {
                         position: h
                     }
                 ),
-                canDrag: () => M && !k,
+                canDrag: () => M && !L,
                 collect: (e) => ({ isDragging: e.isDragging() }),
                 end: (e, t) => {
                     let n = t.getDropResult();
@@ -166,20 +166,20 @@ function G(e) {
                     y(n.roleId);
                 }
             }),
-            [d, _, O, y, k, M, h]
+            [d, _, O, y, L, M, h]
         ),
         [{ isDragging: F }, H] = (0, a.c)(B),
         z = i.useMemo(
             () => ({
-                accept: L,
-                canDrop: () => !k,
+                accept: k,
+                canDrop: () => !L,
                 collect: (e) => {
                     let t = e.getItem();
                     return null != t && e.isOver() && e.canDrop() ? { dragSourcePosition: t.position } : { dragSourcePosition: null };
                 },
                 drop: () => ({ roleId: d.id })
             }),
-            [k, d]
+            [L, d]
         ),
         [{ dragSourcePosition: W }, V] = (0, o.L)(z),
         Y = i.useCallback(
@@ -230,7 +230,7 @@ function G(e) {
         }),
         children: [
             (0, r.jsx)('div', {
-                className: s()(R.dragIcon, Z.dragSpacing, { [R.dragIconHidden]: k || N }),
+                className: s()(R.dragIcon, Z.dragSpacing, { [R.dragIconHidden]: L || N }),
                 onMouseEnter: () => G(!0),
                 onMouseLeave: () => G(!1),
                 children: (0, r.jsx)(m.Vni, {
@@ -306,10 +306,10 @@ function G(e) {
                 children: [
                     (0, r.jsx)(m.M0o, {
                         className: s()(R.circleButton, R.editButton),
-                        tooltip: k ? w.intl.string(w.t['HO/oXl']) : w.intl.string(w.t.bt75u7),
+                        tooltip: L ? w.intl.string(w.t['HO/oXl']) : w.intl.string(w.t.bt75u7),
                         color: m.YX$.SECONDARY,
                         size: m.tT7.SIZE_36,
-                        icon: k
+                        icon: L
                             ? (0, r.jsx)(m.tEF, {
                                   size: 'custom',
                                   color: 'currentColor',

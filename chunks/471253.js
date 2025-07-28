@@ -4,9 +4,9 @@ n.d(t, {
     HO: () => A,
     NZ: () => b,
     Pq: () => R,
-    Q1: () => O,
+    Q1: () => S,
     RK: () => T,
-    _0: () => S,
+    _0: () => O,
     hz: () => m,
     yi: () => f
 });
@@ -51,7 +51,7 @@ function g(e) {
     }
     return e;
 }
-function O(e, t) {
+function S(e, t) {
     let n = e.getGuildId();
     return (
         r()(null != n, 'This channel cannot be guildless.'),
@@ -66,7 +66,7 @@ function O(e, t) {
         })
     );
 }
-function S(e, t) {
+function O(e, t) {
     let n = e.getGuildId();
     return (
         r()(null != n, 'This channel cannot be guildless.'),

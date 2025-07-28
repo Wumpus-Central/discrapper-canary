@@ -57,8 +57,8 @@ let U = (e) => {
     G = (e) => {
         let t, n, O;
         var G,
-            B,
-            { selected: V, route: H, locationState: F } = e,
+            V,
+            { selected: B, route: H, locationState: F } = e,
             z = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -104,9 +104,9 @@ let U = (e) => {
         let [ef, eg] = (0, f.US)(eh, void 0, !0);
         if (
             (i.useEffect(() => {
-                !0 === V && null != ef && eg(k.L.AUTO_DISMISS);
-            }, [eg, V, ef]),
-            !U({ selected: V }))
+                !0 === B && null != ef && eg(k.L.AUTO_DISMISS);
+            }, [eg, B, ef]),
+            !U({ selected: B }))
         )
             return null;
         if (
@@ -126,7 +126,7 @@ let U = (e) => {
         else if (er) {
             let e = (0, P.$q)();
             ((n = (0, r.jsx)(j._y, {
-                isTabSelected: V,
+                isTabSelected: B,
                 badgeCopy: M.intl.string(M.t.OS9KPj),
                 offerExpiresAt: !0 === e ? (null == $ ? void 0 : $.expires_at) : null
             })),
@@ -134,7 +134,7 @@ let U = (e) => {
         } else
             ef === o.z.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE
                 ? ((n = (0, r.jsx)(j._y, {
-                      isTabSelected: V,
+                      isTabSelected: B,
                       badgeCopy: M.intl.string(M.t.y2b7CA),
                       offerExpiresAt: null
                   })),
@@ -150,20 +150,20 @@ let U = (e) => {
                     : null != ee
                       ? ((n = (0, r.jsx)(j.GN, {
                             userDiscount: ee,
-                            isTabSelected: V,
+                            isTabSelected: B,
                             includesAmountOff: !1
                         })),
                         (O = 3))
                       : null == $ || ep
                         ? el &&
                           ((n = (0, r.jsx)(A.l, {
-                              isSelected: V,
+                              isSelected: B,
                               onSelect: () => (0, h.Q3)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: k.L.TAKE_ACTION })
                           })),
                           (O = 6))
                         : ((n = (0, r.jsx)(j.$H, {
                               trialOffer: $,
-                              isTabSelected: V
+                              isTabSelected: B
                           })),
                           (O = 4));
         let em = M.intl.string(M.t.Ipxkoq);
@@ -196,7 +196,7 @@ let U = (e) => {
                 return e;
             })(
                 {
-                    selected: V,
+                    selected: B,
                     route: H,
                     icon: s.SrA,
                     text: em,
@@ -213,13 +213,13 @@ let U = (e) => {
                 z,
                 J
             )),
-            (B = B =
+            (V = V =
                 {
                     className: t,
                     children: n
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(G, Object.getOwnPropertyDescriptors(B))
+                ? Object.defineProperties(G, Object.getOwnPropertyDescriptors(V))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
@@ -227,8 +227,8 @@ let U = (e) => {
                           n.push.apply(n, r);
                       }
                       return n;
-                  })(Object(B)).forEach(function (e) {
-                      Object.defineProperty(G, e, Object.getOwnPropertyDescriptor(B, e));
+                  })(Object(V)).forEach(function (e) {
+                      Object.defineProperty(G, e, Object.getOwnPropertyDescriptor(V, e));
                   }),
             G)
         );

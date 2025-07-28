@@ -1,33 +1,33 @@
-(t.d(i, { default: () => j }), t(953529));
-var n = t(255367),
-    r = t(73800),
-    l = t(481060),
-    c = t(651711),
-    o = t(434404),
-    a = t(202858),
-    s = t(587431),
-    d = t(400842),
-    b = t(271267),
-    u = t(981631),
-    g = t(388032),
-    y = t(280086),
-    h = t(653904);
-function p() {
-    return (0, n.jsxs)('div', {
+(i.d(t, { default: () => j }), i(953529));
+var r = i(255367),
+    n = i(73800),
+    l = i(481060),
+    c = i(651711),
+    a = i(434404),
+    o = i(202858),
+    s = i(587431),
+    d = i(400842),
+    b = i(271267),
+    u = i(981631),
+    g = i(388032),
+    y = i(280086),
+    p = i(653904);
+function h() {
+    return (0, r.jsxs)('div', {
         className: y.eligibilityHeader,
         children: [
-            (0, n.jsx)(l.X6q, {
+            (0, r.jsx)(l.X6q, {
                 className: y.eligibilityHeaderText,
                 variant: 'heading-lg/extrabold',
                 color: 'header-primary',
                 children: g.intl.string(g.t['3s47iI'])
             }),
-            (0, n.jsx)('img', {
+            (0, r.jsx)('img', {
                 className: y.eligibilityHeaderImage,
-                src: h,
+                src: p,
                 alt: ''
             }),
-            (0, n.jsx)(l.olH, {
+            (0, r.jsx)(l.olH, {
                 className: y.eligibilityHeaderCloseButton,
                 onClick: () => {
                     (0, l.Mr3)(b.Q);
@@ -37,45 +37,45 @@ function p() {
     });
 }
 function f(e) {
-    let { eligibility: i, eligibilityLoading: t, eligibilityError: g, guildId: h, onEligibilityBecameStale: p } = e,
-        f = r.useMemo(
+    let { eligibility: t, eligibilityLoading: i, eligibilityError: g, guildId: p, onEligibilityBecameStale: h } = e,
+        f = n.useMemo(
             () => ({
-                onEligibilityBecameStale: p,
+                onEligibilityBecameStale: h,
                 sortedByIneligible: !0,
                 actions: {
-                    onEnableMFAClick: a.ZP.enableMFA,
+                    onEnableMFAClick: o.ZP.enableMFA,
                     onRequireModeratorMFAClick: () => {
-                        ((0, l.Mr3)(b.Q), o.Z.open(h, u.pNK.SAFETY, void 0, u.KsC.SAFETY_PERMISSIONS));
+                        ((0, l.Mr3)(b.Q), a.Z.open(p, u.pNK.SAFETY, void 0, u.KsC.SAFETY_PERMISSIONS));
                     }
                 }
             }),
-            [h, p]
+            [p, h]
         ),
-        j = (0, c.Z)(i, f);
+        j = (0, c.Z)(t, f);
     return null != g
-        ? (0, n.jsx)('div', {
+        ? (0, r.jsx)('div', {
               className: y.paddedContainer,
-              children: (0, n.jsx)(s.Z, { children: g.message })
+              children: (0, r.jsx)(s.Z, { children: g.message })
           })
-        : null == j || t
-          ? (0, n.jsx)('div', {
+        : null == j || i
+          ? (0, r.jsx)('div', {
                 className: y.paddedContainer,
-                children: (0, n.jsx)(l.$jN, {})
+                children: (0, r.jsx)(l.$jN, {})
             })
-          : (0, n.jsx)('div', {
-                children: j.map((e, i) =>
-                    (0, n.jsxs)(
-                        r.Fragment,
+          : (0, r.jsx)('div', {
+                children: j.map((e, t) =>
+                    (0, r.jsxs)(
+                        n.Fragment,
                         {
                             children: [
-                                (0, n.jsx)(d.d, {
+                                (0, r.jsx)(d.d, {
                                     name: e.checked ? e.checkedLabel : e.uncheckedLabel,
                                     description: e.description,
                                     checked: e.checked,
                                     actionLabel: e.actionLabel,
                                     actionHandler: e.actionHandler
                                 }),
-                                i < j.length - 1 ? (0, n.jsx)(l.$i$, {}) : null
+                                t < j.length - 1 ? (0, r.jsx)(l.$i$, {}) : null
                             ]
                         },
                         e.checkedLabel
@@ -84,20 +84,20 @@ function f(e) {
             });
 }
 function j(e) {
-    let { eligibility: i, eligibilityLoading: t, eligibilityError: r, refreshEligibility: c, guildId: o, transitionState: a } = e;
-    return (0, n.jsxs)(l.Y0X, {
+    let { eligibility: t, eligibilityLoading: i, eligibilityError: n, refreshEligibility: c, guildId: a, transitionState: o } = e;
+    return (0, r.jsxs)(l.Y0X, {
         className: y.eligibilityModal,
         size: l.CgR.MEDIUM,
-        transitionState: a,
+        transitionState: o,
         parentComponent: 'EligibilityChecklistModal',
         children: [
-            (0, n.jsx)(p, {}),
-            (0, n.jsx)(l.hzk, {
-                children: (0, n.jsx)(f, {
-                    eligibility: i,
-                    eligibilityLoading: t,
-                    eligibilityError: r,
-                    guildId: o,
+            (0, r.jsx)(h, {}),
+            (0, r.jsx)(l.hzk, {
+                children: (0, r.jsx)(f, {
+                    eligibility: t,
+                    eligibilityLoading: i,
+                    eligibilityError: n,
+                    guildId: a,
                     onEligibilityBecameStale: c
                 })
             })

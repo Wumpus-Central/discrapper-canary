@@ -1,7 +1,8 @@
 (n.d(t, {
     KE: () => _,
     KT: () => b,
-    ZP: () => O
+    ZP: () => C,
+    _C: () => O
 }),
     n(388685),
     n(457542));
@@ -85,19 +86,18 @@ function _(e, t) {
     );
 }
 function O(e, t) {
-    var b;
-    let { analyticsLocations: O } = (0, a.ZP)(),
-        [y, v] = i.useState(!1),
-        [C, j] = i.useState(void 0),
-        E = (0, l.e7)([p.Z], () => {
+    var h;
+    let { analyticsLocations: b } = (0, a.ZP)(),
+        { onToggle: _ } = y(e, t),
+        O = (0, l.e7)([p.Z], () => {
             var t, n;
             return null != (n = null == (t = p.Z.getStateForGuild(e)) ? void 0 : t.appliedBoosts) ? n : 0;
         }),
-        x = (0, l.e7)([u.Z], () => u.Z.getGuild(e)),
-        S = (0, l.e7)([p.Z], () => p.Z.getStateForGuild(e)),
-        I = i.useMemo(
+        C = (0, l.e7)([u.Z], () => u.Z.getGuild(e)),
+        v = (0, l.e7)([p.Z], () => p.Z.getStateForGuild(e)),
+        j = i.useMemo(
             () =>
-                t.type === f.Us.LEVEL && null != S
+                null != t && t.type === f.Us.LEVEL && null != v
                     ? (function (e, t) {
                           let n = f.T1[e.skuId];
                           return null == n
@@ -112,86 +112,110 @@ function O(e, t) {
                                         return t.allPowerups[n];
                                     })
                                     .filter(d.lm);
-                      })(t, S)
+                      })(t, v)
                     : [],
-            [t, S]
+            [t, v]
         ),
-        P = null == I ? void 0 : I.reduce((e, t) => e + t.cost, 0),
-        N = Math.max((null != (b = null == x ? void 0 : x.premiumSubscriberCount) ? b : 0) - E + P, 0),
-        w = i.useCallback(
-            (n) => {
-                let r = n ? h.H6 : h.Th;
-                return (
-                    v(!0),
-                    j(void 0),
-                    r(e, t.skuId)
-                        .catch((e) => {
-                            var t;
-                            throw (j(null != (t = e.body.message) ? t : void 0), e);
-                        })
-                        .finally(() => {
-                            v(!1);
-                        })
-                );
-            },
-            [e, t.skuId]
-        ),
-        Z = i.useCallback(
+        E = null == j ? void 0 : j.reduce((e, t) => e + t.cost, 0),
+        S = Math.max((null != (h = null == C ? void 0 : C.premiumSubscriberCount) ? h : 0) - O + E, 0);
+    return {
+        onActivate: i.useCallback(
             (e) => {
-                if ((e.stopPropagation(), null != x))
-                    return N < t.cost
+                var i;
+                if ((e.stopPropagation(), null != C && null != t))
+                    return S < t.cost
                         ? void (0, s.u)({
                               analyticsLocation: {
                                   page: g.ZY5.GUILD_POWERUPS_OVERVIEW,
                                   section: g.jXE.GUILD_POWERUPS_OVERVIEW_CARD
                               },
-                              numberOfBoostsToAdd: t.cost - N,
-                              analyticsLocations: O,
-                              guild: x,
+                              numberOfBoostsToAdd: t.cost - S,
+                              analyticsLocations: b,
+                              guild: C,
                               intent: t.type === f.Us.LEVEL ? c.P.LEVEL : c.P.PERK,
-                              onSubscribeComplete: () =>
-                                  w(!0).then(() => {
-                                      (0, o.ZDy)(async () => {
-                                          let { default: e } = await n.e('13965').then(n.bind(n, 666083));
-                                          return (n) =>
-                                              (0, r.jsx)(
-                                                  e,
-                                                  m(
-                                                      {
-                                                          guildId: x.id,
-                                                          powerup: t
-                                                      },
-                                                      n
-                                                  )
-                                              );
-                                      });
-                                  })
+                              onSubscribeComplete: () => {
+                                  var e;
+                                  return null == (e = _(!0))
+                                      ? void 0
+                                      : e.then(() => {
+                                            ((0, o.pTH)(),
+                                                (0, o.ZDy)(async () => {
+                                                    let { default: e } = await n.e('13965').then(n.bind(n, 666083));
+                                                    return (n) =>
+                                                        (0, r.jsx)(
+                                                            e,
+                                                            m(
+                                                                {
+                                                                    guildId: C.id,
+                                                                    powerup: t
+                                                                },
+                                                                n
+                                                            )
+                                                        );
+                                                }));
+                                        });
+                              }
                           })
-                        : w(!0).then(() => {
-                              (0, o.ZDy)(async () => {
-                                  let { default: e } = await n.e('13965').then(n.bind(n, 666083));
-                                  return (n) =>
-                                      (0, r.jsx)(
-                                          e,
-                                          m(
-                                              {
-                                                  guildId: x.id,
-                                                  powerup: t
-                                              },
-                                              n
-                                          )
-                                      );
-                              });
-                          });
+                        : null == (i = _(!0))
+                          ? void 0
+                          : i.then(() => {
+                                ((0, o.pTH)(),
+                                    (0, o.ZDy)(async () => {
+                                        let { default: e } = await n.e('13965').then(n.bind(n, 666083));
+                                        return (n) =>
+                                            (0, r.jsx)(
+                                                e,
+                                                m(
+                                                    {
+                                                        guildId: C.id,
+                                                        powerup: t
+                                                    },
+                                                    n
+                                                )
+                                            );
+                                    }));
+                            });
             },
-            [w, t, N, O, x]
-        ),
-        T = i.useCallback((e) => (e.stopPropagation(), w(!1)), [w]);
+            [_, t, S, b, C]
+        )
+    };
+}
+function y(e, t) {
+    let [n, r] = i.useState(!1),
+        [l, o] = i.useState(void 0);
     return {
-        isLoading: y,
-        error: C,
-        onActivate: Z,
-        onDeactivate: T,
+        isLoading: n,
+        error: l,
+        onToggle: i.useCallback(
+            (n) => {
+                if (null == t) return Promise.resolve();
+                let i = n ? h.H6 : h.Th;
+                return (
+                    r(!0),
+                    o(void 0),
+                    i(e, t.skuId)
+                        .catch((e) => {
+                            var t;
+                            throw (o(null != (t = e.body.message) ? t : void 0), e);
+                        })
+                        .finally(() => {
+                            r(!1);
+                        })
+                );
+            },
+            [e, t]
+        )
+    };
+}
+function C(e, t) {
+    let { isLoading: l, error: a, onToggle: s } = y(e, t),
+        { onActivate: c } = O(e, t),
+        u = i.useCallback((e) => (e.stopPropagation(), s(!1)), [s]);
+    return {
+        isLoading: l,
+        error: a,
+        onActivate: c,
+        onDeactivate: u,
         onShowDeactivate: i.useCallback(
             (i) => {
                 (i.stopPropagation(),

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(415506), n(388685));
+(n.d(t, { Z: () => x }), n(415506), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -17,7 +17,7 @@ var r = n(255367),
     _ = n(981631),
     O = n(490897),
     y = n(915887);
-function v(e, t, n) {
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +30,7 @@ function v(e, t, n) {
         e
     );
 }
-function C(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function C(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                C(e, t, n[t]);
             }));
     }
     return e;
@@ -74,7 +74,7 @@ class E extends m.ZP {
     }
     constructor(...e) {
         (super(...e),
-            v(this, 'handleContextMenu', (e) => {
+            C(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
                     i = f.Z.getGuild(t.getGuildId());
                 null != i &&
@@ -84,7 +84,7 @@ class E extends m.ZP {
                             var l, o;
                             return (0, r.jsx)(
                                 e,
-                                ((l = C({}, n)),
+                                ((l = v({}, n)),
                                 (o = o =
                                     {
                                         channel: t,
@@ -107,7 +107,7 @@ class E extends m.ZP {
                         };
                     });
             }),
-            v(this, 'handleClick', (e) => {
+            C(this, 'handleClick', (e) => {
                 let t = e.getGuildId();
                 if (null == t) throw Error('TextChannel, transitionTo: Channel does not have a guildId');
                 (0, h.uL)(_.Z5c.CHANNEL(t, e.id), {
@@ -122,8 +122,8 @@ class E extends m.ZP {
             }));
     }
 }
-let x = (0, u.B)(E),
-    S = i.memo(function (e) {
+let S = (0, u.B)(E),
+    x = i.memo(function (e) {
         let { channel: t, guild: n, disableSorting: i } = e,
             l = (0, a.cj)([p.Z, g.Z], () => {
                 let e = p.Z.getChannel(t.parent_id);
@@ -132,5 +132,5 @@ let x = (0, u.B)(E),
                     canReorderChannel: !0 !== i && null != e ? g.Z.can(_.Plq.MANAGE_CHANNELS, e) : g.Z.can(_.Plq.MANAGE_CHANNELS, n)
                 };
             });
-        return (0, r.jsx)(x, C({}, l, e));
+        return (0, r.jsx)(S, v({}, l, e));
     });

@@ -1,63 +1,63 @@
 (n.d(t, {
-    E: () => C,
-    Z: () => y
+    E: () => y,
+    Z: () => C
 }),
     n(388685));
 var r = n(255367),
-    o = n(73800),
-    a = n(120356),
-    s = n.n(a),
-    i = n(866442),
-    l = n(481060),
+    a = n(73800),
+    o = n(120356),
+    l = n.n(o),
+    s = n(866442),
+    i = n(481060),
     c = n(957537),
-    u = n(839008),
-    d = n(797967),
+    d = n(839008),
+    u = n(797967),
     p = n(755641),
-    f = n(742409),
-    m = n(369509),
+    m = n(742409),
+    f = n(369509),
     g = n(101017),
     b = n(141006),
     _ = n(981631),
     h = n(131085),
-    j = n(388032),
-    x = n(606217),
+    x = n(388032),
+    j = n(606217),
     v = n(183375);
-function y() {
+function C() {
     var e;
-    let t = o.useMemo(() => Math.floor(Math.random() * b.tl.length), []),
-        [n, a] = o.useState({
+    let t = a.useMemo(() => Math.floor(Math.random() * b.tl.length), []),
+        [n, o] = a.useState({
             primary_color: b.tl[t].start,
             secondary_color: b.tl[t].end
         }),
-        { gradientStyle: u, gradientClassname: p } = (0, l.Icv)({
-            primaryColor: (0, i.Rf)(n.primary_color),
-            secondaryColor: (0, i.Rf)(n.secondary_color),
+        { gradientStyle: d, gradientClassname: p } = (0, i.Icv)({
+            primaryColor: (0, s.Rf)(n.primary_color),
+            secondaryColor: (0, s.Rf)(n.secondary_color),
             tertiaryColor: void 0,
             roleStyle: 'username',
             includeConvenienceGlow: !0,
             animateGradient: !0
         });
     return (0, r.jsxs)('div', {
-        className: x.container,
+        className: j.container,
         children: [
             (0, r.jsx)('div', {
-                className: x.messageContainer,
-                children: (0, r.jsx)(f.l, {
+                className: j.messageContainer,
+                children: (0, r.jsx)(m.l, {
                     avatar: c.Z,
                     username: 'Cherry',
-                    usernameStyle: u,
-                    usernameClassName: s()(p, v.animateGradient),
-                    message: j.intl.string(j.t['6OSasb'])
+                    usernameStyle: d,
+                    usernameClassName: l()(p, v.animateGradient),
+                    message: x.intl.string(x.t['6OSasb'])
                 })
             }),
-            (0, r.jsx)(d.default, {
+            (0, r.jsx)(u.default, {
                 defaultColor: _.p6O,
                 colors: b.tl,
                 value: n.primary_color,
                 secondaryValue: null != (e = n.secondary_color) ? e : void 0,
                 onChange: (e) => {
                     var t, r;
-                    return a(
+                    return o(
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -100,7 +100,7 @@ function y() {
                     );
                 },
                 onChangeGradientColors: (e) =>
-                    a({
+                    o({
                         primary_color: e[0],
                         secondary_color: e[1],
                         tertiary_color: void 0
@@ -110,28 +110,28 @@ function y() {
         ]
     });
 }
-function C(e) {
+function y(e) {
     let { guildId: t } = e,
-        [n, a] = o.useState(h.x_.HEART),
-        s = (0, g.Z)(),
-        i = o.useMemo(
+        [n, o] = a.useState(h.x_.HEART),
+        l = (0, g.Z)(),
+        s = a.useMemo(
             () => ({
-                unlockedBadges: s.unlockedBadges.slice(0, 10),
+                unlockedBadges: l.unlockedBadges.slice(0, 10),
                 lockedBadges: []
             }),
-            [s]
+            [l]
         );
     return (0, r.jsxs)('div', {
-        className: x.container,
+        className: j.container,
         children: [
             (0, r.jsx)('div', {
-                className: x.messageContainer,
-                children: (0, r.jsx)(f.l, {
-                    avatar: u.Z,
+                className: j.messageContainer,
+                children: (0, r.jsx)(m.l, {
+                    avatar: d.Z,
                     username: 'Roka',
                     usernameStyle: { color: 'var(--brand-400)' },
-                    message: j.intl.string(j.t['6OSasb']),
-                    decorations: (0, r.jsx)(m.S, {
+                    message: x.intl.string(x.t['6OSasb']),
+                    decorations: (0, r.jsx)(f.S, {
                         guildId: t,
                         tag: 'GGEZ',
                         badge: n
@@ -140,8 +140,8 @@ function C(e) {
             }),
             (0, r.jsx)(p.g, {
                 selectedBadge: n,
-                onBadgeClicked: a,
-                badgeCollection: i
+                onBadgeClicked: o,
+                badgeCollection: s
             })
         ]
     });

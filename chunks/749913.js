@@ -22,9 +22,9 @@ var r = n(255367),
     y = n(795639),
     O = n(957730),
     w = n(25015),
-    N = n(252032),
-    S = n(216572),
-    T = n(913663),
+    S = n(252032),
+    T = n(216572),
+    N = n(913663),
     P = n(268350),
     I = n(456077),
     E = n(488131),
@@ -40,8 +40,8 @@ var r = n(255367),
     B = n(127654),
     H = n(681154),
     U = n(883429),
-    G = n(945141),
-    V = n(456269),
+    V = n(945141),
+    G = n(456269),
     q = n(228392),
     W = n(259637),
     X = n(76451),
@@ -100,7 +100,7 @@ function ea(e, t) {
 let el = b.Ie.CREATE_FORUM_POST;
 function es(e) {
     let { parentChannel: t, isSearchLoading: n, numResults: a, onChange: s, canCreatePost: o, inputRef: d } = e,
-        u = !(0, S.HL)(t) && o,
+        u = !(0, T.HL)(t) && o,
         {
             textAreaState: m,
             formOpen: g,
@@ -120,11 +120,11 @@ function es(e) {
         }, [j]),
         C = (0, h.e7)([k.Z], () => k.Z.can(ee.Plq.ATTACH_FILES, t)),
         w = (0, h.Wu)([L.Z], () => L.Z.getUploads(t.id, Z.d.FirstThreadMessage)),
-        N = g && C && u,
+        S = g && C && u,
         I = (null == t ? void 0 : t.isMediaChannel()) === !0,
         M = (function (e, t) {
             let n = (0, K.AF)(),
-                r = (0, V.ql)(e);
+                r = (0, G.ql)(e);
             return i.useCallback(() => {
                 let { formOpen: i, setFormOpenFromUserAction: a, name: l, textAreaState: s, hasClickedForm: o } = n.getState();
                 !i &&
@@ -155,7 +155,7 @@ function es(e) {
                     let { content: s } = O.ZP.parse(e, t);
                     if (((t = s), null == r || 0 === r.length)) {
                         var o;
-                        r = null == (o = T.Z.getStickerPreview(e.id, el.drafts.type)) ? void 0 : o.map((e) => e.id);
+                        r = null == (o = N.Z.getStickerPreview(e.id, el.drafts.type)) ? void 0 : o.map((e) => e.id);
                     }
                     if (((null == i || 0 === i.length) && (i = L.Z.getUploads(e.id, Z.d.FirstThreadMessage)), null != i && i.length > 0 && e.isMediaChannel())) {
                         let e = i.findIndex((e) => !0 === e.isThumbnail);
@@ -179,7 +179,7 @@ function es(e) {
             return i.useCallback(
                 async (t, i, l) => {
                     let { setNameError: s, setMessageError: o, setSubmitting: c, resetFormState: d, formOpen: u, setFormOpen: m, setPreviewing: h, setFormOpenFromUserAction: g, setGuidelinesOpen: f } = n.getState(),
-                        x = G.Z.hasSeen(e.id);
+                        x = V.Z.hasSeen(e.id);
                     if (!u)
                         return (
                             (0, q.P_)({
@@ -221,7 +221,7 @@ function es(e) {
                             d(),
                             m(!1),
                             h(!1),
-                            G.Z.markAsSeen(e.id),
+                            V.Z.markAsSeen(e.id),
                             f(!1),
                             {
                                 shouldClear: !0,
@@ -288,13 +288,13 @@ function es(e) {
                                         x && (0, r.jsx)(eh, {})
                                     ]
                                 }),
-                                N && (I ? (0, r.jsx)(y._, { parentChannel: t }) : (0, r.jsx)(X.Z, { channelId: t.id }))
+                                S && (I ? (0, r.jsx)(y._, { parentChannel: t }) : (0, r.jsx)(X.Z, { channelId: t.id }))
                             ]
                         }),
                         (0, r.jsxs)('div', {
                             className: er.form,
                             children: [
-                                N && I && (0, r.jsx)(_.Z, { parentChannel: t }),
+                                S && I && (0, r.jsx)(_.Z, { parentChannel: t }),
                                 g &&
                                     (0, r.jsx)(ep, {
                                         className: er.horizontalPadding,
@@ -330,7 +330,7 @@ let eo = i.memo(function (e) {
                 };
             }, c.X),
             m = (0, K.AF)(),
-            h = (0, V.ql)(t),
+            h = (0, G.ql)(t),
             g = i.useCallback(() => {
                 var e;
                 (m.getState().resetFormState(),
@@ -414,8 +414,8 @@ let eo = i.memo(function (e) {
             }, c.X),
             b = (0, K.AF)(),
             j = null != t.topic && 0 !== t.topic.length,
-            v = G.Z.hasSeen(t.id),
-            C = (0, V.ql)(t),
+            v = V.Z.hasSeen(t.id),
+            C = (0, G.ql)(t),
             _ = (0, h.e7)([F.default], () => F.default.getCurrentUser());
         (o()(null != _, 'current user cannot be null'),
             (0, D.yp)({
@@ -567,7 +567,7 @@ let eu = i.memo(function (e) {
                 previewLinkTarget: !0,
                 allowLinks: !0
             }),
-            s = (0, N.Z)(
+            s = (0, S.Z)(
                 {
                     message: i,
                     channel: t,
@@ -835,7 +835,7 @@ let ep = i.memo(function (e) {
 });
 function eb(e) {
     let { parentChannel: t, canCreatePost: n, disabled: i, disableIfInvalid: a = !1 } = e,
-        l = (0, S.HL)(t),
+        l = (0, T.HL)(t),
         {
             submitting: s,
             name: o,
@@ -914,7 +914,7 @@ function ev(e) {
         b = i.useRef(null),
         j = i.useRef(null),
         [v, C] = i.useState(!0),
-        _ = (0, V.Vm)(t),
+        _ = (0, G.Vm)(t),
         [y, O] = i.useState(0);
     return (i.useLayoutEffect(() => {
         var e;

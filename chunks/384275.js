@@ -15,12 +15,12 @@ let o = {
                     (e) =>
                         i.Z.dispatch({
                             type: 'USER_AUTHORIZED_APPS_UPDATE',
-                            apps: e.body
+                            tokens: e.body
                         }),
                     () =>
                         i.Z.dispatch({
                             type: 'USER_AUTHORIZED_APPS_UPDATE',
-                            apps: []
+                            tokens: []
                         })
                 ));
     },

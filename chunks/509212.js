@@ -2,7 +2,7 @@
     $H: () => eP,
     $J: () => e4,
     AV: () => eu,
-    B2: () => tb,
+    B2: () => tO,
     B3: () => td,
     BM: () => e8,
     Bg: () => em,
@@ -10,7 +10,7 @@
     C1: () => to,
     C9: () => ta,
     Dr: () => eC,
-    F9: () => tg,
+    F9: () => tb,
     FI: () => tp,
     FX: () => ep,
     Fs: () => ts,
@@ -22,8 +22,8 @@
     KM: () => ew,
     Kr: () => eh,
     LM: () => eO,
-    MM: () => tI,
-    Mo: () => tT,
+    MM: () => tS,
+    Mo: () => tA,
     Nj: () => eN,
     OG: () => tn,
     PB: () => e1,
@@ -37,18 +37,19 @@
     WP: () => J,
     Xh: () => ea,
     Xv: () => eE,
+    ZS: () => tE,
     ZZ: () => Z,
     Zp: () => th,
     _D: () => F,
     _j: () => ti,
     _p: () => tu,
     b7: () => eW,
-    bA: () => tE,
+    bA: () => ty,
     f$: () => tc,
     f2: () => eM,
     fY: () => e9,
     gI: () => te,
-    hF: () => tO,
+    hF: () => tI,
     hQ: () => et,
     iQ: () => K,
     il: () => eY,
@@ -59,7 +60,7 @@
     pO: () => eR,
     q6: () => z,
     q8: () => e0,
-    qe: () => ty,
+    qe: () => tv,
     t2: () => ec,
     u7: () => tf,
     vQ: () => eb,
@@ -829,46 +830,51 @@ function tm(e) {
     let t = th(e);
     return null != t && R.v6.has(t);
 }
-let tg = (e) => (e.percentComplete > 0 ? D.intl.formatToPlainString(D.t['c59/Tk'], { remainTime: eQ(e) }) : D.intl.formatToPlainString(D.t.GNsKiY, { remainTime: eQ(e) }));
-function tE(e, t) {
+let tg = 'landscape';
+function tE(e) {
+    let t = e.assets.video;
+    return null == t || null == t.width || null == t.height ? tg : t.width > t.height ? 'landscape' : 'portrait';
+}
+let tb = (e) => (e.percentComplete > 0 ? D.intl.formatToPlainString(D.t['c59/Tk'], { remainTime: eQ(e) }) : D.intl.formatToPlainString(D.t.GNsKiY, { remainTime: eQ(e) }));
+function ty(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
 }
-function tb(e) {
+function tO(e) {
     var t, n;
     let r = N.r.build(e).defaultWatchVideoTask;
     return null != (n = null != (t = null == r ? void 0 : r.messages.videoEndCtaButtonLabel) ? t : null == r ? void 0 : r.messages.videoEndCtaTitle) ? n : D.intl.string(D.t.iiTtpK);
 }
-function ty(e, t) {
+function tv(e, t) {
     var n;
     let { quest: r, adDecisionData: i } = null != (n = T.Z.questToDeliverForPlacement.get(th(t))) ? n : {};
     return null != i && (null == r ? void 0 : r.id) === e ? i : R.Jp;
 }
-function tO(e) {
+function tI(e) {
     var t, n;
     let r = null != (n = null == (t = e.userStatus) ? void 0 : t.claimedTier) ? n : 0;
     return 'rewardsConfig' in e.config ? e.config.rewardsConfig.rewards[r] : e.config.rewards[r];
 }
-function tv(e) {
+function tT(e) {
     return new Set(Object.keys(e.config.taskConfigV2.tasks));
 }
-function tI(e, t) {
+function tS(e, t) {
     let n = new Map();
     for (let [r, i] of e)
-        for (let e of tv(i))
+        for (let e of tT(i))
             if (t.has(e)) {
                 n.set(r, i);
                 break;
             }
     return n;
 }
-function tT(e) {
+function tA(e) {
     var t, n;
     let { questId: r, sourceQuestContent: i, videoSessionId: a } = e,
         o = A.ZP.getState().getVideoProgress(r);
     if (null == o) return;
     let s = T.Z.getQuest(r);
     null != s && (null == (t = s.userStatus) ? void 0 : t.enrolledAt) != null && (null == (n = s.userStatus) ? void 0 : n.completedAt) == null && tp(s, o.maxTimestampSec);
-    let l = tE(o.maxTimestampSec, o.duration);
+    let l = ty(o.maxTimestampSec, o.duration);
     ((0, v.dA)({
         questId: r,
         event: P.rMx.QUEST_VIDEO_PROGRESSED,

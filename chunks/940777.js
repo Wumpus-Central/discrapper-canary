@@ -17,12 +17,12 @@ var r = n(255367),
     _ = n(905423),
     O = n(199902),
     y = n(592125),
-    v = n(944486),
-    C = n(979651),
+    C = n(944486),
+    v = n(979651),
     j = n(709054),
     E = n(853856),
-    x = n(593214),
-    S = n(919755),
+    S = n(593214),
+    x = n(919755),
     I = n(110977),
     P = n(603274),
     N = n(981631),
@@ -63,18 +63,18 @@ let A = {
 function R() {
     var e, t;
     let l = (0, a.Ie)('favorites'),
-        { favoriteAdded: R, clearFavoriteAdded: D } = (0, x.up)(),
+        { favoriteAdded: R, clearFavoriteAdded: D } = (0, S.up)(),
         [L, M] = i.useState(!1),
         { favoriteServerMuted: k, favoriteChannels: U } = (0, s.cj)([E.Z], () => ({
             favoriteChannels: E.Z.getFavoriteChannels(),
             favoriteServerMuted: E.Z.favoriteServerMuted
         })),
-        G = (0, s.e7)([v.Z], () => v.Z.getChannelId(N.I_8)),
+        G = (0, s.e7)([C.Z], () => C.Z.getChannelId(N.I_8)),
         B = (0, s.e7)([y.Z], () => y.Z.getChannel(G)),
         V = (0, _.Z)((e) => e.guildId) === N.I_8,
-        { badge: F, unread: H } = (0, S.Z)(U),
+        { badge: F, unread: H } = (0, x.Z)(U),
         z = (function (e) {
-            let t = (0, s.e7)([v.Z], () => v.Z.getVoiceChannelId()),
+            let t = (0, s.e7)([C.Z], () => C.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
                 r = (0, s.e7)([O.Z], () => {
                     if (!n) return !1;
@@ -82,7 +82,7 @@ function R() {
                     return null != t && null != e[t.channelId];
                 }),
                 i = (0, s.e7)([O.Z], () => O.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
-                l = (0, s.e7)([C.Z], () => n && null != t && C.Z.hasVideo(t), [n, t]),
+                l = (0, s.e7)([v.Z], () => n && null != t && v.Z.hasVideo(t), [n, t]),
                 o = (0, s.Wu)([h.ZP], () => j.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
                 a = (0, s.e7)([h.ZP], () =>
                     Array.from(h.ZP.getSelfEmbeddedActivities().values()).some((t) => {

@@ -182,7 +182,7 @@ async function D(e, t) {
 async function A(e, t) {
     return await O.Z.saveGuild(e.id, { moderatorReportingEnabled: t });
 }
-function L(e) {
+function k(e) {
     let { guild: t } = e,
         n = (0, o.e7)([x.Z], () => null != t && x.Z.can(I.Plq.MANAGE_GUILD, t), [t]),
         l = t.features.has(I.oNc.COMMUNITY),
@@ -234,7 +234,7 @@ function L(e) {
               ]
           });
 }
-function k(e) {
+function L(e) {
     let { guild: t, mfaLevel: n } = e,
         l = (0, o.e7)([x.Z], () => null != t && x.Z.can(I.Plq.MANAGE_GUILD, t), [t]),
         s = (0, o.e7)([j.default], () => j.default.getCurrentUser()),
@@ -363,9 +363,9 @@ function G() {
                 titleClassName: T.headerContainer,
                 children: [
                     (0, r.jsx)(M, { guild: e }),
-                    (0, r.jsx)(L, { guild: e }),
+                    (0, r.jsx)(k, { guild: e }),
                     (0, r.jsx)(R, { guild: e }),
-                    (0, r.jsx)(k, {
+                    (0, r.jsx)(L, {
                         guild: e,
                         mfaLevel: t
                     }),

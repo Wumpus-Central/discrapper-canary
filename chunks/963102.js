@@ -15,8 +15,8 @@ var n = r(255367),
     b = r(110560),
     m = r(507808),
     _ = r(822857),
-    C = r(775451),
-    O = r(594174),
+    O = r(775451),
+    C = r(594174),
     v = r(471731),
     E = r(335131),
     S = r(870289),
@@ -51,7 +51,7 @@ function N(e) {
                 ),
                 e && (m.current = g.Z.keyboardModeEnabled));
         },
-        C = (e) => {
+        O = (e) => {
             ('Enter' === e.key || ' ' === e.key) && (e.preventDefault(), _(!0));
         };
     return (0, n.jsx)('div', {
@@ -109,7 +109,7 @@ function N(e) {
                         {
                             ref: d,
                             onClick: () => a(t),
-                            onKeyDown: C,
+                            onKeyDown: O,
                             wrapperClassName: k.tabWrapper,
                             className: o()(k.tab, { [k.selected]: r }),
                             children: (0, n.jsxs)('span', {
@@ -149,7 +149,7 @@ function N(e) {
 function A(e) {
     let { isFullScreen: t, isLayer: r, onClose: i, selectedTab: f, handleTransition: g } = e,
         x = (0, p.ZP)(),
-        A = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
+        A = (0, s.e7)([C.default], () => C.default.getCurrentUser()),
         w = (null == A ? void 0 : A.isStaff()) || (null == A ? void 0 : A.isStaffPersonal()) || !1,
         { enabled: B } = (0, _.WX)({ location: 'collectibles_shop_header_bar' }),
         R = (0, y.S)('collectibles_shop_header_bar'),
@@ -232,10 +232,10 @@ function A(e) {
                                         selectedTab: f
                                     }),
                                 B &&
-                                    (0, n.jsx)(C.V9, {
+                                    (0, n.jsx)(O.V9, {
                                         anchorPillType: t ? 'SHOP_FULLSCREEN' : 'SHOP',
                                         analyticsPage: F,
-                                        cardAlignment: C.V9.CardAlignment.END,
+                                        cardAlignment: O.V9.CardAlignment.END,
                                         ctaText: L.intl.string(L.t.VC4Mq6),
                                         ctaOnClick: M,
                                         className: k.balanceWidgetMenu

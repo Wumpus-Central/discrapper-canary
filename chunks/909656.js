@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => k }), n(388685), n(953529));
+(n.d(t, { Z: () => L }), n(388685), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -88,7 +88,7 @@ function A() {
         }
     ];
 }
-function L(e) {
+function k(e) {
     let { value: t, 'aria-labelledby': n, onChange: l, disabled: a = !1 } = e,
         { ref: o, width: c } = (0, h.ZP)(),
         d = (0, x.Z)(A),
@@ -128,7 +128,7 @@ function L(e) {
         })
     });
 }
-function k(e) {
+function L(e) {
     var t;
     let { guild: n, isGuildProducts: l = !1 } = e,
         { format: s } = (0, I.Z)(n.id),
@@ -139,7 +139,7 @@ function k(e) {
         }, [a]),
         [m, h] = i.useState(s),
         [x, O] = i.useState(null != (t = null == a ? void 0 : a.description) ? t : ''),
-        [A, k] = i.useState(c),
+        [A, L] = i.useState(c),
         [M, G] = i.useState(null == a ? void 0 : a.store_page_guild_products_default_sort),
         [U, B] = i.useState(null == a ? void 0 : a.server_shop_tab_order),
         { loading: F, error: H, updateSubscriptionsSettings: z } = (0, y.QV)(),
@@ -148,7 +148,7 @@ function k(e) {
         X = (0, b.Dt)(),
         q = (0, b.Dt)();
     function J(e, t) {
-        (o()(null != e, 'Null value not allowed'), null != t && Y(t.name), k(e));
+        (o()(null != e, 'Null value not allowed'), null != t && Y(t.name), L(e));
     }
     let Q = i.useMemo(() => {
             var e;
@@ -157,7 +157,7 @@ function k(e) {
         $ = null != x && '' !== x && null != A;
     i.useEffect(() => {
         var e;
-        (null == a || null == (e = a.cover_image_asset) ? void 0 : e.application_id) != null && k((0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, D));
+        (null == a || null == (e = a.cover_image_asset) ? void 0 : e.application_id) != null && L((0, _._W)(a.cover_image_asset.application_id, a.cover_image_asset, D));
     }, [null == a ? void 0 : a.cover_image_asset]);
     let ee = (0, C.mY)(),
         et = i.useMemo(
@@ -203,7 +203,7 @@ function k(e) {
                                       disabled: ee,
                                       children: P.intl.string(P.t.x87YqK)
                                   }),
-                                  (0, r.jsx)(L, {
+                                  (0, r.jsx)(k, {
                                       value: m,
                                       onChange: (e) => {
                                           (s !== e &&
@@ -345,7 +345,7 @@ function k(e) {
                             disabled: !$,
                             onReset: () => {
                                 var e;
-                                (h(s), O(null != (e = null == a ? void 0 : a.description) ? e : ''), k(c), G(null == a ? void 0 : a.store_page_guild_products_default_sort), B(null == a ? void 0 : a.server_shop_tab_order));
+                                (h(s), O(null != (e = null == a ? void 0 : a.description) ? e : ''), L(c), G(null == a ? void 0 : a.store_page_guild_products_default_sort), B(null == a ? void 0 : a.server_shop_tab_order));
                             },
                             onSave: () => {
                                 o()(null != a, 'Settings must be defined');

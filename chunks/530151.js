@@ -56,7 +56,7 @@ let U = (e) => {
         });
     },
     G = [u.Z.unsafe_rawColors.BLUE_345.css, u.Z.colors.INTERACTIVE_NORMAL.css],
-    B = (e) => {
+    V = (e) => {
         let { tooltip: t, onClick: n, icon: i } = e;
         return (0, r.jsx)(h.ua7, {
             text: t,
@@ -76,7 +76,7 @@ let U = (e) => {
             }
         });
     };
-function V(e, t) {
+function B(e, t) {
     switch (t) {
         case R.f07.POST_INSTALL_SCRIPTS:
         case R.f07.PLANNING:
@@ -188,8 +188,8 @@ function F(e, t, n, r, i) {
 }
 function z(e) {
     let { type: t, stage: n, percent: r, progress: i, total: l, secondsRemaining: a } = e,
-        o = V(l, n),
-        s = V(i, n);
+        o = B(l, n),
+        s = B(i, n);
     switch (n) {
         case R.f07.QUEUED:
             if (0 === i) return D.intl.string(D.t.RpfBqa);
@@ -293,8 +293,8 @@ class W extends i.PureComponent {
         if (null != n) {
             let { progress: r, total: i, stage: l } = n;
             if (null != r && null != i) {
-                let n = V(i, l),
-                    a = V(r, l),
+                let n = B(i, l),
+                    a = B(r, l),
                     o = Math.floor((t = Z.xI(r, i)));
                 e =
                     l === R.f07.PAUSING
@@ -416,20 +416,20 @@ class W extends i.PureComponent {
     }
 }
 let Y = () =>
-        (0, r.jsx)(B, {
+        (0, r.jsx)(V, {
             icon: h.o1U,
             tooltip: D.intl.string(D.t.YGm6SU),
             onClick: () => m.v4()
         }),
     K = () =>
-        (0, r.jsx)(B, {
+        (0, r.jsx)(V, {
             icon: h.fpf,
             tooltip: D.intl.string(D.t.TVAd5O),
             onClick: () => m.wO()
         }),
     q = (e) => {
         let { item: t } = e;
-        return (0, r.jsx)(B, {
+        return (0, r.jsx)(V, {
             icon: h.wj7,
             tooltip: D.intl.string(D.t['Eqb+LC']),
             onClick: () => m.A1(t.applicationId, t.branchId)
@@ -437,7 +437,7 @@ let Y = () =>
     },
     X = (e) => {
         let { item: t } = e;
-        return (0, r.jsx)(B, {
+        return (0, r.jsx)(V, {
             icon: h.Dio,
             tooltip: D.intl.string(D.t['0lFmCw']),
             onClick: () => m.al(t.applicationId, t.branchId)

@@ -29,5 +29,5 @@ var u = (function (e) {
         return ((e.ROOT = 'root'), (e.SERVERS_CATEGORY = 'server_tab'), (e.SERVERS_SEARCH = 'server_search'), e);
     })({}),
     f = (function (e) {
-        return ((e.GUILDS_BAR_ICON = 'guilds_bar_icon'), e);
+        return ((e.GUILDS_BAR_ICON = 'guilds_bar_icon'), (e.VIRTUAL_CURRENCY_REHEAT_COACHMARK = 'virtual_currency_reheat_coachmark'), e);
     })({});

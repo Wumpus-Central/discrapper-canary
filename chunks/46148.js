@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(921944),
     O = n(474936),
     y = n(388032),
-    v = n(706442),
-    C = n(777091);
+    C = n(706442),
+    v = n(777091);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -48,8 +48,8 @@ let E = (e, t) => {
         let n = null != t && !t.isPreview;
         return e ? (e && !n ? 'no-wallpaper-nitro' : 'has-wallpaper-nitro') : 'non-nitro';
     },
-    x = (e) => ('has-wallpaper-nitro' === e ? y.intl.string(y.t.T9dXPj) : y.intl.string(y.t.zyvzQ0)),
-    S = (e) => {
+    S = (e) => ('has-wallpaper-nitro' === e ? y.intl.string(y.t.T9dXPj) : y.intl.string(y.t.zyvzQ0)),
+    x = (e) => {
         switch (e) {
             case 'non-nitro':
                 return y.intl.string(y.t.VU8fxM);
@@ -96,8 +96,8 @@ let E = (e, t) => {
                 A(_.L.USER_DISMISS);
             },
             F = E(R, null != D ? D : null),
-            H = x(F),
-            z = S(F);
+            H = S(F),
+            z = x(F);
         return (0, r.jsx)('div', {
             ref: M,
             children: (0, r.jsx)(a.yRy, {
@@ -113,9 +113,9 @@ let E = (e, t) => {
                         buttonText: y.intl.string(y.t['+IrDzM']),
                         header: H,
                         art: (0, r.jsx)('img', {
-                            src: C.Z,
+                            src: v.Z,
                             alt: '',
-                            className: v.chatWallpaperDMListCoachmarkArt
+                            className: C.chatWallpaperDMListCoachmarkArt
                         }),
                         body: z,
                         align: G

@@ -17,12 +17,12 @@ var r = n(255367),
     _ = n(933557),
     O = n(557135),
     y = n(873696),
-    v = n(446226),
-    C = n(305325),
+    C = n(446226),
+    v = n(305325),
     j = n(281956),
     E = n(66999),
-    x = n(554747),
-    S = n(378844),
+    S = n(554747),
+    x = n(378844),
     I = n(574176),
     P = n(340541),
     N = n(359110),
@@ -151,8 +151,8 @@ class $ extends G.ZP {
               });
     }
     render() {
-        let { channel: e, selected: t, connected: n, unread: i, resolvedUnreadSetting: l, mentionCount: a, locked: s, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: _, canMoveMembers: O, showTutorial: y, hasActiveEvent: v, embeddedApps: C, isSubscriptionGated: j, isFavoriteSuggestion: E, withGuildIcon: x } = this.props,
-            { shouldShowActivities: S, shouldShowGuildVerificationPopout: I } = this.state,
+        let { channel: e, selected: t, connected: n, unread: i, resolvedUnreadSetting: l, mentionCount: a, locked: s, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: _, canMoveMembers: O, showTutorial: y, hasActiveEvent: C, embeddedApps: v, isSubscriptionGated: j, isFavoriteSuggestion: E, withGuildIcon: S } = this.props,
+            { shouldShowActivities: x, shouldShowGuildVerificationPopout: I } = this.state,
             N = (0, P.jW)({ location: 'voice_channel' }).entrypoints,
             Z = this.getVoiceStatesCount(),
             T = (0, r.jsxs)('li', {
@@ -169,7 +169,7 @@ class $ extends G.ZP {
                             renderPopout: this.renderPopout,
                             spacing: 0,
                             onRequestClose: this.closeGuildVerificationPopout,
-                            shouldShow: (S && !u && !d && !I) || I,
+                            shouldShow: (x && !u && !d && !I) || I,
                             children: () =>
                                 (0, r.jsx)(c.ua7, {
                                     text: this.getTooltipText(),
@@ -201,8 +201,8 @@ class $ extends G.ZP {
                                                     {
                                                         ref: this.channelItemRef,
                                                         className: q.iconVisibility,
-                                                        iconClassName: o()({ [q.iconLive]: v }),
-                                                        hasActiveEvent: v,
+                                                        iconClassName: o()({ [q.iconLive]: C }),
+                                                        hasActiveEvent: C,
                                                         channel: e,
                                                         selected: !E && t,
                                                         connected: n,
@@ -224,14 +224,14 @@ class $ extends G.ZP {
                                                             unread: i,
                                                             mentionCount: a,
                                                             userCount: Z,
-                                                            embeddedActivitiesCount: C.length,
+                                                            embeddedActivitiesCount: v.length,
                                                             isSubscriptionGated: j
                                                         }),
                                                         'aria-describedby': (0, b.Z)({
                                                             channel: e,
-                                                            embeddedApps: C
+                                                            embeddedApps: v
                                                         }),
-                                                        withGuildIcon: x
+                                                        withGuildIcon: S
                                                     },
                                                     h
                                                 ),
@@ -330,7 +330,7 @@ class $ extends G.ZP {
             X(this, 'handleClick', () => {
                 let { channel: e } = this.props,
                     t = e.getGuildId();
-                (null != t && (0, j.n)(t) && (0, C.hk)(t), this.handleVoiceConnect());
+                (null != t && (0, j.n)(t) && (0, v.hk)(t), this.handleVoiceConnect());
             }),
             X(this, 'handleVoiceStatusClick', (e) => {
                 let { connected: t, channel: n } = this.props;
@@ -351,8 +351,8 @@ class $ extends G.ZP {
                     });
                 }
                 if (s)
-                    return (0, r.jsx)(S.Z, {
-                        type: S.R.VOICE,
+                    return (0, r.jsx)(x.Z, {
+                        type: x.R.VOICE,
                         guildId: e.guild_id,
                         closePopout: this.closeGuildVerificationPopout
                     });
@@ -413,11 +413,11 @@ function et(e) {
         p = (0, a.e7)([k.Z], () => k.Z.hasVideo(n.id)),
         g = (0, f.ZP)(n),
         m = (0, _.ZP)(n),
-        b = (0, x.qY)(n.id),
+        b = (0, S.qY)(n.id),
         { isSubscriptionGated: O, needSubscriptionToAccess: y } = (0, E.Z)(n.id),
-        C = (0, v.Z)(),
+        v = (0, C.Z)(),
         j = (0, a.e7)([M.ZP], () => M.ZP.isFavorite(t.id, n.id)),
-        S = e.connected || (null == C ? void 0 : C.channelId) === n.id,
+        x = e.connected || (null == v ? void 0 : v.channelId) === n.id,
         { enableHangStatus: P, allowChannelTopic: N } = I.n.useExperiment(
             {
                 guildId: n.guild_id,
@@ -435,7 +435,7 @@ function et(e) {
             enableConnectedUserLimit: !0,
             enableActivities: !0
         }),
-        Z = S && null == w;
+        Z = x && null == w;
     return (0, r.jsx)(
         ee,
         J(
@@ -454,7 +454,7 @@ function et(e) {
                 e
             ),
             {
-                connected: S,
+                connected: x,
                 isFavoriteSuggestion: l && !j,
                 forceShowButtons: Z,
                 channelInfo: w,

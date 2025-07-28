@@ -8,7 +8,7 @@ var n = r(603263),
     c = r(862825);
 function u(e) {
     let { searchId: t, searchQueryString: r, searchQuery: l, offset: a } = e;
-    (s.Z.clearSearchMessages(t), n.Gn(t), n.QY(t, !1), n.Vs(t, r, l, a), n.h7(t, r));
+    (s.Z.clearSearchMessages(t), n.Gn(t), n.QY(t, !1), n.Vs(t, r, l, a), n.uJ(t, r));
 }
 let h = {
     fetchCrossDMMessages: function (e) {

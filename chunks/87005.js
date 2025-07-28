@@ -36,10 +36,7 @@ function b(e) {
             r.useEffect(() => {
                 s && h === d.M.NOT_FETCHED && a.Z.fetch();
             }, [s, h]);
-            let g = (0, l.Wu)([d.Z], () => {
-                    var e, t;
-                    return s && null != (t = null == (e = d.Z.getApps()) ? void 0 : e.filter((e) => e.scopes.includes(i.x.APPLICATIONS_COMMANDS))) ? t : [];
-                }),
+            let g = (0, l.Wu)([d.Z], () => (s ? d.Z.getNewestTokens().filter((e) => e.scopes.includes(i.x.APPLICATIONS_COMMANDS)) : [])),
                 b = t.filter((e) => e.id !== f.bi.FRECENCY && e.id !== f.bi.BUILT_IN),
                 v = 'contextless' === n.type,
                 y = r.useMemo(() => {

@@ -22,12 +22,12 @@ var r = n(255367),
     _ = n(496675),
     O = n(259580),
     y = n(267642),
-    v = n(624138),
-    C = n(667815),
+    C = n(624138),
+    v = n(667815),
     j = n(531572),
     E = n(18857),
-    x = n(981631),
-    S = n(921944),
+    S = n(981631),
+    x = n(921944),
     I = n(388032),
     P = n(93841),
     N = n(30009);
@@ -74,7 +74,7 @@ function Z(e, t) {
         e
     );
 }
-let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+let T = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     A = 57,
     R = 57 + T,
     D = {
@@ -83,20 +83,20 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     },
     L = i.memo((e) => {
         let { guild: t, tooltipTypes: l, withMargin: d } = e,
-            v = (0, y.Jh)(t.id),
+            C = (0, y.Jh)(t.id),
             T = (0, b.Z)(t.id),
-            A = (0, y.FZ)(v),
+            A = (0, y.FZ)(C),
             R = null == A,
-            L = null != A ? A : v,
+            L = null != A ? A : C,
             M = (0, c.e7)([j.Z], () => {
                 var e;
                 return null != (e = j.Z.getCountForGuild(t.id)) ? e : 0;
             }),
-            k = (0, c.e7)([_.Z], () => _.Z.can(x.Plq.MANAGE_GUILD, t));
+            k = (0, c.e7)([_.Z], () => _.Z.can(S.Plq.MANAGE_GUILD, t));
         i.useEffect(() => {
-            M !== T && (0, C.v)(t.id, T);
+            M !== T && (0, v.v)(t.id, T);
         }, [t.id, M, T]);
-        let U = R ? '100%' : ''.concat(Math.min(100, (T / x.oCV[L]) * 100), '%'),
+        let U = R ? '100%' : ''.concat(Math.min(100, (T / S.oCV[L]) * 100), '%'),
             { current: G } = i.useRef(U),
             [B] = (0, h.q_F)(
                 () => ({
@@ -107,12 +107,12 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 'respect-motion-settings',
                 [M, T, G, U]
             ),
-            V = t.premiumTier < L && M >= x.oCV[L],
-            F = (0, E.Z)(t, f.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY, x.jXE.PREMIUM_GUILD_PROGRESS_BAR),
+            V = t.premiumTier < L && M >= S.oCV[L],
+            F = (0, E.Z)(t, f.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY, S.jXE.PREMIUM_GUILD_PROGRESS_BAR),
             H = I.intl.formatToPlainString(I.t['2oNfMT'], { levelName: (0, y.e9)(L) }),
             z = I.intl.format(I.t.dhKnYm, {
                 numBoosts: T,
-                numTotal: x.oCV[L]
+                numTotal: S.oCV[L]
             });
         (R && ((H = (0, y.e9)(L)), (z = I.intl.format(I.t.B2byER, { numBoosts: T }))), (H = H.toLocaleLowerCase()));
         let W = (0, s.JA)('boosts-'.concat(t.id)),
@@ -219,7 +219,7 @@ let T = (0, v.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                               align: 'top',
                               shouldShow: !0,
                               closeOnScroll: !0,
-                              onRequestClose: () => q(S.L.INDIRECT_ACTION),
+                              onRequestClose: () => q(x.L.INDIRECT_ACTION),
                               animation: h.yRy.Animation.TRANSLATE,
                               children: (t) =>
                                   (0, r.jsx)('div', {

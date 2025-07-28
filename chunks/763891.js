@@ -15,8 +15,8 @@ var n = r(255367),
     b = r(38900),
     m = r(709999),
     _ = r(81136),
-    C = r(215023),
-    O = r(388032),
+    O = r(215023),
+    C = r(388032),
     v = r(484920),
     E = r(558513),
     S = r(662128),
@@ -43,14 +43,14 @@ function k(e) {
         V = (0, a.ap)(W),
         [U, z, G] = l.useMemo(() => {
             switch (N) {
-                case C.AW.AVATAR_DECORATIONS:
-                    return [O.intl.string(O.t.dRZYND), V ? x.Z : y.Z, i.Z.AVATAR_DECORATION];
-                case C.AW.PROFILE_EFFECTS:
-                    return [O.intl.string(O.t['1cNjt7']), V ? L.Z : P.Z, i.Z.PROFILE_EFFECT];
-                case C.AW.NAMEPLATES:
-                    return [O.intl.string(O.t.V68Fq6), V ? T.Z : j.Z, i.Z.NAMEPLATE];
-                case C.AW.BUNDLES:
-                    return [O.intl.string(O.t.FYFppq), V ? S.Z : E.Z, i.Z.BUNDLE];
+                case O.AW.AVATAR_DECORATIONS:
+                    return [C.intl.string(C.t.dRZYND), V ? x.Z : y.Z, i.Z.AVATAR_DECORATION];
+                case O.AW.PROFILE_EFFECTS:
+                    return [C.intl.string(C.t['1cNjt7']), V ? L.Z : P.Z, i.Z.PROFILE_EFFECT];
+                case O.AW.NAMEPLATES:
+                    return [C.intl.string(C.t.V68Fq6), V ? T.Z : j.Z, i.Z.NAMEPLATE];
+                case O.AW.BUNDLES:
+                    return [C.intl.string(C.t.FYFppq), V ? S.Z : E.Z, i.Z.BUNDLE];
             }
         }, [N, V]),
         q = (0, f.a)(),

@@ -36,13 +36,13 @@ function f(e) {
             targetColor: g,
             animationDelay: u
         },
-        v = i.useRef(y);
+        C = i.useRef(y);
     return (
         i.useEffect(() => {
-            v.current = y;
+            C.current = y;
         }),
         i.useEffect(() => {
-            let { startColor: e, handleRest: t, endColor: n, targetBorderColor: r, targetColor: i, animationDelay: l } = v.current,
+            let { startColor: e, handleRest: t, endColor: n, targetBorderColor: r, targetColor: i, animationDelay: l } = C.current,
                 { useReducedMotion: o } = d.Z,
                 a = 200 * !o;
             (O({

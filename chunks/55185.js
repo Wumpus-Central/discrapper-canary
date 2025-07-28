@@ -21,8 +21,8 @@ var r,
     _ = n(29953),
     O = n(388032),
     y = n(22275),
-    v = n(354810);
-async function C(e) {
+    C = n(354810);
+async function v(e) {
     await h.hW.updateAsync(
         'status',
         (t) => {
@@ -41,7 +41,7 @@ function j(e) {
             size: 'sm',
             text: O.intl.string(_.default.Poezn5),
             onClick: () => {
-                (t(), C(u.Skl.ONLINE));
+                (t(), v(u.Skl.ONLINE));
             },
             fullWidth: !0
         })
@@ -82,14 +82,14 @@ function E(e) {
             }),
             (0, i.jsx)(u.rsf, {
                 onChange: (e) => {
-                    (d.G6.updateSetting(e), n && C(e ? u.Skl.ONLINE : u.Skl.INVISIBLE));
+                    (d.G6.updateSetting(e), n && v(e ? u.Skl.ONLINE : u.Skl.INVISIBLE));
                 },
                 checked: t
             })
         ]
     });
 }
-function x(e) {
+function S(e) {
     let { children: t, closePopout: n } = e,
         r = (0, l.useRef)(null);
     (0, u.Tbt)(r);
@@ -119,7 +119,7 @@ function x(e) {
                                 }),
                                 (0, i.jsx)('img', {
                                     alt: '',
-                                    src: v.Z,
+                                    src: C.Z,
                                     className: y.controllerImage
                                 }),
                                 (0, i.jsx)(o.X6, {
@@ -136,10 +136,10 @@ function x(e) {
         ]
     });
 }
-function S(e) {
+function x(e) {
     let { closePopout: t } = e,
         n = d.G6.useSetting();
-    return (0, i.jsxs)(x, {
+    return (0, i.jsxs)(S, {
         closePopout: t,
         children: [
             (0, i.jsx)(u.Text, {
@@ -161,7 +161,7 @@ function S(e) {
 }
 function I(e) {
     let { closePopout: t } = e;
-    return (0, i.jsxs)(x, {
+    return (0, i.jsxs)(S, {
         closePopout: t,
         children: [
             (0, i.jsx)(u.Text, {
@@ -177,7 +177,7 @@ function I(e) {
 function P(e) {
     let { closePopout: t } = e,
         n = d.G6.useSetting();
-    return (0, i.jsxs)(x, {
+    return (0, i.jsxs)(S, {
         closePopout: t,
         children: [
             (0, i.jsx)(u.Text, {
@@ -201,7 +201,7 @@ function N(e) {
     let { closePopout: t } = e,
         n = d.G6.useSetting(),
         { showLinkToSettings: r } = (0, g.D)('popout');
-    return (0, i.jsxs)(x, {
+    return (0, i.jsxs)(S, {
         children: [
             (0, i.jsx)(E, {
                 showCurrentGame: n,
@@ -219,7 +219,7 @@ function N(e) {
 }
 function w(e) {
     let { closePopout: t } = e;
-    return (0, i.jsxs)(x, {
+    return (0, i.jsxs)(S, {
         children: [
             (0, i.jsx)(o.X6, {
                 variant: 'heading-sm/semibold',
@@ -240,7 +240,7 @@ function Z(e) {
     let { closePopout: t } = e,
         n = d.G6.useSetting(),
         { showLinkToSettings: r } = (0, g.D)('popout');
-    return (0, i.jsxs)(x, {
+    return (0, i.jsxs)(S, {
         children: [
             (0, i.jsx)(E, {
                 showCurrentGame: n,
@@ -268,7 +268,7 @@ function A(e) {
         o)
     ) {
         case 0:
-            return (0, i.jsx)(S, { closePopout: n });
+            return (0, i.jsx)(x, { closePopout: n });
         case 1:
             return (0, i.jsx)(I, { closePopout: n });
         case 2:

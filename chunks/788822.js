@@ -16,12 +16,12 @@ var n = r(255367),
     m = r(806734);
 let _ = (e) => {
     var t, r, i, _;
-    let C,
-        { category: O, subblock: v, badgeText: E, handleTransition: S } = e;
-    null != v && (C = null == (t = p.Z.getCategoryByStoreListingId(null == v ? void 0 : v.categoryStoreListingId)) ? void 0 : t.skuId);
-    let y = null != (r = null != C ? C : null == O ? void 0 : O.skuId) ? r : '',
+    let O,
+        { category: C, subblock: v, badgeText: E, handleTransition: S } = e;
+    null != v && (O = null == (t = p.Z.getCategoryByStoreListingId(null == v ? void 0 : v.categoryStoreListingId)) ? void 0 : t.skuId);
+    let y = null != (r = null != O ? O : null == C ? void 0 : C.skuId) ? r : '',
         { handleCardVisibilityChange: x } = (0, f.E)(y, 'home', 'marketing featured block'),
-        { featuredBlockBanner: j } = (0, g.YG)(O, v),
+        { featuredBlockBanner: j } = (0, g.YG)(C, v),
         T = l.useRef(null),
         P = y === a.T.NAMEPLATES_V3,
         L = P ? 'NAMEPLATES VOL.3' : null,

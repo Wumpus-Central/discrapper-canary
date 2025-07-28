@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var o = n(793030),
     i = n(442837),
-    s = n(481060),
-    l = n(834129),
+    l = n(481060),
+    s = n(834129),
     a = n(271383),
     c = n(709054),
     u = n(884902),
@@ -32,10 +32,10 @@ function f(e) {
             [t]
         ),
         v = (0, u.X7)(t.guildId, t.userId, x);
-    return (0, r.jsx)(l.Z, {
+    return (0, r.jsx)(s.Z, {
         className: m.systemMessageContainer,
         contentClassName: m.systemMessageContent,
-        iconNode: (0, r.jsx)(s.$Eu, {
+        iconNode: (0, r.jsx)(l.$Eu, {
             className: m.icon,
             color: 'currentColor',
             size: 'sm'
@@ -48,7 +48,7 @@ function f(e) {
         children: (0, r.jsxs)('span', {
             className: m.boostMessage,
             children: [
-                (0, r.jsx)(s.PUh, {
+                (0, r.jsx)(l.PUh, {
                     className: m.boostMessageUser,
                     variant: 'text-md/semibold',
                     name: f,

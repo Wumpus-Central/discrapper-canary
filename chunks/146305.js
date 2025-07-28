@@ -32,8 +32,8 @@ var r = n(255367),
     Z = n(84658),
     D = n(142961),
     A = n(730910),
-    L = n(475013),
-    k = n(213956),
+    k = n(475013),
+    L = n(213956),
     M = n(702478),
     G = n(60986),
     U = n(247031),
@@ -197,12 +197,12 @@ let eb = {
                     section: em.pNK.ROLES,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_ROLES,
                     label: ep.intl.string(ep.t.LPJmLy),
-                    element: L.Z,
+                    element: k.Z,
                     type: o.bT.MINIMAL,
                     ariaLabel: ep.intl.string(ep.t.KXcECw),
                     notice: {
                         stores: [S.Z],
-                        element: L._
+                        element: k._
                     },
                     predicate: () => t.canManageRoles,
                     icon: t.pinPermissionMigrationAvailable ? (0, r.jsx)('div', { className: ef.redDot }) : void 0
@@ -287,7 +287,7 @@ let eb = {
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_SAFETY,
                     label: ep.intl.string(ep.t['suhY+f']),
                     ariaLabel: ep.intl.string(ep.t['suhY+f']),
-                    element: k.Z,
+                    element: L.Z,
                     newIndicatorDismissibleContentTypes: [l.z.COMMUNITY_GUILD_SETTINGS_SAFETY],
                     predicate: () => t.canManageGuild && t.guild.features.has(em.oNc.COMMUNITY)
                 };

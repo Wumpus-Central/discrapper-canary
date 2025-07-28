@@ -1,8 +1,8 @@
 n.d(t, {
     $h: () => x,
-    cO: () => I,
-    jG: () => E,
-    yI: () => S
+    cO: () => P,
+    jG: () => S,
+    yI: () => I
 });
 var r = n(255367);
 n(73800);
@@ -23,16 +23,17 @@ var i = n(120356),
     _ = n(981631),
     O = n(921944),
     y = n(93841),
-    v = n(388032),
-    C = n(423151),
-    j = n(928381);
-function E(e) {
+    C = n(388032),
+    v = n(423151),
+    j = n(928381),
+    E = n(225375);
+function S(e) {
     let { guildId: t, powerup: n, markAsDismissed: i } = e;
-    return (0, r.jsx)(P, {
-        asset: (0, r.jsx)(m.g, { className: C.image }),
-        header: v.intl.formatToPlainString(y.default['Zg/m9P'], { perkName: n.title }),
-        content: v.intl.formatToPlainString(y.default['1EGXSE'], { perkName: n.title }),
-        buttonCTA: v.intl.string(v.t.RzWDqa),
+    return (0, r.jsx)(N, {
+        asset: (0, r.jsx)(m.g, { className: v.image }),
+        header: C.intl.formatToPlainString(y.default['Zg/m9P'], { perkName: n.title }),
+        content: C.intl.formatToPlainString(y.default['1EGXSE'], { perkName: n.title }),
+        buttonCTA: C.intl.string(C.t.RzWDqa),
         onClick: () => (0, g.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_LEVEL_UP, n.skuId),
         markAsDismissed: i
     });
@@ -40,15 +41,15 @@ function E(e) {
 function x(e) {
     let { guildId: t, markAsDismissed: n } = e,
         i = (0, f.Z)(t);
-    return (0, r.jsx)(P, {
+    return (0, r.jsx)(N, {
         asset: (0, r.jsx)('img', {
             alt: '',
             src: j.Z,
-            className: l()(C.image, C.newPerksImage)
+            className: l()(v.image, v.newPerksImage)
         }),
-        header: v.intl.string(y.default.QpQBPT),
-        content: i ? v.intl.string(y.default['6hn0xM']) : v.intl.string(y.default.RDuvXl),
-        buttonCTA: v.intl.string(v.t.RzWDqa),
+        header: C.intl.string(y.default.QpQBPT),
+        content: i ? C.intl.string(y.default['6hn0xM']) : C.intl.string(y.default.RDuvXl),
+        buttonCTA: C.intl.string(C.t.RzWDqa),
         onClick: () =>
             i
                 ? (0, g.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_NEW_PERKS)
@@ -60,7 +61,7 @@ function x(e) {
         caretPosition: i ? h.DF.LEFT_TOP : h.DF.TOP_CENTER
     });
 }
-function S(e) {
+function I(e) {
     let { guildId: t, powerups: n, markAsDismissed: i } = e,
         l = (0, s.e7)([p.Z], () => {
             var e;
@@ -70,44 +71,48 @@ function S(e) {
     if (0 === n.length) return;
     let a =
             n.length >= 3
-                ? v.intl.formatToPlainString(y.default['6Sv+3N'], {
+                ? C.intl.formatToPlainString(y.default['6Sv+3N'], {
                       perk: n[0].title,
                       perk2: n[1].title,
                       perk3: n[2].title
                   })
                 : 2 === n.length
-                  ? v.intl.formatToPlainString(y.default.wcQOqK, { perks: ''.concat(n[0].title, ' & ').concat(n[1].title) })
-                  : v.intl.formatToPlainString(y.default.ZF8NT0, { perk: n[0].title }),
+                  ? C.intl.formatToPlainString(y.default.wcQOqK, { perks: ''.concat(n[0].title, ' & ').concat(n[1].title) })
+                  : C.intl.formatToPlainString(y.default.ZF8NT0, { perk: n[0].title }),
         c = 1 === n.length;
-    return (0, r.jsx)(P, {
+    return (0, r.jsx)(N, {
         asset:
             1 === n.length
                 ? (0, r.jsx)(m.m, {
-                      className: C.image,
+                      className: v.image,
                       powerup: n[0]
                   })
-                : (0, r.jsx)(m.g, { className: C.image }),
-        header: v.intl.formatToPlainString(y.default.LmpChI, { guildName: l }),
+                : (0, r.jsx)(m.g, { className: v.image }),
+        header: C.intl.formatToPlainString(y.default.LmpChI, { guildName: l }),
         content: a,
-        buttonCTA: c ? v.intl.string(y.default.gSxlHR) : v.intl.string(v.t.RzWDqa),
+        buttonCTA: c ? C.intl.string(y.default.gSxlHR) : C.intl.string(C.t.RzWDqa),
         onClick: (e) => (c ? o(e) : (0, g.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS)),
         markAsDismissed: i
     });
 }
-function I(e) {
+function P(e) {
     let { guildId: t, powerup: n, markAsDismissed: i } = e;
     return n.skuId === o.A$
-        ? (0, r.jsx)(P, {
-              header: v.intl.string(y.default.Ygpx4e),
-              content: v.intl.string(y.default.mmNkUF),
-              asset: (0, r.jsx)(m.g, { className: C.image }),
+        ? (0, r.jsx)(N, {
+              header: C.intl.string(y.default.Ygpx4e),
+              content: C.intl.string(y.default.mmNkUF),
+              asset: (0, r.jsx)('img', {
+                  alt: '',
+                  src: E.Z,
+                  className: v.image
+              }),
               onClick: () => (0, g.Z)(t, u.Z.GUILD_POWERUPS_COACHMARK_NEW_PERK_AVAILABLE, n.skuId),
               markAsDismissed: i,
-              buttonCTA: v.intl.string(v.t.RzWDqa)
+              buttonCTA: C.intl.string(C.t.RzWDqa)
           })
         : null;
 }
-function P(e) {
+function N(e) {
     var { asset: t, header: n, content: i, caretPosition: o, markAsDismissed: s } = e,
         u = (function (e, t) {
             if (null == e) return {};
@@ -129,7 +134,7 @@ function P(e) {
             return i;
         })(e, ['asset', 'header', 'content', 'caretPosition', 'markAsDismissed']);
     let d = null != o ? o : h.DF.LEFT_TOP,
-        p = d === h.DF.TOP_CENTER || d === h.DF.LEFT_TOP ? C[d] : '';
+        p = d === h.DF.TOP_CENTER || d === h.DF.LEFT_TOP ? v[d] : '';
     return (0, r.jsx)(
         h.ZP,
         (function (e) {
@@ -159,11 +164,11 @@ function P(e) {
         })(
             {
                 asset: (0, r.jsxs)('div', {
-                    className: C.imageContainer,
+                    className: v.imageContainer,
                     children: [
                         t,
                         (0, r.jsx)(c.olH, {
-                            className: C.close,
+                            className: v.close,
                             onClick: () => (null == s ? void 0 : s(O.L.USER_DISMISS))
                         })
                     ]
@@ -177,9 +182,9 @@ function P(e) {
                     color: 'text-muted',
                     children: i
                 }),
-                className: l()(C.container, p),
-                headerClassName: C.header,
-                contentClassName: C.header,
+                className: l()(v.container, p),
+                headerClassName: v.header,
+                contentClassName: v.header,
                 caretPosition: d,
                 markAsDismissed: s
             },

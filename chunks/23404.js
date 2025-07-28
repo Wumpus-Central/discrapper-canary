@@ -129,12 +129,12 @@ function Z(e) {
                     questId: O.id
                 }));
         }, [O.id, E]),
-        B = (0, C.hf)({
+        V = (0, C.hf)({
             quest: O,
             questContent: m.jn.ACTIVITY_PANEL,
             sourceQuestContent: m.jn.ACTIVITY_PANEL
         }),
-        V = (0, f.tP)(O),
+        B = (0, f.tP)(O),
         H = (null == (t = O.userStatus) ? void 0 : t.enrolledAt) != null,
         F = (null == (n = O.userStatus) ? void 0 : n.completedAt) != null,
         z = (null == (l = O.userStatus) ? void 0 : l.claimedAt) != null,
@@ -147,7 +147,7 @@ function Z(e) {
             questContent: m.jn.ACTIVITY_PANEL,
             sourceQuestContent: m.jn.ACTIVITY_PANEL
         });
-    return W || V || z || Z
+    return W || B || z || Z
         ? null
         : (0, r.jsxs)('div', {
               ref: (e) => {
@@ -268,7 +268,7 @@ function Z(e) {
                                   className: j.cta,
                                   color: s.zx.Colors.BRAND,
                                   fullWidth: !0,
-                                  onClick: B,
+                                  onClick: V,
                                   size: s.zx.Sizes.SMALL,
                                   children: P.intl.string(P.t.cfY4PD)
                               })

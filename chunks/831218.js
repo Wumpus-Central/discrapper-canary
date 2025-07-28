@@ -17,12 +17,12 @@ var r,
     _ = n(453542),
     O = n(702321),
     y = n(46148),
-    v = n(82295),
-    C = n(313201),
+    C = n(82295),
+    v = n(313201),
     j = n(860144),
     E = n(214852),
-    x = n(518311),
-    S = n(355298),
+    S = n(518311),
+    x = n(355298),
     I = n(869404),
     P = n(333984),
     N = n(984802),
@@ -416,7 +416,7 @@ class G extends (r = l.Component) {
                     { showDMHeader: n } = this.props;
                 return 0 !== t && n
                     ? (0, i.jsxs)(
-                          v.Z,
+                          C.Z,
                           {
                               className: D.privateChannelsHeaderContainer,
                               children: [
@@ -424,7 +424,7 @@ class G extends (r = l.Component) {
                                       className: D.headerText,
                                       children: R.intl.string(R.t.YUU0RE)
                                   }),
-                                  (0, i.jsx)(x.Z, {
+                                  (0, i.jsx)(S.Z, {
                                       location: 'PrivateChannelsList-CreateDMButton',
                                       tooltip: R.intl.string(R.t['6Urw1t']),
                                       tooltipPosition: 'top',
@@ -463,17 +463,17 @@ let B = (e) => {
         m = w.Z.getMutablePrivateChannels(),
         _ = (0, I.k1)(m),
         O = (0, u.Wu)(
-            [T.Z, S.Z, P.Z],
+            [T.Z, x.Z, P.Z],
             () => {
                 let e = T.Z.getPrivateChannelIds();
-                return (0, I.tU)(e, [S.Z, P.Z]);
+                return (0, I.tU)(e, [x.Z, P.Z]);
             },
             []
         );
     (0, E.z)(j.R);
     let { analyticsLocations: y } = (0, b.ZP)(g.Z.CONTACTS_LIST),
-        v = (0, N.Ll)(),
-        { keyboardModeEnabled: x, version: Z } = (0, u.cj)([f.Z, w.Z], () => ({
+        C = (0, N.Ll)(),
+        { keyboardModeEnabled: S, version: Z } = (0, u.cj)([f.Z, w.Z], () => ({
             keyboardModeEnabled: f.Z.keyboardModeEnabled,
             version: null != n ? ''.concat(n, ':').concat(w.Z.getPrivateChannelsVersion()) : w.Z.getPrivateChannelsVersion()
         })),
@@ -519,10 +519,10 @@ let B = (e) => {
                 }),
             [R]
         ),
-        B = (0, C.Dt)(),
+        B = (0, v.Dt)(),
         V = (0, c.ZP)({
             id: 'private-channels-'.concat(B),
-            isEnabled: x,
+            isEnabled: S,
             scrollToStart: L,
             scrollToEnd: U,
             defaultFocused: (p + +!!a).toString(),
@@ -539,7 +539,7 @@ let B = (e) => {
                     channels: _,
                     privateChannelIds: O,
                     listRef: R,
-                    theme: null != v ? v : r,
+                    theme: null != C ? C : r,
                     version: Z
                 })
             )

@@ -241,8 +241,8 @@ function ei(e) {
     let t = new Set(),
         n = [];
     e.forEach((e) => {
-        let t = e.getData('channel');
-        null != t && n.push(t.id);
+        let t = e.getData('channels');
+        null != t && t.forEach((e) => n.push(e.id));
     });
     let r = (e) => {
             null == e || t.has(e.id) || (i.push(e), t.add(e.id));

@@ -9,8 +9,8 @@
     oE: () => p,
     pB: () => h,
     y: () => O,
-    yS: () => v,
-    yr: () => C
+    yS: () => C,
+    yr: () => v
 }),
     n(781311));
 var r = n(97519),
@@ -158,8 +158,8 @@ let d = (0, r.U)((e) => ({
     _ = () => d.getState().dmsAllowed,
     O = () => d.getState().nickname,
     y = () => d.getState().showActivity,
-    v = () => d.getState().mutedServer,
-    C = () => {
+    C = () => d.getState().mutedServer,
+    v = () => {
         var e, t;
         let { nickname: n } = d();
         if (null != n && '' !== n.trim()) return n;

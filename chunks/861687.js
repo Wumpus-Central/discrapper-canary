@@ -596,7 +596,8 @@ class ev extends d.Z {
         let l = x.Z.getMediaEngine(),
             c = w.Z.getPersistentCodesEnabled(),
             u = null != (s = D.default.getStaticAuthSessionId()) ? s : void 0,
-            d = l.connect(
+            d = (0, _.zO)(),
+            h = l.connect(
                 this.context,
                 this.userId,
                 ec(
@@ -612,21 +613,22 @@ class ev extends d.Z {
                     },
                     this.getExtraConnectionOptions()
                 )
-            );
-        (d.setUseElectronVideo(l.supports(es.AN.ELECTRON_VIDEO)), x.Z.supports(es.AN.IMAGE_QUALITY_MEASUREMENT) && d.setVideoQualityMeasurement('imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec'));
-        let h = ['unk'];
-        (this.context === es.Yn.STREAM && (h.push('nvRelaxRc=250'), h.push('nvNewPresets')),
-            d.setVideoEncoderExperiments(h.join(',')),
-            d.on(f.Sh.Speaking, (e, t, n) => {
+            ),
+            g = (0, _.zO)() - d;
+        (h.setUseElectronVideo(l.supports(es.AN.ELECTRON_VIDEO)), x.Z.supports(es.AN.IMAGE_QUALITY_MEASUREMENT) && h.setVideoQualityMeasurement('imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec'));
+        let b = ['unk'];
+        (this.context === es.Yn.STREAM && (b.push('nvRelaxRc=250'), b.push('nvNewPresets')),
+            h.setVideoEncoderExperiments(b.join(',')),
+            h.on(f.Sh.Speaking, (e, t, n) => {
                 (this.userId === e && this.sendSpeaking(t, n), this.emit(z.z.Speaking, eO(e), t));
             }),
-            d.on(f.Sh.ToggleMuteFromNative, () => {
+            h.on(f.Sh.ToggleMuteFromNative, () => {
                 this.context === es.Yn.DEFAULT && m.Z.toggleSelfMute({ playSoundEffect: !1 });
             }),
-            d.on(f.Sh.NativeMuteChanged, (e) => {
+            h.on(f.Sh.NativeMuteChanged, (e) => {
                 this.context === es.Yn.DEFAULT && E.Z.nativeMuteChanged(e);
             }),
-            d.on(f.Sh.Video, (e, t, n, r, i, a) => {
+            h.on(f.Sh.Video, (e, t, n, r, i, a) => {
                 (this._handleVideoStreamId({
                     userId: eO(e),
                     streamId: t,
@@ -642,16 +644,16 @@ class ev extends d.Z {
                                 100 === t.quality && this.emit(z.z.VideoSourceQualityChanged, this.guildId, this.channelId, eO(e), t.maxResolution, t.maxFrameRate, this.context);
                             })));
             }),
-            d.on(f.Sh.FirstFrame, (e, t, n) => {
+            h.on(f.Sh.FirstFrame, (e, t, n) => {
                 (null != this._localMediaSinkWantsManager && (this._localMediaSinkWantsManager.setFirstFrameReceived(t), this.emit(z.z.Video, this.guildId, this.channelId, eO(e), n, this.streamServerId)), null != this._goLiveQualityManager && (this._goLiveQualityManager.setFirstFrameReceived(t), this.emit(z.z.Video, this.guildId, this.channelId, eO(e), n, this.streamServerId)));
             }),
-            d.on(f.Sh.Silence, (e) => {
+            h.on(f.Sh.Silence, (e) => {
                 this._inputDetected = this._inputDetected || !e;
             }),
-            d.on(f.Sh.Connected, (r, i) => {
+            h.on(f.Sh.Connected, (r, i) => {
                 if ((this.logger.info('RTC connected to media server: '.concat(t, ':').concat(n)), e !== this._socket)) return void this.logger.warn('Socket mismatch, disconnecting');
                 switch (
-                    ((this._voiceQuality = new ei.Z(d)),
+                    ((this._voiceQuality = new ei.Z(h)),
                     this._voiceQuality.start(),
                     this._voiceQuality.on(ei.B.InputDeviceSampleRateChanged, (e) => {
                         p.Z.dispatch({
@@ -661,20 +663,20 @@ class ev extends d.Z {
                     }),
                     (this._voiceQualityPeriodicStatsSequenceId = 0),
                     (this._voiceQualityPeriodicStatsInterval = setInterval(this._handleVoiceQualityPeriodicsStats, 300000)),
-                    (this._systemResponsiveness = new ee.Z(d)),
+                    (this._systemResponsiveness = new ee.Z(h)),
                     this._systemResponsiveness.start(),
                     (this._systemResources = new $.Z()),
                     this._systemResources.setLastBattery(),
                     (this._noiseCancellationError = 0),
-                    (this._voiceDuration = new er.Z(this.userId, d)),
-                    this._voiceDuration.start(d.getSelfMute(), d.getVoiceFilterId()),
+                    (this._voiceDuration = new er.Z(this.userId, h)),
+                    this._voiceDuration.start(h.getSelfMute(), h.getVoiceFilterId()),
                     (this.protocol = r),
                     r)
                 ) {
                     case 'udp':
                         (this.logger.info('Sending UDP info to RTC server.', i, this._selectedExperiments),
                             e.once(X.V.Encryption, (e, t) => {
-                                d === this._connection && (d.setEncryption(e, t), (this._encryptionMode = e));
+                                h === this._connection && (h.setEncryption(e, t), (this._encryptionMode = e));
                             }),
                             e.selectProtocol(r, this.getRTCConnectionId(), i, this._selectedExperiments));
                         break;
@@ -687,14 +689,14 @@ class ev extends d.Z {
                 }
                 this._backoff.succeed();
             }),
-            d.on(f.Sh.VideoEncoderFallback, (t) => {
+            h.on(f.Sh.VideoEncoderFallback, (t) => {
                 let n = t
                     .filter((e) => 'video' === e.type)
                     .map((e) => e.name)
                     .join(',');
                 (this.logger.info('The originally selected video encoder is not working, fallback to the other available encoders: '.concat(n)), e.updateSession({ codecs: t }));
             }),
-            d.on(f.Sh.Error, (t) => {
+            h.on(f.Sh.Error, (t) => {
                 if (e !== this._socket) return;
                 let n = j.Z.shouldIncludePreferredRegion() ? j.Z.getPreferredRegion() : null;
                 (this.logger.error('Error occurred while connecting to RTC server: '.concat(t)),
@@ -710,7 +712,7 @@ class ev extends d.Z {
                         })
                     ));
             }),
-            d.on(f.Sh.ConnectionStateChange, (t) => {
+            h.on(f.Sh.ConnectionStateChange, (t) => {
                 if ((this.logger.info('RTC media connection state change: '.concat(this.state, ' => ').concat(t)), e !== this._socket)) return;
                 let n = this.state;
                 switch (t) {
@@ -733,14 +735,15 @@ class ev extends d.Z {
                         this.setState(eo.hes.DTLS_CONNECTING);
                 }
                 if ((n === eo.hes.RTC_CONNECTING && this.state === eo.hes.RTC_DISCONNECTED ? this.reconnect() : this.state === eo.hes.NO_ROUTE && (0 === this._backoff.fails && this._handleNoRoute(), this._backoff.fail(this.reconnect)), this.state === eo.hes.RTC_CONNECTED)) {
-                    var r, i;
+                    var r, i, a, o, s, l, c, u, d, f;
                     let e = j.Z.shouldIncludePreferredRegion() ? j.Z.getPreferredRegion() : null;
                     if (this._connecting) {
-                        let t = x.Z.getSettings();
-                        G.default.track(
+                        let t = x.Z.getSettings(),
+                            n = this._getAnalyticsProperties();
+                        (G.default.track(
                             eo.rMx.VOICE_CONNECTION_SUCCESS,
                             ec(
-                                ed(ec({}, this._getAnalyticsProperties()), {
+                                ed(ec({}, n), {
                                     hostname: this.hostname,
                                     port: this.port,
                                     protocol: this.protocol,
@@ -755,29 +758,38 @@ class ev extends d.Z {
                                 }),
                                 this.stateHistory.getVoiceConnectionSuccessStats()
                             )
-                        );
+                        ),
+                            G.default.track(eo.rMx.VOICE_CONNECTION_TTC_COLLECTED, {
+                                rtc_connection_id: n.rtc_connection_id,
+                                time_1_creation_to_connect: this._connectStartTime - this._createdTime,
+                                time_2_media_engine_connect: g,
+                                time_3_media_engine_create_native_connection: null == (a = h.transportInfo) ? void 0 : a.createConnectionTime,
+                                time_4_media_engine_connect_to_socket: null == (o = h.transportInfo) ? void 0 : o.connectTime,
+                                time_5_scheduling_connected_callback: (null == (l = this._connection) || null == (s = l.transportInfo) ? void 0 : s.connectCallbackScheduledMs) == null ? -1 : performance.now() - (null == (u = this._connection) || null == (c = u.transportInfo) ? void 0 : c.connectCallbackScheduledMs),
+                                time_6_state_connected_to_end_measure: (null == (d = this._connection) ? void 0 : d.onConnectStarted) == null ? -1 : performance.now() - (null == (f = this._connection) ? void 0 : f.onConnectStarted)
+                            }));
                     }
-                    (null == (r = this._localMediaSinkWantsManager) || r.setConnection(d), null == (i = this._goLiveQualityManager) || i.update(), (this._connectCompletedTime = (0, _.zO)()), (this._connected = !0), (this._connecting = !1), (this._encountered_socket_failure = !1));
+                    (null == (r = this._localMediaSinkWantsManager) || r.setConnection(h), null == (i = this._goLiveQualityManager) || i.update(), (this._connectCompletedTime = (0, _.zO)()), (this._connected = !0), (this._connecting = !1), (this._encountered_socket_failure = !1));
                 } else n === eo.hes.RTC_CONNECTED && this.stateHistory.reset(this.state);
             }),
-            d.on(f.Sh.SecureFramesUpdate, (e) => {
+            h.on(f.Sh.SecureFramesUpdate, (e) => {
                 ((this._secureFramesState = e), this.emit(z.z.SecureFramesUpdate));
             }),
-            d.on(f.Sh.Ping, this._handlePing.bind(this)),
-            d.on(f.Sh.PingTimeout, this._handlePingTimeout.bind(this)),
-            d.on(f.Sh.OutboundLossRate, this._handleOutboundLossRate.bind(this)),
-            d.on(f.Sh.SoundshareTrace, this._handleSoundshareTrace.bind(this)),
-            d.on(f.Sh.LocalVideoDisabled, this._handleLocalVideoDisabled.bind(this)),
-            d.on(f.Sh.Stats, K.Z.create()),
-            d.on(f.Sh.RemoteStreamsReady, this._handleRemoteStreamsReady.bind(this)),
-            d.on(f.Sh.UsersMerged, this.handleUsersMerged.bind(this)),
-            d.on(f.Sh.NoiseCancellationError, (e) => {
+            h.on(f.Sh.Ping, this._handlePing.bind(this)),
+            h.on(f.Sh.PingTimeout, this._handlePingTimeout.bind(this)),
+            h.on(f.Sh.OutboundLossRate, this._handleOutboundLossRate.bind(this)),
+            h.on(f.Sh.SoundshareTrace, this._handleSoundshareTrace.bind(this)),
+            h.on(f.Sh.LocalVideoDisabled, this._handleLocalVideoDisabled.bind(this)),
+            h.on(f.Sh.Stats, K.Z.create()),
+            h.on(f.Sh.RemoteStreamsReady, this._handleRemoteStreamsReady.bind(this)),
+            h.on(f.Sh.UsersMerged, this.handleUsersMerged.bind(this)),
+            h.on(f.Sh.NoiseCancellationError, (e) => {
                 this._noiseCancellationError = e;
             }),
-            d.on(f.Sh.MLSFailure, this._handleMLSFailure.bind(this)),
-            d.setRemoteVideoSinkWants(this._remoteVideoSinkWants),
-            (this._connection = d),
-            (this._mediaEngineConnectionId = d.mediaEngineConnectionId));
+            h.on(f.Sh.MLSFailure, this._handleMLSFailure.bind(this)),
+            h.setRemoteVideoSinkWants(this._remoteVideoSinkWants),
+            (this._connection = h),
+            (this._mediaEngineConnectionId = h.mediaEngineConnectionId));
     }
     _handleSpeaking(e, t, n, r) {
         let i = this._connection;

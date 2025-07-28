@@ -13,13 +13,13 @@ var r = n(755721),
     p = n(562831),
     m = n(981631);
 function b(e) {
-    let { user: t, currentUser: n, guildId: b, channelId: _, displayProfile: x, relationshipType: h, onClose: y } = e,
+    let { user: t, currentUser: n, guildId: b, channelId: x, displayProfile: _, relationshipType: h, onClose: y } = e,
         { newestAnalyticsLocation: g } = (0, c.ZP)(),
         j = (0, l.Z)({
             user: t,
             guildId: b,
-            channelId: _,
-            displayProfile: x,
+            channelId: x,
+            displayProfile: _,
             onClose: y
         }),
         { gameFriends: I, hasOutgoingPendingGameFriends: v, hasIncomingPendingGameFriends: O } = (0, p.H)({ userId: t.id }),

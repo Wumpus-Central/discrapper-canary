@@ -54,8 +54,8 @@ function p(e, t) {
 }
 function f(e) {
     var t,
-        { id: n, className: i, innerClassName: f, renderIcon: g, text: m, selected: b, trailing: _, background: O, showUnread: y = !1, ref: v } = e,
-        C = (function (e, t) {
+        { id: n, className: i, innerClassName: f, renderIcon: g, text: m, selected: b, trailing: _, background: O, showUnread: y = !1, ref: C } = e,
+        v = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -77,10 +77,10 @@ function f(e) {
     let j = (0, o.JA)(n),
         E = null != (t = (0, a.qg)(m)) ? t : '';
     return (0, r.jsx)('li', {
-        ref: v,
+        ref: C,
         children: (0, r.jsxs)(
             s.kL8,
-            p(h({}, C), {
+            p(h({}, v), {
                 buttonProps: p(h({}, j), {
                     id: n,
                     role: 'button'
@@ -95,8 +95,8 @@ function f(e) {
                     }
                 },
                 onContextMenu:
-                    null != C.onContextMenu
-                        ? C.onContextMenu
+                    null != v.onContextMenu
+                        ? v.onContextMenu
                         : (e) => {
                               e.stopPropagation();
                           },

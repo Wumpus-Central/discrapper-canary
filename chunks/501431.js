@@ -1,6 +1,6 @@
 (r.d(t, {
     A: () => E,
-    S: () => C
+    S: () => O
 }),
     r(388685),
     r(781311),
@@ -91,7 +91,7 @@ let g = {
         let { colorFilters: t, themeFilters: r, searchQuery: n, itemTypeFilters: l } = e;
         return t.size > 0 || r.size > 0 || '' !== n.trim() ? b : l.size > 0 ? h : g;
     },
-    C = (0, l.U)(
+    O = (0, l.U)(
         (0, i.XR)((e, t) =>
             p(d({}, m), {
                 hasDefaultFilters: () => !t().hasFilters() && t().sort.sortType === g.sortType && t().sort.sortDirection === g.sortDirection,
@@ -206,7 +206,7 @@ let g = {
             })
         )
     ),
-    O = (e) => {
+    C = (e) => {
         let { itemTypeFilters: t, colorFilters: r, themeFilters: n, orbEligible: l, sort: i, searchQuery: o, queryPageSize: a, queryPageOffset: s } = e;
         return {
             item_types: Array.from(t),
@@ -251,14 +251,14 @@ let g = {
                 };
                 l && 0 !== n.limit && i();
             };
-            n(O(C.getState()));
-            let i = C.subscribe(O, n, { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }),
-                o = C.subscribe(
+            n(C(O.getState()));
+            let i = O.subscribe(C, n, { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }),
+                o = O.subscribe(
                     (e) => e.hasFilters(),
                     (e, t) => {
                         if (!e && t) {
-                            let e = C.getState();
-                            e.userHasSelectedSort || C.setState({ sort: _(e) });
+                            let e = O.getState();
+                            e.userHasSelectedSort || O.setState({ sort: _(e) });
                         }
                     }
                 );

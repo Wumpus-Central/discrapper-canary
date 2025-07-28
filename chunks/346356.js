@@ -56,7 +56,7 @@ let I = () => {
             w = i.useCallback(() => {
                 x(j.L.USER_DISMISS);
             }, [x]),
-            T = i.useCallback(() => {
+            Z = i.useCallback(() => {
                 (x(j.L.TAKE_ACTION),
                     (0, b.Y)({
                         pageType: v.ZY5.GUILD_LIST,
@@ -73,7 +73,7 @@ let I = () => {
                 onCtaClick: N,
                 onClose: w,
                 questId: S.V6,
-                onDiscoveryButtonClick: T
+                onDiscoveryButtonClick: Z
             }
         );
     },

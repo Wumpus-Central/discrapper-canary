@@ -29,8 +29,8 @@ var r = n(255367),
     P = n(15682),
     k = n(189472),
     E = n(749534),
-    M = n(157759),
-    w = n(521332),
+    w = n(157759),
+    M = n(521332),
     A = n(905434),
     R = n(196627),
     D = n(289809),
@@ -39,8 +39,8 @@ var r = n(255367),
     z = n(375790),
     U = n(981631),
     G = n(388032),
-    W = n(130883),
-    F = n(88309);
+    F = n(130883),
+    W = n(88309);
 function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -156,7 +156,7 @@ let K = (e) => {
             }
         }, [er]));
     let eO = (e) => {
-            e === U.evJ.INVALID_FORM_BODY ? eb(G.intl.string(G.t.VjAAuL)) : ec ? eb(G.intl.string(W.default.psKFdH)) : eb(G.intl.string(G.t.h6D8V1));
+            e === U.evJ.INVALID_FORM_BODY ? eb(G.intl.string(G.t.VjAAuL)) : ec ? eb(G.intl.string(F.default.psKFdH)) : eb(G.intl.string(G.t.h6D8V1));
         },
         eT = () => {
             let t = ['', e.successNodeId];
@@ -178,12 +178,12 @@ let K = (e) => {
     let eZ = (0, s.fW)(K),
         eN = null != q(t, 'ignore_users') && ('message' === n.name || 'first_dm' === n.name || 'user' === n.name);
     return (0, r.jsxs)('div', {
-        className: F.container,
+        className: W.container,
         children: [
             (0, r.jsxs)(o.xBx, {
                 separator: !1,
                 direction: l.Z.Direction.VERTICAL,
-                className: F.header,
+                className: W.header,
                 children: [
                     (0, r.jsx)(R.Z, { element: q(t, 'success') }),
                     (0, r.jsx)(O.Z, {
@@ -194,7 +194,7 @@ let K = (e) => {
                 ]
             }),
             (0, r.jsxs)(o.hzk, {
-                className: F.body,
+                className: W.body,
                 children: [
                     null != ea && (0, r.jsx)(B.Z, { element: ea }),
                     null != es && (0, r.jsx)(D.Z, { element: es }),
@@ -257,7 +257,7 @@ let K = (e) => {
                                     }),
                                 null != q(t, 'deauthorize_app') &&
                                     'application' === n.name &&
-                                    (0, r.jsx)(M.Z, {
+                                    (0, r.jsx)(w.Z, {
                                         application: n.record,
                                         reportId: et
                                     })
@@ -266,7 +266,7 @@ let K = (e) => {
                     null != q(t, 'settings_upsells') &&
                         ('message' === n.name || 'report_to_mod_message' === n.name) &&
                         null != eZ &&
-                        (0, r.jsx)(w.Z, {
+                        (0, r.jsx)(M.Z, {
                             settingsUpsells: eZ,
                             channelId: n.record.channel_id,
                             onModalClose: J,
@@ -305,7 +305,7 @@ let K = (e) => {
                             state: eh
                         }),
                     (0, r.jsxs)('div', {
-                        className: F.listContainer,
+                        className: W.listContainer,
                         children: [
                             (0, r.jsx)(_.Z, {
                                 node: t,
@@ -344,7 +344,7 @@ let K = (e) => {
                 canNavigateBack: Y.length > 0
             }),
             (0, r.jsx)(o.olH, {
-                className: F.closeButton,
+                className: W.closeButton,
                 onClick: J
             })
         ]

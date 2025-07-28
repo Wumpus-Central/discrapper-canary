@@ -1,13 +1,13 @@
-t.d(n, { Z: () => a });
+t.d(n, { Z: () => c });
 var l = t(255367);
 t(73800);
 var r = t(481060),
     i = t(493683),
     o = t(475413),
     s = t(388032);
-function a(e) {
-    var { type: n, userId: t, onClose: a } = e,
-        c = (function (e, n) {
+function c(e) {
+    var { type: n, userId: t, onClose: c } = e,
+        a = (function (e, n) {
             if (null == e) return {};
             var t,
                 l,
@@ -60,10 +60,10 @@ function a(e) {
                 text: s.intl.string(s.t.zROXER),
                 tooltipText: s.intl.string(s.t.zROXER),
                 onClick: () => {
-                    (i.Z.openPrivateChannel({ recipientIds: t }), null == a || a());
+                    (i.Z.openPrivateChannel({ recipientIds: t }), null == c || c());
                 }
             },
-            c
+            a
         )
     );
 }

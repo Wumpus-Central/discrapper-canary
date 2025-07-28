@@ -40,16 +40,16 @@ function C(e) {
                     .filter(d.lm),
             [Z]
         ),
-        L = {
+        k = {
             isInEditMode: w,
             setEditingRule: E
         },
-        k = i.useRef(L);
+        L = i.useRef(k);
     (i.useEffect(() => {
-        k.current = L;
+        L.current = k;
     }),
         i.useEffect(() => {
-            let { isInEditMode: e, setEditingRule: t } = k.current;
+            let { isInEditMode: e, setEditingRule: t } = L.current;
             e && t(null);
         }, [P]));
     let M = i.useCallback(

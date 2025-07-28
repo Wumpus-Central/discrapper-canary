@@ -2,8 +2,8 @@
 var r = n(255367),
     o = n(793030),
     i = n(755721),
-    s = n(481060),
-    l = n(434404),
+    l = n(481060),
+    s = n(434404),
     a = n(485386),
     c = n(944888),
     u = n(234368),
@@ -16,7 +16,7 @@ function f(e) {
         x = async () => {
             let e = null;
             for (let n of Object.values(a.Z.getRoles(t))) (0, c.YB)(n) && (e = n.id);
-            (await l.Z.open(t, d.pNK.ROLES), null !== e && (await l.Z.selectRole(e)), f(p.L.SECONDARY));
+            (await s.Z.open(t, d.pNK.ROLES), null !== e && (await s.Z.selectRole(e)), f(p.L.SECONDARY));
         };
     return (0, r.jsxs)('div', {
         className: m.container,
@@ -26,7 +26,7 @@ function f(e) {
                 src: _.assetUrl,
                 className: m.image
             }),
-            (0, r.jsx)(s.olH, {
+            (0, r.jsx)(l.olH, {
                 className: m.close,
                 innerClassName: m.innerClose,
                 onClick: () => {

@@ -17,12 +17,12 @@ var r = n(255367),
     _ = n(594173),
     O = n(786761),
     y = n(493892),
-    v = n(901461),
-    C = n(739566),
+    C = n(901461),
+    v = n(739566),
     j = n(443877),
     E = n(492593),
-    x = n(938353),
-    S = n(25015),
+    S = n(938353),
+    x = n(25015),
     I = n(689674),
     P = n(963550),
     N = n(845080),
@@ -91,14 +91,14 @@ let G = i.memo(function e(t) {
         $ = (0, u.A)((null != (n = s.editedTimestamp) ? n : s.timestamp).valueOf()),
         ee = (0, d.Z)(null == l ? void 0 : l.id),
         { disableReactionCreates: et } = (0, j.Z)(l),
-        { content: en, hasSpoilerEmbeds: er } = (0, S.Z)(s, {
+        { content: en, hasSpoilerEmbeds: er } = (0, x.Z)(s, {
             hideSimpleEmbedContent: X && Q,
             allowList: $,
             allowHeading: $,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
-        ei = (0, C.ZP)(s),
+        ei = (0, v.ZP)(s),
         el = (0, a.e7)([g.Z], () => s.hasFlag(R.iLy.HAS_THREAD) && g.Z.getChannel(b.default.castMessageIdAsChannelId(s.id))),
         eo = s.type === R.uaV.THREAD_STARTER_MESSAGE && K.state === p.Y.LOADED && null != Y,
         ea = !eo && void 0 === i,
@@ -140,7 +140,7 @@ let G = i.memo(function e(t) {
                         guildId: l.guild_id
                     })
                 ),
-                childrenAccessories: (0, r.jsx)(x.BB, {
+                childrenAccessories: (0, r.jsx)(S.BB, {
                     channel: l,
                     message: s,
                     hasSpoilerEmbeds: er,
@@ -170,7 +170,7 @@ let G = i.memo(function e(t) {
                 onClick: V,
                 hasThread: !1 !== H && null != el && s.hasFlag(R.iLy.HAS_THREAD),
                 hasReply: s.type === R.uaV.REPLY,
-                isSystemMessage: (0, v.Z)(s),
+                isSystemMessage: (0, C.Z)(s),
                 messageRef: es,
                 author: ei
             });

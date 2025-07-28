@@ -17,12 +17,12 @@ var r = n(255367),
     _ = n(431),
     O = n(774343),
     y = n(417363),
-    v = n(941128),
-    C = n(780570),
+    C = n(941128),
+    v = n(780570),
     j = n(278464),
     E = n(276952),
-    x = n(682662),
-    S = n(662146),
+    S = n(682662),
+    x = n(662146),
     I = n(674552),
     P = n(981631),
     N = n(474936),
@@ -45,13 +45,13 @@ function R(e) {
     var t, n;
     let { selected: o, user: h, badge: p, link: m, showProgressBadge: b } = e,
         [_, O] = i.useState(!1),
-        [y, v] = i.useState(!1),
-        [C, j] = i.useState(null),
+        [y, C] = i.useState(!1),
+        [v, j] = i.useState(null),
         [N, R] = i.useState(0),
         D = (0, l.Ie)('home'),
         L = (0, d.oq)().activePanel === d.wh.APP_ICON,
         M = () => {
-            (j(null), R(0), clearTimeout(C));
+            (j(null), R(0), clearTimeout(v));
         };
     if (null == h) return null;
     let k = Z.intl.string(Z.t.YUU0RE);
@@ -100,15 +100,15 @@ function R(e) {
                         onMouseEnter: () => O(!0),
                         onMouseLeave: () => O(!1),
                         onClick: () => {
-                            if (!__OVERLAY__ && (null != C && clearTimeout(C), j(setTimeout(M, 500)), R(N + 1), 15 === N)) {
+                            if (!__OVERLAY__ && (null != v && clearTimeout(v), j(setTimeout(M, 500)), R(N + 1), 15 === N)) {
                                 M();
                                 let e = !a.K.get(P.wli);
                                 (a.K.set(P.wli, e),
                                     e && a.K.set(w.O5, !0),
                                     e ? (0, f.GN)('discodo') : (0, f.GN)('user_leave'),
-                                    v(!0),
+                                    C(!0),
                                     setTimeout(() => {
-                                        v(!1);
+                                        C(!1);
                                     }, 1000));
                             }
                         },
@@ -154,14 +154,14 @@ function R(e) {
             inlineSpecs: A,
             tutorialId: 'friends-list',
             position: 'right',
-            children: (0, r.jsxs)(x.H, {
+            children: (0, r.jsxs)(S.H, {
                 children: [
                     (0, r.jsx)(E.Z, {
                         selected: o,
                         hovered: _,
                         className: T.pill
                     }),
-                    (0, r.jsx)(S.Z, {
+                    (0, r.jsx)(x.Z, {
                         color: s.ua7.Colors.PRIMARY,
                         hideOnClick: !0,
                         text: k,
@@ -175,10 +175,10 @@ function R(e) {
 }
 function D() {
     let e = (0, j.n)(),
-        t = (0, o.e7)([v.Z, y.Z], () => {
-            let e = (0, c.E)(v.Z.activeItems, y.Z),
-                { total: t, progress: n } = C.lK(e),
-                r = C.xI(n, t);
+        t = (0, o.e7)([C.Z, y.Z], () => {
+            let e = (0, c.E)(C.Z.activeItems, y.Z),
+                { total: t, progress: n } = v.lK(e),
+                r = v.xI(n, t);
             return r > 0 && r < 100;
         }),
         n = (0, p.If)(),

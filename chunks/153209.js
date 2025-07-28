@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(388685), n(642613));
+(n.d(t, { Z: () => S }), n(388685), n(642613));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -17,13 +17,13 @@ var r = n(255367),
     _ = n(709054),
     O = n(791914),
     y = n(981631),
-    v = n(388032),
-    C = n(929968),
+    C = n(388032),
+    v = n(929968),
     j = n(413813);
 function E(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(c.M0o, {
-        tooltip: v.intl.string(v.t['8k+6QU']),
+        tooltip: C.intl.string(C.t['8k+6QU']),
         color: c.YX$.TERTIARY,
         icon: (0, r.jsx)(c.W6s, {
             size: 'xs',
@@ -33,13 +33,13 @@ function E(e) {
         onClick: t
     });
 }
-function x(e) {
+function S(e) {
     let { setTab: t, badgeState: n, closePopout: l } = e,
-        { initialized: c, items: v, loading: j, loadMore: x } = (0, p.y6)(),
-        S = (0, a.e7)([u.Z], () => u.Z.localItems),
+        { initialized: c, items: C, loading: j, loadMore: S } = (0, p.y6)(),
+        x = (0, a.e7)([u.Z], () => u.Z.localItems),
         I = (0, g.Us)({ location: 'ForYou' }),
-        P = i.useMemo(() => [...[...v, ...S].sort((e, t) => -1 * _.default.compare(e.id, t.id))], [v, S]),
-        N = v.length > 0 ? v[0] : null,
+        P = i.useMemo(() => [...[...C, ...x].sort((e, t) => -1 * _.default.compare(e.id, t.id))], [C, x]),
+        N = C.length > 0 ? C[0] : null,
         w = m.d$.useSetting(),
         Z = i.useMemo(() => {
             if (null != N && 0 >= _.default.compare(N.id, w)) return !1;
@@ -50,7 +50,7 @@ function x(e) {
             return !1;
         }, [N, w, P]);
     return (0, r.jsxs)('div', {
-        className: o()(C.container, { [C.widerInbox]: I }),
+        className: o()(v.container, { [v.widerInbox]: I }),
         children: [
             (0, r.jsx)(O.Z, {
                 tab: s.X.FOR_YOU,
@@ -69,7 +69,7 @@ function x(e) {
                 initialized: c,
                 items: P,
                 loading: j,
-                loadMore: x
+                loadMore: S
             })
         ]
     });

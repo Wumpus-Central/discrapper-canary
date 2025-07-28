@@ -17,23 +17,23 @@ var r = n(255367),
     _ = n(5192),
     O = n(944888),
     y = n(234368),
-    v = n(981631),
-    C = n(921944),
+    C = n(981631),
+    v = n(921944),
     j = n(93841),
     E = n(388032),
-    x = n(951078),
-    S = n(183375),
+    S = n(951078),
+    x = n(183375),
     I = n(445648),
     P = n(128647);
 function N(e) {
     var t;
     let { guild: n, markAsDismissed: l } = e,
         N = (null == n ? void 0 : n.premiumProgressBarEnabled) === !0 ? g.DF.LEFT_TOP : g.DF.TOP_CENTER,
-        w = N === g.DF.TOP_CENTER || N === g.DF.LEFT_TOP ? x[N] : '',
+        w = N === g.DF.TOP_CENTER || N === g.DF.LEFT_TOP ? S[N] : '',
         { analyticsLocations: Z } = (0, d.ZP)(u.Z.GUILD_BOOSTING_ENHANCED_ROLE_COLOR_COACHMARK),
         T = i.useCallback(() => {
             (0, p.u)({
-                analyticsLocation: { section: v.jXE.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK },
+                analyticsLocation: { section: C.jXE.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK },
                 numberOfBoostsToAdd: 1,
                 analyticsLocations: Z,
                 guild: n
@@ -61,11 +61,11 @@ function N(e) {
         });
     return (0, r.jsx)(g.ZP, {
         asset: (0, r.jsxs)('div', {
-            className: x.imageContainer,
+            className: S.imageContainer,
             children: [
                 null != A
                     ? (0, r.jsx)('div', {
-                          className: x.messageContainer,
+                          className: S.messageContainer,
                           children: (0, r.jsx)(f.l, {
                               avatar: (0, r.jsx)(h.Z, {
                                   user: A,
@@ -74,7 +74,7 @@ function N(e) {
                                   'aria-hidden': !0
                               }),
                               usernameStyle: D,
-                              usernameClassName: o()(L, S.animateGradient),
+                              usernameClassName: o()(L, x.animateGradient),
                               username: _.ZP.getName(n.id, null, A),
                               asset: (0, r.jsx)('img', {
                                   alt: '',
@@ -85,12 +85,12 @@ function N(e) {
                     : (0, r.jsx)('img', {
                           alt: '',
                           src: P.Z,
-                          className: x.image
+                          className: S.image
                       }),
                 (0, r.jsx)(c.olH, {
-                    className: x.close,
-                    innerClassName: x.innerClose,
-                    onClick: () => (null == l ? void 0 : l(C.L.USER_DISMISS))
+                    className: S.close,
+                    innerClassName: S.innerClose,
+                    onClick: () => (null == l ? void 0 : l(v.L.USER_DISMISS))
                 })
             ]
         }),
@@ -105,7 +105,7 @@ function N(e) {
         }),
         buttonCTA: E.intl.string(E.t['oPAx7+']),
         onClick: T,
-        className: o()(x.container, w),
+        className: o()(S.container, w),
         caretPosition: N,
         markAsDismissed: l
     });

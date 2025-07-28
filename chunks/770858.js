@@ -17,21 +17,21 @@ var r = n(255367),
     _ = n(370774),
     O = n(128008),
     y = n(961040),
-    v = n(932711),
-    C = n(981631),
+    C = n(932711),
+    v = n(981631),
     j = n(490897),
     E = n(522458);
-function x() {
+function S() {
     let e = (0, s.e7)([m.default], () => m.default.getCurrentUser());
     return (0, s.e7)([f.ZP], () => (null == e ? void 0 : e.id) != null && f.ZP.getMentionCount(e.id, j.W.NOTIFICATION_CENTER) > 0);
 }
-function S(e) {
+function x(e) {
     var t, n;
     let { onClick: l, selectedOverride: p = !1, popoutProps: f, ref: m } = e,
         O = (0, a.Ie)('notifications-inbox'),
         [y, j] = i.useState(!1),
-        S = (0, _.D)(),
-        I = p || S,
+        x = (0, _.D)(),
+        I = p || x,
         { notificationCenterVariant: P } = b.Lk.useExperiment({ location: 'NotificationsInboxButtonInner' }),
         {
             badge: N,
@@ -40,7 +40,7 @@ function S(e) {
         } = (function (e) {
             let { notificationCenterVariant: t } = b.Lk.useExperiment({ location: 'NotificationsInboxButtonInner' }),
                 { unreadRecentMentionsCount: n, unreadChannelIds: i } = (0, _.O4)(),
-                l = x();
+                l = S();
             if (t === b.jP.LEGACY)
                 return {
                     badge: l
@@ -102,7 +102,7 @@ function S(e) {
         T = P === b.jP.LEGACY ? c.xx7 : c.Dkj,
         A = (0, s.e7)([g.Z], () => g.Z.getChannelId()),
         R = i.useMemo(() => {
-            if (P === b.jP.SIDEBAR) return C.Z5c.NOTIFICATIONS_INBOX(null != A ? A : void 0);
+            if (P === b.jP.SIDEBAR) return v.Z5c.NOTIFICATIONS_INBOX(null != A ? A : void 0);
         }, [P, A]);
     return (0, r.jsxs)(h.H, {
         ref: m,
@@ -114,7 +114,7 @@ function S(e) {
                 className: E.pill,
                 disabled: P === b.jP.LEGACY
             }),
-            (0, r.jsx)(v.Z, {
+            (0, r.jsx)(C.Z, {
                 children: (0, r.jsx)(c.aRk, {
                     selected: I || y,
                     lowerBadge: N,
@@ -183,17 +183,17 @@ function S(e) {
 function I() {
     let e = i.useRef(null),
         { notificationCenterVariant: t } = b.Lk.useExperiment({ location: 'NotificationsInboxButton' }),
-        n = x(),
+        n = S(),
         l = (0, O.m)();
     return t === b.jP.SIDEBAR
-        ? (0, r.jsx)(S, {})
+        ? (0, r.jsx)(x, {})
         : t === b.jP.POPOUT
           ? (0, r.jsx)(y.Z, {
                 targetElementRef: e,
                 popoutPosition: 'right',
                 popoutAlign: 'bottom',
                 children: (t, n, i) =>
-                    (0, r.jsx)(S, {
+                    (0, r.jsx)(x, {
                         ref: e,
                         selectedOverride: n,
                         onClick: () => {
@@ -211,7 +211,7 @@ function I() {
                   popoutAlign: 'top',
                   dialogClassName: E.positionLayer,
                   children: (t, n, i) =>
-                      (0, r.jsx)(S, {
+                      (0, r.jsx)(x, {
                           ref: e,
                           selectedOverride: n,
                           onClick: () => {

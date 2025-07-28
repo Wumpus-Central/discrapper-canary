@@ -1,6 +1,6 @@
 n.d(t, {
     J: () => I,
-    y: () => S
+    y: () => x
 });
 var r = n(255367),
     i = n(73800),
@@ -20,12 +20,12 @@ var r = n(255367),
     _ = n(131704),
     O = n(944486),
     y = n(626135),
-    v = n(77880),
-    C = n(870569),
+    C = n(77880),
+    v = n(870569),
     j = n(981631),
     E = n(388032),
-    x = n(390648);
-function S(e, t, n) {
+    S = n(390648);
+function x(e, t, n) {
     return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === j.IIU.PLAYING && (0, u.Z)(t, j.xjy.JOIN));
 }
 let I = i.memo(function (e) {
@@ -39,8 +39,8 @@ let I = i.memo(function (e) {
             autoTrackExposure: !1
         }),
         { parentAnalyticsLocation: B } = (0, h.ZP)(),
-        { changeLeaveCallAndActivityIcons: V } = (0, v.A)({ location: 'Activity Actions' }),
-        F = S(M, L, D),
+        { changeLeaveCallAndActivityIcons: V } = (0, C.A)({ location: 'Activity Actions' }),
+        F = x(M, L, D),
         H = i.useCallback(() => {
             (o()(null != L, 'Received null activity'),
                 (0, p.v)(B, p.d.INVITE),
@@ -145,8 +145,8 @@ let I = i.memo(function (e) {
                           (I = null != R ? E.intl.formatToPlainString(E.t.AB5gT0, { game: R.name }) : E.intl.string(E.t.FeUKeH)))
                         : ((t = !0), (l = null), (u = a.hGI), (I = null != T && (0, _.vd)(T.type) ? E.intl.string(E.t.uQn9Bw) : null != w ? E.intl.string(E.t.fBXEoK) : E.intl.string(E.t.n3feND))),
                   (0, r.jsx)('div', {
-                      className: x.panelButtonContainer,
-                      children: (0, r.jsx)(C.Z, {
+                      className: S.panelButtonContainer,
+                      children: (0, r.jsx)(v.Z, {
                           tooltipText: I,
                           disabled: t,
                           onClick: l,
@@ -156,7 +156,7 @@ let I = i.memo(function (e) {
                 : null,
         q =
             F && null == D
-                ? (0, r.jsx)(C.Z, {
+                ? (0, r.jsx)(v.Z, {
                       tooltipText: E.intl.string(E.t['hC/Ze3']),
                       onClick: H,
                       icon: a.ejJ
@@ -165,7 +165,7 @@ let I = i.memo(function (e) {
         X =
             null == D
                 ? null
-                : (0, r.jsx)(C.Z, {
+                : (0, r.jsx)(v.Z, {
                       tooltipText: E.intl.string(E.t['R/FK4O']),
                       onClick: z(D.applicationId, D.location),
                       icon: V ? a.Dio : a.PBZ
@@ -174,7 +174,7 @@ let I = i.memo(function (e) {
     return null == Y && null == q && null == X
         ? null
         : (0, r.jsxs)('div', {
-              className: x.actions,
+              className: S.actions,
               children: [Y, q, null != X ? X : Q]
           });
 });

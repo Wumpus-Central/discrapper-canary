@@ -160,7 +160,7 @@ function ea(e) {
                         displayProfile: ed,
                         themeType: et.lY.POPOUT,
                         children: [
-                            (0, i.jsxs)('header', {
+                            (0, i.jsxs)('div', {
                                 className: er.header,
                                 children: [
                                     (0, i.jsx)(y.Z, {

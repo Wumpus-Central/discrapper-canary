@@ -1,91 +1,91 @@
-(t.d(n, { Z: () => O }), t(388685));
+(t.d(n, { Z: () => y }), t(388685));
 var l = t(255367),
     r = t(73800),
     i = t(442837),
     o = t(706898),
     s = t(481060),
-    a = t(246946),
-    c = t(785717),
+    c = t(246946),
+    a = t(785717),
     u = t(786366),
     d = t(323090),
     f = t(116906),
     p = t(384816),
     g = t(389190),
-    v = t(428927),
-    j = t(228168),
+    j = t(428927),
+    v = t(228168),
     h = t(388032),
     m = t(301150),
     b = t(923243);
 function x(e) {
-    let { section: n, subsection: t, user: r, currentUser: i, displayProfile: o, guildId: s, channelId: a, onClose: c } = e;
-    return n === j.oh.ACTIVITY
+    let { section: n, subsection: t, user: r, currentUser: i, displayProfile: o, guildId: s, channelId: c, onClose: a } = e;
+    return n === v.oh.ACTIVITY
         ? (0, l.jsx)(f.Z, {
               user: r,
               currentUser: i,
               displayProfile: o,
               guildId: s,
-              onClose: c
+              onClose: a
           })
-        : n === j.oh.MUTUAL_FRIENDS
+        : n === v.oh.MUTUAL_FRIENDS
           ? (0, l.jsx)(g.Z, {
                 user: r,
                 guildId: s,
-                channelId: a,
-                onClose: c
+                channelId: c,
+                onClose: a
             })
-          : n === j.oh.MUTUAL_GUILDS
-            ? (0, l.jsx)(v.Z, {
+          : n === v.oh.MUTUAL_GUILDS
+            ? (0, l.jsx)(j.Z, {
                   user: r,
-                  onClose: c
+                  onClose: a
               })
-            : n === j.oh.BOT_DATA_ACCESS
+            : n === v.oh.BOT_DATA_ACCESS
               ? (0, l.jsx)(u.Z, { user: r })
-              : n === j.oh.BOT_INFO
+              : n === v.oh.BOT_INFO
                 ? (0, l.jsx)(d.Z, {
                       user: r,
                       currentUser: i,
                       displayProfile: o,
                       guildId: s,
                       subsection: t,
-                      onClose: c
+                      onClose: a
                   })
                 : (0, l.jsx)(p.Z, {
                       user: r,
                       currentUser: i,
                       displayProfile: o,
                       subsection: t,
-                      onClose: c
+                      onClose: a
                   });
 }
-function O(e) {
+function y(e) {
     var n, t, u;
-    let { user: d, currentUser: f, displayProfile: p, guildId: g, items: v, initialSection: O = j.oh.USER_INFO, initialSubsection: y, onClose: Z } = e,
-        { trackUserProfileAction: I } = (0, c.KZ)(),
-        P = (0, i.e7)([a.Z], () => a.Z.hidePersonalInformation),
+    let { user: d, currentUser: f, displayProfile: p, guildId: g, items: j, initialSection: y = v.oh.USER_INFO, initialSubsection: O, onClose: Z } = e,
+        { trackUserProfileAction: I } = (0, a.KZ)(),
+        P = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
         [{ section: E, subsection: T }, S] = r.useState({
             section:
                 null !=
                 (u =
                     null ==
-                    (n = v.find((e) => {
+                    (n = j.find((e) => {
                         let { section: n } = e;
-                        return n === O;
+                        return n === y;
                     }))
                         ? void 0
                         : n.section)
                     ? u
-                    : null == (t = v[0])
+                    : null == (t = j[0])
                       ? void 0
                       : t.section,
-            subsection: y
+            subsection: O
         });
     r.useEffect(() => {
-        null == v.find((e) => e.section === E) &&
+        null == j.find((e) => e.section === E) &&
             S({
-                section: v[0].section,
+                section: j[0].section,
                 subsection: void 0
             });
-    }, [v, E]);
+    }, [j, E]);
     let N = r.useCallback(
         (e) => {
             (I({
@@ -121,7 +121,7 @@ function O(e) {
                       type: 'top',
                       selectedItem: E,
                       onItemSelect: N,
-                      children: v.map((e) => {
+                      children: j.map((e) => {
                           let { section: n, text: t } = e;
                           return (0, l.jsx)(
                               o.n.Item,
@@ -139,7 +139,7 @@ function O(e) {
                       })
                   }),
                   (0, l.jsx)(x, {
-                      items: v,
+                      items: j,
                       section: E,
                       subsection: T,
                       user: d,

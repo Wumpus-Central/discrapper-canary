@@ -17,7 +17,7 @@ function b(e) {
     let { setTab: t, badgeState: l, closePopout: b } = e,
         O = (0, a.Wu)([u.Z], () => u.Z.getInvites()),
         y = (0, a.e7)([u.Z], () => u.Z.getInviteStatuses()),
-        [v, C] = i.useMemo(
+        [C, v] = i.useMemo(
             () =>
                 o().partition(O, (e) => {
                     var t;
@@ -122,12 +122,12 @@ function b(e) {
                       children: (0, r.jsxs)('div', {
                           className: m.invitesContainer,
                           children: [
-                              v.length > 0 &&
+                              C.length > 0 &&
                                   (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(_, { title: g.intl.string(g.t.yflAJS) }),
                                           (0, r.jsx)(r.Fragment, {
-                                              children: v.map((e) =>
+                                              children: C.map((e) =>
                                                   (0, r.jsx)(
                                                       f.Z,
                                                       {
@@ -140,12 +140,12 @@ function b(e) {
                                           })
                                       ]
                                   }),
-                              C.length > 0 &&
+                              v.length > 0 &&
                                   (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(_, { title: g.intl.string(g.t.f0Ia4e) }),
                                           (0, r.jsx)(r.Fragment, {
-                                              children: C.map((e) =>
+                                              children: v.map((e) =>
                                                   (0, r.jsx)(
                                                       f.Z,
                                                       {

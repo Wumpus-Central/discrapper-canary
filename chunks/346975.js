@@ -22,9 +22,9 @@ var r = n(255367),
     y = n(71619),
     O = n(898188),
     w = n(41776),
-    N = n(256413),
-    S = n(292853),
-    T = n(869382),
+    S = n(256413),
+    T = n(292853),
+    N = n(869382),
     P = n(982168),
     I = n(216572),
     E = n(543015),
@@ -40,8 +40,8 @@ var r = n(255367),
     B = n(607744),
     H = n(944486),
     U = n(117530),
-    G = n(451478),
-    V = n(459273),
+    V = n(451478),
+    G = n(459273),
     q = n(961675),
     W = n(883429),
     X = n(238349),
@@ -175,7 +175,7 @@ function ew(e) {
         'section-divider'
     );
 }
-function eN(e) {
+function eS(e) {
     let { section: t, coords: n, key: i, isShowingSearchResult: a, hasActiveThreads: l } = e;
     return () =>
         2 === t && !a && l
@@ -190,10 +190,10 @@ function eN(e) {
               )
             : null;
 }
-function eS(e, t) {
+function eT(e, t) {
     return 'card-'.concat(e, '-').concat(t);
 }
-function eT(e) {
+function eN(e) {
     if ('string' == typeof e) {
         let t = e.match(/card-{\d+}-({\d+})$/);
         return null == t ? null : t[1];
@@ -262,9 +262,9 @@ function eP(e) {
         })(t),
         B = m.length > 0,
         U = B || f.length > 0,
-        G = (0, N.Z)(t),
-        { tagFilter: V, tagSetting: X } = (0, K.H)(t.id);
-    (0, J.ku)(t, V, X, u);
+        V = (0, S.Z)(t),
+        { tagFilter: G, tagSetting: X } = (0, K.H)(t.id);
+    (0, J.ku)(t, G, X, u);
     let et = (0, J.jR)(t),
         en = (0, J.eZ)(t),
         ea = i.useRef(null),
@@ -335,7 +335,7 @@ function eP(e) {
         }, [t.id]));
     let { columns: ek } = i.useMemo(() => (eo ? e_.getRenderOptions(eM) : ec.eU), [eo, eM]),
         eA = i.useMemo(() => (O ? Math.round((window.innerHeight - 200) / 118) : 0), [O]),
-        { showResolvedFlags: eL } = (0, T.N)(t.id),
+        { showResolvedFlags: eL } = (0, N.N)(t.id),
         eF = t.isModeratorReportChannel(),
         eD = i.useMemo(() => {
             let e = Math.ceil(window.innerHeight / (0, ec.KW)(e_.getWidth(eM))) * ek;
@@ -363,7 +363,7 @@ function eP(e) {
             else return [1, m.length, f.length, eA];
         }, [eo, eC, m.length, f.length, et, en, eA, x, eD, ez, eB, eL, eF]),
         eU = i.useMemo(() => (!et && eC ? [[], []] : en ? (eC ? [[], x, [], []] : eF && !eL ? [[], m, [], []] : [[], m, f, []]) : [[], m, []]), [eC, et, en, x, m, f, eL, eF]),
-        eG = i.useCallback(
+        eV = i.useCallback(
             (e, n) => {
                 ((0, $.B5)({
                     guildId: t.guild_id,
@@ -378,7 +378,7 @@ function eP(e) {
             },
             [t.guild_id, t.id, ew]
         ),
-        [eV, eq] = i.useState(a + s - 24),
+        [eG, eq] = i.useState(a + s - 24),
         eW = i.useCallback(
             (e, n, i) =>
                 0 === e
@@ -460,7 +460,7 @@ function eP(e) {
                 ),
                 b = i.useCallback(
                     (e) =>
-                        eN({
+                        eS({
                             section: e.section,
                             isShowingSearchResult: h,
                             hasActiveThreads: n
@@ -525,7 +525,7 @@ function eP(e) {
             editorHeight: a,
             editorAdditionRowHeight: s,
             renderSectionOrItem: eW,
-            goToThread: eG,
+            goToThread: eV,
             observePostVisibilityAnalytics: es,
             isShowingSearchResult: eC
         }),
@@ -565,13 +565,13 @@ function eP(e) {
                                 });
                             }
                         }),
-                            (h.current = eT(n)));
+                            (h.current = eN(n)));
                     },
                     [t, h]
                 ),
                 b = i.useCallback(
                     (e) => {
-                        let t = eT(e);
+                        let t = eN(e);
                         if (null == t) return;
                         let n = D.Z.getChannel(t);
                         null != n && a(n, !0);
@@ -584,7 +584,7 @@ function eP(e) {
                         if (0 === n[e].length) return 'section-'.concat(e, '-').concat(t);
                         {
                             let r = n[e][t];
-                            return null == r ? eS(e, t) : eS(e, r);
+                            return null == r ? eT(e, t) : eT(e, r);
                         }
                     },
                     [n]
@@ -594,7 +594,7 @@ function eP(e) {
                         s(
                             e,
                             t,
-                            eN({
+                            eS({
                                 section: e,
                                 coords: t,
                                 key: n,
@@ -661,7 +661,7 @@ function eP(e) {
         })({
             masonryListScrollerRef: e6,
             threadIdsBySection: eU,
-            goToThread: eG,
+            goToThread: eV,
             renderSectionOrItem: eW,
             hasActiveThreads: B,
             isShowingSearchResult: eC,
@@ -669,7 +669,7 @@ function eP(e) {
             canViewArchivedPosts: en,
             observePostVisibilityAnalytics: es,
             focusedThreadId: ew,
-            headerHeight: eV
+            headerHeight: eG
         });
     !(function (e) {
         let { masonryListScrollerRef: t, containerWidth: n, isGridLayout: r, threadIdsBySection: a, focusedThreadId: l, parentId: s } = e;
@@ -683,7 +683,7 @@ function eP(e) {
                     let n = a.findIndex((t) => t.find((t) => t === e)),
                         r = t.current.getCoordsMap(),
                         i = r['__section__'.concat(n)],
-                        o = r[eS(n, e)];
+                        o = r[eT(n, e)];
                     null != i &&
                         null != o &&
                         t.current.scrollIntoViewRect({
@@ -749,10 +749,10 @@ function eP(e) {
                             }),
                         (0, r.jsx)(eR, { channel: t }),
                         (0, r.jsx)(p.nn4, { children: (0, r.jsx)(p.H, { children: ex.intl.string(ex.t.B2panJ) }) }),
-                        G
+                        V
                             ? (0, r.jsx)('div', {
                                   className: ep.optInNotice,
-                                  children: (0, r.jsx)(S.Z, { channel: t })
+                                  children: (0, r.jsx)(T.Z, { channel: t })
                               })
                             : null,
                         eo
@@ -872,7 +872,7 @@ function eM() {
 }
 function eZ(e) {
     var t, n, a;
-    let { channel: s, isEmpty: b, isSearchLoading: C, numResults: w, children: N, coords: S, onHeightChange: T } = e,
+    let { channel: s, isEmpty: b, isSearchLoading: C, numResults: w, children: S, coords: T, onHeightChange: N } = e,
         {
             name: E,
             formOpen: R,
@@ -909,15 +909,15 @@ function eZ(e) {
     }, [ee]);
     let { ref: eh, height: ef } = (0, j.ZP)();
     i.useEffect(() => {
-        null != ef && T(ef);
-    }, [T, ef]);
+        null != ef && N(ef);
+    }, [N, ef]);
     let eC = i.useCallback(() => {
         o()(() => {
             null != eh.current && q.getState().setEditorHeight(eh.current.offsetHeight);
         });
     }, [eh, q]);
     (i.useLayoutEffect(eC, [eC, b, eu, L]),
-        (0, V.yp)({
+        (0, G.yp)({
             event: eg.CkL.REMEASURE_TARGET,
             handler: eC
         }));
@@ -925,8 +925,8 @@ function eZ(e) {
         ey = (0, J.ql)(s),
         eO = i.useRef(null),
         ew = i.useRef(null),
-        [eN, eS] = i.useState(0),
-        { width: eT } = (0, g.e7)([G.Z], () => G.Z.windowSize()),
+        [eS, eT] = i.useState(0),
+        { width: eN } = (0, g.e7)([V.Z], () => V.Z.windowSize()),
         eP = null == (n = eO.current) || null == (t = n.getBoundingClientRect()) ? void 0 : t.width,
         eI = i.useRef(null),
         eE = i.useRef(null);
@@ -942,9 +942,9 @@ function eZ(e) {
                 if (a - t > l) break;
                 n - e > r && (r = n - e);
             }
-            eS(r);
+            eT(r);
         }
-    }, [s.availableTags, eT, eP, D]);
+    }, [s.availableTags, eN, eP, D]);
     let eR = E.length > 0 && !R && (C || null != w),
         eZ = !__OVERLAY__ && !Z && !R && M && (0 === k.textValue.trim().length || k.textValue.trim() === ey) && 0 === e_.length && !ec;
     i.useLayoutEffect(() => {
@@ -990,7 +990,7 @@ function eZ(e) {
                 );
             return (i.useLayoutEffect(() => (t ? window.addEventListener('keydown', n) : window.removeEventListener('keydown', n), () => window.removeEventListener('keydown', n)), [t, n]), e);
         })(),
-        eG = i.useCallback(
+        eV = i.useCallback(
             (e) => {
                 if ((ez(), e.target === eh.current && !eU.current)) {
                     var t;
@@ -999,7 +999,7 @@ function eZ(e) {
             },
             [ez, eh, eU]
         ),
-        eV = i.useMemo(() => (ec ? (0, P.iq)(s.availableTags) : s.availableTags), [s.availableTags, ec]);
+        eG = i.useMemo(() => (ec ? (0, P.iq)(s.availableTags) : s.availableTags), [s.availableTags, ec]);
     return (0, r.jsx)(
         'div',
         ej(
@@ -1007,16 +1007,16 @@ function eZ(e) {
                 {
                     className: l()(ep.card, ep.headerRow, ep.columnsSpan),
                     ref: eh,
-                    onFocus: eG
+                    onFocus: eV
                 },
                 eB
             ),
             {
-                style: ej(eb({}, S), {
+                style: ej(eb({}, T), {
                     position: H === h.X.GRID ? 'absolute' : 'static',
                     height: 'auto'
                 }),
-                children: (0, r.jsxs)(V.I3, {
+                children: (0, r.jsxs)(G.I3, {
                     children: [
                         null != s.guild_id
                             ? (0, r.jsx)(O.Z, {
@@ -1131,7 +1131,7 @@ function eZ(e) {
                             ref: eO,
                             children: [
                                 (0, r.jsx)(ek, { channel: s }),
-                                eV.length > 0
+                                eG.length > 0
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)('div', { className: ep.divider }),
@@ -1155,7 +1155,7 @@ function eZ(e) {
                                                                           n
                                                                       ),
                                                                       {
-                                                                          children: eV.map((e) =>
+                                                                          children: eG.map((e) =>
                                                                               (0, r.jsx)(
                                                                                   eo.Z,
                                                                                   {
@@ -1195,7 +1195,7 @@ function eZ(e) {
                                                               size: x.zx.Sizes.MIN,
                                                               color: x.zx.Colors.CUSTOM,
                                                               className: l()(ep.tagsButton, { [ep.tagsButtonWithCount]: D.size > 0 }),
-                                                              style: { left: eN },
+                                                              style: { left: eS },
                                                               innerClassName: ep.tagsButtonInner,
                                                               'aria-label': D.size > 0 ? ex.intl.string(ex.t.IkpM1d) : ex.intl.string(ex.t['9vKK/P']),
                                                               children: [
@@ -1257,7 +1257,7 @@ function eZ(e) {
                                     : null
                             ]
                         }),
-                        N,
+                        S,
                         Q &&
                             !em &&
                             !ec &&

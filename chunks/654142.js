@@ -76,11 +76,11 @@ let _ = i.memo(function (e) {
             }
             return i;
         })(e, ['folderNode']);
-    let { id: O, name: y, color: v, children: C } = t,
-        j = C.map((e) => e.id),
+    let { id: O, name: y, color: C, children: v } = t,
+        j = v.map((e) => e.id),
         E = (0, s.Z)((e) => e.guildId),
-        x = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(O)),
-        S = (function (e) {
+        S = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(O)),
+        x = (function (e) {
             let t = e.children
                     .map((e) => {
                         let t = e.id,
@@ -116,25 +116,25 @@ let _ = i.memo(function (e) {
                             b(m({}, t), {
                                 folderId: O,
                                 folderName: y,
-                                folderColor: v,
+                                folderColor: C,
                                 unread: w || P > 0
                             })
                         );
                 });
             },
-            [O, y, v, w, P]
+            [O, y, C, w, P]
         );
     return (0, r.jsx)(
         p.Z,
         b(m({}, _), {
             folderNode: t,
-            expanded: x,
+            expanded: S,
             selected: null != E && j.includes(E),
             mentionCount: P,
             isMentionLowImportance: N,
             unread: w,
             mediaState: I,
-            defaultFolderName: S,
+            defaultFolderName: x,
             onExpandCollapse: Z,
             onContextMenu: T
         })

@@ -13,8 +13,8 @@ var r = n(120356),
     p = n(768762),
     m = n(706454),
     b = n(49012),
-    _ = n(981631),
-    x = n(856651),
+    x = n(981631),
+    _ = n(856651),
     h = n(388032),
     y = n(738873);
 function g(e) {
@@ -64,7 +64,7 @@ function I(e) {
     var t;
     let { account: n, locale: r, userId: i } = e,
         c = null != (t = n.metadata) ? t : {},
-        m = (0, u.FI)(c[x.PC.CREATED_AT], r),
+        m = (0, u.FI)(c[_.PC.CREATED_AT], r),
         I = a.Z.get((0, d.rR)(n.type));
     return (0, o.jsxs)('li', {
         className: y.connection,
@@ -112,14 +112,14 @@ function I(e) {
                                           useDefaultUnderlineStyles: !1,
                                           'aria-label': (null == I ? void 0 : I.name) != null ? ''.concat(I.name, ', ').concat(n.name, ', ').concat(h.intl.string(h.t.q5jLJC)) : ''.concat(n.name, ', ').concat(h.intl.string(h.t.q5jLJC)),
                                           onClick: (e) => {
-                                              ((0, s.yw)(_.rMx.CONNECTED_ACCOUNT_VIEWED, {
+                                              ((0, s.yw)(x.rMx.CONNECTED_ACCOUNT_VIEWED, {
                                                   platform_type: n.type,
                                                   other_user_id: i
                                               }),
                                                   (0, b.q)(
                                                       {
                                                           href: t,
-                                                          trusted: (null == I ? void 0 : I.type) !== _.ABu.DOMAIN
+                                                          trusted: (null == I ? void 0 : I.type) !== x.ABu.DOMAIN
                                                       },
                                                       e
                                                   ));
@@ -157,7 +157,7 @@ function I(e) {
                     }),
                     (0, o.jsx)('div', {
                         className: y.metadata,
-                        children: n.type === _.ABu.REDDIT ? (0, f.oP)(c) : n.type === _.ABu.STEAM ? (0, f.Dq)(c) : n.type === _.ABu.BLUESKY || n.type === _.ABu.MASTODON || n.type === _.ABu.TWITTER ? (0, f.rJ)(c) : n.type === _.ABu.PAYPAL ? (0, f.li)(c) : n.type === _.ABu.EBAY ? (0, f.ul)(c) : n.type === _.ABu.TIKTOK ? (0, f.hf)(c) : null
+                        children: n.type === x.ABu.REDDIT ? (0, f.oP)(c) : n.type === x.ABu.STEAM ? (0, f.Dq)(c) : n.type === x.ABu.BLUESKY || n.type === x.ABu.MASTODON || n.type === x.ABu.TWITTER ? (0, f.rJ)(c) : n.type === x.ABu.PAYPAL ? (0, f.li)(c) : n.type === x.ABu.EBAY ? (0, f.ul)(c) : n.type === x.ABu.TIKTOK ? (0, f.hf)(c) : null
                     })
                 ]
             })

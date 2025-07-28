@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(539854));
+(n.d(t, { Z: () => k }), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -108,7 +108,7 @@ let w = (e, t) => (e < (0, v.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, v.A3)(I.Eu4.
             disabled: !i
         });
     },
-    L = (e) => {
+    k = (e) => {
         let { guild: t } = e,
             { isLoading: l } = (0, O.Z)(t.id),
             d = (0, a.e7)(
@@ -122,8 +122,8 @@ let w = (e, t) => (e < (0, v.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, v.A3)(I.Eu4.
             { analyticsLocations: u } = (0, m.ZP)(),
             j = (0, x.Z)(t.id),
             Z = t.features.has(I.oNc.MORE_STICKERS) ? I.Eu4.TIER_3 : t.premiumTier,
-            L = t.features.has(I.oNc.MORE_STICKERS) ? I.oCV[I.Eu4.TIER_3] : j,
-            k = (0, b.Z)(t.id);
+            k = t.features.has(I.oNc.MORE_STICKERS) ? I.oCV[I.Eu4.TIER_3] : j,
+            L = (0, b.Z)(t.id);
         if (
             (i.useEffect(() => {
                 window.dispatchEvent(new Event('resize'));
@@ -212,7 +212,7 @@ let w = (e, t) => (e < (0, v.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, v.A3)(I.Eu4.
                     $ = () => M(Math.max(1, I.oCV[m.tier] - j), m.tier),
                     ee = !1;
                 J &&
-                    (k
+                    (L
                         ? (($ = () => {
                               let e = E.Cp[m.tier];
                               null != e && (0, h.H6)(t.id, e);
@@ -241,7 +241,7 @@ let w = (e, t) => (e < (0, v.A3)(I.Eu4.NONE) ? I.Eu4.NONE : e < (0, v.A3)(I.Eu4.
                     (0, r.jsxs)(
                         N.Z,
                         {
-                            subscriptionCount: L,
+                            subscriptionCount: k,
                             tier: m,
                             onSetRef: u,
                             isAnimatedTo: a,

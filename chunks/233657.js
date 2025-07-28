@@ -66,8 +66,8 @@ function _(e) {
             }),
             [t.id]
         ),
-        v = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
-    async function C() {
+        C = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
+    async function v() {
         (await (0, o.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('79010')]).then(n.bind(n, 17671));
             return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
@@ -86,16 +86,16 @@ function _(e) {
             }),
         text: E,
         selected: _,
-        onClick: C,
+        onClick: v,
         onContextMenu: (e) => {
             (0, a.jW)(e, async () => {
                 let { default: e } = await n.e('95307').then(n.bind(n, 867757));
                 return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
             });
         },
-        showUnread: O && !v,
+        showUnread: O && !C,
         trailing:
-            !v && y > 0
+            !C && y > 0
                 ? (0, r.jsx)(o.mAB, {
                       className: g.numberBadge,
                       disableColor: !0,

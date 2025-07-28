@@ -33,7 +33,7 @@ var r = n(255367),
     T = n(981631),
     Z = n(388032),
     w = n(492077);
-function A(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -58,7 +58,7 @@ function A(e) {
     }
     return e;
 }
-function L(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -155,7 +155,7 @@ let M = (e) => {
                                       children: (t) =>
                                           (0, r.jsx)(
                                               'img',
-                                              L(A({}, t), {
+                                              A(L({}, t), {
                                                   className: w.emojiListEmoji,
                                                   src: f.ZP.getEmojiURL({
                                                       id: e.id,
@@ -306,7 +306,7 @@ let M = (e) => {
                                       children: (e) =>
                                           (0, r.jsx)(
                                               c.d3s,
-                                              A(
+                                              L(
                                                   {
                                                       size: 'xs',
                                                       color: 'currentColor',
@@ -353,7 +353,7 @@ let M = (e) => {
                                                             children: (e) =>
                                                                 (0, r.jsx)(
                                                                     O.Z,
-                                                                    L(A({}, e), {
+                                                                    A(L({}, e), {
                                                                         fullWidth: !0,
                                                                         disabled: !_ || M,
                                                                         submitting: E,

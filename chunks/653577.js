@@ -15,12 +15,12 @@ var r = n(255367),
     m = n(32066),
     b = n(73433);
 function _(e) {
-    let { channel: t, connected: n, hovered: l, subtitle: _, onClick: O, enableHangStatus: y, allowChannelTopic: v } = e,
-        C = (0, a.e7)([u.Z], () => u.Z.getChannelStatus(t)),
-        j = null != C && C.length > 0,
+    let { channel: t, connected: n, hovered: l, subtitle: _, onClick: O, enableHangStatus: y, allowChannelTopic: C } = e,
+        v = (0, a.e7)([u.Z], () => u.Z.getChannelStatus(t)),
+        j = null != v && v.length > 0,
         E = (0, c.ZP)(t, !0),
-        x = (!y || !!v) && E,
-        S = null != _ && _.length > 0;
+        S = (!y || !!C) && E,
+        x = null != _ && _.length > 0;
     if (
         (i.useEffect(() => {
             j &&
@@ -32,18 +32,18 @@ function _(e) {
         null == t.guild_id)
     )
         return null;
-    let I = o()(m.statusDiv, n && x ? m.hoverable : null);
+    let I = o()(m.statusDiv, n && S ? m.hoverable : null);
     return j
         ? (0, r.jsx)(s.P3F, {
               className: I,
-              onClick: x ? O : void 0,
+              onClick: S ? O : void 0,
               children: (0, r.jsx)(s.Text, {
                   variant: 'text-xs/medium',
                   className: o()(m.statusText, b.markup),
-                  children: (0, r.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(C, !0, { channelId: t.id }) })
+                  children: (0, r.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(v, !0, { channelId: t.id }) })
               })
           })
-        : n && x && (!S || l)
+        : n && S && (!x || l)
           ? (0, r.jsxs)(s.P3F, {
                 className: I,
                 onClick: O,
@@ -60,7 +60,7 @@ function _(e) {
                     })
                 ]
             })
-          : S
+          : x
             ? (0, r.jsx)(d.Z, { children: _ })
             : null;
 }

@@ -17,10 +17,7 @@ let x = (e) => {
     var t, n;
     let { entry: x } = e,
         { name: h } = x,
-        f = (0, i.e7)([m.Z], () => {
-            let e = m.Z.getApps();
-            return null != e ? e.find((e) => e.application.id === x.id) : null;
-        }),
+        f = (0, i.e7)([m.Z], () => m.Z.getNewestTokenForApplication(x.id)),
         v = null != (n = x.getIconURL(40)) ? n : g,
         j = (0, d.Z)({ application: x }),
         C = a.useRef(!1);

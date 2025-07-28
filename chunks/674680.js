@@ -52,17 +52,17 @@ function g(e) {
     if (null == b) return null;
     let _ = (0, l.UCu)(g),
         { name: O, rarity: y } = b,
-        { color: v } = (0, c.F7)(y),
-        C = (0, i.wj)(m) ? p : f,
+        { color: C } = (0, c.F7)(y),
+        v = (0, i.wj)(m) ? p : f,
         j = (_.size - _.offset - 2 * _.stroke) * 0.8,
         E = _.size - _.stroke,
-        x = {
+        S = {
             width: 0.4 * j,
             height: 0.4 * j
         },
-        S = {
-            width: x.width + 1,
-            height: x.height + 1,
+        x = {
+            width: S.width + 1,
+            height: S.height + 1,
             right: _.stroke + 1,
             bottom: _.stroke + 1,
             padding: 0
@@ -80,7 +80,7 @@ function g(e) {
                 className: d.trophyIconContainer,
                 children: (0, r.jsx)(l.rm8, {
                     size: 'custom',
-                    color: u ? v : (0, a.Lq)(C.trophy),
+                    color: u ? C : (0, a.Lq)(v.trophy),
                     width: j,
                     height: j
                 })
@@ -88,15 +88,15 @@ function g(e) {
             !u &&
                 (0, r.jsx)('div', {
                     className: d.lockContainer,
-                    style: S,
+                    style: x,
                     children: (0, r.jsx)(
                         l.mBM,
                         h(
                             {
                                 size: 'custom',
-                                color: (0, a.Lq)(C.locked)
+                                color: (0, a.Lq)(v.locked)
                             },
-                            x
+                            S
                         )
                     )
                 }),
@@ -104,8 +104,8 @@ function g(e) {
                 y === c.EP.LEGENDARY &&
                 (0, r.jsx)('div', {
                     className: d.lockContainer,
-                    style: S,
-                    children: (0, r.jsx)(s.Z, h({ className: d.confettiIcon }, x))
+                    style: x,
+                    children: (0, r.jsx)(s.Z, h({ className: d.confettiIcon }, S))
                 })
         ]
     });

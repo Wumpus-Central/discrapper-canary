@@ -32,7 +32,7 @@ var r = n(255367),
     Z = n(231338),
     D = n(388032),
     A = n(983459);
-function L(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function L(e) {
     }
     return e;
 }
-function k(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -143,7 +143,7 @@ let M = 'WELCOME_CHANNEL',
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                k(L({}, t), {
+                                L(k({}, t), {
                                     guildId: a,
                                     welcomeChannel: o,
                                     onChannelReorder: h,
@@ -191,7 +191,7 @@ let M = 'WELCOME_CHANNEL',
                                     return (t) =>
                                         (0, r.jsx)(
                                             e,
-                                            k(L({}, t), {
+                                            L(k({}, t), {
                                                 welcomeChannel: o,
                                                 guildId: a,
                                                 onSave: f
@@ -254,7 +254,7 @@ let M = 'WELCOME_CHANNEL',
                             return (n) =>
                                 (0, r.jsx)(
                                     e,
-                                    k(L({}, n), {
+                                    L(k({}, n), {
                                         guildId: t.id,
                                         onSave: F
                                     })
@@ -331,7 +331,7 @@ let M = 'WELCOME_CHANNEL',
                                                 return (n) =>
                                                     (0, r.jsx)(
                                                         e,
-                                                        k(L({}, n), {
+                                                        L(k({}, n), {
                                                             guildId: t.id,
                                                             isPreview: !0
                                                         })
@@ -444,7 +444,7 @@ let M = 'WELCOME_CHANNEL',
                                                               return (n) =>
                                                                   (0, r.jsx)(
                                                                       e,
-                                                                      k(L({}, n), {
+                                                                      L(k({}, n), {
                                                                           guildId: t.id,
                                                                           onSave: F
                                                                       })

@@ -29,7 +29,7 @@ function _() {
                         className: m.filterTitle,
                         children: b.intl.string(b.t.Qk6r1d)
                     }),
-                    g.xg.map((e) => (0, n.jsx)(C, { filter: e }, e)),
+                    g.xg.map((e) => (0, n.jsx)(O, { filter: e }, e)),
                     a &&
                         (0, n.jsx)(u.XZJ, {
                             value: t,
@@ -41,7 +41,7 @@ function _() {
                         })
                 ]
             }),
-            (0, n.jsx)(O, {}),
+            (0, n.jsx)(C, {}),
             (0, n.jsx)(S, {}),
             i &&
                 (0, n.jsx)(u.zxk, {
@@ -53,7 +53,7 @@ function _() {
         ]
     });
 }
-let C = (e) => {
+let O = (e) => {
         var t;
         let { filter: r } = e,
             l = {
@@ -72,7 +72,7 @@ let C = (e) => {
             })
         });
     },
-    O = () => {
+    C = () => {
         let e = l.useMemo(
                 () => [
                     {
