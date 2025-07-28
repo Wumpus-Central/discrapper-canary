@@ -2,7 +2,7 @@ n.d(t, { Z: () => y });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    a = n(755721),
+    a = n(680018),
     o = n(481060),
     s = n(410030),
     c = n(739566),
@@ -74,18 +74,21 @@ function y(e) {
           (null == F ? void 0 : F.isViewable) &&
               B &&
               !V &&
-              (T = (0, r.jsx)(a.zx, {
+              (T = (0, r.jsx)('div', {
                   className: O.action,
-                  onClick: () => {
-                      h.X(P, w, {
-                          shouldClear: !z,
-                          onError: () => {
-                              (0, o.showToast)((0, o.createToast)(v.intl.string(v.t.F8FvU1), o.ToastType.FAILURE));
-                          }
-                      });
-                  },
-                  submitting: M,
-                  children: v.intl.string(z ? v.t.o6850d : v.t['/ubFp6'])
+                  children: (0, r.jsx)(a.z, {
+                      variant: 'primary',
+                      text: v.intl.string(z ? v.t.o6850d : v.t['/ubFp6']),
+                      loading: M,
+                      onClick: () => {
+                          h.X(P, w, {
+                              shouldClear: !z,
+                              onError: () => {
+                                  (0, o.showToast)((0, o.createToast)(v.intl.string(v.t.F8FvU1), o.ToastType.FAILURE));
+                              }
+                          });
+                      }
+                  })
               })),
           (0, r.jsx)(E.Z, {
               channel: P,

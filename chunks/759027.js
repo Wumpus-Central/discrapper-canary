@@ -77,8 +77,8 @@ function y(e) {
         [E, S] = r.useState(!1),
         [P, w] = r.useState(!1),
         [I, R] = r.useState(!1),
-        [k, Z] = r.useState(!1),
-        [A, D] = r.useState(null),
+        [k, A] = r.useState(!1),
+        [Z, D] = r.useState(null),
         L = (e) => ((null == e && (e = N.status), e in j) ? j[e] : 'Unknown status '.concat(e)),
         M = (e) => {
             let t = new Date(e);
@@ -261,7 +261,7 @@ function y(e) {
                     children: [
                         (0, n.jsxs)(o.P3F, {
                             onClick: () => {
-                                Z(!k);
+                                A(!k);
                             },
                             className: v.collapsablePaneHeader,
                             children: [
@@ -394,11 +394,11 @@ function y(e) {
                                             text: 'Renew Subscription',
                                             onClick: (e) => F()
                                         }),
-                                        null !== A &&
+                                        null !== Z &&
                                             (0, n.jsx)(o.kzN, {
                                                 className: v.error,
                                                 onDismiss: () => D(null),
-                                                children: A
+                                                children: Z
                                             })
                                     ]
                                 }),

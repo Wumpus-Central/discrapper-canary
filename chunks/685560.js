@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => S }), a(388685), a(410992), a(227481), a(730884), a(20464), a(341884), a(364341), a(629680), a(505025), a(918970), a(121784), a(644351), a(146733));
+(a.d(t, { Z: () => P }), a(388685), a(410992), a(227481), a(730884), a(20464), a(341884), a(364341), a(629680), a(505025), a(918970), a(121784), a(644351), a(146733));
 var n = a(255367),
     r = a(913527),
     l = a.n(r),
@@ -18,10 +18,11 @@ var n = a(255367),
     j = a(914010),
     g = a(981631),
     _ = a(444048);
-let y = [o.z.GUILD_POWERUP_PERKS_COACHMARK, o.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK, o.z.GUILD_POWERUP_NOTIFICATION, o.z.GUILD_TAG_AVAILABLE_COACHMARK],
+let y = [o.z.GUILD_POWERUP_PERKS_COACHMARK, o.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK, o.z.GUILD_POWERUP_NOTIFICATION, o.z.GUILD_TAG_AVAILABLE_COACHMARK, o.z.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK],
     C = [o.C.GUILD_POWERUP_LEVEL_1_COACHMARK, o.C.GUILD_POWERUP_LEVEL_2_COACHMARK, o.C.GUILD_POWERUP_LEVEL_3_COACHMARK, o.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK],
-    O = [o.C.ADOPT_CLAN_IDENTITY_NOTICE];
-function N(e) {
+    O = [o.C.ADOPT_CLAN_IDENTITY_NOTICE],
+    N = [o.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION, o.z.VANITY_URL_POWERUP_ROLLBACK_MODAL, o.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER];
+function T(e) {
     switch (e) {
         case o.C.GUILD_POWERUP_LEVEL_1_COACHMARK:
             return 'GUILD_POWERUP_LEVEL_1_COACHMARK';
@@ -37,7 +38,7 @@ function N(e) {
             return 'ADOPT_CLAN_IDENTITY_NOTICE';
     }
 }
-async function T(e, t, a) {
+async function E(e, t, a) {
     (await Promise.all(
         t.map((e) =>
             s.tn.patch({
@@ -50,13 +51,13 @@ async function T(e, t, a) {
         (0, d.C0)(e),
         (0, p.Fm)(e, !0));
 }
-async function E(e) {
+async function S(e) {
     await s.tn.post({
         url: g.ANM.SEND_POWERUPS_SYSTEM_MESSAGE(e),
         rejectWithError: !0
     });
 }
-function S() {
+function P() {
     var e;
     let t = (0, i.e7)([j.Z], () => j.Z.getGuildId()),
         a = (0, i.e7)([v.Z], () => {
@@ -132,14 +133,14 @@ function S() {
                                     variant: 'primary',
                                     text: 'Set Half Boosts expiring in 1 day',
                                     onClick: () => {
-                                        T(t, s.slice(Math.floor(s.length / 2)), !1);
+                                        E(t, s.slice(Math.floor(s.length / 2)), !1);
                                     }
                                 }),
                                 (0, n.jsx)(c.zxk, {
                                     variant: 'primary',
                                     text: 'Reset End Date',
                                     onClick: () => {
-                                        T(t, s, !0);
+                                        E(t, s, !0);
                                     }
                                 })
                             ]
@@ -187,7 +188,7 @@ function S() {
                                     value: r.includes(e),
                                     children: (0, n.jsx)(c.Text, {
                                         variant: 'text-sm/normal',
-                                        children: N(e)
+                                        children: T(e)
                                     })
                                 },
                                 e
@@ -213,10 +214,32 @@ function S() {
                                     value: r.includes(e),
                                     children: (0, n.jsx)(c.Text, {
                                         variant: 'text-sm/normal',
-                                        children: N(e)
+                                        children: T(e)
                                     })
                                 },
                                 e
+                            )
+                        )
+                    ]
+                }),
+                (0, n.jsxs)('div', {
+                    className: _.section,
+                    children: [
+                        (0, n.jsx)(c.Text, {
+                            variant: 'eyebrow',
+                            className: _.header,
+                            children: 'Reset Powerup Rollback DCs'
+                        }),
+                        N.map((e) =>
+                            (0, n.jsx)(
+                                u.u,
+                                {
+                                    className: _.formSwitch,
+                                    contents: l,
+                                    content: o.z[e],
+                                    onChange: () => {}
+                                },
+                                o.z[e]
                             )
                         )
                     ]
@@ -233,7 +256,7 @@ function S() {
                             variant: 'primary',
                             text: 'Send System Message',
                             onClick: () => {
-                                E(t);
+                                S(t);
                             }
                         })
                     ]

@@ -102,6 +102,11 @@ class eb {
     getAllWindowIds(e) {
         return null == this.channelWindowIds[e] ? [] : Array.from(this.channelWindowIds[e]);
     }
+    getAllChannelIdsForWindowId(e) {
+        let t = new Set();
+        for (let [n, r] of G.default.entries(this.channelWindowIds)) r.has(e) && t.add(n);
+        return Array.from(t);
+    }
     isAnyWindowFocused(e) {
         let t = this.channelWindowIds[e];
         if (null == t) return !1;
@@ -1618,6 +1623,9 @@ class tJ extends (i = l.ZP.Store) {
     getSnapshot(e, t) {
         let n = ek.get(e);
         return null == n.snapshot || Date.now() - n.snapshot.takenAt > t ? n.takeSnapshot() : n.snapshot;
+    }
+    getChannelIdsForWindowId(e) {
+        return ey.getAllChannelIdsForWindowId(e);
     }
 }
 eo(tJ, 'displayName', 'ReadStateStore');

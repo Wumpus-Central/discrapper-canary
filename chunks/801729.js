@@ -1,12 +1,12 @@
 n.d(t, {
     Dv: () => p,
-    G2: () => O,
-    IG: () => b,
-    NG: () => g,
-    OV: () => m,
-    fW: () => v,
-    lB: () => y,
-    mA: () => E
+    G2: () => y,
+    IG: () => E,
+    NG: () => m,
+    OV: () => h,
+    fW: () => O,
+    lB: () => b,
+    mA: () => g
 });
 var r = n(255367);
 n(73800);
@@ -93,24 +93,14 @@ let p = {
     SQUARE: ''
 };
 function h(e) {
-    switch (e) {
-        case 1:
-        case 4:
-        case 6:
-            return 1;
-        default:
-            return;
-    }
-}
-function m(e) {
     return e < 10 ? 16 : e < 100 ? 22 : 30;
 }
-function g(e) {
+function m(e) {
     return e < 1000 ? ''.concat(e) : ''.concat(Math.min(Math.floor(e / 1000), 9), 'k+');
 }
-let E = (e) => {
+let g = (e) => {
         var { count: t, color: n = o.Z.STATUS_DANGER, disableColor: i = !1, shape: l = p.ROUND, className: u, style: _ } = e,
-            E = f(e, ['count', 'color', 'disableColor', 'shape', 'className', 'style']);
+            g = f(e, ['count', 'color', 'disableColor', 'shape', 'className', 'style']);
         return (0, r.jsx)(
             'div',
             d(
@@ -120,19 +110,18 @@ let E = (e) => {
                         style: c(
                             {
                                 backgroundColor: i ? void 0 : n,
-                                width: m(t),
-                                paddingRight: h(t)
+                                width: h(t)
                             },
                             _
                         )
                     },
-                    E
+                    g
                 ),
-                { children: g(t) }
+                { children: m(t) }
             )
         );
     },
-    b = (e) => {
+    E = (e) => {
         var { text: t, className: n, color: i = o.Z.STATUS_DANGER, shape: l = p.ROUND, disableColor: u = !1, style: _ } = e,
             h = f(e, ['text', 'className', 'color', 'shape', 'disableColor', 'style']);
         return (0, r.jsx)(
@@ -149,11 +138,11 @@ let E = (e) => {
             )
         );
     },
-    y = (e) => {
+    b = (e) => {
         var { text: t, className: n } = e,
             i = f(e, ['text', 'className']);
         return (0, r.jsx)(
-            b,
+            E,
             c(
                 {
                     className: a()(s.premiumBadge, n),
@@ -163,7 +152,7 @@ let E = (e) => {
             )
         );
     },
-    O = (e) => {
+    y = (e) => {
         let { icon: t, className: n, color: i = o.Z.STATUS_DANGER, shape: l = p.ROUND, disableColor: u = !1, style: d } = e;
         return (0, r.jsx)('div', {
             className: a()(n, s.iconBadge, l),
@@ -174,7 +163,7 @@ let E = (e) => {
             })
         });
     },
-    v = (e) => {
+    O = (e) => {
         var { className: t, color: n = o.Z.INTERACTIVE_ACTIVE, shape: i = p.ROUND, disableColor: l = !1, style: u } = e,
             d = f(e, ['className', 'color', 'shape', 'disableColor', 'style']);
         return (0, r.jsx)(

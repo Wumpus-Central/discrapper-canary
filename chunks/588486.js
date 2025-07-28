@@ -327,6 +327,7 @@ class E extends o.C {
         let t = {
             id: 0,
             label: '',
+            targetAllocation: 0,
             allocations: [],
             type: 0
         };
@@ -351,6 +352,9 @@ class E extends o.C {
                 case 2:
                     a.label = e.string();
                     break;
+                case 3:
+                    a.targetAllocation = e.int32();
+                    break;
                 case 4:
                     a.allocations.push(O.internalBinaryRead(e, e.uint32(), n));
                     break;
@@ -367,7 +371,7 @@ class E extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        (0 !== e.id && t.tag(1, r.TD.Varint).int32(e.id), '' !== e.label && t.tag(2, r.TD.LengthDelimited).string(e.label));
+        (0 !== e.id && t.tag(1, r.TD.Varint).int32(e.id), '' !== e.label && t.tag(2, r.TD.LengthDelimited).string(e.label), 0 !== e.targetAllocation && t.tag(3, r.TD.Varint).int32(e.targetAllocation));
         for (let i = 0; i < e.allocations.length; i++) O.internalBinaryWrite(e.allocations[i], t.tag(4, r.TD.LengthDelimited).fork(), n).join();
         0 !== e.type && t.tag(5, r.TD.Varint).int32(e.type);
         let i = n.writeUnknownFields;
@@ -386,6 +390,12 @@ class E extends o.C {
                 name: 'label',
                 kind: 'scalar',
                 T: 9
+            },
+            {
+                no: 3,
+                name: 'target_allocation',
+                kind: 'scalar',
+                T: 5
             },
             {
                 no: 4,

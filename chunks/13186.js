@@ -8,7 +8,7 @@ var r,
     o = n(120356),
     a = n.n(o),
     s = n(990547),
-    c = n(755721),
+    c = n(680018),
     u = n(481060),
     d = n(213609),
     h = n(341402),
@@ -52,13 +52,13 @@ let f = l.forwardRef(function (e, t) {
                     }),
                     (0, i.jsx)('div', {
                         className: h.buttonContainer,
-                        children: (0, i.jsx)(c.zx, {
-                            className: h.button,
+                        children: (0, i.jsx)(c.z, {
+                            variant: 'primary',
+                            text: o,
+                            fullWidth: !0,
                             onClick: (e) => {
                                 null == p || p(e);
-                            },
-                            color: c.zx.Colors.BRAND,
-                            children: o
+                            }
                         })
                     }),
                     (0, i.jsx)('div', { className: a()(h.pointer, { [h.pointerBottom]: 'bottom' === g }) })
