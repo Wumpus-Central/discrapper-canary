@@ -128,14 +128,12 @@ function eu(e) {
                 : null,
             x
                 ? (0, r.jsx)(w.Z, {
-                      className: ei.rightTrayIcon,
                       popoutWindowAlwaysOnTop: o,
                       onToggleStayOnTop: ec
                   })
                 : null,
             f
                 ? (0, r.jsx)(A.Z, {
-                      className: ei.rightTrayIcon,
                       popoutOpen: l,
                       onOpenPopout: () => {
                           ((0, O.v)(u, O.d.POPOUT, !0), eo(t, p)());

@@ -86,7 +86,6 @@ function G(e) {
         l = (0, o.e7)([Z.Z], () => Z.Z.getLayout(n.id, i));
     return (0, r.jsx)(I.Z, {
         children: (0, r.jsx)(w.Z, {
-            className: U.participants,
             participant: t,
             maxVisibleUsers: 5,
             guildId: n.getGuildId(),
@@ -246,7 +245,9 @@ function W(e) {
                         onDoubleClick: x.O,
                         transparent: !0,
                         showToolbar: !_,
-                        className: e,
+                        className: a()(e, U.headerBar),
+                        innerClassName: U.headerBarChildren,
+                        toolbarClassName: U.toolbar,
                         childrenBottom: V,
                         toolbar: (0, r.jsx)(A.Z, {
                             channel: t,
@@ -256,15 +257,16 @@ function W(e) {
                             exitFullScreen: g
                         }),
                         children: [
-                            null != S
-                                ? (0, r.jsx)(C.ZP.ChannelIcon, {
-                                      icon: S,
-                                      'aria-label': N
-                                  })
-                                : null,
                             (0, r.jsx)(C.ZP.Title, {
+                                wrapperClassName: U.title,
                                 children: (0, r.jsxs)(r.Fragment, {
                                     children: [
+                                        null != S
+                                            ? (0, r.jsx)(C.ZP.ChannelIcon, {
+                                                  icon: S,
+                                                  'aria-label': N
+                                              })
+                                            : null,
                                         y,
                                         Y &&
                                             (0, r.jsx)(s.ua7, {

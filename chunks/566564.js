@@ -107,7 +107,7 @@ let L = (e) => {
                     })
                 ]
             });
-        let w = (e, t) => {
+        let B = (e, t) => {
             if (null == e) return null;
             let l = null;
             switch (e.type) {
@@ -190,7 +190,7 @@ let L = (e) => {
                 t
             );
         };
-        return (0, n.jsx)(n.Fragment, { children: I.map((e, t) => w(e, t)) });
+        return (0, n.jsx)(n.Fragment, { children: I.map((e, t) => B(e, t)) });
     },
     k = (e) => {
         let { isFullScreen: t, handleTransition: r, tab: i, transitionState: a } = e,

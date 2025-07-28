@@ -30,12 +30,12 @@ function k(e) {
     var t;
     let { isFetchingCategories: r, isFullScreen: k, scrollerRef: I, tab: N } = e,
         A = (0, d.sp)(),
-        w = null != (t = null == A ? void 0 : A.sessionId) ? t : '',
-        { noCache: B, includeUnpublished: R } = (0, _.Z)(),
+        B = null != (t = null == A ? void 0 : A.sessionId) ? t : '',
+        { noCache: w, includeUnpublished: R } = (0, _.Z)(),
         Z = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
         D = (0, o.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
-        [F, M] = l.useState(1),
-        H = () => {
+        [F, H] = l.useState(1),
+        M = () => {
             var e;
             null == I || null == (e = I.current) || e.scrollToTop({ animate: !0 });
         },
@@ -67,25 +67,25 @@ function k(e) {
         K = (0, g.l)(Y);
     return (l.useEffect(() => {
         (0, h.n)({
-            sessionId: w,
+            sessionId: B,
             checkpoint: h.a.SHOP_MOUNTED,
             tab: N,
             isFullScreen: k,
             unpublishedCategoriesShown: R,
-            cacheDisabled: B
+            cacheDisabled: w
         });
     }, []),
     l.useEffect(() => {
         r ||
             (0, h.n)({
-                sessionId: w,
+                sessionId: B,
                 checkpoint: h.a.SHOP_RENDERED,
                 tab: N,
                 isFullScreen: k,
                 unpublishedCategoriesShown: R,
-                cacheDisabled: B
+                cacheDisabled: w
             });
-    }, [w, k, R, B, r, N]),
+    }, [B, k, R, w, r, N]),
     r || null == Z)
         ? (0, n.jsx)(b.Z, {})
         : (0, n.jsxs)(n.Fragment, {
@@ -132,7 +132,7 @@ function k(e) {
                                   totalCount: K.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {
-                                      (M(e), H());
+                                      (H(e), M());
                                   },
                                   disablePaginationGap: !0
                               })

@@ -32,7 +32,7 @@ function _(e) {
         { bot: h } = null != p ? p : { bot: null };
     return r.useMemo(
         () =>
-            s
+            s && null != t
                 ? d(t) && null != l
                     ? () => {
                           (0, i.W)({

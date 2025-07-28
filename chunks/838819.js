@@ -30,8 +30,8 @@ var n = r(255367),
     I = r(681435),
     N = r(215023),
     A = r(981631),
-    w = r(420212),
-    B = r(484920);
+    B = r(420212),
+    w = r(484920);
 let R = (e) => {
         let { children: t, shouldAddEventListener: r, onClose: n } = e,
             i = (0, c.f9)();
@@ -39,7 +39,7 @@ let R = (e) => {
             l.useEffect(() => {
                 if (!r || i) return;
                 let e = (e) => {
-                    e.key === w.mR.Escape && n();
+                    e.key === B.mR.Escape && n();
                 };
                 return (window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e));
             }, [r, i, n]),
@@ -51,29 +51,29 @@ let R = (e) => {
         (0, h.z)(g.f);
         let i = (0, p.Z)((0, a.Z)()),
             c = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
-            { closeIntroToOrbsClaimedCoachmark: w } = (0, m.Z)({ location: 'CollectiblesShop' });
+            { closeIntroToOrbsClaimedCoachmark: B } = (0, m.Z)({ location: 'CollectiblesShop' });
         l.useEffect(
             () => () => {
-                w();
+                B();
             },
-            [i, w]
+            [i, B]
         );
         let { onClose: Z } = (0, k.Db)(),
             { currentTab: D, hasFilters: F } = (0, j.S)(),
-            M = l.useMemo(() => (r === N.AW.HOME && D && F() ? D : r), [r, D, F]),
-            { categories: H, refreshCategories: W } = (0, S.ZP)(
+            H = l.useMemo(() => (r === N.AW.HOME && D && F() ? D : r), [r, D, F]),
+            { categories: M, refreshCategories: W } = (0, S.ZP)(
                 {
                     location: 'CollectiblesShop.web',
                     logPerf: !0
                 },
                 {
                     sessionId: i,
-                    tab: M,
+                    tab: H,
                     isFullScreen: t
                 }
             );
         (0, b.D)();
-        let V = (0, y.O)(H),
+        let V = (0, y.O)(M),
             [U, z] = l.useState(),
             G = (0, s.e7)([v.Z], () => {
                 var e;
@@ -84,7 +84,7 @@ let R = (e) => {
         let K = l.useCallback((e, t) => {
                 (Y(e), z(t));
             }, []),
-            { selectedTab: X, transitionState: J, transitionToTab: Q } = (0, x.B)(M, t);
+            { selectedTab: X, transitionState: J, transitionToTab: Q } = (0, x.B)(H, t);
         ((0, E.q3)(i, X, G, J, q), (0, E.EB)(X, c));
         let { dismissShopButtonDC: $ } = (0, I.Z)();
         (l.useEffect(() => {
@@ -120,14 +120,14 @@ let R = (e) => {
                           onClose: Z,
                           shouldAddEventListener: t && !ee,
                           children: (0, n.jsx)('div', {
-                              className: B.shop,
+                              className: w.shop,
                               ref: t ? et : er,
                               tabIndex: -1,
                               children: (0, n.jsxs)('div', {
-                                  className: o()(B.shopViewWrapper, {
-                                      [B.visible]: J === N.f7.VISIBLE,
-                                      [B.in]: J === N.f7.IN,
-                                      [B.out]: J === N.f7.OUT
+                                  className: o()(w.shopViewWrapper, {
+                                      [w.visible]: J === N.f7.VISIBLE,
+                                      [w.in]: J === N.f7.IN,
+                                      [w.out]: J === N.f7.OUT
                                   }),
                                   children: [
                                       (0, n.jsx)(L.I, {

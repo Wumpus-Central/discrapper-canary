@@ -30,11 +30,11 @@ let P = (e) => {
         I = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
         N = h.ZP.canUseCollectibles(I),
         A = (0, _.s)('useShopHomeSorting') && k === y.AW.HOME,
-        { sortType: w, setSortType: B, sortedItems: R, sortOptions: Z, shuffleProducts: D, showRecommendationOption: F } = (0, O.N)(i, N),
-        M = (0, S.St)(R),
-        H = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
+        { sortType: B, setSortType: w, sortedItems: R, sortOptions: Z, shuffleProducts: D, showRecommendationOption: F } = (0, O.N)(i, N),
+        H = (0, S.St)(R),
+        M = (0, a.e7)([u.Z], () => u.Z.useReducedMotion),
         W = (0, a.e7)([p.Z], () => p.Z.isFocused()),
-        V = !H && W,
+        V = !M && W,
         { animationPhase: U, startAnimation: z } = (0, E.y)(),
         G = (0, b.sp)(),
         q = null != (t = null == G ? void 0 : G.sessionId) ? t : '',
@@ -43,14 +43,14 @@ let P = (e) => {
             (e) => {
                 (z({
                     isShuffling: !1,
-                    onOutroComplete: () => B(e)
+                    onOutroComplete: () => w(e)
                 }),
                     f.default.track(x.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: q,
                         sort_type: e
                     }));
             },
-            [z, B, q]
+            [z, w, q]
         );
     return null == I
         ? null
@@ -139,7 +139,7 @@ let P = (e) => {
                                                   options: Z,
                                                   select: K,
                                                   className: T.sortSelect,
-                                                  isSelected: (e) => e === w,
+                                                  isSelected: (e) => e === B,
                                                   serialize: (e) => e
                                               })
                                           ]
@@ -173,7 +173,7 @@ let P = (e) => {
                       className: T.feed,
                       children: r
                           ? (0, n.jsx)(n.Fragment, { children: [...Array(12)].map((e, t) => (0, n.jsx)(C.K, {}, t + 1)) })
-                          : M.slice(0, L).map((e, t) => {
+                          : H.slice(0, L).map((e, t) => {
                                 let r,
                                     l = m.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;

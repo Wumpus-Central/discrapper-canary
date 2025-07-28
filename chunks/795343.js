@@ -30,12 +30,12 @@ function v(e) {
             var e;
             null == v || null == (e = v.current) || e.scrollToTop({ animate: !0 });
         }, [v]),
-        w = null == P ? void 0 : P.join('');
+        B = null == P ? void 0 : P.join('');
     l.useEffect(() => {
         A();
-    }, [w, A]);
-    let B = (0, p.a)(),
-        R = l.useMemo(() => B(N), [B, N]);
+    }, [B, A]);
+    let w = (0, p.a)(),
+        R = l.useMemo(() => w(N), [w, N]);
     l.useEffect(() => {
         r ||
             (0, h.n)({
@@ -48,14 +48,14 @@ function v(e) {
             });
     }, [y, i, j, x, r, E]);
     let Z = l.useRef(null),
-        { setQueryPageSize: D, setQueryPageOffset: F, queryPageSize: M } = (0, f.S)(),
-        [H, W] = l.useState(!1),
+        { setQueryPageSize: D, setQueryPageOffset: F, queryPageSize: H } = (0, f.S)(),
+        [M, W] = l.useState(!1),
         V = r || I || null == T;
     l.useEffect(() => {
         if (V) return void W(!1);
         R.length > 0 && W(!0);
     }, [V, R.length]);
-    let U = M > 0 && !V && 0 === R.length;
+    let U = H > 0 && !V && 0 === R.length;
     return (
         l.useEffect(() => {
             let e = new ResizeObserver(() => {
@@ -70,10 +70,10 @@ function v(e) {
                     children: [
                         U && (0, n.jsx)(O.Z, {}),
                         (0, n.jsxs)('div', {
-                            className: o()(C.products, { [C.loadIn]: H }),
+                            className: o()(C.products, { [C.loadIn]: M }),
                             ref: Z,
                             children: [
-                                V && [...Array(M)].map((e, t) => (0, n.jsx)(b.K, {}, t)),
+                                V && [...Array(H)].map((e, t) => (0, n.jsx)(b.K, {}, t)),
                                 !V &&
                                     R.map((e, t) => {
                                         let r = d.Z.getCategory(e.categorySkuId);
@@ -101,16 +101,16 @@ function v(e) {
                         })
                     ]
                 }),
-                k > M &&
+                k > H &&
                     (0, n.jsx)('div', {
                         className: C.paginationContainer,
                         children: (0, n.jsx)('div', {
                             children: (0, n.jsx)(s.DsT, {
                                 currentPage: L,
                                 totalCount: k,
-                                pageSize: M,
+                                pageSize: H,
                                 onPageChange: (e) => {
-                                    F((e - 1) * M);
+                                    F((e - 1) * H);
                                 },
                                 disablePaginationGap: !0
                             })

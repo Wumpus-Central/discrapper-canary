@@ -313,40 +313,51 @@ function eX(e) {
                                     children: (e) =>
                                         (0, r.jsx)(
                                             g.zx,
-                                            eF(eH({ buttonRef: o }, u, e, c), {
-                                                onClick: (t) => {
-                                                    var n;
-                                                    (u.onClick(t), null == (n = e.onClick) || n.call(e), p && s(t));
-                                                },
-                                                onMouseEnter: () => {
-                                                    var t, n;
-                                                    (null == (t = e.onMouseEnter) || t.call(e), null == (n = c.onMouseEnter) || n.call(c), P.onMouseEnter());
-                                                },
-                                                onMouseLeave: () => {
-                                                    var t;
-                                                    (null == (t = e.onMouseLeave) || t.call(e), P.onMouseLeave());
-                                                },
-                                                onContextMenu: (t) => {
-                                                    var n;
-                                                    (s(t), null == (n = e.onContextMenu) || n.call(e));
-                                                },
-                                                size: g.zx.Sizes.MEDIUM,
-                                                className: a()(eG.button, eG.buttonColor, {
-                                                    [eG.buttonActive]: n,
-                                                    [eG.fauxDisabled]: t,
-                                                    [eG.disabled]: u.disabled
-                                                }),
-                                                innerClassName: eG.buttonContents,
-                                                wrapperClassName: eG.button,
-                                                fullWidth: !0,
-                                                focusProps: eW,
-                                                children: S
-                                                    ? d
-                                                    : (0, r.jsxs)(U.Z, {
-                                                          align: U.Z.Align.CENTER,
-                                                          children: [d, eU.intl.string(eU.t.FlNoSU)]
-                                                      })
-                                            })
+                                            eF(
+                                                eH(
+                                                    {
+                                                        'data-migration-pending': !0,
+                                                        buttonRef: o
+                                                    },
+                                                    u,
+                                                    e,
+                                                    c
+                                                ),
+                                                {
+                                                    onClick: (t) => {
+                                                        var n;
+                                                        (u.onClick(t), null == (n = e.onClick) || n.call(e), p && s(t));
+                                                    },
+                                                    onMouseEnter: () => {
+                                                        var t, n;
+                                                        (null == (t = e.onMouseEnter) || t.call(e), null == (n = c.onMouseEnter) || n.call(c), P.onMouseEnter());
+                                                    },
+                                                    onMouseLeave: () => {
+                                                        var t;
+                                                        (null == (t = e.onMouseLeave) || t.call(e), P.onMouseLeave());
+                                                    },
+                                                    onContextMenu: (t) => {
+                                                        var n;
+                                                        (s(t), null == (n = e.onContextMenu) || n.call(e));
+                                                    },
+                                                    size: g.zx.Sizes.MEDIUM,
+                                                    className: a()(eG.button, eG.buttonColor, {
+                                                        [eG.buttonActive]: n,
+                                                        [eG.fauxDisabled]: t,
+                                                        [eG.disabled]: u.disabled
+                                                    }),
+                                                    innerClassName: eG.buttonContents,
+                                                    wrapperClassName: eG.button,
+                                                    fullWidth: !0,
+                                                    focusProps: eW,
+                                                    children: S
+                                                        ? d
+                                                        : (0, r.jsxs)(U.Z, {
+                                                              align: U.Z.Align.CENTER,
+                                                              children: [d, eU.intl.string(eU.t.FlNoSU)]
+                                                          })
+                                                }
+                                            )
                                         )
                                 });
                             }
@@ -384,7 +395,7 @@ function eQ(e) {
                               g.zx,
                               eF(
                                   eH(
-                                      eF(eH({}, e), {
+                                      eF(eH({ 'data-migration-pending': !0 }, e), {
                                           fullWidth: !0,
                                           size: g.zx.Sizes.MEDIUM
                                       }),
@@ -493,7 +504,7 @@ function eJ(e) {
                         g.zx,
                         eF(
                             eH(
-                                eF(eH({}, e), {
+                                eF(eH({ 'data-migration-pending': !0 }, e), {
                                     buttonRef: c,
                                     size: g.zx.Sizes.MEDIUM,
                                     onClick: (r) => {
