@@ -1,15 +1,15 @@
 n.d(t, {
-    $: () => i,
+    $: () => l,
     w: () => s
 });
 var r,
-    a = n(73800),
-    o = n(626135),
-    l = n(981631),
+    o = n(73800),
+    a = n(626135),
+    i = n(981631),
     s = (((r = {}).DETAIL = 'Boost Perk Shop Details'), (r.DEACTIVATE = 'Boost Perk Shop Disable'), r);
-function i(e, t, n) {
-    a.useEffect(() => {
-        o.default.track(l.rMx.OPEN_MODAL, {
+function l(e, t, n) {
+    o.useEffect(() => {
+        a.default.track(i.rMx.OPEN_MODAL, {
             type: n,
             sku_id: t.skuId,
             guild_id: e

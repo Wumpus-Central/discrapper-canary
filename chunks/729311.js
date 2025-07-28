@@ -6,8 +6,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    s = n(481060),
-    a = n(852860),
+    a = n(481060),
+    s = n(852860),
     o = n(111028),
     c = n(977258),
     d = n(45966),
@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(454585),
     g = n(323502),
     p = n(958832),
-    f = n(324067),
-    h = n(984933),
+    h = n(324067),
+    f = n(984933),
     x = n(259580),
     b = n(999382),
     j = n(743475),
@@ -33,20 +33,20 @@ var r = n(255367),
     P = n(73433);
 function w(e) {
     let { guild: t } = e,
-        a = (0, l.e7)([d.Z], () => d.Z.getEnabled(t.id)),
-        f = (0, l.e7)([p.Z], () => p.Z.hasFetched(t.id)),
-        h = (0, y.Z)(t),
+        s = (0, l.e7)([d.Z], () => d.Z.getEnabled(t.id)),
+        h = (0, l.e7)([p.Z], () => p.Z.hasFetched(t.id)),
+        f = (0, y.Z)(t),
         x = (0, l.e7)([v.Z], () => v.Z.editedDefaultChannelIds),
-        b = h.filter((e) => !x.has(e.id)),
+        b = f.filter((e) => !x.has(e.id)),
         [_, O] = i.useState(!1);
     i.useEffect(() => {
-        f || a || (0, g.S)(t.id);
-    }, [t.id, f, a]);
+        h || s || (0, g.S)(t.id);
+    }, [t.id, h, s]);
     let C = (e) => {
-        (0, s.ZDy)(async () => {
+        (0, a.ZDy)(async () => {
             let { default: i } = await n.e('35641').then(n.bind(n, 89216));
             return (n) => {
-                var l, s;
+                var l, a;
                 return (0, r.jsx)(
                     i,
                     ((l = (function (e) {
@@ -74,13 +74,13 @@ function w(e) {
                         }
                         return e;
                     })({}, n)),
-                    (s = s =
+                    (a = a =
                         {
                             guildId: t.id,
                             startingChannelId: e
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
+                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -88,8 +88,8 @@ function w(e) {
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(s)).forEach(function (e) {
-                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(s, e));
+                          })(Object(a)).forEach(function (e) {
+                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                           }),
                     l)
                 );
@@ -101,7 +101,7 @@ function w(e) {
         : (0, r.jsxs)('div', {
               className: T.recommendations,
               children: [
-                  (0, r.jsx)(s.Text, {
+                  (0, r.jsx)(a.Text, {
                       variant: 'text-md/medium',
                       color: 'header-primary',
                       children: S.intl.string(S.t.NN7rDw)
@@ -109,21 +109,21 @@ function w(e) {
                   (0, r.jsxs)('div', {
                       className: T.recsSubheader,
                       children: [
-                          (0, r.jsx)(s.Text, {
+                          (0, r.jsx)(a.Text, {
                               variant: 'text-xs/normal',
                               color: 'text-muted',
                               children: S.intl.string(S.t['3Uuql5'])
                           }),
-                          (0, r.jsxs)(s.P3F, {
+                          (0, r.jsxs)(a.P3F, {
                               className: T.dismissAll,
                               onClick: () => O(!0),
                               children: [
-                                  (0, r.jsx)(s.dz2, {
+                                  (0, r.jsx)(a.dz2, {
                                       size: 'xxs',
                                       color: 'currentColor',
                                       className: T.checkmark
                                   }),
-                                  (0, r.jsx)(s.Text, {
+                                  (0, r.jsx)(a.Text, {
                                       className: T.dismissAllText,
                                       variant: 'text-xs/medium',
                                       color: 'text-brand',
@@ -153,7 +153,7 @@ function w(e) {
                                                           }),
                                                           (0, r.jsx)(o.Z, {
                                                               className: T.__invalid_name,
-                                                              children: (0, r.jsx)(s.Text, {
+                                                              children: (0, r.jsx)(a.Text, {
                                                                   className: T.__invalid_channelText,
                                                                   variant: 'text-md/medium',
                                                                   lineClamp: 1,
@@ -168,7 +168,7 @@ function w(e) {
                                                             o.Z,
                                                             {
                                                                 className: P.markup,
-                                                                children: (0, r.jsx)(s.Text, {
+                                                                children: (0, r.jsx)(a.Text, {
                                                                     className: T.topic,
                                                                     variant: 'text-xs/normal',
                                                                     children: m.Z.parseTopic(e.topic, !0, { channelId: e.id })
@@ -180,17 +180,17 @@ function w(e) {
                                               ]
                                           }),
                                           (0, c.s)(t.id, e.id)
-                                              ? (0, r.jsx)(s.zxk, {
+                                              ? (0, r.jsx)(a.zxk, {
                                                     size: 'sm',
                                                     variant: 'primary',
                                                     text: S.intl.string(S.t.OYkgVl),
                                                     onClick: () => (0, j.pt)(e.id)
                                                 })
-                                              : (0, r.jsx)(s.zxk, {
+                                              : (0, r.jsx)(a.zxk, {
                                                     size: 'sm',
                                                     variant: 'secondary',
                                                     text: S.intl.string(S.t.zA9d1N),
-                                                    icon: s.mBM,
+                                                    icon: a.mBM,
                                                     iconPosition: 'start',
                                                     onClick: () => C(e.id)
                                                 })
@@ -208,9 +208,9 @@ function w(e) {
 function R(e) {
     let { saveOnClose: t = !1 } = e,
         n = (0, l.e7)([b.Z], () => b.Z.getGuild()),
-        a = (0, l.e7)([d.Z], () => d.Z.isLoading()),
-        o = (0, l.e7)([h.ZP], () => h.ZP.getChannels(null == n ? void 0 : n.id)),
-        c = (0, l.e7)([f.Z], () => f.Z.getCategories(null == n ? void 0 : n.id)),
+        s = (0, l.e7)([d.Z], () => d.Z.isLoading()),
+        o = (0, l.e7)([f.ZP], () => f.ZP.getChannels(null == n ? void 0 : n.id)),
+        c = (0, l.e7)([h.Z], () => h.Z.getCategories(null == n ? void 0 : n.id)),
         u = (0, l.e7)([O.Z], () => O.Z.advancedMode),
         m = i.useRef(null),
         [g, p] = i.useState(!1),
@@ -233,15 +233,15 @@ function R(e) {
     }, [t, u]),
     null == n)
         ? null
-        : a
-          ? (0, r.jsx)(s.$jN, {})
+        : s
+          ? (0, r.jsx)(a.$jN, {})
           : (0, r.jsxs)('div', {
                 className: T.columns,
                 children: [
                     (0, r.jsxs)('div', {
                         className: T.channelBrowser,
                         children: [
-                            (0, r.jsx)(s.P3F, {
+                            (0, r.jsx)(a.P3F, {
                                 className: T.collapseButton,
                                 onClick: () => p((e) => !e),
                                 children: (0, r.jsx)(x.Z, {
@@ -250,12 +250,12 @@ function R(e) {
                                     width: 16
                                 })
                             }),
-                            (0, r.jsx)(s.X6q, {
+                            (0, r.jsx)(a.X6q, {
                                 className: T.header,
                                 variant: 'heading-lg/extrabold',
                                 children: S.intl.string(S.t['4GSygo'])
                             }),
-                            (0, r.jsx)(s.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
                                 children: S.intl.string(S.t.Kq7FAQ)
@@ -282,12 +282,12 @@ function R(e) {
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)('div', { className: T.largeSeparator }),
-                                        (0, r.jsx)(s.X6q, {
+                                        (0, r.jsx)(a.X6q, {
                                             className: T.prejoinHeader,
                                             variant: 'heading-lg/extrabold',
                                             children: S.intl.string(S.t.g2Rnpa)
                                         }),
-                                        (0, r.jsx)(s.Text, {
+                                        (0, r.jsx)(a.Text, {
                                             className: T.prejoinSubHeader,
                                             variant: 'text-sm/normal',
                                             color: 'header-secondary',
@@ -322,7 +322,7 @@ function Z() {
         n = (0, l.e7)([O.Z], () => O.Z.advancedMode);
     return null == e
         ? null
-        : (0, r.jsx)(a.Z, {
+        : (0, r.jsx)(s.Z, {
               onSave: () => {
                   (0, j.DO)(e)
                       .then(() => {

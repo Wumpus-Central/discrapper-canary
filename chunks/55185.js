@@ -1,6 +1,6 @@
 (n.d(t, {
     I: () => A,
-    N: () => T
+    N: () => Z
 }),
     n(388685));
 var r,
@@ -236,7 +236,7 @@ function w(e) {
         ]
     });
 }
-function Z(e) {
+function T(e) {
     let { closePopout: t } = e,
         n = d.G6.useSetting(),
         { showLinkToSettings: r } = (0, g.D)('popout');
@@ -257,7 +257,7 @@ function Z(e) {
         ]
     });
 }
-var T = (((r = {})[(r.ActivityNux = 0)] = 'ActivityNux'), (r[(r.StatusNux = 1)] = 'StatusNux'), (r[(r.ActivityAndStatusNux = 2)] = 'ActivityAndStatusNux'), (r[(r.Activity = 3)] = 'Activity'), (r[(r.Status = 4)] = 'Status'), (r[(r.ActivityAndStatus = 5)] = 'ActivityAndStatus'), r);
+var Z = (((r = {})[(r.ActivityNux = 0)] = 'ActivityNux'), (r[(r.StatusNux = 1)] = 'StatusNux'), (r[(r.ActivityAndStatusNux = 2)] = 'ActivityAndStatusNux'), (r[(r.Activity = 3)] = 'Activity'), (r[(r.Status = 4)] = 'Status'), (r[(r.ActivityAndStatus = 5)] = 'ActivityAndStatus'), r);
 function A(e) {
     let { popoutState: t, closePopout: n, onOpen: r } = e,
         [o] = (0, l.useState)(t);
@@ -278,7 +278,7 @@ function A(e) {
         case 4:
             return (0, i.jsx)(w, { closePopout: n });
         case 5:
-            return (0, i.jsx)(Z, { closePopout: n });
+            return (0, i.jsx)(T, { closePopout: n });
         default:
             return null;
     }

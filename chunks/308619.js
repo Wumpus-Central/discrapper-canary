@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    s = n(852860),
-    a = n(699553),
+    a = n(852860),
+    s = n(699553),
     o = n(314852),
     c = n(434404),
     d = n(999382);
@@ -26,15 +26,15 @@ function u() {
                 gameApplicationIds: u.gameApplicationIds,
                 customBanner: u.customBanner
             };
-            (0, a.pV)(e.id, t);
+            (0, s.pV)(e.id, t);
         }, [e, u]),
-        f = i.useCallback(() => {
+        h = i.useCallback(() => {
             null != t && c.Z.init(t);
         }, [t]);
-    return (0, r.jsx)(s.Z, {
+    return (0, r.jsx)(a.Z, {
         submitting: m,
         errorMessage: g,
         onSave: p,
-        onReset: f
+        onReset: h
     });
 }

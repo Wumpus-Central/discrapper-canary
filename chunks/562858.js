@@ -1,10 +1,8 @@
 n.d(t, {
-    e: () => r,
-    h: () => i
+    e: () => l,
+    h: () => a
 });
-var r = (function (e) {
-        return ((e[(e.BASIC = 0)] = 'BASIC'), (e[(e.NONE = 1)] = 'NONE'), (e[(e.MULTIPLIER = 2)] = 'MULTIPLIER'), (e[(e.BOUNCING_LOGOS = 3)] = 'BOUNCING_LOGOS'), (e[(e.UPGRADES = 4)] = 'UPGRADES'), (e[(e.SUN = 5)] = 'SUN'), (e[(e.SNEK = 6)] = 'SNEK'), (e[(e.NAGBAR = 7)] = 'NAGBAR'), e);
-    })({}),
-    i = (function (e) {
-        return ((e[(e.ITEM = 0)] = 'ITEM'), (e[(e.ITEM_UPGRADE = 1)] = 'ITEM_UPGRADE'), e);
-    })({});
+var r,
+    i,
+    l = (((r = {})[(r.BASIC = 0)] = 'BASIC'), (r[(r.NONE = 1)] = 'NONE'), (r[(r.MULTIPLIER = 2)] = 'MULTIPLIER'), (r[(r.BOUNCING_LOGOS = 3)] = 'BOUNCING_LOGOS'), (r[(r.UPGRADES = 4)] = 'UPGRADES'), (r[(r.SUN = 5)] = 'SUN'), (r[(r.SNEK = 6)] = 'SNEK'), (r[(r.NAGBAR = 7)] = 'NAGBAR'), r),
+    a = (((i = {})[(i.ITEM = 0)] = 'ITEM'), (i[(i.ITEM_UPGRADE = 1)] = 'ITEM_UPGRADE'), i);

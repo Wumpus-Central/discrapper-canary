@@ -1,478 +1,476 @@
-n.d(t, {
-    EQ: () => d,
-    IG: () => _,
-    aC: () => c,
-    kf: () => f,
-    m$: () => u
+i.d(e, {
+    EQ: () => G,
+    IG: () => D,
+    aC: () => I,
+    kf: () => d,
+    m$: () => a
 });
-var r = n(230711),
-    i = n(197062),
-    a = n(727866),
-    o = n(63063),
-    s = n(981631),
-    l = n(388032),
-    c = (function (e) {
-        return ((e[(e.EMPTY_STATE = 0)] = 'EMPTY_STATE'), (e[(e.ADMINISTRATOR = 1)] = 'ADMINISTRATOR'), (e[(e.ROLE = 2)] = 'ROLE'), (e[(e.OWNER = 3)] = 'OWNER'), (e[(e.MEMBER = 4)] = 'MEMBER'), (e[(e.USER = 5)] = 'USER'), (e[(e.GUILD = 6)] = 'GUILD'), e);
-    })({}),
-    u = (function (e) {
-        return ((e[(e.ROLES = 0)] = 'ROLES'), (e[(e.MEMBERS = 1)] = 'MEMBERS'), (e[(e.USERS = 2)] = 'USERS'), (e[(e.GUILDS = 3)] = 'GUILDS'), e);
-    })({});
-let d = 20,
-    f = 'channelPermissionSettingsAdvancedModeOn';
-function _(e, t, n, c) {
-    let u = e.type;
+var r,
+    n,
+    E = i(230711),
+    l = i(197062),
+    s = i(727866),
+    S = i(63063),
+    _ = i(981631),
+    A = i(388032),
+    I = (((r = {})[(r.EMPTY_STATE = 0)] = 'EMPTY_STATE'), (r[(r.ADMINISTRATOR = 1)] = 'ADMINISTRATOR'), (r[(r.ROLE = 2)] = 'ROLE'), (r[(r.OWNER = 3)] = 'OWNER'), (r[(r.MEMBER = 4)] = 'MEMBER'), (r[(r.USER = 5)] = 'USER'), (r[(r.GUILD = 6)] = 'GUILD'), r),
+    a = (((n = {})[(n.ROLES = 0)] = 'ROLES'), (n[(n.MEMBERS = 1)] = 'MEMBERS'), (n[(n.USERS = 2)] = 'USERS'), (n[(n.GUILDS = 3)] = 'GUILDS'), n);
+let G = 20,
+    d = 'channelPermissionSettingsAdvancedModeOn';
+function D(t, e, i, r) {
+    let n = t.type;
     return {
-        [s.Plq.VIEW_CHANNEL.toString()]: {
-            title: u === s.d4z.GUILD_CATEGORY ? l.intl.string(l.t.uV83ys) : l.intl.string(l.t['W/A4Qk']),
+        [_.Plq.VIEW_CHANNEL.toString()]: {
+            title: n === _.d4z.GUILD_CATEGORY ? A.intl.string(A.t.uV83ys) : A.intl.string(A.t['W/A4Qk']),
             description: (() => {
-                if (t)
-                    switch (u) {
-                        case s.d4z.GUILD_CATEGORY:
-                            return l.t['o/vBzs'];
-                        case s.d4z.GUILD_VOICE:
-                        case s.d4z.GUILD_STAGE_VOICE:
-                            return l.t.ejL1Wl;
+                if (e)
+                    switch (n) {
+                        case _.d4z.GUILD_CATEGORY:
+                            return A.t['o/vBzs'];
+                        case _.d4z.GUILD_VOICE:
+                        case _.d4z.GUILD_STAGE_VOICE:
+                            return A.t.ejL1Wl;
                         default:
-                            return l.t['3jG0Bg'];
+                            return A.t['3jG0Bg'];
                     }
-                return u === s.d4z.GUILD_CATEGORY ? l.t.SzosGh : l.t.M2iEy8;
+                return n === _.d4z.GUILD_CATEGORY ? A.t.SzosGh : A.t.M2iEy8;
             })(),
-            flag: s.Plq.VIEW_CHANNEL
+            flag: _.Plq.VIEW_CHANNEL
         },
-        [s.Plq.MANAGE_CHANNELS.toString()]: {
-            title: u === s.d4z.GUILD_CATEGORY ? l.intl.string(l.t['9qLtWl']) : l.intl.string(l.t.nAw15O),
+        [_.Plq.MANAGE_CHANNELS.toString()]: {
+            title: n === _.d4z.GUILD_CATEGORY ? A.intl.string(A.t['9qLtWl']) : A.intl.string(A.t.nAw15O),
             description: (() => {
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return l.t.KJ2JnJ;
-                    case s.d4z.GUILD_VOICE:
-                        return l.t['+gl2nZ'];
-                    case s.d4z.GUILD_STAGE_VOICE:
-                        return l.t['SDX66+'];
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return A.t.KJ2JnJ;
+                    case _.d4z.GUILD_VOICE:
+                        return A.t['+gl2nZ'];
+                    case _.d4z.GUILD_STAGE_VOICE:
+                        return A.t['SDX66+'];
                     default:
-                        return l.t.ydL28v;
+                        return A.t.ydL28v;
                 }
             })(),
-            flag: s.Plq.MANAGE_CHANNELS
+            flag: _.Plq.MANAGE_CHANNELS
         },
-        [s.Plq.MANAGE_ROLES.toString()]: {
-            title: l.intl.string(l.t.ICb6am),
+        [_.Plq.MANAGE_ROLES.toString()]: {
+            title: A.intl.string(A.t.ICb6am),
             description: (() => {
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return l.t.TyyCMD;
-                    case s.d4z.GUILD_STAGE_VOICE:
-                        return l.t.hcw4m5;
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return A.t.TyyCMD;
+                    case _.d4z.GUILD_STAGE_VOICE:
+                        return A.t.hcw4m5;
                     default:
-                        return l.t.hOMXOj;
+                        return A.t.hOMXOj;
                 }
             })(),
-            flag: s.Plq.MANAGE_ROLES
+            flag: _.Plq.MANAGE_ROLES
         },
-        [s.Plq.MANAGE_WEBHOOKS.toString()]: {
-            title: l.intl.string(l.t['/ADKmJ']),
-            description: u === s.d4z.GUILD_CATEGORY ? l.t['K5+ZZ2'] : l.t.CYBZr6,
-            flag: s.Plq.MANAGE_WEBHOOKS
+        [_.Plq.MANAGE_WEBHOOKS.toString()]: {
+            title: A.intl.string(A.t['/ADKmJ']),
+            description: n === _.d4z.GUILD_CATEGORY ? A.t['K5+ZZ2'] : A.t.CYBZr6,
+            flag: _.Plq.MANAGE_WEBHOOKS
         },
-        [s.Plq.CREATE_INSTANT_INVITE.toString()]: {
-            title: l.intl.string(l.t.zJrgTE),
+        [_.Plq.CREATE_INSTANT_INVITE.toString()]: {
+            title: A.intl.string(A.t.zJrgTE),
             description: (() => {
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return l.t['3YFAAQ'];
-                    case s.d4z.GUILD_VOICE:
-                    case s.d4z.GUILD_STAGE_VOICE:
-                        return l.t.lUCs1t;
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return A.t['3YFAAQ'];
+                    case _.d4z.GUILD_VOICE:
+                    case _.d4z.GUILD_STAGE_VOICE:
+                        return A.t.lUCs1t;
                     default:
-                        return l.t.q4g2aG;
+                        return A.t.q4g2aG;
                 }
             })(),
-            flag: s.Plq.CREATE_INSTANT_INVITE
+            flag: _.Plq.CREATE_INSTANT_INVITE
         },
-        [s.Plq.SEND_MESSAGES.toString()]: {
-            title: s.TPd.GUILD_THREADS_ONLY.has(u) ? l.intl.string(l.t.nJwAHR) : n && u === s.d4z.GUILD_CATEGORY ? l.intl.string(l.t.S1VOwc) : l.intl.string(l.t.T32rkJ),
+        [_.Plq.SEND_MESSAGES.toString()]: {
+            title: _.TPd.GUILD_THREADS_ONLY.has(n) ? A.intl.string(A.t.nJwAHR) : i && n === _.d4z.GUILD_CATEGORY ? A.intl.string(A.t.S1VOwc) : A.intl.string(A.t.T32rkJ),
             description: (() => {
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return n ? l.t.IjeLur : l.t.qLnFpa;
-                    case s.d4z.GUILD_FORUM:
-                        return (null == c ? void 0 : c.createPostsDisabled) && !e.isMediaChannel() ? i.Z.getForumChannelPermissionText() : l.t.LG9VAg;
-                    case s.d4z.GUILD_MEDIA:
-                        return l.t.LG9VAg;
-                    case s.d4z.GUILD_ANNOUNCEMENT:
-                        return l.intl.format(l.t.WFwfSE, { articleURL: o.Z.getArticleURL(s.BhN.ANNOUNCEMENT_CHANNELS) });
-                    case s.d4z.GUILD_VOICE:
-                        return a.Z.getTextInVoiceSendMessageChannelPermissionText(null == c ? void 0 : c.sendMessagesDisabled);
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return i ? A.t.IjeLur : A.t.qLnFpa;
+                    case _.d4z.GUILD_FORUM:
+                        return (null == r ? void 0 : r.createPostsDisabled) && !t.isMediaChannel() ? l.Z.getForumChannelPermissionText() : A.t.LG9VAg;
+                    case _.d4z.GUILD_MEDIA:
+                        return A.t.LG9VAg;
+                    case _.d4z.GUILD_ANNOUNCEMENT:
+                        return A.intl.format(A.t.WFwfSE, { articleURL: S.Z.getArticleURL(_.BhN.ANNOUNCEMENT_CHANNELS) });
+                    case _.d4z.GUILD_VOICE:
+                        return s.Z.getTextInVoiceSendMessageChannelPermissionText(null == r ? void 0 : r.sendMessagesDisabled);
                     default:
-                        return l.t.WQ6zpa;
+                        return A.t.WQ6zpa;
                 }
             })(),
-            flag: s.Plq.SEND_MESSAGES
+            flag: _.Plq.SEND_MESSAGES
         },
-        [s.Plq.EMBED_LINKS.toString()]: {
-            title: l.intl.string(l.t['969dEB']),
-            description: u === s.d4z.GUILD_CATEGORY ? l.t['7zlUa2'] : l.t.XFFhAw,
-            flag: s.Plq.EMBED_LINKS
+        [_.Plq.EMBED_LINKS.toString()]: {
+            title: A.intl.string(A.t['969dEB']),
+            description: n === _.d4z.GUILD_CATEGORY ? A.t['7zlUa2'] : A.t.XFFhAw,
+            flag: _.Plq.EMBED_LINKS
         },
-        [s.Plq.ATTACH_FILES.toString()]: {
-            title: l.intl.string(l.t['3AS4UF']),
-            description: u === s.d4z.GUILD_CATEGORY ? l.t.XREf9v : l.t.WK9r7O,
-            flag: s.Plq.ATTACH_FILES
+        [_.Plq.ATTACH_FILES.toString()]: {
+            title: A.intl.string(A.t['3AS4UF']),
+            description: n === _.d4z.GUILD_CATEGORY ? A.t.XREf9v : A.t.WK9r7O,
+            flag: _.Plq.ATTACH_FILES
         },
-        [s.Plq.ADD_REACTIONS.toString()]: {
-            title: l.intl.string(l.t.yEoJAg),
+        [_.Plq.ADD_REACTIONS.toString()]: {
+            title: A.intl.string(A.t.yEoJAg),
             description: (() => {
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return l.t.pZT2Zm;
-                    case s.d4z.GUILD_VOICE:
-                        return l.t.xSSbIi;
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return A.t.pZT2Zm;
+                    case _.d4z.GUILD_VOICE:
+                        return A.t.xSSbIi;
                     default:
-                        return l.t.PVjR1d;
+                        return A.t.PVjR1d;
                 }
             })(),
-            flag: s.Plq.ADD_REACTIONS
+            flag: _.Plq.ADD_REACTIONS
         },
-        [s.Plq.USE_EXTERNAL_EMOJIS.toString()]: {
-            title: l.intl.string(l.t['+bxf3N']),
-            description: u === s.d4z.GUILD_CATEGORY ? l.t.mWAbKy : l.t.Qc5vOj,
-            flag: s.Plq.USE_EXTERNAL_EMOJIS
+        [_.Plq.USE_EXTERNAL_EMOJIS.toString()]: {
+            title: A.intl.string(A.t['+bxf3N']),
+            description: n === _.d4z.GUILD_CATEGORY ? A.t.mWAbKy : A.t.Qc5vOj,
+            flag: _.Plq.USE_EXTERNAL_EMOJIS
         },
-        [s.Plq.USE_EXTERNAL_STICKERS.toString()]: {
-            title: l.intl.string(l.t.ERNhYW),
-            description: u === s.d4z.GUILD_CATEGORY ? l.t['39whJy'] : l.t.VF4fZW,
-            flag: s.Plq.USE_EXTERNAL_STICKERS
+        [_.Plq.USE_EXTERNAL_STICKERS.toString()]: {
+            title: A.intl.string(A.t.ERNhYW),
+            description: n === _.d4z.GUILD_CATEGORY ? A.t['39whJy'] : A.t.VF4fZW,
+            flag: _.Plq.USE_EXTERNAL_STICKERS
         },
-        [s.Plq.MENTION_EVERYONE.toString()]: {
-            title: u === s.d4z.GUILD_STAGE_VOICE ? l.intl.string(l.t.VDUAHB) : l.intl.string(l.t.Y78KGB),
-            description: u === s.d4z.GUILD_CATEGORY ? l.t['HOhg/P'] : u === s.d4z.GUILD_STAGE_VOICE ? l.t.rZn1oK : l.t['6IUSdn'],
-            flag: s.Plq.MENTION_EVERYONE
+        [_.Plq.MENTION_EVERYONE.toString()]: {
+            title: n === _.d4z.GUILD_STAGE_VOICE ? A.intl.string(A.t.VDUAHB) : A.intl.string(A.t.Y78KGB),
+            description: n === _.d4z.GUILD_CATEGORY ? A.t['HOhg/P'] : n === _.d4z.GUILD_STAGE_VOICE ? A.t.rZn1oK : A.t['6IUSdn'],
+            flag: _.Plq.MENTION_EVERYONE
         },
-        [s.Plq.MANAGE_MESSAGES.toString()]: {
-            title: l.intl.string(l.t['6lU9xM']),
+        [_.Plq.MANAGE_MESSAGES.toString()]: {
+            title: A.intl.string(A.t['6lU9xM']),
             description: (() => {
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return l.t['5R9nYm'];
-                    case s.d4z.GUILD_ANNOUNCEMENT:
-                        return l.intl.format(l.t.XRxOo6, { articleURL: o.Z.getArticleURL(s.BhN.ANNOUNCEMENT_CHANNELS) });
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return A.t['5R9nYm'];
+                    case _.d4z.GUILD_ANNOUNCEMENT:
+                        return A.intl.format(A.t.XRxOo6, { articleURL: S.Z.getArticleURL(_.BhN.ANNOUNCEMENT_CHANNELS) });
                     default:
-                        return l.t['SeA+Gx'];
+                        return A.t['SeA+Gx'];
                 }
             })(),
-            flag: s.Plq.MANAGE_MESSAGES
+            flag: _.Plq.MANAGE_MESSAGES
         },
-        [s.Plq.PIN_MESSAGES.toString()]: {
-            title: l.intl.string(l.t.Y5BI39),
-            description: u === s.d4z.GUILD_CATEGORY ? l.t['gmbD8/'] : l.t['0l2EjI'],
-            flag: s.Plq.PIN_MESSAGES
+        [_.Plq.PIN_MESSAGES.toString()]: {
+            title: A.intl.string(A.t.Y5BI39),
+            description: n === _.d4z.GUILD_CATEGORY ? A.t['gmbD8/'] : A.t['0l2EjI'],
+            flag: _.Plq.PIN_MESSAGES
         },
-        [s.Plq.READ_MESSAGE_HISTORY.toString()]: {
-            title: s.TPd.GUILD_THREADS_ONLY.has(u) ? l.intl.string(l.t['0RQwtr']) : l.intl.string(l.t.l9ufaW),
+        [_.Plq.READ_MESSAGE_HISTORY.toString()]: {
+            title: _.TPd.GUILD_THREADS_ONLY.has(n) ? A.intl.string(A.t['0RQwtr']) : A.intl.string(A.t.l9ufaW),
             description: (() => {
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return l.t['cJRv/v'];
-                    case s.d4z.GUILD_VOICE:
-                        return a.Z.getTextInVoiceReadMessageHistoryChannelPermissionText(null == c ? void 0 : c.readMessageHistoryDisabled);
-                    case s.d4z.GUILD_FORUM:
-                    case s.d4z.GUILD_MEDIA:
-                        return l.t.RqCc7u;
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return A.t['cJRv/v'];
+                    case _.d4z.GUILD_VOICE:
+                        return s.Z.getTextInVoiceReadMessageHistoryChannelPermissionText(null == r ? void 0 : r.readMessageHistoryDisabled);
+                    case _.d4z.GUILD_FORUM:
+                    case _.d4z.GUILD_MEDIA:
+                        return A.t.RqCc7u;
                     default:
-                        return l.t.cuMfHx;
+                        return A.t.cuMfHx;
                 }
             })(),
-            flag: s.Plq.READ_MESSAGE_HISTORY
+            flag: _.Plq.READ_MESSAGE_HISTORY
         },
-        [s.Plq.SEND_TTS_MESSAGES.toString()]: {
-            title: l.intl.string(l.t.mMbwh4),
-            description: u === s.d4z.GUILD_CATEGORY ? l.t.b7pc9f : l.t.CpakGx,
-            flag: s.Plq.SEND_TTS_MESSAGES
+        [_.Plq.SEND_TTS_MESSAGES.toString()]: {
+            title: A.intl.string(A.t.mMbwh4),
+            description: n === _.d4z.GUILD_CATEGORY ? A.t.b7pc9f : A.t.CpakGx,
+            flag: _.Plq.SEND_TTS_MESSAGES
         },
-        [s.Plq.USE_APPLICATION_COMMANDS.toString()]: {
-            title: l.intl.string(l.t.nkoPOj),
-            description: u === s.d4z.GUILD_CATEGORY ? l.t['D+qW0N'] : l.t.ReG3gI,
-            flag: s.Plq.USE_APPLICATION_COMMANDS
+        [_.Plq.USE_APPLICATION_COMMANDS.toString()]: {
+            title: A.intl.string(A.t.nkoPOj),
+            description: n === _.d4z.GUILD_CATEGORY ? A.t['D+qW0N'] : A.t.ReG3gI,
+            flag: _.Plq.USE_APPLICATION_COMMANDS
         },
-        [s.Plq.SEND_VOICE_MESSAGES.toString()]: {
-            title: l.intl.string(l.t.WlWSBQ),
-            description: u === s.d4z.GUILD_CATEGORY ? l.t.gavGfn : l.t.BhEo9f,
-            flag: s.Plq.SEND_VOICE_MESSAGES
+        [_.Plq.SEND_VOICE_MESSAGES.toString()]: {
+            title: A.intl.string(A.t.WlWSBQ),
+            description: n === _.d4z.GUILD_CATEGORY ? A.t.gavGfn : A.t.BhEo9f,
+            flag: _.Plq.SEND_VOICE_MESSAGES
         },
-        [s.Plq.SEND_POLLS.toString()]: {
-            title: l.intl.string(l.t.UMQ7W1),
-            description: u === s.d4z.GUILD_CATEGORY ? l.t['18Ya7O'] : l.t.ckKKIC,
-            flag: s.Plq.SEND_POLLS
+        [_.Plq.SEND_POLLS.toString()]: {
+            title: A.intl.string(A.t.UMQ7W1),
+            description: n === _.d4z.GUILD_CATEGORY ? A.t['18Ya7O'] : A.t.ckKKIC,
+            flag: _.Plq.SEND_POLLS
         },
-        [s.Plq.CONNECT.toString()]: {
-            title: l.intl.string(l.t.S0W8Z2),
+        [_.Plq.CONNECT.toString()]: {
+            title: A.intl.string(A.t.S0W8Z2),
             description: (() => {
-                if (t)
-                    switch (u) {
-                        case s.d4z.GUILD_CATEGORY:
-                            return l.t.XcrieH;
-                        case s.d4z.GUILD_STAGE_VOICE:
-                            return l.t.SOFNhI;
-                        case s.d4z.GUILD_TEXT:
-                        case s.d4z.GUILD_FORUM:
-                        case s.d4z.GUILD_MEDIA:
-                            return l.t.LsS8xc;
+                if (e)
+                    switch (n) {
+                        case _.d4z.GUILD_CATEGORY:
+                            return A.t.XcrieH;
+                        case _.d4z.GUILD_STAGE_VOICE:
+                            return A.t.SOFNhI;
+                        case _.d4z.GUILD_TEXT:
+                        case _.d4z.GUILD_FORUM:
+                        case _.d4z.GUILD_MEDIA:
+                            return A.t.LsS8xc;
                         default:
-                            return l.t.j4AyOz;
+                            return A.t.j4AyOz;
                     }
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return l.t.stA0Hh;
-                    case s.d4z.GUILD_STAGE_VOICE:
-                        return l.t['G9+QiY'];
-                    case s.d4z.GUILD_TEXT:
-                    case s.d4z.GUILD_FORUM:
-                    case s.d4z.GUILD_MEDIA:
-                        return l.t['QU/Rw8'];
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return A.t.stA0Hh;
+                    case _.d4z.GUILD_STAGE_VOICE:
+                        return A.t['G9+QiY'];
+                    case _.d4z.GUILD_TEXT:
+                    case _.d4z.GUILD_FORUM:
+                    case _.d4z.GUILD_MEDIA:
+                        return A.t['QU/Rw8'];
                     default:
-                        return l.t.HvG8ub;
+                        return A.t.HvG8ub;
                 }
             })(),
-            flag: s.Plq.CONNECT
+            flag: _.Plq.CONNECT
         },
-        [s.Plq.SPEAK.toString()]: {
-            title: l.intl.string(l.t['8w1tIS']),
+        [_.Plq.SPEAK.toString()]: {
+            title: A.intl.string(A.t['8w1tIS']),
             description: (() => {
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return l.t.iXhS6e;
-                    case s.d4z.GUILD_STAGE_VOICE:
-                        return l.t['a8n74+'];
-                    case s.d4z.GUILD_TEXT:
-                    case s.d4z.GUILD_FORUM:
-                    case s.d4z.GUILD_MEDIA:
-                        return l.t['+VXsJC'];
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return A.t.iXhS6e;
+                    case _.d4z.GUILD_STAGE_VOICE:
+                        return A.t['a8n74+'];
+                    case _.d4z.GUILD_TEXT:
+                    case _.d4z.GUILD_FORUM:
+                    case _.d4z.GUILD_MEDIA:
+                        return A.t['+VXsJC'];
                     default:
-                        return l.t['568E6e'];
+                        return A.t['568E6e'];
                 }
             })(),
-            flag: s.Plq.SPEAK
+            flag: _.Plq.SPEAK
         },
-        [s.Plq.STREAM.toString()]: {
-            title: l.intl.string(l.t.FlNoSU),
+        [_.Plq.STREAM.toString()]: {
+            title: A.intl.string(A.t.FlNoSU),
             description: (() => {
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return l.t['ryG0/P'];
-                    case s.d4z.GUILD_TEXT:
-                    case s.d4z.GUILD_FORUM:
-                    case s.d4z.GUILD_MEDIA:
-                        return l.t.AuEQEB;
-                    case s.d4z.GUILD_STAGE_VOICE:
-                        return l.t.swJcNz;
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return A.t['ryG0/P'];
+                    case _.d4z.GUILD_TEXT:
+                    case _.d4z.GUILD_FORUM:
+                    case _.d4z.GUILD_MEDIA:
+                        return A.t.AuEQEB;
+                    case _.d4z.GUILD_STAGE_VOICE:
+                        return A.t.swJcNz;
                     default:
-                        return l.t.RY8rIS;
+                        return A.t.RY8rIS;
                 }
             })(),
-            flag: s.Plq.STREAM
+            flag: _.Plq.STREAM
         },
-        [s.Plq.USE_EMBEDDED_ACTIVITIES.toString()]: {
-            title: l.intl.string(l.t.rLSGen),
+        [_.Plq.USE_EMBEDDED_ACTIVITIES.toString()]: {
+            title: A.intl.string(A.t.rLSGen),
             description: (() => {
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return l.t.maNzCA;
-                    case s.d4z.GUILD_FORUM:
-                    case s.d4z.GUILD_MEDIA:
-                        return l.t.RyEwlZ;
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return A.t.maNzCA;
+                    case _.d4z.GUILD_FORUM:
+                    case _.d4z.GUILD_MEDIA:
+                        return A.t.RyEwlZ;
                     default:
-                        return l.t.qinvMT;
+                        return A.t.qinvMT;
                 }
             })(),
-            flag: s.Plq.USE_EMBEDDED_ACTIVITIES
+            flag: _.Plq.USE_EMBEDDED_ACTIVITIES
         },
-        [s.Plq.USE_EXTERNAL_APPS.toString()]: {
-            title: l.intl.string(l.t['3TzAk5']),
+        [_.Plq.USE_EXTERNAL_APPS.toString()]: {
+            title: A.intl.string(A.t['3TzAk5']),
             description: (() => {
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return l.t.bgIY3N;
-                    case s.d4z.GUILD_FORUM:
-                    case s.d4z.GUILD_MEDIA:
-                        return l.t.qPUPio;
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return A.t.bgIY3N;
+                    case _.d4z.GUILD_FORUM:
+                    case _.d4z.GUILD_MEDIA:
+                        return A.t.qPUPio;
                     default:
-                        return l.t.czqMLi;
+                        return A.t.czqMLi;
                 }
             })(),
-            flag: s.Plq.USE_EXTERNAL_APPS
+            flag: _.Plq.USE_EXTERNAL_APPS
         },
-        [s.Plq.USE_SOUNDBOARD.toString()]: {
-            title: l.intl.string(l.t.Bco7ND),
+        [_.Plq.USE_SOUNDBOARD.toString()]: {
+            title: A.intl.string(A.t.Bco7ND),
             description: (() => {
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return l.intl.format(l.t['0kBp//'], { helpCenterArticle: o.Z.getArticleURL(s.BhN.SOUNDBOARD) });
-                    case s.d4z.GUILD_TEXT:
-                    case s.d4z.GUILD_FORUM:
-                    case s.d4z.GUILD_MEDIA:
-                        return l.intl.format(l.t['6eYqU1'], { helpCenterArticle: o.Z.getArticleURL(s.BhN.SOUNDBOARD) });
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return A.intl.format(A.t['0kBp//'], { helpCenterArticle: S.Z.getArticleURL(_.BhN.SOUNDBOARD) });
+                    case _.d4z.GUILD_TEXT:
+                    case _.d4z.GUILD_FORUM:
+                    case _.d4z.GUILD_MEDIA:
+                        return A.intl.format(A.t['6eYqU1'], { helpCenterArticle: S.Z.getArticleURL(_.BhN.SOUNDBOARD) });
                     default:
-                        return l.intl.format(l.t.GEi6Ym, { helpCenterArticle: o.Z.getArticleURL(s.BhN.SOUNDBOARD) });
+                        return A.intl.format(A.t.GEi6Ym, { helpCenterArticle: S.Z.getArticleURL(_.BhN.SOUNDBOARD) });
                 }
             })(),
-            flag: s.Plq.USE_SOUNDBOARD
+            flag: _.Plq.USE_SOUNDBOARD
         },
-        [s.Plq.USE_EXTERNAL_SOUNDS.toString()]: {
-            title: l.intl.string(l.t.pwaVJy),
-            description: l.t.qDpPtb,
-            flag: s.Plq.USE_EXTERNAL_SOUNDS
+        [_.Plq.USE_EXTERNAL_SOUNDS.toString()]: {
+            title: A.intl.string(A.t.pwaVJy),
+            description: A.t.qDpPtb,
+            flag: _.Plq.USE_EXTERNAL_SOUNDS
         },
-        [s.Plq.USE_VAD.toString()]: {
-            title: l.intl.string(l.t['08zAV1']),
+        [_.Plq.USE_VAD.toString()]: {
+            title: A.intl.string(A.t['08zAV1']),
             description: (() => {
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return l.t.fUYPl5;
-                    case s.d4z.GUILD_STAGE_VOICE:
-                        return l.t.BJKqsb;
-                    case s.d4z.GUILD_TEXT:
-                    case s.d4z.GUILD_FORUM:
-                    case s.d4z.GUILD_MEDIA:
-                        return l.t['3GJwsb'];
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return A.t.fUYPl5;
+                    case _.d4z.GUILD_STAGE_VOICE:
+                        return A.t.BJKqsb;
+                    case _.d4z.GUILD_TEXT:
+                    case _.d4z.GUILD_FORUM:
+                    case _.d4z.GUILD_MEDIA:
+                        return A.t['3GJwsb'];
                     default:
-                        return l.t.s2eihY;
+                        return A.t.s2eihY;
                 }
             })(),
-            flag: s.Plq.USE_VAD
+            flag: _.Plq.USE_VAD
         },
-        [s.Plq.PRIORITY_SPEAKER.toString()]: {
-            title: l.intl.string(l.t.BVK71t),
+        [_.Plq.PRIORITY_SPEAKER.toString()]: {
+            title: A.intl.string(A.t.BVK71t),
             description: (() => {
-                let e = {
-                    keybind: l.intl.string(l.t.DkSwJy),
+                let t = {
+                    keybind: A.intl.string(A.t.DkSwJy),
                     onClick: () => {
-                        r.Z.open(s.oAB.KEYBINDS);
+                        E.Z.open(_.oAB.KEYBINDS);
                     }
                 };
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return l.intl.format(l.t['8nIfDA'], e);
-                    case s.d4z.GUILD_TEXT:
-                    case s.d4z.GUILD_FORUM:
-                    case s.d4z.GUILD_MEDIA:
-                        return l.intl.format(l.t['0t6uSk'], e);
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return A.intl.format(A.t['8nIfDA'], t);
+                    case _.d4z.GUILD_TEXT:
+                    case _.d4z.GUILD_FORUM:
+                    case _.d4z.GUILD_MEDIA:
+                        return A.intl.format(A.t['0t6uSk'], t);
                     default:
-                        return l.intl.format(l.t.UvB2KC, e);
+                        return A.intl.format(A.t.UvB2KC, t);
                 }
             })(),
-            flag: s.Plq.PRIORITY_SPEAKER
+            flag: _.Plq.PRIORITY_SPEAKER
         },
-        [s.Plq.MUTE_MEMBERS.toString()]: {
-            title: l.intl.string(l.t['8EI309']),
+        [_.Plq.MUTE_MEMBERS.toString()]: {
+            title: A.intl.string(A.t['8EI309']),
             description: (() => {
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return l.t.bcuobG;
-                    case s.d4z.GUILD_STAGE_VOICE:
-                        return l.t.EbvdHx;
-                    case s.d4z.GUILD_TEXT:
-                    case s.d4z.GUILD_FORUM:
-                    case s.d4z.GUILD_MEDIA:
-                        return l.t.KYDG2N;
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return A.t.bcuobG;
+                    case _.d4z.GUILD_STAGE_VOICE:
+                        return A.t.EbvdHx;
+                    case _.d4z.GUILD_TEXT:
+                    case _.d4z.GUILD_FORUM:
+                    case _.d4z.GUILD_MEDIA:
+                        return A.t.KYDG2N;
                     default:
-                        return l.t.LW5C9P;
+                        return A.t.LW5C9P;
                 }
             })(),
-            flag: s.Plq.MUTE_MEMBERS
+            flag: _.Plq.MUTE_MEMBERS
         },
-        [s.Plq.DEAFEN_MEMBERS.toString()]: {
-            title: l.intl.string(l.t['9L47Fh']),
+        [_.Plq.DEAFEN_MEMBERS.toString()]: {
+            title: A.intl.string(A.t['9L47Fh']),
             description: (() => {
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return l.t.amZ5vr;
-                    case s.d4z.GUILD_TEXT:
-                    case s.d4z.GUILD_FORUM:
-                    case s.d4z.GUILD_MEDIA:
-                        return l.t['d+i1nZ'];
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return A.t.amZ5vr;
+                    case _.d4z.GUILD_TEXT:
+                    case _.d4z.GUILD_FORUM:
+                    case _.d4z.GUILD_MEDIA:
+                        return A.t['d+i1nZ'];
                     default:
-                        return l.t.UAdIxs;
+                        return A.t.UAdIxs;
                 }
             })(),
-            flag: s.Plq.DEAFEN_MEMBERS
+            flag: _.Plq.DEAFEN_MEMBERS
         },
-        [s.Plq.MOVE_MEMBERS.toString()]: {
-            title: l.intl.string(l.t.YtjJPT),
+        [_.Plq.MOVE_MEMBERS.toString()]: {
+            title: A.intl.string(A.t.YtjJPT),
             description: (() => {
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return l.t.XmoyRE;
-                    case s.d4z.GUILD_STAGE_VOICE:
-                        return l.t.bizKz8;
-                    case s.d4z.GUILD_TEXT:
-                    case s.d4z.GUILD_FORUM:
-                    case s.d4z.GUILD_MEDIA:
-                        return l.t.cbdQy8;
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return A.t.XmoyRE;
+                    case _.d4z.GUILD_STAGE_VOICE:
+                        return A.t.bizKz8;
+                    case _.d4z.GUILD_TEXT:
+                    case _.d4z.GUILD_FORUM:
+                    case _.d4z.GUILD_MEDIA:
+                        return A.t.cbdQy8;
                     default:
-                        return l.t.nSD1am;
+                        return A.t.nSD1am;
                 }
             })(),
-            flag: s.Plq.MOVE_MEMBERS
+            flag: _.Plq.MOVE_MEMBERS
         },
-        [s.Plq.REQUEST_TO_SPEAK.toString()]: {
-            title: l.intl.string(l.t['5kicT0']),
-            description: u === s.d4z.GUILD_CATEGORY ? l.t.T1lMSk : l.t.uzlYFB,
-            flag: s.Plq.REQUEST_TO_SPEAK
+        [_.Plq.REQUEST_TO_SPEAK.toString()]: {
+            title: A.intl.string(A.t['5kicT0']),
+            description: n === _.d4z.GUILD_CATEGORY ? A.t.T1lMSk : A.t.uzlYFB,
+            flag: _.Plq.REQUEST_TO_SPEAK
         },
-        [s.Plq.MANAGE_THREADS.toString()]: {
-            title: s.TPd.GUILD_THREADS_ONLY.has(u) ? l.intl.string(l.t.ossiZG) : n && u === s.d4z.GUILD_CATEGORY ? l.intl.string(l.t.QKe7Q0) : l.intl.string(l.t.kEqgr6),
+        [_.Plq.MANAGE_THREADS.toString()]: {
+            title: _.TPd.GUILD_THREADS_ONLY.has(n) ? A.intl.string(A.t.ossiZG) : i && n === _.d4z.GUILD_CATEGORY ? A.intl.string(A.t.QKe7Q0) : A.intl.string(A.t.kEqgr6),
             description: (() => {
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return n ? l.t.S31soa : l.t.YDIQ8P;
-                    case s.d4z.GUILD_FORUM:
-                    case s.d4z.GUILD_MEDIA:
-                        return l.t['XLi/jI'];
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return i ? A.t.S31soa : A.t.YDIQ8P;
+                    case _.d4z.GUILD_FORUM:
+                    case _.d4z.GUILD_MEDIA:
+                        return A.t['XLi/jI'];
                     default:
-                        return l.t.yvan0t;
+                        return A.t.yvan0t;
                 }
             })(),
-            flag: s.Plq.MANAGE_THREADS
+            flag: _.Plq.MANAGE_THREADS
         },
-        [s.Plq.CREATE_PUBLIC_THREADS.toString()]: {
-            title: l.intl.string(l.t['25rKnZ']),
-            description: u === s.d4z.GUILD_CATEGORY ? l.t['+M1yLi'] : l.t['5SDtGB'],
-            flag: s.Plq.CREATE_PUBLIC_THREADS
+        [_.Plq.CREATE_PUBLIC_THREADS.toString()]: {
+            title: A.intl.string(A.t['25rKnZ']),
+            description: n === _.d4z.GUILD_CATEGORY ? A.t['+M1yLi'] : A.t['5SDtGB'],
+            flag: _.Plq.CREATE_PUBLIC_THREADS
         },
-        [s.Plq.CREATE_PRIVATE_THREADS.toString()]: {
-            title: l.intl.string(l.t.QwbTSU),
-            description: u === s.d4z.GUILD_CATEGORY ? l.t['hBS/zs'] : l.t.Chg2zc,
-            flag: s.Plq.CREATE_PRIVATE_THREADS
+        [_.Plq.CREATE_PRIVATE_THREADS.toString()]: {
+            title: A.intl.string(A.t.QwbTSU),
+            description: n === _.d4z.GUILD_CATEGORY ? A.t['hBS/zs'] : A.t.Chg2zc,
+            flag: _.Plq.CREATE_PRIVATE_THREADS
         },
-        [s.Plq.SEND_MESSAGES_IN_THREADS.toString()]: {
-            title: s.TPd.GUILD_THREADS_ONLY.has(u) ? l.intl.string(l.t.fqhqWl) : n && u === s.d4z.GUILD_CATEGORY ? l.intl.string(l.t['5QlVGx']) : l.intl.string(l.t.fTE74u),
+        [_.Plq.SEND_MESSAGES_IN_THREADS.toString()]: {
+            title: _.TPd.GUILD_THREADS_ONLY.has(n) ? A.intl.string(A.t.fqhqWl) : i && n === _.d4z.GUILD_CATEGORY ? A.intl.string(A.t['5QlVGx']) : A.intl.string(A.t.fTE74u),
             description: (() => {
-                switch (u) {
-                    case s.d4z.GUILD_CATEGORY:
-                        return n ? l.t.DlIVcH : l.t.VvrChI;
-                    case s.d4z.GUILD_FORUM:
-                    case s.d4z.GUILD_MEDIA:
-                        return l.t.XTnrPD;
+                switch (n) {
+                    case _.d4z.GUILD_CATEGORY:
+                        return i ? A.t.DlIVcH : A.t.VvrChI;
+                    case _.d4z.GUILD_FORUM:
+                    case _.d4z.GUILD_MEDIA:
+                        return A.t.XTnrPD;
                     default:
-                        return l.t.xHO6MT;
+                        return A.t.xHO6MT;
                 }
             })(),
-            flag: s.Plq.SEND_MESSAGES_IN_THREADS
+            flag: _.Plq.SEND_MESSAGES_IN_THREADS
         },
-        [s.Plq.MANAGE_EVENTS.toString()]: {
-            title: l.intl.string(l.t.HIgA5e),
-            description: u === s.d4z.GUILD_CATEGORY ? l.t.CP2sz8 : l.t['4pO/TU'],
-            flag: s.Plq.MANAGE_EVENTS
+        [_.Plq.MANAGE_EVENTS.toString()]: {
+            title: A.intl.string(A.t.HIgA5e),
+            description: n === _.d4z.GUILD_CATEGORY ? A.t.CP2sz8 : A.t['4pO/TU'],
+            flag: _.Plq.MANAGE_EVENTS
         },
-        [s.Plq.CREATE_EVENTS.toString()]: {
-            title: l.intl.string(l.t.qyjZub),
-            description: u === s.d4z.GUILD_CATEGORY ? l.t.XpibmJ : l.t.sPoBLS,
-            flag: s.Plq.CREATE_EVENTS
+        [_.Plq.CREATE_EVENTS.toString()]: {
+            title: A.intl.string(A.t.qyjZub),
+            description: n === _.d4z.GUILD_CATEGORY ? A.t.XpibmJ : A.t.sPoBLS,
+            flag: _.Plq.CREATE_EVENTS
         },
-        [s.Plq.SET_VOICE_CHANNEL_STATUS.toString()]: {
-            title: l.intl.string(l.t.VBwkUV),
-            description: l.t.C6BzX1,
-            flag: s.Plq.SET_VOICE_CHANNEL_STATUS
+        [_.Plq.SET_VOICE_CHANNEL_STATUS.toString()]: {
+            title: A.intl.string(A.t.VBwkUV),
+            description: A.t.C6BzX1,
+            flag: _.Plq.SET_VOICE_CHANNEL_STATUS
         }
     };
 }

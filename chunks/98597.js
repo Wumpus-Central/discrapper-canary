@@ -2,7 +2,7 @@ n.d(t, {
     CN: () => N,
     ZP: () => L,
     eP: () => A,
-    hR: () => T,
+    hR: () => Z,
     jo: () => w
 });
 var r,
@@ -81,7 +81,7 @@ function N(e, t, n) {
 function w(e, t) {
     return null == t ? S.containerDefault : e > t ? S.containerDragAfter : S.containerDragBefore;
 }
-function Z(e) {
+function T(e) {
     let { tabIndex: t, forceShowButtons: n, hasChannelInfo: r, onContextMenu: l } = e;
     return (0, i.jsx)(c.ua7, {
         text: E.intl.string(E.t.OBr7Cw),
@@ -105,7 +105,7 @@ function Z(e) {
         }
     });
 }
-function T(e) {
+function Z(e) {
     let { channel: t, disableManageChannels: n, tabIndex: r, forceShowButtons: l, hasChannelInfo: o = !1 } = e;
     if ((0, s.e7)([y.Z, C.Z], () => n || C.Z.getGuildId() === j.I_8 || (!y.Z.can(j.Plq.MANAGE_CHANNELS, t) && !y.Z.can(j.Plq.MANAGE_ROLES, t) && !y.Z.can(j.Plq.MANAGE_WEBHOOKS, t)) || ((0, b.r8)(t.type) && !y.Z.can(j.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !y.Z.can(j.Plq.CONNECT, t)) || !b.dF.has(t.type) || t.isModeratorReportChannel())) return null;
     function d() {
@@ -140,8 +140,8 @@ function A(e) {
         x = (0, s.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]),
         N = (0, s.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(t.id), [t.id]),
         w = (0, s.e7)([y.Z], () => (0, p.b)(y.Z, v, t, x)),
-        Z = (0, s.e7)([y.Z], () => (y.Z.can(j.Plq.CREATE_INSTANT_INVITE, t) ? E.intl.string(E.t.zJrgTE) : E.intl.string(E.t.Sd8Ix8))),
-        T = C ? E.intl.string(E.t['EE+P0N']) : Z,
+        T = (0, s.e7)([y.Z], () => (y.Z.can(j.Plq.CREATE_INSTANT_INVITE, t) ? E.intl.string(E.t.zJrgTE) : E.intl.string(E.t.Sd8Ix8))),
+        Z = C ? E.intl.string(E.t['EE+P0N']) : T,
         A = l.useRef(null);
     if (o || !w || t.isModeratorReportChannel()) return null;
     function R() {
@@ -182,14 +182,14 @@ function A(e) {
                 })
             })),
         (0, i.jsx)(c.ua7, {
-            text: T,
+            text: Z,
             children: (e) =>
                 (0, i.jsx)(
                     c.P3F,
                     P(I({ className: a()(S.iconItem, f ? S.alwaysShown : void 0, b ? S.iconWithChannelInfo : S.iconNoChannelInfo) }, e), {
                         onClick: R,
                         tabIndex: u,
-                        'aria-label': T,
+                        'aria-label': Z,
                         children: L
                     })
                 )
@@ -243,10 +243,10 @@ function D(e) {
 class L extends (r = l.PureComponent) {
     renderOptionsButton(e) {
         let { onContextMenu: t } = e;
-        return (0, i.jsx)(Z, P(I({}, this.props), { onContextMenu: t }));
+        return (0, i.jsx)(T, P(I({}, this.props), { onContextMenu: t }));
     }
     renderEditButton() {
-        return (0, i.jsx)(T, I({}, this.props));
+        return (0, i.jsx)(Z, I({}, this.props));
     }
     renderInviteButton() {
         return (0, i.jsx)(A, I({}, this.props));

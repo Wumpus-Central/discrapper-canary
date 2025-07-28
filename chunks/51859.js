@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685), n(953529));
+(n.d(t, { Z: () => b }), n(388685), n(953529));
 var r = n(255367),
     o = n(73800),
     i = n(831209),
@@ -13,12 +13,12 @@ var r = n(255367),
     f = n(279604),
     _ = n(279475),
     x = n(535396),
-    v = n(388032),
-    b = n(117172);
-function g(e) {
+    g = n(388032),
+    v = n(117172);
+function b(e) {
     let { guildId: t, powerup: n } = e,
-        [g, j] = o.useState(void 0);
-    (0, f.KT)(g);
+        [b, j] = o.useState(void 0);
+    (0, f.KT)(b);
     let [E, h] = o.useState(!1),
         C = (0, u.Z)(t, n).type !== x.A3.INACTIVE,
         I = (0, _.d)(C),
@@ -30,17 +30,17 @@ function g(e) {
         powerup: n,
         children: [
             (0, r.jsx)(m.m, {
-                className: b.image,
+                className: v.image,
                 powerup: n,
                 isHovering: E
             }),
             (0, r.jsxs)('div', {
-                className: b.contentContainer,
+                className: v.contentContainer,
                 children: [
                     (0, r.jsxs)('div', {
                         children: [
                             (0, r.jsx)('div', {
-                                className: b.headerContainer,
+                                className: v.headerContainer,
                                 children: (0, r.jsx)(s.X6, {
                                     color: I,
                                     variant: 'heading-md/bold',
@@ -48,7 +48,7 @@ function g(e) {
                                 })
                             }),
                             (0, r.jsx)(s.xv, {
-                                className: b.description,
+                                className: v.description,
                                 color: I,
                                 variant: 'text-sm/medium',
                                 children: n.description
@@ -62,7 +62,7 @@ function g(e) {
                 ]
             }),
             (0, r.jsx)('div', {
-                className: b.buttonContainer,
+                className: v.buttonContainer,
                 children: (0, r.jsx)(p.ZP, {
                     guildId: t,
                     powerup: n,
@@ -72,14 +72,14 @@ function g(e) {
             !O &&
                 !N &&
                 (0, r.jsx)(a.IGR, {
-                    className: b.new,
-                    text: v.intl.string(v.t.y2b7CA)
+                    className: v.new,
+                    text: g.intl.string(g.t.y2b7CA)
                 }),
             O &&
                 N &&
                 (0, r.jsx)(a.IGR, {
-                    className: b.new,
-                    text: v.intl.string(v.t.oW0eUV),
+                    className: v.new,
+                    text: g.intl.string(g.t.oW0eUV),
                     color: i.Z.BG_BRAND
                 })
         ]

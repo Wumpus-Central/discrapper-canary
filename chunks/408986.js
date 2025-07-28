@@ -1,7 +1,7 @@
-n.d(t, { Z: () => p });
-var o = n(255367);
+n.d(t, { Z: () => m });
+var r = n(255367);
 n(73800);
-var r = n(481060),
+var o = n(481060),
     i = n(37234),
     c = n(566898),
     l = n(769654),
@@ -10,26 +10,26 @@ var r = n(481060),
     d = n(821179),
     u = n(264481),
     f = n(714905);
-function p(e) {
+function m(e) {
     let { user: t, onClose: n } = e,
-        { trackUserProfileAction: p } = (0, a.KZ)(),
-        { mutualGuilds: m, isFetching: b } = (0, s.Z)(t);
-    return (0, o.jsx)(r.Ttm, {
+        { trackUserProfileAction: m } = (0, a.KZ)(),
+        { mutualGuilds: p, isFetching: b } = (0, s.Z)(t);
+    return (0, r.jsx)(o.Ttm, {
         className: f.scroller,
         fade: !0,
         children:
-            null == m && b
+            null == p && b
                 ? Array.from({ length: 10 }).map((e, t) =>
-                      (0, o.jsxs)(
+                      (0, r.jsxs)(
                           'div',
                           {
                               className: f.guildsLoadingItem,
                               children: [
-                                  (0, o.jsx)(c.ZT, {
+                                  (0, r.jsx)(c.ZT, {
                                       width: 40,
                                       opacity: 0.08
                                   }),
-                                  (0, o.jsx)(c.ZT, {
+                                  (0, r.jsx)(c.ZT, {
                                       width: 135,
                                       opacity: 0.08
                                   })
@@ -38,24 +38,24 @@ function p(e) {
                           t
                       )
                   )
-                : (null != m || b) && (null == m ? void 0 : m.length) !== 0
-                  ? null == m
+                : (null != p || b) && (null == p ? void 0 : p.length) !== 0
+                  ? null == p
                       ? void 0
-                      : m.map((e) => {
-                            let { guild: r, nick: c } = e;
-                            return (0, o.jsx)(
+                      : p.map((e) => {
+                            let { guild: o, nick: c } = e;
+                            return (0, r.jsx)(
                                 d.Z,
                                 {
                                     user: t,
-                                    guild: r,
+                                    guild: o,
                                     nick: c,
                                     onSelect: () => {
-                                        (p({ action: 'PRESS_MUTUAL_GUILD' }), (0, l.X)(r.id), n(), (0, i.xf)());
+                                        (m({ action: 'PRESS_MUTUAL_GUILD' }), (0, l.X)(o.id), n(), (0, i.xf)());
                                     }
                                 },
-                                r.id
+                                o.id
                             );
                         })
-                  : (0, o.jsx)(u.b0, {})
+                  : (0, r.jsx)(u.b0, {})
     });
 }

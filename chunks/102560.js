@@ -6,7 +6,7 @@ var r = n(255367),
     a = n(442837),
     s = n(481060),
     c = n(48210),
-    u = n(605436),
+    u = n(345162),
     d = n(485386),
     C = n(496675),
     m = n(388032),
@@ -26,18 +26,16 @@ let p = (e) => {
         [C.Z, d.Z],
         () => {
             let e = C.Z.getHighestRole(t);
-            return i()(d.Z.getRoles(t.id))
-                .sortBy((e) => e.position)
-                .filter((e) => !(0, u.pM)(t.id, e.id))
-                .filter((n) => C.Z.isRoleHigher(t, e, n))
-                .value()
+            return i()(d.Z.getSortedRoles(t.id))
+                .filter((n) => !(0, u.fI)(n) && C.Z.isRoleHigher(t, e, n))
                 .map((e) => {
                     let { id: t, name: n } = e;
                     return {
                         label: n,
                         value: t
                     };
-                });
+                })
+                .value();
         },
         [t]
     );

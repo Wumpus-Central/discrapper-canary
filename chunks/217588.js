@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => H }), n(953529), n(388685));
+(n.d(t, { Z: () => V }), n(953529), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(767714),
     x = n(430824),
     v = n(594174),
-    O = n(626135),
-    y = n(74538),
+    y = n(626135),
+    O = n(74538),
     j = n(453070),
     I = n(926491),
     S = n(378233),
@@ -80,7 +80,7 @@ let k = (e, t) => (t ? w.intl.format(w.t.auckX1, { stickerPackName: e.name }) : 
         return i.useMemo(() => (null == n ? [] : n.stickers.slice(0, 4).reduce((e, n) => (3 !== e.length && n.id !== t.id ? e.concat(n) : e), [])), [t, n]);
     };
 function U(e) {
-    (O.default.track(P.rMx.PREMIUM_PROMOTION_OPENED, {
+    (y.default.track(P.rMx.PREMIUM_PROMOTION_OPENED, {
         location_page: null != e.guild_id ? P.ZY5.GUILD_CHANNEL : P.ZY5.DM_CHANNEL,
         location_section: P.jXE.STICKER_POPOUT
     }),
@@ -138,7 +138,7 @@ let B = (e) => {
         }, [u]),
         i.useEffect(() => {
             let { channel: e } = _.current;
-            O.default.track(
+            y.default.track(
                 P.rMx.OPEN_POPOUT,
                 L(
                     {
@@ -207,10 +207,10 @@ let B = (e) => {
             [j, I] = i.useState(null),
             [S, N] = i.useState(!1),
             k = v.default.getCurrentUser(),
-            M = y.ZP.canUseCustomStickersEverywhere(k),
+            M = O.ZP.canUseCustomStickersEverywhere(k),
             B = (0, o.e7)([x.Z], () => x.Z.getGuild(n.guild_id)),
             G = null != B,
-            [V, H] = i.useState(!1),
+            [H, V] = i.useState(!1),
             [z, W] = i.useState(null),
             K = i.useMemo(
                 () => ({
@@ -256,7 +256,7 @@ let B = (e) => {
             e();
         }, [S, j]),
         (0, d.ZP)(() => {
-            O.default.track(P.rMx.OPEN_POPOUT, L({ type: ee }, Y));
+            y.default.track(P.rMx.OPEN_POPOUT, L({ type: ee }, Y));
         }),
         S)
             ? (0, r.jsxs)(b.W_, {
@@ -330,7 +330,7 @@ let B = (e) => {
                                               children: [
                                                   (0, r.jsx)(c.P3F, {
                                                       onClick: () => {
-                                                          (E(), H(!V));
+                                                          (E(), V(!H));
                                                       },
                                                       className: R.showMoreEmojis,
                                                       children: (0, r.jsxs)(m.Z, {
@@ -344,12 +344,12 @@ let B = (e) => {
                                                               (0, r.jsx)(c.CJ0, {
                                                                   size: 'md',
                                                                   color: 'currentColor',
-                                                                  className: a()(R.showMoreEmojisArrow, { [R.showMoreEmojisArrowCollapsed]: !V })
+                                                                  className: a()(R.showMoreEmojisArrow, { [R.showMoreEmojisArrowCollapsed]: !H })
                                                               })
                                                           ]
                                                       })
                                                   }),
-                                                  V &&
+                                                  H &&
                                                       (0, r.jsx)(m.Z, {
                                                           wrap: m.Z.Wrap.WRAP,
                                                           align: m.Z.Align.START,
@@ -423,7 +423,7 @@ let B = (e) => {
               })
             : (0, r.jsx)(b.SE, { className: Z.popoutLoader });
     };
-function V(e) {
+function H(e) {
     let { channel: t, closePopout: n, sticker: i } = e;
     return (0, r.jsx)(b.W_, {
         className: Z.popoutContent,
@@ -437,7 +437,7 @@ function V(e) {
         })
     });
 }
-let H = (e) => {
+let V = (e) => {
     let { renderableSticker: t, channel: n, closePopout: i, refreshPositionKey: l } = e,
         [a, o] = (0, j.XW)(t, !0);
     return null != a && (0, S.jl)(a)
@@ -456,7 +456,7 @@ let H = (e) => {
             })
           : o
             ? o && null == a
-                ? (0, r.jsx)(V, {
+                ? (0, r.jsx)(H, {
                       channel: n,
                       closePopout: i,
                       sticker: t

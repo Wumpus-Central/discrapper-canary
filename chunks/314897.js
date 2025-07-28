@@ -43,8 +43,8 @@ let N = new m.Z('AuthenticationStore'),
     D = null,
     L = null,
     x = null,
-    M = null,
     k = null,
+    M = null,
     j = T.u34.NONE,
     U = !1,
     G = [],
@@ -111,13 +111,13 @@ function J(e) {
             )));
 }
 function $() {
-    ((M = x), (x = null), c.K.remove(C));
+    ((k = x), (x = null), c.K.remove(C));
 }
 function ee(e, t) {
     (X('setAuthToken called.'), (null == t || t !== P) && a.removeAnalyticsToken(), a.setToken(e, t));
 }
 function et(e) {
-    ((k = e), a.setAnalyticsToken(e));
+    ((M = e), a.setAnalyticsToken(e));
 }
 function en() {
     return (X('removeAuthToken called.'), a.removeAnalyticsToken(), a.removeToken());
@@ -188,11 +188,11 @@ function eg(e) {
     null == x
         ? null != t
             ? (b.default.track(T.rMx.USER_FINGERPRINT_CHANGED, {
-                  old_fingerprint: null != M ? (0, o.s)(M) : null,
+                  old_fingerprint: null != k ? (0, o.s)(k) : null,
                   new_fingerprint: (0, o.s)(t)
               }),
               (x = t),
-              (M = t),
+              (k = t),
               c.K.set(C, x))
             : Q()
         : null != t &&
@@ -214,7 +214,7 @@ function eb(e) {
 function ey(e) {
     var t;
     let { user: n, sessionId: r, analyticsToken: i, token: a } = e;
-    (O.Z.setUser(n.id, n.username, null != (t = n.email) ? t : void 0, (0, E.Z)(n)), (w = r), (k = i), ee(a, n.id), null != i && et(i), $(), (P = n.id), c.K.set(R, n.id));
+    (O.Z.setUser(n.id, n.username, null != (t = n.email) ? t : void 0, (0, E.Z)(n)), (w = r), (M = i), ee(a, n.id), null != i && et(i), $(), (P = n.id), c.K.set(R, n.id));
 }
 function eO(e) {
     let { code: t } = e;
@@ -309,7 +309,7 @@ class ew extends (i = s.ZP.Store) {
         return x;
     }
     getAnalyticsToken() {
-        return null != k ? k : a.getAnalyticsToken();
+        return null != M ? M : a.getAnalyticsToken();
     }
     getMFATicket() {
         return B;

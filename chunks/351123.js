@@ -232,7 +232,7 @@ function H(e) {
 }
 function G(e) {
     let { guild: t, channel: l, permissionUpdates: r } = e,
-        o = (0, a.e7)([O.Z], () => O.Z.getRoles(t.id)),
+        o = (0, a.e7)([O.Z], () => O.Z.getSortedRoles(t.id)),
         d = _.RZ(t, o, l, C.yP, r),
         u = (0, a.e7)([E.ZP], () => _.cR(E.ZP.getMemberIds(t.id), l, t, C.yP, r)),
         h = (0, y.nG)(l.id);
@@ -454,7 +454,7 @@ let X = a.ZP.connectStores([S.Z, w.Z, E.ZP, T.Z, O.Z], () => {
         e = T.Z.getGuild(t.getGuildId());
         let n = E.ZP.getMemberIds(null == e ? void 0 : e.id);
         if (null != e) {
-            let a = O.Z.getRoles(e.id);
+            let a = O.Z.getSortedRoles(e.id);
             ((r = S.Z.editedPermissionIds.reduce((e, t) => {
                 let n = S.Z.getPermissionOverwrite(t);
                 return (null != n && (e[t] = n), e);

@@ -1,4 +1,4 @@
-(t.d(e, { Z: () => B }), t(642613));
+t.d(e, { Z: () => B });
 var n = t(255367),
     r = t(73800),
     l = t(120356),
@@ -18,22 +18,8 @@ var n = t(255367),
 function B(A) {
     let { member: e } = A,
         t = (0, s.e7)([c.Z], () => c.Z.getGuild(e.guildId)),
-        l = (0, s.e7)([v.Z], () => v.Z.getRoles(e.guildId)),
-        B = r.useMemo(
-            () =>
-                null == t
-                    ? []
-                    : null == e.highestRoleId
-                      ? e.roles
-                      : Object.values(l)
-                            .filter((A) => A.id !== e.highestRoleId && e.roles.includes(A.id))
-                            .sort((A, e) => {
-                                var t, n;
-                                return null != (n = null != (t = null == A ? void 0 : A.position) ? t : 0 - (null == e ? void 0 : e.position)) ? n : 0;
-                            })
-                            .map((A) => A.id),
-            [e.roles, e.highestRoleId, t, l]
-        ),
+        l = (0, s.e7)([v.Z], () => v.Z.getSortedRoles(e.guildId)),
+        B = r.useMemo(() => l.filter((A) => A.id !== e.highestRoleId && e.roles.includes(A.id)), [e.roles, e.highestRoleId, l]),
         w = (0, s.e7)([o.Z], () => o.Z.getEnhancedMember(e.guildId, e.userId), [e.guildId, e.userId]),
         D = (0, g.zq)(w),
         M = (0, g.vN)(e),
@@ -72,10 +58,10 @@ function B(A) {
                                                 f.Z,
                                                 {
                                                     className: C.roleTooltipItem,
-                                                    role: l[A],
+                                                    role: A,
                                                     guildId: e.guildId
                                                 },
-                                                A
+                                                A.id
                                             )
                                         ),
                                         I &&

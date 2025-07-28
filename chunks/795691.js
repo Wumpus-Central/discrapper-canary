@@ -2,19 +2,19 @@
 var r = n(255367),
     i = n(73800),
     l = n(481060),
-    s = n(279881),
-    a = n(383124),
+    a = n(279881),
+    s = n(383124),
     o = n(388032),
     c = n(955373);
 function d(e) {
     let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: d, disabled: u } = e,
-        { topGames: m, tryFetchTopGames: g } = (0, s.I)(),
+        { topGames: m, tryFetchTopGames: g } = (0, a.I)(),
         p = m.get(t),
-        [f, h] = i.useState(!1);
+        [h, f] = i.useState(!1);
     i.useEffect(() => {
-        (h(!0),
+        (f(!0),
             g(t).finally(() => {
-                h(!1);
+                f(!1);
             }));
     }, [t, g]);
     let x = i.useMemo(
@@ -32,7 +32,7 @@ function d(e) {
             },
             [d, n]
         );
-    return f && null == p
+    return h && null == p
         ? (0, r.jsx)(l.$jN, {})
         : null == x || 0 === x.length
           ? null
@@ -51,7 +51,7 @@ function d(e) {
                                 className: c.gamesList,
                                 children: x.map((e) =>
                                     (0, r.jsx)(
-                                        a.Z,
+                                        s.Z,
                                         {
                                             applicationId: e,
                                             selected: !1,

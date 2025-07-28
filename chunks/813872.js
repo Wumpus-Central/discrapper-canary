@@ -16,8 +16,8 @@ var r = n(255367),
     y = n(388032);
 function _(e) {
     let { userId: t, guildId: n, channelId: _, location: p, onAction: m, appContext: j } = e,
-        M = l.useContext(O.AnalyticsContext),
-        P = (0, o.Aq)(),
+        P = l.useContext(O.AnalyticsContext),
+        M = (0, o.Aq)(),
         S = (0, i.e7)([f.Z], () => (null != _ ? _ : f.Z.getChannelId(n, !0)), [_, n]),
         A = (0, i.e7)([d.ZP], () => (null == n ? null : d.ZP.getMember(n, t)), [n, t]),
         Z = (0, s.m)(n);
@@ -30,9 +30,9 @@ function _(e) {
                       (0, u.i)(j),
                       (0, c.r)(n, t, null != S ? S : g.oC.MEMBER_SAFETY, {
                           modViewPanel: b.k.INFO,
-                          sourceLocation: null != p ? p : M.location
+                          sourceLocation: null != p ? p : P.location
                       }),
-                      P.dispatch(E.CkL.POPOUT_CLOSE));
+                      M.dispatch(E.CkL.POPOUT_CLOSE));
               }
           })
         : null;

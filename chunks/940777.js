@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(603274),
     N = n(981631),
     w = n(388032),
-    Z = n(940751);
-function T(e) {
+    T = n(940751);
+function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -118,7 +118,7 @@ function R() {
                 selected: V,
                 hovered: L,
                 unread: H && !k,
-                className: Z.pill
+                className: T.pill
             }),
             (0, r.jsx)(P.Z, {
                 onShow: K,
@@ -129,7 +129,7 @@ function R() {
                         lowerBadge: W,
                         children: (0, r.jsx)(
                             c.LYs,
-                            ((e = T({}, l)),
+                            ((e = Z({}, l)),
                             (t = t =
                                 {
                                     ariaLabel: w.intl.formatToPlainString(w.t['/uzRsr'], {
@@ -150,15 +150,15 @@ function R() {
                                     onContextMenu: function (e) {
                                         (0, d.jW)(e, async () => {
                                             let { default: e } = await n.e('3190').then(n.bind(n, 631981));
-                                            return (t) => (0, r.jsx)(e, T({}, t));
+                                            return (t) => (0, r.jsx)(e, Z({}, t));
                                         });
                                     },
                                     children: (0, r.jsx)('div', {
-                                        className: o()(Z.ring, { [Z.ringActive]: R }),
+                                        className: o()(T.ring, { [T.ringActive]: R }),
                                         children: (0, r.jsx)(c.r7p, {
                                             size: 'custom',
                                             color: 'currentColor',
-                                            className: Z.favoriteIcon,
+                                            className: T.favoriteIcon,
                                             width: 20,
                                             height: 20
                                         })

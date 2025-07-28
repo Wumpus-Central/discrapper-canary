@@ -5,26 +5,26 @@ var n = r(255367),
     a = r.n(l),
     i = r(442837),
     o = r(481060),
-    c = r(778877),
-    u = r(768119),
-    h = r(63063),
-    d = r(405656),
+    c = r(63063),
+    u = r(518944),
+    h = r(607802),
+    d = r(945577),
     p = r(981631),
     f = r(388032),
     g = r(107242);
 function m(e) {
-    let { searchId: t, searchMode: r, onSearchModeChange: l, totalResults: h, isIndexing: m, isSearching: _, documentsIndexed: y } = e,
-        b = (0, c.U)({ location: 'SearchHeader' }),
-        x = (0, i.e7)([u.Z], () => u.Z.getSearchResultsQueryString(t)),
+    let { searchId: t, searchMode: r, onSearchModeChange: l, totalResults: c, isIndexing: m, isSearching: _, documentsIndexed: y } = e,
+        x = (0, d.U)({ location: 'SearchHeader' }),
+        b = (0, i.e7)([u.Z], () => u.Z.getSearchResultsQueryString(t)),
         E = s.useMemo(() => {
-            if (t === p.aib.DMS && b) {
+            if (t === p.aib.DMS && x) {
                 var e, r;
-                let t = (0, d.kG)(null != x ? x : ''),
-                    n = null != (r = null == (e = (0, d.$G)(t).channel_id) ? void 0 : e.length) ? r : 0;
+                let t = (0, h.kG)(null != b ? b : ''),
+                    n = null != (r = null == (e = (0, h.$G)(t).channel_id) ? void 0 : e.length) ? r : 0;
                 return n > 0 ? f.intl.format(f.t.A2dqWF, { filterCount: n }) : f.intl.string(f.t.tc619f);
             }
             return null;
-        }, [t, b, x]);
+        }, [t, x, b]);
     return (0, n.jsxs)('header', {
         className: a()(g.searchHeader, { [g.searchHeaderWithSubtitle]: null != E }),
         children: [
@@ -32,7 +32,7 @@ function m(e) {
                 className: g.totalResults,
                 role: 'status',
                 children: (0, n.jsx)(S, {
-                    totalResults: h,
+                    totalResults: c,
                     subtitle: E,
                     isIndexing: m,
                     isSearching: _,
@@ -70,8 +70,8 @@ function S(e) {
     return l
         ? (0, n.jsx)(y, { documentsIndexed: a })
         : s
-          ? (0, n.jsx)(b, {})
-          : (0, n.jsx)(x, {
+          ? (0, n.jsx)(x, {})
+          : (0, n.jsx)(b, {
                 totalResults: t,
                 subtitle: r
             });
@@ -127,7 +127,7 @@ function y(e) {
                                 color: 'text-muted',
                                 children: (0, n.jsx)(o.eee, {
                                     className: g.helpdeskLink,
-                                    href: h.Z.getArticleURL(p.BhN.SEARCH_INDEXING),
+                                    href: c.Z.getArticleURL(p.BhN.SEARCH_INDEXING),
                                     children: f.intl.string(f.t['G3EA+/'])
                                 })
                             }),
@@ -151,7 +151,7 @@ function y(e) {
         }
     });
 }
-function b() {
+function x() {
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)(o.Text, {
@@ -163,7 +163,7 @@ function b() {
         ]
     });
 }
-function x(e) {
+function b(e) {
     let { totalResults: t, subtitle: r } = e,
         l = s.useMemo(() => t.toLocaleString(), [t]),
         a = (0, n.jsx)(o.Text, {

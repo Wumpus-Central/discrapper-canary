@@ -1,7 +1,7 @@
 n.d(t, {
-    E: () => P,
+    E: () => E,
     Y: () => S,
-    default: () => E
+    default: () => P
 });
 var r = n(255367);
 n(73800);
@@ -49,7 +49,7 @@ function S(e) {
         })
     ];
 }
-function P(e, t, n) {
+function E(e, t, n) {
     let o = (0, d.B)({
             userId: e.id,
             channelId: t,
@@ -82,7 +82,7 @@ function P(e, t, n) {
         u
     ];
 }
-let E = (0, c.Z)(
+let P = (0, c.Z)(
     (0, l.Z)(
         function (e) {
             let { user: t, channel: n, onSelect: l, onInteraction: c, context: a } = e,
@@ -95,7 +95,7 @@ let E = (0, c.Z)(
                     channelId: u,
                     context: a
                 }),
-                O = P(t, u),
+                O = E(t, u),
                 p = (0, b.Z)({
                     id: t.id,
                     label: h.intl.string(h.t['/AXYnJ'])

@@ -10,15 +10,15 @@ var l = t(255367),
     d = t(323090),
     f = t(116906),
     p = t(384816),
-    g = t(389190),
-    j = t(428927),
-    v = t(228168),
-    h = t(388032),
+    j = t(389190),
+    g = t(428927),
+    h = t(228168),
+    v = t(388032),
     m = t(301150),
     b = t(923243);
 function x(e) {
     let { section: n, subsection: t, user: r, currentUser: i, displayProfile: o, guildId: s, channelId: c, onClose: a } = e;
-    return n === v.oh.ACTIVITY
+    return n === h.oh.ACTIVITY
         ? (0, l.jsx)(f.Z, {
               user: r,
               currentUser: i,
@@ -26,21 +26,21 @@ function x(e) {
               guildId: s,
               onClose: a
           })
-        : n === v.oh.MUTUAL_FRIENDS
-          ? (0, l.jsx)(g.Z, {
+        : n === h.oh.MUTUAL_FRIENDS
+          ? (0, l.jsx)(j.Z, {
                 user: r,
                 guildId: s,
                 channelId: c,
                 onClose: a
             })
-          : n === v.oh.MUTUAL_GUILDS
-            ? (0, l.jsx)(j.Z, {
+          : n === h.oh.MUTUAL_GUILDS
+            ? (0, l.jsx)(g.Z, {
                   user: r,
                   onClose: a
               })
-            : n === v.oh.BOT_DATA_ACCESS
+            : n === h.oh.BOT_DATA_ACCESS
               ? (0, l.jsx)(u.Z, { user: r })
-              : n === v.oh.BOT_INFO
+              : n === h.oh.BOT_INFO
                 ? (0, l.jsx)(d.Z, {
                       user: r,
                       currentUser: i,
@@ -59,7 +59,7 @@ function x(e) {
 }
 function y(e) {
     var n, t, u;
-    let { user: d, currentUser: f, displayProfile: p, guildId: g, items: j, initialSection: y = v.oh.USER_INFO, initialSubsection: O, onClose: Z } = e,
+    let { user: d, currentUser: f, displayProfile: p, guildId: j, items: g, initialSection: y = h.oh.USER_INFO, initialSubsection: O, onClose: Z } = e,
         { trackUserProfileAction: I } = (0, a.KZ)(),
         P = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
         [{ section: E, subsection: T }, S] = r.useState({
@@ -67,25 +67,25 @@ function y(e) {
                 null !=
                 (u =
                     null ==
-                    (n = j.find((e) => {
+                    (n = g.find((e) => {
                         let { section: n } = e;
                         return n === y;
                     }))
                         ? void 0
                         : n.section)
                     ? u
-                    : null == (t = j[0])
+                    : null == (t = g[0])
                       ? void 0
                       : t.section,
             subsection: O
         });
     r.useEffect(() => {
-        null == j.find((e) => e.section === E) &&
+        null == g.find((e) => e.section === E) &&
             S({
-                section: j[0].section,
+                section: g[0].section,
                 subsection: void 0
             });
-    }, [j, E]);
+    }, [g, E]);
     let N = r.useCallback(
         (e) => {
             (I({
@@ -108,7 +108,7 @@ function y(e) {
                       (0, l.jsx)('div', { className: m.emptyIconStreamerMode }),
                       (0, l.jsx)('div', {
                           className: m.emptyText,
-                          children: h.intl.string(h.t.Br1ls7)
+                          children: v.intl.string(v.t.Br1ls7)
                       })
                   ]
               })
@@ -121,7 +121,7 @@ function y(e) {
                       type: 'top',
                       selectedItem: E,
                       onItemSelect: N,
-                      children: j.map((e) => {
+                      children: g.map((e) => {
                           let { section: n, text: t } = e;
                           return (0, l.jsx)(
                               o.n.Item,
@@ -139,13 +139,13 @@ function y(e) {
                       })
                   }),
                   (0, l.jsx)(x, {
-                      items: j,
+                      items: g,
                       section: E,
                       subsection: T,
                       user: d,
                       currentUser: f,
                       displayProfile: p,
-                      guildId: g,
+                      guildId: j,
                       onClose: Z
                   })
               ]

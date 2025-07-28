@@ -4,7 +4,7 @@
     Fp: () => V,
     JT: () => $,
     L2: () => z,
-    MY: () => k,
+    MY: () => M,
     Nz: () => Z,
     Q_: () => F,
     TO: () => W,
@@ -15,7 +15,7 @@
     e$: () => Q,
     iM: () => X,
     pO: () => j,
-    xr: () => M,
+    xr: () => k,
     z2: () => J
 }),
     n(388685),
@@ -88,11 +88,11 @@ let y = ['discordapp.com/gifts', 'discord.com/gifts'],
     D = [C, R, P, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
     L = new RegExp('^('.concat(w, ')?(').concat(D, ')$')),
     x = '-';
-var M = (function (e) {
+var k = (function (e) {
     return ((e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.CUSTOM_STYLE = 1)] = 'CUSTOM_STYLE'), (e[(e.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2)] = 'CUSTOM_MESSAGE_EMOJI_SOUNDBOARD'), e);
 })({});
-let k = (e, t) => (i.tq || i.Em ? 0 : null != e || t ? 2 : 1),
-    j = (e) => 0 !== k(e);
+let M = (e, t) => (i.tq || i.Em ? 0 : null != e || t ? 2 : 1),
+    j = (e) => 0 !== M(e);
 function U(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;

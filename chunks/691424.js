@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(382056),
     L = n(532901),
     x = n(311739),
-    M = n(981631),
-    k = n(176505),
+    k = n(981631),
+    M = n(176505),
     j = n(73433),
     U = n(283574);
 function G(e, t, n) {
@@ -137,24 +137,24 @@ function Y(e, t, n) {
     let r = T.Z.getGuild(e);
     if (null == e || null == r) return;
     let i = (t) => {
-        r.features.has(M.oNc.COMMUNITY) && (0, O.uL)(M.Z5c.CHANNEL(e, t));
+        r.features.has(k.oNc.COMMUNITY) && (0, O.uL)(k.Z5c.CHANNEL(e, t));
     };
     switch (t) {
         case 'home':
         case 'guide':
-            i(k.oC.GUILD_HOME);
+            i(M.oC.GUILD_HOME);
             break;
         case 'browse':
-            i(k.oC.CHANNEL_BROWSER);
+            i(M.oC.CHANNEL_BROWSER);
             break;
         case 'customize':
-            i(k.oC.CUSTOMIZE_COMMUNITY);
+            i(M.oC.CUSTOMIZE_COMMUNITY);
             break;
         case 'linked-roles':
             if (null != n) {
                 let t = v.ZP.getSelfMember(e);
                 if (null == t) return null;
-                let r = I.Z.getRoles(e)[n];
+                let r = I.Z.getRole(e, n);
                 null == r || t.roles.includes(r.id)
                     ? c.Z.dispatch({
                           type: 'GUILD_ROLE_CONNECTIONS_MODAL_SHOW',

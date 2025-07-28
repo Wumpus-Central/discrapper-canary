@@ -137,8 +137,8 @@ let b = {
             })(e, ['backSrc', 'frontSrc', 'size', 'isTyping', 'status', 'style', 'className']);
         let { size: v } = c.ny6[s],
             {
-                statusCoords: O,
-                frontAvatarOffsetPx: y,
+                statusCoords: y,
+                frontAvatarOffsetPx: O,
                 frontAvatarSizePx: j,
                 backAvatarSizePx: I
             } = i.useMemo(() => {
@@ -212,8 +212,8 @@ let b = {
                         (0, r.jsx)('div', {
                             style: {
                                 position: 'absolute',
-                                top: y,
-                                left: y
+                                top: O,
+                                left: O
                             },
                             children: (0, r.jsx)(h, {
                                 src: l,
@@ -225,7 +225,7 @@ let b = {
                     ]
                 }),
                 (0, r.jsx)(_, {
-                    statusCoords: O,
+                    statusCoords: y,
                     status: g,
                     isTyping: f
                 })

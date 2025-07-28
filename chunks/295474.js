@@ -1,7 +1,7 @@
 (n.d(t, {
     Ux: () => C,
     gS: () => g,
-    ww: () => S
+    ww: () => O
 }),
     n(997841));
 var i = n(73800),
@@ -55,7 +55,7 @@ function g(e) {
         [e]
     );
 }
-function S(e) {
+function O(e) {
     let { guildId: t, scrollPosition: n, analyticsLocation: s, analyticsLocations: a, openWithoutBackstack: u } = e,
         _ = (0, r.e7)([c.Z], () => c.Z.getGuild(t), [t]),
         E = (0, r.e7)([d.Z], () => null != _ && d.Z.can(h.Plq.CHANGE_NICKNAME, _), [_]);

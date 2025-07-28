@@ -169,14 +169,12 @@ function h(e) {
 function m(e) {
     let { color: t, colors: n, className: i } = e,
         { gradientStyle: a, gradientClassname: s } = (0, l.Ic)({
-            primaryColor: null == n ? void 0 : n.primaryColor,
-            secondaryColor: null == n ? void 0 : n.secondaryColor,
-            tertiaryColor: null == n ? void 0 : n.tertiaryColor,
+            colorStrings: n,
             roleStyle: 'dot'
         });
     if (null == t && null == n) return null;
     let u = null != n && null != n.primaryColor && null != n.secondaryColor,
-        f = d({}, u ? a : { backgroundColor: t });
+        f = d({}, u ? a : { backgroundColor: null != t ? t : void 0 });
     return (0, r.jsx)('span', {
         className: o()(c.roleCircle, i, { [s]: u }),
         style: f

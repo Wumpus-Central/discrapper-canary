@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => a });
 var r = n(81825),
     i = n(598077);
 function l(e, t, n) {
@@ -14,7 +14,7 @@ function l(e, t, n) {
         e
     );
 }
-class s extends r.Z {
+class a extends r.Z {
     constructor(e) {
         (super(), l(this, 'id', void 0), l(this, 'name', void 0), l(this, 'managed', void 0), l(this, 'roles', void 0), l(this, 'requiredColons', void 0), l(this, 'user', void 0), l(this, 'animated', void 0), l(this, 'available', void 0), (this.id = e.id), (this.name = e.name), (this.managed = e.managed), (this.roles = e.roles), (this.requiredColons = e.requiredColons), (this.user = new i.Z(e.user)), (this.animated = e.animated), (this.available = e.available));
     }

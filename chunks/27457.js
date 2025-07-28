@@ -31,8 +31,8 @@ var r = n(255367),
     P = n(314897),
     N = n(857192),
     w = n(77498),
-    Z = n(131951),
-    T = n(158776),
+    T = n(131951),
+    Z = n(158776),
     A = n(979651),
     R = n(574254),
     D = n(374129),
@@ -105,10 +105,10 @@ let $ = [W.fO.ACTIVITY],
             [eI, eP] = i.useState(!1),
             eN = (0, a.e7)([P.default], () => P.default.getId()),
             ew = R.type === W.fO.ACTIVITY ? null : null == (t = R.user) ? void 0 : t.id,
-            [eZ] = (0, f.Z)(R.type === W.fO.ACTIVITY ? [R.applicationId] : []),
-            eT = (0, a.e7)([_.Z], () => _.Z.getEnabled()),
-            eA = (0, a.e7)([Z.Z], () => null != ew && Z.Z.isLocalVideoDisabled(ew, (0, g.Z)(R.type)), [ew, R.type]),
-            eR = (0, a.e7)([Z.Z], () => (null != ew ? Z.Z.getVideoToggleState(ew, (0, g.Z)(R.type)) : z.ZUi.NONE), [ew, R.type]),
+            [eT] = (0, f.Z)(R.type === W.fO.ACTIVITY ? [R.applicationId] : []),
+            eZ = (0, a.e7)([_.Z], () => _.Z.getEnabled()),
+            eA = (0, a.e7)([T.Z], () => null != ew && T.Z.isLocalVideoDisabled(ew, (0, g.Z)(R.type)), [ew, R.type]),
+            eR = (0, a.e7)([T.Z], () => (null != ew ? T.Z.getVideoToggleState(ew, (0, g.Z)(R.type)) : z.ZUi.NONE), [ew, R.type]),
             eD = eR === z.ZUi.AUTO_PROBING,
             { speaking: eL, ringing: eM, hasVideo: ek } = (0, H.Z)(R, eN),
             eU = (function (e, t, n) {
@@ -125,7 +125,7 @@ let $ = [W.fO.ACTIVITY],
                         };
                     }),
                     u = (0, a.cj)(
-                        [Z.Z],
+                        [T.Z],
                         () => {
                             let n = (0, g.Z)(t.type);
                             return e === s
@@ -134,9 +134,9 @@ let $ = [W.fO.ACTIVITY],
                                       deafened: !1
                                   }
                                 : {
-                                      muted: Z.Z.isLocalMute(s, n),
-                                      localVideoDisabled: Z.Z.isLocalVideoDisabled(s, n),
-                                      localVideoAutoDisabled: Z.Z.isLocalVideoAutoDisabled(s, n)
+                                      muted: T.Z.isLocalMute(s, n),
+                                      localVideoDisabled: T.Z.isLocalVideoDisabled(s, n),
+                                      localVideoAutoDisabled: T.Z.isLocalVideoAutoDisabled(s, n)
                                   };
                         },
                         [e, t.type, s]
@@ -154,7 +154,7 @@ let $ = [W.fO.ACTIVITY],
             eB = (0, a.e7)([x.Z], () => (R.type === W.fO.USER && null != ew ? x.Z.getEffectForUserId(ew) : null)),
             eV = (0, a.e7)([A.Z], () => A.Z.getVoicePlatformForChannel(eo.id, null != ew ? ew : z.lds)),
             { showGameIcon: eF } = b.ZP.useExperiment({ location: 'voice_users' }, { autoTrackExposure: !1 }),
-            eH = (0, a.e7)([T.Z], () => (eF && null != ew ? T.Z.findActivity(ew, (e) => null != e.application_id && e.type === z.IIU.PLAYING) : null), [eF, ew]),
+            eH = (0, a.e7)([Z.Z], () => (eF && null != ew ? Z.Z.findActivity(ew, (e) => null != e.application_id && e.type === z.IIU.PLAYING) : null), [eF, ew]),
             ez = (0, a.e7)([w.Z], () => ((null == eH ? void 0 : eH.application_id) != null ? w.Z.getDetectableGame(eH.application_id) : null)),
             eW = (0, a.e7)([p.Z], () => (null != ez && (null == eH ? void 0 : eH.application_id) != null ? p.Z.getApplication(null == eH ? void 0 : eH.application_id) : void 0)),
             eK = (0, j.wV)({
@@ -246,7 +246,7 @@ let $ = [W.fO.ACTIVITY],
                     channel: eo,
                     width: ea
                 })),
-                    (e3 = q.intl.formatToPlainString(q.t.YCvOsL, { activityName: null == eZ ? void 0 : eZ.name })));
+                    (e3 = q.intl.formatToPlainString(q.t.YCvOsL, { activityName: null == eT ? void 0 : eT.name })));
                 break;
             case W.fO.HIDDEN_STREAM:
                 e0 = (0, r.jsx)(B.Z, {
@@ -370,7 +370,7 @@ let $ = [W.fO.ACTIVITY],
                                                   }
                                               )
                                           ),
-                                    R.type === W.fO.USER && eT
+                                    R.type === W.fO.USER && eZ
                                         ? (0, r.jsx)(O.Z, {
                                               userId: R.id,
                                               channelId: eo.id
@@ -479,10 +479,10 @@ function en(e) {
 ee.displayName = 'CallTile';
 let er = i.memo((e) => {
     let { idle: t, title: n, width: l, focused: c, videoToggleState: d, blocked: h, ignored: p, participantType: f, participantUserId: m, platform: b, secureFramesVerified: _, onContextMenu: O, muted: y, deafened: C, localMuted: v, serverMuted: j, serverDeafened: E, hasVideo: S, hideAudioIcon: x, onToggleMute: I } = e,
-        P = (0, a.e7)([Z.Z], () => null != m && Z.Z.isLocalVideoAutoDisabled(m, (0, g.Z)(f)), [m, f]),
+        P = (0, a.e7)([T.Z], () => null != m && T.Z.isLocalVideoAutoDisabled(m, (0, g.Z)(f)), [m, f]),
         N = (0, F.N)(l),
         w = (0, F.K)(l),
-        [T, A] = i.useState(!1);
+        [Z, A] = i.useState(!1);
     i.useEffect(() => {
         let e = !1,
             t = () => {
@@ -609,7 +609,7 @@ let er = i.memo((e) => {
                                         },
                                         tooltipText: q.intl.string(q.t['+1H47u']),
                                         icon: u.xhG,
-                                        hideWhenInactive: !T,
+                                        hideWhenInactive: !Z,
                                         compact: w
                                     }),
                                     D &&
@@ -617,7 +617,7 @@ let er = i.memo((e) => {
                                             onClick: I,
                                             tooltipText: v ? q.intl.string(q.t.YqAjX1) : q.intl.string(q.t['w4m94+']),
                                             icon: v ? u.OyP : u.gj8,
-                                            hideWhenInactive: !v && !T,
+                                            hideWhenInactive: !v && !Z,
                                             compact: w
                                         })
                                 ]

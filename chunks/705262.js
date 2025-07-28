@@ -37,8 +37,8 @@ var r = n(255367),
     D = n(981631),
     L = n(474936),
     x = n(874893),
-    M = n(526761),
-    k = n(231338),
+    k = n(526761),
+    M = n(231338),
     j = n(388032),
     U = n(622581);
 function G(e, t, n) {
@@ -117,8 +117,8 @@ var Y = (function (e) {
     return ((e.EDITOR = 'EDITOR'), (e.SETTINGS = 'SETTINGS'), e);
 })({});
 let W = Object.freeze({
-        EDITOR: M.fy.SLOW_USER_ACTION,
-        SETTINGS: M.fy.INFREQUENT_USER_ACTION
+        EDITOR: k.fy.SLOW_USER_ACTION,
+        SETTINGS: k.fy.INFREQUENT_USER_ACTION
     }),
     K = i.createContext({}),
     z = (e) => {
@@ -370,24 +370,24 @@ let W = Object.freeze({
                         onSelect: () => d('system')
                     }),
                 (0, r.jsx)(P.bD, {
-                    theme: k.BR.LIGHT,
-                    isSelected: c && !u && s === k.BR.LIGHT,
-                    onSelect: () => d(k.BR.LIGHT)
+                    theme: M.BR.LIGHT,
+                    isSelected: c && !u && s === M.BR.LIGHT,
+                    onSelect: () => d(M.BR.LIGHT)
                 }),
                 (0, r.jsx)(P.bD, {
-                    theme: k.BR.DARK,
-                    isSelected: c && !u && s === k.BR.DARK,
-                    onSelect: () => d(k.BR.DARK)
+                    theme: M.BR.DARK,
+                    isSelected: c && !u && s === M.BR.DARK,
+                    onSelect: () => d(M.BR.DARK)
                 }),
                 (0, r.jsx)(P.bD, {
-                    theme: k.BR.DARKER,
-                    isSelected: c && !u && s === k.BR.DARKER,
-                    onSelect: () => d(k.BR.DARKER)
+                    theme: M.BR.DARKER,
+                    isSelected: c && !u && s === M.BR.DARKER,
+                    onSelect: () => d(M.BR.DARKER)
                 }),
                 (0, r.jsx)(P.bD, {
-                    theme: k.BR.MIDNIGHT,
-                    isSelected: c && !u && s === k.BR.MIDNIGHT,
-                    onSelect: () => d(k.BR.MIDNIGHT)
+                    theme: M.BR.MIDNIGHT,
+                    isSelected: c && !u && s === M.BR.MIDNIGHT,
+                    onSelect: () => d(M.BR.MIDNIGHT)
                 }),
                 !n &&
                     !t &&

@@ -1,72 +1,47 @@
-a.d(n, { default: () => m });
-var t = a(255367),
-    r = a(73800),
-    s = a(120356),
-    i = a.n(s),
-    c = a(481060),
-    l = a(313201),
-    o = a(454585),
-    d = a(585483),
-    h = a(981631),
-    u = a(388032),
-    x = a(44534),
-    p = a(73433);
-function m(e) {
-    let { channel: n, isFromComposer: a, transitionState: s, onClose: m } = e,
-        C = (0, l.Dt)();
+e.d(n, { default: () => k });
+var i = e(255367),
+    s = e(73800),
+    a = e(120356),
+    o = e.n(a),
+    c = e(82659),
+    r = e(481060),
+    l = e(454585),
+    d = e(585483),
+    u = e(981631),
+    p = e(388032),
+    h = e(44534),
+    C = e(73433);
+function k(t) {
+    let { channel: n, isFromComposer: e, transitionState: a, onClose: k } = t;
     return (
-        r.useEffect(
+        s.useEffect(
             () => () => {
-                a && d.S.dispatch(h.CkL.FOCUS_COMPOSER_TITLE);
+                e && d.S.dispatch(u.CkL.FOCUS_COMPOSER_TITLE);
             },
-            [a]
+            [e]
         ),
-        (0, t.jsxs)(c.Y0X, {
-            transitionState: s,
-            'aria-labelledby': C,
-            size: c.CgR.DYNAMIC,
-            className: x.container,
-            parentComponent: 'ForumChannelGuidelinesModal',
-            children: [
-                (0, t.jsxs)(c.xBx, {
-                    className: x.header,
-                    separator: !1,
-                    children: [
-                        (0, t.jsx)(c.snC, {
-                            size: 'custom',
-                            color: 'currentColor',
-                            className: x.rulesIcon,
-                            width: 24,
-                            height: 24
-                        }),
-                        (0, t.jsx)(c.X6q, {
-                            variant: 'heading-lg/extrabold',
-                            children: u.intl.string(u.t['4d4T4u'])
-                        })
-                    ]
-                }),
-                (0, t.jsx)(c.hzk, {
-                    children: (0, t.jsx)(c.Text, {
-                        className: i()(x.content, p.markup),
-                        variant: 'text-sm/normal',
-                        color: 'header-secondary',
-                        children: (0, t.jsx)('div', {
-                            children: o.Z.parseForumPostGuidelines(n.topic, !0, {
-                                channelId: n.id,
-                                allowHeading: !0,
-                                allowList: !0
-                            })
-                        })
-                    })
-                }),
-                (0, t.jsx)(c.mzw, {
-                    children: (0, t.jsx)(c.zxk, {
-                        variant: 'primary',
-                        text: u.intl.string(u.t['NX+WJC']),
-                        onClick: m
+        (0, i.jsx)(c.Modal, {
+            transitionState: a,
+            onClose: k,
+            title: p.intl.string(p.t['4d4T4u']),
+            actions: [
+                {
+                    text: p.intl.string(p.t['NX+WJC']),
+                    onClick: k
+                }
+            ],
+            children: (0, i.jsx)(r.Text, {
+                className: o()(h.content, C.markup),
+                variant: 'text-sm/normal',
+                color: 'header-secondary',
+                children: (0, i.jsx)('div', {
+                    children: l.Z.parseForumPostGuidelines(n.topic, !0, {
+                        channelId: n.id,
+                        allowHeading: !0,
+                        allowList: !0
                     })
                 })
-            ]
+            })
         })
     );
 }

@@ -1,5 +1,5 @@
 n.d(t, {
-    Zo: () => s,
+    Zo: () => a,
     m5: () => l
 });
 var r = n(913527),
@@ -16,6 +16,6 @@ function l(e, t) {
         }
     );
 }
-function s(e, t) {
+function a(e, t) {
     return null != e ? i()(e).format(t) : '-';
 }

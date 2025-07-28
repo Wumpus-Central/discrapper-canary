@@ -1,4 +1,4 @@
-(n.d(t, { _: () => T }), n(642613), n(388685));
+(n.d(t, { _: () => Z }), n(642613), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -27,13 +27,13 @@ var r = n(255367),
     P = n(981631),
     N = n(388032),
     w = n(142857);
-let Z = {
+let T = {
     offset: {
         left: 4,
         right: -12
     }
 };
-function T(e) {
+function Z(e) {
     let { setTab: t, closePopout: n } = e;
     return (
         i.useEffect(() => {
@@ -279,7 +279,7 @@ let D = i.memo(function (e) {
                                           className: w.message,
                                           compact: y.jU.getSetting(),
                                           animateAvatar: !1,
-                                          focusProps: Z
+                                          focusProps: T
                                       },
                                       a.id
                                   ),

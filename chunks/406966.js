@@ -1,8 +1,9 @@
-(n.d(t, { Z: () => c }), n(467055), n(388685));
+(n.d(t, { Z: () => u }), n(467055), n(388685));
 var r = n(710845),
     i = n(430824),
-    a = n(287328);
-function o(e, t, n) {
+    a = n(823379),
+    o = n(287328);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,16 +16,16 @@ function o(e, t, n) {
         e
     );
 }
-let s = new r.Z('GuildVersions');
-class l {
+let l = new r.Z('GuildVersions');
+class c {
     async getCommittedVersions() {
         try {
-            let e = a.Z.guildVersions();
+            let e = o.Z.guildVersions();
             if (null == e) return {};
             let t = (await e.getMany()).map((e) => [e.id, e.version]);
             return Object.fromEntries(null != t ? t : []);
         } catch (e) {
-            return (s.warn("couldn't load guild versions", e), {});
+            return (l.warn("couldn't load guild versions", e), {});
         }
     }
     remove(e, t) {
@@ -48,7 +49,7 @@ class l {
                 case 'update':
                     return e.writes;
                 default:
-                    return [];
+                    (0, a.vE)(e);
             }
         }
         (this.updateWith(r, [n]), this.updateWith(r, i(n.emojis)), this.updateWith(r, i(n.stickers)), this.updateWith(r, i(n.channels)), this.updateWith(r, Array.isArray(n.roles) ? n.roles : Object.values(n.roles)), this.commit(t));
@@ -109,7 +110,7 @@ class l {
     }
     commit(e) {
         if (this.pending.size > 0) {
-            let t = a.Z.guildVersionsTransaction(e);
+            let t = o.Z.guildVersionsTransaction(e);
             for (let [e, n] of this.pending)
                 null != n
                     ? (t.put({
@@ -122,9 +123,9 @@ class l {
         }
     }
     constructor() {
-        (o(this, 'pending', new Map()),
-            o(this, 'committed', new Map()),
-            o(this, 'actions', {
+        (s(this, 'pending', new Map()),
+            s(this, 'committed', new Map()),
+            s(this, 'actions', {
                 BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
                 CHANNEL_CREATE: (e, t) => this.handleChannelCreate(e, t),
                 CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),
@@ -141,4 +142,4 @@ class l {
             }));
     }
 }
-let c = new l();
+let u = new c();

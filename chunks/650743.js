@@ -110,7 +110,7 @@ function T(e) {
         : (0, r.jsxs)('div', {
               className: O.keybindHint,
               children: [
-                  (0, r.jsx)(o.P4T, {
+                  (0, r.jsx)(o.Mgn, {
                       size: 'custom',
                       width: 20,
                       height: 20,

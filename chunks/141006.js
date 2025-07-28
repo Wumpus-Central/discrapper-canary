@@ -10,7 +10,8 @@ let r = {
     },
     i = {
         primary_color: 10382335,
-        secondary_color: 10469887
+        secondary_color: 10469887,
+        tertiary_color: null
     },
     a = [
         {

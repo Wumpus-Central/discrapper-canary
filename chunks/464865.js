@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    s = n(481060),
-    a = n(497321),
+    a = n(481060),
+    s = n(497321),
     o = n(158638),
     c = n(246946),
     d = n(63063),
@@ -11,8 +11,8 @@ var r = n(255367),
     m = n(44550),
     g = n(586382),
     p = n(859481),
-    f = n(981631),
-    h = n(388032),
+    h = n(981631),
+    f = n(388032),
     x = n(50986);
 function b(e) {
     let { guild: t } = e,
@@ -38,18 +38,18 @@ function b(e) {
     null == t)
         ? null
         : b
-          ? (0, r.jsx)(a.Z, {})
-          : (0, r.jsxs)(s.hjN, {
+          ? (0, r.jsx)(s.Z, {})
+          : (0, r.jsxs)(a.hjN, {
                 children: [
-                    (0, r.jsxs)(s.vwX, {
+                    (0, r.jsxs)(a.vwX, {
                         className: x.title,
-                        children: [h.intl.string(h.t['5XZKy8']), (0, r.jsx)(g.xl, { guild: t })]
+                        children: [f.intl.string(f.t['5XZKy8']), (0, r.jsx)(g.xl, { guild: t })]
                     }),
-                    (0, r.jsx)(s.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-secondary',
                         className: x.description,
-                        children: n ? h.intl.format(h.t['J/v84O'], { helpCenterArticle: d.Z.getArticleURL(f.BhN.GUILD_VANITY_URL) }) : h.intl.format(h.t.koklFB, { helpCenterArticle: d.Z.getArticleURL(f.BhN.GUILD_VANITY_URL) })
+                        children: n ? f.intl.format(f.t['J/v84O'], { helpCenterArticle: d.Z.getArticleURL(h.BhN.GUILD_VANITY_URL) }) : f.intl.format(f.t.koklFB, { helpCenterArticle: d.Z.getArticleURL(h.BhN.GUILD_VANITY_URL) })
                     }),
                     (0, r.jsx)(p.z, {
                         guild: t,

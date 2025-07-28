@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(388032),
     f = n(405920);
 function h(e) {
-    let { webhook: t, editedWebhook: n, channelOptions: h, isExpanded: x, errors: j, onToggleExpand: O } = e,
-        v = i.useMemo(() => {
+    let { webhook: t, editedWebhook: n, channelOptions: h, isExpanded: x, errors: j, onToggleExpand: v } = e,
+        O = i.useMemo(() => {
             var e;
             return null != (e = t.avatar) && /^data:/.test(e)
                 ? e
@@ -184,13 +184,13 @@ function h(e) {
                     (0, r.jsx)(o.P3F, {
                         className: f.header,
                         'aria-expanded': x,
-                        onClick: O,
+                        onClick: v,
                         children: (0, r.jsxs)(d.Z, {
                             align: d.Z.Align.CENTER,
                             children: [
                                 (0, r.jsx)(m.Z, {
                                     name: t.name,
-                                    imageSrc: v,
+                                    imageSrc: O,
                                     detailsClassName: f.__invalid_description,
                                     details: _
                                 }),

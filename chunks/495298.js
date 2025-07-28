@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => s }), n(388685));
+(n.d(t, { Z: () => a }), n(388685));
 var r = n(73800),
     i = n(584825),
     l = n(14263);
-function s(e) {
+function a(e) {
     let t = (0, i.qi)(e),
         n = (0, l.Z)(e);
     return r.useMemo(() => {

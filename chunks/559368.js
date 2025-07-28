@@ -1,9 +1,9 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r,
     i = n(877921),
     l = n.n(i),
-    s = n(442837),
-    a = n(570140);
+    a = n(442837),
+    s = n(570140);
 function o(e, t, n) {
     return (
         t in e
@@ -25,13 +25,13 @@ function m(e) {
     u = null;
     let r = {},
         i = {},
-        s = n[0],
-        a = n[1];
-    (null != s &&
+        a = n[0],
+        s = n[1];
+    (null != a &&
         c.forEach((e) => {
-            if (null != s[e]) {
+            if (null != a[e]) {
                 let t = l()(e);
-                (null != a && 0 !== a[e] && (r[''.concat(t, 'Change')] = ((s[e] - a[e]) * 100) / a[e]), (i[t] = s[e]));
+                (null != s && 0 !== s[e] && (r[''.concat(t, 'Change')] = ((a[e] - s[e]) * 100) / s[e]), (i[t] = a[e]));
             }
         }),
         (d[t] = (function (e) {
@@ -55,7 +55,7 @@ function g(e) {
     let { error: t } = e;
     u = t.code;
 }
-class p extends (r = s.ZP.Store) {
+class p extends (r = a.ZP.Store) {
     getOverviewAnalytics(e) {
         return d[e];
     }
@@ -64,7 +64,7 @@ class p extends (r = s.ZP.Store) {
     }
 }
 o(p, 'displayName', 'GuildSettingsAnalyticsStore');
-let f = new p(a.Z, {
+let h = new p(s.Z, {
     GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS: m,
     GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS: m,
     GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS: m,

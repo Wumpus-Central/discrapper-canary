@@ -3,22 +3,22 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    s = n(481060),
-    a = n(572590);
+    a = n(481060),
+    s = n(572590);
 function o(e) {
     let { pills: t, pillClassName: n } = e;
     return (0, r.jsx)('div', {
-        className: a.container,
+        className: s.container,
         children: t.map((e) =>
             (0, r.jsx)(
-                s.ua7,
+                a.ua7,
                 {
                     text: e.tooltipText,
                     shouldShow: null != e.tooltipText,
                     children: (t) => {
                         var i, o;
                         return (0, r.jsx)(
-                            s.P3F,
+                            a.P3F,
                             ((i = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -46,9 +46,9 @@ function o(e) {
                             })({}, t)),
                             (o = o =
                                 {
-                                    className: l()(a.pill, { [a.disabled]: e.disabled }, n),
+                                    className: l()(s.pill, { [s.disabled]: e.disabled }, n),
                                     onClick: e.disabled ? void 0 : e.onClick,
-                                    children: (0, r.jsx)(s.Text, {
+                                    children: (0, r.jsx)(a.Text, {
                                         tag: 'span',
                                         variant: 'text-sm/medium',
                                         color: 'interactive-normal',

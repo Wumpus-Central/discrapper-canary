@@ -42,21 +42,21 @@ function h(e) {
 }
 function f() {
     let e = l.G6.useSetting(),
-        t = l.Wz.useSetting(),
+        t = l.no.useSetting(),
         n = (e) => {
-            l.Wz.updateSetting(e);
+            l.no.updateSetting(e);
         },
         a = [
             {
-                value: r.E5.ON,
+                value: r.GI.ACTIVITY_STATUS_ON,
                 name: p.intl.string(p.t.UzGMHx)
             },
             {
-                value: r.E5.ON_FOR_LARGE_GUILDS,
+                value: r.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
                 name: p.intl.string(m.default['/sAeRU'])
             },
             {
-                value: r.E5.OFF,
+                value: r.GI.ACTIVITY_STATUS_OFF,
                 name: p.intl.string(m.default.m3oL7e)
             }
         ];

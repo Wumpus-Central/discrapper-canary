@@ -106,7 +106,7 @@ function O(e) {
             (0, r.jsxs)('div', {
                 className: y.microphoneUnitHeader,
                 children: [
-                    (0, r.jsx)(c.P4T, {
+                    (0, r.jsx)(c.Mgn, {
                         size: 'custom',
                         color: 'currentColor',
                         className: 0 === O.length ? y.warningCircle : y.errorCircle,

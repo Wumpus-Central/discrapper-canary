@@ -2,8 +2,8 @@
 var r = n(73800),
     i = n(392711),
     l = n.n(i),
-    s = n(232473);
-let a = (e) => {
+    a = n(232473);
+let s = (e) => {
         let t = {};
         for (let n of e) {
             let e = ''.concat(n.period_starting_at, ',').concat(n.status);
@@ -28,7 +28,7 @@ let a = (e) => {
                 if ((d([]), null == e)) return void o(!1);
                 try {
                     o(!0);
-                    let t = await s.C(e, { grouping_type: n });
+                    let t = await a.C(e, { grouping_type: n });
                     d(t);
                 } catch (e) {
                 } finally {
@@ -40,7 +40,7 @@ let a = (e) => {
                 u();
             }, [u]),
             {
-                payoutsByPeriod: r.useMemo(() => a(null != i ? c.filter((e) => e.user_id === i) : c), [c, i]),
+                payoutsByPeriod: r.useMemo(() => s(null != i ? c.filter((e) => e.user_id === i) : c), [c, i]),
                 loading: l
             }
         );

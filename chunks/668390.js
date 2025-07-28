@@ -110,7 +110,7 @@ function f(e) {
                                 tooltip: !1
                             })
                           : (0, i.jsx)(o.xko, {
-                                color: null != t ? t : void 0,
+                                color: null != t ? t : null,
                                 colors: O,
                                 className: m.roleCircle
                             }),

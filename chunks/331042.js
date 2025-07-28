@@ -36,8 +36,8 @@ var r = n(255367),
     D = n(429368),
     L = n(884697),
     x = n(587792),
-    M = n(228624),
-    k = n(635552),
+    k = n(228624),
+    M = n(635552),
     j = n(905357),
     U = n(328456),
     G = n(624377),
@@ -74,8 +74,8 @@ let et = 880,
             { confettiColors: w } = (0, G.Z)(A.styles),
             D = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
             L = i.useRef(null),
-            { analyticsLocations: M } = (0, m.ZP)([...l, h.Z.COLLECTIBLES_COLLECTED_MODAL]),
-            { collectedModalBackground: k } = (0, K.Ac)(A),
+            { analyticsLocations: k } = (0, m.ZP)([...l, h.Z.COLLECTIBLES_COLLECTED_MODAL]),
+            { collectedModalBackground: M } = (0, K.Ac)(A),
             j = (0, y.Z)();
         function U() {
             var e;
@@ -103,7 +103,7 @@ let et = 880,
                                       style: t
                                   })
                                 : (0, r.jsx)(V.Z, {
-                                      asset: k,
+                                      asset: M,
                                       size: (0, Z.ML)(et),
                                       className: ee.decorationBanner,
                                       categoryBannerOverride: (0, q.ZS)(A.categorySkuId)
@@ -119,7 +119,7 @@ let et = 880,
                         product: A,
                         pairedProduct: R,
                         onClose: n,
-                        analyticsLocations: M,
+                        analyticsLocations: k,
                         overrideTitle: _,
                         overrideDescription: g,
                         selectedVariantIndex: E,
@@ -135,7 +135,7 @@ let et = 880,
             });
         }
         return (0, r.jsxs)(m.Gt, {
-            value: M,
+            value: k,
             children: [
                 (0, r.jsx)('div', {
                     className: ee.modalInner,
@@ -157,13 +157,13 @@ let et = 880,
     ea = (e) => {
         var t;
         let { product: n, pairedProduct: a, onClose: o, analyticsLocations: s, overrideTitle: u, overrideDescription: d, shouldShowPromotionalExperience: _ } = e,
-            p = (0, M.ed)('CollectiblesCollectedModal'),
+            p = (0, k.ed)('CollectiblesCollectedModal'),
             h = (0, j.k)(n),
             m = (0, j.k)(a),
             g = null != a,
             E = (0, y.Z)(),
             b = null == E || null == (t = E.giftPurchaseConfirmation) ? void 0 : t.rewardCollectedText(),
-            { handleUseNow: O, isApplying: v } = (0, k.W)({
+            { handleUseNow: O, isApplying: v } = (0, M.W)({
                 product: n,
                 onSuccess: o,
                 onError: o
@@ -291,7 +291,7 @@ let et = 880,
     },
     eo = (e) => {
         let { onClose: t, product: n, analyticsLocations: a } = e,
-            o = (0, M.hv)('CollectiblesShopGiftButton'),
+            o = (0, k.hv)('CollectiblesShopGiftButton'),
             s = i.useCallback(
                 (e) => {
                     (e.stopPropagation(),

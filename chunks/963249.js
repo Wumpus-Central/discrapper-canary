@@ -90,13 +90,13 @@ function S(e, t) {
     return i;
 }
 function A(e) {
-    let { initialPlanId: t, followupSKUInfo: i, onClose: y, onComplete: v, onSubscriptionConfirmation: S, analyticsLocations: A, analyticsObject: N, analyticsLocation: C, analyticsSourceLocation: R, confirmationFooter: P, paymentModalBanner: w, isGift: D = !1, giftMessage: L, giftStyle: x, giftingOrigin: M, subscriptionTier: k, trialId: j, postSuccessGuild: U, openInvoiceId: G, applicationId: B, referralTrialOfferId: V, giftRecipient: F, returnRef: Z, subscription: H, skipConfirm: Y } = null != e ? e : {},
+    let { initialPlanId: t, followupSKUInfo: i, onClose: y, onComplete: v, onSubscriptionConfirmation: S, analyticsLocations: A, analyticsObject: N, analyticsLocation: C, analyticsSourceLocation: R, confirmationFooter: P, paymentModalBanner: w, isGift: D = !1, giftMessage: L, giftStyle: x, giftingOrigin: k, subscriptionTier: M, trialId: j, postSuccessGuild: U, openInvoiceId: G, applicationId: B, referralTrialOfferId: V, giftRecipient: F, returnRef: Z, subscription: H, skipConfirm: Y } = null != e ? e : {},
         W = !1,
         K = (0, o.Z)(),
         z = p.default.getCurrentUser(),
         q = (0, g.M5)(z, b.p9.TIER_2),
         X = a()('payment-modal'),
-        Q = (0, g.Wz)(k);
+        Q = (0, g.Wz)(M);
     return (0, s.ZDy)(
         async () => {
             let { default: e } = await Promise.all([n.e('94136'), n.e('17938'), n.e('84992'), n.e('54433'), n.e('25913')]).then(n.bind(n, 7305));
@@ -107,12 +107,12 @@ function A(e) {
                     e,
                     I(O({}, o), {
                         loadId: K,
-                        subscriptionTier: k,
+                        subscriptionTier: M,
                         skuId: Q,
                         isGift: D,
                         giftMessage: L,
                         giftStyle: x,
-                        giftingOrigin: M,
+                        giftingOrigin: k,
                         giftRecipient: F,
                         initialPlanId: t,
                         followupSKUInfo: i,

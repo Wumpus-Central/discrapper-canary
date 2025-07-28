@@ -3,13 +3,13 @@ var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(556012),
-    s = n(862085),
-    a = n(769998),
+    a = n(862085),
+    s = n(769998),
     o = n(671066),
     c = n(273504),
     d = n(467397);
 function u(e) {
-    let { action: t, triggerType: n, toggled: s, onToggleAction: a } = e,
+    let { action: t, triggerType: n, toggled: a, onToggleAction: s } = e,
         o = (0, l.c)(t.type, t, n);
     if (null == o) return null;
     let { headerText: c, descriptionText: u, icon: m } = o;
@@ -42,8 +42,8 @@ function u(e) {
                 children: (0, r.jsx)(i.XZJ, {
                     disabled: !o.isEditable,
                     type: i.XZJ.Types.INVERTED,
-                    value: s,
-                    onChange: () => a(!1),
+                    value: a,
+                    onChange: () => s(!1),
                     className: d.__invalid_actionCheckbox
                 })
             })
@@ -61,7 +61,7 @@ function m(e) {
                 onToggleAction: d
             });
         case c.jj.USER_COMMUNICATION_DISABLED:
-            return (0, r.jsx)(a.Z, {
+            return (0, r.jsx)(s.Z, {
                 action: t,
                 guildId: n,
                 triggerType: i,
@@ -69,7 +69,7 @@ function m(e) {
                 onToggleAction: d
             });
         case c.jj.BLOCK_MESSAGE:
-            return (0, r.jsx)(s.Z, {
+            return (0, r.jsx)(a.Z, {
                 action: t,
                 triggerType: i,
                 toggled: l,

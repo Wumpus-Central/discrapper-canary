@@ -2,17 +2,17 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
-    a = n(512722),
-    o = n.n(a),
+    a = n.n(l),
+    s = n(512722),
+    o = n.n(s),
     c = n(442837),
     d = n(692547),
     u = n(215569),
     m = n(755721),
     g = n(481060),
     p = n(484614),
-    f = n(852860),
-    h = n(782568),
+    h = n(852860),
+    f = n(782568),
     x = n(367907),
     b = n(674180),
     j = n(999382),
@@ -27,7 +27,7 @@ let I = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
     S = I[4],
     T = (e) => {
         var t, n;
-        let { guild: l, canEnable: a } = e,
+        let { guild: l, canEnable: s } = e,
             c = (0, O.YB)(l.id),
             { loading: j, updateSubscriptionsSettings: _ } = (0, O.QV)(),
             [T, P] = i.useState(l.features.has(y.oNc.CREATOR_STORE_PAGE)),
@@ -93,8 +93,8 @@ let I = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                 (0, r.jsx)(g.j7V, {
                     className: N.enableSwitch,
                     value: T,
-                    disabled: H || (!T && !a),
-                    tooltipNote: T || a ? void 0 : C.intl.string(C.t.mIgfEh),
+                    disabled: H || (!T && !s),
+                    tooltipNote: T || s ? void 0 : C.intl.string(C.t.mIgfEh),
                     hideBorder: !0,
                     onChange: (e) => P(e),
                     children: (0, r.jsx)(g.Text, {
@@ -109,7 +109,7 @@ let I = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                     children: [
                         (0, r.jsx)(p.Z, {
                             value: B,
-                            className: s()({ [N.disabled]: H })
+                            className: a()({ [N.disabled]: H })
                         }),
                         (0, r.jsx)('div', {
                             'data-button-hoisted-classname-wrapper': !0,
@@ -117,7 +117,7 @@ let I = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                             children: (0, r.jsx)(g.zxk, {
                                 variant: 'primary',
                                 text: C.intl.string(C.t.CaOYqa),
-                                onClick: () => (0, h.Z)(B),
+                                onClick: () => (0, f.Z)(B),
                                 disabled: H
                             })
                         })
@@ -171,7 +171,7 @@ let I = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                             error: A ? null : C.intl.string(C.t['1kL79f']),
                             placeholder: C.intl.string(C.t['+I4gdX']),
                             className: N.trailerInputWrapper,
-                            inputClassName: s()(N.trailerInput, {
+                            inputClassName: a()(N.trailerInput, {
                                 [N.error]: !A,
                                 [N.trailerInputWithCheckmark]: F || !A
                             }),
@@ -241,7 +241,7 @@ let I = [14361481, 12200937, 8804082, 6576370, 5335282, 2652110, 2128781, 219659
                     children:
                         G &&
                         (0, r.jsx)(g.oXn, {
-                            children: (0, r.jsx)(f.Z, {
+                            children: (0, r.jsx)(h.Z, {
                                 submitting: j,
                                 onReset: () => {
                                     var e, t;

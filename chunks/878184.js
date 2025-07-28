@@ -46,7 +46,7 @@ function u(e) {
                         className: c.error,
                         onClick: n,
                         children: [
-                            (0, r.jsx)(i.P4T, {
+                            (0, r.jsx)(i.Mgn, {
                                 size: 'sm',
                                 color: 'currentColor'
                             }),

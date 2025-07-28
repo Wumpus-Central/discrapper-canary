@@ -21,7 +21,7 @@ function _(e) {
         C = (0, i.e7)([s.default], () => s.default.getId()),
         x = p.ZP.useName(h),
         v = C === h.id,
-        O = (0, i.e7)([c.Z, u.Z], () => {
+        y = (0, i.e7)([c.Z, u.Z], () => {
             let e = c.Z.getChannel(E);
             if (null == e) return !1;
             if (e.isPrivate()) return !0;
@@ -38,7 +38,7 @@ function _(e) {
             : ((_ = f.intl.string(f.t['YVub5+'])),
               b
                   ? (t = f.intl.string(f.t['57nBt7']))
-                  : null != x && O
+                  : null != x && y
                     ? ((t = f.intl.formatToPlainString(f.t['9Akp1t'], { username: x })),
                       (n = (0, r.jsx)(a.Z.Button, {
                           onClick: function () {

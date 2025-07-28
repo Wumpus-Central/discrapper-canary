@@ -1,12 +1,12 @@
 n.d(t, {
     SR: () => o,
-    Vk: () => a,
+    Vk: () => s,
     xl: () => c
 });
 var r = n(544891),
     i = n(570140),
     l = n(981631);
-function s(e, t) {
+function a(e, t) {
     let n = new Date(),
         i = new Date(n.getTime() - (n.getDay() + 1) * 86400000 - 3628800000);
     return r.tn.get({
@@ -20,8 +20,8 @@ function s(e, t) {
         rejectWithError: !1
     });
 }
-function a(e) {
-    return s(e, l.ANM.GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW).then(
+function s(e) {
+    return a(e, l.ANM.GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW).then(
         (t) => {
             let { body: n } = t;
             i.Z.dispatch({
@@ -39,7 +39,7 @@ function a(e) {
     );
 }
 function o(e) {
-    return s(e, l.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW).then(
+    return a(e, l.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW).then(
         (t) => {
             let { body: n } = t;
             i.Z.dispatch({
@@ -57,7 +57,7 @@ function o(e) {
     );
 }
 function c(e) {
-    return s(e, l.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION).then(
+    return a(e, l.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION).then(
         (t) => {
             let { body: n } = t,
                 r = n

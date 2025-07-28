@@ -16,8 +16,8 @@ var l = n(255367),
     x = n(433355),
     _ = n(430824),
     C = n(31445),
-    j = n(59350),
-    b = n(290511),
+    b = n(59350),
+    j = n(290511),
     v = n(176505),
     y = n(921944),
     O = n(388032),
@@ -53,12 +53,12 @@ function w(e) {
     let { guildId: t, selectedSection: n } = e,
         i = (0, o.e7)([_.Z], () => _.Z.getGuild(t)),
         s = (0, C.Z)(i),
-        [u, m] = r.useState(null != n ? n : b.l7.CUSTOMIZE);
+        [u, m] = r.useState(null != n ? n : j.l7.CUSTOMIZE);
     r.useEffect(() => {
         null != n && m(n);
     }, [n]);
     let h = (0, o.e7)([x.ZP], () => x.ZP.getCurrentSidebarChannelId(v.oC.CHANNEL_BROWSER)),
-        y = null != h && u === b.l7.BROWSE,
+        y = null != h && u === j.l7.BROWSE,
         w = (0, o.e7)([g.Z], () => g.Z.getNewChannelIds(t).size > 0),
         P = (0, p.fU)(t);
     return null == i
@@ -84,16 +84,16 @@ function w(e) {
                                                   d.njP.Item,
                                                   {
                                                       className: Z.tabBarItem,
-                                                      id: b.l7.CUSTOMIZE,
+                                                      id: j.l7.CUSTOMIZE,
                                                       children: O.intl.string(O.t.H2cICQ)
                                                   },
-                                                  b.l7.CUSTOMIZE
+                                                  j.l7.CUSTOMIZE
                                               ),
                                               (0, l.jsxs)(
                                                   d.njP.Item,
                                                   {
                                                       className: Z.tabBarItem,
-                                                      id: b.l7.BROWSE,
+                                                      id: j.l7.BROWSE,
                                                       'aria-label': O.intl.string(O.t.et6wam),
                                                       children: [
                                                           O.intl.string(O.t.et6wam),
@@ -104,18 +104,18 @@ function w(e) {
                                                           })
                                                       ]
                                                   },
-                                                  b.l7.BROWSE
+                                                  j.l7.BROWSE
                                               )
                                           ]
                                       }),
                                   (() => {
                                       switch (u) {
-                                          case b.l7.CUSTOMIZE:
-                                              return (0, l.jsx)(j.Z, {
+                                          case j.l7.CUSTOMIZE:
+                                              return (0, l.jsx)(b.Z, {
                                                   guildId: t,
-                                                  onBrowseChannels: () => m(b.l7.BROWSE)
+                                                  onBrowseChannels: () => m(j.l7.BROWSE)
                                               });
-                                          case b.l7.BROWSE:
+                                          case j.l7.BROWSE:
                                           default:
                                               return (0, l.jsx)(f.Z, { guildId: t });
                                       }

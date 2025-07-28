@@ -1,3 +1,3 @@
-e.exports = function (e) {
-    return e.split('');
+t.exports = function (t) {
+    return t.split('');
 };

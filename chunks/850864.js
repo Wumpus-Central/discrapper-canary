@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(399606),
-    s = n(780384),
-    a = n(481060),
+    a = n(780384),
+    s = n(481060),
     o = n(210887),
     c = n(430824),
     d = n(999382),
@@ -11,8 +11,8 @@ var r = n(255367),
     m = n(969632),
     g = n(998164),
     p = n(340189),
-    f = n(507317),
-    h = n(399614),
+    h = n(507317),
+    f = n(399614),
     x = n(387960),
     b = n(806742),
     j = n(388032),
@@ -45,21 +45,21 @@ function N(e) {
         },
         [n, t.id]
     );
-    let E = i.useMemo(() => ((0, s.ap)(I) ? ('existing' === c ? O : C) : 'existing' === c ? _ : y), [c, I]);
+    let E = i.useMemo(() => ((0, a.ap)(I) ? ('existing' === c ? O : C) : 'existing' === c ? _ : y), [c, I]);
     return (0, r.jsxs)('div', {
         className: v.page,
         children: [
             (0, r.jsxs)('div', {
                 className: v.leftColumn,
                 children: [
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(s.X6q, {
                         className: v.header,
                         variant: 'heading-lg/extrabold',
                         children: j.intl.string(j.t.tbUZVl)
                     }),
                     (0, r.jsx)('div', {
                         className: v.descriptionSection,
-                        children: (0, r.jsx)(a.Text, {
+                        children: (0, r.jsx)(s.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
                             children: j.intl.string(j.t.DvHCq6)
@@ -70,14 +70,14 @@ function N(e) {
                         children: (0, r.jsx)(b.Z, { guildId: t.id })
                     }),
                     (0, r.jsx)('div', { className: v.sectionSeparator }),
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(s.X6q, {
                         className: v.header,
                         variant: 'heading-lg/extrabold',
                         children: j.intl.string(j.t['roY/ws'])
                     }),
                     (0, r.jsx)('div', {
                         className: v.descriptionSection,
-                        children: (0, r.jsx)(a.Text, {
+                        children: (0, r.jsx)(s.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
                             children: j.intl.format(j.t['/lWYYW'], {})
@@ -89,7 +89,7 @@ function N(e) {
                     }),
                     (0, r.jsx)(g.Z, { guildId: t.id }),
                     (0, r.jsx)('div', { className: v.sectionSeparator }),
-                    (0, r.jsx)(a.X6q, {
+                    (0, r.jsx)(s.X6q, {
                         className: v.header,
                         variant: 'heading-lg/extrabold',
                         children: j.intl.string(j.t.hEjHyM)
@@ -97,7 +97,7 @@ function N(e) {
                     (0, r.jsxs)('div', {
                         className: v.descriptionSection,
                         children: [
-                            (0, r.jsx)(a.Text, {
+                            (0, r.jsx)(s.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
                                 children: j.intl.string(j.t.YnvKVF)
@@ -106,7 +106,7 @@ function N(e) {
                                 className: v.bulletList,
                                 children: [
                                     (0, r.jsx)('li', {
-                                        children: (0, r.jsx)(a.Text, {
+                                        children: (0, r.jsx)(s.Text, {
                                             tag: 'span',
                                             variant: 'text-sm/medium',
                                             color: 'header-secondary',
@@ -114,7 +114,7 @@ function N(e) {
                                         })
                                     }),
                                     (0, r.jsx)('li', {
-                                        children: (0, r.jsx)(a.Text, {
+                                        children: (0, r.jsx)(s.Text, {
                                             tag: 'span',
                                             variant: 'text-sm/medium',
                                             color: 'header-secondary',
@@ -122,7 +122,7 @@ function N(e) {
                                         })
                                     }),
                                     (0, r.jsx)('li', {
-                                        children: (0, r.jsx)(a.Text, {
+                                        children: (0, r.jsx)(s.Text, {
                                             tag: 'span',
                                             variant: 'text-sm/medium',
                                             color: 'header-secondary',
@@ -135,10 +135,10 @@ function N(e) {
                     }),
                     (0, r.jsxs)('div', {
                         className: v.section,
-                        children: [(0, r.jsx)(x.Z, { guildId: t.id }), (0, r.jsx)(h.Z, { guildId: t.id })]
+                        children: [(0, r.jsx)(x.Z, { guildId: t.id }), (0, r.jsx)(f.Z, { guildId: t.id })]
                     }),
                     (0, r.jsx)('div', { className: v.sectionSeparator }),
-                    (0, r.jsx)(f.Z, { guild: t })
+                    (0, r.jsx)(h.Z, { guild: t })
                 ]
             }),
             (0, r.jsxs)('div', {
@@ -146,7 +146,7 @@ function N(e) {
                 children: [
                     (0, r.jsx)('div', {
                         className: v.centeredSection,
-                        children: (0, r.jsx)(a.Text, {
+                        children: (0, r.jsx)(s.Text, {
                             variant: 'text-sm/medium',
                             color: 'header-secondary',
                             children: j.intl.string(j.t.EVV6ub)
@@ -157,7 +157,7 @@ function N(e) {
                         src: E,
                         alt: j.intl.string(j.t.ST4UOz)
                     }),
-                    (0, r.jsx)(a.sY7, {
+                    (0, r.jsx)(s.sY7, {
                         options: N,
                         value: c,
                         onChange: (e) => d(e.value),

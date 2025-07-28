@@ -8,8 +8,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    s = n(442837),
     o = n(544891),
     c = n(433517),
     d = n(755721),
@@ -17,8 +17,8 @@ var r = n(255367),
     m = n(852860),
     g = n(493773),
     p = n(933557),
-    f = n(769654),
-    h = n(984933),
+    h = n(769654),
+    f = n(984933),
     x = n(650774),
     b = n(430824),
     j = n(496675),
@@ -82,15 +82,15 @@ let R = 'dismissedCommunityFeaturesUpsell',
                 guild: t,
                 submitting: n,
                 errors: i
-            } = (0, a.cj)([y.Z], () => ({
+            } = (0, s.cj)([y.Z], () => ({
                 submitting: y.Z.isSubmitting(),
                 guild: y.Z.getGuild(),
                 errors: y.Z.getErrors()
             })),
             l = Object.keys(i),
-            s = l.length > 0 ? l[0] : null;
+            a = l.length > 0 ? l[0] : null;
         return (
-            (e = 'rules_channel_id' === s ? E.intl.string(E.t['7IrBYm']) : null != s ? i[s] : void 0),
+            (e = 'rules_channel_id' === a ? E.intl.string(E.t['7IrBYm']) : null != a ? i[a] : void 0),
             (0, r.jsx)(m.Z, {
                 submitting: n,
                 onReset: () => {
@@ -113,12 +113,12 @@ let R = 'dismissedCommunityFeaturesUpsell',
     },
     D = (e) => {
         let { discoveryEnabled: t, onboardingEnabled: n, guild: l } = e,
-            [s, m] = i.useState(!0 === c.K.get(R)),
-            p = (0, a.e7)([x.Z], () => {
+            [a, m] = i.useState(!0 === c.K.get(R)),
+            p = (0, s.e7)([x.Z], () => {
                 var e;
                 return null != (e = x.Z.getMemberCount(l.id)) ? e : 0;
             }),
-            [h, j] = i.useState(!1);
+            [f, j] = i.useState(!1);
         (0, g.ZP)(() => {
             o.tn
                 .get({
@@ -130,8 +130,8 @@ let R = 'dismissedCommunityFeaturesUpsell',
                 })
                 .catch(() => j(!1));
         });
-        let v = (0, a.e7)([b.Z], () => b.Z.getGuild('942897714956472401')),
-            _ = l.features.has(I.oNc.COMMUNITY) && p >= 1000 && h && null == v;
+        let v = (0, s.e7)([b.Z], () => b.Z.getGuild('942897714956472401')),
+            _ = l.features.has(I.oNc.COMMUNITY) && p >= 1000 && f && null == v;
         if (t && n && !_) return null;
         let y = async () => {
             try {
@@ -140,10 +140,10 @@ let R = 'dismissedCommunityFeaturesUpsell',
                     oldFormErrors: !0,
                     rejectWithError: !0
                 });
-                (O.Z.close(), (0, f.X)(e.body.id));
+                (O.Z.close(), (0, h.X)(e.body.id));
             } catch (e) {}
         };
-        return s && !_
+        return a && !_
             ? null
             : (0, r.jsxs)('div', {
                   className: S.upsellContainer,
@@ -245,18 +245,18 @@ let R = 'dismissedCommunityFeaturesUpsell',
               });
     },
     A = () => {
-        let e = (0, a.e7)([y.Z], () => y.Z.getGuild()),
-            { canManageGuild: t, isGuildAdmin: n } = (0, a.cj)([j.Z], () => ({
+        let e = (0, s.e7)([y.Z], () => y.Z.getGuild()),
+            { canManageGuild: t, isGuildAdmin: n } = (0, s.cj)([j.Z], () => ({
                 canManageGuild: j.Z.can(I.Plq.MANAGE_GUILD, e),
                 isGuildAdmin: j.Z.can(I.Plq.ADMINISTRATOR, e)
             })),
-            l = (0, a.e7)([h.ZP], () => (null != e ? h.ZP.getChannels(e.id) : null)),
+            l = (0, s.e7)([f.ZP], () => (null != e ? f.ZP.getChannels(e.id) : null)),
             o = i.useMemo(N.jb, []),
             d = !0 !== c.K.get(R);
         if (null == e) return null;
         let m = [];
         null != l &&
-            l[h.sH].forEach((e) => {
+            l[f.sH].forEach((e) => {
                 let { channel: t } = e;
                 t.type === I.d4z.GUILD_TEXT &&
                     m.push({
@@ -276,7 +276,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                         publicUpdatesChannelId: null
                     }));
             },
-            f = (e) => {
+            h = (e) => {
                 O.Z.updateGuild({ description: e });
             },
             x = () => {
@@ -342,7 +342,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                       })
                     : null,
                 (0, r.jsxs)(u.hjN, {
-                    className: s()(S.twoColumnFormSection, S.firstSection),
+                    className: a()(S.twoColumnFormSection, S.firstSection),
                     children: [
                         (0, r.jsxs)('div', {
                             className: S.descriptionColumn,
@@ -373,7 +373,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                 }),
                 (0, r.jsx)(u.$i$, { className: S.divider }),
                 (0, r.jsxs)(u.hjN, {
-                    className: s()(S.twoColumnFormSection, S.firstSection),
+                    className: a()(S.twoColumnFormSection, S.firstSection),
                     children: [
                         (0, r.jsxs)('div', {
                             className: S.descriptionColumn,
@@ -404,7 +404,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                 }),
                 (0, r.jsx)(u.$i$, { className: S.divider }),
                 (0, r.jsxs)(u.hjN, {
-                    className: s()(S.twoColumnFormSection, S.firstSection),
+                    className: a()(S.twoColumnFormSection, S.firstSection),
                     children: [
                         (0, r.jsxs)('div', {
                             className: S.descriptionColumn,
@@ -482,7 +482,7 @@ let R = 'dismissedCommunityFeaturesUpsell',
                                 (0, r.jsx)(u.Kx8, {
                                     value: null != (n = e.description) ? n : '',
                                     placeholder: E.intl.string(E.t.Nvfows),
-                                    onChange: f,
+                                    onChange: h,
                                     maxLength: 120,
                                     disabled: !t
                                 })
@@ -531,6 +531,6 @@ let R = 'dismissedCommunityFeaturesUpsell',
         });
     },
     k = () => {
-        let e = (0, a.e7)([y.Z], () => y.Z.getGuild());
+        let e = (0, s.e7)([y.Z], () => y.Z.getGuild());
         return null == e ? null : e.features.has(I.oNc.COMMUNITY) ? (0, r.jsx)(A, {}) : (0, r.jsx)(C.Z, { guild: e });
     };

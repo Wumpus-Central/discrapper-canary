@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(793030),
     l = n(442837),
-    s = n(902840),
-    a = n(100527),
+    a = n(902840),
+    s = n(100527),
     o = n(906732),
     c = n(34586),
     d = n(496675),
@@ -12,18 +12,18 @@ var i = n(793030),
     m = n(723914),
     g = n(30818),
     p = n(997698),
-    f = n(354031),
-    h = n(335438),
+    h = n(354031),
+    f = n(335438),
     x = n(166805),
     b = n(981631),
     j = n(388032),
     v = n(515636);
 let _ = function () {
-    let { analyticsLocations: e } = (0, o.ZP)(a.Z.GUILD_SETTINGS_ENGAGEMENT_PAGE),
+    let { analyticsLocations: e } = (0, o.ZP)(s.Z.GUILD_SETTINGS_ENGAGEMENT_PAGE),
         t = (0, l.e7)([u.Z], () => u.Z.getProps().guild, []),
         n = (0, l.e7)([d.Z], () => null != t && d.Z.can(b.Plq.MANAGE_GUILD, t)),
         _ = (0, c.E)(t),
-        O = (0, s.l9)(null != t ? t : void 0);
+        O = (0, a.l9)(null != t ? t : void 0);
     return null == t
         ? null
         : (0, r.jsx)(o.Gt, {
@@ -50,14 +50,14 @@ let _ = function () {
                       !0 === O &&
                           (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(f.P, {
+                                  (0, r.jsx)(h.P, {
                                       canManageGuild: n,
                                       features: t.features
                                   }),
                                   (0, r.jsx)('div', { className: v.divider })
                               ]
                           }),
-                      (0, r.jsx)(h.l, {
+                      (0, r.jsx)(f.l, {
                           canManageGuild: n,
                           guild: t
                       }),

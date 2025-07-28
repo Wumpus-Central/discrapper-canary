@@ -1,9 +1,9 @@
-n.d(t, { h: () => f });
+n.d(t, { h: () => h });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    s = n(442837),
     o = n(481060),
     c = n(496675),
     d = n(63063),
@@ -11,13 +11,13 @@ var r = n(255367),
     m = n(981631),
     g = n(388032),
     p = n(109303);
-function f(e) {
+function h(e) {
     let { activeType: t, onTypePicked: n, guild: l } = e,
-        f = l.features.has(m.oNc.COMMUNITY),
-        h = (0, a.e7)([c.Z], () => c.Z.can(m.Plq.ADMINISTRATOR, l)),
+        h = l.features.has(m.oNc.COMMUNITY),
+        f = (0, s.e7)([c.Z], () => c.Z.can(m.Plq.ADMINISTRATOR, l)),
         x = i.useMemo(() => {
-            let e = t === u.A.DISCOVERABLE && !h,
-                n = f && (t === u.A.DISCOVERABLE || h);
+            let e = t === u.A.DISCOVERABLE && !f,
+                n = h && (t === u.A.DISCOVERABLE || f);
             return [
                 {
                     id: u.A.INVITE,
@@ -41,10 +41,10 @@ function f(e) {
                     body: g.intl.string(g.t.pqQylZ),
                     icon: o.enf,
                     enabled: n,
-                    ineligibleText: f ? g.intl.string(g.t.iBpXPj) : g.intl.string(g.t['5TQ+eH'])
+                    ineligibleText: h ? g.intl.string(g.t.iBpXPj) : g.intl.string(g.t['5TQ+eH'])
                 }
             ];
-        }, [t, f, h]);
+        }, [t, h, f]);
     return (0, r.jsxs)('div', {
         children: [
             (0, r.jsx)(o.X6q, {
@@ -83,7 +83,7 @@ function f(e) {
                                 className: p.tooltipContainer,
                                 tooltipClassName: p.tooltip,
                                 children: (0, r.jsxs)('div', {
-                                    className: s()(p.joinOptionContent, {
+                                    className: a()(p.joinOptionContent, {
                                         [p.active]: n,
                                         [p.uninteractive]: !e.enabled
                                     }),

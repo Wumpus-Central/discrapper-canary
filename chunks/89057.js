@@ -72,7 +72,7 @@ function O(e) {
               className: a()(h.blockedPaymentsWarning, t),
               type: l.Zbd.Types.CUSTOM,
               children: [
-                  (0, r.jsx)(l.P4T, {
+                  (0, r.jsx)(l.Mgn, {
                       size: 'custom',
                       width: 20,
                       height: 20,

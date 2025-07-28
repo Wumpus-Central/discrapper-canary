@@ -1,13 +1,14 @@
-(n.d(t, { fE: () => b }), n(953529), n(415506));
+(n.d(t, { fE: () => y }), n(953529), n(415506));
 var r = n(512722),
     i = n.n(r),
     a = n(442837),
     o = n(579092),
     s = n(570140),
     l = n(311929),
-    c = n(611907),
-    u = n(544407);
-function d(e, t, n) {
+    c = n(823379),
+    u = n(611907),
+    d = n(544407);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,14 +21,14 @@ function d(e, t, n) {
         e
     );
 }
-let f = new o.Yd('KvStore'),
-    _ = Symbol('setKv'),
-    p = Symbol('setMetadata'),
-    h = Object.prototype.hasOwnProperty,
-    m = Symbol('version'),
-    g = p,
-    E = _;
-class b extends a.yh {
+let _ = new o.Yd('KvStore'),
+    p = Symbol('setKv'),
+    h = Symbol('setMetadata'),
+    m = Object.prototype.hasOwnProperty,
+    g = Symbol('version'),
+    E = h,
+    b = p;
+class y extends a.yh {
     getMode() {
         return this.mode;
     }
@@ -36,12 +37,12 @@ class b extends a.yh {
         return () => {
             let { memoized: n } = this.derived,
                 r = n[t];
-            return (h.call(n, t) || ((r = e(this.root)), (n[t] = r)), r);
+            return (m.call(n, t) || ((r = e(this.root)), (n[t] = r)), r);
         };
     }
     version() {
-        let e = this.derived.memoized[m];
-        return (null == e && (this.derived.memoized[m] = e = ++this.nextVersion), e);
+        let e = this.derived.memoized[g];
+        return (null == e && (this.derived.memoized[g] = e = ++this.nextVersion), e);
     }
     get(e) {
         return this.root[e];
@@ -53,7 +54,7 @@ class b extends a.yh {
         return this.derived.length;
     }
     constructor(e, t = 'typescript') {
-        'typescript' === t || (0, c.F)() || (f.warn('Attempted to create a KvStore in mode '.concat(t, ', but libdiscore is not available. Falling back to typescript mode.')), (t = 'typescript'));
+        'typescript' === t || (0, u.F)() || (_.warn('Attempted to create a KvStore in mode '.concat(t, ', but libdiscore is not available. Falling back to typescript mode.')), (t = 'typescript'));
         let n = {};
         if ('typescript' === t || 'typescript-libdiscore-dual-read' === t) {
             let t = !1,
@@ -76,7 +77,7 @@ class b extends a.yh {
                         return (void 0 === r && i.length++, (i.memoized = {}), (t = !0), !0);
                     },
                     remove: (e) => {
-                        let n = h.call(this.root, e);
+                        let n = m.call(this.root, e);
                         if (n) {
                             delete this.root[e];
                             let { derived: n } = this;
@@ -95,13 +96,13 @@ class b extends a.yh {
         }
         switch (
             (super(s.Z, n),
-            d(this, 'mode', void 0),
-            d(this, 'shadowState', void 0),
-            d(this, g, void 0),
-            d(this, E, void 0),
-            d(this, 'root', void 0),
-            d(this, 'derived', void 0),
-            d(this, 'nextVersion', void 0),
+            f(this, 'mode', void 0),
+            f(this, 'shadowState', void 0),
+            f(this, E, void 0),
+            f(this, b, void 0),
+            f(this, 'root', void 0),
+            f(this, 'derived', void 0),
+            f(this, 'nextVersion', void 0),
             (this.mode = t),
             (this.shadowState = null),
             (this.root = {}),
@@ -110,7 +111,7 @@ class b extends a.yh {
                 memoized: {}
             }),
             (this.nextVersion = 0),
-            f.info(''.concat(this.getName(), ' initialized in mode: ').concat(this.mode)),
+            _.info(''.concat(this.getName(), ' initialized in mode: ').concat(this.mode)),
             t)
         ) {
             case 'typescript-libdiscore-dual-read':
@@ -121,10 +122,10 @@ class b extends a.yh {
                         memoized: {}
                     }
                 }),
-                    (this[p] = (e) => {
+                    (this[h] = (e) => {
                         (i()(null != this.shadowState, 'Shadow state must be set in dual-read mode before setting derived data.'), (this.shadowState.derived = e));
                     }),
-                    (this[_] = (e, t) => {
+                    (this[p] = (e, t) => {
                         (i()(null != this.shadowState, 'Shadow state must be set in dual-read mode before setting derived data.'),
                             (this.shadowState = {
                                 root: e,
@@ -133,7 +134,7 @@ class b extends a.yh {
                     }),
                     this.addChangeListener(() => {
                         (i()(null != this.shadowState, 'Shadow state must be set in dual-read mode before running validation.'),
-                            (0, u.t)(
+                            (0, d.t)(
                                 this.getName(),
                                 {
                                     root: this.root,
@@ -144,20 +145,20 @@ class b extends a.yh {
                     }));
                 break;
             case 'libdiscore':
-                ((this[p] = (e) => {
+                ((this[h] = (e) => {
                     this.derived = e;
                 }),
-                    (this[_] = (e, t) => {
+                    (this[p] = (e, t) => {
                         this.setKvRoot(e, t);
                     }));
                 break;
             case 'typescript':
-                this[p] = this[_] = () => {
+                this[h] = this[p] = () => {
                     throw Error('This method should not be called in TypeScript mode.');
                 };
                 break;
             default:
-                throw Error('Unknown KvStore mode: '.concat(t));
+                (0, c.vE)(t);
         }
     }
 }

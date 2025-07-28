@@ -16,8 +16,8 @@ var n = r(255367),
 function E(e) {
     let { detectedGame: t, trackAction: r } = e,
         [a, E] = i.useState((null == t ? void 0 : t.summaryLocalized) != null),
-        [x, h] = i.useState(!0),
-        [v, j] = i.useState(!1),
+        [x, v] = i.useState(!0),
+        [h, j] = i.useState(!1),
         b = i.useRef(null),
         { width: I, height: y } = (0, d.Z)();
     return (i.useEffect(() => {
@@ -50,11 +50,11 @@ function E(e) {
                       variant: 'text-sm/normal',
                       children: a ? t.summaryLocalized : t.summary
                   }),
-                  v &&
+                  h &&
                       (0, n.jsx)(u.P3F, {
                           className: p.clickable,
                           onClick: () => {
-                              (r(x ? m.as.ShowMore : m.as.ShowLess), h(!x));
+                              (r(x ? m.as.ShowMore : m.as.ShowLess), v(!x));
                           },
                           children: (0, n.jsx)(o.xv, {
                               variant: 'text-sm/semibold',

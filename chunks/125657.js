@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(539854), n(388685));
+(n.d(t, { Z: () => j }), n(539854), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(149765),
@@ -10,38 +10,32 @@ var r = n(255367),
     u = n(385499),
     p = n(600164),
     m = n(422559),
-    b = n(601964),
-    g = n(598077),
-    f = n(271383),
-    h = n(485386),
-    x = n(823379),
-    j = n(700785),
-    O = n(388032),
-    v = n(439478);
-function y(e) {
+    b = n(598077),
+    g = n(271383),
+    f = n(485386),
+    h = n(388032),
+    x = n(439478);
+function j(e) {
     var t;
-    let { guild: n, applicationIntegration: y } = e,
-        _ = (0, o.e7)([h.Z], () => h.Z.getRoles(n.id)),
-        { application: C } = y,
-        N = null != C.bot ? new g.Z(C.bot) : null,
-        S = (0, o.e7)([f.ZP], () => (null != N ? f.ZP.getMember(n.id, N.id) : null), [N, n]),
-        I = null == N ? void 0 : N.id;
+    let { guild: n, applicationIntegration: j } = e,
+        { application: v } = j,
+        O = null != v.bot ? new b.Z(v.bot) : null,
+        y = (0, o.e7)([g.ZP], () => (null != O ? g.ZP.getMember(n.id, O.id) : null), [O, n]),
+        _ = (0, o.e7)([f.Z], () => f.Z.getEveryoneRole(n)),
+        C = (0, o.Wu)([f.Z], () => {
+            var e;
+            return f.Z.getManyRoles(n.id, null != (e = null == y ? void 0 : y.roles) ? e : []);
+        }),
+        N = null == O ? void 0 : O.id;
     i.useEffect(() => {
-        null != I && s.Z.requestMembersById(n.id, I);
-    }, [n.id, I]);
-    let E = i.useMemo(() => {
-        var e, t, r;
-        let i = _[(0, b.lV)(n)],
-            o = null != (t = null == S || null == (e = S.roles) ? void 0 : e.map((e) => _[e]).filter(x.lm)) ? t : [],
-            a = null != (r = null == i ? void 0 : i.permissions) ? r : j.Hn;
-        for (let e of o) a = l.IH(a, e.permissions);
-        return a;
-    }, [n, _, S]);
-    return null == N
+        null != N && s.Z.requestMembersById(n.id, N);
+    }, [n.id, N]);
+    let S = i.useMemo(() => l.$e(_.permissions, ...C.map((e) => e.permissions)), [C, _]);
+    return null == O
         ? null
         : (0, r.jsx)(a.Zbd, {
               editable: !0,
-              className: v.card,
+              className: x.card,
               children: (0, r.jsxs)(p.Z, {
                   direction: p.Z.Direction.VERTICAL,
                   children: [
@@ -50,17 +44,17 @@ function y(e) {
                           children: [
                               (0, r.jsx)('img', {
                                   alt: '',
-                                  src: N.getAvatarURL(n.id, 32),
-                                  className: v.iconWrapper
+                                  src: O.getAvatarURL(n.id, 32),
+                                  className: x.iconWrapper
                               }),
                               (0, r.jsx)(a.Text, {
                                   color: 'header-primary',
                                   variant: 'text-sm/normal',
-                                  children: O.intl.format(O.t.GyhzGx, { user: N.toString() })
+                                  children: h.intl.format(h.t.GyhzGx, { user: O.toString() })
                               }),
                               (0, r.jsx)(u.Z, {
-                                  className: v.tag,
-                                  verified: N.isVerifiedBot()
+                                  className: x.tag,
+                                  verified: O.isVerifiedBot()
                               })
                           ]
                       }),
@@ -70,19 +64,19 @@ function y(e) {
                           for (let e of m.VY) l.e$(i, e) ? o.push(e) : s.push(e);
                           return (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(a.$i$, { className: v.divider }),
+                                  (0, r.jsx)(a.$i$, { className: x.divider }),
                                   n.length > 0
                                       ? (0, r.jsxs)(r.Fragment, {
                                             children: [
                                                 (0, r.jsx)(a.vwX, {
-                                                    className: v.permissionHeader,
-                                                    children: O.intl.format(O.t.PCs0oq, { numRoles: n.length })
+                                                    className: x.permissionHeader,
+                                                    children: h.intl.format(h.t.PCs0oq, { numRoles: n.length })
                                                 }),
                                                 (0, r.jsx)(c.ZP, {
-                                                    className: v.rolePills,
+                                                    className: x.rolePills,
                                                     user: e,
                                                     guild: t,
-                                                    userRoles: n,
+                                                    userRoleIds: n,
                                                     wrap: !1,
                                                     readOnly: !0
                                                 })
@@ -92,14 +86,14 @@ function y(e) {
                                   o.length > 0 || s.length > 0
                                       ? (0, r.jsx)(d.Z, {
                                             grantedPermissions: o,
-                                            grantedPermissionsHeader: O.intl.string(O.t['hA4+sr']),
+                                            grantedPermissionsHeader: h.intl.string(h.t['hA4+sr']),
                                             disabledPermissions: s,
-                                            disabledPermissionsHeader: O.intl.string(O.t['/rEZ2t'])
+                                            disabledPermissionsHeader: h.intl.string(h.t['/rEZ2t'])
                                         })
                                       : null
                               ]
                           });
-                      })(N, n, null != (t = null == S ? void 0 : S.roles) ? t : [], E)
+                      })(O, n, null != (t = null == y ? void 0 : y.roles) ? t : [], S)
                   ]
               })
           });

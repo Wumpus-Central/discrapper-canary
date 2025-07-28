@@ -49,17 +49,17 @@ class g {
             b = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : a.Z,
             E = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : i.Z,
             { snapshotIndex: C, parentMessage: x, messageSnapshot: v } = this,
-            O = (0, d.Xf)(v.message.timestamp),
-            y = m.getChannel(this.parentMessage.channel_id);
-        if (null != y && y.guild_id === (null == (e = x.messageReference) ? void 0 : e.guild_id)) {
+            y = (0, d.Xf)(v.message.timestamp),
+            O = m.getChannel(this.parentMessage.channel_id);
+        if (null != O && O.guild_id === (null == (e = x.messageReference) ? void 0 : e.guild_id)) {
             let e = m.getChannel(null == (n = x.messageReference) ? void 0 : n.channel_id);
             if (null == e) {
-                let e = b.getGuild(y.guild_id);
+                let e = b.getGuild(O.guild_id);
                 return null == e
                     ? { snapshotIndex: C }
                     : {
                           snapshotIndex: C,
-                          footerInfo: f(e, O)
+                          footerInfo: f(e, y)
                       };
             }
             if (!h.can(e.accessPermissions, e)) return { snapshotIndex: C };
@@ -68,10 +68,10 @@ class g {
                 snapshotIndex: C,
                 footerInfo: {
                     originLabel: t,
-                    timestampLabel: O,
+                    timestampLabel: y,
                     accessibilityLabel: p.intl.formatToPlainString(p.t['+l04BA'], {
                         origin: t,
-                        timestamp: O
+                        timestamp: y
                     })
                 }
             };
@@ -83,7 +83,7 @@ class g {
             ? { snapshotIndex: C }
             : {
                   snapshotIndex: C,
-                  footerInfo: f(I, O)
+                  footerInfo: f(I, y)
               };
     }
     constructor(e, t, n) {

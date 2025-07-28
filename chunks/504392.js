@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => w }), n(539854), n(388685), n(953529));
+(n.d(t, { Z: () => S }), n(539854), n(388685), n(953529));
 var r = n(255367),
     o = n(73800),
     i = n(120356),
@@ -13,9 +13,9 @@ var r = n(255367),
     f = n(639777),
     _ = n(27237),
     x = n(51859),
-    v = n(184478),
-    b = n(877362),
-    g = n(460608),
+    g = n(184478),
+    v = n(877362),
+    b = n(460608),
     j = n(279604),
     E = n(385902),
     h = n(332538),
@@ -23,16 +23,16 @@ var r = n(255367),
     I = n(921944),
     N = n(93841),
     O = n(388032),
-    P = n(782285);
-let Z = [C.Us.LEVEL, C.Us.PERK];
-function w(e) {
+    Z = n(782285);
+let P = [C.Us.LEVEL, C.Us.PERK];
+function S(e) {
     let { guildId: t, powerupSkuId: i } = e;
     (o.useEffect(() => {
         ((0, p.Sn)(t), (0, p.Fm)(t));
     }, [t]),
         (0, h.Wj)(t));
-    let w = (0, s.e7)([m.Z], () => m.Z.getStateForGuild(t)),
-        S = (0, f.Z)(t),
+    let S = (0, s.e7)([m.Z], () => m.Z.getStateForGuild(t)),
+        w = (0, f.Z)(t),
         y = o.useRef(!1),
         { shouldShow: T, modalConfig: A } = (0, E.K)(t, 'GuildPowerupsOverview'),
         R = null == i && null != A,
@@ -42,9 +42,9 @@ function w(e) {
     return (o.useEffect(() => {
         var e;
         if (null == i) return;
-        let n = null == w || null == (e = w.allPowerups) ? void 0 : e[i];
+        let n = null == S || null == (e = S.allPowerups) ? void 0 : e[i];
         null == n || y.current || ((0, j.KE)(t, n), (y.current = !0));
-    }, [t, i, null == w ? void 0 : w.allPowerups]),
+    }, [t, i, null == S ? void 0 : S.allPowerups]),
     o.useEffect(() => {
         null != k &&
             null != A &&
@@ -95,13 +95,13 @@ function w(e) {
                 }
             );
     }, [t, k, D, A]),
-    (null == w ? void 0 : w.powerupCatalog) == null)
+    (null == S ? void 0 : S.powerupCatalog) == null)
         ? null
         : (0, r.jsxs)('div', {
-              className: P.container,
+              className: Z.container,
               children: [
                   (0, r.jsxs)(d.Z, {
-                      className: P.toolbar,
+                      className: Z.toolbar,
                       hideSearch: !0,
                       toolbar: (0, r.jsx)('div', {}),
                       children: [
@@ -113,12 +113,12 @@ function w(e) {
                       ]
                   }),
                   (0, r.jsxs)('div', {
-                      className: P.contentContainer,
+                      className: Z.contentContainer,
                       children: [
                           (0, r.jsx)(c.zJl, {
-                              className: P.powerupsContainer,
-                              children: Z.map((e) => {
-                                  let n = w.powerupCatalog[e];
+                              className: Z.powerupsContainer,
+                              children: P.map((e) => {
+                                  let n = S.powerupCatalog[e];
                                   if (null == n) return;
                                   let { title: o, description: i } = (function (e) {
                                           switch (e) {
@@ -138,10 +138,10 @@ function w(e) {
                                   return (0, r.jsxs)(
                                       'div',
                                       {
-                                          className: P.powerupsSection,
+                                          className: Z.powerupsSection,
                                           children: [
                                               (0, r.jsxs)('div', {
-                                                  className: P.powerupHorizontalPadding,
+                                                  className: Z.powerupHorizontalPadding,
                                                   children: [
                                                       (0, r.jsx)(c.X6q, {
                                                           color: 'header-primary',
@@ -157,7 +157,7 @@ function w(e) {
                                               }),
                                               (0, r.jsx)(s, {
                                                   orientation: 'horizontal',
-                                                  className: l()(P.powerupContainer, P.powerupHorizontalPadding, { [P.powerupsLevelContainer]: e === C.Us.LEVEL }),
+                                                  className: l()(Z.powerupContainer, Z.powerupHorizontalPadding, { [Z.powerupsLevelContainer]: e === C.Us.LEVEL }),
                                                   fade: !0,
                                                   children: n.map((e, o) => {
                                                       switch (e.type) {
@@ -191,8 +191,8 @@ function w(e) {
                               })
                           }),
                           (0, r.jsxs)('div', {
-                              className: P.sidebarContainer,
-                              children: [S ? (0, r.jsx)(v.Z, { guildId: t }) : (0, r.jsx)(b.Z, { guildId: t }), (0, r.jsx)(g.Z, { guildId: t })]
+                              className: Z.sidebarContainer,
+                              children: [w ? (0, r.jsx)(g.Z, { guildId: t }) : (0, r.jsx)(v.Z, { guildId: t }), (0, r.jsx)(b.Z, { guildId: t })]
                           })
                       ]
                   })

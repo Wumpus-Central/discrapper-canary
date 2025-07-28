@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    s = n(481060),
     o = n(442837),
     c = n(210753),
     d = n(77498),
@@ -14,11 +14,11 @@ function m(e) {
             coverImageHeight: 336,
             coverImageWidth: 252
         }),
-        f = (0, o.e7)([d.Z], () => {
+        h = (0, o.e7)([d.Z], () => {
             var e, n;
             return null != (n = null == (e = d.Z.getDetectableGame(t)) ? void 0 : e.name) ? n : '';
         }),
-        h = i.useCallback(() => {
+        f = i.useCallback(() => {
             null == l || l(t);
         }, [t, l]),
         x = i.useMemo(
@@ -28,26 +28,26 @@ function m(e) {
                     : null == p
                       ? (0, r.jsx)('div', {
                             className: u.gameUnknownImage,
-                            children: (0, r.jsx)(a.IMN, { size: 'lg' })
+                            children: (0, r.jsx)(s.IMN, { size: 'lg' })
                         })
                       : (0, r.jsx)('img', {
                             className: u.gameImage,
-                            alt: f,
+                            alt: h,
                             src: p
                         }),
-            [p, g, f]
+            [p, g, h]
         );
     return (0, r.jsxs)('div', {
-        className: s()(u.selectedGame, {
+        className: a()(u.selectedGame, {
             [u.dimmed]: !n,
             [u.disabled]: m
         }),
         children: [
-            (0, r.jsxs)(a.P3F, {
+            (0, r.jsxs)(s.P3F, {
                 'aria-disabled': m,
                 tabIndex: m ? -1 : 0,
-                onClick: m ? void 0 : h,
-                className: s()(u.gameImageBackground, {
+                onClick: m ? void 0 : f,
+                className: a()(u.gameImageBackground, {
                     [u.gameImageLoading]: g,
                     [u.disabled]: m
                 }),
@@ -55,7 +55,7 @@ function m(e) {
                     n &&
                         (0, r.jsx)('div', {
                             className: u.checkBackground,
-                            children: (0, r.jsx)(a.XZJ, {
+                            children: (0, r.jsx)(s.XZJ, {
                                 displayOnly: !0,
                                 value: n
                             })
@@ -63,11 +63,11 @@ function m(e) {
                     x
                 ]
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(s.Text, {
                 className: u.gameName,
                 variant: 'text-xs/medium',
                 color: 'header-primary',
-                children: f
+                children: h
             })
         ]
     });

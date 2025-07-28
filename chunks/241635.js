@@ -5,9 +5,9 @@ var i = n(442837),
     l = n(481060),
     o = n(749210),
     a = n(240872),
-    s = n(605436),
-    c = n(228643),
-    d = n(299206),
+    s = n(228643),
+    c = n(299206),
+    d = n(345162),
     u = n(496675),
     p = n(867108),
     m = n(388032);
@@ -20,18 +20,18 @@ function b(e, t) {
         g = [],
         f = (0, p.Z)(e, t);
     null != f && g.push(f);
-    let h = (0, d.Z)({
+    let h = (0, c.Z)({
         id: t.id,
         label: m.intl.string(m.t.sMsaLi)
     });
     null != h && g.push(h);
     let x = (null == (n = t.tags) ? void 0 : n.guild_connections) === null,
         j = t.managed && !x,
-        O = null != t && (0, s.pM)(e.id, t.id);
+        v = null != t && (0, d.fI)(t);
     return (
         b ||
             j ||
-            O ||
+            v ||
             g.push(
                 (0, r.jsx)(
                     l.kSQ,
@@ -47,7 +47,7 @@ function b(e, t) {
                                     body: m.intl.format(m.t['9+nrUV'], { name: t.name }),
                                     cancelText: m.intl.string(m.t['ETE/oK']),
                                     onConfirm: async () => {
-                                        (x && (await (0, c.L_)(e.id, t.id, [])), o.Z.deleteRole(e.id, t.id));
+                                        (x && (await (0, s.L_)(e.id, t.id, [])), o.Z.deleteRole(e.id, t.id));
                                     }
                                 });
                             }

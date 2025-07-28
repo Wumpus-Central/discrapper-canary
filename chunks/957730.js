@@ -79,7 +79,7 @@ function x(e, t) {
         e
     );
 }
-function M(e, t, n) {
+function k(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
     if (t[0] !== e) return null;
     let i = t.substr(e.length);
@@ -102,10 +102,10 @@ function M(e, t, n) {
         })
         .first();
 }
-function k(e, t, n) {
+function M(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
     if (t[0] !== e) return null;
-    if ('"' !== t[1]) return M(e, t, n, r);
+    if ('"' !== t[1]) return k(e, t, n, r);
     let i = 2;
     for (; i < t.length; i++) {
         if ('\\' === t[i]) {
@@ -171,10 +171,10 @@ let G = u.Z.RULES,
             match(e, t, n) {
                 let r = n.split(' ').pop() + e;
                 if (/^[^ ]+@[^ ]+\.[^ .]+/.test(r)) return null;
-                let i = M('@', e, t.users, 'mention');
-                if (i || (i = M('@', e, t.mentionableRoles, 'roleMention'))) return i;
+                let i = k('@', e, t.users, 'mention');
+                if (i || (i = k('@', e, t.mentionableRoles, 'roleMention'))) return i;
                 if (
-                    !(i = M(
+                    !(i = k(
                         '@',
                         e,
                         t.users.map((e) => x(D({}, e), { text: e.text.split('#')[0] })),
@@ -203,7 +203,7 @@ let G = u.Z.RULES,
             }
         },
         channel: {
-            match: (e, t) => k('#', e, t.channels),
+            match: (e, t) => M('#', e, t.channels),
             parse: (e) => ({
                 type: 'text',
                 content: '<#'.concat(e[1], '>')
@@ -277,22 +277,22 @@ let G = u.Z.RULES,
         mention: {
             match: o().anyScopeRegex(V),
             parse(e, t, n) {
-                let { isNotification: r, guild: i } = n,
-                    a = T.default.getUser(e[1]);
-                if (null == a) return { content: e[0] };
-                let o = N.ZP.getUserTag(a, { identifiable: r && I.Z.enabled ? 'never' : 'always' });
+                let { isNotification: r, guild: a } = n,
+                    o = T.default.getUser(e[1]);
+                if (null == o) return { content: e[0] };
+                let s = N.ZP.getUserTag(o, { identifiable: r && I.Z.enabled ? 'never' : 'always' });
                 if (r) {
-                    let e = N.ZP.getGlobalName(a);
-                    return { content: null != e ? '@'.concat(e) : '@'.concat(o) };
+                    let e = N.ZP.getGlobalName(o);
+                    return { content: null != e ? '@'.concat(e) : '@'.concat(s) };
                 }
                 {
-                    if (a.bot) return { content: '@'.concat(o) };
+                    if (o.bot) return { content: '@'.concat(s) };
                     let e = '';
-                    if ((null == i ? void 0 : i.id) != null) {
-                        let t = b.Z.getRoles(i.id);
-                        e = null != t && Object.values(t).some((e) => o.toLowerCase().startsWith(e.name.toLowerCase())) ? '#'.concat(''.concat(a.discriminator).padStart(4, '0')) : '';
+                    if ((null == a ? void 0 : a.id) != null) {
+                        let t = s.toLowerCase();
+                        e = i().some(b.Z.getUnsafeMutableRoles(a.id), (e) => t.startsWith(e.name.toLowerCase())) ? '#'.concat(''.concat(o.discriminator).padStart(4, '0')) : '';
                     }
-                    return { content: '@'.concat(o).concat(e) };
+                    return { content: '@'.concat(s).concat(e) };
                 }
             }
         },
@@ -301,7 +301,7 @@ let G = u.Z.RULES,
             parse(e, t, n) {
                 let { guild: r } = n;
                 if (null != r) {
-                    let t = b.Z.getRoles(r.id)[e[1]];
+                    let t = b.Z.getRole(r.id, e[1]);
                     if (null != t) return { content: '@'.concat(t.name) };
                 }
                 return { content: e[0] };
@@ -423,8 +423,7 @@ function $(e) {
                 );
             }, [])
         ),
-        s = i()(null != r ? b.Z.getRoles(r.id) : {})
-            .values()
+        s = i()(null != r ? b.Z.getSortedRoles(r.id) : [])
             .filter((e) => {
                 let { mentionable: t } = e;
                 return a || t;

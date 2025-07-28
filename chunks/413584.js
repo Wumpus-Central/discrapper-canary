@@ -2,17 +2,17 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
-    a = n(348327),
-    o = n.n(a),
+    a = n.n(l),
+    s = n(348327),
+    o = n.n(s),
     c = n(562075),
     d = n(539202),
     u = n(442837),
     m = n(481060),
     g = n(239091),
     p = n(596454),
-    f = n(493773),
-    h = n(607070),
+    h = n(493773),
+    f = n(607070),
     x = n(933557),
     b = n(471445),
     j = n(339085),
@@ -79,7 +79,7 @@ let M = 'WELCOME_CHANNEL',
     G = (e) => {
         var t;
         let l,
-            { guildId: a, welcomeChannel: o, onEdit: f, onChannelReorder: h, isDropHovered: v, index: _ } = e,
+            { guildId: s, welcomeChannel: o, onEdit: h, onChannelReorder: f, isDropHovered: v, index: _ } = e,
             [O, y] = i.useState(!1),
             C = i.useRef(null),
             S = (0, u.e7)([I.Z], () => I.Z.getChannel(o.channel_id)),
@@ -94,16 +94,16 @@ let M = 'WELCOME_CHANNEL',
                     index: _
                 },
                 end: (e, t) => {
-                    null == e || t.didDrop() || h(e.channel, null, !0);
+                    null == e || t.didDrop() || f(e.channel, null, !0);
                 }
             }),
             [, F] = (0, d.L)({
                 accept: M,
                 hover: (e) => {
-                    h(e.channel, _, !1);
+                    f(e.channel, _, !1);
                 },
                 drop: (e) => {
-                    h(e.channel, _, !0);
+                    f(e.channel, _, !0);
                 }
             });
         return (
@@ -134,7 +134,7 @@ let M = 'WELCOME_CHANNEL',
                       className: A.warningIcon
                   })),
             (0, r.jsxs)('div', {
-                className: s()(A.welcomeChannel, { [A.dragging]: v }),
+                className: a()(A.welcomeChannel, { [A.dragging]: v }),
                 ref: C,
                 'data-dnd-name': o.description,
                 onContextMenu: (e) => {
@@ -144,11 +144,11 @@ let M = 'WELCOME_CHANNEL',
                             (0, r.jsx)(
                                 e,
                                 L(k({}, t), {
-                                    guildId: a,
+                                    guildId: s,
                                     welcomeChannel: o,
-                                    onChannelReorder: h,
+                                    onChannelReorder: f,
                                     setShowConfirmModal: y,
-                                    onEdit: f,
+                                    onEdit: h,
                                     index: _
                                 })
                             );
@@ -193,8 +193,8 @@ let M = 'WELCOME_CHANNEL',
                                             e,
                                             L(k({}, t), {
                                                 welcomeChannel: o,
-                                                guildId: a,
-                                                onSave: f
+                                                guildId: s,
+                                                onSave: h
                                             })
                                         );
                                 },
@@ -203,7 +203,7 @@ let M = 'WELCOME_CHANNEL',
                     }),
                     O &&
                         (0, r.jsx)(N.Z, {
-                            onConfirm: () => f(),
+                            onConfirm: () => h(),
                             onCancel: () => y(!1),
                             channelId: o.channel_id
                         })
@@ -213,20 +213,20 @@ let M = 'WELCOME_CHANNEL',
     },
     U = (e) => {
         let { guild: t, showCreateModal: l } = e,
-            { welcomeSettings: s, originalWelcomeSettings: a } = (0, u.e7)([C.Z], () => C.Z.getSettingsProps()),
-            c = (0, u.e7)([h.Z], () => h.Z.useReducedMotion),
+            { welcomeSettings: a, originalWelcomeSettings: s } = (0, u.e7)([C.Z], () => C.Z.getSettingsProps()),
+            c = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
             [d, g] = i.useState(null),
             [p, x] = i.useState(!1),
             [b, j] = i.useState(!1),
-            { description: N, channels: I, enabled: T } = s,
+            { description: N, channels: I, enabled: T } = a,
             M = () => {
-                null != t && N !== a.description && ((0, y.Es)(t.id, { description: null == N ? void 0 : N.trim() }), x(!0));
+                null != t && N !== s.description && ((0, y.Es)(t.id, { description: null == N ? void 0 : N.trim() }), x(!0));
             },
             U = (e) => {
-                null != t && (o()(e, a.channels) || ((0, y.Es)(t.id, { channels: e }), x(!0)));
+                null != t && (o()(e, s.channels) || ((0, y.Es)(t.id, { channels: e }), x(!0)));
             },
             B = (e) => {
-                null != t && e !== a.enabled && ((0, y.Es)(t.id, { enabled: e }), j(!c), x(!0));
+                null != t && e !== s.enabled && ((0, y.Es)(t.id, { enabled: e }), j(!c), x(!0));
             },
             F = (e) => {
                 if (null == e) return;
@@ -244,7 +244,7 @@ let M = 'WELCOME_CHANNEL',
                 (null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), (0, y.VP)({ channels: i })), n ? (U(i), g(null)) : g(t));
             },
             W = i.useRef(!1);
-        ((0, f.ZP)(
+        ((0, h.ZP)(
             () => (
                 null != t &&
                     l &&

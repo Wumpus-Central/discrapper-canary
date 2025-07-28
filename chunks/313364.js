@@ -2,8 +2,8 @@ n.d(t, { Z: () => R });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
-    a = n(399606),
+    a = n.n(l),
+    s = n(399606),
     o = n(481060),
     c = n(100527),
     d = n(906732),
@@ -11,8 +11,8 @@ var r = n(255367),
     m = n(613464),
     g = n(434404),
     p = n(6025),
-    f = n(892001),
-    h = n(433355),
+    h = n(892001),
+    f = n(433355),
     x = n(430824),
     b = n(893966),
     j = n(527379),
@@ -30,19 +30,19 @@ var r = n(255367),
     w = n(319586);
 function R(e) {
     let { guildId: t } = e,
-        n = (0, a.e7)([x.Z], () => x.Z.getGuild(t)),
+        n = (0, s.e7)([x.Z], () => x.Z.getGuild(t)),
         { analyticsLocations: l } = (0, d.ZP)(c.Z.GUILD_SETTINGS_MEMBERS_PAGE),
         R = (0, u.m)(t),
-        Z = (0, a.e7)([h.ZP], () => h.ZP.getGuildSidebarState(t), [t]),
+        Z = (0, s.e7)([f.ZP], () => f.ZP.getGuildSidebarState(t), [t]),
         D = i.useCallback(() => {
             p.Z.closeGuildSidebar(t);
         }, [t]),
         A = !1 == !!(null == n ? void 0 : n.features.has(S.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
-        k = (0, a.e7)([b.Z], () => b.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
+        k = (0, s.e7)([b.Z], () => b.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
         L = i.useCallback(
             (e) => {
                 null != e &&
-                    (0, f.openUserProfileModal)({
+                    (0, h.openUserProfileModal)({
                         userId: e.userId,
                         guildId: e.guildId,
                         sourceAnalyticsLocations: l
@@ -61,7 +61,7 @@ function R(e) {
         value: l,
         children: [
             (0, r.jsx)('div', {
-                className: s()(w.customColumn, P.override, P.settingsColumn),
+                className: a()(w.customColumn, P.override, P.settingsColumn),
                 children: (0, r.jsx)('div', {
                     className: w.customContainer,
                     children: (0, r.jsx)(o.w0Z, {
@@ -71,7 +71,7 @@ function R(e) {
                             className: P.settingsHorizontalScroller,
                             orientation: 'auto',
                             children: (0, r.jsxs)('main', {
-                                className: s()(w.customColumn, w.contentColumnDefault, P.override, P.settingsColumn, P.settingsContent),
+                                className: a()(w.customColumn, w.contentColumnDefault, P.override, P.settingsColumn, P.settingsContent),
                                 children: [
                                     (0, r.jsx)(
                                         o.hjN,

@@ -118,7 +118,7 @@ function p(e) {
                               style: { transform: _ },
                               className: s.inputError,
                               children: [
-                                  (0, r.jsx)(a.P4T, {
+                                  (0, r.jsx)(a.Mgn, {
                                       size: 'xs',
                                       color: a.TVs.colors.TEXT_DANGER.css
                                   }),

@@ -4,7 +4,7 @@
     H9: () => A,
     Kd: () => j,
     UR: () => v,
-    d2: () => k,
+    d2: () => M,
     dU: () => T
 }),
     n(388685),
@@ -216,10 +216,10 @@ let P = [
 function x(e) {
     return 'meta' === e || 'shift' === e || 'alt' === e || 'ctrl' === e;
 }
-function M(e) {
+function k(e) {
     return e + 'Key';
 }
-function k(e) {
+function M(e) {
     let t = {
         keyCode: 0,
         key: '',
@@ -235,7 +235,7 @@ function k(e) {
               let r = A(n),
                   i = _({}, t);
               if (null == r) return (e.push(h(_({}, i), { combo: n })), e);
-              if (L.test(r) && x(r)) return ((t[M(r)] = !0), e.map((e) => ((e[M(r)] = !0), e)));
+              if (L.test(r) && x(r)) return ((t[k(r)] = !0), e.map((e) => ((e[k(r)] = !0), e)));
               {
                   let t = N(r, d.CgE.BROWSER);
                   return (null != t && (i.keyCode = t), e.push(i), e);

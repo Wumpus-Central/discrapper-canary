@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(149765),
-    s = n(442837),
-    a = n(481060),
+    a = n(442837),
+    s = n(481060),
     o = n(933557),
     c = n(984933),
     d = n(496675),
@@ -11,13 +11,13 @@ var r = n(255367),
     m = n(594174),
     g = n(434404),
     p = n(800223),
-    f = n(981631),
-    h = n(388032);
+    h = n(981631),
+    f = n(388032);
 let x = 'NO_CHANNEL',
-    b = l.$e(f.Plq.VIEW_CHANNEL, f.Plq.CREATE_INSTANT_INVITE);
+    b = l.$e(h.Plq.VIEW_CHANNEL, h.Plq.CREATE_INSTANT_INVITE);
 function j(e) {
-    let { guildId: t, widgetEnabled: n, widgetChannelId: l, className: f, enableLocalUpdate: j } = e,
-        v = (0, s.e7)([c.ZP], () => c.ZP.getChannels(t)),
+    let { guildId: t, widgetEnabled: n, widgetChannelId: l, className: h, enableLocalUpdate: j } = e,
+        v = (0, a.e7)([c.ZP], () => c.ZP.getChannels(t)),
         _ = i.useMemo(() => {
             let e = [...v[c.sH], ...v[c.Zb]]
                 .filter((e) => {
@@ -38,7 +38,7 @@ function j(e) {
             return (
                 e.unshift({
                     value: x,
-                    label: h.intl.string(h.t.u197b2)
+                    label: f.intl.string(f.t.u197b2)
                 }),
                 e
             );
@@ -49,10 +49,10 @@ function j(e) {
             },
             [t, n, j]
         );
-    return (0, r.jsx)(a.q4e, {
+    return (0, r.jsx)(s.q4e, {
         options: _,
         value: l,
         onChange: O,
-        className: f
+        className: h
     });
 }

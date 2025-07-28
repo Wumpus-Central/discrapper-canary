@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => O });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -19,9 +19,9 @@ var r = n(255367),
     C = n(981631),
     x = n(474936),
     v = n(388032),
-    O = n(510064);
-function y(e) {
-    var t, n, y, j;
+    y = n(510064);
+function O(e) {
+    var t, n, O, j;
     let I,
         S,
         T,
@@ -43,26 +43,26 @@ function y(e) {
         F = (0, b.Z)(P.id),
         B = U === N.id,
         G = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
-        V = (null == G ? void 0 : G.id) === N.author.id,
-        H = (0, u.m)(x.p9.TIER_2),
+        H = (null == G ? void 0 : G.id) === N.author.id,
+        V = (0, u.m)(x.p9.TIER_2),
         z = _.t(P);
     return (i.useEffect(() => {
         null == k && g.Z.shouldFetchWallpapers && h.k9();
     }, [k]),
     null == w)
         ? null
-        : ((I = V
+        : ((I = H
               ? v.intl.format(v.t.z847Tk, { wallpaper_name: null != (n = null == k ? void 0 : k.label) ? n : v.intl.string(v.t['UQMV/P']) })
               : v.intl.format(v.t['+lKndX'], {
                     username: null == L ? void 0 : L.nick,
-                    wallpaper_name: null != (y = null == k ? void 0 : k.label) ? y : v.intl.string(v.t['UQMV/P'])
+                    wallpaper_name: null != (O = null == k ? void 0 : k.label) ? O : v.intl.string(v.t['UQMV/P'])
                 })),
           Z
               ? D || R
                   ? z && B
                       ? (S = v.intl.formatToPlainString(v.t.PzTpVV, { wallpaperName: null != (j = null == k ? void 0 : k.label) ? j : v.intl.string(v.t['UQMV/P']) }))
-                      : V ||
-                        H ||
+                      : H ||
+                        V ||
                         !B ||
                         (S = v.intl.format(v.t.JwUhHh, {
                             onClickNitro: () => {
@@ -73,9 +73,9 @@ function y(e) {
               : (S = v.intl.string(v.t['6JSOu7'])),
           (null == F ? void 0 : F.isViewable) &&
               B &&
-              !V &&
+              !H &&
               (T = (0, r.jsx)('div', {
-                  className: O.action,
+                  className: y.action,
                   children: (0, r.jsx)(a.z, {
                       variant: 'primary',
                       text: v.intl.string(z ? v.t.o6850d : v.t['/ubFp6']),

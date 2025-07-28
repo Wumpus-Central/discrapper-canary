@@ -1,6 +1,6 @@
 (n.d(t, {
     ZP: () => L,
-    wD: () => Z
+    wD: () => T
 }),
     n(388685));
 var r = n(255367),
@@ -154,7 +154,7 @@ function w() {
         width: 20
     });
 }
-let Z = (e) => {
+let T = (e) => {
     let { open: t } = e,
         n = t ? u.u04 : u.CJ0;
     return (0, r.jsx)(n, {
@@ -162,7 +162,7 @@ let Z = (e) => {
         color: 'currentColor'
     });
 };
-function T(e) {
+function Z(e) {
     let { guild: t } = e;
     return (0, r.jsx)(u.X6q, {
         variant: 'text-md/semibold',
@@ -181,7 +181,7 @@ function A(e) {
                 isBannerVisible: n
             }),
             i.id === v._ && (0, r.jsx)(w, {}),
-            (0, r.jsx)(T, { guild: i }),
+            (0, r.jsx)(Z, { guild: i }),
             null != l &&
                 (0, r.jsx)(u.P3F, {
                     className: S.headerButton,
@@ -280,7 +280,7 @@ function D(e) {
                                                 isBannerVisible: t
                                             }),
                                             l.id === v._ && (0, r.jsx)(w, {}),
-                                            (0, r.jsx)(T, { guild: l })
+                                            (0, r.jsx)(Z, { guild: l })
                                         ]
                                     }),
                                     (0, r.jsx)('div', {
@@ -317,11 +317,11 @@ function D(e) {
     });
 }
 let L = i.memo(function (e) {
-    let { ref: t, bannerVisible: n, controller: l, className: a, onClick: c, onContextMenu: p, onMouseDown: f, disableBannerAnimation: g, 'aria-expanded': b, 'aria-controls': y, guild: v, guildBanner: j, animationOverlayHeight: E, children: w, headerClassName: Z, communityInfoVisible: T, hasSubheader: R } = e,
+    let { ref: t, bannerVisible: n, controller: l, className: a, onClick: c, onContextMenu: p, onMouseDown: f, disableBannerAnimation: g, 'aria-expanded': b, 'aria-controls': y, guild: v, guildBanner: j, animationOverlayHeight: E, children: w, headerClassName: T, communityInfoVisible: Z, hasSubheader: R } = e,
         L = v.features.has(C.oNc.ANIMATED_BANNER),
         k = (0, d.Z)(v),
         U = !k && (0, O.Z)(v),
-        G = !k && T,
+        G = !k && Z,
         B = (0, _.xR)(j) && L && !g,
         [V, F] = i.useState(!1),
         H = i.useRef(!1),
@@ -382,7 +382,7 @@ let L = i.memo(function (e) {
                         onContextMenu: p,
                         children: [
                             (0, r.jsxs)('header', {
-                                className: o()(S.header, Z, { [S.themedHeaderMobile]: s.tq }),
+                                className: o()(S.header, T, { [S.themedHeaderMobile]: s.tq }),
                                 children: [
                                     (0, r.jsx)('div', {
                                         className: o()(S.headerContent, S.primaryInfo),

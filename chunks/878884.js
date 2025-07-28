@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+(n.d(t, { Z: () => C }), n(388685));
 var r,
     i,
     l,
@@ -12,22 +12,22 @@ var r,
     p = n(592125),
     m = n(19780),
     g = n(594174),
-    _ = n(979651),
-    v = n(938475),
-    h = n(981631),
-    b = n(354459);
+    h = n(979651),
+    b = n(938475),
+    _ = n(981631),
+    v = n(354459);
 let y = new c.Z(),
     O = new c.Z(),
-    j = new Set();
-function S(e, t, n) {
+    S = new Set();
+function I(e, t, n) {
     let r = new d.Z({
             userId: e.id,
             channelId: n
         }),
-        i = (0, v.PH)(r, null != t ? t : h.ME, e.id);
+        i = (0, b.PH)(r, null != t ? t : _.ME, e.id);
     y.set(e.id, i);
     let l = {
-        type: b.fO.USER,
+        type: v.fO.USER,
         user: e,
         id: e.id,
         streamId: null,
@@ -43,33 +43,33 @@ function S(e, t, n) {
     };
     O.set(e.id, l);
 }
-function x(e) {
+function j(e) {
     let t = y.delete(e),
         n = O.delete(e),
-        r = j.delete(e);
+        r = S.delete(e);
     return t || n || r;
 }
-function I() {
+function x() {
     var e;
     let t = m.Z.getChannelId();
     if (null == t) return !1;
     let n = null == (e = p.Z.getChannel(t)) ? void 0 : e.getGuildId(),
         r = !1;
     return (
-        j.forEach((e) => {
-            if (null != _.Z.getVoiceStateForChannel(t, e)) return void j.delete(e);
+        S.forEach((e) => {
+            if (null != h.Z.getVoiceStateForChannel(t, e)) return void S.delete(e);
             let i = g.default.getUser(e);
-            null != i && ((r = !0), j.delete(e), S(i, n, t));
+            null != i && ((r = !0), S.delete(e), I(i, n, t));
         }),
         r
     );
 }
-function P() {
-    (y.clear(), O.clear(), j.clear());
+function E() {
+    (y.clear(), O.clear(), S.clear());
 }
-class C extends (r = a.ZP.Store) {
+class P extends (r = a.ZP.Store) {
     initialize() {
-        (this.waitFor(_.Z, g.default, p.Z, m.Z), this.syncWith([g.default], I));
+        (this.waitFor(h.Z, g.default, p.Z, m.Z), this.syncWith([g.default], x));
     }
     get desyncedVoiceStatesCount() {
         return y.size();
@@ -85,23 +85,23 @@ class C extends (r = a.ZP.Store) {
     }
 }
 ((l = 'RTCConnectionDesyncStore'),
-    (i = 'displayName') in C
-        ? Object.defineProperty(C, i, {
+    (i = 'displayName') in P
+        ? Object.defineProperty(P, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (C[i] = l));
-let E = new C(s.Z, {
+        : (P[i] = l));
+let C = new P(s.Z, {
     CONNECTION_OPEN: function () {
-        P();
+        E();
     },
-    VOICE_CHANNEL_SELECT: P,
+    VOICE_CHANNEL_SELECT: E,
     RTC_CONNECTION_STATE: function (e) {
         let { state: t, context: n } = e;
-        if (n !== o.Yn.DEFAULT || t !== h.hes.DISCONNECTED) return !1;
-        P();
+        if (n !== o.Yn.DEFAULT || t !== _.hes.DISCONNECTED) return !1;
+        E();
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e,
@@ -110,7 +110,7 @@ let E = new C(s.Z, {
             null != n &&
             t.reduce((e, t) => {
                 let { userId: r, channelId: i } = t;
-                return (i === n && !!x(r)) || e;
+                return (i === n && !!j(r)) || e;
             }, !1)
         );
     },
@@ -119,14 +119,14 @@ let E = new C(s.Z, {
         return (
             i === o.Yn.DEFAULT &&
             t.reduce((e, t) => {
-                if (null != _.Z.getVoiceStateForChannel(r, t)) return e;
+                if (null != h.Z.getVoiceStateForChannel(r, t)) return e;
                 let i = g.default.getUser(t);
-                return null == i ? (j.add(t), e) : (S(i, n, r), !0);
+                return null == i ? (S.add(t), e) : (I(i, n, r), !0);
             }, !1)
         );
     },
     RTC_CONNECTION_CLIENT_DISCONNECT: function (e) {
         let { userId: t, context: n } = e;
-        return n === o.Yn.DEFAULT && x(t);
+        return n === o.Yn.DEFAULT && j(t);
     }
 });

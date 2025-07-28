@@ -1,6 +1,6 @@
 (n.d(t, {
     W: () => j,
-    u: () => O
+    u: () => y
 }),
     n(190126),
     n(368063),
@@ -63,8 +63,8 @@ function v(e) {
     }
     return e;
 }
-var O = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
-function y(e) {
+var y = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
+function O(e) {
     let { onClick: t, children: n, className: r } = e;
     return null != t
         ? (0, i.jsx)(u.P3F, {
@@ -79,7 +79,7 @@ function y(e) {
 }
 function j(e) {
     var t, n, r, a;
-    let { title: O, header: j, footer: I, info: S, staticBannerSrc: T, videoBannerSrc: N, bannerAspectRatio: P = 0, iconSrc: A, embedUrl: w, infoUrl: Z, actions: R = [], trackingConfig: L, onClickContent: D, onClickBanner: k } = e;
+    let { title: y, header: j, footer: I, info: S, staticBannerSrc: T, videoBannerSrc: N, bannerAspectRatio: P = 0, iconSrc: A, embedUrl: w, infoUrl: Z, actions: R = [], trackingConfig: L, onClickContent: D, onClickBanner: k } = e;
     L = {
         id: null != (n = null == (t = L) ? void 0 : t.id) ? n : '0',
         linkType: null != (r = null == t ? void 0 : t.linkType) ? r : h.Un.UNKNOWN,
@@ -92,7 +92,7 @@ function j(e) {
         F = 'linear-gradient(45deg, '.concat(M, ', ').concat(U, ')'),
         B = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
         G = l.useRef(!1),
-        V = (0, d.O)(
+        H = (0, d.O)(
             (e) => {
                 if (!1 === G.current && e) {
                     var t;
@@ -101,7 +101,7 @@ function j(e) {
             },
             void 0
         ),
-        H =
+        V =
             _.wS && null != w
                 ? (0, i.jsx)(c.zx, {
                       look: c.zx.Looks.BLANK,
@@ -152,11 +152,11 @@ function j(e) {
                 };
         }, [k, L]);
     return (0, i.jsxs)('div', {
-        ref: V,
+        ref: H,
         className: C.embed,
         children: [
             Y &&
-                (0, i.jsxs)(y, {
+                (0, i.jsxs)(O, {
                     onClick: ee,
                     className: o()(C.bannerWrapper, X, { [C.showVideoOnFocus]: K }),
                     children: [
@@ -197,13 +197,13 @@ function j(e) {
                                             color: 'none',
                                             children: j
                                         }),
-                                        null != H ? H : z
+                                        null != V ? V : z
                                     ]
                                 }),
                             (0, i.jsxs)('div', {
                                 className: C.contentAndCopyButtonWrapper,
                                 children: [
-                                    (0, i.jsxs)(y, {
+                                    (0, i.jsxs)(O, {
                                         onClick: $,
                                         className: o()(C.contentWrapper, { [C.contentWrapperClickable]: null != $ }),
                                         children: [
@@ -220,7 +220,7 @@ function j(e) {
                                                         color: 'none',
                                                         lineClamp: 1,
                                                         className: C.contentTitle,
-                                                        children: O
+                                                        children: y
                                                     }),
                                                     (0, i.jsx)('div', {
                                                         className: C.contentInfoWrapper,
@@ -230,7 +230,7 @@ function j(e) {
                                             })
                                         ]
                                     }),
-                                    null == j && (null != H ? H : z)
+                                    null == j && (null != V ? V : z)
                                 ]
                             }),
                             R.length > 0 &&

@@ -1,6 +1,6 @@
 (n.d(t, {
     W: () => O,
-    Z: () => S
+    Z: () => y
 }),
     n(457542));
 var r,
@@ -25,7 +25,7 @@ var r,
     I = n(388032),
     j = n(576052),
     O = (((r = {})[(r.LOGIN_REQUIRED = 0)] = 'LOGIN_REQUIRED'), (r[(r.SWITCHED = 1)] = 'SWITCHED'), (r[(r.REMOVED = 2)] = 'REMOVED'), r);
-function y(e) {
+function S(e) {
     let { actionText: t, user: n, onAction: r } = e,
         {
             currentUser: l,
@@ -37,19 +37,19 @@ function y(e) {
             isAuthenticated: p.default.isAuthenticated()
         })),
         O = new h.Z(n),
-        y = E && (null == l ? void 0 : l.id) === O.id,
-        S = n.tokenStatus === b.q.INVALID,
-        N = s || O.isPomelo() ? null : '#'.concat(O.discriminator),
+        S = E && (null == l ? void 0 : l.id) === O.id,
+        y = n.tokenStatus === b.q.INVALID,
+        N = s || O.hasUniqueUsername() ? null : '#'.concat(O.discriminator),
         C = null;
     return (
-        y
+        S
             ? (C = (0, i.jsx)(c.Text, {
                   variant: 'text-sm/semibold',
                   className: j.hintText,
                   color: 'text-feedback-positive',
                   children: I.intl.string(I.t.seV8ys)
               }))
-            : S &&
+            : y &&
               (C = (0, i.jsx)(c.Text, {
                   variant: 'text-sm/semibold',
                   className: j.hintText,
@@ -67,7 +67,7 @@ function y(e) {
                         'aria-label': n.username
                     }),
                     (0, i.jsxs)('div', {
-                        className: a()(j.usernameSection, { [j.hasActionMaxWidth]: !y }),
+                        className: a()(j.usernameSection, { [j.hasActionMaxWidth]: !S }),
                         children: [
                             (0, i.jsxs)('div', {
                                 className: j.username,
@@ -94,12 +94,12 @@ function y(e) {
                     (0, i.jsxs)('div', {
                         className: j.userActions,
                         children: [
-                            !y &&
+                            !S &&
                                 (0, i.jsx)(c.zxk, {
                                     variant: 'secondary',
-                                    text: S ? I.intl.string(I.t['DSN+h4']) : t,
+                                    text: y ? I.intl.string(I.t['DSN+h4']) : t,
                                     onClick: function () {
-                                        if (S) return void r(0, n.id);
+                                        if (y) return void r(0, n.id);
                                         (f.default.track(v.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: v.jXE.MANAGE_ACCOUNTS_MODAL } }), x.yD(n.id), r(1, n.id));
                                     }
                                 }),
@@ -138,7 +138,7 @@ function y(e) {
         })
     );
 }
-function S(e) {
+function y(e) {
     let { actionText: t, onAction: n } = e,
         { isLoading: r, multiAccountUsers: s } = (0, E.L)();
     return (0, i.jsx)('div', {
@@ -151,7 +151,7 @@ function S(e) {
                       {
                           children: [
                               (0, i.jsx)(
-                                  y,
+                                  S,
                                   {
                                       user: e,
                                       actionText: t,

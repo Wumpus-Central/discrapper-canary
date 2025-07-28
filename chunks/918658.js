@@ -18,9 +18,9 @@ var i = n(255367),
     p = n(703656),
     C = n(944486),
     g = n(914010),
-    S = n(671533),
-    O = n(259580),
-    T = n(358085),
+    O = n(671533),
+    T = n(259580),
+    S = n(358085),
     f = n(962086),
     N = n(160404),
     m = n(889695),
@@ -58,7 +58,7 @@ function M() {
             viewingRoles: l,
             backNavigationSection: o,
             isFullServerPreview: c,
-            isServerShopPreview: T
+            isServerShopPreview: S
         } = (0, s.cj)([N.Z], () => ({
             viewingRoles: null != t ? N.Z.getViewingRoles(t) : null,
             backNavigationSection: N.Z.getBackNavigationSection(t),
@@ -79,8 +79,8 @@ function M() {
             }
         })(o),
         L = o === R.pNK.ROLE_SUBSCRIPTIONS ? P.intl.string(P.t.hZUCzc) : P.intl.string(P.t['/djIh4']),
-        Z = n === A.oC.GUILD_ONBOARDING,
-        k = (e) => {
+        k = n === A.oC.GUILD_ONBOARDING,
+        Z = (e) => {
             let { backToSettings: n } = e;
             null != t && (N.Z.isFullServerPreview(t) && (0, p.uL)(R.Z5c.CHANNEL(t)), _.ZP.shouldShowOnboarding(t) && (u.Z.finishOnboarding(t), (0, h.EI)(t)), (0, f.mL)(t), n && I.Z.open(t, o), o === R.pNK.ROLE_SUBSCRIPTIONS && (0, E.GN)(t));
         };
@@ -89,19 +89,19 @@ function M() {
         className: D.notice,
         children: [
             (0, i.jsxs)(v, {
-                onClick: () => k({ backToSettings: !0 }),
+                onClick: () => Z({ backToSettings: !0 }),
                 className: D.backButton,
                 children: [
-                    (0, i.jsx)(S.Z, {
+                    (0, i.jsx)(O.Z, {
                         width: 16,
                         height: 16,
-                        direction: S.Z.Directions.LEFT,
+                        direction: O.Z.Directions.LEFT,
                         className: D.backArrow
                     }),
                     M
                 ]
             }),
-            Z && c
+            k && c
                 ? (0, i.jsx)('div', {
                       className: D.noticeContents,
                       children: (0, i.jsx)('div', {
@@ -127,10 +127,10 @@ function M() {
                                       buttonRef: e,
                                       children: [
                                           L,
-                                          (0, i.jsx)(O.Z, {
+                                          (0, i.jsx)(T.Z, {
                                               width: 16,
                                               height: 16,
-                                              direction: O.Z.Directions.DOWN,
+                                              direction: T.Z.Directions.DOWN,
                                               className: D.selectCaret
                                           })
                                       ]
@@ -141,26 +141,26 @@ function M() {
                               (0, i.jsx)(d.DY3, {
                                   className: D.previewWarning,
                                   text: P.intl.string(P.t.mW4DUF),
-                                  children: (0, i.jsx)(d.P4T, {
+                                  children: (0, i.jsx)(d.Mgn, {
                                       size: 'xs',
                                       color: a.Z.unsafe_rawColors.YELLOW_300.css
                                   })
                               }),
-                          T &&
+                          S &&
                               (0, i.jsx)(d.DY3, {
                                   className: D.previewWarning,
                                   text: P.intl.formatToPlainString(P.t.eummvb, {
                                       maxTiers: b.fF,
                                       maxProducts: y.dD
                                   }),
-                                  children: (0, i.jsx)(d.P4T, {
+                                  children: (0, i.jsx)(d.Mgn, {
                                       size: 'xs',
                                       color: a.Z.unsafe_rawColors.YELLOW_300.css
                                   })
                               })
                       ]
                   }),
-            c || o === R.pNK.ROLE_SUBSCRIPTIONS ? null : (0, i.jsx)(U, { onClick: () => k({ backToSettings: !1 }) })
+            c || o === R.pNK.ROLE_SUBSCRIPTIONS ? null : (0, i.jsx)(U, { onClick: () => Z({ backToSettings: !1 }) })
         ]
     });
 }
@@ -169,8 +169,8 @@ function L(e) {
     return (0, s.e7)([N.Z], () => N.Z.isViewingRoles(t))
         ? (0, i.jsx)('div', {
               className: o()(D.settingsWrapper, {
-                  [D.windows]: (0, T.isWindows)(),
-                  [D.osx]: (0, T.isMac)()
+                  [D.windows]: (0, S.isWindows)(),
+                  [D.osx]: (0, S.isMac)()
               }),
               children: (0, i.jsx)(M, {})
           })

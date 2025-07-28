@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(984370),
     j = n(706454),
     A = n(210887),
-    x = n(430824),
-    Z = n(496675),
+    Z = n(430824),
+    x = n(496675),
     w = n(525395),
     L = n(558314),
     R = n(580130),
@@ -473,7 +473,7 @@ class ep extends i.PureComponent {
             }),
             ec(this, 'renderInviteLink', () => {
                 let { channel: e, guild: t } = this.props;
-                return null != e && null != t && (Z.Z.can(el.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode)
+                return null != e && null != t && (x.Z.can(el.Plq.CREATE_INSTANT_INVITE, t) || null != t.vanityURLCode)
                     ? (0, r.jsx)(u.zx, {
                           'aria-label': eo.intl.string(eo.t.zJrgTE),
                           look: u.zx.Looks.BLANK,
@@ -601,7 +601,7 @@ class ep extends i.PureComponent {
 }
 let eh = (0, _.Z)(
     (0, O.Z)(
-        o.ZP.connectStores([L.Z, A.Z, j.default, U.Z, k.Z, D.Z, M.Z, E.Z, y.Z, w.Z, x.Z, R.Z], (e) => {
+        o.ZP.connectStores([L.Z, A.Z, j.default, U.Z, k.Z, D.Z, M.Z, E.Z, y.Z, w.Z, Z.Z, R.Z], (e) => {
             let t,
                 n,
                 r,
@@ -633,7 +633,7 @@ let eh = (0, _.Z)(
                 matureAgree: L.Z.didMatureAgree,
                 theme: A.Z.theme,
                 locale: j.default.locale,
-                guild: null != s ? x.Z.getGuild(s.getGuildId()) : null
+                guild: null != s ? Z.Z.getGuild(s.getGuildId()) : null
             };
         })(ep)
     )

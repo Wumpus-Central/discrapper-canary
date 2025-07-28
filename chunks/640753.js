@@ -23,7 +23,7 @@ let g = r.memo(function (e) {
                 }),
             [j, v, g, t, n]
         ),
-        [x, S] = r.useState(!1),
+        [S, x] = r.useState(!1),
         E = (0, l.e7)([a.Z], () => a.Z.useReducedMotion),
         R = c.Yk.useSetting(),
         I = r.useCallback(() => {
@@ -36,10 +36,10 @@ let g = r.memo(function (e) {
         }, [g, t, n]);
     return (r.useEffect(() => {
         let e = () => {
-            if (x) return;
+            if (S) return;
             let e = (0, d.vJ)(''.concat(Date.now()).concat(t).concat(n).concat(g.name)) % 10;
             (e += O > 4 ? 4 : O - 1) > 7 &&
-                (S(!0),
+                (x(!0),
                 (0, s.T6)({
                     channelId: t,
                     messageId: n,
@@ -47,13 +47,13 @@ let g = r.memo(function (e) {
                     key: u.I.RANDOM
                 }));
         };
-        if (x || (E && !R) || !R) return;
+        if (S || (E && !R) || !R) return;
         e();
         let i = setInterval(e, 5000);
         return () => {
             clearInterval(i);
         };
-    }, [R, t, O, g, g.name, x, n, E]),
+    }, [R, t, O, g, g.name, S, n, E]),
     null == v)
         ? null
         : (0, i.jsx)(h.Z, {

@@ -60,13 +60,13 @@ function k(e) {
         { guild: n, channel: a, permission: s, pendingAdditions: o, setPendingAdditions: d, isStageChannel: u = null != a && a.isGuildStageVoice(), description: m } = e,
         [x, y] = l.useState(!1),
         [f, p] = l.useState(''),
-        T = (0, i.e7)([b.Z], () => b.Z.getRoles(n.id));
+        T = (0, i.e7)([b.Z], () => b.Z.getSortedRoles(n.id));
     function w(e) {
         let t = L(f.trim(), x);
         return RegExp(''.concat(j.Z.escape(t)), 'i').test(e);
     }
     let O = (0, i.Wu)([h.ZP], () => h.ZP.getMemberIds(n.id));
-    x ? (t = []) : u ? (t = v.Wx(n, T, a, s, w)) : 0 !== (t = v.ik(n, T, a, s, w)).length || '' !== f.trim() || v.RD(n, T) || (t = v.aq());
+    x ? (t = []) : u ? (t = v.Wx(n, T, a, s, w)) : 0 === (t = v.ik(n, T, a, s, w)).length && '' === f.trim() && 1 === T.length && (t = v.aq());
     let N = v.iI(O, a, n, s, w),
         {
             placeholderText: M,

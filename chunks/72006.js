@@ -1,21 +1,21 @@
 (r.d(t, {
     FZ: () => N,
-    Hl: () => D,
-    NJ: () => k,
+    Hl: () => F,
+    NJ: () => M,
     R8: () => w,
-    Sq: () => I,
+    Sq: () => j,
     Wg: () => L,
-    Zn: () => R,
+    Zn: () => I,
     c2: () => A,
-    eE: () => Z,
-    iE: () => F,
-    iK: () => M,
+    eE: () => k,
+    iE: () => D,
+    iK: () => Z,
     lv: () => T,
     nR: () => P,
     q0: () => l.a,
-    x0: () => C,
+    x0: () => O,
     xb: () => H,
-    yd: () => j
+    yd: () => R
 }),
     r(388685),
     r(539854));
@@ -36,10 +36,10 @@ var n = r(399834),
     S = r.n(m),
     _ = r(803068),
     y = r.n(_),
-    b = r(561099),
-    x = r.n(b),
+    x = r(561099),
+    b = r.n(x),
     E = r(655000),
-    O = r.n(E);
+    C = r.n(E);
 function v(e, t, r, s) {
     let l = s.getCurrentContent(),
         a = null;
@@ -53,7 +53,7 @@ function v(e, t, r, s) {
         });
     return ((l = n.Modifier.applyEntity(l, o, a)), n.EditorState.set(s, { currentContent: l }));
 }
-function C(e, t, r, s) {
+function O(e, t, r, s) {
     let l,
         a,
         o = t.getCurrentContent(),
@@ -73,10 +73,10 @@ function C(e, t, r, s) {
         d = i()(o, l);
     return (l.isCollapsed() ? ((o = n.Modifier.insertText(o, l, e, h, d)), (a = 'insert-characters')) : ((o = n.Modifier.replaceText(o, l, e, h, d)), (a = 'replace-characters')), n.EditorState.push(t, o, a));
 }
-function j(e, t) {
+function R(e, t) {
     switch (e) {
         case 'delete':
-            return x()(t);
+            return b()(t);
         case 'delete-word':
             return p()(t);
         case 'backspace':
@@ -89,10 +89,10 @@ function j(e, t) {
             return t;
     }
 }
-function R(e, t) {
+function I(e, t) {
     switch (e) {
         case 'transpose-characters':
-            return O()(t);
+            return C()(t);
         case 'move-selection-to-start-of-block':
             return S()(t);
         case 'move-selection-to-end-of-block':
@@ -101,7 +101,7 @@ function R(e, t) {
             return t;
     }
 }
-function I(e) {
+function j(e) {
     return e.getCurrentContent().getFirstBlock().getText();
 }
 function T(e, t) {
@@ -154,38 +154,38 @@ function N(e) {
     return (null != r && r.hasFocus && (t = n.EditorState.moveFocusToEnd(t)), t);
 }
 function A(e, t) {
-    let r = I(t);
-    return C(e, t, 0, r.length);
+    let r = j(t);
+    return O(e, t, 0, r.length);
 }
-function M(e, t) {
+function Z(e, t) {
     let r = t.getSelection();
     return ((r = (r = r.set('focusOffset', e)).set('anchorOffset', e)), n.EditorState.forceSelection(t, r));
 }
-function k(e) {
-    return M(e.getCurrentContent().getFirstBlock().getText().length, e);
+function M(e) {
+    return Z(e.getCurrentContent().getFirstBlock().getText().length, e);
 }
-function Z(e) {
-    return M(0, e);
+function k(e) {
+    return Z(0, e);
 }
 function w(e) {
     let t = e.getSelection();
     return ((t = (t = t.set('focusOffset', 0)).set('isBackward', !0)), n.EditorState.forceSelection(e, t));
 }
 function L(e) {
-    let t = I(e),
+    let t = j(e),
         r = e.getSelection();
     return ((r = (r = r.set('focusOffset', t.length)).set('isBackward', !1)), n.EditorState.forceSelection(e, r));
 }
-function D(e) {
+function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 512,
-        r = I(e);
+        r = j(e);
     if (r.length > t) {
         let s = e.getSelection();
-        ((e = C('', e, t, r.length)), s.getAnchorOffset() > t && (s = s.set('anchorOffset', t)), s.getFocusOffset() > t && (s = s.set('focusOffset', t)), (e = n.EditorState.forceSelection(e, s)));
+        ((e = O('', e, t, r.length)), s.getAnchorOffset() > t && (s = s.set('anchorOffset', t)), s.getFocusOffset() > t && (s = s.set('focusOffset', t)), (e = n.EditorState.forceSelection(e, s)));
     }
     return e;
 }
-function F(e) {
+function D(e) {
     let t = window.getSelection();
     if (null == t || 'Caret' !== t.type || null == e) return;
     let r = t.getRangeAt(0);
@@ -206,5 +206,5 @@ function F(e) {
     l < e.scrollLeft ? (e.scrollLeft = l - 10) : l > e.scrollLeft + e.offsetWidth && (e.scrollLeft = l - e.offsetWidth + 3);
 }
 function H(e) {
-    return 0 === I(e).length;
+    return 0 === j(e).length;
 }

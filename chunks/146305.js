@@ -2,8 +2,8 @@ n.d(t, { Z: () => eb });
 var r = n(255367),
     i = n(990547),
     l = n(704215),
-    s = n(481060),
-    a = n(37234),
+    a = n(481060),
+    s = n(37234),
     o = n(493544),
     c = n(688465),
     d = n(676317),
@@ -11,8 +11,8 @@ var r = n(255367),
     m = n(45966),
     g = n(637853),
     p = n(352981),
-    f = n(610403),
-    h = n(923726),
+    h = n(610403),
+    f = n(923726),
     x = n(303737),
     b = n(15030),
     j = n(220685),
@@ -45,8 +45,8 @@ var r = n(255367),
     V = n(324330),
     Y = n(495300),
     K = n(651780),
-    X = n(279542),
-    q = n(665324),
+    q = n(279542),
+    X = n(665324),
     J = n(208150),
     Q = n(353398),
     $ = n(365774),
@@ -56,8 +56,8 @@ var r = n(255367),
     er = n(942478),
     ei = n(845995),
     el = n(708510),
-    es = n(237245),
-    ea = n(658666),
+    ea = n(237245),
+    es = n(658666),
     eo = n(224726),
     ec = n(308619),
     ed = n(254925),
@@ -65,8 +65,8 @@ var r = n(255367),
     em = n(981631),
     eg = n(135899),
     ep = n(388032),
-    ef = n(474913);
-function eh(e) {
+    eh = n(474913);
+function ef(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -117,14 +117,14 @@ let eb = {
                 eb && ej
                     ? {
                           label: (0, r.jsx)('div', {
-                              className: ef.roleSubLabel,
+                              className: eh.roleSubLabel,
                               children: ep.intl.string(ep.t.Tn7Koq)
                           }),
                           ariaLabel: ep.intl.string(ep.t.Tn7Koq)
                       }
                     : {
                           label: (0, r.jsx)('div', {
-                              className: ef.roleSubLabel,
+                              className: eh.roleSubLabel,
                               children: ep.intl.string(ep.t['KzCF//'])
                           }),
                           ariaLabel: ep.intl.string(ep.t['KzCF//'])
@@ -205,7 +205,7 @@ let eb = {
                         element: k._
                     },
                     predicate: () => t.canManageRoles,
-                    icon: t.pinPermissionMigrationAvailable ? (0, r.jsx)('div', { className: ef.redDot }) : void 0
+                    icon: t.pinPermissionMigrationAvailable ? (0, r.jsx)('div', { className: eh.redDot }) : void 0
                 };
             case em.pNK.EMOJI:
                 return {
@@ -230,7 +230,7 @@ let eb = {
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_SOUNDBOARD,
                     label: ep.intl.string(ep.t.OWQNYm),
                     ariaLabel: ep.intl.string(ep.t.OWQNYm),
-                    element: q.Z,
+                    element: X.Z,
                     predicate: () => t.canManageGuildExpressions
                 };
             case em.pNK.GUILD_TEMPLATES:
@@ -253,8 +253,8 @@ let eb = {
                     label: ep.intl.string(ep.t.YJlvBA),
                     element: el.O,
                     notice: {
-                        stores: [ea.Z],
-                        element: es.w
+                        stores: [es.Z],
+                        element: ea.w
                     },
                     predicate: () => t.canManageGuild,
                     ariaLabel: ep.intl.string(ep.t.YJlvBA)
@@ -296,14 +296,14 @@ let eb = {
                     section: em.pNK.MODERATION,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_MODERATION,
                     label: ep.intl.string(ep.t['suhY+f']),
-                    element: X.ZP,
+                    element: q.ZP,
                     predicate: () => t.canManageGuild && !t.guild.features.has(em.oNc.COMMUNITY)
                 };
             case em.pNK.GUILD_AUTOMOD:
                 return {
                     section: em.pNK.GUILD_AUTOMOD,
                     label: (0, r.jsx)('div', {
-                        className: ef.landingPageTabLink,
+                        className: eh.landingPageTabLink,
                         children: ep.intl.string(ep.t.uRelg4)
                     }),
                     ariaLabel: ep.intl.string(ep.t.uRelg4),
@@ -383,7 +383,7 @@ let eb = {
                     section: em.pNK.DISCOVERY_LANDING_PAGE,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_DISCOVERY_LANDING_PAGE,
                     label: (0, r.jsxs)('div', {
-                        className: ef.landingPageTabLink,
+                        className: eh.landingPageTabLink,
                         children: [ep.intl.string(ep.t.kGlQGB), ' ', (0, r.jsx)(c.Z, {})]
                     }),
                     ariaLabel: ep.intl.string(ep.t.kGlQGB),
@@ -412,7 +412,7 @@ let eb = {
                     predicate: () => t.canManageGuild && t.guild.features.has(em.oNc.COMMUNITY) && !t.welcomeScreenEmpty && !t.guild.features.has(em.oNc.GUILD_SERVER_GUIDE)
                 };
             case em.pNK.ROLE_SUBSCRIPTIONS:
-                return ex(eh({}, ev), {
+                return ex(ef({}, ev), {
                     section: em.pNK.ROLE_SUBSCRIPTIONS,
                     element: b.Z,
                     type: o.bT.CUSTOM,
@@ -424,8 +424,8 @@ let eb = {
                     section: em.pNK.GUILD_PRODUCTS,
                     label: ep.intl.string(ep.t.X6h2g4),
                     ariaLabel: ep.intl.string(ep.t.X6h2g4),
-                    element: f.Z,
-                    predicate: () => t.monetizationPredicate() && (0, p.p)(t.guild.id, 'guild_product_settings_predicate') && (0, h.sy)(t.guild)
+                    element: h.Z,
+                    predicate: () => t.monetizationPredicate() && (0, p.p)(t.guild.id, 'guild_product_settings_predicate') && (0, f.sy)(t.guild)
                 };
             case em.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE:
                 return {
@@ -435,7 +435,7 @@ let eb = {
                     label: ep.intl.string(ep.t.ipTYsr),
                     ariaLabel: ep.intl.string(ep.t.ipTYsr),
                     element: j.Z,
-                    predicate: () => t.monetizationPredicate() && (0, h.sy)(t.guild)
+                    predicate: () => t.monetizationPredicate() && (0, f.sy)(t.guild)
                 };
             case em.pNK.GUILD_PREMIUM:
                 return {
@@ -444,11 +444,11 @@ let eb = {
                     label: ep.intl.string(ep.t['8+VX4+']),
                     ariaLabel: ep.intl.string(ep.t['8+VX4+']),
                     element: K.Z,
-                    className: ef.serverBoostTabItem,
-                    icon: (0, r.jsx)(s.$Eu, {
-                        color: s.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                    className: eh.serverBoostTabItem,
+                    icon: (0, r.jsx)(a.$Eu, {
+                        color: a.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
                         size: 'sm',
-                        className: ef.icon
+                        className: eh.icon
                     })
                 };
             case em.pNK.MEMBERS:
@@ -476,27 +476,27 @@ let eb = {
                                     (C.S.subscribeOnce(em.CkL.LAYER_POP_COMPLETE, () => {
                                         I.Z.deleteGuild(t.guild.id, i);
                                     }),
-                                        (0, a.xf)());
+                                        (0, s.xf)());
                                 }
                             };
                         e.mfaEnabled
-                            ? (0, s.h7j)((e) =>
+                            ? (0, a.h7j)((e) =>
                                   (0, r.jsx)(
-                                      s.ConfirmModal,
-                                      ex(eh({}, e, l), {
-                                          children: (0, r.jsx)(s.Text, {
+                                      a.ConfirmModal,
+                                      ex(ef({}, e, l), {
+                                          children: (0, r.jsx)(a.Text, {
                                               variant: 'text-md/normal',
                                               children: ep.intl.format(ep.t['Zuo+VV'], { name: i })
                                           })
                                       })
                                   )
                               )
-                            : (0, s.ZDy)(async () => {
+                            : (0, a.ZDy)(async () => {
                                   let { default: e } = await n.e('18259').then(n.bind(n, 1493));
                                   return (t) =>
                                       (0, r.jsx)(
                                           e,
-                                          ex(eh({}, t, l), {
+                                          ex(ef({}, t, l), {
                                               validationText: i,
                                               instructionText: ep.intl.string(ep.t.abprOD),
                                               errorText: ep.intl.string(ep.t['c2/DS0']),
@@ -507,7 +507,7 @@ let eb = {
                     },
                     label: ep.intl.string(ep.t.l3hWPz),
                     ariaLabel: ep.intl.string(ep.t.l3hWPz),
-                    icon: (0, r.jsx)(s.XHJ, {
+                    icon: (0, r.jsx)(a.XHJ, {
                         size: 'xs',
                         color: 'currentColor'
                     }),

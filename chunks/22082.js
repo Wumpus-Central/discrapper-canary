@@ -58,15 +58,15 @@ function _(e) {
         )),
         (j[e] = Date.now()));
 }
-function P() {
+function x() {
     O.default.keys(S).forEach((e) => {
         let t = S[e];
         S[e] = new Set([...t].filter((t) => !h.ZP.isChannelOrParentOptedIn(e, t)));
     });
 }
-class x extends (r = s.ZP.Store) {
+class P extends (r = s.ZP.Store) {
     initialize() {
-        (this.waitFor(p.ZP, d.default, g.ZP, h.ZP, b.ZP, u.Z), this.syncWith([h.ZP], P));
+        (this.waitFor(p.ZP, d.default, g.ZP, h.ZP, b.ZP, u.Z), this.syncWith([h.ZP], x));
     }
     getNewChannelIds(e) {
         var t;
@@ -80,15 +80,15 @@ class x extends (r = s.ZP.Store) {
     }
 }
 ((l = 'NewChannelsStore'),
-    (i = 'displayName') in x
-        ? Object.defineProperty(x, i, {
+    (i = 'displayName') in P
+        ? Object.defineProperty(P, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (x[i] = l));
-let N = new x(o.Z, {
+        : (P[i] = l));
+let N = new P(o.Z, {
     BULK_CLEAR_RECENTS: function (e) {
         let { guildId: t, channelIds: n } = e;
         if (null == S[t]) return !1;

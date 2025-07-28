@@ -29,8 +29,8 @@ let S = {
     A = (e) => {
         let { user: t, nameplate: n, nameplateData: a, className: A, innerClassName: N, isHighlighted: C, showStatus: R, showPlaceholderUser: P, pendingGlobalName: w, nameplatePreviewSize: D = 'default', isPurchased: L = !1 } = e,
             x = (0, s.e7)([E.Z], () => (0, l.wj)(E.Z.theme)),
-            M = null != n ? (0, y.EU)(n) : a,
-            k = (0, s.e7)([b.Z], () => (null != t ? b.Z.getStatus(t.id) : c.Skl.ONLINE)),
+            k = null != n ? (0, y.EU)(n) : a,
+            M = (0, s.e7)([b.Z], () => (null != t ? b.Z.getStatus(t.id) : c.Skl.ONLINE)),
             j = x ? '#706F74' : '#aaaab2',
             U = i.useRef(null),
             G =
@@ -57,11 +57,11 @@ let S = {
                     [v.xlarge]: 'xlarge' === D
                 }),
                 children: [
-                    null != M &&
+                    null != k &&
                         (0, r.jsx)(
                             m.Z,
                             {
-                                nameplate: M,
+                                nameplate: k,
                                 hovered: C,
                                 placement: h.i.PREVIEW,
                                 content: P ? void 0 : U
@@ -80,7 +80,7 @@ let S = {
                                               user: t,
                                               guildId: null,
                                               avatarSize: B,
-                                              status: R ? k : void 0,
+                                              status: R ? M : void 0,
                                               'aria-hidden': !0
                                           }),
                                           decorators: (0, r.jsx)(p.ZP, {

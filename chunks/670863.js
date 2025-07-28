@@ -1,4 +1,4 @@
-(n.d(t, { j: () => b }), n(388685));
+(n.d(t, { j: () => v }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -12,13 +12,13 @@ var r = n(255367),
     p = n(981631),
     m = n(65154),
     g = n(388032),
-    _ = n(583453),
-    v = n(20493);
-let h = 'SHOW_MORE';
-function b(e) {
+    h = n(583453),
+    b = n(20493);
+let _ = 'SHOW_MORE';
+function v(e) {
     var t,
-        { deviceType: n, location: b, showAllDevices: y = !1, selectedDeviceId: O, onSelectDevice: j, hideDeviceTypeIcon: S = !1 } = e,
-        x = (function (e, t) {
+        { deviceType: n, location: v, showAllDevices: y = !1, selectedDeviceId: O, onSelectDevice: S, hideDeviceTypeIcon: I = !1 } = e,
+        j = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -38,11 +38,11 @@ function b(e) {
             return i;
         })(e, ['deviceType', 'location', 'showAllDevices', 'selectedDeviceId', 'onSelectDevice', 'hideDeviceTypeIcon']);
     let {
-            setDevice: I,
-            Icon: P,
-            getCanSetDevice: C,
-            getWarningMessage: E,
-            getLocation: w
+            setDevice: x,
+            Icon: E,
+            getCanSetDevice: P,
+            getWarningMessage: C,
+            getLocation: T
         } = {
             [m.h7.AUDIO_INPUT]: {
                 setDevice: o.Z.setInputDevice,
@@ -66,49 +66,49 @@ function b(e) {
                 getLocation: (e) => ''.concat(e, '.SingleSelectVideoDevices')
             }
         }[n],
-        { analyticsLocations: T } = (0, s.ZP)(),
-        [N, Z] = i.useState(y),
-        A = w(b),
-        [D, k] = (0, f.L)(n, { location: A }),
-        { id: L } = (0, f.p)(n),
-        M = (0, l.e7)([u.Z], () => C(u.Z)),
+        { analyticsLocations: N } = (0, s.ZP)(),
+        [A, w] = i.useState(y),
+        D = T(v),
+        [Z, L] = (0, f.L)(n, { location: D }),
+        { id: M } = (0, f.p)(n),
+        k = (0, l.e7)([u.Z], () => P(u.Z)),
         U = (0, r.jsx)(a.R94, {
             type: a.R94.Types.DESCRIPTION,
-            className: v.marginTop8,
-            children: E()
+            className: b.marginTop8,
+            children: C()
         }),
         R = i.useCallback(
             (e) => {
-                if (e === h)
-                    (Z(!0),
+                if (e === _)
+                    (w(!0),
                         d.default.track(p.rMx.DEVICES_LIST_SHOW_MORE_CLICKED, {
                             device_type: n,
-                            location: A,
-                            location_stack: T,
-                            shown_device_count: D.length,
-                            hidden_device_count: k.length
+                            location: D,
+                            location_stack: N,
+                            shown_device_count: Z.length,
+                            hidden_device_count: L.length
                         }));
                 else {
                     var t;
-                    (null == (t = null == j ? void 0 : j(e)) || t) &&
-                        I(e, {
-                            location: A,
-                            analyticsLocations: T
+                    (null == (t = null == S ? void 0 : S(e)) || t) &&
+                        x(e, {
+                            location: D,
+                            analyticsLocations: N
                         });
                 }
             },
-            [n, A, D.length, k.length, T, j, I]
+            [n, D, Z.length, L.length, N, S, x]
         ),
         V =
-            null != (t = x.renderOptionLabel)
+            null != (t = j.renderOptionLabel)
                 ? t
                 : function (e) {
                       let { label: t } = e;
                       return (0, r.jsxs)('div', {
-                          className: _.selectedDevice,
+                          className: h.selectedDevice,
                           children: [
-                              !S &&
-                                  (0, r.jsx)(P, {
+                              !I &&
+                                  (0, r.jsx)(E, {
                                       size: 'custom',
                                       width: 20,
                                       height: 20,
@@ -153,7 +153,7 @@ function b(e) {
                     return e;
                 })(
                     {
-                        value: null != O ? O : L,
+                        value: null != O ? O : M,
                         onChange: R,
                         options: (function () {
                             let e = (e) => {
@@ -163,22 +163,22 @@ function b(e) {
                                         label: n
                                     };
                                 },
-                                t = D.map(e);
-                            if (N || 0 === k.length) {
-                                let n = k.map(e);
+                                t = Z.map(e);
+                            if (A || 0 === L.length) {
+                                let n = L.map(e);
                                 return t.concat(n);
                             }
                             {
                                 let e = {
-                                    value: h,
+                                    value: _,
                                     label: g.intl.string(g.t.E99UMj),
                                     preventCloseOnSelect: !0
                                 };
                                 return t.concat(e);
                             }
                         })(),
-                        isDisabled: !M,
-                        className: _.selector,
+                        isDisabled: !k,
+                        className: h.selector,
                         popoutPosition: 'bottom',
                         renderOptionLabel: V,
                         renderOptionValue: (e) => {
@@ -186,10 +186,10 @@ function b(e) {
                             return V(t);
                         }
                     },
-                    x
+                    j
                 )
             ),
-            !M && U
+            !k && U
         ]
     });
 }

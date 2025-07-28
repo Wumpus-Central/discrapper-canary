@@ -3,15 +3,15 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    s = n(692547),
-    a = n(481060),
+    a = n(692547),
+    s = n(481060),
     o = n(259580),
     c = n(196345),
     d = n(137158),
     u = n(388032),
     m = n(664305);
 let g = function (e) {
-    let { channelId: t, formField: n, index: i, isDragEnabled: g, isDropHovered: p, onDrop: f, onEdit: h, onRemove: x, canRemove: b, title: j, actionsLocation: v, fieldStyle: _ } = e,
+    let { channelId: t, formField: n, index: i, isDragEnabled: g, isDropHovered: p, onDrop: h, onEdit: f, onRemove: x, canRemove: b, title: j, actionsLocation: v, fieldStyle: _ } = e,
         O = n.values,
         y = O.slice(0, 1),
         C = O.length - y.length;
@@ -20,8 +20,8 @@ let g = function (e) {
         index: i,
         isDragEnabled: g,
         isDropHovered: p,
-        onDrop: f,
-        onEdit: h,
+        onDrop: h,
+        onEdit: f,
         onRemove: x,
         title: j,
         canRemove: b,
@@ -34,11 +34,11 @@ let g = function (e) {
                 channelId: t
             }),
             0 !== C &&
-                (0, r.jsxs)(a.P3F, {
+                (0, r.jsxs)(s.P3F, {
                     className: l()(m.fieldFooterContainer, m.clickable),
-                    onClick: h,
+                    onClick: f,
                     children: [
-                        (0, r.jsx)(a.R94, {
+                        (0, r.jsx)(s.R94, {
                             className: m.clickable,
                             children: u.intl.format(u.t.jnhD0d, { count: C })
                         }),
@@ -46,7 +46,7 @@ let g = function (e) {
                             className: m.termsFieldCaretIcon,
                             height: 14,
                             width: 14,
-                            color: s.Z.unsafe_rawColors.WHITE_500.css
+                            color: a.Z.unsafe_rawColors.WHITE_500.css
                         })
                     ]
                 }),

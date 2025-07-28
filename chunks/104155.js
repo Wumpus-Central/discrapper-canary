@@ -1,5 +1,5 @@
 (n.d(t, {
-    I: () => b,
+    I: () => j,
     Z: () => v
 }),
     n(388685),
@@ -21,8 +21,8 @@ var l = n(255367),
     x = n(981631),
     _ = n(176505),
     C = n(388032),
-    j = n(335204);
-function b(e) {
+    b = n(335204);
+function j(e) {
     let { channelId: t } = e;
     return (0, l.jsx)(o.Z, {
         sidebarType: o.y.ThreadSidebar,
@@ -36,7 +36,7 @@ function b(e) {
 function v(e) {
     let { guildId: t } = e,
         [o, s] = r.useState(''),
-        b = (0, i.e7)([m.Z], () => m.Z.getGuild(t)),
+        j = (0, i.e7)([m.Z], () => m.Z.getGuild(t)),
         v = (0, i.e7)([u.ZP], () => u.ZP.getChannels(t)),
         y = (0, i.e7)([d.Z], () => d.Z.getCategories(t)),
         O = (0, f.Fo)(t, y, v, o),
@@ -97,16 +97,16 @@ function v(e) {
                 };
             });
         }, [t]);
-    return null == b
+    return null == j
         ? null
         : (0, l.jsxs)('div', {
-              className: j.pageBody,
+              className: b.pageBody,
               children: [
                   (0, l.jsxs)('div', {
-                      className: j.header,
+                      className: b.header,
                       children: [
                           (0, l.jsx)(a.E1j, {
-                              className: j.search,
+                              className: b.search,
                               size: a.E1j.Sizes.MEDIUM,
                               query: o,
                               onChange: (e) => {
@@ -125,10 +125,10 @@ function v(e) {
                       ]
                   }),
                   (0, l.jsx)(g.Z, {
-                      className: j.browser,
+                      className: b.browser,
                       channels: v,
                       categories: O,
-                      guild: b,
+                      guild: j,
                       hasSidebar: N
                   })
               ]

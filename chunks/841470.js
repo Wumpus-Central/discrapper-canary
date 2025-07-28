@@ -3,11 +3,11 @@ var r = n(255367);
 n(73800);
 var i = n(692547),
     l = n(481060),
-    s = n(355011),
-    a = n(388032),
+    a = n(355011),
+    s = n(388032),
     o = n(193);
 let c = (e) => {
-    let { title: t, subtext: n = a.intl.string(a.t.jHpxws), localizedNumber: c, isTrendingUp: d, isTrendingDown: u, tooltipText: m } = e,
+    let { title: t, subtext: n = s.intl.string(s.t.jHpxws), localizedNumber: c, isTrendingUp: d, isTrendingDown: u, tooltipText: m } = e,
         g =
             null != m
                 ? (0, r.jsx)(l.ua7, {
@@ -79,26 +79,26 @@ let c = (e) => {
                 children: (0, r.jsx)(l.X6q, {
                     className: null != c ? o.analyticsCardNumber : o.analyticsCardNumberNotAvailable,
                     variant: 'heading-xl/semibold',
-                    children: null != c ? c : a.intl.string(a.t.jHpxws)
+                    children: null != c ? c : s.intl.string(s.t.jHpxws)
                 })
             }),
             (0, r.jsxs)('div', {
                 className: o.analyticsCardArrowSubText,
                 children: [
                     d
-                        ? (0, r.jsx)(s.Z, {
+                        ? (0, r.jsx)(a.Z, {
                               className: o.trendingArrow,
                               color: i.Z.unsafe_rawColors.GREEN_360.css,
-                              'aria-label': a.intl.string(a.t['8mcccX']),
+                              'aria-label': s.intl.string(s.t['8mcccX']),
                               width: 14,
                               height: 12
                           })
                         : null,
                     u
-                        ? (0, r.jsx)(s.Z, {
+                        ? (0, r.jsx)(a.Z, {
                               className: o.trendingArrowIconDown,
                               color: i.Z.unsafe_rawColors.RED_400.css,
-                              'aria-label': a.intl.string(a.t.NLl6Q0),
+                              'aria-label': s.intl.string(s.t.NLl6Q0),
                               width: 14,
                               height: 12
                           })

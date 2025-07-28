@@ -33,7 +33,7 @@ function c(e) {
 function u(e) {
     let { message: t, compact: n } = e;
     return (0, r.jsx)(l.Z, {
-        iconNode: (0, r.jsx)(i.P4T, {
+        iconNode: (0, r.jsx)(i.Mgn, {
             size: 'custom',
             width: 20,
             height: 20,
@@ -49,7 +49,7 @@ function u(e) {
 function d(e) {
     let { message: t, compact: n } = e;
     return (0, r.jsx)(l.Z, {
-        iconNode: (0, r.jsx)(i.P4T, {
+        iconNode: (0, r.jsx)(i.Mgn, {
             size: 'custom',
             width: 20,
             height: 20,

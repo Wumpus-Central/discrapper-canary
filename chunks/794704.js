@@ -945,8 +945,8 @@ function eR(e) {
             colorString: '#000000',
             colorStrings: {
                 primaryColor: '#000000',
-                secondaryColor: void 0,
-                tertiaryColor: void 0
+                secondaryColor: null,
+                tertiaryColor: null
             }
         },
         nick: e,

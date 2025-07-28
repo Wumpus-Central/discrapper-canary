@@ -28,29 +28,20 @@ function p(e) {
         _ = (0, a.e7)([s.ZP], () => (null == i || null == r ? null : s.ZP.getMember(i, r))),
         p = (0, a.e7)([d.default], () => d.default.getUser(r), [r]),
         h = f.ZP.useName((null == e ? void 0 : e.author.bot) ? (null == e ? void 0 : e.author) : p),
-        { guild: m, guildRoles: g } = (0, a.cj)(
-            [c.Z, l.Z],
-            () => {
-                let e = c.Z.getGuild(i),
-                    t = null != e ? l.Z.getRoles(e.id) : void 0;
-                return {
-                    guild: e,
-                    guildRoles: t
-                };
-            },
-            [i]
-        ),
-        E = (0, a.e7)([u.Z], () => (null != r && (null == n ? void 0 : n.isPrivate()) ? u.Z.getNickname(r) : null));
+        m = (0, a.e7)([c.Z], () => c.Z.getGuild(i), [i]),
+        g = null == _ ? void 0 : _.colorRoleId,
+        E = (0, a.e7)([l.Z], () => (null != i && null != g ? l.Z.getRole(i, g) : void 0), [i, g]),
+        y = (0, a.e7)([u.Z], () => (null != r && (null == n ? void 0 : n.isPrivate()) ? u.Z.getNickname(r) : null));
     return null == e
         ? null
         : b({
               user: e.author,
               channel: n,
               guild: m,
-              guildRoles: g,
+              memberColorRole: E,
               userName: h,
               member: _,
-              friendNickname: E
+              friendNickname: y
           });
 }
 function h(e) {
@@ -65,84 +56,75 @@ function g(e, t) {
     let n = null == e ? void 0 : e.id,
         r = null == t ? void 0 : t.guild_id,
         i = (0, a.e7)([s.ZP], () => (null == r || null == n ? null : s.ZP.getMember(r, n))),
-        { guild: o, guildRoles: d } = (0, a.cj)(
-            [c.Z, l.Z],
-            () => {
-                let e = c.Z.getGuild(r),
-                    t = null != e ? l.Z.getRoles(e.id) : void 0;
-                return {
-                    guild: e,
-                    guildRoles: t
-                };
-            },
-            [r]
-        ),
-        _ = (0, a.e7)([u.Z], () => (null != n && (null == t ? void 0 : t.isPrivate()) ? u.Z.getNickname(n) : null)),
-        p = f.ZP.useName(e);
+        o = (0, a.e7)([c.Z], () => c.Z.getGuild(r), [r]),
+        d = null == i ? void 0 : i.colorRoleId,
+        _ = (0, a.e7)([l.Z], () => (null != r && null != d ? l.Z.getRole(r, d) : void 0), [r, d]),
+        p = (0, a.e7)([u.Z], () => (null != n && (null == t ? void 0 : t.isPrivate()) ? u.Z.getNickname(n) : null)),
+        h = f.ZP.useName(e);
     return b({
         user: e,
         channel: t,
         guild: o,
-        guildRoles: d,
+        memberColorRole: _,
         member: i,
-        userName: p,
-        friendNickname: _
+        userName: h,
+        friendNickname: p
     });
 }
 function E(e, t) {
     let n = null == e ? void 0 : e.id,
         r = null == t ? void 0 : t.guild_id,
         i = c.Z.getGuild(r),
-        a = null != r ? l.Z.getRoles(r) : void 0,
-        o = null == r || null == n ? null : s.ZP.getMember(r, n),
+        a = null == r || null == n ? null : s.ZP.getMember(r, n),
+        o = null != r && (null == a ? void 0 : a.colorRoleId) != null ? l.Z.getRole(r, a.colorRoleId) : void 0,
         d = null != n && null != t && t.isPrivate() ? u.Z.getNickname(n) : null;
     return b({
         user: e,
         channel: t,
         guild: i,
-        guildRoles: a,
-        member: o,
+        memberColorRole: o,
+        member: a,
         friendNickname: d
     });
 }
 function b(e) {
-    var t, n, r, i, a, o;
-    let { user: s, channel: l, guild: c, guildRoles: u, member: d, userName: _, friendNickname: p } = e,
-        h = null == s ? '???' : null != _ ? _ : f.ZP.getName(s),
-        m = null != (n = null == s ? void 0 : s.displayNameStyles) ? n : void 0;
-    return (null == s ? void 0 : s.id) == null || null == l
+    var t, n, r;
+    let { user: i, channel: a, guild: o, memberColorRole: s, member: l, userName: c, friendNickname: u } = e,
+        d = null == i ? '???' : null != c ? c : f.ZP.getName(i),
+        _ = null != (t = null == i ? void 0 : i.displayNameStyles) ? t : void 0;
+    return (null == i ? void 0 : i.id) == null || null == a
         ? {
-              nick: h,
-              colorString: void 0,
-              colorStrings: void 0,
-              displayNameStyles: m
+              nick: d,
+              colorString: null,
+              colorStrings: null,
+              displayNameStyles: _
           }
-        : (null == c ? void 0 : c.id) == null
+        : (null == o ? void 0 : o.id) == null
           ? {
-                nick: null != p ? p : h,
-                colorString: void 0,
-                colorStrings: void 0,
-                displayNameStyles: m
+                nick: null != u ? u : d,
+                colorString: null,
+                colorStrings: null,
+                displayNameStyles: _
             }
-          : null == d
+          : null == l
             ? {
-                  nick: h,
-                  colorString: void 0,
-                  colorStrings: void 0,
-                  displayNameStyles: m
+                  nick: d,
+                  colorString: null,
+                  colorStrings: null,
+                  displayNameStyles: _
               }
             : {
-                  nick: null != (r = d.nick) ? r : h,
-                  colorString: null != (i = d.colorString) ? i : void 0,
-                  colorStrings: null != (a = d.colorStrings) ? a : void 0,
-                  colorRoleName: null != d.colorRoleId && null != c ? (null == u || null == (t = u[d.colorRoleId]) ? void 0 : t.name) : void 0,
-                  colorRoleId: d.colorRoleId,
-                  iconRoleId: d.iconRoleId,
-                  guildMemberAvatar: d.avatar,
-                  guildMemberAvatarDecoration: d.avatarDecoration,
-                  primaryGuild: null != (o = s.primaryGuild) ? o : void 0,
-                  guildId: c.id,
-                  authorId: s.id,
-                  displayNameStyles: m
+                  nick: null != (n = l.nick) ? n : d,
+                  colorString: l.colorString,
+                  colorStrings: l.colorStrings,
+                  colorRoleName: null == s ? void 0 : s.name,
+                  colorRoleId: null == s ? void 0 : s.id,
+                  iconRoleId: l.iconRoleId,
+                  guildMemberAvatar: l.avatar,
+                  guildMemberAvatarDecoration: l.avatarDecoration,
+                  primaryGuild: null != (r = i.primaryGuild) ? r : void 0,
+                  guildId: o.id,
+                  authorId: i.id,
+                  displayNameStyles: _
               };
 }

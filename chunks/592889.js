@@ -104,7 +104,7 @@ function N(e) {
         (0, i.jsxs)('div', {
             className: a()(S.root, s),
             children: [
-                (0, i.jsx)(m.P4T, {
+                (0, i.jsx)(m.Mgn, {
                     size: 'custom',
                     width: 20,
                     height: 20,

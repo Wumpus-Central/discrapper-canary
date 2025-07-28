@@ -79,7 +79,7 @@ function f(e, t) {
 let _ = (e) => {
     var t,
         n,
-        { size: s = 'md', width: c, height: f, secondaryColor: _ = i.Z.colors.STATUS_DANGER, secondaryColorClass: p = '', color: h = i.Z.colors.INTERACTIVE_NORMAL, colorClass: m = '' } = e,
+        { size: s = 'md', width: c, height: f, secondaryColor: _ = '#C12A35', secondaryColorClass: p = '', color: h = i.Z.colors.INTERACTIVE_NORMAL, colorClass: m = '' } = e,
         g = d(e, ['size', 'width', 'height', 'secondaryColor', 'secondaryColorClass', 'color', 'colorClass']);
     let E = (0, o.m)(s),
         b = null != (t = null == E ? void 0 : E.width) ? t : c,

@@ -192,39 +192,39 @@ let P = r.memo(function () {
         }
     };
 function T(A) {
-    var e;
-    let { guildId: t, inviterUser: l, joinSourceType: o, className: f, onClickInviter: v } = A,
-        c = (0, s.e7)([d.ZP], () => (null == l ? null : d.ZP.getMember(t, l.id)), [l, t]),
-        E = (0, h.X7)(null == c ? void 0 : c.guildId, null == c ? void 0 : c.userId, null == c ? void 0 : c.colorStrings),
-        u = r.useCallback(
+    var e, t;
+    let { guildId: l, inviterUser: o, joinSourceType: f, className: v, onClickInviter: c } = A,
+        E = (0, s.e7)([d.ZP], () => (null == o ? null : d.ZP.getMember(l, o.id)), [o, l]),
+        u = (0, h.X7)(null == E ? void 0 : E.guildId, null == E ? void 0 : E.userId, null != (e = null == E ? void 0 : E.colorStrings) ? e : null),
+        C = r.useCallback(
             (A) => {
-                (A.stopPropagation(), A.preventDefault(), null != l && (null == v || v(l)));
+                (A.stopPropagation(), A.preventDefault(), null != o && (null == c || c(o)));
             },
-            [l, v]
+            [o, c]
         );
-    return null == l
+    return null == o
         ? null
         : (0, n.jsxs)('div', {
-              className: i()(b.inviterTooltipContainer, f),
+              className: i()(b.inviterTooltipContainer, v),
               children: [
                   (0, n.jsx)(a.Text, {
                       variant: 'text-xs/medium',
-                      children: o !== p.gq.BOT ? H.intl.string(H.t.azhY2t) : H.intl.string(H.t['2ByN2t'])
+                      children: f !== p.gq.BOT ? H.intl.string(H.t.azhY2t) : H.intl.string(H.t['2ByN2t'])
                   }),
                   (0, n.jsxs)(a.P3F, {
-                      className: i()(b.inviterUserContainer, null != v && b.clickable),
-                      onClick: u,
+                      className: i()(b.inviterUserContainer, null != c && b.clickable),
+                      onClick: C,
                       children: [
                           (0, n.jsx)(g.Z, {
-                              user: l,
+                              user: o,
                               size: a.EFr.SIZE_16
                           }),
                           (0, n.jsx)(a.Text, {
                               variant: 'text-xs/medium',
                               children: (0, n.jsx)(a.PUh, {
-                                  name: D.ZP.getName(t, null, l),
-                                  color: null != (e = null == c ? void 0 : c.colorString) ? e : void 0,
-                                  roleColors: E
+                                  name: D.ZP.getName(l, null, o),
+                                  colorString: null != (t = null == E ? void 0 : E.colorString) ? t : null,
+                                  colorStrings: u
                               })
                           })
                       ]

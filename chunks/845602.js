@@ -4,18 +4,18 @@
 }),
     n(388685));
 var r = n(255367),
-    a = n(73800),
-    o = n(120356),
-    l = n.n(o),
-    s = n(866442),
-    i = n(481060),
-    c = n(957537),
-    d = n(839008),
-    u = n(797967),
-    p = n(755641),
-    m = n(742409),
-    f = n(369509),
-    g = n(101017),
+    l = n(73800),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    i = n(957537),
+    c = n(839008),
+    d = n(797967),
+    u = n(755641),
+    p = n(742409),
+    m = n(369509),
+    f = n(101017),
+    g = n(606318),
     b = n(141006),
     _ = n(981631),
     h = n(131085),
@@ -24,15 +24,16 @@ var r = n(255367),
     v = n(183375);
 function C() {
     var e;
-    let t = a.useMemo(() => Math.floor(Math.random() * b.tl.length), []),
-        [n, o] = a.useState({
-            primary_color: b.tl[t].start,
-            secondary_color: b.tl[t].end
+    let [t, n] = l.useState(() => {
+            let e = Math.floor(Math.random() * b.tl.length);
+            return {
+                primary_color: b.tl[e].start,
+                secondary_color: b.tl[e].end,
+                tertiary_color: null
+            };
         }),
-        { gradientStyle: d, gradientClassname: p } = (0, i.Icv)({
-            primaryColor: (0, s.Rf)(n.primary_color),
-            secondaryColor: (0, s.Rf)(n.secondary_color),
-            tertiaryColor: void 0,
+        { gradientStyle: a, gradientClassname: c } = (0, o.Icv)({
+            colorStrings: (0, g.DX)(t),
             roleStyle: 'username',
             includeConvenienceGlow: !0,
             animateGradient: !0
@@ -42,23 +43,23 @@ function C() {
         children: [
             (0, r.jsx)('div', {
                 className: j.messageContainer,
-                children: (0, r.jsx)(m.l, {
-                    avatar: c.Z,
+                children: (0, r.jsx)(p.l, {
+                    avatar: i.Z,
                     username: 'Cherry',
-                    usernameStyle: d,
-                    usernameClassName: l()(p, v.animateGradient),
+                    usernameStyle: a,
+                    usernameClassName: s()(c, v.animateGradient),
                     message: x.intl.string(x.t['6OSasb'])
                 })
             }),
-            (0, r.jsx)(u.default, {
+            (0, r.jsx)(d.default, {
                 defaultColor: _.p6O,
                 colors: b.tl,
-                value: n.primary_color,
-                secondaryValue: null != (e = n.secondary_color) ? e : void 0,
+                value: t.primary_color,
+                secondaryValue: null != (e = t.secondary_color) ? e : void 0,
                 onChange: (e) => {
-                    var t, r;
-                    return o(
-                        ((t = (function (e) {
+                    var r, l;
+                    return n(
+                        ((r = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
                                     r = Object.keys(n);
@@ -82,10 +83,10 @@ function C() {
                                     }));
                             }
                             return e;
-                        })({}, n)),
-                        (r = r = { primary_color: e }),
+                        })({}, t)),
+                        (l = l = { primary_color: e }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -93,17 +94,17 @@ function C() {
                                       n.push.apply(n, r);
                                   }
                                   return n;
-                              })(Object(r)).forEach(function (e) {
-                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                              })(Object(l)).forEach(function (e) {
+                                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                               }),
-                        t)
+                        r)
                     );
                 },
                 onChangeGradientColors: (e) =>
-                    o({
+                    n({
                         primary_color: e[0],
                         secondary_color: e[1],
-                        tertiary_color: void 0
+                        tertiary_color: null
                     }),
                 isGradient: !0
             })
@@ -112,36 +113,36 @@ function C() {
 }
 function y(e) {
     let { guildId: t } = e,
-        [n, o] = a.useState(h.x_.HEART),
-        l = (0, g.Z)(),
-        s = a.useMemo(
+        [n, a] = l.useState(h.x_.HEART),
+        s = (0, f.Z)(),
+        o = l.useMemo(
             () => ({
-                unlockedBadges: l.unlockedBadges.slice(0, 10),
+                unlockedBadges: s.unlockedBadges.slice(0, 10),
                 lockedBadges: []
             }),
-            [l]
+            [s]
         );
     return (0, r.jsxs)('div', {
         className: j.container,
         children: [
             (0, r.jsx)('div', {
                 className: j.messageContainer,
-                children: (0, r.jsx)(m.l, {
-                    avatar: d.Z,
+                children: (0, r.jsx)(p.l, {
+                    avatar: c.Z,
                     username: 'Roka',
                     usernameStyle: { color: 'var(--brand-400)' },
                     message: x.intl.string(x.t['6OSasb']),
-                    decorations: (0, r.jsx)(f.S, {
+                    decorations: (0, r.jsx)(m.S, {
                         guildId: t,
                         tag: 'GGEZ',
                         badge: n
                     })
                 })
             }),
-            (0, r.jsx)(p.g, {
+            (0, r.jsx)(u.g, {
                 selectedBadge: n,
-                onBadgeClicked: o,
-                badgeCollection: s
+                onBadgeClicked: a,
+                badgeCollection: o
             })
         ]
     });

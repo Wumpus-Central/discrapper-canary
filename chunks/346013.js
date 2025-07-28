@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(348238),
     x = n(38267),
     v = n(884902),
-    O = n(670188),
-    y = n(695346),
+    y = n(670188),
+    O = n(695346),
     j = n(271383),
     I = n(594174),
     S = n(768581),
@@ -79,12 +79,12 @@ function M(e, t) {
 function U(e) {
     var t, n, l, U;
     let { embedUrl: F, message: B, channel: G } = e,
-        V = i.useRef(null),
         H = i.useRef(null),
+        V = i.useRef(null),
         z = (0, A.J)(F, B),
         { setPopout: W } = (0, x.Z)(B.id, Z.d$),
         K = (0, C.qo)(B, G, W, !0),
-        Y = y.QK.useSetting(),
+        Y = O.QK.useSetting(),
         X = (0, N.n)(),
         [q, Q] = i.useState(!1),
         [J, $] = i.useState((null == z ? void 0 : z.coverImage) == null),
@@ -100,8 +100,8 @@ function U(e) {
         en = (0, c.e7)([j.ZP], () => ((null == z ? void 0 : z.authorId) != null ? j.ZP.getMember(z.guildId, z.authorId) : null)),
         er = (0, g.Z)((null == en ? void 0 : en.avatarDecoration) != null ? (null == en ? void 0 : en.avatarDecoration) : null == z || null == (t = z.user) ? void 0 : t.avatarDecoration),
         [ei, el, ea] = i.useMemo(() => {
-            var e;
-            return [null != (e = null == en ? void 0 : en.colorString) ? e : 'inherit', null == en ? void 0 : en.colorStrings, null == en ? void 0 : en.colorRoleId];
+            var e, t;
+            return [null != (e = null == en ? void 0 : en.colorString) ? e : 'inherit', null != (t = null == en ? void 0 : en.colorStrings) ? t : null, null == en ? void 0 : en.colorRoleId];
         }, [en]),
         eo = (0, v.X7)(null == en ? void 0 : en.guildId, null != (l = null == z ? void 0 : z.authorId) ? l : void 0, el),
         { reducedMotion: es } = i.useContext(d.Sfi),
@@ -206,8 +206,8 @@ function U(e) {
                         children: [
                             null != z.authorId &&
                                 null != eg &&
-                                (0, r.jsx)(O.Z, {
-                                    targetElementRef: H,
+                                (0, r.jsx)(y.Z, {
+                                    targetElementRef: V,
                                     userId: z.authorId,
                                     guildId: z.guildId,
                                     channelId: G.id,
@@ -223,7 +223,7 @@ function U(e) {
                                             children: (0, r.jsx)(
                                                 d.qEK,
                                                 M(k({}, e), {
-                                                    ref: H,
+                                                    ref: V,
                                                     size: d.EFr.SIZE_40,
                                                     src: eg,
                                                     'aria-label': R.intl.string(R.t.KXz3XF),
@@ -266,14 +266,14 @@ function U(e) {
                                                     null == z.authorId
                                                         ? (0, r.jsx)(d.rz2, {
                                                               name: z.authorName,
-                                                              color: ei,
-                                                              roleColors: eo,
+                                                              colorString: ei,
+                                                              colorStrings: eo,
                                                               className: L.authorName
                                                           })
                                                         : (0, r.jsx)(
-                                                              O.Z,
+                                                              y.Z,
                                                               {
-                                                                  targetElementRef: V,
+                                                                  targetElementRef: H,
                                                                   userId: z.authorId,
                                                                   guildId: z.guildId,
                                                                   channelId: G.id,
@@ -285,10 +285,10 @@ function U(e) {
                                                                       (0, r.jsx)(
                                                                           d.rz2,
                                                                           M(k({}, e), {
-                                                                              ref: V,
+                                                                              ref: H,
                                                                               name: z.authorName,
-                                                                              color: ei,
-                                                                              roleColors: eo,
+                                                                              colorString: ei,
+                                                                              colorStrings: eo,
                                                                               className: L.authorName
                                                                           })
                                                                       )

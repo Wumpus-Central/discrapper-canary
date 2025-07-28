@@ -7,8 +7,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
-    a = n(392711),
+    a = n.n(l),
+    s = n(392711),
     o = n(442837),
     c = n(481060),
     d = n(230711),
@@ -16,8 +16,8 @@ var r = n(255367),
     m = n(470734),
     g = n(688465),
     p = n(241559),
-    f = n(953252),
-    h = n(601964),
+    h = n(953252),
+    f = n(601964),
     x = n(496675),
     b = n(246946),
     j = n(594174),
@@ -88,11 +88,11 @@ function R(e) {
             },
             [t]
         ),
-        s = i.useMemo(() => {
+        a = i.useMemo(() => {
             let e = (0, _.IF)(null == t ? void 0 : t.features.has(I.oNc.COMMUNITY)).map((e) => w(P({}, e), { tooltipPosition: 'left' }));
             return (0, _.LJ)(e);
         }, [t]),
-        a = i.useMemo(() => s.find((e) => e.value === (null == t ? void 0 : t.verificationLevel)), [t, s]);
+        s = i.useMemo(() => a.find((e) => e.value === (null == t ? void 0 : t.verificationLevel)), [t, a]);
     return (0, r.jsxs)('div', {
         className: T.setupContainer,
         children: [
@@ -113,8 +113,8 @@ function R(e) {
             }),
             (0, r.jsx)(N.Z, {
                 changeTitle: E.intl.string(E.t.TxESJC),
-                value: null == a ? void 0 : a.value,
-                options: s,
+                value: null == s ? void 0 : s.value,
+                options: a,
                 disabled: !n,
                 onChange: l
             })
@@ -123,7 +123,7 @@ function R(e) {
 }
 function Z(e) {
     let { guild: t, className: n, withDivider: l = !0 } = e,
-        a = (0, m.pn)('GuildExplicitContentFilter'),
+        s = (0, m.pn)('GuildExplicitContentFilter'),
         d = (0, o.e7)([x.Z], () => null != t && x.Z.can(I.Plq.MANAGE_GUILD, t), [t]),
         u = i.useCallback(
             async (e) => {
@@ -145,7 +145,7 @@ function Z(e) {
         children: [
             l && (0, r.jsx)(c.$i$, { className: T.divider }),
             (0, r.jsxs)('div', {
-                className: s()(T.setupContainer, n),
+                className: a()(T.setupContainer, n),
                 children: [
                     (0, r.jsxs)('div', {
                         className: T.switchItemTextContent,
@@ -153,12 +153,12 @@ function Z(e) {
                             (0, r.jsx)(c.Text, {
                                 color: 'header-primary',
                                 variant: 'text-md/semibold',
-                                children: a ? E.intl.string(E.t.bPgfJy) : E.intl.string(E.t.Kd6OQU)
+                                children: s ? E.intl.string(E.t.bPgfJy) : E.intl.string(E.t.Kd6OQU)
                             }),
                             (0, r.jsx)(c.Text, {
                                 color: 'header-secondary',
                                 variant: 'text-sm/normal',
-                                children: E.intl.format(a ? E.t.BI4ukJ : E.t.zOmxND, { helpdeskArticle: v.Z.getArticleURL(I.BhN.SAFE_DIRECT_MESSAGING) })
+                                children: E.intl.format(s ? E.t.BI4ukJ : E.t.zOmxND, { helpdeskArticle: v.Z.getArticleURL(I.BhN.SAFE_DIRECT_MESSAGING) })
                             })
                         ]
                     }),
@@ -186,15 +186,15 @@ function k(e) {
     let { guild: t } = e,
         n = (0, o.e7)([x.Z], () => null != t && x.Z.can(I.Plq.MANAGE_GUILD, t), [t]),
         l = t.features.has(I.oNc.COMMUNITY),
-        s = (0, p.n2)(t.id),
-        [a, d] = i.useState(t.features.has(I.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
+        a = (0, p.n2)(t.id),
+        [s, d] = i.useState(t.features.has(I.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
         u = i.useCallback(
             async (e) => {
                 (d(e), await D(t, e));
             },
             [t]
         );
-    return l || !s
+    return l || !a
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
@@ -202,7 +202,7 @@ function k(e) {
                       className: T.setupContainer,
                       children: [
                           (0, r.jsx)(c.j7V, {
-                              value: a,
+                              value: s,
                               onChange: u,
                               className: T.switchItem,
                               disabled: !n,
@@ -237,22 +237,22 @@ function k(e) {
 function L(e) {
     let { guild: t, mfaLevel: n } = e,
         l = (0, o.e7)([x.Z], () => null != t && x.Z.can(I.Plq.MANAGE_GUILD, t), [t]),
-        s = (0, o.e7)([j.default], () => j.default.getCurrentUser()),
+        a = (0, o.e7)([j.default], () => j.default.getCurrentUser()),
         { isGuildOwnerWithMFA: u, showMFAUserTooltip: m } = i.useMemo(
             () =>
-                null == s
+                null == a
                     ? {
                           canChangeMFALevel: !1,
                           showMFAUserTooltip: !1
                       }
                     : {
-                          isGuildOwnerWithMFA: (0, h.yn)(t, s),
-                          showMFAUserTooltip: !s.mfaEnabled && (0, h.eM)(t, s)
+                          isGuildOwnerWithMFA: (0, f.yn)(t, a),
+                          showMFAUserTooltip: !a.mfaEnabled && (0, f.eM)(t, a)
                       },
-            [s, t]
+            [a, t]
         ),
         g = n === I.BpS.ELEVATED,
-        p = (0, a.throttle)(async (e) => {
+        p = (0, s.throttle)(async (e) => {
             u &&
                 (m ||
                     (await O.Z.updateMFALevel({
@@ -310,10 +310,10 @@ function M(e) {
     let { guild: t } = e,
         n = (0, o.e7)([x.Z], () => null != t && x.Z.can(I.Plq.MANAGE_GUILD, t), [t]),
         l = t.features.has(I.oNc.REPORT_TO_MOD_PILOT),
-        [s, a] = i.useState((0, f.Z)(t) && l),
+        [a, s] = i.useState((0, h.Z)(t) && l),
         d = i.useCallback(
             async (e) => {
-                (a(e), await A(t, e));
+                (s(e), await A(t, e));
             },
             [t]
         );
@@ -323,7 +323,7 @@ function M(e) {
                   (0, r.jsx)('div', {
                       className: T.setupContainer,
                       children: (0, r.jsx)(c.j7V, {
-                          value: s,
+                          value: a,
                           onChange: d,
                           className: T.switchItem,
                           disabled: !n,

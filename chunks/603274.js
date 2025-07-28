@@ -104,7 +104,7 @@ function I() {
             c.gj8,
             l.filter((e) => !S.includes(e.id) && !I.includes(e.id))
         ),
-        Z =
+        T =
             0 === o.length
                 ? null
                 : (0, r.jsxs)('div', {
@@ -137,14 +137,14 @@ function I() {
                           })
                       ]
                   }),
-        T = x(
+        Z = x(
             c.hGI,
             N.filter((e) => null != e && !I.includes(e.id))
         ),
         { enabled: A } = u.c.useExperiment({ location: 'FavoritesTooltip' }, { autoTrackExposure: !0 }),
         R = x(A ? c.iWm : c.nG3, P);
     return (0, r.jsxs)(r.Fragment, {
-        children: [Z, w, T, R]
+        children: [T, w, Z, R]
     });
 }
 function P() {

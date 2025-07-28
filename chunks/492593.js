@@ -76,9 +76,9 @@ let b = function (e) {
                 }
             },
             hasThread: N,
-            isSystemMessage: Z,
-            hasReply: R,
-            author: T,
+            isSystemMessage: T,
+            hasReply: Z,
+            author: R,
             onMouseEnter: I,
             onMouseLeave: _
         } = e,
@@ -101,8 +101,8 @@ let b = function (e) {
             }
             return l;
         })(e, ['className', 'compact', 'contentOnly', 'zalgo', 'preview', 'disableInteraction', 'childrenRepliedMessage', 'childrenExecutedCommand', 'childrenHeader', 'childrenSystemMessage', 'childrenButtons', 'childrenMessageContent', 'childrenAccessories', 'messageRef', 'focusProps', 'hasThread', 'isSystemMessage', 'hasReply', 'author', 'onMouseEnter', 'onMouseLeave']);
-    let M = (0, a.e7)([p.Z], () => ((null == T ? void 0 : T.guildId) == null || (null == T ? void 0 : T.colorRoleId) == null ? null : p.Z.getRole(T.guildId, T.colorRoleId))),
-        D = (0, d.yH)(null == T ? void 0 : T.guildId, M) && (0, u.S2)(T),
+    let M = (0, a.e7)([p.Z], () => ((null == R ? void 0 : R.guildId) == null || (null == R ? void 0 : R.colorRoleId) == null ? null : p.Z.getRole(R.guildId, R.colorRoleId))),
+        D = (0, d.yH)(null == R ? void 0 : R.guildId, M) && (0, u.S2)(R),
         [A, L] = l.useState(!1),
         G = l.useCallback(
             (e) => {
@@ -138,8 +138,8 @@ let b = function (e) {
                                         [m.cozy]: !n,
                                         [m.zalgo]: b,
                                         [m.hasThread]: N,
-                                        [m.isSystemMessage]: Z,
-                                        [m.hasReply]: R
+                                        [m.isSystemMessage]: T,
+                                        [m.hasReply]: Z
                                     }),
                                     ref: S
                                 },

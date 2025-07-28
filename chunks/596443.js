@@ -7,11 +7,11 @@ var n = t(255367),
     a = t.n(s),
     o = t(399606),
     g = t(481060),
-    f = t(605436),
-    v = t(79712),
-    c = t(285173),
-    h = t(434404),
-    E = t(422559),
+    f = t(79712),
+    v = t(285173),
+    c = t(434404),
+    h = t(422559),
+    E = t(345162),
     u = t(271383),
     d = t(485386),
     C = t(430824),
@@ -27,9 +27,9 @@ var n = t(255367),
 function O(A) {
     var e, t, l, s;
     let { permission: a, roleIds: u, guild: C, specMap: w, categoryTitle: D, userId: M } = A,
-        b = (0, o.e7)([d.Z], () => d.Z.getRoles(C.id)),
+        b = (0, o.Wu)([d.Z], () => d.Z.getManyRoles(C.id, u)),
         O = p.Plq[a],
-        P = null != (l = null == (e = w[O.toString()]) ? void 0 : e.title) ? l : (0, E.wt)(O),
+        P = null != (l = null == (e = w[O.toString()]) ? void 0 : e.title) ? l : (0, h.wt)(O),
         V = null != (s = null == (t = w[O.toString()]) ? void 0 : t.description) ? s : '',
         j = I._o.has(O),
         T = I.Qn.includes(a),
@@ -37,7 +37,7 @@ function O(A) {
         m = (0, o.e7)([B.Z], () => B.Z.can(p.Plq.MANAGE_ROLES, C), [C]),
         L = r.useCallback(
             async (A) => {
-                m && (await h.Z.open(C.id, p.pNK.ROLES), await h.Z.selectRole(A));
+                m && (await c.Z.open(C.id, p.pNK.ROLES), await c.Z.selectRole(A));
             },
             [m, C.id]
         );
@@ -67,7 +67,7 @@ function O(A) {
                                         j &&
                                             (0, n.jsxs)(n.Fragment, {
                                                 children: [
-                                                    (0, n.jsx)(v.Z, {
+                                                    (0, n.jsx)(f.Z, {
                                                         height: 4,
                                                         width: 4,
                                                         'aria-hidden': 'true',
@@ -142,7 +142,7 @@ function O(A) {
                                             T &&
                                             (0, n.jsxs)(n.Fragment, {
                                                 children: [
-                                                    (0, n.jsx)(v.Z, {
+                                                    (0, n.jsx)(f.Z, {
                                                         height: 4,
                                                         width: 4,
                                                         'aria-hidden': 'true',
@@ -180,8 +180,8 @@ function O(A) {
                 }),
             (0, n.jsx)('div', {
                 className: Q.permissionItemRoleContainer,
-                children: u.map((A) =>
-                    (0, I.Ov)(A, M)
+                children: b.map((A) =>
+                    (0, I.Ov)(A.id, M)
                         ? (0, n.jsx)(
                               'div',
                               {
@@ -195,20 +195,20 @@ function O(A) {
                                       })
                                   })
                               },
-                              A
+                              A.id
                           )
                         : (0, n.jsx)(
                               g.P3F,
                               {
-                                  className: i()(Q.roleTooltipItem, { [Q.editable]: m && !(0, f.pM)(C.id, A) }),
-                                  onClick: () => L(A),
-                                  children: (0, n.jsx)(c.Z, {
-                                      role: b[A],
+                                  className: i()(Q.roleTooltipItem, { [Q.editable]: m && !(0, E.fI)(A) }),
+                                  onClick: () => L(A.id),
+                                  children: (0, n.jsx)(v.Z, {
+                                      role: A,
                                       guildId: C.id,
                                       className: Q.roleChiplet
                                   })
                               },
-                              A
+                              A.id
                           )
                 )
             })
@@ -222,7 +222,7 @@ function V(A) {
     let { userId: e, guildId: t, location: l, className: s, onNavigate: f } = A,
         v = (0, o.e7)([w.default], () => w.default.getUser(e), [e]),
         c = (0, o.e7)([C.Z], () => C.Z.getGuild(t), [t]),
-        h = (0, o.e7)([u.ZP], () => u.ZP.getMember(t, e), [t, e]),
+        E = (0, o.e7)([u.ZP], () => u.ZP.getMember(t, e), [t, e]),
         d = (0, I.B2)(e, t, I.pd),
         B = Object.keys(d).length,
         V = r.useMemo(() => (null != c ? D.Z.getGuildPermissionSpecMap(c) : null), [c]),
@@ -239,8 +239,8 @@ function V(A) {
         N = r.useCallback(() => {
             (y(''), L(''));
         }, []),
-        R = r.useMemo(() => {
-            if (null == c || null == V || null == h) return null;
+        S = r.useMemo(() => {
+            if (null == c || null == V || null == E) return null;
             if (0 === B)
                 return (0, n.jsx)(g.Text, {
                     variant: 'text-sm/normal',
@@ -258,17 +258,17 @@ function V(A) {
                             if (null != s) {
                                 if (m.length > 0) {
                                     var a, o, g, f, v;
-                                    let A = null != (f = null == (a = V[l.toString()]) ? void 0 : a.title) ? f : (0, E.wt)(l),
+                                    let A = null != (f = null == (a = V[l.toString()]) ? void 0 : a.title) ? f : (0, h.wt)(l),
                                         e = null != (v = null == (g = V[l.toString()]) || null == (o = g.description) ? void 0 : o.toString()) ? v : '',
                                         n = t.title,
                                         r = I._o.has(l),
                                         s = I.Qn.includes(i),
                                         c = r ? H.intl.string(H.t.k7Kqj4) : s ? H.intl.string(H.t.IfqUEB) : null,
-                                        h = P(m, A),
+                                        E = P(m, A),
                                         u = P(m, e),
                                         d = P(m, n),
                                         C = null != c && P(m, c);
-                                    if (!h && !u && !d && !C) return;
+                                    if (!E && !u && !d && !C) return;
                                 }
                                 A.push(
                                     (0, n.jsx)(
@@ -289,8 +289,8 @@ function V(A) {
                     }),
                 A
             );
-        }, [c, V, h, B, j, d, m, e]);
-    return null == v || null == h
+        }, [c, V, E, B, j, d, m, e]);
+    return null == v || null == E
         ? null
         : (0, n.jsxs)('div', {
               className: i()(b.container, s),
@@ -320,7 +320,7 @@ function V(A) {
                                           spellCheck: 'false'
                                       }
                                   }),
-                                  R
+                                  S
                               ]
                           })
                       })

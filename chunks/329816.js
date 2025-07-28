@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(84615),
     L = n(429142),
     x = n(813744),
-    M = n(746106),
-    k = n(526665),
+    k = n(746106),
+    M = n(526665),
     j = n(314897),
     U = n(819640),
     G = n(358085),
@@ -71,7 +71,7 @@ let X = (0, B.Un)({
     }),
     J = i.memo(function () {
         let e = (0, c.e7)([U.Z], () => U.Z.hasLayers()),
-            t = (0, k.wy)('AppSkeleton'),
+            t = (0, M.wy)('AppSkeleton'),
             n = (0, c.e7)([U.Z], () => U.Z.getLayers().includes(z.S9g.USER_SETTINGS)),
             i = (0, d.s9z)(d.$sL);
         if (!n || !t)
@@ -85,13 +85,13 @@ let X = (0, B.Un)({
             a = (0, G.getPlatform)(),
             u = l.tq || l.Em,
             m = (0, c.e7)([E.Z], () => (E.Z.useForcedColors ? 'yes' : 'no')),
-            k = i.useRef(document.body),
+            M = i.useRef(document.body),
             j = ''.concat(m);
         return (
             (0, C.G)(),
             (0, P.G)('AppSkeleton'),
             (0, r.jsx)(
-                M.w,
+                k.w,
                 {
                     children: (0, r.jsxs)(b.Z, {
                         children: [
@@ -99,7 +99,7 @@ let X = (0, B.Un)({
                             (0, r.jsx)(h.T, {
                                 children: (0, r.jsx)(H.Z, {
                                     children: (0, r.jsxs)(d.JcV, {
-                                        containerRef: k,
+                                        containerRef: M,
                                         children: [
                                             (0, r.jsx)(W.Co, {}),
                                             (0, r.jsx)(Y.ZP, {}),

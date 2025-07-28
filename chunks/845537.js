@@ -1,10 +1,10 @@
 n.d(t, {
     EK: () => G,
-    Io: () => k,
+    Io: () => M,
     N1: () => B,
     NY: () => j,
     Ox: () => L,
-    Vq: () => M,
+    Vq: () => k,
     Wf: () => U,
     cB: () => x,
     dy: () => w,
@@ -140,7 +140,7 @@ function x(e) {
         u = v.ZP.useName(n, o, l),
         d = (0, r.jsx)(f.Z, { children: null == u ? '<@'.concat(t, '>') : '@'.concat(u) });
     if (null != l) {
-        let e = c || l.isPomelo() ? null : '#'.concat(l.discriminator);
+        let e = c || l.hasUniqueUsername() ? null : '#'.concat(l.discriminator);
         return (0, r.jsx)(a.ua7, {
             text: (0, r.jsxs)('div', {
                 className: S.userTooltip,
@@ -169,7 +169,7 @@ function x(e) {
     }
     return d;
 }
-function M(e) {
+function k(e) {
     let { id: t, guildId: n } = e,
         o = (0, i.e7)([g.Z], () => (null != n ? g.Z.getRole(n, t) : void 0)),
         s = (0, i.e7)([l.Z], () => l.Z.roleStyle),
@@ -197,7 +197,7 @@ function M(e) {
         ]
     });
 }
-function k(e) {
+function M(e) {
     let { id: t } = e,
         n = (0, i.e7)([h.Z], () => h.Z.getChannel(t)),
         a = T.intl.string(T.t.zLZPmp).toLowerCase(),

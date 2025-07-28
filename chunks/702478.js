@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(772848),
-    s = n(640358),
-    a = n(442837),
+    a = n(640358),
+    s = n(442837),
     o = n(544891),
     c = n(481060),
     d = n(497321),
@@ -11,8 +11,8 @@ var r = n(255367),
     m = n(142497),
     g = n(706454),
     p = n(650774),
-    f = n(430824),
-    h = n(246946),
+    h = n(430824),
+    f = n(246946),
     x = n(626135),
     b = n(146596),
     j = n(559368),
@@ -50,9 +50,9 @@ let I = function (e, t, n) {
         let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             i = null;
         return (
-            null == t || Number.isNaN(t) ? (null == t || Number.isNaN(t)) && null != e && (i = y.intl.string(y.t.xO2msb)) : (i = y.intl.formatToPlainString(y.t.nskeMz, { percentage: (0, s.o)(Math.abs(t), n) })),
+            null == t || Number.isNaN(t) ? (null == t || Number.isNaN(t)) && null != e && (i = y.intl.string(y.t.xO2msb)) : (i = y.intl.formatToPlainString(y.t.nskeMz, { percentage: (0, a.o)(Math.abs(t), n) })),
             {
-                localizedNumber: null != e ? ''.concat((0, s.o)(e, n)).concat(r ? '%' : '') : y.intl.string(y.t.jHpxws),
+                localizedNumber: null != e ? ''.concat((0, a.o)(e, n)).concat(r ? '%' : '') : y.intl.string(y.t.jHpxws),
                 subtext: i,
                 isTrendingUp: t > 0,
                 isTrendingDown: t < 0
@@ -77,7 +77,7 @@ let I = function (e, t, n) {
     },
     S = () => {
         let [e, t] = i.useState(!1),
-            n = (0, a.e7)([v.Z], () => v.Z.getGuildId());
+            n = (0, s.e7)([v.Z], () => v.Z.getGuildId());
         return (0, r.jsx)('div', {
             'data-button-hoisted-classname-wrapper': !0,
             className: C.developerPortalCta,
@@ -115,15 +115,15 @@ let I = function (e, t, n) {
         });
     },
     T = () => {
-        let e = (0, a.e7)([v.Z], () => v.Z.getGuildId()),
-            t = (0, a.e7)([p.Z], () => p.Z.getMemberCount(e)),
-            n = (0, a.e7)([f.Z], () => f.Z.getGuild(e)),
-            l = (0, a.e7)([g.default], () => g.default.locale),
-            { analytics: s, errorCode: o } = (0, a.cj)([j.Z], () => ({
+        let e = (0, s.e7)([v.Z], () => v.Z.getGuildId()),
+            t = (0, s.e7)([p.Z], () => p.Z.getMemberCount(e)),
+            n = (0, s.e7)([h.Z], () => h.Z.getGuild(e)),
+            l = (0, s.e7)([g.default], () => g.default.locale),
+            { analytics: a, errorCode: o } = (0, s.cj)([j.Z], () => ({
                 analytics: null != e ? j.Z.getOverviewAnalytics(e) : null,
                 errorCode: j.Z.getError()
             })),
-            x = (0, a.e7)([h.Z], () => h.Z.getSettings().enabled),
+            x = (0, s.e7)([f.Z], () => f.Z.getSettings().enabled),
             T = null == t || null == n || (null != t && t < 500 && null != n && !n.features.has(_.oNc.PARTNERED) && !n.features.has(_.oNc.VERIFIED));
         (i.useEffect(() => {
             null == e || T || ((0, b.Vk)(e), (0, b.SR)(e), (0, b.xl)(e));
@@ -132,7 +132,7 @@ let I = function (e, t, n) {
                 (0, m.Kw)(O.v.GUILD_ANALYTICS_GUILD_SETTINGS_MENU);
             }, []));
         let P =
-            null != s
+            null != a
                 ? (0, r.jsx)('div', {
                       className: C.__invalid_guildAnalyticsOverviewWrapper,
                       children: (0, r.jsxs)('div', {
@@ -145,7 +145,7 @@ let I = function (e, t, n) {
                                           title: y.intl.string(y.t.i0Nora),
                                           tooltipText: y.intl.string(y.t.KiRbLC)
                                       },
-                                      I(s.visitors, s.visitorsChange, l)
+                                      I(a.visitors, a.visitorsChange, l)
                                   )
                               ),
                               (0, r.jsx)(
@@ -155,10 +155,10 @@ let I = function (e, t, n) {
                                           title: y.intl.string(y.t.DDAHdX),
                                           tooltipText: y.intl.string(y.t.HxWUkZ)
                                       },
-                                      I(s.communicators, s.communicatorsChange, l)
+                                      I(a.communicators, a.communicatorsChange, l)
                                   )
                               ),
-                              (0, r.jsx)(u.Z, N({ title: y.intl.string(y.t.hYeOqK) }, I(s.newMembers, s.newMembersChange, l))),
+                              (0, r.jsx)(u.Z, N({ title: y.intl.string(y.t.hYeOqK) }, I(a.newMembers, a.newMembersChange, l))),
                               (0, r.jsx)(
                                   u.Z,
                                   N(
@@ -166,7 +166,7 @@ let I = function (e, t, n) {
                                           title: y.intl.string(y.t.jj7OPz),
                                           tooltipText: y.intl.string(y.t.MQCsl5)
                                       },
-                                      I(s.pctRetained, s.pctRetainedChange, l, !0)
+                                      I(a.pctRetained, a.pctRetainedChange, l, !0)
                                   )
                               )
                           ]

@@ -210,7 +210,7 @@ function er(e) {
                                                 }),
                                                 children: (e) =>
                                                     (0, i.jsx)(
-                                                        p.P4T,
+                                                        p.Mgn,
                                                         et(
                                                             en(
                                                                 {

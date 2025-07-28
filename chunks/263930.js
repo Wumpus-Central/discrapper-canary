@@ -20,6 +20,7 @@ e.exports = {
     gameIcon: 'gameIcon__8e830',
     mainContent: 'mainContent__8e830',
     sidebar: 'sidebar__8e830',
+    gameStoreButton: 'gameStoreButton__8e830',
     sections: 'sections__8e830',
     sectionHeader: 'sectionHeader__8e830'
 };

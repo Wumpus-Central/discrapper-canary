@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(580685),
-    s = n(793030),
-    a = n(442837),
+    a = n(793030),
+    s = n(442837),
     o = n(481060),
     c = n(497321),
     d = n(484614),
@@ -11,8 +11,8 @@ var r = n(255367),
     m = n(65361),
     g = n(246946),
     p = n(330010),
-    f = n(999382),
-    h = n(800223),
+    h = n(999382),
+    f = n(800223),
     x = n(24318),
     b = n(822693),
     j = n(388032),
@@ -25,8 +25,8 @@ function _(e) {
             fetchedEmbed: y,
             embedEnabled: C,
             embedChannelId: N
-        } = (0, a.cj)([f.Z], () => {
-            let { fetchedEmbed: e, embedEnabled: t, embedChannelId: n } = f.Z.getProps();
+        } = (0, s.cj)([h.Z], () => {
+            let { fetchedEmbed: e, embedEnabled: t, embedChannelId: n } = h.Z.getProps();
             return {
                 fetchedEmbed: e,
                 embedEnabled: t,
@@ -46,7 +46,7 @@ function _(e) {
         }, [t, g]));
     let R = i.useCallback(
         async (e) => {
-            (T(!0), await (0, h.c)(t, e, N), T(!1));
+            (T(!0), await (0, f.c)(t, e, N), T(!1));
         },
         [N, t]
     );
@@ -61,7 +61,7 @@ function _(e) {
                       children: j.intl.string(j.t.NR6hub)
                   }),
                   w
-                      ? (0, r.jsx)(s.xv, {
+                      ? (0, r.jsx)(a.xv, {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
                             className: v.subtext,
@@ -79,7 +79,7 @@ function _(e) {
                                     widgetChannelId: N,
                                     enableLocalUpdate: !0
                                 }),
-                                (0, r.jsx)(s.xv, {
+                                (0, r.jsx)(a.xv, {
                                     variant: 'text-sm/medium',
                                     color: 'text-secondary',
                                     className: v.subtext,
@@ -107,7 +107,7 @@ function _(e) {
                                             children: [
                                                 (0, r.jsx)(o.vwX, { children: j.intl.string(j.t.XVGbn5) }),
                                                 (0, r.jsx)(d.Z, { value: E }),
-                                                (0, r.jsx)(s.xv, {
+                                                (0, r.jsx)(a.xv, {
                                                     variant: 'text-sm/medium',
                                                     color: 'text-secondary',
                                                     className: v.subtext,
@@ -132,11 +132,11 @@ function _(e) {
 }
 function O(e) {
     let { guildId: t } = e,
-        n = (0, a.e7)([g.Z], () => g.Z.enabled);
+        n = (0, s.e7)([g.Z], () => g.Z.enabled);
     return (0, r.jsxs)(o.hjN, {
         title: j.intl.string(j.t.qlhNb2),
         children: [
-            (0, r.jsx)(s.xv, {
+            (0, r.jsx)(a.xv, {
                 variant: 'text-sm/medium',
                 color: 'text-secondary',
                 className: v.description,

@@ -144,7 +144,7 @@ function x(e) {
               ).values()
           ];
 }
-function M(e) {
+function k(e) {
     let t = b[e];
     if (null == t) return;
     let n = s().maxBy(Object.values(t), (e) => e.processedAtTimestamp);
@@ -153,7 +153,7 @@ function M(e) {
         ((y[e] = n.status), (O[e] = n.activities), (v[e] = null != (r = n.hiddenActivities) ? r : []), null != n.clientStatus && (I[e] = n.clientStatus));
     }
 }
-function k(e) {
+function M(e) {
     let { guildId: t, userId: n, status: r, clientStatus: i, activities: o, hiddenActivities: s, processedAtTimestamp: l } = e;
     if (n === p.default.getId()) return !1;
     let c = r === m.Skl.OFFLINE && (null == s || 0 === s.length),
@@ -261,7 +261,7 @@ function V(e) {
                 i.add(t.id));
         }),
         i.delete(r),
-        i.forEach(M));
+        i.forEach(k));
 }
 function F(e) {
     let { presences: t } = e;
@@ -273,7 +273,7 @@ function Z(e) {
         t.forEach((e) => {
             let { user: t, status: n, clientStatus: r, activities: i, hiddenActivities: a, processedAtTimestamp: o } = e;
             null != t &&
-                k({
+                M({
                     guildId: m.ME,
                     userId: t.id,
                     status: n,
@@ -288,7 +288,7 @@ function H(e) {
     let { guild: t } = e;
     t.presences.forEach((e) => {
         let { user: n, status: r, clientStatus: i, activities: a, hiddenActivities: o, processedAtTimestamp: s } = e;
-        k({
+        M({
             guildId: t.id,
             userId: n.id,
             status: r,
@@ -312,7 +312,7 @@ function K(e) {
     return t
         .map((e) => {
             let { guildId: t, user: n, status: r, clientStatus: i, activities: a, hiddenActivities: o, processedAtTimestamp: s } = e;
-            return k({
+            return M({
                 guildId: null != t ? t : m.ME,
                 userId: n.id,
                 status: r,
@@ -328,7 +328,7 @@ function z(e) {
     let { guildId: t, members: n } = e;
     n.forEach((e) => {
         null != e.presence &&
-            k({
+            M({
                 guildId: t,
                 userId: e.user_id,
                 status: e.presence.status,
@@ -344,7 +344,7 @@ function q(e) {
     null == n ||
         n.forEach((e) => {
             null != e.presence &&
-                k({
+                M({
                     guildId: t,
                     userId: e.userId,
                     status: e.presence.status,

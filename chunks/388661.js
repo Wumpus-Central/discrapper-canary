@@ -2,8 +2,8 @@ n.d(t, { Z: () => b });
 var r = n(255367),
     i = n(120356),
     l = n.n(i),
-    s = n(442837),
-    a = n(755721),
+    a = n(442837),
+    s = n(755721),
     o = n(481060),
     c = n(510918),
     d = n(494620),
@@ -11,26 +11,26 @@ var r = n(255367),
     m = n(434404),
     g = n(999382),
     p = n(981631),
-    f = n(195196),
-    h = n(388032),
+    h = n(195196),
+    f = n(388032),
     x = n(602268);
 let b = function (e) {
     let { className: t, guildId: n, tag: i, badge: b, primaryColor: j, secondaryColor: v, isDisabled: _ = !1 } = e,
-        O = (0, s.e7)([g.Z], () => g.Z.getProps().originalProfile),
+        O = (0, a.e7)([g.Z], () => g.Z.getProps().originalProfile),
         y = null != O && O.tag !== i;
     return (0, r.jsxs)('div', {
         className: t,
         children: [
             (0, r.jsx)(o.vwX, {
                 className: x.sectionTitle,
-                children: h.intl.string(f.default['tN+8pK'])
+                children: f.intl.string(h.default['tN+8pK'])
             }),
             (0, r.jsxs)('div', {
                 className: x.tagContainer,
                 children: [
                     (0, r.jsx)('div', {
                         className: x.tagInputContainer,
-                        children: (0, r.jsx)(a.Is, {
+                        children: (0, r.jsx)(s.Is, {
                             className: x.tagInputWrapper,
                             inputClassName: l()(x.tagInput, 'heading-sm/semibold'),
                             maxLength: 4,
@@ -55,7 +55,7 @@ let b = function (e) {
                         children: (0, r.jsx)(o.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-muted',
-                            children: h.intl.string(f.default.CrHXHh)
+                            children: f.intl.string(h.default.CrHXHh)
                         })
                     })
                 ]
@@ -65,7 +65,7 @@ let b = function (e) {
                     className: x.tagChangeInfoBox,
                     children: (0, r.jsx)(o.Text, {
                         variant: 'text-xs/medium',
-                        children: h.intl.format(f.default['4ZKDXl'], { articleUrl: u.Z.getArticleURL(p.BhN.SERVER_TAGS) })
+                        children: f.intl.format(h.default['4ZKDXl'], { articleUrl: u.Z.getArticleURL(p.BhN.SERVER_TAGS) })
                     })
                 })
         ]

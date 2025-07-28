@@ -12,20 +12,20 @@ var r = t(481060),
 function f(e) {
     let { user: n, onClose: t } = e,
         { trackUserProfileAction: f } = (0, s.KZ)(),
-        { mutualGuilds: p, isFetching: g } = (0, c.Z)(n),
-        j = (e) => {
+        { mutualGuilds: p, isFetching: j } = (0, c.Z)(n),
+        g = (e) => {
             ((0, o.X)(e), t(), (0, i.xf)());
         };
     return (0, l.jsx)(r.zJl, {
         className: d.listScroller,
         fade: !0,
         children:
-            null == p && g
+            null == p && j
                 ? (0, l.jsx)('div', {
                       className: d.empty,
                       children: (0, l.jsx)(r.$jN, {})
                   })
-                : (null != p || g) && (null == p ? void 0 : p.length) !== 0
+                : (null != p || j) && (null == p ? void 0 : p.length) !== 0
                   ? null == p
                       ? void 0
                       : p.map((e) => {
@@ -37,7 +37,7 @@ function f(e) {
                                     guild: t,
                                     nick: r,
                                     onSelect: () => {
-                                        (f({ action: 'PRESS_MUTUAL_GUILD' }), j(t.id));
+                                        (f({ action: 'PRESS_MUTUAL_GUILD' }), g(t.id));
                                     }
                                 },
                                 t.id

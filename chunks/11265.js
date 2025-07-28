@@ -2,15 +2,15 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
-    a = n(652141),
+    a = n.n(l),
+    s = n(652141),
     o = n(481060),
     c = n(393238),
     d = n(388032),
     u = n(212787);
 let m = i.memo(function (e) {
     var t, n;
-    let { renderHeader: l, children: m, isExpanded: g, isStuck: p, onExpand: f, disableAnimation: h, disableBackground: x } = e,
+    let { renderHeader: l, children: m, isExpanded: g, isStuck: p, onExpand: h, disableAnimation: f, disableBackground: x } = e,
         [b, j] = i.useState(!0),
         [v, _] = i.useState(!1),
         { ref: O, height: y = 0 } = (0, c.ZP)(),
@@ -44,7 +44,7 @@ let m = i.memo(function (e) {
                                 }));
                         }
                         return e;
-                    })({}, a.config.stiff)),
+                    })({}, s.config.stiff)),
                     (n = n = { clamp: !0 }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -66,7 +66,7 @@ let m = i.memo(function (e) {
                     _(!0);
                 }
             },
-            b || h ? 'animate-never' : 'respect-motion-settings'
+            b || f ? 'animate-never' : 'respect-motion-settings'
         );
     return (
         i.useLayoutEffect(() => {
@@ -79,18 +79,18 @@ let m = i.memo(function (e) {
             return () => clearTimeout(e);
         }, []),
         (0, r.jsx)(o.P3F, {
-            className: s()(u.editCard, {
+            className: a()(u.editCard, {
                 [u.toggled]: g,
                 [u.noBackground]: x
             }),
-            children: (0, r.jsxs)(a.animated.div, {
-                className: s()(u.contentExpandContainer, { [u.showOverflow]: g && v }),
+            children: (0, r.jsxs)(s.animated.div, {
+                className: a()(u.contentExpandContainer, { [u.showOverflow]: g && v }),
                 style: S,
                 children: [
                     (0, r.jsx)(o.P3F, {
                         innerRef: O,
-                        onClick: p ? void 0 : f,
-                        className: s()(u.innerHeader, { [u.toggled]: g && p }),
+                        onClick: p ? void 0 : h,
+                        className: a()(u.innerHeader, { [u.toggled]: g && p }),
                         'aria-label': d.intl.string(d.t.dcl9MT),
                         children: l
                     }),

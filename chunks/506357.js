@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => S });
 var i = n(255367),
     r = n(73800),
     l = n(442837),
@@ -15,10 +15,10 @@ var i = n(255367),
     p = n(533244),
     C = n(981631),
     g = n(176505),
-    S = n(388032),
-    O = n(302654);
-function T(e) {
-    var t, T;
+    O = n(388032),
+    T = n(302654);
+function S(e) {
+    var t, S;
     let { onDismiss: f } = e,
         N = (0, l.e7)([_.Z], () => _.Z.getGuildId()),
         m = (0, l.e7)([u.Z], () => (null != N ? u.Z.getChannelId(N) : null), [N]),
@@ -92,14 +92,14 @@ function T(e) {
             });
         },
         M = (0, i.jsx)(s.Z, {
-            className: O.guildIcon,
+            className: T.guildIcon,
             guild: A,
             size: s.Z.Sizes.MINI
         }),
         L = (0, p.OY)(b, A.name);
-    if (null != (null != (T = b.dmsDisabledUntil) ? T : b.invitesDisabledUntil) && P)
+    if (null != (null != (S = b.dmsDisabledUntil) ? S : b.invitesDisabledUntil) && P)
         return (0, i.jsxs)(o.qXd, {
-            className: O.notice,
+            className: T.notice,
             color: o.DM8.NEUTRAL,
             children: [
                 (0, i.jsx)(o.RyX, {
@@ -109,25 +109,25 @@ function T(e) {
                 M,
                 L,
                 (0, i.jsx)(o.EyT, {
-                    className: O.actionButton,
+                    className: T.actionButton,
                     onClick: () => U(!1),
                     children: (0, i.jsxs)('div', {
-                        className: O.actionButtonInner,
+                        className: T.actionButtonInner,
                         children: [
                             (0, i.jsx)(o.mBM, {
                                 size: 'xs',
                                 color: 'currentColor'
                             }),
-                            (0, i.jsx)('span', { children: S.intl.string(S.t['c+7oa2']) })
+                            (0, i.jsx)('span', { children: O.intl.string(O.t['c+7oa2']) })
                         ]
                     })
                 })
             ]
         });
-    let Z = (0, p.CG)(b) ? S.intl.formatToPlainString(S.t.tZTx2N, { guildName: A.name }) : (0, p.kk)(b) ? S.intl.formatToPlainString(S.t['1bSmxs'], { guildName: A.name }) : S.intl.formatToPlainString(S.t.W87xDA, { guildName: A.name }),
-        k = D && m === g.oC.MEMBER_SAFETY;
+    let k = (0, p.CG)(b) ? O.intl.formatToPlainString(O.t.tZTx2N, { guildName: A.name }) : (0, p.kk)(b) ? O.intl.formatToPlainString(O.t['1bSmxs'], { guildName: A.name }) : O.intl.formatToPlainString(O.t.W87xDA, { guildName: A.name }),
+        Z = D && m === g.oC.MEMBER_SAFETY;
     return (0, i.jsxs)(o.qXd, {
-        className: O.notice,
+        className: T.notice,
         color: o.DM8.WARNING,
         children: [
             (0, i.jsx)(o.RyX, {
@@ -135,14 +135,14 @@ function T(e) {
                 noticeType: C.kVF.GUILD_RAID_NOTIFICATION
             }),
             M,
-            Z,
-            !k &&
+            k,
+            !Z &&
                 (0, i.jsx)(o.EyT, {
-                    className: O.actionButton,
+                    className: T.actionButton,
                     onClick: () => U(!0),
                     children: (0, i.jsx)('div', {
-                        className: O.actionButtonInner,
-                        children: (0, i.jsx)('span', { children: S.intl.string(S.t.zDJDho) })
+                        className: T.actionButtonInner,
+                        children: (0, i.jsx)('span', { children: O.intl.string(O.t.zDJDho) })
                     })
                 })
         ]

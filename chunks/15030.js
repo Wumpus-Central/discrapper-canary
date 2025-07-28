@@ -2,8 +2,8 @@ n.d(t, { Z: () => j });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    s = n(704215),
-    a = n(481060),
+    a = n(704215),
+    s = n(481060),
     o = n(725803),
     c = n(266454),
     d = n(999382),
@@ -11,8 +11,8 @@ var r = n(255367),
     m = n(303737),
     g = n(618748),
     p = n(500395),
-    f = n(975464),
-    h = n(981631),
+    h = n(975464),
+    f = n(981631),
     x = n(674563),
     b = n(94072);
 function j() {
@@ -22,20 +22,20 @@ function j() {
         v = i.useRef(null),
         _ = (0, u.Z)(null != t ? t : void 0);
     i.useEffect(() => {
-        null != t && (0, m.sO)(t) && (0, c.Q3)(s.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
+        null != t && (0, m.sO)(t) && (0, c.Q3)(a.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
     }, [t]);
-    let O = (null == t ? void 0 : t.features.has(h.oNc.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.features.has(h.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
+    let O = (null == t ? void 0 : t.features.has(f.oNc.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.features.has(f.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
     return (
         (e =
             null == t || j
-                ? (0, r.jsx)(a.$jN, {})
+                ? (0, r.jsx)(s.$jN, {})
                 : null != _
                   ? (0, r.jsx)(p.Z, {
                         guild: t,
                         config: _
                     })
                   : O
-                    ? (0, r.jsx)(f.Z, { guild: t })
+                    ? (0, r.jsx)(h.Z, { guild: t })
                     : (0, r.jsx)(g.Z, {
                           guild: t,
                           application: n
@@ -44,12 +44,12 @@ function j() {
             className: b.settingsColumn,
             children: (0, r.jsx)('div', {
                 className: b.settingsContainer,
-                children: (0, r.jsx)(a.w0Z, {
+                children: (0, r.jsx)(s.w0Z, {
                     className: b.settingsScroller,
                     children: (0, r.jsx)('main', {
                         ref: v,
                         className: b.settingsContent,
-                        children: (0, r.jsx)(a.JcV, {
+                        children: (0, r.jsx)(s.JcV, {
                             containerRef: v,
                             children: e
                         })

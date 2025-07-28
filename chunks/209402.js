@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    s = n(852860),
-    a = n(699553),
+    a = n(852860),
+    s = n(699553),
     o = n(314852),
     c = n(434404),
     d = n(999382),
@@ -15,8 +15,8 @@ function g() {
         n = (0, l.e7)([d.Z], () => d.Z.getProfileError()),
         g = (0, l.e7)([d.Z], () => d.Z.getGuildProfile()),
         p = (0, l.e7)([o.Z], () => o.Z.getIsUpdating(t)),
-        f = i.useMemo(() => ((null == n ? void 0 : n.status) === 429 ? m.intl.string(u.default['bFRS/v']) : null == n ? void 0 : n.getAnyErrorMessage()), [n]),
-        h = i.useCallback(() => {
+        h = i.useMemo(() => ((null == n ? void 0 : n.status) === 429 ? m.intl.string(u.default['bFRS/v']) : null == n ? void 0 : n.getAnyErrorMessage()), [n]),
+        f = i.useCallback(() => {
             if (null == e || null == g) return;
             let t = {
                 tag: g.tag,
@@ -24,15 +24,15 @@ function g() {
                 badgeColorPrimary: g.badgeColorPrimary,
                 badgeColorSecondary: g.badgeColorSecondary
             };
-            (0, a.pV)(e.id, t);
+            (0, s.pV)(e.id, t);
         }, [e, g]),
         x = i.useCallback(() => {
             null != t && c.Z.init(t);
         }, [t]);
-    return (0, r.jsx)(s.Z, {
+    return (0, r.jsx)(a.Z, {
         submitting: p,
-        errorMessage: f,
-        onSave: h,
+        errorMessage: h,
+        onSave: f,
         onReset: x
     });
 }

@@ -1,39 +1,37 @@
 (n.d(t, {
-    Ng: () => v,
-    OC: () => N,
-    dg: () => I,
-    dp: () => E,
-    f3: () => y,
-    iL: () => C,
-    nA: () => T,
-    qF: () => g,
-    uV: () => O,
-    vY: () => A
+    Ng: () => O,
+    OC: () => A,
+    dg: () => v,
+    dp: () => g,
+    f3: () => b,
+    iL: () => N,
+    nA: () => I,
+    qF: () => m,
+    uV: () => y,
+    vY: () => S
 }),
     n(35282),
-    n(388685),
-    n(704826));
-var r = n(255367),
-    i = n(112456),
-    a = n.n(i),
-    o = n(392711),
-    s = n.n(o),
-    l = n(430824),
-    c = n(594174),
-    u = n(424218),
-    d = n(74538),
-    f = n(981631),
-    _ = n(474936),
-    p = n(388032);
-let h = 524288000,
-    m = 524288000;
-function g(e, t) {
-    return e instanceof File ? e : E(e.data.buffer, e.filename, null != t ? t : 'text/plain');
+    n(388685));
+var r = n(112456),
+    i = n.n(r),
+    a = n(392711),
+    o = n.n(a),
+    s = n(430824),
+    l = n(594174),
+    c = n(424218),
+    u = n(74538),
+    d = n(981631),
+    f = n(474936),
+    _ = n(388032);
+let p = 524288000,
+    h = 524288000;
+function m(e, t) {
+    return e instanceof File ? e : g(e.data.buffer, e.filename, null != t ? t : 'text/plain');
 }
-function E(e, t, n) {
+function g(e, t, n) {
     return new File([e], t, { type: n });
 }
-let b = [
+let E = [
     {
         reType: /^image\/vnd.adobe.photoshop/,
         klass: 'photoshop'
@@ -91,49 +89,48 @@ let b = [
         klass: 'audio'
     }
 ];
-function y(e) {
-    return O(e.name, e.type);
+function b(e) {
+    return y(e.name, e.type);
 }
-function O(e, t) {
+function y(e, t) {
     var n;
     e = null != (n = null == e ? void 0 : e.toLowerCase()) ? n : '';
-    let r = s().find(b, (n) => (null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e)));
+    let r = o().find(E, (n) => (null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e)));
     return null != r ? r.klass : 'unknown';
 }
+function O(e) {
+    return i().filesize(e);
+}
 function v(e) {
-    return a().filesize(e);
-}
-function I(e) {
-    let t = c.default.getCurrentUser(),
-        n = d.ZP.getUserMaxFileSize(t);
+    let t = l.default.getCurrentUser(),
+        n = u.ZP.getUserMaxFileSize(t);
     if (null == e) return n;
-    let r = l.Z.getGuild(e);
-    return Math.max(null != r ? _.HO[r.premiumTier].limits.fileSize : f.mBz, n);
+    let r = s.Z.getGuild(e);
+    return Math.max(null != r ? f.HO[r.premiumTier].limits.fileSize : d.mBz, n);
 }
-function T(e, t) {
-    let n = I(t);
+function I(e, t) {
+    let n = v(t);
     return Array.from(e).some((e) => e.size > n);
 }
-function S(e) {
+function T(e) {
     let t = 0;
     for (let n of e) t += n.size;
     return t;
 }
-function A(e) {
-    return S(e) > N();
+function S(e) {
+    return T(e) > A();
 }
-function N() {
-    let e = c.default.getCurrentUser();
-    return null != e && e.isStaff() ? m : h;
+function A() {
+    let e = l.default.getCurrentUser();
+    return null != e && e.isStaff() ? h : p;
 }
-function C(e) {
+function N(e) {
     let { guildId: t, onClick: n } = e,
-        i = (0, u.BU)(I(t) / 1024, { useKibibytes: !0 }),
-        a = (0, u.BU)(_.Uq / 1024, { useKibibytes: !0 }),
-        o = p.intl.formatToPlainString(p.t.q5fTZm, { maxSize: i }),
-        s = p.intl.formatToPlainString(p.t.htbuIS, { premiumMaxSize: a }),
-        l = p.intl.format(p.t.fjSvsL, { onClick: n });
-    return (0, r.jsxs)(r.Fragment, {
-        children: [o, ' ', s.replace('\n', ' '), '. ', l]
+        r = (0, c.BU)(v(t) / 1024, { useKibibytes: !0 }),
+        i = (0, c.BU)(f.Uq / 1024, { useKibibytes: !0 });
+    return _.intl.format(_.t.tRuxk5, {
+        maxSize: r,
+        premiumMaxSize: i,
+        onClick: n
     });
 }

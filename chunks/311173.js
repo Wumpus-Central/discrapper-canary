@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    s = n(481060),
     o = n(63063),
     c = n(256569),
     d = n(858457),
@@ -11,20 +11,20 @@ var r = n(255367),
     m = n(981631),
     g = n(388032),
     p = n(409866);
-let f = o.Z.getArticleURL(m.BhN.GUILD_AUTOMOD_REGEX);
-function h(e) {
+let h = o.Z.getArticleURL(m.BhN.GUILD_AUTOMOD_REGEX);
+function f(e) {
     let { hasErrors: t, text: n, errorText: i } = e;
     return t
         ? (0, r.jsx)('div', {
               className: p.subtext,
-              children: (0, r.jsx)(a.Text, {
+              children: (0, r.jsx)(s.Text, {
                   className: p.errorSpan,
                   variant: 'text-xs/medium',
                   color: 'text-danger',
-                  children: null != i ? i : g.intl.format(g.t.jKYAPj, { helpArticle: f })
+                  children: null != i ? i : g.intl.format(g.t.jKYAPj, { helpArticle: h })
               })
           })
-        : (0, r.jsx)(a.Text, {
+        : (0, r.jsx)(s.Text, {
               className: p.subtext,
               variant: 'text-xs/medium',
               color: 'text-muted',
@@ -33,8 +33,8 @@ function h(e) {
 }
 function x(e) {
     var t, n;
-    let { rule: l, onChangeText: a, className: o } = e,
-        { patterns: m, valueError: x, errors: b, validatePatternsChanged: j, validateEditingValueChanged: v } = (0, d.Z)(l, a),
+    let { rule: l, onChangeText: s, className: o } = e,
+        { patterns: m, valueError: x, errors: b, validatePatternsChanged: j, validateEditingValueChanged: v } = (0, d.Z)(l, s),
         [_] = i.useState(() => ({
             tags: m,
             value: '',
@@ -44,14 +44,14 @@ function x(e) {
         O = i.useMemo(
             () =>
                 b.reduce((e, t) => {
-                    let { pattern: n, message: r, description: i, erroringCharacterLength: l = n.length, erroringCharacterOffset: s = 0 } = t;
+                    let { pattern: n, message: r, description: i, erroringCharacterLength: l = n.length, erroringCharacterOffset: a = 0 } = t;
                     return (
                         null == m.find((e) => e === n) ||
                             (e[n] = {
                                 value: n,
                                 message: null != i ? i : r,
                                 erroringCharacterLength: l,
-                                erroringCharacterOffset: s
+                                erroringCharacterOffset: a
                             }),
                         e
                     );
@@ -71,7 +71,7 @@ function x(e) {
             [v]
         );
     return (0, r.jsxs)('div', {
-        className: s()(p.keywordsContainer, o),
+        className: a()(p.keywordsContainer, o),
         children: [
             (0, r.jsx)(c.Z, {
                 placeholder: '^b(a|@)d$\nw(o|0)rd(s|$)',
@@ -81,8 +81,8 @@ function x(e) {
                 tagErrors: O,
                 maxTags: u.VW
             }),
-            (0, r.jsx)(h, {
-                text: g.intl.format(g.t['PGC/AA'], { helpArticle: f }),
+            (0, r.jsx)(f, {
+                text: g.intl.format(g.t['PGC/AA'], { helpArticle: h }),
                 hasErrors: b.length > 0 || null != x,
                 errorText:
                     null !=

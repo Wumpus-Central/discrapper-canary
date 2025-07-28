@@ -2,8 +2,8 @@ n.d(t, { Z: () => R });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
-    a = n(91192),
+    a = n.n(l),
+    s = n(91192),
     o = n(442837),
     c = n(780384),
     d = n(481060),
@@ -11,8 +11,8 @@ var r = n(255367),
     m = n(100527),
     g = n(933557),
     p = n(670188),
-    f = n(210887),
-    h = n(598077),
+    h = n(210887),
+    f = n(598077),
     x = n(699516),
     b = n(594174),
     j = n(259580),
@@ -90,14 +90,14 @@ class P extends i.PureComponent {
 }
 let w = i.forwardRef((e, t) => {
     let n,
-        { log: l, className: o, expanded: f, guildId: _, guild: w, onChannelContextMenu: R, onContentClick: Z, onHeaderClick: D, onTargetContextMenu: A, onUserContextMenu: k, theme: L } = e,
+        { log: l, className: o, expanded: h, guildId: _, guild: w, onChannelContextMenu: R, onContentClick: Z, onHeaderClick: D, onTargetContextMenu: A, onUserContextMenu: k, theme: L } = e,
         M = i.useRef(null),
         G = (function () {
             let { changes: e } = l;
             return (l.actionType !== N.vB8.DELETE || l.action === N.rsA.MEMBER_BAN_ADD || l.action === N.rsA.MEMBER_KICK || l.action === N.rsA.MEMBER_PRUNE) && null != e && e.some((e) => !(0, C.xO)(l, e));
         })(),
         U = E.headerDefault;
-    f ? (U = E.headerExpanded) : G && (U = E.headerClickable);
+    h ? (U = E.headerExpanded) : G && (U = E.headerClickable);
     let B = l.timestampStart.calendar(),
         F = l.timestampEnd.calendar();
     n =
@@ -113,12 +113,12 @@ let w = i.forwardRef((e, t) => {
                   children: [B, '\u2014', F]
               });
     let H = G ? D : N.dG4;
-    return (0, r.jsx)(a.mh, {
+    return (0, r.jsx)(s.mh, {
         id: l.id,
         children: (e) =>
             (0, r.jsxs)('div', {
                 ref: t,
-                className: s()(E.auditLog, o),
+                className: a()(E.auditLog, o),
                 children: [
                     (0, r.jsxs)(
                         d.P3F,
@@ -126,7 +126,7 @@ let w = i.forwardRef((e, t) => {
                             S(
                                 {
                                     className: U,
-                                    'aria-expanded': f,
+                                    'aria-expanded': h,
                                     onClick: H
                                 },
                                 e
@@ -190,11 +190,11 @@ let w = i.forwardRef((e, t) => {
                                                     let e,
                                                         { user: t, target: n, options: i } = l;
                                                     e = (0, v.lM)(n) ? n.name : n.toString();
-                                                    let s = y.N5(l);
-                                                    return null != s
+                                                    let a = y.N5(l);
+                                                    return null != a
                                                         ? (0, r.jsx)('div', {
                                                               className: E.overflowEllipsis,
-                                                              children: I.intl.format(s, {
+                                                              children: I.intl.format(a, {
                                                                   user: t,
                                                                   target: e,
                                                                   userHook: (e, t) => {
@@ -215,7 +215,7 @@ let w = i.forwardRef((e, t) => {
                                                                       return I.intl.string(I.t['30mdIy']);
                                                                   },
                                                                   targetHook: (e, t) =>
-                                                                      l.targetType === N.KFR.USER && l.target instanceof h.Z
+                                                                      l.targetType === N.KFR.USER && l.target instanceof f.Z
                                                                           ? (0, r.jsx)(
                                                                                 P,
                                                                                 {
@@ -256,7 +256,7 @@ let w = i.forwardRef((e, t) => {
                                         ? (0, r.jsx)(j.Z, {
                                               className: E.expand,
                                               foreground: E.expandForeground,
-                                              expanded: f,
+                                              expanded: h,
                                               'aria-hidden': !0
                                           })
                                         : null
@@ -264,8 +264,8 @@ let w = i.forwardRef((e, t) => {
                             }
                         )
                     ),
-                    f ? (0, r.jsx)('div', { className: E.divider }) : null,
-                    f && null != w
+                    h ? (0, r.jsx)('div', { className: E.divider }) : null,
+                    h && null != w
                         ? (0, r.jsx)(C.tP, {
                               log: l,
                               guild: w,
@@ -277,4 +277,4 @@ let w = i.forwardRef((e, t) => {
     });
 });
 w.displayName = 'GuildSettingsAuditLogEntry';
-let R = o.ZP.connectStores([f.Z], () => ({ theme: f.Z.theme }), { forwardRef: !0 })(w);
+let R = o.ZP.connectStores([h.Z], () => ({ theme: h.Z.theme }), { forwardRef: !0 })(w);

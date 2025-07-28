@@ -31,7 +31,7 @@ let A = function (e) {
         D = i.useRef(null),
         L = i.useRef(null),
         x = i.useRef(null),
-        M = i.useCallback(() => {
+        k = i.useCallback(() => {
             null != x.current &&
                 null != L.current &&
                 L.current.scrollTo({
@@ -39,7 +39,7 @@ let A = function (e) {
                     animate: !0
                 });
         }, []),
-        k = i.useCallback(() => {
+        M = i.useCallback(() => {
             (null == A || A(),
                 _.default.track(I.rMx.MODAL_DISMISSED, {
                     type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
@@ -76,7 +76,7 @@ let A = function (e) {
     }, [n.id, t, w]),
         i.useEffect(() => {
             function e(e) {
-                'Escape' === e.key && k();
+                'Escape' === e.key && M();
             }
             return (
                 window.addEventListener('keydown', e),
@@ -84,7 +84,7 @@ let A = function (e) {
                     window.removeEventListener('keydown', e);
                 }
             );
-        }, [k]));
+        }, [M]));
     let U = (0, u.U)('GuildBoostingMarketing');
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -93,7 +93,7 @@ let A = function (e) {
                     className: S.closeIconWrapper,
                     children: (0, r.jsx)(s.Z, {
                         className: S.closeIcon,
-                        closeAction: k,
+                        closeAction: M,
                         keybind: 'ESC',
                         variant: s.Z.Variants.BOLD
                     })
@@ -111,7 +111,7 @@ let A = function (e) {
                                     (0, r.jsx)(d.Z, {
                                         guild: e.guild,
                                         themeResponsive: !1,
-                                        onButtonClick: M
+                                        onButtonClick: k
                                     }),
                                     (0, r.jsx)(o.X6q, {
                                         className: S.heading,
@@ -121,7 +121,7 @@ let A = function (e) {
                                     }),
                                     (0, r.jsx)(h.Z, {
                                         guild: n,
-                                        closeLayer: k,
+                                        closeLayer: M,
                                         onCtaVisibilityChange: C
                                     }),
                                     (0, r.jsx)(E.Z, { guild: n }),
@@ -138,7 +138,7 @@ let A = function (e) {
                             (0, r.jsx)(f.Z, {
                                 ref: x,
                                 guild: e.guild,
-                                onClose: k
+                                onClose: M
                             })
                         ]
                     }),
@@ -173,7 +173,7 @@ let A = function (e) {
             (0, r.jsx)(g.Z, {
                 guild: n,
                 isVisible: !N,
-                closeLayer: k
+                closeLayer: M
             })
         ]
     });

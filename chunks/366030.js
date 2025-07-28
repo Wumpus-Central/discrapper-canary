@@ -25,9 +25,9 @@ var r = n(255367),
     S = n(107484),
     E = n(977392),
     N = n(134433),
-    Z = n(753194),
-    R = n(458034),
-    T = n(856651),
+    T = n(753194),
+    Z = n(458034),
+    R = n(856651),
     I = n(981631),
     _ = n(228168),
     k = n(388032),
@@ -62,13 +62,13 @@ function A(e) {
         { connectionType: n, connectionMetadataField: l, operator: o, value: i, description: a } = e;
     if (null != a)
         switch (o) {
-            case T.iO.LESS_THAN:
+            case R.iO.LESS_THAN:
                 t = k.intl.format(k.t['2p7dAw'], {
                     description: a,
                     count: Math.max(0, Number(i) - 1)
                 });
                 break;
-            case T.iO.GREATER_THAN:
+            case R.iO.GREATER_THAN:
                 t = k.intl.format(k.t['2p7dAw'], {
                     description: a,
                     count: Math.max(0, Number(i) + 1)
@@ -119,7 +119,7 @@ function L(e) {
                 O = (null == b ? void 0 : b.bot) != null ? new P.Z(b.bot) : null;
             return (
                 C.SJ.includes(null != (t = null == b ? void 0 : b.id) ? t : '')
-                    ? (s = (0, r.jsx)(Z.Z, {
+                    ? (s = (0, r.jsx)(T.Z, {
                           className: M.botTag,
                           color: l,
                           size: 16
@@ -277,7 +277,7 @@ function U(e) {
                           channelId: a.id,
                           guildId: o.id,
                           onGetRolesClicked: () => {
-                              (0, R.Am)(o.id);
+                              (0, Z.Am)(o.id);
                           },
                           onOpenProfile: () => {
                               ((0, j.openUserProfileModal)({

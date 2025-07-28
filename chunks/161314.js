@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(76535),
     x = n(866104),
     v = n(886176),
-    O = n(981631),
-    y = n(388032),
+    y = n(981631),
+    O = n(388032),
     j = n(24665);
 function I(e) {
     var t;
@@ -31,7 +31,7 @@ function I(e) {
         N = (0, g.ue)(n, { publishedOnly: !0 }),
         P = i.useCallback(async () => {
             (E.default.track(
-                O.rMx.GUILD_SHOP_EMBED_CLICKED,
+                y.rMx.GUILD_SHOP_EMBED_CLICKED,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,7 +58,7 @@ function I(e) {
                     return e;
                 })({}, (0, p.hH)(n))
             ),
-                await (0, _.Z)(O.Z5c.SERVER_SHOP(n)));
+                await (0, _.Z)(y.Z5c.SERVER_SHOP(n)));
         }, [n]);
     (0, m.Z)(
         {
@@ -92,7 +92,7 @@ function I(e) {
                                 variant: 'heading-sm/semibold',
                                 color: 'interactive-normal',
                                 className: j.serverShopLabelText,
-                                children: y.intl.string(y.t.al5EXF)
+                                children: O.intl.string(O.t.al5EXF)
                             })
                         ]
                     }),
@@ -100,7 +100,7 @@ function I(e) {
                     (0, r.jsx)(d.X6q, {
                         variant: 'heading-md/semibold',
                         color: 'text-default',
-                        children: y.intl.format(y.t.NZeik5, { guildName: l.name })
+                        children: O.intl.format(O.t.NZeik5, { guildName: l.name })
                     }),
                     (0, r.jsx)(d.LZC, { size: 4 }),
                     (0, r.jsx)(d.Text, {
@@ -123,7 +123,7 @@ function I(e) {
                                         children: (0, r.jsx)(d.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-muted',
-                                            children: y.intl.format(y.t.tKZNlZ, { listingCount: N.length })
+                                            children: O.intl.format(O.t.tKZNlZ, { listingCount: N.length })
                                         })
                                     }),
                                     null != A &&
@@ -131,7 +131,7 @@ function I(e) {
                                             children: (0, r.jsx)(d.Text, {
                                                 variant: 'text-sm/normal',
                                                 color: 'text-muted',
-                                                children: y.intl.format(y.t['kXr8+f'], { createdYear: A.getFullYear() })
+                                                children: O.intl.format(O.t['kXr8+f'], { createdYear: A.getFullYear() })
                                             })
                                         })
                                 ]
@@ -149,7 +149,7 @@ function I(e) {
                                         (0, r.jsx)(d.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
-                                            children: y.intl.string(y.t.jXx1CA)
+                                            children: O.intl.string(O.t.jXx1CA)
                                         })
                                     ]
                                 })

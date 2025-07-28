@@ -26,7 +26,7 @@ function f() {
 function _() {
     if (!o.w8.getCurrentConfig({ location: 'b9eb97_1' }, { autoTrackExposure: !1 }).enabled) return !1;
     let e = a.default.getCurrentUser();
-    if (null == e || e.isPomelo() || !e.hasVerifiedEmailOrPhone()) return !1;
+    if (null == e || e.hasUniqueUsername() || !e.hasVerifiedEmailOrPhone()) return !1;
     let t = d,
         n = r.K.get(t);
     return !(null != n && Date.now() - n < u);

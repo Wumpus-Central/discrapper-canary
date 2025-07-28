@@ -18,10 +18,9 @@ function c(e) {
     return null != e.tags && void 0 !== e.tags.premium_subscriber;
 }
 function u(e, t) {
-    if (null == e || null == t) return null;
+    if (null == e || null == t) return;
     let n = i.ZP.getMember(e, t);
-    if (null == n) return null;
-    let r = a.Z.getRoles(e),
-        o = n.colorRoleId;
-    return null == o ? null : r[o];
+    if (null == n) return;
+    let r = n.colorRoleId;
+    if (null != r) return a.Z.getRole(e, r);
 }

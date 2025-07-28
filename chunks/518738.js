@@ -10,6 +10,7 @@ var r = n(73800),
     s = n(829883);
 function l(e, t) {
     var n;
+    if (null == e) return;
     let { customIconSrc: r, unicodeEmoji: i } = null != (n = (0, s.zy)(e, t)) ? n : {};
     if (null != r || null != i)
         return {
@@ -22,18 +23,16 @@ function l(e, t) {
 }
 function c(e) {
     let { guildId: t, roleId: n, size: c = 20 } = e,
-        { guild: u, roles: d } = (0, i.cj)(
+        { guild: u, role: d } = (0, i.cj)(
             [o.Z, a.Z],
             () => ({
                 guild: o.Z.getGuild(t),
-                roles: a.Z.getRoles(t)
+                role: null != n ? a.Z.getRole(t, n) : void 0
             }),
-            [t]
+            [t, n]
         );
     return r.useMemo(() => {
-        if (null == u || null == n) return;
-        let e = d[n];
-        if ((0, s._b)(u, e)) return l(e, c);
+        if (null != u && null != n && (0, s._b)(u, d)) return l(d, c);
     }, [u, d, n, c]);
 }
 function u(e, t) {

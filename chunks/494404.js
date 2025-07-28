@@ -22,15 +22,15 @@ var n = r(255367),
     S = r(294218),
     _ = r(703656),
     y = r(592125),
-    b = r(375954),
-    x = r(496675),
+    x = r(375954),
+    b = r(496675),
     E = r(933429),
-    O = r(451478),
+    C = r(451478),
     v = r(626135),
-    C = r(585483),
-    j = r(981631),
-    R = r(388032),
-    I = r(555565);
+    O = r(585483),
+    R = r(981631),
+    I = r(388032),
+    j = r(555565);
 function T(e, t, r) {
     return (
         t in e
@@ -50,10 +50,10 @@ function P(e) {
 let N = (e) => {
         let { title: t, icon: r, children: s, className: l } = e;
         return (0, n.jsxs)('div', {
-            className: a()(l, I.header),
+            className: a()(l, j.header),
             children: [
                 (0, n.jsxs)('div', {
-                    className: I.titleContainer,
+                    className: j.titleContainer,
                     children: [
                         null != r ? (0, n.jsx)(r, { color: d.TVs.colors.INTERACTIVE_NORMAL }) : null,
                         null == t
@@ -72,33 +72,33 @@ let N = (e) => {
     A = (e) => {
         let { msg: t, image: r } = e;
         return (0, n.jsxs)('div', {
-            className: I.emptyPlaceholder,
+            className: j.emptyPlaceholder,
             children: [
                 (0, n.jsx)('div', {
-                    className: I.image,
+                    className: j.image,
                     style: { backgroundImage: 'url('.concat(r, ')') }
                 }),
                 (0, n.jsx)('div', {
-                    className: I.body,
+                    className: j.body,
                     children: t
                 })
             ]
         });
     };
-class M extends s.PureComponent {
+class Z extends s.PureComponent {
     renderJumpButton() {
         let { jumping: e } = this.props;
         return (0, n.jsxs)(d.P3F, {
-            className: I.jumpButton,
+            className: j.jumpButton,
             onClick: this.handleClickJump,
             children: [
                 (0, n.jsx)('div', {
-                    className: a()(I.__invalid_text, { hidden: e }),
-                    children: R.intl.string(R.t.k5WiPT)
+                    className: a()(j.__invalid_text, { hidden: e }),
+                    children: I.intl.string(I.t.k5WiPT)
                 }),
                 (0, n.jsx)(d.$jN, {
                     type: d.$jN.Type.PULSING_ELLIPSIS,
-                    className: a()(I.loading, { [I.visible]: e })
+                    className: a()(j.loading, { [j.visible]: e })
                 })
             ]
         });
@@ -113,14 +113,14 @@ class M extends s.PureComponent {
                   children: (0, n.jsx)(d.Dio, {
                       size: 'md',
                       color: 'currentColor',
-                      className: I.closeIcon
+                      className: j.closeIcon
                   })
               })
             : null;
     }
     render() {
         return (0, n.jsxs)('div', {
-            className: I.actionButtons,
+            className: j.actionButtons,
             children: [this.renderJumpButton(), this.renderCloseButton()]
         });
     }
@@ -136,18 +136,18 @@ class M extends s.PureComponent {
             }));
     }
 }
-let k = u.ZP.connectStores([x.Z], (e) => {
+let M = u.ZP.connectStores([b.Z], (e) => {
     let { channel: t } = e;
-    return { canManageMessages: null != t && x.Z.can(j.Plq.MANAGE_MESSAGES, t) };
-})(M);
-function Z(e) {
-    let { analyticsName: t, items: r, hasMore: l, loading: i, loadMore: p, renderHeader: m, renderEmptyState: S, renderItem: _, getProTip: y, scrollerClassName: b, className: x, listName: N } = e,
+    return { canManageMessages: null != t && b.Z.can(R.Plq.MANAGE_MESSAGES, t) };
+})(Z);
+function k(e) {
+    let { analyticsName: t, items: r, hasMore: l, loading: i, loadMore: p, renderHeader: m, renderEmptyState: S, renderItem: _, getProTip: y, scrollerClassName: x, className: b, listName: N } = e,
         A = s.useRef(null),
-        M = (0, f.Z)(N, A),
-        k = (0, u.e7)([E.ZP], () => E.ZP.hasNotice()),
-        Z = (0, u.e7)([O.Z], () => O.Z.windowSize());
+        Z = (0, f.Z)(N, A),
+        M = (0, u.e7)([E.ZP], () => E.ZP.hasNotice()),
+        k = (0, u.e7)([C.Z], () => C.Z.windowSize());
     (s.useEffect(() => {
-        v.default.track(j.rMx.OPEN_POPOUT, { type: t });
+        v.default.track(R.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
         s.useEffect(() => {
             function e() {
@@ -159,10 +159,10 @@ function Z(e) {
                 null == (e = A.current) || e.scrollPageDown({ animate: !0 });
             }
             return (
-                C.S.subscribe(j.CkL.SCROLL_PAGE_DOWN, t),
-                C.S.subscribe(j.CkL.SCROLL_PAGE_UP, e),
+                O.S.subscribe(R.CkL.SCROLL_PAGE_DOWN, t),
+                O.S.subscribe(R.CkL.SCROLL_PAGE_UP, e),
                 () => {
-                    (C.S.unsubscribe(j.CkL.SCROLL_PAGE_DOWN, t), C.S.unsubscribe(j.CkL.SCROLL_PAGE_UP, e));
+                    (O.S.unsubscribe(R.CkL.SCROLL_PAGE_DOWN, t), O.S.unsubscribe(R.CkL.SCROLL_PAGE_UP, e));
                 }
             );
         }, []));
@@ -172,13 +172,13 @@ function Z(e) {
             null != t && t.scrollHeight - t.scrollTop - t.offsetHeight < 250 && l && !i && (null == p || p());
         }, [l, p, i]),
         L = [],
-        D = !0;
+        F = !0;
     null == r || (i && 0 === r.length)
         ? (L = [
               (0, n.jsx)(
                   'div',
                   {
-                      className: a()(I.emptyPlaceholder, I.loadingPlaceholder),
+                      className: a()(j.emptyPlaceholder, j.loadingPlaceholder),
                       children: (0, n.jsx)(d.$jN, {})
                   },
                   'spinner'
@@ -186,44 +186,44 @@ function Z(e) {
           ])
         : 0 === r.length
           ? L.push((0, n.jsx)(s.Fragment, { children: S() }, 'empty-state'))
-          : ((D = !1),
+          : ((F = !1),
             (L = []),
             o().each(r, (e) => {
                 L.push(..._(e));
             }));
-    let F = null;
+    let D = null;
     null != r &&
         r.length > 0 &&
         null != p &&
-        (F = i
+        (D = i
             ? (0, n.jsx)(
                   'div',
                   {
-                      className: I.loadingMore,
+                      className: j.loadingMore,
                       children: (0, n.jsx)(d.$jN, {})
                   },
                   'loading-more-after'
               )
             : l
               ? (0, n.jsx)('div', {
-                    className: I.hasMore,
+                    className: j.hasMore,
                     children: (0, n.jsx)(h.zx, {
                         look: h.zx.Looks.FILLED,
                         color: h.zx.Colors.PRIMARY,
                         size: h.zx.Sizes.MAX,
                         onClick: p,
-                        children: R.intl.string(R.t.XBlaiI)
+                        children: I.intl.string(I.t.XBlaiI)
                     })
                 })
               : (0, n.jsx)('div', {
-                    className: I.scrollingFooterWrap,
+                    className: j.scrollingFooterWrap,
                     children: S()
                 }));
     let H = null == y ? void 0 : y(),
-        B =
-            D && null != H
+        W =
+            F && null != H
                 ? (0, n.jsx)('div', {
-                      className: I.footer,
+                      className: j.footer,
                       children: (0, n.jsx)(g.Z, {
                           style: {
                               width: '100%',
@@ -234,11 +234,11 @@ function Z(e) {
                       })
                   })
                 : null,
-        U = { maxHeight: Z.height - 43 - 25 - 48 };
-    k && (U.maxHeight -= 40);
-    let W = null != p && l;
+        U = { maxHeight: k.height - 43 - 25 - 48 };
+    M && (U.maxHeight -= 40);
+    let B = null != p && l;
     return (0, n.jsx)('div', {
-        className: a()(x, I.messagesPopoutWrap),
+        className: a()(b, j.messagesPopoutWrap),
         style: U,
         onClick: P,
         onDoubleClick: P,
@@ -247,12 +247,12 @@ function Z(e) {
             component: m(),
             children: [
                 (0, n.jsxs)(d.Den, {
-                    className: a()(I.messagesPopout, b),
-                    onScroll: W ? w : void 0,
+                    className: a()(j.messagesPopout, x),
+                    onScroll: B ? w : void 0,
                     ref: A,
                     children: [
                         (0, n.jsx)(c.bG, {
-                            navigator: M,
+                            navigator: Z,
                             children: (0, n.jsx)(c.SJ, {
                                 children: (e) => {
                                     var t,
@@ -313,25 +313,25 @@ function Z(e) {
                                 }
                             })
                         }),
-                        F
+                        D
                     ]
                 }),
-                B
+                W
             ]
         })
     });
 }
 function w(e) {
-    let { analyticsName: t, onFetch: r, channel: l, messages: a, hasMore: i, loading: o, loadMore: c, onJump: h, canCloseAllMessages: d = !1, renderHeader: f, renderEmptyState: g, renderMessage: x, getProTip: E, scrollerClassName: O, className: v, onCloseMessage: C, listName: R } = e,
-        T = (0, u.e7)([b.Z], () => {
-            let e = null != l ? b.Z.getMessages(l.id) : null;
+    let { analyticsName: t, onFetch: r, channel: l, messages: a, hasMore: i, loading: o, loadMore: c, onJump: h, canCloseAllMessages: d = !1, renderHeader: f, renderEmptyState: g, renderMessage: b, getProTip: E, scrollerClassName: C, className: v, onCloseMessage: O, listName: I } = e,
+        T = (0, u.e7)([x.Z], () => {
+            let e = null != l ? x.Z.getMessages(l.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
     function P(e, r) {
         if ((0, m.Z)(e) && !T) {
             let { id: n, channel_id: s } = e,
                 l = y.Z.getChannel(s);
-            (null != l && (p.Z.trackJump(s, n, t), (0, _.uL)(j.Z5c.CHANNEL(l.getGuildId(), s, n))), null == h || h(r));
+            (null != l && (p.Z.trackJump(s, n, t), (0, _.uL)(R.Z5c.CHANNEL(l.getGuildId(), s, n))), null == h || h(r));
         }
     }
     s.useEffect(() => {
@@ -347,9 +347,9 @@ function w(e) {
                   })),
         [a, l]
     );
-    return (0, n.jsx)(Z, {
+    return (0, n.jsx)(k, {
         className: v,
-        scrollerClassName: O,
+        scrollerClassName: C,
         items: N,
         loading: o,
         analyticsName: t,
@@ -361,7 +361,7 @@ function w(e) {
         renderItem: function (e) {
             let { message: t, channel: r } = e;
             if (null == t) return [];
-            if (null != x) return x(t, (e) => P(t, e));
+            if (null != b) return b(t, (e) => P(t, e));
             let s = [];
             return null == r
                 ? []
@@ -369,20 +369,20 @@ function w(e) {
                       (0, n.jsxs)(
                           'div',
                           {
-                              className: I.messageGroupWrapper,
+                              className: j.messageGroupWrapper,
                               children: [
                                   (0, n.jsx)(S.Z, {
-                                      className: I.messageGroupCozy,
+                                      className: j.messageGroupCozy,
                                       message: t,
                                       channel: r
                                   }),
-                                  (0, n.jsx)(k, {
+                                  (0, n.jsx)(M, {
                                       channel: l,
                                       message: t,
                                       jumping: T,
                                       canCloseAllMessages: d,
                                       jumpTo: P,
-                                      onCloseMessage: C
+                                      onCloseMessage: O
                                   })
                               ]
                           },
@@ -391,7 +391,7 @@ function w(e) {
                   ),
                   s);
         },
-        listName: R,
+        listName: I,
         'aria-label': e['aria-label']
     });
 }

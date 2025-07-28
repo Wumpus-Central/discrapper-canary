@@ -1,7 +1,7 @@
 n.d(t, { k: () => c });
-var o = n(818083),
-    r = n(438379);
-let i = (0, o.B)({
+var r = n(818083),
+    o = n(438379);
+let i = (0, r.B)({
     kind: 'user',
     id: '2025-07_user_profile_game_widgets',
     label: 'User Profile Game Widgets',
@@ -16,7 +16,7 @@ let i = (0, o.B)({
 });
 function c(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        o = (0, r.J)({
+        r = (0, o.J)({
             location: t,
             autoTrackExposure: n
         }),
@@ -24,7 +24,7 @@ function c(e) {
             { location: t },
             {
                 autoTrackExposure: n,
-                disable: o
+                disable: r
             }
         );
     return c;

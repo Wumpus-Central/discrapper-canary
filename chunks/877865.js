@@ -155,13 +155,13 @@ function D(e) {
         x = i.useCallback((e) => {
             R(e.hex);
         }, []),
-        M = (e) => {
+        k = (e) => {
             if (((0, E.P0)(), n(e.hex), o.length > 0)) {
                 let t = [...o];
                 ((t[v] = e.hex), s(t));
             }
         },
-        k = async () => {
+        M = async () => {
             if (null != c)
                 try {
                     let { sRGBHex: e } = await c.open();
@@ -224,7 +224,7 @@ function D(e) {
                 }),
             (0, r.jsx)(N, {
                 onChange: x,
-                onChangeComplete: M,
+                onChangeComplete: k,
                 color: A
             }),
             (0, r.jsxs)('div', {
@@ -257,7 +257,7 @@ function D(e) {
                                                     e
                                                 ),
                                                 {
-                                                    onClick: k,
+                                                    onClick: M,
                                                     icon: d.i,
                                                     'aria-label': y.intl.string(b.default['8QXO8v'])
                                                 }

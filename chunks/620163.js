@@ -609,7 +609,7 @@ let e$ = () => {
                 label: eq.intl.string(eq.t.trSpHR),
                 element: w.Z,
                 icon: E
-                    ? (0, i.jsx)(l.P4T, {
+                    ? (0, i.jsx)(l.Mgn, {
                           size: 'xs',
                           color: a.Z.unsafe_rawColors.YELLOW_300.css
                       })

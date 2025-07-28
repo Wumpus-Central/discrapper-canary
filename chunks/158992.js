@@ -1,16 +1,16 @@
-(n.d(t, { Z: () => a }), n(388685));
+(n.d(t, { Z: () => s }), n(388685));
 var r = n(73800),
     i = n(479531),
     l = n(53365),
-    s = n(581050);
-function a(e) {
+    a = n(581050);
+function s(e) {
     let [t, n] = r.useState(null != e),
-        [a, o] = r.useState(),
+        [s, o] = r.useState(),
         [c, d] = r.useState(),
         u = r.useCallback(async (e) => {
             (n(!0), o(void 0));
             try {
-                var t, r, a, c, u;
+                var t, r, s, c, u;
                 let n = await l.yk(e);
                 d({
                     isEligibleForMonetization: n.sufficient,
@@ -23,14 +23,14 @@ function a(e) {
                     hasMemberRetention: n.retention_healthy,
                     notNSFW: 0 === Object.keys(n.nsfw_properties).length,
                     canApply: n.can_apply,
-                    isApplicationPending: (null == (t = n.latest_request) ? void 0 : t.state) === s.X.OPEN,
-                    actionRequired: (null == (r = n.latest_request) ? void 0 : r.state) === s.X.ACTION_REQUIRED,
+                    isApplicationPending: (null == (t = n.latest_request) ? void 0 : t.state) === a.X.OPEN,
+                    actionRequired: (null == (r = n.latest_request) ? void 0 : r.state) === a.X.ACTION_REQUIRED,
                     minimumAgeInDays: n.minimum_age_in_days,
                     minimumOwnerAgeInYears: n.minimum_owner_age_in_years,
                     minimumSize: n.minimum_size,
                     latestRequest: n.latest_request,
                     rejection: n.rejection,
-                    guildMemberCount: null == (a = n.health_score) ? void 0 : a.guild_size,
+                    guildMemberCount: null == (s = n.health_score) ? void 0 : s.guild_size,
                     communicatorCount: null == (c = n.health_score) ? void 0 : c.communicators,
                     retentionScore: null == (u = n.health_score) ? void 0 : u.perc_ret_w1
                 });
@@ -41,7 +41,7 @@ function a(e) {
             }
         }, []);
     return {
-        error: a,
+        error: s,
         loading: t,
         eligibility: c,
         refresh: r.useCallback(() => {

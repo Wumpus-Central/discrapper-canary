@@ -98,7 +98,7 @@ function A(e) {
     let t;
     var n,
         a,
-        { role: u = 'button', variant: d = 'primary', size: E = 'md', text: y, icon: I, iconPosition: A = 'start', iconOpticalOffsetMargin: R = 0, fullWidth: P = !1, focusProps: w, loading: D, loadingStartedLabel: L, loadingFinishedLabel: x, rounded: M = !1, type: k = 'button', rel: j, onClick: U, onDoubleClick: G, onMouseUp: B, onMouseDown: V, onKeyDown: F, disabled: Z, className: H, style: Y, buttonRef: W } = e,
+        { role: u = 'button', variant: d = 'primary', size: E = 'md', text: y, icon: I, iconPosition: A = 'start', iconOpticalOffsetMargin: R = 0, fullWidth: P = !1, focusProps: w, loading: D, loadingStartedLabel: L, loadingFinishedLabel: x, rounded: k = !1, type: M = 'button', rel: j, onClick: U, onDoubleClick: G, onMouseUp: B, onMouseDown: V, onKeyDown: F, disabled: Z, className: H, style: Y, buttonRef: W } = e,
         K = v(e, ['role', 'variant', 'size', 'text', 'icon', 'iconPosition', 'iconOpticalOffsetMargin', 'fullWidth', 'focusProps', 'loading', 'loadingStartedLabel', 'loadingFinishedLabel', 'rounded', 'type', 'rel', 'onClick', 'onDoubleClick', 'onMouseUp', 'onMouseDown', 'onKeyDown', 'disabled', 'className', 'style', 'buttonRef']);
     let z = (0, m.M)(),
         q = null != (n = null == z ? void 0 : z.size) ? n : E,
@@ -160,11 +160,11 @@ function A(e) {
                                 className: o()(g.button, g[q], g[d], {
                                     [g.hasText]: J,
                                     [g.fullWidth]: X,
-                                    [g.rounded]: M
+                                    [g.rounded]: k
                                 }),
                                 ref: ee,
                                 rel: j,
-                                type: k,
+                                type: M,
                                 onClick: eo ? (e) => e.preventDefault() : U,
                                 onDoubleClick: eo ? (e) => e.preventDefault() : G,
                                 onMouseUp: eo ? void 0 : B,

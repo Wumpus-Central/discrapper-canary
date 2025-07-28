@@ -19,8 +19,8 @@ var r,
     C = n(834129),
     x = n(981631),
     v = n(388032),
-    O = n(573510);
-function y(e) {
+    y = n(573510);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -126,7 +126,7 @@ let T = ['TOP_LEFT', 'TOP_RIGHT'],
             },
             leafRotationDirection: -1
         },
-        BOTTOM_LEFT: j(y({}, P), {
+        BOTTOM_LEFT: j(O({}, P), {
             getConfettiPosition: (e) => ({
                 x: e - 11,
                 y: 125
@@ -136,7 +136,7 @@ let T = ['TOP_LEFT', 'TOP_RIGHT'],
                 y: -1
             }
         }),
-        BOTTOM_RIGHT: j(y({}, P), {
+        BOTTOM_RIGHT: j(O({}, P), {
             getConfettiPosition: (e) => ({
                 x: 11,
                 y: 125
@@ -201,7 +201,7 @@ function M(e) {
             }
         })(d, g),
         v = T.includes(g),
-        y = v && 'exit' === d,
+        O = v && 'exit' === d,
         j = l.useCallback((e) => {
             m(e);
         }, []),
@@ -309,15 +309,15 @@ function M(e) {
                 }),
                 (0, i.jsx)(p.P3F, {
                     onClick: n,
-                    className: o()(O.easterEggAnimationClickTarget, {
-                        [O.easterEggAnimationClickTargetTopLeft]: 'TOP_LEFT' === g,
-                        [O.easterEggAnimationClickTargetTopRight]: 'TOP_RIGHT' === g,
-                        [O.easterEggAnimationClickTargetBottomLeft]: 'BOTTOM_LEFT' === g,
-                        [O.easterEggAnimationClickTargetBottomRight]: 'BOTTOM_RIGHT' === g
+                    className: o()(y.easterEggAnimationClickTarget, {
+                        [y.easterEggAnimationClickTargetTopLeft]: 'TOP_LEFT' === g,
+                        [y.easterEggAnimationClickTargetTopRight]: 'TOP_RIGHT' === g,
+                        [y.easterEggAnimationClickTargetBottomLeft]: 'BOTTOM_LEFT' === g,
+                        [y.easterEggAnimationClickTargetBottomRight]: 'BOTTOM_RIGHT' === g
                     }),
                     children: (0, i.jsx)(p.kci, {
                         animationRef: M,
-                        className: o()(O.easterEggAnimation, { [O.easterEggAnimationHideLeaf]: y }),
+                        className: o()(y.easterEggAnimation, { [y.easterEggAnimationHideLeaf]: O }),
                         nextScene: x,
                         sceneSegments: I,
                         onScenePlay: j,
@@ -345,7 +345,7 @@ function U(e) {
             return null;
         })(n),
         u = (0, h.Z)(n),
-        { createMultipleConfettiAt: d, addClickListener: y } = l.useContext(f.h),
+        { createMultipleConfettiAt: d, addClickListener: O } = l.useContext(f.h),
         [j, I] = l.useState(!1),
         S = l.useRef(null),
         { reducedMotion: T } = l.useContext(p.Sfi),
@@ -399,14 +399,14 @@ function U(e) {
             },
             [L]
         );
-    l.useEffect(() => y(D));
+    l.useEffect(() => O(D));
     let k = (0, i.jsx)(p.P3F, {
-        className: O.iconWrapper,
+        className: y.iconWrapper,
         innerRef: S,
         onClick: s,
         children: (0, i.jsx)(p.$Eu, {
             color: p.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-            className: O.icon,
+            className: y.icon,
             onMouseEnter: Z
         })
     });
@@ -417,13 +417,13 @@ function U(e) {
         children: [
             (0, i.jsx)('div', {
                 onClick: s,
-                className: O.message,
+                className: y.message,
                 children: t
             }),
             j
                 ? (0, i.jsx)(g.ZP, {
                       children: (0, i.jsx)('div', {
-                          className: O.cannonWrapper,
+                          className: y.cannonWrapper,
                           children: (0, i.jsx)(M, {
                               onAnimationComplete: R,
                               onClick: L

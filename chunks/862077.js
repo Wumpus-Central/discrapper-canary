@@ -60,26 +60,26 @@ function T(e) {
             roleId: A
         }),
         x = i.useRef(null),
-        M = (0, _.ZP)(t.id, n);
+        k = (0, _.ZP)(t.id, n);
     i.useEffect(() => {
         null == v || v(null == x ? void 0 : x.current);
     }, [x, v]);
-    let k = w ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
+    let M = w ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
         j = P ? 'div' : o.VqE;
     return (0, r.jsx)(l.Gt, {
         value: D,
         children: (0, r.jsx)(d.Mt, {
             value: L,
             openedAt: N,
-            fetchStartedAt: null == M ? void 0 : M.fetchStartedAt,
-            fetchEndedAt: null == M ? void 0 : M.fetchEndedAt,
-            isLoaded: null == M ? void 0 : M.isLoaded,
+            fetchStartedAt: null == k ? void 0 : k.fetchStartedAt,
+            fetchEndedAt: null == k ? void 0 : k.fetchEndedAt,
+            isLoaded: null == k ? void 0 : k.isLoaded,
             children: (0, r.jsx)(j, {
                 ref: x,
                 'aria-label': t.username,
                 children: (0, r.jsx)(h.Z, {
                     user: t,
-                    displayProfile: M,
+                    displayProfile: k,
                     themeType: E.lY.POPOUT,
                     children: (0, r.jsxs)('div', {
                         className: y.container,
@@ -120,7 +120,7 @@ function T(e) {
                                                         (0, f.pQ)(
                                                             I(
                                                                 {
-                                                                    action: k,
+                                                                    action: M,
                                                                     analyticsLocations: D
                                                                 },
                                                                 L

@@ -9,7 +9,7 @@
         openQuestMinorEnrollmentBlockModal: () => B,
         openQuestOrbsRewardModal: () => G,
         openQuestsNitroRewardModal: () => j,
-        openQuestsRewardCodeModal: () => k,
+        openQuestsRewardCodeModal: () => M,
         openVideoQuestModal: () => Y
     }));
 var r = n(255367);
@@ -93,8 +93,8 @@ function L(e, t) {
     );
 }
 let x = 'in-app',
-    M = 'Discord Widget';
-function k(e) {
+    k = 'Discord Widget';
+function M(e) {
     let { questId: t, questContent: i, questContentPosition: a, preview: o = !1, previewQuest: l = null, sourceQuestContent: c } = e;
     (0, s.ZDy)(async () => {
         let { default: e } = await Promise.all([n.e('37447'), n.e('64838'), n.e('27458'), n.e('17218'), n.e('25053')]).then(n.bind(n, 985866));
@@ -193,7 +193,7 @@ function V(e, t) {
 function F() {
     let { fromContent: e, questId: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     (0, A.Z.getState().setUtmCurrentContext)({
-        utmSourceCurrent: M,
+        utmSourceCurrent: k,
         utmMediumCurrent: x,
         utmCampaignCurrent: t,
         utmContentCurrent: Object.keys(b.jn).find((t) => b.jn[t] === e)

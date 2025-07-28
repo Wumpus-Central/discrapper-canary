@@ -2,8 +2,8 @@ n.d(t, { Z: () => E });
 var r = n(255367),
     i = n(73800),
     l = n(512722),
-    s = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    s = n(442837),
     o = n(481060),
     c = n(367907),
     d = n(605436),
@@ -11,8 +11,8 @@ var r = n(255367),
     m = n(496675),
     g = n(626135),
     p = n(823379),
-    f = n(243730),
-    h = n(946724),
+    h = n(243730),
+    f = n(946724),
     x = n(999382),
     b = n(130341),
     j = n(981975),
@@ -26,23 +26,23 @@ var r = n(255367),
 function E(e) {
     let t,
         { editRoleId: n, setEditRoleId: l, selectedSection: E, setSelectedSection: S } = e,
-        T = (0, a.e7)([h.Z], () => h.Z.guild, []);
-    s()(null != T, 'guildId cannot be null here');
-    let { role: P, permissionSearchQuery: w } = (0, a.cj)(
-        [h.Z],
+        T = (0, s.e7)([f.Z], () => f.Z.guild, []);
+    a()(null != T, 'guildId cannot be null here');
+    let { role: P, permissionSearchQuery: w } = (0, s.cj)(
+        [f.Z],
         () => ({
-            role: h.Z.getRole(n),
-            permissionSearchQuery: h.Z.getPermissionSearchQuery()
+            role: f.Z.getRole(n),
+            permissionSearchQuery: f.Z.getPermissionSearchQuery()
         }),
         [n]
     );
     i.useEffect(() => {
         null == P && l(null);
     }, [P, l]);
-    let R = (0, a.e7)([m.Z], () => m.Z.getHighestRole(T), [T]),
-        Z = (0, a.e7)([m.Z], () => !m.Z.isRoleHigher(T, R, P)),
+    let R = (0, s.e7)([m.Z], () => m.Z.getHighestRole(T), [T]),
+        Z = (0, s.e7)([m.Z], () => !m.Z.isRoleHigher(T, R, P)),
         D = i.useRef(null),
-        A = (0, a.e7)([x.Z], () => x.Z.getProps().integrations),
+        A = (0, s.e7)([x.Z], () => x.Z.getProps().integrations),
         k = {
             role: P,
             editRoleId: n
@@ -56,7 +56,7 @@ function E(e) {
             var e, t;
             let { role: n, editRoleId: r } = L.current,
                 i = (0, b.UT)(E),
-                l = null != (t = null == (e = f.Z.getRoleMemberCount(T.id)) ? void 0 : e[r]) ? t : 0;
+                l = null != (t = null == (e = h.Z.getRoleMemberCount(T.id)) ? void 0 : e[r]) ? t : 0;
             g.default.track(
                 N.rMx.ROLE_PAGE_VIEWED,
                 (function (e) {

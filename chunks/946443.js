@@ -29,8 +29,8 @@ var r = n(255367),
     x = n(388032),
     I = n(128406);
 function P(e) {
-    var t, n, l, a, P, w, Z;
-    let { setTab: T, onJump: A, showTutorial: R, setSeenTutorial: D, closePopout: L, badgeState: M } = e,
+    var t, n, l, a, P, w, T;
+    let { setTab: Z, onJump: A, showTutorial: R, setSeenTutorial: D, closePopout: L, badgeState: M } = e,
         k = i.useRef(null),
         [U, G] = (0, E.ZP)(k),
         { loadState: B, channels: V } = U,
@@ -98,14 +98,14 @@ function P(e) {
             children: [
                 (0, r.jsx)(v.Z, {
                     tab: d.X.UNREADS,
-                    setTab: T,
+                    setTab: Z,
                     badgeState: M,
                     closePopout: L
                 }),
                 (0, r.jsx)(C.Z, {
                     Icon: h.xx7,
                     header: x.intl.string(x.t['6XMM+P']),
-                    tip: (null == (Z = s().os) ? void 0 : Z.family) === 'OS X' ? x.intl.string(x.t.w9uDOT) : x.intl.string(x.t.BiUJCw)
+                    tip: (null == (T = s().os) ? void 0 : T.family) === 'OS X' ? x.intl.string(x.t.w9uDOT) : x.intl.string(x.t.BiUJCw)
                 })
             ]
         });
@@ -116,7 +116,7 @@ function P(e) {
         children: [
             (0, r.jsx)(v.Z, {
                 tab: d.X.UNREADS,
-                setTab: T,
+                setTab: Z,
                 badgeState: M,
                 closePopout: L,
                 children: (0, r.jsx)(y.Z, {

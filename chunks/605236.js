@@ -14,10 +14,10 @@
     XY: () => D,
     ZF: () => A,
     bj: () => U,
-    kk: () => M,
+    kk: () => k,
     oK: () => x,
     po: () => T,
-    u9: () => k,
+    u9: () => M,
     wH: () => G,
     wx: () => y,
     z2: () => I
@@ -170,7 +170,7 @@ function x(e, t) {
     let n = s.Z.getGuildDismissedContentState(t);
     return null != n && null != n[e] && null != n[e].lastDismissedAtMs && '0' !== n[e].lastDismissedAtMs;
 }
-function M(e, t, n) {
+function k(e, t, n) {
     !((0, p.cI)(e) || _.Z.hasUserHitDCCap(e, null == t ? void 0 : t.guildId)) &&
         (n ||
             (a.Z.dispatch({
@@ -198,7 +198,7 @@ function M(e, t, n) {
                 }
             })));
 }
-function k(e) {
+function M(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     (((0, p.cI)(e) || t.forceTrack) && F(e, t), (0, f.Vr)(e));
 }
@@ -220,14 +220,14 @@ async function U(e) {
 }
 async function G(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    (k(e, n), await v(e, t), j(e, n));
+    (M(e, n), await v(e, t), j(e, n));
 }
 async function B(e, t, n) {
-    (k(e, n), await T(e, t), j(e, n));
+    (M(e, n), await T(e, t), j(e, n));
 }
 async function V(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    (k(e, t), await I(e), j(e, t));
+    (M(e, t), await I(e), j(e, t));
 }
 function F(e, t) {
     var n;

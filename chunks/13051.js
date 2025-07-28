@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => P }), n(388685), n(642613), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529));
+(n.d(t, { Z: () => Z }), n(388685), n(642613), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -16,8 +16,8 @@ var r = n(255367),
     h = n(434404),
     x = n(598077),
     j = n(485386),
-    O = n(246946),
-    v = n(259580),
+    v = n(246946),
+    O = n(259580),
     y = n(531087),
     _ = n(768581),
     C = n(709054),
@@ -51,16 +51,15 @@ function w(e) {
     }
     return e;
 }
-function P(e) {
+function Z(e) {
     let t,
-        { guild: n, integration: l, editedIntegration: a, isExpanded: P, onToggleExpand: Z, onDisable: A, onEnable: k } = e,
-        D = (0, d.e7)([j.Z], () => j.Z.getRoles(n.id)),
-        [R, L] = i.useState(!1),
-        M = (0, d.e7)([O.Z], () => O.Z.hidePersonalInformation),
-        B = i.useCallback(() => {
-            (L(!0), k(l));
+        { guild: n, integration: l, editedIntegration: a, isExpanded: Z, onToggleExpand: P, onDisable: A, onEnable: k } = e,
+        [D, R] = i.useState(!1),
+        L = (0, d.e7)([v.Z], () => v.Z.hidePersonalInformation),
+        M = i.useCallback(() => {
+            (R(!0), k(l));
         }, [l, k]),
-        U = i.useCallback(() => {
+        B = i.useCallback(() => {
             l.syncing ||
                 (0, p.h7j)((e) => {
                     var t, n;
@@ -95,18 +94,18 @@ function P(e) {
                     );
                 });
         }, [l, A]),
-        W = i.useCallback(() => {
+        U = i.useCallback(() => {
             h.Z.syncIntegration(n.id, l.id);
         }, [n.id, l.id]),
-        H = i.useCallback(() => {
+        W = i.useCallback(() => {
             null != l.role_id && (h.Z.setSection(S.pNK.ROLES), h.Z.selectRole(l.role_id));
         }, [l.role_id]),
         {
-            serviceName: G,
-            channelURL: z,
-            expireBehaviorLabel: F,
-            syncLabel: V,
-            subscribersText: K
+            serviceName: H,
+            channelURL: G,
+            expireBehaviorLabel: z,
+            syncLabel: F,
+            subscribersText: V
         } = i.useMemo(() => {
             var e, t, n, r, i;
             let o =
@@ -140,46 +139,44 @@ function P(e) {
                     };
             }
         }, [l.account, l.subscriber_count, l.type]),
+        K = (0, d.e7)([j.Z], () => (null != l.role_id ? j.Z.getRole(n.id, l.role_id) : void 0)),
         { roleLink: q, syncDescriptionText: Y } = i.useMemo(() => {
-            let e,
-                t,
-                n = null != l.role_id ? D[l.role_id] : null;
+            let e, t;
             e =
-                null != n
+                null != K
                     ? (0, r.jsx)(p.eee, {
-                          onClick: H,
-                          children: n.name
+                          onClick: W,
+                          children: K.name
                       })
                     : I.intl.string(I.t.PoWNfX);
-            let i = b.Z.get(l.type);
+            let n = b.Z.get(l.type);
             return {
                 roleLink: e,
                 syncDescriptionText:
-                    l.revoked && null != i
+                    l.revoked && null != n
                         ? I.intl.formatToPlainString(I.t.G16Wjo, {
                               user: l.user,
-                              platformName: i.name
+                              platformName: n.name
                           })
                         : I.intl.formatToPlainString(I.t.unl3AA, { datetime: s()(l.synced_at).calendar() })
             };
-        }, [D, H, l.revoked, l.role_id, l.synced_at, l.type, l.user]),
-        X = i.useMemo(() => {
+        }, [K, W, l.revoked, l.synced_at, l.type, l.user]),
+        X = (0, d.e7)([j.Z], () => j.Z.getSortedRoles(n.id)),
+        J = i.useMemo(() => {
             let e = f.ZP.getGuildEmoji(n.id),
-                t = Object.values(D)
-                    .filter((e) => null != e.tags && e.tags.integration_id === l.id)
-                    .map((e) => e.id);
+                t = X.filter((e) => null != e.tags && e.tags.integration_id === l.id).map((e) => e.id);
             return l.enable_emoticons ? e.sort((e, t) => e.name.localeCompare(t.name)).filter((e) => null != l.role_id && (null == e ? void 0 : e.roles.some((e) => t.includes(e)))) : [];
-        }, [n.id, D, l.enable_emoticons, l.id, l.role_id]);
+        }, [n.id, X, l.enable_emoticons, l.id, l.role_id]);
     if (
         (i.useEffect(() => {
-            (null == a ? void 0 : a.id) === l.id && (null == a ? void 0 : a.enabled) === !0 && L(!1);
+            (null == a ? void 0 : a.id) === l.id && (null == a ? void 0 : a.enabled) === !0 && R(!1);
         }, [a, l.id]),
         l.enabled && null != l.user)
     )
         t = [
             {
                 icon: p.T39,
-                text: M
+                text: L
                     ? I.intl.formatToPlainString(I.t.gcdJ8P, { timestamp: C.default.extractTimestamp(l.id) })
                     : I.intl.formatToPlainString(I.t.Nu9sam, {
                           user: null != l.user ? new x.Z(l.user).tag : null,
@@ -188,18 +185,18 @@ function P(e) {
             }
         ];
     else {
-        let e = new URL(z);
+        let e = new URL(G);
         t = [
             {
                 text: I.intl.format(I.t.BegylZ, {
-                    serviceName: G,
-                    accountUrl: z,
+                    serviceName: H,
+                    accountUrl: G,
                     accountUrlText: e.hostname + e.pathname
                 })
             }
         ];
     }
-    let J = (0, r.jsxs)(g.Z, {
+    let $ = (0, r.jsxs)(g.Z, {
             className: E.header,
             align: g.Z.Align.CENTER,
             children: [
@@ -212,9 +209,9 @@ function P(e) {
                     ? (0, r.jsx)(g.Z.Child, {
                           shrink: 0,
                           grow: 0,
-                          children: (0, r.jsx)(v.Z, {
+                          children: (0, r.jsx)(O.Z, {
                               className: E.expandIcon,
-                              expanded: P && !R,
+                              expanded: Z && !D,
                               'aria-hidden': !0
                           })
                       })
@@ -224,9 +221,9 @@ function P(e) {
                           children: (0, r.jsx)(u.zx, {
                               size: u.zx.Sizes.SMALL,
                               color: u.zx.Colors.PRIMARY,
-                              onClick: B,
-                              disabled: R,
-                              children: R
+                              onClick: M,
+                              disabled: D,
+                              children: D
                                   ? (0, r.jsx)(y.Z, {
                                         width: 24,
                                         height: 24
@@ -236,12 +233,12 @@ function P(e) {
                       })
             ]
         }),
-        $ = null;
+        Q = null;
     return (
-        P &&
-            !R &&
+        Z &&
+            !D &&
             null != a &&
-            ($ = (0, r.jsxs)(g.Z, {
+            (Q = (0, r.jsxs)(g.Z, {
                 className: E.body,
                 direction: g.Z.Direction.VERTICAL,
                 children: [
@@ -305,11 +302,11 @@ function P(e) {
                         });
                     })({
                         integration: a,
-                        labelText: V,
-                        subscribersText: K,
+                        labelText: F,
+                        subscribersText: V,
                         descriptionText: Y,
                         roleLink: q,
-                        onSync: W
+                        onSync: U
                     }),
                     (0, r.jsx)(p.$i$, { className: E.midDivider }),
                     (function (e) {
@@ -365,7 +362,7 @@ function P(e) {
                         });
                     })({
                         integration: a,
-                        labelText: F,
+                        labelText: z,
                         onBehaviorChange: function (e) {
                             m.Z.updateIntegration({ expireBehavior: e });
                         },
@@ -425,7 +422,7 @@ function P(e) {
                               });
                           })({
                               integration: a,
-                              emojis: X,
+                              emojis: J,
                               onToggle: function (e) {
                                   m.Z.updateIntegration({ enableEmoticons: e });
                               }
@@ -438,7 +435,7 @@ function P(e) {
                             size: u.zx.Sizes.SMALL,
                             color: u.zx.Colors.RED,
                             look: u.zx.Looks.LINK,
-                            onClick: U,
+                            onClick: B,
                             children: I.intl.string(I.t.M6q6eX)
                         })
                     })
@@ -453,12 +450,12 @@ function P(e) {
                     l.enabled
                         ? (0, r.jsx)(p.P3F, {
                               className: E.expandableHeader,
-                              'aria-expanded': P && !R,
-                              onClick: Z,
-                              children: J
+                              'aria-expanded': Z && !D,
+                              onClick: P,
+                              children: $
                           })
-                        : J,
-                    $
+                        : $,
+                    Q
                 ]
             })
         })

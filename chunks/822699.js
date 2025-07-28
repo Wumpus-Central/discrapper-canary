@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => eS }), n(35282), n(388685));
+(n.r(t), n.d(t, { default: () => ey }), n(35282), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(593473),
@@ -21,8 +21,8 @@ var r = n(255367),
     I = n(637776),
     j = n(264229),
     O = n(677760),
-    y = n(893607),
-    S = n(314897),
+    S = n(893607),
+    y = n(314897),
     N = n(82142),
     C = n(701190),
     A = n(626135),
@@ -36,8 +36,8 @@ var r = n(255367),
     k = n(718182),
     M = n(223543),
     B = n(73906),
-    G = n(299852),
-    U = n(39514),
+    U = n(299852),
+    G = n(39514),
     F = n(236446),
     z = n(9325),
     V = n(344295),
@@ -104,7 +104,7 @@ let el = (0, L.Z)(H.Z),
     es = (0, L.Z)(K.Z),
     ea = (0, L.Z)(V.Z),
     eo = (0, L.Z)(F.Z),
-    ec = (0, L.Z)(U.Z),
+    ec = (0, L.Z)(G.Z),
     eu = (0, L.Z)(O.Z),
     ed = (0, L.Z)(q.Z),
     eh = (0, L.Z)(k.Z),
@@ -112,7 +112,7 @@ let el = (0, L.Z)(H.Z),
     eg = (0, L.Z)(Q.Z),
     em = (0, L.Z)(x.Z),
     ef = (0, L.Z)(J.Z),
-    e_ = (0, L.Z)(G.Z),
+    e_ = (0, L.Z)(U.Z),
     ex = (0, L.Z)(_.Z),
     eb = (0, L.Z)(I.Z),
     eE = (0, L.Z)(B.Z),
@@ -120,7 +120,7 @@ let el = (0, L.Z)(H.Z),
     eI = (0, L.Z)(X.Z),
     ej = (0, L.Z)(Y.Z),
     eO = (0, L.Z)(g.Z);
-class ey extends i.PureComponent {
+class eS extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         var n;
         let { invite: r, location: i } = e,
@@ -339,7 +339,7 @@ class ey extends i.PureComponent {
                     render: (e) => (0, r.jsx)(ev, er({}, e))
                 }),
                 (0, r.jsx)(m.Z, {
-                    path: $.Z5c.CHANNEL(y.Hw.guildId(), y.Hw.channelId({ optional: !0 }), ':messageId?'),
+                    path: $.Z5c.CHANNEL(S.Hw.guildId(), S.Hw.channelId({ optional: !0 }), ':messageId?'),
                     render: (e) => (0, r.jsx)(eE, er({}, e))
                 }),
                 (0, r.jsx)(m.Z, {
@@ -366,7 +366,7 @@ class ey extends i.PureComponent {
             }));
     }
 }
-let eS = o.ZP.connectStores([S.default, C.Z, N.Z, b.Z, E.Z], (e) => {
+let ey = o.ZP.connectStores([y.default, C.Z, N.Z, b.Z, E.Z], (e) => {
     var t, n, r;
     let { match: i, location: l } = e,
         s = null == i || null == (t = i.params) ? void 0 : t.inviteCode,
@@ -376,7 +376,7 @@ let eS = o.ZP.connectStores([S.default, C.Z, N.Z, b.Z, E.Z], (e) => {
         u = null == i || null == (r = i.params) ? void 0 : r.guildTemplateCode;
     return {
         inviteKey: o,
-        isAuthenticated: S.default.isAuthenticated(),
+        isAuthenticated: y.default.isAuthenticated(),
         giftCode: c,
         guildTemplateCode: u,
         gift: null != c ? N.Z.get(c) : null,
@@ -384,4 +384,4 @@ let eS = o.ZP.connectStores([S.default, C.Z, N.Z, b.Z, E.Z], (e) => {
         guildTemplate: null != u ? E.Z.getGuildTemplate(u) : null,
         hasLoadedExperiments: b.Z.hasLoadedExperiments
     };
-})(ey);
+})(eS);

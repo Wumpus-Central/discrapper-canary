@@ -51,7 +51,7 @@ function I(e) {
                     f = null != (o = null == n ? void 0 : n.lastBoostCount) ? o : 0;
                 return (u.length > 0 && d < p) || null != h
                     ? {
-                          trailing: (0, r.jsx)(a.P4T, {
+                          trailing: (0, r.jsx)(a.Mgn, {
                               color: a.TVs.colors.STATUS_WARNING,
                               size: 'sm'
                           }),

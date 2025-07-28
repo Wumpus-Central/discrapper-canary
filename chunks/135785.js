@@ -28,7 +28,7 @@ let h = (e) => {
             className: s()(g.container, h, { [g.centerText]: b }),
             type: a.Zbd.Types.CUSTOM,
             children: [
-                (0, i.jsx)(a.P4T, {
+                (0, i.jsx)(a.Mgn, {
                     size: 'custom',
                     width: 20,
                     height: 20,

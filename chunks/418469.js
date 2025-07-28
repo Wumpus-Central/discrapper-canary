@@ -78,6 +78,6 @@ function _(e, t, d) {
         color: 'danger',
         label: u.intl.string(u.t.sdnCxc),
         action: b,
-        icon: a.P4T
+        icon: a.Mgn
     });
 }

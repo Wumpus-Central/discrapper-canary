@@ -26,7 +26,7 @@ var i = n(442837),
     x = n(990252);
 function I(e) {
     var t;
-    let { channel: n, isChannelSelected: I, isChannelCollapsed: P, voiceStates: N, enableConnectedUserLimit: w, enableActivities: Z, isSubscriptionGated: T, needSubscriptionToAccess: A, isNewChannel: R, muted: D, resolvedUnreadSetting: L } = e,
+    let { channel: n, isChannelSelected: I, isChannelCollapsed: P, voiceStates: N, enableConnectedUserLimit: w, enableActivities: T, isSubscriptionGated: Z, needSubscriptionToAccess: A, isNewChannel: R, muted: D, resolvedUnreadSetting: L } = e,
         M = (0, i.e7)([f.ZP], () => f.ZP.getMentionCount(n.id)),
         k = (0, i.e7)([f.ZP], () => f.ZP.getIsMentionLowImportance(n.id)),
         U = (0, a.ZP)(n),
@@ -50,7 +50,7 @@ function I(e) {
             mentionsCount: M,
             isMentionLowImportance: k
         });
-    if ((0, c.O)(T)) return (0, r.jsx)(c.Z, { locked: A });
+    if ((0, c.O)(Z)) return (0, r.jsx)(c.Z, { locked: A });
     if (R)
         return (0, r.jsx)(o.IGR, {
             text: S.intl.string(S.t.y2b7CA),
@@ -81,7 +81,7 @@ function I(e) {
                 text: S.intl.string(S.t.dI3q4u),
                 color: l.Z.unsafe_rawColors.RED_400.css
             })
-          : null != Z && Z && (0, b.u)(U)
+          : null != T && T && (0, b.u)(U)
             ? (0, r.jsx)(y.Z, {
                   embeddedApps: U,
                   muted: D

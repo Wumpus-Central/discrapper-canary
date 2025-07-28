@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(340541),
     N = n(359110),
     w = n(155409),
-    Z = n(695346),
-    T = n(592125),
+    T = n(695346),
+    Z = n(592125),
     A = n(430824),
     R = n(607744),
     D = n(496675),
@@ -154,8 +154,8 @@ class $ extends G.ZP {
         let { channel: e, selected: t, connected: n, unread: i, resolvedUnreadSetting: l, mentionCount: a, locked: s, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: _, canMoveMembers: O, showTutorial: y, hasActiveEvent: C, embeddedApps: v, isSubscriptionGated: j, isFavoriteSuggestion: E, withGuildIcon: S } = this.props,
             { shouldShowActivities: x, shouldShowGuildVerificationPopout: I } = this.state,
             N = (0, P.jW)({ location: 'voice_channel' }).entrypoints,
-            Z = this.getVoiceStatesCount(),
-            T = (0, r.jsxs)('li', {
+            T = this.getVoiceStatesCount(),
+            Z = (0, r.jsxs)('li', {
                 ref: this.ref,
                 className: o()(this.getModeClass(), { [q.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
@@ -223,7 +223,7 @@ class $ extends G.ZP {
                                                             channel: e,
                                                             unread: i,
                                                             mentionCount: a,
-                                                            userCount: Z,
+                                                            userCount: T,
                                                             embeddedActivitiesCount: v.length,
                                                             isSubscriptionGated: j
                                                         }),
@@ -257,17 +257,17 @@ class $ extends G.ZP {
                 ]
             });
         return (
-            O && (T = f(T)),
-            _ && (T = h(p(T))),
+            O && (Z = f(Z)),
+            _ && (Z = h(p(Z))),
             y &&
-                (T = (0, r.jsx)(w.Z, {
+                (Z = (0, r.jsx)(w.Z, {
                     childRef: this.ref,
                     tutorialId: 'voice-conversations',
                     position: 'right',
                     offsetX: -20,
-                    children: T
+                    children: Z
                 })),
-            T
+            Z
         );
     }
     constructor(...e) {
@@ -340,7 +340,7 @@ class $ extends G.ZP {
                 let { channel: e, voiceStates: t, sorting: n, isUserOver: i, selected: l, guild: o } = this.props,
                     { shouldShowActivities: a, shouldShowGuildVerificationPopout: s } = this.state;
                 if (a && !n && !i && !s) {
-                    let n = Z.SE.getSetting().includes(o.id);
+                    let n = T.SE.getSetting().includes(o.id);
                     return (0, r.jsx)(F.Z, {
                         onAction: this.closePopout,
                         guild: o,
@@ -398,8 +398,8 @@ function et(e) {
             mentionCount: L.ZP.getMentionCount(n.id)
         })),
         d = (0, a.e7)([M.ZP], () => M.ZP.resolveUnreadSetting(n)),
-        h = (0, a.cj)([T.Z, R.Z, D.Z], () => {
-            let e = T.Z.getChannel(n.parent_id),
+        h = (0, a.cj)([Z.Z, R.Z, D.Z], () => {
+            let e = Z.Z.getChannel(n.parent_id),
                 r = R.Z.getCheck(n.guild_id);
             return {
                 canManageChannel: D.Z.can(W.Plq.MANAGE_CHANNELS, n),
@@ -435,7 +435,7 @@ function et(e) {
             enableConnectedUserLimit: !0,
             enableActivities: !0
         }),
-        Z = x && null == w;
+        T = x && null == w;
     return (0, r.jsx)(
         ee,
         J(
@@ -456,7 +456,7 @@ function et(e) {
             {
                 connected: x,
                 isFavoriteSuggestion: l && !j,
-                forceShowButtons: Z,
+                forceShowButtons: T,
                 channelInfo: w,
                 resolvedUnreadSetting: d,
                 enableHangStatus: P,

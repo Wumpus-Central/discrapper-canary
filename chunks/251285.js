@@ -11,11 +11,11 @@ var r = n(442837),
     o = n(905405),
     c = n(786761),
     s = n(937889),
-    u = n(903488),
-    d = n(416638),
-    _ = n(23750),
-    E = n(699516),
-    O = n(768119);
+    u = n(23750),
+    d = n(699516),
+    _ = n(171900),
+    E = n(518944),
+    O = n(607802);
 function I(e, t) {
     let [n] = t,
         r = n.getMessage(e.id, e.channel_id);
@@ -30,15 +30,15 @@ function I(e, t) {
 }
 function p(e) {
     return (0, r.e7)(
-        [E.Z],
+        [d.Z],
         () => {
             let t = 0,
                 n = 0;
             return [
                 e.map((e) =>
                     e.filter((e) => {
-                        let r = E.Z.isBlockedForMessage(e),
-                            i = E.Z.isIgnoredForMessage(e);
+                        let r = d.Z.isBlockedForMessage(e),
+                            i = d.Z.isIgnoredForMessage(e);
                         return (r && e.isSearchHit ? t++ : i && e.isSearchHit && n++, (!r && !i) || e.isSearchHit);
                     })
                 ),
@@ -54,18 +54,18 @@ function T(e) {
     let t = (0, o.p)(),
         [n, a, c] = p(
             (0, r.e7)(
-                [O.Z, u.Z, l.Z],
+                [E.Z, _.Z, l.Z],
                 () => {
                     var n;
-                    let r = (0, d.WJ)(e),
-                        a = O.Z.getSearchResultsQuery(r),
-                        o = u.Z.getMessages(r);
+                    let r = (0, O.WJ)(e),
+                        a = E.Z.getSearchResultsQuery(r),
+                        o = _.Z.getMessages(r);
                     if (null == o || 0 === o.length) return [];
                     let c = (0, i.nC)(null != (n = null == a ? void 0 : a.content) ? n : ''),
-                        E = [];
+                        d = [];
                     return (
                         o.forEach((e) => {
-                            let n = new _.ZP(e);
+                            let n = new u.ZP(e);
                             ((n = I(n, [l.Z])).set(
                                 'customRenderedContent',
                                 (0, s.ZP)(n, {
@@ -75,9 +75,9 @@ function T(e) {
                                     shouldFilterKeywords: t
                                 })
                             ),
-                                E.push([n]));
+                                d.push([n]));
                         }),
-                        E
+                        d
                     );
                 },
                 [e, t],
@@ -94,15 +94,15 @@ let S = [];
 function N(e) {
     let t = (0, o.p)(),
         n = a.d.useExperiment({ location: 'useMessageRenderedContent' }).enabled,
-        [d, _, E] = p(
+        [u, d, O] = p(
             (0, r.e7)(
-                [O.Z, u.Z, l.Z],
+                [E.Z, _.Z, l.Z],
                 () => {
                     var r;
-                    let a = O.Z.getSearchResultsQuery(e),
-                        o = u.Z.getRawMessages(e);
+                    let a = E.Z.getSearchResultsQuery(e),
+                        o = _.Z.getRawMessages(e);
                     if (null == a || null == o) return S;
-                    let d = (0, i.nC)(null != (r = a.content) ? r : '');
+                    let u = (0, i.nC)(null != (r = a.content) ? r : '');
                     return o.map((e) =>
                         e.map((e) => {
                             let r = I((0, c.e5)(e), [l.Z]);
@@ -110,7 +110,7 @@ function N(e) {
                                 ? r.set(
                                       'customRenderedContent',
                                       (0, s.ZP)(r, {
-                                          postProcessor: d,
+                                          postProcessor: u,
                                           allowHeading: !0,
                                           allowList: !0,
                                           allowGameMentions: n,
@@ -126,8 +126,8 @@ function N(e) {
             )
         );
     return {
-        searchResults: d,
-        blockCount: _,
-        ignoreCount: E
+        searchResults: u,
+        blockCount: d,
+        ignoreCount: O
     };
 }

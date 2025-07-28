@@ -59,7 +59,7 @@ function g() {
                       )),
                       (t = t =
                           {
-                              children: (0, r.jsx)(o.P4T, {
+                              children: (0, r.jsx)(o.Mgn, {
                                   color: 'currentColor',
                                   'aria-hidden': !0
                               })

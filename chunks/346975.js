@@ -1105,7 +1105,7 @@ function eZ(e) {
                                             : (0, r.jsxs)('div', {
                                                   className: ep.startPostHelp,
                                                   children: [
-                                                      (0, r.jsx)(p.P4T, {
+                                                      (0, r.jsx)(p.Mgn, {
                                                           size: 'custom',
                                                           color: 'currentColor',
                                                           height: 14,

@@ -18,7 +18,7 @@ let x = () => {
     var e;
     let [t, n] = i.useState(!1),
         l = c.G6.useSetting(),
-        { nickname: x, dmsAllowed: b, showActivity: E, mutedServer: v, setNickname: I, setDmsAllowed: j, setShowActivity: O, setMutedServer: y, guildId: S, inviteCode: N } = (0, g.XW)(),
+        { nickname: x, dmsAllowed: b, showActivity: E, mutedServer: v, setNickname: I, setDmsAllowed: j, setShowActivity: O, setMutedServer: S, guildId: y, inviteCode: N } = (0, g.XW)(),
         C = null == (e = o.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
         A = (0, p.m4)({ location: 'InviteSettingsControls' });
     return (0, r.jsxs)('div', {
@@ -29,7 +29,7 @@ let x = () => {
                 onClick: () => {
                     (t ||
                         h.default.track(m.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
-                            guild_id: S,
+                            guild_id: y,
                             invite_code: N
                         }),
                         n(!t));
@@ -99,7 +99,7 @@ let x = () => {
                         (0, r.jsx)(u.Z, {
                             title: f.intl.string(f.t['0nZCqK']),
                             value: v,
-                            onChange: y
+                            onChange: S
                         })
                 ]
             })

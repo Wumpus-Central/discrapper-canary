@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(963550),
     N = n(845080),
     w = n(295790),
-    Z = n(145807),
-    T = n(56744),
+    T = n(145807),
+    Z = n(56744),
     A = n(834129),
     R = n(981631),
     D = n(388032),
@@ -133,7 +133,7 @@ let G = i.memo(function e(t) {
                     [M.disableInteraction]: F,
                     [M.groupStart]: t.isGroupStart
                 }),
-                childrenRepliedMessage: (0, T.Z)(s, l, W, K, A),
+                childrenRepliedMessage: (0, Z.Z)(s, l, W, K, A),
                 childrenHeader: (0, N.Z)(
                     U(k({}, t), {
                         author: ei,
@@ -163,7 +163,7 @@ let G = i.memo(function e(t) {
                     enabledContentHarmTypeFlags: ec,
                     ctaButtonType: eu
                 }),
-                childrenExecutedCommand: (0, Z.Z)(s, l, A),
+                childrenExecutedCommand: (0, T.Z)(s, l, A),
                 childrenMessageContent: (0, P.Z)(t, en),
                 childrenSystemMessage: (0, w.Z)(t),
                 onContextMenu: G,

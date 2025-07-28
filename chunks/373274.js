@@ -33,8 +33,8 @@ var r,
     P = n(486311),
     N = n(620304),
     w = n(220444),
-    Z = n(31022),
-    T = n(10401),
+    T = n(31022),
+    Z = n(10401),
     A = n(131704),
     R = n(592125),
     D = n(796974),
@@ -682,7 +682,7 @@ class e_ extends (r = l.PureComponent) {
                             I
                         );
                     case eu.d4z.GUILD_STAGE_VOICE:
-                        var w, Z;
+                        var w, T;
                         return (0, i.jsx)(
                             et.Z,
                             {
@@ -693,7 +693,7 @@ class e_ extends (r = l.PureComponent) {
                                 connected: c === E.id,
                                 collapsed: E.isCollapsed || y.isCollapsed,
                                 voiceStates: null != (w = h[E.id]) ? w : [],
-                                speakerVoiceStates: null != (Z = f[E.id]) ? Z : [],
+                                speakerVoiceStates: null != (T = f[E.id]) ? T : [],
                                 disableManageChannels: p,
                                 isFavoriteCategory: S
                             },
@@ -781,7 +781,7 @@ class e_ extends (r = l.PureComponent) {
                 }
             }),
             ef(this, 'testShouldSkipTutorial', () => {
-                if (!T.Z.shouldShow('voice-conversations')) return;
+                if (!Z.Z.shouldShow('voice-conversations')) return;
                 let { guildChannels: e } = this.props,
                     t = e.getFirstVoiceChannel();
                 if (null == t) return void f.Z.dismiss('voice-conversations');
@@ -845,10 +845,10 @@ let eO = (e) => {
     l.useEffect(() => {
         null != r && P(r);
     }, [r, P]);
-    let N = (0, Z.Z)(t),
+    let N = (0, T.Z)(t),
         w = (0, x.V)('NavigableChannels'),
-        T = (0, u.e7)([k.default], () => k.default.getCurrentUser()),
-        A = (0, I.Z)(null == T ? void 0 : T.id, t) && !0 === n.premiumProgressBarEnabled;
+        Z = (0, u.e7)([k.default], () => k.default.getCurrentUser()),
+        A = (0, I.Z)(null == Z ? void 0 : Z.id, t) && !0 === n.premiumProgressBarEnabled;
     return (0, i.jsx)(_.Gt, {
         value: d,
         children: (0, i.jsx)(g.Z, {

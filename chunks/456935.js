@@ -1,9 +1,9 @@
-(n.d(t, { I9: () => s }), n(255367), n(73800));
+(n.d(t, { I9: () => a }), n(255367), n(73800));
 var r = n(692547);
 (n(481060), n(496675), n(484455));
 var i = n(981631),
     l = n(388032);
-function s(e) {
+function a(e) {
     switch (e) {
         case i.sFg.LOW:
             return l.intl.string(l.t.SsCK8P);

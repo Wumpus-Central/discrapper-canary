@@ -2,17 +2,17 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
-    a = n(392711),
-    o = n.n(a),
+    a = n.n(l),
+    s = n(392711),
+    o = n.n(s),
     c = n(442837),
     d = n(481060),
     u = n(570140),
     m = n(275759),
     g = n(313201),
     p = n(63063),
-    f = n(243730),
-    h = n(764260),
+    h = n(243730),
+    f = n(764260),
     x = n(946724),
     b = n(95242),
     j = n(530198),
@@ -79,14 +79,14 @@ function P(e) {
     });
 }
 function w(e) {
-    let { guild: t, role: n, locked: l, setSelectedSection: a, integrations: o } = e,
+    let { guild: t, role: n, locked: l, setSelectedSection: s, integrations: o } = e,
         { headerHeight: g, headerRef: w } = (0, b.Z)(0),
         { scrolledToTop: R, handleScroll: Z } = (0, v.V)(),
         D = (0, c.e7)(
-            [f.Z],
+            [h.Z],
             () => {
                 var e;
-                return null == (e = f.Z.getRoleMemberCount(t.id)) ? void 0 : e[n.id];
+                return null == (e = h.Z.getRoleMemberCount(t.id)) ? void 0 : e[n.id];
             },
             [n.id, t.id]
         ),
@@ -107,7 +107,7 @@ function w(e) {
             operator: void 0,
             value: void 0
         }),
-            (0, h.d_)(n.id, T(r, k)));
+            (0, f.d_)(n.id, T(r, k)));
     }
     function U() {
         u.Z.dispatch({
@@ -138,7 +138,7 @@ function w(e) {
             })),
             (B = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    ((F = () => (0, h.d_)(n.id, [])),
+                    ((F = () => (0, f.d_)(n.id, [])),
                     (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsxs)('div', {
@@ -167,7 +167,7 @@ function w(e) {
                         ]
                     })),
                     (function (e, t, n, i, l) {
-                        let s = T(i, m.O1.OR);
+                        let a = T(i, m.O1.OR);
                         return (0, r.jsx)(d.xJW, {
                             className: N.operatorContainer,
                             title: C.intl.string(C.t.Xs7PHR),
@@ -184,13 +184,13 @@ function w(e) {
                                 ],
                                 onChange: (e) => l(i, e.value),
                                 value: n,
-                                disabled: e || s.length < 2,
+                                disabled: e || a.length < 2,
                                 'aria-labelledby': S
                             })
                         });
-                    })(l, n.id, k, L, (e, t) => (0, h.d_)(n.id, T(e, t))),
+                    })(l, n.id, k, L, (e, t) => (0, f.d_)(n.id, T(e, t))),
                     (function (e, t, n, i, l) {
-                        function s(n, r) {
+                        function a(n, r) {
                             let i = [];
                             for (let t of e) i.push(E({}, t));
                             if (null == n) {
@@ -199,25 +199,25 @@ function w(e) {
                             } else -1 === r ? i.push(n) : r >= 0 && (i[r] = n);
                             t(i);
                         }
-                        let a = new Map();
+                        let s = new Map();
                         for (let t of (e.forEach((e, t) => {
                             let n = ''.concat(e.connectionType, ':').concat(e.applicationId);
-                            if (a.has(n)) {
-                                let r = a.get(n);
+                            if (s.has(n)) {
+                                let r = s.get(n);
                                 null == r ||
                                     r.push({
                                         index: t,
                                         configuration: e
                                     });
                             } else
-                                a.set(n, [
+                                s.set(n, [
                                     {
                                         index: t,
                                         configuration: e
                                     }
                                 ]);
                         }),
-                        a.values())) {
+                        s.values())) {
                             if (
                                 t.some((e) => {
                                     let { configuration: t } = e;
@@ -255,12 +255,12 @@ function w(e) {
                         }
                         return (0, r.jsx)('div', {
                             className: N.configurationsContainer,
-                            children: Array.from(a.values()).map((e) =>
+                            children: Array.from(s.values()).map((e) =>
                                 (0, r.jsx)(
                                     j.Z,
                                     {
                                         configurationItems: e,
-                                        onConfigurationChange: s,
+                                        onConfigurationChange: a,
                                         locked: n,
                                         integrations: l
                                     },
@@ -268,7 +268,7 @@ function w(e) {
                                 )
                             )
                         });
-                    })(L, (e) => (0, h.d_)(n.id, T(e, k)), l, n.id, o),
+                    })(L, (e) => (0, f.d_)(n.id, T(e, k)), l, n.id, o),
                     e
                 ]
             })));
@@ -281,20 +281,20 @@ function w(e) {
             className: I.contentWidth,
             children: [
                 (0, r.jsx)('div', {
-                    className: s()(I.header, I.stickyHeader, { [I.stickyHeaderElevated]: !R }),
+                    className: a()(I.header, I.stickyHeader, { [I.stickyHeaderElevated]: !R }),
                     ref: w,
                     children: (0, r.jsx)(v.Z, {
                         guild: t,
                         role: n,
                         selectedSection: _.ZI.VERIFICATIONS,
-                        setSelectedSection: a
+                        setSelectedSection: s
                     })
                 }),
                 (null != D ? D : 0) > 0
                     ? (0, r.jsxs)('div', {
                           className: N.warningContainer,
                           children: [
-                              (0, r.jsx)(d.P4T, {
+                              (0, r.jsx)(d.Mgn, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,

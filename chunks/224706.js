@@ -31,7 +31,7 @@ let w = 3,
     D = 20;
 function L(e) {
     let { applicationId: t, secret: n, channelId: r, intent: i = R.Ws.PLAY, embedded: a = !1, source: o, locationObject: s, analyticsLocations: c } = e;
-    k({
+    M({
         applicationId: t,
         channelId: r,
         embedded: a,
@@ -64,7 +64,7 @@ function x(e, t) {
               sku: t
           };
 }
-function M(e) {
+function k(e) {
     return o.tn
         .post({
             url: C.ANM.OAUTH2_AUTHORIZE,
@@ -95,7 +95,7 @@ function M(e) {
             }
         );
 }
-async function k(e) {
+async function M(e) {
     let { applicationId: t, branchId: n, channelId: r, embedded: i = !1, source: a, locationObject: o = {}, analyticsLocations: s = [] } = e;
     if (i) {
         let e = u.Z.getApplication(t);
@@ -123,7 +123,7 @@ async function k(e) {
         if (null == e) throw Error('Missing dispatch game when launching');
         let i = E.Z.getLibraryApplication(t, n);
         if (null == i) throw Error('Missing library application when launching');
-        d = M(t).then((t) => v.Z.launchDispatchApplication(e, t, h.default.locale, i.getBranchName(), r));
+        d = k(t).then((t) => v.Z.launchDispatchApplication(e, t, h.default.locale, i.getBranchName(), r));
     } else {
         let e = u.Z.getApplication(t);
         d = null != e ? v.Z.launch(e) : v.Z.launchGame(t);
@@ -348,7 +348,7 @@ let j = {
             game: e
         });
     },
-    launch: k,
+    launch: M,
     async join(e) {
         let { userId: t, sessionId: n, applicationId: r, channelId: i, messageId: a, intent: o = R.Ws.PLAY, embedded: s = !1, source: c, locationObject: u, analyticsLocations: d } = e;
         if (__OVERLAY__)

@@ -30,7 +30,7 @@ function Z(e) {
             },
             [a]
         ),
-        P = (function (e, t) {
+        S = (function (e, t) {
             let [n, r] = l.useState(''),
                 [a, s] = l.useState(!1),
                 [o, i] = l.useState(!1),
@@ -107,7 +107,7 @@ function Z(e) {
                                                       }));
                                               }
                                               return e;
-                                          })({}, P)
+                                          })({}, S)
                                       )
                                   ]
                               })
@@ -134,12 +134,12 @@ function Z(e) {
                         })
                     ]
                 }),
-                children: P.hasResults
+                children: S.hasResults
                     ? (0, r.jsx)(m.Z, {
                           channel: t,
                           startThread: w,
                           goToThread: N,
-                          threadIds: P.results
+                          threadIds: S.results
                       })
                     : (0, r.jsx)(f.Z, {
                           channel: t,

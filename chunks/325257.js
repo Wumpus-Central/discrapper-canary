@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(252686),
     N = n(682662),
     w = n(674552),
-    Z = n(981631),
-    T = n(388032),
+    T = n(981631),
+    Z = n(388032),
     A = n(335426);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -75,14 +75,14 @@ function D(e, t) {
 }
 let L = {
     analyticsSource: {
-        page: Z.ZY5.GUILD_CHANNEL,
-        section: Z.jXE.CHANNEL_LIST,
-        object: Z.qAy.CHANNEL
+        page: T.ZY5.GUILD_CHANNEL,
+        section: T.jXE.CHANNEL_LIST,
+        object: T.qAy.CHANNEL
     }
 };
 function M(e, t) {
     (0, f.jW)(e, async () => {
-        let { default: e } = await Promise.all([n.e('71418'), n.e('7654'), n.e('44156'), n.e('7104'), n.e('6850'), n.e('58227'), n.e('54408'), n.e('20087'), n.e('94312'), n.e('56534'), n.e('87154'), n.e('33213'), n.e('40407')]).then(n.bind(n, 545135));
+        let { default: e } = await Promise.all([n.e('1806'), n.e('71418'), n.e('7654'), n.e('44156'), n.e('7104'), n.e('6850'), n.e('58227'), n.e('54408'), n.e('20087'), n.e('94312'), n.e('56534'), n.e('87154'), n.e('33213'), n.e('40407')]).then(n.bind(n, 545135));
         return (n) => (0, r.jsx)(e, D(R({}, n), { guild: t }));
     });
 }
@@ -110,7 +110,7 @@ let k = i.memo(function (e) {
             },
             collect: (e) => ({ dragging: e.isDragging() })
         }),
-        ep = (0, c.Ie)(null != eo ? eo : Z.lds, null != ea ? 2 : 1),
+        ep = (0, c.Ie)(null != eo ? eo : T.lds, null != ea ? 2 : 1),
         [ef, eg] = i.useState(!1),
         em = !ee && ef,
         [eb, e_] = i.useState(!1),
@@ -175,7 +175,7 @@ let k = i.memo(function (e) {
                       D(
                           R(
                               {
-                                  ariaLabel: T.intl.formatToPlainString(T.t['/uzRsr'], {
+                                  ariaLabel: Z.intl.formatToPlainString(Z.t['/uzRsr'], {
                                       guildName: H.name,
                                       mentions: X
                                   }),
@@ -202,7 +202,7 @@ let k = i.memo(function (e) {
                           }
                       )
                   ),
-        eZ = ed
+        eT = ed
             ? (0, r.jsx)(x.OG, { children: (0, r.jsx)(P.Z, {}) })
             : (0, r.jsx)(s.animated.div, {
                   ref: $
@@ -239,7 +239,7 @@ let k = i.memo(function (e) {
                 guild: H,
                 disabled: ee,
                 isDragging: ed,
-                children: eZ
+                children: eT
             }),
             $
                 ? (0, r.jsx)(x.ZP, {

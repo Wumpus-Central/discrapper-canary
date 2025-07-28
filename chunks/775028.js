@@ -16,8 +16,8 @@ var l = n(255367),
     x = n(454585),
     _ = n(22082),
     C = n(703656),
-    j = n(6025),
-    b = n(922482),
+    b = n(6025),
+    j = n(922482),
     v = n(601070),
     y = n(216306),
     O = n(163),
@@ -71,8 +71,8 @@ function A(e, t) {
         e
     );
 }
-let B = new Set([I.d4z.GUILD_FORUM, I.d4z.GUILD_MEDIA]),
-    k = new Set([I.d4z.GUILD_VOICE, I.d4z.GUILD_STAGE_VOICE]);
+let k = new Set([I.d4z.GUILD_FORUM, I.d4z.GUILD_MEDIA]),
+    B = new Set([I.d4z.GUILD_VOICE, I.d4z.GUILD_STAGE_VOICE]);
 function R(e) {
     let { guild: t, channel: r, onCategoryClick: i } = e,
         o = (0, Z.Mf)(t.id, r.id, r.id),
@@ -193,7 +193,7 @@ let D = r.memo(function () {
                                 'thread-count'
                             )
                         ),
-                    k.has(e.type) ||
+                    B.has(e.type) ||
                         n.push(
                             (0, l.jsx)(
                                 d.Text,
@@ -225,11 +225,11 @@ let D = r.memo(function () {
                 );
             })(t, G),
             X = (e) => (
-                (e.stopPropagation(), B.has(t.type) || e.shiftKey)
+                (e.stopPropagation(), k.has(t.type) || e.shiftKey)
                     ? (0, C.XU)(i.id, t.id)
                     : t.isGuildStageVoice() || t.isGuildVoice()
-                      ? (0, b.Cq)(t)
-                      : j.Z.openChannelAsSidebar({
+                      ? (0, j.Cq)(t)
+                      : b.Z.openChannelAsSidebar({
                             guildId: t.guild_id,
                             channelId: t.id,
                             baseChannelId: w.oC.CHANNEL_BROWSER

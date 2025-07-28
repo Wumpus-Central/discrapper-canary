@@ -15,12 +15,11 @@ var r = n(255367),
     b = n(388032),
     h = n(264700);
 function v(e) {
-    var t;
-    let { guildId: n, role: l, theme: v, content: O = b.intl.string(b.t['6OSasb']), className: y } = e,
-        E = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
-        S = g.ZP.useName(n, null, E),
-        j = (0, c.Kz)(l),
-        C = i.useMemo(() => {
+    let { guildId: t, role: n, theme: l, content: v = b.intl.string(b.t['6OSasb']), className: O } = e,
+        y = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
+        E = g.ZP.useName(t, null, y),
+        S = (0, c.Kz)(n),
+        j = i.useMemo(() => {
             var e, t;
             return (0, u.e5)(
                 ((e = (function (e) {
@@ -51,12 +50,12 @@ function v(e) {
                     {},
                     (0, d.ZP)({
                         channelId: '0',
-                        content: O,
+                        content: v,
                         tts: void 0,
                         type: void 0,
                         messageReference: void 0,
                         allowedMentions: void 0,
-                        author: E
+                        author: y
                     })
                 )),
                 (t = t =
@@ -78,21 +77,22 @@ function v(e) {
                       }),
                 e)
             );
-        }, [E, O]),
-        _ = {
-            nick: S,
-            colorString: null != (t = l.colorString) ? t : void 0
+        }, [y, v]),
+        C = {
+            nick: E,
+            colorString: n.colorString,
+            colorStrings: n.colorStrings
         };
     return (0, r.jsx)(a.f6W, {
-        theme: v,
+        theme: l,
         children: (e) =>
             (0, r.jsx)('div', {
-                className: s()(e, h.container, y),
+                className: s()(e, h.container, O),
                 children: (0, r.jsx)(f.Z, {
                     hideTimestamp: !0,
-                    author: _,
-                    roleIcon: j,
-                    message: C,
+                    author: C,
+                    roleIcon: S,
+                    message: j,
                     isGroupStart: !0,
                     disableInteraction: !0
                 })

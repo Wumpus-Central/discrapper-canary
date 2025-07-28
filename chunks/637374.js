@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(930114),
     x = n(981632),
     v = n(108989),
-    O = n(703656),
-    y = n(314897),
+    y = n(703656),
+    O = n(314897),
     j = n(82142),
     I = n(283595),
     S = n(594174),
@@ -66,7 +66,7 @@ function G(e) {
     }
     return e;
 }
-function V(e, t) {
+function H(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -84,7 +84,7 @@ function V(e, t) {
         e
     );
 }
-function H(e) {
+function V(e) {
     let { onClick: t, libraryApplication: n } = e;
     return (0, r.jsxs)(d.P3F, {
         className: F.libraryLink,
@@ -143,7 +143,7 @@ class W extends i.Component {
         let {
             analyticsContext: { location: e }
         } = this.props;
-        return V(G({}, e), { section: k.jXE.GIFT_CODE_EMBED });
+        return H(G({}, e), { section: k.jXE.GIFT_CODE_EMBED });
     }
     renderActions(e) {
         let { libraryApplication: t } = this.props;
@@ -155,7 +155,7 @@ class W extends i.Component {
                         this.renderButton(e),
                         null == t || e.isSubscription
                             ? null
-                            : (0, r.jsx)(H, {
+                            : (0, r.jsx)(V, {
                                   onClick: this.handleViewLibrary,
                                   libraryApplication: t
                               })
@@ -189,7 +189,7 @@ class W extends i.Component {
             (e.redeemed || a || e.isClaimed || !n.verified) && ((l.color = u.zx.Colors.BRAND), (l.disabled = !0)),
             (0, r.jsx)(
                 u.zx,
-                V(G({}, l), {
+                H(G({}, l), {
                     className: (0, h.mO)(e) ? F.collectiblesAcceptButton : null,
                     size: u.zx.Sizes.SMALL,
                     children: e.redeemed ? U.intl.string(U.t.BTihoq) : null != e.giftStyle ? U.intl.string(U.t.TiZFqa) : U.intl.string(U.t.bUvv1d)
@@ -319,7 +319,7 @@ class W extends i.Component {
         (super(...e),
             B(this, 'handleViewLibrary', (e) => {
                 let { libraryApplication: t } = this.props;
-                (e.preventDefault(), null != t && t.isHidden() ? (0, O.uL)(k.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, O.uL)(k.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } }));
+                (e.preventDefault(), null != t && t.isHidden() ? (0, y.uL)(k.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, y.uL)(k.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } }));
             }),
             B(this, 'handleVerificationClick', (e) => {
                 (e.stopPropagation(), e.preventDefault(), p.Z.open(k.oAB.ACCOUNT));
@@ -330,7 +330,7 @@ class W extends i.Component {
                     e.stopPropagation(),
                     A.default.track(k.rMx.OPEN_MODAL, {
                         type: 'gift_accept',
-                        location: V(G({}, this.analyticsLocation), { object: k.qAy.BUTTON_CTA })
+                        location: H(G({}, this.analyticsLocation), { object: k.qAy.BUTTON_CTA })
                     }));
                 let a = i !== k.uaV.CUSTOM_GIFT ? void 0 : r;
                 (0, C.V)({
@@ -386,7 +386,7 @@ class W extends i.Component {
     }
 }
 let K = (0, g.Z)((0, f.Z)(W)),
-    Y = c.ZP.connectStores([j.Z, N.Z, S.default, I.Z, T.Z, y.default, _.Z], (e) => {
+    Y = c.ZP.connectStores([j.Z, N.Z, S.default, I.Z, T.Z, O.default, _.Z], (e) => {
         let { code: t, author: n, currentUser: r } = e,
             i = j.Z.get(t),
             l = null != i ? N.Z.get(i.skuId) : null,
@@ -398,7 +398,7 @@ let K = (0, g.Z)((0, f.Z)(W)),
             gifter: a,
             currentUser: r,
             subscriptionPlan: null != i && null != i.subscriptionPlanId ? (0, R.oE)(i.subscriptionPlanId) : null,
-            isSelfGift: null != i ? y.default.getId() === i.userId : y.default.getId() === n.id,
+            isSelfGift: null != i ? O.default.getId() === i.userId : O.default.getId() === n.id,
             resolved: j.Z.getIsResolved(t),
             libraryApplication: null != l && (null == i ? void 0 : i.entitlementBranches) != null ? w.z2(i.entitlementBranches, l, I.Z) : null,
             useReducedMotion: o

@@ -5,7 +5,7 @@
     CW: () => eD,
     Cr: () => eh,
     DC: () => eo,
-    Ex: () => ek,
+    Ex: () => eM,
     Fg: () => $,
     G6: () => ef,
     H1: () => x,
@@ -30,9 +30,8 @@
     T4: () => L,
     UP: () => eu,
     Wp: () => eR,
-    Wz: () => eM,
     Xc: () => V,
-    Xk: () => M,
+    Xk: () => k,
     Xr: () => ed,
     YC: () => eK,
     YT: () => S,
@@ -67,7 +66,8 @@
     l4: () => eY,
     mX: () => K,
     nc: () => eO,
-    qF: () => k,
+    no: () => ek,
+    qF: () => M,
     rN: () => ev,
     tU: () => eg,
     uL: () => G,
@@ -236,7 +236,7 @@ let S = (0, d.Zc)(
         },
         (e) => o.D5.create({ value: e })
     ),
-    M = (0, d.Zc)(
+    k = (0, d.Zc)(
         'textAndImages',
         'showCommandSuggestions',
         (e) => {
@@ -245,7 +245,7 @@ let S = (0, d.Zc)(
         },
         (e) => o.D5.create({ value: e })
     ),
-    k = (0, d.Zc)(
+    M = (0, d.Zc)(
         'voiceAndVideo',
         'alwaysPreviewVideo',
         (e) => {
@@ -784,20 +784,32 @@ let eS = (0, d.KM)(
         'activityJoiningRestrictedGuildIds',
         (e) => (null != e ? e : eL),
         (e) => e
+    );
+(0, d.TG)({
+    baseSetting: (0, d.Zc)(
+        'privacy',
+        'defaultGuildsActivityRestricted',
+        (e) => e,
+        (e) => (null != e ? e : a.E5.OFF)
     ),
-    eM = (0, d.TG)({
+    isEligible: () => (0, c.o0)('user_settings'),
+    useIsEligible: () => (0, c.Yd)('user_settings'),
+    ineligibleDefault: a.E5.OFF,
+    eligibleDefault: () => a.E5.ON_FOR_LARGE_GUILDS
+});
+let ek = (0, d.TG)({
         baseSetting: (0, d.Zc)(
             'privacy',
-            'defaultGuildsActivityRestricted',
+            'defaultGuildsActivityRestrictedV2',
             (e) => e,
-            (e) => (null != e ? e : a.E5.OFF)
+            (e) => (null != e ? e : a.GI.ACTIVITY_STATUS_OFF)
         ),
         isEligible: () => (0, c.o0)('user_settings'),
         useIsEligible: () => (0, c.Yd)('user_settings'),
-        ineligibleDefault: a.E5.OFF,
-        eligibleDefault: () => a.E5.ON_FOR_LARGE_GUILDS
+        ineligibleDefault: a.GI.ACTIVITY_STATUS_OFF,
+        eligibleDefault: () => a.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS
     }),
-    ek = (0, d.Zc)(
+    eM = (0, d.Zc)(
         'privacy',
         'familyCenterEnabledV2',
         (e) => (null == e ? void 0 : e.value),

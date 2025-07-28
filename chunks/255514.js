@@ -29,8 +29,8 @@ var r = n(255367),
     P = n(15682),
     k = n(189472),
     E = n(749534),
-    w = n(157759),
-    M = n(521332),
+    M = n(157759),
+    w = n(521332),
     A = n(905434),
     R = n(196627),
     D = n(289809),
@@ -257,7 +257,7 @@ let K = (e) => {
                                     }),
                                 null != q(t, 'deauthorize_app') &&
                                     'application' === n.name &&
-                                    (0, r.jsx)(w.Z, {
+                                    (0, r.jsx)(M.Z, {
                                         application: n.record,
                                         reportId: et
                                     })
@@ -266,7 +266,7 @@ let K = (e) => {
                     null != q(t, 'settings_upsells') &&
                         ('message' === n.name || 'report_to_mod_message' === n.name) &&
                         null != eZ &&
-                        (0, r.jsx)(M.Z, {
+                        (0, r.jsx)(w.Z, {
                             settingsUpsells: eZ,
                             channelId: n.record.channel_id,
                             onModalClose: J,

@@ -91,41 +91,42 @@ let w = i.memo(function (e) {
         });
     }),
     R = i.memo(function (e) {
-        let { channel: t, participant: l, tempDisableOnInit: o = !1 } = e,
-            g = i.useRef(null),
-            [C, j] = i.useState(o);
+        var t;
+        let { channel: l, participant: o, tempDisableOnInit: g = !1 } = e,
+            C = i.useRef(null),
+            [j, S] = i.useState(g);
         (0, f.ZP)(() => {
-            if (!C) return;
-            let e = setTimeout(() => j(!1), 1000);
+            if (!j) return;
+            let e = setTimeout(() => S(!1), 1000);
             return () => clearTimeout(e);
         });
-        let S = t.getGuildId();
-        s()(null != S, 'Channel cannot be guildless');
-        let { isMobile: P, status: I } = (0, c.cj)([x.Z], () => ({
-                isMobile: x.Z.isMobileOnline(l.user.id),
-                status: x.Z.getStatus(l.user.id, S)
+        let P = l.getGuildId();
+        s()(null != P, 'Channel cannot be guildless');
+        let { isMobile: I, status: w } = (0, c.cj)([x.Z], () => ({
+                isMobile: x.Z.isMobileOnline(o.user.id),
+                status: x.Z.getStatus(o.user.id, P)
             })),
-            w = (0, c.e7)([y.ZP], () => y.ZP.getMember(S, l.user.id)),
-            R = (0, b.X7)(t.guild_id, null == w ? void 0 : w.userId, null == w ? void 0 : w.colorStrings),
-            M = i.useMemo(() => ({ [S]: [l.user.id] }), [S, l.user.id]);
-        (0, m.$)(M);
-        let D = l.rtsState === E.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-        function k() {
-            (0, v.DT)(t, l.user.id, !1);
-        }
+            R = (0, c.e7)([y.ZP], () => y.ZP.getMember(P, o.user.id)),
+            M = (0, b.X7)(l.guild_id, null == R ? void 0 : R.userId, null != (t = null == R ? void 0 : R.colorStrings) ? t : null),
+            D = i.useMemo(() => ({ [P]: [o.user.id] }), [P, o.user.id]);
+        (0, m.$)(D);
+        let k = o.rtsState === E.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         function L() {
-            (0, v.DT)(t, l.user.id, !0);
+            (0, v.DT)(l, o.user.id, !1);
         }
-        let U = (e) => {
+        function U() {
+            (0, v.DT)(l, o.user.id, !0);
+        }
+        let B = (e) => {
             (0, p.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('97589'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387));
-                return (n) =>
+                return (t) =>
                     (0, r.jsx)(
                         e,
-                        A(N({}, n), {
-                            user: l.user,
-                            guildId: S,
-                            channel: t,
+                        A(N({}, t), {
+                            user: o.user,
+                            guildId: P,
+                            channel: l,
                             showMediaItems: !0
                         })
                     );
@@ -135,10 +136,10 @@ let w = i.memo(function (e) {
             className: T.participantRowContainer,
             children: [
                 (0, r.jsx)(_.Z, {
-                    targetElementRef: g,
-                    user: l.user,
-                    guildId: t.guild_id,
-                    channelId: t.id,
+                    targetElementRef: C,
+                    user: o.user,
+                    guildId: l.guild_id,
+                    channelId: l.id,
                     position: 'left',
                     spacing: 16,
                     clickTrap: !0,
@@ -149,9 +150,9 @@ let w = i.memo(function (e) {
                             A(
                                 N(
                                     {
-                                        innerRef: g,
+                                        innerRef: C,
                                         className: T.participantMemberContainer,
-                                        onContextMenu: U
+                                        onContextMenu: B
                                     },
                                     e
                                 ),
@@ -160,23 +161,23 @@ let w = i.memo(function (e) {
                                         (0, r.jsx)(h.Z, {
                                             size: d.EFr.SIZE_40,
                                             className: T.participantAvatar,
-                                            user: l.user,
-                                            isMobile: P,
-                                            status: I
+                                            user: o.user,
+                                            isMobile: I,
+                                            status: w
                                         }),
                                         (0, r.jsxs)('div', {
                                             className: T.participantTextContainer,
                                             children: [
                                                 (0, r.jsx)(d.PUh, {
-                                                    name: l.userNick,
-                                                    color: null != (t = null == w ? void 0 : w.colorString) ? t : void 0,
-                                                    roleColors: R,
+                                                    name: o.userNick,
+                                                    colorString: null != (t = null == R ? void 0 : R.colorString) ? t : null,
+                                                    colorStrings: M,
                                                     className: T.participantName
                                                 }),
                                                 (0, r.jsx)(d.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'header-secondary',
-                                                    children: (0, O.$)(l)
+                                                    children: (0, O.$)(o)
                                                 })
                                             ]
                                         })
@@ -187,7 +188,7 @@ let w = i.memo(function (e) {
                     }
                 }),
                 (0, r.jsx)(d.ua7, {
-                    text: D ? Z.intl.string(Z.t.h9rsTU) : Z.intl.string(Z.t.f0T7hI),
+                    text: k ? Z.intl.string(Z.t.h9rsTU) : Z.intl.string(Z.t.f0T7hI),
                     children: (e) =>
                         (0, r.jsx)(
                             u.zx,
@@ -195,8 +196,8 @@ let w = i.memo(function (e) {
                                 innerClassName: T.buttonContainer,
                                 look: u.zx.Looks.BLANK,
                                 size: u.zx.Sizes.NONE,
-                                onClick: k,
-                                disabled: D || C,
+                                onClick: L,
+                                disabled: k || j,
                                 children: (0, r.jsx)(d.Lrb, {
                                     size: 'xs',
                                     color: 'currentColor'
@@ -213,7 +214,7 @@ let w = i.memo(function (e) {
                                 innerClassName: a()(T.buttonContainer, T.buttonMargin),
                                 look: u.zx.Looks.BLANK,
                                 size: u.zx.Sizes.NONE,
-                                onClick: L,
+                                onClick: U,
                                 children: (0, r.jsx)(d.Dio, {
                                     size: 'xs',
                                     color: 'currentColor'

@@ -22,8 +22,8 @@ var r = n(255367),
     j = n(981631),
     E = n(388032);
 function S(e) {
-    let { onOpen: t, onClose: n, children: S, badgeState: x, popoutPosition: I, popoutAlign: P, targetElementRef: N, spacing: w, dialogClassName: Z } = e,
-        { analyticsLocations: T } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
+    let { onOpen: t, onClose: n, children: S, badgeState: x, popoutPosition: I, popoutAlign: P, targetElementRef: N, spacing: w, dialogClassName: T } = e,
+        { analyticsLocations: Z } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
         [A, R] = i.useState(!1),
         [D, L] = [
             (0, o.e7)([g.Z], () => {
@@ -80,7 +80,7 @@ function S(e) {
         [U]
     );
     return (0, r.jsx)(u.Gt, {
-        value: T,
+        value: Z,
         children: (0, r.jsx)(s.yRy, {
             targetElementRef: N,
             animation: s.yRy.Animation.NONE,
@@ -92,7 +92,7 @@ function S(e) {
             renderPopout: function () {
                 return (0, r.jsx)(s.VqE, {
                     'aria-label': E.intl.string(E.t.GSmTKC),
-                    className: Z,
+                    className: T,
                     children:
                         D === a.X.FOR_YOU
                             ? (0, r.jsx)(_.Z, {

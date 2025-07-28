@@ -107,7 +107,7 @@ function I(e) {
             height: v ? g : 0,
             config: P.Y
         }),
-        O = 0 === j ? u.P4T : u.d3s,
+        O = 0 === j ? u.Mgn : u.d3s,
         E = (0, m.Lq)(A.Ilk.RED_345),
         w = 0 === j ? E : l ? u.TVs.colors.TEXT_DEFAULT : u.TVs.colors.WHITE;
     return (0, r.jsx)(i.animated.div, {

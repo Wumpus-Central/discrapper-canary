@@ -1,4 +1,4 @@
-(n.d(t, { default: () => R }), n(388685), n(539854), n(415506));
+(n.d(t, { default: () => O }), n(388685), n(539854), n(415506));
 var l = n(255367),
     a = n(73800),
     s = n(120356),
@@ -26,16 +26,16 @@ var l = n(255367),
     Z = n(981631),
     y = n(388032),
     M = n(869322),
-    P = n(144452);
-let k = x.O.VOTE;
-function I() {
+    k = n(144452);
+let I = x.O.VOTE;
+function P() {
     let e = (0, _.ZP)();
     return (0, l.jsxs)(d.ubH, {
         theme: e,
         children: [
             (0, l.jsx)(d.oxh, {
-                darkSrc: P,
-                lightSrc: P,
+                darkSrc: k,
+                lightSrc: k,
                 width: 106,
                 height: 100,
                 style: { marginBottom: 10 }
@@ -132,7 +132,7 @@ function E(e) {
         })
     });
 }
-function V(e) {
+function U(e) {
     let { user: t, channel: n } = e,
         a = (0, i.e7)([f.default], () => f.default.getUser(t.id), [t]),
         s = N.ZP.useName(n.guild_id, n.id, t);
@@ -156,7 +156,7 @@ function V(e) {
                 'aria-label': s,
                 children: [
                     (0, l.jsx)('span', {
-                        className: t.isPomelo() ? '' : M.nickname,
+                        className: t.hasUniqueUsername() ? '' : M.nickname,
                         children: s
                     }),
                     (0, l.jsx)(u.Z, {
@@ -171,7 +171,7 @@ function V(e) {
         ]
     });
 }
-function O(e) {
+function V(e) {
     let { message: t, reaction: n, channel: s } = e,
         { reactors: r, hasMore: i } = (0, T.Z)({
             channelId: s.id,
@@ -190,7 +190,7 @@ function O(e) {
                 emoji: n.emoji,
                 limit: Z.pTL,
                 after: e,
-                type: k
+                type: I
             });
             ((c.current = l[l.length - 1].id), m(!1));
         }, [s.id, t.id, n.emoji]);
@@ -226,7 +226,7 @@ function O(e) {
                       ? (0, l.jsx)(d.$jN, { className: M.spinner }, 'loadingMore')
                       : null != a &&
                         (0, l.jsx)(
-                            V,
+                            U,
                             {
                                 channel: s,
                                 user: a
@@ -254,7 +254,7 @@ function O(e) {
         })
     });
 }
-function R(e) {
+function O(e) {
     var t;
     let { message: n, initialAnswerId: s, onClose: r, transitionState: u } = e,
         m = (0, i.e7)([p.Z], () => p.Z.getChannel(n.getChannelId())),
@@ -326,12 +326,12 @@ function R(e) {
                             className: M.panel,
                             children:
                                 null != v && f > 0
-                                    ? (0, l.jsx)(O, {
+                                    ? (0, l.jsx)(V, {
                                           message: n,
                                           reaction: v,
                                           channel: m
                                       })
-                                    : (0, l.jsx)(I, {})
+                                    : (0, l.jsx)(P, {})
                         })
                     ]
                 })

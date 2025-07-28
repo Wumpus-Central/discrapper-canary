@@ -97,7 +97,7 @@ function Y(e) {
         b(null != c.current && c.current.scrollWidth > c.current.clientWidth);
     }, [o.username]);
     let x = !o.isClaimed(),
-        _ = (u && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || x,
+        _ = (u && !o.hasUniqueUsername() && !o.hasVerifiedEmailOrPhone()) || x,
         j = _ ? G.intl.string(G.t['7Ngnys']) : void 0;
     return (0, i.jsxs)('div', {
         className: a()(F.field, l),
@@ -121,7 +121,7 @@ function Y(e) {
                                     variant: 'text-md/normal',
                                     children: o.username
                                 }),
-                                !o.isPomelo() &&
+                                !o.hasUniqueUsername() &&
                                     (0, i.jsxs)(m.Text, {
                                         tag: 'span',
                                         color: 'header-secondary',
@@ -140,7 +140,7 @@ function Y(e) {
                         text: G.intl.string(G.t.HHC5Z2),
                         children: (e) =>
                             (0, i.jsx)(
-                                m.P4T,
+                                m.Mgn,
                                 z(
                                     H(
                                         {
@@ -163,7 +163,7 @@ function Y(e) {
                         'aria-label': !1,
                         children: (e) =>
                             (0, i.jsx)(
-                                m.P4T,
+                                m.Mgn,
                                 z(
                                     H(
                                         {
@@ -262,7 +262,7 @@ function K(e) {
                             'aria-label': !1,
                             children: (e) =>
                                 (0, i.jsx)(
-                                    m.P4T,
+                                    m.Mgn,
                                     z(
                                         H(
                                             {

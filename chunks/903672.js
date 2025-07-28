@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(791914),
     N = n(981631),
     w = n(388032),
-    Z = n(384323);
-let T = {
+    T = n(384323);
+let Z = {
     offset: {
         left: 4,
         right: -12
@@ -60,13 +60,13 @@ function R(e) {
             everyoneFilter: j.ZP.everyoneFilter
         })),
         I = (0, _.Us)({ location: 'RecentMentions' }),
-        T = (0, p.Z)(C),
+        Z = (0, p.Z)(C),
         R = (0, p.Z)(E),
         L = (0, p.Z)(x);
     (i.useEffect(() => {
         if (!j.ZP.hasLoadedEver) return void A(f, !0);
-        ((null != T && C !== T) || (null != R && E !== R) || (null != L && x !== L)) && A(f, !0);
-    }, [T, C, R, E, L, x, f, !0]),
+        ((null != Z && C !== Z) || (null != R && E !== R) || (null != L && x !== L)) && A(f, !0);
+    }, [Z, C, R, E, L, x, f, !0]),
         (0, h.ZP)(() => {
             (null == g ? void 0 : g.some(m.k5)) && (u.Z.clearMentions(), A(f, !0));
         }),
@@ -88,8 +88,8 @@ function R(e) {
         [!0, t, l, c]
     );
     return (0, r.jsx)(d.ZP, {
-        className: o()(Z.recentMentionsPopout, { [Z.widerInbox]: I }),
-        scrollerClassName: Z.scroller,
+        className: o()(T.recentMentionsPopout, { [T.widerInbox]: I }),
+        scrollerClassName: T.scroller,
         onFetch: () => null,
         onJump: n,
         onCloseMessage: function (e) {
@@ -132,7 +132,7 @@ function L(e) {
     let o = C.Z.didAgree(l.getGuildId()),
         a = !!(0, g.aC)(l) && !o;
     return (0, r.jsxs)('div', {
-        className: Z.container,
+        className: T.container,
         children: [
             (0, r.jsx)(x.Z, {
                 channel: l,
@@ -140,7 +140,7 @@ function L(e) {
                 children:
                     null != i
                         ? (0, r.jsx)(c.M0o, {
-                              className: Z.closeButton,
+                              className: T.closeButton,
                               tooltip: w.intl.string(w.t.cpT0Cg),
                               color: c.YX$.TERTIARY,
                               icon: (0, r.jsx)(c.Dio, {
@@ -152,10 +152,10 @@ function L(e) {
                         : null
             }),
             (0, r.jsxs)('div', {
-                className: Z.messageContainer,
+                className: T.messageContainer,
                 children: [
                     (0, r.jsx)(E.Z, {
-                        className: Z.jumpMessageButton,
+                        className: T.jumpMessageButton,
                         onJump: n
                     }),
                     (0, r.jsx)(
@@ -163,11 +163,11 @@ function L(e) {
                         {
                             message: t,
                             channel: l,
-                            className: Z.message,
+                            className: T.message,
                             hideAccessories: a,
                             compact: O.jU.getSetting(),
                             animateAvatar: !1,
-                            focusProps: T,
+                            focusProps: Z,
                             trackAnnouncementViews: !0
                         },
                         t.id

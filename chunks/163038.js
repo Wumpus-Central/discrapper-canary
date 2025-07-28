@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => V }), n(388685));
+(n.d(t, { Z: () => H }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(793030),
@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(348238),
     x = n(38267),
     v = n(25015),
-    O = n(438075),
-    y = n(359110),
+    y = n(438075),
+    O = n(359110),
     j = n(6025),
     I = n(695346),
     S = n(433355),
@@ -57,7 +57,7 @@ function F(e) {
                     baseChannelId: l,
                     guildId: r.guild_id
                 }),
-                (0, y.Kh)(l),
+                (0, O.Kh)(l),
                 L.default.track(k.rMx.MODERATOR_REPORT_ORIGINAL_MESSAGE_LINK_CLICKED, {
                     moderator_report_id: t.channel_id,
                     destination_channel_id: l,
@@ -186,8 +186,8 @@ function G(e) {
             allowDevLinks: b,
             previewLinkTarget: !0
         }),
-        y = (0, a.e7)([T.Z], () => T.Z.getChannel(o.channel_id));
-    return null == y
+        O = (0, a.e7)([T.Z], () => T.Z.getChannel(o.channel_id));
+    return null == O
         ? null
         : (0, r.jsx)(
               'div',
@@ -199,14 +199,14 @@ function G(e) {
                           (0, r.jsx)(B, {
                               mergedMessageRecord: g,
                               content: C,
-                              channel: y,
+                              channel: O,
                               reportingUserId: null == s || null == (n = s.moderatorReport) ? void 0 : n.reporting_user_id,
                               reportedTimestamp: o.timestamp
                           }),
-                          (0, O.Z)({
+                          (0, y.Z)({
                               channelMessageProps: {
                                   message: g,
-                                  channel: y,
+                                  channel: O,
                                   compact: !1
                               },
                               hasSpoilerEmbeds: x,
@@ -226,7 +226,7 @@ function G(e) {
               c
           );
 }
-function V(e) {
+function H(e) {
     let { message: t } = e;
     return (0, r.jsx)(r.Fragment, {
         children: t.messageSnapshots.map((e, n) =>

@@ -84,9 +84,7 @@ let g = (e) => {
         b = h(e, ['ref', 'children', 'className', 'color', 'roleColors', 'iconType', 'onMouseEnter', 'onMouseLeave']);
     let [y, O] = i.useState(!1),
         { gradientStyle: v, gradientClassname: I } = (0, l.Icv)({
-            primaryColor: null == _ ? void 0 : _.primaryColor,
-            secondaryColor: null == _ ? void 0 : _.secondaryColor,
-            tertiaryColor: null == _ ? void 0 : _.tertiaryColor,
+            colorStrings: null != _ ? _ : null,
             roleStyle: 'username',
             animateGradient: y
         }),

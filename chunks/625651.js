@@ -21,7 +21,7 @@ function j(e) {
     var t,
         n,
         { guildId: j, powerup: _ } = e,
-        O = (function (e, t) {
+        I = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -40,15 +40,15 @@ function j(e) {
             }
             return o;
         })(e, ['guildId', 'powerup']);
-    let { onDeactivate: I, error: C, isLoading: T } = (0, x.ZP)(j, _),
-        { onClose: N } = O,
+    let { onDeactivate: O, error: C, isLoading: T } = (0, x.ZP)(j, _),
+        { onClose: N } = I,
         y = o.useCallback(
             (e) => {
-                I(e).then(() => {
+                O(e).then(() => {
                     null == N || N();
                 });
             },
-            [N, I]
+            [N, O]
         ),
         E = (function (e, t) {
             let n = (0, i.e7)([l.Z], () => l.Z.getMemberCount(e)),
@@ -63,15 +63,10 @@ function j(e) {
                     () =>
                         t.skuId !== g.If || null == m
                             ? 0
-                            : Object.values(d.Z.getRoles(e))
-                                  .filter((e) => {
-                                      var t;
-                                      return (null == (t = e.colorStrings) ? void 0 : t.secondaryColor) != null;
-                                  })
-                                  .reduce((e, t) => {
-                                      var n;
-                                      return e + (null != (n = m[t.id]) ? n : 0);
-                                  }, 0),
+                            : d.Z.getSortedRoles(e).reduce((e, t) => {
+                                  var n, r;
+                                  return (null == (n = t.colorStrings) ? void 0 : n.secondaryColor) == null ? e : e + (null != (r = m[t.id]) ? r : 0);
+                              }, 0),
                     [e, t.skuId, m]
                 );
             return o.useMemo(() => {
@@ -155,7 +150,7 @@ function j(e) {
                     className: h.modal,
                     size: _.type === g.Us.LEVEL ? s.CgR.MEDIUM : s.CgR.SMALL
                 },
-                O
+                I
             )),
             (n = n =
                 {
@@ -181,7 +176,7 @@ function j(e) {
                                                 })
                                             ]
                                         }),
-                                        (0, r.jsx)(s.olH, { onClick: O.onClose })
+                                        (0, r.jsx)(s.olH, { onClick: I.onClose })
                                     ]
                                 }),
                                 (() => {
@@ -239,7 +234,7 @@ function j(e) {
                                     children: (0, r.jsx)(s.zxk, {
                                         variant: 'secondary',
                                         text: v.intl.string(v.t['ETE/oK']),
-                                        onClick: O.onClose
+                                        onClick: I.onClose
                                     })
                                 })
                             ]

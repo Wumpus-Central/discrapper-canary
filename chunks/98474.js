@@ -59,8 +59,8 @@ function j(e, t) {
 let O = [];
 function y(e) {
     let { messageId: t, emoji: n, startPosition: y, targetPosition: v } = e,
-        [T, x] = r.useState(0),
-        [S, E] = r.useState(0),
+        [T, S] = r.useState(0),
+        [x, E] = r.useState(0),
         [R, I] = r.useState(null),
         { confettiCanvas: N } = r.useContext(u.h),
         P = (0, l.uR)(N, R),
@@ -114,25 +114,25 @@ function y(e) {
             },
             onChange: (e) => {
                 let { x: t } = e;
-                x(t);
+                S(t);
             }
         });
     return (
         r.useEffect(() => {
             T > 0 &&
-                S > 0 &&
+                x > 0 &&
                 P.createConfetti(
                     j(b({}, f.We), {
                         position: {
                             type: 'static',
                             value: {
                                 x: T,
-                                y: S
+                                y: x
                             }
                         }
                     })
                 );
-        }, [P, T, S]),
+        }, [P, T, x]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(l.Ji, {

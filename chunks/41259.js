@@ -112,7 +112,7 @@ function b(e) {
                                               variant: 'text-sm/normal',
                                               children: [
                                                   t.username,
-                                                  !t.isPomelo() &&
+                                                  !t.hasUniqueUsername() &&
                                                       (0, r.jsx)(l.x, {
                                                           className: E.currentUserDiscriminator,
                                                           variant: 'text-sm/normal',

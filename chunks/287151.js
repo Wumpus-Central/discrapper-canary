@@ -26,8 +26,8 @@ var i,
     y = n(367907),
     v = n(436774),
     T = n(98474),
-    x = n(339085),
-    S = n(906411),
+    S = n(339085),
+    x = n(906411),
     E = n(56314),
     R = n(231053),
     I = n(944386),
@@ -155,7 +155,7 @@ class ed extends (i = l.PureComponent) {
     render() {
         let e,
             t,
-            { count: n, burst_count: i, colors: l, isBurstReaction: o, hideCount: s, emoji: c, readOnly: u, isLurking: p, isGuest: m, isPendingMember: b, className: j, useChatFontScaling: y, message: v, hideEmoji: x, animationStartPosition: S, emojiSize: E } = this.props,
+            { count: n, burst_count: i, colors: l, isBurstReaction: o, hideCount: s, emoji: c, readOnly: u, isLurking: p, isGuest: m, isPendingMember: b, className: j, useChatFontScaling: y, message: v, hideEmoji: S, animationStartPosition: x, emojiSize: E } = this.props,
             { shouldShowTooltip: R, tooltipTextAria: I, reactionRef: N, tooltipPositionKey: P } = this.state,
             w = y ? ei : en,
             Z = {
@@ -170,8 +170,8 @@ class ed extends (i = l.PureComponent) {
             (this.isMe() && (Z.borderColor = i), (Z.background = o), (e = n), (t = n));
         }
         let k = null == N ? void 0 : N.getBoundingClientRect(),
-            L = null != S && null != k,
-            D = null == S;
+            L = null != x && null != k,
+            D = null == x;
         return (0, r.jsx)(f.yRy, {
             targetElementRef: { current: N },
             shouldShow: R,
@@ -190,7 +190,7 @@ class ed extends (i = l.PureComponent) {
                         className: a()(w.reaction, j, {
                             [w.reactionMe]: this.isMe(),
                             [w.reactionReadOnly]: u && !p && !b && !m,
-                            [w.shakeReaction]: x && null == S
+                            [w.shakeReaction]: S && null == x
                         }),
                         style: Z,
                         children: (0, r.jsx)(f.yRy, {
@@ -221,7 +221,7 @@ class ed extends (i = l.PureComponent) {
                                                                       (0, r.jsx)(T.Z, {
                                                                           messageId: v.id,
                                                                           emoji: c,
-                                                                          startPosition: S,
+                                                                          startPosition: x,
                                                                           targetPosition: k
                                                                       }),
                                                                   D &&
@@ -238,7 +238,7 @@ class ed extends (i = l.PureComponent) {
                                                           })
                                                         : null,
                                                     (0, r.jsx)(g.Z, {
-                                                        className: a()({ [w.hideEmoji]: x }),
+                                                        className: a()({ [w.hideEmoji]: S }),
                                                         emojiId: c.id,
                                                         emojiName: c.name,
                                                         size: E,
@@ -647,9 +647,9 @@ let eh = l.memo((e) => {
     em = (e) => {
         var t;
         let { emojiId: n, refreshPositionKey: i, onClose: o, nonce: s } = e,
-            { joinedEmojiSourceGuild: c } = (0, p.cj)([x.ZP, L.Z], () => {
-                let e = x.ZP.getCustomEmojiById(n);
-                return { joinedEmojiSourceGuild: (null == e ? void 0 : e.type) === S.B.GUILD ? L.Z.getGuild(null == e ? void 0 : e.guildId) : void 0 };
+            { joinedEmojiSourceGuild: c } = (0, p.cj)([S.ZP, L.Z], () => {
+                let e = S.ZP.getCustomEmojiById(n);
+                return { joinedEmojiSourceGuild: (null == e ? void 0 : e.type) === x.B.GUILD ? L.Z.getGuild(null == e ? void 0 : e.guildId) : void 0 };
             }),
             [u, d] = l.useState(void 0),
             [h, m] = l.useState(void 0),

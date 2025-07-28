@@ -87,17 +87,17 @@ let N = (0, g.Un)({
         name: 'CollectiblesShop'
     }),
     A = (0, g.Un)({
-        createPromise: () => Promise.all([n.e('71418'), n.e('7654'), n.e('44156'), n.e('7104'), n.e('6850'), n.e('58227'), n.e('54408'), n.e('20087'), n.e('94312'), n.e('95140')]).then(n.bind(n, 994763)),
+        createPromise: () => Promise.all([n.e('1806'), n.e('71418'), n.e('7654'), n.e('44156'), n.e('7104'), n.e('6850'), n.e('58227'), n.e('54408'), n.e('20087'), n.e('94312'), n.e('95140')]).then(n.bind(n, 994763)),
         webpackId: 994763,
         name: 'GuildSettings'
     }),
-    x = {
+    Z = {
         [y.S9g.USER_SETTINGS]: () => ((0, _.yP)('Layers') ? (0, i.jsx)(T, {}) : (0, i.jsx)(N, {})),
         [y.S9g.CHANNEL_SETTINGS]: () => (0, i.jsx)(P, {}),
         [y.S9g.GUILD_SETTINGS]: () => (0, i.jsx)(A, {}),
         [y.S9g.COLLECTIBLES_SHOP]: () => (0, i.jsx)(j, {})
     },
-    Z = 'SHOWN',
+    x = 'SHOWN',
     w = 'HIDDEN',
     L = {
         friction: 10,
@@ -119,8 +119,8 @@ class D extends (r = l.PureComponent) {
         let { mode: t } = this.props,
             { mode: n } = e;
         if (t !== n) {
-            if (t === Z && n === w) return this.animateIn();
-            if (t === w && n === Z) return this.animateUnder();
+            if (t === x && n === w) return this.animateIn();
+            if (t === w && n === x) return this.animateUnder();
         }
     }
     componentWillEnter(e) {
@@ -240,7 +240,7 @@ class k extends l.PureComponent {
                 (0, i.jsx)(
                     D,
                     {
-                        mode: 0 !== r || n ? w : Z,
+                        mode: 0 !== r || n ? w : x,
                         baseLayer: !0,
                         children: e
                     },
@@ -254,11 +254,11 @@ class k extends l.PureComponent {
     renderComponent(e, t, n) {
         let r;
         return (
-            (r = 'string' == typeof e ? x[e]() : (0, i.jsx)(e, {})),
+            (r = 'string' == typeof e ? Z[e]() : (0, i.jsx)(e, {})),
             (0, i.jsxs)(
                 D,
                 {
-                    mode: t === n - 1 ? Z : w,
+                    mode: t === n - 1 ? x : w,
                     children: [(0, i.jsx)(R, {}), r]
                 },
                 'layer-'.concat(t)

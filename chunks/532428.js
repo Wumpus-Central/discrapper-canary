@@ -109,7 +109,7 @@ function x() {
             .map((e) => e.toLowerCase())
     );
 }
-function M() {
+function k() {
     let e = new Date().getFullYear();
     return new Set(
         o()
@@ -117,15 +117,15 @@ function M() {
             .map((e) => e.toString())
     );
 }
-function k(e, t) {
+function M(e, t) {
     return [e, e.clone().add(1, t)];
 }
 function j(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-    return k(l()().startOf(e).add(t, e), e);
+    return M(l()().startOf(e).add(t, e), e);
 }
 function U(e, t, n) {
-    return k(l()(e, t).local(), n);
+    return M(l()(e, t).local(), n);
 }
 function G() {
     return {
@@ -159,7 +159,7 @@ function q(e, t) {
         r,
         i = e.getFullMatch().trim().toLowerCase(),
         a = G()[i];
-    return (null != a ? ([n, r] = a()) : L().has(i) ? ([n, r] = U(i, 'MMMM', 'month')) : x().has(i) ? ([n, r] = U(i, 'dddd', 'day')) : M().has(i) ? ([n, r] = U(i, 'YYYY', 'year')) : ([n, r] = U(i, N.b2L, 'day')), !!(n.isValid() && r.isValid()) && ('before' === t ? ((r = n), (n = null)) : 'after' === t && ((n = r), (r = null)), e.setData('start', n), e.setData('end', r), !0));
+    return (null != a ? ([n, r] = a()) : L().has(i) ? ([n, r] = U(i, 'MMMM', 'month')) : x().has(i) ? ([n, r] = U(i, 'dddd', 'day')) : k().has(i) ? ([n, r] = U(i, 'YYYY', 'year')) : ([n, r] = U(i, N.b2L, 'day')), !!(n.isValid() && r.isValid()) && ('before' === t ? ((r = n), (n = null)) : 'after' === t && ((n = r), (r = null)), e.setData('start', n), e.setData('end', r), !0));
 }
 function X(e, t, n) {
     let r = f.ZP.getChannels(n)[f.sH].concat(f.ZP.getChannels(n)[f.Zb]),
@@ -215,7 +215,7 @@ function $(e) {
     return null != t && '' !== t && (e.setData('has', t), !0);
 }
 function ee() {
-    return [...Array.from(L()), ...Array.from(x()), ...Array.from(M()), ...Object.keys(G())];
+    return [...Array.from(L()), ...Array.from(x()), ...Array.from(k()), ...Object.keys(G())];
 }
 function et() {
     return o().sample(ee());

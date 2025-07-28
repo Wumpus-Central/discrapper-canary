@@ -52,23 +52,23 @@ function m(e) {
             let s = null == e ? void 0 : e.colorStrings,
                 c = y && null != s && null != s.primaryColor && null != s.secondaryColor,
                 d = (t) => {
-                    var n, o;
+                    var n, o, a;
                     return (0, i.jsx)(
                         l.rz2,
-                        ((n = p({}, null != t ? t : {})),
-                        (o = o =
+                        ((o = p({}, null != t ? t : {})),
+                        (a = a =
                             {
                                 ref: j,
                                 onContextMenu: T,
                                 name: (0, l.qgQ)(r),
-                                color: null == e ? void 0 : e.colorString,
+                                colorString: null != (n = null == e ? void 0 : e.colorString) ? n : null,
                                 roleName: null == e ? void 0 : e.colorRoleName,
-                                roleColors: c ? s : null,
+                                colorStrings: c ? s : null,
                                 'aria-label': b,
                                 className: v
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
+                            ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(a))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -76,10 +76,10 @@ function m(e) {
                                       n.push.apply(n, i);
                                   }
                                   return n;
-                              })(Object(o)).forEach(function (e) {
-                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
+                              })(Object(a)).forEach(function (e) {
+                                  Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(a, e));
                               }),
-                        n)
+                        o)
                     );
                 },
                 h = (e) => (t) => {

@@ -21,17 +21,17 @@ function f(e) {
         } = (0, i.cj)(
             [a.ZP],
             () => {
-                var e, n;
-                let r = a.ZP.getMember(t.guildId, t.userId);
+                var e, n, r, o;
+                let i = a.ZP.getMember(t.guildId, t.userId);
                 return {
                     username: null != (n = a.ZP.getNick(t.guildId, t.userId)) ? n : null == (e = t.user) ? void 0 : e.username,
-                    roleColor: null == r ? void 0 : r.colorString,
-                    roleColorStrings: null == r ? void 0 : r.colorStrings
+                    roleColor: null != (r = null == i ? void 0 : i.colorString) ? r : null,
+                    roleColorStrings: null != (o = null == i ? void 0 : i.colorStrings) ? o : null
                 };
             },
             [t]
         ),
-        v = (0, u.X7)(t.guildId, t.userId, x);
+        g = (0, u.X7)(t.guildId, t.userId, null != x ? x : null);
     return (0, r.jsx)(s.Z, {
         className: m.systemMessageContainer,
         contentClassName: m.systemMessageContent,
@@ -52,8 +52,8 @@ function f(e) {
                     className: m.boostMessageUser,
                     variant: 'text-md/semibold',
                     name: f,
-                    color: null != _ ? _ : void 0,
-                    roleColors: v
+                    colorString: null != _ ? _ : null,
+                    colorStrings: g
                 }),
                 (0, r.jsx)(o.xv, {
                     variant: 'text-md/medium',

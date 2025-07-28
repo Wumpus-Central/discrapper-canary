@@ -30,12 +30,12 @@ function N(e, t) {
             guildId: null == o ? void 0 : o.guild_id,
             location: 'useRingHangupItem'
         }),
-        E = !m || (null == n ? void 0 : n.length) === 0 || null == t,
+        P = !m || (null == n ? void 0 : n.length) === 0 || null == t,
         S = N && (null == o ? void 0 : o.guild_id) != null,
         A = null == l,
         C = null != l && l.type === j.fO.USER && l.ringing,
         D = [];
-    S && !E && (A || C) && D.push(u.z.RING_USER_TO_VC_NEW_BADGE);
+    S && !P && (A || C) && D.push(u.z.RING_USER_TO_VC_NEW_BADGE);
     let [U, L] = (0, v.US)(D),
         T = U === u.z.RING_USER_TO_VC_NEW_BADGE,
         { analyticsLocations: w } = (0, g.ZP)();
@@ -49,10 +49,10 @@ function N(e, t) {
                 location_stack: w
             }
         },
-        { disableTrack: E || !S },
+        { disableTrack: P || !S },
         [e.id]
     ),
-    E)
+    P)
         ? null
         : A
           ? (0, i.jsx)(d.sNh, {
@@ -60,7 +60,7 @@ function N(e, t) {
                 label: S
                     ? (0, i.jsxs)('div', {
                           className: y.label,
-                          children: [_.intl.string(_.t['3Hv9qa']), T && (0, i.jsx)(P, {})]
+                          children: [_.intl.string(_.t['3Hv9qa']), T && (0, i.jsx)(E, {})]
                       })
                     : _.intl.string(_.t.bHa9kJ),
                 subtext: S ? (0, i.jsx)(I, { channel: o }) : null,
@@ -74,7 +74,7 @@ function N(e, t) {
                   id: 'stop-ringing',
                   label: (0, i.jsxs)('div', {
                       className: y.label,
-                      children: [_.intl.string(_.t.ygslb2), T && (0, i.jsx)(P, {})]
+                      children: [_.intl.string(_.t.ygslb2), T && (0, i.jsx)(E, {})]
                   }),
                   subtext: S
                       ? (0, i.jsx)(d.Text, {
@@ -105,7 +105,7 @@ let I = (e) => {
             ]
         });
     },
-    P = () =>
+    E = () =>
         (0, i.jsx)(d.IGR, {
             color: o.Z.BG_BRAND,
             text: _.intl.string(_.t.y2b7CA)

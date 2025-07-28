@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    s = n(481060),
-    a = n(852860),
+    a = n(481060),
+    s = n(852860),
     o = n(881052),
     c = n(456268),
     d = n(863249),
@@ -11,8 +11,8 @@ var r = n(255367),
     m = n(983736),
     g = n(571728),
     p = n(699553),
-    f = n(434404),
-    h = n(999382),
+    h = n(434404),
+    f = n(999382),
     x = n(654351),
     b = n(658666),
     j = n(384632),
@@ -65,14 +65,14 @@ function N(e, t) {
 }
 function I(e) {
     var t;
-    let { pendingState: l, dirtyState: h, originalGuild: b, settingsGuild: I, settingsMetadata: E, settingsProfile: S } = e,
+    let { pendingState: l, dirtyState: f, originalGuild: b, settingsGuild: I, settingsMetadata: E, settingsProfile: S } = e,
         T = I.id,
         [P, w] = i.useState(!1),
         [R, Z] = i.useState(null),
         D = I.features.has(_.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
         A = null != (t = (0, g.A)({ guildId: I.id })) ? t : 0,
         k = i.useCallback(() => {
-            (Z(null), f.Z.init(T, _.pNK.ACCESS));
+            (Z(null), h.Z.init(T, _.pNK.ACCESS));
         }, [T]),
         L = i.useCallback(async (e) => {
             try {
@@ -84,7 +84,7 @@ function I(e) {
         M = i.useCallback(
             async (e) => {
                 try {
-                    await f.Z.saveGuild(T, e, { throwErr: !0 });
+                    await h.Z.saveGuild(T, e, { throwErr: !0 });
                 } catch (e) {
                     throw ('object' == typeof e && 'message' in e ? Z(e.message) : Z(y.intl.formatToPlainString(y.t.aTVNen, { statusPageURL: _.yXt.STATUS })), e);
                 }
@@ -135,7 +135,7 @@ function I(e) {
                             let e = new Set(I.features);
                             (e.delete(_.oNc.DISCOVERABLE), await M({ features: e }));
                         }
-                        h.verificationDirty && (await U(t, r, e));
+                        f.verificationDirty && (await U(t, r, e));
                     });
                 } else if (l.joinType === j.A.APPLY) {
                     let { pendingVerificationFields: t } = l;
@@ -145,13 +145,13 @@ function I(e) {
                             let e = new Set(I.features);
                             (e.delete(_.oNc.DISCOVERABLE), await M({ features: e }));
                         }
-                        (h.verificationDirty && (await G([...t], !0, e)), h.profileDirty && null != S && (await (0, p.pV)(I.id, { visibility: S.visibility })));
+                        (f.verificationDirty && (await G([...t], !0, e)), f.profileDirty && null != S && (await (0, p.pV)(I.id, { visibility: S.visibility })));
                     });
                 } else if (l.joinType === j.A.DISCOVERABLE) {
                     let { requireTerms: t, termRules: n = [] } = l,
                         r = n.map((e) => e.value.trim()).filter((e) => '' !== e);
                     L(async () => {
-                        if ((h.verificationDirty && (await U(t, r, e)), h.guildDirty)) {
+                        if ((f.verificationDirty && (await U(t, r, e)), f.guildDirty)) {
                             (0, x.UA)(I, b);
                             let e = new Set(I.features);
                             (e.add(_.oNc.DISCOVERABLE),
@@ -171,13 +171,13 @@ function I(e) {
                     });
                 }
             },
-            [l, L, I, h, M, U, S, G, b, E]
+            [l, L, I, f, M, U, S, G, b, E]
         ),
         F = i.useCallback(() => {
             var e;
             let t = (e) => {
                     if (l.joinType === j.A.DISCOVERABLE && l.settingsView === v.U.ELIGIBLE_DISABLED)
-                        return void (0, s.ZDy)(async () => {
+                        return void (0, a.ZDy)(async () => {
                             let { default: t } = await n.e('67376').then(n.bind(n, 207252));
                             return (n) =>
                                 (0, r.jsx)(
@@ -192,7 +192,7 @@ function I(e) {
                 },
                 i = (e) => {
                     if (D && A > 0 && l.joinType !== j.A.APPLY)
-                        return void (0, s.ZDy)(async () => {
+                        return void (0, a.ZDy)(async () => {
                             let { default: t } = await n.e('55009').then(n.bind(n, 185141));
                             return (n) =>
                                 (0, r.jsx)(
@@ -215,7 +215,7 @@ function I(e) {
         }, [D, B, l, T, A]),
         H = l.joinType === j.A.DISCOVERABLE && l.settingsView === v.U.ELIGIBLE_DISABLED,
         z = null != I.description && E.primaryCategoryId !== O.o3 && E.keywords.length > 0;
-    return (0, r.jsx)(a.Z, {
+    return (0, r.jsx)(s.Z, {
         message: H ? y.intl.string(y.t.V2G2Ym) : void 0,
         onSaveText: H ? y.intl.string(y.t['qjtt/v']) : void 0,
         submitting: P,
@@ -233,10 +233,10 @@ function E() {
         {
             settingsGuild: n,
             settingsMetadata: i,
-            originalGuild: s,
+            originalGuild: a,
             guildProfile: o
-        } = (0, l.cj)([h.Z], () => {
-            let { guild: e, guildMetadata: t, originalGuild: n, profile: r } = h.Z.getProps();
+        } = (0, l.cj)([f.Z], () => {
+            let { guild: e, guildMetadata: t, originalGuild: n, profile: r } = f.Z.getProps();
             return {
                 settingsGuild: e,
                 settingsMetadata: t,
@@ -247,14 +247,14 @@ function E() {
     return null == e || null == n
         ? null
         : e.joinType === j.A.DISCOVERABLE && e.settingsView === v.U.INELIGIBLE
-          ? (0, r.jsx)(a.Z, {
+          ? (0, r.jsx)(s.Z, {
                 message: y.intl.string(y.t.TEXwRk),
-                onReset: () => f.Z.init(n.id, _.pNK.ACCESS)
+                onReset: () => h.Z.init(n.id, _.pNK.ACCESS)
             })
           : (0, r.jsx)(I, {
                 pendingState: e,
                 dirtyState: t,
-                originalGuild: s,
+                originalGuild: a,
                 settingsGuild: n,
                 settingsMetadata: i,
                 settingsProfile: o

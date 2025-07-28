@@ -16,8 +16,8 @@ var l = n(255367),
     x = n(665149),
     _ = n(442336),
     C = n(910611),
-    j = n(41776),
-    b = n(703656),
+    b = n(41776),
+    j = n(703656),
     v = n(6025),
     y = n(592125),
     O = n(703558),
@@ -30,7 +30,7 @@ var l = n(255367),
     S = n(981631),
     T = n(388032),
     A = n(560460);
-function B(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             l = Object.keys(n);
@@ -55,7 +55,7 @@ function B(e) {
     }
     return e;
 }
-function k(e, t) {
+function B(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function R(e) {
         G = (0, i.e7)([Z.Z], () => Z.Z.didAgree(null == M ? void 0 : M.guild_id)),
         W = (null == U ? void 0 : U.nsfwAllowed) === !0,
         F = (0, P.ZP)(M),
-        q = (0, i.e7)([j.Z], () => (null == H ? void 0 : H.id) != null && j.Z.isLurking(H.id), [H]),
+        q = (0, i.e7)([b.Z], () => (null == H ? void 0 : H.id) != null && b.Z.isLurking(H.id), [H]),
         z = (0, g.Z)(t),
         X = (0, i.e7)([f.Z], () => {
             var e;
@@ -90,7 +90,7 @@ function R(e) {
         V = r.useRef(!1);
     if (
         (r.useEffect(() => {
-            null == M || V.current || ((V.current = !0), (0, u.yw)(S.rMx.CHANNEL_OPENED, k(B({}, (0, u.$H)(M.id)), { channel_view: D })), (0, m.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: M.id }));
+            null == M || V.current || ((V.current = !0), (0, u.yw)(S.rMx.CHANNEL_OPENED, B(k({}, (0, u.$H)(M.id)), { channel_view: D })), (0, m.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: M.id }));
         }, [M, D]),
         null == M || null == H)
     )
@@ -129,7 +129,7 @@ function R(e) {
                                   return (t) =>
                                       (0, l.jsx)(
                                           e,
-                                          k(B({}, t), {
+                                          B(k({}, t), {
                                               channel: M,
                                               guild: H
                                           })
@@ -139,10 +139,10 @@ function R(e) {
                           handleClick: () => {
                               let e = I.Z.getMessages(M.id);
                               if (L) {
-                                  ((0, b.uL)(S.Z5c.CHANNEL(M.guild_id, M.id)), (0, p.C3)(M.guild_id, null));
+                                  ((0, j.uL)(S.Z5c.CHANNEL(M.guild_id, M.id)), (0, p.C3)(M.guild_id, null));
                                   return;
                               }
-                              (0, b.XU)(M.guild_id, M.id, e.jumpTargetId);
+                              (0, j.XU)(M.guild_id, M.id, e.jumpTargetId);
                           }
                       })
                   }),

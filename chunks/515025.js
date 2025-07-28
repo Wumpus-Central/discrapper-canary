@@ -2,8 +2,8 @@ n.d(t, { h: () => x });
 var r = n(255367),
     i = n(73800),
     l = n(481060),
-    s = n(906732),
-    a = n(884858),
+    a = n(906732),
+    s = n(884858),
     o = n(516129),
     c = n(768581),
     d = n(434404),
@@ -11,13 +11,13 @@ var r = n(255367),
     m = n(981631),
     g = n(30513),
     p = n(200299),
-    f = n(388032),
-    h = n(322847);
+    h = n(388032),
+    f = n(322847);
 function x(e) {
     let { guild: t, canManageGuild: n } = e,
         x = t.features.has(m.oNc.INVITE_SPLASH),
         b = n && x,
-        { analyticsLocations: j } = (0, s.ZP)(),
+        { analyticsLocations: j } = (0, a.ZP)(),
         v = i.useCallback((e) => {
             d.Z.updateGuild({ splash: e });
         }, []),
@@ -46,17 +46,17 @@ function x(e) {
                     : null,
             disabled: !b,
             onChange: v,
-            hint: f.intl.string(f.t.uPvxqK),
+            hint: h.intl.string(h.t.uPvxqK),
             enabled: b,
             maxFileSizeBytes: p.B,
-            onFileSizeError: () => (0, a.Z)(p.B)
+            onFileSizeError: () => (0, s.Z)(p.B)
         });
     return x
         ? O
         : (0, r.jsx)(l.P3F, {
               'aria-hidden': !0,
               tabIndex: -1,
-              className: h.upsell,
+              className: f.upsell,
               onClick: _,
               children: O
           });

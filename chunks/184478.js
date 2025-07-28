@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => b });
 var r = n(255367);
 n(73800);
 var o = n(793030),
@@ -14,36 +14,36 @@ var o = n(793030),
     f = n(767218),
     _ = n(981631),
     x = n(93841),
-    v = n(388032),
-    b = n(466649);
-function g(e) {
+    g = n(388032),
+    v = n(466649);
+function b(e) {
     let { guildId: t } = e,
         n = (0, i.e7)([u.Z], () => u.Z.getGuild(t)),
-        { available: g, spent: j, total: E } = (0, p.Z)(t);
+        { available: b, spent: j, total: E } = (0, p.Z)(t);
     if (null != n)
         return (0, r.jsxs)('div', {
-            className: b.container,
+            className: v.container,
             children: [
                 (0, r.jsxs)('div', {
-                    className: b.headerContainer,
+                    className: v.headerContainer,
                     children: [
                         (0, r.jsx)(o.xv, {
                             variant: 'eyebrow',
                             color: 'text-secondary',
-                            children: v.intl.string(x.default.hjvcLC)
+                            children: g.intl.string(x.default.hjvcLC)
                         }),
                         (0, r.jsx)(o.xv, {
-                            className: b.learnMore,
+                            className: v.learnMore,
                             variant: 'text-xs/semibold',
-                            children: v.intl.format(x.default.fXE30d, { helpDeskArticle: d.Z.getArticleURL(_.BhN.GUILD_BOOSTING_FAQ) })
+                            children: g.intl.format(x.default.fXE30d, { helpDeskArticle: d.Z.getArticleURL(_.BhN.GUILD_BOOSTING_FAQ) })
                         })
                     ]
                 }),
                 (0, r.jsxs)('div', {
-                    className: b.contentContainer,
+                    className: v.contentContainer,
                     children: [
                         (0, r.jsx)(f.Z, {
-                            count: g,
+                            count: b,
                             type: f.b.AVAILABLE
                         }),
                         (0, r.jsx)(f.Z, {
@@ -57,7 +57,7 @@ function g(e) {
                     ]
                 }),
                 (0, r.jsx)(a.Z, {
-                    className: b.boostButton,
+                    className: v.boostButton,
                     guild: n,
                     analyticsLocation: {
                         page: _.ZY5.GUILD_POWERUPS_OVERVIEW,
@@ -67,7 +67,7 @@ function g(e) {
                     size: l.Ph.LARGE,
                     intent: c.P.NONE,
                     icon: (0, r.jsx)(s.$Eu, {
-                        className: b.boostButtonIcon,
+                        className: v.boostButtonIcon,
                         size: 'sm',
                         color: s.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK
                     })

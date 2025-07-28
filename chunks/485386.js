@@ -1,11 +1,9 @@
-(n.d(t, { Z: () => N }), n(388685), n(415506));
-var r,
-    i = n(442837),
-    a = n(902704),
-    o = n(570140),
-    s = n(601964),
-    l = n(625137);
-function c(e, t, n) {
+(n.d(t, { Z: () => u }), n(415506), n(388685));
+var r = n(429091),
+    i = n(601964),
+    a = n(539600),
+    o = n(625137);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +16,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,121 +27,105 @@ function u(e) {
                 })
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                s(e, t, n[t]);
             }));
     }
     return e;
 }
-function d(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        (t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r));
+class c extends r.d {
+    serializeAllGuildRoles() {
+        return this.mapPartitions(a.an);
     }
-    return n;
-}
-function f(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let _ = {};
-function p(e) {
-    ((_ = {}),
-        e.guilds.forEach((e) => {
-            _[e.id] = e.roles instanceof Array ? l.C5(e.id, e.roles) : e.roles;
-        }));
-}
-function h(e) {
-    for (let n of e.guilds) {
-        var t;
-        if (null == _[n.id] || 'unavailable' === n.data_mode) return;
-        _[n.id] = 'partial' === n.data_mode ? l.EO(n.id, null != (t = _[n.id]) ? t : S, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : l.C5(n.id, n.roles);
+    getUnsafeMutableRoles(e) {
+        return this.getPartition(e);
     }
-}
-function m(e) {
-    for (let { id: t, roles: n } of ((_ = {}), e)) {
-        for (let e in n) l.k0(n[e]);
-        _[t] = n;
-    }
-}
-function g(e) {
-    m(e.guilds);
-}
-function E(e) {
-    if (0 === e.guilds.length) return !1;
-    m(e.guilds);
-}
-function b(e) {
-    _ = e.allGuildsRoles;
-}
-function y(e) {
-    _[e.guild.id] = e.guild.roles instanceof Array ? l.C5(e.guild.id, e.guild.roles) : e.guild.roles;
-}
-function O(e) {
-    _[e.guild.id] = l.C5(e.guild.id, e.guild.roles);
-}
-function v(e) {
-    let { guild: t } = e;
-    if (null == _[t.id] || t.unavailable) return !1;
-    delete _[t.id];
-}
-function I(e) {
-    let { guildId: t, role: n } = e,
-        r = _[t],
-        i = l.CL(n),
-        o = null == r ? void 0 : r[i.id];
-    if (null != o && (0, a.Z)(i, o)) return !1;
-    ((r = f(u({}, r), { [n.id]: l.CL(n) })), (r = l.iw(t, Object.values(r))), (_[t] = r));
-}
-function T(e) {
-    let { guildId: t, roleId: n } = e,
-        r = _[t];
-    if (null == r) return !1;
-    ((r = u({}, r)), delete r[n], (_[t] = r));
-}
-let S = Object.freeze({});
-class A extends (r = i.ZP.Store) {
-    getAllGuildsRoles() {
-        return _;
-    }
-    getRoles(e) {
-        var t;
-        return null != (t = _[e]) ? t : S;
+    getManyRoles(e, t) {
+        return this.getManyRecords(e, t);
     }
     getRole(e, t) {
-        var n;
-        return null == (n = _[e]) ? void 0 : n[t];
+        return this.getRecord(e, t);
+    }
+    getNumRoles(e) {
+        return this.partitionLength(e);
     }
     getEveryoneRole(e) {
-        var t;
-        let n = (0, s.lV)(e),
-            r = null == (t = _[e.id]) ? void 0 : t[n];
-        if (null == r) throw Error('Guild '.concat(e.id, ' does not have an @everyone role'));
-        return r;
+        let t = (0, i.lV)(e),
+            n = this.getRecord(e.id, t);
+        if (null == n) throw Error('Guild '.concat(e.id, ' does not have an @everyone role'));
+        return n;
+    }
+    constructor(...e) {
+        (super(...e),
+            s(
+                this,
+                'getSortedRoles',
+                this.memoizedPartition((e) => o.BL(Object.values(e)))
+            ),
+            s(
+                this,
+                'getRolesSnapshot',
+                this.memoizedPartition((e) => l({}, e))
+            ));
     }
 }
-c(A, 'displayName', 'GuildRoleStore');
-let N = new A(o.Z, {
-    BACKGROUND_SYNC: h,
-    CONNECTION_OPEN: p,
-    OVERLAY_INITIALIZE: b,
-    CACHE_LOADED: g,
-    CACHE_LOADED_LAZY: E,
-    GUILD_CREATE: y,
-    GUILD_UPDATE: O,
-    GUILD_DELETE: v,
-    GUILD_ROLE_CREATE: I,
-    GUILD_ROLE_UPDATE: I,
-    GUILD_ROLE_DELETE: T
+s(c, 'displayName', 'GuildRoleStore');
+let u = new c({
+    BACKGROUND_SYNC: (e, t) => {
+        let { guilds: n } = e;
+        for (let e of n) {
+            let n = t.getPartition(e.id);
+            null != n && 'unavailable' !== e.data_mode && t.setPartition(e.id, 'partial' === e.data_mode ? o.EO(e.id, n, e.partial_updates.roles, e.partial_updates.deleted_role_ids) : a.qt(e.id, e.roles));
+        }
+    },
+    OVERLAY_INITIALIZE: (e, t) => {
+        t.reset((t) => {
+            for (let { partitionKey: n, values: r } of e.serializedGuildRoles) t[n] = a.If(n, r);
+        });
+    },
+    CONNECTION_OPEN: (e, t) => {
+        let { guilds: n } = e;
+        return t.reset((e) => {
+            for (let { id: t, roles: r } of n) e[t] = Array.isArray(r) ? a.qt(t, r) : r;
+        });
+    },
+    CACHE_LOADED: (e, t) => {
+        let { guilds: n } = e;
+        t.reset((e) => {
+            for (let { id: t, roles: r } of n) e[t] = a.If(t, r);
+        });
+    },
+    CACHE_LOADED_LAZY: (e, t) => {
+        0 !== e.guilds.length &&
+            t.reset((t) => {
+                for (let { id: n, roles: r } of e.guilds) t[n] = a.If(n, r);
+            });
+    },
+    GUILD_CREATE: (e, t) => {
+        let {
+            guild: { id: n, roles: r }
+        } = e;
+        t.setPartition(n, Array.isArray(r) ? a.qt(n, r) : r);
+    },
+    GUILD_UPDATE: (e, t) => {
+        let {
+            guild: { id: n, roles: r }
+        } = e;
+        t.setPartition(n, a.qt(n, r));
+    },
+    GUILD_DELETE: (e, t) => {
+        let {
+            guild: { id: n, unavailable: r }
+        } = e;
+        r || t.removePartition(n);
+    },
+    GUILD_ROLE_CREATE: (e, t) => {
+        t.set(e.guildId, e.role.id, a.wD(e.guildId, e.role));
+    },
+    GUILD_ROLE_UPDATE: (e, t) => {
+        t.set(e.guildId, e.role.id, a.wD(e.guildId, e.role));
+    },
+    GUILD_ROLE_DELETE: (e, t) => {
+        let { guildId: n, roleId: r } = e;
+        t.remove(n, r);
+    }
 });

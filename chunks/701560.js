@@ -31,7 +31,7 @@ function v(e, t, n) {
         e
     );
 }
-function O(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +47,7 @@ function O(e) {
     }
     return e;
 }
-function y(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,7 +67,7 @@ function y(e, t) {
 }
 class j extends (r = l.PureComponent) {
     get analyticsLocation() {
-        return y(O({}, this.props.analyticsContext.location), { object: E.qAy.BUTTON_CTA });
+        return O(y({}, this.props.analyticsContext.location), { object: E.qAy.BUTTON_CTA });
     }
     renderDropdown() {
         let { dispatchState: e } = this.props;
@@ -103,7 +103,7 @@ class j extends (r = l.PureComponent) {
                 (0, i.jsx)(u.ua7, {
                     text: t,
                     position: o,
-                    children: (e) => (0, i.jsx)('div', O({ className: x.disabledButtonOverlay }, e))
+                    children: (e) => (0, i.jsx)('div', y({ className: x.disabledButtonOverlay }, e))
                 })
             ]
         });
@@ -143,7 +143,7 @@ class j extends (r = l.PureComponent) {
                         return (n) =>
                             (0, i.jsx)(
                                 e,
-                                y(O({}, n), {
+                                O(y({}, n), {
                                     libraryApplication: t,
                                     onPlay: this.handleClick
                                 })
@@ -172,7 +172,7 @@ function I(e) {
         c = (0, s.e7)([_.Z], () => (null != n ? _.Z.getState(n.id, n.branchId) : null), [n]);
     return (0, i.jsx)(
         j,
-        y(O({}, e), {
+        O(y({}, e), {
             analyticsContext: r,
             isLaunchable: l,
             isLaunching: a,

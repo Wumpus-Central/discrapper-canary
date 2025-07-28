@@ -1,11 +1,11 @@
 (n.d(t, {
     $Y: () => f,
-    JK: () => S,
-    Je: () => O,
+    JK: () => O,
+    Je: () => T,
     T9: () => R,
     UE: () => m,
     Xx: () => N,
-    mm: () => T,
+    mm: () => S,
     qY: () => g
 }),
     n(388685));
@@ -80,7 +80,7 @@ async function g(e) {
         });
     return (0, u.C)(n.body);
 }
-async function S(e) {
+async function O(e) {
     let t = I(e);
     return (
         delete t.id,
@@ -95,7 +95,7 @@ async function S(e) {
         )
     );
 }
-async function O(e) {
+async function T(e) {
     let t = I(e);
     return C(
         (
@@ -107,7 +107,7 @@ async function O(e) {
         ).body
     );
 }
-async function T(e, t) {
+async function S(e, t) {
     return (
         await i.tn.del({
             url: h.ANM.GUILD_AUTOMOD_RULE(t, e),

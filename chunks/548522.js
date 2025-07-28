@@ -1,9 +1,9 @@
-(n.d(t, { y: () => f }), n(388685));
+(n.d(t, { y: () => h }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(793030),
-    s = n(246364),
-    a = n(571728),
+    a = n(246364),
+    s = n(571728),
     o = n(446945),
     c = n(681460),
     d = n(700833),
@@ -11,15 +11,15 @@ var r = n(255367),
     m = n(592286),
     g = n(388032),
     p = n(539482);
-function f(e) {
+function h(e) {
     var t;
     let { guild: n, formFields: c } = e,
-        [f, x] = i.useState(c);
+        [h, x] = i.useState(c);
     i.useEffect(() => x(c), [c]);
-    let b = null != (t = (0, a.A)({ guildId: n.id })) ? t : 0,
+    let b = null != (t = (0, s.A)({ guildId: n.id })) ? t : 0,
         [j, v] = i.useState(null),
-        _ = i.useMemo(() => (null == f ? void 0 : f.some((e) => (0, s.J)(e))), [f]),
-        O = i.useMemo(() => f.length === m.nx, [f]),
+        _ = i.useMemo(() => (null == h ? void 0 : h.some((e) => (0, a.J)(e))), [h]),
+        O = i.useMemo(() => h.length === m.nx, [h]),
         y = i.useCallback(
             (e) => {
                 (u.Z.setPendingMemberVerificationRules(n.id, e), x(e), null != j && v(null));
@@ -28,31 +28,31 @@ function f(e) {
         ),
         C = i.useCallback(
             (e) => {
-                y([...f, e]);
+                y([...h, e]);
             },
-            [f, y]
+            [h, y]
         ),
         N = i.useCallback(
             (e) => {
-                y([...f.slice(0, e), ...f.slice(e + 1)]);
+                y([...h.slice(0, e), ...h.slice(e + 1)]);
             },
-            [f, y]
+            [h, y]
         ),
         I = i.useCallback(
             (e, t) => {
-                if (f[e] === t) return;
-                let n = [...f];
+                if (h[e] === t) return;
+                let n = [...h];
                 ((n[e] = t), y(n));
             },
-            [f, y]
+            [h, y]
         ),
         E = i.useCallback(
             (e, t, n) => {
-                let r = f.indexOf(e),
-                    i = [...f];
+                let r = h.indexOf(e),
+                    i = [...h];
                 (null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), x(i)), n ? (y(i), null !== j && v(null)) : j !== t && v(t));
             },
-            [j, f, y]
+            [j, h, y]
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -61,24 +61,24 @@ function f(e) {
                 color: 'text-muted',
                 className: p.title,
                 children: g.intl.format(g.t['sm+75u'], {
-                    currentCount: f.length,
+                    currentCount: h.length,
                     maxCount: m.nx
                 })
             }),
-            f.map((e) =>
+            h.map((e) =>
                 (0, d.a0)({
                     dropHoveredIndex: j,
                     formField: e,
                     guild: n,
-                    index: f.indexOf(e),
-                    isDragEnabled: f.length > 1,
+                    index: h.indexOf(e),
+                    isDragEnabled: h.length > 1,
                     submittedGuildJoinRequestsCount: b,
                     removeFormField: N,
                     updateFormField: I,
                     updateFormFieldOrder: E,
-                    canRemove: f.length > 1,
+                    canRemove: h.length > 1,
                     actionsLocation: 'side',
-                    fieldStyle: s.it.COMPACT
+                    fieldStyle: a.it.COMPACT
                 })
             ),
             !O &&
@@ -90,11 +90,11 @@ function f(e) {
                         allowTerms: !_
                     })
                 }),
-            !O && (0, r.jsx)(h, { addFormField: C })
+            !O && (0, r.jsx)(f, { addFormField: C })
         ]
     });
 }
-function h(e) {
+function f(e) {
     let { addFormField: t } = e,
         n = i.useMemo(
             () => [
@@ -102,7 +102,7 @@ function h(e) {
                     text: g.intl.string(g.t.EOwiEh),
                     onClick: () => {
                         t({
-                            field_type: s.QJ.TEXT_INPUT,
+                            field_type: a.QJ.TEXT_INPUT,
                             label: g.intl.string(g.t.EOwiEh),
                             required: !0
                         });
@@ -112,7 +112,7 @@ function h(e) {
                     text: g.intl.string(g.t.jqrNDg),
                     onClick: () => {
                         t({
-                            field_type: s.QJ.TEXT_INPUT,
+                            field_type: a.QJ.TEXT_INPUT,
                             label: g.intl.string(g.t.jqrNDg),
                             required: !0
                         });
@@ -122,7 +122,7 @@ function h(e) {
                     text: g.intl.string(g.t.I5q8vr),
                     onClick: () => {
                         t({
-                            field_type: s.QJ.TEXT_INPUT,
+                            field_type: a.QJ.TEXT_INPUT,
                             label: g.intl.string(g.t.I5q8vr),
                             required: !0
                         });

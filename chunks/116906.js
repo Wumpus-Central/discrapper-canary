@@ -11,10 +11,10 @@ var r = t(442837),
     d = t(209698),
     f = t(369566),
     p = t(29899),
-    g = t(678738),
-    j = t(151545),
-    v = t(744802),
-    h = t(493043),
+    j = t(678738),
+    g = t(151545),
+    h = t(744802),
+    v = t(493043),
     m = t(864141),
     b = t(228168),
     x = t(981631),
@@ -46,7 +46,7 @@ function I(e) {
               fade: !0,
               children: [
                   k
-                      ? (0, l.jsx)(g.Z, {
+                      ? (0, l.jsx)(j.Z, {
                             'aria-label': y.intl.string(y.t.J6STd3),
                             children: (0, l.jsxs)('ul', {
                                 className: O.activityList,
@@ -63,7 +63,7 @@ function I(e) {
                                         }),
                                     null != w &&
                                         (0, l.jsx)('li', {
-                                            children: (0, l.jsx)(h.Z, {
+                                            children: (0, l.jsx)(v.Z, {
                                                 location: 'UserProfileModalActivity',
                                                 user: n,
                                                 currentUser: t,
@@ -76,7 +76,7 @@ function I(e) {
                                         (0, l.jsx)(
                                             'li',
                                             {
-                                                children: (0, l.jsx)(j.Z, {
+                                                children: (0, l.jsx)(g.Z, {
                                                     user: n,
                                                     currentUser: t,
                                                     activity: e,
@@ -92,7 +92,7 @@ function I(e) {
                         })
                       : null,
                   G
-                      ? (0, l.jsx)(g.Z, {
+                      ? (0, l.jsx)(j.Z, {
                             heading: y.intl.string(y.t.M0zgnZ),
                             introText: U
                                 ? y.intl.format(y.t['4bk9Ag'], {
@@ -114,7 +114,7 @@ function I(e) {
                                     (0, l.jsx)(
                                         'li',
                                         {
-                                            children: (0, l.jsx)(v.Z, {
+                                            children: (0, l.jsx)(h.Z, {
                                                 location: 'UserProfileModalActivity',
                                                 user: n,
                                                 currentUser: t,

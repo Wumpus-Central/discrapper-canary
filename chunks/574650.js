@@ -16,9 +16,9 @@ var s = n(442837),
     p = n(937111),
     C = n(981631),
     g = n(176505),
-    S = n(388032),
-    O = n(246752),
-    T = n(240211);
+    O = n(388032),
+    T = n(246752),
+    S = n(240211);
 function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,11 +58,11 @@ let N =
                   b = null,
                   P = null,
                   D = null,
-                  v = [O.notice, T.notice];
+                  v = [T.notice, S.notice];
               switch (y) {
                   case E.wB.SUBMITTED:
-                      ((b = S.intl.string(S.t['5iLvS0'])),
-                          (P = S.intl.string(S.t.mqtdmZ)),
+                      ((b = O.intl.string(O.t['5iLvS0'])),
+                          (P = O.intl.string(O.t.mqtdmZ)),
                           (D = () => {
                               (0, c.h7j)((e) => {
                                   var t, n;
@@ -70,9 +70,9 @@ let N =
                                       c.ConfirmModal,
                                       ((t = f(
                                           {
-                                              header: S.intl.string(S.t.aIz1oa),
-                                              confirmText: S.intl.string(S.t['cY+Ooa']),
-                                              cancelText: S.intl.string(S.t['ETE/oK']),
+                                              header: O.intl.string(O.t.aIz1oa),
+                                              confirmText: O.intl.string(O.t['cY+Ooa']),
+                                              cancelText: O.intl.string(O.t['ETE/oK']),
                                               onConfirm: () => _.Z.removeGuildJoinRequest(N.id),
                                               confirmButtonColor: a.zx.Colors.BRAND
                                           },
@@ -82,7 +82,7 @@ let N =
                                           {
                                               children: (0, i.jsx)(c.Text, {
                                                   variant: 'text-md/normal',
-                                                  children: S.intl.string(S.t['13tjTU'])
+                                                  children: O.intl.string(O.t['13tjTU'])
                                               })
                                           }),
                                       Object.getOwnPropertyDescriptors
@@ -103,19 +103,19 @@ let N =
                           }));
                       break;
                   case E.wB.REJECTED:
-                      ((b = S.intl.string(S.t.lk30cX)),
-                          (P = S.intl.string(S.t['8RrsHh'])),
+                      ((b = O.intl.string(O.t.lk30cX)),
+                          (P = O.intl.string(O.t['8RrsHh'])),
                           (D = () => {
                               (0, c.ZDy)(async () => {
                                   let { default: e } = await n.e('3378').then(n.bind(n, 76075));
                                   return (t) => (0, i.jsx)(e, f({ guildId: N.id }, t));
                               });
                           }),
-                          v.push(O.error));
+                          v.push(T.error));
                       break;
                   default:
-                      ((b = S.intl.string(S.t.G5YKXF)),
-                          (P = S.intl.string(S.t['r8/DT0'])),
+                      ((b = O.intl.string(O.t.G5YKXF)),
+                          (P = O.intl.string(O.t['r8/DT0'])),
                           (D = () => {
                               (0, h.hk)(N.id);
                           }));
@@ -124,7 +124,7 @@ let N =
                   className: l()(...v),
                   children: [
                       (0, i.jsx)(c.Text, {
-                          className: O.header,
+                          className: T.header,
                           variant: 'text-sm/normal',
                           children: b
                       }),

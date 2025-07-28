@@ -13,9 +13,9 @@ var r = n(255367),
     f = n(279475),
     _ = n(535396),
     x = n(981631),
-    v = n(93841),
-    b = n(388032),
-    g = n(568413),
+    g = n(93841),
+    v = n(388032),
+    b = n(568413),
     j = n(117172);
 function E(e) {
     let t,
@@ -23,12 +23,12 @@ function E(e) {
     return (
         (t = n && !1 !== o ? 'full' : n && !1 === o ? 'half' : 'none'),
         (0, r.jsxs)('div', {
-            className: g.progressContainer,
+            className: b.progressContainer,
             children: [
-                (0, r.jsx)('div', { className: l()(g.progress, g[i], g[t]) }),
+                (0, r.jsx)('div', { className: l()(b.progress, b[i], b[t]) }),
                 (0, r.jsx)('div', {
-                    className: l()(g.boostContainer, j.boostProgressBackground, {
-                        [g.boostContainerActive]: n,
+                    className: l()(b.boostContainer, j.boostProgressBackground, {
+                        [b.boostContainerActive]: n,
                         [j.active]: n
                     }),
                     children: (0, r.jsx)(a.$Eu, {
@@ -54,14 +54,14 @@ function h(e) {
                       (0, r.jsxs)(
                           'div',
                           {
-                              className: g.perkRow,
+                              className: b.perkRow,
                               children: [
                                   (0, r.jsx)(e.icon, {
                                       color: l,
                                       size: 'sm'
                                   }),
                                   (0, r.jsx)(s.xv, {
-                                      className: g.perkText,
+                                      className: b.perkText,
                                       color: i,
                                       variant: 'text-sm/medium',
                                       children: e.getCopy()
@@ -73,15 +73,15 @@ function h(e) {
                   );
         }, [n, l, i]);
     return (0, r.jsxs)('div', {
-        className: g.perkRowContainer,
+        className: b.perkRowContainer,
         children: [
             a,
             (0, r.jsx)('div', {
-                className: g.perkRow,
+                className: b.perkRow,
                 children: (0, r.jsx)(s.xv, {
                     color: i,
                     variant: 'text-sm/medium',
-                    children: b.intl.string(v.default.nIj3LS)
+                    children: v.intl.string(g.default.nIj3LS)
                 })
             })
         ]
@@ -92,20 +92,20 @@ function C(e) {
         a = (0, u.Z)(t, i),
         c = (0, u.Z)(t, l),
         x = a.type !== _.A3.INACTIVE,
-        v = c.type !== _.A3.INACTIVE,
-        b = a.type === _.A3.TIER_OVERRIDE_ACTIVATED,
+        g = c.type !== _.A3.INACTIVE,
+        v = a.type === _.A3.TIER_OVERRIDE_ACTIVATED,
         [C, I] = o.useState(void 0);
     (0, m.KT)(C);
     let N = (0, f.d)(x);
     return (0, r.jsxs)(d.Z, {
         guildId: t,
         powerup: i,
-        className: g.card,
+        className: b.card,
         children: [
             (0, r.jsx)(E, {
                 position: 0 === n ? 'start' : null == l ? 'end' : 'middle',
                 active: x,
-                nextActive: null != l ? v : void 0
+                nextActive: null != l ? g : void 0
             }),
             (0, r.jsxs)('div', {
                 className: j.contentContainer,
@@ -119,15 +119,15 @@ function C(e) {
                         isActive: x,
                         index: n
                     }),
-                    !b &&
+                    !v &&
                         (0, r.jsx)(d.u, {
-                            className: g.footer,
+                            className: b.footer,
                             guildId: t,
                             powerup: i
                         })
                 ]
             }),
-            !b &&
+            !v &&
                 (0, r.jsx)('div', {
                     className: j.buttonContainer,
                     children: (0, r.jsx)(p.ZP, {

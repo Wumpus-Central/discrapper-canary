@@ -18,7 +18,7 @@ function g(e) {
     return null == i
         ? (0, r.jsx)('div', {
               className: o()(f.folderPreviewGuildIcon, f.folderPreviewGuildIconError),
-              children: (0, r.jsx)(s.P4T, { color: 'currentColor' })
+              children: (0, r.jsx)(s.Mgn, { color: 'currentColor' })
           })
         : (0, r.jsx)(u.Z, {
               guild: i,
@@ -112,10 +112,10 @@ function b(e) {
         w = i.useCallback(() => {
             (a || N(!0), null == v || v(!0));
         }, [a, v]),
-        Z = i.useCallback(() => {
+        T = i.useCallback(() => {
             (a || N(!1), null == v || v(!1));
         }, [a, v]),
-        T = o || null == u ? null : (0, h.Or)(u),
+        Z = o || null == u ? null : (0, h.Or)(u),
         A = !o && d > 0 ? (0, h.Ne)(d, g ? c.Z.BACKGROUND_ACCENT : c.Z.STATUS_DANGER) : null;
     return (0, r.jsx)(s.tEY, {
         children: (0, r.jsx)(
@@ -150,7 +150,7 @@ function b(e) {
                     onClick: y,
                     onContextMenu: C,
                     onMouseEnter: w,
-                    onMouseLeave: Z,
+                    onMouseLeave: T,
                     onKeyDown: j,
                     onFocus: E,
                     focusProps: { enabled: !1 }
@@ -166,7 +166,7 @@ function b(e) {
                     'aria-owns': _,
                     children: (0, r.jsxs)(s.aRk, {
                         isFolder: !0,
-                        upperBadge: T,
+                        upperBadge: Z,
                         lowerBadge: A,
                         lowerBadgeSize: { width: (0, s.OVM)(d) },
                         children: [

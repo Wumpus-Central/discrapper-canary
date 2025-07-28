@@ -37,7 +37,7 @@ function E(e, t, n, r, i) {
     let [a, o] = e.slice(1).split('#', 2),
         l = null != t ? d.Z.getGuild(t) : null;
     if (i && null == o && null != l) {
-        for (let e of Object.values(u.Z.getRoles(l.id)))
+        for (let e of u.Z.getSortedRoles(l.id))
             if (a === e.name)
                 return {
                     type: 'roleMention',

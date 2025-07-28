@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(456677),
     l = n(55889),
-    s = n(300453),
-    a = n(620436),
+    a = n(300453),
+    s = n(620436),
     o = n(388032),
     c = n(461367);
 function d(e) {
@@ -12,12 +12,12 @@ function d(e) {
     return (0, r.jsxs)('div', {
         className: c.cardContentsContainer,
         children: [
-            (0, r.jsx)(s.Z, {
+            (0, r.jsx)(a.Z, {
                 step: 1,
                 header: o.intl.string(o.t['1YgPj4'])
             }),
-            (0, r.jsx)(a.Z, { type: a.Z.Type.ARROW_DOWN }),
-            (0, r.jsx)(s.Z, {
+            (0, r.jsx)(s.Z, { type: s.Z.Type.ARROW_DOWN }),
+            (0, r.jsx)(a.Z, {
                 step: 2,
                 header: o.intl.string(o.t['18TOiY']),
                 children: (0, r.jsx)(i.Z, {
@@ -25,8 +25,8 @@ function d(e) {
                     onChangeRule: n
                 })
             }),
-            (0, r.jsx)(a.Z, { type: a.Z.Type.CROSS }),
-            (0, r.jsx)(s.Z, {
+            (0, r.jsx)(s.Z, { type: s.Z.Type.CROSS }),
+            (0, r.jsx)(a.Z, {
                 step: 3,
                 header: o.intl.string(o.t.eq3gjo),
                 children: (0, r.jsx)(l.Z, {

@@ -72,7 +72,7 @@ function f(e) {
           });
 }
 function g(e) {
-    let { imageUrl: t, name: n, description: i, formattedPrice: c, role: g, ctaComponent: _, shouldShowFullDescriptionButton: h = !0, onShowFullDescription: b, productType: E, onTapCard: C, actionMenu: x, showOpaqueBackground: v = !1, hideRoleTag: O = !1, lineClamp: y = 1, cardWidth: j = 332, cardHeight: I, thumbnailHeight: S = 187, descriptionTextVariant: T = 'text-sm/normal', isDraft: N = !1 } = e,
+    let { imageUrl: t, name: n, description: i, formattedPrice: c, role: g, ctaComponent: _, shouldShowFullDescriptionButton: h = !0, onShowFullDescription: b, productType: E, onTapCard: C, actionMenu: x, showOpaqueBackground: v = !1, hideRoleTag: y = !1, lineClamp: O = 1, cardWidth: j = 332, cardHeight: I, thumbnailHeight: S = 187, descriptionTextVariant: T = 'text-sm/normal', isDraft: N = !1 } = e,
         P = (0, o.hQ)(),
         A = (0, r.jsxs)(r.Fragment, {
             children: [
@@ -103,7 +103,7 @@ function g(e) {
                                     children: (0, r.jsx)(s.Z, {
                                         variant: T,
                                         color: 'text-muted',
-                                        lineClamp: y,
+                                        lineClamp: O,
                                         text: i
                                     })
                                 }),
@@ -112,7 +112,7 @@ function g(e) {
                                         onShowFullDescription: b,
                                         variant: T
                                     }),
-                                O || null == g || '' === g.name
+                                y || null == g || '' === g.name
                                     ? null
                                     : (0, r.jsxs)(r.Fragment, {
                                           children: [(0, r.jsx)(a.LZC, { size: 16 }), (0, r.jsx)(u.Z, { role: g })]

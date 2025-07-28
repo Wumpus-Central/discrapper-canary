@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(399606),
     l = n(481060),
-    s = n(674180),
-    a = n(267101),
+    a = n(674180),
+    s = n(267101),
     o = n(430824),
     c = n(584825),
     d = n(198139),
@@ -13,15 +13,15 @@ function m(e) {
     let { guildId: t, allPeriods: m } = e,
         g = (0, i.e7)([o.Z], () => o.Z.getGuild(t)),
         p = (0, c.qi)(t, { includeSoftDeleted: !0 }),
-        f = (0, a.ue)(t, { publishedOnly: !1 }),
-        { allowSelfRemoveMonetization: h } = (0, s.gX)(t),
+        h = (0, s.ue)(t, { publishedOnly: !1 }),
+        { allowSelfRemoveMonetization: f } = (0, a.gX)(t),
         x = m.filter((e) => {
             var t;
             let n = Object.values(null != (t = e.ppgs) ? t : {})[0];
             return (null == n ? void 0 : n.status) === d.x_.OPEN || (null == n ? void 0 : n.status) === d.x_.PAYOUT_DEFERRED;
         }),
         b = p.length > 0,
-        j = f.length > 0,
+        j = h.length > 0,
         v = x.length > 0;
     return null == g
         ? null
@@ -35,7 +35,7 @@ function m(e) {
                   (0, r.jsx)(l.zxk, {
                       variant: 'critical-primary',
                       text: u.intl.string(u.t.FrOFSk),
-                      disabled: !h || b || j || v,
+                      disabled: !f || b || j || v,
                       onClick: () => {
                           (0, l.ZDy)(async () => {
                               let { default: e } = await n.e('35282').then(n.bind(n, 157429));

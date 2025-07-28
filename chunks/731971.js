@@ -66,8 +66,8 @@ let c = {
     mutedServer: !1
 };
 function u(e) {
-    let t = l.Wz.getSetting();
-    return t !== i.E5.ON && (t !== i.E5.ON_FOR_LARGE_GUILDS || null == e || !(e > 200));
+    let t = l.no.getSetting();
+    return t !== i.GI.ACTIVITY_STATUS_ON && (t !== i.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS || null == e || !(e > 200));
 }
 let d = (0, r.U)((e) => ({
         nickname: c.nickname,

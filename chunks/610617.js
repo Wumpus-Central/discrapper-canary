@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685), n(953529));
+(n.d(t, { Z: () => L }), n(388685), n(953529));
 var i = n(255367),
     s = n(73800),
     l = n(120356),
@@ -24,13 +24,13 @@ var i = n(255367),
     E = n(871465),
     Z = n(388032),
     _ = n(345450);
-function T(e) {
+function L(e) {
     let { guildId: t, onClose: n, isRedesign: l = !1 } = e,
         a = (0, c.e7)([x.Z], () => x.Z.getGuild(t)),
-        T = (0, c.e7)([v.default], () => v.default.getCurrentUser()),
-        { playSound: L, isPlaying: y, soundpackPlaying: M } = (0, N.Z)(),
+        L = (0, c.e7)([v.default], () => v.default.getCurrentUser()),
+        { playSound: T, isPlaying: y, soundpackPlaying: M } = (0, N.Z)(),
         I = (0, S.OR)(t),
-        P = j.ZP.canUseCustomNotificationSounds(T),
+        P = j.ZP.canUseCustomNotificationSounds(L),
         A = P ? I : E.YC.CLASSIC,
         R = s.useRef(0),
         w = s.useRef(-1),
@@ -67,9 +67,9 @@ function T(e) {
         },
         [J]
     );
-    let z = j.ZP.canUseCustomNotificationSounds(T),
+    let z = j.ZP.canUseCustomNotificationSounds(L),
         F = (0, c.e7)([p.ZP], () => p.ZP.isMuted(t), [t]);
-    return null == T
+    return null == L
         ? null
         : (0, i.jsxs)('div', {
               children: [
@@ -116,7 +116,7 @@ function T(e) {
                       (0, i.jsxs)('div', {
                           className: _.warningContainer,
                           children: [
-                              (0, i.jsx)(g.P4T, {
+                              (0, i.jsx)(g.Mgn, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
@@ -139,7 +139,7 @@ function T(e) {
                                   className: r()({ [_.options]: z }),
                                   value: null != A ? A : E.YC.CLASSIC,
                                   onChange: (e) => {
-                                      (L(e.value), P && (0, f.t)(t, A, e.value, 'notificationSettings'));
+                                      (T(e.value), P && (0, f.t)(t, A, e.value, 'notificationSettings'));
                                   },
                                   options: W,
                                   radioItemClassName: _.option

@@ -20,8 +20,8 @@ function h(e) {
         v = (0, i.tP)(t),
         { containerRef: y, size: O, height: N } = (0, m.h)(),
         {
-            expansionSpring: T,
-            isAnimating: E,
+            expansionSpring: E,
+            isAnimating: T,
             isExpanded: q,
             toggleExpanded: S
         } = (0, m.O)({
@@ -45,7 +45,7 @@ function h(e) {
                     maxHeight:
                         n === a.jn.QUESTS_EMBED
                             ? void 0
-                            : T.to({
+                            : E.to({
                                   range: [0, 1],
                                   output: [c.DJ, P]
                               })
@@ -65,8 +65,8 @@ function h(e) {
                             location: n,
                             quest: t,
                             size: O,
-                            expansionSpring: T,
-                            isAnimating: E,
+                            expansionSpring: E,
+                            isAnimating: T,
                             isExpanded: q,
                             contentPosition: x,
                             toggleExpanded: S,
@@ -79,7 +79,7 @@ function h(e) {
                             size: O,
                             isFocused: j,
                             isExpanded: q,
-                            isAnimating: E,
+                            isAnimating: T,
                             contentPosition: x,
                             sourceQuestContent: g
                         })

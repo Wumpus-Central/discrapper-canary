@@ -12,5 +12,5 @@ let o = () => a(r.default.getCurrentUser(), (0, l.JH)()),
             (0, l.o9)()
         );
 function a(e, t) {
-    return !(null == e || e.isPomelo()) && !!e.hasVerifiedEmailOrPhone() && !!t;
+    return !(null == e || e.hasUniqueUsername()) && !!e.hasVerifiedEmailOrPhone() && !!t;
 }

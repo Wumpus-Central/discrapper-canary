@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => k }), n(388685), n(642613), n(539854));
+(n.d(t, { Z: () => M }), n(388685), n(642613), n(539854));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -229,7 +229,7 @@ function x(e) {
     for (let e in y) n.has(y[e].parentId) && (y[e].rebuild(), (r = !0));
     return r;
 }
-class M extends (r = o.ZP.Store) {
+class k extends (r = o.ZP.Store) {
     initialize() {
         (this.waitFor(l.Z, c.ZP, u.Z, d.Z, f.Z, _.default),
             this.syncWith([u.Z], () => {
@@ -259,8 +259,8 @@ class M extends (r = o.ZP.Store) {
         return null != (i = null == o ? void 0 : o.canViewChannel) && i;
     }
 }
-b(M, 'displayName', 'ThreadMemberListStore');
-let k = new M(s.Z, {
+b(k, 'displayName', 'ThreadMemberListStore');
+let M = new k(s.Z, {
     CONNECTION_OPEN: v,
     THREAD_MEMBERS_UPDATE: I,
     THREAD_UPDATE: w,

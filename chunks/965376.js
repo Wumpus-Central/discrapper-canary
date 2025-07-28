@@ -1,47 +1,54 @@
-(n.d(t, { D: () => m }), n(388685), n(583741), n(539854));
+(n.d(t, { D: () => h }), n(539854));
 var r = n(73800),
-    i = n(392711),
-    l = n.n(i),
-    a = n(442837),
-    o = n(941028),
-    s = n(493773),
-    c = n(509848),
-    u = n(485386),
-    d = n(159299),
-    p = n(231338),
-    h = n(388032);
-let f = [];
-function m(e, t) {
-    (0, s.ZP)(() => {
-        (null == t ? void 0 : t.id) != null && (0, o.b8)(t.id, e, c.KV);
+    i = n(442837),
+    l = n(941028),
+    a = n(493773),
+    o = n(509848),
+    s = n(485386),
+    c = n(159299),
+    u = n(231338),
+    d = n(388032);
+let p = [];
+function h(e, t) {
+    (0, a.ZP)(() => {
+        (null == t ? void 0 : t.id) != null && (0, l.b8)(t.id, e, o.KV);
     });
-    let n = (0, a.e7)([u.Z], () => (null != t ? u.Z.getRoles(t.id) : void 0)),
-        { version: i, members: m } = (0, a.cj)([d.Z], () => ({
-            version: d.Z.getMemberListVersion(e),
-            members: d.Z.getMemberListSections(e)
+    let n = (0, i.e7)([s.Z], () => (null != t ? s.Z.getSortedRoles(t.id) : [])),
+        { version: h, members: f } = (0, i.cj)([c.Z], () => ({
+            version: c.Z.getMemberListVersion(e),
+            members: c.Z.getMemberListSections(e)
         })),
-        g = null == t,
-        b = r.useMemo(() => {
-            if (g) return f;
-            let e = l()(n)
-                .values()
+        m = null == t,
+        g = r.useMemo(() => {
+            if (m) return p;
+            let e = n
                 .filter((e) => e.hoist)
-                .sortBy((e) => e.position)
-                .reverse()
-                .map((e) => e.id)
-                .value();
+                .map((e) => ({
+                    id: e.id,
+                    label: e.name
+                }));
             return (
-                e.push(p.Sk.ONLINE, p.Sk.OFFLINE),
+                e.push(
+                    {
+                        id: u.Sk.ONLINE,
+                        label: d.intl.string(d.t.WbGtnJ)
+                    },
+                    {
+                        id: u.Sk.OFFLINE,
+                        label: d.intl.string(d.t.Vv0abG)
+                    }
+                ),
                 e.map((e) => {
-                    var t, r, i, l;
+                    var t, n;
+                    let { id: r, label: i } = e;
                     return {
-                        label: e === p.Sk.ONLINE ? h.intl.string(h.t.WbGtnJ) : e === p.Sk.OFFLINE ? h.intl.string(h.t.Vv0abG) : null != (i = null == n || null == (t = n[e]) ? void 0 : t.name) ? i : '',
-                        userIds: null != (l = null == m || null == (r = m[e]) ? void 0 : r.userIds) ? l : [],
-                        id: e,
-                        roleId: e
+                        label: i,
+                        userIds: null != (n = null == f || null == (t = f[r]) ? void 0 : t.userIds) ? n : [],
+                        id: r,
+                        roleId: r
                     };
                 })
             );
-        }, [n, m, i, g]);
-    return null != m ? b : f;
+        }, [n, f, h, m]);
+    return null != f ? g : p;
 }

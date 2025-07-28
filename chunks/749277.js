@@ -16,9 +16,9 @@ var r = n(442837),
     p = n(703656),
     C = n(914010),
     g = n(594174),
-    S = n(395361),
-    O = n(626135),
-    T = n(243778),
+    O = n(395361),
+    T = n(626135),
+    S = n(243778),
     f = n(921944),
     N = n(981631),
     m = n(801461),
@@ -29,7 +29,7 @@ let b = (e) => {
     let { dismissibleContent: t, noticeType: b } = e,
         P = (0, r.e7)([g.default], () => g.default.getCurrentUser()),
         D = (0, r.e7)([C.Z], () => C.Z.getGuildId());
-    return (0, i.jsx)(T.ZP, {
+    return (0, i.jsx)(S.ZP, {
         contentTypes: [t],
         groupName: f.R.NOTICE_BAR,
         bypassAutoDismiss: !0,
@@ -96,7 +96,7 @@ let b = (e) => {
                                 onClick: () => r(f.L.UNKNOWN),
                                 noticeType: b
                             }),
-                            (0, i.jsx)(S.Z, { className: y.platformIcon }),
+                            (0, i.jsx)(O.Z, { className: y.platformIcon }),
                             A.intl.string(A.t['5NUVHB']),
                             (0, i.jsx)(o.NoS, {
                                 onClick: () =>
@@ -159,7 +159,7 @@ let b = (e) => {
                                 className: y.premiumAction,
                                 noticeType: b,
                                 onClick: () => {
-                                    (O.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
+                                    (T.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
                                         location_section: N.jXE.NOTIFICATION_BAR,
                                         location_object: N.qAy.BUTTON_CTA
                                     }),

@@ -1,9 +1,9 @@
 (n.r(t), n.d(t, { default: () => P }), n(415506), n(388685));
 var r = n(255367),
-    o = n(73800),
-    i = n(442837),
-    a = n(13245),
-    l = n(615287),
+    i = n(73800),
+    a = n(442837),
+    l = n(13245),
+    o = n(615287),
     c = n(493773),
     u = n(710845),
     s = n(522474),
@@ -14,14 +14,14 @@ var r = n(255367),
     b = n(358085);
 n(606206);
 var m = n(998502),
-    v = n(145597);
+    g = n(145597);
 n(371467);
-var g = n(41534),
-    h = n(554370),
+var h = n(41534),
+    v = n(554370),
     y = n(371651),
-    O = n(610394),
-    E = n(757744),
-    I = n(981631);
+    E = n(610394),
+    I = n(757744),
+    O = n(981631);
 let C = new u.Z('AppOverlay');
 async function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1000,
@@ -30,53 +30,53 @@ async function S(e, t) {
         try {
             await m.ZP.isAlwaysOnTop(t);
         } catch (e) {
-            (C.error('Window does not exist while trying to show inactive', e), (0, g.D1)(e, l.gl.OutOfProcess));
+            (C.error('Window does not exist while trying to show inactive', e), (0, h.D1)(e, o.gl.OutOfProcess));
         }
-        for (let i = 0; i < r; i++)
+        for (let a = 0; a < r; a++)
             try {
                 if (!(await m.ZP.waitForIPCReady(n, e))) throw Error('IPC not ready');
                 m.ZP.showInactive(t);
                 return;
             } catch (e) {
-                var o;
-                if ((null == (o = e.message) ? void 0 : o.includes('IPC')) && i < r - 1) {
-                    let t = (n / 2) * Math.pow(2, i + 1);
+                var i;
+                if ((null == (i = e.message) ? void 0 : i.includes('IPC')) && a < r - 1) {
+                    let t = (n / 2) * Math.pow(2, a + 1);
                     (C.error('Failed to show inactive, retrying in '.concat(t, 'ms'), e), await new Promise((e) => setTimeout(e, t)));
-                } else throw ((0, g.D1)(e, l.gl.OutOfProcess), e);
+                } else throw ((0, h.D1)(e, o.gl.OutOfProcess), e);
             }
     }
 }
-let P = o.memo(function (e) {
+let P = i.memo(function (e) {
     let { withTitleBar: t, windowKey: n } = e,
         u = (function (e, t) {
-            let n = (0, i.e7)([s.Z], () => s.Z.getWindow(e)),
-                r = o.useRef(null),
-                u = o.useRef(null),
-                d = o.useRef(null),
-                m = (0, i.e7)([p.default], () => {
+            let n = (0, a.e7)([s.Z], () => s.Z.getWindow(e)),
+                r = i.useRef(null),
+                u = i.useRef(null),
+                d = i.useRef(null),
+                m = (0, a.e7)([p.default], () => {
                     let e = p.default.getFocusedPID();
-                    return !b.isPlatformEmbedded || (null != e && e !== v.UNSET_PID);
+                    return !b.isPlatformEmbedded || (null != e && e !== g.UNSET_PID);
                 }),
-                [g, h] = o.useState(m),
-                [E, C] = o.useState(!1),
-                P = o.useCallback(() => {
-                    let e = (0, v.getPID)(),
+                [h, v] = i.useState(m),
+                [I, C] = i.useState(!1),
+                P = i.useCallback(() => {
+                    let e = (0, g.getPID)(),
                         n = null != _.Z.getVoiceChannelId();
-                    (a.Z.track(I.rMx.OVERLAY_INITIALIZED, {
+                    (l.Z.track(O.rMx.OVERLAY_INITIALIZED, {
                         voice_widget_connected: n,
-                        text_widget_connected: O.ZP.isPinned(I.Odu.TEXT),
-                        overlay_render_method: l.gl[y.default.getOverlayMethod(e)],
+                        text_widget_connected: E.ZP.isPinned(O.Odu.TEXT),
+                        overlay_render_method: o.gl[y.default.getOverlayMethod(e)],
                         unpinned_widget_types: f.Z.getAllUnpinnedPinnedWidgets(t)
                     }),
-                        a.Z.successfullyShown(e));
+                        l.Z.successfullyShown(e));
                 }, [t]);
             (0, c.Ng)(() => {
                 let e = (e) => {
                     let t = null != n ? n : window;
-                    e.data === O.Il &&
+                    e.data === E.Il &&
                         t.requestAnimationFrame(() => {
                             t.requestAnimationFrame(() => {
-                                window.parent.postMessage(O.A8, '*');
+                                window.parent.postMessage(E.A8, '*');
                             });
                         });
                 };
@@ -87,7 +87,7 @@ let P = o.memo(function (e) {
                     }
                 );
             });
-            let w = o.useCallback(
+            let A = i.useCallback(
                 (e, t) => {
                     null == r.current &&
                         ((d.current = () => {
@@ -97,38 +97,38 @@ let P = o.memo(function (e) {
                             try {
                                 await S(e, t);
                             } catch (e) {
-                                a.Z.setOverlayCrashed((0, v.getPID)(), e);
+                                l.Z.setOverlayCrashed((0, g.getPID)(), e);
                                 return;
                             }
                             u.current = e.setTimeout(() => {
-                                (h(!0), C(!0), P(), (d.current = null));
+                                (v(!0), C(!0), P(), (d.current = null));
                             }, 100);
                         })));
                 },
                 [P]
             );
             return (
-                o.useEffect(() => {
-                    (!g || null == n) && m && m && null != n && w(n, e);
-                }, [w, g, m, e, n]),
+                i.useEffect(() => {
+                    (!h || null == n) && m && m && null != n && A(n, e);
+                }, [A, h, m, e, n]),
                 (0, c.Ng)(() => {
-                    g && null != n && w(n, e);
+                    h && null != n && A(n, e);
                 }),
                 (0, c.zq)(() => {
                     null != d.current && d.current();
                 }),
-                E
+                I
             );
-        })(n, E.$S),
-        m = (0, v.getPID)(),
-        g = (0, i.e7)([p.default], () => p.default.isInputLocked(m), [m]);
+        })(n, I.$S),
+        m = (0, g.getPID)(),
+        h = (0, a.e7)([p.default], () => p.default.isInputLocked(m), [m]);
     return u
         ? (0, r.jsx)(d.Z, {
               withTitleBar: t,
               windowKey: n,
               title: 'Discord Overlay',
-              hideModals: g,
-              children: (0, r.jsx)(h.Z, {})
+              hideModals: h,
+              children: (0, r.jsx)(v.Z, {})
           })
         : null;
 });

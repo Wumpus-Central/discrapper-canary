@@ -12,8 +12,7 @@
     n(490233),
     n(97749),
     n(388685),
-    n(467055),
-    n(642613));
+    n(467055));
 var r = n(512722),
     i = n.n(r),
     a = n(392711),
@@ -182,27 +181,18 @@ function g(e) {
         }
     return o;
 }
-function E(e, t) {
-    return Object.values(t).some((e) => {
-        var t;
-        return (null == (t = e.tags) ? void 0 : t.guild_connections) === null;
-    });
+function E(e) {
+    return e.some((e) => null === e.tags.guild_connections);
 }
 function b(e) {
     var t, n;
-    let { guildMember: r, guild: a, guildRoles: u, channel: d, onlyChannelConnectionRoles: f = !1 } = e;
-    if (null == r || (null == a && null != d && (a = c.Z.getGuild(d.getGuildId())), null == a)) return null;
-    let { id: _ } = a;
-    null == u && (u = l.Z.getRoles(_));
-    let p = r.roles
-            .map((e) => u[e])
-            .filter((e) => {
-                var t;
-                return (null == e || null == (t = e.tags) ? void 0 : t.guild_connections) === null;
-            })
-            .sort((e, t) => (i()(null != e && null != t, 'roleA or roleB is null'), t.position - e.position)),
-        h = o().intersection(p, (0, s.Z)(d));
-    return h.length > 0 ? (null != (t = h[0]) ? t : null) : f ? null : null != (n = p[0]) ? n : null;
+    let { guildMember: r, guild: i, sortedGuildRoles: a, channel: u, onlyChannelConnectionRoles: d = !1 } = e;
+    if (null == r || (null == i && null != u && (i = c.Z.getGuild(u.getGuildId())), null == i)) return null;
+    let { id: f } = i;
+    null == a && (a = l.Z.getSortedRoles(f));
+    let _ = a.filter((e) => null === e.tags.guild_connections && r.roles.includes(e.id)),
+        p = o().intersection(_, (0, s.Z)(u));
+    return p.length > 0 ? (null != (t = p[0]) ? t : null) : d ? null : null != (n = _[0]) ? n : null;
 }
 function y(e, t) {
     if (null == e || '' === e) return null;

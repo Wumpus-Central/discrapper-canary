@@ -234,17 +234,17 @@ let X = l.memo(function (e) {
               });
     }),
     K = l.memo(function (e) {
-        var t;
-        let { member: n, user: l } = e,
-            o = (0, y.X7)(null == n ? void 0 : n.guildId, null == n ? void 0 : n.userId, null == n ? void 0 : n.colorStrings);
-        return null == l || null == n
+        var t, n;
+        let { member: l, user: o } = e,
+            i = (0, y.X7)(null == l ? void 0 : l.guildId, null == l ? void 0 : l.userId, null != (t = null == l ? void 0 : l.colorStrings) ? t : null);
+        return null == o || null == l
             ? null
             : (0, r.jsxs)('div', {
                   className: G.memberNameContainer,
                   children: [
                       (0, r.jsx)('div', {
                           className: G.memberAvatar,
-                          children: (0, r.jsx)(m.Z, { user: l })
+                          children: (0, r.jsx)(m.Z, { user: o })
                       }),
                       (0, r.jsx)('div', {
                           className: G.memberName,
@@ -254,15 +254,15 @@ let X = l.memo(function (e) {
                                   className: G.nameContainer,
                                   children: [
                                       (0, r.jsx)(C.PUh, {
-                                          name: Z.ZP.getName(n.guildId, null, l),
-                                          color: null != (t = n.colorString) ? t : void 0,
-                                          roleColors: o,
+                                          name: Z.ZP.getName(l.guildId, null, o),
+                                          colorString: null != (n = l.colorString) ? n : null,
+                                          colorStrings: i,
                                           className: G.memberNameText
                                       }),
                                       (0, r.jsx)(v.ZP, {
-                                          primaryGuild: null == l ? void 0 : l.primaryGuild,
-                                          userId: null == l ? void 0 : l.id,
-                                          contextGuildId: n.guildId,
+                                          primaryGuild: null == o ? void 0 : o.primaryGuild,
+                                          userId: null == o ? void 0 : o.id,
+                                          contextGuildId: l.guildId,
                                           containerClassName: G.memberClanTag
                                       })
                                   ]
@@ -275,7 +275,7 @@ let X = l.memo(function (e) {
                               variant: 'text-xs/normal',
                               color: 'header-secondary',
                               tag: 'span',
-                              children: R.ZP.getUserTag(l)
+                              children: R.ZP.getUserTag(o)
                           })
                       })
                   ]

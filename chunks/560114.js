@@ -183,7 +183,7 @@ class ep extends (l = r.PureComponent) {
             ? (0, i.jsxs)('div', {
                   className: er.warningContainer,
                   children: [
-                      (0, i.jsx)(I.P4T, {
+                      (0, i.jsx)(I.Mgn, {
                           size: 'custom',
                           className: er.warningIcon,
                           color: v.Z.unsafe_rawColors.YELLOW_300.css,

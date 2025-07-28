@@ -100,7 +100,8 @@ function y(A) {
                                         variant: 'text-lg/medium',
                                         children: (0, n.jsx)(s.PUh, {
                                             name: b.ZP.getName(t, null, e),
-                                            color: s.TVs.colors.HEADER_PRIMARY.css
+                                            colorString: s.TVs.colors.HEADER_PRIMARY.css,
+                                            colorStrings: null
                                         })
                                     }),
                                     (0, n.jsx)(E.ZP, {

@@ -8,12 +8,12 @@ var i = n(755721),
     s = n(862863);
 function c(e) {
     let { activity: t, user: n, source: c, className: u, size: d, look: f, color: p, fullWidth: m, onAction: g } = e,
-        { label: _, tooltip: v, loading: h, disabled: b, onClick: y } = (0, o.Ih)(t, n, c),
+        { label: h, tooltip: b, loading: _, disabled: v, onClick: y } = (0, o.Ih)(t, n, c),
         O = () => {
             (null == g || g(), y());
         };
     return (0, r.jsx)(l.ua7, {
-        text: v,
+        text: b,
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n } = e;
             return (0, r.jsxs)(i.zx, {
@@ -26,14 +26,14 @@ function c(e) {
                 onClick: O,
                 onMouseEnter: t,
                 onMouseLeave: n,
-                disabled: b,
-                submitting: h,
+                disabled: v,
+                submitting: _,
                 children: [
                     (0, r.jsx)(a.Z, {
                         width: 16,
                         height: 16
                     }),
-                    _
+                    h
                 ]
             });
         }

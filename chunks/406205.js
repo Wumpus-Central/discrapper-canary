@@ -89,8 +89,8 @@ function E(e) {
         }),
         r = (0, a.e7)([c.ZP], () => c.ZP.getMessageNotifications(t)),
         [f, E] = (0, s.useState)(!1),
-        T = f ? x.s8.CUSTOM : (0, x.gs)(l, r),
-        L = (e) => {
+        L = f ? x.s8.CUSTOM : (0, x.gs)(l, r),
+        T = (e) => {
             if (e === x.s8.CUSTOM) return void E(!0);
             (E(!1), (0, g.V)(t, e));
         };
@@ -99,11 +99,11 @@ function E(e) {
             (0, i.jsx)('div', {
                 className: N.segmentedControlsContainer,
                 children: (0, i.jsx)(o.sY7, {
-                    value: T,
+                    value: L,
                     options: O(),
                     onChange: (e) => {
                         let { value: t } = e;
-                        return L(t);
+                        return T(t);
                     },
                     className: N.segmentedControl,
                     look: 'pill'

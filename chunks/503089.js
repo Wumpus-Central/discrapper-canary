@@ -1,7 +1,7 @@
 (n.d(t, {
     $x: () => C,
     ZP: () => w,
-    d7: () => P,
+    d7: () => x,
     w6: () => _
 }),
     n(539854),
@@ -79,8 +79,8 @@ let j = Object.freeze({
     }),
     C = 1.4,
     _ = 15,
-    P = 2;
-function x(e) {
+    x = 2;
+function P(e) {
     var t, n;
     let { section: i, setPreventNavigation: s, scrollerRef: o } = e;
     (0, a.Z)({
@@ -137,7 +137,7 @@ class N extends i.PureComponent {
                   duration: 300,
                   intensity: this._intensity
               }),
-              (this._intensity = Math.min(this._intensity + P, _)),
+              (this._intensity = Math.min(this._intensity + x, _)),
               p.S.dispatch(h.CkL.EMPHASIZE_NOTICE),
               !1)
             : ((this._intensity = C), !0);
@@ -201,7 +201,7 @@ class N extends i.PureComponent {
                     scrollerRef: this.scrollerRef,
                     section: n,
                     sidebar: this.renderSidebar(o),
-                    content: (0, r.jsx)(x, {
+                    content: (0, r.jsx)(P, {
                         section: a,
                         setPreventNavigation: this.setPreventNavigation,
                         scrollerRef: this.scrollerRef
@@ -265,7 +265,7 @@ class N extends i.PureComponent {
                 let { section: i, label: l = null, ariaLabel: a, onClick: c, variant: u, icon: f, className: p, newIndicator: g, newIndicatorDismissibleContentTypes: m, badgeCount: b } = e,
                     y = null;
                 i === h.oAB.ACCOUNT && this.props.isEligibleForPomelo
-                    ? (y = (0, r.jsx)(o.P4T, {
+                    ? (y = (0, r.jsx)(o.Mgn, {
                           size: 'custom',
                           width: 20,
                           height: 20,

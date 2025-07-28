@@ -143,10 +143,10 @@ function x() {
     }
     return t ? ((C = e), 'APPLICATION_ACTIVITIES_CHANGED') : 'NO_CHANGES';
 }
-function M() {
+function k() {
     (x(), R());
 }
-class k extends (r = l.ZP.Store) {
+class M extends (r = l.ZP.Store) {
     initialize() {
         (this.waitFor(_.ZP, u.ZP, y.Z, b.Z, m.Z, E.Z, O.Z, p.Z), this.syncWith([h.Z, p.Z], () => R()));
     }
@@ -173,8 +173,8 @@ class k extends (r = l.ZP.Store) {
         return null;
     }
 }
-I(k, 'displayName', 'LocalActivityStore');
-let j = new k(c.Z, {
+I(M, 'displayName', 'LocalActivityStore');
+let j = new M(c.Z, {
     OVERLAY_INITIALIZE: L,
     START_SESSION: P,
     LOCAL_ACTIVITY_UPDATE: w,
@@ -187,7 +187,7 @@ let j = new k(c.Z, {
     USER_CONNECTIONS_UPDATE: R,
     STREAM_START: R,
     STREAM_STOP: R,
-    USER_SETTINGS_PROTO_UPDATE: M,
+    USER_SETTINGS_PROTO_UPDATE: k,
     EMBEDDED_ACTIVITY_CLOSE: R,
     UPDATE_HANG_STATUS: R
 });

@@ -51,8 +51,8 @@ var r = n(255367),
     D = n(598077),
     L = n(314897),
     x = n(630388),
-    M = n(700785),
-    k = n(591759),
+    k = n(700785),
+    M = n(591759),
     j = n(807675),
     U = n(489863),
     G = n(228763),
@@ -293,12 +293,12 @@ function eu(e) {
     let [eC, eR] = i.useState(null),
         [eP, ew] = i.useState(null),
         [eD, eL] = i.useState(null),
-        [ex, eM] = i.useState(!1),
-        [ek, ej] = i.useState(!1),
+        [ex, ek] = i.useState(!1),
+        [eM, ej] = i.useState(!1),
         eU = null == eC ? void 0 : eC.guilds,
         [eG, eB] = i.useState(null != ed ? ed : null),
         [eV, eF] = i.useState(null != ef ? ef : null),
-        [eZ, eH] = i.useState(M.Hn),
+        [eZ, eH] = i.useState(k.Hn),
         [eY, eW] = i.useState(!1),
         eK = i.useMemo(() => ((null == eC ? void 0 : eC.user) != null ? new D.Z(eC.user) : null), [null == eC ? void 0 : eC.user]),
         ez = i.useMemo(() => (null == eU ? void 0 : eU.find((e) => e.id === eG)), [eU, eG]),
@@ -328,7 +328,7 @@ function eu(e) {
         e4 = i.useMemo(() => {
             var e;
             let t = eQ ? d.vB(null != (e = null == e0 ? void 0 : e0.permissions) ? e : 0) : eu;
-            return null != t ? t : M.Hn;
+            return null != t ? t : k.Hn;
         }, [null == e0 ? void 0 : e0.permissions, eu, eQ]),
         e5 = i.useRef(!1),
         [e6, e8] = i.useState(null != ev ? ev : []),
@@ -356,7 +356,7 @@ function eu(e) {
     let te = i.useCallback(
             async (e) => {
                 if (null != ey) {
-                    (eM(!0), ey(e));
+                    (ek(!0), ey(e));
                     return;
                 }
                 if (!e && !em) {
@@ -370,7 +370,7 @@ function eu(e) {
                 }
                 if (null == eq) return void eL(Error('No integration type was selected.'));
                 try {
-                    eM(!0);
+                    ek(!0);
                     let n = await (0, U.Iq)({
                         authorize: e,
                         clientId: N,
@@ -403,8 +403,8 @@ function eu(e) {
                             null == eO || eO());
                     else if (null != n.location) {
                         var t;
-                        let e = null == (t = k.Z.toURLSafe(n.location)) ? void 0 : t.pathname;
-                        k.Z.isDiscordUrl(n.location) && e === $.Z5c.OAUTH2_AUTHORIZED
+                        let e = null == (t = M.Z.toURLSafe(n.location)) ? void 0 : t.pathname;
+                        M.Z.isDiscordUrl(n.location) && e === $.Z5c.OAUTH2_AUTHORIZED
                             ? (0, P.uL)($.Z5c.OAUTH2_AUTHORIZED, {
                                   state: {
                                       application: null == eC ? void 0 : eC.application,
@@ -412,10 +412,10 @@ function eu(e) {
                                   }
                               })
                             : (window.location = n.location);
-                    } else eM(!1);
+                    } else ek(!1);
                 } catch (t) {
                     let e = t.body;
-                    ((null == e ? void 0 : e.message) != null && '' !== e.message ? eL(Error(e.message)) : eL(e), ew('AUTHORIZE_SCOPES'), eM(!1));
+                    ((null == e ? void 0 : e.message) != null && '' !== e.message ? eL(Error(e.message)) : eL(e), ew('AUTHORIZE_SCOPES'), ek(!1));
                 }
             },
             [ey, em, eb, null == eC ? void 0 : eC.application, ez, eO, N, e2, R, X, ee, er, ei, ea, e4, eZ, eG, eq, eV, e6, eY]
@@ -625,7 +625,7 @@ function eu(e) {
                         : null
                 ]
             })),
-                e2.includes(u.x.BOT) && !d.fS(e4, M.Hn) && (m = 'AUTHORIZE_BOT_PERMISSIONS'),
+                e2.includes(u.x.BOT) && !d.fS(e4, k.Hn) && (m = 'AUTHORIZE_BOT_PERMISSIONS'),
                 tr.length > 1 && (h = 'SELECT_INSTALL_TYPE'),
                 (tu = (tE && null == ez) || (tg && null == eV)),
                 (tc = !0));
@@ -695,7 +695,7 @@ function eu(e) {
             ),
             'SELECT_INSTALL_TYPE' !== eP &&
                 ty.push(
-                    ek
+                    eM
                         ? {
                               onClick: null != m ? () => ew(m) : () => te(!0),
                               loading: ex,
@@ -724,8 +724,8 @@ function eu(e) {
 function ed(e, t) {
     var n, i;
     if (null == t.location || (null != e.callback && e.callback(t))) return;
-    let { host: a, pathname: o, searchParams: s } = null != (n = k.Z.toURLSafe(t.location)) ? n : {},
-        l = k.Z.isDiscordHostname(null != a ? a : null) || window.location.host === a;
+    let { host: a, pathname: o, searchParams: s } = null != (n = M.Z.toURLSafe(t.location)) ? n : {},
+        l = M.Z.isDiscordHostname(null != a ? a : null) || window.location.host === a;
     l && o === $.Z5c.OAUTH2_AUTHORIZED
         ? (0, _.h7)((e) =>
               (0, r.jsx)(
@@ -777,6 +777,6 @@ function e_(e, t) {
 }
 function ep(e) {
     var t;
-    let { hostname: n = '', host: r, pathname: i, search: a } = null != (t = k.Z.toURLSafe(e)) ? t : {};
-    return null != i && null != a && (k.Z.isDiscordHostname(n) || r === window.location.host) && (i.startsWith('/api'.concat($.ANM.OAUTH2_AUTHORIZE)) || i.startsWith($.Z5c.OAUTH2_AUTHORIZE)) ? (0, j.y)(a) : null;
+    let { hostname: n = '', host: r, pathname: i, search: a } = null != (t = M.Z.toURLSafe(e)) ? t : {};
+    return null != i && null != a && (M.Z.isDiscordHostname(n) || r === window.location.host) && (i.startsWith('/api'.concat($.ANM.OAUTH2_AUTHORIZE)) || i.startsWith($.Z5c.OAUTH2_AUTHORIZE)) ? (0, j.y)(a) : null;
 }

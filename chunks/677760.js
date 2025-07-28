@@ -21,7 +21,7 @@ var r = n(255367),
     I = n(981631),
     j = n(388032),
     O = n(534962);
-function y(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function y(e) {
     }
     return e;
 }
-function S(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -162,8 +162,8 @@ function P(e) {
     let n = (e) => (null == t ? null : 1 === e ? (0, r.jsx)(v.X, { invite: t }) : null);
     return (0, r.jsx)(
         T,
-        S(
-            y(
+        y(
+            S(
                 {
                     startAnimHeightPx: 0,
                     innerStyle: () => O.guildInfoInner
@@ -180,9 +180,9 @@ function Z(e) {
             if (null == t) return (0, r.jsx)(N, {});
             switch (n) {
                 case 1:
-                    return (0, r.jsx)(E.Z, S(y({}, e), { invite: t }));
+                    return (0, r.jsx)(E.Z, y(S({}, e), { invite: t }));
                 case 2:
-                    return (0, r.jsx)(A, S(y({}, e), { invite: t }));
+                    return (0, r.jsx)(A, y(S({}, e), { invite: t }));
                 default:
                     return (0, r.jsx)(N, {});
             }
@@ -194,8 +194,8 @@ function Z(e) {
         };
     return (0, r.jsx)(
         T,
-        S(
-            y(
+        y(
+            S(
                 {
                     startAnimHeightPx: 200,
                     innerStyle: (e) => i[e]
@@ -222,7 +222,7 @@ function R(e) {
         className: O.splashBackground,
         style: l,
         contentClassName: O.centerAuthBoxContent,
-        children: [(0, r.jsx)(Z, S(y({}, e), { onAcceptInvite: n })), (0, r.jsx)(P, y({}, e))]
+        children: [(0, r.jsx)(Z, y(S({}, e), { onAcceptInvite: n })), (0, r.jsx)(P, S({}, e))]
     });
 }
 function w(e) {

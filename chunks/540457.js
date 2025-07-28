@@ -1,11 +1,11 @@
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(441012);
-function s(e) {
-    let { text: t, tooltipText: n, onClick: s, disabled: a } = e;
-    return a
+function a(e) {
+    let { text: t, tooltipText: n, onClick: a, disabled: s } = e;
+    return s
         ? (0, r.jsxs)('div', {
               className: l.container,
               children: [
@@ -25,7 +25,7 @@ function s(e) {
               text: n,
               shouldShow: null != n,
               children: (e) => {
-                  var n, a;
+                  var n, s;
                   return (0, r.jsxs)(
                       i.P3F,
                       ((n = (function (e) {
@@ -53,10 +53,10 @@ function s(e) {
                           }
                           return e;
                       })({}, e)),
-                      (a = a =
+                      (s = s =
                           {
                               className: l.container,
-                              onClick: s,
+                              onClick: a,
                               children: [
                                   (0, r.jsx)(i.qJs, {
                                       size: 'md',
@@ -71,7 +71,7 @@ function s(e) {
                               ]
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
+                          ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(s))
                           : (function (e, t) {
                                 var n = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
@@ -79,8 +79,8 @@ function s(e) {
                                     n.push.apply(n, r);
                                 }
                                 return n;
-                            })(Object(a)).forEach(function (e) {
-                                Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
+                            })(Object(s)).forEach(function (e) {
+                                Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(s, e));
                             }),
                       n)
                   );

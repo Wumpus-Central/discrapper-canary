@@ -1,5 +1,5 @@
 (n.d(t, {
-    Z: () => V,
+    Z: () => H,
     n: () => D
 }),
     n(415506),
@@ -27,8 +27,8 @@ var r = n(512722),
     C = n(314897),
     x = n(592125),
     v = n(703558),
-    O = n(607744),
-    y = n(375954),
+    y = n(607744),
+    O = n(375954),
     j = n(117530),
     I = n(553803),
     S = n(467531),
@@ -116,7 +116,7 @@ function D(e) {
             title: A.intl.string(A.t['7LpysL']),
             body: A.intl.string(A.t['5sHHo6'])
         });
-    let l = y.Z.getMessage(t, n);
+    let l = O.Z.getMessage(t, n);
     if (null == l || null == l.poll || 0 === l.poll.answers.length) return;
     let a = null != r ? r : String(l.poll.answers[0].answer_id);
     I.A({
@@ -139,7 +139,7 @@ function k(e) {
 }
 function M(e) {
     let { channelId: t, messageId: n } = e,
-        r = y.Z.getMessage(t, n);
+        r = O.Z.getMessage(t, n);
     return null == r ? [] : r.reactions.flatMap((e) => (!0 === e.me_vote ? e.emoji.name : []));
 }
 async function U(e) {
@@ -190,7 +190,7 @@ async function F(e) {
             title: A.intl.string(A.t.Qic1FB),
             body: A.intl.string(A.t['5sHHo6'])
         });
-    if (!O.Z.canChatInGuild(r.guild_id))
+    if (!y.Z.canChatInGuild(r.guild_id))
         return void d.Z.show({
             title: A.intl.string(A.t.p245ws),
             body: A.intl.string(A.t['U/uodn'])
@@ -299,7 +299,7 @@ async function G(e) {
                 (0, T.eu)(t, n, (e) => {
                     var r, i;
                     let l = null == e || !e.showResults,
-                        a = y.Z.getMessage(t, n),
+                        a = O.Z.getMessage(t, n),
                         o =
                             null != a
                                 ? a.reactions.reduce((e, t) => {
@@ -338,7 +338,7 @@ async function G(e) {
             i()(!1, 'Unknown poll action type: '.concat(r));
     }
 }
-let V = {
+let H = {
     handlePollAnswerTapped: function (e) {
         var t,
             n,
@@ -349,7 +349,7 @@ let V = {
                 message: o
             } = (function (e) {
                 let { channelId: t, messageId: n } = e,
-                    r = y.Z.getMessage(t, n);
+                    r = O.Z.getMessage(t, n);
                 if (null != r)
                     return {
                         message: r,

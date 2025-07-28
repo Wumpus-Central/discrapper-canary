@@ -10,28 +10,28 @@ var l = t(255367),
     d = t(388032),
     f = t(343074);
 function p(e) {
-    let { autoFocus: n = !1, className: t, userId: p, onUpdate: g } = e,
-        j = (0, i.e7)([a.Z], () => a.Z.hidePersonalInformation),
-        { loading: v, note: h } = (0, c.Z)(p),
+    let { autoFocus: n = !1, className: t, userId: p, onUpdate: j } = e,
+        g = (0, i.e7)([a.Z], () => a.Z.hidePersonalInformation),
+        { loading: h, note: v } = (0, c.Z)(p),
         m = r.useRef(null);
     return (r.useEffect(() => {
-        if (!n || j) return;
+        if (!n || g) return;
         let e = m.current;
         (null == e ? void 0 : e.selectionStart) != null && (e.focus(), e.setSelection(e.value.length, e.value.length));
-    }, [n, j]),
-    j)
+    }, [n, g]),
+    g)
         ? null
         : (0, l.jsx)('div', {
               className: t,
               children: (0, l.jsx)(o.lcI, {
                   ref: m,
                   className: f.textarea,
-                  disabled: v,
-                  placeholder: v ? d.intl.string(d.t['WLKx//']) : d.intl.string(d.t.VBhOe3),
+                  disabled: h,
+                  placeholder: h ? d.intl.string(d.t['WLKx//']) : d.intl.string(d.t.VBhOe3),
                   'aria-label': d.intl.string(d.t.PbMNh4),
                   onBlur: (e) => {
                       let n = e.currentTarget.value;
-                      (null != h ? h : '') !== n && (null == g || g(), s.Z.updateNote(p, n));
+                      (null != v ? v : '') !== n && (null == j || j(), s.Z.updateNote(p, n));
                   },
                   onKeyPress: (e) => {
                       if (13 === e.which)
@@ -41,7 +41,7 @@ function p(e) {
                           } else (e.preventDefault(), e.currentTarget.blur());
                       else e.which === u.yXg.SPACE && e.stopPropagation();
                   },
-                  defaultValue: null != h ? h : void 0,
+                  defaultValue: null != v ? v : void 0,
                   maxLength: u.vuo
               })
           });

@@ -16,8 +16,8 @@ var r = n(255367),
     h = n(768581),
     x = n(572004),
     j = n(709054),
-    O = n(51144),
-    v = n(486199),
+    v = n(51144),
+    O = n(486199),
     y = n(981631),
     _ = n(388032),
     C = n(368938);
@@ -67,7 +67,7 @@ function S(e, t) {
 let I = (e) => {
     if (null == e) return null;
     let t = new g.Z(e);
-    return O.ZP.getUserTag(t);
+    return v.ZP.getUserTag(t);
 };
 function E(e, t) {
     return null != t && /^data:/.test(t)
@@ -79,8 +79,8 @@ function E(e, t) {
           });
 }
 function T(e) {
-    let { id: t, webhook: n, editedWebhook: l, channelOptions: g, isExpanded: h, isNew: O, errors: T, onToggleExpand: w } = e,
-        [P, Z] = i.useState(!1),
+    let { id: t, webhook: n, editedWebhook: l, channelOptions: g, isExpanded: h, isNew: v, errors: T, onToggleExpand: w } = e,
+        [Z, P] = i.useState(!1),
         [A] = i.useState(new s.V7());
     i.useEffect(() => () => A.stop(), [A]);
     let k = i.useMemo(() => E(n, n.avatar), [n]),
@@ -207,7 +207,7 @@ function T(e) {
                                         children: [
                                             (0, r.jsx)(c.ua7, {
                                                 text: _.intl.string(_.t.wwdb3t),
-                                                forceOpen: P,
+                                                forceOpen: Z,
                                                 color: c.FGA.GREEN,
                                                 disableTooltipPointerEvents: !0,
                                                 children: (e) => {
@@ -248,7 +248,7 @@ function T(e) {
                                                                 {
                                                                     'aria-label': '',
                                                                     onClick: () => {
-                                                                        (null == t || t(), Z(!0), c.uvj.announce(_.intl.string(_.t.wwdb3t)), A.start(1000, () => Z(!1)), D());
+                                                                        (null == t || t(), P(!0), c.uvj.announce(_.intl.string(_.t.wwdb3t)), A.start(1000, () => P(!1)), D());
                                                                     },
                                                                     disabled: null == n.token || '' === n.token
                                                                 }
@@ -274,7 +274,7 @@ function T(e) {
         (0, r.jsx)(c.Zbd, {
             editable: !0,
             id: t,
-            className: o()(C.card, O ? C.pulse : null),
+            className: o()(C.card, v ? C.pulse : null),
             children: (0, r.jsxs)(m.Z, {
                 direction: m.Z.Direction.VERTICAL,
                 children: [
@@ -285,7 +285,7 @@ function T(e) {
                         children: (0, r.jsxs)(m.Z, {
                             align: m.Z.Align.CENTER,
                             children: [
-                                (0, r.jsx)(v.Z, {
+                                (0, r.jsx)(O.Z, {
                                     name: n.name,
                                     imageSrc: k,
                                     details: L

@@ -23,90 +23,80 @@ function u(e, t, n) {
 }
 function m(e) {
     let { guild: t, prompt: n, selectedRoleIds: m, selectedChannelIds: h, itemHook: p } = e,
-        f = (0, l.e7)([a.Z], () => (null != t ? a.Z.getRoles(t.id) : void 0)),
-        g = (0, l.Wu)([i.Z, s.default, o.Z], () =>
+        f = null == t ? void 0 : t.id,
+        g = (0, l.Wu)([a.Z], () => (null != f ? a.Z.getManyRoles(f, m) : []), [f, m]),
+        x = (0, l.Wu)([i.Z, s.default, o.Z], () =>
             Array.from(h)
                 .map((e) => i.Z.getChannel(e))
                 .filter(c.lm)
                 .map((e) => (0, r.F6)(e, s.default, o.Z, !0))
         ),
-        x = Array.from(m)
-            .map((e) => {
-                var t;
-                return null == (t = (null != f ? f : {})[e]) ? void 0 : t.name;
-            })
-            .filter(c.lm)
-            .map((e) => '@'.concat(e)),
-        _ = (null == n ? void 0 : n.singleSelect) ? '' : d.intl.string(d.t.JshhEh),
-        C = '';
-    if (0 === g.length && x.length > 0) _ = u(x, p);
+        _ = g.map((e) => '@'.concat(e.name)),
+        C = (null == n ? void 0 : n.singleSelect) ? '' : d.intl.string(d.t.JshhEh),
+        b = '';
+    if (0 === x.length && _.length > 0) C = u(_, p);
     else
-        g.length > 0 &&
-            ((_ =
-                0 === g.length
+        x.length > 0 &&
+            ((C =
+                0 === x.length
                     ? ''
                     : d.intl.format(d.t.Rj841d, {
-                          count: g.length,
-                          extraCount: Math.max(g.length - 2, 0),
-                          channel1: g[0],
-                          channel2: g[1],
+                          count: x.length,
+                          extraCount: Math.max(x.length - 2, 0),
+                          channel1: x[0],
+                          channel2: x[1],
                           itemHook: p
                       })),
-            x.length > 0 && (C = u(x, p, !0)));
+            _.length > 0 && (b = u(_, p, !0)));
     return {
-        helpText: _,
-        helpTextAdditional: C
+        helpText: C,
+        helpTextAdditional: b
     };
 }
 function h(e) {
     let { guild: t, prompt: n, selectedRoleIds: u, selectedChannelIds: m, itemHook: h } = e,
-        p = (0, l.e7)([a.Z], () => (null != t ? a.Z.getRoles(t.id) : void 0)),
-        f = (0, l.Wu)([i.Z, s.default, o.Z], () =>
+        p = null == t ? void 0 : t.id,
+        f = (0, l.Wu)([a.Z], () => (null != p ? a.Z.getManyRoles(p, u) : []), [p, u]),
+        g = (0, l.Wu)([i.Z, s.default, o.Z], () =>
             Array.from(m)
                 .map((e) => i.Z.getChannel(e))
                 .filter(c.lm)
                 .map((e) => (0, r.F6)(e, s.default, o.Z, !0))
         ),
-        g = Array.from(u)
-            .map((e) => {
-                var t;
-                return null == (t = (null != p ? p : {})[e]) ? void 0 : t.name;
-            })
-            .filter(c.lm)
-            .map((e) => '@'.concat(e)),
-        x = (null == n ? void 0 : n.singleSelect) ? '' : d.intl.string(d.t.JshhEh);
+        x = f.map((e) => '@'.concat(e.name)),
+        _ = (null == n ? void 0 : n.singleSelect) ? '' : d.intl.string(d.t.JshhEh);
     return (
-        0 === f.length && g.length > 0
-            ? (x = d.intl.format(d.t.vdtNYW, {
-                  count: g.length,
-                  extraCount: Math.max(g.length - 2, 0),
-                  role1: g[0],
-                  role2: g[1],
+        0 === g.length && x.length > 0
+            ? (_ = d.intl.format(d.t.vdtNYW, {
+                  count: x.length,
+                  extraCount: Math.max(x.length - 2, 0),
+                  role1: x[0],
+                  role2: x[1],
                   itemHook: h
               }))
-            : f.length > 0 && 0 === g.length
-              ? (x = d.intl.format(d.t.ZKywGR, {
-                    count: f.length,
-                    extraCount: Math.max(f.length - 2, 0),
-                    channel1: f[0],
-                    channel2: f[1],
+            : g.length > 0 && 0 === x.length
+              ? (_ = d.intl.format(d.t.ZKywGR, {
+                    count: g.length,
+                    extraCount: Math.max(g.length - 2, 0),
+                    channel1: g[0],
+                    channel2: g[1],
                     itemHook: h
                 }))
-              : f.length > 0 &&
-                g.length > 0 &&
-                (x = d.intl.format(d.t.WewRHB, {
-                    channelCount: f.length,
-                    extraChannelCount: Math.max(f.length - 2, 0),
-                    channel1: f[0],
-                    channel2: f[1],
+              : g.length > 0 &&
+                x.length > 0 &&
+                (_ = d.intl.format(d.t.WewRHB, {
+                    channelCount: g.length,
+                    extraChannelCount: Math.max(g.length - 2, 0),
+                    channel1: g[0],
+                    channel2: g[1],
                     itemHook: h,
-                    roleCount: g.length,
-                    extraRoleCount: Math.max(g.length - 2, 0),
-                    role1: g[0],
-                    role2: g[1]
+                    roleCount: x.length,
+                    extraRoleCount: Math.max(x.length - 2, 0),
+                    role1: x[0],
+                    role2: x[1]
                 })),
         {
-            helpText: x,
+            helpText: _,
             helpTextAdditional: ''
         }
     );

@@ -1,6 +1,6 @@
 n.d(t, {
     U2: () => i,
-    jb: () => s
+    jb: () => a
 });
 var r = n(388032);
 let i = {
@@ -22,7 +22,7 @@ let i = {
         49: [() => r.intl.string(r.t.QYvZFh), () => r.intl.string(r.t.C2TrLi), () => r.intl.string(r.t['9AEkCw']), () => r.intl.string(r.t['FM0+HR']), () => r.intl.string(r.t['vwjf//']), () => r.intl.string(r.t['Exwe4+']), () => r.intl.string(r.t.QiafXV)]
     },
     l = ['en-GB'];
-function s() {
+function a() {
     return (0, r.getAvailableLocales)()
         .map((e) => {
             let t,

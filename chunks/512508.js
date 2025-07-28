@@ -203,7 +203,7 @@ function T(e, t, n) {
 }
 function k(e) {
     let { guildId: t, roleRows: n = [], channelRows: o = [], selectedChannelIds: a = new Set(), selectedRoleIds: C = new Set(), onChange: m, placeholder: b, helperText: p, className: f } = e,
-        h = (0, c.e7)([x.Z], () => x.Z.getRoles(t)),
+        h = (0, c.e7)([x.Z], () => x.Z.getRolesSnapshot(t)),
         j = l.useMemo(
             () =>
                 (function (e, t, n) {

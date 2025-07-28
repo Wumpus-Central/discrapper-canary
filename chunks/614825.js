@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(70956),
     x = n(63063),
     v = n(74538),
-    O = n(276444),
-    y = n(857262),
+    y = n(276444),
+    O = n(857262),
     j = n(93237),
     I = n(786397),
     S = n(474936),
@@ -65,7 +65,7 @@ class Z extends i.Component {
             o = null != a ? a.username : '???';
         if (e && void 0 === r.redeemed_at) return N.intl.formatToPlainString(N.t.Mptau7, { username: l });
         if (t) return n ? N.intl.string(N.t['9SNdf3']) : N.intl.formatToPlainString(N.t['H0+MxM'], { userName: o });
-        switch (y.Z.getCurrentConfig({ location: 'renderTitle' }, { autoTrackExposure: !1 }).treatmentGroup) {
+        switch (O.Z.getCurrentConfig({ location: 'renderTitle' }, { autoTrackExposure: !1 }).treatmentGroup) {
             case 1:
                 return N.intl.formatToPlainString(N.t['L/leCw'], { receiver: l });
             case 2:
@@ -90,7 +90,7 @@ class Z extends i.Component {
         if (t) return null;
         let i = h.default.getUser(r.referrer_id),
             l = null != i ? i.username : '???';
-        switch (y.Z.getCurrentConfig({ location: 'renderBody' }, { autoTrackExposure: !1 }).treatmentGroup) {
+        switch (O.Z.getCurrentConfig({ location: 'renderBody' }, { autoTrackExposure: !1 }).treatmentGroup) {
             case 1:
                 return N.intl.format(N.t.Ylrdnp, { sender: l });
             case 2:
@@ -221,10 +221,10 @@ class Z extends i.Component {
 function R(e) {
     let { userTrialOfferId: t, canRenderReferralEmbed: n } = e,
         { trialOffer: i, isResolving: l } = (0, u.cj)(
-            [O.Z],
+            [y.Z],
             () => ({
-                trialOffer: n ? O.Z.getRelevantUserTrialOffer(t) : null,
-                isResolving: !!n && O.Z.isResolving(t)
+                trialOffer: n ? y.Z.getRelevantUserTrialOffer(t) : null,
+                isResolving: !!n && y.Z.isResolving(t)
             }),
             [n, t]
         ),

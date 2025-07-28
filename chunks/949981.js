@@ -19,8 +19,8 @@ var r = n(255367),
 function C(e) {
     let t,
         { invite: n, message: l, currentUserId: C, onTransitionToInviteChannel: x, onAcceptInstantInvite: v } = e,
-        O = C === l.author.id,
-        y = n.state === h.r2o.ACCEPTING,
+        y = C === l.author.id,
+        O = n.state === h.r2o.ACCEPTING,
         j = (0, o.e7)([m.Z], () => (null != n.channel ? m.Z.getChannel(n.channel.id) : null), [n]);
     a()(null == j || j.isPrivate(), 'must be a private channel');
     let { analyticsLocations: I } = (0, u.ZP)(c.Z.INVITE_EMBED),
@@ -63,7 +63,7 @@ function C(e) {
     S && ((P = b.intl.string(b.t.cEnaW1)), (A = d.Z.Button.Colors.PRIMARY));
     let w = b.intl.string(b.t['3p3/BA']);
     return (
-        O && (w = b.intl.string(b.t.qmtuXF)),
+        y && (w = b.intl.string(b.t.qmtuXF)),
         (0, r.jsxs)(d.Z, {
             children: [
                 (0, r.jsx)(d.Z.Header, { text: w }),
@@ -85,7 +85,7 @@ function C(e) {
                         }),
                         (0, r.jsx)(d.Z.Button, {
                             onClick: T,
-                            submitting: y,
+                            submitting: O,
                             isDisabled: S,
                             color: A,
                             children: P

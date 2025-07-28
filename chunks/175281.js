@@ -137,7 +137,7 @@ function w() {
         })
     });
 }
-class Z extends i.PureComponent {
+class T extends i.PureComponent {
     componentDidMount() {
         ((this.lastInputedKeys = []), y.S.subscribe(v.CkL.SCROLL_PAGE_UP, this.scrollPageUp), y.S.subscribe(v.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.addEventListener('keyup', this.handleKeyUp, { capture: !0 }));
     }
@@ -167,25 +167,25 @@ class Z extends i.PureComponent {
                 (0, r.jsxs)('div', {
                     className: E.ddrArrows,
                     children: [
-                        (0, r.jsx)(T, {
+                        (0, r.jsx)(Z, {
                             arrow: 'LEFT',
                             isActive: n,
                             className: E.left,
                             children: 'left'
                         }),
-                        (0, r.jsx)(T, {
+                        (0, r.jsx)(Z, {
                             arrow: 'DOWN',
                             isActive: t,
                             className: E.down,
                             children: 'down'
                         }),
-                        (0, r.jsx)(T, {
+                        (0, r.jsx)(Z, {
                             arrow: 'UP',
                             isActive: e,
                             className: E.up,
                             children: 'up'
                         }),
-                        (0, r.jsx)(T, {
+                        (0, r.jsx)(Z, {
                             arrow: 'RIGHT',
                             isActive: i,
                             className: E.right,
@@ -282,7 +282,7 @@ class Z extends i.PureComponent {
             }));
     }
 }
-function T(e) {
+function Z(e) {
     let { isActive: t, arrow: n, className: l, children: a } = e,
         [s, c] = i.useState(t),
         u = i.useCallback(() => {
@@ -333,7 +333,7 @@ function A(e) {
                               'raging-demo'
                           )
                         : (0, r.jsx)(
-                              Z,
+                              T,
                               {
                                   content: u,
                                   keyboardModeEnabled: d,

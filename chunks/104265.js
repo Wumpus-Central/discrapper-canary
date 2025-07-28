@@ -15,8 +15,8 @@ var l = n(255367),
     g = n(388032),
     x = n(136338);
 function _(e) {
-    let { guildId: t, option: n, selected: i, onSelect: _, hideMemberCount: C, canBeNew: j } = e,
-        b = (0, d.wj)((0, h.ZP)()),
+    let { guildId: t, option: n, selected: i, onSelect: _, hideMemberCount: C, canBeNew: b } = e,
+        j = (0, d.wj)((0, h.ZP)()),
         [v, y] = r.useState(!1),
         O = v && !C,
         Z = r.useRef(null),
@@ -27,7 +27,7 @@ function _(e) {
         }),
         w = (0, f.Z)(t, 1000),
         P = null == w || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => w[e])),
-        E = j && !i && n.isUnseen,
+        E = b && !i && n.isUnseen,
         S = (0, u.q_F)(
             {
                 transform: i || N.enabled ? 'scale(1)' : 'scale(0.7)',
@@ -38,16 +38,16 @@ function _(e) {
         ),
         T = (0, u.dQu)(c.Z.colors.BORDER_SUBTLE),
         A = (0, u.dQu)(c.Z.unsafe_rawColors.BRAND_500),
-        B = (0, u.q_F)(
+        k = (0, u.q_F)(
             {
                 from: { color: A.spring() },
-                color: T.spring({ opacity: b ? 0.5 : 0.25 }),
+                color: T.spring({ opacity: j ? 0.5 : 0.25 }),
                 config: { duration: 300 },
                 delay: 500
             },
             'animate-always'
         ),
-        k = (0, u.Yzy)(
+        B = (0, u.Yzy)(
             O,
             {
                 from: {
@@ -80,7 +80,7 @@ function _(e) {
             [x.selected]: i,
             [x.pressed]: R
         }),
-        M = E ? { borderColor: B.color } : {};
+        M = E ? { borderColor: k.color } : {};
     return (0, l.jsx)(o.animated.div, {
         style: M,
         className: L,
@@ -127,7 +127,7 @@ function _(e) {
                         color: c.Z.unsafe_rawColors.WHITE_500.css
                     })
                 }),
-                k(
+                B(
                     (e, t) =>
                         P > 0 &&
                         t &&

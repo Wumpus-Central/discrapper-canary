@@ -6,8 +6,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
-    a = n(952683),
+    a = n.n(l),
+    s = n(952683),
     o = n(481060),
     c = n(313201),
     d = n(817460),
@@ -15,20 +15,20 @@ var r = n(255367),
     m = n(528027),
     g = n(686807),
     p = n(157018),
-    f = n(828656),
-    h = n(388032),
+    h = n(828656),
+    f = n(388032),
     x = n(492606);
 function b(e) {
-    let { guildId: t, emojiId: n, emojiName: l, title: a, description: c, targetType: d, index: u, dndName: g, onEdit: p, onMove: b, disabled: j = !1 } = e,
+    let { guildId: t, emojiId: n, emojiName: l, title: s, description: c, targetType: d, index: u, dndName: g, onEdit: p, onMove: b, disabled: j = !1 } = e,
         v = i.useRef(null),
         _ = i.useRef(null),
-        { drag: O, dragPreview: y, drop: C, isDragging: N } = (0, f.Z)(v, d, u, b);
+        { drag: O, dragPreview: y, drop: C, isDragging: N } = (0, h.Z)(v, d, u, b);
     return (
         O(_),
         y(C(v)),
         (0, r.jsxs)('div', {
             ref: v,
-            className: s()(x.card, {
+            className: a()(x.card, {
                 [x.cardDragging]: N,
                 [x.disabled]: j
             }),
@@ -61,7 +61,7 @@ function b(e) {
                         (0, r.jsx)(o.Text, {
                             color: 'header-primary',
                             variant: 'text-md/semibold',
-                            children: a
+                            children: s
                         }),
                         (0, r.jsx)(o.Text, {
                             color: 'interactive-normal',
@@ -77,7 +77,7 @@ function b(e) {
                         (0, r.jsx)(o.P3F, {
                             className: x.cardActionButton,
                             onClick: j ? void 0 : p,
-                            'aria-label': h.intl.string(h.t.Eoo8h4),
+                            'aria-label': f.intl.string(f.t.Eoo8h4),
                             'aria-disabled': j,
                             children: (0, r.jsx)(o.vdY, {
                                 size: 'xs',
@@ -93,12 +93,12 @@ function b(e) {
 function j(e) {
     let { benefits: t, onEdit: n, onMove: l, guildId: o } = e,
         m = (0, c.Dt)(),
-        { isDragging: f } = (0, a.f)((e) => ({ isDragging: e.getItemType() === m })),
-        h = (0, u.mY)();
+        { isDragging: h } = (0, s.f)((e) => ({ isDragging: e.getItemType() === m })),
+        f = (0, u.mY)();
     return 0 === t.length
         ? null
         : (0, r.jsx)('div', {
-              className: s()(x.container, { [x.isDragging]: f }),
+              className: a()(x.container, { [x.isDragging]: h }),
               children: t.map((e, t) =>
                   (0, r.jsxs)(
                       i.Fragment,
@@ -116,7 +116,7 @@ function j(e) {
                                   dndName: (0, p.Z)(e),
                                   onEdit: () => n(t),
                                   onMove: l,
-                                  disabled: h
+                                  disabled: f
                               })
                           ]
                       },
@@ -132,7 +132,7 @@ function v(e) {
         onClick: i ? void 0 : t,
         'aria-disabled': i,
         children: (0, r.jsxs)('div', {
-            className: s()(x.card, x.addBenefit, { [x.disabled]: i }),
+            className: a()(x.card, x.addBenefit, { [x.disabled]: i }),
             children: [
                 (0, r.jsx)('div', {
                     className: x.emojiWrapper,

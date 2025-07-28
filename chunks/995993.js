@@ -34,10 +34,10 @@ function E(e) {
             let r = m.default.extractTimestamp(n);
             return null != e && e > r;
         }),
-        Z = i.useCallback(() => {
+        T = i.useCallback(() => {
             (0, f.uL)(O.Z5c.CHANNEL(t.id, S ? y.oC.CUSTOMIZE_COMMUNITY : y.oC.CHANNEL_BROWSER));
         }, [t.id, S]),
-        T = i.useCallback(
+        Z = i.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
                     let { default: e } = await n.e('8926').then(n.bind(n, 156673));
@@ -110,8 +110,8 @@ function E(e) {
                 }),
             text: S ? v.intl.string(v.t.h9mGOD) : v.intl.string(v.t.et6wam),
             selected: E,
-            onClick: Z,
-            onContextMenu: T,
+            onClick: T,
+            onContextMenu: Z,
             trailing: A
         })
     );

@@ -90,8 +90,8 @@ function O() {
 function v(e) {
     let { users: t, maxUsers: a, guildId: s, channelId: m, className: E, size: v = u.EFr.SIZE_24, overflowCountVariant: I, overflowCountColor: T = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: A = !1, disableUsernameTooltip: N = !1, disableUserPopout: C = !1, onClick: R, onFocus: P, onUserClick: w, onUserPopoutRequestClose: D } = e,
         [L, x] = i.useState(!1),
-        M = y(v),
-        k = i.useRef(null);
+        k = y(v),
+        M = i.useRef(null);
     function j() {
         return (0, r.jsx)(u.VqE, {
             className: h.popoutWrapper,
@@ -114,7 +114,7 @@ function v(e) {
                                 (0, d.jW)(
                                     t,
                                     async () => {
-                                        let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('70686')]).then(n.bind(n, 881351));
+                                        let { default: t } = await Promise.all([n.e('70274'), n.e('79695'), n.e('69220'), n.e('70686')]).then(n.bind(n, 881351));
                                         return (n) =>
                                             (0, r.jsx)(
                                                 t,
@@ -144,7 +144,7 @@ function v(e) {
                 .map((e, t) => {
                     let n = p.ZP.getName(e),
                         a = t === d && !i,
-                        l = o()(h.avatar, M, a && h.isLast);
+                        l = o()(h.avatar, k, a && h.isLast);
                     return N
                         ? (0, r.jsx)(
                               'div',
@@ -178,15 +178,15 @@ function v(e) {
             f[f.length - 1] = (0, r.jsx)(
                 u.yRy,
                 {
-                    targetElementRef: k,
+                    targetElementRef: M,
                     renderPopout: j,
                     shouldShow: L,
                     position: 'bottom',
                     onRequestClose: () => x(!1),
                     children: () =>
                         (0, r.jsx)(c.zx, {
-                            buttonRef: k,
-                            className: o()(h.overflow, M, S),
+                            buttonRef: M,
+                            className: o()(h.overflow, k, S),
                             onFocus: P,
                             onClick: (e) => {
                                 (null == R || R(e), x(!0));

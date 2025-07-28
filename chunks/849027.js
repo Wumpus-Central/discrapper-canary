@@ -18,7 +18,7 @@ var r = n(430198),
 async function b(e) {
     let { guildId: t, channelId: n } = e,
         b = p.Z.getGuild(t),
-        y = _.Z.getRoles(t);
+        y = _.Z.getUnsafeMutableRoles(t);
     if (null == b && t !== g.ME) return !1;
     if (null == n) return !0;
     if ((0, E.AB)(n))

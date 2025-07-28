@@ -111,23 +111,21 @@ function J(e) {
     let { overwrite: t } = e,
         n = (0, o.e7)([T.Z], () => T.Z.channel),
         l = (0, o.e7)([I.Z], () => (null != n ? I.Z.getGuild(n.getGuildId()) : null)),
-        r = (0, o.e7)([R.Z], () => (null != l ? R.Z.getRoles(l.id) : void 0)),
+        r = (0, o.e7)([R.Z], () => (null != l && null != t && t.type === j.BN.ROLE ? R.Z.getRole(l.id, t.id) : void 0)),
         s = N.D.useExperiment({
             guildId: null == n ? void 0 : n.guild_id,
             location: 'ChannelSettingsPermissions'
         }).enabled;
     if (null == n || null == l || null == t) return null;
     let { guild_id: c, id: g } = n,
-        { id: p } = t,
-        x = () => {
+        p = () => {
             var e;
-            if (null == I.Z.getGuild(c) || null == r) return '';
-            let t = r[p],
-                n = P.default.getUser(p),
+            if (null == I.Z.getGuild(c)) return '';
+            let n = t.type === j.BN.MEMBER ? P.default.getUser(t.id) : void 0,
                 i = null != (e = null == n ? void 0 : n.username) ? e : '';
-            return null != t ? t.name : i;
+            return null != r ? r.name : i;
         },
-        b = (e, i) => {
+        x = (e, i) => {
             if ('boolean' == typeof i) throw Error('Unexpected boolean action');
             let { allow: l, deny: r } = t;
             switch (((r = a.Od(r, e)), (l = a.Od(l, e)), i)) {
@@ -139,13 +137,13 @@ function J(e) {
             }
             if (
                 _.Z.can(e, n, {
-                    [p]: X(z({}, t), {
+                    [t.id]: X(z({}, t), {
                         allow: l,
                         deny: r
                     })
                 })
             )
-                (0, m.kY)(n, p, l, r);
+                (0, m.kY)(n, t.id, l, r);
             else {
                 let e;
                 if (t.type === j.BN.MEMBER) {
@@ -161,49 +159,49 @@ function J(e) {
                 U.X(e);
             }
         },
-        v = (e) => {
+        b = (e) => {
             let t = _.Z.can(H.Plq.ADMINISTRATOR, l) || _.Z.can(H.Plq.MANAGE_ROLES, n, void 0, void 0, !0);
             return n.isGuildStageVoice() && S.xS.has(e) ? G.intl.string(G.t.bTS5lZ) : !((!a.fS(e, H.Plq.MANAGE_ROLES) || t) && (null == e || _.Z.can(e, l) || t)) && G.intl.string(G.t.nOtPMD);
         },
-        y = p === c,
-        E = n.isForumLikeChannel() && a.e$(t.deny, H.Plq.SEND_MESSAGES),
-        O = a.e$(t.deny, H.Plq.SEND_MESSAGES),
-        w = a.e$(t.deny, H.Plq.READ_MESSAGE_HISTORY),
-        Z = k.Z.generateChannelPermissionSpec(c, n, y, {
-            createPostsDisabled: E,
-            sendMessagesDisabled: O,
-            readMessageHistoryDisabled: w
+        v = t.id === c,
+        y = n.isForumLikeChannel() && a.e$(t.deny, H.Plq.SEND_MESSAGES),
+        E = a.e$(t.deny, H.Plq.SEND_MESSAGES),
+        O = a.e$(t.deny, H.Plq.READ_MESSAGE_HISTORY),
+        w = k.Z.generateChannelPermissionSpec(c, n, v, {
+            createPostsDisabled: y,
+            sendMessagesDisabled: E,
+            readMessageHistoryDisabled: O
         });
     return (0, i.jsxs)(C.ZP.Content, {
         className: F.layoutStyle,
         children: [
-            Z.map((e, n) =>
+            w.map((e, n) =>
                 (0, i.jsx)(
                     f.Z,
                     {
                         spec: e,
                         allow: t.allow,
                         deny: t.deny,
-                        onChange: b,
-                        permissionRender: v,
+                        onChange: x,
+                        permissionRender: b,
                         className: F.permissionsForm,
                         inPinPermissionExperiment: s
                     },
                     n
                 )
             ),
-            c === p
+            c === t.id
                 ? null
                 : (0, i.jsx)(d.zxk, {
                       variant: 'critical-secondary',
-                      text: G.intl.format(G.t.txPV7u, { name: x() }),
+                      text: G.intl.format(G.t.txPV7u, { name: p() }),
                       onClick: () => {
-                          let e = x();
+                          let e = p();
                           u.Z.show({
                               title: G.intl.string(G.t.GuPYQE),
                               body: G.intl.format(G.t.xERCnZ, { name: e }),
                               cancelText: G.intl.string(G.t['ETE/oK']),
-                              onConfirm: () => h.Z.clearPermissionOverwrite(g, p)
+                              onConfirm: () => h.Z.clearPermissionOverwrite(g, t.id)
                           });
                       }
                   })
@@ -267,7 +265,7 @@ function $(e) {
 }
 function Q(e) {
     let { guild: t, channel: n, permissionOverwrites: l, onClose: r, onSelect: a, position: c } = e,
-        d = (0, o.e7)([R.Z], () => R.Z.getRoles(t.id)),
+        d = (0, o.e7)([R.Z], () => R.Z.getSortedRoles(t.id)),
         u = (0, o.Wu)([Z.ZP], () => Z.ZP.getMemberIds(t.id));
     return (0, i.jsx)(y.Z, {
         label: G.intl.string(G.t.lT5Ztr),
@@ -294,10 +292,7 @@ function Q(e) {
         },
         onFilterResults: (e, t) =>
             0 === t
-                ? s()(d)
-                      .filter((t) => null == l[t.id] && e(t.name))
-                      .sortBy((e) => -e.position)
-                      .value()
+                ? d.filter((t) => null == l[t.id] && e(t.name))
                 : s()(u)
                       .map(P.default.getUser)
                       .filter(A.lm)
@@ -318,14 +313,14 @@ function K() {
     let e = l.useRef(null),
         { channel: t, permissionOverwrites: r, selectedOverwriteId: a } = (0, o.cj)([T.Z], () => T.Z),
         f = null == t ? void 0 : t.getGuildId(),
-        { guild: x, guildRoles: y } = (0, o.cj)(
+        { guild: x, sortedGuildRoles: y } = (0, o.cj)(
             [I.Z, R.Z],
             () => {
                 let e = null != f ? I.Z.getGuild(f) : void 0,
-                    t = null != e ? R.Z.getRoles(e.id) : void 0;
+                    t = null != e ? R.Z.getSortedRoles(e.id) : void 0;
                 return {
                     guild: e,
-                    guildRoles: t
+                    sortedGuildRoles: t
                 };
             },
             [f]
@@ -384,11 +379,11 @@ function K() {
             }).then(() => (0, m.Aj)(e));
         };
     null != r && null == r[x.id] && (r[x.id] = B.we(x.id));
-    let P = s()(r)
-            .filter((e) => e.type === j.BN.ROLE)
-            .map((e) => y[e.id])
-            .filter(A.lm)
-            .sortBy((e) => -e.position)
+    let P = y
+            .filter((e) => {
+                var t;
+                return (null == (t = r[e.id]) ? void 0 : t.type) === j.BN.ROLE;
+            })
             .map((e) =>
                 (0, i.jsx)(
                     p.Z,
@@ -410,9 +405,8 @@ function K() {
                     },
                     ''.concat(a, '-').concat(e.id)
                 )
-            )
-            .value(),
-        L = s()(N)
+            ),
+        A = s()(N)
             .sortBy((e) => e.username.toLowerCase())
             .map((e) => {
                 let t = e.getAvatarURL(x.id, 24);
@@ -487,7 +481,7 @@ function K() {
                     });
                 })(),
                 P,
-                L,
+                A,
                 (0, i.jsxs)(l.Fragment, {
                     children: [
                         (0, i.jsx)(d.njP.Separator, {

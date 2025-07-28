@@ -57,7 +57,7 @@ function E(e) {
                                                 identifiable: n ? 'never' : 'always'
                                             })
                                         }),
-                                        !s.isPomelo() &&
+                                        !s.hasUniqueUsername() &&
                                             (0, i.jsx)(a.Text, {
                                                 className: j.userMenuDiscriminator,
                                                 variant: 'text-sm/normal',
@@ -73,7 +73,7 @@ function E(e) {
                                         className: j.activeIcon
                                     }),
                                 d &&
-                                    (0, i.jsx)(a.P4T, {
+                                    (0, i.jsx)(a.Mgn, {
                                         color: (0, l.Lq)(x.Ilk.RED_400),
                                         secondaryColor: (0, l.Lq)((t && E) || (t && !E) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500),
                                         size: 'xs',

@@ -81,7 +81,7 @@ let f = (t) => {
             (0, i.jsx)(o.DY3, {
                 position: 'right',
                 text: h,
-                children: (0, i.jsx)(o.P4T, {
+                children: (0, i.jsx)(o.Mgn, {
                     size: 'custom',
                     width: 20,
                     height: 20,

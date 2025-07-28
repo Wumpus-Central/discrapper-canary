@@ -1,6 +1,6 @@
 (n.d(t, {
     R: () => O,
-    Z: () => S
+    Z: () => y
 }),
     n(415506));
 var r = n(255367),
@@ -39,7 +39,7 @@ let O = () =>
                 })
             ]
         }),
-    y = (e) => {
+    S = (e) => {
         let { guild: t, user: n, application: i, compact: l } = e;
         return null != i
             ? (0, r.jsx)(c.Z, {
@@ -67,12 +67,12 @@ let O = () =>
                   })
                 : null;
     },
-    S = (e) => {
+    y = (e) => {
         var t;
         let n,
             i,
             o,
-            { invite: c, disableUser: O = !1, error: S, flatActivityCount: N = !1, isRegister: C = !1, inUnclaimedFlow: A = !1 } = e,
+            { invite: c, disableUser: O = !1, error: y, flatActivityCount: N = !1, isRegister: C = !1, inUnclaimedFlow: A = !1 } = e,
             { currentUser: T } = (0, l.cj)([f.default], () => ({ currentUser: f.default.getCurrentUser() })),
             P = (0, d.WR)({ location: 'invite' }) && null != T;
         if (null == c) return null;
@@ -138,7 +138,7 @@ let O = () =>
             ((i = I.intl.formatToPlainString(I.t['4aF92d'], { username: e })),
                 (M = !0),
                 (o =
-                    null != S
+                    null != y
                         ? null
                         : (0, r.jsx)(a.DK, {
                               className: j.directInviteSubTitle,
@@ -148,15 +148,15 @@ let O = () =>
         return (0, r.jsxs)('div', {
             className: j.container,
             children: [
-                (0, r.jsx)(y, {
+                (0, r.jsx)(S, {
                     application: w,
                     guild: Z,
                     user: D ? L : null,
                     compact: M
                 }),
-                null != S
+                null != y
                     ? (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(a.DK, { children: I.intl.string(I.t.mDFGFh) }), (0, r.jsx)(a.Dx, { children: S })]
+                          children: [(0, r.jsx)(a.DK, { children: I.intl.string(I.t.mDFGFh) }), (0, r.jsx)(a.Dx, { children: y })]
                       })
                     : (0, r.jsxs)(r.Fragment, {
                           children: [

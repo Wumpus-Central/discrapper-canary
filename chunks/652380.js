@@ -830,7 +830,7 @@ class U extends o.Component {
             ? (0, r.jsxs)('div', {
                   className: R.errorBoundary,
                   children: [
-                      (0, r.jsx)(d.P4T, { className: R.errorBoundaryIcon }),
+                      (0, r.jsx)(d.Mgn, { className: R.errorBoundaryIcon }),
                       (0, r.jsx)(d.X6q, {
                           variant: 'heading-lg/semibold',
                           children: 'Something broke in the Quest preview tool :('

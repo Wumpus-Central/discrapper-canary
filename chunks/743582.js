@@ -68,7 +68,7 @@ function p(n) {
                                       variant: 'text-sm/semibold',
                                       color: 'text-danger',
                                       children: [
-                                          (0, e.jsx)(r.P4T, {
+                                          (0, e.jsx)(r.Mgn, {
                                               size: 'xs',
                                               color: 'currentColor',
                                               className: m.warningIcon

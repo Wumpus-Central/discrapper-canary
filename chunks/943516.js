@@ -73,7 +73,7 @@ function h(e) {
     );
 }
 function m() {
-    return (0, n.jsx)(s.P4T, {
+    return (0, n.jsx)(s.Mgn, {
         size: 'xs',
         color: 'currentColor',
         className: g.warningIcon

@@ -21,8 +21,8 @@ var r = n(255367),
     I = n(63063),
     j = n(51144),
     O = n(481153),
-    y = n(781428),
-    S = n(423527),
+    S = n(781428),
+    y = n(423527),
     N = n(981631),
     C = n(388032),
     A = n(20493);
@@ -192,13 +192,13 @@ class P extends i.PureComponent {
                 return c || null == e ? this.renderSpinner(C.intl.string(C.t.bYb2nZ)) : this.requiresVerification && null != e ? this.renderVerification(e) : this.renderAuthenticated(i, e);
             }
             return 'login' === this.getMode()
-                ? (0, r.jsx)(y.Z, {
+                ? (0, r.jsx)(S.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
                       transitionTo: a,
                       location: o
                   })
-                : (0, r.jsx)(S.Z, {
+                : (0, r.jsx)(y.Z, {
                       giftCodeSKU: t,
                       giftCode: i,
                       transitionTo: a,

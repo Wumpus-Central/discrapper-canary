@@ -79,10 +79,10 @@ let _ = (0, c.B)(function (e) {
         );
     if (null == S) return null;
     let w = (0, p.jo)(c, C),
-        Z = (0, p.CN)(S, O, y),
-        T = (0, r.jsx)('div', {
+        T = (0, p.CN)(S, O, y),
+        Z = (0, r.jsx)('div', {
             className: o()(w, {
-                [b.disabled]: Z,
+                [b.disabled]: T,
                 [b.selected]: I
             }),
             'data-dnd-name': S.name,
@@ -107,5 +107,5 @@ let _ = (0, c.B)(function (e) {
                 ]
             })
         });
-    return (P && (T = j(v(T))), T);
+    return (P && (Z = j(v(Z))), Z);
 });

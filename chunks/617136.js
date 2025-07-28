@@ -1,9 +1,9 @@
 (n.d(t, {
     Ic: () => x,
-    O5: () => k,
+    O5: () => M,
     Zk: () => j,
     _3: () => L,
-    _F: () => M,
+    _F: () => k,
     _b: () => N,
     dA: () => w,
     jZ: () => D,
@@ -153,7 +153,7 @@ function x(e) {
         sourceQuestContent: n
     });
 }
-function M() {
+function k() {
     let e = (0, _.WD)();
     function t(t) {
         let { questId: n, event: r, properties: i, trackGuildAndChannelMetadata: a = !1, shouldExtendSession: o = !1, sourceQuestContent: s } = t;
@@ -168,8 +168,8 @@ function M() {
     }
     return r.useCallback(t, [e]);
 }
-function k() {
-    let e = M();
+function M() {
+    let e = k();
     return r.useCallback(
         (t) => {
             let { questId: n, questContent: r, questContentCTA: o, questContentPosition: s, questContentRowIndex: c, trackGuildAndChannelMetadata: u = !1, sourceQuestContent: d } = t,

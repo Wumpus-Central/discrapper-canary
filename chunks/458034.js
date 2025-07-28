@@ -71,7 +71,7 @@ function u(e) {
     );
 }
 function d(e) {
-    return (0, l.e7)([i.Z], () => (0, a.kQ)(e, i.Z.getRoles(e.id)), [e])
+    return (0, l.e7)([i.Z], () => (0, a.kQ)(i.Z.getSortedRoles(e.id)), [e])
         ? (0, r.jsx)(o.sNh, {
               id: 'guild-connection-roles',
               label: s.intl.string(s.t.ghtnsr),

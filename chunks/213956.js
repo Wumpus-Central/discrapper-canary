@@ -2,8 +2,8 @@ n.d(t, { Z: () => y });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    s = n(704215),
-    a = n(755721),
+    a = n(704215),
+    s = n(755721),
     o = n(481060),
     c = n(266454),
     d = n(874993),
@@ -11,8 +11,8 @@ var r = n(255367),
     m = n(430824),
     g = n(999382),
     p = n(84613),
-    f = n(392885),
-    h = n(740903),
+    h = n(392885),
+    f = n(740903),
     x = n(464610),
     b = n(733629),
     j = n(598622),
@@ -23,50 +23,50 @@ function y() {
     let e,
         t = (0, l.e7)([g.Z], () => g.Z.getGuildId()),
         n = (0, l.e7)([m.Z], () => m.Z.getGuild(t)),
-        y = (0, l.e7)([f.Z], () => f.Z.getCurrentPage());
+        y = (0, l.e7)([h.Z], () => h.Z.getCurrentPage());
     if (
         (i.useEffect(() => {
-            (0, c.Q3)(s.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: v.L.AUTO });
+            (0, c.Q3)(a.z.COMMUNITY_GUILD_SETTINGS_SAFETY, { dismissAction: v.L.AUTO });
         }, []),
         null == n)
     )
         return null;
     let C = (0, j.Q)(n);
     switch (y) {
-        case h.u.OVERVIEW:
+        case f.u.OVERVIEW:
             e = (0, r.jsx)(x.Z, { guild: n });
             break;
-        case h.u.CAPTCHA_AND_RAID_PROTECTION:
+        case f.u.CAPTCHA_AND_RAID_PROTECTION:
             e = (0, r.jsx)(b.Z, {
                 title: _.intl.string(_.t['53eF5u']),
-                settings: C[h.u.CAPTCHA_AND_RAID_PROTECTION]
+                settings: C[f.u.CAPTCHA_AND_RAID_PROTECTION]
             });
             break;
-        case h.u.DM_AND_SPAM_PROTECTION:
+        case f.u.DM_AND_SPAM_PROTECTION:
             e = (0, r.jsx)(b.Z, {
                 title: _.intl.string(_.t.O0SfFx),
-                settings: C[h.u.DM_AND_SPAM_PROTECTION]
+                settings: C[f.u.DM_AND_SPAM_PROTECTION]
             });
             break;
-        case h.u.AUTOMOD:
+        case f.u.AUTOMOD:
             e = (0, r.jsx)(d.Z, { guildId: n.id });
             break;
-        case h.u.PERMISSIONS:
+        case f.u.PERMISSIONS:
             e = (0, r.jsx)(b.Z, {
                 title: _.intl.string(_.t.BXoNiY),
-                settings: C[h.u.PERMISSIONS]
+                settings: C[f.u.PERMISSIONS]
             });
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            y !== h.u.OVERVIEW &&
-                (0, r.jsxs)(a.zx, {
+            y !== f.u.OVERVIEW &&
+                (0, r.jsxs)(s.zx, {
                     className: O.back,
                     innerClassName: O.backButton,
-                    look: a.zx.Looks.BLANK,
-                    size: a.zx.Sizes.MIN,
+                    look: s.zx.Looks.BLANK,
+                    size: s.zx.Sizes.MIN,
                     onClick: () => {
-                        (0, p.K)(h.u.OVERVIEW);
+                        (0, p.K)(f.u.OVERVIEW);
                     },
                     children: [
                         (0, r.jsx)(u.Z, {

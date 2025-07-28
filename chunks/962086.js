@@ -130,14 +130,13 @@ function N(e, t, n) {
         }));
 }
 function C(e, t) {
-    let n = c.Z.getRoles(e);
     A(e, t);
-    let r = {};
-    (t.forEach((e) => (r[e] = n[e])),
-        I(e, {
-            type: h.z.NEW_MEMBER,
-            roles: r
-        }));
+    let n = {};
+    for (let r of c.Z.getManyRoles(e, t)) n[r.id] = r;
+    I(e, {
+        type: h.z.NEW_MEMBER,
+        roles: n
+    });
 }
 function R(e, t) {
     I(e, b({ type: h.z.NEW_MEMBER }, t));

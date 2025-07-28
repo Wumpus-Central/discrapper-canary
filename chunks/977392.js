@@ -10,12 +10,12 @@ function s(e, t) {
         c = (0, r.e7)([o.ZP], () => (null != e ? o.ZP.getMember(e.id, t) : null), [e, t]),
         u = (0, r.e7)([l.Z], () => l.Z.getChannel(n), [n]),
         d = (0, r.e7)([l.Z], () => l.Z.getChannel(null == u ? void 0 : u.parent_id), [u]),
-        p = (0, r.e7)([i.Z], () => (null != e ? i.Z.getRoles(e.id) : void 0));
+        p = (0, r.e7)([i.Z], () => (null != e ? i.Z.getSortedRoles(e.id) : void 0));
     return null == e || null == p || null == c
         ? null
         : (0, a.Ur)({
               guild: e,
-              guildRoles: p,
+              sortedGuildRoles: p,
               guildMember: c,
               channel: null != u && u.isThread() && null != d ? d : u,
               onlyChannelConnectionRoles: s

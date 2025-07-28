@@ -14,7 +14,7 @@ var i = n(100527),
     f = n(159909),
     m = n(531675);
 function g(e) {
-    let { channel: t, hasActiveStream: n, showRightDivider: g } = e,
+    let { channel: t, hasActiveStream: n, showRightDivider: g = !1 } = e,
         { analyticsLocations: b } = (0, l.ZP)(i.Z.VOICE_CONTROL_TRAY),
         _ = (0, o.Z)(),
         { isSharedCanvasEnabled: y } = c.Z.useExperiment({

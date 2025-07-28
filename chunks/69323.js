@@ -14,7 +14,7 @@ var r = n(255367),
 function _(e) {
     let { powerup: t, targetRef: n, isCardVisible: _ } = e,
         x = (0, l.e7)([u.Z], () => u.Z.hasLayers()),
-        v =
+        g =
             t.skuId === i.A$
                 ? {
                       title: f.intl.string(m.default.YWo6VF),
@@ -22,18 +22,18 @@ function _(e) {
                       dismissibleContentType: s.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER
                   }
                 : null,
-        b = [];
-    null != v && !x && _ && b.push(v.dismissibleContentType);
-    let [g, j] = (0, c.US)(b),
+        v = [];
+    null != g && !x && _ && v.push(g.dismissibleContentType);
+    let [b, j] = (0, c.US)(v),
         E = o.useCallback(() => {
             j(p.L.INDIRECT_ACTION);
         }, [j]);
     return ((0, d.Z)({
         targetRef: n,
         onShouldClose: E,
-        enabled: null != g
+        enabled: null != b
     }),
-    null == v || null == g)
+    null == g || null == b)
         ? null
         : (0, r.jsx)(a.J2, {
               targetElementRef: n,
@@ -45,8 +45,8 @@ function _(e) {
                   position: 'left',
                   align: 'start'
               },
-              title: v.title,
-              body: v.body,
+              title: g.title,
+              body: g.body,
               onRequestClose: () => {
                   j(p.L.USER_DISMISS);
               }

@@ -1,4 +1,4 @@
-t.d(n, { Z: () => j });
+t.d(n, { Z: () => g });
 var l = t(255367),
     r = t(73800),
     i = t(481060),
@@ -10,10 +10,10 @@ var l = t(255367),
     d = t(892001),
     f = t(252417),
     p = t(388032),
-    g = t(301150);
-function j(e) {
-    let { user: n, guildId: t, channelId: j, onClose: v } = e,
-        { mutualFriends: h } = (0, a.Z)(n),
+    j = t(301150);
+function g(e) {
+    let { user: n, guildId: t, channelId: g, onClose: h } = e,
+        { mutualFriends: v } = (0, a.Z)(n),
         { analyticsLocations: m } = (0, s.ZP)(),
         { context: b, trackUserProfileAction: x } = (0, c.KZ)(),
         y = (0, o.Z)();
@@ -69,26 +69,26 @@ function j(e) {
         );
     };
     return (0, l.jsx)(i.zJl, {
-        className: g.listScroller,
+        className: j.listScroller,
         fade: !0,
         children:
-            null == h
+            null == v
                 ? (0, l.jsx)('div', {
-                      className: g.empty,
+                      className: j.empty,
                       children: (0, l.jsx)(i.$jN, {})
                   })
-                : 0 === h.length
+                : 0 === v.length
                   ? (0, l.jsxs)('div', {
-                        className: g.empty,
+                        className: j.empty,
                         children: [
-                            (0, l.jsx)('div', { className: g.emptyIconFriends }),
+                            (0, l.jsx)('div', { className: j.emptyIconFriends }),
                             (0, l.jsx)('div', {
-                                className: g.emptyText,
+                                className: j.emptyText,
                                 children: p.intl.string(p.t['/5p4g4'])
                             })
                         ]
                     })
-                  : h.map((e) => {
+                  : v.map((e) => {
                         let { key: n, user: r, status: i } = e;
                         return (0, l.jsx)(
                             f.Z,
@@ -96,9 +96,9 @@ function j(e) {
                                 user: r,
                                 status: i,
                                 guildId: t,
-                                channelId: j,
+                                channelId: g,
                                 onSelect: () => {
-                                    (null == v || v(), x({ action: 'PRESS_MUTUAL_FRIEND' }), O(r.id));
+                                    (null == h || h(), x({ action: 'PRESS_MUTUAL_FRIEND' }), O(r.id));
                                 }
                             },
                             n

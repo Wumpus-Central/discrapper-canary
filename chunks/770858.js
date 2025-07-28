@@ -36,7 +36,7 @@ function x(e) {
         {
             badge: N,
             badgeDimensions: w,
-            unreadChannelsCount: Z
+            unreadChannelsCount: T
         } = (function (e) {
             let { notificationCenterVariant: t } = b.Lk.useExperiment({ location: 'NotificationsInboxButtonInner' }),
                 { unreadRecentMentionsCount: n, unreadChannelIds: i } = (0, _.O4)(),
@@ -99,7 +99,7 @@ function x(e) {
                 badgeDimensions: s
             };
         })(I),
-        T = P === b.jP.LEGACY ? c.xx7 : c.Dkj,
+        Z = P === b.jP.LEGACY ? c.xx7 : c.Dkj,
         A = (0, s.e7)([g.Z], () => g.Z.getChannelId()),
         R = i.useMemo(() => {
             if (P === b.jP.SIDEBAR) return v.Z5c.NOTIFICATIONS_INBOX(null != A ? A : void 0);
@@ -110,7 +110,7 @@ function x(e) {
             (0, r.jsx)(d.Z, {
                 selected: I && P === b.jP.SIDEBAR,
                 hovered: y && P === b.jP.SIDEBAR,
-                unread: Z > 0,
+                unread: T > 0,
                 className: E.pill,
                 disabled: P === b.jP.LEGACY
             }),
@@ -153,7 +153,7 @@ function x(e) {
                                 selected: I || y,
                                 onMouseEnter: () => j(!0),
                                 onMouseLeave: () => j(!1),
-                                children: (0, r.jsx)(T, {
+                                children: (0, r.jsx)(Z, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     className: E.notificationsIcon,

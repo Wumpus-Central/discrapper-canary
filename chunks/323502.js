@@ -1,8 +1,8 @@
-n.d(t, { S: () => s });
+n.d(t, { S: () => a });
 var r = n(544891),
     i = n(570140),
     l = n(981631);
-function s(e) {
+function a(e) {
     return r.tn
         .get({
             url: l.ANM.GUILD_TOP_READ_CHANNELS(e),

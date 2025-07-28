@@ -513,7 +513,7 @@ let F = i.memo(function (e) {
             D = (e, t) => {
                 O ||
                     (0, u.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('79695'), n.e('6524')]).then(n.bind(n, 27900));
+                        let { default: e } = await Promise.all([n.e('70274'), n.e('79695'), n.e('6524')]).then(n.bind(n, 27900));
                         return (
                             (0, V.Ws)(k.Odu.VOICE_V3, {
                                 type: V.Qu.VOICE,

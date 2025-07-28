@@ -1,5 +1,5 @@
 (n.d(t, {
-    B5: () => k,
+    B5: () => M,
     PI: () => D,
     WD: () => G,
     aM: () => B,
@@ -92,7 +92,7 @@ let R = 100,
 function x(e, t) {
     return ''.concat(e, '_').concat(t);
 }
-class M {
+class k {
     getId() {
         return this.id;
     }
@@ -266,7 +266,7 @@ class M {
                 let { triggeredByStatusChange: t } = e;
                 return (
                     this.stop(),
-                    new M({
+                    new k({
                         questContent: this.questContent,
                         questOrQuests: this.quests,
                         questContentRowIndex: this.questContentRowIndex,
@@ -317,7 +317,7 @@ class M {
             (this.sourceQuestContent = f));
     }
 }
-let k = (e, t) => {
+let M = (e, t) => {
         let n = Array.isArray(e)
             ? e
                   .sort()
@@ -355,7 +355,7 @@ function V(e) {
                 o = ((n || c) && !r) || d;
             ((i || o) && null != f.current && f.current.stop(),
                 i &&
-                    ((f.current = new M({
+                    ((f.current = new k({
                         questOrQuests: e.questOrQuests,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,

@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(359110),
     j = n(6025),
     A = n(897473),
-    x = n(108427),
-    Z = n(970731),
+    Z = n(108427),
+    x = n(970731),
     w = n(210887),
     L = n(433355),
     R = n(592125),
@@ -225,14 +225,14 @@ function ei(e) {
 }
 let el = function (e) {
         let { markAsDismissed: t } = e;
-        return (0, r.jsx)(Z.ZP, {
+        return (0, r.jsx)(x.ZP, {
             header: ee.intl.string(ee.t.hRT8tb),
             content: ee.intl.string(ee.t.apPgJC),
             buttonCTA: ee.intl.string(ee.t.LNoAQU),
             className: et.messageRequestCoachmark,
             onClick: () => t(J.L.UNKNOWN),
             markAsDismissed: t,
-            caretPosition: Z.DF.TOP_CENTER,
+            caretPosition: x.DF.TOP_CENTER,
             headerClassName: et.__invalid_header
         });
     },
@@ -254,7 +254,7 @@ let el = function (e) {
                               renderPopout: () =>
                                   t
                                       ? (0, r.jsx)(el, { markAsDismissed: o })
-                                      : (0, r.jsx)(Z.ZP, {
+                                      : (0, r.jsx)(x.ZP, {
                                             header: ee.intl.string(ee.t.hRT8tb),
                                             content: ee.intl.string(ee.t['8JWodn']),
                                             buttonCTA: ee.intl.string(ee.t.JN6EOD),
@@ -264,7 +264,7 @@ let el = function (e) {
                                                 (e.stopPropagation(), f.Z.open(Q.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: $.FY.MESSAGE_REQUESTS_V2 }));
                                             },
                                             markAsDismissed: o,
-                                            caretPosition: Z.DF.TOP_CENTER,
+                                            caretPosition: x.DF.TOP_CENTER,
                                             headerClassName: et.__invalid_header
                                         }),
                               position: 'bottom',
@@ -287,7 +287,7 @@ let es = (0, g.Z)(function (e) {
     let { width: t } = e,
         n = (0, F.q)();
     (0, b.ZP)(() => {
-        (h.Y(Q.Z5c.MESSAGE_REQUESTS), (0, x.e)('message-requests'), k.default.track(Q.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), T.Z.increment({ name: s.V.MESSAGE_REQUEST_VIEW }));
+        (h.Y(Q.Z5c.MESSAGE_REQUESTS), (0, Z.e)('message-requests'), k.default.track(Q.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), T.Z.increment({ name: s.V.MESSAGE_REQUEST_VIEW }));
     });
     let l = (0, c.e7)([w.Z], () => w.Z.theme),
         o = (0, W.w)(),

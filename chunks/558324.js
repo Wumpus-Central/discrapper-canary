@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
-    a = n(755721),
+    a = n.n(l),
+    s = n(755721),
     o = n(481060),
     c = n(981631),
     d = n(388032),
@@ -11,7 +11,7 @@ var r = n(255367),
 let m = (e) => {
     var t,
         n,
-        { className: l, tags: m, value: g, onRemoveTag: p, onAddTag: f, onAddTagError: h, maxTaxLength: x, maxTags: b, disabled: j, placeholder: v } = e,
+        { className: l, tags: m, value: g, onRemoveTag: p, onAddTag: h, onAddTagError: f, maxTaxLength: x, maxTags: b, disabled: j, placeholder: v } = e,
         _ = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -58,12 +58,12 @@ let m = (e) => {
             let e = O.trim();
             if (0 !== e.length) {
                 if (null != b && m.length >= b) {
-                    null == h || h(d.intl.string(d.t.Xx7XeH));
+                    null == f || f(d.intl.string(d.t.Xx7XeH));
                     return;
                 }
-                (f(e), y(''));
+                (h(e), y(''));
             }
-        }, [O, b, f, h, m.length]),
+        }, [O, b, h, f, m.length]),
         I = i.useCallback(
             (e) => {
                 switch (e.keyCode) {
@@ -79,11 +79,11 @@ let m = (e) => {
             [N, O.length, p, m.length]
         );
     return (0, r.jsxs)('div', {
-        className: s()(l, u.inputWrapper, { [u.disabled]: j }),
+        className: a()(l, u.inputWrapper, { [u.disabled]: j }),
         children: [
             C,
             (0, r.jsx)(
-                a.Is,
+                s.Is,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},

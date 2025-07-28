@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    s = n(481060),
-    a = n(224706),
+    a = n(481060),
+    s = n(224706),
     o = n(100527),
     c = n(906732),
     d = n(314852),
@@ -11,8 +11,8 @@ var r = n(255367),
     m = n(798476),
     g = n(496675),
     p = n(434404),
-    f = n(999382),
-    h = n(12078),
+    h = n(999382),
+    f = n(12078),
     x = n(934638),
     b = n(566036),
     j = n(979664),
@@ -25,10 +25,10 @@ var r = n(255367),
     I = n(83951);
 let E = function () {
     let { analyticsLocations: e } = (0, c.ZP)(o.Z.GUILD_SETTINGS_PROFILE_PAGE),
-        t = (0, l.e7)([f.Z], () => f.Z.getGuild(), []),
+        t = (0, l.e7)([h.Z], () => h.Z.getGuild(), []),
         n = null == t ? void 0 : t.id,
         { fetchGuildProfile: E, fetchStatus: S } = (0, u.u)(null == t ? void 0 : t.id),
-        T = (0, l.e7)([f.Z], () => f.Z.getGuildProfile(), []),
+        T = (0, l.e7)([h.Z], () => h.Z.getGuildProfile(), []),
         P = (0, l.e7)([g.Z], () => g.Z.can(C.Plq.MANAGE_GUILD, t)),
         w = i.useCallback(
             (e) => {
@@ -49,14 +49,14 @@ let E = function () {
         E(!0);
     }, [E]);
     return (i.useEffect(() => {
-        a.Z.getDetectableGames();
+        s.Z.getDetectableGames();
     }, []),
     S === d.a.FETCHED && null == T)
         ? (0, r.jsx)(_.g, { forceFetchGuildProfile: Z })
         : S === d.a.NOT_FETCHED || S === d.a.FETCHING
           ? (0, r.jsx)('main', {
                 className: I.spinner,
-                children: (0, r.jsx)(s.$jN, {})
+                children: (0, r.jsx)(a.$jN, {})
             })
           : null == t || null == T
             ? null
@@ -70,12 +70,12 @@ let E = function () {
                               children: [
                                   (0, r.jsxs)('div', {
                                       children: [
-                                          (0, r.jsx)(s.X6q, {
+                                          (0, r.jsx)(a.X6q, {
                                               variant: 'heading-lg/semibold',
                                               color: 'header-primary',
                                               children: N.intl.string(N.t.txdaxc)
                                           }),
-                                          (0, r.jsx)(s.Text, {
+                                          (0, r.jsx)(a.Text, {
                                               variant: 'text-sm/medium',
                                               color: 'header-secondary',
                                               className: I.description,
@@ -94,7 +94,7 @@ let E = function () {
                                       onIconChange: w
                                   }),
                                   (0, r.jsx)('div', { className: I.divider }),
-                                  (0, r.jsx)(h.Z, {
+                                  (0, r.jsx)(f.Z, {
                                       profile: T,
                                       onCustomBannerChange: R,
                                       canManageGuild: P
@@ -123,7 +123,7 @@ let E = function () {
                           }),
                           (0, r.jsx)('div', {
                               className: I.rightColumn,
-                              children: (0, r.jsx)(s.Ttm, {
+                              children: (0, r.jsx)(a.Ttm, {
                                   className: I.profilePreviewContainer,
                                   children: (0, r.jsx)(m.ZP, {
                                       className: I.profilePreview,

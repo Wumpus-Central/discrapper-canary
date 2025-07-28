@@ -1,9 +1,9 @@
-(n.d(t, { Z: () => f }), n(388685), n(361932), n(187205), n(953529));
+(n.d(t, { Z: () => h }), n(388685), n(361932), n(187205), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
-    a = n(652141),
+    a = n.n(l),
+    s = n(652141),
     o = n(692547),
     c = n(481060),
     d = n(259580),
@@ -26,25 +26,25 @@ function p(e) {
                       size: 'md',
                       color: 'currentColor',
                       secondaryColor: o.Z.unsafe_rawColors.WHITE_500.css,
-                      className: s()(g.rowIcon, g.rowIconChecked)
+                      className: a()(g.rowIcon, g.rowIconChecked)
                   })
-                : (0, r.jsx)('div', { className: s()(g.rowIcon, g.rowIconEmpty) })
+                : (0, r.jsx)('div', { className: a()(g.rowIcon, g.rowIconEmpty) })
         ]
     });
 }
-function f(e) {
+function h(e) {
     let { children: t } = e,
         [n, l] = i.useState(!1),
-        s = t.flatMap((e) => e.items.map((e) => e.completed)),
-        o = s.filter((e) => e).length / s.length,
-        f = 1 === o,
-        h = (0, c.q_F)({ width: ''.concat(100 * o, '%') }),
+        a = t.flatMap((e) => e.items.map((e) => e.completed)),
+        o = a.filter((e) => e).length / a.length,
+        h = 1 === o,
+        f = (0, c.q_F)({ width: ''.concat(100 * o, '%') }),
         x = [m.intl.format(m.t.wtQtXl, { promoPageGuideUrl: u.iv.PROMO_PAGE_GUIDE }), m.intl.format(m.t['0Fo0wc'], { caseStudiesUrl: u.iv.CASE_STUDIES }), m.intl.format(m.t['7JdzjI'], { subscriptionOfferingGuideUrl: u.iv.SUBSCRIPTION_OFFERING_GUIDE }), m.intl.format(m.t.zkXN6O, { tierStructureGuideUrl: u.iv.TIER_STRUCTURE_GUIDE })],
         b = n
             ? null
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      !f &&
+                      !h &&
                           t.map((e, t) => {
                               let { title: n, items: l } = e;
                               return (0, r.jsxs)(
@@ -111,12 +111,12 @@ function f(e) {
                         })
                     ]
                 }),
-                !f &&
+                !h &&
                     (0, r.jsx)('div', {
                         className: g.progressBarOuter,
-                        children: (0, r.jsx)(a.animated.div, {
+                        children: (0, r.jsx)(s.animated.div, {
                             className: g.progressBarInner,
-                            style: h
+                            style: f
                         })
                     }),
                 b

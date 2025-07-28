@@ -1,9 +1,9 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(73800),
     i = n(399606),
     l = n(674180),
-    s = n(601964),
-    a = n(594174),
+    a = n(601964),
+    s = n(594174),
     o = n(63063),
     c = n(223892),
     d = n(58259),
@@ -11,15 +11,15 @@ var r = n(73800),
     m = n(159361),
     g = n(377176),
     p = n(981631),
-    f = n(388032);
-function h(e) {
+    h = n(388032);
+function f(e) {
     let t,
         n = (0, c.Ob)(e),
-        h = null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
+        f = null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
         x = null == e ? void 0 : e.features.has(p.oNc.CREATOR_MONETIZABLE),
-        b = (0, i.e7)([a.default], () => {
-            let t = a.default.getCurrentUser();
-            return null != e && (0, s.eM)(e, t);
+        b = (0, i.e7)([s.default], () => {
+            let t = s.default.getCurrentUser();
+            return null != e && (0, a.eM)(e, t);
         }),
         { error: j, loading: v, createEnableRequest: _, submittedRequest: O } = (0, d.Z)(null == e ? void 0 : e.id),
         { loading: y, error: C, refresh: N, eligibility: I } = (0, u.Z)(null == e ? void 0 : e.id),
@@ -28,19 +28,19 @@ function h(e) {
         { isMonetizationReapplicationDisabled: P } = (0, l.eC)(null == e ? void 0 : e.id),
         w = O || (null == I ? void 0 : I.isApplicationPending) === !0,
         R = (null == I ? void 0 : I.canApply) === !0,
-        Z = f.intl.format(f.t.aJUdOj, { faqUrl: o.Z.getArticleURL(p.BhN.CREATOR_FAQ) });
+        Z = h.intl.format(h.t.aJUdOj, { faqUrl: o.Z.getArticleURL(p.BhN.CREATOR_FAQ) });
     E && P
-        ? (t = !0 === h ? f.intl.format(f.t['0o1Q+v'], { communityGuidelineUrl: p.EYA.GUIDELINES }) : f.intl.format(f.t.b6h59v, { communityGuidelineUrl: p.EYA.GUIDELINES }))
+        ? (t = !0 === f ? h.intl.format(h.t['0o1Q+v'], { communityGuidelineUrl: p.EYA.GUIDELINES }) : h.intl.format(h.t.b6h59v, { communityGuidelineUrl: p.EYA.GUIDELINES }))
         : E &&
           null != S &&
-          (t = f.intl.format(f.t.TvX209, {
+          (t = h.intl.format(h.t.TvX209, {
               requestCooldownDuration: S,
               creatorRevenuePolicyUrl: o.Z.getArticleURL(p.BhN.CREATOR_POLICY)
           }));
     let D = n && b && !1 === x,
-        A = n && !1 === h,
+        A = n && !1 === f,
         k = (0, g.f)(),
-        L = E && R && b ? f.intl.format(f.t.wbVIUF, {}) : void 0;
+        L = E && R && b ? h.intl.format(h.t.wbVIUF, {}) : void 0;
     return (
         r.useEffect(() => {
             D && N();

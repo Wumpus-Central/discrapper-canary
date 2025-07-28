@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T });
+n.d(t, { Z: () => Z });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -68,7 +68,7 @@ function w(e, t) {
         e
     );
 }
-function Z(e) {
+function T(e) {
     let { style: t, withGuildIcon: n, inverted: i } = e,
         l = {
             className: o()(P.spine, { [P.spineWithGuildIcon]: n }, { [P.invertedSpine]: i }),
@@ -141,8 +141,8 @@ function Z(e) {
             );
     }
 }
-let T = i.memo(function (e) {
-    let { thread: t, isSelectedChannel: l, isSelectedVoice: P, isLast: T, withGuildIcon: A } = e,
+let Z = i.memo(function (e) {
+    let { thread: t, isSelectedChannel: l, isSelectedVoice: P, isLast: Z, withGuildIcon: A } = e,
         R = (0, s.e7)([_.ZP], () => _.ZP.getVoiceStatesForChannel(t), [t]),
         D = (0, s.e7)([b.Z], () => b.Z.hasVideo(t.id)),
         {
@@ -211,10 +211,10 @@ let T = i.memo(function (e) {
         role: z,
         className: o()(x.containerDefault, { [x.selected]: l }),
         children: [
-            (0, r.jsx)(Z, { withGuildIcon: A }),
-            T
+            (0, r.jsx)(T, { withGuildIcon: A }),
+            Z
                 ? null
-                : (0, r.jsx)(Z, {
+                : (0, r.jsx)(T, {
                       withGuildIcon: A,
                       inverted: !0,
                       style: { transform: 'rotateX(180deg) translateY(-9px)' }

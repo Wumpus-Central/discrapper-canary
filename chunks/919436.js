@@ -54,7 +54,7 @@ function w(e) {
     }
     return e;
 }
-function Z(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,7 +72,7 @@ function Z(e, t) {
         e
     );
 }
-let T = {
+let Z = {
     friction: 28,
     tension: 600
 };
@@ -80,9 +80,9 @@ function A(e) {
     switch (e) {
         case 'height':
         case 'opacity':
-            return w({ duration: 150 }, T);
+            return w({ duration: 150 }, Z);
         case 'scale':
-            return w({}, T);
+            return w({}, Z);
         default:
             throw Error('DirectMessage: getSpringConfigs() - Invalid spring '.concat(String(e)));
     }
@@ -233,7 +233,7 @@ class R extends (r = l.PureComponent) {
                           return (n) =>
                               (0, i.jsx)(
                                   e,
-                                  Z(w({}, n), {
+                                  T(w({}, n), {
                                       channel: t,
                                       user: r
                                   })
@@ -244,7 +244,7 @@ class R extends (r = l.PureComponent) {
                           return (n) =>
                               (0, i.jsx)(
                                   e,
-                                  Z(w({}, n), {
+                                  T(w({}, n), {
                                       channel: t,
                                       selected: !1
                                   })
@@ -276,7 +276,7 @@ let D = l.forwardRef(function (e, t) {
     let S = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE);
     return (0, i.jsx)(
         R,
-        Z(w({}, e), {
+        T(w({}, e), {
             ref: t,
             channelName: r,
             unread: y > 0,

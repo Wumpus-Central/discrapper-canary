@@ -41,7 +41,7 @@ function S(e) {
         P = i.useMemo(() => [...[...C, ...x].sort((e, t) => -1 * _.default.compare(e.id, t.id))], [C, x]),
         N = C.length > 0 ? C[0] : null,
         w = m.d$.useSetting(),
-        Z = i.useMemo(() => {
+        T = i.useMemo(() => {
             if (null != N && 0 >= _.default.compare(N.id, w)) return !1;
             for (let e of P) {
                 if (0 >= _.default.compare(e.id, w)) break;
@@ -57,7 +57,7 @@ function S(e) {
                 setTab: t,
                 badgeState: n,
                 closePopout: l,
-                children: Z
+                children: T
                     ? (0, r.jsx)(E, {
                           onClick: () => {
                               null != N && (m.d$.updateSetting(N.id), b.default.track(y.rMx.NOTIFICATION_CENTER_ACTION, { action_type: d.ud.MARK_ALL_READ }));

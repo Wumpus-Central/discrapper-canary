@@ -62,56 +62,56 @@ function j(e, t) {
     );
 }
 function O(e) {
-    var t, l;
-    let { userId: p, channel: _ } = e,
-        y = i.useRef(null),
-        { analyticsLocations: C } = (0, d.ZP)(u.Z.USERNAME),
-        O = (0, o.e7)([g.default], () => g.default.getUser(p)),
-        E = (0, o.e7)([m.ZP], () => (null != p ? m.ZP.getMember(_.guild_id, p) : null)),
-        S = (0, h.X7)(_.guild_id, null != p ? p : void 0, null == E ? void 0 : E.colorStrings);
-    function P(e) {
-        if (null == O) return null;
+    var t, l, p;
+    let { userId: _, channel: y } = e,
+        C = i.useRef(null),
+        { analyticsLocations: O } = (0, d.ZP)(u.Z.USERNAME),
+        E = (0, o.e7)([g.default], () => g.default.getUser(_)),
+        S = (0, o.e7)([m.ZP], () => (null != _ ? m.ZP.getMember(y.guild_id, _) : null)),
+        P = (0, h.X7)(y.guild_id, null != _ ? _ : void 0, null != (t = null == S ? void 0 : S.colorStrings) ? t : null);
+    function I(e) {
+        if (null == E) return null;
         (0, c.jW)(e, async () => {
             let { default: e } = await Promise.all([n.e('79695'), n.e('70675')]).then(n.bind(n, 654663));
             return (t) =>
                 (0, r.jsx)(
                     e,
                     j(v({}, t), {
-                        user: O,
-                        guildId: _.guild_id,
-                        channel: _
+                        user: E,
+                        guildId: y.guild_id,
+                        channel: y
                     })
                 );
         });
     }
-    let I = null != (l = null != (t = null == E ? void 0 : E.nick) ? t : b.ZP.getName(O)) ? l : '???',
-        Z = null == E ? void 0 : E.colorString;
-    return null == O
+    let Z = null != (p = null != (l = null == S ? void 0 : S.nick) ? l : b.ZP.getName(E)) ? p : '???',
+        T = null == S ? void 0 : S.colorString;
+    return null == E
         ? (0, r.jsx)('span', {
               className: a()(x.threadCreatorName, x.unknownCreatorName),
-              children: I
+              children: Z
           })
         : (0, r.jsx)(d.Gt, {
-              value: C,
+              value: O,
               children: (0, r.jsx)(f.Z, {
-                  targetElementRef: y,
-                  user: O,
-                  guildId: _.guild_id,
-                  channelId: _.id,
-                  roleId: null == E ? void 0 : E.colorRoleId,
+                  targetElementRef: C,
+                  user: E,
+                  guildId: y.guild_id,
+                  channelId: y.id,
+                  roleId: null == S ? void 0 : S.colorRoleId,
                   clickTrap: !0,
                   children: (e) =>
                       (0, r.jsx)(
                           s.P3F,
                           j(v({}, e), {
-                              innerRef: y,
+                              innerRef: C,
                               tag: 'span',
                               className: x.threadCreatorName,
-                              onContextMenu: P,
+                              onContextMenu: I,
                               children: (0, r.jsx)(s.PUh, {
-                                  name: I,
-                                  color: null != Z ? Z : void 0,
-                                  roleColors: S
+                                  name: Z,
+                                  colorString: null != T ? T : null,
+                                  colorStrings: P
                               })
                           })
                       )

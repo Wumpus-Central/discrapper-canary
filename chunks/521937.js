@@ -18,11 +18,11 @@ function m(e) {
             let { user_code: e } = l.parse(window.location.search);
             return n && null != e ? e : '';
         }),
-        b = (0, s.TH)(),
-        v = r.useCallback(() => {
-            (0, u.c$)(b, 'user_code_input_unauthorized');
-        }, [b]),
-        { manualSubmit: _, error: g, submitting: C } = (0, f.c)(o, t, v);
+        v = (0, s.TH)(),
+        b = r.useCallback(() => {
+            (0, u.c$)(v, 'user_code_input_unauthorized');
+        }, [v]),
+        { manualSubmit: _, error: g, submitting: C } = (0, f.c)(o, t, b);
     return (0, a.jsxs)('div', {
         className: x.content,
         children: [
@@ -53,16 +53,13 @@ function m(e) {
                     })
                 ]
             }),
-            (0, a.jsx)(c.zx, {
+            (0, a.jsx)(d.zxk, {
                 fullWidth: !0,
-                color: c.zx.Colors.BRAND,
+                variant: 'primary',
+                text: h.intl.string(h.t['3PatS0']),
                 onClick: _,
-                submitting: C,
-                disabled: o.length !== p.A.USER_CODE_LENGTH,
-                children: (0, a.jsx)(d.Text, {
-                    variant: 'text-md/medium',
-                    children: h.intl.string(h.t['3PatS0'])
-                })
+                loading: C,
+                disabled: o.length !== p.A.USER_CODE_LENGTH
             })
         ]
     });

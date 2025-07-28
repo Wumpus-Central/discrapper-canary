@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    s = n(481060),
     o = n(749210),
     c = n(493544),
     d = n(607070),
@@ -11,14 +11,15 @@ var r = n(255367),
     m = n(981631),
     g = n(388032),
     p = n(406116);
-function f(e) {
+function h(e) {
     let { color: t, children: n } = e;
     return (0, r.jsxs)('div', {
         className: p.roleTag,
         children: [
-            (0, r.jsx)(a.xko, {
+            (0, r.jsx)(s.xko, {
                 className: p.roleDot,
-                color: t
+                color: t,
+                colors: null
             }),
             (0, r.jsx)('span', {
                 className: p.roleText,
@@ -27,10 +28,10 @@ function f(e) {
         ]
     });
 }
-function h(e) {
+function f(e) {
     let { guild: t, display: n } = e;
     return (0, r.jsxs)('div', {
-        className: s()(p.banner, t.backgroundClass, { [p.bannerOut]: !n }),
+        className: a()(p.banner, t.backgroundClass, { [p.bannerOut]: !n }),
         children: [
             (0, r.jsx)('div', {
                 className: p.roles,
@@ -41,7 +42,7 @@ function h(e) {
                             className: p.rolesRow,
                             children: e.map((e) =>
                                 (0, r.jsx)(
-                                    f,
+                                    h,
                                     {
                                         color: e.color,
                                         children: e.name
@@ -59,13 +60,13 @@ function h(e) {
                 children: (0, r.jsxs)('div', {
                     className: p.avatarContainer,
                     children: [
-                        (0, r.jsx)(a.qEK, {
-                            size: a.EFr.SIZE_56,
+                        (0, r.jsx)(s.qEK, {
+                            size: s.EFr.SIZE_56,
                             'aria-hidden': !0,
                             status: m.Skl.ONLINE,
                             src: t.avatar
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(s.Text, {
                             color: 'header-primary',
                             variant: 'text-md/bold',
                             className: p.avatarName,
@@ -189,14 +190,14 @@ function x() {
             []
         ),
         [t, l] = i.useState(0),
-        s = i.useRef(e);
+        a = i.useRef(e);
     return (
         i.useEffect(() => {
-            s.current = e;
+            a.current = e;
         }),
         i.useEffect(() => {
             if (d.Z.useReducedMotion) return;
-            let e = setTimeout(() => l((t + 1) % s.current.length), 6332);
+            let e = setTimeout(() => l((t + 1) % a.current.length), 6332);
             return () => clearTimeout(e);
         }, [t]),
         (0, r.jsx)('div', {
@@ -204,7 +205,7 @@ function x() {
             'aria-hidden': !0,
             children: e.map((e, n) =>
                 (0, r.jsx)(
-                    h,
+                    f,
                     {
                         guild: e,
                         display: n === t
@@ -217,28 +218,28 @@ function x() {
 }
 function b(e) {
     let { guild: t, everyoneRole: n, setEditRoleId: l } = e,
-        [s, d] = i.useState(!1),
+        [a, d] = i.useState(!1),
         m = async () => {
             (d(!0), await o.Z.createRole(t.id), d(!1));
         },
-        f = i.useCallback(() => {
+        h = i.useCallback(() => {
             l(n.id);
         }, [l, n.id]);
     return (0, r.jsx)(c.NM, {
-        children: (0, r.jsxs)(a.hjN, {
+        children: (0, r.jsxs)(s.hjN, {
             className: p.section,
             title: g.intl.string(g.t.LPJmLy),
-            tag: a.RB0.H2,
+            tag: s.RB0.H2,
             children: [
                 (0, r.jsxs)('div', {
                     className: p.container,
                     children: [
                         (0, r.jsx)(x, {}),
-                        (0, r.jsx)(a.X6q, {
+                        (0, r.jsx)(s.X6q, {
                             variant: 'heading-xl/semibold',
                             children: g.intl.string(g.t.ALlnbm)
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(s.Text, {
                             color: 'header-secondary',
                             variant: 'text-md/normal',
                             className: p.introBody,
@@ -247,19 +248,19 @@ function b(e) {
                         (0, r.jsx)('div', {
                             'data-button-hoisted-classname-wrapper': !0,
                             className: p.button,
-                            children: (0, r.jsx)(a.zxk, {
+                            children: (0, r.jsx)(s.zxk, {
                                 variant: 'primary',
                                 text: g.intl.string(g.t.JZZjQE),
                                 onClick: m,
-                                loading: s
+                                loading: a
                             })
                         })
                     ]
                 }),
-                (0, r.jsx)(a.$i$, { className: p.divider }),
+                (0, r.jsx)(s.$i$, { className: p.divider }),
                 (0, r.jsx)(u.Z, {
                     role: n,
-                    onClick: f
+                    onClick: h
                 })
             ]
         })

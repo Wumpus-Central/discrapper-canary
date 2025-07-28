@@ -15,7 +15,7 @@ let u = {
         BACKGROUND_ACCENT: c.backgroundAccent
     },
     d = i.forwardRef(function (e, t) {
-        let { role: n, children: i, className: a, onDismiss: d, backgroundColor: f = u.RED, icon: _ = l.P4T, iconClassName: p } = e;
+        let { role: n, children: i, className: a, onDismiss: d, backgroundColor: f = u.RED, icon: _ = l.Mgn, iconClassName: p } = e;
         return (0, r.jsxs)('div', {
             className: o()(c.error, a, f),
             ref: t,

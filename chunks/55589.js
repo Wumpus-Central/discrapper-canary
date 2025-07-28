@@ -50,13 +50,13 @@ function _(e) {
         isRequest: m.Z.isMessageRequest(e.id) || b.Z.isSpam(e.id)
     };
 }
-function P() {
+function x() {
     (C.clear(),
         Object.values(v.Z.getMutablePrivateChannels()).forEach((e) => {
             C.set(e.id, _(e));
         }));
 }
-function x() {
+function P() {
     let e = v.Z.getMutablePrivateChannels();
     for (let t in e) C.set(t, _(e[t]));
 }
@@ -85,7 +85,7 @@ let N =
     });
 class w extends (s = d.ZP.Store) {
     initialize() {
-        (this.waitFor(v.Z, O.Z, S.default, m.Z, E.ZP), this.syncWith([E.ZP, m.Z], P));
+        (this.waitFor(v.Z, O.Z, S.default, m.Z, E.ZP), this.syncWith([E.ZP, m.Z], x));
     }
     getPrivateChannelIds() {
         return N();
@@ -114,11 +114,11 @@ class w extends (s = d.ZP.Store) {
           })
         : (w[o] = a));
 let T = new w(p.Z, {
-    CONNECTION_OPEN: P,
-    CONNECTION_OPEN_SUPPLEMENTAL: P,
-    OVERLAY_INITIALIZE: P,
-    CACHE_LOADED: x,
-    CACHE_LOADED_LAZY: x,
+    CONNECTION_OPEN: x,
+    CONNECTION_OPEN_SUPPLEMENTAL: x,
+    OVERLAY_INITIALIZE: x,
+    CACHE_LOADED: P,
+    CACHE_LOADED_LAZY: P,
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
         t.forEach((e) => {

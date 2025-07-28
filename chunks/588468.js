@@ -50,7 +50,7 @@ function x(e, t, n) {
         e
     );
 }
-function M(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -66,7 +66,7 @@ function M(e) {
     }
     return e;
 }
-function k(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -83,7 +83,7 @@ function j(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -132,7 +132,7 @@ class Z extends a.PureComponent {
             l = this.isSelectable();
         return (0, i.jsx)(
             d.P3F,
-            j(M({}, e), {
+            j(k({}, e), {
                 className: s()(L.clickable, r, n),
                 id: null != (t = B(a)) ? t : void 0,
                 onClick: l ? this.handleClick : void 0,
@@ -245,7 +245,7 @@ class z extends Z {
                             mode: 'username',
                             identifiable: a ? 'never' : 'always'
                         }),
-                        a || t.isPomelo()
+                        a || t.hasUniqueUsername()
                             ? null
                             : (0, i.jsxs)('span', {
                                   className: L.descriptionDiscriminator,
@@ -266,14 +266,12 @@ class q extends Z {
             c = (0, b.AQ)(n, e, a),
             u = null != c && l,
             { gradientStyle: _, gradientClassname: p } = (0, d.JUn)({
-                primaryColor: null == a ? void 0 : a.primaryColor,
-                secondaryColor: null == a ? void 0 : a.secondaryColor,
-                tertiaryColor: null == a ? void 0 : a.tertiaryColor,
+                colorStrings: a,
                 useReducedMotion: f.Z.useReducedMotion,
                 roleStyle: 'username',
                 includeConvenienceGlow: !0
             }),
-            h = l ? M({}, u ? _ : { color: null != r ? r : void 0 }) : void 0;
+            h = l ? k({}, u ? _ : { color: null != r ? r : void 0 }) : void 0;
         return (0, i.jsxs)(R.RX, {
             children: [
                 (0, i.jsx)(R.z5, {
@@ -431,7 +429,7 @@ class en extends Z {
 }
 class er extends Z {
     renderContent() {
-        return (0, i.jsx)(y.Z, M({}, this.props));
+        return (0, i.jsx)(y.Z, k({}, this.props));
     }
 }
 class ei extends Z {
@@ -461,7 +459,7 @@ class ea extends (r = a.PureComponent) {
                   value: { id: null != o ? o : '' },
                   children: (0, i.jsx)('div', {
                       className: s()(L.autocomplete, n),
-                      children: (0, i.jsx)('div', j(M({ className: s()(L.autocompleteInner, r) }, l), { children: t }))
+                      children: (0, i.jsx)('div', j(k({ className: s()(L.autocompleteInner, r) }, l), { children: t }))
                   })
               })
             : null;

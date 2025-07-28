@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(594190),
     N = n(925329),
     w = n(102172),
-    Z = n(74299),
-    T = n(914923),
+    T = n(74299),
+    Z = n(914923),
     A = n(165393),
     R = n(989941),
     D = n(690221),
@@ -121,7 +121,7 @@ class ec extends i.PureComponent {
     }
     renderScreenshare() {
         let { isStreaming: e, streamMetadata: t, streamQualityIndicator: n } = this.props,
-            { title: i, sanitizedTitle: l } = (0, T.Z)(t);
+            { title: i, sanitizedTitle: l } = (0, Z.Z)(t);
         return (0, r.jsxs)('div', {
             className: el.gameWrapper,
             children: [
@@ -278,9 +278,9 @@ let eu = (0, g.Z)(function (e) {
         S = (0, c.e7)([H.Z, W.Z, F.ZP], () => (null != d ? w.JL(d, H.Z, W.Z, !1) : null != o && w.h_(F.ZP.getChannels(o), H.Z, W.Z).length > 0)),
         [I] = (0, v.Z)([null != (l = null != _ && null != _.id ? _.id : null != u && null != u.id ? u.id : null != j ? j.applicationId : void 0) ? l : '']),
         N = (0, c.e7)([x.Z], () => x.Z.getFakeGameData()),
-        T = (0, c.e7)([O.ZP], () => O.ZP.getCurrentEmbeddedActivity()),
-        A = (0, y.Z)() && null != T && (0, b.R)(),
-        D = (0, c.e7)([z.Z], () => (0, Z.Z)(z.Z) && (0, J.isWindows)()),
+        Z = (0, c.e7)([O.ZP], () => O.ZP.getCurrentEmbeddedActivity()),
+        A = (0, y.Z)() && null != Z && (0, b.R)(),
+        D = (0, c.e7)([z.Z], () => (0, T.Z)(z.Z) && (0, J.isWindows)()),
         k = (0, c.e7)([K.Z], () => (null != s ? K.Z.findActivity(s, (e) => e.type === er.IIU.PLAYING) : null)),
         U = null != g && g.ownerId === s && g.state !== er.jm8.ENDED,
         $ = (0, c.e7)([X.default, Y.Z], () => (null != p ? (0, E.F6)(p, X.default, Y.Z) : void 0)),

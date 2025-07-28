@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(273254);
 function x(e) {
     var t, x, v;
-    let O,
-        y,
+    let y,
+        O,
         j,
         { onTransitionToInviteChannel: I, onAcceptInstantInvite: S, guild: T, invite: N, message: P, currentUserId: A } = e,
         w = A === P.author.id,
@@ -32,15 +32,15 @@ function x(e) {
         F = null != k && k.isGuildVocal(),
         B = null != k && k.isGuildStageVoice(),
         G = (0, f.yE)(null != (t = N.flags) ? t : 0, l.$.IS_GUEST_INVITE),
-        V = null != (x = null == T ? void 0 : T.features.has(b.oNc.HUB)) && x,
-        H = null == T ? void 0 : T.id,
+        H = null != (x = null == T ? void 0 : T.features.has(b.oNc.HUB)) && x,
+        V = null == T ? void 0 : T.id,
         { analyticsLocations: z } = (0, c.ZP)(s.Z.INVITE_EMBED),
         [W, K] = i.useState(!1),
         Y = i.useCallback(() => K(!1), []),
         X = i.useRef(null),
         q = i.useCallback(() => {
-            (K(!0), (0, o.CB)(H, 'show profile', z));
-        }, [H, z]),
+            (K(!0), (0, o.CB)(V, 'show profile', z));
+        }, [V, z]),
         Q = i.useCallback(() => {
             let e = 'noop';
             (M ? (I(), (e = 'transition')) : (S(), (e = 'accept')),
@@ -62,12 +62,12 @@ function x(e) {
         isVoiceChannel: F,
         isOwnInvite: w,
         isGuest: G,
-        isHubGuild: V,
+        isHubGuild: H,
         isStage: B,
         isStream: !1
     });
     return (
-        (y = (0, r.jsxs)('span', {
+        (O = (0, r.jsxs)('span', {
             className: C.infoTitle,
             children: [
                 (0, r.jsx)(u.Z, {
@@ -103,8 +103,8 @@ function x(e) {
                 })
             })),
         F
-            ? ((y = (0, r.jsx)(p.Z.Channel, { channel: k })),
-              (O = (0, r.jsxs)('span', {
+            ? ((O = (0, r.jsx)(p.Z.Channel, { channel: k })),
+              (y = (0, r.jsxs)('span', {
                   className: C.infoTitle,
                   children: [
                       E.intl.format(E.t['2wimj4'], { guildName: T.name }),
@@ -118,12 +118,12 @@ function x(e) {
                   ]
               })))
             : (null != R && R >= 5) || (null != L && L > 0)
-              ? (O = (0, r.jsx)(p.Z.Data, {
+              ? (y = (0, r.jsx)(p.Z.Data, {
                     members: R,
                     membersOnline: L
                 }))
               : U &&
-                (O = (0, r.jsx)(p.Z.Channel, {
+                (y = (0, r.jsx)(p.Z.Channel, {
                     channel: k,
                     guild: T
                 })),
@@ -141,9 +141,9 @@ function x(e) {
                             children: [
                                 (0, r.jsx)(p.Z.Icon, { guild: T }),
                                 (0, r.jsx)(p.Z.Info, {
-                                    title: y,
+                                    title: O,
                                     onClick: q,
-                                    children: O
+                                    children: y
                                 })
                             ]
                         }),

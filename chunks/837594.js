@@ -1,1 +1,1 @@
-e.exports = JSON.parse('{"klSpfn":"Rediger indstillinger","NzUuLC":["+",[1,"count"]," ",[6,"count",{"one":["besked"],"other":["beskeder"]},0,"cardinal"]],"O+racX":"Der er ingen meddelelser.","dcpdhI":"Vælg en besked for at hoppe derhen.","VAK+h4":"Velkommen til dit meddelelsescenter!"}');
+e.exports = JSON.parse('{"klSpfn":"Rediger indstillinger","NzUuLC":["+",[1,"count"]," ",[6,"count",{"one":["besked"],"other":["beskeder"]},0,"cardinal"]],"O+racX":"Der er ingen meddelelser.","dcpdhI":"Vælg en besked for at gå til den.","VAK+h4":"Velkommen til dit meddelelsescenter!"}');

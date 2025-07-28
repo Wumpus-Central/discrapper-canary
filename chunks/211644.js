@@ -1,8 +1,8 @@
 (n.d(t, {
     Aq: () => L,
     Do: () => P,
-    Kl: () => M,
-    ZP: () => k,
+    Kl: () => k,
+    ZP: () => M,
     bn: () => D,
     cI: () => w,
     cv: () => S,
@@ -180,7 +180,7 @@ let u = new (n(499303).I)(),
         }),
             u.unschedule());
     },
-    M = () => p.getState().postConnectionOpen;
-function k(e, t) {
+    k = () => p.getState().postConnectionOpen;
+function M(e, t) {
     return p(e, t);
 }

@@ -1,1 +1,1 @@
-p.exports = JSON.parse('{"RPb8Zm":"您的意見回饋有助於我們改善 Discord 的安全功能\u3002","KZw6kp":"哪裡運作不佳\uFF1F","ep5SQk":"其他原因","Q5cQ4+":"描述您的問題","zApKaW":"您想多提供一些意見嗎\uFF1F","4djgOz":"感謝您的意見回饋\uFF01"}');
+p.exports = JSON.parse('{"RPb8Zm":"您的意見回饋有助於我們改善 Discord 的安全功能\u3002","cDP3b2":"已提交意見回饋","KZw6kp":"哪裡運作不佳\uFF1F","eSP1Fx":"我改變主意了\uFF0C我不想看這個內容","bC0QVV":"說明令人困惑","8JFGXV":"我試著按照步驟操作\uFF0C但沒有成功","Dl4A+f":"我沒有攜帶正確的文件","ZsnNg4":"我擔心會洩漏個人資訊","ep5SQk":"其他原因","kkKhVF":"花太多時間","maxf2d":"我不確定其必要性","Q5cQ4+":"描述您的問題","zApKaW":"您想多提供一些意見嗎\uFF1F","4djgOz":"感謝您的意見回饋\uFF01","RqoA4u":"年齡認證的體驗如何\uFF1F"}');

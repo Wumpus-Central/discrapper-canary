@@ -60,6 +60,7 @@ function h(e) {
                   : o.noop
               : () => P()),
         (0, n.jsxs)(a.zx, {
+            'data-migration-pending': !0,
             color: (function (e) {
                 switch (e) {
                     case d.ZJ.PRIMARY:

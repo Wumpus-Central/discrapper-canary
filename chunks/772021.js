@@ -23,5 +23,5 @@ function c(e, t) {
 }
 function u(e) {
     let t = (0, r.e7)([i.default, a.ZP], () => (null == e ? null : a.ZP.getMember(e, i.default.getId())));
-    return (0, r.e7)([s.Z, o.Z], () => c(e, null != e ? o.Z.getRoles(e) : void 0, t, [s.Z]), [e, t]);
+    return (0, r.e7)([s.Z, o.Z], () => c(e, null != e ? o.Z.getRolesSnapshot(e) : void 0, t, [s.Z]), [e, t]);
 }

@@ -353,7 +353,7 @@ class ti extends r.PureComponent {
                       className: e2.customStatus
                   })
               })
-            : null != s && s !== e0.Skl.UNKNOWN && r.isPomelo()
+            : null != s && s !== e0.Skl.UNKNOWN && r.hasUniqueUsername()
               ? (0, i.jsx)(T.Z, {
                     hoverText: a,
                     forceHover: e,

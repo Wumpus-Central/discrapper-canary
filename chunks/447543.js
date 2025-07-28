@@ -38,8 +38,8 @@ var r = n(525654),
     D = n(703656),
     L = n(922482),
     x = n(131704),
-    M = n(314897),
-    k = n(592125),
+    k = n(314897),
+    M = n(592125),
     j = n(984933),
     U = n(271383),
     G = n(430824),
@@ -136,7 +136,7 @@ function ed(e, t, n) {
     var r, i;
     if ((null == n ? void 0 : n.targetType) === et.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return $.oC.ROLE_SUBSCRIPTIONS;
     if ((null == n ? void 0 : n.targetType) == null && !x.tx.has(t.type) && (0, I.s)(e)) return $.oC.GUILD_HOME;
-    let a = k.Z.getChannel(t.id);
+    let a = M.Z.getChannel(t.id);
     return V.Z.can(J.Plq.VIEW_CHANNEL, a) ? t.id : null != (i = null == (r = j.ZP.getDefaultChannel(e, !0, J.Plq.CREATE_INSTANT_INVITE)) ? void 0 : r.id) ? i : t.id;
 }
 function ef(e, t) {
@@ -156,7 +156,7 @@ function e_(e) {
         { targetUserId: l, targetType: c, targetApplicationId: u, isGuestInvite: f, isApplicationBypassInvite: _ } = null != i ? i : {};
     if (!f && !_ && !(null == i ? void 0 : i.forceTransition) && s && F.Z.getGuildId() !== t) return;
     let { type: p } = r,
-        g = k.Z.getChannel(r.id),
+        g = M.Z.getChannel(r.id),
         b = ed(t, r, i),
         I = p === J.d4z.GUILD_STAGE_VOICE,
         T = J.Z5c.CHANNEL(t, b);
@@ -248,9 +248,9 @@ function eh(e, t, n) {
 }
 let em = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-        k.Z.addConditionalChangeListener(() => {
+        M.Z.addConditionalChangeListener(() => {
             var r;
-            let i = k.Z.getChannel(e),
+            let i = M.Z.getChannel(e),
                 a = Z.default.getCurrentUser();
             return (
                 null == i ||
@@ -442,7 +442,7 @@ let ey = {
         let { inviteKey: r, context: i, callback: a, skipOnboarding: o } = e,
             s = (0, C.fU)(r),
             l = s.baseCode,
-            c = M.default.getSessionId(),
+            c = k.default.getSessionId(),
             d = eu(i, s),
             _ = Z.default.getCurrentUser();
         return null != (t = null == _ ? void 0 : _.hasFlag(J.xW$.QUARANTINED)) && t

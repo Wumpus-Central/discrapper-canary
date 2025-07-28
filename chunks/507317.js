@@ -2,8 +2,8 @@ n.d(t, { Z: () => v });
 var r = n(255367),
     i = n(73800),
     l = n(755721),
-    s = n(481060),
-    a = n(367907),
+    a = n(481060),
+    s = n(367907),
     o = n(807582),
     c = n(26323),
     d = n(516129),
@@ -11,8 +11,8 @@ var r = n(255367),
     m = n(768581),
     g = n(434404),
     p = n(981631),
-    f = n(30513),
-    h = n(486324),
+    h = n(30513),
+    f = n(486324),
     x = n(200299),
     b = n(388032),
     j = n(773100);
@@ -22,7 +22,7 @@ let v = function (e) {
         _ = i.useCallback(
             (e, i) => {
                 if (null == e || void 0 === i) return void g.Z.saveGuild(t.id, { homeHeader: null });
-                (0, s.ZDy)(async () => {
+                (0, a.ZDy)(async () => {
                     let { default: l } = await Promise.all([n.e('91689'), n.e('59732'), n.e('77942')]).then(n.bind(n, 712451));
                     return (n) =>
                         (0, r.jsx)(
@@ -59,7 +59,7 @@ let v = function (e) {
                                         let { imageUri: n } = e;
                                         return g.Z.saveGuild(t.id, { homeHeader: n });
                                     },
-                                    uploadType: h.pC.HOME_HEADER
+                                    uploadType: f.pC.HOME_HEADER
                                 },
                                 n
                             )
@@ -72,7 +72,7 @@ let v = function (e) {
             (e) => {
                 (e.preventDefault(),
                     e.stopPropagation(),
-                    (0, a.yw)(p.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                    (0, s.yw)(p.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                         location: {
                             section: p.jXE.GUILD_SETTINGS_ONBOARDING,
                             object: p.qAy.LEARN_MORE
@@ -88,7 +88,7 @@ let v = function (e) {
                             page: p.ZY5.GUILD_SETTINGS
                         },
                         guild: t,
-                        perks: (0, f.XO)()
+                        perks: (0, h.XO)()
                     }));
             },
             [t]
@@ -114,7 +114,7 @@ let v = function (e) {
                   (0, r.jsxs)('div', {
                       className: j.sectionHeader,
                       children: [
-                          (0, r.jsx)(s.X6q, {
+                          (0, r.jsx)(a.X6q, {
                               className: j.header,
                               variant: 'heading-lg/extrabold',
                               children: b.intl.string(b.t.BBj1nZ)
@@ -133,7 +133,7 @@ let v = function (e) {
                           (0, r.jsxs)('div', {
                               className: j.homeBannerExplainer,
                               children: [
-                                  (0, r.jsx)(s.Text, {
+                                  (0, r.jsx)(a.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'header-secondary',
                                       children: b.intl.string(b.t.Vwintr)
@@ -157,7 +157,7 @@ let v = function (e) {
                   (0, r.jsxs)('div', {
                       className: j.sectionHeader,
                       children: [
-                          (0, r.jsx)(s.X6q, {
+                          (0, r.jsx)(a.X6q, {
                               className: j.header,
                               variant: 'heading-lg/extrabold',
                               children: b.intl.string(b.t.BBj1nZ)
@@ -176,22 +176,22 @@ let v = function (e) {
                           (0, r.jsxs)('div', {
                               className: j.homeBannerExplainer,
                               children: [
-                                  (0, r.jsx)(s.Text, {
+                                  (0, r.jsx)(a.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'header-secondary',
                                       className: j.bannerDescription,
                                       children: b.intl.string(b.t.Vwintr)
                                   }),
-                                  (0, r.jsx)(s.zxk, {
+                                  (0, r.jsx)(a.zxk, {
                                       variant: 'expressive',
-                                      icon: s.$Eu,
+                                      icon: a.$Eu,
                                       text: b.intl.string(b.t['+7XY39']),
                                       onClick: O
                                   })
                               ]
                           }),
                           (0, r.jsx)('div', {
-                              children: (0, r.jsx)(s.P3F, {
+                              children: (0, r.jsx)(a.P3F, {
                                   'aria-hidden': !0,
                                   tabIndex: -1,
                                   onClick: O,

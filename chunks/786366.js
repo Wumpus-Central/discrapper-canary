@@ -44,7 +44,7 @@ function f(e) {
             var e;
             return null == (e = c.Z.getUserProfile(n.id)) ? void 0 : e.application;
         }),
-        { hasMessageContent: f, hasGuildPresences: p, hasGuildMembers: g } = (0, s.w)({ flags: null == t ? void 0 : t.flags });
+        { hasMessageContent: f, hasGuildPresences: p, hasGuildMembers: j } = (0, s.w)({ flags: null == t ? void 0 : t.flags });
     return (0, l.jsxs)(r.zJ, {
         fade: !0,
         className: u.scroller,
@@ -61,7 +61,7 @@ function f(e) {
                     title: a.intl.string(a.t.awYSsL),
                     description: a.intl.string(a.t.TpsXoK)
                 }),
-            g &&
+            j &&
                 (0, l.jsx)(d, {
                     icon: o.BFJ,
                     title: a.intl.string(a.t.WuKeSE),

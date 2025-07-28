@@ -72,7 +72,7 @@ let v = (e) => {
         : (0, r.jsxs)('div', {
               className: g.pendingCancellation,
               children: [
-                  (0, r.jsx)(d.P4T, {
+                  (0, r.jsx)(d.Mgn, {
                       size: 'custom',
                       width: 20,
                       height: 20,

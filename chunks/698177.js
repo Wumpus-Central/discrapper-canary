@@ -20,23 +20,23 @@ let x = () => {
         [b, E] = i.useState(!1),
         [v, I] = i.useState(!1),
         [j, O] = i.useState(null),
-        [y, S] = i.useState(null),
+        [S, y] = i.useState(null),
         N = (0, a.e7)([d.Z], () => d.Z.getCountryCode()),
         C = N.code.split(' ')[0],
         A = async () => {
             try {
                 await c.Z.resendCode(e);
             } catch (e) {
-                S(e.body.message);
+                y(e.body.message);
             }
         },
         T = async () => {
             E(!0);
             try {
                 let { token: t } = await c.Z.verifyPhone(C + e, l);
-                (O(null), S(null), I(!0), c.Z.validatePhoneForSupport(t));
+                (O(null), y(null), I(!0), c.Z.validatePhoneForSupport(t));
             } catch (e) {
-                e.body.message ? (O(null), S(e.body.message)) : (O(e.body.phone), S(e.body.code));
+                e.body.message ? (O(null), y(e.body.message)) : (O(e.body.phone), y(e.body.code));
             } finally {
                 E(!1);
             }
@@ -86,7 +86,7 @@ let x = () => {
                               value: l,
                               onChange: x,
                               maxLength: g.z,
-                              error: y
+                              error: S
                           }),
                           (0, r.jsx)(p.zx, {
                               size: p.zx.Sizes.SMALL,

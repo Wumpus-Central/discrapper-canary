@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
-    a = n(755721),
+    a = n.n(l),
+    s = n(755721),
     o = n(481060),
     c = n(596454),
     d = n(318766),
@@ -11,8 +11,8 @@ var r = n(255367),
     m = n(176354),
     g = n(434404),
     p = n(185923),
-    f = n(388032),
-    h = n(186667),
+    h = n(388032),
+    f = n(186667),
     x = n(381109);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -42,8 +42,8 @@ function b(e) {
 let j = { label: '' };
 function v(e) {
     let { emoji: t, disabled: n, handleSelectEmoji: l } = e,
-        s = i.useRef(null),
-        a = i.useMemo(
+        a = i.useRef(null),
+        s = i.useMemo(
             () =>
                 null == t || null == t.name
                     ? null
@@ -62,10 +62,10 @@ function v(e) {
         ? (0, r.jsx)(d.Z, {
               tabIndex: -1,
               active: !1,
-              renderButtonContents: a
+              renderButtonContents: s
           })
         : (0, r.jsx)(o.yRy, {
-              targetElementRef: s,
+              targetElementRef: a,
               position: 'bottom',
               renderPopout: (e) => {
                   let { closePopout: t } = e;
@@ -83,10 +83,10 @@ function v(e) {
                       ((n = b({}, e)),
                       (i = i =
                           {
-                              ref: s,
+                              ref: a,
                               tabIndex: 0,
                               active: l,
-                              renderButtonContents: a
+                              renderButtonContents: s
                           }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -121,7 +121,7 @@ function _(e) {
             [t, l, c]
         ),
         [g, p] = i.useState(!1),
-        f = i.useCallback(() => p(!0), []),
+        h = i.useCallback(() => p(!0), []),
         x = i.useCallback(() => p(!1), []),
         b = i.useCallback(
             (e) => {
@@ -132,9 +132,9 @@ function _(e) {
         j = i.useMemo(() => n.emoji, [n.emoji]),
         _ = (null != n.label && n.label.length > 0) || null != n.emoji;
     return (0, r.jsxs)('div', {
-        className: h.traitWrapper,
+        className: f.traitWrapper,
         children: [
-            (0, r.jsx)(a.Is, {
+            (0, r.jsx)(s.Is, {
                 'aria-disabled': d,
                 disabled: d,
                 value: n.label,
@@ -145,15 +145,15 @@ function _(e) {
                     disabled: d,
                     handleSelectEmoji: m
                 }),
-                className: s()(h.traitContainer, { [h.traitContainerFocused]: g }),
-                inputClassName: h.traitInput,
-                onFocus: f,
+                className: a()(f.traitContainer, { [f.traitContainerFocused]: g }),
+                inputClassName: f.traitInput,
+                onFocus: h,
                 onBlur: x
             }),
             _ &&
                 (0, r.jsx)(o.P3F, {
                     onClick: u,
-                    className: h.traitRemoveButton,
+                    className: f.traitRemoveButton,
                     children: (0, r.jsx)(o.k$p, {
                         size: 'xs',
                         color: 'currentColor'
@@ -166,7 +166,7 @@ let O = [0, 1, 2, 3, 4];
 function y(e) {
     let { profile: t, canManageGuild: n } = e,
         l = i.useMemo(() => t.traits, [t]),
-        s = i.useCallback(
+        a = i.useCallback(
             (e, t, n) => {
                 let r = [...l];
                 ((r[t] = b({}, l[t], n)), g.Z.updateGuildProfile(e, { traits: r }));
@@ -179,15 +179,15 @@ function y(e) {
             (0, r.jsxs)('div', {
                 className: x.sectionHeader,
                 children: [
-                    (0, r.jsx)(o.vwX, { children: f.intl.string(f.t.S6JNrq) }),
+                    (0, r.jsx)(o.vwX, { children: h.intl.string(h.t.S6JNrq) }),
                     (0, r.jsx)(o.R94, {
                         type: 'description',
-                        children: f.intl.string(f.t.l7Ig5e)
+                        children: h.intl.string(h.t.l7Ig5e)
                     })
                 ]
             }),
             (0, r.jsx)('div', {
-                className: h.grid,
+                className: f.grid,
                 children: O.map((e) => {
                     var i;
                     return (0, r.jsx)(
@@ -196,7 +196,7 @@ function y(e) {
                             guildId: t.id,
                             trait: null != (i = l[e]) ? i : j,
                             index: e,
-                            onTraitUpdate: s,
+                            onTraitUpdate: a,
                             disabled: !n
                         },
                         'trait-'.concat(e)

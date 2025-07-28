@@ -22,7 +22,7 @@ var n = r(255367),
     y = r(678916),
     I = r(388032),
     w = r(253380);
-function T(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -47,7 +47,7 @@ function T(e) {
     }
     return e;
 }
-function N(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -116,11 +116,11 @@ function b(e) {
             return (0, f.vE)(e);
     }
 }
-function G(e) {
+function M(e) {
     let { zoomRatio: t, imageRotation: r, imageTransformCoordinates: n } = e;
     return 1 !== t || 0 !== r || 0 !== n.x || 0 !== n.y;
 }
-let M = {
+let G = {
     imageDimensions: null,
     cropDimensions: {
         width: 0,
@@ -146,51 +146,51 @@ function v(e, t) {
     var r, n, i, a, o, s;
     switch (t.type) {
         case 'SET_DIMENSIONS':
-            return N(T({}, e), {
+            return T(N({}, e), {
                 imageDimensions: t.imageDimensions,
                 cropDimensions: t.cropDimensions,
                 dragBoundaries: t.dragBoundaries
             });
         case 'START_DRAGGING_IMAGE':
-            return N(T({}, e), {
+            return T(N({}, e), {
                 startingCoordinates: t.startingCoordinates,
                 isDragging: !0
             });
         case 'STOP_DRAGGING_IMAGE':
-            return N(T({}, e), {
+            return T(N({}, e), {
                 isDragging: !1,
-                hasImageEdits: G({
+                hasImageEdits: M({
                     zoomRatio: e.zoomRatio,
                     imageRotation: e.imageRotation,
                     imageTransformCoordinates: t.imageTransformCoordinates
                 })
             });
         case 'ROTATE_IMAGE':
-            return N(T({}, e), {
+            return T(N({}, e), {
                 imageRotation: t.imageRotation,
                 imageTransformCoordinates: t.imageTransformCoordinates,
                 imageDimensions: null != (r = t.imageDimensions) ? r : e.imageDimensions,
                 cropDimensions: null != (n = t.cropDimensions) ? n : e.cropDimensions,
                 dragBoundaries: null != (i = t.dragBoundaries) ? i : e.dragBoundaries,
-                hasImageEdits: G({
+                hasImageEdits: M({
                     zoomRatio: e.zoomRatio,
                     imageRotation: t.imageRotation,
                     imageTransformCoordinates: t.imageTransformCoordinates
                 })
             });
         case 'SET_IMAGE_ZOOM_RATIO':
-            return N(T({}, e), {
+            return T(N({}, e), {
                 imageTransformCoordinates: t.imageTransformCoordinates,
                 zoomRatio: t.zoomRatio,
                 dragBoundaries: t.dragBoundaries,
-                hasImageEdits: G({
+                hasImageEdits: M({
                     zoomRatio: t.zoomRatio,
                     imageRotation: e.imageRotation,
                     imageTransformCoordinates: t.imageTransformCoordinates
                 })
             });
         case 'RESET':
-            return N(T({}, e), {
+            return T(N({}, e), {
                 zoomRatio: 1,
                 imageRotation: 0,
                 imageDimensions: null != (a = t.imageDimensions) ? a : e.imageDimensions,
@@ -203,11 +203,11 @@ function v(e, t) {
     }
 }
 function S(e) {
-    let { file: t, imageUri: r, originalAsset: a, transitionState: f, onCrop: y, onClose: G, uploadType: S = O.pC.AVATAR, showUpsellHeader: j = !1, analyticsPage: k } = e,
+    let { file: t, imageUri: r, originalAsset: a, transitionState: f, onCrop: y, onClose: M, uploadType: S = O.pC.AVATAR, showUpsellHeader: j = !1, analyticsPage: k } = e,
         B = i.useRef(_),
-        P = i.useRef(null),
         z = i.useRef(null),
-        [L, U] = i.useReducer(v, M),
+        P = i.useRef(null),
+        [L, U] = i.useReducer(v, G),
         { cropDimensions: V, dragBoundaries: H, imageDimensions: F, imageRotation: X, zoomRatio: K, startingCoordinates: Y, isDragging: Z, hasImageEdits: W } = L,
         [q, $] = i.useState(!1),
         [J, Q] = i.useState(!1),
@@ -229,13 +229,13 @@ function S(e) {
         }, [j, k, ei, er, S]));
     let ea = i.useCallback(
             (e, t, r, n) => {
-                ((B.current = (0, A.U$)(e, t, r)), null != P.current && (P.current.style.transform = 'translate3d('.concat(B.current.x, 'px, ').concat(B.current.y, 'px, 0) rotate(').concat(n, 'deg)')));
+                ((B.current = (0, A.U$)(e, t, r)), null != z.current && (z.current.style.transform = 'translate3d('.concat(B.current.x, 'px, ').concat(B.current.y, 'px, 0) rotate(').concat(n, 'deg)')));
             },
-            [P]
+            [z]
         ),
         eo = i.useCallback(() => {
-            if (null == P.current || K > 1) return;
-            let { width: e, height: t } = P.current.getBoundingClientRect(),
+            if (null == z.current || K > 1) return;
+            let { width: e, height: t } = z.current.getBoundingClientRect(),
                 { width: r, height: n } = (0, A.Es)(S, e, t),
                 i = (0, A.AK)(S, r, n, t),
                 a = (0, A.kH)(r, n, i);
@@ -306,7 +306,7 @@ function S(e) {
         ),
         em = i.useCallback(() => {
             var e;
-            if (null == P.current || null == F) return;
+            if (null == z.current || null == F) return;
             let t = (X + 90) % 360,
                 { x: r, y: n } =
                     ((e = B.current.x),
@@ -334,7 +334,7 @@ function S(e) {
                     }));
         }, [H, ed, F, X, ea, K]),
         eg = i.useCallback(() => {
-            if (null != P.current && null != F) {
+            if (null != z.current && null != F) {
                 if (F.width !== F.height && (X - 0) % 180 != 0) {
                     let { newImageDimensions: e, newCropDimensions: t, newDragBoundaries: r } = ed(F, 1);
                     (U({
@@ -373,9 +373,9 @@ function S(e) {
         }, [V.height, F, X, eh, K]),
         eE = i.useCallback(async () => {
             let e;
-            if (null == P.current) return;
+            if (null == z.current) return;
             Q(!0);
-            let r = P.current,
+            let r = z.current,
                 n = b(S);
             if (ei)
                 try {
@@ -387,10 +387,10 @@ function S(e) {
                         maxDimensions: n,
                         imageRotation: X
                     });
-                    ((z.current = a), (e = await i), (z.current = null));
+                    ((P.current = a), (e = await i), (P.current = null));
                 } catch (e) {
                     var i;
-                    throw (null == (i = z.current) || i.call(z), (z.current = null), Error('Error cropping GIF: '.concat(e instanceof Error ? e.toString() : String(e))));
+                    throw (null == (i = P.current) || i.call(P), (P.current = null), Error('Error cropping GIF: '.concat(e instanceof Error ? e.toString() : String(e))));
                 }
             else
                 e = (0, l.PT)({
@@ -413,15 +413,15 @@ function S(e) {
                 originalAsset: a
             }),
                 Q(!1),
-                G());
-        }, [V, t, W, X, ei, G, y, a, S]),
+                M());
+        }, [V, t, W, X, ei, M, y, a, S]),
         eC = i.useCallback(() => {
-            if (null != z.current) {
-                (z.current(), (z.current = null), Q(!1));
+            if (null != P.current) {
+                (P.current(), (P.current = null), Q(!1));
                 return;
             }
-            G();
-        }, [G]);
+            M();
+        }, [M]);
     (i.useEffect(
         () => (
             window.addEventListener('mouseup', ec),
@@ -436,10 +436,10 @@ function S(e) {
             if (Z) return (window.addEventListener('mousemove', el), () => window.removeEventListener('mousemove', el));
         }, [el, Z]),
         i.useEffect(() => {
-            if (null != z.current)
+            if (null != P.current)
                 return () => {
                     var e;
-                    return null == (e = z.current) ? void 0 : e.call(z);
+                    return null == (e = P.current) ? void 0 : e.call(P);
                 };
         }, []));
     let ef = S === O.pC.AVATAR || S === O.pC.BANNER,
@@ -469,7 +469,7 @@ function S(e) {
                             children: I.intl.string(I.t.DxAYCA)
                         }),
                         (0, n.jsx)(u.olH, {
-                            onClick: G,
+                            onClick: M,
                             className: w.modalCloseButton
                         })
                     ]
@@ -483,7 +483,7 @@ function S(e) {
                                 ? (0, n.jsxs)('div', {
                                       className: w.errorContainer,
                                       children: [
-                                          (0, n.jsx)(u.P4T, {
+                                          (0, n.jsx)(u.Mgn, {
                                               size: 'sm',
                                               color: u.TVs.colors.TEXT_DANGER
                                           }),
@@ -499,7 +499,7 @@ function S(e) {
                                           (0, n.jsx)('img', {
                                               onLoad: eo,
                                               onError: () => $(!0),
-                                              style: T(
+                                              style: N(
                                                   {
                                                       opacity: +(null != F),
                                                       transform: 'translate3d('.concat(B.current.x, 'px, ').concat(B.current.y, 'px, 0) rotate(').concat(X, 'deg)')
@@ -510,7 +510,7 @@ function S(e) {
                                               src: r,
                                               crossOrigin: 'anonymous',
                                               alt: 'avatar',
-                                              ref: P,
+                                              ref: z,
                                               onMouseDown: es,
                                               draggable: !1
                                           }),
@@ -599,8 +599,8 @@ function S(e) {
                                             })(e, ['onClick']);
                                         return (0, n.jsx)(
                                             c.zx,
-                                            N(
-                                                T(
+                                            T(
+                                                N(
                                                     {
                                                         className: w.rotateButton,
                                                         look: c.zx.Looks.BLANK,

@@ -1,16 +1,16 @@
 n.d(t, {
-    G7: () => s,
+    G7: () => a,
     LG: () => d,
     Pg: () => l,
     ZI: () => o,
-    _0: () => a,
+    _0: () => s,
     mf: () => u
 });
 var r,
     i = n(388032);
 let l = 5,
-    s = 10,
-    a = 30;
+    a = 10,
+    s = 30;
 var o = (((r = {})[(r.DISPLAY = 0)] = 'DISPLAY'), (r[(r.PERMISSIONS = 1)] = 'PERMISSIONS'), (r[(r.MEMBERS = 2)] = 'MEMBERS'), (r[(r.VERIFICATIONS = 3)] = 'VERIFICATIONS'), r);
 let c = {
     afk_channel_id: () => i.intl.string(i.t.KuYcnZ),

@@ -146,11 +146,11 @@ function L() {
 function x() {
     S = !0;
 }
-function M(e) {
+function k(e) {
     let { eligible: t } = e;
     ((T = t), (I = !1));
 }
-function k(e) {
+function M(e) {
     let {} = e;
     ((T = !1), (I = !1));
 }
@@ -243,7 +243,7 @@ let V = new B(a.Z, {
     BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: D,
     BILLING_SUBSCRIPTION_RESET: j,
     BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: L,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: M,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: k,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: k,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: M,
     LOGOUT: j
 });

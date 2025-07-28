@@ -20,10 +20,10 @@ var h = n(122289),
 let y = new Set([p.h8.SKU_SELECT, p.h8.AWAITING_AUTHENTICATION, p.h8.AWAITING_PURCHASE_TOKEN_AUTH, p.h8.CONFIRM]);
 function O(e) {
     let { steps: t, currentStep: n, body: o, overrideKey: O, paymentError: v, header: I, footer: T, isGift: S = !1, giftMessage: A = E.intl.string(E.t.DrgnS0), hideBreadcrumbs: N = !1, isLoading: C = !1, purchaseError: R, purchaseErrorBlockRef: P, planError: w, onScroll: D, scrollerClassName: L, hasCurrencies: x = !1 } = e,
-        M = null;
-    null != v && null == (0, p.ly)(v) ? (M = v) : null != R ? (M = R) : null != w && (M = w);
-    let k = null != M ? M.message : '';
-    null != M && M instanceof d.HF && (M.code === f.SM.CARD_DECLINED && x && (k += ' '.concat(E.intl.string(E.t.iWvwQU))), M.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (k = E.intl.string(E.t.ypuSd3)), M.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (k = E.intl.string(E.t.mXMmWF)));
+        k = null;
+    null != v && null == (0, p.ly)(v) ? (k = v) : null != R ? (k = R) : null != w && (k = w);
+    let M = null != k ? k.message : '';
+    null != k && k instanceof d.HF && (k.code === f.SM.CARD_DECLINED && x && (M += ' '.concat(E.intl.string(E.t.iWvwQU))), k.code === f.SM.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (M = E.intl.string(E.t.ypuSd3)), k.code === g.evJ.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (M = E.intl.string(E.t.mXMmWF)));
     let { stripe: j } = (0, _.JL)();
     C = C || null == j;
     let U = i.useRef(new l.V7());
@@ -76,13 +76,13 @@ function O(e) {
                     (0, r.jsxs)('div', {
                         className: b.bodyWrapper,
                         children: [
-                            null == M
+                            null == k
                                 ? null
                                 : (0, r.jsx)('div', {
                                       className: b.errorBlockWrapper,
                                       children: (0, r.jsx)(c.kzN, {
                                           ref: P,
-                                          children: k
+                                          children: M
                                       })
                                   }),
                             C

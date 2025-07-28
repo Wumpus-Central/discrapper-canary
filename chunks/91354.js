@@ -5,7 +5,7 @@ var i = n(325767);
 function l(e) {
     var t,
         n,
-        { width: l = 24, height: s = 24, color: a = 'currentColor' } = e,
+        { width: l = 24, height: a = 24, color: s = 'currentColor' } = e,
         o = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -55,11 +55,11 @@ function l(e) {
         (n = n =
             {
                 width: l,
-                height: s,
+                height: a,
                 viewBox: '0 0 24 24',
                 children: (0, r.jsx)('path', {
                     d: 'M22 9H10V7H22V9ZM22 12H2V14H22V12ZM22 17H2V19H22V17ZM9 5.41L7.59 4L4 7.59L2.41 6L1 7.41L4 10.41L9 5.41Z',
-                    fill: a
+                    fill: s
                 })
             }),
         Object.getOwnPropertyDescriptors

@@ -6,7 +6,7 @@ var i = n(442837),
     o = n(481060),
     s = n(944613),
     l = n(607070),
-    c = n(605436),
+    c = n(345162),
     u = n(496675),
     d = n(981631),
     f = n(388032),
@@ -67,7 +67,7 @@ function E(e) {
     let { guild: t, guildMember: n, numRoles: p, highestRole: m, onAddRole: E, buttonRef: b } = e,
         y = (0, i.e7)([l.Z], () => l.Z.roleStyle);
     if (!(0, i.e7)([u.Z], () => u.Z.can(d.Plq.MANAGE_ROLES, t))) return null;
-    let O = (e) => (0, c.Gy)(t.id, e.id) && !e.managed && u.Z.isRoleHigher(t, m, e) && -1 === n.roles.indexOf(e.id);
+    let O = (e) => !(0, c.fI)(e) && !e.managed && u.Z.isRoleHigher(t, m, e) && -1 === n.roles.indexOf(e.id);
     return (0, r.jsx)(a.y, {
         targetElementRef: b,
         position: 'bottom',

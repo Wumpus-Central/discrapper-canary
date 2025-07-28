@@ -13,7 +13,7 @@ function l(e) {
             (0, r.jsxs)('div', {
                 className: i.header,
                 children: [
-                    (0, r.jsx)(o.P4T, {
+                    (0, r.jsx)(o.Mgn, {
                         size: 'custom',
                         color: 'currentColor',
                         className: i.icon,

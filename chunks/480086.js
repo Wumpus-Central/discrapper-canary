@@ -8,8 +8,8 @@ var r = n(73800),
     c = n(669764),
     u = n(80387),
     d = n(981631),
-    _ = n(388032);
-let f = {
+    f = n(388032);
+let _ = {
         '356875762940379136': 'https://worldofwarcraft.blizzard.com',
         '615752773690064908': 'https://worldofwarcraft.blizzard.com',
         '424719708785344525': 'https://warcraft3.blizzard.com',
@@ -61,13 +61,13 @@ function m(e) {
         y = (0, r.useMemo)(() => {
             if (!n || null == b) return null;
             let { app: t, steamSku: r } = b,
-                i = f[t.id];
+                i = _[t.id];
             if (null != i && '' !== i)
                 return h({
                     url: i,
                     platform: 'battlenet',
                     icon: a.DvD,
-                    labelKey: _.t['ZGax9/'],
+                    labelKey: f.t['ZGax9/'],
                     applicationId: e,
                     applicationName: t.name
                 });
@@ -77,7 +77,7 @@ function m(e) {
                       url: o,
                       platform: 'riot',
                       icon: a.mVV,
-                      labelKey: _.t['+KXANz'],
+                      labelKey: f.t['+KXANz'],
                       applicationId: e,
                       applicationName: t.name
                   })
@@ -86,7 +86,7 @@ function m(e) {
                         url: 'https://store.steampowered.com/app/'.concat(r),
                         platform: 'steam',
                         icon: a.xCj,
-                        labelKey: _.t.OlubCw,
+                        labelKey: f.t.OlubCw,
                         applicationId: e,
                         applicationName: t.name
                     })

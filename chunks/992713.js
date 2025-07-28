@@ -68,7 +68,7 @@ function S(e) {
     let i = null == (t = p.Z.getGuild(e)) ? void 0 : t.name;
     b.fileOnly('requesting deleted guild entities (id: '.concat(e, ', name: ').concat(i, ')'));
     let a = A(Object.keys(f.Z.getMutableBasicGuildChannelsForGuild(e))),
-        o = A(Object.keys(_.Z.getRoles(e))),
+        o = A(_.Z.getSortedRoles(e).map((e) => e.id)),
         s = A(u.ZP.getGuildEmoji(e).map((e) => e.id)),
         l = A(null != (r = null == (n = d.Z.getStickersByGuildId(e)) ? void 0 : n.map((e) => e.id)) ? r : []);
     m.Z.getSocket().getDeletedEntityIdsNotMatchingHash(e, a, o, s, l);
@@ -95,7 +95,7 @@ function N(e, t) {
         }));
 }
 function C(e, t) {
-    h.default.keys(_.Z.getRoles(e)).forEach((n) => {
+    h.default.keys(_.Z.getUnsafeMutableRoles(e)).forEach((n) => {
         t.has(n) ||
             o.Z.dispatch({
                 type: 'GUILD_ROLE_DELETE',

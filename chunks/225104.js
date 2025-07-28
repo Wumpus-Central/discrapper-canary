@@ -1,22 +1,19 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
-var i = n(866442),
-    l = n(91218),
-    a = n(518738),
-    o = n(134433),
-    s = n(981631);
-function c(e) {
-    var t;
-    let { guildId: n, role: c, size: u, className: d } = e,
-        p = (0, a.p9)({
-            guildId: n,
-            roleId: c.id,
-            size: u
+var i = n(91218),
+    l = n(518738),
+    a = n(134433);
+function o(e) {
+    let { guildId: t, role: n, size: o, className: s } = e,
+        c = (0, l.p9)({
+            guildId: t,
+            roleId: n.id,
+            size: o
         });
-    return null != p
+    return null != c
         ? (0, r.jsx)(
-              l.Z,
+              i.Z,
               (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},
@@ -41,11 +38,11 @@ function c(e) {
                           }));
                   }
                   return e;
-              })({ className: d }, p)
+              })({ className: s }, c)
           )
-        : (0, r.jsx)(o.Z, {
-              color: null != (t = c.colorString) ? t : (0, i.Rf)(s.p6O),
-              className: d,
-              size: u
+        : (0, r.jsx)(a.Z, {
+              color: n.colorString,
+              className: s,
+              size: o
           });
 }

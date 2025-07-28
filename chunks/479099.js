@@ -83,7 +83,7 @@ function M(A) {
                     return (t) => (0, r.jsx)(A, w(B({}, t), { tag: e }));
                 });
         },
-        R = (0, r.jsxs)(r.Fragment, {
+        S = (0, r.jsxs)(r.Fragment, {
             children: [
                 m
                     ? (0, r.jsx)(v.Z, {
@@ -112,7 +112,7 @@ function M(A) {
                 })
             ]
         }),
-        S = {
+        R = {
             key: e.id,
             className: s()(
                 C.pill,
@@ -145,12 +145,12 @@ function M(A) {
                           role: 'button',
                           'aria-pressed': p
                       }),
-                      S
+                      R
                   ),
-                  { children: R }
+                  { children: S }
               )
           )
-        : (0, r.jsx)('div', w(B({}, S), { children: R }));
+        : (0, r.jsx)('div', w(B({}, R), { children: S }));
 }
 function I(A) {
     let { tags: e, count: t, size: n = 1 } = A,

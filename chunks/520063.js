@@ -13,7 +13,7 @@ var l = t(255367),
     b = t(496675),
     f = t(594174),
     p = t(388032);
-function O(e) {
+function m(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             l = Object.keys(t);
@@ -38,7 +38,7 @@ function O(e) {
     }
     return e;
 }
-function m(e, n) {
+function O(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -88,7 +88,7 @@ function h(e, n, h) {
                                   return (t) =>
                                       (0, l.jsx)(
                                           n,
-                                          m(O({}, t), {
+                                          O(m({}, t), {
                                               guildId: v.id,
                                               user: e
                                           })
@@ -107,7 +107,7 @@ function h(e, n, h) {
                                   return (t) =>
                                       (0, l.jsx)(
                                           n,
-                                          m(O({}, t), {
+                                          O(m({}, t), {
                                               guildId: v.id,
                                               user: e
                                           })

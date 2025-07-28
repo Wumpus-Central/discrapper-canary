@@ -16,8 +16,8 @@ var r = n(255367),
     h = n(585483),
     x = n(63063),
     j = n(919196),
-    O = n(731072),
-    v = n(494118),
+    v = n(731072),
+    O = n(494118),
     y = n(37607),
     _ = n(351644),
     C = n(108053),
@@ -46,7 +46,7 @@ function E(e, t) {
     }
 }
 let T = i.memo(function (e) {
-    let { section: t, sectionId: n, guild: l, channel: T, integrations: w, editedIntegration: P, webhooks: Z, editedWebhook: A, isFetchingWebhooks: k, refToScroller: D, errors: R, hasChanges: L } = e,
+    let { section: t, sectionId: n, guild: l, channel: T, integrations: w, editedIntegration: Z, webhooks: P, editedWebhook: A, isFetchingWebhooks: k, refToScroller: D, errors: R, hasChanges: L } = e,
         M = (0, a.e7)([g.ZP], () => (null != l ? g.ZP.getDefaultChannel(l.id) : null)),
         B = (0, a.cj)([g.ZP], () => g.ZP.getChannels(null == l ? void 0 : l.id)),
         U = (0, a.cj)([f.Z], () =>
@@ -103,7 +103,7 @@ let T = i.memo(function (e) {
                                 (null == (l = r.application.bot) ? void 0 : l.id) !== void 0 && (t[r.application.bot.id] = r.application.id));
                         }
                     } else (r.type in n || (n[r.type] = []), n[r.type].push(r));
-            for (let t of Z) (t.channel_id in U || t.channel_id in W) && (null != t.application_id && t.application_id in e ? e[t.application_id].webhooks.push(t) : t.type === N.ylB.CHANNEL_FOLLOWER ? i.push(t) : r.push(t));
+            for (let t of P) (t.channel_id in U || t.channel_id in W) && (null != t.application_id && t.application_id in e ? e[t.application_id].webhooks.push(t) : t.type === N.ylB.CHANNEL_FOLLOWER ? i.push(t) : r.push(t));
             return {
                 applicationIntegrations: e,
                 applicationBotIds: t,
@@ -111,7 +111,7 @@ let T = i.memo(function (e) {
                 customWebhooks: r,
                 followedChannelWebhooks: i
             };
-        }, [w, U, W, Z]);
+        }, [w, U, W, P]);
     (i.useEffect(() => {
         if (!k)
             switch (t) {
@@ -138,10 +138,10 @@ let T = i.memo(function (e) {
     switch (t) {
         case N.b4C.TWITCH:
             null != X[N.ABu.TWITCH] &&
-                (Q = (0, r.jsx)(O.Z, {
+                (Q = (0, r.jsx)(v.Z, {
                     guild: l,
                     integrations: X[N.ABu.TWITCH],
-                    editedIntegration: P,
+                    editedIntegration: Z,
                     labelText: S.intl.string(S.t.q4pBGx),
                     platformType: N.ABu.TWITCH,
                     descriptionText: S.intl.string(S.t.V9kNqq),
@@ -158,10 +158,10 @@ let T = i.memo(function (e) {
             break;
         case N.b4C.YOUTUBE:
             null != X[N.ABu.YOUTUBE] &&
-                (Q = (0, r.jsx)(O.Z, {
+                (Q = (0, r.jsx)(v.Z, {
                     guild: l,
                     integrations: X[N.ABu.YOUTUBE],
-                    editedIntegration: P,
+                    editedIntegration: Z,
                     labelText: S.intl.string(S.t.aS6cKy),
                     platformType: N.ABu.YOUTUBE,
                     descriptionText: S.intl.string(S.t['7Tv7JC']),
@@ -186,7 +186,7 @@ let T = i.memo(function (e) {
                 }));
             break;
         case N.b4C.CHANNEL_FOLLOWING:
-            Q = (0, r.jsx)(v.Z, {
+            Q = (0, r.jsx)(O.Z, {
                 followedChannelWebhooks: $,
                 editedWebhook: A,
                 selectableWebhookChannels: U,

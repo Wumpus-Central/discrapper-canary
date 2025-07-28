@@ -1,12 +1,12 @@
 (n.d(t, {
-    Z: () => r,
+    Z: () => o,
     d: () => i
 }),
     n(415506),
     n(388685));
 var a = n(281215);
 let i = '$root';
-class r {
+class o {
     get(e) {
         return this.items[e];
     }
@@ -21,11 +21,11 @@ class r {
                       writable: !0
                   })
                 : (this[t] = n));
-        let r = {},
+        let o = {},
             s = (e, t) => {
-                if (null != r[e.key]) throw Error("Duplicate setting key '".concat(e.key, "'"));
-                if ((null != t && e.linkToParent(t), (r[e.key] = e), e.isLayoutType())) for (let t of e) s(t, e);
+                if (null != o[e.key]) throw Error("Duplicate setting key '".concat(e.key, "'"));
+                if ((null != t && e.linkToParent(t), (o[e.key] = e), e.isLayoutType())) for (let t of e) s(t, e);
             };
-        (s(new a.ZP(a.Jq.ROOT, i, { layout: e })), (this.items = Object.freeze(r)));
+        (s(new a.ZP(a.Jq.ROOT, i, { layout: e })), (this.items = Object.freeze(o)));
     }
 }

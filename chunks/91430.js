@@ -112,7 +112,7 @@ function U() {
         (0, i.jsxs)('div', {
             className: B.paymentBanner,
             children: [
-                (0, i.jsx)(g.P4T, {
+                (0, i.jsx)(g.Mgn, {
                     size: 'custom',
                     width: 20,
                     height: 20,
@@ -136,7 +136,7 @@ function V() {
         (0, i.jsxs)('div', {
             className: B.paymentBanner,
             children: [
-                (0, i.jsx)(g.P4T, {
+                (0, i.jsx)(g.Mgn, {
                     size: 'custom',
                     width: 20,
                     height: 20,
@@ -162,7 +162,7 @@ function G(e) {
         (0, i.jsxs)('div', {
             className: B.paymentBanner,
             children: [
-                (0, i.jsx)(g.P4T, {
+                (0, i.jsx)(g.Mgn, {
                     size: 'custom',
                     width: 20,
                     height: 20,
@@ -334,7 +334,7 @@ function Y() {
         (0, i.jsxs)('div', {
             className: B.duplicateSubscriptionsBanner,
             children: [
-                (0, i.jsx)(g.P4T, {
+                (0, i.jsx)(g.Mgn, {
                     size: 'custom',
                     width: 20,
                     height: 20,

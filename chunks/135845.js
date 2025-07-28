@@ -22,8 +22,8 @@ function v(e) {
     let t,
         n,
         l,
-        { invite: v, currentUserId: O, guild: y, message: j, onTransitionToInviteChannel: I, onAcceptInstantInvite: S } = e,
-        T = null == y ? void 0 : y.id,
+        { invite: v, currentUserId: y, guild: O, message: j, onTransitionToInviteChannel: I, onAcceptInstantInvite: S } = e,
+        T = null == O ? void 0 : O.id,
         N = (0, o.e7)([f.Z], () => f.Z.getGuildId()),
         P = (0, o.e7)([m.Z], () => (null != v && null != v.target_user ? m.Z.getActiveStreamForUser(v.target_user.id, T) : null), [v, T]),
         A = (0, o.e7)([m.Z], () => (null != v && null != v.target_user ? m.Z.getStreamForUser(v.target_user.id, T) : null), [v, T]),
@@ -33,7 +33,7 @@ function v(e) {
     a()(null != v, 'Invite cannot be null');
     let { target_type: L, target_user: D } = v;
     a()(L === E.Iq.STREAM && null != D, 'invalid streaming invite');
-    let k = O === D.id,
+    let k = y === D.id,
         M = v.state === b.r2o.ACCEPTING,
         U = i.useCallback(() => {
             let e = 'noop';
@@ -48,15 +48,15 @@ function v(e) {
                     w
                 ));
         }, [v, j, w, Z, I, S]),
-        F = null != y;
-    if (null == y) {
+        F = null != O;
+    if (null == O) {
         if (null == v.guild) return (0, r.jsx)(h.Z, {});
-        y = (0, g.Qs)(v.guild);
+        O = (0, g.Qs)(v.guild);
     }
     let B = null != v.channel ? (0, p.jD)(v.channel) : null,
         G = _.ZP.getName(D);
     F && !R ? (l = k ? C.intl.string(C.t.oBLoZG) : C.intl.formatToPlainString(C.t['0QJmAw'], { name: G })) : ((t = C.intl.string(C.t['I6JG4+'])), (n = d.Z.Button.Colors.GREEN), Z && ((t = C.intl.string(C.t['Q1W99/'])), (n = d.Z.Button.Colors.PRIMARY)), (l = k ? C.intl.string(C.t['4hyaHh']) : C.intl.formatToPlainString(C.t.QmlLEh, { name: G })));
-    let V = N === y.id && null != B ? (0, r.jsx)(d.Z.Channel, { channel: B }) : C.intl.formatToPlainString(C.t.u0vaDA, { guildName: y.name });
+    let H = N === O.id && null != B ? (0, r.jsx)(d.Z.Channel, { channel: B }) : C.intl.formatToPlainString(C.t.u0vaDA, { guildName: O.name });
     return (0, r.jsxs)(d.Z, {
         children: [
             (0, r.jsx)(d.Z.Header, { text: C.intl.string(C.t['wS+5WV']) }),
@@ -66,13 +66,13 @@ function v(e) {
                         className: x.headerLine,
                         children: [
                             (0, r.jsx)(d.Z.Icon, {
-                                guild: y,
+                                guild: O,
                                 onClick: F && R ? U : void 0
                             }),
                             (0, r.jsx)(d.Z.Info, {
                                 title: l,
                                 onClick: F && R ? U : void 0,
-                                children: V
+                                children: H
                             })
                         ]
                     }),

@@ -106,7 +106,7 @@ function g(e) {
                         onMouseLeave: y,
                         className: a()(n, E.root),
                         children: (0, r.jsx)(f.Z, {
-                            children: (0, r.jsx)(u.P4T, {
+                            children: (0, r.jsx)(u.Mgn, {
                                 onMouseEnter: _,
                                 onMouseLeave: y,
                                 size: 'custom',

@@ -102,10 +102,10 @@ function L() {
 function x() {
     ((S.length = 0), A.clear(), (N = {}));
 }
-function M() {
+function k() {
     x();
 }
-function k() {
+function M() {
     ((T = I()), x());
 }
 function j() {
@@ -211,8 +211,8 @@ class z extends (r = l.ZP.PersistedStore) {
         }
     ]));
 let q = new z(c.Z, {
-    CONNECTION_OPEN: M,
-    LOGOUT: k,
+    CONNECTION_OPEN: k,
+    LOGOUT: M,
     MESSAGE_GIFT_INTENT_SHOWN: U,
     FRIENDS_LIST_GIFT_INTENTS_SHOWN: j,
     FRIENDS_TAB_BADGE_DISMISS: G,

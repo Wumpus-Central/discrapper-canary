@@ -2,15 +2,15 @@ n.d(t, { K: () => m });
 var r = n(255367),
     i = n(73800),
     l = n(481060),
-    s = n(37234),
-    a = n(749681),
+    a = n(37234),
+    s = n(749681),
     o = n(258971),
     c = n(49898),
     d = n(388032),
     u = n(544627);
 function m(e) {
     let t = i.useCallback(() => {
-        ((0, a.transitionToGlobalDiscovery)({
+        ((0, s.transitionToGlobalDiscovery)({
             tab: c.GlobalDiscoveryTab.APPS,
             newSessionState: {
                 guildId: e.guildId,
@@ -20,7 +20,7 @@ function m(e) {
                 }
             }
         }),
-            (0, s.xf)());
+            (0, a.xf)());
     }, [e.guildId, e.section]);
     return (0, r.jsxs)(l.P3F, {
         onClick: t,

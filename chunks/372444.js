@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    s = n(755721),
-    a = n(481060),
+    a = n(755721),
+    s = n(481060),
     o = n(100527),
     c = n(906732),
     d = n(678558),
@@ -16,14 +16,14 @@ let g = (e) => {
             analyticsLocation: n,
             className: i,
             buttonProps: l = {
-                color: s.Tt.BRAND_INVERTED,
+                color: a.Tt.BRAND_INVERTED,
                 text: u.intl.string(u.t.oqweNz)
             }
         } = e,
-        { color: a, text: o } = l,
+        { color: s, text: o } = l,
         c = t.premiumTier + 1;
     return (0, r.jsx)(d.Z, {
-        color: a,
+        color: s,
         analyticsLocation: n,
         guild: t,
         buttonText: o,
@@ -32,7 +32,7 @@ let g = (e) => {
     });
 };
 function p(e) {
-    let { header: t, text: i, analyticsLocation: s, guild: d, className: u, textColor: p, headerColor: f, buttonProps: h } = e,
+    let { header: t, text: i, analyticsLocation: a, guild: d, className: u, textColor: p, headerColor: h, buttonProps: f } = e,
         { analyticsLocations: x } = (0, c.ZP)(o.Z.GUILD_BOOSTING_UPSELL_BANNER);
     return (0, r.jsx)(c.Gt, {
         value: x,
@@ -47,13 +47,13 @@ function p(e) {
                 (0, r.jsxs)('div', {
                     className: m.content,
                     children: [
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(s.Text, {
                             variant: 'text-lg/semibold',
-                            color: null != f ? f : 'always-white',
+                            color: null != h ? h : 'always-white',
                             className: m.header,
                             children: t
                         }),
-                        (0, r.jsx)(a.Text, {
+                        (0, r.jsx)(s.Text, {
                             variant: 'text-sm/normal',
                             color: null != p ? p : 'always-white',
                             children: i
@@ -64,9 +64,9 @@ function p(e) {
                     className: m.ctaContainer,
                     children: (0, r.jsx)(g, {
                         guild: d,
-                        analyticsLocation: s,
+                        analyticsLocation: a,
                         className: m.button,
-                        buttonProps: h
+                        buttonProps: f
                     })
                 })
             ]

@@ -2,8 +2,8 @@ n.d(t, { F: () => u });
 var r = n(73800),
     i = n(232567),
     l = n(786761),
-    s = n(3148),
-    a = n(598077),
+    a = n(3148),
+    s = n(598077),
     o = n(981631),
     c = n(388032),
     d = n(540167);
@@ -37,7 +37,7 @@ function u(e) {
                     return e;
                 })(
                     {},
-                    (0, s.ZP)({
+                    (0, a.ZP)({
                         channelId: '1337',
                         content: e
                     })
@@ -61,7 +61,7 @@ function u(e) {
                       }),
                 t)
             ),
-            u = new a.Z({
+            u = new s.Z({
                 id: '313337',
                 username: c.intl.string(c.t.cqpybG),
                 discriminator: '0000',

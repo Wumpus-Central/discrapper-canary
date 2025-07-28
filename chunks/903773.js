@@ -8,7 +8,7 @@ function s(e) {
     return (0, r.jsx)(l.Z, {
         className: n,
         color: s,
-        icon: i.P4T,
+        icon: i.Mgn,
         children: t
     });
 }

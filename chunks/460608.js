@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(642613), n(388685));
+(n.d(t, { Z: () => v }), n(642613), n(388685));
 var r = n(255367),
     o = n(73800),
     i = n(597312),
@@ -13,8 +13,8 @@ var r = n(255367),
     f = n(709054),
     _ = n(659679),
     x = n(388032),
-    v = n(211886);
-function b(e) {
+    g = n(211886);
+function v(e) {
     let { guildId: t } = e,
         n = (0, s.Wu)(
             [u.Z],
@@ -24,24 +24,24 @@ function b(e) {
             },
             [t]
         ),
-        b = o.useMemo(() => n.sort((e, t) => (f.default.extractTimestamp(e.id) < f.default.extractTimestamp(t.id) ? 1 : -1)), [n]),
-        g = (0, s.Wu)(
+        v = o.useMemo(() => n.sort((e, t) => (f.default.extractTimestamp(e.id) < f.default.extractTimestamp(t.id) ? 1 : -1)), [n]),
+        b = (0, s.Wu)(
             [p.ZP],
             () => {
                 let e = new Set();
                 return (
-                    b.forEach((n) => {
+                    v.forEach((n) => {
                         null == p.ZP.getMember(t, n.userId) && e.add(n.userId);
                     }),
                     Array.from(e)
                 );
             },
-            [t, b]
+            [t, v]
         );
     o.useEffect(() => {
-        g.length > 0 && g.forEach((e) => d.Z.requestMember(t, e));
-    }, [t, g]);
-    let j = o.useMemo(() => (g.length > 0 ? { [t]: g } : {}), [t, g]);
+        b.length > 0 && b.forEach((e) => d.Z.requestMember(t, e));
+    }, [t, b]);
+    let j = o.useMemo(() => (b.length > 0 ? { [t]: b } : {}), [t, b]);
     (0, c.$)(j);
     let E = (0, s.e7)([m.Z], () => {
         var e;
@@ -50,20 +50,20 @@ function b(e) {
     return (o.useEffect(() => {
         E !== n.length && (0, a.C0)(t);
     }, [t, E, n.length]),
-    0 === b.length)
+    0 === v.length)
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(l.X6, {
-                      className: v.header,
+                      className: g.header,
                       variant: 'eyebrow',
                       color: 'text-secondary',
                       children: x.intl.string(x.t.yM9Krq)
                   }),
                   (0, r.jsx)(i.zJ, {
-                      className: v.container,
+                      className: g.container,
                       fade: !0,
-                      children: b.map((e, t) => (0, r.jsx)(_.Z, { boost: e }, 'boost-activity-'.concat(t)))
+                      children: v.map((e, t) => (0, r.jsx)(_.Z, { boost: e }, 'boost-activity-'.concat(t)))
                   })
               ]
           });

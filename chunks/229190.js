@@ -2,40 +2,40 @@ n.d(t, { Z: () => c });
 var r = n(255367),
     i = n(73800),
     l = n(481060),
-    s = n(388032),
-    a = n(404922);
+    a = n(388032),
+    s = n(404922);
 function o(e) {
     let { showSecondaryColor: t, palette: n, onPrimaryColorChange: o, onSecondaryColorChange: c } = e,
         d = i.useRef(null);
     return (
         (0, l.Tbt)(d),
         (0, r.jsxs)('div', {
-            className: a.popoutContainer,
+            className: s.popoutContainer,
             children: [
                 (0, r.jsx)(l.Text, {
                     variant: 'text-xs/semibold',
                     color: 'header-secondary',
-                    className: a.customColorsHeader,
-                    children: s.intl.string(s.t.JhNpg4)
+                    className: s.customColorsHeader,
+                    children: a.intl.string(a.t.JhNpg4)
                 }),
                 (0, r.jsxs)('div', {
                     ref: d,
-                    className: a.colorPickersContainer,
+                    className: s.colorPickersContainer,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: a.colorColumn,
+                            className: s.colorColumn,
                             children: [
                                 (0, r.jsx)('div', {
-                                    className: a.colorSwatch,
+                                    className: s.colorSwatch,
                                     style: { backgroundColor: n.primary }
                                 }),
                                 (0, r.jsx)(l.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-default',
-                                    children: s.intl.string(s.t.C3KTQk)
+                                    children: a.intl.string(a.t.C3KTQk)
                                 }),
                                 (0, r.jsx)(l.Z$W, {
-                                    className: a.colorPicker,
+                                    className: s.colorPicker,
                                     value: n.primary,
                                     eagerUpdate: !0,
                                     wrapperComponentType: 'div',
@@ -46,19 +46,19 @@ function o(e) {
                         }),
                         t &&
                             (0, r.jsxs)('div', {
-                                className: a.colorColumn,
+                                className: s.colorColumn,
                                 children: [
                                     (0, r.jsx)('div', {
-                                        className: a.colorSwatch,
+                                        className: s.colorSwatch,
                                         style: { backgroundColor: n.secondary }
                                     }),
                                     (0, r.jsx)(l.Text, {
                                         variant: 'text-xs/medium',
                                         color: 'text-default',
-                                        children: s.intl.string(s.t['8elvy8'])
+                                        children: a.intl.string(a.t['8elvy8'])
                                     }),
                                     (0, r.jsx)(l.Z$W, {
-                                        className: a.colorPicker,
+                                        className: s.colorPicker,
                                         value: n.secondary,
                                         eagerUpdate: !0,
                                         wrapperComponentType: 'div',
@@ -74,13 +74,13 @@ function o(e) {
     );
 }
 function c(e) {
-    let { shouldShow: t, showSecondaryColor: n, onRequestClose: i, children: s, palette: a, onPrimaryColorChange: c, onSecondaryColorChange: d, popoutTargetRef: u } = e;
+    let { shouldShow: t, showSecondaryColor: n, onRequestClose: i, children: a, palette: s, onPrimaryColorChange: c, onSecondaryColorChange: d, popoutTargetRef: u } = e;
     return (0, r.jsx)(l.yRy, {
         targetElementRef: u,
         renderPopout: () =>
             (0, r.jsx)(o, {
                 showSecondaryColor: n,
-                palette: a,
+                palette: s,
                 onPrimaryColorChange: c,
                 onSecondaryColorChange: d
             }),
@@ -89,6 +89,6 @@ function c(e) {
         onRequestClose: i,
         animation: l.yRy.Animation.TRANSLATE,
         animationPosition: 'right',
-        children: s
+        children: a
     });
 }

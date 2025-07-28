@@ -1,8 +1,8 @@
 n.d(t, {
     Ds: () => j,
-    YB: () => M,
+    YB: () => k,
     of: () => U,
-    q5: () => k
+    q5: () => M
 });
 var r = n(255367);
 n(73800);
@@ -45,9 +45,9 @@ function x(e) {
         label: n ? w.intl.string(w.t['2TiKgY']) : w.intl.string(w.t.oN8bqa)
     });
 }
-function M(e) {
+function k(e) {
     var t, n, i;
-    let { channel: a, applicationId: s, onMouseDown: y, onMouseMove: I, onMouseLeave: N, onJumpToChannel: w, idle: x, selectedParticipant: M, embeddedActivity: k } = e,
+    let { channel: a, applicationId: s, onMouseDown: y, onMouseMove: I, onMouseLeave: N, onJumpToChannel: w, idle: x, selectedParticipant: k, embeddedActivity: M } = e,
         j = (0, c.bp)() === R.IlC.POPOUT,
         U = (0, o.e7)([S.Z], () => S.Z.isVideoEnabled()),
         G = (0, o.e7)([S.Z], () => Object.values(S.Z.getVideoDevices())[0]),
@@ -102,7 +102,7 @@ function M(e) {
                                         channelId: a.id,
                                         guildId: a.getGuildId(),
                                         className: L.__invalid_leftTrayIcon,
-                                        participant: M,
+                                        participant: k,
                                         compact: !0
                                     })
                                 })
@@ -125,7 +125,7 @@ function M(e) {
                                   }),
                             (0, r.jsx)(O.Z, {
                                 applicationId: s,
-                                location: k.location,
+                                location: M.location,
                                 className: D.rightPipIcon
                             })
                         ]
@@ -135,7 +135,7 @@ function M(e) {
         ]
     });
 }
-function k(e) {
+function M(e) {
     var t, n;
     let { channel: i, applicationId: o, onMouseDown: l, onMouseMove: c, onMouseLeave: u, onJumpToChannel: f, idle: _, users: p, embeddedActivity: h } = e,
         m = (0, d.Z)([o])[0];

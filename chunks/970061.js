@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
-    a = n(652141),
+    a = n.n(l),
+    s = n(652141),
     o = n(692547),
     c = n(481060),
     d = n(259580),
@@ -24,18 +24,18 @@ function m(e) {
                       size: 'md',
                       color: 'currentColor',
                       secondaryColor: o.Z.unsafe_rawColors.WHITE_500.css,
-                      className: s()(u.rowIcon, u.rowIconChecked)
+                      className: a()(u.rowIcon, u.rowIconChecked)
                   })
-                : (0, r.jsx)('div', { className: s()(u.rowIcon, u.rowIconEmpty) })
+                : (0, r.jsx)('div', { className: a()(u.rowIcon, u.rowIconEmpty) })
         ]
     });
 }
 function g(e) {
-    let { title: t, children: n, buttonLabel: l, buttonCallback: s, disabled: o } = e,
+    let { title: t, children: n, buttonLabel: l, buttonCallback: a, disabled: o } = e,
         [g, p] = i.useState(!1),
-        f = n.flatMap((e) => e.items.map((e) => e.completed)),
-        h = f.filter((e) => e).length / f.length,
-        x = (0, c.q_F)({ width: ''.concat(100 * h, '%') });
+        h = n.flatMap((e) => e.items.map((e) => e.completed)),
+        f = h.filter((e) => e).length / h.length,
+        x = (0, c.q_F)({ width: ''.concat(100 * f, '%') });
     return (0, r.jsxs)('div', {
         className: u.container,
         children: [
@@ -56,7 +56,7 @@ function g(e) {
             }),
             (0, r.jsx)('div', {
                 className: u.progressBarOuter,
-                children: (0, r.jsx)(a.animated.div, {
+                children: (0, r.jsx)(s.animated.div, {
                     className: u.progressBarInner,
                     style: x
                 })
@@ -90,7 +90,7 @@ function g(e) {
                 }),
             null !== l &&
                 '' !== l &&
-                null !== s &&
+                null !== a &&
                 (0, r.jsxs)('div', {
                     children: [
                         (0, r.jsx)(c.$i$, { className: u.divider }),
@@ -101,8 +101,8 @@ function g(e) {
                                 variant: 'primary',
                                 size: 'sm',
                                 text: l,
-                                onClick: s,
-                                disabled: 1 !== h || o
+                                onClick: a,
+                                disabled: 1 !== f || o
                             })
                         })
                     ]

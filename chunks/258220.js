@@ -1,160 +1,71 @@
 (n.d(t, {
-    default: () => g,
-    r: () => f
+    default: () => f,
+    r: () => h
 }),
     n(388685));
 var r = n(255367),
     i = n(73800),
-    l = n(481060),
-    a = n(153867),
-    o = n(835473),
-    s = n(600164),
+    l = n(82659),
+    a = n(481060),
+    o = n(153867),
+    s = n(835473),
     c = n(626135),
     u = n(998502),
     d = n(981631),
-    p = n(388032),
-    h = n(607919);
-let f = 'Activity Encourages Hardware Acceleration';
-function g(e) {
-    var t,
-        n,
-        g,
-        { applicationId: m } = e,
-        b = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                r,
-                i = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
-                    return i;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
-            }
-            return i;
-        })(e, ['applicationId']);
-    let [_, O] = i.useState(!1),
-        [E] = (0, o.Z)([m]),
-        y = null != (g = null == E ? void 0 : E.name) ? g : 'This Activity';
+    p = n(388032);
+let h = 'Activity Encourages Hardware Acceleration';
+function f(e) {
+    var t;
+    let { applicationId: n, transitionState: f, onClose: g } = e,
+        [m, b] = i.useState(!1),
+        [_] = (0, s.Z)([n]),
+        O = null != (t = null == _ ? void 0 : _.name) ? t : 'This Activity';
     i.useEffect(() => {
-        c.default.track(d.rMx.OPEN_MODAL, { type: f });
+        c.default.track(d.rMx.OPEN_MODAL, { type: h });
     }, []);
-    let v = () => {
-        let e = 'temporary';
-        (_ && ((e = 'permanent'), a.ZP.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
-            c.default.track(d.rMx.MODAL_DISMISSED, {
-                type: f,
-                dismiss_type: e
-            }),
-            b.onClose());
-    };
-    return (0, r.jsxs)(
-        l.Y0X,
-        ((t = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
-                    )),
-                    r.forEach(function (t) {
-                        var r;
-                        ((r = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: r,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0
-                                  })
-                                : (e[t] = r));
-                    }));
-            }
-            return e;
-        })(
+    let E = async () => {
+            let e = 'temporary';
+            (m && ((e = 'permanent'), o.ZP.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
+                c.default.track(d.rMx.MODAL_DISMISSED, {
+                    type: h,
+                    dismiss_type: e
+                }),
+                await g());
+        },
+        y = async () => {
+            (c.default.track(d.rMx.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: n }), u.ZP.setEnableHardwareAcceleration(!0), await E());
+        };
+    return (0, r.jsx)(l.Modal, {
+        size: 'md',
+        transitionState: f,
+        onClose: E,
+        'aria-label': p.intl.string(p.t.NQkK4u),
+        title: p.intl.string(p.t.NQkK4u),
+        actionBarInput: (0, r.jsx)(a.XZJ, {
+            type: a.XZJ.Types.INVERTED,
+            size: 18,
+            value: m,
+            onChange: () => b(!m),
+            children: (0, r.jsx)(a.Text, {
+                variant: 'text-sm/normal',
+                children: p.intl.string(p.t['5E9SBw'])
+            })
+        }),
+        actions: [
             {
-                className: h.root,
-                'aria-label': p.intl.string(p.t.NQkK4u)
+                variant: 'secondary',
+                text: p.intl.string(p.t['Ibf5/v']),
+                onClick: E
             },
-            b
-        )),
-        (n = n =
             {
-                parentComponent: 'ActivityHardwareAccelerationModal',
-                children: [
-                    (0, r.jsxs)(l.xBx, {
-                        separator: !1,
-                        children: [
-                            (0, r.jsx)(l.Text, {
-                                className: h.__invalid_header,
-                                variant: 'text-lg/normal',
-                                children: p.intl.string(p.t.NQkK4u)
-                            }),
-                            (0, r.jsx)(l.olH, {
-                                onClick: v,
-                                className: h.closeButton
-                            })
-                        ]
-                    }),
-                    (0, r.jsx)(l.hzk, {
-                        className: h.content,
-                        children: (0, r.jsx)(l.Text, {
-                            variant: 'text-md/normal',
-                            className: h.__invalid_ratingBody,
-                            children: p.intl.format(p.t.B9eiaG, { applicationName: y })
-                        })
-                    }),
-                    (0, r.jsxs)(l.mzw, {
-                        className: h.footer,
-                        direction: s.Z.Direction.HORIZONTAL,
-                        children: [
-                            (0, r.jsx)(l.XZJ, {
-                                type: l.XZJ.Types.INVERTED,
-                                size: 18,
-                                value: _,
-                                onChange: () => O(!_),
-                                children: (0, r.jsx)(l.Text, {
-                                    variant: 'text-sm/normal',
-                                    children: p.intl.string(p.t['5E9SBw'])
-                                })
-                            }),
-                            (0, r.jsx)(l.zxk, {
-                                variant: 'secondary',
-                                text: p.intl.string(p.t['Ibf5/v']),
-                                onClick: v
-                            }),
-                            (0, r.jsx)(l.zxk, {
-                                variant: 'primary',
-                                text: p.intl.string(p.t['/wlDqq']),
-                                onClick: () => {
-                                    (c.default.track(d.rMx.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: m }), u.ZP.setEnableHardwareAcceleration(!0));
-                                }
-                            })
-                        ]
-                    })
-                ]
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-              }),
-        t)
-    );
+                variant: 'primary',
+                text: p.intl.string(p.t['/wlDqq']),
+                onClick: y
+            }
+        ],
+        children: (0, r.jsx)(a.Text, {
+            variant: 'text-md/normal',
+            children: p.intl.format(p.t.B9eiaG, { applicationName: O })
+        })
+    });
 }

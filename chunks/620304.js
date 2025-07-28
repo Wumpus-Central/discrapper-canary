@@ -69,20 +69,20 @@ function P(e) {
     let { guild: t, tooltipTypes: l, withMargin: P } = e,
         N = i.useMemo(() => (0, C.Z)(t), [t]),
         w = (0, O.Z)(t.id),
-        Z = i.useCallback(() => {
+        T = i.useCallback(() => {
             (0, y.Z)(t.id, p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
-        T = (0, c.e7)([m.Z], () => {
+        Z = (0, c.e7)([m.Z], () => {
             var e;
             return null != (e = m.Z.getCountForGuild(t.id)) ? e : 0;
         });
     i.useEffect(() => {
-        T !== t.premiumSubscriberCount && (0, g.v)(t.id, t.premiumSubscriberCount);
-    }, [t.id, T, t.premiumSubscriberCount]);
-    let A = Math.min((T / N) * 100, 100),
+        Z !== t.premiumSubscriberCount && (0, g.v)(t.id, t.premiumSubscriberCount);
+    }, [t.id, Z, t.premiumSubscriberCount]);
+    let A = Math.min((Z / N) * 100, 100),
         [R, D] = (0, d.q_F)(
             () => ({
-                width: T === t.premiumSubscriberCount ? 'calc('.concat(A, '% - 4px)') : '0%',
+                width: Z === t.premiumSubscriberCount ? 'calc('.concat(A, '% - 4px)') : '0%',
                 config: {
                     tension: 250,
                     damping: 5,
@@ -90,12 +90,12 @@ function P(e) {
                 }
             }),
             'respect-motion-settings',
-            [T, t.premiumSubscriberCount]
+            [Z, t.premiumSubscriberCount]
         );
     i.useEffect(() => {
         D({ width: 'calc('.concat(A, '% - 4px)') });
     }, [A, D]);
-    let L = T >= N,
+    let L = Z >= N,
         M = i.useRef(null),
         [k, U] = (0, f.US)(l),
         G = (e) =>
@@ -112,7 +112,7 @@ function P(e) {
                     },
                     onClick: () => {
                         var t;
-                        (null == e || null == (t = e.onClick) || t.call(e), Z());
+                        (null == e || null == (t = e.onClick) || t.call(e), T());
                     },
                     className: o()(S.container, { [S.containerWithMargin]: P }),
                     onContextMenu: (e) => {
@@ -156,9 +156,9 @@ function P(e) {
                                                 className: o()(S.text, S.boostCountText),
                                                 variant: 'text-xs/semibold',
                                                 children: L
-                                                    ? E.intl.formatToPlainString(j.default['Ehpq+/'], { appliedBoostCount: T })
+                                                    ? E.intl.formatToPlainString(j.default['Ehpq+/'], { appliedBoostCount: Z })
                                                     : E.intl.formatToPlainString(j.default['/rbPDg'], {
-                                                          appliedBoostCount: T,
+                                                          appliedBoostCount: Z,
                                                           maxBoostCount: N
                                                       })
                                             }),

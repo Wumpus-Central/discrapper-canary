@@ -96,26 +96,26 @@ function D(e) {
 }
 function Z() {
     let e = N.G6.useSetting(),
-        t = N.Wz.useSetting(),
+        t = N.no.useSetting(),
         n = (0, S.Yd)('activity privacy tab'),
         r = v.isPlatformEmbedded ? A.intl.string(A.t.MznbeH) : A.intl.string(A.t.oKqC4u),
         s = (e) => {
-            (N.Wz.updateSetting(e ? d.E5.ON_FOR_LARGE_GUILDS : d.E5.OFF), D(e));
+            (N.no.updateSetting(e ? d.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS : d.GI.ACTIVITY_STATUS_OFF), D(e));
         },
         l = (e) => {
-            (N.Wz.updateSetting(e), D(e !== d.E5.OFF));
+            (N.no.updateSetting(e), D(e !== d.GI.ACTIVITY_STATUS_OFF));
         },
         o = [
             {
-                value: d.E5.ON,
+                value: d.GI.ACTIVITY_STATUS_ON,
                 label: A.intl.string(A.t.UzGMHx)
             },
             {
-                value: d.E5.ON_FOR_LARGE_GUILDS,
+                value: d.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
                 label: A.intl.string(A.t.OFqxQU)
             },
             {
-                value: d.E5.OFF,
+                value: d.GI.ACTIVITY_STATUS_OFF,
                 label: A.intl.string(A.t.MIgNPD)
             }
         ];
@@ -158,7 +158,7 @@ function Z() {
                           ]
                       })
                     : (0, i.jsx)(p.j7V, {
-                          value: t === d.E5.OFF,
+                          value: t === d.GI.ACTIVITY_STATUS_OFF,
                           note: A.intl.format(A.t['+5/xu7'], { helpdeskArticle: C.Z.getArticleURL(y.BhN.ACTIVITY_STATUS_SETTINGS) }),
                           onChange: (e) => s(!e),
                           children: A.intl.string(A.t.D5GXTU)

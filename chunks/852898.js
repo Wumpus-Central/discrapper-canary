@@ -1,9 +1,9 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(255367),
     i = n(73800),
     l = n(951284),
-    s = n(442837),
-    a = n(139387),
+    a = n(442837),
+    s = n(139387),
     o = n(726542),
     c = n(690221),
     d = n(232062),
@@ -11,21 +11,21 @@ var r = n(255367),
     m = n(999382),
     g = n(981631),
     p = n(388032);
-function f(e, t) {
-    let n = (0, s.e7)([m.Z], () => m.Z.getProps().integrations);
+function h(e, t) {
+    let n = (0, a.e7)([m.Z], () => m.Z.getProps().integrations);
     return i.useMemo(
         () =>
             (function (e, t, n) {
-                var i, s, m, f;
-                let h;
+                var i, a, m, h;
+                let f;
                 if (!t.managed) return null;
                 let x = null == (i = t.tags) ? void 0 : i.bot_id,
-                    b = null == (s = t.tags) ? void 0 : s.integration_id,
+                    b = null == (a = t.tags) ? void 0 : a.integration_id,
                     j = (null == (m = t.tags) ? void 0 : m.premium_subscriber) !== void 0,
-                    v = (null == (f = t.tags) ? void 0 : f.guild_connections) !== void 0;
+                    v = (null == (h = t.tags) ? void 0 : h.guild_connections) !== void 0;
                 if (
                     (null != x
-                        ? (h =
+                        ? (f =
                               null == n
                                   ? void 0
                                   : n.find((e) => {
@@ -34,20 +34,20 @@ function f(e, t) {
                                         return (null == n || null == (t = n.bot) ? void 0 : t.id) === x;
                                     }))
                         : null != b &&
-                          (h =
+                          (f =
                               null == n
                                   ? void 0
                                   : n.find((e) => {
                                         let { id: t } = e;
                                         return t === b;
                                     })),
-                    null != h && null != h.application && null != h.name)
+                    null != f && null != f.application && null != f.name)
                 ) {
-                    let e = h.application.id,
-                        t = h.name;
-                    [l.b.TWITCH, l.b.YOUTUBE].includes(h.type) && (t = ''.concat(o.Z.get(h.type).name, ' - ').concat(t));
+                    let e = f.application.id,
+                        t = f.name;
+                    [l.b.TWITCH, l.b.YOUTUBE].includes(f.type) && (t = ''.concat(o.Z.get(f.type).name, ' - ').concat(t));
                     let n = () => {
-                        (u.Z.setSection(g.pNK.INTEGRATIONS), a.Z.setSection(g.b4C.APPLICATION, e));
+                        (u.Z.setSection(g.pNK.INTEGRATIONS), s.Z.setSection(g.b4C.APPLICATION, e));
                     };
                     return p.intl.format(p.t.FuXsWl, {
                         name: t,

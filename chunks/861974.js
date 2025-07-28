@@ -15,7 +15,7 @@ var i = n(120356),
 function u(e) {
     switch (e) {
         case 'warn':
-            return o.P4T;
+            return o.Mgn;
         case 'info':
             return o.d3s;
         case 'danger':

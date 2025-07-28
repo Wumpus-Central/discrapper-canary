@@ -1,6 +1,6 @@
 (n.d(t, {
     $0: () => R,
-    AN: () => k,
+    AN: () => M,
     Ct: () => A,
     DU: () => V,
     EQ: () => B,
@@ -10,7 +10,7 @@
     O8: () => w,
     Pl: () => I,
     Uw: () => L,
-    ZE: () => M,
+    ZE: () => k,
     _G: () => O,
     _O: () => S,
     _y: () => g,
@@ -83,8 +83,8 @@ let p = new _(r.q.ANIMATED_EMOJIS),
     D = new _(r.q.CUSTOM_NOTIFICATION_SOUNDS),
     L = new _('fancyVoiceChannelReactions'),
     x = new _('installPremiumApplications'),
-    M = new _('redeemPremiumPerks'),
-    k = new _(r.q.VIDEO_FILTER_ASSETS);
+    k = new _('redeemPremiumPerks'),
+    M = new _(r.q.VIDEO_FILTER_ASSETS);
 new o.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, a.h);
 let j = new _(r.q.INCREASED_GUILD_LIMIT),
     U = new _(r.q.INCREASED_MESSAGE_LENGTH),
@@ -92,9 +92,9 @@ let j = new _(r.q.INCREASED_GUILD_LIMIT),
     B = new _('uploadLargeFiles'),
     V = new _(r.q.CHAT_WALLPAPERS),
     F = Object.freeze({
-        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, k, G, B, A]),
+        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, M, G, B, A]),
         [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, y, O, I, C, P, L, G, B, A]),
-        [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [p, h, m, g, E, y, O, v, I, T, N, C, R, P, w, L, x, M, k, j, U, G, B, A, S, D, b, V])
+        [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [p, h, m, g, E, y, O, v, I, T, N, C, R, P, w, L, x, k, M, j, U, G, B, A, S, D, b, V])
     }),
     Z = [C, R];
 function H(e, t, n) {

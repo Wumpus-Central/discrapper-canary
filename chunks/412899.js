@@ -1,6 +1,6 @@
 (t.d(e, {
-    UB: () => U,
-    ZP: () => K
+    UB: () => F,
+    ZP: () => Y
 }),
     t(388685),
     t(642613),
@@ -22,24 +22,25 @@ var n = t(255367),
     d = t(749210),
     C = t(112724),
     B = t(607070),
-    w = t(605436),
-    D = t(134433),
-    M = t(600164),
-    I = t(91218),
-    p = t(313201),
-    H = t(518738),
-    b = t(434404),
-    Q = t(884902),
-    O = t(271383),
-    P = t(485386),
-    V = t(496675),
-    j = t(594174),
-    T = t(700785),
-    y = t(944613),
-    m = t(981631),
-    L = t(388032),
-    x = t(78248);
-function Z(A) {
+    w = t(134433),
+    D = t(600164),
+    M = t(91218),
+    I = t(313201),
+    p = t(518738),
+    H = t(434404),
+    b = t(884902),
+    Q = t(635042),
+    O = t(345162),
+    P = t(271383),
+    V = t(485386),
+    j = t(496675),
+    T = t(594174),
+    y = t(700785),
+    m = t(944613),
+    L = t(981631),
+    x = t(388032),
+    Z = t(78248);
+function N(A) {
     for (var e = 1; e < arguments.length; e++) {
         var t = null != arguments[e] ? arguments[e] : {},
             n = Object.keys(t);
@@ -64,7 +65,7 @@ function Z(A) {
     }
     return A;
 }
-function N(A, e) {
+function S(A, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -101,73 +102,73 @@ function R(A, e) {
     }
     return r;
 }
-let S = () => Promise.resolve();
-function G(A) {
-    let { userRoles: e, position: t } = A,
-        r = R(A, ['userRoles', 'position']),
-        l = (0, p.Dt)();
+let G = () => Promise.resolve();
+function U(A) {
+    let { userRoleIds: e, position: t } = A,
+        r = R(A, ['userRoleIds', 'position']),
+        l = (0, I.Dt)();
     return (0, n.jsxs)(E.VqE, {
-        className: i()(x.overflowRolesPopout, {
-            [x.popoutBottom]: 'bottom' === t,
-            [x.popoutTop]: 'top' === t
+        className: i()(Z.overflowRolesPopout, {
+            [Z.popoutBottom]: 'bottom' === t,
+            [Z.popoutTop]: 'top' === t
         }),
         'aria-labelledby': l,
         children: [
             (0, n.jsx)('div', {
-                className: x.overflowRolesPopoutArrowWrapper,
-                children: (0, n.jsx)('div', { className: x.overflowRolesPopoutArrow })
+                className: Z.overflowRolesPopoutArrowWrapper,
+                children: (0, n.jsx)('div', { className: Z.overflowRolesPopoutArrow })
             }),
-            (0, n.jsxs)(M.Z, {
-                className: x.overflowRolesPopoutHeader,
-                align: M.Z.Align.CENTER,
+            (0, n.jsxs)(D.Z, {
+                className: Z.overflowRolesPopoutHeader,
+                align: D.Z.Align.CENTER,
                 children: [
                     (0, n.jsx)(E.U65, {
                         size: 'xs',
                         color: h.Z.unsafe_rawColors.PRIMARY_400.css,
-                        className: x.overflowRolesPopoutHeaderIcon
+                        className: Z.overflowRolesPopoutHeaderIcon
                     }),
                     (0, n.jsx)('div', {
-                        className: x.overflowRolesPopoutHeaderText,
+                        className: Z.overflowRolesPopoutHeaderText,
                         id: l,
-                        children: L.intl.format(L.t.PCs0oq, { numRoles: e.length })
+                        children: x.intl.format(x.t.PCs0oq, { numRoles: e.length })
                     })
                 ]
             }),
             (0, n.jsx)(
-                z,
-                N(Z({}, r), {
+                k,
+                S(N({}, r), {
                     wrap: !0,
-                    userRoles: e
+                    userRoleIds: e
                 })
             )
         ]
     });
 }
-let U = r.forwardRef(function (A, e) {
+let F = r.forwardRef(function (A, e) {
     var l, s, a;
     let o,
-        { canRemove: f, className: d, role: C, onRemove: w, guildId: M, disableBorderColor: p, onMouseDown: b } = A,
+        { canRemove: f, className: d, role: C, onRemove: D, guildId: I, disableBorderColor: H, onMouseDown: Q } = A,
         O = (0, g.JA)(C.id),
         { tabIndex: P } = O,
         V = R(O, ['tabIndex']),
-        j = (0, H.p9)({
+        j = (0, p.p9)({
             roleId: C.id,
             size: 16,
-            guildId: M
+            guildId: I
         }),
         T = (0, c.e7)([B.Z], () => B.Z.roleStyle),
-        y = (0, Q._f)(M, C, C.colorStrings),
+        y = (0, b._f)(I, C, C.colorStrings),
         m = (null == (l = C.tags) ? void 0 : l.guild_connections) === null,
-        S = r.useCallback(
+        L = r.useCallback(
             (A) => {
                 (0, u.jW)(A, async () => {
                     let { default: A } = await t.e('5396').then(t.bind(t, 731646));
                     return (e) =>
                         (0, n.jsx)(
                             A,
-                            N(Z({}, e), {
+                            S(N({}, e), {
                                 id: C.id,
-                                label: L.intl.string(L.t.sMsaLi)
+                                label: x.intl.string(x.t.sMsaLi)
                             })
                         );
                 });
@@ -181,15 +182,15 @@ let U = r.forwardRef(function (A, e) {
         z = (0, v._i)(U);
     (null != z && 0.3 > (0, v.Bd)(z) && (X = h.Z.unsafe_rawColors.PRIMARY_630.css),
         (o = m
-            ? (0, n.jsx)(D.Z, {
-                  className: x.roleFlowerStar,
-                  iconClassName: f ? x.roleVerifiedIcon : void 0,
+            ? (0, n.jsx)(w.Z, {
+                  className: Z.roleFlowerStar,
+                  iconClassName: f ? Z.roleVerifiedIcon : void 0,
                   color: U,
                   size: 14
               })
             : 'dot' === T
               ? (0, n.jsx)(E.FhE, {
-                    className: x.roleDot,
+                    className: Z.roleDot,
                     color: U,
                     colors: y,
                     background: !1,
@@ -201,19 +202,19 @@ let U = r.forwardRef(function (A, e) {
                 })));
     let k = r.useMemo(() => {
         var e;
-        return Z({ borderColor: p ? void 0 : F }, null != (e = A.style) ? e : {});
-    }, [F, p, A.style]);
+        return N({ borderColor: H ? void 0 : F }, null != (e = A.style) ? e : {});
+    }, [F, H, A.style]);
     return (0, n.jsx)(E.tEY, {
         children: (0, n.jsxs)(
             'div',
-            N(
-                Z(
+            S(
+                N(
                     {
                         ref: e,
-                        className: i()(x.role, d),
+                        className: i()(Z.role, d),
                         style: k,
-                        onContextMenu: S,
-                        onMouseDown: b,
+                        onContextMenu: L,
+                        onMouseDown: Q,
                         'aria-label': C.name,
                         tabIndex: P
                     },
@@ -222,31 +223,31 @@ let U = r.forwardRef(function (A, e) {
                 {
                     children: [
                         (0, n.jsxs)(E.P3F, {
-                            className: i()(f && x.roleRemoveButtonCanRemove, x.roleRemoveButton),
-                            onClick: f ? w : void 0,
+                            className: i()(f && Z.roleRemoveButtonCanRemove, Z.roleRemoveButton),
+                            onClick: f ? D : void 0,
                             tabIndex: f ? P : -1,
-                            focusProps: { focusClassName: x.roleRemoveIconFocused },
+                            focusProps: { focusClassName: Z.roleRemoveIconFocused },
                             'aria-hidden': !f,
-                            'aria-label': L.intl.formatToPlainString(L.t.QrxwhY, { roleName: C.name }),
+                            'aria-label': x.intl.formatToPlainString(x.t.QrxwhY, { roleName: C.name }),
                             children: [
                                 o,
                                 f
                                     ? (0, n.jsx)(E.Dio, {
                                           size: 'md',
                                           color: X,
-                                          className: x.roleRemoveIcon,
+                                          className: Z.roleRemoveIcon,
                                           'aria-hidden': !0
                                       })
                                     : null
                             ]
                         }),
-                        null != j ? (0, n.jsx)(I.Z, N(Z({ className: x.roleIcon }, j), { enableTooltip: !1 })) : null,
+                        null != j ? (0, n.jsx)(M.Z, S(N({ className: Z.roleIcon }, j), { enableTooltip: !1 })) : null,
                         (0, n.jsx)('div', {
                             'aria-hidden': !0,
-                            className: x.roleName,
+                            className: Z.roleName,
                             children: (0, n.jsx)(E.Text, {
                                 variant: 'text-xs/medium',
-                                className: x.roleNameOverflow,
+                                className: Z.roleNameOverflow,
                                 children: C.name
                             })
                         })
@@ -256,7 +257,7 @@ let U = r.forwardRef(function (A, e) {
         )
     });
 });
-function F(A) {
+function X(A) {
     let { user: e, numRolesHidden: t, roleClassName: l } = A,
         s = (0, g.JA)('overflow-more-roles-'.concat(e.id)),
         a = r.useRef(null);
@@ -264,26 +265,26 @@ function F(A) {
         targetElementRef: a,
         renderPopout: (e) => {
             let { position: t } = e;
-            return (0, n.jsx)(G, N(Z({}, A), { position: null != t ? t : 'top' }));
+            return (0, n.jsx)(U, S(N({}, A), { position: null != t ? t : 'top' }));
         },
         position: 'top',
         align: 'center',
-        children: (A) => (0, n.jsx)(E.tEY, { children: (0, n.jsx)('button', N(Z(N(Z({ ref: a }, A), { className: i()(x.overflowButton, l) }), s), { children: '+'.concat(t) })) })
+        children: (A) => (0, n.jsx)(E.tEY, { children: (0, n.jsx)('button', S(N(S(N({ ref: a }, A), { className: i()(Z.overflowButton, l) }), s), { children: '+'.concat(t) })) })
     });
 }
-function X(A) {
+function z(A) {
     let e = r.useRef(null),
         { guild: t, user: l, handleAddRole: s, roleClassName: a, addButtonClassName: o, addButtonIconClassName: f } = A,
         v = (0, g.JA)('overflow-add-roles-'.concat(l.id)),
         h = (0, c.e7)([B.Z], () => B.Z.roleStyle),
-        u = V.Z.getHighestRole(t),
-        d = O.ZP.getMember(t.id, l.id),
-        C = (A) => (0, w.Gy)(t.id, A.id) && !A.managed && V.Z.isRoleHigher(t, u, A) && (null == d || -1 === d.roles.indexOf(A.id));
+        u = j.Z.getHighestRole(t),
+        d = P.ZP.getMember(t.id, l.id),
+        C = (A) => !(0, O.fI)(A) && !A.managed && j.Z.isRoleHigher(t, u, A) && (null == d || -1 === d.roles.indexOf(A.id));
     return (0, n.jsx)(E.yRy, {
         targetElementRef: e,
         renderPopout: (A) => {
             let { closePopout: e } = A;
-            return (0, n.jsx)(y.Z, {
+            return (0, n.jsx)(m.Z, {
                 guild: t,
                 roleStyle: h,
                 roleFilter: C,
@@ -297,11 +298,11 @@ function X(A) {
             (0, n.jsx)(E.tEY, {
                 children: (0, n.jsx)(
                     'button',
-                    N(
-                        Z(
-                            N(Z({ ref: e }, A), {
-                                className: i()(x.addButton, a, o),
-                                'aria-label': L.intl.string(L.t.e3Wly8),
+                    S(
+                        N(
+                            S(N({ ref: e }, A), {
+                                className: i()(Z.addButton, a, o),
+                                'aria-label': x.intl.string(x.t.e3Wly8),
                                 type: 'button'
                             }),
                             v
@@ -310,7 +311,7 @@ function X(A) {
                             children: (0, n.jsx)(E.qJs, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: i()(x.addButtonIcon, f),
+                                className: i()(Z.addButtonIcon, f),
                                 'aria-hidden': !0
                             })
                         }
@@ -319,75 +320,65 @@ function X(A) {
             })
     });
 }
-function z(A) {
+function k(A) {
     let e,
-        { user: t, guild: l, userRoles: s, wrap: v = !0, width: h, className: E, readOnly: u, roleClassName: C, disableBorderColor: B } = A,
+        { user: t, guild: l, userRoleIds: s, wrap: v = !0, width: h, className: E, readOnly: u, roleClassName: C, disableBorderColor: B } = A,
         w = r.useRef({}),
         D = r.useCallback(
             (A) => {
                 var e;
                 let n = s.filter((e) => e !== A.id);
-                (null == (e = A.tags) ? void 0 : e.guild_connections) === null ? d.Z.unassignGuildRoleConnection(l.id, A.id) : b.Z.updateMemberRoles(l.id, t.id, n, [], [A.id]);
+                (null == (e = A.tags) ? void 0 : e.guild_connections) === null ? d.Z.unassignGuildRoleConnection(l.id, A.id) : H.Z.updateMemberRoles(l.id, t.id, n, [], [A.id]);
             },
             [s, l.id, t.id]
         ),
         M = r.useCallback(
             (A) => {
                 let e = s;
-                (-1 === e.indexOf(A) && (e = e.concat([A])), b.Z.updateMemberRoles(l.id, t.id, e, [A], []));
+                (e.includes(A) || (e = [...e, A]), H.Z.updateMemberRoles(l.id, t.id, e, [A], []));
             },
             [s, l.id, t.id]
         ),
         [I, p] = r.useState(null),
-        H = (0, c.e7)([P.Z], () => P.Z.getRoles(l.id)),
-        Q = r.useMemo(() => {
-            let A = Object.values(H)
-                .filter((A) => s.includes(A.id))
-                .sort((A, e) => {
-                    var t, n;
-                    let r = (null == (t = A.tags) ? void 0 : t.guild_connections) !== null,
-                        l = (null == (n = e.tags) ? void 0 : n.guild_connections) !== null;
-                    return r && !l ? 1 : !r && l ? -1 : 0;
-                });
-            return null != I ? A.slice(0, I) : A;
-        }, [H, I, s]),
-        O = s.length - Q.length;
+        b = (0, c.Wu)([V.Z], () => V.Z.getManyRoles(l.id, s).sort(Q.Z)),
+        O = r.useMemo(() => (null != I ? b.slice(0, I) : b), [b, I]),
+        P = s.length - O.length;
     r.useLayoutEffect(() => {
         if (v) return;
         if ('number' != typeof h) throw Error('Unexpected null width');
         let A = 0,
             e = 0,
             t = h - 30 - 4;
-        for (let n = 0; n < Q.length; n++) {
-            let r = Q[n],
+        for (let n = 0; n < O.length; n++) {
+            let r = O[n],
                 l = w.current[r.id];
             if (null != l) {
                 if ((e += l.offsetWidth + 4) > t) break;
                 A++;
             }
         }
-        p((e) => (A < Q.length ? A : e));
-    }, [v, h, Q]);
-    let y = j.default.getCurrentUser();
-    a()(null != y, 'MemberRolesList: currentUser cannot be undefined');
-    let G = !u && V.Z.can(m.Plq.MANAGE_ROLES, l),
-        z = T.e9(l, y.id),
-        k = r.useMemo(() => 'roles-'.concat((0, o.Z)()), []),
-        K = (0, f.ZP)({
-            id: k,
+        p((e) => (A < O.length ? A : e));
+    }, [v, h, O]);
+    let m = T.default.getCurrentUser();
+    a()(null != m, 'MemberRolesList: currentUser cannot be undefined');
+    let U = !u && j.Z.can(L.Plq.MANAGE_ROLES, l),
+        k = y.e9(l, m.id),
+        K = r.useMemo(() => 'roles-'.concat((0, o.Z)()), []),
+        Y = (0, f.ZP)({
+            id: K,
             isEnabled: !0,
-            scrollToStart: S,
-            scrollToEnd: S,
+            scrollToStart: G,
+            scrollToEnd: G,
             wrap: !0
         }),
-        Y = Q.map((A) => {
+        W = O.map((A) => {
             var e;
             return (0, n.jsx)(
-                U,
+                F,
                 {
                     className: C,
                     role: A,
-                    canRemove: (null == (e = A.tags) ? void 0 : e.guild_connections) === null ? t.id === y.id : G && T.r6(l, y.id, z, A),
+                    canRemove: (null == (e = A.tags) ? void 0 : e.guild_connections) === null ? t.id === m.id : U && y.r6(l, m.id, k, A),
                     onRemove: () => D(A),
                     ref: (e) => {
                         var t;
@@ -400,26 +391,26 @@ function z(A) {
             );
         });
     return (
-        null != I && 0 !== O ? (e = (0, n.jsx)(F, N(Z({}, A), { numRolesHidden: O }))) : G && (e = (0, n.jsx)(X, N(Z({}, A), { handleAddRole: M }))),
+        null != I && 0 !== P ? (e = (0, n.jsx)(X, S(N({}, A), { numRolesHidden: P }))) : U && (e = (0, n.jsx)(z, S(N({}, A), { handleAddRole: M }))),
         (0, n.jsx)(g.bG, {
-            navigator: K,
+            navigator: Y,
             children: (0, n.jsx)(g.SJ, {
                 children: (A) => {
                     var { ref: t } = A,
                         r = R(A, ['ref']);
                     return (0, n.jsxs)(
                         'div',
-                        N(
-                            Z(
+                        S(
+                            N(
                                 {
-                                    className: i()(x.root, E),
-                                    'aria-label': L.intl.formatToPlainString(L.t.PCs0oq, { numRoles: s.length }),
+                                    className: i()(Z.root, E),
+                                    'aria-label': x.intl.formatToPlainString(x.t.PCs0oq, { numRoles: s.length }),
                                     ref: t
                                 },
                                 r
                             ),
                             {
-                                children: [Y, e]
+                                children: [W, e]
                             }
                         )
                     );
@@ -428,13 +419,13 @@ function z(A) {
         })
     );
 }
-let k = (0, C.Z)(z);
-function K(A) {
+let K = (0, C.Z)(k);
+function Y(A) {
     return (
-        (0, c.e7)([V.Z], () => {
+        (0, c.e7)([j.Z], () => {
             var e;
-            return V.Z.getGuildVersion(null == (e = A.guild) ? void 0 : e.id);
+            return j.Z.getGuildVersion(null == (e = A.guild) ? void 0 : e.id);
         }),
-        !1 === A.wrap ? (0, n.jsx)(k, Z({}, A)) : (0, n.jsx)(z, Z({}, A))
+        !1 === A.wrap ? (0, n.jsx)(K, N({}, A)) : (0, n.jsx)(k, N({}, A))
     );
 }

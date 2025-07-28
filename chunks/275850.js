@@ -187,7 +187,7 @@ function S(e) {
                 ? (0, r.jsxs)('div', {
                       className: g.paymentSourceWarning,
                       children: [
-                          (0, r.jsx)(c.P4T, {
+                          (0, r.jsx)(c.Mgn, {
                               size: 'custom',
                               width: 20,
                               height: 20,

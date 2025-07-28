@@ -60,19 +60,19 @@ function _(e) {
             messageId: n.id
         })(C),
         v = (0, o.Sw)(E, i),
-        O = (0, s.l)({
+        y = (0, s.l)({
             user: E,
             channelId: b,
             guildId: i.guild_id,
             messageId: n.id
         })(v),
-        y = null != (t = m[_]) ? t : null;
-    if (null == y) return null;
-    let j = p.intl.format(y(), {
+        O = null != (t = m[_]) ? t : null;
+    if (null == O) return null;
+    let j = p.intl.format(O(), {
         actorName: h.nick,
         actorHook: x,
         targetName: null == v ? void 0 : v.nick,
-        targetHook: O
+        targetHook: y
     });
     return (0, r.jsx)(c.Z, {
         iconNode: (0, r.jsx)(g, { type: _ }),

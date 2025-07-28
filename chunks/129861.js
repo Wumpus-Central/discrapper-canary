@@ -136,7 +136,7 @@ let v = (e) => {
             I = t.isVerifiedBot(),
             T = f.ZP.getName(t),
             S = i ? E : null != n ? n : T,
-            A = t.isPomelo() || l;
+            A = t.hasUniqueUsername() || l;
         if (A || S !== E) {
             let e = S === E && A && i ? f.ZP.getUserTag(t, { forcePomelo: l }) : S,
                 n = a && e !== '@'.concat(E) ? f.ZP.getUserTag(t) : void 0;

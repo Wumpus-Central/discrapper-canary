@@ -103,10 +103,10 @@ let _ = i.memo(function (e) {
             isMentionLowImportance: j.every((e) => u.default.getIsMentionLowImportance(e)),
             unread: j.some((e) => u.default.hasUnread(e))
         })),
-        Z = i.useCallback(() => {
+        T = i.useCallback(() => {
             a.Z.toggleGuildFolderExpand(O);
         }, [O]),
-        T = i.useCallback(
+        Z = i.useCallback(
             (e) => {
                 (0, o.jW)(e, async () => {
                     let { default: e } = await n.e('52590').then(n.bind(n, 205784));
@@ -135,8 +135,8 @@ let _ = i.memo(function (e) {
             unread: w,
             mediaState: I,
             defaultFolderName: x,
-            onExpandCollapse: Z,
-            onContextMenu: T
+            onExpandCollapse: T,
+            onContextMenu: Z
         })
     );
 });

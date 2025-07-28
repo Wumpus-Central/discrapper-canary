@@ -1,65 +1,63 @@
-(r.d(t, { default: () => S }), r(388685), r(781311));
+(r.d(t, { default: () => k }), r(388685), r(781311));
 var n = r(255367),
-    o = r(73800),
-    a = r(866442),
-    l = r(442837),
-    i = r(755721),
-    s = r(481060),
-    d = r(794433),
-    c = r(185413),
-    u = r(971628),
-    b = r(600164),
+    a = r(73800),
+    o = r(442837),
+    i = r(257465),
+    l = r(369585),
+    s = r(103866),
+    b = r(37148),
+    u = r(794433),
+    d = r(185413),
+    c = r(971628),
     m = r(892880),
     _ = r(51144),
     f = r(480608),
-    x = r(434404),
-    h = r(946724),
-    p = r(130341),
-    g = r(494831),
-    y = r(981631),
+    y = r(434404),
+    p = r(946724),
+    g = r(130341),
+    h = r(494831),
     v = r(71080),
-    k = r(388032),
-    j = r(691);
-function w(e) {
+    w = r(388032),
+    x = r(691);
+function O(e) {
     var t = (function (e, t) {
-        if ('object' !== R(e) || null === e) return e;
+        if ('object' !== S(e) || null === e) return e;
         var r = e[Symbol.toPrimitive];
         if (void 0 !== r) {
             var n = r.call(e, t || 'default');
-            if ('object' !== R(n)) return n;
+            if ('object' !== S(n)) return n;
             throw TypeError('@@toPrimitive must return a primitive value.');
         }
         return ('string' === t ? String : Number)(e);
     })(e, 'string');
-    return 'symbol' === R(t) ? t : String(t);
+    return 'symbol' === S(t) ? t : String(t);
 }
-function R(e) {
+function S(e) {
     return e && 'undefined' != typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e;
 }
-function C(e) {
-    var t;
-    let { onClose: r, roleId: R, guildId: C, onBack: S, isCreateRoleFlow: O, focusSearchAfterReady: M, isReady: L } = e,
-        T = (0, l.e7)([h.Z], () => h.Z.getRole(R), [R]),
-        [N, z] = o.useState(''),
-        [P, B] = o.useState({}),
-        [E, I] = o.useState(!1);
-    o.useEffect(() => {
-        m.Z.requestMembers(C, N.trim().toLowerCase(), p._4);
-    }, [C, N]);
-    let A = o.useCallback((e) => !e.roles.includes(R), [R]),
-        Z = (0, p.lJ)(C, A),
-        Y = o.useMemo(() => Z.filter((e) => (0, p.eg)(N, e)), [N, Z]),
-        q = o.useCallback(async () => {
-            let e = Object.values(P).map((e) => e.row.id);
-            I(!0);
+function k(e) {
+    let { transitionState: t, onClose: r, roleId: S, guildId: k } = e,
+        j = (0, o.e7)([p.Z], () => p.Z.getRole(S), [S]),
+        [C, R] = a.useState(''),
+        [M, L] = a.useState({}),
+        [P, E] = a.useState(!1);
+    a.useEffect(() => {
+        m.Z.requestMembers(k, C.trim().toLowerCase(), g._4);
+    }, [k, C]);
+    let T = a.useCallback((e) => !e.roles.includes(S), [S]),
+        B = (0, g.lJ)(k, T),
+        I = a.useMemo(() => B.filter((e) => (0, g.eg)(C, e)), [C, B]),
+        Z = a.useCallback(async () => {
+            let e = Object.values(M).map((e) => e.row.id);
+            E(!0);
             try {
-                (await x.Z.bulkAddMemberRoles(C, R, e), (0, f.H)(C, R, !1), r());
+                (await y.Z.bulkAddMemberRoles(k, S, e), (0, f.H)(k, S, !1), r());
             } catch (e) {
-                I(!1);
+                E(!1);
             }
-        }, [C, R, P, r]),
-        U = o.useCallback((e) => {
-            B((t) => {
+        }, [k, S, M, r]),
+        q = a.useCallback((e) => {
+            L((t) => {
                 let r = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var r = null != arguments[t] ? arguments[t] : {},
@@ -85,13 +83,13 @@ function C(e) {
                         }
                         return e;
                     })({}, t),
-                    n = (0, u.G)(e);
+                    n = (0, c.G)(e);
                 return (
                     n in r
                         ? delete r[n]
                         : (r[n] = {
                               display: {
-                                  type: d.F.MEMBER,
+                                  type: u.F.MEMBER,
                                   label: e.name,
                                   avatar: e.avatarURL
                               },
@@ -101,33 +99,33 @@ function C(e) {
                 );
             });
         }, []),
-        H = o.useCallback((e) => {
-            B((t) => {
+        U = a.useCallback((e) => {
+            L((t) => {
                 let { [e]: r } = t;
                 return (function (e, t) {
                     if (null == e) return {};
                     var r,
                         n,
-                        o = (function (e, t) {
+                        a = (function (e, t) {
                             if (null == e) return {};
                             var r,
                                 n,
-                                o = {},
-                                a = Object.keys(e);
-                            for (n = 0; n < a.length; n++) ((r = a[n]), t.indexOf(r) >= 0 || (o[r] = e[r]));
-                            return o;
+                                a = {},
+                                o = Object.keys(e);
+                            for (n = 0; n < o.length; n++) ((r = o[n]), t.indexOf(r) >= 0 || (a[r] = e[r]));
+                            return a;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
-                        var a = Object.getOwnPropertySymbols(e);
-                        for (n = 0; n < a.length; n++) ((r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]));
+                        var o = Object.getOwnPropertySymbols(e);
+                        for (n = 0; n < o.length; n++) ((r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]));
                     }
-                    return o;
-                })(t, [e].map(w));
+                    return a;
+                })(t, [e].map(O));
             });
         }, []),
-        K = o.useMemo(
+        A = a.useMemo(
             () =>
-                Y.map((e) => {
+                I.map((e) => {
                     var t;
                     let r = _.ZP.getUserTag(e.user);
                     return {
@@ -143,111 +141,54 @@ function C(e) {
                         key: e.id
                     };
                 }),
-            [Y]
+            [I]
         ),
-        V = o.useMemo(() => Object.keys(P).length, [P]);
-    return (0, n.jsxs)(n.Fragment, {
-        children: [
-            (0, n.jsxs)(s.xBx, {
-                className: j.header,
-                separator: !1,
-                direction: b.Z.Direction.VERTICAL,
-                children: [
-                    (0, n.jsx)(s.X6q, {
-                        variant: 'heading-xl/semibold',
-                        children: k.intl.string(k.t['ZYOK4+'])
-                    }),
-                    O
-                        ? (0, n.jsx)(s.Text, {
-                              className: j.subtitle,
-                              color: 'text-default',
-                              variant: 'text-md/normal',
-                              children: k.intl.string(k.t.AMsxa2)
-                          })
-                        : (0, n.jsxs)('div', {
-                              className: j.roleContainer,
-                              children: [
-                                  (0, n.jsx)(s.lZ8, {
-                                      size: 'xs',
-                                      color: null != (t = null == T ? void 0 : T.colorString) ? t : (0, a.Rf)(y.p6O)
-                                  }),
-                                  (0, n.jsx)(s.Text, {
-                                      className: j.roleName,
-                                      color: 'text-default',
-                                      variant: 'text-md/normal',
-                                      children: null == T ? void 0 : T.name
-                                  })
-                              ]
-                          })
-                ]
-            }),
-            (0, n.jsx)(c.t, {
-                listClassName: j.list,
-                pendingAdditions: P,
-                query: N,
-                onQueryChange: z,
-                onClickRow: U,
-                onRemovePendingAddition: H,
-                roles: [],
-                members: K,
-                placeholderText: k.intl.string(k.t.vMiCaW),
-                renderEmptyText: (e) => k.intl.format(k.t.eq8a8f, { query: e }),
-                focusSearchAfterReady: M,
-                isReady: L,
-                description: k.intl.formatToPlainString(k.t['3OxP4u'], { numMembers: g.ey })
-            }),
-            (0, n.jsxs)(s.mzw, {
-                className: j.footer,
-                children: [
-                    (0, n.jsxs)('div', {
-                        className: j.buttonsRight,
-                        children: [
-                            O && 0 === V
-                                ? (0, n.jsx)(s.zxk, {
-                                      variant: 'secondary',
-                                      text: k.intl.string(k.t.CJm5V1),
-                                      onClick: r
-                                  })
-                                : (0, n.jsx)(s.zxk, {
-                                      variant: 'primary',
-                                      text: k.intl.string(k.t.OYkgVl),
-                                      onClick: q,
-                                      loading: E,
-                                      disabled: 0 === V || V > g.ey
-                                  }),
-                            !O &&
-                                (0, n.jsx)(s.zxk, {
-                                    variant: 'secondary',
-                                    size: 'sm',
-                                    text: k.intl.string(k.t['ETE/oK']),
-                                    onClick: r
-                                })
-                        ]
-                    }),
-                    null != S &&
-                        (0, n.jsx)(i.zx, {
-                            color: i.zx.Colors.PRIMARY,
-                            look: i.zx.Looks.LINK,
-                            size: i.zx.Sizes.TINY,
-                            onClick: S,
-                            className: j.backButton,
-                            children: k.intl.string(k.t['13/7kZ'])
-                        })
-                ]
-            })
-        ]
-    });
-}
-function S(e) {
-    let { transitionState: t, onClose: r, roleId: o, guildId: a } = e;
-    return (0, n.jsx)(s.Y0X, {
+        H = a.useMemo(() => Object.keys(M).length, [M]),
+        N = [
+            {
+                text: w.intl.string(w.t['ETE/oK']),
+                variant: 'secondary',
+                onClick: r
+            },
+            {
+                text: w.intl.string(w.t.OYkgVl),
+                variant: 'primary',
+                onClick: Z,
+                loading: P,
+                disabled: 0 === H || H > h.ey
+            }
+        ];
+    return (0, n.jsxs)(i.I, {
+        onClose: r,
         transitionState: t,
-        size: s.CgR.SMALL,
-        parentComponent: 'AddRoleMembersModal',
-        children: (0, n.jsx)(C, {
-            onClose: r,
-            roleId: o,
-            guildId: a
-        })
+        children: [
+            (0, n.jsx)(b.x, {
+                title: w.intl.string(w.t['ZYOK4+']),
+                subtitle:
+                    null != j
+                        ? w.intl.format(w.t['qP+nub'], {
+                              numMembers: h.ey,
+                              roleName: j.name
+                          })
+                        : w.intl.format(w.t['3OxP4u'], { numMembers: h.ey }),
+                alignCenter: !0,
+                titleTextVariant: 'heading-xl/semibold'
+            }),
+            (0, n.jsx)(s.f, {
+                children: (0, n.jsx)(d.t, {
+                    listClassName: x.list,
+                    pendingAdditions: M,
+                    query: C,
+                    onQueryChange: R,
+                    onClickRow: q,
+                    onRemovePendingAddition: U,
+                    roles: [],
+                    members: A,
+                    placeholderText: w.intl.string(w.t.vMiCaW),
+                    renderEmptyText: (e) => w.intl.format(w.t.eq8a8f, { query: e })
+                })
+            }),
+            (0, n.jsx)(l.G, { actions: N })
+        ]
     });
 }

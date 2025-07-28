@@ -25,7 +25,7 @@ function m() {
                     text: d.intl.string(d.t.L99HQk),
                     children: (e) =>
                         (0, i.jsx)(
-                            s.P4T,
+                            s.Mgn,
                             (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},

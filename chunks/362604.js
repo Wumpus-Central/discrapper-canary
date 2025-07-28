@@ -19,10 +19,10 @@ var r = n(255367),
 function C(e) {
     let { message: t, channel: l, compact: C } = e,
         x = (0, o.Wu)([p.Z], () => Array.from(p.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
-        [v, O] = i.useState(null);
+        [v, y] = i.useState(null);
     return (i.useEffect(() => {
         let e = setInterval(() => {
-            x.length > 0 && O(x[Math.floor(Math.random() * x.length)]);
+            x.length > 0 && y(x[Math.floor(Math.random() * x.length)]);
         }, 500);
         return () => clearInterval(e);
     }, [x]),

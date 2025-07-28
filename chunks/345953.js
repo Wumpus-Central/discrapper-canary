@@ -153,10 +153,10 @@ let L = i().debounce(() => {
 function x(e, t, n) {
     ((0, h.RF)(e, t, { volume: n }), L());
 }
-function M(e, t, n) {
+function k(e, t, n) {
     ((0, h.RF)(e, t, { muted: n }), L.cancel(), U());
 }
-function k(e, t, n) {
+function M(e, t, n) {
     ((0, h.RF)(e, t, { soundboardMuted: n }), L.cancel(), U());
 }
 let j = i().debounce(c.On, 500, { maxWait: 500 });
@@ -191,11 +191,11 @@ function G(e) {
 }
 function B(e) {
     let { context: t, userId: n } = e;
-    n !== f.default.getId() && M(t, n, _.Z.isLocalMute(n, t));
+    n !== f.default.getId() && k(t, n, _.Z.isLocalMute(n, t));
 }
 function V(e) {
     let { context: t, userId: n } = e;
-    n !== f.default.getId() && k(t, n, d.Z.isLocalSoundboardMuted(n));
+    n !== f.default.getId() && M(t, n, d.Z.isLocalSoundboardMuted(n));
 }
 class F extends l.Z {
     constructor(...e) {

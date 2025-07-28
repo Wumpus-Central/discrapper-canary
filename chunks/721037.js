@@ -50,8 +50,8 @@ let L = {
         minWidth: P.Rv[P.cL.VIDEO],
         maxWidth: P.$i[P.cL.VIDEO]
     },
-    M = [];
-class k extends i.PureComponent {
+    k = [];
+class M extends i.PureComponent {
     render() {
         let { selectedPIPWindow: e, pipWindows: t, pipWidth: n, maxX: i, maxY: a, theme: o, dockedRect: s, appContext: l, roundCorners: c, getDockedRectPositionY: u } = this.props;
         return (0, r.jsxs)(g._X, {
@@ -94,9 +94,9 @@ let j = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z],
         D = b.Z.getWindowOpen(C.KJ3.ACTIVITY_POPOUT),
         L = s.ZP.getCurrentEmbeddedActivity(),
         x = (0, c.p)(null == L ? void 0 : L.location),
-        k = null != L && !(0, u.Z)(x, I.Z, S.Z),
+        M = null != L && !(0, u.Z)(x, I.Z, S.Z),
         j = s.ZP.getActivityPanelMode(),
-        U = k && j === R.Ez.PANEL,
+        U = M && j === R.Ez.PANEL,
         G = null != L && null != x && (null == (t = f.Z.getSelectedParticipant(x)) ? void 0 : t.type) === P.fO.ACTIVITY,
         B = p.Z.getConnectedFrame(),
         V = p.Z.getFrameLayoutMode() === w.U.FOCUSED,
@@ -121,7 +121,7 @@ let j = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z],
             })
                 ? e - _.q8
                 : e;
-    h = (null != L && D) || (F && k) ? null : F || !v || k ? (null != L && U ? (null != (n = T.Z.pipActivityWindow) ? n : T.Z.pipVideoWindow) : null != B && V ? (null != (i = null != (r = T.Z.pipFrameWindow) ? r : T.Z.pipVideoWindow) ? i : T.Z.pipActivityWindow) : null != (o = null != (a = T.Z.pipVideoWindow) ? a : T.Z.pipActivityWindow) ? o : T.Z.pipFrameWindow) : null;
+    h = (null != L && D) || (F && M) ? null : F || !v || M ? (null != L && U ? (null != (n = T.Z.pipActivityWindow) ? n : T.Z.pipVideoWindow) : null != B && V ? (null != (i = null != (r = T.Z.pipFrameWindow) ? r : T.Z.pipVideoWindow) ? i : T.Z.pipActivityWindow) : null != (o = null != (a = T.Z.pipVideoWindow) ? a : T.Z.pipActivityWindow) ? o : T.Z.pipFrameWindow) : null;
     let z = Array.from(T.Z.pipWindows.values()),
         q = T.Z.pipWidth(P.cL.VIDEO),
         X = z.find((e) => e.component === C.NYg.VIDEO),
@@ -135,7 +135,7 @@ let j = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z],
         ei = !en && null != h && ee && et;
     return {
         selectedPIPWindow: h,
-        pipWindows: 0 === Q.length ? M : Q,
+        pipWindows: 0 === Q.length ? k : Q,
         pipWidth: q,
         maxX: Y.width - (ei ? J : 0),
         maxY: Y.height,
@@ -145,4 +145,4 @@ let j = a.ZP.connectStores([b.Z, s.ZP, A.Z, y.Z, I.Z, S.Z, T.Z, f.Z, O.ZP, p.Z],
         appContext: W,
         roundCorners: !er
     };
-})(k);
+})(M);

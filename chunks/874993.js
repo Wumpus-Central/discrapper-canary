@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    s = n(692547),
-    a = n(481060),
+    a = n(692547),
+    s = n(481060),
     o = n(999382),
     c = n(279542),
     d = n(823379),
@@ -11,8 +11,8 @@ var r = n(255367),
     m = n(426563),
     g = n(727072),
     p = n(85960),
-    f = n(577330),
-    h = n(65912),
+    h = n(577330),
+    f = n(65912),
     x = n(51248),
     b = n(546513),
     j = n(572456),
@@ -23,7 +23,7 @@ var r = n(255367),
 function C(e) {
     var t, n;
     let { guildId: C, setPreventNavigation: N = () => {} } = e,
-        { editingRule: I, setEditingRule: E } = (0, h.V)(),
+        { editingRule: I, setEditingRule: E } = (0, f.V)(),
         { guild: S, subsection: T } = (0, l.cj)([o.Z], () => o.Z.getProps()),
         P = null != (n = null != (t = null == S ? void 0 : S.id) ? t : C) ? n : _.lds,
         w = null != I,
@@ -96,24 +96,24 @@ function C(e) {
                     );
                 })
             });
-    return (0, r.jsxs)(a.hjN, {
+    return (0, r.jsxs)(s.hjN, {
         title: O.intl.string(O.t.uRelg4),
         tag: 'h1',
         children: [
             (0, r.jsxs)('div', {
                 className: y.descriptionContainer,
                 children: [
-                    (0, r.jsxs)(a.hjN, {
+                    (0, r.jsxs)(s.hjN, {
                         tag: 'h3',
                         className: y.description,
                         titleClassName: y.descriptionHeader,
                         children: [
-                            (0, r.jsx)(a.Text, {
+                            (0, r.jsx)(s.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-secondary',
                                 children: O.intl.string(O.t.EwuSCQ)
                             }),
-                            (0, r.jsx)(a.Text, {
+                            (0, r.jsx)(s.Text, {
                                 variant: 'text-sm/medium',
                                 className: y.helpUrl,
                                 children: O.intl.format(O.t['B+sgGh'], { helpUrl: u.Z.getArticleURL(_.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
@@ -123,28 +123,28 @@ function C(e) {
                     (0, r.jsxs)('div', {
                         className: y.descriptionAvatarContainer,
                         children: [
-                            (0, r.jsx)(a.qEK, {
+                            (0, r.jsx)(s.qEK, {
                                 src: (0, m.j)(),
-                                size: a.EFr.SIZE_80,
+                                size: s.EFr.SIZE_80,
                                 'aria-label': O.intl.string(O.t.hG1StL)
                             }),
-                            (0, r.jsx)(a.IGR, {
+                            (0, r.jsx)(s.IGR, {
                                 text: (0, r.jsxs)('div', {
                                     className: y.automodBadgeText,
                                     children: [
-                                        (0, r.jsx)(a.sV5, {
+                                        (0, r.jsx)(s.sV5, {
                                             size: 'xxs',
                                             color: 'currentColor',
                                             className: y.checkmarkIcon
                                         }),
-                                        (0, r.jsx)(a.Text, {
+                                        (0, r.jsx)(s.Text, {
                                             variant: 'text-xs/bold',
                                             className: y.automodText,
                                             children: O.intl.string(O.t.hG1StL)
                                         })
                                     ]
                                 }),
-                                color: s.Z.unsafe_rawColors.BRAND_500.css,
+                                color: a.Z.unsafe_rawColors.BRAND_500.css,
                                 className: y.textBadge
                             })
                         ]
@@ -152,16 +152,16 @@ function C(e) {
                 ]
             }),
             R
-                ? (0, r.jsx)(f.Z, {})
+                ? (0, r.jsx)(h.Z, {})
                 : Object.entries(U).map((e) => {
                       let [t, n] = e;
                       if (0 === n.length) return (0, r.jsx)(i.Fragment, {}, t);
                       let l =
                           null != D[t]
-                              ? (0, r.jsx)(a.hjN, {
+                              ? (0, r.jsx)(s.hjN, {
                                     tag: 'h3',
                                     className: y.categoryHeader,
-                                    children: (0, r.jsx)(a.Text, {
+                                    children: (0, r.jsx)(s.Text, {
                                         variant: 'text-lg/normal',
                                         color: 'header-primary',
                                         children: D[t]

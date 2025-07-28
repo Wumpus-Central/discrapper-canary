@@ -125,13 +125,13 @@ function b(e) {
 }
 function E(e) {
     let { product: t, guildId: n, showEditProduct: l, showUnpublishProduct: a, showTestDownload: s, showCopyLink: c, showDeleteProduct: u, showReportProduct: d, onEditProduct: p, onUnpublishProduct: m, onDeleteProduct: E, onCopyProductLink: C, onTestDownload: x, onReportProduct: v } = e,
-        O = i.useRef(null);
+        y = i.useRef(null);
     return (0, r.jsx)('div', {
         onClick: (e) => {
             e.stopPropagation();
         },
         children: (0, r.jsx)(o.yRy, {
-            targetElementRef: O,
+            targetElementRef: y,
             position: 'right',
             align: 'top',
             spacing: -8,
@@ -161,7 +161,7 @@ function E(e) {
                 return (0, r.jsx)(
                     o.P3F,
                     h(_({}, e), {
-                        innerRef: O,
+                        innerRef: y,
                         'aria-label': f.intl.formatToPlainString(f.t.RtqjeH, { productName: t.name }),
                         'aria-haspopup': 'listbox',
                         'aria-expanded': i,
@@ -179,14 +179,14 @@ function E(e) {
     });
 }
 function C(e) {
-    let { product: t, guildId: n, onEditProduct: i, onUnpublishProduct: l, onDeleteProduct: C, onCopyProductLink: x, onTestDownload: v, disabled: O = !1 } = e,
-        y = (0, c.U)(t, 600),
+    let { product: t, guildId: n, onEditProduct: i, onUnpublishProduct: l, onDeleteProduct: C, onCopyProductLink: x, onTestDownload: v, disabled: y = !1 } = e,
+        O = (0, c.U)(t, 600),
         j = null !== t.price_tier ? (0, u.T4)(t.price_tier, m.pK.USD) : void 0,
         I = (0, d.C)(t);
     return (0, r.jsxs)(o.kL8, {
         tag: 'article',
-        className: a()(g.productCardClickable, g.productCard, { [g.disabled]: O }),
-        onClick: O ? void 0 : i,
+        className: a()(g.productCardClickable, g.productCard, { [g.disabled]: y }),
+        onClick: y ? void 0 : i,
         onContextMenu: function (e) {
             (0, s.jW)(e, () =>
                 Promise.resolve((e) =>
@@ -217,7 +217,7 @@ function C(e) {
         children: [
             (0, r.jsx)('img', {
                 alt: '',
-                src: y,
+                src: O,
                 className: g.productThumbnail
             }),
             (0, r.jsxs)('div', {
@@ -259,7 +259,7 @@ function C(e) {
                             t.published ? (0, r.jsx)(p.t, {}) : (0, r.jsx)(p.b, {})
                         ]
                     }),
-                    !O &&
+                    !y &&
                         (0, r.jsx)(E, {
                             product: t,
                             guildId: n,

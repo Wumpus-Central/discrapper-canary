@@ -1,33 +1,29 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var i = n(255367);
 n(73800);
 var r = n(481060),
-    s = n(304480),
-    a = n(104494),
-    l = n(639119),
-    o = n(388032),
-    c = n(372461);
-let d = (e) => {
-        let t,
-            { trialOffer: n, discountOffer: i, referralProgramBadgeBannerExperimentEnabled: r } = e;
-        return (null != n ? (t = r ? o.intl.string(o.t.gtNqJS) : o.intl.string(o.t.IBYG5e)) : null != i && (t = o.intl.formatToPlainString(o.t.iiLbvr, { percent: i.discount.amount })), t);
+    s = n(104494),
+    a = n(639119),
+    l = n(388032),
+    o = n(372461);
+let c = (e) => {
+        let { trialOffer: t, discountOffer: n } = e;
+        return null != t ? l.intl.string(l.t.gtNqJS) : null != n ? l.intl.formatToPlainString(l.t.iiLbvr, { percent: n.discount.amount }) : void 0;
     },
-    u = (e) => {
+    d = (e) => {
         let { enablePremiumBrandRefresh: t = !1 } = e,
-            n = (0, l.N)(),
-            o = d({
-                trialOffer: n,
-                discountOffer: (0, a.Ng)(),
-                referralProgramBadgeBannerExperimentEnabled: !0 === s.Z.useExperiment({ location: 'OfferPill' }).enabled
+            n = c({
+                trialOffer: (0, a.N)(),
+                discountOffer: (0, s.Ng)()
             });
-        return null == o
+        return null == n
             ? null
             : (0, i.jsx)('div', {
-                  className: t ? c.premiumBrandRefreshOfferPill : c.offerPill,
+                  className: t ? o.premiumBrandRefreshOfferPill : o.offerPill,
                   children: (0, i.jsx)(r.Text, {
                       variant: t ? 'text-sm/bold' : 'text-xs/bold',
                       color: 'always-white',
-                      children: o
+                      children: n
                   })
               });
     };

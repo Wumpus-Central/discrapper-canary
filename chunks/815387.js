@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(29887),
     x = n(533694),
     v = n(345114),
-    O = n(924301),
-    y = n(225890),
+    y = n(924301),
+    O = n(225890),
     j = n(434404),
     I = n(507435),
     S = n(504733),
@@ -39,8 +39,8 @@ var r = n(255367),
     F = n(430824),
     B = n(496675),
     G = n(158776),
-    V = n(944486),
-    H = n(594174),
+    H = n(944486),
+    V = n(594174),
     z = n(979651),
     W = n(585483),
     K = n(5192),
@@ -73,8 +73,8 @@ var r = n(255367),
     eC = n(29338),
     ex = n(461135),
     ev = n(296571),
-    eO = n(587737),
-    ey = n(482239),
+    ey = n(587737),
+    eO = n(482239),
     ej = n(328749),
     eI = n(4305),
     eS = n(910548),
@@ -160,7 +160,7 @@ let eR = Object.freeze({
             let { message: t, channel: n, compact: i } = e,
                 { author: a } = t,
                 o = t.getChannelId(),
-                s = (0, l.e7)([H.default], () => H.default.getUser(t.mentions[0]), [t]),
+                s = (0, l.e7)([V.default], () => V.default.getUser(t.mentions[0]), [t]),
                 c = K.ZP.getName(null, o, s),
                 u = (0, et.l)({
                     user: a,
@@ -175,7 +175,7 @@ let eR = Object.freeze({
                     messageId: t.id
                 });
             return n.isThread()
-                ? (0, r.jsx)(eO.Z, {
+                ? (0, r.jsx)(ey.Z, {
                       message: t,
                       channel: n,
                       compact: i,
@@ -195,7 +195,7 @@ let eR = Object.freeze({
             let { message: t, channel: n, compact: i } = e,
                 { author: a } = t,
                 o = t.getChannelId(),
-                s = (0, l.e7)([H.default], () => H.default.getUser(t.mentions[0]), [t]),
+                s = (0, l.e7)([V.default], () => V.default.getUser(t.mentions[0]), [t]),
                 c = (0, et.l)({
                     user: a,
                     channelId: o,
@@ -209,7 +209,7 @@ let eR = Object.freeze({
                     messageId: t.id
                 });
             return n.isThread()
-                ? (0, r.jsx)(ey.Z, {
+                ? (0, r.jsx)(eO.Z, {
                       message: t,
                       channel: n,
                       compact: i,
@@ -295,7 +295,7 @@ let eR = Object.freeze({
                 { author: a } = t,
                 o = t.getChannelId(),
                 s = i.useCallback(() => {
-                    if (V.Z.getChannelId() !== o) {
+                    if (H.Z.getChannelId() !== o) {
                         let e = U.Z.getChannel(o);
                         null != e && (0, P.XU)(e.guild_id, e.id);
                     }
@@ -544,7 +544,7 @@ let eR = Object.freeze({
                     guildId: n.guild_id,
                     messageId: t.id
                 }),
-                o = (0, l.e7)([O.ZP], () => O.ZP.getActiveEventByChannel(n.id), [n.id]);
+                o = (0, l.e7)([y.ZP], () => y.ZP.getActiveEventByChannel(n.id), [n.id]);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(eC.Z, {
@@ -552,7 +552,7 @@ let eR = Object.freeze({
                         compact: i,
                         usernameHook: a
                     }),
-                    null != o && o.name === t.content ? (0, r.jsx)(y.Z, { code: ''.concat(n.guild_id, '-').concat(o.id) }) : null
+                    null != o && o.name === t.content ? (0, r.jsx)(O.Z, { code: ''.concat(n.guild_id, '-').concat(o.id) }) : null
                 ]
             });
         },
@@ -673,7 +673,7 @@ let eR = Object.freeze({
         [eT.uaV.GIFTING_PROMPT]: function (e) {
             let { message: t, channel: n } = e,
                 i = t.giftingPrompt,
-                a = (0, l.e7)([H.default], () => H.default.getUser(null == i ? void 0 : i.recipientUserId));
+                a = (0, l.e7)([V.default], () => V.default.getUser(null == i ? void 0 : i.recipientUserId));
             return null == i || null == a
                 ? null
                 : (0, r.jsx)(Q.Z, {

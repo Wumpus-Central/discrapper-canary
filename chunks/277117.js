@@ -99,7 +99,7 @@ function w(e) {
                     className: A.card,
                     children: (0, r.jsx)(O.Z, {
                         heading: N.intl.string(N.t.Iyka0d),
-                        headingIcon: (0, r.jsx)(i.P4T, {
+                        headingIcon: (0, r.jsx)(i.Mgn, {
                             size: 'xxs',
                             color: a.Z.colors.HEADER_PRIMARY
                         }),

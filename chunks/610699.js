@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(835473),
     x = n(471445),
     v = n(111028),
-    O = n(592125),
-    y = n(430824),
+    y = n(592125),
+    O = n(430824),
     j = n(496675),
     I = n(594174),
     S = n(626135),
@@ -133,7 +133,7 @@ function k(e) {
                 invite_inviter_id: null == (e = a.inviter) ? void 0 : e.id
             });
         }, [null == (t = a.inviter) ? void 0 : t.id, b.id]),
-        x = (0, c.e7)([y.Z], () => (null != a.guild ? y.Z.getGuild(a.guild.id) : null), [a]),
+        x = (0, c.e7)([O.Z], () => (null != a.guild ? O.Z.getGuild(a.guild.id) : null), [a]),
         v = (0, C.Z)([b.id])[0],
         T = (0, c.e7)([p.ZP], () => {
             var e;
@@ -146,7 +146,7 @@ function k(e) {
                 return b.id === t;
             });
         }),
-        L = O.Z.getChannel(null == (n = a.channel) ? void 0 : n.id),
+        L = y.Z.getChannel(null == (n = a.channel) ? void 0 : n.id),
         D = (0, c.e7)([j.Z], () => null != L && j.Z.can(A.Plq.USE_EMBEDDED_ACTIVITIES, L), [L]),
         { analyticsLocations: k } = (0, f.ZP)(m.Z.INVITE_EMBED),
         U = (0, c.Wu)(
@@ -177,27 +177,27 @@ function k(e) {
                 }));
         }, [a, o, k, u]),
         G = a.state === A.r2o.ACCEPTING,
-        V = null != x;
+        H = null != x;
     if (null == x) {
         if (null == a.guild) return (0, r.jsx)(P.Z, {});
         x = (0, N.Qs)(a.guild);
     }
-    let H = (V && !D) || (V && T);
-    return (V && T && (l = Z.intl.string(Z.t.wJNK8P)), D || (l = Z.intl.string(Z.t.hHGrW1)), null == a.code || '' === a.code || null == v)
+    let V = (H && !D) || (H && T);
+    return (H && T && (l = Z.intl.string(Z.t.wJNK8P)), D || (l = Z.intl.string(Z.t.hHGrW1)), null == a.code || '' === a.code || null == v)
         ? null
         : (0, r.jsx)(f.Gt, {
               value: k,
               children: (0, r.jsx)(M, {
                   app: v,
                   activityUsers: F,
-                  isMember: V,
+                  isMember: H,
                   channel: L,
                   guild: x,
                   members: g,
                   membersOnline: _,
                   isActivityActive: R,
                   submitting: G,
-                  isDisabled: H,
+                  isDisabled: V,
                   tooltip: l,
                   handleAcceptInvite: B,
                   onView: E
@@ -207,11 +207,11 @@ function k(e) {
 function M(e) {
     var t, n;
     let { app: l, activityUsers: a, isMember: o, channel: s, guild: c, members: u, membersOnline: d, isActivityActive: p, submitting: m, isDisabled: f, tooltip: C, handleAcceptInvite: x, onView: v } = e,
-        { bot: O, icon: y } = l,
+        { bot: y, icon: O } = l,
         j = T.ZP.getApplicationIconURL({
             id: l.id,
-            icon: y,
-            bot: O
+            icon: O,
+            bot: y
         }),
         I = (0, E.G)(l),
         S = (0, b.E)(l),

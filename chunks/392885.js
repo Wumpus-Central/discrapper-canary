@@ -1,9 +1,9 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r,
     i,
     l,
-    s = n(442837),
-    a = n(570140),
+    a = n(442837),
+    s = n(570140),
     o = n(999382),
     c = n(740903),
     d = n(981631);
@@ -29,7 +29,7 @@ function g(e) {
             u = c.u.OVERVIEW;
     }
 }
-class p extends (l = s.ZP.Store) {
+class p extends (l = a.ZP.Store) {
     getCurrentPage() {
         return u;
     }
@@ -43,7 +43,7 @@ class p extends (l = s.ZP.Store) {
               writable: !0
           })
         : (p[r] = i));
-let f = new p(a.Z, {
+let h = new p(s.Z, {
     GUILD_SETTINGS_INIT: function () {
         if (o.Z.getGuildId() === m) return !1;
         m = o.Z.getGuildId();

@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(461762),
     L = n(680783),
     x = n(981631),
-    M = n(921944),
-    k = n(474936),
+    k = n(921944),
+    M = n(474936),
     j = n(388032),
     U = n(874577);
 function G(e, t, n) {
@@ -364,7 +364,7 @@ function $() {
                     textOverride: j.intl.string(j.t.JST6jo),
                     textClassName: U.getNitroButtonText
                 },
-                subscriptionTier: k.Si.TIER_2,
+                subscriptionTier: M.Si.TIER_2,
                 showGradient: !0,
                 color: f.Tt.BRAND,
                 size: f.zx.Sizes.MEDIUM
@@ -377,7 +377,7 @@ let ee = function (e) {
         { analyticsLocations: l } = (0, m.ZP)(h.Z.CHAT_WALLPAPER_PICKER),
         { activePickerChannelId: c, closePicker: d, setPreviewWallpaperId: f } = (0, A.B)(),
         g = (0, L.Z)(c),
-        E = (0, O.m)(k.p9.TIER_2),
+        E = (0, O.m)(M.p9.TIER_2),
         [b, y] = i.useState(!1),
         v = (0, C.e)(b),
         D = (0, w.u)();
@@ -403,13 +403,13 @@ let ee = function (e) {
         }),
         q = i.useCallback(
             function () {
-                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : M.L.USER_DISMISS;
+                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : k.L.USER_DISMISS;
                 ((null == s ? void 0 : s.markDismissed) != null && s.markDismissed(e), d());
             },
             [d, s]
         );
     (0, p.ZP)(() => () => {
-        q(M.L.INDIRECT_ACTION);
+        q(k.L.INDIRECT_ACTION);
     });
     let ee = i.useCallback(() => {
             if (null == c || null == g || void 0 === g.wallpaperId) return;

@@ -46,7 +46,7 @@ function y(e) {
         onClick: w,
         onContextMenu: (e) => {
             (0, o.jW)(e, async () => {
-                let { default: e } = await Promise.all([r.e('79695'), r.e('69220'), r.e('70686')]).then(r.bind(r, 881351));
+                let { default: e } = await Promise.all([r.e('70274'), r.e('79695'), r.e('69220'), r.e('70686')]).then(r.bind(r, 881351));
                 return (r) => {
                     var i, l;
                     return (0, n.jsx)(

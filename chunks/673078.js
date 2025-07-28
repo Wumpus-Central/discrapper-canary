@@ -27,7 +27,7 @@ function m(t) {
                       variant: 'text-md/medium',
                       color: 'text-default',
                       children: [
-                          (0, n.jsx)(a.P4T, {
+                          (0, n.jsx)(a.Mgn, {
                               size: 'sm',
                               color: 'currentColor'
                           }),

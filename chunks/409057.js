@@ -32,8 +32,8 @@ var i = n(120356),
     D = n(670451),
     L = n(881530),
     x = n(228168),
-    M = n(981631),
-    k = n(701488),
+    k = n(981631),
+    M = n(701488),
     j = n(388032),
     U = n(227832);
 function G(e, t, n) {
@@ -214,7 +214,7 @@ function Z(e) {
         },
         el = () => {
             var e, t, n, a, o, s, l, u;
-            if (i.type === M.IIU.WATCHING) return null;
+            if (i.type === k.IIU.WATCHING) return null;
             if ((0, c.Z)(i)) return ec();
             if ((0, b.dS)(i) && (null == (e = i.party) ? void 0 : e.size) != null && (null == (t = i.party) ? void 0 : t.size.length) >= 2) {
                 let e = j.intl.formatToPlainString(j.t['JC/3x8'], {
@@ -238,7 +238,7 @@ function Z(e) {
         },
         ec = () => {
             var e, t, n, a;
-            return (null == (e = i.party) ? void 0 : e.size) == null && i.application_id === k.Zc
+            return (null == (e = i.party) ? void 0 : e.size) == null && i.application_id === M.Zc
                 ? (0, r.jsxs)('div', {
                       className: U.gameState,
                       children: [

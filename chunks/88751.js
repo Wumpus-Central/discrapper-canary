@@ -1,4 +1,4 @@
-(n.d(t, { ZP: () => M }), n(388685));
+(n.d(t, { ZP: () => k }), n(388685));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -41,7 +41,7 @@ function O(e, t, n) {
         user: e,
         context: t,
         overwrites: n.permissionOverwrites,
-        roles: u.Z.getRoles(t.id)
+        roles: u.Z.getUnsafeMutableRoles(t.id)
     });
 }
 function v(e, t) {
@@ -142,7 +142,7 @@ class x extends (r = o.ZP.Store) {
     }
 }
 g(x, 'displayName', 'StageChannelRoleStore');
-let M = new x(s.Z, {
+let k = new x(s.Z, {
     CHANNEL_UPDATES: N,
     CONNECTION_OPEN: D,
     GUILD_MEMBER_REMOVE: R,

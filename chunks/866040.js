@@ -74,7 +74,7 @@ function m(e) {
                     nick: u.ZP.getNickname(null == i ? void 0 : i.guild_id, null == i ? void 0 : i.id, e),
                     onContextMenu: (t) => {
                         (0, o.jW)(t, async () => {
-                            let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('70686')]).then(n.bind(n, 881351));
+                            let { default: t } = await Promise.all([n.e('70274'), n.e('79695'), n.e('69220'), n.e('70686')]).then(n.bind(n, 881351));
                             return (n) => (0, r.jsx)(t, h(_({}, n), { user: e }));
                         });
                     }

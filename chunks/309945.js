@@ -18,18 +18,18 @@ function _(e) {
             return null != (n = null == (e = d.Z.getStateForGuild(t)) ? void 0 : e.appliedBoosts) ? n : 0;
         }),
         x = (0, a.e7)([u.Z], () => u.Z.getAppliedGuildBoostsForGuild(t), [t]),
-        v =
+        g =
             _ -
             o.useMemo(() => {
                 var e, t, n;
                 return null != (n = null == x || null == (t = x.filter) || null == (e = t.call(x, (e) => !e.ended && null == e.endsAt)) ? void 0 : e.length) ? n : 0;
             }, [x]);
-    if (v <= 0) return null;
-    let b = n.some((e) => e.skuId === i.A$);
+    if (g <= 0) return null;
+    let v = n.some((e) => e.skuId === i.A$);
     return (0, r.jsxs)('div', {
         className: f.container,
         children: [
-            (0, r.jsx)(l.P4T, {
+            (0, r.jsx)(l.Mgn, {
                 color: c.Z.colors.TEXT_FEEDBACK_WARNING,
                 className: f.icon
             }),
@@ -42,10 +42,10 @@ function _(e) {
                 variant: 'text-sm/medium',
                 children: [
                     m.intl.formatToPlainString(p.default.iAaAiI, {
-                        boostCount: v,
+                        boostCount: g,
                         perksString: n.map((e) => e.title).join(', ')
                     }),
-                    b &&
+                    v &&
                         (0, r.jsx)(s.xv, {
                             variant: 'text-sm/medium',
                             color: 'text-feedback-warning',

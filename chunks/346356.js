@@ -1,4 +1,4 @@
-(n.d(t, { H: () => T }), n(388685));
+(n.d(t, { H: () => Z }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(636977),
@@ -56,10 +56,10 @@ let P = (e) => {
                         questId: x.V6
                     }));
             }, [v]),
-            Z = i.useCallback(() => {
+            T = i.useCallback(() => {
                 v(E.L.USER_DISMISS);
             }, [v]),
-            T = i.useCallback(() => {
+            Z = i.useCallback(() => {
                 (v(E.L.TAKE_ACTION),
                     (0, b.Y)({
                         pageType: j.ZY5.GUILD_LIST,
@@ -74,13 +74,13 @@ let P = (e) => {
             {
                 shouldShow: I,
                 onCtaClick: w,
-                onClose: Z,
+                onClose: T,
                 questId: x.V6,
-                onDiscoveryButtonClick: T
+                onDiscoveryButtonClick: Z
             }
         );
     },
-    Z = (e) => {
+    T = (e) => {
         let { targetElementRef: t, renderDiscoveryButton: n, isGuildBarScrolling: l, shouldShow: o, questId: a, onClose: s, onCtaClick: c, onDiscoveryButtonClick: u } = e,
             d = i.useMemo(
                 () => ({
@@ -103,7 +103,7 @@ let P = (e) => {
             innerCoachmarkProps: d
         });
     },
-    T = (e) => {
+    Z = (e) => {
         let { targetElementRef: t, scrollToBottom: n, renderDiscoveryButton: i, isGuildBarScrolling: l } = e,
             { enabled: o } = (0, y.WX)({ location: 'orbs_discovery_reheat_coachmark' }),
             a = w({
@@ -135,7 +135,7 @@ let P = (e) => {
             })(a, ['shouldShow']);
         return s
             ? (0, r.jsx)(
-                  Z,
+                  T,
                   (function (e) {
                       for (var t = 1; t < arguments.length; t++) {
                           var n = null != arguments[t] ? arguments[t] : {},

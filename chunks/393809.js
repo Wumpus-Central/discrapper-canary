@@ -33,7 +33,7 @@ function T(t) {
                     (0, e.jsxs)('div', {
                         className: E.header,
                         children: [
-                            (0, e.jsx)(o.P4T, {
+                            (0, e.jsx)(o.Mgn, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 20,

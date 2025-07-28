@@ -1,6 +1,6 @@
 (r.d(t, {
     M: () => _,
-    Z: () => b
+    Z: () => x
 }),
     r(415506),
     r(781311),
@@ -11,8 +11,8 @@ var n,
     a = r(120356),
     i = r.n(a),
     o = r(481060),
-    c = r(579612),
-    u = r(405656),
+    c = r(607802),
+    u = r(579612),
     h = r(388032),
     d = r(953928);
 function p(e, t, r) {
@@ -67,11 +67,11 @@ let m = (e) => {
         {
             filterCount: a,
             queryContent: i,
-            isQueryEmpty: c
+            isQueryEmpty: u
         } = l.useMemo(() => {
             var e, r, n;
-            let s = (0, u.kG)(t),
-                l = (0, u.$G)(s),
+            let s = (0, c.kG)(t),
+                l = (0, c.$G)(s),
                 a = null != (r = l.content) ? r : '';
             return {
                 filterCount: null != (n = null == (e = l.channel_id) ? void 0 : e.length) ? n : 0,
@@ -90,7 +90,7 @@ let m = (e) => {
                     variant: 'text-sm/medium',
                     color: 'text-secondary',
                     className: d.searchDMQueryText,
-                    children: c
+                    children: u
                         ? h.intl.format(h.t.iV2ftr, { filterCount: a })
                         : h.intl.format(h.t['5CTmUl'], {
                               filterCount: a,
@@ -101,7 +101,7 @@ let m = (e) => {
                     variant: 'text-sm/medium',
                     color: 'text-secondary',
                     className: d.searchDMQueryText,
-                    children: c ? h.intl.string(h.t.w39VdH) : h.intl.format(h.t['9gKPv7'], { value: i })
+                    children: u ? h.intl.string(h.t.w39VdH) : h.intl.format(h.t['9gKPv7'], { value: i })
                 })
           : (0, s.jsx)('div', {
                 className: d.queryText,
@@ -202,8 +202,8 @@ class y extends (n = l.PureComponent) {
             p(this, 'renderSearchInSelectedChannelAutocomplete', () => {
                 let { navId: e, channel: t, showSearchInSelectedChannel: r, focusedIndex: n, onSelectSearchInSelectedChannel: l } = this.props;
                 if (!r || null == t) return null;
-                let a = (0, u.X3)(t),
-                    i = (0, s.jsx)(c.ZP, {
+                let a = (0, c.X3)(t),
+                    i = (0, s.jsx)(u.ZP, {
                         channel: t,
                         text: h.intl.formatToPlainString(h.t.LDpotL, { guildName: a }),
                         channelContainerClassName: d.channelContainer,
@@ -230,4 +230,4 @@ p(y, 'defaultProps', {
     hideQuery: !1,
     width: 320
 });
-let b = y;
+let x = y;

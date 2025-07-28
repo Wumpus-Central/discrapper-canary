@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(481060),
-    s = n(434404),
-    a = n(981631),
+    a = n(434404),
+    s = n(981631),
     o = n(388032),
     c = n(837188);
 function d(e) {
@@ -11,7 +11,7 @@ function d(e) {
         u = i.useCallback(
             (e) => {
                 let t = new Set(d);
-                (e ? (t.add(a.oNc.ACTIVITY_FEED_ENABLED_BY_USER), t.delete(a.oNc.ACTIVITY_FEED_DISABLED_BY_USER)) : (t.add(a.oNc.ACTIVITY_FEED_DISABLED_BY_USER), t.delete(a.oNc.ACTIVITY_FEED_ENABLED_BY_USER)), s.Z.updateGuild({ features: t }));
+                (e ? (t.add(s.oNc.ACTIVITY_FEED_ENABLED_BY_USER), t.delete(s.oNc.ACTIVITY_FEED_DISABLED_BY_USER)) : (t.add(s.oNc.ACTIVITY_FEED_DISABLED_BY_USER), t.delete(s.oNc.ACTIVITY_FEED_ENABLED_BY_USER)), a.Z.updateGuild({ features: t }));
             },
             [d]
         );

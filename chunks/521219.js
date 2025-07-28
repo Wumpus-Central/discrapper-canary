@@ -13,8 +13,6 @@ e.exports = {
     memberCountContainer: 'memberCountContainer__5f97b',
     person: 'person__5f97b',
     buttonsContainer: 'buttonsContainer__5f97b',
-    editButton: 'editButton__5f97b',
-    circleButton: 'circleButton__5f97b',
     roleRowDisableHover: 'roleRowDisableHover__5f97b',
     dragIconHidden: 'dragIconHidden__5f97b',
     containerDragAfter: 'containerDragAfter__5f97b',

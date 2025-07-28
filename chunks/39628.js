@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+(n.d(t, { Z: () => h }), n(388685));
 var r,
     i = n(255367),
     l = n(73800),
@@ -119,4 +119,4 @@ class g extends (r = l.PureComponent) {
     }
 }
 d(g, 'defaultProps', { themed: !1 });
-let _ = g;
+let h = g;

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+(n.d(t, { Z: () => b }), n(388685));
 var i = n(710845),
     r = n(601964),
     s = n(314897),
@@ -6,9 +6,10 @@ var i = n(710845),
     l = n(485386),
     o = n(430824),
     c = n(411198),
-    d = n(625137),
-    u = n(287328);
-function m(e, t, n) {
+    d = n(539600),
+    u = n(625137),
+    m = n(287328);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +22,7 @@ function m(e, t, n) {
         e
     );
 }
-function p(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -32,12 +33,12 @@ function p(e) {
                 })
             )),
             i.forEach(function (t) {
-                m(e, t, n[t]);
+                p(e, t, n[t]);
             }));
     }
     return e;
 }
-function g(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,25 +56,25 @@ function g(e, t) {
         e
     );
 }
-let h = new i.Z('Guilds'),
-    f = new (class {
+let f = new i.Z('Guilds'),
+    b = new (class {
         async getAsync(e) {
             let t = performance.now(),
-                n = await u.Z.guilds(e).getMany(),
+                n = await m.Z.guilds(e).getMany(),
                 i = performance.now();
-            return (h.verbose('loaded in '.concat(i - t, 'ms (guilds: ').concat(n.length, ')')), n);
+            return (f.verbose('loaded in '.concat(i - t, 'ms (guilds: ').concat(n.length, ')')), n);
         }
         async getOneAsync(e, t) {
-            return await u.Z.guilds(e).get(t);
+            return await m.Z.guilds(e).get(t);
         }
         handleBackgroundSync(e, t) {
             for (let n of e.guilds) {
                 if ('unavailable' === n.data_mode) return;
                 let e = o.Z.getGuild(n.id);
                 if (null != e) {
-                    let i = l.Z.getRoles(n.id),
-                        r = 'partial' === n.data_mode ? d.EO(n.id, i, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : (0, d.C5)(n.id, n.roles);
-                    this.put(c.rk(c.sp(n, e), r, a.ZP.getSelfMember(n.id)), t);
+                    let i = l.Z.getUnsafeMutableRoles(n.id),
+                        r = 'partial' === n.data_mode ? u.EO(n.id, i, n.partial_updates.roles, n.partial_updates.deleted_role_ids) : d.qt(n.id, n.roles);
+                    this.put(c.rk(c.sp(n, e), d.an(r), a.ZP.getSelfMember(n.id)), t);
                 }
             }
         }
@@ -86,29 +87,29 @@ let h = new i.Z('Guilds'),
         handleGuildUpdate(e, t) {
             let n = o.Z.getGuild(e.guild.id),
                 i = c.R(e.guild, n);
-            this.put(c.rk(i, (0, d.C5)(e.guild.id, e.guild.roles), a.ZP.getSelfMember(e.guild.id)), t);
+            this.put(c.rk(i, d.an(d.qt(e.guild.id, e.guild.roles)), a.ZP.getSelfMember(e.guild.id)), t);
         }
         handleGuildDelete(e, t) {
             this.delete(e.guild.id, t);
         }
         handleGuildRoleChange(e, t) {
             let n = o.Z.getGuild(e.guildId),
-                i = l.Z.getRoles(e.guildId);
-            null != n && this.put(c.rk(n, g(p({}, i), { [e.role.id]: e.role }), a.ZP.getSelfMember(e.guildId)), t);
+                i = l.Z.getUnsafeMutableRoles(e.guildId);
+            null != n && this.put(c.rk(n, h(g({}, i), { [e.role.id]: e.role }), a.ZP.getSelfMember(e.guildId)), t);
         }
         handleGuildRoleDelete(e, t) {
             let n = o.Z.getGuild(e.guildId);
             if (null != n) {
-                let i = p({}, l.Z.getRoles(e.guildId));
+                let i = g({}, l.Z.getUnsafeMutableRoles(e.guildId));
                 delete i[e.roleId];
                 let r = a.ZP.getSelfMember(e.guildId);
-                (null != r && (r = g(p({}, r), { roles: r.roles.filter((t) => t !== e.roleId) })), this.put(c.rk(n, i, r), t));
+                (null != r && (r = h(g({}, r), { roles: r.roles.filter((t) => t !== e.roleId) })), this.put(c.rk(n, d.an(i), r), t));
             }
         }
         handleGuildMemberAdd(e, t) {
             if (null != e.joinedAt && e.user.id === s.default.getId()) {
                 let n = o.Z.getGuild(e.guildId);
-                null != n && this.put(c.rk((0, r.kH)(n, e.joinedAt), l.Z.getRoles(n.id), a.ZP.getSelfMember(n.id)), t);
+                null != n && this.put(c.rk((0, r.kH)(n, e.joinedAt), d.an(l.Z.getUnsafeMutableRoles(n.id)), a.ZP.getSelfMember(n.id)), t);
             }
         }
         handleGuildMemberUpdate(e, t) {
@@ -116,7 +117,7 @@ let h = new i.Z('Guilds'),
             let n = o.Z.getGuild(e.guildId);
             null != n &&
                 this.put(
-                    c.rk(n, l.Z.getRoles(n.id), {
+                    c.rk(n, d.an(l.Z.getUnsafeMutableRoles(n.id)), {
                         roles: e.roles,
                         userId: e.user.id
                     }),
@@ -129,7 +130,7 @@ let h = new i.Z('Guilds'),
                 i = o.Z.getGuild(e.id),
                 r = c.rk(
                     c.wD(e, i),
-                    e.roles instanceof Array ? (0, d.C5)(e.id, e.roles) : e.roles,
+                    d.an(e.roles instanceof Array ? d.qt(e.id, e.roles) : e.roles),
                     null != n
                         ? {
                               userId: n.user.id,
@@ -140,16 +141,16 @@ let h = new i.Z('Guilds'),
             this.put(r, t);
         }
         put(e, t) {
-            u.Z.guildsTransaction(t).put(e);
+            m.Z.guildsTransaction(t).put(e);
         }
         delete(e, t) {
-            u.Z.guildsTransaction(t).delete(e);
+            m.Z.guildsTransaction(t).delete(e);
         }
         clear(e) {
-            u.Z.guildsTransaction(e).delete();
+            m.Z.guildsTransaction(e).delete();
         }
         constructor() {
-            m(this, 'actions', {
+            p(this, 'actions', {
                 BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
                 CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
                 GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),

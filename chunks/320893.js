@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(780384),
     l = n(481060),
-    s = n(410030),
-    a = n(293810),
+    a = n(410030),
+    s = n(293810),
     o = n(388032),
     c = n(752651),
     d = n(934961),
@@ -12,15 +12,15 @@ var i = n(780384),
     m = n(867861),
     g = n(860790),
     p = n(268953),
-    f = n(487703),
-    h = n(458050),
+    h = n(487703),
+    f = n(458050),
     x = n(334364),
     b = n(431712);
 function j(e) {
     return (0, i.wj)(e) ? c.revenueSharePercentageDark : c.revenueSharePercentageLight;
 }
 function v() {
-    let e = (0, s.ZP)(),
+    let e = (0, a.ZP)(),
         t = { backgroundColor: (0, i.wj)(e) ? '#2e3638' : 'var(--background-base-low)' };
     return (0, r.jsxs)('div', {
         className: c.earningsPreviewContainer,
@@ -43,14 +43,14 @@ function v() {
             }),
             (0, r.jsx)('img', {
                 className: c.roundAvatar,
-                src: f,
+                src: h,
                 alt: o.intl.string(o.t.NgjpTE)
             })
         ]
     });
 }
 function _() {
-    let e = (0, s.ZP)();
+    let e = (0, a.ZP)();
     function t(e) {
         var t, n;
         let { length: i, horizontal: l } = e;
@@ -197,7 +197,7 @@ function y() {
     });
 }
 function C() {
-    let e = (0, s.ZP)();
+    let e = (0, a.ZP)();
     return (0, r.jsxs)('div', {
         className: c.revenueShareBenefitCard,
         children: [
@@ -210,7 +210,7 @@ function C() {
                             lineHeight: '52px'
                         },
                         variant: 'heading-xxl/extrabold',
-                        children: [a.NT, '%']
+                        children: [s.NT, '%']
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: 'text-md/normal',
@@ -221,7 +221,7 @@ function C() {
             }),
             (0, r.jsx)('img', {
                 className: c.roleSubscriptionEarningIllo,
-                src: h,
+                src: f,
                 alt: o.intl.string(o.t.fD9Wv7)
             })
         ]

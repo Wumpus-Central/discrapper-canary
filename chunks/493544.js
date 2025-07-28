@@ -2,7 +2,7 @@ n.d(t, {
     ID: () => O,
     NM: () => S,
     Xi: () => E,
-    ZP: () => P,
+    ZP: () => x,
     bT: () => j
 });
 var r,
@@ -162,11 +162,11 @@ function _(e) {
               })
           });
 }
-let P = function (e) {
+let x = function (e) {
     let { sidebar: t, content: n, notice: r, section: i, closeAction: o, sidebarTheme: m, contentType: b, scrollerRef: v, mobileSidebarOpen: O, toggleSidebar: E, hideSidebar: S = !1 } = e,
         j = s.useRef(null),
-        P = s.useRef(null),
-        x = (0, g.Z)(i),
+        x = s.useRef(null),
+        P = (0, g.Z)(i),
         N = (0, p.Yzy)(
             S,
             {
@@ -187,8 +187,8 @@ let P = function (e) {
             [v]
         );
     s.useLayoutEffect(() => {
-        null != j.current && x !== i && j.current.scrollTo({ to: 0 });
-    }, [i, x, j]);
+        null != j.current && P !== i && j.current.scrollTo({ to: 0 });
+    }, [i, P, j]);
     let T = (0, l.jsx)(_, {
         isMobile: d.tq,
         mobileSidebarOpen: O,
@@ -267,10 +267,10 @@ let P = function (e) {
                                             (0, l.jsx)(y.Provider, {
                                                 value: j.current,
                                                 children: (0, l.jsx)('div', {
-                                                    ref: P,
+                                                    ref: x,
                                                     className: h.contentColumnScrollable,
                                                     children: (0, l.jsx)(p.JcV, {
-                                                        containerRef: P,
+                                                        containerRef: x,
                                                         children: n
                                                     })
                                                 })
@@ -299,12 +299,12 @@ let P = function (e) {
                                                     children: (0, l.jsx)(p.njP.Panel, {
                                                         id: i,
                                                         className: a()(h.contentColumn, h[r], { [h.mobileContent]: d.tq }),
-                                                        ref: P,
+                                                        ref: x,
                                                         style: d.tq ? { maxWidth: window.innerWidth } : void 0,
                                                         children: S
                                                             ? n
                                                             : (0, l.jsx)(p.JcV, {
-                                                                  containerRef: P,
+                                                                  containerRef: x,
                                                                   children: n
                                                               })
                                                     })

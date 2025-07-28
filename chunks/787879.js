@@ -43,8 +43,8 @@ let R = {},
     D = [],
     L = !1,
     x = !1,
-    M = !1,
-    k = I.default.fromTimestamp(Date.now()),
+    k = !1,
+    M = I.default.fromTimestamp(Date.now()),
     j = !0,
     U = null;
 function G() {
@@ -112,17 +112,17 @@ function F(e) {
 }
 function Z() {
     if (null == P) {
-        k = I.default.fromTimestamp(Date.now());
+        M = I.default.fromTimestamp(Date.now());
         return;
     }
     for (let e of P.toSorted((e, t) => I.default.compare(b.ZP.lastMessageId(t), b.ZP.lastMessageId(e)))) {
         let t = R[e];
         if (t.loadState === S.a7.UNLOADED && null != t.mostRecentMessageId) {
-            k = t.mostRecentMessageId;
+            M = t.mostRecentMessageId;
             return;
         }
     }
-    k = '0';
+    M = '0';
 }
 function H() {
     let { notifyingChannelIds: e, staleChannelIds: t } = G();
@@ -148,7 +148,7 @@ function H() {
     ((D = D.filter((e) => e.kind !== S.fL.ALL_MESSAGES_CHANNEL || e.channelId in R)), Z());
 }
 function Y() {
-    for (let n of ((R = {}), (P = null), (w = []), (D = []), (L = !1), (x = !1), (k = I.default.fromTimestamp(Date.now())), (j = !0), (M = !1), (U = null), (er = null), H(), null != P ? P : [])) {
+    for (let n of ((R = {}), (P = null), (w = []), (D = []), (L = !1), (x = !1), (M = I.default.fromTimestamp(Date.now())), (j = !0), (k = !1), (U = null), (er = null), H(), null != P ? P : [])) {
         var e, t;
         let r = F(n);
         null != r && ((R[n].loadState = S.a7.LOADED), (R[n].mostRecentMessageId = null != (t = null == (e = r.last()) ? void 0 : e.id) ? t : null), Z());
@@ -224,12 +224,12 @@ function $() {
 }
 function ee(e) {
     let { preload: t, finished: n, analyticsPayload: r } = e;
-    ((L = !1), t ? (M = !0) : ((j = !0 !== n), (x = !0)), (U = null != r ? r : null));
+    ((L = !1), t ? (k = !0) : ((j = !0 !== n), (x = !0)), (U = null != r ? r : null));
 }
 function et(e) {
     var t;
     let { preload: n } = e;
-    return null != (null == (t = T.Lk.getCurrentConfig({ location: 'NotificationsInboxStore.canLoadMore' })) ? void 0 : t.notificationCenterVariant) && null != P && !L && (!n || !M) && j;
+    return null != (null == (t = T.Lk.getCurrentConfig({ location: 'NotificationsInboxStore.canLoadMore' })) ? void 0 : t.notificationCenterVariant) && null != P && !L && (!n || !k) && j;
 }
 function en() {
     ((L = !1), (U = null));
@@ -265,7 +265,7 @@ class es extends (r = l.ZP.Store) {
         return R;
     }
     get oldestDisplayedMessageId() {
-        return k;
+        return M;
     }
     get hasMoreToLoad() {
         return j;
@@ -277,7 +277,7 @@ class es extends (r = l.ZP.Store) {
         return x;
     }
     get hasPreloaded() {
-        return M;
+        return k;
     }
     get isLoadingComplete() {
         return !L && !j;

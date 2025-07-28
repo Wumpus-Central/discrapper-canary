@@ -2,8 +2,8 @@ n.d(t, { Z: () => b });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
-    a = n(580685),
+    a = n.n(l),
+    s = n(580685),
     o = n(442837),
     c = n(481060),
     d = n(314852),
@@ -11,14 +11,14 @@ var r = n(255367),
     m = n(423252),
     g = n(434404),
     p = n(436879),
-    f = n(981631),
-    h = n(388032),
+    h = n(981631),
+    f = n(388032),
     x = n(951767);
 function b(e) {
     var t;
     let { profile: n, canManageGuild: l } = e,
         b = n.id,
-        j = a.Y.VISIBLE.has(n.visibility),
+        j = s.Y.VISIBLE.has(n.visibility),
         v = (0, o.e7)(
             [d.Z],
             () => {
@@ -28,14 +28,14 @@ function b(e) {
             [b]
         ),
         _ = i.useRef(null);
-    (0, p.Z)(_, f.KsC.PROFILE_VISIBILITY);
+    (0, p.Z)(_, h.KsC.PROFILE_VISIBILITY);
     let O = i.useCallback(() => {
             j ? g.Z.updateGuildProfile(b, { visibility: u.k.RESTRICTED }) : g.Z.updateGuildProfile(b, { visibility: v ? u.k.PUBLIC_WITH_RECRUITMENT : u.k.PUBLIC });
         }, [b, v, j]),
         y = i.useCallback(() => {
-            g.Z.setSection(f.pNK.ACCESS, f.KsC.ACCESS_DISCOVERABLE);
+            g.Z.setSection(h.pNK.ACCESS, h.KsC.ACCESS_DISCOVERABLE);
         }, []),
-        C = null == (t = n.features) ? void 0 : t.includes(f.oNc.DISCOVERABLE);
+        C = null == (t = n.features) ? void 0 : t.includes(h.oNc.DISCOVERABLE);
     return (0, r.jsxs)(c.hjN, {
         className: x.twoColumnContainer,
         ref: _,
@@ -48,18 +48,18 @@ function b(e) {
                         value: !j,
                         hideBorder: !0,
                         disabled: C || !l,
-                        children: h.intl.string(h.t.fjHWen)
+                        children: f.intl.string(f.t.fjHWen)
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-secondary',
-                        children: h.intl.string(h.t.J1YOV1)
+                        children: f.intl.string(f.t.J1YOV1)
                     }),
                     C &&
                         (0, r.jsx)(c.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-muted',
-                            children: h.intl.format(h.t.R8jY9v, {
+                            children: f.intl.format(f.t.R8jY9v, {
                                 accessLink: (e, t) =>
                                     (0, r.jsx)(
                                         c.eee,
@@ -74,7 +74,7 @@ function b(e) {
                 ]
             }),
             (0, r.jsx)('div', {
-                className: s()(x.column, { [x.profileViewDisabled]: j }),
+                className: a()(x.column, { [x.profileViewDisabled]: j }),
                 children: (0, r.jsx)(m.Z, {
                     guildId: b,
                     name: null

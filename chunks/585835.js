@@ -16,12 +16,12 @@ var r = n(255367),
     h = n(626135),
     x = n(486199),
     j = n(929507),
-    O = n(981631),
-    v = n(388032),
+    v = n(981631),
+    O = n(388032),
     y = n(694095);
 function _(e) {
     var t, n, l;
-    let { name: _, icon: C, imageSrc: N, iconBackgroundColor: S, iconClassName: I, iconWrapperClassName: E, details: T, integration: w, buttonText: P, buttonDisabled: Z, hasNextSection: A, onButtonClick: k, guildId: D, isScrolling: R, canShowMigrationTooltip: L, trailing: M } = e,
+    let { name: _, icon: C, imageSrc: N, iconBackgroundColor: S, iconClassName: I, iconWrapperClassName: E, details: T, integration: w, buttonText: Z, buttonDisabled: P, hasNextSection: A, onButtonClick: k, guildId: D, isScrolling: R, canShowMigrationTooltip: L, trailing: M } = e,
         [B, U] = i.useState(!1),
         [W, H] = i.useState(!1),
         G = L && !R && !W && void 0 !== D && null != w,
@@ -61,12 +61,12 @@ function _(e) {
                             children: e
                         }),
             [z, F]
-        )(P, Z, A, k);
+        )(Z, P, A, k);
     i.useEffect(() => {
         var e, t;
         G &&
             h.default.track(
-                O.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
+                v.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
                 ((e = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -121,7 +121,7 @@ function _(e) {
                               (e.stopPropagation(), H(!0), j.Z.dismissOverviewTooltip(D, w.integration));
                           },
                           children: (0, r.jsx)(g.ZP, {
-                              content: v.intl.string(v.t.TyMJwM),
+                              content: O.intl.string(O.t.TyMJwM),
                               onClick: () => {}
                           })
                       }),
@@ -170,7 +170,7 @@ function _(e) {
                                                 d.DY3,
                                                 {
                                                     forceOpen: t,
-                                                    text: new f.Z(s.bot).isVerifiedBot() ? v.intl.string(v.t.xxcTGx) : v.intl.string(v.t.AOdOYm),
+                                                    text: new f.Z(s.bot).isVerifiedBot() ? O.intl.string(O.t.xxcTGx) : O.intl.string(O.t.AOdOYm),
                                                     className: y.feature,
                                                     children: (0, r.jsx)(d.wGt, {
                                                         size: 'md',
@@ -187,7 +187,7 @@ function _(e) {
                                                 d.DY3,
                                                 {
                                                     forceOpen: t,
-                                                    text: v.intl.formatToPlainString(v.t['6HqDfX'], { count: u.length }),
+                                                    text: O.intl.formatToPlainString(O.t['6HqDfX'], { count: u.length }),
                                                     className: y.feature,
                                                     children: (0, r.jsx)(d.tYf, {
                                                         size: 'md',
@@ -205,7 +205,7 @@ function _(e) {
                                                 d.DY3,
                                                 {
                                                     forceOpen: t,
-                                                    text: v.intl.string(v.t['0hKkS0']),
+                                                    text: O.intl.string(O.t['0hKkS0']),
                                                     className: y.feature,
                                                     children: (0, r.jsx)(d.SsZ, {
                                                         size: 'md',

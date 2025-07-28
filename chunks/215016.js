@@ -87,10 +87,10 @@ function x(e, t) {
     var n, r;
     return e > 0 ? '' : null != (r = null == (n = P[t]) ? void 0 : n.id) ? r : '';
 }
-function M(e) {
+function k(e) {
     return e === u.EO.VIDEO;
 }
-function k(e) {
+function M(e) {
     return ((0, E._M)(e) || (0, E.MO)(e)) && (e.pathname.toLowerCase().endsWith('.webp') || e.pathname.toLowerCase().endsWith('.avif'));
 }
 function j(e) {
@@ -99,7 +99,7 @@ function j(e) {
 function U(e) {
     let t = y.Z.toURLSafe(e),
         n = null != t && j(t);
-    return null != t && (k(t) || n) ? (n && t.searchParams.set('format', 'webp'), t.searchParams.set('animated', 'true'), t.toString()) : e;
+    return null != t && (M(t) || n) ? (n && t.searchParams.set('format', 'webp'), t.searchParams.set('animated', 'true'), t.toString()) : e;
 }
 class G extends i.PureComponent {
     componentDidMount() {
@@ -154,7 +154,7 @@ class G extends i.PureComponent {
             'data-focused': a,
             onClick: this.handleClick,
             style: A({ backgroundColor: s ? void 0 : o }, i),
-            children: [M(n) ? null : this.renderGIF(), null != t ? t(e) : null]
+            children: [k(n) ? null : this.renderGIF(), null != t ? t(e) : null]
         });
     }
     constructor(e) {
@@ -175,7 +175,7 @@ class G extends i.PureComponent {
             color: null == n ? l().sample(N) : n,
             loaded: !1
         }),
-            M(t) || ((this._image = r.getElement()), (this._image.onload = () => this.setState({ loaded: !0 })), (this._image.src = e.src)));
+            k(t) || ((this._image = r.getElement()), (this._image.onload = () => this.setState({ loaded: !0 })), (this._image.src = e.src)));
     }
 }
 class B extends i.PureComponent {

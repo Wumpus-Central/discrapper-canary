@@ -90,8 +90,8 @@ function A(e) {
         D = T(i, a),
         L = (0, h.NE)(i, a),
         x = n.showThreadPromptOnReply && D >= v && L,
-        M = () => (0, p.uL)(b.Z5c.CHANNEL(i.getGuildId(), i.id, a.id));
-    function k(e) {
+        k = () => (0, p.uL)(b.Z5c.CHANNEL(i.getGuildId(), i.id, a.id));
+    function M(e) {
         (e.stopPropagation(), (0, _.qx)(i.id, !s));
     }
     function j(e) {
@@ -106,7 +106,7 @@ function A(e) {
                     className: O.replyBar,
                     children: [
                         (0, r.jsx)(l.P3F, {
-                            onClick: M,
+                            onClick: k,
                             focusProps: {
                                 offset: {
                                     top: -8,
@@ -126,9 +126,9 @@ function A(e) {
                                             {
                                                 className: O.name,
                                                 name: g,
-                                                color: I,
+                                                colorString: I,
+                                                colorStrings: P,
                                                 roleName: N,
-                                                roleColors: P,
                                                 nameTextClassName: w
                                             },
                                             t
@@ -149,7 +149,7 @@ function A(e) {
                                                     return (0, r.jsx)(l.P3F, {
                                                         role: 'switch',
                                                         'aria-checked': s,
-                                                        onClick: k,
+                                                        onClick: M,
                                                         onMouseEnter: t,
                                                         onMouseLeave: n,
                                                         onFocus: i,

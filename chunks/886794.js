@@ -10,10 +10,10 @@ var l = t(255367),
     d = t(5192),
     f = t(785717),
     p = t(687158),
-    g = t(899007),
-    j = t(648052),
-    v = t(867176),
-    h = t(280885),
+    j = t(899007),
+    g = t(648052),
+    h = t(867176),
+    v = t(280885),
     m = t(900927),
     b = t(678738),
     x = t(502762),
@@ -43,7 +43,7 @@ function A(e) {
             roleId: w
         }),
         F = r.useRef(null),
-        z = (0, o.Z)(F);
+        W = (0, o.Z)(F);
     return (0, l.jsx)(c.Gt, {
         value: Y,
         children: (0, l.jsx)(f.Mt, {
@@ -75,14 +75,14 @@ function A(e) {
                                 (0, l.jsx)(Z.Z, { children: (0, l.jsx)(O.Z, { user: n }) }),
                                 (0, l.jsxs)('div', {
                                     children: [
-                                        (0, l.jsx)(v.Z, {
+                                        (0, l.jsx)(h.Z, {
                                             user: n,
                                             displayProfile: B,
                                             themeType: I.lY.MODAL
                                         }),
                                         (0, l.jsx)('div', {
                                             className: T.headerInner,
-                                            children: (0, l.jsx)(g.Z, {
+                                            children: (0, l.jsx)(j.Z, {
                                                 user: n,
                                                 displayProfile: B,
                                                 guildId: L,
@@ -101,7 +101,7 @@ function A(e) {
                                             nickname: k,
                                             pronouns: null == B ? void 0 : B.pronouns,
                                             nicknameVariant: 'heading-xl/bold',
-                                            tags: (0, l.jsx)(j.Z, {
+                                            tags: (0, l.jsx)(g.Z, {
                                                 displayProfile: B,
                                                 themeType: I.lY.MODAL,
                                                 onClose: U
@@ -133,7 +133,7 @@ function A(e) {
                                                     fade: !0,
                                                     className: S.scroller,
                                                     children: [
-                                                        (0, l.jsx)(h.Z, {
+                                                        (0, l.jsx)(v.Z, {
                                                             userId: n.id,
                                                             userBio: null == B ? void 0 : B.bio,
                                                             setLineClamp: !1
@@ -158,7 +158,7 @@ function A(e) {
                     (null == B ? void 0 : B.profileEffectId) != null &&
                         (0, l.jsx)(u.Z, {
                             profileEffectId: null == B ? void 0 : B.profileEffectId,
-                            isHovering: z
+                            isHovering: W
                         })
                 ]
             })

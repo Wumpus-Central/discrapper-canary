@@ -118,7 +118,7 @@ function g(e) {
                         color: 'text-default',
                         children: s.intl.string(s.t.Iyka0d)
                     }),
-                    (0, r.jsx)(i.P4T, {
+                    (0, r.jsx)(i.Mgn, {
                         size: 'xs',
                         className: l.icon
                     })

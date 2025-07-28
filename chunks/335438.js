@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(793030),
     l = n(481060),
-    s = n(578053),
-    a = n(715224),
+    a = n(578053),
+    s = n(715224),
     o = n(388032),
     c = n(713811);
 function d(e) {
@@ -18,7 +18,7 @@ function d(e) {
                 className: c.description,
                 children: o.intl.string(o.t.qxIcra)
             }),
-            (0, r.jsx)(a.W, {
+            (0, r.jsx)(s.W, {
                 canManageGuild: t,
                 guild: n,
                 switchClassName: c.switch
@@ -39,7 +39,7 @@ function d(e) {
                     }),
                     (0, r.jsx)('div', {
                         className: c.halfWidth,
-                        children: (0, r.jsx)(s.u, {
+                        children: (0, r.jsx)(a.u, {
                             canManageGuild: t,
                             guildId: n.id,
                             systemChannelId: n.systemChannelId

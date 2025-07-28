@@ -1,13 +1,13 @@
 (n.d(t, {
-    ZP: () => f,
+    ZP: () => h,
     vE: () => p
 }),
     n(539854));
 var r = n(223892),
     i = n(738774),
     l = n(676317),
-    s = n(923726),
-    a = n(144507),
+    a = n(923726),
+    s = n(144507),
     o = n(823379),
     c = n(146305),
     d = n(981631),
@@ -19,14 +19,14 @@ let { getSectionDefinition: m } = c.Z,
     };
 function p(e) {
     var t, n;
-    let { guild: c, canManageGuild: p, canViewAuditLog: f, canManageRoles: h, canManageBans: x, canAccessMembersPage: b, canViewGuildAnalytics: j, isOwner: v, isGuildAdmin: _, canManageGuildExpressions: O } = e,
+    let { guild: c, canManageGuild: p, canViewAuditLog: h, canManageRoles: f, canManageBans: x, canAccessMembersPage: b, canViewGuildAnalytics: j, isOwner: v, isGuildAdmin: _, canManageGuildExpressions: O } = e,
         y = () =>
-            (0, a.X$)({
+            (0, s.X$)({
                 guild: c,
                 isOwner: v,
-                canManageGuildRoleSubscriptions: (0, a.H2)(c),
+                canManageGuildRoleSubscriptions: (0, s.H2)(c),
                 isMonetizationWaitlistEnabledForGuild: (0, r.mG)(c.id),
-                isGuildEligibleForRoleSubscriptions: (0, s.kT)(c.id),
+                isGuildEligibleForRoleSubscriptions: (0, a.kT)(c.id),
                 isExpeditedMonetizationOnboardingGuild: (0, r.Rw)(c),
                 isUserInCreatorMonetizationEligibleCountry: (0, r.DB)(),
                 shouldRestrictUpdatingRoleSubscriptionSettings: (0, i.cu)(c.id)
@@ -89,7 +89,7 @@ function p(e) {
             N.push(m(d.pNK.EMOJI, C)),
             N.push(m(d.pNK.STICKERS, C)),
             N.push(m(d.pNK.SOUNDBOARD, C))),
-        (p || h || b || _) &&
+        (p || f || b || _) &&
             (N.push({ section: g.DIVIDER }),
             N.push({
                 section: g.HEADER,
@@ -107,7 +107,7 @@ function p(e) {
         N.push(m(d.pNK.INTEGRATIONS, C)),
         N.push(m(d.pNK.APP_DIRECTORY, C)));
     let I = !c.features.has(d.oNc.COMMUNITY) && ((0, l.Nb)(c.id) || (0, l.ze)(c.id));
-    (p || f || x || I) &&
+    (p || h || x || I) &&
         (N.push({ section: g.DIVIDER }),
         N.push({
             section: g.HEADER,
@@ -122,4 +122,4 @@ function p(e) {
         S = y();
     return ((p || E || S) && (N.push({ section: g.DIVIDER }), N.push(m(d.pNK.COMMUNITY, C)), N.push(m(d.pNK.ONBOARDING, C)), N.push(m(d.pNK.ANALYTICS, C)), N.push(m(d.pNK.COMMUNITY_WELCOME, C)), N.push(m(d.pNK.DISCOVERY_LANDING_PAGE, C)), N.push(m(d.pNK.ROLE_SUBSCRIPTIONS, C)), N.push(m(d.pNK.GUILD_PRODUCTS, C)), N.push(m(d.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, C))), N.push({ section: g.DIVIDER }), N.push(m(d.pNK.GUILD_PREMIUM, C)), N.push(m(d.pNK.GUILD_TEMPLATES, C)), N.push(m(d.pNK.DELETE, C)), N.filter(o.lm));
 }
-let f = { generateSections: p };
+let h = { generateSections: p };

@@ -14,7 +14,7 @@ function c(e) {
             (0, i.jsxs)('div', {
                 className: o.textContainer,
                 children: [
-                    (0, i.jsx)(l.P4T, {
+                    (0, i.jsx)(l.Mgn, {
                         size: 'custom',
                         width: 20,
                         height: 20,

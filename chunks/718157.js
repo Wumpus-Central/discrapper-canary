@@ -2,8 +2,8 @@ n.d(t, { E: () => u });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    s = n(481060),
-    a = n(456268),
+    a = n(481060),
+    s = n(456268),
     o = n(526429),
     c = n(128449),
     d = n(388032);
@@ -12,11 +12,11 @@ function u(e) {
         g = (0, l.Wu)([o.Z], () => o.Z.getPrimaryCategories()),
         p = i.useCallback(
             (e) => {
-                (0, a.TA)(t, null != e ? e : c.o3);
+                (0, s.TA)(t, null != e ? e : c.o3);
             },
             [t]
         ),
-        f = i.useMemo(
+        h = i.useMemo(
             () =>
                 g.map((e) => {
                     let { categoryId: t, name: n } = e;
@@ -28,17 +28,17 @@ function u(e) {
             [g]
         );
     return 0 === g.length
-        ? (0, r.jsx)(s.$jN, {})
+        ? (0, r.jsx)(a.$jN, {})
         : (0, r.jsx)(
-              s.VcW,
+              a.VcW,
               {
                   value: n.primaryCategoryId === c.o3 ? null : n.primaryCategoryId,
                   placeholder: d.intl.string(d.t.XqMe3N),
-                  options: f,
+                  options: h,
                   onChange: p,
                   isDisabled: u,
                   clearable: m
               },
-              f.length
+              h.length
           );
 }

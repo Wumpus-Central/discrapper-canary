@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(63063),
-    s = n(586382),
-    a = n(594980),
+    a = n(586382),
+    s = n(594980),
     o = n(515025),
     c = n(981631),
     d = n(388032),
@@ -19,7 +19,7 @@ function m(e) {
                 children: [
                     (0, r.jsxs)(i.vwX, {
                         className: u.title,
-                        children: [d.intl.string(d.t.tzGY0t), (0, r.jsx)(s.hH, { guild: t })]
+                        children: [d.intl.string(d.t.tzGY0t), (0, r.jsx)(a.hH, { guild: t })]
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: 'text-sm/medium',
@@ -33,7 +33,7 @@ function m(e) {
                         className: u.text,
                         children: d.intl.format(d.t.ZYA9PT, { articleURL: l.Z.getArticleURL(c.BhN.GUILD_INVITE_SPLASH) })
                     }),
-                    (0, r.jsx)(a.c, {
+                    (0, r.jsx)(s.c, {
                         guild: t,
                         canManageGuild: n,
                         buttonClassName: u.button

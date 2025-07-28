@@ -10,17 +10,17 @@ var l = t(255367),
     d = t(510659),
     f = t(287954),
     p = t(660579),
-    g = t(652853),
-    j = t(64621),
-    v = t(382405),
-    h = t(386019),
+    j = t(652853),
+    g = t(64621),
+    h = t(382405),
+    v = t(386019),
     m = t(228168),
     b = t(227832);
 function x(e) {
     let { user: n, entry: t, profileGuildId: i, className: x, onClose: y, hideContextMenu: O = !1 } = e,
         Z = r.useRef(null),
         { analyticsLocations: I } = (0, c.ZP)(s.Z.USER_PROFILE_RECENT_ACTIVITY_CARD),
-        { themeType: P } = (0, g.z)(),
+        { themeType: P } = (0, j.z)(),
         { interactionSource: E, interactionSourceId: T } = (0, d.Xo)(),
         S = (0, u.Z)({
             display: 'recent',
@@ -31,7 +31,7 @@ function x(e) {
     return null != P && (0, a.Rh)(t)
         ? (0, l.jsx)(c.Gt, {
               value: I,
-              children: (0, l.jsx)(j.Z, {
+              children: (0, l.jsx)(g.Z, {
                   targetElementRef: Z,
                   sourceType: m.n_.ACTIVITY,
                   user: n,
@@ -55,14 +55,14 @@ function x(e) {
                               renderMoreButtonPopout: O
                                   ? void 0
                                   : (e) =>
-                                        (0, l.jsx)(h.Z, {
+                                        (0, l.jsx)(v.Z, {
                                             display: 'recent',
                                             entry: t,
                                             user: n,
                                             onClose: y,
                                             children: e
                                         }),
-                              children: (0, l.jsx)(v.Z, {
+                              children: (0, l.jsx)(h.Z, {
                                   entry: t,
                                   user: n,
                                   onClose: y,

@@ -17,8 +17,8 @@ let d = i.memo(
             [P, w] = i.useState(-1),
             [D, L] = i.useState(-1),
             x = i.useRef(null),
-            M = i.useRef(0),
-            k = i.useRef(-1);
+            k = i.useRef(0),
+            M = i.useRef(-1);
         (0, l.Ng)(() => {
             var e;
             let t = null == (e = x.current) ? void 0 : e.getScrollerNode();
@@ -136,10 +136,10 @@ let d = i.memo(
                 r = u(x);
             null != t &&
                 null != r &&
-                (r.cancelAnimationFrame(k.current),
-                (k.current = r.requestAnimationFrame(() => {
+                (r.cancelAnimationFrame(M.current),
+                (M.current = r.requestAnimationFrame(() => {
                     let { scrollTop: e } = t;
-                    ((M.current = e), null == n || n(e), w(e));
+                    ((k.current = e), null == n || n(e), w(e));
                 })));
         }, [n]);
         i.useImperativeHandle(
@@ -169,21 +169,21 @@ let d = i.memo(
                                     offset: { top: s, bottom: l }
                                 } = i,
                                 c = G(o),
-                                u = s - (T ? c : 0) - r <= M.current,
-                                d = l + r >= M.current + D;
+                                u = s - (T ? c : 0) - r <= k.current,
+                                d = l + r >= k.current + D;
                             if (u) {
-                                let i = M.current + c - s,
-                                    a = T ? M.current - i : s;
+                                let i = k.current + c - s,
+                                    a = T ? k.current - i : s;
                                 null == (t = x.current) ||
                                     t.scrollTo({
                                         to: 0 === e ? 0 : a - r,
                                         animate: n
                                     });
                             } else if (d) {
-                                let e = l - (M.current + D);
+                                let e = l - (k.current + D);
                                 null == (a = x.current) ||
                                     a.scrollTo({
-                                        to: M.current + e + r,
+                                        to: k.current + e + r,
                                         animate: n
                                     });
                             }

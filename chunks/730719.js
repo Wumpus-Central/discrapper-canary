@@ -11,7 +11,7 @@ let l = (e) => {
         : (0, r.jsxs)('div', {
               className: o.errorContainer,
               children: [
-                  (0, r.jsx)(a.P4T, {
+                  (0, r.jsx)(a.Mgn, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 20,

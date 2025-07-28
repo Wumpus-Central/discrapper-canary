@@ -9,9 +9,9 @@
     Zt: () => I,
     Zv: () => S,
     _V: () => A,
-    cv: () => k,
+    cv: () => M,
     gM: () => B,
-    jl: () => M,
+    jl: () => k,
     sM: () => C,
     z: () => w
 }),
@@ -141,8 +141,8 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         }
     },
     x = (e) => e.type === d.n0.GUILD,
-    M = (e) => e.type === d.n0.STANDARD,
-    k = (e) => (e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : []),
+    k = (e) => e.type === d.n0.STANDARD,
+    M = (e) => (e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : []),
     j = (e) => {
         if (null === e) return !1;
         let t = e.guild_id;

@@ -24,8 +24,8 @@ var i = n(255367),
     E = n(131704),
     Z = n(592125),
     _ = n(324067),
-    T = n(650774),
-    L = n(430824),
+    L = n(650774),
+    T = n(430824),
     y = n(699516),
     M = n(9156),
     I = n(594174),
@@ -514,13 +514,13 @@ class B extends s.PureComponent {
 function J(e) {
     var { guildId: t } = e,
         n = W(e, ['guildId']);
-    let s = (0, c.cj)([_.Z, L.Z, T.Z, M.ZP], () => {
+    let s = (0, c.cj)([_.Z, T.Z, L.Z, M.ZP], () => {
             let e = _.Z.getCategories(t);
             return {
                 guildId: t,
                 categories: e,
-                guild: L.Z.getGuild(t),
-                memberCount: T.Z.getMemberCount(t),
+                guild: T.Z.getGuild(t),
+                memberCount: L.Z.getMemberCount(t),
                 suppressEveryone: M.ZP.isSuppressEveryoneEnabled(t),
                 suppressRoles: M.ZP.isSuppressRolesEnabled(t),
                 muteEvents: M.ZP.isMuteScheduledEventsEnabled(t),

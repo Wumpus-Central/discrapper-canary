@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(345074),
-    s = n(442837),
-    a = n(481060),
+    a = n(442837),
+    s = n(481060),
     o = n(434404),
     c = n(999382),
     d = n(388032),
@@ -17,21 +17,21 @@ function m(e) {
             },
             [m]
         ),
-        p = (0, s.e7)([c.Z], () => c.Z.getError('description'));
-    return (0, r.jsxs)(a.hjN, {
+        p = (0, a.e7)([c.Z], () => c.Z.getError('description'));
+    return (0, r.jsxs)(s.hjN, {
         className: u.section,
         children: [
             (0, r.jsxs)('div', {
                 className: u.sectionHeader,
                 children: [
-                    (0, r.jsx)(a.vwX, { children: d.intl.string(d.t.Z27SCQ) }),
-                    (0, r.jsx)(a.R94, {
-                        type: a.geA.DESCRIPTION,
+                    (0, r.jsx)(s.vwX, { children: d.intl.string(d.t.Z27SCQ) }),
+                    (0, r.jsx)(s.R94, {
+                        type: s.geA.DESCRIPTION,
                         children: d.intl.string(d.t.pw0MIi)
                     })
                 ]
             }),
-            (0, r.jsx)(a.Kx8, {
+            (0, r.jsx)(s.Kx8, {
                 value: t.description,
                 placeholder: d.intl.string(d.t.Nvfows),
                 onChange: g,

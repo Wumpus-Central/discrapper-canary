@@ -2,16 +2,16 @@ n.d(t, { Z: () => d });
 var r = n(73800),
     i = n(442837),
     l = n(80932),
-    s = n(110924),
-    a = n(471613),
+    a = n(110924),
+    s = n(471613),
     o = n(889564);
 let c = [];
 function d(e) {
-    let { revision: t, emojis: n } = (0, i.cj)([a.Z], () => ({
-            revision: a.Z.getEmojiRevision(e),
-            emojis: a.Z.getEmojis(e)
+    let { revision: t, emojis: n } = (0, i.cj)([s.Z], () => ({
+            revision: s.Z.getEmojiRevision(e),
+            emojis: s.Z.getEmojis(e)
         })),
-        d = (0, s.Z)(t);
+        d = (0, a.Z)(t);
     return (
         r.useEffect(() => {
             (0, l.OQ)(e);

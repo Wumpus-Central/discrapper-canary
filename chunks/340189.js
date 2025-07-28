@@ -1,12 +1,12 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => s });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(388032),
-    s = n(773100);
-let a = function () {
+    a = n(773100);
+let s = function () {
     return (0, r.jsxs)('div', {
-        className: s.badExample,
+        className: a.badExample,
         children: [
             (0, r.jsx)(i.Text, {
                 variant: 'eyebrow',
@@ -14,10 +14,10 @@ let a = function () {
                 children: l.intl.string(l.t.MjVwl5)
             }),
             (0, r.jsxs)('div', {
-                className: s.example,
+                className: a.example,
                 children: [
                     (0, r.jsx)('div', {
-                        className: s.badExampleIcon,
+                        className: a.badExampleIcon,
                         children: (0, r.jsx)(i.Dio, {
                             size: 'md',
                             color: 'currentColor'

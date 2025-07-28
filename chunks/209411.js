@@ -39,7 +39,7 @@ function x(e) {
         })),
         { location: v, redirectTo: I } = e,
         [j, O] = i.useState(b);
-    function y(e) {
+    function S(e) {
         let { handoffKey: t, handoffToken: n, handoffSource: r } = e;
         ((0, c.Yz)({
             handoffKey: t,
@@ -55,13 +55,13 @@ function x(e) {
                 let n = null != I ? (0, d.L)(I) : void 0;
                 j
                     ? o.Z.logout('handoff', null).finally(() => {
-                          y({
+                          S({
                               handoffKey: e,
                               handoffToken: t,
                               handoffSource: n
                           });
                       })
-                    : y({
+                    : S({
                           handoffKey: e,
                           handoffToken: t,
                           handoffSource: n

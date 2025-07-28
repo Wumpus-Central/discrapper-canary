@@ -4,9 +4,9 @@ n.d(t, {
     HO: () => A,
     NZ: () => b,
     Pq: () => R,
-    Q1: () => S,
-    RK: () => T,
-    _0: () => O,
+    Q1: () => O,
+    RK: () => S,
+    _0: () => T,
     hz: () => m,
     yi: () => f
 });
@@ -51,7 +51,7 @@ function g(e) {
     }
     return e;
 }
-function S(e, t) {
+function O(e, t) {
     let n = e.getGuildId();
     return (
         r()(null != n, 'This channel cannot be guildless.'),
@@ -66,7 +66,7 @@ function S(e, t) {
         })
     );
 }
-function O(e, t) {
+function T(e, t) {
     let n = e.getGuildId();
     return (
         r()(null != n, 'This channel cannot be guildless.'),
@@ -81,7 +81,7 @@ function O(e, t) {
         })
     );
 }
-function T(e, t) {
+function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = null == e ? void 0 : e.getGuildId();
     r()(null != i, 'This channel cannot be guildless.');
@@ -169,7 +169,7 @@ async function A(e, t, n, i) {
     if ('' === t) return;
     d.Z.getVoiceChannelId() !== e.id && (0, h.TM)(e);
     let r = await (0, I.me)(e.id, t, n, i);
-    return (T(e, !1, !0), r);
+    return (S(e, !1, !0), r);
 }
 async function y(e, t, n) {
     if ('' !== t) return await (0, I.Dk)(e.id, t, n);

@@ -26,8 +26,8 @@ var r,
     I = n(100159),
     j = n(473855),
     O = n(124860),
-    y = n(86779),
-    S = n(726745),
+    S = n(86779),
+    y = n(726745),
     N = n(913583),
     C = n(144114),
     A = n(541692),
@@ -41,8 +41,8 @@ var r,
     k = n(626135),
     M = n(585483),
     B = n(358085),
-    G = n(481153),
-    U = n(588705),
+    U = n(481153),
+    G = n(588705),
     F = n(494526),
     z = n(163671),
     V = n(981631),
@@ -304,7 +304,7 @@ class $ extends (r = l.PureComponent) {
         return (0, i.jsxs)(b.ZP, {
             className: e,
             children: [
-                (0, i.jsx)(U.R, {}),
+                (0, i.jsx)(G.R, {}),
                 (0, i.jsxs)(b.gO, {
                     className: q.marginTop20,
                     children: [
@@ -372,7 +372,7 @@ class $ extends (r = l.PureComponent) {
             (n =
                 null == r || p
                     ? null != l
-                        ? (0, i.jsx)(G.Z, { giftCode: l })
+                        ? (0, i.jsx)(U.Z, { giftCode: l })
                         : (0, i.jsxs)('div', {
                               className: W.header,
                               children: [
@@ -387,7 +387,7 @@ class $ extends (r = l.PureComponent) {
                                   !1 === (0, B.isAndroidWeb)() ? (0, i.jsx)(b.DK, { children: K.intl.string(K.t.euS7r6) }, 'subtitle') : null
                               ]
                           })
-                    : (0, i.jsx)(U.Z, { invite: r })),
+                    : (0, i.jsx)(G.Z, { invite: r })),
             (0, i.jsxs)(
                 v.Z,
                 {
@@ -520,7 +520,7 @@ class $ extends (r = l.PureComponent) {
                     expanded: !0,
                     children: this.renderDefaultForm(!0)
                 }),
-                t && (0, i.jsx)(y.Z, {})
+                t && (0, i.jsx)(S.Z, {})
             ]
         });
     }
@@ -792,7 +792,7 @@ class $ extends (r = l.PureComponent) {
 }
 Y($, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
 let ee = function (e) {
-    let t = (0, d.cj)([L.Z, D.Z, w.default, S.Z, A.Z], () => ({
+    let t = (0, d.cj)([L.Z, D.Z, w.default, y.Z, A.Z], () => ({
         authenticated: w.default.isAuthenticated(),
         handoffAvailable: L.Z.isHandoffAvailable(),
         user: L.Z.user,
@@ -801,7 +801,7 @@ let ee = function (e) {
         mfaMethods: w.default.getMFAMethods(),
         defaultRoute: D.Z.defaultRoute,
         country: A.Z.getCountryCode(),
-        hasLoggedInAccounts: S.Z.getHasLoggedInAccounts()
+        hasLoggedInAccounts: y.Z.getHasLoggedInAccounts()
     }));
     return (0, i.jsx)($, J({}, e, t));
 };

@@ -1,5 +1,5 @@
 let r, i, a, o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I;
-(n.d(t, { Z: () => ek }), n(388685));
+(n.d(t, { Z: () => eM }), n(388685));
 var T,
     S = n(392711),
     A = n(754700),
@@ -11,7 +11,7 @@ var T,
     D = n(184299),
     L = n(5881),
     x = n(46140);
-function M(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function k(e) {
                 })
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                k(e, t, n[t]);
             }));
     }
     return e;
@@ -76,7 +76,7 @@ function Z(e, t) {
 function H(e, t) {
     let n = (o = new Map(o)).get(e);
     if (null != n) {
-        let r = k({}, n, t);
+        let r = M({}, n, t);
         (Z(e, t), o.set(e, r));
     }
 }
@@ -88,7 +88,7 @@ function W(e, t) {
     Y(e, t);
     let n = o.get(e),
         r = null == n ? void 0 : n.userStatus;
-    null != r && null == r.claimedAt && H(e, { userStatus: U(k({}, r), { claimedAt: t.claimedAt }) });
+    null != r && null == r.claimedAt && H(e, { userStatus: U(M({}, r), { claimedAt: t.claimedAt }) });
 }
 function K(e) {
     var t;
@@ -106,7 +106,7 @@ function z(e, t) {
         let n = K({ entitlements: t });
         (null != n && Y(e, n),
             H(e, {
-                userStatus: U(k({}, i), {
+                userStatus: U(M({}, i), {
                     claimedAt: t.claimedAt,
                     claimedTier: null != (a = null == n ? void 0 : n.tier) ? a : null
                 })
@@ -293,7 +293,7 @@ function eP() {
     (o.forEach((n, r) => {
         !0 !== t.get(r) && ((0, P.zi)(n) ? (t.set(r, !0), (e = !0)) : t.has(r) || t.set(r, !1));
     }),
-        e && ((v = t), eM.emitChange()));
+        e && ((v = t), ek.emitChange()));
 }
 function ew() {
     null === B &&
@@ -387,8 +387,8 @@ class ex extends (T = C.ZP.Store) {
         return null != (t = v.get(e)) && t;
     }
 }
-M(ex, 'displayName', 'QuestsStore');
-let eM = new ex(R.Z, {
+k(ex, 'displayName', 'QuestsStore');
+let ek = new ex(R.Z, {
         LOGOUT: X,
         QUESTS_FETCH_CURRENT_QUESTS_BEGIN: Q,
         QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: J,
@@ -423,4 +423,4 @@ let eM = new ex(R.Z, {
         QUESTS_RESET_OPTIMISTIC_PROGRESS: eN,
         QUESTS_USER_COMPLETION_UPDATE: eL
     }),
-    ek = eM;
+    eM = ek;

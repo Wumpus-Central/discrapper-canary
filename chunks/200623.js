@@ -1,35 +1,36 @@
 r.d(t, { default: () => C });
 var n = r(255367),
-    a = r(73800),
-    s = r(442837),
-    o = r(481060),
-    c = r(198993),
+    s = r(73800),
+    i = r(442837),
+    a = r(82659),
+    c = r(481060),
+    o = r(198993),
     l = r(639351),
-    i = r(63063),
-    d = r(258609),
-    u = r(259408),
+    d = r(63063),
+    u = r(258609),
+    f = r(259408),
     m = r(893387),
-    f = r(927923),
+    p = r(927923),
     x = r(981631),
-    p = r(388032),
-    _ = r(403883);
+    b = r(388032),
+    g = r(403883);
 function h(e) {
     let { step: t, instructions: r } = e;
     return (0, n.jsxs)('div', {
-        className: _.cardRow,
+        className: g.cardRow,
         children: [
             (0, n.jsx)('div', {
-                className: _.stepNumberContainer,
-                children: (0, n.jsx)(o.Text, {
+                className: g.stepNumberContainer,
+                children: (0, n.jsx)(c.Text, {
                     variant: 'text-sm/semibold',
-                    className: _.stepNumber,
+                    className: g.stepNumber,
                     children: t
                 })
             }),
-            (0, n.jsx)(o.Text, {
+            (0, n.jsx)(c.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-primary',
-                className: _.instructions,
+                className: g.instructions,
                 children: r
             })
         ]
@@ -37,82 +38,58 @@ function h(e) {
 }
 function C(e) {
     let { channel: t, transitionState: r, onClose: C } = e,
-        b = (0, s.e7)([d.Z], () => null != d.Z.getRemoteSessionId()),
-        g = (0, u.Z)(t, { forQRCode: !0 });
+        _ = (0, i.e7)([u.Z], () => null != u.Z.getRemoteSessionId()),
+        j = (0, f.Z)(t, { forQRCode: !0 });
     return (
-        a.useEffect(() => {
-            b && C();
-        }, [b, C]),
-        a.useEffect(() => {
-            (0, m.Z)(t.id, f.YE.XBOX);
+        s.useEffect(() => {
+            _ && C();
+        }, [_, C]),
+        s.useEffect(() => {
+            (0, m.Z)(t.id, p.YE.XBOX);
         }, [t.id]),
-        (0, n.jsxs)(o.Y0X, {
-            size: o.CgR.DYNAMIC,
-            className: _.modalRoot,
+        (0, n.jsx)(a.Modal, {
+            title: b.intl.string(b.t['f+Aijo']),
+            subtitle: b.intl.string(b.t.mYFmDQ),
+            actions: [],
+            onClose: C,
             transitionState: r,
-            parentComponent: 'XboxModal',
-            children: [
-                (0, n.jsxs)(o.xBx, {
-                    separator: !1,
-                    className: _.modalHeaderContainer,
-                    children: [
-                        (0, n.jsx)(o.X6q, {
-                            className: _.modalHeader,
-                            variant: 'heading-xl/extrabold',
-                            children: p.intl.string(p.t['f+Aijo'])
-                        }),
-                        (0, n.jsx)(o.Text, {
-                            variant: 'text-md/medium',
-                            color: 'header-secondary',
-                            children: p.intl.string(p.t.mYFmDQ)
-                        })
-                    ]
-                }),
-                (0, n.jsx)(o.hzk, {
-                    className: _.content,
-                    children: (0, n.jsxs)('div', {
-                        className: _.card,
+            children: (0, n.jsxs)('div', {
+                className: g.card,
+                children: [
+                    (0, n.jsxs)('div', {
+                        className: g.cardText,
                         children: [
-                            (0, n.jsxs)('div', {
-                                className: _.cardText,
-                                children: [
-                                    (0, n.jsxs)(o.Text, {
-                                        variant: 'text-lg/semibold',
-                                        color: 'header-primary',
-                                        className: _.cardRow,
-                                        children: [(0, n.jsx)(l.Z, { className: _.cardHeaderIcon }), p.intl.string(p.t.ZNlYbG)]
-                                    }),
-                                    (0, n.jsx)(h, {
-                                        step: 1,
-                                        instructions: p.intl.string(p.t.dDtkl5)
-                                    }),
-                                    (0, n.jsx)(h, {
-                                        step: 2,
-                                        instructions: p.intl.string(p.t.IWuXjI)
-                                    }),
-                                    (0, n.jsx)(o.Text, {
-                                        variant: 'text-sm/medium',
-                                        children: (0, n.jsx)(o.eee, {
-                                            className: _.learnMore,
-                                            href: i.Z.getArticleURL(x.BhN.XBOX_CONNECTION),
-                                            children: p.intl.string(p.t.hvVgAQ)
-                                        })
-                                    })
-                                ]
+                            (0, n.jsxs)(c.Text, {
+                                variant: 'text-lg/semibold',
+                                color: 'header-primary',
+                                className: g.cardRow,
+                                children: [(0, n.jsx)(l.Z, { className: g.cardHeaderIcon }), b.intl.string(b.t.ZNlYbG)]
                             }),
-                            (0, n.jsx)(c.ZP, {
-                                className: _.qrCode,
-                                size: 120,
-                                text: g
+                            (0, n.jsx)(h, {
+                                step: 1,
+                                instructions: b.intl.string(b.t.dDtkl5)
+                            }),
+                            (0, n.jsx)(h, {
+                                step: 2,
+                                instructions: b.intl.string(b.t.IWuXjI)
+                            }),
+                            (0, n.jsx)(c.Text, {
+                                variant: 'text-sm/medium',
+                                children: (0, n.jsx)(c.eee, {
+                                    className: g.learnMore,
+                                    href: d.Z.getArticleURL(x.BhN.XBOX_CONNECTION),
+                                    children: b.intl.string(b.t.hvVgAQ)
+                                })
                             })
                         ]
+                    }),
+                    (0, n.jsx)(o.ZP, {
+                        className: g.qrCode,
+                        size: 120,
+                        text: j
                     })
-                }),
-                (0, n.jsx)(o.olH, {
-                    className: _.closeButton,
-                    onClick: C
-                })
-            ]
+                ]
+            })
         })
     );
 }

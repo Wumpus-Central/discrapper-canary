@@ -16,7 +16,7 @@ var r = n(255367),
     h = n(981631),
     x = n(388032),
     j = n(613915);
-function O(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function O(e) {
     }
     return e;
 }
-function v(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,12 +67,12 @@ function y(e) {
         [I, E] = i.useState(f.Fl),
         T = (0, o.e7)([b.Z], () => b.Z.getGuildIncident(t)),
         w = (0, p.BT)(C),
-        P = (0, m.SG)(T) || N,
-        Z = (0, m.sN)(T),
-        [A, k] = i.useState(P),
-        [D, R] = i.useState(Z),
+        Z = (0, m.SG)(T) || N,
+        P = (0, m.sN)(T),
+        [A, k] = i.useState(Z),
+        [D, R] = i.useState(P),
         [L, M] = i.useState(!1),
-        B = A !== P || D !== Z || L,
+        B = A !== Z || D !== P || L,
         U = N && !w;
     if (null == C) return (y(), null);
     function W() {
@@ -138,7 +138,7 @@ function y(e) {
                                     children: (e) =>
                                         (0, r.jsx)(
                                             'div',
-                                            v(O({}, e), {
+                                            O(v({}, e), {
                                                 children: (0, r.jsx)(a.rsf, {
                                                     className: j.toggle,
                                                     onChange: W,
@@ -188,7 +188,7 @@ function y(e) {
                             variant: 'primary',
                             text: x.intl.string(x.t['pwm/z8']),
                             onClick: () => {
-                                (P || Z) && !A && !D ? ((0, u.n)(C.id, !1, !1), (0, a.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(g.Z, v(O({}, e), { guildId: t }))))) : (0, u.n)(C.id, A, D, I);
+                                (Z || P) && !A && !D ? ((0, u.n)(C.id, !1, !1), (0, a.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(g.Z, O(v({}, e), { guildId: t }))))) : (0, u.n)(C.id, A, D, I);
                                 let { source: e, alertType: n, messageId: i } = _;
                                 (d.default.track(h.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                                     guild_id: t,

@@ -15,11 +15,11 @@ var r = n(255367),
     x = n(412899),
     p = n(493773),
     b = n(447003),
-    j = n(605436),
-    v = n(621516),
-    C = n(982168),
-    _ = n(386923),
-    y = n(474366),
+    j = n(621516),
+    v = n(982168),
+    C = n(386923),
+    _ = n(474366),
+    y = n(345162),
     O = n(485386),
     w = n(430824),
     S = n(186523),
@@ -213,7 +213,7 @@ let J = (e) => {
     },
     ea = (e) => {
         let { isAllDone: t, isVisible: n, canManageChannel: r, guildId: a, channel: l } = e,
-            s = (0, h.e7)([O.Z], () => (null != a ? O.Z.getRoles(a) : void 0)),
+            s = (0, h.e7)([O.Z], () => (null != a ? O.Z.partitionVersion(a) : void 0)),
             o = i.useCallback(() => {
                 T.S.dispatch(z.CkL.REMEASURE_TARGET);
             }, []);
@@ -275,7 +275,7 @@ let J = (e) => {
             u = (0, h.e7)([I.Z], () => I.Z.hasHidden(a.id)),
             f = (function (e, t, a, l) {
                 let s = null == e ? void 0 : e.id,
-                    o = (0, h.e7)([O.Z], () => (null != s ? O.Z.getRoles(s) : void 0));
+                    o = (0, h.e7)([O.Z], () => (null != s ? O.Z.getSortedRoles(s) : void 0));
                 return i.useMemo(() => {
                     let i = new K(),
                         s = (null == t ? void 0 : t.isMediaChannel()) === !0;
@@ -287,9 +287,9 @@ let J = (e) => {
                             i.addStep(
                                 (function (e, t, i, a) {
                                     let l = (0, b.Z)(i) ? m.$e(z.Plq.VIEW_CHANNEL, z.Plq.SEND_MESSAGES) : z.Plq.SEND_MESSAGES,
-                                        s = null != e ? (0, R.E$)(e, t, i, l).filter((t) => i.permissionOverwrites.hasOwnProperty(t.id) || (0, j.pM)(e.id, t.id)) : [],
+                                        s = null != e ? (0, R.E)(t, i, l).filter((e) => i.permissionOverwrites.hasOwnProperty(e.id) || (0, y.fI)(e)) : [],
                                         o = s.length > 0,
-                                        c = s.some((t) => (0, j.pM)(e.id, t.id));
+                                        c = s.some((e) => (0, y.fI)(e));
                                     return {
                                         name: B.intl.string(B.t['/Ax2go']),
                                         description: B.intl.string(B.t.oMIexc),
@@ -397,7 +397,7 @@ let J = (e) => {
             m = (0, Z.r_)(i),
             { transitions: f, setVisible: x } = el(),
             b = es(a),
-            j = eu(),
+            y = eu(),
             O = ee(i.id, x),
             {
                 onboardingSteps: T,
@@ -428,19 +428,19 @@ let J = (e) => {
         }),
         null == o)
             ? null
-            : (0, C.iZ)(i)
+            : (0, v.iZ)(i)
               ? n || 0 !== s.size
                   ? s.size > 0
                       ? null
-                      : (0, r.jsx)(_.Z, { guild: o })
+                      : (0, r.jsx)(C.Z, { guild: o })
                   : (0, r.jsxs)(r.Fragment, {
-                        children: [(0, r.jsx)(_.Z, { guild: o }), (0, r.jsx)(y.q, {})]
+                        children: [(0, r.jsx)(C.Z, { guild: o }), (0, r.jsx)(_.q, {})]
                     })
               : E && m
                 ? k
                     ? t
                         ? null
-                        : (0, r.jsx)(v.Z, { channel: i })
+                        : (0, r.jsx)(j.Z, { channel: i })
                     : (0, r.jsx)(r.Fragment, {
                           children: f((e, t) =>
                               t
@@ -499,11 +499,11 @@ let J = (e) => {
                                                                           {
                                                                               tag: 'li',
                                                                               'aria-label': e.name,
-                                                                              onClick: () => j(e),
+                                                                              onClick: () => y(e),
                                                                               className: l()(H.stepContainer, { [H.completed]: e.isDone }),
                                                                               children: [
                                                                                   e.shouldWarn
-                                                                                      ? (0, r.jsx)(g.P4T, {
+                                                                                      ? (0, r.jsx)(g.Mgn, {
                                                                                             size: 'custom',
                                                                                             width: 20,
                                                                                             height: 20,

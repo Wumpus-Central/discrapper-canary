@@ -80,11 +80,11 @@ let T = (e) => {
         D = null != w && w.animated,
         L = null != w && !_.ZP.isInternalEmojiForGuildId(w, null == y ? void 0 : y.getGuildId()),
         x = null != w ? m.qAy.EMOJI : m.qAy.EMOJI_PICKER_FLOATING_UPSELL,
-        M = (0, a.e7)([u.Z], () => u.Z.hasFetched);
+        k = (0, a.e7)([u.Z], () => u.Z.hasFetched);
     return (
         i.useEffect(() => {
-            M || o.MH();
-        }, [M]),
+            k || o.MH();
+        }, [k]),
         (0, r.jsx)(d.Z, {
             containerContext: A,
             image: {

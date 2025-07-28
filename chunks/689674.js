@@ -46,7 +46,7 @@ function d(e) {
                 autoTrackExposure: !0
             }
         ).enabled,
-        O = (0, a.O)(x, 0, v);
+        y = (0, a.O)(x, 0, v);
     return (
         r.useEffect(
             () => () => {
@@ -54,6 +54,6 @@ function d(e) {
             },
             [b]
         ),
-        O
+        y
     );
 }

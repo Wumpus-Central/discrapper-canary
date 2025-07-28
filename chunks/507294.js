@@ -1,6 +1,6 @@
 (n.d(t, {
-    default: () => Z,
-    g: () => x
+    default: () => x,
+    g: () => Z
 }),
     n(388685),
     n(472816),
@@ -58,7 +58,7 @@ function A(e) {
     }
     return e;
 }
-function x(e, t) {
+function Z(e, t) {
     (0, u.ZDy)(async () => {
         let { default: i } = await Promise.all([n.e('82412'), n.e('80993')]).then(n.bind(n, 107807));
         return (n) =>
@@ -74,9 +74,9 @@ function x(e, t) {
             );
     });
 }
-let Z = function (e) {
-    let { guildId: t, transitionState: l, onClose: Z } = e,
-        w = (0, s.e7)([y.Z], () => y.Z.getRoles(t)),
+let x = function (e) {
+    let { guildId: t, transitionState: l, onClose: x } = e,
+        w = (0, s.e7)([y.Z], () => y.Z.getSortedRoles(t)),
         L = (0, s.e7)([O.default], () => O.default.getId()),
         R = (0, s.e7)([E.ZP], () => E.ZP.getMember(t, L)),
         [D, k] = i.useState([]),
@@ -104,10 +104,7 @@ let Z = function (e) {
         null == R)
     )
         return null;
-    let G = Object.values(w).filter((e) => {
-        var t;
-        return (null == (t = e.tags) ? void 0 : t.guild_connections) === null;
-    });
+    let G = w.filter((e) => null === e.tags.guild_connections);
     return (0, r.jsxs)(u.Y0X, {
         transitionState: l,
         'aria-labelledby': U,
@@ -131,7 +128,7 @@ let Z = function (e) {
                             })
                         ]
                     }),
-                    (0, r.jsx)(u.olH, { onClick: Z })
+                    (0, r.jsx)(u.olH, { onClick: x })
                 ]
             }),
             (0, r.jsxs)(u.hzk, {
@@ -181,7 +178,7 @@ let Z = function (e) {
                                 u.P3F,
                                 {
                                     className: a()(P.verifiedRole, l ? P.verifiedRoleHasRole : null),
-                                    onClick: l ? void 0 : () => x(e, t),
+                                    onClick: l ? void 0 : () => Z(e, t),
                                     onContextMenu: l
                                         ? (i) => {
                                               var l;

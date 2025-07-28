@@ -2,8 +2,8 @@
 var r = n(255367),
     i = n(73800),
     l = n(392711),
-    s = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    s = n(481060),
     o = n(510231),
     c = n(434404),
     d = n(383124),
@@ -11,11 +11,11 @@ var r = n(255367),
     m = n(388032),
     g = n(210530),
     p = n(381109);
-let f = () => null;
-function h(e) {
+let h = () => null;
+function f(e) {
     let { gameApplicationIds: t, handleChange: n, disabled: i } = e,
-        { options: l, matchSorterOptions: s } = (0, o.h)();
-    return (0, r.jsx)(a.VcW, {
+        { options: l, matchSorterOptions: a } = (0, o.h)();
+    return (0, r.jsx)(s.VcW, {
         multi: !0,
         hidePills: !0,
         wrapperClassName: g.selectWrapper,
@@ -24,10 +24,10 @@ function h(e) {
         placeholder: m.intl.string(m.t.JTLolJ),
         onChange: n,
         isDisabled: 20 === t.length || i,
-        matchSorterOptions: s,
+        matchSorterOptions: a,
         clearQueryOnSelect: !0,
         customPillContainerClassName: g.pills,
-        renderCustomPill: f
+        renderCustomPill: h
     });
 }
 function x(e) {
@@ -56,7 +56,7 @@ function j(e) {
     let { profile: n, canManageGuild: l } = e,
         o = n.id,
         d = null != (t = null == n ? void 0 : n.gameApplicationIds) ? t : b,
-        f = i.useCallback(
+        h = i.useCallback(
             (e) => {
                 c.Z.updateGuildProfile(o, { gameApplicationIds: e });
             },
@@ -70,16 +70,16 @@ function j(e) {
             [o, d]
         ),
         v = i.useRef(d),
-        _ = i.useMemo(() => (s().isEqual(new Set(d), new Set(v.current)) || (v.current = [...d]), v.current), [d]);
-    return (0, r.jsxs)(a.hjN, {
+        _ = i.useMemo(() => (a().isEqual(new Set(d), new Set(v.current)) || (v.current = [...d]), v.current), [d]);
+    return (0, r.jsxs)(s.hjN, {
         className: p.section,
         children: [
             (0, r.jsxs)('div', {
                 className: p.sectionHeader,
                 children: [
-                    (0, r.jsx)(a.vwX, { children: m.intl.string(m.t.BR68vL) }),
-                    (0, r.jsx)(a.R94, {
-                        type: a.geA.DESCRIPTION,
+                    (0, r.jsx)(s.vwX, { children: m.intl.string(m.t.BR68vL) }),
+                    (0, r.jsx)(s.R94, {
+                        type: s.geA.DESCRIPTION,
                         children: m.intl.string(m.t.MobxiI)
                     })
                 ]
@@ -87,9 +87,9 @@ function j(e) {
             (0, r.jsxs)('div', {
                 className: g.sectionBody,
                 children: [
-                    (0, r.jsx)(h, {
+                    (0, r.jsx)(f, {
                         gameApplicationIds: d,
-                        handleChange: f,
+                        handleChange: h,
                         disabled: !l
                     }),
                     (0, r.jsx)(x, {
@@ -100,7 +100,7 @@ function j(e) {
                     (0, r.jsx)(u.Z, {
                         guildId: o,
                         selectedGameApplicationIds: d,
-                        onUpdateGames: f,
+                        onUpdateGames: h,
                         disabled: !l
                     })
                 ]

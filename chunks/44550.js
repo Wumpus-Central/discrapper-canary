@@ -2,14 +2,14 @@ n.d(t, { Z: () => p });
 var r,
     i,
     l,
-    s = n(442837),
-    a = n(570140);
+    a = n(442837),
+    s = n(570140);
 let o = null,
     c = 0,
     d = null,
     u = null,
     m = !1;
-class g extends (l = s.ZP.Store) {
+class g extends (l = a.ZP.Store) {
     hasChanges() {
         return o !== d;
     }
@@ -44,7 +44,7 @@ class g extends (l = s.ZP.Store) {
               writable: !0
           })
         : (g[r] = i));
-let p = new g(a.Z, {
+let p = new g(s.Z, {
     GUILD_SETTINGS_SET_VANITY_URL: function (e) {
         var t, n;
         ((d = o = null != (t = e.code) ? t : ''), (c = e.uses), (u = null != (n = e.error) ? n : null), (m = !0));

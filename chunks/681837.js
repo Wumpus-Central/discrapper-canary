@@ -24,7 +24,7 @@ function _(e) {
               className: f.container,
               text: d.intl.string(d.t.p3Q9Y2),
               delay: u.vB,
-              children: (0, r.jsx)(s.P4T, {
+              children: (0, r.jsx)(s.Mgn, {
                   size: n,
                   color: a.Z.colors.STATUS_WARNING.css
               })

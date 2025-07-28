@@ -15,8 +15,8 @@ var n = r(255367),
     O = r(774073),
     E = r(426482),
     x = r(644941),
-    h = r(388032),
-    v = r(263930),
+    v = r(388032),
+    h = r(263930),
     j = r(276220);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -119,9 +119,9 @@ function y(e) {
     f && null == m)
         ? (0, n.jsxs)('div', {
               children: [
-                  (0, n.jsx)('div', { className: l()(j.loadingHeading, v.sectionHeader) }),
+                  (0, n.jsx)('div', { className: l()(j.loadingHeading, h.sectionHeader) }),
                   (0, n.jsx)('div', {
-                      className: l()(v.row, v.gapLg),
+                      className: l()(h.row, h.gapLg),
                       children: o()
                           .range(0, 5)
                           .map((e) => (0, n.jsx)('div', { className: j.loadingArtwork }, e))
@@ -132,10 +132,10 @@ function y(e) {
           ? (0, n.jsxs)('div', {
                 children: [
                     (0, n.jsx)(u.X6q, {
-                        className: v.sectionHeader,
+                        className: h.sectionHeader,
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: h.intl.string(h.t['6rLyQE'])
+                        children: v.intl.string(v.t['6rLyQE'])
                     }),
                     (0, n.jsx)('div', {
                         className: j.similarGames,
