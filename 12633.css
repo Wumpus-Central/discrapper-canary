@@ -2151,7 +2151,8 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     width: 100%
 }
 
-.headerGraphic__53cea img {
+.headerGraphic__53cea img,
+.headerGraphic__53cea video {
     max-height: 100%;
     max-width: 100%
 }
