@@ -267,14 +267,15 @@ let el = (e) => {
         let { isParentHovered: t } = e,
             i = (0, P.gU)();
         return t
-            ? (0, r.jsx)(Y.PZ, {
+            ? (0, r.jsx)(Y.bU, {
                   onClick: () => {
                       (0, h.ZD)(async () => {
                           let { default: e } = await n.e('44153').then(n.bind(n, 760949));
                           return (t) => (0, r.jsx)(e, en({}, t));
                       });
                   },
-                  'aria-label': $.intl.string($.t.cpT0Cg)
+                  'aria-label': $.intl.string($.t.cpT0Cg),
+                  icon: g.Dio
               })
             : i > 0
               ? (0, r.jsx)('div', {

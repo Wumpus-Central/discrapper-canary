@@ -84,7 +84,7 @@ function B(e) {
     });
 }
 function X(e) {
-    let { message: t, channel: n, mediaItem: i, textSelection: a, favoriteableType: s, favoriteableId: c, favoriteableName: B, itemHref: X, itemSrc: K, itemSafeSrc: W, itemTextContent: q, canReport: V, onHeightUpdate: J, onSelect: Q, onClose: Y, navId: $, ariaLabel: ee, shouldHideMediaOptions: et = !1 } = e,
+    let { message: t, channel: n, mediaItem: i, textSelection: a, favoriteableType: s, favoriteableId: c, favoriteableName: B, itemHref: X, itemSrc: K, itemSafeSrc: W, itemTextContent: q, canReport: V, onHeightUpdate: Q, onSelect: J, onClose: Y, navId: $, ariaLabel: ee, shouldHideMediaOptions: et = !1 } = e,
         en = (0, d.Z)(a),
         er = (0, b.Z)(a),
         ei = (0, A.Z)(t, n),
@@ -133,7 +133,7 @@ function X(e) {
             commandTargetId: t.id,
             channel: n,
             guildId: void 0,
-            onHeightUpdate: J
+            onHeightUpdate: Q
         }),
         eC = (0, U.Z)(t),
         eR = (0, p.Z)(t);
@@ -141,7 +141,7 @@ function X(e) {
         navId: $,
         onClose: Y,
         'aria-label': ee,
-        onSelect: Q,
+        onSelect: J,
         children: [
             (0, r.jsx)(l.kSQ, { children: en }),
             (0, r.jsx)(l.kSQ, { children: er }),

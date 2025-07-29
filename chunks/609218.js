@@ -21,7 +21,7 @@ var r = n(255367),
     E = n(357355),
     b = n(47280),
     y = n(639119),
-    O = n(740594),
+    O = n(638212),
     v = n(767714),
     I = n(302945),
     T = n(474936),
@@ -124,12 +124,10 @@ function w(e) {
                                               object: S.qAy.BUTTON_CTA
                                           },
                                           subscriptionTier: T.Si.TIER_2,
-                                          color: c.zx.Colors.CUSTOM,
                                           onClick: () => {
                                               x();
                                           },
-                                          buttonTextOverride: H(),
-                                          variant: 'expressive'
+                                          defaultTextOverride: H()
                                       })
                                   ]
                               })

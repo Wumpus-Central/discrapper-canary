@@ -1,11 +1,9 @@
-n.d(t, { Z: () => p });
-var r = n(255367);
-n(73800);
-var i = n(680018),
-    a = n(481060),
-    o = n(648613),
-    s = n(433390);
-function l(e, t, n) {
+n.d(t, { Z: () => f });
+var r = n(255367),
+    i = n(680018),
+    a = n(648613),
+    o = n(864218);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +16,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +27,12 @@ function c(e) {
                 })
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                s(e, t, n[t]);
             }));
     }
     return e;
 }
-function u(e, t) {
+function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,29 +44,29 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function u(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : c(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function _(e, t) {
+function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,43 +75,32 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let p = function (e) {
-    var { subscriptionTier: t, onClick: n, postSuccessGuild: l, onSubscribeModalClose: u, premiumModalAnalyticsLocation: f, applicationId: p, confirmationFooter: h, paymentModalBanner: m, buttonTextOverride: g } = e,
-        E = _(e, ['subscriptionTier', 'onClick', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'applicationId', 'confirmationFooter', 'paymentModalBanner', 'buttonTextOverride']);
-    let b = {
+let f = function (e) {
+    var { subscriptionTier: t, onClick: n, postSuccessGuild: s, onSubscribeModalClose: c, premiumModalAnalyticsLocation: _, applicationId: f, confirmationFooter: p, paymentModalBanner: h, buttonTextOverride: m, defaultTextOverride: g, iconOverride: E, variantOverride: b } = e,
+        y = d(e, ['subscriptionTier', 'onClick', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'applicationId', 'confirmationFooter', 'paymentModalBanner', 'buttonTextOverride', 'defaultTextOverride', 'iconOverride', 'variantOverride']);
+    let O = {
             onClick: n,
             subscriptionTier: t,
-            postSuccessGuild: l,
-            onSubscribeModalClose: u,
-            premiumModalAnalyticsLocation: f,
-            applicationId: p,
-            confirmationFooter: h,
-            paymentModalBanner: m
+            postSuccessGuild: s,
+            onSubscribeModalClose: c,
+            premiumModalAnalyticsLocation: _,
+            applicationId: f,
+            confirmationFooter: p,
+            paymentModalBanner: h
         },
-        { buttonText: y, disabled: O } = (0, s.Z)({
+        { subscribeButtonProps: v } = (0, o.F)({
             subscriptionTier: t,
-            buttonTextOverride: g
+            buttonTextOverride: m,
+            defaultTextOverride: g,
+            iconOverride: E,
+            variantOverride: b
         });
     return (0, r.jsx)(
-        o.Z,
-        d(c({}, b), {
+        a.Z,
+        u(l({}, O), {
             children: (e) => {
-                let { onClick: t } = e,
-                    { variant: n } = E,
-                    o = _(E, ['variant']);
-                return (0, r.jsx)(
-                    i.z,
-                    c(
-                        {
-                            onClick: t,
-                            text: y,
-                            disabled: O,
-                            icon: a.SrA,
-                            variant: n
-                        },
-                        o
-                    )
-                );
+                let { onClick: t } = e;
+                return (0, r.jsx)(i.z, l({ onClick: t }, v, y));
             }
         })
     );

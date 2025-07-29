@@ -41,11 +41,11 @@ let b = (e) => ({
                                 (function (e) {
                                     var t;
                                     let { guild: n, emojis: r, isEmojiAnimated: l } = e,
-                                        a = null != (t = null == r ? void 0 : r.filter((e) => e.animated === l && !(0, c.Kt)(e, n.id)).length) ? t : 0;
+                                        a = null != (t = r.filter((e) => e.animated === l && !(0, c.Kt)(e, n.id)).length) ? t : 0;
                                     return (0, p.y4)(n) - a;
                                 })({
                                     guild: n,
-                                    emojis: s.ZP.getGuildEmojiOrUndefined(t),
+                                    emojis: s.ZP.getGuildEmoji(t),
                                     isEmojiAnimated: O
                                 })
                             ];

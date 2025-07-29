@@ -88,11 +88,9 @@ function E(e, t) {
     }
 }
 function b(e) {
-    let t = m(e)
-        .values()
+    let t = Array.from(m(e).values())
         .filter((e) => e.type === i.re.TEXT_DISPLAY)
         .map((e) => e.content)
-        .toArray()
         .join('\n');
     return '' !== t ? t : null;
 }

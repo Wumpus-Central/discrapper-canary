@@ -52,7 +52,7 @@ function v() {
             var e;
             return null != (e = h.Z.getNotifyingChannelIds()) ? e : [];
         }),
-        t = (0, a.Wu)([f.ZP], () => e.filter((e) => f.ZP.hasUnread(e) && !f.ZP.isEstimated(e)), [e]),
+        t = (0, a.Wu)([f.ZP], () => e.filter((e) => f.ZP.hasUnread(e)), [e]),
         n = (0, a.Wu)([s.ZP], () => {
             var e;
             return null != (e = s.ZP.getSettingsFilteredMentions()) ? e : [];

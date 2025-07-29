@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => s }), n(415506));
+(n.d(t, { Z: () => a }), n(415506));
 var r = n(772848),
     i = n(544891),
     l = n(981631);
-let s = {
+let a = {
     generateNonce: function () {
         return (0, r.Z)();
     },

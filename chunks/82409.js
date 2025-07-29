@@ -134,7 +134,7 @@ function U(e) {
                         null != r &&
                             null != i &&
                             n.hasPresent() &&
-                            C.default.compare(i, r) > 0 &&
+                            C.default.compare(i, r) >= 0 &&
                             d.In(
                                 e,
                                 {
