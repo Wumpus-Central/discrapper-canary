@@ -13,10 +13,10 @@ var n = r(255367),
     f = r(388032),
     g = r(107242);
 function m(e) {
-    let { searchId: t, searchMode: r, onSearchModeChange: l, totalResults: c, isIndexing: m, isSearching: _, documentsIndexed: y } = e,
+    let { searchId: t, searchMode: r, onSearchModeChange: l, totalResults: c, isIndexing: m, isSearching: _, documentsIndexed: S } = e,
         x = (0, d.U)({ location: 'SearchHeader' }),
         b = (0, i.e7)([u.Z], () => u.Z.getSearchResultsQueryString(t)),
-        E = s.useMemo(() => {
+        C = s.useMemo(() => {
             if (t === p.aib.DMS && x) {
                 var e, r;
                 let t = (0, h.kG)(null != b ? b : ''),
@@ -26,17 +26,17 @@ function m(e) {
             return null;
         }, [t, x, b]);
     return (0, n.jsxs)('header', {
-        className: a()(g.searchHeader, { [g.searchHeaderWithSubtitle]: null != E }),
+        className: a()(g.searchHeader, { [g.searchHeaderWithSubtitle]: null != C }),
         children: [
             (0, n.jsx)('div', {
                 className: g.totalResults,
                 role: 'status',
-                children: (0, n.jsx)(S, {
+                children: (0, n.jsx)(y, {
                     totalResults: c,
-                    subtitle: E,
+                    subtitle: C,
                     isIndexing: m,
                     isSearching: _,
-                    documentsIndexed: y
+                    documentsIndexed: S
                 })
             }),
             (0, n.jsxs)(o.njP, {
@@ -65,10 +65,10 @@ function m(e) {
         ]
     });
 }
-function S(e) {
+function y(e) {
     let { totalResults: t, subtitle: r, isSearching: s, isIndexing: l, documentsIndexed: a } = e;
     return l
-        ? (0, n.jsx)(y, { documentsIndexed: a })
+        ? (0, n.jsx)(S, { documentsIndexed: a })
         : s
           ? (0, n.jsx)(x, {})
           : (0, n.jsx)(b, {
@@ -86,7 +86,7 @@ function _() {
         })
     });
 }
-function y(e) {
+function S(e) {
     let { documentsIndexed: t } = e;
     return (0, n.jsx)(o.ua7, {
         text: f.intl.formatToPlainString(f.t['4Y3O+P'], { count: t }),

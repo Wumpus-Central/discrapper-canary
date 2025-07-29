@@ -1,8 +1,8 @@
-r.d(t, { Z: () => a });
-var n = r(594174),
-    s = r(111361),
-    l = r(474936);
-function a() {
-    let e = n.default.getCurrentUser();
-    return (0, s.I5)(e, l.p9.TIER_2);
+n.d(t, { Z: () => o });
+var r = n(594174),
+    i = n(111361),
+    a = n(474936);
+function o() {
+    let e = r.default.getCurrentUser();
+    return (0, i.I5)(e, a.p9.TIER_2);
 }

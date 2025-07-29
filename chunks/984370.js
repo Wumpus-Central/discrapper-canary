@@ -91,7 +91,17 @@ function P(e) {
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
                           P,
-                          e ? (0, r.jsx)(E.Z, { className: m.search }, null != p ? p : o) : null,
+                          e && !(0, f.AB)(o)
+                              ? (0, r.jsx)(
+                                    E.Z,
+                                    {
+                                        guildId: p,
+                                        channelId: o,
+                                        className: m.search
+                                    },
+                                    null != p ? p : o
+                                )
+                              : null,
                           M && (0, r.jsx)(S.ZP.Divider, {}),
                           k && !x ? (0, r.jsx)(_.Z, {}) : null,
                           F &&

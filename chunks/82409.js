@@ -191,10 +191,11 @@ function U(e) {
     let { filterStyle: Q } = v.Lk.useExperiment({ location: 'NotificationsInboxSidebar' }),
         { entrypoints: J } = (0, g._k)({ location: 'NotificationsInboxSidebar' }),
         $ = Q === v.v8.DROPDOWN && p !== A.V5.ALL;
-    return (0, r.jsxs)('nav', {
+    return (0, r.jsx)('nav', {
         className: o()(L.container, { [L.panelSpacing]: l }),
-        children: [
-            (0, r.jsx)(
+        children: (0, r.jsxs)(c.y5t, {
+            forceLevel: 1,
+            component: (0, r.jsx)(
                 f.ZP,
                 ((t = M(
                     {
@@ -226,20 +227,22 @@ function U(e) {
                       }),
                 t)
             ),
-            Q === v.v8.TABS && (0, r.jsx)(T.Z, {}),
-            p === A.V5.ALL && (0, r.jsx)(H, { hideBanner: !G || p !== A.V5.ALL }),
-            $ && (0, r.jsx)(z, { filter: p }),
-            (0, r.jsx)(Z.Z, {
-                className: L.messageList,
-                renderMessageGroup: F,
-                messages: p === A.V5.BOOKMARKS ? Y : q,
-                unreadMessages: p === A.V5.BOOKMARKS ? [] : X,
-                listName: 'notifications-inbox',
-                renderLoadingState: V,
-                ignoreGrouping: p === A.V5.BOOKMARKS,
-                loadMore: U
-            })
-        ]
+            children: [
+                Q === v.v8.TABS && (0, r.jsx)(T.Z, {}),
+                p === A.V5.ALL && (0, r.jsx)(H, { hideBanner: !G || p !== A.V5.ALL }),
+                $ && (0, r.jsx)(z, { filter: p }),
+                (0, r.jsx)(Z.Z, {
+                    className: L.messageList,
+                    renderMessageGroup: F,
+                    messages: p === A.V5.BOOKMARKS ? Y : q,
+                    unreadMessages: p === A.V5.BOOKMARKS ? [] : X,
+                    listName: 'notifications-inbox',
+                    renderLoadingState: V,
+                    ignoreGrouping: p === A.V5.BOOKMARKS,
+                    loadMore: U
+                })
+            ]
+        })
     });
 }
 function G(e) {

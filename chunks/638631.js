@@ -8,7 +8,7 @@ var r = n(481060),
     o = n(372461);
 let c = (e) => {
         let { trialOffer: t, discountOffer: n } = e;
-        return null != t ? l.intl.string(l.t.gtNqJS) : null != n ? l.intl.formatToPlainString(l.t.iiLbvr, { percent: n.discount.amount }) : void 0;
+        return null != t ? (null != t.referrer_id ? l.intl.string(l.t.gtNqJS) : l.intl.string(l.t.IBYG5e)) : null != n ? l.intl.formatToPlainString(l.t.iiLbvr, { percent: n.discount.amount }) : void 0;
     },
     d = (e) => {
         let { enablePremiumBrandRefresh: t = !1 } = e,

@@ -23,7 +23,7 @@ function g(e) {
             let e = (0, i.uniqWith)(
                     E.filter((e) => {
                         let { type: t } = e;
-                        return t !== p.IIU.CUSTOM_STATUS && t !== p.IIU.HANG_STATUS;
+                        return t !== p.IIU.CUSTOM_STATUS;
                     }),
                     (e, t) => (null != e.application_id && null != t.application_id && e.application_id === t.application_id) || (null != e.name && null != t.name && e.name === t.name)
                 ),

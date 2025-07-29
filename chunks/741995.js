@@ -1,60 +1,69 @@
-(r.d(t, { Z: () => f }), r(781311), r(290780));
-var n,
-    s,
-    l,
-    a = r(442837),
-    i = r(433517),
-    o = r(570140),
-    c = r(723642);
-let u = c.OA,
-    h = !1,
-    d = {};
-class p extends (n = a.ZP.Store) {
+(n.d(t, { Z: () => b }), n(781311), n(290780));
+var r,
+    i = n(442837),
+    a = n(433517),
+    o = n(570140),
+    s = n(723642);
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let c = s.OA,
+    u = 'tokenized',
+    d = !1,
+    _ = {};
+function f(e) {
+    var t;
+    let { searchId: n, query: r } = e;
+    if ('string' != typeof r || '' === (r = r.trim())) return;
+    let i = (_[n] = null != (t = _[n]) ? t : []),
+        o = i.indexOf(r);
+    (-1 !== o ? (i.splice(o, 1), i.unshift(r)) : null != i[0] && '' !== i[0] && r.startsWith(i[0]) ? (i[0] = r) : o < 0 && i.unshift(r), i.length > 5 && i.splice(5, i.length), a.K.set(s.OA, { history: _ }));
+}
+function p(e) {
+    let { searchId: t } = e;
+    null == t ? (a.K.remove(s.OA), (_ = {})) : (delete _[t], a.K.set(s.OA, { history: _ }));
+}
+function h(e) {
+    let { searchId: t, query: n } = e;
+    null != _[t] && ((_[t] = _[t].filter((e) => e !== n)), a.K.set(s.OA, { history: _ }));
+}
+function m(e) {
+    return (
+        Object.keys(e).forEach((t) => {
+            (Array.isArray(e[t]) && (e[t] = e[t].filter((e) => 'string' == typeof e && e.trim())), (Array.isArray(e[t]) && 0 !== e[t].length) || delete e[t]);
+        }),
+        e
+    );
+}
+function g() {
+    (a.K.remove(s.OA), (_ = {}));
+}
+class E extends (r = i.ZP.Store) {
     initialize() {
-        var e;
-        let t = i.K.get(u);
-        ((null == t ? void 0 : t.history) != null &&
-            (Object.keys((e = t.history)).forEach((t) => {
-                (Array.isArray(e[t]) && (e[t] = e[t].filter((e) => 'string' == typeof e && e.trim())), (Array.isArray(e[t]) && 0 !== e[t].length) || delete e[t]);
-            }),
-            (d = e)),
-            (h = !!i.K.get('tokenized')));
+        let e = a.K.get(c);
+        ((null == e ? void 0 : e.history) != null && (_ = m(e.history)), (d = !!a.K.get(u)));
     }
     isTokenized() {
-        return h;
+        return d;
     }
     getHistory(e) {
-        return d[e];
+        return _[e];
     }
 }
-((s = 'displayName'),
-    (l = c.zn),
-    s in p
-        ? Object.defineProperty(p, s, {
-              value: l,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (p[s] = l));
-let f = new p(o.Z, {
-    SEARCH_HISTORY_WEB_CLEAR_ITEMS: function (e) {
-        let { searchId: t } = e;
-        null == t ? (i.K.remove(c.OA), (d = {})) : (delete d[t], i.K.set(c.OA, { history: d }));
-    },
-    SEARCH_HISTORY_WEB_REMOVE_ITEM: function (e) {
-        let { searchId: t, query: r } = e;
-        null != d[t] && ((d[t] = d[t].filter((e) => e !== r)), i.K.set(c.OA, { history: d }));
-    },
-    SEARCH_HISTORY_WEB_ADD_ITEM: function (e) {
-        var t;
-        let { searchId: r, query: n } = e;
-        if ('string' != typeof n || '' === (n = n.trim())) return;
-        let s = (d[r] = null != (t = d[r]) ? t : []),
-            l = s.indexOf(n);
-        (-1 !== l ? (s.splice(l, 1), s.unshift(n)) : null != s[0] && '' !== s[0] && n.startsWith(s[0]) ? (s[0] = n) : l < 0 && s.unshift(n), s.length > 5 && s.splice(5, s.length), i.K.set(c.OA, { history: d }));
-    },
-    LOGOUT: function () {
-        (i.K.remove(c.OA), (d = {}));
-    }
+l(E, 'displayName', s.zn);
+let b = new E(o.Z, {
+    SEARCH_HISTORY_WEB_CLEAR_ITEMS: p,
+    SEARCH_HISTORY_WEB_REMOVE_ITEM: h,
+    SEARCH_HISTORY_WEB_ADD_ITEM: f,
+    LOGOUT: g
 });

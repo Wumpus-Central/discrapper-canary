@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(388685));
+(n.d(t, { Z: () => x }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -10,10 +10,11 @@ var r = n(255367),
     d = n(324701),
     h = n(768943),
     p = n(804932),
-    f = n(981631),
-    g = n(388032),
-    m = n(539499);
-function b(e) {
+    f = n(370774),
+    g = n(981631),
+    m = n(388032),
+    b = n(539499);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,7 +39,7 @@ function b(e) {
     }
     return e;
 }
-function _(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -56,19 +57,22 @@ function _(e, t) {
         e
     );
 }
-let O = {
-        MENTION: ['BOOKMARK', 'SETTINGS'],
+let y = {
+        MENTION: ['SETTINGS'],
         REPLY: ['SETTINGS'],
         REACTION: ['SETTINGS'],
         ANNOUNCEMENT: ['SETTINGS'],
         MESSAGE: ['SETTINGS']
     },
-    y = (e, t) =>
-        (0, i.useMemo)(() => {
-            let n = O[E(e)];
-            return t ? ['ACK', ...n] : n;
-        }, [e, t]);
-function C(e) {
+    C = (e, t) => {
+        let n = (0, f.ux)();
+        return (0, i.useMemo)(() => {
+            let r = S(e),
+                i = new Set();
+            return (t && i.add('ACK'), n && i.add('BOOKMARK'), y[r].forEach((e) => i.add(e)), Array.from(i));
+        }, [e, t, n]);
+    };
+function v(e) {
     let { label: t, onClick: n, message: l, Icon: a, interactionType: s } = e,
         [c, u] = (0, i.useState)(!1),
         d = (0, p.fJ)();
@@ -81,8 +85,8 @@ function C(e) {
         children: (e) =>
             (0, r.jsx)(
                 o.P3F,
-                _(b({}, e), {
-                    className: m.action,
+                O(_({}, e), {
+                    className: b.action,
                     onClick: (e) => {
                         ((0, p.Qz)({
                             message: l,
@@ -94,25 +98,25 @@ function C(e) {
                     },
                     children: (0, r.jsx)(a, {
                         size: c ? 'sm' : 'xs',
-                        className: m.actionIcon
+                        className: b.actionIcon
                     })
                 })
             )
     });
 }
-function v(e) {
+function j(e) {
     let { channel: t, message: n, label: l, Icon: a, Menu: s, interactionType: c } = e,
         u = (0, p.fJ)(),
         [d, h] = (0, i.useState)(!1),
         [f, g] = (0, i.useState)(!1),
-        O = (0, i.useRef)(null);
+        m = (0, i.useRef)(null);
     return (0, r.jsx)(o.yRy, {
         shouldShow: f,
         animation: o.yRy.Animation.NONE,
         position: 'right',
         align: 'top',
         autoInvert: !1,
-        targetElementRef: O,
+        targetElementRef: m,
         onRequestClose: () => g(!1),
         renderPopout: (e) =>
             (0, r.jsx)(o.P3F, {
@@ -133,9 +137,9 @@ function v(e) {
                 children: (t) =>
                     (0, r.jsx)(
                         o.P3F,
-                        _(b({}, t), {
-                            innerRef: O,
-                            className: m.action,
+                        O(_({}, t), {
+                            innerRef: m,
+                            className: b.action,
                             onClick: (e) => {
                                 ((0, p.Qz)({
                                     message: n,
@@ -147,10 +151,10 @@ function v(e) {
                             },
                             children: (0, r.jsx)(
                                 a,
-                                _(b({}, e), {
+                                O(_({}, e), {
                                     message: n,
                                     'aria-label': l,
-                                    className: m.actionIcon,
+                                    className: b.actionIcon,
                                     size: d ? 'sm' : 'xs'
                                 })
                             )
@@ -159,11 +163,11 @@ function v(e) {
             })
     });
 }
-let j = {
+let E = {
         ACK: {
             type: 'standard',
             Icon: o.dz2,
-            label: g.intl.string(g.t.e6RscX),
+            label: m.intl.string(m.t.e6RscX),
             onClick: (e) => {
                 (a.Z.dispatch({
                     type: 'NOTIFICATIONS_INBOX_ITEM_ACK',
@@ -172,8 +176,8 @@ let j = {
                     s.In(
                         e.channel_id,
                         {
-                            object: f.qAy.MARK_MESSAGE_AS_READ_BUTTON,
-                            objectType: f.Qqv.ACK_MANUAL
+                            object: g.qAy.MARK_MESSAGE_AS_READ_BUTTON,
+                            objectType: g.Qqv.ACK_MANUAL
                         },
                         !0,
                         void 0,
@@ -184,8 +188,8 @@ let j = {
         },
         BOOKMARK: {
             type: 'menu',
-            label: g.intl.string(g.t['9p3D9v']),
-            Icon: (e) => (null != h.Z.getSavedMessage(e.message.channel_id, e.message.id) ? (0, r.jsx)(o.plf, b({}, e)) : (0, r.jsx)(o.gt9, b({}, e))),
+            label: m.intl.string(m.t['9p3D9v']),
+            Icon: (e) => (null != h.Z.getSavedMessage(e.message.channel_id, e.message.id) ? (0, r.jsx)(o.plf, _({}, e)) : (0, r.jsx)(o.gt9, _({}, e))),
             interactionType: p.s_.BOOKMARK,
             Menu: (e) => {
                 let { message: t, renderPopoutProps: n } = e,
@@ -196,16 +200,16 @@ let j = {
                     });
                 return (0, r.jsxs)(
                     o.v2r,
-                    _(b({}, n), {
+                    O(_({}, n), {
                         navId: 'message-reminder-create',
-                        'aria-label': g.intl.string(g.t.mJ3P0N),
+                        'aria-label': m.intl.string(m.t.mJ3P0N),
                         onClose: n.closePopout,
                         onSelect: () => null,
                         children: [
                             null != i
                                 ? (0, r.jsx)(o.sNh, {
                                       id: 'remove-from-for-later',
-                                      label: g.intl.string(g.t.SvXS1d),
+                                      label: m.intl.string(m.t.SvXS1d),
                                       icon: o.plf,
                                       action: () =>
                                           (0, d.x)({
@@ -217,7 +221,7 @@ let j = {
                                   })
                                 : (0, r.jsx)(o.sNh, {
                                       id: 'create-bookmark',
-                                      label: g.intl.string(g.t['9p3D9v']),
+                                      label: m.intl.string(m.t['9p3D9v']),
                                       icon: o.gt9,
                                       action: () =>
                                           (0, d.z)({
@@ -236,40 +240,40 @@ let j = {
         SETTINGS: {
             type: 'menu',
             Icon: o.Dkj,
-            label: g.intl.string(g.t.h850Sk),
+            label: m.intl.string(m.t.h850Sk),
             interactionType: p.s_.SETTINGS,
             Menu: (e) => {
                 let { channel: t, renderPopoutProps: n } = e;
                 return (0, r.jsx)(
                     c.Z,
-                    _(b({}, n), {
+                    O(_({}, n), {
                         channel: t,
                         navId: 'channel-context',
-                        label: g.intl.string(g.t.Xm41aW)
+                        label: m.intl.string(m.t.Xm41aW)
                     })
                 );
             }
         }
     },
-    E = (e) => 'MENTION';
-function S(e) {
+    S = (e) => 'MENTION';
+function x(e) {
     let { message: t, channel: n, isUnread: i } = e,
-        l = y(t, i);
+        l = C(t, i);
     return (0, r.jsx)(o.Kqy, {
         direction: 'horizontal',
         gap: 4,
         align: 'center',
         justify: 'center',
-        className: m.actions,
+        className: b.actions,
         children: l.map((e) => {
-            let i = j[e];
+            let i = E[e];
             switch (i.type) {
                 case 'standard':
-                    return (0, r.jsx)(C, _(b({}, i), { message: t }), e);
+                    return (0, r.jsx)(v, O(_({}, i), { message: t }), e);
                 case 'menu':
                     return (0, r.jsx)(
-                        v,
-                        _(b({}, i), {
+                        j,
+                        O(_({}, i), {
                             channel: n,
                             message: t
                         }),

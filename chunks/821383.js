@@ -3,6 +3,5 @@ e.exports = {
     switchGroup: 'switchGroup_f0aa37',
     error: 'error_f0aa37',
     roleSelector: 'roleSelector_f0aa37',
-    roleCircle: 'roleCircle_f0aa37',
-    button: 'button_f0aa37'
+    roleCircle: 'roleCircle_f0aa37'
 };

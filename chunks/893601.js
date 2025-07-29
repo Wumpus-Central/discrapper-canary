@@ -3,7 +3,7 @@ var r = n(818083),
     i = n(480218);
 let a = (0, r.B)({
     kind: 'user',
-    id: '2025-07_clipboard_attachment_conversion',
+    id: '2025-07_image_attachment_mezzanine',
     label: 'Convert attachment images to WebP format for size optimization',
     defaultConfig: {
         enabled: !1,

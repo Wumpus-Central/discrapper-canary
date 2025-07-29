@@ -1,25 +1,26 @@
 (n.d(t, {
-    $G: () => P,
-    BU: () => M,
-    Fr: () => V,
-    Fz: () => B,
-    Ko: () => A,
-    Pe: () => F,
-    R6: () => Z,
+    $G: () => w,
+    AH: () => T,
+    BU: () => k,
+    Fr: () => F,
+    Fz: () => V,
+    Ko: () => N,
+    Pe: () => Z,
+    R6: () => H,
     Tm: () => O,
-    Vj: () => S,
+    Vj: () => A,
     WJ: () => v,
-    WU: () => G,
-    X$: () => Y,
-    X3: () => H,
-    cl: () => k,
-    g9: () => w,
-    i3: () => x,
-    jW: () => R,
-    kG: () => U,
-    qc: () => D,
+    WU: () => B,
+    X$: () => W,
+    X3: () => Y,
+    cl: () => j,
+    g9: () => D,
+    i3: () => M,
+    jW: () => P,
+    kG: () => G,
+    qc: () => L,
     s5: () => I,
-    zH: () => T
+    zH: () => S
 }),
     n(539854),
     n(997841),
@@ -85,8 +86,9 @@ function O(e) {
         case g.aib.THREAD:
             return e.channelId;
         case g.aib.DMS:
-        case g.aib.FAVORITES:
             return e.type;
+        case g.aib.FAVORITES:
+            return g.I_8;
     }
 }
 function v(e) {
@@ -98,8 +100,9 @@ function v(e) {
         case g.aib.CHANNEL:
             return e.channelId;
         case g.aib.DMS:
-        case g.aib.FAVORITES:
             return e.type;
+        case g.aib.FAVORITES:
+            return g.I_8;
     }
 }
 function I(e) {
@@ -112,11 +115,23 @@ function I(e) {
             var t;
             let n = s.Z.getChannel(e.channelId);
             return null != (t = null == n ? void 0 : n.guild_id) ? t : null;
+        case g.aib.FAVORITES:
+            return g.I_8;
         default:
             return null;
     }
 }
 function T(e) {
+    switch (e.type) {
+        case g.aib.GUILD_CHANNEL:
+        case g.aib.CHANNEL:
+        case g.aib.THREAD:
+            return e.channelId;
+        default:
+            return null;
+    }
+}
+function S(e) {
     switch (e) {
         case g.QIO.MOST_RELEVANT:
             return {
@@ -136,10 +151,10 @@ function T(e) {
             };
     }
 }
-function S(e) {
+function A(e) {
     return null == e.sort_by || null == e.sort_order ? g.QIO.NEWEST : 'relevance' === e.sort_by ? g.QIO.MOST_RELEVANT : 'asc' === e.sort_order ? g.QIO.OLDEST : g.QIO.NEWEST;
 }
-function A(e) {
+function N(e) {
     switch (e) {
         case g.dCx.FILTER_FROM:
             return E.intl.string(E.t.E466pK);
@@ -161,23 +176,23 @@ function A(e) {
             return E.intl.string(E.t.UJxL3d);
     }
 }
-let N = {
+let C = {
     [g.dCx.FILTER_BEFORE]: !0,
     [g.dCx.FILTER_AFTER]: !0,
     [g.dCx.FILTER_ON]: !0
 };
-function C(e) {
+function R(e) {
     let t = m.ZP[e],
         n = null != t ? t.queryKey : null;
     return (null == n && (n = 'content'), n);
 }
-function R(e, t) {
+function P(e, t) {
     if (c.Z.didAgree(t)) {
         let t = _.default.getCurrentUser();
         null != t && (e.include_nsfw = null == t.nsfwAllowed || t.nsfwAllowed);
     }
 }
-function P(e) {
+function w(e) {
     let t = {};
     for (let [n, r] of (e.forEach((e) => {
         let { type: n } = e;
@@ -191,7 +206,7 @@ function P(e) {
                 (r && (t.min_id = f.default.fromTimestamp(r)), i && (t.max_id = f.default.fromTimestamp(i)));
                 return;
         }
-        let a = C(n);
+        let a = R(n);
         null == t[a] && (t[a] = new Set());
         let o = t[a];
         switch (n) {
@@ -221,7 +236,7 @@ function P(e) {
         r instanceof Set && (t[n] = Array.from(r));
     return (t.content && ((t.content = t.content.join(' ').trim()), t.content || delete t.content), t);
 }
-function w(e, t, n) {
+function D(e, t, n) {
     let r,
         i,
         a = e.find((a, o) => (t >= a.start && t <= a.end && n >= a.start && n <= a.end ? (null != e[o + 1] && (i = e[o + 1]), !0) : ((r = a), !1)));
@@ -235,7 +250,7 @@ function w(e, t, n) {
               anchorOffset: n
           };
 }
-function D(e, t) {
+function L(e, t) {
     let n,
         { currentToken: r, nextToken: i, previousToken: o } = (e = null != e ? e : {});
     if (0 === t.length)
@@ -277,14 +292,14 @@ function D(e, t) {
               token: n
           });
 }
-function L(e) {
+function x(e) {
     if (null == e.match(/([\\" ])/g)) return e;
     {
         let t = e.replaceAll(/([\\"])/g, (e, t) => '\\'.concat(t));
         return '"'.concat(t, '"');
     }
 }
-function x(e, t) {
+function M(e, t) {
     let n = [];
     return (
         i()(e).forEach((e) => {
@@ -293,7 +308,7 @@ function x(e, t) {
             n = n.concat(
                 e.results.map((n) => {
                     let i = n.text;
-                    if ((null != n.channel && (i = L(i)), t.type === g.Sap.FILTER_ALL)) {
+                    if ((null != n.channel && (i = x(i)), t.type === g.Sap.FILTER_ALL)) {
                         var a;
                         r = null != (a = n.group) ? a : r;
                         let e = m.ZP[r];
@@ -313,37 +328,37 @@ function x(e, t) {
         })
     );
 }
-function M(e) {
+function k(e) {
     return e.reduce((e, t) => (null == t ? e : t.results.length + e), 0);
 }
-function k(e) {
+function j(e) {
     return null == e ? '' : e.map((e) => e.getFullMatch()).join('');
 }
-let j = new a.ZP();
-function U(e) {
-    return j.tokenize(e);
+let U = new a.ZP();
+function G(e) {
+    return U.tokenize(e);
 }
-function G() {
-    return j.clearCache();
+function B() {
+    return U.clearCache();
 }
-function B(e) {
-    return null != e ? N[e] : null;
+function V(e) {
+    return null != e ? C[e] : null;
 }
-function V(e, t) {
+function F(e, t) {
     let n = g.TNx.test(e.type);
     return (null != t || !n) && (null == t || !n || !!g.KA4.test(t.type));
 }
-function F() {
-    ((0, m.WK)(), j.reset(), i()(m.ZP).forOwn((e, t) => j.addRule(y({ type: t }, e))));
+function Z() {
+    ((0, m.WK)(), U.reset(), i()(m.ZP).forOwn((e, t) => U.addRule(y({ type: t }, e))));
 }
-function Z(e) {
+function H(e) {
     if (e === g.aib.GUILD) return !0;
     {
         let t = (0, h.a)({ location: 'isChannelFilterSupported' });
         return e === g.aib.DMS && t && !d.Z.hidePersonalInformation;
     }
 }
-function H(e) {
+function Y(e) {
     let t = e.name,
         n = !1;
     if (e.isGroupDM()) t = (0, o.F6)(e, _.default, u.Z);
@@ -358,9 +373,9 @@ function H(e) {
         let r = l.ZP.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
         (null == r ? void 0 : r.name) != null && (t = r.name);
     }
-    return ((t = L(t)), n) ? '#'.concat(t) : t;
+    return ((t = x(t)), n) ? '#'.concat(t) : t;
 }
-function Y() {
+function W() {
     var e, t;
     return null != (t = null == (e = _.default.getCurrentUser()) ? void 0 : e.isStaff()) && t;
 }

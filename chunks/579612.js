@@ -1,8 +1,8 @@
 r.d(t, {
-    GQ: () => S,
+    GQ: () => y,
     MC: () => m,
     P: () => _,
-    ZP: () => y
+    ZP: () => S
 });
 var n = r(255367);
 r(73800);
@@ -43,7 +43,7 @@ function m(e) {
     let r = (0, o.KS)(t);
     return null == r ? null : (0, n.jsx)(r, { className: g.searchResultChannelIcon });
 }
-function S(e) {
+function y(e) {
     let { channel: t } = e;
     return t.isDM() || t.isGroupDM()
         ? (0, n.jsx)('span', {
@@ -71,7 +71,7 @@ function _(e) {
             children: (0, i.F6)(r, p.default, h.Z)
         });
 }
-function y(e) {
+function S(e) {
     let { channel: t, text: r, channelContainerClassName: s, textContainerClassName: a } = e;
     return null == t
         ? (0, n.jsx)('strong', { children: r })
@@ -81,7 +81,7 @@ function y(e) {
                   (0, n.jsx)(m, { channel: t }),
                   (0, n.jsxs)('div', {
                       className: a,
-                      children: [(0, n.jsx)(S, { channel: t }), (0, n.jsx)(_, { channel: t })]
+                      children: [(0, n.jsx)(y, { channel: t }), (0, n.jsx)(_, { channel: t })]
                   })
               ]
           });

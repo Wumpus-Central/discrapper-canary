@@ -32,6 +32,7 @@ function w(e) {
 function T(e) {
     let { group: t, isOpen: n, toggleOpenedState: i } = e;
     return (0, r.jsx)(h.P3F, {
+        'aria-expanded': n,
         onClick: i,
         className: o()(N.messagesGroupHeaderWrap, { [N.collapsed]: !n }),
         children: (0, r.jsxs)(h.Kqy, {

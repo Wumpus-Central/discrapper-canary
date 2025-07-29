@@ -7,15 +7,15 @@ var r = n(255367),
     i = n(73800),
     a = n(15155),
     l = n(780384),
-    c = n(481060),
-    o = n(626135),
+    o = n(481060),
+    c = n(626135),
     s = n(756148),
     u = n(981631);
 function d(e) {
     let { sitekey: t, action: n, onVerify: a } = e,
         [l, d] = i.useState('uninitialized'),
         f = i.useCallback((e) => {
-            o.default.track(u.rMx.RECAPTCHA_MODAL_EVENT, { recaptcha_event_name: e });
+            c.default.track(u.rMx.RECAPTCHA_MODAL_EVENT, { recaptcha_event_name: e });
         }, []),
         p = i.useCallback(
             (e) => {
@@ -33,13 +33,13 @@ function d(e) {
                     (f('recaptcha-ready'), p(await (null == (e = window) ? void 0 : e.grecaptcha).enterprise.execute(t, null != n ? { action: n } : void 0)), d('loaded'));
                 });
         }, [t, n, p, f]),
-        y = i.useCallback(() => {
+        g = i.useCallback(() => {
             (d('running'), f('recaptcha-loading'), s.I.loadRecaptchaScript(t, m, f));
         }, [t, m, f]);
     return (
         i.useEffect(() => {
-            'uninitialized' === l && y();
-        }, [y, l]),
+            'uninitialized' === l && g();
+        }, [g, l]),
         i.useEffect(
             () => () => {
                 (f('recaptcha-unloading'),
@@ -51,14 +51,14 @@ function d(e) {
             },
             [f]
         ),
-        (0, r.jsx)(c.$jN, {})
+        (0, r.jsx)(o.$jN, {})
     );
 }
 let f = (e) => {
     var t,
         n,
         { theme: i } = e,
-        c = (function (e, t) {
+        o = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -77,7 +77,7 @@ let f = (e) => {
             }
             return i;
         })(e, ['theme']);
-    let o = (0, l.wj)(i) ? 'dark' : 'light';
+    let c = (0, l.wj)(i) ? 'dark' : 'light';
     return (0, r.jsx)(
         a.Z,
         ((t = (function (e) {
@@ -104,8 +104,8 @@ let f = (e) => {
                     }));
             }
             return e;
-        })({ sitekey: u.OL7 }, c)),
-        (n = n = { theme: o }),
+        })({ sitekey: u.OL7 }, o)),
+        (n = n = { theme: c }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
             : (function (e, t) {

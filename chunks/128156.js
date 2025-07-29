@@ -9,36 +9,36 @@ var o = n(442837),
     s = n(158776),
     d = n(885110),
     u = n(63063),
-    f = n(209698),
-    m = n(369566),
+    m = n(209698),
+    f = n(369566),
     p = n(29899),
     g = n(151545),
     b = n(744802),
     x = n(493043),
-    _ = n(864141),
-    h = n(264481),
-    y = n(693408),
-    j = n(228168),
+    h = n(864141),
+    _ = n(264481),
+    j = n(693408),
+    y = n(228168),
     v = n(981631),
     I = n(388032),
     O = n(514656);
 function P(e) {
-    let { user: t, currentUser: n, displayProfile: P, guildId: A, channelId: N, subsection: T, onClose: Z } = e,
+    let { user: t, currentUser: n, displayProfile: P, guildId: N, channelId: T, subsection: A, onClose: Z } = e,
         { voiceActivityStatusEnabled: C } = (0, a.U)({ location: 'UserProfileModalV2Activity' }),
-        w = (0, f.b)({ location: 'UserProfileModalV2Activity' }),
-        { live: E, recent: S, stream: L } = (0, m.Z)(t.id),
-        { voiceChannel: B, voiceActivity: D } = (0, p.Z)({
+        w = (0, m.b)({ location: 'UserProfileModalV2Activity' }),
+        { live: E, recent: S, stream: L } = (0, f.Z)(t.id),
+        { voiceChannel: B, voiceActivity: k } = (0, p.Z)({
             userId: t.id,
-            guildId: A
+            guildId: N
         }),
         U = (0, o.e7)([l.Z], () => l.Z.isFetchingUserOutbox(t.id)),
-        k = t.id === n.id,
+        D = t.id === n.id,
         R = (0, o.e7)([d.Z, s.Z], () => {
-            let e = k ? d.Z.getStatus() : s.Z.getStatus(t.id);
+            let e = D ? d.Z.getStatus() : s.Z.getStatus(t.id);
             return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
         }),
         G = E.length > 0 || null != L,
-        M = C && null == L && null == D && null != B,
+        M = C && null == L && null == k && null != B,
         V = !R && (G || M),
         F = S.length > 0;
     if (!V && !F && U)
@@ -66,12 +66,12 @@ function P(e) {
         });
     if (!V && !F && !U) {
         var W;
-        return k
-            ? (0, r.jsx)(h.Uf, { onClose: Z })
-            : (0, r.jsx)(h.P9, {
+        return D
+            ? (0, r.jsx)(_.Uf, { onClose: Z })
+            : (0, r.jsx)(_.P9, {
                   user: t,
                   guildId: null != (W = null == P ? void 0 : P.guildId) ? W : void 0,
-                  channelId: N,
+                  channelId: T,
                   onClose: Z
               });
     }
@@ -80,7 +80,7 @@ function P(e) {
         fade: !0,
         children: [
             V
-                ? (0, r.jsx)(y.Z, {
+                ? (0, r.jsx)(j.Z, {
                       heading: I.intl.string(I.t.J6STd3),
                       children: (0, r.jsxs)('ul', {
                           className: O.cards,
@@ -88,7 +88,7 @@ function P(e) {
                               !w &&
                                   M &&
                                   (0, r.jsx)('li', {
-                                      children: (0, r.jsx)(_.Z, {
+                                      children: (0, r.jsx)(h.Z, {
                                           user: t,
                                           currentUser: n,
                                           voiceChannel: B,
@@ -124,7 +124,7 @@ function P(e) {
                               w &&
                                   M &&
                                   (0, r.jsx)('li', {
-                                      children: (0, r.jsx)(_.Z, {
+                                      children: (0, r.jsx)(h.Z, {
                                           user: t,
                                           currentUser: n,
                                           voiceChannel: B,
@@ -136,9 +136,9 @@ function P(e) {
                   })
                 : null,
             F
-                ? (0, r.jsx)(y.Z, {
+                ? (0, r.jsx)(j.Z, {
                       heading: I.intl.string(I.t.jzgEoK),
-                      introText: k
+                      introText: D
                           ? I.intl.format(I.t['4bk9Ag'], {
                                 learnMoreHook: (e, t) =>
                                     (0, r.jsx)(
@@ -151,7 +151,7 @@ function P(e) {
                                     )
                             })
                           : void 0,
-                      scrollIntoView: T === j.Tb.RECENT_ACTIVITY,
+                      scrollIntoView: A === y.Tb.RECENT_ACTIVITY,
                       children: (0, r.jsx)('ul', {
                           className: O.cards,
                           children: S.map((e) =>

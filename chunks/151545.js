@@ -1,76 +1,90 @@
-n.d(t, { Z: () => E });
-var r = n(255367);
-n(73800);
-var i = n(442837),
-    a = n(841784),
-    o = n(503438),
-    s = n(812206),
-    l = n(835473),
-    c = n(592125),
-    u = n(430824),
-    d = n(979651),
-    _ = n(81570),
-    f = n(409057),
-    p = n(443375),
-    h = n(128277),
-    m = n(263059),
-    g = n(981631);
-function E(e) {
-    let { user: t, currentUser: n, activity: E, className: b, onClose: y, profileGuildId: O } = e,
-        v = (0, _.T)({ location: 'UserProfileActivityCardWrapper' }),
-        I = t.id === n.id,
-        T = v && !I && !t.bot,
-        { voiceGuild: S, voiceChannel: A } = (0, i.cj)([u.Z, d.Z, c.Z], () => {
-            var e;
-            if (!(0, a.Z)(E)) return {};
-            let n = null == (e = d.Z.getVoiceStateForSession(t.id, null == E ? void 0 : E.session_id)) ? void 0 : e.channelId,
-                r = c.Z.getChannel(n);
+n.d(t, { Z: () => O });
+var r = n(255367),
+    i = n(73800),
+    a = n(442837),
+    o = n(841784),
+    s = n(503438),
+    l = n(812206),
+    c = n(835473),
+    u = n(741570),
+    d = n(592125),
+    _ = n(430824),
+    f = n(979651),
+    p = n(626135),
+    h = n(81570),
+    m = n(409057),
+    g = n(443375),
+    E = n(128277),
+    b = n(263059),
+    y = n(981631);
+function O(e) {
+    let { user: t, currentUser: n, activity: O, className: v, onClose: I, profileGuildId: T } = e,
+        S = (0, h.T)({ location: 'UserProfileActivityCardWrapper' }),
+        A = t.id === n.id,
+        N = S && !A && !t.bot,
+        { voiceGuild: C, voiceChannel: R } = (0, a.cj)([_.Z, f.Z, d.Z], () => {
+            var e, n;
+            let r = (0, o.Z)(O);
+            if (!r && (null == O ? void 0 : O.type) !== y.IIU.HANG_STATUS) return {};
+            let i = r ? (null == (e = f.Z.getVoiceStateForSession(t.id, null == O ? void 0 : O.session_id)) ? void 0 : e.channelId) : null == (n = f.Z.getVoiceStateForUser(t.id)) ? void 0 : n.channelId,
+                a = d.Z.getChannel(i);
             return {
-                voiceGuild: u.Z.getGuild(null == r ? void 0 : r.getGuildId()),
-                voiceChannel: r
+                voiceGuild: _.Z.getGuild(null == a ? void 0 : a.getGuildId()),
+                voiceChannel: a
             };
-        });
-    (0, l.q)(null == E ? void 0 : E.application_id);
-    let N = (0, i.e7)([s.Z], () => ((null == E ? void 0 : E.application_id) != null ? s.Z.getApplication(E.application_id) : (null == E ? void 0 : E.name) != null ? s.Z.getApplicationByName(E.name) : null));
-    return (null == E ? void 0 : E.type) === g.IIU.CUSTOM_STATUS || (null == E ? void 0 : E.type) === g.IIU.HANG_STATUS
-        ? null
-        : (0, o.Z)(E)
-          ? T
-              ? (0, r.jsx)(m.Z, {
+        }),
+        P = (0, u.E)('UserProfileActivityCardWrapper', R),
+        w = (null == O ? void 0 : O.type) === y.IIU.HANG_STATUS && P ? R : null;
+    (0, c.q)(null == O ? void 0 : O.application_id);
+    let D = (0, a.e7)([l.Z], () => ((null == O ? void 0 : O.application_id) != null ? l.Z.getApplication(O.application_id) : (null == O ? void 0 : O.name) != null ? l.Z.getApplicationByName(O.name) : null));
+    return (i.useEffect(() => {
+        (null == O ? void 0 : O.type) === y.IIU.HANG_STATUS &&
+            P &&
+            p.default.track(y.rMx.VIEW_HANG_STATUS, {
+                source: 'UserProfilePopout',
+                guild_id: null == w ? void 0 : w.guild_id,
+                channel_id: null == w ? void 0 : w.id
+            });
+    }, [null == O ? void 0 : O.type, P, null == w ? void 0 : w.id, null == w ? void 0 : w.guild_id]),
+    (null == O ? void 0 : O.type) !== y.IIU.CUSTOM_STATUS && ((null == O ? void 0 : O.type) !== y.IIU.HANG_STATUS || P))
+        ? (0, s.Z)(O)
+            ? N
+                ? (0, r.jsx)(b.Z, {
+                      user: t,
+                      currentUser: n,
+                      activity: O,
+                      profileGuildId: T,
+                      className: v,
+                      onClose: I
+                  })
+                : (0, r.jsx)(E.Z, {
+                      user: t,
+                      currentUser: n,
+                      activity: O,
+                      className: v,
+                      onClose: I
+                  })
+            : N
+              ? (0, r.jsx)(g.Z, {
                     user: t,
                     currentUser: n,
-                    activity: E,
-                    profileGuildId: O,
-                    className: b,
-                    onClose: y
+                    activity: O,
+                    application: D,
+                    voiceGuild: C,
+                    voiceChannel: R,
+                    profileGuildId: T,
+                    className: v,
+                    onClose: I
                 })
-              : (0, r.jsx)(h.Z, {
+              : (0, r.jsx)(m.Z, {
                     user: t,
                     currentUser: n,
-                    activity: E,
-                    className: b,
-                    onClose: y
+                    activity: O,
+                    application: D,
+                    voiceGuild: C,
+                    voiceChannel: R,
+                    className: v,
+                    onClose: I
                 })
-          : T
-            ? (0, r.jsx)(p.Z, {
-                  user: t,
-                  currentUser: n,
-                  activity: E,
-                  application: N,
-                  voiceGuild: S,
-                  voiceChannel: A,
-                  profileGuildId: O,
-                  className: b,
-                  onClose: y
-              })
-            : (0, r.jsx)(f.Z, {
-                  user: t,
-                  currentUser: n,
-                  activity: E,
-                  application: N,
-                  voiceGuild: S,
-                  voiceChannel: A,
-                  className: b,
-                  onClose: y
-              });
+        : null;
 }

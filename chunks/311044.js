@@ -8,15 +8,15 @@ var r = n(255367),
     s = n(785717),
     d = n(806729),
     u = n(857302),
-    f = n(892001),
-    m = n(252417),
+    m = n(892001),
+    f = n(252417),
     p = n(264481),
     g = n(714905);
 function b(e) {
     let { user: t, guildId: n, channelId: b, onClose: x } = e,
-        { analyticsLocations: _ } = (0, l.ZP)(),
-        { context: h, trackUserProfileAction: y } = (0, s.KZ)(),
-        { mutualFriends: j, mutualFriendsCount: v } = (0, d.Z)(t),
+        { analyticsLocations: h } = (0, l.ZP)(),
+        { context: _, trackUserProfileAction: j } = (0, s.KZ)(),
+        { mutualFriends: y, mutualFriendsCount: v } = (0, d.Z)(t),
         I = (0, a.Z)();
     return (
         o.useEffect(() => {
@@ -26,7 +26,7 @@ function b(e) {
             className: g.scroller,
             fade: !0,
             children:
-                null == j
+                null == y
                     ? Array.from({ length: null != v ? v : 10 }).map((e, t) =>
                           (0, r.jsxs)(
                               'div',
@@ -46,12 +46,12 @@ function b(e) {
                               t
                           )
                       )
-                    : 0 === j.length
+                    : 0 === y.length
                       ? (0, r.jsx)(p.s_, {})
-                      : j.map((e) => {
+                      : y.map((e) => {
                             let { key: t, user: o, status: i } = e;
                             return (0, r.jsx)(
-                                m.Z,
+                                f.Z,
                                 {
                                     user: o,
                                     status: i,
@@ -60,8 +60,8 @@ function b(e) {
                                     onSelect: () => {
                                         var e, t;
                                         (null == x || x(),
-                                            y({ action: 'PRESS_MUTUAL_FRIEND' }),
-                                            (0, f.openUserProfileModal)(
+                                            j({ action: 'PRESS_MUTUAL_FRIEND' }),
+                                            (0, m.openUserProfileModal)(
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
                                                         var n = null != arguments[t] ? arguments[t] : {},
@@ -86,11 +86,11 @@ function b(e) {
                                                             }));
                                                     }
                                                     return e;
-                                                })({}, h)),
+                                                })({}, _)),
                                                 (t = t =
                                                     {
                                                         userId: o.id,
-                                                        sourceAnalyticsLocations: _
+                                                        sourceAnalyticsLocations: h
                                                     }),
                                                 Object.getOwnPropertyDescriptors
                                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))

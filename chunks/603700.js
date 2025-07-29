@@ -5,10 +5,10 @@ let i = { refresh_app: n(286813).Z },
     a = (e) => {
         var t;
         let { task: n, onSubmit: a, disabled: l } = e,
-            c = i[n.ui_component.type];
-        return null == c
+            o = i[n.ui_component.type];
+        return null == o
             ? null
-            : (0, r.jsx)(c, {
+            : (0, r.jsx)(o, {
                   configData: n.ui_component.data,
                   onSubmit: a,
                   taskId: n.task_id,

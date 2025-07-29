@@ -2,7 +2,7 @@ n.d(t, { Z: () => l });
 var r = n(255367);
 n(73800);
 var o = n(750312),
-    i = n(30344),
+    i = n(232083),
     a = n(388032);
 function l(e) {
     let { user: t, widget: n, loading: l } = e;

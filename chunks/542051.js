@@ -108,7 +108,7 @@ let m = (e) => {
                 children: h.intl.format(h.t.ub226e, { value: t })
             });
 };
-function S(e) {
+function y(e) {
     (e.stopPropagation(), e.preventDefault());
 }
 function _(e, t, r) {
@@ -119,23 +119,23 @@ function _(e, t, r) {
         'aria-selected': r
     };
 }
-class y extends (n = l.PureComponent) {
+class S extends (n = l.PureComponent) {
     renderQuery(e) {
-        let { query: t, navId: r, focusedIndex: n, onSelectQuery: l, onSelectSearchEverywhere: a, onHighlightQuery: c, hideQuery: u, searchFavorites: p, showDMQueryText: S } = this.props;
+        let { query: t, navId: r, focusedIndex: n, onSelectQuery: l, onSelectSearchEverywhere: a, onHighlightQuery: c, hideQuery: u, searchFavorites: p, showDMQueryText: y } = this.props;
         if (e || u) return null;
-        let y = -1 === n;
+        let S = -1 === n;
         return (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsxs)(
                     o.P3F,
-                    g(f({ className: i()(d.queryContainer, { [d.focused]: y }) }, _(r, -1, y)), {
+                    g(f({ className: i()(d.queryContainer, { [d.focused]: S }) }, _(r, -1, S)), {
                         onMouseEnter: c,
                         onClick: l,
                         children: [
                             (0, s.jsx)(m, {
                                 query: t,
                                 searchFavorites: p,
-                                showDMQueryText: S
+                                showDMQueryText: y
                             }),
                             (0, s.jsx)('div', {
                                 className: d.queryShortcut,
@@ -152,7 +152,7 @@ class y extends (n = l.PureComponent) {
                 p &&
                     (0, s.jsxs)(
                         o.P3F,
-                        g(f({ className: i()(d.queryContainer, { [d.focused]: y }) }, _(r, -1, y)), {
+                        g(f({ className: i()(d.queryContainer, { [d.focused]: S }) }, _(r, -1, S)), {
                             onMouseEnter: c,
                             onClick: a,
                             children: [
@@ -189,7 +189,7 @@ class y extends (n = l.PureComponent) {
         return (0, s.jsxs)('div', {
             className: d.container,
             style: { width: n },
-            onMouseDown: S,
+            onMouseDown: y,
             role: 'listbox',
             id: r,
             tabIndex: -1,
@@ -225,9 +225,9 @@ class y extends (n = l.PureComponent) {
             }));
     }
 }
-p(y, 'defaultProps', {
+p(S, 'defaultProps', {
     renderInitialState: () => null,
     hideQuery: !1,
     width: 320
 });
-let x = y;
+let x = S;

@@ -1,6 +1,6 @@
 r.d(t, {
     AT: () => g,
-    fC: () => S,
+    fC: () => y,
     gr: () => m,
     hQ: () => f
 });
@@ -52,7 +52,7 @@ function m(e) {
         [t, e]
     );
 }
-async function S(e, t) {
+async function y(e, t) {
     if ((null == t ? void 0 : t.type) === d.d4z.UNKNOWN && null == e.saveData.guildId)
         try {
             let t = await o.Z.fetchChannel(e.saveData.channelId);

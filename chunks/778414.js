@@ -9,8 +9,8 @@ var o = n(481060),
     s = n(985748),
     d = n(566007),
     u = n(173951),
-    f = n(455731),
-    m = n(19043);
+    m = n(455731),
+    f = n(19043);
 function p(e) {
     let { widget: t, user: n, loading: o = !1 } = e,
         l = t.gameWidgetType;
@@ -28,7 +28,7 @@ function p(e) {
                 loading: o
             });
         case a.g.WANT_TO_PLAY:
-            return (0, r.jsx)(f.Z, {
+            return (0, r.jsx)(m.Z, {
                 user: n,
                 widget: t,
                 loading: o
@@ -48,7 +48,7 @@ function g(e) {
         n = (0, c.Z)(),
         { widgets: i, isFetching: a } = (0, l.Z)(n);
     return (0, r.jsx)(o.Ttm, {
-        className: m.scroller,
+        className: f.scroller,
         fade: !0,
         children: i.map((e) =>
             (0, r.jsx)(

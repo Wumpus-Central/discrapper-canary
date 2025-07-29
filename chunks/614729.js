@@ -15,5 +15,6 @@ e.exports = {
     allPerksScroller: 'allPerksScroller_ca1a02',
     open: 'open_ca1a02',
     openCloseReduceMotion: 'openCloseReduceMotion_ca1a02',
-    cardCarousel: 'cardCarousel_ca1a02'
+    cardCarousel: 'cardCarousel_ca1a02',
+    loading: 'loading_ca1a02'
 };

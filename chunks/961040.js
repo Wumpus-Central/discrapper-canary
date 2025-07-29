@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => b });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -11,51 +11,56 @@ var r = n(255367),
     h = n(736670),
     p = n(82409),
     f = n(981631),
-    g = n(614147);
-function m(e) {
+    g = n(388032),
+    m = n(614147);
+function b(e) {
     let { children: t, popoutPosition: n, popoutAlign: l, targetElementRef: o, spacing: p = 0 } = e,
-        { isOpen: g, setIsOpen: m } = (0, h.Z)(),
-        _ = i.useCallback(() => {
-            m(!1);
-        }, [m]),
+        { isOpen: m, setIsOpen: b } = (0, h.Z)(),
         O = i.useCallback(() => {
-            m(!g);
-        }, [g, m]);
+            b(!1);
+        }, [b]),
+        y = i.useCallback(() => {
+            b(!m);
+        }, [m, b]);
     ((0, c.ZP)(() => {
         let e = () => {
-            m(!1);
+            b(!1);
         };
         return (s.Z.subscribe('USER_SETTINGS_MODAL_OPEN', e), () => s.Z.unsubscribe('USER_SETTINGS_MODAL_OPEN', e));
     }),
-        i.useEffect(() => (u.S.subscribe(f.CkL.TOGGLE_INBOX, O), () => void u.S.unsubscribe(f.CkL.TOGGLE_INBOX, O)), [O]));
-    let { entrypoint: y } = d.Lk.useExperiment({ location: 'NotificationsInboxPopout' });
+        i.useEffect(() => (u.S.subscribe(f.CkL.TOGGLE_INBOX, y), () => void u.S.unsubscribe(f.CkL.TOGGLE_INBOX, y)), [y]));
+    let { entrypoint: C } = d.Lk.useExperiment({ location: 'NotificationsInboxPopout' });
     return (0, r.jsx)(a.yRy, {
         targetElementRef: o,
-        shouldShow: g,
+        shouldShow: m,
         align: l,
-        animation: y === d.u3.TITLE_BAR_LEFT ? a.yRy.Animation.TRANSLATE : a.yRy.Animation.FADE,
-        animationPosition: y === d.u3.TITLE_BAR_LEFT ? 'bottom' : 'left',
+        animation: C === d.u3.TITLE_BAR_LEFT ? a.yRy.Animation.TRANSLATE : a.yRy.Animation.FADE,
+        animationPosition: C === d.u3.TITLE_BAR_LEFT ? 'bottom' : 'left',
         position: n,
-        onRequestClose: _,
+        onRequestClose: O,
         spacing: p,
-        renderPopout: b,
+        renderPopout: () =>
+            (0, r.jsx)(a.VqE, {
+                'aria-label': g.intl.string(g.t.GSmTKC),
+                children: (0, r.jsx)(_, {})
+            }),
         children: (e, n) => {
             let { isShown: r } = n;
-            return t(O, r, e);
+            return t(y, r, e);
         }
     });
 }
-function b() {
+function _() {
     let { entrypoint: e } = d.Lk.useExperiment({ location: 'NotificationsInboxPopout' });
     return (0, r.jsxs)('div', {
-        className: o()(g.container, {
-            [g.repositionLayerTitlebarPopout]: e === d.u3.TITLE_BAR_LEFT,
-            [g.repositionLayerSidebarPopout]: e === d.u3.SERVER_RAIL_TOP
+        className: o()(m.container, {
+            [m.repositionLayerTitlebarPopout]: e === d.u3.TITLE_BAR_LEFT,
+            [m.repositionLayerSidebarPopout]: e === d.u3.SERVER_RAIL_TOP
         }),
         children: [
             (0, r.jsx)('div', {
-                className: g.backgroundContainer,
-                children: (0, r.jsx)('span', { className: g.background })
+                className: m.backgroundContainer,
+                children: (0, r.jsx)('span', { className: m.background })
             }),
             (0, r.jsx)(p.Z, {})
         ]

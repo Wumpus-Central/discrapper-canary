@@ -8,7 +8,7 @@ var i = n(278074),
     l = n(750154),
     c = n(16779),
     u = n(981631);
-let d = (e) => ((0, l.dS)(e) ? [] : e.type === u.IIU.PLAYING ? [c.ho, c.Xh] : e.type === u.IIU.LISTENING ? [c.ho] : e.type === u.IIU.WATCHING ? [c.ho, c.Rg] : []);
+let d = (e) => ((0, l.dS)(e) ? [] : e.type === u.IIU.PLAYING ? [c.ho, c.Xh] : e.type === u.IIU.LISTENING ? [c.ho] : e.type === u.IIU.WATCHING ? [c.ho, c.Rg] : e.type === u.IIU.COMPETING ? [c.ho] : []);
 function _(e) {
     let { entry: t } = e;
     return (0, r.jsx)(r.Fragment, {

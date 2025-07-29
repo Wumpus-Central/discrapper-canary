@@ -68,8 +68,13 @@ function s(e) {
                                       text: o.intl.string(o.t.OzCsIC),
                                       platformIcon: n
                                   }
-                                : {
-                                      text: void 0,
-                                      platformIcon: n
-                                  };
+                                : e.type === a.IIU.HANG_STATUS
+                                  ? {
+                                        text: o.intl.string(o.t['04B8fH']),
+                                        platformIcon: n
+                                    }
+                                  : {
+                                        text: void 0,
+                                        platformIcon: n
+                                    };
 }
