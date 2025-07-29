@@ -43543,9 +43543,22 @@ html:not(.chat-input) .inputInner_b1f01d {
     background: var(--user-profile-overlay-background-hover)
 }
 
-.clickableImage__39ec2,
-.clickableImage__39ec2:after,
 .image__39ec2 {
+    border-radius: var(--radius-sm)
+}
+
+.hangStatusIcon__39ec2 {
+    height: 100px;
+    width: 100px
+}
+
+.hangStatusIcon__39ec2.small__39ec2 {
+    height: 60px;
+    width: 60px
+}
+
+.clickableImage__39ec2,
+.clickableImage__39ec2:after {
     border-radius: var(--radius-sm)
 }
 
