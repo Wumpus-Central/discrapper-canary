@@ -4,7 +4,7 @@ var r = n(255367),
     a = n(120356),
     o = n.n(a),
     s = n(442837),
-    l = n(755721),
+    l = n(680018),
     c = n(481060),
     u = n(355467),
     d = n(269128),
@@ -128,20 +128,17 @@ class w extends i.PureComponent {
                 i = m.W[e](),
                 a = null == this.props.paymentSourceTypeRestrictions || (null == (t = this.props.paymentSourceTypeRestrictions) ? void 0 : t.includes(e));
             return (0, r.jsx)(
-                l.zx,
+                l.z,
                 {
                     onClick: () => this.props.onChooseType(e),
                     disabled: !a,
-                    children: (0, r.jsxs)('div', {
-                        className: o()(v.flex, v.alignCenter),
-                        children: [
-                            (0, r.jsx)(h.ZP, {
-                                className: O.buttonIcon,
-                                type: n
-                            }),
-                            i
-                        ]
-                    })
+                    fullWidth: !0,
+                    text: i,
+                    icon: () =>
+                        (0, r.jsx)(h.ZP, {
+                            className: O.buttonIcon,
+                            type: n
+                        })
                 },
                 e
             );

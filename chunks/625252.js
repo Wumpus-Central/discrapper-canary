@@ -1,28 +1,27 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => x });
 var i = n(255367),
     r = n(73800),
     s = n(772848),
     a = n(780384),
-    l = n(755721),
-    o = n(481060),
-    c = n(37234),
-    d = n(410030),
-    u = n(626135),
-    m = n(617136),
-    p = n(497505),
-    g = n(110560),
-    h = n(981631),
-    f = n(388032),
-    b = n(31903),
-    x = n(66094);
-function _() {
-    let e = (0, a.wj)((0, d.ZP)()),
+    l = n(481060),
+    o = n(37234),
+    c = n(410030),
+    d = n(626135),
+    u = n(617136),
+    m = n(497505),
+    p = n(110560),
+    g = n(981631),
+    h = n(388032),
+    f = n(31903),
+    b = n(66094);
+function x() {
+    let e = (0, a.wj)((0, c.ZP)()),
         t = r.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
         n = r.useCallback(() => {
-            ((0, c.xf)(),
-                (0, g.navigateToQuestHome)({ fromContent: p.jn.QUEST_HOME_MOVE_CALLOUT }),
-                u.default.track(
-                    h.rMx.QUEST_CONTENT_CLICKED,
+            ((0, o.xf)(),
+                (0, p.navigateToQuestHome)({ fromContent: m.jn.QUEST_HOME_MOVE_CALLOUT }),
+                d.default.track(
+                    g.rMx.QUEST_CONTENT_CLICKED,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -49,51 +48,50 @@ function _() {
                         return e;
                     })(
                         {
-                            cta_name: m.jZ.VIEW_QUESTS,
+                            cta_name: u.jZ.VIEW_QUESTS,
                             click_id: (0, s.Z)(),
                             is_targeted: !1
                         },
-                        (0, m.mH)(p.jn.QUEST_HOME_MOVE_CALLOUT)
+                        (0, u.mH)(m.jn.QUEST_HOME_MOVE_CALLOUT)
                     )
                 ));
         }, []);
     return (0, i.jsx)('div', {
-        className: b.container,
+        className: f.container,
         style: t,
-        children: (0, i.jsxs)('div', {
-            className: b.textContainer,
+        children: (0, i.jsxs)(l.Kqy, {
+            className: f.textContainer,
+            justify: 'space-between',
             children: [
-                (0, i.jsxs)('div', {
-                    className: b.headerContainer,
+                (0, i.jsxs)(l.Kqy, {
+                    gap: 4,
                     children: [
-                        (0, i.jsx)('img', {
-                            alt: '',
-                            src: x,
-                            className: b.icon
+                        (0, i.jsxs)('div', {
+                            className: f.headerContainer,
+                            children: [
+                                (0, i.jsx)('img', {
+                                    alt: '',
+                                    src: b,
+                                    className: f.icon
+                                }),
+                                (0, i.jsx)(l.X6q, {
+                                    variant: 'heading-lg/bold',
+                                    color: 'always-white',
+                                    children: h.intl.string(h.t.z8YP2N)
+                                })
+                            ]
                         }),
-                        (0, i.jsx)(o.X6q, {
-                            variant: 'heading-lg/bold',
-                            color: 'always-white',
-                            children: f.intl.string(f.t.z8YP2N)
+                        (0, i.jsx)(l.Text, {
+                            variant: 'text-md/medium',
+                            color: 'text-secondary',
+                            children: h.intl.string(h.t.IqmRZ2)
                         })
                     ]
                 }),
-                (0, i.jsx)(o.Text, {
-                    variant: 'text-md/medium',
-                    color: 'text-secondary',
-                    children: f.intl.string(f.t.IqmRZ2)
-                }),
-                (0, i.jsx)(l.zx, {
-                    size: 'large',
-                    color: e ? l.Tt.BRAND : l.Tt.WHITE,
-                    className: b.button,
-                    onClick: n,
-                    innerClassName: b.innerButton,
-                    children: (0, i.jsx)(o.Text, {
-                        variant: 'text-md/medium',
-                        color: e ? 'always-white' : 'text-default',
-                        children: f.intl.string(f.t.GURBQk)
-                    })
+                (0, i.jsx)(l.zxk, {
+                    variant: e ? 'primary' : 'overlay-primary',
+                    text: h.intl.string(h.t.GURBQk),
+                    onClick: n
                 })
             ]
         })

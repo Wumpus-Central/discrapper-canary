@@ -1,41 +1,43 @@
-(n.d(t, { Z: () => _ }), n(539854), n(388685));
+(n.d(t, { Z: () => x }), n(539854), n(388685));
 var r = n(255367),
     o = n(73800),
     i = n(494497),
     l = n(442837),
     s = n(704215),
-    a = n(907862),
-    c = n(243778),
-    u = n(819640),
-    d = n(476044),
-    p = n(921944),
-    m = n(93841),
-    f = n(388032);
-function _(e) {
-    let { powerup: t, targetRef: n, isCardVisible: _ } = e,
-        x = (0, l.e7)([u.Z], () => u.Z.hasLayers()),
-        g =
+    a = n(952265),
+    c = n(907862),
+    u = n(243778),
+    d = n(819640),
+    p = n(476044),
+    m = n(921944),
+    f = n(93841),
+    _ = n(388032);
+function x(e) {
+    let { powerup: t, targetRef: n, isCardVisible: x } = e,
+        g = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
+        v = (0, a.f9)(),
+        b =
             t.skuId === i.A$
                 ? {
-                      title: f.intl.string(m.default.YWo6VF),
-                      body: f.intl.string(m.default.gXVvKS),
+                      title: _.intl.string(f.default.YWo6VF),
+                      body: _.intl.string(f.default.gXVvKS),
                       dismissibleContentType: s.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER
                   }
                 : null,
-        v = [];
-    null != g && !x && _ && v.push(g.dismissibleContentType);
-    let [b, j] = (0, c.US)(v),
-        E = o.useCallback(() => {
-            j(p.L.INDIRECT_ACTION);
-        }, [j]);
-    return ((0, d.Z)({
+        j = [];
+    null == b || g || !x || v || j.push(b.dismissibleContentType);
+    let [E, h] = (0, u.US)(j),
+        C = o.useCallback(() => {
+            h(m.L.INDIRECT_ACTION);
+        }, [h]);
+    return ((0, p.Z)({
         targetRef: n,
-        onShouldClose: E,
-        enabled: null != b
+        onShouldClose: C,
+        enabled: null != E
     }),
-    null == g || null == b)
+    null == b || null == E)
         ? null
-        : (0, r.jsx)(a.J2, {
+        : (0, r.jsx)(c.J2, {
               targetElementRef: n,
               shouldShow: !0,
               position: 'right',
@@ -45,10 +47,10 @@ function _(e) {
                   position: 'left',
                   align: 'start'
               },
-              title: g.title,
-              body: g.body,
+              title: b.title,
+              body: b.body,
               onRequestClose: () => {
-                  j(p.L.USER_DISMISS);
+                  h(m.L.USER_DISMISS);
               }
           });
 }
