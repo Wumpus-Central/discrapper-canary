@@ -1,38 +1,38 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => m });
 var l = n(255367),
-    r = n(73800),
-    i = n(442837),
-    o = n(481060),
-    a = n(40851),
+    i = n(73800),
+    r = n(442837),
+    a = n(481060),
+    o = n(40851),
     u = n(549879),
-    c = n(189432),
-    d = n(189357),
-    s = n(271383),
-    f = n(944486),
-    g = n(626135),
-    b = n(981631),
-    O = n(176505),
-    E = n(50493),
-    _ = n(388032);
-function y(e) {
-    let { userId: t, guildId: n, channelId: y, location: v, onAction: h, appContext: Z } = e,
-        m = r.useContext(g.AnalyticsContext),
-        p = (0, a.Aq)(),
-        S = (0, i.e7)([f.Z], () => (null != y ? y : f.Z.getChannelId(n, !0)), [y, n]),
-        j = (0, i.e7)([s.ZP], () => (null == n ? null : s.ZP.getMember(n, t)), [n, t]),
-        P = (0, d.m)(n);
-    return null != n && null != j && P
-        ? (0, l.jsx)(o.sNh, {
+    s = n(189432),
+    c = n(189357),
+    d = n(271383),
+    g = n(944486),
+    f = n(626135),
+    P = n(981631),
+    E = n(176505),
+    Z = n(50493),
+    b = n(388032);
+function m(e) {
+    let { userId: t, guildId: n, channelId: m, location: O, onAction: h, appContext: v } = e,
+        y = i.useContext(f.AnalyticsContext),
+        S = (0, o.Aq)(),
+        p = (0, r.e7)([g.Z], () => (null != m ? m : g.Z.getChannelId(n, !0)), [m, n]),
+        C = (0, r.e7)([d.ZP], () => (null == n ? null : d.ZP.getMember(n, t)), [n, t]),
+        M = (0, c.m)(n);
+    return null != n && null != C && M
+        ? (0, l.jsx)(a.sNh, {
               id: 'mod-view',
-              label: _.intl.string(_.t.kj3tz8),
+              label: b.intl.string(b.t.kj3tz8),
               action: () => {
                   (null == h || h(),
-                      (0, u.i)(Z),
-                      (0, c.r)(n, t, null != S ? S : O.oC.MEMBER_SAFETY, {
-                          modViewPanel: E.k.INFO,
-                          sourceLocation: null != v ? v : m.location
+                      (0, u.i)(v),
+                      (0, s.r)(n, t, null != p ? p : E.oC.MEMBER_SAFETY, {
+                          modViewPanel: Z.k.INFO,
+                          sourceLocation: null != O ? O : y.location
                       }),
-                      p.dispatch(b.CkL.POPOUT_CLOSE));
+                      S.dispatch(P.CkL.POPOUT_CLOSE));
               }
           })
         : null;

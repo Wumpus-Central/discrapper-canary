@@ -52,7 +52,6 @@ class h extends (r = a.PureComponent) {
                             (this.setState({ hovered: !1 }), null == b || b());
                         }, p)));
                 },
-                onFocus: () => this.setState({ focused: !0 }),
                 onBlur: () => this.setState({ focused: !1 }),
                 onKeyDown: this.handleKeyDown,
                 children: [
@@ -113,10 +112,21 @@ class h extends (r = a.PureComponent) {
                     a = 0.05 * (r - t);
                 switch (e.key) {
                     case 'ArrowUp':
-                        (e.stopPropagation(), e.preventDefault(), null == i || i(Math.min(r, n + a)));
+                        if ((e.stopPropagation(), e.preventDefault(), !this.state.focused)) {
+                            this.setState({ focused: !0 });
+                            break;
+                        }
+                        null == i || i(Math.min(r, n + a));
                         break;
                     case 'ArrowDown':
-                        (e.stopPropagation(), e.preventDefault(), null == i || i(Math.max(t, n - a)));
+                        if ((e.stopPropagation(), e.preventDefault(), !this.state.focused)) {
+                            this.setState({ focused: !0 });
+                            break;
+                        }
+                        null == i || i(Math.max(t, n - a));
+                        break;
+                    case 'Escape':
+                        (this.setState({ focused: !1 }), e.stopPropagation(), e.preventDefault());
                 }
             }),
             _(this, 'handleDragStart', () => {

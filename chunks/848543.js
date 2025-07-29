@@ -151,7 +151,7 @@ function A(e) {
                             u.zx,
                             j(
                                 P(
-                                    j(P({}, e, t), {
+                                    j(P({ 'data-migration-pending': !0 }, e, t), {
                                         className: a()(T.button, T.buttonColor, {
                                             [T.greyButtonActive]: R,
                                             [T.disabled]: L
@@ -178,7 +178,6 @@ function A(e) {
                                     l
                                 ),
                                 {
-                                    'data-migration-pending': !0,
                                     children: (0, r.jsx)(F, {
                                         className: T.buttonIcon,
                                         size: 'sm',

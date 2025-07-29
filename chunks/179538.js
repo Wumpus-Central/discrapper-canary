@@ -79,30 +79,31 @@ function p(e, t) {
     return i;
 }
 function h(e) {
-    var { role: t = 'button', text: n, focusProps: i, variant: c = 'primary', textVariant: d = 'text-md/medium', lineClamp: p = 1, className: h, style: m } = e,
-        g = _(e, ['role', 'text', 'focusProps', 'variant', 'textVariant', 'lineClamp', 'className', 'style']);
+    var { focusProps: t, lineClamp: n = 1, role: i = 'button', text: c, textVariant: d = 'text-md/medium', type: p = 'button', variant: h = 'primary', className: m, style: g } = e,
+        E = _(e, ['focusProps', 'lineClamp', 'role', 'text', 'textVariant', 'type', 'variant', 'className', 'style']);
     return (0, r.jsx)(
         o.t,
-        f(u({}, i), {
+        f(u({}, t), {
             children: (0, r.jsx)(
                 'button',
                 f(
                     u(
                         {
+                            className: a()(l.textButton, l[h]),
                             'data-mana-component': 'text-button',
-                            role: t,
-                            className: a()(l.textButton, l[c])
+                            role: i,
+                            type: p
                         },
-                        g
+                        E
                     ),
                     {
                         children: (0, r.jsx)(s.x, {
                             tag: 'span',
                             variant: d,
                             color: 'none',
-                            lineClamp: p,
+                            lineClamp: n,
                             className: l.text,
-                            children: n
+                            children: c
                         })
                     }
                 )

@@ -55,8 +55,8 @@ let u = {
     lg: 'md'
 };
 function m(e) {
-    var { role: t = 'button', size: n = 'md', variant: r = 'secondary', icon: m, iconOpticalOffsetMargin: p = 0, focusProps: g, pressed: h = !1, 'aria-label': f, className: b, style: x } = e,
-        _ = (function (e, t) {
+    var { role: t = 'button', type: n = 'button', size: r = 'md', variant: m = 'secondary', icon: p, iconOpticalOffsetMargin: g = 0, focusProps: h, pressed: f = !1, 'aria-label': b, className: x, style: _ } = e,
+        j = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -74,29 +74,30 @@ function m(e) {
                 for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
             return r;
-        })(e, ['role', 'size', 'variant', 'icon', 'iconOpticalOffsetMargin', 'focusProps', 'pressed', 'aria-label', 'className', 'style']);
+        })(e, ['role', 'type', 'size', 'variant', 'icon', 'iconOpticalOffsetMargin', 'focusProps', 'pressed', 'aria-label', 'className', 'style']);
     return (0, i.jsx)(
         a.t,
-        d(c({}, g), {
+        d(c({}, h), {
             children: (0, i.jsx)(
                 'button',
                 d(
                     c(
                         {
                             role: t,
-                            'aria-pressed': h,
-                            className: s()(l.button, o.button, l[n], o[r], { [o.pressed]: h }),
-                            'aria-label': f
+                            type: n,
+                            'aria-pressed': f,
+                            className: s()(l.button, o.button, l[r], o[m], { [o.pressed]: f }),
+                            'aria-label': b
                         },
-                        _
+                        j
                     ),
                     {
                         children: (0, i.jsx)('div', {
                             className: l.buttonChildrenWrapper,
-                            children: (0, i.jsx)(m, {
+                            children: (0, i.jsx)(p, {
                                 color: 'currentColor',
-                                style: 0 === p ? {} : { marginLeft: p },
-                                size: u[n]
+                                style: 0 === g ? {} : { marginLeft: g },
+                                size: u[r]
                             })
                         })
                     }

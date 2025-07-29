@@ -18,7 +18,7 @@ var i = n(255367),
     g = n(367074),
     h = n(140465),
     f = n(775412),
-    b = n(51574),
+    b = n(47280),
     x = n(736519),
     _ = n(784238),
     j = n(422034),
@@ -79,39 +79,38 @@ let N = r.forwardRef((e, t) => {
     let { className: n, buttonClassName: r, subscriptionTier: s, isDarkMode: m } = e,
         { analyticsLocations: _ } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_HERO_CTA),
         E = (0, f._O)(),
-        O = (0, h.Nx)(),
-        N = (0, g.Vi)(),
-        I = (0, l.e7)([p.Z], () => p.Z.affinities).length > 0,
-        y = (0, b.ZP)({ location: 'HeroHeading' }),
-        A = (0, b.J1)(y);
+        N = (0, h.Nx)(),
+        I = (0, g.Vi)(),
+        y = (0, l.e7)([p.Z], () => p.Z.affinities).length > 0,
+        A = (0, b.Z)({ location: 'HeroHeading' }) ? O.intl.string(O.t['EW+VIS']) : O.intl.string(O.t.YCZldH);
     return (0, i.jsx)(u.Gt, {
         value: _,
         children: (0, i.jsxs)('div', {
             ref: t,
             className: a()(C.container, n, {
-                [C.settingsContainer]: !O,
-                [C.affinityHeight]: !O && I
+                [C.settingsContainer]: !N,
+                [C.affinityHeight]: !N && y
             }),
             'data-testid': 'v2-marketing-page-hero-header',
             children: [
                 (0, i.jsxs)('div', {
-                    className: O ? C.fullscreenTextContainer : C.settingsTextContainer,
+                    className: N ? C.fullscreenTextContainer : C.settingsTextContainer,
                     children: [
                         (0, i.jsx)(c.X6q, {
-                            variant: O ? 'display-lg' : 'display-md',
+                            variant: N ? 'display-lg' : 'display-md',
                             color: 'always-white',
                             children: A
                         }),
-                        I
+                        y
                             ? (0, i.jsx)('div', {
                                   className: C.affinityDescription,
                                   children: (0, i.jsx)(j.Z, {
                                       textColor: 'always-white',
-                                      smallerText: !O
+                                      smallerText: !N
                                   })
                               })
                             : (0, i.jsx)(T, {}),
-                        N || E
+                        I || E
                             ? (0, i.jsx)('div', {
                                   className: C.buttonContainer,
                                   children: (0, i.jsx)(x.Z, {
@@ -121,18 +120,18 @@ let N = r.forwardRef((e, t) => {
                               })
                             : (0, i.jsx)(v, {
                                   subscriptionTier: s,
-                                  inOfferExperience: O,
+                                  inOfferExperience: N,
                                   buttonClassName: r,
                                   isDarkMode: m
                               }),
-                        I &&
+                        y &&
                             (0, i.jsx)(T, {
                                 variant: 'text-md/normal',
                                 withBottomMargin: !1
                             })
                     ]
                 }),
-                !O && (0, i.jsx)(S, {})
+                !N && (0, i.jsx)(S, {})
             ]
         })
     });
