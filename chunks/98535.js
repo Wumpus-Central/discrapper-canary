@@ -2,8 +2,8 @@
 var n = r(255367),
     l = r(73800),
     i = r(180650),
-    o = r(442837),
-    a = r(607070),
+    a = r(442837),
+    o = r(607070),
     s = r(594174),
     c = r(960048),
     u = r(597688),
@@ -21,14 +21,14 @@ function v(e) {
     let { tab: t, isFullScreen: r, sortedCategories: s, transitionToTab: c, transitionState: u, updateAnalyticsState: d, refreshCategories: b } = e,
         v = E();
     S(v);
-    let y = (0, o.e7)([a.Z], () => a.Z.useReducedMotion),
+    let y = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
         [x, j] = l.useState(void 0),
         T = l.useCallback(
             async (e, t, n) => {
                 d(e, t);
                 let l = n && !r && !y,
-                    o = t === i.T.ORB ? O.AW.ORBS : O.AW.CATALOG;
-                (j(t), await c(o, l));
+                    a = t === i.T.ORB ? O.AW.ORBS : O.AW.CATALOG;
+                (j(t), await c(a, l));
             },
             [r, y, c, d]
         ),
@@ -57,9 +57,9 @@ function v(e) {
                   onUnmount: () => j(void 0)
               });
 }
-let E = () => (0, o.e7)([u.Z, d.Z], () => (null != u.Z.error ? 'shop load fetch categories error: '.concat(u.Z.error.message) : null != d.Z.claimError ? 'shop load claim error: '.concat(d.Z.claimError.message) : null != d.Z.fetchError ? 'shop load fetch purchase error: '.concat(d.Z.fetchError.message) : void 0)),
+let E = () => (0, a.e7)([u.Z, d.Z], () => (null != u.Z.error ? 'shop load fetch categories error: '.concat(u.Z.error.message) : null != d.Z.claimError ? 'shop load claim error: '.concat(d.Z.claimError.message) : null != d.Z.fetchError ? 'shop load fetch purchase error: '.concat(d.Z.fetchError.message) : void 0)),
     S = (e) => {
-        let t = (0, o.e7)([s.default], () => s.default.getCurrentUser()),
+        let t = (0, a.e7)([s.default], () => s.default.getCurrentUser()),
             { noCache: r, includeUnpublished: n } = (0, b.Z)();
         l.useEffect(() => {
             var l, i;

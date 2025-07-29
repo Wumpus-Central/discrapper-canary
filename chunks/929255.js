@@ -2,8 +2,8 @@
 var n = r(255367),
     l = r(73800),
     i = r(120356),
-    o = r.n(i),
-    a = r(481060),
+    a = r.n(i),
+    o = r(481060),
     s = r(702486),
     c = r(381585),
     u = r(870289),
@@ -48,11 +48,11 @@ function S(e) {
             f || v(!1);
         }, [f, v]),
         (0, n.jsx)('div', {
-            className: o()(E.pageWrapper, { [E.pageWrapperFilter]: f }),
+            className: a()(E.pageWrapper, { [E.pageWrapperFilter]: f }),
             children: (0, n.jsxs)('main', {
-                className: o()(E.page, { [E.pageFilter]: f }),
+                className: a()(E.page, { [E.pageFilter]: f }),
                 children: [
-                    (0, n.jsx)(a.yWw, {
+                    (0, n.jsx)(o.yWw, {
                         className: E.shopScroll,
                         ref: h,
                         onScroll: m,
@@ -70,7 +70,7 @@ function S(e) {
                     C && !S && (0, n.jsx)('div', { className: E.divider }),
                     C &&
                         !S &&
-                        (0, n.jsx)(a.Ttm, {
+                        (0, n.jsx)(o.Ttm, {
                             className: E.filterBar,
                             children: (0, n.jsx)(b.Z, {})
                         })
@@ -101,7 +101,7 @@ let y = (e) => {
         (0, n.jsx)('div', {
             className: E.inventoryWrapper,
             children: (0, n.jsxs)('div', {
-                className: o()(E.inventory, {
+                className: a()(E.inventory, {
                     [E.inventoryFilter]: j,
                     [E.pageFullscreen]: t
                 }),
@@ -115,12 +115,12 @@ let y = (e) => {
                                     children: (0, n.jsx)(p.Z, {})
                                 }),
                                 (0, n.jsxs)('div', {
-                                    className: o()(E.controlsRightSide, { [E.controlsRightSideResponsive]: r }),
+                                    className: a()(E.controlsRightSide, { [E.controlsRightSideResponsive]: r }),
                                     children: [
                                         (0, n.jsxs)('div', {
                                             className: E.sortBy,
                                             children: [
-                                                (0, n.jsx)(a.Text, {
+                                                (0, n.jsx)(o.Text, {
                                                     variant: 'text-md/semibold',
                                                     children: v.intl.string(v.t.uaX709)
                                                 }),
@@ -129,11 +129,11 @@ let y = (e) => {
                                         }),
                                         (0, n.jsx)('div', {
                                             ref: I,
-                                            children: (0, n.jsx)(a.zxk, {
+                                            children: (0, n.jsx)(o.zxk, {
                                                 onClick: () => s((e) => !e),
                                                 variant: 'secondary',
                                                 text: v.intl.string(i ? v.t.fYtm6e : v.t.TeTYEx),
-                                                icon: a.gXV,
+                                                icon: o.gXV,
                                                 iconPosition: 'end'
                                             })
                                         })
@@ -144,7 +144,7 @@ let y = (e) => {
                                     (0, n.jsx)('div', {
                                         className: E.filterOverlay,
                                         ref: T,
-                                        children: (0, n.jsx)(a.Den, {
+                                        children: (0, n.jsx)(o.Den, {
                                             className: E.filterOverlayContent,
                                             children: (0, n.jsx)(b.Z, {})
                                         })

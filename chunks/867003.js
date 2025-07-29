@@ -1,6 +1,8 @@
 n.d(t, {
+    I: () => x,
     L0: () => _,
     Rr: () => b,
+    nH: () => C,
     tp: () => h,
     wT: () => E
 });
@@ -51,5 +53,15 @@ let m = 3 * o.Z.Millis.DAY,
             feedback: t,
             reason: n,
             skipped: r
+        });
+    },
+    C = (e) => (e === r.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE ? d.L$.KID_STARTED : d.L$.GET_STARTED),
+    x = (e, t, n, r, i) => {
+        a.default.track(p.rMx.AGE_VERIFICATION_FEEDBACK_SUBMITTED, {
+            rating: e,
+            feedback: t,
+            reason: n,
+            skipped: r,
+            entrypoint: i
         });
     };

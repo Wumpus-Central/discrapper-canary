@@ -2,8 +2,8 @@
 var n = r(255367),
     l = r(73800),
     i = r(979554),
-    o = r(399606),
-    a = r(780384),
+    a = r(399606),
+    o = r(780384),
     s = r(481060),
     c = r(410030),
     u = r(594174),
@@ -32,15 +32,15 @@ function k(e) {
         A = (0, d.sp)(),
         B = null != (t = null == A ? void 0 : A.sessionId) ? t : '',
         { noCache: w, includeUnpublished: R } = (0, _.Z)(),
-        Z = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        D = (0, o.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
-        [F, H] = l.useState(1),
-        M = () => {
+        Z = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
+        D = (0, a.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
+        [F, M] = l.useState(1),
+        H = () => {
             var e;
             null == I || null == (e = I.current) || e.scrollToTop({ animate: !0 });
         },
         W = (0, c.Fg)(),
-        V = (0, a.ap)(W),
+        V = (0, o.ap)(W),
         [U, z, G] = l.useMemo(() => {
             switch (N) {
                 case O.AW.AVATAR_DECORATIONS:
@@ -132,7 +132,7 @@ function k(e) {
                                   totalCount: K.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {
-                                      (H(e), M());
+                                      (M(e), H());
                                   },
                                   disablePaginationGap: !0
                               })

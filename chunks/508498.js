@@ -2,8 +2,8 @@
 var n = r(73800),
     l = r(114858),
     i = r(37234),
-    o = r(703656),
-    a = r(981631);
+    a = r(703656),
+    o = r(981631);
 function s() {
     let { search: e } = (0, l.TH)(),
         t = (0, l.UO)(),
@@ -37,11 +37,11 @@ function s() {
         {
             onClose: n.useCallback(() => {
                 if (0 === s) {
-                    ((0, o.op)(), (0, i.jN)(a.S9g.USER_SETTINGS));
+                    ((0, a.op)(), (0, i.jN)(o.S9g.USER_SETTINGS));
                     return;
                 }
-                if ((0, o.uv)()) return void (0, o.op)();
-                (0, o.uL)(a.Z5c.APP);
+                if ((0, a.uv)()) return void (0, a.op)();
+                (0, a.uL)(o.Z5c.APP);
             }, [s]),
             source: s
         },

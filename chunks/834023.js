@@ -1,4 +1,7 @@
-n.d(t, { gM: () => c });
+n.d(t, {
+    gM: () => u,
+    tK: () => s
+});
 var r = n(255367),
     i = n(73800);
 function a(e, t, n) {
@@ -30,17 +33,22 @@ function o(e) {
     }
     return e;
 }
-let s = {
-        1: () => n.e('48221').then(n.bind(n, 740106)),
+var s = (function (e) {
+    return ((e[(e.COLLECTIBLES_PREVIEW = 0)] = 'COLLECTIBLES_PREVIEW'), (e[(e.LOOPING_VIDEO = 1)] = 'LOOPING_VIDEO'), (e[(e.DEMO = 2)] = 'DEMO'), e);
+})({});
+let l = {
+        2: () => n.e('48221').then(n.bind(n, 740106)),
+        1: () => n.e('17094').then(n.bind(n, 326379)),
         0: () => Promise.resolve().then(n.bind(n, 669636))
     },
-    l = {
-        1: i.lazy(s[1]),
-        0: i.lazy(s[0])
+    c = {
+        2: i.lazy(l[2]),
+        1: i.lazy(l[1]),
+        0: i.lazy(l[0])
     };
-function c(e) {
+function u(e) {
     let { data: t } = e,
-        n = l[t.type],
+        n = c[t.type],
         a = t.props;
     return (0, r.jsx)(i.Suspense, {
         fallback: null,

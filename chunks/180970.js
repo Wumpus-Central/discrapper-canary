@@ -6,15 +6,15 @@ var n = r(255367),
     a = r(332664),
     l = r(626135),
     s = r(867003),
-    u = r(987562),
-    _ = r(981631),
+    _ = r(987562),
+    u = r(981631),
     b = r(388032);
-let d = [u.F5.SOMETHING_ELSE];
+let d = [_.F5.SOMETHING_ELSE];
 function p(e) {
     let { onClose: t, transitionState: p } = e,
-        f = (0, c.Z)(u.CE);
+        f = (0, c.Z)(_.CE);
     o.useEffect(() => {
-        l.default.track(_.rMx.OPEN_MODAL, { type: 'Block User Feedback' });
+        l.default.track(u.rMx.OPEN_MODAL, { type: 'Block User Feedback' });
     }, []);
     let m = o.useCallback((e) => {
         var t;
@@ -65,7 +65,7 @@ function p(e) {
         onSubmit: m,
         onClose: t,
         transitionState: p,
-        otherKey: u.F5.SOMETHING_ELSE,
+        otherKey: _.F5.SOMETHING_ELSE,
         hideHelpDeskLink: !0,
         hideDontShowAgainCheckbox: !0
     });

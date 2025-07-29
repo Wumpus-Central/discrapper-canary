@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(953529));
+(n.d(t, { Z: () => T }), n(953529));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -9,16 +9,17 @@ var i = n(255367),
     d = n(780384),
     u = n(755721),
     m = n(481060),
-    p = n(410030),
-    g = n(70097),
-    h = n(626135),
-    f = n(526167),
-    b = n(572995),
-    x = n(981631),
-    _ = n(869783),
-    j = n(888723),
-    E = n(790895);
-function O(e) {
+    p = n(434650),
+    g = n(410030),
+    h = n(70097),
+    f = n(626135),
+    b = n(526167),
+    x = n(572995),
+    _ = n(981631),
+    j = n(869783),
+    E = n(888723),
+    O = n(790895);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -43,7 +44,7 @@ function O(e) {
     }
     return e;
 }
-function C(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,160 +62,168 @@ function C(e, t) {
         e
     );
 }
-let v = (e) => {
+let S = (e) => {
         let { descriptionCta: t, onClick: n, debouncedOnClickAnalytics: r, enablePremiumBrandRefreshDesign: s } = e,
-            l = (0, p.ZP)(),
+            l = (0, g.ZP)(),
             c = (0, d.wj)(l),
             m = c ? u.Tt.WHITE : u.Tt.BRAND,
-            g = () => {
+            p = () => {
                 (r(), n());
             };
         return s
             ? (0, i.jsx)('div', {
-                  className: E.bentoBoxButton,
+                  className: O.bentoBoxButton,
                   children: (0, i.jsx)(o.z, {
                       variant: 'secondary',
-                      onClick: g,
+                      onClick: p,
                       text: t
                   })
               })
             : (0, i.jsx)(u.zx, {
                   look: u.iL.OUTLINED,
                   color: m,
-                  className: a()(j.bentoBoxButton, c ? j.bentoBoxButtonWhite : j.bentoBoxButtonBrand),
-                  onClick: g,
+                  className: a()(E.bentoBoxButton, c ? E.bentoBoxButtonWhite : E.bentoBoxButtonBrand),
+                  onClick: p,
                   children: t
               });
     },
-    S = (e) => {
+    T = (e) => {
         let t,
-            { name: n, title: s, description: o, descriptionCta: d, previewImage: u, videoUrl: p, shouldLoadVideo: S, index: T, customVideoStyle: N, isReducedMotion: I, onClick: y, badgeText: A, size: P, enablePremiumBrandRefreshDesign: R } = e,
-            D = (0, f.rO)(),
-            Z = r.useRef(null),
-            w = r.useRef(0),
-            k = (function (e) {
+            { name: n, title: s, description: o, descriptionCta: d, previewImage: u, videoUrl: g, shouldLoadVideo: T, index: N, customVideoStyle: I, isReducedMotion: y, onClick: A, badgeText: P, size: R, enablePremiumBrandRefreshDesign: D } = e,
+            Z = (0, b.rO)(),
+            w = r.useRef(null),
+            k = r.useRef(0),
+            L = (function (e) {
                 let t;
                 switch (e) {
-                    case b.NA.EMOJIS:
-                        t = j.emojisBackground;
+                    case x.NA.EMOJIS:
+                        t = E.emojisBackground;
                         break;
-                    case b.NA.REFERRAL_PROGRAM:
-                        t = j.referralProgramBackground;
+                    case x.NA.REFERRAL_PROGRAM:
+                        t = E.referralProgramBackground;
                         break;
-                    case b.NA.NO_LIMITS:
-                        t = j.noLimitsBackground;
+                    case x.NA.NO_LIMITS:
+                        t = E.noLimitsBackground;
                         break;
-                    case b.NA.YOUR_SPACE:
-                        t = j.yourSpaceBackground;
+                    case x.NA.YOUR_SPACE:
+                        t = E.yourSpaceBackground;
                         break;
-                    case b.NA.SERVER_PROFILES:
-                        t = j.serverProfilesBackground;
+                    case x.NA.SERVER_PROFILES:
+                        t = E.serverProfilesBackground;
                         break;
-                    case b.NA.SHOW_YOUR_STYLE:
-                        t = j.yourStyleBackground;
+                    case x.NA.SHOW_YOUR_STYLE:
+                        t = E.yourStyleBackground;
                         break;
-                    case b.NA.PERMADECOS:
-                        t = j.permadecosBackground;
+                    case x.NA.PERMADECOS:
+                        t = E.permadecosBackground;
                         break;
-                    case b.NA.VOICE_FILTERS:
-                        t = j.voiceFiltersBackground;
+                    case x.NA.VOICE_FILTERS:
+                        t = E.voiceFiltersBackground;
                 }
                 return t;
             })(n),
-            L = (0, l.debounce)(() => {
-                h.default.track(x.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(n) });
+            B = (0, l.debounce)(() => {
+                f.default.track(_.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(n) });
             }, 800),
-            B = () => {
-                null == Z.current || I || ((Z.current.currentTime = w.current), Z.current.play());
-            },
             M = () => {
-                null == Z.current || I || ((w.current = Z.current.currentTime), Z.current.pause());
+                null == w.current || y || ((w.current.currentTime = k.current), w.current.play());
             },
-            U = R ? E : j;
-        t = R ? (P === b.y$.LARGE ? 'heading-xxl/bold' : 'heading-xl/bold') : P === b.y$.SMALL ? 'heading-xl/extrabold' : 'heading-xxl/extrabold';
-        let V = () =>
+            U = () => {
+                null == w.current || y || ((k.current = w.current.currentTime), w.current.pause());
+            },
+            V = (0, p.O)(
+                (e) => {
+                    e ? M() : e || U();
+                },
+                0.7,
+                D
+            ),
+            G = D ? O : E;
+        t = D ? (R === x.y$.LARGE ? 'heading-xxl/bold' : 'heading-xl/bold') : R === x.y$.SMALL ? 'heading-xl/extrabold' : 'heading-xxl/extrabold';
+        let F = () =>
                 (0, i.jsxs)('div', {
-                    className: a()(U.textBox, U[''.concat(P)]),
+                    className: a()(G.textBox, G[''.concat(R)]),
                     children: [
                         (0, i.jsxs)('div', {
                             children: [
-                                null != A &&
+                                null != P &&
                                     (0, i.jsx)('div', {
-                                        className: U.badge,
+                                        className: G.badge,
                                         children: (0, i.jsx)(m.X6q, {
                                             variant: 'eyebrow',
                                             color: 'always-white',
-                                            children: A
+                                            children: P
                                         })
                                     }),
                                 (0, i.jsx)(m.X6q, {
                                     variant: t,
                                     color: 'header-primary',
-                                    className: a()(U.header, !R && U[''.concat(P)]),
+                                    className: a()(G.header, !D && G[''.concat(R)]),
                                     children: s
                                 })
                             ]
                         }),
                         (0, i.jsx)(m.Text, {
                             variant: 'text-md/medium',
-                            color: R ? 'text-primary' : 'text-muted',
-                            className: U.description,
+                            color: D ? 'text-primary' : 'text-muted',
+                            className: G.description,
                             children: o
                         }),
                         null != d &&
-                            null != y &&
-                            (0, i.jsx)(v, {
+                            null != A &&
+                            (0, i.jsx)(S, {
                                 descriptionCta: d,
-                                onClick: y,
-                                debouncedOnClickAnalytics: L,
-                                enablePremiumBrandRefreshDesign: R
+                                onClick: A,
+                                debouncedOnClickAnalytics: B,
+                                enablePremiumBrandRefreshDesign: D
                             })
                     ]
                 }),
-            G = () =>
+            H = () =>
                 (0, i.jsx)('div', {
-                    className: a()(U.boxArtContainer, U[''.concat(P)]),
+                    className: a()(G.boxArtContainer, G[''.concat(R)]),
+                    ref: V,
                     children: (0, i.jsx)(
-                        g.Z,
+                        h.Z,
                         {
                             playsInline: !0,
-                            preload: S ? 'auto' : 'none',
+                            preload: T ? 'auto' : 'none',
                             muted: !0,
                             poster: u,
                             loop: !0,
-                            className: a()(U.boxVideo, { [N]: null != N }),
-                            ref: Z,
+                            className: a()(G.boxVideo, { [I]: null != I }),
+                            ref: w,
                             children: (0, i.jsx)('source', {
-                                src: p,
-                                type: D ? _.m.MP4 : _.m.WEBM
+                                src: g,
+                                type: Z ? j.m.MP4 : j.m.WEBM
                             })
                         },
-                        p
+                        g
                     )
                 }),
-            F = T % 2 != 0,
-            H = () =>
-                F
+            z = N % 2 != 0,
+            W = () =>
+                z
                     ? (0, i.jsxs)(i.Fragment, {
-                          children: [(0, i.jsx)(V, {}), (0, i.jsx)(G, {})]
+                          children: [(0, i.jsx)(F, {}), (0, i.jsx)(H, {})]
                       })
                     : (0, i.jsxs)(i.Fragment, {
-                          children: [(0, i.jsx)(G, {}), (0, i.jsx)(V, {})]
+                          children: [(0, i.jsx)(H, {}), (0, i.jsx)(F, {})]
                       }),
-            z = {
-                className: a()(R ? E.backgroundColor : k, U.boxContainer, U[''.concat(P)], R && E.gradientBackground),
-                onMouseEnter: B,
-                onFocus: B,
-                onBlur: M,
-                onMouseLeave: M
+            Y = {
+                className: a()(D ? O.backgroundColor : L, G.boxContainer, G[''.concat(R)], D && O.gradientBackground),
+                onMouseEnter: M,
+                onFocus: M,
+                onBlur: U,
+                onMouseLeave: U
             };
-        return R
+        return D
             ? (0, i.jsx)(
                   c.$,
-                  C(O({}, z), {
+                  v(C({}, Y), {
                       color: 'purple',
-                      children: (0, i.jsx)(H, {})
+                      children: (0, i.jsx)(W, {})
                   })
               )
-            : (0, i.jsx)('div', C(O({}, z), { children: (0, i.jsx)(H, {}) }));
+            : (0, i.jsx)('div', v(C({}, Y), { children: (0, i.jsx)(W, {}) }));
     };

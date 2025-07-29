@@ -1,4 +1,4 @@
-r.d(t, { a: () => a });
+r.d(t, { a: () => o });
 var n = r(97519);
 function l(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -43,7 +43,7 @@ function i(e, t) {
         e
     );
 }
-let o = {
+let a = {
         skus: [],
         currentPage: 0,
         totalCount: 0,
@@ -51,14 +51,14 @@ let o = {
         searchError: null,
         isFetchingResults: !1
     },
-    a = (0, n.U)((e) =>
-        i(l({}, o), {
+    o = (0, n.U)((e) =>
+        i(l({}, a), {
             onSetResponse: (t) => {
                 let r = Math.floor(t.pageOffset / t.pageLimit) + 1;
                 e(i(l({}, t), { currentPage: r }));
             },
             setSearchError: (t) => {
-                e(i(l({}, o), { searchError: t }));
+                e(i(l({}, a), { searchError: t }));
             },
             setIsFetchingResults: (t) => {
                 e({ isFetchingResults: t });
@@ -67,7 +67,7 @@ let o = {
                 e({ searchError: null });
             },
             clear: () => {
-                e(l({}, o));
+                e(l({}, a));
             }
         })
     );

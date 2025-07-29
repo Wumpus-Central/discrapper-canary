@@ -2,13 +2,13 @@
 var n = r(255367),
     l = r(73800),
     i = r(481060),
-    o = r(501431),
-    a = r(215023),
+    a = r(501431),
+    o = r(215023),
     s = r(388032),
     c = r(234209);
 function u(e) {
     let { handleTransition: t, selectedTab: r } = e,
-        { searchQuery: u, onSetSearchQuery: d } = (0, o.S)(),
+        { searchQuery: u, onSetSearchQuery: d } = (0, a.S)(),
         [p, f] = l.useState('');
     return (
         l.useEffect(() => {
@@ -23,7 +23,7 @@ function u(e) {
         (0, n.jsx)(i.P3F, {
             ignoreKeyPress: !0,
             onClick: () => {
-                r !== a.AW.CATALOG && t(a.AW.CATALOG);
+                r !== o.AW.CATALOG && t(o.AW.CATALOG);
             },
             children: (0, n.jsx)(i.E1j, {
                 className: c.searchBar,

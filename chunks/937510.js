@@ -2,15 +2,15 @@
 var n = r(73800),
     l = r(952639),
     i = r.n(l),
-    o = r(399606),
-    a = r(1870),
+    a = r(399606),
+    o = r(1870),
     s = r(724994);
 let c = (e) => {
-    let t = (0, o.e7)([a.Z], () => a.Z.purchases);
+    let t = (0, a.e7)([o.Z], () => o.Z.purchases);
     return (0, n.useMemo)(() => {
         let t = [[], [], [], []];
         for (let r of e.values()) {
-            let { isPurchased: e, isPartiallyOwnedBundle: n, isPartiallyOwnedVariantsGroup: l } = (0, s.U)(a.Z, r);
+            let { isPurchased: e, isPartiallyOwnedBundle: n, isPartiallyOwnedVariantsGroup: l } = (0, s.U)(o.Z, r);
             t[n ? 2 : l ? 1 : 3 * !!e].push(r);
         }
         return i()(t);

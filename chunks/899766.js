@@ -2,8 +2,8 @@
 var n = r(255367),
     l = r(73800),
     i = r(120356),
-    o = r.n(i),
-    a = r(652141),
+    a = r.n(i),
+    o = r(652141),
     s = r(873546),
     c = r(435935),
     u = r(481060),
@@ -12,12 +12,12 @@ var n = r(255367),
     f = r(698921);
 function g(e) {
     let { endDate: t } = e,
-        { days: r, hours: l, minutes: i, seconds: o } = (0, d.Z)(t),
-        a = (function (e, t, r, n) {
+        { days: r, hours: l, minutes: i, seconds: a } = (0, d.Z)(t),
+        o = (function (e, t, r, n) {
             let l = (e, t) => ''.concat(e.toString().padStart(2, '0')).concat(t),
                 i = [];
             return (e > 0 && i.push(l(e, p.intl.string(p.t.QJyuxc))), (t > 0 || i.length > 0) && i.push(l(t, p.intl.string(p.t['1LyF1t']))), (r > 0 || i.length > 0) && i.push(l(r, p.intl.string(p.t.n7dksL))), i.push(l(n, p.intl.string(p.t['6m/6nJ']))), i.join(':'));
-        })(r, l, i, o);
+        })(r, l, i, a);
     return (0, n.jsx)(u.Text, {
         variant: 'heading-md/medium',
         className: f.countdown,
@@ -26,7 +26,7 @@ function g(e) {
         children: (0, n.jsx)('div', {
             role: 'timer',
             'aria-relevant': 'all',
-            children: a
+            children: o
         })
     });
 }
@@ -40,8 +40,8 @@ let h = l.memo(function (e) {
                 friction: 12
             }
         });
-    return (0, n.jsxs)(a.animated.div, {
-        className: o()([f.countDownWrapper, l && f.fullScreenWrapper, s.tq && f.mobileWrapper]),
+    return (0, n.jsxs)(o.animated.div, {
+        className: a()([f.countDownWrapper, l && f.fullScreenWrapper, s.tq && f.mobileWrapper]),
         role: 'status',
         style: (function (e) {
             for (var t = 1; t < arguments.length; t++) {

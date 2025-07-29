@@ -2,8 +2,8 @@
 var n = r(255367),
     l = r(73800),
     i = r(120356),
-    o = r.n(i),
-    a = r(772848),
+    a = r.n(i),
+    o = r(772848),
     s = r(399606),
     c = r(952265),
     u = r(481060),
@@ -49,7 +49,7 @@ let R = (e) => {
     Z = function (e) {
         let { isFullScreen: t = !0, tab: r = N.AW.HOME } = e;
         (0, h.z)(g.f);
-        let i = (0, p.Z)((0, a.Z)()),
+        let i = (0, p.Z)((0, o.Z)()),
             c = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
             { closeIntroToOrbsClaimedCoachmark: B } = (0, m.Z)({ location: 'CollectiblesShop' });
         l.useEffect(
@@ -60,20 +60,20 @@ let R = (e) => {
         );
         let { onClose: Z } = (0, k.Db)(),
             { currentTab: D, hasFilters: F } = (0, j.S)(),
-            H = l.useMemo(() => (r === N.AW.HOME && D && F() ? D : r), [r, D, F]),
-            { categories: M, refreshCategories: W } = (0, S.ZP)(
+            M = l.useMemo(() => (r === N.AW.HOME && D && F() ? D : r), [r, D, F]),
+            { categories: H, refreshCategories: W } = (0, S.ZP)(
                 {
                     location: 'CollectiblesShop.web',
                     logPerf: !0
                 },
                 {
                     sessionId: i,
-                    tab: H,
+                    tab: M,
                     isFullScreen: t
                 }
             );
         (0, b.D)();
-        let V = (0, y.O)(M),
+        let V = (0, y.O)(H),
             [U, z] = l.useState(),
             G = (0, s.e7)([v.Z], () => {
                 var e;
@@ -84,7 +84,7 @@ let R = (e) => {
         let K = l.useCallback((e, t) => {
                 (Y(e), z(t));
             }, []),
-            { selectedTab: X, transitionState: J, transitionToTab: Q } = (0, x.B)(H, t);
+            { selectedTab: X, transitionState: J, transitionToTab: Q } = (0, x.B)(M, t);
         ((0, E.q3)(i, X, G, J, q), (0, E.EB)(X, c));
         let { dismissShopButtonDC: $ } = (0, I.Z)();
         (l.useEffect(() => {
@@ -124,7 +124,7 @@ let R = (e) => {
                               ref: t ? et : er,
                               tabIndex: -1,
                               children: (0, n.jsxs)('div', {
-                                  className: o()(w.shopViewWrapper, {
+                                  className: a()(w.shopViewWrapper, {
                                       [w.visible]: J === N.f7.VISIBLE,
                                       [w.in]: J === N.f7.IN,
                                       [w.out]: J === N.f7.OUT
