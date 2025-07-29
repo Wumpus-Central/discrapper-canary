@@ -19,11 +19,11 @@ var r,
 let C = 'DetectedOffPlatformPremiumPerksStore',
     x = {},
     v = {},
-    y = [];
-function O() {
+    O = [];
+function y() {
     let e = !1;
     for (let { skuId: t, applicationId: n } of o().values(v)) {
-        if (y.includes(t)) continue;
+        if (O.includes(t)) continue;
         let r = f.Z.getApplication(n);
         if (null == r) {
             f.Z.isFetchingApplication(n) || f.Z.didFetchingApplicationFail(n) || m.ZP.fetchApplication(n);
@@ -47,7 +47,7 @@ function O() {
 class j extends (r = s.ZP.Store) {
     initialize() {
         var e;
-        (this.waitFor(g.ZP, b.Z, h.Z), (y = null != (e = c.K.get(C)) ? e : y));
+        (this.waitFor(g.ZP, b.Z, h.Z), (O = null != (e = c.K.get(C)) ? e : O));
     }
     getDetectedOffPlatformPremiumPerks() {
         return o().values(x);
@@ -66,14 +66,14 @@ let I = new j(u.Z, {
     LOGOUT: function () {
         ((x = {}), (v = {}));
     },
-    SKU_FETCH_SUCCESS: O,
-    ENTITLEMENT_FETCH_APPLICATION_SUCCESS: O,
-    ENTITLEMENT_CREATE: O,
-    APPLICATION_FETCH_SUCCESS: O,
+    SKU_FETCH_SUCCESS: y,
+    ENTITLEMENT_FETCH_APPLICATION_SUCCESS: y,
+    ENTITLEMENT_CREATE: y,
+    APPLICATION_FETCH_SUCCESS: y,
     DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
         let { skuId: t } = e;
-        if ((delete x[t], y.includes(t))) return !1;
-        (y.push(t), c.K.set(C, y));
+        if ((delete x[t], O.includes(t))) return !1;
+        (O.push(t), c.K.set(C, O));
     },
     RUNNING_GAMES_CHANGE: function () {
         let e = !1;
@@ -81,7 +81,7 @@ let I = new j(u.Z, {
             if (null != t && n !== E.GQo.DISCORD)
                 for (let { skuId: n, applicationId: r } of E.Lg6)
                     r !== t ||
-                        y.includes(n) ||
+                        O.includes(n) ||
                         (null == v[n] &&
                             (h.Z.applicationIdsFetched.has(r) || h.Z.applicationIdsFetching.has(r) || null != h.Z.getForSku(n) || d.yD(r),
                             (v[n] = {
@@ -89,6 +89,6 @@ let I = new j(u.Z, {
                                 applicationId: r
                             }),
                             (e = !0)));
-        return (e && O(), e);
+        return (e && y(), e);
     }
 });

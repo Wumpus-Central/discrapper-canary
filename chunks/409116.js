@@ -1,10 +1,10 @@
 r.d(t, { F: () => p });
 var n = r(255367);
 r(73800);
-var l = r(120356),
-    i = r.n(l),
-    o = r(481060),
-    a = r(937615),
+var i = r(120356),
+    l = r.n(i),
+    a = r(481060),
+    o = r(937615),
     s = r(884697),
     c = r(388032),
     u = r(864356);
@@ -22,57 +22,57 @@ function d() {
 let p = (e) => {
     let {
             price: { amount: t, currency: r },
-            nitroIconType: l,
+            nitroIconType: i,
             nitroIconSize: p = 'md',
-            className: f,
-            discount: g = s.f_,
-            variant: h = 'heading-md/semibold'
+            className: v,
+            discount: b = s.f_,
+            variant: f = 'heading-md/semibold'
         } = e,
-        b = (0, a.qr)(t, r),
-        m =
-            g !== s.f_ && g.discountPercentage >= 5
+        m = (0, o.qr)(t, r),
+        h =
+            b !== s.f_ && b.discountPercentage >= 5
                 ? (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, n.jsx)(o.nn4, {
+                          (0, n.jsx)(a.nn4, {
                               children: c.intl.format(c.t.niC6DA, {
-                                  price: b,
-                                  discountPercentage: g.discountPercentage
+                                  price: m,
+                                  discountPercentage: b.discountPercentage
                               })
                           }),
                           (0, n.jsx)('span', {
                               'aria-hidden': !0,
-                              children: b
+                              children: m
                           }),
-                          (0, n.jsxs)(o.Text, {
-                              variant: h,
+                          (0, n.jsxs)(a.Text, {
+                              variant: f,
                               color: 'text-feedback-positive',
                               className: u.discount,
                               'aria-hidden': !0,
-                              children: ['(-', g.discountPercentage, '%)']
+                              children: ['(-', b.discountPercentage, '%)']
                           })
                       ]
                   })
                 : (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, n.jsx)(o.nn4, { children: c.intl.format(c.t['6C36MD'], { price: b }) }),
+                          (0, n.jsx)(a.nn4, { children: c.intl.format(c.t['6C36MD'], { price: m }) }),
                           (0, n.jsx)('span', {
                               'aria-hidden': !0,
-                              children: b
+                              children: m
                           })
                       ]
                   });
-    return (0, n.jsxs)(o.Text, {
-        variant: h,
-        className: i()(u.container, f),
+    return (0, n.jsxs)(a.Text, {
+        variant: f,
+        className: l()(u.container, v),
         children: [
-            'tooltip' === l
-                ? (0, n.jsx)(o.ua7, {
+            'tooltip' === i
+                ? (0, n.jsx)(a.ua7, {
                       text: c.intl.string(c.t.MPFyJy),
                       'aria-label': c.intl.string(c.t.X3Ekj4),
                       children: (e) => {
                           var t,
                               r,
-                              l = d(
+                              i = d(
                                   {},
                                   (function (e) {
                                       if (null == e) throw TypeError('Cannot destructure ' + e);
@@ -80,7 +80,7 @@ let p = (e) => {
                                   })(e)
                               );
                           return (0, n.jsx)(
-                              o.SrA,
+                              a.SrA,
                               ((t = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
                                       var r = null != arguments[t] ? arguments[t] : {},
@@ -110,7 +110,7 @@ let p = (e) => {
                                       size: p,
                                       color: 'currentColor'
                                   },
-                                  l
+                                  i
                               )),
                               (r = r = { className: u.nitroIcon }),
                               Object.getOwnPropertyDescriptors
@@ -129,14 +129,14 @@ let p = (e) => {
                           );
                       }
                   })
-                : 'default' === l
-                  ? (0, n.jsx)(o.SrA, {
+                : 'default' === i
+                  ? (0, n.jsx)(a.SrA, {
                         size: p,
                         color: 'currentColor',
                         className: u.nitroIcon
                     })
                   : null,
-            m
+            h
         ]
     });
 };

@@ -157,9 +157,16 @@ function U(e) {
     t.forEach(w);
 }
 function G(e) {
-    let { messages: t, threads: n } = e;
-    for (let e of t) for (let t of e) w(t.thread);
-    n.forEach(w);
+    let { data: t } = e;
+    t.forEach((e) => {
+        let { messages: t, threads: n } = e;
+        (t.forEach((e) => {
+            e.forEach((e) => {
+                w(e.thread);
+            });
+        }),
+            n.forEach(w));
+    });
 }
 function B(e) {
     let { channel: t } = e;
@@ -278,8 +285,8 @@ let X = new q(s.Z, {
     RELATIONSHIP_ADD: z,
     RELATIONSHIP_UPDATE: z,
     RELATIONSHIP_REMOVE: z,
-    SEARCH_FINISH: G,
-    MOD_VIEW_SEARCH_FINISH: G,
+    SEARCH_MESSAGES_SUCCESS: G,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: G,
     THREAD_DELETE: V,
     CHANNEL_DELETE: B,
     MESSAGE_CREATE: F,

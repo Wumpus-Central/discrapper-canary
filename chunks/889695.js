@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(225675),
     x = n(981631),
     v = n(388032),
-    y = n(318135);
-function O(e) {
+    O = n(318135);
+function y(e) {
     var t;
     return (0, r.jsx)('span', {
         style: { color: null != (t = e.colorString) ? t : 'currentColor' },
@@ -82,7 +82,7 @@ function j(e) {
         o.$e(x.Plq.MANAGE_GUILD, x.Plq.MANAGE_ROLES)
     ) || (0, u.eM)(l, n))
         ? (0, r.jsx)('div', {
-              className: y.container,
+              className: O.container,
               children: (0, r.jsx)(c.hQY, {
                   placeholder: v.intl.string(v.t.Sojqsr),
                   value: A,
@@ -97,7 +97,7 @@ function j(e) {
                                               c.lo1,
                                               {
                                                   value: n.id,
-                                                  children: [(0, r.jsx)(c.lo1.Label, { children: O(n) }), (0, r.jsx)(c.lo1.Checkbox, {})]
+                                                  children: [(0, r.jsx)(c.lo1.Label, { children: y(n) }), (0, r.jsx)(c.lo1.Checkbox, {})]
                                               },
                                               n.id
                                           )
@@ -115,7 +115,7 @@ function j(e) {
                                       {
                                           value: n.id,
                                           disabled: !0,
-                                          children: [(0, r.jsx)(c.lo1.Label, { children: O(n) }), (0, r.jsx)(c.lo1.Checkbox, { checked: !0 })]
+                                          children: [(0, r.jsx)(c.lo1.Label, { children: y(n) }), (0, r.jsx)(c.lo1.Checkbox, { checked: !0 })]
                                       },
                                       n.id
                                   )

@@ -25,8 +25,8 @@ var r = n(255367),
     C = n(696014),
     x = n(847033),
     v = n(544978),
-    y = n(893182),
-    O = n(388032),
+    O = n(893182),
+    y = n(388032),
     j = n(414521);
 function I(e) {
     let { onClick: t } = e;
@@ -37,7 +37,7 @@ function I(e) {
             (0, r.jsx)(s.Text, {
                 variant: 'text-sm/medium',
                 color: 'header-primary',
-                children: O.intl.string(O.t.J4cw1t)
+                children: y.intl.string(y.t.J4cw1t)
             }),
             (0, r.jsx)(s.LZC, {
                 size: 4,
@@ -105,7 +105,7 @@ function T(e) {
         [P, A] = i.useState(1),
         w = (0, c.Z)('(max-width: 1439px)'),
         { selectedTab: Z, isPhantomPreview: R } = (0, x.m)(),
-        L = Z === v.y.GUILD_PRODUCTS_PREVIEW ? O.intl.string(O.t['LvXy/P']) : O.intl.string(O.t.XyqKh4),
+        L = Z === v.y.GUILD_PRODUCTS_PREVIEW ? y.intl.string(y.t['LvXy/P']) : y.intl.string(y.t.XyqKh4),
         D = N
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
@@ -119,14 +119,14 @@ function T(e) {
                       }),
                       E &&
                           (0, r.jsxs)(r.Fragment, {
-                              children: [(0, r.jsx)(s.LZC, { size: 4 }), (0, r.jsx)(I, { onClick: () => (0, y.Z)({ guildId: m }) })]
+                              children: [(0, r.jsx)(s.LZC, { size: 4 }), (0, r.jsx)(I, { onClick: () => (0, O.Z)({ guildId: m }) })]
                           })
                   ]
               })
             : (0, r.jsx)(s.Text, {
                   variant: 'text-sm/normal',
                   color: 'text-default',
-                  children: R ? L : O.intl.string(O.t['NY/FIS'])
+                  children: R ? L : y.intl.string(y.t['NY/FIS'])
               });
     return (0, r.jsxs)('div', {
         className: j.container,
@@ -155,14 +155,14 @@ function T(e) {
                                     variant: 'heading-xl/semibold',
                                     color: 'header-primary',
                                     lineClamp: 2,
-                                    children: R ? O.intl.string(O.t.rtgp7u) : O.intl.formatToPlainString(O.t.NZeik5, { guildName: l.name })
+                                    children: R ? y.intl.string(y.t.rtgp7u) : y.intl.formatToPlainString(y.t.NZeik5, { guildName: l.name })
                                 })
                             }),
                             (0, r.jsx)(s.LZC, { size: 8 }),
                             (0, r.jsx)(s.Text, {
                                 variant: 'text-md/normal',
                                 color: 'text-default',
-                                children: O.intl.format(O.t['7JwrlJ'], {
+                                children: y.intl.format(y.t['7JwrlJ'], {
                                     username: f,
                                     usernameHook: function (e, t) {
                                         return (0, r.jsx)(

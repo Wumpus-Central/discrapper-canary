@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(348238),
     x = n(38267),
     v = n(884902),
-    y = n(670188),
-    O = n(695346),
+    O = n(670188),
+    y = n(695346),
     j = n(271383),
     I = n(594174),
     S = n(768581),
@@ -84,7 +84,7 @@ function U(e) {
         z = (0, A.J)(F, B),
         { setPopout: W } = (0, x.Z)(B.id, Z.d$),
         K = (0, C.qo)(B, G, W, !0),
-        Y = O.QK.useSetting(),
+        Y = y.QK.useSetting(),
         X = (0, N.n)(),
         [q, Q] = i.useState(!1),
         [J, $] = i.useState((null == z ? void 0 : z.coverImage) == null),
@@ -206,7 +206,7 @@ function U(e) {
                         children: [
                             null != z.authorId &&
                                 null != eg &&
-                                (0, r.jsx)(y.Z, {
+                                (0, r.jsx)(O.Z, {
                                     targetElementRef: V,
                                     userId: z.authorId,
                                     guildId: z.guildId,
@@ -271,7 +271,7 @@ function U(e) {
                                                               className: L.authorName
                                                           })
                                                         : (0, r.jsx)(
-                                                              y.Z,
+                                                              O.Z,
                                                               {
                                                                   targetElementRef: H,
                                                                   userId: z.authorId,

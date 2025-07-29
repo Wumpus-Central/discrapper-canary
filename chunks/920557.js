@@ -48,13 +48,13 @@ function v(e) {
         { channelId: c, messageId: u } = (0, b.pE)(),
         [_, h] = i.useState(''),
         [E, v] = i.useState(!1),
-        y = '' !== _ && E,
-        O = i.useCallback(() => {
+        O = '' !== _ && E,
+        y = i.useCallback(() => {
             h((0, g.e1)(u, c, a));
         }, [u, c, a]),
         j = i.useCallback(() => {
-            (O(), v(!0));
-        }, [O]),
+            (y(), v(!0));
+        }, [y]),
         I = i.useCallback(() => {
             v(!1);
         }, []),
@@ -69,12 +69,12 @@ function v(e) {
         i.useEffect(() => {
             if (E)
                 return (
-                    m.Z.addReactChangeListener(O),
+                    m.Z.addReactChangeListener(y),
                     () => {
-                        m.Z.removeReactChangeListener(O);
+                        m.Z.removeReactChangeListener(y);
                     }
                 );
-        }, [E, O]),
+        }, [E, y]),
         (0, r.jsxs)('div', {
             className: C.votesData,
             children: [
@@ -88,7 +88,7 @@ function v(e) {
                                       scaleFontToUserSetting: !0,
                                       children: _
                                   }),
-                                  forceOpen: y,
+                                  forceOpen: O,
                                   'aria-label': !1,
                                   children: (e) => {
                                       var t, i;
@@ -102,7 +102,7 @@ function v(e) {
                                                   onFocus: j,
                                                   onBlur: I,
                                                   onClick: S,
-                                                  'aria-describedby': y ? s : void 0,
+                                                  'aria-describedby': O ? s : void 0,
                                                   text: n,
                                                   variant: 'secondary',
                                                   textVariant: 'text-xs/semibold'
@@ -123,7 +123,7 @@ function v(e) {
                                       );
                                   }
                               }),
-                              y &&
+                              O &&
                                   (0, r.jsx)(o.T, {
                                       id: s,
                                       children: _
@@ -146,7 +146,7 @@ function v(e) {
         })
     );
 }
-function y(e) {
+function O(e) {
     let { percentage: t, shouldAnimate: n } = e,
         i = (0, d.q_F)(
             {
@@ -165,7 +165,7 @@ function y(e) {
         'aria-hidden': !0
     });
 }
-function O(e) {
+function y(e) {
     let { answersInteraction: t, isSelected: n, didSelfVote: i, isVictor: l, isExpired: a, className: o } = e;
     return (0, c.EQ)({
         answersInteraction: t,
@@ -213,7 +213,7 @@ function j(e) {
         }),
         children: [
             l
-                ? (0, r.jsx)(y, {
+                ? (0, r.jsx)(O, {
                       percentage: t.votesPercentage,
                       shouldAnimate: m
                   })
@@ -238,7 +238,7 @@ function j(e) {
                     canShowVoterDetails: s,
                     answerId: t.answerId
                 }),
-            (0, r.jsx)(O, {
+            (0, r.jsx)(y, {
                 answersInteraction: i,
                 isSelected: c,
                 didSelfVote: u,

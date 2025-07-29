@@ -104,10 +104,10 @@ let g = (e) => {
         if (null == n || null == b) return null;
         let { topic: E, speaker_count: C, participant_count: x } = n,
             v = null != (t = n.members) ? t : [],
-            y = _ ? v.slice(0, 3) : v,
-            O = C - y.length;
+            O = _ ? v.slice(0, 3) : v,
+            y = C - O.length;
         return (
-            _ && (O += v.length - y.length),
+            _ && (y += v.length - O.length),
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsxs)('div', {
@@ -179,11 +179,11 @@ let g = (e) => {
                     (0, r.jsxs)('div', {
                         className: a()(f.members, { [f.embed]: _ }),
                         children: [
-                            y.length > 0 &&
+                            O.length > 0 &&
                                 (0, r.jsxs)('div', {
                                     className: f.speakers,
                                     children: [
-                                        y.map((e) =>
+                                        O.map((e) =>
                                             (0, r.jsx)(
                                                 g,
                                                 {
@@ -194,7 +194,7 @@ let g = (e) => {
                                                 e.user.id
                                             )
                                         ),
-                                        O > 0
+                                        y > 0
                                             ? (0, r.jsxs)('div', {
                                                   className: f.speaker,
                                                   children: [
@@ -210,7 +210,7 @@ let g = (e) => {
                                                       (0, r.jsxs)(s.Text, {
                                                           variant: _ ? 'text-xs/normal' : 'text-sm/normal',
                                                           color: 'text-secondary',
-                                                          children: ['+', m.intl.format(m.t.L1pCBQ, { count: O })]
+                                                          children: ['+', m.intl.format(m.t.L1pCBQ, { count: y })]
                                                       })
                                                   ]
                                               })

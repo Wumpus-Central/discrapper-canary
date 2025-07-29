@@ -145,8 +145,11 @@ function Y(e) {
     return t.some((e) => null != e.thread);
 }
 function W(e) {
-    let { messages: t, threads: n } = e;
-    return n.length > 0 || t.some((e) => e.some((e) => null != e.thread));
+    let { data: t } = e;
+    return t.some((e) => {
+        let { messages: t, threads: n } = e;
+        return n.length > 0 || t.some((e) => e.some((e) => null != e.thread));
+    });
 }
 function K(e) {
     let { channel: t } = e;
@@ -313,8 +316,8 @@ let ee = new J(l.Z, {
     LOAD_ARCHIVED_THREADS_SUCCESS: F,
     CHANNEL_UPDATES: V,
     LOAD_MESSAGES_SUCCESS: Y,
-    SEARCH_FINISH: W,
-    MOD_VIEW_SEARCH_FINISH: W,
+    SEARCH_MESSAGES_SUCCESS: W,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: W,
     THREAD_MEMBER_UPDATE: Z,
     THREAD_MEMBERS_UPDATE: H,
     CHANNEL_DELETE: K,

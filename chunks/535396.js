@@ -119,6 +119,14 @@ let u = '1340102344645283891',
         [s.oNc.ENHANCED_ROLE_COLORS]: {
             boostPrice: 3,
             includedInLevel: void 0
+        },
+        [s.oNc.GUILD_TAGS_BADGE_PACK_PETS]: {
+            boostPrice: 3,
+            includedInLevel: void 0
+        },
+        [s.oNc.GUILD_TAGS_BADGE_PACK_FLEX]: {
+            boostPrice: 6,
+            includedInLevel: void 0
         }
     },
     A = { [r.A$]: s.Eu4.TIER_3 };

@@ -22,19 +22,16 @@ function u(e) {
     return ''.concat(e.channel_id, ':').concat(e.id);
 }
 function d(e) {
-    return (
-        null != e.messages &&
-        ((c = e.messages.reduce(
-            (e, t) => (
-                t.forEach((t) => {
-                    e[u(t)] = (0, o.e5)(t);
-                }),
-                e
-            ),
-            {}
-        )),
-        !0)
-    );
+    let { data: t } = e;
+    ((c = {}),
+        t.forEach((e) => {
+            let { messages: t } = e;
+            t.forEach((e) => {
+                e.forEach((e) => {
+                    c[u(e)] = (0, o.e5)(e);
+                });
+            });
+        }));
 }
 function f(e) {
     let { message: t } = e;
@@ -80,8 +77,8 @@ class g extends (r = i.ZP.Store) {
 }
 l(g, 'displayName', 'SearchMessageStore');
 let E = new g(a.Z, {
-    SEARCH_FINISH: d,
-    MOD_VIEW_SEARCH_FINISH: d,
+    SEARCH_MESSAGES_SUCCESS: d,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: d,
     MESSAGE_UPDATE: f,
     LOGOUT: p,
     CONNECTION_OPEN: h,

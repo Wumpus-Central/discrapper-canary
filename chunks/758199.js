@@ -1,6 +1,6 @@
 (n.d(t, {
     W: () => j,
-    u: () => y
+    u: () => O
 }),
     n(190126),
     n(368063),
@@ -63,8 +63,8 @@ function v(e) {
     }
     return e;
 }
-var y = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
-function O(e) {
+var O = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
+function y(e) {
     let { onClick: t, children: n, className: r } = e;
     return null != t
         ? (0, i.jsx)(u.P3F, {
@@ -79,7 +79,7 @@ function O(e) {
 }
 function j(e) {
     var t, n, r, a;
-    let { title: y, header: j, footer: I, info: S, staticBannerSrc: T, videoBannerSrc: N, bannerAspectRatio: P = 0, iconSrc: A, embedUrl: w, infoUrl: Z, actions: R = [], trackingConfig: L, onClickContent: D, onClickBanner: k } = e;
+    let { title: O, header: j, footer: I, info: S, staticBannerSrc: T, videoBannerSrc: N, bannerAspectRatio: P = 0, iconSrc: A, embedUrl: w, infoUrl: Z, actions: R = [], trackingConfig: L, onClickContent: D, onClickBanner: k } = e;
     L = {
         id: null != (n = null == (t = L) ? void 0 : t.id) ? n : '0',
         linkType: null != (r = null == t ? void 0 : t.linkType) ? r : h.Un.UNKNOWN,
@@ -156,7 +156,7 @@ function j(e) {
         className: C.embed,
         children: [
             Y &&
-                (0, i.jsxs)(O, {
+                (0, i.jsxs)(y, {
                     onClick: ee,
                     className: o()(C.bannerWrapper, X, { [C.showVideoOnFocus]: K }),
                     children: [
@@ -203,7 +203,7 @@ function j(e) {
                             (0, i.jsxs)('div', {
                                 className: C.contentAndCopyButtonWrapper,
                                 children: [
-                                    (0, i.jsxs)(O, {
+                                    (0, i.jsxs)(y, {
                                         onClick: $,
                                         className: o()(C.contentWrapper, { [C.contentWrapperClickable]: null != $ }),
                                         children: [
@@ -220,7 +220,7 @@ function j(e) {
                                                         color: 'none',
                                                         lineClamp: 1,
                                                         className: C.contentTitle,
-                                                        children: y
+                                                        children: O
                                                     }),
                                                     (0, i.jsx)('div', {
                                                         className: C.contentInfoWrapper,

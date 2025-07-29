@@ -38,8 +38,8 @@ var r = n(255367),
     C = n(630388),
     x = n(358085),
     v = n(51144),
-    y = n(91047),
-    O = n(50284),
+    O = n(91047),
+    y = n(50284),
     j = n(804063),
     I = n(981631);
 function S(e, t, n) {
@@ -188,7 +188,7 @@ function M(e, t) {
         (n) => {
             let r = h.default.getUser(e),
                 i = f.Z.getChannel(t);
-            null != r && null != i && (n.stopPropagation(), (0, y.Pv)(n, r, i));
+            null != r && null != i && (n.stopPropagation(), (0, O.Pv)(n, r, i));
         },
         [e, t]
     );
@@ -201,7 +201,7 @@ function U(e, t, n) {
             null != i &&
                 null != l &&
                 (r.stopPropagation(),
-                (0, y._j)(r, {
+                (0, O._j)(r, {
                     user: i,
                     channel: l,
                     moderationAlertId: n
@@ -215,7 +215,7 @@ function F(e, t) {
         (n) => {
             let r = h.default.getUser(e),
                 i = f.Z.getChannel(t);
-            null != r && null != i && (n.stopPropagation(), (0, y.xS)(n, r, i.guild_id));
+            null != r && null != i && (n.stopPropagation(), (0, O.xS)(n, r, i.guild_id));
         },
         [e, t]
     );
@@ -225,7 +225,7 @@ function B(e, t) {
         { id: r } = t;
     return i.useCallback(
         (e) => {
-            e.altKey && (e.preventDefault(), (0, O.Z)(r, n));
+            e.altKey && (e.preventDefault(), (0, y.Z)(r, n));
         },
         [r, n]
     );

@@ -381,10 +381,16 @@ function X(e) {
     return (t === r || t === i) && W(n);
 }
 function Q(e) {
-    let { messages: t } = e;
-    if (null == t) return !1;
-    let n = i()(t);
-    return W(o()(n, (e, t) => e.id === t.id && e.channel_id === t.channel_id));
+    let { data: t } = e,
+        n = !1;
+    return (
+        t.forEach((e) => {
+            let { messages: t } = e,
+                r = i()(t);
+            n = W(o()(r, (e, t) => e.id === t.id && e.channel_id === t.channel_id)) || n;
+        }),
+        n
+    );
 }
 function J(e) {
     let { pins: t } = e;
@@ -437,8 +443,8 @@ class eo extends c.Z {
                 MESSAGE_CREATE: q,
                 MESSAGE_UPDATE: z,
                 LOGOUT: M,
-                SEARCH_FINISH: Q,
-                MOD_VIEW_SEARCH_FINISH: Q,
+                SEARCH_MESSAGES_SUCCESS: Q,
+                MOD_VIEW_SEARCH_MESSAGES_SUCCESS: Q,
                 CHANNEL_SELECT: en,
                 LOAD_PINNED_MESSAGES_SUCCESS: J,
                 USER_SETTINGS_PROTO_UPDATE: er,

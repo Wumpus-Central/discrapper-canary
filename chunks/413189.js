@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => y });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -19,9 +19,9 @@ var r = n(255367),
     C = n(981631),
     x = n(474936),
     v = n(388032),
-    y = n(510064);
-function O(e) {
-    var t, n, O, j;
+    O = n(510064);
+function y(e) {
+    var t, n, y, j;
     let I,
         S,
         T,
@@ -55,7 +55,7 @@ function O(e) {
               ? v.intl.format(v.t.z847Tk, { wallpaper_name: null != (n = null == k ? void 0 : k.label) ? n : v.intl.string(v.t['UQMV/P']) })
               : v.intl.format(v.t['+lKndX'], {
                     username: null == L ? void 0 : L.nick,
-                    wallpaper_name: null != (O = null == k ? void 0 : k.label) ? O : v.intl.string(v.t['UQMV/P'])
+                    wallpaper_name: null != (y = null == k ? void 0 : k.label) ? y : v.intl.string(v.t['UQMV/P'])
                 })),
           Z
               ? D || R
@@ -75,7 +75,7 @@ function O(e) {
               B &&
               !H &&
               (T = (0, r.jsx)('div', {
-                  className: y.action,
+                  className: O.action,
                   children: (0, r.jsx)(a.z, {
                       variant: 'primary',
                       text: v.intl.string(z ? v.t.o6850d : v.t['/ubFp6']),

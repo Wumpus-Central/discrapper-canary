@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(699516),
     x = n(594174),
     v = n(100604),
-    y = n(694784),
-    O = n(39154),
+    O = n(694784),
+    y = n(39154),
     j = n(245216),
     I = n(388032),
     S = n(752386);
@@ -47,7 +47,7 @@ function N(e) {
         p = i.useMemo(() => new v.r(t, n, d), [t, n, d]),
         m = (0, a.e7)([_.Z, x.default, C.Z, E.Z, b.Z, u.Z], () => p.getForwardInfo(_.Z, x.default, C.Z, E.Z, b.Z, u.Z).footerInfo, [p], o.Z),
         f = i.useCallback(() => {
-            (0, y.Z)(t);
+            (0, O.Z)(t);
         }, [t]);
     return null == m
         ? null
@@ -78,7 +78,7 @@ function N(e) {
 function P(e) {
     var t;
     let { message: n, snapshot: l, index: o } = e,
-        s = i.useMemo(() => (0, O.Z)(n, l), [n, l]),
+        s = i.useMemo(() => (0, y.Z)(n, l), [n, l]),
         c = g.RS.useSetting(),
         u = g.NA.useSetting(),
         b = (0, a.e7)([h.Z], () => h.Z.isDeveloper),
@@ -94,7 +94,7 @@ function P(e) {
             previewLinkTarget: !0
         }),
         v = (0, a.e7)([_.Z], () => _.Z.getChannel(n.channel_id)),
-        y = g.jU.useSetting();
+        O = g.jU.useSetting();
     return null == v
         ? null
         : (0, r.jsxs)(
@@ -110,13 +110,13 @@ function P(e) {
                               (0, r.jsx)(p.ZP, {
                                   message: s,
                                   content: C,
-                                  compact: y
+                                  compact: O
                               }),
                               (0, f.Z)({
                                   channelMessageProps: {
                                       message: s,
                                       channel: v,
-                                      compact: y
+                                      compact: O
                                   },
                                   hasSpoilerEmbeds: x,
                                   isInteracting: !1,

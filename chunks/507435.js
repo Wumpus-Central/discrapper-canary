@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(953529));
+(n.d(t, { Z: () => y }), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -137,7 +137,7 @@ function v(e) {
         children: t
     });
 }
-function y(e) {
+function O(e) {
     let { className: t, data: n, onClickPollLink: l } = e,
         o = i.useMemo(
             () =>
@@ -204,7 +204,7 @@ function y(e) {
         ]
     });
 }
-function O(e) {
+function y(e) {
     var t;
     let { message: n, channel: l, compact: a, disableInteraction: u = !1 } = e,
         d = n.embeds[0],
@@ -217,16 +217,16 @@ function O(e) {
             guildId: l.guild_id,
             messageId: n.id
         }),
-        O = n.messageReference,
+        y = n.messageReference,
         j = i.useCallback(() => {
-            null != O &&
+            null != y &&
                 c.Z.jumpToMessage({
-                    channelId: O.channel_id,
-                    messageId: O.message_id,
+                    channelId: y.channel_id,
+                    messageId: y.message_id,
                     flash: !0,
                     returnMessageId: n.id
                 });
-        }, [n.id, O]);
+        }, [n.id, y]);
     return null == _
         ? null
         : (0, r.jsxs)(r.Fragment, {
@@ -242,7 +242,7 @@ function O(e) {
                           titleOnClick: j
                       })
                   }),
-                  (0, r.jsx)(y, {
+                  (0, r.jsx)(O, {
                       className: E.embed,
                       data: _,
                       onClickPollLink: u ? void 0 : j

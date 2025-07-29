@@ -131,20 +131,24 @@ function M(A, e, t) {
                                         M({}),
                                         i)
                                     ) {
-                                        var l, o;
+                                        var l, o, g;
                                         a.Z.dispatch({
-                                            type: 'MOD_VIEW_SEARCH_FINISH',
-                                            searchId: e,
+                                            type: 'MOD_VIEW_SEARCH_MESSAGES_SUCCESS',
                                             guildId: e,
-                                            analyticsId: t.analytics_id,
-                                            totalResults: t.total_results,
-                                            channels: t.channels,
-                                            messages: t.messages,
-                                            threads: null != (l = t.threads) ? l : [],
-                                            members: (null != (o = t.members) ? o : []).map((A) => (0, f.Z)(A)),
-                                            hasError: !1,
-                                            doingHistoricalIndex: t.doing_deep_historical_index,
-                                            documentsIndexed: t.documents_indexed
+                                            data: [
+                                                {
+                                                    id: e,
+                                                    analyticsId: t.analytics_id,
+                                                    totalResults: t.total_results,
+                                                    channels: null != (l = t.channels) ? l : [],
+                                                    messages: t.messages,
+                                                    threads: null != (o = t.threads) ? o : [],
+                                                    members: (null != (g = t.members) ? g : []).map((A) => (0, f.Z)(A)),
+                                                    doingHistoricalIndex: t.doing_deep_historical_index,
+                                                    documentsIndexed: t.documents_indexed,
+                                                    cursor: null
+                                                }
+                                            ]
                                         });
                                     }
                                 },

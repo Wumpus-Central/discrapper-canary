@@ -366,16 +366,22 @@ function eC(e) {
     for (let e of t) null != e.thread && !(e.thread.id in x) && g.AW.has(e.thread.type) && et((0, g.q_)(e.thread));
 }
 function eR(e) {
-    let { messages: t, threads: n, channels: r } = e;
-    for (let e of t) for (let t of e) eP(t.thread);
-    (n.forEach(eP),
-        null == r ||
+    let { data: t } = e;
+    t.forEach((e) => {
+        let { messages: t, threads: n, channels: r } = e;
+        (t.forEach((e) => {
+            e.forEach((e) => {
+                eP(e.thread);
+            });
+        }),
+            n.forEach(eP),
             r.forEach((e) => {
                 let t = (0, g.q_)(e),
                     n = null != J(e.id),
                     r = null != Z[e.id];
                 t.isPrivate() && (!n || r) ? (Z[t.id] = t) : n || $(t);
             }));
+    });
 }
 function eP(e) {
     null != e && !(e.id in x) && g.AW.has(e.type) && et((0, g.q_)(e));
@@ -502,8 +508,8 @@ let ek = new eL(l.Z, {
     LOAD_THREADS_SUCCESS: ey,
     LOGOUT: eD,
     OVERLAY_INITIALIZE: ef,
-    SEARCH_FINISH: eR,
-    MOD_VIEW_SEARCH_FINISH: eR,
+    SEARCH_MESSAGES_SUCCESS: eR,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: eR,
     THREAD_CREATE: eh,
     THREAD_DELETE: eI,
     THREAD_LIST_SYNC: eb,

@@ -1090,17 +1090,21 @@ function tu(e) {
     );
 }
 function td(e) {
-    let { messages: t, threads: n } = e;
-    for (let e of t)
-        eU(
-            e
-                .map((e) => {
-                    let { thread: t } = e;
-                    return t;
-                })
-                .filter(j.lm)
-        );
-    eU(n);
+    let { data: t } = e;
+    t.forEach((e) => {
+        let { messages: t, threads: n } = e;
+        (t.forEach((e) => {
+            eU(
+                e
+                    .map((e) => {
+                        let { thread: t } = e;
+                        return t;
+                    })
+                    .filter(j.lm)
+            );
+        }),
+            eU(n));
+    });
 }
 function tf(e) {
     let t = J.default.getCurrentUser();
@@ -1654,8 +1658,8 @@ let t$ = new tJ(f.Z, {
         THREAD_LIST_SYNC: tl,
         LOAD_THREADS_SUCCESS: tc,
         LOAD_ARCHIVED_THREADS_SUCCESS: tc,
-        SEARCH_FINISH: td,
-        MOD_VIEW_SEARCH_FINISH: td,
+        SEARCH_MESSAGES_SUCCESS: td,
+        MOD_VIEW_SEARCH_MESSAGES_SUCCESS: td,
         THREAD_MEMBER_UPDATE: to,
         THREAD_MEMBERS_UPDATE: ts,
         CHANNEL_DELETE: tv,

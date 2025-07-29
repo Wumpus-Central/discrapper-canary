@@ -96,24 +96,6 @@ let f = {
                             };
                         })
                     }),
-                        r.forEach((e) => {
-                            var r, i;
-                            let [o, c] = e;
-                            l.Z.dispatch({
-                                type: 'SEARCH_FINISH',
-                                searchId: (0, s.WJ)(t),
-                                guildId: (0, s.s5)(t),
-                                analyticsId: n.analytics_id,
-                                totalResults: c.total_results,
-                                channels: c.channels,
-                                messages: c.messages,
-                                threads: null != (r = c.threads) ? r : [],
-                                members: (null != (i = c.members) ? i : []).map((e) => (0, a.Z)(e)),
-                                hasError: !1,
-                                doingHistoricalIndex: n.doing_deep_historical_index,
-                                documentsIndexed: n.documents_indexed
-                            });
-                        }),
                         null == g ||
                             g({
                                 searchContext: t,
@@ -154,8 +136,8 @@ let f = {
         }),
             m.fetch(
                 (e) => {
-                    var t, r, i, o, s, c;
-                    (l.Z.dispatch({
+                    var t, r, i;
+                    l.Z.dispatch({
                         type: 'SEARCH_MESSAGES_SUCCESS',
                         guildId: f,
                         data: [
@@ -172,21 +154,7 @@ let f = {
                                 cursor: null
                             }
                         ]
-                    }),
-                        l.Z.dispatch({
-                            type: 'SEARCH_FINISH',
-                            searchId: n,
-                            guildId: f,
-                            analyticsId: e.body.analytics_id,
-                            totalResults: e.body.total_results,
-                            messages: e.body.messages,
-                            threads: null != (o = e.body.threads) ? o : [],
-                            members: (null != (s = e.body.members) ? s : []).map((e) => (0, a.Z)(e)),
-                            doingHistoricalIndex: e.body.doing_deep_historical_index,
-                            documentsIndexed: e.body.documents_indexed,
-                            channels: null != (c = e.body.channels) ? c : [],
-                            hasError: !1
-                        }));
+                    });
                 },
                 () => {
                     l.Z.dispatch({

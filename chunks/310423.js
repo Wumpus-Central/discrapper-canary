@@ -19,7 +19,7 @@ var r = n(255367),
     C = n(761652),
     x = n(388032),
     v = n(912861);
-function y(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -44,7 +44,7 @@ function y(e) {
     }
     return e;
 }
-function O(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ let j = {
 function S(e) {
     return (0, r.jsx)(
         s.Text,
-        O(y({}, j), {
+        y(O({}, j), {
             color: 'header-primary',
             children: e
         })
@@ -109,7 +109,7 @@ let T = i.memo(function (e) {
                                 (0, r.jsxs)(
                                     i.Fragment,
                                     {
-                                        children: [' ', (0, r.jsx)(s.Text, O(y({}, j), { children: null != (l = null == w ? void 0 : w.name_localized) ? l : v.name }))]
+                                        children: [' ', (0, r.jsx)(s.Text, y(O({}, j), { children: null != (l = null == w ? void 0 : w.name_localized) ? l : v.name }))]
                                     },
                                     R
                                 )
@@ -139,7 +139,7 @@ let T = i.memo(function (e) {
                                     let e = (0, E.ij)(t, T);
                                     h = (0, r.jsxs)(
                                         m.Z,
-                                        O(y({}, I), {
+                                        y(O({}, I), {
                                             onClick: () =>
                                                 (0, f.openUserProfileModal)({
                                                     userId: t.id,
@@ -160,7 +160,7 @@ let T = i.memo(function (e) {
                                 null != t &&
                                     (h = (0, r.jsxs)(
                                         m.Z,
-                                        O(y({}, I), {
+                                        y(O({}, I), {
                                             children: [C.zy, t.name]
                                         })
                                     ));
@@ -172,7 +172,7 @@ let T = i.memo(function (e) {
                                 null != t &&
                                     (h = (0, r.jsxs)(
                                         m.Z,
-                                        O(y({}, I), {
+                                        y(O({}, I), {
                                             children: [C.ME, t.name]
                                         })
                                     ));
@@ -191,7 +191,7 @@ let T = i.memo(function (e) {
                                         let e = (0, E.ij)(t, T);
                                         h = (0, r.jsxs)(
                                             m.Z,
-                                            O(y({}, I), {
+                                            y(O({}, I), {
                                                 onClick: () =>
                                                     (0, f.openUserProfileModal)({
                                                         userId: t.id,
@@ -222,7 +222,7 @@ let T = i.memo(function (e) {
                                     children: [
                                         (0, r.jsxs)(
                                             s.Text,
-                                            O(y({}, j), {
+                                            y(O({}, j), {
                                                 children: [' ', null != (p = null == w ? void 0 : w.name_localized) ? p : v.name, ': ']
                                             })
                                         ),
@@ -247,7 +247,7 @@ let T = i.memo(function (e) {
             children: [
                 (0, r.jsxs)(
                     s.Text,
-                    O(y({}, j), {
+                    y(O({}, j), {
                         children: ['/', null != (N = null == (l = Z.application_command) ? void 0 : l.name_localized) ? N : Z.name]
                     })
                 ),

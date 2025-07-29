@@ -28,12 +28,12 @@ var n = r(255367),
     v = r(759209),
     O = r(970850),
     R = r(861262),
-    I = r(251285),
-    j = r(406326),
-    T = r(994463),
-    P = r(611004),
-    N = r(619753),
-    A = r(902733),
+    I = r(406326),
+    j = r(994463),
+    T = r(611004),
+    P = r(619753),
+    N = r(902733),
+    A = r(737),
     Z = r(315322),
     M = r(981631),
     k = r(531578),
@@ -172,7 +172,7 @@ class U extends s.PureComponent {
             }),
             F(this, 'handleSearchResultsClose', () => {
                 let { searchId: e } = this.props;
-                P.Z.cleanUpSearchState(e);
+                T.Z.cleanUpSearchState(e);
             }),
             F(this, 'handleSearchModeChange', (e) => {
                 let {
@@ -202,7 +202,7 @@ class U extends s.PureComponent {
             }),
             F(this, 'renderFooter', () =>
                 this.props.isFeedbackVisible
-                    ? (0, n.jsx)(A.Z, {
+                    ? (0, n.jsx)(N.Z, {
                           searchId: this.props.searchId,
                           searchType: this.props.searchType,
                           dismissFeedbackEntrypoint: this.props.dismissFeedbackEntrypoint
@@ -215,7 +215,7 @@ class U extends s.PureComponent {
                     searchMode: t,
                     search: { totalResults: r, isSearching: s, isHistoricalIndexing: l, documentsIndexed: a }
                 } = this.props;
-                return (0, n.jsx)(j.Z, {
+                return (0, n.jsx)(I.Z, {
                     searchId: e,
                     searchMode: t,
                     onSearchModeChange: this.handleSearchModeChange,
@@ -229,7 +229,7 @@ class U extends s.PureComponent {
                 let e = this.props.searchType === M.aib.GUILD ? w.intl.string(w.t.AXPbZm) : w.intl.string(w.t.Q0JJjo);
                 return (0, n.jsxs)(W, {
                     children: [
-                        (0, n.jsx)(T.Z, {}),
+                        (0, n.jsx)(j.Z, {}),
                         (0, n.jsx)('div', {
                             className: (L.emptyResultsText, L.stillIndexing),
                             children: e
@@ -303,7 +303,7 @@ class U extends s.PureComponent {
                       : o
                         ? null
                         : i > 0
-                          ? (0, n.jsx)(N.Z, {
+                          ? (0, n.jsx)(P.Z, {
                                 search: s,
                                 searchResults: e,
                                 onClick: this.handleSearchResultClick,
@@ -336,7 +336,7 @@ function B(e) {
         }),
         o = (0, R.k)(t),
         u = (0, c.e7)([x.Z], () => x.Z.getAnalyticsId(t)),
-        { searchResults: h, ignoreCount: d, blockCount: p } = (0, I.Z)(t),
+        { searchResults: h, ignoreCount: d, blockCount: p } = (0, A.Z)(t),
         { searchMode: g, setSearchMode: m } = (0, O.Z)({ searchId: t }),
         S = s.useCallback(
             (e) => {
@@ -345,7 +345,7 @@ function B(e) {
                     n = b.Z.getSearchResultsQuery(t);
                 null != r &&
                     null != n &&
-                    P.Z.fetchMessages({
+                    T.Z.fetchMessages({
                         searchId: t,
                         queryString: r,
                         searchQuery: n,
@@ -362,7 +362,7 @@ function B(e) {
                     n = b.Z.getSearchResultsQuery(t);
                 null != r &&
                     null != n &&
-                    P.Z.fetchMessages({
+                    T.Z.fetchMessages({
                         searchId: t,
                         queryString: r,
                         searchQuery: n,
@@ -426,13 +426,13 @@ function Q(e) {
             };
         }),
         u = (0, c.e7)([x.Z], () => x.Z.getAnalyticsId(i)),
-        { searchResults: h, ignoreCount: d, blockCount: p } = (0, I.G)(a),
+        { searchResults: h, ignoreCount: d, blockCount: p } = (0, A.Z)(i),
         { searchMode: g, setSearchMode: m } = (0, O.Z)({ searchId: i }),
         S = s.useCallback(
             (e) => {
                 m(e);
                 let t = D(i);
-                P.Z.fetchCrossDMMessages({
+                T.Z.fetchCrossDMMessages({
                     searchContext: a,
                     selectedPageIndex: 0,
                     queryString: null != t ? t : '',
@@ -444,7 +444,7 @@ function Q(e) {
         _ = s.useCallback(
             (e) => {
                 var t;
-                P.Z.fetchCrossDMMessages({
+                T.Z.fetchCrossDMMessages({
                     searchContext: a,
                     queryString: null != (t = D(i)) ? t : '',
                     selectedPageIndex: e,

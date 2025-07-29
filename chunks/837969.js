@@ -27,7 +27,7 @@ function d(e) {
             focusedIndex: d,
             itemCount: n
         }),
-        { itemCount: y, focusedIndex: O } = x,
+        { itemCount: O, focusedIndex: y } = x,
         [j] = r.useState(() => (0, a.P2)(v, 16));
     return (
         r.useEffect(() => {
@@ -39,17 +39,17 @@ function d(e) {
         (function (e) {
             let { navId: t, itemCount: n, focusedIndex: d, onSelect: p, setFocus: m = u, getNewFocusIndex: f, dispatch: g, maintainFocusPosition: _, includeSetSizes: h, focusOnMount: b, enabled: E, makeId: C = a.qR, getIndexFromId: x } = e,
                 v = r.useRef(n),
-                y = r.useRef(x);
-            ((y.current = x), (v.current = n));
-            let O = r.useRef(E);
+                O = r.useRef(x);
+            ((O.current = x), (v.current = n));
+            let y = r.useRef(E);
             r.useEffect(() => {
-                O.current = E;
+                y.current = E;
             }, [E]);
             let [j, I] = r.useState(!1),
                 [S] = r.useState(
                     () =>
                         new a.$o((e) => () => {
-                            let t = null != y.current && 'string' == typeof e ? y.current(e) : e;
+                            let t = null != O.current && 'string' == typeof e ? O.current(e) : e;
                             'number' != typeof t ||
                                 t < 0 ||
                                 g({
@@ -61,7 +61,7 @@ function d(e) {
             r.useEffect(() => () => S.clean(), [S]);
             let T = r.useCallback(
                     (e, t) => {
-                        O.current && m(e, t);
+                        y.current && m(e, t);
                     },
                     [m]
                 ),
@@ -85,7 +85,7 @@ function d(e) {
                 ),
                 w = r.useCallback(
                     (e) => {
-                        if (!O.current) return;
+                        if (!y.current) return;
                         if (o.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
                             (e.preventDefault(), e.stopPropagation(), A());
                             return;
@@ -169,7 +169,7 @@ function d(e) {
                             'aria-posinset': h ? n + 1 : void 0,
                             id: C(t, n),
                             tabIndex: _ && n === d ? 0 : -1,
-                            onFocus: S.get(null != y.current ? C(t, n) : n)
+                            onFocus: S.get(null != O.current ? C(t, n) : n)
                         };
                     },
                     [C, t, d, _, S, h]
@@ -184,8 +184,8 @@ function d(e) {
             );
         })({
             navId: t,
-            itemCount: y,
-            focusedIndex: O,
+            itemCount: O,
+            focusedIndex: y,
             dispatch: j,
             onSelect: p,
             setFocus: m,

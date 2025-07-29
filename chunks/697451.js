@@ -19,8 +19,8 @@ var r = n(255367),
     C = n(783097),
     x = n(581364),
     v = n(592180),
-    y = n(726033),
-    O = n(598077),
+    O = n(726033),
+    y = n(598077),
     j = n(594174),
     I = n(768581),
     S = n(585483),
@@ -93,14 +93,14 @@ function M(e) {
 }
 function U(e, t, n, i, l, o) {
     var s, c, u;
-    let { message: d, compact: m, channel: f, isInteractionUserBlocked: g, isInteractionUserIgnored: _, showAvatarPopout: h, showTargetAvatarPopout: b, onClickAvatar: E, onUserContextMenu: C, onClickTargetAvatar: x, onTargetUserContextMenu: v, onPopoutRequestClose: y } = e;
+    let { message: d, compact: m, channel: f, isInteractionUserBlocked: g, isInteractionUserIgnored: _, showAvatarPopout: h, showTargetAvatarPopout: b, onClickAvatar: E, onUserContextMenu: C, onClickTargetAvatar: x, onTargetUserContextMenu: v, onPopoutRequestClose: O } = e;
     if (m && 1 === n) return null;
     if ((m && null == d.activityInstance) || g || _)
         return (0, r.jsx)('div', {
             className: L.replyBadge,
             children: (0, r.jsx)(M, { className: L.commandIcon })
         });
-    let O =
+    let y =
             null !=
             (u = I.ZP.getGuildMemberAvatarURL({
                 avatar: null != (s = i.guildMemberAvatar) ? s : void 0,
@@ -127,7 +127,7 @@ function U(e, t, n, i, l, o) {
             })({
                 user: t,
                 guildId: f.guild_id,
-                guildAvatar: O,
+                guildAvatar: y,
                 onClick: 1 === n ? x : E,
                 onContextMenu: 1 === n ? v : C,
                 ref: o
@@ -139,7 +139,7 @@ function U(e, t, n, i, l, o) {
               renderPopout: l,
               shouldShow: S,
               position: 'right',
-              onRequestClose: y,
+              onRequestClose: O,
               children: j
           })
         : j();
@@ -185,7 +185,7 @@ function H(e) {
                 s()(null != f, 'ExecutedCommand: currentUser cannot be undefined'),
                 s()(null != o, 'ExecutedCommand: channel cannot be undefined'),
                 (0, r.jsx)(
-                    y.Z,
+                    O.Z,
                     k(D({}, e), {
                         user: t,
                         currentUser: f,
@@ -213,7 +213,7 @@ function H(e) {
             [o, l.id, l.interactionData]
         ),
         V = (0, x.t0)(l),
-        z = (null == V ? void 0 : V.type) === m.B8.APPLICATION_COMMAND && null != V.target_user ? new O.Z(V.target_user) : null,
+        z = (null == V ? void 0 : V.type) === m.B8.APPLICATION_COMMAND && null != V.target_user ? new y.Z(V.target_user) : null,
         W = (null == V ? void 0 : V.type) === m.B8.APPLICATION_COMMAND && null != l.messageReference && null != e.renderTargetMessage,
         K = (0, N.Sw)(null == (t = l.interaction) ? void 0 : t.user, o),
         Y = (0, N.Sw)(z, o),

@@ -1,13 +1,11 @@
-(n.d(t, { Z: () => v }), n(388685));
+(n.d(t, { Z: () => y }), n(388685), n(539854));
 var r,
-    i = n(392711),
-    a = n.n(i),
-    o = n(442837),
-    s = n(570140),
-    l = n(537986),
-    c = n(592125),
-    u = n(271383);
-function d(e, t, n) {
+    i = n(442837),
+    a = n(570140),
+    o = n(537986),
+    s = n(592125),
+    l = n(271383);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,52 +18,52 @@ function d(e, t, n) {
         e
     );
 }
-let f = new l.Z(u.ZP.isMember, (e, t) => {
-    s.Z.dispatch({
+let u = new o.Z(l.ZP.isMember, (e, t) => {
+    a.Z.dispatch({
         type: 'GUILD_MEMBERS_REQUEST',
         guildIds: [e],
         userIds: t
     });
 });
-function _() {
-    f.reset();
+function d() {
+    u.reset();
 }
-function p(e) {
+function f(e) {
     let { chunks: t } = e;
     for (let e of t)
         (e.members.forEach((t) => {
-            f.acknowledge(e.guildId, t.user.id);
+            u.acknowledge(e.guildId, t.user.id);
         }),
-            null != e.notFound && e.notFound.forEach((t) => f.acknowledge(e.guildId, t)));
+            null != e.notFound && e.notFound.forEach((t) => u.acknowledge(e.guildId, t)));
     return !1;
 }
-function h() {
-    return (f.requestUnacknowledged(), !1);
+function _() {
+    return (u.requestUnacknowledged(), !1);
 }
-function m(e, t) {
-    return (f.request(e, t), !1);
+function p(e, t) {
+    return (u.request(e, t), !1);
 }
-function g(e, t) {
+function h(e, t) {
     return (
         t.forEach((t) => {
             let { author: n, mentions: r } = t;
-            (null != n && m(e, n.id), null == r || r.forEach((t) => m(e, t.id)));
+            (null != n && p(e, n.id), null == r || r.forEach((t) => p(e, t.id)));
         }),
         !1
     );
 }
-function E(e) {
+function m(e) {
     let { channelId: t, messages: n } = e,
-        r = c.Z.getChannel(t);
-    return null != r && null != r.guild_id && g(r.guild_id, n);
+        r = s.Z.getChannel(t);
+    return null != r && null != r.guild_id && h(r.guild_id, n);
 }
-function b(e) {
+function g(e) {
     let { pins: t, channelId: n } = e,
-        r = c.Z.getChannel(n);
+        r = s.Z.getChannel(n);
     return (
         null != r &&
         null != r.guild_id &&
-        g(
+        h(
             r.guild_id,
             t.map((e) => {
                 let { message: t } = e;
@@ -74,29 +72,41 @@ function b(e) {
         )
     );
 }
-function y(e) {
-    let { guildId: t, messages: n } = e;
-    return null != t && g(t, a().flatten(n));
+function E(e) {
+    let { guildId: t, data: n } = e;
+    if (null == t) return !1;
+    let r = [];
+    return (
+        n.forEach((e) => {
+            let { messages: t } = e;
+            t.forEach((e) => {
+                e.forEach((e) => {
+                    r.push(e);
+                });
+            });
+        }),
+        h(t, r)
+    );
 }
-class O extends (r = o.ZP.Store) {
+class b extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(c.Z, u.ZP);
+        this.waitFor(s.Z, l.ZP);
     }
     requestMember(e, t) {
-        m(e, t);
+        p(e, t);
     }
 }
-d(O, 'displayName', 'GuildMemberRequesterStore');
-let v = new O(s.Z, {
-    CONNECTION_CLOSED: _,
-    CONNECTION_OPEN: _,
-    CONNECTION_RESUMED: h,
-    GUILD_MEMBERS_CHUNK_BATCH: p,
-    SEARCH_FINISH: y,
-    MOD_VIEW_SEARCH_FINISH: y,
-    LOCAL_MESSAGES_LOADED: E,
-    LOAD_MESSAGES_SUCCESS: E,
-    LOAD_MESSAGES_AROUND_SUCCESS: E,
-    LOAD_RECENT_MENTIONS_SUCCESS: E,
-    LOAD_PINNED_MESSAGES_SUCCESS: b
+c(b, 'displayName', 'GuildMemberRequesterStore');
+let y = new b(a.Z, {
+    CONNECTION_CLOSED: d,
+    CONNECTION_OPEN: d,
+    CONNECTION_RESUMED: _,
+    GUILD_MEMBERS_CHUNK_BATCH: f,
+    SEARCH_MESSAGES_SUCCESS: E,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: E,
+    LOCAL_MESSAGES_LOADED: m,
+    LOAD_MESSAGES_SUCCESS: m,
+    LOAD_MESSAGES_AROUND_SUCCESS: m,
+    LOAD_RECENT_MENTIONS_SUCCESS: m,
+    LOAD_PINNED_MESSAGES_SUCCESS: g
 });

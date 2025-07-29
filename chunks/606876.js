@@ -1,14 +1,14 @@
 (n.d(t, { Z: () => u }), n(388685));
 var r = n(255367),
-    l = n(73800),
-    a = n(481060),
-    s = n(927160),
-    o = n(203377),
+    s = n(73800),
+    o = n(481060),
+    l = n(927160),
+    a = n(203377),
     i = n(93841),
     c = n(388032),
     d = n(606055);
 function u() {
-    let [e, t] = l.useState('');
+    let [e, t] = s.useState('');
     return (0, r.jsxs)('div', {
         className: d.container,
         children: [
@@ -20,7 +20,7 @@ function u() {
                         children: [
                             (0, r.jsx)('div', {
                                 className: d.avatar,
-                                children: (0, r.jsx)(a.gw7, {
+                                children: (0, r.jsx)(o.gw7, {
                                     size: 'custom',
                                     width: 24,
                                     height: 24
@@ -36,13 +36,13 @@ function u() {
                                     (0, r.jsxs)('div', {
                                         className: d.previewCardUrl,
                                         children: [
-                                            (0, r.jsx)(a.Text, {
+                                            (0, r.jsx)(o.Text, {
                                                 variant: 'text-sm/medium',
                                                 color: 'text-tertiary',
                                                 className: d.baseUrl,
-                                                children: ''.concat(o.mf, '/')
+                                                children: ''.concat(a.mf, '/')
                                             }),
-                                            (0, r.jsx)(a.Text, {
+                                            (0, r.jsx)(o.Text, {
                                                 variant: 'text-sm/medium',
                                                 color: 'text-link',
                                                 className: d.vanityCode,
@@ -71,7 +71,7 @@ function u() {
                             })
                         ]
                     }),
-                    (0, r.jsx)(s.Z, {
+                    (0, r.jsx)(l.Z, {
                         autoFocus: !0,
                         value: e,
                         onChange: t,
@@ -79,7 +79,7 @@ function u() {
                     })
                 ]
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-tertiary',
                 className: d.disclaimer,

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+(n.d(t, { Z: () => O }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -26,7 +26,7 @@ function v(e) {
     let { currentUser: t, channel: n, message: l, buttonLabels: d, stickers: m, event: f, eventProperties: g } = e,
         h = (0, p.t)(),
         [E, v] = i.useState(!1),
-        y = i.useMemo(
+        O = i.useMemo(
             () =>
                 x({
                     assets: m,
@@ -35,7 +35,7 @@ function v(e) {
                 }),
             [m, t, l]
         ),
-        O = i.useMemo(
+        y = i.useMemo(
             () =>
                 x({
                     assets: d,
@@ -66,7 +66,7 @@ function v(e) {
                 })({
                     channel: n,
                     message: l,
-                    sticker: y
+                    sticker: O
                 }),
                 (function (e) {
                     var t, n;
@@ -115,17 +115,17 @@ function v(e) {
                             t)
                         );
                 })({
-                    sticker: y,
+                    sticker: O,
                     event: f,
                     eventProperties: g
                 }));
-        }, [n, l, y, f, g]);
+        }, [n, l, O, f, g]);
     return h
         ? (0, r.jsx)(a.zx, {
               variant: 'secondary',
               size: 'md',
               onClick: j,
-              text: O
+              text: y
           })
         : (0, r.jsxs)(o.zx, {
               'data-migration-pending': !0,
@@ -139,14 +139,14 @@ function v(e) {
                   (0, r.jsx)(u.Z, {
                       className: C.CTAMessageSticker,
                       isInteracting: E,
-                      sticker: y,
+                      sticker: O,
                       size: 28
                   }),
-                  O
+                  y
               ]
           });
 }
-function y(e) {
+function O(e) {
     let { channel: t, message: n, buttonLabels: i, stickers: a, event: o, eventProperties: s } = e,
         c = g.default.getCurrentUser(),
         u = (function (e) {

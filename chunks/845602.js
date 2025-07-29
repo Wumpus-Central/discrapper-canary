@@ -4,10 +4,10 @@
 }),
     n(388685));
 var r = n(255367),
-    l = n(73800),
-    a = n(120356),
-    s = n.n(a),
-    o = n(481060),
+    s = n(73800),
+    o = n(120356),
+    l = n.n(o),
+    a = n(481060),
     i = n(957537),
     c = n(839008),
     d = n(797967),
@@ -24,7 +24,7 @@ var r = n(255367),
     v = n(183375);
 function C() {
     var e;
-    let [t, n] = l.useState(() => {
+    let [t, n] = s.useState(() => {
             let e = Math.floor(Math.random() * b.tl.length);
             return {
                 primary_color: b.tl[e].start,
@@ -32,7 +32,7 @@ function C() {
                 tertiary_color: null
             };
         }),
-        { gradientStyle: a, gradientClassname: c } = (0, o.Icv)({
+        { gradientStyle: o, gradientClassname: c } = (0, a.Icv)({
             colorStrings: (0, g.DX)(t),
             roleStyle: 'username',
             includeConvenienceGlow: !0,
@@ -46,8 +46,8 @@ function C() {
                 children: (0, r.jsx)(p.l, {
                     avatar: i.Z,
                     username: 'Cherry',
-                    usernameStyle: a,
-                    usernameClassName: s()(c, v.animateGradient),
+                    usernameStyle: o,
+                    usernameClassName: l()(c, v.animateGradient),
                     message: x.intl.string(x.t['6OSasb'])
                 })
             }),
@@ -57,7 +57,7 @@ function C() {
                 value: t.primary_color,
                 secondaryValue: null != (e = t.secondary_color) ? e : void 0,
                 onChange: (e) => {
-                    var r, l;
+                    var r, s;
                     return n(
                         ((r = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
@@ -84,9 +84,9 @@ function C() {
                             }
                             return e;
                         })({}, t)),
-                        (l = l = { primary_color: e }),
+                        (s = s = { primary_color: e }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
+                            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(s))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -94,8 +94,8 @@ function C() {
                                       n.push.apply(n, r);
                                   }
                                   return n;
-                              })(Object(l)).forEach(function (e) {
-                                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
+                              })(Object(s)).forEach(function (e) {
+                                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(s, e));
                               }),
                         r)
                     );
@@ -113,14 +113,14 @@ function C() {
 }
 function y(e) {
     let { guildId: t } = e,
-        [n, a] = l.useState(h.x_.HEART),
-        s = (0, f.Z)(),
-        o = l.useMemo(
+        [n, o] = s.useState(h.x_.HEART),
+        l = (0, f.Z)(),
+        a = s.useMemo(
             () => ({
-                unlockedBadges: s.unlockedBadges.slice(0, 10),
+                unlockedBadges: l.unlockedBadges.slice(0, 10),
                 lockedBadges: []
             }),
-            [s]
+            [l]
         );
     return (0, r.jsxs)('div', {
         className: j.container,
@@ -141,8 +141,8 @@ function y(e) {
             }),
             (0, r.jsx)(u.g, {
                 selectedBadge: n,
-                onBadgeClicked: a,
-                badgeCollection: o
+                onBadgeClicked: o,
+                badgeCollection: a
             })
         ]
     });

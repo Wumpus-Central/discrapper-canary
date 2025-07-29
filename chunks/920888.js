@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685), n(539854));
+(n.d(t, { Z: () => y }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -67,7 +67,7 @@ let C = (e, t) => (null == e && null == t) || e === t,
         let n = x(e, t);
         return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
     };
-class y extends i.PureComponent {
+class O extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let n = e.message.reactions.length;
         return 0 === t.reactionsCount && n > 0
@@ -80,9 +80,9 @@ class y extends i.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: i, isGuest: l, isPendingMember: h, isForumToolbar: b, channel: E, className: C, forceAddReactions: x, reactionClassName: v, useChatFontScaling: y, forceHideReactionCreates: O, remainingReactions: j, combinedReactions: I, visibleReactionsCount: S } = this.props,
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: i, isGuest: l, isPendingMember: h, isForumToolbar: b, channel: E, className: C, forceAddReactions: x, reactionClassName: v, useChatFontScaling: O, forceHideReactionCreates: y, remainingReactions: j, combinedReactions: I, visibleReactionsCount: S } = this.props,
             { disableTransitionAppear: T } = this.state,
-            N = y ? _ : g,
+            N = O ? _ : g,
             P = S > 0;
         if (!P && !x) return null;
         let A = x || P;
@@ -104,7 +104,7 @@ class y extends i.PureComponent {
                     isGuest: l,
                     isPendingMember: h,
                     isForumToolbar: b,
-                    useChatFontScaling: y,
+                    useChatFontScaling: O,
                     className: v
                 }),
                 j > 0 &&
@@ -121,13 +121,13 @@ class y extends i.PureComponent {
                         })
                     }),
                 !t &&
-                    !O &&
+                    !y &&
                     (0, r.jsx)(u.X, {
                         tabIndex: A || this.state.isHovered ? 0 : -1,
                         type: c.O.NORMAL,
                         message: e,
                         channel: E,
-                        useChatFontScaling: y,
+                        useChatFontScaling: O,
                         isHovered: this.state.isHovered,
                         className: a()({ [N.forceShow]: A })
                     })
@@ -143,7 +143,7 @@ class y extends i.PureComponent {
             }));
     }
 }
-let O = (e) => {
+let y = (e) => {
     let { message: t, maxReactions: n, hoistReaction: l } = e,
         {
             combinedReactions: a,
@@ -167,7 +167,7 @@ let O = (e) => {
             );
         }, [l, n, t.reactions]);
     return (0, r.jsx)(
-        y,
+        O,
         E(b({}, e), {
             visibleReactionsCount: s,
             combinedReactions: a,

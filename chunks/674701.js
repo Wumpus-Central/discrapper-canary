@@ -22,8 +22,8 @@ var r,
     C = n(963249),
     x = n(594174),
     v = n(626135),
-    y = n(51144),
-    O = n(479446),
+    O = n(51144),
+    y = n(479446),
     j = n(795448),
     I = n(441623),
     S = n(317271),
@@ -50,7 +50,7 @@ function L(e) {
             }
         });
     }, [t, n]);
-    let H = () => (t === T.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t['L2s/Nz'], { numberOfYears: G }) : (0, O.Ou)(t)),
+    let H = () => (t === T.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t['L2s/Nz'], { numberOfYears: G }) : (0, y.Ou)(t)),
         V = 'coachmark' === n,
         z = V ? Z.innerContentCoachmark : Z.innerContent,
         W = V ? Z.recipientUserAvatarCoachmark : Z.recipientUserAvatar,
@@ -99,12 +99,12 @@ function L(e) {
                                     variant: 'text-md/medium',
                                     color: V ? 'header-primary' : 'always-white',
                                     lineClamp: 3,
-                                    children: t === T.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.BWJvAA, { friendUserName: y.ZP.getName(r) }) : (0, O.Ou)(t)
+                                    children: t === T.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.BWJvAA, { friendUserName: O.ZP.getName(r) }) : (0, y.Ou)(t)
                                 }),
                                 (0, i.jsx)(p.Text, {
                                     className: Y,
                                     variant: 'text-sm/normal',
-                                    children: t === T.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.S3fdq6, { numberOfYears: G }) : (0, O.Ou)(t)
+                                    children: t === T.hX.FRIEND_ANNIVERSARY ? w.intl.formatToPlainString(w.t.S3fdq6, { numberOfYears: G }) : (0, y.Ou)(t)
                                 })
                             ]
                         })
