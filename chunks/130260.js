@@ -1,11 +1,11 @@
-a.d(e, { x: () => s });
+a.d(e, { x: () => E });
 var r = a(696486),
     _ = a(151122),
     n = a(622916),
     o = a(454463),
     i = a(243309),
     c = a(748688);
-let s = (0, _._I)(() => ({
+let E = (0, _._I)(() => ({
     name: 'BrowserProfiling',
     setup(t) {
         let e = (0, r.HN)(),
@@ -33,8 +33,8 @@ let s = (0, _._I)(() => ({
                         o.X && n.kg.log(`[Profiling] Could not retrieve profile for span: ${r}`);
                         continue;
                     }
-                    let s = (0, c.nm)(r, _, i, t);
-                    s && a.push(s);
+                    let E = (0, c.nm)(r, _, i, t);
+                    E && a.push(E);
                 }
                 (0, c.db)(t, a);
             }));

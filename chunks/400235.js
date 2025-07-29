@@ -13,8 +13,8 @@ function u(e) {
         n = void 0 === t ? 'bottom' : t,
         u = e.strategy,
         d = void 0 === u ? 'absolute' : u,
-        f = e.modifiers,
-        _ = void 0 === f ? c : f,
+        _ = e.modifiers,
+        f = void 0 === _ ? c : _,
         p = e.referenceElement,
         h = e.onFirstUpdate,
         m = e.innerRef,
@@ -38,7 +38,7 @@ function u(e) {
                     placement: n,
                     strategy: d,
                     onFirstUpdate: h,
-                    modifiers: [].concat(_, [
+                    modifiers: [].concat(f, [
                         {
                             name: 'arrow',
                             enabled: null != I,
@@ -47,7 +47,7 @@ function u(e) {
                     ])
                 };
             },
-            [n, d, h, _, I]
+            [n, d, h, f, I]
         ),
         A = (0, o.D)(p || E, y, S),
         N = A.state,

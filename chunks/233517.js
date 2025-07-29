@@ -1,7 +1,7 @@
 a.d(e, {
     Qy: () => O,
     TM: () => g,
-    Tb: () => E,
+    Tb: () => s,
     YA: () => f,
     av: () => A,
     cg: () => C,
@@ -9,8 +9,8 @@ a.d(e, {
     eN: () => u,
     eW: () => T,
     mG: () => N,
-    rJ: () => d,
-    sU: () => R,
+    rJ: () => R,
+    sU: () => d,
     uT: () => l,
     v: () => I,
     xv: () => L,
@@ -23,9 +23,9 @@ var r = a(622916),
     o = a(263449),
     i = a(255768),
     c = a(112797),
-    s = a(822578);
-function E(t, e) {
-    return (0, o.nZ)().captureException(t, (0, s.U0)(e));
+    E = a(822578);
+function s(t, e) {
+    return (0, o.nZ)().captureException(t, (0, E.U0)(e));
 }
 function l(t, e) {
     let a = 'string' == typeof e ? e : void 0,
@@ -38,10 +38,10 @@ function u(t, e) {
 function I(t, e) {
     (0, o.aF)().setContext(t, e);
 }
-function d(t) {
+function R(t) {
     (0, o.aF)().setExtras(t);
 }
-function R(t, e) {
+function d(t, e) {
     (0, o.aF)().setExtra(t, e);
 }
 function N(t) {
@@ -74,13 +74,13 @@ function P(t) {
     let e = (0, o.s3)(),
         a = (0, o.aF)(),
         r = (0, o.nZ)(),
-        { release: i, environment: s = n.J } = (e && e.getOptions()) || {},
-        { userAgent: E } = _.n.navigator || {},
+        { release: i, environment: E = n.J } = (e && e.getOptions()) || {},
+        { userAgent: s } = _.n.navigator || {},
         l = (0, c.Hv)({
             release: i,
-            environment: s,
+            environment: E,
             user: r.getUser() || a.getUser(),
-            ...(E && { userAgent: E }),
+            ...(s && { userAgent: s }),
             ...t
         }),
         u = a.getSession();

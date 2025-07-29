@@ -3,13 +3,13 @@ var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(652141),
+    s = n(564854),
     l = n(793030),
     c = n(442837),
     u = n(755721),
     d = n(481060),
-    f = n(434650),
-    _ = n(100527),
+    _ = n(434650),
+    f = n(100527),
     p = n(906732),
     h = n(879892),
     m = n(245004),
@@ -79,15 +79,15 @@ function x(e, t) {
         e
     );
 }
-function k(e) {
+function M(e) {
     let { guildId: t, powerup: n, onClose: a } = e,
         { analyticsLocations: l } = (0, p.ZP)(),
         c = (0, I.Z)(t, n).type !== S.A3.INACTIVE,
         E = (0, v.Z)(t),
         [b, y] = i.useState(!1),
         [w, L] = i.useState(!1),
-        k = w,
-        M = i.useCallback(() => {
+        M = w,
+        k = i.useCallback(() => {
             let e = g.Z.getGuild(t);
             null != e &&
                 (0, h.u)({
@@ -101,31 +101,31 @@ function k(e) {
                 });
         }, [t, l]),
         j = i.useCallback(() => {
-            (a(), (0, T.Z)(t, _.Z.GUILD_POWERUPS_MARKETING, n.skuId));
+            (a(), (0, T.Z)(t, f.Z.GUILD_POWERUPS_MARKETING, n.skuId));
         }, [t, n.skuId, a]),
         U = {
             tension: 400,
             friction: 30
         },
         G = (0, d.q_F)({
-            transform: k ? 'translateX(-50%) translateY(16px) scale(1)' : 'translateX(-50%) translateY(24px) scale(1.40)',
+            transform: M ? 'translateX(-50%) translateY(16px) scale(1)' : 'translateX(-50%) translateY(24px) scale(1.40)',
             borderRadius: '0px',
             transformOrigin: 'center 0%',
             config: U
         }),
         B = (0, d.q_F)({
-            y: k ? -25 : 0,
+            y: M ? -25 : 0,
             config: U
         }),
         V = (0, d.q_F)({
-            opacity: +!!k,
-            transform: k ? 'translateY(0)' : 'translateY(20px)',
+            opacity: +!!M,
+            transform: M ? 'translateY(0)' : 'translateY(20px)',
             config: U
         }),
         F = i.useCallback((e) => {
             e && y(!0);
         }, []),
-        Z = (0, f.O)(F),
+        Z = (0, _.O)(F),
         H = (0, O.Z)(n, w);
     return (0, r.jsxs)('div', {
         className: o()(P.topPerksCard, P.animatedTopPerksCard, R.powerupCard, { [P.animate]: b }),
@@ -161,7 +161,7 @@ function k(e) {
                         children: [
                             (0, r.jsx)(u.zx, {
                                 grow: !0,
-                                onClick: M,
+                                onClick: k,
                                 color: u.zx.Colors.BRAND,
                                 className: P.button,
                                 children: C.intl.string(C.t['oPAx7+'])
@@ -186,7 +186,7 @@ function k(e) {
         ]
     });
 }
-let M = i.forwardRef((e, t) => {
+let k = i.forwardRef((e, t) => {
     var n, a;
     let { guild: o, onClose: s } = e;
     i.useEffect(() => {
@@ -212,7 +212,7 @@ let M = i.forwardRef((e, t) => {
                       className: R.powerupsContainer,
                       children: d.map((e) =>
                           (0, r.jsx)(
-                              k,
+                              M,
                               {
                                   guildId: o.id,
                                   powerup: e,
@@ -225,5 +225,5 @@ let M = i.forwardRef((e, t) => {
               ]
           });
 });
-M.displayName = 'GuildPowerupsMarketingPowerupCards';
-let j = M;
+k.displayName = 'GuildPowerupsMarketingPowerupCards';
+let j = k;

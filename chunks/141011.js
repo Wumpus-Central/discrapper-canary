@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(607070),
     u = n(302221),
     d = n(884697),
-    f = n(372654),
-    _ = n(534215);
+    _ = n(372654),
+    f = n(534215);
 function p(e, t, n) {
     return (
         t in e
@@ -65,7 +65,7 @@ function g(e, t) {
 let E = (e) => null != e && /^http/i.test(e),
     b = (e) => null != e && /^blob:https?:\/\/[^\/]+\//i.test(e),
     y = (e) => {
-        let { asset: t, size: n = f.yV, className: a, style: p, children: m, categoryBannerOverride: y } = e,
+        let { asset: t, size: n = _.yV, className: a, style: p, children: m, categoryBannerOverride: y } = e,
             O = (0, s.e7)([c.Z], () => c.Z.saturation),
             v = i.useMemo(() => {
                 if (null == t) return p;
@@ -104,7 +104,7 @@ let E = (e) => null != e && /^http/i.test(e),
                 );
             }, [t, n, O, p, null == y ? void 0 : y.blur, null == y ? void 0 : y.addGradient]);
         return (0, r.jsx)('div', {
-            className: o()(_.banner, a),
+            className: o()(f.banner, a),
             style: v,
             children: m
         });

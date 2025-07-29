@@ -9,8 +9,8 @@ var i = n(442837),
     c = n(29899),
     u = n(151545),
     d = n(493043),
-    f = n(864141),
-    _ = n(231338);
+    _ = n(864141),
+    f = n(231338);
 function p(e) {
     let { user: t, currentUser: n, displayProfile: p, guildId: h, className: m, onClose: g } = e,
         { live: E, stream: b } = (0, l.Z)(t.id),
@@ -22,13 +22,13 @@ function p(e) {
         v = t.id === n.id,
         I = (0, i.e7)([s.Z, o.Z], () => {
             let e = v ? s.Z.getStatus() : o.Z.getStatus(t.id, h);
-            return e === _.Sk.OFFLINE || e === _.Sk.INVISIBLE;
+            return e === f.Sk.OFFLINE || e === f.Sk.INVISIBLE;
         }),
         { voiceActivityStatusEnabled: T } = (0, a.U)({ location: 'UserProfileFeaturedActivity' });
     return I || null == b
         ? I || null == y
             ? T && !I && null != O
-                ? (0, r.jsx)(f.Z, {
+                ? (0, r.jsx)(_.Z, {
                       user: t,
                       currentUser: n,
                       voiceChannel: O,

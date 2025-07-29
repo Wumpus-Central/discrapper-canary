@@ -1,5 +1,5 @@
 a.d(e, {
-    Lh: () => E,
+    Lh: () => s,
     _l: () => l,
     jC: () => u,
     uc: () => I
@@ -10,9 +10,9 @@ var r = a(370336),
     o = a(263449),
     i = a(988097),
     c = a(696486);
-let s = '_frozenDsc';
-function E(t, e) {
-    (0, r.xp)(t, s, e);
+let E = '_frozenDsc';
+function s(t, e) {
+    (0, r.xp)(t, E, e);
 }
 function l(t, e) {
     let a = e.getOptions(),
@@ -30,18 +30,18 @@ function u(t) {
     if (!e) return {};
     let a = l((0, c.XU)(t).trace_id || '', e),
         r = (0, c.Gx)(t),
-        n = r[s];
+        n = r[E];
     if (n) return n;
-    let E = r.spanContext().traceState,
-        u = E && E.get('sentry.dsc'),
+    let s = r.spanContext().traceState,
+        u = s && s.get('sentry.dsc'),
         I = u && (0, _.EN)(u);
     if (I) return I;
-    let d = (0, c.XU)(r),
-        R = d.data || {},
-        N = R[i.TE];
+    let R = (0, c.XU)(r),
+        d = R.data || {},
+        N = d[i.TE];
     null != N && (a.sample_rate = `${N}`);
-    let f = R[i.Zj],
-        A = d.description;
+    let f = d[i.Zj],
+        A = R.description;
     return ('url' !== f && A && (a.transaction = A), (a.sampled = String((0, c.Tt)(r))), e.emit('createDsc', a, r), a);
 }
 function I(t) {

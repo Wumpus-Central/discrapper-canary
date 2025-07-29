@@ -8,8 +8,8 @@ var i,
     c = n(989872),
     u = n.n(c),
     d = n(442837),
-    f = n(570140),
-    _ = n(758449),
+    _ = n(570140),
+    f = n(758449),
     p = n(245335);
 function h(e, t, n) {
     return (
@@ -40,7 +40,7 @@ function T(e) {
 }
 function S(e) {
     let { channelId: t, invite: n } = e,
-        r = _.Z.createFromServer(n);
+        r = f.Z.createFromServer(n);
     r.targetType === p.Iq.STREAM && null != r.targetUser ? (null == g[t] && (g[t] = {}), (g[t][String(r.targetUser.id)] = r)) : r.targetType === p.Iq.EMBEDDED_APPLICATION && null != r.targetApplication ? (null == E[t] && (E[t] = {}), (E[t][r.targetApplication.id] = r)) : (m[t] = r);
 }
 function A(e) {
@@ -53,7 +53,7 @@ function N(e) {
 }
 function C(e) {
     var t;
-    ((b[e.invite.code] = _.Z.createFromServer(e.invite)), (r = null != (t = o()(l()(u()(Object.values(b), 'createdAt')))) ? t : null), (v = !1));
+    ((b[e.invite.code] = f.Z.createFromServer(e.invite)), (r = null != (t = o()(l()(u()(Object.values(b), 'createdAt')))) ? t : null), (v = !1));
 }
 function R() {
     v = !1;
@@ -80,15 +80,15 @@ function x(e) {
     var t;
     ((b = {}),
         e.invites.forEach((e) => {
-            b[e.code] = _.Z.createFromServer(e);
+            b[e.code] = f.Z.createFromServer(e);
         }),
         (r = null != (t = o()(l()(u()(Object.values(b), 'createdAt')))) ? t : null),
         (y = !1));
 }
-function k(e) {
+function M(e) {
     delete m[e.channelId];
 }
-class M extends (i = d.ZP.Store) {
+class k extends (i = d.ZP.Store) {
     getInvite(e) {
         var t, n;
         let { targetType: r, targetUserId: i, targetApplicationId: a } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -104,8 +104,8 @@ class M extends (i = d.ZP.Store) {
         return null != r && !O && !v;
     }
 }
-h(M, 'displayName', 'InstantInviteStore');
-let j = new M(f.Z, {
+h(k, 'displayName', 'InstantInviteStore');
+let j = new k(_.Z, {
     CONNECTION_OPEN: I,
     CHANNEL_DELETE: T,
     FRIEND_INVITE_CREATE_SUCCESS: C,
@@ -118,5 +118,5 @@ let j = new M(f.Z, {
     FRIEND_INVITE_CREATE_REQUEST: D,
     FRIEND_INVITES_FETCH_REQUEST: L,
     FRIEND_INVITES_FETCH_RESPONSE: x,
-    INSTANT_INVITE_CLEAR: k
+    INSTANT_INVITE_CLEAR: M
 });

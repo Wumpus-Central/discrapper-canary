@@ -4,10 +4,10 @@ a.d(e, {
     JQ: () => l,
     S3: () => o,
     TE: () => _,
-    Wb: () => s,
+    Wb: () => E,
     Zj: () => r,
     ju: () => i,
-    p6: () => E
+    p6: () => s
 });
 let r = 'sentry.source',
     _ = 'sentry.sample_rate',
@@ -15,6 +15,6 @@ let r = 'sentry.source',
     o = 'sentry.origin',
     i = 'sentry.idle_span_finish_reason',
     c = 'sentry.measurement_unit',
-    s = 'sentry.measurement_value',
-    E = 'sentry.profile_id',
+    E = 'sentry.measurement_value',
+    s = 'sentry.profile_id',
     l = 'sentry.exclusive_time';

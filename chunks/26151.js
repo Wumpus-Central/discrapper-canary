@@ -8,20 +8,20 @@ var r = n(544891),
     c = n(626135),
     u = n(668781),
     d = n(194359),
-    f = n(287734),
-    _ = n(981631),
+    _ = n(287734),
+    f = n(981631),
     p = n(388032);
 let h = {
     call(e, t, n, i, a) {
         let o = (n) => {
-            (f.default.selectVoiceChannel(e, t), n && this.ring(e), null == a || a(e));
+            (_.default.selectVoiceChannel(e, t), n && this.ring(e), null == a || a(e));
         };
         if (null != i) {
             if (s.Z.isBlocked(i)) return;
             let t = l.default.getUser(i);
             r.tn
                 .get({
-                    url: _.ANM.CALL(e),
+                    url: f.ANM.CALL(e),
                     oldFormErrors: !0,
                     rejectWithError: !0
                 })
@@ -30,7 +30,7 @@ let h = {
                         o(n && e.body.ringable);
                     },
                     () => {
-                        (c.default.track(_.rMx.OPEN_POPOUT, {
+                        (c.default.track(f.rMx.OPEN_POPOUT, {
                             type: 'Not Friend',
                             source: 'Call'
                         }),
@@ -54,10 +54,10 @@ let h = {
         let s = o.Z.getChannel(e);
         if (null == s) return;
         let l = (0, a.V)(s),
-            c = _.TPd.CALLABLE.has(s.type);
+            c = f.TPd.CALLABLE.has(s.type);
         if (l) {
             (r.tn.post({
-                url: _.ANM.CALL_RING(e),
+                url: f.ANM.CALL_RING(e),
                 body: {
                     recipients: t,
                     analytics_location: n
@@ -65,7 +65,7 @@ let h = {
                 oldFormErrors: !0,
                 rejectWithError: !0
             }),
-                s.type === _.d4z.GUILD_VOICE &&
+                s.type === f.d4z.GUILD_VOICE &&
                     null != t &&
                     i.Z.dispatch({
                         type: 'GUILD_LOCAL_RING_START',
@@ -83,7 +83,7 @@ let h = {
     },
     stopRinging: (e, t) =>
         r.tn.post({
-            url: _.ANM.CALL_STOP_RINGING(e),
+            url: f.ANM.CALL_STOP_RINGING(e),
             body: { recipients: t },
             oldFormErrors: !0,
             rejectWithError: !0

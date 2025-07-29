@@ -2,11 +2,11 @@
     BU: () => v,
     CM: () => h,
     Eo: () => m,
-    Kj: () => _,
+    Kj: () => f,
     Kr: () => b,
     LY: () => R,
     XA: () => g,
-    aB: () => f,
+    aB: () => _,
     hm: () => P,
     jE: () => d
 }),
@@ -74,10 +74,10 @@ function u(e, t) {
 var d = (function (e) {
         return ((e.SHOP_ALL_BANNER_STATIC = 'shop_all_banner.jpg'), (e.SHOP_ALL_BANNER_ANIMATED = 'shop_all_banner_animated.webm'), (e.HERO_BANNER_STATIC = 'hero_banner.jpg'), (e.HERO_BANNER_ANIMATED = 'hero_banner_animated.webm'), (e.HERO_LOGO = 'hero_logo.png'), (e.FEATURED_BLOCK = 'featured_block.png'), (e.UPSELL_BANNER = 'upsell_banner.jpg'), (e.UPSELL_BANNER_POPOUT = 'upsell_banner_popout.png'), (e.PDP_BACKGROUND = 'pdp_bg.jpg'), (e.PDP_LOGO = 'pdp_logo.png'), (e.COLLECTED_MODAL_BG = 'collected_modal_bg.jpg'), (e.SHOP_BUTTON_BG_HOVER = 'shop_button_bg_hover.png'), (e.SHOP_BUTTON_BG_HOVER_DARK = 'shop_button_bg_hover_dark.png'), (e.SHOP_BUTTON_BG_HOVER_LIGHT = 'shop_button_bg_hover_light.png'), (e.SHOP_BUTTON_BG_RESTING = 'shop_button_bg_resting.png'), (e.SHOP_BUTTON_BG_RESTING_DARK = 'shop_button_bg_resting_dark.png'), (e.SHOP_BUTTON_BG_RESTING_LIGHT = 'shop_button_bg_resting_light.png'), (e.COACHTIP_AVATAR = 'coachtip_avatar.png'), (e.MOBILE_BANNER = 'mobile_banner.jpg'), (e.MOBILE_BACKGROUND = 'mobile_bg.jpg'), e);
     })({}),
-    f = (function (e) {
+    _ = (function (e) {
         return ((e.PROFILE_EFFECT = 'profile_effect'), (e.AVATAR_DECORATION = 'avatar_decoration'), e);
     })({});
-let _ = {
+let f = {
         'shop_all_banner.jpg': 'shop_all_banner.jpg',
         'shop_all_banner_animated.webm': 'shop_all_banner_animated.webm',
         'hero_banner.jpg': 'hero_banner.jpg',
@@ -128,7 +128,7 @@ let m = (e) => {
     O = (e) => (0, a.tw)(e.type) || (0, a.X2)(e.type),
     v = (e) => {
         var t;
-        return null != (t = _[e.name]) ? t : null;
+        return null != (t = f[e.name]) ? t : null;
     },
     I = async (e) => {
         let t = [];
@@ -151,7 +151,7 @@ let m = (e) => {
     S = (e, t, n, r) => {
         if (t.name === p) return;
         let i = y(e, t.name);
-        'profile_effects' === n ? T(e, t, r) : O(t) ? ('collection' === n || null === n ? (t.name in _ ? r.collectionFiles.push(t) : r.ignoredFilenames.push(i)) : 'avatar_decorations' === n ? r.avatarDecorationFiles.push(t) : r.ignoredFilenames.push(i)) : r.ignoredFilenames.push(i);
+        'profile_effects' === n ? T(e, t, r) : O(t) ? ('collection' === n || null === n ? (t.name in f ? r.collectionFiles.push(t) : r.ignoredFilenames.push(i)) : 'avatar_decorations' === n ? r.avatarDecorationFiles.push(t) : r.ignoredFilenames.push(i)) : r.ignoredFilenames.push(i);
     },
     A = async (e, t, n) => {
         let r = e.createReader();

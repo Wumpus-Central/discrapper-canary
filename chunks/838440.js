@@ -8,15 +8,15 @@ var r = n(570140),
     c = n(760729),
     u = n(74538),
     d = n(981631),
-    f = n(388032);
-function _(e, t) {
+    _ = n(388032);
+function f(e, t) {
     (i.Z.show({
-        title: f.intl.string(f.t.l8rYLi),
-        body: f.intl.formatToPlainString(f.t.FfjF19, {
+        title: _.intl.string(_.t.l8rYLi),
+        body: _.intl.formatToPlainString(_.t.FfjF19, {
             currentLength: e,
             maxLength: t
         }),
-        confirmText: f.intl.string(f.t.BddRzc)
+        confirmText: _.intl.string(_.t.BddRzc)
     }),
         l.default.track(d.rMx.OPEN_MODAL, {
             type: 'Message Too Long Alert',
@@ -40,7 +40,7 @@ function p(e) {
                   channel: h,
                   content: l
               })
-            : _(l.length, y),
+            : f(l.length, y),
             b({
                 valid: !1,
                 failureReason: d.zYc.MESSAGE_TOO_LONG
@@ -73,9 +73,9 @@ function p(e) {
     }
     if (a.ZP.isFull()) {
         (i.Z.show({
-            title: f.intl.string(f.t['7Q4eo6']),
-            body: f.intl.string(f.t.gi6XHh),
-            confirmText: f.intl.string(f.t.Z4U1g4)
+            title: _.intl.string(_.t['7Q4eo6']),
+            body: _.intl.string(_.t.gi6XHh),
+            confirmText: _.intl.string(_.t.Z4U1g4)
         }),
             b({
                 valid: !1,

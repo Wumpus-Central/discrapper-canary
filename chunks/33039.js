@@ -56,8 +56,8 @@ function d(e, t) {
         e
     );
 }
-let f = null,
-    _ = null,
+let _ = null,
+    f = null,
     p = {},
     h = {};
 function m(e, t) {
@@ -81,11 +81,11 @@ function E(e, t, n, r) {
 }
 function b(e) {
     let { user: t, sessionId: n } = e;
-    ((f = t.id), (_ = n));
+    ((_ = t.id), (f = n));
 }
 function y(e) {
     let { user: t, sessionId: n } = e;
-    ((f = t.id), (_ = n));
+    ((_ = t.id), (f = n));
 }
 function O(e) {
     let { userId: t, guildId: n, streamId: r, context: i } = e;
@@ -96,8 +96,8 @@ function v(e) {
     return t.reduce((e, t) => {
         var n;
         let { userId: r, sessionId: i, channelId: a, guildId: s } = t;
-        if (null == a && r === f)
-            if (i !== _) return e;
+        if (null == a && r === _)
+            if (i !== f) return e;
             else ((p = {}), (h = {}));
         else {
             if (null != a || (null == (n = p[r]) ? void 0 : n[null != s ? s : o.kod]) == null) return e;

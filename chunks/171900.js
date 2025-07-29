@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-class f {
+class _ {
     handleSearchStart() {
         ((this.isFetching = !0), (this.isIndexing = !1), (this.analyticsId = null), (this.error = null));
     }
@@ -50,16 +50,16 @@ class f {
         (d(this, 'isIndexing', !1), d(this, 'isHistoricalIndexing', !1), d(this, 'isFetching', !1), d(this, 'analyticsId', null), d(this, 'error', null), d(this, 'rawMessages', null), d(this, 'messages', null), d(this, 'documentsIndexed', 0), d(this, 'totalResults', null), d(this, 'hasNextPage', !1), d(this, 'messageIds', new Set()), d(this, 'isInitialFetchComplete', !1), d(this, 'cursor', null));
     }
 }
-let _ = new Map(),
+let f = new Map(),
     p = new Map(),
     h = new Map();
 function m(e) {
     var t;
-    return null != (t = _.get(e)) ? t : new f();
+    return null != (t = f.get(e)) ? t : new _();
 }
 function g(e) {
     let t = m(e);
-    return (_.set(e, t), t);
+    return (f.set(e, t), t);
 }
 function E(e, t) {
     let n = p.get(e);
@@ -71,7 +71,7 @@ function b(e, t) {
     return t(m(e));
 }
 function y() {
-    ((_ = new Map()), (p = new Map()), (h = new Map()));
+    ((f = new Map()), (p = new Map()), (h = new Map()));
 }
 function O(e) {
     e.ids.forEach((e) => {
@@ -134,17 +134,17 @@ function R(e) {
     });
 }
 function P(e) {
-    let t = _.get(e.id);
+    let t = f.get(e.id);
     if (null == t) return !1;
     (t.messageIds.forEach((e) => {
         var t;
         let n = null != (t = h.get(e)) ? t : 0;
         n <= 1 ? (p.delete(e), h.delete(e)) : h.set(e, n - 1);
     }),
-        _.delete(e.id));
+        f.delete(e.id));
 }
 function w(e) {
-    ((_ = new Map()), (p = new Map()), (h = new Map()));
+    ((f = new Map()), (p = new Map()), (h = new Map()));
 }
 class D extends (r = i.ZP.Store) {
     initialize() {
@@ -190,7 +190,7 @@ class D extends (r = i.ZP.Store) {
         return b(e, (e) => e.rawMessages);
     }
     hasSearchState(e) {
-        return _.has(e);
+        return f.has(e);
     }
 }
 d(D, 'displayName', 'SearchMessageStore');

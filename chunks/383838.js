@@ -25,7 +25,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -73,13 +73,13 @@ function g(e) {
         v = s.Z.Direction.HORIZONTAL;
     if (null != d) {
         let { position: e } = d,
-            n = _(d, ['position']);
+            n = f(d, ['position']);
         ((t = (0, r.jsx)(s.Z.Child, {
             grow: 0,
             shrink: 0,
             children: (0, r.jsx)(
                 'img',
-                f(
+                _(
                     {
                         alt: '',
                         className: a()(u.icon, g)

@@ -8,8 +8,8 @@ var r = n(442837),
     c = n(650774),
     u = n(866960),
     d = n(626135),
-    f = n(981631);
-function _(e, t, n) {
+    _ = n(981631);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -73,7 +73,7 @@ function b(e) {
         r = null == e.gatewaySeenTimestamp ? null : e.gatewaySeenTimestamp - e.initialSendTimestamp,
         i = (0, s.d)();
     d.default.track(
-        f.rMx.SEND_MESSAGE_ROUNDTRIP,
+        _.rMx.SEND_MESSAGE_ROUNDTRIP,
         p(
             m(p({}, (0, o.Z)()), {
                 api_latency_ms: n,
@@ -122,7 +122,7 @@ class O extends r.ZP.Store {
         }
     }
     constructor(...e) {
-        (super(...e), _(this, 'pendingMessages', new Map()));
+        (super(...e), f(this, 'pendingMessages', new Map()));
     }
 }
 let v = new O(i.Z, { MESSAGE_CREATE: y }),

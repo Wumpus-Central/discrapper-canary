@@ -3,13 +3,13 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     a = n.n(i),
-    o = n(652141),
+    o = n(564854),
     s = n(481060),
     l = n(436774),
     c = n(767714),
     u = n(474936),
     d = n(888358);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,13 +33,13 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
 }
 function p(e) {
-    let { showUpsell: t, text: n, textVariant: i, button: f, buttonAnalyticsObject: p, className: h, buttonStyles: m, onSubscribeModalClose: g, showShadow: E = !0, position: b = 'floating', buttonSize: y = 'md', useLockIcon: O = !1 } = e,
+    let { showUpsell: t, text: n, textVariant: i, button: _, buttonAnalyticsObject: p, className: h, buttonStyles: m, onSubscribeModalClose: g, showShadow: E = !0, position: b = 'floating', buttonSize: y = 'md', useLockIcon: O = !1 } = e,
         v = (0, s.q_F)({
             transform: t ? 'translateY(0%)' : 'translateY(120%)',
             opacity: +!!t,
@@ -49,7 +49,7 @@ function p(e) {
             }
         });
     return (0, r.jsxs)(o.animated.div, {
-        style: _({}, v),
+        style: f({}, v),
         className: a()(
             d.upsellContainer,
             {
@@ -78,18 +78,18 @@ function p(e) {
                 className: d.upsellText,
                 children: n
             }),
-            'string' == typeof f
+            'string' == typeof _
                 ? (0, r.jsx)(c.Z, {
                       size: y,
                       className: d.upsellButton,
                       shinyButtonClassName: null != m ? m : d.upsellButton,
                       subscriptionTier: u.Si.TIER_2,
-                      textOptions: { textOverride: f },
+                      textOptions: { textOverride: _ },
                       premiumModalAnalyticsLocation: p,
                       tabIndex: t ? 0 : -1,
                       onSubscribeModalClose: g
                   })
-                : f
+                : _
         ]
     });
 }

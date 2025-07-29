@@ -11,20 +11,21 @@ var i = n(755721),
 function d(e) {
     let { activity: t, onAction: n } = e,
         { themeType: d } = (0, s.z)(),
-        f = (0, a.Z)(t);
-    if (!(0, o.Z)(t) || null == f) return null;
-    let _ = (e) => (e.stopPropagation(), null == n || n({ action: 'PRESS_WATCH_BUTTON' }), window.open(f));
+        _ = (0, a.Z)(t);
+    if (!(0, o.Z)(t) || null == _) return null;
+    let f = (e) => (e.stopPropagation(), null == n || n({ action: 'PRESS_WATCH_BUTTON' }), window.open(_));
     return d === c.lY.MODAL_V2
         ? (0, r.jsx)(l.tG, {
               text: u.intl.string(u.t['I6JG4+']),
               size: i.Ph.TINY,
               themeColor: 'secondary',
-              onClick: _
+              onClick: f
           })
         : (0, r.jsx)(l.tG, {
               text: u.intl.string(u.t['I6JG4+']),
-              themeColor: 'secondary',
+              size: i.Ph.SMALL,
               fullWidth: !0,
-              onClick: _
+              themeColor: 'secondary',
+              onClick: f
           });
 }

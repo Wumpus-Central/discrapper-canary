@@ -7,7 +7,7 @@ var r = n(255367),
     l = n(52565);
 let c = 16,
     u = i.memo(function (e) {
-        let { children: t, trailing: n, className: i, icon: a, isCollapsed: u, onClick: d, 'aria-label': f } = e;
+        let { children: t, trailing: n, className: i, icon: a, isCollapsed: u, onClick: d, 'aria-label': _ } = e;
         return (0, r.jsxs)('div', {
             className: o()(l.wrapper, i),
             children: [
@@ -16,7 +16,7 @@ let c = 16,
                     onKeyDown: (e) => e.stopPropagation(),
                     className: o()(l.header, { [l.interactive]: null != u }),
                     'aria-expanded': null != u ? !u : void 0,
-                    'aria-label': f,
+                    'aria-label': _,
                     children: [
                         null != a &&
                             (0, r.jsx)('div', {

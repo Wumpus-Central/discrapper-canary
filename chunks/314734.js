@@ -7,9 +7,9 @@ n.d(t, {
     NN: () => l,
     bS: () => r,
     e9: () => a,
-    lv: () => f,
+    lv: () => _,
     t4: () => o,
-    u$: () => _
+    u$: () => f
 });
 var r = (function (e) {
     return ((e[(e.POPULAR = 0)] = 'POPULAR'), (e[(e.ALPHABETICAL = 1)] = 'ALPHABETICAL'), e);
@@ -22,8 +22,8 @@ let i = 'app-launcher-element',
     c = 'app-launcher-profile-friend-activity-entry',
     u = 500,
     d = 680,
-    f = 'min(100vh, '.concat(d, 'px)'),
-    _ = {
+    _ = 'min(100vh, '.concat(d, 'px)'),
+    f = {
         '--custom-app-launcher-width': ''.concat(u, 'px'),
-        '--custom-app-launcher-height': f
+        '--custom-app-launcher-height': _
     };

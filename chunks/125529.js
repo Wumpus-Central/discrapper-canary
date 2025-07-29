@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(981729);
@@ -74,18 +74,18 @@ function d(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-function f(e) {
+function _(e) {
     var { mouseLeaveDelay: t = 100 } = e,
         n = u(e, ['mouseLeaveDelay']);
     let { children: o, className: l } = n,
         d = u(n, ['children', 'className']),
-        f = i.useRef(0),
-        [_, p] = i.useState(!1);
+        _ = i.useRef(0),
+        [f, p] = i.useState(!1);
     function h() {
-        (clearTimeout(f.current), p(!0));
+        (clearTimeout(_.current), p(!0));
     }
     function m() {
-        (clearTimeout(f.current), (f.current = setTimeout(() => p(!1), t)));
+        (clearTimeout(_.current), (_.current = setTimeout(() => p(!1), t)));
     }
     return (0, r.jsx)('div', {
         className: l,
@@ -96,7 +96,7 @@ function f(e) {
             c(
                 s(
                     {
-                        forceOpen: _,
+                        forceOpen: f,
                         disableTooltipPointerEvents: !1
                     },
                     d

@@ -9,8 +9,8 @@ var i = n(97613),
     c = n(159351),
     u = n(366939),
     d = n(667),
-    f = n(138464),
-    _ = n(619067),
+    _ = n(138464),
+    f = n(619067),
     p = n(594174),
     h = n(626135),
     m = n(585483),
@@ -90,13 +90,13 @@ function S(e, t) {
     return i;
 }
 function A(e) {
-    let { initialPlanId: t, followupSKUInfo: i, onClose: y, onComplete: v, onSubscriptionConfirmation: S, analyticsLocations: A, analyticsObject: N, analyticsLocation: C, analyticsSourceLocation: R, confirmationFooter: P, paymentModalBanner: w, isGift: D = !1, giftMessage: L, giftStyle: x, giftingOrigin: k, subscriptionTier: M, trialId: j, postSuccessGuild: U, openInvoiceId: G, applicationId: B, referralTrialOfferId: V, giftRecipient: F, returnRef: Z, subscription: H, skipConfirm: Y } = null != e ? e : {},
+    let { initialPlanId: t, followupSKUInfo: i, onClose: y, onComplete: v, onSubscriptionConfirmation: S, analyticsLocations: A, analyticsObject: N, analyticsLocation: C, analyticsSourceLocation: R, confirmationFooter: P, paymentModalBanner: w, isGift: D = !1, giftMessage: L, giftStyle: x, giftingOrigin: M, subscriptionTier: k, trialId: j, postSuccessGuild: U, openInvoiceId: G, applicationId: B, referralTrialOfferId: V, giftRecipient: F, returnRef: Z, subscription: H, skipConfirm: Y } = null != e ? e : {},
         W = !1,
         K = (0, o.Z)(),
         z = p.default.getCurrentUser(),
         q = (0, g.M5)(z, b.p9.TIER_2),
         X = a()('payment-modal'),
-        Q = (0, g.Wz)(M);
+        Q = (0, g.Wz)(k);
     return (0, s.ZDy)(
         async () => {
             let { default: e } = await Promise.all([n.e('94136'), n.e('17938'), n.e('84992'), n.e('54433'), n.e('83033')]).then(n.bind(n, 7305));
@@ -107,26 +107,26 @@ function A(e) {
                     e,
                     I(O({}, o), {
                         loadId: K,
-                        subscriptionTier: M,
+                        subscriptionTier: k,
                         skuId: Q,
                         isGift: D,
                         giftMessage: L,
                         giftStyle: x,
-                        giftingOrigin: k,
+                        giftingOrigin: M,
                         giftRecipient: F,
                         initialPlanId: t,
                         followupSKUInfo: i,
                         onClose: (e, t) => {
                             (a(),
                                 null == y || y(e),
-                                e && (null == S || S(), (0, _.I)(D, q, t) && m.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
+                                e && (null == S || S(), (0, f.I)(D, q, t) && m.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
                                 l.Z.dispatch({
                                     type: 'PREMIUM_PAYMENT_MODAL_CLOSE',
                                     didSucceed: e
                                 }));
                         },
                         onComplete: (e) => {
-                            ((W = !0), null == v || v(), (0, _.I)(D, q, (0, g.k5)(null == e ? void 0 : e.subscription)) && (0, f.H)(!0));
+                            ((W = !0), null == v || v(), (0, f.I)(D, q, (0, g.k5)(null == e ? void 0 : e.subscription)) && (0, _.H)(!0));
                         },
                         onSubscriptionConfirmation: S,
                         analyticsLocations: A,

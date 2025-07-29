@@ -57,7 +57,7 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -69,16 +69,16 @@ function f(e, t) {
     );
 }
 n(789952);
-let _ = !1;
+let f = !1;
 {
     let e = o.F3.findDocumentOrShadowRoot;
     ((o.F3.findDocumentOrShadowRoot = (t) => {
         var n, r;
         return null != (r = null == (n = t.windowContext) ? void 0 : n.renderWindow.document) ? r : e(t);
     }),
-        (_ = !0));
+        (f = !0));
 }
-let p = f(u({}, a.ML, o.F3), {
+let p = _(u({}, a.ML, o.F3), {
         richValue: (e) => e.children,
         blocks: (e) => p.richValue(e).map((e, t) => [e, [t]]),
         isBlock: (e, t) => m.isElement(t) && a.ML.isBlock(e, t),
@@ -265,11 +265,11 @@ let p = f(u({}, a.ML, o.F3), {
             );
         }
     }),
-    h = f(u({}, a.NB), {
+    h = _(u({}, a.NB), {
         isType: (e, t) => a.W_.isElement(e) && e.type === t,
         isInTypes: (e, t) => a.W_.isElement(e) && t.has(e.type)
     }),
-    m = f(u({}, a.W_), {
+    m = _(u({}, a.W_), {
         updateElement(e, t) {
             let n = p.node(e, t[1]);
             return (i()(!p.isEditor(t[0]), 'Element is the root node'), i()(null != n, 'Failed to find element'), i()(m.isElement(n[0]), 'Node at this path is no longer an element'), i()(n[0].type === t[0].type, 'Node at this path is a different type'), n);
@@ -292,13 +292,13 @@ let p = f(u({}, a.ML, o.F3), {
         }
     }),
     g = u({}, a.xv),
-    E = f(u({}, a.y$), {
+    E = _(u({}, a.y$), {
         isFirstEditorBlock: (e) => E.equals(e, l.YD),
         isFirstEditorText: (e) => E.equals(e, l.u9),
         isFirstChild: (e, t) => E.equals(t, E.child(e, 0)),
         child: (e, t) => [...e, t]
     }),
-    b = f(u({}, a.E9), {
+    b = _(u({}, a.E9), {
         start(e) {
             let [, t] = e;
             return {
@@ -325,7 +325,7 @@ let p = f(u({}, a.ML, o.F3), {
             return (b.isBefore(e, n) && (e = n), b.isAfter(e, r) && (e = r), e);
         }
     }),
-    y = f(u({}, a.e6), {
+    y = _(u({}, a.e6), {
         toPoint: (e) => (null == e || y.isExpanded(e) ? null : e.anchor),
         children(e) {
             let [t, n] = e,

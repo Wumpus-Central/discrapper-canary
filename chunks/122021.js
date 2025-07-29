@@ -13,10 +13,10 @@ var r = n(73800),
     c = n(553795),
     u = n(594174),
     d = n(70956),
-    f = n(981631),
-    _ = n(420212);
-let p = { [f.ABu.INSTAGRAM]: ['1036753656588017764'] },
-    h = new Map([[f.ABu.INSTAGRAM, new Date(2023, 1, 18).getTime()]]),
+    _ = n(981631),
+    f = n(420212);
+let p = { [_.ABu.INSTAGRAM]: ['1036753656588017764'] },
+    h = new Map([[_.ABu.INSTAGRAM, new Date(2023, 1, 18).getTime()]]),
     m = 30 * d.Z.Millis.DAY;
 function g(e) {
     let { forUserProfile: t } = e,
@@ -24,7 +24,7 @@ function g(e) {
         r = l.c.useExperiment({ location: 'f2f7ef_1' }, { autoTrackExposure: !1 }).allowPlayStationStaging;
     return (e) => {
         var i;
-        return e.type === f.ABu.PLAYSTATION_STAGING ? r : !!(void 0 !== n && (null == (i = p[e.type]) ? void 0 : i.includes(n.id))) || !!t || e.enabled;
+        return e.type === _.ABu.PLAYSTATION_STAGING ? r : !!(void 0 !== n && (null == (i = p[e.type]) ? void 0 : i.includes(n.id))) || !!t || e.enabled;
     };
 }
 function E() {
@@ -43,7 +43,7 @@ function E() {
                 },
                 (e) => n.has(e.type),
                 (e) => e.hasMetadata,
-                (e) => !f.vbS.has(e.type),
+                (e) => !_.vbS.has(e.type),
                 (e) => e.name
             ]),
         [n, t]
@@ -53,11 +53,11 @@ function b(e) {
     let [t, n] = r.useState(!1);
     function i(e) {
         let { key: t } = e;
-        t === _.vn.SHIFT && n(!0);
+        t === f.vn.SHIFT && n(!0);
     }
     function a(e) {
         let { key: t } = e;
-        t === _.vn.SHIFT && n(!1);
+        t === f.vn.SHIFT && n(!1);
     }
     return (r.useEffect(
         () => (
@@ -69,8 +69,8 @@ function b(e) {
         ),
         []
     ),
-    t && e === f.ABu.TWITTER)
-        ? f.ABu.TWITTER_LEGACY
+    t && e === _.ABu.TWITTER)
+        ? _.ABu.TWITTER_LEGACY
         : e;
 }
-(f.ABu.PLAYSTATION, f.ABu.XBOX, f.ABu.SPOTIFY, f.ABu.STEAM, f.ABu.TWITCH);
+(_.ABu.PLAYSTATION, _.ABu.XBOX, _.ABu.SPOTIFY, _.ABu.STEAM, _.ABu.TWITCH);

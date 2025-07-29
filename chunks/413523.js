@@ -16,8 +16,8 @@ var r = n(392711),
     c = n(199902),
     u = n(314897),
     d = n(523746),
-    f = n(592125),
-    _ = n(131951),
+    _ = n(592125),
+    f = n(131951),
     p = n(606304),
     h = n(594174),
     m = n(33039),
@@ -111,7 +111,7 @@ class w {
         return this.participantByIndex.values(e, !0);
     }
     rebuild() {
-        let e = f.Z.getChannel(this.channelId);
+        let e = _.Z.getChannel(this.channelId);
         if (null == e || e.type === O.d4z.GUILD_TEXT || ((this.call = d.Z.getCall(this.channelId)), e.isPrivate() && (null == this.call || this.call.unavailable))) return !1;
         let t = new Set(e.isGuildVocalOrThread() ? Object.keys(g.Z.getVoiceStatesForChannel(e.id)) : e.recipients);
         return (
@@ -228,7 +228,7 @@ class w {
                 activityType: O.IIU.PLAYING,
                 activityUrl: e.url,
                 participants: [...(null != (r = e.participants) ? r : [])],
-                guildId: null != (i = null == (n = f.Z.getChannel(this.channelId)) ? void 0 : n.getGuildId()) ? i : null,
+                guildId: null != (i = null == (n = _.Z.getChannel(this.channelId)) ? void 0 : n.getGuildId()) ? i : null,
                 sortKey: t.toString()
             };
         });
@@ -242,7 +242,7 @@ class w {
         if (null == S) return I;
         let N = g.Z.getVoiceStateForChannel(this.channelId, e),
             C = g.Z.getVoicePlatformForChannel(this.channelId, e),
-            R = f.Z.getChannel(this.channelId),
+            R = _.Z.getChannel(this.channelId),
             P = null == R ? void 0 : R.getGuildId(),
             w = null != (r = (null == (n = this.call) || null == (t = n.ringing) ? void 0 : t.includes(e)) || this.guildRingingUsers.has(e)) && r;
         (null != N || w) &&
@@ -260,7 +260,7 @@ class w {
                 ringing: w,
                 userNick: E.ZP.getName(P, this.channelId, S),
                 userAvatarDecoration: (0, s.o)(S, P),
-                localVideoDisabled: _.Z.isLocalVideoDisabled(S.id)
+                localVideoDisabled: f.Z.isLocalVideoDisabled(S.id)
             })),
             I.push(b));
         let D = null != (o = c.Z.getStreamForUser(e, P)) ? o : c.Z.getActiveStreamForUser(e, P);

@@ -14,8 +14,8 @@ var r = n(255367),
     c = n(442837),
     u = n(481060),
     d = n(456100),
-    f = n(317381),
-    _ = n(884338),
+    _ = n(317381),
+    f = n(884338),
     p = n(470883),
     h = n(666188),
     m = n(372769),
@@ -37,8 +37,8 @@ var r = n(255367),
     D = n(938475),
     L = n(981631),
     x = n(388032),
-    k = n(714509),
-    M = n(375613);
+    M = n(714509),
+    k = n(375613);
 function j(e, t, n) {
     return (
         t in e
@@ -131,7 +131,7 @@ function V(e) {
                 return (0, p.dq)(n, s);
             })
         ),
-        _ = (0, c.e7)([I.Z], () => {
+        f = (0, c.e7)([I.Z], () => {
             let e = 0;
             for (let t of a) e += I.Z.getParticipantCount(t, T.pV.AUDIENCE);
             return e;
@@ -147,9 +147,9 @@ function V(e) {
             [s, t]
         ),
         m = (0, c.Wu)(
-            [f.ZP],
+            [_.ZP],
             () => {
-                let e = f.ZP.getEmbeddedActivitiesForGuild(t).flatMap((e) => Array.from(e.userIds));
+                let e = _.ZP.getEmbeddedActivitiesForGuild(t).flatMap((e) => Array.from(e.userIds));
                 return (0, p._j)(e, s);
             },
             [t, s]
@@ -170,7 +170,7 @@ function V(e) {
     return {
         voiceUsersToShow: y,
         stageSpeakers: d,
-        numStageListeners: _,
+        numStageListeners: f,
         streamUsersToShow: O,
         embeddedActivitiesUsers: g,
         hasActivity: v
@@ -180,13 +180,13 @@ function F(e, t, n) {
     return 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
-              className: k.row,
+              className: M.row,
               children: [
                   (0, r.jsx)(e, {
-                      className: k.activityIcon,
+                      className: M.activityIcon,
                       color: 'currentColor'
                   }),
-                  (0, r.jsx)(_.ZP, {
+                  (0, r.jsx)(f.ZP, {
                       guildId: n,
                       users: t,
                       max: 6
@@ -198,27 +198,27 @@ function Z(e, t, n) {
     return 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
-              className: k.row,
+              className: M.row,
               children: [
                   (0, r.jsx)(u.ewx, {
                       size: 'lg',
                       color: 'currentColor',
-                      className: k.activityIcon
+                      className: M.activityIcon
                   }),
-                  (0, r.jsx)(_.ZP, {
+                  (0, r.jsx)(f.ZP, {
                       guildId: e,
                       users: t,
                       max: 3
                   }),
                   (0, r.jsxs)('div', {
-                      className: k.stageListenerPill,
+                      className: M.stageListenerPill,
                       children: [
                           (0, r.jsx)(u.VWR, {
                               size: 'xs',
                               color: 'currentColor'
                           }),
                           (0, r.jsx)(u.Text, {
-                              className: k.stageListenerCount,
+                              className: M.stageListenerCount,
                               color: 'text-default',
                               variant: 'text-xs/normal',
                               children: n
@@ -246,11 +246,11 @@ function Y(e) {
     let { guild: t } = e,
         n = t.id,
         { enabled: i } = d.c.useExperiment({ location: 'GuildTooltip' }, { autoTrackExposure: !0 }),
-        { voiceUsersToShow: a, stageSpeakers: s, numStageListeners: l, streamUsersToShow: f, embeddedActivitiesUsers: _ } = V(t),
+        { voiceUsersToShow: a, stageSpeakers: s, numStageListeners: l, streamUsersToShow: _, embeddedActivitiesUsers: f } = V(t),
         p = F(u.gj8, a, n),
         h = Z(n, s, l),
-        m = F(u.hGI, f, n),
-        g = F(i ? u.iWm : u.nG3, _, n),
+        m = F(u.hGI, _, n),
+        g = F(i ? u.iWm : u.nG3, f, n),
         { isMuted: E, muteConfig: b } = (0, c.cj)(
             [P.ZP],
             () => ({
@@ -269,7 +269,7 @@ function Y(e) {
             E
                 ? (0, r.jsx)(H, {
                       muteConfig: b,
-                      className: o()(k.muteText, { [k.muteTextWithActivity]: y })
+                      className: o()(M.muteText, { [M.muteTextWithActivity]: y })
                   })
                 : null
         ]
@@ -290,7 +290,7 @@ function W(e) {
 function K(e) {
     let { guildJoinRequestStatus: t } = e;
     return (0, r.jsx)(u.Text, {
-        className: k.viewAsRolesWarning,
+        className: M.viewAsRolesWarning,
         color: 'text-default',
         variant: 'text-xs/normal',
         children: W(t)
@@ -303,32 +303,32 @@ function z(e) {
         s = null != a ? (0, r.jsx)(K, { guildJoinRequestStatus: a }) : null,
         l = n ? (0, r.jsx)(Y, { guild: t }) : null,
         d = (0, c.e7)([O.Z], () => O.Z.isViewingRoles(t.id)),
-        f = null != s ? s : l,
-        _ = (0, y.Ij)(t);
+        _ = null != s ? s : l,
+        f = (0, y.Ij)(t);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: o()(k.row, k.rowGuildName),
+                className: o()(M.row, M.rowGuildName),
                 children: [
                     i
                         ? (0, r.jsx)(g.Z, {
                               guild: t,
-                              className: k.rowIconV2
+                              className: M.rowIconV2
                           })
                         : (0, r.jsx)(m.Z, {
                               guild: t,
                               size: 20,
-                              className: k.rowIcon
+                              className: M.rowIcon
                           }),
                     (0, r.jsx)('span', {
-                        className: o()(k.guildNameText, { [k.guildNameTextLimitedSize]: null != l }),
+                        className: o()(M.guildNameText, { [M.guildNameTextLimitedSize]: null != l }),
                         children: t.name
                     })
                 ]
             }),
-            _
+            f
                 ? (0, r.jsx)(u.Text, {
-                      className: k.invitesDisabledTooltip,
+                      className: M.invitesDisabledTooltip,
                       color: 'header-secondary',
                       variant: 'text-sm/medium',
                       children: x.intl.string(x.t['2n0/Fh'])
@@ -336,12 +336,12 @@ function z(e) {
                 : null,
             d
                 ? (0, r.jsx)(u.Text, {
-                      className: k.viewAsRolesWarning,
+                      className: M.viewAsRolesWarning,
                       color: 'text-default',
                       variant: 'text-xs/normal',
                       children: x.intl.string(x.t['5LwN8/'])
                   })
-                : f
+                : _
         ]
     });
 }
@@ -358,8 +358,8 @@ function q(e) {
                   includeActivity: s
               }),
         'aria-label': a,
-        tooltipClassName: M.listItemTooltip,
-        tooltipContentClassName: M.listItemTooltipContent,
+        tooltipClassName: k.listItemTooltip,
+        tooltipContentClassName: k.listItemTooltipContent,
         children: (e) => {
             var { onFocus: t, onBlur: n } = e,
                 a = G(e, ['onFocus', 'onBlur']);

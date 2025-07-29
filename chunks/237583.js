@@ -8,7 +8,7 @@ var r,
     c = n(598077),
     u = n(436980),
     d = n(264589);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e, t, n) {
+function f(e, t, n) {
     return (0, i.jsx)(
         'div',
         {
@@ -72,30 +72,30 @@ class p extends (r = a.PureComponent) {
     }
     constructor(...e) {
         (super(...e),
-            f(this, '_ref', void 0),
-            f(this, 'defaultRenderUser', (e, t, n, r) => {
-                let { onClick: a, size: o, guildId: f } = this.props,
-                    _ = e instanceof c.Z ? e : null != e ? e.user : null;
-                return null == _
+            _(this, '_ref', void 0),
+            _(this, 'defaultRenderUser', (e, t, n, r) => {
+                let { onClick: a, size: o, guildId: _ } = this.props,
+                    f = e instanceof c.Z ? e : null != e ? e.user : null;
+                return null == f
                     ? (0, i.jsx)('div', { className: s()(u.emptyUser, t) }, n)
                     : (0, i.jsx)(
                           l.qEK,
                           {
                               tabIndex: 0,
-                              src: _.getAvatarURL(f, (0, l.pxk)(o)),
+                              src: f.getAvatarURL(_, (0, l.pxk)(o)),
                               size: o,
-                              'aria-label': _.username,
+                              'aria-label': f.username,
                               className: s()(t, d.cursorPointer, u.avatarSize),
-                              onClick: (e) => (null != a ? a(e, _, this._ref) : null)
+                              onClick: (e) => (null != a ? a(e, f, this._ref) : null)
                           },
-                          _.id
+                          f.id
                       );
             }));
     }
 }
-f(p, 'defaultProps', {
+_(p, 'defaultProps', {
     max: 10,
-    renderMoreUsers: _,
+    renderMoreUsers: f,
     size: l.EFr.SIZE_24
 });
 let h = p;

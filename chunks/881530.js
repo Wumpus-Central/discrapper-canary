@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(394821),
     i = n(841784),
     a = n(833664),
@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,10 +36,10 @@ function f(e) {
     }
     return e;
 }
-function _(e) {
-    let { location: t, user: n, currentUser: d, activity: _, application: p, entry: h, onClose: m } = e,
+function f(e) {
+    let { location: t, user: n, currentUser: d, activity: f, application: p, entry: h, onClose: m } = e,
         g = (0, s.Z)(
-            f(
+            _(
                 {
                     location: t,
                     source: o.m1.UserProfile,
@@ -47,7 +47,7 @@ function _(e) {
                 },
                 (0, c.nK)({
                     user: n,
-                    activity: _,
+                    activity: f,
                     entry: h
                 })
             )
@@ -56,15 +56,15 @@ function _(e) {
             applicationId: null == p ? void 0 : p.id,
             onClose: m
         }),
-        b = (0, i.Z)(_);
+        b = (0, i.Z)(f);
     return b && null != p
         ? E
-        : !b && (0, a.Z)(_)
+        : !b && (0, a.Z)(f)
           ? g
-          : (0, r.Z)(_) && n.id !== d.id
+          : (0, r.Z)(f) && n.id !== d.id
             ? () =>
                   (0, l.s)({
-                      activity: _,
+                      activity: f,
                       user: n,
                       index: 0
                   })

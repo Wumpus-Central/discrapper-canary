@@ -8,8 +8,8 @@ var r = n(36056),
     c = n(349992),
     u = n(320215),
     d = n(660284),
-    f = n(838390),
-    _ = n(284267),
+    _ = n(838390),
+    f = n(284267),
     p = n(973408),
     h = n(647943);
 class m {
@@ -25,7 +25,7 @@ class m {
         return ((0, u.l)(this, t, e), t);
     }
     equals(e, t) {
-        return (0, _.Y)(this, e, t);
+        return (0, f.Y)(this, e, t);
     }
     is(e, t = this.defaultCheckDepth) {
         return this.refTypeCheck.is(e, t, !1);
@@ -41,14 +41,14 @@ class m {
         return this.internalBinaryRead(n.readerFactory(e), e.byteLength, n);
     }
     fromJson(e, t) {
-        return this.internalJsonRead(e, (0, f.jl)(t));
+        return this.internalJsonRead(e, (0, _.jl)(t));
     }
     fromJsonString(e, t) {
         let n = JSON.parse(e);
         return this.fromJson(n, t);
     }
     toJson(e, t) {
-        return this.internalJsonWrite(e, (0, f.P2)(t));
+        return this.internalJsonWrite(e, (0, _.P2)(t));
     }
     toJsonString(e, t) {
         var n;

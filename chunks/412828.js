@@ -1,7 +1,7 @@
 let r;
 a.d(e, {
-    U: () => s,
-    Y: () => E
+    U: () => E,
+    Y: () => s
 });
 var _ = a(622574);
 let n = 0,
@@ -12,8 +12,8 @@ let n = 0,
             t.interactionId && ((o = Math.min(o, t.interactionId)), (n = (i = Math.max(i, t.interactionId)) ? (i - o) / 7 + 1 : 0));
         });
     },
-    s = () => (r ? n : performance.interactionCount || 0),
-    E = () => {
+    E = () => (r ? n : performance.interactionCount || 0),
+    s = () => {
         'interactionCount' in performance ||
             r ||
             (r = (0, _.N)('event', c, {

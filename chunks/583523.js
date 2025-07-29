@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function f() {
+function _() {
     let e = l.Z.getVoiceChannelId(),
         t = o.Z.bitrate;
     if (null == e) return;
@@ -32,7 +32,7 @@ function f() {
             bitrate: n.bitrate
         });
 }
-function _() {
+function f() {
     var e;
     let t = l.Z.getVoiceChannelId(),
         n = c.Z.mode;
@@ -47,7 +47,7 @@ function _() {
         });
 }
 function p() {
-    (f(), _());
+    (_(), f());
 }
 function h(e) {
     let { channels: t } = e;

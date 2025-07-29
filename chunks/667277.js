@@ -8,8 +8,8 @@ var r = n(393655),
     c = n(198050),
     u = n(217224),
     d = n(951516),
-    f = n(608297),
-    _ = n(416778),
+    _ = n(608297),
+    f = n(416778),
     p = n(633605);
 function h(e) {
     return (h =
@@ -95,7 +95,7 @@ function S(e, t, n, g) {
         v = (0, p.j)(),
         S = null != (R = null != (P = null == g ? void 0 : g.locale) ? P : v.locale) ? R : r.Z;
     if (!S.match) throw RangeError('locale must contain match property');
-    var N = (0, u.Z)(null != (w = null != (D = null != (L = null != (x = null == g ? void 0 : g.firstWeekContainsDate) ? x : null == g || null == (k = g.locale) || null == (M = k.options) ? void 0 : M.firstWeekContainsDate) ? L : v.firstWeekContainsDate) ? D : null == (j = v.locale) || null == (U = j.options) ? void 0 : U.firstWeekContainsDate) ? w : 1);
+    var N = (0, u.Z)(null != (w = null != (D = null != (L = null != (x = null == g ? void 0 : g.firstWeekContainsDate) ? x : null == g || null == (M = g.locale) || null == (k = M.options) ? void 0 : k.firstWeekContainsDate) ? L : v.firstWeekContainsDate) ? D : null == (j = v.locale) || null == (U = j.options) ? void 0 : U.firstWeekContainsDate) ? w : 1);
     if (!(N >= 1 && N <= 7)) throw RangeError('firstWeekContainsDate must be between 1 and 7 inclusively');
     var C = (0, u.Z)(null != (G = null != (B = null != (V = null != (F = null == g ? void 0 : g.weekStartsOn) ? F : null == g || null == (Z = g.locale) || null == (H = Z.options) ? void 0 : H.weekStartsOn) ? V : v.weekStartsOn) ? B : null == (Y = v.locale) || null == (W = Y.options) ? void 0 : W.weekStartsOn) ? G : 0);
     if (!(C >= 0 && C <= 6)) throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
@@ -108,8 +108,8 @@ function S(e, t, n, g) {
         D,
         L,
         x,
-        k,
         M,
+        k,
         j,
         U,
         G,
@@ -126,7 +126,7 @@ function S(e, t, n, g) {
             weekStartsOn: C,
             locale: S
         },
-        q = [new f.GT()],
+        q = [new _.GT()],
         X = O.match(y)
             .map(function (e) {
                 var t = e[0];
@@ -141,7 +141,7 @@ function S(e, t, n, g) {
             var t = K.value;
             (!(null != g && g.useAdditionalWeekYearTokens) && (0, c.Do)(t) && (0, c.qp)(t, O, e), !(null != g && g.useAdditionalDayOfYearTokens) && (0, c.Iu)(t) && (0, c.qp)(t, O, e));
             var n = t[0],
-                r = _.f[n];
+                r = f.f[n];
             if (r) {
                 var i = r.incompatibleTokens;
                 if (Array.isArray(i)) {

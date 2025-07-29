@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(314910),
     d = n(906467),
-    f = n(857192),
-    _ = n(835225),
+    _ = n(857192),
+    f = n(835225),
     p = n(117795),
     h = n(565384),
     m = n(418075);
@@ -41,7 +41,7 @@ function b() {
             }),
             s.X
         ),
-        n = (0, l.e7)([f.default], () => f.default.isAnalyticsDebuggerEnabled),
+        n = (0, l.e7)([_.default], () => _.default.isAnalyticsDebuggerEnabled),
         a = (0, l.e7)([d.Z], () => d.Z.isDeveloper),
         [E, b] = i.useState(!1),
         y = null != e ? e : {},
@@ -61,7 +61,7 @@ function b() {
                           onClick: () => {
                               b(!E);
                           },
-                          children: E ? (0, r.jsx)(_.Z, {}) : (0, r.jsx)(p.Z, {})
+                          children: E ? (0, r.jsx)(f.Z, {}) : (0, r.jsx)(p.Z, {})
                       }),
                       (0, r.jsxs)('div', {
                           className: o()(m.content, { [m.contentMinimized]: E }),

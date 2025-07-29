@@ -21,16 +21,16 @@ var r = n(512722),
     c = n(134432),
     u = n(981631);
 let d = 'mp',
-    f = 3600000,
-    _ = 'https://i.scdn.co/image/',
+    _ = 3600000,
+    f = 'https://i.scdn.co/image/',
     p = (e, t, n) => 'https://static-cdn.jtvnw.net/previews-ttv/live_user_'.concat(e, '-').concat(t, 'x').concat(n, '.jpg'),
     h = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/,
     m = (e) => 'https://i.ytimg.com/vi/'.concat(e, '/hqdefault_live.jpg'),
     g = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
     E = {
         [u.ABu.SPOTIFY]: {
-            deserialize: (e) => ''.concat(_).concat(encodeURIComponent(e)),
-            serialize: (e) => e.split(_)[1]
+            deserialize: (e) => ''.concat(f).concat(encodeURIComponent(e)),
+            serialize: (e) => e.split(f)[1]
         },
         [u.ABu.TWITCH]: {
             deserialize: (e, t) => p(encodeURIComponent(e), t[0], t[1]),
@@ -60,7 +60,7 @@ let d = 'mp',
     },
     b = {};
 function y(e) {
-    return Date.now() - e > f;
+    return Date.now() - e > _;
 }
 async function O(e) {
     let { body: t } = await a.tn.get({

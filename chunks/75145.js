@@ -13,8 +13,8 @@ var r = n(255367),
     c = n(481060),
     u = n(607070),
     d = n(243778),
-    f = n(921944),
-    _ = n(388032),
+    _ = n(921944),
+    f = n(388032),
     p = n(230889);
 let h = 0.2,
     m = 41;
@@ -25,7 +25,7 @@ function g() {
     return (
         i.useEffect(
             () => () => {
-                h && a(f.L.TAKE_ACTION);
+                h && a(_.L.TAKE_ACTION);
             },
             [h, a]
         ),
@@ -56,7 +56,7 @@ function g() {
                                     variant: 'text-xs/medium',
                                     color: 'always-white',
                                     lineClamp: 1,
-                                    children: _.intl.string(_.t['BMw+7O'])
+                                    children: f.intl.string(f.t['BMw+7O'])
                                 })
                             ]
                         }),

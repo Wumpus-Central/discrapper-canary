@@ -35,8 +35,8 @@ function d(e) {
     }
     return e;
 }
-let f = 10,
-    _ = 20 * o.Z.Millis.SECOND,
+let _ = 10,
+    f = 20 * o.Z.Millis.SECOND,
     p = {
         getActiveErrors: () => {
             let e = a.Z.getRTCConnection();
@@ -45,7 +45,7 @@ let f = 10,
             if (null == t || !i.Z.isVideoEnabled()) return null;
             let n = a.Z.getLastNonZeroRemoteVideoSinkWantsTime();
             if (
-                (null != n && performance.now() - n < _) ||
+                (null != n && performance.now() - n < f) ||
                 Object.entries(e.getRemoteVideoSinkWants()).every((e) => {
                     let [t, n] = e;
                     return 'any' === t || 0 === n;
@@ -55,7 +55,7 @@ let f = 10,
             let o = (0, c.hj)(t, r.default.getId());
             return null == o
                 ? null
-                : o.short.frameRate < f || o.long.frameRate < f
+                : o.short.frameRate < _ || o.long.frameRate < _
                   ? [
                         d(
                             {

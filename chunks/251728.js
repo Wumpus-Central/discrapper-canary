@@ -1,4 +1,4 @@
-n.d(t, { Y: () => f });
+n.d(t, { Y: () => _ });
 var r = n(685816),
     i = n(549616),
     a = n(472756),
@@ -20,9 +20,9 @@ function d(e, t, n) {
         e
     );
 }
-class f {
+class _ {
     static fromServer(e) {
-        return new f(e);
+        return new _(e);
     }
     constructor(e) {
         (d(this, 'shopBlocks', void 0),

@@ -8,8 +8,8 @@ var r,
     c = n.n(l),
     u = n(442837),
     d = n(570140),
-    f = n(812206),
-    _ = n(594190),
+    _ = n(812206),
+    f = n(594190),
     p = n(592745),
     h = n(706454),
     m = n(757266),
@@ -43,15 +43,15 @@ function L(e, t, n) {
     );
 }
 let x = 5,
-    k = c()().subtract(1, 'week'),
-    M = [],
+    M = c()().subtract(1, 'week'),
+    k = [],
     j = '',
     U = !1;
 function G(e, t) {
     return e.application.name.localeCompare(t.application.name, h.default.locale, { sensitivity: 'base' });
 }
 function B(e, t) {
-    return null != e && c()(e.createdAt).isAfter(k) && 0 === t;
+    return null != e && c()(e.createdAt).isAfter(M) && 0 === t;
 }
 let V = {
         [D.iEv.NAME]: G,
@@ -85,7 +85,7 @@ function z(e) {
 }
 function q(e, t, n, r, i) {
     if (!i && t.has(e.id)) return null;
-    let a = f.Z.getApplication(e.id);
+    let a = _.Z.getApplication(e.id);
     if (null == a) return null;
     let o = K(a, n);
     return (t.add(e.id), (0, N.Je)(e) || v.Z.isInstalled(e.id, e.branchId))
@@ -113,7 +113,7 @@ function q(e, t, n, r, i) {
         : null;
 }
 function X(e, t, n, r) {
-    let i = null != e ? f.Z.getApplication(e) : null;
+    let i = null != e ? _.Z.getApplication(e) : null;
     if (null == i || null == e || t.has(e)) return null;
     let a = K(i, n);
     return (
@@ -142,10 +142,10 @@ function X(e, t, n, r) {
     );
 }
 function Q() {
-    let e = new Set(_.ZP.getRunningVerifiedApplicationIds()),
+    let e = new Set(f.ZP.getRunningVerifiedApplicationIds()),
         t = {},
         n = new Set(),
-        r = _.ZP.getGamesSeen(!1, !1).map((e) => {
+        r = f.ZP.getGamesSeen(!1, !1).map((e) => {
             let n = g.Z.getGameByGameData(e);
             return null != n ? ((t[n.id] = e.lastFocused * T.Z.Millis.SECOND), n.id) : null;
         }),
@@ -155,11 +155,11 @@ function Q() {
         a = [...r.map((r) => X(r, n, t, e)).filter(A.lm), ...i].sort((e, t) => (e.lastPlayed === t.lastPlayed ? 0 : e.lastPlayed > t.lastPlayed ? -1 : 1));
     return (
         (U = null != g.Z.lastFetched && E.Z.fetched),
-        !s().isEqual(a, M) &&
-            ((M = a),
+        !s().isEqual(a, k) &&
+            ((k = a),
             C.isPlatformEmbedded &&
                 R.ZP.setSystemTrayApplications(
-                    Z(M)
+                    Z(k)
                         .map((e) => e.application)
                         .slice(0, x)
                 ),
@@ -168,19 +168,19 @@ function Q() {
 }
 class J extends (r = u.ZP.Store) {
     initialize() {
-        (this.syncWith([f.Z, g.Z, p.Z, _.ZP, v.Z, I.Z, E.Z, y.Z, b.Z, m.Z], Q, 200), this.syncWith([O.Z, h.default], () => !0));
+        (this.syncWith([_.Z, g.Z, p.Z, f.ZP, v.Z, I.Z, E.Z, y.Z, b.Z, m.Z], Q, 200), this.syncWith([O.Z, h.default], () => !0));
     }
     get applicationFilterQuery() {
         return j;
     }
     get applicationViewItems() {
-        return M;
+        return k;
     }
     get launchableApplicationViewItems() {
-        return Z(M);
+        return Z(k);
     }
     get libraryApplicationViewItems() {
-        return F(M);
+        return F(k);
     }
     get filteredLibraryApplicationViewItems() {
         return H(this.libraryApplicationViewItems, j);
@@ -189,7 +189,7 @@ class J extends (r = u.ZP.Store) {
         return Y(this.filteredLibraryApplicationViewItems, O.Z.sortKey, O.Z.sortDirection, h.default.locale);
     }
     get hiddenLibraryApplicationViewItems() {
-        return W(M);
+        return W(k);
     }
     get hasFetchedApplications() {
         return U;

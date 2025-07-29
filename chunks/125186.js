@@ -61,28 +61,28 @@ async function s(e) {
             u = c.getContext('2d');
         if (null == u) throw Error('could not get canvas context');
         let d = new Image(),
-            f = URL.createObjectURL(e);
+            _ = URL.createObjectURL(e);
         try {
             (await new Promise((e, t) => {
-                ((d.onload = () => e()), (d.onerror = () => t(Error('failed to load image'))), (d.src = f));
+                ((d.onload = () => e()), (d.onerror = () => t(Error('failed to load image'))), (d.src = _));
             }),
                 (c.width = d.width),
                 (c.height = d.height),
                 u.drawImage(d, 0, 0));
         } finally {
-            URL.revokeObjectURL(f);
+            URL.revokeObjectURL(_);
         }
-        let _ = await new Promise((e) => {
+        let f = await new Promise((e) => {
             c.toBlob(e, 'image/webp', 1);
         });
-        if (null == _) throw Error('failed to convert to webp');
-        let p = e.size > 0 ? _.size / e.size : 1,
+        if (null == f) throw Error('failed to convert to webp');
+        let p = e.size > 0 ? f.size / e.size : 1,
             h = 1 - p,
             m = null != (s = t.minSizeReductionPercent) ? s : a;
-        if (h < m) return (r.verbose('[WebP] Insufficient savings: '.concat(Math.round(100 * h), '% < ').concat(100 * m, '%')), i('insufficient_savings', _.size));
+        if (h < m) return (r.verbose('[WebP] Insufficient savings: '.concat(Math.round(100 * h), '% < ').concat(100 * m, '%')), i('insufficient_savings', f.size));
         let g = e.name.lastIndexOf('.'),
             E = -1 === g ? e.name : e.name.substring(0, g),
-            b = new File([_], ''.concat(E, '.webp'), {
+            b = new File([f], ''.concat(E, '.webp'), {
                 type: 'image/webp',
                 lastModified: e.lastModified
             }),
@@ -94,7 +94,7 @@ async function s(e) {
                 originalFile: e,
                 convertedFile: b,
                 sizeBefore: e.size,
-                sizeAfter: _.size,
+                sizeAfter: f.size,
                 compressionRatio: p
             }
         );

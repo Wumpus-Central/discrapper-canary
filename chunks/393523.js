@@ -6,9 +6,9 @@ var _ = a(578346),
     i = a(395848);
 function c(t) {
     let e = 'history';
-    ((0, _.Hj)(e, t), (0, _.D2)(e, s));
+    ((0, _.Hj)(e, t), (0, _.D2)(e, E));
 }
-function s() {
+function E() {
     if (!(0, n.B)()) return;
     let t = i.m.onpopstate;
     function e(t) {

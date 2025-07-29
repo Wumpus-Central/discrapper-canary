@@ -34,14 +34,14 @@ class s {
                 case 'scalar':
                 case 'enum':
                     let d = 'enum' == s.kind ? i.wx.INT32 : s.T,
-                        f = 'scalar' == s.kind ? s.L : void 0;
+                        _ = 'scalar' == s.kind ? s.L : void 0;
                     if (c) {
                         let t = l[u];
                         if (o == r.TD.LengthDelimited && d != i.wx.STRING && d != i.wx.BYTES) {
                             let n = e.uint32() + e.pos;
-                            for (; e.pos < n; ) t.push(this.scalar(e, d, f));
-                        } else t.push(this.scalar(e, d, f));
-                    } else l[u] = this.scalar(e, d, f);
+                            for (; e.pos < n; ) t.push(this.scalar(e, d, _));
+                        } else t.push(this.scalar(e, d, _));
+                    } else l[u] = this.scalar(e, d, _);
                     break;
                 case 'message':
                     if (c) {
@@ -51,8 +51,8 @@ class s {
                     } else l[u] = s.T().internalBinaryRead(e, e.uint32(), n, l[u]);
                     break;
                 case 'map':
-                    let [_, p] = this.mapEntry(s, e, n);
-                    l[u][_] = p;
+                    let [f, p] = this.mapEntry(s, e, n);
+                    l[u][f] = p;
             }
         }
     }

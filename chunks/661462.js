@@ -2,27 +2,27 @@
 var r = n(255367),
     o = n(73800),
     i = n(481060),
-    c = n(785717),
+    a = n(785717),
     l = n(128156),
-    a = n(311044),
+    c = n(311044),
     s = n(408986),
     d = n(778414),
     u = n(228168),
     f = n(662776);
 function m(e) {
-    let { user: t, currentUser: n, section: o, subsection: i, displayProfile: c, guildId: f, channelId: m, onClose: p } = e;
+    let { user: t, currentUser: n, section: o, subsection: i, displayProfile: a, guildId: f, channelId: m, onClose: p } = e;
     return o === u.oh.ACTIVITY
         ? (0, r.jsx)(l.Z, {
               user: t,
               currentUser: n,
-              displayProfile: c,
+              displayProfile: a,
               guildId: f,
               channelId: m,
               subsection: i,
               onClose: p
           })
         : o === u.oh.MUTUAL_FRIENDS
-          ? (0, r.jsx)(a.Z, {
+          ? (0, r.jsx)(c.Z, {
                 user: t,
                 guildId: f,
                 channelId: m,
@@ -34,16 +34,13 @@ function m(e) {
                   onClose: p
               })
             : o === u.oh.WIDGETS
-              ? (0, r.jsx)(d.Z, {
-                    user: t,
-                    onClose: p
-                })
+              ? (0, r.jsx)(d.Z, { user: t })
               : null;
 }
 function p(e) {
     var t, n, l;
-    let { user: a, currentUser: s, displayProfile: d, guildId: u, channelId: p, items: b, initialSection: x, initialSubsection: h, onClose: _ } = e,
-        { trackUserProfileAction: g } = (0, c.KZ)(),
+    let { user: c, currentUser: s, displayProfile: d, guildId: u, channelId: p, items: g, initialSection: b, initialSubsection: x, onClose: _ } = e,
+        { trackUserProfileAction: h } = (0, a.KZ)(),
         [{ section: y, subsection: j, text: v }, I] = o.useState(
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -72,14 +69,14 @@ function p(e) {
             })(
                 {},
                 null !=
-                    (t = b.find((e) => {
+                    (t = g.find((e) => {
                         let { section: t } = e;
-                        return t === x;
+                        return t === b;
                     }))
                     ? t
-                    : b[0]
+                    : g[0]
             )),
-            (l = l = { subsection: h }),
+            (l = l = { subsection: x }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                 : (function (e, t) {
@@ -107,16 +104,16 @@ function p(e) {
                     look: 'custom',
                     selectedItem: y,
                     onItemSelect: (e) => {
-                        (g({
+                        (h({
                             action: 'PRESS_SECTION',
                             section: e
                         }),
                             I((t) => {
                                 var n;
-                                return null != (n = b.find((t) => t.section === e)) ? n : t;
+                                return null != (n = g.find((t) => t.section === e)) ? n : t;
                             }));
                     },
-                    children: b.map((e) =>
+                    children: g.map((e) =>
                         (0, r.jsx)(
                             i.njP.Item,
                             {
@@ -135,7 +132,7 @@ function p(e) {
                 'aria-label': v,
                 className: f.tabBarPanel,
                 children: (0, r.jsx)(m, {
-                    user: a,
+                    user: c,
                     currentUser: s,
                     displayProfile: d,
                     guildId: u,

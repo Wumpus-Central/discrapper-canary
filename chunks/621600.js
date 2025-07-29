@@ -22,8 +22,8 @@ var l = n(630388),
     c = n(981631),
     u = n(468788),
     d = n(490897),
-    f = n(526761);
-function _(e, t, n) {
+    _ = n(526761);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -99,7 +99,7 @@ let E = {
     });
 function y(e, t, n, a, o) {
     var s, d;
-    let _ = function (e) {
+    let f = function (e) {
             var t, n, r, i, a, o, s;
             let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 c = null != l.mute_config && null != l.mute_config.end_time ? new Date(l.mute_config.end_time).getTime() : e.guild_muted_until,
@@ -116,12 +116,12 @@ function y(e, t, n, a, o) {
                 guild_scheduled_events_muted: null != (s = l.mute_scheduled_events) ? s : e.guild_scheduled_events_muted
             };
         },
-        h = _(n),
-        g = _(T(e), t),
+        h = f(n),
+        g = f(T(e), t),
         E = O(h, g, 'RETURN_PREVIOUS_WHEN_CHANGED'),
         y = null != (s = E('guild_flags')) ? s : 0,
         v = (null != (d = g.guild_flags) ? d : 0) ^ y,
-        I = 0 === (0, l.M1)(v, f.vc.OPT_IN_CHANNELS_OFF, f.vc.OPT_IN_CHANNELS_ON);
+        I = 0 === (0, l.M1)(v, _.vc.OPT_IN_CHANNELS_OFF, _.vc.OPT_IN_CHANNELS_ON);
     r.ZP.trackWithMetadata(
         c.rMx.NOTIFICATION_SETTINGS_UPDATED,
         m(p({}, g, i.Z.getStats(e)), {
@@ -151,7 +151,7 @@ function v(e) {
 }
 function I(e) {
     var t, n, s, d;
-    let { updateType: _ = u.I.CHANNEL, guildId: h, channelId: g, applicationId: E, change: y, previous: I, label: T, location: S } = e,
+    let { updateType: f = u.I.CHANNEL, guildId: h, channelId: g, applicationId: E, change: y, previous: I, label: T, location: S } = e,
         N = function (e) {
             var t, n;
             let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -172,15 +172,15 @@ function I(e) {
         w = a.Z.getChannel(g),
         D = null != (n = P('channel_flags')) ? n : 0,
         L = (null != (s = R.channel_flags) ? s : 0) ^ D,
-        x = 0 === (0, l.M1)(L, f.ic.FAVORITED, f.ic.OPT_IN_ENABLED),
-        k = null != (d = null == (t = o.Z.getLastMessage(g)) ? void 0 : t.type) ? d : null;
+        x = 0 === (0, l.M1)(L, _.ic.FAVORITED, _.ic.OPT_IN_ENABLED),
+        M = null != (d = null == (t = o.Z.getLastMessage(g)) ? void 0 : t.type) ? d : null;
     r.ZP.trackWithMetadata(
         c.rMx.NOTIFICATION_SETTINGS_UPDATED,
         m(p({}, R, i.Z.getStats(h)), {
             location: S,
             guild_id: h,
             channel_id: g,
-            update_type: _,
+            update_type: f,
             label: T,
             parent_id: null != w ? w.parent_id : null,
             channel_flags_old: P('channel_flags'),
@@ -189,7 +189,7 @@ function I(e) {
             channel_is_overridden_old: P('channel_is_overridden'),
             channel_message_notification_settings_old: P('channel_message_notification_settings'),
             is_opt_in_only_change: x,
-            last_message_type: k,
+            last_message_type: M,
             application_id: E
         })
     );

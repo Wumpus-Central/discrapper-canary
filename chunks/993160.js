@@ -1,26 +1,26 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var o = n(755721),
     i = n(572691),
-    c = n(906732),
+    a = n(906732),
     l = n(444141),
-    a = n(705556),
+    c = n(705556),
     s = n(30556),
     d = n(664794),
     u = n(522182),
     f = n(821706),
     m = n(562831),
     p = n(981631);
-function b(e) {
-    let { user: t, currentUser: n, guildId: b, channelId: x, displayProfile: h, relationshipType: _, onClose: g } = e,
-        { newestAnalyticsLocation: y } = (0, c.ZP)(),
+function g(e) {
+    let { user: t, currentUser: n, guildId: g, channelId: b, displayProfile: x, relationshipType: _, onClose: h } = e,
+        { newestAnalyticsLocation: y } = (0, a.ZP)(),
         j = (0, l.Z)({
             user: t,
-            guildId: b,
-            channelId: x,
-            displayProfile: h,
-            onClose: g
+            guildId: g,
+            channelId: b,
+            displayProfile: x,
+            onClose: h
         }),
         { gameFriends: v, hasOutgoingPendingGameFriends: I, hasIncomingPendingGameFriends: O } = (0, m.H)({ userId: t.id }),
         P = v.length > 0 || I || O;
@@ -29,16 +29,16 @@ function b(e) {
         : t.id === n.id
           ? (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(a.Z, {
+                    (0, r.jsx)(c.Z, {
                         user: t,
-                        guildId: b,
-                        onClose: g
+                        guildId: g,
+                        onClose: h
                     }),
-                    (0, r.jsx)(u.Z, { onClose: g }),
+                    (0, r.jsx)(u.Z, { onClose: h }),
                     (0, r.jsx)(d.Z, {
                         type: 'icon',
                         user: t,
-                        guildId: b,
+                        guildId: g,
                         viewProfileItem: j,
                         themeColor: 'secondary'
                     })
@@ -56,7 +56,7 @@ function b(e) {
                       (0, r.jsx)(d.Z, {
                           type: 'icon',
                           user: t,
-                          guildId: b,
+                          guildId: g,
                           viewProfileItem: j,
                           themeColor: 'secondary'
                       })
@@ -75,7 +75,7 @@ function b(e) {
                         (0, r.jsx)(d.Z, {
                             type: 'icon',
                             user: t,
-                            guildId: b,
+                            guildId: g,
                             themeColor: 'secondary'
                         })
                     ]
@@ -101,7 +101,7 @@ function b(e) {
                           (0, r.jsx)(d.Z, {
                               type: 'icon',
                               user: t,
-                              guildId: b,
+                              guildId: g,
                               viewProfileItem: j,
                               themeColor: 'secondary'
                           })
@@ -131,7 +131,7 @@ function b(e) {
                             (0, r.jsx)(d.Z, {
                                 type: 'icon',
                                 user: t,
-                                guildId: b,
+                                guildId: g,
                                 viewProfileItem: j,
                                 themeColor: 'secondary'
                             })
@@ -155,7 +155,7 @@ function b(e) {
                             (0, r.jsx)(d.Z, {
                                 type: 'icon',
                                 user: t,
-                                guildId: b,
+                                guildId: g,
                                 viewProfileItem: j,
                                 themeColor: 'secondary'
                             })

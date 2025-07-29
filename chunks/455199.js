@@ -13,8 +13,8 @@ var r,
     c = n(570140),
     u = n(786761),
     d = n(572804),
-    f = n(901461),
-    _ = n(814082),
+    _ = n(901461),
+    f = n(814082),
     p = n(23750),
     h = n(314897),
     m = n(592125),
@@ -67,8 +67,8 @@ let A = 'recentMentionFilterSettings',
     }),
     L = !1,
     x = 0,
-    k = !1;
-function M(e) {
+    M = !1;
+function k(e) {
     ((C = {}),
         e.forEach((e) => {
             (null == C[e.getChannelId()] && (C[e.getChannelId()] = 0), C[e.getChannelId()]++);
@@ -134,12 +134,12 @@ function F() {
 }
 function Z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    if ((0, f.Z)(e) && !I.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type)) return null;
+    if ((0, _.Z)(e) && !I.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type)) return null;
     null == t && (t = e.channel_id);
     let n = m.Z.getChannel(t);
     if (null == n || n.type === I.d4z.DM || (D.guildFilter === I.NgX.THIS_SERVER && n.getGuildId() !== y.Z.getGuildId())) return null;
     let r = h.default.getId();
-    if (b.Z.isBlockedOrIgnoredForMessage(e) || (0, _.Z)(e, r)) return null;
+    if (b.Z.isBlockedOrIgnoredForMessage(e) || (0, f.Z)(e, r)) return null;
     e = G(e);
     let i = !D.everyoneFilter,
         a = !D.roleFilter;
@@ -149,7 +149,7 @@ function Z(e) {
         suppressEveryone: i,
         suppressRoles: a
     })
-        ? (k &&
+        ? (M &&
               E.ZP.ackMessageId(n.id) !== e.id &&
               (0, d.ZP)({
                   message: e,
@@ -157,7 +157,7 @@ function Z(e) {
                   suppressEveryone: O.ZP.isSuppressEveryoneEnabled(n.getGuildId()),
                   suppressRoles: O.ZP.isSuppressRolesEnabled(n.getGuildId())
               }) &&
-              (k = !1),
+              (M = !1),
           e)
         : null;
 }
@@ -222,7 +222,7 @@ function q(e) {
             let t = Z(e);
             null != t && (i.push(t), (R[t.id] = !0));
         }),
-        M((N = i)),
+        k((N = i)),
         0 === N.length && (L = !1));
 }
 function X() {
@@ -230,7 +230,7 @@ function X() {
     L = !1;
 }
 function Q() {
-    ((N = []), (R = {}), (L = !1), (k = !1), (C = {}));
+    ((N = []), (R = {}), (L = !1), (M = !1), (C = {}));
 }
 function J(e) {
     let { guild: t } = e,
@@ -259,7 +259,7 @@ function en(e) {
     N.length > (N = N.slice(0, t)).length && (w = !0);
 }
 function er(e) {
-    k = !0;
+    M = !0;
 }
 class ei extends (r = o.ZP.Store) {
     initialize() {
@@ -296,7 +296,7 @@ class ei extends (r = o.ZP.Store) {
         return D.roleFilter;
     }
     get mentionsAreStale() {
-        return k;
+        return M;
     }
     get mentionCountByChannel() {
         return C;

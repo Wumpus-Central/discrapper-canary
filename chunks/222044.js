@@ -20,7 +20,7 @@ function u(e, t, n) {
     );
 }
 let d = new Worker(new URL('/assets/' + n.u('80493'), n.b));
-function f(e) {
+function _(e) {
     return new Promise((t) => {
         let n = (r) => {
             let {
@@ -31,7 +31,7 @@ function f(e) {
         (null == d || d.addEventListener('message', n), null == d || d.postMessage({ url: e }));
     });
 }
-function _(e) {
+function f(e) {
     let t = [],
         n = e.defaultReactionEmoji;
     if ((null == n ? void 0 : n.emojiId) != null) {
@@ -66,8 +66,8 @@ class p extends r.Z {
         let n = a.Z.getChannel(t);
         null != n &&
             n.isForumLikeChannel() &&
-            _(n).forEach((e) => {
-                null != e && 0 !== e.length && f(e);
+            f(n).forEach((e) => {
+                null != e && 0 !== e.length && _(e);
             });
     }
     constructor(...e) {

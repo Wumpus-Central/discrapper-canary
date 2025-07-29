@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(206074),
@@ -60,14 +60,14 @@ function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -76,22 +76,22 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-function _(e) {
+function f(e) {
     var { ButtonComponent: t = a.Z, application: n, location: s } = e,
         c = d(e, ['ButtonComponent', 'application', 'location']);
-    let f = (0, i.Z)({
+    let _ = (0, i.Z)({
             application: n,
             location: s
         }),
-        _ = () => {
-            null == f || f();
+        f = () => {
+            null == _ || _();
         };
     return (0, r.jsx)(
         t,
         u(
             l(
                 {
-                    onClick: _,
+                    onClick: f,
                     fullWidth: !0
                 },
                 c

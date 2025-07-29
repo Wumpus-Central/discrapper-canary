@@ -17,12 +17,12 @@ let i = (0, n._I)(() => {
                         ((function (t, e) {
                             let a = t.message,
                                 r = e.message;
-                            return (!!a || !!r) && (!a || !!r) && (!!a || !r) && a === r && !!s(t, e) && !!c(t, e) && !0;
+                            return (!!a || !!r) && (!a || !!r) && (!!a || !r) && a === r && !!E(t, e) && !!c(t, e) && !0;
                         })(a, _) ||
                             (function (t, e) {
-                                let a = E(e),
-                                    r = E(t);
-                                return !!a && !!r && a.type === r.type && a.value === r.value && !!s(t, e) && !!c(t, e);
+                                let a = s(e),
+                                    r = s(t);
+                                return !!a && !!r && a.type === r.type && a.value === r.value && !!E(t, e) && !!c(t, e);
                             })(a, _)))
                 )
                     return (o.X && r.kg.warn('Event dropped due to being a duplicate of previously captured event.'), null);
@@ -43,7 +43,7 @@ function c(t, e) {
     }
     return !0;
 }
-function s(t, e) {
+function E(t, e) {
     let a = t.fingerprint,
         r = e.fingerprint;
     if (!a && !r) return !0;
@@ -54,6 +54,6 @@ function s(t, e) {
         return !1;
     }
 }
-function E(t) {
+function s(t) {
     return t.exception && t.exception.values && t.exception.values[0];
 }

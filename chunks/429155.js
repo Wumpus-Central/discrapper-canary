@@ -8,9 +8,9 @@ var r = n(255367),
     c = n(122567),
     u = n(98528),
     d = n(204922);
-let f = 20,
-    _ = i.forwardRef(function (e, t) {
-        let { categories: n, store: a, hasSearchResults: c, listPadding: _, renderRow: h, renderSection: m, renderSectionHeader: g, renderSectionFooter: E, renderInspector: b, renderEmptySearchState: y, rowCount: O, rowCountBySection: v, rowHeight: I, sectionHeaderHeight: T, sectionFooterHeight: S, renderUpsell: A } = e,
+let _ = 20,
+    f = i.forwardRef(function (e, t) {
+        let { categories: n, store: a, hasSearchResults: c, listPadding: f, renderRow: h, renderSection: m, renderSectionHeader: g, renderSectionFooter: E, renderInspector: b, renderEmptySearchState: y, rowCount: O, rowCountBySection: v, rowHeight: I, sectionHeaderHeight: T, sectionFooterHeight: S, renderUpsell: A } = e,
             N = i.useRef(!1),
             C = i.useRef(null),
             R = (0, l.Iu)((e) => e.searchQuery),
@@ -21,7 +21,7 @@ let f = 20,
                 isScrolling: N,
                 listRef: C,
                 onActiveCategoryIndexChange: a.setActiveCategoryIndex,
-                scrollOffset: f,
+                scrollOffset: _,
                 searchQuery: R
             }),
             L = i.useCallback(
@@ -92,7 +92,7 @@ let f = 20,
                         ? y()
                         : (0, r.jsx)(o.Z, {
                               role: 'none presentation',
-                              listPadding: _,
+                              listPadding: f,
                               onScroll: L,
                               renderRow: h,
                               renderSection: m,
@@ -130,4 +130,4 @@ function h(e) {
         areOnlyNitroLockedSectionsVisible: a.areOnlyNitroLockedSectionsVisible
     });
 }
-let m = _;
+let m = f;

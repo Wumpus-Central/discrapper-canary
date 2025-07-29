@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(213459),
     u = n(434404),
     d = n(795594),
-    f = n(881998),
-    _ = n(430824),
+    _ = n(881998),
+    f = n(430824),
     p = n(496675),
     h = n(981631),
     m = n(388032);
@@ -17,13 +17,13 @@ function g(e) {
     var t;
     let { user: g, application: E, guildId: b, context: y, onItemClick: O } = e,
         v = null != (t = null == E ? void 0 : E.id) ? t : null == g ? void 0 : g.id,
-        I = _.Z.getGuild(b),
+        I = f.Z.getGuild(b),
         T = (0, a.e7)([p.Z], () => (null != I ? p.Z.can(h.Plq.MANAGE_GUILD, I) : null)),
         S = !0,
         A = !0,
         N = (0, c.LD)(b, A),
         C = (0, c.PL)(S, A),
-        R = (0, a.e7)([f.Z], () => null != f.Z.getNewestTokenForApplication(v)),
+        R = (0, a.e7)([_.Z], () => null != _.Z.getNewestTokenForApplication(v)),
         { isUserApp: P, isGuildApp: w } = i.useMemo(() => {
             var e, t, n, r;
             if (null == v)

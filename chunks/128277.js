@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(100527),
     u = n(906732),
     d = n(379357),
-    f = n(358696),
-    _ = n(649700),
+    _ = n(358696),
+    f = n(649700),
     p = n(313201),
     h = n(952164),
     m = n(960870),
@@ -81,8 +81,8 @@ function L(e) {
     let { user: t, currentUser: n, activity: a, className: R, onClose: w } = e,
         L = (0, p.Dt)(),
         x = (0, p.Dt)(),
-        { themeType: k } = (0, b.z)(),
-        M = (0, _.Z)({
+        { themeType: M } = (0, b.z)(),
+        k = (0, f.Z)({
             activity: a,
             user: t
         }),
@@ -94,7 +94,7 @@ function L(e) {
             display: 'live',
             user: t,
             activity: a,
-            entry: M,
+            entry: k,
             analyticsLocations: B
         }),
         F = (0, g.Z)({
@@ -172,7 +172,7 @@ function L(e) {
                             display: 'live',
                             user: t,
                             activity: a,
-                            entry: M,
+                            entry: k,
                             onClose: w
                         })
                     })
@@ -182,9 +182,9 @@ function L(e) {
                     children: (0, r.jsxs)('div', {
                         className: C.content,
                         children: [
-                            (0, r.jsx)(f.E, {
+                            (0, r.jsx)(_.E, {
                                 image: G,
-                                size: k === N.lY.MODAL_V2 ? f.J.SIZE_100 : f.J.SIZE_60,
+                                size: M === N.lY.MODAL_V2 ? _.J.SIZE_100 : _.J.SIZE_60,
                                 className: C.clickableImage,
                                 onClick: (e) => {
                                     (e.stopPropagation(), V({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, h.Z5)(a, t.id));
@@ -212,14 +212,14 @@ function L(e) {
                                         className: C.badges
                                     }),
                                     H(),
-                                    k === N.lY.MODAL_V2 && Y()
+                                    M === N.lY.MODAL_V2 && Y()
                                 ]
                             }),
-                            k === N.lY.MODAL && Y()
+                            M === N.lY.MODAL && Y()
                         ]
                     })
                 }),
-                k !== N.lY.MODAL && k !== N.lY.MODAL_V2 && Y()
+                M !== N.lY.MODAL && M !== N.lY.MODAL_V2 && Y()
             ]
         })
     });

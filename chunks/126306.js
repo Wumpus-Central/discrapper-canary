@@ -10,12 +10,12 @@ let u = 200;
 var d = (function (e) {
     return ((e[(e.TRANSLATE = 1)] = 'TRANSLATE'), (e[(e.SCALE = 2)] = 'SCALE'), (e[(e.FADE = 3)] = 'FADE'), e);
 })(d || {});
-let f = Object.freeze({
+let _ = Object.freeze({
         1: c.translate,
         2: c.scale,
         3: c.fade
     }),
-    _ = Object.freeze({
+    f = Object.freeze({
         top: c.animatorTop,
         bottom: c.animatorBottom,
         left: c.animatorLeft,
@@ -48,8 +48,8 @@ function p(e) {
         }, [t, g]),
         (0, r.jsx)('div', {
             'data-popout-animating': E,
-            className: o()(null != t ? _[t] : null, {
-                [f[p]]: null != t,
+            className: o()(null != t ? f[t] : null, {
+                [_[p]]: null != t,
                 [c.didRender]: h
             }),
             children: a

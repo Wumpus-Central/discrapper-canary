@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(49691),
     i = n(316138),
     a = n(874900),
@@ -20,7 +20,7 @@ function d(e) {
     }
     return null;
 }
-function f(e) {
+function _(e) {
     for (var t = (0, r.Z)(e), n = u(e); n && (0, s.Z)(n) && 'static' === (0, a.Z)(n).position; ) n = u(n);
     return n && ('html' === (0, i.Z)(n) || ('body' === (0, i.Z)(n) && 'static' === (0, a.Z)(n).position)) ? t : n || d(e) || t;
 }

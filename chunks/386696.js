@@ -13,19 +13,19 @@ var r = n(442837),
 function u(e, t) {
     let [n, r, u] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [s.default, a.Z, o.Z],
         d = r.getGuild(e),
-        f = n.getUser(t);
+        _ = n.getUser(t);
     return (
         !(
             null == d ||
-            null == f ||
-            f.isNonUserBot() ||
-            (0, i.eM)(d, f) ||
+            null == _ ||
+            _.isNonUserBot() ||
+            (0, i.eM)(d, _) ||
             l.BT({
                 permission: c.Plq.ADMINISTRATOR,
-                user: f,
+                user: _,
                 context: d
             })
-        ) && u.canManageUser(c.Plq.MODERATE_MEMBERS, f, d)
+        ) && u.canManageUser(c.Plq.MODERATE_MEMBERS, _, d)
     );
 }
 function d(e, t) {

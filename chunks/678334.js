@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(906732),
     u = n(600164),
     d = n(717401),
-    f = n(160913),
-    _ = n(311821),
+    _ = n(160913),
+    f = n(311821),
     p = n(459965),
     h = n(858987),
     m = n(855775),
@@ -25,15 +25,15 @@ var r = n(255367),
     A = n(981631),
     N = n(843856);
 function C(e) {
-    let { premiumSubscription: t, setPurchaseState: n, onBack: a, onNext: C, legalTermsNodeRef: R, flashLegalTerms: P, invoiceError: w, planError: D, onPurchaseError: L, baseAnalyticsData: x, flowStartTime: k, trialId: M, planGroup: j, analyticsLocation: U, purchaseTokenAuthState: G, openInvoiceId: B, metadata: V, backButtonEligible: F, disablePurchase: Z, isTrial: H = !1, onPaymentSourceAdd: Y } = e,
+    let { premiumSubscription: t, setPurchaseState: n, onBack: a, onNext: C, legalTermsNodeRef: R, flashLegalTerms: P, invoiceError: w, planError: D, onPurchaseError: L, baseAnalyticsData: x, flowStartTime: M, trialId: k, planGroup: j, analyticsLocation: U, purchaseTokenAuthState: G, openInvoiceId: B, metadata: V, backButtonEligible: F, disablePurchase: Z, isTrial: H = !1, onPaymentSourceAdd: Y } = e,
         { selectedPlan: W, priceOptions: K, setHasAcceptedTerms: z, setPurchaseError: q, purchaseType: X, paymentSourceId: Q, paymentSources: J, selectedSkuId: $, skusById: ee, skuPricePreviewsById: et, referralCode: en, contextMetadata: er, invoicePreview: ei, inReverseTrial: ea, premiumBrandRefreshBackgroundClassName: eo } = (0, y.JL)(),
-        { isGift: es, selectedGiftStyle: el, customGiftMessage: ec, emojiConfetti: eu, soundEffect: ed, giftRecipient: ef, selectedGiftingPromotionReward: e_ } = (0, b.wD)(),
+        { isGift: es, selectedGiftStyle: el, customGiftMessage: ec, emojiConfetti: eu, soundEffect: ed, giftRecipient: e_, selectedGiftingPromotionReward: ef } = (0, b.wD)(),
         ep = (0, d.a5)(W),
-        eh = (0, g.MY)(ef),
+        eh = (0, g.MY)(e_),
         em = {};
-    ((em.gift_style = el), (em.reward_sku_ids = ep && (null == e_ ? void 0 : e_.skuId) != null ? [null == e_ ? void 0 : e_.skuId] : []), eh === g.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (o()(null != ef, 'Gift recipient must be set at purchase review step for these gift options.'), (em.recipient_id = ef.id), (em.custom_message = ec), (em.emoji_id = null == eu ? void 0 : eu.id), (em.emoji_name = (null == eu ? void 0 : eu.id) == null ? (null == eu ? void 0 : eu.surrogates) : void 0), (em.sound_id = null == ed ? void 0 : ed.soundId)));
+    ((em.gift_style = el), (em.reward_sku_ids = ep && (null == ef ? void 0 : ef.skuId) != null ? [null == ef ? void 0 : ef.skuId] : []), eh === g.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (o()(null != e_, 'Gift recipient must be set at purchase review step for these gift options.'), (em.recipient_id = e_.id), (em.custom_message = ec), (em.emoji_id = null == eu ? void 0 : eu.id), (em.emoji_name = (null == eu ? void 0 : eu.id) == null ? (null == eu ? void 0 : eu.surrogates) : void 0), (em.sound_id = null == ed ? void 0 : ed.soundId)));
     let eg = null == W ? void 0 : W.id,
-        eE = (0, v.sE)(M, K.paymentSourceId, eg),
+        eE = (0, v.sE)(k, K.paymentSourceId, eg),
         { analyticsLocations: eb } = (0, c.ZP)(),
         ey = (0, T.m)(J, Q),
         [eO, ev] = i.useState(eE),
@@ -41,7 +41,7 @@ function C(e) {
         { hasEntitlements: eS } = (0, p.H)(eg, es),
         eA = (0, E.Ap)(K.paymentSourceId),
         eN = eS || eE,
-        eC = (0, f.U)(),
+        eC = (0, _.U)(),
         eR = (0, s.e7)([I.Z], () => I.Z.currentOrderId),
         eP = null,
         ew = null;
@@ -64,10 +64,10 @@ function C(e) {
                 baseAnalyticsData: x,
                 analyticsLocation: U,
                 analyticsLocations: eb,
-                flowStartTime: k,
+                flowStartTime: M,
                 subscriptionPlan: W,
                 planGroup: j,
-                trialId: M,
+                trialId: k,
                 priceOptions: K,
                 paymentSource: ey,
                 isPrepaidPaymentPastDue: eC,
@@ -87,7 +87,7 @@ function C(e) {
         },
         ex = {
             baseAnalyticsData: x,
-            flowStartTime: k,
+            flowStartTime: M,
             makePurchase: eL,
             onNext: C,
             onPurchaseError: L,
@@ -96,15 +96,15 @@ function C(e) {
             purchaseTokenAuthState: G,
             setPurchaseState: n
         },
-        ek = i.useRef(ex);
+        eM = i.useRef(ex);
     (i.useEffect(() => {
-        ek.current = ex;
+        eM.current = ex;
     }),
         i.useEffect(() => {
-            let { makePurchase: e } = ek.current;
+            let { makePurchase: e } = eM.current;
             eE && !es && null == t && e();
         }, [eE, es, t]));
-    let eM = null != B || (X === A.GZQ.ONE_TIME && !es);
+    let ek = null != B || (X === A.GZQ.ONE_TIME && !es);
     return eE
         ? null
         : (0, r.jsxs)(l.mzw, {
@@ -130,10 +130,10 @@ function C(e) {
                       onPaymentSourceAdd: Y
                   }),
                   (0, r.jsx)(S.Z, {}),
-                  F && !eM
+                  F && !ek
                       ? (0, r.jsx)('div', {
                             className: N.back,
-                            children: (0, r.jsx)(_.Z, { onClick: a })
+                            children: (0, r.jsx)(f.Z, { onClick: a })
                         })
                       : null
               ]

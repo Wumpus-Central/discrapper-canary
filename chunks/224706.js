@@ -8,8 +8,8 @@ var r = n(664751),
     c = n(638880),
     u = n(812206),
     d = n(439849),
-    f = n(510839),
-    _ = n(813370),
+    _ = n(510839),
+    f = n(813370),
     p = n(669764),
     h = n(706454),
     m = n(757266),
@@ -31,7 +31,7 @@ let w = 3,
     D = 20;
 function L(e) {
     let { applicationId: t, secret: n, channelId: r, intent: i = R.Ws.PLAY, embedded: a = !1, source: o, locationObject: s, analyticsLocations: c } = e;
-    M({
+    k({
         applicationId: t,
         channelId: r,
         embedded: a,
@@ -64,7 +64,7 @@ function x(e, t) {
               sku: t
           };
 }
-function k(e) {
+function M(e) {
     return o.tn
         .post({
             url: C.ANM.OAUTH2_AUTHORIZE,
@@ -95,12 +95,12 @@ function k(e) {
             }
         );
 }
-async function M(e) {
+async function k(e) {
     let { applicationId: t, branchId: n, channelId: r, embedded: i = !1, source: a, locationObject: o = {}, analyticsLocations: s = [] } = e;
     if (i) {
         let e = u.Z.getApplication(t);
-        return null != e && (0, _.g)(e)
-            ? ((0, f.s2)({ applicationId: t }), 0)
+        return null != e && (0, f.g)(e)
+            ? ((0, _.s2)({ applicationId: t }), 0)
             : (await (0, c.Z)({
                     applicationId: t,
                     activityChannelId: null != r ? r : void 0,
@@ -123,7 +123,7 @@ async function M(e) {
         if (null == e) throw Error('Missing dispatch game when launching');
         let i = E.Z.getLibraryApplication(t, n);
         if (null == i) throw Error('Missing library application when launching');
-        d = k(t).then((t) => v.Z.launchDispatchApplication(e, t, h.default.locale, i.getBranchName(), r));
+        d = M(t).then((t) => v.Z.launchDispatchApplication(e, t, h.default.locale, i.getBranchName(), r));
     } else {
         let e = u.Z.getApplication(t);
         d = null != e ? v.Z.launch(e) : v.Z.launchGame(t);
@@ -348,7 +348,7 @@ let j = {
             game: e
         });
     },
-    launch: M,
+    launch: k,
     async join(e) {
         let { userId: t, sessionId: n, applicationId: r, channelId: i, messageId: a, intent: o = R.Ws.PLAY, embedded: s = !1, source: c, locationObject: u, analyticsLocations: d } = e;
         if (__OVERLAY__)

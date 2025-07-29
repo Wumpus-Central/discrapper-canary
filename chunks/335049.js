@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => I });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -47,7 +47,7 @@ function S(e) {
     }
     return e;
 }
-function I(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,7 +65,7 @@ function I(e, t) {
         e
     );
 }
-function E(e) {
+function I(e) {
     let { guild: t, id: l, type: o, isLocked: a, lockTooltipText: c } = e,
         d = !a || null != c;
     s()(d, 'No lockTooltipText provided while isLocked=true');
@@ -76,7 +76,7 @@ function E(e) {
                 return (t) =>
                     (0, r.jsx)(
                         e,
-                        I(S({}, t), {
+                        E(S({}, t), {
                             id: l,
                             label: C.intl.string(C.t.oJ1Mu7)
                         })
@@ -191,7 +191,7 @@ function w(e) {
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                I(S({}, t), {
+                                E(S({}, t), {
                                     guild: l,
                                     role: m
                                 })
@@ -273,7 +273,7 @@ function P(e) {
         children: (e) =>
             (0, r.jsx)(
                 'div',
-                I(S({ className: N.lockIcon }, e), {
+                E(S({ className: N.lockIcon }, e), {
                     children: (0, r.jsx)(d.mBM, {
                         size: 'xs',
                         color: 'currentColor'

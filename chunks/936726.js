@@ -64,12 +64,12 @@ function S(e, t) {
         e
     );
 }
-let I = (e) => {
+let E = (e) => {
     if (null == e) return null;
     let t = new g.Z(e);
     return v.ZP.getUserTag(t);
 };
-function E(e, t) {
+function I(e, t) {
     return null != t && /^data:/.test(t)
         ? t
         : (0, h.ov)({
@@ -83,7 +83,7 @@ function T(e) {
         [Z, P] = i.useState(!1),
         [A] = i.useState(new s.V7());
     i.useEffect(() => () => A.stop(), [A]);
-    let k = i.useMemo(() => E(n, n.avatar), [n]),
+    let k = i.useMemo(() => I(n, n.avatar), [n]),
         D = i.useCallback(() => {
             let e = ''.concat((0, a.K0)(!1)).concat(y.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
             (0, x.JG)(e);
@@ -123,7 +123,7 @@ function T(e) {
         ? L.push({
               icon: c.T39,
               text: _.intl.formatToPlainString(_.t['7EcUbm'], {
-                  user: I(n.user),
+                  user: E(n.user),
                   timestamp: j.default.extractTimestamp(n.id)
               })
           })
@@ -153,7 +153,7 @@ function T(e) {
                                             onChange: (e) => {
                                                 u.Z.updateWebhook({ avatar: e });
                                             },
-                                            makeURL: (e) => E(n, e),
+                                            makeURL: (e) => I(n, e),
                                             imageClassName: C.avatarUploaderInner,
                                             showIcon: !0
                                         }),

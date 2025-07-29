@@ -13,21 +13,21 @@ var r = n(255367),
     c = n(481060),
     u = n(607070),
     d = n(706454),
-    f = n(70956),
-    _ = n(506071),
+    _ = n(70956),
+    f = n(506071),
     p = n(719247),
     h = n(561308),
     m = n(419732);
 function g(e) {
     let [t, n] = i.useState(Date.now()),
-        r = (0, _.n)(),
+        r = (0, f.n)(),
         a = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         o = !r || (a && !e);
     return (
         i.useEffect(() => {
             let e = new l.Xp();
             return (
-                e.start(o ? 15 * f.Z.Millis.SECOND : f.Z.Millis.SECOND, () => {
+                e.start(o ? 15 * _.Z.Millis.SECOND : _.Z.Millis.SECOND, () => {
                     n(Date.now());
                 }),
                 () => e.stop()
@@ -40,9 +40,9 @@ function g(e) {
     );
 }
 let E = (e) => {
-        let { entry: t, inline: n = !1, textColor: a, textTabularNumbers: s = !0, textFontCode: l = !0, hovered: u = !1, bold: d = !1, scaleFontToUserSetting: f = !1 } = e,
-            { now: _ } = g(u),
-            p = i.useMemo(() => (0, h.T_)(t, _), [t, _]),
+        let { entry: t, inline: n = !1, textColor: a, textTabularNumbers: s = !0, textFontCode: l = !0, hovered: u = !1, bold: d = !1, scaleFontToUserSetting: _ = !1 } = e,
+            { now: f } = g(u),
+            p = i.useMemo(() => (0, h.T_)(t, f), [t, f]),
             E = i.useRef(p),
             b = i.useRef(p);
         return (
@@ -61,7 +61,7 @@ let E = (e) => {
                 variant: 'text-xs/medium',
                 tabularNumbers: s,
                 color: a,
-                scaleFontToUserSetting: f,
+                scaleFontToUserSetting: _,
                 'aria-label': E.current,
                 children: p
             })
@@ -70,8 +70,8 @@ let E = (e) => {
     b = (e) => {
         var t, n;
         let { entry: i, textColor: a, hovered: o = !1, bold: l = !1, scaleFontToUserSetting: u = !1 } = e,
-            f = (0, h.Jg)(i),
-            _ = (0, s.e7)([d.default], () => d.default.locale),
+            _ = (0, h.Jg)(i),
+            f = (0, s.e7)([d.default], () => d.default.locale),
             m = (0, s.e7)([p.Z], () => p.Z.getMatchingActivity(i)),
             g = null != (n = null == m || null == (t = m.timestamps) ? void 0 : t.start) ? n : null == m ? void 0 : m.created_at;
         return null != g
@@ -82,7 +82,7 @@ let E = (e) => {
                   bold: l,
                   scaleFontToUserSetting: u
               })
-            : f
+            : _
               ? (0, r.jsx)(E, {
                     entry: i,
                     textColor: a,
@@ -95,6 +95,6 @@ let E = (e) => {
                     color: a,
                     lineClamp: 1,
                     scaleFontToUserSetting: u,
-                    children: (0, h.GL)(i, _)
+                    children: (0, h.GL)(i, f)
                 });
     };

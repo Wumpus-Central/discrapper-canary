@@ -13,8 +13,8 @@ var i,
     c = n(843991),
     u = n(442837),
     d = n(570140),
-    f = n(344185),
-    _ = n(144140),
+    _ = n(344185),
+    f = n(144140),
     p = n(314897),
     h = n(592125),
     m = n(306680),
@@ -48,17 +48,17 @@ let O = [],
     D = o().chain(O),
     L = new Set(),
     x = new Set();
-function k(e) {
+function M(e) {
     var t;
     return null != (t = m.ZP.lastMessageId(e)) ? t : e;
 }
-function M(e) {
-    let t = _.Z.getCount(e);
+function k(e) {
+    let t = f.Z.getCount(e);
     return null === t || 0 === t;
 }
 function j(e) {
     return function (t, n) {
-        return (0, b.yv)(t) ? -1 : (0, b.yv)(n) ? 1 : e === l.z.LATEST_ACTIVITY ? E.default.compare(k(n), k(t)) : E.default.compare(n, t);
+        return (0, b.yv)(t) ? -1 : (0, b.yv)(n) ? 1 : e === l.z.LATEST_ACTIVITY ? E.default.compare(M(n), M(t)) : E.default.compare(n, t);
     };
 }
 function U(e, t) {
@@ -84,7 +84,7 @@ function V(e) {
     let t = h.Z.getChannel(e);
     return null == t
         ? []
-        : Object.values(f.Z.getThreadsForParent(t.guild_id, t.id))
+        : Object.values(_.Z.getThreadsForParent(t.guild_id, t.id))
               .map((e) => {
                   let { id: t } = e;
                   return t;
@@ -95,7 +95,7 @@ function F(e) {
     let t = h.Z.getChannel(I);
     if (null == t) return;
     ((null == e ? void 0 : e.refreshThreadIds) &&
-        ((P = Object.values(f.Z.getThreadsForParent(t.guild_id, t.id)).map((e) => {
+        ((P = Object.values(_.Z.getThreadsForParent(t.guild_id, t.id)).map((e) => {
             let { id: t } = e;
             return t;
         })),
@@ -105,7 +105,7 @@ function F(e) {
         0 !== x.size && ((P = Array.from(new Set([...P, ...x]))), x.clear()),
         ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && ((D = o().chain(P).sort(j(l.z.LATEST_ACTIVITY))), (w = o().chain(P).sort(j(l.z.CREATION_DATE)))));
     let n = (S === l.z.LATEST_ACTIVITY ? D : w).value(),
-        i = (C = 0 === T.size ? n : n.filter(U(T, A))).find((e) => M(e));
+        i = (C = 0 === T.size ? n : n.filter(U(T, A))).find((e) => k(e));
     r = null == i ? null : i;
 }
 function Z(e) {
@@ -152,7 +152,7 @@ function q(e) {
 }
 class X extends (i = u.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, f.Z, g.Z, m.ZP);
+        this.waitFor(h.Z, _.Z, g.Z, m.ZP);
     }
     getNewThreadCount() {
         return N;

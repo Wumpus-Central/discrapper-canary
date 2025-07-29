@@ -56,13 +56,13 @@ function d(e, t) {
         e
     );
 }
-let f = null;
-function _(e) {
+let _ = null;
+function f(e) {
     let { applicationId: t } = e,
         n = (0, o.ZP)(t);
     null != n &&
-        (null != f && (f = null),
-        (f = {
+        (null != _ && (_ = null),
+        (_ = {
             applicationId: t,
             url: n,
             connectedSince: Date.now(),
@@ -71,26 +71,26 @@ function _(e) {
 }
 function p(e) {
     let { applicationId: t } = e;
-    (null == f ? void 0 : f.applicationId) === t && (f = null);
+    (null == _ ? void 0 : _.applicationId) === t && (_ = null);
 }
 function h(e) {
     let { applicationId: t, layoutMode: n } = e;
-    (null == f ? void 0 : f.applicationId) === t && (f = d(c({}, f), { layoutMode: n }));
+    (null == _ ? void 0 : _.applicationId) === t && (_ = d(c({}, _), { layoutMode: n }));
 }
 class m extends (r = i.ZP.Store) {
     getConnectedFrame() {
-        return f;
+        return _;
     }
     getFrameLayoutMode() {
-        return null == f ? void 0 : f.layoutMode;
+        return null == _ ? void 0 : _.layoutMode;
     }
     isFrameActive() {
-        return null != f;
+        return null != _;
     }
 }
 l(m, 'displayName', 'FramesStore');
 let g = new m(a.Z, {
-    FRAME_LAUNCH: _,
+    FRAME_LAUNCH: f,
     FRAME_STOP: p,
     FRAME_UPDATE_LAYOUT_MODE: h
 });

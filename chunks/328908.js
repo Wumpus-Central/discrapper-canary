@@ -71,11 +71,11 @@ let d = Object.freeze({
         messageSendConfetti: {},
         messageReactionConfetti: void 0
     }),
-    f = (0, r.U)(() => d),
-    _ = (e, t) => {
+    _ = (0, r.U)(() => d),
+    f = (e, t) => {
         (a.default.track(o.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: t }),
             (0, i.j)(() => {
-                f.setState((t) => {
+                _.setState((t) => {
                     let { messageSendConfetti: n } = t;
                     return {
                         messageSendConfetti: u(l({}, n), {
@@ -91,7 +91,7 @@ let d = Object.freeze({
     },
     p = (e) => {
         (0, i.j)(() => {
-            f.setState((t) => {
+            _.setState((t) => {
                 let { messageSendConfetti: n } = t,
                     r = l({}, n);
                 return (delete r[e], { messageSendConfetti: r });
@@ -99,18 +99,18 @@ let d = Object.freeze({
         });
     },
     h = (e, t) => {
-        null != f.getState().messageSendConfetti[e] ? p(e) : _(e, t);
+        null != _.getState().messageSendConfetti[e] ? p(e) : f(e, t);
     },
     m = (e) => {
-        let t = f.getState();
+        let t = _.getState();
         null != t.messageSendConfetti[e] && 0 === t.messageSendConfetti[e].state && (t.messageSendConfetti[e].hasAutoPopped = !0);
     };
 function g(e) {
-    return f((t) => null != t.messageSendConfetti[e]);
+    return _((t) => null != t.messageSendConfetti[e]);
 }
 function E(e, t) {
     return (0, i.j)(() => {
-        f.setState((n) => {
+        _.setState((n) => {
             let { messageSendConfetti: r } = n;
             return {
                 messageSendConfetti: u(l({}, r), {
@@ -124,36 +124,36 @@ function E(e, t) {
     });
 }
 function b(e) {
-    return f((t) => {
+    return _((t) => {
         var n;
         return null == (n = t.messageSendConfetti[e]) ? void 0 : n.emoji;
     });
 }
 function y(e) {
     var t;
-    return null == (t = f.getState().messageSendConfetti[e]) ? void 0 : t.emoji;
+    return null == (t = _.getState().messageSendConfetti[e]) ? void 0 : t.emoji;
 }
 function O(e) {
     return (0, i.j)(() => {
-        f.setState(() => ({ messageReactionConfetti: e }));
+        _.setState(() => ({ messageReactionConfetti: e }));
     });
 }
 function v() {
     return (0, i.j)(() => {
-        f.setState(() => ({ messageReactionConfetti: void 0 }));
+        _.setState(() => ({ messageReactionConfetti: void 0 }));
     });
 }
 function I(e, t, n) {
     n ? O(e) : E(e, t);
 }
 function T(e, t) {
-    return f((n) => {
+    return _((n) => {
         var r;
         return t ? n.messageReactionConfetti : null == (r = n.messageSendConfetti[e]) ? void 0 : r.emoji;
     });
 }
 function S(e) {
-    return f((t) => {
+    return _((t) => {
         let n = t.messageSendConfetti[e];
         if ((null == n ? void 0 : n.state) === 0) return n.hasAutoPopped;
     });

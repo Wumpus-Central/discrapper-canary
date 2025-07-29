@@ -85,12 +85,12 @@ e.exports = function (e) {
         c = '[0-9](_?[0-9])*',
         u = `(\\b(${c}))?\\.(${c})|\\b(${c})\\.`,
         d = `\\b|${r.join('|')}`,
-        f = {
+        _ = {
             className: 'number',
             relevance: 0,
             variants: [{ begin: `(\\b(${c})|(${u}))[eE][+-]?(${c})[jJ]?(?=${d})` }, { begin: `(${u})[jJ]?` }, { begin: `\\b([1-9](_?[0-9])*|0+(_?0)*)[lLjJ]?(?=${d})` }, { begin: `\\b0[bB](_?[01])+[lL]?(?=${d})` }, { begin: `\\b0[oO](_?[0-7])+[lL]?(?=${d})` }, { begin: `\\b0[xX](_?[0-9a-fA-F])+[lL]?(?=${d})` }, { begin: `\\b(${c})[jJ](?=${d})` }]
         },
-        _ = {
+        f = {
             className: 'comment',
             begin: t.lookahead(/# type:/),
             end: /$/,
@@ -118,12 +118,12 @@ e.exports = function (e) {
                     excludeBegin: !0,
                     excludeEnd: !0,
                     keywords: i,
-                    contains: ['self', a, f, l, e.HASH_COMMENT_MODE]
+                    contains: ['self', a, _, l, e.HASH_COMMENT_MODE]
                 }
             ]
         };
     return (
-        (o.contains = [l, f, a]),
+        (o.contains = [l, _, a]),
         {
             name: 'Python',
             aliases: ['py', 'gyp', 'ipython'],
@@ -132,7 +132,7 @@ e.exports = function (e) {
             illegal: /(<\/|\?)|=>/,
             contains: [
                 a,
-                f,
+                _,
                 {
                     scope: 'variable.language',
                     match: /\bself\b/
@@ -146,7 +146,7 @@ e.exports = function (e) {
                     scope: 'keyword'
                 },
                 l,
-                _,
+                f,
                 e.HASH_COMMENT_MODE,
                 {
                     match: [/\bdef/, /\s+/, n],
@@ -175,7 +175,7 @@ e.exports = function (e) {
                     className: 'meta',
                     begin: /^[\t ]*@/,
                     end: /(?=#)|$/,
-                    contains: [f, p, l]
+                    contains: [_, p, l]
                 }
             ]
         }

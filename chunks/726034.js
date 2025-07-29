@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(680018),
     u = n(146187),
     d = n(861066),
-    f = n(179538),
-    _ = n(755721),
+    _ = n(179538),
+    f = n(755721),
     p = n(481060),
     h = n(153867),
     m = n(230711),
@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(877865),
     L = n(536847),
     x = n(981631),
-    k = n(921944),
-    M = n(474936),
+    M = n(921944),
+    k = n(474936),
     j = n(671147),
     U = n(388032),
     G = n(882903);
@@ -109,7 +109,7 @@ function Y(e) {
         children: (0, r.jsx)(u.P, {
             size: 'sm',
             onClick: () => {
-                (null == t || t(k.L.USER_DISMISS), (0, y.Ll)());
+                (null == t || t(M.L.USER_DISMISS), (0, y.Ll)());
             }
         })
     });
@@ -148,7 +148,7 @@ function K(e) {
 }
 function z(e) {
     let { markAsDismissed: t } = e,
-        n = (0, T.m)(M.p9.TIER_2);
+        n = (0, T.m)(k.p9.TIER_2);
     return (0, r.jsxs)('div', {
         className: G.coachmarkHeaderContainer,
         children: [
@@ -290,7 +290,7 @@ function J(e) {
 }
 function $(e) {
     let { onSaveTheme: t, canApply: n } = e,
-        i = (0, T.m)(M.p9.TIER_2);
+        i = (0, T.m)(k.p9.TIER_2);
     return (
         (0, w.hf)(i, E.Z.CUSTOM_THEMES_EDITOR_COACHMARK),
         (0, r.jsxs)('div', {
@@ -309,9 +309,9 @@ function $(e) {
                               section: x.jXE.CUSTOM_THEMES_COACHMARK_FOOTER
                           },
                           textOptions: { subscribeText: U.intl.string(U.t.JST6jo) },
-                          subscriptionTier: M.Si.TIER_2,
+                          subscriptionTier: k.Si.TIER_2,
                           showGradient: !0,
-                          color: _.Tt.BRAND
+                          color: f.Tt.BRAND
                       })
             ]
         })
@@ -319,7 +319,7 @@ function $(e) {
 }
 function ee(e) {
     let { onSaveTheme: t, canApply: n, metadata: i } = e,
-        a = (0, T.m)(M.p9.TIER_2);
+        a = (0, T.m)(k.p9.TIER_2);
     (0, w.hf)(a, E.Z.CUSTOM_THEMES_EDITOR);
     let o = () => {
         ((0, w.Vb)(), (0, O.Q3)(l.z.CUSTOM_THEME_COACHMARK), (null == i ? void 0 : i.from) === y.tE.SETTING ? (m.Z.open(), (0, y.Ll)()) : (null == i ? void 0 : i.from) === y.tE.CLIENT_THEMES_EDITOR ? (0, y.XO)(y.wh.CLIENT_THEMES) : (0, y.Ll)());
@@ -328,7 +328,7 @@ function ee(e) {
         className: G.footerContainer,
         children: [
             (0, r.jsx)(Q, { type: 'no-text' }),
-            (0, r.jsx)(f.A, {
+            (0, r.jsx)(_.A, {
                 variant: 'secondary',
                 onClick: o,
                 text: U.intl.string(U.t['13/7kZ'])
@@ -340,8 +340,8 @@ function ee(e) {
                   })
                 : (0, r.jsx)(I.Z, {
                       className: G.subscribeButton,
-                      size: _.zx.Sizes.MEDIUM,
-                      subscriptionTier: M.Si.TIER_2,
+                      size: f.zx.Sizes.MEDIUM,
+                      subscriptionTier: k.Si.TIER_2,
                       showGradient: !0,
                       premiumModalAnalyticsLocation: {
                           page: x.ZY5.PREMIUM_UPSELL_CUSTOM_THEMES,
@@ -357,25 +357,25 @@ function et(e) {
     let { metadata: n, markAsDismissed: a, isCoachmark: o } = e,
         u = P.M.useExperiment({ location: 'ClientThemeColorPickerTools' }).enabled,
         d = (0, R.jJ)(),
-        f = i.useRef(!1),
-        { colors: _, chassisMixAmount: m, gradientAngle: v, setColors: I, setChassisMixAmount: T, setGradientAngle: C } = (0, N.Ig)(),
-        [x, M] = i.useState(null != (t = _[0]) ? t : N.Dp),
+        _ = i.useRef(!1),
+        { colors: f, chassisMixAmount: m, gradientAngle: v, setColors: I, setChassisMixAmount: T, setGradientAngle: C } = (0, N.Ig)(),
+        [x, k] = i.useState(null != (t = f[0]) ? t : N.Dp),
         j = (0, s.e7)([A.Z], () => A.Z.theme),
         B = (0, O.Nj)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
         { analyticsLocations: V } = (0, b.ZP)(E.Z.CUSTOM_THEMES_EDITOR),
         F = async () => {
-            ((f.current = !0),
+            ((_.current = !0),
                 await (0, h.ZI)({
                     theme: j,
                     customUserThemeSettings: {
-                        colors: _,
+                        colors: f,
                         gradientColorStops: [],
                         gradientAngle: v,
                         baseMix: m
                     }
                 }),
-                (0, w.u7)(_, m, v, j, V),
-                null == a || a(k.L.TAKE_ACTION),
+                (0, w.u7)(f, m, v, j, V),
+                null == a || a(M.L.TAKE_ACTION),
                 B || (0, O.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
                 (0, y.Ll)(),
                 (0, S.UD)());
@@ -383,15 +383,15 @@ function et(e) {
         Z = () => {
             (d(R._m.RESET_BUTTON), (0, w.uf)());
         },
-        H = _.length > 0;
+        H = f.length > 0;
     return (i.useEffect(
         () => () => {
-            f.current || d(R._m.EDITOR_CLOSE);
+            _.current || d(R._m.EDITOR_CLOSE);
         },
         [d]
     ),
     (0, g.ZP)(() => {
-        o || (0, R.lT)(_, x, I);
+        o || (0, R.lT)(f, x, I);
     }),
     u)
         ? (0, r.jsx)('div', {
@@ -411,13 +411,13 @@ function et(e) {
                                   (0, r.jsx)(L.o, {}),
                                   (0, r.jsx)(D.U, {
                                       onChange: (e) => {
-                                          (M(e), 0 === _.length && (0, R.lT)(_, e, I));
+                                          (k(e), 0 === f.length && (0, R.lT)(f, e, I));
                                       },
                                       value: x,
-                                      colors: _,
+                                      colors: f,
                                       setColors: I
                                   }),
-                                  _.length > 1 &&
+                                  f.length > 1 &&
                                       (0, r.jsx)(q, {
                                           gradientAngle: v,
                                           setGradientAngle: C
@@ -425,7 +425,7 @@ function et(e) {
                                   (0, r.jsx)(X, {
                                       chassisMixAmount: m,
                                       setChassisMixAmount: (e) => {
-                                          (T(e), 0 === _.length && (0, R.lT)(_, x, I));
+                                          (T(e), 0 === f.length && (0, R.lT)(f, x, I));
                                       }
                                   }),
                                   (0, r.jsx)(c.z, {

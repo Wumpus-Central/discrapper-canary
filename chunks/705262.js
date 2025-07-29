@@ -14,8 +14,8 @@ var r = n(255367),
     c = n(524437),
     u = n(481060),
     d = n(37234),
-    f = n(153867),
-    _ = n(607070),
+    _ = n(153867),
+    f = n(607070),
     p = n(100527),
     h = n(906732),
     m = n(550385),
@@ -37,8 +37,8 @@ var r = n(255367),
     D = n(981631),
     L = n(474936),
     x = n(874893),
-    k = n(526761),
-    M = n(231338),
+    M = n(526761),
+    k = n(231338),
     j = n(388032),
     U = n(622581);
 function G(e, t, n) {
@@ -117,8 +117,8 @@ var Y = (function (e) {
     return ((e.EDITOR = 'EDITOR'), (e.SETTINGS = 'SETTINGS'), e);
 })({});
 let W = Object.freeze({
-        EDITOR: k.fy.SLOW_USER_ACTION,
-        SETTINGS: k.fy.INFREQUENT_USER_ACTION
+        EDITOR: M.fy.SLOW_USER_ACTION,
+        SETTINGS: M.fy.INFREQUENT_USER_ACTION
     }),
     K = i.createContext({}),
     z = (e) => {
@@ -248,7 +248,7 @@ let W = Object.freeze({
             }),
             [b, y] = i.useState(!1),
             [O, v] = i.useState(-1),
-            I = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
+            I = (0, l.e7)([f.Z], () => f.Z.useReducedMotion),
             T = C.M.useExperiment({ location: 'GradientSelectors' }).enabled;
         i.useEffect(() => {
             ((O === w.XV.length - 2 && 'EDITOR' === a) || E === c.Us.EASTER_EGG) && y(!0);
@@ -261,7 +261,7 @@ let W = Object.freeze({
                         analyticsLocations: s,
                         themeName: c.Us[e.id]
                     }),
-                    (0, f.ZI)(
+                    (0, _.ZI)(
                         {
                             backgroundGradientPresetId: e.id,
                             theme: e.theme,
@@ -358,7 +358,7 @@ let W = Object.freeze({
                         analyticsLocations: o,
                         themeName: 'default '.concat(e)
                     }),
-                    (0, f.ZI)({ theme: e }, a));
+                    (0, _.ZI)({ theme: e }, a));
             };
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -370,24 +370,24 @@ let W = Object.freeze({
                         onSelect: () => d('system')
                     }),
                 (0, r.jsx)(P.bD, {
-                    theme: M.BR.LIGHT,
-                    isSelected: c && !u && s === M.BR.LIGHT,
-                    onSelect: () => d(M.BR.LIGHT)
+                    theme: k.BR.LIGHT,
+                    isSelected: c && !u && s === k.BR.LIGHT,
+                    onSelect: () => d(k.BR.LIGHT)
                 }),
                 (0, r.jsx)(P.bD, {
-                    theme: M.BR.DARK,
-                    isSelected: c && !u && s === M.BR.DARK,
-                    onSelect: () => d(M.BR.DARK)
+                    theme: k.BR.DARK,
+                    isSelected: c && !u && s === k.BR.DARK,
+                    onSelect: () => d(k.BR.DARK)
                 }),
                 (0, r.jsx)(P.bD, {
-                    theme: M.BR.DARKER,
-                    isSelected: c && !u && s === M.BR.DARKER,
-                    onSelect: () => d(M.BR.DARKER)
+                    theme: k.BR.DARKER,
+                    isSelected: c && !u && s === k.BR.DARKER,
+                    onSelect: () => d(k.BR.DARKER)
                 }),
                 (0, r.jsx)(P.bD, {
-                    theme: M.BR.MIDNIGHT,
-                    isSelected: c && !u && s === M.BR.MIDNIGHT,
-                    onSelect: () => d(M.BR.MIDNIGHT)
+                    theme: k.BR.MIDNIGHT,
+                    isSelected: c && !u && s === k.BR.MIDNIGHT,
+                    onSelect: () => d(k.BR.MIDNIGHT)
                 }),
                 !n &&
                     !t &&

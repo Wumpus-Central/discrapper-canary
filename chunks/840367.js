@@ -3,14 +3,14 @@ var r = n(255367);
 n(73800);
 var o = n(481060),
     i = n(388032),
-    c = n(196880);
+    a = n(196880);
 function l(e) {
     let { title: t, subtitle: n, headingId: l } = e;
     return (0, r.jsxs)('div', {
-        className: c.headerRow,
+        className: a.headerRow,
         children: [
             (0, r.jsxs)('div', {
-                className: c.title,
+                className: a.title,
                 children: [
                     (0, r.jsx)(o.X6q, {
                         variant: 'heading-sm/medium',
@@ -27,7 +27,7 @@ function l(e) {
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: c.actions,
+                className: a.actions,
                 children: [
                     (0, r.jsx)(o.zxk, {
                         size: 'sm',

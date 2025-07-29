@@ -1,5 +1,5 @@
 a.d(e, {
-    Wz: () => E,
+    Wz: () => s,
     m9: () => c,
     re: () =>
         function t(e, a = {}, n) {
@@ -19,9 +19,9 @@ a.d(e, {
                     return e.apply(this, r);
                 } catch (t) {
                     throw (
-                        s++,
+                        E++,
                         setTimeout(() => {
-                            s--;
+                            E--;
                         }),
                         (0, r.$e)((e) => {
                             (e.addEventProcessor(
@@ -56,7 +56,7 @@ var r = a(263449),
     o = a(370336),
     i = a(394798);
 let c = n.n,
-    s = 0;
-function E() {
-    return s > 0;
+    E = 0;
+function s() {
+    return E > 0;
 }

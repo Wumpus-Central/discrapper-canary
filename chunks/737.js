@@ -56,19 +56,24 @@ function O(e) {
             [n, e, t],
             r.pF
         );
-    return (0, r.cj)([u.Z], () => {
-        let e = 0,
-            t = 0;
-        return {
-            searchResults: O.map((n) =>
-                n.filter((n) => {
-                    let r = u.Z.isBlockedForMessage(n),
-                        i = u.Z.isIgnoredForMessage(n);
-                    return (r && n.isSearchHit ? e++ : i && n.isSearchHit && t++, (!r && !i) || n.isSearchHit);
-                })
-            ),
-            blockCount: e,
-            ignoreCount: t
-        };
-    });
+    return (0, r.e7)(
+        [u.Z],
+        () => {
+            let e = 0,
+                t = 0;
+            return {
+                searchResults: O.map((n) =>
+                    n.filter((n) => {
+                        let r = u.Z.isBlockedForMessage(n),
+                            i = u.Z.isIgnoredForMessage(n);
+                        return (r && n.isSearchHit ? e++ : i && n.isSearchHit && t++, (!r && !i) || n.isSearchHit);
+                    })
+                ),
+                blockCount: e,
+                ignoreCount: t
+            };
+        },
+        [O],
+        r.pF
+    );
 }

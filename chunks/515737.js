@@ -16,13 +16,13 @@ let i = ['EventTarget', 'Window', 'Node', 'ApplicationCache', 'AudioTrackList', 
         return {
             name: 'BrowserApiErrors',
             setupOnce() {
-                (e.setTimeout && (0, _.hl)(o.m9, 'setTimeout', s), e.setInterval && (0, _.hl)(o.m9, 'setInterval', s), e.requestAnimationFrame && (0, _.hl)(o.m9, 'requestAnimationFrame', E), e.XMLHttpRequest && 'XMLHttpRequest' in o.m9 && (0, _.hl)(XMLHttpRequest.prototype, 'send', l));
+                (e.setTimeout && (0, _.hl)(o.m9, 'setTimeout', E), e.setInterval && (0, _.hl)(o.m9, 'setInterval', E), e.requestAnimationFrame && (0, _.hl)(o.m9, 'requestAnimationFrame', s), e.XMLHttpRequest && 'XMLHttpRequest' in o.m9 && (0, _.hl)(XMLHttpRequest.prototype, 'send', l));
                 let t = e.eventTarget;
                 t && (Array.isArray(t) ? t : i).forEach(u);
             }
         };
     });
-function s(t) {
+function E(t) {
     return function (...e) {
         let a = e[0];
         return (
@@ -37,7 +37,7 @@ function s(t) {
         );
     };
 }
-function E(t) {
+function s(t) {
     return function (e) {
         return t.apply(this, [
             (0, o.re)(e, {

@@ -3,8 +3,8 @@ a.d(e, {
     _I: () => I,
     m7: () => l,
     m8: () => c,
-    q4: () => s,
-    uf: () => E
+    q4: () => E,
+    uf: () => s
 });
 var r = a(394798),
     _ = a(622916),
@@ -36,7 +36,7 @@ function c(t) {
     }
     return n;
 }
-function s(t, e) {
+function E(t, e) {
     let a = {};
     return (
         e.forEach((e) => {
@@ -45,7 +45,7 @@ function s(t, e) {
         a
     );
 }
-function E(t, e) {
+function s(t, e) {
     for (let a of e) a && a.afterAllSetup && a.afterAllSetup(t);
 }
 function l(t, e, a) {

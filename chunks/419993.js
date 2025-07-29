@@ -8,8 +8,8 @@ var r,
     c = n(84735),
     u = n(15127),
     d = n(766646),
-    f = n(993365),
-    _ = n(179240),
+    _ = n(993365),
+    f = n(179240),
     p = n(388032),
     h = n(999249),
     m = n(165005),
@@ -87,7 +87,7 @@ class T extends (r = a.Component) {
         let e = this.getErrorMessage();
         return null == e
             ? null
-            : (0, i.jsx)(f.x, {
+            : (0, i.jsx)(_.x, {
                   id: b,
                   variant: 'text-xs/normal',
                   color: 'text-danger',
@@ -97,8 +97,8 @@ class T extends (r = a.Component) {
     }
     render() {
         var e, t;
-        let { disabled: n, value: r, placeholder: a, autoFocus: o, minLength: l, maxLength: u, allowOverflow: f, spellCheck: E, resizeable: b, className: v, id: I, rows: T, flex: S, autosize: A, required: N, onInvalid: C, inputRef: R } = this.props,
-            P = A ? _.l : 'textarea',
+        let { disabled: n, value: r, placeholder: a, autoFocus: o, minLength: l, maxLength: u, allowOverflow: _, spellCheck: E, resizeable: b, className: v, id: I, rows: T, flex: S, autosize: A, required: N, onInvalid: C, inputRef: R } = this.props,
+            P = A ? f.l : 'textarea',
             w = this.hasError(),
             D = null != (t = this.props['aria-labelledby']) ? t : null == (e = this.context) ? void 0 : e.titleId,
             L = this.getAriaDescribedBy();
@@ -126,7 +126,7 @@ class T extends (r = a.Component) {
                                 value: r,
                                 autoFocus: o,
                                 minLength: l,
-                                maxLength: f ? void 0 : u,
+                                maxLength: _ ? void 0 : u,
                                 spellCheck: E,
                                 required: N,
                                 onChange: this.onChange,

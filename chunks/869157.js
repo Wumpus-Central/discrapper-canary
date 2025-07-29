@@ -23,8 +23,8 @@ var r = n(255367),
     C = n(905753),
     N = n(399860),
     S = n(335049),
-    I = n(617012),
-    E = n(981631),
+    E = n(617012),
+    I = n(981631),
     T = n(388032),
     w = n(981263);
 function Z(e) {
@@ -75,8 +75,8 @@ function A(e) {
         f = (0, a.e7)([x.Z], () => x.Z.getGuild(l));
     o()(null != f, '');
     let v = (0, a.e7)([h.Z], () => h.Z.getSortedRoles(l)),
-        [S, I] = i.useState(new Set()),
-        E = i.useMemo(() => {
+        [S, E] = i.useState(new Set()),
+        I = i.useMemo(() => {
             let e = (0, p.bD)(l),
                 t = v.toReversed().reduce((e, t, n) => ((e[t.id] = n), e), {});
             return Object.values(m)
@@ -137,8 +137,8 @@ function A(e) {
         let e = Object.values(m)
             .filter((e) => e.type === u.Kw.USER && !e.canRead && !S.has(e.id))
             .map((e) => e.id);
-        0 !== e.length && (c.Z.requestMembersById(l, e, !1), I((t) => new Set([...t, ...e])));
-    }, [l, m, S, I]);
+        0 !== e.length && (c.Z.requestMembersById(l, e, !1), E((t) => new Set([...t, ...e])));
+    }, [l, m, S, E]);
     let P = (0, a.e7)([C.Z], () => C.Z.getApplicationId()),
         A = (0, a.e7)([_.default], () =>
             null == P
@@ -149,8 +149,8 @@ function A(e) {
                   })
         ),
         D = (0, a.e7)([b.Z], () => void 0 !== A && b.Z.canShowToggleTooltip(A.id));
-    return E.length > 0
-        ? E.map((e) =>
+    return I.length > 0
+        ? I.map((e) =>
               (0, r.jsx)(
                   k,
                   {
@@ -189,7 +189,7 @@ function k(e) {
         if (k) {
             var e;
             v.default.track(
-                E.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
+                I.rMx.COMMANDS_MIGRATION_TOOLTIP_VIEWED,
                 P(Z({}, (0, d.hH)(a.id)), {
                     application_id: null == j || null == (e = j.application) ? void 0 : e.id,
                     location: 'toggle'
@@ -209,7 +209,7 @@ function k(e) {
                     'div',
                     P(Z({}, e), {
                         ref: R,
-                        children: (0, r.jsx)(I.Z, {
+                        children: (0, r.jsx)(E.Z, {
                             isDisabled: N,
                             currentValue: x.permission,
                             onChange: k

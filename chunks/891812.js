@@ -1,5 +1,5 @@
 let r;
-(n.d(t, { Z: () => _ }), n(388685));
+(n.d(t, { Z: () => f }), n(388685));
 var i = n(46973),
     a = n(846027),
     o = n(147913),
@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-class f extends o.Z {
+class _ extends o.Z {
     constructor(...e) {
         (super(...e),
             d(this, 'handlePostConnectionOpen', () => {
@@ -42,4 +42,4 @@ class f extends o.Z {
             }));
     }
 }
-let _ = new f();
+let f = new _();

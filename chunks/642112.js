@@ -1,34 +1,34 @@
 a.d(e, { Z: () => n });
 var r = a(573736),
     _ = a(886115);
-function n(t, e, a = 250, c, s, E, l) {
+function n(t, e, a = 250, c, E, s, l) {
     var u, I;
-    if (!E.exception || !E.exception.values || !l || !(0, r.V9)(l.originalException, Error)) return;
-    let d = E.exception.values.length > 0 ? E.exception.values[E.exception.values.length - 1] : void 0;
-    d &&
-        (E.exception.values =
-            ((u = (function t(e, a, _, n, c, s, E, l) {
-                if (s.length >= _ + 1) return s;
-                let u = [...s];
+    if (!s.exception || !s.exception.values || !l || !(0, r.V9)(l.originalException, Error)) return;
+    let R = s.exception.values.length > 0 ? s.exception.values[s.exception.values.length - 1] : void 0;
+    R &&
+        (s.exception.values =
+            ((u = (function t(e, a, _, n, c, E, s, l) {
+                if (E.length >= _ + 1) return E;
+                let u = [...E];
                 if ((0, r.V9)(n[c], Error)) {
-                    o(E, l);
+                    o(s, l);
                     let r = e(a, n[c]),
-                        s = u.length;
-                    (i(r, c, s, l), (u = t(e, a, _, n[c], c, [r, ...u], r, s)));
+                        E = u.length;
+                    (i(r, c, E, l), (u = t(e, a, _, n[c], c, [r, ...u], r, E)));
                 }
                 return (
                     Array.isArray(n.errors) &&
-                        n.errors.forEach((n, s) => {
+                        n.errors.forEach((n, E) => {
                             if ((0, r.V9)(n, Error)) {
-                                o(E, l);
+                                o(s, l);
                                 let r = e(a, n),
                                     I = u.length;
-                                (i(r, `errors[${s}]`, I, l), (u = t(e, a, _, n, c, [r, ...u], r, I)));
+                                (i(r, `errors[${E}]`, I, l), (u = t(e, a, _, n, c, [r, ...u], r, I)));
                             }
                         }),
                     u
                 );
-            })(t, e, s, l.originalException, c, E.exception.values, d, 0)),
+            })(t, e, E, l.originalException, c, s.exception.values, R, 0)),
             (I = a),
             u.map((t) => (t.value && (t.value = (0, _.$G)(t.value, I)), t))));
 }

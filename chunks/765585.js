@@ -8,19 +8,19 @@ var r = n(255367),
     c = n(393238),
     u = n(428967),
     d = n(266454),
-    f = n(605236),
-    _ = n(279745),
+    _ = n(605236),
+    f = n(279745),
     p = n(921944),
     h = n(388032),
     m = n(418952);
 let g = 280,
     E = i.forwardRef(function (e, t) {
-        let { body: n, header: a, artClassName: E, headerClassName: b, contentClassName: y, tryItText: O, dismissText: v, onTryFeature: I, onClose: T, className: S, inlineArt: A = !1, isPremiumFeature: N = !1, shouldUseHorizontalButtons: C = !1, showGIFTag: R = !1, dismissibleContent: P, position: w = 'top', align: D = 'center', art: L, isPremiumEarlyAccess: x = !1, maxWidth: k = g, hideDismissButton: M = !1, pointerClassName: j, dismissIconClassName: U, dismissIcon: G, onDismissIconClick: B, tryItButtonColor: V } = e,
+        let { body: n, header: a, artClassName: E, headerClassName: b, contentClassName: y, tryItText: O, dismissText: v, onTryFeature: I, onClose: T, className: S, inlineArt: A = !1, isPremiumFeature: N = !1, shouldUseHorizontalButtons: C = !1, showGIFTag: R = !1, dismissibleContent: P, position: w = 'top', align: D = 'center', art: L, isPremiumEarlyAccess: x = !1, maxWidth: M = g, hideDismissButton: k = !1, pointerClassName: j, dismissIconClassName: U, dismissIcon: G, onDismissIconClick: B, tryItButtonColor: V } = e,
             F = C ? s.zx.Sizes.LARGE : s.zx.Sizes.MAX,
             [Z, H] = i.useState(!1),
             { ref: Y, width: W } = (0, c.ZP)();
         function K(e) {
-            if ((0, u.lg)(P)) return void (0, f.bj)(P, { dismissAction: e });
+            if ((0, u.lg)(P)) return void (0, _.bj)(P, { dismissAction: e });
             (0, d.Q3)(P, { dismissAction: e });
         }
         function z() {
@@ -38,10 +38,10 @@ let g = 280,
             i.useEffect(() => {
                 var e, t;
                 let n = (null != (t = null == (e = Y.current) ? void 0 : e.scrollWidth) ? t : 0) + 64;
-                !Z && n > k && H(!0);
-            }, [Z, W, Y, k]),
+                !Z && n > M && H(!0);
+            }, [Z, W, Y, M]),
             i.useEffect(() => {
-                (0, f.kk)(P);
+                (0, _.kk)(P);
             }, [P]),
             (0, r.jsx)('div', {
                 className: S,
@@ -60,7 +60,7 @@ let g = 280,
                             }),
                         (0, r.jsxs)('div', {
                             className: o()(E, A ? m.artInline : m.artAbsolute),
-                            children: [R && (0, r.jsx)(_.Z, { className: m.gifTag }), L]
+                            children: [R && (0, r.jsx)(f.Z, { className: m.gifTag }), L]
                         }),
                         (0, r.jsxs)('div', {
                             className: m.body,
@@ -117,7 +117,7 @@ let g = 280,
                                                   color: null != V ? V : N || x ? s.zx.Colors.BRAND_INVERTED : s.zx.Colors.WHITE,
                                                   children: null != O ? O : h.intl.string(h.t.IHf1RE)
                                               }),
-                                              !M &&
+                                              !k &&
                                                   (0, r.jsx)(s.zx, {
                                                       className: m.button,
                                                       size: F,

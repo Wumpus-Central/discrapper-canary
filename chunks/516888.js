@@ -8,7 +8,7 @@ var r = n(512722),
     c = n(823379),
     u = n(611907),
     d = n(544407);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-let _ = new o.Yd('KvStore'),
+let f = new o.Yd('KvStore'),
     p = Symbol('setKv'),
     h = Symbol('setMetadata'),
     m = Object.prototype.hasOwnProperty,
@@ -54,7 +54,7 @@ class y extends a.yh {
         return this.derived.length;
     }
     constructor(e, t = 'typescript') {
-        'typescript' === t || (0, u.F)() || (_.warn('Attempted to create a KvStore in mode '.concat(t, ', but libdiscore is not available. Falling back to typescript mode.')), (t = 'typescript'));
+        'typescript' === t || (0, u.F)() || (f.warn('Attempted to create a KvStore in mode '.concat(t, ', but libdiscore is not available. Falling back to typescript mode.')), (t = 'typescript'));
         let n = {};
         if ('typescript' === t || 'typescript-libdiscore-dual-read' === t) {
             let t = !1,
@@ -96,13 +96,13 @@ class y extends a.yh {
         }
         switch (
             (super(s.Z, n),
-            f(this, 'mode', void 0),
-            f(this, 'shadowState', void 0),
-            f(this, E, void 0),
-            f(this, b, void 0),
-            f(this, 'root', void 0),
-            f(this, 'derived', void 0),
-            f(this, 'nextVersion', void 0),
+            _(this, 'mode', void 0),
+            _(this, 'shadowState', void 0),
+            _(this, E, void 0),
+            _(this, b, void 0),
+            _(this, 'root', void 0),
+            _(this, 'derived', void 0),
+            _(this, 'nextVersion', void 0),
             (this.mode = t),
             (this.shadowState = null),
             (this.root = {}),
@@ -111,7 +111,7 @@ class y extends a.yh {
                 memoized: {}
             }),
             (this.nextVersion = 0),
-            _.info(''.concat(this.getName(), ' initialized in mode: ').concat(this.mode)),
+            f.info(''.concat(this.getName(), ' initialized in mode: ').concat(this.mode)),
             t)
         ) {
             case 'typescript-libdiscore-dual-read':

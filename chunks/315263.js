@@ -8,8 +8,8 @@ var r = n(873546),
     c = n(566620),
     u = n(122613),
     d = n(649256),
-    f = n(574952),
-    _ = n(367907),
+    _ = n(574952),
+    f = n(367907),
     p = n(421474),
     h = n(812206),
     m = n(506895),
@@ -31,15 +31,15 @@ var r = n(873546),
     D = n(626135),
     L = n(591759),
     x = n(782568),
-    k = n(981631);
+    M = n(981631);
 n(215023);
-var M = n(46140);
+var k = n(46140);
 async function j(e, t) {
     await a.Z.dispatch({
         type: 'INVITE_MODAL_OPEN',
         invite: e,
         code: t,
-        context: k.IlC.APP
+        context: M.IlC.APP
     });
 }
 async function U(e) {
@@ -50,7 +50,7 @@ async function U(e) {
         n = t;
     }
     if (null == n) return;
-    if (n.state === k.r2o.EXPIRED || n.state === k.r2o.BANNED || n.state === k.r2o.ERROR) return void (await j(n, e.code));
+    if (n.state === M.r2o.EXPIRED || n.state === M.r2o.BANNED || n.state === M.r2o.ERROR) return void (await j(n, e.code));
     let r = w.ZP.getFlattenedGuildIds(),
         i = null == n || null == (t = n.guild) ? void 0 : t.id;
     null != i && r.includes(i) ? s.ZP.transitionToInviteSync(n) : await j(n, e.code);
@@ -85,7 +85,7 @@ function B(e) {
             return (
                 null == s
                     ? (0, x.Z)(e)
-                    : (D.default.track(k.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+                    : (D.default.track(M.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
                           application_id: s,
                           device_platform: r.tq ? 'mobile_web' : 'desktop_web',
                           guild_id: c,
@@ -115,8 +115,8 @@ function B(e) {
             let { code: r, url: i } = C,
                 a = h.Z.getApplication(r),
                 l = new URL(i),
-                _ = null != (t = l.searchParams.get('referrer_id')) ? t : void 0,
-                p = (0, f.Z)(),
+                f = null != (t = l.searchParams.get('referrer_id')) ? t : void 0,
+                p = (0, _.Z)(),
                 { currentChannelId: g, instanceId: E, isCurrentlyInInstance: b, canLaunchInChannel: y } = (0, m.v)(r);
             if (y)
                 return (
@@ -131,7 +131,7 @@ function B(e) {
                                 isStart: null == E,
                                 embeddedActivitiesManager: p,
                                 customId: t,
-                                referrerId: _,
+                                referrerId: f,
                                 analyticsLocations: s
                             });
                         })
@@ -150,7 +150,7 @@ function B(e) {
                                 channelId: e,
                                 analyticsLocations: s,
                                 customId: t,
-                                referrerId: _
+                                referrerId: f
                             });
                         })
                         .catch(() => {}),
@@ -173,7 +173,7 @@ function B(e) {
                 !0
             );
         };
-    if (null != C && C.type === g.g.QUESTS_EMBED && (0, T.cB)({ location: M.dr.EMBED_MOBILE }))
+    if (null != C && C.type === g.g.QUESTS_EMBED && (0, T.cB)({ location: k.dr.EMBED_MOBILE }))
         return (e) => (
             null == e || e.preventDefault(),
             Promise.resolve()
@@ -230,14 +230,14 @@ function B(e) {
     if (null != B && Z) {
         let { getOAuth2AuthorizeProps: t, openOAuth2ModalWithCreateGuildModal: r } = n(69580),
             i = t(e);
-        if (null != i) return (e) => (null == e || e.preventDefault(), null != C && C.type === g.g.APP_OAUTH2_LINK && _.ZP.trackWithMetadata(k.rMx.APP_OAUTH2_LINK_EMBED_URL_CLICKED, { application_id: i.clientId }), r(i), !0);
+        if (null != i) return (e) => (null == e || e.preventDefault(), null != C && C.type === g.g.APP_OAUTH2_LINK && f.ZP.trackWithMetadata(M.rMx.APP_OAUTH2_LINK_EMBED_URL_CLICKED, { application_id: i.clientId }), r(i), !0);
     }
     let H = (0, v.Ao)(B);
     if (null != B && Z && null != H)
         return (e) => {
             null == e || e.preventDefault();
             let t = P.Z.getGuildId();
-            null != H.guildId && '' !== H.guildId && H.guildId !== t && (0, I.Z)(k.Z5c.CHANNEL(H.guildId));
+            null != H.guildId && '' !== H.guildId && H.guildId !== t && (0, I.Z)(M.Z5c.CHANNEL(H.guildId));
             let n = y.ZP.getGuildScheduledEvent(H.guildEventId);
             return (null != n && (0, b.bO)({ eventId: n.id }), !0);
         };

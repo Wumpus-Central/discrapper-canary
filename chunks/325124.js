@@ -9,13 +9,13 @@ var r = a(650665),
     o = a(553062),
     i = a(859502),
     c = a(988097),
-    s = a(263449),
-    E = a(696486),
+    E = a(263449),
+    s = a(696486),
     l = a(305625),
     u = a(622916),
     I = a(370541),
-    d = a(101284),
-    R = a(731889),
+    R = a(101284),
+    d = a(731889),
     N = a(467510),
     f = a(454463),
     A = a(163162),
@@ -37,7 +37,7 @@ let L = {
         let {
                 enableInp: e,
                 enableLongTask: a,
-                enableLongAnimationFrame: R,
+                enableLongAnimationFrame: d,
                 _experiments: { enableInteractions: N },
                 beforeStartSpan: h,
                 idleTimeout: D,
@@ -55,7 +55,7 @@ let L = {
                 ...t
             },
             w = (0, r.PR)();
-        (e && (0, _.N)(), R && PerformanceObserver.supportedEntryTypes.includes('long-animation-frame') ? (0, r.Jk)() : a && (0, r.Fv)(), N && (0, r.sn)());
+        (e && (0, _.N)(), d && PerformanceObserver.supportedEntryTypes.includes('long-animation-frame') ? (0, r.Jk)() : a && (0, r.Fv)(), N && (0, r.sn)());
         let M = {
             name: void 0,
             source: void 0
@@ -74,54 +74,54 @@ let L = {
                     (w(), (0, r.f7)(t));
                 }
             });
-            function s() {
+            function E() {
                 ['interactive', 'complete'].includes(A.m9.document.readyState) && t.emit('idleSpanEnableAutoFinish', i);
             }
             return (
                 a &&
                     A.m9.document &&
                     (A.m9.document.addEventListener('readystatechange', () => {
-                        s();
+                        E();
                     }),
-                    s()),
+                    E()),
                 i
             );
         }
         return {
             name: 'BrowserTracing',
             afterAllSetup(t) {
-                var a, r, i, R;
+                var a, r, i, d;
                 let L,
                     h,
                     w = A.m9.location && A.m9.location.href;
                 (t.on('startNavigationSpan', (e) => {
-                    (0, s.s3)() === t &&
-                        (h && !(0, E.XU)(h).timestamp && (f.X && u.kg.log(`[Tracing] Finishing current root span with op: ${(0, E.XU)(h).op}`), h.end()),
+                    (0, E.s3)() === t &&
+                        (h && !(0, s.XU)(h).timestamp && (f.X && u.kg.log(`[Tracing] Finishing current root span with op: ${(0, s.XU)(h).op}`), h.end()),
                         (h = B(t, {
                             op: 'navigation',
                             ...e
                         })));
                 }),
                     t.on('startPageLoadSpan', (e, a = {}) => {
-                        if ((0, s.s3)() !== t) return;
-                        h && !(0, E.XU)(h).timestamp && (f.X && u.kg.log(`[Tracing] Finishing current root span with op: ${(0, E.XU)(h).op}`), h.end());
+                        if ((0, E.s3)() !== t) return;
+                        h && !(0, s.XU)(h).timestamp && (f.X && u.kg.log(`[Tracing] Finishing current root span with op: ${(0, s.XU)(h).op}`), h.end());
                         let r = a.sentryTrace || g('sentry-trace'),
                             _ = a.baggage || g('baggage'),
                             n = (0, I.pT)(r, _);
-                        ((0, s.nZ)().setPropagationContext(n),
+                        ((0, E.nZ)().setPropagationContext(n),
                             (h = B(t, {
                                 op: 'pageload',
                                 ...e
                             })));
                     }),
                     t.on('spanEnd', (t) => {
-                        let e = (0, E.XU)(t).op;
-                        if (t !== (0, E.Gx)(t) || ('navigation' !== e && 'pageload' !== e)) return;
-                        let a = (0, s.nZ)(),
+                        let e = (0, s.XU)(t).op;
+                        if (t !== (0, s.Gx)(t) || ('navigation' !== e && 'pageload' !== e)) return;
+                        let a = (0, E.nZ)(),
                             r = a.getPropagationContext();
                         a.setPropagationContext({
                             ...r,
-                            sampled: void 0 !== r.sampled ? r.sampled : (0, E.Tt)(t),
+                            sampled: void 0 !== r.sampled ? r.sampled : (0, s.Tt)(t),
                             dsc: r.dsc || (0, l.jC)(t)
                         });
                     }),
@@ -129,7 +129,7 @@ let L = {
                         (G &&
                             O(t, {
                                 name: A.m9.location.pathname,
-                                startTime: d.Z1 ? d.Z1 / 1000 : void 0,
+                                startTime: R.Z1 ? R.Z1 / 1000 : void 0,
                                 attributes: {
                                     [c.Zj]: 'url',
                                     [c.S3]: 'auto.pageload.browser'
@@ -156,27 +156,27 @@ let L = {
                         ((a = D),
                         (r = C),
                         (i = m),
-                        (R = M),
+                        (d = M),
                         A.m9.document &&
                             addEventListener(
                                 'click',
                                 () => {
                                     let t = 'ui.action.click',
-                                        e = (0, E.HN)(),
-                                        _ = e && (0, E.Gx)(e);
-                                    if (_ && ['navigation', 'pageload'].includes((0, E.XU)(_).op)) {
+                                        e = (0, s.HN)(),
+                                        _ = e && (0, s.Gx)(e);
+                                    if (_ && ['navigation', 'pageload'].includes((0, s.XU)(_).op)) {
                                         f.X && u.kg.warn(`[Tracing] Did not create ${t} span because a pageload or navigation span is in progress.`);
                                         return;
                                     }
-                                    if ((L && (L.setAttribute(c.ju, 'interactionInterrupted'), L.end(), (L = void 0)), !R.name)) {
+                                    if ((L && (L.setAttribute(c.ju, 'interactionInterrupted'), L.end(), (L = void 0)), !d.name)) {
                                         f.X && u.kg.warn(`[Tracing] Did not create ${t} transaction because _latestRouteName is missing.`);
                                         return;
                                     }
                                     L = (0, o.R)(
                                         {
-                                            name: R.name,
+                                            name: d.name,
                                             op: t,
-                                            attributes: { [c.Zj]: R.source || 'url' }
+                                            attributes: { [c.Zj]: d.source || 'url' }
                                         },
                                         {
                                             idleTimeout: a,
@@ -202,14 +202,14 @@ let L = {
         };
     };
 function O(t, e, a) {
-    (t.emit('startPageLoadSpan', e, a), (0, s.nZ)().setTransactionName(e.name));
-    let r = (0, E.HN)();
-    return 'pageload' === (r && (0, E.XU)(r).op) ? r : void 0;
+    (t.emit('startPageLoadSpan', e, a), (0, E.nZ)().setTransactionName(e.name));
+    let r = (0, s.HN)();
+    return 'pageload' === (r && (0, s.XU)(r).op) ? r : void 0;
 }
 function P(t, e) {
-    ((0, s.aF)().setPropagationContext((0, R.Q)()), (0, s.nZ)().setPropagationContext((0, R.Q)()), t.emit('startNavigationSpan', e), (0, s.nZ)().setTransactionName(e.name));
-    let a = (0, E.HN)();
-    return 'navigation' === (a && (0, E.XU)(a).op) ? a : void 0;
+    ((0, E.aF)().setPropagationContext((0, d.Q)()), (0, E.nZ)().setPropagationContext((0, d.Q)()), t.emit('startNavigationSpan', e), (0, E.nZ)().setTransactionName(e.name));
+    let a = (0, s.HN)();
+    return 'navigation' === (a && (0, s.XU)(a).op) ? a : void 0;
 }
 function g(t) {
     let e = (0, N.qT)(`meta[name=${t}]`);

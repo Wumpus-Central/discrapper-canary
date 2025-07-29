@@ -1,5 +1,5 @@
-let r, i, a, o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I;
-(n.d(t, { Z: () => eM }), n(388685));
+let r, i, a, o, s, l, c, u, d, _, f, p, h, m, g, E, b, y, O, v, I;
+(n.d(t, { Z: () => ek }), n(388685));
 var T,
     S = n(392711),
     A = n(754700),
@@ -11,7 +11,7 @@ var T,
     D = n(184299),
     L = n(5881),
     x = n(46140);
-function k(e, t, n) {
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function k(e, t, n) {
         e
     );
 }
-function M(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function M(e) {
                 })
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                M(e, t, n[t]);
             }));
     }
     return e;
@@ -67,7 +67,7 @@ let G = new Map(),
     B = null,
     V = 1000;
 function F() {
-    ((r = !1), (i = !1), (a = !1), (o = new Map()), (s = new Map()), (l = new Map()), (c = 0), (u = 0), (d = new Set()), (f = new Set()), (_ = new Set()), (p = new Set()), (G = new Map()), (m = new Map()), (g = new Map()), (E = new Map()), (b = null), (y = new Map()), (h = new Set()), (O = new Map()), (v = new Map()), eD(), (I = null));
+    ((r = !1), (i = !1), (a = !1), (o = new Map()), (s = new Map()), (l = new Map()), (c = 0), (u = 0), (d = new Set()), (_ = new Set()), (f = new Set()), (p = new Set()), (G = new Map()), (m = new Map()), (g = new Map()), (E = new Map()), (b = null), (y = new Map()), (h = new Set()), (O = new Map()), (v = new Map()), eD(), (I = null));
 }
 function Z(e, t) {
     var n, r, i, a;
@@ -76,7 +76,7 @@ function Z(e, t) {
 function H(e, t) {
     let n = (o = new Map(o)).get(e);
     if (null != n) {
-        let r = M({}, n, t);
+        let r = k({}, n, t);
         (Z(e, t), o.set(e, r));
     }
 }
@@ -88,7 +88,7 @@ function W(e, t) {
     Y(e, t);
     let n = o.get(e),
         r = null == n ? void 0 : n.userStatus;
-    null != r && null == r.claimedAt && H(e, { userStatus: U(M({}, r), { claimedAt: t.claimedAt }) });
+    null != r && null == r.claimedAt && H(e, { userStatus: U(k({}, r), { claimedAt: t.claimedAt }) });
 }
 function K(e) {
     var t;
@@ -106,7 +106,7 @@ function z(e, t) {
         let n = K({ entitlements: t });
         (null != n && Y(e, n),
             H(e, {
-                userStatus: U(M({}, i), {
+                userStatus: U(k({}, i), {
                     claimedAt: t.claimedAt,
                     claimedTier: null != (a = null == n ? void 0 : n.tier) ? a : null
                 })
@@ -183,33 +183,33 @@ function eu(e) {
 }
 function ed(e) {
     let { questId: t } = e,
-        n = new Set(_);
-    (n.add(t), (_ = n));
-}
-function ef(e) {
-    let { questId: t, rewardCode: n } = e,
-        r = new Set(_);
-    (r.delete(t), (_ = r), W(t, n));
-}
-function e_(e) {
-    let { questId: t } = e,
-        n = new Set(_);
-    (n.delete(t), (_ = n));
-}
-function ep(e) {
-    let { questId: t } = e,
         n = new Set(f);
     (n.add(t), (f = n));
 }
-function eh(e) {
-    let { questId: t, entitlements: n } = e,
+function e_(e) {
+    let { questId: t, rewardCode: n } = e,
         r = new Set(f);
-    (r.delete(t), (f = r), z(t, n));
+    (r.delete(t), (f = r), W(t, n));
 }
-function em(e) {
+function ef(e) {
     let { questId: t } = e,
         n = new Set(f);
     (n.delete(t), (f = n));
+}
+function ep(e) {
+    let { questId: t } = e,
+        n = new Set(_);
+    (n.add(t), (_ = n));
+}
+function eh(e) {
+    let { questId: t, entitlements: n } = e,
+        r = new Set(_);
+    (r.delete(t), (_ = r), z(t, n));
+}
+function em(e) {
+    let { questId: t } = e,
+        n = new Set(_);
+    (n.delete(t), (_ = n));
 }
 function eg(e) {
     let t = new Set(p);
@@ -293,7 +293,7 @@ function eP() {
     (o.forEach((n, r) => {
         !0 !== t.get(r) && ((0, P.zi)(n) ? (t.set(r, !0), (e = !0)) : t.has(r) || t.set(r, !1));
     }),
-        e && ((v = t), ek.emitChange()));
+        e && ((v = t), eM.emitChange()));
 }
 function ew() {
     null === B &&
@@ -348,10 +348,10 @@ class ex extends (T = C.ZP.Store) {
         return d.has(e);
     }
     isClaimingReward(e) {
-        return f.has(e);
+        return _.has(e);
     }
     isFetchingRewardCode(e) {
-        return _.has(e);
+        return f.has(e);
     }
     isDismissingContent(e) {
         return p.has(e);
@@ -387,8 +387,8 @@ class ex extends (T = C.ZP.Store) {
         return null != (t = v.get(e)) && t;
     }
 }
-k(ex, 'displayName', 'QuestsStore');
-let ek = new ex(R.Z, {
+M(ex, 'displayName', 'QuestsStore');
+let eM = new ex(R.Z, {
         LOGOUT: X,
         QUESTS_FETCH_CURRENT_QUESTS_BEGIN: Q,
         QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: J,
@@ -405,8 +405,8 @@ let ek = new ex(R.Z, {
         QUESTS_ENROLL_SUCCESS: ec,
         QUESTS_ENROLL_FAILURE: eu,
         QUESTS_FETCH_REWARD_CODE_BEGIN: ed,
-        QUESTS_FETCH_REWARD_CODE_SUCCESS: ef,
-        QUESTS_FETCH_REWARD_CODE_FAILURE: e_,
+        QUESTS_FETCH_REWARD_CODE_SUCCESS: e_,
+        QUESTS_FETCH_REWARD_CODE_FAILURE: ef,
         QUESTS_CLAIM_REWARD_BEGIN: ep,
         QUESTS_CLAIM_REWARD_SUCCESS: eh,
         QUESTS_CLAIM_REWARD_FAILURE: em,
@@ -423,4 +423,4 @@ let ek = new ex(R.Z, {
         QUESTS_RESET_OPTIMISTIC_PROGRESS: eN,
         QUESTS_USER_COMPLETION_UPDATE: eL
     }),
-    eM = ek;
+    ek = eM;

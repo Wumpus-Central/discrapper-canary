@@ -8,9 +8,9 @@ var r = n(255367),
     c = n(601964),
     u = n(830129);
 let d = (e) => {
-    let { className: t, guild: n, isSelected: a = !0, width: d = 32, height: f = 32, shouldAnimate: _ = !0, isLocked: p = !1 } = e,
+    let { className: t, guild: n, isSelected: a = !0, width: d = 32, height: _ = 32, shouldAnimate: f = !0, isLocked: p = !1 } = e,
         [h, m] = i.useState(!1),
-        g = (0, c.EB)(n, 32, _ && a),
+        g = (0, c.EB)(n, 32, f && a),
         E = () => m(!0),
         b = () => m(!1);
     return (0, r.jsxs)('div', {
@@ -23,7 +23,7 @@ let d = (e) => {
                 className: o()(u.mask, t),
                 mask: a || h ? l.QS.SQUIRCLE : l.QS.AVATAR_DEFAULT,
                 width: d,
-                height: f,
+                height: _,
                 children:
                     null == g
                         ? (0, r.jsx)('div', {

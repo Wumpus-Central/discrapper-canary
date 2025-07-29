@@ -9,13 +9,13 @@ var i = n(120356),
     c = n(872810),
     u = n(493773),
     d = n(569545),
-    f = n(592125),
-    _ = n(231338),
+    _ = n(592125),
+    f = n(231338),
     p = n(388032),
     h = n(65558);
 function m(e) {
     let { stream: t, width: n } = e,
-        i = (0, o.e7)([f.Z], () => f.Z.getChannel(t.channelId));
+        i = (0, o.e7)([_.Z], () => _.Z.getChannel(t.channelId));
     function m(e) {
         return e < 550 ? 'small' : e < 1000 ? 'medium' : 'large';
     }
@@ -27,7 +27,7 @@ function m(e) {
         b = m(n);
     return (0, r.jsx)(l.f6W, {
         disableAdaptiveTheme: !0,
-        theme: _.BR.MIDNIGHT,
+        theme: f.BR.MIDNIGHT,
         children: (e) =>
             (0, r.jsx)('div', {
                 className: a()(h.container, e),

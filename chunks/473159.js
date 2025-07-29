@@ -17,10 +17,10 @@ function l(e) {
     function d() {
         e.document.hasFocus() || (0, r.T_)(e, !1);
     }
-    function f() {
+    function _() {
         (0, r.gH)(e);
     }
-    function _() {
+    function f() {
         ((0, r.Rz)(e), (0, i.UC)(c, e.document.body), (0, i.fO)(n, e.document.body));
     }
     function p() {
@@ -34,6 +34,6 @@ function l(e) {
     function m() {
         (0, r.CO)(e);
     }
-    for (let n of ((0, i.YP)(c, e.document.body), e.addEventListener('focus', u), e.addEventListener('blur', d), e.addEventListener('unload', _), e.addEventListener('visibilitychange', m), s.wu)) (t.addEventListener(n, p, !0), t.addEventListener(n, h, !1));
-    ((0, a.uF)(t, f), (0, r.S1)(e));
+    for (let n of ((0, i.YP)(c, e.document.body), e.addEventListener('focus', u), e.addEventListener('blur', d), e.addEventListener('unload', f), e.addEventListener('visibilitychange', m), s.wu)) (t.addEventListener(n, p, !0), t.addEventListener(n, h, !1));
+    ((0, a.uF)(t, _), (0, r.S1)(e));
 }

@@ -1,18 +1,18 @@
-a.d(e, { E: () => E });
+a.d(e, { E: () => s });
 var r = a(573736),
     _ = a(202811),
     n = a(370336),
     o = a(886115),
     i = a(622916),
     c = a(151122),
-    s = a(255768);
-let E = (0, c._I)((t = {}) => {
+    E = a(255768);
+let s = (0, c._I)((t = {}) => {
     let { depth: e = 3, captureErrorCause: a = !0 } = t;
     return {
         name: 'ExtraErrorData',
-        processEvent(t, c, E) {
-            let { maxValueLength: l = 250 } = E.getOptions();
-            return (function (t, e = {}, a, c, E) {
+        processEvent(t, c, s) {
+            let { maxValueLength: l = 250 } = s.getOptions();
+            return (function (t, e = {}, a, c, s) {
                 if (!e.originalException || !(0, r.VZ)(e.originalException)) return t;
                 let l = e.originalException.name || e.originalException.constructor.name,
                     u = (function (t, e, a) {
@@ -33,10 +33,10 @@ let E = (0, c._I)((t = {}) => {
                             }
                             return n;
                         } catch (t) {
-                            s.X && i.kg.error('Unable to extract extra data from the Error object:', t);
+                            E.X && i.kg.error('Unable to extract extra data from the Error object:', t);
                         }
                         return null;
-                    })(e.originalException, c, E);
+                    })(e.originalException, c, s);
                 if (u) {
                     let e = { ...t.contexts },
                         o = (0, _.Fv)(u, a);

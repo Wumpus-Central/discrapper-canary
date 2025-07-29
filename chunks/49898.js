@@ -4,7 +4,7 @@
         GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX: () => l,
         GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX: () => c,
         GLOBAL_DISCOVERY_TABS: () => i,
-        GlobalDiscoveryAnalyticsLocations: () => f,
+        GlobalDiscoveryAnalyticsLocations: () => _,
         GlobalDiscoveryRoutes: () => d,
         GlobalDiscoverySearchBarState: () => u,
         GlobalDiscoverySharedTabId: () => o,
@@ -28,6 +28,6 @@ var u = (function (e) {
     d = (function (e) {
         return ((e.ROOT = 'root'), (e.SERVERS_CATEGORY = 'server_tab'), (e.SERVERS_SEARCH = 'server_search'), e);
     })({}),
-    f = (function (e) {
+    _ = (function (e) {
         return ((e.GUILDS_BAR_ICON = 'guilds_bar_icon'), (e.VIRTUAL_CURRENCY_REHEAT_COACHMARK = 'virtual_currency_reheat_coachmark'), e);
     })({});

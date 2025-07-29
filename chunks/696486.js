@@ -3,13 +3,13 @@ a.d(e, {
     Dp: () => C,
     Gx: () => m,
     HN: () => v,
-    HR: () => R,
+    HR: () => d,
     Hb: () => f,
     Tt: () => L,
     XU: () => p,
     _4: () => h,
     ed: () => D,
-    i0: () => d,
+    i0: () => R,
     j5: () => g,
     ve: () => I,
     wy: () => N,
@@ -21,13 +21,13 @@ var r = a(370336),
     o = a(833873),
     i = a(356442),
     c = a(263449),
-    s = a(899195),
-    E = a(988097),
+    E = a(899195),
+    s = a(988097),
     l = a(793373),
     u = a(99342);
 let I = 0,
-    d = 1;
-function R(t) {
+    R = 1;
+function d(t) {
     let { spanId: e, traceId: a } = t.spanContext(),
         { data: _, op: n, parent_span_id: o, status: i, origin: c } = p(t);
     return (0, r.Jr)({
@@ -76,9 +76,9 @@ function p(t) {
                 start_timestamp: A(n),
                 timestamp: A(i) || void 0,
                 status: h(l),
-                op: e[E.$J],
-                origin: e[E.S3],
-                _metrics_summary: (0, s.y)(t)
+                op: e[s.$J],
+                origin: e[s.S3],
+                _metrics_summary: (0, E.y)(t)
             });
         }
         return {
@@ -91,7 +91,7 @@ function p(t) {
 }
 function L(t) {
     let { traceFlags: e } = t.spanContext();
-    return e === d;
+    return e === R;
 }
 function h(t) {
     if (t && t.code !== l.pq) return t.code === l.OP ? 'ok' : t.message || 'unknown_error';
@@ -124,5 +124,5 @@ function v() {
 }
 function y(t, e, a, r, _, n) {
     let o = v();
-    o && (0, s.V)(o, t, e, a, r, _, n);
+    o && (0, E.V)(o, t, e, a, r, _, n);
 }

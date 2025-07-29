@@ -1,11 +1,11 @@
 n.d(t, {
     IS: () => d,
     MH: () => p,
-    UE: () => _,
+    UE: () => f,
     as: () => l,
     fP: () => u,
     m1: () => c,
-    wz: () => f
+    wz: () => _
 });
 var r = n(772848),
     i = n(146282),
@@ -33,7 +33,7 @@ let u = () => (0, r.Z)(),
             t
         );
     },
-    f = (e) => {
+    _ = (e) => {
         let { viewId: t, gameName: n, applicationId: r, playedFriendIds: l, playedFriendsData: c, similarGames: u, officialGuildId: d } = e;
         a.default.track(o.rMx.GAME_PROFILE_CLOSE, {
             view_id: t,
@@ -46,7 +46,7 @@ let u = () => (0, r.Z)(),
             official_guild_id: d
         });
     },
-    _ = (e) => {
+    f = (e) => {
         let { gameName: t, applicationId: n, action: r, recipientUserId: i, similarGameId: s, viewId: l, officialGuildId: c } = e;
         a.default.track(o.rMx.GAME_PROFILE_ACTION, {
             game_name: t,

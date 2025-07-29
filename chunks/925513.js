@@ -44,7 +44,7 @@ let d = (e) => {
         if (null != t && t !== i.Q4.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
         let a = o.default.getCurrentUser();
         return (0, s.bc)('resolveSettingWithDefaults')
-            ? f({
+            ? _({
                   isDm: n,
                   isFriend: r
               })
@@ -55,16 +55,16 @@ let d = (e) => {
                       isDm: n,
                       isFriend: r
                   })
-                : _({
+                : f({
                       isDm: n,
                       isFriend: r
                   });
     },
-    f = (e) => {
+    _ = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         return t && !n ? i.Q4.BLOCK : i.Q4.BLUR;
     },
-    _ = (e) => {
+    f = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         return t && n ? i.Q4.SHOW : t ? i.Q4.BLOCK : i.Q4.SHOW;
     },

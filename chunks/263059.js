@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => M }), n(35282));
+(n.d(t, { Z: () => k }), n(35282));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(100527),
     u = n(906732),
     d = n(379357),
-    f = n(358696),
-    _ = n(649700),
+    _ = n(358696),
+    f = n(649700),
     p = n(313201),
     h = n(952164),
     m = n(960870),
@@ -43,7 +43,7 @@ function x(e, t, n) {
         e
     );
 }
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,15 +59,15 @@ function k(e) {
     }
     return e;
 }
-function M(e) {
+function k(e) {
     var t;
-    let { user: n, currentUser: a, activity: x, profileGuildId: M, className: j, onClose: U } = e,
+    let { user: n, currentUser: a, activity: x, profileGuildId: k, className: j, onClose: U } = e,
         G = (0, p.Dt)(),
         B = (0, p.Dt)(),
         V = i.useRef(null),
         { themeType: F } = (0, I.z)(),
         { interactionSource: Z, interactionSourceId: H } = (0, y.Xo)(),
-        Y = (0, _.Z)({
+        Y = (0, f.Z)({
             activity: x,
             user: n
         }),
@@ -152,7 +152,7 @@ function M(e) {
             user: n,
             children: (0, r.jsx)(O.Z, {
                 user: n,
-                guildId: M,
+                guildId: k,
                 themeType: F,
                 sourceId: et,
                 sourceDetails: null == Y ? (0, b.Z)(x) : null,
@@ -184,15 +184,15 @@ function M(e) {
                             onClose: U,
                             'aria-labelledby': K ? ''.concat(B, ' ').concat(G) : G,
                             children: [
-                                (0, r.jsx)(N.Z, k({ textId: B }, W)),
+                                (0, r.jsx)(N.Z, M({ textId: B }, W)),
                                 (0, r.jsx)('div', {
                                     className: L.body,
                                     children: (0, r.jsxs)('div', {
                                         className: L.content,
                                         children: [
-                                            (0, r.jsx)(f.E, {
+                                            (0, r.jsx)(_.E, {
                                                 image: z,
-                                                size: F === D.lY.MODAL_V2 ? f.J.SIZE_100 : f.J.SIZE_60,
+                                                size: F === D.lY.MODAL_V2 ? _.J.SIZE_100 : _.J.SIZE_60,
                                                 className: L.clickableImage,
                                                 onClick: (e) => {
                                                     (e.stopPropagation(), X({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, h.Z5)(x, n.id));

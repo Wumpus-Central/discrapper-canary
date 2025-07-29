@@ -35,37 +35,37 @@ function c(e) {
 }
 let u = 0.5,
     d = new Map(),
-    f = !1,
-    _ = Object.freeze({
+    _ = !1,
+    f = Object.freeze({
         userAffinities: [],
         lastFetched: 0
     }),
-    p = c({}, _);
+    p = c({}, f);
 function h() {
     d = new Map(p.userAffinities.filter((e) => !o.Z.isBlockedOrIgnored(e.otherUserId)).map((e) => [e.otherUserId, e]));
 }
 function m() {
-    f = !0;
+    _ = !0;
 }
 function g(e) {
     let { affineUsers: t } = e;
-    ((p.lastFetched = Date.now()), (f = !1), (p.userAffinities = t), h());
+    ((p.lastFetched = Date.now()), (_ = !1), (p.userAffinities = t), h());
 }
 function E() {
-    f = !1;
+    _ = !1;
 }
 function b() {
-    ((p = c({}, _)), (d = new Map()), (f = !1));
+    ((p = c({}, f)), (d = new Map()), (_ = !1));
 }
 class y extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         (this.waitFor(o.Z), null != e && ((p.userAffinities = e.userAffinities), (p.lastFetched = e.lastFetched), h()), this.syncWith([o.Z], h));
     }
     shouldFetch() {
-        if (!f) return Date.now() - p.lastFetched > s.K;
+        if (!_) return Date.now() - p.lastFetched > s.K;
     }
     isFetching() {
-        return f;
+        return _;
     }
     getUserAffinities() {
         return p.userAffinities;

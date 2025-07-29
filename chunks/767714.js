@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(451478),
     u = n(648613),
     d = n(433390),
-    f = n(474936),
-    _ = n(163882);
+    _ = n(474936),
+    f = n(163882);
 function p(e, t, n) {
     return (
         t in e
@@ -92,7 +92,7 @@ let y = function (e) {
             buttonTextOverride: null == m ? void 0 : m.textOverride,
             defaultTextOverride: null == m ? void 0 : m.subscribeText
         }),
-        k = {
+        M = {
             onClick: n,
             subscriptionTier: t,
             postSuccessGuild: y,
@@ -102,11 +102,11 @@ let y = function (e) {
             confirmationFooter: C,
             paymentModalBanner: R
         };
-    function M(e) {
-        let n = null != P ? P : t === f.Si.TIER_1 ? s.zx.Colors.PRIMARY : s.zx.Colors.GREEN;
+    function k(e) {
+        let n = null != P ? P : t === _.Si.TIER_1 ? s.zx.Colors.PRIMARY : s.zx.Colors.GREEN;
         return (0, r.jsx)(
             u.Z,
-            g(h({}, k), {
+            g(h({}, M), {
                 children: (o) => {
                     let { onClick: c } = o;
                     return (0, r.jsxs)(
@@ -116,18 +116,18 @@ let y = function (e) {
                                 {
                                     disabled: x.disabled,
                                     onClick: c,
-                                    innerClassName: _.premiumSubscribeButton,
+                                    innerClassName: f.premiumSubscribeButton,
                                     color: n,
                                     size: i,
                                     className: A,
                                     wrapperClassName: a()(
                                         {
-                                            [_.tier2Gradient]: N && t === f.Si.TIER_2,
-                                            [_.tier1Gradient]: N && t === f.Si.TIER_1
+                                            [f.tier2Gradient]: N && t === _.Si.TIER_2,
+                                            [f.tier1Gradient]: N && t === _.Si.TIER_1
                                         },
                                         p
                                     ),
-                                    buttonShineClassName: 'buttonShineClassName' in D ? D.buttonShineClassName : n === s.Tt.BRAND_INVERTED ? _.brandShine : void 0,
+                                    buttonShineClassName: 'buttonShineClassName' in D ? D.buttonShineClassName : n === s.Tt.BRAND_INVERTED ? f.brandShine : void 0,
                                     pauseAnimation: !L || T
                                 },
                                 D,
@@ -139,10 +139,10 @@ let y = function (e) {
                                         (0, r.jsx)(l.SrA, {
                                             size: 'md',
                                             color: w,
-                                            className: a()(_.premiumIcon, b)
+                                            className: a()(f.premiumIcon, b)
                                         }),
                                     (0, r.jsx)('span', {
-                                        className: a()(_.buttonText, null == m ? void 0 : m.textClassName),
+                                        className: a()(f.buttonText, null == m ? void 0 : m.textClassName),
                                         children: x.buttonText
                                     })
                                 ]
@@ -156,7 +156,7 @@ let y = function (e) {
     return null != x.buttonTooltipText
         ? (0, r.jsx)(l.ua7, {
               text: x.buttonTooltipText,
-              children: M
+              children: k
           })
-        : M();
+        : k();
 };

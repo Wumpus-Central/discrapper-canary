@@ -21,7 +21,7 @@ var r = n(255367),
     y = n(694095);
 function _(e) {
     var t, n, l;
-    let { name: _, icon: C, imageSrc: N, iconBackgroundColor: S, iconClassName: I, iconWrapperClassName: E, details: T, integration: w, buttonText: Z, buttonDisabled: P, hasNextSection: A, onButtonClick: k, guildId: D, isScrolling: R, canShowMigrationTooltip: L, trailing: M } = e,
+    let { name: _, icon: C, imageSrc: N, iconBackgroundColor: S, iconClassName: E, iconWrapperClassName: I, details: T, integration: w, buttonText: Z, buttonDisabled: P, hasNextSection: A, onButtonClick: k, guildId: D, isScrolling: R, canShowMigrationTooltip: L, trailing: M } = e,
         [B, U] = i.useState(!1),
         [W, H] = i.useState(!1),
         G = L && !R && !W && void 0 !== D && null != w,
@@ -145,8 +145,8 @@ function _(e) {
                     icon: C,
                     imageSrc: N,
                     iconBackgroundColor: S,
-                    iconClassName: I,
-                    iconWrapperClassName: E,
+                    iconClassName: E,
+                    iconWrapperClassName: I,
                     details: T,
                     isPremium: q.length > 0
                 }),

@@ -7,7 +7,7 @@ var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(652141),
+    s = n(564854),
     l = n(481060),
     c = n(58178);
 function u(e, t, n) {
@@ -39,7 +39,7 @@ function d(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,12 +51,12 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -98,9 +98,9 @@ let I = i.memo(function (e) {
             c = i.useRef(h()),
             u = i.useRef(!0);
         i.useEffect(() => () => void (u.current = !1), []);
-        let [f] = (0, l.q_F)(
+        let [_] = (0, l.q_F)(
                 () =>
-                    _(d({}, O), {
+                    f(d({}, O), {
                         to: async (e) => {
                             let t = b;
                             for (; u.current; )
@@ -132,13 +132,13 @@ let I = i.memo(function (e) {
                     {
                         cx: n ? n.to([0, 1], [y, l]) : l,
                         cy: t,
-                        r: f.dotCycle
+                        r: _.dotCycle
                             .to((e) => v(e - i))
                             .to([0, 0.4, 0.8, 1], [0.8 * t, 0.8 * t, t, t])
                             .to((e) => (c.current ? e : t)),
                         fill: a,
                         style: {
-                            opacity: f.dotCycle
+                            opacity: _.dotCycle
                                 .to((e) => v(e - i))
                                 .to([0, 0.4, 0.8, 1], [0.3, 0.3, 1, 1])
                                 .to((e) => (c.current ? e : 1))
@@ -151,14 +151,14 @@ let I = i.memo(function (e) {
     }),
     T = i.memo(
         i.forwardRef(function (e, t) {
-            let { dotRadius: n, x: i, y: a, hide: u = !1, themed: f = !1, className: p } = e;
+            let { dotRadius: n, x: i, y: a, hide: u = !1, themed: _ = !1, className: p } = e;
             return (0, l.Yzy)(
                 u,
-                _(d({}, y), { key: (e) => (e ? 'true' : 'false') }),
+                f(d({}, y), { key: (e) => (e ? 'true' : 'false') }),
                 h() ? 'animate-always' : 'animate-never'
             )((e, l, u) => {
                 let { dotPosition: d } = e,
-                    { key: _ } = u;
+                    { key: f } = u;
                 return l
                     ? null
                     : (0, r.jsx)(
@@ -169,7 +169,7 @@ let I = i.memo(function (e) {
                               y: a,
                               width: 2 * n * 3 + (n / 2) * 2,
                               height: 2 * n,
-                              className: o()(p, c.dots, f ? c.themed : null),
+                              className: o()(p, c.dots, _ ? c.themed : null),
                               children: (0, r.jsx)(s.animated.g, {
                                   style: { opacity: d.to((e) => Math.min(1, Math.max(e, 0))) },
                                   children: (0, r.jsx)(I, {
@@ -178,7 +178,7 @@ let I = i.memo(function (e) {
                                   })
                               })
                           },
-                          _
+                          f
                       );
             });
         })

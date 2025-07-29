@@ -8,16 +8,16 @@ var r = n(255367),
     c = n(481060),
     u = n(633302),
     d = n(334920),
-    f = n(768581),
-    _ = n(185923),
+    _ = n(768581),
+    f = n(185923),
     p = n(385491);
-let h = l().memoize((e) => ''.concat(e * _.DC.NonDiversityPerRow, 'px ').concat(e * Math.ceil(u.ZP.numNonDiversitySprites / _.DC.NonDiversityPerRow), 'px')),
-    m = l().memoize((e) => ''.concat(e * _.DC.DiversityPerRow, 'px ').concat(e * Math.ceil(u.ZP.numDiversitySprites / _.DC.DiversityPerRow), 'px')),
+let h = l().memoize((e) => ''.concat(e * f.DC.NonDiversityPerRow, 'px ').concat(e * Math.ceil(u.ZP.numNonDiversitySprites / f.DC.NonDiversityPerRow), 'px')),
+    m = l().memoize((e) => ''.concat(e * f.DC.DiversityPerRow, 'px ').concat(e * Math.ceil(u.ZP.numDiversitySprites / f.DC.DiversityPerRow), 'px')),
     g = (e, t, r) => {
         let i, a, o;
         if (!e.useSpriteSheet) return;
         let s = null != e.index ? e.index : 0;
-        e.hasDiversity ? ((i = n(735800)('./spritesheet-'.concat(t, '-').concat(r, '.png'))), (a = m(r)), (o = _.DC.DiversityPerRow)) : ((i = n(604901)('./spritesheet-emoji-'.concat(r, '.png'))), (a = h(r)), (o = _.DC.NonDiversityPerRow));
+        e.hasDiversity ? ((i = n(735800)('./spritesheet-'.concat(t, '-').concat(r, '.png'))), (a = m(r)), (o = f.DC.DiversityPerRow)) : ((i = n(604901)('./spritesheet-emoji-'.concat(r, '.png'))), (a = h(r)), (o = f.DC.NonDiversityPerRow));
         let l = (-s % o) * r,
             c = -Math.floor(s / o) * r;
         return {
@@ -36,10 +36,10 @@ let h = l().memoize((e) => ''.concat(e * _.DC.NonDiversityPerRow, 'px ').concat(
                     let i =
                         null == t.id
                             ? t.url
-                            : f.ZP.getEmojiURL({
+                            : _.ZP.getEmojiURL({
                                   id: t.id,
                                   animated: s && t.animated,
-                                  size: _.$U
+                                  size: f.$U
                               });
                     return null != i
                         ? (0, r.jsx)(d.Z, {

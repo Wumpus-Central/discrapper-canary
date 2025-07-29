@@ -6591,7 +6591,140 @@ let { Themes: r } = n(15202).V,
                     }
                 }
             },
+            INPUT_BACKGROUND_CRITICAL: {
+                category: 'background',
+                [r.DARK]: {
+                    raw: 'OPACITY_BLACK_20',
+                    opacity: 0.2
+                },
+                [r.LIGHT]: {
+                    raw: 'OPACITY_BLACK_8',
+                    opacity: 0.0784313725490196
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'OPACITY_BLACK_8',
+                    opacity: 0.0784313725490196
+                },
+                [r.DARKER]: {
+                    raw: 'OPACITY_BLACK_8',
+                    opacity: 0.0784313725490196
+                }
+            },
+            INPUT_BACKGROUND_DEFAULT: {
+                category: 'background',
+                [r.DARK]: {
+                    raw: 'OPACITY_BLACK_20',
+                    opacity: 0.2
+                },
+                [r.LIGHT]: {
+                    raw: 'OPACITY_BLACK_8',
+                    opacity: 0.0784313725490196
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'OPACITY_BLACK_8',
+                    opacity: 0.0784313725490196
+                },
+                [r.DARKER]: {
+                    raw: 'OPACITY_BLACK_8',
+                    opacity: 0.0784313725490196
+                }
+            },
             INPUT_BORDER: {
+                category: 'background',
+                [r.DARK]: {
+                    raw: 'OPACITY_20',
+                    opacity: 0.2
+                },
+                [r.LIGHT]: {
+                    raw: 'OPACITY_36',
+                    opacity: 0.3607843137254902
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'OPACITY_32',
+                    opacity: 0.3215686274509804
+                },
+                [r.DARKER]: {
+                    raw: 'OPACITY_20',
+                    opacity: 0.2
+                }
+            },
+            INPUT_BORDER_ACTIVE: {
+                category: 'background',
+                [r.DARK]: {
+                    raw: 'BLUE_NEW_26',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'BLUE_NEW_49',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'BLUE_NEW_42',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'BLUE_NEW_36',
+                    opacity: 1
+                }
+            },
+            INPUT_BORDER_CRITICAL: {
+                category: 'background',
+                [r.DARK]: {
+                    raw: 'RED_NEW_22',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'RED_NEW_54',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'RED_NEW_37',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'RED_NEW_32',
+                    opacity: 1
+                }
+            },
+            INPUT_BORDER_CRITICAL_HOVER: {
+                category: 'background',
+                [r.DARK]: {
+                    raw: 'RED_NEW_22',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'RED_NEW_54',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'RED_NEW_37',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'RED_NEW_32',
+                    opacity: 1
+                }
+            },
+            INPUT_BORDER_DEFAULT: {
+                category: 'background',
+                [r.DARK]: {
+                    raw: 'OPACITY_20',
+                    opacity: 0.2
+                },
+                [r.LIGHT]: {
+                    raw: 'OPACITY_36',
+                    opacity: 0.3607843137254902
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'OPACITY_32',
+                    opacity: 0.3215686274509804
+                },
+                [r.DARKER]: {
+                    raw: 'OPACITY_20',
+                    opacity: 0.2
+                }
+            },
+            INPUT_BORDER_DEFAULT_HOVER: {
                 category: 'background',
                 [r.DARK]: {
                     raw: 'OPACITY_20',
@@ -6684,6 +6817,82 @@ let { Themes: r } = n(15202).V,
                 [r.DARKER]: {
                     raw: 'PLUM_11',
                     opacity: 0.32
+                }
+            },
+            INPUT_FOREGROUND_CRITICAL: {
+                category: 'background',
+                [r.DARK]: {
+                    raw: 'RED_345',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'RED_500',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'RED_345',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'RED_345',
+                    opacity: 1
+                }
+            },
+            INPUT_FOREGROUND_DEFAULT: {
+                category: 'background',
+                [r.DARK]: {
+                    raw: 'NEUTRAL_9',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'NEUTRAL_69',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'NEUTRAL_10',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'NEUTRAL_5',
+                    opacity: 1
+                }
+            },
+            INPUT_FOREGROUND_ICON: {
+                category: 'background',
+                [r.DARK]: {
+                    raw: 'NEUTRAL_16',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'NEUTRAL_44',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'NEUTRAL_27',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'NEUTRAL_23',
+                    opacity: 1
+                }
+            },
+            INPUT_FOREGROUND_PLACEHOLDER: {
+                category: 'background',
+                [r.DARK]: {
+                    raw: 'NEUTRAL_32',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'NEUTRAL_44',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'NEUTRAL_38',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'NEUTRAL_36',
+                    opacity: 1
                 }
             },
             INPUT_PLACEHOLDER_TEXT: {

@@ -22,7 +22,7 @@ let u = new Set();
 function d() {
     for (let e of [r.X4.HasRTCConnection, r.X4.IsSendingVideo, r.X4.IsSendingStream, r.X4.IsReceivingVideo, r.X4.IsReceivingStream]) s.ZP.setCrashInformation(e, 0);
 }
-function f(e) {
+function _(e) {
     switch (e) {
         case i.Yn.DEFAULT:
             return r.X4.VideoMediaSessionId;
@@ -30,9 +30,9 @@ function f(e) {
             return r.X4.StreamMediaSessionId;
     }
 }
-function _(e) {
+function f(e) {
     var t;
-    s.ZP.setCrashInformation(f(e.context), null != (t = e.mediaSessionId) ? t : null);
+    s.ZP.setCrashInformation(_(e.context), null != (t = e.mediaSessionId) ? t : null);
 }
 function p(e) {
     var t;
@@ -42,7 +42,7 @@ function p(e) {
             (u.add(n), s.ZP.setCrashInformation(r.X4.HasRTCConnection, 1));
             break;
         case l.hes.DISCONNECTED:
-            (s.ZP.setCrashInformation(f(e.context), null), u.delete(n), 0 === u.size && d());
+            (s.ZP.setCrashInformation(_(e.context), null), u.delete(n), 0 === u.size && d());
     }
 }
 function h(e) {
@@ -64,7 +64,7 @@ class m extends a.Z {
             c(this, 'actions', {
                 RTC_CONNECTION_STATE: p,
                 RTC_CONNECTION_VIDEO: h,
-                MEDIA_SESSION_JOINED: _
+                MEDIA_SESSION_JOINED: f
             }));
     }
 }

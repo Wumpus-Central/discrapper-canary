@@ -1892,6 +1892,42 @@ let { Themes: r } = n(15202).V,
                     opacity: 0.1607843137254902
                 }
             },
+            INPUT_BACKGROUND_CRITICAL: {
+                [r.DARK]: {
+                    raw: 'OPACITY_BLACK_28',
+                    opacity: 0.2784313725490196
+                },
+                [r.LIGHT]: {
+                    raw: 'OPACITY_BLACK_12',
+                    opacity: 0.12156862745098039
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'OPACITY_BLACK_12',
+                    opacity: 0.12156862745098039
+                },
+                [r.DARKER]: {
+                    raw: 'OPACITY_BLACK_16',
+                    opacity: 0.1607843137254902
+                }
+            },
+            INPUT_BACKGROUND_DEFAULT: {
+                [r.DARK]: {
+                    raw: 'OPACITY_BLACK_28',
+                    opacity: 0.2784313725490196
+                },
+                [r.LIGHT]: {
+                    raw: 'OPACITY_BLACK_12',
+                    opacity: 0.12156862745098039
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'OPACITY_BLACK_12',
+                    opacity: 0.12156862745098039
+                },
+                [r.DARKER]: {
+                    raw: 'OPACITY_BLACK_16',
+                    opacity: 0.1607843137254902
+                }
+            },
             INPUT_BORDER: {
                 [r.DARK]: {
                     raw: 'NEUTRAL_25',
@@ -1907,6 +1943,150 @@ let { Themes: r } = n(15202).V,
                 },
                 [r.DARKER]: {
                     raw: 'NEUTRAL_28',
+                    opacity: 1
+                }
+            },
+            INPUT_BORDER_ACTIVE: {
+                [r.DARK]: {
+                    raw: 'BLUE_NEW_18',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'BLUE_NEW_63',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'BLUE_NEW_27',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'BLUE_NEW_21',
+                    opacity: 1
+                }
+            },
+            INPUT_BORDER_CRITICAL: {
+                [r.DARK]: {
+                    raw: 'RED_NEW_6',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'RED_NEW_63',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'RED_NEW_22',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'RED_NEW_16',
+                    opacity: 1
+                }
+            },
+            INPUT_BORDER_CRITICAL_HOVER: {
+                [r.DARK]: {
+                    raw: 'RED_NEW_6',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'RED_NEW_63',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'RED_NEW_22',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'RED_NEW_16',
+                    opacity: 1
+                }
+            },
+            INPUT_BORDER_DEFAULT: {
+                [r.DARK]: {
+                    raw: 'NEUTRAL_5',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'NEUTRAL_59',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'NEUTRAL_17',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'NEUTRAL_13',
+                    opacity: 1
+                }
+            },
+            INPUT_BORDER_DEFAULT_HOVER: {
+                [r.DARK]: {
+                    raw: 'NEUTRAL_5',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'NEUTRAL_59',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'NEUTRAL_17',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'NEUTRAL_13',
+                    opacity: 1
+                }
+            },
+            INPUT_FOREGROUND_DEFAULT: {
+                [r.DARK]: {
+                    raw: 'NEUTRAL_1',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'NEUTRAL_76',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'NEUTRAL_6',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'NEUTRAL_1',
+                    opacity: 1
+                }
+            },
+            INPUT_FOREGROUND_ICON: {
+                [r.DARK]: {
+                    raw: 'NEUTRAL_2',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'NEUTRAL_64',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'NEUTRAL_15',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'NEUTRAL_10',
+                    opacity: 1
+                }
+            },
+            INPUT_FOREGROUND_PLACEHOLDER: {
+                [r.DARK]: {
+                    raw: 'NEUTRAL_29',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'NEUTRAL_46',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'NEUTRAL_36',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'NEUTRAL_34',
                     opacity: 1
                 }
             },

@@ -8,8 +8,8 @@ var r = n(275726),
     c = n(496675),
     u = n(944486),
     d = n(594174),
-    f = n(146085),
-    _ = n(96052),
+    _ = n(146085),
+    f = n(96052),
     p = n(981631);
 function h(e, t, n) {
     return (
@@ -29,10 +29,10 @@ class m extends a.Z {
         let { voiceStates: t } = e;
         t.forEach((e) => {
             let { channelId: t, userId: n, suppress: a, requestToSpeakTimestamp: h } = e;
-            if (u.Z.getVoiceChannelId() === t && a && null != t && n !== o.default.getId() && c.Z.can(f.yP, s.Z.getChannel(t)))
+            if (u.Z.getVoiceChannelId() === t && a && null != t && n !== o.default.getId() && c.Z.can(_.yP, s.Z.getChannel(t)))
                 if (null != h) {
                     let e = d.default.getUser(n);
-                    null != e && (0, _.U)(t, e, h);
+                    null != e && (0, f.U)(t, e, h);
                 } else {
                     let e = l.Z.getMessages(t).findNewest((e) => e.type === r.u.STAGE_RAISE_HAND && e.hasFlag(p.iLy.EPHEMERAL) && e.author.id === n);
                     null != e && i.Z.deleteMessage(t, e.id, !0);

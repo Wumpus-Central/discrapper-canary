@@ -10,14 +10,14 @@ function i(t, e) {
     return (a) => {
         let i = t(a),
             c = new Map();
-        function s(e, r) {
+        function E(e, r) {
             let i = r ? `${e}:${r}` : e,
-                s = c.get(i);
-            if (!s) {
-                let E = (0, _.U4)(e);
-                if (!E) return;
-                let l = (0, n.U)(E, a.tunnel);
-                ((s = r
+                E = c.get(i);
+            if (!E) {
+                let s = (0, _.U4)(e);
+                if (!s) return;
+                let l = (0, n.U)(s, a.tunnel);
+                ((E = r
                     ? ((e) => {
                           let a = t(e);
                           return {
@@ -35,9 +35,9 @@ function i(t, e) {
                           ...a,
                           url: l
                       })),
-                    c.set(i, s));
+                    c.set(i, E));
             }
-            return [e, s];
+            return [e, E];
         }
         return {
             send: async function (t) {
@@ -47,7 +47,7 @@ function i(t, e) {
                             return o(t, e && e.length ? e : ['event']);
                         }
                     })
-                        .map((t) => ('string' == typeof t ? s(t, void 0) : s(t.dsn, t.release)))
+                        .map((t) => ('string' == typeof t ? E(t, void 0) : E(t.dsn, t.release)))
                         .filter((t) => !!t),
                     _ = a.length ? a : [['', i]];
                 return (

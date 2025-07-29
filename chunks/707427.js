@@ -3374,6 +3374,25 @@ let { Themes: r } = n(15202).V,
                     opacity: 0.32
                 }
             },
+            INPUT_BORDER_CRITICAL_HOVER: {
+                category: 'background',
+                [r.DARK]: {
+                    raw: 'RED_NEW_22',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'RED_NEW_54',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'RED_NEW_37',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'RED_NEW_32',
+                    opacity: 1
+                }
+            },
             INPUT_ERROR_BACKGROUND: {
                 category: 'background',
                 [r.DARK]: {
@@ -3448,6 +3467,44 @@ let { Themes: r } = n(15202).V,
                 [r.DARKER]: {
                     raw: 'PLUM_11',
                     opacity: 0.32
+                }
+            },
+            INPUT_FOREGROUND_CRITICAL: {
+                category: 'background',
+                [r.DARK]: {
+                    raw: 'RED_345',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'RED_500',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'RED_345',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'RED_345',
+                    opacity: 1
+                }
+            },
+            INPUT_FOREGROUND_DEFAULT: {
+                category: 'background',
+                [r.DARK]: {
+                    raw: 'NEUTRAL_9',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'NEUTRAL_69',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'NEUTRAL_10',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'NEUTRAL_5',
+                    opacity: 1
                 }
             },
             INPUT_PLACEHOLDER_TEXT: {

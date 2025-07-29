@@ -39,7 +39,7 @@ function d(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,12 +51,12 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -65,7 +65,7 @@ function _(e, t) {
 function p(e) {
     var t;
     let { color: n, colors: a, className: s, background: u = !0, hoverOverride: d } = e,
-        [f, _] = i.useState(!1),
+        [_, f] = i.useState(!1),
         p = null != (t = null == a ? void 0 : a.primaryColor) ? t : n,
         { hasGradient: h, stops: m, gradientId: g, animatedGradientId: E } = (0, l.De)(p, null == a ? void 0 : a.secondaryColor, null == a ? void 0 : a.tertiaryColor);
     return null == p
@@ -75,10 +75,10 @@ function p(e) {
               viewBox: '0 0 20 20',
               fill: 'none',
               onMouseEnter: () => {
-                  _(!0);
+                  f(!0);
               },
               onMouseLeave: () => {
-                  _(!1);
+                  f(!1);
               },
               children: [
                   h &&
@@ -143,7 +143,7 @@ function p(e) {
                       cx: '10',
                       cy: '10',
                       r: '5',
-                      fill: h ? 'url(#'.concat(d || f ? E : g, ')') : p
+                      fill: h ? 'url(#'.concat(d || _ ? E : g, ')') : p
                   })
               ]
           });
@@ -158,7 +158,7 @@ function h(e) {
                 children: (t) =>
                     (0, r.jsx)(
                         'span',
-                        _(d({}, t), {
+                        f(d({}, t), {
                             'aria-hidden': !0,
                             children: (0, r.jsx)(p, d({}, e))
                         })
@@ -174,9 +174,9 @@ function m(e) {
         });
     if (null == t && null == n) return null;
     let u = null != n && null != n.primaryColor && null != n.secondaryColor,
-        f = d({}, u ? a : { backgroundColor: null != t ? t : void 0 });
+        _ = d({}, u ? a : { backgroundColor: null != t ? t : void 0 });
     return (0, r.jsx)('span', {
         className: o()(c.roleCircle, i, { [s]: u }),
-        style: f
+        style: _
     });
 }

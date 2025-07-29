@@ -19,14 +19,14 @@ let u = {};
 function d(e, t) {
     return e + t;
 }
-function f(e, t) {
+function _(e, t) {
     return t.map((t) => d(e, t));
 }
-function _(e) {
+function f(e) {
     return e.split('-')[1];
 }
 function p(e) {
-    return e.filter((e) => u[e] <= 1).map(_);
+    return e.filter((e) => u[e] <= 1).map(f);
 }
 function h(e, t) {
     e.forEach((e) => {
@@ -92,7 +92,7 @@ function v(e) {
     };
 }
 async function I(e, t) {
-    let n = f(e, t),
+    let n = _(e, t),
         i = p(n);
     if (0 === i.length) return [];
     h(n, 2);
@@ -109,9 +109,9 @@ async function I(e, t) {
             let { userId: t } = e;
             return o.push(t);
         });
-        let s = f(e, o),
+        let s = _(e, o),
             c = i.filter((e) => !o.includes(e)),
-            u = f(e, c);
+            u = _(e, c);
         return (h(s, 3), h(u, 0), a);
     } catch (e) {
         h(n, 0);

@@ -8,8 +8,8 @@ var r = n(392711),
     c = n(402235),
     u = n(11637),
     d = n(592125),
-    f = n(485386),
-    _ = n(430824),
+    _ = n(485386),
+    f = n(430824),
     p = n(594174),
     h = n(5192),
     m = n(51144),
@@ -69,7 +69,7 @@ function x(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ function k(e, t) {
         e
     );
 }
-let M = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
+let k = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
     j = /^$|\n *$/,
     U = /^ *>>> ?/,
     G = /^ *> ?/gm,
@@ -109,19 +109,19 @@ let F = (e) => {
         let t = d.Z.getChannel(e);
         return null == t ? void 0 : t.getGuildId();
     },
-    Z = (e) => (null != e.guildId ? _.Z.getGuild(e.guildId) : null != e.channelId ? _.Z.getGuild(F(e.channelId)) : null),
+    Z = (e) => (null != e.guildId ? f.Z.getGuild(e.guildId) : null != e.channelId ? f.Z.getGuild(F(e.channelId)) : null),
     H = {
         newline: o().defaultRules.newline,
         paragraph: o().defaultRules.paragraph,
-        escape: k(L({}, o().defaultRules.escape), { match: (e, t, n) => (!1 === t.allowEscape ? null : o().defaultRules.escape.match(e, t, n)) }),
-        blockQuote: k(L({}, o().defaultRules.blockQuote), {
+        escape: M(L({}, o().defaultRules.escape), { match: (e, t, n) => (!1 === t.allowEscape ? null : o().defaultRules.escape.match(e, t, n)) }),
+        blockQuote: M(L({}, o().defaultRules.blockQuote), {
             requiredFirstCharacters: [' ', '>'],
             match(e, t) {
                 let { prevCapture: n, inQuote: r, nested: i } = t;
                 if (r || i) return null;
-                if (null == n) return M.exec(e);
+                if (null == n) return k.exec(e);
                 let a = n[0];
-                return j.test(a) ? M.exec(e) : null;
+                return j.test(a) ? k.exec(e) : null;
             },
             parse(e, t, n) {
                 let r = e[0],
@@ -148,12 +148,12 @@ let F = (e) => {
             }
         }),
         link: y.ZP,
-        autolink: k(L({}, o().defaultRules.autolink), { parse: V }),
-        mailto: k(L({}, o().defaultRules.mailto), {
+        autolink: M(L({}, o().defaultRules.autolink), { parse: V }),
+        mailto: M(L({}, o().defaultRules.mailto), {
             match: o().inlineRegex(/^<([^\s<>@]+@[^\s<>@]+\.[^\s<>@]+)>/),
             requiredFirstCharacters: ['<']
         }),
-        tel: k(L({}, o().defaultRules.mailto), {
+        tel: M(L({}, o().defaultRules.mailto), {
             requiredFirstCharacters: ['<'],
             match: o().inlineRegex(/^<((?:(?:tel|sms):\+?|\+)(?:(?:[0-9]|\([0-9]+\)))(?:[- .\/]?(?:[0-9]|\([0-9]+\)))+)>/),
             parse(e) {
@@ -174,7 +174,7 @@ let F = (e) => {
                 );
             }
         }),
-        url: k(L({}, o().defaultRules.url), {
+        url: M(L({}, o().defaultRules.url), {
             requiredFirstCharacters: ['h', 's'],
             match(e, t) {
                 if (!t.inline) return null;
@@ -201,10 +201,10 @@ let F = (e) => {
         u: o().defaultRules.u,
         br: o().defaultRules.br,
         text: T.ZP,
-        inlineCode: k(L({}, o().defaultRules.inlineCode), {
+        inlineCode: M(L({}, o().defaultRules.inlineCode), {
             parse(e, t, n) {
                 let r = o().defaultRules.inlineCode.parse(e, t, n);
-                return !0 === n.parseInlineCodeChildContent ? k(L({}, r), { validationChildContent: t(r.content, n) }) : r;
+                return !0 === n.parseInlineCodeChildContent ? M(L({}, r), { validationChildContent: t(r.content, n) }) : r;
             }
         }),
         emoticon: {
@@ -242,20 +242,20 @@ let F = (e) => {
                         id: s
                     };
                 let u = Z(n),
-                    d = null != u ? f.Z.getRole(u.id, s) : null;
+                    d = null != u ? _.Z.getRole(u.id, s) : null;
                 if (null == d)
                     return {
                         type: 'text',
                         content: '@'.concat(w.intl.string(w.t['YV4F/v']))
                     };
-                let _ = (0, c.zI)(null == u ? void 0 : u.id, d) && !(0, l.Gr)(d);
+                let f = (0, c.zI)(null == u ? void 0 : u.id, d) && !(0, l.Gr)(d);
                 return {
                     type: 'mention',
                     channelId: n.channelId,
                     guildId: null != u ? u.id : null,
                     roleId: s,
                     roleColor: d.color,
-                    roleColors: _
+                    roleColors: f
                         ? {
                               primaryColor: null == (r = d.colors) ? void 0 : r.primary_color,
                               secondaryColor: null == (i = d.colors) ? void 0 : i.secondary_color,
@@ -512,7 +512,7 @@ let et = 10,
                 parse(e, t, n) {
                     var r;
                     let i = null != (r = n.parseDepth) ? r : 0,
-                        a = k(L({}, n), { parseDepth: i + 1 }),
+                        a = M(L({}, n), { parseDepth: i + 1 }),
                         o = t(e[2], a),
                         s = t(e[3], a);
                     return [

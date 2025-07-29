@@ -1,4 +1,4 @@
-n.d(t, { x: () => f });
+n.d(t, { x: () => _ });
 var r = n(255367),
     i = n(73800),
     a = n(778382),
@@ -56,9 +56,9 @@ function d(e, t) {
         e
     );
 }
-let f = i.forwardRef(function (e, t) {
+let _ = i.forwardRef(function (e, t) {
     let { status: n, buffer: i } = (0, s.VG)(a.Z),
         l = (0, s.T3)(a.Z);
     return n === s.Jt.Loading ? null : (0, r.jsx)(o.v, d(c(d(c({}, l ? { key: 'override' } : {}), { buffer: i }), e), { ref: t }));
 });
-f.riveSrc = a.Z;
+_.riveSrc = a.Z;

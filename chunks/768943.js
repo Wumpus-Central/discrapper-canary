@@ -35,9 +35,9 @@ function d(e) {
     }
     return e;
 }
-let f = 10000000000000;
-function _(e) {
-    if (null == e) return f;
+let _ = 10000000000000;
+function f(e) {
+    if (null == e) return _;
     try {
         return new Date(e).getTime();
     } catch (t) {
@@ -45,7 +45,7 @@ function _(e) {
     }
 }
 function p(e) {
-    return _(e.dueAt) - _(e.savedAt);
+    return f(e.dueAt) - f(e.savedAt);
 }
 let h = new a.h(
         (e) => {
@@ -148,12 +148,12 @@ function x() {
     if (0 === b.size || m) return !1;
     m = !0;
 }
-function k(e) {
+function M(e) {
     let { channel: t } = e;
     if (0 === b.size || m || !O(t.id)) return !1;
     m = !0;
 }
-function M(e) {
+function k(e) {
     let { channels: t } = e;
     if (0 === b.size || m) return !1;
     let n = !1;
@@ -241,8 +241,8 @@ let V = new B(o.Z, {
     GUILD_CREATE: x,
     GUILD_UPDATE: x,
     GUILD_DELETE: x,
-    CHANNEL_CREATE: k,
-    CHANNEL_UPDATES: M,
+    CHANNEL_CREATE: M,
+    CHANNEL_UPDATES: k,
     CHANNEL_DELETE: j,
     GUILD_MEMBER_UPDATE: U,
     GUILD_ROLE_CREATE: x,

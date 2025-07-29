@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(987826),
     u = n(826298),
     d = n(761652),
-    f = n(388032),
-    _ = n(893541);
+    _ = n(388032),
+    f = n(893541);
 function p(e, t, n) {
     return (
         t in e
@@ -67,7 +67,7 @@ function b(e, t, n) {
     return (0, r.jsx)(
         c.Z,
         {
-            className: _.option,
+            className: f.option,
             name: e.displayName,
             state: t,
             onClick: n
@@ -98,7 +98,7 @@ function y(e) {
             };
         }, [t.options, n]),
         u = (0, r.jsx)('div', {
-            className: _.optionalNames,
+            className: f.optionalNames,
             children: c.map((e) =>
                 (0, r.jsx)(
                     s.Text,
@@ -116,9 +116,9 @@ function y(e) {
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(s.X6q, {
-                              className: _.optionalHeader,
+                              className: f.optionalHeader,
                               variant: 'heading-deprecated-12/semibold',
-                              children: f.intl.string(f.t['5C107O'])
+                              children: _.intl.string(_.t['5C107O'])
                           }),
                           l.map((e) => b(e, null == n ? void 0 : n[e.name], a))
                       ]
@@ -136,13 +136,13 @@ function y(e) {
                               g(
                                   h(
                                       {
-                                          className: _.optionalCount,
+                                          className: f.optionalCount,
                                           color: 'text-muted',
                                           variant: 'text-sm/normal'
                                       },
                                       e
                                   ),
-                                  { children: 0 === l.length ? f.intl.formatToPlainString(f.t['0mI72t'], { count: c.length }) : f.intl.formatToPlainString(f.t.BP8N0N, { count: c.length }) }
+                                  { children: 0 === l.length ? _.intl.formatToPlainString(_.t['0mI72t'], { count: c.length }) : _.intl.formatToPlainString(_.t.BP8N0N, { count: c.length }) }
                               )
                           )
                   })
@@ -152,7 +152,7 @@ function y(e) {
             d,
             null != p || null != m
                 ? (0, r.jsxs)('div', {
-                      className: _.optionals,
+                      className: f.optionals,
                       children: [p, m]
                   })
                 : null
@@ -162,20 +162,20 @@ function y(e) {
 function O(e) {
     var t, n, a;
     let s,
-        { command: c, activeOptionName: f, channel: p, showOptions: h, showImage: m, optionStates: g, onOptionClick: E, section: b, isSelectable: O = !0 } = e,
+        { command: c, activeOptionName: _, channel: p, showOptions: h, showImage: m, optionStates: g, onOptionClick: E, section: b, isSelectable: O = !0 } = e,
         v = i.useMemo(() => {
             var e;
-            return null == c || null == (e = c.options) ? void 0 : e.find((e) => e.name === f);
-        }, [f, c]),
-        I = null != f ? (null == g ? void 0 : g[f]) : null;
+            return null == c || null == (e = c.options) ? void 0 : e.find((e) => e.name === _);
+        }, [_, c]),
+        I = null != _ ? (null == g ? void 0 : g[_]) : null;
     s = null != I && (null == (t = I.lastValidationResult) ? void 0 : t.success) === !1 ? (null != (n = I.lastValidationResult.error) ? n : '') : null;
     let T = m && null != b ? (0, u.ky)(b) : null;
     return (0, r.jsxs)('div', {
-        className: o()(_.wrapper, O ? null : _.disabled),
+        className: o()(f.wrapper, O ? null : f.disabled),
         children: [
             null != T
                 ? (0, r.jsx)(T, {
-                      className: _.image,
+                      className: f.image,
                       channel: p,
                       section: b,
                       width: 32,
@@ -183,13 +183,13 @@ function O(e) {
                   })
                 : null,
             (0, r.jsxs)('div', {
-                className: _.infoWrapper,
+                className: f.infoWrapper,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: _.usageWrapper,
+                        className: f.usageWrapper,
                         children: [
                             (0, r.jsx)(l.BR, {
-                                className: _.title,
+                                className: f.title,
                                 children: d.GI + c.displayName
                             }),
                             h
@@ -202,13 +202,13 @@ function O(e) {
                         ]
                     }),
                     (0, r.jsx)(l.wL, {
-                        className: o()(_.description, null != s ? _.error : null),
+                        className: o()(f.description, null != s ? f.error : null),
                         children: null != (a = null != s ? s : null == v ? void 0 : v.displayDescription) ? a : c.displayDescription
                     })
                 ]
             }),
             (0, r.jsx)(l.dY, {
-                className: _.source,
+                className: f.source,
                 children: null == b ? void 0 : b.name
             })
         ]

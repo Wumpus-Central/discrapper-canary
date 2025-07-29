@@ -4,7 +4,7 @@
     G9: () => u,
     J6: () => p,
     Z_: () => l,
-    _v: () => _,
+    _v: () => f,
     jU: () => g,
     sX: () => d,
     zO: () => s
@@ -103,7 +103,7 @@ class d {
         (o(this, 'stopwatch', void 0), o(this, 'state', void 0), (this.stopwatch = new u(t)), (this.state = e), this.stopwatch.toggle(e));
     }
 }
-class f {
+class _ {
     hasTimedOut() {
         if (!this.watch.isRunning()) throw Error('`start` must be called before `hasTimedOut`');
         return this.watch.elapsed().isGreaterOrEqualTo(this.timeout);
@@ -112,17 +112,17 @@ class f {
         this.watch.start();
     }
     static startNew(e) {
-        let t = new f(e);
+        let t = new _(e);
         return (t.start(), t);
     }
     static async waitFor(e, t) {
         let n,
             r = c.fromMilliseconds(100);
         e instanceof c ? (n = e) : ((n = e.timeout), null != e.sleep && (r = e.sleep));
-        let i = f.startNew(n);
+        let i = _.startNew(n);
         do {
             if ((await t()) === !0) return !0;
-            await _(r);
+            await f(r);
         } while (!i.hasTimedOut());
         return !1;
     }
@@ -130,7 +130,7 @@ class f {
         (o(this, 'timeout', void 0), o(this, 'watch', void 0), (this.timeout = e), (this.watch = new u()));
     }
 }
-function _(e) {
+function f(e) {
     let t = 'number' == typeof e ? e : e.asMilliseconds();
     return new Promise((e) => {
         setTimeout(() => e(), t);

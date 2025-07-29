@@ -1,6 +1,6 @@
 n.d(t, {
-    T: () => f,
-    a: () => _
+    T: () => _,
+    a: () => f
 });
 var r = n(544891),
     i = n(704215),
@@ -14,22 +14,22 @@ let d = () => {
     let e = null;
     return ((0, c.isAndroid)() ? (e = u.gg$.GOOGLE) : (0, c.isIOS)() && (e = u.gg$.APPLE), e);
 };
-async function f(e) {
+async function _(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     if (t) {
         a.Z.dispatch({ type: 'BILLING_USER_OFFER_FETCH_START' });
         try {
-            var n, c, f;
+            var n, c, _;
             null != e && l.default.track(u.rMx.FETCH_USER_OFFER_STARTED, { call_location: e });
             let t = d(),
-                _ = await r.tn.post({
+                f = await r.tn.post({
                     url: u.ANM.USER_OFFER,
                     body: null != t ? { payment_gateway: t } : {},
                     rejectWithError: !0
                 }),
-                p = null != (n = _.body.user_trial_offer) ? n : null,
-                h = null != (c = _.body.user_discount) ? c : null,
-                m = null != (f = _.body.user_discount_offer) ? f : null;
+                p = null != (n = f.body.user_trial_offer) ? n : null,
+                h = null != (c = f.body.user_discount) ? c : null,
+                m = null != (_ = f.body.user_discount_offer) ? _ : null;
             return (
                 null == p && (0, o.zu)(i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (0, s.w9)(i.z.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING),
                 a.Z.dispatch({
@@ -49,7 +49,7 @@ async function f(e) {
         }
     }
 }
-function _(e, t) {
+function f(e, t) {
     let n = null != e && null == e.expires_at ? e.id : void 0,
         i = null != t && null == t.expires_at ? t.id : void 0;
     if (void 0 !== n || void 0 !== i)

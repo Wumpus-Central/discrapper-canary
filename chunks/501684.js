@@ -9,13 +9,13 @@ a.d(e, {
     to: () => L
 });
 var c = a(622916),
-    s = a(688838),
-    E = a(665909),
+    E = a(688838),
+    s = a(665909),
     l = a(795927),
     u = a(661129),
     I = a(231550),
-    d = a(428983),
-    R = a(622574),
+    R = a(428983),
+    d = a(622574),
     N = a(288570);
 let f = {},
     A = {};
@@ -41,7 +41,7 @@ function P(t, e) {
             ((function (t) {
                 let e = {};
                 ('event' === t && (e.durationThreshold = 0),
-                    (0, R.N)(
+                    (0, d.N)(
                         t,
                         (e) => {
                             g(t, { entries: e });
@@ -60,11 +60,11 @@ function g(t, e) {
             try {
                 r(e);
             } catch (e) {
-                E.X &&
+                s.X &&
                     c.kg.error(
                         `Error while triggering instrumentation handler.
 Type: ${t}
-Name: ${(0, s.$P)(r)}
+Name: ${(0, E.$P)(r)}
 Error:`,
                         e
                     );
@@ -84,7 +84,7 @@ function C() {
     });
 }
 function m() {
-    return (0, d.N)(
+    return (0, R.N)(
         (t) => {
             (g('lcp', { metric: t }), (n = t));
         },

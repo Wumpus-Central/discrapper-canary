@@ -13,8 +13,8 @@ var r = n(255367),
     c = n(271579),
     u = n(756647),
     d = n(442837),
-    f = n(433517),
-    _ = n(799656),
+    _ = n(433517),
+    f = n(799656),
     p = n(765717),
     h = n(663993),
     m = n(329816),
@@ -85,12 +85,12 @@ function x(e, t) {
     );
 }
 (n(928518), n(972830), n(704806));
-let k = (0, h.Un)({
+let M = (0, h.Un)({
         createPromise: () => n.e('47620').then(n.bind(n, 576184)),
         webpackId: 576184,
         name: 'UnsupportedBrowser'
     }),
-    M = (0, h.Un)({
+    k = (0, h.Un)({
         createPromise: () => n.e('74023').then(n.bind(n, 431583)),
         webpackId: 431583,
         name: 'DownloadApps'
@@ -126,7 +126,7 @@ let k = (0, h.Un)({
         name: 'LinkAuthorize'
     }),
     Z = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('25820'), n.e('69773')]).then(n.bind(n, 197528)),
+        createPromise: () => Promise.all([n.e('72311'), n.e('69773')]).then(n.bind(n, 197528)),
         webpackId: 197528,
         name: 'ActivateDevice'
     }),
@@ -138,7 +138,7 @@ let k = (0, h.Un)({
         id: 457094
     }),
     Y = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('14006'), n.e('8381'), n.e('49645'), n.e('8895'), n.e('70791'), n.e('25820'), n.e('6583'), n.e('70274'), n.e('25292'), n.e('80417'), n.e('22878'), n.e('31978'), n.e('74891'), n.e('85372'), n.e('6380'), n.e('28467'), n.e('8739'), n.e('16766'), n.e('86282'), n.e('73057'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('44421'), n.e('30424'), n.e('76540'), n.e('77451'), n.e('66005'), n.e('36512'), n.e('94136'), n.e('49508'), n.e('22646'), n.e('64838'), n.e('25183'), n.e('3940'), n.e('27458'), n.e('17218'), n.e('67501'), n.e('83075'), n.e('88712'), n.e('30419'), n.e('66317'), n.e('18824'), n.e('73021'), n.e('63243'), n.e('87294'), n.e('81409'), n.e('52030'), n.e('1337'), n.e('86383'), n.e('10778'), n.e('74941'), n.e('84956'), n.e('27978')]).then(n.bind(n, 822699)),
+        createPromise: () => Promise.all([n.e('14006'), n.e('8381'), n.e('49645'), n.e('8895'), n.e('70791'), n.e('72311'), n.e('6583'), n.e('70274'), n.e('25292'), n.e('80417'), n.e('22878'), n.e('31978'), n.e('74891'), n.e('85372'), n.e('6380'), n.e('28467'), n.e('8739'), n.e('16766'), n.e('86282'), n.e('73057'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('44421'), n.e('30424'), n.e('76540'), n.e('77451'), n.e('66005'), n.e('36512'), n.e('94136'), n.e('49508'), n.e('22646'), n.e('64838'), n.e('25183'), n.e('3940'), n.e('27458'), n.e('17218'), n.e('67501'), n.e('83075'), n.e('88712'), n.e('30419'), n.e('66317'), n.e('18824'), n.e('73021'), n.e('63243'), n.e('87294'), n.e('81409'), n.e('52030'), n.e('1337'), n.e('86383'), n.e('10778'), n.e('74941'), n.e('84956'), n.e('27978')]).then(n.bind(n, 822699)),
         webpackId: 822699,
         name: 'ViewsWithAuth'
     }),
@@ -207,7 +207,7 @@ class ei extends i.Component {
                 n === g.P.IN_PROGRESS
                     ? null
                     : !P.KO || d
-                      ? (0, r.jsx)(o.rs, { children: (0, r.jsx)(p.Z, { component: k }) })
+                      ? (0, r.jsx)(o.rs, { children: (0, r.jsx)(p.Z, { component: M }) })
                       : A.isPlatformEmbedded
                         ? (0, r.jsxs)(o.rs, {
                               children: [
@@ -220,12 +220,12 @@ class ei extends i.Component {
                                   (0, r.jsx)(o.AW, {
                                       exact: !0,
                                       path: C.Z5c.INDEX,
-                                      render: () => (0, r.jsx)(_.Z, {})
+                                      render: () => (0, r.jsx)(f.Z, {})
                                   }),
                                   (0, r.jsx)(p.Z, {
                                       exact: !0,
                                       path: C.Z5c.APPS,
-                                      component: M
+                                      component: k
                                   }),
                                   (0, r.jsx)(o.AW, {
                                       path: er([C.Z5c.LOGIN, C.Z5c.REGISTER, C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.RESET], R.a),
@@ -251,7 +251,7 @@ class ei extends i.Component {
                                   (0, r.jsx)(p.Z, {
                                       exact: !0,
                                       path: C.Z5c.INDEX,
-                                      render: () => (0, r.jsx)(_.Z, {})
+                                      render: () => (0, r.jsx)(f.Z, {})
                                   }),
                                   (0, r.jsx)(o.AW, {
                                       path: er([C.Z5c.LOGIN, C.Z5c.LOGIN_HANDOFF, C.Z5c.REGISTER, C.Z5c.BILLING_PREFIX, C.Z5c.BILLING_PROMOTION_REDEMPTION(':code'), C.Z5c.INVITE(':inviteCode'), C.Z5c.INVITE_LOGIN(':inviteCode'), C.Z5c.GIFT_CODE(':giftCode'), C.Z5c.GIFT_CODE_LOGIN(':giftCode'), C.Z5c.GUILD_TEMPLATE(':guildTemplateCode'), C.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode'), C.Z5c.DISABLE_EMAIL_NOTIFICATIONS, C.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, C.Z5c.RESET, C.Z5c.REPORT, C.Z5c.REPORT_SECOND_LOOK, C.Z5c.ACCOUNT_REVERT(':token')], R.a),
@@ -408,7 +408,7 @@ class ei extends i.Component {
                           })),
             (0, r.jsxs)(m.Z, {
                 skipsSettingDefaultPageTitle: i,
-                children: [e, A.isPlatformEmbedded && (n === g.P.NOT_STARTED || n === g.P.IN_PROGRESS) && !0 !== f.K.get(l.SV) ? (0, r.jsx)(E.Z, {}) : null]
+                children: [e, A.isPlatformEmbedded && (n === g.P.NOT_STARTED || n === g.P.IN_PROGRESS) && !0 !== _.K.get(l.SV) ? (0, r.jsx)(E.Z, {}) : null]
             })
         );
     }

@@ -36,7 +36,7 @@ function d(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,12 +48,12 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -81,7 +81,7 @@ let p = () => {
                     return (n) =>
                         (0, r.jsx)(
                             t,
-                            _(d({}, n), {
+                            f(d({}, n), {
                                 guildId: e,
                                 inviteKey: a,
                                 onComplete: c,
@@ -114,7 +114,7 @@ let p = () => {
                 return (n) =>
                     (0, r.jsx)(
                         t,
-                        _(d({}, n), {
+                        f(d({}, n), {
                             guildId: e,
                             isPreview: !0
                         })

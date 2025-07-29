@@ -2,7 +2,7 @@ a.d(e, {
     Ak: () => o,
     QC: () => i,
     t$: () => c,
-    zb: () => s
+    zb: () => E
 });
 var r = a(176984),
     _ = a(622916);
@@ -33,6 +33,6 @@ function c() {
         }
     return t;
 }
-function s() {
+function E() {
     return 'ReportingObserver' in n;
 }

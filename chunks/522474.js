@@ -8,8 +8,8 @@ var r,
     c = n(442837),
     u = n(570140),
     d = n(615287),
-    f = n(710845),
-    _ = n(41534),
+    _ = n(710845),
+    f = n(41534),
     p = n(857192),
     h = n(358085),
     m = n(998502),
@@ -88,7 +88,7 @@ function S(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let A = new f.Z('PopoutWindowStore'),
+let A = new _.Z('PopoutWindowStore'),
     N = {},
     C = {},
     R = {},
@@ -97,8 +97,8 @@ let A = new f.Z('PopoutWindowStore'),
     D = new Set(),
     L = 'app-mount',
     x = () => $.emitChange(),
-    k = s().debounce(x, 150),
-    M = !1;
+    M = s().debounce(x, 150),
+    k = !1;
 function j(e, t) {
     let n = t.document,
         r = n.head;
@@ -125,7 +125,7 @@ function U(e) {
 }
 function G(e) {
     let t = R[e];
-    (a()(null != t, 'Popout window was null during unmount'), t.removeEventListener('focus', x), t.removeEventListener('blur', x), t.removeEventListener('resize', k));
+    (a()(null != t, 'Popout window was null during unmount'), t.removeEventListener('focus', x), t.removeEventListener('blur', x), t.removeEventListener('resize', M));
     let n = P[e];
     (a()(null != n, 'Window root was null while unmounting'), n.unmount(), delete R[e], delete C[e], delete w[e], delete P[e]);
 }
@@ -146,7 +146,7 @@ function F(e) {
         n = w[e];
     if (null == t) return void A.warn('Failed to open window', e);
     let r = t.document;
-    ((0, g.uF)(r, x), t.addEventListener('focus', x), t.addEventListener('blur', x), t.addEventListener('resize', k), M ? j(e, t) : V(e, t));
+    ((0, g.uF)(r, x), t.addEventListener('focus', x), t.addEventListener('blur', x), t.addEventListener('resize', M), k ? j(e, t) : V(e, t));
     let i = (0, l.createRoot)(r.getElementById(L));
     (a()(null != i, 'No render target for popout!'), (P[e] = i), i.render(n(e)));
 }
@@ -160,7 +160,7 @@ function Z(e) {
     if (o && i) return (A.info('Already has open window, skipping focus'), !1);
     let { defaultWidth: s, defaultHeight: l, defaultAlwaysOnTop: c = !1 } = n,
         u = T(n, ['defaultWidth', 'defaultHeight', 'defaultAlwaysOnTop']),
-        f = I(O({}, u), {
+        _ = I(O({}, u), {
             width: null != s ? s : u.width,
             height: null != l ? l : u.height
         }),
@@ -169,24 +169,24 @@ function Z(e) {
     if (null != g) {
         let { width: e, height: t, x: n, y: r, alwaysOnTop: i } = g;
         ((p = null != i ? i : c),
-            (f = I(O({}, f), {
+            (_ = I(O({}, _), {
                 width: null != e && 0 !== e ? e : s,
                 height: null != t && 0 !== t ? t : l,
                 left: n,
                 top: r
             })));
     }
-    let y = (0, E.Z)(f),
+    let y = (0, E.Z)(_),
         v = window.open(b.Z5c.POPOUT_WINDOW, t, y);
     try {
         v.windowKey = t;
     } catch (e) {
         throw (
-            (0, _.D1)(e, i ? d.gl.OutOfProcess : null, {
+            (0, f.D1)(e, i ? d.gl.OutOfProcess : null, {
                 extra: {
                     windowKey: t,
                     totalWindowCount: Object.keys(R).length,
-                    features: f,
+                    features: _,
                     encodedFeatures: y,
                     isPlatformEmbedded: h.isPlatformEmbedded
                 }

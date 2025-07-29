@@ -8,8 +8,8 @@ var r = n(812206),
     c = n(566620),
     u = n(317381),
     d = n(672181),
-    f = n(882347),
-    _ = n(16609),
+    _ = n(882347),
+    f = n(16609),
     p = n(224189),
     h = n(574952),
     m = n(917107),
@@ -30,10 +30,10 @@ async function O(e) {
     if (null == D) return !1;
     if (null == R || (w && !R.isPrivate()) || null == l) return Promise.resolve(!1);
     let L = u.ZP.getCurrentEmbeddedActivity();
-    if (((null == L ? void 0 : L.applicationId) != null && (t = r.Z.getApplication(null == L ? void 0 : L.applicationId)), a.Z.getVoiceChannelId() === l && null != L && L.applicationId === n && (0, _.p)(L.location) === a.Z.getVoiceChannelId())) return ((0, E.Z)(P, L.location), Promise.resolve(!0));
+    if (((null == L ? void 0 : L.applicationId) != null && (t = r.Z.getApplication(null == L ? void 0 : L.applicationId)), a.Z.getVoiceChannelId() === l && null != L && L.applicationId === n && (0, f.p)(L.location) === a.Z.getVoiceChannelId())) return ((0, E.Z)(P, L.location), Promise.resolve(!0));
     let x = await (0, p.Z)(n, l);
     if (
-        !(await (0, f.p)({
+        !(await (0, _.p)({
             applicationId: n,
             application: x,
             channel: R,

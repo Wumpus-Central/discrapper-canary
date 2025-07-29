@@ -1,5 +1,5 @@
 (n.d(t, {
-    cE: () => _,
+    cE: () => p,
     vP: () => f
 }),
     n(415506));
@@ -10,63 +10,65 @@ var r = n(255367),
     s = n(873546),
     l = n(481060),
     c = n(597952),
-    u = n(580747);
-let d = i.createContext({
+    u = n(377089),
+    d = n(580747);
+let _ = i.createContext({
     lang: '',
     style: '',
     className: ''
 });
 function f() {
-    let e = i.useContext(d);
+    let e = i.useContext(_);
     if (void 0 === e) throw Error('useRootElementContext must be used within a RootElementContextProvider');
     return e;
 }
-function _(e) {
-    let { rootClassName: t, lang: n, theme: a, density: f, focused: _, fontScale: p, fontScaleClass: h, mouseMode: m, keyboardModeEnabled: g, saturation: E, desaturateUserColors: b, useForcedColors: y, systemForcedColors: O, useReducedMotion: v, alwaysShowLinkDecorations: I, hardwareAccelerationEnabled: T, highContrastMode: S, children: A } = e,
-        N = window.CSS.supports('selector(::-webkit-scrollbar)'),
-        C = 'font-size: '.concat(p, '%; --saturation-factor: ').concat(E, ';'),
-        R = (0, u.Z)('highlight_mana_buttons'),
-        P = (0, u.Z)('highlight_mana_components'),
-        w = (0, u.Z)('highlight_void_buttons'),
-        D = o()(
+function p(e) {
+    let { rootClassName: t, lang: n, theme: a, density: f, focused: p, fontScale: h, fontScaleClass: m, mouseMode: g, keyboardModeEnabled: E, saturation: b, desaturateUserColors: y, useForcedColors: O, systemForcedColors: v, useReducedMotion: I, alwaysShowLinkDecorations: T, hardwareAccelerationEnabled: S, highContrastMode: A, children: N } = e,
+        C = window.CSS.supports('selector(::-webkit-scrollbar)'),
+        R = 'font-size: '.concat(h, '%; --saturation-factor: ').concat(b, ';'),
+        P = (0, d.Z)('highlight_mana_buttons'),
+        w = (0, d.Z)('highlight_mana_components'),
+        D = (0, d.Z)('highlight_void_buttons'),
+        L = o()(
             (0, c.Z)(),
             (0, l.QeD)(a),
             'density-'.concat(f),
-            h,
+            m,
             {
-                'low-saturation': E <= l.AEw,
-                'keyboard-mode': g,
-                'decorate-links': I,
-                'no-webkit-scrollbar': !N,
-                'has-webkit-scrollbar': N,
-                'mouse-mode': m,
-                'reduce-motion': v,
-                'full-motion': !v,
+                'low-saturation': b <= l.AEw,
+                'keyboard-mode': E,
+                'decorate-links': T,
+                'no-webkit-scrollbar': !C,
+                'has-webkit-scrollbar': C,
+                'mouse-mode': g,
+                'reduce-motion': I,
+                'full-motion': !I,
                 'is-mobile': s.tq,
-                'app-focused': _,
-                'desaturate-user-colors': b,
-                'disable-forced-colors': !y && 'active' === O,
-                'enable-forced-colors': y,
+                'app-focused': p,
+                'desaturate-user-colors': y,
+                'disable-forced-colors': !O && 'active' === v,
+                'enable-forced-colors': O,
                 'visual-refresh': !0,
-                'hardware-acceleration-disabled': !T,
+                'hardware-acceleration-disabled': !S,
                 'visual-refresh-chat-input': !1,
-                'highlight-mana-buttons': R,
-                'highlight-mana-components': P,
-                'highlight-void-buttons': w,
-                'high-contrast-mode': S
+                'mana-text-inputs': (0, u.U)('RootElementContextProvider'),
+                'highlight-mana-buttons': P,
+                'highlight-mana-components': w,
+                'highlight-void-buttons': D,
+                'high-contrast-mode': A
             },
             t
         ),
-        L = i.useMemo(
+        x = i.useMemo(
             () => ({
                 lang: n,
-                style: C,
-                className: D
+                style: R,
+                className: L
             }),
-            [n, C, D]
+            [n, R, L]
         );
-    return (0, r.jsx)(d.Provider, {
-        value: L,
-        children: A
+    return (0, r.jsx)(_.Provider, {
+        value: x,
+        children: N
     });
 }

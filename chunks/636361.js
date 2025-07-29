@@ -1,15 +1,15 @@
-a.d(e, { S: () => s });
+a.d(e, { S: () => E });
 var r = a(622916),
     _ = a(394798),
     n = a(886115),
     o = a(255768),
     i = a(151122);
 let c = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/, /^ResizeObserver loop completed with undelivered notifications.$/, /^Cannot redefine property: googletag$/, "undefined is not an object (evaluating 'a.L')", 'can\'t redefine non-configurable property "solana"', "vv().getRestrictions is not a function. (In 'vv().getRestrictions(1,a)', 'vv().getRestrictions' is undefined)", "Can't find variable: _AutofillCallbackHandler"],
-    s = (0, i._I)((t = {}) => ({
+    E = (0, i._I)((t = {}) => ({
         name: 'InboundFilters',
         processEvent: (e, a, i) => {
-            var s, l, u, I, d;
-            return ((s = e),
+            var E, l, u, I, R;
+            return ((E = e),
             (l = (function (t = {}, e = {}) {
                 return {
                     allowUrls: [...(t.allowUrls || []), ...(e.allowUrls || [])],
@@ -24,12 +24,12 @@ let c = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/, /
                     return 'SentryError' === t.exception.values[0].type;
                 } catch (t) {}
                 return !1;
-            })(s)
+            })(E)
                 ? (o.X &&
                       r.kg.warn(`Event dropped due to being internal Sentry Error.
-Event: ${(0, _.jH)(s)}`),
+Event: ${(0, _.jH)(E)}`),
                   0)
-                : ((u = s),
+                : ((u = E),
                     (I = l.ignoreErrors),
                     !u.type &&
                         I &&
@@ -45,47 +45,47 @@ Event: ${(0, _.jH)(s)}`),
                         })(u).some((t) => (0, n.U0)(t, I)))
                   ? (o.X &&
                         r.kg.warn(`Event dropped due to being matched by \`ignoreErrors\` option.
-Event: ${(0, _.jH)(s)}`),
+Event: ${(0, _.jH)(E)}`),
                     0)
-                  : (d = s).type || !d.exception || !d.exception.values || 0 === d.exception.values.length || d.message || d.exception.values.some((t) => t.stacktrace || (t.type && 'Error' !== t.type) || t.value)
+                  : (R = E).type || !R.exception || !R.exception.values || 0 === R.exception.values.length || R.message || R.exception.values.some((t) => t.stacktrace || (t.type && 'Error' !== t.type) || t.value)
                     ? !(function (t, e) {
                           if ('transaction' !== t.type || !e || !e.length) return !1;
                           let a = t.transaction;
                           return !!a && (0, n.U0)(a, e);
-                      })(s, l.ignoreTransactions)
+                      })(E, l.ignoreTransactions)
                         ? !(function (t, e) {
                               if (!e || !e.length) return !1;
-                              let a = E(t);
+                              let a = s(t);
                               return !!a && (0, n.U0)(a, e);
-                          })(s, l.denyUrls)
+                          })(E, l.denyUrls)
                             ? (function (t, e) {
                                   if (!e || !e.length) return !0;
-                                  let a = E(t);
+                                  let a = s(t);
                                   return !a || (0, n.U0)(a, e);
-                              })(s, l.allowUrls) ||
+                              })(E, l.allowUrls) ||
                               (o.X &&
                                   r.kg.warn(`Event dropped due to not being matched by \`allowUrls\` option.
-Event: ${(0, _.jH)(s)}.
-Url: ${E(s)}`),
+Event: ${(0, _.jH)(E)}.
+Url: ${s(E)}`),
                               0)
                             : (o.X &&
                                   r.kg.warn(`Event dropped due to being matched by \`denyUrls\` option.
-Event: ${(0, _.jH)(s)}.
-Url: ${E(s)}`),
+Event: ${(0, _.jH)(E)}.
+Url: ${s(E)}`),
                               0)
                         : (o.X &&
                               r.kg.warn(`Event dropped due to being matched by \`ignoreTransactions\` option.
-Event: ${(0, _.jH)(s)}`),
+Event: ${(0, _.jH)(E)}`),
                           0)
                     : (o.X &&
                           r.kg.warn(`Event dropped due to not having an error message, error type or stacktrace.
-Event: ${(0, _.jH)(s)}`),
+Event: ${(0, _.jH)(E)}`),
                       0))
                 ? e
                 : null;
         }
     }));
-function E(t) {
+function s(t) {
     try {
         let e;
         try {

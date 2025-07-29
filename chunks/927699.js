@@ -8,18 +8,18 @@ var r = n(255367),
     c = n(752305),
     u = n(893718),
     d = n(993413),
-    f = n(131704),
-    _ = n(474936),
+    _ = n(131704),
+    f = n(474936),
     p = n(981631),
     h = n(388032),
     m = n(913850);
-let g = (0, f.kt)({
+let g = (0, _.kt)({
     id: '1',
     type: p.d4z.DM
 });
 function E(e) {
-    let { sectionTitle: t, errors: n, onTextChange: a, pendingText: f, placeholder: p, currentText: E, className: b, innerClassName: y, disabled: O = !1, disableThemedBackground: v = !1 } = e,
-        [I, T] = i.useState(null != f ? f : E),
+    let { sectionTitle: t, errors: n, onTextChange: a, pendingText: _, placeholder: p, currentText: E, className: b, innerClassName: y, disabled: O = !1, disableThemedBackground: v = !1 } = e,
+        [I, T] = i.useState(null != _ ? _ : E),
         [S, A] = i.useState((0, c.JM)(I)),
         N = i.useRef(!1);
     function C(e, t, n) {
@@ -38,11 +38,11 @@ function E(e) {
             N.current = !0;
         }, []),
         i.useEffect(() => {
-            if (void 0 === f) {
+            if (void 0 === _) {
                 let e = (0, c.JM)(E);
                 (T(E), A(e));
             }
-        }, [f, E]),
+        }, [_, E]),
         (0, r.jsx)('div', {
             className: o()(m.body, b),
             children: (0, r.jsxs)(d.Z, {
@@ -53,7 +53,7 @@ function E(e) {
                     (0, r.jsx)(u.Z, {
                         innerClassName: o()(m.textArea, y),
                         editorClassName: m.editorTextArea,
-                        maxCharacterCount: _.$n,
+                        maxCharacterCount: f.$n,
                         onChange: C,
                         placeholder: p,
                         channel: g,
@@ -70,7 +70,7 @@ function E(e) {
                         onSubmit: R,
                         disableThemedBackground: v
                     }),
-                    (0, r.jsx)(s.nn4, { children: h.intl.format(h.t['+DFxLS'], { maxLength: _.$n }) })
+                    (0, r.jsx)(s.nn4, { children: h.intl.format(h.t['+DFxLS'], { maxLength: f.$n }) })
                 ]
             })
         })

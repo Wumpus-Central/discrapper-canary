@@ -8,8 +8,8 @@ var r,
     c = n(704907),
     u = n(317381),
     d = n(581883),
-    f = n(674563),
-    _ = n(526761);
+    _ = n(674563),
+    f = n(526761);
 function p(e, t, n) {
     return (
         t in e
@@ -69,14 +69,14 @@ let E = [l.yU.CHAT, l.yU.PRIMARY_ENTRY_POINT],
         computeWeight: (e) => (e <= 3 ? 100 : e <= 15 ? 70 : e <= 30 ? 50 : e <= 45 ? 30 : e <= 80 ? 10 : 1),
         lookupKey: (e) => e,
         afterCompute: () => {},
-        numFrequentlyItems: f.yP
+        numFrequentlyItems: _.yP
     });
 function O(e) {
     let {
         settings: { type: t },
         wasSaved: n
     } = e;
-    if (t !== _.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+    if (t !== f.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
     b.pendingUsages = [];
 }
 function v(e) {

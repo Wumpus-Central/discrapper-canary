@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,19 +47,19 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function p(e) {
-    let { text: t, tooltipText: n, textVariant: a = 'text-xs/medium', textClassName: u, 'aria-label': f, icon: p, canTruncate: h = !0, hideTooltip: m = !1, hideText: g = !1 } = e,
+    let { text: t, tooltipText: n, textVariant: a = 'text-xs/medium', textClassName: u, 'aria-label': _, icon: p, canTruncate: h = !0, hideTooltip: m = !1, hideText: g = !1 } = e,
         E = i.useRef(null),
         b = () => {
             let e = null != n ? n : t;
@@ -87,7 +87,7 @@ function p(e) {
         : v
           ? (0, r.jsx)(s.ua7, {
                 text: b(),
-                'aria-label': f,
+                'aria-label': _,
                 tooltipContentClassName: o()(c.container, c.activitiesTooltip),
                 delay: l.X,
                 children: (e) => {
@@ -100,11 +100,11 @@ function p(e) {
                             (null != n || t || g) && (null == i || i());
                         },
                         onMouseLeave: a,
-                        children: [p, !g && (0, r.jsx)(s.Text, _(d({ ref: E }, y), { children: t }))]
+                        children: [p, !g && (0, r.jsx)(s.Text, f(d({ ref: E }, y), { children: t }))]
                     });
                 }
             })
           : (0, r.jsxs)(r.Fragment, {
-                children: [p, !g && (0, r.jsx)(s.Text, _(d({}, y), { children: t }))]
+                children: [p, !g && (0, r.jsx)(s.Text, f(d({}, y), { children: t }))]
             });
 }

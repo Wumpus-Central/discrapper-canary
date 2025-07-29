@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -9,9 +9,9 @@ var i = n(442837),
     c = n(562831),
     u = n(228168),
     d = n(981631);
-function f(e) {
-    let { user: t, themeType: n, shouldShowTooltip: f = !1 } = e,
-        { newestAnalyticsLocation: _ } = (0, a.ZP)(),
+function _(e) {
+    let { user: t, themeType: n, shouldShowTooltip: _ = !1 } = e,
+        { newestAnalyticsLocation: f } = (0, a.ZP)(),
         p = (0, i.e7)([o.default], () => o.default.getId() === t.id),
         h = (0, i.e7)([s.Z], () => s.Z.getRelationshipType(t.id)),
         { gameFriends: m, hasOutgoingPendingGameFriends: g, hasIncomingPendingGameFriends: E } = (0, c.H)({ userId: t.id }),
@@ -26,8 +26,8 @@ function f(e) {
                   gameFriends: m,
                   hasOutgoingPendingGameFriends: g,
                   hasIncomingPendingGameFriends: E,
-                  analyticsLocation: _,
-                  shouldShowTooltip: f
+                  analyticsLocation: f,
+                  shouldShowTooltip: _
               });
     switch (h) {
         case d.OGo.FRIEND:
@@ -38,16 +38,16 @@ function f(e) {
                 type: 'banner',
                 user: t,
                 relationshipType: h,
-                analyticsLocation: _,
-                shouldShowTooltip: f
+                analyticsLocation: f,
+                shouldShowTooltip: _
             });
         default:
             if (n === u.lY.MODAL) return null;
             return (0, r.jsx)(l.Z7, {
                 type: 'banner',
                 userId: t.id,
-                shouldShowTooltip: f,
-                analyticsLocation: _
+                shouldShowTooltip: _,
+                analyticsLocation: f
             });
     }
 }

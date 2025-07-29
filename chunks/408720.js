@@ -5,13 +5,13 @@ var r = a(469359),
     o = a(151122),
     i = a(263449),
     c = a(572299),
-    s = a(910731),
-    E = a(64685),
+    E = a(910731),
+    s = a(64685),
     l = a(394798),
     u = a(622916),
     I = a(467510),
-    d = a(954211),
-    R = a(886115),
+    R = a(954211),
+    d = a(886115),
     N = a(873567),
     f = a(454463),
     A = a(163162);
@@ -30,7 +30,7 @@ let T = (0, o._I)((t = {}) => {
         setup(t) {
             var a, o, T, p, L, h, O;
             (e.console &&
-                (0, s.e)(
+                (0, E.e)(
                     ((a = t),
                     function (t) {
                         if ((0, i.s3)() !== a) return;
@@ -40,12 +40,12 @@ let T = (0, o._I)((t = {}) => {
                                 arguments: t.args,
                                 logger: 'console'
                             },
-                            level: (0, d.V)(t.level),
-                            message: (0, R.nK)(t.args, ' ')
+                            level: (0, R.V)(t.level),
+                            message: (0, d.nK)(t.args, ' ')
                         };
                         if ('assert' === t.level)
                             if (!1 !== t.args[0]) return;
-                            else ((e.message = `Assertion failed: ${(0, R.nK)(t.args.slice(1), ' ') || 'console.assert'}`), (e.data.arguments = t.args.slice(1)));
+                            else ((e.message = `Assertion failed: ${(0, d.nK)(t.args.slice(1), ' ') || 'console.assert'}`), (e.data.arguments = t.args.slice(1)));
                         (0, c.n)(e, {
                             input: t.args,
                             level: t.level
@@ -75,12 +75,12 @@ let T = (0, o._I)((t = {}) => {
                                 e = '<unknown>';
                             }
                             if (0 === e.length) return;
-                            let s = {
+                            let E = {
                                 category: `ui.${t.name}`,
                                 message: e
                             };
-                            (a && (s.data = { 'ui.component_name': a }),
-                                (0, c.n)(s, {
+                            (a && (E.data = { 'ui.component_name': a }),
+                                (0, c.n)(E, {
                                     event: t.event,
                                     name: t.name,
                                     global: t.global
@@ -95,10 +95,10 @@ let T = (0, o._I)((t = {}) => {
                             let { startTimestamp: e, endTimestamp: a } = t,
                                 r = t.xhr[_.xU];
                             if (!e || !a || !r) return;
-                            let { method: n, url: o, status_code: s, body: E } = r,
+                            let { method: n, url: o, status_code: E, body: s } = r,
                                 l = {
                                     xhr: t.xhr,
-                                    input: E,
+                                    input: s,
                                     startTimestamp: e,
                                     endTimestamp: a
                                 };
@@ -108,7 +108,7 @@ let T = (0, o._I)((t = {}) => {
                                     data: {
                                         method: n,
                                         url: o,
-                                        status_code: s
+                                        status_code: E
                                     },
                                     type: 'http'
                                 },
@@ -117,7 +117,7 @@ let T = (0, o._I)((t = {}) => {
                         })
                     ),
                 e.fetch &&
-                    (0, E.Uf)(
+                    (0, s.Uf)(
                         ((L = t),
                         function (t) {
                             if ((0, i.s3)() !== L) return;

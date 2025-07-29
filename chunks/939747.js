@@ -1,5 +1,5 @@
 a.d(e, {
-    Bg: () => E,
+    Bg: () => s,
     Ic: () => _,
     M: () => n,
     OC: () => i,
@@ -32,7 +32,7 @@ function i(t) {
 function c(t) {
     return t.replace(/[^\w\-.]+/gi, '_');
 }
-let s = [
+let E = [
     ['\n', '\\n'],
     ['\r', '\\r'],
     ['\t', '\\t'],
@@ -40,7 +40,7 @@ let s = [
     ['|', '\\u{7c}'],
     [',', '\\u{2c}']
 ];
-function E(t) {
+function s(t) {
     let e = {};
     for (let a in t)
         Object.prototype.hasOwnProperty.call(t, a) &&
@@ -48,7 +48,7 @@ function E(t) {
                 (t, e) =>
                     t +
                     (function (t) {
-                        for (let [e, a] of s) if (t === e) return a;
+                        for (let [e, a] of E) if (t === e) return a;
                         return t;
                     })(e),
                 ''

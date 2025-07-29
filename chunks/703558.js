@@ -1,5 +1,5 @@
 (n.d(t, {
-    Z: () => k,
+    Z: () => M,
     d: () => E
 }),
     n(388685),
@@ -13,8 +13,8 @@ var r,
     c = n(709054),
     u = n(314897),
     d = n(592125),
-    f = n(486472);
-function _(e, t, n) {
+    _ = n(486472);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -117,7 +117,7 @@ function S(e, t) {
 }
 function A() {
     let e = u.default.getId();
-    if (null == e || f.Z.totalUnavailableGuilds > 0) return;
+    if (null == e || _.Z.totalUnavailableGuilds > 0) return;
     let t = O(e);
     for (let e in t) null == d.Z.getChannel(e) && delete t[e];
 }
@@ -177,7 +177,7 @@ function L() {
 }
 class x extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        ((b = null != e ? e : {}), L(), this.waitFor(u.default, d.Z, f.Z));
+        ((b = null != e ? e : {}), L(), this.waitFor(u.default, d.Z, _.Z));
     }
     getState() {
         return b;
@@ -231,9 +231,9 @@ class x extends (r = o.ZP.PersistedStore) {
         return null == n ? null : n[1];
     }
 }
-(_(x, 'displayName', 'DraftStore'),
-    _(x, 'persistKey', 'DraftStore'),
-    _(x, 'migrations', [
+(f(x, 'displayName', 'DraftStore'),
+    f(x, 'persistKey', 'DraftStore'),
+    f(x, 'migrations', [
         (e) => {
             if (null == e) return {};
             for (let t in e) 'timestamp' in e[t] && (e[t] = { 0: e[t] });
@@ -248,7 +248,7 @@ class x extends (r = o.ZP.PersistedStore) {
             return n;
         }
     ]));
-let k = new x(s.Z, {
+let M = new x(s.Z, {
     CONNECTION_OPEN: N,
     LOGOUT: w,
     MULTI_ACCOUNT_REMOVE_ACCOUNT: D,

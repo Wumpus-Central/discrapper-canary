@@ -9,8 +9,8 @@ let c = 3600000;
 function u(e) {
     let t = (0, i.e7)([a.Z], () => (null != e ? a.Z.get(e) : null)),
         n = null != t && t.productLine !== l.POd.COLLECTIBLES,
-        [u, d, f, _] = (0, i.Wu)([s.Z], () => [s.Z.isFetchingProduct(e), s.Z.getProduct(e), s.Z.getProductFetchError(e), s.Z.getProductFetchErrorTimestamp(e)]),
-        p = null != f && null != _ && Date.now() - _ < c;
+        [u, d, _, f] = (0, i.Wu)([s.Z], () => [s.Z.isFetchingProduct(e), s.Z.getProduct(e), s.Z.getProductFetchError(e), s.Z.getProductFetchErrorTimestamp(e)]),
+        p = null != _ && null != f && Date.now() - f < c;
     return (
         (0, r.useEffect)(() => {
             null == e || null != d || n || u || p || (0, o.jr)(e);

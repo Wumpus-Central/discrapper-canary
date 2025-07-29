@@ -1,19 +1,19 @@
-(n.d(t, { z: () => f }), n(388685));
+(n.d(t, { z: () => _ }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(652141),
+    s = n(564854),
     l = n(481060),
     c = n(393238),
     u = n(397974);
 let d = 100;
-function f(e) {
-    let { children: t, className: n, collapsibleContent: a, isExpanded: f } = e,
-        [_, p] = i.useState(!1),
+function _(e) {
+    let { children: t, className: n, collapsibleContent: a, isExpanded: _ } = e,
+        [f, p] = i.useState(!1),
         [h, m] = i.useState(!0),
         [g, E] = i.useState(!1),
-        b = null != f ? f : _,
+        b = null != _ ? _ : f,
         { ref: y, height: O = 0 } = (0, c.ZP)(),
         { ref: v, height: I = 0 } = (0, c.ZP)(),
         T = (0, l.q_F)(
@@ -25,8 +25,8 @@ function f(e) {
             h ? 'animate-never' : 'respect-motion-settings'
         ),
         S = i.useCallback(() => {
-            p(!_);
-        }, [_, p]);
+            p(!f);
+        }, [f, p]);
     return (
         i.useLayoutEffect(() => {
             let e = setTimeout(() => {

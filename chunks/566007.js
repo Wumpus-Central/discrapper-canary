@@ -1,19 +1,18 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => l });
 var r = n(255367);
 n(73800);
-var o = n(313201),
-    i = n(840367),
-    c = n(388032),
-    l = n(523114);
-function a() {
-    let e = (0, o.Dt)();
-    return (0, r.jsx)('section', {
-        className: l.container,
-        'aria-labelledby': e,
+var o = n(750312),
+    i = n(30344),
+    a = n(388032);
+function l(e) {
+    let { user: t, widget: n, loading: l } = e;
+    return (0, r.jsx)(o.Z, {
+        title: a.intl.string(a.t.sUQar6),
+        subtitle: a.intl.string(a.t.wiXdER),
         children: (0, r.jsx)(i.Z, {
-            title: c.intl.string(c.t.sUQar6),
-            subtitle: c.intl.string(c.t.wiXdER),
-            headingId: e
+            games: [n.game],
+            userId: t.id,
+            loading: l
         })
     });
 }

@@ -20,10 +20,10 @@ function c(e, t, n) {
 }
 let u = 604800000,
     d = 'lastSawPomelo';
-function f() {
+function _() {
     r.K.set(d, Date.now());
 }
-function _() {
+function f() {
     if (!o.w8.getCurrentConfig({ location: 'b9eb97_1' }, { autoTrackExposure: !1 }).enabled) return !1;
     let e = a.default.getCurrentUser();
     if (null == e || e.hasUniqueUsername() || !e.hasVerifiedEmailOrPhone()) return !1;
@@ -36,7 +36,7 @@ class p extends i.Z {
         (super(...e),
             c(this, 'actions', { POST_CONNECTION_OPEN: () => this.onPostConnectionOpen() }),
             c(this, 'onPostConnectionOpen', () => {
-                _() && (0, s.a)(l.Kq.APP_START, !0, !1) && f();
+                f() && (0, s.a)(l.Kq.APP_START, !0, !1) && _();
             }));
     }
 }

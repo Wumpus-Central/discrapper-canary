@@ -24,8 +24,8 @@ function d(e, t, n) {
         e
     );
 }
-let f = 12,
-    _ = [c.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, c.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'];
+let _ = 12,
+    f = [c.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, c.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'];
 class p extends a.PureComponent {
     render() {
         let {
@@ -41,7 +41,7 @@ class p extends a.PureComponent {
         });
     }
     constructor(...e) {
-        (super(...e), d(this, 'state', { backgroundColor: s().sample(_) }));
+        (super(...e), d(this, 'state', { backgroundColor: s().sample(f) }));
     }
 }
 class h extends (r = a.Component) {
@@ -80,8 +80,8 @@ class h extends (r = a.Component) {
                         props: { direction: e },
                         state: { translateY: t, height: n }
                     } = this,
-                    r = e > 0 ? 0 : -n / 2 + f,
-                    i = e > 0 ? -n / 2 + f : 0;
+                    r = e > 0 ? 0 : -n / 2 + _,
+                    i = e > 0 ? -n / 2 + _ : 0;
                 (t.setValue(r),
                     l.Z.timing(t, {
                         toValue: i,
@@ -94,7 +94,7 @@ class h extends (r = a.Component) {
             .map(() => s().random(40, 150));
         this.state = {
             blocks: t,
-            height: 2 * t.reduce((e, t) => e + t + f, f),
+            height: 2 * t.reduce((e, t) => e + t + _, _),
             translateY: new l.Z.Value(0)
         };
     }

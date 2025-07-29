@@ -17,8 +17,8 @@ var r,
     c = n(570140),
     u = n(122810),
     d = n(106301),
-    f = n(920828),
-    _ = n(709054),
+    _ = n(920828),
+    f = n(709054),
     p = n(314897),
     h = n(594174),
     m = n(981631);
@@ -80,7 +80,7 @@ function D(e, t) {
             visible: e,
             hidden: []
         };
-    let n = f.R.getCurrentConfig({ location: 'presence_filtering' }, { autoTrackExposure: !1 });
+    let n = _.R.getCurrentConfig({ location: 'presence_filtering' }, { autoTrackExposure: !1 });
     if (!n.filterGamePresence && !n.filterRichPresence)
         return {
             visible: e,
@@ -144,7 +144,7 @@ function x(e) {
               ).values()
           ];
 }
-function k(e) {
+function M(e) {
     let t = b[e];
     if (null == t) return;
     let n = s().maxBy(Object.values(t), (e) => e.processedAtTimestamp);
@@ -153,7 +153,7 @@ function k(e) {
         ((y[e] = n.status), (O[e] = n.activities), (v[e] = null != (r = n.hiddenActivities) ? r : []), null != n.clientStatus && (I[e] = n.clientStatus));
     }
 }
-function M(e) {
+function k(e) {
     let { guildId: t, userId: n, status: r, clientStatus: i, activities: o, hiddenActivities: s, processedAtTimestamp: l } = e;
     if (n === p.default.getId()) return !1;
     let c = r === m.Skl.OFFLINE && (null == s || 0 === s.length),
@@ -173,8 +173,8 @@ function M(e) {
     else {
         let { visible: e, hidden: c } = D(o.length > 1 ? [...o].sort(w) : o, n),
             d = x([...(null != s ? s : []), ...c]),
-            f = u[t];
-        ((o = null != f && a()(f.activities, e) ? f.activities : e),
+            _ = u[t];
+        ((o = null != _ && a()(_.activities, e) ? _.activities : e),
             (u[t] = {
                 status: r,
                 clientStatus: i,
@@ -221,7 +221,7 @@ function U(e, t) {
     (delete n[e], 0 === Object.keys(n).length && delete b[t], L(t));
 }
 function G(e) {
-    for (let t of _.default.keys(b)) U(e, t);
+    for (let t of f.default.keys(b)) U(e, t);
 }
 function B() {
     return !0;
@@ -261,7 +261,7 @@ function V(e) {
                 i.add(t.id));
         }),
         i.delete(r),
-        i.forEach(k));
+        i.forEach(M));
 }
 function F(e) {
     let { presences: t } = e;
@@ -273,7 +273,7 @@ function Z(e) {
         t.forEach((e) => {
             let { user: t, status: n, clientStatus: r, activities: i, hiddenActivities: a, processedAtTimestamp: o } = e;
             null != t &&
-                M({
+                k({
                     guildId: m.ME,
                     userId: t.id,
                     status: n,
@@ -288,7 +288,7 @@ function H(e) {
     let { guild: t } = e;
     t.presences.forEach((e) => {
         let { user: n, status: r, clientStatus: i, activities: a, hiddenActivities: o, processedAtTimestamp: s } = e;
-        M({
+        k({
             guildId: t.id,
             userId: n.id,
             status: r,
@@ -312,7 +312,7 @@ function K(e) {
     return t
         .map((e) => {
             let { guildId: t, user: n, status: r, clientStatus: i, activities: a, hiddenActivities: o, processedAtTimestamp: s } = e;
-            return M({
+            return k({
                 guildId: null != t ? t : m.ME,
                 userId: n.id,
                 status: r,
@@ -328,7 +328,7 @@ function z(e) {
     let { guildId: t, members: n } = e;
     n.forEach((e) => {
         null != e.presence &&
-            M({
+            k({
                 guildId: t,
                 userId: e.user_id,
                 status: e.presence.status,
@@ -344,7 +344,7 @@ function q(e) {
     null == n ||
         n.forEach((e) => {
             null != e.presence &&
-                M({
+                k({
                     guildId: t,
                     userId: e.userId,
                     status: e.presence.status,
@@ -400,7 +400,7 @@ class J extends (r = l.ZP.Store) {
     }
     getAllApplicationActivities(e) {
         let t = [];
-        for (let n of _.default.keys(O))
+        for (let n of f.default.keys(O))
             for (let r of O[n])
                 r.application_id === e &&
                     t.push({
@@ -424,7 +424,7 @@ class J extends (r = l.ZP.Store) {
         return T[e];
     }
     getUserIds() {
-        return _.default.keys(O);
+        return f.default.keys(O);
     }
     isMobileOnline(e) {
         let t = I[e];

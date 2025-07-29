@@ -12,13 +12,13 @@ var r = a(636361),
     o = a(151122),
     i = a(511906),
     c = a(263449),
-    s = a(233517),
-    E = a(510529),
+    E = a(233517),
+    s = a(510529),
     l = a(622916),
     u = a(694043),
     I = a(688838),
-    d = a(393523),
-    R = a(833772),
+    R = a(393523),
+    d = a(833772),
     N = a(454463),
     f = a(163162),
     A = a(408720),
@@ -65,7 +65,7 @@ function D(t = {}) {
             integrations: (0, o.m8)(e),
             transport: e.transport || P.f
         },
-        r = (0, i.M)(R.R, a);
+        r = (0, i.M)(d.R, a);
     return (
         e.autoSessionTracking &&
             (function () {
@@ -73,10 +73,10 @@ function D(t = {}) {
                     N.X && l.kg.warn('Session tracking in non-browser environment with @sentry/browser is not supported.');
                     return;
                 }
-                ((0, s.yj)({ ignoreDuration: !0 }),
-                    (0, s.cg)(),
-                    (0, d.a)(({ from: t, to: e }) => {
-                        void 0 !== t && t !== e && ((0, s.yj)({ ignoreDuration: !0 }), (0, s.cg)());
+                ((0, E.yj)({ ignoreDuration: !0 }),
+                    (0, E.cg)(),
+                    (0, R.a)(({ from: t, to: e }) => {
+                        void 0 !== t && t !== e && ((0, E.yj)({ ignoreDuration: !0 }), (0, E.cg)());
                     }));
             })(),
         r
@@ -102,11 +102,11 @@ function C(t = {}) {
             }),
         !t.eventId)
     ) {
-        let e = (0, s.eW)();
+        let e = (0, E.eW)();
         e && (t.eventId = e);
     }
     let _ = f.m9.document.createElement('script');
-    ((_.async = !0), (_.crossOrigin = 'anonymous'), (_.src = (0, E.h)(r, t)), t.onLoad && (_.onload = t.onLoad));
+    ((_.async = !0), (_.crossOrigin = 'anonymous'), (_.src = (0, s.h)(r, t)), t.onLoad && (_.onload = t.onLoad));
     let { onClose: n } = t;
     if (n) {
         let t = (e) => {

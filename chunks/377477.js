@@ -12,20 +12,20 @@ var o = 'function' == typeof Object.is ? Object.is : a,
 t.useSyncExternalStoreWithSelector = function (e, t, n, r, i) {
     var a = l(null);
     if (null === a.current) {
-        var f = {
+        var _ = {
             hasValue: !1,
             value: null
         };
-        a.current = f;
-    } else f = a.current;
-    var _ = s(
+        a.current = _;
+    } else _ = a.current;
+    var f = s(
         e,
         (a = u(
             function () {
                 function e(e) {
                     if (!l) {
-                        if (((l = !0), (a = e), (e = r(e)), void 0 !== i && f.hasValue)) {
-                            var t = f.value;
+                        if (((l = !0), (a = e), (e = r(e)), void 0 !== i && _.hasValue)) {
+                            var t = _.value;
                             if (i(t, e)) return (s = t);
                         }
                         return (s = e);
@@ -56,11 +56,11 @@ t.useSyncExternalStoreWithSelector = function (e, t, n, r, i) {
     return (
         c(
             function () {
-                ((f.hasValue = !0), (f.value = _));
+                ((_.hasValue = !0), (_.value = f));
             },
-            [_]
+            [f]
         ),
-        d(_),
-        _
+        d(f),
+        f
     );
 };

@@ -16,13 +16,13 @@ var r = a(559508),
     o = a(622916),
     i = a(101284),
     c = a(394798),
-    s = a(617726),
-    E = a(899517),
+    E = a(617726),
+    s = a(899517),
     l = a(454463),
     u = a(163162);
 let I = String(0),
-    d = '',
     R = '',
+    d = '',
     N = '',
     f = (u.m9.navigator && u.m9.navigator.userAgent) || '',
     A = '',
@@ -39,7 +39,7 @@ function h(t, e) {
 function O(t) {
     let e = [];
     return (
-        (0, s.gv)(t, (t, a) => {
+        (0, E.gv)(t, (t, a) => {
             if ('transaction' === a)
                 for (let a = 1; a < t.length; a++) {
                     let r = t[a];
@@ -55,7 +55,7 @@ function O(t) {
     p
         .getHighEntropyValues(['architecture', 'model', 'platform', 'platformVersion', 'fullVersionList'])
         .then((t) => {
-            if (((d = t.platform || ''), (N = t.architecture || ''), (A = t.model || ''), (R = t.platformVersion || ''), t.fullVersionList && t.fullVersionList.length > 0)) {
+            if (((R = t.platform || ''), (N = t.architecture || ''), (A = t.model || ''), (d = t.platformVersion || ''), t.fullVersionList && t.fullVersionList.length > 0)) {
                 let e = t.fullVersionList[t.fullVersionList.length - 1];
                 f = `${e.brand} ${e.version}`;
             }
@@ -90,7 +90,7 @@ function m(t) {
     return (('number' != typeof r && 'boolean' != typeof r) || ('number' == typeof r && isNaN(r)) ? (l.X && o.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be a boolean or a number between 0 and 1. Got ${JSON.stringify(r)} of type ${JSON.stringify(typeof r)}.`), 1) : !0 !== r && !1 !== r && (r < 0 || r > 1) && (l.X && o.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be between 0 and 1. Got ${r}.`), 1)) ? (l.X && o.kg.warn('[Profiling] Discarding profile because of invalid sample rate.'), !1) : r ? !!(!0 === r || Math.random() < r) || (l.X && o.kg.log(`[Profiling] Discarding profile because it's not included in the random sample (sampling rate = ${Number(r)})`), !1) : (l.X && o.kg.log('[Profiling] Discarding profile because a negative sampling decision was inherited or profileSampleRate is set to 0'), !1);
 }
 function v(t, e, a, _) {
-    var s;
+    var E;
     if (!(a.samples.length < 2 ? (l.X && o.kg.log('[Profiling] Discarding profile because it contains less than 2 samples'), !1) : !!a.frames.length || (l.X && o.kg.log('[Profiling] Discarding profile because it contains no frames'), !1))) return null;
     if ('transaction' !== _.type) throw TypeError('Profiling events may only be attached to transactions, this should never occur.');
     if (null == a) throw TypeError(`Cannot construct profiling event envelope without a valid profile. Got ${a} instead.`);
@@ -99,8 +99,8 @@ function v(t, e, a, _) {
             return ('string' == typeof e && 32 !== e.length && l.X && o.kg.log(`[Profiling] Invalid traceId: ${e} on profiled event`), 'string' != typeof e) ? '' : e;
         })(_),
         L =
-            'thread_metadata' in (s = a)
-                ? s
+            'thread_metadata' in (E = a)
+                ? E
                 : (function (t) {
                       let e,
                           a = 0,
@@ -127,9 +127,9 @@ function v(t, e, a, _) {
                                   return;
                               }
                               let i = t.stacks[_.stackId],
-                                  s = [];
+                                  E = [];
                               for (; i; ) {
-                                  s.push(i.frameId);
+                                  E.push(i.frameId);
                                   let e = t.frames[i.frameId];
                                   (e &&
                                       void 0 === r.frames[i.frameId] &&
@@ -141,16 +141,16 @@ function v(t, e, a, _) {
                                       }),
                                       (i = void 0 === i.parentId ? void 0 : t.stacks[i.parentId]));
                               }
-                              let E = {
+                              let s = {
                                   elapsed_since_start_ns: ((_.timestamp + c - n) * 1000000).toFixed(0),
                                   stack_id: a,
                                   thread_id: I
                               };
-                              ((r.stacks[a] = s), (r.samples[o] = E), a++);
+                              ((r.stacks[a] = E), (r.samples[o] = s), a++);
                           }),
                           r
                       );
-                  })(s),
+                  })(E),
         h = e || ('number' == typeof _.start_timestamp ? 1000 * _.start_timestamp : 1000 * (0, i.ph)()),
         O = 'number' == typeof _.timestamp ? 1000 * _.timestamp : 1000 * (0, i.ph)();
     return {
@@ -165,8 +165,8 @@ function v(t, e, a, _) {
             version: u.m9.navigator.userAgent
         },
         os: {
-            name: d,
-            version: R,
+            name: R,
+            version: d,
             build_number: f
         },
         device: {
@@ -179,7 +179,7 @@ function v(t, e, a, _) {
         debug_meta: {
             images: (function (t) {
                 let e,
-                    a = E.n._sentryDebugIds;
+                    a = s.n._sentryDebugIds;
                 if (!a) return [];
                 let r = (0, n.s3)(),
                     _ = r && r.getOptions(),
@@ -201,16 +201,16 @@ function v(t, e, a, _) {
                         }
                         return t;
                     }, {}),
-                    s = [];
+                    E = [];
                 for (let e of t)
                     e &&
                         c[e] &&
-                        s.push({
+                        E.push({
                             type: 'sourcemap',
                             code_file: e,
                             debug_id: c[e]
                         });
-                return s;
+                return E;
             })(a.resources)
         },
         profile: L,

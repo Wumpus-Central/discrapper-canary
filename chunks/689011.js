@@ -14,8 +14,8 @@ var i = n(481060),
     c = n(225715),
     u = n(750143),
     d = n(388032),
-    f = n(708820),
-    _ = n(365627),
+    _ = n(708820),
+    f = n(365627),
     p = n(753260);
 let h = (e) => {
         let { step: t, onClose: n } = e,
@@ -23,26 +23,26 @@ let h = (e) => {
         return t === o.h8.CONFIRM || t === o.h8.BENEFITS
             ? (0, r.jsx)('div', {})
             : (0, r.jsxs)('div', {
-                  className: f.headerContainer,
+                  className: _.headerContainer,
                   children: [
                       !s &&
                           (0, r.jsx)('div', {
-                              className: f.headerImageContainer,
+                              className: _.headerImageContainer,
                               'aria-hidden': 'true',
                               children: (0, r.jsx)('img', {
                                   src: p,
                                   alt: '',
-                                  className: f.headerImage
+                                  className: _.headerImage
                               })
                           }),
                       (0, r.jsx)(i.P3F, {
-                          className: f.closeContainer,
+                          className: _.closeContainer,
                           onClick: () => n(),
                           'aria-label': d.intl.string(d.t.cpT0Cg),
                           children: (0, r.jsx)(i.Dio, {
                               size: 'md',
                               color: 'currentColor',
-                              className: f.closeIcon
+                              className: _.closeIcon
                           })
                       })
                   ]
@@ -53,7 +53,7 @@ let h = (e) => {
         return null == a
             ? null
             : (0, r.jsx)('div', {
-                  className: f.confirmationContainer,
+                  className: _.confirmationContainer,
                   children: (0, r.jsxs)(c.q$, {
                       children: [
                           (0, r.jsx)(c.CW, {
@@ -78,22 +78,22 @@ let h = (e) => {
 function g(e) {
     let { tierName: t, onConfirm: n, subscription: a } = e;
     return (0, r.jsxs)('div', {
-        className: f.purchaseConfirmation,
+        className: _.purchaseConfirmation,
         children: [
             (0, r.jsx)('img', {
-                src: _,
+                src: f,
                 alt: '',
                 width: 300,
                 height: 126
             }),
             (0, r.jsx)(i.X6q, {
-                className: f.confirmationTitle,
+                className: _.confirmationTitle,
                 variant: 'heading-xl/extrabold',
                 color: 'header-primary',
                 children: d.intl.format(d.t['wLFT6+'], { tier: t })
             }),
             (0, r.jsx)(i.Text, {
-                className: f.confirmationSubtitle,
+                className: _.confirmationSubtitle,
                 variant: 'text-md/medium',
                 color: 'header-secondary',
                 children: d.intl.format(d.t.OsAK9v, { timestamp: null == a ? void 0 : a.currentPeriodEnd })

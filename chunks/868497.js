@@ -1,19 +1,19 @@
-a.d(e, { m: () => R });
+a.d(e, { m: () => d });
 var r = a(873567),
     _ = a(370541),
     n = a(285883),
     o = a(573736),
     i = a(263449),
     c = a(988097),
-    s = a(73453),
-    E = a(696486),
+    E = a(73453),
+    s = a(696486),
     l = a(789112),
     u = a(793373),
     I = a(152228),
-    d = a(305625);
-function R(t, e, a, N, f = 'auto.http.browser') {
+    R = a(305625);
+function d(t, e, a, N, f = 'auto.http.browser') {
     if (!t.fetchData) return;
-    let A = (0, s.z)() && e(t.fetchData.url);
+    let A = (0, E.z)() && e(t.fetchData.url);
     if (t.endTimestamp && A) {
         let e = t.fetchData.__span;
         if (!e) return;
@@ -49,7 +49,7 @@ function R(t, e, a, N, f = 'auto.http.browser') {
             }
         })(h),
         P = O ? (0, r.en)(O).host : void 0,
-        g = !!(0, E.HN)(),
+        g = !!(0, s.HN)(),
         D =
             A && g
                 ? (0, I.qp)({
@@ -71,7 +71,7 @@ function R(t, e, a, N, f = 'auto.http.browser') {
         let a = t.args[1];
         a.headers = (function (t, e, a, r, c) {
             let {
-                    traceId: s,
+                    traceId: E,
                     spanId: l,
                     sampled: u,
                     dsc: I
@@ -79,20 +79,20 @@ function R(t, e, a, N, f = 'auto.http.browser') {
                     ...(0, i.aF)().getPropagationContext(),
                     ...a.getPropagationContext()
                 },
-                R = c ? (0, E.Hb)(c) : (0, _.$p)(s, l, u),
-                N = (0, n.IQ)(I || (c ? (0, d.jC)(c) : (0, d._l)(s, e))),
+                d = c ? (0, s.Hb)(c) : (0, _.$p)(E, l, u),
+                N = (0, n.IQ)(I || (c ? (0, R.jC)(c) : (0, R._l)(E, e))),
                 f = r.headers || ('undefined' != typeof Request && (0, o.V9)(t, Request) ? t.headers : void 0);
             if (!f)
                 return {
-                    'sentry-trace': R,
+                    'sentry-trace': d,
                     baggage: N
                 };
             if ('undefined' != typeof Headers && (0, o.V9)(f, Headers)) {
                 let t = new Headers(f);
-                return (t.append('sentry-trace', R), N && t.append(n.bU, N), t);
+                return (t.append('sentry-trace', d), N && t.append(n.bU, N), t);
             }
             if (Array.isArray(f)) {
-                let t = [...f, ['sentry-trace', R]];
+                let t = [...f, ['sentry-trace', d]];
                 return (N && t.push([n.bU, N]), t);
             }
             {
@@ -103,12 +103,12 @@ function R(t, e, a, N, f = 'auto.http.browser') {
                     N && e.push(N),
                     {
                         ...f,
-                        'sentry-trace': R,
+                        'sentry-trace': d,
                         baggage: e.length > 0 ? e.join(',') : void 0
                     }
                 );
             }
-        })(e, p, T, a, (0, s.z)() && g ? D : void 0);
+        })(e, p, T, a, (0, E.z)() && g ? D : void 0);
     }
     return D;
 }

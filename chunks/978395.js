@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(246946),
     u = n(5192),
     d = n(74538),
-    f = n(209698),
-    _ = n(648052),
+    _ = n(209698),
+    f = n(648052),
     p = n(537006),
     h = n(483424),
     m = n(681837),
@@ -29,15 +29,15 @@ var r = n(255367),
     P = n(388032),
     w = n(200669);
 function D(e) {
-    let { user: t, currentUser: n, displayProfile: D, guild: L, isHovering: x, onOpenProfile: k, channelId: M, onClose: j } = e,
-        U = u.ZP.useName(null == L ? void 0 : L.id, M, t),
+    let { user: t, currentUser: n, displayProfile: D, guild: L, isHovering: x, onOpenProfile: M, channelId: k, onClose: j } = e,
+        U = u.ZP.useName(null == L ? void 0 : L.id, k, t),
         { relationshipType: G, originApplicationId: B } = (0, i.cj)([l.Z], () => ({
             relationshipType: l.Z.getRelationshipType(t.id),
             originApplicationId: l.Z.getOriginApplicationId(t.id)
         })),
         V = (0, o.vh)(t.id),
         F = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        Z = (0, f.b)({ location: 'UserProfilePopoutBody' }),
+        Z = (0, _.b)({ location: 'UserProfilePopoutBody' }),
         H = t.id === n.id,
         Y = (0, d.I5)(n);
     return (0, r.jsxs)(a.Ttm, {
@@ -46,7 +46,7 @@ function D(e) {
         children: [
             (0, r.jsx)(v.Z, {
                 user: t,
-                onOpenProfile: k,
+                onOpenProfile: M,
                 onClose: j,
                 usernameIcon:
                     t.hasAvatarForGuild(null == L ? void 0 : L.id) &&
@@ -56,7 +56,7 @@ function D(e) {
                     }),
                 nickname: U,
                 pronouns: null == D ? void 0 : D.pronouns,
-                tags: (0, r.jsx)(_.Z, {
+                tags: (0, r.jsx)(f.Z, {
                     displayProfile: D,
                     themeType: C.lY.POPOUT,
                     onClose: j
@@ -68,7 +68,7 @@ function D(e) {
                             (0, r.jsx)(I.Z, {
                                 userId: t.id,
                                 isHovering: x,
-                                onOpenProfile: k
+                                onOpenProfile: M
                             })
                     ]
                 })
@@ -78,7 +78,7 @@ function D(e) {
                     children: (0, r.jsx)(g.Z, {
                         user: t,
                         guildId: null == L ? void 0 : L.id,
-                        channelId: M,
+                        channelId: k,
                         applicationId: B
                     })
                 }),
@@ -90,7 +90,7 @@ function D(e) {
                             user: t,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
-                            channelId: M
+                            channelId: k
                         })
                     },
                     e.applicationId
@@ -100,7 +100,7 @@ function D(e) {
             !H &&
                 (0, r.jsx)(N.Z, {
                     user: t,
-                    onOpenProfile: (e) => (null == k ? void 0 : k({ section: e }))
+                    onOpenProfile: (e) => (null == M ? void 0 : M({ section: e }))
                 }),
             t.isProvisional
                 ? (0, r.jsx)(O.Z.Overlay, {
@@ -132,7 +132,7 @@ function D(e) {
                       currentUser: n,
                       displayProfile: D,
                       guildId: null == L ? void 0 : L.id,
-                      onOpenUserProfileModal: k,
+                      onOpenUserProfileModal: M,
                       onClose: j
                   })
                 : (0, r.jsx)(h.Z, {

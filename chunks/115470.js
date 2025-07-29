@@ -56,14 +56,14 @@ function u(e, t) {
     );
 }
 let d = {};
-function f(e) {
+function _(e) {
     let { feedbackType: t, cooldown: n, chance: r } = e;
     d[t] = u(l({}, o.R[t]), {
         cooldown: n,
         chance: r
     });
 }
-function _(e) {
+function f(e) {
     let { feedbackType: t } = e;
     delete d[t];
 }
@@ -75,6 +75,6 @@ class p extends (r = i.ZP.Store) {
 }
 (s(p, 'displayName', 'FeedbackOverrideStore'), s(p, 'persistKey', 'feedbackOverrides'));
 let h = new p(a.Z, {
-    FEEDBACK_OVERRIDE_SET: f,
-    FEEDBACK_OVERRIDE_CLEAR: _
+    FEEDBACK_OVERRIDE_SET: _,
+    FEEDBACK_OVERRIDE_CLEAR: f
 });

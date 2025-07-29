@@ -9,8 +9,8 @@ var i = n(658722),
     c = n(481060),
     u = n(402235),
     d = n(485386),
-    f = n(981631),
-    _ = n(388032),
+    _ = n(981631),
+    f = n(388032),
     p = n(72903);
 let h = function (e) {
     let { className: t, guild: n, roleStyle: i, roleFilter: o, onSelect: h, onClose: m } = e,
@@ -25,8 +25,8 @@ let h = function (e) {
         className: t,
         value: new Set(),
         onChange: h,
-        placeholder: _.intl.string(_.t.XPGZXF),
-        'aria-label': _.intl.string(_.t.ljnBlp),
+        placeholder: f.intl.string(f.t.XPGZXF),
+        'aria-label': f.intl.string(f.t.ljnBlp),
         onClose: m,
         children: (e) =>
             b(e).map((e) => {
@@ -39,14 +39,14 @@ let h = function (e) {
                             'dot' === i
                                 ? (0, r.jsx)(c.FhE, {
                                       className: p.popoutRoleDot,
-                                      color: null != (t = e.colorString) ? t : f.Pbq,
+                                      color: null != (t = e.colorString) ? t : _.Pbq,
                                       colors: E ? e.colorStrings : null,
                                       background: !1,
                                       tooltip: !1
                                   })
                                 : (0, r.jsx)(c.xko, {
                                       className: p.popoutRoleCircle,
-                                      color: null != (n = e.colorString) ? n : f.Pbq,
+                                      color: null != (n = e.colorString) ? n : _.Pbq,
                                       colors: E ? e.colorStrings : null
                                   }),
                             (0, r.jsx)(c.lo1.Label, { children: e.name })

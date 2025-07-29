@@ -5,12 +5,12 @@ var r = a(395848),
     o = a(622574),
     i = a(433691),
     c = a(412828),
-    s = a(662355);
-let E = [200, 500],
+    E = a(662355);
+let s = [200, 500],
     l = () => (0, c.U)() - 0,
     u = [],
     I = {},
-    d = (t) => {
+    R = (t) => {
         let e = u[u.length - 1],
             a = I[t.interactionId];
         if (a || u.length < 10 || (e && t.duration > e.latency)) {
@@ -29,24 +29,24 @@ let E = [200, 500],
                 }));
         }
     },
-    R = () => {
+    d = () => {
         let t = Math.min(u.length - 1, Math.floor(l() / 50));
         return u[t];
     },
     N = (t, e = {}) => {
-        (0, s.A)(() => {
+        (0, E.A)(() => {
             let a;
             (0, c.Y)();
-            let s = (0, n.I)('INP'),
+            let E = (0, n.I)('INP'),
                 I = (t) => {
                     t.forEach((t) => {
-                        (t.interactionId && d(t), 'first-input' === t.entryType && (u.some((e) => e.entries.some((e) => t.duration === e.duration && t.startTime === e.startTime)) || d(t)));
+                        (t.interactionId && R(t), 'first-input' === t.entryType && (u.some((e) => e.entries.some((e) => t.duration === e.duration && t.startTime === e.startTime)) || R(t)));
                     });
-                    let e = R();
-                    e && e.latency !== s.value && ((s.value = e.latency), (s.entries = e.entries), a());
+                    let e = d();
+                    e && e.latency !== E.value && ((E.value = e.latency), (E.entries = e.entries), a());
                 },
                 N = (0, o.N)('event', I, { durationThreshold: null != e.durationThreshold ? e.durationThreshold : 40 });
-            ((a = (0, _._)(t, s, E, e.reportAllChanges)),
+            ((a = (0, _._)(t, E, s, e.reportAllChanges)),
                 N &&
                     ('PerformanceEventTiming' in r.m &&
                         'interactionId' in PerformanceEventTiming.prototype &&
@@ -55,7 +55,7 @@ let E = [200, 500],
                             buffered: !0
                         }),
                     (0, i.u)(() => {
-                        (I(N.takeRecords()), s.value < 0 && l() > 0 && ((s.value = 0), (s.entries = [])), a(!0));
+                        (I(N.takeRecords()), E.value < 0 && l() > 0 && ((E.value = 0), (E.entries = [])), a(!0));
                     })));
         });
     };

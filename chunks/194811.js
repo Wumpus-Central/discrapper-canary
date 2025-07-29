@@ -9,21 +9,21 @@ var i = n(120356),
     c = n(228168),
     u = n(227832);
 function d(e) {
-    let { text: t, textId: n, tags: i, platformIcon: d, contextMenu: f } = e,
-        { themeType: _ } = (0, l.z)();
-    return (null == t || '' === t) && null == f
+    let { text: t, textId: n, tags: i, platformIcon: d, contextMenu: _ } = e,
+        { themeType: f } = (0, l.z)();
+    return (null == t || '' === t) && null == _
         ? null
         : null == t || '' === t
           ? (0, r.jsx)('div', {
                 className: a()(u.headerContextMenu, u.absolute),
-                children: f
+                children: _
             })
           : (0, r.jsxs)('div', {
                 className: u.header,
                 children: [
                     (0, r.jsxs)(o.Text, {
                         className: u.headerText,
-                        variant: _ === c.lY.SIDEBAR ? 'text-xs/semibold' : 'text-xs/medium',
+                        variant: f === c.lY.SIDEBAR ? 'text-xs/semibold' : 'text-xs/medium',
                         color: 'header-primary',
                         id: n,
                         children: [
@@ -39,10 +39,10 @@ function d(e) {
                             i
                         ]
                     }),
-                    null != f &&
+                    null != _ &&
                         (0, r.jsx)('div', {
                             className: u.headerContextMenu,
-                            children: f
+                            children: _
                         })
                 ]
             });

@@ -1,7 +1,7 @@
 (n.d(t, {
     DM: () => c,
     SF: () => d,
-    iY: () => f
+    iY: () => _
 }),
     n(415506));
 var r = n(966146),
@@ -94,7 +94,7 @@ class d {
         (a(this, 'width', void 0), a(this, 'height', void 0), a(this, 'framerate', void 0), a(this, 'pixelCount', void 0), (this.width = e.width), (this.height = e.height), (this.framerate = e.framerate), (this.pixelCount = e.width * e.height));
     }
 }
-class f {
+class _ {
     getQuality(e) {
         let t = this.connection.getLocalWant(e),
             n = 0;
@@ -226,7 +226,7 @@ class f {
         });
     }
     getGoliveLQQuality() {
-        var e, t, n, r, a, o, s, l, c, d, f, _;
+        var e, t, n, r, a, o, s, l, c, d, _, f;
         let p = Math.min(i.ef, null != (s = null == (e = this.goliveMaxQuality.encode) ? void 0 : e.width) ? s : i.ef),
             h = Math.min(i.ru, null != (l = null == (t = this.goliveMaxQuality.encode) ? void 0 : t.height) ? l : i.ru),
             m = Math.min(i.R$, null != (c = null == (n = this.goliveMaxQuality.encode) ? void 0 : n.framerate) ? c : i.R$),
@@ -234,8 +234,8 @@ class f {
         return new u({
             capture: {
                 width: g,
-                height: Math.min(i.ru, null != (f = null == (a = this.goliveMaxQuality.capture) ? void 0 : a.height) ? f : i.ru),
-                framerate: Math.min(i.R$, null != (_ = null == (o = this.goliveMaxQuality.capture) ? void 0 : o.framerate) ? _ : i.R$)
+                height: Math.min(i.ru, null != (_ = null == (a = this.goliveMaxQuality.capture) ? void 0 : a.height) ? _ : i.ru),
+                framerate: Math.min(i.R$, null != (f = null == (o = this.goliveMaxQuality.capture) ? void 0 : o.framerate) ? f : i.R$)
             },
             encode: {
                 width: p,

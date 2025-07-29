@@ -531,8 +531,8 @@ function eP(e) {
         }),
         e6 = i.useRef(null),
         {
-            updateMasonryListScrollerRef: e1,
-            getItemKey: e8,
+            updateMasonryListScrollerRef: e8,
+            getItemKey: e1,
             renderGridSection: e9,
             renderGridItem: e4,
             getGridSectionHeight: e5,
@@ -764,14 +764,14 @@ function eP(e) {
                                           {
                                               ref: (e) => {
                                                   var t;
-                                                  ((ta.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null), e1(e));
+                                                  ((ta.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null), e8(e));
                                               },
                                               itemGutter: 16,
                                               padding: 24,
                                               className: ep.grid,
                                               columns: ek,
                                               sections: eH,
-                                              getItemKey: e8,
+                                              getItemKey: e1,
                                               getSectionHeight: e5,
                                               getItemHeight: eO,
                                               renderSection: e9,

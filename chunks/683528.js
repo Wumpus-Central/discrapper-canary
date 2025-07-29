@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(124347),
     u = n(52824),
     d = n(549635),
-    f = n(217702),
-    _ = n(388032),
+    _ = n(217702),
+    f = n(388032),
     p = n(581327);
 let h = 40;
 function m(e) {
@@ -42,7 +42,7 @@ function E(e) {
               shouldRenderAccessory: !1,
               srcIsAnimated: i.srcIsAnimated,
               alt: i.alt,
-              mediaLayoutType: f.hV.MOSAIC
+              mediaLayoutType: _.hV.MOSAIC
           });
 }
 let b = i.memo(E);
@@ -69,7 +69,7 @@ function y(e) {
                 onClick: (e) => e.stopPropagation(),
                 children: t.map((e, i) => {
                     let l = i === n,
-                        c = l ? _.t['qv/U5e'] : _.t.zviMAA;
+                        c = l ? f.t['qv/U5e'] : f.t.zviMAA;
                     return (0, r.jsx)(
                         s.P3F,
                         {
@@ -79,7 +79,7 @@ function y(e) {
                                 [p.first]: 0 === i,
                                 [p.last]: i === t.length - 1
                             }),
-                            'aria-label': _.intl.formatToPlainString(c, {
+                            'aria-label': f.intl.formatToPlainString(c, {
                                 pageNumber: i + 1,
                                 totalPages: t.length
                             }),

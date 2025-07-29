@@ -12,13 +12,13 @@ var r = a(370541),
     o = a(356442),
     i = a(263449),
     c = a(833873),
-    s = a(255768),
-    E = a(988097),
+    E = a(255768),
+    s = a(988097),
     l = a(366569),
     u = a(73453),
     I = a(99342),
-    d = a(696486),
-    R = a(305625),
+    R = a(696486),
+    d = a(305625),
     N = a(966497),
     f = a(787659),
     A = a(789112),
@@ -49,7 +49,7 @@ function O(t, e) {
                 (0, l.i)(
                     () => e(o),
                     () => {
-                        let { status: t } = (0, d.XU)(o);
+                        let { status: t } = (0, R.XU)(o);
                         o.isRecording() &&
                             (!t || 'ok' === t) &&
                             o.setStatus({
@@ -89,7 +89,7 @@ function P(t, e) {
                 (0, l.i)(
                     () => e(o, c),
                     () => {
-                        let { status: t } = (0, d.XU)(o);
+                        let { status: t } = (0, R.XU)(o);
                         o.isRecording() &&
                             (!t || 'ok' === t) &&
                             o.setStatus({
@@ -130,7 +130,7 @@ function C(t, e) {
     return a.withActiveSpan ? a.withActiveSpan(t, e) : (0, i.$e)((a) => ((0, I.D)(a, t || void 0), e(a)));
 }
 function m(t) {
-    return (0, i.$e)((e) => (e.setPropagationContext((0, _.Q)()), s.X && n.kg.info(`Starting a new trace with id ${e.getPropagationContext().traceId}`), C(null, t)));
+    return (0, i.$e)((e) => (e.setPropagationContext((0, _.Q)()), E.X && n.kg.info(`Starting a new trace with id ${e.getPropagationContext().traceId}`), C(null, t)));
 }
 function v({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
     let _;
@@ -139,7 +139,7 @@ function v({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
     if (t && !a)
         ((_ = (function (t, e, a) {
             let { spanId: r, traceId: _ } = t.spanContext(),
-                n = !e.getScopeData().sdkProcessingMetadata[h] && (0, d.Tt)(t),
+                n = !e.getScopeData().sdkProcessingMetadata[h] && (0, R.Tt)(t),
                 o = n
                     ? new T.s({
                           ...a,
@@ -148,15 +148,15 @@ function v({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
                           sampled: n
                       })
                     : new A.b({ traceId: _ });
-            (0, d.j5)(t, o);
+            (0, R.j5)(t, o);
             let c = (0, i.s3)();
             return (c && (c.emit('spanStart', o), a.endTimestamp && c.emit('spanEnd', o)), o);
         })(t, r, e)),
-            (0, d.j5)(t, _));
+            (0, R.j5)(t, _));
     else if (t) {
-        let a = (0, R.jC)(t),
+        let a = (0, d.jC)(t),
             { traceId: n, spanId: o } = t.spanContext(),
-            i = (0, d.Tt)(t);
+            i = (0, R.Tt)(t);
         ((_ = U(
             {
                 traceId: n,
@@ -166,7 +166,7 @@ function v({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
             r,
             i
         )),
-            (0, R.Lh)(_, a));
+            (0, d.Lh)(_, a));
     } else {
         let {
             traceId: t,
@@ -186,7 +186,7 @@ function v({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
             r,
             i
         )),
-            a && (0, R.Lh)(_, a));
+            a && (0, d.Lh)(_, a));
     }
     return ((0, N.Z)(_), (0, L.YJ)(_, r, n), _);
 }
@@ -197,7 +197,7 @@ function y(t) {
     };
     if (t.startTime) {
         let a = { ...e };
-        return ((a.startTimestamp = (0, d.$k)(t.startTime)), delete a.startTime, a);
+        return ((a.startTimestamp = (0, R.$k)(t.startTime)), delete a.startTime, a);
     }
     return e;
 }
@@ -209,7 +209,7 @@ function U(t, e, a) {
     let r = (0, i.s3)(),
         _ = (r && r.getOptions()) || {},
         { name: n = '', attributes: o } = t,
-        [c, s] = e.getScopeData().sdkProcessingMetadata[h]
+        [c, E] = e.getScopeData().sdkProcessingMetadata[h]
             ? [!1]
             : (0, f.R)(_, {
                   name: n,
@@ -223,18 +223,18 @@ function U(t, e, a) {
         l = new T.s({
             ...t,
             attributes: {
-                [E.Zj]: 'custom',
+                [s.Zj]: 'custom',
                 ...t.attributes
             },
             sampled: c
         });
-    return (void 0 !== s && l.setAttribute(E.TE, s), r && r.emit('spanStart', l), l);
+    return (void 0 !== E && l.setAttribute(s.TE, E), r && r.emit('spanStart', l), l);
 }
 function b(t) {
     let e = (0, I.Y)(t);
     if (!e) return;
     let a = (0, i.s3)();
-    return (a ? a.getOptions() : {}).parentSpanIsAlwaysRootSpan ? (0, d.Gx)(e) : e;
+    return (a ? a.getOptions() : {}).parentSpanIsAlwaysRootSpan ? (0, R.Gx)(e) : e;
 }
 function G(t) {
     return void 0 !== t ? (e) => C(t, e) : (t) => t();

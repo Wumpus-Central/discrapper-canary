@@ -57,12 +57,12 @@ function c(e) {
                 webpackId: n
             })
         ),
-        f = (e) =>
+        _ = (e) =>
             (0, r.jsx)(i.Suspense, {
                 fallback: null != o ? o() : l()(),
                 children: (0, r.jsx)(d, s({}, e))
             });
-    return (u && (f = i.memo(f)), (f.displayName = 'Suspense('.concat(c || 'Unknown', ')')), f);
+    return (u && (_ = i.memo(_)), (_.displayName = 'Suspense('.concat(c || 'Unknown', ')')), _);
 }
 function u(e) {
     let { createPromise: t, webpackId: n, render: o, renderFallback: s } = e,

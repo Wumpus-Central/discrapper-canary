@@ -16,8 +16,8 @@ var r = n(512722),
     c = n(341702),
     u = n(925994),
     d = n(436660),
-    f = n(887490);
-let _ = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\ |\\\\|\\"|(?!")\w)+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
+    _ = n(887490);
+let f = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\ |\\\\|\\"|(?!")\w)+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
     p = new Set(['emoji', 'customEmoji', 'textMention', 'userMention', 'roleMention', 'channelMention', 'staticRouteLink', 'soundboard', 'timestamp', 'gameMention']),
     h = new Set(['gameMentionInput']),
     m = new Set(['line', 'blockQuote']),
@@ -29,10 +29,10 @@ function E(e, t, n) {
         s = !0;
     return (
         (e.onChange = () => {
-            let r = f.bN.richValue(e);
+            let r = _.bN.richValue(e);
             ((r !== o || e.previewMarkdown !== s) &&
                 (l.T.withMergedEntry(e, () => {
-                    f.bN.withoutNormalizing(e, () => b(e, t, n));
+                    _.bN.withoutNormalizing(e, () => b(e, t, n));
                 }),
                 (o = r),
                 (s = e.previewMarkdown)),
@@ -42,15 +42,15 @@ function E(e, t, n) {
     );
 }
 function b(e, t, n) {
-    let r = f.bN.areStylesDisabled(e);
-    for (let i of f.bN.blocks(e))
+    let r = _.bN.areStylesDisabled(e);
+    for (let i of _.bN.blocks(e))
         if (m.has(i[0].type)) r ? O(e, i, !0, null) : y(e, i, t, n);
         else {
             let [a, o] = i;
             for (let i = a.children.length - 1; i >= 0; i--) {
                 let s = a.children[i];
                 if (g.has(s.type)) {
-                    let a = [s, f.C0.child(o, i)];
+                    let a = [s, _.C0.child(o, i)];
                     r ? O(e, a, !0, null) : y(e, a, t, n);
                 }
             }
@@ -59,8 +59,8 @@ function b(e, t, n) {
 function y(e, t, n, r) {
     var i;
     let a = 'line' === t[0].type && (null == (i = t[0].codeBlockState) ? void 0 : i.isInCodeBlock) === !0,
-        o = f.q.markdown(t[0], n);
-    (O(e, t, a, o) && ((t = f.q.updateElement(e, t)), (o = f.q.markdown(t[0], n))), a || (v(e, t, r, o) && ((t = f.q.updateElement(e, t)), (o = f.q.markdown(t[0], n))), I(e, t, n, r, o)));
+        o = _.q.markdown(t[0], n);
+    (O(e, t, a, o) && ((t = _.q.updateElement(e, t)), (o = _.q.markdown(t[0], n))), a || (v(e, t, r, o) && ((t = _.q.updateElement(e, t)), (o = _.q.markdown(t[0], n))), I(e, t, n, r, o)));
 }
 function O(e, t, n, r) {
     let [i, a] = t,
@@ -68,7 +68,7 @@ function O(e, t, n, r) {
     for (let t = i.children.length - 1; t >= 0; t--) {
         let s = i.children[t],
             l = t < i.children.length - 1 ? i.children[t + 1] : null;
-        if (f.LC.isText(s) && !n) {
+        if (_.LC.isText(s) && !n) {
             if (null == l || !e.isVoid(l)) continue;
             let n = !1,
                 r = 0;
@@ -82,7 +82,7 @@ function O(e, t, n, r) {
                 r = e + 2;
             }
             if (n) {
-                let n = f.C0.child(a, t + 1);
+                let n = _.C0.child(a, t + 1);
                 (d.Q.voidToText(
                     e,
                     (0, u.sg)(l, {
@@ -94,9 +94,9 @@ function O(e, t, n, r) {
                     (o = !0));
             }
         } else if (e.isVoid(s)) {
-            let i = f.C0.child(a, t),
+            let i = _.C0.child(a, t),
                 l = {
-                    path: f.C0.child(i, 0),
+                    path: _.C0.child(i, 0),
                     offset: 0
                 };
             (n || (null != r && S(e, a, l, r))) &&
@@ -120,8 +120,8 @@ function v(e, t, n, r) {
     for (let s = 0; s < o.length; s++) {
         let l,
             u = o[s],
-            f = o[s + 1];
-        if (null != f && f.text.endsWith('\\') && u.start === f.start + f.text.length) continue;
+            _ = o[s + 1];
+        if (null != _ && _.text.endsWith('\\') && u.start === _.start + _.text.length) continue;
         switch (u.attributes[0]) {
             case 'emoji':
                 l = {
@@ -209,10 +209,10 @@ function v(e, t, n, r) {
                 continue;
         }
         if (!A(n, t[0], l)) continue;
-        let _ = (0, c.t)(e, i, r.serializedChildren, u.start),
+        let f = (0, c.t)(e, i, r.serializedChildren, u.start),
             p = (0, c.t)(e, i, r.serializedChildren, u.start + u.text.length);
         (d.Q.textToVoid(e, l, {
-            anchor: _,
+            anchor: f,
             focus: p
         }),
             (a = !0));
@@ -225,12 +225,12 @@ function I(e, t, n, r, i) {
     for (let c = a.children.length - 1; c >= 0; c--) {
         let u,
             d = a.children[c];
-        if (!f.LC.isText(d)) continue;
-        let p = f.C0.child(o, c),
+        if (!_.LC.isText(d)) continue;
+        let p = _.C0.child(o, c),
             h = [];
-        for (_.lastIndex = 0; null != (u = _.exec(d.text)); ) {
+        for (f.lastIndex = 0; null != (u = f.exec(d.text)); ) {
             if (0 !== u.index && null == d.text.charAt(u.index - 1).match(/(\t|\s)/)) {
-                _.lastIndex = u.index + 1;
+                f.lastIndex = u.index + 1;
                 continue;
             }
             if (
@@ -252,9 +252,9 @@ function I(e, t, n, r, i) {
                       length: u[0].length,
                       node: a
                   })
-                : (_.lastIndex = u.index + 1);
+                : (f.lastIndex = u.index + 1);
         }
-        for (let t of h.reverse()) (T(e, [d, f.C0.child(o, c)], t.index, t.length, t.node), (l = !0));
+        for (let t of h.reverse()) (T(e, [d, _.C0.child(o, c)], t.index, t.length, t.node), (l = !0));
     }
     return l;
 }
@@ -277,14 +277,14 @@ function T(e, t, n, r, a) {
 }
 function S(e, t, n, r) {
     let i = 0;
-    for (let [r, a] of f.bN.nodes(e, {
+    for (let [r, a] of _.bN.nodes(e, {
         at: {
-            anchor: f.bN.start(e, t),
+            anchor: _.bN.start(e, t),
             focus: n
         },
         mode: 'lowest'
     }))
-        f.LC.isText(r) ? (f.C0.equals(a, n.path) ? (i += n.offset) : (i += r.text.length)) : (i += 1);
+        _.LC.isText(r) ? (_.C0.equals(a, n.path) ? (i += n.offset) : (i += r.text.length)) : (i += 1);
     for (let e of r.entries) {
         if (!e.attributes.includes('codeBlockText') && !e.attributes.includes('inlineCode')) continue;
         let t = e.start,

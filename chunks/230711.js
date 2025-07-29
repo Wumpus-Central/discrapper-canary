@@ -8,8 +8,8 @@ var r = n(544891),
     c = n(37234),
     u = n(981631),
     d = n(792101),
-    f = n(388032);
-function _(e, t, n) {
+    _ = n(388032);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -136,7 +136,7 @@ let g = {
     },
     saveAccountChanges(e, t) {
         a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_SUBMIT' });
-        let { username: n, email: s, emailToken: c, password: _, avatar: h, newPassword: g, discriminator: E } = e,
+        let { username: n, email: s, emailToken: c, password: f, avatar: h, newPassword: g, discriminator: E } = e,
             { close: b } = t;
         return (0, l.Z)(
             (e) => {
@@ -146,7 +146,7 @@ let g = {
                                 username: n,
                                 email: s,
                                 email_token: c,
-                                password: _,
+                                password: f,
                                 avatar: h,
                                 new_password: g
                             },
@@ -170,7 +170,7 @@ let g = {
             },
             {
                 checkEnabled: !1,
-                modalProps: { title: f.intl.string(f.t.clQc1d) },
+                modalProps: { title: _.intl.string(_.t.clQc1d) },
                 hooks: {
                     onEarlyClose: () =>
                         a.Z.dispatch({
@@ -201,7 +201,7 @@ let g = {
                             user: t,
                             newPassword: g
                         }),
-                    null != _ &&
+                    null != f &&
                         null != g &&
                         a.Z.dispatch({
                             type: 'PASSWORD_UPDATED',

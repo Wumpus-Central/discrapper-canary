@@ -3,13 +3,13 @@ var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(652141),
+    s = n(564854),
     l = n(793030),
     c = n(442837),
     u = n(755721),
     d = n(481060),
-    f = n(905128),
-    _ = n(535396),
+    _ = n(905128),
+    f = n(535396),
     p = n(93841),
     h = n(388032),
     m = n(698323);
@@ -76,9 +76,9 @@ function O(e) {
 }
 function v(e) {
     let { guild: t, themeResponsive: n = !0, onButtonClick: a } = e,
-        g = (0, c.e7)([f.Z], () => {
+        g = (0, c.e7)([_.Z], () => {
             var e, n;
-            return null == (n = f.Z.getStateForGuild(t.id)) || null == (e = n.powerupCatalog) ? void 0 : e[_.Us.PERK];
+            return null == (n = _.Z.getStateForGuild(t.id)) || null == (e = n.powerupCatalog) ? void 0 : e[f.Us.PERK];
         }),
         [b, v] = i.useState(!1),
         [I, T] = (0, d.q_F)(() => ({
