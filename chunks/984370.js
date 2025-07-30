@@ -22,8 +22,8 @@ var i = n(873546),
     S = n(665149),
     N = n(981631),
     f = n(176505),
-    m = n(220705);
-function g(e) {
+    g = n(220705);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -74,7 +74,7 @@ async function R(e) {
     }
 }
 function P(e) {
-    let { children: t, className: n, channelId: o, channelType: c, guildId: p, innerClassname: T, transparent: g = !1, showToolbar: A = !0, toolbar: P, mobileToolbar: C, 'aria-label': y, 'aria-labelledby': b, scrollable: D, role: h, hideSearch: U, showDivider: M, disableDoubleClick: v } = e,
+    let { children: t, className: n, channelId: o, channelType: c, guildId: p, innerClassname: T, transparent: m = !1, showToolbar: A = !0, toolbar: P, mobileToolbar: C, 'aria-label': y, 'aria-labelledby': b, scrollable: D, role: h, hideSearch: U, showDivider: M, disableDoubleClick: v } = e,
         Z = null == o || (0, f.AB)(o) ? null : o,
         j = (0, l.e7)([I.Z], () => I.Z.isInChannel(Z) || !1),
         L = (0, l.e7)([s.Z], () => null != Z && s.Z.getParticipantsListOpen(Z)),
@@ -97,7 +97,7 @@ function P(e) {
                                     {
                                         guildId: p,
                                         channelId: o,
-                                        className: m.search
+                                        className: g.search
                                     },
                                     null != p ? p : o
                                 )
@@ -110,13 +110,13 @@ function P(e) {
                               !L &&
                               c === N.d4z.GROUP_DM &&
                               (0, r.jsxs)('div', {
-                                  className: m.controlButtonWrapper,
+                                  className: g.controlButtonWrapper,
                                   children: [(0, r.jsx)(S.ZP.Divider, {}), (0, r.jsx)(O.Z, { onClick: () => a.Z.toggleParticipantsList(Z, !L) })]
                               })
                       ]
                   });
         })(),
-        transparent: g,
+        transparent: m,
         showToolbar: A,
         onDoubleClick: () => R(v),
         'aria-label': y,
@@ -161,7 +161,7 @@ function y(e) {
     let { analyticsLocations: i } = (0, c.ZP)(o.Z.HEADER_BAR);
     return (0, r.jsx)(c.Gt, {
         value: i,
-        children: t ? (0, r.jsx)(P, A(g({}, n), { className: n.className })) : (0, r.jsx)(C, A(g({}, n), { className: n.className }))
+        children: t ? (0, r.jsx)(P, A(m({}, n), { className: n.className })) : (0, r.jsx)(C, A(m({}, n), { className: n.className }))
     });
 }
 ((y.Title = S.ZP.Title), (y.Icon = S.ZP.Icon), (y.ChannelIcon = S.ZP.ChannelIcon), (y.Divider = S.ZP.Divider), (y.Caret = S.ZP.Caret));

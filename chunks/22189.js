@@ -45,8 +45,8 @@ var s = n(399606),
     G = n(193943),
     F = n(707046),
     H = n(488459),
-    z = n(334347),
-    W = n(132015),
+    W = n(334347),
+    z = n(132015),
     Y = n(142416),
     K = n(498730),
     q = n(607762),
@@ -177,14 +177,14 @@ let ed = () => {
                       description: D.intl.string(D.t.mUT8bG),
                       descriptionCta: D.intl.string(D.t.jVcuVV),
                       onCtaClick: e_,
-                      perkImage: W
+                      perkImage: z
                   }
                 : {
                       name: 'entranceSounds',
                       title: D.intl.string(D.t['f4M+Hx']),
                       subtitle: D.intl.string(D.t['7ZCYvL']),
                       description: D.intl.string(D.t['3smf/f']),
-                      perkImage: W
+                      perkImage: z
                   },
             entranceSoundsSeeAllVariation: em
                 ? {
@@ -341,7 +341,7 @@ let ed = () => {
                 name: 'moreEmojiPower',
                 title: D.intl.string(D.t['R2IV/f']),
                 subtitle: D.intl.string(D.t.R5Xag4),
-                perkImage: z,
+                perkImage: W,
                 description: D.intl.string(D.t['8lsjS0'])
             },
             customSoundsEverywhere: {

@@ -152,16 +152,16 @@ let C = {
                         }
                     });
             }, [t.config.stillFrames]));
-        let z = {
+        let W = {
                 effect: t,
                 upsertConfig: n
             },
-            W = r.useRef(z);
+            z = r.useRef(W);
         return (r.useEffect(() => {
-            W.current = z;
+            z.current = W;
         }),
         r.useEffect(() => {
-            let { effect: e, upsertConfig: t } = W.current;
+            let { effect: e, upsertConfig: t } = z.current;
             e.readonly ||
                 t({
                     id: e.id,

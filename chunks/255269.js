@@ -3,8 +3,8 @@ n.d(t, {
     _: () => l
 });
 var a = n(399606),
-    i = n(695346),
-    o = n(496675),
+    o = n(695346),
+    i = n(496675),
     r = n(981631);
 function c(e, t) {
     switch (e) {
@@ -18,6 +18,6 @@ function c(e, t) {
     }
 }
 function l(e) {
-    let t = (0, a.e7)([o.Z], () => o.Z.can(r.Plq.MANAGE_MESSAGES, e));
-    return !c(i.cC.useSetting(), t);
+    let t = (0, a.e7)([i.Z], () => i.Z.can(r.Plq.MANAGE_MESSAGES, e));
+    return !c(o.cC.useSetting(), t);
 }

@@ -19,16 +19,16 @@ var n = r(255367),
     f = r(724757),
     g = r(576855),
     m = r(804063),
-    y = r(294218),
-    _ = r(703656),
+    _ = r(294218),
+    y = r(703656),
     S = r(592125),
     x = r(375954),
     b = r(496675),
     v = r(933429),
     C = r(451478),
     j = r(626135),
-    O = r(585483),
-    E = r(981631),
+    E = r(585483),
+    O = r(981631),
     R = r(388032),
     I = r(555565);
 function P(e, t, r) {
@@ -136,18 +136,18 @@ class k extends s.PureComponent {
             }));
     }
 }
-let Z = u.ZP.connectStores([b.Z], (e) => {
+let M = u.ZP.connectStores([b.Z], (e) => {
     let { channel: t } = e;
-    return { canManageMessages: null != t && b.Z.can(E.Plq.MANAGE_MESSAGES, t) };
+    return { canManageMessages: null != t && b.Z.can(O.Plq.MANAGE_MESSAGES, t) };
 })(k);
-function M(e) {
-    let { analyticsName: t, items: r, hasMore: l, loading: i, loadMore: p, renderHeader: m, renderEmptyState: y, renderItem: _, getProTip: S, scrollerClassName: x, className: b, listName: N } = e,
+function Z(e) {
+    let { analyticsName: t, items: r, hasMore: l, loading: i, loadMore: p, renderHeader: m, renderEmptyState: _, renderItem: y, getProTip: S, scrollerClassName: x, className: b, listName: N } = e,
         A = s.useRef(null),
         k = (0, f.Z)(N, A),
-        Z = (0, u.e7)([v.ZP], () => v.ZP.hasNotice()),
-        M = (0, u.e7)([C.Z], () => C.Z.windowSize());
+        M = (0, u.e7)([v.ZP], () => v.ZP.hasNotice()),
+        Z = (0, u.e7)([C.Z], () => C.Z.windowSize());
     (s.useEffect(() => {
-        j.default.track(E.rMx.OPEN_POPOUT, { type: t });
+        j.default.track(O.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
         s.useEffect(() => {
             function e() {
@@ -159,10 +159,10 @@ function M(e) {
                 null == (e = A.current) || e.scrollPageDown({ animate: !0 });
             }
             return (
-                O.S.subscribe(E.CkL.SCROLL_PAGE_DOWN, t),
-                O.S.subscribe(E.CkL.SCROLL_PAGE_UP, e),
+                E.S.subscribe(O.CkL.SCROLL_PAGE_DOWN, t),
+                E.S.subscribe(O.CkL.SCROLL_PAGE_UP, e),
                 () => {
-                    (O.S.unsubscribe(E.CkL.SCROLL_PAGE_DOWN, t), O.S.unsubscribe(E.CkL.SCROLL_PAGE_UP, e));
+                    (E.S.unsubscribe(O.CkL.SCROLL_PAGE_DOWN, t), E.S.unsubscribe(O.CkL.SCROLL_PAGE_UP, e));
                 }
             );
         }, []));
@@ -185,11 +185,11 @@ function M(e) {
               )
           ])
         : 0 === r.length
-          ? D.push((0, n.jsx)(s.Fragment, { children: y() }, 'empty-state'))
+          ? D.push((0, n.jsx)(s.Fragment, { children: _() }, 'empty-state'))
           : ((L = !1),
             (D = []),
             o().each(r, (e) => {
-                D.push(..._(e));
+                D.push(...y(e));
             }));
     let F = null;
     null != r &&
@@ -217,7 +217,7 @@ function M(e) {
                 })
               : (0, n.jsx)('div', {
                     className: I.scrollingFooterWrap,
-                    children: y()
+                    children: _()
                 }));
     let W = null == S ? void 0 : S(),
         H =
@@ -234,8 +234,8 @@ function M(e) {
                       })
                   })
                 : null,
-        B = { maxHeight: M.height - 43 - 25 - 48 };
-    Z && (B.maxHeight -= 40);
+        B = { maxHeight: Z.height - 43 - 25 - 48 };
+    M && (B.maxHeight -= 40);
     let U = null != p && l;
     return (0, n.jsx)('div', {
         className: a()(b, I.messagesPopoutWrap),
@@ -322,7 +322,7 @@ function M(e) {
     });
 }
 function w(e) {
-    let { analyticsName: t, onFetch: r, channel: l, messages: a, hasMore: i, loading: o, loadMore: c, onJump: h, canCloseAllMessages: d = !1, renderHeader: f, renderEmptyState: g, renderMessage: b, getProTip: v, scrollerClassName: C, className: j, onCloseMessage: O, listName: R } = e,
+    let { analyticsName: t, onFetch: r, channel: l, messages: a, hasMore: i, loading: o, loadMore: c, onJump: h, canCloseAllMessages: d = !1, renderHeader: f, renderEmptyState: g, renderMessage: b, getProTip: v, scrollerClassName: C, className: j, onCloseMessage: E, listName: R } = e,
         P = (0, u.e7)([x.Z], () => {
             let e = null != l ? x.Z.getMessages(l.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
@@ -331,7 +331,7 @@ function w(e) {
         if ((0, m.Z)(e) && !P) {
             let { id: n, channel_id: s } = e,
                 l = S.Z.getChannel(s);
-            (null != l && (p.Z.trackJump(s, n, t), (0, _.uL)(E.Z5c.CHANNEL(l.getGuildId(), s, n))), null == h || h(r));
+            (null != l && (p.Z.trackJump(s, n, t), (0, y.uL)(O.Z5c.CHANNEL(l.getGuildId(), s, n))), null == h || h(r));
         }
     }
     s.useEffect(() => {
@@ -347,7 +347,7 @@ function w(e) {
                   })),
         [a, l]
     );
-    return (0, n.jsx)(M, {
+    return (0, n.jsx)(Z, {
         className: j,
         scrollerClassName: C,
         items: N,
@@ -371,18 +371,18 @@ function w(e) {
                           {
                               className: I.messageGroupWrapper,
                               children: [
-                                  (0, n.jsx)(y.Z, {
+                                  (0, n.jsx)(_.Z, {
                                       className: I.messageGroupCozy,
                                       message: t,
                                       channel: r
                                   }),
-                                  (0, n.jsx)(Z, {
+                                  (0, n.jsx)(M, {
                                       channel: l,
                                       message: t,
                                       jumping: P,
                                       canCloseAllMessages: d,
                                       jumpTo: T,
-                                      onCloseMessage: O
+                                      onCloseMessage: E
                                   })
                               ]
                           },

@@ -201,9 +201,9 @@ let S = (e) => {
                         g
                     )
                 }),
-            z = N % 2 != 0,
-            W = () =>
-                z
+            W = N % 2 != 0,
+            z = () =>
+                W
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [(0, i.jsx)(F, {}), (0, i.jsx)(H, {})]
                       })
@@ -222,8 +222,8 @@ let S = (e) => {
                   c.$,
                   v(C({}, Y), {
                       color: 'purple',
-                      children: (0, i.jsx)(W, {})
+                      children: (0, i.jsx)(z, {})
                   })
               )
-            : (0, i.jsx)('div', v(C({}, Y), { children: (0, i.jsx)(W, {}) }));
+            : (0, i.jsx)('div', v(C({}, Y), { children: (0, i.jsx)(z, {}) }));
     };

@@ -42,8 +42,8 @@ function V(e) {
     let { user: V, isVisible: G, shouldShow: F } = e,
         H = N.ZP.isPremium(V),
         {
-            pendingAvatar: z,
-            pendingThemeColors: W,
+            pendingAvatar: W,
+            pendingThemeColors: z,
             tryItOutThemeColors: Y,
             tryItOutAvatar: K,
             tryItOutBanner: q,
@@ -172,9 +172,9 @@ function V(e) {
                                       user: V,
                                       pendingAvatarSrc: (0, O.SD)({
                                           userId: V.id,
-                                          image: null != K ? K : z
+                                          image: null != K ? K : W
                                       }),
-                                      pendingColors: null != Y ? Y : W,
+                                      pendingColors: null != Y ? Y : z,
                                       onThemeColorsChange: C.rf,
                                       showPremiumIcon: !1,
                                       preventDisabled: !0

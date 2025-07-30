@@ -41,8 +41,8 @@ var i = n(255367),
     G = n(695346),
     F = n(306052),
     H = n(10298),
-    z = n(526156),
-    W = n(726985),
+    W = n(526156),
+    z = n(726985),
     Y = n(981631),
     K = n(908442),
     q = n(121306),
@@ -314,7 +314,7 @@ class ea extends r.Component {
                       })
                     : null;
         return (0, i.jsx)(Z.F, {
-            setting: W.s6.DEVELOPER_OPTIONS_BUILD_OVERRIDE,
+            setting: z.s6.DEVELOPER_OPTIONS_BUILD_OVERRIDE,
             children: (0, i.jsxs)(g.hjN, {
                 className: J.marginTop60,
                 children: [
@@ -816,7 +816,7 @@ function eo() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(Z.F, {
-                setting: W.s6.DEVELOPER_OPTIONS_CSS_DEBUGGING,
+                setting: z.s6.DEVELOPER_OPTIONS_CSS_DEBUGGING,
                 children: (0, i.jsx)(g.j7V, {
                     value: o,
                     note: 'Display raw colors as pink. Toggling this will refresh the browser.',
@@ -827,7 +827,7 @@ function eo() {
                 })
             }),
             (0, i.jsx)(Z.F, {
-                setting: W.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING,
+                setting: z.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING,
                 children: (0, i.jsx)(g.j7V, {
                     value: c,
                     note: 'Renders a grid on top of the app to help debug layout alignment issues.',
@@ -838,7 +838,7 @@ function eo() {
                 })
             }),
             (0, i.jsxs)(Z.F, {
-                setting: W.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING_OPTIONS,
+                setting: z.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING_OPTIONS,
                 children: [
                     (0, i.jsxs)(g.hjN, {
                         className: J.marginBottom20,
@@ -914,7 +914,7 @@ function ec() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(Z.F, {
-                setting: W.s6.DEVELOPER_OPTIONS_TRACING_REQUESTS,
+                setting: z.s6.DEVELOPER_OPTIONS_TRACING_REQUESTS,
                 children: (0, i.jsx)(g.j7V, {
                     value: e,
                     note: 'Force trace all client requests with APM',
@@ -923,7 +923,7 @@ function ec() {
                 })
             }),
             (0, i.jsx)(Z.F, {
-                setting: W.s6.DEVELOPER_OPTIONS_FORCED_CANARY,
+                setting: z.s6.DEVELOPER_OPTIONS_FORCED_CANARY,
                 children: (0, i.jsx)(g.j7V, {
                     value: t,
                     note: 'Force all API requests to canary instances',
@@ -932,7 +932,7 @@ function ec() {
                 })
             }),
             (0, i.jsx)(Z.F, {
-                setting: W.s6.DEVELOPER_OPTIONS_ALWAYS_DELIVER,
+                setting: z.s6.DEVELOPER_OPTIONS_ALWAYS_DELIVER,
                 children: (0, i.jsx)(g.j7V, {
                     value: m,
                     note: 'Make user targetable for all active ads',
@@ -941,7 +941,7 @@ function ec() {
                 })
             }),
             (0, i.jsx)(Z.F, {
-                setting: W.s6.DEVELOPER_OPTIONS_SOURCE_MAPS,
+                setting: z.s6.DEVELOPER_OPTIONS_SOURCE_MAPS,
                 children: (0, i.jsx)(g.j7V, {
                     value: r,
                     note: 'Only enable on devices you trust.',
@@ -950,7 +950,7 @@ function ec() {
                 })
             }),
             (0, i.jsx)(Z.F, {
-                setting: W.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
+                setting: z.s6.DEVELOPER_OPTIONS_IDLE_STATUS_INDICATOR,
                 children: (0, i.jsx)(g.j7V, {
                     value: s,
                     note: 'Displays a floating idle status indicator',
@@ -959,7 +959,7 @@ function ec() {
                 })
             }),
             (0, i.jsx)(Z.F, {
-                setting: W.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING,
+                setting: z.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING,
                 children: (0, i.jsx)(g.j7V, {
                     value: n,
                     note: 'Runs Axe auditing for accessibility while using the app. Violations get logged to the console. Only available in development',
@@ -968,7 +968,7 @@ function ec() {
                 })
             }),
             (0, i.jsx)(Z.F, {
-                setting: W.s6.DEVELOPER_OPTIONS_PREVENT_POPOUT_CLOSE,
+                setting: z.s6.DEVELOPER_OPTIONS_PREVENT_POPOUT_CLOSE,
                 children: (0, i.jsx)(g.j7V, {
                     value: o,
                     note: 'This is to enable viewing console logs for popout crashes. This may leave your app/popout in a weird state.',
@@ -977,7 +977,7 @@ function ec() {
                 })
             }),
             (0, i.jsx)(Z.F, {
-                setting: W.s6.DEVELOPER_OPTIONS_LOG_KEYBOARD_MISMATCHES,
+                setting: z.s6.DEVELOPER_OPTIONS_LOG_KEYBOARD_MISMATCHES,
                 children: (0, i.jsx)(g.j7V, {
                     value: c,
                     note: 'Logs mismatches in detected keyboard codes to the console',
@@ -986,7 +986,7 @@ function ec() {
                 })
             }),
             (0, i.jsx)(Z.F, {
-                setting: W.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
+                setting: z.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS,
                 children: (0, i.jsx)(g.j7V, {
                     value: a,
                     note: "Only show application collections (e.g. in App Directory, App Launcher in text) that have the 'preview' active state. This disables application collections cache, too, so you can see collections updates immediately.",
@@ -995,7 +995,7 @@ function ec() {
                 })
             }),
             (0, i.jsx)(Z.F, {
-                setting: W.s6.DEVELOPER_OPTIONS_DISABLE_APP_COLLECTIONS_CACHE,
+                setting: z.s6.DEVELOPER_OPTIONS_DISABLE_APP_COLLECTIONS_CACHE,
                 children: (0, i.jsx)(g.j7V, {
                     value: l,
                     note: 'Disable application collections cache so that you can see updates to collections immediately.',
@@ -1004,7 +1004,7 @@ function ec() {
                 })
             }),
             (0, i.jsx)(Z.F, {
-                setting: W.s6.DEVELOPER_OPTIONS_DISABLE_ALIGN_CHAT_INPUT,
+                setting: z.s6.DEVELOPER_OPTIONS_DISABLE_ALIGN_CHAT_INPUT,
                 children: (0, i.jsx)(g.j7V, {
                     value: u,
                     note: 'Disable aligning chat input to the bottom of the screen',
@@ -1034,10 +1034,10 @@ function ed() {
         isAnalyticsDebuggerEnabled: w.default.isAnalyticsDebuggerEnabled
     }));
     return (0, i.jsxs)(Z.F, {
-        setting: W.s6.DEVELOPER_OPTIONS_LOGGING_TAB,
+        setting: z.s6.DEVELOPER_OPTIONS_LOGGING_TAB,
         children: [
             (0, i.jsx)(Z.F, {
-                setting: W.s6.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
+                setting: z.s6.DEVELOPER_OPTIONS_GATEWAY_EVENTS_TO_CONSOLE,
                 children: (0, i.jsx)(g.j7V, {
                     value: e,
                     note: 'Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.',
@@ -1046,7 +1046,7 @@ function ed() {
                 })
             }),
             (0, i.jsx)(Z.F, {
-                setting: W.s6.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
+                setting: z.s6.DEVELOPER_OPTIONS_OVERLAY_RPC_EVENTS_COMMANDS,
                 children: (0, i.jsx)(g.j7V, {
                     value: t,
                     note: 'Logs all overlay related RPC events. Super noisy if an overlay is connected',
@@ -1055,7 +1055,7 @@ function ed() {
                 })
             }),
             (0, i.jsx)(Z.F, {
-                setting: W.s6.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
+                setting: z.s6.DEVELOPER_OPTIONS_ANALYTICS_EVENTS_LOGGING,
                 children: (0, i.jsx)(g.j7V, {
                     value: n,
                     note: 'Logs all analytics events to the developer console',
@@ -1064,7 +1064,7 @@ function ed() {
                 })
             }),
             (0, i.jsx)(Z.F, {
-                setting: W.s6.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
+                setting: z.s6.DEVELOPER_OPTIONS_ANALYTICS_DEBUGGER_VIEW,
                 children: (0, i.jsx)(g.j7V, {
                     value: r,
                     note: 'Displays a floating debugger with viewed impressions',
@@ -1097,7 +1097,7 @@ function em() {
                       className: [q.buttonsContainer, J.marginBottom20].join(' '),
                       children: [
                           (0, i.jsx)(Z.F, {
-                              setting: W.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
+                              setting: z.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
                               children: o
                                   ? (0, i.jsx)(g.zxk, {
                                         variant: 'primary',
@@ -1112,7 +1112,7 @@ function em() {
                                     })
                           }),
                           (0, i.jsx)(Z.F, {
-                              setting: W.s6.DEVELOPER_OPTIONS_RESET_SOCKET,
+                              setting: z.s6.DEVELOPER_OPTIONS_RESET_SOCKET,
                               children: (0, i.jsx)(g.zxk, {
                                   variant: 'primary',
                                   text: 'Reset Socket',
@@ -1122,7 +1122,7 @@ function em() {
                               })
                           }),
                           (0, i.jsx)(Z.F, {
-                              setting: W.s6.DEVELOPER_OPTIONS_CLEAR_CACHES,
+                              setting: z.s6.DEVELOPER_OPTIONS_CLEAR_CACHES,
                               children: (0, i.jsx)(g.zxk, {
                                   variant: 'primary',
                                   text: 'Clear Caches',
@@ -1139,7 +1139,7 @@ function em() {
                       ]
                   }),
                   (0, i.jsx)(Z.F, {
-                      setting: W.s6.DEVELOPER_OPTIONS_CRASHES,
+                      setting: z.s6.DEVELOPER_OPTIONS_CRASHES,
                       children: (0, i.jsx)(g.hjN, {
                           title: 'Crashes',
                           tag: g.RB0.H1,
@@ -1219,7 +1219,7 @@ function ep() {
     let e = (0, d.e7)([k.Z], () => k.Z.getSurveyOverride()),
         [t, n] = r.useState(null != e ? e : '');
     return (0, i.jsx)(Z.F, {
-        setting: W.s6.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,
+        setting: z.s6.DEVELOPER_OPTIONS_SURVEY_OVERRIDE,
         children: (0, i.jsxs)(g.hjN, {
             tag: g.RB0.H1,
             title: 'Survey Override',
@@ -1253,7 +1253,7 @@ function eg() {
     let t = (0, d.e7)([v.Z], () => v.Z.overrideId()),
         [n, s] = r.useState(null != (e = v.Z.overrideId()) ? e : '');
     return (0, i.jsx)(Z.F, {
-        setting: W.s6.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
+        setting: z.s6.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
         children: (0, i.jsx)(g.hjN, {
             tag: g.RB0.H1,
             title: 'Changelog',
@@ -1308,7 +1308,7 @@ function eg() {
 }
 function eh() {
     return (0, i.jsx)(Z.F, {
-        setting: W.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
+        setting: z.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
         children: (0, i.jsx)(g.hjN, {
             tag: g.RB0.H1,
             title: 'Client-Side Overrides',
@@ -1331,34 +1331,34 @@ function ef() {
 let eb = function () {
     return (0, i.jsx)(H.N, {
         header: 'Developer Options',
-        children: (0, i.jsx)(z.Z, {
-            parentSetting: W.s6.DEVELOPER_OPTIONS,
+        children: (0, i.jsx)(W.Z, {
+            parentSetting: z.s6.DEVELOPER_OPTIONS,
             settingsSection: Y.oAB.DEVELOPER_OPTIONS,
             tabs: [
                 {
                     title: 'Overrides',
                     component: ef,
-                    setting: W.s6.DEVELOPER_OPTIONS_OVERRIDES_TAB
+                    setting: z.s6.DEVELOPER_OPTIONS_OVERRIDES_TAB
                 },
                 {
                     title: 'Manual Triggers',
                     component: em,
-                    setting: W.s6.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB
+                    setting: z.s6.DEVELOPER_OPTIONS_MANUAL_TRIGGERS_TAB
                 },
                 {
                     title: 'Developer Flags',
                     component: ec,
-                    setting: W.s6.DEVELOPER_OPTIONS_FLAGS_TAB
+                    setting: z.s6.DEVELOPER_OPTIONS_FLAGS_TAB
                 },
                 {
                     title: 'Logging',
                     component: ed,
-                    setting: W.s6.DEVELOPER_OPTIONS_LOGGING_TAB
+                    setting: z.s6.DEVELOPER_OPTIONS_LOGGING_TAB
                 },
                 {
                     title: 'Design Tools',
                     component: eo,
-                    setting: W.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB
+                    setting: z.s6.DEVELOPER_OPTIONS_DESIGN_TOOLS_TAB
                 }
             ]
         })

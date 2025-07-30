@@ -4,9 +4,9 @@ n.d(t, {
 });
 var r = n(255367);
 n(73800);
-var s = n(120356),
-    l = n.n(s),
-    a = n(692547),
+var a = n(120356),
+    s = n.n(a),
+    l = n(692547),
     i = n(481060),
     o = n(109434),
     c = n(456269),
@@ -18,22 +18,22 @@ var s = n(120356),
 function f(e) {
     let { channel: t, isNew: n } = e,
         r = (0, c.eV)(t),
-        s = r.slice(void 0, 3),
-        l = r.slice(3),
-        a = r.length > 3 ? r.length - 3 : 0,
+        a = r.slice(void 0, 3),
+        s = r.slice(3),
+        l = r.length > 3 ? r.length - 3 : 0,
         i = t.hasFlag(d.zZ.PINNED),
-        o = s.length > 0 || i || n;
+        o = a.length > 0 || i || n;
     return {
-        shownTags: s,
-        remainingTags: l,
-        moreTagsCount: a,
+        shownTags: a,
+        remainingTags: s,
+        moreTagsCount: l,
         isPinned: i,
         shouldRenderTagsRow: o,
         forumPostContainsTags: r.length > 0
     };
 }
 function b(e) {
-    let { channel: t, isNew: n, tagsClassName: s, className: c } = e,
+    let { channel: t, isNew: n, tagsClassName: a, className: c } = e,
         {
             shownTags: d,
             remainingTags: b,
@@ -47,12 +47,12 @@ function b(e) {
         { tagFilter: v } = (0, o.H)(t.id);
     return x
         ? (0, r.jsxs)('div', {
-              className: l()(g.tags, c),
+              className: s()(g.tags, c),
               children: [
                   n
                       ? (0, r.jsx)(i.IGR, {
-                            className: l()(h.newBadge, h.inTagsRow),
-                            color: a.Z.unsafe_rawColors.BRAND_260.css,
+                            className: s()(h.newBadge, h.inTagsRow),
+                            color: l.Z.unsafe_rawColors.BRAND_260.css,
                             text: m.intl.string(m.t.y2b7CA)
                         })
                       : null,
@@ -119,7 +119,7 @@ function b(e) {
                           {
                               tag: e,
                               size: u.Z.Sizes.SMALL,
-                              className: l()(s, { [g.tagFiltered]: v.has(e.id) })
+                              className: s()(a, { [g.tagFiltered]: v.has(e.id) })
                           },
                           e.id
                       )

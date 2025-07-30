@@ -277,7 +277,7 @@ function u(e) {
             },
             [v, O, f, E, m, d, u, p]
         ),
-        k = r.useCallback(
+        I = r.useCallback(
             (e, t) => {
                 var n, r;
                 if (null == u.current) return;
@@ -305,7 +305,7 @@ function u(e) {
             },
             [O, u, f, m, d, v, p]
         ),
-        I = r.useCallback(
+        k = r.useCallback(
             (e) => {
                 null != u.current &&
                     v({
@@ -354,8 +354,8 @@ function u(e) {
         trackQuestVideoBufferingStarted: D,
         trackQuestVideoBufferingEnded: T,
         trackWatchTimeAnalytics: N,
-        trackQuestVideoFullscreenChanged: I,
-        trackQuestVideoError: k,
+        trackQuestVideoFullscreenChanged: k,
+        trackQuestVideoError: I,
         trackQuestVideoVolumeChanged: w
     };
 }

@@ -45,7 +45,7 @@ let L = function (e) {
         G = (0, P.N)(),
         F = (0, A.Ng)(),
         H = (0, b.V)(Z.nS),
-        [z, W] = r.useState(!0),
+        [W, z] = r.useState(!0),
         Y = r.useRef(0),
         K = (0, T.M5)(U, Z.p9.TIER_2),
         q = (0, y.Z)({ location: 'PremiumMarketingPage' }),
@@ -56,16 +56,16 @@ let L = function (e) {
         r.useEffect(() => {
             c.Z.wait(async () => {
                 let e = Date.now();
-                (await Promise.all([d.jg(), d.tZ(), (0, u.Y2)(null, null, w.JjL.DISCOVERY)]), (Y.current = Date.now() - e), W(!1));
+                (await Promise.all([d.jg(), d.tZ(), (0, u.Y2)(null, null, w.JjL.DISCOVERY)]), (Y.current = Date.now() - e), z(!1));
             });
         }, []),
         r.useEffect(() => {
-            z ||
+            W ||
                 S.default.track(w.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
                     location_stack: s,
                     load_duration_ms: Y.current
                 });
-        }, [s, z]),
+        }, [s, W]),
         r.useEffect(() => {
             n && (null != G || null != F) && (0, I.a)(G, F);
         }, [n, G, F]));

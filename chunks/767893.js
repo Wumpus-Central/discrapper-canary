@@ -1,4 +1,4 @@
-r.d(t, { Z: () => _ });
+r.d(t, { Z: () => y });
 var n = r(255367),
     s = r(120356),
     l = r.n(s),
@@ -13,16 +13,16 @@ var n = r(255367),
     f = r(430824),
     g = r(388032),
     m = r(432513);
-let y = {
+let _ = {
     top: 8,
     bottom: 8,
     left: -4,
     right: -4
 };
-function _(e) {
+function y(e) {
     let { channel: t, children: r } = e;
     return (0, n.jsx)(a.tE, {
-        offset: y,
+        offset: _,
         children: (0, n.jsxs)('div', {
             className: m.channelHeader,
             'data-recents-channel': t.id,

@@ -47,8 +47,8 @@ var i = n(255367),
     G = n(199902),
     F = n(158776),
     H = n(306680),
-    z = n(699516),
-    W = n(111583),
+    W = n(699516),
+    z = n(111583),
     Y = n(9156),
     K = n(594174),
     q = n(709054),
@@ -231,13 +231,13 @@ let ei = X.ZP.getEnableHardwareAcceleration() ? p.Xo$ : p.qEK,
         });
     };
 function ed(e) {
-    let { channel: t, isGDMFacepileEnabled: s, selected: l = !1, user: u, activities: b, applicationStream: _, voiceChannel: R, isTyping: k, status: L, isMobile: G, nameplate: F, ref: W, 'aria-posinset': K, 'aria-setsize': q } = e,
+    let { channel: t, isGDMFacepileEnabled: s, selected: l = !1, user: u, activities: b, applicationStream: _, voiceChannel: R, isTyping: k, status: L, isMobile: G, nameplate: F, ref: z, 'aria-posinset': K, 'aria-setsize': q } = e,
         [X, ec] = r.useState(!1),
         [ed, eu] = r.useState(!1),
         [em, ep] = r.useState(!1),
         eg = r.useRef(null),
         eh = r.useRef(null),
-        ef = null != W ? W : eh,
+        ef = null != z ? z : eh,
         {
             avatarSrc: eb,
             avatarDecorationSrc: ex,
@@ -253,9 +253,9 @@ function ed(e) {
         eC = !ej && !eE && t.type === J.d4z.DM,
         ev = eC && (null == u ? void 0 : u.primaryGuild) != null,
         eS = (0, m.e7)([Y.ZP], () => Y.ZP.isChannelMuted(t.getGuildId(), t.id)),
-        { ignored: eT, blocked: eN } = (0, m.cj)([z.Z], () => ({
-            ignored: z.Z.isIgnored(t.getRecipientId()),
-            blocked: z.Z.isBlocked(t.getRecipientId())
+        { ignored: eT, blocked: eN } = (0, m.cj)([W.Z], () => ({
+            ignored: W.Z.isIgnored(t.getRecipientId()),
+            blocked: W.Z.isBlocked(t.getRecipientId())
         })),
         eI = eC && eT,
         ey = eC && eN,
@@ -331,7 +331,7 @@ function ed(e) {
                           { onClose: () => ep(!1) }
                       ));
         },
-        ez = (e) => {
+        eW = (e) => {
             (e.preventDefault(), e.stopPropagation());
             let r = Q.intl.formatToPlainString(Q.t.hJ5Ap6, { name: eR }),
                 s = Q.intl.format(Q.t.SSIVOj, { name: eR });
@@ -352,7 +352,7 @@ function ed(e) {
                         );
                 }));
         },
-        eW = () =>
+        ez = () =>
             t.isSystemDM()
                 ? (0, i.jsx)('div', {
                       className: $.subtext,
@@ -502,7 +502,7 @@ function ed(e) {
                                             avatar: eY(),
                                             highlighted: eP && !eA,
                                             muted: eA,
-                                            subText: eW(),
+                                            subText: ez(),
                                             name: (0, i.jsx)(I.Z, {
                                                 className: a()($.overflowTooltip, { [$.withDisplayNameStyles]: null == u ? void 0 : u.displayNameStyles }),
                                                 children: eq
@@ -533,7 +533,7 @@ function ed(e) {
                                 : (0, i.jsx)(es, {
                                       icon: p.Dio,
                                       'aria-label': ej ? Q.intl.string(Q.t['26C4oq']) : Q.intl.string(Q.t.jsvgc3),
-                                      onClick: ej ? ez : eU,
+                                      onClick: ej ? eW : eU,
                                       onMouseDown: eG,
                                       nameplate: F
                                   })
@@ -575,16 +575,16 @@ let eu =
                   { voiceChannel: p } = (0, _.Z)({ userId: c }),
                   g = (0, k.K)({ user: s }),
                   h = (0, m.e7)(
-                      [K.default, W.Z],
+                      [K.default, z.Z],
                       () => {
                           if (t.isMultiUserDM())
                               if (l)
-                                  return q.default.keys(W.Z.getTypingUsers(t.id)).some((e) => {
+                                  return q.default.keys(z.Z.getTypingUsers(t.id)).some((e) => {
                                       var t;
                                       return e !== (null == (t = K.default.getCurrentUser()) ? void 0 : t.id);
                                   });
                               else return !1;
-                          return null != s && W.Z.isTyping(t.id, t.getRecipientId());
+                          return null != s && z.Z.isTyping(t.id, t.getRecipientId());
                       },
                       [t, s, l]
                   );

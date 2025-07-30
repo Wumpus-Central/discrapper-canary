@@ -48,7 +48,7 @@ function H() {
         }),
         s = (0, l.e7)([P.Z], () => P.Z.hidePersonalInformation),
         H = (0, l.cj)([R.Z], () => R.Z.getAllPending()),
-        { pendingBio: z, pendingAvatar: W, pendingNameplate: Y } = H,
+        { pendingBio: W, pendingAvatar: z, pendingNameplate: Y } = H,
         K = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -70,10 +70,10 @@ function H() {
         })(H, ['pendingBio', 'pendingAvatar', 'pendingNameplate']),
         q = (0, I.SD)({
             userId: n.id,
-            image: W
+            image: z
         }),
         X = (0, l.e7)([R.Z], () => R.Z.showNotice()),
-        J = L.dN.useSetting() && null != z ? E.ZP.parse(void 0, z).content : z,
+        J = L.dN.useSetting() && null != W ? E.ZP.parse(void 0, W).content : W,
         Q = w.ZP.canUsePremiumProfileCustomization(n),
         { analyticsLocations: $, newestAnalyticsLocation: ee } = (0, f.ZP)(h.Z.USER_SETTINGS_USER_PROFILE),
         et = (0, y.T)({ location: 'UserSettingsProfileCustomization' }),

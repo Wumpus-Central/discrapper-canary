@@ -1,5 +1,5 @@
 (r.d(t, {
-    M: () => _,
+    M: () => y,
     Z: () => x
 }),
     r(415506),
@@ -108,10 +108,10 @@ let m = (e) => {
                 children: h.intl.format(h.t.ub226e, { value: t })
             });
 };
-function y(e) {
+function _(e) {
     (e.stopPropagation(), e.preventDefault());
 }
-function _(e, t, r) {
+function y(e, t, r) {
     return {
         id: ''.concat(e, '-').concat(t),
         role: 'option',
@@ -121,21 +121,21 @@ function _(e, t, r) {
 }
 class S extends (n = l.PureComponent) {
     renderQuery(e) {
-        let { query: t, navId: r, focusedIndex: n, onSelectQuery: l, onSelectSearchEverywhere: a, onHighlightQuery: c, hideQuery: u, searchFavorites: p, showDMQueryText: y } = this.props;
+        let { query: t, navId: r, focusedIndex: n, onSelectQuery: l, onSelectSearchEverywhere: a, onHighlightQuery: c, hideQuery: u, searchFavorites: p, showDMQueryText: _ } = this.props;
         if (e || u) return null;
         let S = -1 === n;
         return (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsxs)(
                     o.P3F,
-                    g(f({ className: i()(d.queryContainer, { [d.focused]: S }) }, _(r, -1, S)), {
+                    g(f({ className: i()(d.queryContainer, { [d.focused]: S }) }, y(r, -1, S)), {
                         onMouseEnter: c,
                         onClick: l,
                         children: [
                             (0, s.jsx)(m, {
                                 query: t,
                                 searchFavorites: p,
-                                showDMQueryText: y
+                                showDMQueryText: _
                             }),
                             (0, s.jsx)('div', {
                                 className: d.queryShortcut,
@@ -152,7 +152,7 @@ class S extends (n = l.PureComponent) {
                 p &&
                     (0, s.jsxs)(
                         o.P3F,
-                        g(f({ className: i()(d.queryContainer, { [d.focused]: S }) }, _(r, -1, S)), {
+                        g(f({ className: i()(d.queryContainer, { [d.focused]: S }) }, y(r, -1, S)), {
                             onMouseEnter: c,
                             onClick: a,
                             children: [
@@ -189,7 +189,7 @@ class S extends (n = l.PureComponent) {
         return (0, s.jsxs)('div', {
             className: d.container,
             style: { width: n },
-            onMouseDown: y,
+            onMouseDown: _,
             role: 'listbox',
             id: r,
             tabIndex: -1,
@@ -211,7 +211,7 @@ class S extends (n = l.PureComponent) {
                     });
                 return (0, s.jsx)(
                     o.P3F,
-                    g(f({}, _(e, -1, -1 === n)), {
+                    g(f({}, y(e, -1, -1 === n)), {
                         className: d.inChannelOptionContainer,
                         onClick: l,
                         children: (0, s.jsx)(o.Text, {

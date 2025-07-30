@@ -1,7 +1,7 @@
-(n.d(t, { default: () => N }), n(388685), n(953529));
+(n.d(t, { default: () => w }), n(388685), n(953529));
 var a = n(255367),
-    i = n(73800),
-    o = n(442837),
+    o = n(73800),
+    i = n(442837),
     r = n(544891),
     c = n(179538),
     l = n(82659),
@@ -18,76 +18,76 @@ var a = n(255367),
     y = n(709054),
     T = n(861990),
     C = n(127654),
-    E = n(979956),
-    x = n(228392),
-    O = n(404616),
+    O = n(979956),
+    E = n(228392),
+    x = n(404616),
     v = n(470623),
     I = n(981631),
-    S = n(231338),
-    M = n(388032),
+    M = n(231338),
+    S = n(388032),
     j = n(994436);
-async function w(e) {
+async function N(e) {
     var t, n, a;
-    let i,
-        { thread: o, attachments: c, setIsUploading: l, guild: p, onClose: _ } = e,
-        g = y.default.castChannelIdAsMessageId(o.id),
-        x = new d.Z();
-    x.on('progress', (e) => {
+    let o,
+        { thread: i, attachments: c, setIsUploading: l, guild: p, onClose: _ } = e,
+        g = y.default.castChannelIdAsMessageId(i.id),
+        E = new d.Z();
+    E.on('progress', (e) => {
         let t = (0, h.dg)(p.id);
-        e.currentSize > t && (x.cancel(), l(!1), _(), (0, C.G)(o, (0, E.KZ)(c)));
+        e.currentSize > t && (E.cancel(), l(!1), _(), (0, C.G)(i, (0, O.KZ)(c)));
     });
-    let O = b.Z.getMessage(o.id, g),
-        v = null != O ? O.attachments : [];
+    let x = b.Z.getMessage(i.id, g),
+        v = null != x ? x.attachments : [];
     l(!0);
     try {
-        i = await x.uploadFiles(c);
+        o = await E.uploadFiles(c);
     } catch (e) {
         l(!1);
         return;
     }
-    let S = [...v, ...(null != (t = i.map((e, t) => (0, T.B)(e, t))) ? t : [])];
+    let M = [...v, ...(null != (t = o.map((e, t) => (0, T.B)(e, t))) ? t : [])];
     try {
         (await r.tn.patch({
-            url: I.ANM.MESSAGE(o.id, g),
-            body: { attachments: S },
+            url: I.ANM.MESSAGE(i.id, g),
+            body: { attachments: M },
             rejectWithError: !1
         }),
             _(),
-            u.Z.clearAll(o.id, f.d.ChannelMessage));
+            u.Z.clearAll(i.id, f.d.ChannelMessage));
     } catch (e) {
-        (l(!1), (null == (n = e.body) ? void 0 : n.code) === I.evJ.EXPLICIT_CONTENT && (_(), s.Z.sendExplicitMediaClydeError(o.id, null == (a = e.body) ? void 0 : a.attachments, m.UU.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED), u.Z.clearAll(o.id, f.d.ChannelMessage)));
+        (l(!1), (null == (n = e.body) ? void 0 : n.code) === I.evJ.EXPLICIT_CONTENT && (_(), s.Z.sendExplicitMediaClydeError(i.id, null == (a = e.body) ? void 0 : a.attachments, m.UU.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED), u.Z.clearAll(i.id, f.d.ChannelMessage)));
     }
 }
-function N(e) {
+function w(e) {
     var t;
     let { threadId: n, attachments: r, sendMessage: s, transitionState: u, onClose: d } = e,
-        m = (0, o.e7)([_.Z], () => _.Z.getChannel(n), [n]),
-        f = (0, o.e7)([g.Z], () => g.Z.getGuild(null == m ? void 0 : m.getGuildId()), [m]),
-        b = (0, o.e7)([_.Z], () => _.Z.getChannel(null == m ? void 0 : m.parent_id), [m]),
+        m = (0, i.e7)([_.Z], () => _.Z.getChannel(n), [n]),
+        f = (0, i.e7)([g.Z], () => g.Z.getGuild(null == m ? void 0 : m.getGuildId()), [m]),
+        b = (0, i.e7)([_.Z], () => _.Z.getChannel(null == m ? void 0 : m.parent_id), [m]),
         h = null == (t = r[0]) ? void 0 : t.item,
-        [y, T] = i.useState(null);
-    i.useEffect(() => {
-        null != h && (0, p.Fq)(h.file, (e, t) => T(e), S.dG);
+        [y, T] = o.useState(null);
+    o.useEffect(() => {
+        null != h && (0, p.Fq)(h.file, (e, t) => T(e), M.dG);
     }, [h]);
     let C =
             null != h && null != y
                 ? {
                       src: y,
-                      width: O.TJ,
-                      height: O.Lp,
+                      width: x.TJ,
+                      height: x.Lp,
                       spoiler: r[0].spoiler,
                       alt: r[0].description
                   }
                 : null,
-        [E, I] = i.useState(!1),
-        N = i.useCallback(() => {
-            ((0, x.xI)({ added: !1 }), s(), d());
+        [O, I] = o.useState(!1),
+        w = o.useCallback(() => {
+            ((0, E.xI)({ added: !1 }), s(), d());
         }, [s, d]),
-        P = i.useCallback(() => {
+        P = o.useCallback(() => {
             null != m &&
                 null != f &&
-                ((0, x.xI)({ added: !0 }),
-                w({
+                ((0, E.xI)({ added: !0 }),
+                N({
                     thread: m,
                     attachments: r,
                     setIsUploading: I,
@@ -98,36 +98,36 @@ function N(e) {
     return null == b
         ? null
         : (0, a.jsx)(l.Modal, {
-              title: M.intl.string(M.t.hMWWMT),
-              subtitle: M.intl.string(M.t.zMsUsr),
+              title: S.intl.string(S.t.hMWWMT),
+              subtitle: S.intl.string(S.t.zMsUsr),
               transitionState: u,
               onClose: d,
               actionBarInput: (0, a.jsx)(c.A, {
                   variant: 'secondary',
-                  disabled: E,
+                  disabled: O,
                   onClick: d,
-                  text: M.intl.string(M.t['ETE/oK'])
+                  text: S.intl.string(S.t['ETE/oK'])
               }),
               actions: [
                   {
                       variant: 'secondary',
-                      text: M.intl.string(M.t['8rKVHB']),
-                      disabled: E,
-                      onClick: N
+                      text: S.intl.string(S.t['8rKVHB']),
+                      disabled: O,
+                      onClick: w
                   },
                   {
                       variant: 'primary',
-                      text: M.intl.string(M.t.d611xM),
-                      loading: E,
+                      text: S.intl.string(S.t.d611xM),
+                      loading: O,
                       onClick: P,
                       autoFocus: !0
                   }
               ],
               children: (0, a.jsx)(v.oL, {
                   channel: b,
-                  children: (0, a.jsx)(O.ZP, {
+                  children: (0, a.jsx)(x.ZP, {
                       threadId: n,
-                      goToThread: S.dG,
+                      goToThread: M.dG,
                       overrideMedia: C,
                       className: j.forumPost
                   })

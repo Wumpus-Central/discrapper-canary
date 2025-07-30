@@ -1,4 +1,4 @@
-n.d(t, { L: () => j });
+n.d(t, { L: () => E });
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -8,57 +8,58 @@ var i = n(255367),
     c = n(481060),
     d = n(607070),
     u = n(70097),
-    m = n(507808),
-    p = n(981631),
-    g = n(388032),
-    h = n(350298),
-    f = n(806539),
-    b = n(477154),
-    x = n(387888);
-let _ = () => {
+    m = n(63063),
+    p = n(507808),
+    g = n(981631),
+    h = n(388032),
+    f = n(350298),
+    b = n(806539),
+    x = n(477154),
+    _ = n(387888);
+let j = () => {
         let e = (0, l.e7)([d.Z], () => d.Z.useReducedMotion);
         return (0, i.jsx)('div', {
-            className: h.assetContainer,
+            className: f.assetContainer,
             children: e
                 ? (0, i.jsx)('img', {
-                      src: b.Z,
-                      className: h.orbAsset,
+                      src: x.Z,
+                      className: f.orbAsset,
                       alt: 'Orb'
                   })
                 : (0, i.jsxs)(u.Z, {
                       autoPlay: !0,
                       loop: !0,
-                      className: h.orbAsset,
+                      className: f.orbAsset,
                       children: [
                           (0, i.jsx)('source', {
-                              src: x.Z,
+                              src: _.Z,
                               type: 'video/webm'
                           }),
                           (0, i.jsx)('img', {
-                              src: b.Z,
-                              className: h.orbAsset,
+                              src: x.Z,
+                              className: f.orbAsset,
                               alt: 'Orb'
                           })
                       ]
                   })
         });
     },
-    j = (e) => {
-        let { ctaText: t, ctaOnClick: n, analyticsPage: s, linkPreText: l = g.intl.string(g.t['5qZv9P']), linkText: d = g.intl.string(g.t.XRdyj4) } = e,
+    E = (e) => {
+        let { ctaText: t, ctaOnClick: n, analyticsPage: s, linkPreText: l = h.intl.string(h.t['5qZv9P']), linkText: d = h.intl.string(h.t.XRdyj4) } = e,
             u = r.useCallback(() => {
                 null != s &&
-                    (0, m.Y)({
+                    (0, p.Y)({
                         pageType: s,
-                        sectionType: p.jXE.ORBS_BALANCE_MENU,
-                        ctaObject: p.qAy.ORBS_LEARN_MORE_LINK
+                        sectionType: g.jXE.ORBS_BALANCE_MENU,
+                        ctaObject: g.qAy.ORBS_LEARN_MORE_LINK
                     });
             }, [s]);
         return (0, i.jsxs)('div', {
-            className: a()(h.container, f.baseCardOutline),
+            className: a()(f.container, b.baseCardOutline),
             children: [
-                (0, i.jsx)(_, {}),
+                (0, i.jsx)(j, {}),
                 (0, i.jsx)(o.zx, {
-                    className: h.ctaButton,
+                    className: f.ctaButton,
                     color: o.zx.Colors.BRAND,
                     look: o.zx.Looks.FILLED,
                     size: o.zx.Sizes.SMALL,
@@ -67,19 +68,19 @@ let _ = () => {
                     children: t
                 }),
                 (0, i.jsxs)('div', {
-                    className: h.linkContainer,
+                    className: f.linkContainer,
                     children: [
                         void 0 !== l &&
                             (0, i.jsxs)(c.Text, {
                                 variant: 'text-xs/normal',
-                                className: h.linkPreText,
+                                className: f.linkPreText,
                                 children: [l, '\xA0']
                             }),
                         (0, i.jsx)(c.eee, {
                             target: '_blank',
                             rel: 'author',
-                            href: p.yXt.HELP_ARTICLE_ORBS_FAQ,
-                            className: h.learnMoreLink,
+                            href: m.Z.getArticleURL(g.BhN.ORBS_FAQ),
+                            className: f.learnMoreLink,
                             onClick: u,
                             children: d
                         })

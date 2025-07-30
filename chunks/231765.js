@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => z }), n(953529), n(388685));
+(n.d(t, { Z: () => W }), n(953529), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(392711),
@@ -516,7 +516,7 @@ let F = (e, t, n) => {
         }
     },
     H = (e) => (0 === e ? u.n.LEFT : u.n.RIGHT);
-function z() {
+function W() {
     let [e, t] = r.useState(0),
         [n, s] = r.useState(H(e)),
         [l, c] = r.useState(!1),

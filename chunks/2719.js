@@ -65,7 +65,7 @@ function H(e) {
     }
     return e;
 }
-function z(e, t) {
+function W(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,7 +83,7 @@ function z(e, t) {
         e
     );
 }
-let W = w.ZP.getEnableHardwareAcceleration() ? m.Xo$ : m.qEK;
+let z = w.ZP.getEnableHardwareAcceleration() ? m.Xo$ : m.qEK;
 function Y(e) {
     var t, s;
     let { className: l, user: o } = e,
@@ -141,7 +141,7 @@ function Y(e) {
                         children: (e) =>
                             (0, i.jsx)(
                                 m.Mgn,
-                                z(
+                                W(
                                     H(
                                         {
                                             size: 'custom',
@@ -164,7 +164,7 @@ function Y(e) {
                         children: (e) =>
                             (0, i.jsx)(
                                 m.Mgn,
-                                z(
+                                W(
                                     H(
                                         {
                                             size: 'custom',
@@ -186,7 +186,7 @@ function Y(e) {
                         className: F.fieldButton,
                         children: (0, i.jsx)(
                             m.zxk,
-                            z(
+                            W(
                                 H(
                                     {
                                         variant: 'secondary',
@@ -263,7 +263,7 @@ function K(e) {
                             children: (e) =>
                                 (0, i.jsx)(
                                     m.Mgn,
-                                    z(
+                                    W(
                                         H(
                                             {
                                                 size: 'custom',
@@ -440,7 +440,7 @@ function J(e) {
                                       (0, m.h7j)((e) =>
                                           (0, i.jsx)(
                                               h.Z,
-                                              z(H({}, e), {
+                                              W(H({}, e), {
                                                   title: G.intl.string(G.t['3CTiKi']),
                                                   children: s.hasFlag(M.xW$.MFA_SMS) ? G.intl.string(G.t.jrhJys) : void 0,
                                                   actionText: G.intl.string(G.t.N86XcH),
@@ -501,7 +501,7 @@ function Q(e) {
               children: (e) =>
                   (0, i.jsx)(
                       m.P3F,
-                      z(H({}, e), {
+                      W(H({}, e), {
                           innerRef: a,
                           className: F.overflowMenuButton,
                           'aria-label': G.intl.string(G.t.DEoVWV),
@@ -592,7 +592,7 @@ function et() {
             (0, i.jsxs)('div', {
                 className: F.userInfo,
                 children: [
-                    (0, i.jsx)(W, {
+                    (0, i.jsx)(z, {
                         className: F.avatar,
                         src: d,
                         avatarDecoration: u,
