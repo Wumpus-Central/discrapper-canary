@@ -1,9 +1,9 @@
 n.d(t, { Z: () => h });
-var r = n(255367);
+var l = n(255367);
 n(73800);
-var l = n(442837),
-    i = n(481060),
-    a = n(594174),
+var r = n(442837),
+    a = n(481060),
+    i = n(594174),
     s = n(246364),
     o = n(489813),
     c = n(186078),
@@ -13,13 +13,13 @@ var l = n(442837),
     x = n(388032);
 let h = function (e) {
     let { guildId: t, formFields: n, user: h, showRequirements: j = !0 } = e;
-    return null == (0, l.e7)([a.default], () => (null != h ? h : a.default.getCurrentUser()))
+    return null == (0, r.e7)([i.default], () => (null != h ? h : i.default.getCurrentUser()))
         ? null
-        : (0, r.jsxs)(r.Fragment, {
+        : (0, l.jsxs)(l.Fragment, {
               children: [
                   j &&
-                      (0, r.jsx)(o.Ih, {
-                          icon: i.b7C,
+                      (0, l.jsx)(o.Ih, {
+                          icon: a.b7C,
                           text: x.intl.string(x.t.v2z4c3),
                           meetsRequirement: !0
                       }),
@@ -27,13 +27,13 @@ let h = function (e) {
                       (function (e, t) {
                           switch (e.field_type) {
                               case s.QJ.TERMS:
-                                  return (0, r.jsx)(u.QC, { formField: e }, t);
+                                  return (0, l.jsx)(u.QC, { formField: e }, t);
                               case s.QJ.TEXT_INPUT:
-                                  return (0, r.jsx)(m.YJ, { formField: e }, t);
+                                  return (0, l.jsx)(m.YJ, { formField: e }, t);
                               case s.QJ.PARAGRAPH:
-                                  return (0, r.jsx)(d.jn, { formField: e }, t);
+                                  return (0, l.jsx)(d.jn, { formField: e }, t);
                               case s.QJ.MULTIPLE_CHOICE:
-                                  return (0, r.jsx)(c.QH, { formField: e }, t);
+                                  return (0, l.jsx)(c.QH, { formField: e }, t);
                           }
                       })(e, t)
                   )

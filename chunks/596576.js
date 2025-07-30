@@ -5,7 +5,5 @@ e.exports = {
     sectionTitle: 'sectionTitle_f391e3',
     selected: 'selected_f391e3',
     siblingSelected: 'siblingSelected_f391e3',
-    messageRequestCoachmark: 'messageRequestCoachmark_f391e3',
-    titleDivider: 'titleDivider_f391e3',
-    clearAllButton: 'clearAllButton_f391e3'
+    titleDivider: 'titleDivider_f391e3'
 };

@@ -1,17 +1,17 @@
 (r.d(t, {
     $z: () => Z,
-    I1: () => v,
+    I1: () => j,
     IZ: () => O,
     LQ: () => f,
     PJ: () => N,
-    Qb: () => j,
+    Qb: () => C,
     Yc: () => I,
     bh: () => M,
     bo: () => P,
     cy: () => E,
     hM: () => S,
     sL: () => x,
-    t6: () => C,
+    t6: () => v,
     tA: () => w,
     tI: () => R,
     z4: () => T,
@@ -70,7 +70,7 @@ function _(e) {
     return null == e ? null : a.Z.getAnalyticsId(e);
 }
 function S(e) {
-    let { searchType: t, searchId: r, searchAnalyticsId: s, prevSearchAnalyticsId: l, isError: a, limit: i, offset: o, page: c, totalResults: u, pageResults: d, isIndexing: f, pageNumMessages: _, pageNumLinks: S, pageNumEmbeds: x, pageNumAttachments: b, searchQueryString: C, searchQuery: j } = e;
+    let { searchType: t, searchId: r, searchAnalyticsId: s, prevSearchAnalyticsId: l, isError: a, limit: i, offset: o, page: c, totalResults: u, pageResults: d, isIndexing: f, pageNumMessages: _, pageNumLinks: S, pageNumEmbeds: x, pageNumAttachments: b, searchQueryString: v, searchQuery: C } = e;
     n.ZP.trackWithMetadata(h.rMx.SEARCH_RESULT_VIEWED, {
         search_type: t,
         search_id: s,
@@ -88,8 +88,8 @@ function S(e) {
         page_num_links: S,
         page_num_embeds: x,
         page_num_attach: b,
-        search_query_length: m(C),
-        search_query_content_length: y(j)
+        search_query_length: m(v),
+        search_query_content_length: y(C)
     });
 }
 function x(e) {
@@ -122,7 +122,7 @@ function b(e) {
         new_sort_type: l
     });
 }
-function C(e) {
+function v(e) {
     let { searchType: t, searchId: r, searchAnalyticsId: s, newPageIndex: l } = e;
     n.ZP.trackWithMetadata(h.rMx.SEARCH_RESULT_PAGE_CHANGED, {
         search_id: s,
@@ -132,7 +132,7 @@ function C(e) {
         new_page_index: l
     });
 }
-function j(e) {
+function C(e) {
     let { searchType: t, searchId: r, searchAnalyticsId: s, searchQueryString: l, searchQuery: a } = e;
     n.ZP.trackWithMetadata(h.rMx.SEARCH_RESULT_EMPTY, {
         search_id: s,
@@ -143,7 +143,7 @@ function j(e) {
         search_query_content_length: y(a)
     });
 }
-function v(e) {
+function j(e) {
     let { searchType: t, searchId: r } = e;
     (d(r, (e) => {
         c.Z.initialize({
@@ -192,16 +192,16 @@ function R(e) {
         S = 0,
         x = 0,
         b = 0,
-        C = 0,
-        j = 0;
+        v = 0,
+        C = 0;
     c.forEach((e) => {
-        e.type === h.dCx.ANSWER_IN ? u++ : e.type === h.dCx.ANSWER_USERNAME_FROM ? d++ : e.type === h.dCx.ANSWER_USERNAME_MENTIONS ? f++ : e.type === h.dCx.ANSWER_HAS ? S++ : e.type === h.dCx.ANSWER_BEFORE ? x++ : e.type === h.dCx.ANSWER_ON ? b++ : e.type === h.dCx.ANSWER_AFTER ? C++ : e.type === h.dCx.ANSWER_PINNED && j++;
+        e.type === h.dCx.ANSWER_IN ? u++ : e.type === h.dCx.ANSWER_USERNAME_FROM ? d++ : e.type === h.dCx.ANSWER_USERNAME_MENTIONS ? f++ : e.type === h.dCx.ANSWER_HAS ? S++ : e.type === h.dCx.ANSWER_BEFORE ? x++ : e.type === h.dCx.ANSWER_ON ? b++ : e.type === h.dCx.ANSWER_AFTER ? v++ : e.type === h.dCx.ANSWER_PINNED && C++;
     });
-    let v = g(r);
+    let j = g(r);
     (n.ZP.trackWithMetadata(h.rMx.MESSAGES_SEARCH_STARTED, {
         search_id: _(r),
         search_session_id: p(r),
-        search_query_id: v,
+        search_query_id: j,
         search_type: t,
         search_query_length: m(l),
         search_query_content_length: y(s),
@@ -212,8 +212,8 @@ function R(e) {
         filter_has_count: S,
         filter_before_count: x,
         filter_during_count: b,
-        filter_after_count: C,
-        filter_pinned_count: j
+        filter_after_count: v,
+        filter_pinned_count: C
     }),
         n.ZP.trackWithMetadata(h.rMx.SEARCH_STARTED, {
             search_id: _(r),
@@ -309,21 +309,21 @@ function Z(e) {
 function M(e) {
     var t;
     let { searchId: r, searchQuery: s, searchQueryString: l, searchAutocompleteResultIndex: a, searchAutocompleteTotalResults: i, searchTokenType: c, searchAutocompleteGroup: u, isSearchFilterPrefix: d, isSearchFilterAnswer: f, isSearchFilterComplete: S, isInFilterForSelectedChannel: x, searchAutocompleteSelectAction: b } = e,
-        C = (0, o.g)(r);
+        v = (0, o.g)(r);
     h.rtL.HISTORY;
-    let j = null != (t = A.get(u)) ? t : k.get(u),
-        v = null != c ? A.get(c) : null;
+    let C = null != (t = A.get(u)) ? t : k.get(u),
+        j = null != c ? A.get(c) : null;
     n.ZP.trackWithMetadata(h.rMx.SEARCH_MESSAGES_AUTOCOMPLETE_CLICKED, {
         search_id: _(r),
-        search_type: C,
+        search_type: v,
         search_session_id: p(r),
         search_query_id: g(r),
         search_query_length: m(l),
         search_query_content_length: y(s),
         search_autocomplete_result_index: a,
         search_autocomplete_total_results: i,
-        search_autocomplete_group: j,
-        search_autocomplete_filter_type: v,
+        search_autocomplete_group: C,
+        search_autocomplete_filter_type: j,
         is_search_filter_prefix: d,
         is_search_filter_answer: f,
         is_search_filter_complete: S,

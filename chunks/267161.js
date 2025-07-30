@@ -31,8 +31,8 @@ var r = n(255367),
     P = n(430824),
     j = n(944486),
     A = n(914010),
-    Z = n(451478),
-    x = n(768581),
+    x = n(451478),
+    Z = n(768581),
     w = n(998502),
     L = n(228488),
     R = n(950796),
@@ -105,7 +105,7 @@ function z() {
         }),
         O =
             null != m
-                ? x.ZP.getApplicationIconURL({
+                ? Z.ZP.getApplicationIconURL({
                       id: m.id,
                       icon: m.icon,
                       bot: m.bot
@@ -175,7 +175,7 @@ let W = i.memo(function () {
         w.ZP.setMinimumSize(k.J, k.N);
     }, []);
     let b = (0, N.Ll)(),
-        v = (0, o.e7)([Z.Z, C.Z], () => (0, L.rB)()),
+        v = (0, o.e7)([x.Z, C.Z], () => (0, L.rB)()),
         T = (function (e) {
             let { showCollapsedSidebarIcons: t, showNotificationsInbox: n, showRecentsButton: r } = e;
             return i.useMemo(() => (t ? 'SIDEBAR' : n ? 'NOTIFICATIONS_INBOX' : r ? 'RECENTS' : 'HELP'), [t, n, r]);

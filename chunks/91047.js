@@ -157,7 +157,7 @@ function c(e, t) {
 function u(e, t, a) {
     null != a &&
         (0, r.jW)(e, async () => {
-            let { default: e } = await Promise.all([n.e('21443'), n.e('19877')]).then(n.bind(n, 158195));
+            let { default: e } = await n.e('50331').then(n.bind(n, 158195));
             return (t) => (0, i.jsx)(e, o(l({}, t), { guildId: a }));
         });
 }

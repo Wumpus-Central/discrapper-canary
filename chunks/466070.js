@@ -1,6 +1,6 @@
 n.d(t, { t: () => d });
-var r = n(255367),
-    i = n(73800),
+var i = n(255367),
+    r = n(73800),
     l = n(481060),
     o = n(296023),
     a = n(768581),
@@ -8,24 +8,24 @@ var r = n(255367),
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                ((r = n[t]),
+            i.forEach(function (t) {
+                var i;
+                ((i = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: i,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r));
+                        : (e[t] = i));
             }));
     }
     return e;
@@ -36,48 +36,48 @@ function d(e) {
         m = (function (e, t) {
             if (null == e) return {};
             var n,
-                r,
-                i = (function (e, t) {
+                i,
+                r = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        r,
-                        i = {},
+                        i,
+                        r = {},
                         l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
-                    return i;
+                    for (i = 0; i < l.length; i++) ((n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                    return r;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+                for (i = 0; i < l.length; i++) ((n = l[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
             }
-            return i;
+            return r;
         })(e, ['channel', 'application', 'showApplicationImage']);
     let b = (0, o.w)(d),
-        g = i.useCallback(
+        g = r.useCallback(
             () =>
                 (0, l.ZDy)(async () => {
                     let { default: e } = await n.e('30019').then(n.bind(n, 719498));
                     return (t) => {
-                        var n, i;
-                        return (0, r.jsx)(
+                        var n, r;
+                        return (0, i.jsx)(
                             e,
                             ((n = c({}, t)),
-                            (i = i =
+                            (r = r =
                                 {
                                     channel: d,
                                     application: u
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
+                                          var i = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, i);
                                       }
                                       return n;
-                                  })(Object(i)).forEach(function (e) {
-                                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                                  })(Object(r)).forEach(function (e) {
+                                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                                   }),
                             n)
                         );
@@ -86,7 +86,7 @@ function d(e) {
             [u, d]
         ),
         f = p ? (null != (t = u.getIconURL(48)) ? t : a.pK['0']) : void 0;
-    return (0, r.jsx)(
+    return (0, i.jsx)(
         s.Z,
         c(
             {

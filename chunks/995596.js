@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => N }), n(388685));
-var r = n(255367),
-    l = n(73800),
-    i = n(120356),
-    a = n.n(i),
+(n.d(t, { Z: () => E }), n(388685));
+var l = n(255367),
+    r = n(73800),
+    a = n(120356),
+    i = n.n(a),
     s = n(442837),
     o = n(21260),
     c = n(780384),
@@ -15,46 +15,46 @@ var r = n(255367),
     b = n(984370),
     f = n(433355),
     p = n(384433),
-    g = n(388032),
+    C = n(388032),
     v = n(86931);
-let _ = (e) => [
+let g = (e) => [
         {
             id: p.e.ALL_MEMBERS,
-            label: g.intl.string(g.t.NOOm1d)
+            label: C.intl.string(C.t.NOOm1d)
         },
         {
             id: p.e.PENDING,
-            label: e > 0 ? g.intl.formatToPlainString(g.t['Wo+zLy'], { count: e }) : g.intl.string(g.t['4eQVBA'])
+            label: e > 0 ? C.intl.formatToPlainString(C.t['Wo+zLy'], { count: e }) : C.intl.string(C.t['4eQVBA'])
         },
         {
             id: p.e.REJECTED,
-            label: g.intl.string(g.t.bSZklZ)
+            label: C.intl.string(C.t.bSZklZ)
         },
         {
             id: p.e.APPROVED,
-            label: g.intl.string(g.t.aURgY2)
+            label: C.intl.string(C.t.aURgY2)
         }
     ],
-    C = (e) => {
-        let { tabs: t, selectedTab: n, onTabSelect: l, onClose: i } = e;
-        return (0, r.jsx)(d.v2r, {
+    _ = (e) => {
+        let { tabs: t, selectedTab: n, onTabSelect: r, onClose: a } = e;
+        return (0, l.jsx)(d.v2r, {
             navId: 'members-tabs-overflow-menu',
-            'aria-label': g.intl.string(g.t.riPnr6),
+            'aria-label': C.intl.string(C.t.riPnr6),
             hideScroller: !0,
-            onClose: i,
-            onSelect: i,
-            children: (0, r.jsx)(
+            onClose: a,
+            onSelect: a,
+            children: (0, l.jsx)(
                 d.kSQ,
                 {
                     children: t.map((e) => {
-                        let { id: t, label: i } = e;
-                        return (0, r.jsx)(
+                        let { id: t, label: a } = e;
+                        return (0, l.jsx)(
                             d.sNh,
                             {
                                 id: t,
-                                label: i,
+                                label: a,
                                 icon: t === n ? d.owK : void 0,
-                                action: () => l(t)
+                                action: () => r(t)
                             },
                             t
                         );
@@ -65,28 +65,28 @@ let _ = (e) => [
         });
     };
 function T(e) {
-    let { onTabSelect: t, tabs: n, selectedTab: i } = e,
-        s = l.useRef(null),
+    let { onTabSelect: t, tabs: n, selectedTab: a } = e,
+        s = r.useRef(null),
         o = (0, x.ZP)(),
         u = (0, c.wj)(o),
-        m = l.useMemo(
+        m = r.useMemo(
             () =>
                 null !=
                 n.find((e) => {
                     let { id: t } = e;
-                    return t === i;
+                    return t === a;
                 }),
-            [i, n]
+            [a, n]
         ),
         h = m ? 'header-primary' : u ? 'text-muted' : 'header-primary',
         j = m ? d.TVs.colors.HEADER_PRIMARY : u ? d.TVs.colors.TEXT_MUTED : d.TVs.colors.HEADER_PRIMARY;
-    return (0, r.jsx)(d.yRy, {
+    return (0, l.jsx)(d.yRy, {
         targetElementRef: s,
         renderPopout: (e) => {
-            let { closePopout: l } = e;
-            return (0, r.jsx)(C, {
-                selectedTab: i,
-                onClose: l,
+            let { closePopout: r } = e;
+            return (0, l.jsx)(_, {
+                selectedTab: a,
+                onClose: r,
                 tabs: n,
                 onTabSelect: t
             });
@@ -94,121 +94,121 @@ function T(e) {
         position: 'bottom',
         align: 'left',
         children: (e, t) => {
-            var n, l;
-            let { isShown: i } = t;
-            return (0, r.jsxs)(
+            var n, r;
+            let { isShown: a } = t;
+            return (0, l.jsxs)(
                 d.njP.Item,
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
+                            l = Object.keys(n);
                         ('function' == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
+                            (l = l.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 })
                             )),
-                            r.forEach(function (t) {
-                                var r;
-                                ((r = n[t]),
+                            l.forEach(function (t) {
+                                var l;
+                                ((l = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: r,
+                                              value: l,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r));
+                                        : (e[t] = l));
                             }));
                     }
                     return e;
                 })({}, e)),
-                (l = l =
+                (r = r =
                     {
                         id: 'more',
                         clickableInnerRef: s,
                         color: 'text-muted',
-                        className: a()(v.more, { [v.selected]: m }),
-                        'aria-label': g.intl.string(g.t.UKOtz8),
+                        className: i()(v.more, { [v.selected]: m }),
+                        'aria-label': C.intl.string(C.t.UKOtz8),
                         children: [
-                            (0, r.jsx)(d.Text, {
+                            (0, l.jsx)(d.Text, {
                                 variant: 'text-md/medium',
                                 color: h,
-                                children: g.intl.string(g.t.UKOtz8)
+                                children: C.intl.string(C.t.UKOtz8)
                             }),
-                            i
-                                ? (0, r.jsx)(d.u04, {
+                            a
+                                ? (0, l.jsx)(d.u04, {
                                       size: 'sm',
                                       color: j
                                   })
-                                : (0, r.jsx)(d.CJ0, {
+                                : (0, l.jsx)(d.CJ0, {
                                       size: 'sm',
                                       color: j
                                   })
                         ]
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
+                              var l = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, l);
                           }
                           return n;
-                      })(Object(l)).forEach(function (e) {
-                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                      })(Object(r)).forEach(function (e) {
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                       }),
                 n)
             );
         }
     });
 }
-function N(e) {
-    let { guildId: t, currentTab: n, onTabSelect: i } = e,
-        [a, c] = l.useState(0),
-        x = l.useRef(null),
-        C = l.useRef(a),
-        N = (0, j.A)({ guildId: t }),
-        E = _(null != N ? N : 0),
+function E(e) {
+    let { guildId: t, currentTab: n, onTabSelect: a } = e,
+        [i, c] = r.useState(0),
+        x = r.useRef(null),
+        _ = r.useRef(i),
+        E = (0, j.A)({ guildId: t }),
+        N = g(null != E ? E : 0),
         {
             lastVisibleIndex: S,
-            onItemLayout: I,
-            overflowItemsRef: O
+            onItemLayout: P,
+            overflowItemsRef: R
         } = (0, o.zP)({
-            items: E,
+            items: N,
             itemGapPx: 16,
             maxLines: 1,
-            containerWidth: a - 200
+            containerWidth: i - 200
         }),
-        P = (0, s.e7)([f.ZP], () => null != f.ZP.getGuildSidebarState(t), [t]),
-        R = (0, h.L)({ guildId: t }),
-        y = l.useMemo(() => (n === p.e.ALL_MEMBERS ? P : null != R && null != R.user), [n, P, R]),
-        w = l.useMemo(() => E.slice(0, S + 1), [S, E]),
-        A = l.useMemo(() => E.slice(S + 1), [S, E]),
-        M = (0, m.Z)((e) => {
+        I = (0, s.e7)([f.ZP], () => null != f.ZP.getGuildSidebarState(t), [t]),
+        Z = (0, h.L)({ guildId: t }),
+        w = r.useMemo(() => (n === p.e.ALL_MEMBERS ? I : null != Z && null != Z.user), [n, I, Z]),
+        y = r.useMemo(() => N.slice(0, S + 1), [S, N]),
+        M = r.useMemo(() => N.slice(S + 1), [S, N]),
+        O = (0, m.Z)((e) => {
             let t = e.contentRect.width;
-            null != t && C.current !== t && (c(t), (C.current = t));
+            null != t && _.current !== t && (c(t), (_.current = t));
         });
     return (
-        (0, u.s)(x, M, [y]),
-        (0, r.jsxs)(r.Fragment, {
+        (0, u.s)(x, O, [w]),
+        (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, r.jsx)(b.Z.Divider, { className: v.divider }),
-                (0, r.jsxs)('div', {
+                (0, l.jsx)(b.Z.Divider, { className: v.divider }),
+                (0, l.jsxs)('div', {
                     className: v.tabsContainer,
                     ref: x,
                     children: [
-                        (0, r.jsxs)('div', {
+                        (0, l.jsxs)('div', {
                             className: v.measurements,
                             children: [
-                                E.map((e, t) =>
-                                    (0, r.jsx)(
+                                N.map((e, t) =>
+                                    (0, l.jsx)(
                                         o.AJ,
                                         {
                                             index: t,
-                                            onItemLayout: I,
-                                            children: (0, r.jsx)(d.njP.Item, {
+                                            onItemLayout: P,
+                                            children: (0, l.jsx)(d.njP.Item, {
                                                 id: e.id,
                                                 'aria-label': e.label,
                                                 children: e.label
@@ -217,24 +217,24 @@ function N(e) {
                                         e.id
                                     )
                                 ),
-                                (0, r.jsx)('div', {
-                                    ref: O,
-                                    children: (0, r.jsx)(T, {
-                                        tabs: A,
-                                        onTabSelect: i,
+                                (0, l.jsx)('div', {
+                                    ref: R,
+                                    children: (0, l.jsx)(T, {
+                                        tabs: M,
+                                        onTabSelect: a,
                                         selectedTab: n
                                     })
                                 })
                             ]
                         }),
-                        (0, r.jsxs)(d.njP, {
-                            'aria-label': g.intl.string(g.t.tcvVXF),
+                        (0, l.jsxs)(d.njP, {
+                            'aria-label': C.intl.string(C.t.tcvVXF),
                             selectedItem: n,
                             type: 'top-pill',
-                            onItemSelect: i,
+                            onItemSelect: a,
                             children: [
-                                w.map((e) =>
-                                    (0, r.jsx)(
+                                y.map((e) =>
+                                    (0, l.jsx)(
                                         d.njP.Item,
                                         {
                                             id: e.id,
@@ -244,10 +244,10 @@ function N(e) {
                                         e.id
                                     )
                                 ),
-                                0 !== A.length
-                                    ? (0, r.jsx)(T, {
-                                          tabs: A,
-                                          onTabSelect: i,
+                                0 !== M.length
+                                    ? (0, l.jsx)(T, {
+                                          tabs: M,
+                                          onTabSelect: a,
                                           selectedTab: n
                                       })
                                     : null

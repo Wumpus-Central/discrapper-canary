@@ -1,47 +1,47 @@
-e.d(n, {
-    Cv: () => g,
+n.d(t, {
+    Cv: () => v,
     HL: () => h,
-    KK: () => Z,
+    KK: () => b,
     Q_: () => f,
-    nw: () => v
+    nw: () => g
 });
-var i = e(73800),
-    r = e(442837),
-    l = e(904245),
-    a = e(232567),
-    o = e(430824),
-    s = e(375954),
-    d = e(982168),
-    u = e(893908),
-    c = e(953252);
-function f(t) {
+var i = n(73800),
+    r = n(442837),
+    l = n(904245),
+    a = n(232567),
+    o = n(430824),
+    s = n(375954),
+    d = n(982168),
+    u = n(893908),
+    c = n(953252);
+function f(e) {
     return (0, r.e7)([o.Z], () => {
-        if (null == t) return !1;
-        let n = o.Z.getGuild(t);
-        return null != n && (0, c.Z)(n) && null != (0, u.Z)(n);
+        if (null == e) return !1;
+        let t = o.Z.getGuild(e);
+        return null != t && (0, c.Z)(t) && null != (0, u.Z)(t);
     });
 }
-function h(t) {
-    return (0, d.P0)(t);
+function h(e) {
+    return (0, d.P0)(e);
 }
-function v(t) {
-    return (0, d.gT)(t);
+function g(e) {
+    return (0, d.gT)(e);
 }
-function g(t) {
-    let { messageReference: n } = t,
-        e = (0, r.e7)([s.Z], () => (null != n ? s.Z.getMessage(n.channel_id, n.message_id) : null));
+function v(e) {
+    let { messageReference: t } = e,
+        n = (0, r.e7)([s.Z], () => (null != t ? s.Z.getMessage(t.channel_id, t.message_id) : null));
     (0, i.useEffect)(() => {
-        null == e &&
-            null != n &&
+        null == n &&
+            null != t &&
             l.Z.fetchMessages({
-                channelId: n.channel_id,
-                jump: { messageId: n.message_id },
+                channelId: t.channel_id,
+                jump: { messageId: t.message_id },
                 limit: 10
             });
-    }, [e, n]);
+    }, [n, t]);
 }
-function Z(t) {
-    var n, e;
-    let i = null == t || null == (e = t.messageSnapshots[0]) || null == (n = e.moderatorReport) ? void 0 : n.reported_user_id;
+function b(e) {
+    var t, n;
+    let i = null == e || null == (n = e.messageSnapshots[0]) || null == (t = n.moderatorReport) ? void 0 : t.reported_user_id;
     null != i && (0, a.PR)(i);
 }

@@ -1,10 +1,12 @@
-(r.d(t, { default: () => u }), r(388685));
+(r.d(t, { default: () => d }), r(388685));
 var n = r(255367),
-    l = r(73800),
-    o = r(755721),
+    i = r(73800),
+    l = r(82659),
     c = r(481060),
-    i = r(388032);
-function s(e) {
+    s = r(63063),
+    a = r(981631),
+    o = r(388032);
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -29,7 +31,7 @@ function s(e) {
     }
     return e;
 }
-function a(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -47,149 +49,102 @@ function a(e, t) {
         e
     );
 }
-function u(e) {
-    var {
-            modalProps: t,
-            settings: { onConfirm: r }
-        } = e,
-        u = (function (e, t) {
-            if (null == e) return {};
-            var r,
-                n,
-                l = (function (e, t) {
-                    if (null == e) return {};
-                    var r,
-                        n,
-                        l = {},
-                        o = Object.keys(e);
-                    for (n = 0; n < o.length; n++) ((r = o[n]), t.indexOf(r) >= 0 || (l[r] = e[r]));
-                    return l;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < o.length; n++) ((r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (l[r] = e[r]));
-            }
-            return l;
-        })(e.settings, ['onConfirm']);
-    let [b, d] = l.useState({
+function d(e) {
+    let { modalProps: t, onConfirm: r } = e,
+        [d, p] = i.useState({
             Account: {
                 value: 'Account',
-                label: i.intl.string(i.t['rfe/x8']),
+                label: o.intl.string(o.t['rfe/x8']),
                 checked: !1
             },
             Analytics: {
                 value: 'Analytics',
-                label: i.intl.string(i.t['j+d6RE']),
+                label: o.intl.string(o.t['j+d6RE']),
                 checked: !1
             },
             Activities: {
                 value: 'Activities',
-                label: i.intl.string(i.t.KO88BQ),
+                label: o.intl.string(o.t.KO88BQ),
                 checked: !1
             },
             Ads: {
                 value: 'Ads',
-                label: i.intl.string(i.t.wb7QJy),
+                label: o.intl.string(o.t.wb7QJy),
                 checked: !1
             },
             Messages: {
                 value: 'Messages',
-                label: i.intl.string(i.t['0dO1t7']),
+                label: o.intl.string(o.t['0dO1t7']),
                 checked: !1
             },
             Programs: {
                 value: 'Programs',
-                label: i.intl.string(i.t.M4ddeX),
+                label: o.intl.string(o.t.M4ddeX),
                 checked: !1
             },
             Servers: {
                 value: 'Servers',
-                label: i.intl.string(i.t.JN9c39),
+                label: o.intl.string(o.t.JN9c39),
                 checked: !1
             }
         }),
-        [p, y] = l.useState(!1),
-        g = (e) => (t, r) => {
-            (d((t) => a(s({}, t), { [e]: a(s({}, t[e]), { checked: r }) })), r && p && y(!1));
+        [g, v] = i.useState(!1),
+        y = (e) => (t, r) => {
+            (p((t) => b(u({}, t), { [e]: b(u({}, t[e]), { checked: r }) })), r && g && v(!1));
         },
-        x = Object.values(b).some((e) => e.checked);
-    return (0, n.jsxs)(
-        c.Y0X,
-        a(s({}, t), {
-            parentComponent: 'DataHarvestModal',
+        O = Object.values(d).some((e) => e.checked);
+    return (0, n.jsx)(l.Modal, {
+        title: o.intl.string(o.t.jxXMEx),
+        subtitle: o.intl.format(o.t.fSv59f, { helpdeskArticle: s.Z.getArticleURL(a.BhN.GDPR_PACKAGE_CONTENTS) }),
+        transitionState: t.transitionState,
+        onClose: t.onClose,
+        actions: [
+            {
+                text: o.intl.string(o.t.jpVjsr),
+                onClick: () => {
+                    t.onClose();
+                },
+                variant: 'secondary'
+            },
+            {
+                text: o.intl.string(o.t.NYgNg4),
+                onClick: () => {
+                    if (!O) return void v(!0);
+                    let e = Object.keys(d)
+                        .filter((e) => d[e].checked)
+                        .map((e) => d[e].value);
+                    (null == r || r(e), t.onClose());
+                },
+                variant: 'primary'
+            }
+        ],
+        children: (0, n.jsxs)(c.Kqy, {
+            direction: 'vertical',
+            gap: 8,
             children: [
-                (0, n.jsx)(c.xBx, {
-                    separator: !1,
-                    children: (0, n.jsx)(c.X6q, {
-                        variant: 'heading-lg/semibold',
-                        children: u.header
+                Object.keys(d).map((e) => {
+                    let { label: t, checked: r } = d[e];
+                    return (0, n.jsx)(
+                        c.XZJ,
+                        {
+                            type: c.XZJ.Types.INVERTED,
+                            value: r,
+                            onChange: y(e),
+                            children: (0, n.jsx)(c.Text, {
+                                variant: 'text-md/normal',
+                                children: t
+                            })
+                        },
+                        e
+                    );
+                }),
+                g &&
+                    (0, n.jsx)(c.Text, {
+                        variant: 'text-sm/normal',
+                        color: 'text-danger',
+                        children: o.intl.string(o.t.W1Rw3N)
                     })
-                }),
-                (0, n.jsxs)(c.hzk, {
-                    children: [
-                        (0, n.jsx)(c.Text, {
-                            variant: 'text-md/normal',
-                            style: { marginBottom: '5px' },
-                            children: u.body
-                        }),
-                        Object.keys(b).map((e) => {
-                            let { label: t, checked: r } = b[e];
-                            return (0, n.jsx)(
-                                c.XZJ,
-                                {
-                                    type: c.XZJ.Types.INVERTED,
-                                    value: r,
-                                    style: { marginBottom: '2px' },
-                                    onChange: g(e),
-                                    children: (0, n.jsx)(c.Text, {
-                                        variant: 'text-md/normal',
-                                        children: t
-                                    })
-                                },
-                                e
-                            );
-                        }),
-                        p &&
-                            (0, n.jsx)(c.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'text-danger',
-                                style: { marginTop: '8px' },
-                                children: i.intl.string(i.t.W1Rw3N)
-                            })
-                    ]
-                }),
-                (0, n.jsxs)(c.mzw, {
-                    children: [
-                        (0, n.jsx)(o.zx, {
-                            type: 'button',
-                            size: o.zx.Sizes.MEDIUM,
-                            color: null != u.confirmButtonColor ? u.confirmButtonColor : o.zx.Colors.RED,
-                            onClick: () => {
-                                if (!x) return void y(!0);
-                                let e = Object.keys(b)
-                                    .filter((e) => b[e].checked)
-                                    .map((e) => b[e].value);
-                                (null == r || r(e), t.onClose());
-                            },
-                            children: u.confirmText
-                        }),
-                        null != u.cancelText &&
-                            '' !== u.cancelText &&
-                            (0, n.jsx)(o.zx, {
-                                type: 'button',
-                                look: o.zx.Looks.FILLED,
-                                color: o.zx.Colors.PRIMARY,
-                                size: o.zx.Sizes.MEDIUM,
-                                onClick: () => {
-                                    var e;
-                                    (null == (e = u.onCancel) || e.call(u), t.onClose());
-                                },
-                                style: { marginRight: 8 },
-                                children: u.cancelText
-                            })
-                    ]
-                })
             ]
         })
-    );
+    });
 }

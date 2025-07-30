@@ -213,41 +213,40 @@ let Z = (e) => {
             a = i.useCallback(() => {
                 b.Z.closeChannelSidebar(C.uZ);
             }, []),
-            c = i.useCallback(() => {
+            o = i.useCallback(() => {
                 b.Z.closeChannelSidebar(C.uZ);
             }, []),
             {
-                acceptMessageRequest: u,
-                rejectMessageRequest: d,
-                isAcceptLoading: p,
-                isRejectLoading: h,
-                isOptimisticAccepted: m,
-                isOptimisticRejected: g
+                acceptMessageRequest: c,
+                rejectMessageRequest: u,
+                isAcceptLoading: d,
+                isRejectLoading: p,
+                isOptimisticAccepted: h,
+                isOptimisticRejected: m
             } = (0, f.m)({
                 user: v.default.getUser(n),
                 onError: l,
-                onAcceptSuccess: c,
+                onAcceptSuccess: o,
                 onRejectSuccess: a
             }),
-            _ = p || h || m || g;
+            g = d || p || h || m;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(o.zx, {
-                    className: I.action,
-                    size: o.zx.Sizes.TINY,
-                    onClick: () => u(t),
-                    disabled: _,
-                    submitting: p,
-                    children: P.intl.string(P.t.Kz8Pws)
+                (0, r.jsx)(s.zxk, {
+                    variant: 'primary',
+                    size: 'sm',
+                    disabled: g,
+                    onClick: () => c(t),
+                    loading: d,
+                    text: P.intl.string(P.t.Kz8Pws)
                 }),
-                (0, r.jsx)(o.zx, {
-                    className: I.action,
-                    size: o.zx.Sizes.TINY,
-                    onClick: () => d(t),
-                    color: o.zx.Colors.PRIMARY,
-                    disabled: _,
-                    submitting: h,
-                    children: P.intl.string(P.t.B2nygY)
+                (0, r.jsx)(s.zxk, {
+                    variant: 'secondary',
+                    size: 'sm',
+                    disabled: g,
+                    onClick: () => u(t),
+                    loading: p,
+                    text: P.intl.string(P.t.B2nygY)
                 })
             ]
         });

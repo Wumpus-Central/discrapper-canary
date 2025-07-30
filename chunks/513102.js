@@ -1,22 +1,22 @@
 n.d(t, { Z: () => d });
 var i = n(255367);
 n(73800);
-var a = n(481060),
-    r = n(456100),
-    l = n(749681),
+var r = n(481060),
+    l = n(456100),
+    a = n(749681),
     o = n(258971),
-    s = n(49898),
-    c = n(388032);
+    c = n(49898),
+    s = n(388032);
 function d(e) {
-    let { enabled: t } = r.c.useExperiment({ location: 'useApplicationDirectoryItem' }, { autoTrackExposure: !0 }),
-        n = t ? a.iWm : a.jje;
-    return (0, i.jsx)(a.sNh, {
+    let { enabled: t } = l.c.useExperiment({ location: 'useApplicationDirectoryItem' }, { autoTrackExposure: !0 }),
+        n = t ? r.iWm : r.jje;
+    return (0, i.jsx)(r.sNh, {
         id: 'application-directory',
-        label: (0, i.jsx)(i.Fragment, { children: c.intl.string(c.t.AKcFUl) }),
+        label: (0, i.jsx)(i.Fragment, { children: s.intl.string(s.t.AKcFUl) }),
         icon: n,
         action: () => {
-            (0, l.transitionToGlobalDiscovery)({
-                tab: s.GlobalDiscoveryTab.APPS,
+            (0, a.transitionToGlobalDiscovery)({
+                tab: c.GlobalDiscoveryTab.APPS,
                 newSessionState: {
                     entrypoint: { name: o.xF.GUILD_HEADER_POPOUT },
                     guildId: e.id

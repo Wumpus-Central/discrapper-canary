@@ -89,9 +89,9 @@ function A(e) {
             return i;
         })(e, ['channel']);
     let A = i.useRef(null),
-        { mute: Z, suppress: x } = (0, _.Z)(t),
+        { mute: x, suppress: Z } = (0, _.Z)(t),
         w = (0, o.e7)([O.Z], () => O.Z.isDeaf()),
-        L = Z || x || w,
+        L = x || Z || w,
         [R, D] = i.useState(!1),
         k = t.getGuildId(),
         M = (0, y.sR)({ isSoundboardButtonDisabled: L }),
@@ -200,7 +200,7 @@ function A(e) {
             value: V,
             children: (0, r.jsx)(d.ua7, {
                 targetElementRef: A,
-                text: Z ? N.intl.string(N.t['Ox4/zc']) : x ? N.intl.string(N.t['+YBKYG']) : w ? N.intl.string(N.t.X1lQlp) : N.intl.string(N.t['6EJvHh']),
+                text: x ? N.intl.string(N.t['Ox4/zc']) : Z ? N.intl.string(N.t['+YBKYG']) : w ? N.intl.string(N.t.X1lQlp) : N.intl.string(N.t['6EJvHh']),
                 children: (e) => K(e)
             })
         })

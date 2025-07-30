@@ -3,12 +3,12 @@ n.d(t, {
     nj: () => c,
     sE: () => a
 });
-var r = n(544891),
-    i = n(570140),
+var i = n(544891),
+    r = n(570140),
     l = n(480608),
     o = n(981631);
 function a(e, t) {
-    r.tn
+    i.tn
         .get({
             url: o.ANM.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
             rejectWithError: !0
@@ -25,7 +25,7 @@ function a(e, t) {
                         value: e.value
                     }))
                 )),
-                i.Z.dispatch({
+                r.Z.dispatch({
                     type: 'GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS',
                     roleId: t,
                     roleConnectionConfigurations: n
@@ -43,7 +43,7 @@ async function s(e, t, n) {
                 value: e.value
             }))
         ),
-        s = await r.tn
+        s = await i.tn
             .put({
                 url: o.ANM.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
                 body: 0 === a.length ? [] : a,
@@ -68,13 +68,13 @@ async function s(e, t, n) {
             }),
         c = await (0, l.H)(e, t, !1);
     (null != c &&
-        i.Z.dispatch({
+        r.Z.dispatch({
             type: 'GUILD_ROLE_MEMBER_COUNT_UPDATE',
             guildId: e,
             roleId: t,
             count: c
         }),
-        i.Z.dispatch({
+        r.Z.dispatch({
             type: 'GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS',
             roleId: t,
             roleConnectionConfigurations: s
@@ -82,7 +82,7 @@ async function s(e, t, n) {
 }
 async function c() {
     return (
-        await r.tn.get({
+        await i.tn.get({
             url: o.ANM.APPLICATION_USER_ROLE_CONNECTIONS,
             rejectWithError: !1
         })

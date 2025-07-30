@@ -18,9 +18,9 @@ var n = r(255367),
     S = r(944486),
     x = r(246946),
     b = r(594174),
-    C = r(585483),
-    j = r(63063),
-    v = r(51144),
+    v = r(585483),
+    C = r(63063),
+    j = r(51144),
     O = r(748610),
     E = r(738018),
     R = r(518944),
@@ -80,7 +80,7 @@ function F(e, t) {
         e
     );
 }
-function H(e, t) {
+function W(e, t) {
     if (null == e) return {};
     var r,
         n,
@@ -99,7 +99,7 @@ function H(e, t) {
     }
     return s;
 }
-let W = u()('2015-05-15').local(),
+let H = u()('2015-05-15').local(),
     B = (0, h.Un)({
         createPromise: () => Promise.resolve().then(r.bind(r, 547800)),
         webpackId: 547800
@@ -113,7 +113,7 @@ let W = u()('2015-05-15').local(),
             h = (0, I.s5)(e),
             d = m.Z.getChannel(u),
             p = (null == d ? void 0 : d.isPrivate()) ? _.Z.getNickname(i.id) : null,
-            f = null != (l = null != (s = y.ZP.getNick(h, i.id)) ? s : p) ? l : v.ZP.getName(i),
+            f = null != (l = null != (s = y.ZP.getNick(h, i.id)) ? s : p) ? l : j.ZP.getName(i),
             g = null != (a = null == c ? void 0 : c.getAvatarURL(h, 20)) ? a : i.getAvatarURL(null == d ? void 0 : d.guild_id, 20);
         return [
             (0, n.jsx)(
@@ -137,7 +137,7 @@ let W = u()('2015-05-15').local(),
                 'span',
                 {
                     className: w.displayUsername,
-                    children: v.ZP.getUserTag(i, { identifiable: x.Z.enabled && x.Z.hidePersonalInformation ? 'never' : 'always' })
+                    children: j.ZP.getUserTag(i, { identifiable: x.Z.enabled && x.Z.hidePersonalInformation ? 'never' : 'always' })
                 },
                 'display-username-'.concat(t, '-').concat(i.id)
             )
@@ -239,7 +239,7 @@ let W = u()('2015-05-15').local(),
             },
             component: function (e) {
                 var { onSelect: t, onFocus: r, result: l, showFilter: i, searchContext: o, renderResult: c, group: u } = e,
-                    h = H(e, ['onSelect', 'onFocus', 'result', 'showFilter', 'searchContext', 'renderResult', 'group']);
+                    h = W(e, ['onSelect', 'onFocus', 'result', 'showFilter', 'searchContext', 'renderResult', 'group']);
                 let d = '',
                     f = s
                         .useMemo(() => {
@@ -304,7 +304,7 @@ let W = u()('2015-05-15').local(),
                             'div',
                             F(L({ className: w.searchLearnMore }, e), {
                                 children: (0, n.jsx)(p.eee, {
-                                    href: j.Z.getArticleURL(Z.BhN.USING_SEARCH),
+                                    href: C.Z.getArticleURL(Z.BhN.USING_SEARCH),
                                     title: M.intl.string(M.t.hvVgAQ),
                                     children: (0, n.jsx)(p.idN, {
                                         size: 'md',
@@ -317,7 +317,7 @@ let W = u()('2015-05-15').local(),
             component: function (e) {
                 var t,
                     { result: r, onSelect: s, onFocus: l, showFilter: i, searchContext: o } = e,
-                    c = H(e, ['result', 'onSelect', 'onFocus', 'showFilter', 'searchContext']);
+                    c = W(e, ['result', 'onSelect', 'onFocus', 'showFilter', 'searchContext']);
                 let u = (0, I.Ko)(null != (t = r.token) ? t : '');
                 return (0, n.jsxs)(
                     p.P3F,
@@ -505,7 +505,7 @@ class K extends s.PureComponent {
                     l = 0;
                 null != n.token ? (l = n.token.start) : (null == s ? void 0 : s.currentToken) != null && (l = s.currentToken.end);
                 let a = null != n.token ? n.token.end : l;
-                (C.S.dispatch(Z.CkL.SET_SEARCH_QUERY, {
+                (v.S.dispatch(Z.CkL.SET_SEARCH_QUERY, {
                     query: e,
                     anchor: l,
                     focus: a,
@@ -547,7 +547,7 @@ class K extends s.PureComponent {
                         (0, n.jsx)(B, {
                             onSelect: this.handleDateChange,
                             maxDate: u()().local(),
-                            minDate: W
+                            minDate: H
                         }),
                         (0, n.jsxs)('div', {
                             className: w.datePickerHint,
@@ -571,7 +571,7 @@ class K extends s.PureComponent {
                 this.setSearchQuery(this.state.dateHint, !0);
             }),
             D(this, 'performSearch', (e) => {
-                C.S.dispatch(Z.CkL.PERFORM_SEARCH, null != e ? e : {});
+                v.S.dispatch(Z.CkL.PERFORM_SEARCH, null != e ? e : {});
             }),
             D(this, 'renderAutocompletes', () => {
                 let { selectedIndex: e } = this.state,

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => g });
-var r = n(255367);
+var i = n(255367);
 n(73800);
-var i = n(780384),
+var r = n(780384),
     l = n(481060),
     o = n(410030),
     a = n(600164),
@@ -15,15 +15,15 @@ var i = n(780384),
 function g(e) {
     let { followedChannelWebhooks: t, editedWebhook: n, selectableWebhookChannels: g, errors: f, canNavigate: h } = e,
         x = (0, o.ZP)();
-    return (0, r.jsxs)(l.hjN, {
+    return (0, i.jsxs)(l.hjN, {
         children: [
-            (0, r.jsx)(l.R94, {
+            (0, i.jsx)(l.R94, {
                 type: l.geA.DESCRIPTION,
                 children: u.intl.format(u.t['5u+aV1'], { helpdeskArticle: s.Z.getArticleURL(d.BhN.CHANNEL_FOLLOWING) })
             }),
-            (0, r.jsx)(l.$i$, { className: p.headerDivider }),
+            (0, i.jsx)(l.$i$, { className: p.headerDivider }),
             t.length > 0
-                ? (0, r.jsx)(c.Z, {
+                ? (0, i.jsx)(c.Z, {
                       webhooks: t,
                       editedWebhook: n,
                       selectableWebhookChannels: g,
@@ -31,24 +31,24 @@ function g(e) {
                       canNavigate: h
                   })
                 : (function (e, t) {
-                      let n = (0, i.wj)(e) ? m : b;
-                      return (0, r.jsxs)(a.Z, {
+                      let n = (0, r.wj)(e) ? m : b;
+                      return (0, i.jsxs)(a.Z, {
                           direction: a.Z.Direction.VERTICAL,
                           align: a.Z.Align.CENTER,
                           children: [
-                              (0, r.jsx)('img', {
+                              (0, i.jsx)('img', {
                                   alt: '',
                                   src: n,
                                   className: p.emptyStateImage
                               }),
-                              (0, r.jsx)(l.X6q, {
+                              (0, i.jsx)(l.X6q, {
                                   variant: 'heading-md/semibold',
                                   children: u.intl.string(u.t.gzuVHx)
                               }),
-                              (0, r.jsx)('div', {
+                              (0, i.jsx)('div', {
                                   'data-button-hoisted-classname-wrapper': !0,
                                   className: p.emptyStateButton,
-                                  children: (0, r.jsx)(l.zxk, {
+                                  children: (0, i.jsx)(l.zxk, {
                                       variant: 'primary',
                                       text: u.intl.string(u.t['ZwSt+f']),
                                       onClick: t

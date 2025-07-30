@@ -1,23 +1,23 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => u });
 var i = n(255367),
     r = n(73800),
-    a = n(481060),
-    l = n(493683),
-    o = n(699516),
-    d = n(594174),
-    u = n(933557),
-    c = n(388032);
-function s(e, t) {
-    let s = r.useCallback(() => {
-        let r = (0, u.F6)(e, d.default, o.Z),
-            s = c.intl.formatToPlainString(c.t.hJ5Ap6, { name: r }),
-            f = c.intl.format(c.t.SSIVOj, { name: r });
-        e.isManaged() && ((s = c.intl.formatToPlainString(c.t.hVGjER, { name: r })), (f = c.intl.format(c.t.IK1Qvr, { name: r })));
+    o = n(481060),
+    a = n(493683),
+    l = n(699516),
+    c = n(594174),
+    s = n(933557),
+    f = n(388032);
+function u(e, t) {
+    let u = r.useCallback(() => {
+        let r = (0, s.F6)(e, c.default, l.Z),
+            u = f.intl.formatToPlainString(f.t.hJ5Ap6, { name: r }),
+            d = f.intl.format(f.t.SSIVOj, { name: r });
+        e.isManaged() && ((u = f.intl.formatToPlainString(f.t.hVGjER, { name: r })), (d = f.intl.format(f.t.IK1Qvr, { name: r })));
         let b = function (n) {
             let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            l.Z.closePrivateChannel(e.id, t, i);
+            a.Z.closePrivateChannel(e.id, t, i);
         };
-        (0, a.ZDy)(async () => {
+        (0, o.ZDy)(async () => {
             let { default: e } = await n.e('14604').then(n.bind(n, 960670));
             return (t) =>
                 (0, i.jsx)(
@@ -48,8 +48,8 @@ function s(e, t) {
                         return e;
                     })(
                         {
-                            header: s,
-                            body: f,
+                            header: u,
+                            body: d,
                             onSubmit: b
                         },
                         t
@@ -57,10 +57,10 @@ function s(e, t) {
                 );
         });
     }, [e, t]);
-    return (0, i.jsx)(a.sNh, {
+    return (0, i.jsx)(o.sNh, {
         id: 'leave-channel',
-        label: c.intl.string(c.t['26C4oq']),
-        action: s,
+        label: f.intl.string(f.t['26C4oq']),
+        action: u,
         color: 'danger'
     });
 }

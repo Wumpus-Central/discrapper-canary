@@ -39,7 +39,7 @@ function S(e) {
                         source: I.Zu.NAGBAR,
                         alertType: (0, p.T1)(b)
                     },
-                    { default: t } = await n.e('58175').then(n.bind(n, 664452));
+                    { default: t } = await Promise.all([n.e('58175'), n.e('6584')]).then(n.bind(n, 664452));
                 return (n) => {
                     var r, l;
                     return (0, i.jsx)(

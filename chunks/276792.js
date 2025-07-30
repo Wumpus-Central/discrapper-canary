@@ -65,7 +65,7 @@ function E(e) {
         P = 'AnnouncementModalVariant1_'.concat(i.z[Number(I.dismissKey)]),
         { onClose: j } = C,
         A = null != (y = null == (t = I.button) ? void 0 : t.copy) ? y : g.intl.string(g.t.YScQSE),
-        Z = (null == (n = I.button) ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button';
+        x = (null == (n = I.button) ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button';
     switch (null == (E = I.button) ? void 0 : E.buttonAction) {
         case l.Wc.OPEN_MARKETING_PAGE:
             v = () => {
@@ -102,7 +102,7 @@ function E(e) {
                     }
                 });
     }
-    let x =
+    let Z =
             '' !== I.helpArticleId
                 ? () =>
                       (0, r.jsxs)(r.Fragment, {
@@ -144,7 +144,7 @@ function E(e) {
         header: I.header,
         modalTopExtra: L,
         subHeader: I.subheader,
-        subHeaderExtra: x,
+        subHeaderExtra: Z,
         body: I.body,
         heroArt: w,
         featureCards: I.featureCards.map((e) => ({
@@ -164,7 +164,7 @@ function E(e) {
                 onClick: () => {
                     (u.default.track(f.rMx.CHANGE_LOG_CTA_CLICKED, {
                         change_log_id: P,
-                        cta_type: Z,
+                        cta_type: x,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         target: P
                     }),

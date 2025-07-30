@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(596557),
     j = n(817520),
     A = n(999309),
-    Z = n(408987),
-    x = n(130734),
+    x = n(408987),
+    Z = n(130734),
     w = n(499137),
     L = n(258871),
     R = n(340541),
@@ -379,7 +379,7 @@ class eC extends i.PureComponent {
                 let { guild: t } = this.props;
                 null != t &&
                     (0, m.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('1806'), n.e('71418'), n.e('7654'), n.e('44156'), n.e('7104'), n.e('6850'), n.e('58227'), n.e('54408'), n.e('20087'), n.e('94312'), n.e('87154'), n.e('33213'), n.e('15875')]).then(n.bind(n, 545135));
+                        let { default: e } = await Promise.all([n.e('1806'), n.e('58175'), n.e('71418'), n.e('7654'), n.e('44156'), n.e('99226'), n.e('6850'), n.e('58227'), n.e('54408'), n.e('20087'), n.e('94312'), n.e('87154'), n.e('33213'), n.e('15875')]).then(n.bind(n, 545135));
                         return (n) => (0, r.jsx)(e, eE(eO({}, n), { guild: t }));
                     });
             }),
@@ -397,10 +397,10 @@ class eC extends i.PureComponent {
             }),
             e_(this, 'handleCloseTemplateDirtyTooltip', () => {
                 let { guild: e, showGuildTemplateDirtyTooltip: t } = this.props;
-                null != e && t && Z.Z.hideGuildTemplateDirtyTooltip(e.id);
+                null != e && t && x.Z.hideGuildTemplateDirtyTooltip(e.id);
             }),
             e_(this, 'renderMenuPopout', async () => {
-                let { default: e } = await Promise.all([n.e('87154'), n.e('21443'), n.e('12519')]).then(n.bind(n, 859432));
+                let { default: e } = await Promise.all([n.e('87154'), n.e('42018')]).then(n.bind(n, 859432));
                 return (t) => {
                     let { closePopout: n } = t,
                         { guild: i } = this.props;
@@ -472,7 +472,7 @@ function eS(e) {
     let c = (0, N.Z)(n),
         h = (0, d.e7)([K.Z], () => K.Z.getGuildDimensions(n).scrollTo),
         g = (0, d.e7)([en.Z], () => en.Z.getChannelId()),
-        [m, b, Z] = (0, d.Wu)([ee.Z], () => [ee.Z.can(ep.Plq.MANAGE_GUILD, o), ee.Z.can(ep.Plq.MANAGE_ROLES, o), ee.Z.can(ep.Plq.MANAGE_THREADS, o)]),
+        [m, b, x] = (0, d.Wu)([ee.Z], () => [ee.Z.can(ep.Plq.MANAGE_GUILD, o), ee.Z.can(ep.Plq.MANAGE_ROLES, o), ee.Z.can(ep.Plq.MANAGE_THREADS, o)]),
         L = (0, d.e7)([q.Z], () => q.Z.isUnavailable(n)),
         R = (0, d.e7)([er.default], () => er.default.getCurrentUser()),
         G = (0, V.Ll)(),
@@ -499,9 +499,9 @@ function eS(e) {
         eT = m && (null == o ? void 0 : o.features.has(ep.oNc.DISCOVERABLE)) === !0,
         eP = (0, v.Q)(),
         ej = (m || (null == o ? void 0 : o.premiumTier) === ep.Eu4.NONE) && !el.s.isDisallowPopupsSet() && !eP,
-        eA = (0, d.e7)([x.Z, $.Z], () => null != o && null != R && m && !$.Z.hasLayers() && x.Z.shouldShowGuildTemplateDirtyTooltip(n)),
-        eZ = (0, d.e7)([Y.Z], () => Y.Z.getChannel(a)),
-        { isPopoutOpen: ex } = (0, T.y)(),
+        eA = (0, d.e7)([Z.Z, $.Z], () => null != o && null != R && m && !$.Z.hasLayers() && Z.Z.shouldShowGuildTemplateDirtyTooltip(n)),
+        ex = (0, d.e7)([Y.Z], () => Y.Z.getChannel(a)),
+        { isPopoutOpen: eZ } = (0, T.y)(),
         ew = null != (t = null == o ? void 0 : o.features.has(ep.oNc.COMMUNITY)) && t,
         eL = (0, d.e7)([B.Z], () => !s().isEmpty(B.Z.getThreadsForGuild(n))),
         eR = ei.ZP.isNewUser(R),
@@ -521,7 +521,7 @@ function eS(e) {
         guild: o,
         scrollToChannel: h,
         selectedChannelId: l ? null : a,
-        selectedChannel: eZ,
+        selectedChannel: ex,
         selectedVoiceChannelId: g,
         voiceStates: c,
         rtcConnectedChannelId: eG,
@@ -540,11 +540,11 @@ function eS(e) {
         showRoleSubscriptionUpsell: eS,
         showHubPrivacySettingsTooltip: eN,
         showNewUnreadsBar: ew,
-        showActiveThreadsNotice: Z && null != eE && eE >= 200 && eL,
+        showActiveThreadsNotice: x && null != eE && eE >= 200 && eL,
         showGuildSoundboardPermissionUpsell: eI,
         showMediaChannelUpsell: eM,
         showTierTemplatesUpsell: eU,
-        isHeaderPopoutOpen: ex,
+        isHeaderPopoutOpen: eZ,
         enableStudyGroup: z,
         isGuildHeaderDismissibleTooltipShown: ed,
         canShowCoachMarkAtBottom: ea,

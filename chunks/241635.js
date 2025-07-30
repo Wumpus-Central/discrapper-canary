@@ -1,7 +1,7 @@
 (n.d(t, { Z: () => b }), n(539854));
-var r = n(255367);
+var i = n(255367);
 n(73800);
-var i = n(442837),
+var r = n(442837),
     l = n(481060),
     o = n(749210),
     a = n(240872),
@@ -13,7 +13,7 @@ var i = n(442837),
     m = n(388032);
 function b(e, t) {
     var n;
-    let b = (0, i.e7)([u.Z], () => {
+    let b = (0, r.e7)([u.Z], () => {
             let n = u.Z.getHighestRole(e);
             return !u.Z.isRoleHigher(e, n, t);
         }),
@@ -33,10 +33,10 @@ function b(e, t) {
             j ||
             v ||
             g.push(
-                (0, r.jsx)(
+                (0, i.jsx)(
                     l.kSQ,
                     {
-                        children: (0, r.jsx)(l.sNh, {
+                        children: (0, i.jsx)(l.sNh, {
                             id: 'delete-role',
                             label: m.intl.string(m.t.oyYWHB),
                             color: 'danger',

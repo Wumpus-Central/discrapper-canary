@@ -1,5 +1,5 @@
 (r.d(t, {
-    K: () => W,
+    K: () => H,
     P: () => B
 }),
     r(388685));
@@ -22,9 +22,9 @@ var n = r(255367),
     S = r(294218),
     x = r(373662),
     b = r(695346),
-    C = r(496675),
-    j = r(626135),
-    v = r(585483),
+    v = r(496675),
+    C = r(626135),
+    j = r(585483),
     O = r(70956),
     E = r(324701),
     R = r(575016),
@@ -86,7 +86,7 @@ let F = {
         right: -12
     }
 };
-function H(e) {
+function W(e) {
     let { closePopout: t } = e;
     return (0, n.jsx)(f.VqE, {
         'aria-label': M.intl.string(M.t['2pAkDA']),
@@ -97,12 +97,12 @@ function H(e) {
                     icon: f.plf,
                     title: M.intl.string(M.t['2pAkDA'])
                 }),
-                (0, n.jsx)(W, { closePopout: t })
+                (0, n.jsx)(H, { closePopout: t })
             ]
         })
     });
 }
-function W(e) {
+function H(e) {
     let { closePopout: t } = e,
         r = (0, T.Z)();
     return ((0, _.Z)(
@@ -134,7 +134,7 @@ function B(e) {
         d = s.useCallback(() => {
             (c(!o), o ? null == r || r() : null == t || t());
         }, [r, t, o]);
-    s.useEffect(() => (v.S.subscribe(Z.CkL.TOGGLE_FOR_LATER, d), () => void v.S.unsubscribe(Z.CkL.TOGGLE_FOR_LATER, d)), [d]);
+    s.useEffect(() => (j.S.subscribe(Z.CkL.TOGGLE_FOR_LATER, d), () => void j.S.unsubscribe(Z.CkL.TOGGLE_FOR_LATER, d)), [d]);
     let g = (0, p.e7)([I.Z], () => I.Z.hasOverdueReminder(), []);
     return (0, n.jsx)(f.yRy, {
         targetElementRef: u,
@@ -145,7 +145,7 @@ function B(e) {
         shouldShow: o,
         onRequestClose: h,
         renderPopout: function () {
-            return (0, n.jsx)(H, { closePopout: h });
+            return (0, n.jsx)(W, { closePopout: h });
         },
         ignoreModalClicks: !0,
         children: (e, t) => {
@@ -231,7 +231,7 @@ function Q(e) {
                 var n;
                 (await (0, R.fC)(t, i),
                     e.shiftKey || r(),
-                    j.default.track(Z.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
+                    C.default.track(Z.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
                         channel_id: t.saveData.channelId,
                         message_id: t.saveData.messageId,
                         message_author_id: null == (n = t.message) ? void 0 : n.author.id,
@@ -241,7 +241,7 @@ function Q(e) {
             },
             [r, t, i]
         ),
-        c = (0, p.e7)([C.Z], () => !!((null == i ? void 0 : i.type) === Z.d4z.UNKNOWN || (null == i ? void 0 : i.isPrivate())) || C.Z.can(Z.Plq.VIEW_CHANNEL, i));
+        c = (0, p.e7)([v.Z], () => !!((null == i ? void 0 : i.type) === Z.d4z.UNKNOWN || (null == i ? void 0 : i.isPrivate())) || v.Z.can(Z.Plq.VIEW_CHANNEL, i));
     return null != i && null != t.message && c
         ? (0, n.jsxs)('div', {
               className: w.messageContainer,

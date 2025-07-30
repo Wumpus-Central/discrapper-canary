@@ -69,7 +69,7 @@ async function N(e, t, n) {
         o,
         s,
         c,
-        { client_id: u, response_type: y = 'code', redirect_uri: I, code_challenge: C, code_challenge_method: S, state: N, nonce: T, scope: P, permissions: j, guild_id: A, channel_id: Z, prompt: x, disable_guild_select: w, integration_type: L, pid: R, signal: D, isSocketRpcPrivateScope: k } = e;
+        { client_id: u, response_type: y = 'code', redirect_uri: I, code_challenge: C, code_challenge_method: S, state: N, nonce: T, scope: P, permissions: j, guild_id: A, channel_id: x, prompt: Z, disable_guild_select: w, integration_type: L, pid: R, signal: D, isSocketRpcPrivateScope: k } = e;
     if (null == D ? void 0 : D.aborted) throw new E.Z({ errorCode: v.lTL.UNKNOWN_ERROR }, 'Request aborted');
     if (null == u) throw new E.Z({ errorCode: v.lTL.OAUTH2_ERROR }, 'No Client ID provided');
     if (!k && null != I) throw new E.Z({ errorCode: v.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
@@ -103,7 +103,7 @@ async function N(e, t, n) {
         let { body: e } = t;
         throw new E.Z({ errorCode: v.lTL.OAUTH2_ERROR }, 'OAuth2 Authorization Error: '.concat((null == e ? void 0 : e.message) || 'Unknown Error'));
     }
-    if (x === f.s.NONE && null != o && o.authorized && c)
+    if (Z === f.s.NONE && null != o && o.authorized && c)
         try {
             return (
                 await (0, h.Iq)({
@@ -123,7 +123,7 @@ async function N(e, t, n) {
             let { body: e } = t;
             throw new E.Z({ errorCode: v.lTL.OAUTH2_ERROR }, 'OAuth2 Authorize Error: '.concat((null == e ? void 0 : e.message) || 'Unknown Error'));
         }
-    null == n || n(o.application, Z, R);
+    null == n || n(o.application, x, R);
     let U = O.Hn;
     try {
         U = a.vB(null != j ? j : 0);
@@ -141,8 +141,8 @@ async function N(e, t, n) {
             codeChallengeMethod: S,
             state: N,
             guildId: A,
-            channelId: Z,
-            prompt: x,
+            channelId: x,
+            prompt: Z,
             disableGuildSelect: w,
             disclosures: s,
             integrationType: l,

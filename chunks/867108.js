@@ -1,7 +1,7 @@
 n.d(t, { Z: () => p });
-var r = n(255367);
+var i = n(255367);
 n(73800);
-var i = n(442837),
+var r = n(442837),
     l = n(481060),
     o = n(434404),
     a = n(962086),
@@ -11,8 +11,8 @@ var i = n(442837),
     u = n(388032);
 function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.pNK.ROLES;
-    return (0, i.e7)([c.Z], () => c.Z.canImpersonateRole(e, t))
-        ? (0, r.jsx)(
+    return (0, r.e7)([c.Z], () => c.Z.canImpersonateRole(e, t))
+        ? (0, i.jsx)(
               l.sNh,
               {
                   id: 'view-as-role',

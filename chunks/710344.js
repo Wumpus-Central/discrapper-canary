@@ -1,30 +1,30 @@
-(n.d(t, { Z: () => i }), n(388685));
-var r = n(73800);
-function i(e, t) {
-    let [n, i] = r.useState(null),
-        l = r.useCallback((e) => {
-            i(e);
+(n.d(t, { Z: () => r }), n(388685));
+var i = n(73800);
+function r(e, t) {
+    let [n, r] = i.useState(null),
+        l = i.useCallback((e) => {
+            r(e);
         }, []),
-        o = r.useCallback(() => {
-            i(null);
+        o = i.useCallback(() => {
+            r(null);
         }, []),
-        a = r.useCallback(
-            (r) => {
+        a = i.useCallback(
+            (i) => {
                 o();
-                let i = e.find((e) => {
+                let r = e.find((e) => {
                         let { id: t } = e;
                         return n === t;
                     }),
                     l = e.find((e) => {
                         let { id: t } = e;
-                        return r === t;
+                        return i === t;
                     });
-                if (null == i || null == l || i === l) return;
+                if (null == r || null == l || r === l) return;
                 let a = [...e],
-                    s = a.indexOf(i),
+                    s = a.indexOf(r),
                     c = a.indexOf(l),
                     d = +(c - s > 0);
-                (a.splice(s, 1), (c = a.indexOf(l)), a.splice(c + d, 0, i), t(a));
+                (a.splice(s, 1), (c = a.indexOf(l)), a.splice(c + d, 0, r), t(a));
             },
             [e, n, o, t]
         );

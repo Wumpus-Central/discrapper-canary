@@ -707,6 +707,18 @@ let z = {
             let { acquireGlobalLock: t } = this.getDiscordUtils();
             if (null != t) return t(e);
         },
+        SetServiceChannel(e) {
+            let { setServiceChannel: t } = this.getDiscordUtils();
+            null != t && t(e);
+        },
+        IsServiceHelperInstalled() {
+            let { isServiceHelperInstalled: e } = this.getDiscordUtils();
+            if (null != e) return e();
+        },
+        InputEventServiceSetAllowed(e) {
+            let { inputEventServiceSetAllowed: t } = this.getDiscordUtils();
+            if (null != t) return t(e);
+        },
         isModuleVersionAtLeast(e, t) {
             var n, r, i;
             let a = [...(null != C ? C : [0, 0, 0])];

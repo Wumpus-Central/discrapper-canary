@@ -45,8 +45,8 @@ let S = Object.freeze({
 function j(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: l } = e,
         { guildIds: s, loading: h, searchResultsQuery: I, loadMore: j, searchCategoryId: A } = (0, b.f)({ loadId: t }),
-        Z = 0 === s.length && !h,
-        x = i.useContext(d.AnalyticsContext),
+        x = 0 === s.length && !h,
+        Z = i.useContext(d.AnalyticsContext),
         [w, L] = i.useState((0, m.PM)()),
         [R, D] = i.useState(!0),
         k = i.useRef(R),
@@ -55,9 +55,9 @@ function j(e) {
         V = i.useRef(null),
         B = i.useCallback(
             (e) => {
-                if (null != e && !Z && !h) 336 * (s.length / M) <= e.height && j();
+                if (null != e && !x && !h) 336 * (s.length / M) <= e.height && j();
             },
-            [Z, h, s.length, M, j]
+            [x, h, s.length, M, j]
         ),
         H = i.useCallback(
             (e) => {
@@ -81,10 +81,10 @@ function j(e) {
                 searchId: w,
                 query: I,
                 guildResults: s.map(f.Z.getGuild).filter(p.lm),
-                analyticsContext: x,
+                analyticsContext: Z,
                 categoryId: A
             });
-        }, [x, s, t, A, w, I]));
+        }, [Z, s, t, A, w, I]));
     let z = i.useCallback((e) => n(e, A), [n, A]),
         W = i.useMemo(() => (h ? [s.length, 0] : [s.length]), [s.length, h]),
         Y = i.useCallback(
@@ -105,7 +105,7 @@ function j(e) {
                                             className: C.headingFilters,
                                             children: [(0, r.jsx)(O.Z, { loadId: t }), (0, r.jsx)(y.Z, { loadId: t })]
                                         }),
-                                    Z && (0, r.jsx)(E.Z, { loadId: t })
+                                    x && (0, r.jsx)(E.Z, { loadId: t })
                                 ]
                             },
                             i
@@ -114,21 +114,21 @@ function j(e) {
                         return (0, r.jsx)(c.$jN, { className: a()(C.spinner, { [C.spinnerWithSidebar]: R }) }, i);
                 }
             },
-            [Z, R, t]
+            [x, R, t]
         ),
         K = i.useCallback(
             (e) => {
                 switch (e) {
                     case 0:
                         let t = R ? 16 : 50;
-                        return Z ? t + 448 : t;
+                        return x ? t + 448 : t;
                     case 1:
                         return 120;
                     default:
                         throw Error('[getSectionHeight] Failed for section: '.concat(e));
                 }
             },
-            [Z, R]
+            [x, R]
         ),
         q = i.useCallback(
             (e, t) => {

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => p });
-var r = n(255367),
-    i = n(73800),
+var i = n(255367),
+    r = n(73800),
     l = n(481060),
     o = n(139387),
     a = n(726542),
@@ -11,27 +11,27 @@ var r = n(255367),
 function p(e) {
     let { integrations: t, editedIntegration: n, guild: p, platformType: m, labelText: b, descriptionText: g, helpText: f, canNavigate: h } = e,
         x = a.Z.get(m),
-        j = i.useCallback(
+        j = r.useCallback(
             async (e) => {
                 h() && (await s.Z.enableIntegration(p.id, e.type, e.id), o.Z.startEditingIntegration(e.id));
             },
             [h, p.id]
         ),
-        v = i.useCallback(
+        v = r.useCallback(
             (e) => {
                 h() && (e.id === (null == n ? void 0 : n.id) && o.Z.stopEditingIntegration(), s.Z.disableIntegration(p.id, e.id));
             },
             [h, n, p.id]
         ),
-        O = i.useCallback(
+        O = r.useCallback(
             (e) => {
                 h() && (e === (null == n ? void 0 : n.id) ? o.Z.stopEditingIntegration() : o.Z.startEditingIntegration(e));
             },
             [h, n]
         );
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, r.jsx)(c.Z, {
+            (0, i.jsx)(c.Z, {
                 name: b,
                 icon: null == x ? void 0 : x.icon.whiteSVG,
                 iconBackgroundColor: null == x ? void 0 : x.color,
@@ -39,9 +39,9 @@ function p(e) {
                 description: g,
                 isHeader: !0
             }),
-            (0, r.jsx)(l.$i$, { className: u.headerDivider }),
+            (0, i.jsx)(l.$i$, { className: u.headerDivider }),
             t.map((e) =>
-                (0, r.jsx)(
+                (0, i.jsx)(
                     d.Z,
                     {
                         integration: e,
@@ -55,7 +55,7 @@ function p(e) {
                     e.id
                 )
             ),
-            (0, r.jsx)(l.Text, {
+            (0, i.jsx)(l.Text, {
                 className: u.helpText,
                 color: 'text-muted',
                 variant: 'text-sm/normal',

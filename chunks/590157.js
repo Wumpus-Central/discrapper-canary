@@ -1,6 +1,6 @@
 n.d(t, { Z: () => g });
-var r = n(255367),
-    i = n(73800),
+var i = n(255367),
+    r = n(73800),
     l = n(442837),
     o = n(481060),
     a = n(366598),
@@ -14,31 +14,31 @@ var r = n(255367),
 function g(e) {
     let { application: t, canNavigate: n, guildId: d } = e,
         p = (0, l.e7)([c.Z], () => c.Z.isUnavailable());
-    return (i.useEffect(() => (s.I4(t.id), s.kZ), [t.id]),
-    i.useEffect(() => {
+    return (r.useEffect(() => (s.I4(t.id), s.kZ), [t.id]),
+    r.useEffect(() => {
         (s.gq(t.id, d, t.id), s.Sn(d, t.id));
     }, [t.id, d]),
     p)
         ? null
-        : (0, r.jsxs)(i.Fragment, {
+        : (0, i.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(a.Z, {
-                      icon: (0, r.jsx)(o.SsZ, {
+                  (0, i.jsx)(a.Z, {
+                      icon: (0, i.jsx)(o.SsZ, {
                           size: 'md',
                           color: 'currentColor'
                       }),
                       title: m.intl.string(m.t.RGoJND)
                   }),
-                  (0, r.jsx)(o.Text, {
+                  (0, i.jsx)(o.Text, {
                       color: 'text-muted',
                       variant: 'text-sm/normal',
                       children: m.intl.string(m.t.sCkD3d)
                   }),
-                  (0, r.jsx)(f, {
+                  (0, i.jsx)(f, {
                       guildId: d,
                       applicationId: t.id
                   }),
-                  (0, r.jsx)(u.Z, {
+                  (0, i.jsx)(u.Z, {
                       applicationIcon: t.icon,
                       applicationName: t.name,
                       canNavigate: n,
@@ -49,15 +49,15 @@ function g(e) {
 }
 function f(e) {
     let { applicationId: t, guildId: n } = e,
-        { originalApplicationPermissions: i, editedTargetPermissions: l, selectedPermissionCount: o } = (0, d.Z)(n, t);
-    return (0, r.jsx)('div', {
+        { originalApplicationPermissions: r, editedTargetPermissions: l, selectedPermissionCount: o } = (0, d.Z)(n, t);
+    return (0, i.jsx)('div', {
         className: b.applicationPermissions,
-        children: (0, r.jsx)(p.Z, {
+        children: (0, i.jsx)(p.Z, {
             applicationId: t,
             guildId: n,
             inModal: !1,
             editedTargetPermissions: l,
-            originalApplicationPermissions: i,
+            originalApplicationPermissions: r,
             selectedPermissionCount: o
         })
     });

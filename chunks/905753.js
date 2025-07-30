@@ -1,4 +1,4 @@
-let r, i, l;
+let i, r, l;
 (n.d(t, { Z: () => h }), n(467055), n(388685));
 var o,
     a = n(442837),
@@ -22,7 +22,7 @@ let p = {},
     m = {},
     b = !1;
 function g() {
-    ((r = void 0), (p = {}), (m = {}), (i = void 0), (l = void 0), (b = !1));
+    ((i = void 0), (p = {}), (m = {}), (r = void 0), (l = void 0), (b = !1));
 }
 class f extends (o = a.ZP.Store) {
     getApplicationPermissions() {
@@ -35,7 +35,7 @@ class f extends (o = a.ZP.Store) {
         return null == m ? void 0 : m[e];
     }
     getEditedApplication() {
-        return i;
+        return r;
     }
     getEditedCommand() {
         return l;
@@ -44,7 +44,7 @@ class f extends (o = a.ZP.Store) {
         return b;
     }
     getApplicationId() {
-        return r;
+        return i;
     }
 }
 u(f, 'displayName', 'IntegrationPermissionStore');
@@ -52,19 +52,19 @@ let h = new f(s.Z, {
     LOGOUT: g,
     INTEGRATION_PERMISSION_SETTINGS_APPLICATION_PERMISSIONS_FETCH_FAILURE: function (e) {
         let { applicationId: t } = e;
-        if (t !== r) return !1;
+        if (t !== i) return !1;
         b = !0;
     },
     INTEGRATION_PERMISSION_SETTINGS_CLEAR: g,
     INTEGRATION_PERMISSION_SETTINGS_INIT: function (e) {
         let { applicationId: t } = e;
-        (g(), (r = t));
+        (g(), (i = t));
     },
     INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE: function (e) {
         var t, n;
-        let { applicationId: i, commandId: l, permissions: o } = e;
-        if (i !== r) return !1;
-        if (l === r) {
+        let { applicationId: r, commandId: l, permissions: o } = e;
+        if (r !== i) return !1;
+        if (l === i) {
             p = (0, d.tk)(o);
             return;
         }
@@ -74,14 +74,14 @@ let h = new f(s.Z, {
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                        i = Object.keys(n);
                     ('function' == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
+                        (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
                         )),
-                        r.forEach(function (t) {
+                        i.forEach(function (t) {
                             u(e, t, n[t]);
                         }));
                 }
@@ -93,8 +93,8 @@ let h = new f(s.Z, {
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
+                          var i = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, i);
                       }
                       return n;
                   })(Object(n)).forEach(function (e) {
@@ -104,9 +104,9 @@ let h = new f(s.Z, {
     },
     INTEGRATION_PERMISSION_SETTINGS_EDIT: function (e) {
         let { applicationId: t, commandId: n, permissions: o } = e;
-        if (t !== r) return !1;
-        n === r
-            ? (i = o)
+        if (t !== i) return !1;
+        n === i
+            ? (r = o)
             : (l = {
                   commandId: n,
                   permissions: o
@@ -114,20 +114,20 @@ let h = new f(s.Z, {
     },
     INTEGRATION_PERMISSION_SETTINGS_RESET: function (e) {
         let { commandId: t } = e;
-        null == t ? (i = void 0) : (l = void 0);
+        null == t ? (r = void 0) : (l = void 0);
     },
     INTEGRATION_PERMISSION_SETTINGS_COMMANDS_FETCH_FAILURE: function (e) {
         let { applicationId: t } = e;
-        if (t !== r) return !1;
+        if (t !== i) return !1;
         b = !0;
     },
     INTEGRATION_PERMISSION_SETTINGS_COMMANDS_FETCH_SUCCESS: function (e) {
-        let { applicationId: t, commands: n, permissions: i } = e;
-        if (t !== r) return !1;
-        let l = Object.fromEntries(i.map((e) => [e.id, e.permissions])),
+        let { applicationId: t, commands: n, permissions: r } = e;
+        if (t !== i) return !1;
+        let l = Object.fromEntries(r.map((e) => [e.id, e.permissions])),
             o = {};
         for (let e of n)
-            if (e.application_id === r) {
+            if (e.application_id === i) {
                 let t = (0, c.Z8)({
                         rootCommand: e,
                         command: e,

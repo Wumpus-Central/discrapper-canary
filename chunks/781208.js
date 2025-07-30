@@ -1,12 +1,12 @@
-t.d(n, {
-    $l: () => a,
+n.d(t, {
+    $l: () => c,
     RI: () => i,
-    Ud: () => s
+    Ud: () => l
 });
-var r = t(388032);
+var r = n(388032);
 let i = 'https://discord.com/community/securing-your-server',
-    s = ['MESSAGE_SPAM', 'DM_SPAM', 'MENTION_SPAM', 'SUSPICIOUS_USERS', 'SETTINGS_SPAM'],
-    a = (e) => {
+    l = ['MESSAGE_SPAM', 'DM_SPAM', 'MENTION_SPAM', 'SUSPICIOUS_USERS', 'SETTINGS_SPAM'],
+    c = (e) => {
         switch (e) {
             case 'DM_SPAM':
                 return r.intl.string(r.t['9CYNmZ']);

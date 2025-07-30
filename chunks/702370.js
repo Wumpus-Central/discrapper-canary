@@ -15,8 +15,8 @@ var r = n(255367),
     v = n(809206),
     P = n(727637),
     b = n(410030),
-    x = n(100527),
-    g = n(906732),
+    g = n(100527),
+    x = n(906732),
     j = n(570908),
     C = n(786761),
     _ = n(3148),
@@ -69,8 +69,8 @@ var r = n(255367),
     ev = n(22267),
     eP = n(332246),
     eb = n(58201),
-    ex = n(794324),
-    eg = n(361110),
+    eg = n(794324),
+    ex = n(361110),
     ej = n(956472),
     eC = n(832149),
     e_ = n(215023),
@@ -240,10 +240,10 @@ let eN = (e) => {
     },
     eA = (e) => {
         let t,
-            { product: n, user: a, category: s, shouldCheckoutWithOrbs: c, onClose: m, returnRef: P, previewingVariantIndexProps: x, selectedVariantIndex: j, tab: C } = e,
-            { analyticsLocations: _ } = (0, g.ZP)(),
+            { product: n, user: a, category: s, shouldCheckoutWithOrbs: c, onClose: m, returnRef: P, previewingVariantIndexProps: g, selectedVariantIndex: j, tab: C } = e,
+            { analyticsLocations: _ } = (0, x.ZP)(),
             w = U.ZP.canUseCollectibles(a),
-            { previewingVariantIndex: O } = x,
+            { previewingVariantIndex: O } = g,
             I = (0, eP.N)(n, O),
             T = (0, eb.W)(n, j);
         o()(null != T, 'Selected product should not be null');
@@ -268,8 +268,8 @@ let eN = (e) => {
                 onSuccess: m
             }),
             ev = (0, V.hv)('CollectiblesProductPreviewInfo'),
-            ex = (0, Y.T)(T),
-            { enabled: eg } = (0, Z.WX)({ location: 'collectibles_shop_product_details_modal' }),
+            eg = (0, Y.T)(T),
+            { enabled: ex } = (0, Z.WX)({ location: 'collectibles_shop_product_details_modal' }),
             {
                 checkoutEligiblePrices: eN,
                 isOrbExclusive: ek,
@@ -348,7 +348,7 @@ let eN = (e) => {
             eD = (e, t) => {
                 let n = !et && !ec && !u.tq && !ek && D,
                     i = (0, W.x6)(T) ? ey.intl.string(ey.t.V1AWw8) : T.type === d.Z.PROFILE_EFFECT ? ey.intl.string(ey.t.kAeDcH) : T.type === d.Z.NAMEPLATE ? ey.intl.string(ey.t.H3vhqa) : ey.intl.string(ey.t.AQ0Ven),
-                    a = eg ? ey.intl.formatToPlainString(ey.t['cNSL/v'], { price: (0, F.T4)(e.amount, e.currency) }) : i;
+                    a = ex ? ey.intl.formatToPlainString(ey.t['cNSL/v'], { price: (0, F.T4)(e.amount, e.currency) }) : i;
                 return (0, r.jsxs)('div', {
                     className: eE.checkoutButtonsRow,
                     children: [
@@ -395,7 +395,7 @@ let eN = (e) => {
                                 (0, r.jsx)(h.X6q, {
                                     variant: 'heading-xl/extrabold',
                                     className: eE.headingWithItemTypePill,
-                                    children: ex
+                                    children: eg
                                 }),
                                 (0, r.jsx)(h.Text, {
                                     variant: 'text-sm/normal',
@@ -413,7 +413,7 @@ let eN = (e) => {
                                             className: eE.priceTag,
                                             children: ey.intl.string(ey.t.rt69oq)
                                         })
-                                      : eg
+                                      : ex
                                         ? (0, r.jsx)(ef.a, {
                                               prices: eN,
                                               product: T,
@@ -442,7 +442,7 @@ let eN = (e) => {
                             children: (0, r.jsx)(ep.P, {
                                 selectedVariantIndex: j,
                                 variantGroupProduct: n,
-                                previewingVariantIndexProps: x,
+                                previewingVariantIndexProps: g,
                                 className: eE.variantsSwitch
                             })
                         }),
@@ -712,16 +712,16 @@ let eN = (e) => {
     eF = (e) => {
         let { transitionState: t, onClose: n, product: a, category: l, returnRef: s, analyticsSource: c, analyticsLocations: u, shouldCheckoutWithOrbs: p, tab: v } = e,
             P = (0, f.e7)([B.default], () => B.default.getCurrentUser()),
-            b = (0, eg.f)(a),
+            b = (0, ex.f)(a),
             { previewingVariantIndex: j } = b,
             C = (0, f.e7)([z.Z], () => z.Z.purchases),
             _ = (0, G.o)(a, C),
             w = (0, eP.N)(a, j),
             O = (0, eb.W)(a, _);
         o()(null != O, 'Selected product should not be null');
-        let { analyticsLocations: I } = (0, g.ZP)([...u, x.Z.COLLECTIBLES_SHOP_DETAILS_MODAL]);
+        let { analyticsLocations: I } = (0, x.ZP)([...u, g.Z.COLLECTIBLES_SHOP_DETAILS_MODAL]);
         (0, en.u9)(O.skuId);
-        let { pdpBackground: y, logo: E } = (0, ex.OR)(l, a);
+        let { pdpBackground: y, logo: E } = (0, eg.OR)(l, a);
         i.useEffect(() => {
             null != P && (0, k.Z)(P.id, P.getAvatarURL(void 0, 80));
         }, [P]);
@@ -740,9 +740,10 @@ let eN = (e) => {
             N = t === h.Dvm.EXITING;
         if (null == P) return null;
         let Z = (0, e_.ZS)(l.skuId);
-        return (0, r.jsx)(g.Gt, {
+        return (0, r.jsx)(x.Gt, {
             value: I,
             children: (0, r.jsx)(h.Y0X, {
+                'data-migration-pending': !0,
                 hideShadow: !0,
                 className: eE.modalRoot,
                 returnRef: s,
@@ -750,6 +751,7 @@ let eN = (e) => {
                 size: h.CgR.DYNAMIC,
                 parentComponent: 'CollectiblesShopProductDetailsModal',
                 children: (0, r.jsxs)(h.hzk, {
+                    'data-migration-pending': !0,
                     className: eE.modalContent,
                     children: [
                         (0, r.jsx)(eA, {

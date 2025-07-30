@@ -1,55 +1,54 @@
-n.d(t, { J: () => o });
-var r = n(255367);
+n.d(t, { J: () => l });
+var i = n(255367);
 n(73800);
-var c = n(481060);
-function o(e) {
-    (0, c.ZDy)(async () => {
+var r = n(481060);
+function l(e) {
+    (0, r.ZDy)(async () => {
         let { default: t } = await n.e('9354').then(n.bind(n, 461533));
         return (n) => {
-            var c, o;
-            return (0, r.jsx)(
+            var r, l;
+            return (0, i.jsx)(
                 t,
-                ((c = (function (e) {
+                ((r = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
+                            i = Object.keys(n);
                         ('function' == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
+                            (i = i.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 })
                             )),
-                            r.forEach(function (t) {
-                                var r;
-                                ((r = n[t]),
+                            i.forEach(function (t) {
+                                var i;
+                                ((i = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: r,
+                                              value: i,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = r));
+                                        : (e[t] = i));
                             }));
                     }
                     return e;
                 })({}, n)),
-                (o = o = { guildId: e }),
+                (l = l = { guildId: e }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(o))
+                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
+                              var i = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, i);
                           }
                           return n;
-                      })(Object(o)).forEach(function (e) {
-                          Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(o, e));
+                      })(Object(l)).forEach(function (e) {
+                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                       }),
-                c)
+                r)
             );
         };
     });
 }
-n(558511);

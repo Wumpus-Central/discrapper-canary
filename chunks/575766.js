@@ -1,12 +1,12 @@
-n.d(t, { n: () => i });
-var r = n(73800),
-    l = n(941028);
-function i(e) {
-    r.useEffect(
+n.d(t, { n: () => a });
+var l = n(73800),
+    r = n(941028);
+function a(e) {
+    l.useEffect(
         () => (
-            l.k$(e),
+            r.k$(e),
             () => {
-                l.kr(e);
+                r.kr(e);
             }
         ),
         [e]

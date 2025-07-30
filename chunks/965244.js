@@ -1,77 +1,77 @@
-n.d(t, { Z: () => b });
-var r = n(255367);
-n(73800);
-var i = n(442837),
-    o = n(481060),
-    c = n(666657),
-    l = n(533244),
-    a = n(487419),
-    u = n(430824),
-    s = n(981631),
-    f = n(388032);
-function b(e, t) {
-    let b = t === s.IlC.POPOUT,
-        d = (0, i.e7)([u.Z], () => u.Z.getGuild(e), [e]),
-        O = (0, i.e7)([a.Z], () => (null != d ? a.Z.getGuildIncident(d.id) : null));
-    return b
+r.d(t, { Z: () => f });
+var n = r(255367);
+r(73800);
+var o = r(442837),
+    c = r(481060),
+    i = r(666657),
+    a = r(533244),
+    l = r(487419),
+    u = r(430824),
+    b = r(981631),
+    s = r(388032);
+function f(e, t) {
+    let f = t === b.IlC.POPOUT,
+        O = (0, o.e7)([u.Z], () => u.Z.getGuild(e), [e]),
+        p = (0, o.e7)([l.Z], () => (null != O ? l.Z.getGuildIncident(O.id) : null));
+    return f
         ? null
-        : (0, r.jsx)(o.sNh, {
+        : (0, n.jsx)(c.sNh, {
               id: 'nav-security-actions',
-              label: f.intl.string(f.t.UgXhdn),
+              label: s.intl.string(s.t.UgXhdn),
               action: () => {
                   let t = {
-                      source: c.Zu.MESSAGE,
-                      alertType: (0, l.T1)(O)
+                      source: i.Zu.MESSAGE,
+                      alertType: (0, a.T1)(p)
                   };
-                  (0, o.ZDy)(async () => {
-                      let { default: i } = await n.e('61536').then(n.bind(n, 664452));
-                      return (n) => {
-                          var o, c;
-                          return (0, r.jsx)(
-                              i,
-                              ((o = (function (e) {
+                  (0, c.ZDy)(async () => {
+                      let { default: o } = await Promise.all([r.e('58175'), r.e('6584')]).then(r.bind(r, 664452));
+                      return (r) => {
+                          var c, i;
+                          return (0, n.jsx)(
+                              o,
+                              ((c = (function (e) {
                                   for (var t = 1; t < arguments.length; t++) {
-                                      var n = null != arguments[t] ? arguments[t] : {},
-                                          r = Object.keys(n);
+                                      var r = null != arguments[t] ? arguments[t] : {},
+                                          n = Object.keys(r);
                                       ('function' == typeof Object.getOwnPropertySymbols &&
-                                          (r = r.concat(
-                                              Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                          (n = n.concat(
+                                              Object.getOwnPropertySymbols(r).filter(function (e) {
+                                                  return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                               })
                                           )),
-                                          r.forEach(function (t) {
-                                              var r;
-                                              ((r = n[t]),
+                                          n.forEach(function (t) {
+                                              var n;
+                                              ((n = r[t]),
                                                   t in e
                                                       ? Object.defineProperty(e, t, {
-                                                            value: r,
+                                                            value: n,
                                                             enumerable: !0,
                                                             configurable: !0,
                                                             writable: !0
                                                         })
-                                                      : (e[t] = r));
+                                                      : (e[t] = n));
                                           }));
                                   }
                                   return e;
-                              })({}, n)),
-                              (c = c =
+                              })({}, r)),
+                              (i = i =
                                   {
                                       guildId: e,
                                       analyticsData: t
                                   }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(o, Object.getOwnPropertyDescriptors(c))
+                                  ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(i))
                                   : (function (e, t) {
-                                        var n = Object.keys(e);
+                                        var r = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
-                                            var r = Object.getOwnPropertySymbols(e);
-                                            n.push.apply(n, r);
+                                            var n = Object.getOwnPropertySymbols(e);
+                                            r.push.apply(r, n);
                                         }
-                                        return n;
-                                    })(Object(c)).forEach(function (e) {
-                                        Object.defineProperty(o, e, Object.getOwnPropertyDescriptor(c, e));
+                                        return r;
+                                    })(Object(i)).forEach(function (e) {
+                                        Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(i, e));
                                     }),
-                              o)
+                              c)
                           );
                       };
                   });

@@ -27,7 +27,7 @@ var r = n(255367),
     P = n(388032),
     j = n(370168);
 let A = 15 * O.Z.Millis.MINUTE,
-    Z = (0, S.Z)(function (e) {
+    x = (0, S.Z)(function (e) {
         let { party: t, onUserContextMenu: n, onChannelContextMenu: l, quest: a } = e,
             o = i.useRef(null),
             c = (0, r.jsx)(v.Z, {
@@ -131,7 +131,7 @@ let A = 15 * O.Z.Millis.MINUTE,
               })
             : null;
     }),
-    x = a().throttle(() => f._(), 300000);
+    Z = a().throttle(() => f._(), 300000);
 function w() {
     let {
             nowPlayingCards: e,
@@ -149,7 +149,7 @@ function w() {
         o = (0, c.e7)([h.Z], () => h.Z.quests);
     (i.useEffect(() => (d.Z.wait(() => E.L()), () => d.Z.wait(() => E.v())), [null == a ? void 0 : a.id]),
         i.useEffect(() => {
-            n && !l && x();
+            n && !l && Z();
         }, [n, l]));
     let s = i.useMemo(() => {
             let t = new Map(),
@@ -171,7 +171,7 @@ function w() {
                   ? e.map((e) => {
                         let { party: t } = e;
                         return (0, r.jsx)(
-                            Z,
+                            x,
                             {
                                 party: t,
                                 quest: s.get(t.id)

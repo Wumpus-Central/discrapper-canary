@@ -1,5 +1,5 @@
 let r, i;
-(n.d(t, { Z: () => x }), n(49124), n(388685), n(35282), n(65234), n(111804), n(490233), n(97749), n(539854), n(415506));
+(n.d(t, { Z: () => Z }), n(49124), n(388685), n(35282), n(65234), n(111804), n(490233), n(97749), n(539854), n(415506));
 var l = n(836560),
     a = n(392711),
     o = n.n(a),
@@ -132,7 +132,7 @@ class A extends g.Z {
         ((this._sendCallback = e), (this._closeCallback = t));
     }
 }
-class Z extends l.EventEmitter {
+class x extends l.EventEmitter {
     handleRequest(e, t) {
         let [n, r] = S(e.url).split('?'),
             i = S(e.method);
@@ -218,4 +218,4 @@ class Z extends l.EventEmitter {
         new y.ws.Server(n).on('connection', (e) => this.handleConnection(e));
     }
 }
-let x = new Z();
+let Z = new x();

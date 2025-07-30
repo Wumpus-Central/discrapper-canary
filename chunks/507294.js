@@ -1,6 +1,6 @@
 (n.d(t, {
-    default: () => x,
-    g: () => Z
+    default: () => Z,
+    g: () => x
 }),
     n(388685),
     n(472816),
@@ -58,7 +58,7 @@ function A(e) {
     }
     return e;
 }
-function Z(e, t) {
+function x(e, t) {
     (0, u.ZDy)(async () => {
         let { default: i } = await Promise.all([n.e('82412'), n.e('80993')]).then(n.bind(n, 107807));
         return (n) =>
@@ -74,8 +74,8 @@ function Z(e, t) {
             );
     });
 }
-let x = function (e) {
-    let { guildId: t, transitionState: l, onClose: x } = e,
+let Z = function (e) {
+    let { guildId: t, transitionState: l, onClose: Z } = e,
         w = (0, s.e7)([y.Z], () => y.Z.getSortedRoles(t)),
         L = (0, s.e7)([O.default], () => O.default.getId()),
         R = (0, s.e7)([E.ZP], () => E.ZP.getMember(t, L)),
@@ -128,7 +128,7 @@ let x = function (e) {
                             })
                         ]
                     }),
-                    (0, r.jsx)(u.olH, { onClick: x })
+                    (0, r.jsx)(u.olH, { onClick: Z })
                 ]
             }),
             (0, r.jsxs)(u.hzk, {
@@ -178,7 +178,7 @@ let x = function (e) {
                                 u.P3F,
                                 {
                                     className: a()(P.verifiedRole, l ? P.verifiedRoleHasRole : null),
-                                    onClick: l ? void 0 : () => Z(e, t),
+                                    onClick: l ? void 0 : () => x(e, t),
                                     onContextMenu: l
                                         ? (i) => {
                                               var l;

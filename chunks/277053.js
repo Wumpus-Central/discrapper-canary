@@ -1,5 +1,5 @@
 let r, i;
-(n.d(t, { Z: () => x }), n(388685));
+(n.d(t, { Z: () => Z }), n(388685));
 var l,
     a = n(392711),
     o = n.n(a),
@@ -78,7 +78,7 @@ function A() {
     let e = C.getGuildId();
     ((I = v = j(C)), null == v[N] && (N = e), (i = null != S), (r = d.o4(C, S)), (T = null), (y = !1), (E = f.QZA.CLOSED), O.clear());
 }
-class Z extends (l = s.ZP.Store) {
+class x extends (l = s.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, h.Z);
     }
@@ -119,8 +119,8 @@ class Z extends (l = s.ZP.Store) {
         return P;
     }
 }
-m(Z, 'displayName', 'ChannelSettingsPermissionsStore');
-let x = new Z(u.Z, {
+m(x, 'displayName', 'ChannelSettingsPermissionsStore');
+let Z = new x(u.Z, {
     CHANNEL_SETTINGS_SET_SECTION: function (e) {
         let { section: t } = e;
         if (null != C || t !== f.CoT.PERMISSIONS) return !1;

@@ -16,7 +16,7 @@ function m(e) {
     let { searchId: t, searchMode: r, onSearchModeChange: l, totalResults: c, isIndexing: m, isSearching: _, documentsIndexed: S } = e,
         x = (0, d.U)({ location: 'SearchHeader' }),
         b = (0, i.e7)([u.Z], () => u.Z.getSearchResultsQueryString(t)),
-        C = s.useMemo(() => {
+        v = s.useMemo(() => {
             if (t === p.aib.DMS && x) {
                 var e, r;
                 let t = (0, h.kG)(null != b ? b : ''),
@@ -26,14 +26,14 @@ function m(e) {
             return null;
         }, [t, x, b]);
     return (0, n.jsxs)('header', {
-        className: a()(g.searchHeader, { [g.searchHeaderWithSubtitle]: null != C }),
+        className: a()(g.searchHeader, { [g.searchHeaderWithSubtitle]: null != v }),
         children: [
             (0, n.jsx)('div', {
                 className: g.totalResults,
                 role: 'status',
                 children: (0, n.jsx)(y, {
                     totalResults: c,
-                    subtitle: C,
+                    subtitle: v,
                     isIndexing: m,
                     isSearching: _,
                     documentsIndexed: S
