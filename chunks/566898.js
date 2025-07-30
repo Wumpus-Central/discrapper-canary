@@ -3,7 +3,7 @@ n.d(t, {
     Pb: () => x,
     XX: () => g,
     ZP: () => _,
-    ZT: () => m,
+    ZT: () => f,
     iv: () => b,
     pk: () => p
 });
@@ -24,7 +24,7 @@ function u() {
         style: { opacity: 0.08 }
     });
 }
-function m(e) {
+function f(e) {
     let { width: t, height: n, opacity: o, className: a } = e,
         c = {
             width: d(t),
@@ -38,9 +38,9 @@ function m(e) {
         })
     );
 }
-function f(e) {
+function m(e) {
     let t,
-        { groupStart: n = !1, compact: o = !1, attachmentSpecs: a, usernameWidth: d, usernameOpacity: f, className: p, style: g } = e,
+        { groupStart: n = !1, compact: o = !1, attachmentSpecs: a, usernameWidth: d, usernameOpacity: m, className: p, style: g } = e,
         b = o ? 50 : l().random(40, 50);
     return (
         !o && n
@@ -49,9 +49,9 @@ function f(e) {
                       (0, r.jsx)(u, {}),
                       (0, r.jsx)(c.H, {
                           className: s.header,
-                          children: (0, r.jsx)(m, {
+                          children: (0, r.jsx)(f, {
                               width: d,
-                              opacity: f,
+                              opacity: m,
                               className: s.__invalid_username
                           })
                       })
@@ -61,7 +61,7 @@ function f(e) {
               (t = (0, r.jsxs)(r.Fragment, {
                   children: [
                       o &&
-                          (0, r.jsx)(m, {
+                          (0, r.jsx)(f, {
                               width: b,
                               className: i()({
                                   [s.compactTimestamp]: !0,
@@ -70,9 +70,9 @@ function f(e) {
                           }),
                       (0, r.jsx)(c.H, {
                           className: s.header,
-                          children: (0, r.jsx)(m, {
+                          children: (0, r.jsx)(f, {
                               width: d,
-                              opacity: f
+                              opacity: m
                           })
                       })
                   ]
@@ -97,7 +97,7 @@ function f(e) {
                                 .map(() => l().random(30, 80))
                                 .map((e, t) =>
                                     (0, r.jsx)(
-                                        m,
+                                        f,
                                         {
                                             width: e,
                                             opacity: 0.06
@@ -159,7 +159,7 @@ function _(e) {
             .fill(null)
             .map((e, t) =>
                 (0, r.jsx)(
-                    f,
+                    m,
                     {
                         compact: o,
                         className: a,

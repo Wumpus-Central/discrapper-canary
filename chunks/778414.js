@@ -1,62 +1,60 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
-var o = n(481060),
-    i = n(823379),
-    a = n(836197),
-    l = n(747101),
-    c = n(517157),
-    s = n(985748),
-    d = n(566007),
-    u = n(173951),
-    m = n(455731),
+var o = n(924322),
+    i = n(481060),
+    a = n(747101),
+    l = n(517157),
+    c = n(985748),
+    s = n(566007),
+    d = n(173951),
+    u = n(455731),
     f = n(19043);
-function p(e) {
-    let { widget: t, user: n, loading: o = !1 } = e,
-        l = t.gameWidgetType;
-    switch (l) {
-        case a.g.FAVORITE:
-            return (0, r.jsx)(d.Z, {
-                user: n,
-                widget: t,
-                loading: o
-            });
-        case a.g.CURRENT:
+function m(e) {
+    let { widget: t, user: n, loading: i = !1 } = e;
+    switch (t.gameWidgetType) {
+        case o.g.FAVORITE:
             return (0, r.jsx)(s.Z, {
                 user: n,
                 widget: t,
-                loading: o
+                loading: i
             });
-        case a.g.WANT_TO_PLAY:
-            return (0, r.jsx)(m.Z, {
+        case o.g.CURRENT:
+            return (0, r.jsx)(c.Z, {
                 user: n,
                 widget: t,
-                loading: o
+                loading: i
             });
-        case a.g.PLAYED:
+        case o.g.WANT_TO_PLAY:
             return (0, r.jsx)(u.Z, {
                 user: n,
                 widget: t,
-                loading: o
+                loading: i
+            });
+        case o.g.PLAYED:
+            return (0, r.jsx)(d.Z, {
+                user: n,
+                widget: t,
+                loading: i
             });
         default:
-            return (0, i.vE)(l);
+            return null;
     }
 }
-function g(e) {
+function p(e) {
     let { user: t } = e,
-        n = (0, c.Z)(),
-        { widgets: i, isFetching: a } = (0, l.Z)(n);
-    return (0, r.jsx)(o.Ttm, {
+        n = (0, l.Z)(),
+        { widgets: o, isFetching: c } = (0, a.Z)(n);
+    return (0, r.jsx)(i.Ttm, {
         className: f.scroller,
         fade: !0,
-        children: i.map((e) =>
+        children: o.map((e) =>
             (0, r.jsx)(
-                p,
+                m,
                 {
                     widget: e,
                     user: t,
-                    loading: a
+                    loading: c
                 },
                 e.id
             )

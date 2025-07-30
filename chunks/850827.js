@@ -15,8 +15,8 @@ var i = n(120356),
     g = n(892001),
     h = n(592125),
     b = n(594174),
-    _ = n(979651),
-    v = n(374129),
+    v = n(979651),
+    _ = n(374129),
     y = n(639351),
     O = n(503438),
     S = n(802856),
@@ -63,9 +63,9 @@ let R = (e) => {
             z = (0, O.Z)(t),
             J = z || Y ? p.Z.Direction.HORIZONTAL : p.Z.Direction.VERTICAL,
             K = (null == t ? void 0 : t.type) === Z.IIU.HANG_STATUS,
-            q = (0, s.e7)([_.Z, h.Z], () => {
+            q = (0, s.e7)([v.Z, h.Z], () => {
                 var e;
-                return K ? h.Z.getChannel(null == (e = _.Z.getVoiceStateForUser(i.id)) ? void 0 : e.channelId) : null;
+                return K ? h.Z.getChannel(null == (e = v.Z.getVoiceStateForUser(i.id)) ? void 0 : e.channelId) : null;
             });
         if ((null == t ? void 0 : t.application_id) === L.bO) {
             var X, Q;
@@ -150,7 +150,7 @@ let R = (e) => {
                             color: F,
                             platform: d.Z.get(Z.ABu.PLAYSTATION),
                             onAction: W,
-                            Icon: v.Z
+                            Icon: _.Z
                         },
                         'ConnectPlatformActivityButton'
                     );

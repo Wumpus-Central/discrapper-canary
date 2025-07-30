@@ -14,8 +14,8 @@ var r,
     g = n(594174),
     h = n(979651),
     b = n(938475),
-    _ = n(981631),
-    v = n(354459);
+    v = n(981631),
+    _ = n(354459);
 let y = new c.Z(),
     O = new c.Z(),
     S = new Set();
@@ -24,10 +24,10 @@ function I(e, t, n) {
             userId: e.id,
             channelId: n
         }),
-        i = (0, b.PH)(r, null != t ? t : _.ME, e.id);
+        i = (0, b.PH)(r, null != t ? t : v.ME, e.id);
     y.set(e.id, i);
     let l = {
-        type: v.fO.USER,
+        type: _.fO.USER,
         user: e,
         id: e.id,
         streamId: null,
@@ -100,7 +100,7 @@ let C = new P(s.Z, {
     VOICE_CHANNEL_SELECT: E,
     RTC_CONNECTION_STATE: function (e) {
         let { state: t, context: n } = e;
-        if (n !== o.Yn.DEFAULT || t !== _.hes.DISCONNECTED) return !1;
+        if (n !== o.Yn.DEFAULT || t !== v.hes.DISCONNECTED) return !1;
         E();
     },
     VOICE_STATE_UPDATES: function (e) {

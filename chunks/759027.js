@@ -15,7 +15,7 @@ var n = a(255367),
     b = a(474936),
     f = a(546147),
     v = a(909291);
-let j = {
+let g = {
         [p.O0b.UNPAID]: 'Unpaid',
         [p.O0b.ACTIVE]: 'Active',
         [p.O0b.PAST_DUE]: 'Past Due',
@@ -26,7 +26,7 @@ let j = {
         [p.O0b.PAUSED]: 'Paused',
         [p.O0b.PAUSE_PENDING]: 'Pause Pending'
     },
-    g = {
+    j = {
         [h.Id.UNKNOWN]: 'Unknown',
         [h.Id.ADMIN]: 'Admin',
         [h.Id.USER]: 'User',
@@ -75,11 +75,11 @@ function y(e) {
     var t, a, l, h, y, C, O;
     let { subscription: N, onUpdated: T } = e,
         [E, S] = r.useState(!1),
-        [P, I] = r.useState(!1),
-        [w, R] = r.useState(!1),
+        [P, w] = r.useState(!1),
+        [I, R] = r.useState(!1),
         [k, A] = r.useState(!1),
         [Z, D] = r.useState(null),
-        L = (e) => ((null == e && (e = N.status), e in j) ? j[e] : 'Unknown status '.concat(e)),
+        L = (e) => ((null == e && (e = N.status), e in g) ? g[e] : 'Unknown status '.concat(e)),
         M = (e) => {
             let t = new Date(e);
             return u.default.fromTimestamp(t.getTime());
@@ -193,7 +193,7 @@ function y(e) {
                             children: [
                                 (0, n.jsxs)(o.Text, {
                                     variant: 'text-md/normal',
-                                    children: ['Pause Reason: ', N.pauseReason in g ? g[N.pauseReason] : 'Unknown pause reason '.concat(N.pauseReason)]
+                                    children: ['Pause Reason: ', N.pauseReason in j ? j[N.pauseReason] : 'Unknown pause reason '.concat(N.pauseReason)]
                                 }),
                                 null != N.pauseEndsAt &&
                                     (0, n.jsxs)(o.Text, {
@@ -210,7 +210,7 @@ function y(e) {
                     children: [
                         (0, n.jsxs)(o.P3F, {
                             onClick: () => {
-                                R(!w);
+                                R(!I);
                             },
                             className: v.collapsablePaneHeader,
                             children: [
@@ -220,10 +220,10 @@ function y(e) {
                                         children: 'Trial Info'
                                     })
                                 }),
-                                (0, n.jsx)(c.Z, { direction: w ? c.Z.Directions.UP : c.Z.Directions.DOWN })
+                                (0, n.jsx)(c.Z, { direction: I ? c.Z.Directions.UP : c.Z.Directions.DOWN })
                             ]
                         }),
-                        w &&
+                        I &&
                             (0, n.jsxs)('ul', {
                                 className: v.collapsiblePaneList,
                                 children: [
@@ -355,7 +355,7 @@ function y(e) {
                 children: [
                     (0, n.jsxs)(o.P3F, {
                         onClick: () => {
-                            I(!P);
+                            w(!P);
                         },
                         className: v.collapsablePaneHeader,
                         children: [

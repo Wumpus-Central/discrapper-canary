@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var o = n(481060),
@@ -9,13 +9,13 @@ var o = n(481060),
     s = n(806729),
     d = n(821179),
     u = n(264481),
-    m = n(714905);
-function f(e) {
+    f = n(714905);
+function m(e) {
     let { user: t, onClose: n } = e,
-        { trackUserProfileAction: f } = (0, c.KZ)(),
+        { trackUserProfileAction: m } = (0, c.KZ)(),
         { mutualGuilds: p, isFetching: g } = (0, s.Z)(t);
     return (0, r.jsx)(o.Ttm, {
-        className: m.scroller,
+        className: f.scroller,
         fade: !0,
         children:
             null == p && g
@@ -23,7 +23,7 @@ function f(e) {
                       (0, r.jsxs)(
                           'div',
                           {
-                              className: m.guildsLoadingItem,
+                              className: f.guildsLoadingItem,
                               children: [
                                   (0, r.jsx)(a.ZT, {
                                       width: 40,
@@ -50,7 +50,7 @@ function f(e) {
                                     guild: o,
                                     nick: a,
                                     onSelect: () => {
-                                        (f({ action: 'PRESS_MUTUAL_GUILD' }), (0, l.X)(o.id), n(), (0, i.xf)());
+                                        (m({ action: 'PRESS_MUTUAL_GUILD' }), (0, l.X)(o.id), n(), (0, i.xf)());
                                     }
                                 },
                                 o.id

@@ -1,10 +1,10 @@
-let r, i, a, o, s, l, c, u, d, _;
-n.d(t, { Z: () => B });
-var f,
-    p = n(442837),
-    h = n(570140),
-    m = n(981631);
-function g(e, t, n) {
+let r, i, a, o, s, l, c, u, d, _, f;
+n.d(t, { Z: () => F });
+var p,
+    h = n(442837),
+    m = n(570140),
+    g = n(981631);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,87 +17,91 @@ function g(e, t, n) {
         e
     );
 }
-let E = m.QZA.CLOSED,
-    b = {};
-function y(e) {
-    ((d = e.guild), (E = m.QZA.OPEN), (b = {}), (_ = e.source));
-}
-function O() {
-    ((E = m.QZA.CLOSED), (b = {}), (_ = void 0));
+let b = g.QZA.CLOSED,
+    y = {};
+function O(e) {
+    ((_ = e.guild), (b = g.QZA.OPEN), (y = {}), (f = e.source));
 }
 function v() {
-    ((E = m.QZA.SUBMITTING), (b = {}));
+    ((b = g.QZA.CLOSED), (y = {}), (f = void 0));
 }
-function I(e) {
-    ((d = e.guild), (b = {}));
+function I() {
+    ((b = g.QZA.SUBMITTING), (y = {}));
 }
 function T(e) {
-    var t;
-    if (E !== m.QZA.SUBMITTING) return !1;
-    ((E = m.QZA.OPEN), (b = null != (t = e.errors) ? t : {}));
+    ((_ = e.guild), (y = {}));
 }
 function S(e) {
-    ((E = m.QZA.OPEN), (b = e.errors));
+    var t;
+    if (b !== g.QZA.SUBMITTING) return !1;
+    ((b = g.QZA.OPEN), (y = null != (t = e.errors) ? t : {}));
 }
 function A(e) {
+    ((b = g.QZA.OPEN), (y = e.errors));
+}
+function N(e) {
     let { avatar: t } = e;
     r = t;
 }
-function N(e) {
+function C(e) {
     let { avatarDecoration: t } = e;
     i = t;
 }
-function C(e) {
-    let { profileEffectId: t } = e;
-    a = t;
-}
 function R(e) {
-    let { banner: t } = e;
+    let { profileEffectId: t } = e;
     o = t;
 }
 function P(e) {
-    let { bio: t } = e;
+    let { banner: t } = e;
     s = t;
 }
 function w(e) {
-    let { pronouns: t } = e;
+    let { bio: t } = e;
     l = t;
 }
 function D(e) {
-    let { nickname: t } = e;
+    let { pronouns: t } = e;
     c = t;
 }
 function L(e) {
-    let { themeColors: t } = e;
+    let { nickname: t } = e;
     u = t;
 }
-function x() {
-    (M(), k(), (b = {}), (E = m.QZA.OPEN));
+function x(e) {
+    let { themeColors: t } = e;
+    d = t;
 }
-function M() {
-    ((r = void 0), (c = void 0), (i = void 0));
+function M(e) {
+    let { nameplate: t } = e;
+    a = t;
 }
 function k() {
-    ((o = void 0), (s = void 0), (l = void 0), (u = void 0), (a = void 0));
+    (j(), U(), (y = {}), (b = g.QZA.OPEN));
 }
 function j() {
-    b = {};
+    ((r = void 0), (u = void 0), (i = void 0), (a = void 0));
 }
 function U() {
-    (x(), O());
+    ((s = void 0), (l = void 0), (c = void 0), (d = void 0), (o = void 0));
 }
-class G extends (f = p.ZP.Store) {
+function G() {
+    y = {};
+}
+function B() {
+    (k(), v());
+}
+class V extends (p = h.ZP.Store) {
     getFormState() {
-        return E;
-    }
-    getErrors() {
         return b;
     }
+    getErrors() {
+        return y;
+    }
     showNotice() {
-        return void 0 !== r || void 0 !== i || void 0 !== a || void 0 !== o || void 0 !== s || void 0 !== l || void 0 !== c || void 0 !== u;
+        return void 0 !== r || void 0 !== i || void 0 !== o || void 0 !== s || void 0 !== l || void 0 !== c || void 0 !== u || void 0 !== d || void 0 !== a;
     }
     getIsSubmitDisabled() {
-        return void 0 !== s && s.length > m.tPV;
+        return void 0 !== l && l.length > g.tPV;
     }
     getPendingAvatar() {
         return r;
@@ -106,64 +110,69 @@ class G extends (f = p.ZP.Store) {
         return i;
     }
     getPendingProfileEffectId() {
-        return a;
-    }
-    getPendingBanner() {
         return o;
     }
-    getPendingBio() {
+    getPendingBanner() {
         return s;
     }
-    getPendingNickname() {
-        return c;
-    }
-    getPendingPronouns() {
+    getPendingBio() {
         return l;
     }
-    getPendingAccentColor() {
+    getPendingNickname() {
+        return u;
+    }
+    getPendingPronouns() {
         return c;
     }
-    getPendingThemeColors() {
+    getPendingAccentColor() {
         return u;
+    }
+    getPendingThemeColors() {
+        return d;
+    }
+    getPendingNameplate() {
+        return a;
     }
     getAllPending() {
         return {
             pendingAvatar: r,
             pendingAvatarDecoration: i,
-            pendingProfileEffectId: a,
-            pendingBanner: o,
-            pendingBio: s,
-            pendingPronouns: l,
-            pendingNickname: c,
-            pendingThemeColors: u
+            pendingProfileEffectId: o,
+            pendingBanner: s,
+            pendingBio: l,
+            pendingPronouns: c,
+            pendingNickname: u,
+            pendingThemeColors: d,
+            pendingNameplate: a
         };
     }
     getGuild() {
-        return d;
-    }
-    getSource() {
         return _;
     }
+    getSource() {
+        return f;
+    }
 }
-g(G, 'displayName', 'GuildIdentitySettingsStore');
-let B = new G(h.Z, {
-    GUILD_IDENTITY_SETTINGS_INIT: y,
-    GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: U,
-    GUILD_IDENTITY_SETTINGS_SET_GUILD: I,
-    GUILD_IDENTITY_SETTINGS_SUBMIT: v,
-    GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: T,
-    USER_PROFILE_UPDATE_FAILURE: S,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: A,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR_DECORATION: N,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID: C,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: R,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: P,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: w,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: D,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS: L,
-    GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: M,
-    GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: k,
-    GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: x,
-    GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: x,
-    GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: j
+E(V, 'displayName', 'GuildIdentitySettingsStore');
+let F = new V(m.Z, {
+    GUILD_IDENTITY_SETTINGS_INIT: O,
+    GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: B,
+    GUILD_IDENTITY_SETTINGS_SET_GUILD: T,
+    GUILD_IDENTITY_SETTINGS_SUBMIT: I,
+    GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: S,
+    USER_PROFILE_UPDATE_FAILURE: A,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: N,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR_DECORATION: C,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_NAMEPLATE: M,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID: R,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: P,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: w,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: D,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: L,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS: x,
+    GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: j,
+    GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: U,
+    GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: k,
+    GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: k,
+    GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: G
 });

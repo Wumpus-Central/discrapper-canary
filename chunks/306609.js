@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(659580),
     h = n(795318),
     b = n(670863),
-    _ = n(53691),
-    v = n(457165),
+    v = n(53691),
+    _ = n(457165),
     y = n(131951),
     O = n(594174),
     S = n(626135),
@@ -197,11 +197,11 @@ function W(e) {
                                         y: ea.y,
                                         opacity: ea.y.to((e) => +(50 !== e))
                                     },
-                                    children: (0, r.jsx)(_.p, {
+                                    children: (0, r.jsx)(v.p, {
                                         showUpsell: !0,
                                         text: V.intl.format(V.t['XMDm8/'], {
                                             nitroTierName: (0, j.Px)(k.p9.TIER_2),
-                                            onClick: () => (0, v.i)()
+                                            onClick: () => (0, _.i)()
                                         }),
                                         button: V.intl.string(V.t.cRCCJy),
                                         buttonAnalyticsObject: { section: L.jXE.VOICE_FILTERS_FLOATING_UPSELL },

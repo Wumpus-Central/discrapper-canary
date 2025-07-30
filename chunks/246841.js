@@ -8,7 +8,7 @@ var i = n(755721),
     s = n(862863);
 function c(e) {
     let { activity: t, user: n, source: c, className: u, size: d, look: f, color: p, fullWidth: m, onAction: g } = e,
-        { label: h, tooltip: b, loading: _, disabled: v, onClick: y } = (0, o.Ih)(t, n, c),
+        { label: h, tooltip: b, loading: v, disabled: _, onClick: y } = (0, o.Ih)(t, n, c),
         O = () => {
             (null == g || g(), y());
         };
@@ -26,8 +26,8 @@ function c(e) {
                 onClick: O,
                 onMouseEnter: t,
                 onMouseLeave: n,
-                disabled: v,
-                submitting: _,
+                disabled: _,
+                submitting: v,
                 children: [
                     (0, r.jsx)(a.Z, {
                         width: 16,

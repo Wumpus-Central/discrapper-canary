@@ -13,7 +13,7 @@ var r = i(120356),
     C = i(106112);
 let p = function (e) {
     let { subscriptionTier: t, interval: i = m.rV.MONTH, className: r, isGift: p = !1, variant: g, priceOptions: x, isApplicationHome: f, enablePremiumBrandRefresh: h } = e,
-        v = (0, a.e7)([u.Z], () => u.Z.isLoadedForPremiumSKUs()),
+        v = (0, a.e7)([u.Z], () => u.Z.isLoadedForSKUs([t])),
         I = (0, s.ap)((0, c.ZP)());
     if (!v)
         return (0, n.jsx)(o.$jN, {

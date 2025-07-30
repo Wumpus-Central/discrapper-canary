@@ -15,8 +15,8 @@ var n = a(255367),
     b = a(581883),
     f = a(899667),
     v = a(430824),
-    j = a(914010),
-    g = a(981631),
+    g = a(914010),
+    j = a(981631),
     _ = a(444048);
 let y = [o.z.GUILD_POWERUP_PERKS_COACHMARK, o.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK, o.z.GUILD_POWERUP_NOTIFICATION, o.z.GUILD_TAG_AVAILABLE_COACHMARK, o.z.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK],
     C = [o.C.GUILD_POWERUP_LEVEL_1_COACHMARK, o.C.GUILD_POWERUP_LEVEL_2_COACHMARK, o.C.GUILD_POWERUP_LEVEL_3_COACHMARK, o.C.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, o.C.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK],
@@ -42,7 +42,7 @@ async function E(e, t, a) {
     (await Promise.all(
         t.map((e) =>
             s.tn.patch({
-                url: g.ANM.APPLIED_BOOST_MODIFY_END_DATE(e.id),
+                url: j.ANM.APPLIED_BOOST_MODIFY_END_DATE(e.id),
                 body: a ? {} : { ends_at: l()().add(1, 'day') },
                 rejectWithError: !0
             })
@@ -53,13 +53,13 @@ async function E(e, t, a) {
 }
 async function S(e) {
     await s.tn.post({
-        url: g.ANM.SEND_POWERUPS_SYSTEM_MESSAGE(e),
+        url: j.ANM.SEND_POWERUPS_SYSTEM_MESSAGE(e),
         rejectWithError: !0
     });
 }
 function P() {
     var e;
-    let t = (0, i.e7)([j.Z], () => j.Z.getGuildId()),
+    let t = (0, i.e7)([g.Z], () => g.Z.getGuildId()),
         a = (0, i.e7)([v.Z], () => {
             var e;
             return null == (e = v.Z.getGuild(t)) ? void 0 : e.name;

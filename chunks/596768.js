@@ -15,8 +15,8 @@ var n = a(255367),
     b = a(55935),
     f = a(120816),
     v = a(31336),
-    j = a(257785),
-    g = a(484036),
+    g = a(257785),
+    j = a(484036),
     _ = a(681619),
     y = a(621060),
     C = a(388032),
@@ -70,10 +70,10 @@ let T = [
                                 (0, n.jsx)(h.ZP.Title, { children: t })
                             ]
                         }),
-                        (0, n.jsxs)(j.E, {
+                        (0, n.jsxs)(g.E, {
                             className: O.commonProperties,
                             children: [
-                                (0, n.jsx)(j.Z9, {
+                                (0, n.jsx)(g.Z9, {
                                     name: 'Timestamp (local)',
                                     children: (0, n.jsx)('time', {
                                         dateTime: s.toISOString(),
@@ -82,35 +82,35 @@ let T = [
                                     })
                                 }),
                                 'guild' === a.type &&
-                                    (0, n.jsx)(j.Z9, {
+                                    (0, n.jsx)(g.Z9, {
                                         name: 'Guild ID',
                                         children: (0, n.jsx)('code', { children: a.guildId })
                                     }),
-                                (0, n.jsx)(j.Z9, {
+                                (0, n.jsx)(g.Z9, {
                                     name: 'Bucket',
                                     children: (0, n.jsx)('code', { children: a.bucket })
                                 }),
-                                (0, n.jsx)(j.Z9, {
+                                (0, n.jsx)(g.Z9, {
                                     name: 'Revision',
                                     children: (0, n.jsx)('code', { children: a.revision })
                                 }),
-                                (0, n.jsx)(j.Z9, {
+                                (0, n.jsx)(g.Z9, {
                                     name: 'Override',
-                                    children: (0, n.jsx)(j.wl, { value: a.override })
+                                    children: (0, n.jsx)(g.wl, { value: a.override })
                                 }),
-                                (0, n.jsx)(j.Z9, {
+                                (0, n.jsx)(g.Z9, {
                                     name: 'Exposure type',
                                     children: (0, n.jsx)('code', { children: r })
                                 }),
-                                (0, n.jsx)(j.Z9, {
+                                (0, n.jsx)(g.Z9, {
                                     name: 'Excluded',
-                                    children: (0, n.jsx)(j.wl, { value: l })
+                                    children: (0, n.jsx)(g.wl, { value: l })
                                 }),
-                                (0, n.jsx)(j.Z9, {
+                                (0, n.jsx)(g.Z9, {
                                     name: 'Previously tracked',
-                                    children: (0, n.jsx)(j.wl, { value: c })
+                                    children: (0, n.jsx)(g.wl, { value: c })
                                 }),
-                                (0, n.jsx)(j.Z9, {
+                                (0, n.jsx)(g.Z9, {
                                     name: 'Location',
                                     children: (0, n.jsx)('code', { children: o })
                                 })
@@ -128,7 +128,7 @@ function S() {
         s = r.useMemo(() => l.filter((t) => 0 === e.length || o()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
         [c, d] = r.useState(void 0),
         h = s.find((e) => e.key === c),
-        { TabBar: b, renderSelectedTab: j } = (0, y.ZP)({ tabs: E }, []),
+        { TabBar: b, renderSelectedTab: g } = (0, y.ZP)({ tabs: E }, []),
         S = (0, u.e7)([f.Z], () => f.Z.trackTriggers),
         P = r.useCallback((e) => {
             p.Z.dispatch({
@@ -182,11 +182,11 @@ function S() {
                 onClickRow: (e) => d(e.key)
             }),
             null != h &&
-                (0, n.jsxs)(g.Z, {
+                (0, n.jsxs)(j.Z, {
                     className: O.subPanel,
                     minHeight: 100,
                     initialHeight: null != a.current ? a.current.clientHeight / 2 : 300,
-                    children: [(0, n.jsx)(b, {}), j({ loggedTrigger: h })]
+                    children: [(0, n.jsx)(b, {}), g({ loggedTrigger: h })]
                 })
         ]
     });

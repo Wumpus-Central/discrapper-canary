@@ -9,8 +9,8 @@ var o = n(120356),
     s = n(367907),
     d = n(122021),
     u = n(275759),
-    m = n(888496),
-    f = n(768762),
+    f = n(888496),
+    m = n(768762),
     p = n(706454),
     g = n(49012),
     b = n(981631),
@@ -140,9 +140,9 @@ function v(e) {
                                                               })
                                                           )
                                                   }),
-                                                  (0, r.jsx)(f.Z, {
+                                                  (0, r.jsx)(m.Z, {
                                                       className: _.platformUrlIcon,
-                                                      direction: f.Z.Directions.RIGHT
+                                                      direction: m.Z.Directions.RIGHT
                                                   })
                                               ]
                                           })
@@ -157,7 +157,7 @@ function v(e) {
                     }),
                     (0, r.jsx)('div', {
                         className: _.metadata,
-                        children: n.type === b.ABu.REDDIT ? (0, m.oP)(a) : n.type === b.ABu.STEAM ? (0, m.Dq)(a) : n.type === b.ABu.BLUESKY || n.type === b.ABu.MASTODON || n.type === b.ABu.TWITTER ? (0, m.rJ)(a) : n.type === b.ABu.PAYPAL ? (0, m.li)(a) : n.type === b.ABu.EBAY ? (0, m.ul)(a) : n.type === b.ABu.TIKTOK ? (0, m.hf)(a) : null
+                        children: n.type === b.ABu.REDDIT ? (0, f.oP)(a) : n.type === b.ABu.STEAM ? (0, f.Dq)(a) : n.type === b.ABu.BLUESKY || n.type === b.ABu.MASTODON || n.type === b.ABu.TWITTER ? (0, f.rJ)(a) : n.type === b.ABu.PAYPAL ? (0, f.li)(a) : n.type === b.ABu.EBAY ? (0, f.ul)(a) : n.type === b.ABu.TIKTOK ? (0, f.hf)(a) : null
                     })
                 ]
             })

@@ -17,8 +17,8 @@ var r = n(255367),
     g = n(430824),
     h = n(979651),
     b = n(626135),
-    _ = n(153066),
-    v = n(981631),
+    v = n(153066),
+    _ = n(981631),
     y = n(66569);
 function O(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -66,7 +66,7 @@ function S(e, t) {
 function I(e) {
     let { type: t, source: n, activity: i, applicationStream: l, user: o, guildId: s, channelId: u, onAction: d, actionColor: f } = e;
     return (0, r.jsx)(c.Z, {
-        className: (0, _.l)(y, 'actions', t),
+        className: (0, v.l)(y, 'actions', t),
         type: t,
         source: n,
         activity: i,
@@ -81,7 +81,7 @@ function I(e) {
 }
 let j = s.Z.Types,
     x = function (e) {
-        var { activity: t, user: n, useStoreStream: a = !0, showActions: c = !0, hideHeader: _ = !1, showChannelDetails: y = !1 } = e,
+        var { activity: t, user: n, useStoreStream: a = !0, showActions: c = !0, hideHeader: v = !1, showChannelDetails: y = !1 } = e,
             j = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -107,10 +107,10 @@ let j = s.Z.Types,
             }),
             E = (0, d.E)('UserActivityContainer', x),
             P = (0, l.e7)([p.Z], () => (a ? p.Z.getAnyStreamForUser(n.id) : null)),
-            C = (null == t ? void 0 : t.type) === v.IIU.HANG_STATUS && E ? x : null,
+            C = (null == t ? void 0 : t.type) === _.IIU.HANG_STATUS && E ? x : null,
             T = (0, l.e7)([g.Z, h.Z, m.Z], () => {
                 var e, r;
-                return (0, o.Z)(t, v.xjy.EMBEDDED) ? g.Z.getGuild(null == (e = m.Z.getChannel(null == (r = h.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) ? void 0 : r.channelId)) ? void 0 : e.getGuildId()) : null != C ? g.Z.getGuild(C.getGuildId()) : null;
+                return (0, o.Z)(t, _.xjy.EMBEDDED) ? g.Z.getGuild(null == (e = m.Z.getChannel(null == (r = h.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) ? void 0 : r.channelId)) ? void 0 : e.getGuildId()) : null != C ? g.Z.getGuild(C.getGuildId()) : null;
             }),
             N = (0, l.e7)([g.Z], () => (null != P ? g.Z.getGuild(P.guildId) : null)),
             A = (0, l.e7)([u.Z], () => {
@@ -120,22 +120,22 @@ let j = s.Z.Types,
                 return null;
             });
         return (i.useEffect(() => {
-            (null == t ? void 0 : t.type) === v.IIU.HANG_STATUS &&
+            (null == t ? void 0 : t.type) === _.IIU.HANG_STATUS &&
                 E &&
-                b.default.track(v.rMx.VIEW_HANG_STATUS, {
+                b.default.track(_.rMx.VIEW_HANG_STATUS, {
                     source: 'UserProfilePopout',
                     guild_id: null == C ? void 0 : C.guild_id,
                     channel_id: null == C ? void 0 : C.id
                 });
         }, [null == t ? void 0 : t.type, E, C]),
-        (null == t ? void 0 : t.type) !== v.IIU.HANG_STATUS || E)
+        (null == t ? void 0 : t.type) !== _.IIU.HANG_STATUS || E)
             ? (0, r.jsx)(
                   s.Z,
                   S(O({}, j), {
                       activity: t,
                       user: n,
                       application: A,
-                      hideHeader: _,
+                      hideHeader: v,
                       activityGuild: null != T ? T : N,
                       showChannelDetails: y,
                       channel: y ? x : void 0,

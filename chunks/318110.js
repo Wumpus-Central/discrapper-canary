@@ -3,11 +3,11 @@ var i = n(255367);
 n(73800);
 var r = n(481060);
 let s = (e) => {
-    let { analyticsLocations: t } = e;
+    let { analyticsLocations: t, guildId: s } = e;
     (0, r.ZDy)(async () => {
         let { default: e } = await Promise.all([n.e('204'), n.e('55864')]).then(n.bind(n, 612293));
         return (n) => {
-            var r, s;
+            var r, a;
             return (0, i.jsx)(
                 e,
                 ((r = (function (e) {
@@ -35,9 +35,13 @@ let s = (e) => {
                     }
                     return e;
                 })({}, n)),
-                (s = s = { analyticsLocations: t }),
+                (a = a =
+                    {
+                        guildId: s,
+                        analyticsLocations: t
+                    }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(s))
+                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -45,8 +49,8 @@ let s = (e) => {
                               n.push.apply(n, i);
                           }
                           return n;
-                      })(Object(s)).forEach(function (e) {
-                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(s, e));
+                      })(Object(a)).forEach(function (e) {
+                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
                       }),
                 r)
             );

@@ -9,8 +9,8 @@ var r = n(447448),
 function d(e) {
     let { user: t, currentUser: n } = e,
         { mutualFriendsCount: d, mutualGuilds: u } = (0, i.Z)(t),
-        m = null == u ? void 0 : u.length,
-        f = (0, o.Z)(t),
+        f = null == u ? void 0 : u.length,
+        m = (0, o.Z)(t),
         p = (0, r.k)({ location: 'useUserProfileModalV2TabBarItems' }),
         g = [];
     return (
@@ -26,14 +26,14 @@ function d(e) {
             subsection: void 0
         }),
         t.id !== (null == n ? void 0 : n.id) &&
-            f &&
+            m &&
             (g.push({
                 text: (0, a.Z)(d),
                 section: c.oh.MUTUAL_FRIENDS,
                 subsection: void 0
             }),
             g.push({
-                text: (0, l.Z)(m),
+                text: (0, l.Z)(f),
                 section: c.oh.MUTUAL_GUILDS,
                 subsection: void 0
             })),

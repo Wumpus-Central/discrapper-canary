@@ -1,50 +1,56 @@
-(n.d(t, { Z: () => f }), n(388685));
+(n.d(t, { Z: () => x }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(704215),
     a = n(481060),
-    l = n(906732),
-    o = n(243778),
-    c = n(158947),
-    d = n(318110),
-    u = n(150039),
-    m = n(993413),
-    p = n(921944),
-    g = n(388032),
-    h = n(388898);
-function f(e) {
-    let { user: t } = e,
-        { analyticsLocations: n } = (0, l.ZP)(),
-        f = t.nameplate,
-        { pendingNameplate: b, pendingErrors: x } = (0, u._A)(),
-        _ = [s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE],
-        [j, E] = (0, o.US)(_),
-        O = j === s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,
-        C = r.useCallback(() => {
-            (E(p.L.TAKE_ACTION), (0, d.f)({ analyticsLocations: n }));
-        }, [n, E]),
-        v = r.useCallback(() => {
-            (0, u.Wh)(null);
-        }, []);
-    return (0, i.jsx)(m.Z, {
-        title: g.intl.string(g.t.x5CoXV),
-        titleIcon: O ? (0, i.jsx)(c.Z, { className: h.newBadge }) : void 0,
-        errors: x,
+    l = n(809206),
+    o = n(906732),
+    c = n(243778),
+    d = n(18438),
+    u = n(158947),
+    m = n(318110),
+    p = n(150039),
+    g = n(993413),
+    h = n(921944),
+    f = n(388032),
+    b = n(388898);
+function x(e) {
+    let { user: t, guild: n } = e,
+        { analyticsLocations: x } = (0, o.ZP)(),
+        _ = null != n,
+        { userNameplate: j, guildNameplate: E, pendingNameplate: O, pendingErrors: C } = (0, p.Zx)(t, null == n ? void 0 : n.id),
+        v = [s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE],
+        [S, T] = (0, c.US)(v),
+        N = S === s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,
+        I = r.useCallback(() => {
+            (T(h.L.TAKE_ACTION),
+                (0, m.f)({
+                    analyticsLocations: x,
+                    guildId: null == n ? void 0 : n.id
+                }));
+        }, [x, T, null == n ? void 0 : n.id]),
+        y = r.useCallback(() => {
+            (null == n ? void 0 : n.id) != null ? (0, d.RH)(null) : (0, l.Rx)(null);
+        }, [null == n ? void 0 : n.id]);
+    return (0, i.jsx)(g.Z, {
+        title: f.intl.string(f.t.x5CoXV),
+        titleIcon: N ? (0, i.jsx)(u.Z, { className: b.newBadge }) : void 0,
+        errors: C,
         children: (0, i.jsxs)('div', {
-            className: h.section,
+            className: b.section,
             children: [
                 (0, i.jsx)(a.zxk, {
                     variant: 'primary',
                     size: 'sm',
-                    text: g.intl.string(g.t.BwdeMz),
-                    onClick: C
+                    text: f.intl.string(f.t.BwdeMz),
+                    onClick: I
                 }),
-                (void 0 === b ? null != f : null != b) &&
+                (void 0 === O ? (_ ? E : j) != null : null != O) &&
                     (0, i.jsx)(a.zxk, {
                         variant: 'secondary',
                         size: 'sm',
-                        text: g.intl.string(g.t['9zwziY']),
-                        onClick: v
+                        text: f.intl.string(f.t['9zwziY']),
+                        onClick: y
                     })
             ]
         })

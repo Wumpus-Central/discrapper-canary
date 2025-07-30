@@ -25,7 +25,7 @@ e.exports = {
     userJoinSystemMessageIcon: 'userJoinSystemMessageIcon_c19a55',
     commandIcon: 'commandIcon_c19a55',
     commandName: 'commandName_c19a55',
-    username: 'username_c19a55 ' + n(361585).desaturateUserColors,
+    username: 'username_c19a55 ' + a(361585).desaturateUserColors,
     roleDot: 'roleDot_c19a55',
     botTag: 'botTag_c19a55',
     appsIcon: 'appsIcon_c19a55',

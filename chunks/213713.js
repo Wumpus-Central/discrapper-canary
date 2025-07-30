@@ -15,8 +15,8 @@ var n = a(255367),
     b = a(812206),
     f = a(835473),
     v = a(246992),
-    j = a(681619),
-    g = a(810568),
+    g = a(681619),
+    j = a(810568),
     _ = a(168524),
     y = a(77498),
     C = a(823379),
@@ -26,13 +26,13 @@ var n = a(255367),
     E = a(780106),
     S = a(650613),
     P = a(789086),
-    I = a(206583),
-    w = a(403542),
+    w = a(206583),
+    I = a(403542),
     R = a(616257);
 let k = [
     {
         key: 'type',
-        cellClassName: i()(w.cell, w.cellType),
+        cellClassName: i()(I.cell, I.cellType),
         render(e) {
             let { type: t } = e;
             return (0, n.jsx)(p.Text, {
@@ -43,7 +43,7 @@ let k = [
     },
     {
         key: 'count',
-        cellClassName: i()(w.cell, w.cellCount),
+        cellClassName: i()(I.cell, I.cellCount),
         render(e) {
             let { entries: t } = e;
             return (0, n.jsx)('div', {
@@ -56,7 +56,7 @@ let k = [
     },
     {
         key: 'only?',
-        cellClassName: w.cell,
+        cellClassName: I.cell,
         render(e) {
             let { type: t } = e;
             return (0, n.jsx)(A, { type: t });
@@ -85,7 +85,7 @@ function A(e) {
 }
 function Z() {
     var e, t;
-    let a = (0, u.e7)([T.Z], () => T.Z.getFeed(I.YN.GLOBAL_FEED)),
+    let a = (0, u.e7)([T.Z], () => T.Z.getFeed(w.YN.GLOBAL_FEED)),
         l = (0, u.e7)([T.Z], () => T.Z.getDebugImpressionCappingDisabled()),
         i = (0, u.e7)([N.Z], () => N.Z.getDebugFastImpressionCappingEnabled()),
         s = (function (e) {
@@ -101,7 +101,7 @@ function Z() {
         })(null == a || null == (e = a.entries) ? void 0 : e.map((e) => e.content)),
         c = (0, u.e7)([T.Z], () => {
             var e;
-            return (null == (e = T.Z.getFeedState(I.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
+            return (null == (e = T.Z.getFeedState(w.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
         [A, Z] = r.useState(''),
         L = (0, u.e7)(
@@ -115,7 +115,7 @@ function Z() {
         M = (0, _.Z)({
             applicationId: L,
             location: 'DevToolsContentInventory',
-            source: g.m1.DevTools
+            source: j.m1.DevTools
         }),
         U = Object.entries(null != (t = m.K.get('GameProfileModal')) ? t : {})
             .filter((e) => {
@@ -131,13 +131,13 @@ function Z() {
     return (0, n.jsx)('div', {
         className: R.panel,
         children: (0, n.jsxs)(p.zJl, {
-            className: w.content,
+            className: I.content,
             children: [
                 (0, n.jsxs)(p.hjN, {
                     children: [
                         (0, n.jsx)(p.vwX, { children: 'Inventory' }),
                         s.length > 0 &&
-                            (0, n.jsx)(j.Z, {
+                            (0, n.jsx)(g.Z, {
                                 columns: k,
                                 data: s
                             }),
@@ -150,7 +150,7 @@ function Z() {
                             onClick: function () {
                                 h.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_MANUAL_REFRESH',
-                                    feedId: I.YN.GLOBAL_FEED,
+                                    feedId: w.YN.GLOBAL_FEED,
                                     feature: d.L.INBOX
                                 });
                             },
@@ -248,7 +248,7 @@ let D = (e) => {
         a = (0, _.Z)({
             applicationId: t.id,
             location: 'DevToolsContentInventory',
-            source: g.m1.DevTools
+            source: j.m1.DevTools
         });
     return (0, n.jsx)(p.P3F, {
         onClick: a,

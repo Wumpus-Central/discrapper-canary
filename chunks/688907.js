@@ -1,28 +1,28 @@
-n.d(t, {
-    BH: () => a,
+a.d(t, {
+    BH: () => s,
     MH: () => o,
-    j4: () => d,
-    nC: () => u
+    j4: () => u,
+    nC: () => d
 });
-var r = n(442837),
-    i = n(524437),
-    l = n(761781),
-    s = n(695346);
-function a() {
+var n = a(442837),
+    r = a(524437),
+    l = a(761781),
+    i = a(695346);
+function s() {
     return c(
-        s.YT.useSetting(),
-        (0, r.e7)([l.Z], () => l.Z.currentUserApplicationIds.size > 0)
+        i.YT.useSetting(),
+        (0, n.e7)([l.Z], () => l.Z.currentUserApplicationIds.size > 0)
     );
 }
 function o() {
-    return c(s.YT.getSetting(), l.Z.currentUserApplicationIds.size > 0);
+    return c(i.YT.getSetting(), l.Z.currentUserApplicationIds.size > 0);
 }
 function c(e, t) {
-    return e === i.Tv.ACTIVITY_NOTIFICATIONS_UNSET ? (t ? i.Tv.ONLY_GAMES_PLAYED : i.Tv.ACTIVITY_NOTIFICATIONS_ENABLED) : e !== i.Tv.ONLY_GAMES_PLAYED || t ? e : i.Tv.ACTIVITY_NOTIFICATIONS_ENABLED;
-}
-function u() {
-    return s.Qq.useSetting();
+    return e === r.Tv.ACTIVITY_NOTIFICATIONS_UNSET ? (t ? r.Tv.ONLY_GAMES_PLAYED : r.Tv.ACTIVITY_NOTIFICATIONS_ENABLED) : e !== r.Tv.ONLY_GAMES_PLAYED || t ? e : r.Tv.ACTIVITY_NOTIFICATIONS_ENABLED;
 }
 function d() {
-    return s.Qq.getSetting();
+    return i.Qq.useSetting();
+}
+function u() {
+    return i.Qq.getSetting();
 }

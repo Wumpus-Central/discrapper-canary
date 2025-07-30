@@ -4,14 +4,15 @@
     HP: () => s,
     I5: () => u,
     ID: () => h,
-    IO: () => E,
+    IO: () => b,
     It: () => c,
-    W3: () => y,
-    b9: () => O,
+    RH: () => E,
+    W3: () => O,
+    b9: () => v,
     cV: () => d,
     g_: () => f,
     iq: () => o,
-    pG: () => b,
+    pG: () => y,
     sr: () => m,
     xn: () => _,
     z5: () => g
@@ -21,21 +22,33 @@ var r = n(544891),
     i = n(570140),
     a = n(981631);
 async function o(e, t) {
-    let { nick: n, avatar: o, avatarDescription: s, avatarId: l, avatarDecoration: c } = t;
+    let { nick: n, avatar: o, avatarDescription: s, avatarId: l, avatarDecoration: c, nameplate: u } = t;
     if (null == e) throw Error('Need guildId');
     i.Z.dispatch({ type: 'GUILD_IDENTITY_SETTINGS_SUBMIT' });
-    let u = {
+    let d = {
         nick: n,
         avatar: o,
         avatar_description: s,
         avatar_id: l,
         avatar_decoration_id: null === c ? null : null == c ? void 0 : c.id,
-        avatar_decoration_sku_id: null === c ? null : null == c ? void 0 : c.skuId
+        avatar_decoration_sku_id: null === c ? null : null == c ? void 0 : c.skuId,
+        collectibles:
+            void 0 !== u
+                ? {
+                      nameplate:
+                          null === u
+                              ? null
+                              : {
+                                    id: u.id,
+                                    sku_id: u.skuId
+                                }
+                  }
+                : void 0
     };
     try {
         let t = await r.tn.patch({
                 url: a.ANM.SET_GUILD_MEMBER(e),
-                body: u,
+                body: d,
                 oldFormErrors: !0,
                 rejectWithError: !1
             }),
@@ -125,15 +138,21 @@ function g(e) {
         themeColors: e
     });
 }
-function E() {
-    i.Z.dispatch({ type: 'GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES' });
+function E(e) {
+    i.Z.dispatch({
+        type: 'GUILD_IDENTITY_SETTINGS_SET_PENDING_NAMEPLATE',
+        nameplate: e
+    });
 }
 function b() {
-    i.Z.dispatch({ type: 'GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES' });
+    i.Z.dispatch({ type: 'GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES' });
 }
 function y() {
-    i.Z.dispatch({ type: 'GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING' });
+    i.Z.dispatch({ type: 'GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES' });
 }
 function O() {
+    i.Z.dispatch({ type: 'GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING' });
+}
+function v() {
     i.Z.dispatch({ type: 'GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS' });
 }

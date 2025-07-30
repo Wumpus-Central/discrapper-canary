@@ -3,15 +3,14 @@
     Jw: () => b,
     Kg: () => m,
     PO: () => O,
-    Wh: () => I,
-    Wx: () => S,
-    ZT: () => A,
-    _A: () => h,
+    Wx: () => I,
+    ZT: () => T,
+    Zx: () => h,
     bd: () => g,
-    f$: () => C,
+    f$: () => A,
     gc: () => f,
-    gd: () => N,
-    s6: () => T,
+    gd: () => S,
+    s6: () => v,
     xQ: () => E
 }),
     n(539854));
@@ -55,14 +54,23 @@ function p(e, t) {
         pendingErrors: null != t ? u : s
     };
 }
-function h() {
-    let { pendingUserNameplate: e, userErrors: t } = (0, i.cj)([_.Z], () => ({
-        pendingUserNameplate: _.Z.getPendingNameplate(),
-        userErrors: _.Z.getErrors().nameplate
-    }));
+function h(e, t) {
+    var n;
+    let r = (0, i.e7)([d.ZP], () => (void 0 === t ? null : d.ZP.getMember(t, e.id))),
+        a = e.nameplate,
+        { pendingUserNameplate: o, userErrors: s } = (0, i.cj)([_.Z], () => ({
+            pendingUserNameplate: _.Z.getPendingNameplate(),
+            userErrors: _.Z.getErrors().nameplate
+        })),
+        { pendingGuildNameplate: c, guildErrors: u } = (0, i.cj)([l.Z], () => ({
+            pendingGuildNameplate: l.Z.getPendingNameplate(),
+            guildErrors: l.Z.getErrors().nameplate
+        }));
     return {
-        pendingNameplate: e,
-        pendingErrors: t
+        userNameplate: a,
+        guildNameplate: null == r || null == (n = r.collectibles) ? void 0 : n.nameplate,
+        pendingNameplate: null != t ? c : o,
+        pendingErrors: null != t ? u : s
     };
 }
 function m(e, t) {
@@ -103,17 +111,11 @@ function y(e) {
 function O(e, t) {
     y(null != e)(t);
 }
-function v() {
-    return a.KP;
-}
-function I(e) {
-    v()(e);
-}
-function T(e, t, n) {
+function v(e, t, n) {
     if (e === t) return void (null == n ? (0, a.xn)(void 0) : (0, s.xn)(void 0));
     null == n ? (0, a.xn)(e) : (0, s.xn)(e);
 }
-function S(e, t, n) {
+function I(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return null != e
         ? '' === e
@@ -135,7 +137,7 @@ function S(e, t, n) {
                 isUsingGuildValue: !1
             };
 }
-function A(e) {
+function T(e) {
     var t, n;
     let { pendingProfileEffectId: r, displayProfile: i } = e,
         a = null == i || null == (t = i._userProfile) ? void 0 : t.profileEffectId,
@@ -143,9 +145,9 @@ function A(e) {
         s = null === r;
     return s && null != o ? a : s ? null : null != r ? r : null == i ? void 0 : i.profileEffectId;
 }
-function N(e, t) {
+function S(e, t) {
     return void 0 === e ? null != t : null != e;
 }
-function C(e, t) {
+function A(e, t) {
     return void 0 === e ? null != t : null != e;
 }

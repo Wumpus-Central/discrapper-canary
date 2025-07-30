@@ -80,7 +80,7 @@ let p = [
                   }
               );
     },
-    j = () => {
+    g = () => {
         let e = (0, i.lb)(),
             { previewProfileEffectId: t, setPreviewProfileEffectId: a } = (0, o.N9)(),
             s = r.useMemo(
@@ -122,7 +122,7 @@ let p = [
             ]
         });
     },
-    g = () => {
+    j = () => {
         let { previewAvatarDecorationId: e, setPreviewAvatarDecorationId: t } = (0, o.N9)(),
             { avatarDecorationAssets: a } = (0, o.xq)(),
             i = r.useMemo(
@@ -430,8 +430,8 @@ let p = [
                         })
                     ]
                 }),
-                (0, n.jsx)(j, {}),
                 (0, n.jsx)(g, {}),
+                (0, n.jsx)(j, {}),
                 (0, n.jsx)(_, {
                     clearAssets: s,
                     clearIgnoredFiles: u

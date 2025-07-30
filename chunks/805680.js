@@ -219,7 +219,7 @@ function J(e) {
         eE = (null == (t = z.gifs) ? void 0 : t.allowSending) && !c.tq && null != Z,
         eb = (null == (n = z.stickers) ? void 0 : n.allowSending) && null != Y,
         ey = !(null == (a = z.expressionPicker) ? void 0 : a.onlyEmojis) && (eE || eb),
-        { showExpressionPickerButton: eO } = (0, v.q)({
+        { showExpressionPickerButton: eO } = (0, v.qt)({
             location: 'expression_picker',
             autoTrackExposure: !0,
             disable: !ey || ec !== M.X1.EMOJI

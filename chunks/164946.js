@@ -28,7 +28,7 @@ function o(e) {
         var n;
         t.nick = null != (n = e.pendingNickname) ? n : '';
     }
-    return (void 0 !== e.pendingAvatarDecoration && (t.avatarDecoration = e.pendingAvatarDecoration), t);
+    return (void 0 !== e.pendingAvatarDecoration && (t.avatarDecoration = e.pendingAvatarDecoration), void 0 !== e.pendingNameplate && (t.nameplate = e.pendingNameplate), t);
 }
 function s(e) {
     let t = {};

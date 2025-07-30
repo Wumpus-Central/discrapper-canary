@@ -1,4 +1,4 @@
-(n.d(t, { j: () => v }), n(388685));
+(n.d(t, { j: () => _ }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -14,10 +14,10 @@ var r = n(255367),
     g = n(388032),
     h = n(583453),
     b = n(20493);
-let _ = 'SHOW_MORE';
-function v(e) {
+let v = 'SHOW_MORE';
+function _(e) {
     var t,
-        { deviceType: n, location: v, showAllDevices: y = !1, selectedDeviceId: O, onSelectDevice: S, hideDeviceTypeIcon: I = !1 } = e,
+        { deviceType: n, location: _, showAllDevices: y = !1, selectedDeviceId: O, onSelectDevice: S, hideDeviceTypeIcon: I = !1 } = e,
         j = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -68,7 +68,7 @@ function v(e) {
         }[n],
         { analyticsLocations: N } = (0, s.ZP)(),
         [A, w] = i.useState(y),
-        D = T(v),
+        D = T(_),
         [Z, L] = (0, f.L)(n, { location: D }),
         { id: M } = (0, f.p)(n),
         k = (0, l.e7)([u.Z], () => P(u.Z)),
@@ -79,7 +79,7 @@ function v(e) {
         }),
         R = i.useCallback(
             (e) => {
-                if (e === _)
+                if (e === v)
                     (w(!0),
                         d.default.track(p.rMx.DEVICES_LIST_SHOW_MORE_CLICKED, {
                             device_type: n,
@@ -170,7 +170,7 @@ function v(e) {
                             }
                             {
                                 let e = {
-                                    value: _,
+                                    value: v,
                                     label: g.intl.string(g.t.E99UMj),
                                     preventCloseOnSelect: !0
                                 };

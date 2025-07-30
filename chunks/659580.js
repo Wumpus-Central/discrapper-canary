@@ -15,8 +15,8 @@ var i = n(990547),
     g = n(967003),
     h = n(632304),
     b = n(131951),
-    _ = n(358085),
-    v = n(822556),
+    v = n(358085),
+    _ = n(822556),
     y = n(981631),
     O = n(345655),
     S = n(65154),
@@ -30,7 +30,7 @@ function x(e) {
         name: i.ImpressionNames.AUDIO_DEVICE_MENU,
         properties: { location_stack: L }
     });
-    let M = (0, v.Z)(D),
+    let M = (0, _.Z)(D),
         k = (0, f.M)({
             deviceType: S.h7.AUDIO_INPUT,
             analyticsLocations: L,
@@ -90,7 +90,7 @@ function x(e) {
                                   'self-deafen'
                               )
                             : null,
-                        A && x && _.isPlatformEmbedded
+                        A && x && v.isPlatformEmbedded
                             ? (0, r.jsx)(o.S89, {
                                   checked: Y === y.pM4.PUSH_TO_TALK,
                                   id: 'input-mode',

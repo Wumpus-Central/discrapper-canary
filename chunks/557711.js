@@ -10,12 +10,12 @@ var i = n(120356),
     u = n(862863);
 function d(e) {
     let { activity: t, user: n, channelId: i, guildId: d, source: f, size: p, look: m, color: g, className: h, onAction: b } = e,
-        { tooltip: _, loading: v, disabled: y, onClick: O } = (0, c.Fe)(t, n, f, s.ZP.getNickname(d, i, n)),
+        { tooltip: v, loading: _, disabled: y, onClick: O } = (0, c.Fe)(t, n, f, s.ZP.getNickname(d, i, n)),
         S = () => {
             (null == b || b(), O());
         };
     return (0, r.jsx)(o.ua7, {
-        text: _,
+        text: v,
         children: (e) => {
             let { onMouseEnter: n, onMouseLeave: i } = e;
             return (0, r.jsx)(a.zx, {
@@ -28,8 +28,8 @@ function d(e) {
                 onMouseEnter: n,
                 onMouseLeave: i,
                 disabled: y,
-                submitting: v,
-                'aria-label': null != _ ? _ : t.name,
+                submitting: _,
+                'aria-label': null != v ? v : t.name,
                 children: (0, r.jsx)(o.iOO, {
                     size: 'xs',
                     color: 'currentColor'

@@ -1,12 +1,12 @@
-n.d(t, {
+a.d(t, {
     _x: () => c,
-    dm: () => a,
+    dm: () => s,
     uw: () => o
 });
-var r = n(818083),
-    i = n(752048),
-    l = n(699516);
-let s = (0, r.B)({
+var n = a(818083),
+    r = a(752048),
+    l = a(699516);
+let i = (0, n.B)({
     kind: 'user',
     id: '2025-04_game_activity_notification',
     label: 'Game Activity Notifications',
@@ -24,8 +24,8 @@ let s = (0, r.B)({
         }
     ]
 });
-function a(e) {
-    switch (s.getCurrentConfig({ location: 'filterPresences' }).fromUserType) {
+function s(e) {
+    switch (i.getCurrentConfig({ location: 'filterPresences' }).fromUserType) {
         case 2:
             return [];
         case 0:
@@ -36,15 +36,15 @@ function a(e) {
         case 1:
             return e.filter((e) => {
                 let { user: t } = e;
-                return l.Z.isFriend(t.id) || i.Z.isHighlyAffinedVCUser(t.id);
+                return l.Z.isFriend(t.id) || r.Z.isHighlyAffinedVCUser(t.id);
             });
         default:
             return e;
     }
 }
 function o(e) {
-    return 2 !== s.getCurrentConfig({ location: e }).fromUserType;
+    return 2 !== i.getCurrentConfig({ location: e }).fromUserType;
 }
 function c(e) {
-    return 2 !== s.useExperiment({ location: e }).fromUserType;
+    return 2 !== i.useExperiment({ location: e }).fromUserType;
 }

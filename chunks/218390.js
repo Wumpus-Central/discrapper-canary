@@ -370,7 +370,7 @@ let eu = function () {
         { analyticsLocations: n } = (0, C.ZP)(O.Z.PREMIUM_SETTINGS),
         s = (0, c.e7)([R.Z], () => R.Z.getPremiumTypeSubscription()),
         a = (0, c.e7)([R.Z], () => R.Z.hasFetchedSubscriptions()),
-        l = (0, T.V)(),
+        l = (0, T.V)(J.nS),
         [o, u] = r.useState(!0),
         m = (0, S.Z)({ forceFetch: !0 }),
         f = (0, c.e7)([A.Z], () => A.Z.enabled),

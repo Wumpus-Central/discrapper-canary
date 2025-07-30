@@ -191,14 +191,7 @@ class b extends i.Z {
     }
     get nameplate() {
         var e;
-        let t = null == (e = this.collectibles) ? void 0 : e.nameplate;
-        return null == t
-            ? null
-            : {
-                  src: t.asset,
-                  palette: (0, l.t1)(t.palette),
-                  imgAlt: t.label
-              };
+        return (0, l.Pb)(null == (e = this.collectibles) ? void 0 : e.nameplate);
     }
     constructor(e) {
         var t, n, i, a, l, c, u, d, _, p, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, w, D, L, x, M, k, j, U;

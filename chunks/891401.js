@@ -15,8 +15,8 @@ var n = a(255367),
     b = a(680783),
     f = a(605236),
     v = a(675478),
-    j = a(944486),
-    g = a(388032),
+    g = a(944486),
+    j = a(388032),
     _ = a(145634);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -69,7 +69,7 @@ function O() {
 }
 function N() {
     var e, t;
-    let a = (0, c.e7)([j.Z], () => j.Z.getChannelId()),
+    let a = (0, c.e7)([g.Z], () => g.Z.getChannelId()),
         l = (0, b.Z)(a),
         s = null == l ? void 0 : l.wallpaperId,
         d = (0, h.Z)(s),
@@ -98,8 +98,8 @@ function N() {
             [null == l ? void 0 : l.wallpaperId]
         ),
         T = r.useCallback(() => E(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        I = r.useCallback(() => P(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        w = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        w = r.useCallback(() => P(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        I = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         R = r.useCallback(
             (e) => {
                 null != s && (0, p.i)(s, { token_mix_amount: Math.round(e) });
@@ -195,7 +195,7 @@ function N() {
                                 ),
                                 (0, n.jsx)(m.M0o, {
                                     color: 'currentColor',
-                                    tooltip: g.intl.string(g.t.N86XcH),
+                                    tooltip: j.intl.string(j.t.N86XcH),
                                     icon: (0, n.jsx)(m.P$X, {
                                         size: 'xs',
                                         color: 'currentColor'
@@ -236,12 +236,12 @@ function N() {
                                 ),
                                 (0, n.jsx)(m.M0o, {
                                     color: 'currentColor',
-                                    tooltip: g.intl.string(g.t.N86XcH),
+                                    tooltip: j.intl.string(j.t.N86XcH),
                                     icon: (0, n.jsx)(m.P$X, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
-                                    onClick: I,
+                                    onClick: w,
                                     className: _.removeButton
                                 })
                             ]
@@ -306,12 +306,12 @@ function N() {
                                 ),
                                 (0, n.jsx)(m.M0o, {
                                     color: 'currentColor',
-                                    tooltip: g.intl.string(g.t.N86XcH),
+                                    tooltip: j.intl.string(j.t.N86XcH),
                                     icon: (0, n.jsx)(m.P$X, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
-                                    onClick: w,
+                                    onClick: I,
                                     className: _.removeButton
                                 })
                             ]

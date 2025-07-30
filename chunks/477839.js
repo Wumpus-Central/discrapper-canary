@@ -37,8 +37,8 @@ var r,
     g = n(350445),
     h = n(297036),
     b = n(360552),
-    _ = n(284867),
-    v = n(928132),
+    v = n(284867),
+    _ = n(928132),
     y = n(520803),
     O = n(406543),
     S = n(31316),
@@ -91,8 +91,8 @@ var r,
     eg = n(603264),
     eh = n(35356),
     eb = n(599643),
-    e_ = n(71032),
-    ev = n(733724),
+    ev = n(71032),
+    e_ = n(733724),
     ey = n(718256),
     eO = n(255785),
     eS = n(429413);
@@ -220,14 +220,14 @@ let eT = () => ({
         description: d.intl.string(u.default.HNySeX),
         pointsDescription: u.default.QMkrPj,
         cost: 250,
-        purchaseIconSrc: ev
+        purchaseIconSrc: e_
     },
     17: {
         name: d.intl.string(u.default['p+2LlJ']),
         description: d.intl.string(u.default.tZGbND),
         pointsDescription: u.default.QMkrPj,
         cost: 15,
-        purchaseIconSrc: e_
+        purchaseIconSrc: ev
     },
     18: {
         name: d.intl.string(u.default['3p41io']),
@@ -661,7 +661,7 @@ let ek = {
             description: d.intl.formatToPlainString(u.default['87JVSk'], { count: ek[1] })
         },
         2: {
-            icon: _,
+            icon: v,
             name: d.intl.string(u.default.oTL1qq),
             description: d.intl.formatToPlainString(u.default['87JVSk'], { count: ek[2] })
         },
@@ -716,7 +716,7 @@ let ek = {
             description: d.intl.formatToPlainString(u.default.gNIyY2, { count: ek[13] })
         },
         14: {
-            icon: v,
+            icon: _,
             name: d.intl.string(u.default.IdVao6),
             description: d.intl.formatToPlainString(u.default.AmNmLy, { count: ek[14] })
         },

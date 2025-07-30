@@ -8,24 +8,24 @@ var r = n(255367),
     s = n(408986),
     d = n(778414),
     u = n(228168),
-    m = n(662776);
-function f(e) {
-    let { user: t, currentUser: n, section: o, subsection: i, displayProfile: a, guildId: m, channelId: f, onClose: p } = e;
+    f = n(662776);
+function m(e) {
+    let { user: t, currentUser: n, section: o, subsection: i, displayProfile: a, guildId: f, channelId: m, onClose: p } = e;
     return o === u.oh.ACTIVITY
         ? (0, r.jsx)(l.Z, {
               user: t,
               currentUser: n,
               displayProfile: a,
-              guildId: m,
-              channelId: f,
+              guildId: f,
+              channelId: m,
               subsection: i,
               onClose: p
           })
         : o === u.oh.MUTUAL_FRIENDS
           ? (0, r.jsx)(c.Z, {
                 user: t,
-                guildId: m,
-                channelId: f,
+                guildId: f,
+                channelId: m,
                 onClose: p
             })
           : o === u.oh.MUTUAL_GUILDS
@@ -92,11 +92,11 @@ function p(e) {
             n)
         );
     return (0, r.jsxs)('div', {
-        className: m.container,
+        className: f.container,
         children: [
             (0, r.jsx)(i.Ttm, {
                 orientation: 'horizontal',
-                className: m.scroller,
+                className: f.scroller,
                 fade: !0,
                 paddingFix: !1,
                 children: (0, r.jsx)(i.njP, {
@@ -117,7 +117,7 @@ function p(e) {
                         (0, r.jsx)(
                             i.njP.Item,
                             {
-                                className: m.tabBarItem,
+                                className: f.tabBarItem,
                                 id: e.section,
                                 'aria-label': e.text,
                                 children: e.text
@@ -130,8 +130,8 @@ function p(e) {
             (0, r.jsx)(i.njP.Panel, {
                 id: j,
                 'aria-label': v,
-                className: m.tabBarPanel,
-                children: (0, r.jsx)(f, {
+                className: f.tabBarPanel,
+                children: (0, r.jsx)(m, {
                     user: c,
                     currentUser: s,
                     displayProfile: d,

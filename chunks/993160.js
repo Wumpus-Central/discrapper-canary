@@ -9,8 +9,8 @@ var o = n(755721),
     s = n(30556),
     d = n(664794),
     u = n(522182),
-    m = n(821706),
-    f = n(562831),
+    f = n(821706),
+    m = n(562831),
     p = n(981631);
 function g(e) {
     let { user: t, currentUser: n, guildId: g, channelId: b, displayProfile: x, relationshipType: h, onClose: _ } = e,
@@ -22,7 +22,7 @@ function g(e) {
             displayProfile: x,
             onClose: _
         }),
-        { gameFriends: v, hasOutgoingPendingGameFriends: I, hasIncomingPendingGameFriends: O } = (0, f.H)({ userId: t.id }),
+        { gameFriends: v, hasOutgoingPendingGameFriends: I, hasIncomingPendingGameFriends: O } = (0, m.H)({ userId: t.id }),
         P = v.length > 0 || I || O;
     return h === p.OGo.BLOCKED
         ? null
@@ -90,7 +90,7 @@ function g(e) {
                               onClose: i.Z.popAll,
                               autoFocus: !0
                           }),
-                          (0, r.jsx)(m.g, {
+                          (0, r.jsx)(f.g, {
                               type: 'icon',
                               user: t,
                               relationshipType: h,
@@ -116,7 +116,7 @@ function g(e) {
                                 onClose: i.Z.popAll,
                                 autoFocus: !0
                             }),
-                            (0, r.jsx)(m.k9, {
+                            (0, r.jsx)(f.k9, {
                                 type: 'icon',
                                 user: t,
                                 analyticsLocation: j,
@@ -139,7 +139,7 @@ function g(e) {
                     })
                   : (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)(m.Z7, {
+                            (0, r.jsx)(f.Z7, {
                                 type: 'text',
                                 userId: t.id,
                                 analyticsLocation: j,

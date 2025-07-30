@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => m });
 var r = n(255367),
     o = n(73800),
     i = n(481060),
@@ -8,7 +8,7 @@ var r = n(255367),
     s = n(388032),
     d = n(467514),
     u = n(418718);
-function m(e) {
+function f(e) {
     let { text: t } = e;
     return null == t
         ? null
@@ -27,8 +27,8 @@ function m(e) {
               ]
           });
 }
-function f(e) {
-    let { userId: t, game: n, loading: f = !1, disableInteraction: p = !1 } = e,
+function m(e) {
+    let { userId: t, game: n, loading: m = !1, disableInteraction: p = !1 } = e,
         { gameName: g, imageSrc: b, applicationId: x, comment: h } = n,
         _ = (0, l.Z)({
             location: 'UserProfileWidgetGameDetailsCard',
@@ -61,7 +61,7 @@ function f(e) {
                                 color: 'text-default',
                                 children: g
                             }),
-                            (0, r.jsx)(m, { text: h }),
+                            (0, r.jsx)(f, { text: h }),
                             (0, r.jsx)(i.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'text-secondary',
@@ -72,7 +72,7 @@ function f(e) {
                     })
                 ]
             });
-    return f
+    return m
         ? (0, r.jsxs)('div', {
               className: u.card,
               children: [(0, r.jsx)('div', { className: d.gameCover }), (0, r.jsx)('div', { className: u.details })]

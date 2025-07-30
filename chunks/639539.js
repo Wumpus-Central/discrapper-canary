@@ -1,4 +1,4 @@
-(n.d(t, { J: () => _ }), n(388685));
+(n.d(t, { J: () => v }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -164,7 +164,7 @@ let m = (e) => {
             children: [(0, r.jsx)(h, { digits: t.hours }), (0, r.jsx)(g, {}), (0, r.jsx)(h, { digits: t.minutes }), (0, r.jsx)(g, {}), (0, r.jsx)(h, { digits: t.seconds })]
         });
     };
-function _(e) {
+function v(e) {
     let { textVariant: t, className: n, catalogUpdateTime: l, isScrolled: o } = e,
         [s, u] = i.useState(() => p(l));
     return (

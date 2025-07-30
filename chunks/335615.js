@@ -246,7 +246,11 @@ let et = Y.ZP.getEnableHardwareAcceleration(),
                 },
                 [i, t]
             ),
-            p = (0, R.K)({ user: l });
+            p = (0, R.K)({
+                user: l,
+                guildId: i.guild_id,
+                location: 'ChannelMembers'
+            });
         return (0, r.jsx)(
             er,
             $(J({}, n, o), {

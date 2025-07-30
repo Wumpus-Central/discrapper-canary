@@ -1,4 +1,5 @@
 (n.d(t, {
+    Pb: () => _,
     ic: () => s,
     t1: () => c,
     w$: () => d,
@@ -65,3 +66,11 @@ function d() {
         }
     };
 }
+let _ = (e) =>
+    null == e
+        ? null
+        : {
+              src: e.asset,
+              palette: c(e.palette),
+              imgAlt: e.label
+          };
