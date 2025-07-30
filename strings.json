@@ -18615,6 +18615,7 @@
   "Ic588P": "Your network connection may be causing a decrease in video and audio quality. To improve voice audio, disable the stream.",
   "pgUTZG": "No permission",
   "uQZTBQ": "Stream just started. Get in here!",
+  "e9LMur": "Stream ended due to a system error (!!{errorMessage}!!)",
   "mAf1OD": "Participants without video are currently hidden.\\n\\nWould you like to show them?\\n\\n",
   "ilLVLi": "Participants without video are currently hidden",
   "wxbmeH": "This stream has been paused",
