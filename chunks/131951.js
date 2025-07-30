@@ -462,10 +462,12 @@ function tV() {
                             ((tt = !1), r.emitChange());
                         }));
                 })),
-            e.on(b.Sh.DesktopSourceEnd, () => {
+            e.on(b.Sh.DesktopSourceEnd, (t, n) => {
                 v.Z.dispatch({
                     type: 'MEDIA_ENGINE_SET_GO_LIVE_SOURCE',
-                    settings: { context: e.context }
+                    settings: { context: e.context },
+                    endReason: t,
+                    errorCode: n
                 });
             }),
             e.on(b.Sh.InteractionRequired, (e) => {
@@ -563,10 +565,12 @@ function tV() {
                 outputVolume: t
             });
         }),
-        eK.on(b.aB.DesktopSourceEnd, () => {
+        eK.on(b.aB.DesktopSourceEnd, (e, t) => {
             v.Z.dispatch({
                 type: 'MEDIA_ENGINE_SET_GO_LIVE_SOURCE',
-                settings: null
+                settings: null,
+                endReason: e,
+                errorCode: t
             });
         }),
         eK.on(b.aB.AudioPermission, (e) => {

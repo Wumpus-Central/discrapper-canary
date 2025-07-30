@@ -3,7 +3,6 @@ e.exports = {
     content: 'content__3782a',
     closeButton: 'closeButton__3782a',
     contentContainer: 'contentContainer__3782a',
-    image: 'image__3782a',
     title: 'title__3782a',
     body: 'body__3782a',
     footer: 'footer__3782a',

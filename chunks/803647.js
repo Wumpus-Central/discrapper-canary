@@ -4,14 +4,15 @@ var r = n(846027),
     a = n(314897),
     o = n(569545);
 function s(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     if (null == e) return;
-    let { streamType: n, guildId: s, channelId: l, ownerId: c } = e,
-        u = (0, o.V9)({
-            streamType: n,
-            guildId: s,
-            channelId: l,
-            ownerId: c
+    let { streamType: s, guildId: l, channelId: c, ownerId: u } = e,
+        d = (0, o.V9)({
+            streamType: s,
+            guildId: l,
+            channelId: c,
+            ownerId: u
         });
-    (c === a.default.getId() && r.Z.setGoLiveSource(null), i.g(u, t));
+    (u === a.default.getId() && r.Z.setGoLiveSource(null), i.g(d, t, n));
 }

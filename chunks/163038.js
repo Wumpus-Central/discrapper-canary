@@ -52,7 +52,7 @@ function F(e) {
                 null == i ||
                 s ||
                 null == l ||
-                (I.Z.openThreadAsSidebar({
+                (I.Z.openModReportAsSidebar({
                     channelId: r.id,
                     baseChannelId: l,
                     guildId: r.guild_id

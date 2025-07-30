@@ -1,99 +1,114 @@
-r.d(t, { default: () => b });
+r.d(t, { default: () => y });
 var n = r(255367);
 r(73800);
-var a = r(952265),
-    o = r(174609),
-    c = r(790527),
-    i = r(703656),
-    l = r(626135),
-    s = r(981631),
-    u = r(474936),
-    p = r(388032),
-    d = r(309368);
-function b(e) {
+var o = r(952265),
+    a = r(174609),
+    c = r(998076),
+    l = r(790527),
+    i = r(731502),
+    s = r(703656),
+    u = r(626135),
+    b = r(981631),
+    f = r(474936),
+    d = r(388032),
+    p = r(309368);
+function O(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                })
+            )),
+            n.forEach(function (t) {
+                var n;
+                ((n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n));
+            }));
+    }
+    return e;
+}
+function y(e) {
     var { onClose: t, analyticsSource: r } = e,
-        b = (function (e, t) {
+        y = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
-                a = (function (e, t) {
+                o = (function (e, t) {
                     if (null == e) return {};
                     var r,
                         n,
-                        a = {},
-                        o = Object.keys(e);
-                    for (n = 0; n < o.length; n++) ((r = o[n]), t.indexOf(r) >= 0 || (a[r] = e[r]));
-                    return a;
+                        o = {},
+                        a = Object.keys(e);
+                    for (n = 0; n < a.length; n++) ((r = a[n]), t.indexOf(r) >= 0 || (o[r] = e[r]));
+                    return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < o.length; n++) ((r = o[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]));
+                var a = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < a.length; n++) ((r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]));
             }
-            return a;
+            return o;
         })(e, ['onClose', 'analyticsSource']);
-    let O = (0, n.jsx)('img', {
-            className: d.art,
-            alt: 'HD Streaming Nitro Perk',
-            src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png'
-        }),
-        f = p.intl.string(p.t.ewxv3N),
-        y = p.intl.string(p.t.qlsCDA);
-    return (0, n.jsx)(
-        c.Z,
-        (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var r = null != arguments[t] ? arguments[t] : {},
-                    n = Object.keys(r);
-                ('function' == typeof Object.getOwnPropertySymbols &&
-                    (n = n.concat(
-                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                        })
-                    )),
-                    n.forEach(function (t) {
-                        var n;
-                        ((n = r[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: n,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0
-                                  })
-                                : (e[t] = n));
-                    }));
-            }
-            return e;
-        })(
-            {
-                title: f,
-                glowUp: y,
-                body: y,
-                artElement: O,
-                artContainerClassName: d.artContainer,
-                type: u.cd.STREAM_QUALITY_UPSELL,
-                analyticsLocation: {
-                    section: s.jXE.STREAM_UPSELL_MODAL,
-                    object: s.qAy.BUTTON_CTA
-                },
-                analyticsSource: r,
-                onClose: t,
-                onSubscribeClick: o.Z,
-                secondaryCTA: p.intl.string(p.t.ZnqyZ2),
-                onSecondaryClick: function () {
-                    ((0, o.Z)(),
-                        (0, a.pT)(),
-                        l.default.track(s.rMx.PREMIUM_PROMOTION_OPENED, {
-                            location_section: s.jXE.STREAM_UPSELL_MODAL,
-                            location_object: s.qAy.NAVIGATION_LINK
-                        }),
-                        (0, i.uL)(s.Z5c.APPLICATION_STORE));
-                },
-                showEnhancedUpsell: !0,
-                enableArtBoxShadow: !1,
-                headerClassName: d.header
-            },
-            b
-        )
-    );
+    let g = (0, n.jsx)('img', {
+        className: p.art,
+        alt: 'HD Streaming Nitro Perk',
+        src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png'
+    });
+    function m() {
+        ((0, a.Z)(),
+            (0, o.pT)(),
+            u.default.track(b.rMx.PREMIUM_PROMOTION_OPENED, {
+                location_section: b.jXE.STREAM_UPSELL_MODAL,
+                location_object: b.qAy.NAVIGATION_LINK
+            }),
+            (0, s.uL)(b.Z5c.APPLICATION_STORE));
+    }
+    let h = d.intl.string(d.t.ewxv3N),
+        j = d.intl.string(d.t.qlsCDA);
+    return (0, c.Z)({ location: 'StreamUpsellModal' })
+        ? (0, n.jsx)(
+              i.Z,
+              O(
+                  {
+                      onClose: t,
+                      handleLearnMore: m
+                  },
+                  y
+              )
+          )
+        : (0, n.jsx)(
+              l.Z,
+              O(
+                  {
+                      title: h,
+                      glowUp: j,
+                      body: j,
+                      artElement: g,
+                      artContainerClassName: p.artContainer,
+                      type: f.cd.STREAM_QUALITY_UPSELL,
+                      analyticsLocation: {
+                          section: b.jXE.STREAM_UPSELL_MODAL,
+                          object: b.qAy.BUTTON_CTA
+                      },
+                      analyticsSource: r,
+                      onClose: t,
+                      onSubscribeClick: a.Z,
+                      secondaryCTA: d.intl.string(d.t.ZnqyZ2),
+                      onSecondaryClick: m,
+                      showEnhancedUpsell: !0,
+                      enableArtBoxShadow: !1,
+                      headerClassName: p.header
+                  },
+                  y
+              )
+          );
 }

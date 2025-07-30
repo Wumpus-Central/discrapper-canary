@@ -127,8 +127,9 @@ function x(e, t) {
     (i && a === r) || (0, u.Z)(e);
 }
 function M(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    (k(e, t),
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+    (n && k(e, t),
         s.Z.dispatch({
             type: 'STREAM_STOP',
             streamKey: e,

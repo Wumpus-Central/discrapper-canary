@@ -1,24 +1,21 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => I });
 var r = n(255367),
     i = n(73800),
     a = n(442837),
     o = n(481060),
-    s = n(174609),
-    l = n(703656),
-    c = n(210887),
-    u = n(914010),
-    d = n(594174),
-    _ = n(626135),
-    f = n(424218),
-    p = n(403182),
-    h = n(63063),
-    m = n(74538),
-    g = n(790527),
-    E = n(474936),
-    b = n(981631),
-    y = n(388032),
-    O = n(290602);
-function v(e, t, n) {
+    s = n(210887),
+    l = n(914010),
+    c = n(594174),
+    u = n(424218),
+    d = n(403182),
+    _ = n(63063),
+    f = n(74538),
+    p = n(790527),
+    h = n(474936),
+    m = n(981631),
+    g = n(388032),
+    E = n(290602);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +28,7 @@ function v(e, t, n) {
         e
     );
 }
-function I(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,23 +39,23 @@ function I(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                b(e, t, n[t]);
             }));
     }
     return e;
 }
-function T(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = S(e, t);
+        i = v(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function S(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -67,64 +64,55 @@ function S(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-function A(e) {
-    var { onClose: t } = e,
-        n = T(e, ['onClose']);
-    let v = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        S = (0, a.e7)([c.Z], () => c.Z.theme),
-        A = (0, a.e7)([u.Z], () => u.Z.getGuildId()),
-        N = S === b.BRd.LIGHT ? 'light' : 'dark',
-        C = (0, r.jsx)('img', {
-            className: O.art,
+function I(e) {
+    var { onClose: t, handleLearnMore: n } = e,
+        b = O(e, ['onClose', 'handleLearnMore']);
+    let v = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
+        I = (0, a.e7)([s.Z], () => s.Z.theme),
+        T = (0, a.e7)([l.Z], () => l.Z.getGuildId()),
+        S = I === m.BRd.LIGHT ? 'light' : 'dark',
+        A = (0, r.jsx)('img', {
+            className: E.art,
             alt: 'File Upload Nitro Perk',
-            src: 'https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_'.concat(N, '_v2.png')
+            src: 'https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_'.concat(S, '_v2.png')
         }),
-        R = i.useMemo(() => {
-            let e = m.ZP.getUserMaxFileSize(v);
-            return (0, f.BU)(e / 1024, { useKibibytes: !0 });
+        N = i.useMemo(() => {
+            let e = f.ZP.getUserMaxFileSize(v);
+            return (0, u.BU)(e / 1024, { useKibibytes: !0 });
         }, [v]),
-        P = (0, p.iL)({
-            guildId: A,
+        C = (0, d.iL)({
+            guildId: T,
             onClick: () => {
-                window.open(h.Z.getArticleURL(b.BhN.NITRO_FAQ), '_blank');
+                window.open(_.Z.getArticleURL(m.BhN.NITRO_FAQ), '_blank');
             }
         }),
-        w = (0, r.jsx)('div', {
-            className: O.body,
+        R = (0, r.jsx)('div', {
+            className: E.body,
             children: (0, r.jsx)(o.Text, {
                 variant: 'text-sm/medium',
-                children: P
+                children: C
             })
         });
-    function D() {
-        ((0, s.Z)(),
-            t(),
-            _.default.track(b.rMx.PREMIUM_PROMOTION_OPENED, {
-                location_section: b.jXE.FILE_UPLOAD_UPSELL_MODAL,
-                location_object: b.qAy.NAVIGATION_LINK
-            }),
-            (0, l.uL)(b.Z5c.APPLICATION_STORE));
-    }
     return (0, r.jsx)(
-        g.Z,
-        I(
+        p.Z,
+        y(
             {
-                artElement: C,
-                artContainerClassName: O.artContainer,
+                artElement: A,
+                artContainerClassName: E.artContainer,
                 enableArtBoxShadow: !1,
-                type: E.cd.UPLOAD_ERROR_UPSELL,
-                title: y.intl.string(y.t['9C+41t']),
-                body: w,
-                context: y.intl.formatToPlainString(y.t.q5fTZm, { maxSize: R }),
-                glowUp: P,
-                analyticsLocation: { section: b.jXE.FILE_UPLOAD_POPOUT },
+                type: h.cd.UPLOAD_ERROR_UPSELL,
+                title: g.intl.string(g.t['9C+41t']),
+                body: R,
+                context: g.intl.formatToPlainString(g.t.q5fTZm, { maxSize: N }),
+                glowUp: C,
+                analyticsLocation: { section: m.jXE.FILE_UPLOAD_POPOUT },
                 onClose: t,
-                subscriptionTier: E.Si.TIER_2,
-                secondaryCTA: y.intl.string(y.t.ZnqyZ2),
-                onSecondaryClick: D,
+                subscriptionTier: h.Si.TIER_2,
+                secondaryCTA: g.intl.string(g.t.ZnqyZ2),
+                onSecondaryClick: n,
                 showEnhancedUpsell: !0
             },
-            n
+            b
         )
     );
 }

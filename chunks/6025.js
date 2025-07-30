@@ -62,6 +62,27 @@ let u = {
                 channelId: n
             }));
     },
+    openModReportAsSidebar(e) {
+        let { guildId: t, baseChannelId: n, channelId: o, flash: c = !0, details: u } = e;
+        (r.Z.dispatch({
+            type: 'SIDEBAR_VIEW_CHANNEL',
+            sidebarType: l.tI.VIEW_MOD_REPORT,
+            baseChannelId: n,
+            channelId: o,
+            details: u
+        }),
+            (null == u ? void 0 : u.initialMessageId) != null
+                ? i.Z.jumpToMessage({
+                      channelId: o,
+                      messageId: u.initialMessageId,
+                      flash: c,
+                      jumpType: a.SR.INSTANT
+                  })
+                : s.Z.fetchMessages({
+                      guildId: t,
+                      channelId: o
+                  }));
+    },
     openThreadAsSidebar(e) {
         let { guildId: t, baseChannelId: n, channelId: o, flash: c = !0, details: u } = e;
         (r.Z.dispatch({

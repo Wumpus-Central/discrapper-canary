@@ -79,7 +79,7 @@ function Y(e) {
     (0, d.ZP)(() => {
         !$ && (null == X ? void 0 : X.isGuildStageVoice()) && !et && ((0, c.rn)(K), s.Z.updateStageStreamSize(K.channelId, !1));
     });
-    let ei = (0, E.Z)(k.Yn.STREAM, t.user.id);
+    let ei = (0, E.c)(k.Yn.STREAM, t.user.id);
     if (
         (l.useEffect(() => {
             H.info(
@@ -106,7 +106,8 @@ function Y(e) {
         });
     if (null != ei || (null == Q ? void 0 : Q.state) === L.jm8.FAILED)
         return (0, r.jsx)(R.Z, {
-            avError: ei,
+            avError: null == ei ? void 0 : ei.type,
+            avErrorContext: ei,
             selected: n,
             stream: t.stream,
             width: D

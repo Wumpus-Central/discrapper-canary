@@ -1,69 +1,58 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => b });
 var r = n(255367),
     i = n(73800),
     l = n(399606),
-    a = n(755721),
-    o = n(481060),
-    s = n(367907),
-    c = n(592125),
-    u = n(934415),
-    d = n(572004),
-    p = n(63063),
-    h = n(158222),
-    f = n(523900),
-    m = n(981631),
-    g = n(388032),
-    b = n(684885);
-function _(e) {
+    a = n(481060),
+    o = n(367907),
+    s = n(592125),
+    c = n(934415),
+    u = n(572004),
+    d = n(63063),
+    p = n(158222),
+    h = n(523900),
+    f = n(981631),
+    m = n(388032),
+    g = n(684885);
+function b(e) {
     let { threadId: t } = e,
-        n = (0, l.e7)([c.Z], () => c.Z.getChannel(t)),
-        _ = (0, l.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.parent_id)),
-        y = i.useCallback(() => {
-            null != n && null != _ && ((0, s.yw)(m.rMx.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }), (0, d.JG)((0, u.EO)(n, _)));
-        }, [n, _]);
+        n = (0, l.e7)([s.Z], () => s.Z.getChannel(t)),
+        b = (0, l.e7)([s.Z], () => s.Z.getChannel(null == n ? void 0 : n.parent_id)),
+        _ = i.useCallback(() => {
+            null != n && null != b && ((0, o.yw)(f.rMx.MEDIA_POST_SHARE_PROMPT_CLICKED, { media_post_id: n.id }), (0, u.JG)((0, c.EO)(n, b)));
+        }, [n, b]);
     return (0, r.jsxs)('div', {
-        className: b.sharePromptContainer,
+        className: g.sharePromptContainer,
         children: [
-            (0, r.jsx)(f.Z, {}),
+            (0, r.jsx)(h.Z, {}),
             (0, r.jsxs)('div', {
-                className: b.sharePromptContent,
+                className: g.sharePromptContent,
                 children: [
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: g.intl.string(g.t['5uAO7e'])
+                        children: m.intl.string(m.t['5uAO7e'])
                     }),
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-default',
-                        children: g.intl.format(g.t.WnfPV1, { helpArticleUrl: p.Z.getCreatorSupportArticleURL(m.BhN.MEDIA_CHANNEL) })
+                        children: m.intl.format(m.t.WnfPV1, { helpArticleUrl: d.Z.getCreatorSupportArticleURL(f.BhN.MEDIA_CHANNEL) })
                     }),
-                    (0, r.jsx)(o.LZC, { size: 4 }),
-                    (0, r.jsxs)(a.zx, {
-                        className: b.sharePromptCta,
-                        innerClassName: b.ctaContent,
-                        onClick: y,
-                        children: [
-                            (0, r.jsx)(o.xPt, {
-                                color: 'currentColor',
-                                size: 'xs'
-                            }),
-                            (0, r.jsx)(o.Text, {
-                                variant: 'text-sm/medium',
-                                color: 'always-white',
-                                children: g.intl.string(g.t.C5UQCw)
-                            })
-                        ]
+                    (0, r.jsx)(a.LZC, { size: 4 }),
+                    (0, r.jsx)(a.zxk, {
+                        text: m.intl.string(m.t.C5UQCw),
+                        variant: 'primary',
+                        icon: a.xPt,
+                        onClick: _
                     })
                 ]
             }),
-            (0, r.jsx)(o.P3F, {
-                className: b.closeButton,
+            (0, r.jsx)(a.P3F, {
+                className: g.closeButton,
                 onClick: () => {
-                    (0, h.fn)(t);
+                    (0, p.fn)(t);
                 },
-                'aria-label': g.intl.string(g.t['0+xZHx']),
-                children: (0, r.jsx)(o.Dio, {
+                'aria-label': m.intl.string(m.t['0+xZHx']),
+                children: (0, r.jsx)(a.Dio, {
                     color: 'currentColor',
                     size: 'xs'
                 })

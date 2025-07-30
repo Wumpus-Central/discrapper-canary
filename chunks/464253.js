@@ -53,17 +53,21 @@ class m {
             }));
     }
     _onStreamEnd(e) {
+        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         if (this.streamKey === e)
             switch (((this.streamKey = null), this.mode)) {
                 case 'application':
                     this.director.onStreamEnd();
                     break;
                 case 'verbatim-source':
-                    this._onDirectorAction({ type: s.A.STOP });
+                    this._onDirectorAction({
+                        type: s.A.STOP,
+                        alsoClose: t
+                    });
                     break;
                 default:
-                    var t;
-                    throw Error('unknown streaming mode: '.concat(null != (t = this.mode) ? t : '(none)'));
+                    var n;
+                    throw Error('unknown streaming mode: '.concat(null != (n = this.mode) ? n : '(none)'));
             }
     }
     _onStreamKilled(e) {
@@ -80,11 +84,12 @@ class m {
             }
     }
     _onDirectorAction(e) {
-        let t = c.Z.getCurrentUserActiveStream(),
-            n = l.Z.getState();
+        var t, n;
+        let r = c.Z.getCurrentUserActiveStream(),
+            o = l.Z.getState();
         switch (e.type) {
             case s.A.STREAM:
-                if ((null != t && (0, a.tK)(t, !1), e.sourceId.startsWith('camera') && null != e.audioSourceId)) {
+                if ((null != r && (0, a.tK)(r, !1), e.sourceId.startsWith('camera') && null != e.audioSourceId)) {
                     let t = e.sourceId.split(':')[1];
                     i.Z.setGoLiveSource({
                         cameraSettings: {
@@ -92,33 +97,31 @@ class m {
                             audioDeviceGuid: e.audioSourceId
                         },
                         qualityOptions: {
-                            preset: n.preset,
-                            resolution: n.resolution,
-                            frameRate: n.fps
+                            preset: o.preset,
+                            resolution: o.resolution,
+                            frameRate: o.fps
                         },
                         context: p.Yn.STREAM
                     });
-                } else {
-                    var r;
+                } else
                     i.Z.setGoLiveSource({
                         desktopSettings: {
                             sourceId: e.sourceId,
-                            sound: null == (r = e.sound) || r
+                            sound: null == (t = e.sound) || t
                         },
                         qualityOptions: {
-                            preset: n.preset,
-                            resolution: n.resolution,
-                            frameRate: n.fps
+                            preset: o.preset,
+                            resolution: o.resolution,
+                            frameRate: o.fps
                         },
                         context: p.Yn.STREAM
                     });
-                }
                 break;
             case s.A.PAUSE:
-                null != t && (0, a.tK)(t, !0);
+                null != r && (0, a.tK)(r, !0);
                 break;
             case s.A.STOP:
-                null != t && (0, _.Z)(t);
+                null != r && (0, _.Z)(r, !0, null == (n = e.alsoClose) || n);
                 break;
             default:
                 throw Error('unhandled stream action: '.concat(e.type));
@@ -129,16 +132,17 @@ class m {
         null != t && (0, a.tK)(t, e);
     }
     _onCaptureEnded() {
+        let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
         switch (this.mode) {
             case 'application':
                 this._onCapturePaused(!0);
                 break;
             case 'verbatim-source':
-                null != this.streamKey && this._onStreamEnd(this.streamKey);
+                null != this.streamKey && this._onStreamEnd(this.streamKey, e);
                 break;
             default:
-                var e;
-                throw Error('unknown streaming mode: '.concat(null != (e = this.mode) ? e : '(none)'));
+                var t;
+                throw Error('unknown streaming mode: '.concat(null != (t = this.mode) ? t : '(none)'));
         }
     }
     constructor() {
@@ -178,8 +182,8 @@ class m {
             }),
             r.Z.subscribe('MEDIA_ENGINE_SET_GO_LIVE_SOURCE', (e) => {
                 var t;
-                let { settings: n } = e;
-                ((null == n ? void 0 : n.context) === p.Yn.STREAM && (null == n ? void 0 : n.desktopSettings) == null && (null == n ? void 0 : n.cameraSettings) == null && this._onCaptureEnded(), (null == n || null == (t = n.desktopSettings) ? void 0 : t.sound) != null && (this.director.sound = n.desktopSettings.sound));
+                let { settings: n, errorCode: r } = e;
+                ((null == n ? void 0 : n.context) === p.Yn.STREAM && (null == n ? void 0 : n.desktopSettings) == null && (null == n ? void 0 : n.cameraSettings) == null && this._onCaptureEnded(null == r), (null == n || null == (t = n.desktopSettings) ? void 0 : t.sound) != null && (this.director.sound = n.desktopSettings.sound));
             }));
     }
 }

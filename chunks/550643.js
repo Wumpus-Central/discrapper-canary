@@ -129,7 +129,8 @@ class O extends i.Z {
                 RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: this.updateActiveErrors,
                 VIDEO_STREAM_READY_TIMEOUT: this.updateActiveErrors,
                 CLEAR_VIDEO_STREAM_READY_TIMEOUT: this.updateActiveErrors,
-                REPORT_AV_ERROR: this.handleReportAVError
+                REPORT_AV_ERROR: this.handleReportAVError,
+                STREAM_CLOSE: this.updateActiveErrors
             }));
     }
 }

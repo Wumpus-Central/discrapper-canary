@@ -402,6 +402,12 @@ class ts extends i.PureComponent {
                     let n = (null == t ? void 0 : t.isForumLikeChannel()) ? G.Z : eA.Z;
                     e = (0, r.jsx)(n, { channelId: i.channelId });
                     break;
+                case eO.tI.VIEW_MOD_REPORT:
+                    e = (0, r.jsx)(eA.Z, {
+                        channelId: i.channelId,
+                        baseChannelId: i.baseChannelId
+                    });
+                    break;
                 case eO.tI.VIEW_CHANNEL:
                 case eO.tI.VIEW_MESSAGE_REQUEST:
                 default:

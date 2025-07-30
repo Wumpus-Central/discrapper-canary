@@ -1,5 +1,5 @@
 let r, i, a, o, s, l;
-(n.d(t, { Z: () => ea }), n(388685), n(539854));
+(n.d(t, { Z: () => eo }), n(388685), n(539854));
 var c,
     u = n(442837),
     d = n(570140),
@@ -168,6 +168,25 @@ function Y(e) {
         }
 }
 function W(e) {
+    let { settings: t, endReason: n, errorCode: i } = e;
+    if ((null == t ? void 0 : t.desktopSettings) != null || (null == t ? void 0 : t.cameraSettings) != null || null == i) return !1;
+    let a = !1;
+    for (let e in o) {
+        let t = r.get(e);
+        null != t &&
+            (r.set(
+                e,
+                D(P({}, t), {
+                    state: N.jm8.FAILED,
+                    endReason: n,
+                    errorCode: i
+                })
+            ),
+            (a = !0));
+    }
+    return a;
+}
+function K(e) {
     let { existing: t, content: n } = e;
     if (null == n || ((s = null == (l = Y(n)) ? void 0 : l.pid), !t)) return !1;
     let r = (0, g.Z)(n),
@@ -183,11 +202,11 @@ function W(e) {
     }
     return a;
 }
-function K(e) {
+function z(e) {
     let { streamKey: t } = e;
     o[t] = null;
 }
-function z(e) {
+function q(e) {
     let { streamKey: t, region: n, viewerIds: i, paused: o } = e;
     (r.set(t, D(P({}, (0, p.my)(t)), { state: o ? N.jm8.PAUSED : N.jm8.ACTIVE })),
         (a[t] = {
@@ -196,11 +215,11 @@ function z(e) {
             viewerIds: i
         }));
 }
-function q(e) {
+function X(e) {
     let { streamKey: t } = e;
     G(t);
 }
-function X(e) {
+function Q(e) {
     let { id: t, channelId: n } = e;
     ((L = t),
         Array.from(r.values()).forEach((e) => {
@@ -208,7 +227,7 @@ function X(e) {
         }),
         null != t && (0, p.DB)(t) && t.includes(b.default.getId()) && (x[n] = !1));
 }
-function Q(e) {
+function J(e) {
     let { streamKey: t, unavailable: i, reason: o } = e;
     delete a[t];
     let s = r.get(t);
@@ -226,20 +245,20 @@ function Q(e) {
                 n(e);
             }),
             (l = N.jm8.ENDED));
-    }
+    } else s.state === N.jm8.FAILED && o === N.si2.USER_REQUESTED && (l = N.jm8.FAILED);
     (r.set(t, D(P({}, s), { state: l })), l === N.jm8.ENDED && L !== t && G(t));
 }
-function J(e) {
+function $(e) {
     let { streamKey: t } = e,
         n = r.get(t);
     if (null == n) return !1;
     r.set(t, D(P({}, n), { state: N.jm8.FAILED }));
 }
-function $(e) {
+function ee(e) {
     let { streamKey: t, state: n } = e;
     if (null == t) return !1;
     let i = r.get(t);
-    if (null == i || i.state === N.jm8.ENDED) return !1;
+    if (null == i || i.state === N.jm8.ENDED || (i.state === N.jm8.FAILED && i.ownerId === b.default.getId())) return !1;
     let a = i.state;
     switch (n) {
         case N.hes.DISCONNECTED:
@@ -251,25 +270,25 @@ function $(e) {
     if (a === i.state) return !1;
     r.set(t, D(P({}, i), { state: a }));
 }
-function ee(e) {
+function et(e) {
     let { channelId: t, selfStreamHidden: n } = e;
     ((0, p.DB)(L) && (null == L ? void 0 : L.includes(b.default.getId())) && !1 === x[t] && !0 === n && (L = null), (x[t] = n));
 }
-function et(e) {
+function en(e) {
     let { intent: t } = e;
     M = t;
 }
-function en(e, t) {
+function er(e, t) {
     let n = y.Z.getBasicChannel(t);
     return e === C.lo.CALL || (null != n && I.Z.canBasicChannel(N.S7T.VIEW_CHANNEL, n));
 }
-function er(e) {
-    if (en(e.streamType, e.channelId)) return !0;
+function ei(e) {
+    if (er(e.streamType, e.channelId)) return !0;
     let t = y.Z.getBasicChannel(e.channelId);
     return null != t && (0, h.p9)(t, A.Z, O.Z, I.Z, _.Z)[0];
 }
 k();
-class ei extends (c = u.ZP.PersistedStore) {
+class ea extends (c = u.ZP.PersistedStore) {
     initialize(e) {
         (this.syncWith([I.Z], () => !0), this.waitFor(f.ZP, I.Z), (null == e ? void 0 : e.selfStreamParticipantsHidden) !== void 0 && Object.assign(x, null == e ? void 0 : e.selfStreamParticipantsHidden));
     }
@@ -331,29 +350,29 @@ class ei extends (c = u.ZP.PersistedStore) {
         var t;
         if (!(0, m.Z)(v.Z)) return null;
         let n = i[e];
-        return null == n ? null : null != (t = Object.values(n).find((e) => er(e))) ? t : null;
+        return null == n ? null : null != (t = Object.values(n).find((e) => ei(e))) ? t : null;
     }
     getAnyDiscoverableStreamForUser(e) {
         var t;
         if (!(0, m.Z)(v.Z)) return null;
         let n = i[e];
-        return null == n ? null : null != (t = Object.values(n).find((e) => er(e) && !1 !== e.discoverable)) ? t : null;
+        return null == n ? null : null != (t = Object.values(n).find((e) => ei(e) && !1 !== e.discoverable)) ? t : null;
     }
     getStreamForUser(e, t) {
         var n;
         if (!(0, m.Z)(v.Z)) return null;
         let r = null == (n = i[e]) ? void 0 : n[null != t ? t : N.kod];
-        return null != r && er(r) ? r : null;
+        return null != r && ei(r) ? r : null;
     }
     getRTCStream(e) {
         var t;
         return (0, m.Z)(v.Z) && null != (t = a[e]) ? t : null;
     }
     getAllApplicationStreams() {
-        return (0, m.Z)(v.Z) ? B().filter((e) => null != e && en(e.streamType, e.channelId)) : [];
+        return (0, m.Z)(v.Z) ? B().filter((e) => null != e && er(e.streamType, e.channelId)) : [];
     }
     getAllApplicationStreamsForChannel(e) {
-        return (0, m.Z)(v.Z) ? B().filter((t) => null != t && t.channelId === e && en(t.streamType, t.channelId)) : [];
+        return (0, m.Z)(v.Z) ? B().filter((t) => null != t && t.channelId === e && er(t.streamType, t.channelId)) : [];
     }
     getViewerIds(e) {
         if (!(0, m.Z)(v.Z)) return [];
@@ -380,23 +399,24 @@ class ei extends (c = u.ZP.PersistedStore) {
               };
     }
 }
-(R(ei, 'displayName', 'ApplicationStreamingStore'), R(ei, 'persistKey', 'ApplicationStreamingStore'));
-let ea = new ei(d.Z, {
-    NATIVE_SCREEN_SHARE_PICKER_UPDATE: W,
+(R(ea, 'displayName', 'ApplicationStreamingStore'), R(ea, 'persistKey', 'ApplicationStreamingStore'));
+let eo = new ea(d.Z, {
+    MEDIA_ENGINE_SET_GO_LIVE_SOURCE: W,
+    NATIVE_SCREEN_SHARE_PICKER_UPDATE: K,
     OVERLAY_INITIALIZE: V,
     VOICE_STATE_UPDATES: F,
     STREAM_WATCH: Z,
     STREAM_START: H,
-    STREAM_STOP: K,
-    STREAM_CREATE: z,
-    STREAM_UPDATE: z,
-    STREAM_TIMED_OUT: J,
-    STREAM_DELETE: Q,
-    STREAM_CLOSE: q,
-    STREAM_UPDATE_SELF_HIDDEN: ee,
-    SET_STREAM_APP_INTENT: et,
-    RTC_CONNECTION_STATE: $,
-    CHANNEL_RTC_SELECT_PARTICIPANT: X,
+    STREAM_STOP: z,
+    STREAM_CREATE: q,
+    STREAM_UPDATE: q,
+    STREAM_TIMED_OUT: $,
+    STREAM_DELETE: J,
+    STREAM_CLOSE: X,
+    STREAM_UPDATE_SELF_HIDDEN: et,
+    SET_STREAM_APP_INTENT: en,
+    RTC_CONNECTION_STATE: ee,
+    CHANNEL_RTC_SELECT_PARTICIPANT: Q,
     CONNECTION_OPEN: k,
     CONNECTION_CLOSED: k,
     LOGOUT: k

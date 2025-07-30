@@ -52,15 +52,16 @@ function d() {
 }
 function _(e) {
     var t;
-    let { channelId: n } = (0, i.my)(e),
-        a = l.Z.getRTCConnection(e);
+    let { channelId: n, ownerId: a } = (0, i.my)(e),
+        o = l.Z.getRTCConnection(e);
     return u(
         {
             channelId: n,
-            mediaSessionId: null != (t = null == a ? void 0 : a.getMediaSessionId()) ? t : void 0,
-            rtcConnectionId: null == a ? void 0 : a.getRTCConnectionId(),
+            mediaSessionId: null != (t = null == o ? void 0 : o.getMediaSessionId()) ? t : void 0,
+            rtcConnectionId: null == o ? void 0 : o.getRTCConnectionId(),
             mediaContext: r.Yn.STREAM,
-            streamKey: e
+            streamKey: e,
+            userId: a
         },
         f()
     );

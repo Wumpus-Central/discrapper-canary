@@ -16,6 +16,5 @@ e.exports = {
     authorName: 'authorName__419e3',
     mediaChannelIcon: 'mediaChannelIcon__419e3',
     channelName: 'channelName__419e3',
-    subscribeButton: 'subscribeButton__419e3',
     spoiler: 'spoiler__419e3'
 };

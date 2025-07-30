@@ -12,7 +12,6 @@ e.exports = {
     contentImageContainer: 'contentImageContainer_c6ad88',
     previewEmbedImage: 'previewEmbedImage_c6ad88',
     serverSubPill: 'serverSubPill_c6ad88',
-    addChannelButton: 'addChannelButton_c6ad88',
     contentRowTwo: 'contentRowTwo_c6ad88',
     contentVideoContainer: 'contentVideoContainer_c6ad88',
     contentTextContainer: 'contentTextContainer_c6ad88',

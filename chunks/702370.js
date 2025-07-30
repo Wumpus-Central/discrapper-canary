@@ -337,7 +337,7 @@ let eN = (e) => {
                                     orbIconHook: () =>
                                         (0, r.jsx)(R.Z, {
                                             className: eE.orbIconAligned,
-                                            shouldUseThemeColor: a
+                                            shouldUseThemeColor: a && !t
                                         })
                                 }),
                                 fullWidth: !0
