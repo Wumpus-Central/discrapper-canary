@@ -12,7 +12,6 @@ e.exports = {
     giftRecipientSection: 'giftRecipientSection_cd2ff7',
     giftRecipientInputWrapper: 'giftRecipientInputWrapper_cd2ff7',
     giftRecipientInputError: 'giftRecipientInputError_cd2ff7',
-    sendToRecipientButton: 'sendToRecipientButton_cd2ff7',
     confirmation: 'confirmation_cd2ff7',
     seasonalConfirmationPadding: 'seasonalConfirmationPadding_cd2ff7',
     giftCodeSection: 'giftCodeSection_cd2ff7'

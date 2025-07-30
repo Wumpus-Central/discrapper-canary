@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(699516),
     u = n(594174),
     d = n(981631),
-    _ = n(998587);
-let f = [];
+    f = n(998587);
+let _ = [];
 function p(e, t) {
     let n = (0, s.Z)(e, t);
     return i.useMemo(() => {
@@ -25,7 +25,7 @@ function p(e, t) {
 function h(e) {
     let { application: t } = e;
     return (0, r.jsxs)('div', {
-        className: _.subtext,
+        className: f.subtext,
         children: [
             (0, r.jsx)(l.Z, {
                 game: t,
@@ -36,14 +36,14 @@ function h(e) {
     });
 }
 function m(e) {
-    let { menuItemId: t, user: n, label: s, gameRelationships: _, onClick: m, color: g } = e,
+    let { menuItemId: t, user: n, label: s, gameRelationships: f, onClick: m, color: g } = e,
         { id: E, bot: b } = n,
         y =
             (0, a.e7)([u.default], () => {
                 var e;
                 return (null == (e = u.default.getCurrentUser()) ? void 0 : e.id) === E;
             }) || b,
-        O = y ? f : _,
+        O = y ? _ : f,
         [v, I] = i.useState(!1),
         T = i.useCallback(() => I(!0), []),
         S = i.useMemo(

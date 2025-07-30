@@ -11,15 +11,15 @@
     n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(564854),
+    a = n(778141),
     o = n(442837),
     s = n(481060),
     l = n(100527),
     c = n(335131),
     u = n(594190),
     d = n(98278),
-    _ = n(507808),
-    f = n(594174),
+    f = n(507808),
+    _ = n(594174),
     p = n(78839),
     h = n(617136),
     m = n(915750),
@@ -91,7 +91,7 @@ function x(e, t) {
 }
 function M(e) {
     let { quest: t, questContent: n, questContentPosition: r, questContentRowIndex: a, sourceQuestContent: s } = e,
-        l = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
+        l = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
         c = null == l ? void 0 : l.hasVerifiedEmailOrPhone(),
         u = null == l ? void 0 : l.verified,
         d = (0, h.O5)();
@@ -195,7 +195,7 @@ function G(e) {
 }
 function B(e) {
     var t;
-    let { quest: n, progressState: r, isCollectibleQuest: a, questContent: o, questContentPosition: s, questContentRowIndex: u, inGiftInventory: f, isVideoQuest: p, inGameQuest: y, sourceQuestContent: O } = e,
+    let { quest: n, progressState: r, isCollectibleQuest: a, questContent: o, questContentPosition: s, questContentRowIndex: u, inGiftInventory: _, isVideoQuest: p, inGameQuest: y, sourceQuestContent: O } = e,
         v = M({
             quest: n,
             questContent: o,
@@ -209,7 +209,7 @@ function B(e) {
             (0, d.$)();
         }, []),
         w = i.useCallback(() => {
-            ((0, _.Y)({
+            ((0, f.Y)({
                 pageType: C.ZY5.GLOBAL_DISCOVERY_QUESTS,
                 sectionType: C.jXE.QUEST_TILE_CTA,
                 ctaObject: C.qAy.CTA_TO_ORBS_SHOP
@@ -263,7 +263,7 @@ function B(e) {
                 );
             case b.OH.ACCEPTED:
             case b.OH.IN_PROGRESS:
-                if (I && f)
+                if (I && _)
                     return {
                         text: P.intl.string(P.t.Cfye4u),
                         tooltipText: null,
@@ -334,7 +334,7 @@ function B(e) {
                     };
                 return x(D({}, i), { text: P.intl.string(P.t.bAGFz8) });
         }
-    }, [r, p, I, f, v, a, n, o, s, u, L, S, A, w, y, k, O]);
+    }, [r, p, I, _, v, a, n, o, s, u, L, S, A, w, y, k, O]);
 }
 function V() {
     return (0, o.e7)([y.Z], () => {
@@ -371,7 +371,7 @@ function F(e) {
             };
     }
     let d = (null == (t = r.userStatus) ? void 0 : t.claimedAt) != null,
-        _ = !u && null != r.userStatus && (0, g.zE)(r.userStatus, O.jn.QUEST_BAR);
+        f = !u && null != r.userStatus && (0, g.zE)(r.userStatus, O.jn.QUEST_BAR);
     return d
         ? {
               isQuestBarVisible: !1,
@@ -383,7 +383,7 @@ function F(e) {
                 reason: 'quest_expired'
             }
           : i
-            ? _
+            ? f
                 ? {
                       isQuestBarVisible: !1,
                       reason: 'quest_dismissed'

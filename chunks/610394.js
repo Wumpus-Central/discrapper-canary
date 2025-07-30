@@ -14,8 +14,8 @@ var r,
     c = n(353926),
     u = n(594190),
     d = n(928518),
-    _ = n(314897),
-    f = n(355863),
+    f = n(314897),
+    _ = n(355863),
     p = n(626135),
     h = n(998502),
     m = n(145597),
@@ -305,7 +305,7 @@ async function ed() {
     }
     return null;
 }
-async function e_(e) {
+async function ef(e) {
     L.verbose('Creating OOP Host Window for pid '.concat(e));
     try {
         let t = new Date().getTime();
@@ -332,7 +332,7 @@ async function e_(e) {
     }
     return (ep(e), '');
 }
-function ef() {
+function e_() {
     (L.verbose('Destroying OOP host window'), j.resetGPUBoosts());
     try {
         var e;
@@ -437,7 +437,7 @@ let eI = (() => {
             var e, t, n;
             await h.ZP.ensureModule('discord_desktop_overlay');
             let r = h.ZP.requireModule('discord_desktop_overlay');
-            (null == r || null == (e = r.init) || e.call(r), r.setCaptureZoneCallback(em), r.setHostWindowCallbacks(e_, ef, eh), r.setFocusCallback(eE), null == (t = r.setFocusLostCallback) || t.call(r, eb), null == (n = r.setSuccessfullyShownCallback) || n.call(r, ev), (U = r), (0, m.setOutOfProcessSupport)(!0), el(), L.info('OverlayV3 Module Loaded'));
+            (null == r || null == (e = r.init) || e.call(r), r.setCaptureZoneCallback(em), r.setHostWindowCallbacks(ef, e_, eh), r.setFocusCallback(eE), null == (t = r.setFocusLostCallback) || t.call(r, eb), null == (n = r.setSuccessfullyShownCallback) || n.call(r, ev), (U = r), (0, m.setOutOfProcessSupport)(!0), el(), L.info('OverlayV3 Module Loaded'));
         } catch (e) {
             throw (L.error('failed loading overlay module', e), (0, m.setOutOfProcessSupport)(!1), (0, g.V6)(e, b.gl.OutOfProcess, { extra: et(null != V ? V : m.UNSET_PID, 'module_load') }), e);
         }
@@ -515,7 +515,7 @@ function eZ(e) {
 }
 class eH extends (r = i.ZP.Store) {
     initialize() {
-        (this.waitFor(u.ZP, _.default, c.Z), this.syncWith([c.Z], eV));
+        (this.waitFor(u.ZP, f.default, c.Z), this.syncWith([c.Z], eV));
     }
     isInputLocked(e) {
         return !M.has(e);
@@ -530,15 +530,15 @@ class eH extends (r = i.ZP.Store) {
         return x.has(e);
     }
     getWidgetByType(e) {
-        let t = f.Z.getLayout(S.$S);
+        let t = _.Z.getLayout(S.$S);
         if (null != t) {
             let r = t.widgets.find((t) => {
-                let n = f.Z.getWidget(t);
+                let n = _.Z.getWidget(t);
                 return null != n && n.type === e ? t : null;
             });
             if (null != r) {
                 var n;
-                return null != (n = f.Z.getWidget(r)) ? n : null;
+                return null != (n = _.Z.getWidget(r)) ? n : null;
             }
         }
         return null;

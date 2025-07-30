@@ -8,8 +8,8 @@ var r = n(772848),
     c = n(837268),
     u = n(355863),
     d = n(449224),
-    _ = n(451478),
-    f = n(434529),
+    f = n(451478),
+    _ = n(434529),
     p = n(145597),
     h = n(765250),
     m = n(981631);
@@ -255,7 +255,7 @@ let O = new o.Z('OverlayActionCreators'),
                 c = u.Z.getWidgetDefaultSettings(m.Odu.GUILDS),
                 d = u.Z.getWidgetDefaultSettings(m.Odu.TEXT);
             if (((0, s.JS)(m.Odu.TEXT, { pinned: e }), 0 === n.length || null == i || null == a || null == o || null == l || null == c || null == d)) return;
-            let g = _.Z.windowSize(),
+            let g = f.Z.windowSize(),
                 b = {
                     width: 0,
                     height: 0
@@ -285,21 +285,21 @@ let O = new o.Z('OverlayActionCreators'),
                     let { type: t, id: n, anchor: r, size: i } = e;
                     switch (t) {
                         case m.Odu.TEXT:
-                            ((b = (0, f.w_)(i, g)), (0, h.E9)(n));
+                            ((b = (0, _.w_)(i, g)), (0, h.E9)(n));
                             break;
                         case m.Odu.GUILDS:
-                            ((O = (0, f.vS)(r, i, g)), (v = (0, f.w_)(i, g)), (0, h.E9)(n));
+                            ((O = (0, _.vS)(r, i, g)), (v = (0, _.w_)(i, g)), (0, h.E9)(n));
                             break;
                         case m.Odu.GUILDS_TEXT:
-                            ((I = (0, f.vS)(r, i, g)), (T = (0, f.w_)(i, g)), (0, h.E9)(n));
+                            ((I = (0, _.vS)(r, i, g)), (T = (0, _.w_)(i, g)), (0, h.E9)(n));
                     }
                 }),
                 e)
             ) {
                 let e = 'auto' === T.width ? l.minSize.width : T.width;
                 e -= c.minSize.width;
-                let [n, i] = (0, f.o4)(I, y(E({}, T), { width: c.minSize.width }), g),
-                    [a, o] = (0, f.uq)(I, y(E({}, T), { width: e }), g, {
+                let [n, i] = (0, _.o4)(I, y(E({}, T), { width: c.minSize.width }), g),
+                    [a, o] = (0, _.uq)(I, y(E({}, T), { width: e }), g, {
                         x: 10,
                         y: 10
                     }),
@@ -328,7 +328,7 @@ let O = new o.Z('OverlayActionCreators'),
             } else {
                 let e = 'auto' === b.width ? d.minSize.width : b.width;
                 e += c.minSize.width;
-                let [n, i] = (0, f.o4)(
+                let [n, i] = (0, _.o4)(
                         O,
                         {
                             height: v.height,

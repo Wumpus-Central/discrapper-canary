@@ -34,18 +34,18 @@ function u(e) {
         )
     );
     let d = r.useRef(!0),
-        _ = {
+        f = {
             contextKey: u,
             modalKey: c,
             onCloseCallback: i
         },
-        f = r.useRef(_);
+        _ = r.useRef(f);
     return (
         r.useEffect(() => {
-            f.current = _;
+            _.current = f;
         }),
         r.useLayoutEffect(() => {
-            let { contextKey: e, modalKey: r, onCloseCallback: i } = f.current;
+            let { contextKey: e, modalKey: r, onCloseCallback: i } = _.current;
             (d.current || (0, s.o)(r, t, n, i, e), (d.current = !1));
         }, [t, n]),
         null

@@ -1,4 +1,4 @@
-n.d(t, { P: () => f });
+n.d(t, { P: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(657707),
@@ -60,14 +60,14 @@ function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -76,7 +76,7 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-function f(e) {
+function _(e) {
     var { colorMix: t = !1, 'aria-label': n } = e,
         s = d(e, ['colorMix', 'aria-label']);
     return (0, r.jsx)(

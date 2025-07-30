@@ -8,8 +8,8 @@ var r,
     c = n(455199),
     u = n(601070),
     d = n(569471),
-    _ = n(723170),
-    f = n(23750),
+    f = n(723170),
+    _ = n(23750),
     p = n(592125),
     h = n(984933),
     m = n(375954),
@@ -49,7 +49,7 @@ let C = {},
 function U() {
     let e = E.ZP.getFlattenedGuildIds().flatMap((e) => h.ZP.getSelectableChannelIds(e)),
         t = u.Z.getAllActiveJoinedThreads(),
-        n = (e) => !!S.TPd.GUILD_TEXTUAL.has(e.type) && (b.ZP.allowAllMessages(e) || (0, _.J)(e, d.Z, b.ZP, p.Z) === A.iN.ALL_MESSAGES),
+        n = (e) => !!S.TPd.GUILD_TEXTUAL.has(e.type) && (b.ZP.allowAllMessages(e) || (0, f.J)(e, d.Z, b.ZP, p.Z) === A.iN.ALL_MESSAGES),
         r = [];
     for (let t of e) {
         let e = p.Z.getBasicChannel(t);
@@ -132,7 +132,7 @@ function F() {
     }
 }
 function Z(e) {
-    if (e instanceof f.ZP) return e;
+    if (e instanceof _.ZP) return e;
     let t = m.Z.getMessage(e.channel_id, e.id);
     return null != t ? t : (0, l.e5)(e);
 }

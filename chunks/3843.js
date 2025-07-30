@@ -7,8 +7,8 @@ var r = n(179560),
     c = o('Object.prototype.toString'),
     u = n(195653)(),
     d = 'undefined' == typeof globalThis ? n.g : globalThis,
-    _ = i(),
-    f = o('String.prototype.slice'),
+    f = i(),
+    _ = o('String.prototype.slice'),
     p =
         o('Array.prototype.indexOf', !0) ||
         function (e, t) {
@@ -17,7 +17,7 @@ var r = n(179560),
         },
     h = { __proto__: null };
 u && s && l
-    ? r(_, function (e) {
+    ? r(f, function (e) {
           var t = new d[e]();
           if (Symbol.toStringTag in t && l) {
               var n = l(t),
@@ -25,7 +25,7 @@ u && s && l
               (!r && n && (r = s(l(n), Symbol.toStringTag)), (h['$' + e] = a(r.get)));
           }
       })
-    : r(_, function (e) {
+    : r(f, function (e) {
           var t = new d[e](),
               n = t.slice || t.set;
           n && (h['$' + e] = a(n));
@@ -36,7 +36,7 @@ var m = function (e) {
             r(h, function (n, r) {
                 if (!t)
                     try {
-                        '$' + n(e) === r && (t = f(r, 1));
+                        '$' + n(e) === r && (t = _(r, 1));
                     } catch (e) {}
             }),
             t
@@ -48,7 +48,7 @@ var m = function (e) {
             r(h, function (n, r) {
                 if (!t)
                     try {
-                        (n(e), (t = f(r, 1)));
+                        (n(e), (t = _(r, 1)));
                     } catch (e) {}
             }),
             t
@@ -57,8 +57,8 @@ var m = function (e) {
 e.exports = function (e) {
     if (!e || 'object' != typeof e) return !1;
     if (!u) {
-        var t = f(c(e), 8, -1);
-        return p(_, t) > -1 ? t : 'Object' === t && g(e);
+        var t = _(c(e), 8, -1);
+        return p(f, t) > -1 ? t : 'Object' === t && g(e);
     }
     return s ? m(e) : null;
 };

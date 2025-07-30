@@ -32,14 +32,14 @@ function d(e) {
                 rpc_message: t.message,
                 application_id: r
             }),
-            _(t)));
+            f(t)));
 }
-function _(e) {
+function f(e) {
     let { code: t, message: n } = e,
         i = ''.concat(c.intl.formatToPlainString(c.t.hbiAOz, { code: t }), ': ').concat(n);
     (0, r.showToast)((0, r.createToast)(i, r.ToastType.FAILURE));
 }
-class f extends i.Z {
+class _ extends i.Z {
     constructor(...e) {
         (super(...e),
             u(this, 'actions', {
@@ -49,5 +49,5 @@ class f extends i.Z {
             }));
     }
 }
-u(f, 'displayName', 'FramesManager');
-let p = new f();
+u(_, 'displayName', 'FramesManager');
+let p = new _();

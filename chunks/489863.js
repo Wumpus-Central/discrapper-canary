@@ -1,9 +1,9 @@
 (n.d(t, {
-    Iq: () => f,
+    Iq: () => _,
     UR: () => h,
     Ww: () => p,
     c$: () => m,
-    g: () => _,
+    g: () => f,
     i2: () => b,
     tR: () => E,
     tV: () => g
@@ -27,7 +27,7 @@ function d() {
         channel_type: null != (n = null == i ? void 0 : i.type) ? n : l.d4z.UNKNOWN
     };
 }
-function _(e) {
+function f(e) {
     return i.tn.post({
         url: l.ANM.OAUTH2_WHITELIST_ACCEPT,
         query: { token: e },
@@ -35,8 +35,8 @@ function _(e) {
         rejectWithError: !1
     });
 }
-async function f(e) {
-    let { authorize: t, clientId: n, scopes: r, responseType: a, redirectUri: o, codeChallenge: s, codeChallengeMethod: c, state: u, permissions: _, guildId: f, channelId: p, integrationType: h, nonce: m, dmSettings: g } = e;
+async function _(e) {
+    let { authorize: t, clientId: n, scopes: r, responseType: a, redirectUri: o, codeChallenge: s, codeChallengeMethod: c, state: u, permissions: f, guildId: _, channelId: p, integrationType: h, nonce: m, dmSettings: g } = e;
     return (
         await i.tn.post({
             url: l.ANM.OAUTH2_AUTHORIZE,
@@ -51,10 +51,10 @@ async function f(e) {
                 nonce: m
             },
             body: {
-                guild_id: f,
-                webhook_channel_id: null != f && null != p ? p : void 0,
-                channel_id: null == f && null != p ? p : void 0,
-                permissions: _,
+                guild_id: _,
+                webhook_channel_id: null != _ && null != p ? p : void 0,
+                channel_id: null == _ && null != p ? p : void 0,
+                permissions: f,
                 authorize: t,
                 integration_type: h,
                 location_context: d(),
@@ -66,7 +66,7 @@ async function f(e) {
     ).body;
 }
 async function p(e) {
-    let { clientId: t, scopes: n, responseType: r, redirectUri: a, codeChallenge: o, codeChallengeMethod: s, state: c, integrationType: u, nonce: d, signal: _ } = e;
+    let { clientId: t, scopes: n, responseType: r, redirectUri: a, codeChallenge: o, codeChallengeMethod: s, state: c, integrationType: u, nonce: d, signal: f } = e;
     return (
         await i.tn.get({
             url: l.ANM.OAUTH2_AUTHORIZE,
@@ -81,7 +81,7 @@ async function p(e) {
                 integration_type: u,
                 nonce: d
             },
-            signal: _,
+            signal: f,
             retries: 3,
             oldFormErrors: !0,
             rejectWithError: !1

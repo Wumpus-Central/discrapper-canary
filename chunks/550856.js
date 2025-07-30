@@ -8,7 +8,7 @@ var r = n(46973),
     c = n(358085),
     u = n(621413),
     d = n(981631);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-let f = 'c6_BVC',
+let _ = 'c6_BVC',
     p = new o.Z('KrispBVCDeviceManager'),
     h = [],
     m = [],
@@ -33,7 +33,7 @@ for (let e of ((0, c.isMac)() ? (g = n(598473)) : (0, c.isWindows)() && (g = n(6
 for (let e of g.allow_list) 'name' in e && h.push(e.name.toLowerCase());
 function E() {
     var e;
-    if ((!(0, c.isMac)() && !(0, c.isWindows)()) || !s.Z.getKrispModels().includes(f)) return;
+    if ((!(0, c.isMac)() && !(0, c.isWindows)()) || !s.Z.getKrispModels().includes(_)) return;
     let t = s.Z.getInputDeviceId(),
         n = s.Z.getInputDevices()[t],
         r = null != l.Z.getChannelId();
@@ -51,7 +51,7 @@ function E() {
         return;
     }
     if (h.some((e) => d.includes(e))) {
-        (r && u.F.trackExposure({ location: 'KrispBVCDeviceManager' }), s.Z.getKrispModelOverride() !== f && (p.info('BVC compatible with device, enabling BVC.'), i.Z.setKrispModelOverride(f)));
+        (r && u.F.trackExposure({ location: 'KrispBVCDeviceManager' }), s.Z.getKrispModelOverride() !== _ && (p.info('BVC compatible with device, enabling BVC.'), i.Z.setKrispModelOverride(_)));
         return;
     }
     s.Z.getKrispModelOverride() && (p.info('Unknown BVC compatibility with device, disabling BVC.'), i.Z.setKrispModelOverride(''));
@@ -59,7 +59,7 @@ function E() {
 class b extends a.Z {
     constructor(...e) {
         (super(...e),
-            _(this, 'actions', {
+            f(this, 'actions', {
                 AUDIO_SET_INPUT_DEVICE: E,
                 MEDIA_ENGINE_DEVICES: E,
                 RTC_CONNECTION_STATE: (e) => {

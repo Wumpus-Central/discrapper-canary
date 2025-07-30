@@ -118,12 +118,12 @@ let e0 = () => {
         let e = [];
         return (G.c.getCurrentConfig({ location: 'SettingsRendererConfig' }).enabled && e.push(s.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE), I.J.getCurrentConfig({ location: 'SettingsRendererConfig' }).enabled && e.push(s.z.DISPLAY_NAME_STYLES_NEW_BADGE), e.push(s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE), e);
     },
-    e6 = () => {
+    e8 = () => {
         let e = e3(),
             [t] = (0, N.US)(e);
         return t === s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE ? (0, i.jsx)(D.Z, {}) : t === s.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE || t === s.z.DISPLAY_NAME_STYLES_NEW_BADGE ? (0, i.jsx)(l.IGR, { text: eX.intl.string(eX.t.y2b7CA) }) : null;
     },
-    e8 = ew.Z,
+    e6 = ew.Z,
     e2 = (e) => {
         let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: E, impressionSource: N, numOfPendingFamilyRequests: I, isOverlaySupported: D, isClipsBetaTagShowing: G = !1, shouldMergeGameSettings: e2, isKeywordFilteringEnabled: e5, isStaff: e7, isInappropriateConversationWarningEnabled: e4, isInapproprateConversationsDefaultOn: e9, paymentsBlocked: te, isEligibleForQuests: tt, isStricterMessageRequestsEnabled: tn, hasLibraryApplication: ti, hasTOTPEnabled: tr, developerMode: ts, isAdultUser: ta, hasSecureFramesVerifiedUserIds: tl, hypeSquadRemoved: to, hasIgnoredUsers: tc, hasBlockedUsers: td, useRefreshedVoiceAndVideo: tu, isEligibleForSensitiveContentDefaults: tm, inputMode: tp, activeInputProfile: tg, isInputProfileCustom: th, isGoreContentFilteringEnabled: tf } = e;
         return Object.freeze({
@@ -272,7 +272,7 @@ let e0 = () => {
                 label: eX.intl.string(eX.t['vi7f+v']),
                 ariaLabel: eX.intl.string(eX.t['vi7f+v']),
                 element: B.Z,
-                newIndicator: (0, i.jsx)(e6, {}),
+                newIndicator: (0, i.jsx)(e8, {}),
                 newIndicatorDismissibleContentTypes: [...e3()],
                 notice: {
                     stores: [K.Z, P.Z],
@@ -1420,7 +1420,7 @@ let e0 = () => {
                 section: eY.oAB.LINUX,
                 searchableTitles: [eX.intl.string(eX.t['7pPjTU'])],
                 label: eX.intl.string(eX.t['7pPjTU']),
-                element: e8,
+                element: e6,
                 predicate: () => Q.isPlatformEmbedded && (0, Q.isLinux)()
             },
             [eW.s6.STREAMER_MODE]: {

@@ -8,7 +8,7 @@ var r = n(147913),
     c = n(371651),
     u = n(610394),
     d = n(501787);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-let f = new i.Z('OverlayWindowRAFManager'),
+let _ = new i.Z('OverlayWindowRAFManager'),
     p = window.requestAnimationFrame.bind(window),
     h = (e) => {
         try {
@@ -31,7 +31,7 @@ let f = new i.Z('OverlayWindowRAFManager'),
                 r = null != t && t.document.hasFocus();
             if (n || r) return t.requestAnimationFrame(e);
         } catch (e) {
-            (f.error('RAF redirect failed, falling back to original', e), (0, s.D1)(e, u.ZP.getOverlayMethod((0, o.getPID)())));
+            (_.error('RAF redirect failed, falling back to original', e), (0, s.D1)(e, u.ZP.getOverlayMethod((0, o.getPID)())));
         }
         return p(e);
     };
@@ -44,7 +44,7 @@ class m extends r.Z {
         window.requestAnimationFrame = p;
     }
     constructor(...e) {
-        (super(...e), _(this, 'actions', { OVERLAY_UPDATE_OVERLAY_STATE: this.handlePatchOverlayWindowRaf }));
+        (super(...e), f(this, 'actions', { OVERLAY_UPDATE_OVERLAY_STATE: this.handlePatchOverlayWindowRaf }));
     }
 }
 let g = new m();

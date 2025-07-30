@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,20 +57,20 @@ function _(e, t) {
         e
     );
 }
-let f = null;
+let _ = null;
 function p(e, t) {
     let n = {};
-    return (null != e.mention && null != f && (n = { mention: f }), (0, l.Z)([e, ...t, n]));
+    return (null != e.mention && null != _ && (n = { mention: _ }), (0, l.Z)([e, ...t, n]));
 }
-f = n(878611).Z;
+_ = n(878611).Z;
 let h = {
         enableBuildOverrides: !1,
         enableEmojiClick: !0
     },
     m = p(s.Z.RULES, [(0, o.Z)({ enableBuildOverrides: !0 })]),
     g = i().omit(p(s.Z.RULES, [(0, o.Z)(h)]), 'paragraph', 'newline'),
-    E = p(s.Z.CHANNEL_TOPIC_RULES, [(0, o.Z)(_(u({}, h), { emojiTooltipPosition: 'bottom' })), { codeBlock: { react: s.Z.RULES.text.react } }]),
-    b = p(s.Z.VOICE_CHANNEL_STATUS_RULES, [(0, o.Z)(_(u({}, h), { enableEmojiClick: !1 }))]),
+    E = p(s.Z.CHANNEL_TOPIC_RULES, [(0, o.Z)(f(u({}, h), { emojiTooltipPosition: 'bottom' })), { codeBlock: { react: s.Z.RULES.text.react } }]),
+    b = p(s.Z.VOICE_CHANNEL_STATUS_RULES, [(0, o.Z)(f(u({}, h), { enableEmojiClick: !1 }))]),
     y = p(s.Z.EMBED_TITLE_RULES, [(0, o.Z)(h)]),
     O = p(s.Z.INLINE_REPLY_RULES, [(0, o.Z)(h)]),
     v = p(s.Z.GUILD_VERIFICATION_FORM_RULES, [(0, o.Z)(h)]),

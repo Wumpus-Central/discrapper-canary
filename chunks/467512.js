@@ -92,10 +92,10 @@ async function u(e) {
                     aborted: !0
                 });
         }));
-    let _ = await u.uploadFiles(o);
+    let f = await u.uploadFiles(o);
     if (!u._aborted)
         return {
-            attachments: _,
+            attachments: f,
             uploader: u
         };
 }

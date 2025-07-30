@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function _(e, t) {
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,7 +79,7 @@ function p(e, t) {
 }
 function h(e) {
     let { children: t, size: n = 16, className: a, flowerStarClassName: c } = e,
-        d = f(e, ['children', 'size', 'className', 'flowerStarClassName']),
+        d = _(e, ['children', 'size', 'className', 'flowerStarClassName']),
         p = i.Children.only(t),
         h = {
             width: n,
@@ -90,7 +90,7 @@ function h(e) {
         className: o()(l.flowerStarContainer, a),
         style: h,
         children: [
-            (0, r.jsx)(s.Z, _(u({}, d), { className: o()(c, l.flowerStar) })),
+            (0, r.jsx)(s.Z, f(u({}, d), { className: o()(c, l.flowerStar) })),
             (0, r.jsx)('div', {
                 className: o()(l.childContainer, { [l.redesignIconChildContainer]: m }),
                 children: p

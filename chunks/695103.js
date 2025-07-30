@@ -6,8 +6,8 @@ var o,
     c = n(238514),
     u = n(695346),
     d = n(581883),
-    _ = n(283595);
-function f(e, t, n) {
+    f = n(283595);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -71,7 +71,7 @@ class S extends (o = s.ZP.PersistedStore) {
             (i = m.originURL),
             this.waitFor(d.Z, c.Z),
             this.syncWith([d.Z, c.Z], () => !0),
-            _.Z.whenInitialized(() => {
+            f.Z.whenInitialized(() => {
                 E = !0;
             }));
     }
@@ -111,7 +111,7 @@ class S extends (o = s.ZP.PersistedStore) {
         });
     }
 }
-(f(S, 'displayName', 'TestModeStore'), f(S, 'persistKey', 'TestModeStore'));
+(_(S, 'displayName', 'TestModeStore'), _(S, 'persistKey', 'TestModeStore'));
 let A = new S(l.Z, {
     DEVELOPER_TEST_MODE_AUTHORIZATION_START: O,
     DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: v,

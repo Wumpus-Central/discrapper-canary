@@ -28,7 +28,7 @@ let r = n(889658),
             if (n.includePrerelease) return !0;
             else t = u;
         let g = new Set();
-        for (let t of e) '>' === t.operator || '>=' === t.operator ? (r = _(r, t, n)) : '<' === t.operator || '<=' === t.operator ? (i = f(i, t, n)) : g.add(t.semver);
+        for (let t of e) '>' === t.operator || '>=' === t.operator ? (r = f(r, t, n)) : '<' === t.operator || '<=' === t.operator ? (i = _(i, t, n)) : g.add(t.semver);
         if (g.size > 1) return null;
         if (r && i && ((l = s(r.semver, i.semver, n)) > 0 || (0 === l && ('>=' !== r.operator || '<=' !== i.operator)))) return null;
         for (let e of g) {
@@ -41,24 +41,24 @@ let r = n(889658),
         for (let e of (E && 1 === E.prerelease.length && '<' === i.operator && 0 === E.prerelease[0] && (E = !1), t)) {
             if (((m = m || '>' === e.operator || '>=' === e.operator), (h = h || '<' === e.operator || '<=' === e.operator), r)) {
                 if ((b && e.semver.prerelease && e.semver.prerelease.length && e.semver.major === b.major && e.semver.minor === b.minor && e.semver.patch === b.patch && (b = !1), '>' === e.operator || '>=' === e.operator)) {
-                    if ((d = _(r, e, n)) === e && d !== r) return !1;
+                    if ((d = f(r, e, n)) === e && d !== r) return !1;
                 } else if ('>=' === r.operator && !o(r.semver, String(e), n)) return !1;
             }
             if (i) {
                 if ((E && e.semver.prerelease && e.semver.prerelease.length && e.semver.major === E.major && e.semver.minor === E.minor && e.semver.patch === E.patch && (E = !1), '<' === e.operator || '<=' === e.operator)) {
-                    if ((p = f(i, e, n)) === e && p !== i) return !1;
+                    if ((p = _(i, e, n)) === e && p !== i) return !1;
                 } else if ('<=' === i.operator && !o(i.semver, String(e), n)) return !1;
             }
             if (!e.operator && (i || r) && 0 !== l) return !1;
         }
         return (!r || !h || !!i || 0 === l) && (!i || !m || !!r || 0 === l) && !b && !E && !0;
     },
-    _ = (e, t, n) => {
+    f = (e, t, n) => {
         if (!e) return t;
         let r = s(e.semver, t.semver, n);
         return r > 0 ? e : r < 0 || ('>' === t.operator && '>=' === e.operator) ? t : e;
     },
-    f = (e, t, n) => {
+    _ = (e, t, n) => {
         if (!e) return t;
         let r = s(e.semver, t.semver, n);
         return r < 0 ? e : r > 0 || ('<' === t.operator && '<=' === e.operator) ? t : e;

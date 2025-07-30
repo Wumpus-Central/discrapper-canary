@@ -17,8 +17,8 @@ var s = n(292419),
     c = n(378233),
     u = n(360742),
     d = n(23750),
-    _ = n(598077),
-    f = n(314897),
+    f = n(598077),
+    _ = n(314897),
     p = n(699516),
     h = n(594174),
     m = n(408433),
@@ -81,13 +81,13 @@ function S(e, t) {
         e
     );
 }
-let A = new _.Z({
+let A = new f.Z({
     id: '???',
     username: '???'
 });
 function N(e) {
     var t;
-    return null == e.author ? A : null != e.webhook_id ? new _.Z(e.author) : null != (t = h.default.getUser(e.author.id)) ? t : new _.Z(e.author);
+    return null == e.author ? A : null != e.webhook_id ? new f.Z(e.author) : null != (t = h.default.getUser(e.author.id)) ? t : new f.Z(e.author);
 }
 function C(e) {
     return !1;
@@ -107,7 +107,7 @@ function R(e) {
 }
 function P(e) {
     var t, n, r, i, o, s, c;
-    let _,
+    let f,
         h,
         { reactions: m, interactionData: y } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         v = R(e),
@@ -123,7 +123,7 @@ function P(e) {
         B = e.type === O.uaV.THREAD_STARTER_MESSAGE ? (null == (r = e.referenced_message) || null == (n = r.author) ? void 0 : n.id) : void 0,
         V = e.content;
     return new d.ZP(
-        (e.type === O.uaV.PREMIUM_REFERRAL ? ((_ = E.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (V = '')) : e.type === O.uaV.CHAT_WALLPAPER_SET && ((h = (0, a.Z)(e.content)), (V = '')), C(e))
+        (e.type === O.uaV.PREMIUM_REFERRAL ? ((f = E.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (V = '')) : e.type === O.uaV.CHAT_WALLPAPER_SET && ((h = (0, a.Z)(e.content)), (V = '')), C(e))
             ? S(I({}, L), {
                   id: e.id,
                   channel_id: e.channel_id,
@@ -143,7 +143,7 @@ function P(e) {
                   mentionChannels: P,
                   messageReference: w,
                   mentioned: (0, b.Sz)({
-                      userId: f.default.getId(),
+                      userId: _.default.getId(),
                       channelId: e.channel_id,
                       mentionEveryone: null != (c = e.mention_everyone) && c,
                       mentionUsers: T,
@@ -151,7 +151,7 @@ function P(e) {
                   }),
                   giftCodes: (0, g.Fp)(e) ? (0, g.Q_)(null == e ? void 0 : e.embeds[0].url) : (0, g.Q_)(e.content),
                   content: V,
-                  referralTrialOfferId: _,
+                  referralTrialOfferId: f,
                   call: x(e.call, v.timestamp),
                   messageSnapshots: j(e),
                   reactions: k(null != m ? m : e.reactions, e.poll),
@@ -184,7 +184,7 @@ function D(e, t) {
         });
     let n = e,
         r = !1;
-    if ((null != t.call && (n = n.set('call', x(t.call, e.timestamp))), null != t.attachments && (n = n.set('attachments', L(t))), null != t.content && '' !== t.content && (n = n.set('content', t.content)), null != t.embeds && (n = n.set('embeds', M(t))), null != t.message_snapshots && (n = n.set('messageSnapshots', j(t))), t.pinned !== n.pinned && (n = n.set('pinned', t.pinned)), null != n.webhookId && null != t.author && (n = n.set('author', new _.Z(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set('flags', t.flags)), null != t.components && (n = n.set('components', (0, s.uZ)(t.components, { includeEmojiSrc: !1 }))), null != t.role_subscription_data && (n = n.set('roleSubscriptionData', t.role_subscription_data)), null != t.reactions)) {
+    if ((null != t.call && (n = n.set('call', x(t.call, e.timestamp))), null != t.attachments && (n = n.set('attachments', L(t))), null != t.content && '' !== t.content && (n = n.set('content', t.content)), null != t.embeds && (n = n.set('embeds', M(t))), null != t.message_snapshots && (n = n.set('messageSnapshots', j(t))), t.pinned !== n.pinned && (n = n.set('pinned', t.pinned)), null != n.webhookId && null != t.author && (n = n.set('author', new f.Z(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set('flags', t.flags)), null != t.components && (n = n.set('components', (0, s.uZ)(t.components, { includeEmojiSrc: !1 }))), null != t.role_subscription_data && (n = n.set('roleSubscriptionData', t.role_subscription_data)), null != t.reactions)) {
         var i;
         n = n.set('reactions', k(null != (i = e.reactions) ? i : t.reactions));
     }
@@ -204,7 +204,7 @@ function D(e, t) {
                 'mentioned',
                 (0, b.ZP)({
                     message: n,
-                    userId: f.default.getId()
+                    userId: _.default.getId()
                 })
             )),
         n

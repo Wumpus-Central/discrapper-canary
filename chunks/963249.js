@@ -9,8 +9,8 @@ var i = n(97613),
     c = n(159351),
     u = n(366939),
     d = n(667),
-    _ = n(138464),
-    f = n(619067),
+    f = n(138464),
+    _ = n(619067),
     p = n(594174),
     h = n(626135),
     m = n(585483),
@@ -119,14 +119,14 @@ function A(e) {
                         onClose: (e, t) => {
                             (a(),
                                 null == y || y(e),
-                                e && (null == S || S(), (0, f.I)(D, q, t) && m.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
+                                e && (null == S || S(), (0, _.I)(D, q, t) && m.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
                                 l.Z.dispatch({
                                     type: 'PREMIUM_PAYMENT_MODAL_CLOSE',
                                     didSucceed: e
                                 }));
                         },
                         onComplete: (e) => {
-                            ((W = !0), null == v || v(), (0, f.I)(D, q, (0, g.k5)(null == e ? void 0 : e.subscription)) && (0, _.H)(!0));
+                            ((W = !0), null == v || v(), (0, _.I)(D, q, (0, g.k5)(null == e ? void 0 : e.subscription)) && (0, f.H)(!0));
                         },
                         onSubscriptionConfirmation: S,
                         analyticsLocations: A,

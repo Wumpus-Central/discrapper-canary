@@ -8,7 +8,7 @@ var r,
     c = n(944486),
     u = n(594174),
     d = n(647177);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -71,11 +71,11 @@ function y(e) {
 }
 function O(e) {
     let { videoFilterAsset: t } = e;
-    b = h(f({}, b), { [t.id]: t });
+    b = h(_({}, b), { [t.id]: t });
 }
 function v(e) {
     let { videoFilterAsset: t } = e;
-    ((b = f({}, b)), delete b[t.id]);
+    ((b = _({}, b)), delete b[t.id]);
 }
 function I(e) {
     var t;
@@ -112,7 +112,7 @@ class C extends (r = i.ZP.Store) {
         return E;
     }
 }
-_(C, 'displayName', 'VideoBackgroundStore');
+f(C, 'displayName', 'VideoBackgroundStore');
 let R = new C(o.Z, {
     VIDEO_FILTER_ASSETS_FETCH_SUCCESS: y,
     VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: O,

@@ -32,8 +32,8 @@ var r = n(990547),
     c = n(186102),
     u = n(152521),
     d = n(626135),
-    _ = n(573261),
-    f = n(617136),
+    f = n(573261),
+    _ = n(617136),
     p = n(823289),
     h = n(705006),
     m = n(509212),
@@ -190,7 +190,7 @@ async function x(e) {
     let { questId: t, streamKey: n, terminal: i = !1 } = e;
     try {
         var s;
-        let e = await _.Z.post({
+        let e = await f.Z.post({
             url: I.ANM.QUESTS_HEARTBEAT(t),
             body: {
                 stream_key: n,
@@ -226,7 +226,7 @@ async function x(e) {
 async function M(e, t) {
     if (
         (null != t.questContentCTA &&
-            (0, f._3)({
+            (0, _._3)({
                 questId: e,
                 questContent: t.questContent,
                 questContentCTA: t.questContentCTA,
@@ -472,7 +472,7 @@ function K(e) {
     });
 }
 async function z(e) {
-    var t, n, r, u, _, f, g;
+    var t, n, r, u, f, _, g;
     (a.Z.dispatch({
         type: 'QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN',
         placement: e
@@ -498,12 +498,13 @@ async function z(e) {
                     adset_id: null == (n = b.ad_identifiers) ? void 0 : n.adset_id,
                     ad_set_id: null == (r = b.ad_identifiers) ? void 0 : r.ad_set_id,
                     campaign_id: null == (u = b.ad_identifiers) ? void 0 : u.campaign_id,
-                    creative_id: null == (_ = b.ad_identifiers) ? void 0 : _.creative_id,
-                    creative_type: null == (f = b.ad_identifiers) ? void 0 : f.creative_type,
+                    creative_id: null == (f = b.ad_identifiers) ? void 0 : f.creative_id,
+                    creative_type: null == (_ = b.ad_identifiers) ? void 0 : _.creative_type,
                     decision_id: b.request_id,
                     is_targeted: null != b.ad_identifiers,
                     metadata_raw: b.metadata_raw
                 },
+                adContext: b.ad_context,
                 placement: e
             }),
             h.Z.recordQuestRequestApiResponse('/quests/decision', { wasSuccessful: !0 }),
@@ -529,7 +530,7 @@ async function z(e) {
 }
 async function q(e, t) {
     var n;
-    await _.Z.post({
+    await f.Z.post({
         url: I.ANM.QUESTS_VIDEO_PROGRESS(e),
         body: { timestamp: t },
         trackedActionData: {

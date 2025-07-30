@@ -12,7 +12,7 @@ function o(e) {
     }, [s, o]);
     let u = (0, r.useRef)(a);
     u.current = i(l, c, t);
-    let [d, _] = u.current;
+    let [d, f] = u.current;
     return {
         forceUpdateOnChunkChange: (0, r.useCallback)(
             (e) => {
@@ -24,7 +24,7 @@ function o(e) {
             [o, t, n]
         ),
         chunkStart: d,
-        chunkEnd: _,
+        chunkEnd: f,
         dirty: s
     };
 }

@@ -13,8 +13,8 @@ var i,
     c = n(843991),
     u = n(442837),
     d = n(570140),
-    _ = n(344185),
-    f = n(144140),
+    f = n(344185),
+    _ = n(144140),
     p = n(314897),
     h = n(592125),
     m = n(306680),
@@ -53,7 +53,7 @@ function M(e) {
     return null != (t = m.ZP.lastMessageId(e)) ? t : e;
 }
 function k(e) {
-    let t = f.Z.getCount(e);
+    let t = _.Z.getCount(e);
     return null === t || 0 === t;
 }
 function j(e) {
@@ -84,7 +84,7 @@ function V(e) {
     let t = h.Z.getChannel(e);
     return null == t
         ? []
-        : Object.values(_.Z.getThreadsForParent(t.guild_id, t.id))
+        : Object.values(f.Z.getThreadsForParent(t.guild_id, t.id))
               .map((e) => {
                   let { id: t } = e;
                   return t;
@@ -95,7 +95,7 @@ function F(e) {
     let t = h.Z.getChannel(I);
     if (null == t) return;
     ((null == e ? void 0 : e.refreshThreadIds) &&
-        ((P = Object.values(_.Z.getThreadsForParent(t.guild_id, t.id)).map((e) => {
+        ((P = Object.values(f.Z.getThreadsForParent(t.guild_id, t.id)).map((e) => {
             let { id: t } = e;
             return t;
         })),
@@ -152,7 +152,7 @@ function q(e) {
 }
 class X extends (i = u.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, _.Z, g.Z, m.ZP);
+        this.waitFor(h.Z, f.Z, g.Z, m.ZP);
     }
     getNewThreadCount() {
         return N;

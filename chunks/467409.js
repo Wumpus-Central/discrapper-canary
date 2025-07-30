@@ -11,13 +11,13 @@ let l = (e) => {
         c = !(0, s.G5)(l, e),
         u = (0, o.og)(),
         d = null != u ? r.z[u] : 'None',
-        _ = (0, o.Do)();
+        f = (0, o.Do)();
     return {
         dailyCapReached: t,
         inCooldown: n,
         inAccountTenureRestriction: c,
         lastContentShown: d,
-        currentFatigableWinner: null != _ ? r.z[_] : 'None',
+        currentFatigableWinner: null != f ? r.z[f] : 'None',
         lastDismissibleContentWinner: d
     };
 };

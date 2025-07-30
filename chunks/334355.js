@@ -13,8 +13,8 @@ e.exports = function (e) {
             return -1 !== e.input.indexOf(n, t);
         },
         d = t,
-        _ = '<>',
-        f = '</>',
+        f = '<>',
+        _ = '</>',
         p = /<[A-Za-z0-9\\._:-]+\s*\/>/,
         h = /<[A-Za-z0-9\\._:-]+/,
         m = /\/[A-Za-z0-9\\._:-]+>|\/>/,
@@ -320,8 +320,8 @@ e.exports = function (e) {
                     {
                         variants: [
                             {
-                                begin: _,
-                                end: f
+                                begin: f,
+                                end: _
                             },
                             { match: p },
                             {

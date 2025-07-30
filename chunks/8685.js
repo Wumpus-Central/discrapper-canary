@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(503856),
     u = n(209590),
     d = n(388032);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -71,14 +71,14 @@ let m = () => {
         function t() {
             null !== e.current && ((0, o.Mr3)(e.current), (e.current = null));
         }
-        let [s, _] = (0, a.Wu)([u.Z], () => [u.Z.shouldShowWarning(), u.Z.isAFKChannel()], []),
+        let [s, f] = (0, a.Wu)([u.Z], () => [u.Z.shouldShowWarning(), u.Z.isAFKChannel()], []),
             p = i.useCallback(() => {
                 let t, n;
-                (_ ? ((t = d.intl.string(d.t.Y40JkZ)), (n = d.intl.string(d.t['5J4yGR']))) : ((t = d.intl.string(d.t.FJSZVF)), (n = d.intl.string(d.t.etJjgY))),
+                (f ? ((t = d.intl.string(d.t.Y40JkZ)), (n = d.intl.string(d.t['5J4yGR']))) : ((t = d.intl.string(d.t.FJSZVF)), (n = d.intl.string(d.t.etJjgY))),
                     (e.current = (0, o.h7j)((e) =>
                         (0, r.jsx)(
                             l.default,
-                            f(
+                            _(
                                 {
                                     title: t,
                                     body: n,
@@ -91,11 +91,11 @@ let m = () => {
                             )
                         )
                     )));
-            }, [_]),
+            }, [f]),
             E = i.useCallback(() => {
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('41281').then(n.bind(n, 669732));
-                    return (t) => (0, r.jsx)(e, h(f({}, t), { showHideSuppressWarning: !0 }));
+                    return (t) => (0, r.jsx)(e, h(_({}, t), { showHideSuppressWarning: !0 }));
                 }).then((t) => {
                     null != t && (e.current = t);
                 });

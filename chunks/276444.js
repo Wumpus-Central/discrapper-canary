@@ -20,8 +20,8 @@ function u(e, t, n) {
     );
 }
 let d = 5,
-    _ = null,
-    f = new Set(),
+    f = null,
+    _ = new Set(),
     p = new Map(),
     h = !1,
     m = new Set(),
@@ -35,7 +35,7 @@ let d = 5,
     T = !1,
     S = null;
 function A() {
-    ((_ = null), (f = new Set()), (h = !1), (m = new Set()), (g = new Set()), (E = new Map()), (b = 0), (y = null), (O = []), (v = !1), (I = 0), (T = !1), (S = null), (p = new Map()));
+    ((f = null), (_ = new Set()), (h = !1), (m = new Set()), (g = new Set()), (E = new Map()), (b = 0), (y = null), (O = []), (v = !1), (I = 0), (T = !1), (S = null), (p = new Map()));
 }
 let N = () => !0;
 function C(e) {
@@ -44,7 +44,7 @@ function C(e) {
 }
 function R(e) {
     let { referrals_remaining: t, sent_user_ids: n, refresh_at: r, recipient_status: i, has_eligible_friends: a } = e;
-    ((T = null == r && a), (h = !1), (_ = t), (f = new Set(n)), (S = r), (p = i));
+    ((T = null == r && a), (h = !1), (f = t), (_ = new Set(n)), (S = r), (p = i));
 }
 function P(e) {
     let {} = e;
@@ -52,11 +52,11 @@ function P(e) {
 }
 function w(e) {
     let { userTrialOffer: t } = e;
-    ((0, l.C$)(), E.set(t.id, t), f.add(t.user_id));
+    ((0, l.C$)(), E.set(t.id, t), _.add(t.user_id));
 }
 function D(e) {
     let { userTrialOffers: t } = e;
-    for (let e of ((0, l.C$)(), t)) (E.set(e.id, e), f.add(e.user_id));
+    for (let e of ((0, l.C$)(), t)) (E.set(e.id, e), _.add(e.user_id));
 }
 function L(e) {
     m.add(e);
@@ -101,13 +101,13 @@ class Z extends (r = a.ZP.Store) {
         (this.waitFor(s.default), this.syncWith([s.default], N));
     }
     checkAndFetchReferralsRemaining() {
-        null == _ && !h && b < d && (null == y || y < Date.now()) && (0, l.C$)();
+        null == f && !h && b < d && (null == y || y < Date.now()) && (0, l.C$)();
     }
     getReferralsRemaining() {
-        return (this.checkAndFetchReferralsRemaining(), _);
+        return (this.checkAndFetchReferralsRemaining(), f);
     }
     getSentUserIds() {
-        return (this.checkAndFetchReferralsRemaining(), Array.from(f.values()));
+        return (this.checkAndFetchReferralsRemaining(), Array.from(_.values()));
     }
     isFetchingReferralsRemaining() {
         return h;

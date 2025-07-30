@@ -7,7 +7,7 @@ var r = n(98405),
     c = n(77826),
     u = Array,
     d = Math.max,
-    _ = Math.min;
+    f = Math.min;
 (r(
     {
         target: 'Array',
@@ -18,16 +18,16 @@ var r = n(98405),
             var n,
                 r,
                 i,
-                f,
+                _,
                 p = l(this),
                 h = o(p),
                 m = s(e, h),
                 g = arguments.length,
                 E = 0;
-            for (0 === g ? (n = r = 0) : 1 === g ? ((n = 0), (r = h - m)) : ((n = g - 2), (r = _(d(c(t), 0), h - m))), f = u((i = a(h + n - r))); E < m; E++) f[E] = p[E];
-            for (; E < m + n; E++) f[E] = arguments[E - m + 2];
-            for (; E < i; E++) f[E] = p[E + r - n];
-            return f;
+            for (0 === g ? (n = r = 0) : 1 === g ? ((n = 0), (r = h - m)) : ((n = g - 2), (r = f(d(c(t), 0), h - m))), _ = u((i = a(h + n - r))); E < m; E++) _[E] = p[E];
+            for (; E < m + n; E++) _[E] = arguments[E - m + 2];
+            for (; E < i; E++) _[E] = p[E + r - n];
+            return _;
         }
     }
 ),

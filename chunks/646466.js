@@ -1,4 +1,4 @@
-(a.d(t, { O: () => T }), a(388685));
+(a.d(t, { O: () => N }), a(388685));
 var n = a(255367),
     r = a(73800),
     l = a(481060),
@@ -443,7 +443,7 @@ let p = [
             ]
         });
     },
-    T = () => {
+    N = () => {
         let [e, t] = r.useState('preview');
         return (0, n.jsxs)('div', {
             className: m.container,

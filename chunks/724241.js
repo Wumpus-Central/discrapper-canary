@@ -9,8 +9,8 @@ var i = n(442837),
     c = n(271383),
     u = n(246946),
     d = n(654904),
-    _ = n(228168),
-    f = n(200669);
+    f = n(228168),
+    _ = n(200669);
 function p(e) {
     var t;
     let { user: n, displayProfile: p, guild: h, pendingAvatar: m, pendingNickname: g, pendingGlobalName: E, pendingBio: b, pendingPronouns: y, pendingLegacyUsernameDisabled: O, pendingBadges: v, isTryItOutFlow: I, hideBioSection: T, shouldOpenBadgeTooltip: S } = e,
@@ -32,7 +32,7 @@ function p(e) {
                 });
         };
     return (0, r.jsxs)('div', {
-        className: f.body,
+        className: _.body,
         inert: !0,
         children: [
             (0, r.jsx)(o.Z, {
@@ -43,7 +43,7 @@ function p(e) {
                 isTryItOut: I,
                 tags: (0, r.jsx)(a.Z, {
                     displayProfile: p,
-                    themeType: _.lY.POPOUT,
+                    themeType: f.lY.POPOUT,
                     pendingLegacyUsernameDisabled: O,
                     pendingBadges: v,
                     shouldOpenBadgeTooltip: S

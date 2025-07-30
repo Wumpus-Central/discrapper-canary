@@ -23,8 +23,8 @@ var r = n(544891),
     c = n(626135),
     u = n(956664),
     d = n(981631),
-    _ = n(474936);
-function f(e, t, n) {
+    f = n(474936);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +48,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -56,19 +56,19 @@ function p(e) {
 function h(e) {
     c.default.track(d.rMx.PREMIUM_FEATURE_TRY_OUT, {
         feature_name: e,
-        feature_tier: _.h1.PREMIUM_STANDARD
+        feature_tier: f.h1.PREMIUM_STANDARD
     });
 }
 async function m(e, t) {
     var n, c, u;
-    let _ = null == (n = l.default.getCurrentUser()) ? void 0 : n.id;
-    if (null == _) return;
-    let f = s.dN.getSetting();
-    null != e.bio && f && (e.bio = o.ZP.parse(void 0, e.bio).content);
+    let f = null == (n = l.default.getCurrentUser()) ? void 0 : n.id;
+    if (null == f) return;
+    let _ = s.dN.getSetting();
+    null != e.bio && _ && (e.bio = o.ZP.parse(void 0, e.bio).content);
     try {
         i.Z.dispatch({
             type: 'USER_PROFILE_UPDATE_START',
-            userId: _
+            userId: f
         });
         let n = await r.tn.patch({
             url: null != t ? d.ANM.USER_GUILD_PROFILE(t, d.ME) : d.ANM.USER_PROFILE(d.ME),
@@ -82,7 +82,7 @@ async function m(e, t) {
                 p(
                     {
                         type: 'USER_PROFILE_UPDATE_SUCCESS',
-                        userId: _,
+                        userId: f,
                         profileEffectId: e,
                         profileEffectExpiresAt: t
                     },
@@ -167,29 +167,29 @@ function S(e) {
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR',
         avatar: e
     }),
-        h(_.QP.ANIMATED_AVATAR));
+        h(f.QP.ANIMATED_AVATAR));
 }
 function A(e) {
     (i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION',
         avatarDecoration: e
     }),
-        h(_.QP.AVATAR_DECORATION));
+        h(f.QP.AVATAR_DECORATION));
 }
 function N(e) {
     (i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER',
         banner: e
     }),
-        h(_.QP.PROFILE_BANNER));
+        h(f.QP.PROFILE_BANNER));
 }
 function C(e) {
     (i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS',
         themeColors: e
     }),
-        h(_.QP.PROFILE_THEME_COLOR));
+        h(f.QP.PROFILE_THEME_COLOR));
 }
 function R(e) {
-    (i.Z.dispatch(p({ type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET' }, e)), h(_.QP.PRESET));
+    (i.Z.dispatch(p({ type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET' }, e)), h(f.QP.PRESET));
 }

@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(596454),
     u = n(367907),
     d = n(255963),
-    _ = n(626135),
-    f = n(183023),
+    f = n(626135),
+    _ = n(183023),
     p = n(524444),
     h = n(981631),
     m = n(185923),
@@ -74,7 +74,7 @@ function v(e, t) {
 let I = (e) => {
         var t;
         let { node: n, tooltipPosition: a = p.b_.position, enableClick: s = !0, channelId: u, messageId: d } = e,
-            _ = i.useRef(null),
+            f = i.useRef(null),
             h = null == (t = n.originalMatch) ? void 0 : t[0],
             m = null != h ? h : n.name,
             [g, b] = i.useState(!1),
@@ -116,7 +116,7 @@ let I = (e) => {
                                 (0, r.jsx)(
                                     l.P3F,
                                     v(y({}, e), {
-                                        innerRef: _,
+                                        innerRef: f,
                                         tag: 'span',
                                         onClick: (t) => {
                                             var n;
@@ -133,7 +133,7 @@ let I = (e) => {
                     )
                 );
         if (!s) return I();
-        let T = (e) => (0, r.jsx)(f.Az, v(y({}, e), { node: n }));
+        let T = (e) => (0, r.jsx)(_.Az, v(y({}, e), { node: n }));
         return (0, r.jsx)(l.yRy, {
             animation: l.yRy.Animation.TRANSLATE,
             align: 'center',
@@ -144,7 +144,7 @@ let I = (e) => {
                 b(!1);
             },
             renderPopout: T,
-            targetElementRef: _,
+            targetElementRef: f,
             children: I
         });
     },
@@ -210,7 +210,7 @@ let I = (e) => {
                                               }
                                             : void 0,
                                         onMouseLeave: () => {
-                                            T && (_.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1));
+                                            T && (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1));
                                         },
                                         tag: 'span',
                                         className: o()(E.emojiContainer, {
@@ -226,7 +226,7 @@ let I = (e) => {
         if (!u) return D();
         let L = (e) =>
             (0, r.jsx)(
-                f.vk,
+                _.vk,
                 v(y({}, e), {
                     node: t,
                     refreshPositionKey: () => I(String(Date.now())),
@@ -237,7 +237,7 @@ let I = (e) => {
             animation: l.yRy.Animation.FADE,
             align: 'center',
             onRequestClose: () => {
-                (_.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1), C(!1));
+                (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1), C(!1));
             },
             autoInvert: !0,
             nudgeAlignIntoViewport: !0,

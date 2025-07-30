@@ -6,7 +6,7 @@
     gT: () => g,
     iZ: () => m,
     iq: () => O,
-    sP: () => f
+    sP: () => _
 }),
     n(642613),
     n(149765));
@@ -21,14 +21,14 @@ var s = n(182274),
 (n(594174), n(700785));
 var u = n(970257),
     d = n(893908),
-    _ = n(953252);
-function f(e) {
+    f = n(953252);
+function _(e) {
     if (!(0, u.Fi)(e.author)) return !1;
     let t = l.Z.getChannel(e.channel_id);
     if (null == t) return !1;
     let n = c.Z.getGuild(t.guild_id);
     if (null == n) return !1;
-    let r = (0, _.Z)(n),
+    let r = (0, f.Z)(n),
         i = (0, d.Z)(n);
     return r && null != i;
 }

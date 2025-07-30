@@ -12,8 +12,8 @@ var r,
     c = n(897473),
     u = n(585483),
     d = n(709054),
-    _ = n(592125),
-    f = n(496675),
+    f = n(592125),
+    _ = n(496675),
     p = n(944486),
     h = n(914010),
     m = n(594174),
@@ -182,8 +182,8 @@ function H() {
     for (let t in R) {
         let n = R[t];
         if (n.type === c.tI.VIEW_THREAD || n.type === c.tI.VIEW_CHANNEL) {
-            let r = _.Z.getChannel(n.channelId);
-            (null != r && f.Z.can(b.Pl.VIEW_CHANNEL, r)) || (delete R[t], (e = !0));
+            let r = f.Z.getChannel(n.channelId);
+            (null != r && _.Z.can(b.Pl.VIEW_CHANNEL, r)) || (delete R[t], (e = !0));
         }
     }
     return e;
@@ -209,7 +209,7 @@ class z extends (r = a.ZP.PersistedStore) {
             var t, n, r, i, a;
             ((S = null != (t = e.isMembersOpen) && t), (A = null != (n = e.isSummariesOpen) && n), (N = null == (r = e.isProfileOpen) || r), (R = null != (i = e.sidebars) ? i : {}), (P = null != (a = e.guildSidebars) ? a : {}));
         }
-        (this.syncWith([s.Z, l.Z], W), this.syncWith([f.Z], H), this.waitFor(l.Z, s.Z));
+        (this.syncWith([s.Z, l.Z], W), this.syncWith([_.Z], H), this.waitFor(l.Z, s.Z));
     }
     getState() {
         return {

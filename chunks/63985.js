@@ -8,8 +8,8 @@ var r = n(678916),
     c = n(355198),
     u = n(221226),
     d = n(979954),
-    _ = n(197231),
-    f = n(48539);
+    f = n(197231),
+    _ = n(48539);
 let p = () => ({
     [r.dp.OPTION_1]: {
         id: r.dp.OPTION_1,
@@ -28,7 +28,7 @@ let p = () => ({
     },
     [r.dp.OPTION_4]: {
         id: r.dp.OPTION_4,
-        source: _.Z,
+        source: f.Z,
         name: a.intl.string(a.t['/Dl3+f'])
     },
     [r.dp.OPTION_7]: {
@@ -54,7 +54,7 @@ let p = () => ({
     },
     [r.dp.OPTION_10]: {
         id: r.dp.OPTION_10,
-        source: f.Z,
+        source: _.Z,
         name: a.intl.string(a.t.TSTgyM),
         isVideo: !0,
         hotspotLocation: i.v.ANIMATED_VIDEO_BG_WUMPICE_NEW

@@ -8,8 +8,8 @@ var r = n(475179),
     c = n(317381),
     u = n(531826),
     d = n(16609),
-    _ = n(917107),
-    f = n(918559),
+    f = n(917107),
+    _ = n(918559),
     p = n(981631);
 function h(e, t) {
     let n = c.ZP.getSelfEmbeddedActivityForLocation(t);
@@ -23,7 +23,7 @@ function h(e, t) {
     if (null != g) return void (0, o.Z)(g);
     null != m &&
         ((0, s.uL)(p.Z5c.CHANNEL(e, m)),
-        (0, _.Z)(m)
+        (0, f.Z)(m)
             ? (r.Z.selectParticipant(
                   m,
                   (0, a.gN)({
@@ -32,5 +32,5 @@ function h(e, t) {
                   })
               ),
               r.Z.updateLayout(m, p.AEg.NO_CHAT))
-            : (0, l.tg)(f.Ez.PANEL));
+            : (0, l.tg)(_.Ez.PANEL));
 }

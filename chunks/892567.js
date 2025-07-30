@@ -8,14 +8,14 @@ var r = n(255367),
     c = n(442837),
     u = n(481060),
     d = n(607070),
-    _ = n(594928),
-    f = n(821795),
+    f = n(594928),
+    _ = n(821795),
     p = n(760692),
     h = n(7284),
     m = n(482695);
 let g = i.memo(function (e) {
-    let { userName: t, displayNameStyles: n, effectDisplayType: i = f.F.STATIC, textClassName: a } = e,
-        s = _.f.useExperiment({ location: 'UserNameWithEffects' }).enabled,
+    let { userName: t, displayNameStyles: n, effectDisplayType: i = _.F.STATIC, textClassName: a } = e,
+        s = f.f.useExperiment({ location: 'UserNameWithEffects' }).enabled,
         g = (0, h.j)({ displayNameStyles: n }),
         {
             useReducedMotion: b,
@@ -32,8 +32,8 @@ let g = i.memo(function (e) {
         T = E(n.effectId);
     return (0, r.jsx)('div', {
         className: o()(m.container, T, g, a, {
-            [m.showEffect]: i !== f.F.PLAIN,
-            [m.animated]: i === f.F.ANIMATED && !b
+            [m.showEffect]: i !== _.F.PLAIN,
+            [m.animated]: i === _.F.ANIMATED && !b
         }),
         style: I,
         'data-username-with-effects': (0, u.qgQ)(t),

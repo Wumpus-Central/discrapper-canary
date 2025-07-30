@@ -9,8 +9,8 @@ var i = n(442837),
     c = n(864138),
     u = n(986398),
     d = n(69589),
-    _ = n(388032),
-    f = n(734842);
+    f = n(388032),
+    _ = n(734842);
 function p(e) {
     let { userId: t, leaderboard: n } = e,
         p = (0, i.e7)([o.default], () => o.default.getUser(t));
@@ -20,7 +20,7 @@ function p(e) {
     return (0, r.jsx)(c.z, {
         imageUrl: h,
         children: (0, r.jsxs)('div', {
-            className: f.userContainer,
+            className: _.userContainer,
             children: [
                 (0, r.jsx)(d.Z, {
                     user: p,
@@ -34,11 +34,11 @@ function p(e) {
                 (0, r.jsxs)('div', {
                     children: [
                         (0, r.jsxs)('div', {
-                            className: f.userNameContainer,
+                            className: _.userNameContainer,
                             children: [
                                 (0, r.jsx)(a.Text, {
                                     variant: 'text-sm/semibold',
-                                    className: f.userName,
+                                    className: _.userName,
                                     children: m
                                 }),
                                 (0, r.jsx)(a.LZC, {
@@ -46,15 +46,15 @@ function p(e) {
                                     horizontal: !0
                                 }),
                                 (0, r.jsx)(u.Z, {
-                                    className: f.winnerImage,
+                                    className: _.winnerImage,
                                     leaderboard: n
                                 })
                             ]
                         }),
                         (0, r.jsx)(a.Text, {
                             variant: 'text-xs/normal',
-                            className: f.userSubtitle,
-                            children: _.intl.string(_.t['0ScUkZ'])
+                            className: _.userSubtitle,
+                            children: f.intl.string(f.t['0ScUkZ'])
                         })
                     ]
                 })

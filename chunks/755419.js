@@ -1,6 +1,6 @@
 n.d(t, {
-    K: () => _,
-    X: () => f
+    K: () => f,
+    X: () => _
 });
 var r = n(255367),
     i = n(120356),
@@ -11,7 +11,7 @@ var r = n(255367),
     c = n(157570),
     u = n(593639),
     d = n(26028);
-let _ = {
+let f = {
         [l.Vt.FRACTIONAL_PREMIUM]: {
             render: (e) => {
                 let { alt: t, className: n } = e;
@@ -33,7 +33,7 @@ let _ = {
             }
         }
     },
-    f = () => ({
+    _ = () => ({
         id: o.l.ORB_PROFILE_BADGE,
         icon: o.l.ORB_PROFILE_BADGE,
         iconSrc: d.Z,

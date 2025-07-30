@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -9,9 +9,9 @@ var i = n(481060),
     c = n(486324),
     u = n(228168),
     d = n(388032),
-    _ = n(83561);
-function f(e) {
-    let { user: t, displayProfile: n, guildId: f, canUsePremiumCustomization: p, pendingBanner: h, pendingAccentColor: m, isTryItOutFlow: g, disabledInputs: E, onUpsellClick: b } = e,
+    f = n(83561);
+function _(e) {
+    let { user: t, displayProfile: n, guildId: _, canUsePremiumCustomization: p, pendingBanner: h, pendingAccentColor: m, isTryItOutFlow: g, disabledInputs: E, onUpsellClick: b } = e,
         { newestAnalyticsLocation: y } = (0, a.ZP)(),
         O = p || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1,
         v = O ? i.vdY : i.SrA,
@@ -24,14 +24,14 @@ function f(e) {
             (0, l.$r)({
                 uploadType: c.pC.BANNER,
                 analyticsSource: y,
-                guildId: f,
+                guildId: _,
                 isTryItOutFlow: g
             });
         };
     return (0, r.jsx)(s.Z, {
         user: t,
         displayProfile: n,
-        guildId: f,
+        guildId: _,
         themeType: u.lY.POPOUT,
         pendingBanner: h,
         pendingAccentColor: m,
@@ -40,7 +40,7 @@ function f(e) {
             !E &&
             (0, r.jsxs)(i.P3F, {
                 onClick: T,
-                className: _.clickable,
+                className: f.clickable,
                 children: [
                     (0, r.jsx)(v, {
                         size: 'xs',

@@ -13,8 +13,8 @@ var i = n(399606),
     c = n(501867),
     u = n(567949),
     d = n(552781),
-    _ = n(952567),
-    f = n(807159);
+    f = n(952567),
+    _ = n(807159);
 function p(e, t, n) {
     return (
         t in e
@@ -157,13 +157,13 @@ let y = function () {
                     (0, r.jsx)(b, {
                         description: s.intl.string(s.t.HTvLGh),
                         heading: s.intl.string(s.t.IpRQw8),
-                        imgSrc: _,
+                        imgSrc: f,
                         label: s.intl.string(l.default.dyNT9v)
                     }),
                     (0, r.jsx)(b, {
                         description: s.intl.string(s.t.yCjoUF),
                         heading: s.intl.string(s.t['/bX4Ji']),
-                        imgSrc: f,
+                        imgSrc: _,
                         label: s.intl.string(l.default['8AEGEx'])
                     })
                 ]

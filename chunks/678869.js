@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(952164),
     u = n(768419),
     d = n(424678),
-    _ = n(239470),
-    f = n(894344),
+    f = n(239470),
+    _ = n(894344),
     p = n(314897),
     h = n(908841),
     m = n(5192),
@@ -94,7 +94,7 @@ function x(e) {
         { activity: G, currentEntry: B, artist: V, title: F, user: Z } = (0, v.pi)(x),
         { primaryColor: H, secondaryColor: Y } = (0, O.Z)(null == U ? void 0 : U.src),
         W = (0, y.Z)(A.ABu.SPOTIFY),
-        K = (0, o.e7)([u.Z, p.default], () => ((null == G ? void 0 : G.type) === A.IIU.LISTENING && null != Z ? (0, _.Z)(u.Z, p.default, Z, G) : void 0), [G, Z], s.Z),
+        K = (0, o.e7)([u.Z, p.default], () => ((null == G ? void 0 : G.type) === A.IIU.LISTENING && null != Z ? (0, f.Z)(u.Z, p.default, Z, G) : void 0), [G, Z], s.Z),
         z = i.useCallback(() => {
             var e;
             if (null == R || null == Z) return;
@@ -144,7 +144,7 @@ function x(e) {
             (null == K ? void 0 : K.syncDisabled) === !1)
         ) {
             let e = () => {
-                ((0, f.Z)(K, N.kG.USER_ACTIVITY_SYNC), M());
+                ((0, _.Z)(K, N.kG.USER_ACTIVITY_SYNC), M());
             };
             X.push(
                 (0, r.jsx)(

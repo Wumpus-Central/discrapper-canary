@@ -64,10 +64,10 @@ function C(e, t) {
 function O() {
     return (0, n.jsxs)(m.Ttm, {
         className: _.container,
-        children: [(0, n.jsx)(T, {}), (0, n.jsx)(N, {})]
+        children: [(0, n.jsx)(N, {}), (0, n.jsx)(T, {})]
     });
 }
-function T() {
+function N() {
     var e, t;
     let a = (0, c.e7)([g.Z], () => g.Z.getChannelId()),
         l = (0, b.Z)(a),
@@ -91,15 +91,15 @@ function T() {
             },
             [null == l ? void 0 : l.wallpaperId]
         ),
-        T = r.useCallback(
+        N = r.useCallback(
             (e) => {
                 S(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
             [null == l ? void 0 : l.wallpaperId]
         ),
-        N = r.useCallback(() => E(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        w = r.useCallback(() => P(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        I = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        T = r.useCallback(() => E(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        I = r.useCallback(() => P(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        w = r.useCallback(() => S(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         R = r.useCallback(
             (e) => {
                 null != s && (0, p.i)(s, { token_mix_amount: Math.round(e) });
@@ -200,7 +200,7 @@ function T() {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
-                                    onClick: N,
+                                    onClick: T,
                                     className: _.removeButton
                                 })
                             ]
@@ -241,7 +241,7 @@ function T() {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
-                                    onClick: w,
+                                    onClick: I,
                                     className: _.removeButton
                                 })
                             ]
@@ -300,7 +300,7 @@ function T() {
                                     {
                                         type: 'color',
                                         value: d.link_color,
-                                        onChange: T
+                                        onChange: N
                                     },
                                     'linkColor-'.concat(d.link_color)
                                 ),
@@ -311,7 +311,7 @@ function T() {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
-                                    onClick: I,
+                                    onClick: w,
                                     className: _.removeButton
                                 })
                             ]
@@ -326,7 +326,7 @@ function T() {
         ]
     });
 }
-function N() {
+function T() {
     let e = r.useCallback(() => {
             (0, v.Z1)(d.z.NITRO_TENURE_BADGE_LEVEL_UP);
         }, []),

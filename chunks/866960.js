@@ -20,13 +20,13 @@ function l(e, t, n) {
 let c = s.IWh.UNKNOWN,
     u = s.IyS.UNKNOWN,
     d = null;
-function _(e) {
+function f(e) {
     var t;
     ((c = null != e.type ? e.type : s.IWh.UNKNOWN), (u = null != (t = e.effectiveSpeed) ? t : s.IyS.UNKNOWN), (d = e.serviceProvider), p.emitChange());
 }
-class f extends (r = i.ZP.Store) {
+class _ extends (r = i.ZP.Store) {
     initialize() {
-        (o.Z.getNetworkInformation().then(_), o.Z.addChangeCallback(_));
+        (o.Z.getNetworkInformation().then(f), o.Z.addChangeCallback(f));
     }
     getType() {
         return c;
@@ -38,6 +38,6 @@ class f extends (r = i.ZP.Store) {
         return d;
     }
 }
-l(f, 'displayName', 'NetworkStore');
-let p = new f(a.Z, {}),
+l(_, 'displayName', 'NetworkStore');
+let p = new _(a.Z, {}),
     h = p;

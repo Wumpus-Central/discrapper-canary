@@ -9,8 +9,8 @@ var i = n(278074),
     c = n(583434),
     u = n(22267),
     d = n(479446),
-    _ = n(981632),
-    f = n(731896),
+    f = n(981632),
+    _ = n(731896),
     p = n(680295),
     h = n(998502),
     m = n(987209),
@@ -97,7 +97,7 @@ function S(e) {
 function A(e) {
     var t;
     let { id: n } = e,
-        i = null == (t = (0, f.V)(n)) ? void 0 : t.config;
+        i = null == (t = (0, _.V)(n)) ? void 0 : t.config;
     return (0, r.jsxs)('div', {
         className: E.profileEffectContainer,
         children: [
@@ -136,7 +136,7 @@ function C(e) {
     return null != n && null == l
         ? (0, r.jsx)('div', {
               className: E.giftMainAnimationWrapper,
-              children: (0, r.jsx)(_.Z, {
+              children: (0, r.jsx)(f.Z, {
                   defaultAnimationState: d.SR.LOOP,
                   giftStyle: n,
                   shouldAnimate: !0,

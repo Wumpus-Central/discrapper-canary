@@ -4,9 +4,9 @@
     Qu: () => h,
     Ws: () => g,
     bk: () => m,
-    ee: () => _,
+    ee: () => f,
     ou: () => d,
-    zi: () => f
+    zi: () => _
 }),
     n(388685));
 var r = n(73800),
@@ -31,20 +31,20 @@ function u(e) {
 }
 function d(e, t, r) {
     var a, c, d;
-    let _ = null != r ? i.Z.getDetectableGame(r) : null,
-        { default: f } = n(371651),
-        p = null != (a = null == f ? void 0 : f.getMostRecentOverlayRenderMethod()) ? a : void 0,
+    let f = null != r ? i.Z.getDetectableGame(r) : null,
+        { default: _ } = n(371651),
+        p = null != (a = null == _ ? void 0 : _.getMostRecentOverlayRenderMethod()) ? a : void 0,
         h = null != p ? s.gl[p] : void 0;
     o.default.track(l.rMx.OVERLAY_TOGGLED, {
         enabled: e,
         setting_type: u(t),
         client_setting_type: t,
-        application_id: null != (c = null == _ ? void 0 : _.id) ? c : void 0,
-        application_name: null != (d = null == _ ? void 0 : _.name) ? d : void 0,
+        application_id: null != (c = null == f ? void 0 : f.id) ? c : void 0,
+        application_name: null != (d = null == f ? void 0 : f.name) ? d : void 0,
         most_recent_overlay_render_method: h
     });
 }
-function _(e, t) {
+function f(e, t) {
     let [n, i] = r.useState(e()),
         a = r.useRef(e);
     return (
@@ -63,7 +63,7 @@ function _(e, t) {
         n
     );
 }
-function f(e, t) {
+function _(e, t) {
     var n, r, i;
     let { locked: s, shownUserIds: c, liveUserIds: u, contentInventoryIds: d } = t;
     ((null != (n = null == c ? void 0 : c.length) ? n : 0) !== 0 || (null != (r = null == u ? void 0 : u.length) ? r : 0) !== 0 || (null != (i = null == d ? void 0 : d.length) ? i : 0) !== 0) &&

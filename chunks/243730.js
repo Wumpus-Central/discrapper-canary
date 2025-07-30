@@ -28,14 +28,14 @@ function d(e) {
     if (null == i) return !1;
     i[n] = r;
 }
-function _(e) {
+function f(e) {
     let { guildId: t, roleId: n, added: r } = e,
         i = l[t];
     if (null == i || null == i[n]) return !1;
     let a = Object.keys(r).length;
     i[n] += a;
 }
-function f(e) {
+function _(e) {
     let { guildId: t, roleId: n } = e,
         r = l[t];
     if (null == r || null == r[n]) return !1;
@@ -69,8 +69,8 @@ o(g, 'displayName', 'GuildRoleMemberCountStore');
 let E = new g(a.Z, {
     GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS: u,
     GUILD_ROLE_MEMBER_COUNT_UPDATE: d,
-    GUILD_ROLE_MEMBER_BULK_ADD: _,
-    GUILD_ROLE_MEMBER_ADD: f,
+    GUILD_ROLE_MEMBER_BULK_ADD: f,
+    GUILD_ROLE_MEMBER_ADD: _,
     GUILD_ROLE_MEMBER_REMOVE: p,
     GUILD_ROLE_CREATE: h,
     GUILD_DELETE: m

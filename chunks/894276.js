@@ -1,7 +1,7 @@
 (n.d(t, {
-    IZ: () => _,
+    IZ: () => f,
     Re: () => s,
-    j_: () => f
+    j_: () => _
 }),
     n(953529),
     n(539854),
@@ -130,6 +130,6 @@ class d extends c {
         (super(...e), o(this, 'MAX_EMISSIONS_PER_APP_LAUNCH', 5), o(this, 'emissionsCount', 0));
     }
 }
-let _ = new u('2025-05_libdiscore_notestore_v2', 'NoteStore'),
-    f = new u('2025-07_libdiscore_guildstore_v2', 'GuildStore');
+let f = new u('2025-05_libdiscore_notestore_v2', 'NoteStore'),
+    _ = new u('2025-07_libdiscore_guildstore_v2', 'GuildStore');
 new d('2025-07_libdiscore_telemetry');

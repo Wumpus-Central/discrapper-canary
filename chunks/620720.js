@@ -10,6 +10,6 @@ function s(e, t) {
         c = l === (null == (n = e.ownerDocument) ? void 0 : n.body),
         u = (0, a.Z)(l),
         d = c ? [u].concat(u.visualViewport || [], (0, o.Z)(l) ? l : []) : l,
-        _ = t.concat(d);
-    return c ? _ : _.concat(s((0, i.Z)(d)));
+        f = t.concat(d);
+    return c ? f : f.concat(s((0, i.Z)(d)));
 }

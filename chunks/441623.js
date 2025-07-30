@@ -8,8 +8,8 @@ var r,
     c = n(570140),
     u = n(353926),
     d = n(752048),
-    _ = n(480294),
-    f = n(699516),
+    f = n(480294),
+    _ = n(699516),
     p = n(522558),
     h = n(981631);
 function m(e, t, n) {
@@ -72,14 +72,14 @@ function P(e) {
 }
 function w() {
     if (null != C) return void K(C);
-    if ((x(), !_.Z.hasConsented(h.pjP.PERSONALIZATION))) return;
+    if ((x(), !f.Z.hasConsented(h.pjP.PERSONALIZATION))) return;
     let { enabled: e } = p.w.getCurrentConfig({ location: 'PremiumGiftingIntentStore updateFriendAnniversaries' }, { autoTrackExposure: !1 });
     if (e) {
-        for (let e of f.Z.getFriendIDs()) {
+        for (let e of _.Z.getFriendIDs()) {
             if (S.length >= b) break;
-            let t = f.Z.getSince(e),
+            let t = _.Z.getSince(e),
                 n = d.Z.getUserAffinity(e);
-            if (!f.Z.isIgnored(e) && null != n && n.communicationProbability > 0 && null != t) {
+            if (!_.Z.isIgnored(e) && null != n && n.communicationProbability > 0 && null != t) {
                 let n = new Date(t);
                 P(n) && (S.push(e), (N[e] = { friendsSince: n }));
             }
@@ -153,11 +153,11 @@ function K(e) {
     let { enabled: t } = p.w.getCurrentConfig({ location: 'PremiumGiftingIntentStore generateFriendAnniversaries' }, { autoTrackExposure: !1 });
     if (!t) return;
     C = e;
-    let n = f.Z.getFriendIDs().filter((e) => !f.Z.isIgnored(e));
+    let n = _.Z.getFriendIDs().filter((e) => !_.Z.isIgnored(e));
     (a()
         .sampleSize(n, e)
         .forEach((e) => {
-            let t = f.Z.getSince(e);
+            let t = _.Z.getSince(e);
             if (null != t) {
                 let n = new Date(t);
                 (S.push(e), (N[e] = { friendsSince: n }));
@@ -167,7 +167,7 @@ function K(e) {
 }
 class z extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        ((T = I()), null != e && ((T.friendsTabBadgeLastDismissedTime = e.friendsTabBadgeLastDismissedTime), (T.lastShownFriendsListGiftIntents = Array.from(e.lastShownFriendsListGiftIntents)), (T.messageGiftIntentLastShownMap = g({}, e.messageGiftIntentLastShownMap))), this.syncWith([f.Z, d.Z, _.Z, u.Z], w), F());
+        ((T = I()), null != e && ((T.friendsTabBadgeLastDismissedTime = e.friendsTabBadgeLastDismissedTime), (T.lastShownFriendsListGiftIntents = Array.from(e.lastShownFriendsListGiftIntents)), (T.messageGiftIntentLastShownMap = g({}, e.messageGiftIntentLastShownMap))), this.syncWith([_.Z, d.Z, f.Z, u.Z], w), F());
     }
     getState() {
         return T;

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(780384),
     u = n(481060),
     d = n(436774),
-    _ = n(623624),
-    f = n(297700),
+    f = n(623624),
+    _ = n(297700),
     p = n(210887),
     h = n(271383),
     m = n(594174),
@@ -227,7 +227,7 @@ function M(e) {
                 U &&
                     (e.stopPropagation(),
                     e.preventDefault(),
-                    (0, _.f)({
+                    (0, f.f)({
                         guildId: o.id,
                         location: {
                             section: I.jXE.GUILD_HEADER,
@@ -259,7 +259,7 @@ function M(e) {
                 onClick: G,
                 tabIndex: U ? 0 : -1,
                 children: (0, r.jsx)(
-                    f.Z,
+                    _.Z,
                     R(N({}, e), {
                         className: g,
                         flowerStarClassName: E,

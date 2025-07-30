@@ -8,8 +8,8 @@ var r = n(512722),
     c = n(358085),
     u = n(987209),
     d = n(563132),
-    _ = n(409813),
-    f = n(45572),
+    f = n(409813),
+    _ = n(45572),
     p = n(981631),
     h = n(474936);
 function m(e, t, n) {
@@ -82,24 +82,24 @@ function y(e) {
         U = (0, o.N)(m),
         G = !k && null != U && null != w && h.nG[U.trial_id].skus.includes(w),
         B = () => {
-            c(Object.values(T).length < 1 && null == n ? _.h8.PLAN_SELECT : _.h8.REVIEW, { trackedFromStep: _.h8.PAYMENT_TYPE });
+            c(Object.values(T).length < 1 && null == n ? f.h8.PLAN_SELECT : f.h8.REVIEW, { trackedFromStep: f.h8.PAYMENT_TYPE });
         },
         V = null != E ? E : B;
     i()(I, 'Step should be set here');
     let F = (0, a.Z)(() => Date.now(), [I]),
-        Z = (0, a.Z)(() => (null != y && null == L.current ? (M && y === _.h8.CREDIT_CARD_INFORMATION ? _.h8.PAYMENT_ELEMENT : y) : _.h8.PAYMENT_TYPE), [y, L.current, M]);
+        Z = (0, a.Z)(() => (null != y && null == L.current ? (M && y === f.h8.CREDIT_CARD_INFORMATION ? f.h8.PAYMENT_ELEMENT : y) : f.h8.PAYMENT_TYPE), [y, L.current, M]);
     return (0, s.vP)({
         paymentModalArgs: j,
         initialStep: Z,
-        prependSteps: [_.h8.PROMOTION_INFO],
-        appendSteps: [_.h8.REVIEW, _.h8.CONFIRM],
+        prependSteps: [f.h8.PROMOTION_INFO],
+        appendSteps: [f.h8.REVIEW, f.h8.CONFIRM],
         breadcrumpSteps: r,
         currentBreadcrumpStep: I,
         usePaymentModalStep: !0,
         analyticsData: t,
         onReturn: V,
         onComplete: (e) => {
-            _.Nj.has(e) ? (x(f.A.COMPLETED), c(_.h8.CONFIRM, { trackedFromStep: e })) : c(_.h8.REVIEW, { trackedFromStep: e });
+            f.Nj.has(e) ? (x(_.A.COMPLETED), c(f.h8.CONFIRM, { trackedFromStep: e })) : c(f.h8.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
             let { currentStep: n, toStep: r } = e,

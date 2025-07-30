@@ -7,8 +7,8 @@ var a,
     c = n(570140),
     u = n(189786),
     d = n(981631),
-    _ = n(354459);
-function f(e, t, n) {
+    f = n(354459);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -205,13 +205,13 @@ class V extends (a = l.ZP.Store) {
     getVoicePlatformForChannel(e, t) {
         var n, a;
         let o = null != i && (null == (a = O[r]) || null == (n = a[i]) ? void 0 : n.channelId);
-        return t === r && e === o ? _.wR.DESKTOP : v[I(t, e)];
+        return t === r && e === o ? f.wR.DESKTOP : v[I(t, e)];
     }
     get userHasBeenMovedVersion() {
         return p;
     }
 }
-f(V, 'displayName', 'VoiceStateStore');
+_(V, 'displayName', 'VoiceStateStore');
 let F = new V(c.Z, {
     CONNECTION_OPEN: M,
     CONNECTION_OPEN_SUPPLEMENTAL: k,

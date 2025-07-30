@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(749210),
     d = n(434404),
-    _ = n(271383),
-    f = n(485386),
+    f = n(271383),
+    _ = n(485386),
     p = n(496675),
     h = n(259580),
     m = n(700785),
@@ -101,7 +101,7 @@ let P = 4,
         return t > 0 ? t + P : 0;
     };
 function x(e) {
-    let { user: t, currentUser: n, guild: l, guildMember: u, roles: d, highestRole: _, canManageRoles: f, onAddRole: p, onRemoveRole: E } = e,
+    let { user: t, currentUser: n, guild: l, guildMember: u, roles: d, highestRole: f, canManageRoles: _, onAddRole: p, onRemoveRole: E } = e,
         T = i.useRef({}),
         A = (e, t) => {
             null != t ? (T.current[e] = t) : delete T.current[e];
@@ -158,7 +158,7 @@ function x(e) {
                     disableBorderColor: !0,
                     ref: (t) => A(e.id, t),
                     onRemove: () => E(e),
-                    canRemove: (null == (a = e.tags) ? void 0 : a.guild_connections) === null ? t.id === n.id : f && m.r6(l, n.id, _, e)
+                    canRemove: (null == (a = e.tags) ? void 0 : a.guild_connections) === null ? t.id === n.id : _ && m.r6(l, n.id, f, e)
                 },
                 e.id
             );
@@ -217,13 +217,13 @@ function x(e) {
                                               })
                                           })
                                     : null,
-                                f && null != u
+                                _ && null != u
                                     ? (0, r.jsx)(y.Z, {
                                           buttonRef: B,
                                           guild: l,
                                           guildMember: u,
                                           numRoles: H,
-                                          highestRole: _,
+                                          highestRole: f,
                                           onAddRole: p
                                       })
                                     : null
@@ -238,9 +238,9 @@ function x(e) {
 function M(e) {
     let { user: t, currentUser: n, guild: a } = e,
         { trackUserProfileAction: o } = (0, g.KZ)(),
-        s = (0, l.e7)([_.ZP], () => _.ZP.getMember(a.id, t.id)),
+        s = (0, l.e7)([f.ZP], () => f.ZP.getMember(a.id, t.id)),
         c = null == s ? void 0 : s.roles,
-        h = (0, l.Wu)([f.Z], () => f.Z.getManyRoles(a.id, null != c ? c : []).sort(E.Z), [c, a.id]),
+        h = (0, l.Wu)([_.Z], () => _.Z.getManyRoles(a.id, null != c ? c : []).sort(E.Z), [c, a.id]),
         b = m.e9(a, n.id),
         [y] = (0, l.Wu)([p.Z], () => [p.Z.can(O.Plq.MANAGE_ROLES, a), null != a ? p.Z.getGuildVersion(a.id) : null]),
         v = i.useCallback(

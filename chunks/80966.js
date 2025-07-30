@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,12 +47,12 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -81,16 +81,16 @@ function h(e, t) {
 class m extends i.Component {
     render() {
         let e = this.props,
-            { src: t, fileSize: n, className: i, mediaPlayerClassName: u, poster: _, fileName: h, naturalWidth: m, naturalHeight: g, playable: E, downloadable: b = !0, volume: y, autoPlay: O, autoMute: v, responsive: I, mediaLayoutType: T, mimeType: S, renderOverlayContent: A, renderLinkComponent: N, onClick: C, onPlay: R, onPause: P, onEnded: w, onControlsShow: D, onControlsHide: L, onVolumeChange: x, onMute: M, disableArrowKeySeek: k, alt: j = c.intl.string(c.t.FlNoSU) } = e,
+            { src: t, fileSize: n, className: i, mediaPlayerClassName: u, poster: f, fileName: h, naturalWidth: m, naturalHeight: g, playable: E, downloadable: b = !0, volume: y, autoPlay: O, autoMute: v, responsive: I, mediaLayoutType: T, mimeType: S, renderOverlayContent: A, renderLinkComponent: N, onClick: C, onPlay: R, onPause: P, onEnded: w, onControlsShow: D, onControlsHide: L, onVolumeChange: x, onMute: M, disableArrowKeySeek: k, alt: j = c.intl.string(c.t.FlNoSU) } = e,
             U = p(e, ['src', 'fileSize', 'className', 'mediaPlayerClassName', 'poster', 'fileName', 'naturalWidth', 'naturalHeight', 'playable', 'downloadable', 'volume', 'autoPlay', 'autoMute', 'responsive', 'mediaLayoutType', 'mimeType', 'renderOverlayContent', 'renderLinkComponent', 'onClick', 'onPlay', 'onPause', 'onEnded', 'onControlsShow', 'onControlsHide', 'onVolumeChange', 'onMute', 'disableArrowKeySeek', 'alt']);
         return (0, r.jsx)(
             o.ZP,
-            f(
+            _(
                 d(
                     {
                         alt: j,
                         className: i,
-                        src: _
+                        src: f
                     },
                     U
                 ),

@@ -9,8 +9,8 @@ var i = n(442837),
     c = n(335131),
     u = n(628952),
     d = n(225657),
-    _ = n(600164),
-    f = n(109213),
+    f = n(600164),
+    _ = n(109213),
     p = n(927699),
     h = n(987716),
     m = n(311821),
@@ -86,9 +86,9 @@ function M(e) {
         { customGiftMessage: s = '', setCustomGiftMessage: l, giftRecipientError: m, setGiftRecipientError: T, validatingGiftRecipient: w, giftRecipient: D, recommendedGiftSkuIds: L, giftingOrigin: M, setValidatingGiftRecipient: j } = (0, v.wD)(),
         { selectedSkuId: U, setSelectedSkuId: G, selectedSkuPricePreview: B, paymentSourceId: V, skuPricePreviewsById: F } = (0, I.JL)(),
         Z = (0, i.e7)([E.default], () => E.default.getCurrentUser()),
-        { enabled: H, giftRecommendationAlgorithm: Y } = f.G.useExperiment({ location: 'CollectiblesPaymentModalGiftCustomizationStep' }, { autoTrackExposure: !1 }),
+        { enabled: H, giftRecommendationAlgorithm: Y } = _.G.useExperiment({ location: 'CollectiblesPaymentModalGiftCustomizationStep' }, { autoTrackExposure: !1 }),
         W = H && M === N.Wt.DM_CHANNEL,
-        K = Y === f.u.POPULAR ? C.intl.string(C.t.Kwgrrq) : C.intl.string(C.t.r1huYW),
+        K = Y === _.u.POPULAR ? C.intl.string(C.t.Kwgrrq) : C.intl.string(C.t.r1huYW),
         z = async (e, t) => {
             (j(!0), null != m && T(), (await (0, c.B1)(e.id, t)) || T(C.intl.string(C.t['4kgVqa'])), j(!1));
         };
@@ -193,8 +193,8 @@ function M(e) {
             }),
             (0, r.jsx)(S.O3, {
                 children: (0, r.jsx)(a.mzw, {
-                    justify: _.Z.Justify.BETWEEN,
-                    align: _.Z.Align.CENTER,
+                    justify: f.Z.Justify.BETWEEN,
+                    align: f.Z.Align.CENTER,
                     children: (0, r.jsx)(x, {
                         onStepChange: t,
                         onBackClick: n,

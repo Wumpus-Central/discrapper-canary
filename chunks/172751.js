@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(857395),
     u = n(210887),
     d = n(594174),
-    _ = n(731722),
-    f = n(131085),
+    f = n(731722),
+    _ = n(131085),
     p = n(388032),
     h = n(953790);
 function m(e, t, n) {
@@ -46,7 +46,7 @@ function g(e) {
     return e;
 }
 let E = i.memo(function (e) {
-        let { src: t, tag: n, className: i, size: a = f.Gg.SIZE_16 } = e;
+        let { src: t, tag: n, className: i, size: a = _.Gg.SIZE_16 } = e;
         return null == t
             ? null
             : (0, r.jsx)('img', {
@@ -58,7 +58,7 @@ let E = i.memo(function (e) {
               });
     }),
     b = i.memo(function (e) {
-        let { guildId: t, guildTag: n, guildBadge: i, className: a, textClassName: s, badgeClassName: c, onClick: u, onMouseEnter: d, textVariant: p = 'text-xs/semibold', textColor: m = 'text-default', badgeSize: g = f.Gg.SIZE_12, inline: b = !0 } = e;
+        let { guildId: t, guildTag: n, guildBadge: i, className: a, textClassName: s, badgeClassName: c, onClick: u, onMouseEnter: d, textVariant: p = 'text-xs/semibold', textColor: m = 'text-default', badgeSize: g = _.Gg.SIZE_12, inline: b = !0 } = e;
         return (0, r.jsx)(l.P3F, {
             tag: 'span',
             tabIndex: null == u ? -1 : void 0,
@@ -74,7 +74,7 @@ let E = i.memo(function (e) {
                 children: [
                     null != i && 'string' == typeof i
                         ? (0, r.jsx)(E, {
-                              src: (0, _.Ic)(t, i, g),
+                              src: (0, f.Ic)(t, i, g),
                               tag: null == n ? void 0 : n.toString(),
                               size: g,
                               className: c
@@ -90,13 +90,13 @@ let E = i.memo(function (e) {
     }),
     y = i.memo(function (e) {
         var t;
-        let { primaryGuild: n, userId: a, contextGuildId: f, className: p, containerClassName: m, textVariant: E, textColor: y, badgeSize: O, disableGuildProfile: v = !1, inline: I = !0, onShowProfile: T, onClose: S } = e,
+        let { primaryGuild: n, userId: a, contextGuildId: _, className: p, containerClassName: m, textVariant: E, textColor: y, badgeSize: O, disableGuildProfile: v = !1, inline: I = !0, onShowProfile: T, onClose: S } = e,
             A = i.useRef(null),
             N = (0, s.e7)([d.default], () => d.default.getUser(a), [a]),
             C = (0, s.e7)([u.Z], () => u.Z.theme),
             R = null != (t = null == N ? void 0 : N.primaryGuild) ? t : n,
-            { tag: P, badge: w, guildId: D } = (0, _.Pb)(R);
-        return (0, _.yF)(a, f) && null != D
+            { tag: P, badge: w, guildId: D } = (0, f.Pb)(R);
+        return (0, f.yF)(a, _) && null != D
             ? v
                 ? (0, r.jsx)(b, {
                       guildId: D,

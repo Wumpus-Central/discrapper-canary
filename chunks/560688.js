@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(481060),
@@ -57,7 +57,7 @@ function d(e, t) {
         e
     );
 }
-function _(e) {
+function f(e) {
     a.Z.supports(o.AN.VIDEO)
         ? (0, i.ZDy)(async () => {
               let { default: t } = await n.e('67753').then(n.bind(n, 873809));

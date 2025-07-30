@@ -1,5 +1,5 @@
 n.d(t, {
-    Qt: () => _,
+    Qt: () => f,
     _H: () => p,
     a7: () => d
 });
@@ -71,8 +71,8 @@ function d(e, t, n) {
         })
     );
 }
-function _(e, t, n, i) {
-    var s, c, d, _, f;
+function f(e, t, n, i) {
+    var s, c, d, f, _;
     a.default.track(
         o.rMx.CHANNEL_AUTOCOMPLETE_SELECTED,
         u(l({}, (0, r.v_)(n), (0, r.hH)(n.guild_id)), {
@@ -83,12 +83,12 @@ function _(e, t, n, i) {
             num_emoji_results: null != (s = null == i ? void 0 : i.numEmojiResults) ? s : 0,
             num_sticker_results: null != (c = null == i ? void 0 : i.numStickerResults) ? c : 0,
             emoji_name: null != (d = null == i ? void 0 : i.expressionName) ? d : '',
-            is_custom: null != (_ = null == i ? void 0 : i.isCustom) && _,
-            is_animated: null != (f = null == i ? void 0 : i.isAnimated) && f
+            is_custom: null != (f = null == i ? void 0 : i.isCustom) && f,
+            is_animated: null != (_ = null == i ? void 0 : i.isAnimated) && _
         })
     );
 }
-function f(e) {
+function _(e) {
     switch (e) {
         case i.V0.AUTOCOMPLETE:
             return 'autocomplete';
@@ -104,7 +104,7 @@ function p(e) {
     let { sticker: t, stickerSelectLocation: n, isReplacement: r, analyticsLocations: i } = e;
     a.default.track(o.rMx.STICKER_ATTACHED, {
         replaced: r,
-        source: f(n),
+        source: _(n),
         sticker_id: t.id,
         location_stack: i
     });

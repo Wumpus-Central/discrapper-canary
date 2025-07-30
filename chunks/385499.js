@@ -21,7 +21,7 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function _(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,14 +54,14 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 let h = (e) => {
-    let { invertColor: t = !1, type: n = l.Hb.BOT, className: i, verified: d, hideIcon: f = !1, useRemSizes: h = !1, children: m = [] } = e,
+    let { invertColor: t = !1, type: n = l.Hb.BOT, className: i, verified: d, hideIcon: _ = !1, useRemSizes: h = !1, children: m = [] } = e,
         g = null,
         E = c.intl.string(c.t.g76OcH),
         b = t ? u.botTagInvert : u.botTagRegular;
@@ -100,7 +100,7 @@ let h = (e) => {
             children: (e) =>
                 (0, r.jsx)(
                     s.kSu,
-                    p(_({}, e), {
+                    p(f({}, e), {
                         className: u.botTagVerified,
                         color: s.TVs.colors.WHITE
                     })
@@ -109,13 +109,13 @@ let h = (e) => {
     let I = (e) =>
         (0, r.jsxs)(
             'span',
-            p(_({}, e), {
+            p(f({}, e), {
                 className: a()(i, b, h ? u.rem : u.px, {
                     [u.botTagOP]: y,
                     [u.botTagRemix]: O
                 }),
                 children: [
-                    f ? null : v,
+                    _ ? null : v,
                     m,
                     (0, r.jsx)('span', {
                         className: u.botText,

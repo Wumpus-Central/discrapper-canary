@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(7366),
     u = n(981631),
     d = n(388032),
-    _ = n(152599),
-    f = n(860978);
+    f = n(152599),
+    _ = n(860978);
 function p(e, t, n) {
     return (
         t in e
@@ -70,7 +70,7 @@ let E = 2.1,
                     window.open(l.Z.getArticleURL(u.BhN.NITRO_FAQ), '_blank');
                 }
             }),
-            b = (0, o.rO)() ? _.Z : f.Z;
+            b = (0, o.rO)() ? f.Z : _.Z;
         return (0, r.jsx)(
             c.Z,
             h(

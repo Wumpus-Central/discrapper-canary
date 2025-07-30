@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(493773),
     d = n(468363),
-    _ = n(906732),
-    f = n(313201),
+    f = n(906732),
+    _ = n(313201),
     p = n(158776),
     h = n(885110),
     m = n(823379),
@@ -105,8 +105,8 @@ let M = {
 };
 function k(e) {
     let { user: t, currentUser: n, displayProfile: a, guildId: m, onOpenUserProfileModal: C, onClose: P } = e,
-        w = (0, f.Dt)(),
-        { analyticsLocations: k } = (0, _.ZP)(),
+        w = (0, _.Dt)(),
+        { analyticsLocations: k } = (0, f.ZP)(),
         { trackUserProfileAction: j } = (0, g.KZ)(),
         { live: U, stream: G } = (0, E.Z)(t.id),
         { voiceChannel: B, voiceActivity: V } = (0, b.Z)({

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(755721),
     u = n(481060),
     d = n(239091),
-    _ = n(751688),
-    f = n(5192),
+    f = n(751688),
+    _ = n(5192),
     p = n(51144),
     h = n(223390);
 function m(e, t, n) {
@@ -99,12 +99,12 @@ function v(e) {
                 className: h.scroller,
                 children: t.map((e) =>
                     (0, r.jsx)(
-                        _.Z,
+                        f.Z,
                         {
                             user: e,
                             guildId: s,
                             channelId: m,
-                            nick: f.ZP.getNickname(s, m, e),
+                            nick: _.ZP.getNickname(s, m, e),
                             disablePopout: 'function' == typeof C ? C(e.id) : C,
                             onClick: w,
                             onPopoutRequestClose: () => {
@@ -139,7 +139,7 @@ function v(e) {
             n = e + 1,
             i = e > 0 && !A,
             d = Math.min(t.length, a) - 1,
-            _ = l()(t)
+            f = l()(t)
                 .take(a)
                 .map((e, t) => {
                     let n = p.ZP.getName(e),
@@ -175,7 +175,7 @@ function v(e) {
                 .value();
         if (i) {
             let e = null != I ? I : O(v);
-            _[_.length - 1] = (0, r.jsx)(
+            f[f.length - 1] = (0, r.jsx)(
                 u.yRy,
                 {
                     targetElementRef: k,
@@ -203,7 +203,7 @@ function v(e) {
                 'overflow'
             );
         }
-        return _;
+        return f;
     }
     return t.length <= 0
         ? null

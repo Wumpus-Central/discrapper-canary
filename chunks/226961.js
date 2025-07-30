@@ -16,7 +16,7 @@ var r,
     c = n(594174),
     u = n(981631),
     d = n(65154);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -86,17 +86,17 @@ class v {
     }
     put(e, t, n, r) {
         if ('' === r) {
-            let r = f({}, this.state);
+            let r = _({}, this.state);
             return (delete r[y(e, t, n)], new v(r));
         }
-        return new v(f({ [y(e, t, n)]: r }, this.state));
+        return new v(_({ [y(e, t, n)]: r }, this.state));
     }
     get(e, t, n) {
         let r = this.state[y(e, t, n)];
         return null != r ? r : null;
     }
     constructor(e) {
-        (_(this, 'state', void 0), (this.state = e));
+        (f(this, 'state', void 0), (this.state = e));
     }
 }
 let I = v.empty(),
@@ -276,7 +276,7 @@ class Z extends (r = i.ZP.Store) {
         return g.has(n) ? g.get(n) : d.Z.NO_OVERRIDE;
     }
 }
-_(Z, 'displayName', 'RTCDebugStore');
+f(Z, 'displayName', 'RTCDebugStore');
 let H = new Z(o.Z, {
     RTC_DEBUG_MODAL_OPEN: P,
     RTC_DEBUG_MODAL_CLOSE: w,

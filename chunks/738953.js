@@ -1,15 +1,15 @@
 (n.d(t, { Z: () => z }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(564854),
+    a = n(778141),
     o = n(442837),
     s = n(704215),
     l = n(481060),
     c = n(727637),
     u = n(980591),
     d = n(616780),
-    _ = n(100527),
-    f = n(906732),
+    f = n(100527),
+    _ = n(906732),
     p = n(313201),
     h = n(359588),
     m = n(368326),
@@ -94,7 +94,7 @@ function W(e, t) {
 let K = 200;
 function z(e) {
     let { user: t, currentUser: n, guildId: Z, channelId: Y, messageId: z, roleId: q, openedAt: X, closePopout: Q, setPopoutRef: J, disableUserProfileLink: $ = __OVERLAY__, newAnalyticsLocations: ee = [], appContext: et, disableAutoFocus: en = !1 } = e,
-        { analyticsLocations: er } = (0, f.ZP)([...ee, _.Z.USER_PROFILE_POPOUT]),
+        { analyticsLocations: er } = (0, _.ZP)([...ee, f.Z.USER_PROFILE_POPOUT]),
         ei = (0, T.ZB)({
             layout: 'POPOUT',
             userId: t.id,
@@ -117,14 +117,14 @@ function z(e) {
     i.useEffect(() => {
         null == J || J(null == es ? void 0 : es.current);
     }, [es, J]);
-    let e_ = i.useRef(null),
-        [ef, ep] = i.useState(String(Date.now())),
+    let ef = i.useRef(null),
+        [e_, ep] = i.useState(String(Date.now())),
         [eh, em] = i.useState(!1);
     ((0, u.Z)(() => {
         em(!0);
     }, K),
         (0, O.fu)({
-            targetElementRef: e_,
+            targetElementRef: ef,
             onGetElementDimensionsAndBoundingRect: (e) => {
                 let { hasElementPositionChanged: t } = e;
                 t && ep(String(Date.now()));
@@ -175,7 +175,7 @@ function z(e) {
         eA = en ? 'div' : l.VqE,
         eN = (0, p.Dt)(),
         eC = I.ZP.useName(null == ea ? void 0 : ea.id, Y, t);
-    return (0, r.jsx)(f.Gt, {
+    return (0, r.jsx)(_.Gt, {
         value: er,
         children: (0, r.jsx)(T.Mt, {
             value: ei,
@@ -255,13 +255,13 @@ function z(e) {
                                         }),
                                         eO && eh
                                             ? (0, r.jsx)(E.Z, {
-                                                  positionKey: ef,
+                                                  positionKey: e_,
                                                   markAsDismissed: ey,
-                                                  targetElementRef: e_,
+                                                  targetElementRef: ef,
                                                   onTryFeature: Q,
                                                   children: () =>
                                                       (0, r.jsx)(j.Z, {
-                                                          ref: e_,
+                                                          ref: ef,
                                                           location: 'UserProfilePopout',
                                                           user: t,
                                                           guildId: Z,
@@ -272,7 +272,7 @@ function z(e) {
                                                       })
                                               })
                                             : (0, r.jsx)(j.Z, {
-                                                  ref: eO ? e_ : void 0,
+                                                  ref: eO ? ef : void 0,
                                                   location: 'UserProfilePopout',
                                                   user: t,
                                                   guildId: Z,

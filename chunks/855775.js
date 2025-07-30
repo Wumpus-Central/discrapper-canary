@@ -1,7 +1,7 @@
 let r, i;
 (n.d(t, {
     Z: () => H,
-    c: () => f
+    c: () => _
 }),
     n(388685));
 var a,
@@ -49,7 +49,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,7 +60,7 @@ function _(e, t) {
         e
     );
 }
-let f = 'no_payment_source',
+let _ = 'no_payment_source',
     p = null,
     h = null,
     m = null,
@@ -92,7 +92,7 @@ function D(e) {
 }
 function L(e) {
     let { skuId: t, paymentSourceId: n, price: r } = e;
-    ((b = _(u({}, b), { [t]: _(u({}, b[t]), { [null != n ? n : f]: r }) })), C.delete(t));
+    ((b = f(u({}, b), { [t]: f(u({}, b[t]), { [null != n ? n : _]: r }) })), C.delete(t));
 }
 function x(e) {
     let { skuId: t } = e;

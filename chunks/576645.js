@@ -1,8 +1,8 @@
 (n.d(t, {
     Nt: () => g,
-    R2: () => _,
+    R2: () => f,
     ZC: () => m,
-    t6: () => f,
+    t6: () => _,
     tv: () => p,
     vY: () => h
 }),
@@ -19,7 +19,7 @@ var o = n(980463),
     c = n(111810),
     u = n(477931),
     d = n(981631);
-function _(e) {
+function f(e) {
     let [t, n, a] = (0, i.Wu)([s.Z], () => [s.Z.isFetchingPrice(e), s.Z.getPrice(e), s.Z.getErrored(e)]);
     return (
         (0, r.useEffect)(() => {
@@ -32,7 +32,7 @@ function _(e) {
         }
     );
 }
-function f(e) {
+function _(e) {
     let t = (0, c.V1)('Utils.tsx'),
         [n, a, l, u, d] = (0, i.Wu)([s.Z], () => [s.Z.isEntitlementFetched(e), s.Z.fetchPotionCount(e), s.Z.isEntitlementFetching(e), s.Z.getEntitlement(e), s.Z.getErrored(e)]);
     return (
@@ -68,6 +68,6 @@ function m(e) {
     return null;
 }
 let g = () => {
-    let { entitlement: e, numPotions: t } = f(l.D1);
+    let { entitlement: e, numPotions: t } = _(l.D1);
     return null != e && e.type === d.qc2.PURCHASE && null != t && t > 0;
 };

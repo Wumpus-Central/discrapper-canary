@@ -1,9 +1,9 @@
 n.d(t, {
     $J: () => l,
     AQ: () => u,
-    F7: () => _,
+    F7: () => f,
     JP: () => o,
-    KZ: () => f,
+    KZ: () => _,
     V5: () => p,
     Vv: () => m,
     W9: () => d,
@@ -23,14 +23,14 @@ let o = 'Notifications Inbox',
     c = r.Z.Millis.WEEK,
     u = 50,
     d = 10,
-    _ = (0, i.yS)({
+    f = (0, i.yS)({
         id: s,
         name: a.intl.string(a.t.HcoRu7),
         description: '',
         icon: void 0,
         features: []
     });
-var f = (function (e) {
+var _ = (function (e) {
         return ((e.UNREAD = 'UNREAD'), (e.TODAY = 'TODAY'), (e.YESTERDAY = 'YESTERDAY'), (e.OLDER = 'OLDER'), e);
     })({}),
     p = (function (e) {

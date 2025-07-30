@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(351402),
     u = n(603421),
     d = n(981631),
-    _ = n(388032),
-    f = n(13482);
+    f = n(388032),
+    _ = n(13482);
 function p(e, t, n) {
     return (
         t in e
@@ -69,15 +69,15 @@ let m = (e) => {
             children: [
                 E
                     ? (0, r.jsx)(o.kzN, {
-                          className: f.errorBlock,
-                          children: _.intl.string(_.t.vZ8y7u)
+                          className: _.errorBlock,
+                          children: f.intl.string(f.t.vZ8y7u)
                       })
                     : null,
                 (0, r.jsx)(
                     s.ZP,
                     h(
                         {
-                            className: f.__invalid_formItem,
+                            className: _.__invalid_formItem,
                             onBillingAddressChange: m,
                             error: p,
                             layout: t

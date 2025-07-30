@@ -15,15 +15,15 @@ function s() {
         n = [
             {
                 applicationId: c.J6['58'],
-                tags: [o._.CASUAL]
+                tags: [o._.NOOB]
             },
             {
                 applicationId: c.J6['31'],
-                tags: [o._.COMPETITIVE, o._.LFG]
+                tags: [o._.LFG, o._.GOD_TIER]
             },
             {
                 applicationId: c.J6['50'],
-                tags: [o._.CASUAL, o._.LFG]
+                tags: [o._.LIKE_IT, o._.OPEN_TO_PLAY, o._.NOOB, o._.GOD_TIER, o._.LFG, o._.GETTING_GOOD, o._.LEARNING_THE_ROPES, o._.LOOKING_FOR_TIPS]
             }
         ],
         s = [{ applicationId: c.J6['0'] }, { applicationId: c.J6['1'] }, { applicationId: c.J6['2'] }, { applicationId: c.J6['3'] }, { applicationId: c.J6['4'] }, { applicationId: c.J6['5'] }, { applicationId: c.J6['6'] }],

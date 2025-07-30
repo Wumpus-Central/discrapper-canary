@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(49012),
     u = n(5192),
     d = n(591759),
-    _ = n(379357),
-    f = n(561308),
+    f = n(379357),
+    _ = n(561308),
     p = n(685270),
     h = n(31074),
     m = n(206295),
@@ -39,11 +39,11 @@ let I = (e, t, n) => {
     S = (e) => {
         let { channel: t, entry: n, onReaction: u, onVoiceChannelPreview: S } = e,
             A = (0, a.e7)([l.default], () => l.default.getUser(n.author_id)),
-            { largeImage: N } = (0, _.rv)({ entry: n }),
+            { largeImage: N } = (0, f.rv)({ entry: n }),
             { primaryColor: C, secondaryColor: R } = (0, m.Z)(null == N ? void 0 : N.src),
             P = (0, a.e7)([s.default], () => s.default.locale),
             w = (0, h.Z)(O.ABu.CRUNCHYROLL),
-            D = (0, f.ap)(n.extra.media_assets_large_text),
+            D = (0, _.ap)(n.extra.media_assets_large_text),
             L = i.useCallback(
                 (e) => {
                     if (null != A && (null == N ? void 0 : N.src) != null)
@@ -52,7 +52,7 @@ let I = (e, t, n) => {
                             mediaImageSrc: null == N ? void 0 : N.src,
                             avatarSrc: A.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
                             description: I(n, t, A),
-                            timestamp: (0, f.yh)(n, P),
+                            timestamp: (0, _.yh)(n, P),
                             episodeDescription: D,
                             colors: [C, R],
                             channelId: e
@@ -78,7 +78,7 @@ let I = (e, t, n) => {
                       (0, r.jsx)(b.wG, {
                           channel: t,
                           entry: n,
-                          userDescription: (0, f.kr)(n) ? v.t['LH+Z39'] : v.t.YuKgmp,
+                          userDescription: (0, _.kr)(n) ? v.t['LH+Z39'] : v.t.YuKgmp,
                           title: n.extra.media_title,
                           subtitle: n.extra.media_subtitle,
                           headerIcons: (0, r.jsx)(y.Z, {

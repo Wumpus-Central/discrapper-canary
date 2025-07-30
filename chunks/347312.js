@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(393238),
     u = n(206678),
     d = n(302221),
-    _ = n(328187),
-    f = n(607889),
+    f = n(328187),
+    _ = n(607889),
     p = n(94432),
     h = n(864595);
 let m = 40,
@@ -42,7 +42,7 @@ function R(e, t) {
             let n = t - e.length;
             return e.concat(Array(n).fill(0));
         }
-        return (0, _.Z)(e, t);
+        return (0, f.Z)(e, t);
     }
 }
 function P(e) {
@@ -96,13 +96,13 @@ function j(e, t) {
         o = (0, l.dQu)(s.Z.unsafe_rawColors.WHITE_500).hex(),
         c = t ? a : n,
         [u, d] = k(c, t, e),
-        [_, f] = k(t ? o : e ? i : r, t, e),
+        [f, _] = k(t ? o : e ? i : r, t, e),
         [p, h] = k(e ? c : r, t, e);
     return {
         lastBackgroundFillColor: u,
         backgroundFillColor: d,
-        lastActiveFillColor: _,
-        activeFillColor: f,
+        lastActiveFillColor: f,
+        activeFillColor: _,
         lastInactiveFillColor: p,
         inactiveFillColor: h
     };
@@ -113,7 +113,7 @@ function U(e, t, n, r) {
     return 1 === i ? [t, !1] : [(0, d.BM)(e, t, i), !0];
 }
 function G(e) {
-    let { className: t, waveform: n, currentTime: a, duration: s, played: l, playing: d, onDrag: _, onDragStart: p, onDragEnd: m } = e,
+    let { className: t, waveform: n, currentTime: a, duration: s, played: l, playing: d, onDrag: f, onDragStart: p, onDragEnd: m } = e,
         { ref: g, width: E } = (0, c.ZP)(),
         b = i.useMemo(() => P(s), [s]),
         y = i.useRef(void 0),
@@ -140,7 +140,7 @@ function G(e) {
                     duration: t,
                     numSegments: O.length
                 });
-            y.current = O.map((e, t) => new f.Z(t < r ? e : 0));
+            y.current = O.map((e, t) => new _.Z(t < r ? e : 0));
         }, [O]),
         i.useEffect(() => {
             let e = y.current;
@@ -183,15 +183,15 @@ function G(e) {
                         constrainMin: !0
                     });
                 i.fill();
-                let [_, f] = U(G, B, n, A.current);
-                o = o || f;
+                let [f, _] = U(G, B, n, A.current);
+                o = o || _;
                 let [p, h] = U(D, k, n, A.current);
                 o = o || h;
                 for (let e = 0; e < a.length; e++) {
                     let t = a[e],
                         n = Math.max(t.getCurrentValue(), O[e] - 0.1);
                     (i.beginPath(),
-                        (i.fillStyle = t.isReset ? _ : p),
+                        (i.fillStyle = t.isReset ? f : p),
                         x({
                             context: i,
                             devicePixelRatio: C,
@@ -214,7 +214,7 @@ function G(e) {
         }, [g, C, O, E, a, s, l, d, R, w, D, k, G, B]));
     let [, Z] = (0, u.Z)({
         ref: g,
-        onDrag: _,
+        onDrag: f,
         onDragStart: p,
         onDragEnd: m
     });

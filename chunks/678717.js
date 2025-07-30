@@ -22,13 +22,13 @@ var _ = a(392750),
     y = a(926976),
     C = a(789654),
     O = a(719672),
-    T = a(691867),
-    N = a(916790),
+    N = a(691867),
+    T = a(916790),
     E = a(645973),
     S = a(903502),
     P = a(604776),
-    w = a(912072),
-    I = a(272193),
+    I = a(912072),
+    w = a(272193),
     R = a(685560),
     k = a(735959),
     A = a(572444),
@@ -39,8 +39,8 @@ var _ = a(392750),
     U = a(442954),
     F = a(925124),
     B = a(633001),
-    z = a(702904),
-    G = a(178821),
+    G = a(702904),
+    z = a(178821),
     V = a(891401),
     H = a(958328),
     W = a(315384),
@@ -99,7 +99,7 @@ function eo(e) {
                     id: 'dispatcher',
                     name: 'Dispatcher',
                     group: ea.v0.EVENTS,
-                    render: () => (0, n.jsx)(N.Z, {})
+                    render: () => (0, n.jsx)(T.Z, {})
                 }
             ];
             return (
@@ -126,7 +126,7 @@ function eo(e) {
                         id: 'performance',
                         name: 'Performance',
                         group: ea.v0.DEVELOPMENT,
-                        render: () => (0, n.jsx)(G.ZP, {})
+                        render: () => (0, n.jsx)(z.ZP, {})
                     }),
                     e.push({
                         id: 'feedback',
@@ -168,13 +168,13 @@ function eo(e) {
                     id: 'design_toggles',
                     name: 'Design Toggles',
                     group: ea.v0.UI,
-                    render: () => (0, n.jsx)(T.Z, {})
+                    render: () => (0, n.jsx)(N.Z, {})
                 }),
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
                     group: ea.v0.DEVELOPMENT,
-                    render: () => (0, n.jsx)(w.Z, { devSettingsCategory: j.zU.OVERLAYS })
+                    render: () => (0, n.jsx)(I.Z, { devSettingsCategory: j.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
@@ -186,7 +186,7 @@ function eo(e) {
                     id: 'reporting',
                     name: 'Reporting',
                     group: ea.v0.EXPERIMENTS,
-                    render: () => (0, n.jsx)(w.Z, { devSettingsCategory: j.zU.REPORTING })
+                    render: () => (0, n.jsx)(I.Z, { devSettingsCategory: j.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -254,7 +254,7 @@ function eo(e) {
                         id: 'payments',
                         name: 'Payments',
                         group: ea.v0.BILLING,
-                        render: () => (0, n.jsx)(z.Z, {})
+                        render: () => (0, n.jsx)(G.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',
@@ -272,7 +272,7 @@ function eo(e) {
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
                     group: ea.v0.PREMIUM,
-                    render: () => (0, n.jsx)(I.Z, {})
+                    render: () => (0, n.jsx)(w.Z, {})
                 }),
                 e.push({
                     id: 'voice_filters',

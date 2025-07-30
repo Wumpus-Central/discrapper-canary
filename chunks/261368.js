@@ -78,7 +78,7 @@ e.exports = function (e) {
         },
         u = i,
         d = e.COMMENT('/\\*', '\\*/', { contains: [e.C_BLOCK_COMMENT_MODE] }),
-        _ = {
+        f = {
             variants: [
                 {
                     className: 'type',
@@ -91,10 +91,10 @@ e.exports = function (e) {
                 }
             ]
         },
-        f = _;
+        _ = f;
     return (
-        (f.variants[1].contains = [_]),
         (_.variants[1].contains = [f]),
+        (f.variants[1].contains = [_]),
         {
             name: 'Kotlin',
             aliases: ['kt', 'kts'],
@@ -149,7 +149,7 @@ e.exports = function (e) {
                                     begin: /:/,
                                     end: /[=,\/]/,
                                     endsWithParent: !0,
-                                    contains: [_, e.C_LINE_COMMENT_MODE, d],
+                                    contains: [f, e.C_LINE_COMMENT_MODE, d],
                                     relevance: 0
                                 },
                                 e.C_LINE_COMMENT_MODE,

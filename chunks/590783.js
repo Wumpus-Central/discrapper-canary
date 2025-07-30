@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(997841));
+(n.d(t, { Z: () => f }), n(997841));
 var r = n(913527),
     i = n.n(r),
     a = n(81825),
@@ -24,9 +24,9 @@ let d = Object.freeze({
     EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2,
     NOT_SELF_REDEEMABLE: 4
 });
-class _ extends a.Z {
+class f extends a.Z {
     static createFromServer(e) {
-        return new _({
+        return new f({
             userId: null != e.user ? e.user.id : null,
             code: e.code,
             skuId: e.sku_id,

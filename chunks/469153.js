@@ -1,7 +1,7 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
-var i = n(564854),
+var i = n(778141),
     a = n(442837),
     o = n(481060),
     s = n(607070),
@@ -23,10 +23,10 @@ let d = () =>
                 })
             ]
         }),
-    _ = (e) => {
+    f = (e) => {
         let { shown: t, sent: n, className: c } = e,
             u = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-            _ = (0, o.Yzy)(
+            f = (0, o.Yzy)(
                 t,
                 {
                     from: {
@@ -52,7 +52,7 @@ let d = () =>
                 'animate-always'
             );
         return (0, r.jsx)(r.Fragment, {
-            children: _(
+            children: f(
                 (e, t) =>
                     t &&
                     (0, r.jsx)(i.animated.div, {

@@ -8,8 +8,8 @@ var r,
     c = n(581883),
     u = n(70956),
     d = n(926491),
-    _ = n(526761);
-function f(e, t, n) {
+    f = n(526761);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -106,7 +106,7 @@ function T(e) {
         settings: { type: t },
         wasSaved: n
     } = e;
-    if (t !== _.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+    if (t !== f.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
     g.pendingUsages = [];
 }
 class S extends (r = o.ZP.PersistedStore) {
@@ -123,7 +123,7 @@ class S extends (r = o.ZP.PersistedStore) {
         return b;
     }
 }
-(f(S, 'displayName', 'StickersPersistedStore'), f(S, 'persistKey', 'StickersPersistedStoreV2'));
+(_(S, 'displayName', 'StickersPersistedStore'), _(S, 'persistKey', 'StickersPersistedStoreV2'));
 let A = new S(s.Z, {
     STICKER_TRACK_USAGE: O,
     USER_SETTINGS_PROTO_UPDATE: T

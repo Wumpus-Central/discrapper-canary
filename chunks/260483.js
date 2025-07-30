@@ -35,28 +35,28 @@ function d(e) {
     }
     return e;
 }
-let _ = {};
-function f(e) {
-    _ = a().omitBy(_, (t) => t.guildId === e);
+let f = {};
+function _(e) {
+    f = a().omitBy(f, (t) => t.guildId === e);
 }
 function p(e) {
-    _ = a().omitBy(_, (t) => t.parentId === e);
+    f = a().omitBy(f, (t) => t.parentId === e);
 }
 function h(e) {
     var t;
     null == (t = e.threads) || t.forEach(g);
 }
 function m(e) {
-    if (!(e.id in _)) {
+    if (!(e.id in f)) {
         var t, n;
-        _[e.id] = {
+        f[e.id] = {
             guildId: e.guild_id,
             parentId: e.parent_id,
             memberCount: null != (t = e.memberCount) ? t : 0,
             memberIdsPreview: null != (n = e.memberIdsPreview) ? n : []
         };
     }
-    return _[e.id];
+    return f[e.id];
 }
 function g(e) {
     if (!l.AW.has(e.type)) return !1;
@@ -64,11 +64,11 @@ function g(e) {
     (null != e.memberCount && (t.memberCount = e.memberCount), null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview));
 }
 function E(e) {
-    ((_ = {}), e.guilds.forEach(h));
+    ((f = {}), e.guilds.forEach(h));
 }
 function b(e) {
     let { threadMembers: t } = e;
-    _ = d({}, t);
+    f = d({}, t);
 }
 function y(e) {
     let { guild: t } = e;
@@ -76,7 +76,7 @@ function y(e) {
 }
 function O(e) {
     let { guild: t } = e;
-    f(t.id);
+    _(t.id);
 }
 function v(e) {
     let { channel: t } = e;
@@ -96,7 +96,7 @@ function S(e) {
 }
 function A(e) {
     let { channel: t } = e;
-    delete _[t.id];
+    delete f[t.id];
 }
 function N(e) {
     let t = !1;
@@ -122,14 +122,14 @@ function C(e) {
     );
 }
 function R(e) {
-    if (null != e && !(e.id in _)) {
+    if (null != e && !(e.id in f)) {
         let t = c.Z.getChannel(e.id);
         if (null != t) return (g(t), !0);
     }
     return !1;
 }
 function P(e) {
-    let t = _[e.id];
+    let t = f[e.id];
     if (null == t) return !1;
     (null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview), (t.memberCount = e.memberCount));
 }
@@ -139,14 +139,14 @@ class w extends (r = o.ZP.Store) {
     }
     getMemberCount(e) {
         var t, n;
-        return null != (n = null == (t = _[e]) ? void 0 : t.memberCount) ? n : null;
+        return null != (n = null == (t = f[e]) ? void 0 : t.memberCount) ? n : null;
     }
     getMemberIdsPreview(e) {
         var t, n;
-        return null != (n = null == (t = _[e]) ? void 0 : t.memberIdsPreview) ? n : null;
+        return null != (n = null == (t = f[e]) ? void 0 : t.memberIdsPreview) ? n : null;
     }
     getInitialOverlayState() {
-        return _;
+        return f;
     }
 }
 u(w, 'displayName', 'ThreadMembersStore');

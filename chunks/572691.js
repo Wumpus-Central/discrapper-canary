@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(539854));
+(n.d(t, { Z: () => _ }), n(539854));
 var r = n(97613),
     i = n.n(r),
     a = n(570140),
@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,14 +36,14 @@ function _(e) {
     }
     return e;
 }
-let f = {
+let _ = {
     push(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i()('modal'),
             r = arguments.length > 3 ? arguments[3] : void 0,
             o = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : u.IlC.APP;
         return (
             (0, s.Ll)(
-                _(
+                f(
                     {
                         key: n,
                         modal: (0, c.Z)(e, {}, t, n)

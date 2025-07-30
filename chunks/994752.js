@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+(n.d(t, { Z: () => _ }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -30,7 +30,7 @@ function u(e) {
 function d() {
     c = new Map();
 }
-class _ extends (r = i.ZP.Store) {
+class f extends (r = i.ZP.Store) {
     getLeaderboards(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
@@ -47,8 +47,8 @@ class _ extends (r = i.ZP.Store) {
         return null == (r = c.get(i)) || null == (n = r.get(e)) ? void 0 : n.get(t);
     }
 }
-s(_, 'displayName', 'GuildLeaderboardStore');
-let f = new _(a.Z, {
+s(f, 'displayName', 'GuildLeaderboardStore');
+let _ = new f(a.Z, {
     CONNECTION_OPEN: d,
     SET_GUILD_LEADERBOARD: u
 });

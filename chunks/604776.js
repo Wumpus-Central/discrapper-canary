@@ -97,15 +97,15 @@ function _() {
         [a, l] = r.useState(s.a.PREMIUM_TIER_2_1_HOUR),
         [u, v] = r.useState([]),
         [_, y] = r.useState([]),
-        { refreshEntitlementList: C, grantFractionalPremium: O, deleteFractionalPremium: T, triggerNextEntitlementFulfillment: N, entitlements: E, loading: S } = (0, x.m)();
+        { refreshEntitlementList: C, grantFractionalPremium: O, deleteFractionalPremium: N, triggerNextEntitlementFulfillment: T, entitlements: E, loading: S } = (0, x.m)();
     r.useEffect(() => {
         C();
     }, [C]);
     let P = (e) => e.filter((e) => null != e.endsAt && e.endsAt > new Date() && e.type === p.qc2.FRACTIONAL_REDEMPTION),
-        w = (e) => e.filter((e) => Object.values(s.a).includes(e.skuId) && null == e.startsAt);
+        I = (e) => e.filter((e) => Object.values(s.a).includes(e.skuId) && null == e.startsAt);
     return (
         r.useEffect(() => {
-            (v(P(E)), y(w(E)));
+            (v(P(E)), y(I(E)));
         }, [E]),
         (0, n.jsx)(c.zJl, {
             className: f.panel,
@@ -196,7 +196,7 @@ function _() {
                                                 size: o.zx.Sizes.TINY,
                                                 color: o.zx.Colors.PRIMARY,
                                                 look: o.zx.Looks.OUTLINED,
-                                                onClick: () => N(),
+                                                onClick: () => T(),
                                                 children: 'Run fulfillment'
                                             }),
                                             (0, n.jsx)(o.zx, {
@@ -204,7 +204,7 @@ function _() {
                                                 size: o.zx.Sizes.TINY,
                                                 color: o.zx.Colors.RED,
                                                 look: o.zx.Looks.OUTLINED,
-                                                onClick: () => T(),
+                                                onClick: () => N(),
                                                 children: 'Delete all'
                                             }),
                                             (0, n.jsx)(o.zx, {
@@ -239,7 +239,7 @@ function _() {
                                                     {
                                                         entitlement: e,
                                                         active: !0,
-                                                        onDelete: () => T(e.id)
+                                                        onDelete: () => N(e.id)
                                                     },
                                                     e.id
                                                 )

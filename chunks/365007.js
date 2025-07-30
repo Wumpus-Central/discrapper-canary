@@ -1,7 +1,7 @@
 n.d(t, {
-    L$: () => f,
+    L$: () => _,
     Sr: () => p,
-    WQ: () => _,
+    WQ: () => f,
     cT: () => d,
     d$: () => c,
     hL: () => u,
@@ -58,7 +58,7 @@ function d(e) {
             });
         });
 }
-async function _(e, t) {
+async function f(e, t) {
     let n = await i.tn.patch({
         url: s.ANM.MFA_WEBAUTHN_CREDENTIAL(e),
         body: { name: t },
@@ -69,7 +69,7 @@ async function _(e, t) {
         credential: n.body
     });
 }
-async function f() {
+async function _() {
     let {
         body: { ticket: e, challenge: t }
     } = await i.tn.post({

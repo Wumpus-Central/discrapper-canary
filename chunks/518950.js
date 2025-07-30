@@ -7,7 +7,7 @@ var r = n(73800),
     l = n(594174),
     c = n(287008);
 function u(e) {
-    let { userId: t, guildId: n, size: u, showPending: d = !1, showTryItOut: _ = !1, animateOnHover: f = !1, avatarDecorationOverride: p, avatarOverride: h } = e,
+    let { userId: t, guildId: n, size: u, showPending: d = !1, showTryItOut: f = !1, animateOnHover: _ = !1, avatarDecorationOverride: p, avatarOverride: h } = e,
         m = (0, i.e7)([l.default], () => l.default.getUser(t)),
         {
             avatarSrc: g,
@@ -18,7 +18,7 @@ function u(e) {
             guildId: n,
             size: (0, a.pxk)(u),
             showPending: d,
-            animateOnHover: f,
+            animateOnHover: _,
             avatarOverride: h
         }),
         {
@@ -30,9 +30,9 @@ function u(e) {
             guildId: null != n ? n : void 0,
             size: (0, o.y9)(u),
             showPending: d,
-            onlyAnimateOnHover: f,
+            onlyAnimateOnHover: _,
             avatarDecorationOverride: p,
-            showTryItOut: _
+            showTryItOut: f
         });
     return {
         avatarPlaceholderSrc: y,

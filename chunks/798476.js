@@ -13,8 +13,8 @@ var i = n(120356),
     c = n(305347),
     u = n(328656),
     d = n(708321),
-    _ = n(174161),
-    f = n(220250),
+    f = n(174161),
+    _ = n(220250),
     p = n(486324),
     h = n(541195);
 function m(e, t, n) {
@@ -48,7 +48,7 @@ function g(e) {
 }
 function E(e) {
     let { profile: t, className: n } = e,
-        i = (0, f.TK)(t);
+        i = (0, _.TK)(t);
     return null != i
         ? (0, r.jsx)('div', {
               className: a()(n, h.banner),
@@ -62,8 +62,8 @@ function E(e) {
 function b(e) {
     var t;
     let { profile: n, className: i } = e,
-        o = (0, f.nv)(),
-        s = (0, f.qw)({
+        o = (0, _.nv)(),
+        s = (0, _.qw)({
             profile: n,
             defaultColor: o.hex(),
             forceDefaultColor: null != n.brandColorPrimary
@@ -71,7 +71,7 @@ function b(e) {
         l = null != (t = n.brandColorPrimary) ? t : s;
     return (0, r.jsx)('div', {
         className: a()(i, h.banner),
-        style: { background: (0, f.dG)(l) }
+        style: { background: (0, _.dG)(l) }
     });
 }
 function y(e) {
@@ -153,12 +153,12 @@ function y(e) {
 }
 function O(e) {
     let { profile: t, onIconChange: n, className: i, disableCTA: o, CTAOverride: s, onClose: l, disableGuildNameClick: c } = e,
-        f = null;
+        _ = null;
     return (
         null != s
-            ? (f = s)
+            ? (_ = s)
             : o ||
-              (f = (0, r.jsx)(d.Z, {
+              (_ = (0, r.jsx)(d.Z, {
                   profile: t,
                   onComplete: l
               })),
@@ -170,15 +170,15 @@ function O(e) {
                     onIconChange: n,
                     profile: t
                 }),
-                (0, r.jsx)(_.Z, {
+                (0, r.jsx)(f.Z, {
                     profile: t,
                     disableGuildNameClick: c
                 }),
                 (0, r.jsx)(u.E, { profile: t }),
-                null != f &&
+                null != _ &&
                     (0, r.jsx)('div', {
                         className: h.buttonContainer,
-                        children: f
+                        children: _
                     })
             ]
         })

@@ -1,5 +1,5 @@
 (n.d(t, {
-    Ou: () => _,
+    Ou: () => f,
     SR: () => u,
     YD: () => d
 }),
@@ -25,4 +25,4 @@ let d = async (e, t) => {
             r = (0, c.Nz)(t);
         return o.Z.sendMessage(n.id, s.ZP.parse(n, r), void 0, { isGiftLinkSentOnBehalfOfUser: !0 });
     },
-    _ = (e) => {};
+    f = (e) => {};

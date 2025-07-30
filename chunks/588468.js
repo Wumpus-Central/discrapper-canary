@@ -15,8 +15,8 @@ var r,
     c = n.n(l),
     u = n(91192),
     d = n(481060),
-    _ = n(607070),
-    f = n(895924),
+    f = n(607070),
+    _ = n(895924),
     p = n(237375),
     h = n(342687),
     m = n(933557),
@@ -261,17 +261,17 @@ class q extends Z {
     renderContent() {
         let { role: e, hideDescription: t, guildId: n } = this.props,
             { colorString: r, colorStrings: a } = e,
-            o = 'dot' === _.Z.roleStyle,
-            l = 'username' === _.Z.roleStyle && (null != r || null != a),
+            o = 'dot' === f.Z.roleStyle,
+            l = 'username' === f.Z.roleStyle && (null != r || null != a),
             c = (0, b.AQ)(n, e, a),
             u = null != c && l,
-            { gradientStyle: f, gradientClassname: p } = (0, d.JUn)({
+            { gradientStyle: _, gradientClassname: p } = (0, d.JUn)({
                 colorStrings: a,
-                useReducedMotion: _.Z.useReducedMotion,
+                useReducedMotion: f.Z.useReducedMotion,
                 roleStyle: 'username',
                 includeConvenienceGlow: !0
             }),
-            h = l ? M({}, u ? f : { color: null != r ? r : void 0 }) : void 0;
+            h = l ? M({}, u ? _ : { color: null != r ? r : void 0 }) : void 0;
         return (0, i.jsxs)(R.RX, {
             children: [
                 (0, i.jsx)(R.z5, {
@@ -328,13 +328,13 @@ class Q extends Z {
 }
 class J extends Z {
     isSelectable() {
-        return this.props.command.inputType !== f.iw.PLACEHOLDER;
+        return this.props.command.inputType !== _.iw.PLACEHOLDER;
     }
     renderContent() {
         let { command: e, channel: t, showImage: n, section: r, selected: a } = this.props,
             { hovered: o } = this.state,
             s = this.isSelectable();
-        return e.inputType === f.iw.PLACEHOLDER
+        return e.inputType === _.iw.PLACEHOLDER
             ? (0, i.jsx)(h.Z, {})
             : (0, i.jsx)(p.Z, {
                   command: e,

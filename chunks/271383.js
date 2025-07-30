@@ -16,8 +16,8 @@ var r,
     c = n(16609),
     u = n(864106),
     d = n(579407),
-    _ = n(710845),
-    f = n(69882),
+    f = n(710845),
+    _ = n(69882),
     p = n(134049),
     h = n(160404),
     m = n(630388),
@@ -81,7 +81,7 @@ function C(e, t) {
         e
     );
 }
-let R = new _.Z('GuildMemberStore'),
+let R = new f.Z('GuildMemberStore'),
     P = {},
     w = {},
     D = {},
@@ -97,9 +97,9 @@ let R = new _.Z('GuildMemberStore'),
         removed: []
     };
 function V(e, t) {
-    if (null == t.communicationDisabledUntil || !(0, f.b)(t)) return F(e, t.userId);
+    if (null == t.communicationDisabledUntil || !(0, _.b)(t)) return F(e, t.userId);
     let n = Y(e, t.userId);
-    x[n] !== t.communicationDisabledUntil && (0, f.b)(t) && ((x[n] = t.communicationDisabledUntil), Z(n));
+    x[n] !== t.communicationDisabledUntil && (0, _.b)(t) && ((x[n] = t.communicationDisabledUntil), Z(n));
 }
 function F(e, t) {
     if (null != t) {
@@ -154,7 +154,7 @@ function z(e, t) {
 }
 function q(e) {
     var t, n;
-    let { userId: r, nick: i, guildId: a, avatar: o, avatarDecoration: s, guildRoles: l, roles: c, premiumSince: u, isPending: d, joinedAt: _, communicationDisabledUntil: f, unusualDMActivityUntil: p, fullProfileLoadedTimestamp: g, flags: E, collectibles: O } = e,
+    let { userId: r, nick: i, guildId: a, avatar: o, avatarDecoration: s, guildRoles: l, roles: c, premiumSince: u, isPending: d, joinedAt: f, communicationDisabledUntil: _, unusualDMActivityUntil: p, fullProfileLoadedTimestamp: g, flags: E, collectibles: O } = e,
         { colorString: v, colorStrings: I, colorRoleId: S, iconRoleId: N, hoistRoleId: R, highestRoleId: w } = z(l, c),
         L = {
             userId: r,
@@ -171,8 +171,8 @@ function q(e) {
             highestRoleId: w,
             premiumSince: u,
             isPending: d,
-            joinedAt: _,
-            communicationDisabledUntil: f,
+            joinedAt: f,
+            communicationDisabledUntil: _,
             unusualDMActivityUntil: p,
             fullProfileLoadedTimestamp: g,
             flags: E,
@@ -237,7 +237,7 @@ function er(e) {
 }
 function ei(e) {
     var t;
-    let { guildId: n, user: r, nick: i, avatar: a, avatarDecoration: o, roles: s, premiumSince: l, isPending: c, joinedAt: d, communicationDisabledUntil: _, unusualDMActivityUntil: f, flags: p, collectibles: h } = e,
+    let { guildId: n, user: r, nick: i, avatar: a, avatarDecoration: o, roles: s, premiumSince: l, isPending: c, joinedAt: d, communicationDisabledUntil: f, unusualDMActivityUntil: _, flags: p, collectibles: h } = e,
         m = P[n];
     if (null == m) return !1;
     let g = I.Z.getGuild(n);
@@ -253,8 +253,8 @@ function ei(e) {
         premiumSince: l,
         isPending: c,
         joinedAt: d,
-        communicationDisabledUntil: _,
-        unusualDMActivityUntil: f,
+        communicationDisabledUntil: f,
+        unusualDMActivityUntil: _,
         fullProfileLoadedTimestamp: null == (t = m[r.id]) ? void 0 : t.fullProfileLoadedTimestamp,
         flags: p,
         collectibles: h
@@ -326,7 +326,7 @@ function ed(e) {
     let { guildId: t, owners: n } = e;
     return ep(t, n);
 }
-function e_(e) {
+function ef(e) {
     let { guildId: t, threads: n } = e;
     return ep(
         t,
@@ -340,7 +340,7 @@ function e_(e) {
         }, [])
     );
 }
-function ef(e) {
+function e_(e) {
     let { guildId: t, addedMembers: n } = e;
     return null != n && ep(t, n.map((e) => e.member).filter(g.lm));
 }
@@ -480,10 +480,10 @@ function eS(e) {
     let { guildId: i, roles: o, addedRoleIds: s, removedRoleIds: l, flags: c } = e,
         u = y.default.getId(),
         d = P[i],
-        _ = null != d ? d[u] : null;
-    if (null == _) return !1;
-    let f = I.Z.getGuild(i);
+        f = null != d ? d[u] : null;
     if (null == f) return !1;
+    let _ = I.Z.getGuild(i);
+    if (null == _) return !1;
     let p = null != (t = G[i]) ? t : {};
     ((G[i] = {
         added: a().difference(a().union(null != (n = p.added) ? n : [], s), null != l ? l : []),
@@ -492,17 +492,17 @@ function eS(e) {
         (d[u] = q({
             userId: u,
             guildId: i,
-            nick: _.nick,
-            avatar: _.avatar,
-            avatarDecoration: _.avatarDecoration,
-            guildRoles: v.Z.getUnsafeMutableRoles(f.id),
-            roles: null != o ? o : _.roles,
-            premiumSince: _.premiumSince,
-            isPending: _.isPending,
-            joinedAt: _.joinedAt,
-            flags: null != c ? c : _.flags,
-            fullProfileLoadedTimestamp: _.fullProfileLoadedTimestamp,
-            collectibles: _.collectibles
+            nick: f.nick,
+            avatar: f.avatar,
+            avatarDecoration: f.avatarDecoration,
+            guildRoles: v.Z.getUnsafeMutableRoles(_.id),
+            roles: null != o ? o : f.roles,
+            premiumSince: f.premiumSince,
+            isPending: f.isPending,
+            joinedAt: f.joinedAt,
+            flags: null != c ? c : f.flags,
+            fullProfileLoadedTimestamp: f.fullProfileLoadedTimestamp,
+            collectibles: f.collectibles
         })));
 }
 function eA(e) {
@@ -728,9 +728,9 @@ let eM = new ex(s.Z, {
     GUILD_MEMBER_REMOVE: eg,
     GUILD_MEMBER_REMOVE_LOCAL: eE,
     THREAD_MEMBER_LIST_UPDATE: eu,
-    THREAD_MEMBERS_UPDATE: ef,
+    THREAD_MEMBERS_UPDATE: e_,
     LOAD_ARCHIVED_THREADS_SUCCESS: ed,
-    LOAD_FORUM_POSTS: e_,
+    LOAD_FORUM_POSTS: ef,
     GUILD_ROLE_UPDATE: eT,
     GUILD_ROLE_DELETE: eT,
     GUILD_ROLE_MEMBER_REMOVE: eo,

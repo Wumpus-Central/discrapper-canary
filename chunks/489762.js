@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(788911),
     u = n(2052),
     d = n(100527),
-    _ = n(906732),
-    f = n(218867),
+    f = n(906732),
+    _ = n(218867),
     p = n(880949),
     h = n(806966),
     m = n(28546),
@@ -110,7 +110,7 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     ec = 12,
     eu = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKERS_LIST_EMPTY_GUILD_UPSELL_HEIGHT),
     ed = ['laugh', 'wave', 'yes', 'dance', 'sad', 'no', 'hi', 'bye', 'cry', 'ok'],
-    e_ = (e) => {
+    ef = (e) => {
         let { onSuggestionClick: t } = e;
         return (0, r.jsx)('div', {
             className: G.searchSuggestions,
@@ -131,7 +131,7 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             )
         });
     },
-    ef = (e) => {
+    e_ = (e) => {
         let { onSelectSticker: t, channel: n, currentUser: r } = e,
             a = (0, u.O)(),
             o = (0, m.Iu)((e) => e.searchQuery);
@@ -166,10 +166,10 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
         };
     },
     ep = (e) => {
-        let { collapsedStickersCategories: t, gridWidth: n, onSelectSticker: a, getStickerItemProps: s, getStickerRowProps: c, gutterWidth: d, inspectedStickerPosition: _, isScrolling: f, isUsingKeyboardNavigation: h, stickersGrid: m, stickersCategories: g, filteredStickers: E, ownedStickerPacks: T, channel: S } = e,
+        let { collapsedStickersCategories: t, gridWidth: n, onSelectSticker: a, getStickerItemProps: s, getStickerRowProps: c, gutterWidth: d, inspectedStickerPosition: f, isScrolling: _, isUsingKeyboardNavigation: h, stickersGrid: m, stickersCategories: g, filteredStickers: E, ownedStickerPacks: T, channel: S } = e,
             A = (0, u.O)(),
             N = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
-            { handleStickerInspect: C, handleSelect: x } = ef({
+            { handleStickerInspect: C, handleSelect: x } = e_({
                 onSelectSticker: a,
                 channel: S,
                 currentUser: N
@@ -188,8 +188,8 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                   getStickerItemProps: s,
                                   getStickerRowProps: c,
                                   gutterWidth: d,
-                                  inspectedStickerPosition: _,
-                                  isScrolling: f,
+                                  inspectedStickerPosition: f,
+                                  isScrolling: _,
                                   isUsingKeyboardNavigation: h,
                                   onInspect: C,
                                   onSelect: x,
@@ -207,7 +207,7 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                           )
                         : null;
                 },
-                [m, s, c, d, _, f, h, C, x, n, T, S, N]
+                [m, s, c, d, f, _, h, C, x, n, T, S, N]
             ),
             H = i.useCallback((e, t) => (0, r.jsx)('div', { children: t }, e), []),
             K = i.useCallback(
@@ -381,7 +381,7 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             A = i.useRef(!1),
             N = i.useRef(null),
             [C, P] = h.ZN.useStore((e) => [e.activeCategoryIndex, e.inspectedExpressionPosition], a.X),
-            { analyticsLocations: w } = (0, _.ZP)(d.Z.STICKER_PICKER),
+            { analyticsLocations: w } = (0, f.ZP)(d.Z.STICKER_PICKER),
             D = (0, m.Iu)((e) => e.searchQuery),
             L = (0, o.e7)([R.Z], () => R.Z.getPremiumPacks()),
             {
@@ -464,7 +464,7 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 }),
                 []
             ),
-            (0, r.jsx)(_.Gt, {
+            (0, r.jsx)(f.Gt, {
                 value: w,
                 children: (0, r.jsxs)('div', {
                     className: G.wrapper,
@@ -474,9 +474,9 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                   message: U.intl.string(U.t['zc+LQU']),
                                   className: G.__invalid_noSearchResultsContainer,
                                   noResultsImageURL: B,
-                                  suggestions: (0, r.jsx)(e_, { onSuggestionClick: (e) => (0, m.ql)(e, !0) })
+                                  suggestions: (0, r.jsx)(ef, { onSuggestionClick: (e) => (0, m.ql)(e, !0) })
                               })
-                            : (0, r.jsx)(f.Z, {
+                            : (0, r.jsx)(_.Z, {
                                   role: 'none presentation',
                                   listPadding: null != l ? el : es,
                                   onScroll: H,

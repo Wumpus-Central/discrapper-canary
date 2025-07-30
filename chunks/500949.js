@@ -15,7 +15,7 @@
     h9: () => es,
     iw: () => ea,
     jC: () => V,
-    jQ: () => z,
+    jQ: () => G,
     lT: () => X,
     rd: () => ed,
     t4: () => ec,
@@ -48,13 +48,13 @@ var n,
     y = a(81011),
     C = a(981613),
     O = a(762399),
-    T = a(232112),
-    N = a(53796),
+    N = a(232112),
+    T = a(53796),
     E = a(723757),
     S = a(375924),
     P = a(596136),
-    w = a(341901),
-    I = a(856308),
+    I = a(341901),
+    w = a(856308),
     R = a(665352),
     k = a(394900),
     A = a(661105),
@@ -125,18 +125,18 @@ let B = {
         Luv: y.Z,
         OKLCH: C.Z,
         OKLab: O.Z,
-        P3: T.Z,
-        ProPhoto: N.Z,
+        P3: N.Z,
+        ProPhoto: T.Z,
         REC_2020: E.Z,
         REC_2100_HLG: S.Z,
         REC_2100_PQ: P.Z,
-        XYZ_D50: w.Z,
-        XYZ_D65: I.Z
+        XYZ_D50: I.Z,
+        XYZ_D65: w.Z
     },
-    z = Object.fromEntries(Object.keys(B).map((e) => [e, e]));
+    G = Object.fromEntries(Object.keys(B).map((e) => [e, e]));
 Object.values(B).forEach((e) => R.Z.register(e));
-let { SemanticColors: G } = L.V,
-    V = G,
+let { SemanticColors: z } = L.V,
+    V = z,
     H = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
 function W(e, t) {
     let [a, n] = l.useState(() => {

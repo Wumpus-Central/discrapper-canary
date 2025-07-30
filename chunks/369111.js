@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(73800),
     i = n(399606),
     a = n(311395),
@@ -8,27 +8,27 @@ var r = n(73800),
     c = n(25990),
     u = n(594174),
     d = n(350327);
-function _(e) {
-    let { isTryItOut: t, analyticsLocations: n, guildId: _ } = e,
-        f = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
-        p = (0, i.e7)([l.ZP], () => (null != _ && null != f ? l.ZP.getMember(_, f.id) : null)),
-        h = null != p ? p.avatarDecoration : null == f ? void 0 : f.avatarDecoration,
+function f(e) {
+    let { isTryItOut: t, analyticsLocations: n, guildId: f } = e,
+        _ = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
+        p = (0, i.e7)([l.ZP], () => (null != f && null != _ ? l.ZP.getMember(f, _.id) : null)),
+        h = null != p ? p.avatarDecoration : null == _ ? void 0 : _.avatarDecoration,
         m = (0, a.Z)(n),
         {
             pendingAvatar: g,
             pendingAvatarDecoration: E,
             pendingErrors: b
         } = (0, i.cj)([c.Z, o.Z], () => ({
-            pendingAvatar: t ? c.Z.getTryItOutAvatar() : null != _ ? o.Z.getPendingAvatar() : c.Z.getPendingAvatar(),
-            pendingAvatarDecoration: t ? c.Z.getTryItOutAvatarDecoration() : null != _ ? o.Z.getPendingAvatarDecoration() : c.Z.getPendingAvatarDecoration(),
-            pendingErrors: null != _ ? o.Z.getErrors().avatarDecoration : c.Z.getErrors().avatarDecoration
+            pendingAvatar: t ? c.Z.getTryItOutAvatar() : null != f ? o.Z.getPendingAvatar() : c.Z.getPendingAvatar(),
+            pendingAvatarDecoration: t ? c.Z.getTryItOutAvatarDecoration() : null != f ? o.Z.getPendingAvatarDecoration() : c.Z.getPendingAvatarDecoration(),
+            pendingErrors: null != f ? o.Z.getErrors().avatarDecoration : c.Z.getErrors().avatarDecoration
         })),
-        y = (0, r.useCallback)((e) => (0, s.Jw)(e, null == f ? void 0 : f.avatar), [null == f ? void 0 : f.avatar]),
+        y = (0, r.useCallback)((e) => (0, s.Jw)(e, null == _ ? void 0 : _.avatar), [null == _ ? void 0 : _.avatar]),
         O = (0, r.useCallback)(
             (e) => {
-                ((0, s.PO)(_, e), null != e && m(e));
+                ((0, s.PO)(f, e), null != e && m(e));
             },
-            [m, _]
+            [m, f]
         );
     return {
         pendingAvatar: g,

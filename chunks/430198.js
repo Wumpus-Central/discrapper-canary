@@ -8,8 +8,8 @@ var r,
     c = n(923726),
     u = n(973542),
     d = n(790285),
-    _ = n(160404),
-    f = n(131704),
+    f = n(160404),
+    _ = n(131704),
     p = n(345162),
     h = n(592125),
     m = n(271383),
@@ -45,7 +45,7 @@ function S(e) {
 }
 function A(e, t) {
     if (!t.features.has(y.oNc.CREATOR_MONETIZABLE) && !t.features.has(y.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) return !1;
-    let n = _.Z.isViewingServerShop(t.id);
+    let n = f.Z.isViewingServerShop(t.id);
     for (let r of Object.keys(e.permissionOverwrites)) {
         let i = g.Z.getRole(t.id, r);
         if (
@@ -129,7 +129,7 @@ function M(e) {
 }
 class k extends (r = i.ZP.Store) {
     initialize() {
-        (this.waitFor(E.Z, g.Z, h.Z, _.Z), l.Zo.subscribe({ location: '1' }, () => R()));
+        (this.waitFor(E.Z, g.Z, h.Z, f.Z), l.Zo.subscribe({ location: '1' }, () => R()));
     }
     isChannelGated(e, t) {
         if (null == e) return !1;
@@ -143,7 +143,7 @@ class k extends (r = i.ZP.Store) {
         if (null == e) return !1;
         if (this.isChannelGated(e, t)) return !0;
         let n = h.Z.getChannel(t);
-        return !!(null != n && null != n.parent_id && f.Ec.has(null == n ? void 0 : n.type)) && this.isChannelOrThreadParentGated(e, n.parent_id);
+        return !!(null != n && null != n.parent_id && _.Ec.has(null == n ? void 0 : n.type)) && this.isChannelOrThreadParentGated(e, n.parent_id);
     }
 }
 O(k, 'displayName', 'GatedChannelStore');

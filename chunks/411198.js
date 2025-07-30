@@ -10,7 +10,7 @@
     cL: () => C,
     dS: () => N,
     e: () => I,
-    lM: () => f,
+    lM: () => _,
     rk: () => m,
     sp: () => g,
     wD: () => h,
@@ -65,7 +65,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,11 +76,11 @@ function _(e, t) {
         e
     );
 }
-function f(e) {
+function _(e) {
     return (0, o.Wh)(s.VI, e);
 }
 function p(e, t, n) {
-    var r, i, l, c, u, d, _, f, p, h, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, D, x;
+    var r, i, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, D, x;
     return (0, o.oI)(s.VI, n, {
         id: e.id,
         joinedAt: t.joinedAt,
@@ -94,8 +94,8 @@ function p(e, t, n) {
         features: (0, a.G)(e.features),
         preferredLocale: null != (d = e.preferred_locale) ? d : s.Cx.preferredLocale,
         ownerId: e.owner_id,
-        application_id: null != (_ = e.application_id) ? _ : null,
-        afkChannelId: null != (f = e.afk_channel_id) ? f : null,
+        application_id: null != (f = e.application_id) ? f : null,
+        afkChannelId: null != (_ = e.afk_channel_id) ? _ : null,
         afkTimeout: null != (p = e.afk_timeout) ? p : s.Cx.afkTimeout,
         systemChannelId: null != (h = e.system_channel_id) ? h : null,
         verificationLevel: null != (m = e.verification_level) ? m : s.Cx.verificationLevel,
@@ -142,7 +142,7 @@ function h(e, t) {
           );
 }
 function m(e, t, n) {
-    return _(u({}, e), {
+    return f(u({}, e), {
         joinedAt: null != e.joinedAt ? e.joinedAt.toISOString() : null,
         features: Array.from(e.features),
         roles: t,
@@ -348,7 +348,7 @@ function N(e) {
     };
 }
 function C(e) {
-    let t = _(u({}, e), {
+    let t = f(u({}, e), {
         features: (0, a.G)(e.features),
         joinedAt: null != e.joinedAt ? new Date(e.joinedAt) : null
     });

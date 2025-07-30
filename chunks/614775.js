@@ -7,10 +7,10 @@ var r = n(566817),
     c = n(163567),
     u = n(511389),
     d = n(414235),
-    _ = n(936342),
-    f = n(951575);
+    f = n(936342),
+    _ = n(951575);
 e.exports = function (e, t, n) {
-    if (!f(e)) throw new a('Assertion failed: O must be an Object');
+    if (!_(e)) throw new a('Assertion failed: O must be an Object');
     if (!c(t)) throw new a('Assertion failed: P must be a Property Key');
     if (!o(n)) throw new a('Assertion failed: Desc must be a Property Descriptor');
     if (!r) {
@@ -23,5 +23,5 @@ e.exports = function (e, t, n) {
     var m = r(e, t),
         g = m && u(m),
         E = l(e);
-    return _(e, t, E, n, g);
+    return f(e, t, E, n, g);
 };

@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(481060),
     u = n(565138),
     d = n(223390);
-function _() {
+function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.Z.Sizes.SMALLER;
     switch (e) {
         case u.Z.Sizes.SMOL:
@@ -21,7 +21,7 @@ function _() {
             return d.size24;
     }
 }
-function f() {
+function _() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.Z.Sizes.SMALLER;
     switch (e) {
         case u.Z.Sizes.SMOL:
@@ -34,17 +34,17 @@ function f() {
 }
 function p(e) {
     let { className: t, maxGuilds: n, guilds: i, onFocus: o, onClick: p, size: h = u.Z.Sizes.SMALLER, hideOverflowCount: m = !1, disableGuildNameTooltip: g = !1 } = e,
-        E = _(h);
+        E = f(h);
     function b() {
         let e = i.length - n,
             t = e + 1,
-            _ = e > 0 && !m,
+            f = e > 0 && !m,
             b = Math.min(i.length, n) - 1,
             y = s()(i)
                 .take(n)
                 .map((e, t) => {
                     let n = e.name,
-                        i = t === b && !_,
+                        i = t === b && !f,
                         o = a()(d.avatar, E, i && d.isLast);
                     return g
                         ? (0, r.jsx)('div', {
@@ -71,8 +71,8 @@ function p(e) {
                           );
                 })
                 .value();
-        if (_) {
-            let e = f(h);
+        if (f) {
+            let e = _(h);
             y[y.length - 1] = (0, r.jsx)(l.zx, {
                 className: a()(d.overflow, E),
                 onFocus: o,

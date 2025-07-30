@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function _(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,7 +53,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -80,11 +80,11 @@ function m(e, t) {
     return i;
 }
 let g = (e) => {
-    var { ref: t, children: n, className: a, color: d, roleColors: f, iconType: m, onMouseEnter: g, onMouseLeave: E } = e,
+    var { ref: t, children: n, className: a, color: d, roleColors: _, iconType: m, onMouseEnter: g, onMouseLeave: E } = e,
         b = h(e, ['ref', 'children', 'className', 'color', 'roleColors', 'iconType', 'onMouseEnter', 'onMouseLeave']);
     let [y, O] = i.useState(!1),
         { gradientStyle: v, gradientClassname: I } = (0, l.Icv)({
-            colorStrings: null != f ? f : null,
+            colorStrings: null != _ ? _ : null,
             roleStyle: 'username',
             animateGradient: y
         }),
@@ -109,7 +109,7 @@ let g = (e) => {
             }),
         (0, r.jsx)(
             l.P3F,
-            p(_({}, b), {
+            p(f({}, b), {
                 innerRef: t,
                 tag: 'span',
                 className: o()(a, {
@@ -126,9 +126,9 @@ let g = (e) => {
                               iconType: m,
                               children: n
                           })
-                        : null != f
+                        : null != _
                           ? (0, r.jsx)('span', {
-                                style: _({}, v),
+                                style: f({}, v),
                                 className: I,
                                 children: n
                             })

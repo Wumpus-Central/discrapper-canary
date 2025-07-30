@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(646476),
     u = n(104494),
     d = n(639119),
-    _ = n(981632),
-    f = n(798769),
+    f = n(981632),
+    _ = n(798769),
     p = n(689011),
     h = n(669079),
     m = n(987209),
@@ -47,7 +47,7 @@ function T(e) {
                 ? (e = (0, r.jsxs)('div', {
                       className: v.container,
                       children: [
-                          (0, r.jsx)(_.Z, {
+                          (0, r.jsx)(f.Z, {
                               defaultAnimationState: l.SR.LOOP,
                               giftStyle: L,
                               className: v.seasonalGiftBoxHeaderIcon
@@ -67,7 +67,7 @@ function T(e) {
                       }))
                     : U &&
                       (o()(I(S, y.y7), 'invalid sku id: '.concat(S)),
-                      (e = (0, r.jsx)(f.Z, {
+                      (e = (0, r.jsx)(_.Z, {
                           currentStep: null != A ? A : void 0,
                           purchaseState: C,
                           premiumType: y.y7[S],

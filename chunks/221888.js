@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(442837),
     u = n(846519),
     d = n(481060),
-    _ = n(239091),
-    f = n(410575),
+    f = n(239091),
+    _ = n(410575),
     p = n(350810),
     h = n(751688),
     m = n(199902),
@@ -188,7 +188,7 @@ function L(e) {
         G = i.useCallback(
             (e, t) => {
                 (j(),
-                    (0, _.jW)(
+                    (0, f.jW)(
                         e,
                         async () => {
                             let { default: e } = await Promise.all([n.e('70274'), n.e('79695'), n.e('69220'), n.e('70686')]).then(n.bind(n, 881351));
@@ -234,7 +234,7 @@ function L(e) {
                 },
                 'overflow'
             )),
-        (0, r.jsx)(f.Z, {
+        (0, r.jsx)(_.Z, {
             section: O.jXE.STREAM_VIEWER_POPOUT,
             children: (0, r.jsx)('div', {
                 onMouseEnter: j,

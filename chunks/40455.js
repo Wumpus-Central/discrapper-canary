@@ -8,8 +8,8 @@ var r = n(592125),
     c = n(143806),
     u = n(814074),
     d = n(582142),
-    _ = n(989263),
-    f = n(872261);
+    f = n(989263),
+    _ = n(872261);
 function p(e, t, n) {
     return (
         t in e
@@ -73,7 +73,7 @@ class S extends a.Z {
     }
     static recordChannel(e) {
         let t = r.Z.getBasicChannel(e);
-        if (null != t && (0, _.v)(t)) {
+        if (null != t && (0, f.v)(t)) {
             var n;
             let r = {
                 guildId: null != (n = t.guild_id) ? n : null,
@@ -92,11 +92,11 @@ class S extends a.Z {
     static dropUnreachableChannels() {
         for (let e of v.keys()) {
             let t = r.Z.getBasicChannel(e);
-            (0, _.v)(t) || S.deleteChannel(e);
+            (0, f.v)(t) || S.deleteChannel(e);
         }
     }
     static deleteUnreadableGuildChannels(e) {
-        for (let t of v.values()) e !== t.guildId || (0, _.$)(t.channelId) || S.deleteChannel(t.channelId);
+        for (let t of v.values()) e !== t.guildId || (0, f.$)(t.channelId) || S.deleteChannel(t.channelId);
     }
     static replaceLru(e) {
         v = e;
@@ -120,11 +120,11 @@ function A() {
     null != e && S.recordChannel(e);
 }
 function N() {
-    (S.dropUnreachableChannels(), S.replaceLru((0, f.J)(v, h + g)));
+    (S.dropUnreachableChannels(), S.replaceLru((0, _.J)(v, h + g)));
 }
 function C(e) {
     let t = e.id,
-        n = (0, _.v)(e),
+        n = (0, f.v)(e),
         r = o.Z.getChannelId();
     (n && t === r && S.recordChannel(t), n || S.deleteChannel(t));
 }

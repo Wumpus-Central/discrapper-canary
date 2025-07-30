@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(607070),
     u = n(621593),
     d = n(177751),
-    _ = n(62170),
-    f = n(640108),
+    f = n(62170),
+    _ = n(640108),
     p = n(793148),
     h = n(585483),
     m = n(70956),
@@ -27,7 +27,7 @@ function T(e) {
 }
 function S(e) {
     let { played: t, duration: n, currentTime: i } = e,
-        a = null == n ? '--:--' : t ? (0, f.yv)(Math.ceil(n - i)) : (0, f.yv)(Math.ceil(n));
+        a = null == n ? '--:--' : t ? (0, _.yv)(Math.ceil(n - i)) : (0, _.yv)(Math.ceil(n));
     return (0, r.jsx)(l.Text, {
         variant: 'text-sm/normal',
         className: v.duration,
@@ -68,7 +68,7 @@ function N(e, t, n) {
 }
 let C = i.memo(function (e) {
     let t,
-        { src: n, volume: a = 1, onVolumeChange: f, onMute: h, waveform: b, durationSecs: y, onVolumeShow: C, onVolumeHide: R, onPlay: P, onPause: w, onError: D, playbackCacheKey: L } = e,
+        { src: n, volume: a = 1, onVolumeChange: _, onMute: h, waveform: b, durationSecs: y, onVolumeShow: C, onVolumeHide: R, onPlay: P, onPause: w, onError: D, playbackCacheKey: L } = e,
         x = i.useRef(null),
         M = i.useMemo(() => (null != L ? d.ZP.getPlaybackPosition(L) : 0), [L]),
         k = (0, s.e7)([d.ZP], () => d.ZP.getPlaybackRate(d.Ir.VOICE_MESSAGE)),
@@ -121,17 +121,17 @@ let C = i.memo(function (e) {
         eu = i.useCallback(
             (e) => {
                 let t = (0, g.A)(e, 1);
-                (H(0 === t), ee(t), null == f || f(t));
+                (H(0 === t), ee(t), null == _ || _(t));
             },
-            [f]
+            [_]
         ),
         ed = i.useCallback(() => {
             (H(!Z), null == h || h(!Z));
         }, [Z, h]),
-        e_ = i.useCallback(() => {
+        ef = i.useCallback(() => {
             z(!0);
         }, []),
-        ef = i.useCallback(() => {
+        e_ = i.useCallback(() => {
             (z(!1), G === V && eo(), ea(G));
         }, [G, V, eo, ea]),
         ep = i.useCallback(
@@ -208,7 +208,7 @@ let C = i.memo(function (e) {
                       playbackRate: k
                   })
               })
-            : (0, r.jsx)(_.Z, {
+            : (0, r.jsx)(f.Z, {
                   ref: x,
                   className: v.audioElement,
                   controls: !1,
@@ -249,8 +249,8 @@ let C = i.memo(function (e) {
                 playing: Y,
                 played: j,
                 onDrag: ep,
-                onDragStart: e_,
-                onDragEnd: ef
+                onDragStart: ef,
+                onDragEnd: e_
             }),
             (0, r.jsx)(S, {
                 played: j,

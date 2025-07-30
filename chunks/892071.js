@@ -1,6 +1,6 @@
 (n.d(t, {
     cE: () => p,
-    vP: () => f
+    vP: () => _
 }),
     n(415506));
 var r = n(255367),
@@ -12,18 +12,18 @@ var r = n(255367),
     c = n(597952),
     u = n(377089),
     d = n(580747);
-let _ = i.createContext({
+let f = i.createContext({
     lang: '',
     style: '',
     className: ''
 });
-function f() {
-    let e = i.useContext(_);
+function _() {
+    let e = i.useContext(f);
     if (void 0 === e) throw Error('useRootElementContext must be used within a RootElementContextProvider');
     return e;
 }
 function p(e) {
-    let { rootClassName: t, lang: n, theme: a, density: f, focused: p, fontScale: h, fontScaleClass: m, mouseMode: g, keyboardModeEnabled: E, saturation: b, desaturateUserColors: y, useForcedColors: O, systemForcedColors: v, useReducedMotion: I, alwaysShowLinkDecorations: T, hardwareAccelerationEnabled: S, highContrastMode: A, children: N } = e,
+    let { rootClassName: t, lang: n, theme: a, density: _, focused: p, fontScale: h, fontScaleClass: m, mouseMode: g, keyboardModeEnabled: E, saturation: b, desaturateUserColors: y, useForcedColors: O, systemForcedColors: v, useReducedMotion: I, alwaysShowLinkDecorations: T, hardwareAccelerationEnabled: S, highContrastMode: A, children: N } = e,
         C = window.CSS.supports('selector(::-webkit-scrollbar)'),
         R = 'font-size: '.concat(h, '%; --saturation-factor: ').concat(b, ';'),
         P = (0, d.Z)('highlight_mana_buttons'),
@@ -32,7 +32,7 @@ function p(e) {
         L = o()(
             (0, c.Z)(),
             (0, l.QeD)(a),
-            'density-'.concat(f),
+            'density-'.concat(_),
             m,
             {
                 'low-saturation': b <= l.AEw,
@@ -67,7 +67,7 @@ function p(e) {
             }),
             [n, R, L]
         );
-    return (0, r.jsx)(_.Provider, {
+    return (0, r.jsx)(f.Provider, {
         value: x,
         children: N
     });

@@ -3,8 +3,8 @@ let r, i, a, o, s, l;
 var c,
     u = n(442837),
     d = n(570140),
-    _ = n(258609),
-    f = n(594190),
+    f = n(258609),
+    _ = n(594190),
     p = n(569545),
     h = n(102172),
     m = n(139656),
@@ -130,7 +130,7 @@ function Z(e) {
 }
 function H(e) {
     var t;
-    let { streamType: n, guildId: i, channelId: a, pid: c, sourceName: u, sourceId: d, sourceIcon: _, previewDisabled: h } = e,
+    let { streamType: n, guildId: i, channelId: a, pid: c, sourceName: u, sourceId: d, sourceIcon: f, previewDisabled: h } = e,
         m = (0, p.V9)({
             streamType: n,
             guildId: i,
@@ -138,13 +138,13 @@ function H(e) {
             ownerId: b.default.getId()
         });
     (null == d ? void 0 : d.startsWith('prepicked:')) && null == c && (c = s);
-    let g = null != (t = (null == d ? void 0 : d.startsWith('prepicked:')) && null != l ? l : null != c ? f.ZP.getGameForPID(c) : null != d ? f.ZP.getRunningGames().find((e) => (0, E.Z)(d, e.windowHandle)) : null) ? t : null;
+    let g = null != (t = (null == d ? void 0 : d.startsWith('prepicked:')) && null != l ? l : null != c ? _.ZP.getGameForPID(c) : null != d ? _.ZP.getRunningGames().find((e) => (0, E.Z)(d, e.windowHandle)) : null) ? t : null;
     ((o[m] = {
         id: null == g ? void 0 : g.id,
         pid: c,
         sourceName: u,
         previewDisabled: h,
-        sourceIcon: _,
+        sourceIcon: f,
         sourceId: d
     }),
         r.delete(m),
@@ -158,12 +158,12 @@ function H(e) {
 }
 function Y(e) {
     for (let t of e.applications) {
-        let e = f.ZP.getGameForPID(t.id);
+        let e = _.ZP.getGameForPID(t.id);
         if (null != e) return e;
     }
     for (let t of e.windows)
         if (null != t.owningApplication) {
-            let e = f.ZP.getGameForPID(t.owningApplication.id);
+            let e = _.ZP.getGameForPID(t.owningApplication.id);
             if (null != e) return e;
         }
 }
@@ -285,12 +285,12 @@ function er(e, t) {
 function ei(e) {
     if (er(e.streamType, e.channelId)) return !0;
     let t = y.Z.getBasicChannel(e.channelId);
-    return null != t && (0, h.p9)(t, A.Z, O.Z, I.Z, _.Z)[0];
+    return null != t && (0, h.p9)(t, A.Z, O.Z, I.Z, f.Z)[0];
 }
 k();
 class ea extends (c = u.ZP.PersistedStore) {
     initialize(e) {
-        (this.syncWith([I.Z], () => !0), this.waitFor(f.ZP, I.Z), (null == e ? void 0 : e.selfStreamParticipantsHidden) !== void 0 && Object.assign(x, null == e ? void 0 : e.selfStreamParticipantsHidden));
+        (this.syncWith([I.Z], () => !0), this.waitFor(_.ZP, I.Z), (null == e ? void 0 : e.selfStreamParticipantsHidden) !== void 0 && Object.assign(x, null == e ? void 0 : e.selfStreamParticipantsHidden));
     }
     getState() {
         return { selfStreamParticipantsHidden: x };

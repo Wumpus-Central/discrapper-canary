@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(841784),
     u = n(833664),
     d = n(420660),
-    _ = n(100527),
-    f = n(906732),
+    f = n(100527),
+    _ = n(906732),
     p = n(379357),
     h = n(358696),
     m = n(649700),
@@ -77,7 +77,7 @@ function z(e) {
         ee = (0, g.Dt)(),
         et = (0, g.Dt)(),
         en = i.useRef(null),
-        { analyticsLocations: er } = (0, f.ZP)(_.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        { analyticsLocations: er } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { themeType: ei } = (0, P.z)(),
         { interactionSource: ea, interactionSourceId: eo } = (0, N.Xo)(),
         es = (0, m.Z)({
@@ -97,7 +97,7 @@ function z(e) {
         }),
         eu = (0, T.Z)(W),
         ed = null != eu.text && '' !== eu.text,
-        { largeImage: e_, smallImage: ef } = (0, p.FO)(W, z),
+        { largeImage: ef, smallImage: e_ } = (0, p.FO)(W, z),
         ep = (0, B.Z)({
             location: 'UserProfileActivityCardWithInteractionToolbar',
             user: n,
@@ -117,15 +117,15 @@ function z(e) {
                   })
                 : null == ep
                   ? (0, r.jsx)(h.E, {
-                        image: e_,
-                        smallImage: ef,
+                        image: ef,
+                        smallImage: e_,
                         size: t,
                         aspectRatio: e,
                         className: Y.image
                     })
                   : (0, r.jsx)(h.E, {
-                        image: e_,
-                        smallImage: ef,
+                        image: ef,
+                        smallImage: e_,
                         size: t,
                         className: Y.clickableImage,
                         aspectRatio: e,
@@ -308,7 +308,7 @@ function z(e) {
     if (null === ei) return null;
     let eT = null != (t = W.application_id) ? t : W.name,
         eS = ea === V.n_.ACTIVITY && eo === eT;
-    return (0, r.jsx)(f.Gt, {
+    return (0, r.jsx)(_.Gt, {
         value: er,
         children: (0, r.jsx)(w.Z, {
             targetElementRef: en,

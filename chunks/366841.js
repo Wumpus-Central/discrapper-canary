@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(570140),
     u = n(153867),
     d = n(514361),
-    _ = n(266454),
-    f = n(243778),
+    f = n(266454),
+    _ = n(243778),
     p = n(210887),
     h = n(314897),
     m = n(70956),
@@ -51,11 +51,11 @@ function T() {
     let [e, t] = i.useState(!1),
         O = (0, l.VXO)(E.Xd),
         T = i.useMemo(() => [o.z.DESKTOP_REFRESH_ONBOARDING_MODAL], []),
-        [S, A] = (0, f.US)(T),
+        [S, A] = (0, _.US)(T),
         N = S === o.z.DESKTOP_REFRESH_ONBOARDING_MODAL,
         C = (0, a.e7)([h.default], () => h.default.getId());
     (i.useLayoutEffect(() => {
-        null != C && g.default.age(C) < m.Z.Millis.DAY && (0, _.Q3)(o.z.DESKTOP_REFRESH_ONBOARDING_MODAL);
+        null != C && g.default.age(C) < m.Z.Millis.DAY && (0, f.Q3)(o.z.DESKTOP_REFRESH_ONBOARDING_MODAL);
         let e = 'desktop_refresh_theme_migration_key',
             t = 'true' === s.K.get(e);
         !N || t || p.Z.theme !== y.BR.DARK || null != d.Z.gradientPreset || t || (s.K.set(e, 'true'), (0, u.ZI)({ theme: y.BR.DARKER }));

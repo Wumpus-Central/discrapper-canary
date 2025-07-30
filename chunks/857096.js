@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(208156),
     u = n(100527),
     d = n(906732),
-    _ = n(835473),
-    f = n(607187),
+    f = n(835473),
+    _ = n(607187),
     p = n(937995),
     h = n(366050),
     m = n(510839),
@@ -25,7 +25,7 @@ function T(e) {
     let { isLoading: t } = e,
         n = (0, o.e7)([g.Z], () => g.Z.getConnectedFrame()),
         i = (0, o.e7)([g.Z], () => g.Z.getFrameLayoutMode()),
-        u = (0, _.q)(null == n ? void 0 : n.applicationId),
+        u = (0, f.q)(null == n ? void 0 : n.applicationId),
         d = (0, o.e7)([h.Z], () => h.Z.isFrameHidden()),
         T = i === b.U.PIP && !d,
         S = T && null != h.Z.pipVideoWindow && null != h.Z.pipFrameWindow;
@@ -65,8 +65,8 @@ function T(e) {
     return (0, r.jsx)(p.ZP, {
         timeout: 2000,
         children: (e) => {
-            let { idle: i, onActive: o, onForceIdle: _ } = e;
-            return (0, r.jsxs)(f.Z, {
+            let { idle: i, onActive: o, onForceIdle: f } = e;
+            return (0, r.jsxs)(_.Z, {
                 className: a()(O.root, {
                     [O.pipMode]: T,
                     [I.elevationHigh]: T,
@@ -81,7 +81,7 @@ function T(e) {
                         className: 'theme-dark',
                         children: N({
                             onActive: o,
-                            onForceIdle: _,
+                            onForceIdle: f,
                             idle: i
                         })
                     }),

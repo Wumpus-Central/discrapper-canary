@@ -36,18 +36,18 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -58,13 +58,13 @@ function f(e, t) {
 }
 function p(e) {
     var { popoutOpen: t, onClosePopout: n, onOpenPopout: i } = e,
-        u = _(e, ['popoutOpen', 'onClosePopout', 'onOpenPopout']);
-    let f = t ? l.intl.string(l.t['7Dwcnp']) : l.intl.string(l.t.JzWez8);
+        u = f(e, ['popoutOpen', 'onClosePopout', 'onOpenPopout']);
+    let _ = t ? l.intl.string(l.t['7Dwcnp']) : l.intl.string(l.t.JzWez8);
     return (0, r.jsx)(
         s.Z,
         d(
             {
-                label: f,
+                label: _,
                 onClick: t ? n : i,
                 iconComponent: o.rgF,
                 iconClassName: a()({ [c.popIn]: t })

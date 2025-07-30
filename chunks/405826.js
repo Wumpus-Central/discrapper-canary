@@ -8,8 +8,8 @@ var r = n(623279),
     c = n(706454),
     u = n(823379),
     d = n(598105),
-    _ = n(643413);
-function f(e, t, n) {
+    f = n(643413);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ let p = 250,
     m = null === s.Z || void 0 === s.Z ? void 0 : s.Z.spellCheck;
 function g(e) {
     var t;
-    e = null != (t = _.Z[e]) ? t : e;
+    e = null != (t = f.Z[e]) ? t : e;
     let n = (0, r.parse)(e.replace(/[_-]/g, '-'));
     if (null == n || null == n.langtag.language || null == n.langtag.region) return void h.error(''.concat(e, ' is not a valid locale.'));
     let { language: i, region: a } = n.langtag;
@@ -77,7 +77,7 @@ class E {
         m.replaceMisspelling(e);
     }
     constructor(e) {
-        (f(this, 'languageDetector', void 0), f(this, 'regionPreference', void 0), f(this, '_enabled', !0), f(this, 'misspelledWord', ''), f(this, 'corrections', []));
+        (_(this, 'languageDetector', void 0), _(this, 'regionPreference', void 0), _(this, '_enabled', !0), _(this, 'misspelledWord', ''), _(this, 'corrections', []));
         let [t, n] = c.default.locale.split('-');
         this.regionPreference = n;
         let r = this.getAvailableLanguages(e);
@@ -86,7 +86,7 @@ class E {
             if (-1 !== e.indexOf(i)) this.setLocale(i);
             else {
                 var a;
-                let e = null != (a = r[n]) ? a : _.Z[t];
+                let e = null != (a = r[n]) ? a : f.Z[t];
                 null != e && this.setLocale(e);
             }
         })),

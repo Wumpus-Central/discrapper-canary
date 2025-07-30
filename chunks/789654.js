@@ -1,6 +1,6 @@
 (a.d(t, {
     Z: () => E,
-    q: () => N
+    q: () => T
 }),
     a(804061),
     a(704826),
@@ -92,10 +92,10 @@ let { SemanticColors: C } = d.V;
 function O(e) {
     return e.replaceAll(/_|\./g, '-').toLowerCase();
 }
-function T(e) {
+function N(e) {
     return e.replaceAll(/_|-/g, '.').toLowerCase();
 }
-function N(e, t) {
+function T(e, t) {
     let a = new Blob([t], { type: 'application/json' }),
         n = URL.createObjectURL(a),
         r = document.createElement('a'),
@@ -110,7 +110,7 @@ function N(e, t) {
 function E() {
     let e = (0, p.Fg)(),
         [t, a, l, s, d, u] = (0, g.zn)(),
-        { semanticColorOverrides: v, rawColorOverrides: C, tab: T, scales: E } = t,
+        { semanticColorOverrides: v, rawColorOverrides: C, tab: N, scales: E } = t,
         P = r.useMemo(() => {
             let t = Object.entries(v).map((t) => {
                     let [a, n] = t,
@@ -173,7 +173,7 @@ function E() {
                         className: j.tabBar,
                         type: 'top',
                         look: 'brand',
-                        selectedItem: T,
+                        selectedItem: N,
                         onItemSelect: (e) => {
                             a((t) => y(_({}, t), { tab: e }));
                         },
@@ -248,7 +248,7 @@ function E() {
                                 color: m.zx.Colors.TRANSPARENT,
                                 look: m.zx.Looks.BLANK,
                                 onClick: () => {
-                                    N('color-overrides', JSON.stringify(_({}, t), null, 2));
+                                    T('color-overrides', JSON.stringify(_({}, t), null, 2));
                                 },
                                 children: (0, n.jsx)(x._8t, {})
                             })
@@ -258,7 +258,7 @@ function E() {
             }),
             (0, n.jsx)('div', {
                 className: j.tab,
-                hidden: T !== g.H8.TOKENS,
+                hidden: N !== g.H8.TOKENS,
                 children: (0, n.jsx)(S, {
                     state: t,
                     setState: a
@@ -266,7 +266,7 @@ function E() {
             }),
             (0, n.jsx)('div', {
                 className: j.tab,
-                hidden: T !== g.H8.PALETTES,
+                hidden: N !== g.H8.PALETTES,
                 children: (0, n.jsx)(f.P, {
                     state: t,
                     setState: a
@@ -385,14 +385,14 @@ function S(e) {
                     let [t, r] = e,
                         i = r.colors[l];
                     if (null == i) return null;
-                    let s = T(i.color),
+                    let s = N(i.color),
                         c = i.opacity,
                         d = g.jC[t][l];
                     return (0, n.jsx)(
                         P,
                         {
                             title: O(t),
-                            subtitle: 1 === d.opacity ? T(d.raw) : ''.concat(T(d.raw), ' @ ').concat(100 * d.opacity, '%'),
+                            subtitle: 1 === d.opacity ? N(d.raw) : ''.concat(N(d.raw), ' @ ').concat(100 * d.opacity, '%'),
                             highlight: r.highlight,
                             onReset: () => {
                                 a((e) => {

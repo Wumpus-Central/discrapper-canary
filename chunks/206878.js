@@ -1,4 +1,4 @@
-(a.d(t, { g: () => T }), a(388685), a(35282));
+(a.d(t, { g: () => N }), a(388685), a(35282));
 var n = a(73800),
     r = a(281598);
 function l(e) {
@@ -193,7 +193,7 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
                 addWarning: t
             }));
     },
-    T = () => {
+    N = () => {
         let [e, t] = n.useState(!1),
             [a, s] = n.useState({}),
             [o, c] = n.useState({}),

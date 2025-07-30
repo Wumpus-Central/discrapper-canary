@@ -9,8 +9,8 @@ var i = n(704215),
     c = n(131951),
     u = n(626135),
     d = n(542238),
-    _ = n(927923),
-    f = n(981631),
+    f = n(927923),
+    _ = n(981631),
     p = n(388032);
 function h(e, t, n) {
     return (
@@ -68,11 +68,11 @@ let b = 'game_console_alert_modal',
     y = 'game_console_ptt_alert_modal',
     O = {
         maybeShowPTTAlert(e) {
-            if (c.Z.getMode() !== f.pM4.PUSH_TO_TALK || (0, l.zu)(i.z.CONSOLE_PTT_DISABLE_ALERT)) return Promise.resolve();
+            if (c.Z.getMode() !== _.pM4.PUSH_TO_TALK || (0, l.zu)(i.z.CONSOLE_PTT_DISABLE_ALERT)) return Promise.resolve();
             let t = {
-                [f.ABu.XBOX]: p.intl.string(p.t.bVZ7v7),
-                [f.ABu.PLAYSTATION]: p.intl.string(p.t['6iqUsb']),
-                [f.ABu.PLAYSTATION_STAGING]: p.intl.string(p.t['6iqUsb'])
+                [_.ABu.XBOX]: p.intl.string(p.t.bVZ7v7),
+                [_.ABu.PLAYSTATION]: p.intl.string(p.t['6iqUsb']),
+                [_.ABu.PLAYSTATION_STAGING]: p.intl.string(p.t['6iqUsb'])
             }[e];
             return null == t
                 ? Promise.resolve()
@@ -107,8 +107,8 @@ let b = 'game_console_alert_modal',
             function h() {
                 null != l &&
                     ((0, s.Z)({ platformType: l }),
-                    u.default.track(f.rMx.ACCOUNT_LINK_STEP, {
-                        previous_step: _.Lw,
+                    u.default.track(_.rMx.ACCOUNT_LINK_STEP, {
+                        previous_step: f.Lw,
                         current_step: 'desktop oauth',
                         platform_type: l
                     }));

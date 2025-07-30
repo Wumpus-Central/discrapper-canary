@@ -25,7 +25,7 @@ async function l(e) {
 }
 function c(e) {
     let { deviceId: t, width: n, height: c, disabled: u } = e,
-        [d, _] = i.useState();
+        [d, f] = i.useState();
     return (
         i.useEffect(() => {
             let e = l({
@@ -36,7 +36,7 @@ function c(e) {
             }).then((e) => {
                 let t = null != e ? (0, a.N7)(e) : null;
                 return (
-                    _(t),
+                    f(t),
                     {
                         stream: e,
                         streamId: t

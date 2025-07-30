@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(570908),
     d = n(204418),
-    _ = n(821795),
-    f = n(892567),
+    f = n(821795),
+    _ = n(892567),
     p = n(172751),
     h = n(359135),
     m = n(516817),
@@ -87,10 +87,10 @@ let S = {
                                               userId: t.id,
                                               className: v.tagChiplet
                                           }),
-                                          name: (0, r.jsx)(f.Z, {
+                                          name: (0, r.jsx)(_.Z, {
                                               userName: G,
                                               displayNameStyles: t.displayNameStyles,
-                                              effectDisplayType: _.F.ANIMATED
+                                              effectDisplayType: f.F.ANIMATED
                                           }),
                                           innerClassName: N
                                       })

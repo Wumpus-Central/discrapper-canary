@@ -7,8 +7,8 @@ var r,
     c = n(242606),
     u = n(48657),
     d = n(390827).set,
-    _ = n(557655),
-    f = n(266782),
+    f = n(557655),
+    _ = n(266782),
     p = n(225991),
     h = n(787898),
     m = n(426625),
@@ -18,7 +18,7 @@ var r,
     y = l.Promise,
     O = c('queueMicrotask');
 if (!O) {
-    var v = new _(),
+    var v = new f(),
         I = function () {
             var e, t;
             for (m && (e = b.domain) && e.exit(); (t = v.get()); )
@@ -29,7 +29,7 @@ if (!O) {
                 }
             e && e.enter();
         };
-    (f || m || h || !g || !E
+    (_ || m || h || !g || !E
         ? !p && y && y.resolve
             ? (((o = y.resolve(void 0)).constructor = y),
               (s = u(o.then, o)),

@@ -20,8 +20,8 @@ var r = n(392711),
     c = n(602210),
     u = n(502087),
     d = n(168232),
-    _ = n(598077),
-    f = n(630388),
+    f = n(598077),
+    _ = n(630388),
     p = n(823379),
     h = n(314897),
     m = n(750041),
@@ -86,10 +86,10 @@ function A(e) {
         }
         delete e.public_flags;
     }
-    let _ = e.purchased_flags;
-    void 0 !== _ && ((e.purchasedFlags = _), delete e.purchased_flags);
-    let f = e.premium_usage_flags;
-    (void 0 !== f && ((e.premiumUsageFlags = f), delete e.premium_usage_flags), null === e.banner_color && delete e.banner_color);
+    let f = e.purchased_flags;
+    void 0 !== f && ((e.purchasedFlags = f), delete e.purchased_flags);
+    let _ = e.premium_usage_flags;
+    (void 0 !== _ && ((e.premiumUsageFlags = _), delete e.premium_usage_flags), null === e.banner_color && delete e.banner_color);
     let p = e.avatar_decoration_data;
     void 0 !== p && ((e.avatarDecorationData = (0, o.FG)(p)), delete e.avatar_decoration_data);
     let h = e.collectibles;
@@ -109,7 +109,7 @@ function C(e) {
         n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         r = y[e.id],
         i = void 0 !== e.id && e.id === h.default.getId();
-    if (null == r) void 0 !== (t = (r = new _.Z(e)).premiumType) && i && (r.premiumType = P((0, d.QI)(r), r.premiumType));
+    if (null == r) void 0 !== (t = (r = new f.Z(e)).premiumType) && i && (r.premiumType = P((0, d.QI)(r), r.premiumType));
     else if (n) {
         var a;
         let n = A(e);
@@ -182,7 +182,7 @@ function D(e) {
             });
         }),
         null != y[h.default.getId()] &&
-            (y[v] = new _.Z({
+            (y[v] = new f.Z({
                 id: v,
                 username: 'Wumpus',
                 discriminator: '0',
@@ -210,7 +210,7 @@ function x(e) {
     return !('incomplete' in e);
 }
 function M(e) {
-    if (null != e.users) for (let t of e.users) (t.id in y && x(t)) || (y[t.id] = new _.Z(t));
+    if (null != e.users) for (let t of e.users) (t.id in y && x(t)) || (y[t.id] = new f.Z(t));
 }
 function k(e) {
     let { user: t } = e;
@@ -302,9 +302,9 @@ function q(e) {
 }
 function X(e) {
     let { message: t } = e;
-    if ((w(t, !0), null != t.flags && f.yE(t.flags, g.iLy.URGENT))) {
+    if ((w(t, !0), null != t.flags && _.yE(t.flags, g.iLy.URGENT))) {
         let e = y[h.default.getId()];
-        return null != e && ((y[h.default.getId()] = e.set('flags', f.mB(e.flags, g.xW$.HAS_UNREAD_URGENT_MESSAGES, !0))), !0);
+        return null != e && ((y[h.default.getId()] = e.set('flags', _.mB(e.flags, g.xW$.HAS_UNREAD_URGENT_MESSAGES, !0))), !0);
     }
     return !1;
 }
@@ -409,7 +409,7 @@ function ed(e) {
         n
     );
 }
-function e_(e) {
+function ef(e) {
     let { guild: t } = e;
     t.members.forEach((e) => {
         let {
@@ -427,7 +427,7 @@ function e_(e) {
             I(n, t.id, s));
     });
 }
-function ef(e) {
+function e_(e) {
     return C(e.relationship.user);
 }
 function ep(e) {
@@ -447,7 +447,7 @@ function eg(e) {
 function eE(e) {
     let { users: t } = e;
     t.forEach((e) => {
-        null == y[e.id] && (y[e.id] = new _.Z(e));
+        null == y[e.id] && (y[e.id] = new f.Z(e));
     });
 }
 function eb(e) {
@@ -529,8 +529,8 @@ class eD extends m.Z {
     }
     handleLoadCache(e) {
         let t = this.readSnapshot(eD.LATEST_SNAPSHOT_VERSION);
-        if (null != t) for (let e of t.users) y[e.id] = new _.Z(e);
-        if (null != e.users) for (let t of e.users) (t.id in y && x(t)) || (y[t.id] = new _.Z(t));
+        if (null != t) for (let e of t.users) y[e.id] = new f.Z(e);
+        if (null != e.users) for (let t of e.users) (t.id in y && x(t)) || (y[t.id] = new f.Z(t));
         for (let t of [e.privateChannels, e.initialGuildChannels])
             for (let e of t) {
                 var n;
@@ -589,7 +589,7 @@ class eD extends m.Z {
             MESSAGE_UPDATE: X,
             GUILD_SETTINGS_LOADED_BANS: et,
             GUILD_SETTINGS_LOADED_BANS_BATCH: en,
-            GUILD_CREATE: e_,
+            GUILD_CREATE: ef,
             GUILD_BAN_ADD: er,
             GUILD_BAN_REMOVE: er,
             CHANNEL_RECIPIENT_ADD: ei,
@@ -604,7 +604,7 @@ class eD extends m.Z {
             THREAD_MEMBERS_UPDATE: ed,
             CHANNEL_CREATE: Q,
             CHANNEL_UPDATES: J,
-            RELATIONSHIP_ADD: ef,
+            RELATIONSHIP_ADD: e_,
             GAME_RELATIONSHIP_ADD: ep,
             LOAD_RELATIONSHIPS_SUCCESS: eh,
             FRIEND_SUGGESTION_CREATE: em,

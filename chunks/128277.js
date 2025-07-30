@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(100527),
     u = n(906732),
     d = n(379357),
-    _ = n(358696),
-    f = n(649700),
+    f = n(358696),
+    _ = n(649700),
     p = n(313201),
     h = n(952164),
     m = n(960870),
@@ -82,7 +82,7 @@ function L(e) {
         L = (0, p.Dt)(),
         x = (0, p.Dt)(),
         { themeType: M } = (0, b.z)(),
-        k = (0, f.Z)({
+        k = (0, _.Z)({
             activity: a,
             user: t
         }),
@@ -182,9 +182,9 @@ function L(e) {
                     children: (0, r.jsxs)('div', {
                         className: C.content,
                         children: [
-                            (0, r.jsx)(_.E, {
+                            (0, r.jsx)(f.E, {
                                 image: G,
-                                size: M === N.lY.MODAL_V2 ? _.J.SIZE_100 : _.J.SIZE_60,
+                                size: M === N.lY.MODAL_V2 ? f.J.SIZE_100 : f.J.SIZE_60,
                                 className: C.clickableImage,
                                 onClick: (e) => {
                                     (e.stopPropagation(), V({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, h.Z5)(a, t.id));

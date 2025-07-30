@@ -56,13 +56,13 @@ function u(e, t) {
     );
 }
 let d = /\n{2,}$/,
-    _ = /(?:^|\n)( *)$/,
-    f = '(?:[*-]|\\d+\\.)',
-    p = '(%INDENT_CAPTURE_PATTERN%)(' + f + ') +',
+    f = /(?:^|\n)( *)$/,
+    _ = '(?:[*-]|\\d+\\.)',
+    p = '(%INDENT_CAPTURE_PATTERN%)(' + _ + ') +',
     h = RegExp('^' + p.replace('%INDENT_CAPTURE_PATTERN%', ' *')),
-    m = p + '[^\\n]*(?:\\n(?!%INDENT_CAPTURE_PATTERN%' + f + ' )[^\\n]*)*(\n|$)',
+    m = p + '[^\\n]*(?:\\n(?!%INDENT_CAPTURE_PATTERN%' + _ + ' )[^\\n]*)*(\n|$)',
     g = / *\n$/,
-    E = RegExp('^( *)(' + f + ') [\\s\\S]+?(?:\\n(?! )(?!\\1' + f + ' )|$)'),
+    E = RegExp('^( *)(' + _ + ') [\\s\\S]+?(?:\\n(?! )(?!\\1' + _ + ' )|$)'),
     b = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
     y = 10,
     O = 1,
@@ -73,7 +73,7 @@ let d = /\n{2,}$/,
         match: (e, t) => {
             if (!t.allowList || t._listLevel >= y + 1) return null;
             let n = null == t.prevCapture ? '' : t.prevCapture[0],
-                r = _.exec(n);
+                r = f.exec(n);
             return null == r || b.test(r[0]) ? null : E.exec(e);
         },
         parse: (e, t, n) => {
@@ -82,11 +82,11 @@ let d = /\n{2,}$/,
                 o = a ? Math.min(v, Math.max(O, +r)) : void 0,
                 s = e[0].replace(d, '\n'),
                 c = h.exec(s),
-                _ = null != c ? c[0].length : 0,
-                f = null != c ? c[1].length : 0,
-                p = ' {'.concat(f, ',').concat(f + 1, '}'),
+                f = null != c ? c[0].length : 0,
+                _ = null != c ? c[1].length : 0,
+                p = ' {'.concat(_, ',').concat(_ + 1, '}'),
                 E = RegExp(m.replaceAll('%INDENT_CAPTURE_PATTERN%', p), 'gm'),
-                b = RegExp('^ {1,' + _ + '}', 'gm'),
+                b = RegExp('^ {1,' + f + '}', 'gm'),
                 y = s.match(E);
             i()(null != y, 'markup list items can not be parsed.');
             let T = !1;
@@ -101,10 +101,10 @@ let d = /\n{2,}$/,
                     T = s;
                     let c = n.inline,
                         d = n._list,
-                        _ = n._listLevel;
-                    ((n._list = !0), (n._listLevel = (null != _ ? _ : 0) + 1), s ? ((n.inline = !1), (i = a.replace(g, '\n\n'))) : ((n.inline = !0), (i = a.replace(g, ''))));
-                    let f = I(t(i, u(l({}, n), { allowHeading: !1 })));
-                    return ((n.inline = c), (n._list = d), (n._listLevel = _), f);
+                        f = n._listLevel;
+                    ((n._list = !0), (n._listLevel = (null != f ? f : 0) + 1), s ? ((n.inline = !1), (i = a.replace(g, '\n\n'))) : ((n.inline = !0), (i = a.replace(g, ''))));
+                    let _ = I(t(i, u(l({}, n), { allowHeading: !1 })));
+                    return ((n.inline = c), (n._list = d), (n._listLevel = f), _);
                 })
             };
         }

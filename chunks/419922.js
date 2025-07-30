@@ -10,11 +10,11 @@ var r = n(255367),
     o = n.n(a),
     s = n(512722),
     l = n.n(s),
-    c = n(564854),
+    c = n(778141),
     u = n(442837),
     d = n(622535),
-    _ = n(481060),
-    f = n(607070),
+    f = n(481060),
+    _ = n(607070),
     p = n(134432),
     h = n(314910),
     m = n(506071),
@@ -59,7 +59,7 @@ let P = (e) => {
                     ? (0, r.jsxs)('div', {
                           className: O.error,
                           children: [
-                              (0, r.jsx)(_.r8p, {
+                              (0, r.jsx)(f.r8p, {
                                   size: 'custom',
                                   width: 20,
                                   height: 20,
@@ -67,7 +67,7 @@ let P = (e) => {
                                   className: O.errorIcon
                               }),
                               c &&
-                                  (0, r.jsx)(_.Text, {
+                                  (0, r.jsx)(f.Text, {
                                       className: O.errorText,
                                       color: 'header-secondary',
                                       variant: 'text-sm/normal',
@@ -81,7 +81,7 @@ let P = (e) => {
         });
     },
     w = (e) => {
-        let { shouldAnimate: t, size: a, sticker: o, fileUri: s, assetData: c, isFocused: u, className: d, maskAsset: _, positionRef: f, withLoadingIndicator: h, onError: m } = e,
+        let { shouldAnimate: t, size: a, sticker: o, fileUri: s, assetData: c, isFocused: u, className: d, maskAsset: f, positionRef: _, withLoadingIndicator: h, onError: m } = e,
             g = i.useRef(null),
             E = i.useRef(null),
             [v, I] = i.useState(!0),
@@ -130,11 +130,11 @@ let P = (e) => {
                   role: 'img',
                   className: d,
                   'aria-label': T ? y.intl.string(y.t.yEvsKy) : R(o),
-                  ref: f,
+                  ref: _,
                   children: (0, r.jsx)(P, {
                       hasError: T,
                       isLoading: v,
-                      maskAsset: _,
+                      maskAsset: f,
                       size: a,
                       withLoadingIndicator: h,
                       children: C(
@@ -148,15 +148,15 @@ let P = (e) => {
               });
     },
     D = (e) => {
-        let { shouldAnimate: t, sticker: n, isFocused: a, size: s, className: l, maskAsset: c, positionRef: u, withLoadingIndicator: _, fileUri: f } = e,
+        let { shouldAnimate: t, sticker: n, isFocused: a, size: s, className: l, maskAsset: c, positionRef: u, withLoadingIndicator: f, fileUri: _ } = e,
             [p, h] = i.useState(!1),
             [m, g] = i.useState(!0),
             [E, y] = i.useState(!1),
             T = i.useRef(null),
             S = i.useRef(null),
             A =
-                null != f
-                    ? f
+                null != _
+                    ? _
                     : (0, b.Q6)(n, {
                           isPreview: !t || !p || !a,
                           size: s
@@ -192,7 +192,7 @@ let P = (e) => {
                           isLoading: m,
                           maskAsset: c,
                           size: s,
-                          withLoadingIndicator: _,
+                          withLoadingIndicator: f,
                           children: C(
                               (0, r.jsx)('img', {
                                   className: O.pngImage,
@@ -212,13 +212,13 @@ let P = (e) => {
     },
     L = (e) => {
         let { disableAnimation: t, enlargeScaleFactor: n, enlargeWithName: a, isInteracting: o, positionRef: s, size: l, sticker: d } = e,
-            p = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
+            p = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
             m = i.useRef(null),
             g = {
                 transform: 'scale('.concat(p ? 1 : 1 / n, ')'),
                 opacity: 0
             },
-            E = (0, _.Yzy)(o, {
+            E = (0, f.Yzy)(o, {
                 ref: m,
                 from: g,
                 enter: {
@@ -229,7 +229,7 @@ let P = (e) => {
                 config: A
             }),
             b = i.useRef(null),
-            y = (0, _.q_F)(
+            y = (0, f.q_F)(
                 {
                     ref: b,
                     transform: o || p ? 'translateY(0)' : 'translateY(-25px)',
@@ -271,7 +271,7 @@ let P = (e) => {
                                         (0, r.jsx)(c.animated.div, {
                                             className: O.overlayLabelWrapper,
                                             style: y,
-                                            children: (0, r.jsx)(_.Text, {
+                                            children: (0, r.jsx)(f.Text, {
                                                 variant: 'text-sm/medium',
                                                 className: O.overlayLabel,
                                                 children: d.name
@@ -284,7 +284,7 @@ let P = (e) => {
         );
     },
     x = (e) => {
-        let { isInteracting: t = !1, disableAnimation: n = !1, enlargeOnInteraction: a = !1, enlargeWithName: o = !0, enlargeScaleFactor: s = S, maskAsset: l = !1, size: c, sticker: u, className: d, withLoadingIndicator: _, assetData: f, fileUri: p, onError: h } = e,
+        let { isInteracting: t = !1, disableAnimation: n = !1, enlargeOnInteraction: a = !1, enlargeWithName: o = !0, enlargeScaleFactor: s = S, maskAsset: l = !1, size: c, sticker: u, className: d, withLoadingIndicator: f, assetData: _, fileUri: p, onError: h } = e,
             b = (0, m.n)(),
             y = (0, g.t$)(t) && !n,
             O = i.useRef(null);
@@ -302,8 +302,8 @@ let P = (e) => {
                         className: d,
                         maskAsset: l,
                         positionRef: O,
-                        withLoadingIndicator: _,
-                        assetData: f,
+                        withLoadingIndicator: f,
+                        assetData: _,
                         fileUri: p,
                         onError: h
                     }),

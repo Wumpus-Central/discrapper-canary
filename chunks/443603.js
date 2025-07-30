@@ -6,13 +6,13 @@ var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(564854),
+    s = n(778141),
     l = n(481060),
     c = n(686546),
     u = n(855981),
     d = n(55543),
-    _ = n(504684);
-function f(e, t, n) {
+    f = n(504684);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -92,22 +92,22 @@ let E = 20,
         }
     };
 function y(e) {
-    let { ref: t, className: n, disabled: i = !1, childClassName: a, iconClassName: f, icon: h, children: g, onClick: y, onDoubleClick: O, isActive: v, onMouseEnter: I, onMouseLeave: T, onFocus: S, onBlur: A, pulse: N, sparkle: C, notification: R, 'aria-label': P, 'aria-expanded': w, 'aria-haspopup': D, 'aria-controls': L, noHover: x } = e,
+    let { ref: t, className: n, disabled: i = !1, childClassName: a, iconClassName: _, icon: h, children: g, onClick: y, onDoubleClick: O, isActive: v, onMouseEnter: I, onMouseLeave: T, onFocus: S, onBlur: A, pulse: N, sparkle: C, notification: R, 'aria-label': P, 'aria-expanded': w, 'aria-haspopup': D, 'aria-controls': L, noHover: x } = e,
         M = (0, l.Yzy)(null != g, m(p({}, b), { keys: (e) => (e ? 'children' : 'icon') })),
         k = (e) => {
             let { component: t } = e;
             return null != R
                 ? (0, r.jsxs)('div', {
-                      className: _.buttonContent,
+                      className: f.buttonContent,
                       children: [
                           (0, r.jsx)(c.ZP, {
-                              className: _.iconMask,
+                              className: f.iconMask,
                               mask: c.QS.CHAT_INPUT_BUTTON_NOTIFICATION,
                               width: E,
                               height: E,
                               children: t
                           }),
-                          (0, r.jsx)('span', { className: _.notificationDot })
+                          (0, r.jsx)('span', { className: f.notificationDot })
                       ]
                   })
                 : t;
@@ -119,11 +119,11 @@ function y(e) {
         'aria-haspopup': D,
         'aria-controls': L,
         'aria-disabled': i,
-        className: o()(n, _.button, {
-            [_.active]: v,
-            [_.noHover]: x,
-            [_.pulseButton]: N,
-            [_.disabled]: i
+        className: o()(n, f.button, {
+            [f.active]: v,
+            [f.noHover]: x,
+            [f.pulseButton]: N,
+            [f.disabled]: i
         }),
         onClick: i ? void 0 : y,
         onDoubleClick: i ? void 0 : O,
@@ -145,7 +145,7 @@ function y(e) {
                           s.animated.div,
                           {
                               style: e,
-                              className: o()(_.buttonWrapper, a),
+                              className: o()(f.buttonWrapper, a),
                               children: k({ component: g })
                           },
                           i
@@ -155,10 +155,10 @@ function y(e) {
                             s.animated.div,
                             {
                                 style: e,
-                                className: o()(_.buttonWrapper, a),
+                                className: o()(f.buttonWrapper, a),
                                 children: k({
                                     component: (0, r.jsx)(h, {
-                                        className: o()(_.icon, f, { [_.pulseIcon]: N }),
+                                        className: o()(f.icon, _, { [f.pulseIcon]: N }),
                                         color: 'currentColor'
                                     })
                                 })
@@ -169,8 +169,8 @@ function y(e) {
             }),
             C &&
                 (0, r.jsxs)('div', {
-                    className: _.sparkleContainer,
-                    children: [(0, r.jsx)(d.Z, { className: _.sparkleStar }), (0, r.jsx)(u.Z, { className: _.sparklePlus })]
+                    className: f.sparkleContainer,
+                    children: [(0, r.jsx)(d.Z, { className: f.sparkleStar }), (0, r.jsx)(u.Z, { className: f.sparklePlus })]
                 })
         ]
     });

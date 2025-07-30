@@ -64,8 +64,8 @@ function u(e, t) {
     );
 }
 let d = 10,
-    _ = 1000,
-    f = 32,
+    f = 1000,
+    _ = 32,
     p = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
     h = {
         original: (e) => {
@@ -83,8 +83,8 @@ let d = 10,
     },
     m = {
         original: p,
-        safe: (e, t, n) => (null == n.maxTotalUse ? 0 : Math.trunc(1000 * ((e / n.maxTotalUse) * 0.2 + (t / _) * 0.8))),
-        day_recency: (e, t, n) => (null == n.maxTotalUse ? 0 : Math.trunc(1000 * ((e / n.maxTotalUse) * 0.05 + (t / _) * 0.95)))
+        safe: (e, t, n) => (null == n.maxTotalUse ? 0 : Math.trunc(1000 * ((e / n.maxTotalUse) * 0.2 + (t / f) * 0.8))),
+        day_recency: (e, t, n) => (null == n.maxTotalUse ? 0 : Math.trunc(1000 * ((e / n.maxTotalUse) * 0.05 + (t / f) * 0.95)))
     };
 class g {
     overwriteHistory(e, t) {
@@ -176,7 +176,7 @@ class g {
     set frequently(e) {
         this._frequently = e;
     }
-    constructor({ computeBonus: e, computeWeight: t, computeFrecency: n = p, lookupKey: r, afterCompute: i, numFrequentlyItems: a = f, maxSamples: o = d }) {
+    constructor({ computeBonus: e, computeWeight: t, computeFrecency: n = p, lookupKey: r, afterCompute: i, numFrequentlyItems: a = _, maxSamples: o = d }) {
         (s(this, 'dirty', void 0), s(this, '_frequently', void 0), s(this, 'numFrequentlyItems', void 0), s(this, 'maxSamples', void 0), s(this, 'computeBonus', void 0), s(this, 'computeWeight', void 0), s(this, 'computeFrecency', void 0), s(this, 'lookupKey', void 0), s(this, 'usageHistory', void 0), s(this, 'afterCompute', void 0), s(this, 'calculateMaxTotalUse', void 0), (this.computeBonus = e), (this.computeWeight = t), (this.computeFrecency = n), (this.afterCompute = i), (this.lookupKey = r), (this.usageHistory = {}), (this.frequently = []), (this.maxSamples = o), (this.numFrequentlyItems = a), (this.calculateMaxTotalUse = !1), (this.dirty = !1));
     }
 }

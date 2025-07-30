@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(906732),
     u = n(785717),
     d = n(892001),
-    _ = n(280885),
-    f = n(388032),
+    f = n(280885),
+    _ = n(388032),
     p = n(383994);
 function h(e, t, n) {
     return (
@@ -94,7 +94,7 @@ let b = 57.75,
                           ref: N,
                           className: o()(p.descriptionClamp, T && p.maxBioHeight),
                           onBlur: R,
-                          children: (0, r.jsx)(_.Z, {
+                          children: (0, r.jsx)(f.Z, {
                               userBio: a,
                               setLineClamp: !1,
                               textColor: 'header-primary'
@@ -110,7 +110,7 @@ let b = 57.75,
                               children: (0, r.jsx)(l.Text, {
                                   variant: 'text-xs/normal',
                                   color: 'none',
-                                  children: f.intl.string(f.t.YDiPq6)
+                                  children: _.intl.string(_.t.YDiPq6)
                               })
                           })
                   ]

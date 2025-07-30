@@ -9,9 +9,9 @@ var i = n(120356),
     c = n(175531);
 function u(e) {
     let { className: t, isEligibleForTrial: n = !1 } = e,
-        { step: i, breadcrumbs: u, startedPaymentFlowWithPaymentSourcesRef: d, enablePremiumBrandRefresh: _ } = (0, s.JL)();
-    if (_ || null == u || 0 === u.length) return null;
-    let f = u.flatMap((e) => {
+        { step: i, breadcrumbs: u, startedPaymentFlowWithPaymentSourcesRef: d, enablePremiumBrandRefresh: f } = (0, s.JL)();
+    if (f || null == u || 0 === u.length) return null;
+    let _ = u.flatMap((e) => {
         let t = e.useBreadcrumbLabel(n);
         return null != t
             ? {
@@ -20,9 +20,9 @@ function u(e) {
               }
             : [];
     });
-    return 0 === f.length
+    return 0 === _.length
         ? null
-        : ((f = f.filter((e) => {
+        : ((_ = _.filter((e) => {
               let t = e.id !== l.h8.ADD_PAYMENT_STEPS,
                   r = e.id === l.h8.ADD_PAYMENT_STEPS && !d.current;
               return !n || (n && (t || r));
@@ -31,7 +31,7 @@ function u(e) {
               className: a()('breadcrumb', c.wrapper, t),
               children: (0, r.jsx)(o.OoM, {
                   activeId: i,
-                  breadcrumbs: f
+                  breadcrumbs: _
               })
           }));
 }

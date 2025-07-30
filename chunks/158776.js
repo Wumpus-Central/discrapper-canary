@@ -17,8 +17,8 @@ var r,
     c = n(570140),
     u = n(122810),
     d = n(106301),
-    _ = n(920828),
-    f = n(709054),
+    f = n(920828),
+    _ = n(709054),
     p = n(314897),
     h = n(594174),
     m = n(981631);
@@ -80,7 +80,7 @@ function D(e, t) {
             visible: e,
             hidden: []
         };
-    let n = _.R.getCurrentConfig({ location: 'presence_filtering' }, { autoTrackExposure: !1 });
+    let n = f.R.getCurrentConfig({ location: 'presence_filtering' }, { autoTrackExposure: !1 });
     if (!n.filterGamePresence && !n.filterRichPresence)
         return {
             visible: e,
@@ -173,8 +173,8 @@ function k(e) {
     else {
         let { visible: e, hidden: c } = D(o.length > 1 ? [...o].sort(w) : o, n),
             d = x([...(null != s ? s : []), ...c]),
-            _ = u[t];
-        ((o = null != _ && a()(_.activities, e) ? _.activities : e),
+            f = u[t];
+        ((o = null != f && a()(f.activities, e) ? f.activities : e),
             (u[t] = {
                 status: r,
                 clientStatus: i,
@@ -221,7 +221,7 @@ function U(e, t) {
     (delete n[e], 0 === Object.keys(n).length && delete b[t], L(t));
 }
 function G(e) {
-    for (let t of f.default.keys(b)) U(e, t);
+    for (let t of _.default.keys(b)) U(e, t);
 }
 function B() {
     return !0;
@@ -400,7 +400,7 @@ class J extends (r = l.ZP.Store) {
     }
     getAllApplicationActivities(e) {
         let t = [];
-        for (let n of f.default.keys(O))
+        for (let n of _.default.keys(O))
             for (let r of O[n])
                 r.application_id === e &&
                     t.push({
@@ -424,7 +424,7 @@ class J extends (r = l.ZP.Store) {
         return T[e];
     }
     getUserIds() {
-        return f.default.keys(O);
+        return _.default.keys(O);
     }
     isMobileOnline(e) {
         let t = I[e];

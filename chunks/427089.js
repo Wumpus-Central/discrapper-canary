@@ -108,7 +108,7 @@ e.exports = function (e) {
                 keywords: 'inline'
             }
         ],
-        _ = {
+        f = {
             begin: [/\(\s*/, /using/, /\s+(?!\))/],
             beginScope: { 2: 'keyword' }
         };
@@ -144,7 +144,7 @@ e.exports = function (e) {
             c,
             u,
             ...d,
-            _,
+            f,
             n
         ]
     };

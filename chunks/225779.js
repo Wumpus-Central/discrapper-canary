@@ -16,7 +16,7 @@ var i = n(120356),
     c = n(981631),
     u = n(388032),
     d = n(240211);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -106,10 +106,10 @@ let E = Object.freeze({
 function b(e) {
     var { children: t, className: n, minor: i = !1 } = e,
         o = m(e, ['children', 'className', 'minor']);
-    return (0, r.jsx)(s.tEY, { children: (0, r.jsx)('button', h(f({ className: a()(d.button, n, { [d.buttonMinor]: i }) }, o), { children: t })) });
+    return (0, r.jsx)(s.tEY, { children: (0, r.jsx)('button', h(_({ className: a()(d.button, n, { [d.buttonMinor]: i }) }, o), { children: t })) });
 }
 function y(e, t) {
-    null != e && l.default.track(c.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, f({ notice_type: e }, t));
+    null != e && l.default.track(c.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, _({ notice_type: e }, t));
 }
 function O(e) {
     null != e && l.default.track(c.rMx.APP_NOTICE_CLOSED, { notice_type: e });
@@ -119,7 +119,7 @@ function v(e) {
         a = m(e, ['children', 'noticeType', 'additionalTrackingProps']);
     return (0, r.jsx)(
         b,
-        h(f({}, a), {
+        h(_({}, a), {
             onClick: (e) => {
                 (null != a.onClick && a.onClick(e), y(n, i));
             },
@@ -132,7 +132,7 @@ function I(e) {
         i = m(e, ['children', 'href']);
     return (0, r.jsx)(
         s.eee,
-        h(f({}, i), {
+        h(_({}, i), {
             className: d.button,
             href: n,
             children: t

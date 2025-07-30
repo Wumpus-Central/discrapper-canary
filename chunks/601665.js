@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(906732),
     u = n(313201),
     d = n(430824),
-    _ = n(5192),
-    f = n(785717),
+    f = n(5192),
+    _ = n(785717),
     p = n(221292),
     h = n(687158),
     m = n(892001),
@@ -56,7 +56,7 @@ function R(e) {
 function P(e) {
     let { user: t, currentUser: n, guildId: C, channelId: P, messageId: w, roleId: D, openedAt: L, closePopout: x, setPopoutRef: M, disableUserProfileLink: k = __OVERLAY__, newAnalyticsLocations: j = [], disableAutoFocus: U = !1 } = e,
         { analyticsLocations: G } = (0, c.ZP)([...j, l.Z.USER_PROFILE_POPOUT]),
-        B = (0, f.ZB)({
+        B = (0, _.ZB)({
             layout: 'POPOUT',
             userId: t.id,
             guildId: C,
@@ -105,10 +105,10 @@ function P(e) {
                   }),
         K = U ? 'div' : o.VqE,
         z = (0, u.Dt)(),
-        q = _.ZP.useName(C, P, t);
+        q = f.ZP.useName(C, P, t);
     return (0, r.jsx)(c.Gt, {
         value: G,
-        children: (0, r.jsx)(f.Mt, {
+        children: (0, r.jsx)(_.Mt, {
             value: B,
             openedAt: L,
             fetchStartedAt: null == V ? void 0 : V.fetchStartedAt,

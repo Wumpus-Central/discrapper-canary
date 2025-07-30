@@ -8,8 +8,8 @@ var i,
     c = n(490029),
     u = n(710845),
     d = n(454991),
-    _ = n(48481),
-    f = n(131704),
+    f = n(48481),
+    _ = n(131704),
     p = n(314897),
     h = n(592125),
     m = n(984933),
@@ -138,8 +138,8 @@ function K(e) {
             case 'THREAD_UPDATE':
             case 'CHANNEL_DELETE':
             case 'THREAD_DELETE':
-                let r = (0, f.kt)(e.channel);
-                if (!f.AW.has(r.type)) break;
+                let r = (0, _.kt)(e.channel);
+                if (!_.AW.has(r.type)) break;
                 s.Z.dispatch({
                     type: e.type,
                     channel: r
@@ -148,17 +148,17 @@ function K(e) {
             case 'CHANNEL_UPDATES':
                 s.Z.dispatch({
                     type: e.type,
-                    channels: e.channels.map((e) => (0, f.kt)(e))
+                    channels: e.channels.map((e) => (0, _.kt)(e))
                 });
                 break;
             case 'CONNECTION_OPEN_SUPPLEMENTAL':
-                ((e.lazyPrivateChannels = (null != (t = e.lazyPrivateChannels) ? t : []).map((e) => (0, f.kt)(e))), s.Z.dispatch(e));
+                ((e.lazyPrivateChannels = (null != (t = e.lazyPrivateChannels) ? t : []).map((e) => (0, _.kt)(e))), s.Z.dispatch(e));
                 break;
             case 'THREAD_LIST_SYNC':
-                s.Z.dispatch(C(A({}, e), { threads: e.threads.map((e) => (0, f.kt)(e)) }));
+                s.Z.dispatch(C(A({}, e), { threads: e.threads.map((e) => (0, _.kt)(e)) }));
                 break;
             case 'GUILD_CREATE':
-                let i = (e) => (0, f.kt)(e),
+                let i = (e) => (0, _.kt)(e),
                     a = e.guild;
                 switch (((a.threads = null == (n = a.threads) ? void 0 : n.map(i)), a.channels.op)) {
                     case 'full_sync':
@@ -179,7 +179,7 @@ function K(e) {
                 s.Z.dispatch(
                     C(A({}, e), {
                         settings: {
-                            proto: (0, _.kI)(e.settings.type, e.settings.proto),
+                            proto: (0, f.kI)(e.settings.type, e.settings.proto),
                             type: e.settings.type
                         }
                     })
@@ -272,11 +272,11 @@ function ed(e) {
     let { mode: t } = e;
     Z.displayUserMode = t;
 }
-function e_(e) {
+function ef(e) {
     let { mode: t } = e;
     Z.avatarSizeMode = t;
 }
-function ef(e) {
+function e_(e) {
     let { mode: t } = e;
     Z.notificationPositionMode = t;
 }
@@ -522,8 +522,8 @@ let eR = new eC(s.Z, {
     OVERLAY_SET_ENABLED: eA,
     OVERLAY_SET_DISPLAY_NAME_MODE: eu,
     OVERLAY_SET_DISPLAY_USER_MODE: ed,
-    OVERLAY_SET_AVATAR_SIZE_MODE: e_,
-    OVERLAY_SET_NOTIFICATION_POSITION_MODE: ef,
+    OVERLAY_SET_AVATAR_SIZE_MODE: ef,
+    OVERLAY_SET_NOTIFICATION_POSITION_MODE: e_,
     OVERLAY_SET_DISABLE_CLICKABLE_REGIONS: ep,
     OVERLAY_SET_SHOW_KEYBIND_INDICATORS: eh,
     OVERLAY_SET_INVITE_MESSAGE: em,

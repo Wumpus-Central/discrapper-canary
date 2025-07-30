@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(846519),
     u = n(692547),
     d = n(481060),
-    _ = n(596454),
-    f = n(607070),
+    f = n(596454),
+    _ = n(607070),
     p = n(906732),
     h = n(745510),
     m = n(806966),
@@ -219,20 +219,20 @@ let q = i.forwardRef(function (e, t) {
         v,
         { sound: I, channel: T, containerClassName: R, className: x, focused: k, forceSecondaryActions: G = !1, interactive: Y = !0, enableSecondaryActions: q = !1, suppressPlaySound: X, onMouseEnter: Q, onSelectItem: J, analyticsLocations: $, buttonOverlay: ee = S.Pb.PLAY, showLockForDisabledSound: et = !0, inNitroLockedSection: en = !1, isAnimated: er = !0, isPlayingSoundOverride: ei, isSoundmoji: ea, soundmojiVisualEffectRef: eo, tooltipOverride: es, tooltipClassName: el, tooltipContentClassName: ec } = e,
         eu = U(e, ['sound', 'channel', 'containerClassName', 'className', 'focused', 'forceSecondaryActions', 'interactive', 'enableSecondaryActions', 'suppressPlaySound', 'onMouseEnter', 'onSelectItem', 'analyticsLocations', 'buttonOverlay', 'showLockForDisabledSound', 'inNitroLockedSection', 'isAnimated', 'isPlayingSoundOverride', 'isSoundmoji', 'soundmojiVisualEffectRef', 'tooltipOverride', 'tooltipClassName', 'tooltipContentClassName']);
-    let { name: ed, emojiId: e_, emojiName: ef } = I,
+    let { name: ed, emojiId: ef, emojiName: e_ } = I,
         ep = (0, l.e7)([O.default], () => O.default.getCurrentUser()),
         eh = (0, C.z)(I, null == T ? void 0 : T.guild_id),
         { playSoundboardSound: em, previewSound: eg, isPlayingSound: eE } = (0, N.Z)(I, null != (u = null == T ? void 0 : T.id) ? u : null, null != (p = ea ? b.AY.getSetting() : null == (n = b.kU.getSetting()) ? void 0 : n.volume) ? p : 100, !ea && (null == T ? void 0 : T.isVocal()) ? w.w.VOICE : w.w.DEFAULT),
         { createMultipleConfettiAt: eb } = i.useContext(h.h),
         ey = i.useRef(null),
         eO = z(I.soundId, ey.current),
-        ev = (0, l.e7)([f.Z], () => f.Z.useReducedMotion),
+        ev = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
         eI = i.useRef(V),
         eT = i.useRef(new c.Xp()),
         eS = I.soundId === B,
         eA = 'sound-'.concat(I.soundId),
         eN = (0, s.JA)(eA),
-        eC = null != e_ || null != ef,
+        eC = null != ef || null != e_,
         eR = !(0, A.Nq)(ep, I, T) && !ea,
         eP = G || (q && !eR),
         ew = null != (y = m.Wq.useStore().bottomPosition) ? y : 0,
@@ -414,9 +414,9 @@ let q = i.forwardRef(function (e, t) {
                                         ref: ey,
                                         children: [
                                             eC &&
-                                                (0, r.jsx)(_.Z, {
-                                                    emojiId: e_,
-                                                    emojiName: ef,
+                                                (0, r.jsx)(f.Z, {
+                                                    emojiId: ef,
+                                                    emojiName: e_,
                                                     className: L.emoji
                                                 }),
                                             (0, r.jsx)(d.Text, {

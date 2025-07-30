@@ -17,8 +17,8 @@ var r = n(392711),
     c = n(131951),
     u = n(626135),
     d = n(460366),
-    _ = n(358085),
-    f = n(960048),
+    f = n(358085),
+    _ = n(960048),
     p = n(998502),
     h = n(743498),
     m = n(709706),
@@ -129,7 +129,7 @@ function P(e) {
                         error_message: n,
                         cause: (0, d.X)(Error(t))
                     }),
-                    f.Z.captureException(Error(n, { cause: t }), {
+                    _.Z.captureException(Error(n, { cause: t }), {
                         tags: { modelId: r },
                         extra: { reason: t }
                     }));
@@ -214,7 +214,7 @@ async function x() {
                     error_message: 'Failed to refresh voice filters catalog',
                     cause: (0, d.X)(e)
                 }),
-                f.Z.captureException(e),
+                _.Z.captureException(e),
                 await s.Z.dispatch({ type: 'VOICE_FILTER_CATALOG_FETCH_FAILED' }));
         } finally {
             C = !1;
@@ -225,7 +225,7 @@ function M() {
 }
 async function k() {
     if (!(m.Z.isNativeModuleLoaded() || m.Z.isNativeModuleLoading()) && !__OVERLAY__) {
-        if (!(0, _.isWindows)() && !(0, _.isMac)())
+        if (!(0, f.isWindows)() && !(0, f.isMac)())
             return void s.Z.dispatch({
                 type: 'VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE',
                 state: g.O.UNSUPPORTED
@@ -262,7 +262,7 @@ async function k() {
                         error_message: 'Voice Filters failed in process',
                         cause: (0, d.X)(Error(e))
                     }),
-                    f.Z.captureException(Error('Voice Filters failed in process', { cause: e })));
+                    _.Z.captureException(Error('Voice Filters failed in process', { cause: e })));
             });
         } catch (e) {
             (S.warn('Failed to load Voice Filters module: '.concat(e.message)),
@@ -270,7 +270,7 @@ async function k() {
                     error_message: 'Failed to load Voice Filters module',
                     cause: (0, d.X)(e)
                 }),
-                f.Z.captureException(e),
+                _.Z.captureException(e),
                 s.Z.dispatch({
                     type: 'VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE',
                     state: g.O.FAILED

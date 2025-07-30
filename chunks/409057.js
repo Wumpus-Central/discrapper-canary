@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(833664),
     u = n(420660),
     d = n(100527),
-    _ = n(906732),
-    f = n(379357),
+    f = n(906732),
+    _ = n(379357),
     p = n(264832),
     h = n(358696),
     m = n(649700),
@@ -94,7 +94,7 @@ function Y(e) {
     let { user: t, currentUser: n, activity: i, application: V, voiceGuild: Z, voiceChannel: Y, className: W, onClose: K, appContext: z } = e,
         q = (0, g.Dt)(),
         X = (0, g.Dt)(),
-        { analyticsLocations: Q } = (0, _.ZP)(d.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        { analyticsLocations: Q } = (0, f.ZP)(d.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { themeType: J } = (0, A.z)(),
         $ = (0, m.Z)({
             activity: i,
@@ -113,7 +113,7 @@ function Y(e) {
         }),
         en = (0, T.Z)(i),
         er = null != en.text && '' !== en.text,
-        { largeImage: ei, smallImage: ea } = (0, f.FO)(i, V),
+        { largeImage: ei, smallImage: ea } = (0, _.FO)(i, V),
         eo = (0, M.Z)({
             location: 'UserProfileActivityCard',
             user: t,
@@ -305,7 +305,7 @@ function Y(e) {
                       })
                     : null;
         },
-        e_ = () => {
+        ef = () => {
             if (!(0, S.Z)(i)) return null;
             let { start: e, end: t } = i.timestamps;
             return (0, r.jsx)(L.Z, {
@@ -313,7 +313,7 @@ function Y(e) {
                 end: t
             });
         },
-        ef = () =>
+        e_ = () =>
             null == eo
                 ? (0, r.jsxs)('div', {
                       children: [el(), ec(), eu()]
@@ -348,7 +348,7 @@ function Y(e) {
                           application: V
                       })
                   });
-    return (0, r.jsx)(_.Gt, {
+    return (0, r.jsx)(f.Gt, {
         value: Q,
         children: (0, r.jsxs)(R.Z, {
             ref: et,
@@ -380,14 +380,14 @@ function Y(e) {
                                 (0, r.jsxs)('div', {
                                     className: B.details,
                                     children: [
-                                        ef(),
+                                        e_(),
                                         !t.bot &&
                                             (0, r.jsx)(C.Z, {
                                                 user: t,
                                                 activity: i,
                                                 className: B.badges
                                             }),
-                                        e_(),
+                                        ef(),
                                         J === k.lY.MODAL_V2 && eh()
                                     ]
                                 }),

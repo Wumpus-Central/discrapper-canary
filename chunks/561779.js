@@ -6,10 +6,10 @@ var r,
     s = n.n(o),
     l = n(392711),
     c = n.n(l),
-    u = n(564854),
+    u = n(778141),
     d = n(374470),
-    _ = n(143450),
-    f = n(84735),
+    f = n(143450),
+    _ = n(84735),
     p = n(981729),
     h = n(607070),
     m = n(251574);
@@ -134,7 +134,7 @@ class T extends (r = a.PureComponent) {
     }
     render() {
         var e;
-        let { value: t, active: n, focused: r, sortedMarkers: a, markerPositions: o, closestMarkerIndex: l, newClosestIndex: c, min: d, max: _ } = this.state,
+        let { value: t, active: n, focused: r, sortedMarkers: a, markerPositions: o, closestMarkerIndex: l, newClosestIndex: c, min: d, max: f } = this.state,
             { disabled: g, stickToMarkers: b, className: O, children: v, barStyles: I, fillStyles: T, mini: A, hideBubble: N, defaultValue: C, orientation: R, onValueRender: P, renderMarker: w, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: M = {}, markerPosition: k = 0, 'aria-hidden': j, 'aria-label': U, 'aria-labelledby': G, 'aria-describedby': B } = this.props,
             V = 0;
         b ? null != o && (null != c ? (V = o[c]) : null != l && (V = o[l])) : (V = this.scaleValue(t));
@@ -178,7 +178,7 @@ class T extends (r = a.PureComponent) {
             keyboardFocused: r && h.Z.keyboardModeEnabled,
             children: (e) => {
                 var a;
-                return (0, i.jsx)(f.t, {
+                return (0, i.jsx)(_.t, {
                     focusTarget: this.containerRef,
                     ringTarget: this.grabberRef,
                     children: (0, i.jsxs)(u.animated.div, {
@@ -189,7 +189,7 @@ class T extends (r = a.PureComponent) {
                         }),
                         style: null == e ? void 0 : e.sliderStyles,
                         'aria-valuemin': d,
-                        'aria-valuemax': _,
+                        'aria-valuemax': f,
                         'aria-valuenow': t,
                         'aria-disabled': g,
                         'aria-orientation': R,
@@ -277,8 +277,8 @@ class T extends (r = a.PureComponent) {
         if (e.clientX <= l || e.clientX >= c) return;
         let u = c - l,
             d = (e.clientX - r) / u,
-            _ = a[i] + 100 * d;
-        (null != (t = this.props.equidistant ? O(_, a) : O(this.unscaleValue(_), o)) && (null == s || s(o[t])), this.setState({ newClosestIndex: t }));
+            f = a[i] + 100 * d;
+        (null != (t = this.props.equidistant ? O(f, a) : O(this.unscaleValue(f), o)) && (null == s || s(o[t])), this.setState({ newClosestIndex: t }));
     }
     constructor(e) {
         (super(e),
@@ -303,10 +303,10 @@ class T extends (r = a.PureComponent) {
                     { disabled: n, maxValue: r, minValue: i, asValueChanges: a, onValueChange: o, stickToMarkers: s } = this.props,
                     { sortedMarkers: l, markerPositions: c } = this.state;
                 if (n) return;
-                let { clientX: u, currentTarget: _ } = e;
-                if (!(0, d.k)(_)) return;
-                let { left: f, width: p } = _.getBoundingClientRect(),
-                    h = (u - f) / p;
+                let { clientX: u, currentTarget: f } = e;
+                if (!(0, d.k)(f)) return;
+                let { left: _, width: p } = f.getBoundingClientRect(),
+                    h = (u - _) / p;
                 if (s) {
                     let { nextClosestMarkerIndex: e } = c.reduce(
                         (e, t, n) => {
@@ -416,7 +416,7 @@ function S(e) {
     let { active: t, keyboardFocused: n, children: r } = e,
         [i, o] = a.useState(!1);
     return r({
-        sliderStyles: (0, _.q)({
+        sliderStyles: (0, f.q)({
             '--grabber-size': n || t || i ? '20px' : '16px',
             '--bar-size': n || t || i ? '6px' : '4px',
             config: y(E({}, u.config.stiff), { duration: 100 })

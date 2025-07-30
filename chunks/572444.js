@@ -91,13 +91,13 @@ function _() {
         [_, y] = r.useState(null),
         C = r.useRef(null),
         O = r.useRef(null),
-        [T, N] = r.useState(0.5),
+        [N, T] = r.useState(0.5),
         {
             krispModels: E,
             krispModelOverride: S,
             inputMode: P,
-            echoCancellation: w,
-            autoThreshold: I,
+            echoCancellation: I,
+            autoThreshold: w,
             vadUseKrisp: R,
             vadKrispActivationThreshold: k,
             noiseCancellation: A,
@@ -125,13 +125,13 @@ function _() {
             var e;
             (null == (e = C.current) || e.stop(), (C.current = null), y(null));
         }, []);
-    function z() {
+    function G() {
         p.Z.getMediaEngine().stopRecordingRawSamples();
     }
-    function G(e) {
-        if ((t && z(), B(), null == F)) return;
+    function z(e) {
+        if ((t && G(), B(), null == F)) return;
         let a = F.createBufferSource();
-        ((a.buffer = e.audioBuffer), (O.current = F.createGain()), (O.current.gain.value = T), a.connect(O.current), O.current.connect(F.destination), (a.loop = !0), a.start(), (C.current = a), y(e));
+        ((a.buffer = e.audioBuffer), (O.current = F.createGain()), (O.current.gain.value = N), a.connect(O.current), O.current.connect(F.destination), (a.loop = !0), a.start(), (C.current = a), y(e));
     }
     r.useEffect(() => {
         B();
@@ -233,12 +233,12 @@ function _() {
                                     tag: c.RB0.H3,
                                     children: (0, n.jsx)(c.j7V, {
                                         hideBorder: !0,
-                                        value: I,
+                                        value: w,
                                         onChange: (e) => d.Z.setMode(b.pM.VOICE_ACTIVITY, { autoThreshold: e }),
                                         children: 'Auto Threshold'
                                     })
                                 }),
-                                I &&
+                                w &&
                                     (0, n.jsxs)(n.Fragment, {
                                         children: [
                                             (0, n.jsx)(c.hjN, {
@@ -270,7 +270,7 @@ function _() {
                         tag: c.RB0.H3,
                         children: (0, n.jsx)(c.j7V, {
                             hideBorder: !0,
-                            value: w,
+                            value: I,
                             onChange: (e) => d.Z.setEchoCancellation(e),
                             children: 'Echo Cancellation'
                         })
@@ -281,7 +281,7 @@ function _() {
                         children: (0, n.jsx)(o.zx, {
                             color: t ? o.zx.Colors.RED : o.zx.Colors.BRAND,
                             onClick: t
-                                ? z
+                                ? G
                                 : function () {
                                       (B(),
                                           a(!0),
@@ -305,7 +305,7 @@ function _() {
                                                       audioBuffer: l,
                                                       createdAt: Date.now(),
                                                       suppression: U,
-                                                      echoCancellation: w,
+                                                      echoCancellation: I,
                                                       krispSuppressionLevel: g
                                                   }
                                               ]);
@@ -318,9 +318,9 @@ function _() {
                         title: 'Volume',
                         tag: c.RB0.H3,
                         children: (0, n.jsx)(c.iRW, {
-                            initialValue: T,
+                            initialValue: N,
                             asValueChanges: function (e) {
-                                null != O.current && ((O.current.gain.value = e), N(e));
+                                null != O.current && ((O.current.gain.value = e), T(e));
                             },
                             minValue: 0,
                             maxValue: 1
@@ -335,7 +335,7 @@ function _() {
                                 {
                                     recording: e,
                                     playing: e === _,
-                                    onPlay: G,
+                                    onPlay: z,
                                     onStop: B
                                 },
                                 t

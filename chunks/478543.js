@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(755721),
     u = n(481060),
     d = n(240872),
-    _ = n(19780),
-    f = n(942389),
+    f = n(19780),
+    _ = n(942389),
     p = n(572004),
     h = n(63063),
     m = n(358085),
@@ -60,7 +60,7 @@ function I() {
     });
 }
 function T(e) {
-    let { subHead: t, buildDetails: n, buttonColor: a, buttonClick: s, buttonText: l, disabled: d = !1, submitting: _ = !1 } = e;
+    let { subHead: t, buildDetails: n, buttonColor: a, buttonClick: s, buttonText: l, disabled: d = !1, submitting: f = !1 } = e;
     return (0, r.jsxs)(i.Fragment, {
         children: [
             (0, r.jsxs)('div', {
@@ -78,7 +78,7 @@ function T(e) {
                 ]
             }),
             (0, r.jsx)(c.zx, {
-                submitting: _,
+                submitting: f,
                 color: a,
                 onClick: s,
                 className: o()(y.button, d ? y.disabledButtonOverride : null),
@@ -94,16 +94,16 @@ function S(e) {
         n,
         r,
         { currentOverrides: i, linkMeta: a, applyBuildOverride: o, clearBuildOverride: s, submitting: u } = e,
-        f = ['discord_web'];
-    m.isPlatformEmbedded || f.push('discord_marketing', 'discord_developers');
-    let p = (0, g.Z)(a, f);
+        _ = ['discord_web'];
+    m.isPlatformEmbedded || _.push('discord_marketing', 'discord_developers');
+    let p = (0, g.Z)(a, _);
     if (!p.valid) return A(p.reason);
     l()(null != a, 'BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved');
     let { discord_web: h, discord_developers: E } = a.targetBuildOverride,
         y = null != h ? h : E;
     (l()(null != y, 'BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web or linkMeta.targetBuildOverride.discord_developers should never be null if resolved'), O(y, i) ? ((n = b.intl.string(b.t.tX4xrq)), (t = s), (r = c.zx.Colors.RED)) : ((n = b.intl.string(b.t.nOunHB)), (t = o), (r = c.zx.Colors.GREEN)));
     let v = () => {
-        _.Z.isConnected()
+        f.Z.isConnected()
             ? d.Z.show({
                   title: b.intl.string(b.t.tiu1l5),
                   body: b.intl.string(b.t['zK+lqa']),
@@ -161,7 +161,7 @@ let C = (e) => {
         d = i.useCallback(() => {
             c || (u(!0), s().catch(() => u(!1)));
         }, [s, c]),
-        _ = i.useCallback(() => {
+        f = i.useCallback(() => {
             c || (u(!0), l().catch(() => u(!1)));
         }, [l, c]);
     return (0, r.jsxs)('div', {
@@ -171,14 +171,14 @@ let C = (e) => {
             (0, r.jsxs)('div', {
                 className: y.content,
                 children: [
-                    (0, r.jsx)(f.Z, { className: y.icon }),
+                    (0, r.jsx)(_.Z, { className: y.icon }),
                     t
                         ? I()
                         : S({
                               currentOverrides: n,
                               linkMeta: a,
                               applyBuildOverride: d,
-                              clearBuildOverride: _,
+                              clearBuildOverride: f,
                               submitting: c
                           })
                 ]

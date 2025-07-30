@@ -1,8 +1,8 @@
 n.d(t, {
     Ac: () => m,
     OR: () => h,
-    YG: () => f,
-    hr: () => _,
+    YG: () => _,
+    hr: () => f,
     mB: () => g,
     t0: () => p
 });
@@ -15,27 +15,27 @@ var r = n(73800),
     c = n(619899),
     u = n(281598),
     d = n(215023);
-let _ = (e) => {
+let f = (e) => {
         let t = (0, c.zL)(u.jE.HERO_LOGO),
             n = (0, c.zL)(u.jE.HERO_BANNER_STATIC),
             i = (0, c.zL)(u.jE.HERO_BANNER_ANIMATED),
             a = (0, l.n)(null == e ? void 0 : e.categorySkuId);
         return r.useMemo(() => {
             var r, o, s, l, c, u;
-            let _ = (0, d.ZS)(e.categorySkuId),
-                f = null != n || null != i;
+            let f = (0, d.ZS)(e.categorySkuId),
+                _ = null != n || null != i;
             return {
                 isPreviewingStaticBanner: null != n && null == i,
-                bannerOverrides: _,
-                bannerStyleOverrides: f ? void 0 : null != (l = e.bannerConfig) ? l : a,
-                logoStyleOverrides: f ? void 0 : e.logoConfig,
+                bannerOverrides: f,
+                bannerStyleOverrides: _ ? void 0 : null != (l = e.bannerConfig) ? l : a,
+                logoStyleOverrides: _ ? void 0 : e.logoConfig,
                 heroLogo: null != t ? t : e.logoUrl,
                 heroBannerStatic: null != (c = null != n ? n : null == (r = e.bannerAsset) ? void 0 : r.static) ? c : e.fallbackBannerUrl,
-                heroBannerAnimated: null != (u = null != i ? i : null == _ || null == (o = _.heroBanner) ? void 0 : o.animationSource) ? u : null == (s = e.bannerAsset) ? void 0 : s.animated
+                heroBannerAnimated: null != (u = null != i ? i : null == f || null == (o = f.heroBanner) ? void 0 : o.animationSource) ? u : null == (s = e.bannerAsset) ? void 0 : s.animated
             };
         }, [t, n, i, e, a]);
     },
-    f = (e, t) => {
+    _ = (e, t) => {
         let n = (0, c.zL)(u.jE.FEATURED_BLOCK);
         return r.useMemo(() => {
             var r;
@@ -91,7 +91,7 @@ let _ = (e) => {
             l = (0, c.zL)(u.jE.SHOP_BUTTON_BG_RESTING_LIGHT),
             d = (0, c.zL)(u.jE.COACHTIP_AVATAR);
         return r.useMemo(() => {
-            var r, c, u, _, f;
+            var r, c, u, f, _;
             let p = [t, n, a, o, s, l, d].some((e) => null != e);
             if ((null == e ? void 0 : e.type) === i.Z.COACHMARK) return { hasPreviewAssets: !1 };
             let h = null == e || null == (r = e.refTargetBackground) ? void 0 : r.asset,
@@ -101,8 +101,8 @@ let _ = (e) => {
                 hasPreviewAssets: p,
                 buttonBGHoverDark: null != (c = null != n ? n : t) ? c : null == g ? void 0 : g.dark,
                 buttonBGHoverLight: null != (u = null != a ? a : t) ? u : null == g ? void 0 : g.light,
-                buttonBGRestingDark: null != (_ = null != s ? s : o) ? _ : null == m ? void 0 : m.dark,
-                buttonBGRestingLight: null != (f = null != l ? l : o) ? f : null == m ? void 0 : m.light,
+                buttonBGRestingDark: null != (f = null != s ? s : o) ? f : null == m ? void 0 : m.dark,
+                buttonBGRestingLight: null != (_ = null != l ? l : o) ? _ : null == m ? void 0 : m.light,
                 coachtipAvatar: null != d ? d : null == e ? void 0 : e.avatar
             };
         }, [t, n, a, o, s, l, d, e]);

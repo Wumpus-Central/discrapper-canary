@@ -1,6 +1,6 @@
 n.d(t, {
     KV: () => c,
-    ZP: () => _,
+    ZP: () => f,
     dj: () => l
 });
 var r = n(392711),
@@ -32,7 +32,7 @@ function u(e) {
     );
 }
 let d = 5;
-class _ {
+class f {
     reset() {
         this._subscriptions = {};
     }

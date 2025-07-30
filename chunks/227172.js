@@ -11,8 +11,8 @@ var r = n(255367),
     c = n(841784),
     u = n(420660),
     d = n(206074),
-    _ = n(145843),
-    f = n(429589),
+    f = n(145843),
+    _ = n(429589),
     p = n(757182),
     h = n(728345),
     m = n(706454),
@@ -150,7 +150,7 @@ let j = {
                       }),
             ec =
                 (0, l.Z)(H, L.xjy.JOIN) || (0, c.Z)(H)
-                    ? (0, r.jsx)(f.Z, {
+                    ? (0, r.jsx)(_.Z, {
                           activity: H,
                           user: V,
                           ButtonComponent: (e) => (0, r.jsx)(P.Ll, k({ IconComponent: s.iWm }, e))
@@ -165,7 +165,7 @@ let j = {
                       })
                     : null,
                 ea
-                    ? (0, r.jsx)(_.Z, {
+                    ? (0, r.jsx)(f.Z, {
                           application: ei,
                           ButtonComponent: (e) => (0, r.jsx)(P.Ll, k({ IconComponent: s.v3n }, e)),
                           location: 'MemberListGamingContentPopout'

@@ -64,7 +64,7 @@ function u(e, t) {
 var d = (function (e) {
     return ((e.VIEWER_SWIPE = 'number_viewer_swipes'), (e.THUMBNAIL_SWIPE = 'number_thumbnail_swipes'), (e.SELECTED_ITEM_CHANGE = 'number_selected_item_changes'), (e.ZOOM_IN_BUTTON_PRESSED = 'number_zoom_in_button_pressed'), (e.ZOOM_IN_IMAGE_PRESSED = 'number_zoom_in_image_pressed'), (e.ZOOM_OUT_BUTTON_PRESSED = 'number_zoom_out_button_pressed'), (e.ZOOM_OUT_IMAGE_PRESSED = 'number_zoom_out_image_pressed'), (e.FORWARD_PRESSED = 'number_forward_button_pressed'), (e.SAVE_MEDIA_PRESSED = 'number_save_media_button_pressed'), (e.OPEN_LINK_PRESSED = 'number_open_link_button_pressed'), (e.MORE_BUTTON_PRESSED = 'number_more_button_pressed'), (e.COPY_IMAGE_PRESSED = 'number_copy_image_more_menu_pressed'), (e.COPY_LINK_PRESSED = 'number_copy_link_more_menu_pressed'), (e.CONTEXT_MENU_OPENED = 'number_context_menu_opened'), e);
 })({});
-let _ = {
+let f = {
         guildId: void 0,
         channelId: void 0,
         channelType: void 0,
@@ -73,12 +73,12 @@ let _ = {
         source: void 0,
         incrementableActions: Object.fromEntries(Object.values(d).map((e) => [e, 0]))
     },
-    f = (0, r.U)(() => _);
+    _ = (0, r.U)(() => f);
 function p(e) {
-    (0, i.j)(() => f.setState(l({}, _, e)));
+    (0, i.j)(() => _.setState(l({}, f, e)));
 }
 function h() {
-    let e = f.getState();
+    let e = _.getState();
     (a.default.track(
         o.rMx.MEDIA_VIEWER_SESSION_COMPLETED,
         l(
@@ -93,10 +93,10 @@ function h() {
             e.incrementableActions
         )
     ),
-        (0, i.j)(() => f.setState(l({}, _))));
+        (0, i.j)(() => _.setState(l({}, f))));
 }
 function m(e) {
     (0, i.j)(() => {
-        f.setState((t) => ({ incrementableActions: u(l({}, t.incrementableActions), { [e]: t.incrementableActions[e] + 1 }) }));
+        _.setState((t) => ({ incrementableActions: u(l({}, t.incrementableActions), { [e]: t.incrementableActions[e] + 1 }) }));
     });
 }

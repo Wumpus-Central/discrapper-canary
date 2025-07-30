@@ -8,8 +8,8 @@ var r,
     c = n(271383),
     u = n(797316),
     d = n(158776),
-    _ = n(885110),
-    f = n(594174),
+    f = n(885110),
+    _ = n(594174),
     p = n(823379),
     h = n(700785),
     m = n(709054),
@@ -69,7 +69,7 @@ class O {
     }
     addUser(e, t, n, r, i) {
         this.allUserIds.add(e);
-        let a = f.default.getUser(e);
+        let a = _.default.getUser(e);
         if (null == a || '' === a.username) return;
         t in this.sections ||
             (this.sections[t] = {
@@ -123,9 +123,9 @@ class O {
     calculateNewState(e, t) {
         var n, r;
         let i = c.ZP.getMember(this.guildId, e),
-            a = f.default.getUser(e),
-            o = f.default.getCurrentUser(),
-            s = (null == a ? void 0 : a.id) === (null == o ? void 0 : o.id) ? _.Z.getStatus() : d.Z.getStatus(e, this.guildId),
+            a = _.default.getUser(e),
+            o = _.default.getCurrentUser(),
+            s = (null == a ? void 0 : a.id) === (null == o ? void 0 : o.id) ? f.Z.getStatus() : d.Z.getStatus(e, this.guildId),
             l =
                 null != a &&
                 null != t &&
@@ -231,16 +231,16 @@ function x(e) {
 }
 class M extends (r = o.ZP.Store) {
     initialize() {
-        (this.waitFor(l.Z, c.ZP, u.Z, d.Z, _.Z, f.default),
+        (this.waitFor(l.Z, c.ZP, u.Z, d.Z, f.Z, _.default),
             this.syncWith([u.Z], () => {
                 let e = u.Z.getSubscribedThreadIds(),
                     t = !1;
                 for (let n in y) e.has(n) || (delete y[n], (t = !0));
                 return t;
             }),
-            this.syncWith([_.Z], () => {
+            this.syncWith([f.Z], () => {
                 var e;
-                return C(null == (e = f.default.getCurrentUser()) ? void 0 : e.id);
+                return C(null == (e = _.default.getCurrentUser()) ? void 0 : e.id);
             }));
     }
     getMemberListVersion(e) {

@@ -8,8 +8,8 @@ var r = n(73800),
     c = n(317381),
     u = n(638880),
     d = n(255621),
-    _ = n(16609),
-    f = n(452634),
+    f = n(16609),
+    _ = n(452634),
     p = n(527805),
     h = n(620662),
     m = n(841784),
@@ -45,8 +45,8 @@ function G(e) {
         X = null != V || (0, m.Z)(B),
         Q = (0, i.e7)([P.default], () => P.default.getCurrentUser()),
         J = F.id === (null == Q ? void 0 : Q.id),
-        $ = (0, f.Z)({
-            channelId: (0, _.p)(null == V ? void 0 : V.location),
+        $ = (0, _.Z)({
+            channelId: (0, f.p)(null == V ? void 0 : V.location),
             userId: F.id,
             activity: B
         }),
@@ -66,7 +66,7 @@ function G(e) {
         et = (0, i.e7)([c.ZP], () =>
             Array.from(c.ZP.getSelfEmbeddedActivities().values()).some((e) => {
                 let { applicationId: t, location: n } = e;
-                return (t === (null == B ? void 0 : B.application_id) || t === (null == V ? void 0 : V.applicationId)) && (0, _.p)(n) === $;
+                return (t === (null == B ? void 0 : B.application_id) || t === (null == V ? void 0 : V.applicationId)) && (0, f.p)(n) === $;
             })
         ),
         en = (0, i.e7)([D.Z], () => null != B && null != B.application_id && D.Z.getState(B.application_id, k.mFx.JOIN) === k.OcF.LOADING),
@@ -109,16 +109,16 @@ function G(e) {
     let eu = !J || (X && !es),
         ed = eu && (ec || ee) && !K && !et;
     eu ? ec || ee || null == B || (G = U.intl.formatToPlainString(U.t.SqJBnJ, { name: B.name })) : (G = U.intl.string(U.t['0OiwfH']));
-    let e_ = null != (n = null == V ? void 0 : V.launchId) ? n : null == B ? void 0 : B.session_id,
-        ef = async (e, t) => {
-            if (null == e_ || null == q) return;
+    let ef = null != (n = null == V ? void 0 : V.launchId) ? n : null == B ? void 0 : B.session_id,
+        e_ = async (e, t) => {
+            if (null == ef || null == q) return;
             let n = (0, h.Z)(t, k.xjy.EMBEDDED),
                 r = R.Z.getVoiceChannelId(),
                 i = v.Z.getChannel(r);
             if (
                 (await o.Z.join({
                     userId: e.id,
-                    sessionId: e_,
+                    sessionId: ef,
                     applicationId: q,
                     channelId: r,
                     messageId: null,
@@ -174,7 +174,7 @@ function G(e) {
             }
             if (!e) {
                 if (eo) {
-                    (null == Z || Z(), ef(F, B), null == H || H());
+                    (null == Z || Z(), e_(F, B), null == H || H());
                     return;
                 }
                 await t();

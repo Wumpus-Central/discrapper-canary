@@ -1,4 +1,4 @@
-let r, i, a, o, s, l, c, u, d, _, f;
+let r, i, a, o, s, l, c, u, d, f, _;
 n.d(t, { Z: () => F });
 var p,
     h = n(442837),
@@ -20,16 +20,16 @@ function E(e, t, n) {
 let b = g.QZA.CLOSED,
     y = {};
 function O(e) {
-    ((_ = e.guild), (b = g.QZA.OPEN), (y = {}), (f = e.source));
+    ((f = e.guild), (b = g.QZA.OPEN), (y = {}), (_ = e.source));
 }
 function v() {
-    ((b = g.QZA.CLOSED), (y = {}), (f = void 0));
+    ((b = g.QZA.CLOSED), (y = {}), (_ = void 0));
 }
 function I() {
     ((b = g.QZA.SUBMITTING), (y = {}));
 }
 function T(e) {
-    ((_ = e.guild), (y = {}));
+    ((f = e.guild), (y = {}));
 }
 function S(e) {
     var t;
@@ -147,10 +147,10 @@ class V extends (p = h.ZP.Store) {
         };
     }
     getGuild() {
-        return _;
+        return f;
     }
     getSource() {
-        return f;
+        return _;
     }
 }
 E(V, 'displayName', 'GuildIdentitySettingsStore');

@@ -21,13 +21,13 @@ var n = a(255367),
     y = a(808506),
     C = a(572004),
     O = a(70956),
-    T = a(145597),
-    N = a(246992),
+    N = a(145597),
+    T = a(246992),
     E = a(981631),
     S = a(757744),
     P = a(388032),
-    w = a(931207),
-    I = a(616257);
+    I = a(931207),
+    w = a(616257);
 function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {},
@@ -139,7 +139,7 @@ function L(e) {
             onClick: function () {
                 (0, C.JG)(t, () => l(!0));
             },
-            className: w.copyId,
+            className: I.copyId,
             children: ['Application Id: ', t, ' ', a ? P.intl.string(P.t['t5VZ8/']) : null]
         })
     );
@@ -150,7 +150,7 @@ let M = r.memo(function (e) {
             r = (0, o.e7)([_.Z], () => _.Z.getGameForPID(t.pid)),
             l = (0, o.e7)([p.ZP], () => (null == a ? null : p.ZP.getGameOverlayStatus(a)));
         return (0, n.jsxs)('div', {
-            className: w.panelGroup,
+            className: I.panelGroup,
             children: [
                 (0, n.jsx)(d.Text, {
                     variant: 'text-md/bold',
@@ -194,7 +194,7 @@ let M = r.memo(function (e) {
                     children: ['successfullyShown: ', t.successfullyShown ? 'Yes' : 'No']
                 }),
                 (0, n.jsxs)('div', {
-                    className: w.panelGroup,
+                    className: I.panelGroup,
                     children: [
                         (0, n.jsxs)(d.Text, {
                             variant: 'text-sm/normal',
@@ -220,7 +220,7 @@ let M = r.memo(function (e) {
                 }),
                 null != l &&
                     (0, n.jsxs)('div', {
-                        className: w.panelGroup,
+                        className: I.panelGroup,
                         children: [
                             (0, n.jsxs)(d.Text, {
                                 variant: 'text-sm/normal',
@@ -281,7 +281,7 @@ let M = r.memo(function (e) {
             s = (0, o.e7)([y.default], () => y.default.DEV_isInputLocked(t), [t]),
             c = (0, o.e7)([y.default], () => y.default.isReady(t), [t]);
         return (0, n.jsxs)('div', {
-            className: w.panelGroup,
+            className: I.panelGroup,
             children: [
                 (0, n.jsx)(d.Text, {
                     variant: 'text-md/semibold',
@@ -377,7 +377,7 @@ function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return t ? ''.concat(e.toFixed(2), 'ms') : new Date(e).toLocaleTimeString();
 }
-let z = r.memo(function (e) {
+let G = r.memo(function (e) {
     var { pid: t } = e,
         a = (function (e, t) {
             if (null == e) return {};
@@ -417,17 +417,17 @@ let z = r.memo(function (e) {
         })
     );
 });
-function G() {
+function z() {
     let e = (0, o.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(h.GO.TrackFocusPIDs)),
         t = (0, o.Wu)([b.default], () => b.default.getDevToolsFocusedPidsWithTimestamp(), []),
         a = () => {
             m.Z.setRenderDebugMode(!v.ZP.hasRenderDebugMode(h.GO.TrackFocusPIDs), h.GO.TrackFocusPIDs);
         };
     return (0, n.jsxs)('div', {
-        className: w.panelGroup,
+        className: I.panelGroup,
         children: [
             (0, n.jsxs)('div', {
-                className: w.panelHeader,
+                className: I.panelHeader,
                 children: [
                     (0, n.jsx)(d.XZJ, {
                         value: e,
@@ -443,7 +443,7 @@ function G() {
                         })
                     }),
                     (0, n.jsx)(d.P3F, {
-                        className: w.panelButton,
+                        className: I.panelButton,
                         onClick: () => m.Z.clearTrackedPids(),
                         children: (0, n.jsx)(d.XHJ, {
                             size: 'md',
@@ -453,7 +453,7 @@ function G() {
                 ]
             }),
             (0, n.jsxs)(d.zJl, {
-                className: i()(w.panelGroup, w.scroller),
+                className: i()(I.panelGroup, I.scroller),
                 children: [
                     0 === t.length &&
                         (0, n.jsx)(d.Text, {
@@ -478,7 +478,7 @@ function G() {
                                                     variant: 'text-sm/medium',
                                                     color: l === h.d5.TRACK_FOCUS ? 'text-default' : 'text-danger',
                                                     children: [
-                                                        (0, n.jsx)(z, {
+                                                        (0, n.jsx)(G, {
                                                             pid: a,
                                                             tag: 'span'
                                                         }),
@@ -570,7 +570,7 @@ let V = r.memo(function (e) {
                         'div',
                         k(R({}, a), {
                             children: (0, n.jsxs)(d.zJl, {
-                                className: i()(w.panelGroup, w.scroller),
+                                className: i()(I.panelGroup, I.scroller),
                                 children: [
                                     0 === Object.keys(e).length &&
                                         (0, n.jsx)(d.Text, {
@@ -583,7 +583,7 @@ let V = r.memo(function (e) {
                                             'div',
                                             {
                                                 children: [
-                                                    (0, n.jsx)(z, {
+                                                    (0, n.jsx)(G, {
                                                         tag: 'div',
                                                         pid: e.pid
                                                     }),
@@ -619,13 +619,13 @@ let V = r.memo(function (e) {
     W = r.memo(function () {
         var e, t;
         let a = (0, o.cj)([b.default], () => b.default.getTrackedGames()),
-            r = (0, T.getPID)(),
+            r = (0, N.getPID)(),
             l = (0, o.e7)([b.default], () => b.default.isOverlayOOPEnabledForPid(r), [r]),
             [i, s] = (0, o.Wu)([g.Z], () => [g.Z.enabled, g.Z.keepOpen]),
             c = (0, o.e7)([y.default], () => y.default.getFocusedPID()),
             u = (0, o.e7)([y.default], () => y.default.isFocusedPidOutOfProcess());
         return (0, n.jsxs)('div', {
-            className: w.panelGroup,
+            className: I.panelGroup,
             children: [
                 0 === Object.keys(a).length &&
                     (0, n.jsx)(d.Text, {
@@ -694,7 +694,7 @@ let V = r.memo(function (e) {
                 u(h.GO.ForceGPUBoost);
             };
         return (0, n.jsxs)('div', {
-            className: w.panelGroup,
+            className: I.panelGroup,
             children: [
                 (0, n.jsx)(d.ua7, {
                     position: 'left',
@@ -852,7 +852,7 @@ let V = r.memo(function (e) {
                                 'div',
                                 k(R({}, e), {
                                     children: (0, n.jsxs)('div', {
-                                        className: w.panelGroup,
+                                        className: I.panelGroup,
                                         children: [
                                             (0, n.jsx)(d.Text, {
                                                 variant: 'text-md/bold',
@@ -888,7 +888,7 @@ let V = r.memo(function (e) {
                             'div',
                             k(R({}, t), {
                                 children: (0, n.jsxs)('div', {
-                                    className: w.panelGroup,
+                                    className: I.panelGroup,
                                     children: [
                                         0 === Object.keys(e).length &&
                                             (0, n.jsx)(d.Text, {
@@ -936,13 +936,13 @@ let V = r.memo(function (e) {
                 (0, n.jsx)(
                     'div',
                     k(R({}, e), {
-                        className: w.panelGroup,
+                        className: I.panelGroup,
                         children: (0, n.jsx)(d.PhF, {
                             serialize: (e) => e,
                             isSelected: (e) => e === t,
                             options: i,
                             select: l,
-                            popoutLayerContext: N.O$
+                            popoutLayerContext: T.O$
                         })
                     })
                 )
@@ -951,8 +951,8 @@ let V = r.memo(function (e) {
 function J() {
     return (0, n.jsx)(d.w0Z, {
         children: (0, n.jsxs)('div', {
-            className: i()(I.panel, w.panel),
-            children: [(0, n.jsx)(K, {}), (0, n.jsx)(Y, {}), (0, n.jsx)(X, {}), (0, n.jsx)(W, {}), (0, n.jsx)(G, {}), (0, n.jsx)(H, {})]
+            className: i()(w.panel, I.panel),
+            children: [(0, n.jsx)(K, {}), (0, n.jsx)(Y, {}), (0, n.jsx)(X, {}), (0, n.jsx)(W, {}), (0, n.jsx)(z, {}), (0, n.jsx)(H, {})]
         })
     });
 }

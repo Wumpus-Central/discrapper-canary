@@ -8,8 +8,8 @@ var r = n(772848),
     c = n(710845),
     u = n(581567),
     d = n(594190),
-    _ = n(486016),
-    f = n(837268),
+    f = n(486016),
+    _ = n(837268),
     p = n(371651),
     h = n(624864),
     m = n(449224),
@@ -331,7 +331,7 @@ class G {
         }
         if (null == e) {
             let e = null != t ? p.default.getRenderMethod(t.pid) : null;
-            return C({ original_method: null != e ? e : f.gl.Disabled }, a);
+            return C({ original_method: null != e ? e : _.gl.Disabled }, a);
         }
         if (null == n) return C({ original_method: e }, a);
         let s = n.any_other_method;
@@ -390,11 +390,11 @@ class G {
             }));
     }
     getSettingMethod() {
-        return null == this.overlayMethod ? f.gl[f.gl.Disabled] : f.gl[this.overlayMethod];
+        return null == this.overlayMethod ? _.gl[_.gl.Disabled] : _.gl[this.overlayMethod];
     }
     async getAnalytics() {
         var e, t, n, r, i, a, o, s, c;
-        let p = null != (n = this.overlayMethod) ? n : f.gl.Disabled,
+        let p = null != (n = this.overlayMethod) ? n : _.gl.Disabled,
             m = {
                 setting_is_enabled: g.default.enabled,
                 setting_method: this.getSettingMethod(),
@@ -402,12 +402,12 @@ class G {
                 setting_display_name: E.default.getDisplayNameMode(),
                 setting_avatar_size: E.default.getAvatarSizeMode(),
                 setting_notification_position: E.default.getNotificationPositionMode(),
-                setting_chat_notification: h.Z.isNotificationDisabled(_.OverlayNotificationDisabledSetting.TEXT_CHAT) ? 'DISABLED' : 'ENABLED'
+                setting_chat_notification: h.Z.isNotificationDisabled(f.OverlayNotificationDisabledSetting.TEXT_CHAT) ? 'DISABLED' : 'ENABLED'
             },
             b = (0, d.b6)(this.game),
             y = (0, u.G8)(this.game),
             O = null != (r = this.overlayMethodStats) ? r : this.buildOverlayMethodStats(p, this.game),
-            v = null != O.any_other_method ? f.gl[O.any_other_method] : null,
+            v = null != O.any_other_method ? _.gl[O.any_other_method] : null,
             I = b.enabledLegacy || b.enabledOOP;
         return {
             usage: P(
@@ -456,7 +456,7 @@ class G {
                     O
                 ),
                 {
-                    original_method: f.gl[O.original_method],
+                    original_method: _.gl[O.original_method],
                     any_other_method: v
                 }
             ),
@@ -589,7 +589,7 @@ function Q(e) {
 function J(e) {
     let t = G.getByPid(e.pid);
     if (null == t) return void L.error('OVERLAY_UPDATE_OVERLAY_METHOD: Game not found', e, G.debug);
-    e.overlayMethod !== f.gl.Disabled && (L.verbose('OVERLAY_UPDATE_OVERLAY_METHOD', e), t.setOverlayMethod(e.overlayMethod));
+    e.overlayMethod !== _.gl.Disabled && (L.verbose('OVERLAY_UPDATE_OVERLAY_METHOD', e), t.setOverlayMethod(e.overlayMethod));
 }
 (N(G, 'gamesByPid', {}), N(G, 'gamesByName', {}), N(G, 'desktopMainWindowHasFocus', document.hasFocus()));
 class $ {

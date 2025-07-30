@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,12 +47,12 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -109,22 +109,22 @@ function g(e, t, n, r, a, o) {
 }
 function E(e) {
     var t;
-    let { disabled: n = !1, editable: o, inputRef: l, focusProps: u, name: _ = '', type: h = 'text', placeholder: E = '', maxLength: b = 999, value: y, defaultValue: O, minLength: v, error: I, defaultDirty: T = !1, leading: S, trailing: A, validateOn: N = 'change' } = e,
+    let { disabled: n = !1, editable: o, inputRef: l, focusProps: u, name: f = '', type: h = 'text', placeholder: E = '', maxLength: b = 999, value: y, defaultValue: O, minLength: v, error: I, defaultDirty: T = !1, leading: S, trailing: A, validateOn: N = 'change' } = e,
         C = p(e, ['disabled', 'editable', 'inputRef', 'focusProps', 'name', 'type', 'placeholder', 'maxLength', 'value', 'defaultValue', 'minLength', 'error', 'defaultDirty', 'leading', 'trailing', 'validateOn']),
         R = m(y, O),
         { errorMessage: P, hasError: w, setShouldValidate: D } = g(N, I, y, v, b, T),
         L = (e) => {
             var t, n;
             let r = e.currentTarget.value;
-            (null == (t = C.onChange) || t.call(C, r, _), D(!0), null == (n = R.setHasValue) || n.call(R, '' !== r));
+            (null == (t = C.onChange) || t.call(C, r, f), D(!0), null == (n = R.setHasValue) || n.call(R, '' !== r));
         },
         x = (e) => {
             var t, n;
-            (null == (t = C.onFocus) || t.call(C, e, _), null == (n = R.setIsFocused) || n.call(R, !0));
+            (null == (t = C.onFocus) || t.call(C, e, f), null == (n = R.setIsFocused) || n.call(R, !0));
         },
         M = (e) => {
             var t, n;
-            (null == (t = C.onBlur) || t.call(C, e, _), null == (n = R.setIsFocused) || n.call(R, !1));
+            (null == (t = C.onBlur) || t.call(C, e, f), null == (n = R.setIsFocused) || n.call(R, !1));
         },
         k = i.useRef(null),
         j = !1 === o || void 0;
@@ -142,13 +142,13 @@ function E(e) {
                     S,
                     (0, r.jsx)(
                         a.t,
-                        f(d({ ringTarget: k }, u), {
+                        _(d({ ringTarget: k }, u), {
                             children: (0, r.jsx)(
                                 'input',
-                                f(
+                                _(
                                     d(
                                         {
-                                            name: _,
+                                            name: f,
                                             className: c.input,
                                             disabled: n,
                                             readOnly: j,

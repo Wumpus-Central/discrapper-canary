@@ -8,8 +8,8 @@ var r,
     c = n(442837),
     u = n(570140),
     d = n(710845),
-    _ = n(41534),
-    f = n(837268),
+    f = n(41534),
+    _ = n(837268),
     p = n(857192),
     h = n(358085),
     m = n(998502),
@@ -182,7 +182,7 @@ function Z(e) {
         v.windowKey = t;
     } catch (e) {
         throw (
-            (0, _.D1)(e, i ? f.gl.OutOfProcess : null, {
+            (0, f.D1)(e, i ? _.gl.OutOfProcess : null, {
                 extra: {
                     windowKey: t,
                     totalWindowCount: Object.keys(R).length,

@@ -12,8 +12,8 @@ var r,
     c = n(512722),
     u = n.n(c),
     d = n(688642),
-    _ = n(731965),
-    f = n(442837),
+    f = n(731965),
+    _ = n(442837),
     p = n(481060),
     h = n(490173),
     m = n(175724),
@@ -113,7 +113,7 @@ class z extends (r = a.Component) {
     componentWillUnmount() {
         let { guestWindow: e } = this.props,
             t = e.document;
-        (this.unregisterPopoutGlobalKeybinds(), e.removeEventListener('blur', this.handleBlur), M.isPlatformEmbedded ? t.removeEventListener('contextmenu', k.contextMenuCallbackNative) : t.removeEventListener('contextmenu', k.contextMenuCallbackWeb), (0, _.j)(() => p.s9z.setState((e) => W(H({}, e), { [p.u1M]: [] }))), e.removeEventListener('beforeunload', this.beforeUnload));
+        (this.unregisterPopoutGlobalKeybinds(), e.removeEventListener('blur', this.handleBlur), M.isPlatformEmbedded ? t.removeEventListener('contextmenu', k.contextMenuCallbackNative) : t.removeEventListener('contextmenu', k.contextMenuCallbackWeb), (0, f.j)(() => p.s9z.setState((e) => W(H({}, e), { [p.u1M]: [] }))), e.removeEventListener('beforeunload', this.beforeUnload));
     }
     updateTitle() {
         let { title: e, guestWindow: t } = this.props,
@@ -144,7 +144,7 @@ class z extends (r = a.Component) {
         null != this._combokeys && this._combokeys.reset();
     }
     render() {
-        let { focused: e, forcedColors: t, children: n, windowKey: r, isFullScreen: a, withTitleBar: o, guestWindow: c, clientThemesClassName: u, contentClassName: _, hideModals: f = !1 } = this.props;
+        let { focused: e, forcedColors: t, children: n, windowKey: r, isFullScreen: a, withTitleBar: o, guestWindow: c, clientThemesClassName: u, contentClassName: f, hideModals: _ = !1 } = this.props;
         (0, M.getPlatform)();
         let m = K({
                 withTitleBar: o,
@@ -182,12 +182,12 @@ class z extends (r = a.Component) {
                                                                         }),
                                                                     null,
                                                                     (0, i.jsx)('div', {
-                                                                        className: s()(F.content, _),
+                                                                        className: s()(F.content, f),
                                                                         children: n
                                                                     })
                                                                 ]
                                                             }),
-                                                            !f && (0, i.jsx)(p.nKe, {}),
+                                                            !_ && (0, i.jsx)(p.nKe, {}),
                                                             (0, i.jsx)(h.Z, {}),
                                                             (0, i.jsx)(w.Un, {})
                                                         ]
@@ -255,13 +255,13 @@ let q = a.forwardRef(function (e, t) {
             guestWindow: n,
             focused: r,
             isFullScreen: a
-        } = (0, f.cj)([G.Z], () => ({
+        } = (0, _.cj)([G.Z], () => ({
             guestWindow: G.Z.getWindow(e.windowKey),
             focused: G.Z.getWindowFocused(e.windowKey),
             isFullScreen: G.Z.isWindowFullScreen(e.windowKey)
         }));
         u()(null != n, 'Missing guestWindow reference');
-        let { forcedColors: o, connectedEmbeddedActivity: s } = (0, f.cj)([b.Z, O.ZP], () => ({
+        let { forcedColors: o, connectedEmbeddedActivity: s } = (0, _.cj)([b.Z, O.ZP], () => ({
             forcedColors: b.Z.useForcedColors ? 'yes' : 'no',
             connectedEmbeddedActivity: O.ZP.getCurrentEmbeddedActivity()
         }));

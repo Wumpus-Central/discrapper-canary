@@ -32,7 +32,7 @@ e.exports = function (e) {
             begin: '\\b(?:TODO|DONE|BEGIN|END|STUB|CHG|FIXME|NOTE|BUG|XXX)\\b',
             relevance: 0
         },
-        _ = {
+        f = {
             variants: [
                 {
                     className: 'comment',
@@ -50,7 +50,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        f = {
+        _ = {
             $pattern: t,
             keyword: r,
             built_in: o,
@@ -59,7 +59,7 @@ e.exports = function (e) {
         },
         p = {
             begin: '\\.\\s*' + e.UNDERSCORE_IDENT_RE,
-            keywords: f,
+            keywords: _,
             relevance: 0
         },
         h = {
@@ -70,7 +70,7 @@ e.exports = function (e) {
         },
         m = {
             className: 'variable',
-            keywords: f,
+            keywords: _,
             begin: t,
             relevance: 0,
             contains: [h, p]
@@ -92,15 +92,15 @@ e.exports = function (e) {
             begin: g,
             end: '\\)$',
             returnBegin: !0,
-            keywords: f,
+            keywords: _,
             illegal: '[\\[\\]\\|\\$\\?%,~#@]',
-            contains: [E, p, m, u, c, _]
+            contains: [E, p, m, u, c, f]
         };
     return {
         name: 'ISBL',
         case_insensitive: !0,
-        keywords: f,
+        keywords: _,
         illegal: '\\$|\\?|%|,|;$|~|#|@|</',
-        contains: [b, h, p, m, u, c, _]
+        contains: [b, h, p, m, u, c, f]
     };
 };

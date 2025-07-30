@@ -1,4 +1,4 @@
-n.d(t, { K: () => f });
+n.d(t, { K: () => _ });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -8,10 +8,10 @@ var r = n(255367),
     c = n(70097),
     u = n(475595),
     d = n(388032),
-    _ = n(536087);
-function f(e) {
+    f = n(536087);
+function _(e) {
     var t, n, a;
-    let { videoActive: f, imageAsset: p, videoAsset: h, imageDimensions: m, onLoadComplete: g } = e,
+    let { videoActive: _, imageAsset: p, videoAsset: h, imageDimensions: m, onLoadComplete: g } = e,
         E = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
         b = null == p || p.asset.isAnimated ? null : p.asset.url,
         y = null != h && h.asset.isAnimated ? h.asset.url : null,
@@ -35,14 +35,14 @@ function f(e) {
               children: [
                   (0, r.jsx)('img', {
                       alt: null != (t = null == p ? void 0 : p.alt) ? t : d.intl.string(d.t.P84bAA),
-                      className: null != (n = null == p ? void 0 : p.className) ? n : _.image,
+                      className: null != (n = null == p ? void 0 : p.className) ? n : f.image,
                       src: I,
                       onLoad: g
                   }),
                   !E &&
                       null != h &&
                       null != y &&
-                      f &&
+                      _ &&
                       (0, r.jsx)(c.Z, {
                           autoPlay: !0,
                           loop: !0,
@@ -50,7 +50,7 @@ function f(e) {
                           preload: 'auto',
                           poster: I,
                           playsInline: !0,
-                          className: o()(h.className, _.video, { [_.hidden]: !f }),
+                          className: o()(h.className, f.video, { [f.hidden]: !_ }),
                           controls: !1,
                           onProgress: g,
                           children: (0, r.jsx)('source', {

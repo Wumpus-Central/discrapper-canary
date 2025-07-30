@@ -22,8 +22,8 @@ var i = n(772848),
     c = n(836768),
     u = n(98278),
     d = n(703656),
-    _ = n(314897),
-    f = n(626135),
+    f = n(314897),
+    _ = n(626135),
     p = n(954824),
     h = n(617136),
     m = n(509212),
@@ -230,7 +230,7 @@ function Y(e) {
         null != e &&
             e.timestampSec > 1 &&
             ((0, g.lx)(n.id),
-            f.default.track(C.rMx.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
+            _.default.track(C.rMx.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
                 quest_id: n.id,
                 source_quest_content: (0, h._b)(o),
                 source_quest_content_cta: l,
@@ -269,7 +269,7 @@ function W(e) {
     let n = null == (t = platform.os) ? void 0 : t.family,
         r = 'quest';
     if ('Android' === n || 'iOS' === n) {
-        let t = _.default.getFingerprint(),
+        let t = f.default.getFingerprint(),
             n = (0, a.WS)(),
             i = ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, '/quests/').concat(e);
         return (0, a.ZP)(i, {
@@ -284,7 +284,7 @@ function K(e) {
     let t = W(e),
         n = (0, a.zS)(t);
     (null != n &&
-        f.default.track(C.rMx.DEEP_LINK_CLICKED, {
+        _.default.track(C.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, o.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource

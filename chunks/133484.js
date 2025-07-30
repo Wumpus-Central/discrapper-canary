@@ -87,7 +87,7 @@ e.exports = function (e) {
             illegal: '\\n',
             relevance: 0
         },
-        _ = [
+        f = [
             r,
             {
                 className: 'meta',
@@ -151,16 +151,16 @@ e.exports = function (e) {
             a,
             o
         ],
-        f = [..._];
+        _ = [...f];
     return (
-        f.pop(),
-        f.push(s),
-        (c.contains = f),
+        _.pop(),
+        _.push(s),
+        (c.contains = _),
         {
             name: 'YAML',
             case_insensitive: !0,
             aliases: ['yml'],
-            contains: _
+            contains: f
         }
     );
 };

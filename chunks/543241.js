@@ -35,8 +35,8 @@ var r = n(73800),
     c = n(689789),
     u = n(407477),
     d = n(633302),
-    _ = n(558217),
-    f = n(125900),
+    f = n(558217),
+    _ = n(125900),
     p = n(675478),
     h = n(430824),
     m = n(771845),
@@ -56,7 +56,7 @@ var r = n(73800),
 let P = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null == t ? void 0 : t.getGuildId(),
             i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        (0, _.O)(n);
+        (0, f.O)(n);
         let a = (0, A.Gt)(e),
             s = Z(n),
             d = H(n),
@@ -82,7 +82,7 @@ let P = function (e, t) {
             }),
             D = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
             L = (0, O.I5)(D),
-            x = (0, f.g2)({ location: 'useEmojiCategories' });
+            x = (0, _.g2)({ location: 'useEmojiCategories' });
         return r.useMemo(() => {
             let r = P.getGroupedCustomEmoji(),
                 o = m.ZP.getFlattenedGuildIds(),
@@ -93,7 +93,7 @@ let P = function (e, t) {
                     id: T.UX.SOUNDMOJI,
                     isNitroLocked: !1
                 },
-                _ = (r) =>
+                f = (r) =>
                     y.ZP.getEmojiUnavailableReasons({
                         categoryEmojis: r,
                         channel: t,
@@ -107,7 +107,7 @@ let P = function (e, t) {
                         if ((t === T.En.GUILD && (e = h.Z.getGuild(i)), null == e)) continue;
                         let a = null == r ? void 0 : r[e.id];
                         if (null == a || 0 === a.length) continue;
-                        let { emojisDisabled: o, emojisUnfiltered: s, emojisPremiumLockedCount: l, emojiNitroLocked: u } = _(a);
+                        let { emojisDisabled: o, emojisUnfiltered: s, emojisPremiumLockedCount: l, emojiNitroLocked: u } = f(a);
                         if (0 === s.length) continue;
                         let d = null;
                         (t === T.En.GUILD &&
@@ -124,7 +124,7 @@ let P = function (e, t) {
                 l.ZP.categories.reduce(
                     (t, r) => {
                         if (r === T.UX.TOP_GUILD_EMOJI) {
-                            let { emojisDisabled: e, emojisUnfiltered: n } = _(C);
+                            let { emojisDisabled: e, emojisUnfiltered: n } = f(C);
                             if (null == n || 0 === n.length) return t;
                             t.push({
                                 type: T.En.TOP_GUILD_EMOJI,
@@ -135,7 +135,7 @@ let P = function (e, t) {
                                 emojisDisabled: e
                             });
                         } else if (r === T.UX.RECENT) {
-                            let { emojisDisabled: n, emojisUnfiltered: i } = _(e === A.Hz.REACTION && (p || E) ? d : s);
+                            let { emojisDisabled: n, emojisUnfiltered: i } = f(e === A.Hz.REACTION && (p || E) ? d : s);
                             if (null == i || 0 === i.length) return t;
                             t.push({
                                 type: T.En.RECENT,
@@ -146,7 +146,7 @@ let P = function (e, t) {
                                 emojisDisabled: n
                             });
                         } else if (r === T.UX.FAVORITES) {
-                            let { emojisDisabled: e, emojisUnfiltered: n } = _(b);
+                            let { emojisDisabled: e, emojisUnfiltered: n } = f(b);
                             if (null == n || 0 === n.length) return t;
                             t.push({
                                 type: T.En.FAVORITES,
@@ -204,8 +204,8 @@ let P = function (e, t) {
     },
     M = (e) => {
         var t, n, r;
-        let { emoji: i, emojiSuggestions: o, searchQuery: l, isLocked: c, location: u, intention: d, index: _ } = e,
-            f = null != (r = i.uniqueName) ? r : i.name,
+        let { emoji: i, emojiSuggestions: o, searchQuery: l, isLocked: c, location: u, intention: d, index: f } = e,
+            _ = null != (r = i.uniqueName) ? r : i.name,
             p = (0, a.EQ)(d)
                 .with(A.Hz.REACTION, () => S.aib.EMOJI_REACTION)
                 .with(A.Hz.AUTO_SUGGESTION, () => S.aib.EMOJI_AUTO_SUGGESTION)
@@ -215,12 +215,12 @@ let P = function (e, t) {
             location: u,
             expression_guild_id: i.guildId,
             emoji_id: i.id,
-            emoji_name: f,
+            emoji_name: _,
             is_custom: null != i.id,
             is_animated: i.animated,
             is_locked: c,
             query: l,
-            index_num: _,
+            index_num: f,
             load_id: null == o ? void 0 : o.loadId,
             total_results: null == o || null == (t = o.results) ? void 0 : t.length,
             emoji_suggestion_ids:
@@ -266,12 +266,12 @@ let P = function (e, t) {
             default:
                 n = C.cd.EMOJI_PICKER_EMOJI_CLICKED;
         }
-        let _ = null != (t = r.uniqueName) ? t : r.name;
+        let f = null != (t = r.uniqueName) ? t : r.name;
         s.ZP.trackWithMetadata(S.rMx.EXPRESSION_PICKER_EXPRESSION_SELECTED, {
             type: n,
             location: i,
             expression_id: r.id,
-            expression_name: _,
+            expression_name: f,
             expression_guild_id: r.guildId,
             is_custom: null != r.id,
             is_animated: r.animated,

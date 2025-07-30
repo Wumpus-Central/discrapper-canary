@@ -1,7 +1,7 @@
 (n.d(t, { N: () => b }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(564854),
+    a = n(778141),
     o = n(481060),
     s = n(450096),
     l = n(981631),
@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,12 +47,12 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -65,14 +65,14 @@ let p = 200,
         leave: { opacity: 0 },
         config: { duration: 200 }
     },
-    m = f(d({}, h), { config: { duration: 50 } }),
-    g = f(d({}, h), { config: (e, t) => (t ? { duration: 800 } : { duration: 200 }) });
+    m = _(d({}, h), { config: { duration: 50 } }),
+    g = _(d({}, h), { config: (e, t) => (t ? { duration: 800 } : { duration: 200 }) });
 function E(e) {
     let { readyState: t, placeholderImg: n, placeholderStyle: s } = e,
         u = t === l.zo9.LOADING,
-        [_] = i.useState(() => Date.now()),
-        f = t === l.zo9.READY && Date.now() - _ < p,
-        g = (0, o.Yzy)(u && null != n, f ? m : h);
+        [f] = i.useState(() => Date.now()),
+        _ = t === l.zo9.READY && Date.now() - f < p,
+        g = (0, o.Yzy)(u && null != n, _ ? m : h);
     return (0, r.jsx)(r.Fragment, {
         children: g(
             (e, t) =>
@@ -87,7 +87,7 @@ function E(e) {
     });
 }
 function b(e) {
-    let { readyState: t, aspectRatio: n, placeholder: u, placeholderVersion: d, placeholderStyle: _, children: f } = e,
+    let { readyState: t, aspectRatio: n, placeholder: u, placeholderVersion: d, placeholderStyle: f, children: _ } = e,
         p = t === l.zo9.LOADING,
         [h] = i.useState(p),
         [m, b] = i.useState(!1),
@@ -105,12 +105,12 @@ function b(e) {
         className: c.loadingOverlay,
         style: { aspectRatio: n },
         children: [
-            f,
+            _,
             null != y &&
                 (0, r.jsx)(E, {
                     readyState: t,
                     placeholderImg: y,
-                    placeholderStyle: _
+                    placeholderStyle: f
                 }),
             O(
                 (e, t) =>

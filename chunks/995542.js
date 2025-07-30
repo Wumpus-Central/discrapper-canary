@@ -7,8 +7,8 @@ var r = n(56135),
     c = 1,
     u = 2,
     d = '[object Boolean]',
-    _ = '[object Date]',
-    f = '[object Error]',
+    f = '[object Date]',
+    _ = '[object Error]',
     p = '[object Map]',
     h = '[object Number]',
     m = '[object RegExp]',
@@ -28,10 +28,10 @@ e.exports = function (e, t, n, r, v, T, S) {
             if (e.byteLength != t.byteLength || !T(new i(e), new i(t))) break;
             return !0;
         case d:
-        case _:
+        case f:
         case h:
             return a(+e, +t);
-        case f:
+        case _:
             return e.name == t.name && e.message == t.message;
         case m:
         case E:

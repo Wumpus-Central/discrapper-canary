@@ -1,10 +1,10 @@
 n.d(t, {
-    A4: () => f,
+    A4: () => _,
     E9: () => d,
     Os: () => c,
     jx: () => p,
     nv: () => l,
-    sz: () => _,
+    sz: () => f,
     te: () => s,
     xh: () => u,
     zG: () => h
@@ -54,13 +54,13 @@ function d(e) {
         widgetId: e
     });
 }
-function _(e) {
+function f(e) {
     r.Z.dispatch({
         type: 'LAYOUT_DELETE_ALL_WIDGETS',
         layoutId: e
     });
 }
-function f(e) {
+function _(e) {
     p([e]);
 }
 function p(e) {

@@ -9,7 +9,7 @@ var s = n(986529),
     c = n(153102),
     u = n(625306),
     d = n(420970);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function _(e, t, n) {
         e
     );
 }
-let f = new Set(['APP_STATE_UPDATE', 'CLEAR_CACHES', 'CONNECTION_CLOSED', 'CONNECTION_OPEN', 'CONNECTION_RESUMED', 'LOGIN_SUCCESS', 'LOGIN', 'LOGOUT', 'MESSAGE_SEND_FAILED', 'PUSH_NOTIFICATION_CLICK', 'RESET_SOCKET', 'SESSION_START', 'UPLOAD_FAIL', 'WRITE_CACHES']),
+let _ = new Set(['APP_STATE_UPDATE', 'CLEAR_CACHES', 'CONNECTION_CLOSED', 'CONNECTION_OPEN', 'CONNECTION_RESUMED', 'LOGIN_SUCCESS', 'LOGIN', 'LOGOUT', 'MESSAGE_SEND_FAILED', 'PUSH_NOTIFICATION_CLICK', 'RESET_SOCKET', 'SESSION_START', 'UPLOAD_FAIL', 'WRITE_CACHES']),
     p = new l.Yd('Flux'),
     h = 100,
     m = 10,
@@ -76,7 +76,7 @@ class E {
         this._dispatchWithLogging(e);
     }
     _dispatchWithLogging(e) {
-        (a()(null == this._currentDispatchActionType, 'Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: '.concat(e.type, ' Already dispatching: ').concat(this._currentDispatchActionType)), a()(e.type, 'Dispatch.dispatch(...) called without an action type'), f.has(e.type) && p.log('Dispatching '.concat(e.type)), (0, s.B1)(e.type), u.IH(e.type));
+        (a()(null == this._currentDispatchActionType, 'Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: '.concat(e.type, ' Already dispatching: ').concat(this._currentDispatchActionType)), a()(e.type, 'Dispatch.dispatch(...) called without an action type'), _.has(e.type) && p.log('Dispatching '.concat(e.type)), (0, s.B1)(e.type), u.IH(e.type));
         let t = this.actionLogger.log(e, (t) => {
             try {
                 ((this._currentDispatchActionType = e.type), this._dispatch(e, t));
@@ -126,7 +126,7 @@ class E {
         this._actionHandlers.addDependencies(e, t);
     }
     constructor(e = 0, t, n) {
-        ((_(this, '_defaultBand', void 0), _(this, '_interceptors', []), _(this, '_subscriptions', {}), _(this, '_waitQueue', []), _(this, '_processingWaitQueue', !1), _(this, '_currentDispatchActionType', null), _(this, '_actionHandlers', new b()), _(this, '_sentryUtils', void 0), _(this, 'actionLogger', void 0), _(this, 'functionCache', {}), (this._defaultBand = e), (this._sentryUtils = n), null != t) ? (this.actionLogger = t) : ('undefined' == typeof window || 1, (this.actionLogger = new d.Z())),
+        ((f(this, '_defaultBand', void 0), f(this, '_interceptors', []), f(this, '_subscriptions', {}), f(this, '_waitQueue', []), f(this, '_processingWaitQueue', !1), f(this, '_currentDispatchActionType', null), f(this, '_actionHandlers', new b()), f(this, '_sentryUtils', void 0), f(this, 'actionLogger', void 0), f(this, 'functionCache', {}), (this._defaultBand = e), (this._sentryUtils = n), null != t) ? (this.actionLogger = t) : ('undefined' == typeof window || 1, (this.actionLogger = new d.Z())),
             this.actionLogger.on('trace', (e, t, n) => {
                 o.Z.isTracing && n >= m && o.Z.mark('\uD83E\uDDA5', t, n);
             }));
@@ -215,7 +215,7 @@ class b {
         }
     }
     constructor() {
-        (_(this, '_orderedActionHandlers', {}), _(this, '_orderedCallbackTokens', null), _(this, '_lastID', 1), _(this, '_dependencyGraph', new r.DepGraph()));
+        (f(this, '_orderedActionHandlers', {}), f(this, '_orderedCallbackTokens', null), f(this, '_lastID', 1), f(this, '_dependencyGraph', new r.DepGraph()));
     }
 }
 function y(e, t) {

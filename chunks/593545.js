@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(40330),
     u = n(571989),
     d = n(828061),
-    _ = n(259580),
-    f = n(424218),
+    f = n(259580),
+    _ = n(424218),
     p = n(388032),
     h = n(8410),
     m = n(283574);
@@ -95,8 +95,8 @@ function v(e, t) {
                         c = O(t).decode(await s.arrayBuffer()),
                         u = null != (i = s.headers.get('content-range')) ? i : '0',
                         d = null != (a = s.headers.get('content-length')) ? a : '1',
-                        _ = parseInt(u.split('/')[1]) - parseInt(d);
-                    (o(0 === _ ? c : c.slice(0, -1)), l(_), r(!1));
+                        f = parseInt(u.split('/')[1]) - parseInt(d);
+                    (o(0 === f ? c : c.slice(0, -1)), l(f), r(!1));
                 } catch (e) {
                     (l(0), r(!0));
                 }
@@ -149,14 +149,14 @@ function T(e) {
                     onClick: () => {
                         n(!t);
                     },
-                    children: [(0, r.jsx)(_.Z, { direction: t ? _.Z.Directions.UP : _.Z.Directions.DOWN }), t ? p.intl.string(p.t.iTcumZ) : p.intl.string(p.t.dcl9MT)]
+                    children: [(0, r.jsx)(f.Z, { direction: t ? f.Z.Directions.UP : f.Z.Directions.DOWN }), t ? p.intl.string(p.t.iTcumZ) : p.intl.string(p.t.dcl9MT)]
                 })
             )
     });
 }
 function S(e) {
     let { url: t, fileName: n, fileSize: i } = e,
-        a = ''.concat(n, ' (').concat((0, f.IC)(i), ')');
+        a = ''.concat(n, ' (').concat((0, _.IC)(i), ')');
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.ua7, {
@@ -177,7 +177,7 @@ function S(e) {
                         'span',
                         y(E({}, e), {
                             className: o()(h.downloadSection, h.formattedSize),
-                            children: (0, f.IC)(i)
+                            children: (0, _.IC)(i)
                         })
                     )
             }),
@@ -282,13 +282,13 @@ function N(e) {
 }
 function C(e) {
     var t;
-    let { url: n, fileName: i, fileSize: a, fileContents: s, expanded: c, setExpanded: d, language: _, setLanguage: m, bytesLeft: g, className: E } = e,
+    let { url: n, fileName: i, fileSize: a, fileContents: s, expanded: c, setExpanded: d, language: f, setLanguage: m, bytesLeft: g, className: E } = e,
         b = null == s ? void 0 : s.split('\n'),
         y = null != (t = null == b ? void 0 : b.length) ? t : 0,
         O = c ? 100 : 6,
         v = 0 === g,
         C = '';
-    (v && c && y > O ? (C = '\n...') : v || (C = '...'), '' !== C && (v ? (C += ' ' + p.intl.formatToPlainString(p.t.DQnFp6, { lines: y - O })) : (C += ' ' + p.intl.formatToPlainString(p.t['1+gGcH'], { formattedBytes: (0, f.IC)(g) }))));
+    (v && c && y > O ? (C = '\n...') : v || (C = '...'), '' !== C && (v ? (C += ' ' + p.intl.formatToPlainString(p.t.DQnFp6, { lines: y - O })) : (C += ' ' + p.intl.formatToPlainString(p.t['1+gGcH'], { formattedBytes: (0, _.IC)(g) }))));
     let R = (null == b ? void 0 : b.slice(0, O).join('\n')) + C,
         P = (0, u.yx)(R),
         w = c || O < y;
@@ -302,7 +302,7 @@ function C(e) {
                         ? (0, r.jsx)(l.$jN, { className: h.spinner })
                         : (0, r.jsx)(I, {
                               text: P,
-                              language: _
+                              language: f
                           })
             }),
             (0, r.jsxs)(l.Text, {
@@ -323,7 +323,7 @@ function C(e) {
                                       url: n,
                                       fileName: i,
                                       fileSize: a,
-                                      language: _,
+                                      language: f,
                                       fileContents: s,
                                       bytesLeft: g
                                   })
@@ -337,7 +337,7 @@ function C(e) {
                         fileSize: a
                     }),
                     (0, r.jsx)(A, {
-                        language: _,
+                        language: f,
                         setLanguage: m
                     })
                 ]
@@ -347,10 +347,10 @@ function C(e) {
 }
 function R(e) {
     let { url: t, fileName: n, fileSize: a, transitionState: o, language: s, fileContents: c, bytesLeft: u } = e,
-        [d, _] = i.useState(s),
+        [d, f] = i.useState(s),
         m = null != c ? c : '';
     return (
-        0 !== u && (m += '... '.concat(p.intl.formatToPlainString(p.t['1+gGcH'], { formattedBytes: (0, f.IC)(u) }))),
+        0 !== u && (m += '... '.concat(p.intl.formatToPlainString(p.t['1+gGcH'], { formattedBytes: (0, _.IC)(u) }))),
         (0, r.jsx)(l.Y0X, {
             transitionState: o,
             'aria-label': p.intl.string(p.t.qxQjc3),
@@ -383,7 +383,7 @@ function R(e) {
                             }),
                             (0, r.jsx)(A, {
                                 language: d,
-                                setLanguage: _
+                                setLanguage: f
                             })
                         ]
                     })
@@ -395,7 +395,7 @@ function R(e) {
 let P = i.memo(
     function (e) {
         let { url: t, fileName: n, fileSize: a, contentType: s, className: l, onClick: u, onContextMenu: d } = e,
-            [_, f] = i.useState(!1),
+            [f, _] = i.useState(!1),
             [p, m] = i.useState(n.split('.').slice(-1)[0]),
             { fileContents: g, bytesLeft: E, hadError: b } = v(t, s);
         return b
@@ -413,8 +413,8 @@ let P = i.memo(
                   fileSize: a,
                   fileContents: g,
                   bytesLeft: E,
-                  expanded: _,
-                  setExpanded: f,
+                  expanded: f,
+                  setExpanded: _,
                   language: p,
                   setLanguage: m,
                   className: o()(h.newMosaicStyle, l)
