@@ -64,31 +64,31 @@ function g(e) {
             };
         }, [y, O]),
         I = (0, r.useMemo)(() => {
-            if (!n || null == v) return null;
-            let { app: t, steamSku: r } = v,
-                i = p[t.id];
-            if (null != i && '' !== i)
+            if (null == v) return null;
+            let { app: t, steamSku: n } = v,
+                r = p[t.id];
+            if (null != r && '' !== r)
                 return m({
-                    url: i,
+                    url: r,
                     platform: 'battlenet',
                     icon: a.DvD,
                     labelKey: f.t['ZGax9/'],
                     applicationId: e,
                     applicationName: t.name
                 });
-            let o = h[t.id];
-            return null != o && '' !== o
+            let i = h[t.id];
+            return null != i && '' !== i
                 ? m({
-                      url: o,
+                      url: i,
                       platform: 'riot',
                       icon: a.mVV,
                       labelKey: f.t['+KXANz'],
                       applicationId: e,
                       applicationName: t.name
                   })
-                : null != r && '' !== r
+                : null != n && '' !== n
                   ? m({
-                        url: l ? 'steam://advertise/'.concat(r) : 'https://store.steampowered.com/app/'.concat(r),
+                        url: l ? 'steam://advertise/'.concat(n) : 'https://store.steampowered.com/app/'.concat(n),
                         platform: 'steam',
                         icon: a.xCj,
                         labelKey: f.t.OlubCw,
@@ -96,11 +96,11 @@ function g(e) {
                         applicationName: t.name
                     })
                   : null;
-        }, [n, v, e, l]);
+        }, [v, e, l]);
     return (
         (0, r.useEffect)(() => {
             null != I && d.m.trackExposure({ location: 'GameStoreLink' });
         }, [I]),
-        I
+        n ? I : null
     );
 }

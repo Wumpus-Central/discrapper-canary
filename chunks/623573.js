@@ -1,23 +1,25 @@
-n.d(t, { default: () => f });
+n.d(t, { default: () => x });
 var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
     a = n(512722),
     l = n.n(a),
-    o = n(481060),
-    c = n(563132),
-    d = n(409813),
-    u = n(3409),
-    m = n(388032),
-    p = n(281817),
-    g = n(893354);
-function h(e) {
-    let { transitionState: t, analyticsLocation: n, onClose: r, onAddPaymentSource: a, toastContent: c, initialStep: h = d.h8.PAYMENT_TYPE, overwriteSubscriptionPaymentSource: f = !1 } = e,
-        b = (0, u.fL)(),
-        x = (0, u.vP)({
-            paymentModalArgs: b,
-            initialStep: h,
+    o = n(257465),
+    c = n(37148),
+    d = n(481060),
+    u = n(563132),
+    m = n(409813),
+    p = n(3409),
+    g = n(388032),
+    h = n(281817),
+    f = n(893354);
+function b(e) {
+    let { transitionState: t, analyticsLocation: n, onClose: r, onAddPaymentSource: a, toastContent: u, initialStep: b = m.h8.PAYMENT_TYPE, overwriteSubscriptionPaymentSource: x = !1 } = e,
+        _ = (0, p.fL)(),
+        j = (0, p.vP)({
+            paymentModalArgs: _,
+            initialStep: b,
             prependSteps: [],
             appendSteps: [],
             onReturn: () => {
@@ -28,42 +30,41 @@ function h(e) {
             },
             onStepChange: () => {},
             header: (0, i.jsxs)('div', {
-                className: s()(p.modalTitle, g.flex, g.justifyBetween, g.alignCenter),
+                className: s()(h.modalTitle, f.flex, f.justifyBetween, f.alignCenter),
                 children: [
-                    (0, i.jsx)(o.vwX, {
-                        tag: o.RB0.H4,
-                        children: m.intl.string(m.t.eQ2bLi)
+                    (0, i.jsx)(d.vwX, {
+                        tag: d.RB0.H4,
+                        children: g.intl.string(g.t.eQ2bLi)
                     }),
-                    (0, i.jsx)(o.olH, { onClick: r })
+                    (0, i.jsx)(c.o, {})
                 ]
             }),
             analyticsLocation: n,
             hideBreadcrumbs: !0,
-            toastContent: c,
-            overwriteSubscriptionPaymentSource: f
+            toastContent: u,
+            overwriteSubscriptionPaymentSource: x
         });
-    return (0, i.jsx)(o.Y0X, {
+    return (0, i.jsx)(o.I, {
         transitionState: t,
-        size: o.CgR.SMALL,
-        className: p.modal,
-        'aria-label': m.intl.string(m.t.eQ2bLi),
-        parentComponent: 'AddPaymentModal',
+        onClose: r,
+        size: 'sm',
+        'aria-label': g.intl.string(g.t.eQ2bLi),
         children: (0, i.jsx)('form', {
-            className: p.form,
+            className: h.form,
             onSubmit: function (e) {
                 e.preventDefault();
             },
-            children: x
+            children: j
         })
     });
 }
-function f(e) {
-    return (0, i.jsx)(c.PaymentContextProvider, {
+function x(e) {
+    return (0, i.jsx)(u.PaymentContextProvider, {
         activeSubscription: null,
         stepConfigs: [],
         skuIDs: [],
         children: (0, i.jsx)(
-            h,
+            b,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},

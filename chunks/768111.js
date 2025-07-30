@@ -1,42 +1,47 @@
-(n.d(t, { Z: () => d }), n(539854));
+(n.d(t, { Z: () => u }), n(539854));
 var r = n(447448),
     o = n(585305),
     i = n(806729),
-    a = n(708108),
-    l = n(146078),
-    c = n(228168),
-    s = n(388032);
-function d(e) {
+    a = n(517157),
+    l = n(708108),
+    c = n(146078),
+    s = n(228168),
+    d = n(388032);
+function u(e) {
     let { user: t, currentUser: n } = e,
-        { mutualFriendsCount: d, mutualGuilds: u } = (0, i.Z)(t),
-        f = null == u ? void 0 : u.length,
-        m = (0, o.Z)(t),
-        p = (0, r.k)({ location: 'useUserProfileModalV2TabBarItems' }),
-        g = [];
+        { mutualFriendsCount: u, mutualGuilds: f } = (0, i.Z)(t),
+        m = null == f ? void 0 : f.length,
+        p = (0, o.Z)(t),
+        g = (0, r.k)({ location: 'useUserProfileModalV2TabBarItems' }),
+        b = (0, a.Z)(),
+        x = [],
+        h = t.id === (null == n ? void 0 : n.id),
+        _ = b.length > 0;
     return (
-        p &&
-            g.push({
-                text: s.intl.string(s.t.laViw8),
-                section: c.oh.WIDGETS,
+        g &&
+            (_ || h) &&
+            x.push({
+                text: d.intl.string(d.t.laViw8),
+                section: s.oh.WIDGETS,
                 subsection: void 0
             }),
-        g.push({
-            text: s.intl.string(s.t.chq59f),
-            section: c.oh.ACTIVITY,
+        x.push({
+            text: d.intl.string(d.t.chq59f),
+            section: s.oh.ACTIVITY,
             subsection: void 0
         }),
         t.id !== (null == n ? void 0 : n.id) &&
-            m &&
-            (g.push({
-                text: (0, a.Z)(d),
-                section: c.oh.MUTUAL_FRIENDS,
+            p &&
+            (x.push({
+                text: (0, l.Z)(u),
+                section: s.oh.MUTUAL_FRIENDS,
                 subsection: void 0
             }),
-            g.push({
-                text: (0, l.Z)(f),
-                section: c.oh.MUTUAL_GUILDS,
+            x.push({
+                text: (0, c.Z)(m),
+                section: s.oh.MUTUAL_GUILDS,
                 subsection: void 0
             })),
-        g
+        x
     );
 }

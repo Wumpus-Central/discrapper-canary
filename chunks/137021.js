@@ -1,11 +1,11 @@
-(n.d(t, { default: () => v }), n(388685));
+(n.d(t, { default: () => E }), n(388685));
 var r = n(255367),
     l = n(73800),
-    s = n(442837),
-    i = n(755721),
-    a = n(481060),
-    o = n(904245),
-    u = n(311819),
+    a = n(442837),
+    s = n(82659),
+    i = n(481060),
+    u = n(904245),
+    o = n(311819),
     c = n(835473),
     d = n(957730),
     f = n(987509),
@@ -13,277 +13,145 @@ var r = n(255367),
     p = n(592125),
     h = n(594174),
     m = n(572004),
-    y = n(823379),
-    g = n(207003),
-    j = n(388032),
-    x = n(277580),
-    O = n(621054);
-function v(e) {
-    var t,
-        n,
-        { applicationId: m, customId: v, linkId: _, message: E, onClose: P, onCopyLink: Z, onShare: L, transitionState: C } = e,
-        N = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                r,
-                l = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        r,
-                        l = {},
-                        s = Object.keys(e);
-                    for (r = 0; r < s.length; r++) ((n = s[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
-                    return l;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < s.length; r++) ((n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
-            }
-            return l;
-        })(e, ['applicationId', 'customId', 'linkId', 'message', 'onClose', 'onCopyLink', 'onShare', 'transitionState']);
-    let [w] = (0, c.Z)([m]),
-        k = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
-        [T, D] = l.useState(!1),
-        [R, M] = l.useState(''),
-        [I, A] = l.useState('');
+    g = n(823379),
+    y = n(207003),
+    x = n(388032),
+    v = n(277580),
+    S = n(621054);
+function E(e) {
+    let { applicationId: t, customId: n, linkId: E, message: j, onClose: Z, onCopyLink: O, onShare: _, transitionState: P } = e,
+        [C] = (0, c.Z)([t]),
+        L = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
+        [T, N] = l.useState(!1),
+        [w, D] = l.useState(''),
+        [M, R] = l.useState('');
     l.useEffect(() => {
-        A(
-            (0, u.H)({
-                applicationId: m,
-                referrerId: null == k ? void 0 : k.id,
-                customId: v,
-                linkId: _
+        R(
+            (0, o.H)({
+                applicationId: t,
+                referrerId: null == L ? void 0 : L.id,
+                customId: n,
+                linkId: E
             })
         );
-    }, [m, k, v, _, A]);
-    let U = l.useRef(0),
-        [z, H] = l.useState([]),
-        q = z.length,
-        F = q >= 5;
+    }, [t, L, n, E, R]);
+    let k = l.useRef(0),
+        [I, U] = l.useState([]),
+        A = I.length,
+        H = A >= 5;
     l.useEffect(() => {
-        if ('' === R) {
+        if ('' === w) {
             var e;
-            null == (e = W.current) || e.focus();
+            null == (e = q.current) || e.focus();
         }
-    }, [R]);
-    let B = l.useCallback(() => {
-            M('');
-        }, [M]),
-        W = l.useRef(null),
-        { results: G, updateSearchText: X } = (0, b.s)({
-            selectedDestinations: z,
+    }, [w]);
+    let F = l.useCallback(() => {
+            D('');
+        }, [D]),
+        q = l.useRef(null),
+        { results: z, updateSearchText: G } = (0, b.s)({
+            selectedDestinations: I,
             includeMissingDMs: !0
         }),
+        W = l.useCallback(
+            (e) => {
+                (D(e), G(e));
+            },
+            [D, G]
+        ),
         V = l.useCallback(
             (e) => {
-                (M(e), X(e));
-            },
-            [M, X]
-        ),
-        J = l.useCallback(
-            (e) => {
-                H((t) => {
+                U((t) => {
                     let n = t.findIndex((t) => {
                         let { type: n, id: r } = t;
                         return n === e.type && r === e.id;
                     });
-                    if (-1 === n) return F ? t : (M(''), (U.current += 1), [e, ...t]);
+                    if (-1 === n) return H ? t : (D(''), (k.current += 1), [e, ...t]);
                     let r = [...t];
-                    return (r.splice(n, 1), (U.current += 1), r);
+                    return (r.splice(n, 1), (k.current += 1), r);
                 });
             },
-            [F]
+            [H]
         ),
-        K = l.useCallback(
+        X = l.useCallback(
             async (e) => {
-                if (null == w) return;
-                let t = j.intl.formatToMarkdownString(j.t.dZJpdH, {
-                        applicationName: w.name,
-                        link: I
+                if (null == C) return;
+                let t = x.intl.formatToMarkdownString(x.t.dZJpdH, {
+                        applicationName: C.name,
+                        link: M
                     }),
-                    n = ''.concat(E, '\n\n').concat(t);
-                (D(!0),
-                    (await Promise.all(e.map(f.qx))).filter(y.lm).forEach(async (e) => {
+                    n = ''.concat(j, '\n\n').concat(t);
+                (N(!0),
+                    (await Promise.all(e.map(f.qx))).filter(g.lm).forEach(async (e) => {
                         let t = p.Z.getChannel(e);
-                        null != t && (await o.Z.sendMessage(e, d.ZP.parse(t, n), !1));
+                        null != t && (await u.Z.sendMessage(e, d.ZP.parse(t, n), !1));
                     }),
-                    (0, a.showToast)((0, a.createToast)(j.intl.formatToPlainString(j.t.jQULqK, { applicationName: w.name }), a.ToastType.SUCCESS)),
-                    L(!0),
-                    P());
+                    (0, i.showToast)((0, i.createToast)(x.intl.formatToPlainString(x.t.jQULqK, { applicationName: C.name }), i.ToastType.SUCCESS)),
+                    _(!0),
+                    Z());
             },
-            [E, I, P, L, w]
+            [j, M, Z, _, C]
         ),
+        J = l.useCallback(() => {
+            (0, m.JG)(M, () => {
+                (O(), (0, i.showToast)((0, i.createToast)(x.intl.string(x.t['t5VZ8/']), i.ToastType.SUCCESS)));
+            });
+        }, [M, O]),
         Q =
-            G.length > 0
-                ? (0, r.jsx)(g.Q, {
-                      paddingBottom: 16,
-                      paddingTop: 16,
-                      rowData: G,
-                      handleToggleDestination: J,
-                      selectedDestinations: z,
-                      disableSelection: F
+            z.length > 0
+                ? (0, r.jsx)(y.Q, {
+                      paddingBottom: 8,
+                      paddingTop: 8,
+                      rowData: z,
+                      handleToggleDestination: V,
+                      selectedDestinations: I,
+                      disableSelection: H
                   })
-                : (0, r.jsxs)(a.hzk, {
-                      className: x.noResults,
+                : (0, r.jsxs)('div', {
+                      className: v.noResults,
                       children: [
                           (0, r.jsx)('img', {
-                              className: x.noResultsImg,
-                              src: O,
+                              className: v.noResultsImg,
+                              src: S,
                               alt: ''
                           }),
-                          (0, r.jsx)(a.Text, {
+                          (0, r.jsx)(i.Text, {
                               variant: 'text-md/normal',
                               color: 'text-muted',
-                              children: j.intl.string(j.t.V6nAfH)
+                              children: x.intl.string(x.t.V6nAfH)
                           })
                       ]
                   });
-    return (0, r.jsxs)(
-        a.Y0X,
-        ((t = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
-                    )),
-                    r.forEach(function (t) {
-                        var r;
-                        ((r = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: r,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0
-                                  })
-                                : (e[t] = r));
-                    }));
-            }
-            return e;
-        })({ transitionState: C }, N)),
-        (n = n =
+    return (0, r.jsx)(s.Modal, {
+        transitionState: P,
+        onClose: Z,
+        title: x.intl.string(x.t.r9qKo6),
+        subtitle: j,
+        size: 'md',
+        input: (0, r.jsx)(i.E1j, {
+            ref: q,
+            size: i.E1j.Sizes.MEDIUM,
+            query: w,
+            onChange: W,
+            onClear: F,
+            placeholder: x.intl.string(x.t['5h0QOD']),
+            'aria-label': x.intl.string(x.t['5h0QOD']),
+            autoFocus: !0
+        }),
+        actions: [
             {
-                className: x.modalRoot,
-                parentComponent: 'ActivityShareLinkModal',
-                children: [
-                    (0, r.jsxs)(a.xBx, {
-                        className: x.header,
-                        children: [
-                            (0, r.jsxs)('div', {
-                                className: x.titleLine,
-                                children: [
-                                    (0, r.jsx)('div', {
-                                        className: x.title,
-                                        children: (0, r.jsx)(a.y5t, {
-                                            component: (0, r.jsx)(a.X6q, {
-                                                variant: 'heading-lg/semibold',
-                                                children: j.intl.string(j.t.r9qKo6)
-                                            }),
-                                            children: (0, r.jsx)(a.Text, {
-                                                className: x.message,
-                                                lineClamp: 1,
-                                                variant: 'text-sm/medium',
-                                                color: 'text-secondary',
-                                                children: E
-                                            })
-                                        })
-                                    }),
-                                    (0, r.jsx)(a.olH, {
-                                        className: x.closeButton,
-                                        onClick: P
-                                    })
-                                ]
-                            }),
-                            (0, r.jsx)(a.E1j, {
-                                ref: W,
-                                size: a.E1j.Sizes.MEDIUM,
-                                query: R,
-                                onChange: V,
-                                onClear: B,
-                                placeholder: j.intl.string(j.t['5h0QOD']),
-                                'aria-label': j.intl.string(j.t['5h0QOD']),
-                                autoFocus: !0
-                            })
-                        ]
-                    }),
-                    Q,
-                    (0, r.jsx)(a.mzw, {
-                        className: x.footer,
-                        children: (0, r.jsxs)('div', {
-                            className: x.copySendBar,
-                            children: [
-                                (0, r.jsx)(S, {
-                                    link: I,
-                                    onCopyLink: Z
-                                }),
-                                (0, r.jsx)(i.zx, {
-                                    className: x.sendWithMessage,
-                                    onClick: () => K(z),
-                                    submitting: T,
-                                    disabled: !(q > 0),
-                                    children: j.intl.string(j.t.TXNS7e)
-                                })
-                            ]
-                        })
-                    })
-                ]
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-              }),
-        t)
-    );
-}
-function S(e) {
-    let { link: t, onCopyLink: n } = e,
-        [s, o] = l.useState(!1);
-    return (
-        l.useEffect(() => {
-            let e;
-            return (
-                s &&
-                    (e = setTimeout(() => {
-                        o(!1);
-                    }, 1000)),
-                () => {
-                    null != e && clearTimeout(e);
-                }
-            );
-        }, [s]),
-        (0, r.jsxs)(i.zx, {
-            look: i.zx.Looks.LINK,
-            color: i.zx.Colors.LINK,
-            onClick: function () {
-                (0, m.JG)(t, () => {
-                    (n(), o(!0));
-                });
+                text: x.intl.string(x.t.WqhZsr),
+                variant: 'secondary',
+                onClick: J
             },
-            innerClassName: x.copyButton,
-            children: [
-                s
-                    ? (0, r.jsx)(a.owK, {
-                          size: 'md',
-                          color: 'currentColor'
-                      })
-                    : (0, r.jsx)(a.TIy, {
-                          size: 'xs',
-                          color: 'currentColor'
-                      }),
-                s ? j.intl.string(j.t['t5VZ8/']) : j.intl.string(j.t.WqhZsr)
-            ]
-        })
-    );
+            {
+                text: x.intl.string(x.t.TXNS7e),
+                variant: 'primary',
+                onClick: () => X(I),
+                loading: T,
+                disabled: !(A > 0)
+            }
+        ],
+        children: Q
+    });
 }

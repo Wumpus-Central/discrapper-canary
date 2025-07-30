@@ -2332,7 +2332,6 @@ var tU = (function (e) {
             (e.LOGIN = 'Login'),
             (e.OVERLAY = 'Overlay'),
             (e.STICKERS_SHOP = 'Stickers Shop'),
-            (e.STICKER_PACK_VIEW_ALL = 'Sticker Pack View All'),
             (e.STICKER_PICKER_UPSELL = 'Sticker Picker Upsell'),
             (e.STICKER_PREMIUM_TIER_2_UPSELL_MODAL = 'Stickers Nitro Upsell Modal'),
             (e.STICKER_PREMIUM_TIER_1_UPSELL_MODAL = 'Stickers Nitro Classic Upsell Modal'),

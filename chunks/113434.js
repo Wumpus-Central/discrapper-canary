@@ -99,12 +99,14 @@ function B() {
 }
 function V(e) {
     return e.sort((e, t) => {
-        var n, r, i, a, o, s;
-        let l = !(0, A.zi)(e),
-            c = !(0, A.zi)(t),
-            u = (null == (n = e.userStatus) ? void 0 : n.enrolledAt) != null,
-            d = (null == (r = t.userStatus) ? void 0 : r.enrolledAt) != null;
-        return l !== c ? (l ? U : G) : u !== d ? (u ? U : G) : l && c ? F(null == (o = e.config) ? void 0 : o.expiresAt, null == (s = t.config) ? void 0 : s.expiresAt, 1) : F(null == (i = e.config) ? void 0 : i.expiresAt, null == (a = t.config) ? void 0 : a.expiresAt, 0);
+        var n, r, i, a, o, s, l, c;
+        let u = !(0, A.zi)(e);
+        if (!(0, A.zi)(t) !== u) return u ? U : G;
+        let d = (null == (n = e.userStatus) ? void 0 : n.claimedAt) != null,
+            _ = (null == (r = t.userStatus) ? void 0 : r.claimedAt) != null,
+            f = (null == (i = e.userStatus) ? void 0 : i.enrolledAt) != null,
+            p = (null == (a = t.userStatus) ? void 0 : a.enrolledAt) != null;
+        return u ? (d !== _ ? (d ? G : U) : f !== p ? (f ? U : G) : F(null == (o = e.config) ? void 0 : o.expiresAt, null == (s = t.config) ? void 0 : s.expiresAt, 1)) : d !== _ ? (d ? U : G) : f !== p ? (f ? U : G) : F(null == (l = e.config) ? void 0 : l.expiresAt, null == (c = t.config) ? void 0 : c.expiresAt, 0);
     });
 }
 function F(e, t, n) {
