@@ -11,7 +11,7 @@ var r = n(990547),
     p = n(526761);
 let m = {
     createChannel(e) {
-        let { guildId: t, type: n, name: m, permissionOverwrites: f = [], bitrate: g, userLimit: _, parentId: h, skuId: b, branchId: E } = e;
+        let { guildId: t, type: n, name: m, permissionOverwrites: f = [], bitrate: _, userLimit: g, parentId: h, skuId: b, branchId: E } = e;
         l.Z.dispatch({
             type: 'CREATE_CHANNEL_MODAL_SUBMIT',
             guildId: t,
@@ -22,7 +22,7 @@ let m = {
             name: m,
             permission_overwrites: f
         };
-        if ((null != g && g !== d.epw && (C.bitrate = g), null != _ && _ > 0 && (C.user_limit = _), null != h && (C.parent_id = h), n === d.d4z.GUILD_STORE)) {
+        if ((null != _ && _ !== d.epw && (C.bitrate = _), null != g && g > 0 && (C.user_limit = g), null != h && (C.parent_id = h), n === d.d4z.GUILD_STORE)) {
             if (null == b) throw Error('Unexpected missing SKU');
             ((C.sku_id = b), (C.branch_id = E));
         }

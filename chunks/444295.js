@@ -10,10 +10,10 @@
 }),
     n(388685));
 var r = n(73800),
-    i = n(615287),
-    a = n(77498),
-    o = n(19780),
-    s = n(626135),
+    i = n(77498),
+    a = n(19780),
+    o = n(626135),
+    s = n(837268),
     l = n(981631),
     c = (function (e) {
         return ((e.OOP = 'oop'), (e.OOP_GAME = 'oop game'), (e.LEGACY = 'legacy'), (e.LEGACY_GAME = 'legacy game'), e);
@@ -30,12 +30,12 @@ function u(e) {
     }
 }
 function d(e, t, r) {
-    var o, c, d;
-    let _ = null != r ? a.Z.getDetectableGame(r) : null,
+    var a, c, d;
+    let _ = null != r ? i.Z.getDetectableGame(r) : null,
         { default: f } = n(371651),
-        p = null != (o = null == f ? void 0 : f.getMostRecentOverlayRenderMethod()) ? o : void 0,
-        h = null != p ? i.gl[p] : void 0;
-    s.default.track(l.rMx.OVERLAY_TOGGLED, {
+        p = null != (a = null == f ? void 0 : f.getMostRecentOverlayRenderMethod()) ? a : void 0,
+        h = null != p ? s.gl[p] : void 0;
+    o.default.track(l.rMx.OVERLAY_TOGGLED, {
         enabled: e,
         setting_type: u(t),
         client_setting_type: t,
@@ -65,20 +65,20 @@ function _(e, t) {
 }
 function f(e, t) {
     var n, r, i;
-    let { locked: a, shownUserIds: c, liveUserIds: u, contentInventoryIds: d } = t;
+    let { locked: s, shownUserIds: c, liveUserIds: u, contentInventoryIds: d } = t;
     ((null != (n = null == c ? void 0 : c.length) ? n : 0) !== 0 || (null != (r = null == u ? void 0 : u.length) ? r : 0) !== 0 || (null != (i = null == d ? void 0 : d.length) ? i : 0) !== 0) &&
-        s.default.track(l.rMx.WIDGET_CONTENT_SHOWN, {
-            overlay_locked: a,
+        o.default.track(l.rMx.WIDGET_CONTENT_SHOWN, {
+            overlay_locked: s,
             widget_type: e,
             shown_user_ids: c,
             live_user_ids: u,
             content_inventory_ids: d,
-            media_session_id: o.Z.getMediaSessionId()
+            media_session_id: a.Z.getMediaSessionId()
         });
 }
 function p(e, t) {
     let { pinned: n, opacity: r } = t;
-    s.default.track(l.rMx.WIDGET_SETTING_UPDATED, {
+    o.default.track(l.rMx.WIDGET_SETTING_UPDATED, {
         widget_type: e,
         pinned: n,
         opacity: r
@@ -92,11 +92,11 @@ var h = (function (e) {
     })({});
 function g(e, t) {
     let { type: n, value: r, userId: i } = t;
-    s.default.track(l.rMx.WIDGET_INTERACTED, {
+    o.default.track(l.rMx.WIDGET_INTERACTED, {
         widget_type: e,
         interaction_type: n,
         interaction_value: r,
         target_user_id: i,
-        media_session_id: o.Z.getMediaSessionId()
+        media_session_id: a.Z.getMediaSessionId()
     });
 }

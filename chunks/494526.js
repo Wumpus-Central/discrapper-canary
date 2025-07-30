@@ -25,16 +25,16 @@ var r = n(255367),
     y = n(388032),
     N = n(84879),
     C = n(20493);
-let A = n(515695),
-    T = new _.Z('LoginQRSocket');
+let T = n(515695),
+    A = new _.Z('LoginQRSocket');
 function P(e) {
     let { text: t = '' } = e,
         [n, l] = i.useState(!1);
     return (
         i.useEffect(() => {
             let e = new Image();
-            ((e.src = A), (e.onload = () => l(!0)), (e.onerror = () => l(!0)));
-        }, [A]),
+            ((e.src = T), (e.onload = () => l(!0)), (e.onerror = () => l(!0)));
+        }, [T]),
         i.useEffect(() => {
             n && u.uvj.announce(y.intl.string(y.t.j2p129));
         }, [n]),
@@ -52,7 +52,7 @@ function P(e) {
                               (0, r.jsx)('div', {
                                   className: N.qrCodeOverlay,
                                   children: (0, r.jsx)('img', {
-                                      src: A,
+                                      src: T,
                                       alt: ''
                                   })
                               })
@@ -165,22 +165,22 @@ function w(e) {
                 d = (0, p.Z)(),
                 h = i.useMemo(() => new s.Z(1500, 30000), []),
                 m = (0, g.Z)(() => {
-                    (o({ step: 0 }), d ? n((e) => e + 1) : (T.info('document is not visible, will defer reconnection when document becomes visible.'), l(!0)));
+                    (o({ step: 0 }), d ? n((e) => e + 1) : (A.info('document is not visible, will defer reconnection when document becomes visible.'), l(!0)));
                 }),
                 f = i.useCallback(() => {
-                    (T.error('Could not complete QR code login, trying to restart with a new QR code.'), o({ step: 0 }), h.pending || h.fail(m));
+                    (A.error('Could not complete QR code login, trying to restart with a new QR code.'), o({ step: 0 }), h.pending || h.fail(m));
                 }, [m, h]);
             return (
                 i.useEffect(() => {
-                    d && r && 0 === a.step && (T.info('reconnecting, now that document is visible'), l(!1), n((e) => e + 1));
+                    d && r && 0 === a.step && (A.info('reconnecting, now that document is visible'), l(!1), n((e) => e + 1));
                 }, [a, d, r, l]),
                 i.useEffect(() => {
                     let t = Date.now(),
                         n = () => ''.concat(Date.now() - t, 'ms'),
                         r = 'wss:'.concat(window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT, '/?v=2'),
                         i = new WebSocket(r);
-                    T.info('[0ms] connecting to '.concat(r));
-                    let l = (e) => T.info('['.concat(n(), '] ').concat(e)),
+                    A.info('[0ms] connecting to '.concat(r));
+                    let l = (e) => A.info('['.concat(n(), '] ').concat(e)),
                         s = null,
                         a = null,
                         c = null,

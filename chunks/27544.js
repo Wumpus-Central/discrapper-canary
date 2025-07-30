@@ -9,14 +9,14 @@ var i = n(255367),
     d = n(856606),
     u = n(277053),
     h = n(259580),
-    m = n(388032),
-    g = n(241756);
+    g = n(388032),
+    m = n(241756);
 function p() {
     let e = (0, s.e7)([u.Z], () => u.Z.advancedMode),
         [t] = l.useState(new r.Z.Value(+!!e));
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(o.$i$, { className: g.advancedModeDivider }),
+            (0, i.jsx)(o.$i$, { className: m.advancedModeDivider }),
             (0, i.jsx)(o.y5t, {
                 component: (0, i.jsx)(a.zx, {
                     look: a.zx.Looks.BLANK,
@@ -37,12 +37,12 @@ function p() {
                     },
                     children: (0, i.jsxs)(o.vwX, {
                         tag: 'h1',
-                        className: g.advancedTitle,
+                        className: m.advancedTitle,
                         children: [
-                            m.intl.string(m.t.dYRsrq),
+                            g.intl.string(g.t.dYRsrq),
                             (0, i.jsx)(h.Z, {
                                 expanded: e,
-                                className: g.titleCaret,
+                                className: m.titleCaret,
                                 width: 20,
                                 height: 20
                             })

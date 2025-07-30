@@ -1,6 +1,6 @@
 n.d(t, {
-    I: () => x,
-    L0: () => _,
+    I: () => O,
+    L0: () => g,
     Rr: () => b,
     nH: () => C,
     tp: () => h,
@@ -18,13 +18,13 @@ var r = n(704215),
     p = n(981631);
 let m = 3 * o.Z.Millis.DAY,
     f = o.Z.Millis.WEEK,
-    g = o.Z.Millis.DAYS_30,
-    _ = () => {
+    _ = o.Z.Millis.DAYS_30,
+    g = () => {
         if (!(0, s.nZ)('block_user_feedback_utils')) return !1;
         let e = l.Z.getSinces();
         return Object.keys(e).some((t) => {
             let n = Date.now() - Date.parse(e[t]);
-            return l.Z.isBlocked(t) && n > f && n < g;
+            return l.Z.isBlocked(t) && n > f && n < _;
         });
     },
     h = (e, t, n, r) => {
@@ -44,7 +44,7 @@ let m = 3 * o.Z.Millis.DAY,
             o = c.Z.getIgnoreTimestamps();
         return Object.keys(o).some((e) => {
             let t = Date.now() - Number(o[e]);
-            return l.Z.isIgnored(e) && t > a && t < g;
+            return l.Z.isIgnored(e) && t > a && t < _;
         });
     },
     E = (e, t, n, r) => {
@@ -56,7 +56,7 @@ let m = 3 * o.Z.Millis.DAY,
         });
     },
     C = (e) => (e === r.z.AGE_VERIFICATION_SURVEY_MODAL_CLOSE ? d.L$.KID_STARTED : d.L$.GET_STARTED),
-    x = (e, t, n, r, i) => {
+    O = (e, t, n, r, i) => {
         a.default.track(p.rMx.AGE_VERIFICATION_FEEDBACK_SUBMITTED, {
             rating: e,
             feedback: t,

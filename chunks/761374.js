@@ -20,10 +20,10 @@ var i = n(255367),
     g = n(592125),
     y = n(355863),
     O = n(944486),
-    b = n(353038),
-    v = n(804570),
-    E = n(350663),
-    _ = n(610394),
+    b = n(837268),
+    v = n(353038),
+    E = n(804570),
+    _ = n(350663),
     x = n(461393),
     I = n(340101),
     S = n(501787),
@@ -79,7 +79,7 @@ let Z = [],
         width: e,
         height: t
     }),
-    T = P(E.bt, E.fd);
+    T = P(_.bt, _.fd);
 function k(e, t, n, i, r) {
     let { padding: o, sizeOffset: l } = r,
         a = Math.max(1, i),
@@ -89,7 +89,7 @@ function k(e, t, n, i, r) {
     return (e === I.C5.HORIZONTAL ? (u = n) : (c = t), P(c + l, u + l));
 }
 function D(e, t, n) {
-    return k(e, E.bt, E.fd, t, n);
+    return k(e, _.bt, _.fd, t, n);
 }
 let A = (e) => {
     let { operation: t, computedSize: n, originSize: i, borderWidth: r, padding: o, containerSpecs: l } = e,
@@ -97,8 +97,8 @@ let A = (e) => {
         s = Math.max(1, i.width - a) / Math.max(1, i.height - a),
         c = (() => {
             switch (t) {
-                case b.B.RESIZE_NORTH:
-                case b.B.RESIZE_SOUTH:
+                case v.B.RESIZE_NORTH:
+                case v.B.RESIZE_SOUTH:
                     return {
                         height: n.height,
                         width: Math.round((n.height - a) * s + a)
@@ -121,7 +121,7 @@ function R(e) {
     let { width: c, height: u } = A(
             N(
                 {
-                    operation: b.B.RESIZE_NORTH,
+                    operation: v.B.RESIZE_NORTH,
                     computedSize: {
                         width: n.width,
                         height: n.height
@@ -140,7 +140,7 @@ function R(e) {
         { width: d, height: p } = A(
             N(
                 {
-                    operation: b.B.RESIZE_NORTH,
+                    operation: v.B.RESIZE_NORTH,
                     computedSize: {
                         width: o.width,
                         height: o.height
@@ -170,12 +170,12 @@ function R(e) {
     });
 }
 function L(e) {
-    var t, n, a, b, x, P;
+    var t, n, a, v, x, P;
     let { id: A, widget: L, size: M, locked: z, padding: U, borderWidth: V, opacity: W, horizontal: G, pinned: F, anchorTop: B, anchorLeft: H, showEmpty: Y = !0 } = e,
         Q = 2 * U + 2 * V,
         { width: K, height: X } = {
-            width: 'number' == typeof M.width ? M.width : E.bt,
-            height: 'number' == typeof M.height ? M.height : E.fd
+            width: 'number' == typeof M.width ? M.width : _.bt,
+            height: 'number' == typeof M.height ? M.height : _.fd
         },
         J = (0, o.e7)([O.Z], () => O.Z.getVoiceChannelId()),
         { width: q = K - Q, height: $ = X - Q, ref: ee } = (0, c.ZP)(),
@@ -237,7 +237,7 @@ function L(e) {
             containerHeight: $
         },
         { tileWidth: ep, tileHeight: ef } = (function (e, t, n) {
-            let { tileWidth: i, tileHeight: o } = (0, E.IV)(n, t.containerWidth, t.containerHeight),
+            let { tileWidth: i, tileHeight: o } = (0, _.IV)(n, t.containerWidth, t.containerHeight),
                 [l, a] = r.useState(i),
                 [s, c] = r.useState(o);
             return (
@@ -274,14 +274,14 @@ function L(e) {
                 top: 0,
                 left: 0,
                 bottom: null != (a = null == eh ? void 0 : eh.height) ? a : X,
-                right: null != (b = null == eh ? void 0 : eh.width) ? b : K
+                right: null != (v = null == eh ? void 0 : eh.width) ? v : K
             }
         };
     return (r.useEffect(() => {
-        s.Z.setGpuBoostRequested(_.zS.OVERLAY_VIDEO_STREAM_RENDERING, !ec);
+        s.Z.setGpuBoostRequested(b.zS.OVERLAY_VIDEO_STREAM_RENDERING, !ec);
     }, [ec]),
     (0, u.ZP)(() => () => {
-        s.Z.setGpuBoostRequested(_.zS.OVERLAY_VIDEO_STREAM_RENDERING, !1);
+        s.Z.setGpuBoostRequested(b.zS.OVERLAY_VIDEO_STREAM_RENDERING, !1);
     }),
     (function (e) {
         let { streamParticipants: t, layout: n, widgetLayoutSpecs: i } = e,
@@ -389,7 +389,7 @@ function L(e) {
           ? Y
               ? z
                   ? null
-                  : (0, i.jsx)(v.E, {
+                  : (0, i.jsx)(E.E, {
                         emptyText: j.intl.string(j.t['T6+rX1']),
                         icon: l.hGI,
                         absolute: !0
@@ -399,7 +399,7 @@ function L(e) {
                 className: C.goLiveGridContainer,
                 style: { opacity: W },
                 ref: ee,
-                children: (0, i.jsx)(E.ZP, {
+                children: (0, i.jsx)(_.ZP, {
                     widgetId: A,
                     tileWidth: ep,
                     tileHeight: ef,

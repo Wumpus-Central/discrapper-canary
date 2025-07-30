@@ -2,8 +2,8 @@ n.d(t, {
     Q: () => m,
     t: () => h
 });
-var r = n(615287),
-    i = n(594190),
+var r = n(594190),
+    i = n(837268),
     a = n(371651),
     o = n(388627),
     s = n(131951),
@@ -45,20 +45,20 @@ function h() {
     let e,
         t,
         n,
-        r,
+        i,
         a,
         o = s.Z.getGoLiveSource();
     if (null != o && ((e = o.quality.resolution), (t = o.quality.frameRate), null != o.desktopSource)) {
         var l, c;
         n = o.desktopSource.soundshareSession;
-        let e = null != o.desktopSource.sourcePid ? i.ZP.getGameForPID(o.desktopSource.sourcePid) : null;
-        ((r = null != (l = null == e ? void 0 : e.name) ? l : null), (a = null != (c = null == e ? void 0 : e.id) ? c : null));
+        let e = null != o.desktopSource.sourcePid ? r.ZP.getGameForPID(o.desktopSource.sourcePid) : null;
+        ((i = null != (l = null == e ? void 0 : e.name) ? l : null), (a = null != (c = null == e ? void 0 : e.id) ? c : null));
     }
     return {
         video_input_resolution: e,
         video_input_frame_rate: t,
         soundshare_session: n,
-        share_game_name: r,
+        share_game_name: i,
         share_game_id: a
     };
 }
@@ -66,7 +66,7 @@ function m(e, t) {
     var n, s, f;
     let h = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         m = __OVERLAY__ ? c.Z.getGame() : (0, o.pL)(),
-        g = i.ZP.getRunningGames().find((e) => e.name === (null == m ? void 0 : m.name)),
+        g = r.ZP.getRunningGames().find((e) => e.name === (null == m ? void 0 : m.name)),
         E = (null == g ? void 0 : g.pid) != null ? a.default.getTrackedGameByPid(null == g ? void 0 : g.pid) : null,
         b = null != (n = null == E ? void 0 : E.source) ? n : null,
         y = null != (f = null != (s = null == E ? void 0 : E.overlayMethod) ? s : a.default.getRenderMethod(null == g ? void 0 : g.pid)) ? f : null;
@@ -77,7 +77,7 @@ function m(e, t) {
                 overlay_game_source: b,
                 overlay_game_name: null != m ? m.name : 'Unknown Game',
                 overlay_app_id: null != m ? m.id : null,
-                overlay_render_method: null != y ? r.gl[y] : null,
+                overlay_render_method: null != y ? i.gl[y] : null,
                 media_session_id: l.Z.getMediaSessionId()
             },
             t

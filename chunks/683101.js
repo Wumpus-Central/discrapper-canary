@@ -23,7 +23,7 @@ function f(e, t, n) {
         e
     );
 }
-function g(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function g(e) {
     }
     return e;
 }
-function _(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ class h extends i.PureComponent {
             offset: 4,
             children: (0, r.jsxs)(
                 'li',
-                _(g({ className: m.container }, t), {
+                g(_({ className: m.container }, t), {
                     'aria-posinset': 1 + n + i,
                     'aria-setsize': l,
                     'aria-labelledby': f,
@@ -128,7 +128,7 @@ class h extends i.PureComponent {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                _(g({}, n), {
+                                g(_({}, n), {
                                     message: t,
                                     channel: i
                                 })

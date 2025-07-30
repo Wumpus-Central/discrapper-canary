@@ -72,9 +72,9 @@ let O = () =>
         let n,
             i,
             o,
-            { invite: c, disableUser: O = !1, error: y, flatActivityCount: N = !1, isRegister: C = !1, inUnclaimedFlow: A = !1 } = e,
-            { currentUser: T } = (0, l.cj)([f.default], () => ({ currentUser: f.default.getCurrentUser() })),
-            P = (0, d.WR)({ location: 'invite' }) && null != T;
+            { invite: c, disableUser: O = !1, error: y, flatActivityCount: N = !1, isRegister: C = !1, inUnclaimedFlow: T = !1 } = e,
+            { currentUser: A } = (0, l.cj)([f.default], () => ({ currentUser: f.default.getCurrentUser() })),
+            P = (0, d.WR)({ location: 'invite' }) && null != A;
         if (null == c) return null;
         let Z = null != c.guild ? (_.lM(c.guild) ? c.guild : _.Qs(c.guild)) : null,
             R = null != c.channel ? (0, g.jD)(c.channel) : null,
@@ -186,7 +186,7 @@ let O = () =>
                           total: c.approximate_member_count,
                           flat: N
                       }),
-                !A && P ? (0, r.jsx)(h.R, {}) : (0, r.jsx)(a.jQ, { user: T })
+                !T && P ? (0, r.jsx)(h.R, {}) : (0, r.jsx)(a.jQ, { user: A })
             ]
         });
     };

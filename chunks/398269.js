@@ -3,21 +3,21 @@ var r = n(255367);
 n(73800);
 var i = n(608787),
     a = n(765250),
-    o = n(615287),
-    s = n(788983),
-    l = n(355863),
+    o = n(788983),
+    s = n(355863),
+    l = n(837268),
     c = n(32300),
     u = n(757744),
     d = n(501787);
 async function _() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o.R5.UNSET,
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.R5.UNSET,
         t = {
             outOfProcessOverlay: !0,
             focusable: !1
         },
         _ = (0, c.Rb)('openOverlayPopout').overlayV3UI;
-    if (!_ && e === o.R5.UNSET) return;
-    let f = e === o.R5.OUT_OF_PROCESS_V3 || e === o.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
+    if (!_ && e === l.R5.UNSET) return;
+    let f = e === l.R5.OUT_OF_PROCESS_V3 || e === l.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION,
         p = (e) => null;
     if (_ || f) {
         let e = (0, i.Un)({
@@ -30,7 +30,7 @@ async function _() {
                 withTitleBar: !1,
                 windowKey: t
             })),
-            (0, a.te)(u.$S, l.Z.getDefaultLayout(u.$S, u.HN), u.HN));
+            (0, a.te)(u.$S, s.Z.getDefaultLayout(u.$S, u.HN), u.HN));
     } else throw Error('OverlayV3Utils: No overlay rendering mode found');
-    await s.bA(d.$J, p, t);
+    await o.bA(d.$J, p, t);
 }

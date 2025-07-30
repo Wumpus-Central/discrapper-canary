@@ -5,11 +5,11 @@ var a = n(255367),
     s = n(379649),
     o = n(755721),
     l = n(481060),
-    d = n(615287),
-    c = n(493773),
-    u = n(594190),
-    m = n(77498),
-    _ = n(626135),
+    d = n(493773),
+    c = n(594190),
+    u = n(77498),
+    m = n(626135),
+    _ = n(837268),
     x = n(371651),
     h = n(981631),
     g = n(388032),
@@ -22,15 +22,15 @@ function v(e) {
         [S, R] = r.useState(!1),
         [z, w] = r.useState(!1),
         [I, M] = r.useState(!1),
-        A = (0, i.e7)([m.Z, u.ZP], () => {
+        A = (0, i.e7)([u.Z, c.ZP], () => {
             var e;
-            let t = null != j ? j : null == (e = u.ZP.getCurrentGameForAnalytics()) ? void 0 : e.id;
-            return null == t ? null : m.Z.getDetectableGame(t);
+            let t = null != j ? j : null == (e = c.ZP.getCurrentGameForAnalytics()) ? void 0 : e.id;
+            return null == t ? null : u.Z.getDetectableGame(t);
         }),
         B = (0, i.e7)([x.default], () => {
             var e;
             let t = null != (e = null === x.default || void 0 === x.default ? void 0 : x.default.getMostRecentOverlayRenderMethod()) ? e : void 0;
-            return null != t ? d.gl[t] : void 0;
+            return null != t ? _.gl[t] : void 0;
         }),
         H = r.useMemo(() => {
             let e = {
@@ -54,7 +54,7 @@ function v(e) {
                 return;
             }
             (f(!0),
-                await _.default.track(h.rMx.OVERLAY_DISABLED_SURVEY, {
+                await m.default.track(h.rMx.OVERLAY_DISABLED_SURVEY, {
                     reason: C,
                     comment: b,
                     client_setting_type: v,
@@ -69,8 +69,8 @@ function v(e) {
                 t());
         };
     return (
-        (0, c.ZP)(() => {
-            _.default.track(h.rMx.OPEN_MODAL, { type: 'overlay_disabled_questionnaire_modal' });
+        (0, d.ZP)(() => {
+            m.default.track(h.rMx.OPEN_MODAL, { type: 'overlay_disabled_questionnaire_modal' });
         }),
         (0, a.jsxs)(l.Y0X, {
             transitionState: n,

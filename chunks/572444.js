@@ -91,7 +91,7 @@ function _() {
         [_, y] = r.useState(null),
         C = r.useRef(null),
         O = r.useRef(null),
-        [N, T] = r.useState(0.5),
+        [T, N] = r.useState(0.5),
         {
             krispModels: E,
             krispModelOverride: S,
@@ -131,7 +131,7 @@ function _() {
     function G(e) {
         if ((t && z(), B(), null == F)) return;
         let a = F.createBufferSource();
-        ((a.buffer = e.audioBuffer), (O.current = F.createGain()), (O.current.gain.value = N), a.connect(O.current), O.current.connect(F.destination), (a.loop = !0), a.start(), (C.current = a), y(e));
+        ((a.buffer = e.audioBuffer), (O.current = F.createGain()), (O.current.gain.value = T), a.connect(O.current), O.current.connect(F.destination), (a.loop = !0), a.start(), (C.current = a), y(e));
     }
     r.useEffect(() => {
         B();
@@ -318,9 +318,9 @@ function _() {
                         title: 'Volume',
                         tag: c.RB0.H3,
                         children: (0, n.jsx)(c.iRW, {
-                            initialValue: N,
+                            initialValue: T,
                             asValueChanges: function (e) {
-                                null != O.current && ((O.current.gain.value = e), T(e));
+                                null != O.current && ((O.current.gain.value = e), N(e));
                             },
                             minValue: 0,
                             maxValue: 1

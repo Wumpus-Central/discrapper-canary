@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => p }), n(388685));
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(525654),
@@ -473,4 +473,4 @@ class d extends i.Component {
             c(this, 'shouldLoop', () => this._isMounted));
     }
 }
-let p = d;
+let _ = d;

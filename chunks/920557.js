@@ -1,4 +1,4 @@
-(n.d(t, { K: () => I }), n(388685), n(314940));
+(n.d(t, { K: () => j }), n(388685), n(314940));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -11,13 +11,13 @@ var r = n(255367),
     p = n(313201),
     m = n(542578),
     f = n(203143),
-    g = n(79390),
-    _ = n(839963),
+    _ = n(79390),
+    g = n(839963),
     h = n(139256),
     b = n(294608),
     E = n(388032),
     C = n(709893);
-function x(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,21 +42,21 @@ function x(e) {
     }
     return e;
 }
-function v(e) {
+function y(e) {
     let { percentage: t, label: n, canShowVoterDetails: l, answerId: a } = e,
         s = (0, p.Dt)(),
         { channelId: c, messageId: u } = (0, b.pE)(),
-        [_, h] = i.useState(''),
-        [E, v] = i.useState(!1),
-        O = '' !== _ && E,
-        y = i.useCallback(() => {
-            h((0, g.e1)(u, c, a));
+        [g, h] = i.useState(''),
+        [E, y] = i.useState(!1),
+        v = '' !== g && E,
+        x = i.useCallback(() => {
+            h((0, _.e1)(u, c, a));
         }, [u, c, a]),
-        j = i.useCallback(() => {
-            (y(), v(!0));
-        }, [y]),
         I = i.useCallback(() => {
-            v(!1);
+            (x(), y(!0));
+        }, [x]),
+        j = i.useCallback(() => {
+            y(!1);
         }, []),
         S = i.useCallback(() => {
             (0, f.n)({
@@ -69,12 +69,12 @@ function v(e) {
         i.useEffect(() => {
             if (E)
                 return (
-                    m.Z.addReactChangeListener(y),
+                    m.Z.addReactChangeListener(x),
                     () => {
-                        m.Z.removeReactChangeListener(y);
+                        m.Z.removeReactChangeListener(x);
                     }
                 );
-        }, [E, y]),
+        }, [E, x]),
         (0, r.jsxs)('div', {
             className: C.votesData,
             children: [
@@ -86,23 +86,23 @@ function v(e) {
                                       variant: 'text-sm/normal',
                                       color: 'text-muted',
                                       scaleFontToUserSetting: !0,
-                                      children: _
+                                      children: g
                                   }),
-                                  forceOpen: O,
+                                  forceOpen: v,
                                   'aria-label': !1,
                                   children: (e) => {
                                       var t, i;
                                       return (0, r.jsx)(
                                           d.Avr,
-                                          ((t = x({}, e)),
+                                          ((t = O({}, e)),
                                           (i = i =
                                               {
-                                                  onMouseEnter: j,
-                                                  onMouseLeave: I,
-                                                  onFocus: j,
-                                                  onBlur: I,
+                                                  onMouseEnter: I,
+                                                  onMouseLeave: j,
+                                                  onFocus: I,
+                                                  onBlur: j,
                                                   onClick: S,
-                                                  'aria-describedby': O ? s : void 0,
+                                                  'aria-describedby': v ? s : void 0,
                                                   text: n,
                                                   variant: 'secondary',
                                                   textVariant: 'text-xs/semibold'
@@ -123,10 +123,10 @@ function v(e) {
                                       );
                                   }
                               }),
-                              O &&
+                              v &&
                                   (0, r.jsx)(o.T, {
                                       id: s,
-                                      children: _
+                                      children: g
                                   })
                           ]
                       })
@@ -146,7 +146,7 @@ function v(e) {
         })
     );
 }
-function O(e) {
+function v(e) {
     let { percentage: t, shouldAnimate: n } = e,
         i = (0, d.q_F)(
             {
@@ -165,20 +165,20 @@ function O(e) {
         'aria-hidden': !0
     });
 }
-function y(e) {
+function x(e) {
     let { answersInteraction: t, isSelected: n, didSelfVote: i, isVictor: l, isExpired: a, className: o } = e;
     return (0, c.EQ)({
         answersInteraction: t,
         didSelfVote: i
     })
-        .with({ answersInteraction: _.Y7.RADIO_BUTTONS }, () =>
+        .with({ answersInteraction: g.Y7.RADIO_BUTTONS }, () =>
             (0, r.jsx)(h.Og, {
                 isSelected: n,
                 size: 24,
                 className: o
             })
         )
-        .with({ answersInteraction: _.Y7.CHECKBOXES }, () =>
+        .with({ answersInteraction: g.Y7.CHECKBOXES }, () =>
             (0, r.jsx)(h.zs, {
                 isSelected: n,
                 size: 20,
@@ -187,7 +187,7 @@ function y(e) {
         )
         .with(
             {
-                answersInteraction: _.Y7.LIST,
+                answersInteraction: g.Y7.LIST,
                 didSelfVote: !0
             },
             () =>
@@ -200,7 +200,7 @@ function y(e) {
         )
         .otherwise(() => null);
 }
-function j(e) {
+function I(e) {
     let { answer: t, isExpired: n, answersInteraction: i, canShowVoteCounts: l, canShowVoterDetails: s } = e,
         c = !0 === t.isSelected,
         u = !0 === t.didSelfVote,
@@ -208,12 +208,12 @@ function j(e) {
         m = t.shouldAnimateTransition;
     return (0, r.jsxs)('div', {
         className: a()(C.answerInner, {
-            [C.currentlyVoting]: i !== _.Y7.LIST,
+            [C.currentlyVoting]: i !== g.Y7.LIST,
             [C.selected]: c
         }),
         children: [
             l
-                ? (0, r.jsx)(O, {
+                ? (0, r.jsx)(v, {
                       percentage: t.votesPercentage,
                       shouldAnimate: m
                   })
@@ -232,13 +232,13 @@ function j(e) {
             }),
             t.didSelfVote && (0, r.jsx)(o.T, { children: E.intl.string(E.t['8DAM+/']) }),
             l &&
-                (0, r.jsx)(v, {
+                (0, r.jsx)(y, {
                     percentage: t.votesPercentage,
                     label: t.votes,
                     canShowVoterDetails: s,
                     answerId: t.answerId
                 }),
-            (0, r.jsx)(y, {
+            (0, r.jsx)(x, {
                 answersInteraction: i,
                 isSelected: c,
                 didSelfVote: u,
@@ -249,7 +249,7 @@ function j(e) {
         ]
     });
 }
-function I(e) {
+function j(e) {
     var { isExpired: t, answersInteraction: n, canShowVoteCounts: i, canTapAnswers: l } = e,
         a = (function (e, t) {
             if (null == e) return {};
@@ -272,14 +272,14 @@ function I(e) {
         })(e, ['isExpired', 'answersInteraction', 'canShowVoteCounts', 'canTapAnswers']);
     return (0, r.jsx)(
         h.$e,
-        x(
+        O(
             {
                 className: C.answersContainer,
                 answerClassName: C.answer,
                 answersInteraction: n,
                 canTapAnswers: l,
                 renderAnswerContent: (e) =>
-                    (0, r.jsx)(j, {
+                    (0, r.jsx)(I, {
                         answer: e,
                         isExpired: t,
                         answersInteraction: n,

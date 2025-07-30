@@ -1,7 +1,7 @@
-r.d(t, { xd: () => a });
-var n = r(818083),
-    s = r(154579);
-let l = (0, n.B)({
+n.d(t, { xd: () => a });
+var r = n(818083),
+    i = n(154579);
+let l = (0, r.B)({
     kind: 'user',
     id: '2025-07_search_filters_redesign',
     label: 'Search Filters Redesign',
@@ -37,17 +37,17 @@ let l = (0, n.B)({
     ]
 });
 function a(e) {
-    let { isXDMSearch: t, location: r, autoTrackExposure: n = !0 } = e,
-        a = (0, s.nd)({
-            location: r,
-            autoTrackExposure: n
+    let { isXDMSearch: t, location: n, autoTrackExposure: r = !0 } = e,
+        a = (0, i.nd)({
+            location: n,
+            autoTrackExposure: r
         }),
-        { isResultFiltersRedesignEnabled: i } = l.useExperiment(
-            { location: r },
+        { isResultFiltersRedesignEnabled: o } = l.useExperiment(
+            { location: n },
             {
-                autoTrackExposure: n,
+                autoTrackExposure: r,
                 disable: a || t
             }
         );
-    return i;
+    return o;
 }

@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => h,
-    y: () => _
+    y: () => g
 }),
     n(953529));
 var r = n(255367),
@@ -15,7 +15,7 @@ var r = n(255367),
     p = n(411198),
     m = n(388032),
     f = n(515230);
-let g = (e) => {
+let _ = (e) => {
         var t;
         let { speaker: n, guildId: i, isEmbed: l } = e,
             a = new d.Z(n.user);
@@ -37,7 +37,7 @@ let g = (e) => {
             ]
         });
     },
-    _ = (e) => {
+    g = (e) => {
         let { guild: t, onlineCount: n } = e;
         if (null == t) return null;
         let i = p.Qs(t),
@@ -99,15 +99,15 @@ let g = (e) => {
     },
     h = (e) => {
         var t;
-        let { stageInstance: n, guild: l, isCard: d = !1, isEmbed: _ = !1, onClick: h } = e,
+        let { stageInstance: n, guild: l, isCard: d = !1, isEmbed: g = !1, onClick: h } = e,
             b = i.useMemo(() => (null == l ? null : p.lM(l) ? l : p.Qs(l)), [l]);
         if (null == n || null == b) return null;
-        let { topic: E, speaker_count: C, participant_count: x } = n,
-            v = null != (t = n.members) ? t : [],
-            O = _ ? v.slice(0, 3) : v,
-            y = C - O.length;
+        let { topic: E, speaker_count: C, participant_count: O } = n,
+            y = null != (t = n.members) ? t : [],
+            v = g ? y.slice(0, 3) : y,
+            x = C - v.length;
         return (
-            _ && (y += v.length - O.length),
+            g && (x += y.length - v.length),
             (0, r.jsxs)('div', {
                 children: [
                     (0, r.jsxs)('div', {
@@ -143,15 +143,15 @@ let g = (e) => {
                                     (0, r.jsx)(s.X6q, {
                                         className: a()(f.__invalid_label, f.listeners),
                                         variant: 'heading-sm/semibold',
-                                        children: x
+                                        children: O
                                     })
                                 ]
                             })
                         ]
                     }),
-                    _ &&
+                    g &&
                         (0, r.jsxs)('div', {
-                            className: a()(f.guild, { [f.embed]: _ }),
+                            className: a()(f.guild, { [f.embed]: g }),
                             children: [
                                 (0, r.jsx)(c.ZP, {
                                     mask: c.ZP.Masks.SQUIRCLE,
@@ -172,52 +172,52 @@ let g = (e) => {
                             ]
                         }),
                     (0, r.jsx)(s.X6q, {
-                        variant: d || _ ? 'heading-md/semibold' : 'heading-lg/semibold',
-                        className: a()(f.header, { [f.embed]: _ }),
+                        variant: d || g ? 'heading-md/semibold' : 'heading-lg/semibold',
+                        className: a()(f.header, { [f.embed]: g }),
                         children: E
                     }),
                     (0, r.jsxs)('div', {
-                        className: a()(f.members, { [f.embed]: _ }),
+                        className: a()(f.members, { [f.embed]: g }),
                         children: [
-                            O.length > 0 &&
+                            v.length > 0 &&
                                 (0, r.jsxs)('div', {
                                     className: f.speakers,
                                     children: [
-                                        O.map((e) =>
+                                        v.map((e) =>
                                             (0, r.jsx)(
-                                                g,
+                                                _,
                                                 {
                                                     speaker: e,
                                                     guildId: b.id,
-                                                    isEmbed: _
+                                                    isEmbed: g
                                                 },
                                                 e.user.id
                                             )
                                         ),
-                                        y > 0
+                                        x > 0
                                             ? (0, r.jsxs)('div', {
                                                   className: f.speaker,
                                                   children: [
                                                       (0, r.jsx)('div', {
-                                                          className: a()(f.icon, { [f.embed]: _ }),
+                                                          className: a()(f.icon, { [f.embed]: g }),
                                                           children: (0, r.jsx)(s.S6n, {
                                                               size: 'custom',
                                                               color: 'currentColor',
-                                                              height: _ ? 12 : 14,
+                                                              height: g ? 12 : 14,
                                                               className: f.listeners
                                                           })
                                                       }),
                                                       (0, r.jsxs)(s.Text, {
-                                                          variant: _ ? 'text-xs/normal' : 'text-sm/normal',
+                                                          variant: g ? 'text-xs/normal' : 'text-sm/normal',
                                                           color: 'text-secondary',
-                                                          children: ['+', m.intl.format(m.t.L1pCBQ, { count: y })]
+                                                          children: ['+', m.intl.format(m.t.L1pCBQ, { count: x })]
                                                       })
                                                   ]
                                               })
                                             : null
                                     ]
                                 }),
-                            _ &&
+                            g &&
                                 (0, r.jsx)(o.zx, {
                                     color: o.zx.Colors.GREEN,
                                     onClick: h,

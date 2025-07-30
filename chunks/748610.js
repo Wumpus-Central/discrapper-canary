@@ -14,7 +14,7 @@ function m() {
 }
 let f = {
     fetchTabMessages: function (e) {
-        let { searchContext: t, searchTabs: n, searchQueryString: r, pagination: o, trackExactTotalHits: c, getId: u, getLimit: m, onFetchStart: f, onFetchSuccess: g, searchMode: _ = p.QIO.NEWEST } = e,
+        let { searchContext: t, searchTabs: n, searchQueryString: r, pagination: o, trackExactTotalHits: c, getId: u, getLimit: m, onFetchStart: f, onFetchSuccess: _, searchMode: g = p.QIO.NEWEST } = e,
             h = (0, s.kG)(r),
             b = (0, s.$G)(h);
         !(function (e) {
@@ -46,10 +46,10 @@ let f = {
                         }));
                 }
                 return e;
-            })({}, b, (0, s.zH)(_)),
+            })({}, b, (0, s.zH)(g)),
             C = (0, s.s5)(t);
         null != C && (0, s.jW)(E, C);
-        let x = d.Z.create({
+        let O = d.Z.create({
             id: (0, s.Tm)(t),
             searchContext: t,
             searchQuery: E,
@@ -64,13 +64,13 @@ let f = {
                 searchQueryString: r,
                 searchQuery: E
             });
-        let v = n.map((e) => u(e));
+        let y = n.map((e) => u(e));
         return (
             l.Z.dispatch({
                 type: 'SEARCH_MESSAGES_START',
-                ids: v
+                ids: y
             }),
-            x.fetch(
+            O.fetch(
                 (e) => {
                     let { body: n } = e,
                         r = Object.entries(n.tabs);
@@ -96,8 +96,8 @@ let f = {
                             };
                         })
                     }),
-                        null == g ||
-                            g({
+                        null == _ ||
+                            _({
                                 searchContext: t,
                                 tabEntries: r
                             }));
@@ -105,13 +105,13 @@ let f = {
                 () => {
                     l.Z.dispatch({
                         type: 'SEARCH_MESSAGES_INDEXING',
-                        ids: v
+                        ids: y
                     });
                 },
                 (e) => {
                     l.Z.dispatch({
                         type: 'SEARCH_MESSAGES_FAILURE',
-                        ids: v,
+                        ids: y,
                         error: e
                     });
                 }

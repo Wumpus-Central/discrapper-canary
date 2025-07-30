@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(953529));
+(n.d(t, { Z: () => x }), n(953529));
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -11,8 +11,8 @@ var r = n(255367),
     p = n(739566),
     m = n(942951),
     f = n(834129),
-    g = n(809026),
-    _ = n(139256),
+    _ = n(809026),
+    g = n(139256),
     h = n(489887),
     b = n(388032),
     E = n(271629);
@@ -31,7 +31,7 @@ function C() {
         })
     });
 }
-function x(e) {
+function O(e) {
     let t,
         { hasNoVotes: n, victorEmoji: i } = e;
     if (n) t = (0, r.jsx)(C, {});
@@ -50,7 +50,7 @@ function x(e) {
           })
         : null;
 }
-function v(e) {
+function y(e) {
     let t;
     var { type: n } = e,
         i = (function (e, t) {
@@ -96,7 +96,7 @@ function v(e) {
                                 scaleFontToUserSetting: !0,
                                 children: a
                             }),
-                            (0, r.jsx)(_.ZY, {
+                            (0, r.jsx)(g.ZY, {
                                 size: 16,
                                 className: E.victorIcon,
                                 isVictor: !0,
@@ -137,7 +137,7 @@ function v(e) {
         children: t
     });
 }
-function O(e) {
+function v(e) {
     let { className: t, data: n, onClickPollLink: l } = e,
         o = i.useMemo(
             () =>
@@ -162,12 +162,12 @@ function O(e) {
     return (0, r.jsxs)('div', {
         className: a()(E.container, { [E.containerWithImage]: c }, t),
         children: [
-            (0, r.jsx)(x, {
+            (0, r.jsx)(O, {
                 hasNoVotes: 'NO_VOTES' === o.type,
                 victorEmoji: n.victorEmoji
             }),
             (0, r.jsx)(
-                v,
+                y,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -204,30 +204,30 @@ function O(e) {
         ]
     });
 }
-function y(e) {
+function x(e) {
     var t;
     let { message: n, channel: l, compact: a, disableInteraction: u = !1 } = e,
         d = n.embeds[0],
-        _ = i.useMemo(() => (0, g.Z)(d), [d]),
-        C = (0, o.aF)(null != (t = null == _ ? void 0 : _.questionText) ? t : '', h.Dv),
-        x = (0, p.ZP)(n),
-        v = (0, m.l)({
+        g = i.useMemo(() => (0, _.Z)(d), [d]),
+        C = (0, o.aF)(null != (t = null == g ? void 0 : g.questionText) ? t : '', h.Dv),
+        O = (0, p.ZP)(n),
+        y = (0, m.l)({
             user: n.author,
             channelId: l.id,
             guildId: l.guild_id,
             messageId: n.id
         }),
-        y = n.messageReference,
-        j = i.useCallback(() => {
-            null != y &&
+        x = n.messageReference,
+        I = i.useCallback(() => {
+            null != x &&
                 c.Z.jumpToMessage({
-                    channelId: y.channel_id,
-                    messageId: y.message_id,
+                    channelId: x.channel_id,
+                    messageId: x.message_id,
                     flash: !0,
                     returnMessageId: n.id
                 });
-        }, [n.id, y]);
-    return null == _
+        }, [n.id, x]);
+    return null == g
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
@@ -236,16 +236,16 @@ function y(e) {
                       timestamp: n.timestamp,
                       compact: a,
                       children: b.intl.format(b.t['VJcK4+'], {
-                          username: x.nick,
-                          usernameHook: v(x),
+                          username: O.nick,
+                          usernameHook: y(O),
                           title: C,
-                          titleOnClick: j
+                          titleOnClick: I
                       })
                   }),
-                  (0, r.jsx)(O, {
+                  (0, r.jsx)(v, {
                       className: E.embed,
-                      data: _,
-                      onClickPollLink: u ? void 0 : j
+                      data: g,
+                      onClickPollLink: u ? void 0 : I
                   })
               ]
           });

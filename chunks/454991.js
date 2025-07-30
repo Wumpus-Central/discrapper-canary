@@ -46,6 +46,17 @@ class s {
     static load() {
         return (null == s._loaded && (s._loaded = s.loadInternal()), s._loaded);
     }
+    static serialize() {
+        let e = this.load();
+        return {
+            legacyEnabled: e.legacyEnabled,
+            oopEnabled: e.oopEnabled
+        };
+    }
+    static fromSerialized(e) {
+        let t = new s(e.legacyEnabled, e.oopEnabled);
+        return (t.save(), t);
+    }
     static loadInternal() {
         var e, t, n, a, o;
         let l = r.K.get('OverlayStore');

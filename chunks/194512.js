@@ -13,6 +13,6 @@ e.exports = {
     defaultImageView: 'defaultImageView__0511a',
     nameInput: 'nameInput__0511a',
     emojiButton: 'emojiButton__0511a',
-    nameInputWrapperWithEmojiPicker: 'nameInputWrapperWithEmojiPicker__0511a',
-    nameInputInnerWithEmojiPicker: 'nameInputInnerWithEmojiPicker__0511a'
+    nameInputWrapper: 'nameInputWrapper__0511a',
+    nameInputInner: 'nameInputInner__0511a'
 };

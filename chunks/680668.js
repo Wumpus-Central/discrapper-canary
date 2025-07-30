@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => x }), n(997841), n(388685));
+(n.d(t, { Z: () => O }), n(997841), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(533800),
@@ -11,28 +11,28 @@ var r = n(255367),
     p = n(955415),
     m = n(131704),
     f = n(630388),
-    g = n(411198),
-    _ = n(277707),
+    _ = n(411198),
+    g = n(277707),
     h = n(358595),
     b = n(981631),
     E = n(388032),
     C = n(273254);
-function x(e) {
-    var t, x, v;
-    let O,
-        y,
-        j,
-        { onTransitionToInviteChannel: I, onAcceptInstantInvite: S, guild: T, invite: N, message: P, currentUserId: A } = e,
+function O(e) {
+    var t, O, y;
+    let v,
+        x,
+        I,
+        { onTransitionToInviteChannel: j, onAcceptInstantInvite: S, guild: T, invite: N, message: P, currentUserId: A } = e,
         w = A === P.author.id,
-        { channel: Z, approximate_member_count: R, approximate_presence_count: L } = N,
-        D = N.state === b.r2o.ACCEPTING,
-        k = null != Z ? (0, m.jD)(Z) : null,
-        M = null != T,
-        U = null != k,
-        F = null != k && k.isGuildVocal(),
-        B = null != k && k.isGuildStageVoice(),
+        { channel: Z, approximate_member_count: R, approximate_presence_count: D } = N,
+        L = N.state === b.r2o.ACCEPTING,
+        M = null != Z ? (0, m.jD)(Z) : null,
+        k = null != T,
+        U = null != M,
+        F = null != M && M.isGuildVocal(),
+        B = null != M && M.isGuildStageVoice(),
         G = (0, f.yE)(null != (t = N.flags) ? t : 0, l.$.IS_GUEST_INVITE),
-        H = null != (x = null == T ? void 0 : T.features.has(b.oNc.HUB)) && x,
+        H = null != (O = null == T ? void 0 : T.features.has(b.oNc.HUB)) && O,
         V = null == T ? void 0 : T.id,
         { analyticsLocations: z } = (0, c.ZP)(s.Z.INVITE_EMBED),
         [W, K] = i.useState(!1),
@@ -43,7 +43,7 @@ function x(e) {
         }, [V, z]),
         Q = i.useCallback(() => {
             let e = 'noop';
-            (M ? (I(), (e = 'transition')) : (S(), (e = 'accept')),
+            (k ? (j(), (e = 'transition')) : (S(), (e = 'accept')),
                 (0, o.r$)(
                     {
                         invite: N,
@@ -53,12 +53,12 @@ function x(e) {
                     },
                     z
                 ));
-        }, [N, P, z, M, I, S]);
+        }, [N, P, z, k, j, S]);
     if (null == T) {
         if (null == N.guild) return (0, r.jsx)(h.Z, {});
-        (T = g.Qs(N.guild)).premiumTier = null != (v = N.guild.premium_tier) ? v : b.Eu4.NONE;
+        (T = _.Qs(N.guild)).premiumTier = null != (y = N.guild.premium_tier) ? y : b.Eu4.NONE;
     }
-    let J = (0, _.e)({
+    let J = (0, g.e)({
         isVoiceChannel: F,
         isOwnInvite: w,
         isGuest: G,
@@ -67,7 +67,7 @@ function x(e) {
         isStream: !1
     });
     return (
-        (y = (0, r.jsxs)('span', {
+        (x = (0, r.jsxs)('span', {
             className: C.infoTitle,
             children: [
                 (0, r.jsx)(u.Z, {
@@ -93,7 +93,7 @@ function x(e) {
             ]
         })),
         G &&
-            (j = (0, r.jsx)(a.DY3, {
+            (I = (0, r.jsx)(a.DY3, {
                 className: C.tooltipContainer,
                 text: E.intl.string(E.t['/FeTKy']),
                 children: (0, r.jsx)(a.d3s, {
@@ -103,8 +103,8 @@ function x(e) {
                 })
             })),
         F
-            ? ((y = (0, r.jsx)(p.Z.Channel, { channel: k })),
-              (O = (0, r.jsxs)('span', {
+            ? ((x = (0, r.jsx)(p.Z.Channel, { channel: M })),
+              (v = (0, r.jsxs)('span', {
                   className: C.infoTitle,
                   children: [
                       E.intl.format(E.t['2wimj4'], { guildName: T.name }),
@@ -117,14 +117,14 @@ function x(e) {
                       })
                   ]
               })))
-            : (null != R && R >= 5) || (null != L && L > 0)
-              ? (O = (0, r.jsx)(p.Z.Data, {
+            : (null != R && R >= 5) || (null != D && D > 0)
+              ? (v = (0, r.jsx)(p.Z.Data, {
                     members: R,
-                    membersOnline: L
+                    membersOnline: D
                 }))
               : U &&
-                (O = (0, r.jsx)(p.Z.Channel, {
-                    channel: k,
+                (v = (0, r.jsx)(p.Z.Channel, {
+                    channel: M,
                     guild: T
                 })),
         (0, r.jsxs)(p.Z, {
@@ -132,7 +132,7 @@ function x(e) {
                 (0, r.jsx)(p.Z.GuildSplash, { guild: T }),
                 (0, r.jsx)(p.Z.Header, {
                     text: J,
-                    extra: j
+                    extra: I
                 }),
                 (0, r.jsxs)(p.Z.Body, {
                     children: [
@@ -141,17 +141,17 @@ function x(e) {
                             children: [
                                 (0, r.jsx)(p.Z.Icon, { guild: T }),
                                 (0, r.jsx)(p.Z.Info, {
-                                    title: y,
+                                    title: x,
                                     onClick: q,
-                                    children: O
+                                    children: v
                                 })
                             ]
                         }),
                         (0, r.jsx)(p.Z.Button, {
                             onClick: Q,
-                            submitting: D,
+                            submitting: L,
                             color: p.Z.Button.Colors.GREEN,
-                            children: F ? (B ? E.intl.string(E.t['7vb2cX']) : E.intl.string(E.t.gpqgam)) : M ? E.intl.string(E.t.cEnaW1) : E.intl.string(E.t.XpeFYm)
+                            children: F ? (B ? E.intl.string(E.t['7vb2cX']) : E.intl.string(E.t.gpqgam)) : k ? E.intl.string(E.t.cEnaW1) : E.intl.string(E.t.XpeFYm)
                         })
                     ]
                 }),

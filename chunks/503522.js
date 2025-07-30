@@ -1,10 +1,10 @@
 (n.d(t, { Z: () => f }), n(388685));
-var r = n(615287),
-    i = n(147913),
-    a = n(579806),
-    o = n(710845),
-    s = n(199902),
-    l = n(41534),
+var r = n(147913),
+    i = n(579806),
+    a = n(710845),
+    o = n(199902),
+    s = n(41534),
+    l = n(837268),
     c = n(501787);
 function u(e, t, n) {
     return (
@@ -19,8 +19,8 @@ function u(e, t, n) {
         e
     );
 }
-let d = new o.Z('OverlayContentProtectionManagerV3');
-class _ extends i.Z {
+let d = new a.Z('OverlayContentProtectionManagerV3');
+class _ extends r.Z {
     constructor(...e) {
         var t;
         (super(...e),
@@ -38,9 +38,9 @@ class _ extends i.Z {
                 try {
                     var e, t;
                     if (this.enabled === this.shouldEnable) return;
-                    (null === a.Z || void 0 === a.Z || null == (e = (t = a.Z.window).setWindowContentProtection) || e.call(t, c.$J, this.shouldEnable), (this.enabled = this.shouldEnable));
+                    (null === i.Z || void 0 === i.Z || null == (e = (t = i.Z.window).setWindowContentProtection) || e.call(t, c.$J, this.shouldEnable), (this.enabled = this.shouldEnable));
                 } catch (e) {
-                    (d.error('Error setting content protection:', e), (0, l.D1)(e, r.gl.OutOfProcess));
+                    (d.error('Error setting content protection:', e), (0, s.D1)(e, l.gl.OutOfProcess));
                 }
             }),
             u(this, 'actions', {
@@ -50,7 +50,7 @@ class _ extends i.Z {
                     this.setContentProtection(r);
                 },
                 STREAM_STOP: () => {
-                    null == s.Z.getCurrentUserActiveStream() && this.setContentProtection(!1);
+                    null == o.Z.getCurrentUserActiveStream() && this.setContentProtection(!1);
                 }
             }));
     }

@@ -1,8 +1,8 @@
 r.d(t, { F: () => p });
 var n = r(255367);
 r(73800);
-var i = r(120356),
-    l = r.n(i),
+var l = r(120356),
+    i = r.n(l),
     a = r(481060),
     o = r(937615),
     s = r(884697),
@@ -22,57 +22,57 @@ function d() {
 let p = (e) => {
     let {
             price: { amount: t, currency: r },
-            nitroIconType: i,
+            nitroIconType: l,
             nitroIconSize: p = 'md',
-            className: v,
-            discount: b = s.f_,
-            variant: f = 'heading-md/semibold'
+            className: f,
+            discount: g = s.f_,
+            variant: h = 'heading-md/semibold'
         } = e,
-        m = (0, o.qr)(t, r),
-        h =
-            b !== s.f_ && b.discountPercentage >= 5
+        b = (0, o.qr)(t, r),
+        m =
+            g !== s.f_ && g.discountPercentage >= 5
                 ? (0, n.jsxs)(n.Fragment, {
                       children: [
                           (0, n.jsx)(a.nn4, {
                               children: c.intl.format(c.t.niC6DA, {
-                                  price: m,
-                                  discountPercentage: b.discountPercentage
+                                  price: b,
+                                  discountPercentage: g.discountPercentage
                               })
                           }),
                           (0, n.jsx)('span', {
                               'aria-hidden': !0,
-                              children: m
+                              children: b
                           }),
                           (0, n.jsxs)(a.Text, {
-                              variant: f,
+                              variant: h,
                               color: 'text-feedback-positive',
                               className: u.discount,
                               'aria-hidden': !0,
-                              children: ['(-', b.discountPercentage, '%)']
+                              children: ['(-', g.discountPercentage, '%)']
                           })
                       ]
                   })
                 : (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, n.jsx)(a.nn4, { children: c.intl.format(c.t['6C36MD'], { price: m }) }),
+                          (0, n.jsx)(a.nn4, { children: c.intl.format(c.t['6C36MD'], { price: b }) }),
                           (0, n.jsx)('span', {
                               'aria-hidden': !0,
-                              children: m
+                              children: b
                           })
                       ]
                   });
     return (0, n.jsxs)(a.Text, {
-        variant: f,
-        className: l()(u.container, v),
+        variant: h,
+        className: i()(u.container, f),
         children: [
-            'tooltip' === i
+            'tooltip' === l
                 ? (0, n.jsx)(a.ua7, {
                       text: c.intl.string(c.t.MPFyJy),
                       'aria-label': c.intl.string(c.t.X3Ekj4),
                       children: (e) => {
                           var t,
                               r,
-                              i = d(
+                              l = d(
                                   {},
                                   (function (e) {
                                       if (null == e) throw TypeError('Cannot destructure ' + e);
@@ -110,7 +110,7 @@ let p = (e) => {
                                       size: p,
                                       color: 'currentColor'
                                   },
-                                  i
+                                  l
                               )),
                               (r = r = { className: u.nitroIcon }),
                               Object.getOwnPropertyDescriptors
@@ -129,14 +129,14 @@ let p = (e) => {
                           );
                       }
                   })
-                : 'default' === i
+                : 'default' === l
                   ? (0, n.jsx)(a.SrA, {
                         size: p,
                         color: 'currentColor',
                         className: u.nitroIcon
                     })
                   : null,
-            h
+            m
         ]
     });
 };

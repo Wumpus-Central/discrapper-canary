@@ -10,15 +10,15 @@ var i = n(255367),
     u = n(286379),
     h = n(481060),
     p = n(13245),
-    f = n(615287),
-    g = n(490029),
-    m = n(797614),
-    y = n(593481),
-    O = n(703656),
-    v = n(254761),
-    _ = n(70956),
-    b = n(145597),
-    E = n(41534),
+    f = n(490029),
+    g = n(797614),
+    m = n(593481),
+    y = n(703656),
+    O = n(254761),
+    v = n(70956),
+    _ = n(145597),
+    b = n(41534),
+    E = n(837268),
     S = n(692546),
     x = n(518084),
     C = n(987650),
@@ -38,11 +38,11 @@ function P(e, t, n) {
         e
     );
 }
-let w = 10 * _.Z.Millis.SECOND;
+let w = 10 * v.Z.Millis.SECOND;
 function N() {
-    let e = (0, b.getPID)(),
-        t = (0, b.getRPCAuthToken)();
-    (0, g.lW)({
+    let e = (0, _.getPID)(),
+        t = (0, _.getRPCAuthToken)();
+    (0, f.lW)({
         type: j.BmY.DISPATCH,
         pid: e,
         token: t,
@@ -80,9 +80,9 @@ class T extends r.PureComponent {
                               className: l()(r, I.container),
                               onClick: (e) => e.stopPropagation(),
                               children: [
-                                  (0, i.jsx)(y.ZP, {
+                                  (0, i.jsx)(m.ZP, {
                                       expand: !0,
-                                      icon: (0, i.jsx)(v.Z, {
+                                      icon: (0, i.jsx)(O.Z, {
                                           width: 40,
                                           height: 40,
                                           className: I.notificationIcon
@@ -150,7 +150,7 @@ class T extends r.PureComponent {
 }
 let D = a().throttle(
     () => {
-        m.Z.increment(
+        g.Z.increment(
             {
                 name: u.V.APP_CRASHED,
                 tags: ['reason:'.concat(c.v.UNHANDLED_JS_ERROR), 'level:'.concat(d.c.FATAL)]
@@ -163,16 +163,16 @@ let D = a().throttle(
 );
 class k extends r.PureComponent {
     componentDidCatch(e, t) {
-        let n = (0, O.s1)().location;
+        let n = (0, y.s1)().location;
         this.setState({
             error: e,
             info: t
         });
-        let i = (0, b.getPID)(),
-            r = (0, b.getRPCAuthToken)();
-        ((0, g.lW)({
+        let i = (0, _.getPID)(),
+            r = (0, _.getRPCAuthToken)();
+        ((0, f.lW)({
             type: j.BmY.DISPATCH,
-            pid: (0, b.getPID)(),
+            pid: (0, _.getPID)(),
             token: r,
             payloads: [
                 {
@@ -188,7 +188,7 @@ class k extends r.PureComponent {
             ]
         }),
             setImmediate(() => window.addEventListener('click', N)));
-        let o = (0, E.V6)(e, f.gl.Hook, { extra: t });
+        let o = (0, b.V6)(e, E.gl.Hook, { extra: t });
         (p.Z.track(j.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,

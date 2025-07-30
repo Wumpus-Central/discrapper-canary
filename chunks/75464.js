@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => g }), n(388685));
+(n.d(t, { Z: () => m }), n(388685));
 var i,
     l = n(255367),
     r = n(73800),
@@ -29,7 +29,7 @@ let u = {
         DEFAULT: 'default',
         STATIC: 'static'
     };
-class m extends (i = r.PureComponent) {
+class g extends (i = r.PureComponent) {
     render() {
         let e = this.props,
             { size: t, src: n, srcHover: i, className: r } = e,
@@ -98,9 +98,9 @@ class m extends (i = r.PureComponent) {
             }));
     }
 }
-(d(m, 'Sizes', u),
-    d(m, 'defaultProps', {
+(d(g, 'Sizes', u),
+    d(g, 'defaultProps', {
         size: u.MEDIUM,
         disabled: !1
     }));
-let g = m;
+let m = g;

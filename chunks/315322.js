@@ -1,344 +1,344 @@
-(r.d(t, {
-    $z: () => M,
-    I1: () => j,
-    IZ: () => E,
-    LQ: () => f,
-    PJ: () => N,
-    Qb: () => C,
-    Yc: () => I,
-    bh: () => Z,
+(n.d(t, {
+    $z: () => k,
+    I1: () => R,
+    IZ: () => b,
+    LQ: () => p,
+    PJ: () => M,
+    Qb: () => N,
+    Yc: () => C,
+    bh: () => v,
     bo: () => P,
-    cy: () => O,
-    hM: () => S,
-    sL: () => x,
-    t6: () => v,
-    tA: () => w,
-    tI: () => R,
-    z4: () => T,
-    zW: () => b
+    cy: () => y,
+    hM: () => T,
+    sL: () => S,
+    t6: () => g,
+    tA: () => L,
+    tI: () => A,
+    z4: () => D,
+    zW: () => m
 }),
-    r(781311),
-    r(388685));
-var n = r(367907),
-    s = r(710845),
-    l = r(626135),
-    a = r(171900),
-    i = r(607802),
-    o = r(861262),
-    c = r(971128),
-    u = r(723642),
-    h = r(981631);
-function d(e, t) {
-    let r = (function (e) {
-        let t = null != e ? (0, o.g)(e) : null;
-        return t === h.aib.DMS
-            ? { type: h.aib.DMS }
-            : t === h.aib.FAVORITES
-              ? { type: h.aib.FAVORITES }
-              : t === h.aib.GUILD
+    n(781311),
+    n(388685));
+var r = n(367907),
+    i = n(710845),
+    l = n(626135),
+    a = n(171900),
+    o = n(607802),
+    s = n(861262),
+    c = n(971128),
+    u = n(723642),
+    d = n(981631);
+function _(e, t) {
+    let n = (function (e) {
+        let t = null != e ? (0, s.g)(e) : null;
+        return t === d.aib.DMS
+            ? { type: d.aib.DMS }
+            : t === d.aib.FAVORITES
+              ? { type: d.aib.FAVORITES }
+              : t === d.aib.GUILD
                 ? {
-                      type: h.aib.GUILD,
+                      type: d.aib.GUILD,
                       guildId: e
                   }
-                : t === h.aib.CHANNEL
+                : t === d.aib.CHANNEL
                   ? {
-                        type: h.aib.CHANNEL,
+                        type: d.aib.CHANNEL,
                         channelId: e
                     }
                   : null;
     })(e);
-    return null != r ? t(r) : null;
+    return null != n ? t(n) : null;
+}
+function E(e) {
+    return _(e, (e) => c.Z.getSessionId(e));
 }
 function p(e) {
-    return d(e, (e) => c.Z.getSessionId(e));
+    _(e, (e) => c.Z.refreshSearchQueryAnalyticsId(e));
+}
+function O(e) {
+    return _(e, (e) => c.Z.getQueryId(e));
 }
 function f(e) {
-    d(e, (e) => c.Z.refreshSearchQueryAnalyticsId(e));
+    var t, n;
+    return null != (n = null == e || null == (t = e.trim()) ? void 0 : t.length) ? n : 0;
 }
-function g(e) {
-    return d(e, (e) => c.Z.getQueryId(e));
+function I(e) {
+    var t, n, r;
+    return null != (r = null == e || null == (n = e.content) || null == (t = n.trim()) ? void 0 : t.length) ? r : 0;
 }
-function m(e) {
-    var t, r;
-    return null != (r = null == e || null == (t = e.trim()) ? void 0 : t.length) ? r : 0;
-}
-function _(e) {
-    var t, r, n;
-    return null != (n = null == e || null == (r = e.content) || null == (t = r.trim()) ? void 0 : t.length) ? n : 0;
-}
-function y(e) {
+function h(e) {
     return null == e ? null : a.Z.getAnalyticsId(e);
 }
-function S(e) {
-    let { searchType: t, searchId: r, searchAnalyticsId: s, prevSearchAnalyticsId: l, isError: a, limit: i, offset: o, page: c, totalResults: u, pageResults: d, isIndexing: f, pageNumMessages: y, pageNumLinks: S, pageNumEmbeds: x, pageNumAttachments: b, searchQueryString: v, searchQuery: C } = e;
-    n.ZP.trackWithMetadata(h.rMx.SEARCH_RESULT_VIEWED, {
+function T(e) {
+    let { searchType: t, searchId: n, searchAnalyticsId: i, prevSearchAnalyticsId: l, isError: a, limit: o, offset: s, page: c, totalResults: u, pageResults: _, isIndexing: p, pageNumMessages: h, pageNumLinks: T, pageNumEmbeds: S, pageNumAttachments: m, searchQueryString: g, searchQuery: N } = e;
+    r.ZP.trackWithMetadata(d.rMx.SEARCH_RESULT_VIEWED, {
         search_type: t,
-        search_id: s,
+        search_id: i,
         prev_search_id: l,
-        search_session_id: p(r),
-        search_query_id: g(r),
+        search_session_id: E(n),
+        search_query_id: O(n),
         is_error: a,
-        limit: i,
-        offset: o,
+        limit: o,
+        offset: s,
         page: c,
         total_results: u,
-        page_results: d,
-        is_indexing: f,
-        page_num_messages: y,
-        page_num_links: S,
-        page_num_embeds: x,
-        page_num_attach: b,
-        search_query_length: m(v),
-        search_query_content_length: _(C)
+        page_results: _,
+        is_indexing: p,
+        page_num_messages: h,
+        page_num_links: T,
+        page_num_embeds: S,
+        page_num_attach: m,
+        search_query_length: f(g),
+        search_query_content_length: I(N)
     });
 }
-function x(e) {
-    let { searchType: t, searchId: r, searchAnalyticsId: n, messageId: s, guildId: a, channelId: i, pageResults: o, totalResults: c, page: u, limit: d, offset: f, index: y, searchQueryString: S, searchQuery: x } = e;
-    l.default.track(h.rMx.SEARCH_RESULT_SELECTED, {
+function S(e) {
+    let { searchType: t, searchId: n, searchAnalyticsId: r, messageId: i, guildId: a, channelId: o, pageResults: s, totalResults: c, page: u, limit: _, offset: p, index: h, searchQueryString: T, searchQuery: S } = e;
+    l.default.track(d.rMx.SEARCH_RESULT_SELECTED, {
         search_type: t,
-        search_id: n,
-        search_session_id: p(r),
-        search_query_id: g(r),
-        message_id: s,
+        search_id: r,
+        search_session_id: E(n),
+        search_query_id: O(n),
+        message_id: i,
         guild_id: a,
-        channel_id: i,
-        page_results: o,
+        channel_id: o,
+        page_results: s,
         total_results: c,
         page: u,
-        limit: d,
-        offset: f,
-        index_num: y,
-        search_query_length: m(S),
-        search_query_content_length: _(x)
+        limit: _,
+        offset: p,
+        index_num: h,
+        search_query_length: f(T),
+        search_query_content_length: I(S)
     });
 }
-function b(e) {
-    let { searchType: t, searchId: r, searchAnalyticsId: s, mode: l } = e;
-    n.ZP.trackWithMetadata(h.rMx.SEARCH_RESULT_SORT_CHANGED, {
-        search_id: s,
-        search_session_id: p(r),
-        search_query_id: g(r),
+function m(e) {
+    let { searchType: t, searchId: n, searchAnalyticsId: i, mode: l } = e;
+    r.ZP.trackWithMetadata(d.rMx.SEARCH_RESULT_SORT_CHANGED, {
+        search_id: i,
+        search_session_id: E(n),
+        search_query_id: O(n),
         search_type: t,
         new_sort_type: l
     });
 }
-function v(e) {
-    let { searchType: t, searchId: r, searchAnalyticsId: s, newPageIndex: l } = e;
-    n.ZP.trackWithMetadata(h.rMx.SEARCH_RESULT_PAGE_CHANGED, {
-        search_id: s,
-        search_session_id: p(r),
-        search_query_id: g(r),
+function g(e) {
+    let { searchType: t, searchId: n, searchAnalyticsId: i, newPageIndex: l } = e;
+    r.ZP.trackWithMetadata(d.rMx.SEARCH_RESULT_PAGE_CHANGED, {
+        search_id: i,
+        search_session_id: E(n),
+        search_query_id: O(n),
         search_type: t,
         new_page_index: l
     });
 }
-function C(e) {
-    let { searchType: t, searchId: r, searchAnalyticsId: s, searchQueryString: l, searchQuery: a } = e;
-    n.ZP.trackWithMetadata(h.rMx.SEARCH_RESULT_EMPTY, {
-        search_id: s,
-        search_session_id: p(r),
-        search_query_id: g(r),
+function N(e) {
+    let { searchType: t, searchId: n, searchAnalyticsId: i, searchQueryString: l, searchQuery: a } = e;
+    r.ZP.trackWithMetadata(d.rMx.SEARCH_RESULT_EMPTY, {
+        search_id: i,
+        search_session_id: E(n),
+        search_query_id: O(n),
         search_type: t,
-        search_query_length: m(l),
-        search_query_content_length: _(a)
-    });
-}
-function j(e) {
-    let { searchType: t, searchId: r } = e;
-    (d(r, (e) => {
-        c.Z.initialize({
-            searchContext: e,
-            initialTab: u.sR.MESSAGES
-        });
-    }),
-        n.ZP.trackWithMetadata(h.rMx.SEARCH_OPENED, {
-            search_id: y(r),
-            search_session_id: p(r),
-            search_type: t
-        }));
-}
-function E(e) {
-    let { searchId: t, searchType: r } = e;
-    (n.ZP.trackWithMetadata(h.rMx.SEARCH_CLOSED, {
-        search_id: y(t),
-        search_session_id: p(t),
-        search_query_id: g(t),
-        search_type: r
-    }),
-        d(t, (e) => {
-            c.Z.terminate(e);
-        }));
-}
-function O(e) {
-    let { searchType: t, searchId: r } = e;
-    n.ZP.trackWithMetadata(h.rMx.SEARCH_INPUT_CLEARED, {
-        search_id: y(r),
-        search_session_id: p(r),
-        search_query_id: g(r),
-        search_type: t
+        search_query_length: f(l),
+        search_query_content_length: I(a)
     });
 }
 function R(e) {
-    let { searchType: t, searchId: r, query: s, queryString: l } = e,
-        a = Object.keys(s),
-        o = a.reduce((e, t) => {
-            let r = s[t];
-            return ((e[t] = Array.isArray(r) ? r.length : 1), e);
-        }, {}),
-        c = null != l ? (0, i.kG)(l) : [],
-        u = 0,
-        d = 0,
-        f = 0,
-        S = 0,
-        x = 0,
-        b = 0,
-        v = 0,
-        C = 0;
-    c.forEach((e) => {
-        e.type === h.dCx.ANSWER_IN ? u++ : e.type === h.dCx.ANSWER_USERNAME_FROM ? d++ : e.type === h.dCx.ANSWER_USERNAME_MENTIONS ? f++ : e.type === h.dCx.ANSWER_HAS ? S++ : e.type === h.dCx.ANSWER_BEFORE ? x++ : e.type === h.dCx.ANSWER_ON ? b++ : e.type === h.dCx.ANSWER_AFTER ? v++ : e.type === h.dCx.ANSWER_PINNED && C++;
-    });
-    let j = g(r);
-    (n.ZP.trackWithMetadata(h.rMx.MESSAGES_SEARCH_STARTED, {
-        search_id: y(r),
-        search_session_id: p(r),
-        search_query_id: j,
-        search_type: t,
-        search_query_length: m(l),
-        search_query_content_length: _(s),
-        sort_type: (0, i.Vj)(s),
-        filter_in_count: u,
-        filter_from_count: d,
-        filter_mentions_count: f,
-        filter_has_count: S,
-        filter_before_count: x,
-        filter_during_count: b,
-        filter_after_count: v,
-        filter_pinned_count: C
-    }),
-        n.ZP.trackWithMetadata(h.rMx.SEARCH_STARTED, {
-            search_id: y(r),
-            search_session_id: p(r),
-            search_query_id: g(r),
-            search_type: t,
-            num_modifiers: a.length,
-            modifiers: o
-        }));
-}
-function I(e) {
-    let { rating: t, searchId: r, searchType: s } = e;
-    n.ZP.trackWithMetadata(h.rMx.SEARCH_RESULTS_FEEDBACK_MODAL_VIEWED, {
-        rating: t,
-        search_id: y(r),
-        search_type: s,
-        search_session_id: p(r),
-        search_query_id: g(r)
-    });
-}
-function P(e) {
-    let { searchId: t, searchType: r } = e;
-    n.ZP.trackWithMetadata(h.rMx.SEARCH_RESULTS_FEEDBACK_ENTRYPOINT_VIEWED, {
-        search_id: y(t),
-        search_type: r,
-        search_session_id: p(t),
-        search_query_id: g(t)
-    });
-}
-function T(e) {
-    let { rating: t, searchId: r, searchType: s, unsatisfiedQuestionOption: l, unsatisfiedQuestionText: a, describeSearchQuestionOption: i, describeSearchQuestionText: o } = e;
-    n.ZP.trackWithMetadata(h.rMx.SEARCH_RESULTS_FEEDBACK_SUBMITTED, {
-        search_id: y(r),
-        search_type: s,
-        search_session_id: p(r),
-        search_query_id: g(r),
-        rating: t,
-        unsatisfied_question_option: l,
-        unsatisfied_question_text: a,
-        describe_search_question_option: i,
-        describe_search_question_text: o
-    });
-}
-function N(e) {
-    let { searchType: t, searchId: r } = e;
-    (d(r, (e) => {
+    let { searchType: t, searchId: n } = e;
+    (_(n, (e) => {
         c.Z.initialize({
             searchContext: e,
             initialTab: u.sR.MESSAGES
         });
     }),
-        n.ZP.trackWithMetadata(h.rMx.SEARCH_MESSAGES_CHANNEL_PREFILL, {
-            search_type: t,
-            search_id: y(r),
-            search_session_id: p(r)
+        r.ZP.trackWithMetadata(d.rMx.SEARCH_OPENED, {
+            search_id: h(n),
+            search_session_id: E(n),
+            search_type: t
         }));
 }
-new s.Z('SearchTracking');
-let A = new Map([
-        [h.dCx.ANSWER_IN, 'in'],
-        [h.dCx.FILTER_IN, 'in'],
-        [h.dCx.ANSWER_USERNAME_FROM, 'from'],
-        [h.dCx.FILTER_FROM, 'from'],
-        [h.dCx.ANSWER_USERNAME_MENTIONS, 'mentions'],
-        [h.dCx.FILTER_MENTIONS, 'mentions'],
-        [h.dCx.ANSWER_HAS, 'has'],
-        [h.dCx.FILTER_HAS, 'has'],
-        [h.dCx.ANSWER_BEFORE, 'before'],
-        [h.dCx.FILTER_BEFORE, 'before'],
-        [h.dCx.ANSWER_ON, 'during'],
-        [h.dCx.FILTER_ON, 'during'],
-        [h.dCx.ANSWER_AFTER, 'after'],
-        [h.dCx.FILTER_AFTER, 'after'],
-        [h.dCx.ANSWER_PINNED, 'pinned'],
-        [h.dCx.FILTER_PINNED, 'pinned']
-    ]),
-    k = new Map([
-        [h.rtL.HISTORY, 'history'],
-        [h.rtL.DATES, 'dates'],
-        [h.rtL.SEARCH_OPTIONS, 'search_options']
-    ]);
+function b(e) {
+    let { searchId: t, searchType: n } = e;
+    (r.ZP.trackWithMetadata(d.rMx.SEARCH_CLOSED, {
+        search_id: h(t),
+        search_session_id: E(t),
+        search_query_id: O(t),
+        search_type: n
+    }),
+        _(t, (e) => {
+            c.Z.terminate(e);
+        }));
+}
+function y(e) {
+    let { searchType: t, searchId: n } = e;
+    r.ZP.trackWithMetadata(d.rMx.SEARCH_INPUT_CLEARED, {
+        search_id: h(n),
+        search_session_id: E(n),
+        search_query_id: O(n),
+        search_type: t
+    });
+}
+function A(e) {
+    let { searchType: t, searchId: n, query: i, queryString: l } = e,
+        a = Object.keys(i),
+        s = a.reduce((e, t) => {
+            let n = i[t];
+            return ((e[t] = Array.isArray(n) ? n.length : 1), e);
+        }, {}),
+        c = null != l ? (0, o.kG)(l) : [],
+        u = 0,
+        _ = 0,
+        p = 0,
+        T = 0,
+        S = 0,
+        m = 0,
+        g = 0,
+        N = 0;
+    c.forEach((e) => {
+        e.type === d.dCx.ANSWER_IN ? u++ : e.type === d.dCx.ANSWER_USERNAME_FROM ? _++ : e.type === d.dCx.ANSWER_USERNAME_MENTIONS ? p++ : e.type === d.dCx.ANSWER_HAS ? T++ : e.type === d.dCx.ANSWER_BEFORE ? S++ : e.type === d.dCx.ANSWER_ON ? m++ : e.type === d.dCx.ANSWER_AFTER ? g++ : e.type === d.dCx.ANSWER_PINNED && N++;
+    });
+    let R = O(n);
+    (r.ZP.trackWithMetadata(d.rMx.MESSAGES_SEARCH_STARTED, {
+        search_id: h(n),
+        search_session_id: E(n),
+        search_query_id: R,
+        search_type: t,
+        search_query_length: f(l),
+        search_query_content_length: I(i),
+        sort_type: (0, o.Vj)(i),
+        filter_in_count: u,
+        filter_from_count: _,
+        filter_mentions_count: p,
+        filter_has_count: T,
+        filter_before_count: S,
+        filter_during_count: m,
+        filter_after_count: g,
+        filter_pinned_count: N
+    }),
+        r.ZP.trackWithMetadata(d.rMx.SEARCH_STARTED, {
+            search_id: h(n),
+            search_session_id: E(n),
+            search_query_id: O(n),
+            search_type: t,
+            num_modifiers: a.length,
+            modifiers: s
+        }));
+}
+function C(e) {
+    let { rating: t, searchId: n, searchType: i } = e;
+    r.ZP.trackWithMetadata(d.rMx.SEARCH_RESULTS_FEEDBACK_MODAL_VIEWED, {
+        rating: t,
+        search_id: h(n),
+        search_type: i,
+        search_session_id: E(n),
+        search_query_id: O(n)
+    });
+}
+function P(e) {
+    let { searchId: t, searchType: n } = e;
+    r.ZP.trackWithMetadata(d.rMx.SEARCH_RESULTS_FEEDBACK_ENTRYPOINT_VIEWED, {
+        search_id: h(t),
+        search_type: n,
+        search_session_id: E(t),
+        search_query_id: O(t)
+    });
+}
+function D(e) {
+    let { rating: t, searchId: n, searchType: i, unsatisfiedQuestionOption: l, unsatisfiedQuestionText: a, describeSearchQuestionOption: o, describeSearchQuestionText: s } = e;
+    r.ZP.trackWithMetadata(d.rMx.SEARCH_RESULTS_FEEDBACK_SUBMITTED, {
+        search_id: h(n),
+        search_type: i,
+        search_session_id: E(n),
+        search_query_id: O(n),
+        rating: t,
+        unsatisfied_question_option: l,
+        unsatisfied_question_text: a,
+        describe_search_question_option: o,
+        describe_search_question_text: s
+    });
+}
 function M(e) {
-    let { searchId: t, searchHistoryIndex: r, searchHistoryTotalResults: s } = e,
-        l = (0, o.g)(t);
-    n.ZP.trackWithMetadata(h.rMx.SEARCH_HISTORY_CLICKED, {
-        search_id: y(t),
+    let { searchType: t, searchId: n } = e;
+    (_(n, (e) => {
+        c.Z.initialize({
+            searchContext: e,
+            initialTab: u.sR.MESSAGES
+        });
+    }),
+        r.ZP.trackWithMetadata(d.rMx.SEARCH_MESSAGES_CHANNEL_PREFILL, {
+            search_type: t,
+            search_id: h(n),
+            search_session_id: E(n)
+        }));
+}
+new i.Z('SearchTracking');
+let j = new Map([
+        [d.dCx.ANSWER_IN, 'in'],
+        [d.dCx.FILTER_IN, 'in'],
+        [d.dCx.ANSWER_USERNAME_FROM, 'from'],
+        [d.dCx.FILTER_FROM, 'from'],
+        [d.dCx.ANSWER_USERNAME_MENTIONS, 'mentions'],
+        [d.dCx.FILTER_MENTIONS, 'mentions'],
+        [d.dCx.ANSWER_HAS, 'has'],
+        [d.dCx.FILTER_HAS, 'has'],
+        [d.dCx.ANSWER_BEFORE, 'before'],
+        [d.dCx.FILTER_BEFORE, 'before'],
+        [d.dCx.ANSWER_ON, 'during'],
+        [d.dCx.FILTER_ON, 'during'],
+        [d.dCx.ANSWER_AFTER, 'after'],
+        [d.dCx.FILTER_AFTER, 'after'],
+        [d.dCx.ANSWER_PINNED, 'pinned'],
+        [d.dCx.FILTER_PINNED, 'pinned']
+    ]),
+    x = new Map([
+        [d.rtL.HISTORY, 'history'],
+        [d.rtL.DATES, 'dates'],
+        [d.rtL.SEARCH_OPTIONS, 'search_options']
+    ]);
+function k(e) {
+    let { searchId: t, searchHistoryIndex: n, searchHistoryTotalResults: i } = e,
+        l = (0, s.g)(t);
+    r.ZP.trackWithMetadata(d.rMx.SEARCH_HISTORY_CLICKED, {
+        search_id: h(t),
         search_type: l,
-        search_session_id: p(t),
-        search_history_index: r,
-        search_history_total_results: s
+        search_session_id: E(t),
+        search_history_index: n,
+        search_history_total_results: i
     });
 }
-function Z(e) {
+function v(e) {
     var t;
-    let { searchId: r, searchQuery: s, searchQueryString: l, searchAutocompleteResultIndex: a, searchAutocompleteTotalResults: i, searchTokenType: c, searchAutocompleteGroup: u, isSearchFilterPrefix: d, isSearchFilterAnswer: f, isSearchFilterComplete: S, isInFilterForSelectedChannel: x, searchAutocompleteSelectAction: b } = e,
-        v = (0, o.g)(r);
-    h.rtL.HISTORY;
-    let C = null != (t = A.get(u)) ? t : k.get(u),
-        j = null != c ? A.get(c) : null;
-    n.ZP.trackWithMetadata(h.rMx.SEARCH_MESSAGES_AUTOCOMPLETE_CLICKED, {
-        search_id: y(r),
-        search_type: v,
-        search_session_id: p(r),
-        search_query_id: g(r),
-        search_query_length: m(l),
-        search_query_content_length: _(s),
+    let { searchId: n, searchQuery: i, searchQueryString: l, searchAutocompleteResultIndex: a, searchAutocompleteTotalResults: o, searchTokenType: c, searchAutocompleteGroup: u, isSearchFilterPrefix: _, isSearchFilterAnswer: p, isSearchFilterComplete: T, isInFilterForSelectedChannel: S, searchAutocompleteSelectAction: m } = e,
+        g = (0, s.g)(n);
+    d.rtL.HISTORY;
+    let N = null != (t = j.get(u)) ? t : x.get(u),
+        R = null != c ? j.get(c) : null;
+    r.ZP.trackWithMetadata(d.rMx.SEARCH_MESSAGES_AUTOCOMPLETE_CLICKED, {
+        search_id: h(n),
+        search_type: g,
+        search_session_id: E(n),
+        search_query_id: O(n),
+        search_query_length: f(l),
+        search_query_content_length: I(i),
         search_autocomplete_result_index: a,
-        search_autocomplete_total_results: i,
-        search_autocomplete_group: C,
-        search_autocomplete_filter_type: j,
-        is_search_filter_prefix: d,
-        is_search_filter_answer: f,
-        is_search_filter_complete: S,
-        is_in_filter_for_selected_channel: x,
-        search_autocomplete_select_action: b
+        search_autocomplete_total_results: o,
+        search_autocomplete_group: N,
+        search_autocomplete_filter_type: R,
+        is_search_filter_prefix: _,
+        is_search_filter_answer: p,
+        is_search_filter_complete: T,
+        is_in_filter_for_selected_channel: S,
+        search_autocomplete_select_action: m
     });
 }
-function w(e) {
-    let { searchId: t, searchAutocompleteSelectAction: r } = e,
-        s = (0, o.g)(t);
-    n.ZP.trackWithMetadata(h.rMx.SEARCH_MESSAGES_SELECTED_CHANNEL_FILTER_CLICKED, {
-        search_id: y(t),
-        search_type: s,
-        search_session_id: p(t),
-        search_query_id: g(t),
-        search_autocomplete_select_action: r
+function L(e) {
+    let { searchId: t, searchAutocompleteSelectAction: n } = e,
+        i = (0, s.g)(t);
+    r.ZP.trackWithMetadata(d.rMx.SEARCH_MESSAGES_SELECTED_CHANNEL_FILTER_CLICKED, {
+        search_id: h(t),
+        search_type: i,
+        search_session_id: E(t),
+        search_query_id: O(t),
+        search_autocomplete_select_action: n
     });
 }

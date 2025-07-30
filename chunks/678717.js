@@ -22,8 +22,8 @@ var _ = a(392750),
     y = a(926976),
     C = a(789654),
     O = a(719672),
-    N = a(691867),
-    T = a(916790),
+    T = a(691867),
+    N = a(916790),
     E = a(645973),
     S = a(903502),
     P = a(604776),
@@ -99,7 +99,7 @@ function eo(e) {
                     id: 'dispatcher',
                     name: 'Dispatcher',
                     group: ea.v0.EVENTS,
-                    render: () => (0, n.jsx)(T.Z, {})
+                    render: () => (0, n.jsx)(N.Z, {})
                 }
             ];
             return (
@@ -168,7 +168,7 @@ function eo(e) {
                     id: 'design_toggles',
                     name: 'Design Toggles',
                     group: ea.v0.UI,
-                    render: () => (0, n.jsx)(N.Z, {})
+                    render: () => (0, n.jsx)(T.Z, {})
                 }),
                 e.push({
                     id: 'overlays',

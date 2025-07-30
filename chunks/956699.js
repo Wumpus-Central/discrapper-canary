@@ -17,16 +17,16 @@ var i = n(255367),
     x = n(491428),
     _ = n(225433),
     j = n(484614),
-    E = n(615287),
-    O = n(386506),
-    C = n(865427),
-    v = n(802098),
-    S = n(663993),
-    T = n(600164),
-    N = n(482215),
-    I = n(38618),
-    y = n(375657),
-    A = n(171393),
+    E = n(386506),
+    O = n(865427),
+    C = n(802098),
+    v = n(663993),
+    S = n(600164),
+    T = n(482215),
+    N = n(38618),
+    I = n(375657),
+    y = n(171393),
+    A = n(837268),
     P = n(32300),
     R = n(371651),
     D = n(398269),
@@ -113,18 +113,18 @@ function er(e) {
 class es extends r.Component {
     render() {
         let { project: e, overrideType: t, overrideId: n, disabled: r, error: s } = this.props;
-        return (0, i.jsxs)(T.Z, {
-            direction: T.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(S.Z, {
+            direction: S.Z.Direction.VERTICAL,
             className: a()(q.buildOverrideGroup, J.marginBottom20, X.card, q.row),
             children: [
                 (0, i.jsx)(_.Z, {
                     className: a()(q.removeBuildOverride, { [q.removeBuildOverrideDisabled]: r }),
                     onClick: r ? void 0 : this.handleRemoveBuildOverride
                 }),
-                (0, i.jsxs)(T.Z, {
+                (0, i.jsxs)(S.Z, {
                     className: J.marginBottom8,
                     children: [
-                        (0, i.jsx)(T.Z.Child, {
+                        (0, i.jsx)(S.Z.Child, {
                             basis: '50%',
                             children: (0, i.jsx)(g.xJW, {
                                 title: 'Override Type',
@@ -137,7 +137,7 @@ class es extends r.Component {
                                 })
                             })
                         }),
-                        (0, i.jsx)(T.Z.Child, {
+                        (0, i.jsx)(S.Z.Child, {
                             basis: '50%',
                             children: (0, i.jsx)(g.xJW, {
                                 title: 'branch' === t ? 'Branch Name' : 'Commit SHA',
@@ -151,7 +151,7 @@ class es extends r.Component {
                         })
                     ]
                 }),
-                (0, i.jsxs)(T.Z.Child, {
+                (0, i.jsxs)(S.Z.Child, {
                     children: [
                         null != s &&
                             '' !== s &&
@@ -190,7 +190,7 @@ class es extends r.Component {
 class ea extends r.Component {
     async refreshBuildOverrides() {
         this.setState({ loading: !0 });
-        let e = await (0, C.Ce)();
+        let e = await (0, O.Ce)();
         this.setState({
             loading: !1,
             buildOverrides: e,
@@ -241,10 +241,10 @@ class ea extends r.Component {
     renderRefreshButton() {
         return !this.state.didSave || this.isDirty()
             ? null
-            : (0, i.jsx)(T.Z, {
+            : (0, i.jsx)(S.Z, {
                   grow: 0,
-                  direction: T.Z.Direction.HORIZONTAL_REVERSE,
-                  children: (0, i.jsx)(T.Z.Child, {
+                  direction: S.Z.Direction.HORIZONTAL_REVERSE,
+                  children: (0, i.jsx)(S.Z.Child, {
                       grow: 0,
                       children: (0, i.jsx)(g.zxk, {
                           variant: 'secondary',
@@ -258,10 +258,10 @@ class ea extends r.Component {
         let { buildOverrides: e } = this.state;
         return null == e || 0 === Object.keys(e).length
             ? null
-            : (0, i.jsx)(T.Z, {
+            : (0, i.jsx)(S.Z, {
                   grow: 0,
-                  direction: T.Z.Direction.HORIZONTAL_REVERSE,
-                  children: (0, i.jsx)(T.Z.Child, {
+                  direction: S.Z.Direction.HORIZONTAL_REVERSE,
+                  children: (0, i.jsx)(S.Z.Child, {
                       grow: 0,
                       children: (0, i.jsx)(g.zxk, {
                           variant: 'primary',
@@ -274,11 +274,11 @@ class ea extends r.Component {
     renderSaveButton() {
         if (!this.isDirty()) return null;
         let { saving: e, buildOverrides: t } = this.state;
-        return (0, i.jsxs)(T.Z, {
+        return (0, i.jsxs)(S.Z, {
             grow: 0,
-            direction: T.Z.Direction.HORIZONTAL_REVERSE,
+            direction: S.Z.Direction.HORIZONTAL_REVERSE,
             children: [
-                (0, i.jsx)(T.Z.Child, {
+                (0, i.jsx)(S.Z.Child, {
                     grow: 0,
                     children: (0, i.jsx)(g.zxk, {
                         variant: 'active',
@@ -288,7 +288,7 @@ class ea extends r.Component {
                         loading: e
                     })
                 }),
-                (0, i.jsx)(T.Z.Child, {
+                (0, i.jsx)(S.Z.Child, {
                     grow: 0,
                     children: (0, i.jsx)(g.zxk, {
                         variant: 'critical-primary',
@@ -318,16 +318,16 @@ class ea extends r.Component {
             children: (0, i.jsxs)(g.hjN, {
                 className: J.marginTop60,
                 children: [
-                    (0, i.jsxs)(T.Z, {
+                    (0, i.jsxs)(S.Z, {
                         className: J.marginBottom20,
                         children: [
-                            (0, i.jsx)(T.Z.Child, {
+                            (0, i.jsx)(S.Z.Child, {
                                 children: (0, i.jsx)(g.vwX, {
                                     tag: g.RB0.H1,
                                     children: 'Build Overrides'
                                 })
                             }),
-                            (0, i.jsx)(T.Z.Child, {
+                            (0, i.jsx)(S.Z.Child, {
                                 grow: 0,
                                 children: (0, i.jsx)(g.zxk, {
                                     variant: 'primary',
@@ -339,14 +339,14 @@ class ea extends r.Component {
                             })
                         ]
                     }),
-                    (0, i.jsxs)(T.Z, {
-                        direction: T.Z.Direction.VERTICAL,
+                    (0, i.jsxs)(S.Z, {
+                        direction: S.Z.Direction.VERTICAL,
                         children: [
                             a,
                             e,
-                            (0, i.jsxs)(T.Z, {
+                            (0, i.jsxs)(S.Z, {
                                 grow: 0,
-                                direction: T.Z.Direction.HORIZONTAL_REVERSE,
+                                direction: S.Z.Direction.HORIZONTAL_REVERSE,
                                 children: [this.renderRefreshButton(), this.renderSaveButton(), this.renderLinkButton()]
                             })
                         ]
@@ -445,7 +445,7 @@ class ea extends r.Component {
                 let { buildOverrides: e } = this.state;
                 if (null == e) return;
                 this.setState({ saving: !0 });
-                let t = await (0, O.aD)(e);
+                let t = await (0, E.aD)(e);
                 if (200 === t.status) {
                     let e = t.body;
                     this.setState({
@@ -486,7 +486,7 @@ class el extends r.Component {
                 label: e,
                 value: e
             }));
-        return (0, i.jsxs)(T.Z.Child, {
+        return (0, i.jsxs)(S.Z.Child, {
             basis: '70%',
             children: [
                 (0, i.jsx)(g.xJW, {
@@ -515,10 +515,10 @@ class el extends r.Component {
                               (0, i.jsx)(g.xJW, {
                                   title: 'Add allowed app version (required)',
                                   className: J.marginBottom20,
-                                  children: (0, i.jsxs)(T.Z, {
-                                      direction: T.Z.Direction.HORIZONTAL,
+                                  children: (0, i.jsxs)(S.Z, {
+                                      direction: S.Z.Direction.HORIZONTAL,
                                       children: [
-                                          (0, i.jsx)(T.Z.Child, {
+                                          (0, i.jsx)(S.Z.Child, {
                                               wrap: !0,
                                               basis: '90%',
                                               children: (0, i.jsx)(p.Is, {
@@ -557,9 +557,9 @@ class el extends r.Component {
                           title: 'Limit to User IDs (optional)',
                           className: J.marginBottom20,
                           children: [
-                              (0, i.jsx)(T.Z, {
-                                  direction: T.Z.Direction.HORIZONTAL,
-                                  children: (0, i.jsx)(T.Z.Child, {
+                              (0, i.jsx)(S.Z, {
+                                  direction: S.Z.Direction.HORIZONTAL,
+                                  children: (0, i.jsx)(S.Z.Child, {
                                       wrap: !0,
                                       basis: '90%',
                                       children: (0, i.jsx)(g.Kx8, {
@@ -582,9 +582,9 @@ class el extends r.Component {
                     title: 'Client Experiment Override',
                     className: J.marginBottom20,
                     children: [
-                        (0, i.jsx)(T.Z, {
-                            direction: T.Z.Direction.HORIZONTAL,
-                            children: (0, i.jsx)(T.Z.Child, {
+                        (0, i.jsx)(S.Z, {
+                            direction: S.Z.Direction.HORIZONTAL,
+                            children: (0, i.jsx)(S.Z.Child, {
                                 wrap: !0,
                                 basis: '90%',
                                 children: (0, i.jsx)(g.Kx8, {
@@ -614,7 +614,7 @@ class el extends r.Component {
     renderPayloadBlock() {
         let e = JSON.stringify(this.generatePayload(), null, 2),
             t = () => e,
-            r = (0, i.jsx)(S.GI, {
+            r = (0, i.jsx)(v.GI, {
                 createPromise: () => Promise.resolve().then(n.bind(n, 364964)),
                 webpackId: 364964,
                 renderFallback: t,
@@ -628,7 +628,7 @@ class el extends r.Component {
                           });
                 }
             });
-        return (0, i.jsx)(T.Z.Child, { children: (0, i.jsx)(g.Zbd, { children: (0, i.jsx)('pre', { children: r }) }) });
+        return (0, i.jsx)(S.Z.Child, { children: (0, i.jsx)(g.Zbd, { children: (0, i.jsx)('pre', { children: r }) }) });
     }
     renderLinkForm() {
         let { status: e, statusText: t, publicLink: n } = this.state,
@@ -644,9 +644,9 @@ class el extends r.Component {
             children: [
                 (0, i.jsx)(g.xJW, {
                     title: 'Signed Link',
-                    children: (0, i.jsxs)(T.Z, {
+                    children: (0, i.jsxs)(S.Z, {
                         children: [
-                            (0, i.jsx)(T.Z.Child, {
+                            (0, i.jsx)(S.Z.Child, {
                                 wrap: !0,
                                 basis: '75%',
                                 children: (0, i.jsx)(j.Z, { value: n })
@@ -677,7 +677,7 @@ class el extends r.Component {
             parentComponent: 'UserSettingsDeveloperOptions',
             children: [
                 (0, i.jsxs)(g.xBx, {
-                    justify: T.Z.Justify.BETWEEN,
+                    justify: S.Z.Justify.BETWEEN,
                     separator: !1,
                     children: [
                         (0, i.jsx)(g.X6q, {
@@ -689,7 +689,7 @@ class el extends r.Component {
                 }),
                 (0, i.jsxs)(g.hzk, {
                     children: [
-                        (0, i.jsxs)(T.Z, {
+                        (0, i.jsxs)(S.Z, {
                             children: [this.renderSettingsForm(), this.renderPayloadBlock()]
                         }),
                         this.renderLinkForm()
@@ -800,13 +800,13 @@ class el extends r.Component {
                 if (this.isMobile() && 0 === this.state.allowedVersions.length) return void this.setAllowedVersionError('You must add at least one allowed version for iOS');
                 this.setStatusMessage(null);
                 let e = this.generatePayload(),
-                    t = await (0, O.M3)(e);
+                    t = await (0, E.M3)(e);
                 !1 !== t.error ? this.setStatusMessage(JSON.stringify(t.error), 0) : (this.setState({ publicLink: t.url.toString() }), 0 === e.meta.user_ids.length && this.setStatusMessage('Warning! No users added to the whitelist! This link could be used by anyone to override their build.', 1));
             }));
     }
 }
 function eo() {
-    let { horizontalSpacing: e, verticalSpacing: t, maxHorizontalSpacing: n, maxVerticalSpacing: s } = (0, N.i)(),
+    let { horizontalSpacing: e, verticalSpacing: t, maxHorizontalSpacing: n, maxVerticalSpacing: s } = (0, T.i)(),
         a = r.useMemo(() => Array.from({ length: n + 1 }, (e, t) => t), [n]),
         l = r.useMemo(() => Array.from({ length: s + 1 }, (e, t) => t), [s]),
         { cssDebuggingEnabled: o, layoutDebuggingEnabled: c } = (0, d.cj)([w.default], () => ({
@@ -854,7 +854,7 @@ function eo() {
                                 minValue: 0,
                                 maxValue: n,
                                 markers: a,
-                                onValueChange: (e) => N.i.getState().setHorizontalSpacing(e),
+                                onValueChange: (e) => T.i.getState().setHorizontalSpacing(e),
                                 onValueRender: (e) => ''.concat(Math.round(e), 'px'),
                                 onMarkerRender: (e) => (e % 4 == 0 ? ''.concat(e) : void 0),
                                 equidistant: !0
@@ -875,7 +875,7 @@ function eo() {
                                 minValue: 0,
                                 maxValue: s,
                                 markers: l,
-                                onValueChange: (e) => N.i.getState().setVerticalSpacing(e),
+                                onValueChange: (e) => T.i.getState().setVerticalSpacing(e),
                                 onValueRender: (e) => ''.concat(Math.round(e), 'px'),
                                 onMarkerRender: (e) => (e % 4 == 0 ? ''.concat(e) : void 0),
                                 equidistant: !0
@@ -909,7 +909,7 @@ function ec() {
             preventPopoutClose: w.default.preventPopoutClose,
             logKeyboardMismatches: w.default.logKeyboardMismatches
         })),
-        u = (0, A.Z)('go_back_to_regular_input'),
+        u = (0, y.Z)('go_back_to_regular_input'),
         m = G.zY.useSetting();
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -1013,7 +1013,7 @@ function ec() {
                             reason: 'disable-align-chat-input',
                             rating: e ? 'yes' : 'no'
                         }),
-                            (0, y.s)('go_back_to_regular_input', { enabled: e }));
+                            (0, I.s)('go_back_to_regular_input', { enabled: e }));
                     },
                     children: 'Disable aligning chat input to the bottom of the screen'
                 })
@@ -1083,7 +1083,7 @@ function em() {
         t = (0, d.e7)([R.default], () => R.default.getForcedRenderMode()),
         [n, s] = r.useState(!1),
         [a, l] = r.useState(''),
-        o = e || t === E.R5.OUT_OF_PROCESS_V3 || t === E.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;
+        o = e || t === A.R5.OUT_OF_PROCESS_V3 || t === A.R5.OUT_OF_PROCESS_V3_LIMITED_INTERACTION;
     return (r.useEffect(() => {
         (async () => {
             l(await (0, L.getOverlayURL)());
@@ -1117,7 +1117,7 @@ function em() {
                                   variant: 'primary',
                                   text: 'Reset Socket',
                                   onClick: () => {
-                                      (I.Z.getSocket().close(), I.Z.getSocket().connect());
+                                      (N.Z.getSocket().close(), N.Z.getSocket().connect());
                                   }
                               })
                           }),
@@ -1250,8 +1250,8 @@ function ep() {
 }
 function eg() {
     var e;
-    let t = (0, d.e7)([v.Z], () => v.Z.overrideId()),
-        [n, s] = r.useState(null != (e = v.Z.overrideId()) ? e : '');
+    let t = (0, d.e7)([C.Z], () => C.Z.overrideId()),
+        [n, s] = r.useState(null != (e = C.Z.overrideId()) ? e : '');
     return (0, i.jsx)(Z.F, {
         setting: z.s6.DEVELOPER_OPTIONS_CHANGELOG_OVERRIDE,
         children: (0, i.jsx)(g.hjN, {

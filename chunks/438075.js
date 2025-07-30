@@ -17,8 +17,8 @@ function a(e) {
         renderThreadAccessory: p,
         renderSuppressEmbeds: m,
         renderReactions: f,
-        forceAddReactions: g,
-        disableComponentInteractivity: _,
+        forceAddReactions: _,
+        disableComponentInteractivity: g,
         className: h
     } = e;
     return u
@@ -35,9 +35,9 @@ function a(e) {
                   isMessageSnapshot: d,
                   onMediaItemContextMenu: s,
                   renderThreadAccessory: p,
-                  disableComponentInteractivity: _,
+                  disableComponentInteractivity: g,
                   renderSuppressEmbeds: m,
-                  forceAddReactions: g,
+                  forceAddReactions: _,
                   renderReactions: f
               })
           });

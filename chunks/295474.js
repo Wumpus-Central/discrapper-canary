@@ -1,77 +1,77 @@
 (n.d(t, {
-    Ux: () => C,
-    gS: () => g,
-    ww: () => O
+    Ux: () => I,
+    gS: () => h,
+    ww: () => T
 }),
     n(997841));
-var i = n(73800),
-    r = n(399606),
+var r = n(73800),
+    i = n(399606),
     l = n(230711),
-    o = n(18438),
-    s = n(314897),
-    a = n(271383),
+    a = n(18438),
+    o = n(314897),
+    s = n(271383),
     c = n(430824),
-    d = n(496675),
-    u = n(914010),
+    u = n(496675),
+    d = n(914010),
     _ = n(715903),
-    h = n(981631),
-    E = n(372897),
-    I = n(526761),
-    p = n(388032);
-function C(e) {
-    return (0, r.e7)(
-        [s.default, a.ZP],
+    E = n(981631),
+    p = n(372897),
+    O = n(526761),
+    f = n(388032);
+function I(e) {
+    return (0, i.e7)(
+        [o.default, s.ZP],
         () => {
             if (null == e) return !1;
-            let t = s.default.getId();
-            return (0, _.EY)(a.ZP.getMember(e, t));
+            let t = o.default.getId();
+            return (0, _.EY)(s.ZP.getMember(e, t));
         },
         [e]
     );
 }
-function g(e) {
-    return (0, r.cj)(
-        [s.default, a.ZP, u.Z, c.Z],
+function h(e) {
+    return (0, i.cj)(
+        [o.default, s.ZP, d.Z, c.Z],
         () => {
             let t = {
                     nick: void 0,
                     bio: void 0
                 },
-                n = u.Z.getGuildId(),
-                i = null != e ? e : n,
-                r = c.Z.getGuild(i);
-            if (null == r || null == i) return t;
-            let l = s.default.getId(),
-                o = a.ZP.getMember(i, l),
-                d = (0, _.Ow)(null == o ? void 0 : o.flags);
-            if (0 === d.size) return t;
-            if (d.has(E.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME))
+                n = d.Z.getGuildId(),
+                r = null != e ? e : n,
+                i = c.Z.getGuild(r);
+            if (null == i || null == r) return t;
+            let l = o.default.getId(),
+                a = s.ZP.getMember(r, l),
+                u = (0, _.Ow)(null == a ? void 0 : a.flags);
+            if (0 === u.size) return t;
+            if (u.has(p.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME))
                 if (null == e) {
-                    var h;
-                    t.nick = [p.intl.formatToPlainString(p.t.WBUh3N, { guildName: null != (h = r.name) ? h : '' })];
-                } else t.nick = [p.intl.string(p.t.EPZCrK)];
-            return (d.has(E.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [p.intl.string(p.t.dZh1v7)]), t);
+                    var E;
+                    t.nick = [f.intl.formatToPlainString(f.t.WBUh3N, { guildName: null != (E = i.name) ? E : '' })];
+                } else t.nick = [f.intl.string(f.t.EPZCrK)];
+            return (u.has(p.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [f.intl.string(f.t.dZh1v7)]), t);
         },
         [e]
     );
 }
-function O(e) {
-    let { guildId: t, scrollPosition: n, analyticsLocation: s, analyticsLocations: a, openWithoutBackstack: u } = e,
-        _ = (0, r.e7)([c.Z], () => c.Z.getGuild(t), [t]),
-        E = (0, r.e7)([d.Z], () => null != _ && d.Z.can(h.Plq.CHANGE_NICKNAME, _), [_]);
+function T(e) {
+    let { guildId: t, scrollPosition: n, analyticsLocation: o, analyticsLocations: s, openWithoutBackstack: d } = e,
+        _ = (0, i.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+        p = (0, i.e7)([u.Z], () => null != _ && u.Z.can(E.Plq.CHANGE_NICKNAME, _), [_]);
     return [
-        i.useCallback(() => {
+        r.useCallback(() => {
             if (null == _) return;
-            let e = h.oAB.PROFILE_CUSTOMIZATION,
-                t = I.NB.GUILD;
-            (E ? (0, o.Fq)(_) : (t = I.NB.USER_PROFILE),
+            let e = E.oAB.PROFILE_CUSTOMIZATION,
+                t = O.NB.GUILD;
+            (p ? (0, a.Fq)(_) : (t = O.NB.USER_PROFILE),
                 l.Z.open(e, t, {
                     scrollPosition: n,
-                    analyticsLocation: s,
-                    analyticsLocations: a,
-                    openWithoutBackstack: u
+                    analyticsLocation: o,
+                    analyticsLocations: s,
+                    openWithoutBackstack: d
                 }));
-        }, [E, n, s, a, u, _]),
-        E
+        }, [p, n, o, s, d, _]),
+        p
     ];
 }

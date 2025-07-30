@@ -9,7 +9,7 @@ var l = n(120356),
     c = n(600164),
     d = n(427256);
 let u = (e) => {
-    let { className: t, icon: n, noticeText: l, buttonText: u, onClick: h, canSync: m } = e;
+    let { className: t, icon: n, noticeText: l, buttonText: u, onClick: h, canSync: g } = e;
     return (0, i.jsx)(o.Zbd, {
         className: r()(t, d.card),
         children: (0, i.jsxs)(c.Z, {
@@ -29,7 +29,7 @@ let u = (e) => {
                         children: l
                     })
                 }),
-                m &&
+                g &&
                     (0, i.jsx)(a.zx, {
                         size: a.zx.Sizes.SMALL,
                         color: a.zx.Colors.PRIMARY,

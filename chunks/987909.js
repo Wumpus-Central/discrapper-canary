@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+(n.d(t, { Z: () => v }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -11,40 +11,40 @@ var r = n(255367),
     p = n(223750),
     m = n(271383),
     f = n(496675),
-    g = n(594174),
-    _ = n(626135),
+    _ = n(594174),
+    g = n(626135),
     h = n(709054),
     b = n(838440),
     E = n(981631),
     C = n(18485);
-function x(e) {
+function O(e) {
     let { assets: t, currentUser: n, message: r } = e,
         i = (h.default.extractTimestamp(n.id) + h.default.extractTimestamp(r.id)) % t.length;
     return t[i];
 }
-function v(e) {
-    let { currentUser: t, channel: n, message: l, buttonLabels: d, stickers: m, event: f, eventProperties: g } = e,
+function y(e) {
+    let { currentUser: t, channel: n, message: l, buttonLabels: d, stickers: m, event: f, eventProperties: _ } = e,
         h = (0, p.t)(),
-        [E, v] = i.useState(!1),
-        O = i.useMemo(
+        [E, y] = i.useState(!1),
+        v = i.useMemo(
             () =>
-                x({
+                O({
                     assets: m,
                     currentUser: t,
                     message: l
                 }),
             [m, t, l]
         ),
-        y = i.useMemo(
+        x = i.useMemo(
             () =>
-                x({
+                O({
                     assets: d,
                     currentUser: t,
                     message: l
                 }),
             [d, t, l]
         ),
-        j = i.useCallback(async () => {
+        I = i.useCallback(async () => {
             let { valid: e } = await (0, b.v)({
                 type: c.Ie.FORM,
                 content: '',
@@ -66,13 +66,13 @@ function v(e) {
                 })({
                     channel: n,
                     message: l,
-                    sticker: O
+                    sticker: v
                 }),
                 (function (e) {
                     var t, n;
                     let { sticker: r, event: i, eventProperties: l } = e;
                     null != i &&
-                        _.default.track(
+                        g.default.track(
                             i,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
@@ -115,40 +115,40 @@ function v(e) {
                             t)
                         );
                 })({
-                    sticker: O,
+                    sticker: v,
                     event: f,
-                    eventProperties: g
+                    eventProperties: _
                 }));
-        }, [n, l, O, f, g]);
+        }, [n, l, v, f, _]);
     return h
         ? (0, r.jsx)(a.zx, {
               variant: 'secondary',
               size: 'md',
-              onClick: j,
-              text: y
+              onClick: I,
+              text: x
           })
         : (0, r.jsxs)(o.zx, {
               'data-migration-pending': !0,
               className: C.CTAMessageButtonOuter,
               innerClassName: C.CTAMessageButton,
               color: o.Tt.PRIMARY,
-              onMouseEnter: () => v(!0),
-              onMouseLeave: () => v(!1),
-              onClick: j,
+              onMouseEnter: () => y(!0),
+              onMouseLeave: () => y(!1),
+              onClick: I,
               children: [
                   (0, r.jsx)(u.Z, {
                       className: C.CTAMessageSticker,
                       isInteracting: E,
-                      sticker: O,
+                      sticker: v,
                       size: 28
                   }),
-                  y
+                  x
               ]
           });
 }
-function O(e) {
+function v(e) {
     let { channel: t, message: n, buttonLabels: i, stickers: a, event: o, eventProperties: s } = e,
-        c = g.default.getCurrentUser(),
+        c = _.default.getCurrentUser(),
         u = (function (e) {
             let { channel: t, message: n, currentUser: r } = e;
             return (0, l.e7)([f.Z, m.ZP], () => {
@@ -169,7 +169,7 @@ function O(e) {
     return null != c && u
         ? (0, r.jsx)('div', {
               className: C.CTAMessage,
-              children: (0, r.jsx)(v, {
+              children: (0, r.jsx)(y, {
                   currentUser: c,
                   channel: t,
                   message: n,

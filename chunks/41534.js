@@ -3,8 +3,8 @@ n.d(t, {
     IK: () => u,
     V6: () => _
 });
-var r = n(615287),
-    i = n(960048);
+var r = n(960048),
+    i = n(837268);
 function a(e, t, n) {
     return (
         t in e
@@ -65,7 +65,7 @@ function c() {
         tags: o(
             {
                 source: 'overlay',
-                overlayMethod: ''.concat(null == t ? null : r.gl[null != t ? t : r.gl.Disabled])
+                overlayMethod: ''.concat(null == t ? null : i.gl[null != t ? t : i.gl.Disabled])
             },
             null != (e = null == n ? void 0 : n.tags) ? e : {}
         )
@@ -74,15 +74,15 @@ function c() {
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    i.Z.captureMessage(e, c(t, n));
+    r.Z.captureMessage(e, c(t, n));
 }
 function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    i.Z.captureException(e, c(t, n));
+    r.Z.captureException(e, c(t, n));
 }
 function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
-    return i.Z.captureCrash(e, c(t, n));
+    return r.Z.captureCrash(e, c(t, n));
 }

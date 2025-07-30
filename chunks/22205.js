@@ -11,15 +11,15 @@ var r = n(255367),
     _ = n(481060),
     f = n(224706),
     p = n(13245),
-    h = n(615287),
-    m = n(493773),
-    g = n(797614),
-    E = n(703656),
-    b = n(594174),
-    y = n(254761),
-    O = n(70956),
-    v = n(145597),
-    I = n(41534),
+    h = n(493773),
+    m = n(797614),
+    g = n(703656),
+    E = n(594174),
+    b = n(254761),
+    y = n(70956),
+    O = n(145597),
+    v = n(41534),
+    I = n(837268),
     T = n(333031),
     S = n(610394),
     A = n(380736),
@@ -42,7 +42,7 @@ function w(e, t, n) {
 }
 let D = o().throttle(
         () => {
-            g.Z.increment(
+            m.Z.increment(
                 {
                     name: u.V.APP_CRASHED,
                     tags: ['reason:'.concat(l.v.UNHANDLED_JS_ERROR), 'level:'.concat(c.c.FATAL)]
@@ -53,26 +53,26 @@ let D = o().throttle(
         100,
         { trailing: !1 }
     ),
-    L = 10 * O.Z.Millis.SECOND;
+    L = 10 * y.Z.Millis.SECOND;
 function x(e) {
     var t, n;
     let { error: a, onLock: o, onReload: l, onDisable: c, onCrashDisabled: u } = e,
         f = i.useMemo(() => new s.SpringValue(1), []),
-        h = i.useRef(null),
-        [g, E] = i.useState(!1),
+        m = i.useRef(null),
+        [g, y] = i.useState(!1),
         [O, v] = i.useState(!1),
-        I = (0, d.e7)([b.default], () => b.default.getCurrentUser());
-    (0, m.ZP)(
+        I = (0, d.e7)([E.default], () => E.default.getCurrentUser());
+    (0, h.ZP)(
         () => (
-            (h.current = setTimeout(T, L)),
+            (m.current = setTimeout(T, L)),
             p.Z.track(C.rMx.NOTIFICATION_VIEWED, { notif_type: N.n0.OverlayCrashed }),
             () => {
-                null != h.current && clearTimeout(h.current);
+                null != m.current && clearTimeout(m.current);
             }
         )
     );
     let T = i.useCallback(() => {
-            (f.set(0), null != h.current && clearTimeout(h.current), (h.current = null), null == o || o(), null == u || u());
+            (f.set(0), null != m.current && clearTimeout(m.current), (m.current = null), null == o || o(), null == u || u());
         }, [f, o, u]),
         w = i.useCallback(
             (e) => {
@@ -94,9 +94,9 @@ function x(e) {
         ),
         D = i.useCallback(
             (e) => {
-                (e.stopPropagation(), e.shiftKey ? (E(!0), null != h.current && clearTimeout(h.current)) : E(!1));
+                (e.stopPropagation(), e.shiftKey ? (y(!0), null != m.current && clearTimeout(m.current)) : y(!1));
             },
-            [E]
+            [y]
         ),
         x = i.useCallback(
             (e) => {
@@ -142,7 +142,7 @@ function x(e) {
         hint: U ? j : void 0,
         confirmText: R.intl.string(R.t.a3HlgI),
         cancelText: null != M ? R.intl.string(R.t.qIYnPj) : void 0,
-        icon: (0, r.jsx)(y.Z, {
+        icon: (0, r.jsx)(b.Z, {
             width: 40,
             height: 40,
             className: P.notificationIcon
@@ -164,14 +164,14 @@ function x(e) {
 }
 class M extends i.PureComponent {
     componentDidCatch(e, t) {
-        let n = (0, E.s1)().location;
+        let n = (0, g.s1)().location;
         this.setState({
             error: e,
             info: t
         });
-        let r = (0, v.getPID)();
+        let r = (0, O.getPID)();
         (p.Z.setOverlayCrashed(r, e), p.Z.setInputLocked(!0, r));
-        let i = (0, I.V6)(e, h.gl.OutOfProcess, {
+        let i = (0, v.V6)(e, I.gl.OutOfProcess, {
             extra: {
                 info: t,
                 location: n
@@ -199,7 +199,7 @@ class M extends i.PureComponent {
                           error: n,
                           onLock: () => {
                               var e;
-                              let t = null != (e = this.pid) ? e : (0, v.getPID)();
+                              let t = null != (e = this.pid) ? e : (0, O.getPID)();
                               (p.Z.setInputLocked(!0, t), this.setState({ showError: !1 }));
                           },
                           onDisable: () => {
@@ -208,11 +208,11 @@ class M extends i.PureComponent {
                           },
                           onCrashDisabled: () => {
                               var e;
-                              let t = null != (e = this.pid) ? e : (0, v.getPID)();
-                              (p.Z.updateOverlayState(t, h.mM.OVERLAY_CRASHED_DISABLED), this.setState({ showError: !1 }));
+                              let t = null != (e = this.pid) ? e : (0, O.getPID)();
+                              (p.Z.updateOverlayState(t, I.mM.OVERLAY_CRASHED_DISABLED), this.setState({ showError: !1 }));
                           },
                           onReload: () => {
-                              (p.Z.setReloadOverlay((0, v.getPID)()), this.setState({ showError: !1 }));
+                              (p.Z.setReloadOverlay((0, O.getPID)()), this.setState({ showError: !1 }));
                           }
                       })
                   })

@@ -11,22 +11,22 @@ var r = n(255367),
     p = n(314897),
     m = n(592125),
     f = n(699516),
-    g = n(51144),
-    _ = n(981631),
+    _ = n(51144),
+    g = n(981631),
     h = n(388032),
     b = n(273254);
 function E(e) {
     var t;
     let { invite: n, message: E, getAcceptInviteContext: C } = e,
-        x = (0, l.e7)([p.default], () => p.default.getId()),
-        v = (null == (t = n.inviter) ? void 0 : t.id) === x,
-        O = n.state === _.r2o.ACCEPTING,
-        { analyticsLocations: y } = (0, c.ZP)(s.Z.INVITE_EMBED),
-        j = (0, l.e7)([f.Z], () => {
+        O = (0, l.e7)([p.default], () => p.default.getId()),
+        y = (null == (t = n.inviter) ? void 0 : t.id) === O,
+        v = n.state === g.r2o.ACCEPTING,
+        { analyticsLocations: x } = (0, c.ZP)(s.Z.INVITE_EMBED),
+        I = (0, l.e7)([f.Z], () => {
             var e;
             return null != n.inviter && f.Z.isFriend(null == (e = n.inviter) ? void 0 : e.id);
         }),
-        I = i.useCallback(() => {
+        j = i.useCallback(() => {
             let e = 'noop';
             (null != n.inviter && null != m.Z.getDMFromUserId(n.inviter.id) && ((e = 'transition'), a.Z.openPrivateChannel({ recipientIds: [n.inviter.id] })),
                 (0, o.r$)(
@@ -36,9 +36,9 @@ function E(e) {
                         inviter_id: E.author.id,
                         invite_message_id: E.id
                     },
-                    y
+                    x
                 ));
-        }, [n, E, y]),
+        }, [n, E, x]),
         S = i.useCallback(() => {
             (0, o.r$)(
                 {
@@ -47,22 +47,22 @@ function E(e) {
                     inviter_id: E.author.id,
                     invite_message_id: E.id
                 },
-                y
+                x
             );
             let e = C('Invite Button Embed');
             o.ZP.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: n.code,
                 context: e
             });
-        }, [n, E, y, C]);
+        }, [n, E, x, C]);
     if (null == n.inviter) return null;
-    let T = j ? I : S,
+    let T = I ? j : S,
         N = h.intl.string(h.t.ib7Ng4),
         P = u.Z.Button.Colors.GREEN;
-    j ? ((N = h.intl.string(h.t.xhxnPj)), (P = u.Z.Button.Colors.PRIMARY)) : v && ((N = h.intl.string(h.t.ib7Ng4)), (P = u.Z.Button.Colors.PRIMARY));
-    let A = v ? h.intl.string(h.t.eQyu1N) : h.intl.string(h.t.PYJHW1),
+    I ? ((N = h.intl.string(h.t.xhxnPj)), (P = u.Z.Button.Colors.PRIMARY)) : y && ((N = h.intl.string(h.t.ib7Ng4)), (P = u.Z.Button.Colors.PRIMARY));
+    let A = y ? h.intl.string(h.t.eQyu1N) : h.intl.string(h.t.PYJHW1),
         w = null != n.inviter ? ''.concat(n.inviter.username) : '',
-        Z = null != n.inviter ? g.ZP.getUserTag(n.inviter) : '';
+        Z = null != n.inviter ? _.ZP.getUserTag(n.inviter) : '';
     return (0, r.jsxs)(u.Z, {
         children: [
             (0, r.jsx)(u.Z.Header, { text: A }),
@@ -73,19 +73,19 @@ function E(e) {
                         children: [
                             (0, r.jsx)(u.Z.Icon, {
                                 user: new d.Z(n.inviter),
-                                onClick: j ? T : void 0
+                                onClick: I ? T : void 0
                             }),
                             (0, r.jsx)(u.Z.Info, {
                                 title: w,
-                                onClick: j ? T : void 0,
+                                onClick: I ? T : void 0,
                                 children: Z
                             })
                         ]
                     }),
                     (0, r.jsx)(u.Z.Button, {
                         onClick: T,
-                        submitting: O,
-                        isDisabled: v,
+                        submitting: v,
+                        isDisabled: y,
                         color: P,
                         children: N
                     })

@@ -19,7 +19,7 @@ let m = {
         [i.u.REPORT_TO_MOD_DELETED_MESSAGE]: () => d.default['4023i4'],
         [i.u.REPORT_TO_MOD_CLOSED_REPORT]: () => d.default.UE81zc
     };
-function g(e) {
+function _(e) {
     let { type: t } = e,
         n = null;
     switch (t) {
@@ -45,40 +45,40 @@ function g(e) {
           })
         : null;
 }
-function _(e) {
+function g(e) {
     var t;
     let { message: n, channel: i, compact: a } = e,
-        { author: d, mentions: f, type: _ } = n,
+        { author: d, mentions: f, type: g } = n,
         h = (0, o.ZP)(n),
         b = n.getChannelId(),
         E = (0, l.e7)([u.default], () => u.default.getUser(f[0]), [f]),
         C = (0, o.JZ)(d, i),
-        x = (0, s.l)({
+        O = (0, s.l)({
             user: d,
             channelId: b,
             guildId: i.guild_id,
             messageId: n.id
         })(C),
-        v = (0, o.Sw)(E, i),
-        O = (0, s.l)({
+        y = (0, o.Sw)(E, i),
+        v = (0, s.l)({
             user: E,
             channelId: b,
             guildId: i.guild_id,
             messageId: n.id
-        })(v),
-        y = null != (t = m[_]) ? t : null;
-    if (null == y) return null;
-    let j = p.intl.format(y(), {
+        })(y),
+        x = null != (t = m[g]) ? t : null;
+    if (null == x) return null;
+    let I = p.intl.format(x(), {
         actorName: h.nick,
-        actorHook: x,
-        targetName: null == v ? void 0 : v.nick,
-        targetHook: O
+        actorHook: O,
+        targetName: null == y ? void 0 : y.nick,
+        targetHook: v
     });
     return (0, r.jsx)(c.Z, {
-        iconNode: (0, r.jsx)(g, { type: _ }),
+        iconNode: (0, r.jsx)(_, { type: g }),
         timestamp: n.timestamp,
         compact: a,
-        children: j
+        children: I
     });
 }
 function h(e) {
@@ -87,13 +87,13 @@ function h(e) {
         { author: a, type: u } = n,
         d = (0, o.ZP)(n),
         m = n.getChannelId(),
-        _ = (0, o.JZ)(a, i),
+        g = (0, o.JZ)(a, i),
         h = (0, s.l)({
             user: a,
             channelId: m,
             guildId: i.guild_id,
             messageId: n.id
-        })(_),
+        })(g),
         b = null != (t = f[u]) ? t : null;
     if (null == b) return null;
     let E = p.intl.format(b(), {
@@ -101,7 +101,7 @@ function h(e) {
         actorHook: h
     });
     return (0, r.jsx)(c.Z, {
-        iconNode: (0, r.jsx)(g, { type: u }),
+        iconNode: (0, r.jsx)(_, { type: u }),
         timestamp: n.timestamp,
         compact: l,
         children: E
@@ -111,7 +111,7 @@ function b(e) {
     let { message: t, channel: n, compact: l } = e,
         { type: a } = t;
     return a === i.u.REPORT_TO_MOD_BAN_USER || a === i.u.REPORT_TO_MOD_KICK_USER || a === i.u.REPORT_TO_MOD_TIMEOUT_USER
-        ? (0, r.jsx)(_, {
+        ? (0, r.jsx)(g, {
               message: t,
               channel: n,
               compact: l

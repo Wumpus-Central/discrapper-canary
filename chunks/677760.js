@@ -92,7 +92,7 @@ let C = (e) => {
             (0, _.vE)(n);
     }
 };
-function A(e) {
+function T(e) {
     let { invite: t, onAcceptInvite: n } = e;
     return (null == t ? void 0 : t.state) === I.r2o.BANNED
         ? (0, r.jsx)(c.u, {
@@ -106,7 +106,7 @@ function A(e) {
               onClick: n
           });
 }
-function T(e) {
+function A(e) {
     var { children: t, cardChildren: n, startAnimHeightPx: s, innerStyle: o } = e;
     let { invite: c } = (function (e, t) {
             if (null == e) return {};
@@ -161,7 +161,7 @@ function P(e) {
     if (null == t || !(0, b.JI)(t)) return null;
     let n = (e) => (null == t ? null : 1 === e ? (0, r.jsx)(v.X, { invite: t }) : null);
     return (0, r.jsx)(
-        T,
+        A,
         y(
             S(
                 {
@@ -182,7 +182,7 @@ function Z(e) {
                 case 1:
                     return (0, r.jsx)(E.Z, y(S({}, e), { invite: t }));
                 case 2:
-                    return (0, r.jsx)(A, y(S({}, e), { invite: t }));
+                    return (0, r.jsx)(T, y(S({}, e), { invite: t }));
                 default:
                     return (0, r.jsx)(N, {});
             }
@@ -193,7 +193,7 @@ function Z(e) {
             0: O.inviteCardInnerLoading
         };
     return (0, r.jsx)(
-        T,
+        A,
         y(
             S(
                 {

@@ -10,15 +10,15 @@ var i = n(255367),
     u = n(821022);
 function h(e) {
     let { guild: t, error: n, onClose: h } = e,
-        m = t.id,
-        g = l.useCallback(() => {
-            (h(), a.Z.open(m, c.pNK.INVITES));
-        }, [m, h]),
+        g = t.id,
+        m = l.useCallback(() => {
+            (h(), a.Z.open(g, c.pNK.INVITES));
+        }, [g, h]),
         p = l.useCallback(
             (e) =>
                 (0, i.jsx)(r.P3F, {
                     className: u.errorLink,
-                    onClick: g,
+                    onClick: m,
                     children: (0, i.jsx)(r.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-link',
@@ -26,7 +26,7 @@ function h(e) {
                         children: e
                     })
                 }),
-            [g]
+            [m]
         ),
         f = l.useCallback(
             (e) =>

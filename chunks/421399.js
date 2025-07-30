@@ -28,8 +28,8 @@ var r,
     y = n(485386),
     N = n(768581),
     C = n(585483),
-    A = n(463396),
-    T = n(935910),
+    T = n(463396),
+    A = n(935910),
     P = n(981631),
     Z = n(848697);
 function R(e) {
@@ -99,7 +99,7 @@ function k(e) {
         ec = (0, b.j)({ displayNameStyles: el }),
         eu = (0, c.e7)([y.Z], () => (null == n.guildId || null == n.colorRoleId ? null : y.Z.getRole(n.guildId, n.colorRoleId))),
         ed = (0, j.yH)(null != q ? q : Q, eu),
-        eh = (0, T.Z)(r),
+        eh = (0, A.Z)(r),
         ep = l.useContext(u.d),
         eg = ed && (0, I.S2)(n),
         em = ea && eg;
@@ -246,7 +246,7 @@ function k(e) {
                 }),
             null != eS ? eS : null,
             null == eO || U || L ? null : eO,
-            null != r && (0, A.f)(r) && eo && K ? (0, i.jsx)(D, {}) : null
+            null != r && (0, T.f)(r) && eo && K ? (0, i.jsx)(D, {}) : null
         ]
     });
 }

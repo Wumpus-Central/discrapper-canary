@@ -38,10 +38,10 @@ let v = 'mweb_handoff_nonce',
                     fingerprint: f
                 });
         }, [f, e]);
-        let [C, A] = i.useState(null),
-            T = i.useCallback(
+        let [C, T] = i.useState(null),
+            A = i.useCallback(
                 (e) => {
-                    (A(e),
+                    (T(e),
                         m.default.track(
                             x.rMx.MOBILE_WEB_HANDOFF_FAILURE,
                             {
@@ -51,18 +51,18 @@ let v = 'mweb_handoff_nonce',
                             { fingerprint: N }
                         ));
                 },
-                [A, N]
+                [T, N]
             ),
             P = c.K.get(v);
         if (
-            ('null' === n && null === C && T('deep_link_failed'),
-            null != n && 'null' !== n && null == P && null === C && T('nonce_missing'),
+            ('null' === n && null === C && A('deep_link_failed'),
+            null != n && 'null' !== n && null == P && null === C && A('nonce_missing'),
             i.useEffect(() => {
                 if (null != P) {
                     let e = c.K.get(I);
-                    (null == e || Date.now() >= e) && (T('nonce_expired'), y());
+                    (null == e || Date.now() >= e) && (A('nonce_expired'), y());
                 }
-            }, [P, T]),
+            }, [P, A]),
             i.useEffect(() => {
                 null != n &&
                     'null' !== n &&
@@ -89,12 +89,12 @@ let v = 'mweb_handoff_nonce',
                             (t.delete('handoff_token'), t.delete('fingerprint'), (e.search = t.toString()), window.history.pushState(null, '', e));
                         })
                         .catch(() => {
-                            T('handoff_exchange');
+                            A('handoff_exchange');
                         })
                         .finally(() => {
                             y();
                         });
-            }, [n, P, C, N, T]),
+            }, [n, P, C, N, A]),
             null == N)
         )
             return null;

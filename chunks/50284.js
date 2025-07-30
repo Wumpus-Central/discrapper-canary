@@ -1,40 +1,40 @@
-(n.d(t, { Z: () => E }), n(642613), n(583741));
-var i = n(544891),
-    r = n(710845),
+(n.d(t, { Z: () => p }), n(642613), n(583741));
+var r = n(544891),
+    i = n(710845),
     l = n(569471),
-    o = n(346479),
-    s = n(592125),
-    a = n(375954),
+    a = n(346479),
+    o = n(592125),
+    s = n(375954),
     c = n(306680),
-    d = n(594174),
-    u = n(709054),
+    u = n(594174),
+    d = n(709054),
     _ = n(981631);
-let h = new r.Z('markUnread');
-async function E(e, t) {
-    let n = d.default.getCurrentUser();
+let E = new i.Z('markUnread');
+async function p(e, t) {
+    let n = u.default.getCurrentUser();
     if (null == n) return;
-    let r = a.Z.getMessages(e),
-        E = r
+    let i = s.Z.getMessages(e),
+        p = i
             .toArray()
-            .filter((e) => 0 > u.default.compare(e.id, t))
-            .sort((e, t) => u.default.compare(e.id, t.id))
+            .filter((e) => 0 > d.default.compare(e.id, t))
+            .sort((e, t) => d.default.compare(e.id, t.id))
             .reverse()[0],
-        I = null == E ? u.default.atPreviousMillisecond(t) : E.id,
-        p = 0;
-    r.forAll((e) => {
-        u.default.compare(e.id, I) > 0 && (0, c.Ex)(e, n) && p++;
+        O = null == p ? d.default.atPreviousMillisecond(t) : p.id,
+        f = 0;
+    i.forAll((e) => {
+        d.default.compare(e.id, O) > 0 && (0, c.Ex)(e, n) && f++;
     });
-    let C = s.Z.getChannel(e);
-    (null != C && C.isThread() && (C.isArchivedThread() && (await o.Z.unarchiveThread(C, !1)), l.Z.hasJoined(e) || (await o.Z.joinThread(C, 'Mark Unread'))),
-        h.log('Marking unread', {
+    let I = o.Z.getChannel(e);
+    (null != I && I.isThread() && (I.isArchivedThread() && (await a.Z.unarchiveThread(I, !1)), l.Z.hasJoined(e) || (await a.Z.joinThread(I, 'Mark Unread'))),
+        E.log('Marking unread', {
             channelId: e,
             messageId: t
         }),
-        i.tn.post({
-            url: _.ANM.MESSAGE_ACK(e, I),
+        r.tn.post({
+            url: _.ANM.MESSAGE_ACK(e, O),
             body: {
                 manual: !0,
-                mention_count: p
+                mention_count: f
             },
             oldFormErrors: !0,
             rejectWithError: !0

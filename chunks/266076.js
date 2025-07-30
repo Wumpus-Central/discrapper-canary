@@ -26,8 +26,8 @@ let c = i.memo(function (e) {
             }
             return i;
         })(e, ['channel', 'size', 'facepileSizeOverride', 'experimentLocation', 'isTyping', 'status', 'className', 'animated']);
-    let { isFacepileEnabled: g } = o.Z.useExperiment({ location: c }, { autoTrackExposure: !0 });
-    return t.recipients.length >= 2 && g && null == t.icon
+    let { isFacepileEnabled: _ } = o.Z.useExperiment({ location: c }, { autoTrackExposure: !0 });
+    return t.recipients.length >= 2 && _ && null == t.icon
         ? (0, r.jsx)(s.Z, {
               'aria-label': f['aria-label'],
               'aria-hidden': f['aria-hidden'],

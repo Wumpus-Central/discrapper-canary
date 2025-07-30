@@ -1,16 +1,18 @@
 n.d(t, {
+    J0: () => E,
     NW: () => l,
     OV: () => a,
     Rb: () => s,
     Se: () => f,
     XE: () => c,
+    YB: () => m,
     Yo: () => u,
     dj: () => d,
     hS: () => p,
     mB: () => h,
     o4: () => o,
-    td: () => _,
-    wd: () => m
+    qA: () => g,
+    td: () => _
 });
 var r = n(818083),
     i = n(987338);
@@ -160,4 +162,36 @@ let h = (0, r.B)({
 function m(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return h.getCurrentConfig({ location: e }, { autoTrackExposure: t }).enabled;
+}
+let g = (0, r.B)({
+    kind: 'user',
+    id: '2025-07_overlay_oop_nudge',
+    label: 'Overlay OOP Nudge',
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
+    defaultConfig: {
+        useContextualNudge: !1,
+        disableNudge: !1
+    },
+    treatments: [
+        {
+            id: 1,
+            label: 'Enable Contextual Nudge',
+            config: {
+                useContextualNudge: !0,
+                disableNudge: !1
+            }
+        },
+        {
+            id: 2,
+            label: 'No Nudge',
+            config: {
+                useContextualNudge: !1,
+                disableNudge: !0
+            }
+        }
+    ]
+});
+function E(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return g.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }

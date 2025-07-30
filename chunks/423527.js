@@ -25,8 +25,8 @@ var r,
     y = n(616952),
     N = n(792766),
     C = n(692483),
-    A = n(100159),
-    T = n(473855),
+    T = n(100159),
+    A = n(473855),
     P = n(726745),
     Z = n(929809),
     R = n(541692),
@@ -138,7 +138,7 @@ class eu extends (r = l.PureComponent) {
                     location: null != t ? 'Invite Register Page' : 'Non-Invite Register Page',
                     registration_source: this.registrationSource
                 },
-                null != e ? (0, A.Z)(e, !1, !1) : {}
+                null != e ? (0, T.Z)(e, !1, !1) : {}
             ),
             { flush: !0 }
         ),
@@ -480,8 +480,8 @@ class eu extends (r = l.PureComponent) {
     renderFull(e, t) {
         let { email: n, username: r, globalName: s, password: o, consent: c, parsedDateOfBirth: u, globalNameFocused: d, emailClientError: h, usernameClientError: g, passwordClientError: m, dateOfBirthClientError: f, registering: _, apiErrors: { email: b, username: E, global_name: v, password: I, date_of_birth: O } = {} } = this.state,
             { consentRequired: S, authBoxClassName: N, hasLoggedInAccounts: C } = this.props,
-            A = this.renderErrorMessage(),
-            T = (0, i.jsx)(p.ua7, {
+            T = this.renderErrorMessage(),
+            A = (0, i.jsx)(p.ua7, {
                 text: !c && S ? en.intl.string(en.t.AY4IVF) : null,
                 children: (e) =>
                     (0, i.jsx)(
@@ -614,8 +614,8 @@ class eu extends (r = l.PureComponent) {
                     }),
                     (0, i.jsx)(y.Z, {}),
                     this.renderConsentComponent(),
-                    T,
                     A,
+                    T,
                     $.a
                         ? null
                         : (0, i.jsx)(j.zx, {
@@ -693,7 +693,7 @@ class eu extends (r = l.PureComponent) {
                 ? this.renderInviteResolving()
                 : this.renderInvite()
             : null != l
-              ? this.renderFull(() => (0, i.jsx)(T.Z, { guildTemplate: l }), !0)
+              ? this.renderFull(() => (0, i.jsx)(A.Z, { guildTemplate: l }), !0)
               : null != n
                 ? this.renderFull(() => (0, i.jsx)(q.Z, { giftCode: n }))
                 : null != r && s && r.state === X.r2o.RESOLVED

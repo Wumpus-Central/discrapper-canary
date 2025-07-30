@@ -1,6 +1,6 @@
 (n.d(t, {
     M: () => p,
-    Z: () => v
+    Z: () => y
 }),
     n(539854),
     n(388685));
@@ -16,8 +16,8 @@ var r,
     p = (((i = {})[(i.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (i[(i.FETCHING = 1)] = 'FETCHING'), (i[(i.FETCHED = 2)] = 'FETCHED'), i);
 let m = {},
     f = {},
-    g = {},
-    _ = 10 * u.Z.Millis.MINUTE;
+    _ = {},
+    g = 10 * u.Z.Millis.MINUTE;
 function h(e) {
     return 'guild:'.concat(e);
 }
@@ -36,7 +36,7 @@ let E = new s.h(
             })(e)
     ),
     C = [];
-class x extends (r = o.ZP.Store) {
+class O extends (r = o.ZP.Store) {
     getGuildProductsForGuildFetchState(e) {
         var t;
         return null != (t = m[e]) ? t : 0;
@@ -54,21 +54,21 @@ class x extends (r = o.ZP.Store) {
     }
     isGuildProductsCacheExpired(e) {
         var t;
-        return Date.now() - (null != (t = g[e]) ? t : 0) > _;
+        return Date.now() - (null != (t = _[e]) ? t : 0) > g;
     }
 }
 ((a = 'GuildProductsStore'),
-    (l = 'displayName') in x
-        ? Object.defineProperty(x, l, {
+    (l = 'displayName') in O
+        ? Object.defineProperty(O, l, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (x[l] = a));
-let v = new x(c.Z, {
+        : (O[l] = a));
+let y = new O(c.Z, {
     CONNECTION_OPEN: function () {
-        (E.clear(), (m = {}), (f = {}), (g = {}));
+        (E.clear(), (m = {}), (f = {}), (_ = {}));
     },
     GUILD_PRODUCTS_FETCH: function (e) {
         let { guildId: t } = e;
@@ -80,7 +80,7 @@ let v = new x(c.Z, {
     GUILD_PRODUCTS_FETCH_SUCCESS: function (e) {
         let { guildId: t, products: n } = e;
         ((m[t] = 2),
-            (g[t] = Date.now()),
+            (_[t] = Date.now()),
             n.forEach((e) => {
                 (E.set(e.id, e), (f[e.id] = 2));
             }));

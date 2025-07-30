@@ -11,21 +11,21 @@ var r = n(255367),
     p = n(926491),
     m = n(419922),
     f = n(626135),
-    g = n(585483),
-    _ = n(115610),
+    _ = n(585483),
+    g = n(115610),
     h = n(981631),
     b = n(388032),
     E = n(711643);
 function C(e) {
     let { message: t, channel: l, compact: C } = e,
-        x = (0, o.Wu)([p.Z], () => Array.from(p.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
-        [v, O] = i.useState(null);
+        O = (0, o.Wu)([p.Z], () => Array.from(p.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
+        [y, v] = i.useState(null);
     return (i.useEffect(() => {
         let e = setInterval(() => {
-            x.length > 0 && O(x[Math.floor(Math.random() * x.length)]);
+            O.length > 0 && v(O[Math.floor(Math.random() * O.length)]);
         }, 500);
         return () => clearInterval(e);
-    }, [x]),
+    }, [O]),
     null == l.guild_id)
         ? null
         : (0, r.jsxs)('div', {
@@ -56,7 +56,7 @@ function C(e) {
                                           guild_id: l.guild_id,
                                           action_type: 'upload_file'
                                       }),
-                                          g.S.dispatch(h.CkL.UPLOAD_FILE),
+                                          _.S.dispatch(h.CkL.UPLOAD_FILE),
                                           (0, d.fE)({
                                               message: t,
                                               channel: l,
@@ -80,13 +80,13 @@ function C(e) {
                                           guild_id: l.guild_id,
                                           action_type: 'sticker'
                                       }),
-                                          (0, _.O)(t.id, l));
+                                          (0, g.O)(t.id, l));
                                   },
                                   children:
-                                      null != v
+                                      null != y
                                           ? (0, r.jsx)(m.Z, {
                                                 size: 32,
-                                                sticker: v
+                                                sticker: y
                                             })
                                           : (0, r.jsx)(c.EO4, {
                                                 size: 'md',

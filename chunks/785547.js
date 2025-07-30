@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => L }), n(415506), n(388685));
+(n.d(t, { Z: () => D }), n(415506), n(388685));
 var r,
     i,
     l = n(255367),
@@ -11,18 +11,18 @@ var r,
     p = n(2052),
     m = n(710845),
     f = n(703656),
-    g = n(173747),
-    _ = n(7956),
+    _ = n(173747),
+    g = n(7956),
     h = n(293245),
     b = n(417363),
     E = n(941128),
     C = n(780570),
-    x = n(358085),
-    v = n(814225),
-    O = n(346329),
-    y = n(701560),
-    j = n(981631),
-    I = n(388032),
+    O = n(358085),
+    y = n(814225),
+    v = n(346329),
+    x = n(701560),
+    I = n(981631),
+    j = n(388032),
     S = n(207178);
 function T(e, t, n) {
     return (
@@ -73,40 +73,40 @@ function P(e, t) {
 }
 var A = (((i = A || {}).PLAY = 'play'), (i.NOW_PLAYING = 'now_playing'), (i.INSTALL = 'install'), (i.UPDATE = 'update'), (i.PAUSED = 'paused'), (i.LOCATE = 'locate'), (i.UNINSTALLING = 'uninstalling'), (i.QUEUED = 'queued'), (i.DOWNLOADING = 'downloading'), (i.UNSUPPORTED_OS = 'unsupported_os'), (i.ADD_TO_LIBRARY = 'add_to_library'), (i.PREORDER_WAIT = 'preorder_wait'), i);
 let w = Object.freeze({
-        [j.apO.PLAY]: 'play',
-        [j.apO.INSTALL]: 'install',
-        [j.apO.UPDATE]: 'update',
-        [j.apO.PAUSE]: 'downloading',
-        [j.apO.MOVE_UP]: 'queued',
-        [j.apO.RESUME]: 'paused'
+        [I.apO.PLAY]: 'play',
+        [I.apO.INSTALL]: 'install',
+        [I.apO.UPDATE]: 'update',
+        [I.apO.PAUSE]: 'downloading',
+        [I.apO.MOVE_UP]: 'queued',
+        [I.apO.RESUME]: 'paused'
     }),
-    Z = () => [I.intl.string(I.t.r9wmKi), I.intl.string(I.t['6CpimZ']), I.intl.string(I.t.ysbNDQ), I.intl.string(I.t.TLnXx8), I.intl.string(I.t.Qi8mnZ), I.intl.string(I.t.yvMu3d), I.intl.string(I.t.PnNUZ2), I.intl.string(I.t.hU2TEB), I.intl.string(I.t.YyY519), I.intl.string(I.t.PbHJb2)];
+    Z = () => [j.intl.string(j.t.r9wmKi), j.intl.string(j.t['6CpimZ']), j.intl.string(j.t.ysbNDQ), j.intl.string(j.t.TLnXx8), j.intl.string(j.t.Qi8mnZ), j.intl.string(j.t.yvMu3d), j.intl.string(j.t.PnNUZ2), j.intl.string(j.t.hU2TEB), j.intl.string(j.t.YyY519), j.intl.string(j.t.PbHJb2)];
 class R extends (r = a.Component) {
     get analyticsLocation() {
-        return P(N({}, this.props.analyticsContext.location), { object: j.qAy.BUTTON_CTA });
+        return P(N({}, this.props.analyticsContext.location), { object: I.qAy.BUTTON_CTA });
     }
     getText(e) {
         switch (('uninstalling' !== e && (this._uninstallStringIndex = null), e)) {
             case 'install':
             case 'unsupported_os':
-                return I.intl.string(I.t.nL0WvL);
+                return j.intl.string(j.t.nL0WvL);
             case 'update':
-                return I.intl.string(I.t.tkhwp6);
+                return j.intl.string(j.t.tkhwp6);
             case 'paused':
-                return I.intl.string(I.t['6EKrh4']);
+                return j.intl.string(j.t['6EKrh4']);
             case 'locate':
-                return I.intl.string(I.t['nIj+a2']);
+                return j.intl.string(j.t['nIj+a2']);
             case 'uninstalling':
                 let t = Z();
                 return (null == this._uninstallStringIndex && (this._uninstallStringIndex = Math.floor(Math.random() * t.length)), t[this._uninstallStringIndex]);
             case 'queued':
-                return I.intl.string(I.t.TiJg5u);
+                return j.intl.string(j.t.TiJg5u);
             case 'downloading':
-                return I.intl.string(I.t.Tdhepa);
+                return j.intl.string(j.t.Tdhepa);
             case 'preorder_wait':
-                return I.intl.string(I.t.xiXyPT);
+                return j.intl.string(j.t.xiXyPT);
             case 'add_to_library':
-                return I.intl.string(I.t.r3fwub);
+                return j.intl.string(j.t.r3fwub);
             default:
                 throw Error('Unexpected button state');
         }
@@ -116,11 +116,11 @@ class R extends (r = a.Component) {
         if (e.isHidden()) return 'add_to_library';
         if (e.isPreorder()) return 'preorder_wait';
         let r = null != n ? w[n] : null;
-        return null != r ? r : null != t && t.type === j.vxO.UNINSTALLING ? 'uninstalling' : (0, x.isWeb)() ? 'play' : 'unsupported_os';
+        return null != r ? r : null != t && t.type === I.vxO.UNINSTALLING ? 'uninstalling' : (0, O.isWeb)() ? 'play' : 'unsupported_os';
     }
     renderPlayButton() {
         let { libraryApplication: e, fullWidth: t, size: n, color: r, customDisabledColor: i, isPlayShiny: a, onDropdownOpen: o, onDropdownClose: s, analyticsListSort: c, analyticsListIndex: u } = this.props;
-        return (0, l.jsx)(y.Z, {
+        return (0, l.jsx)(x.Z, {
             applicationId: e.id,
             libraryApplication: e,
             fullWidth: t,
@@ -160,7 +160,7 @@ class R extends (r = a.Component) {
         if (e) return null;
         let n = C.KJ(t);
         if (null == n) return null;
-        let r = n.type === j.vxO.UNINSTALLING ? u.Exd.INDETERMINATE : C.xI(Number(n.progress), Number(n.total));
+        let r = n.type === I.vxO.UNINSTALLING ? u.Exd.INDETERMINATE : C.xI(Number(n.progress), Number(n.total));
         return (0, l.jsx)(u.Exd, {
             percent: r,
             size: u.Exd.Sizes.XSMALL,
@@ -189,12 +189,12 @@ class R extends (r = a.Component) {
             return this.renderDisabledButton(
                 n,
                 (function (e) {
-                    let t = v.en(e.sku);
-                    return null != t ? I.intl.formatToPlainString(I.t.Aqe2ZG, { date: t }) : null;
+                    let t = y.en(e.sku);
+                    return null != t ? j.intl.formatToPlainString(j.t.Aqe2ZG, { date: t }) : null;
                 })(t)
             );
-        if ('unsupported_os' === n) return this.renderDisabledButton(n, I.intl.formatToPlainString(I.t.LBm0Aw, { operatingSystem: I.intl.string(I.t['0/xHFB']) }));
-        if ('install' === n && e) return this.renderDisabledButton(n, I.intl.string(I.t.QUSQIC));
+        if ('unsupported_os' === n) return this.renderDisabledButton(n, j.intl.formatToPlainString(j.t.LBm0Aw, { operatingSystem: j.intl.string(j.t['0/xHFB']) }));
+        if ('install' === n && e) return this.renderDisabledButton(n, j.intl.string(j.t.QUSQIC));
         let r = this.onClickHandlers[n];
         return null == r ? this.renderDisabledButton(n) : this.renderActionButton(n, r);
     }
@@ -204,18 +204,18 @@ class R extends (r = a.Component) {
             T(this, 'handleAddToLibrary', async () => {
                 try {
                     let { libraryApplication: e } = this.props;
-                    (await d.h(e.id, e.branchId, e.getFlags() & ~j.eHb.HIDDEN), (0, f.uL)(j.Z5c.APPLICATION_LIBRARY));
+                    (await d.h(e.id, e.branchId, e.getFlags() & ~I.eHb.HIDDEN), (0, f.uL)(I.Z5c.APPLICATION_LIBRARY));
                 } catch (e) {
                     new m.Z('LibraryApplicationButton').error(e);
                 }
             }),
             T(this, 'handleInstall', () => {
                 let { libraryApplication: e, source: t } = this.props;
-                O.installApplication(e.id, e.branchId, t);
+                v.installApplication(e.id, e.branchId, t);
             }),
             T(this, 'handleUpdate', () => {
                 let { libraryApplication: e } = this.props;
-                O.updateApplication(e.id, e.branchId);
+                v.updateApplication(e.id, e.branchId);
             }),
             T(this, 'onClickHandlers', {
                 add_to_library: this.handleAddToLibrary,
@@ -228,12 +228,12 @@ class R extends (r = a.Component) {
             }));
     }
 }
-function L(e) {
+function D(e) {
     let { libraryApplication: t } = e,
         n = (0, p.O)(),
-        [r, i] = (0, o.Wu)([b.Z, E.Z], () => [(0, _.i)(t, b.Z, E.Z), b.Z.getState(t.id, t.branchId)], [t]),
+        [r, i] = (0, o.Wu)([b.Z, E.Z], () => [(0, g.i)(t, b.Z, E.Z), b.Z.getState(t.id, t.branchId)], [t]),
         a = (0, o.e7)([h.Z], () => h.Z.isSyncing(t.id, t.branchId), [t]),
-        s = (0, o.e7)([g.Z], () => g.Z.hasNoBuild(t.id, t.branchId), [t]);
+        s = (0, o.e7)([_.Z], () => _.Z.hasNoBuild(t.id, t.branchId), [t]);
     return (0, l.jsx)(
         R,
         P(N({}, e), {

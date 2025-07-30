@@ -1,9 +1,9 @@
 n.d(t, {
     Dr: () => f,
     YO: () => p,
-    _X: () => g,
+    _X: () => _,
     _o: () => m,
-    nb: () => _,
+    nb: () => g,
     zO: () => d
 });
 var r = n(570140),
@@ -60,12 +60,12 @@ async function f(e, t) {
         searchState: t
     });
 }
-function g(e) {
+function _(e) {
     let t = (0, o.lv)(e),
         n = a.Z.getGuild(e);
     return !!t && null != n && (n.features.has(c.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) || n.features.has(c.oNc.COMMUNITY) || n.features.has(c.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? (0, l.uL)(c.Z5c.CHANNEL(e, u.oC.MEMBER_SAFETY)) : i.Z.open(n.id, c.pNK.MEMBERS), !0);
 }
-async function _(e, t) {
+async function g(e, t) {
     let n = await (0, s._2)(e, t);
     return 0 === n.length
         ? []

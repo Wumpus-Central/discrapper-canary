@@ -12,15 +12,15 @@ var i = n(442837),
     p = n(592125),
     m = n(430824),
     f = n(699516),
-    g = n(594174),
-    _ = n(934415),
+    _ = n(594174),
+    g = n(934415),
     h = n(900849),
     b = n(981631);
 function E(e) {
-    let { channel: t, onClick: n, beforeTransition: E, className: C, openChatWithoutConnecting: x } = e,
-        v = (0, i.e7)([g.default, f.Z], () => (null == t ? '' : (0, s.F6)(t, g.default, f.Z)), [t]);
+    let { channel: t, onClick: n, beforeTransition: E, className: C, openChatWithoutConnecting: O } = e,
+        y = (0, i.e7)([_.default, f.Z], () => (null == t ? '' : (0, s.F6)(t, _.default, f.Z)), [t]);
     return (0, r.jsx)(l.ua7, {
-        text: v,
+        text: y,
         position: 'top',
         children: (e) => {
             let { onMouseEnter: i, onMouseLeave: s } = e;
@@ -48,12 +48,12 @@ function E(e) {
                                       return;
                                   }
                                   (0, u.uL)(b.Z5c.CHANNEL(e, t));
-                              })(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, x)));
+                              })(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, O)));
                 },
                 onMouseEnter: i,
                 onMouseLeave: s,
-                iconType: (0, _.wl)(t),
-                children: v
+                iconType: (0, g.wl)(t),
+                children: y
             });
         }
     });

@@ -9,8 +9,8 @@ var i = n(255367),
     d = n(503089),
     u = n(493544),
     h = n(367907),
-    m = n(933557),
-    g = n(471445),
+    g = n(933557),
+    m = n(471445),
     p = n(351123),
     f = n(685929),
     x = n(984802),
@@ -21,8 +21,8 @@ var i = n(255367),
     C = n(277053),
     N = n(388610),
     S = n(592125),
-    E = n(496675),
-    O = n(699516),
+    O = n(496675),
+    E = n(699516),
     T = n(594174),
     w = n(585483),
     Z = n(787263),
@@ -67,7 +67,7 @@ class k extends l.PureComponent {
                   onClose: c.xf,
                   sections: (function (e) {
                       let { channel: t, category: n, canManageRoles: l, canManageChannels: r, canDeleteChannels: a, canManageWebhooks: d, canUnlinkChannel: h } = e,
-                          f = (0, g.KS)(t),
+                          f = (0, m.KS)(t),
                           { GUILD_CATEGORY: x } = A.d4z,
                           j = v.Ec.has(t.type),
                           b = t.type === x ? L.intl.string(L.t.ifbXnJ) : j ? (t.isForumPost() ? L.intl.string(L.t.nEOg1N) : L.intl.string(L.t.H7vTe3)) : L.intl.string(L.t['8D8Rsb']);
@@ -85,7 +85,7 @@ class k extends l.PureComponent {
                                                           className: D.channelIcon
                                                       })
                                                     : null,
-                                                (0, m.F6)(t, T.default, O.Z),
+                                                (0, g.F6)(t, T.default, E.Z),
                                                 null != n
                                                     ? (0, i.jsx)(s.Text, {
                                                           tag: 'span',
@@ -93,7 +93,7 @@ class k extends l.PureComponent {
                                                           color: 'header-secondary',
                                                           lineClamp: 1,
                                                           className: D.category,
-                                                          children: (0, m.F6)(n, T.default, O.Z)
+                                                          children: (0, g.F6)(n, T.default, E.Z)
                                                       })
                                                     : null
                                             ]
@@ -184,22 +184,22 @@ function B() {
             canManageChannels: d,
             canManageRoles: u,
             canManageWebhooks: h,
-            canUnlinkChannel: m
-        } = (0, r.cj)([E.Z], () => ({
-            canManageChannels: E.Z.can(A.Plq.MANAGE_CHANNELS, e),
-            canManageRoles: null != e && E.Z.can(A.Plq.MANAGE_ROLES, e),
-            canManageWebhooks: null != e && E.Z.can(A.Plq.MANAGE_WEBHOOKS, e),
-            canUnlinkChannel: (0, f.C)(e, E.Z)
+            canUnlinkChannel: g
+        } = (0, r.cj)([O.Z], () => ({
+            canManageChannels: O.Z.can(A.Plq.MANAGE_CHANNELS, e),
+            canManageRoles: null != e && O.Z.can(A.Plq.MANAGE_ROLES, e),
+            canManageWebhooks: null != e && O.Z.can(A.Plq.MANAGE_WEBHOOKS, e),
+            canUnlinkChannel: (0, f.C)(e, O.Z)
         })),
-        g = (0, r.e7)([S.Z], () => S.Z.getChannel(null == e ? void 0 : e.parent_id));
+        m = (0, r.e7)([S.Z], () => S.Z.getChannel(null == e ? void 0 : e.parent_id));
     return (0, i.jsx)(k, {
         channel: e,
-        category: g,
+        category: m,
         canManageChannels: (null == e ? void 0 : e.isThread()) ? o : d,
         canDeleteChannels: (null == e ? void 0 : e.isThread()) ? c : d,
         canManageRoles: u,
         canManageWebhooks: h,
-        canUnlinkChannel: m,
+        canUnlinkChannel: g,
         formState: n,
         theme: s,
         sidebarTheme: a,

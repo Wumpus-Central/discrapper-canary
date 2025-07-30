@@ -163,139 +163,144 @@ function er(e) {
 }
 class eo extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, k.default, x.Z);
+        this.waitFor(L.default, I.Z, k.default, x.Z);
     }
     getNotifications() {
         return q;
     }
 }
 H(eo, 'displayName', 'OverlayNotificationsStore');
-let el = new eo(a.Z, {
-    OVERLAY_UPDATE_NOTIFICATION_STATUS: function (e) {
-        let { notificationId: t, status: n } = e;
-        ee(t, n);
-    },
-    OVERLAY_MOUNTED: function (e) {
-        var t;
-        let { nudges: n } = e;
-        if (S.default.hasChangedRenderMode(null != (t = A.default.getFocusedPID()) ? t : (0, V.getPID)())) return;
-        let i = (function (e) {
-            switch (e.type) {
-                case B.nc.OOP_WELCOME:
-                    return (0, f.Z)(e);
-                case B.nc.GO_LIVE_VOICE:
-                case B.nc.GO_LIVE_NON_VOICE:
-                    return (0, h.Z)(e);
-                case B.nc.KEYBIND_INDICATORS:
-                    return (0, E.Z)(e);
-                case B.nc.NEWS:
-                default:
-                    return (0, y.Z)(e);
-            }
-        })(n[0]);
-        null != i &&
-            ei(i, {
-                priority: 2,
-                duration: X
-            });
-    },
-    OVERLAY_SET_INPUT_LOCKED: function (e) {
-        let { locked: t } = e;
-        if (t) return !1;
-        q = q.map((e) => (e.status === U._1z.ACTIVE ? (clearTimeout(e.timerId), Y(F({}, e), { timerId: $(e.id, e.expirationExternallyManaged) })) : e));
-    },
-    MESSAGE_CREATE: function (e) {
-        var t, n, i;
-        let { channelId: r, message: l } = e,
-            s = I.Z.getChannel(r),
-            a = k.default.getUser(null == (t = l.author) ? void 0 : t.id);
-        if (null == s || null == a) return !1;
-        if ((null == (n = l.activity) ? void 0 : n.type) === U.mFx.JOIN || (null == (i = l.activity) ? void 0 : i.type) === U.mFx.JOIN_REQUEST) {
-            if (!(0, _.eF)(l, r, !0, !0)) return !1;
-            let e = (function (e, t, n) {
-                let i, r;
-                if ((o()(null != t.activity, 'received null message activity'), n.id === Z.default.getId())) return !1;
-                let l = W.Z.getGame();
-                if (null == l) return !1;
-                switch (t.activity.type) {
-                    case U.mFx.JOIN:
-                        if (null == (i = w.Z.getApplicationActivity(n.id, l.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
-                        r = (0, d.Z)(e, t, n, l, i);
-                        break;
-                    case U.mFx.JOIN_REQUEST:
-                        if (null == (i = T.Z.getApplicationActivity(l.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
-                        r = (0, g.Z)(e, n, l, i);
-                }
-                if (null == r) return !1;
-                let s = ei(r, {
-                    priority: 2,
-                    expirationExternallyManaged: !0,
-                    channelId: e.id
-                });
-                return (null != s && $(s, !1, J), !0);
-            })(s, l, a);
-            if (!1 !== e) return e;
-        }
-        if (((!L.default.isInstanceLocked() || L.default.isPinned(U.Odu.TEXT)) && r === N.Z.getChannelId()) || x.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT) || D.Z.disableNotifications || !(0, _.eF)(l, r)) return !1;
-        let c = !P.Z.isSoundDisabled(R.Ay);
-        ei((0, m.Z)(s, l, a, c), {
-            type: 1,
-            channelId: s.id,
-            messageType: l.type
-        });
-    },
-    CHANNEL_SELECT: function (e) {
-        let { channelId: t } = e;
-        return null != t && et(t);
-    },
-    MESSAGE_ACK: function (e) {
-        let { channelId: t } = e;
-        return et(t);
-    },
-    CALL_CREATE: er,
-    CALL_UPDATE: er,
-    CALL_DELETE: function (e) {
-        let { channelId: t } = e;
-        ee(en(t));
-    },
-    GUILD_RING_START: er,
-    GUILD_RING_STOP: function (e) {
-        let { channelId: t, guildId: n, ringing: i } = e;
-        if (
-            !j.Z.getCurrentConfig({
-                guildId: n,
-                location: 'OverlayStopRinging'
-            }).enabled
-        )
-            return !1;
-        i.includes(Z.default.getId()) && ee(en(t));
-    },
-    ACTIVITY_USER_ACTION: function (e) {
-        let t,
-            { actionType: n, user: i, applicationId: r } = e,
-            o = W.Z.getGame();
-        return (
-            null != o &&
-            o.id === r &&
-            (n === U.mFx.JOIN && (t = (0, u.Z)(i, o)),
-            null != t &&
-                void ei(t, {
-                    priority: 2,
-                    type: 0
-                }))
-        );
-    },
-    CLIPS_SAVE_CLIP_START: function () {
-        ei((0, v.f)(G.intl.string(G.t.NBMK9v)));
-    },
-    CLIPS_SAVE_CLIP: function () {
-        ei((0, v.f)(G.intl.formatToPlainString(G.t.KLhk6u, { duration: (0, z.A)(O.Z.getSettings().clipsLength / 1000, !0) })));
-    },
-    CLIPS_SAVE_CLIP_ERROR: function () {
-        ei((0, v.f)(G.intl.string(G.t['1ZbZur'])));
-    },
-    STREAM_START: function (e) {
-        let t = (0, v.y)();
-        null != t && ei(t);
-    }
-});
+let el = new eo(
+    a.Z,
+    !__OVERLAY__
+        ? {}
+        : {
+              OVERLAY_UPDATE_NOTIFICATION_STATUS: function (e) {
+                  let { notificationId: t, status: n } = e;
+                  ee(t, n);
+              },
+              OVERLAY_MOUNTED: function (e) {
+                  var t;
+                  let { nudges: n } = e;
+                  if (S.default.hasChangedRenderMode(null != (t = A.default.getFocusedPID()) ? t : (0, V.getPID)())) return;
+                  let i = (function (e) {
+                      switch (e.type) {
+                          case B.nc.OOP_WELCOME:
+                              return (0, f.Z)(e);
+                          case B.nc.GO_LIVE_VOICE:
+                          case B.nc.GO_LIVE_NON_VOICE:
+                              return (0, h.Z)(e);
+                          case B.nc.KEYBIND_INDICATORS:
+                              return (0, E.Z)(e);
+                          case B.nc.NEWS:
+                          default:
+                              return (0, y.Z)(e);
+                      }
+                  })(n[0]);
+                  null != i &&
+                      ei(i, {
+                          priority: 2,
+                          duration: X
+                      });
+              },
+              OVERLAY_SET_INPUT_LOCKED: function (e) {
+                  let { locked: t } = e;
+                  if (t) return !1;
+                  q = q.map((e) => (e.status === U._1z.ACTIVE ? (clearTimeout(e.timerId), Y(F({}, e), { timerId: $(e.id, e.expirationExternallyManaged) })) : e));
+              },
+              MESSAGE_CREATE: function (e) {
+                  var t, n, i;
+                  let { channelId: r, message: l } = e,
+                      s = I.Z.getChannel(r),
+                      a = k.default.getUser(null == (t = l.author) ? void 0 : t.id);
+                  if (null == s || null == a) return !1;
+                  if ((null == (n = l.activity) ? void 0 : n.type) === U.mFx.JOIN || (null == (i = l.activity) ? void 0 : i.type) === U.mFx.JOIN_REQUEST) {
+                      if (!(0, _.eF)(l, r, !0, !0)) return !1;
+                      let e = (function (e, t, n) {
+                          let i, r;
+                          if ((o()(null != t.activity, 'received null message activity'), n.id === Z.default.getId())) return !1;
+                          let l = W.Z.getGame();
+                          if (null == l) return !1;
+                          switch (t.activity.type) {
+                              case U.mFx.JOIN:
+                                  if (null == (i = w.Z.getApplicationActivity(n.id, l.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
+                                  r = (0, d.Z)(e, t, n, l, i);
+                                  break;
+                              case U.mFx.JOIN_REQUEST:
+                                  if (null == (i = T.Z.getApplicationActivity(l.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
+                                  r = (0, g.Z)(e, n, l, i);
+                          }
+                          if (null == r) return !1;
+                          let s = ei(r, {
+                              priority: 2,
+                              expirationExternallyManaged: !0,
+                              channelId: e.id
+                          });
+                          return (null != s && $(s, !1, J), !0);
+                      })(s, l, a);
+                      if (!1 !== e) return e;
+                  }
+                  if (((!L.default.isInstanceLocked() || L.default.isPinned(U.Odu.TEXT)) && r === N.Z.getChannelId()) || x.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT) || D.Z.disableNotifications || !(0, _.eF)(l, r)) return !1;
+                  let c = !P.Z.isSoundDisabled(R.Ay);
+                  ei((0, m.Z)(s, l, a, c), {
+                      type: 1,
+                      channelId: s.id,
+                      messageType: l.type
+                  });
+              },
+              CHANNEL_SELECT: function (e) {
+                  let { channelId: t } = e;
+                  return null != t && et(t);
+              },
+              MESSAGE_ACK: function (e) {
+                  let { channelId: t } = e;
+                  return et(t);
+              },
+              CALL_CREATE: er,
+              CALL_UPDATE: er,
+              CALL_DELETE: function (e) {
+                  let { channelId: t } = e;
+                  ee(en(t));
+              },
+              GUILD_RING_START: er,
+              GUILD_RING_STOP: function (e) {
+                  let { channelId: t, guildId: n, ringing: i } = e;
+                  if (
+                      !j.Z.getCurrentConfig({
+                          guildId: n,
+                          location: 'OverlayStopRinging'
+                      }).enabled
+                  )
+                      return !1;
+                  i.includes(Z.default.getId()) && ee(en(t));
+              },
+              ACTIVITY_USER_ACTION: function (e) {
+                  let t,
+                      { actionType: n, user: i, applicationId: r } = e,
+                      o = W.Z.getGame();
+                  return (
+                      null != o &&
+                      o.id === r &&
+                      (n === U.mFx.JOIN && (t = (0, u.Z)(i, o)),
+                      null != t &&
+                          void ei(t, {
+                              priority: 2,
+                              type: 0
+                          }))
+                  );
+              },
+              CLIPS_SAVE_CLIP_START: function () {
+                  ei((0, v.f)(G.intl.string(G.t.NBMK9v)));
+              },
+              CLIPS_SAVE_CLIP: function () {
+                  ei((0, v.f)(G.intl.formatToPlainString(G.t.KLhk6u, { duration: (0, z.A)(O.Z.getSettings().clipsLength / 1000, !0) })));
+              },
+              CLIPS_SAVE_CLIP_ERROR: function () {
+                  ei((0, v.f)(G.intl.string(G.t['1ZbZur'])));
+              },
+              STREAM_START: function (e) {
+                  let t = (0, v.y)();
+                  null != t && ei(t);
+              }
+          }
+);

@@ -1,6 +1,6 @@
 n.d(t, {
     G: () => C,
-    z: () => x
+    z: () => O
 });
 var r = n(73800),
     i = n(442837),
@@ -14,8 +14,8 @@ var r = n(73800),
     p = n(914010),
     m = n(135431),
     f = n(433534),
-    g = n(914498),
-    _ = n(981631),
+    _ = n(914498),
+    g = n(981631),
     h = n(49898),
     b = n(388032);
 function E(e) {
@@ -33,18 +33,18 @@ function E(e) {
             [c.Z, u.Z, d.Z],
             () => {
                 let e = c.Z.getChannel(d.Z.getChannelId());
-                return null != e && (e.isPrivate() || u.Z.can(_.Plq.SEND_MESSAGES, e));
+                return null != e && (e.isPrivate() || u.Z.can(g.Plq.SEND_MESSAGES, e));
             },
             []
         ),
-        g = (0, l.PZ)(e, s) && m;
+        _ = (0, l.PZ)(e, s) && m;
     return {
         isDiscoverable: t,
         customInstallUrl: n,
         installParams: r,
         integrationTypesConfig: a,
-        canViewApp: t || g,
-        canOpenAppLauncher: g,
+        canViewApp: t || _,
+        canOpenAppLauncher: _,
         isInstallable: o,
         selectedGuildId: s
     };
@@ -78,7 +78,7 @@ function C(e, t) {
         [e.id, i, n, c, u, d, l, t, p]
     );
 }
-function x(e) {
+function O(e) {
     let { canViewApp: t, isInstallable: n } = E(e),
         i = C(e);
     return r.useMemo(
@@ -86,7 +86,7 @@ function x(e) {
             t && null != i
                 ? {
                       label: b.intl.string(b.t.hvVgAQ),
-                      trackingArea: g.j_.VIEW,
+                      trackingArea: _.j_.VIEW,
                       onClick() {
                           i();
                       }
@@ -94,7 +94,7 @@ function x(e) {
                 : n && null != i
                   ? {
                         label: b.intl.string(b.t.NgXl3N),
-                        trackingArea: g.j_.ADD_APP,
+                        trackingArea: _.j_.ADD_APP,
                         onClick() {
                             i();
                         }
