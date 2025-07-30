@@ -17592,6 +17592,7 @@
   "e7f8r6": "We’ve hidden {count, plural, one {!!{count}!! result} other {!!{count}!! results} } from users you’ve ignored.",
   "OukXZm": "Oldest",
   "a1BaUl": "Old",
+  "E+2azc": "We can only return up to !!{maxPages}!! pages of results. Try making your search more specific!",
   "epc9sr": "Pick a date",
   "Ov3VOz": "Remove from Search History",
   "I+4OJC": "Were these search results helpful?",
