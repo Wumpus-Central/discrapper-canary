@@ -35,8 +35,8 @@ var r = n(255367),
     D = n(946598),
     L = n(428946),
     x = n(42948),
-    k = n(109194),
-    M = n(352812),
+    M = n(109194),
+    k = n(352812),
     j = (function (e) {
         return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e);
     })({});
@@ -71,7 +71,7 @@ function U(e) {
         J = (0, u.ap)((0, h.ZP)());
     if ((0, v.Z)({ location: 'PremiumUpsellPickerOverlay' })) {
         let e;
-        e = H ? ((0, b.rO)() ? L.Z : x.Z) : (0, b.rO)() ? k.Z : M.Z;
+        e = H ? ((0, b.rO)() ? L.Z : x.Z) : (0, b.rO)() ? M.Z : k.Z;
         let t = H ? 'nitro-pink' : 'green';
         return (0, r.jsxs)(r.Fragment, {
             children: [

@@ -91,18 +91,18 @@ function _(e) {
             },
             [g, _, f, m, t, w]
         ),
-        [x, k] = r.useState(!1);
+        [x, M] = r.useState(!1);
     r.useEffect(() => {
         if (!x || !T) return;
-        k(!1);
+        M(!1);
         let e = u(c(t, _, f));
         if (null != e) return void w(e);
         S(!1);
         let n = u(c(t));
         null != n && w(n);
     }, [t, x, T, w, _, f]);
-    let M = r.useCallback((e) => {
-        v.current && null == e && k(!0);
+    let k = r.useCallback((e) => {
+        v.current && null == e && M(!0);
     }, []);
     (r.useEffect(() => {
         T && A && null != I && (w(I), N(!1));
@@ -167,9 +167,9 @@ function _(e) {
                     tabIndex: E && e === _ && n === f ? 0 : -1,
                     onFocus: P.get(''.concat(e, ',').concat(n))
                 };
-                return (e === _ && n === f && (r.ref = M), r);
+                return (e === _ && n === f && (r.ref = k), r);
             },
-            [t, E, _, f, P, M]
+            [t, E, _, f, P, k]
         ),
         Z = r.useCallback(
             (e) => ({

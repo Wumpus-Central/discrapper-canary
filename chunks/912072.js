@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => x }), a(388685));
+(a.d(t, { Z: () => p }), a(388685));
 var n = a(255367),
     r = a(73800),
     l = a(120356),
@@ -9,7 +9,7 @@ var n = a(255367),
     d = a(432877),
     u = a(738629),
     m = a(616257);
-function x(e) {
+function p(e) {
     let { devSettingsCategory: t } = e,
         a = (0, s.e7)([d.ZP], () => d.ZP.allByCategory(t), [t], s.pF),
         l = r.useMemo(

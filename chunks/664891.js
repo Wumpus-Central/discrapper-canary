@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(811334),
     L = n(585602),
     x = n(314182),
-    k = n(396955),
-    M = n(314404),
+    M = n(396955),
+    k = n(314404),
     j = n(42818),
     U = n(474936),
     G = n(981631),
@@ -158,11 +158,11 @@ function K(e) {
                       preventFetch: ef
                   }));
     let eE = null == n ? void 0 : n.eligiblePaymentGateways,
-        eb = null != eE && eE.length > 0 && (es === N.c || null === el) && ei ? k.w.SELECT_PAYMENT_METHOD : void 0;
+        eb = null != eE && eE.length > 0 && (es === N.c || null === el) && ei ? M.w.SELECT_PAYMENT_METHOD : void 0;
     return (0, r.jsxs)('div', {
         className: F.stepBody,
         children: [
-            (0, r.jsx)(k.Y, { paymentRestrictionBannerType: eb }),
+            (0, r.jsx)(M.Y, { paymentRestrictionBannerType: eb }),
             !eh &&
                 ep &&
                 (0, r.jsxs)('div', {
@@ -172,7 +172,7 @@ function K(e) {
                             negativeMarginTop: !0
                         }),
                         (0, r.jsx)(w.Z, {}),
-                        (0, r.jsx)(M.O, {
+                        (0, r.jsx)(k.O, {
                             planOptions: em,
                             eligibleForMultiMonthPlans: !1,
                             selectedPlanId: P,

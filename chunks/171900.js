@@ -41,13 +41,12 @@ class _ {
                 this.messageIds.has(e.id) || (this.messageIds.add(e.id), c.push(e), u.push(e));
             }),
             (this.messages = c),
-            (this.hasNextPage = null != this.cursor),
             (this.totalResults = o),
             u
         );
     }
     constructor() {
-        (d(this, 'isIndexing', !1), d(this, 'isHistoricalIndexing', !1), d(this, 'isFetching', !1), d(this, 'analyticsId', null), d(this, 'error', null), d(this, 'rawMessages', null), d(this, 'messages', null), d(this, 'documentsIndexed', 0), d(this, 'totalResults', null), d(this, 'hasNextPage', !1), d(this, 'messageIds', new Set()), d(this, 'isInitialFetchComplete', !1), d(this, 'cursor', null));
+        (d(this, 'isIndexing', !1), d(this, 'isHistoricalIndexing', !1), d(this, 'isFetching', !1), d(this, 'analyticsId', null), d(this, 'error', null), d(this, 'rawMessages', null), d(this, 'messages', null), d(this, 'documentsIndexed', 0), d(this, 'totalResults', null), d(this, 'messageIds', new Set()), d(this, 'isInitialFetchComplete', !1), d(this, 'cursor', null));
     }
 }
 let f = new Map(),
@@ -170,9 +169,6 @@ class D extends (r = i.ZP.Store) {
     }
     getIsFetching(e) {
         return b(e, (e) => e.isFetching);
-    }
-    getHasNextPage(e) {
-        return b(e, (e) => e.hasNextPage);
     }
     getError(e) {
         return b(e, (e) => e.error);

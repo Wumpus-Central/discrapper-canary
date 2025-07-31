@@ -1,4 +1,4 @@
-(a.d(t, { Z: () => x }), a(388685));
+(a.d(t, { Z: () => p }), a(388685));
 var n = a(255367),
     r = a(73800),
     l = a(544891),
@@ -12,10 +12,10 @@ let u = '/users/@me/debug/consumables/',
         [o.FX]: 'HD Streaming Potion',
         [o.D1]: 'Confetti Potion'
     };
-function x() {
+function p() {
     let e,
         [t, a] = (0, r.useState)([]),
-        [x, p] = (0, r.useState)(null),
+        [p, x] = (0, r.useState)(null),
         [h, b] = (0, r.useState)(!1);
     return (
         (0, r.useEffect)(
@@ -25,11 +25,11 @@ function x() {
                         let e = (await l.tn.get(u)).body.entitlements.map((e) => c.Z.createFromServer(e));
                         a(e);
                     } catch (e) {
-                        p('Failed to fetch entitlements');
+                        x('Failed to fetch entitlements');
                     }
                 })(),
                 () => {
-                    (a([]), p(null));
+                    (a([]), x(null));
                 }
             ),
             []
@@ -37,10 +37,10 @@ function x() {
         (0, n.jsx)('div', {
             className: d.panel,
             children:
-                null != x
+                null != p
                     ? (0, n.jsx)(s.Text, {
                           variant: 'text-md/normal',
-                          children: x
+                          children: p
                       })
                     : 0 === t.length
                       ? (0, n.jsxs)(n.Fragment, {
@@ -63,7 +63,7 @@ function x() {
                                                     r = new c.Z(n.body.entitlement);
                                                 a([...t, r]);
                                             } catch (e) {
-                                                p('Failed to create entitlement');
+                                                x('Failed to create entitlement');
                                             } finally {
                                                 b(!1);
                                             }

@@ -15,7 +15,7 @@ var r = n(255367),
     m = n(418952);
 let g = 280,
     E = i.forwardRef(function (e, t) {
-        let { body: n, header: a, artClassName: E, headerClassName: b, contentClassName: y, tryItText: O, dismissText: v, onTryFeature: I, onClose: T, className: S, inlineArt: A = !1, isPremiumFeature: N = !1, shouldUseHorizontalButtons: C = !1, showGIFTag: R = !1, dismissibleContent: P, position: w = 'top', align: D = 'center', art: L, isPremiumEarlyAccess: x = !1, maxWidth: k = g, hideDismissButton: M = !1, pointerClassName: j, dismissIconClassName: U, dismissIcon: G, onDismissIconClick: B, tryItButtonColor: V } = e,
+        let { body: n, header: a, artClassName: E, headerClassName: b, contentClassName: y, tryItText: O, dismissText: v, onTryFeature: I, onClose: T, className: S, inlineArt: A = !1, isPremiumFeature: N = !1, shouldUseHorizontalButtons: C = !1, showGIFTag: R = !1, dismissibleContent: P, position: w = 'top', align: D = 'center', art: L, isPremiumEarlyAccess: x = !1, maxWidth: M = g, hideDismissButton: k = !1, pointerClassName: j, dismissIconClassName: U, dismissIcon: G, onDismissIconClick: B, tryItButtonColor: V } = e,
             F = C ? s.zx.Sizes.LARGE : s.zx.Sizes.MAX,
             [Z, H] = i.useState(!1),
             { ref: Y, width: W } = (0, c.ZP)();
@@ -38,8 +38,8 @@ let g = 280,
             i.useEffect(() => {
                 var e, t;
                 let n = (null != (t = null == (e = Y.current) ? void 0 : e.scrollWidth) ? t : 0) + 64;
-                !Z && n > k && H(!0);
-            }, [Z, W, Y, k]),
+                !Z && n > M && H(!0);
+            }, [Z, W, Y, M]),
             i.useEffect(() => {
                 (0, _.kk)(P);
             }, [P]),
@@ -117,7 +117,7 @@ let g = 280,
                                                   color: null != V ? V : N || x ? s.zx.Colors.BRAND_INVERTED : s.zx.Colors.WHITE,
                                                   children: null != O ? O : h.intl.string(h.t.IHf1RE)
                                               }),
-                                              !M &&
+                                              !k &&
                                                   (0, r.jsx)(s.zx, {
                                                       className: m.button,
                                                       size: F,

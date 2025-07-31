@@ -41,8 +41,8 @@ function C(e) {
             let r = (0, u.iC)(a, n);
             return null != b ? (null != (e = r.find((e) => e.id === b)) ? e : null) : void 0 !== R ? R : null == w ? null : null != (t = r.find((e) => (0, O.sr)(e, w))) ? t : null;
         }),
-        { product: x, purchase: k } = (0, d.Z)(null == D ? void 0 : D.skuId),
-        M = y.ZP.canUseCollectibles(t),
+        { product: x, purchase: M } = (0, d.Z)(null == D ? void 0 : D.skuId),
+        k = y.ZP.canUseCollectibles(t),
         j = i.useRef(null),
         U = (0, f.Z)(l),
         G = (0, O.sr)(D, void 0 === R ? w : R),
@@ -65,14 +65,14 @@ function C(e) {
         ),
         Z = (0, p.M)(),
         H = () =>
-            (null != k && (!(0, u.qS)(k) || M)) || null === D
+            (null != M && (!(0, u.qS)(M) || k)) || null === D
                 ? (0, r.jsx)(o.zxk, {
                       variant: 'primary',
                       text: A.intl.string(A.t.Jh8fJy),
                       onClick: V,
                       disabled: G
                   })
-                : null == k && (M || !(0, u.G1)(x))
+                : null == M && (k || !(0, u.G1)(x))
                   ? (0, r.jsx)(o.zxk, {
                         variant: 'primary',
                         onClick: () => F(null == x ? void 0 : x.skuId),

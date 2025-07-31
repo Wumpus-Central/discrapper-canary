@@ -64,8 +64,8 @@ let T = 25,
     D = 0,
     L = 0,
     x = { state: 'uninitialized' },
-    k = f.Z.getState(),
-    M = (0, E.H)(),
+    M = f.Z.getState(),
+    k = (0, E.H)(),
     j = d.default.getToken();
 function U() {
     if (null != P) return;
@@ -146,7 +146,7 @@ function H() {}
 function Y() {
     let e = [];
     return (
-        null != j && (M && e.push('foregrounded'), k !== O.hes.DISCONNECTED && k !== O.hes.RTC_DISCONNECTED && e.push('rtc_connected')),
+        null != j && (k && e.push('foregrounded'), M !== O.hes.DISCONNECTED && M !== O.hes.RTC_DISCONNECTED && e.push('rtc_connected')),
         {
             active: e.length > 0,
             ver: T,
@@ -206,18 +206,18 @@ function ee() {
     (j !== e && ((j = e), Q()), K());
 }
 function et() {
-    ((k = f.Z.getState()), K());
+    ((M = f.Z.getState()), K());
 }
 function en(e) {
     let { focused: t } = e;
-    ((M = t), K());
+    ((k = t), K());
 }
 function er(e) {
     let { state: t } = e;
-    ((M = t === O.$7l.ACTIVE), K());
+    ((k = t === O.$7l.ACTIVE), K());
 }
 function ei() {
-    ((k = f.Z.getState()), (M = (0, E.H)()), ee());
+    ((M = f.Z.getState()), (k = (0, E.H)()), ee());
 }
 function ea() {
     (m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), f.Z.addChangeListener(et), d.default.addChangeListener(ee), s.Z.subscribe('WINDOW_FOCUS', en), s.Z.subscribe('APP_STATE_UPDATE', er), s.Z.subscribe('CONNECTION_OPEN', $), K(), z(), a.ZP.initialized.then(ei));

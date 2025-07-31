@@ -115,12 +115,12 @@ function y(e) {
         w = m(e, ['disabled', 'editable', 'inputRef', 'focusProps', 'name', 'type', 'placeholder', 'maxLength', 'value', 'defaultValue', 'minLength', 'error', 'defaultDirty', 'leading', 'trailing', 'validateOn', 'size', 'fullWidth']),
         D = E(O, v),
         { errorMessage: L, setShouldValidate: x } = b(C, T, O, I, y, S),
-        k = (e) => {
+        M = (e) => {
             var t, n;
             let r = e.currentTarget.value;
             (null == (t = w.onChange) || t.call(w, r, _), x(!0), null == (n = D.setHasValue) || n.call(D, '' !== r));
         },
-        M = (e) => {
+        k = (e) => {
             var t, n;
             (null == (t = w.onFocus) || t.call(w, e), null == (n = D.setIsFocused) || n.call(D, !0));
         },
@@ -163,9 +163,9 @@ function y(e) {
                             ),
                             {
                                 'aria-labelledby': null != (t = w['aria-labelledby']) ? t : D.titleId,
-                                onChange: k,
+                                onChange: M,
                                 onBlur: j,
-                                onFocus: M,
+                                onFocus: k,
                                 ref: l
                             }
                         )

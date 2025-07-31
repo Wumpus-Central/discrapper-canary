@@ -165,7 +165,7 @@ function x() {
     let e = document.referrer;
     return 0 === e.search('https?://(.*)google.([^/?]*)') ? 'google' : 0 === e.search('https?://(.*)bing.com') ? 'bing' : 0 === e.search('https?://(.*)yahoo.com') ? 'yahoo' : 0 === e.search('https?://(.*)duckduckgo.com') ? 'duckduckgo' : null;
 }
-function k() {
+function M() {
     let e = {},
         t = document.referrer,
         n = x(),
@@ -177,7 +177,7 @@ function k() {
     }
     return e;
 }
-function M() {
+function k() {
     let { userAgent: e, vendor: t = '' } = window.navigator,
         { opera: n } = window;
     if (n) return /Mini/.test(e) ? 'Opera Mini' : 'Opera';
@@ -219,7 +219,7 @@ function G() {
 }
 function B() {
     let e = {};
-    return ((e.os = j()), (e.browser = M()), (e.device = U()), (e.system_locale = (0, f.qf)()), (e.has_client_mods = (0, _.e)()), e);
+    return ((e.os = j()), (e.browser = k()), (e.device = U()), (e.system_locale = (0, f.qf)()), (e.has_client_mods = (0, _.e)()), e);
 }
 function V() {
     var e, t;
@@ -236,7 +236,7 @@ function V() {
 }
 function F() {
     let e = {};
-    return ((e.referrer = document.referrer), (e.referring_domain = G()), (e = I({}, e, L(window.location.href), k())));
+    return ((e.referrer = document.referrer), (e.referring_domain = G()), (e = I({}, e, L(window.location.href), M())));
 }
 function Z(e, t) {
     let n = {};
@@ -261,7 +261,7 @@ function W() {
     let n = {},
         r = window.GLOBAL_ENV.RELEASE_CHANNEL;
     r && (null == n.release_channel || '' === n.release_channel) && (n.release_channel = r.split('-')[0]);
-    let i = parseInt('425572', 10);
+    let i = parseInt('425658', 10);
     isNaN(i) || (n.client_build_number = i);
     let a = null == P || null == (e = (t = P.remoteApp).getBuildNumber) ? void 0 : e.call(t);
     return (isNaN(a) || (n.native_build_number = a), (n.client_event_source = Y()), (n.has_client_mods = (0, _.e)()), (n.client_launch_id = g.s), n);

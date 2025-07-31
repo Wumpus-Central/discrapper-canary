@@ -98,9 +98,9 @@ function A(e, t) {
     return i;
 }
 var N = (function (e) {
-    return ((e[(e.SEND = 0)] = 'SEND'), (e[(e.EDIT = 1)] = 'EDIT'), (e[(e.COMMAND = 2)] = 'COMMAND'), e);
+    return ((e[(e.SEND = 0)] = 'SEND'), (e[(e.EDIT = 1)] = 'EDIT'), (e[(e.COMMAND = 2)] = 'COMMAND'), (e[(e.SEND_ANNOUNCEMENT = 3)] = 'SEND_ANNOUNCEMENT'), e);
 })({});
-let C = (e) => 0 === e.type,
+let C = (e) => 0 === e.type || 3 === e.type,
     R = (e) => 1 === e.type,
     P = (e) => (C(e) ? e.message.nonce : R(e) ? e.message.messageId : e.message.data.id),
     w = [+p.Z.Millis.MINUTE, 5 * p.Z.Millis.MINUTE];
@@ -112,6 +112,9 @@ class D extends m.Z {
         switch ((this.logger.log('Draining Message Queue with: ', e.type), e.type)) {
             case 0:
                 this.handleSend(e.message, t);
+                break;
+            case 3:
+                this.handleSendAnnouncement(e.message, t);
                 break;
             case 1:
                 this.handleEdit(e.message, t);
@@ -184,6 +187,51 @@ class D extends m.Z {
                     v(
                         {
                             url: b.ANM.MESSAGES(r),
+                            body: p,
+                            context: l,
+                            oldFormErrors: !0
+                        },
+                        y.hs
+                    ),
+                    {
+                        signal: m.signal,
+                        rejectWithError: !0,
+                        onRequestCreated: () => {
+                            null != e.nonce && this.requests.set(e.nonce, m);
+                        }
+                    }
+                ),
+                h
+            ));
+    }
+    handleSendAnnouncement(e, t) {
+        var n;
+        let { channelId: r, analyticsLocation: i } = e,
+            o = S(e, ['channelId', 'analyticsLocation']),
+            s = null != (n = (0, d.Z)()) ? n : i,
+            l = null != s ? { location: s } : void 0,
+            _ = (0, u.d)(),
+            p = v({ mobile_network_type: f.Z.getType() }, o, null != _ && { signal_strength: _ });
+        if (c.ZP.get('send_fail_100')) {
+            (this.logger.log('Skipping message send because send_fail_100 is enabled'),
+                t(null, {
+                    ok: !1,
+                    hasErr: !1,
+                    status: 500,
+                    headers: {},
+                    body: '{}',
+                    text: 'Simulated failure'
+                }));
+            return;
+        }
+        let h = this.createResponseHandler(e.nonce, t),
+            m = new AbortController();
+        (this.startQueueMetricTimers(e.nonce),
+            a.tn.post(
+                T(
+                    v(
+                        {
+                            url: b.ANM.MESSAGES_ANNOUNCEMENT(r),
                             body: p,
                             context: l,
                             oldFormErrors: !0

@@ -43,8 +43,8 @@ var r,
     D = n(226951),
     L = n(709054),
     x = n(906411),
-    k = n(689789),
-    M = n(407477),
+    M = n(689789),
+    k = n(407477),
     j = n(633302),
     U = n(396352),
     G = n(856985),
@@ -297,11 +297,11 @@ class ep {
         return this.rebuildFavoriteEmojisWithoutFetchingLatest().favorites;
     }
     getEmojiInPriorityOrderWithoutFetchingLatest() {
-        let e = (0, M.E2)({
+        let e = (0, k.E2)({
             location: 'getEmojiInPriorityOrderWithoutFetchingLatest',
             autoTrackExposure: !0
         });
-        M.Xb.trackExposure({ location: 'getEmojiInPriorityOrderWithoutFetchingLatest' });
+        k.Xb.trackExposure({ location: 'getEmojiInPriorityOrderWithoutFetchingLatest' });
         let t = e ? this.getFrequentlyUsedReactionEmojisWithoutFetchingLatest() : this.getFrequentlyUsedEmojisWithoutFetchingLatest(),
             n = new Set();
         return this.favoriteEmojisWithoutFetchingLatest.concat(t).filter((e) => !n.has(e) && (n.add(e), !0));
@@ -464,15 +464,15 @@ function eP(e) {
     if (!e.optimistic) return !1;
     let t = null != e.emoji.id && '0' !== e.emoji.id ? e.emoji : j.ZP.getByName(j.ZP.convertSurrogateToName(e.emoji.name, !1));
     if (null == t) return !1;
-    (ej([t]), eM([t]));
+    (ej([t]), ek([t]));
 }
 function ew(e, t) {
-    let { canSplitFrecencyList: n } = k.Z.getCurrentConfig({ location: 'populateInitialFrecencyData' }, { autoTrackExposure: !0 }),
-        r = (0, M.E2)({
+    let { canSplitFrecencyList: n } = M.Z.getCurrentConfig({ location: 'populateInitialFrecencyData' }, { autoTrackExposure: !0 }),
+        r = (0, k.E2)({
             location: 'populateInitialFrecencyData',
             autoTrackExposure: !0
         });
-    if ((M.Xb.trackExposure({ location: 'populateInitialFrecencyData' }), a().isEmpty(e) && a().isEmpty(X.pendingUsages) && v.Z.hasLoaded(Z.yP.FRECENCY_AND_FAVORITES_SETTINGS))) for (let e of ['thumbsup', 'thumbsup', 'eyes', 'eyes', 'laughing', 'laughing', 'watermelon', 'fork_and_knife', 'yum', 'weary', 'tired_face', 'poop', '100']) eh.track(e);
+    if ((k.Xb.trackExposure({ location: 'populateInitialFrecencyData' }), a().isEmpty(e) && a().isEmpty(X.pendingUsages) && v.Z.hasLoaded(Z.yP.FRECENCY_AND_FAVORITES_SETTINGS))) for (let e of ['thumbsup', 'thumbsup', 'eyes', 'eyes', 'laughing', 'laughing', 'watermelon', 'fork_and_knife', 'yum', 'weary', 'tired_face', 'poop', '100']) eh.track(e);
     if ((n || r) && a().isEmpty(t) && a().isEmpty(X.emojiReactionPendingUsages) && v.Z.hasLoaded(Z.yP.FRECENCY_AND_FAVORITES_SETTINGS)) for (let e of ['100', '100', 'thumbsup', 'thumbsup', 'thumbsdown', 'thumbsdown', 'heart', 'point_up', 'eyes', 'weary', 'laughing', 'white_check_mark', 'x']) em.track(e);
 }
 function eD() {
@@ -502,17 +502,17 @@ function eL(e) {
 }
 function ex() {
     if (!m.Z.hasLoadedExperiments) return;
-    let { frecencyAlgorithm: e } = M.ZP.getCurrentConfig({ location: 'handleExperimentsChange' }, { autoTrackExposure: !0 }),
+    let { frecencyAlgorithm: e } = k.ZP.getCurrentConfig({ location: 'handleExperimentsChange' }, { autoTrackExposure: !0 }),
         t = d.M$[e],
         n = d.KX[e],
         r = 'original' !== e;
     (e !== z && em.replaceEntryComputeFunctions(t, n, r), (z = e));
 }
-function ek(e) {
-    let { emojiUsed: t } = e;
-    eM(t);
-}
 function eM(e) {
+    let { emojiUsed: t } = e;
+    ek(t);
+}
+function ek(e) {
     if (null == e) return !1;
     for (let r of e) {
         var t, n;
@@ -620,12 +620,12 @@ class eF extends (r = c.ZP.PersistedStore) {
     getSearchResultsOrder(e, t, n, r) {
         let i = t.toLowerCase(),
             o = D.Z.escape(i),
-            { canSplitFrecencyList: s } = k.Z.getCurrentConfig({ location: 'getSearchResultsOrder' }, { autoTrackExposure: !0 }),
-            l = (0, M.E2)({
+            { canSplitFrecencyList: s } = M.Z.getCurrentConfig({ location: 'getSearchResultsOrder' }, { autoTrackExposure: !0 }),
+            l = (0, k.E2)({
                 location: 'getSearchResultsOrder',
                 autoTrackExposure: !0
             });
-        if ((M.Xb.trackExposure({ location: 'getSearchResultsOrder' }), e.length > 0)) {
+        if ((k.Xb.trackExposure({ location: 'getSearchResultsOrder' }), e.length > 0)) {
             let t = RegExp('^'.concat(o), 'i'),
                 n = new RegExp('(^|_|[A-Z])'.concat(o, 's?([A-Z]|_|$)')),
                 c = n.test.bind(n),
@@ -724,7 +724,7 @@ let eZ = new eF(u.Z, {
     GUILD_EMOJIS_UPDATE: eN,
     GUILD_DELETE: eC,
     MESSAGE_REACTION_ADD: eP,
-    EMOJI_TRACK_USAGE: ek,
+    EMOJI_TRACK_USAGE: eM,
     USER_SETTINGS_PROTO_UPDATE: eL,
     GUILD_ROLE_CREATE: eU,
     GUILD_ROLE_UPDATE: eU,

@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(755733),
     _ = n(981631),
     j = n(388032),
-    O = n(49149);
-function E(e) {
+    E = n(49149);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -64,7 +64,7 @@ function C(e, t) {
 function v(e) {
     let { transitionState: t, onClose: a, ticket: c, challenge: m } = e,
         b = (0, d.Dt)(),
-        [E, C] = r.useState(''),
+        [O, C] = r.useState(''),
         [v, S] = r.useState(!0),
         [T, N] = r.useState(x.x.INIT),
         [I, y] = r.useState(''),
@@ -87,7 +87,7 @@ function v(e) {
         parentComponent: 'UserSettingsWebAuthn',
         children: [
             (0, i.jsxs)(o.xBx, {
-                className: O.header,
+                className: E.header,
                 separator: !1,
                 children: [
                     (0, i.jsxs)(o.X6q, {
@@ -97,7 +97,7 @@ function v(e) {
                     }),
                     (0, i.jsx)(o.olH, {
                         onClick: a,
-                        className: O.modalCloseButton
+                        className: E.modalCloseButton
                     })
                 ]
             }),
@@ -109,10 +109,10 @@ function v(e) {
                         id: x.x.INIT,
                         children: [
                             (0, i.jsxs)(o.hzk, {
-                                className: O.content,
+                                className: E.content,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: O.icon,
+                                        className: E.icon,
                                         children: (0, i.jsx)('img', {
                                             alt: '',
                                             src: n(773072)
@@ -148,10 +148,10 @@ function v(e) {
                         id: x.x.REGISTER,
                         children: [
                             (0, i.jsxs)(o.hzk, {
-                                className: O.content,
+                                className: E.content,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: O.icon,
+                                        className: E.icon,
                                         children: (0, i.jsx)('img', {
                                             alt: '',
                                             src: n(773072)
@@ -179,7 +179,7 @@ function v(e) {
                         children: (0, i.jsxs)('form', {
                             onSubmit: (e) => {
                                 (e.preventDefault(),
-                                    (0, f.Sr)(E, c, I)
+                                    (0, f.Sr)(O, c, I)
                                         .then(async () => {
                                             await (0, u.Yn)(!1);
                                         })
@@ -190,10 +190,10 @@ function v(e) {
                             },
                             children: [
                                 (0, i.jsxs)(o.hzk, {
-                                    className: O.content,
+                                    className: E.content,
                                     children: [
                                         (0, i.jsx)('div', {
-                                            className: O.icon,
+                                            className: E.icon,
                                             children: (0, i.jsx)('img', {
                                                 alt: '',
                                                 src: n(637163)
@@ -206,8 +206,8 @@ function v(e) {
                                                     children: j.intl.string(j.t['Jzd+z8'])
                                                 }),
                                                 (0, i.jsx)(l.Is, {
-                                                    className: O.input,
-                                                    value: E,
+                                                    className: E.input,
+                                                    value: O,
                                                     onChange: (e) => {
                                                         (C(e), S(0 === e.length));
                                                     },
@@ -219,7 +219,7 @@ function v(e) {
                                     ]
                                 }),
                                 (0, i.jsx)(o.mzw, {
-                                    className: O.footer,
+                                    className: E.footer,
                                     children: (0, i.jsxs)(o.hE2, {
                                         direction: 'horizontal-reverse',
                                         children: [
@@ -261,7 +261,7 @@ function S(e) {
                 action: () => {
                     (0, o.ZDy)(async () => {
                         let { default: e } = await n.e('804').then(n.bind(n, 89616));
-                        return (t) => (0, i.jsx)(e, E({ credential: r }, t));
+                        return (t) => (0, i.jsx)(e, O({ credential: r }, t));
                     });
                 }
             }),
@@ -287,21 +287,21 @@ function T() {
     let [n, s] = r.useState(!1);
     return (0, i.jsxs)(o.hjN, {
         title: j.intl.string(j.t.y7SXYW),
-        className: O.settings,
+        className: E.settings,
         children: [
             (0, i.jsx)(o.R94, {
                 type: o.R94.Types.DESCRIPTION,
-                className: O.description,
+                className: E.description,
                 children: j.intl.string(j.t.TMukAA)
             }),
             e.length > 0 &&
                 (0, i.jsx)('div', {
-                    className: O.credentialList,
+                    className: E.credentialList,
                     children: e.map((e) =>
                         (0, i.jsxs)(
                             'div',
                             {
-                                className: O.credentialItem,
+                                className: E.credentialItem,
                                 children: [
                                     (0, i.jsx)(o.Text, {
                                         variant: 'text-md/semibold',
@@ -312,14 +312,14 @@ function T() {
                                         color: l.zx.Colors.TRANSPARENT,
                                         size: l.zx.Sizes.ICON,
                                         onClick: (t) => {
-                                            (0, c.vq)(t, (t) => (0, i.jsx)(S, C(E({}, t), { credential: e })));
+                                            (0, c.vq)(t, (t) => (0, i.jsx)(S, C(O({}, t), { credential: e })));
                                         },
                                         'aria-label': j.intl.string(j.t['+nrTbG']),
-                                        innerClassName: O.credentialOptions,
+                                        innerClassName: E.credentialOptions,
                                         children: (0, i.jsx)(o.Huf, {
                                             size: 'md',
-                                            className: O.__invalid_overflowIcon,
-                                            colorClass: O.__invalid_overflowIconFg,
+                                            className: E.__invalid_overflowIcon,
+                                            colorClass: E.__invalid_overflowIconFg,
                                             'aria-hidden': !0
                                         })
                                     })
@@ -342,7 +342,7 @@ function T() {
                                     (0, o.h7j)((e) =>
                                         (0, i.jsx)(
                                             v,
-                                            C(E({}, e), {
+                                            C(O({}, e), {
                                                 ticket: t,
                                                 challenge: n
                                             })

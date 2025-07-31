@@ -1,8 +1,8 @@
 (t.d(r, { default: () => h }), t(388685));
 var n = t(255367),
     o = t(73800),
-    s = t(512722),
-    i = t.n(s),
+    i = t(512722),
+    s = t.n(i),
     c = t(481060),
     l = t(985002),
     a = t(880257),
@@ -11,36 +11,37 @@ var n = t(255367),
     b = t(388032),
     f = t(497251);
 let h = (e) => {
-    let { currentUser: r, otherUser: t, transitionState: s, onClose: h } = e,
-        [j, p] = o.useState(!1),
-        x = o.useCallback(() => {
-            p(!0);
-        }, []),
+    let { currentUser: r, otherUser: t, transitionState: i, onClose: h } = e,
+        [p, j] = o.useState(!1),
         m = o.useCallback(() => {
-            p(!1);
+            j(!0);
+        }, []),
+        x = o.useCallback(() => {
+            j(!1);
         }, []),
         y = o.useCallback(() => {
             h();
         }, [h]),
-        O = (0, a.Z)(),
-        { declineLinkRequest: g, isDeclineLoading: v } = (0, l.G)({
-            onError: x,
+        g = (0, a.Z)(),
+        { declineLinkRequest: O, isDeclineLoading: v } = (0, l.G)({
+            onError: m,
             onSuccess: y
         });
     return (
-        i()(!O, 'FamilyCenterDeclineLinkModal should only be rendered for teens.'),
+        s()(!g, 'FamilyCenterDeclineLinkModal should only be rendered for teens.'),
         (0, n.jsx)(d.Z, {
-            transitionState: s,
+            transitionState: i,
             children: (0, n.jsxs)('form', {
                 onSubmit: (e) => {
-                    (e.preventDefault(), g(t));
+                    (e.preventDefault(), O(t));
                 },
                 children: [
                     (0, n.jsx)(d.Z.Error, {
-                        error: j ? b.intl.string(u.default.tJAUys) : void 0,
-                        onDismiss: m
+                        error: p ? b.intl.string(u.default.tJAUys) : void 0,
+                        onDismiss: x
                     }),
                     (0, n.jsxs)(c.hzk, {
+                        'data-migration-pending': !0,
                         children: [
                             (0, n.jsx)(d.Z.Header, {
                                 currentUser: r,
@@ -56,6 +57,7 @@ let h = (e) => {
                         ]
                     }),
                     (0, n.jsx)(c.mzw, {
+                        'data-migration-pending': !0,
                         children: (0, n.jsx)(d.Z.ButtonFooter, {
                             children: (0, n.jsxs)(c.hE2, {
                                 direction: 'horizontal-reverse',

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => k });
+n.d(t, { Z: () => M });
 var r,
     i = n(442837),
     a = n(780384),
@@ -128,7 +128,7 @@ function x() {
         },
         (e) => e
     ]));
-let k = new N(o.Z, {
+let M = new N(o.Z, {
     CACHE_LOADED: A,
     CONNECTION_OPEN: C,
     LOGOUT: P,

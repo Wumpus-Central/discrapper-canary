@@ -79,7 +79,7 @@ function x(e, t) {
         e
     );
 }
-function k(e, t, n) {
+function M(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
     if (t[0] !== e) return null;
     let i = t.substr(e.length);
@@ -102,10 +102,10 @@ function k(e, t, n) {
         })
         .first();
 }
-function M(e, t, n) {
+function k(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
     if (t[0] !== e) return null;
-    if ('"' !== t[1]) return k(e, t, n, r);
+    if ('"' !== t[1]) return M(e, t, n, r);
     let i = 2;
     for (; i < t.length; i++) {
         if ('\\' === t[i]) {
@@ -171,10 +171,10 @@ let G = u.Z.RULES,
             match(e, t, n) {
                 let r = n.split(' ').pop() + e;
                 if (/^[^ ]+@[^ ]+\.[^ .]+/.test(r)) return null;
-                let i = k('@', e, t.users, 'mention');
-                if (i || (i = k('@', e, t.mentionableRoles, 'roleMention'))) return i;
+                let i = M('@', e, t.users, 'mention');
+                if (i || (i = M('@', e, t.mentionableRoles, 'roleMention'))) return i;
                 if (
-                    !(i = k(
+                    !(i = M(
                         '@',
                         e,
                         t.users.map((e) => x(D({}, e), { text: e.text.split('#')[0] })),
@@ -203,7 +203,7 @@ let G = u.Z.RULES,
             }
         },
         channel: {
-            match: (e, t) => M('#', e, t.channels),
+            match: (e, t) => k('#', e, t.channels),
             parse: (e) => ({
                 type: 'text',
                 content: '<#'.concat(e[1], '>')

@@ -1,7 +1,7 @@
 (n.d(t, { Z: () => z }), n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(855659),
+    a = n(66546),
     o = n(442837),
     s = n(704215),
     l = n(481060),
@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(502762),
     L = n(544989),
     x = n(481932),
-    k = n(195387),
-    M = n(664794),
+    M = n(195387),
+    k = n(664794),
     j = n(4517),
     U = n(978395),
     G = n(161572),
@@ -207,7 +207,7 @@ function z(e) {
                                     }),
                                 (0, r.jsxs)(L.Z, {
                                     children: [
-                                        (0, r.jsx)(k.Z, {
+                                        (0, r.jsx)(M.Z, {
                                             shouldShowTooltip: null === eu.interactionType,
                                             user: t,
                                             guildId: Z,
@@ -221,7 +221,7 @@ function z(e) {
                                             user: t
                                         }),
                                         !eE &&
-                                            (0, r.jsx)(M.Z, {
+                                            (0, r.jsx)(k.Z, {
                                                 type: 'banner',
                                                 user: t,
                                                 guildId: Z,

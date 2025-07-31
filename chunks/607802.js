@@ -15,7 +15,7 @@
     X3: () => W,
     cl: () => U,
     g9: () => L,
-    i3: () => M,
+    i3: () => k,
     jW: () => w,
     kG: () => B,
     qc: () => x,
@@ -293,14 +293,14 @@ function x(e, t) {
               token: n
           });
 }
-function k(e) {
+function M(e) {
     if (null == e.match(/([\\" ])/g)) return e;
     {
         let t = e.replaceAll(/([\\"])/g, (e, t) => '\\'.concat(t));
         return '"'.concat(t, '"');
     }
 }
-function M(e, t) {
+function k(e, t) {
     let n = [];
     return (
         i()(e).forEach((e) => {
@@ -309,7 +309,7 @@ function M(e, t) {
             n = n.concat(
                 e.results.map((n) => {
                     let i = n.text;
-                    if ((null != n.channel && (i = k(i)), t.type === E.Sap.FILTER_ALL)) {
+                    if ((null != n.channel && (i = M(i)), t.type === E.Sap.FILTER_ALL)) {
                         var a;
                         r = null != (a = n.group) ? a : r;
                         let e = g.ZP[r];
@@ -376,7 +376,7 @@ function W(e) {
         let r = l.ZP.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
         (null == r ? void 0 : r.name) != null && (t = r.name);
     }
-    return ((t = k(t)), n) ? '#'.concat(t) : t;
+    return ((t = M(t)), n) ? '#'.concat(t) : t;
 }
 function K() {
     var e, t;

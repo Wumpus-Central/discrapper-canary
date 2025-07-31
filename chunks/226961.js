@@ -139,7 +139,7 @@ function L(e) {
 function x(e) {
     h = e.section;
 }
-function k(e) {
+function M(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
         r = {};
@@ -152,12 +152,12 @@ function k(e) {
                 for (let e = 0; e < a.length; e++) {
                     let r = t[e],
                         i = 'object' == typeof r ? r : {};
-                    o.push(k(a[e], i, n));
+                    o.push(M(a[e], i, n));
                 }
             } else r[i] = a;
         else if ('object' == typeof a && null !== a) {
             let t = 'object' == typeof e && null !== e ? e : {};
-            r[i] = k(a, t, n);
+            r[i] = M(a, t, n);
         } else if (i in E && 'number' == typeof a) {
             let t = (r[i] = Array.isArray(e) ? e : []);
             (t.push({
@@ -169,7 +169,7 @@ function k(e) {
     }
     return r;
 }
-function M(e) {
+function k(e) {
     let { connectionStats: t } = e;
     Object.values(d.Yn).forEach((e) => {
         t.filter((t) => {
@@ -195,7 +195,7 @@ function j(e) {
             } = n;
             Object.keys(e).includes(a) || (h = p);
         }
-        i[r] = k(n, i[r]);
+        i[r] = M(n, i[r]);
     } else delete i[r];
 }
 function U(e) {
@@ -288,5 +288,5 @@ let H = new Z(o.Z, {
     RTC_DEBUG_SET_SIMULCAST_OVERRIDE: F,
     VOICE_CHANNEL_SELECT: D,
     RTC_CONNECTION_VIDEO: L,
-    MEDIA_ENGINE_CONNECTION_STATS: M
+    MEDIA_ENGINE_CONNECTION_STATS: k
 });

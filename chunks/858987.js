@@ -89,10 +89,10 @@ function S(e, t) {
 function A(e) {
     var t;
     let { legalTermsNodeRef: n, invoiceError: i, planError: a, disablePurchase: _, flashLegalTerms: f, isSubmitting: m, premiumSubscription: y, isGift: v, planGroup: A, isPrepaid: N, isTrial: C, makePurchase: R, needsPaymentSource: P, inReverseTrial: w, onNext: D, onPaymentSourceAdd: L } = e,
-        { application: x, selectedPlan: k, hasAcceptedTerms: M, purchaseType: j, paymentSourceId: U, activeSubscription: G, devShelfFetchState: B, hasPaymentSources: V } = (0, u.JL)(),
+        { application: x, selectedPlan: M, hasAcceptedTerms: k, purchaseType: j, paymentSourceId: U, activeSubscription: G, devShelfFetchState: B, hasPaymentSources: V } = (0, u.JL)(),
         F = T({
             purchaseType: j,
-            plan: k,
+            plan: M,
             premiumSubscription: y,
             isGift: v,
             planGroup: A,
@@ -177,8 +177,8 @@ function A(e) {
     if (C)
         return (0, r.jsxs)(s.gtL, {
             innerClassName: E.innerButton,
-            'data-testid': M ? 'purchase' : 'submitButton',
-            onClick: M ? R : () => S(n, f),
+            'data-testid': k ? 'purchase' : 'submitButton',
+            onClick: k ? R : () => S(n, f),
             color: o.zx.Colors.GREEN,
             submitting: m,
             children: [
@@ -190,7 +190,7 @@ function A(e) {
                 F
             ]
         });
-    else if (!M)
+    else if (!k)
         return (0, r.jsx)(s.ua7, {
             text: g.intl.string(g.t.XdvBLS),
             children: (e) =>

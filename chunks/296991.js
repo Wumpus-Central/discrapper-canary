@@ -122,7 +122,7 @@ function E(e) {
             children: [
                 (0, r.jsx)(m.P3F, {
                     onMouseDown: () => j(l),
-                    children: (0, r.jsx)(h.Z, {
+                    children: (0, r.jsx)(h.ZP, {
                         innerClassName: y.rulesTextAreaInput,
                         type: g.Ie.RULES_INPUT,
                         textValue: T,

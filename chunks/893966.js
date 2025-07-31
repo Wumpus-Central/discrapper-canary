@@ -114,7 +114,7 @@ function x(e) {
         }, []);
     return r.updateMembersByMemberIds(i);
 }
-function k(e) {
+function M(e) {
     let { guildId: t, threads: n } = e,
         r = Object.values(n);
     if (0 === r.length) return !1;
@@ -128,7 +128,7 @@ function k(e) {
         }, []);
     return i.updateMembersByMemberIds(a);
 }
-function M(e) {
+function k(e) {
     let { guildId: t, guildMember: n } = e;
     return y(t).updateMembersByMemberIds([n.user.id]);
 }
@@ -341,13 +341,13 @@ let J = new Q(a.Z, {
     GUILD_MEMBER_REMOVE: R,
     GUILD_ROLE_UPDATE: P,
     GUILD_ROLE_DELETE: P,
-    GUILD_MEMBER_PROFILE_UPDATE: M,
+    GUILD_MEMBER_PROFILE_UPDATE: k,
     GUILD_ROLE_MEMBER_REMOVE: w,
     GUILD_ROLE_MEMBER_ADD: w,
     THREAD_MEMBER_LIST_UPDATE: D,
     THREAD_MEMBERS_UPDATE: L,
     LOAD_ARCHIVED_THREADS_SUCCESS: x,
-    LOAD_FORUM_POSTS: k,
+    LOAD_FORUM_POSTS: M,
     INITIALIZE_MEMBER_SAFETY_STORE: H,
     MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH: Y,
     MEMBER_SAFETY_PAGINATION_UPDATE: W,

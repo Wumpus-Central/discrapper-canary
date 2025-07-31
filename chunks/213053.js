@@ -55,21 +55,21 @@ let g = {
         '--profile-gradient-modal-background-color': 'var(--background-base-lower)'
     });
 function y(e) {
-    let { theme: t, themeType: n, primaryColor: i, secondaryColor: p } = e,
-        [h, y] = (0, s.Wu)([c.Z], () => [c.Z.desaturateUserColors, c.Z.syncProfileThemeWithUserTheme]),
-        O = (0, f.f)(t),
-        v = y ? (null == O ? void 0 : O.overlaySyncedWithUserTheme) : null == O ? void 0 : O.overlay;
+    let { theme: t, themeType: n, primaryColor: i, secondaryColor: p, forceUserTheme: h = !1 } = e,
+        [y, O] = (0, s.Wu)([c.Z], () => [c.Z.desaturateUserColors, c.Z.syncProfileThemeWithUserTheme]),
+        v = (0, f.f)(t),
+        I = O || h ? (null == v ? void 0 : v.overlaySyncedWithUserTheme) : null == v ? void 0 : v.overlay;
     return {
         profileThemeStyle: (0, r.useMemo)(() => {
-            if (null == i || null == p || null == O || null == v) return b;
-            let e = (e, t) => (0, o.ho)(e, h, null, t);
+            if (null == i || null == p || null == v || null == I) return b;
+            let e = (e, t) => (0, o.ho)(e, y, null, t);
             return m(
                 {
                     '--profile-gradient-primary-color': e(i),
                     '--profile-gradient-secondary-color': e(p),
-                    '--profile-gradient-overlay-color': v,
+                    '--profile-gradient-overlay-color': I,
                     '--profile-gradient-button-color': e((0, _.ZB)(i)),
-                    '--profile-gradient-modal-background-color': e((0, _.oU)(i, p, y ? t : void 0))
+                    '--profile-gradient-modal-background-color': e((0, _.oU)(i, p, O || h ? t : void 0))
                 },
                 (0, u.W4)({
                     enabled: !0,
@@ -79,7 +79,7 @@ function y(e) {
                     textMixAmount: 25
                 })
             );
-        }, [i, p, O, v, y, t, h]),
+        }, [i, p, v, I, O, h, t, y]),
         profileThemeClassName: a()((0, l.QeD)(t), null != n ? { [g[n]]: !0 } : void 0, {
             [d.e3]: null != i,
             [E]: null != i

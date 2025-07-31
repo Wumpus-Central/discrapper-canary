@@ -1,68 +1,67 @@
-(r.d(t, { default: () => m }), r(953529), r(388685));
+(r.d(t, { default: () => j }), r(953529), r(388685));
 var n = r(255367);
 r(73800);
 var o = r(435935),
-    i = r(481060),
-    c = r(259756),
-    a = r(785681),
-    s = r(880257),
-    l = r(863552),
-    d = r(292352),
-    h = r(916723),
-    u = r(388032),
-    p = r(81718),
-    f = r(128216);
-let j = {
-        [d.MY.USER_INTERACTION]: (0, n.jsx)(l.Z, {
+    i = r(82659),
+    c = r(481060),
+    s = r(259756),
+    l = r(785681),
+    a = r(880257),
+    u = r(863552),
+    h = r(292352),
+    p = r(916723),
+    d = r(388032),
+    f = r(81718);
+let C = {
+        [h.MY.USER_INTERACTION]: (0, n.jsx)(u.Z, {
             width: 18,
             height: 18
         }),
-        [d.MY.USER_CALLED]: (0, n.jsx)(i.Csw, {
+        [h.MY.USER_CALLED]: (0, n.jsx)(c.Csw, {
             size: 'custom',
             color: 'currentColor',
             width: 22,
             height: 22
         }),
-        [d.MY.USER_ADD]: (0, n.jsx)(i.iFz, {
+        [h.MY.USER_ADD]: (0, n.jsx)(c.iFz, {
             size: 'custom',
             color: 'currentColor',
-            className: p.personWavingIcon,
+            className: f.personWavingIcon,
             width: 22,
             height: 22
         }),
-        [d.MY.GUILD_ADD]: (0, n.jsx)(i.dRF, {
+        [h.MY.GUILD_ADD]: (0, n.jsx)(c.dRF, {
             size: 'custom',
             color: 'currentColor',
             width: 22,
             height: 22
         }),
-        [d.MY.GUILD_INTERACTION]: (0, n.jsx)(i.VL1, {
+        [h.MY.GUILD_INTERACTION]: (0, n.jsx)(c.VL1, {
             size: 'custom',
             color: 'currentColor',
-            className: p.threadIcon,
+            className: f.threadIcon,
             width: 22,
             height: 22
         })
     },
-    C = (e) => {
-        let { header: t, description: r, icon: c } = e;
+    b = (e) => {
+        let { header: t, description: r, icon: i } = e;
         return (0, n.jsxs)(o.k, {
-            className: p.row,
+            className: f.row,
             grow: 0,
             children: [
                 (0, n.jsx)('div', {
-                    className: p.iconContainer,
-                    children: c
+                    className: f.iconContainer,
+                    children: i
                 }),
                 (0, n.jsxs)('div', {
-                    className: p.rowContent,
+                    className: f.rowContent,
                     children: [
-                        (0, n.jsx)(i.Text, {
-                            className: p.__invalid_rowHeader,
+                        (0, n.jsx)(c.Text, {
                             variant: 'text-sm/bold',
                             children: t
                         }),
-                        (0, n.jsx)(i.Text, {
+                        (0, n.jsx)(c.Text, {
                             variant: 'text-xs/medium',
                             children: r
                         })
@@ -71,56 +70,28 @@ let j = {
             ]
         });
     },
-    m = (e) => {
+    j = (e) => {
         let { transitionState: t, onClose: r } = e,
-            l = (0, a.o)(u.intl.string(h.default.q3IRam), u.intl.string(h.default.JNLpDQ)),
-            m = (0, s.Z)(),
-            g = Array.from(d.tx.entries()),
-            b = (0, c.Xi)({ location: 'family_center_tooltip_modal_web' });
-        return (0, n.jsxs)(i.Y0X, {
+            o = (0, l.o)(d.intl.string(p.default.q3IRam), d.intl.string(p.default.JNLpDQ)),
+            c = (0, a.Z)(),
+            u = Array.from(h.tx.entries()),
+            f = (0, s.Xi)({ location: 'family_center_tooltip_modal_web' });
+        return (0, n.jsx)(i.Modal, {
             transitionState: t,
-            parentComponent: 'FamilyCenterDataTooltipModal',
-            children: [
-                (0, n.jsx)('img', {
-                    className: p.art,
-                    src: f,
-                    alt: u.intl.string(h.default.ffg6xc)
-                }),
-                (0, n.jsx)(i.hzk, {
-                    className: p.content,
-                    children: (0, n.jsxs)(o.k, {
-                        direction: o.k.Direction.VERTICAL,
-                        align: o.k.Align.CENTER,
-                        children: [
-                            (0, n.jsx)(i.X6q, {
-                                className: p.header,
-                                color: 'header-primary',
-                                variant: 'heading-lg/semibold',
-                                children: (0, n.jsx)(i.y5t, { children: l })
-                            }),
-                            g.map((e) => {
-                                let [t, r] = e;
-                                return (0, n.jsx)(
-                                    C,
-                                    {
-                                        icon: j[t],
-                                        header: r.tooltipHeader(),
-                                        description: r.tooltipDescription(null != m ? m : void 0, b)
-                                    },
-                                    t
-                                );
-                            })
-                        ]
-                    })
-                }),
-                (0, n.jsx)(i.mzw, {
-                    children: (0, n.jsx)(i.zxk, {
-                        variant: 'primary',
-                        text: u.intl.string(u.t['NX+WJC']),
-                        type: 'button',
-                        onClick: r
-                    })
-                })
-            ]
+            onClose: r,
+            actions: [],
+            title: o,
+            children: u.map((e) => {
+                let [t, r] = e;
+                return (0, n.jsx)(
+                    b,
+                    {
+                        icon: C[t],
+                        header: r.tooltipHeader(),
+                        description: r.tooltipDescription(null != c ? c : void 0, f)
+                    },
+                    t
+                );
+            })
         });
     };

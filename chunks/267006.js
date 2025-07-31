@@ -99,7 +99,7 @@ function _(e) {
                       );
                   });
         }, []),
-        O = (0, i.jsxs)(i.Fragment, {
+        E = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(d.F, {
                     setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264,
@@ -139,11 +139,11 @@ function _(e) {
     return (0, i.jsx)(d.F, {
         setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
         children: t
-            ? O
+            ? E
             : (0, i.jsx)(o.hjN, {
                   className: b.marginBottom20,
                   title: f.intl.string(f.t.Tceiq6),
-                  children: O
+                  children: E
               })
     });
 }

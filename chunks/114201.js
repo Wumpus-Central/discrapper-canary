@@ -140,7 +140,7 @@ function R(e) {
             leaderboardId: p,
             statisticId: a.E.LOL_TOTAL_KILLS
         }),
-        { disabled: k, subtext: M } = C(L, x),
+        { disabled: M, subtext: k } = C(L, x),
         j = (0, o.e7)(
             [_.Z, d.Z],
             () => {
@@ -174,8 +174,8 @@ function R(e) {
                                       id: 'refresh-my-data',
                                       label: O.intl.string(O.t.iopWUV),
                                       action: w,
-                                      disabled: k,
-                                      subtext: M
+                                      disabled: M,
+                                      subtext: k
                                   }),
                               (0, r.jsx)(s.sNh, {
                                   id: 'leaderboard-modal',

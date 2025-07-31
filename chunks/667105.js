@@ -3,15 +3,15 @@
     Ks: () => B,
     Ws: () => Z,
     g2: () => j,
-    hf: () => k,
+    hf: () => M,
     k3: () => U,
     qN: () => F,
-    tP: () => M
+    tP: () => k
 }),
     n(388685));
 var r = n(255367),
     i = n(73800),
-    a = n(855659),
+    a = n(66546),
     o = n(442837),
     s = n(481060),
     l = n(100527),
@@ -89,7 +89,7 @@ function x(e, t) {
         e
     );
 }
-function k(e) {
+function M(e) {
     let { quest: t, questContent: n, questContentPosition: r, questContentRowIndex: a, sourceQuestContent: s } = e,
         l = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
         c = null == l ? void 0 : l.hasVerifiedEmailOrPhone(),
@@ -125,7 +125,7 @@ function k(e) {
                   : (0, A.B)());
     }, [t, d, n, r, a, c, u, s]);
 }
-function M(e) {
+function k(e) {
     var t;
     let n = (0, o.Wu)([u.ZP], () => u.ZP.getGamesSeen(!1)).find((t) => (null == t ? void 0 : t.id) === e);
     return null != n && Date.now() - 25920000000 <= (null != (t = n.lastLaunched) ? t : 0);
@@ -196,7 +196,7 @@ function G(e) {
 function B(e) {
     var t;
     let { quest: n, progressState: r, isCollectibleQuest: a, questContent: o, questContentPosition: s, questContentRowIndex: u, inGiftInventory: f, isVideoQuest: p, inGameQuest: y, sourceQuestContent: O } = e,
-        v = k({
+        v = M({
             quest: n,
             questContent: o,
             questContentPosition: s,
@@ -222,7 +222,7 @@ function B(e) {
                 }));
         }, []),
         L = null == (t = (0, m.WD)()) ? void 0 : t.getId(),
-        { launchInGameActivity: M } = (0, b.zB)(n);
+        { launchInGameActivity: k } = (0, b.zB)(n);
     return i.useMemo(() => {
         if ((0, g.HJ)(n) && r !== b.OH.COMPLETED && r !== b.OH.CLAIMED) {
             let e = P.intl.string(P.t.BkZhUF);
@@ -257,7 +257,7 @@ function B(e) {
                                           sourceQuestContent: O,
                                           sourceQuestContentCTA: h.jZ.ACCEPT_QUEST
                                       })
-                                    : y && n.config.features.includes(N.S7.START_QUEST_CTA) && M());
+                                    : y && n.config.features.includes(N.S7.START_QUEST_CTA) && k());
                         }
                     }
                 );
@@ -298,7 +298,7 @@ function B(e) {
                         text: e,
                         tooltipText: P.intl.string(P.t.hsbwjo),
                         onClick: () => {
-                            n.config.features.includes(N.S7.START_QUEST_CTA) && M();
+                            n.config.features.includes(N.S7.START_QUEST_CTA) && k();
                         }
                     };
                 }
@@ -334,7 +334,7 @@ function B(e) {
                     };
                 return x(D({}, i), { text: P.intl.string(P.t.bAGFz8) });
         }
-    }, [r, p, I, f, v, a, n, o, s, u, L, S, A, w, y, M, O]);
+    }, [r, p, I, f, v, a, n, o, s, u, L, S, A, w, y, k, O]);
 }
 function V() {
     return (0, o.e7)([y.Z], () => {

@@ -107,10 +107,13 @@ function g(e) {
               'aria-label': 'CAPTCHA',
               className: o()(b.modal, b.gradientBorder),
               parentComponent: 'CaptchaModal',
+              'data-migration-pending': !0,
               children: (0, r.jsxs)(s.hzk, {
+                  'data-migration-pending': !0,
                   className: b.container,
                   children: [
                       (0, r.jsx)(s.olH, {
+                          'data-migration-pending': !0,
                           className: b.close,
                           onClick: t
                       }),

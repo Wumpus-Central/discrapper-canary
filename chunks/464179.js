@@ -104,11 +104,11 @@ var L = (function (e) {
     x = (function (e) {
         return ((e.EDIT = 'edit'), (e.CREATE = 'create'), e);
     })(x || {});
-let k = {
+let M = {
         [O]: l.G,
         [v]: o.X
     },
-    M = (e) => ({
+    k = (e) => ({
         name: 'name',
         id: A,
         title: () => f.intl.string(f.t.vyuULS),
@@ -264,7 +264,7 @@ let k = {
                 }
             },
             renderInput(t) {
-                let n = k[e],
+                let n = M[e],
                     r =
                         null == t.value ||
                         '' === t.value ||
@@ -294,12 +294,12 @@ let k = {
     Z = {
         modalUS: [[j], [U], [G], [B], [F, V]],
         modalInternational: [[j], [U], [G], [B], [F], [V]],
-        modalUSWithName: [[j], [M], [U], [G], [B], [F, V]],
-        modalInternationalWithName: [[j], [M], [U], [G], [B], [F], [V]],
-        settingsUS: [[M], [U, G], [B, F, V], [j]],
-        settingsUSMobile: [[M], [U], [G], [B], [F], [V], [j]],
-        settingsInternational: [[M], [U, G], [B], [F, V], [j]],
-        settingsInternationalMobile: [[M], [U], [G], [B], [F], [V], [j]],
+        modalUSWithName: [[j], [k], [U], [G], [B], [F, V]],
+        modalInternationalWithName: [[j], [k], [U], [G], [B], [F], [V]],
+        settingsUS: [[k], [U, G], [B, F, V], [j]],
+        settingsUSMobile: [[k], [U], [G], [B], [F], [V], [j]],
+        settingsInternational: [[k], [U, G], [B], [F, V], [j]],
+        settingsInternationalMobile: [[k], [U], [G], [B], [F], [V], [j]],
         settingsInternationalWithoutName: [[U, G], [B], [F, V], [j]],
         settingsInternationalWithoutNameMobile: [[U], [G], [B], [F], [V], [j]]
     };

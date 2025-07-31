@@ -18,8 +18,8 @@ var r = n(442837),
     x = n(540204),
     _ = n(546957),
     j = n(893996),
-    O = n(273927),
-    E = n(211466),
+    E = n(273927),
+    O = n(211466),
     C = n(864239),
     v = n(190014),
     S = n(301812),
@@ -51,14 +51,14 @@ let R = () =>
         return (0, i.jsxs)(j.Z, {
             title: P.intl.string(P.t.xVRG4O),
             webSetting: I.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-            children: [t ? (0, i.jsx)(E.n, {}) : (0, i.jsx)(h.P, {}), (0, i.jsx)(g.Z, {}), (0, i.jsx)(b.Z, {}), (0, i.jsx)(p.Z, {}), (0, i.jsx)(d.Z, {}), (0, i.jsx)(C.Z, {})]
+            children: [t ? (0, i.jsx)(O.n, {}) : (0, i.jsx)(h.P, {}), (0, i.jsx)(g.Z, {}), (0, i.jsx)(b.Z, {}), (0, i.jsx)(p.Z, {}), (0, i.jsx)(d.Z, {}), (0, i.jsx)(C.Z, {})]
         });
     },
     Z = () =>
         (0, i.jsxs)(j.Z, {
             title: P.intl.string(P.t['1Qn8iY']),
             webSetting: I.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
-            children: [(0, i.jsx)(f.Z, {}), (0, i.jsx)(O.ZP, {})]
+            children: [(0, i.jsx)(f.Z, {}), (0, i.jsx)(E.ZP, {})]
         }),
     w = (e) => {
         let { isGoreFilterEligible: t } = e;

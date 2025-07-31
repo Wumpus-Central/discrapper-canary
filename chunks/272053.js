@@ -192,12 +192,12 @@ let L = new D();
 function x() {
     p.Z.enabled ? L.start() : L.stop();
 }
-function k(e) {
+function M(e) {
     var t;
     if (a()(e.stream, T)) return !1;
     T = null != (t = e.stream) ? t : null;
 }
-class M extends (r = o.ZP.Store) {
+class k extends (r = o.ZP.Store) {
     initialize() {
         (x(), this.waitFor(f.Z), this.syncWith([p.Z], x));
     }
@@ -205,8 +205,8 @@ class M extends (r = o.ZP.Store) {
         return T;
     }
 }
-m(M, 'displayName', 'ExternalStreamingStore');
-let j = new M(l.Z, {
-    STREAMING_UPDATE: k,
+m(k, 'displayName', 'ExternalStreamingStore');
+let j = new k(l.Z, {
+    STREAMING_UPDATE: M,
     USER_CONNECTIONS_UPDATE: () => L._check()
 });

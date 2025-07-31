@@ -64,15 +64,15 @@ let x = [
         }
     ],
     j = 'forever';
-function O(e, t) {
+function E(e, t) {
     return e.getFullYear() === t.getFullYear() && e.getMonth() === t.getMonth() && e.getDate() === t.getDate();
 }
-function E(e) {
+function O(e) {
     let { status: t, currentStatus: n, description: s } = e,
         { showTempStatusOptions: c, hasDefaultClickOption: d, hasButtonStyling: u } = o.Y.useExperiment({ location: 'UserProfileAccountPopout' }),
         f = c && t !== h.Skl.ONLINE,
-        [O, E] = r.useState(void 0),
-        C = void 0 !== O && t === n,
+        [E, O] = r.useState(void 0),
+        C = void 0 !== E && t === n,
         v = (0, i.jsx)(i.Fragment, {
             children: x.map((e) => {
                 let { duration: r, label: s } = e;
@@ -104,7 +104,7 @@ function E(e) {
                         id: ''.concat(t, '-').concat(r),
                         onClick: (e) => {
                             (e.stopPropagation(),
-                                E(r),
+                                O(r),
                                 (0, g.Z)({
                                     nextStatus: t,
                                     prevStatus: n,
@@ -112,7 +112,7 @@ function E(e) {
                                 }));
                         },
                         className: b.durationButton,
-                        color: O === r ? a.Tt.BRAND : a.Tt.PRIMARY,
+                        color: E === r ? a.Tt.BRAND : a.Tt.PRIMARY,
                         size: a.Ph.NONE,
                         grow: !1,
                         children: s()
@@ -151,7 +151,7 @@ function E(e) {
             });
         },
         action: () => {
-            (E(f ? m.Z.Millis.DAY : void 0),
+            (O(f ? m.Z.Millis.DAY : void 0),
                 (0, g.Z)({
                     nextStatus: t,
                     prevStatus: n,
@@ -165,10 +165,10 @@ function E(e) {
 function C(e) {
     if (null == e || '0' === e) return;
     let t = new Date(Number(e)),
-        n = O(t, new Date()),
+        n = E(t, new Date()),
         i = new Date();
     i.setDate(i.getDate() + 1);
-    let r = O(t, i);
+    let r = E(t, i);
     return n
         ? f.intl.formatToPlainString(f.t.ZxxHIC, { timeString: f.intl.data.formatTime(t, { format: 'short' }) })
         : f.intl.formatToPlainString(f.t['9OFjSU'], {
@@ -212,28 +212,28 @@ function v(e) {
                 );
             })
         }),
-        O = E({
+        E = O({
             status: h.Skl.ONLINE,
             currentStatus: e
         }),
-        v = E({
+        v = O({
             status: h.Skl.IDLE,
             currentStatus: e,
             description: g(h.Skl.IDLE)
         }),
-        S = E({
+        S = O({
             status: h.Skl.DND,
             currentStatus: e,
             description: g(h.Skl.DND)
         }),
-        T = E({
+        T = O({
             status: h.Skl.INVISIBLE,
             currentStatus: e,
             description: g(h.Skl.INVISIBLE)
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            O,
+            E,
             (0, i.jsx)(l.Clw, {}, 'menu-separator-statuses'),
             v,
             S,

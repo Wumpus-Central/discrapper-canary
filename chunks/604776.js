@@ -13,17 +13,17 @@ var n = a(255367),
     d = a(259580),
     u = a(55935),
     m = a(246992),
-    x = a(232867),
-    p = a(981631),
+    p = a(232867),
+    x = a(981631),
     h = a(123393),
     b = a(546147),
     f = a(616257);
 let v = {
-        [p.kNB.QUEST_REWARD]: 'Quest Reward',
-        [p.kNB.DEVELOPER_GIFT]: 'Developer Gift',
-        [p.kNB.INVOICE]: 'Invoice',
-        [p.kNB.REVERSE_TRIAL]: 'Reverse Trial',
-        [p.kNB.FRACTIONAL_PREMIUM_GIVEBACK]: 'Giveback'
+        [x.kNB.QUEST_REWARD]: 'Quest Reward',
+        [x.kNB.DEVELOPER_GIFT]: 'Developer Gift',
+        [x.kNB.INVOICE]: 'Invoice',
+        [x.kNB.REVERSE_TRIAL]: 'Reverse Trial',
+        [x.kNB.FRACTIONAL_PREMIUM_GIVEBACK]: 'Giveback'
     },
     g = (e) => {
         var t;
@@ -97,11 +97,11 @@ function _() {
         [a, l] = r.useState(s.a.PREMIUM_TIER_2_1_HOUR),
         [u, v] = r.useState([]),
         [_, y] = r.useState([]),
-        { refreshEntitlementList: C, grantFractionalPremium: O, deleteFractionalPremium: T, triggerNextEntitlementFulfillment: N, entitlements: E, loading: S } = (0, x.m)();
+        { refreshEntitlementList: C, grantFractionalPremium: O, deleteFractionalPremium: T, triggerNextEntitlementFulfillment: N, entitlements: E, loading: S } = (0, p.m)();
     r.useEffect(() => {
         C();
     }, [C]);
-    let P = (e) => e.filter((e) => null != e.endsAt && e.endsAt > new Date() && e.type === p.qc2.FRACTIONAL_REDEMPTION),
+    let P = (e) => e.filter((e) => null != e.endsAt && e.endsAt > new Date() && e.type === x.qc2.FRACTIONAL_REDEMPTION),
         I = (e) => e.filter((e) => Object.values(s.a).includes(e.skuId) && null == e.startsAt);
     return (
         r.useEffect(() => {

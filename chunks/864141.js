@@ -91,8 +91,8 @@ function w(e) {
             userId: t.id,
             onAction: L
         }),
-        k = (0, o.e7)([d.Z], () => d.Z.getGuild(i.guild_id)),
-        M = (0, f.Z)(i),
+        M = (0, o.e7)([d.Z], () => d.Z.getGuild(i.guild_id)),
+        k = (0, f.Z)(i),
         j = (0, u.ZP)(i),
         { channelStatusEnabled: U } = (0, _.D)({ location: 'UserProfileVoiceActivityCard' }),
         G = () => {
@@ -137,7 +137,7 @@ function w(e) {
                         className: A.content,
                         children: [
                             (0, r.jsx)(y.Z, {
-                                users: M,
+                                users: k,
                                 channel: i
                             }),
                             (0, r.jsxs)('div', {
@@ -145,7 +145,7 @@ function w(e) {
                                 children: [
                                     (0, r.jsx)(b.Z, {
                                         channel: i,
-                                        guild: k,
+                                        guild: M,
                                         onAction: L,
                                         onClose: R
                                     }),

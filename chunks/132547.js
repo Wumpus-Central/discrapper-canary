@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(560223),
     _ = n(347475),
     j = n(342414),
-    O = n(391110),
-    E = n(71363),
+    E = n(391110),
+    O = n(71363),
     C = n(781800),
     v = n(981631),
     S = n(388032),
@@ -56,10 +56,10 @@ let I = (e) => {
                               children: [
                                   (0, i.jsx)(j.Z, {
                                       className: T.heroHeading,
-                                      location: O.MQ.HOME
+                                      location: E.MQ.HOME
                                   }),
                                   (0, i.jsx)(x.Z, {
-                                      variant: O.gM.WHATS_NEW,
+                                      variant: E.gM.WHATS_NEW,
                                       className: T.whatsNew,
                                       noBackground: !0,
                                       leftAlignHeaders: !0,
@@ -67,12 +67,12 @@ let I = (e) => {
                                   }),
                                   (0, i.jsx)(x.Z, {
                                       className: T.perksDiscoverability,
-                                      variant: O.gM.PERKS_DISCOVERABILITY,
+                                      variant: E.gM.PERKS_DISCOVERABILITY,
                                       noBackground: !0,
                                       leftAlignHeaders: !0,
                                       showAllPerksButton: (0, i.jsx)(C.Z, {
                                           setIsAllPerksVisible: y,
-                                          previousComponent: O.MQ.HOME
+                                          previousComponent: E.MQ.HOME
                                       })
                                   }),
                                   (0, i.jsx)(_.Z, {
@@ -105,10 +105,10 @@ let I = (e) => {
                           })
                       })
                   }),
-                  (0, i.jsx)(E.Z, {
+                  (0, i.jsx)(O.Z, {
                       isAllPerksVisible: I,
                       setIsAllPerksVisible: y,
-                      previousComponent: O.MQ.HOME
+                      previousComponent: E.MQ.HOME
                   })
               ]
           });

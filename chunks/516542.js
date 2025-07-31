@@ -60,7 +60,7 @@ function O(e) {
         );
     return (0, i.jsx)('div', {
         className: y.container,
-        children: (0, i.jsx)(p.Z, {
+        children: (0, i.jsx)(p.ZP, {
             innerClassName: y.textArea,
             onChange: P,
             placeholder: E,

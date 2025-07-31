@@ -7,7 +7,7 @@ var n = a(255367),
     o = a(616257);
 function c(e) {
     let { columns: t, data: a, className: l, rowClassName: c, onClickRow: d, selectedRowKey: u, rowHeight: m = 40 } = e,
-        x = r.useMemo(
+        p = r.useMemo(
             () =>
                 t.map((e) =>
                     (function (e) {
@@ -47,13 +47,13 @@ function c(e) {
                 ),
             [t]
         ),
-        p = [a.length];
+        x = [a.length];
     return (0, n.jsx)('div', {
         className: o.tableContainer,
         children: (0, n.jsx)(s.Tvr, {
             className: l,
             innerClassName: o.table,
-            sections: p,
+            sections: x,
             sectionHeight: 40,
             renderSection: (e) => {
                 let { section: t } = e,
@@ -62,7 +62,7 @@ function c(e) {
                     'div',
                     {
                         className: r,
-                        children: x.map((e) => {
+                        children: p.map((e) => {
                             var r, l;
                             let i = e.cellClassName,
                                 s = { width: 'calc('.concat(null != (l = e.cellWidth) ? l : '1fr', ' - ').concat(16, 'px)') };
@@ -85,16 +85,16 @@ function c(e) {
                 let { rowIndex: t } = e,
                     r = a[t],
                     l = r.key,
-                    p = i()(o.tableRow, {
+                    x = i()(o.tableRow, {
                         [o.selectedTableRow]: l === u,
                         rowClassName: c
                     });
                 return (0, n.jsx)(
                     s.P3F,
                     {
-                        className: p,
+                        className: x,
                         onClick: () => (null == d ? void 0 : d(r)),
-                        children: x.map((e) => {
+                        children: p.map((e) => {
                             var a, l;
                             let i = e.cellClassName,
                                 s = {

@@ -93,8 +93,8 @@ function A(e) {
     var t,
         n,
         { src: a, alt: s, className: c, emojiId: _, emojiName: p, channelId: g, messageId: b, animated: O, size: T = 'default', isInteracting: A = !1, shouldAnimate: N, onMouseEnter: C, onMouseLeave: R, canSelect: P = !0, autoplay: w, registerInnerRef: D, registerAnimatedElementRef: L, surrogate: x } = e,
-        k = I(e, ['src', 'alt', 'className', 'emojiId', 'emojiName', 'channelId', 'messageId', 'animated', 'size', 'isInteracting', 'shouldAnimate', 'onMouseEnter', 'onMouseLeave', 'canSelect', 'autoplay', 'registerInnerRef', 'registerAnimatedElementRef', 'surrogate']);
-    let [M, j] = i.useState(!1),
+        M = I(e, ['src', 'alt', 'className', 'emojiId', 'emojiName', 'channelId', 'messageId', 'animated', 'size', 'isInteracting', 'shouldAnimate', 'onMouseEnter', 'onMouseLeave', 'canSelect', 'autoplay', 'registerInnerRef', 'registerAnimatedElementRef', 'surrogate']);
+    let [k, j] = i.useState(!1),
         [U, G] = i.useState(void 0),
         B = i.useRef(void 0),
         { triggerAnimation: V, untriggerAnimation: F } = i.useContext(u.Rm),
@@ -109,13 +109,13 @@ function A(e) {
                 let e = !0 === N && Y;
                 return h.ZP.getEmojiURL({
                     id: _,
-                    animated: H && !0 === O && (e || M || !0 === A),
+                    animated: H && !0 === O && (e || k || !0 === A),
                     size: W
                 });
             }
             if (null != p) return m.ZP.getURL(p);
             throw Error('Unknown Src for Emoji');
-        }, [O, Y, _, p, W, H, M, A, N, a]),
+        }, [O, Y, _, p, W, H, k, A, N, a]),
         q = i.useCallback(() => {
             null != z &&
                 (B.current = (0, d.po)(z, (e) => {
@@ -137,7 +137,7 @@ function A(e) {
         J = i.useMemo(() => {
             let e = null != _ && '' !== _ ? { 'data-id': _ } : { 'data-name': p };
             return y(
-                v(y({}, k), {
+                v(y({}, M), {
                     className: o()('emoji', c, { jumboable: 'jumbo' === T }),
                     onError: q,
                     onMouseEnter: X,
@@ -146,7 +146,7 @@ function A(e) {
                 }),
                 e
             );
-        }, [c, _, p, X, Q, q, k, T]);
+        }, [c, _, p, X, Q, q, M, T]);
     i.useEffect(
         () => () => {
             var e;

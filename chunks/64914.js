@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(726985),
     _ = n(981631),
     j = n(388032),
-    O = n(40713);
-function E(e) {
+    E = n(40713);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -53,7 +53,7 @@ function C() {
             h.bm.updateSetting(!e);
         }, []),
         T = r.useCallback((e) => {
-            e ? (0, a.h7j)((e) => (0, i.jsx)(b.Z, E({}, e))) : l.mc();
+            e ? (0, a.h7j)((e) => (0, i.jsx)(b.Z, O({}, e))) : l.mc();
         }, []),
         N = r.useCallback((e) => {
             (0, c.BV)(e, o.Z.USER_SETTINGS);
@@ -64,7 +64,7 @@ function C() {
                 let s = e ? j.intl.format(j.t.LYXRxM, {}) : j.intl.format(j.t.uDP3Ky, {});
                 return (0, i.jsx)(
                     a.ConfirmModal,
-                    ((n = E(
+                    ((n = O(
                         {
                             header: j.intl.string(j.t.aqpAvr),
                             confirmText: j.intl.string(j.t.vT7ckp),
@@ -124,7 +124,7 @@ function C() {
             (0, i.jsx)(u.F, {
                 setting: x.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
                 children: (0, i.jsx)(a.j7V, {
-                    className: e ? '' : O.formSwitchExtension,
+                    className: e ? '' : E.formSwitchExtension,
                     value: e,
                     onChange: I,
                     note: j.intl.string(j.t.Afc7l5),
@@ -139,7 +139,7 @@ function C() {
                             look: f.z.WARNING,
                             children: j.intl.string(j.t.j7S6IS)
                         }),
-                        (0, i.jsx)(a.$i$, { className: O.infoBoxDivider })
+                        (0, i.jsx)(a.$i$, { className: E.infoBoxDivider })
                     ]
                 }),
             (0, i.jsx)(u.F, {

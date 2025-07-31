@@ -45,13 +45,13 @@ let b = (e) => {
     },
     x = (e) => {
         let { className: t, variant: n, noBackground: s = !1, leftAlignHeaders: x = !1, showAllPerksButton: _, headerClassname: j } = e,
-            O = r.useRef(null),
-            E = n === p.gM.WHATS_NEW,
+            E = r.useRef(null),
+            O = n === p.gM.WHATS_NEW,
             C = (0, u.x)();
         r.useEffect(() => {
-            E && C();
-        }, [C, E]);
-        let v = (0, g.re)(E),
+            O && C();
+        }, [C, O]);
+        let v = (0, g.re)(O),
             S = (0, m.Z)(),
             T = (0, g.mN)(),
             { fractionalState: N } = (0, o.Z)(),
@@ -68,7 +68,7 @@ let b = (e) => {
             }),
             P = A.some((e) => null != e.pillText);
         return (0, i.jsxs)('div', {
-            ref: O,
+            ref: E,
             className: a()(
                 f.section,
                 {
@@ -90,7 +90,7 @@ let b = (e) => {
                     className: a()(f.subtitle, {
                         [f.subtitle]: null == _ || x,
                         [f.subtitleWithButton]: null != _ && !x,
-                        [f.fullWidth]: E || x,
+                        [f.fullWidth]: O || x,
                         [f.moreSubtitleMargin]: P,
                         [f.leftAlignSubtitle]: x,
                         [f.centerAlignSubtitle]: !x

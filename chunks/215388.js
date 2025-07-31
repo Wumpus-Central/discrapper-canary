@@ -61,7 +61,7 @@ function q(e) {
             }),
             [d]
         );
-    return (0, n.jsxs)(c.Z, {
+    return (0, n.jsxs)(c.ZP, {
         'aria-describedby': K,
         'aria-labelledby': T,
         innerClassName: l()(a, p.textArea),

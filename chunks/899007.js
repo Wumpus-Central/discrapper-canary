@@ -78,8 +78,8 @@ function R(e) {
         { theme: D } = (0, b.z)(),
         { analyticsLocations: L } = (0, d.ZP)(u.Z.AVATAR),
         { trackUserProfileAction: x } = (0, m.KZ)(),
-        k = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2),
-        M = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, h), [t, h]),
+        M = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2),
+        k = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, h), [t, h]),
         { live: j } = (0, g.Z)(t.id),
         [U] = j,
         { status: G, isMobileOnline: B } = (0, s.cj)([f.Z], () => ({
@@ -105,8 +105,8 @@ function R(e) {
             size: F,
             'aria-label': t.username,
             imageClassName: null != R ? I.overlay : void 0,
-            status: M ? O.Skl.UNKNOWN : V,
-            statusBackdropColor: k && !M ? (0, l.QFD)(D) : void 0,
+            status: k ? O.Skl.UNKNOWN : V,
+            statusBackdropColor: M && !k ? (0, l.QFD)(D) : void 0,
             isMobile: B,
             statusTooltip: !0,
             statusTooltipDelay: y.vB

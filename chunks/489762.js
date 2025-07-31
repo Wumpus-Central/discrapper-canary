@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(419922),
     L = n(1450),
     x = n(491173),
-    k = n(515005),
-    M = n(981631),
+    M = n(515005),
+    k = n(981631),
     j = n(957825),
     U = n(388032),
     G = n(230584),
@@ -145,7 +145,7 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     if (e.type !== P.al.STICKER) return;
                     let { sticker: s } = e;
                     if (null == s) return;
-                    let l = H(F({}, a.location), { object: '' === o ? M.qAy.STICKER_PICKER_VIEW_ALL : M.qAy.STICKER_SEARCH_VIEW_ALL });
+                    let l = H(F({}, a.location), { object: '' === o ? k.qAy.STICKER_PICKER_VIEW_ALL : k.qAy.STICKER_SEARCH_VIEW_ALL });
                     if (null != s && !(0, A.kl)(s, r, n)) {
                         let e = (0, w.J8)(s);
                         ((0, A.cO)(s, r, n) === A.eb.SENDABLE_WITH_PREMIUM && (0, S.f)(!0), e && A.eb.SENDABLE_WITH_BOOSTED_GUILD);
@@ -156,7 +156,7 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                             ? (0, N.hW)(s.id)
                             : ((0, C.cQ)({
                                   sticker: s,
-                                  location: H(F({}, l), { object: M.qAy.STICKER })
+                                  location: H(F({}, l), { object: k.qAy.STICKER })
                               }),
                               (0, N.SA)(s.id)));
                     t(e);
@@ -183,7 +183,7 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     let t = m[e];
                     return null != t
                         ? (0, r.jsx)(
-                              k.Z,
+                              M.Z,
                               {
                                   getStickerItemProps: s,
                                   getStickerRowProps: c,
@@ -216,7 +216,7 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                         r = new Set(t),
                         i = t.has(e);
                     (i ? r.delete(e) : r.add(e),
-                        I.default.track(M.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
+                        I.default.track(k.rMx.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
                             location: null == A ? void 0 : A.location,
                             tab: j.X1.STICKER,
                             collapsed: !i,
@@ -385,8 +385,8 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             D = (0, m.Iu)((e) => e.searchQuery),
             L = (0, o.e7)([R.Z], () => R.Z.getPremiumPacks()),
             {
-                renderRow: k,
-                renderSection: M,
+                renderRow: M,
+                renderSection: k,
                 renderSectionFooter: j,
                 sectionFooterHeight: V,
                 renderSectionHeader: F,
@@ -480,8 +480,8 @@ let Y = (0, T.Mg)(s.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                   role: 'none presentation',
                                   listPadding: null != l ? el : es,
                                   onScroll: H,
-                                  renderRow: k,
-                                  renderSection: null == l ? M : void 0,
+                                  renderRow: M,
+                                  renderSection: null == l ? k : void 0,
                                   renderSectionHeader: F,
                                   renderSectionFooter: j,
                                   rowCount: O,

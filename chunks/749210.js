@@ -88,14 +88,14 @@ function x(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = k(e, t);
+        i = M(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function k(e, t) {
+function M(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -104,7 +104,7 @@ function k(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let M = (e) => {
+let k = (e) => {
         N.Z.show({
             title: R.intl.string(R.t.cTaRxM),
             body: R.intl.formatToPlainString(R.t['VSd+Ag'], { quantity: e })
@@ -201,7 +201,7 @@ let V = {
         } catch (t) {
             if ((null == (i = t.body) ? void 0 : i.code) === C.evJ.TOO_MANY_USER_GUILDS) {
                 let e = v.default.getCurrentUser();
-                S.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? M(C.tHP) : M(C.DZw);
+                S.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? k(C.tHP) : k(C.DZw);
             }
             throw ((null == (s = t.body) ? void 0 : s.code) === C.evJ.GUILD_AT_CAPACITY && U(), h && (null == (l = t.body) ? void 0 : l.code) === C.evJ.UNKNOWN_GUILD && j(e), t);
         }

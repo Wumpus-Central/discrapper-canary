@@ -45,11 +45,11 @@ let T = !1,
 function x(e) {
     return (0, h.OT)(e, E.Z);
 }
-function k(e) {
+function M(e) {
     let t = m.Z.getGameByName(e);
     return null != t ? x(t.id) : _.G6.getSetting();
 }
-function M(e) {
+function k(e) {
     var t;
     if ((0, p.yE)(null != (t = e.flags) ? t : 0, v.xjy.CONTEXTLESS)) return !0;
     switch (e.type) {
@@ -58,7 +58,7 @@ function M(e) {
             if (null != e.application_id) return x(e.application_id);
             return !1;
         case v.IIU.PLAYING:
-            return null != e.application_id ? x(e.application_id) : k(e.name);
+            return null != e.application_id ? x(e.application_id) : M(e.name);
         case v.IIU.STREAMING:
         case v.IIU.WATCHING:
         default:
@@ -78,7 +78,7 @@ function U() {
     }
     S === v.Skl.ONLINE && N > 0 && (S = v.Skl.IDLE);
     let t = !1,
-        n = P || S === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(M);
+        n = P || S === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(k);
     a()(C, n) || ((C = n), (t = !0));
     let r = O.Z.getRemoteActivities();
     w !== r && ((w = r), (t = !0));

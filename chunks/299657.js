@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(89057),
     _ = n(433811),
     j = n(214852),
-    O = n(246946),
-    E = n(594174),
+    E = n(246946),
+    O = n(594174),
     C = n(853872),
     v = n(78839),
     S = n(626135),
@@ -40,7 +40,7 @@ let L = function (e) {
         { sourceAnalyticsLocations: s, analyticsLocations: L } = (0, h.ZP)(g.Z.PREMIUM_MARKETING),
         B = (0, l.e7)([v.Z], () => v.Z.hasFetchedSubscriptions()),
         M = (0, l.e7)([C.Z], () => C.Z.hasFetchedPaymentSources),
-        U = (0, l.e7)([E.default], () => E.default.getCurrentUser()),
+        U = (0, l.e7)([O.default], () => O.default.getCurrentUser()),
         V = null == U ? void 0 : U.id,
         G = (0, P.N)(),
         F = (0, A.Ng)(),
@@ -69,7 +69,7 @@ let L = function (e) {
         r.useEffect(() => {
             n && (null != G || null != F) && (0, I.a)(G, F);
         }, [n, G, F]));
-    let J = (0, l.e7)([O.Z], () => O.Z.enabled),
+    let J = (0, l.e7)([E.Z], () => E.Z.enabled),
         Q = t === Z.EZ.ApplicationStoreHome,
         $ = J
             ? (0, i.jsx)(m.Z, {})

@@ -39,8 +39,8 @@ function v(e) {
         }, [n]);
     if ((0, l.e7)([f.Z], () => f.Z.isBlockedOrIgnored(null == t ? void 0 : t.id))) return null;
     let x = (null == t ? void 0 : t.bot) === !0,
-        k = (null == L ? void 0 : L.state) != null && 'xs' === S,
-        M = () => {
+        M = (null == L ? void 0 : L.state) != null && 'xs' === S,
+        k = () => {
             if (null != P)
                 return (0, r.jsx)(h.Z, {
                     stream: P,
@@ -48,7 +48,7 @@ function v(e) {
                     textVariant: 'text-'.concat(S, '/medium'),
                     textClassName: I,
                     iconClassName: T,
-                    hideText: k,
+                    hideText: M,
                     hideIcon: x,
                     hideTooltip: R
                 });
@@ -65,7 +65,7 @@ function v(e) {
                       textVariant: 'text-'.concat(S, '/medium'),
                       textClassName: I,
                       iconClassName: T,
-                      hideText: k,
+                      hideText: M,
                       hideIcon: x,
                       hideTooltip: R
                   })
@@ -75,7 +75,7 @@ function v(e) {
                         textVariant: 'text-'.concat(S, '/medium'),
                         textClassName: I,
                         iconClassName: T,
-                        hideText: k,
+                        hideText: M,
                         hideTooltip: R
                     })
                   : null;
@@ -102,7 +102,7 @@ function v(e) {
     return (0, r.jsxs)('div', {
         className: j,
         children: [
-            M(),
+            k(),
             (0, r.jsx)(s.xv, {
                 variant: 'text-'.concat(S, '/normal'),
                 className: o()(O.truncated, O.dot, I),

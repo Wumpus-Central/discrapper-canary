@@ -31,7 +31,7 @@ var r = n(255367),
     D = n(388032),
     L = n(73433),
     x = n(83902);
-function k(e, t, n) {
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function k(e, t, n) {
         e
     );
 }
-function M(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +55,7 @@ function M(e) {
                 })
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                M(e, t, n[t]);
             }));
     }
     return e;
@@ -125,7 +125,7 @@ function B(e) {
                       let { isShown: o } = i;
                       return (0, r.jsx)(
                           _.Z,
-                          M(
+                          k(
                               {
                                   ref: c,
                                   selected: o,
@@ -144,7 +144,7 @@ function B(e) {
                                           return (t) =>
                                               (0, r.jsx)(
                                                   e,
-                                                  U(M({}, t), {
+                                                  U(k({}, t), {
                                                       user: f,
                                                       guildId: a,
                                                       channel: p,
@@ -238,7 +238,7 @@ function V(e) {
         children: (0, r.jsx)(
             'div',
             U(
-                M(
+                k(
                     {
                         className: L.rolePopout,
                         ref: d
@@ -289,7 +289,7 @@ function F(e) {
             (0, r.jsxs)(
                 O.Z,
                 U(
-                    M(
+                    k(
                         {
                             ref: N,
                             className: L.roleMention,

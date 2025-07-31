@@ -61,49 +61,49 @@ function j(e) {
     let { user: t } = e,
         s = (0, d.Z)(),
         j = (0, u.VM)(),
-        O = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        E = r.useCallback(() => {
-            (a()(void 0 !== O, 'User must be logged in to accept a link request'),
+        E = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
+        O = r.useCallback(() => {
+            (a()(void 0 !== E, 'User must be logged in to accept a link request'),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('59716').then(n.bind(n, 275370));
                     return (n) =>
                         (0, i.jsx)(
                             e,
                             _(x({}, n), {
-                                currentUser: O,
+                                currentUser: E,
                                 otherUser: t
                             })
                         );
                 }));
-        }, [O, t]),
+        }, [E, t]),
         C = r.useCallback(() => {
-            (a()(void 0 !== O, 'User must be logged in to decline a link request'),
+            (a()(void 0 !== E, 'User must be logged in to decline a link request'),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('958').then(n.bind(n, 4526));
                     return (n) =>
                         (0, i.jsx)(
                             e,
                             _(x({}, n), {
-                                currentUser: O,
+                                currentUser: E,
                                 otherUser: t
                             })
                         );
                 }));
-        }, [O, t]),
+        }, [E, t]),
         v = r.useCallback(() => {
-            (a()(void 0 !== O, 'User must be logged in to decline a link request'),
+            (a()(void 0 !== E, 'User must be logged in to decline a link request'),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('69015').then(n.bind(n, 247265));
                     return (n) =>
                         (0, i.jsx)(
                             e,
                             _(x({}, n), {
-                                currentUser: O,
+                                currentUser: E,
                                 otherUser: t
                             })
                         );
                 }));
-        }, [O, t]);
+        }, [E, t]);
     return (0, i.jsxs)('div', {
         className: b.container,
         children: [
@@ -131,7 +131,7 @@ function j(e) {
                                         icon: o.dz2,
                                         className: b.__invalid_actionAccept,
                                         tooltip: f.intl.string(h.default.krWQZG),
-                                        onClick: E
+                                        onClick: O
                                     }),
                               (0, i.jsx)(m.Z, {
                                   icon: o.Dio,

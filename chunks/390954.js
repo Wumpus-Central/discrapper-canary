@@ -29,7 +29,7 @@ function j(e, t, n) {
         e
     );
 }
-function O(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -45,7 +45,7 @@ function O(e) {
     }
     return e;
 }
-class E extends (i = s.PureComponent) {
+class O extends (i = s.PureComponent) {
     render() {
         let { paymentSource: e, isDefault: t, isEditing: n, index: i, hideDivider: s, isForSubscription: a, locale: l, removing: d, submitting: u, onSubmit: p, onCancel: g, onDelete: b } = this.props;
         return n
@@ -98,7 +98,7 @@ class E extends (i = s.PureComponent) {
             }));
     }
 }
-j(E, 'defaultProps', {
+j(O, 'defaultProps', {
     isEditing: !1,
     hideDivider: !1,
     onEditClick: () => {}
@@ -140,7 +140,7 @@ class C extends s.PureComponent {
             u = o.findIndex((e) => e.id === d),
             p = o.map((t, l) =>
                 (0, r.jsx)(
-                    E,
+                    O,
                     {
                         locale: n,
                         paymentSource: t,
@@ -172,7 +172,7 @@ class C extends s.PureComponent {
                                 children: (e) =>
                                     (0, r.jsx)(
                                         c.mBM,
-                                        O(
+                                        E(
                                             {
                                                 size: 'md',
                                                 color: 'currentColor',
@@ -225,7 +225,7 @@ class C extends s.PureComponent {
                             var n, i;
                             return (0, r.jsx)(
                                 e,
-                                ((n = O({}, t)),
+                                ((n = E({}, t)),
                                 (i = i = { onAddPaymentSource: this.handlePaymentSourceAdded }),
                                 Object.getOwnPropertyDescriptors
                                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))

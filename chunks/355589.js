@@ -5,7 +5,7 @@ var r = n(255367),
     l = n.n(a),
     s = n(913527),
     o = n.n(s),
-    c = n(855659),
+    c = n(66546),
     d = n(94171),
     u = n(831209),
     m = n(149765),
@@ -17,13 +17,13 @@ var r = n(255367),
     b = n(447003),
     j = n(621516),
     v = n(982168),
-    C = n(386923),
-    _ = n(474366),
+    _ = n(386923),
+    C = n(474366),
     y = n(345162),
-    O = n(485386),
-    w = n(430824),
-    S = n(186523),
-    T = n(585483),
+    w = n(485386),
+    T = n(430824),
+    O = n(186523),
+    S = n(585483),
     N = n(70956),
     P = n(709054),
     I = n(961675),
@@ -178,7 +178,7 @@ let J = (e) => {
                   }
               }),
         clickHandler: () => {
-            (X(D.ZI.CREATE_POST), T.S.dispatch(z.CkL.FOCUS_COMPOSER_TITLE));
+            (X(D.ZI.CREATE_POST), S.S.dispatch(z.CkL.FOCUS_COMPOSER_TITLE));
         },
         isDone: e
     }),
@@ -213,9 +213,9 @@ let J = (e) => {
     },
     ea = (e) => {
         let { isAllDone: t, isVisible: n, canManageChannel: r, guildId: a, channel: l } = e,
-            s = (0, h.e7)([O.Z], () => (null != a ? O.Z.partitionVersion(a) : void 0)),
+            s = (0, h.e7)([w.Z], () => (null != a ? w.Z.partitionVersion(a) : void 0)),
             o = i.useCallback(() => {
-                T.S.dispatch(z.CkL.REMEASURE_TARGET);
+                S.S.dispatch(z.CkL.REMEASURE_TARGET);
             }, []);
         i.useEffect(() => {
             o();
@@ -275,7 +275,7 @@ let J = (e) => {
             u = (0, h.e7)([I.Z], () => I.Z.hasHidden(a.id)),
             f = (function (e, t, a, l) {
                 let s = null == e ? void 0 : e.id,
-                    o = (0, h.e7)([O.Z], () => (null != s ? O.Z.getSortedRoles(s) : void 0));
+                    o = (0, h.e7)([w.Z], () => (null != s ? w.Z.getSortedRoles(s) : void 0));
                 return i.useMemo(() => {
                     let i = new K(),
                         s = (null == t ? void 0 : t.isMediaChannel()) === !0;
@@ -393,14 +393,14 @@ let J = (e) => {
                 return { onboardingExpanded: t };
             }, d.X),
             { tagFilter: s } = (0, M.H)(i.id),
-            o = (0, h.e7)([w.Z], () => w.Z.getGuild(i.getGuildId())),
+            o = (0, h.e7)([T.Z], () => T.Z.getGuild(i.getGuildId())),
             m = (0, Z.r_)(i),
             { transitions: f, setVisible: x } = el(),
             b = es(a),
             y = eu(),
-            O = ee(i.id, x),
+            w = ee(i.id, x),
             {
-                onboardingSteps: T,
+                onboardingSteps: S,
                 isDismissed: N,
                 isHidden: P,
                 isAllDone: I
@@ -408,13 +408,13 @@ let J = (e) => {
                 guild: o,
                 channel: i,
                 hasAnyThread: t,
-                handleHide: O
+                handleHide: w
             }),
             E = !P && !N,
             R = (0, F.AF)(),
             k = i.isMediaChannel(),
             A = (e) => R.getState().setOnboardingExpanded(e);
-        return (ei(I, E, O),
+        return (ei(I, E, w),
         ea({
             isAllDone: I,
             isVisible: E,
@@ -432,9 +432,9 @@ let J = (e) => {
               ? n || 0 !== s.size
                   ? s.size > 0
                       ? null
-                      : (0, r.jsx)(C.Z, { guild: o })
+                      : (0, r.jsx)(_.Z, { guild: o })
                   : (0, r.jsxs)(r.Fragment, {
-                        children: [(0, r.jsx)(C.Z, { guild: o }), (0, r.jsx)(_.q, {})]
+                        children: [(0, r.jsx)(_.Z, { guild: o }), (0, r.jsx)(C.q, {})]
                     })
               : E && m
                 ? k
@@ -462,8 +462,8 @@ let J = (e) => {
                                                                 variant: 'heading-md/medium',
                                                                 className: H.header,
                                                                 children: B.intl.format(B.t['9L+8b2'], {
-                                                                    numCompleted: T.completedSteps.toString(),
-                                                                    numSteps: T.steps.length.toString()
+                                                                    numCompleted: S.completedSteps.toString(),
+                                                                    numSteps: S.steps.length.toString()
                                                                 })
                                                             }),
                                                             (0, r.jsxs)(g.Text, {
@@ -482,7 +482,7 @@ let J = (e) => {
                                                                 expanded: a,
                                                                 onClick: () => A(!a)
                                                             }),
-                                                            (0, r.jsx)(em, { handleHide: O })
+                                                            (0, r.jsx)(em, { handleHide: w })
                                                         ]
                                                     })
                                                 }),
@@ -493,7 +493,7 @@ let J = (e) => {
                                                               className: H.listContainer,
                                                               children: (0, r.jsx)('ol', {
                                                                   className: H.checklist,
-                                                                  children: T.getSteps().map((e) =>
+                                                                  children: S.getSteps().map((e) =>
                                                                       (0, r.jsxs)(
                                                                           g.P3F,
                                                                           {
@@ -519,7 +519,7 @@ let J = (e) => {
                                                                                           })
                                                                                         : (0, r.jsx)(g.G2e, {
                                                                                               disableColor: !0,
-                                                                                              icon: (0, g.GSL)(S.Z),
+                                                                                              icon: (0, g.GSL)(O.Z),
                                                                                               style: q,
                                                                                               className: l()(H.stepStatus, H.completed)
                                                                                           }),

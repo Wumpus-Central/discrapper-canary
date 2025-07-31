@@ -69,7 +69,7 @@ function x(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -80,7 +80,7 @@ function k(e, t) {
         e
     );
 }
-function M(e) {
+function k(e) {
     let t = (null == e ? void 0 : e.name) === '' ? null : null == e ? void 0 : e.name;
     return null != t ? P.intl.formatToPlainString(P.t['0wJXSk'], { name: t }) : P.intl.string(P.t.eXan7O);
 }
@@ -95,7 +95,7 @@ function U(e) {
         s = (0, f.ZP)(r),
         l = a || o;
     return (
-        null != t && i.push(M(t)),
+        null != t && i.push(k(t)),
         n.forEach((e) => {
             let { tooltip: t } = (0, v.Z)(e, l);
             null != t && i.push(t);
@@ -125,8 +125,8 @@ function B(e) {
 function V(e) {
     let { user: t, activities: n, applicationStream: a, voiceChannel: l, textClassName: f, iconClassName: m, textSize: O = 'xs', animateEmoji: v = !0, hasQuest: P = !1, hideEmoji: D = !1, hideTooltip: x = !1 } = e;
     (0, _.Z)(null == t ? void 0 : t.id);
-    let M = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
-        j = (0, g.Cf)(M),
+    let k = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
+        j = (0, g.Cf)(k),
         V = i.useMemo(() => {
             var e, t;
             let r =
@@ -163,7 +163,7 @@ function V(e) {
         K = (0, c.e7)([y.Z], () => y.Z.isBlockedOrIgnored(null == t ? void 0 : t.id)),
         z = (0, p.Z)({ location: 'ActivityStatus' }) && null != V ? (0, h.Z)(V) : null,
         q = (null == V ? void 0 : V.state) != null || null != z,
-        X = null != M,
+        X = null != k,
         Q = !X && null != l,
         J = H.length + (X || Q ? 1 : 0),
         $ = J > 1,
@@ -177,9 +177,9 @@ function V(e) {
     let en = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = !0 === e || x;
-            if (null != M)
+            if (null != k)
                 return (0, r.jsx)(T.Z, {
-                    stream: M,
+                    stream: k,
                     game: Y,
                     textVariant: 'text-'.concat(O, '/medium'),
                     textClassName: f,
@@ -220,14 +220,14 @@ function V(e) {
                     canTruncate: !1
                 };
             return (
-                null != M &&
+                null != k &&
                     e.push(
                         (0, r.jsx)(
                             T.Z,
-                            k(
+                            M(
                                 L(
                                     {
-                                        stream: M,
+                                        stream: k,
                                         game: null == n ? void 0 : n.find(d.Z)
                                     },
                                     t
@@ -240,7 +240,7 @@ function V(e) {
                 H.forEach((n, i) => {
                     e.push((0, r.jsx)(A.Z, L({ activity: n }, t), 'activity-'.concat(i)));
                 }),
-                Q && e.push((0, r.jsx)(N.Z, k(L({ channel: l }, t), { showChannelName: !0 }), 'voice')),
+                Q && e.push((0, r.jsx)(N.Z, M(L({ channel: l }, t), { showChannelName: !0 }), 'voice')),
                 e
             );
         },
@@ -268,7 +268,7 @@ function V(e) {
                             children: (e) =>
                                 (0, r.jsxs)(
                                     'div',
-                                    k(L({ className: o()(w.activityContainer, ee && w.iconOnly) }, e), {
+                                    M(L({ className: o()(w.activityContainer, ee && w.iconOnly) }, e), {
                                         children: [en(!0), ei()]
                                     })
                                 )

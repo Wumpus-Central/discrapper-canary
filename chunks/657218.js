@@ -510,7 +510,7 @@ function ee(e) {
                 className: z.starterMessageError,
                 children: (0, r.jsx)(c.pdY, { error: v })
             }),
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(C.ZP, {
                 type: q,
                 channel: t,
                 placeholder: V.intl.string(V.t.taZfIC),

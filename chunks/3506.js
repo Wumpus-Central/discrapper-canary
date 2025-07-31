@@ -18,8 +18,8 @@ var r = n(512722),
     x = n(809357),
     _ = n(371651),
     j = n(624864),
-    O = n(957148),
-    E = n(556296),
+    E = n(957148),
+    O = n(556296),
     C = n(808506),
     v = n(237997),
     S = n(626135);
@@ -33,8 +33,8 @@ function P(e) {
     var t;
     let n = v.default.getNotificationPositionMode(),
         i = n !== N._vf.DISABLED,
-        r = E.ZP.getOverlayKeybind(),
-        s = E.ZP.getOverlayChatKeybind();
+        r = O.ZP.getOverlayKeybind(),
+        s = O.ZP.getOverlayChatKeybind();
     return {
         enabled: C.default.enabled,
         notifications_enabled: i,
@@ -72,7 +72,7 @@ function D(e) {
             shouldShowKeybindIndicators: v.default.showKeybindIndicators,
             textChatDisabled: j.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT)
         })),
-        L = (0, o.e7)([E.ZP], () => E.ZP.getOverlayKeybind()),
+        L = (0, o.e7)([O.ZP], () => O.ZP.getOverlayKeybind()),
         B = (0, x.Z)({ location: 'overlay_user_settings' }),
         M = (0, p.$1)(),
         U = P(A);
@@ -102,7 +102,7 @@ function D(e) {
                                             var t, n;
                                             u.Z.setEnabled(e, r);
                                             let i = null != (n = null == (t = g.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id) ? n : null;
-                                            ((0, f.ou)(e, f.AE.LEGACY, i), !e && a && (0, O.l)(f.AE.LEGACY, i));
+                                            ((0, f.ou)(e, f.AE.LEGACY, i), !e && a && (0, E.l)(f.AE.LEGACY, i));
                                         },
                                         children: I.intl.string(I.t.vSP6c3)
                                     })

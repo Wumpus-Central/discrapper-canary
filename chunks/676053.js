@@ -24,8 +24,8 @@ function h(e) {
                 align: 'center'
             },
             badge: j,
-            textLink: O,
-            onWatchVideo: E,
+            textLink: E,
+            onWatchVideo: O,
             onRequestClose: C,
             popoverRef: v
         } = e,
@@ -78,8 +78,8 @@ function h(e) {
                 shouldHideMediaOptions: !0
             }),
                 null == C || C(),
-                null == E || E());
-        }, [I, E, C]),
+                null == O || O());
+        }, [I, O, C]),
         R = N
             ? (0, i.jsx)('img', {
                   src: b,
@@ -162,7 +162,7 @@ function h(e) {
                             title: h,
                             body: f,
                             badge: j,
-                            textLink: O,
+                            textLink: E,
                             hasBottomMargin: null != x
                         }),
                         null != x ? (0, i.jsx)(c.k, { actions: [x] }) : null,

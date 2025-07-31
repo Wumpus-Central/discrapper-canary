@@ -6,14 +6,14 @@
     Dd: () => C,
     Ft: () => D,
     TK: () => B,
-    X0: () => M,
+    X0: () => k,
     XA: () => j,
     Z8: () => v,
     bD: () => P,
     nG: () => A,
     qJ: () => U,
     t0: () => G,
-    tI: () => k
+    tI: () => M
 }),
     n(388685),
     n(953529),
@@ -330,13 +330,13 @@ function x(e) {
             return f.d.SlashCommand;
     }
 }
-function k(e) {
+function M(e) {
     if (null != e)
         if (e.id === h.bi.BUILT_IN) return p.ub.BUILT_IN;
         else if (e.id === h.bi.FRECENCY) return p.ub.FRECENCY;
         else return p.ub.APP;
 }
-function M(e, t) {
+function k(e, t) {
     var n, r;
     return {
         type: p.Qi.APPLICATION,

@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(199778),
     _ = n(296533),
     j = n(901750),
-    O = n(112863),
-    E = n(701157),
+    E = n(112863),
+    O = n(701157),
     C = n(912152),
     v = n(615603),
     S = n(474936),
@@ -62,7 +62,7 @@ function N(e) {
                 containerClassName: T.FPContainer,
                 pillClassName: T.FPPill
             }),
-            !R && (0, i.jsx)(O.Z, {}),
+            !R && (0, i.jsx)(E.Z, {}),
             (null == t ? void 0 : t.isPaused) && B !== S.a$.FP_SUB_PAUSED
                 ? (0, i.jsx)(_.r, {
                       appliedGuildBoosts: L,
@@ -76,7 +76,7 @@ function N(e) {
                 guildBoostSlots: N,
                 fractionalPremiumState: B
             }),
-            (0, i.jsx)(E.Z, {
+            (0, i.jsx)(O.Z, {
                 canAddBoosts: w && U,
                 canApplyBoosts: k
             }),

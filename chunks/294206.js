@@ -47,7 +47,7 @@ function x(e, t, n) {
         e
     );
 }
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,7 +63,7 @@ function k(e) {
     }
     return e;
 }
-function M(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -80,7 +80,7 @@ function j(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -119,7 +119,7 @@ function Y(e) {
         children: (e) =>
             (0, r.jsx)(
                 d.P3F,
-                j(k({}, e), {
+                j(M({}, e), {
                     innerRef: l,
                     'aria-label': i,
                     className: o()(L.secondaryButton, { [L.buttonDisabled]: t }),
@@ -170,7 +170,7 @@ function K(e) {
                         ? (0, I.hs)(t.soundId)
                         : ((0, A.lF)({
                               sound: t,
-                              location: j(k({}, a), { object: R.qAy.SOUNDBOARD_SOUND })
+                              location: j(M({}, a), { object: R.qAy.SOUNDBOARD_SOUND })
                           }),
                           (0, I.TB)(t.soundId)));
             },
@@ -217,7 +217,7 @@ let q = i.forwardRef(function (e, t) {
         p,
         y,
         v,
-        { sound: I, channel: T, containerClassName: R, className: x, focused: M, forceSecondaryActions: G = !1, interactive: Y = !0, enableSecondaryActions: q = !1, suppressPlaySound: X, onMouseEnter: Q, onSelectItem: J, analyticsLocations: $, buttonOverlay: ee = S.Pb.PLAY, showLockForDisabledSound: et = !0, inNitroLockedSection: en = !1, isAnimated: er = !0, isPlayingSoundOverride: ei, isSoundmoji: ea, soundmojiVisualEffectRef: eo, tooltipOverride: es, tooltipClassName: el, tooltipContentClassName: ec } = e,
+        { sound: I, channel: T, containerClassName: R, className: x, focused: k, forceSecondaryActions: G = !1, interactive: Y = !0, enableSecondaryActions: q = !1, suppressPlaySound: X, onMouseEnter: Q, onSelectItem: J, analyticsLocations: $, buttonOverlay: ee = S.Pb.PLAY, showLockForDisabledSound: et = !0, inNitroLockedSection: en = !1, isAnimated: er = !0, isPlayingSoundOverride: ei, isSoundmoji: ea, soundmojiVisualEffectRef: eo, tooltipOverride: es, tooltipClassName: el, tooltipContentClassName: ec } = e,
         eu = U(e, ['sound', 'channel', 'containerClassName', 'className', 'focused', 'forceSecondaryActions', 'interactive', 'enableSecondaryActions', 'suppressPlaySound', 'onMouseEnter', 'onSelectItem', 'analyticsLocations', 'buttonOverlay', 'showLockForDisabledSound', 'inNitroLockedSection', 'isAnimated', 'isPlayingSoundOverride', 'isSoundmoji', 'soundmojiVisualEffectRef', 'tooltipOverride', 'tooltipClassName', 'tooltipContentClassName']);
     let { name: ed, emojiId: e_, emojiName: ef } = I,
         ep = (0, l.e7)([O.default], () => O.default.getCurrentUser()),
@@ -238,13 +238,13 @@ let q = i.forwardRef(function (e, t) {
         ew = null != (y = m.Wq.useStore().bottomPosition) ? y : 0,
         eD = (null != (v = null == (a = ey.current) ? void 0 : a.getBoundingClientRect().bottom) ? v : 0) + 50 > ew ? 'top' : 'bottom',
         [eL, ex] = i.useState(!1),
-        ek = eR && et;
-    function eM() {
+        eM = eR && et;
+    function ek() {
         X || em($);
     }
     function ej(e) {
         if ((eS && !ev && ((eI.current = Math.min(eI.current + Z, F)), Math.random() < eI.current && eb(eO.x, eO.y, void 0, void 0, { sprite: P.vv })), null != J)) return void J(e);
-        eM();
+        ek();
     }
     let eU = W({
             sound: I,
@@ -253,7 +253,7 @@ let q = i.forwardRef(function (e, t) {
         }),
         eG = (e) =>
             X || eR
-                ? ek
+                ? eM
                     ? (0, r.jsx)(d.mBM, {
                           size: 'xs',
                           color: 'currentColor',
@@ -270,7 +270,7 @@ let q = i.forwardRef(function (e, t) {
             disabled: !Y && !G
         }),
         eV = () =>
-            ek && !en
+            eM && !en
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)('div', { className: L.buttonOverlayBackground }),
@@ -370,9 +370,9 @@ let q = i.forwardRef(function (e, t) {
                     (0, r.jsxs)(
                         d.kL8,
                         j(
-                            k(
-                                j(k({}, eu), {
-                                    buttonProps: j(k({}, eN), {
+                            M(
+                                j(M({}, eu), {
+                                    buttonProps: j(M({}, eN), {
                                         id: eA,
                                         role: 'button'
                                     }),
@@ -390,7 +390,7 @@ let q = i.forwardRef(function (e, t) {
                                             [L.buttonDisabled]: !Y && !G,
                                             [L.premiumDisabled]: eR && !G,
                                             [L.buttonDisabledSecondaryActionsEnabled]: !Y && G,
-                                            [L.focused]: Y && M
+                                            [L.focused]: Y && k
                                         },
                                         x
                                     )
@@ -436,7 +436,7 @@ let q = i.forwardRef(function (e, t) {
             !I.available &&
                 (0, r.jsx)(d.ua7, {
                     text: D.intl.string(D.t.MDOXJS),
-                    children: (e) => (0, r.jsx)('div', k({ className: L.unavailableTooltip }, e))
+                    children: (e) => (0, r.jsx)('div', M({ className: L.unavailableTooltip }, e))
                 }),
             !0 === ea &&
                 (0, r.jsx)(E.Z, {

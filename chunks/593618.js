@@ -37,8 +37,8 @@ var r = n(255367),
     D = n(938475),
     L = n(981631),
     x = n(388032),
-    k = n(714509),
-    M = n(375613);
+    M = n(714509),
+    k = n(375613);
 function j(e, t, n) {
     return (
         t in e
@@ -180,10 +180,10 @@ function F(e, t, n) {
     return 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
-              className: k.row,
+              className: M.row,
               children: [
                   (0, r.jsx)(e, {
-                      className: k.activityIcon,
+                      className: M.activityIcon,
                       color: 'currentColor'
                   }),
                   (0, r.jsx)(f.ZP, {
@@ -198,12 +198,12 @@ function Z(e, t, n) {
     return 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
-              className: k.row,
+              className: M.row,
               children: [
                   (0, r.jsx)(u.ewx, {
                       size: 'lg',
                       color: 'currentColor',
-                      className: k.activityIcon
+                      className: M.activityIcon
                   }),
                   (0, r.jsx)(f.ZP, {
                       guildId: e,
@@ -211,14 +211,14 @@ function Z(e, t, n) {
                       max: 3
                   }),
                   (0, r.jsxs)('div', {
-                      className: k.stageListenerPill,
+                      className: M.stageListenerPill,
                       children: [
                           (0, r.jsx)(u.VWR, {
                               size: 'xs',
                               color: 'currentColor'
                           }),
                           (0, r.jsx)(u.Text, {
-                              className: k.stageListenerCount,
+                              className: M.stageListenerCount,
                               color: 'text-default',
                               variant: 'text-xs/normal',
                               children: n
@@ -269,7 +269,7 @@ function Y(e) {
             E
                 ? (0, r.jsx)(H, {
                       muteConfig: b,
-                      className: o()(k.muteText, { [k.muteTextWithActivity]: y })
+                      className: o()(M.muteText, { [M.muteTextWithActivity]: y })
                   })
                 : null
         ]
@@ -290,7 +290,7 @@ function W(e) {
 function K(e) {
     let { guildJoinRequestStatus: t } = e;
     return (0, r.jsx)(u.Text, {
-        className: k.viewAsRolesWarning,
+        className: M.viewAsRolesWarning,
         color: 'text-default',
         variant: 'text-xs/normal',
         children: W(t)
@@ -308,27 +308,27 @@ function z(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: o()(k.row, k.rowGuildName),
+                className: o()(M.row, M.rowGuildName),
                 children: [
                     i
                         ? (0, r.jsx)(g.Z, {
                               guild: t,
-                              className: k.rowIconV2
+                              className: M.rowIconV2
                           })
                         : (0, r.jsx)(m.Z, {
                               guild: t,
                               size: 20,
-                              className: k.rowIcon
+                              className: M.rowIcon
                           }),
                     (0, r.jsx)('span', {
-                        className: o()(k.guildNameText, { [k.guildNameTextLimitedSize]: null != l }),
+                        className: o()(M.guildNameText, { [M.guildNameTextLimitedSize]: null != l }),
                         children: t.name
                     })
                 ]
             }),
             f
                 ? (0, r.jsx)(u.Text, {
-                      className: k.invitesDisabledTooltip,
+                      className: M.invitesDisabledTooltip,
                       color: 'header-secondary',
                       variant: 'text-sm/medium',
                       children: x.intl.string(x.t['2n0/Fh'])
@@ -336,7 +336,7 @@ function z(e) {
                 : null,
             d
                 ? (0, r.jsx)(u.Text, {
-                      className: k.viewAsRolesWarning,
+                      className: M.viewAsRolesWarning,
                       color: 'text-default',
                       variant: 'text-xs/normal',
                       children: x.intl.string(x.t['5LwN8/'])
@@ -358,8 +358,8 @@ function q(e) {
                   includeActivity: s
               }),
         'aria-label': a,
-        tooltipClassName: M.listItemTooltip,
-        tooltipContentClassName: M.listItemTooltipContent,
+        tooltipClassName: k.listItemTooltip,
+        tooltipContentClassName: k.listItemTooltipContent,
         children: (e) => {
             var { onFocus: t, onBlur: n } = e,
                 a = G(e, ['onFocus', 'onBlur']);

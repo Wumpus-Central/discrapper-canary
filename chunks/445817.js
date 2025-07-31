@@ -21,9 +21,9 @@ let x = {
 function _(e) {
     let { previewEnabled: t, onEnablePreview: n, onCancelPreview: _ } = e,
         j = p.Z.getCameraComponent(),
-        [O, E] = r.useState((0, c.P)(g.default.getCurrentUser())),
+        [E, O] = r.useState((0, c.P)(g.default.getCurrentUser())),
         C = r.useRef(!1),
-        v = r.useRef(O),
+        v = r.useRef(E),
         S = (0, o.O)(),
         T = (0, s.e7)([p.Z], () => p.Z.isVideoAvailable());
     return (
@@ -34,9 +34,9 @@ function _(e) {
             []
         ),
         (0, i.jsx)(m.Z, {
-            selectedBackgroundOption: O,
+            selectedBackgroundOption: E,
             onSelectBackgroundOption: (e) => {
-                ((C.current = !0), (v.current = e), E(e), (0, u.wG)(e, { location: S.location }).catch(h.dG4));
+                ((C.current = !0), (v.current = e), O(e), (0, u.wG)(e, { location: S.location }).catch(h.dG4));
             },
             onCancelPreview: _,
             renderCamera: (e) =>

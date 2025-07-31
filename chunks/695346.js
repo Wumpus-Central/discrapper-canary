@@ -5,7 +5,7 @@
     CW: () => eD,
     Cr: () => eh,
     DC: () => eo,
-    Ex: () => eM,
+    Ex: () => ek,
     Fg: () => $,
     G6: () => e_,
     H1: () => x,
@@ -31,7 +31,7 @@
     UP: () => eu,
     Wp: () => eR,
     Xc: () => V,
-    Xk: () => k,
+    Xk: () => M,
     Xr: () => ed,
     YC: () => eK,
     YT: () => S,
@@ -66,8 +66,8 @@
     l4: () => eY,
     mX: () => K,
     nc: () => eO,
-    no: () => ek,
-    qF: () => M,
+    no: () => eM,
+    qF: () => k,
     rN: () => ev,
     tU: () => eg,
     uL: () => G,
@@ -236,7 +236,7 @@ let S = (0, d.Zc)(
         },
         (e) => o.D5.create({ value: e })
     ),
-    k = (0, d.Zc)(
+    M = (0, d.Zc)(
         'textAndImages',
         'showCommandSuggestions',
         (e) => {
@@ -245,7 +245,7 @@ let S = (0, d.Zc)(
         },
         (e) => o.D5.create({ value: e })
     ),
-    M = (0, d.Zc)(
+    k = (0, d.Zc)(
         'voiceAndVideo',
         'alwaysPreviewVideo',
         (e) => {
@@ -797,7 +797,7 @@ let eS = (0, d.KM)(
     ineligibleDefault: a.E5.OFF,
     eligibleDefault: () => a.E5.ON_FOR_LARGE_GUILDS
 });
-let ek = (0, d.TG)({
+let eM = (0, d.TG)({
         baseSetting: (0, d.Zc)(
             'privacy',
             'defaultGuildsActivityRestrictedV2',
@@ -809,7 +809,7 @@ let ek = (0, d.TG)({
         ineligibleDefault: a.GI.ACTIVITY_STATUS_OFF,
         eligibleDefault: () => a.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS
     }),
-    eM = (0, d.Zc)(
+    ek = (0, d.Zc)(
         'privacy',
         'familyCenterEnabledV2',
         (e) => (null == e ? void 0 : e.value),

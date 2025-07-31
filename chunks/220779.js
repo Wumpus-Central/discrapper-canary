@@ -90,7 +90,7 @@ function T(e) {
                 t = window.innerHeight;
             return e.top < t / 2 ? 'bottom' : 'top';
         };
-    return (0, r.jsx)(d.Z, {
+    return (0, r.jsx)(d.ZP, {
         ref: N,
         placeholder: t,
         editorClassName: m,

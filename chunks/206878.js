@@ -62,11 +62,11 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
         max: 1000000,
         warn: 500000
     },
-    x = {
+    p = {
         max: 250000,
         warn: 50000
     },
-    p = {
+    x = {
         [r.aB.PROFILE_EFFECT]: c,
         [r.aB.AVATAR_DECORATION]: d,
         [r.jE.HERO_BANNER_ANIMATED]: c,
@@ -80,13 +80,13 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
         [r.jE.HERO_BANNER_STATIC]: u,
         [r.jE.SHOP_ALL_BANNER_STATIC]: u,
         [r.jE.UPSELL_BANNER]: m,
-        [r.jE.UPSELL_BANNER_POPOUT]: x,
+        [r.jE.UPSELL_BANNER_POPOUT]: p,
         [r.jE.MOBILE_BANNER]: m,
-        [r.jE.MOBILE_BACKGROUND]: x,
-        [r.jE.PDP_BACKGROUND]: x,
-        [r.jE.PDP_LOGO]: x,
-        [r.jE.COLLECTED_MODAL_BG]: x,
-        [r.jE.COACHTIP_AVATAR]: x
+        [r.jE.MOBILE_BACKGROUND]: p,
+        [r.jE.PDP_BACKGROUND]: p,
+        [r.jE.PDP_LOGO]: p,
+        [r.jE.COLLECTED_MODAL_BG]: p,
+        [r.jE.COACHTIP_AVATAR]: p
     },
     h = async (e) => {
         let t = Object.values(r.CM),
@@ -115,13 +115,13 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
         } else r > e.warn && n("Files are a tad chonky - are you sure they're optimized?", [''.concat(i)]);
     },
     g = (e, t, a, n) => {
-        let r = p[e];
+        let r = x[e];
         if (null != r) for (let e of t) e.name.endsWith('.txt') || v(r, e, a, n);
     },
     j = (e, t, a) => {
         for (let n of e) {
             let e = (0, r.BU)(n),
-                l = null != e ? p[e] : null;
+                l = null != e ? x[e] : null;
             null != l && v(l, n, t, a);
         }
     },

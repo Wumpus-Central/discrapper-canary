@@ -39,5 +39,6 @@ e.exports = {
     newMemberActionBar: 'newMemberActionBar__74017',
     stackedBars: 'stackedBars__74017',
     expressionPickerPositionLayer: 'expressionPickerPositionLayer__74017',
-    textAreaMobileThemed: 'textAreaMobileThemed__74017'
+    textAreaMobileThemed: 'textAreaMobileThemed__74017',
+    announcementScrollableContainer: 'announcementScrollableContainer__74017 scrollableContainer__74017'
 };

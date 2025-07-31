@@ -18,8 +18,8 @@ var r = n(512722),
     x = n(134795),
     _ = n(610966),
     j = n(513901),
-    O = n(451392),
-    E = n(906364),
+    E = n(451392),
+    O = n(906364),
     C = n(643879),
     v = n(350327),
     S = n(621853),
@@ -118,7 +118,7 @@ function R() {
                 user: k
             }),
             (0, i.jsx)(
-                E.Z,
+                O.Z,
                 {
                     sectionTitle: A.intl.string(A.t['+T3RIy']),
                     errors: Y.pronouns,
@@ -169,7 +169,7 @@ function R() {
                               },
                               'banner'
                           ),
-                          (0, i.jsx)(O.Z, {
+                          (0, i.jsx)(E.Z, {
                               user: k,
                               pendingAvatarSrc: K,
                               pendingColors: H,

@@ -466,13 +466,13 @@ function x(e, t) {
     } else s['[[locale]]'] = P();
     return s;
 }
-function k(e, t) {
+function M(e, t) {
     return x(e, t);
 }
-function M(e, t, n, r, i) {
+function k(e, t, n, r, i) {
     if (0 === e.length) throw ReferenceError('No locale data has been provided for this object yet.');
     if ('lookup' === n['[[localeMatcher]]']) var a = x(e, t);
-    else var a = k(e, t);
+    else var a = M(e, t);
     var o = a['[[locale]]'];
     if (c.call(a, '[[extension]]'))
         var s = a['[[extension]]'],
@@ -578,7 +578,7 @@ function Z(e, t, n) {
         s = B(n, 'localeMatcher', 'string', new ef('lookup', 'best fit'), 'best fit');
     o['[[localeMatcher]]'] = s;
     var c = b.NumberFormat['[[localeData]]'],
-        d = M(b.NumberFormat['[[availableLocales]]'], a, o, b.NumberFormat['[[relevantExtensionKeys]]'], c);
+        d = k(b.NumberFormat['[[availableLocales]]'], a, o, b.NumberFormat['[[relevantExtensionKeys]]'], c);
     ((r['[[locale]]'] = d['[[locale]]']), (r['[[numberingSystem]]'] = d['[[nu]]']), (r['[[dataLocale]]'] = d['[[dataLocale]]']));
     var _ = d['[[dataLocale]]'],
         f = B(n, 'style', 'string', new ef('decimal', 'percent', 'currency'), 'decimal');
@@ -756,7 +756,7 @@ function Q(e, t, n) {
     ((v = B(n, 'localeMatcher', 'string', new ef('lookup', 'best fit'), 'best fit')), (o['[[localeMatcher]]'] = v));
     var s = b.DateTimeFormat,
         d = s['[[localeData]]'],
-        _ = M(s['[[availableLocales]]'], a, o, s['[[relevantExtensionKeys]]'], d);
+        _ = k(s['[[availableLocales]]'], a, o, s['[[relevantExtensionKeys]]'], d);
     ((r['[[locale]]'] = _['[[locale]]']), (r['[[calendar]]'] = _['[[ca]]']), (r['[[numberingSystem]]'] = _['[[nu]]']), (r['[[dataLocale]]'] = _['[[dataLocale]]']));
     var f = _['[[dataLocale]]'],
         p = n.timeZone;

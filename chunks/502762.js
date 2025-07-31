@@ -10,36 +10,38 @@ var r = n(255367),
     d = n(750883);
 let _ = Object.assign(
     i.forwardRef(function (e, t) {
-        let { user: n, displayProfile: i, themeType: a, className: _, pendingThemeColors: f, themeOverride: p, children: h, forceShowPremium: m = !1 } = e,
+        let { user: n, displayProfile: i, themeType: a, className: _, pendingThemeColors: f, themeOverride: p, children: h, forceShowPremium: m = !1, forceUserTheme: g = !1 } = e,
             {
-                theme: g,
-                primaryColor: E,
-                secondaryColor: b
+                theme: E,
+                primaryColor: b,
+                secondaryColor: y
             } = (0, l.Z)({
                 user: n,
                 displayProfile: i,
                 pendingThemeColors: f,
-                isPreview: m
+                isPreview: m,
+                forceUserTheme: g
             }),
-            { profileThemeStyle: y, profileThemeClassName: O } = (0, c.Z)({
-                theme: null != p ? p : g,
+            { profileThemeStyle: O, profileThemeClassName: v } = (0, c.Z)({
+                theme: null != p ? p : E,
                 themeType: a,
-                primaryColor: E,
-                secondaryColor: b
+                primaryColor: b,
+                secondaryColor: y,
+                forceUserTheme: g
             });
         return (0, r.jsx)('div', {
-            className: o()(d.outer, O, _),
-            style: y,
+            className: o()(d.outer, v, _),
+            style: O,
             ref: t,
             children: (0, r.jsx)('div', {
                 className: d.inner,
                 children: (0, r.jsx)(s.ze6, {
-                    theme: null != p ? p : g,
+                    theme: null != p ? p : E,
                     children: (0, r.jsx)(u.X, {
                         themeType: a,
-                        theme: null != p ? p : g,
-                        primaryColor: E,
-                        secondaryColor: b,
+                        theme: null != p ? p : E,
+                        primaryColor: b,
+                        secondaryColor: y,
                         children: h
                     })
                 })

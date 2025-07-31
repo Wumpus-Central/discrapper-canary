@@ -7,7 +7,7 @@ var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(855659),
+    s = n(66546),
     l = n(442837),
     c = n(755721),
     u = n(481060),
@@ -97,8 +97,8 @@ function A(e) {
 }
 let N = i.memo(function (e) {
     let { maxBodyLines: t, expand: n = !1, onNotificationShow: a, onDismissClick: d, onConfirmClick: p, onCancelClick: m, onNotificationClick: y, hint: O, cancelText: v, confirmText: I, icon: T, body: S, title: N, renderFooter: C, contentOpacity: R, status: P, containerRef: w, className: D, wrapperClassName: L } = e,
-        [x, k] = i.useState(!1),
-        M = n || x || P === g._1z.FOCUSED,
+        [x, M] = i.useState(!1),
+        k = n || x || P === g._1z.FOCUSED,
         j = (0, l.e7)([h.ZP], () => h.ZP.isInputLocked((0, _.getPID)()));
     i.useEffect(() => {
         null == a || a();
@@ -122,10 +122,10 @@ let N = i.memo(function (e) {
             [m]
         ),
         V = i.useCallback(() => {
-            k(!0);
+            M(!0);
         }, []),
         F = i.useCallback(() => {
-            k(!1);
+            M(!1);
         }, []);
     function Z() {
         return (0, r.jsx)(f.Z, {
@@ -135,7 +135,7 @@ let N = i.memo(function (e) {
         });
     }
     function H() {
-        let e = 'function' == typeof O ? O(M, j) : O;
+        let e = 'function' == typeof O ? O(k, j) : O;
         return null != O
             ? (0, r.jsx)(u.Text, {
                   className: b.hint,
@@ -189,7 +189,7 @@ let N = i.memo(function (e) {
                 });
     }
     function K() {
-        let e = null == C ? void 0 : C(M, j);
+        let e = null == C ? void 0 : C(k, j);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(s.animated.div, {
@@ -210,7 +210,7 @@ let N = i.memo(function (e) {
                                     ? (0, r.jsx)(u.Text, {
                                           color: 'interactive-normal',
                                           variant: 'text-sm/normal',
-                                          lineClamp: null != t ? t * (M ? 2 : 1) : void 0,
+                                          lineClamp: null != t ? t * (k ? 2 : 1) : void 0,
                                           children: S
                                       })
                                     : null,
@@ -315,7 +315,7 @@ function P(e) {
         ),
         P = i.useCallback((e, t) => (null == g ? void 0 : g(e, c, t)), [g, c]),
         {
-            props: { onNotificationShow: w, onDismissClick: D, renderFooter: L, onNotificationClick: x, onConfirmClick: k, onCancelClick: M, disableClickableRegions: j = !1 },
+            props: { onNotificationShow: w, onDismissClick: D, renderFooter: L, onNotificationClick: x, onConfirmClick: M, onCancelClick: k, disableClickableRegions: j = !1 },
             status: U
         } = t,
         G = T(t.props, ['onNotificationShow', 'onDismissClick', 'renderFooter', 'onNotificationClick', 'onConfirmClick', 'onCancelClick', 'disableClickableRegions']),

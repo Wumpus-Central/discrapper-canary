@@ -1,5 +1,5 @@
 (n.d(t, {
-    Z: () => k,
+    Z: () => M,
     d: () => E
 }),
     n(388685),
@@ -248,7 +248,7 @@ class x extends (r = o.ZP.PersistedStore) {
             return n;
         }
     ]));
-let k = new x(s.Z, {
+let M = new x(s.Z, {
     CONNECTION_OPEN: N,
     LOGOUT: w,
     MULTI_ACCOUNT_REMOVE_ACCOUNT: D,

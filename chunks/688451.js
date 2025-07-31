@@ -214,7 +214,7 @@ function L(e) {
 function x(e) {
     e.o || (e.o = h(e.t));
 }
-function k(e, t, n) {
+function M(e, t, n) {
     var r = _(t)
         ? b('MapSet').F(t, n)
         : f(t)
@@ -246,7 +246,7 @@ function k(e, t, n) {
             : b('ES5').J(t, n);
     return ((n ? n.A : O()).p.push(r), r);
 }
-function M(e) {
+function k(e) {
     return (
         i(e) || r(22, e),
         (function e(t) {
@@ -324,7 +324,7 @@ var U,
                     return i ? ('value' in i ? i.value : null == (r = i.get) ? void 0 : r.call(e.k)) : void 0;
                 })(e, n, t);
             var r = n[t];
-            return e.I || !a(r) ? r : r === w(e.t, t) ? (x(e), (e.o[t] = k(e.A.h, r, e))) : r;
+            return e.I || !a(r) ? r : r === w(e.t, t) ? (x(e), (e.o[t] = M(e.A.h, r, e))) : r;
         },
         has: function (e, t) {
             return t in p(e);
@@ -404,7 +404,7 @@ var ee = new ((function () {
                     }
                     if (('function' != typeof n && r(6), void 0 !== i && 'function' != typeof i && r(7), a(e))) {
                         var c = S(t),
-                            u = k(t, e, void 0),
+                            u = M(t, e, void 0),
                             d = !0;
                         try {
                             ((o = n(u)), (d = !1));
@@ -457,9 +457,9 @@ var ee = new ((function () {
         var t = e.prototype;
         return (
             (t.createDraft = function (e) {
-                (a(e) || r(8), i(e) && (e = M(e)));
+                (a(e) || r(8), i(e) && (e = k(e)));
                 var t = S(this),
-                    n = k(this, e, void 0);
+                    n = M(this, e, void 0);
                 return ((n[W].C = !0), T(t), n);
             }),
             (t.finishDraft = function (e, t) {

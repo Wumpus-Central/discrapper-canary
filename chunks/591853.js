@@ -40,8 +40,8 @@ var c = n(442837),
     D = n(871118),
     L = n(565138),
     x = n(66999),
-    k = n(359110),
-    M = n(12168),
+    M = n(359110),
+    k = n(12168),
     j = n(237583),
     U = n(131704),
     G = n(592125),
@@ -191,7 +191,7 @@ function eO(e) {
         D = null != R && 0 === s.length ? [R] : s,
         L = D.length > 0,
         x = D.length >= 2,
-        [k, M] = i.useState(!L),
+        [M, k] = i.useState(!L),
         j = q.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
         U = null != t && g ? eu.intl.formatToPlainString(eu.t['8lzR/f'], { channel: '#'.concat(t.name) }) : eu.intl.formatToPlainString(eu.t['4c+CAw'], { channel: '@'.concat(j) }),
         B = g ? eu.intl.string(eu.t.Z2CUgo) : eu.intl.string(eu.t.XLGiTE),
@@ -263,10 +263,10 @@ function eO(e) {
         },
         Y = null != _ ? _ : null != C ? C : null != w ? w : void 0,
         W = () => {
-            (E((e) => !e), k && (null == b || b.focus()));
+            (E((e) => !e), M && (null == b || b.focus()));
         },
         z = (e) => {
-            (M(e), e && (null == b || b.focus()));
+            (k(e), e && (null == b || b.focus()));
         };
     return (0, r.jsxs)('div', {
         style: { pointerEvents: I ? 'none' : 'all' },
@@ -291,7 +291,7 @@ function eO(e) {
                       })
                   }),
             (0, r.jsxs)('div', {
-                className: k ? ed.inputContainerShareToChannel : ed.hiddenButRenderedInputField,
+                className: M ? ed.inputContainerShareToChannel : ed.hiddenButRenderedInputField,
                 children: [
                     (0, r.jsx)(O.A7, {
                         placeholder: U,
@@ -340,7 +340,7 @@ function eO(e) {
                         })
                 ]
             }),
-            !1 === k &&
+            !1 === M &&
                 (0, r.jsxs)('div', {
                     className: ed.primaryActionPopoutActionButtons,
                     children: [
@@ -405,7 +405,7 @@ let ev = (e) => {
                               'aria-label': eu.intl.formatToPlainString(eu.t.kilW3t, { emojiName: t.name }),
                               color: p.ua7.Colors.PRIMARY,
                               shouldShow: !s && void 0,
-                              children: (0, r.jsx)(M.u, {
+                              children: (0, r.jsx)(k.u, {
                                   emoji: t,
                                   isDisabled: !a,
                                   onClick: () => n({ emoji: t }),
@@ -623,8 +623,8 @@ function eA(e) {
             { onOpened: () => (null == h ? void 0 : h(el.xP.OPENED_GAME_PROFILE)) }
         ),
         A = v ? S : void 0,
-        { activity: L, activityApplication: x, fallbackApplication: k } = (0, et.Z)(O),
-        { largeImage: M, smallImage: j } = (0, X.YC)(L, null != x ? x : k),
+        { activity: L, activityApplication: x, fallbackApplication: M } = (0, et.Z)(O),
+        { largeImage: k, smallImage: j } = (0, X.YC)(L, null != x ? x : M),
         { largeImage: U } = (0, X.rv)({ entry: O });
     return (0, r.jsxs)('div', {
         className: ed.popoutContentWrapper,
@@ -662,11 +662,11 @@ function eA(e) {
                     (0, r.jsxs)('div', {
                         className: ed.streamingPopoutHeader,
                         children: [
-                            null != M &&
+                            null != k &&
                                 (0, r.jsx)('div', {
                                     className: ed.popoutThumbnailContainer,
                                     children: (0, r.jsx)($.E, {
-                                        image: M,
+                                        image: k,
                                         smallImage: j,
                                         onClick: null != l ? l : A,
                                         size: $.J.SIZE_72
@@ -754,7 +754,7 @@ function eC(e) {
                       children: [
                           (0, r.jsxs)(p.P3F, {
                               'aria-label': eu.intl.string(eu.t['W/A4Qk']),
-                              onClick: () => (0, k.Kh)(n.id),
+                              onClick: () => (0, M.Kh)(n.id),
                               className: ed.voiceChannelPopoutReactorChannel,
                               children: [
                                   (0, r.jsx)(L.Z, {
@@ -830,7 +830,7 @@ function eR(e) {
         };
     let E = null != o,
         b = () => {
-            (m.Z.updateChatOpen(s.id, !0), (0, k.Kh)(s.id), null == a || a(s));
+            (m.Z.updateChatOpen(s.id, !0), (0, M.Kh)(s.id), null == a || a(s));
         },
         y = () => {
             v.Z.handleVoiceConnect({

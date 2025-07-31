@@ -287,11 +287,11 @@
         },
         x = t.createContext(null);
     x.displayName = 'ElementsContext';
-    var k = function (e, t) {
+    var M = function (e, t) {
             if (!e) throw Error('Could not find Elements context; You need to wrap the part of your app that '.concat(t, ' in an <Elements> provider.'));
             return e;
         },
-        M = function (e) {
+        k = function (e) {
             var n = e.stripe,
                 r = e.options,
                 i = e.children,
@@ -365,12 +365,12 @@
                 t.createElement(x.Provider, { value: s }, i)
             );
         };
-    M.propTypes = {
+    k.propTypes = {
         stripe: O.any,
         options: O.object
     };
     var j = function (e) {
-            return k(t.useContext(x), e);
+            return M(t.useContext(x), e);
         },
         U = function () {
             return j('calls useElements()').elements;
@@ -509,7 +509,7 @@
             var n = t.useContext(V),
                 r = t.useContext(x);
             if (n && r) throw Error('You cannot wrap the part of your app that '.concat(e, ' in both <CheckoutProvider> and <Elements> providers.'));
-            return n ? F(n, e) : k(r, e);
+            return n ? F(n, e) : M(r, e);
         },
         q = function () {
             K('calls useCheckout()');
@@ -603,16 +603,16 @@
                             },
                             [N, C, u]
                         ));
-                    var k = I(u);
+                    var M = I(u);
                     return (
                         t.useEffect(
                             function () {
                                 if (L.current) {
-                                    var e = R(u, k, ['paymentRequest']);
+                                    var e = R(u, M, ['paymentRequest']);
                                     e && 'update' in L.current && L.current.update(e);
                                 }
                             },
-                            [u, k]
+                            [u, M]
                         ),
                         t.useLayoutEffect(function () {
                             return function () {
@@ -810,5 +810,5 @@
         eS = J('paymentMethodMessaging', $),
         eA = J('affirmMessage', $),
         eN = J('afterpayClearpayMessage', $);
-    ((e.AddressElement = eI), (e.AffirmMessageElement = eA), (e.AfterpayClearpayMessageElement = eN), (e.AuBankAccountElement = el), (e.CardCvcElement = e_), (e.CardElement = ec), (e.CardExpiryElement = ed), (e.CardNumberElement = eu), (e.CheckoutProvider = W), (e.CurrencySelectorElement = ey), (e.Elements = M), (e.ElementsConsumer = G), (e.EmbeddedCheckout = eo), (e.EmbeddedCheckoutProvider = er), (e.EpsBankElement = eg), (e.ExpressCheckoutElement = eb), (e.FpxBankElement = ef), (e.IbanElement = ep), (e.IdealBankElement = eh), (e.LinkAuthenticationElement = ev), (e.P24BankElement = em), (e.PaymentElement = eE), (e.PaymentMethodMessagingElement = eS), (e.PaymentRequestButtonElement = eO), (e.ShippingAddressElement = eT), (e.useCheckout = q), (e.useElements = U), (e.useStripe = es));
+    ((e.AddressElement = eI), (e.AffirmMessageElement = eA), (e.AfterpayClearpayMessageElement = eN), (e.AuBankAccountElement = el), (e.CardCvcElement = e_), (e.CardElement = ec), (e.CardExpiryElement = ed), (e.CardNumberElement = eu), (e.CheckoutProvider = W), (e.CurrencySelectorElement = ey), (e.Elements = k), (e.ElementsConsumer = G), (e.EmbeddedCheckout = eo), (e.EmbeddedCheckoutProvider = er), (e.EpsBankElement = eg), (e.ExpressCheckoutElement = eb), (e.FpxBankElement = ef), (e.IbanElement = ep), (e.IdealBankElement = eh), (e.LinkAuthenticationElement = ev), (e.P24BankElement = em), (e.PaymentElement = eE), (e.PaymentMethodMessagingElement = eS), (e.PaymentRequestButtonElement = eO), (e.ShippingAddressElement = eT), (e.useCheckout = q), (e.useElements = U), (e.useStripe = es));
 });

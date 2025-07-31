@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => M }), n(388685), n(642613));
+(n.d(t, { Z: () => k }), n(388685), n(642613));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -31,12 +31,12 @@ var r = n(255367),
     D = n(474936),
     L = n(388032),
     x = n(136266);
-let k = 1500;
-function M(e) {
+let M = 1500;
+function k(e) {
     let { giftCode: t, application: n, sku: a, subscriptionPlan: s, selectedGiftStyle: l, onClose: u, hasSentMessage: f, giftRecipient: p, giftMessageError: g, isSendingMessage: y } = e,
         [O, I] = i.useState(_.kO8.Modes.DEFAULT),
         S = (0, c.e7)([T.Z], () => T.Z.enabled),
-        M = f || (null != l && null != p),
+        k = f || (null != l && null != p),
         U = (null == a ? void 0 : a.productLine) === w.POd.COLLECTIBLES,
         G = (0, b.Z)(),
         { selectedGiftingPromotionReward: B } = (0, P.wD)(),
@@ -50,7 +50,7 @@ function M(e) {
                 ? L.intl.string(L.t.qB8ayc)
                 : null == s
                   ? null
-                  : ((e = s.interval === D.rV.MONTH ? (M ? (Z ? V.monthGiftText : L.t['4ZJ+7e']) : L.t['P+z55e']) : M ? (Z ? V.yearGiftText : L.t.p0pZXF) : L.t.bXqk3t),
+                  : ((e = s.interval === D.rV.MONTH ? (k ? (Z ? V.monthGiftText : L.t['4ZJ+7e']) : L.t['P+z55e']) : k ? (Z ? V.yearGiftText : L.t.p0pZXF) : L.t.bXqk3t),
                     L.intl.format(e, {
                         skuName: (0, C.aq)(s.id),
                         intervalCount: s.intervalCount
@@ -73,7 +73,7 @@ function M(e) {
                 ),
                 setTimeout(() => {
                     I(_.kO8.Modes.DEFAULT);
-                }, k));
+                }, M));
         },
         z = () => {
             let e;
@@ -184,7 +184,7 @@ function M(e) {
                       }),
                       children: W()
                   }),
-                  (f && null != p && null == g) || M ? X() : q()
+                  (f && null != p && null == g) || k ? X() : q()
               ]
           });
 }

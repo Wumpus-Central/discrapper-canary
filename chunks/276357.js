@@ -20,43 +20,43 @@ function b() {
 function j(e) {
     let { channel: t, closePopout: n, setPopoutRef: j } = e,
         v = (0, m.Vm)(t),
-        { tagFilter: C } = (0, u.H)(t.id),
-        _ = (0, u.v)(),
+        { tagFilter: _ } = (0, u.H)(t.id),
+        C = (0, u.v)(),
         y = (0, s.e7)([d.Z], () => d.Z.keyboardModeEnabled),
-        O = i.useCallback(
+        w = i.useCallback(
             (e) => {
                 ((0, h.e7)({
                     guildId: t.guild_id,
                     channelId: t.id,
                     tagId: e,
-                    filterTagIds: Array.from(C),
-                    added: !C.has(e),
+                    filterTagIds: Array.from(_),
+                    added: !_.has(e),
                     location: {
                         page: f.ZY5.GUILD_CHANNEL,
                         section: f.jXE.FORUM_CHANNEL_HEADER,
                         object: f.qAy.CHANNEL_TAG
                     }
                 }),
-                    _.getState().toggleTagFilter(t.id, e));
+                    C.getState().toggleTagFilter(t.id, e));
             },
-            [t, C, _]
+            [t, _, C]
         ),
-        w = i.useCallback(() => {
-            (_.getState().setTagFilter(t.id, new Set()), y || n());
-        }, [_, t.id, y, n]),
-        S = (0, a.ZP)({
+        T = i.useCallback(() => {
+            (C.getState().setTagFilter(t.id, new Set()), y || n());
+        }, [C, t.id, y, n]),
+        O = (0, a.ZP)({
             id: ''.concat(t.id, '-all-tags-dropdown-navigator'),
             isEnabled: !0,
             wrap: !0,
             scrollToStart: b,
             scrollToEnd: b
         }),
-        T = i.useRef(null);
+        S = i.useRef(null);
     return (
         i.useEffect(() => {
             requestAnimationFrame(() => {
-                if (null != T.current) {
-                    let e = T.current.querySelector('.'.concat(p.tag));
+                if (null != S.current) {
+                    let e = S.current.querySelector('.'.concat(p.tag));
                     null != e && e.focus();
                 }
             });
@@ -86,14 +86,14 @@ function j(e) {
                                     color: 'none',
                                     variant: 'text-xs/medium',
                                     tabularNumbers: !0,
-                                    children: C.size
+                                    children: _.size
                                 })
                             })
                         ]
                     })
                 }),
                 (0, r.jsx)(l.bG, {
-                    navigator: S,
+                    navigator: O,
                     children: (0, r.jsx)(l.SJ, {
                         children: (e) => {
                             var t,
@@ -147,7 +147,7 @@ function j(e) {
                                 })(
                                     {
                                         ref: (e) => {
-                                            ((i.current = e), (T.current = e));
+                                            ((i.current = e), (S.current = e));
                                         }
                                     },
                                     a
@@ -161,8 +161,8 @@ function j(e) {
                                                 {
                                                     className: p.tag,
                                                     tag: e,
-                                                    selected: C.has(e.id),
-                                                    onClick: () => O(e.id)
+                                                    selected: _.has(e.id),
+                                                    onClick: () => w(e.id)
                                                 },
                                                 e.id
                                             )
@@ -192,7 +192,7 @@ function j(e) {
                     color: o.zx.Colors.CUSTOM,
                     className: p.clear,
                     'aria-label': x.intl.string(x.t['98EPQE']),
-                    onClick: w,
+                    onClick: T,
                     children: (0, r.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-link',

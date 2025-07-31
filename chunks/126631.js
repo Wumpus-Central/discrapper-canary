@@ -19,14 +19,14 @@ let h = (0, c.hQ)(),
     b = (0, c.hQ)();
 function x(e) {
     let { sectionTitle: t, errors: n, onBioChange: c, pendingBio: d, placeholder: x, currentBio: _, disabled: j = !1 } = e,
-        [O, E] = r.useState(null != d ? d : _),
-        [C, v] = r.useState((0, l.JM)(O)),
+        [E, O] = r.useState(null != d ? d : _),
+        [C, v] = r.useState((0, l.JM)(E)),
         S = r.useRef(!1);
     return (
         r.useEffect(() => {
             if (void 0 === d) {
                 let e = (0, l.JM)(_);
-                (E(_), v(e));
+                (O(_), v(e));
             }
         }, [d, _]),
         (0, i.jsxs)(u.Z, {
@@ -36,18 +36,18 @@ function x(e) {
             errors: n,
             disabled: j,
             children: [
-                (0, i.jsx)(o.Z, {
+                (0, i.jsx)(o.ZP, {
                     'aria-describedby': b,
                     'aria-labelledby': h,
                     className: g.bioTextAreaContainer,
                     innerClassName: g.bioTextArea,
                     maxCharacterCount: m.tPV,
                     onChange: function (e, t, n) {
-                        t !== O && (E(t), v(n), c(t));
+                        t !== E && (O(t), v(n), c(t));
                     },
                     placeholder: x,
                     channel: f,
-                    textValue: O,
+                    textValue: E,
                     richValue: C,
                     type: a.Ie.PROFILE_BIO_INPUT,
                     onBlur: () => {

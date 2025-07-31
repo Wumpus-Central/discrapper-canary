@@ -1,6 +1,6 @@
 (n.d(t, {
     PF: () => F,
-    R7: () => M,
+    R7: () => k,
     Tg: () => U,
     UU: () => G,
     gK: () => j,
@@ -9,7 +9,7 @@
     mO: () => x,
     t1: () => R,
     uL: () => V,
-    v2: () => k,
+    v2: () => M,
     yC: () => L
 }),
     n(704826),
@@ -169,7 +169,7 @@ function L(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 ? arguments[3] : void 0;
     '' === e
-        ? k()
+        ? M()
         : (l.Z.dispatch({
               type: 'GIF_PICKER_QUERY',
               query: e
@@ -200,13 +200,13 @@ function x(e) {
                 });
             });
 }
-function k() {
+function M() {
     l.Z.dispatch({
         type: 'GIF_PICKER_QUERY',
         query: ''
     });
 }
-function M(e) {
+function k(e) {
     let { type: t, index: n, offset: r, limit: i, results: a, totalResults: s, query: l, gifId: u } = e,
         d = (0, h._)(f.Z.getAnalyticsID(), t, {
             offset: r,

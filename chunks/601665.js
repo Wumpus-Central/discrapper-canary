@@ -54,7 +54,7 @@ function R(e) {
     return e;
 }
 function P(e) {
-    let { user: t, currentUser: n, guildId: C, channelId: P, messageId: w, roleId: D, openedAt: L, closePopout: x, setPopoutRef: k, disableUserProfileLink: M = __OVERLAY__, newAnalyticsLocations: j = [], disableAutoFocus: U = !1 } = e,
+    let { user: t, currentUser: n, guildId: C, channelId: P, messageId: w, roleId: D, openedAt: L, closePopout: x, setPopoutRef: M, disableUserProfileLink: k = __OVERLAY__, newAnalyticsLocations: j = [], disableAutoFocus: U = !1 } = e,
         { analyticsLocations: G } = (0, c.ZP)([...j, l.Z.USER_PROFILE_POPOUT]),
         B = (0, f.ZB)({
             layout: 'POPOUT',
@@ -69,8 +69,8 @@ function P(e) {
         Z = i.useRef(null),
         H = (0, s.Z)(Z);
     i.useEffect(() => {
-        null == k || k(null == Z ? void 0 : Z.current);
-    }, [Z, k]);
+        null == M || M(null == Z ? void 0 : Z.current);
+    }, [Z, M]);
     let Y = (e) => {
             (null == x || x(),
                 (0, m.openUserProfileModal)(
@@ -85,7 +85,7 @@ function P(e) {
                 ));
         },
         W = () =>
-            M
+            k
                 ? null
                 : (0, r.jsx)(o.sNh, {
                       id: 'view-profile',
@@ -152,7 +152,7 @@ function P(e) {
                                         guildId: C,
                                         channelId: P,
                                         themeType: S.lY.POPOUT,
-                                        onOpenProfile: M ? void 0 : Y
+                                        onOpenProfile: k ? void 0 : Y
                                     }),
                                     (0, r.jsx)(v.Z, {
                                         location: 'BotUserProfilePopout',
@@ -169,7 +169,7 @@ function P(e) {
                                 displayProfile: V,
                                 guild: F,
                                 isHovering: H,
-                                onOpenProfile: M ? void 0 : Y,
+                                onOpenProfile: k ? void 0 : Y,
                                 channelId: P,
                                 onClose: x
                             }),

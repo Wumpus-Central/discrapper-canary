@@ -150,8 +150,8 @@ function L(e) {
         C = null != N ? E.default.age(N.id) : 0,
         { giftBoxAnimation: R, trinketsAnimation: L } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
         x = null != n.firstTimeNotice && !s && A && C >= D,
-        [k, M] = (0, _.XR)(x ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, d.t)(o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
-        j = null != k,
+        [M, k] = (0, _.XR)(x ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, d.t)(o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
+        j = null != M,
         U = I || j,
         G = (0, b.Ft)(g);
     if (s) return null;
@@ -170,7 +170,7 @@ function L(e) {
             });
         },
         V = () => {
-            (S(!1), M(v.L.TAKE_ACTION), B());
+            (S(!1), k(v.L.TAKE_ACTION), B());
         },
         F =
             void 0 !== R
@@ -199,7 +199,7 @@ function L(e) {
                 ? (0, r.jsx)(p.Z, {
                       onComplete: () => S(!1),
                       onCheckItOutClick: B,
-                      markAsDismissed: M,
+                      markAsDismissed: k,
                       config: n.firstTimeNotice,
                       children: F
                   })

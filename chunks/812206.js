@@ -168,13 +168,13 @@ function x(e) {
     }
     return n;
 }
-function k(e) {
+function M(e) {
     let { entitlements: t } = e,
         n = !1;
     for (let { sku: e } of t) (null == e ? void 0 : e.application) != null && (b(o.ZP.createFromServer(e.application)), (n = !0));
     return n;
 }
-function M(e) {
+function k(e) {
     let { guildId: t, applications: n } = e,
         r = [];
     for (let e of n) (r.push(e.id), b(o.ZP.createFromServer(e)));
@@ -314,10 +314,10 @@ let z = new K(a.Z, {
     APPLICATIONS_FETCH_SUCCESS: P,
     APPLICATIONS_FETCH_FAIL: x,
     APPLICATION_UPDATE: I,
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: k,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: k,
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: k,
-    GUILD_APPLICATIONS_FETCH_SUCCESS: M,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: M,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: M,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: M,
+    GUILD_APPLICATIONS_FETCH_SUCCESS: k,
     BILLING_PAYMENTS_FETCH_SUCCESS: j,
     PAYMENT_UPDATE: U,
     INVITE_RESOLVE_SUCCESS: B,

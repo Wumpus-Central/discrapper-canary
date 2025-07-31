@@ -7,7 +7,7 @@ var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(855659),
+    s = n(66546),
     l = n(442837),
     c = n(704215),
     u = n(481060),
@@ -110,14 +110,14 @@ let P = function (e) {
     let { tabIndex: t, className: n, renderButtonContents: a, active: y, onClick: v, 'aria-controls': T, focusProps: S, ref: P } = e,
         [w, D] = i.useState(!1),
         [L, x] = i.useState(50),
-        k = w || y,
-        M = (0, h.l)(b, 'emojiButton', k ? 'Hovered' : 'Normal'),
+        M = w || y,
+        k = (0, h.l)(b, 'emojiButton', M ? 'Hovered' : 'Normal'),
         j = R(L),
         U = i.useCallback(() => {
-            if (k) return;
+            if (M) return;
             let e = Math.floor(Math.random() * A);
             (D(!0), x(e), (0, f.x)(g.qR.EmojiButtonMouseEntered));
-        }, [k, D, x]),
+        }, [M, D, x]),
         G = i.useCallback(() => {
             D(!1);
         }, [D]),
@@ -141,7 +141,7 @@ let P = function (e) {
             (0, r.jsx)(u.P3F, {
                 innerRef: z,
                 tabIndex: t,
-                className: o()(M, n),
+                className: o()(k, n),
                 onMouseEnter: () => {
                     var t;
                     (U(), null == (t = e.onMouseEnter) || t.call(e));
@@ -167,7 +167,7 @@ let P = function (e) {
                         ? a()
                         : (0, r.jsx)(u.AMe, {
                               config: N,
-                              to: { value: +!!k },
+                              to: { value: +!!M },
                               children: (e) => {
                                   let { value: t } = e;
                                   return (0, r.jsxs)(s.animated.div, {
@@ -175,7 +175,7 @@ let P = function (e) {
                                       style: I(O({}, j), {
                                           transform: t.to([0, 1], [1, 1.14]).to((e) => 'scale('.concat(e, ')'))
                                       }),
-                                      children: [(0, r.jsx)('div', { className: o()(b.sprite, b.spriteColored, k ? b.active : b.inactive) }), (0, r.jsx)('div', { className: o()(b.sprite, H ? b.spritePremiumColored : b.spriteGreyscale, k ? b.inactive : b.active, { [b.reducedMotion]: W }) })]
+                                      children: [(0, r.jsx)('div', { className: o()(b.sprite, b.spriteColored, M ? b.active : b.inactive) }), (0, r.jsx)('div', { className: o()(b.sprite, H ? b.spritePremiumColored : b.spriteGreyscale, M ? b.inactive : b.active, { [b.reducedMotion]: W }) })]
                                   });
                               }
                           })

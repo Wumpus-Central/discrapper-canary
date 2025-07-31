@@ -173,8 +173,7 @@ function P() {
         );
     }, [s]);
     let _ = i.useCallback(() => {
-            let e = o.current;
-            null != e && null != e.onCloseRequest && e.onCloseRequest();
+            m.S.dispatch(b.CkL.MODAL_CLOSE);
         }, []),
         h = i.useCallback(
             (t) => {

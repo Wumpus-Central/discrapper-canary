@@ -32,8 +32,8 @@ var i = n(120356),
     D = n(384298),
     L = n(670451),
     x = n(228168),
-    k = n(981631),
-    M = n(388032),
+    M = n(981631),
+    k = n(388032),
     j = n(227832),
     U = n(162509),
     G = n(924482),
@@ -67,7 +67,7 @@ function V(e) {
         { previewUrl: J, isLoading: $ } = (0, E.Z)(null == i ? void 0 : i.guildId, null == i ? void 0 : i.channelId, null == i ? void 0 : i.ownerId),
         [ee, et] = (0, b.wq)(W),
         en = (0, f.Kt)() && (0, f.zd)(null == W ? void 0 : W.id),
-        er = (0, o.e7)([v.Z], () => null != W && !en && v.Z.canBasicChannel(k.S7T.CONNECT, W)),
+        er = (0, o.e7)([v.Z], () => null != W && !en && v.Z.canBasicChannel(M.S7T.CONNECT, W)),
         ei = (0, u.Z)($ ? null : J),
         ea = $ || null == J ? ei : J;
     if (null == Y || null == W || !1 === i.discoverable) return null;
@@ -89,7 +89,7 @@ function V(e) {
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
-                                src: H === k.BRd.LIGHT ? B : G
+                                src: H === M.BRd.LIGHT ? B : G
                             }),
                             Z !== x.lY.MODAL &&
                                 Z !== x.lY.MODAL_V2 &&
@@ -103,7 +103,7 @@ function V(e) {
                                         }),
                                         (0, r.jsx)(s.Text, {
                                             variant: 'text-sm/medium',
-                                            children: er ? M.intl.string(M.t.uQZTBQ) : M.intl.string(M.t.pgUTZG)
+                                            children: er ? k.intl.string(k.t.uQZTBQ) : k.intl.string(k.t.pgUTZG)
                                         })
                                     ]
                                 })
@@ -189,7 +189,7 @@ function V(e) {
                           onClose: F
                       })
                   }),
-        eu = null != z ? M.intl.formatToPlainString(M.t['4CQq9f'], { name: z.name }) : M.intl.string(M.t['Jpkr/v']);
+        eu = null != z ? k.intl.formatToPlainString(k.t['4CQq9f'], { name: z.name }) : k.intl.string(k.t['Jpkr/v']);
     return (0, r.jsx)(h.Gt, {
         value: q,
         children: (0, r.jsxs)(C.Z, {

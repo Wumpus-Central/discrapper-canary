@@ -6,13 +6,13 @@ n.d(t, {
     hz: () => j,
     mz: () => U,
     ol: () => G,
-    xB: () => k
+    xB: () => M
 });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(855659),
+    s = n(66546),
     l = n(990547),
     c = n(748780),
     u = n(197723),
@@ -138,8 +138,8 @@ function x(e) {
             },
             'animate-always'
         ),
-        k = i.useRef(null),
-        M = null != P['aria-label'],
+        M = i.useRef(null),
+        k = null != P['aria-label'],
         j = null != P['aria-labelledby'],
         U = i.useId(),
         G = null != (t = P['aria-labelledby']) ? t : U,
@@ -161,7 +161,7 @@ function x(e) {
                         role: f,
                         returnRef: I,
                         impressionType: l.ImpressionTypes.MODAL,
-                        'aria-labelledby': M ? void 0 : B.headerId
+                        'aria-labelledby': k ? void 0 : B.headerId
                     },
                     P
                 ),
@@ -171,10 +171,10 @@ function x(e) {
                             [T.fullscreenOnMobile]: g,
                             [T.rootWithShadow]: !E
                         }),
-                        ref: k,
+                        ref: M,
                         style: x,
                         children: (0, r.jsx)(h.J, {
-                            containerRef: k,
+                            containerRef: M,
                             children: a
                         })
                     })
@@ -183,7 +183,7 @@ function x(e) {
         )
     });
 }
-function k(e) {
+function M(e) {
     var t, n, a, s, l;
     let { headerId: c, headerIdIsManaged: u } = i.useContext(O.zM);
     return (0, r.jsx)(y.Z, {
@@ -198,7 +198,7 @@ function k(e) {
         children: e.children
     });
 }
-function M(e) {
+function k(e) {
     switch (null != e ? e : 'thin') {
         case 'auto':
             return g.yW;
@@ -211,7 +211,7 @@ function M(e) {
 function j(e) {
     let { className: t, children: n, scrollerRef: i, scrollbarType: a } = e,
         s = R(e, ['className', 'children', 'scrollerRef', 'scrollbarType']),
-        l = M(a);
+        l = k(a);
     return (0, r.jsx)(
         l,
         C(

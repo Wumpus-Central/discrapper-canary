@@ -320,7 +320,7 @@ function L(e, t, n, r) {
 }
 function x(e) {
     return (
-        k(e),
+        M(e),
         R.updateAsync(
             'userContent',
             (t) => {
@@ -331,10 +331,10 @@ function x(e) {
         )
     );
 }
-function k(e) {
-    !E.Z.hasLoaded(y.yP.PRELOADED_USER_SETTINGS) && (M(e) || p.default.track(O.rMx.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: o.z[e] }));
-}
 function M(e) {
+    !E.Z.hasLoaded(y.yP.PRELOADED_USER_SETTINGS) && (k(e) || p.default.track(O.rMx.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: o.z[e] }));
+}
+function k(e) {
     var t;
     let n = null == (t = E.Z.settings.userContent) ? void 0 : t.dismissedContents;
     return null != n && (0, m.jl)(n, e);

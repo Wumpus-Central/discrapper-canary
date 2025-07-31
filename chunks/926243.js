@@ -139,7 +139,7 @@ let C = (e, t) => ''.concat(e, ':').concat(t),
         });
     });
 function P(e) {
-    let { descriptor: t, emojiItemKey: a, isInspected: o, rowIndex: _, channelGuildId: p, onInspect: g, onSelect: b, isScrolling: O, isUsingKeyboardNavigation: v, showEmojiFavoriteTooltip: T, surrogateCodePoint: N, selectedItemClassName: P, getEmojiItemProps: w, isMediumSize: D, isLargeSize: L, pulseItemKey: x, allowAnimatedEmoji: k, setPulseItemKey: M, messageId: j, isBurstReaction: U, rowPosition: G, inNitroLockedSection: B } = e,
+    let { descriptor: t, emojiItemKey: a, isInspected: o, rowIndex: _, channelGuildId: p, onInspect: g, onSelect: b, isScrolling: O, isUsingKeyboardNavigation: v, showEmojiFavoriteTooltip: T, surrogateCodePoint: N, selectedItemClassName: P, getEmojiItemProps: w, isMediumSize: D, isLargeSize: L, pulseItemKey: x, allowAnimatedEmoji: M, setPulseItemKey: k, messageId: j, isBurstReaction: U, rowPosition: G, inNitroLockedSection: B } = e,
         [V, F] = i.useState(''),
         Z = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         H = (0, s.e7)([d.ZP], () => d.ZP.getDisambiguatedEmojiContext(p), [p]),
@@ -148,7 +148,7 @@ function P(e) {
         X = (e) => {
             if ((e.stopPropagation(), O.current || v.current)) return;
             let n = e.altKey;
-            (n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(W) && M(a),
+            (n && !d.ZP.getDisambiguatedEmojiContext().isFavoriteEmojiWithoutFetchingLatest(W) && k(a),
                 (0, h.Kw)(h.v6.FAVORITE_EMOJI_TOOLTIP),
                 b(t, {
                     isFinalSelection: !e.shiftKey,
@@ -186,13 +186,13 @@ function P(e) {
                         isInspected: o,
                         isDisabled: z,
                         showPulse: x === a,
-                        allowAnimatedEmoji: k,
+                        allowAnimatedEmoji: M,
                         onFocus: null != u ? u : Q,
                         onMouseMove: Q,
                         onMouseEnter: t,
                         onMouseLeave: n,
                         onClick: (e) => {
-                            if (null != Y.current && null != G && null != j && !e.shiftKey && null != W.name && U && !Z && k) {
+                            if (null != Y.current && null != G && null != j && !e.shiftKey && null != W.name && U && !Z && M) {
                                 let e = null == W.id ? f.ZP.convertNameToSurrogate(W.name) : W.name,
                                     t = Y.current.getBoundingClientRect();
                                 ((t.x = G.x + (q + 1) * K), F(C(q, _)), (0, m.U)(j, e, W.id, t));

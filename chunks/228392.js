@@ -2,7 +2,7 @@
     B: () => D,
     B5: () => R,
     Do: () => w,
-    GX: () => M,
+    GX: () => k,
     HR: () => F,
     Hr: () => C,
     Je: () => A,
@@ -22,7 +22,7 @@
     qs: () => E,
     qz: () => V,
     ws: () => x,
-    xI: () => k,
+    xI: () => M,
     zI: () => y
 }),
     n(781311));
@@ -286,11 +286,11 @@ function x(e) {
     let { forumDemoId: t } = e;
     r.ZP.trackWithMetadata(f.rMx.FORUM_UPSELL_MODAL_CLICKED, { forum_demo_id: t });
 }
-function k(e) {
+function M(e) {
     let { added: t } = e;
     r.ZP.trackWithMetadata(f.rMx.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_CLICKED, { added: t });
 }
-function M(e) {
+function k(e) {
     let { readGuideCta: t } = e;
     r.ZP.trackWithMetadata(f.rMx.FORUM_CHANNEL_HELPER_CARD_CLICKED, { read_guide_cta: t });
 }

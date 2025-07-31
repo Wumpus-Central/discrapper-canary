@@ -32,8 +32,8 @@ var i = n(120356),
     D = n(668700),
     L = n(262210),
     x = n(670451),
-    k = n(881530),
-    M = n(228168),
+    M = n(881530),
+    k = n(228168),
     j = n(981631),
     U = n(701488),
     G = n(388032),
@@ -114,7 +114,7 @@ function Y(e) {
         en = (0, T.Z)(i),
         er = null != en.text && '' !== en.text,
         { largeImage: ei, smallImage: ea } = (0, f.FO)(i, V),
-        eo = (0, k.Z)({
+        eo = (0, M.Z)({
             location: 'UserProfileActivityCard',
             user: t,
             currentUser: n,
@@ -125,11 +125,11 @@ function Y(e) {
         }),
         es = () => {
             let e = (0, s.Z)(i) ? 'crunchyroll' : 'default',
-                t = J === M.lY.MODAL_V2 ? h.J.SIZE_100 : h.J.SIZE_60;
+                t = J === k.lY.MODAL_V2 ? h.J.SIZE_100 : h.J.SIZE_60;
             return i.type === j.IIU.HANG_STATUS
                 ? (0, r.jsx)(b.Z, {
                       hangStatusActivity: i,
-                      className: a()(B.hangStatusIcon, B.image, { [B.small]: J !== M.lY.MODAL_V2 })
+                      className: a()(B.hangStatusIcon, B.image, { [B.small]: J !== k.lY.MODAL_V2 })
                   })
                 : null == eo
                   ? (0, r.jsx)(h.E, {
@@ -388,16 +388,16 @@ function Y(e) {
                                                 className: B.badges
                                             }),
                                         e_(),
-                                        J === M.lY.MODAL_V2 && eh()
+                                        J === k.lY.MODAL_V2 && eh()
                                     ]
                                 }),
-                                J === M.lY.MODAL && eh()
+                                J === k.lY.MODAL && eh()
                             ]
                         }),
                         ep()
                     ]
                 }),
-                J !== M.lY.MODAL && J !== M.lY.MODAL_V2 && eh()
+                J !== k.lY.MODAL && J !== k.lY.MODAL_V2 && eh()
             ]
         })
     });

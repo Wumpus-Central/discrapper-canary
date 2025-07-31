@@ -123,7 +123,7 @@ function T(e) {
             className: t,
             children: T
         });
-    let k = (e) =>
+    let M = (e) =>
         (0, r.jsx)(
             d.Z,
             v(
@@ -141,7 +141,7 @@ function T(e) {
     return S
         ? (0, r.jsx)(c.Gt, {
               value: C,
-              children: k()
+              children: M()
           })
         : (0, r.jsx)(c.Gt, {
               value: C,
@@ -152,7 +152,7 @@ function T(e) {
                   channelId: b,
                   position: a.tq ? 'top' : 'right',
                   clickTrap: !0,
-                  children: (e) => k(e)
+                  children: (e) => M(e)
               })
           });
 }

@@ -178,13 +178,13 @@ e.exports = function (e) {
                 _: [...i, ...a]
             }
         },
-        k = {
+        M = {
             label: 'use_strict',
             className: 'meta',
             relevance: 10,
             begin: /^\s*['"]use (strict|asm)['"]/
         },
-        M = {
+        k = {
             variants: [
                 {
                     match: [/function/, /\s+/, d, /(?=\s*\()/]
@@ -255,7 +255,7 @@ e.exports = function (e) {
                 binary: 'node',
                 relevance: 5
             }),
-            k,
+            M,
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
             T,
@@ -342,7 +342,7 @@ e.exports = function (e) {
                     }
                 ]
             },
-            M,
+            k,
             { beginKeywords: 'while if switch catch for' },
             {
                 begin: '\\b(?!function)' + e.UNDERSCORE_IDENT_RE + '\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{',

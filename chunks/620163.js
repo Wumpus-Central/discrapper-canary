@@ -18,8 +18,8 @@ var r = n(990547),
     x = n(163379),
     _ = n(498646),
     j = n(489968),
-    O = n(803038),
-    E = n(703288),
+    E = n(803038),
+    O = n(703288),
     C = n(574755),
     v = n(994714),
     S = n(377171),
@@ -72,8 +72,8 @@ var r = n(990547),
     ex = n(177508),
     e_ = n(956699),
     ej = n(54942),
-    eO = n(293389),
-    eE = n(88624),
+    eE = n(293389),
+    eO = n(88624),
     eC = n(387747),
     ev = n(389650),
     eS = n(649157),
@@ -107,25 +107,25 @@ var r = n(990547),
     e$ = n(539452);
 let e0 = () => {
         let e = [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE];
-        return (O.M.getCurrentConfig({ location: 'getAppearanceDCs' }).enabled && e.push(s.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE), e);
+        return (E.M.getCurrentConfig({ location: 'getAppearanceDCs' }).enabled && e.push(s.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE), e);
     },
-    e3 = () => {
+    e1 = () => {
         let e = e0(),
             [t] = (0, N.US)(e);
         return t === s.z.CLIENT_THEMES_SETTINGS_BADGE || t === s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE ? (0, i.jsx)(l.lBU, { text: eX.intl.string(eX.t.y2b7CA) }) : t === s.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE ? (0, i.jsx)(l.IGR, { text: eX.intl.string(eX.t.y2b7CA) }) : null;
     },
-    e1 = () => {
+    e3 = () => {
         let e = [];
         return (G.c.getCurrentConfig({ location: 'SettingsRendererConfig' }).enabled && e.push(s.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE), I.J.getCurrentConfig({ location: 'SettingsRendererConfig' }).enabled && e.push(s.z.DISPLAY_NAME_STYLES_NEW_BADGE), e.push(s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE), e);
     },
     e6 = () => {
-        let e = e1(),
+        let e = e3(),
             [t] = (0, N.US)(e);
         return t === s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE ? (0, i.jsx)(D.Z, {}) : t === s.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE || t === s.z.DISPLAY_NAME_STYLES_NEW_BADGE ? (0, i.jsx)(l.IGR, { text: eX.intl.string(eX.t.y2b7CA) }) : null;
     },
     e8 = ew.Z,
     e2 = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: O, impressionSource: N, numOfPendingFamilyRequests: I, isOverlaySupported: D, isClipsBetaTagShowing: G = !1, shouldMergeGameSettings: e2, isKeywordFilteringEnabled: e5, isStaff: e4, isInappropriateConversationWarningEnabled: e7, isInapproprateConversationsDefaultOn: e9, paymentsBlocked: te, isEligibleForQuests: tt, isStricterMessageRequestsEnabled: tn, hasLibraryApplication: ti, hasTOTPEnabled: tr, developerMode: ts, isAdultUser: ta, hasSecureFramesVerifiedUserIds: tl, hypeSquadRemoved: to, hasIgnoredUsers: tc, hasBlockedUsers: td, useRefreshedVoiceAndVideo: tu, isEligibleForSensitiveContentDefaults: tm, inputMode: tp, activeInputProfile: tg, isInputProfileCustom: th, isGoreContentFilteringEnabled: tf } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: E, impressionSource: N, numOfPendingFamilyRequests: I, isOverlaySupported: D, isClipsBetaTagShowing: G = !1, shouldMergeGameSettings: e2, isKeywordFilteringEnabled: e5, isStaff: e4, isInappropriateConversationWarningEnabled: e7, isInapproprateConversationsDefaultOn: e9, paymentsBlocked: te, isEligibleForQuests: tt, isStricterMessageRequestsEnabled: tn, hasLibraryApplication: ti, hasTOTPEnabled: tr, developerMode: ts, isAdultUser: ta, hasSecureFramesVerifiedUserIds: tl, hypeSquadRemoved: to, hasIgnoredUsers: tc, hasBlockedUsers: td, useRefreshedVoiceAndVideo: tu, isEligibleForSensitiveContentDefaults: tm, inputMode: tp, activeInputProfile: tg, isInputProfileCustom: th, isGoreContentFilteringEnabled: tf } = e;
         return Object.freeze({
             [ez.s6.SEARCH_NO_RESULTS]: {
                 section: p.ID.CUSTOM,
@@ -273,7 +273,7 @@ let e0 = () => {
                 ariaLabel: eX.intl.string(eX.t['vi7f+v']),
                 element: B.Z,
                 newIndicator: (0, i.jsx)(e6, {}),
-                newIndicatorDismissibleContentTypes: [...e1()],
+                newIndicatorDismissibleContentTypes: [...e3()],
                 notice: {
                     stores: [K.Z, P.Z],
                     element: L.Z
@@ -561,7 +561,7 @@ let e0 = () => {
                 searchableTitles: [eX.intl.string(eX.t.z2jK6e)],
                 label: eX.intl.string(eX.t.z2jK6e),
                 ariaLabel: eX.intl.string(eX.t.z2jK6e),
-                icon: G ? (0, i.jsx)(E.Z, {}) : void 0,
+                icon: G ? (0, i.jsx)(O.Z, {}) : void 0,
                 element: C.Z,
                 predicate: () => !e2,
                 url: eY.Z5c.SETTINGS('clips')
@@ -609,7 +609,7 @@ let e0 = () => {
                 searchableTitles: [eX.intl.string(eX.t.trSpHR)],
                 label: eX.intl.string(eX.t.trSpHR),
                 element: k.Z,
-                icon: O
+                icon: E
                     ? (0, i.jsx)(l.Mgn, {
                           size: 'xs',
                           color: a.Z.unsafe_rawColors.YELLOW_300.css
@@ -676,7 +676,7 @@ let e0 = () => {
                 label: eX.intl.string(eX.t['iHH+k5']),
                 ariaLabel: eX.intl.string(eX.t['iHH+k5']),
                 element: em.Z,
-                newIndicator: (0, i.jsx)(e3, {}),
+                newIndicator: (0, i.jsx)(e1, {}),
                 newIndicatorDismissibleContentTypes: e0(),
                 url: eY.Z5c.SETTINGS('appearance')
             },
@@ -1545,7 +1545,7 @@ let e0 = () => {
                 section: eY.oAB.REGISTERED_GAMES,
                 searchableTitles: [eX.intl.string(eX.t.AVDyEh)],
                 label: eX.intl.string(eX.t.AVDyEh),
-                element: eO.Z,
+                element: eE.Z,
                 predicate: () => !e2 && (0, eB.Jw)()
             },
             [ez.s6.OVERLAY]: {
@@ -1582,7 +1582,7 @@ let e0 = () => {
                 section: eY.oAB.HYPESQUAD_ONLINE,
                 searchableTitles: [eX.intl.string(eX.t['k0R+4e'])],
                 label: eX.intl.string(eX.t['k0R+4e']),
-                element: eE.Z,
+                element: eO.Z,
                 predicate: () => !to
             },
             [ez.s6.TOWNHALL]: {

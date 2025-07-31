@@ -17,13 +17,13 @@ function b(e) {
     let { cta: t, storeListing: n, className: s } = e,
         { applicationId: b, benefits: x, description: _ } = n,
         j = r.useMemo(() => (null == n.thumbnail ? null : (0, g.q)(b, n.thumbnail, 256)), [b, n.thumbnail]),
-        { data: O } = (0, d.X)(n.skuId),
-        E = r.useMemo(() => {
-            if (null == O || 0 === O.length) return null;
-            let e = O[0];
+        { data: E } = (0, d.X)(n.skuId),
+        O = r.useMemo(() => {
+            if (null == E || 0 === E.length) return null;
+            let e = E[0];
             return (0, m.xg)(e);
-        }, [O]);
-    return null == E
+        }, [E]);
+    return null == O
         ? null
         : (0, i.jsxs)(l.l, {
               className: a()(f.wrapper, s),
@@ -47,7 +47,7 @@ function b(e) {
                                       }),
                                       (0, i.jsx)(c.Text, {
                                           variant: 'text-md/medium',
-                                          children: E
+                                          children: O
                                       })
                                   ]
                               })

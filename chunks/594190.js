@@ -43,8 +43,8 @@ var i,
     D = n(358085),
     L = n(998502),
     x = n(145597),
-    k = n(981631),
-    M = n(987650);
+    M = n(981631),
+    k = n(987650);
 function j(e, t, n) {
     return (
         t in e
@@ -203,7 +203,7 @@ let V = new h.Z('RunningGameStore'),
                     name: 'spotify'
                 }
             ],
-            name: f.Z.get(k.ABu.SPOTIFY).name
+            name: f.Z.get(M.ABu.SPOTIFY).name
         }
     ],
     W = [],
@@ -452,7 +452,7 @@ function eD() {
     }
 }
 function eL(e) {
-    return null != ee[e.exePath] ? k.GQo.DISCORD : /steamapps/.test(e.cmdLine) ? k.GQo.STEAM : /-epicapp/.test(e.cmdLine) ? k.GQo.EPIC : e.id === I.eB ? k.GQo.ROBLOX : e.distributor;
+    return null != ee[e.exePath] ? M.GQo.DISCORD : /steamapps/.test(e.cmdLine) ? M.GQo.STEAM : /-epicapp/.test(e.cmdLine) ? M.GQo.EPIC : e.id === I.eB ? M.GQo.ROBLOX : e.distributor;
 }
 function ex(e) {
     null != e &&
@@ -478,13 +478,13 @@ function ex(e) {
         }),
         en.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused),
         eC(),
-        P.Z.setRecentGames(ek().map((e) => eR(e, e2, S.Z, A.Z))));
+        P.Z.setRecentGames(eM().map((e) => eR(e, e2, S.Z, A.Z))));
 }
-function ek() {
+function eM() {
     let e = o().values(en.gameOverrides);
     return en.gamesSeen.filter((e) => void 0 === en.gameOverrides[eO(e)]).concat(e);
 }
-function eM(e, t) {
+function ek(e, t) {
     if (void 0 === t) {
         let t = L.ZP.getDiscordUtils();
         if (null != t && null != t.getWindowHandleFromPid) {
@@ -497,7 +497,7 @@ function eM(e, t) {
 }
 function ej(e) {
     let { subgameInfo: t } = e;
-    J = (Q = Q.map((e) => (e.distributor === k.GQo.ROBLOX ? (0, T.ON)(e, t) : e))).length > 0 ? Q[0] : null;
+    J = (Q = Q.map((e) => (e.distributor === M.GQo.ROBLOX ? (0, T.ON)(e, t) : e))).length > 0 ? Q[0] : null;
 }
 function eU(e) {
     ex(Q);
@@ -555,7 +555,7 @@ function ez(e) {
         })
         .map((e) => e.cleanedExePath);
     t.length > 0 &&
-        C.default.track(k.rMx.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
+        C.default.track(M.rMx.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
             keywords: W,
             paths: t,
             debugging_level: ed,
@@ -574,7 +574,7 @@ function eq(e) {
 function eX(e) {
     let { game: t } = e,
         n = eA(t);
-    ((en.enableDetection[eO(t)] = !n), eC(), C.default.track(k.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, { enabled: !n }));
+    ((en.enableDetection[eO(t)] = !n), eC(), C.default.track(M.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, { enabled: !n }));
 }
 function eQ(e) {
     let t = eO(e.game),
@@ -624,7 +624,7 @@ function e0() {
     m.Z.hasLoadedExperiments && H.length > 0 && (ex(H), (H = []));
 }
 !__OVERLAY__ &&
-    ((0, D.isDesktop)() || M.iP) &&
+    ((0, D.isDesktop)() || k.iP) &&
     (er = function () {
         let e = [],
             t = new Set();
@@ -678,7 +678,7 @@ function e0() {
             L.ZP.setObservedGamesCallback(e, (e) => {
                 let n = [],
                     i = {};
-                e = e.filter((e) => ((e.distributor = eL(e)), (e.isLauncher = e.isLauncher || t.has(e.exeName)), e.isLauncher && null != e.id && (i[e.id] = e), (e.windowHandle = eM(e.pid, e.windowHandle)), null == eE(e) || (n.push(e), !1)));
+                e = e.filter((e) => ((e.distributor = eL(e)), (e.isLauncher = e.isLauncher || t.has(e.exeName)), e.isLauncher && null != e.id && (i[e.id] = e), (e.windowHandle = ek(e.pid, e.windowHandle)), null == eE(e) || (n.push(e), !1)));
                 let a = n.filter(eb).length;
                 (a !== ea &&
                     ((ea = a),
@@ -770,7 +770,7 @@ class e1 extends (i = c.ZP.Store) {
     }
     getGamesSeen(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            n = ek();
+            n = eM();
         if (e) {
             let e = this.getVisibleGame();
             if (null != e) {

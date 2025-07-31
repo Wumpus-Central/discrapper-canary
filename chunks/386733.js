@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(796634),
     _ = n(119269),
     j = n(938736),
-    O = n(981631),
-    E = n(388032),
+    E = n(981631),
+    O = n(388032),
     C = n(357885),
     v = n(691766);
 function S(e) {
@@ -90,7 +90,7 @@ let N = (e) => {
                       children: n
                   });
         return (0, i.jsx)(c.ua7, {
-            text: E.intl.string(E.t.UnKHdn),
+            text: O.intl.string(O.t.UnKHdn),
             shouldShow: !a,
             tooltipContentClassName: C.unsentTooltipContent,
             children: (e) => (0, i.jsx)('div', T(S({ className: C.userAvatarProgressBarUnit }, e), { children: l }))
@@ -145,7 +145,7 @@ let N = (e) => {
     },
     A = (e) => {
         let { analyticsLocations: t } = e;
-        (g.default.track(O.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
+        (g.default.track(E.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
             (0, c.ZDy)(async () => {
                 let { default: e } = await n.e('47435').then(n.bind(n, 204387));
                 return (n) => (0, i.jsx)(e, T(S({}, n), { sourceAnalyticsLocations: t }));
@@ -165,7 +165,7 @@ let N = (e) => {
             (e === f.Fe.REDEEMED && g.redeemed++, e === f.Fe.CONVERTED && (g.redeemed++, g.converted++));
         });
         let S = g.sent === x.Q,
-            T = h.Z.getArticleURL(O.BhN.REFERRAL_PROGRAM),
+            T = h.Z.getArticleURL(E.BhN.REFERRAL_PROGRAM),
             { analyticsLocations: N } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
             I = r.useRef(null),
             P = (g.sent / x.Q) * 100,
@@ -211,7 +211,7 @@ let N = (e) => {
                                                 alt: '',
                                                 className: C.expandedProgressBarSelectFriendsIcon
                                             }),
-                                            S ? E.intl.string(E.t.SY9tyM) : E.intl.string(E.t.Lm2nFR)
+                                            S ? O.intl.string(O.t.SY9tyM) : O.intl.string(O.t.Lm2nFR)
                                         ]
                                     })
                                 })

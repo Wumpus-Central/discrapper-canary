@@ -71,18 +71,18 @@ function v(e, t, n) {
     let { channel: P, type: w } = e,
         [D, L] = r.useState(() => (0, p.PA)()),
         x = (0, i.Z)(),
-        k = (0, a.e7)([u.ZP, f.default], () => {
+        M = (0, a.e7)([u.ZP, f.default], () => {
             var e, t;
             let n = f.default.getCurrentUser();
             return null != (t = null != P.guild_id && null != n ? (null == (e = u.ZP.getMember(P.guild_id, n.id)) ? void 0 : e.isPending) : null) && t;
         }),
-        { canMentionEveryone: M, hidePersonalInformation: j } = (0, a.cj)(
+        { canMentionEveryone: k, hidePersonalInformation: j } = (0, a.cj)(
             [d.Z, _.Z],
             () => ({
-                canMentionEveryone: P.isPrivate() || k || w === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, P),
+                canMentionEveryone: P.isPrivate() || M || w === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, P),
                 hidePersonalInformation: _.Z.hidePersonalInformation
             }),
-            [P, w, k]
+            [P, w, M]
         ),
         { activeCommand: U, activeCommandOption: G } = (0, a.cj)([s.Z], () => ({
             activeCommand: s.Z.getActiveCommand(P.id),
@@ -104,7 +104,7 @@ function v(e, t, n) {
             activeCommandOption: G,
             activeInlineAutocompleteInput: Z,
             canMentionUsers: null != (N = null == (v = w.users) ? void 0 : v.allowMentioning) && N,
-            canMentionEveryone: M,
+            canMentionEveryone: k,
             hidePersonalInformation: j,
             hideMentionDescription: w === l.Ie.RULES_INPUT,
             emojiIntention: w === l.Ie.RULES_INPUT ? g.Hz.COMMUNITY_CONTENT : g.Hz.CHAT,

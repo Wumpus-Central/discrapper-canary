@@ -71,11 +71,11 @@ function x(e) {
     let { themeColors: t } = e;
     d = t;
 }
-function k(e) {
+function M(e) {
     let { nameplate: t } = e;
     a = t;
 }
-function M() {
+function k() {
     (j(), U(), (y = {}), (b = g.QZA.OPEN));
 }
 function j() {
@@ -88,7 +88,7 @@ function G() {
     y = {};
 }
 function B() {
-    (M(), v());
+    (k(), v());
 }
 class V extends (p = h.ZP.Store) {
     getFormState() {
@@ -163,7 +163,7 @@ let F = new V(m.Z, {
     USER_PROFILE_UPDATE_FAILURE: A,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: N,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR_DECORATION: C,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_NAMEPLATE: k,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_NAMEPLATE: M,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID: R,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: P,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: w,
@@ -172,7 +172,7 @@ let F = new V(m.Z, {
     GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS: x,
     GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: j,
     GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: U,
-    GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: M,
-    GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: M,
+    GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: k,
+    GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: k,
     GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: G
 });

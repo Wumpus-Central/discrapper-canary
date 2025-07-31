@@ -79,8 +79,8 @@ function L(e, t) {
     );
 }
 let x = 10,
-    k = 15,
-    M = 'leaderboard.png';
+    M = 15,
+    k = 'leaderboard.png';
 function j(e) {
     let { leaderboard: t, previewMode: n = !1, trackRankingItemInteraction: s } = e,
         _ = (0, a.e7)([d.default], () => d.default.getId()),
@@ -111,7 +111,7 @@ function j(e) {
         { primaryColor: v } = (0, l.Z)(g),
         I = i.useMemo(() => {
             let e = (0, p.oo)(v),
-                t = L(w({}, (0, p.pz)(e.r, e.g, e.b)), { l: k });
+                t = L(w({}, (0, p.pz)(e.r, e.g, e.b)), { l: M });
             return (0, p.ZJ)(t.h, t.s, t.l);
         }, [v]),
         S = i.useMemo(() => null == m.find((e) => e.userId === _) && m.length <= x, [m, _]);
@@ -216,7 +216,7 @@ function G(e) {
             let e = _.Z.getPrimaryActivity(t);
             return (null == e ? void 0 : e.application_id) != null && A.T.includes(e.application_id);
         }),
-        { generatingImage: x, generateImage: k } = (0, s.d)({
+        { generatingImage: x, generateImage: M } = (0, s.d)({
             renderComponent: (e) =>
                 (0, r.jsx)(
                     T.Z,
@@ -230,8 +230,8 @@ function G(e) {
         }),
         j = async () => {
             try {
-                let e = await k();
-                (await g.ZP.copyImageBlob(e, M), P('copied'), null == E || E(N.xP.COPIED_LEADERBOARD_ROW));
+                let e = await M();
+                (await g.ZP.copyImageBlob(e, k), P('copied'), null == E || E(N.xP.COPIED_LEADERBOARD_ROW));
             } catch (e) {
                 P('error');
             }

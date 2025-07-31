@@ -97,20 +97,20 @@ null != I &&
 let D = new Set(['discord_erlpack', 'discord_game_utils', 'discord_rpc', 'discord_spellcheck', 'discord_utils', 'discord_voice']),
     L = !1,
     x = 'lastImageSaveDirectory',
-    k = /[<>:"/\\|?*@]/g,
-    M = /(\.[a-zA-Z0-9]+):[^.]*$/,
+    M = /[<>:"/\\|?*@]/g,
+    k = /(\.[a-zA-Z0-9]+):[^.]*$/,
     j = /(\.[a-zA-Z0-9]+)%3A.+$/,
     U = /[^a-zA-Z0-9]/g,
     G = /\.[^.]*$/;
 function B(e) {
     try {
         let t = decodeURIComponent(e);
-        return (t = (t = t.replace(M, '$1')).replace(/(.+)@([a-zA-Z0-9]+)$/, '$1.$2')).replace(k, '_');
+        return (t = (t = t.replace(k, '$1')).replace(/(.+)@([a-zA-Z0-9]+)$/, '$1.$2')).replace(M, '_');
     } catch (t) {
         return e
             .replace(j, '$1')
             .replace(/(.+)%40([a-zA-Z0-9]+)$/, '$1.$2')
-            .replace(k, '_');
+            .replace(M, '_');
     }
 }
 async function V(e) {

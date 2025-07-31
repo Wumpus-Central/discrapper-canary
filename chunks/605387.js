@@ -466,10 +466,10 @@ var t = (function () {
                                 var x = e.B[D - 257];
                                 ((L = O + (x >>> 3) + i(r, v, 7 & x)), (v += 7 & x));
                             }
-                            var k = _[o(r, v) & y];
-                            v += 15 & k;
-                            var M = k >>> 4,
-                                j = e.h[M],
+                            var M = _[o(r, v) & y];
+                            v += 15 & M;
+                            var k = M >>> 4,
+                                j = e.h[k],
                                 U = (j >>> 4) + a(r, v, 15 & j);
                             for (v += 15 & j, I && (u = s(u, O + 131072)); O < L; ) ((u[O] = u[O++ - U]), (u[O] = u[O++ - U]), (u[O] = u[O++ - U]), (u[O] = u[O++ - U]));
                             O = L;
@@ -766,17 +766,17 @@ var t = (function () {
             for (var m = 0; m < v.length; m++) {
                 var R = v[m],
                     x = new Uint32Array(R.img.buffer),
-                    k = R.rect.width,
+                    M = R.rect.width,
                     b = x.length,
                     w = new Uint8Array(b);
                 S.push(w);
                 for (var y = 0; y < b; y++) {
-                    var M = x[y];
-                    if (0 != y && M == x[y - 1]) w[y] = w[y - 1];
-                    else if (y > k && M == x[y - k]) w[y] = w[y - k];
+                    var k = x[y];
+                    if (0 != y && k == x[y - 1]) w[y] = w[y - 1];
+                    else if (y > M && k == x[y - M]) w[y] = w[y - M];
                     else {
-                        var j = I[M];
-                        if (null == j && ((I[M] = j = T.length), T.push(M), T.length >= 300)) break;
+                        var j = I[k];
+                        if (null == j && ((I[k] = j = T.length), T.push(k), T.length >= 300)) break;
                         w[y] = j;
                     }
                 }
@@ -785,29 +785,29 @@ var t = (function () {
         U <= 256 && !1 == u && (p = Math.max((p = U <= 2 ? 1 : U <= 4 ? 2 : U <= 16 ? 4 : 8), c));
         for (var m = 0; m < v.length; m++) {
             var R = v[m],
-                k = (R.rect.x, R.rect.y, R.rect.width),
+                M = (R.rect.x, R.rect.y, R.rect.width),
                 G = R.rect.height,
                 B = R.img;
             new Uint32Array(B.buffer);
-            var V = 4 * k,
+            var V = 4 * M,
                 F = 4;
             if (U <= 256 && !1 == u) {
-                for (var Z = new Uint8Array((V = Math.ceil((p * k) / 8)) * G), H = S[m], Y = 0; Y < G; Y++) {
+                for (var Z = new Uint8Array((V = Math.ceil((p * M) / 8)) * G), H = S[m], Y = 0; Y < G; Y++) {
                     var y = Y * V,
-                        W = Y * k;
-                    if (8 == p) for (var K = 0; K < k; K++) Z[y + K] = H[W + K];
-                    else if (4 == p) for (var K = 0; K < k; K++) Z[y + (K >> 1)] |= H[W + K] << (4 - (1 & K) * 4);
-                    else if (2 == p) for (var K = 0; K < k; K++) Z[y + (K >> 2)] |= H[W + K] << (6 - (3 & K) * 2);
-                    else if (1 == p) for (var K = 0; K < k; K++) Z[y + (K >> 3)] |= H[W + K] << (7 - (7 & K) * 1);
+                        W = Y * M;
+                    if (8 == p) for (var K = 0; K < M; K++) Z[y + K] = H[W + K];
+                    else if (4 == p) for (var K = 0; K < M; K++) Z[y + (K >> 1)] |= H[W + K] << (4 - (1 & K) * 4);
+                    else if (2 == p) for (var K = 0; K < M; K++) Z[y + (K >> 2)] |= H[W + K] << (6 - (3 & K) * 2);
+                    else if (1 == p) for (var K = 0; K < M; K++) Z[y + (K >> 3)] |= H[W + K] << (7 - (7 & K) * 1);
                 }
                 ((B = Z), (_ = 3), (F = 1));
             } else if (!1 == O && 1 == v.length) {
-                for (var Z = new Uint8Array(k * G * 3), z = k * G, y = 0; y < z; y++) {
+                for (var Z = new Uint8Array(M * G * 3), z = M * G, y = 0; y < z; y++) {
                     var q = 3 * y,
                         X = 4 * y;
                     ((Z[q] = B[X]), (Z[q + 1] = B[X + 1]), (Z[q + 2] = B[X + 2]));
                 }
-                ((B = Z), (_ = 2), (F = 3), (V = 3 * k));
+                ((B = Z), (_ = 2), (F = 3), (V = 3 * M));
             }
             ((R.img = B), (R.bpl = V), (R.bpp = F));
         }
@@ -868,15 +868,15 @@ var t = (function () {
                 var L = s[l];
                 if (1 != L.blend) {
                     var x = L.rect,
-                        k = s[l - 1].rect,
-                        M = Math.min(x.x, k.x),
-                        j = Math.min(x.y, k.y),
-                        U = Math.max(x.x + x.width, k.x + k.width),
-                        G = Math.max(x.y + x.height, k.y + k.height),
+                        M = s[l - 1].rect,
+                        k = Math.min(x.x, M.x),
+                        j = Math.min(x.y, M.y),
+                        U = Math.max(x.x + x.width, M.x + M.width),
+                        G = Math.max(x.y + x.height, M.y + M.height),
                         B = {
-                            x: M,
+                            x: k,
                             y: j,
-                            width: U - M,
+                            width: U - k,
                             height: G - j
                         };
                     ((s[l - 1].dispose = 1), l - 1 != 0 && p(t, n, r, s, l - 1, B, a), p(t, n, r, s, l, B, a));

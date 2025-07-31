@@ -9,8 +9,8 @@ var n = a(255367),
     d = a(848572),
     u = a(594174),
     m = a(78839),
-    x = a(709054),
-    p = a(246992),
+    p = a(709054),
+    x = a(246992),
     h = a(981631),
     b = a(474936);
 let f = [
@@ -65,7 +65,7 @@ function v() {
                 let a = {
                     subscription_status: h.O0b.ACTIVE,
                     endedAt: void 0,
-                    premium_streak_started_at: x.default.fromTimestamp(t.getTime())
+                    premium_streak_started_at: p.default.fromTimestamp(t.getTime())
                 };
                 (v(!0),
                     await i.tn.patch({
@@ -86,7 +86,7 @@ function v() {
             isSelected: (e) => e === y,
             options: f,
             select: C,
-            popoutLayerContext: p.O$,
+            popoutLayerContext: x.O$,
             popoutWidth: 200
         });
 }

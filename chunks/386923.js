@@ -1,9 +1,9 @@
-(n.d(t, { Z: () => T }), n(388685));
+(n.d(t, { Z: () => S }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
     l = n.n(a),
-    s = n(855659),
+    s = n(66546),
     o = n(442837),
     c = n(481060),
     d = n(918222),
@@ -17,15 +17,15 @@ var r = n(255367),
     b = n(388032),
     j = n(767905),
     v = n(683999),
-    C = n(602512),
-    _ = n(184476);
+    _ = n(602512),
+    C = n(184476);
 let y = {
         mass: 1,
         tension: 250,
         friction: 18,
         clamp: !0
     },
-    O = () => {
+    w = () => {
         let [e, t] = i.useState(!0);
         return {
             transitions: (0, c.Yzy)(e, {
@@ -39,14 +39,14 @@ let y = {
             setVisible: t
         };
     },
-    w = (e) =>
+    T = (e) =>
         (0, c.Yzy)(e, {
             from: { maxHeight: 0 },
             enter: { maxHeight: 850 },
             leave: { maxHeight: 0 },
             config: { duration: 200 }
         }),
-    S = (e) => {
+    O = (e) => {
         let { guild: t } = e,
             n = (0, o.e7)([g.Z], () => g.Z.can(x.Plq.MANAGE_GUILD, t));
         return (0, r.jsxs)(c.Kqy, {
@@ -217,7 +217,7 @@ let y = {
                     ]
                 }),
                 (0, r.jsx)('img', {
-                    src: _,
+                    src: C,
                     alt: b.intl.string(b.t.gAlJzc),
                     width: u.TJ,
                     height: u.TJ
@@ -225,12 +225,12 @@ let y = {
             ]
         });
     };
-function T(e) {
+function S(e) {
     let { guild: t } = e,
         [n, a] = (0, d.R)('report-to-mod-education-dismissed', !1),
         [o, u] = (0, d.R)('report-to-mod-education-expanded', !1),
-        { transitions: m, setVisible: h } = O(),
-        g = w(null != o && o);
+        { transitions: m, setVisible: h } = w(),
+        g = T(null != o && o);
     return (i.useEffect(() => {
         n && h(!1);
     }, [n, h]),
@@ -241,7 +241,7 @@ function T(e) {
                   ? (0, r.jsxs)(s.animated.div, {
                         style: e,
                         onClick: () => u(!o),
-                        className: l()(C.container, j.container, v.mainCard),
+                        className: l()(_.container, j.container, v.mainCard),
                         children: [
                             (0, r.jsxs)('div', {
                                 className: j.inline,
@@ -287,7 +287,7 @@ function T(e) {
                                 n
                                     ? (0, r.jsxs)(s.animated.div, {
                                           style: e,
-                                          children: [(0, r.jsx)('hr', { className: j.separator }), (0, r.jsx)(S, { guild: t })]
+                                          children: [(0, r.jsx)('hr', { className: j.separator }), (0, r.jsx)(O, { guild: t })]
                                       })
                                     : null
                             )

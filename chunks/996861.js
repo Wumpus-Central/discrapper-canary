@@ -57,7 +57,7 @@ function Z(e, t, n) {
     t.state === S.yb.SEND_FAILED || n.shiftKey ? i.Z.deleteMessage(e.id, t.id, t.state === S.yb.SEND_FAILED) : l.Z.confirmDelete(e, t);
 }
 function T(e, t) {
-    i.Z.startEditMessage(e.id, t.id, t.content);
+    i.Z.startEditMessageRecord(e.id, t);
 }
 function I(e, t) {
     (0, v.Z)(e.id, t.id);

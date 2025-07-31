@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(391110),
     _ = n(484239),
     j = n(658370),
-    O = n(981631),
-    E = n(921944),
+    E = n(981631),
+    O = n(921944),
     C = n(388032),
     v = n(593595);
 function S(e) {
@@ -75,11 +75,11 @@ let N = r.memo((e) => {
         [k, L] = (0, p.cv)(null != s && n ? [s] : []),
         { easterEggLevel: B, isEasterEggTriggered: M, onHover: U, onUnhover: V } = (0, f.Z)(5),
         G = (0, l.debounce)(() => {
-            g.default.track(O.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, { card_type: (0, l.snakeCase)(t) });
+            g.default.track(E.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, { card_type: (0, l.snakeCase)(t) });
         }, 800),
         F = (0, l.debounce)(() => {
             null != j &&
-                g.default.track(O.rMx.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
+                g.default.track(E.rMx.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
                     card_type: (0, l.snakeCase)(t),
                     function_name: (0, l.snakeCase)(j.name)
                 });
@@ -94,7 +94,7 @@ let N = r.memo((e) => {
     });
     let H = k !== s || null == s || R;
     return (r.useEffect(() => {
-        y && A && (D(!0), g.default.track(O.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != s && L(E.L.TAKE_ACTION));
+        y && A && (D(!0), g.default.track(E.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != s && L(O.L.TAKE_ACTION));
     }, [y, A, s, t, L]),
     (0, m.Z)({
         type: o.ImpressionTypes.VIEW,
@@ -156,7 +156,7 @@ let N = r.memo((e) => {
                                 [v.reducedMotion]: y
                             }),
                             onTransitionEnd: (e) => {
-                                A && 'transform' === e.propertyName && e.target.classList.contains(v.flipCard) && (D(!0), g.default.track(O.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != s && L(E.L.TAKE_ACTION));
+                                A && 'transform' === e.propertyName && e.target.classList.contains(v.flipCard) && (D(!0), g.default.track(E.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != s && L(O.L.TAKE_ACTION));
                             },
                             children: [
                                 (0, i.jsx)('div', {
@@ -189,19 +189,19 @@ let N = r.memo((e) => {
 N.displayName = 'PremiumPerkCard';
 let I = r.forwardRef((e, t) => {
     var n;
-    let { title: r, titleClassName: s = '', subtitle: l = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: u, onCtaClick: m, onMouseEnter: p, className: g, perkComponent: f, cardVariant: b, cardType: O, onClick: E, backgroundImage: C, pillText: S, perkImage: T, imageOverlayText: N, hasNitroGradientBackground: I } = e,
-        y = O === x.gM.CARD_CAROUSEL_FIRST_ROW || O === x.gM.CARD_CAROUSEL_SECOND_ROW || O === x.gM.CARD_CAROUSEL_THIRD_ROW,
+    let { title: r, titleClassName: s = '', subtitle: l = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: u, onCtaClick: m, onMouseEnter: p, className: g, perkComponent: f, cardVariant: b, cardType: E, onClick: O, backgroundImage: C, pillText: S, perkImage: T, imageOverlayText: N, hasNitroGradientBackground: I } = e,
+        y = E === x.gM.CARD_CAROUSEL_FIRST_ROW || E === x.gM.CARD_CAROUSEL_SECOND_ROW || E === x.gM.CARD_CAROUSEL_THIRD_ROW,
         A = '' !== o || '' !== c || ('' !== l && b === x.zW.REWARD),
         P = (0, h._)(b);
     return (0, i.jsxs)(d.P3F, {
         className: a()(v.card, g, null == (n = P.cardContainer) ? void 0 : n.className, {
-            [v.clickable]: null != E,
+            [v.clickable]: null != O,
             [v.hideOverflow]: y,
             [v.nitroGradientBackground]: I
         }),
         onMouseEnter: p,
         style: { backgroundImage: null != C ? 'url('.concat(C, ')') : void 0 },
-        onClick: E,
+        onClick: O,
         children: [
             null != S &&
                 (0, i.jsx)(d.Text, {

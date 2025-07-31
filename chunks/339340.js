@@ -37,8 +37,8 @@ function P(e) {
         w = b.Z.getCurrentConfig({ location: 'VoiceChannelStatusModal' }, { autoTrackExposure: !0 }).enabled,
         D = (0, s.e7)([p.Z], () => p.Z.getChannelStatus(t)),
         L = (0, s.e7)([O.Z], () => O.Z.getMediaSessionId()),
-        [x, k] = i.useState(null != D ? D : ''),
-        [M, j] = i.useState(!1),
+        [x, M] = i.useState(null != D ? D : ''),
+        [k, j] = i.useState(!1),
         [U, G] = i.useState(null),
         B = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
         V = x.length > R;
@@ -88,10 +88,10 @@ function P(e) {
         },
         [Y, W] = i.useState((0, m.JM)(x)),
         K = (e, t, n) => {
-            (k(t), W(n));
+            (M(t), W(n));
         },
         z = async () => (
-            V || M || (await H()),
+            V || k || (await H()),
             Promise.resolve({
                 shouldClear: !1,
                 shouldRefocus: !0
@@ -101,7 +101,7 @@ function P(e) {
             className: w ? void 0 : A.inputSection,
             title: S.intl.string(S.t.Fq5lwM),
             children: [
-                (0, r.jsx)(g.Z, {
+                (0, r.jsx)(g.ZP, {
                     innerClassName: A.textArea,
                     textValue: x,
                     richValue: Y,
@@ -142,7 +142,7 @@ function P(e) {
                   },
                   {
                       variant: 'primary',
-                      loading: M,
+                      loading: k,
                       disabled: V,
                       text: S.intl.string(S.t.XqK2Iy),
                       onClick: H
@@ -203,7 +203,7 @@ function P(e) {
                               }),
                               (0, r.jsx)(u.zx, {
                                   onClick: H,
-                                  submitting: M,
+                                  submitting: k,
                                   className: A.button,
                                   disabled: V,
                                   children: S.intl.string(S.t.XqK2Iy)

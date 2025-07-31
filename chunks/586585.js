@@ -1,17 +1,20 @@
 n.d(t, {
-    Z: () => g,
-    g: () => h
+    Z: () => O,
+    g: () => E
 });
 var r = n(255367);
 n(73800);
-var i = n(755721),
-    a = n(481060),
-    o = n(600164),
-    s = n(563132),
-    l = n(612853),
-    c = n(388032),
-    u = n(240150);
-function d(e, t, n) {
+var i = n(793030),
+    a = n(179538),
+    o = n(159691),
+    s = n(755721),
+    l = n(481060),
+    c = n(600164),
+    u = n(563132),
+    d = n(612853),
+    _ = n(388032),
+    f = n(240150);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +27,7 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,12 +38,12 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                p(e, t, n[t]);
             }));
     }
     return e;
 }
-function f(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,93 +55,113 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-var h = (function (e) {
+var E = (function (e) {
     return ((e[(e.CONTINUE = 0)] = 'CONTINUE'), (e[(e.UPGRADE = 1)] = 'UPGRADE'), (e[(e.PURCHASE = 2)] = 'PURCHASE'), e);
 })({});
-let m = (e) => {
-    let { onBack: t, backText: n, primaryIcon: d, primaryCTA: f, primaryType: h, primaryText: m, primaryTooltip: g, primaryDisabled: E, primarySubmitting: b, onPrimary: y, secondaryText: O, onSecondary: v } = e,
-        { premiumBrandRefreshBackgroundClassName: I } = (0, s.JL)(),
-        T = () => {
-            if (null == f || null == m) return null;
-            let e = 2 === f ? a.gtL : i.zx,
-                t = {
-                    innerClassName: u.button,
-                    type: h,
-                    disabled: E,
-                    submitting: b,
-                    color: 0 === f ? i.zx.Colors.BRAND : i.zx.Colors.GREEN,
-                    onClick: y
-                };
-            return null != g
-                ? (0, r.jsx)(a.ua7, {
-                      text: g,
-                      children: (n) =>
-                          (0, r.jsxs)(
-                              e,
-                              p(_({}, n, t), {
-                                  children: [
-                                      null == d
-                                          ? null
-                                          : (0, r.jsx)(d, {
-                                                color: 'currentColor',
-                                                className: u.primaryIcon
-                                            }),
-                                      m
-                                  ]
-                              })
-                          )
-                  })
-                : (0, r.jsxs)(
-                      e,
-                      p(_({}, t), {
-                          children: [
-                              null == d
+let b = (e) => {
+        let { primaryIcon: t, primaryCTA: n, primaryType: i, primaryText: a, primaryDisabled: c, primarySubmitting: u, onPrimary: d, tooltipProps: _ } = e,
+            p = {
+                type: i,
+                disabled: c,
+                onClick: d
+            };
+        return 2 === n
+            ? (0, r.jsx)(
+                  l.gtL,
+                  g(
+                      h(
+                          g(h({}, p), {
+                              submitting: u,
+                              color: s.zx.Colors.GREEN
+                          }),
+                          _
+                      ),
+                      {
+                          children:
+                              null == t
                                   ? null
-                                  : (0, r.jsx)(d, {
+                                  : (0, r.jsx)(t, {
                                         color: 'currentColor',
-                                        className: u.primaryIcon
-                                    }),
-                              m
-                          ]
+                                        className: f.primaryIcon
+                                    })
+                      }
+                  )
+              )
+            : (0, r.jsx)(
+                  o.zx,
+                  h(
+                      g(h({}, p), {
+                          text: a,
+                          loading: u,
+                          variant: 0 === n ? 'primary' : 'active',
+                          icon:
+                              null == t
+                                  ? void 0
+                                  : () =>
+                                        (0, r.jsx)(t, {
+                                            color: 'currentColor',
+                                            className: f.primaryIcon
+                                        })
+                      }),
+                      _
+                  )
+              );
+    },
+    y = (e) => {
+        let { onBack: t, backText: n, primaryIcon: o, primaryCTA: s, primaryType: f, primaryText: p, primaryTooltip: m, primaryDisabled: E, primarySubmitting: y, onPrimary: O } = e,
+            { premiumBrandRefreshBackgroundClassName: v } = (0, u.JL)(),
+            I = () => {
+                if (null == s || null == p) return null;
+                let e = {
+                    primaryIcon: o,
+                    primaryCTA: s,
+                    primaryType: f,
+                    primaryText: p,
+                    primaryDisabled: E,
+                    primarySubmitting: y,
+                    onPrimary: O
+                };
+                return null != m
+                    ? (0, r.jsx)(l.ua7, {
+                          text: m,
+                          children: (t) => (0, r.jsx)(b, g(h({}, e), { tooltipProps: t }))
                       })
-                  );
-        },
-        S = () =>
-            null == O
-                ? null
-                : (0, r.jsx)(i.zx, {
-                      color: i.zx.Colors.PRIMARY,
-                      look: i.zx.Looks.LINK,
-                      onClick: v,
-                      children: O
-                  }),
-        A = () =>
-            null == t
-                ? null
-                : (0, r.jsx)(i.zx, {
-                      className: u.back,
-                      color: i.zx.Colors.PRIMARY,
-                      look: i.zx.Looks.LINK,
-                      onClick: t,
-                      children: null != n ? n : c.intl.string(c.t['13/7kZ'])
-                  });
-    return (0, r.jsxs)(a.mzw, {
-        justify: o.Z.Justify.BETWEEN,
-        align: o.Z.Align.CENTER,
-        className: I,
-        children: [T(), S(), (0, r.jsx)(l.Z, {}), A()]
-    });
-};
-m.CTAType = h;
-let g = m;
+                    : (0, r.jsx)(b, g(h({}, e), { onPrimary: O }));
+            },
+            T = () =>
+                null == t
+                    ? null
+                    : (0, r.jsx)(a.A, {
+                          text: null != n ? n : _.intl.string(_.t['13/7kZ']),
+                          onClick: t,
+                          variant: 'secondary'
+                      });
+        return (0, r.jsxs)(l.mzw, {
+            justify: c.Z.Justify.BETWEEN,
+            align: c.Z.Align.CENTER,
+            className: v,
+            children: [
+                (0, r.jsxs)(i.Kq, {
+                    direction: 'horizontal-reverse',
+                    align: 'center',
+                    gap: 0,
+                    padding: 0,
+                    children: [I(), (0, r.jsx)(d.Z, {})]
+                }),
+                T()
+            ]
+        });
+    };
+y.CTAType = E;
+let O = y;

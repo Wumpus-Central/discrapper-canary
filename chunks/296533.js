@@ -6,7 +6,7 @@
     n(388685));
 var i = n(255367),
     r = n(73800),
-    s = n(855659),
+    s = n(66546),
     a = n(399606),
     l = n(481060),
     o = n(607070),
@@ -22,40 +22,40 @@ var i = n(255367),
     x = n(275909),
     _ = n(300037),
     j = n(981631),
-    O = n(474936),
-    E = n(388032),
+    E = n(474936),
+    O = n(388032),
     C = n(238045);
 function v(e) {
     let { guildTier: t, guildBoostSlot: n, showAltText: a, isCanceled: o, premiumSubscription: c, fractionalPremiumInfo: d } = e,
         u = r.useMemo(() => {
             if (o) {
                 let e = c.currentPeriodEnd;
-                return (c.isPausedForFractionalPremium && (e = d.endsAt.toDate()), E.intl.format(E.t.Z4ULRE, { date: e }));
+                return (c.isPausedForFractionalPremium && (e = d.endsAt.toDate()), O.intl.format(O.t.Z4ULRE, { date: e }));
             }
             let e = null != n.premiumGuildSubscription ? f.default.extractTimestamp(n.premiumGuildSubscription.id) : 0;
-            return E.intl.formatToPlainString(E.t.lY2Bur, { date: new Date(e) });
+            return O.intl.formatToPlainString(O.t.lY2Bur, { date: new Date(e) });
         }, [n, o, c, d]),
         m = r.useMemo(
             () =>
                 (function (e) {
                     if (null == e || e === j.Eu4.NONE) return '';
                     let t = [
-                        E.intl.formatToPlainString(E.t.dLlKX1, { numEmojiSlots: O.HO[e].limits.emoji }),
-                        E.intl.formatToPlainString(E.t['+ANIfn'], { numStickerSlots: O.HO[e].limits.stickers }),
-                        E.intl.formatToPlainString(E.t['4gt60d'], { numSoundboardSlots: O.HO[e].limits.soundboardSounds }),
-                        E.intl.formatToPlainString(E.t.XahSjY, {
-                            resolution: O.HO[e].limits.screenShareQualityResolution,
-                            framerate: O.HO[e].limits.screenShareQualityFramerate
+                        O.intl.formatToPlainString(O.t.dLlKX1, { numEmojiSlots: E.HO[e].limits.emoji }),
+                        O.intl.formatToPlainString(O.t['+ANIfn'], { numStickerSlots: E.HO[e].limits.stickers }),
+                        O.intl.formatToPlainString(O.t['4gt60d'], { numSoundboardSlots: E.HO[e].limits.soundboardSounds }),
+                        O.intl.formatToPlainString(O.t.XahSjY, {
+                            resolution: E.HO[e].limits.screenShareQualityResolution,
+                            framerate: E.HO[e].limits.screenShareQualityFramerate
                         }),
-                        E.intl.formatToPlainString(E.t.NbNs7e, { bitrate: O.HO[e].limits.bitrate / 1000 }),
-                        E.intl.formatToPlainString(E.t.VVKcpq, { filesize: O.HO[e].limits.fileSize / 1024 / 1024 }),
-                        E.intl.formatToPlainString(E.t.TbpCvr, { numVideoStageSeats: O.HO[e].limits.stageVideoUsers }),
-                        E.intl.string(E.t.LDyX3t),
-                        E.intl.string(E.t.YtGlPT)
+                        O.intl.formatToPlainString(O.t.NbNs7e, { bitrate: E.HO[e].limits.bitrate / 1000 }),
+                        O.intl.formatToPlainString(O.t.VVKcpq, { filesize: E.HO[e].limits.fileSize / 1024 / 1024 }),
+                        O.intl.formatToPlainString(O.t.TbpCvr, { numVideoStageSeats: E.HO[e].limits.stageVideoUsers }),
+                        O.intl.string(O.t.LDyX3t),
+                        O.intl.string(O.t.YtGlPT)
                     ];
-                    (e >= j.Eu4.TIER_2 && (t.push(E.intl.string(E.t.SztbtL)), t.push(E.intl.string(E.t['3GK91t']))), e >= j.Eu4.TIER_3 && t.push(E.intl.string(E.t.XUUJd3)));
+                    (e >= j.Eu4.TIER_2 && (t.push(O.intl.string(O.t.SztbtL)), t.push(O.intl.string(O.t['3GK91t']))), e >= j.Eu4.TIER_3 && t.push(O.intl.string(O.t.XUUJd3)));
                     let n = t[Math.floor(Math.random() * t.length)];
-                    return E.intl.format(E.t['/dOAmZ'], { perk: n });
+                    return O.intl.format(O.t['/dOAmZ'], { perk: n });
                 })(t),
             [t]
         ),
@@ -94,7 +94,7 @@ function S(e) {
         f = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
         _ = (0, a.e7)([p.default], () => p.default.getCurrentUser()),
         j = r.useMemo(() => (null != n.cooldownEndsAt ? new Date(n.cooldownEndsAt) : null), [n]),
-        O = r.useMemo(() => null != j && j > new Date(), [j]),
+        E = r.useMemo(() => null != j && j > new Date(), [j]),
         S = (0, g.tl)(n),
         T = (0, c.Z)(),
         N = r.useRef(null);
@@ -106,13 +106,13 @@ function S(e) {
                 children: [
                     (0, i.jsx)(x.Z, {
                         isCanceled: S,
-                        hasCooldown: O,
+                        hasCooldown: E,
                         useReducedMotion: f
                     }),
                     (0, i.jsx)('div', {
                         className: C.boostDescriptionContainer,
                         children:
-                            null != j && O && !S
+                            null != j && E && !S
                                 ? (0, i.jsx)(b.Z, {
                                       className: C.boostDescriptionInnerContainer,
                                       cooldown: j.getTime()
@@ -173,7 +173,7 @@ function S(e) {
                                 (n = n =
                                     {
                                         innerRef: N,
-                                        'aria-label': E.intl.string(E.t.PdRCRk),
+                                        'aria-label': O.intl.string(O.t.PdRCRk),
                                         className: C.boostSlotMenuIcon,
                                         children: (0, i.jsx)(l.Huf, {
                                             size: 'md',

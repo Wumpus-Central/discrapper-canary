@@ -61,10 +61,10 @@ function x() {
         (e.destroy(e.isOwner ? 'sender-disconnect' : 'receiver-disconnect'), delete D[t], delete P[t]);
     });
 }
-function k(e) {
+function M(e) {
     ((r = e.sessionId), x());
 }
-function M() {
+function k() {
     ((r = null), x());
 }
 function j(e) {
@@ -288,8 +288,8 @@ let J = new Q(
     !b.Z.isSupported() || __OVERLAY__
         ? {}
         : {
-              CONNECTION_OPEN: k,
-              CONNECTION_CLOSED: M,
+              CONNECTION_OPEN: M,
+              CONNECTION_CLOSED: k,
               RTC_CONNECTION_STATE: Y,
               RTC_CONNECTION_PING: Y,
               RTC_CONNECTION_LOSS_RATE: Y,

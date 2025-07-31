@@ -3,7 +3,7 @@ var r = n(255367),
     i = n(73800),
     a = n(120356),
     l = n.n(a),
-    s = n(855659),
+    s = n(66546),
     o = n(94171),
     c = n(481060),
     d = n(787014),
@@ -22,29 +22,29 @@ let b = i.memo(function (e) {
             return { guidelinesOpen: t };
         }, o.X),
         v = (0, m.r_)(t),
-        [C, _] = i.useState(!1),
+        [_, C] = i.useState(!1),
         y = i.useCallback(
             (e) => {
                 if (null == e) return;
                 let t = e.clientHeight >= 220;
-                t !== C && _(t);
+                t !== _ && C(t);
             },
-            [C]
+            [_]
         );
     i.useLayoutEffect(() => {
         setTimeout(a, 350);
     }, [j, a]);
-    let [O, w] = i.useState(!j),
-        S = (0, c.q_F)({
+    let [w, T] = i.useState(!j),
+        O = (0, c.q_F)({
             opacity: +!!j,
             maxHeight: 500 * !!j,
             config: { duration: 300 },
-            onRest: () => w(!j)
+            onRest: () => T(!j)
         });
     return null != t.topic && t.topic.length > 0
         ? (0, r.jsx)(s.animated.div, {
-              style: S,
-              className: O ? x.hiddenVisually : void 0,
+              style: O,
+              className: w ? x.hiddenVisually : void 0,
               children: (0, r.jsxs)('div', {
                   className: x.container,
                   children: [
@@ -107,7 +107,7 @@ let b = i.memo(function (e) {
                                       })
                                   })
                               }),
-                              C &&
+                              _ &&
                                   (0, r.jsxs)('div', {
                                       className: x.showMore,
                                       children: [

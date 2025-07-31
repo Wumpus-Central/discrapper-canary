@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(243778),
     _ = n(440051),
     j = n(734934),
-    O = n(300284),
-    E = n(680295),
+    E = n(300284),
+    O = n(680295),
     C = n(785717),
     v = n(209698),
     S = n(687158),
@@ -101,10 +101,10 @@ function ea(e) {
         { expiringStatusProfileFeedback: ex } = _.Y.useExperiment({ location: 'UserProfileAccountPopout' }, { autoTrackExposure: !1 }),
         e_ = (0, a.e7)([H.Z], () => H.Z.hidePersonalInformation),
         ej = (0, j.p)(),
-        eO = V.Sb.useSetting(),
-        eE = (0, Q.I)(eh),
+        eE = V.Sb.useSetting(),
+        eO = (0, Q.I)(eh),
         eC = (0, q.g)(n),
-        ev = (0, O.Z)({ analyticsLocations: eu }),
+        ev = (0, E.Z)({ analyticsLocations: eu }),
         eS = (0, Y.I5)(t),
         eT = (0, h.p)({ location: 'UserProfileAccountPopout' }),
         eN = (0, v.b)({ location: 'UserProfileAccountPopout' }),
@@ -295,7 +295,7 @@ function ea(e) {
                                                                           className: ei.statusPickerModalMenu,
                                                                           'aria-label': en.intl.string(en.t.E13trK),
                                                                           onClose: t,
-                                                                          children: eE
+                                                                          children: eO
                                                                       });
                                                                   },
                                                             onClick: s.tq
@@ -342,7 +342,7 @@ function ea(e) {
                                                                                                           hideScroller: !0,
                                                                                                           onClose: r,
                                                                                                           onSelect: void 0,
-                                                                                                          children: eE
+                                                                                                          children: eO
                                                                                                       })
                                                                                                   }),
                                                                                               Object.getOwnPropertyDescriptors
@@ -393,7 +393,7 @@ function ea(e) {
                                                         }),
                                                         !__OVERLAY__ &&
                                                             z.wS &&
-                                                            eO &&
+                                                            eE &&
                                                             (0, i.jsxs)(i.Fragment, {
                                                                 children: [
                                                                     (0, i.jsx)(P.Z, { className: ei.menuDivider }),
@@ -416,7 +416,7 @@ function ea(e) {
                                 ]
                             }),
                             eU &&
-                                (0, i.jsx)(E.Z, {
+                                (0, i.jsx)(O.Z, {
                                     profileEffectId: null == ed ? void 0 : ed.profileEffectId,
                                     isHovering: eg
                                 })

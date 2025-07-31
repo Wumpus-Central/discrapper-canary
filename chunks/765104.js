@@ -76,17 +76,17 @@ let P = {},
     D = {},
     L = [],
     x = {},
-    k = {
+    M = {
         status: 'ok',
         lastRequest: null,
         lastResponse: null
     },
-    M = [],
+    k = [],
     j = [],
     U = 75,
     G = 25;
 function B() {
-    M = h.Z.getProps()
+    k = h.Z.getProps()
         .results.filter((e) => e.type === f.h8.TEXT_CHANNEL && 0 === e.record.type)
         .map((e) => e.record.id);
 }
@@ -151,16 +151,16 @@ class V extends (s = u.ZP.PersistedStore) {
         return x;
     }
     channelAffinitiesStatus() {
-        return k;
+        return M;
     }
     shouldFetchChannelAffinities() {
-        return !('fetching' === k.status || (null != k.lastResponse && Date.now() - k.lastResponse < 30 * v.Z.Millis.SECOND));
+        return !('fetching' === M.status || (null != M.lastResponse && Date.now() - M.lastResponse < 30 * v.Z.Millis.SECOND));
     }
     defaultChannelIds(e) {
         let { withQuickSwitcher: t, withChannelAffinities: n, withUnreads: r, numChannels: i = G } = e,
             a = [];
         return (
-            t && (a = a.concat(M)),
+            t && (a = a.concat(k)),
             n && (a = a.concat(L.map((e) => e.channel_id))),
             r &&
                 (a = a.filter((e) => {
@@ -284,7 +284,7 @@ let Z = new V(d.Z, {
         null != n ? (D[t.id] = n) : delete D[t.id];
     },
     REQUEST_CHANNEL_AFFINITIES() {
-        k = R(N({}, k), {
+        M = R(N({}, M), {
             status: 'fetching',
             lastRequest: Date.now()
         });
@@ -295,7 +295,7 @@ let Z = new V(d.Z, {
         if (null != r) {
             ((L = []),
                 (x = {}),
-                (k = R(N({}, k), {
+                (M = R(N({}, M), {
                     status: 'error',
                     lastResponse: Date.now()
                 })));
@@ -303,7 +303,7 @@ let Z = new V(d.Z, {
         }
         ((L = null != n ? n : []),
             (x = null != (t = null == n ? void 0 : n.reduce((e, t) => ((e[t.channel_id] = t.affinity), e), {})) ? t : {}),
-            (k = R(N({}, k), {
+            (M = R(N({}, M), {
                 status: 'ok',
                 lastResponse: Date.now()
             })));

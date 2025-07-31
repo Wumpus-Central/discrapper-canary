@@ -417,7 +417,7 @@ class y extends o.Z {
                 },
                 m
             ),
-            { bytes: y, framesDropped: O, framesCodecError: v, framesCodec: I, framesNetwork: T, packets: S, packetsLost: A, nackCount: N, pliCount: C, qpSum: R, pauseCount: P, freezeCount: w, totalPausesDuration: D, totalFreezesDuration: L, totalFramesDuration: x, keyframes: k, passthroughCount: M, cryptorSuccessCount: j, cryptorFailureCount: U, cryptorDuration: G, cryptorAttempts: B, cryptorMissingKeyCount: V, cryptorInvalidNonceCount: F, qualityDecodeErrors: Z, qualityDecoderReboots: H, qualityScoreErrors: Y, qualityFrameDrops: W, qualitySizeMismatches: K } = e.aggregatedProperties,
+            { bytes: y, framesDropped: O, framesCodecError: v, framesCodec: I, framesNetwork: T, packets: S, packetsLost: A, nackCount: N, pliCount: C, qpSum: R, pauseCount: P, freezeCount: w, totalPausesDuration: D, totalFreezesDuration: L, totalFramesDuration: x, keyframes: M, passthroughCount: k, cryptorSuccessCount: j, cryptorFailureCount: U, cryptorDuration: G, cryptorAttempts: B, cryptorMissingKeyCount: V, cryptorInvalidNonceCount: F, qualityDecodeErrors: Z, qualityDecoderReboots: H, qualityScoreErrors: Y, qualityFrameDrops: W, qualitySizeMismatches: K } = e.aggregatedProperties,
             z = (null != U ? U : 0) - (null != (t = e.cryptorFailureBeforeSuccessCount) ? t : 0);
         return (
             e instanceof f.nt ? ((b.sender_freeze_count = w), (b.sender_total_freezes_duration = L), (b.sender_total_frames_duration = x)) : ((b.receiver_freeze_count = w), (b.receiver_total_freezes_duration = L), (b.receiver_total_frames_duration = x), (b.receiver_pause_count = P), (b.receiver_total_pauses_duration = D)),
@@ -434,8 +434,8 @@ class y extends o.Z {
                 num_nacks: N,
                 num_plis: C,
                 qp_sum: R,
-                num_keyframes: k,
-                cryptor_passthrough_count: M,
+                num_keyframes: M,
+                cryptor_passthrough_count: k,
                 cryptor_success_count: j,
                 cryptor_failure_count: U,
                 cryptor_duration: G,

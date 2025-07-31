@@ -1,10 +1,10 @@
-n.d(t, { Z: () => a });
-var r = n(531643),
-    i = n(403182),
-    l = n(388032);
-function a(e) {
-    (0, r.openUploadError)({
+t.d(e, { Z: () => i });
+var n = t(531643),
+    r = t(403182),
+    l = t(388032);
+function i(A) {
+    (0, n.openUploadError)({
         title: l.intl.string(l.t['/tGlcn']),
-        help: l.intl.formatToPlainString(l.t.fxEKdX, { maxSize: (0, i.Ng)(e) })
+        help: l.intl.formatToPlainString(l.t.fxEKdX, { maxSize: (0, r.Ng)(A) })
     });
 }

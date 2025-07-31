@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+(n.d(t, { Z: () => O }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -17,11 +17,11 @@ var i = n(255367),
     x = n(251574),
     _ = n(893354),
     j = n(20493);
-let O = (0, p.hQ)();
-function E() {
+let E = (0, p.hQ)();
+function O() {
     let [e, t] = r.useState(-100),
         [n, s] = r.useState(!1),
-        { threshold: E, autoThreshold: C } = (0, l.cj)([g.Z], () => ({
+        { threshold: O, autoThreshold: C } = (0, l.cj)([g.Z], () => ({
             threshold: g.Z.getModeOptions().threshold,
             autoThreshold: g.Z.getModeOptions().autoThreshold
         })),
@@ -57,12 +57,12 @@ function E() {
     let y = (0, i.jsx)('section', {
         className: a()(b.inputSensitivityToggle, b.manual),
         children: (0, i.jsx)(u.iRW, {
-            initialValue: E + 100,
+            initialValue: O + 100,
             onValueRender: (e) => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
             onValueChange: (e) => I(-((100 - e) * 1), C),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
-            'aria-labelledby': O,
+            'aria-labelledby': E,
             children: (0, i.jsxs)('div', {
                 className: a()(b.sliderBar, b.microphone, b.inputSensitivityBar, x.bar),
                 children: [
@@ -93,7 +93,7 @@ function E() {
             })),
         (0, i.jsxs)(u.xJW, {
             title: f.intl.string(f.t['sqUm+v']),
-            titleId: O,
+            titleId: E,
             className: b.sensitivity,
             children: [
                 S &&
@@ -113,7 +113,7 @@ function E() {
                                     (0, i.jsx)(u.rsf, {
                                         id: e,
                                         checked: C,
-                                        onChange: (e) => I(E, e)
+                                        onChange: (e) => I(O, e)
                                     })
                                 ]
                             })

@@ -40,7 +40,8 @@ function p(e) {
                     (0, r.jsx)('div', { className: f.divider }),
                     (0, r.jsx)(o.z, {
                         onClick: t,
-                        text: _.intl.string(_.t.cpT0Cg)
+                        text: _.intl.string(_.t.cpT0Cg),
+                        fullWidth: !0
                     })
                 ]
             })

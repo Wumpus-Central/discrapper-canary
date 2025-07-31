@@ -32,7 +32,7 @@
     CoT: () => R,
     Cyb: () => g.Cy,
     DJE: () => re,
-    DJj: () => ek,
+    DJj: () => eM,
     DZw: () => ew,
     E07: () => tS,
     EKQ: () => g.EK,
@@ -43,7 +43,7 @@
     Etm: () => g.Et,
     Eu4: () => no,
     FD8: () => eU,
-    FQ1: () => rM,
+    FQ1: () => rk,
     Fc: () => tr,
     FoC: () => Q,
     FsG: () => E.Fs,
@@ -74,7 +74,7 @@
     Jn9: () => rq,
     JuI: () => ez,
     JwP: () => nf,
-    K3D: () => rk,
+    K3D: () => rM,
     KA4: () => tR,
     KFR: () => nD,
     KJ3: () => rw,
@@ -108,13 +108,13 @@
     OcF: () => e9,
     Odu: () => et,
     PEY: () => e3,
-    PNu: () => eM,
+    PNu: () => ek,
     POd: () => rf,
     PRK: () => e0,
     PUi: () => nj,
     Pbq: () => t6,
     Plq: () => g.Pl,
-    PrB: () => k,
+    PrB: () => M,
     PrS: () => tE,
     PsQ: () => tW,
     PyE: () => g.Py,
@@ -182,7 +182,7 @@
     Z8P: () => ex,
     Z9p: () => nh,
     ZUi: () => Y,
-    ZY5: () => tM,
+    ZY5: () => tk,
     ZfP: () => P,
     Zuq: () => g.Zu,
     _1z: () => ei,
@@ -195,13 +195,13 @@
     aO5: () => g.aO,
     aZC: () => tJ,
     aib: () => tw,
-    ane: () => nM,
+    ane: () => nk,
     apO: () => rr,
     b2L: () => ni,
     b4C: () => rF,
     b8q: () => tj,
     bL: () => eP,
-    c2C: () => nk,
+    c2C: () => nM,
     d4z: () => o.d,
     dAT: () => tK,
     dCx: () => nt,
@@ -276,12 +276,12 @@
     pAY: () => th,
     pJs: () => D,
     pKx: () => g.pK,
-    pM4: () => M,
+    pM4: () => k,
     pNK: () => N,
     pTL: () => rz,
     pjP: () => n3,
     pmI: () => t8,
-    q5t: () => tk,
+    q5t: () => tM,
     q9n: () => nZ,
     qAy: () => tG,
     qWG: () => rZ,
@@ -437,10 +437,10 @@ var O = (function (e) {
     x = (function (e) {
         return ((e.NEVER = 'NEVER'), (e.ENABLED = 'ENABLED'), (e.BLOCKED = 'BLOCKED'), e);
     })({}),
-    k = (function (e) {
+    M = (function (e) {
         return ((e.NEVER = 'NEVER'), (e.ALL_CHANNELS = 'ALL_CHANNELS'), (e.SELECTED_CHANNEL = 'SELECTED_CHANNEL'), e);
     })({}),
-    M = (function (e) {
+    k = (function (e) {
         return ((e.PUSH_TO_TALK = 'PUSH_TO_TALK'), (e.VOICE_ACTIVITY = 'VOICE_ACTIVITY'), e);
     })({}),
     j = (function (e) {
@@ -814,6 +814,7 @@ let eg = '@me',
         },
         MESSAGES: (e) => '/channels/'.concat(e, '/messages'),
         MESSAGES_GREET: (e) => '/channels/'.concat(e, '/greet'),
+        MESSAGES_ANNOUNCEMENT: (e) => '/channels/'.concat(e, '/messages/announcement'),
         MESSAGE: (e, t) => '/channels/'.concat(e, '/messages/').concat(t),
         MESSAGE_ACK: (e, t) => '/channels/'.concat(e, '/messages/').concat(t, '/ack'),
         MESSAGE_CREATE_ATTACHMENT_UPLOAD: (e) => '/channels/'.concat(e, '/attachments'),
@@ -1591,8 +1592,8 @@ let ew = 100,
     eD = 200,
     eL = 50,
     ex = 50,
-    ek = 25,
-    eM = 200,
+    eM = 25,
+    ek = 200,
     ej = 100,
     eU = 250,
     eG = 2000,
@@ -1974,10 +1975,10 @@ var tw = (function (e) {
             e
         );
     })({}),
-    tk = (function (e) {
+    tM = (function (e) {
         return ((e.JOIN = 'join'), (e.ASK_TO_JOIN = 'ask to join'), (e.LAUNCH = 'launch'), (e.SPECTATE = 'spectate'), e);
     })({}),
-    tM = (function (e) {
+    tk = (function (e) {
         return (
             (e.AUTH = 'Auth'),
             (e.STORE_LISTING = 'Store Listing'),
@@ -4556,10 +4557,10 @@ var nR = (function (e) {
         );
     })({});
 let nx = 50;
-var nk = (function (e) {
+var nM = (function (e) {
         return ((e.AGREEMENTS = 'AGREEMENTS'), (e.REQUIRE_CAPTCHA = 'REQUIRE_CAPTCHA'), (e.REQUIRE_VERIFIED_EMAIL = 'REQUIRE_VERIFIED_EMAIL'), (e.REQUIRE_VERIFIED_PHONE = 'REQUIRE_VERIFIED_PHONE'), (e.REQUIRE_REVERIFIED_EMAIL = 'REQUIRE_REVERIFIED_EMAIL'), (e.REQUIRE_REVERIFIED_PHONE = 'REQUIRE_REVERIFIED_PHONE'), (e.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE = 'REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE'), (e.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE = 'REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE'), (e.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE = 'REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE'), (e.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE = 'REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE'), (e.REQUIRE_SAFETY_FLOWS = 'REQUIRE_SAFETY_FLOWS'), e);
     })({}),
-    nM = (function (e) {
+    nk = (function (e) {
         return ((e.UPDATE_PASSWORD = 'update_password'), e);
     })({}),
     nj = (function (e) {
@@ -5286,10 +5287,10 @@ var rw = (function (e) {
     rx = (function (e) {
         return ((e.USER_REQUESTED = 'user_requested'), (e.STREAM_FULL = 'stream_full'), (e.UNAUTHORIZED = 'unauthorized'), (e.SAFETY_GUILD_RATE_LIMITED = 'safety_guild_rate_limited'), e);
     })({}),
-    rk = (function (e) {
+    rM = (function (e) {
         return ((e.SOUND = 'SOUND'), (e.VIDEO = 'VIDEO'), e);
     })({}),
-    rM = (function (e) {
+    rk = (function (e) {
         return ((e.PLAYING = 'playing'), (e.PAUSED = 'paused'), e);
     })({}),
     rj = (function (e) {

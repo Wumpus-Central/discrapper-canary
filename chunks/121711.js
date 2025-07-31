@@ -115,7 +115,20 @@ let q = function () {
     (0, g.Tt)({ location: H.intl.string(H.t.JALI2N) });
     let q = z ? H.intl.format(H.t.BCBIlp, {}) : H.intl.format(H.t.lmMBf3, {}),
         X = z ? H.intl.format(H.t.U9FY0N, {}) : H.intl.string(H.t.oWCrBg),
-        Q = i.useRef(null);
+        Q = i.useRef(null),
+        J = i.useCallback(() => {
+            ((0, C.Y)({
+                pageType: V.ZY5.GLOBAL_DISCOVERY_QUESTS,
+                sectionType: V.jXE.ORBS_BALANCE_MENU,
+                ctaObject: V.qAy.CTA_TO_ORBS_SHOP
+            }),
+                (0, f.mK)({
+                    openInLayer: !1,
+                    tab: B.AW.ORBS,
+                    analyticsLocations: [],
+                    analyticsSource: p.Z.ORBS_BALANCE_MENU
+                }));
+        }, []);
     return (0, r.jsx)(k.k.Provider, {
         value: { onAssetLoadComplete: P },
         children: (0, r.jsx)('div', {
@@ -136,19 +149,7 @@ let q = function () {
                                       analyticsPage: V.ZY5.GLOBAL_DISCOVERY_QUESTS,
                                       cardAlignment: T.ek.END,
                                       ctaText: H.intl.string(H.t['J+vlIS']),
-                                      ctaOnClick: () => {
-                                          ((0, C.Y)({
-                                              pageType: V.ZY5.GLOBAL_DISCOVERY_QUESTS,
-                                              sectionType: V.jXE.ORBS_BALANCE_MENU,
-                                              ctaObject: V.qAy.CTA_TO_ORBS_SHOP
-                                          }),
-                                              (0, f.mK)({
-                                                  openInLayer: !1,
-                                                  tab: B.AW.ORBS,
-                                                  analyticsLocations: [],
-                                                  analyticsSource: p.Z.ORBS_BALANCE_MENU
-                                              }));
-                                      }
+                                      ctaOnClick: J
                                   })
                               }),
                               (0, r.jsxs)(_.Z, {
