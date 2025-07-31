@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(877565),
     u = n(590921),
     d = n(761652),
-    f = n(388032);
-function _(e, t, n) {
+    _ = n(388032);
+function f(e, t, n) {
     return s.ZP.hasSameRoleAsUsername(t, e) ? ''.concat(d.ME).concat(e.tag) : ''.concat(d.ME).concat(l.ZP.getUserTag(e, { identifiable: n ? 'never' : 'always' }));
 }
 function p(e) {
@@ -34,7 +34,7 @@ let E = {
             l = r.mentions.user !== u.h3.DENY,
             c = r.mentions.role !== u.Fw.DENY,
             d = r.mentions.user === u.h3.ALLOW_GUILD,
-            f = r.mentions.role === u.Fw.ALLOW_ALL;
+            _ = r.mentions.role === u.Fw.ALLOW_ALL;
         return {
             results: s.ZP.queryMentionResults({
                 query: n,
@@ -44,7 +44,7 @@ let E = {
                 canMentionUsers: l,
                 canMentionRoles: c,
                 includeAllGuildUsers: d,
-                includeNonMentionableRoles: f,
+                includeNonMentionableRoles: _,
                 request: i
             })
         };
@@ -54,7 +54,7 @@ let E = {
             n,
             {
                 results: { users: o, globals: s, roles: l },
-                selectedIndex: _,
+                selectedIndex: f,
                 channel: p,
                 query: h,
                 options: m,
@@ -68,7 +68,7 @@ let E = {
                         guildId: p.guild_id,
                         onClick: E,
                         onHover: g,
-                        selected: _ === t,
+                        selected: f === t,
                         index: t,
                         user: e.user,
                         nick: e.nick,
@@ -84,7 +84,7 @@ let E = {
                     {
                         onClick: E,
                         onHover: g,
-                        selected: _ === t + o.length,
+                        selected: f === t + o.length,
                         index: o.length + t,
                         text: e.text,
                         description: m.hideMentionDescription ? null : e.description,
@@ -99,7 +99,7 @@ let E = {
                     {
                         onClick: E,
                         onHover: g,
-                        selected: _ === t + o.length + s.length,
+                        selected: f === t + o.length + s.length,
                         index: o.length + s.length + t,
                         role: e,
                         hideDescription: m.hideMentionDescription,
@@ -109,7 +109,7 @@ let E = {
                 )
             );
         return (
-            m.mentions.user === u.h3.DENY ? ((t = f.t.MLiD1d), (n = f.intl.string(f.t.LPJmLy))) : ((t = f.t.rPNimp), (n = f.intl.string(f.t['9Oq93t']))),
+            m.mentions.user === u.h3.DENY ? ((t = _.t.MLiD1d), (n = _.intl.string(_.t.LPJmLy))) : ((t = _.t.rPNimp), (n = _.intl.string(_.t['9Oq93t']))),
             (0, r.jsxs)(
                 i.Fragment,
                 {
@@ -141,6 +141,6 @@ let E = {
             s = t[i],
             l = n[i - t.length],
             c = r[i - t.length - n.length];
-        return (null != s ? a.insertText(_(s.user, o, a.hidePersonalInformation), p(s.user)) : null != l ? (null != l.inlineAutocompleteType ? a.insertAutocompleteInput(l.inlineAutocompleteType) : a.insertText(h(l))) : null != c && a.insertText(m(c), g(c)), { type: u.z2.MENTION });
+        return (null != s ? a.insertText(f(s.user, o, a.hidePersonalInformation), p(s.user)) : null != l ? (null != l.inlineAutocompleteType ? a.insertAutocompleteInput(l.inlineAutocompleteType) : a.insertText(h(l))) : null != c && a.insertText(m(c), g(c)), { type: u.z2.MENTION });
     }
 };

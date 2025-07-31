@@ -17,7 +17,7 @@ var i = n(255367),
     x = n(662583),
     _ = n(346537),
     j = n(830318);
-function E(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -42,7 +42,7 @@ function E(e) {
     }
     return e;
 }
-function O(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -101,7 +101,7 @@ let C = {
                 let n = V(t);
                 null != n &&
                     (0, f.i0)(n, (t) => {
-                        w((i) => O(E({}, i), { [e]: (0, f.z)(t, n) }));
+                        w((i) => E(O({}, i), { [e]: (0, f.z)(t, n) }));
                     });
             },
             F = (e, t) => {
@@ -112,7 +112,7 @@ let C = {
                             let r = [...i],
                                 s = i[t];
                             if (null == s) return i;
-                            let a = E({}, s);
+                            let a = O({}, s);
                             return (
                                 null == a.randomizedSources && (a.randomizedSources = []),
                                 a.randomizedSources.push({
@@ -126,7 +126,7 @@ let C = {
                     });
             },
             H = (e) => {
-                w((t) => O(E({}, t), { [e]: null }));
+                w((t) => E(O({}, t), { [e]: null }));
             };
         (r.useEffect(() => {
             let e = t.config.effects;
@@ -148,20 +148,20 @@ let C = {
                         let [t, n] = e;
                         if (null != n) {
                             let e = (0, f.$j)(n.base64);
-                            ((n.src = e), k.current.push(e), w((e) => O(E({}, e), { [t]: n })));
+                            ((n.src = e), k.current.push(e), w((e) => E(O({}, e), { [t]: n })));
                         }
                     });
             }, [t.config.stillFrames]));
-        let W = {
+        let z = {
                 effect: t,
                 upsertConfig: n
             },
-            z = r.useRef(W);
+            W = r.useRef(z);
         return (r.useEffect(() => {
-            z.current = W;
+            W.current = z;
         }),
         r.useEffect(() => {
-            let { effect: e, upsertConfig: t } = z.current;
+            let { effect: e, upsertConfig: t } = W.current;
             e.readonly ||
                 t({
                     id: e.id,
@@ -364,9 +364,9 @@ let C = {
                                                   (0, i.jsx)(u.Z, {
                                                       fileContents: () =>
                                                           JSON.stringify(
-                                                              O(E({}, t), {
+                                                              E(O({}, t), {
                                                                   name: L,
-                                                                  config: O(E({}, t.config), {
+                                                                  config: E(O({}, t.config), {
                                                                       effects: R,
                                                                       stillFrames: Z
                                                                   })

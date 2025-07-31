@@ -10,7 +10,7 @@ function c(e, t) {
     return Array.from((null != (n = t.current) ? n : document).querySelectorAll('['.concat(l.ie, '^="').concat(e, '"]')));
 }
 function u(e) {
-    let { id: t, defaultFocused: n, isEnabled: u, scrollToStart: d, scrollToEnd: f, onNavigatePreviousAtStart: _, onNavigateNextAtEnd: p, setFocus: h, setFocusOnList: m, preserveFocusPosition: g = !0, useVirtualFocus: E = !1, wrap: b = !1, orientation: y = s.hy.VERTICAL, disableClickOnSpace: O = !1 } = e,
+    let { id: t, defaultFocused: n, isEnabled: u, scrollToStart: d, scrollToEnd: _, onNavigatePreviousAtStart: f, onNavigateNextAtEnd: p, setFocus: h, setFocusOnList: m, preserveFocusPosition: g = !0, useVirtualFocus: E = !1, wrap: b = !1, orientation: y = s.hy.VERTICAL, disableClickOnSpace: O = !1 } = e,
         v = r.useRef(n ? (0, l.jb)(t, n) : null),
         I = r.useRef(!1),
         T = r.useRef(null),
@@ -56,9 +56,9 @@ function u(e) {
                         return null == (e = T.current) ? void 0 : e.ownerDocument.activeElement;
                     },
                     scrollToStart: d,
-                    scrollToEnd: f
+                    scrollToEnd: _
                 }),
-            [t, d, f]
+            [t, d, _]
         ),
         [D, L] = r.useState(!1),
         x = r.useRef(D);
@@ -107,7 +107,7 @@ function u(e) {
                 I.current = !0;
             }
         }, [u, t, g, C, m, R, P]));
-    let M = r.useMemo(
+    let k = r.useMemo(
             () => ({
                 wrap: b,
                 get from() {
@@ -122,16 +122,16 @@ function u(e) {
             }),
             [E, b]
         ),
-        k = r.useCallback(async () => {
-            let e = await w.getNextFocusableElement(M),
+        M = r.useCallback(async () => {
+            let e = await w.getNextFocusableElement(k),
                 t = null == e ? void 0 : e.getAttribute(l.ie);
             null != t ? P(t) : null == e && null != p && p();
-        }, [w, M, p, P]),
+        }, [w, k, p, P]),
         j = r.useCallback(async () => {
-            let e = await w.getPreviousFocusableElement(M),
+            let e = await w.getPreviousFocusableElement(k),
                 t = null == e ? void 0 : e.getAttribute(l.ie);
-            null != t ? P(t) : null == e && null != _ && _();
-        }, [w, M, _, P]),
+            null != t ? P(t) : null == e && null != f && f();
+        }, [w, k, f, P]),
         U = r.useCallback(
             (e) => {
                 if (!S.current || (!E && !x.current)) return;
@@ -139,7 +139,7 @@ function u(e) {
                     r = y === s.hy.HORIZONTAL ? s.R8.LEFT : s.R8.UP;
                 switch (e.key) {
                     case n:
-                        (e.stopPropagation(), e.preventDefault(), k());
+                        (e.stopPropagation(), e.preventDefault(), M());
                         return;
                     case r:
                         (e.stopPropagation(), e.preventDefault(), j());
@@ -156,7 +156,7 @@ function u(e) {
                     case s.R8.END:
                         (e.stopPropagation(),
                             e.preventDefault(),
-                            f().then(() => {
+                            _().then(() => {
                                 var e;
                                 let n = c(t, T),
                                     r = null == (e = n[n.length - 1]) ? void 0 : e.getAttribute(l.ie);
@@ -177,7 +177,7 @@ function u(e) {
                     }
                 }
             },
-            [k, j, t, y, f, d, P, E]
+            [M, j, t, y, _, d, P, E]
         ),
         G = r.useCallback(
             (e) => {
@@ -206,12 +206,12 @@ function u(e) {
                 null !== n && P(n);
             },
             focusPreviousItem: j,
-            focusNextItem: k,
+            focusNextItem: M,
             focusedItemId() {
                 let e = v.current;
                 return e ? (0, l.x3)(e) : null;
             }
         }),
-        [t, U, y, D, g, G, j, k, P]
+        [t, U, y, D, g, G, j, M, P]
     );
 }

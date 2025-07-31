@@ -25,7 +25,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -58,7 +58,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -85,7 +85,7 @@ class b extends (r = a.Component) {
         let { align: t, animate: n, currentIndex: r, items: i, width: a } = this.props,
             o = E(r, i.length),
             s = E(e.currentIndex, i.length);
-        ((o !== s || i.length !== e.items.length) && this.updateAnimatedIndex(o, s), a !== e.width ? this.animatedAlignmentOffset.setValue(this.getAlignmentOffset(t)) : n && (t !== e.align || o !== s) && l.Z.spring(this.animatedAlignmentOffset, p(f({}, h), { toValue: this.getAlignmentOffset(t) })).start());
+        ((o !== s || i.length !== e.items.length) && this.updateAnimatedIndex(o, s), a !== e.width ? this.animatedAlignmentOffset.setValue(this.getAlignmentOffset(t)) : n && (t !== e.align || o !== s) && l.Z.spring(this.animatedAlignmentOffset, p(_({}, h), { toValue: this.getAlignmentOffset(t) })).start());
     }
     getAlignmentOffset(e) {
         let { width: t, itemSize: n, currentIndex: r, gutter: i, items: a } = this.props,
@@ -99,7 +99,7 @@ class b extends (r = a.Component) {
     animateToIndex(e, t) {
         let { animatedIndex: n } = this,
             { items: r, edgeItems: i } = this.props;
-        (i > 0 && (0 === e && t === r.length - 1 ? n.setValue(-1) : 0 === t && e === r.length - 1 && r.length > 2 && n.setValue(r.length)), l.Z.spring(n, p(f({}, h), { toValue: e })).start());
+        (i > 0 && (0 === e && t === r.length - 1 ? n.setValue(-1) : 0 === t && e === r.length - 1 && r.length > 2 && n.setValue(r.length)), l.Z.spring(n, p(_({}, h), { toValue: e })).start());
     }
     updateAnimatedIndex(e, t) {
         let { animatedIndex: n, animatedOpacity: r } = this,
@@ -137,7 +137,7 @@ class b extends (r = a.Component) {
         let e,
             { animatedIndex: t, animatedAlignmentOffset: n, animatedOpacity: r } = this,
             { renderItem: a, items: o, itemSize: s, edgeItems: c, gutter: d } = this.props,
-            { margin: f, width: _ } = s,
+            { margin: _, width: f } = s,
             p = this.getCarouselTranslate(),
             h = this.getItemStyle(),
             m = (e = c > 0 ? [...o.slice(-c), ...o, ...o.slice(0, c)] : o).map((e, t) =>
@@ -158,7 +158,7 @@ class b extends (r = a.Component) {
                 left: l.Z.add(
                     t.interpolate({
                         inputRange: [0, 1],
-                        outputRange: [-p, -f - _ - p - d * (o.length - 1)]
+                        outputRange: [-p, -_ - f - p - d * (o.length - 1)]
                     }),
                     n
                 )

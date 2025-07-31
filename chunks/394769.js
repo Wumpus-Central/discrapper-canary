@@ -10,7 +10,7 @@ var i = n(855659),
     u = n(831740);
 let d = function (e) {
     let { closeLayer: t, guild: n, isVisible: d } = e,
-        f = (0, o.q_F)({
+        _ = (0, o.q_F)({
             transform: d ? 'translateY(-100%)' : 'translateY(0%)',
             opacity: +!!d,
             config: {
@@ -20,7 +20,7 @@ let d = function (e) {
         });
     return (0, r.jsx)(i.animated.div, {
         className: u.wrapper,
-        style: f,
+        style: _,
         children: (0, r.jsxs)('div', {
             className: u.innerWrapper,
             children: [

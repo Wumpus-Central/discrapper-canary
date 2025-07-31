@@ -6,8 +6,9 @@ var r = n(748610),
     o = n(723642),
     s = n(981631);
 function c(e) {
-    let { searchId: t, searchQueryString: n, searchQuery: i, offset: l } = e;
-    (r.Z.clearSearchMessages(t), r.Z.setShowNoResultsAlt(t), r.Z.setShowBlockedResults(t, !1), r.Z.updateSearchResultsQuery(t, n, i, l), r.Z.addWebSearchHistoryItem(t, n));
+    let { searchContext: t, searchQueryString: n, searchQuery: l, offset: a } = e,
+        o = (0, i.WJ)(t);
+    (r.Z.clearSearchMessages(o), r.Z.setShowNoResultsAlt(o), r.Z.setShowBlockedResults(o, !1), r.Z.updateSearchResultsQuery(o, n, l, a), r.Z.addWebSearchHistoryItem(o, n));
 }
 let u = {
     fetchCrossDMMessages: function (e) {
@@ -21,11 +22,11 @@ let u = {
             getId: () => u,
             getLimit: () => s.vpv,
             onFetchStart: (e) => {
-                let { searchQueryString: t, searchQuery: r } = e;
+                let { searchQueryString: r, searchQuery: i } = e;
                 c({
-                    searchId: u,
-                    searchQueryString: t,
-                    searchQuery: r,
+                    searchContext: t,
+                    searchQueryString: r,
+                    searchQuery: i,
                     offset: n * s.vpv
                 });
             },
@@ -34,11 +35,12 @@ let u = {
         });
     },
     cleanUpSearchState: function (e) {
-        (r.Z.clearSearchState(e), r.Z.clearSearchMessages(e), l.Z.cleanUp(e), a.Z.cleanUp(e));
+        let t = (0, i.WJ)(e);
+        (r.Z.clearSearchState(t), r.Z.clearSearchMessages(t), l.Z.cleanUp(t), a.Z.cleanUp(t));
     },
     fetchMessages: function (e) {
         var t, n;
-        let { searchId: l, searchQuery: a, queryString: o, searchEverywhere: s, offset: u, searchMode: d } = e,
+        let { searchContext: l, searchQuery: a, queryString: o, searchEverywhere: s, offset: u, searchMode: d } = e,
             _ =
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -80,13 +82,13 @@ let u = {
                       }),
                 t);
         (c({
-            searchId: l,
+            searchContext: l,
             searchQueryString: o,
             searchQuery: _,
             offset: u
         }),
             r.Z.fetchMessages({
-                searchId: l,
+                searchContext: l,
                 query: _,
                 searchEverywhere: s
             }));

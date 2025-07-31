@@ -7,8 +7,8 @@ var r = n(98405),
     c = n(880181),
     u = n(661970),
     d = n(992174),
-    f = n(380297),
-    _ = n(504290),
+    _ = n(380297),
+    f = n(504290),
     p = String,
     h = i('JSON', 'stringify'),
     m = s(/./.exec),
@@ -20,7 +20,7 @@ var r = n(98405),
     v = /^[\uD800-\uDBFF]$/,
     I = /^[\uDC00-\uDFFF]$/,
     T =
-        !_ ||
+        !f ||
         l(function () {
             var e = i('Symbol')('stringify detection');
             return '[null]' !== h([e]) || '{}' !== h({ a: e }) || '{}' !== h(Object(e));
@@ -30,7 +30,7 @@ var r = n(98405),
     }),
     A = function (e, t) {
         var n = d(arguments),
-            r = f(t);
+            r = _(t);
         if (!(!c(r) && (void 0 === e || u(e))))
             return (
                 (n[1] = function (e, t) {

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(755721),
     u = n(481060),
     d = n(239091),
-    f = n(751688),
-    _ = n(5192),
+    _ = n(751688),
+    f = n(5192),
     p = n(51144),
     h = n(223390);
 function m(e, t, n) {
@@ -90,8 +90,8 @@ function O() {
 function v(e) {
     let { users: t, maxUsers: a, guildId: s, channelId: m, className: E, size: v = u.EFr.SIZE_24, overflowCountVariant: I, overflowCountColor: T = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: A = !1, disableUsernameTooltip: N = !1, disableUserPopout: C = !1, onClick: R, onFocus: P, onUserClick: w, onUserPopoutRequestClose: D } = e,
         [L, x] = i.useState(!1),
-        M = y(v),
-        k = i.useRef(null);
+        k = y(v),
+        M = i.useRef(null);
     function j() {
         return (0, r.jsx)(u.VqE, {
             className: h.popoutWrapper,
@@ -99,12 +99,12 @@ function v(e) {
                 className: h.scroller,
                 children: t.map((e) =>
                     (0, r.jsx)(
-                        f.Z,
+                        _.Z,
                         {
                             user: e,
                             guildId: s,
                             channelId: m,
-                            nick: _.ZP.getNickname(s, m, e),
+                            nick: f.ZP.getNickname(s, m, e),
                             disablePopout: 'function' == typeof C ? C(e.id) : C,
                             onClick: w,
                             onPopoutRequestClose: () => {
@@ -139,12 +139,12 @@ function v(e) {
             n = e + 1,
             i = e > 0 && !A,
             d = Math.min(t.length, a) - 1,
-            f = l()(t)
+            _ = l()(t)
                 .take(a)
                 .map((e, t) => {
                     let n = p.ZP.getName(e),
                         a = t === d && !i,
-                        l = o()(h.avatar, M, a && h.isLast);
+                        l = o()(h.avatar, k, a && h.isLast);
                     return N
                         ? (0, r.jsx)(
                               'div',
@@ -175,18 +175,18 @@ function v(e) {
                 .value();
         if (i) {
             let e = null != I ? I : O(v);
-            f[f.length - 1] = (0, r.jsx)(
+            _[_.length - 1] = (0, r.jsx)(
                 u.yRy,
                 {
-                    targetElementRef: k,
+                    targetElementRef: M,
                     renderPopout: j,
                     shouldShow: L,
                     position: 'bottom',
                     onRequestClose: () => x(!1),
                     children: () =>
                         (0, r.jsx)(c.zx, {
-                            buttonRef: k,
-                            className: o()(h.overflow, M, S),
+                            buttonRef: M,
+                            className: o()(h.overflow, k, S),
                             onFocus: P,
                             onClick: (e) => {
                                 (null == R || R(e), x(!0));
@@ -203,7 +203,7 @@ function v(e) {
                 'overflow'
             );
         }
-        return f;
+        return _;
     }
     return t.length <= 0
         ? null

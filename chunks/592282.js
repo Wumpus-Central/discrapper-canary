@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(670596),
     u = n(743236),
     d = n(481060),
-    f = n(939350),
-    _ = n(906944);
+    _ = n(939350),
+    f = n(906944);
 function p(e, t, n) {
     return (
         t in e
@@ -81,9 +81,9 @@ function E(e) {
             h(
                 {
                     innerRef: T,
-                    className: o()(_.item, _.checkboxContainer, _.labelContainer, f._[t], O, {
-                        [_.disabled]: m,
-                        [_.focused]: E,
+                    className: o()(f.item, f.checkboxContainer, f.labelContainer, _._[t], O, {
+                        [f.disabled]: m,
+                        [f.focused]: E,
                         [null != v ? v : '']: E
                     }),
                     onClick: m ? void 0 : S
@@ -95,18 +95,18 @@ function E(e) {
                 'aria-disabled': m,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: _.label,
+                        className: f.label,
                         children: [
                             (0, l.I)(n, e),
                             null != p &&
                                 (0, r.jsx)('div', {
-                                    className: _.subtext,
+                                    className: f.subtext,
                                     children: p
                                 })
                         ]
                     }),
                     (0, r.jsx)('div', {
-                        className: _.iconContainer,
+                        className: f.iconContainer,
                         children: (0, r.jsx)(d.FZ5, {
                             shape: d.XZJ.Shapes.BOX,
                             size: 20,

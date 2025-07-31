@@ -21,8 +21,8 @@ var i,
     x = n(985443),
     _ = n(612253),
     j = n(872532),
-    E = n(404583),
-    O = n(295349),
+    O = n(404583),
+    E = n(295349),
     C = n(631572),
     v = n(999675),
     S = n(238027),
@@ -45,8 +45,8 @@ var i,
     G = n(712626),
     F = n(386014),
     H = n(845571),
-    W = n(220046),
-    z = n(385874),
+    z = n(220046),
+    W = n(385874),
     Y = n(371000),
     K = n(310960),
     q = n(815581),
@@ -92,7 +92,7 @@ let et = (e, t) =>
                 },
                 serverProfiles: {
                     thumbnail: j,
-                    assetUrl: e ? H.ZP : W.ZP
+                    assetUrl: e ? H.ZP : z.ZP
                 }
             },
             t
@@ -110,8 +110,8 @@ let et = (e, t) =>
                           assetUrl: e ? D.Z : w.Z
                       },
                       emojis: {
-                          thumbnail: O.Z,
-                          assetUrl: e ? E.Z : C.Z
+                          thumbnail: E.Z,
+                          assetUrl: e ? O.Z : C.Z
                       },
                       noLimits: {
                           thumbnail: S.Z,
@@ -125,7 +125,7 @@ let et = (e, t) =>
                       },
                       showYourStyle: {
                           thumbnail: _,
-                          assetUrl: e ? z.Z : Y.Z
+                          assetUrl: e ? W.Z : Y.Z
                       },
                       yourSpace: {
                           thumbnail: x,
@@ -185,7 +185,7 @@ let et = (e, t) =>
                 previewImage: f.referralProgram.thumbnail,
                 videoUrl: f.referralProgram.assetUrl
             },
-            E = {
+            O = {
                 name: 'showYourStyle',
                 title: h.intl.string(h.t.Ij3Zmp),
                 description: h.intl.string(h.t.UsOUxc),
@@ -194,7 +194,7 @@ let et = (e, t) =>
                 onClick: t,
                 videoUrl: f.showYourStyle.assetUrl
             },
-            O = {
+            E = {
                 name: 'yourSpace',
                 title: h.intl.string(h.t.Wme3nZ),
                 description: h.intl.string(h.t['/aAIqa']),
@@ -218,8 +218,8 @@ let et = (e, t) =>
         return {
             whatsNewBoxes: r ? [[b], [x, j]] : [[x], [_, j]],
             bestOfBoxes: [
-                [E],
                 [O],
+                [E],
                 [
                     C,
                     {

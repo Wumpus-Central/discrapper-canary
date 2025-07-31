@@ -12,8 +12,8 @@ var r = n(913527),
     c = n(594174),
     u = n(78839),
     d = n(431),
-    f = n(580130),
-    _ = n(358085),
+    _ = n(580130),
+    f = n(358085),
     p = n(74538),
     h = n(617799),
     m = n(84053),
@@ -44,10 +44,10 @@ function N(e) {
         let e = n.hasPremiumAtLeast(T.p9.TIER_2),
             t = c.default.getCurrentUser(),
             r = !!(null == n ? void 0 : n.hasActiveTrial) && p.ZP.isPremiumExactly(t, T.p9.TIER_0),
-            i = (0, _.isAndroid)() && n.paymentGateway !== S.gg$.GOOGLE;
+            i = (0, f.isAndroid)() && n.paymentGateway !== S.gg$.GOOGLE;
         if (e || r || i) return !1;
     }
-    return !(a.tq && f.Z.isFractionalPremiumActive());
+    return !(a.tq && _.Z.isFractionalPremiumActive());
 }
 function C() {
     var e;
@@ -59,7 +59,7 @@ function C() {
         {
             mostRecentSubscription: c,
             premiumSubscription: d,
-            previousPremiumSubscription: f
+            previousPremiumSubscription: _
         } = (0, o.cj)([u.Z], () => ({
             mostRecentSubscription: u.Z.getMostRecentPremiumTypeSubscription(),
             premiumSubscription: u.Z.getPremiumTypeSubscription(),
@@ -71,12 +71,12 @@ function C() {
         T = Date.now(),
         S = T > I;
     (0, y.Z)({ delay: S ? -1 : I - T });
-    let A = !a.tq || ((0, _.isAndroid)() && s),
+    let A = !a.tq || ((0, f.isAndroid)() && s),
         C = N({
             experimentEnabled: i,
             premiumSubscription: d,
             mostRecentSubscription: c,
-            previousPremiumSubscription: f
+            previousPremiumSubscription: _
         }),
         R = A && C && null == p && null != r && !n && null == O,
         { enabled: P } = h.Z.useExperiment(
@@ -95,10 +95,10 @@ async function R() {
         r = !(null == n ? void 0 : n.isClaimed()),
         { paymentsBlocked: i } = l.Z.getCurrentConfig({ location: '153d31_3' }, { autoTrackExposure: !1 }),
         { enabled: o } = (0, g.aW)(),
-        { enabled: f } = (0, m.oW)(),
-        { enabled: _ } = h.Z.getCurrentConfig({ location: '153d31_4' }, { autoTrackExposure: !1 }),
-        p = !a.tq || f;
-    if (r || i || !o || (t && !_) || !p || (d.Z.hasFetchedOffer() && (d.Z.hasAnyUnexpiredOffer() || d.Z.hasAnyUnexpiredDiscountOffer()))) return !1;
+        { enabled: _ } = (0, m.oW)(),
+        { enabled: f } = h.Z.getCurrentConfig({ location: '153d31_4' }, { autoTrackExposure: !1 }),
+        p = !a.tq || _;
+    if (r || i || !o || (t && !f) || !p || (d.Z.hasFetchedOffer() && (d.Z.hasAnyUnexpiredOffer() || d.Z.hasAnyUnexpiredDiscountOffer()))) return !1;
     (!u.Z.hasFetchedMostRecentPremiumTypeSubscription() && (null == (e = c.default.getCurrentUser()) ? void 0 : e.hasPurchasedFlag(T.in.PREMIUM_TIER_2)) && (await (0, s.ou)()), u.Z.hasFetchedSubscriptions() || (await (0, s.jg)()));
     let E = u.Z.getMostRecentPremiumTypeSubscription();
     return N({

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(520315),
     u = n(688465),
     d = n(314583),
-    f = n(388032),
-    _ = n(639746),
+    _ = n(388032),
+    f = n(639746),
     p = n(73433),
     h = n(413097);
 function m(e, t, n) {
@@ -59,15 +59,15 @@ function b(e) {
                     {
                         type: a.Y.USER_INSTALL,
                         icon: o.oLu,
-                        title: f.intl.string(f.t.aCg60N),
-                        subtitle: f.intl.string(f.t.YeiIUV),
+                        title: _.intl.string(_.t.aCg60N),
+                        subtitle: _.intl.string(_.t.YeiIUV),
                         beta: !1
                     },
                     {
                         type: a.Y.GUILD_INSTALL,
                         icon: o.QTo,
-                        title: f.intl.string(f.t.E64YCw),
-                        subtitle: f.intl.string(f.t.bbtoKi),
+                        title: _.intl.string(_.t.E64YCw),
+                        subtitle: _.intl.string(_.t.bbtoKi),
                         beta: !1
                     }
                 ].filter((e) => {
@@ -77,15 +77,15 @@ function b(e) {
             [t.integrationTypesConfig]
         );
     return (0, r.jsxs)('div', {
-        className: _.container,
+        className: f.container,
         children: [
             (0, r.jsxs)('header', {
                 id: c,
-                className: _.header,
+                className: f.header,
                 children: [
                     (0, r.jsx)(l.Z, {
                         src: p,
-                        className: _.appIcon,
+                        className: f.appIcon,
                         rendersPlaceholder: !0
                     }),
                     (0, r.jsx)(O, { application: t }),
@@ -93,25 +93,25 @@ function b(e) {
                 ]
             }),
             (0, r.jsx)('ul', {
-                className: _.rows,
+                className: f.rows,
                 children: m.map((e) =>
                     (0, r.jsxs)(
                         o.P3F,
                         {
                             tag: 'li',
-                            className: _.row,
+                            className: f.row,
                             onClick: () => n(e.type),
                             children: [
                                 (0, r.jsx)(e.icon, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: _.leftIcon
+                                    className: f.leftIcon
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: _.rowInner,
+                                    className: f.rowInner,
                                     children: [
                                         (0, r.jsxs)('div', {
-                                            className: _.rowDetails,
+                                            className: f.rowDetails,
                                             children: [
                                                 (0, r.jsx)(o.Text, {
                                                     variant: 'text-md/medium',
@@ -129,7 +129,7 @@ function b(e) {
                                         (0, r.jsx)(o.Fbu, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            className: _.rightIcon
+                                            className: f.rightIcon
                                         })
                                     ]
                                 })
@@ -148,9 +148,9 @@ function y(e) {
     return null == n || 0 === n.length
         ? null
         : (0, r.jsx)('div', {
-              className: _.detailsContainer,
+              className: f.detailsContainer,
               children: (0, r.jsx)('div', {
-                  className: _.overviewContainerNoVideo,
+                  className: f.overviewContainerNoVideo,
                   children: null != n && n.length > 0 ? (0, r.jsx)(I, { description: n }) : null
               })
           });
@@ -160,7 +160,7 @@ function O(e) {
         n = t.name,
         i = (0, s.vJ)(t);
     return (0, r.jsxs)('div', {
-        className: _.titleContainer,
+        className: f.titleContainer,
         children: [
             (0, r.jsx)(o.X6q, {
                 variant: 'heading-xl/extrabold',
@@ -169,11 +169,11 @@ function O(e) {
             }),
             i
                 ? (0, r.jsx)('div', {
-                      className: _.partnerLabelContainer,
+                      className: f.partnerLabelContainer,
                       children: (0, r.jsx)(o.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-default',
-                          children: f.intl.string(f.t.LO4f0N)
+                          children: _.intl.string(_.t.LO4f0N)
                       })
                   })
                 : null
@@ -202,11 +202,11 @@ function I(e) {
         { ref: E, isTransitioning: b, onTransitionEnd: y } = (0, c.Z)(g({ isExpanded: a }, m)),
         O = a || b;
     return (0, r.jsxs)('div', {
-        className: _.descriptionContainer,
+        className: f.descriptionContainer,
         children: [
             (0, r.jsx)('div', {
                 ref: E,
-                className: _.overflowHidden,
+                className: f.overflowHidden,
                 onTransitionEnd: y,
                 children: (0, r.jsx)(o.Text, {
                     ref: u,
@@ -219,13 +219,13 @@ function I(e) {
             }),
             null != h && h > v
                 ? (0, r.jsxs)(o.P3F, {
-                      className: _.expandableDescriptionClickable,
+                      className: f.expandableDescriptionClickable,
                       onClick: () => s((e) => !e),
                       children: [
                           (0, r.jsx)(o.Text, {
                               variant: 'text-sm/semibold',
                               color: 'text-brand',
-                              children: O ? f.intl.string(f.t.u4YJ8v) : f.intl.string(f.t['N/tajI'])
+                              children: O ? _.intl.string(_.t.u4YJ8v) : _.intl.string(_.t['N/tajI'])
                           }),
                           O
                               ? (0, r.jsx)(o.u04, {

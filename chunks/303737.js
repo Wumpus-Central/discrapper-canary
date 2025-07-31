@@ -1,11 +1,11 @@
 (n.d(t, {
-    GN: () => O,
+    GN: () => v,
     be: () => C,
     g4: () => b,
     m7: () => h,
-    r4: () => v,
-    sO: () => x,
-    yL: () => y
+    r4: () => O,
+    sO: () => y,
+    yL: () => x
 }),
     n(539854),
     n(388685),
@@ -23,9 +23,9 @@ var r = n(991637),
     p = n(144507),
     m = n(853439),
     f = n(981631),
-    _ = n(176505);
+    g = n(176505);
 i().shim();
-let g = {};
+let _ = {};
 function h(e) {
     let t = (0, l.e7)([s.Z], () => s.Z.getChannel(e)),
         n = (0, l.e7)([m.Z], () => m.Z.getChannel(e));
@@ -77,25 +77,25 @@ function E(e) {
 }
 function C(e) {
     let t = E(e);
-    ((g[e] = t),
+    ((_[e] = t),
         t.forEach((e) => {
-            let t = e.set('flags', _.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
+            let t = e.set('flags', g.zZ.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
             a.Z.dispatch({
                 type: 'CHANNEL_CREATE',
                 channel: t
             });
         }));
 }
-function O(e) {
+function v(e) {
     var t;
-    (null != (t = g[e]) ? t : E(e)).forEach((e) => {
+    (null != (t = _[e]) ? t : E(e)).forEach((e) => {
         a.Z.dispatch({
             type: 'CHANNEL_DELETE',
             channel: e
         });
     });
 }
-async function v(e, t) {
+async function O(e, t) {
     let n = [],
         r = [];
     (t.forEach((t) => {
@@ -124,7 +124,7 @@ async function v(e, t) {
                 }
             }));
 }
-function y(e, t) {
+function x(e, t) {
     var n, r;
     let i = d.n.getState().listings[e],
         l = null == i ? void 0 : i.usedTemplate;
@@ -168,6 +168,6 @@ function y(e, t) {
         hasChangeFromTemplate: !1
     };
 }
-function x(e) {
+function y(e) {
     return (0, p.H2)(e) && e.features.has(f.oNc.ROLE_SUBSCRIPTIONS_ENABLED) && (0, c.$F)() && (0, c.hQ)(e.id);
 }

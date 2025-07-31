@@ -56,7 +56,7 @@ function u(e, t) {
     );
 }
 let d = '--';
-function f(e) {
+function _(e) {
     switch (e.key) {
         case a.R8.ENTER:
         case a.R8.SPACE:
@@ -71,7 +71,7 @@ function f(e) {
             return a.Us.NAVIGATE_OUT;
     }
 }
-function _(e, t) {
+function f(e, t) {
     return null != t ? ''.concat((0, o.qR)(e, t.join(d))) : e;
 }
 function p(e, t) {
@@ -121,7 +121,7 @@ function m(e) {
             (e) => {
                 if (!E.current) return;
                 e.key === a.R8.ESCAPE && null != g && (e.stopPropagation(), e.preventDefault(), g());
-                let n = f(e);
+                let n = _(e);
                 switch (n) {
                     case a.Us.NAVIGATE_UP:
                     case a.Us.NAVIGATE_DOWN:
@@ -133,7 +133,7 @@ function m(e) {
                         var r;
                         if (e.repeat || h(e.target)) return;
                         if ((e.preventDefault(), e.stopPropagation(), A(!1), O({ type: n }), null != c)) return void c(v);
-                        let i = p(null != (r = e.target.ownerDocument) ? r : document, _(t, v));
+                        let i = p(null != (r = e.target.ownerDocument) ? r : document, f(t, v));
                         null == i || i.click();
                 }
             },
@@ -169,7 +169,7 @@ function m(e) {
             }),
             [t, R, P, w, D, v]
         ),
-        M = r.useCallback(
+        k = r.useCallback(
             (e) => {
                 let { path: n } = e;
                 return {
@@ -182,7 +182,7 @@ function m(e) {
             },
             [t, v, L, b.focusIndex, S]
         ),
-        k = r.useCallback(
+        M = r.useCallback(
             (e) => {
                 let { path: n, hasSubmenu: r = !1, navigable: i = !0, role: a = 'menuitem' } = e,
                     s = n.join(d);
@@ -211,11 +211,11 @@ function m(e) {
         () => ({
             dispatch: O,
             getContainerProps: x,
-            getSubmenuProps: M,
-            getItemProps: k,
+            getSubmenuProps: k,
+            getItemProps: M,
             isFocused: L,
             isUsingKeyboardNavigation: S
         }),
-        [O, x, M, k, L, S]
+        [O, x, k, M, L, S]
     );
 }

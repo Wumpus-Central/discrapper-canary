@@ -7,7 +7,7 @@ var a = n(824096),
     o = n(626135),
     s = n(981631);
 function l(e, t, n) {
-    let { featureEnabled: l, windowLength: c, allowedPoorFpsRatio: u, fpsThreshold: d, backoffTimeSec: f } = a.y.defaultConfig;
+    let { featureEnabled: l, windowLength: c, allowedPoorFpsRatio: u, fpsThreshold: d, backoffTimeSec: _ } = a.y.defaultConfig;
     o.default.track(s.rMx.VIDEO_TOGGLED, {
         video_toggle_reason: t,
         toggled_user_id: e,
@@ -17,7 +17,7 @@ function l(e, t, n) {
         video_health_manager_poor_fps_ratio: l ? u : null,
         video_health_manager_fps_threshold: l ? d : null,
         is_video_shown: n,
-        video_health_manager_backoff_time_seconds: l ? f : null
+        video_health_manager_backoff_time_seconds: l ? _ : null
     });
 }
 function c(e, t) {

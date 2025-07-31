@@ -41,7 +41,7 @@ function _() {
                         })
                 ]
             }),
-            (0, n.jsx)(C, {}),
+            (0, n.jsx)(v, {}),
             (0, n.jsx)(S, {}),
             i &&
                 (0, n.jsx)(u.zxk, {
@@ -72,7 +72,7 @@ let O = (e) => {
             })
         });
     },
-    C = () => {
+    v = () => {
         let e = l.useMemo(
                 () => [
                     {
@@ -141,12 +141,12 @@ let O = (e) => {
                     className: m.filterTitle,
                     children: b.intl.string(b.t.K1xGoK)
                 }),
-                (0, n.jsx)(v, { colors: e }),
-                (0, n.jsx)(v, { colors: t })
+                (0, n.jsx)(C, { colors: e }),
+                (0, n.jsx)(C, { colors: t })
             ]
         });
     },
-    v = (e) => {
+    C = (e) => {
         let { colors: t } = e,
             { colorFilters: r, onToggleColor: l } = (0, f.S)();
         return (0, n.jsx)('div', {

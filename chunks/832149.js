@@ -1,52 +1,73 @@
-r.d(t, { Z: () => a });
-var n = r(255367);
-r(73800);
-var l = r(481060),
-    i = r(215023);
-let a = (e) => {
-    let { product: t, analyticsLocations: a, overrideTitle: o, overrideDescription: s, shouldShowPromotionalExperience: c, shouldCheckoutWithOrbs: u, onCloseCallback: d, itemConsumed: p, purchaseType: f = i.o8.FIAT } = e;
-    (0, l.ZDy)(
+n.d(t, { Z: () => l });
+var r = n(255367);
+n(73800);
+var i = n(481060),
+    a = n(215023);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                o(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+let l = (e) => {
+    let { product: t, analyticsLocations: o, overrideTitle: l, overrideDescription: c, shouldShowPromotionalExperience: u, onCloseCallback: d, itemConsumed: _, purchaseType: f = a.o8.FIAT } = e;
+    (0, i.ZDy)(
         async () => {
-            let { default: e } = await Promise.resolve().then(r.bind(r, 331042));
-            return (r) =>
-                (0, n.jsx)(
+            if (t.skuId === a.Vt.FRACTIONAL_PREMIUM || t.skuId === a.Vt.ORB_PROFILE_BADGE) {
+                let { default: e } = await Promise.all([n.e('30141'), n.e('77198')]).then(n.bind(n, 509428));
+                return (n) =>
+                    (0, r.jsx)(
+                        e,
+                        s(
+                            {
+                                product: t,
+                                analyticsLocations: o,
+                                overrideTitle: l,
+                                overrideDescription: c,
+                                itemConsumed: _,
+                                purchaseType: a.o8.ORB
+                            },
+                            n
+                        )
+                    );
+            }
+            let { default: e } = await Promise.all([n.e('30141'), n.e('87624')]).then(n.bind(n, 331042));
+            return (n) =>
+                (0, r.jsx)(
                     e,
-                    (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var r = null != arguments[t] ? arguments[t] : {},
-                                n = Object.keys(r);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
-                                (n = n.concat(
-                                    Object.getOwnPropertySymbols(r).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                    })
-                                )),
-                                n.forEach(function (t) {
-                                    var n;
-                                    ((n = r[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: n,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0
-                                              })
-                                            : (e[t] = n));
-                                }));
-                        }
-                        return e;
-                    })(
+                    s(
                         {
                             product: t,
-                            analyticsLocations: a,
-                            overrideTitle: o,
-                            overrideDescription: s,
-                            shouldShowPromotionalExperience: c,
-                            shouldCheckoutWithOrbs: u,
-                            itemConsumed: p,
+                            analyticsLocations: o,
+                            overrideTitle: l,
+                            overrideDescription: c,
+                            shouldShowPromotionalExperience: u,
                             purchaseType: f
                         },
-                        r
+                        n
                     )
                 );
         },

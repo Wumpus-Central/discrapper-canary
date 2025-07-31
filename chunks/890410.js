@@ -36,7 +36,7 @@ function d(e) {
 function p(e) {
     var t,
         n,
-        { message: i, channel: p, content: m, className: f, compact: _, popoutProps: g, hideTimestamp: h = !1, withFooter: b = !1 } = e,
+        { message: i, channel: p, content: m, className: f, compact: g, popoutProps: _, hideTimestamp: h = !1, withFooter: b = !1 } = e,
         E = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -58,18 +58,18 @@ function p(e) {
         })(e, ['message', 'channel', 'content', 'className', 'compact', 'popoutProps', 'hideTimestamp', 'withFooter']);
     let C = (0, a.ZP)(i);
     return (0, r.jsx)('div', {
-        className: l()({ [u.withFooter]: b }, u.embedCard, { [u.compact]: _ }, f),
+        className: l()({ [u.withFooter]: b }, u.embedCard, { [u.compact]: g }, f),
         children: (0, r.jsx)(
             o.Z,
             ((t = d({}, E)),
             (n = n =
                 {
-                    className: l()(u.messageContainer, { [u.compact]: _ }),
+                    className: l()(u.messageContainer, { [u.compact]: g }),
                     childrenMessageContent: (0, r.jsx)(s.ZP, {
-                        className: l()(u.__invalid_messageContent, { [u.compact]: _ }),
+                        className: l()(u.__invalid_messageContent, { [u.compact]: g }),
                         message: i,
                         content: m,
-                        compact: null != _ && _
+                        compact: null != g && g
                     }),
                     childrenHeader: (0, r.jsx)(
                         c.ZP,
@@ -79,14 +79,14 @@ function p(e) {
                                 channel: p,
                                 author: C,
                                 guildId: null == p ? void 0 : p.guild_id,
-                                compact: _,
+                                compact: g,
                                 hideTimestamp: h,
-                                className: l()(u.header, { [u.compact]: _ })
+                                className: l()(u.header, { [u.compact]: g })
                             },
-                            null != g ? g : {}
+                            null != _ ? _ : {}
                         )
                     ),
-                    compact: _,
+                    compact: g,
                     author: C
                 }),
             Object.getOwnPropertyDescriptors

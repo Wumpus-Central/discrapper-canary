@@ -1,47 +1,45 @@
-n.d(e, { Z: () => _ });
+n.d(e, { Z: () => h });
 var r = n(255367);
 n(73800);
-var s = n(755721),
-    i = n(442837),
-    o = n(594174),
-    c = n(51144),
-    a = n(473092),
+var i = n(481060),
+    s = n(442837),
+    a = n(594174),
+    o = n(51144),
+    c = n(473092),
     l = n(955708),
-    u = n(850165),
-    d = n(388032),
+    d = n(850165),
+    u = n(388032),
     E = n(948582),
-    h = n(282668);
-function _(t) {
-    let { senderId: e, trackAnalyticsEvent: n, onNavigate: _ } = t,
-        N = (0, i.e7)([o.default], () => {
-            let t = o.default.getUser(e);
-            return c.ZP.getName(t);
+    _ = n(282668);
+function h(t) {
+    let { senderId: e, trackAnalyticsEvent: n, onNavigate: h } = t,
+        p = (0, s.e7)([a.default], () => {
+            let t = a.default.getUser(e);
+            return o.ZP.getName(t);
         });
-    return (0, r.jsx)(u.Z, {
-        header: d.intl.string(d.t.sSMgCw),
-        description: d.intl.formatToPlainString(d.t.q2QrTU, { username: N }),
-        heroImageSrc: h,
-        heroImageAlt: d.intl.string(d.t['3QhxXF']),
+    return (0, r.jsx)(d.Z, {
+        header: u.intl.string(u.t.sSMgCw),
+        description: u.intl.formatToPlainString(u.t.q2QrTU, { username: p }),
+        heroImageSrc: _,
+        heroImageAlt: u.intl.string(u.t['3QhxXF']),
         children: (0, r.jsxs)('div', {
             className: E.buttonContainer,
             children: [
-                (0, r.jsx)(s.zx, {
-                    color: s.zx.Colors.BRAND,
-                    size: s.zx.Sizes.LARGE,
-                    className: E.button,
+                (0, r.jsx)(i.zxk, {
+                    text: u.intl.string(u.t['+o4Q7e']),
+                    variant: 'primary',
+                    fullWidth: !0,
                     onClick: () => {
-                        (_(l.x.TAKE_ACTION), n(a.NM.USER_TAKEOVER_MODAL_TAKE_ACTION));
-                    },
-                    children: d.intl.string(d.t['+o4Q7e'])
+                        (h(l.x.TAKE_ACTION), n(c.NM.USER_TAKEOVER_MODAL_TAKE_ACTION));
+                    }
                 }),
-                (0, r.jsx)(s.zx, {
-                    color: s.zx.Colors.PRIMARY,
-                    size: s.zx.Sizes.LARGE,
-                    className: E.button,
+                (0, r.jsx)(i.zxk, {
+                    text: u.intl.string(u.t.xLkGzM),
+                    variant: 'secondary',
+                    fullWidth: !0,
                     onClick: () => {
-                        (_(l.x.SAFETY_TIPS), n(a.NM.USER_TAKEOVER_MODAL_SAFETY_TIPS));
-                    },
-                    children: d.intl.string(d.t.xLkGzM)
+                        (h(l.x.SAFETY_TIPS), n(c.NM.USER_TAKEOVER_MODAL_SAFETY_TIPS));
+                    }
                 })
             ]
         })

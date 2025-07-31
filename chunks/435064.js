@@ -8,8 +8,8 @@ var r,
     c = n(314897),
     u = n(594174),
     d = n(630388),
-    f = n(358085),
-    _ = n(894694),
+    _ = n(358085),
+    f = n(894694),
     p = n(356659),
     h = n(981631),
     m = n(37113);
@@ -108,14 +108,14 @@ async function x() {
     let e = await o.Z.remoteApp.getPath('documents');
     ((L.clipsSettings.storageLocation = e), ei.emitChange());
 }
-function M(e) {
+function k(e) {
     let { classification: t } = e,
         n = L.hardwareClassification;
-    ((L.hardwareClassificationVersion = p.WM), (L.hardwareClassification = t), L.hardwareClassification === _.x.MEETS_AUTO_ENABLE && n !== _.x.MEETS_AUTO_ENABLE && (L.clipsSettings.clipsEnabled = !0));
+    ((L.hardwareClassificationVersion = p.WM), (L.hardwareClassification = t), L.hardwareClassification === f.x.MEETS_AUTO_ENABLE && n !== f.x.MEETS_AUTO_ENABLE && (L.clipsSettings.clipsEnabled = !0));
     let r = L.hardwareClassificationForDecoupled;
-    ((L.hardwareClassificationForDecoupled = t), L.hardwareClassificationForDecoupled === _.x.MEETS_AUTO_ENABLE && r !== _.x.MEETS_AUTO_ENABLE && L.clipsSettings.clipsEnabled && (L.clipsSettings.decoupledClipsEnabled = !0));
+    ((L.hardwareClassificationForDecoupled = t), L.hardwareClassificationForDecoupled === f.x.MEETS_AUTO_ENABLE && r !== f.x.MEETS_AUTO_ENABLE && L.clipsSettings.clipsEnabled && (L.clipsSettings.decoupledClipsEnabled = !0));
 }
-function k(e) {
+function M(e) {
     let { clip: t } = e;
     for (let [e, n] of I.entries())
         if (n.id === t.id) {
@@ -328,7 +328,7 @@ class er extends (r = i.ZP.DeviceSettingsStore) {
     }
     isDecoupledGameClippingEnabled() {
         var e, t;
-        return null != (t = null == (e = u.default.getCurrentUser()) ? void 0 : e.isStaff()) && t && (0, f.isWindows)();
+        return null != (t = null == (e = u.default.getCurrentUser()) ? void 0 : e.isStaff()) && t && (0, _.isWindows)();
     }
     hasClips() {
         return L.hasClips;
@@ -417,11 +417,11 @@ let ei = new er(a.Z, {
         CLIPS_CLEAR_NEW_CLIP_IDS: $,
         CLIPS_LOAD_DIRECTORY_SUCCESS: X,
         CLIPS_DELETE_CLIP: Q,
-        CLIPS_UPDATE_METADATA: k,
+        CLIPS_UPDATE_METADATA: M,
         RTC_CONNECTION_FLAGS: ee,
         CLIPS_SHOW_CALL_WARNING: H,
         VOICE_CHANNEL_SELECT: Y,
-        CLIPS_CLASSIFY_HARDWARE: M,
+        CLIPS_CLASSIFY_HARDWARE: k,
         CLIPS_INIT: W,
         CLIPS_INIT_FAILURE: K,
         CLIPS_DISMISS_EDUCATION: en,

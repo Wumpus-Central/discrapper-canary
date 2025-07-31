@@ -32,8 +32,8 @@ function l(e, t, n) {
 let c = null,
     u = new WeakMap(),
     d = ['\uD83C\uDFFB', '\uD83C\uDFFC', '\uD83C\uDFFD', '\uD83C\uDFFE', '\uD83C\uDFFF'],
-    f = /^:([^\s:]+?(?:::skin-tone-\d)?):/,
     _ = /^:([^\s:]+?(?:::skin-tone-\d)?):/,
+    f = /^:([^\s:]+?(?:::skin-tone-\d)?):/,
     p = n(523558),
     h = /^(>:\(|>:\-\(|>=\(|>=\-\(|:"\)|:\-"\)|="\)|=\-"\)|<\/3|<\\3|:\-\\|:\-\/|=\-\\|=\-\/|:'\(|:'\-\(|:,\(|:,\-\(|='\(|='\-\(|=,\(|=,\-\(|:\(|:\-\(|=\(|=\-\(|<3|♡|\]:\(|\]:\-\(|\]=\(|\]=\-\(|o:\)|O:\)|o:\-\)|O:\-\)|0:\)|0:\-\)|o=\)|O=\)|o=\-\)|O=\-\)|0=\)|0=\-\)|:'D|:'\-D|:,D|:,\-D|='D|='\-D|=,D|=,\-D|:\*|:\-\*|=\*|=\-\*|x\-\)|X\-\)|:\||:\-\||=\||=\-\||:o|:\-o|:O|:\-O|=o|=\-o|=O|=\-O|:@|:\-@|=@|=\-@|:D|:\-D|=D|=\-D|:'\)|:'\-\)|:,\)|:,\-\)|='\)|='\-\)|=,\)|=,\-\)|:\)|:\-\)|=\)|=\-\)|\]:\)|\]:\-\)|\]=\)|\]=\-\)|:,'\(|:,'\-\(|;\(|;\-\(|=,'\(|=,'\-\(|:P|:\-P|=P|=\-P|8\-\)|B\-\)|,:\(|,:\-\(|,=\(|,=\-\(|,:\)|,:\-\)|,=\)|,=\-\)|:s|:\-S|:z|:\-Z|:\$|:\-\$|=s|=\-S|=z|=\-Z|=\$|=\-\$|;\)|;\-\))/,
     m = /[\u200d\ud800-\udfff\u0300-\u036f\ufe20-\ufe2f\u20d0-\u20ff\ufe0e\ufe0f\u270b\u2b50\u2728\u26a1\u26c5\u26c4\u2614\u2615\u26bd\u26be\u26f3\u26f5\u2693\u26fd\u26f2\u26fa\u26ea\u231a\u23f0\u231b\u23f3\u26ce\u2648\u2649\u264a\u264b\u264c\u264d\u264e\u264f\u2650\u2651\u2652\u2653\u270a\u274c\u2b55\u26d4\u2757\u2755\u2753\u2754\u2705\u274e\u267f\u23e9\u23ea\u23eb\u23ec\u2795\u2796\u2797\u27b0\u27bf\u26aa\u26ab\u25fe\u25fd\u2b1b\u2b1c\u26a7]/,
@@ -147,11 +147,11 @@ function x(e) {
     }
     return t;
 }
-function M(e) {
+function k(e) {
     return m.test(e);
 }
-function k(e) {
-    return e.replace(_, (e, t) => H(t, e));
+function M(e) {
+    return e.replace(f, (e, t) => H(t, e));
 }
 function j(e) {
     var t;
@@ -172,7 +172,7 @@ let U = String.fromCodePoint(917631),
     B = RegExp('^[\\u{E0061}-\\u{E007A}]$', 'u');
 function V(e, t) {
     var n;
-    if (!0 !== t && !M(e))
+    if (!0 !== t && !k(e))
         return [
             {
                 type: 'text',
@@ -212,7 +212,7 @@ function F(e) {
         .join('');
 }
 function Z(e) {
-    if (!M(e)) return null;
+    if (!k(e)) return null;
     let t = V(e, !0)
         .map((e) => ('text' === e.type ? e.text : e.emojiName))
         .join('');
@@ -244,8 +244,8 @@ let K = {
     getCategories: w,
     getByName: D,
     getByCategory: x,
-    contentHasUnicodeOrEmoji: M,
-    translateInlineEmojiToSurrogates: k,
+    contentHasUnicodeOrEmoji: k,
+    translateInlineEmojiToSurrogates: M,
     maybeTranslateSurrogatesToInlineEmoji: Z,
     findInlineEmojisFromSurrogates: V,
     translateSurrogatesToInlineEmoji: F,
@@ -263,8 +263,8 @@ let K = {
     },
     numDiversitySprites: v,
     numNonDiversitySprites: I,
-    EMOJI_NAME_RE: f,
-    EMOJI_NAME_AND_DIVERSITY_RE: _,
+    EMOJI_NAME_RE: _,
+    EMOJI_NAME_AND_DIVERSITY_RE: f,
     EMOJI_SHORTCUT_RE: h,
     hasSurrogates: function e(e) {
         return i()

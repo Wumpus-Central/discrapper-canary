@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(541716),
     u = n(752305),
     d = n(893718),
-    f = n(318766),
-    _ = n(931651),
+    _ = n(318766),
+    f = n(931651),
     p = n(131704),
     h = n(142550),
     m = n(981631),
@@ -76,7 +76,7 @@ let I = (0, p.kt)({
     type: m.d4z.DM
 });
 function T(e) {
-    let { placeholder: t, onEnter: n, setEditorRef: a, showEmojiButton: s = !1, renderAttachButton: l, autoFocus: f = !0, onFocus: _, channel: p, className: m } = e,
+    let { placeholder: t, onEnter: n, setEditorRef: a, showEmojiButton: s = !1, renderAttachButton: l, autoFocus: _ = !0, onFocus: f, channel: p, className: m } = e,
         [g, b] = i.useState(''),
         [O, T] = i.useState((0, u.JM)('')),
         S = () => {
@@ -120,8 +120,8 @@ function T(e) {
                   }));
         },
         setEditorRef: a,
-        focused: f,
-        onFocus: _,
+        focused: _,
+        onFocus: f,
         disableThemedBackground: !0,
         emojiPickerCloseOnModalOuterClick: !0,
         disabled: !1,
@@ -168,7 +168,7 @@ let S = (e, t) => {
                             (0, r.jsx)('div', {
                                 className: e,
                                 ref: u,
-                                children: (0, r.jsx)(_.$, {
+                                children: (0, r.jsx)(f.$, {
                                     messageId: m.lds,
                                     channel: I,
                                     closePopout: () => {
@@ -195,7 +195,7 @@ let S = (e, t) => {
                                 'div',
                                 v(y({ ref: d }, e), {
                                     className: E.reaction,
-                                    children: (0, r.jsx)(f.Z, {
+                                    children: (0, r.jsx)(_.Z, {
                                         active: !1,
                                         tabIndex: 0,
                                         onClick: () => {

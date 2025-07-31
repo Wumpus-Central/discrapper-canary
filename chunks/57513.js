@@ -8,13 +8,13 @@ var r = n(544891),
     c = n(129542),
     u = n(70956),
     d = n(981631);
-let f = 10 * u.Z.Millis.MINUTE,
-    _ = 10 * u.Z.Millis.MINUTE,
+let _ = 10 * u.Z.Millis.MINUTE,
+    f = 10 * u.Z.Millis.MINUTE,
     p = +u.Z.Millis.MINUTE,
     h = {};
 function m(e, t) {
     (null == h[t] && (h[t] = new a.V7()),
-        h[t].start(f + Math.random() * _, () => {
+        h[t].start(_ + Math.random() * f, () => {
             null != l.Z.getLibraryApplication(e, t) && g(e, t);
         }));
 }

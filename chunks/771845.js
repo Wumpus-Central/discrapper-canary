@@ -8,8 +8,8 @@ var i = n(348327),
     c = n(727258),
     u = n(41776),
     d = n(581883),
-    f = n(251625),
-    _ = n(823379),
+    _ = n(251625),
+    f = n(823379),
     p = n(664915),
     h = n(486472),
     m = n(271383),
@@ -138,17 +138,17 @@ function D(e) {
     }
     let o = T.getNode(t);
     if (null == o) return !1;
-    let l = o.children.map((e) => e.id).filter(_.lm),
+    let l = o.children.map((e) => e.id).filter(f.lm),
         u = new Set(l),
         d = new Set(n),
-        f = new Set([...l].filter((e) => !d.has(e)));
+        _ = new Set([...l].filter((e) => !d.has(e)));
     (n
         .filter((e) => !u.has(e))
         .forEach((e) => {
             let t = T.getNode(e);
             null != t && T.moveInto(t, o, !0);
         }),
-        f.forEach((e) => {
+        _.forEach((e) => {
             let t = T.getNode(e);
             null != t && T.moveNextTo(t, o, !0);
         }));
@@ -159,7 +159,7 @@ function L(e) {
     if (null == n || n.type !== c.eD.FOLDER) return !1;
     n.children
         .map((e) => e.id)
-        .filter(_.lm)
+        .filter(f.lm)
         .forEach((e) => {
             let t = T.getNode(e);
             null != t && T.moveNextTo(t, n, !0);
@@ -173,14 +173,14 @@ function x(e) {
     let o = 'string' == typeof n ? new Date(n) : n;
     return o !== a.joinedAt && null != o && C();
 }
-function M(e) {
+function k(e) {
     let { folderId: t } = e,
         n = T.getNode(t),
         r = p.Z.isFolderExpanded(t);
     if (null == n || n.type !== c.eD.FOLDER || n.expanded === r) return !1;
     U(n, r);
 }
-function k(e) {
+function M(e) {
     let { folderId: t, expanded: n } = e,
         r = T.getNode(t);
     if (null == r || r.type !== c.eD.FOLDER || r.expanded === n) return !1;
@@ -193,9 +193,9 @@ function U(e, t) {
     let n = T.cloneNode(e);
     (s()(n.id === e.id, '[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.'), (n.expanded = t), T.replaceNode(e, n));
 }
-let G = (0, f.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
-    B = (0, f.oH)((e, t) => e.getRoots().map(A)),
-    V = (0, f.oH)((e, t) => {
+let G = (0, _.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
+    B = (0, _.oH)((e, t) => e.getRoots().map(A)),
+    V = (0, _.oH)((e, t) => {
         let n = [];
         function r(e) {
             switch (e.type) {
@@ -207,7 +207,7 @@ let G = (0, f.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
         }
         return (r(e.root), n);
     }),
-    F = (0, f.oH)((e, t) => e.root.children.map(A));
+    F = (0, _.oH)((e, t) => e.root.children.map(A));
 class Z extends E.Z {
     initialize() {
         this.waitFor(g.Z, b.ZP, d.Z, h.Z, u.Z, p.Z, l.Z);
@@ -252,8 +252,8 @@ class Z extends E.Z {
             GUILD_FOLDER_CREATE_LOCAL: w,
             GUILD_FOLDER_EDIT_LOCAL: D,
             GUILD_FOLDER_DELETE_LOCAL: L,
-            TOGGLE_GUILD_FOLDER_EXPAND: M,
-            SET_GUILD_FOLDER_EXPANDED: k,
+            TOGGLE_GUILD_FOLDER_EXPAND: k,
+            SET_GUILD_FOLDER_EXPANDED: M,
             GUILD_FOLDER_COLLAPSE: j
         }),
             O(this, 'loadCache', () => {

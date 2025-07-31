@@ -1,91 +1,79 @@
-n.d(t, { R: () => E });
-var r = n(255367);
-n(73800);
-var i = n(120356),
-    a = n.n(i),
-    o = n(979554),
-    s = n(481060),
-    l = n(1585),
-    c = n(125988),
-    u = n(998502),
-    d = n(388032),
-    f = n(614490);
-function _(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function p(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
-            )),
-            r.forEach(function (t) {
-                _(e, t, n[t]);
-            }));
-    }
-    return e;
-}
-function h(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        (t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r));
-    }
-    return n;
-}
-function m(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let g = u.ZP.getEnableHardwareAcceleration() ? s.Xo$ : s.qEK,
-    E = (e) => {
-        let { item: t, user: n, isHighlighted: i = !1, isPurchased: u = !1, avatarSize: _ = s.EFr.SIZE_152, avatarPlaceholderSrc: h } = e,
-            E = (0, l.y9)(_),
+r.d(t, { R: () => g });
+var n = r(255367);
+r(73800);
+var l = r(120356),
+    i = r.n(l),
+    a = r(979554),
+    o = r(481060),
+    s = r(1585),
+    c = r(125988),
+    u = r(998502),
+    d = r(388032),
+    p = r(614490);
+let f = u.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK,
+    g = (e) => {
+        var t, r;
+        let { item: l, user: u, isHighlighted: g = !1, isPurchased: h = !1, avatarSize: b = o.EFr.SIZE_152, avatarPlaceholderSrc: m } = e,
+            _ = (0, s.y9)(b),
             {
-                avatarDecorationSrc: b,
-                eventHandlers: y,
-                avatarPlaceholderSrc: O
+                avatarDecorationSrc: O,
+                eventHandlers: v,
+                avatarPlaceholderSrc: C
             } = (0, c.Z)({
-                user: n,
-                avatarDecorationOverride: (null == t ? void 0 : t.type) === o.Z.AVATAR_DECORATION ? t : void 0,
-                size: E,
-                onlyAnimateOnHover: !i
-            }),
-            v = d.intl.formatToPlainString(d.t.Do2lxM, { a11y_text: t.label });
-        return (0, r.jsx)(
-            g,
-            m(p({}, y), {
-                avatarDecoration: b,
-                src: i ? (null == n ? void 0 : n.getAvatarURL(void 0, 152, !0)) : null != h ? h : O,
-                imageClassName: i ? f.fadeInAvatarImg : void 0,
-                className: a()(f.avatar, { [f.avatarPurchased]: u && !i }),
+                user: u,
+                avatarDecorationOverride: (null == l ? void 0 : l.type) === a.Z.AVATAR_DECORATION ? l : void 0,
                 size: _,
-                'aria-label': v
-            })
+                onlyAnimateOnHover: !g
+            }),
+            E = d.intl.formatToPlainString(d.t.Do2lxM, { a11y_text: l.label });
+        return (0, n.jsx)(
+            f,
+            ((t = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var r = null != arguments[t] ? arguments[t] : {},
+                        n = Object.keys(r);
+                    ('function' == typeof Object.getOwnPropertySymbols &&
+                        (n = n.concat(
+                            Object.getOwnPropertySymbols(r).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                            })
+                        )),
+                        n.forEach(function (t) {
+                            var n;
+                            ((n = r[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: n,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = n));
+                        }));
+                }
+                return e;
+            })({}, v)),
+            (r = r =
+                {
+                    avatarDecoration: O,
+                    src: g ? (null == u ? void 0 : u.getAvatarURL(void 0, 152, !0)) : null != m ? m : C,
+                    imageClassName: g ? p.fadeInAvatarImg : void 0,
+                    className: i()(p.avatar, { [p.avatarPurchased]: h && !g }),
+                    size: b,
+                    'aria-label': E
+                }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                : (function (e, t) {
+                      var r = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var n = Object.getOwnPropertySymbols(e);
+                          r.push.apply(r, n);
+                      }
+                      return r;
+                  })(Object(r)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                  }),
+            t)
         );
     };

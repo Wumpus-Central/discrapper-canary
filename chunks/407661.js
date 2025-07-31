@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(367907),
     u = n(7284),
     d = n(739566),
-    f = n(884902),
-    _ = n(623292),
+    _ = n(884902),
+    f = n(623292),
     p = n(703656),
     h = n(665906),
     m = n(488131),
@@ -40,7 +40,7 @@ function T(e, t) {
 function S(e) {
     let { channel: t, message: n, replyChainLength: a } = e;
     function o() {
-        ((0, _.A6)(t.id), (0, m.R6)(t, n, 'Reply Chain Nudge'));
+        ((0, f.A6)(t.id), (0, m.R6)(t, n, 'Reply Chain Nudge'));
     }
     let s = i.useRef(a);
     return (
@@ -85,17 +85,17 @@ function A(e) {
     let { reply: t, chatInputType: n } = e,
         { channel: i, message: a, shouldMention: s, showMentionToggle: c } = t,
         { guildId: m, nick: g, colorString: I, colorStrings: A, colorRoleName: N, authorId: C, displayNameStyles: R } = (0, d.ZP)(a),
-        P = (0, f.X7)(m, C, A),
+        P = (0, _.X7)(m, C, A),
         w = (0, u.j)({ displayNameStyles: R }),
         D = T(i, a),
         L = (0, h.NE)(i, a),
         x = n.showThreadPromptOnReply && D >= v && L,
-        M = () => (0, p.uL)(b.Z5c.CHANNEL(i.getGuildId(), i.id, a.id));
-    function k(e) {
-        (e.stopPropagation(), (0, _.qx)(i.id, !s));
+        k = () => (0, p.uL)(b.Z5c.CHANNEL(i.getGuildId(), i.id, a.id));
+    function M(e) {
+        (e.stopPropagation(), (0, f.qx)(i.id, !s));
     }
     function j(e) {
-        (e.stopPropagation(), (0, _.A6)(i.id));
+        (e.stopPropagation(), (0, f.A6)(i.id));
     }
     return (0, r.jsx)('div', {
         className: O.clipContainer,
@@ -106,7 +106,7 @@ function A(e) {
                     className: O.replyBar,
                     children: [
                         (0, r.jsx)(l.P3F, {
-                            onClick: M,
+                            onClick: k,
                             focusProps: {
                                 offset: {
                                     top: -8,
@@ -149,7 +149,7 @@ function A(e) {
                                                     return (0, r.jsx)(l.P3F, {
                                                         role: 'switch',
                                                         'aria-checked': s,
-                                                        onClick: k,
+                                                        onClick: M,
                                                         onMouseEnter: t,
                                                         onMouseLeave: n,
                                                         onFocus: i,

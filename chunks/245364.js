@@ -72,7 +72,7 @@
         return i;
     }
     function l(e, t) {
-        return c(e) || u(e, t) || d(e, t) || _();
+        return c(e) || u(e, t) || d(e, t) || f();
     }
     function c(e) {
         if (Array.isArray(e)) return e;
@@ -101,18 +101,18 @@
     }
     function d(e, t) {
         if (e) {
-            if ('string' == typeof e) return f(e, t);
+            if ('string' == typeof e) return _(e, t);
             var n = Object.prototype.toString.call(e).slice(8, -1);
             if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
-            if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return f(e, t);
+            if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _(e, t);
         }
     }
-    function f(e, t) {
+    function _(e, t) {
         (null == t || t > e.length) && (t = e.length);
         for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
         return r;
     }
-    function _() {
+    function f() {
         throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
     }
     function p(e) {
@@ -234,11 +234,11 @@
             var u = Object.keys(s);
             if (u.length !== a.length) return !1;
             var d = t,
-                f = n,
-                _ = function (t) {
-                    return e(d[t], f[t]);
+                _ = n,
+                f = function (t) {
+                    return e(d[t], _[t]);
                 };
-            return u.every(_);
+            return u.every(f);
         },
         R = function (e, t, n) {
             return T(e)
@@ -287,11 +287,11 @@
         },
         x = t.createContext(null);
     x.displayName = 'ElementsContext';
-    var M = function (e, t) {
+    var k = function (e, t) {
             if (!e) throw Error('Could not find Elements context; You need to wrap the part of your app that '.concat(t, ' in an <Elements> provider.'));
             return e;
         },
-        k = function (e) {
+        M = function (e) {
             var n = e.stripe,
                 r = e.options,
                 i = e.children,
@@ -365,12 +365,12 @@
                 t.createElement(x.Provider, { value: s }, i)
             );
         };
-    k.propTypes = {
+    M.propTypes = {
         stripe: O.any,
         options: O.object
     };
     var j = function (e) {
-            return M(t.useContext(x), e);
+            return k(t.useContext(x), e);
         },
         U = function () {
             return j('calls useElements()').elements;
@@ -418,9 +418,9 @@
                     2
                 ),
                 d = u[0],
-                f = u[1],
-                _ = function (e, t) {
-                    f(function (n) {
+                _ = u[1],
+                f = function (e, t) {
+                    _(function (n) {
                         return n.stripe && n.checkoutSdk
                             ? n
                             : {
@@ -440,7 +440,7 @@
                               !p.current &&
                               ((p.current = !0),
                               a.stripe.initCheckout(r).then(function (e) {
-                                  e && (_(a.stripe, e), e.on('change', c));
+                                  e && (f(a.stripe, e), e.on('change', c));
                               }))
                             : a.stripePromise.then(function (t) {
                                   t &&
@@ -448,7 +448,7 @@
                                       !p.current &&
                                       ((p.current = !0),
                                       t.initCheckout(r).then(function (e) {
-                                          e && (_(t, e), e.on('change', c));
+                                          e && (f(t, e), e.on('change', c));
                                       }));
                               }),
                         function () {
@@ -509,7 +509,7 @@
             var n = t.useContext(V),
                 r = t.useContext(x);
             if (n && r) throw Error('You cannot wrap the part of your app that '.concat(e, ' in both <CheckoutProvider> and <Elements> providers.'));
-            return n ? F(n, e) : M(r, e);
+            return n ? F(n, e) : k(r, e);
         },
         q = function () {
             K('calls useCheckout()');
@@ -530,8 +530,8 @@
                         c = n.options,
                         u = void 0 === c ? {} : c,
                         d = n.onBlur,
-                        f = n.onFocus,
-                        _ = n.onReady,
+                        _ = n.onFocus,
+                        f = n.onReady,
                         p = n.onChange,
                         h = n.onEscape,
                         m = n.onClick,
@@ -551,7 +551,7 @@
                         L = t.useRef(null),
                         x = t.useRef(null);
                     (v(w, 'blur', d),
-                        v(w, 'focus', f),
+                        v(w, 'focus', _),
                         v(w, 'escape', h),
                         v(w, 'click', m),
                         v(w, 'loaderror', g),
@@ -562,12 +562,12 @@
                         v(w, 'shippingaddresschange', T),
                         v(w, 'shippingratechange', S),
                         v(w, 'change', p),
-                        _ &&
+                        f &&
                             (i =
                                 'expressCheckout' === e
-                                    ? _
+                                    ? f
                                     : function () {
-                                          _(w);
+                                          f(w);
                                       }),
                         v(w, 'ready', i),
                         t.useLayoutEffect(
@@ -603,16 +603,16 @@
                             },
                             [N, C, u]
                         ));
-                    var M = I(u);
+                    var k = I(u);
                     return (
                         t.useEffect(
                             function () {
                                 if (L.current) {
-                                    var e = R(u, M, ['paymentRequest']);
+                                    var e = R(u, k, ['paymentRequest']);
                                     e && 'update' in L.current && L.current.update(e);
                                 }
                             },
-                            [u, M]
+                            [u, k]
                         ),
                         t.useLayoutEffect(function () {
                             return function () {
@@ -726,23 +726,23 @@
                     },
                     [s]
                 ));
-            var f = I(n);
+            var _ = I(n);
             t.useEffect(
                 function () {
-                    null !== f && f !== n && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the `stripe` prop after setting it.');
+                    null !== _ && _ !== n && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the `stripe` prop after setting it.');
                 },
-                [f, n]
+                [_, n]
             );
-            var _ = I(r);
+            var f = I(r);
             return (
                 t.useEffect(
                     function () {
-                        if (null != _) {
+                        if (null != f) {
                             if (null == r) return void console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot unset options after setting them.');
-                            (void 0 === r.clientSecret && void 0 === r.fetchClientSecret && console.warn('Invalid props passed to EmbeddedCheckoutProvider: You must provide one of either `options.fetchClientSecret` or `options.clientSecret`.'), null != _.clientSecret && r.clientSecret !== _.clientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the client secret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != _.fetchClientSecret && r.fetchClientSecret !== _.fetchClientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change fetchClientSecret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != _.onComplete && r.onComplete !== _.onComplete && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onComplete option after setting it.'), null != _.onShippingDetailsChange && r.onShippingDetailsChange !== _.onShippingDetailsChange && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onShippingDetailsChange option after setting it.'), null != _.onLineItemsChange && r.onLineItemsChange !== _.onLineItemsChange && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onLineItemsChange option after setting it.'));
+                            (void 0 === r.clientSecret && void 0 === r.fetchClientSecret && console.warn('Invalid props passed to EmbeddedCheckoutProvider: You must provide one of either `options.fetchClientSecret` or `options.clientSecret`.'), null != f.clientSecret && r.clientSecret !== f.clientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the client secret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != f.fetchClientSecret && r.fetchClientSecret !== f.fetchClientSecret && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change fetchClientSecret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.'), null != f.onComplete && r.onComplete !== f.onComplete && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onComplete option after setting it.'), null != f.onShippingDetailsChange && r.onShippingDetailsChange !== f.onShippingDetailsChange && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onShippingDetailsChange option after setting it.'), null != f.onLineItemsChange && r.onLineItemsChange !== f.onLineItemsChange && console.warn('Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onLineItemsChange option after setting it.'));
                         }
                     },
-                    [_, r]
+                    [f, r]
                 ),
                 t.createElement(ee.Provider, { value: u }, i)
             );
@@ -794,8 +794,8 @@
         ec = J('card', $),
         eu = J('cardNumber', $),
         ed = J('cardExpiry', $),
-        ef = J('cardCvc', $),
-        e_ = J('fpxBank', $),
+        e_ = J('cardCvc', $),
+        ef = J('fpxBank', $),
         ep = J('iban', $),
         eh = J('idealBank', $),
         em = J('p24Bank', $),
@@ -810,5 +810,5 @@
         eS = J('paymentMethodMessaging', $),
         eA = J('affirmMessage', $),
         eN = J('afterpayClearpayMessage', $);
-    ((e.AddressElement = eI), (e.AffirmMessageElement = eA), (e.AfterpayClearpayMessageElement = eN), (e.AuBankAccountElement = el), (e.CardCvcElement = ef), (e.CardElement = ec), (e.CardExpiryElement = ed), (e.CardNumberElement = eu), (e.CheckoutProvider = W), (e.CurrencySelectorElement = ey), (e.Elements = k), (e.ElementsConsumer = G), (e.EmbeddedCheckout = eo), (e.EmbeddedCheckoutProvider = er), (e.EpsBankElement = eg), (e.ExpressCheckoutElement = eb), (e.FpxBankElement = e_), (e.IbanElement = ep), (e.IdealBankElement = eh), (e.LinkAuthenticationElement = ev), (e.P24BankElement = em), (e.PaymentElement = eE), (e.PaymentMethodMessagingElement = eS), (e.PaymentRequestButtonElement = eO), (e.ShippingAddressElement = eT), (e.useCheckout = q), (e.useElements = U), (e.useStripe = es));
+    ((e.AddressElement = eI), (e.AffirmMessageElement = eA), (e.AfterpayClearpayMessageElement = eN), (e.AuBankAccountElement = el), (e.CardCvcElement = e_), (e.CardElement = ec), (e.CardExpiryElement = ed), (e.CardNumberElement = eu), (e.CheckoutProvider = W), (e.CurrencySelectorElement = ey), (e.Elements = M), (e.ElementsConsumer = G), (e.EmbeddedCheckout = eo), (e.EmbeddedCheckoutProvider = er), (e.EpsBankElement = eg), (e.ExpressCheckoutElement = eb), (e.FpxBankElement = ef), (e.IbanElement = ep), (e.IdealBankElement = eh), (e.LinkAuthenticationElement = ev), (e.P24BankElement = em), (e.PaymentElement = eE), (e.PaymentMethodMessagingElement = eS), (e.PaymentRequestButtonElement = eO), (e.ShippingAddressElement = eT), (e.useCheckout = q), (e.useElements = U), (e.useStripe = es));
 });

@@ -1,6 +1,6 @@
 (n.d(t, {
-    Z: () => _,
-    o: () => f
+    Z: () => f,
+    o: () => _
 }),
     n(388685));
 var r = n(392711),
@@ -12,7 +12,7 @@ var r = n(392711),
     c = n(804739),
     u = n(981631);
 let d = 50;
-async function f() {
+async function _() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l.Z.entitledBranchIds;
     if (!(0, c.Q)() || 0 === e.length) return [];
     let t = i().chunk(e, d);
@@ -46,7 +46,7 @@ async function f() {
         );
     }
 }
-async function _(e) {
+async function f(e) {
     try {
         let t = await a.tn.get({
                 url: u.ANM.OWNED_APPLICATION_BRANCHES(e),

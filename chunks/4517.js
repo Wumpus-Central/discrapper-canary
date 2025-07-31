@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(846519),
     u = n(481060),
     d = n(607070),
-    f = n(584973),
-    _ = n(100527),
+    _ = n(584973),
+    f = n(100527),
     p = n(906732),
     h = n(368326),
     m = n(74340),
@@ -58,7 +58,7 @@ function x(e) {
     }
     return e;
 }
-function M(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -70,12 +70,12 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -126,7 +126,7 @@ let B = i.forwardRef(function (e, t) {
                         return (t) =>
                             (0, r.jsx)(
                                 e,
-                                k(x({}, t), {
+                                M(x({}, t), {
                                     sourceAnalyticsLocations: s,
                                     location: 'UserProfileCustomStatusBubble',
                                     prompt: a
@@ -135,7 +135,7 @@ let B = i.forwardRef(function (e, t) {
                     }));
             },
             d = null != a ? a.label() : w.intl.string(w.t.evw0o6),
-            f = (0, r.jsxs)('div', {
+            _ = (0, r.jsxs)('div', {
                 className: D.content,
                 children: [
                     (0, r.jsx)(u.oFk, {
@@ -152,7 +152,7 @@ let B = i.forwardRef(function (e, t) {
             });
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(G, { children: f }),
+                (0, r.jsx)(G, { children: _ }),
                 (0, r.jsx)(u.tEY, {
                     ringClassName: D.ring,
                     children: (0, r.jsx)('div', {
@@ -186,25 +186,25 @@ let B = i.forwardRef(function (e, t) {
     }),
     V = i.forwardRef(function (e, t) {
         var n, a;
-        let { emoji: _, text: p, animate: m, className: E, renderToolbar: y, onShowToolbar: O, placeholderText: I, label: S, hasEntered: A = !0 } = e,
+        let { emoji: f, text: p, animate: m, className: E, renderToolbar: y, onShowToolbar: O, placeholderText: I, label: S, hasEntered: A = !0 } = e,
             N = (0, T.yi)(),
             { trackUserProfileAction: C } = (0, v.KZ)(),
             L = (0, h.p)({ location: 'CustomStatusBubble' }),
-            [x, M] = i.useState(!1);
+            [x, k] = i.useState(!1);
         i.useEffect(() => {
-            null != W.current ? M(W.current.getBoundingClientRect().height > P.Ow + P.P) : M(!1);
+            null != W.current ? k(W.current.getBoundingClientRect().height > P.Ow + P.P) : k(!1);
         }, [S, x]);
-        let k = null != _ ? P.Hp : 0,
+        let M = null != f ? P.Hp : 0,
             j = null != S ? P.du : 0,
-            U = (x && (null == _ || null != p) ? P._v : P.hT) + k + j,
-            B = P.YF + k + j,
+            U = (x && (null == f || null != p) ? P._v : P.hT) + M + j,
+            B = P.YF + M + j,
             V = i.useRef(null),
             F = i.useRef(null),
             Z = i.useRef(null),
             H = i.useRef(U),
             Y = i.useRef(B),
             W = i.useRef(null),
-            K = null != _ && null == p && null == S,
+            K = null != f && null == p && null == S,
             [z, q] = i.useState(!1),
             [X, Q] = i.useState(!0),
             [J, $] = i.useState(!K && A),
@@ -227,7 +227,7 @@ let B = i.forwardRef(function (e, t) {
             let e = F.current.getBoundingClientRect().height,
                 t = Z.current.getBoundingClientRect().height;
             ($(t > e), (H.current = e), (Y.current = t), ei({ maxHeight: ''.concat(Math.min(X ? H.current : Y.current, X ? U : B), 'px') }));
-        }, [ee, p, _, S, ei, X, U, B]);
+        }, [ee, p, f, S, ei, X, U, B]);
         let ea = (e) => {
                 J &&
                     (e
@@ -254,9 +254,9 @@ let B = i.forwardRef(function (e, t) {
                       })
                     : null,
             es =
-                null != _
-                    ? (0, r.jsx)(f.Z, {
-                          emoji: _,
+                null != f
+                    ? (0, r.jsx)(_.Z, {
+                          emoji: f,
                           animate: m,
                           hideTooltip: !1,
                           tooltipDelay: R.vB,
@@ -272,7 +272,7 @@ let B = i.forwardRef(function (e, t) {
                       })
                     : null,
             ec =
-                void 0 === I || (null != _ && L)
+                void 0 === I || (null != f && L)
                     ? null
                     : (0, r.jsx)(u.Text, {
                           variant: 'text-sm/normal',
@@ -287,12 +287,12 @@ let B = i.forwardRef(function (e, t) {
                 className: o()(D.content, x && D.singleLineTextClamp),
                 children: [eo, es, eu]
             }),
-            ef = (0, r.jsxs)('div', {
+            e_ = (0, r.jsxs)('div', {
                 ref: Z,
                 className: o()(D.content, D.unclamped),
                 children: [eo, es, eu]
             }),
-            e_ = (0, r.jsx)('div', {
+            ef = (0, r.jsx)('div', {
                 ref: t,
                 className: D.outer,
                 children: (0, r.jsx)('span', {
@@ -309,7 +309,7 @@ let B = i.forwardRef(function (e, t) {
             }),
             ep = (0, r.jsxs)(G, {
                 className: null != eo ? D.withLabel : void 0,
-                children: [eo, ed, ef]
+                children: [eo, ed, e_]
             });
         return null == O
             ? (0, r.jsxs)(r.Fragment, {
@@ -323,7 +323,7 @@ let B = i.forwardRef(function (e, t) {
                               tabIndex: 0,
                               className: o()(D.container, E),
                               'aria-label': w.intl.formatToPlainString(w.t.xRGqo6, {
-                                  emoji: null != (n = null == _ ? void 0 : _.name) ? n : '',
+                                  emoji: null != (n = null == f ? void 0 : f.name) ? n : '',
                                   status: p,
                                   label: null != S ? ''.concat((0, g.Z)(S), ':') : ''
                               }),
@@ -335,7 +335,7 @@ let B = i.forwardRef(function (e, t) {
                               },
                               onFocus: () => ea(!0),
                               onBlur: () => ea(!1),
-                              children: [e_, null == y ? void 0 : y(J)]
+                              children: [ef, null == y ? void 0 : y(J)]
                           })
                       })
                   ]
@@ -351,7 +351,7 @@ let B = i.forwardRef(function (e, t) {
                               tabIndex: 0,
                               className: o()(D.container, E),
                               'aria-label': w.intl.formatToPlainString(w.t.xRGqo6, {
-                                  emoji: null != (a = null == _ ? void 0 : _.name) ? a : '',
+                                  emoji: null != (a = null == f ? void 0 : f.name) ? a : '',
                                   status: p,
                                   label: null != S ? ''.concat((0, g.Z)(S), ':') : ''
                               }),
@@ -368,7 +368,7 @@ let B = i.forwardRef(function (e, t) {
                               onMouseLeave: () => {
                                   (O(!1), ea(!1));
                               },
-                              children: [e_, null == y ? void 0 : y(J)]
+                              children: [ef, null == y ? void 0 : y(J)]
                           })
                       })
                   ]
@@ -380,7 +380,7 @@ let B = i.forwardRef(function (e, t) {
         let [c, u] = i.useState(!1);
         return (0, r.jsx)(
             V,
-            k(x({}, l), {
+            M(x({}, l), {
                 ref: t,
                 emoji: n,
                 text: a,
@@ -400,16 +400,16 @@ function Z(e) {
     var { emoji: t, text: n, label: a, user: o, guildId: s, channelId: l, themeType: c } = e,
         u = j(e, ['emoji', 'text', 'label', 'user', 'guildId', 'channelId', 'themeType']);
     let { trackUserProfileAction: d } = (0, v.KZ)(),
-        { interactionType: f, interactionSource: _, resetInteraction: p } = (0, T.Xo)(),
-        h = _ === R.n_.STATUS && f === R.P.REACT,
-        m = _ === R.n_.STATUS && f === R.P.REPLY,
+        { interactionType: _, interactionSource: f, resetInteraction: p } = (0, T.Xo)(),
+        h = f === R.n_.STATUS && _ === R.P.REACT,
+        m = f === R.n_.STATUS && _ === R.P.REPLY,
         E = h || m,
         b = i.useRef(null),
         O = i.useRef(t),
         I = i.useRef(n);
     i.useEffect(() => {
-        _ === R.n_.STATUS && ((O.current !== t || I.current !== n) && p(), (O.current = t), (I.current = n));
-    }, [_, p, t, n]);
+        f === R.n_.STATUS && ((O.current !== t || I.current !== n) && p(), (O.current = t), (I.current = n));
+    }, [f, p, t, n]);
     let [C, P] = i.useState(!1),
         w = i.useCallback(
             (e) => {
@@ -418,10 +418,10 @@ function Z(e) {
             [E]
         ),
         L = (e) => (null == e ? null : null != e.id ? '`' + ':'.concat(e.name, ':') + '`' : y.ZP.translateSurrogatesToInlineEmoji(e.name)),
-        M = (e, t) => (null == e ? t : ''.concat(e, ' ').concat(t)),
+        k = (e, t) => (null == e ? t : ''.concat(e, ' ').concat(t)),
         U = () => {
             let e = L(t),
-                r = null == n ? e : M(e, n);
+                r = null == n ? e : k(e, n);
             return null != a ? ''.concat((0, g.Z)(a), ':\n> ').concat(r) : r;
         };
     return (0, r.jsx)(S.Z, {
@@ -440,7 +440,7 @@ function Z(e) {
                 user: o,
                 children: (0, r.jsx)(
                     V,
-                    k(x({}, u), {
+                    M(x({}, u), {
                         ref: b,
                         emoji: t,
                         text: n,
@@ -464,10 +464,10 @@ function Z(e) {
 }
 let H = i.forwardRef(function (e, t) {
     var n, i;
-    let { location: a, user: o, onCloseProfile: s, previewText: c, previewEmoji: u, previewLabel: d, placeholderText: f, prompt: h, disableToolbar: g = !1 } = e,
+    let { location: a, user: o, onCloseProfile: s, previewText: c, previewEmoji: u, previewLabel: d, placeholderText: _, prompt: h, disableToolbar: g = !1 } = e,
         b = j(e, ['location', 'user', 'onCloseProfile', 'previewText', 'previewEmoji', 'previewLabel', 'placeholderText', 'prompt', 'disableToolbar']),
         y = (0, E.Z)(o.id),
-        { analyticsLocations: v } = (0, p.ZP)(_.Z.USER_PROFILE_CUSTOM_STATUS_BUBBLE),
+        { analyticsLocations: v } = (0, p.ZP)(f.Z.USER_PROFILE_CUSTOM_STATUS_BUBBLE),
         T = (0, l.e7)([O.default], () => O.default.getId() === o.id),
         S = T && !g,
         A = (0, I.T)({ location: a }),
@@ -484,7 +484,7 @@ let H = i.forwardRef(function (e, t) {
                     {
                         emoji: e,
                         text: n,
-                        placeholderText: f,
+                        placeholderText: _,
                         label: i,
                         ref: t
                     },

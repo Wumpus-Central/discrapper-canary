@@ -1,8 +1,8 @@
 (n.d(t, {
     $0: () => d,
-    Tm: () => f,
+    Tm: () => _,
     ZP: () => p,
-    oT: () => _
+    oT: () => f
 }),
     n(388685),
     n(539854));
@@ -17,8 +17,8 @@ var r = n(73800),
     d = (function (e) {
         return ((e.PURCHASE = 'purchase'), (e.PREMIUM_PURCHASE = 'premium_purchase'), (e.PREVIEW = 'preview'), (e.PREMIUM_PREVIEW = 'premium_preview'), e);
     })({});
-let f = { id: 'None' },
-    _ = { id: 'Shop' },
+let _ = { id: 'None' },
+    f = { id: 'Shop' },
     p = () => {
         let e = (0, i.e7)([l.default], () => l.default.getCurrentUser()),
             t = c.ZP.canUseCollectibles(e),
@@ -41,7 +41,7 @@ let f = { id: 'None' },
             return [
                 {
                     section: 'purchase',
-                    items: [f, _, ...e.purchase],
+                    items: [_, f, ...e.purchase],
                     height: 12,
                     header: u.intl.string(u.t.VqmVqK)
                 },

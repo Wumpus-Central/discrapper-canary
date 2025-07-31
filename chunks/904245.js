@@ -8,8 +8,8 @@ var r = n(278074),
     c = n(673750),
     u = n(367907),
     d = n(287328),
-    f = n(86670),
-    _ = n(685736),
+    _ = n(86670),
+    f = n(685736),
     p = n(421474),
     h = n(234431),
     m = n(914498),
@@ -31,8 +31,8 @@ var r = n(278074),
     D = n(366980),
     L = n(467512),
     x = n(779832),
-    M = n(786761),
-    k = n(459618),
+    k = n(786761),
+    M = n(459618),
     j = n(541288),
     U = n(3148),
     G = n(48854),
@@ -64,9 +64,9 @@ var eo = n(701190),
     ec = n(158776),
     eu = n(306680),
     ed = n(300429),
-    ef = n(594174);
+    e_ = n(594174);
 n(626135);
-var e_ = n(70956),
+var ef = n(70956),
     ep = n(630388),
     eh = n(669079),
     em = n(63063),
@@ -148,7 +148,7 @@ function ex(e) {
     (0, b.ZP)(t).forEach((e) => {
         let { type: t, code: c, url: d } = e;
         if (t === E.g.INVITE)
-            eM({
+            ek({
                 inviteKey: c,
                 channelId: n,
                 messageId: r,
@@ -175,9 +175,9 @@ function ex(e) {
             let e = (0, p.Q)(c);
             null != e && (0, T.y)(e.applicationId, 'storefront_sku');
         } else if (t === E.g.ACTIVITY_BOOKMARK) {
-            var f;
+            var _;
             let e = (0, h.U)(d);
-            (0, m.z$)(c, m.Un.ACTIVITY, null != (f = e.referrerId) ? f : l, e.customId);
+            (0, m.z$)(c, m.Un.ACTIVITY, null != (_ = e.referrerId) ? _ : l, e.customId);
         } else if (t === E.g.EMBEDDED_ACTIVITY_INVITE) (0, m.z$)(c, m.Un.ACTIVITY_INVITE, l);
         else if (t === E.g.GUILD_PRODUCT);
         else if (t === E.g.SERVER_SHOP);
@@ -193,15 +193,15 @@ function ex(e) {
         else throw Error('Unknown coded link type: '.concat(t));
     });
 }
-function eM(e) {
+function ek(e) {
     var t, n;
     let { inviteKey: r, channelId: i, messageId: a, location: o, suggested: s = null, overrideProperties: l = {} } = e,
         c = ei.default.getId(),
         d = eo.Z.getInvite(r),
-        f = (0, P.fU)(r),
-        _ = null != d && (0, w.P1)(d),
+        _ = (0, P.fU)(r),
+        f = null != d && (0, w.P1)(d),
         p = null == d || null == (t = d.target_application) ? void 0 : t.id;
-    null != p && _ && (0, m.z$)(p, m.Un.ACTIVITY_INVITE, c);
+    null != p && f && (0, m.z$)(p, m.Un.ACTIVITY_INVITE, c);
     let h = ea.Z.getChannel(i);
     if (null != h) {
         let e = null;
@@ -222,12 +222,12 @@ function eM(e) {
                 eC(eA({}, t), {
                     location: o,
                     invite_type: e,
-                    invite_code: f.baseCode,
+                    invite_code: _.baseCode,
                     guild_id: h.getGuildId(),
                     channel_id: h.id,
                     message_id: a,
                     send_type: eO.a5g.DIRECT_MESSAGE,
-                    invite_guild_scheduled_event_id: f.guildScheduledEventId
+                    invite_guild_scheduled_event_id: _.guildScheduledEventId
                 }),
                 l
             )),
@@ -243,17 +243,17 @@ function eM(e) {
                 eC(eA({}, e), {
                     location: o,
                     invite_type: eO.dAT.FRIEND_INVITE,
-                    invite_code: f.baseCode,
+                    invite_code: _.baseCode,
                     message_id: a,
                     send_type: eO.a5g.DIRECT_MESSAGE,
-                    invite_guild_scheduled_event_id: f.guildScheduledEventId
+                    invite_guild_scheduled_event_id: _.guildScheduledEventId
                 }),
                 l
             )),
             u.ZP.trackWithMetadata(eO.rMx.INVITE_SENT, e));
     }
 }
-function ek(e, t, n, r, i) {
+function eM(e, t, n, r, i) {
     (0, eh.Q_)(e).forEach((e) => {
         let a = ea.Z.getChannel(t);
         null != a &&
@@ -477,7 +477,7 @@ let eG = {
         },
         jumpToMessage(e) {
             var t;
-            let { channelId: n, messageId: r, flash: i = !1, offset: a, context: o, extraProperties: s = null, isPreload: l, returnMessageId: c, skipLocalFetch: u, jumpType: d, avoidInitialScroll: f } = e;
+            let { channelId: n, messageId: r, flash: i = !1, offset: a, context: o, extraProperties: s = null, isPreload: l, returnMessageId: c, skipLocalFetch: u, jumpType: d, avoidInitialScroll: _ } = e;
             return (
                 'string' == typeof o && eB.trackJump(n, r, o, s),
                 null == eR || null == (t = eR.pauseAllMediaPlayers) || t.call(eR),
@@ -493,7 +493,7 @@ let eG = {
                     },
                     isPreload: l,
                     skipLocalFetch: u,
-                    avoidInitialScroll: f
+                    avoidInitialScroll: _
                 })
             );
         },
@@ -519,11 +519,11 @@ let eG = {
                     rejectWithError: !1
                 })
                 .then((e) => {
-                    if (e.body.length > 0) return (0, M.e5)(e.body[0]);
+                    if (e.body.length > 0) return (0, k.e5)(e.body[0]);
                 });
         },
         fetchMessages(e) {
-            let { channelId: t, before: n, after: r, limit: i, jump: o, focus: c, isPreload: u, skipLocalFetch: d, truncate: f, forICYMI: _, avoidInitialScroll: p } = e,
+            let { channelId: t, before: n, after: r, limit: i, jump: o, focus: c, isPreload: u, skipLocalFetch: d, truncate: _, forICYMI: f, avoidInitialScroll: p } = e,
                 h = ea.Z.getChannel(t),
                 m = I.Z.isConnectedOrOverlay(),
                 E = Date.now();
@@ -538,7 +538,7 @@ let eG = {
                     limit: i,
                     jump: o,
                     focus: c,
-                    truncate: f
+                    truncate: _
                 }))
             )
                 return;
@@ -605,9 +605,9 @@ let eG = {
                                         hasMoreAfter: h,
                                         limit: i,
                                         jump: o,
-                                        forICYMI: _,
+                                        forICYMI: f,
                                         isStale: !m || I.Z.lastTimeConnectedChanged() >= E,
-                                        truncate: f,
+                                        truncate: _,
                                         avoidInitialScroll: p
                                     }));
                             }),
@@ -630,7 +630,7 @@ let eG = {
                 c = d.Z.database();
             if (null == c || null == a || null != t || null != n) return void en.Z.addLocalMessages(e, -1);
             if (o.ready && !o.cached) return void en.Z.addLocalMessages(e, -2);
-            let u = await (0, f.dI)(() => _.ZP.load(c, e, r));
+            let u = await (0, _.dI)(() => f.ZP.load(c, e, r));
             if (null == u) return void en.Z.addLocalMessages(e, -3);
             if ((eP.log('fetched '.concat(u.messages.length, ' messages from local database (channel_id: ').concat(e, ', remote_fetch_completed: ').concat(i.completed, ')')), en.Z.addLocalMessages(e, u.messages.length), !i.completed && u.messages.length > 0)) {
                 let t = u.messages.length >= r && u.connectionId === I.Z.lastTimeConnectedChanged();
@@ -652,7 +652,7 @@ let eG = {
             if (null == i || null == r) return;
             let a = l.Z.getOrCreate(e);
             if (a.hasMoreAfter) return;
-            let o = await (0, f.dI)(() => _.ZP.load(i, e, t));
+            let o = await (0, _.dI)(() => f.ZP.load(i, e, t));
             if (null == o) return;
             let c = null == (n = (a = l.Z.getOrCreate(e)).last()) ? void 0 : n.id,
                 u = null == c ? o.messages : o.messages.filter((e) => eE.default.compare(e.id, c) > 0);
@@ -745,7 +745,7 @@ let eG = {
             i = eC(eA({}, i), { nonce: o });
             let s = () => eB._sendMessage(e, t, i),
                 l = x.ZP.backgroundify(s, void 0);
-            return (k.Z.recordMessageSendAttempt(e, o), es.Z.isReady(e))
+            return (M.Z.recordMessageSendAttempt(e, o), es.Z.isReady(e))
                 ? l()
                 : r && e !== g.V
                   ? (ew.info('Waiting for channel '.concat(e, ' to be ready before sending.')),
@@ -921,14 +921,14 @@ let eG = {
                     })
                 );
             let u = t.content,
-                { invalidEmojis: d, validNonShortcutEmojis: f, tts: _ = !1 } = t,
+                { invalidEmojis: d, validNonShortcutEmojis: _, tts: f = !1 } = t,
                 { activityAction: p, location: h, suggestedInvite: m, stickerIds: g, confettiPotionData: E, messageReference: b, allowedMentions: y, poll: v, contentInventoryEntry: I, attachments: T, attachmentsToUpload: S, onAttachmentUploadError: R } = n,
                 P = null != (i = n.flags) ? i : 0,
                 [w, D] = (0, ee.Z)(u);
             w && ((u = D), (P = (0, ep.pj)(P, eO.iLy.SUPPRESS_NOTIFICATIONS)));
             let x = !1,
-                M = (null == (r = n.messageReference) ? void 0 : r.type) === eO.Uvt.FORWARD;
-            if ('' === u && null == p && null == g && null == v && null == I && !M && (null == T || 0 === T.length))
+                k = (null == (r = n.messageReference) ? void 0 : r.type) === eO.Uvt.FORWARD;
+            if ('' === u && null == p && null == g && null == v && null == I && !k && (null == T || 0 === T.length))
                 if (null == S || !(S.length > 0)) return Promise.resolve();
                 else x = !0;
             let Y = null != b ? eO.uaV.REPLY : eO.uaV.DEFAULT,
@@ -937,7 +937,7 @@ let eG = {
                 et = (0, U.ZP)({
                     channelId: e,
                     content: u,
-                    tts: _,
+                    tts: f,
                     type: Y,
                     messageReference: b,
                     allowedMentions: y,
@@ -947,7 +947,7 @@ let eG = {
                 });
             if ((!1 !== n.eagerDispatch && ((0, V.EL)(e, et.id), null != g && (et.sticker_items = g.map((e) => $.Z.getStickerById(e)).filter((e) => null != e)), eB.receiveMessage(e, et, !0, n)), !eD && null != d && d.length > 0)) {
                 eD = !0;
-                let t = ef.default.getCurrentUser(),
+                let t = e_.default.getCurrentUser(),
                     { errorMessage: n, errorMessageName: r } = eB.validateMessage(d, t, e);
                 eB.sendBotMessage(e, n, r);
             }
@@ -957,7 +957,7 @@ let eG = {
                     channelId: e,
                     content: u,
                     nonce: Q,
-                    tts: _,
+                    tts: f,
                     message_reference: b,
                     allowed_mentions: y,
                     flags: P,
@@ -1041,7 +1041,7 @@ let eG = {
                                         joinRequestUserId: n
                                     });
                                 }
-                                (k.Z.recordMessageSendApiResponse(Q),
+                                (M.Z.recordMessageSendApiResponse(Q),
                                     s.Z.dispatch({
                                         type: 'SLOWMODE_RESET_COOLDOWN',
                                         slowmodeType: ed.S.SendMessage,
@@ -1049,7 +1049,7 @@ let eG = {
                                     }),
                                     s.Z.dispatch({
                                         type: 'EMOJI_TRACK_USAGE',
-                                        emojiUsed: f
+                                        emojiUsed: _
                                     }),
                                     s.Z.dispatch({
                                         type: 'STICKER_TRACK_USAGE',
@@ -1059,7 +1059,7 @@ let eG = {
                                         type: 'LOCAL_MESSAGE_CREATE',
                                         message: {
                                             channel_id: e,
-                                            author: ef.default.getCurrentUser()
+                                            author: e_.default.getCurrentUser()
                                         }
                                     }),
                                     ex({
@@ -1069,7 +1069,7 @@ let eG = {
                                         location: null != h ? h : 'chat_input',
                                         suggested: m
                                     }),
-                                    ek(u, e, l.body.id, null != h ? h : 'chat_input', !!n.isGiftLinkSentOnBehalfOfUser),
+                                    eM(u, e, l.body.id, null != h ? h : 'chat_input', !!n.isGiftLinkSentOnBehalfOfUser),
                                     null != o &&
                                         s.Z.dispatch({
                                             type: 'UPLOAD_COMPLETE',
@@ -1079,12 +1079,12 @@ let eG = {
                                         }),
                                     t(l));
                             } else {
-                                var _, p;
+                                var f, p;
                                 let t;
                                 eP.log('Failed to send message', {
                                     hasErr: l.hasErr,
                                     status: l.status,
-                                    code: null == (_ = l.body) ? void 0 : _.code,
+                                    code: null == (f = l.body) ? void 0 : f.code,
                                     error: l.err
                                 });
                                 let i = !1;
@@ -1098,7 +1098,7 @@ let eG = {
                                                 type: 'SLOWMODE_SET_COOLDOWN',
                                                 channelId: e,
                                                 slowmodeType: ed.S.SendMessage,
-                                                cooldownMs: t * e_.Z.Millis.SECOND
+                                                cooldownMs: t * ef.Z.Millis.SECOND
                                             });
                                     } else
                                         A.U8.has(l.body.code)
@@ -1114,7 +1114,7 @@ let eG = {
                                               ? s.Z.dispatch({ type: 'POGGERMODE_TEMPORARILY_DISABLED' })
                                               : l.body.code === eO.evJ.EXPLICIT_CONTENT
                                                 ? (t = eI.xi.EXPLICIT_CONTENT)
-                                                : null != v || M || null != I || eB.sendClydeError(e, l.body.code);
+                                                : null != v || k || null != I || eB.sendClydeError(e, l.body.code);
                                 (i
                                     ? eB.deleteMessage(e, J, !0)
                                     : (null != o &&
@@ -1293,6 +1293,6 @@ let eG = {
                             confirmText: eT.intl.string(eT.t.BddRzc)
                         }));
                 }),
-        trackInvite: eM
+        trackInvite: ek
     },
     eV = eB;

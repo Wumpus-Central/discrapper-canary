@@ -8,8 +8,8 @@ var r = n(512722),
     c = n(903772),
     u = n(442837),
     d = n(544891),
-    f = n(570140),
-    _ = n(406966),
+    _ = n(570140),
+    f = n(406966),
     p = n(795513),
     h = n(266750),
     m = n(15624),
@@ -31,8 +31,8 @@ var r = n(512722),
     D = n(91247),
     L = n(508569),
     x = n(183139),
-    M = n(645436),
-    k = n(866483),
+    k = n(645436),
+    M = n(866483),
     j = n(833508),
     U = n(981631);
 function G(e, t, n) {
@@ -92,8 +92,8 @@ let Z = new E.Z('GatewaySocket'),
 function Y(e) {
     let { actuallySkipped: t, reason: n } = e;
     if (!(0, P.n)()) return;
-    let r = M.a(),
-        i = k.Pf(),
+    let r = k.a(),
+        i = M.Pf(),
         a = m.Z.getState(),
         o = i.length > 0 ? ''.concat(n, ' + ').concat(i) : n,
         s = r ? 'paused' : 'request_state';
@@ -111,7 +111,7 @@ function Y(e) {
                     client_app_state: m.Z.getState(),
                     skip_context: s,
                     original_connect_reason: o,
-                    gateway_connect_reasons: k.Pf()
+                    gateway_connect_reasons: M.Pf()
                 });
             }, 200));
 }
@@ -123,15 +123,15 @@ function W(e) {
         c = !1,
         u = !1,
         d = null,
-        f = null;
+        _ = null;
     if (((window._ws = null), null != l))
         if (((t = l.ws), l.state.gateway !== n)) (Z.verbose('[FAST CONNECT] gatewayURL mismatch: '.concat(l.state.gateway, ' !== ').concat(n)), t.close(1000), (t = null));
         else {
-            var _;
+            var f;
             let e = B({}, l.state);
-            (null != e.messages && (e.messages = e.messages.map((e) => (null != e.data && 'string' == typeof e.data ? F(B({}, e), { data: e.data.substring(0, 100) }) : e))), Z.log('[FAST CONNECT] successfully took over websocket, state:', F(B({}, e), { messages: null == (_ = e.messages) ? void 0 : _.length })), (c = l.state.open), (u = l.state.identify), (d = l.state.messages), (f = l.state.clientState));
+            (null != e.messages && (e.messages = e.messages.map((e) => (null != e.data && 'string' == typeof e.data ? F(B({}, e), { data: e.data.substring(0, 100) }) : e))), Z.log('[FAST CONNECT] successfully took over websocket, state:', F(B({}, e), { messages: null == (f = e.messages) ? void 0 : f.length })), (c = l.state.open), (u = l.state.identify), (d = l.state.messages), (_ = l.state.clientState));
         }
-    (null == t && ((t = (0, j.Z)(n)).binaryType = 'arraybuffer'), r(t), c && i(u, f), null != d && d.forEach(a), (t.onopen = () => i(u, f)), (t.onmessage = a), (t.onclose = s), (t.onerror = o));
+    (null == t && ((t = (0, j.Z)(n)).binaryType = 'arraybuffer'), r(t), c && i(u, _), null != d && d.forEach(a), (t.onopen = () => i(u, _)), (t.onmessage = a), (t.onclose = s), (t.onerror = o));
 }
 function K() {}
 let z = 4,
@@ -196,8 +196,8 @@ class ei extends x.Z {
     }
     _connect(e) {
         if (!this.willReconnect()) return void Z.verbose('Skipping _connect because willReconnect is false');
-        let t = M.a();
-        if ((t || !k.RZ()) && (Z.info('Skipping _connect because socket is paused'), Y({ reason: e }), t)) return;
+        let t = k.a();
+        if ((t || !M.RZ()) && (Z.info('Skipping _connect because socket is paused'), Y({ reason: e }), t)) return;
         ((this.connectionState = N.Z.CONNECTING), (this.nextReconnectIsImmediate = !1));
         let n = this.compressionHandler.getAlgorithm(),
             r = H.getName(),
@@ -431,7 +431,7 @@ class ei extends x.Z {
         this.connectionState = N.Z.IDENTIFYING;
         let t = Date.now();
         this.identifyStartTime = t;
-        let [n, r, i] = await Promise.all([(0, g.O)() ? _.Z.getCommittedVersions() : {}, (0, g.O)() ? h.Z.getCommittedVersions() : {}, !!(0, g.O)() && p.Z.canUseGuildVersions()]),
+        let [n, r, i] = await Promise.all([(0, g.O)() ? f.Z.getCommittedVersions() : {}, (0, g.O)() ? h.Z.getCommittedVersions() : {}, !!(0, g.O)() && p.Z.canUseGuildVersions()]),
             o = i
                 ? {
                       guild_versions: n,
@@ -534,7 +534,7 @@ class ei extends x.Z {
         (0 === this.dispatchExceptionBackoff._fails ? (Z.verbose('Triggering fast reconnect'), this.dispatchExceptionBackoff.fail(() => {}), setTimeout(() => this._connect('resetSocketOnErrorImmediate'), 0)) : this.dispatchExceptionBackoff.fail(() => this._connect('resetSocketOnError')),
             a &&
                 ((this.didForceClearGuildHashes = !0),
-                f.Z.dispatch({
+                _.Z.dispatch({
                     type: 'CLEAR_CACHES',
                     reason: 'Socket reset during '.concat(t)
                 })),
@@ -564,7 +564,7 @@ class ei extends x.Z {
     }
     networkStateChange(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-        (k.RZ() ||
+        (M.RZ() ||
             Y({
                 reason: t,
                 actuallySkipped: !1

@@ -31,7 +31,7 @@ let a = (e) => {
         })(e, ['size', 'width', 'height', 'color']);
     let p = (0, o.m)(c),
         v = null != (a = null == p ? void 0 : p.width) ? a : u,
-        g = null != (s = null == p ? void 0 : p.height) ? s : d;
+        E = null != (s = null == p ? void 0 : p.height) ? s : d;
     return (0, r.jsxs)(
         'svg',
         ((t = (function (e) {
@@ -63,7 +63,7 @@ let a = (e) => {
             {
                 xmlns: 'http://www.w3.org/2000/svg',
                 width: v,
-                height: g,
+                height: E,
                 fill: 'none',
                 viewBox: '0 0 32 32',
                 children: [

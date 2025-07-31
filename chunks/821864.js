@@ -1,8 +1,8 @@
 n.d(t, {
-    I4: () => f,
+    I4: () => _,
     Sn: () => u,
     U3: () => p,
-    Ui: () => _,
+    Ui: () => f,
     W4: () => c,
     gq: () => d,
     kZ: () => l
@@ -72,13 +72,13 @@ async function d(e, t, n) {
         permissions: a
     });
 }
-function f(e) {
+function _(e) {
     i.Z.dispatch({
         applicationId: e,
         type: 'INTEGRATION_PERMISSION_SETTINGS_INIT'
     });
 }
-function _(e) {
+function f(e) {
     i.Z.dispatch({
         commandId: e,
         type: 'INTEGRATION_PERMISSION_SETTINGS_RESET'

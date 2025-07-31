@@ -1,6 +1,6 @@
 (n.d(t, {
     M: () => x,
-    Z: () => b
+    Z: () => S
 }),
     n(415506),
     n(781311),
@@ -9,8 +9,8 @@ var r,
     s = n(255367),
     l = n(73800),
     a = n(120356),
-    i = n.n(a),
-    o = n(481060),
+    o = n.n(a),
+    i = n(481060),
     c = n(607802),
     u = n(579612),
     h = n(388032),
@@ -66,7 +66,7 @@ let m = (e) => {
     let { query: t, searchFavorites: n, showDMQueryText: r } = e,
         {
             filterCount: a,
-            queryContent: i,
+            queryContent: o,
             isQueryEmpty: u
         } = l.useMemo(() => {
             var e, n, r;
@@ -86,7 +86,7 @@ let m = (e) => {
           })
         : r
           ? a > 0
-              ? (0, s.jsx)(o.Text, {
+              ? (0, s.jsx)(i.Text, {
                     variant: 'text-sm/medium',
                     color: 'text-secondary',
                     className: d.searchDMQueryText,
@@ -94,14 +94,14 @@ let m = (e) => {
                         ? h.intl.format(h.t.iV2ftr, { filterCount: a })
                         : h.intl.format(h.t['5CTmUl'], {
                               filterCount: a,
-                              value: i
+                              value: o
                           })
                 })
-              : (0, s.jsx)(o.Text, {
+              : (0, s.jsx)(i.Text, {
                     variant: 'text-sm/medium',
                     color: 'text-secondary',
                     className: d.searchDMQueryText,
-                    children: u ? h.intl.string(h.t.w39VdH) : h.intl.format(h.t['9gKPv7'], { value: i })
+                    children: u ? h.intl.string(h.t.w39VdH) : h.intl.format(h.t['9gKPv7'], { value: o })
                 })
           : (0, s.jsx)('div', {
                 className: d.queryText,
@@ -119,16 +119,16 @@ function x(e, t, n) {
         'aria-selected': n
     };
 }
-class S extends (r = l.PureComponent) {
+class b extends (r = l.PureComponent) {
     renderQuery(e) {
         let { query: t, navId: n, focusedIndex: r, onSelectQuery: l, onSelectSearchEverywhere: a, onHighlightQuery: c, hideQuery: u, searchFavorites: p, showDMQueryText: y } = this.props;
         if (e || u) return null;
-        let S = -1 === r;
+        let b = -1 === r;
         return (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsxs)(
-                    o.P3F,
-                    g(f({ className: i()(d.queryContainer, { [d.focused]: S }) }, x(n, -1, S)), {
+                    i.P3F,
+                    g(f({ className: o()(d.queryContainer, { [d.focused]: b }) }, x(n, -1, b)), {
                         onMouseEnter: c,
                         onClick: l,
                         children: [
@@ -140,7 +140,7 @@ class S extends (r = l.PureComponent) {
                             (0, s.jsx)('div', {
                                 className: d.queryShortcut,
                                 'aria-hidden': !0,
-                                children: (0, s.jsx)(o.M2$, {
+                                children: (0, s.jsx)(i.M2$, {
                                     shortcut: 'return',
                                     dim: !0,
                                     className: d.keyCombo
@@ -151,8 +151,8 @@ class S extends (r = l.PureComponent) {
                 ),
                 p &&
                     (0, s.jsxs)(
-                        o.P3F,
-                        g(f({ className: i()(d.queryContainer, { [d.focused]: S }) }, x(n, -1, S)), {
+                        i.P3F,
+                        g(f({ className: o()(d.queryContainer, { [d.focused]: b }) }, x(n, -1, b)), {
                             onMouseEnter: c,
                             onClick: a,
                             children: [
@@ -163,7 +163,7 @@ class S extends (r = l.PureComponent) {
                                 (0, s.jsx)('div', {
                                     className: d.queryShortcut,
                                     'aria-hidden': !0,
-                                    children: (0, s.jsx)(o.M2$, {
+                                    children: (0, s.jsx)(i.M2$, {
                                         shortcut: 'shift+return',
                                         dim: !0,
                                         className: d.keyCombo
@@ -203,31 +203,31 @@ class S extends (r = l.PureComponent) {
                 let { navId: e, channel: t, showSearchInSelectedChannel: n, focusedIndex: r, onSelectSearchInSelectedChannel: l } = this.props;
                 if (!n || null == t) return null;
                 let a = (0, c.X3)(t),
-                    i = (0, s.jsx)(u.ZP, {
+                    o = (0, s.jsx)(u.ZP, {
                         channel: t,
                         text: h.intl.formatToPlainString(h.t.LDpotL, { guildName: a }),
                         channelContainerClassName: d.channelContainer,
                         textContainerClassName: d.searchResultNameContainer
                     });
                 return (0, s.jsx)(
-                    o.P3F,
+                    i.P3F,
                     g(f({}, x(e, -1, -1 === r)), {
                         className: d.inChannelOptionContainer,
                         onClick: l,
-                        children: (0, s.jsx)(o.Text, {
+                        children: (0, s.jsx)(i.Text, {
                             variant: 'text-md/normal',
                             color: 'interactive-normal',
                             className: d.inChannelOption,
-                            children: h.intl.format(h.t.LDpotL, { guildName: i })
+                            children: h.intl.format(h.t.LDpotL, { guildName: o })
                         })
                     })
                 );
             }));
     }
 }
-p(S, 'defaultProps', {
+p(b, 'defaultProps', {
     renderInitialState: () => null,
     hideQuery: !1,
     width: 320
 });
-let b = S;
+let S = b;

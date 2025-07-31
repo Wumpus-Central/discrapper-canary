@@ -1,4 +1,4 @@
-(t.d(e, { Z: () => H }), t(388685));
+(t.d(e, { Z: () => b }), t(388685));
 var n = t(255367),
     r = t(73800),
     l = t(120356),
@@ -19,49 +19,50 @@ var n = t(255367),
     w = t(356778),
     D = t(370595),
     M = t(50493),
-    I = t(12740),
-    p = t(450355);
-function H(A) {
+    I = t(981631),
+    p = t(12740),
+    H = t(450355);
+function b(A) {
     var e, t;
-    let { userId: l, guildId: H, location: b, className: Q, onNavigate: O } = A,
-        P = r.useRef(null),
-        V = (0, a.e7)([u.ZP], () => u.ZP.getGuildSidebarState(H), [H]),
-        j = r.useRef(0),
-        [T, y] = r.useState(null != (e = null == V ? void 0 : V.details.additionalSearchQuery) ? e : {}),
-        m = (0, w.z0)(l, H, {
-            addtionalQuery: T,
+    let { userId: l, guildId: b, location: Q, className: O, onNavigate: P } = A,
+        V = r.useRef(null),
+        j = (0, a.e7)([u.ZP], () => u.ZP.getGuildSidebarState(b), [b]),
+        T = r.useRef(0),
+        [y, m] = r.useState(null != (e = null == j ? void 0 : j.details.additionalSearchQuery) ? e : {}),
+        L = (0, w.z0)(l, b, {
+            addtionalQuery: y,
             shouldDispatch: !0
         }),
-        L = (0, a.e7)([C.default], () => C.default.getUser(l), [l]),
-        x = (0, a.e7)([d.ZP], () => d.ZP.getMember(H, l), [H, l]);
+        x = (0, a.e7)([C.default], () => C.default.getUser(l), [l]),
+        Z = (0, a.e7)([d.ZP], () => d.ZP.getMember(b, l), [b, l]);
     (0, g.Ng)(() => {
-        let A = null == V ? void 0 : V.details.scrollOffset;
+        let A = null == j ? void 0 : j.details.scrollOffset;
         if (null != A) {
             var e;
-            null == (e = P.current) ||
+            null == (e = V.current) ||
                 e.scrollTo({
                     to: A,
                     animate: !1
                 });
         }
     });
-    let Z = r.useCallback(
+    let N = r.useCallback(
             (A) => {
-                null != V &&
-                    ((j.current = A.target.scrollTop),
-                    (0, B.r)(H, l, V.baseChannelId, {
+                null != j &&
+                    ((T.current = A.target.scrollTop),
+                    (0, B.r)(b, l, j.baseChannelId, {
                         modViewPanel: M.k.MESSAGE_HISTORY,
-                        additionalSearchQuery: T,
-                        scrollOffset: j.current
+                        additionalSearchQuery: y,
+                        scrollOffset: T.current
                     }));
             },
-            [H, l, V, T]
+            [b, l, j, y]
         ),
-        N = (0, s.throttle)(Z, 300),
-        S = r.useCallback(
+        S = (0, s.throttle)(N, 300),
+        R = r.useCallback(
             (A) => {
                 var e, t;
-                if (null == V) return;
+                if (null == j) return;
                 let n =
                     ((e = (function (A) {
                         for (var e = 1; e < arguments.length; e++) {
@@ -87,7 +88,7 @@ function H(A) {
                                 }));
                         }
                         return A;
-                    })({}, T)),
+                    })({}, y)),
                     (t = t = { offset: 25 * A }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -102,21 +103,21 @@ function H(A) {
                               Object.defineProperty(e, A, Object.getOwnPropertyDescriptor(t, A));
                           }),
                     e);
-                (y(n),
-                    (0, B.r)(H, l, V.baseChannelId, {
+                (m(n),
+                    (0, B.r)(b, l, j.baseChannelId, {
                         modViewPanel: M.k.MESSAGE_HISTORY,
                         additionalSearchQuery: n,
-                        scrollOffset: j.current
+                        scrollOffset: T.current
                     }));
             },
-            [H, l, V, T]
+            [b, l, j, y]
         ),
-        R = null != (t = null == T ? void 0 : T.offset) ? t : 0,
-        G = (0, a.e7)(
+        G = null != (t = null == y ? void 0 : y.offset) ? t : 0,
+        U = (0, a.e7)(
             [v.Z],
             () => {
-                if (null == m.result) return [];
-                let A = m.result.messages,
+                if (null == L.result) return [];
+                let A = L.result.messages,
                     e = (0, f.nC)('');
                 return A.map((A) =>
                     A.map((A) => {
@@ -142,57 +143,57 @@ function H(A) {
                     })
                 );
             },
-            [m.result]
+            [L.result]
         ),
-        U = r.useMemo(() => {
+        F = r.useMemo(() => {
             var A, e, t, n;
-            return null == m.result
+            return null == L.result
                 ? {
                       documentsIndexed: 0,
                       isSearching: !0,
                       isIndexing: !1,
                       isHistoricalIndexing: !1,
-                      offset: R,
+                      offset: G,
                       totalResults: 0,
                       hasError: !1,
                       showBlockedResults: !1,
                       showNoResultsAlt: !1
                   }
                 : {
-                      documentsIndexed: null != (A = m.result.documents_indexed) ? A : 0,
+                      documentsIndexed: null != (A = L.result.documents_indexed) ? A : 0,
                       isSearching: !1,
-                      isIndexing: null != (e = m.result.doing_deep_historical_index) && e,
-                      isHistoricalIndexing: null != (t = m.result.doing_deep_historical_index) && t,
-                      offset: R,
-                      totalResults: null != (n = m.result.total_results) ? n : 0,
+                      isIndexing: null != (e = L.result.doing_deep_historical_index) && e,
+                      isHistoricalIndexing: null != (t = L.result.doing_deep_historical_index) && t,
+                      offset: G,
+                      totalResults: null != (n = L.result.total_results) ? n : 0,
                       hasError: !1,
                       showBlockedResults: !1,
                       showNoResultsAlt: !1
                   };
-        }, [m.result, R]);
-    return null == L || null == x || null == U
+        }, [L.result, G]);
+    return null == x || null == Z || null == F
         ? null
         : (0, n.jsxs)('div', {
-              className: i()(I.container, Q),
+              className: i()(p.container, O),
               children: [
                   (0, n.jsx)(D.Z, {
-                      guildId: H,
+                      guildId: b,
                       userId: l,
-                      onNavigate: O
+                      onNavigate: P
                   }),
                   (0, n.jsx)(o.Den, {
-                      className: p.innerContainer,
-                      ref: P,
-                      onScroll: N,
+                      className: H.innerContainer,
+                      ref: V,
+                      onScroll: S,
                       children: (0, n.jsx)(E.Z, {
-                          searchResults: G,
-                          search: U,
-                          searchId: l,
+                          searchResults: U,
+                          search: F,
                           renderEmbeds: !0,
                           blockCount: 0,
                           ignoreCount: 0,
-                          scrollTo: () => {},
-                          onPageChange: S
+                          scrollTo: I.dG4,
+                          onPageChange: R,
+                          onBlockedResultsClick: I.dG4
                       })
                   })
               ]

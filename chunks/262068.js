@@ -1,6 +1,6 @@
 n.d(t, {
     vg: () => p,
-    w7: () => _
+    w7: () => f
 });
 var r = n(961742),
     i = n(295415),
@@ -29,7 +29,7 @@ async function d(e, t, n, o, s) {
     } catch (e) {}
     return e;
 }
-function f(e, { preferredFontFormat: t }) {
+function _(e, { preferredFontFormat: t }) {
     return t
         ? e.replace(l, (e) => {
               for (;;) {
@@ -40,11 +40,11 @@ function f(e, { preferredFontFormat: t }) {
           })
         : e;
 }
-function _(e) {
+function f(e) {
     return -1 !== e.search(o);
 }
 async function p(e, t, n) {
-    if (!_(e)) return e;
-    let r = f(e, n);
+    if (!f(e)) return e;
+    let r = _(e, n);
     return u(r).reduce((e, r) => e.then((e) => d(e, r, t, n)), Promise.resolve(r));
 }

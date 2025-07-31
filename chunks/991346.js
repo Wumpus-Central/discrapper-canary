@@ -3,7 +3,7 @@
     Pt: () => V,
     VO: () => H,
     ji: () => Y,
-    q8: () => W
+    q8: () => z
 }),
     n(836215),
     n(472816),
@@ -29,8 +29,8 @@ var i = n(73800),
     x = n(725727),
     _ = n(977156),
     j = n(921157),
-    E = n(667172),
-    O = n(237292),
+    O = n(667172),
+    E = n(237292),
     C = n(314897),
     v = n(906467),
     S = n(283595),
@@ -103,8 +103,8 @@ function V() {
         { shouldMergeGameSettings: G } = A.b.useExperiment({ location: 'settings' }),
         F = (0, p.Xo)({ location: 'settings' }),
         H = null != (n = null == (e = y.default.getCurrentUser()) ? void 0 : e.isStaff()) && n,
-        W = (0, O.y0)({ location: 'settings' }),
-        z = (0, E.v4)({ location: 'settings' }),
+        z = (0, E.y0)({ location: 'settings' }),
+        W = (0, O.v4)({ location: 'settings' }),
         Y = (0, l.Q)(),
         K = (0, _.Zy)({ location: B.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         q = (0, r.e7)([S.Z], () => S.Z.hasLibraryApplication()),
@@ -145,8 +145,8 @@ function V() {
                 shouldMergeGameSettings: G,
                 isKeywordFilteringEnabled: F,
                 isStaff: H,
-                isInappropriateConversationWarningEnabled: W,
-                isInapproprateConversationsDefaultOn: z,
+                isInappropriateConversationWarningEnabled: z,
+                isInapproprateConversationsDefaultOn: W,
                 paymentsBlocked: Y,
                 isEligibleForQuests: K,
                 isStricterMessageRequestsEnabled: Q,
@@ -165,7 +165,7 @@ function V() {
                 isInputProfileCustom: eo,
                 isGoreContentFilteringEnabled: ec
             }),
-        [J, V, en, ei, q, et, X, $, k, ee, K, z, W, F, M, H, Q, L, Y, G, P, v, er, es, ea, el, eo, ec]
+        [J, V, en, ei, q, et, X, $, k, ee, K, W, z, F, M, H, Q, L, Y, G, P, v, er, es, ea, el, eo, ec]
     );
 }
 function G(e) {
@@ -222,7 +222,7 @@ function G(e) {
 }
 function F(e, t, n) {
     let i = [],
-        r = z(t),
+        r = W(t),
         s = (function (e, t) {
             let n = new Map();
             return (
@@ -310,7 +310,7 @@ function H() {
         );
     return i.useMemo(() => F(r, e), [r, e]);
 }
-function W(e) {
+function z(e) {
     let t = V(),
         n = (function () {
             let { shouldMergeGameSettings: e } = A.b.useExperiment({ location: 'settings' }),
@@ -339,7 +339,7 @@ function W(e) {
         })();
     return i.useMemo(() => F(n, t, new Set(e)), [n, t, e]);
 }
-function z(e) {
+function W(e) {
     return new Map(
         Object.entries(e).filter((e) => {
             let [t, n] = e;
@@ -348,7 +348,7 @@ function z(e) {
     );
 }
 function Y(e) {
-    return Array.from(z(e).entries()).map((e) => {
+    return Array.from(W(e).entries()).map((e) => {
         let [t, n] = e;
         return [t, n.searchableTitles];
     });

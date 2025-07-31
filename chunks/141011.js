@@ -1,111 +1,102 @@
-(n.d(t, { Z: () => y }), n(35282));
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
-    s = n(399606),
-    l = n(692547),
-    c = n(607070),
-    u = n(302221),
-    d = n(884697),
-    f = n(372654),
-    _ = n(534215);
-function p(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function h(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+(r.d(n, { Z: () => p }), r(35282));
+var l = r(255367),
+    t = r(73800),
+    o = r(120356),
+    a = r.n(o),
+    u = r(399606),
+    i = r(692547),
+    s = r(607070),
+    c = r(302221),
+    d = r(884697),
+    g = r(372654),
+    b = r(534215);
+function v(e) {
+    for (var n = 1; n < arguments.length; n++) {
+        var r = null != arguments[n] ? arguments[n] : {},
+            l = Object.keys(r);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (l = l.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                p(e, t, n[t]);
+            l.forEach(function (n) {
+                var l;
+                ((l = r[n]),
+                    n in e
+                        ? Object.defineProperty(e, n, {
+                              value: l,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[n] = l));
             }));
     }
     return e;
 }
-function m(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        (t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r));
-    }
-    return n;
-}
-function g(e, t) {
+function m(e, n) {
     return (
-        (t = null != t ? t : {}),
+        (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+            : (function (e, n) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var l = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, l);
+                  }
+                  return r;
+              })(Object(n)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(n, r));
               }),
         e
     );
 }
-let E = (e) => null != e && /^http/i.test(e),
-    b = (e) => null != e && /^blob:https?:\/\/[^\/]+\//i.test(e),
-    y = (e) => {
-        let { asset: t, size: n = f.yV, className: a, style: p, children: m, categoryBannerOverride: y } = e,
-            O = (0, s.e7)([c.Z], () => c.Z.saturation),
-            v = i.useMemo(() => {
-                if (null == t) return p;
+let O = (e) => null != e && /^http/i.test(e),
+    f = (e) => null != e && /^blob:https?:\/\/[^\/]+\//i.test(e),
+    p = (e) => {
+        let { asset: n, size: r = g.yV, className: o, style: p, children: y, categoryBannerOverride: j } = e,
+            h = (0, u.e7)([s.Z], () => s.Z.saturation),
+            B = t.useMemo(() => {
+                if (null == n) return p;
                 let e =
-                        E(t) || b(t)
-                            ? t
-                            : (0, d.uV)(t, {
-                                  size: n,
+                        O(n) || f(n)
+                            ? n
+                            : (0, d.uV)(n, {
+                                  size: r,
                                   format: 'jpg'
                               }),
-                    r = (null == y ? void 0 : y.blur)
+                    l = (null == j ? void 0 : j.blur)
                         ? {
                               filter: 'blur(2px)',
                               transform: 'scale(1.02)'
                           }
                         : {};
-                if (1 === O)
-                    return h(
-                        g(h({}, p), {
-                            backgroundImage: (null == y ? void 0 : y.addGradient) ? 'url('.concat(e, '), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)') : 'url('.concat(e, ')'),
+                if (1 === h)
+                    return v(
+                        m(v({}, p), {
+                            backgroundImage: (null == j ? void 0 : j.addGradient) ? 'url('.concat(e, '), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)') : 'url('.concat(e, ')'),
                             backgroundBlendMode: 'multiply',
                             backgroundSize: 'cover',
                             backgroundPosition: 'center'
                         }),
-                        r
+                        l
                     );
-                let i = (0, u.aD)(l.Z.unsafe_rawColors.BLACK_500.resolve().hex(), 1 - O);
-                return h(
-                    g(h({}, p), {
-                        backgroundImage: 'linear-gradient('.concat(i, ', ').concat(i, '), url(').concat(e, ')'),
+                let t = (0, c.aD)(i.Z.unsafe_rawColors.BLACK_500.resolve().hex(), 1 - h);
+                return v(
+                    m(v({}, p), {
+                        backgroundImage: 'linear-gradient('.concat(t, ', ').concat(t, '), url(').concat(e, ')'),
                         backgroundBlendMode: 'saturation',
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }),
-                    r
+                    l
                 );
-            }, [t, n, O, p, null == y ? void 0 : y.blur, null == y ? void 0 : y.addGradient]);
-        return (0, r.jsx)('div', {
-            className: o()(_.banner, a),
-            style: v,
-            children: m
+            }, [n, r, h, p, null == j ? void 0 : j.blur, null == j ? void 0 : j.addGradient]);
+        return (0, l.jsx)('div', {
+            className: a()(b.banner, o),
+            style: B,
+            children: y
         });
     };

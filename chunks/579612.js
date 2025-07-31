@@ -2,15 +2,15 @@ n.d(t, {
     GQ: () => y,
     MC: () => m,
     P: () => x,
-    ZP: () => S
+    ZP: () => b
 });
 var r = n(255367);
 n(73800);
 var s = n(120356),
     l = n.n(s),
     a = n(481060),
-    i = n(933557),
-    o = n(471445),
+    o = n(933557),
+    i = n(471445),
     c = n(266076),
     u = n(592125),
     h = n(699516),
@@ -40,7 +40,7 @@ function m(e) {
             size: a.EFr.SIZE_20,
             experimentLocation: 'search_popout'
         });
-    let n = (0, o.KS)(t);
+    let n = (0, i.KS)(t);
     return null == n ? null : (0, r.jsx)(n, { className: g.searchResultChannelIcon });
 }
 function y(e) {
@@ -48,9 +48,9 @@ function y(e) {
     return t.isDM() || t.isGroupDM()
         ? (0, r.jsx)('span', {
               className: g.searchResultDMChannelName,
-              children: (0, i.F6)(t, p.default, h.Z)
+              children: (0, o.F6)(t, p.default, h.Z)
           })
-        : (0, r.jsx)('strong', { children: (0, i.F6)(t, p.default, h.Z) });
+        : (0, r.jsx)('strong', { children: (0, o.F6)(t, p.default, h.Z) });
 }
 function x(e) {
     let { channel: t } = e,
@@ -68,10 +68,10 @@ function x(e) {
     if (null != n)
         return (0, r.jsx)('span', {
             className: g.searchResultChannelCategory,
-            children: (0, i.F6)(n, p.default, h.Z)
+            children: (0, o.F6)(n, p.default, h.Z)
         });
 }
-function S(e) {
+function b(e) {
     let { channel: t, text: n, channelContainerClassName: s, textContainerClassName: a } = e;
     return null == t
         ? (0, r.jsx)('strong', { children: n })

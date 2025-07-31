@@ -8,8 +8,8 @@ var r,
     c = n(274616),
     u = n(57513),
     d = n(51025),
-    f = n(812206),
-    _ = n(695346),
+    _ = n(812206),
+    f = n(695346),
     p = n(581883),
     h = n(283595),
     m = n(417363),
@@ -44,24 +44,24 @@ function D(e) {
     w.start(e + Math.random() * C, c.o);
 }
 function L() {
-    return !_.bm.getSetting() && (D(R), x());
+    return !f.bm.getSetting() && (D(R), x());
 }
 function x() {
-    if (!(0, y.Q)() || _.bm.getSetting()) return !1;
+    if (!(0, y.Q)() || f.bm.getSetting()) return !1;
     let e = h.Z.entitledBranchIds,
         t = [];
     for (let n of e) N.hasOwnProperty(n) || ((N[n] = null), t.push(n));
     if (0 === t.length) return !1;
     l.Z.wait(() => c.o(t));
 }
-function M() {
+function k() {
     if (!(0, y.Q)()) return !1;
     for (let e of A) {
         let { applicationId: t, branchId: n } = (0, b.CP)(e);
-        null != f.Z.getApplication(t) && (A.delete(e), k(t, n));
+        null != _.Z.getApplication(t) && (A.delete(e), M(t, n));
     }
 }
-function k(e, t) {
+function M(e, t) {
     if (null != I[t] && g.Z.shouldBeInstalled(e, t)) {
         let n = I[t],
             r = n.manifestIds,
@@ -70,7 +70,7 @@ function k(e, t) {
             i.shouldPatch &&
             (i.buildId !== n.id || !a().isEqual(i.manifestIds, r)) &&
             l.Z.wait(() => {
-                let i = f.Z.getApplication(e);
+                let i = _.Z.getApplication(e);
                 null != i ? (A.delete((0, b.Tu)(e, t)), (0, d.li)(i, t, n.id, r, !0)) : A.add((0, b.Tu)(e, t));
             });
     }
@@ -95,7 +95,7 @@ function U(e) {
             locale: r,
             manifestIds: a
         }),
-        k(t, n));
+        M(t, n));
 }
 function G(e) {
     let { branchId: t } = e;
@@ -148,7 +148,7 @@ function W(e) {
 }
 class K extends (r = o.ZP.Store) {
     initialize() {
-        (this.syncWith([h.Z], x), this.waitFor(m.Z, h.Z, f.Z, p.Z));
+        (this.syncWith([h.Z], x), this.waitFor(m.Z, h.Z, _.Z, p.Z));
     }
     getTargetBuildId(e, t) {
         return null == I[t] ? null : I[t].id;
@@ -172,7 +172,7 @@ class K extends (r = o.ZP.Store) {
 O(K, 'displayName', 'ApplicationBuildStore');
 let z = new K(l.Z, {
     CONNECTION_OPEN: L,
-    GAMES_DATABASE_UPDATE: M,
+    GAMES_DATABASE_UPDATE: k,
     APPLICATION_BUILD_FETCH_START: j,
     APPLICATION_BUILD_FETCH_SUCCESS: U,
     APPLICATION_BUILD_NOT_FOUND: G,

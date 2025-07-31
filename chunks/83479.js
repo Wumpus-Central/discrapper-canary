@@ -1,41 +1,41 @@
 (n.d(t, { G: () => u }), n(388685));
 var r = n(73800),
-    i = n(979554),
-    a = n(215023),
-    l = n(388032);
-let s = function (e) {
+    a = n(979554),
+    i = n(215023),
+    o = n(388032);
+let c = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (t) {
             var n;
-            return l.intl.formatToPlainString(l.t['/0Yndn'], { num: null == (n = e.bundledProducts) ? void 0 : n.length });
+            return o.intl.formatToPlainString(o.t['/0Yndn'], { num: null == (n = e.bundledProducts) ? void 0 : n.length });
         }
-        let [r, i] = null != e.bundledProducts ? e.bundledProducts : [];
-        return l.intl.formatToPlainString(l.t.WQbNhI, {
+        let [r, a] = null != e.bundledProducts ? e.bundledProducts : [];
+        return o.intl.formatToPlainString(o.t.WQbNhI, {
             decoName: r.name,
-            pfxName: i.name
+            pfxName: a.name
         });
     },
-    o = function (e) {
+    s = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return null == e ? '' : e.type === i.Z.BUNDLE ? s(e, t) : e.summary;
+        return null == e ? '' : e.type === a.Z.BUNDLE ? c(e, t) : e.summary;
     },
-    c = function (e) {
+    l = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         switch (null == e ? void 0 : e.type) {
-            case i.Z.AVATAR_DECORATION:
-                return l.intl.string(l.t['3lv7q6']);
-            case i.Z.PROFILE_EFFECT:
-                return l.intl.string(l.t['VhJL7+']);
-            case i.Z.NAMEPLATE:
-                return l.intl.string(l.t.ik37ER);
-            case i.Z.BUNDLE:
-                return s(e, t);
+            case a.Z.AVATAR_DECORATION:
+                return o.intl.string(o.t['3lv7q6']);
+            case a.Z.PROFILE_EFFECT:
+                return o.intl.string(o.t['VhJL7+']);
+            case a.Z.NAMEPLATE:
+                return o.intl.string(o.t.ik37ER);
+            case a.Z.BUNDLE:
+                return c(e, t);
             default:
                 return '';
         }
     },
     u = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = (null == e ? void 0 : e.skuId) != null && (0, a.o0)(null == e ? void 0 : e.skuId);
-        return (0, r.useMemo)(() => (n ? o(e, t) : c(e, t)), [n, e, t]);
+            n = (null == e ? void 0 : e.skuId) != null && (0, i.o0)(null == e ? void 0 : e.skuId);
+        return (0, r.useMemo)(() => (n ? s(e, t) : l(e, t)), [n, e, t]);
     };

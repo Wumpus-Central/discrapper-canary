@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,7 +53,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -121,12 +121,12 @@ function O(e) {
     let s = !!o.isFolder,
         u = (0, c.Ml)('BlobMask'),
         d = (0, l.dQu)(l.TVs.modules.guildbar.AVATAR_SIZE),
-        _ = (0, l.dQu)(l.TVs.modules.guildbar.FOLDER_SIZE),
-        m = !u && s ? _ : d,
+        f = (0, l.dQu)(l.TVs.modules.guildbar.FOLDER_SIZE),
+        m = !u && s ? f : d,
         E = m / 2;
     return (0, r.jsx)(
         v,
-        p(f({}, o), {
+        p(_({}, o), {
             selected: t,
             rounded: a,
             baseViewBoxSize: m,
@@ -143,7 +143,7 @@ function O(e) {
     );
 }
 function v(e) {
-    let { children: t, viewBoxSize: n, className: a, style: l, innerClassName: c, isFolder: d, lowerBadgeSize: f, highlight: _, badgeMaskStroke: p, badgeMaskSize: h, upperBadge: m, lowerBadge: O, rounded: v = !1 } = e,
+    let { children: t, viewBoxSize: n, className: a, style: l, innerClassName: c, isFolder: d, lowerBadgeSize: _, highlight: f, badgeMaskStroke: p, badgeMaskSize: h, upperBadge: m, lowerBadge: O, rounded: v = !1 } = e,
         [I, T] = i.useState(!1),
         S = () => {
             T(!0);
@@ -159,8 +159,8 @@ function v(e) {
         D = ''.concat(R, '-blob_mask'),
         L = ''.concat(R, '-stroke_mask'),
         x = ''.concat(R, '-highlight_mask'),
-        M = (null == f ? void 0 : f.width) != null ? f.width : g,
-        k = (null == f ? void 0 : f.height) != null ? f.height : g,
+        k = (null == _ ? void 0 : _.width) != null ? _.width : g,
+        M = (null == _ ? void 0 : _.height) != null ? _.height : g,
         j = {
             width: d ? n : n + 8,
             height: d ? n : n + 8,
@@ -184,7 +184,7 @@ function v(e) {
                         height: j.height,
                         viewBox: ''.concat(j.x, ' ').concat(j.y, ' ').concat(j.width, ' ').concat(j.height),
                         className: o()(u.svg, {
-                            [u.noContain]: _,
+                            [u.noContain]: f,
                             [u.shiftSVG]: !d
                         }),
                         overflow: 'visible',
@@ -192,7 +192,7 @@ function v(e) {
                         children: [
                             (0, r.jsxs)('defs', {
                                 children: [
-                                    _ &&
+                                    f &&
                                         (0, r.jsx)('path', {
                                             d: G,
                                             id: x
@@ -217,10 +217,10 @@ function v(e) {
                                         ? (0, r.jsx)('rect', {
                                               id: w,
                                               className: u.badgeStroke,
-                                              x: n - (M + 2 * p) + p,
-                                              y: n - (k + 2 * p) + p,
-                                              width: M + 2 * p,
-                                              height: k + 2 * p,
+                                              x: n - (k + 2 * p) + p,
+                                              y: n - (M + 2 * p) + p,
+                                              width: k + 2 * p,
+                                              height: M + 2 * p,
                                               rx: h / 2,
                                               ry: h / 2
                                           })
@@ -235,7 +235,7 @@ function v(e) {
                                 width: n,
                                 height: n,
                                 children: [
-                                    _ &&
+                                    f &&
                                         (0, r.jsx)('use', {
                                             href: '#'.concat(x),
                                             fill: 'black'
@@ -243,7 +243,7 @@ function v(e) {
                                     (0, r.jsx)('use', {
                                         href: '#'.concat(D),
                                         fill: 'white',
-                                        className: o()({ [u.isHighlighted]: _ })
+                                        className: o()({ [u.isHighlighted]: f })
                                     }),
                                     N
                                         ? (0, r.jsx)('use', {
@@ -300,7 +300,7 @@ function v(e) {
                                       ]
                                   })
                                 : null,
-                            _ &&
+                            f &&
                                 (0, r.jsx)('path', {
                                     d: G,
                                     stroke: s.Z.BRAND_500,

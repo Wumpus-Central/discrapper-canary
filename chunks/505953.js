@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(276952),
     u = n(91159),
     d = n(496675),
-    f = n(306680),
-    _ = n(446183),
+    _ = n(306680),
+    f = n(446183),
     p = n(677281),
     h = n(709054),
     m = n(765104),
@@ -72,7 +72,7 @@ function A(e, t) {
     );
 }
 function N(e) {
-    let { summary: t, channel: f, members: b, guildId: I, unread: S, onClick: N } = e,
+    let { summary: t, channel: _, members: b, guildId: I, unread: S, onClick: N } = e,
         [C, R] = i.useState(!1),
         P = (0, u.Ye)(h.default.extractTimestamp(t.startId)),
         w = (0, a.e7)([m.Z], () => m.Z.summaryFeedback(t)),
@@ -80,11 +80,11 @@ function N(e) {
             (e.stopPropagation(),
                 (0, g.Z)({
                     summary: t,
-                    channel: f,
+                    channel: _,
                     rating: n
                 }));
         },
-        L = d.Z.can(y.Plq.MANAGE_MESSAGES, f),
+        L = d.Z.can(y.Plq.MANAGE_MESSAGES, _),
         x = (e) => {
             L &&
                 (0, s.jW)(e, async () => {
@@ -170,7 +170,7 @@ function N(e) {
                         }),
                         (0, r.jsx)(o.P3F, {
                             onClick: (e) => D(e, O.aZ.BAD),
-                            children: (0, r.jsx)(_.Z, {
+                            children: (0, r.jsx)(f.Z, {
                                 className: v.thumbIcon,
                                 width: 12,
                                 height: 12
@@ -195,7 +195,7 @@ function N(e) {
 }
 function C(e) {
     let { summaries: t, summariesMembers: n, channel: o, selectTopic: s, setOpen: l } = e,
-        c = (0, a.e7)([f.ZP], () => f.ZP.getOldestUnreadMessageId(o.id)),
+        c = (0, a.e7)([_.ZP], () => _.ZP.getOldestUnreadMessageId(o.id)),
         u = i.useCallback(
             (e) => {
                 (s(e), l(!1));

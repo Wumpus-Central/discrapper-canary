@@ -1,7 +1,7 @@
 n.d(t, {
     KS: () => p,
     Th: () => h,
-    bT: () => _
+    bT: () => f
 });
 var r = n(481060),
     i = n(622822),
@@ -12,58 +12,58 @@ var r = n(481060),
     c = n(447003),
     u = n(176505),
     d = n(981631),
-    f = n(388032);
-function _(e, t, n, r) {
+    _ = n(388032);
+function f(e, t, n, r) {
     if (null == e) return null;
-    if (e.id === (null == t ? void 0 : t.rulesChannelId)) return f.intl.string(f.t['/7EhaW']);
+    if (e.id === (null == t ? void 0 : t.rulesChannelId)) return _.intl.string(_.t['/7EhaW']);
     let a = (0, i.aC)(e);
     switch (e.type) {
         case d.d4z.GUILD_TEXT:
-            if (null != e.linkedLobby) return f.intl.string(f.t.Lt3PAA);
-            if (r) return f.intl.string(f.t.LKpYbm);
-            if (a) return f.intl.string(f.t.vvASTU);
-            if ((0, c.Z)(e)) return f.intl.string(f.t.jQ1plp);
-            return f.intl.string(f.t.t1yj0N);
+            if (null != e.linkedLobby) return _.intl.string(_.t.Lt3PAA);
+            if (r) return _.intl.string(_.t.LKpYbm);
+            if (a) return _.intl.string(_.t.vvASTU);
+            if ((0, c.Z)(e)) return _.intl.string(_.t.jQ1plp);
+            return _.intl.string(_.t.t1yj0N);
         case d.d4z.GUILD_FORUM:
             let o = e.isMediaChannel();
-            if (a) return o ? f.intl.string(f.t['pZ/fYW']) : f.intl.string(f.t.ibmpPj);
-            if ((0, c.Z)(e)) return o ? f.intl.string(f.t.gfVCfH) : f.intl.string(f.t.UbLM3N);
-            return o ? f.intl.string(f.t.seKITE) : f.intl.string(f.t['0sDXdn']);
+            if (a) return o ? _.intl.string(_.t['pZ/fYW']) : _.intl.string(_.t.ibmpPj);
+            if ((0, c.Z)(e)) return o ? _.intl.string(_.t.gfVCfH) : _.intl.string(_.t.UbLM3N);
+            return o ? _.intl.string(_.t.seKITE) : _.intl.string(_.t['0sDXdn']);
         case d.d4z.GUILD_MEDIA:
-            if (a) return f.intl.string(f.t['pZ/fYW']);
-            if ((0, c.Z)(e)) return f.intl.string(f.t.gfVCfH);
-            return f.intl.string(f.t.seKITE);
+            if (a) return _.intl.string(_.t['pZ/fYW']);
+            if ((0, c.Z)(e)) return _.intl.string(_.t.gfVCfH);
+            return _.intl.string(_.t.seKITE);
         case d.d4z.GUILD_STAGE_VOICE:
-            if (n) return f.intl.string(f.t.ZjZB3t);
-            if ((0, c.Z)(e)) return f.intl.string(f.t['7pRuCQ']);
-            return f.intl.string(f.t.eJFSiI);
+            if (n) return _.intl.string(_.t.ZjZB3t);
+            if ((0, c.Z)(e)) return _.intl.string(_.t['7pRuCQ']);
+            return _.intl.string(_.t.eJFSiI);
         case d.d4z.GUILD_VOICE:
-            if (n) return f.intl.string(f.t.xY8Wtr);
-            if ((0, c.Z)(e)) return f.intl.string(f.t.qaY8Dg);
-            return f.intl.string(f.t['0kBmo6']);
+            if (n) return _.intl.string(_.t.xY8Wtr);
+            if ((0, c.Z)(e)) return _.intl.string(_.t.qaY8Dg);
+            return _.intl.string(_.t['0kBmo6']);
         case d.d4z.GUILD_ANNOUNCEMENT:
-            if (a) return f.intl.string(f.t.eRc6o6);
-            if ((0, c.Z)(e)) return f.intl.string(f.t.EHLQws);
-            return f.intl.string(f.t.GtDRi4);
+            if (a) return _.intl.string(_.t.eRc6o6);
+            if ((0, c.Z)(e)) return _.intl.string(_.t.EHLQws);
+            return _.intl.string(_.t.GtDRi4);
         case d.d4z.GUILD_STORE:
-            return f.intl.string(f.t.Ea4NDA);
+            return _.intl.string(_.t.Ea4NDA);
         case d.d4z.DM:
-            return f.intl.string(f.t.jN2DfX);
+            return _.intl.string(_.t.jN2DfX);
         case d.d4z.GROUP_DM:
-            return f.intl.string(f.t['e5y+go']);
+            return _.intl.string(_.t['e5y+go']);
         case d.d4z.GUILD_DIRECTORY:
-            return f.intl.string(f.t.IzZTIS);
+            return _.intl.string(_.t.IzZTIS);
         case d.d4z.PUBLIC_THREAD:
-            return f.intl.string(f.t['7Xm5QE']);
+            return _.intl.string(_.t['7Xm5QE']);
         case d.d4z.PRIVATE_THREAD:
-            return f.intl.string(f.t.F1zyvb);
+            return _.intl.string(_.t.F1zyvb);
         default:
             return null;
     }
 }
 function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { locked: f = !1, video: _ = !1, stream: p = !1, hasActiveThreads: h = !1, textFocused: m = !1 } = n;
+        { locked: _ = !1, video: f = !1, stream: p = !1, hasActiveThreads: h = !1, textFocused: m = !1 } = n;
     if (null == e) return null;
     null == t && (t = s.Z.getGuild(e.getGuildId()));
     let g = (0, a.n)(null == t ? void 0 : t.id, [s.Z, l.default, o.ZP]);
@@ -107,7 +107,7 @@ function p(e, t) {
             return r.XBm;
         case d.d4z.GUILD_STAGE_VOICE:
             if (g) return (0, c.Z)(e) ? r.mBM : r.pki;
-            if (f) return r.mBM;
+            if (_) return r.mBM;
             if ((0, c.Z)(e)) return r.pki;
             else return r.ewx;
         case d.d4z.GUILD_VOICE:
@@ -116,10 +116,10 @@ function p(e, t) {
             if (p) return r.hGI;
             if (g)
                 if ((0, c.Z)(e)) return r.mBM;
-                else return _ ? r.TLW : r.gjC;
-            if (f) return r.mBM;
-            if ((0, c.Z)(e)) return _ ? r.TLW : r.gjC;
-            else return _ ? r.Odl : r.gj8;
+                else return f ? r.TLW : r.gjC;
+            if (_) return r.mBM;
+            if ((0, c.Z)(e)) return f ? r.TLW : r.gjC;
+            else return f ? r.Odl : r.gj8;
         case d.d4z.GUILD_DIRECTORY:
             return r.aVH;
         case d.d4z.GUILD_CATEGORY:

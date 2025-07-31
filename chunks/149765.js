@@ -55,21 +55,21 @@ function d(e) {
     }
     return t;
 }
-function f(e) {
+function _(e) {
     let t = d(e),
         n = Array(l);
     for (let e = 0; e < l; e++) n[l - 1 - e] = u(t, e * l, l);
     return n;
 }
-class _ {
+class f {
     static fromString(e) {
-        return new _(f(e), e);
+        return new f(_(e), e);
     }
     static fromBit(e) {
         let t = Array(l),
             n = Math.floor(e / s);
         for (let r = 0; r < l; r++) t[l - 1 - r] = r === n ? 1 << (e - n * s) : 0;
-        return new _(t);
+        return new f(t);
     }
     static asUintN(e, t) {
         let { parts: n } = t,
@@ -85,18 +85,18 @@ class _ {
     }
     and(e) {
         let { parts: t } = e;
-        return new _(this.parts.map((e, n) => e & t[n]));
+        return new f(this.parts.map((e, n) => e & t[n]));
     }
     or(e) {
         let { parts: t } = e;
-        return new _(this.parts.map((e, n) => e | t[n]));
+        return new f(this.parts.map((e, n) => e | t[n]));
     }
     xor(e) {
         let { parts: t } = e;
-        return new _(this.parts.map((e, n) => e ^ t[n]));
+        return new f(this.parts.map((e, n) => e ^ t[n]));
     }
     not() {
-        return new _(this.parts.map((e) => ~e));
+        return new f(this.parts.map((e) => ~e));
     }
     equals(e) {
         let { parts: t } = e;
@@ -131,7 +131,7 @@ let h = p
               return 'bigint' == typeof e;
           }
         : function (e) {
-              return e instanceof _;
+              return e instanceof f;
           },
     m = {},
     g = p
@@ -139,7 +139,7 @@ let h = p
               return BigInt(e);
           }
         : function (e) {
-              return e instanceof _ ? e : ('number' == typeof e && (e = e.toString()), null != m[e] || (m[e] = _.fromString(e)), m[e]);
+              return e instanceof f ? e : ('number' == typeof e && (e = e.toString()), null != m[e] || (m[e] = f.fromString(e)), m[e]);
           },
     E = g(0),
     b = p
@@ -214,12 +214,12 @@ let R = p
               return BigInt(1) << BigInt(e);
           }
         : function (e) {
-              return _.fromBit(e);
+              return f.fromBit(e);
           },
     P = p
         ? function (e, t) {
               return Number(BigInt.asUintN(e, t));
           }
         : function (e, t) {
-              return _.asUintN(e, t);
+              return f.asUintN(e, t);
           };

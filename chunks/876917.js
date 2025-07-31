@@ -1,58 +1,56 @@
-(n.d(t, { Z: () => _ }), n(388685));
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
-    s = n(802433),
-    l = n(680295),
-    c = n(313305),
-    u = n(241822);
-let d = 0.1,
-    f = 250,
-    _ = (e) => {
-        let { profileEffectId: t, isHovering: n, forCollectedModal: a = !1, isPurchased: _, removeSetHeight: p = !1 } = e,
-            h = a ? f : d,
-            [m, g] = i.useState(!0);
-        return (i.useEffect(() => {
-            if (!0 !== a) g(!1);
-            else {
-                let e = setTimeout(() => {
-                    g(!1);
-                }, h);
-                return () => {
-                    clearTimeout(e);
-                };
-            }
-        }, [h, a]),
-        null != t)
-            ? (0, r.jsxs)('div', {
-                  className: o()(c.previewContainer, {
-                      [c.previewContainerAnimation]: a,
-                      [c.previewContainerSetHeight]: !p
+(r.d(t, { Z: () => d }), r(388685));
+var n = r(255367),
+    l = r(73800),
+    i = r(120356),
+    a = r.n(i),
+    o = r(802433),
+    s = r(680295),
+    c = r(313305),
+    u = r(241822);
+let d = (e) => {
+    let { profileEffectId: t, isHovering: r, forCollectedModal: i = !1, isPurchased: d, removeSetHeight: p = !1 } = e,
+        f = i ? 250 : 0.1,
+        [g, h] = l.useState(!0);
+    return (l.useEffect(() => {
+        if (!0 !== i) h(!1);
+        else {
+            let e = setTimeout(() => {
+                h(!1);
+            }, f);
+            return () => {
+                clearTimeout(e);
+            };
+        }
+    }, [f, i]),
+    null != t)
+        ? (0, n.jsxs)('div', {
+              className: a()(c.previewContainer, {
+                  [c.previewContainerAnimation]: i,
+                  [c.previewContainerSetHeight]: !p
+              }),
+              children: [
+                  (0, n.jsx)('img', {
+                      src: u,
+                      alt: ' ',
+                      className: i ? c.previewForCollected : c.preview,
+                      'aria-hidden': !0
                   }),
-                  children: [
-                      (0, r.jsx)('img', {
-                          src: u,
-                          alt: ' ',
-                          className: a ? c.previewForCollected : c.preview,
-                          'aria-hidden': !0
-                      }),
-                      !m &&
-                          (0, r.jsx)('div', {
-                              className: _ ? c.purchasedEffect : void 0,
-                              children: (0, r.jsx)(l.Z, {
-                                  profileEffectId: t,
-                                  useThumbnail: !0,
-                                  autoPlay: a,
-                                  restartMethod: s.j.FromStart,
-                                  resetOnHover: !0,
-                                  isHovering: n,
-                                  introDelay: h,
-                                  useOpacityOnHover: !1,
-                                  shopPreview: !0
-                              })
+                  !g &&
+                      (0, n.jsx)('div', {
+                          className: d ? c.purchasedEffect : void 0,
+                          children: (0, n.jsx)(s.Z, {
+                              profileEffectId: t,
+                              useThumbnail: !0,
+                              autoPlay: i,
+                              restartMethod: o.j.FromStart,
+                              resetOnHover: !0,
+                              isHovering: r,
+                              introDelay: f,
+                              useOpacityOnHover: !1,
+                              shopPreview: !0
                           })
-                  ]
-              })
-            : null;
-    };
+                      })
+              ]
+          })
+        : null;
+};

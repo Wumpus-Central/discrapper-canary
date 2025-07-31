@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,7 +53,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -102,8 +102,8 @@ function R(e) {
     let { subscription: t } = e;
     if (t.user_id !== l.default.getId()) return;
     let n = s.Q.createFromServer(t);
-    ((h = p(f({}, h), { [n.id]: n })),
-        U(n) && (m = p(f({}, m), { [n.id]: n })),
+    ((h = p(_({}, h), { [n.id]: n })),
+        U(n) && (m = p(_({}, m), { [n.id]: n })),
         null != E &&
             n.type === c.NYc.GUILD &&
             (E = C({
@@ -146,11 +146,11 @@ function L() {
 function x() {
     S = !0;
 }
-function M(e) {
+function k(e) {
     let { eligible: t } = e;
     ((T = t), (I = !1));
 }
-function k(e) {
+function M(e) {
     let {} = e;
     ((T = !1), (I = !1));
 }
@@ -243,7 +243,7 @@ let V = new B(a.Z, {
     BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: D,
     BILLING_SUBSCRIPTION_RESET: j,
     BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: L,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: M,
-    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: k,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: k,
+    BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: M,
     LOGOUT: j
 });

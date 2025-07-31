@@ -557,8 +557,8 @@ e.exports = function (e) {
         c = { begin: /-(webkit|moz|ms|o)-(?=[a-z])/ },
         u = 'and or not only',
         d = /@-?\w[\w]*(-\w+)*/,
-        f = '[a-zA-Z-][a-zA-Z0-9_-]*',
-        _ = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE];
+        _ = '[a-zA-Z-][a-zA-Z0-9_-]*',
+        f = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE];
     return {
         name: 'CSS',
         case_insensitive: !0,
@@ -576,7 +576,7 @@ e.exports = function (e) {
             },
             {
                 className: 'selector-class',
-                begin: '\\.' + f,
+                begin: '\\.' + _,
                 relevance: 0
             },
             l.ATTRIBUTE_SELECTOR_MODE,
@@ -597,14 +597,14 @@ e.exports = function (e) {
                     l.HEXCOLOR,
                     l.IMPORTANT,
                     l.CSS_NUMBER_MODE,
-                    ..._,
+                    ...f,
                     {
                         begin: /(url|data-uri)\(/,
                         end: /\)/,
                         relevance: 0,
                         keywords: { built_in: 'url data-uri' },
                         contains: [
-                            ..._,
+                            ...f,
                             {
                                 className: 'string',
                                 begin: /[^)]/,
@@ -641,7 +641,7 @@ e.exports = function (e) {
                                 begin: /[a-z-]+(?=:)/,
                                 className: 'attribute'
                             },
-                            ..._,
+                            ...f,
                             l.CSS_NUMBER_MODE
                         ]
                     }

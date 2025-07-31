@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(680018),
     a = n(648613),
@@ -59,14 +59,14 @@ function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -75,16 +75,16 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let _ = function (e) {
-    var { subscriptionTier: t, onClick: n, postSuccessGuild: s, onSubscribeModalClose: c, premiumModalAnalyticsLocation: f, applicationId: _, confirmationFooter: p, paymentModalBanner: h, buttonTextOverride: m, defaultTextOverride: g, iconOverride: E, variantOverride: b } = e,
+let f = function (e) {
+    var { subscriptionTier: t, onClick: n, postSuccessGuild: s, onSubscribeModalClose: c, premiumModalAnalyticsLocation: _, applicationId: f, confirmationFooter: p, paymentModalBanner: h, buttonTextOverride: m, defaultTextOverride: g, iconOverride: E, variantOverride: b } = e,
         y = d(e, ['subscriptionTier', 'onClick', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'applicationId', 'confirmationFooter', 'paymentModalBanner', 'buttonTextOverride', 'defaultTextOverride', 'iconOverride', 'variantOverride']);
     let O = {
             onClick: n,
             subscriptionTier: t,
             postSuccessGuild: s,
             onSubscribeModalClose: c,
-            premiumModalAnalyticsLocation: f,
-            applicationId: _,
+            premiumModalAnalyticsLocation: _,
+            applicationId: f,
             confirmationFooter: p,
             paymentModalBanner: h
         },

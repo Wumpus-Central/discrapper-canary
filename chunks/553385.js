@@ -1,7 +1,7 @@
 n.d(t, {
-    N7: () => f,
+    N7: () => _,
     XP: () => p,
-    j8: () => _,
+    j8: () => f,
     z$: () => h
 });
 var r = n(544891),
@@ -13,14 +13,14 @@ var r = n(544891),
     c = n(375954),
     u = n(585483),
     d = n(981631);
-function f(e) {
+function _(e) {
     r.tn.post({
         url: d.ANM.INITIATE_CHANNEL_PROMPTS,
         body: { guild_ids: e },
         rejectWithError: !0
     });
 }
-function _(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.uaV.GUILD_DEADCHAT_REVIVE_PROMPT;
     r.tn.post({
         url: d.ANM.FORCE_SEND_PROMPT(e),

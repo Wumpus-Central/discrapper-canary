@@ -8,8 +8,8 @@ var r = n(179360),
     c = n(905128),
     u = n(158638),
     d = n(639777),
-    f = n(981631),
-    _ = n(647086);
+    _ = n(981631),
+    f = n(647086);
 function p(e, t, n) {
     return (
         t in e
@@ -26,7 +26,7 @@ function p(e, t, n) {
 class h extends i.Z {
     handleSelectedGuildChange() {
         let e = s.Z.getGuildId();
-        if (null == e || e === _._ || e === f.I_8) return;
+        if (null == e || e === f._ || e === _.I_8) return;
         let t = a.Z.getGuild(e);
         null != t &&
             (u.sT.trackExposure({

@@ -1,4 +1,4 @@
-(n.d(t, { ZP: () => M }), n(388685));
+(n.d(t, { ZP: () => k }), n(388685));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -8,8 +8,8 @@ var r,
     c = n(271383),
     u = n(485386),
     d = n(430824),
-    f = n(594174),
-    _ = n(979651),
+    _ = n(594174),
+    f = n(979651),
     p = n(700785),
     h = n(146085),
     m = n(590415);
@@ -32,7 +32,7 @@ let E = {},
         moderator: !1
     };
 function y(e, t) {
-    let n = _.Z.getVoiceStateForChannel(t, e);
+    let n = f.Z.getVoiceStateForChannel(t, e);
     return (0, m.gf)(n) === m.xO.ON_STAGE;
 }
 function O(e, t, n) {
@@ -117,7 +117,7 @@ function L(e) {
 }
 class x extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(c.ZP, l.Z, d.Z, f.default, _.Z, u.Z);
+        this.waitFor(c.ZP, l.Z, d.Z, _.default, f.Z, u.Z);
     }
     isSpeaker(e, t) {
         return this.getPermissionsForUser(e, t).speaker;
@@ -142,7 +142,7 @@ class x extends (r = o.ZP.Store) {
     }
 }
 g(x, 'displayName', 'StageChannelRoleStore');
-let M = new x(s.Z, {
+let k = new x(s.Z, {
     CHANNEL_UPDATES: N,
     CONNECTION_OPEN: D,
     GUILD_MEMBER_REMOVE: R,

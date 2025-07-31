@@ -23,8 +23,8 @@ var r,
     c,
     u,
     d,
-    f = n(512722),
-    _ = n.n(f),
+    _ = n(512722),
+    f = n.n(_),
     p = n(159635),
     h = n.n(p),
     m = n(729594),
@@ -48,8 +48,8 @@ let A = 10,
     D = /^\/(application-directory|discovery\/applications)\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
     L = /^\/activities\/([0-9-]+)\/?$/,
     x = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-    M = /^\/channels\/([0-9]+)\/shop$/,
-    k = /^\/quests\/([0-9-]+)\/?$/,
+    k = /^\/channels\/([0-9]+)\/shop$/,
+    M = /^\/quests\/([0-9-]+)\/?$/,
     j = /^\/oauth2\/authorize/,
     U = /^#itemSkuId=([0-9]+)$/,
     G = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
@@ -82,7 +82,7 @@ function q(e) {
 }
 let X = (e) => e.replaceAll(J, ' $2 '),
     Q = null == (a = h().defaultRules.link) || null == (i = a.match) || null == (r = i.regex) ? void 0 : r.source;
-(_()(Q, 'SimpleMarkdown link regex is not set.'), '^' === Q[0] && (Q = Q.substring(1)));
+(f()(Q, 'SimpleMarkdown link regex is not set.'), '^' === Q[0] && (Q = Q.substring(1)));
 let J = RegExp(Q, 'g');
 function $(e, t) {
     var n;
@@ -181,15 +181,15 @@ function ea(e) {
             } else u(t, d[2]);
         }
         (null == c ? void 0 : c.match(C)) != null && u(T.g.CHANNEL_LINK, c.replace('/channels/', ''));
-        let f = en(r.pathname);
-        if ((null != f && u(T.g.EVENT, ''.concat(f.guildId, '-').concat(f.guildEventId) + (null != f.recurrenceId ? '-'.concat(f.recurrenceId) : '')), null != (null == c ? void 0 : c.match(j)) && null != r.query)) {
+        let _ = en(r.pathname);
+        if ((null != _ && u(T.g.EVENT, ''.concat(_.guildId, '-').concat(_.guildEventId) + (null != _.recurrenceId ? '-'.concat(_.recurrenceId) : '')), null != (null == c ? void 0 : c.match(j)) && null != r.query)) {
             let e = (0, y.y)(r.query),
                 t = e.clientId;
             null == t || '' === t || (null == (a = e.scopes) ? void 0 : a.some((e) => e !== g.x.APPLICATIONS_COMMANDS)) || u(T.g.APP_OAUTH2_LINK, t);
         }
-        let _ = null == c ? void 0 : c.match(w);
-        if (null != _) {
-            let e = _[2];
+        let f = null == c ? void 0 : c.match(w);
+        if (null != f) {
+            let e = f[2];
             u(T.g.APP_DIRECTORY_PROFILE, e);
         }
         let p = null == c ? void 0 : c.match(D);
@@ -208,7 +208,7 @@ function ea(e) {
         }
         let m = null == c ? void 0 : c.match(x);
         null != m && u(T.g.GUILD_PRODUCT, ''.concat(m[1], '-').concat(m[2]));
-        let v = null == c ? void 0 : c.match(M);
+        let v = null == c ? void 0 : c.match(k);
         null != v && u(T.g.SERVER_SHOP, v[1]);
         let I = eo(e);
         if ((null != I && u(T.g.QUESTS_EMBED, I), '/shop' === c)) {
@@ -221,7 +221,7 @@ function ea(e) {
 function eo(e) {
     var t, n;
     let r = er(e),
-        i = null == r || null == (t = r.primaryHostRemainingPath) ? void 0 : t.match(k);
+        i = null == r || null == (t = r.primaryHostRemainingPath) ? void 0 : t.match(M);
     return null != (n = null == i ? void 0 : i[1]) ? n : null;
 }
 function es(e) {

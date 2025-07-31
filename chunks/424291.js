@@ -58,7 +58,7 @@ function c(e, t) {
 let u = 'activity-age-gate';
 function d(e) {
     let { application: t, channelId: o, onAgree: l, onDisagree: d } = e,
-        f =
+        _ =
             null !=
             (0, a.ZP)({
                 application: t,
@@ -83,7 +83,7 @@ function d(e) {
             },
             {
                 modalKey: u,
-                contextKey: f
+                contextKey: _
             }
         ),
         Promise.resolve()

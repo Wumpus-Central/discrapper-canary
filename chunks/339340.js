@@ -14,8 +14,8 @@ var r = n(255367),
     c = n(667202),
     u = n(755721),
     d = n(481060),
-    f = n(787014),
-    _ = n(904245),
+    _ = n(787014),
+    f = n(904245),
     p = n(12498),
     h = n(541716),
     m = n(752305),
@@ -37,8 +37,8 @@ function P(e) {
         w = b.Z.getCurrentConfig({ location: 'VoiceChannelStatusModal' }, { autoTrackExposure: !0 }).enabled,
         D = (0, s.e7)([p.Z], () => p.Z.getChannelStatus(t)),
         L = (0, s.e7)([O.Z], () => O.Z.getMediaSessionId()),
-        [x, M] = i.useState(null != D ? D : ''),
-        [k, j] = i.useState(!1),
+        [x, k] = i.useState(null != D ? D : ''),
+        [M, j] = i.useState(!1),
         [U, G] = i.useState(null),
         B = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
         V = x.length > R;
@@ -55,7 +55,7 @@ function P(e) {
         Z = (e) => {
             let { invalidEmojis: n } = e;
             if (null != n && n.length > 0) {
-                let { errorMessage: e } = _.Z.validateMessage(n, B, t.id);
+                let { errorMessage: e } = f.Z.validateMessage(n, B, t.id);
                 return (G(e), j(!1), { hasErrors: !0 });
             }
             return { hasErrors: !1 };
@@ -68,7 +68,7 @@ function P(e) {
                 { hasErrors: o } = Z(i);
             if (!o) {
                 try {
-                    let e = await f.ZP.updateVoiceChannelStatus(t.id, i.content);
+                    let e = await _.ZP.updateVoiceChannelStatus(t.id, i.content);
                     204 === e.status
                         ? (I.default.track(T.rMx.VOICE_CHANNEL_TOPIC_SET, {
                               guild_id: t.guild_id,
@@ -88,10 +88,10 @@ function P(e) {
         },
         [Y, W] = i.useState((0, m.JM)(x)),
         K = (e, t, n) => {
-            (M(t), W(n));
+            (k(t), W(n));
         },
         z = async () => (
-            V || k || (await H()),
+            V || M || (await H()),
             Promise.resolve({
                 shouldClear: !1,
                 shouldRefocus: !0
@@ -142,7 +142,7 @@ function P(e) {
                   },
                   {
                       variant: 'primary',
-                      loading: k,
+                      loading: M,
                       disabled: V,
                       text: S.intl.string(S.t.XqK2Iy),
                       onClick: H
@@ -203,7 +203,7 @@ function P(e) {
                               }),
                               (0, r.jsx)(u.zx, {
                                   onClick: H,
-                                  submitting: k,
+                                  submitting: M,
                                   className: A.button,
                                   disabled: V,
                                   children: S.intl.string(S.t.XqK2Iy)

@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(81643),
     _ = n(952306),
     j = n(299206),
-    E = n(295474),
-    O = n(144114),
+    O = n(295474),
+    E = n(144114),
     C = n(918505),
     v = n(332473),
     S = n(921801),
@@ -65,7 +65,7 @@ function H(e) {
     }
     return e;
 }
-function W(e, t) {
+function z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,14 +83,14 @@ function W(e, t) {
         e
     );
 }
-let z = w.ZP.getEnableHardwareAcceleration() ? m.Xo$ : m.qEK;
+let W = w.ZP.getEnableHardwareAcceleration() ? m.Xo$ : m.qEK;
 function Y(e) {
     var t, s;
     let { className: l, user: o } = e,
         c = r.useRef(null),
         u = (0, C.o9)(),
         p = (0, v.b)(),
-        g = (0, E.gS)(),
+        g = (0, O.gS)(),
         h = null != (s = null == g || null == (t = g.nick) ? void 0 : t[0]) ? s : null,
         [f, b] = r.useState(!1);
     r.useEffect(() => {
@@ -141,7 +141,7 @@ function Y(e) {
                         children: (e) =>
                             (0, i.jsx)(
                                 m.Mgn,
-                                W(
+                                z(
                                     H(
                                         {
                                             size: 'custom',
@@ -164,7 +164,7 @@ function Y(e) {
                         children: (e) =>
                             (0, i.jsx)(
                                 m.Mgn,
-                                W(
+                                z(
                                     H(
                                         {
                                             size: 'custom',
@@ -186,7 +186,7 @@ function Y(e) {
                         className: F.fieldButton,
                         children: (0, i.jsx)(
                             m.zxk,
-                            W(
+                            z(
                                 H(
                                     {
                                         variant: 'secondary',
@@ -220,7 +220,7 @@ function Y(e) {
 function K(e) {
     var t, n;
     let { user: s, className: l } = e,
-        o = (0, E.gS)(),
+        o = (0, O.gS)(),
         c = null != (n = null == o || null == (t = o.nick) ? void 0 : t[0]) ? n : null,
         u = Z.ZP.getGlobalName(s),
         p = r.useRef(null),
@@ -263,7 +263,7 @@ function K(e) {
                             children: (e) =>
                                 (0, i.jsx)(
                                     m.Mgn,
-                                    W(
+                                    z(
                                         H(
                                             {
                                                 size: 'custom',
@@ -440,11 +440,11 @@ function J(e) {
                                       (0, m.h7j)((e) =>
                                           (0, i.jsx)(
                                               h.Z,
-                                              W(H({}, e), {
+                                              z(H({}, e), {
                                                   title: G.intl.string(G.t['3CTiKi']),
                                                   children: s.hasFlag(M.xW$.MFA_SMS) ? G.intl.string(G.t.jrhJys) : void 0,
                                                   actionText: G.intl.string(G.t.N86XcH),
-                                                  handleSubmit: (e) => O.Z.removePhone(e, O.L.USER_SETTINGS_UPDATE)
+                                                  handleSubmit: (e) => E.Z.removePhone(e, E.L.USER_SETTINGS_UPDATE)
                                               })
                                           )
                                       );
@@ -464,7 +464,7 @@ function J(e) {
                                     (0, m.ZDy)(
                                         async () => {
                                             let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
-                                            return (t) => (0, i.jsx)(e, H({ reason: O.L.USER_SETTINGS_UPDATE }, t));
+                                            return (t) => (0, i.jsx)(e, H({ reason: E.L.USER_SETTINGS_UPDATE }, t));
                                         },
                                         { modalKey: U.M }
                                     );
@@ -501,7 +501,7 @@ function Q(e) {
               children: (e) =>
                   (0, i.jsx)(
                       m.P3F,
-                      W(H({}, e), {
+                      z(H({}, e), {
                           innerRef: a,
                           className: F.overflowMenuButton,
                           'aria-label': G.intl.string(G.t.DEoVWV),
@@ -592,7 +592,7 @@ function et() {
             (0, i.jsxs)('div', {
                 className: F.userInfo,
                 children: [
-                    (0, i.jsx)(z, {
+                    (0, i.jsx)(W, {
                         className: F.avatar,
                         src: d,
                         avatarDecoration: u,

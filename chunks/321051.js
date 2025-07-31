@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(692547),
@@ -8,12 +8,12 @@ var r = n(255367),
     c = n(388032),
     u = n(10123);
 let d = [54, 8, 8, 8];
-function f(e) {
+function _(e) {
     let { onSelect: t, sound: n } = e,
-        [f, _] = i.useState(!1),
+        [_, f] = i.useState(!1),
         p = i.useRef(null);
     function h(e) {
-        (_(!1), null == t || t(e));
+        (f(!1), null == t || t(e));
     }
     let m = (e) =>
         (0, r.jsxs)('div', {
@@ -40,10 +40,10 @@ function f(e) {
         });
     return (0, r.jsx)(o.yRy, {
         targetElementRef: p,
-        shouldShow: f,
+        shouldShow: _,
         position: 'bottom',
         align: 'left',
-        onRequestClose: () => _(!1),
+        onRequestClose: () => f(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(o.VqE, {
@@ -65,7 +65,7 @@ function f(e) {
         children: () =>
             (0, r.jsx)(o.P3F, {
                 className: u.container,
-                onClick: () => _(!0),
+                onClick: () => f(!0),
                 innerRef: p,
                 children:
                     null == n

@@ -56,22 +56,22 @@ function u(e, t) {
     );
 }
 let d = [],
-    f = {},
     _ = {},
+    f = {},
     p = {},
     h = {},
     m = {},
     g = { botUserIdToAppUsage: {} },
     E = 10;
 function b(e) {
-    let t = f[e.id];
+    let t = _[e.id];
     h[e.id] = Date.now();
     let n = e;
-    for (let r of (null != t && (n = t.mergeFromApplicationUpdate(e)), (f[e.id] = n), (p[e.name.toLowerCase()] = n), e.aliases)) p[r.toLowerCase()] = n;
+    for (let r of (null != t && (n = t.mergeFromApplicationUpdate(e)), (_[e.id] = n), (p[e.name.toLowerCase()] = n), e.aliases)) p[r.toLowerCase()] = n;
     delete m[e.id];
 }
 function y() {
-    ((f = {}), (_ = {}), (p = {}), (h = {}), (m = {}));
+    ((_ = {}), (f = {}), (p = {}), (h = {}), (m = {}));
 }
 function O(e) {
     let { applications: t } = e;
@@ -168,17 +168,17 @@ function x(e) {
     }
     return n;
 }
-function M(e) {
+function k(e) {
     let { entitlements: t } = e,
         n = !1;
     for (let { sku: e } of t) (null == e ? void 0 : e.application) != null && (b(o.ZP.createFromServer(e.application)), (n = !0));
     return n;
 }
-function k(e) {
+function M(e) {
     let { guildId: t, applications: n } = e,
         r = [];
     for (let e of n) (r.push(e.id), b(o.ZP.createFromServer(e)));
-    _[t] = r;
+    f[t] = r;
 }
 function j(e) {
     let { payments: t } = e,
@@ -264,22 +264,22 @@ class K extends (r = i.ZP.PersistedStore) {
         return g;
     }
     _getAllApplications() {
-        return Object.values(f);
+        return Object.values(_);
     }
     getApplications() {
-        return f;
+        return _;
     }
     getGuildApplication(e, t) {
         if (null != e) {
-            for (let n of Object.values(f)) if (n.guildId === e && n.type === t) return n;
+            for (let n of Object.values(_)) if (n.guildId === e && n.type === t) return n;
         }
     }
     getGuildApplicationIds(e) {
         var t;
-        return null == e ? d : null != (t = _[e]) ? t : d;
+        return null == e ? d : null != (t = f[e]) ? t : d;
     }
     getApplication(e) {
-        if (null != e) return f[e];
+        if (null != e) return _[e];
     }
     getApplicationByName(e) {
         if (null == e) return;
@@ -314,10 +314,10 @@ let z = new K(a.Z, {
     APPLICATIONS_FETCH_SUCCESS: P,
     APPLICATIONS_FETCH_FAIL: x,
     APPLICATION_UPDATE: I,
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: M,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: M,
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: M,
-    GUILD_APPLICATIONS_FETCH_SUCCESS: k,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: k,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: k,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: k,
+    GUILD_APPLICATIONS_FETCH_SUCCESS: M,
     BILLING_PAYMENTS_FETCH_SUCCESS: j,
     PAYMENT_UPDATE: U,
     INVITE_RESOLVE_SUCCESS: B,

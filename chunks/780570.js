@@ -1,11 +1,11 @@
 (n.d(t, {
     CP: () => l,
     Je: () => p,
-    KJ: () => f,
+    KJ: () => _,
     OT: () => c,
     Tu: () => s,
     d0: () => d,
-    lK: () => _,
+    lK: () => f,
     xI: () => u
 }),
     n(388685),
@@ -35,13 +35,13 @@ function u(e, t) {
 function d(e, t, n) {
     return !(null == t || (n.enabled && t.hasFlag(o.eHb.PRIVATE))) && !t.isHidden();
 }
-function f(e) {
+function _(e) {
     return null == e ? null : e.type === o.vxO.INSTALLING || e.type === o.vxO.UPDATING || e.type === o.vxO.UNINSTALLING ? e : null;
 }
-function _(e) {
+function f(e) {
     return e.reduce(
         (e, t) => {
-            let n = f(t);
+            let n = _(t);
             return null == n || t.type === o.vxO.UP_TO_DATE
                 ? e
                 : {

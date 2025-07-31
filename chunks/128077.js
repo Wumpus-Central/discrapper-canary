@@ -5,8 +5,8 @@ var n = r(73800),
 function i() {
     let [e, t] = (0, n.useState)(''),
         [r, i] = (0, n.useState)([]),
-        [o, u] = (0, n.useState)(null),
-        [c, s] = (0, n.useState)(!1);
+        [o, s] = (0, n.useState)(null),
+        [c, u] = (0, n.useState)(!1);
     return (
         (0, n.useEffect)(() => {
             if (null != o)
@@ -45,13 +45,13 @@ function i() {
                     skuId: e,
                     loadId: t,
                     onRedeemStart: () => {
-                        (s(!0), u(null));
+                        (u(!0), s(null));
                     },
                     onRedeemSucceed: (e) => {
-                        (i(e), s(!1), null == r || r(e));
+                        (i(e), u(!1), null == r || r(e));
                     },
                     onRedeemFail: (e) => {
-                        (u(e), s(!1));
+                        (s(e), u(!1));
                     }
                 });
             }

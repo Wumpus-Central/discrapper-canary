@@ -1,6 +1,6 @@
 (n.d(t, {
     W: () => I,
-    u: () => y
+    u: () => x
 }),
     n(190126),
     n(368063),
@@ -21,14 +21,14 @@ var r,
     p = n(607070),
     m = n(206295),
     f = n(70097),
-    _ = n(314897),
-    g = n(572004),
+    g = n(314897),
+    _ = n(572004),
     h = n(914498),
     b = n(217702),
     E = n(388032),
     C = n(383195);
-function O() {
-    return (O =
+function v() {
+    return (v =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -38,7 +38,7 @@ function O() {
             return e;
         }).apply(this, arguments);
 }
-function v(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -63,8 +63,8 @@ function v(e) {
     }
     return e;
 }
-var y = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
-function x(e) {
+var x = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
+function y(e) {
     let { onClick: t, children: n, className: r } = e;
     return null != t
         ? (0, i.jsx)(u.P3F, {
@@ -79,11 +79,11 @@ function x(e) {
 }
 function I(e) {
     var t, n, r, a;
-    let { title: y, header: I, footer: j, info: S, staticBannerSrc: T, videoBannerSrc: N, bannerAspectRatio: P = 0, iconSrc: A, embedUrl: w, infoUrl: Z, actions: R = [], trackingConfig: D, onClickContent: L, onClickBanner: M } = e;
+    let { title: x, header: I, footer: j, info: S, staticBannerSrc: T, videoBannerSrc: N, bannerAspectRatio: P = 0, iconSrc: A, embedUrl: w, infoUrl: Z, actions: R = [], trackingConfig: D, onClickContent: L, onClickBanner: M } = e;
     D = {
         id: null != (n = null == (t = D) ? void 0 : t.id) ? n : '0',
         linkType: null != (r = null == t ? void 0 : t.linkType) ? r : h.Un.UNKNOWN,
-        referrerId: null != (a = null == t ? void 0 : t.referrerId) ? a : _.default.getId(),
+        referrerId: null != (a = null == t ? void 0 : t.referrerId) ? a : g.default.getId(),
         activityCustomId: null == t ? void 0 : t.activityCustomId,
         onView: null == t ? void 0 : t.onView,
         onLinkCopied: null == t ? void 0 : t.onLinkCopied
@@ -92,7 +92,7 @@ function I(e) {
         F = 'linear-gradient(45deg, '.concat(k, ', ').concat(U, ')'),
         B = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
         G = l.useRef(!1),
-        H = (0, d.O)(
+        V = (0, d.O)(
             (e) => {
                 if (!1 === G.current && e) {
                     var t;
@@ -101,15 +101,15 @@ function I(e) {
             },
             void 0
         ),
-        V =
-            g.wS && null != w
+        H =
+            _.wS && null != w
                 ? (0, i.jsx)(c.zx, {
                       look: c.zx.Looks.BLANK,
                       size: c.zx.Sizes.ICON,
                       'aria-label': E.intl.string(E.t.WqhZsr),
                       className: C.linkIcon,
                       onClick: () => {
-                          ((0, g.JG)(w, () => (0, u.showToast)((0, u.createToast)(E.intl.string(E.t['L/PwZW']), u.ToastType.SUCCESS))), (0, h.Yu)(D.id, D.linkType));
+                          ((0, _.JG)(w, () => (0, u.showToast)((0, u.createToast)(E.intl.string(E.t['L/PwZW']), u.ToastType.SUCCESS))), (0, h.Yu)(D.id, D.linkType));
                       },
                       children: (0, i.jsx)(u.xPt, {
                           size: 'xs',
@@ -152,11 +152,11 @@ function I(e) {
                 };
         }, [M, D]);
     return (0, i.jsxs)('div', {
-        ref: H,
+        ref: V,
         className: C.embed,
         children: [
             Y &&
-                (0, i.jsxs)(x, {
+                (0, i.jsxs)(y, {
                     onClick: ee,
                     className: o()(C.bannerWrapper, X, { [C.showVideoOnFocus]: K }),
                     children: [
@@ -197,13 +197,13 @@ function I(e) {
                                             color: 'none',
                                             children: I
                                         }),
-                                        null != V ? V : z
+                                        null != H ? H : z
                                     ]
                                 }),
                             (0, i.jsxs)('div', {
                                 className: C.contentAndCopyButtonWrapper,
                                 children: [
-                                    (0, i.jsxs)(x, {
+                                    (0, i.jsxs)(y, {
                                         onClick: $,
                                         className: o()(C.contentWrapper, { [C.contentWrapperClickable]: null != $ }),
                                         children: [
@@ -220,7 +220,7 @@ function I(e) {
                                                         color: 'none',
                                                         lineClamp: 1,
                                                         className: C.contentTitle,
-                                                        children: y
+                                                        children: x
                                                     }),
                                                     (0, i.jsx)('div', {
                                                         className: C.contentInfoWrapper,
@@ -230,7 +230,7 @@ function I(e) {
                                             })
                                         ]
                                     }),
-                                    null == I && (null != V ? V : z)
+                                    null == I && (null != H ? H : z)
                                 ]
                             }),
                             R.length > 0 &&
@@ -262,19 +262,19 @@ function I(e) {
                                                   {
                                                       text: a,
                                                       children: (e) => {
-                                                          var t = O(
+                                                          var t = v(
                                                               {},
                                                               (function (e) {
                                                                   if (null == e) throw TypeError('Cannot destructure ' + e);
                                                                   return e;
                                                               })(e)
                                                           );
-                                                          return (0, i.jsx)(c.zx, v({}, f, t));
+                                                          return (0, i.jsx)(c.zx, O({}, f, t));
                                                       }
                                                   },
                                                   n
                                               )
-                                            : (0, i.jsx)(c.zx, v({}, f), n);
+                                            : (0, i.jsx)(c.zx, O({}, f), n);
                                     })
                                 })
                         ]

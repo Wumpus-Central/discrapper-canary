@@ -23,10 +23,10 @@ function d(e, t) {
     var o = t || '';
     return n + String(i) + o + (0, l.Z)(a, 2);
 }
-function f(e, t) {
-    return e % 60 == 0 ? (e > 0 ? '-' : '+') + (0, l.Z)(Math.abs(e) / 60, 2) : _(e, t);
-}
 function _(e, t) {
+    return e % 60 == 0 ? (e > 0 ? '-' : '+') + (0, l.Z)(Math.abs(e) / 60, 2) : f(e, t);
+}
+function f(e, t) {
     var n = t || '',
         r = e > 0 ? '-' : '+',
         i = Math.abs(e);
@@ -424,24 +424,24 @@ let p = {
         if (0 === i) return 'Z';
         switch (t) {
             case 'X':
-                return f(i);
+                return _(i);
             case 'XXXX':
             case 'XX':
-                return _(i);
+                return f(i);
             default:
-                return _(i, ':');
+                return f(i, ':');
         }
     },
     x: function (e, t, n, r) {
         var i = (r._originalDate || e).getTimezoneOffset();
         switch (t) {
             case 'x':
-                return f(i);
+                return _(i);
             case 'xxxx':
             case 'xx':
-                return _(i);
+                return f(i);
             default:
-                return _(i, ':');
+                return f(i, ':');
         }
     },
     O: function (e, t, n, r) {
@@ -452,7 +452,7 @@ let p = {
             case 'OOO':
                 return 'GMT' + d(i, ':');
             default:
-                return 'GMT' + _(i, ':');
+                return 'GMT' + f(i, ':');
         }
     },
     z: function (e, t, n, r) {
@@ -463,7 +463,7 @@ let p = {
             case 'zzz':
                 return 'GMT' + d(i, ':');
             default:
-                return 'GMT' + _(i, ':');
+                return 'GMT' + f(i, ':');
         }
     },
     t: function (e, t, n, r) {

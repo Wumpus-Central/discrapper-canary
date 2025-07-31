@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(381499),
     i = n(601992),
     a = n(675478),
@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function f(e, t) {
         e
     );
 }
-async function _(e) {
+async function f(e) {
     let { nextStatus: t, prevStatus: n, analyticsContext: c, durationMillis: d } = e;
     (null == n && (n = o.Z.getStatus()),
         await a.hW.updateAsync(
@@ -67,12 +67,12 @@ async function _(e) {
             },
             a.fy.INFREQUENT_USER_ACTION
         ));
-    let _ = u(
+    let f = u(
         {
             next_status: t,
             prev_status: n
         },
         i.Z.getGlobalStats()
     );
-    (null != d && (_ = f(u({}, _), { expire_duration_minutes: null != d ? d / 60000 : null })), null != c && (_ = u({}, _, c)), s.default.track(l.rMx.USER_STATUS_UPDATED, _));
+    (null != d && (f = _(u({}, f), { expire_duration_minutes: null != d ? d / 60000 : null })), null != c && (f = u({}, f, c)), s.default.track(l.rMx.USER_STATUS_UPDATED, f));
 }

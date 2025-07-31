@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => u }), r(539854));
+(r.d(t, { Z: () => s }), r(539854));
 var n,
     a = r(442837),
     l = r(570140);
@@ -135,4 +135,4 @@ class o extends (n = a.ZP.Store) {
     }
 }
 i(o, 'displayName', 'VirtualCurrencyStore');
-let u = new o();
+let s = new o();

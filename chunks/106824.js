@@ -40,7 +40,7 @@ function d(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -52,12 +52,12 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -77,7 +77,7 @@ class m extends r.EventEmitter {
         let t = this.props.focused !== e.focused,
             n = this.props.channel.id !== e.channel.id || this.props.activeCommandOption !== e.activeCommandOption || this.props.activeInlineAutocompleteInput !== e.activeInlineAutocompleteInput,
             r = !this.state.didInitialQuery || this.props.currentWord !== e.currentWord || this.props.currentWordIsAtStart !== e.currentWordIsAtStart || this.props.textValue !== e.textValue || this.props.optionText !== e.optionText;
-        if (((this.props = e), n || r)) (this.updateResults(r, n), this.state.didInitialQuery || (this.state = _(d({}, this.state), { didInitialQuery: !0 })));
+        if (((this.props = e), n || r)) (this.updateResults(r, n), this.state.didInitialQuery || (this.state = f(d({}, this.state), { didInitialQuery: !0 })));
         else if (t) {
             let e = this.state.query;
             this.setState({ isVisible: null != e && this.shouldShow(e.resultCount, e.isLoading, e.typeInfo) });
@@ -137,9 +137,9 @@ class m extends r.EventEmitter {
             u = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null == this.props.editorRef.current) return;
         let d = (0, c.FW)(this.props),
-            f = this.props.editorRef.current.getSlateEditor();
-        null != f && (r = null != (n = o.bN.getSelectedParentOfType(f, p)) ? o.bN.getTextFromRange(f, o.bN.range(f, n[1])) : null);
-        let _ = (0, c.fZ)({
+            _ = this.props.editorRef.current.getSlateEditor();
+        null != _ && (r = null != (n = o.bN.getSelectedParentOfType(_, p)) ? o.bN.getTextFromRange(_, o.bN.range(_, n[1])) : null);
+        let f = (0, c.fZ)({
                 channel: this.props.channel,
                 guild: this.props.guild,
                 options: d,
@@ -151,9 +151,9 @@ class m extends r.EventEmitter {
                 parentAutocompleteInputValue: r
             }),
             h = d.commands !== l.L8.DISABLED ? (0, c.py)(this.props.activeCommandOption, this.props.currentWord) : null;
-        if (null == _ && null != h) _ = h;
-        else if (null == _ || (null != h && _.type !== h.type)) return void this.clearQuery();
-        let { type: m, typeInfo: g, query: E } = _,
+        if (null == f && null != h) f = h;
+        else if (null == f || (null != h && f.type !== h.type)) return void this.clearQuery();
+        let { type: m, typeInfo: g, query: E } = f,
             b = u || (i && ((null == (e = this.state.query) ? void 0 : e.queryText) !== E || (null == (t = this.state.query) ? void 0 : t.typeInfo) !== g)),
             y = s.fq.getSetting();
         d.allowStickers = d.allowStickers ? y : d.allowStickers;
@@ -187,22 +187,22 @@ class m extends r.EventEmitter {
     selectResult(e, t, n) {
         var r, i, o;
         if (!this.state.isVisible) return !1;
-        let { type: s, typeInfo: c, results: u, resultCount: d, options: f } = this.state.query;
+        let { type: s, typeInfo: c, results: u, resultCount: d, options: _ } = this.state.query;
         if (e >= d) return !1;
-        let _ =
+        let f =
             null == (i = c.onSelect)
                 ? void 0
                 : i.call(c, {
                       results: u,
                       index: e,
                       type: t ? l.QB.SEND : l.QB.INSERT,
-                      options: f,
+                      options: _,
                       channel: this.props.channel,
                       guild: this.props.guild,
                       tabOrEnter: n,
                       queryText: null == (r = this.state.query) ? void 0 : r.queryText
                   });
-        return (null != _ && (0, a.Qt)(s, null != (o = _.type) ? o : null, this.props.channel, _.metadata), !0);
+        return (null != f && (0, a.Qt)(s, null != (o = f.type) ? o : null, this.props.channel, f.metadata), !0);
     }
     setState(e) {
         for (let t in e)

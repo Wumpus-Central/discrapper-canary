@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(835473),
     u = n(741570),
     d = n(592125),
-    f = n(430824),
-    _ = n(979651),
+    _ = n(430824),
+    f = n(979651),
     p = n(626135),
     h = n(81570),
     m = n(409057),
@@ -22,14 +22,14 @@ function O(e) {
         S = (0, h.T)({ location: 'UserProfileActivityCardWrapper' }),
         A = t.id === n.id,
         N = S && !A && !t.bot,
-        { voiceGuild: C, voiceChannel: R } = (0, a.cj)([f.Z, _.Z, d.Z], () => {
+        { voiceGuild: C, voiceChannel: R } = (0, a.cj)([_.Z, f.Z, d.Z], () => {
             var e, n;
             let r = (0, o.Z)(O);
             if (!r && (null == O ? void 0 : O.type) !== y.IIU.HANG_STATUS) return {};
-            let i = r ? (null == (e = _.Z.getVoiceStateForSession(t.id, null == O ? void 0 : O.session_id)) ? void 0 : e.channelId) : null == (n = _.Z.getVoiceStateForUser(t.id)) ? void 0 : n.channelId,
+            let i = r ? (null == (e = f.Z.getVoiceStateForSession(t.id, null == O ? void 0 : O.session_id)) ? void 0 : e.channelId) : null == (n = f.Z.getVoiceStateForUser(t.id)) ? void 0 : n.channelId,
                 a = d.Z.getChannel(i);
             return {
-                voiceGuild: f.Z.getGuild(null == a ? void 0 : a.getGuildId()),
+                voiceGuild: _.Z.getGuild(null == a ? void 0 : a.getGuildId()),
                 voiceChannel: a
             };
         }),

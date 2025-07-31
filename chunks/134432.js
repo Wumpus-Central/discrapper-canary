@@ -3,7 +3,7 @@
     Vv: () => T,
     oO: () => A,
     po: () => S,
-    x_: () => f.Z
+    x_: () => _.Z
 }),
     n(388685),
     n(35282));
@@ -16,8 +16,8 @@ var r = n(392711),
     c = n(956664),
     u = n(931619),
     d = n(591759),
-    f = n(921948),
-    _ = n(981631);
+    _ = n(921948),
+    f = n(981631);
 function p(e, t, n) {
     return (
         t in e
@@ -105,7 +105,7 @@ function S(e, t) {
                                   });
                         });
                 }),
-            _.dG4
+            f.dG4
         );
     {
         let r;
@@ -138,30 +138,30 @@ function N(e) {
     return [t, s.parse(n)];
 }
 function C(e) {
-    let { src: t, sourceWidth: n, sourceHeight: r, targetWidth: a, targetHeight: o, format: l = null, quality: u = null, animated: f = !1, srcIsAnimated: p = !1 } = e;
+    let { src: t, sourceWidth: n, sourceHeight: r, targetWidth: a, targetHeight: o, format: l = null, quality: u = null, animated: _ = !1, srcIsAnimated: p = !1 } = e;
     if (t.startsWith('data:image') || d.Z.isDiscordCdnUrl(t)) return t;
     let [h, m] = N(t);
-    (null != l && (m.format = l), null != u && (m.quality = u), f && p && (g.test(t) || E.test(t)) && (m.animated = !0), E.test(t) && (m.format = 'webp'));
+    (null != l && (m.format = l), null != u && (m.quality = u), _ && p && (g.test(t) || E.test(t)) && (m.animated = !0), E.test(t) && (m.format = 'webp'));
     let b = (0, c.Tj)({
         width: a,
         height: o,
-        maxWidth: _.hiG,
-        maxHeight: _.hiG
+        maxWidth: f.hiG,
+        maxHeight: f.hiG
     });
     return ((a = b.width), (o = b.height), (a !== n || o !== r) && ((m.width = 0 | a), (m.height = 0 | o)), i().isEmpty(m) || (h += '?' + s.stringify(m)), h);
 }
 function R(e) {
     let { src: t, width: n, height: r, maxWidth: i, maxHeight: a, ratio: o = 1, format: s = null, quality: l = null, animated: c = !1, srcIsAnimated: u = !1 } = e,
         d = n,
-        _ = r;
-    (o < 1 && ((d = Math.round(n * o)), (_ = Math.round(r * o))), null != i && (d = Math.min(d, i)), null != a && (_ = Math.min(_, a)));
-    let p = (0, f.Z)();
+        f = r;
+    (o < 1 && ((d = Math.round(n * o)), (f = Math.round(r * o))), null != i && (d = Math.min(d, i)), null != a && (f = Math.min(f, a)));
+    let p = (0, _.Z)();
     return C({
         src: t,
         sourceWidth: n,
         sourceHeight: r,
         targetWidth: (d *= p),
-        targetHeight: (_ *= p),
+        targetHeight: (f *= p),
         format: s,
         quality: l,
         animated: c,

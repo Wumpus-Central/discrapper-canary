@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(904245),
     u = n(159300),
     d = n(592125),
-    f = n(984933),
-    _ = n(430824),
+    _ = n(984933),
+    f = n(430824),
     p = n(496675),
     h = n(699516),
     m = n(771845),
@@ -80,13 +80,13 @@ function C(e) {
     let { user: t, guildId: n, onAction: s } = e,
         c = (0, a.e7)([g.default], () => g.default.getCurrentUser(), []),
         d = (0, a.Wu)(
-            [m.ZP, _.Z, p.Z],
+            [m.ZP, f.Z, p.Z],
             () => {
                 let e = m.ZP.getFlattenedGuildIds(),
                     t = [];
                 return (
                     e.forEach((e) => {
-                        let r = _.Z.getGuild(e);
+                        let r = f.Z.getGuild(e);
                         null != r && (0, u.b)(p.Z, r) && r.id !== n && t.push(r);
                     }),
                     t
@@ -96,7 +96,7 @@ function C(e) {
         ),
         [y, v] = i.useState({});
     function A(e, t) {
-        let n = f.ZP.getDefaultChannel(e.id, !0, E.Plq.CREATE_INSTANT_INVITE);
+        let n = _.ZP.getDefaultChannel(e.id, !0, E.Plq.CREATE_INSTANT_INVITE);
         if (null != n) {
             if ((v(I(O({}, y), { [e.id]: !0 })), !p.Z.can(E.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode)) return void N(t, e.vanityURLCode);
             l.ZP.createInvite(

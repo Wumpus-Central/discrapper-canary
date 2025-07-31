@@ -2,7 +2,7 @@ n.d(t, {
     $w: () => E,
     Bh: () => m,
     Gx: () => y,
-    TA: () => _,
+    TA: () => f,
     V$: () => h,
     g5: () => g,
     i7: () => b,
@@ -22,10 +22,10 @@ function u(e) {
 function d(e) {
     return 'number' == typeof e && e in l.dp;
 }
-function f(e) {
+function _(e) {
     return d(e) ? l.X7.includes(e) : !!u(e) && ((0, s.xR)(e.asset) || (0, s.ay)(e.asset));
 }
-function _(e) {
+function f(e) {
     return null != e ? 'Video Background' : 'None';
 }
 function p(e) {
@@ -58,7 +58,7 @@ function m(e, t, n) {
         d = (0, r.kO)(s, l, !0);
     o.default.track(c.rMx.VIDEO_EFFECT_UPDATED, {
         location: t,
-        effect_type: _(e),
+        effect_type: f(e),
         effect_detail: h(e),
         effect_state: n,
         channel_id: l,
@@ -68,18 +68,18 @@ function m(e, t, n) {
         video_stream_count: d.video_stream_count,
         media_session_id: a.Z.getMediaSessionId(),
         rtc_connection_id: a.Z.getRTCConnectionId(),
-        is_animated: f(e)
+        is_animated: _(e)
     });
 }
 function g(e, t, n) {
     o.default.track(c.rMx.VIDEO_BACKGROUND_ADDED, {
-        is_animated: f(e),
+        is_animated: _(e),
         is_video: t,
         is_from_tenor: n
     });
 }
 function E(e) {
-    o.default.track(c.rMx.VIDEO_BACKGROUND_DELETED, { is_animated: f(e) });
+    o.default.track(c.rMx.VIDEO_BACKGROUND_DELETED, { is_animated: _(e) });
 }
 function b(e) {
     return null == e

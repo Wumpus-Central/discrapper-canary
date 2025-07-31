@@ -3,7 +3,7 @@ n.d(t, {
     AB: () => B,
     JS: () => U,
     ZP: () => W,
-    hH: () => k,
+    hH: () => M,
     kO: () => H,
     oG: () => Y,
     v_: () => G,
@@ -18,8 +18,8 @@ var r = n(392711),
     c = n(131704),
     u = n(314897),
     d = n(592125),
-    f = n(984933),
-    _ = n(650774),
+    _ = n(984933),
+    f = n(650774),
     p = n(271383),
     h = n(485386),
     m = n(430824),
@@ -68,12 +68,12 @@ function x(e) {
     }
     return e;
 }
-function M(e) {
+function k(e) {
     let t = 0;
     for (let n in e) t += 1;
     return t;
 }
-function k(e) {
+function M(e) {
     var t;
     if (null == e) return null;
     let n = m.Z.getGuild(e);
@@ -81,13 +81,13 @@ function k(e) {
     let r = h.Z.getNumRoles(n.id),
         i = u.default.getId(),
         a = p.ZP.getMember(e, i),
-        o = f.ZP.getChannels(e),
-        s = o[f.sH].length,
-        l = o[f.Zb].length,
+        o = _.ZP.getChannels(e),
+        s = o[_.sH].length,
+        l = o[_.Zb].length,
         c = A.Z.getVoiceStates(e);
     return {
         guild_id: n.id,
-        guild_size_total: _.Z.getMemberCount(e),
+        guild_size_total: f.Z.getMemberCount(e),
         guild_num_channels: s + l,
         guild_num_text_channels: s,
         guild_num_voice_channels: l,
@@ -96,7 +96,7 @@ function k(e) {
         guild_member_perms: String(null != (t = E.Z.getGuildPermissions(n)) ? t : R.Hn),
         guild_is_vip: n.features.has(w.oNc.VIP_REGIONS),
         is_member: null != a,
-        num_voice_channels_active: M(c)
+        num_voice_channels_active: k(c)
     };
 }
 function j(e, t) {
@@ -160,7 +160,7 @@ function F(e) {
         i = 'guild_id' in t ? t.guild_id : r ? I.Z.getGuildId() : null,
         a = 'channel_id' in t ? t.channel_id : r ? v.Z.getChannelId(i) : null,
         o = d.Z.getChannel(a),
-        s = x({}, t, k(V(o, i)), null != i && null != a && (0, D.AB)(a) ? j(i, a) : G(o));
+        s = x({}, t, M(V(o, i)), null != i && null != a && (0, D.AB)(a) ? j(i, a) : G(o));
     N.default.track(e, s, { flush: n });
 }
 function Z(e) {

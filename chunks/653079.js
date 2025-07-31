@@ -1,26 +1,26 @@
-r.d(t, { Z: () => b });
+r.d(t, { Z: () => h });
 var n = r(255367),
-    i = r(120356),
-    l = r.n(i),
-    a = r(442837),
+    a = r(120356),
+    l = r.n(a),
+    i = r(442837),
     o = r(481060),
     s = r(597688),
     c = r(709999),
     u = r(22267),
     d = r(25990),
     p = r(388032),
-    v = r(52431);
-let b = (e) => {
-    let { user: t, selectedNameplate: r, purchased: i } = e,
-        b = (0, a.e7)([s.Z], () => s.Z.getProduct(null == r ? void 0 : r.skuId)),
-        f = (0, a.e7)([d.Z], () => d.Z.getPendingGlobalName());
+    b = r(52431);
+let h = (e) => {
+    let { user: t, selectedNameplate: r, purchased: a } = e,
+        h = (0, i.e7)([s.Z], () => s.Z.getProduct(null == r ? void 0 : r.skuId)),
+        f = (0, i.e7)([d.Z], () => d.Z.getPendingGlobalName());
     return (0, n.jsxs)('div', {
-        className: l()(v.previewBorder, { [v.upsell]: !i && null != r }),
+        className: l()(b.previewBorder, { [b.upsell]: !a && null != r }),
         children: [
             (0, n.jsx)('div', {
-                className: v.previewBox,
+                className: b.previewBox,
                 children: (0, n.jsxs)('div', {
-                    className: v.previewContents,
+                    className: b.previewContents,
                     children: [
                         (0, n.jsx)(c.d, {
                             width: 124,
@@ -49,13 +49,13 @@ let b = (e) => {
             }),
             null != r
                 ? (0, n.jsxs)('div', {
-                      className: v.previewDescription,
+                      className: b.previewDescription,
                       children: [
                           (0, n.jsx)(o.Text, {
                               variant: 'text-sm/semibold',
-                              children: null == b ? void 0 : b.name
+                              children: null == h ? void 0 : h.name
                           }),
-                          i
+                          a
                               ? null
                               : (0, n.jsx)(o.Text, {
                                     variant: 'text-sm/normal',

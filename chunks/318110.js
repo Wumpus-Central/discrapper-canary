@@ -3,11 +3,11 @@ var i = n(255367);
 n(73800);
 var r = n(481060);
 let s = (e) => {
-    let { analyticsLocations: t, guildId: s } = e;
+    let { analyticsLocations: t, guildId: s, initialSelectedNameplate: a } = e;
     (0, r.ZDy)(async () => {
-        let { default: e } = await Promise.all([n.e('204'), n.e('22150')]).then(n.bind(n, 612293));
+        let { default: e } = await Promise.all([n.e('89001'), n.e('32104'), n.e('11912')]).then(n.bind(n, 612293));
         return (n) => {
-            var r, a;
+            var r, l;
             return (0, i.jsx)(
                 e,
                 ((r = (function (e) {
@@ -35,13 +35,14 @@ let s = (e) => {
                     }
                     return e;
                 })({}, n)),
-                (a = a =
+                (l = l =
                     {
                         guildId: s,
-                        analyticsLocations: t
+                        analyticsLocations: t,
+                        initialSelectedNameplate: a
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
+                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -49,8 +50,8 @@ let s = (e) => {
                               n.push.apply(n, i);
                           }
                           return n;
-                      })(Object(a)).forEach(function (e) {
-                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
+                      })(Object(l)).forEach(function (e) {
+                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                       }),
                 r)
             );

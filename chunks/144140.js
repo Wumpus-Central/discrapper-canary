@@ -8,8 +8,8 @@ var r,
     c = n(131704),
     u = n(23750),
     d = n(598077),
-    f = n(592125),
-    _ = n(375954),
+    _ = n(592125),
+    f = n(375954),
     p = n(709054),
     h = n(124368),
     m = n(981631);
@@ -112,7 +112,7 @@ function P(e) {
 }
 function w(e) {
     if (null != e && !(e.id in v)) {
-        let t = f.Z.getChannel(e.id);
+        let t = _.Z.getChannel(e.id);
         if (null != t) return (P(t), !0);
     }
     return !1;
@@ -131,11 +131,11 @@ function x(e) {
     let { guild: t } = e;
     C(t);
 }
-function M(e) {
+function k(e) {
     let { guild: t } = e;
     T(t.id);
 }
-function k(e) {
+function M(e) {
     let { channel: t } = e;
     P(t);
 }
@@ -144,7 +144,7 @@ function j(e) {
     (t.forEach(P),
         null == n ||
             n.forEach((e) => {
-                let t = f.Z.getChannel(e.channel_id);
+                let t = _.Z.getChannel(e.channel_id);
                 null != t &&
                     e.type !== m.uaV.THREAD_STARTER_MESSAGE &&
                     A(t, (t) => {
@@ -179,7 +179,7 @@ function V(e) {
 function F(e) {
     let { message: t, optimistic: n, isPushNotification: r, sendMessageOptions: i } = e;
     if (n || r || null != i) return !1;
-    let a = f.Z.getChannel(t.channel_id);
+    let a = _.Z.getChannel(t.channel_id);
     if (null == a || !c.Ec.has(a.type) || !Z(a, t)) return !1;
     A(a, (e) => {
         ((e.count = Math.min(e.count + 1, h.M3)), (e.mostRecentRawMessage = t), (e.mostRecentMessage = null));
@@ -230,7 +230,7 @@ function K(e) {
     let t = !1;
     for (let n of e.messages) t = w(n.thread) || t;
     if (e.isAfter || e.isBefore || e.hasMoreAfter) return t;
-    let n = f.Z.getChannel(e.channelId);
+    let n = _.Z.getChannel(e.channelId);
     if (null == n || !c.Ec.has(n.type)) return t;
     A(n, (t) => {
         if (0 === e.messages.length) ((t.mostRecentRawMessage = null), (t.mostRecentMessage = null), (t.count = 0));
@@ -245,7 +245,7 @@ function z() {
     for (let e in v) {
         let t = v[e];
         if (null != t && null != t.mostRecentMessage) {
-            let n = _.Z.getMessage(e, t.mostRecentMessage.id);
+            let n = f.Z.getMessage(e, t.mostRecentMessage.id);
             if (null == n) continue;
             t.mostRecentMessage = n;
         }
@@ -253,7 +253,7 @@ function z() {
 }
 class q extends (r = o.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, _.Z);
+        this.waitFor(_.Z, f.Z);
     }
     getCount(e) {
         var t, n;
@@ -262,7 +262,7 @@ class q extends (r = o.ZP.Store) {
     getMostRecentMessage(e) {
         var t, n;
         let r = v[e];
-        return null == r ? null : (null == r.mostRecentMessage && null != r.mostRecentRawMessage && ((r.mostRecentMessage = null != (t = _.Z.getMessage(e, r.mostRecentRawMessage.id)) ? t : (0, l.e5)(r.mostRecentRawMessage)), (r.mostRecentRawMessage = null)), null != (n = r.mostRecentMessage) ? n : null);
+        return null == r ? null : (null == r.mostRecentMessage && null != r.mostRecentRawMessage && ((r.mostRecentMessage = null != (t = f.Z.getMessage(e, r.mostRecentRawMessage.id)) ? t : (0, l.e5)(r.mostRecentRawMessage)), (r.mostRecentRawMessage = null)), null != (n = r.mostRecentMessage) ? n : null);
     }
     getChannelThreadsVersion(e) {
         return I[e];
@@ -276,9 +276,9 @@ let X = new q(s.Z, {
     CONNECTION_OPEN: D,
     OVERLAY_INITIALIZE: L,
     GUILD_CREATE: x,
-    GUILD_DELETE: M,
-    THREAD_CREATE: k,
-    THREAD_UPDATE: k,
+    GUILD_DELETE: k,
+    THREAD_CREATE: M,
+    THREAD_UPDATE: M,
     THREAD_LIST_SYNC: j,
     LOAD_THREADS_SUCCESS: U,
     LOAD_ARCHIVED_THREADS_SUCCESS: U,

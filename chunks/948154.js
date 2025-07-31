@@ -8,8 +8,8 @@ var r = n(392711),
     c = n(703656),
     u = n(306680),
     d = n(709054),
-    f = n(804932),
-    _ = n(787879),
+    _ = n(804932),
+    f = n(787879),
     p = n(982183),
     h = n(981631);
 function m(e, t, n) {
@@ -75,9 +75,9 @@ async function T(e) {
         s = E(e, ['preload']);
     let c = Date.now(),
         h = [],
-        m = _.Z.getNotifyingChannelIds();
+        m = f.Z.getNotifyingChannelIds();
     if (null == m) return;
-    let g = _.Z.getChannelInfoMap();
+    let g = f.Z.getChannelInfoMap();
     for (let e of m) {
         if (a && !u.ZP.hasUnread(e)) continue;
         let r = u.ZP.lastMessageId(e),
@@ -110,7 +110,7 @@ async function T(e) {
             channelsFetched: h.length - +!!I,
             mentionsFetched: I
         };
-        (a && (0, f.CP)(e),
+        (a && (0, _.CP)(e),
             i.Z.dispatch({
                 type: 'NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_SUCCESS',
                 preload: a,
@@ -125,7 +125,7 @@ let S = {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         var { preload: t = !1 } = e,
             n = E(e, ['preload']);
-        if (!_.Z.canLoadMore({ preload: t })) return !1;
+        if (!f.Z.canLoadMore({ preload: t })) return !1;
         (i.Z.dispatch({
             type: 'NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_START',
             preload: t
@@ -140,8 +140,8 @@ let S = {
             isUnread: r
         }),
             u &&
-                (0, f.Qz)({
-                    interactionType: f.s_.CLICK,
+                (0, _.Qz)({
+                    interactionType: _.s_.CLICK,
                     message: t,
                     viewId: l
                 }),

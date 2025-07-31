@@ -25,11 +25,11 @@ function x(e) {
             authorizationError: p.Z.error,
             authorizing: p.Z.isFetchingAuthorization
         })),
-        [E, O] = r.useState(null != x ? x : ''),
+        [O, E] = r.useState(null != x ? x : ''),
         [C, v] = r.useState('8080'),
         [S, T] = r.useState('localhost'),
         N = (0, m.Dt)(),
-        I = b.test(E);
+        I = b.test(O);
     async function y() {
         c.q$();
         let e = (function (e, t, n) {
@@ -40,14 +40,14 @@ function x(e) {
                 case 'proxy':
                     return (0, d.ZP)(n);
             }
-        })(S, C, E);
-        null != (await c.Wt(E, e)) && t();
+        })(S, C, O);
+        null != (await c.Wt(O, e)) && t();
     }
     r.useEffect(() => () => o.Z.wait(() => c.q$()), []);
-    let A = null != x && x === E,
+    let A = null != x && x === O,
         P = A
             ? function () {
-                  (c.mc(), O(''), T(null));
+                  (c.mc(), E(''), T(null));
               }
             : y;
     return (0, i.jsxs)(l.Y0X, {
@@ -95,11 +95,11 @@ function x(e) {
                                     title: g.intl.string(g.t.P6TzgI),
                                     required: !0,
                                     children: (0, i.jsx)(l.oil, {
-                                        value: E,
+                                        value: O,
                                         maxLength: 19,
                                         error: I ? null : g.intl.string(g.t.gPNgKC),
                                         onChange: function (e) {
-                                            O(e);
+                                            E(e);
                                         },
                                         disabled: j
                                     })
@@ -108,7 +108,7 @@ function x(e) {
                                     className: h.inputWrapper,
                                     title: g.intl.string(g.t['/GTqXF']),
                                     children: (0, i.jsx)(l.q4e, {
-                                        isDisabled: !I || '' === E,
+                                        isDisabled: !I || '' === O,
                                         value: S,
                                         options: [
                                             {
@@ -144,7 +144,7 @@ function x(e) {
                                 (0, i.jsx)(a.zx, {
                                     submitting: j,
                                     type: 'submit',
-                                    disabled: !I || 0 === E.length || ('localhost' === S && 0 === C.length),
+                                    disabled: !I || 0 === O.length || ('localhost' === S && 0 === C.length),
                                     color: A ? a.zx.Colors.RED : a.zx.Colors.GREEN,
                                     children: A ? g.intl.string(g.t.d6TR3N) : g.intl.string(g.t.qwuK5O)
                                 })

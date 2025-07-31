@@ -8,8 +8,8 @@ var r = n(754700),
     c = n(77498),
     u = n(938475),
     d = n(70956),
-    f = n(823379),
-    _ = n(509212),
+    _ = n(823379),
+    f = n(509212),
     p = n(272008),
     h = n(569984),
     m = n(5881),
@@ -32,7 +32,7 @@ let b = +d.Z.Millis.MINUTE,
     O = +d.Z.Millis.SECOND,
     v = (0, m.T)({ location: g.dr.QUESTS_MANAGER });
 function I(e) {
-    return !(0, _.zi)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
+    return !(0, f.zi)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
 }
 class T extends i.Z {
     syncHeartbeats(e, t) {
@@ -52,7 +52,7 @@ class T extends i.Z {
             case r.X.PLAY_ACTIVITY:
                 return this.getActivelyProgressingActivityQuestIds();
             default:
-                (0, f.vE)(e);
+                (0, _.vE)(e);
         }
     }
     getActivelyProgressingPlayOnDesktopQuestIds() {
@@ -75,7 +75,7 @@ class T extends i.Z {
                 continue;
             }
         }
-        for (let t of r) for (let r of n.values()) I(r) && (0, _.Nj)({ quest: r }) && r.config.application.id === t && e.add(r.id);
+        for (let t of r) for (let r of n.values()) I(r) && (0, f.Nj)({ quest: r }) && r.config.application.id === t && e.add(r.id);
         return (v.log('~ getActivelyProgressingPlayOnDesktopQuestIds -> Actively progressing questIds: ', e), e);
     }
     getActivelyProgressingStreamOnDesktopQuestIds() {
@@ -87,7 +87,7 @@ class T extends i.Z {
         v.log('~ getActivelyProgressingStreamOnDesktopQuestIds -> Active stream metadata: ', n);
         let r = n.id;
         if (null == r) return e;
-        for (let t of h.Z.quests.values()) I(t) && (0, _.Dr)({ quest: t }) && t.config.application.id === r && e.add(t.id);
+        for (let t of h.Z.quests.values()) I(t) && (0, f.Dr)({ quest: t }) && t.config.application.id === r && e.add(t.id);
         return (v.log('~ getActivelyProgressingStreamOnDesktopQuestIds -> Actively progressing questIds: ', e), e);
     }
     getActivelyProgressingActivityQuestIds() {
@@ -96,8 +96,8 @@ class T extends i.Z {
             n = t.size > 0;
         if ((v.log('~ getActivelyProgressingActivityQuestIds -> Embedded activities: ', t), !n)) return e;
         let r = h.Z.quests;
-        for (let n of t.keys()) for (let t of r.values()) I(t) && (0, _.pO)(t) && t.config.application.id === n && e.add(t.id);
-        for (let t of r.values()) I(t) && (0, _.KM)(t) && n && e.add(t.id);
+        for (let n of t.keys()) for (let t of r.values()) I(t) && (0, f.pO)(t) && t.config.application.id === n && e.add(t.id);
+        for (let t of r.values()) I(t) && (0, f.KM)(t) && n && e.add(t.id);
         return (v.log('~ getActivelyProgressingActivityQuestIds -> Actively progressing questIds: ', e), e);
     }
     constructor(...e) {
@@ -110,7 +110,7 @@ class T extends i.Z {
             E(this, 'calculateHeartbeatDurationMs', (e) => {
                 let t = h.Z.quests.get(e);
                 if (null == t || null == t.config || null == t.userStatus) return b;
-                let { progressSeconds: n, targetSeconds: i } = (0, _.il)(t, r.T.DESKTOP),
+                let { progressSeconds: n, targetSeconds: i } = (0, f.il)(t, r.T.DESKTOP),
                     a = Math.max(0, (i - n) * d.Z.Millis.SECOND);
                 return a <= b ? a + O : b;
             }),

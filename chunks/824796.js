@@ -1,4 +1,4 @@
-n.d(t, { u: () => _ });
+n.d(t, { u: () => f });
 var r = n(255367);
 n(73800);
 var i = n(692547),
@@ -60,14 +60,14 @@ function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -76,14 +76,14 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let _ = (e) => {
+let f = (e) => {
     var t,
         n,
-        { size: s = 'md', width: c, height: f, color: _ = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = '' } = e,
+        { size: s = 'md', width: c, height: _, color: f = i.Z.colors.INTERACTIVE_NORMAL, colorClass: p = '' } = e,
         h = d(e, ['size', 'width', 'height', 'color', 'colorClass']);
     let m = (0, o.m)(s),
         g = null != (t = null == m ? void 0 : m.width) ? t : c,
-        E = null != (n = null == m ? void 0 : m.height) ? n : f;
+        E = null != (n = null == m ? void 0 : m.height) ? n : _;
     return (0, r.jsx)(
         'svg',
         u(l({}, (0, a.Z)(h)), {
@@ -93,7 +93,7 @@ let _ = (e) => {
             fill: 'none',
             viewBox: '0 0 24 24',
             children: (0, r.jsx)('path', {
-                fill: 'string' == typeof _ ? _ : _.css,
+                fill: 'string' == typeof f ? f : f.css,
                 fillRule: 'evenodd',
                 d: 'M3 4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h18a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H3Zm9 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM3 7a1 1 0 0 1 1-1h1.25c.41 0 .75.34.75.75C6 7.99 5 9 3.75 9A.75.75 0 0 1 3 8.25V7Zm1 11a1 1 0 0 1-1-1v-1.25c0-.41.34-.75.75-.75C4.99 15 6 16 6 17.25c0 .41-.34.75-.75.75H4ZM21 7a1 1 0 0 0-1-1h-1.25a.75.75 0 0 0-.75.75C18 7.99 19 9 20.25 9c.41 0 .75-.34.75-.75V7Zm-1 11a1 1 0 0 0 1-1v-1.25a.75.75 0 0 0-.75-.75C19.01 15 18 16 18 17.25c0 .41.34.75.75.75H20Z',
                 clipRule: 'evenodd',

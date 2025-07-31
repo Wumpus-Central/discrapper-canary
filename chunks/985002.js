@@ -12,9 +12,9 @@ function o(e) {
         [g, h] = i.useState(!1),
         [f, b] = i.useState(!1),
         [x, _] = i.useState(!1),
-        [j, E] = i.useState(!1),
-        [O, C] = i.useState(!1),
-        v = o || d || m || g || x || O,
+        [j, O] = i.useState(!1),
+        [E, C] = i.useState(!1),
+        v = o || d || m || g || x || E,
         S = i.useCallback(
             async (e) => {
                 if (!v) {
@@ -95,14 +95,14 @@ function o(e) {
         A = i.useCallback(
             async (e) => {
                 if (!j) {
-                    E(!0);
+                    O(!0);
                     try {
                         (await s.ZP.fetchTeenActivity(e), null == n || n());
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
                     } finally {
-                        E(!1);
+                        O(!1);
                     }
                 }
             },
@@ -137,7 +137,7 @@ function o(e) {
                     i = n[n.length - 1],
                     l = a.Z.getStartId(),
                     o = a.Z.getSelectedTeenId();
-                if (!O && null != l && null != o) {
+                if (!E && null != l && null != o) {
                     C(!0);
                     try {
                         await s.ZP.fetchMoreTeenActivity(o, e, l, i.event_id);
@@ -149,7 +149,7 @@ function o(e) {
                     }
                 }
             },
-            [O, t]
+            [E, t]
         ),
         isAcceptLoading: o,
         isDeclineLoading: d,
@@ -158,6 +158,6 @@ function o(e) {
         isGetLinkCodeLoading: f,
         isSelectTeenUserLoading: j,
         isRequestingLink: x,
-        isMoreLoading: O
+        isMoreLoading: E
     };
 }

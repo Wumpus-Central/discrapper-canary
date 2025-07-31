@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(219929),
     u = n(618541),
     d = n(975060),
-    f = n(388032),
-    _ = n(912296);
+    _ = n(388032),
+    f = n(912296);
 class p extends i.PureComponent {
     componentDidMount() {
         null != this.props.paypalClient && l.f6();
@@ -21,20 +21,20 @@ class p extends i.PureComponent {
         let { braintreeEmail: e, className: t, paypalClient: n } = this.props;
         return (0, r.jsx)(s.hjN, {
             className: t,
-            title: f.intl.string(f.t.QQBAoq),
+            title: _.intl.string(_.t.QQBAoq),
             children: (0, r.jsxs)('div', {
-                className: _.inputWrapper,
+                className: f.inputWrapper,
                 children: [
                     (0, r.jsx)(c.ZP, {
                         type: c.ZP.Types.PAYPAL,
-                        className: _.paypalIcon
+                        className: f.paypalIcon
                     }),
                     (0, r.jsx)(o.Is, {
                         value: e,
                         editable: !1,
                         readOnly: !0,
-                        placeholder: null == n ? f.intl.string(f.t.dte2Mz) : f.intl.string(f.t.hopw7e),
-                        inputClassName: _.paypalInput
+                        placeholder: null == n ? _.intl.string(_.t.dte2Mz) : _.intl.string(_.t.hopw7e),
+                        inputClassName: f.paypalInput
                     })
                 ]
             })

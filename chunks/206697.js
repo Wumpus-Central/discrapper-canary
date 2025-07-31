@@ -1,10 +1,10 @@
-n.d(t, { w: () => b });
+n.d(t, { w: () => S });
 var r = n(255367),
     s = n(73800),
     l = n(657707),
     a = n(793030),
-    i = n(755721),
-    o = n(481060),
+    o = n(755721),
+    i = n(481060),
     c = n(100527),
     u = n(436774),
     h = n(767714),
@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(388032),
     y = n(491350),
     x = n(492764),
-    S = n(235810);
-function b() {
+    b = n(235810);
+function S() {
     return (0, p.Z)()
         ? (0, r.jsx)('div', {
               className: y.emptyContainer,
@@ -28,7 +28,7 @@ function b() {
                           className: y.image,
                           alt: ''
                       }),
-                      (0, r.jsx)(o.X6q, {
+                      (0, r.jsx)(i.X6q, {
                           className: y.header,
                           variant: 'heading-xl/semibold',
                           color: 'text-default',
@@ -49,11 +49,11 @@ function b() {
                       className: y.emptyInner,
                       children: [
                           (0, r.jsx)('img', {
-                              src: S,
+                              src: b,
                               className: y.image,
                               alt: ''
                           }),
-                          (0, r.jsx)(o.X6q, {
+                          (0, r.jsx)(i.X6q, {
                               className: y.header,
                               variant: 'heading-xl/semibold',
                               color: 'text-default',
@@ -74,7 +74,7 @@ function v() {
     let e = (0, d.Px)(g.p9.TIER_2),
         t = s.useCallback(
             () =>
-                (0, o.ZDy)(async () => {
+                (0, i.ZDy)(async () => {
                     let { default: e } = await n.e('50740').then(n.bind(n, 639565));
                     return (t) =>
                         (0, r.jsx)(
@@ -127,7 +127,7 @@ function v() {
             }),
             (0, r.jsx)(h.Z, {
                 className: y.upsellButton,
-                size: i.Ph.TINY,
+                size: o.Ph.TINY,
                 shinyButtonClassName: y.upsellButton,
                 subscriptionTier: g.Si.TIER_2,
                 premiumModalAnalyticsLocation: { section: f.jXE.FOR_LATER_POPOUT_UPSELL }

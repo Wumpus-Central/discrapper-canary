@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -12,16 +12,16 @@ var i = n(442837),
     p = n(51144),
     m = n(981631),
     f = n(388032),
-    _ = n(273254);
-function g(e) {
+    g = n(273254);
+function _(e) {
     let t,
         n,
-        g,
+        _,
         { author: h, banned: b, channelId: E } = e,
         C = (0, i.e7)([s.default], () => s.default.getId()),
-        O = p.ZP.useName(h),
-        v = C === h.id,
-        y = (0, i.e7)([c.Z, u.Z], () => {
+        v = p.ZP.useName(h),
+        O = C === h.id,
+        x = (0, i.e7)([c.Z, u.Z], () => {
             let e = c.Z.getChannel(E);
             if (null == e) return !1;
             if (e.isPrivate()) return !0;
@@ -33,13 +33,13 @@ function g(e) {
             return u.Z.can(m.Plq.SEND_MESSAGES, e);
         });
     return (
-        v
-            ? ((t = f.intl.string(f.t['F/OLvL'])), (g = f.intl.string(f.t.C89OLC)))
-            : ((g = f.intl.string(f.t['YVub5+'])),
+        O
+            ? ((t = f.intl.string(f.t['F/OLvL'])), (_ = f.intl.string(f.t.C89OLC)))
+            : ((_ = f.intl.string(f.t['YVub5+'])),
               b
                   ? (t = f.intl.string(f.t['57nBt7']))
-                  : null != O && y
-                    ? ((t = f.intl.formatToPlainString(f.t['9Akp1t'], { username: O })),
+                  : null != v && x
+                    ? ((t = f.intl.formatToPlainString(f.t['9Akp1t'], { username: v })),
                       (n = (0, r.jsx)(a.Z.Button, {
                           onClick: function () {
                               let { id: e } = h,
@@ -55,11 +55,11 @@ function g(e) {
                     : (t = f.intl.string(f.t['SMJr+f']))),
         (0, r.jsxs)(a.Z, {
             children: [
-                (0, r.jsx)(a.Z.Header, { text: g }),
+                (0, r.jsx)(a.Z.Header, { text: _ }),
                 (0, r.jsxs)(a.Z.Body, {
                     children: [
                         (0, r.jsxs)('div', {
-                            className: _.headerLine,
+                            className: g.headerLine,
                             children: [
                                 (0, r.jsx)(a.Z.Icon, { expired: !0 }),
                                 (0, r.jsx)(a.Z.Info, {

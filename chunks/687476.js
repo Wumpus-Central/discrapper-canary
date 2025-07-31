@@ -8,8 +8,8 @@ var r,
     c = n(485386),
     u = n(430824),
     d = n(594174),
-    f = n(973542),
-    _ = n(981631);
+    _ = n(973542),
+    f = n(981631);
 function p(e, t, n) {
     return (
         t in e
@@ -36,18 +36,18 @@ function O(e) {
     let r = new Set(),
         i = new Set(),
         a = new Set();
-    if ((b.set(e, (0, o.eM)(n, t)), n.features.has(_.oNc.ROLE_SUBSCRIPTIONS_ENABLED))) {
+    if ((b.set(e, (0, o.eM)(n, t)), n.features.has(f.oNc.ROLE_SUBSCRIPTIONS_ENABLED))) {
         var p;
         let o = l.ZP.getMember(e, t.id),
             u = new Set(null != (p = null == o ? void 0 : o.roles) ? p : []);
-        for (let t of c.Z.getSortedRoles(n.id)) ((0, f.Z)(t) && (r.add(t.id), (0, f.h)(t) && (i.add(t.id), u.has(t.id) && a.add(t.id))), u.has(t.id) && (0, s.Fs)(t, _.Plq.ADMINISTRATOR) && b.set(e, !0));
+        for (let t of c.Z.getSortedRoles(n.id)) ((0, _.Z)(t) && (r.add(t.id), (0, _.h)(t) && (i.add(t.id), u.has(t.id) && a.add(t.id))), u.has(t.id) && (0, s.Fs)(t, f.Plq.ADMINISTRATOR) && b.set(e, !0));
     }
     return (m.set(e, r), E.set(e, a), g.set(e, i), !0);
 }
 function v() {
     let e = u.Z.getGuildsArray(),
         t = new Set();
-    for (let n of e) n.features.has(_.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) && t.add(n.id);
+    for (let n of e) n.features.has(f.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE) && t.add(n.id);
     return ((y = t), t);
 }
 function I() {
@@ -68,7 +68,7 @@ function S(e) {
     if (null == y) return !1;
     let n = u.Z.getGuild(t);
     if (null == n) return !1;
-    let r = n.features.has(_.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
+    let r = n.features.has(f.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
     if (r && !y.has(t)) {
         let e = new Set(y);
         return (e.add(t), (y = e), !0);

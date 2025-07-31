@@ -25,10 +25,10 @@ let l = 0,
     c = null,
     u = null,
     d = null;
-function f(e) {
+function _(e) {
     ((l = 1), (c = e.loadId));
 }
-function _(e) {
+function f(e) {
     var t, n;
     c === e.loadId && ((u = null != (t = e.skuId) ? t : null), (d = null != (n = e.skuSubscriptionPlanId) ? n : null), (l = 2));
 }
@@ -48,6 +48,6 @@ class p extends (r = i.ZP.Store) {
 }
 o(p, 'displayName', 'BrowserCheckoutStateStore');
 let h = new p(a.Z, {
-    USER_PAYMENT_BROWSER_CHECKOUT_STARTED: f,
-    USER_PAYMENT_BROWSER_CHECKOUT_DONE: _
+    USER_PAYMENT_BROWSER_CHECKOUT_STARTED: _,
+    USER_PAYMENT_BROWSER_CHECKOUT_DONE: f
 });

@@ -18,8 +18,8 @@ var r = n(512722),
     x = n(134795),
     _ = n(610966),
     j = n(513901),
-    E = n(451392),
-    O = n(906364),
+    O = n(451392),
+    E = n(906364),
     C = n(643879),
     v = n(350327),
     S = n(621853),
@@ -44,8 +44,8 @@ function R() {
             pendingPronouns: G,
             pendingAccentColor: F,
             pendingThemeColors: H,
-            pendingLegacyUsernameDisabled: W,
-            pendingPrimaryGuildId: z,
+            pendingLegacyUsernameDisabled: z,
+            pendingPrimaryGuildId: W,
             errors: Y
         } = (0, a.cj)([N.Z], () => {
             var e, t;
@@ -118,7 +118,7 @@ function R() {
                 user: k
             }),
             (0, i.jsx)(
-                O.Z,
+                E.Z,
                 {
                     sectionTitle: A.intl.string(A.t['+T3RIy']),
                     errors: Y.pronouns,
@@ -169,7 +169,7 @@ function R() {
                               },
                               'banner'
                           ),
-                          (0, i.jsx)(E.Z, {
+                          (0, i.jsx)(O.Z, {
                               user: k,
                               pendingAvatarSrc: K,
                               pendingColors: H,
@@ -202,7 +202,7 @@ function R() {
             ei.length > 0 &&
                 (0, i.jsx)(c.Z, {
                     availablePrimaryGuilds: ei,
-                    pendingPrimaryGuildId: z,
+                    pendingPrimaryGuildId: W,
                     onChange: (e) => (0, l.s4)(e)
                 }),
             null != ee &&
@@ -210,7 +210,7 @@ function R() {
                     f.Z,
                     {
                         legacyUsername: ee,
-                        pendingLegacyUsernameDisabled: W
+                        pendingLegacyUsernameDisabled: z
                     },
                     'legacy_username'
                 )

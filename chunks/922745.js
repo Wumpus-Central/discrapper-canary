@@ -12,8 +12,8 @@ var i = n(120356),
     c = n(600164),
     u = n(312956),
     d = n(501967),
-    f = n(19780),
-    _ = n(540028),
+    _ = n(19780),
+    f = n(540028),
     p = n(507675),
     h = n(273716),
     m = n(388032),
@@ -69,10 +69,10 @@ function O(e, t) {
 }
 function v(e) {
     let { title: t, onJumpToChannel: n, onHide: i, idle: a, preventIdleComponent: s } = e,
-        c = (0, o.e7)([f.Z], () => f.Z.getChannelId()),
+        c = (0, o.e7)([_.Z], () => _.Z.getChannelId()),
         d =
             null != c
-                ? (0, r.jsx)(_.Z, {
+                ? (0, r.jsx)(f.Z, {
                       voiceChannelId: c,
                       idle: a
                   })
@@ -112,12 +112,12 @@ function v(e) {
     });
 }
 function I(e) {
-    var { children: t, idle: n, onJumpToChannel: i, onHide: o, backgroundKey: l, onActive: u, onForceIdle: f, renderBottomLeftControls: _, renderBottomRightControls: h, screenMessage: m, hideControls: E = !1, className: O, innerClassName: I, videoControlsClassName: T } = e,
+    var { children: t, idle: n, onJumpToChannel: i, onHide: o, backgroundKey: l, onActive: u, onForceIdle: _, renderBottomLeftControls: f, renderBottomRightControls: h, screenMessage: m, hideControls: E = !1, className: O, innerClassName: I, videoControlsClassName: T } = e,
         S = y(e, ['children', 'idle', 'onJumpToChannel', 'onHide', 'backgroundKey', 'onActive', 'onForceIdle', 'renderBottomLeftControls', 'renderBottomRightControls', 'screenMessage', 'hideControls', 'className', 'innerClassName', 'videoControlsClassName']);
     return (0, r.jsxs)('div', {
         onMouseMove: u,
         onMouseDown: u,
-        onMouseLeave: f,
+        onMouseLeave: _,
         className: a()(g.pictureInPictureVideo, { [g.idle]: n }, O),
         onDoubleClick: i,
         children: [
@@ -159,7 +159,7 @@ function I(e) {
                                     basis: '50%',
                                     align: c.Z.Align.CENTER,
                                     className: g.bottomLeftControls,
-                                    children: null == _ ? void 0 : _()
+                                    children: null == f ? void 0 : f()
                                 }),
                                 (0, r.jsx)(c.Z, {
                                     grow: 0,

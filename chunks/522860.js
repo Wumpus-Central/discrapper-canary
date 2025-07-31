@@ -10,25 +10,25 @@ function c(e) {
     var t;
     let { message: n, channel: c, playingActivity: u, onJoinStream: d, usernameHook: p, compact: m } = e,
         f = (0, a.ZP)(n),
-        _ = null == (t = n.call) ? void 0 : t.duration,
-        g = p(f),
+        g = null == (t = n.call) ? void 0 : t.duration,
+        _ = p(f),
         h = s.intl.format(s.t.FKXvaG, {
             username: f.nick,
             activityName: null != u ? u.name : 'unknown',
             onJoinStream: d,
-            usernameHook: g
+            usernameHook: _
         });
     return (
-        null != _ &&
+        null != g &&
             (h = s.intl.format(s.t.NEFxtb, {
                 username: f.nick,
-                duration: _.humanize(),
+                duration: g.humanize(),
                 channelName: c.name,
-                usernameHook: g
+                usernameHook: _
             })),
         (0, r.jsx)(o.Z, {
             iconNode:
-                null != _
+                null != g
                     ? (0, r.jsx)(i.g5r, {
                           size: 'custom',
                           color: 'currentColor',

@@ -1,18 +1,18 @@
-(n.d(t, { BO: () => u }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(781311));
+(n.d(t, { BO: () => s }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(781311));
 var r = n(73800),
     i = n(348327),
     a = n.n(i),
     l = n(392711),
     o = n(823379),
     c = n(886118);
-let s = new Worker(new URL('/assets/' + n.u('56558'), n.b));
-function u(e, t, n, i) {
-    let u = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
+let u = new Worker(new URL('/assets/' + n.u('56558'), n.b));
+function s(e, t, n, i) {
+    let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
         d = r.useRef(null),
         f = r.useRef(null),
-        p = r.useRef(n),
-        { searchStringGenerator: m } = i,
-        g = (function (e) {
+        _ = r.useRef(n),
+        { searchStringGenerator: p } = i,
+        b = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
                 [n, i] = r.useState(e),
                 l = r.useRef(e);
@@ -28,8 +28,8 @@ function u(e, t, n, i) {
                 }, t),
                 n
             );
-        })(t.map(m), [t, m, ...u]),
-        y = (function (e) {
+        })(t.map(p), [t, p, ...s]),
+        m = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
                 [n, i] = r.useState(e),
                 l = r.useRef(e);
@@ -47,33 +47,33 @@ function u(e, t, n, i) {
             );
         })(t, [t]);
     r.useEffect(() => {
-        p.current = n;
+        _.current = n;
     }, [n]);
-    let h = r.useMemo(() => {
+    let g = r.useMemo(() => {
         let { throttleMs: e = 200, throttleLeading: t = !0, throttleTrailing: n = !0 } = i;
         return (
             (f.current = (0, l.throttle)(
                 async (e, t, n) => {
-                    if ('' === e.trim()) return void p.current(t);
+                    if ('' === e.trim()) return void _.current(t);
                     d.current = (0, l.uniqueId)();
                     let r = await (function (e, t, n, r) {
                         var i;
                         let a = null != (i = r.promiseUuid) ? i : (0, l.uniqueId)(),
-                            { searchType: u = c.S.FUZZY, sortType: d = c.E.NONE, jaroWinklerSearchThreshold: f = 0.85 } = r;
+                            { searchType: s = c.S.FUZZY, sortType: d = c.E.NONE, jaroWinklerSearchThreshold: f = 0.85 } = r;
                         return new Promise((r) => {
                             let i = (t) => {
                                 let {
                                     data: { id: n, foundItemIndexes: l }
                                 } = t;
-                                a === n && (r(l.map((t) => e[t]).filter(o.lm)), null == s || s.removeEventListener('message', i));
+                                a === n && (r(l.map((t) => e[t]).filter(o.lm)), null == u || u.removeEventListener('message', i));
                             };
-                            (null == s || s.addEventListener('message', i),
-                                null == s ||
-                                    s.postMessage({
+                            (null == u || u.addEventListener('message', i),
+                                null == u ||
+                                    u.postMessage({
                                         id: a,
                                         searchTerm: t,
                                         searchStrings: n,
-                                        searchType: u,
+                                        searchType: s,
                                         sortType: d,
                                         jaroWinklerSearchThreshold: f
                                     }));
@@ -108,7 +108,7 @@ function u(e, t, n, i) {
                             return e;
                         })({ promiseUuid: d.current }, i)
                     );
-                    null != d.current && p.current(r);
+                    null != d.current && _.current(r);
                 },
                 e,
                 {
@@ -121,14 +121,14 @@ function u(e, t, n, i) {
     }, [i]);
     return (
         r.useEffect(() => {
-            h(e, y, g);
-        }, [h, e, y, g, ...u]),
+            g(e, m, b);
+        }, [g, e, m, b, ...s]),
         r.useEffect(
             () => () => {
                 (null != f.current && f.current.cancel(), (f.current = null), (d.current = null));
             },
-            [g, n, i]
+            [b, n, i]
         ),
-        h
+        g
     );
 }

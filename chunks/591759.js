@@ -8,14 +8,14 @@ var r = n(628735),
     c = n(981631);
 let u = /(?:^|\.)(?:discordapp|discord|discordmerch)\.com$/i,
     d = /^.*\.discordapp\.net$/,
-    f = '(?:(?:[a-z]+:)?//)',
-    _ = '(?:\\S+(?::\\S*)?@)?',
+    _ = '(?:(?:[a-z]+:)?//)',
+    f = '(?:\\S+(?::\\S*)?@)?',
     p = i().v4().source,
     h = '(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+',
     m = '(?:(?:[a-z\\u00a1-\\uffff]{2,}))',
     g = '(?::\\d{2,5})?',
     E = '(?:[/?#][^\\s"]*)?',
-    b = RegExp('(?:'.concat(f, '|www\\.)').concat(_, '(?:localhost|').concat(p, '|').concat(h).concat(m, ')').concat(g).concat(E), 'ig'),
+    b = RegExp('(?:'.concat(_, '|www\\.)').concat(f, '(?:localhost|').concat(p, '|').concat(h).concat(m, ')').concat(g).concat(E), 'ig'),
     y = new Set([window.GLOBAL_ENV.CDN_HOST, window.GLOBAL_ENV.INVITE_HOST, window.GLOBAL_ENV.GIFT_CODE_HOST, window.GLOBAL_ENV.GUILD_TEMPLATE_HOST]),
     O = !1;
 function v(e) {

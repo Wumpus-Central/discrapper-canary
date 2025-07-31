@@ -1,8 +1,8 @@
 var t = 30,
     n = 12;
 e.exports = function (e, r) {
-    var i, a, o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A, N, C;
-    ((i = e.state), (a = e.next_in), (N = e.input), (o = a + (e.avail_in - 5)), (s = e.next_out), (C = e.output), (l = s - (r - e.avail_out)), (c = s + (e.avail_out - 257)), (u = i.dmax), (d = i.wsize), (f = i.whave), (_ = i.wnext), (p = i.window), (h = i.hold), (m = i.bits), (g = i.lencode), (E = i.distcode), (b = (1 << i.lenbits) - 1), (y = (1 << i.distbits) - 1));
+    var i, a, o, s, l, c, u, d, _, f, p, h, m, g, E, b, y, O, v, I, T, S, A, N, C;
+    ((i = e.state), (a = e.next_in), (N = e.input), (o = a + (e.avail_in - 5)), (s = e.next_out), (C = e.output), (l = s - (r - e.avail_out)), (c = s + (e.avail_out - 257)), (u = i.dmax), (d = i.wsize), (_ = i.whave), (f = i.wnext), (p = i.window), (h = i.hold), (m = i.bits), (g = i.lencode), (E = i.distcode), (b = (1 << i.lenbits) - 1), (y = (1 << i.distbits) - 1));
     r: do
         for (m < 15 && ((h += N[a++] << m), (m += 8), (h += N[a++] << m), (m += 8)), O = g[h & b]; ; ) {
             if (((h >>>= v = O >>> 24), (m -= v), 0 == (v = (O >>> 16) & 255))) C[s++] = 65535 & O;
@@ -14,30 +14,30 @@ e.exports = function (e, r) {
                             break r;
                         }
                         if (((h >>>= v), (m -= v), T > (v = s - l))) {
-                            if ((v = T - v) > f && i.sane) {
+                            if ((v = T - v) > _ && i.sane) {
                                 ((e.msg = 'invalid distance too far back'), (i.mode = t));
                                 break r;
                             }
-                            if (((S = 0), (A = p), 0 === _)) {
+                            if (((S = 0), (A = p), 0 === f)) {
                                 if (((S += d - v), v < I)) {
                                     I -= v;
                                     do C[s++] = p[S++];
                                     while (--v);
                                     ((S = s - T), (A = C));
                                 }
-                            } else if (_ < v) {
-                                if (((S += d + _ - v), (v -= _) < I)) {
+                            } else if (f < v) {
+                                if (((S += d + f - v), (v -= f) < I)) {
                                     I -= v;
                                     do C[s++] = p[S++];
                                     while (--v);
-                                    if (((S = 0), _ < I)) {
-                                        I -= v = _;
+                                    if (((S = 0), f < I)) {
+                                        I -= v = f;
                                         do C[s++] = p[S++];
                                         while (--v);
                                         ((S = s - T), (A = C));
                                     }
                                 }
-                            } else if (((S += _ - v), v < I)) {
+                            } else if (((S += f - v), v < I)) {
                                 I -= v;
                                 do C[s++] = p[S++];
                                 while (--v);

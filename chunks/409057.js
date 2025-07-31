@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(833664),
     u = n(420660),
     d = n(100527),
-    f = n(906732),
-    _ = n(379357),
+    _ = n(906732),
+    f = n(379357),
     p = n(264832),
     h = n(358696),
     m = n(649700),
@@ -32,8 +32,8 @@ var i = n(120356),
     D = n(668700),
     L = n(262210),
     x = n(670451),
-    M = n(881530),
-    k = n(228168),
+    k = n(881530),
+    M = n(228168),
     j = n(981631),
     U = n(701488),
     G = n(388032),
@@ -94,7 +94,7 @@ function Y(e) {
     let { user: t, currentUser: n, activity: i, application: V, voiceGuild: Z, voiceChannel: Y, className: W, onClose: K, appContext: z } = e,
         q = (0, g.Dt)(),
         X = (0, g.Dt)(),
-        { analyticsLocations: Q } = (0, f.ZP)(d.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        { analyticsLocations: Q } = (0, _.ZP)(d.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { themeType: J } = (0, A.z)(),
         $ = (0, m.Z)({
             activity: i,
@@ -113,8 +113,8 @@ function Y(e) {
         }),
         en = (0, T.Z)(i),
         er = null != en.text && '' !== en.text,
-        { largeImage: ei, smallImage: ea } = (0, _.FO)(i, V),
-        eo = (0, M.Z)({
+        { largeImage: ei, smallImage: ea } = (0, f.FO)(i, V),
+        eo = (0, k.Z)({
             location: 'UserProfileActivityCard',
             user: t,
             currentUser: n,
@@ -125,11 +125,11 @@ function Y(e) {
         }),
         es = () => {
             let e = (0, s.Z)(i) ? 'crunchyroll' : 'default',
-                t = J === k.lY.MODAL_V2 ? h.J.SIZE_100 : h.J.SIZE_60;
+                t = J === M.lY.MODAL_V2 ? h.J.SIZE_100 : h.J.SIZE_60;
             return i.type === j.IIU.HANG_STATUS
                 ? (0, r.jsx)(b.Z, {
                       hangStatusActivity: i,
-                      className: a()(B.hangStatusIcon, B.image, { [B.small]: J !== k.lY.MODAL_V2 })
+                      className: a()(B.hangStatusIcon, B.image, { [B.small]: J !== M.lY.MODAL_V2 })
                   })
                 : null == eo
                   ? (0, r.jsx)(h.E, {
@@ -305,7 +305,7 @@ function Y(e) {
                       })
                     : null;
         },
-        ef = () => {
+        e_ = () => {
             if (!(0, S.Z)(i)) return null;
             let { start: e, end: t } = i.timestamps;
             return (0, r.jsx)(L.Z, {
@@ -313,7 +313,7 @@ function Y(e) {
                 end: t
             });
         },
-        e_ = () =>
+        ef = () =>
             null == eo
                 ? (0, r.jsxs)('div', {
                       children: [el(), ec(), eu()]
@@ -348,7 +348,7 @@ function Y(e) {
                           application: V
                       })
                   });
-    return (0, r.jsx)(f.Gt, {
+    return (0, r.jsx)(_.Gt, {
         value: Q,
         children: (0, r.jsxs)(R.Z, {
             ref: et,
@@ -380,24 +380,24 @@ function Y(e) {
                                 (0, r.jsxs)('div', {
                                     className: B.details,
                                     children: [
-                                        e_(),
+                                        ef(),
                                         !t.bot &&
                                             (0, r.jsx)(C.Z, {
                                                 user: t,
                                                 activity: i,
                                                 className: B.badges
                                             }),
-                                        ef(),
-                                        J === k.lY.MODAL_V2 && eh()
+                                        e_(),
+                                        J === M.lY.MODAL_V2 && eh()
                                     ]
                                 }),
-                                J === k.lY.MODAL && eh()
+                                J === M.lY.MODAL && eh()
                             ]
                         }),
                         ep()
                     ]
                 }),
-                J !== k.lY.MODAL && J !== k.lY.MODAL_V2 && eh()
+                J !== M.lY.MODAL && J !== M.lY.MODAL_V2 && eh()
             ]
         })
     });

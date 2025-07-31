@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(91192),
     u = n(442837),
     d = n(477690),
-    f = n(481060),
-    _ = n(2052),
+    _ = n(481060),
+    f = n(2052),
     p = n(607070),
     h = n(806966),
     m = n(254494),
@@ -79,26 +79,26 @@ function L(e, t) {
     );
 }
 let x = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
-    M = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
-    k = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
+    k = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_MARGIN_VERICAL),
+    M = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_SIZE),
     j = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_MARGIN_VERTICAL),
     U = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_UNICODE_CATEGORY_ICON_PADDING),
     G = (0, y.Mg)(R.__invalid_unicodeCategoryShortcutHeight),
     B = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_SIZE),
     V = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_CATEGORY_SEPARATOR_MARGIN_VERTICAL),
-    F = k + M + 2 * U,
-    Z = x + M,
+    F = M + k + 2 * U,
+    Z = x + k,
     H = Z + (B + 2 * V),
-    Y = k + j + 2 * U,
+    Y = M + j + 2 * U,
     W = 7;
 function K(e) {
-    let { activeIndex: t, categoryIndex: n, analyticsContext: a, categories: s, category: l, handleCategorySelect: u, isWindowFocused: d, useReducedMotion: _ } = e,
+    let { activeIndex: t, categoryIndex: n, analyticsContext: a, categories: s, category: l, handleCategorySelect: u, isWindowFocused: d, useReducedMotion: f } = e,
         p = (0, c.JA)('expression-guild-'.concat(n)),
         h = l.type === S.En.GUILD ? null : l.id,
         m = t === n,
         E = l.type === S.En.GUILD ? l.guild : null,
         y = (0, r.jsxs)(
-            f.P3F,
+            _.P3F,
             L(w({}, p), {
                 'aria-label': (0, O.Nf)(l, E),
                 className: o()({
@@ -121,7 +121,7 @@ function K(e) {
                         ? (0, r.jsx)(I.Z, {
                               guild: E,
                               isSelected: m,
-                              shouldAnimate: !_ && d,
+                              shouldAnimate: !f && d,
                               isLocked: l.isNitroLocked
                           })
                         : null,
@@ -129,8 +129,8 @@ function K(e) {
                         ? (0, r.jsx)(v.Z, {
                               categoryId: h,
                               className: R.categoryIcon,
-                              height: k,
-                              width: k,
+                              height: M,
+                              width: M,
                               size: 'custom'
                           })
                         : null
@@ -159,7 +159,7 @@ let z = (e) => {
             sectionDescriptors: a,
             emojiListRef: n
         }),
-        v = (0, _.O)(),
+        v = (0, f.O)(),
         I = (0, O.kI)(s, c, null == c ? void 0 : c.guild_id, d),
         A = i.useMemo(() => (g ? (0, O.ZF)() : I), [I, g]),
         N = i.useRef(null),
@@ -248,9 +248,9 @@ let z = (e) => {
                 if (n.type === S.En.RECENT) return t ? 0 : j;
                 if (n.type === S.En.GUILD) {
                     let n = A[e + 1];
-                    return null != n && n.type !== S.En.GUILD ? (t ? B + -2 * V + M + r : M) : t ? r : M;
+                    return null != n && n.type !== S.En.GUILD ? (t ? B + -2 * V + k + r : k) : t ? r : k;
                 }
-                return t ? M + r : 2 * M;
+                return t ? k + r : 2 * k;
             },
             [A, Q]
         ),
@@ -279,18 +279,18 @@ let z = (e) => {
         children: (e) =>
             U >= W &&
             (0, r.jsx)(
-                f.P3F,
+                _.P3F,
                 {
                     'aria-hidden': !Q,
                     'aria-label': C.intl.string(C.t.dT0ct7),
                     className: o()(R.unicodeShortcut, { [R.unicodeShortcutInvisible]: !Q }),
                     tabIndex: Q ? 0 : -1,
                     onClick: () => ee(e),
-                    children: (0, r.jsx)(f.EO4, {
+                    children: (0, r.jsx)(_.EO4, {
                         size: 'custom',
                         color: 'currentColor',
-                        height: k,
-                        width: k
+                        height: M,
+                        width: M
                     })
                 },
                 er

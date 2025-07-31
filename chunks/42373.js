@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(572995),
     _ = n(981631),
     j = n(869783),
-    E = n(888723),
-    O = n(790895);
+    O = n(888723),
+    E = n(790895);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -72,7 +72,7 @@ let S = (e) => {
             };
         return s
             ? (0, i.jsx)('div', {
-                  className: O.bentoBoxButton,
+                  className: E.bentoBoxButton,
                   children: (0, i.jsx)(o.z, {
                       variant: 'secondary',
                       onClick: p,
@@ -82,7 +82,7 @@ let S = (e) => {
             : (0, i.jsx)(u.zx, {
                   look: u.iL.OUTLINED,
                   color: m,
-                  className: a()(E.bentoBoxButton, c ? E.bentoBoxButtonWhite : E.bentoBoxButtonBrand),
+                  className: a()(O.bentoBoxButton, c ? O.bentoBoxButtonWhite : O.bentoBoxButtonBrand),
                   onClick: p,
                   children: t
               });
@@ -97,28 +97,28 @@ let S = (e) => {
                 let t;
                 switch (e) {
                     case x.NA.EMOJIS:
-                        t = E.emojisBackground;
+                        t = O.emojisBackground;
                         break;
                     case x.NA.REFERRAL_PROGRAM:
-                        t = E.referralProgramBackground;
+                        t = O.referralProgramBackground;
                         break;
                     case x.NA.NO_LIMITS:
-                        t = E.noLimitsBackground;
+                        t = O.noLimitsBackground;
                         break;
                     case x.NA.YOUR_SPACE:
-                        t = E.yourSpaceBackground;
+                        t = O.yourSpaceBackground;
                         break;
                     case x.NA.SERVER_PROFILES:
-                        t = E.serverProfilesBackground;
+                        t = O.serverProfilesBackground;
                         break;
                     case x.NA.SHOW_YOUR_STYLE:
-                        t = E.yourStyleBackground;
+                        t = O.yourStyleBackground;
                         break;
                     case x.NA.PERMADECOS:
-                        t = E.permadecosBackground;
+                        t = O.permadecosBackground;
                         break;
                     case x.NA.VOICE_FILTERS:
-                        t = E.voiceFiltersBackground;
+                        t = O.voiceFiltersBackground;
                 }
                 return t;
             })(n),
@@ -138,7 +138,7 @@ let S = (e) => {
                 0.7,
                 D
             ),
-            G = D ? O : E;
+            G = D ? E : O;
         t = D ? (R === x.y$.LARGE ? 'heading-xxl/bold' : 'heading-xl/bold') : R === x.y$.SMALL ? 'heading-xl/extrabold' : 'heading-xxl/extrabold';
         let F = () =>
                 (0, i.jsxs)('div', {
@@ -201,9 +201,9 @@ let S = (e) => {
                         g
                     )
                 }),
-            W = N % 2 != 0,
-            z = () =>
-                W
+            z = N % 2 != 0,
+            W = () =>
+                z
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [(0, i.jsx)(F, {}), (0, i.jsx)(H, {})]
                       })
@@ -211,7 +211,7 @@ let S = (e) => {
                           children: [(0, i.jsx)(H, {}), (0, i.jsx)(F, {})]
                       }),
             Y = {
-                className: a()(D ? O.backgroundColor : L, G.boxContainer, G[''.concat(R)], D && O.gradientBackground),
+                className: a()(D ? E.backgroundColor : L, G.boxContainer, G[''.concat(R)], D && E.gradientBackground),
                 onMouseEnter: M,
                 onFocus: M,
                 onBlur: U,
@@ -222,8 +222,8 @@ let S = (e) => {
                   c.$,
                   v(C({}, Y), {
                       color: 'purple',
-                      children: (0, i.jsx)(z, {})
+                      children: (0, i.jsx)(W, {})
                   })
               )
-            : (0, i.jsx)('div', v(C({}, Y), { children: (0, i.jsx)(z, {}) }));
+            : (0, i.jsx)('div', v(C({}, Y), { children: (0, i.jsx)(W, {}) }));
     };

@@ -36,12 +36,12 @@ e.exports = {
         function d(e) {
             return e <= 18 ? l(e) : e > 18 && e <= 44 ? c(e) : u(e);
         }
-        var f = i(e / 1.7, 0, 20);
-        f = a(f, 0, 0.8);
-        var _ = a(i(r / 1.7, 0, 20), 0.5, 200),
-            p = s(f, d(_), 0.01);
+        var _ = i(e / 1.7, 0, 20);
+        _ = a(_, 0, 0.8);
+        var f = a(i(r / 1.7, 0, 20), 0.5, 200),
+            p = s(_, d(f), 0.01);
         return {
-            tension: t(_),
+            tension: t(f),
             friction: n(p)
         };
     }

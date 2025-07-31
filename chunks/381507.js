@@ -1,28 +1,28 @@
-n.d(t, { Z: () => h });
-var i = n(255367);
-n(73800);
-var r = n(780384),
-    l = n(481060),
-    s = n(410030),
-    a = n(518950),
-    o = n(51144),
-    C = n(105759),
-    d = n(898969),
-    c = n(703614),
-    u = n(182294),
-    p = n(388032),
-    x = n(332546);
+t.d(n, { Z: () => h });
+var i = t(255367);
+t(73800);
+var r = t(780384),
+    l = t(481060),
+    s = t(410030),
+    a = t(518950),
+    o = t(51144),
+    C = t(105759),
+    d = t(898969),
+    c = t(703614),
+    u = t(182294),
+    p = t(388032),
+    x = t(332546);
 let h = () => {
     let e = (0, C.Z)(),
-        { avatarSrc: t, eventHandlers: n } = (0, a.Z)({
+        { avatarSrc: n, eventHandlers: t } = (0, a.Z)({
             userId: null == e ? void 0 : e.id,
             size: u.EF.SIZE_32,
             animateOnHover: !0
         }),
         h = (0, s.Fg)(),
-        f = (0, r.ap)(h),
-        j = o.ZP.getName(e),
-        m = f ? d.Z : c.Z;
+        j = (0, r.ap)(h),
+        f = o.ZP.getName(e),
+        m = j ? d.Z : c.Z;
     return null == e
         ? null
         : (0, i.jsxs)('div', {
@@ -33,43 +33,43 @@ let h = () => {
                       children: (0, i.jsx)(
                           l.qEK,
                           (function (e) {
-                              for (var t = 1; t < arguments.length; t++) {
-                                  var n = null != arguments[t] ? arguments[t] : {},
-                                      i = Object.keys(n);
+                              for (var n = 1; n < arguments.length; n++) {
+                                  var t = null != arguments[n] ? arguments[n] : {},
+                                      i = Object.keys(t);
                                   ('function' == typeof Object.getOwnPropertySymbols &&
                                       (i = i.concat(
-                                          Object.getOwnPropertySymbols(n).filter(function (e) {
-                                              return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                          Object.getOwnPropertySymbols(t).filter(function (e) {
+                                              return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                           })
                                       )),
-                                      i.forEach(function (t) {
+                                      i.forEach(function (n) {
                                           var i;
-                                          ((i = n[t]),
-                                              t in e
-                                                  ? Object.defineProperty(e, t, {
+                                          ((i = t[n]),
+                                              n in e
+                                                  ? Object.defineProperty(e, n, {
                                                         value: i,
                                                         enumerable: !0,
                                                         configurable: !0,
                                                         writable: !0
                                                     })
-                                                  : (e[t] = i));
+                                                  : (e[n] = i));
                                       }));
                               }
                               return e;
                           })(
                               {
-                                  src: t,
+                                  src: n,
                                   'aria-label': e.username,
                                   size: u.EF.SIZE_32
                               },
-                              n
+                              t
                           )
                       )
                   }),
                   (0, i.jsx)(l.Text, {
                       variant: 'text-xs/bold',
                       className: x.bannerHeader,
-                      children: p.intl.format(p.t.oxhCOj, { userName: j })
+                      children: p.intl.format(p.t.oxhCOj, { userName: f })
                   }),
                   (0, i.jsx)(m, { className: x.bannerIcon })
               ]

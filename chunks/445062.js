@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(864094),
@@ -56,18 +56,18 @@ function u(e, t) {
 function d(e) {
     return e ? o.intl.string(o.t.S5anIS) : o.intl.string(o.t.q3O3Jy);
 }
-function f(e) {
+function _(e) {
     var { isSelfStream: t, centerButton: n = !1, onMouseEnter: o, onMouseLeave: s } = e,
         u = c(e, ['isSelfStream', 'centerButton', 'onMouseEnter', 'onMouseLeave']);
-    let f = n ? a.d : a.Z,
-        { Component: _, events: p } = (0, i.P)('disable');
+    let _ = n ? a.d : a.Z,
+        { Component: f, events: p } = (0, i.P)('disable');
     return (0, r.jsx)(
-        f,
+        _,
         l(
             {
                 label: d(t),
                 isTrayButton: !1,
-                iconComponent: _,
+                iconComponent: f,
                 onMouseEnter: (e) => {
                     (null == o || o(e), p.onMouseEnter());
                 },

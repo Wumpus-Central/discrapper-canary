@@ -32,7 +32,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,7 +65,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -81,18 +81,18 @@ let h = '__DEBUG_PROFILE_EFFECTS_STORE',
         }
     },
     E = (0, o.F)((e) =>
-        p(f({}, m), {
+        p(_({}, m), {
             upsertConfig: (t) =>
                 (0, s.j)(() => {
                     e((e) => {
-                        let n = f({}, e);
+                        let n = _({}, e);
                         return ((n.profileEffects[t.id] = t), g(n), n);
                     });
                 }),
             deleteConfig: (t) =>
                 (0, s.j)(() => {
                     e((e) => {
-                        let n = f({}, e);
+                        let n = _({}, e);
                         return (delete n.profileEffects[t], g(n), n);
                     });
                 })
@@ -122,15 +122,15 @@ let h = '__DEBUG_PROFILE_EFFECTS_STORE',
                         let t = (0, u.$j)(e);
                         return (n.current.push(t), t);
                     },
-                    r = t.config.effects.map((t) => p(f({}, t), { src: e(t.base64) })),
+                    r = t.config.effects.map((t) => p(_({}, t), { src: e(t.base64) })),
                     i = t.config.stillFrames,
-                    a = null != i ? f({}, i) : {};
+                    a = null != i ? _({}, i) : {};
                 for (let t in a) {
                     let n = a[t];
-                    null != n && (a[t] = p(f({}, n), { src: e(n.base64) }));
+                    null != n && (a[t] = p(_({}, n), { src: e(n.base64) }));
                 }
-                return p(f({}, t), {
-                    config: p(f({}, t.config), {
+                return p(_({}, t), {
+                    config: p(_({}, t.config), {
                         effects: r,
                         stillFrames: a
                     })

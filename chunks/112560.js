@@ -15,9 +15,9 @@ function u(e) {
     return e < 400 ? 'small' : e < 1000 ? 'medium' : 'large';
 }
 function d(e) {
-    let { onCTAClick: t, callToAction: n, header: i, description: u, errorCodeMessage: d, size: f, className: _, artURL: p, noArt: h = !1, selected: m = !1 } = e;
+    let { onCTAClick: t, callToAction: n, header: i, description: u, errorCodeMessage: d, size: _, className: f, artURL: p, noArt: h = !1, selected: m = !1 } = e;
     return (0, r.jsxs)(l.Z, {
-        className: _,
+        className: f,
         justify: l.Z.Justify.CENTER,
         align: l.Z.Align.CENTER,
         direction: l.Z.Direction.VERTICAL,
@@ -26,7 +26,7 @@ function d(e) {
             !h &&
                 null != p &&
                 (0, r.jsx)('div', {
-                    className: a()(c.art, c[f]),
+                    className: a()(c.art, c[_]),
                     style: { backgroundImage: 'url('.concat(p, ')') }
                 }),
             null != i
@@ -46,7 +46,7 @@ function d(e) {
                       children: d
                   })
                 : null,
-            null != u && (null == d || 'small' !== f)
+            null != u && (null == d || 'small' !== _)
                 ? (0, r.jsx)(s.Text, {
                       color: 'none',
                       className: c.description,

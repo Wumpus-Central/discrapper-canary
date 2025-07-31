@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => O });
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -35,7 +35,7 @@ let j = () => {
                       : (0, i.jsx)(m.Z, {})
               });
     },
-    E = () => {
+    O = () => {
         let e = (0, d.Z)(),
             t = (0, o.o)(h.intl.string(g.default.T7GyW1), h.intl.string(g.default.goKE2d)),
             n = (0, o.o)(h.intl.format(g.default.MXjDSk, { articleLink: 'https://support.discord.com/hc/articles/14155060633623' }), h.intl.format(g.default.EMCf6u, { articleLink: 'https://support.discord.com/hc/articles/14155043715735' }));

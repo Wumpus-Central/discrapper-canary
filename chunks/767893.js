@@ -3,8 +3,8 @@ var r = n(255367),
     s = n(120356),
     l = n.n(s),
     a = n(708816),
-    i = n(657707),
-    o = n(442837),
+    o = n(657707),
+    i = n(442837),
     c = n(481060),
     u = n(933557),
     h = n(471445),
@@ -26,13 +26,13 @@ function x(e) {
         children: (0, r.jsxs)('div', {
             className: m.channelHeader,
             'data-recents-channel': t.id,
-            children: [(0, r.jsx)(S, { channel: t }), t.isPrivate() ? null : (0, r.jsx)(i.Fbu, { size: 'xxs' }), (0, r.jsx)(b, { channel: t }), n]
+            children: [(0, r.jsx)(b, { channel: t }), t.isPrivate() ? null : (0, r.jsx)(o.Fbu, { size: 'xxs' }), (0, r.jsx)(S, { channel: t }), n]
         })
     });
 }
-function S(e) {
+function b(e) {
     let { channel: t } = e,
-        n = (0, o.e7)([f.Z], () => f.Z.getGuild(t.guild_id));
+        n = (0, i.e7)([f.Z], () => f.Z.getGuild(t.guild_id));
     return null != n
         ? (0, r.jsx)(p.Z, {
               className: m.icon,
@@ -48,16 +48,16 @@ function S(e) {
             })
           : (0, r.jsx)('div', {
                 className: l()(m.icon, m.dmIcon),
-                children: (0, r.jsx)(i.kBi, { size: 'xxs' })
+                children: (0, r.jsx)(o.kBi, { size: 'xxs' })
             });
 }
-function b(e) {
+function S(e) {
     let { channel: t } = e,
-        n = (0, o.e7)([f.Z], () => f.Z.getGuild(t.guild_id)),
+        n = (0, i.e7)([f.Z], () => f.Z.getGuild(t.guild_id)),
         s = (0, u.ZP)(t, !1),
         l = (0, h.KS)(t, n),
         a = t.isPrivate() || null == l,
-        i = t.isDM() ? g.intl.formatToPlainString(g.t.smD7XV, { username: s }) : s;
+        o = t.isDM() ? g.intl.formatToPlainString(g.t.smD7XV, { username: s }) : s;
     return (0, r.jsxs)('div', {
         className: m.channelNameSection,
         children: [
@@ -70,7 +70,7 @@ function b(e) {
             (0, r.jsx)(c.X6q, {
                 variant: 'text-md/semibold',
                 color: 'header-secondary',
-                children: i
+                children: o
             })
         ]
     });

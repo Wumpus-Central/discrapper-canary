@@ -12,10 +12,10 @@ function r(e, t, n) {
     );
 }
 (n.d(t, {
-    $o: () => _,
+    $o: () => f,
     NE: () => d,
     P1: () => c,
-    P2: () => f,
+    P2: () => _,
     ie: () => i,
     jb: () => s,
     kn: () => a,
@@ -43,14 +43,14 @@ function u(e, t) {
 function d(e, t, n) {
     return ''.concat(e, '-').concat(t, '-').concat(n);
 }
-function f(e, t) {
+function _(e, t) {
     let n = !1;
     return function () {
         for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
         n || (e(...i), (n = !0), setTimeout(() => (n = !1), t));
     };
 }
-class _ {
+class f {
     get(e) {
         let t = this.handlers.get(e);
         return (null == t && ((t = this.makeHandler(e)), this.handlers.set(e, t)), t);

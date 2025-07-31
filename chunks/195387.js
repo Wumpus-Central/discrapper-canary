@@ -9,8 +9,8 @@ var i = n(442837),
     c = n(189357),
     u = n(434404),
     d = n(359110),
-    f = n(314897),
-    _ = n(944486),
+    _ = n(314897),
+    f = n(944486),
     p = n(475413),
     h = n(176505),
     m = n(50493),
@@ -18,9 +18,9 @@ var i = n(442837),
 function E(e) {
     let { user: t, guildId: n, channelId: E, onClose: b, appContext: y, shouldShowTooltip: O } = e,
         { newestAnalyticsLocation: v } = (0, s.ZP)(),
-        I = (0, i.e7)([f.default], () => f.default.getId() === (null == t ? void 0 : t.id)),
+        I = (0, i.e7)([_.default], () => _.default.getId() === (null == t ? void 0 : t.id)),
         T = (0, c.m)(null != n ? n : null),
-        S = (0, i.e7)([_.Z], () => (null != E ? E : _.Z.getChannelId(n, !0)), [E, n]);
+        S = (0, i.e7)([f.Z], () => (null != E ? E : f.Z.getChannelId(n, !0)), [E, n]);
     return null == n || !T || I
         ? null
         : (0, r.jsx)(p.oY, {

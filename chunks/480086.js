@@ -8,8 +8,8 @@ var r = n(73800),
     c = n(877481),
     u = n(669764),
     d = n(80387),
-    f = n(981631),
-    _ = n(388032);
+    _ = n(981631),
+    f = n(388032);
 let p = {
         '356875762940379136': 'https://worldofwarcraft.blizzard.com',
         '615752773690064908': 'https://worldofwarcraft.blizzard.com',
@@ -34,7 +34,7 @@ function m(e) {
         icon: e.icon,
         openLink: (t) => {
             (null == t || t.stopPropagation(),
-                l.default.track(f.rMx.GAME_STORE_BUTTON_CLICKED, {
+                l.default.track(_.rMx.GAME_STORE_BUTTON_CLICKED, {
                     application_id: e.applicationId,
                     application_name: e.applicationName,
                     platform: e.platform
@@ -57,7 +57,7 @@ function g(e) {
         v = (0, r.useMemo)(() => {
             var e, t, n;
             if (null == y) return null;
-            let r = null != (n = null != (t = null == (e = y.thirdPartySkus.find((e) => e.distributor === f.GQo.STEAM)) ? void 0 : e.id) ? t : null == O ? void 0 : O.steam_id) ? n : null;
+            let r = null != (n = null != (t = null == (e = y.thirdPartySkus.find((e) => e.distributor === _.GQo.STEAM)) ? void 0 : e.id) ? t : null == O ? void 0 : O.steam_id) ? n : null;
             return {
                 app: y,
                 steamSku: r
@@ -72,7 +72,7 @@ function g(e) {
                     url: r,
                     platform: 'battlenet',
                     icon: a.DvD,
-                    labelKey: _.t['ZGax9/'],
+                    labelKey: f.t['ZGax9/'],
                     applicationId: e,
                     applicationName: t.name
                 });
@@ -82,7 +82,7 @@ function g(e) {
                       url: i,
                       platform: 'riot',
                       icon: a.mVV,
-                      labelKey: _.t['+KXANz'],
+                      labelKey: f.t['+KXANz'],
                       applicationId: e,
                       applicationName: t.name
                   })
@@ -91,7 +91,7 @@ function g(e) {
                         url: l ? 'steam://advertise/'.concat(n) : 'https://store.steampowered.com/app/'.concat(n),
                         platform: 'steam',
                         icon: a.xCj,
-                        labelKey: _.t.OlubCw,
+                        labelKey: f.t.OlubCw,
                         applicationId: e,
                         applicationName: t.name
                     })

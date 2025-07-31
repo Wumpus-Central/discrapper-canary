@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(114101),
     u = n(481060),
     d = n(28546),
-    f = n(581883),
-    _ = n(459273),
+    _ = n(581883),
+    f = n(459273),
     p = n(443603),
     h = n(981631),
     m = n(957825),
@@ -70,9 +70,9 @@ function v(e, t) {
 function I(e, t) {
     let { disabled: n, type: a } = e,
         [b, O] = i.useState(!1),
-        I = (0, l.e7)([f.Z], () => {
+        I = (0, l.e7)([_.Z], () => {
             var e, t;
-            return b && Object.values(null != (t = null == (e = f.Z.frecencyWithoutFetchingLatest.favoriteGifs) ? void 0 : e.gifs) ? t : {}).length <= 2;
+            return b && Object.values(null != (t = null == (e = _.Z.frecencyWithoutFetchingLatest.favoriteGifs) ? void 0 : e.gifs) ? t : {}).length <= 2;
         }),
         [T, S, A] = (0, d.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], s.X),
         N = i.useRef(0),
@@ -83,7 +83,7 @@ function I(e, t) {
                     (O(!1), (N.current = 0));
                 }, 2000)));
         }, []);
-    (0, _.yp)({
+    (0, f.yp)({
         event: h.CkL.FAVORITE_GIF,
         handler: C
     });

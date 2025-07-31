@@ -16,7 +16,7 @@ var r = n(73800),
     c = n(74538),
     u = n(73346),
     d = n(981631);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -89,18 +89,18 @@ function g(e, t) {
     return i;
 }
 async function E(e) {
-    let { items: t, paymentSourceId: n, trialId: r, code: i, applyEntitlements: a = !1, currency: u, renewal: f, metadata: p } = e,
+    let { items: t, paymentSourceId: n, trialId: r, code: i, applyEntitlements: a = !1, currency: u, renewal: _, metadata: p } = e,
         g = {
             items: (t = (0, c.gB)(t)).map((e) => {
                 var { planId: t } = e;
-                return h(_({}, m(e, ['planId'])), { plan_id: t });
+                return h(f({}, m(e, ['planId'])), { plan_id: t });
             }),
             payment_source_id: n,
             trial_id: r,
             code: i,
             apply_entitlements: a,
             currency: u,
-            renewal: f,
+            renewal: _,
             metadata: p
         };
     try {
@@ -116,7 +116,7 @@ async function E(e) {
     }
 }
 async function b(e) {
-    let { subscriptionId: t, items: n, paymentSourceId: r, renewal: i, currency: a, applyEntitlements: u = !1, analyticsLocations: f, analyticsLocation: p, userDiscountOfferId: g } = e;
+    let { subscriptionId: t, items: n, paymentSourceId: r, renewal: i, currency: a, applyEntitlements: u = !1, analyticsLocations: _, analyticsLocation: p, userDiscountOfferId: g } = e;
     null != n && (n = (0, c.gB)(n));
     let E = {
         items:
@@ -124,7 +124,7 @@ async function b(e) {
                 ? void 0
                 : n.map((e) => {
                       var { planId: t } = e;
-                      return h(_({}, m(e, ['planId'])), { plan_id: t });
+                      return h(f({}, m(e, ['planId'])), { plan_id: t });
                   }),
         payment_source_id: r,
         renewal: i,
@@ -137,7 +137,7 @@ async function b(e) {
             url: d.ANM.BILLING_SUBSCRIPTION_PREVIEW(t),
             query: {
                 location: p,
-                location_stack: f
+                location_stack: _
             },
             body: E,
             oldFormErrors: !0,

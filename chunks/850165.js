@@ -1,38 +1,39 @@
-(n.d(e, { Z: () => o }), n(953529));
+(n.d(e, { Z: () => a }), n(953529));
 var r = n(255367);
 n(73800);
-var s = n(481060),
-    i = n(948582);
-function o(t) {
-    let { heroImageSrc: e, heroImageAlt: n, children: o, header: c, description: a } = t;
+var i = n(481060),
+    s = n(948582);
+function a(t) {
+    let { heroImageSrc: e, heroImageAlt: n, children: a, header: o, description: c } = t;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('img', {
                 src: e,
                 alt: n,
-                className: i.heroImage
+                className: s.heroImage
             }),
-            (0, r.jsxs)(s.hzk, {
-                className: i.body,
+            (0, r.jsxs)(i.hzk, {
+                'data-migration-pending': !0,
+                className: s.body,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: i.textContainer,
+                        className: s.textContainer,
                         children: [
-                            (0, r.jsx)(s.X6q, {
+                            (0, r.jsx)(i.X6q, {
                                 variant: 'heading-xl/semibold',
                                 color: 'header-primary',
-                                children: c
+                                children: o
                             }),
-                            null != a &&
-                                (0, r.jsx)(s.Text, {
+                            null != c &&
+                                (0, r.jsx)(i.Text, {
                                     variant: 'text-md/medium',
                                     color: 'header-secondary',
-                                    className: i.description,
-                                    children: a
+                                    className: s.description,
+                                    children: c
                                 })
                         ]
                     }),
-                    o
+                    a
                 ]
             })
         ]

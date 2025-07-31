@@ -6,8 +6,8 @@ var o,
     c = n(261470),
     u = n(442837),
     d = n(902704),
-    f = n(846519),
-    _ = n(570140),
+    _ = n(846519),
+    f = n(570140),
     p = n(586902),
     h = n(726542),
     m = n(524331),
@@ -67,7 +67,7 @@ function x(e, t) {
     }
     return n;
 }
-function M(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -78,7 +78,7 @@ function M(e, t) {
         e
     );
 }
-let k = h.Z.get(w.ABu.SPOTIFY),
+let M = h.Z.get(w.ABu.SPOTIFY),
     j = 'wss://dealer.spotify.com/?access_token=',
     U = 'hm://pusher/v1/connections/',
     G = 30 * N.Z.Millis.SECOND,
@@ -99,11 +99,11 @@ let k = h.Z.get(w.ABu.SPOTIFY),
     },
     Q = { SINGLE: 'single' },
     J = new g.Z('Spotify'),
-    $ = new f.V7(),
-    ee = new f.V7(),
-    et = new f.V7(),
-    en = new f.V7(),
-    er = new f.V7(),
+    $ = new _.V7(),
+    ee = new _.V7(),
+    et = new _.V7(),
+    en = new _.V7(),
+    er = new _.V7(),
     ei = {},
     ea = {},
     eo = {},
@@ -128,7 +128,7 @@ function eu(e, t) {
     return Math.abs(i - r) > H ? i : r;
 }
 function ed(e) {
-    _.Z.dispatch({
+    f.Z.dispatch({
         type: 'SPOTIFY_PLAYER_STATE',
         accountId: e,
         track: null,
@@ -139,13 +139,13 @@ function ed(e) {
         context: null
     });
 }
-function ef(e) {
+function e_(e) {
     return v.Z.findActivity(e, (e) => null != e.party && null != e.party.id && (0, P.Ps)(e.party.id));
 }
-let e_ = new Set([WebSocket.CONNECTING, WebSocket.OPEN]);
+let ef = new Set([WebSocket.CONNECTING, WebSocket.OPEN]);
 class ep {
     get connected() {
-        return null != this.socket && e_.has(this.socket.readyState);
+        return null != this.socket && ef.has(this.socket.readyState);
     }
     connect() {
         this.connected ||
@@ -201,7 +201,7 @@ class ep {
         let { type: t, event: n } = e;
         switch (t) {
             case 'PLAYER_STATE_CHANGED':
-                null != n && null != n.state && ek(this.accountId, this.accessToken, n.state);
+                null != n && null != n.state && eM(this.accountId, this.accessToken, n.state);
                 break;
             case 'DEVICE_STATE_CHANGED':
                 this.handleDeviceStateChange();
@@ -226,7 +226,7 @@ class ep {
             ),
             (this.accountId = e),
             (this.accessToken = t),
-            (this.pingInterval = new f.Xp()),
+            (this.pingInterval = new _.Xp()),
             (this.backoff = new c.Z(void 0, K)),
             this.connect());
     }
@@ -250,15 +250,15 @@ function eE(e, t, n) {
     let { socket: s, device: l } = o,
         { sync_id: c, party: u, timestamps: d } = t;
     if (null == c || null == u || null == u.id || !(0, P.Ps)(u.id)) return !1;
-    let f = null != d && null != d.start ? d.start : Date.now(),
-        _ = Math.max(0, Date.now() - f),
+    let _ = null != d && null != d.start ? d.start : Date.now(),
+        f = Math.max(0, Date.now() - _),
         p = !1,
         h = eo[s.accountId];
     null != h && !1 === h.repeat && (p = null);
     let m = (0, P.c8)(null != (a = null == (r = t.metadata) ? void 0 : r.type) ? a : P.Hw.TRACK);
     if (null == m) return;
     ((0, R.hY)(s.accountId, s.accessToken, c, m, {
-        position: +_,
+        position: +f,
         deviceId: l.id,
         repeat: p
     }),
@@ -266,7 +266,7 @@ function eE(e, t, n) {
             userId: e,
             partyId: u.id,
             trackId: c,
-            startTime: f
+            startTime: _
         }));
     let g = 'presence change';
     (n &&
@@ -323,18 +323,18 @@ function ev(e) {
 }
 function eI(e) {
     let { accountId: t, isPlaying: n, repeat: a, track: o, position: s, device: c, context: u } = e,
-        f = !1;
+        _ = !1;
     if (null != c)
         if (null != ea[t]) {
             let e = ea[t].find((e) => {
                 let { id: t } = e;
                 return t === c.id;
             });
-            (null == e ? (ea[t].push(c), (f = !0)) : (0, d.Z)(e, c) || (Object.assign(e, c), (f = !0)), eg(t, c.id));
-        } else ((ea[t] = [c]), (f = !0));
+            (null == e ? (ea[t].push(c), (_ = !0)) : (0, d.Z)(e, c) || (Object.assign(e, c), (_ = !0)), eg(t, c.id));
+        } else ((ea[t] = [c]), (_ = !0));
     n ? null == el || el.start(B, eP) : ((o = null), null == el || el.stop());
     let p = y.Z.getAccount(t, w.ABu.SPOTIFY);
-    if (null == p) return f;
+    if (null == p) return _;
     let h = eo[t],
         g =
             null != o
@@ -363,9 +363,9 @@ function eI(e) {
             : er.isStarted() && (J.info('Listen along stop cancelled as playback of track resumed'), er.stop()),
         O === r || (null == h && null == g) || (null != h && null != g && h.track.id === g.track.id && h.startTime === g.startTime))
     )
-        return f;
+        return _;
     null != o &&
-        (_.Z.dispatch({
+        (f.Z.dispatch({
             type: 'SPOTIFY_NEW_TRACK',
             track: o,
             connectionId: t
@@ -423,7 +423,7 @@ function eC(e) {
 function eR() {
     if (null == i || null == ec()) return !1;
     let { userId: e } = i,
-        t = ef(e);
+        t = e_(e);
     if (null == t)
         return (
             et.start(F, () => {
@@ -473,16 +473,16 @@ function ex(e) {
     if (null == r) return !1;
     ((r.isPremium = n), J.info('Profile updated for '.concat(t, ': isPremium = ').concat(n)));
 }
-function eM(e) {
+function ek(e) {
     let { settings: t } = e;
     if ((null == t ? void 0 : t.desktopSettings) != null) {
         null == el || el.stop();
         let { sourceId: e, sound: n } = null == t ? void 0 : t.desktopSettings;
-        null != e && E.ZP.getObservedAppNameForWindow(e) === k.name && n ? (el = new f.Xp()).start(B, eP) : (null == el || el.stop(), (el = null));
+        null != e && E.ZP.getObservedAppNameForWindow(e) === M.name && n ? (el = new _.Xp()).start(B, eP) : (null == el || el.stop(), (el = null));
     } else null == t && (null == el || el.stop(), (el = null));
 }
-function ek(e, t, n) {
-    var r, i, a, o, s, l, c, u, d, f, p, h, m, g;
+function eM(e, t, n) {
+    var r, i, a, o, s, l, c, u, d, _, p, h, m, g;
     let E,
         b,
         { device: y, progress_ms: O, is_playing: v, repeat_state: I, item: T, context: S } = n;
@@ -514,13 +514,13 @@ function ek(e, t, n) {
                 album: {
                     id: null != (h = null == (u = T.show) ? void 0 : u.id) ? h : '',
                     name: null != (m = null == (d = T.show) ? void 0 : d.name) ? m : '',
-                    image: null == (f = T.show) ? void 0 : f.images[0],
+                    image: null == (_ = T.show) ? void 0 : _.images[0],
                     type: null != (g = null == (p = T.album) ? void 0 : p.type) ? g : P.Hw.SHOW
                 },
                 artists: [],
                 isLocal: !1
             });
-    if ((null != y && !0 !== y.is_active && (y = M(L({}, y), { is_active: !0 })), null != S && [P.Hw.PLAYLIST, P.Hw.ALBUM].includes(S.type))) {
+    if ((null != y && !0 !== y.is_active && (y = k(L({}, y), { is_active: !0 })), null != S && [P.Hw.PLAYLIST, P.Hw.ALBUM].includes(S.type))) {
         let n = eG.getPlayerState(e);
         b =
             null != n && null != n.context && n.context.uri === S.uri
@@ -540,7 +540,7 @@ function ek(e, t, n) {
     } else b = Promise.resolve(void 0);
     return b.then((t) => {
         (null == t || t.type !== P.Hw.PLAYLIST || t.public || (t = null),
-            _.Z.dispatch({
+            f.Z.dispatch({
                 type: 'SPOTIFY_PLAYER_STATE',
                 accountId: e,
                 track: E,
@@ -562,7 +562,7 @@ function ej(e, t) {
         })
         .then((n) => {
             let r = n.body;
-            null != r ? ek(e, t, r).then(() => n) : ed(e);
+            null != r ? eM(e, t, r).then(() => n) : ed(e);
         })
         .catch(() => ed(e));
 }
@@ -614,11 +614,11 @@ class eU extends (o = u.ZP.Store) {
     }
     getActivity() {
         let e, t, n;
-        if (null == r) return null != i ? ef(i.userId) : null;
+        if (null == r) return null != i ? e_(i.userId) : null;
         let {
                 track: { artists: a, album: o, name: s, id: l, duration: c, isLocal: u, type: d },
-                startTime: f,
-                context: _
+                startTime: _,
+                context: f
             } = r,
             p = a.slice(0, W);
         a.length > 0 &&
@@ -630,7 +630,7 @@ class eU extends (o = u.ZP.Store) {
                 .join('; '));
         let h = {},
             m = null != o.image ? (0, A.f)(w.ABu.SPOTIFY, o.image.url) : null;
-        (null != o.image && null != m && (h.large_image = m), o.type !== Q.SINGLE && (h.large_text = o.name), null != _ && (t = _.uri), (n = null != i && null != i.partyId ? i.partyId : ''.concat(P.lS).concat(b.default.getId())));
+        (null != o.image && null != m && (h.large_image = m), o.type !== Q.SINGLE && (h.large_text = o.name), null != f && (t = f.uri), (n = null != i && null != i.partyId ? i.partyId : ''.concat(P.lS).concat(b.default.getId())));
         let g = s.length > q ? s.substring(0, q - 3) + '...' : s,
             E = {
                 context_uri: t,
@@ -643,13 +643,13 @@ class eU extends (o = u.ZP.Store) {
                 button_urls: []
             },
             y = {
-                name: k.name,
+                name: M.name,
                 assets: h,
                 details: g,
                 state: e,
                 timestamps: {
-                    start: f,
-                    end: f + c
+                    start: _,
+                    end: _ + c
                 },
                 party: { id: n }
             };
@@ -657,7 +657,7 @@ class eU extends (o = u.ZP.Store) {
     }
 }
 D(eU, 'displayName', 'SpotifyStore');
-let eG = new eU(_.Z, {
+let eG = new eU(f.Z, {
         USER_CONNECTIONS_UPDATE: ey,
         CONNECTION_OPEN: ey,
         SPOTIFY_ACCOUNT_ACCESS_TOKEN: eO,
@@ -672,6 +672,6 @@ let eG = new eU(_.Z, {
         SPOTIFY_SET_ACTIVE_DEVICE: eA,
         SPEAKING: eD,
         VOICE_STATE_UPDATES: eL,
-        MEDIA_ENGINE_SET_GO_LIVE_SOURCE: eM
+        MEDIA_ENGINE_SET_GO_LIVE_SOURCE: ek
     }),
     eB = eG;

@@ -1,5 +1,5 @@
 (n.d(t, {
-    R: () => z,
+    R: () => W,
     Z: () => Y
 }),
     n(415506));
@@ -22,8 +22,8 @@ var r = n(120356),
     x = n(594174),
     _ = n(509545),
     j = n(931331),
-    E = n(754347),
-    O = n(122289),
+    O = n(754347),
+    E = n(122289),
     C = n(74538),
     v = n(212895),
     S = n(296848),
@@ -168,11 +168,11 @@ function H(e) {
         ]
     });
 }
-function W() {
+function z() {
     return (0, i.jsxs)('div', {
         className: L.wordMark,
         children: [
-            (0, i.jsx)(E.Z, {
+            (0, i.jsx)(O.Z, {
                 className: L.discordWordmark,
                 'aria-label': k.intl.string(k.t['FSOz7+'])
             }),
@@ -180,10 +180,10 @@ function W() {
         ]
     });
 }
-function z() {
+function W() {
     let { analyticsLocations: e } = (0, p.ZP)(m.Z.ACCOUNT_CREDIT_BANNER);
     return (0, i.jsx)(F, {
-        wordMark: (0, i.jsx)(W, {}),
+        wordMark: (0, i.jsx)(z, {}),
         subscriptionInfo: (0, i.jsx)('div', {
             className: L.planInfo,
             children: k.intl.string(k.t.R0GJLy)
@@ -203,7 +203,7 @@ function z() {
 }
 let Y = function (e) {
     var t;
-    let { subscription: r, renewalInvoicePreview: a, paymentSource: h, busy: P, analyticsLocation: z } = e,
+    let { subscription: r, renewalInvoicePreview: a, paymentSource: h, busy: P, analyticsLocation: W } = e,
         Y = 'subscription_header',
         { analyticsLocations: K } = (0, p.ZP)(m.Z.SUBSCRIPTION_HEADER),
         q = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
@@ -233,7 +233,7 @@ let Y = function (e) {
                         t,
                         M(B({}, n), {
                             premiumSubscription: r,
-                            analyticsLocation: z,
+                            analyticsLocation: W,
                             analyticsLocations: K,
                             initialStep: e
                         })
@@ -253,7 +253,7 @@ let Y = function (e) {
                         : (0, f.Z)({
                               initialPlanId: r.premiumPlanIdFromItems,
                               analyticsLocations: K,
-                              analyticsLocation: z,
+                              analyticsLocation: W,
                               analyticsObject: V,
                               subscription: r
                           }));
@@ -261,7 +261,7 @@ let Y = function (e) {
         },
         ec = () => {
             if (!G.includes(r.status) || null == r.pauseEndsAt)
-                return void (0, O.q2)(Error('Invalid subscription to resume'), {
+                return void (0, E.q2)(Error('Invalid subscription to resume'), {
                     extra: {
                         subscriptionId: r.id,
                         status: r.status,
@@ -272,7 +272,7 @@ let Y = function (e) {
                 ? (0, f.Z)({
                       initialPlanId: r.premiumPlanIdFromItems,
                       analyticsLocations: K,
-                      analyticsLocation: z,
+                      analyticsLocation: W,
                       analyticsObject: V,
                       subscription: r,
                       skipConfirm: !0
@@ -304,7 +304,7 @@ let Y = function (e) {
             ef = (0, i.jsxs)('div', {
                 className: L.wordMark,
                 children: [
-                    (0, i.jsx)(E.Z, {
+                    (0, i.jsx)(O.Z, {
                         className: L.discordWordmark,
                         'aria-label': k.intl.string(k.t['t9uG/v'])
                     }),
@@ -313,7 +313,7 @@ let Y = function (e) {
             });
             break;
         case Z.p9.TIER_1:
-            ef = (0, i.jsx)(W, {});
+            ef = (0, i.jsx)(z, {});
             break;
         case Z.p9.TIER_2:
             ef = (0, i.jsx)(j.Z, {
@@ -392,7 +392,7 @@ let Y = function (e) {
                                         onClick: () => {
                                             (0, f.Z)({
                                                 analyticsLocations: K,
-                                                analyticsLocation: z,
+                                                analyticsLocation: W,
                                                 analyticsObject: V,
                                                 subscription: r
                                             });

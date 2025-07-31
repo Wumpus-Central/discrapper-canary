@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(997841), n(388685));
+(n.d(t, { Z: () => v }), n(997841), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(533800),
@@ -11,16 +11,16 @@ var r = n(255367),
     p = n(955415),
     m = n(131704),
     f = n(630388),
-    _ = n(411198),
-    g = n(277707),
+    g = n(411198),
+    _ = n(277707),
     h = n(358595),
     b = n(981631),
     E = n(388032),
     C = n(273254);
-function O(e) {
-    var t, O, v;
-    let y,
-        x,
+function v(e) {
+    var t, v, O;
+    let x,
+        y,
         I,
         { onTransitionToInviteChannel: j, onAcceptInstantInvite: S, guild: T, invite: N, message: P, currentUserId: A } = e,
         w = A === P.author.id,
@@ -32,15 +32,15 @@ function O(e) {
         F = null != M && M.isGuildVocal(),
         B = null != M && M.isGuildStageVoice(),
         G = (0, f.yE)(null != (t = N.flags) ? t : 0, l.$.IS_GUEST_INVITE),
-        H = null != (O = null == T ? void 0 : T.features.has(b.oNc.HUB)) && O,
-        V = null == T ? void 0 : T.id,
+        V = null != (v = null == T ? void 0 : T.features.has(b.oNc.HUB)) && v,
+        H = null == T ? void 0 : T.id,
         { analyticsLocations: z } = (0, c.ZP)(s.Z.INVITE_EMBED),
         [W, K] = i.useState(!1),
         Y = i.useCallback(() => K(!1), []),
         X = i.useRef(null),
         q = i.useCallback(() => {
-            (K(!0), (0, o.CB)(V, 'show profile', z));
-        }, [V, z]),
+            (K(!0), (0, o.CB)(H, 'show profile', z));
+        }, [H, z]),
         Q = i.useCallback(() => {
             let e = 'noop';
             (k ? (j(), (e = 'transition')) : (S(), (e = 'accept')),
@@ -56,18 +56,18 @@ function O(e) {
         }, [N, P, z, k, j, S]);
     if (null == T) {
         if (null == N.guild) return (0, r.jsx)(h.Z, {});
-        (T = _.Qs(N.guild)).premiumTier = null != (v = N.guild.premium_tier) ? v : b.Eu4.NONE;
+        (T = g.Qs(N.guild)).premiumTier = null != (O = N.guild.premium_tier) ? O : b.Eu4.NONE;
     }
-    let J = (0, g.e)({
+    let J = (0, _.e)({
         isVoiceChannel: F,
         isOwnInvite: w,
         isGuest: G,
-        isHubGuild: H,
+        isHubGuild: V,
         isStage: B,
         isStream: !1
     });
     return (
-        (x = (0, r.jsxs)('span', {
+        (y = (0, r.jsxs)('span', {
             className: C.infoTitle,
             children: [
                 (0, r.jsx)(u.Z, {
@@ -103,8 +103,8 @@ function O(e) {
                 })
             })),
         F
-            ? ((x = (0, r.jsx)(p.Z.Channel, { channel: M })),
-              (y = (0, r.jsxs)('span', {
+            ? ((y = (0, r.jsx)(p.Z.Channel, { channel: M })),
+              (x = (0, r.jsxs)('span', {
                   className: C.infoTitle,
                   children: [
                       E.intl.format(E.t['2wimj4'], { guildName: T.name }),
@@ -118,12 +118,12 @@ function O(e) {
                   ]
               })))
             : (null != R && R >= 5) || (null != D && D > 0)
-              ? (y = (0, r.jsx)(p.Z.Data, {
+              ? (x = (0, r.jsx)(p.Z.Data, {
                     members: R,
                     membersOnline: D
                 }))
               : U &&
-                (y = (0, r.jsx)(p.Z.Channel, {
+                (x = (0, r.jsx)(p.Z.Channel, {
                     channel: M,
                     guild: T
                 })),
@@ -141,9 +141,9 @@ function O(e) {
                             children: [
                                 (0, r.jsx)(p.Z.Icon, { guild: T }),
                                 (0, r.jsx)(p.Z.Info, {
-                                    title: x,
+                                    title: y,
                                     onClick: q,
-                                    children: y
+                                    children: x
                                 })
                             ]
                         }),

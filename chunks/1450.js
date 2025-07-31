@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(2052),
     u = n(367907),
     d = n(906732),
-    f = n(28546),
-    _ = n(26323),
+    _ = n(28546),
+    f = n(26323),
     p = n(434404),
     h = n(357156),
     m = n(430824),
@@ -44,7 +44,7 @@ let v = (e) => {
         return null;
     if (C) {
         let e = () => {
-            (0, _.Z)({
+            (0, f.Z)({
                 analyticsLocations: S,
                 analyticsSourceLocation: T,
                 guild: A,
@@ -75,7 +75,7 @@ let v = (e) => {
     }
     {
         let e = () => {
-            ((0, f._Q)(), p.Z.open(n, E.pNK.STICKERS, T));
+            ((0, _._Q)(), p.Z.open(n, E.pNK.STICKERS, T));
         };
         return (0, r.jsxs)('div', {
             className: o()(O.upsell, t),

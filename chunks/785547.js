@@ -11,16 +11,16 @@ var r,
     p = n(2052),
     m = n(710845),
     f = n(703656),
-    _ = n(173747),
-    g = n(7956),
+    g = n(173747),
+    _ = n(7956),
     h = n(293245),
     b = n(417363),
     E = n(941128),
     C = n(780570),
-    O = n(358085),
-    v = n(814225),
-    y = n(346329),
-    x = n(701560),
+    v = n(358085),
+    O = n(814225),
+    x = n(346329),
+    y = n(701560),
     I = n(981631),
     j = n(388032),
     S = n(207178);
@@ -116,11 +116,11 @@ class R extends (r = a.Component) {
         if (e.isHidden()) return 'add_to_library';
         if (e.isPreorder()) return 'preorder_wait';
         let r = null != n ? w[n] : null;
-        return null != r ? r : null != t && t.type === I.vxO.UNINSTALLING ? 'uninstalling' : (0, O.isWeb)() ? 'play' : 'unsupported_os';
+        return null != r ? r : null != t && t.type === I.vxO.UNINSTALLING ? 'uninstalling' : (0, v.isWeb)() ? 'play' : 'unsupported_os';
     }
     renderPlayButton() {
         let { libraryApplication: e, fullWidth: t, size: n, color: r, customDisabledColor: i, isPlayShiny: a, onDropdownOpen: o, onDropdownClose: s, analyticsListSort: c, analyticsListIndex: u } = this.props;
-        return (0, l.jsx)(x.Z, {
+        return (0, l.jsx)(y.Z, {
             applicationId: e.id,
             libraryApplication: e,
             fullWidth: t,
@@ -189,7 +189,7 @@ class R extends (r = a.Component) {
             return this.renderDisabledButton(
                 n,
                 (function (e) {
-                    let t = v.en(e.sku);
+                    let t = O.en(e.sku);
                     return null != t ? j.intl.formatToPlainString(j.t.Aqe2ZG, { date: t }) : null;
                 })(t)
             );
@@ -211,11 +211,11 @@ class R extends (r = a.Component) {
             }),
             T(this, 'handleInstall', () => {
                 let { libraryApplication: e, source: t } = this.props;
-                y.installApplication(e.id, e.branchId, t);
+                x.installApplication(e.id, e.branchId, t);
             }),
             T(this, 'handleUpdate', () => {
                 let { libraryApplication: e } = this.props;
-                y.updateApplication(e.id, e.branchId);
+                x.updateApplication(e.id, e.branchId);
             }),
             T(this, 'onClickHandlers', {
                 add_to_library: this.handleAddToLibrary,
@@ -231,9 +231,9 @@ class R extends (r = a.Component) {
 function D(e) {
     let { libraryApplication: t } = e,
         n = (0, p.O)(),
-        [r, i] = (0, o.Wu)([b.Z, E.Z], () => [(0, g.i)(t, b.Z, E.Z), b.Z.getState(t.id, t.branchId)], [t]),
+        [r, i] = (0, o.Wu)([b.Z, E.Z], () => [(0, _.i)(t, b.Z, E.Z), b.Z.getState(t.id, t.branchId)], [t]),
         a = (0, o.e7)([h.Z], () => h.Z.isSyncing(t.id, t.branchId), [t]),
-        s = (0, o.e7)([_.Z], () => _.Z.hasNoBuild(t.id, t.branchId), [t]);
+        s = (0, o.e7)([g.Z], () => g.Z.hasNoBuild(t.id, t.branchId), [t]);
     return (0, l.jsx)(
         R,
         P(N({}, e), {

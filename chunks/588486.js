@@ -20,10 +20,10 @@ var r = n(230367),
     d = (function (e) {
         return ((e[(e.SURFACE_UNSPECIFIED = 0)] = 'SURFACE_UNSPECIFIED'), (e[(e.API = 1)] = 'API'), (e[(e.APP = 2)] = 'APP'), e);
     })({}),
-    f = (function (e) {
+    _ = (function (e) {
         return ((e[(e.ENABLED = 0)] = 'ENABLED'), (e[(e.DISABLED = 1)] = 'DISABLED'), e);
     })({}),
-    _ = (function (e) {
+    f = (function (e) {
         return ((e[(e.FULL = 0)] = 'FULL'), (e[(e.FORCE_DEFAULT = 1)] = 'FORCE_DEFAULT'), (e[(e.OVERRIDE_ONLY = 2)] = 'OVERRIDE_ONLY'), e);
     })({}),
     p = (function (e) {
@@ -298,13 +298,13 @@ class g extends o.C {
                 no: 22,
                 name: 'exposure_tracking',
                 kind: 'enum',
-                T: () => ['discord_protos.discord_experimentation.v1.Experiment.ExposureTracking', f]
+                T: () => ['discord_protos.discord_experimentation.v1.Experiment.ExposureTracking', _]
             },
             {
                 no: 25,
                 name: 'assignment_mode',
                 kind: 'enum',
-                T: () => ['discord_protos.discord_experimentation.v1.Experiment.AssignmentMode', _]
+                T: () => ['discord_protos.discord_experimentation.v1.Experiment.AssignmentMode', f]
             },
             {
                 no: 23,

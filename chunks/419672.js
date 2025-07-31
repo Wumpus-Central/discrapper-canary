@@ -1,74 +1,71 @@
 (n.d(e, { Z: () => x }), n(388685));
 var i = n(255367),
     r = n(73800),
-    s = n(755721),
-    l = n(481060),
-    o = n(230711),
+    s = n(481060),
+    l = n(230711),
     a = n(63063),
-    c = n(378298),
-    u = n(584656),
-    d = n(993750),
-    T = n(981631),
-    S = n(526761),
-    _ = n(388032),
-    b = n(621164);
+    o = n(378298),
+    c = n(584656),
+    u = n(993750),
+    d = n(981631),
+    T = n(526761),
+    S = n(388032),
+    _ = n(621164);
 let x = function (t) {
     let { onClose: e, channelId: n } = t,
-        [x, p] = r.useState(!1),
-        O = r.useCallback(() => {
-            (o.Z.open(T.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: S.FY.DM_SAFETY_ALERTS_V2 }), e());
+        [x, b] = r.useState(!1),
+        p = r.useCallback(() => {
+            (l.Z.open(d.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: T.FY.DM_SAFETY_ALERTS_V2 }), e());
         }, [e]),
-        h = r.useCallback(() => {
+        O = r.useCallback(() => {
             x ||
-                (p(!0),
-                (0, c.Uj)(n)
+                (b(!0),
+                (0, o.Uj)(n)
                     .then(() => {
                         (e(),
-                            (0, u.t)({
-                                text: _.intl.string(_.t.FhgVWl),
+                            (0, c.t)({
+                                text: S.intl.string(S.t.FhgVWl),
                                 id: 'safety-tools-report-false-positive'
                             }));
                     })
                     .catch(() => {
-                        (p(!1), (0, l.showToast)((0, l.createToast)(_.intl.string(_.t.R0RpRU), l.ToastType.FAILURE)));
+                        (b(!1), (0, s.showToast)((0, s.createToast)(S.intl.string(S.t.R0RpRU), s.ToastType.FAILURE)));
                     }));
         }, [n, e, x]);
-    return (0, i.jsxs)(d.Z, {
-        style: b.wrapperStyle,
+    return (0, i.jsxs)(u.Z, {
+        style: _.wrapperStyle,
         children: [
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(s.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                children: _.intl.format(_.t['njJ/Cg'], { learnMoreLink: a.Z.getArticleURL(T.BhN.SAFETY_ALERTS) })
+                children: S.intl.format(S.t['njJ/Cg'], { learnMoreLink: a.Z.getArticleURL(d.BhN.SAFETY_ALERTS) })
             }),
-            (0, i.jsx)(s.zx, {
-                className: b.settingsButton,
-                onClick: O,
-                fullWidth: !0,
-                children: _.intl.string(_.t.qpWnyM)
-            }),
-            (0, i.jsx)('div', {
-                children: (0, i.jsx)(l.Text, {
-                    variant: 'text-sm/normal',
-                    color: 'text-muted',
-                    className: b.reportFalsePositiveText,
-                    children: _.intl.format(_.t['2uYViI'], {
-                        reportFalsePositiveHook: (t, e) =>
-                            (0, i.jsx)(
-                                s.zx,
-                                {
-                                    className: b.reportFalsePositiveButton,
-                                    size: s.zx.Sizes.NONE,
-                                    color: s.zx.Colors.LINK,
-                                    look: s.zx.Looks.LINK,
-                                    disabled: x,
-                                    onClick: h,
-                                    children: t
-                                },
-                                e
-                            )
+            (0, i.jsxs)('div', {
+                children: [
+                    (0, i.jsx)(s.zxk, {
+                        onClick: p,
+                        fullWidth: !0,
+                        text: S.intl.string(S.t.qpWnyM)
+                    }),
+                    (0, i.jsx)(s.Text, {
+                        variant: 'text-sm/normal',
+                        color: 'text-muted',
+                        className: _.reportFalsePositiveText,
+                        children: S.intl.format(S.t['2uYViI'], {
+                            reportFalsePositiveHook: (t, e) =>
+                                (0, i.jsx)(
+                                    s.P3F,
+                                    {
+                                        className: _.reportFalsePositiveButton,
+                                        tag: 'span',
+                                        onClick: O,
+                                        children: t
+                                    },
+                                    e
+                                )
+                        })
                     })
-                })
+                ]
             })
         ]
     });

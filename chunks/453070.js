@@ -3,7 +3,7 @@
     LZ: () => D,
     Pq: () => v,
     RJ: () => P,
-    Sd: () => M,
+    Sd: () => k,
     XW: () => x,
     el: () => T,
     fP: () => A,
@@ -22,8 +22,8 @@ var r = n(73800),
     c = n(914010),
     u = n(771845),
     d = n(594174),
-    f = n(267642),
-    _ = n(700785),
+    _ = n(267642),
+    f = n(700785),
     p = n(285651),
     h = n(268350),
     m = n(822179),
@@ -48,7 +48,7 @@ let v = (e) => {
         return r.useMemo(() => {
             let e = Math.floor((o - i + s) / (u + s)),
                 r = Math.floor(Math.max(s, (o - i - u * e) / (e - 1))),
-                _ = [],
+                f = [],
                 p = [],
                 h = [],
                 m = 0,
@@ -63,7 +63,7 @@ let v = (e) => {
                         u = d.findIndex((e) => e.type === E.Ih.FAVORITE),
                         v = d.findIndex((e) => e.type === E.Ih.RECENT),
                         I = t.length;
-                    null != i && s === i.id && o && t.length < (0, f.A3)(i.premiumTier) && I++;
+                    null != i && s === i.id && o && t.length < (0, _.A3)(i.premiumTier) && I++;
                     let T = Math.ceil(I / e);
                     p[g] = r ? 0 : T;
                     for (let a = 0; a < T; a++) {
@@ -92,7 +92,7 @@ let v = (e) => {
                                 columnIndex: l.length,
                                 visibleRowIndex: y
                             }),
-                            r || (y++, h.push(l), _.push(l.length)),
+                            r || (y++, h.push(l), f.push(l.length)),
                             m++);
                     }
                     g++;
@@ -105,7 +105,7 @@ let v = (e) => {
                 rowCountBySection: p,
                 stickersGrid: h,
                 gutterWidth: r,
-                columnCounts: _
+                columnCounts: f
             };
         }, [t, n, i, o, s, u, d]);
     },
@@ -172,7 +172,7 @@ let v = (e) => {
                           stickers: []
                       }),
                     null == o ||
-                        _.BT({
+                        f.BT({
                             permission: y.Plq.USE_EXTERNAL_EMOJIS,
                             user: o,
                             context: e
@@ -280,7 +280,7 @@ let L = (e) => {
             ? [e, s]
             : [null != n ? n : null, s];
     },
-    M = (e) => {
+    k = (e) => {
         let t = L(e);
         return r.useMemo(() => t.filter((e) => e.type === E.Ih.EMPTY_GUILD_UPSELL || e.stickers.length > 0, []), [t]);
     };

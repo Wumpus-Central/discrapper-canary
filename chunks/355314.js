@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(594174),
     u = n(424218),
     d = n(403182),
-    f = n(63063),
-    _ = n(74538),
+    _ = n(63063),
+    f = n(74538),
     p = n(790527),
     h = n(474936),
     m = n(981631),
@@ -77,13 +77,13 @@ function I(e) {
             src: 'https://cdn.discordapp.com/assets/premium/roadblocks/file_upload_'.concat(S, '_v2.png')
         }),
         N = i.useMemo(() => {
-            let e = _.ZP.getUserMaxFileSize(v);
+            let e = f.ZP.getUserMaxFileSize(v);
             return (0, u.BU)(e / 1024, { useKibibytes: !0 });
         }, [v]),
         C = (0, d.iL)({
             guildId: T,
             onClick: () => {
-                window.open(f.Z.getArticleURL(m.BhN.NITRO_FAQ), '_blank');
+                window.open(_.Z.getArticleURL(m.BhN.NITRO_FAQ), '_blank');
             }
         }),
         R = (0, r.jsx)('div', {

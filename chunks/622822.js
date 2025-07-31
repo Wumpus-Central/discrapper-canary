@@ -19,11 +19,11 @@ var r = n(81643),
     c = n(594174),
     u = n(709054),
     d = n(758119),
-    f = n(723359),
-    _ = n(981631),
+    _ = n(723359),
+    f = n(981631),
     p = n(388032);
 let h = new Date('06/16/2020'),
-    m = [_.V_K.AGE_RESTRICTED, _.V_K.EXPLICIT];
+    m = [f.V_K.AGE_RESTRICTED, f.V_K.EXPLICIT];
 function g() {
     let e = c.default.getCurrentUser();
     return null != e && u.default.extractTimestamp(e.id) > h.getTime() && null == e.nsfwAllowed;
@@ -43,7 +43,7 @@ function y() {
 }
 function O(e) {
     let t = (0, r.l6)(),
-        n = e === f.L0.NSFW_SERVER || e === f.L0.NSFW_SERVER_INVITE || e === f.L0.NSFW_SERVER_INVITE_EMBED;
+        n = e === _.L0.NSFW_SERVER || e === _.L0.NSFW_SERVER_INVITE || e === _.L0.NSFW_SERVER_INVITE_EMBED;
     return t
         ? {
               verifyAgreementButtonText: p.intl.string(p.t.PBG51t),
@@ -74,9 +74,9 @@ let v = () => {
     },
     T = (e) => !!v() && null != e && C(s.Z.getChannel(e)),
     S = (e) => b() && T(e),
-    A = (e) => !!S(e) && ((0, d.mN)(f.L0.NSFW_VOICE_CHANNEL), !0);
+    A = (e) => !!S(e) && ((0, d.mN)(_.L0.NSFW_VOICE_CHANNEL), !0);
 function N(e, t, n) {
-    return I(e) ? void (0, d.mN)(null != n ? n : f.L0.NSFW_SERVER) : T(t) ? void (0, d.mN)(null != n ? n : f.L0.NSFW_CHANNEL) : void 0;
+    return I(e) ? void (0, d.mN)(null != n ? n : _.L0.NSFW_SERVER) : T(t) ? void (0, d.mN)(null != n ? n : _.L0.NSFW_CHANNEL) : void 0;
 }
 function C(e) {
     if (null == e) return !1;

@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(243778),
     _ = n(440051),
     j = n(734934),
-    E = n(300284),
-    O = n(680295),
+    O = n(300284),
+    E = n(680295),
     C = n(785717),
     v = n(209698),
     S = n(687158),
@@ -41,8 +41,8 @@ var i = n(255367),
     G = n(622562),
     F = n(158776),
     H = n(246946),
-    W = n(572004),
-    z = n(5192),
+    z = n(572004),
+    W = n(5192),
     Y = n(74538),
     K = n(7093),
     q = n(474376),
@@ -101,10 +101,10 @@ function ea(e) {
         { expiringStatusProfileFeedback: ex } = _.Y.useExperiment({ location: 'UserProfileAccountPopout' }, { autoTrackExposure: !1 }),
         e_ = (0, a.e7)([H.Z], () => H.Z.hidePersonalInformation),
         ej = (0, j.p)(),
-        eE = V.Sb.useSetting(),
-        eO = (0, Q.I)(eh),
+        eO = V.Sb.useSetting(),
+        eE = (0, Q.I)(eh),
         eC = (0, q.g)(n),
-        ev = (0, E.Z)({ analyticsLocations: eu }),
+        ev = (0, O.Z)({ analyticsLocations: eu }),
         eS = (0, Y.I5)(t),
         eT = (0, h.p)({ location: 'UserProfileAccountPopout' }),
         eN = (0, v.b)({ location: 'UserProfileAccountPopout' }),
@@ -206,7 +206,7 @@ function ea(e) {
                                     (0, i.jsx)(k.Z, {
                                         user: t,
                                         className: ei.username,
-                                        nickname: z.ZP.getName(null, null, t),
+                                        nickname: W.ZP.getName(null, null, t),
                                         onOpenProfile: ec ? void 0 : eM,
                                         pronouns: null == ed ? void 0 : ed.pronouns,
                                         tags: (0, i.jsx)(I.Z, {
@@ -295,7 +295,7 @@ function ea(e) {
                                                                           className: ei.statusPickerModalMenu,
                                                                           'aria-label': en.intl.string(en.t.E13trK),
                                                                           onClose: t,
-                                                                          children: eO
+                                                                          children: eE
                                                                       });
                                                                   },
                                                             onClick: s.tq
@@ -342,7 +342,7 @@ function ea(e) {
                                                                                                           hideScroller: !0,
                                                                                                           onClose: r,
                                                                                                           onSelect: void 0,
-                                                                                                          children: eO
+                                                                                                          children: eE
                                                                                                       })
                                                                                                   }),
                                                                                               Object.getOwnPropertyDescriptors
@@ -392,8 +392,8 @@ function ea(e) {
                                                             }
                                                         }),
                                                         !__OVERLAY__ &&
-                                                            W.wS &&
-                                                            eE &&
+                                                            z.wS &&
+                                                            eO &&
                                                             (0, i.jsxs)(i.Fragment, {
                                                                 children: [
                                                                     (0, i.jsx)(P.Z, { className: ei.menuDivider }),
@@ -403,7 +403,7 @@ function ea(e) {
                                                                         icon: c.VuL,
                                                                         label: en.intl.string(en.t['/AXYnJ']),
                                                                         onClick: () => {
-                                                                            ((0, W.JG)(t.id), n());
+                                                                            ((0, z.JG)(t.id), n());
                                                                         }
                                                                     })
                                                                 ]
@@ -416,7 +416,7 @@ function ea(e) {
                                 ]
                             }),
                             eU &&
-                                (0, i.jsx)(O.Z, {
+                                (0, i.jsx)(E.Z, {
                                     profileEffectId: null == ed ? void 0 : ed.profileEffectId,
                                     isHovering: eg
                                 })

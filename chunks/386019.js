@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+(n.d(t, { Z: () => f }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(481060),
@@ -8,15 +8,15 @@ var r = n(255367),
     c = n(960870),
     u = n(510659),
     d = n(848966),
-    f = n(388032);
-function _(e) {
+    _ = n(388032);
+function f(e) {
     var t;
-    let { children: n, user: _, activity: p, entry: h, display: m, onSelect: g, onClose: E, appContext: b, targetElementRef: y } = e,
+    let { children: n, user: f, activity: p, entry: h, display: m, onSelect: g, onClose: E, appContext: b, targetElementRef: y } = e,
         [O, v] = i.useState(!1),
         { analyticsLocations: I } = (0, s.ZP)(o.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
         T = (0, c.Z)({
             display: m,
-            user: _,
+            user: f,
             activity: p,
             entry: h,
             analyticsLocations: I
@@ -27,14 +27,14 @@ function _(e) {
         C = (0, d.Z)({
             entry: h,
             activity: p,
-            user: _,
+            user: f,
             display: m,
             onClose: E,
             onAction: T,
             isMenuOpen: O,
             appContext: b
         });
-    return 0 === C.length || _.bot
+    return 0 === C.length || f.bot
         ? null
         : (0, r.jsx)(a.yRy, {
               targetElementRef: null != y ? y : N,
@@ -53,7 +53,7 @@ function _(e) {
                           onClose: () => {
                               (t(), v(!1));
                           },
-                          'aria-label': f.intl.string(f.t.PlAQz8),
+                          'aria-label': _.intl.string(_.t.PlAQz8),
                           onSelect: g,
                           children: (0, r.jsx)(a.kSQ, { children: C })
                       })

@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(730647),
     _ = n(584825),
     j = n(305342),
-    E = n(333867),
-    O = n(963249),
+    O = n(333867),
+    E = n(963249),
     C = n(87484),
     v = n(736519),
     S = n(365943),
@@ -111,7 +111,7 @@ let k = function () {
             gift: 'true'
         }),
         H = 'true' !== G.gift && null != k,
-        [W, z] = r.useState(L.length > 0 ? L[0].value : null),
+        [z, W] = r.useState(L.length > 0 ? L[0].value : null),
         { analyticsLocations: Y } = (0, g.ZP)(p.Z.PAYMENT_FLOW_TEST_PAGE),
         [K, q] = r.useState(''),
         [X, J] = r.useState(A.lds),
@@ -201,7 +201,7 @@ let k = function () {
                                     variant: 'primary',
                                     text: 'Select Plan',
                                     onClick: () =>
-                                        (0, O.Z)({
+                                        (0, E.Z)({
                                             subscriptionTier: n,
                                             analyticsLocations: Y
                                         })
@@ -409,15 +409,15 @@ let k = function () {
                                     children: 'Premium Server Subscription For'
                                 }),
                                 (0, i.jsx)(c.q4e, {
-                                    value: W,
+                                    value: z,
                                     options: L,
-                                    onChange: (e) => z(e)
+                                    onChange: (e) => W(e)
                                 })
                             ]
                         }),
                         (0, i.jsx)(x.l, {
-                            guildId: null == W ? void 0 : W.id,
-                            children: (0, i.jsx)(w, { selectedGuildForGuildSub: W })
+                            guildId: null == z ? void 0 : z.id,
+                            children: (0, i.jsx)(w, { selectedGuildForGuildSub: z })
                         })
                     ]
                 }),
@@ -505,7 +505,7 @@ let k = function () {
                                     variant: 'primary',
                                     text: 'Open Collectibles Payment Modal for SKU',
                                     onClick: () =>
-                                        (0, E.Z)({
+                                        (0, O.Z)({
                                             skuId: ed,
                                             analyticsLocations: Y,
                                             variantsReturnStyle: em

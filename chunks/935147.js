@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(629654),
     _ = n(53691),
     j = n(165583),
-    E = n(267717),
-    O = n(643879),
+    O = n(267717),
+    E = n(643879),
     C = n(350327),
     v = n(996073),
     S = n(25990),
@@ -42,8 +42,8 @@ function V(e) {
     let { user: V, isVisible: G, shouldShow: F } = e,
         H = N.ZP.isPremium(V),
         {
-            pendingAvatar: W,
-            pendingThemeColors: z,
+            pendingAvatar: z,
+            pendingThemeColors: W,
             tryItOutThemeColors: Y,
             tryItOutAvatar: K,
             tryItOutBanner: q,
@@ -170,11 +170,11 @@ function V(e) {
                                   (0, i.jsx)(Z.Z, {
                                       className: U.customizationSection,
                                       user: V,
-                                      pendingAvatarSrc: (0, O.SD)({
+                                      pendingAvatarSrc: (0, E.SD)({
                                           userId: V.id,
-                                          image: null != K ? K : W
+                                          image: null != K ? K : z
                                       }),
-                                      pendingColors: null != Y ? Y : z,
+                                      pendingColors: null != Y ? Y : W,
                                       onThemeColorsChange: C.rf,
                                       showPremiumIcon: !1,
                                       preventDisabled: !0
@@ -230,7 +230,7 @@ function V(e) {
                               showUpsell: !0,
                               text: M.intl.format(M.t.TmfgIy, {
                                   onClick: () => {
-                                      (0, E.y)({
+                                      (0, O.y)({
                                           analyticsSource: ei,
                                           onSubscribeFinish: es
                                       });

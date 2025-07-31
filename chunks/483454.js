@@ -13,8 +13,8 @@ var r = n(255367),
     c = n(570140),
     u = n(563132),
     d = n(409813),
-    f = n(626135),
-    _ = n(622999),
+    _ = n(626135),
+    f = n(622999),
     p = n(878836),
     h = n(561448),
     m = n(981631),
@@ -98,7 +98,7 @@ let S = [d.h8.PAYMENT_ELEMENT],
             u = I(e, ['originalPaymentType', 'wallets', 'analyticsContext', 'options', 'onChange', 'step']);
         let p = i.useMemo(() => {
                 if (null == t || !(0, h.qH)(t)) return;
-                let e = (0, _.rI)();
+                let e = (0, f.rI)();
                 if ((0, h.Ko)(t)) {
                     let n = (0, h.ZK)(t, e);
                     return null != n ? [n] : [];
@@ -111,7 +111,7 @@ let S = [d.h8.PAYMENT_ELEMENT],
                         let { contextMetadata: t, activitySessionId: n, analyticsData: r } = o,
                             i = (0, h.hR)(e.value.type),
                             a = null != i ? h.Ho[i] : e.value.type;
-                        f.default.track(m.rMx.PAYMENT_ELEMENT_CHANGED, {
+                        _.default.track(m.rMx.PAYMENT_ELEMENT_CHANGED, {
                             load_id: t.loadId,
                             activity_session_id: n,
                             location: r.location,
@@ -154,7 +154,7 @@ let S = [d.h8.PAYMENT_ELEMENT],
         var { options: t, renderWithoutElement: n, billingAddressInfo: o } = e,
             s = I(e, ['options', 'renderWithoutElement', 'billingAddressInfo']);
         let l = i.useMemo(() => {
-                let { name: e, address: t } = (0, _.XZ)(o);
+                let { name: e, address: t } = (0, f.XZ)(o);
                 return y(
                     { name: null != e ? e : null },
                     null != t && {
@@ -195,27 +195,27 @@ let S = [d.h8.PAYMENT_ELEMENT],
               });
     }),
     C = (e) => {
-        let { step: t, billingAddressInfo: n, stripePaymentElementProps: o, stripeAddressElementProps: l, elementsRef: c, originalPaymentType: u, paymentElementSelectedType: f, analyticsContext: _ } = e,
+        let { step: t, billingAddressInfo: n, stripePaymentElementProps: o, stripeAddressElementProps: l, elementsRef: c, originalPaymentType: u, paymentElementSelectedType: _, analyticsContext: f } = e,
             p = (0, a.useElements)();
         i.useEffect(() => {
             c.current = p;
         }, [p, c]);
-        let h = S.includes(t) && null != f,
+        let h = S.includes(t) && null != _,
             m = t === d.h8.ADDRESS;
         return (0, r.jsxs)('div', {
             className: E.body,
             children: [
                 (0, r.jsx)('div', {
                     className: s()(h ? E.visible : E.hidden, {
-                        [E.cardElementContainer]: f === g.He.CARD,
-                        [E.customPaymentElementContainer]: f === g.He.PAYPAL
+                        [E.cardElementContainer]: _ === g.He.CARD,
+                        [E.customPaymentElementContainer]: _ === g.He.PAYPAL
                     }),
                     children: (0, r.jsx)(
                         A,
                         v(y({}, o), {
                             step: t,
                             originalPaymentType: u,
-                            analyticsContext: _
+                            analyticsContext: f
                         })
                     )
                 }),
@@ -253,13 +253,13 @@ let S = [d.h8.PAYMENT_ELEMENT],
     D = (e) => {
         let { step: t, handleStepChange: n, paymentElementsEnabled: r, logger: a, onBillingAddressChange: o, shouldLogOnChangeEvents: s, continueSessionToInitialStep: l } = e,
             u = i.useRef(null),
-            [f, _] = i.useState(!1),
+            [_, f] = i.useState(!1),
             [p, m] = i.useState(l === d.h8.CREDIT_CARD_INFORMATION ? g.He.CARD : null),
             E = r && (t === d.h8.PAYMENT_ELEMENT || t === d.h8.ADDRESS),
             b = i.useMemo(
                 () => ({
                     onChange: (e) => {
-                        (s && null != a && a.log('PaymentElements onChange event:', e), _(e.complete), m((0, h.hR)(e.value.type)));
+                        (s && null != a && a.log('PaymentElements onChange event:', e), f(e.complete), m((0, h.hR)(e.value.type)));
                     },
                     wallets: w
                 }),
@@ -319,7 +319,7 @@ let S = [d.h8.PAYMENT_ELEMENT],
             stripePaymentElementProps: b,
             stripeAddressElementProps: y,
             combinedStripeElementsRef: u,
-            paymentElementReady: f,
+            paymentElementReady: _,
             paymentElementSelectedType: p,
             setPaymentElementSelectedType: m,
             handlePaymentElementStep: O,

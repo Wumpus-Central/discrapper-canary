@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(985375),
     u = n(585483),
     d = n(981631),
-    f = n(388032),
-    _ = n(54816);
+    _ = n(388032),
+    f = n(54816);
 function p(e, t, n) {
     return (
         t in e
@@ -66,7 +66,7 @@ let E = i.memo(function (e) {
     let { width: t, height: n, src: a, url: p, format: m, className: E } = e,
         [b, y] = i.useState(!1),
         O = (0, c.hb)((0, l.iy)(p)),
-        v = O ? f.intl.string(f.t['5/NS7+']) : f.intl.string(f.t.nIH0v7),
+        v = O ? _.intl.string(_.t['5/NS7+']) : _.intl.string(_.t.nIH0v7),
         I = O ? s.r7p : s.vxU;
     i.useEffect(() => {
         if (!b) return;
@@ -96,16 +96,16 @@ let E = i.memo(function (e) {
             (0, r.jsx)(
                 s.P3F,
                 g(h({}, e), {
-                    className: o()(E, _.gifFavoriteButton, {
-                        [_.selected]: O,
-                        [_.showPulse]: b
+                    className: o()(E, f.gifFavoriteButton, {
+                        [f.selected]: O,
+                        [f.showPulse]: b
                     }),
                     onMouseDown: (e) => e.preventDefault(),
                     onClick: T,
                     onDoubleClick: (e) => e.preventDefault(),
                     children: (0, r.jsx)(I, {
                         color: 'currentColor',
-                        className: _.icon,
+                        className: f.icon,
                         size: 'custom',
                         width: 20,
                         height: 20

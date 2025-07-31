@@ -1,6 +1,6 @@
 (n.d(t, {
     EO: () => G,
-    LY: () => k,
+    LY: () => M,
     Nj: () => a.Z,
     a5: () => x,
     c4: () => L,
@@ -12,7 +12,7 @@
     rY: () => P,
     rt: () => R,
     wR: () => j,
-    wl: () => M
+    wl: () => k
 }),
     n(415506),
     n(539854),
@@ -26,8 +26,8 @@ var r = n(149765),
     c = n(131704),
     u = n(592125),
     d = n(984933),
-    f = n(496675),
-    _ = n(944486),
+    _ = n(496675),
+    f = n(944486),
     p = n(938475),
     h = n(700785),
     m = n(709054);
@@ -100,11 +100,11 @@ function P(e, t, n) {
         c = null != (i = null == s ? void 0 : s.maxStageVideoChannelUsers) ? i : -1,
         u = p.ZP.countVoiceStatesForChannel(e.id),
         d = p.ZP.getVoiceStatesForChannel(e),
-        _ = f.Z.can(g.Plq.MOVE_MEMBERS, e) && f.Z.can(g.Plq.CONNECT, e),
+        f = _.Z.can(g.Plq.MOVE_MEMBERS, e) && _.Z.can(g.Plq.CONNECT, e),
         h = !1;
-    h = e.type === v ? null != a && (t.hasVideo(e.id) || (0, o.a)(d)) && c > 0 && u >= c : null != a && t.hasVideo(e.id) && l > 0 && u >= l + +!!_;
+    h = e.type === v ? null != a && (t.hasVideo(e.id) || (0, o.a)(d)) && c > 0 && u >= c : null != a && t.hasVideo(e.id) && l > 0 && u >= l + +!!f;
     let m = e.userLimit > 0 && u >= e.userLimit;
-    return h || (m && !_);
+    return h || (m && !f);
 }
 function w(e, t) {
     return t.isGuildStageVoice() ? g.epw : null == e ? g.eWB : Math.max(e.features.has(g.oNc.VIP_REGIONS) ? E.HO[g.Eu4.TIER_3].limits.bitrate : g.eWB, E.HO[e.premiumTier].limits.bitrate);
@@ -162,19 +162,19 @@ function x(e) {
             return null;
     }
 }
-function M(e) {
+function k(e) {
     if (null == e) return 'text';
     let t = e.isMediaChannel();
-    if (e.type === g.d4z.GUILD_VOICE) return f.Z.can(g.Plq.CONNECT, e) ? 'voice' : 'voice-locked';
-    if (e.type === g.d4z.GUILD_STAGE_VOICE) return f.Z.can(g.Plq.CONNECT, e) ? 'stage' : 'stage-locked';
+    if (e.type === g.d4z.GUILD_VOICE) return _.Z.can(g.Plq.CONNECT, e) ? 'voice' : 'voice-locked';
+    if (e.type === g.d4z.GUILD_STAGE_VOICE) return _.Z.can(g.Plq.CONNECT, e) ? 'stage' : 'stage-locked';
     if (c.Ec.has(e.type)) return e.isForumPost() ? 'post' : 'thread';
     if (e.type === g.d4z.GUILD_FORUM) return t ? 'media' : 'forum';
     if (e.type === g.d4z.GUILD_MEDIA) return 'media';
     else if (c.sR.has(e.type)) return 'text';
 }
-function k(e) {
+function M(e) {
     let t,
-        n = u.Z.getChannel(_.Z.getLastSelectedChannelId());
+        n = u.Z.getChannel(f.Z.getLastSelectedChannelId());
     if (null != n && n.getGuildId() === e && n.type === g.d4z.GUILD_TEXT) t = n.id;
     else {
         let n = d.ZP.getDefaultChannel(e);

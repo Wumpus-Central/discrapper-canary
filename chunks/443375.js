@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(841784),
     u = n(833664),
     d = n(420660),
-    f = n(100527),
-    _ = n(906732),
+    _ = n(100527),
+    f = n(906732),
     p = n(379357),
     h = n(358696),
     m = n(649700),
@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(979038),
     L = n(448980),
     x = n(336383),
-    M = n(194811),
-    k = n(373826),
+    k = n(194811),
+    M = n(373826),
     j = n(668700),
     U = n(262210),
     G = n(386019),
@@ -77,7 +77,7 @@ function z(e) {
         ee = (0, g.Dt)(),
         et = (0, g.Dt)(),
         en = i.useRef(null),
-        { analyticsLocations: er } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        { analyticsLocations: er } = (0, f.ZP)(_.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { themeType: ei } = (0, P.z)(),
         { interactionSource: ea, interactionSourceId: eo } = (0, N.Xo)(),
         es = (0, m.Z)({
@@ -97,7 +97,7 @@ function z(e) {
         }),
         eu = (0, T.Z)(W),
         ed = null != eu.text && '' !== eu.text,
-        { largeImage: ef, smallImage: e_ } = (0, p.FO)(W, z),
+        { largeImage: e_, smallImage: ef } = (0, p.FO)(W, z),
         ep = (0, B.Z)({
             location: 'UserProfileActivityCardWithInteractionToolbar',
             user: n,
@@ -117,15 +117,15 @@ function z(e) {
                   })
                 : null == ep
                   ? (0, r.jsx)(h.E, {
-                        image: ef,
-                        smallImage: e_,
+                        image: e_,
+                        smallImage: ef,
                         size: t,
                         aspectRatio: e,
                         className: Y.image
                     })
                   : (0, r.jsx)(h.E, {
-                        image: ef,
-                        smallImage: e_,
+                        image: e_,
+                        smallImage: ef,
                         size: t,
                         className: Y.clickableImage,
                         aspectRatio: e,
@@ -137,7 +137,7 @@ function z(e) {
         em = () => {
             var e;
             return W.type === F.IIU.HANG_STATUS
-                ? (0, r.jsx)(k.f, {
+                ? (0, r.jsx)(M.f, {
                       variant: 'heading-sm/semibold',
                       text: (0, E.O8)(W),
                       id: ee
@@ -151,7 +151,7 @@ function z(e) {
                                 color: s.TVs.colors.TEXT_DEFAULT,
                                 className: Y.voiceIcon
                             }),
-                            (0, r.jsx)(k.f, {
+                            (0, r.jsx)(M.f, {
                                 variant: 'heading-sm/semibold',
                                 text: X.name,
                                 id: ee
@@ -159,12 +159,12 @@ function z(e) {
                         ]
                     })
                   : (0, u.Z)(W) || (0, O.dS)(W)
-                    ? (0, r.jsx)(k.f, {
+                    ? (0, r.jsx)(M.f, {
                           variant: 'heading-sm/semibold',
                           text: W.name,
                           id: ee
                       })
-                    : (0, r.jsx)(k.f, {
+                    : (0, r.jsx)(M.f, {
                           variant: 'heading-sm/semibold',
                           text: null != (e = W.details) ? e : W.name,
                           id: ee
@@ -173,7 +173,7 @@ function z(e) {
         eg = () => {
             if (W.type === F.IIU.HANG_STATUS) return null;
             if ((0, d.Z)(W) && null != q)
-                return (0, r.jsx)(k.Z, {
+                return (0, r.jsx)(M.Z, {
                     variant: 'text-xs/normal',
                     text: H.intl.formatToPlainString(H.t['hq/Qzc'], { guildName: q.name }),
                     onClick: () => {
@@ -181,18 +181,18 @@ function z(e) {
                     }
                 });
             if ((0, u.Z)(W))
-                return (0, r.jsx)(k.Z, {
+                return (0, r.jsx)(M.Z, {
                     variant: 'text-xs/normal',
                     text: W.details
                 });
             if ((0, O.dS)(W)) {
                 var e;
-                return (0, r.jsx)(k.Z, {
+                return (0, r.jsx)(M.Z, {
                     variant: 'text-xs/normal',
                     text: null == W || null == (e = W.assets) ? void 0 : e.small_text
                 });
             }
-            return (0, r.jsx)(k.Z, {
+            return (0, r.jsx)(M.Z, {
                 variant: 'text-xs/normal',
                 text: W.state
             });
@@ -206,12 +206,12 @@ function z(e) {
                     numSpeakers: null == (i = W.party) ? void 0 : i.size[0],
                     numListeners: (null == (a = W.party) ? void 0 : a.size[1]) - (null == (o = W.party) ? void 0 : o.size[0])
                 });
-                return (0, r.jsx)(k.Z, {
+                return (0, r.jsx)(M.Z, {
                     variant: 'text-xs/normal',
                     text: e
                 });
             }
-            return (0, r.jsx)(k.Z, {
+            return (0, r.jsx)(M.Z, {
                 text: null == (n = W.assets) ? void 0 : n.large_text,
                 variant: 'text-xs/normal'
             });
@@ -222,11 +222,11 @@ function z(e) {
                 ? (0, r.jsxs)('div', {
                       className: Y.gameState,
                       children: [
-                          (0, r.jsx)(k.Z, {
+                          (0, r.jsx)(M.Z, {
                               variant: 'text-xs/normal',
                               text: W.state
                           }),
-                          (0, r.jsx)(k.Z, {
+                          (0, r.jsx)(M.Z, {
                               variant: 'text-xs/normal',
                               text: H.intl.formatToPlainString(H.t['u//9Bw'], {
                                   count: '0',
@@ -239,11 +239,11 @@ function z(e) {
                   ? (0, r.jsxs)('div', {
                         className: Y.gameState,
                         children: [
-                            (0, r.jsx)(k.Z, {
+                            (0, r.jsx)(M.Z, {
                                 variant: 'text-xs/normal',
                                 text: W.state
                             }),
-                            (0, r.jsx)(k.Z, {
+                            (0, r.jsx)(M.Z, {
                                 variant: 'text-xs/normal',
                                 text:
                                     0 === W.party.size[1]
@@ -256,7 +256,7 @@ function z(e) {
                         ]
                     })
                   : null == W.party
-                    ? (0, r.jsx)(k.Z, {
+                    ? (0, r.jsx)(M.Z, {
                           variant: 'text-xs/normal',
                           text: W.state
                       })
@@ -308,7 +308,7 @@ function z(e) {
     if (null === ei) return null;
     let eT = null != (t = W.application_id) ? t : W.name,
         eS = ea === V.n_.ACTIVITY && eo === eT;
-    return (0, r.jsx)(_.Gt, {
+    return (0, r.jsx)(f.Gt, {
         value: er,
         children: (0, r.jsx)(w.Z, {
             targetElementRef: en,
@@ -348,7 +348,7 @@ function z(e) {
                             onClose: $,
                             'aria-labelledby': ed ? ''.concat(et, ' ').concat(ee) : ee,
                             children: [
-                                (0, r.jsx)(M.Z, K({ textId: et }, eu)),
+                                (0, r.jsx)(k.Z, K({ textId: et }, eu)),
                                 (0, r.jsxs)('div', {
                                     className: Y.body,
                                     children: [

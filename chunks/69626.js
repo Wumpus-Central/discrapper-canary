@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(10718),
     u = n(895924),
     d = n(124072),
-    f = n(665906),
-    _ = n(695346),
+    _ = n(665906),
+    f = n(695346),
     p = n(592125),
     h = n(703558),
     m = n(496675),
@@ -90,7 +90,7 @@ function C(e, t, n, i, a) {
             a
         );
         if (null != o && o.untranslatedName === t) {
-            var d, f;
+            var d, _;
             E.S.dispatch(b.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
             let t =
                 null != s
@@ -98,7 +98,7 @@ function C(e, t, n, i, a) {
                           type: u.Qi.APPLICATION,
                           id: s.id,
                           icon: s.icon,
-                          name: null != (f = null == s || null == (d = s.bot) ? void 0 : d.username) ? f : s.name,
+                          name: null != (_ = null == s || null == (d = s.bot) ? void 0 : d.username) ? _ : s.name,
                           application: s
                       }
                     : null;
@@ -167,11 +167,11 @@ function R(e) {
                   }
                 : { type: 'contextless' },
         { command: I } = c.YZ(v, null != (t = n.commandKey) ? t : ''),
-        T = _.dN.useSetting(),
+        T = f.dN.useSetting(),
         S = i.useMemo(() => {
             if (null == I || null == l || I.untranslatedName !== n.commandName || T) return !1;
             let e = l.isPrivate();
-            if ((0, f.xl)(l) || (!e && !h)) return !1;
+            if ((0, _.xl)(l) || (!e && !h)) return !1;
             let t = (null == I ? void 0 : I.applicationId) === y.bi.BUILT_IN;
             return !!e || !!t || !!E;
         }, [l, I, h, E, n.commandName, T]),
@@ -198,7 +198,7 @@ function R(e) {
 function P(e) {
     let { commandId: t, commandName: n, commandDescription: i, applicationId: l, onClick: c } = e,
         d = (0, a.e7)([g.Z], () => g.Z.getChannelId()),
-        f = (e) => {
+        _ = (e) => {
             (null == e || e.stopPropagation(), C(d, n, t, u.Vh.POPULAR_COMMANDS, l), null == c || c(t));
         };
     return (0, r.jsx)(s.ua7, {
@@ -210,7 +210,7 @@ function P(e) {
             return (0, r.jsxs)(o.zx, {
                 color: o.Tt.PRIMARY,
                 size: o.Ph.ICON,
-                onClick: f,
+                onClick: _,
                 onMouseEnter: t,
                 onMouseLeave: i,
                 children: [O.GI, n]

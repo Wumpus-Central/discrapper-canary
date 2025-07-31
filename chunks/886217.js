@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(594174),
     u = n(908841),
     d = n(823379),
-    f = n(5192),
-    _ = n(561308),
+    _ = n(5192),
+    f = n(561308),
     p = n(319604),
     h = n(31074),
     m = n(206295),
@@ -25,7 +25,7 @@ function T(e) {
 }
 let S = (e, t, n, r) => {
         let i = T(r),
-            a = f.ZP.getName(t.guild_id, t.id, n),
+            a = _.ZP.getName(t.guild_id, t.id, n),
             o = e.extra.artist.name;
         return I.intl
             .formatToMarkdownString(i, {
@@ -40,12 +40,12 @@ let S = (e, t, n, r) => {
             artist: e.extra.artist.name
         }),
     N = (e) => {
-        let { channel: t, entry: n, onReaction: a, onVoiceChannelPreview: f } = e,
+        let { channel: t, entry: n, onReaction: a, onVoiceChannelPreview: _ } = e,
             { parent_title: T, provider: N, image_url: C } = n.extra.media,
             R = n.extra.artist.name,
             P = (0, s.e7)([c.default], () => c.default.getUser(n.author_id)),
             { primaryColor: w, secondaryColor: D } = (0, m.Z)(C),
-            L = (0, _.Nq)(n),
+            L = (0, f.Nq)(n),
             x = i.useCallback(() => {
                 if (null == t || null == P || !(0, d.Hi)(L, g.y9)) return;
                 let e = S(n, t, P, L);
@@ -59,9 +59,9 @@ let S = (e, t, n, r) => {
                     badges: (0, p.UU)(n)
                 });
             }, [C, R, t, n, w, L, D, P]),
-            M = (0, h.Z)(O.ABu.SPOTIFY);
+            k = (0, h.Z)(O.ABu.SPOTIFY);
         if (null == P || !(0, d.Hi)(L, g.y9)) return null;
-        let k = () => {
+        let M = () => {
                 let e = v.Hw.ALBUM,
                     t = l.Z.isProtocolRegistered() ? v.C7.PLAYER_OPEN(e, n.extra.media.external_parent_id) : v.C7.WEB_OPEN(e, n.extra.media.external_parent_id);
                 window.open(t);
@@ -74,15 +74,15 @@ let S = (e, t, n, r) => {
         return (0, r.jsxs)(b.yR, {
             children: [
                 (0, r.jsx)(b.wG, {
-                    onClickTitle: k,
+                    onClickTitle: M,
                     onClickSubtitle: j,
-                    onClickThumbnail: k,
+                    onClickThumbnail: M,
                     channel: t,
                     entry: n,
                     headerIcons:
                         N === o.p.SPOTIFY
                             ? (0, r.jsx)(y.Z, {
-                                  onClick: M,
+                                  onClick: k,
                                   Icon: u.Z,
                                   'aria-label': I.intl.string(I.t['0ZB/XF'])
                               })
@@ -98,7 +98,7 @@ let S = (e, t, n, r) => {
                 (0, r.jsx)(b.St, {
                     children: (0, r.jsx)(b.WT, {
                         onReaction: a,
-                        onVoiceChannelPreview: f,
+                        onVoiceChannelPreview: _,
                         user: P,
                         channel: t,
                         generateReactionImage: x,

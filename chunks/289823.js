@@ -11,7 +11,7 @@ var r = n(255367),
     p = n(630403);
 let m = {},
     f = 1 / 4;
-function _(e) {
+function g(e) {
     let { height: t, fillColor: n } = e;
     return (0, r.jsx)('div', {
         style: {
@@ -29,7 +29,7 @@ function _(e) {
         })
     });
 }
-function g(e) {
+function _(e) {
     let { isTyping: t, statusCoords: n, status: i } = e,
         l = (0, c.vjg)(c.Skl.ONLINE);
     return t
@@ -39,7 +39,7 @@ function g(e) {
                   top: n.y,
                   left: n.x
               },
-              children: (0, r.jsx)(_, {
+              children: (0, r.jsx)(g, {
                   height: n.height,
                   fillColor: l
               })
@@ -115,8 +115,8 @@ let b = {
     },
     E = function (e) {
         var t,
-            { backSrc: n, frontSrc: l, size: s, isTyping: f, status: _, style: E, className: C } = e,
-            O = (function (e, t) {
+            { backSrc: n, frontSrc: l, size: s, isTyping: f, status: g, style: E, className: C } = e,
+            v = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -135,15 +135,15 @@ let b = {
                 }
                 return i;
             })(e, ['backSrc', 'frontSrc', 'size', 'isTyping', 'status', 'style', 'className']);
-        let { size: v } = c.ny6[s],
+        let { size: O } = c.ny6[s],
             {
-                statusCoords: y,
-                frontAvatarOffsetPx: x,
+                statusCoords: x,
+                frontAvatarOffsetPx: y,
                 frontAvatarSizePx: I,
                 backAvatarSizePx: j
             } = i.useMemo(() => {
                 var e;
-                let t = ''.concat(v, '-').concat(f);
+                let t = ''.concat(O, '-').concat(f);
                 return null != (e = m[t])
                     ? e
                     : (function (e, t, n) {
@@ -160,8 +160,8 @@ let b = {
                               };
                           return ((m[n] = s), s);
                       })(s, f, t);
-            }, [v, f, s]),
-            S = ((t = null != _), f ? b[s].typing : t ? b[s].status : b[s].default);
+            }, [O, f, s]),
+            S = ((t = null != g), f ? b[s].typing : t ? b[s].status : b[s].default);
         return (0, r.jsxs)('div', {
             style: (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -189,19 +189,19 @@ let b = {
                 return e;
             })(
                 {
-                    width: v,
-                    height: v
+                    width: O,
+                    height: O
                 },
                 E
             ),
-            'aria-label': O['aria-label'],
-            'aria-hidden': O['aria-hidden'],
+            'aria-label': v['aria-label'],
+            'aria-hidden': v['aria-hidden'],
             className: a()(p.container, C),
             children: [
                 (0, r.jsxs)(u.ZP, {
                     mask: S,
-                    height: v,
-                    width: v,
+                    height: O,
+                    width: O,
                     children: [
                         (0, r.jsx)('img', {
                             src: n,
@@ -212,21 +212,21 @@ let b = {
                         (0, r.jsx)('div', {
                             style: {
                                 position: 'absolute',
-                                top: x,
-                                left: x
+                                top: y,
+                                left: y
                             },
                             children: (0, r.jsx)(h, {
                                 src: l,
                                 size: I,
                                 isTyping: f,
-                                status: _
+                                status: g
                             })
                         })
                     ]
                 }),
-                (0, r.jsx)(g, {
-                    statusCoords: y,
-                    status: _,
+                (0, r.jsx)(_, {
+                    statusCoords: x,
+                    status: g,
                     isTyping: f
                 })
             ]

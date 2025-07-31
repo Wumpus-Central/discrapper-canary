@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(388685));
+(n.d(t, { Z: () => f }), n(388685));
 var r = n(147913),
     i = n(579806),
     a = n(710845),
@@ -20,7 +20,7 @@ function u(e, t, n) {
     );
 }
 let d = new a.Z('OverlayContentProtectionManagerV3');
-class f extends r.Z {
+class _ extends r.Z {
     constructor(...e) {
         var t;
         (super(...e),
@@ -55,4 +55,4 @@ class f extends r.Z {
             }));
     }
 }
-let _ = new f();
+let f = new _();

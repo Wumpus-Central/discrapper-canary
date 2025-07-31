@@ -1,6 +1,6 @@
 (n.d(t, {
-    s: () => f,
-    y: () => _
+    s: () => _,
+    y: () => f
 }),
     n(368063),
     n(358797),
@@ -55,8 +55,8 @@ function c(e) {
                 return o(d, ['toJSON']);
             }
         },
-        f = getComputedStyle(l),
-        _ = [
+        _ = getComputedStyle(l),
+        f = [
             {
                 inlineSize: d.width,
                 blockSize: d.height
@@ -64,8 +64,8 @@ function c(e) {
         ],
         p = [
             {
-                inlineSize: d.width - (parseFloat(f.paddingLeft) + parseFloat(f.paddingRight)),
-                blockSize: d.height - (parseFloat(f.paddingTop) + parseFloat(f.paddingBottom))
+                inlineSize: d.width - (parseFloat(_.paddingLeft) + parseFloat(_.paddingRight)),
+                blockSize: d.height - (parseFloat(_.paddingTop) + parseFloat(_.paddingBottom))
             }
         ],
         h = null != (s = window.devicePixelRatio) ? s : 1,
@@ -77,7 +77,7 @@ function c(e) {
         ];
     return {
         target: l,
-        borderBoxSize: _,
+        borderBoxSize: f,
         contentBoxSize: p,
         devicePixelContentBoxSize: m,
         contentRect: d
@@ -115,7 +115,7 @@ function d(e) {
         [a, n]
     );
 }
-function f(e, t) {
+function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
         o = (0, r.useId)(),
@@ -131,7 +131,7 @@ function f(e, t) {
             if (((c.current = r), null != r)) return ((0, i.YP)(r, n), () => (0, i.UC)(r, n));
         }, [s, o, t, e, ...n]));
 }
-function _(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { enabled: a = !0 } = n,

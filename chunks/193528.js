@@ -57,7 +57,7 @@ function x(e, t) {
     );
 }
 function _(e) {
-    let { onChange: t, onClose: n, color: s, suggestedColors: _, disabled: j, label: E, colorPickerMiddle: O, colorPickerFooter: C, showEyeDropper: v } = e,
+    let { onChange: t, onClose: n, color: s, suggestedColors: _, disabled: j, label: O, colorPickerMiddle: E, colorPickerFooter: C, showEyeDropper: v } = e,
         S = r.useRef(null),
         T = (0, d.dQu)(c.Z.colors.BACKGROUND_BASE_LOW).hex(),
         N = c.Z.colors.BACKGROUND_ACCENT.css,
@@ -65,13 +65,13 @@ function _(e) {
         y = (0, o.Rf)(s),
         A = y === T ? N : y,
         P = (0, m.Lq)(I ? g.Ilk.WHITE_500 : g.Ilk.PRIMARY_530),
-        R = (0, u.Z)(O),
+        R = (0, u.Z)(E),
         D = (0, u.Z)(C),
         [Z, w] = r.useState((0, l.Z)());
     return (
         r.useEffect(() => {
-            (R !== O || D !== C) && w((0, l.Z)());
-        }, [C, O, D, R]),
+            (R !== E || D !== C) && w((0, l.Z)());
+        }, [C, E, D, R]),
         (0, i.jsx)(d.yRy, {
             targetElementRef: S,
             positionKey: Z,
@@ -82,7 +82,7 @@ function _(e) {
                         value: s,
                         onChange: t,
                         suggestedColors: _,
-                        middle: O,
+                        middle: E,
                         footer: C,
                         showEyeDropper: v
                     })
@@ -134,7 +134,7 @@ function _(e) {
                                 })
                             })
                         ),
-                        E
+                        O
                     ]
                 });
             }

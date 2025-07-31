@@ -1,53 +1,53 @@
-n.d(t, { n: () => c });
-var r = n(73800),
-    i = n(180650);
-function a(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function o(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        ('function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
-            )),
-            r.forEach(function (t) {
-                a(e, t, n[t]);
-            }));
-    }
-    return e;
-}
-let s = {
-        [i.T.AESPA]: {
+r.d(n, { n: () => u });
+var l = r(73800),
+    t = r(180650);
+let o = {
+        [t.T.AESPA]: {
             responsive: !0,
             backgroundStyle: 'linear-gradient(0deg,rgba(40, 8, 120, 1) 0%,rgba(13, 8, 111, 1) 15%,rgba(11, 2, 60, 1) 50%,rgba(6, 1, 21, 1) 100%)'
         },
-        [i.T.ORB]: {
+        [t.T.ORB]: {
             responsive: !0,
             backgroundStyle: 'linear-gradient(180deg, rgba(39, 30, 173, 0.3), transparent)',
             hideSideShadow: !0
         }
     },
-    l = {
-        responsive: void 0,
-        backgroundStyle: void 0,
-        hideSideShadow: !1
-    },
-    c = (e) =>
-        (0, r.useMemo)(() => {
-            let t = null != e ? s[e] : null;
-            return null != t ? o({}, l, t) : l;
+    a =
+        12633 == r.j
+            ? {
+                  responsive: void 0,
+                  backgroundStyle: void 0,
+                  hideSideShadow: !1
+              }
+            : null,
+    u = (e) =>
+        (0, l.useMemo)(() => {
+            let n = null != e ? o[e] : null;
+            return null != n
+                ? (function (e) {
+                      for (var n = 1; n < arguments.length; n++) {
+                          var r = null != arguments[n] ? arguments[n] : {},
+                              l = Object.keys(r);
+                          ('function' == typeof Object.getOwnPropertySymbols &&
+                              (l = l.concat(
+                                  Object.getOwnPropertySymbols(r).filter(function (e) {
+                                      return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                                  })
+                              )),
+                              l.forEach(function (n) {
+                                  var l;
+                                  ((l = r[n]),
+                                      n in e
+                                          ? Object.defineProperty(e, n, {
+                                                value: l,
+                                                enumerable: !0,
+                                                configurable: !0,
+                                                writable: !0
+                                            })
+                                          : (e[n] = l));
+                              }));
+                      }
+                      return e;
+                  })({}, a, n)
+                : a;
         }, [e]);

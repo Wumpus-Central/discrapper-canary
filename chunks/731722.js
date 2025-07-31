@@ -1,9 +1,9 @@
 n.d(t, {
     Ic: () => d,
-    Pb: () => f,
+    Pb: () => _,
     jq: () => c,
     up: () => u,
-    yF: () => _
+    yF: () => f
 });
 var r = n(442837),
     i = n(715903),
@@ -26,7 +26,7 @@ function d(e, t) {
     let i = s.oC[n];
     return 'https://'.concat(r, '/clan-badges/').concat(e, '/').concat(t, '.png?size=').concat(i);
 }
-function f(e) {
+function _(e) {
     return null != e && e.identityEnabled
         ? {
               guildId: e.identityGuildId,
@@ -35,7 +35,7 @@ function f(e) {
           }
         : {};
 }
-function _(e, t) {
+function f(e, t) {
     let n = (0, r.e7)([o.default], () => o.default.getUser(e), [e]),
         s = (0, r.e7)(
             [a.ZP],
@@ -46,6 +46,6 @@ function _(e, t) {
             },
             [t, e]
         ),
-        { tag: l, guildId: c } = f(null == n ? void 0 : n.primaryGuild);
+        { tag: l, guildId: c } = _(null == n ? void 0 : n.primaryGuild);
     return null != c && null != l && !s;
 }

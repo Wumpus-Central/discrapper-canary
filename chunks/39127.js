@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(49124));
+(n.d(t, { Z: () => _ }), n(49124));
 var r = n(255367),
     i = n(73800),
     a = n(392711),
@@ -14,7 +14,7 @@ let d = async (e) => {
         u = JSON.parse(JSON.stringify(null != r && r < s.length ? s[r] : (0, a.sample)(s)));
     return ((u.assets[0].p = o ? await (0, l.lv)(i) : i), u);
 };
-function f(e) {
+function _(e) {
     let { containerDimensions: t, effect: n, onComplete: a } = e,
         o = i.useRef(null);
     return (

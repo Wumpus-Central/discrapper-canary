@@ -1,6 +1,6 @@
 (n.d(t, {
-    $: () => v,
-    s: () => O
+    $: () => O,
+    s: () => v
 }),
     n(953529));
 var r = n(255367),
@@ -15,8 +15,8 @@ var r = n(255367),
     p = n(584656),
     m = n(247206),
     f = n(470734),
-    _ = n(719548),
-    g = n(388032),
+    g = n(719548),
+    _ = n(388032),
     h = n(580297);
 let b = (e) => {
         let { attachment: t } = e,
@@ -31,7 +31,7 @@ let b = (e) => {
     E = (e) => {
         var t, n, i;
         let { embed: l } = e;
-        if (!_.n2.has(l.type)) return null;
+        if (!g.n2.has(l.type)) return null;
         let a = void 0 !== l.video && l.type !== o.h.GIFV ? l.video.url : null != (i = null == (t = l.thumbnail) ? void 0 : t.url) ? i : null == (n = l.image) ? void 0 : n.url;
         return null == a ? null : (0, r.jsx)(C, { url: a });
     },
@@ -53,17 +53,17 @@ let b = (e) => {
                   })
         });
     };
-function O(e) {
+function v(e) {
     (c.Z.pop(),
         (0, p.t)({
             id: 'explicit-media-false-positive-modal',
-            text: g.intl.string(g.t.gFsTKi)
+            text: _.intl.string(_.t.gFsTKi)
         }),
         e());
 }
-function v(e) {
+function O(e) {
     let { channelId: t, messageId: n, isReportFalsePositiveLoading: l, analyticsContext: a, attachmentPreview: o, embedPreview: c, onConfirmPress: u, transitionState: d, onClose: p } = e,
-        _ = (0, f.pn)('ExplicitMediaFalsePositiveModal'),
+        g = (0, f.pn)('ExplicitMediaFalsePositiveModal'),
         h = i.useCallback(() => {
             ((0, m.aP)({
                 action: m.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
@@ -90,21 +90,21 @@ function v(e) {
             context: a
         });
     }, [t, n, a]);
-    let O = i.useMemo(() => (_ ? g.intl.string(g.t['z4du/P']) : g.intl.string(g.t.gg5Dp6)), [_]);
+    let v = i.useMemo(() => (g ? _.intl.string(_.t['z4du/P']) : _.intl.string(_.t.gg5Dp6)), [g]);
     return (0, r.jsxs)(s.Modal, {
         transitionState: d,
         onClose: p,
-        title: g.intl.string(g.t.TPpVkJ),
-        subtitle: O,
+        title: _.intl.string(_.t.TPpVkJ),
+        subtitle: v,
         actions: [
             {
-                text: g.intl.string(g.t['ETE/oK']),
+                text: _.intl.string(_.t['ETE/oK']),
                 onClick: h,
                 variant: 'secondary',
                 disabled: l
             },
             {
-                text: g.intl.string(g.t['cY+Ooa']),
+                text: _.intl.string(_.t['cY+Ooa']),
                 onClick: C,
                 loading: l,
                 disabled: l

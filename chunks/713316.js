@@ -9,15 +9,15 @@ var i = n(512722),
     c = n(698708),
     u = n(844068),
     d = n(27034),
-    f = n(388032),
-    _ = n(419667);
+    _ = n(388032),
+    f = n(419667);
 function p(e) {
     let { handleClose: t } = e,
         { skusById: n, selectedSkuId: i, application: p } = (0, l.JL)();
     (a()(null != i, 'Expected selectedSkuId'), a()(null != p, 'Expected application'));
     let h = n[i];
     a()(null != h, 'Expected sku');
-    let m = f.intl.formatToPlainString(f.t.wK0IbG, {
+    let m = _.intl.formatToPlainString(_.t.wK0IbG, {
         applicationName: p.name,
         itemName: h.name
     });
@@ -26,21 +26,21 @@ function p(e) {
             (0, r.jsx)(u.Z, {}),
             (0, r.jsx)(c.Z, {}),
             (0, r.jsxs)('div', {
-                className: _.confirmation,
+                className: f.confirmation,
                 children: [
                     (0, r.jsx)(s.X6q, {
                         variant: 'heading-xxl/bold',
-                        className: _.confirmationHeader,
+                        className: f.confirmationHeader,
                         children: 'Success!'
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         children: m
                     }),
-                    (0, r.jsx)('div', { className: _.divider }),
+                    (0, r.jsx)('div', { className: f.divider }),
                     (0, r.jsx)(o.z, {
                         onClick: t,
-                        text: f.intl.string(f.t.cpT0Cg)
+                        text: _.intl.string(_.t.cpT0Cg)
                     })
                 ]
             })

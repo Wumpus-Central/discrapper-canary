@@ -7,10 +7,10 @@ var r = n(98405),
     c = n(554148),
     u = o.ArrayBuffer,
     d = o.DataView,
-    f = d.prototype,
-    _ = i(u.prototype.slice),
-    p = i(f.getUint8),
-    h = i(f.setUint8);
+    _ = d.prototype,
+    f = i(u.prototype.slice),
+    p = i(_.getUint8),
+    h = i(_.setUint8);
 r(
     {
         target: 'ArrayBuffer',
@@ -22,8 +22,8 @@ r(
     },
     {
         slice: function (e, t) {
-            if (_ && void 0 === t) return _(s(this), e);
-            for (var n = s(this).byteLength, r = l(e, n), i = l(void 0 === t ? n : t, n), a = new u(c(i - r)), o = new d(this), f = new d(a), m = 0; r < i; ) h(f, m++, p(o, r++));
+            if (f && void 0 === t) return f(s(this), e);
+            for (var n = s(this).byteLength, r = l(e, n), i = l(void 0 === t ? n : t, n), a = new u(c(i - r)), o = new d(this), _ = new d(a), m = 0; r < i; ) h(_, m++, p(o, r++));
             return a;
         }
     }

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(570908),
     d = n(204418),
-    f = n(821795),
-    _ = n(892567),
+    _ = n(821795),
+    f = n(892567),
     p = n(172751),
     h = n(359135),
     m = n(516817),
@@ -29,8 +29,8 @@ let S = {
     A = (e) => {
         let { user: t, nameplate: n, nameplateData: a, className: A, innerClassName: N, isHighlighted: C, showStatus: R, showPlaceholderUser: P, pendingGlobalName: w, nameplatePreviewSize: D = 'default', isPurchased: L = !1 } = e,
             x = (0, s.e7)([E.Z], () => (0, l.wj)(E.Z.theme)),
-            M = null != n ? (0, y.EU)(n) : a,
-            k = (0, s.e7)([b.Z], () => (null != t ? b.Z.getStatus(t.id) : c.Skl.ONLINE)),
+            k = null != n ? (0, y.EU)(n) : a,
+            M = (0, s.e7)([b.Z], () => (null != t ? b.Z.getStatus(t.id) : c.Skl.ONLINE)),
             j = x ? '#706F74' : '#aaaab2',
             U = i.useRef(null),
             G =
@@ -57,11 +57,11 @@ let S = {
                     [v.xlarge]: 'xlarge' === D
                 }),
                 children: [
-                    null != M &&
+                    null != k &&
                         (0, r.jsx)(
                             m.Z,
                             {
-                                nameplate: M,
+                                nameplate: k,
                                 hovered: C,
                                 placement: h.i.PREVIEW,
                                 content: P ? void 0 : U
@@ -80,17 +80,17 @@ let S = {
                                               user: t,
                                               guildId: null,
                                               avatarSize: B,
-                                              status: R ? k : void 0,
+                                              status: R ? M : void 0,
                                               'aria-hidden': !0
                                           }),
                                           decorators: (0, r.jsx)(p.ZP, {
                                               userId: t.id,
                                               className: v.tagChiplet
                                           }),
-                                          name: (0, r.jsx)(_.Z, {
+                                          name: (0, r.jsx)(f.Z, {
                                               userName: G,
                                               displayNameStyles: t.displayNameStyles,
-                                              effectDisplayType: f.F.ANIMATED
+                                              effectDisplayType: _.F.ANIMATED
                                           }),
                                           innerClassName: N
                                       })

@@ -1,5 +1,5 @@
 n.d(t, {
-    Ct: () => f,
+    Ct: () => _,
     ER: () => o,
     Ek: () => a,
     Gg: () => s,
@@ -112,7 +112,7 @@ let l = {
     c = [6, 0, 7, 8, 1, 2, 4, 5, 9, 3],
     u = [21, 22, 23, 24, 25],
     d = [26, 27, 28, 29, 30],
-    f = {
+    _ = {
         [r.oNc.GUILD_TAGS_BADGE_PACK_PETS]: u,
         [r.oNc.GUILD_TAGS_BADGE_PACK_FLEX]: d
     };

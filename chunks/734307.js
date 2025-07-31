@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => z }), n(388685));
+(n.d(t, { Z: () => W }), n(388685));
 var i,
     r,
     s,
@@ -17,8 +17,8 @@ var i,
     x = n(680089),
     _ = n(592125),
     j = n(58468),
-    E = n(77498),
-    O = n(496675),
+    O = n(77498),
+    E = n(496675),
     C = n(306680),
     v = n(944486),
     S = n(9156),
@@ -94,9 +94,9 @@ function H(e) {
     let { guildScheduledEvent: t } = e;
     return R.updateSubtitles(t.guild_id);
 }
-class W extends (i = o.ZP.Store) {
+class z extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, b.default, x.Z, _.Z, j.Z, d.ZP, E.Z, m.Z, p.ZP, h.Z, O.Z, C.ZP, v.Z, S.ZP, f.Z);
+        this.waitFor(g.Z, b.default, x.Z, _.Z, j.Z, d.ZP, O.Z, m.Z, p.ZP, h.Z, E.Z, C.ZP, v.Z, S.ZP, f.Z);
     }
     getGuild(e, t) {
         var n, i;
@@ -120,15 +120,15 @@ class W extends (i = o.ZP.Store) {
     }
 }
 ((s = 'ChannelListStore'),
-    (r = 'displayName') in W
-        ? Object.defineProperty(W, r, {
+    (r = 'displayName') in z
+        ? Object.defineProperty(z, r, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (W[r] = s));
-let z = new W(c.Z, {
+        : (z[r] = s));
+let W = new z(c.Z, {
     APPLICATION_FETCH_FAIL: F,
     APPLICATION_FETCH_SUCCESS: F,
     APPLICATION_FETCH: F,

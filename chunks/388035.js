@@ -3,8 +3,8 @@ var r = n(255367),
     s = n(704215),
     l = n(755721),
     a = n(481060),
-    i = n(243778),
-    o = n(970731),
+    o = n(243778),
+    i = n(970731),
     c = n(2818),
     u = n(921944),
     h = n(388032),
@@ -21,7 +21,7 @@ let f = s.z.FOR_LATER_POPOUT_COACHMARK,
             })
         }),
     m = (e) =>
-        (0, r.jsx)(o.ZP, {
+        (0, r.jsx)(i.ZP, {
             className: d.container,
             asset: (0, r.jsx)(g, {}),
             header: h.intl.string(h.t.qPbFKy),
@@ -33,12 +33,12 @@ let f = s.z.FOR_LATER_POPOUT_COACHMARK,
             },
             onClick: () => e(u.L.USER_DISMISS),
             markAsDismissed: e,
-            caretPosition: o.DF.TOP_RIGHT
+            caretPosition: i.DF.TOP_RIGHT
         });
 function y(e) {
     let { location: t, children: n, targetElementRef: s } = e,
-        { enabled: l, inInbox: o } = c.Z.useExperiment({ location: 'ForLaterCoachmarkWeb' }, { autoTrackExposure: !1 }),
-        [u, h] = (0, i.US)(l && t === (o ? 'inbox-button' : 'bookmarks-button') ? [f] : [], void 0);
+        { enabled: l, inInbox: i } = c.Z.useExperiment({ location: 'ForLaterCoachmarkWeb' }, { autoTrackExposure: !1 }),
+        [u, h] = (0, o.US)(l && t === (i ? 'inbox-button' : 'bookmarks-button') ? [f] : [], void 0);
     return u !== f
         ? n
         : (0, r.jsx)(a.yRy, {

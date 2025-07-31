@@ -1,213 +1,208 @@
-(n.d(t, {
-    default: () => j,
-    h: () => k,
-    j: () => M
-}),
-    n(388685));
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
-    s = n(505266),
-    l = n(442837),
-    c = n(481060),
-    u = n(230711),
-    d = n(211266),
-    f = n(410030),
-    _ = n(607070),
-    p = n(975298),
-    h = n(530618),
-    m = n(688465),
-    g = n(98278),
-    E = n(741245),
-    b = n(931331),
-    y = n(55935),
-    O = n(63063),
-    v = n(272008),
-    I = n(497505),
-    T = n(502288),
-    S = n(981631),
-    A = n(675654),
-    N = n(474936),
-    C = n(388032),
-    R = n(639220),
-    P = n(851750),
-    w = n(946790),
-    D = n(593639);
-function L(e) {
-    var t, n, a, u, d;
-    let { transitionState: f, onClose: p, quest: m, location: g } = e,
-        E = i.useRef(null),
-        [b, y] = i.useState(null),
-        O = i.useRef(new s.qA()),
-        S = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
-        N = (null == (t = m.userStatus) ? void 0 : t.claimedAt) != null,
-        [C, P] = i.useState({ state: 'loading' });
-    i.useEffect(() => {
-        N ||
-            (0, v.QB)(m.id, I.y$.CROSS_PLATFORM, g)
+(r.d(t, { default: () => V }), r(388685));
+var n = r(255367),
+    a = r(73800),
+    o = r(120356),
+    s = r.n(o),
+    i = r(505266),
+    C = r(442837),
+    l = r(481060),
+    c = r(230711),
+    d = r(211266),
+    u = r(410030),
+    m = r(607070),
+    h = r(975298),
+    x = r(530618),
+    p = r(688465),
+    j = r(98278),
+    _ = r(741245),
+    f = r(931331),
+    g = r(55935),
+    v = r(63063),
+    N = r(272008),
+    H = r(497505),
+    b = r(502288),
+    L = r(981631),
+    y = r(675654),
+    O = r(474936),
+    M = r(388032),
+    Z = r(639220),
+    k = r(851750),
+    w = r(946790),
+    P = r(593639);
+function R(e) {
+    var t, r, o, c, d;
+    let { transitionState: u, onClose: h, quest: p, location: j } = e,
+        _ = a.useRef(null),
+        [f, g] = a.useState(null),
+        v = a.useRef(new i.qA()),
+        L = (0, C.e7)([m.Z], () => m.Z.useReducedMotion),
+        O = (null == (t = p.userStatus) ? void 0 : t.claimedAt) != null,
+        [M, k] = a.useState({ state: 'loading' });
+    a.useEffect(() => {
+        O ||
+            (0, N.QB)(p.id, H.y$.CROSS_PLATFORM, j)
                 .then((e) => {
                     if ((null == e ? void 0 : e.claimedAt) != null)
-                        return void P({
+                        return void k({
                             state: 'claimed',
                             entitlements: e
                         });
-                    P({
+                    k({
                         state: 'error',
                         errorReason: 0
                     });
                 })
                 .catch(() => {
-                    P({
+                    k({
                         state: 'error',
                         errorReason: 0
                     });
                 });
-    }, [m, g, N]);
-    let w = 'loading' === C.state,
-        D = !S && !N && 'claimed' === C.state,
-        L = 'claimed' === C.state && null != C.entitlements && C.entitlements.items.some((e) => e.consumed);
-    return (0, r.jsxs)(r.Fragment, {
+    }, [p, j, O]);
+    let w = 'loading' === M.state,
+        P = !L && !O && 'claimed' === M.state,
+        R = 'claimed' === M.state && null != M.entitlements && M.entitlements.items.some((e) => e.consumed);
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, r.jsx)(s.O_, {
-                ref: y,
-                className: R.confettiCanvas,
-                environment: O.current
+            (0, n.jsx)(i.O_, {
+                ref: g,
+                className: Z.confettiCanvas,
+                environment: v.current
             }),
-            (0, r.jsx)('div', {
-                ref: E,
-                children: (0, r.jsx)(c.Y0X, {
-                    transitionState: f,
-                    size: c.CgR.DYNAMIC,
-                    className: o()(R.rootContainer, { [R.rootContainerLoading]: w }),
+            (0, n.jsx)('div', {
+                ref: _,
+                children: (0, n.jsx)(l.Y0X, {
+                    transitionState: u,
+                    size: l.CgR.DYNAMIC,
+                    className: s()(Z.rootContainer, { [Z.rootContainerLoading]: w }),
                     hideShadow: !0,
                     parentComponent: 'QuestsNitroRewardModal',
                     children: w
-                        ? (0, r.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE })
-                        : 'error' === C.state
-                          ? (0, r.jsx)(x, {
-                                errorReason: C.errorReason,
-                                onClose: p
+                        ? (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE })
+                        : 'error' === M.state
+                          ? (0, n.jsx)(S, {
+                                errorReason: M.errorReason,
+                                onClose: h
                             })
-                          : L
-                            ? (0, r.jsx)(M, {
-                                  duration: (0, T.kb)(null != (u = null == (n = C.entitlements) ? void 0 : n.items) ? u : []),
-                                  onClose: p
+                          : R
+                            ? (0, n.jsx)(T, {
+                                  duration: (0, b.kb)(null != (c = null == (r = M.entitlements) ? void 0 : r.items) ? c : []),
+                                  onClose: h
                               })
-                            : (0, r.jsx)(k, {
-                                  duration: (0, T.kb)(null != (d = null == (a = C.entitlements) ? void 0 : a.items) ? d : []),
-                                  onClose: p
+                            : (0, n.jsx)(A, {
+                                  duration: (0, b.kb)(null != (d = null == (o = M.entitlements) ? void 0 : o.items) ? d : []),
+                                  onClose: h
                               })
                 })
             }),
-            D &&
-                (0, r.jsx)(h.Z, {
-                    confettiTarget: E.current,
-                    confettiCanvas: b,
-                    sprites: A.CA,
-                    colors: A.Br
+            P &&
+                (0, n.jsx)(x.Z, {
+                    confettiTarget: _.current,
+                    confettiCanvas: f,
+                    sprites: y.CA,
+                    colors: y.Br
                 })
         ]
     });
 }
-function x(e) {
+function S(e) {
     let { onClose: t } = e,
-        n = C.intl.string(C.t.PbaUtr);
-    return (0, r.jsxs)(r.Fragment, {
+        r = M.intl.string(M.t.PbaUtr);
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, r.jsxs)(c.xBx, {
+            (0, n.jsxs)(l.xBx, {
                 separator: !1,
-                className: R.errorHeader,
+                className: Z.errorHeader,
                 children: [
-                    (0, r.jsx)(c.X6q, {
-                        className: R.errorTitle,
+                    (0, n.jsx)(l.X6q, {
+                        className: Z.errorTitle,
                         variant: 'heading-xl/medium',
-                        children: C.intl.string(C.t['UleS9/'])
+                        children: M.intl.string(M.t['UleS9/'])
                     }),
-                    (0, r.jsx)(c.olH, {
+                    (0, n.jsx)(l.olH, {
                         onClick: t,
-                        className: R.errorModalCloseButton
+                        className: Z.errorModalCloseButton
                     })
                 ]
             }),
-            (0, r.jsx)(c.hzk, {
-                className: R.errorContent,
-                children: (0, r.jsx)(c.Text, {
+            (0, n.jsx)(l.hzk, {
+                className: Z.errorContent,
+                children: (0, n.jsx)(l.Text, {
                     variant: 'text-md/normal',
-                    children: n
+                    children: r
                 })
             }),
-            (0, r.jsx)(c.mzw, {
-                className: R.errorModalFooter,
-                children: (0, r.jsx)(c.zxk, {
+            (0, n.jsx)(l.mzw, {
+                className: Z.errorModalFooter,
+                children: (0, n.jsx)(l.zxk, {
                     variant: 'primary',
-                    text: C.intl.string(C.t.cpT0Cg),
+                    text: M.intl.string(M.t.cpT0Cg),
                     onClick: t
                 })
             })
         ]
     });
 }
-function M(e) {
-    let { duration: t, onClose: n } = e,
-        { theme: a } = (0, c.TCT)(),
-        o = (0, p.Z)({ forceFetch: !0 }),
-        s = (0, y.vc)(o.endsAt, 'L'),
-        l = i.useCallback(() => {
-            (0, g.$)(n);
-        }, [n]);
-    return o.fractionalState === N.a$.NONE
-        ? (0, r.jsx)('div', {
-              className: R.spinnerContainer,
-              children: (0, r.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE })
+function T(e) {
+    let { duration: t, onClose: r } = e,
+        { theme: o } = (0, l.TCT)(),
+        s = (0, h.Z)({ forceFetch: !0 }),
+        i = (0, g.vc)(s.endsAt, 'L'),
+        C = a.useCallback(() => {
+            (0, j.$)(r);
+        }, [r]);
+    return s.fractionalState === O.a$.NONE
+        ? (0, n.jsx)('div', {
+              className: Z.spinnerContainer,
+              children: (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE })
           })
-        : (0, r.jsxs)(r.Fragment, {
+        : (0, n.jsxs)(n.Fragment, {
               children: [
-                  (0, r.jsxs)('div', {
-                      className: R.nitroHeaderContainer,
+                  (0, n.jsxs)('div', {
+                      className: Z.nitroHeaderContainer,
                       children: [
-                          (0, r.jsx)('div', { className: R.nitroHeaderClouds }),
-                          (0, r.jsx)(b.Z, { className: R.nitroHeaderWordmark }),
-                          (0, r.jsx)(c.Eep, {
+                          (0, n.jsx)('div', { className: Z.nitroHeaderClouds }),
+                          (0, n.jsx)(f.Z, { className: Z.nitroHeaderWordmark }),
+                          (0, n.jsx)(l.Eep, {
                               src: w,
                               width: 110,
                               height: 82,
                               zoomable: !1,
-                              className: R.nitroHeaderWumpus
+                              className: Z.nitroHeaderWumpus
                           }),
-                          (0, r.jsx)(c.olH, {
-                              className: R.nitroHeaderClose,
-                              onClick: n
+                          (0, n.jsx)(l.olH, {
+                              className: Z.nitroHeaderClose,
+                              onClick: r
                           })
                       ]
                   }),
-                  (0, r.jsxs)(c.mzw, {
-                      className: R.footerContainer,
+                  (0, n.jsxs)(l.mzw, {
+                      className: Z.footerContainer,
                       separator: !1,
                       children: [
-                          (0, r.jsx)(m.Z, { className: R.beta }),
-                          (0, r.jsx)(E.ZP, {
-                              className: R.nitroHeading,
-                              premiumType: N.p9.TIER_2,
-                              type: E.ZP.Types.PREMIUM_ACTIVATED,
-                              theme: a
+                          (0, n.jsx)(p.Z, { className: Z.beta }),
+                          (0, n.jsx)(_.ZP, {
+                              className: Z.nitroHeading,
+                              premiumType: O.p9.TIER_2,
+                              type: _.ZP.Types.PREMIUM_ACTIVATED,
+                              theme: o
                           }),
-                          (0, r.jsx)(c.Text, {
+                          (0, n.jsx)(l.Text, {
                               variant: 'text-md/normal',
-                              className: R.text,
-                              children: C.intl.format(C.t.tgc1oq, {
-                                  helpCenterLink: O.Z.getArticleURL(S.BhN.FRACTIONAL_PREMIUM_ABOUT),
+                              className: Z.text,
+                              children: M.intl.format(M.t.tgc1oq, {
+                                  helpCenterLink: v.Z.getArticleURL(L.BhN.FRACTIONAL_PREMIUM_ABOUT),
                                   duration: t,
-                                  expirationDate: s
+                                  expirationDate: i
                               })
                           }),
-                          (0, r.jsx)('div', {
+                          (0, n.jsx)('div', {
                               'data-button-hoisted-classname-wrapper': !0,
-                              className: R.cta,
-                              children: (0, r.jsx)(c.zxk, {
+                              className: Z.cta,
+                              children: (0, n.jsx)(l.zxk, {
                                   variant: 'primary',
-                                  text: C.intl.string(C.t['eQX+go']),
-                                  onClick: l
+                                  text: M.intl.string(M.t['eQX+go']),
+                                  onClick: C
                               })
                           })
                       ]
@@ -215,80 +210,80 @@ function M(e) {
               ]
           });
 }
-function k(e) {
-    let { duration: t, onClose: n } = e,
-        a = (0, p.Z)({ forceFetch: !0 }),
-        s = (0, f.ZP)(),
-        l = i.useCallback(() => {
-            (u.Z.open(S.oAB.SUBSCRIPTIONS, null, {}), n());
-        }, [n]);
-    if (!a.fetched)
-        return (0, r.jsx)('div', {
-            className: R.spinnerContainer,
-            children: (0, r.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE })
+function A(e) {
+    let { duration: t, onClose: r } = e,
+        o = (0, h.Z)({ forceFetch: !0 }),
+        i = (0, u.ZP)(),
+        C = a.useCallback(() => {
+            (c.Z.open(L.oAB.SUBSCRIPTIONS, null, {}), r());
+        }, [r]);
+    if (!o.fetched)
+        return (0, n.jsx)('div', {
+            className: Z.spinnerContainer,
+            children: (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE })
         });
-    let d = a.isFractionalPremiumActive
-        ? C.intl.string(C.t['1ku8i4'])
-        : C.intl.format(C.t.fI1nLy, {
-              helpCenterLink: O.Z.getArticleURL(S.BhN.FRACTIONAL_PREMIUM_ABOUT),
+    let d = o.isFractionalPremiumActive
+        ? M.intl.string(M.t['1ku8i4'])
+        : M.intl.format(M.t.fI1nLy, {
+              helpCenterLink: v.Z.getArticleURL(L.BhN.FRACTIONAL_PREMIUM_ABOUT),
               duration: t
           });
-    return (0, r.jsx)(c.f6W, {
-        theme: s,
+    return (0, n.jsx)(l.f6W, {
+        theme: i,
         children: (e) =>
-            (0, r.jsxs)('div', {
-                className: o()(R.claimedRootContainer, e),
+            (0, n.jsxs)('div', {
+                className: s()(Z.claimedRootContainer, e),
                 children: [
-                    (0, r.jsxs)('div', {
-                        className: R.headerContainer,
+                    (0, n.jsxs)('div', {
+                        className: Z.headerContainer,
                         children: [
-                            (0, r.jsx)('img', {
-                                className: R.headerBackground,
-                                src: P,
-                                alt: C.intl.string(C.t['8SsCa2'])
+                            (0, n.jsx)('img', {
+                                className: Z.headerBackground,
+                                src: k,
+                                alt: M.intl.string(M.t['8SsCa2'])
                             }),
-                            (0, r.jsx)(m.Z, { className: R.beta }),
-                            (0, r.jsxs)('div', {
-                                className: R.headerForeground,
+                            (0, n.jsx)(p.Z, { className: Z.beta }),
+                            (0, n.jsxs)('div', {
+                                className: Z.headerForeground,
                                 children: [
-                                    (0, r.jsx)('div', {
-                                        className: R.rewardAssetContainer,
-                                        children: (0, r.jsx)('img', {
-                                            src: D,
-                                            alt: C.intl.string(C.t.OhPMam),
+                                    (0, n.jsx)('div', {
+                                        className: Z.rewardAssetContainer,
+                                        children: (0, n.jsx)('img', {
+                                            src: P,
+                                            alt: M.intl.string(M.t.OhPMam),
                                             height: 120
                                         })
                                     }),
-                                    (0, r.jsx)(c.olH, {
-                                        className: R.close,
+                                    (0, n.jsx)(l.olH, {
+                                        className: Z.close,
                                         withCircleBackground: !0,
-                                        onClick: n
+                                        onClick: r
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, r.jsxs)(c.mzw, {
-                        className: R.footerContainer,
+                    (0, n.jsxs)(l.mzw, {
+                        className: Z.footerContainer,
                         separator: !1,
                         children: [
-                            (0, r.jsx)(c.X6q, {
+                            (0, n.jsx)(l.X6q, {
                                 variant: 'heading-lg/bold',
-                                className: R.heading,
-                                children: C.intl.string(C.t['+PHEo6'])
+                                className: Z.heading,
+                                children: M.intl.string(M.t['+PHEo6'])
                             }),
-                            (0, r.jsx)(c.Text, {
+                            (0, n.jsx)(l.Text, {
                                 variant: 'text-sm/normal',
-                                className: R.text,
+                                className: Z.text,
                                 children: d
                             }),
-                            (0, r.jsx)('div', {
+                            (0, n.jsx)('div', {
                                 'data-button-hoisted-classname-wrapper': !0,
-                                className: R.cta2,
-                                children: (0, r.jsx)(c.zxk, {
+                                className: Z.cta2,
+                                children: (0, n.jsx)(l.zxk, {
                                     variant: 'primary',
-                                    text: C.intl.string(C.t.LnsQGR),
-                                    onClick: l
+                                    text: M.intl.string(M.t.LnsQGR),
+                                    onClick: C
                                 })
                             })
                         ]
@@ -297,21 +292,21 @@ function k(e) {
             })
     });
 }
-function j(e) {
-    let { quest: t, location: n, onClose: a, transitionState: o } = e,
-        s = (0, d.Z)(() => {
+function V(e) {
+    let { quest: t, location: r, onClose: o, transitionState: s } = e,
+        i = (0, d.Z)(() => {
             var e;
             return (null == (e = t.userStatus) ? void 0 : e.claimedAt) != null;
         });
-    return (i.useEffect(() => {
-        s && a();
-    }, [a, s]),
-    s)
+    return (a.useEffect(() => {
+        i && o();
+    }, [o, i]),
+    i)
         ? null
-        : (0, r.jsx)(L, {
-              onClose: a,
-              transitionState: o,
+        : (0, n.jsx)(R, {
+              onClose: o,
+              transitionState: s,
               quest: t,
-              location: n
+              location: r
           });
 }

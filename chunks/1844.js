@@ -26,8 +26,8 @@ function l() {
 let c = l(),
     u = null,
     d = !1,
-    f = null,
-    _ = !1,
+    _ = null,
+    f = !1,
     p = null,
     h = [],
     m = null;
@@ -44,18 +44,18 @@ function b(e) {
         startDate: t.startDate.toISOString(),
         endDate: t.endDate.toISOString()
     }),
-        (f = Date.now()),
+        (_ = Date.now()),
         (d = !1));
 }
 function y(e) {
     let { activeOutboundPromotions: t, consumedInboundPromotionId: n } = e;
-    ((h = t), (p = Date.now()), (_ = !1), c.hasFetchedConsumedInboundPromotionId || ((c.hasFetchedConsumedInboundPromotionId = !0), (c.consumedInboundPromotionId = n)));
+    ((h = t), (p = Date.now()), (f = !1), c.hasFetchedConsumedInboundPromotionId || ((c.hasFetchedConsumedInboundPromotionId = !0), (c.consumedInboundPromotionId = n)));
 }
 function O() {
-    _ = !0;
+    f = !0;
 }
 function v() {
-    ((h = []), (_ = !1));
+    ((h = []), (f = !1));
 }
 function I() {
     var e;
@@ -74,7 +74,7 @@ function S() {
     null != e && ((m = e), (c.lastSeenOutboundPromotionStartDate = e));
 }
 function A() {
-    ((c = l()), (_ = !1), (p = null), (d = !1), (f = null), (h = []), (u = null));
+    ((c = l()), (f = !1), (p = null), (d = !1), (_ = null), (h = []), (u = null));
 }
 function N() {
     var e, t, n;
@@ -97,7 +97,7 @@ class C extends (r = i.ZP.PersistedStore) {
         return p;
     }
     get isFetchingActiveOutboundPromotions() {
-        return _;
+        return f;
     }
     get hasFetchedConsumedInboundPromotionId() {
         return c.hasFetchedConsumedInboundPromotionId;
@@ -112,7 +112,7 @@ class C extends (r = i.ZP.PersistedStore) {
         return d;
     }
     get lastFetchedActiveBogoPromotion() {
-        return f;
+        return _;
     }
     getState() {
         return c;

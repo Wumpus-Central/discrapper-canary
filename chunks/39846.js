@@ -8,8 +8,8 @@ var r = n(147913),
     c = n(592125),
     u = n(131951),
     d = n(19780),
-    f = n(876506),
-    _ = n(981631),
+    _ = n(876506),
+    f = n(981631),
     p = n(761274);
 function h(e, t, n) {
     return (
@@ -27,9 +27,9 @@ function h(e, t, n) {
 let m = null;
 function g() {
     (i.Z.requestPermission(p.Eu.AUDIO).then((e) => {
-        e && (0, f.Z)(!0);
+        e && (0, _.Z)(!0);
     }),
-        u.Z.getMode() === _.pM4.PUSH_TO_TALK && i.Z.requestPermission(p.Eu.INPUT_MONITORING));
+        u.Z.getMode() === f.pM4.PUSH_TO_TALK && i.Z.requestPermission(p.Eu.INPUT_MONITORING));
 }
 function E(e, t) {
     var n;

@@ -50,7 +50,7 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,7 +61,7 @@ function f(e, t) {
         e
     );
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -86,14 +86,14 @@ function h(e) {
 }
 function m(e) {
     var { userId: t, variant: n = 'text-xs/normal', color: a = 'text-default' } = e,
-        s = _(e, ['userId', 'variant', 'color']);
+        s = f(e, ['userId', 'variant', 'color']);
     let l = (0, o.e)({
         userId: t,
         renderApplicationName: h
     });
     return (0, r.jsx)(
         i.Text,
-        f(
+        _(
             u(
                 {
                     variant: n,

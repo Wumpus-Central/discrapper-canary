@@ -8,8 +8,8 @@ var r = n(846519),
     c = n(70956),
     u = n(581567),
     d = n(594190),
-    f = n(981631);
-function _(e, t, n) {
+    _ = n(981631);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,14 +33,14 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
 }
 let h = 5 * c.Z.Millis.MINUTE;
 function m(e) {
-    return e.distributor === f.GQo.ROBLOX ? (0, a.x3)(e) : null;
+    return e.distributor === _.GQo.ROBLOX ? (0, a.x3)(e) : null;
 }
 function g(e) {
     let t = null != e.name ? e.name : '',
@@ -63,20 +63,20 @@ class E extends i.Z {
     }
     constructor(...e) {
         (super(...e),
-            _(this, 'heartbeatInterval', new r.Xp()),
-            _(this, 'runningGameKeys', new Set()),
-            _(this, 'actions', {
+            f(this, 'heartbeatInterval', new r.Xp()),
+            f(this, 'runningGameKeys', new Set()),
+            f(this, 'actions', {
                 RUNNING_GAMES_CHANGE: (e) => this.handleRunningGamesChanged(e),
                 LOGOUT: () => this.stopHeartbeat(),
                 CONNECTION_CLOSED: () => this.stopHeartbeat(),
                 POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
             }),
-            _(this, 'handleRunningGamesChanged', (e) => {
+            f(this, 'handleRunningGamesChanged', (e) => {
                 let { games: t } = e;
                 if (0 === t.length) return void this.stopHeartbeat();
                 this.maybeStartHeartbeat();
             }),
-            _(this, 'logRunningGameHeartbeats', () => {
+            f(this, 'logRunningGameHeartbeats', () => {
                 let e = d.ZP.getRunningGames(),
                     t = {
                         rtc_connection_id: s.Z.getRTCConnectionId(),
@@ -87,12 +87,12 @@ class E extends i.Z {
                     var r, i;
                     let s = g(e),
                         c = !this.runningGameKeys.has(s),
-                        _ = null != (i = e.id) ? i : null == (r = o.Z.getGameByName(e.name)) ? void 0 : r.id;
+                        f = null != (i = e.id) ? i : null == (r = o.Z.getGameByName(e.name)) ? void 0 : r.id;
                     (l.default.track(
-                        f.rMx.RUNNING_GAME_HEARTBEAT,
+                        _.rMx.RUNNING_GAME_HEARTBEAT,
                         p(
                             {
-                                game_id: _,
+                                game_id: f,
                                 game_name: e.name,
                                 game_distributor: e.distributor,
                                 game_distributor_game_id: e.sku,

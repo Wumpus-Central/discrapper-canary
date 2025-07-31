@@ -1,10 +1,10 @@
 (n.d(t, {
     Q2: () => V,
-    Rv: () => z,
+    Rv: () => W,
     U6: () => F,
     UD: () => G,
     ZP: () => Y,
-    oT: () => W
+    oT: () => z
 }),
     n(415506),
     n(539854));
@@ -26,8 +26,8 @@ var i,
     x = n(239748),
     _ = n(337482),
     j = n(679080),
-    E = n(777019),
-    O = n(523147),
+    O = n(777019),
+    E = n(523147),
     C = n(400332),
     v = n(908552),
     S = n(189509),
@@ -76,12 +76,12 @@ function F(e) {
 function H() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return t.map((e) => {
-        let t = W[e];
+        let t = z[e];
         if (null == t) throw Error('getBindsFor(...): No bind for '.concat(t));
         return t.binds[0];
     });
 }
-let W = {
+let z = {
     [M.EkH.SERVER_NEXT]: v.nq,
     [M.EkH.SERVER_PREV]: v.X3,
     [M.EkH.CHANNEL_NEXT]: a.tQ,
@@ -108,13 +108,13 @@ let W = {
     [M.EkH.TOGGLE_MUTE]: N.iN,
     [M.EkH.TOGGLE_DEAFEN]: N.oV,
     [M.EkH.TOGGLE_CATEGORY_COLLAPSED]: I.u,
-    [M.EkH.SEARCH_SOUNDBOARD]: O.Z,
+    [M.EkH.SEARCH_SOUNDBOARD]: E.Z,
     [M.EkH.SCROLL_UP]: _.B2,
     [M.EkH.SCROLL_DOWN]: _.gN,
     [M.EkH.QUICKSWITCHER_SHOW]: b.$,
     [M.EkH.CREATE_DM_GROUP]: l.K,
     [M.EkH.SEARCH_EMOJIS]: j.S,
-    [M.EkH.SEARCH_GIFS]: E.O,
+    [M.EkH.SEARCH_GIFS]: O.O,
     [M.EkH.SEARCH_STICKERS]: C.U,
     [M.EkH.TOGGLE_HOTKEYS]: R._,
     [M.EkH.JUMP_TO_FIRST_UNREAD]: h.O,
@@ -131,7 +131,7 @@ let W = {
     [M.EkH.OPEN_APP_DIRECTORY]: f.T,
     [M.EkH.BROWSER_DEVTOOLS]: c.p
 };
-function z() {
+function W() {
     let e = [
             {
                 description: U.intl.string(U.t.bx4Uy8),
@@ -382,4 +382,4 @@ function z() {
         e
     );
 }
-let Y = 12633 == n.j ? W : null;
+let Y = 12633 == n.j ? z : null;

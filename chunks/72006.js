@@ -2,20 +2,20 @@
     FZ: () => N,
     Hl: () => F,
     NJ: () => Z,
-    R8: () => M,
+    R8: () => D,
     Sq: () => E,
-    Wg: () => D,
-    Zn: () => P,
+    Wg: () => M,
+    Zn: () => R,
     c2: () => k,
     eE: () => A,
     iE: () => L,
     iK: () => w,
-    lv: () => R,
+    lv: () => I,
     nR: () => T,
     q0: () => l.a,
     x0: () => _,
     xb: () => B,
-    yd: () => I
+    yd: () => P
 }),
     n(388685),
     n(539854));
@@ -23,9 +23,9 @@ var r = n(399834),
     s = n(598335),
     l = n.n(s),
     a = n(596464),
-    i = n.n(a),
-    o = n(476363),
-    c = n.n(o),
+    o = n.n(a),
+    i = n(476363),
+    c = n.n(i),
     u = n(963782),
     h = n.n(u),
     d = n(904112),
@@ -35,29 +35,29 @@ var r = n(399834),
     m = n(544611),
     y = n.n(m),
     x = n(803068),
-    S = n.n(x),
-    b = n(561099),
-    v = n.n(b),
+    b = n.n(x),
+    S = n(561099),
+    v = n.n(S),
     j = n(655000),
     C = n.n(j);
 function O(e, t, n, s) {
     let l = s.getCurrentContent(),
         a = null;
     null != e && (a = (l = l.createEntity(...e)).getLastCreatedEntityKey());
-    let i = l.getFirstBlock(),
-        o = new r.SelectionState({
-            anchorKey: i.getKey(),
+    let o = l.getFirstBlock(),
+        i = new r.SelectionState({
+            anchorKey: o.getKey(),
             anchorOffset: t,
-            focusKey: i.getKey(),
+            focusKey: o.getKey(),
             focusOffset: n
         });
-    return ((l = r.Modifier.applyEntity(l, o, a)), r.EditorState.set(s, { currentContent: l }));
+    return ((l = r.Modifier.applyEntity(l, i, a)), r.EditorState.set(s, { currentContent: l }));
 }
 function _(e, t, n, s) {
     let l,
         a,
-        o = t.getCurrentContent(),
-        c = o.getFirstBlock(),
+        i = t.getCurrentContent(),
+        c = i.getFirstBlock(),
         u = c.getText();
     'number' == typeof n
         ? (n > u.length && (n = u.length),
@@ -70,17 +70,17 @@ function _(e, t, n, s) {
           })))
         : (l = t.getSelection());
     let h = t.getCurrentInlineStyle(),
-        d = i()(o, l);
-    return (l.isCollapsed() ? ((o = r.Modifier.insertText(o, l, e, h, d)), (a = 'insert-characters')) : ((o = r.Modifier.replaceText(o, l, e, h, d)), (a = 'replace-characters')), r.EditorState.push(t, o, a));
+        d = o()(i, l);
+    return (l.isCollapsed() ? ((i = r.Modifier.insertText(i, l, e, h, d)), (a = 'insert-characters')) : ((i = r.Modifier.replaceText(i, l, e, h, d)), (a = 'replace-characters')), r.EditorState.push(t, i, a));
 }
-function I(e, t) {
+function P(e, t) {
     switch (e) {
         case 'delete':
             return v()(t);
         case 'delete-word':
             return p()(t);
         case 'backspace':
-            return S()(t);
+            return b()(t);
         case 'backspace-word':
             return h()(t);
         case 'backspace-to-start-of-line':
@@ -89,7 +89,7 @@ function I(e, t) {
             return t;
     }
 }
-function P(e, t) {
+function R(e, t) {
     switch (e) {
         case 'transpose-characters':
             return C()(t);
@@ -104,7 +104,7 @@ function P(e, t) {
 function E(e) {
     return e.getCurrentContent().getFirstBlock().getText();
 }
-function R(e, t) {
+function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         r = t.getCurrentContent(),
         s = r.getFirstBlock(),
@@ -115,13 +115,13 @@ function R(e, t) {
             (e) => null !== e.getEntity(),
             (e, t) => {
                 let n = r.getEntity(s.getEntityAt(e)).getType(),
-                    i = l.substring(e, t);
+                    o = l.substring(e, t);
                 a.push({
                     processed: !1,
                     type: n,
                     start: e,
                     end: t,
-                    text: i
+                    text: o
                 });
             }
         ),
@@ -130,8 +130,8 @@ function R(e, t) {
             if (
                 (a.forEach((n) => {
                     let { type: s, start: l, end: a } = e,
-                        i = e.getFullMatch();
-                    !n.processed && (n.type === s && n.start === l && n.text === i ? ((n.processed = !0), (r = !0)) : ((l >= n.start && l < n.end) || (a > n.start && a <= n.end)) && ((n.processed = !0), (t = O(null, n.start, n.end, t))));
+                        o = e.getFullMatch();
+                    !n.processed && (n.type === s && n.start === l && n.text === o ? ((n.processed = !0), (r = !0)) : ((l >= n.start && l < n.end) || (a > n.start && a <= n.end)) && ((n.processed = !0), (t = O(null, n.start, n.end, t))));
                 }),
                 r)
             )
@@ -167,11 +167,11 @@ function Z(e) {
 function A(e) {
     return w(0, e);
 }
-function M(e) {
+function D(e) {
     let t = e.getSelection();
     return ((t = (t = t.set('focusOffset', 0)).set('isBackward', !0)), r.EditorState.forceSelection(e, t));
 }
-function D(e) {
+function M(e) {
     let t = E(e),
         n = e.getSelection();
     return ((n = (n = n.set('focusOffset', t.length)).set('isBackward', !1)), r.EditorState.forceSelection(e, n));

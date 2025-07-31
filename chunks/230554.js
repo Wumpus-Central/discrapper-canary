@@ -8,8 +8,8 @@ var r = n(73800),
     c = n(91313),
     u = n(53529),
     d = n(436660),
-    f = n(887490),
-    _ = n(515270),
+    _ = n(887490),
+    f = n(515270),
     p = n(847302),
     h = n(42530);
 let m = (e, t, n) => ({
@@ -18,24 +18,24 @@ let m = (e, t, n) => ({
         (e.preventDefault(), n());
     },
     focus() {
-        f.bN.focus(e);
+        _.bN.focus(e);
     },
     blur() {
         o.F3.blur(e);
     },
     getCurrentWord() {
         let t = e.selection;
-        if (null == t || !f.Ew.isValid(e, t) || f.M8.isExpanded(t) || (0, _.L6)(e))
+        if (null == t || !_.Ew.isValid(e, t) || _.M8.isExpanded(t) || (0, f.L6)(e))
             return {
                 word: null,
                 isAtStart: !1
             };
-        let [n, r] = f.bN.node(e, f.C0.parent(t.anchor.path)),
-            [i, a] = f.bN.node(e, t.anchor.path),
+        let [n, r] = _.bN.node(e, _.C0.parent(t.anchor.path)),
+            [i, a] = _.bN.node(e, t.anchor.path),
             o = t.anchor.offset;
-        if (!f.C0.hasPrevious(a) && f.LC.isText(i)) {
+        if (!_.C0.hasPrevious(a) && _.LC.isText(i)) {
             let e = i.text.substring(0, o);
-            if (f.aj.isType(n, 'applicationCommand') && o < n.command.displayName.length + 2)
+            if (_.aj.isType(n, 'applicationCommand') && o < n.command.displayName.length + 2)
                 return {
                     word: e,
                     isAtStart: !0
@@ -45,25 +45,25 @@ let m = (e, t, n) => ({
             l = !1;
         for (;;) {
             if (--o < 0) {
-                if (!f.C0.hasPrevious(a)) {
+                if (!_.C0.hasPrevious(a)) {
                     l = !0;
                     break;
                 }
-                [i, a] = f.bN.node(e, f.C0.previous(a));
+                [i, a] = _.bN.node(e, _.C0.previous(a));
             }
-            if (!f.LC.isText(i)) break;
+            if (!_.LC.isText(i)) break;
             let t = i.text[o];
             if (h.i$.test(t)) break;
             s = t + s;
         }
         return {
             word: s,
-            isAtStart: l && f.C0.isFirstEditorBlock(r)
+            isAtStart: l && _.C0.isFirstEditorBlock(r)
         };
     },
     getFirstText() {
         var t, n;
-        return null != (n = null == (t = f.bN.getFirstText(e)) ? void 0 : t.text) ? n : '';
+        return null != (n = null == (t = _.bN.getFirstText(e)) ? void 0 : t.text) ? n : '';
     },
     getCurrentCommandOption() {
         let t = c.HZ(e);
@@ -89,11 +89,11 @@ let m = (e, t, n) => ({
                 o = null != a && g(t, a[0]);
             if ((null != r && o && (d.Q.removeInlineChildren(e, a), (i = !1)), E(e, n, r, i), null != r && o)) {
                 let n = c.cr(e);
-                if (((a = f.q.updateElement(e, a)), null != n)) {
-                    let r = f.q.markdown(n[0], t.guild_id);
-                    (0, p.Gg)(e, a, t.id, r) && (a = f.q.updateElement(e, a));
+                if (((a = _.q.updateElement(e, a)), null != n)) {
+                    let r = _.q.markdown(n[0], t.guild_id);
+                    (0, p.Gg)(e, a, t.id, r) && (a = _.q.updateElement(e, a));
                 }
-                (c.xi(e, t.guild_id, t.id, f.q.updateElement(e, a), !1), d.Q.selectNextCommandOption(e));
+                (c.xi(e, t.guild_id, t.id, _.q.updateElement(e, a), !1), d.Q.selectNextCommandOption(e));
             }
         });
     },
@@ -137,7 +137,7 @@ let m = (e, t, n) => ({
     },
     replaceInlineAutocompleteInput(t, n, r) {
         u.T.withSingleEntry(e, () => {
-            let i = f.bN.getSelectedParentOfType(e, [t]);
+            let i = _.bN.getSelectedParentOfType(e, [t]);
             (a()(null != i, 'Cannot replace inline input of type '.concat(t, ' when none is selected')), d.Q.removeNodes(e, { at: i[1] }), E(e, n, r, !0));
         });
     },
@@ -158,7 +158,7 @@ function g(e, t) {
     return null != i && (i.type !== s.jw.STRING || (null == i ? void 0 : i.choices) != null || (null == i ? void 0 : i.autocomplete));
 }
 function E(e, t, n, r) {
-    let i = f.bN.areStylesDisabled(e) || null == n ? t : n;
+    let i = _.bN.areStylesDisabled(e) || null == n ? t : n;
     u.T.withSingleEntry(e, () => {
         d.Q.insertText(e, r ? i + ' ' : i);
     });

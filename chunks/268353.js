@@ -21,7 +21,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,7 +37,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -59,12 +59,12 @@ function p(e, t) {
 }
 function h(e) {
     var { enabled: t } = e,
-        n = _(e, ['enabled']);
+        n = f(e, ['enabled']);
     let i = t ? u.intl.string(u.t.Z7MyND) : u.intl.string(u.t.OIDkcn),
         o = t ? a.wvt : a.NpZ;
     return (0, r.jsx)(
         c.Z,
-        f(
+        _(
             {
                 label: i,
                 iconComponent: o

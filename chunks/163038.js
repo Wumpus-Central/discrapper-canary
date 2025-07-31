@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => H }), n(388685));
+(n.d(t, { Z: () => V }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(793030),
@@ -11,16 +11,16 @@ var r = n(255367),
     p = n(39154),
     m = n(356264),
     f = n(628238),
-    _ = n(739566),
-    g = n(492593),
+    g = n(739566),
+    _ = n(492593),
     h = n(930282),
     b = n(464891),
     E = n(507418),
     C = n(348238),
-    O = n(38267),
-    v = n(25015),
-    y = n(438075),
-    x = n(359110),
+    v = n(38267),
+    O = n(25015),
+    x = n(438075),
+    y = n(359110),
     I = n(6025),
     j = n(695346),
     S = n(433355),
@@ -40,7 +40,7 @@ function F(e) {
     let { message: t, snapshot: n, index: u } = e,
         p = i.useMemo(() => new d.r(t, n, u), [t, n, u]),
         f = (0, a.e7)([T.Z, R.default, w.Z, A.Z, P.Z, m.Z], () => p.getForwardInfo(T.Z, R.default, w.Z, A.Z, P.Z, m.Z).footerInfo, [p], o.Z),
-        _ = i.useCallback(() => {
+        g = i.useCallback(() => {
             var e, n;
             let r = T.Z.getChannel(t.channel_id),
                 i = P.Z.getGuild(null == r ? void 0 : r.guild_id),
@@ -57,7 +57,7 @@ function F(e) {
                     baseChannelId: l,
                     guildId: r.guild_id
                 }),
-                (0, x.Kh)(l),
+                (0, y.Kh)(l),
                 D.default.track(M.rMx.MODERATOR_REPORT_ORIGINAL_MESSAGE_LINK_CLICKED, {
                     moderator_report_id: t.channel_id,
                     destination_channel_id: l,
@@ -68,7 +68,7 @@ function F(e) {
         ? null
         : (0, r.jsxs)(c.P3F, {
               className: U.footerContainer,
-              onClick: _,
+              onClick: g,
               children: [
                   null != f.originIconUrl
                       ? (0, r.jsx)('img', {
@@ -92,7 +92,7 @@ function F(e) {
 }
 function B(e) {
     let { mergedMessageRecord: t, content: n, channel: l, reportingUserId: a, reportedTimestamp: o } = e,
-        s = (0, _.JZ)(t.author, l),
+        s = (0, g.JZ)(t.author, l),
         {
             onClickUsername: c,
             onClickAvatar: u,
@@ -100,7 +100,7 @@ function B(e) {
             showUsernamePopout: p,
             showAvatarPopout: m
         } = (function (e, t) {
-            let { popouts: n, setPopout: r } = (0, O.Z)(e.id, k.d$),
+            let { popouts: n, setPopout: r } = (0, v.Z)(e.id, k.d$),
                 { usernameProfile: l, avatarProfile: a } = n,
                 o = (0, C.XO)(e, t, l, r);
             return {
@@ -119,7 +119,7 @@ function B(e) {
                 showAvatarPopout: a
             };
         })(t, l);
-    return (0, r.jsx)(g.Z, {
+    return (0, r.jsx)(_.Z, {
         childrenExecutedCommand: (0, r.jsx)(L.Z, {
             reportingUserId: a,
             guildId: l.guild_id,
@@ -167,17 +167,17 @@ function G(e) {
                 })
                 .catch(() => {});
     }, [null == s || null == (t = s.moderatorReport) ? void 0 : t.reported_user_id]);
-    let _ = i.useMemo(() => {
+    let g = i.useMemo(() => {
             var e;
             let t = (0, p.Z)(o, s);
             return null != d && (null == s || null == (e = s.moderatorReport) ? void 0 : e.reported_user_id) != null ? t.set('author', d) : t;
         }, [o, s, d]),
-        g = j.RS.useSetting(),
+        _ = j.RS.useSetting(),
         h = j.NA.useSetting(),
         b = (0, a.e7)([N.Z], () => N.Z.isDeveloper),
-        E = (0, f.A)((null != (l = _.editedTimestamp) ? l : _.timestamp).valueOf()),
-        { content: C, hasSpoilerEmbeds: O } = (0, v.Z)(_, {
-            hideSimpleEmbedContent: g && h,
+        E = (0, f.A)((null != (l = g.editedTimestamp) ? l : g.timestamp).valueOf()),
+        { content: C, hasSpoilerEmbeds: v } = (0, O.Z)(g, {
+            hideSimpleEmbedContent: _ && h,
             isInteracting: !1,
             formatInline: !1,
             allowList: E,
@@ -186,8 +186,8 @@ function G(e) {
             allowDevLinks: b,
             previewLinkTarget: !0
         }),
-        x = (0, a.e7)([T.Z], () => T.Z.getChannel(o.channel_id));
-    return null == x
+        y = (0, a.e7)([T.Z], () => T.Z.getChannel(o.channel_id));
+    return null == y
         ? null
         : (0, r.jsx)(
               'div',
@@ -197,19 +197,19 @@ function G(e) {
                       className: U.content,
                       children: [
                           (0, r.jsx)(B, {
-                              mergedMessageRecord: _,
+                              mergedMessageRecord: g,
                               content: C,
-                              channel: x,
+                              channel: y,
                               reportingUserId: null == s || null == (n = s.moderatorReport) ? void 0 : n.reporting_user_id,
                               reportedTimestamp: o.timestamp
                           }),
-                          (0, y.Z)({
+                          (0, x.Z)({
                               channelMessageProps: {
-                                  message: _,
-                                  channel: x,
+                                  message: g,
+                                  channel: y,
                                   compact: !1
                               },
-                              hasSpoilerEmbeds: O,
+                              hasSpoilerEmbeds: v,
                               isInteracting: !1,
                               isMessageSnapshot: !0,
                               renderThreadAccessory: !1,
@@ -226,7 +226,7 @@ function G(e) {
               c
           );
 }
-function H(e) {
+function V(e) {
     let { message: t } = e;
     return (0, r.jsx)(r.Fragment, {
         children: t.messageSnapshots.map((e, n) =>

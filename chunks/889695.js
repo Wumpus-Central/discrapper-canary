@@ -11,16 +11,16 @@ var r = n(255367),
     p = n(271383),
     m = n(485386),
     f = n(430824),
-    _ = n(594174),
-    g = n(700785),
+    g = n(594174),
+    _ = n(700785),
     h = n(709054),
     b = n(962086),
     E = n(160404),
     C = n(225675),
-    O = n(981631),
-    v = n(388032),
-    y = n(318135);
-function x(e) {
+    v = n(981631),
+    O = n(388032),
+    x = n(318135);
+function y(e) {
     var t;
     return (0, r.jsx)('span', {
         style: { color: null != (t = e.colorString) ? t : 'currentColor' },
@@ -29,7 +29,7 @@ function x(e) {
 }
 function I(e) {
     let { guildId: t } = e,
-        n = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
+        n = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
         l = (0, s.e7)([f.Z], () => f.Z.getGuild(t)),
         I = (0, s.e7)([m.Z], () => m.Z.getRolesSnapshot(t)),
         j = (0, s.e7)([m.Z], () => m.Z.getSortedRoles(t)),
@@ -65,7 +65,7 @@ function I(e) {
                               var t;
                               return !N || (null == (t = e.tags) ? void 0 : t.subscription_listing_id) != null;
                           })
-                          .filter((e) => (null == R ? void 0 : R.id) === e.id || g.r6(l, n.id, R, e))
+                          .filter((e) => (null == R ? void 0 : R.id) === e.id || _.r6(l, n.id, R, e))
                     : [],
             [l, n, N, R, j]
         );
@@ -76,16 +76,16 @@ function I(e) {
         null != t && (L[t.id] = t);
     }),
     o.e$(
-        g.I0({
+        _.I0({
             forceRoles: L,
             context: l
         }),
-        o.$e(O.Plq.MANAGE_GUILD, O.Plq.MANAGE_ROLES)
+        o.$e(v.Plq.MANAGE_GUILD, v.Plq.MANAGE_ROLES)
     ) || (0, u.eM)(l, n))
         ? (0, r.jsx)('div', {
-              className: y.container,
+              className: x.container,
               children: (0, r.jsx)(c.hQY, {
-                  placeholder: v.intl.string(v.t.Sojqsr),
+                  placeholder: O.intl.string(O.t.Sojqsr),
                   value: A,
                   onChange: w,
                   autoFocus: !0,
@@ -98,7 +98,7 @@ function I(e) {
                                               c.lo1,
                                               {
                                                   value: n.id,
-                                                  children: [(0, r.jsx)(c.lo1.Label, { children: x(n) }), (0, r.jsx)(c.lo1.Checkbox, {})]
+                                                  children: [(0, r.jsx)(c.lo1.Label, { children: y(n) }), (0, r.jsx)(c.lo1.Checkbox, {})]
                                               },
                                               n.id
                                           )
@@ -116,7 +116,7 @@ function I(e) {
                                       {
                                           value: n.id,
                                           disabled: !0,
-                                          children: [(0, r.jsx)(c.lo1.Label, { children: x(n) }), (0, r.jsx)(c.lo1.Checkbox, { checked: !0 })]
+                                          children: [(0, r.jsx)(c.lo1.Label, { children: y(n) }), (0, r.jsx)(c.lo1.Checkbox, { checked: !0 })]
                                       },
                                       n.id
                                   )
@@ -128,6 +128,6 @@ function I(e) {
           })
         : (0, r.jsx)(c.Text, {
               variant: 'text-md/medium',
-              children: v.intl.string(v.t.MNSTbW)
+              children: O.intl.string(O.t.MNSTbW)
           });
 }

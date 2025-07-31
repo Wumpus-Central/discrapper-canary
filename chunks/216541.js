@@ -1,49 +1,49 @@
-n.d(t, { d: () => m });
-var r = n(255367);
-n(73800);
-var i = n(120356),
-    a = n.n(i),
-    o = n(780384),
-    s = n(481060),
-    l = n(410030),
-    c = n(876917),
-    u = n(328456),
-    d = n(619899),
-    f = n(616066),
-    _ = n(912397),
-    p = n(63243),
-    h = n(244488);
-let m = (e) => {
-    let { product: t, isPurchased: n, isHighlighted: i, user: m, forCollectedModal: g, profileEffectClassName: E } = e,
-        { firstProfileEffect: b, firstAvatarDecoration: y } = (0, u.Rj)(t),
-        O = (0, d.O1)(y),
-        v = (0, l.ZP)(),
-        I = (0, o.ap)(v);
-    return (0, r.jsxs)('div', {
-        className: _.container,
+r.d(t, { d: () => b });
+var n = r(255367);
+r(73800);
+var l = r(120356),
+    i = r.n(l),
+    a = r(780384),
+    o = r(481060),
+    s = r(410030),
+    c = r(876917),
+    u = r(328456),
+    d = r(619899),
+    p = r(616066),
+    f = r(912397),
+    g = r(63243),
+    h = r(244488);
+let b = (e) => {
+    let { product: t, isPurchased: r, isHighlighted: l, user: b, forCollectedModal: m, containerClassName: _, profileEffectClassName: O, avatarDecorationClassName: v } = e,
+        { firstProfileEffect: C, firstAvatarDecoration: E } = (0, u.Rj)(t),
+        S = (0, d.O1)(E),
+        y = (0, s.ZP)(),
+        x = (0, a.ap)(y);
+    return (0, n.jsxs)('div', {
+        className: i()(f.container, _),
         children: [
-            null != b
-                ? (0, r.jsx)('div', {
-                      className: a()(_.profileEffectShopPreview, E),
-                      children: (0, r.jsx)(c.Z, {
-                          isHovering: i,
-                          profileEffectId: b.id,
-                          isPurchased: n,
-                          forCollectedModal: g,
+            null != C
+                ? (0, n.jsx)('div', {
+                      className: i()(f.profileEffectShopPreview, O),
+                      children: (0, n.jsx)(c.Z, {
+                          isHovering: l,
+                          profileEffectId: C.id,
+                          isPurchased: r,
+                          forCollectedModal: m,
                           removeSetHeight: !0
                       })
                   })
                 : null,
-            null != O
-                ? (0, r.jsx)('div', {
-                      className: _.avatarDecorationPreview,
-                      children: (0, r.jsx)(f.R, {
-                          item: O,
-                          user: m,
-                          avatarSize: s.EFr.SIZE_120,
-                          isPurchased: n,
-                          isHighlighted: i,
-                          avatarPlaceholderSrc: I ? h : p
+            null != S
+                ? (0, n.jsx)('div', {
+                      className: i()(f.avatarDecorationPreview, v),
+                      children: (0, n.jsx)(p.R, {
+                          item: S,
+                          user: b,
+                          avatarSize: o.EFr.SIZE_120,
+                          isPurchased: r,
+                          isHighlighted: l,
+                          avatarPlaceholderSrc: x ? h : g
                       })
                   })
                 : null

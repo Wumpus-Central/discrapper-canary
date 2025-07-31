@@ -125,13 +125,13 @@ let f = {
                     let { top: a, left: c, rotation: g, size: h, skuId: b } = e,
                         _ = null == (l = m[t]) ? void 0 : l.items[0],
                         O = null == (i = m[t]) ? void 0 : i.type,
-                        C = O === o.Z.AVATAR_DECORATION ? 384 : 512;
+                        v = O === o.Z.AVATAR_DECORATION ? 384 : 512;
                     return (0, n.jsxs)(
                         'div',
                         {
                             className: p.asset,
                             style: {
-                                top: r ? -f - C : a,
+                                top: r ? -f - v : a,
                                 left: r ? ''.concat(c - 75 - 350 * Math.random()) : c,
                                 transform: 'rotate('.concat(g, 'deg)'),
                                 height: h.y,

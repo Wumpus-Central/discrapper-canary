@@ -10,9 +10,9 @@
     k8: () => L,
     oo: () => d,
     pz: () => h,
-    rj: () => _,
+    rj: () => f,
     vq: () => g,
-    xj: () => k
+    xj: () => M
 }),
     n(415506),
     n(388685),
@@ -75,7 +75,7 @@ function d(e) {
         b: r
     };
 }
-function f(e) {
+function _(e) {
     let [t, n, r, a] = i()(e).rgba();
     return {
         r: t,
@@ -84,8 +84,8 @@ function f(e) {
         a
     };
 }
-function _(e, t) {
-    let { r: n, g: r, b: i, a } = f(e);
+function f(e, t) {
+    let { r: n, g: r, b: i, a } = _(e);
     return 'rgba('
         .concat(n, ', ')
         .concat(r, ', ')
@@ -138,17 +138,17 @@ function b(e) {
         c = parseInt(o[3], 16);
     let u = s / 255,
         d = l / 255,
-        f = c / 255,
-        _ = Math.max(u, d, f),
-        p = _ - Math.min(u, d, f),
-        h = (e) => (_ - e) / 6 / p + 0.5,
+        _ = c / 255,
+        f = Math.max(u, d, _),
+        p = f - Math.min(u, d, _),
+        h = (e) => (f - e) / 6 / p + 0.5,
         m = (e) => Math.round(100 * e) / 100;
     return (
-        0 === p ? (i = a = 0) : ((a = p / _), (t = h(u)), (n = h(d)), (r = h(f)), (i = u === _ ? r - n : d === _ ? 1 / 3 + t - r : f === _ ? 2 / 3 + n - t : 0) < 0 ? (i += 1) : i > 1 && (i -= 1)),
+        0 === p ? (i = a = 0) : ((a = p / f), (t = h(u)), (n = h(d)), (r = h(_)), (i = u === f ? r - n : d === f ? 1 / 3 + t - r : _ === f ? 2 / 3 + n - t : 0) < 0 ? (i += 1) : i > 1 && (i -= 1)),
         {
             h: Math.round(360 * i),
             s: m(100 * a),
-            v: m(100 * _)
+            v: m(100 * f)
         }
     );
 }
@@ -325,14 +325,14 @@ function x(e) {
                           }
             };
         })
-        .sort(M)[0].hex;
+        .sort(k)[0].hex;
 }
-function M(e, t) {
+function k(e, t) {
     let n = e.hsv,
         r = t.hsv;
     return r.s + r.v - (n.s + n.v);
 }
-function k(e) {
+function M(e) {
     var t;
     let { colorRGB: n, saturationFactor: r = 1 } = e;
     if (null == n) return n;

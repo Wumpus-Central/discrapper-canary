@@ -4,16 +4,16 @@ n(73800);
 var s = n(481060),
     l = n(665149),
     a = n(388035),
-    i = n(453473),
-    o = n(388032);
+    o = n(453473),
+    i = n(388032);
 function c(e) {
     let { onOpen: t, onClose: n, className: c } = e;
-    return (0, r.jsx)(i.P, {
+    return (0, r.jsx)(o.P, {
         onOpen: t,
         onClose: n,
         popoutPosition: 'bottom',
         popoutAlign: 'right',
-        children: (e, t, n, i, u) => {
+        children: (e, t, n, o, u) => {
             var h, d;
             return (0, r.jsx)(a.U, {
                 location: 'bookmarks-button',
@@ -51,10 +51,10 @@ function c(e) {
                             className: c,
                             onClick: e,
                             icon: s.plf,
-                            'aria-label': o.intl.string(o.t['2pAkDA']),
-                            tooltip: t ? null : o.intl.string(o.t['2pAkDA']),
+                            'aria-label': i.intl.string(i.t['2pAkDA']),
+                            tooltip: t ? null : i.intl.string(i.t['2pAkDA']),
                             selected: t,
-                            showBadge: i
+                            showBadge: o
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(h, Object.getOwnPropertyDescriptors(d))

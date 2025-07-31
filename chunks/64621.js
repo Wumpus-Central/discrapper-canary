@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(980591),
     u = n(266454),
     d = n(243778),
-    f = n(970731),
-    _ = n(158776),
+    _ = n(970731),
+    f = n(158776),
     p = n(594174),
     h = n(81570),
     m = n(652853),
@@ -30,8 +30,8 @@ function A(e) {
             var e;
             return (null == (e = p.default.getCurrentUser()) ? void 0 : e.id) === A.id;
         }),
-        w = (0, a.e7)([_.Z], () =>
-            _.Z.findActivity(A.id, (e) => {
+        w = (0, a.e7)([f.Z], () =>
+            f.Z.findActivity(A.id, (e) => {
                 let { type: t } = e;
                 return t === E.IIU.CUSTOM_STATUS;
             })
@@ -40,8 +40,8 @@ function A(e) {
         [L, x] = i.useState(!1);
     (0, c.Z)(() => x(!0), D() ? I : null);
     let {
-            asset: M,
-            assetClassName: k,
+            asset: k,
+            assetClassName: M,
             className: j,
             content: U,
             header: G,
@@ -81,20 +81,20 @@ function A(e) {
                 ref: (e) => {
                     null == i || i(e);
                 },
-                children: (0, r.jsx)(f.ZP, {
+                children: (0, r.jsx)(_.ZP, {
                     className: j,
                     asset: (0, r.jsx)('img', {
                         alt: '',
-                        src: M,
-                        className: k
+                        src: k,
+                        className: M
                     }),
                     buttonCTA: b.intl.string(b.t['+IrDzM']),
-                    buttonLayout: f._F.STACKED,
+                    buttonLayout: _._F.STACKED,
                     buttonProps: {
                         color: s.Tt.BRAND_INVERTED,
                         size: s.zx.Sizes.SMALL
                     },
-                    caretPosition: 'right' === t ? f.DF.LEFT_CENTER : f.DF.RIGHT_CENTER,
+                    caretPosition: 'right' === t ? _.DF.LEFT_CENTER : _.DF.RIGHT_CENTER,
                     content: (0, r.jsx)(l.Text, {
                         variant: 'text-xs/normal',
                         color: 'always-white',

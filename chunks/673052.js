@@ -19,7 +19,7 @@ function d(e) {
         })(p),
         f = (0, l.q)(t.applicationId);
     if (null == f) return null;
-    let _ = c.intl.format(c.t.mAtJTE, {
+    let g = c.intl.format(c.t.mAtJTE, {
         username: t.author.username,
         usernameHook: m,
         applicationName: f.name,
@@ -44,6 +44,6 @@ function d(e) {
         timestamp: t.timestamp,
         compact: d,
         contentClassName: u.systemMessage,
-        children: _
+        children: g
     });
 }

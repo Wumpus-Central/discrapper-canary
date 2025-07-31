@@ -4,8 +4,8 @@ n(73800);
 var s = n(120356),
     l = n.n(s),
     a = n(481060),
-    i = n(871499),
-    o = n(388032),
+    o = n(871499),
+    i = n(388032),
     c = n(486748);
 function u(e) {
     let { className: t, count: n } = e;
@@ -49,7 +49,7 @@ function h(e) {
             return s;
         })(e, ['count']);
     return (0, r.jsx)(
-        i.Z,
+        o.Z,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -76,7 +76,7 @@ function h(e) {
             return e;
         })(
             {
-                label: o.intl.string(o.t.jNqDh4),
+                label: i.intl.string(i.t.jNqDh4),
                 iconComponent: (e) => {
                     let { className: n } = e;
                     return (0, r.jsx)(u, {

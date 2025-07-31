@@ -9,14 +9,14 @@ var i = n(442837),
     c = n(922482),
     u = n(496675),
     d = n(979651),
-    f = n(652853),
-    _ = n(475413),
+    _ = n(652853),
+    f = n(475413),
     p = n(228168),
     h = n(981631),
     m = n(388032);
 function g(e) {
     let { channel: t, onAction: n, onClose: g } = e,
-        { themeType: E } = (0, f.z)(),
+        { themeType: E } = (0, _.z)(),
         b = (0, i.e7)([d.Z], () => d.Z.isInChannel(t.id));
     if (
         !(0, i.e7)([u.Z], () => {
@@ -31,13 +31,13 @@ function g(e) {
             (e.stopPropagation(), null == n || n({ action: 'PRESS_JOIN_CALL_BUTTON' }), t.isGuildStageVoice() ? (0, c.Cq)(t) : (o.default.selectVoiceChannel(t.id), (0, l.Kh)(t.id)), null == g || g());
         };
     return E === p.lY.MODAL_V2
-        ? (0, r.jsx)(_.tG, {
+        ? (0, r.jsx)(f.tG, {
               text: b ? y() : O(),
               size: a.Ph.TINY,
               themeColor: 'secondary',
               onClick: v
           })
-        : (0, r.jsx)(_.tG, {
+        : (0, r.jsx)(f.tG, {
               text: b ? y() : O(),
               size: a.Ph.SMALL,
               themeColor: 'secondary',

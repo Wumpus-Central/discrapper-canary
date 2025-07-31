@@ -23,7 +23,7 @@ e.exports = function (e) {
         c = ['current_catalog', 'current_date', 'current_default_transform_group', 'current_path', 'current_role', 'current_schema', 'current_transform_group_for_type', 'current_user', 'session_user', 'system_time', 'system_user', 'current_time', 'localtime', 'current_timestamp', 'localtimestamp'],
         u = ['create table', 'insert into', 'primary key', 'foreign key', 'not null', 'alter table', 'add constraint', 'grouping sets', 'on overflow', 'character set', 'respect nulls', 'ignore nulls', 'nulls first', 'nulls last', 'depth first', 'breadth first'],
         d = l,
-        f = [
+        _ = [
             'abs',
             'acos',
             'all',
@@ -399,7 +399,7 @@ e.exports = function (e) {
             'last',
             'view'
         ].filter((e) => !l.includes(e)),
-        _ = {
+        f = {
             scope: 'variable',
             match: /@[a-z0-9][a-z0-9_]*/
         },
@@ -430,7 +430,7 @@ e.exports = function (e) {
             keyword: (function (e, { exceptions: t, when: n } = {}) {
                 let r = n;
                 return ((t = t || []), e.map((e) => (e.match(/\|\d+$/) || t.includes(e) ? e : r(e) ? `${e}|0` : e)));
-            })(f, { when: (e) => e.length < 3 }),
+            })(_, { when: (e) => e.length < 3 }),
             literal: a,
             type: s,
             built_in: c
@@ -442,7 +442,7 @@ e.exports = function (e) {
             },
             g,
             h,
-            _,
+            f,
             r,
             i,
             e.C_NUMBER_MODE,

@@ -11,23 +11,23 @@ function u(e) {
     let { activity: t, onAction: n } = e,
         { themeType: u } = (0, o.z)(),
         d = null == t ? void 0 : t.application_id,
-        f = (0, a.u)(d);
-    return null == f
+        _ = (0, a.u)(d);
+    return null == _
         ? null
         : u === l.lY.MODAL_V2
           ? (0, r.jsx)(s.tG, {
-                icon: f.icon,
-                text: c.intl.string(f.labelKey),
+                icon: _.icon,
+                text: c.intl.string(_.labelKey),
                 size: i.Ph.TINY,
                 themeColor: 'secondary',
-                onClick: f.openLink
+                onClick: _.openLink
             })
           : (0, r.jsx)(s.tG, {
-                icon: f.icon,
-                text: c.intl.string(f.labelKey),
+                icon: _.icon,
+                text: c.intl.string(_.labelKey),
                 size: i.Ph.SMALL,
                 fullWidth: !0,
                 themeColor: 'secondary',
-                onClick: f.openLink
+                onClick: _.openLink
             });
 }

@@ -7,8 +7,8 @@ var a,
     c = n(570140),
     u = n(189786),
     d = n(981631),
-    f = n(354459);
-function _(e, t, n) {
+    _ = n(354459);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -111,12 +111,12 @@ function x(e) {
         [i] = R(t, r, (e) => (null == e ? void 0 : e.set('channelId', n)));
     return i;
 }
-function M(e) {
+function k(e) {
     let { user: t, sessionId: n } = e,
         a = null != r && r !== t.id;
     return (a && ((m = {}), (b = {}), (O = {}), (y = {}), E.clear()), (r = t.id), (i = n), a);
 }
-function k() {
+function M() {
     ((m = {}), (b = {}), (O = {}), (y = {}), E.clear());
 }
 function j(e) {
@@ -205,16 +205,16 @@ class V extends (a = l.ZP.Store) {
     getVoicePlatformForChannel(e, t) {
         var n, a;
         let o = null != i && (null == (a = O[r]) || null == (n = a[i]) ? void 0 : n.channelId);
-        return t === r && e === o ? f.wR.DESKTOP : v[I(t, e)];
+        return t === r && e === o ? _.wR.DESKTOP : v[I(t, e)];
     }
     get userHasBeenMovedVersion() {
         return p;
     }
 }
-_(V, 'displayName', 'VoiceStateStore');
+f(V, 'displayName', 'VoiceStateStore');
 let F = new V(c.Z, {
-    CONNECTION_OPEN: M,
-    CONNECTION_OPEN_SUPPLEMENTAL: k,
+    CONNECTION_OPEN: k,
+    CONNECTION_OPEN_SUPPLEMENTAL: M,
     OVERLAY_INITIALIZE: j,
     VOICE_CHANNEL_SELECT: x,
     VOICE_STATE_UPDATES: P,

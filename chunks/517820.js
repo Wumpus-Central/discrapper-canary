@@ -11,16 +11,16 @@ var r = n(255367),
     p = n(442837),
     m = n(692547),
     f = n(481060),
-    _ = n(256638),
-    g = n(385499),
+    g = n(256638),
+    _ = n(385499),
     h = n(528011),
     b = n(533244),
     E = n(825829),
     C = n(226192),
-    O = n(36459),
-    v = n(434404),
-    y = n(518950),
-    x = n(670188),
+    v = n(36459),
+    O = n(434404),
+    x = n(518950),
+    y = n(670188),
     I = n(592125),
     j = n(271383),
     S = n(594174),
@@ -84,12 +84,12 @@ function U(e) {
     switch (i) {
         case E.nj:
         case u.p.RAID:
-            return (0, r.jsx)(H, {
+            return (0, r.jsx)(V, {
                 message: t,
                 compact: n
             });
         case u.p.MENTION_RAID:
-            return (0, r.jsx)(V, {
+            return (0, r.jsx)(H, {
                 message: t,
                 compact: n
             });
@@ -162,12 +162,12 @@ function G(e) {
             avatarSrc: u,
             avatarDecorationSrc: d,
             eventHandlers: p
-        } = (0, y.Z)({
+        } = (0, x.Z)({
             userId: null == a ? void 0 : a.id,
             guildId: o,
             size: 12
         }),
-        _ = i.useRef(null);
+        g = i.useRef(null);
     return (0, r.jsx)(z, {
         compact: l,
         header: (0, r.jsxs)(i.Fragment, {
@@ -198,8 +198,8 @@ function G(e) {
                                     color: 'text-default',
                                     children: R.intl.string(R.t.qlFrXV)
                                 }),
-                                (0, r.jsx)(x.Z, {
-                                    targetElementRef: _,
+                                (0, r.jsx)(y.Z, {
+                                    targetElementRef: g,
                                     user: a,
                                     guildId: o,
                                     channelId: n.channel_id,
@@ -210,7 +210,7 @@ function G(e) {
                                             M(
                                                 L(
                                                     {
-                                                        innerRef: _,
+                                                        innerRef: g,
                                                         className: D.alertsEnabledSubHeaderAvatarUsername
                                                     },
                                                     e
@@ -256,19 +256,19 @@ function G(e) {
         })
     });
 }
-function H(e) {
+function V(e) {
     var t;
     let { message: n, compact: l } = e,
-        { joinAttempts: a, raidDatetime: o, dmsSent: u, raidType: _, resolvedReason: g } = (0, E.FL)(n),
-        O = (0, p.e7)([I.Z], () => I.Z.getChannel(n.channel_id), [n.channel_id]),
-        v = null != (t = null == O ? void 0 : O.guild_id) ? t : null,
-        { shouldShowIncidentActions: y } = (0, h.mI)(v),
-        x = (0, N.sR)(n.author.id, n.channel_id),
+        { joinAttempts: a, raidDatetime: o, dmsSent: u, raidType: g, resolvedReason: _ } = (0, E.FL)(n),
+        v = (0, p.e7)([I.Z], () => I.Z.getChannel(n.channel_id), [n.channel_id]),
+        O = null != (t = null == v ? void 0 : v.guild_id) ? t : null,
+        { shouldShowIncidentActions: x } = (0, h.mI)(O),
+        y = (0, N.sR)(n.author.id, n.channel_id),
         j = i.useCallback(() => {
-            let e = null == O ? void 0 : O.guild_id;
+            let e = null == v ? void 0 : v.guild_id;
             null != e && (0, C.kW)(n.id, e);
-        }, [n.id, O]),
-        S = _ === d.$.DM_RAID,
+        }, [n.id, v]),
+        S = g === d.$.DM_RAID,
         T = S ? f.Mgn : f.b6m;
     return (0, r.jsx)(z, {
         compact: l,
@@ -321,7 +321,7 @@ function H(e) {
                       children: R.intl.format(R.t['4QIIZm'], { dateTime: o.toLocaleString(R.intl.currentLocale, b.pQ) })
                   })
                 : null,
-        footerButtons: y
+        footerButtons: x
             ? (0, r.jsxs)('div', {
                   className: D.footerRow,
                   children: [
@@ -339,7 +339,7 @@ function H(e) {
                                   textVariant: 'text-xs/medium',
                                   text: R.intl.string(R.t.DEoVWV),
                                   onClick: (e) => {
-                                      x(e);
+                                      y(e);
                                   }
                               })
                           ]
@@ -351,7 +351,7 @@ function H(e) {
                               variant: 'primary',
                               textVariant: 'text-xs/medium',
                               size: 'sm',
-                              text: (0, E.ge)(g),
+                              text: (0, E.ge)(_),
                               onClick: j
                           })
                       })
@@ -360,7 +360,7 @@ function H(e) {
             : null
     });
 }
-function V(e) {
+function H(e) {
     var t;
     let { message: n, compact: l } = e,
         a = null == (t = I.Z.getBasicChannel(n.channel_id)) ? void 0 : t.guild_id,
@@ -408,8 +408,8 @@ function V(e) {
                         onClick: function () {
                             null != a &&
                                 null != c &&
-                                (0, O.UE)(a, c, () => {
-                                    ((0, _.c)(u), (0, O.T9)(a));
+                                (0, v.UE)(a, c, () => {
+                                    ((0, g.c)(u), (0, v.T9)(a));
                                 });
                         }
                     })
@@ -423,7 +423,7 @@ function V(e) {
                         size: 'sm',
                         text: R.intl.string(R.t['1R7QIy']),
                         onClick: function () {
-                            null != a && v.Z.open(a, w.pNK.GUILD_AUTOMOD, void 0, w.KsC.AUTOMOD_MENTION_SPAM);
+                            null != a && O.Z.open(a, w.pNK.GUILD_AUTOMOD, void 0, w.KsC.AUTOMOD_MENTION_SPAM);
                         }
                     })
                 })
@@ -497,7 +497,7 @@ function W(e) {
                                     className: D.username,
                                     children: R.intl.string(R.t.hG1StL)
                                 }),
-                                (0, r.jsx)(g.Z, {
+                                (0, r.jsx)(_.Z, {
                                     type: Z.Hb.SYSTEM_DM,
                                     className: D.systemTag
                                 }),

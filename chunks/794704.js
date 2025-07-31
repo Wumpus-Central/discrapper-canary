@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(765250),
     _ = n(13245),
     j = n(825209),
-    E = n(593472),
-    O = n(493773),
+    O = n(593472),
+    E = n(493773),
     C = n(812206),
     v = n(835473),
     S = n(243778),
@@ -41,8 +41,8 @@ var i = n(255367),
     G = n(430561),
     F = n(131704),
     H = n(598077),
-    W = n(189786),
-    z = n(199902),
+    z = n(189786),
+    W = n(199902),
     Y = n(77498),
     K = n(355863),
     q = n(283595),
@@ -197,7 +197,7 @@ function ej(e) {
         ]
     });
 }
-function eE(e) {
+function eO(e) {
     var { children: t, className: n, onExpand: s } = e,
         l = (function (e, t) {
             if (null == e) return {};
@@ -261,7 +261,7 @@ function eE(e) {
         }
     });
 }
-let eO = new Set([R.mM.INITIALIZING, R.mM.WAITING_FOR_SCREEN_TYPE_RESOLUTION, R.mM.WAITING_FOR_MODULE_TRACKING, R.mM.WAITING_FOR_OVERLAY_OPEN]),
+let eE = new Set([R.mM.INITIALIZING, R.mM.WAITING_FOR_SCREEN_TYPE_RESOLUTION, R.mM.WAITING_FOR_MODULE_TRACKING, R.mM.WAITING_FOR_OVERLAY_OPEN]),
     eC = (e) => {
         (e.preventDefault(), e.stopPropagation());
     };
@@ -359,8 +359,8 @@ function ev(e) {
         G = !b && !D && j && !N,
         F = !j && !Z && b && !P,
         H = (null == d ? void 0 : d.overlayMethod) === R.gl.Disabled,
-        W = (null == d ? void 0 : d.state) === R.mM.OVERLAY_RENDERING && !H,
-        z = (null == d ? void 0 : d.state) != null && eO.has(d.state) && !H,
+        z = (null == d ? void 0 : d.state) === R.mM.OVERLAY_RENDERING && !H,
+        W = (null == d ? void 0 : d.state) != null && eE.has(d.state) && !H,
         K = (null == d ? void 0 : d.overlayMethod) === R.gl.OutOfProcess,
         X = (null == d ? void 0 : d.overlayMethod) === R.gl.OutOfProcessLimitedInteraction,
         J = (null == d ? void 0 : d.overlayMethod) === R.gl.Hook,
@@ -368,7 +368,7 @@ function ev(e) {
         $ = !b && !j,
         [ee, et] = (() => {
             switch (!0) {
-                case W && K:
+                case z && K:
                     return [
                         ec.intl.format(ec.t.hFVBIi, {
                             overlayMethod: ec.intl.string(ec.t.a3eXS0),
@@ -387,7 +387,7 @@ function ev(e) {
                         }),
                         null
                     ];
-                case W && X:
+                case z && X:
                     return [
                         ec.intl.format(ec.t.hFVBIi, {
                             overlayMethod: ec.intl.string(ec.t['506AbW']),
@@ -406,7 +406,7 @@ function ev(e) {
                         }),
                         null
                     ];
-                case W && J:
+                case z && J:
                     return [
                         ec.intl.format(ec.t.hFVBIi, {
                             overlayMethod: ec.intl.string(ec.t.bvlpDQ),
@@ -426,7 +426,7 @@ function ev(e) {
                         (function () {
                             var e, t;
                             switch (!0) {
-                                case (null == d ? void 0 : d.fullscreenType) !== E.Jx.BORDERLESS_FULLSCREEN:
+                                case (null == d ? void 0 : d.fullscreenType) !== O.Jx.BORDERLESS_FULLSCREEN:
                                     return ec.intl.string(ec.t.mJmbeH);
                                 case P:
                                     return ec.intl.string(ec.t.C7bLTU);
@@ -452,7 +452,7 @@ function ev(e) {
                 case G:
                 case F:
                     return [ec.intl.string(ec.t.VWUn0d), null];
-                case z:
+                case W:
                     if (K) return [ec.intl.string(ec.t['s8+CFh']), null];
                     if (J) return [ec.intl.string(ec.t.JEEdqq), null];
                     if (X) return [ec.intl.string(ec.t.pzBMwc), null];
@@ -463,13 +463,13 @@ function ev(e) {
                     return [ec.intl.string(ec.t.ONovPz), null];
             }
         })();
-    (0, O.ZP)(() => {
+    (0, E.ZP)(() => {
         f.Z.getDetectableGames();
     });
-    let [en, ei] = r.useMemo(() => (z ? ['text-muted', h.TVs.colors.TEXT_MUTED.css] : W && X ? ['text-feedback-warning', h.TVs.colors.TEXT_FEEDBACK_WARNING.css] : W && K ? ['text-feedback-positive', h.TVs.colors.TEXT_FEEDBACK_POSITIVE.css] : W && J ? ['text-primary', h.TVs.colors.TEXT_PRIMARY.css] : ['interactive-normal', h.TVs.colors.INTERACTIVE_NORMAL.css]), [z, W, X, K, J]);
+    let [en, ei] = r.useMemo(() => (W ? ['text-muted', h.TVs.colors.TEXT_MUTED.css] : z && X ? ['text-feedback-warning', h.TVs.colors.TEXT_FEEDBACK_WARNING.css] : z && K ? ['text-feedback-positive', h.TVs.colors.TEXT_FEEDBACK_POSITIVE.css] : z && J ? ['text-primary', h.TVs.colors.TEXT_PRIMARY.css] : ['interactive-normal', h.TVs.colors.INTERACTIVE_NORMAL.css]), [W, z, X, K, J]);
     return null == a
         ? null
-        : (0, i.jsxs)(eE, {
+        : (0, i.jsxs)(eO, {
               onExpand: S,
               className: v ? ed.expandedContainer : void 0,
               title: (0, i.jsxs)(i.Fragment, {
@@ -507,7 +507,7 @@ function ev(e) {
               hint: null != et ? et : void 0,
               header: (0, i.jsxs)(i.Fragment, {
                   children: [
-                      W || z
+                      z || W
                           ? (0, i.jsx)(h.pzj, {
                                 size: 'xxs',
                                 color: ei
@@ -655,7 +655,7 @@ function eN() {
                   ]
               })
           })
-        : (0, i.jsxs)(eE, {
+        : (0, i.jsxs)(eO, {
               onExpand: t,
               className: e ? ed.expandedContainer : void 0,
               title: ec.intl.string(ec.t.BfFpW1),
@@ -738,7 +738,7 @@ function eI() {
                   ]
               })
           })
-        : (0, i.jsxs)(eE, {
+        : (0, i.jsxs)(eO, {
               onExpand: t,
               className: e ? ed.expandedContainer : void 0,
               title: ec.intl.string(ec.t['7BlVIi']),
@@ -918,7 +918,7 @@ function eR(e) {
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         r = '456' + Math.floor(1000000 * Math.random());
     return {
-        voiceState: new W.Z({
+        voiceState: new z.Z({
             channelId: '123',
             userId: r,
             sessionId: '789',
@@ -1125,7 +1125,7 @@ function eZ() {
         n = () => {
             t(ea.L.DISMISS);
         };
-    return ((0, O.ZP)(() => () => {
+    return ((0, E.ZP)(() => () => {
         t(ea.L.AUTO_DISMISS);
     }),
     e !== g.z.OVERLAY_OOP_SETTINGS_NUX)
@@ -1260,7 +1260,7 @@ function ew(e) {
 function ek(e) {
     let { className: t, showHeader: n } = e,
         { runningGame: r, runningGameApplication: s } = (function () {
-            let e = (0, p.e7)([z.Z], () => z.Z.getStreamerActiveStreamMetadata()),
+            let e = (0, p.e7)([W.Z], () => W.Z.getStreamerActiveStreamMetadata()),
                 t = (0, p.e7)(
                     [T.ZP],
                     () => {
@@ -1278,7 +1278,7 @@ function ek(e) {
         })(),
         a = (0, D.o4)('user_settings').overlayV3UI,
         l = (0, p.e7)([X.default], () => X.default.getCurrentUser());
-    (0, O.ZP)(() => {
+    (0, E.ZP)(() => {
         if (en.isPlatformEmbedded) return ((0, N.Ky)(), N.P7);
     });
     let c = ex(eh);

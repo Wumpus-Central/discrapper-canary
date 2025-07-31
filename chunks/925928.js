@@ -1,6 +1,6 @@
 n.d(t, {
     ZP: () => p,
-    Zk: () => f,
+    Zk: () => _,
     d0: () => d
 });
 var r = n(913527),
@@ -18,14 +18,14 @@ let o = 60,
         months: a.t.XzBNbW,
         years: a.t.I1E8p6
     }),
-    f = () => ({
+    _ = () => ({
         minutes: a.t['GqQ/Y2'],
         hours: a.t.c5zfWV,
         days: a.t.amjnaG,
         months: a.t.SoON3d,
         years: a.t['12B3RU']
     });
-function _(e) {
+function f(e) {
     let { seconds: t, getFormatter: n } = e,
         r = n(),
         i = '';
@@ -33,7 +33,7 @@ function _(e) {
 }
 function p(e) {
     let { since: t, getFormatter: n } = e;
-    return _({
+    return f({
         seconds: i()().diff(i()(t), 's'),
         getFormatter: n
     });

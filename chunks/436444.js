@@ -13,8 +13,8 @@ var i = n(120356),
     c = n(975298),
     u = n(471885),
     d = n(267642),
-    f = n(879892),
-    _ = n(198466),
+    _ = n(879892),
+    f = n(198466),
     p = n(981631),
     h = n(474936),
     m = n(388032),
@@ -98,8 +98,8 @@ let T = {
             D = w - C,
             L = A <= N || b,
             x = L && A <= i.premiumTier,
-            M = L && A < i.premiumTier,
-            k = L && A === i.premiumTier,
+            k = L && A < i.premiumTier,
+            M = L && A === i.premiumTier,
             j = i.premiumTier < A && C >= w,
             { scaleFactor: U } = (0, s.q_F)({
                 from: { scaleFactor: 0 },
@@ -133,7 +133,7 @@ let T = {
         function B() {
             L &&
                 (j ||
-                    (0, f.u)({
+                    (0, _.u)({
                         analyticsLocations: R,
                         analyticsLocation: {
                             page: p.ZY5.PREMIUM_GUILD_USER_MODAL,
@@ -168,8 +168,8 @@ let T = {
                                 className: a()(E.progressBarMarker, {
                                     [E.progressBarMarkerUnlocked]: x,
                                     [E.progressBarMarkerLocked]: V,
-                                    [E.progressBarMarkerLower]: M,
-                                    [E.progressBarMarkerCurrent]: k
+                                    [E.progressBarMarkerLower]: k,
+                                    [E.progressBarMarkerCurrent]: M
                                 }),
                                 style: { left: ''.concat(100 * T[A], '%') }
                             },
@@ -180,7 +180,7 @@ let T = {
                             children: [
                                 !x && (0, r.jsx)('div', { className: E.boostedTierIconBackground }),
                                 x && A === p.Eu4.TIER_3
-                                    ? (0, r.jsx)(_.m, {
+                                    ? (0, r.jsx)(f.m, {
                                           confettiTriggerRef: n,
                                           setConfettiCount: O,
                                           setShouldFireConfetti: S,

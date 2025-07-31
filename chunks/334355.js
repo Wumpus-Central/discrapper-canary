@@ -13,8 +13,8 @@ e.exports = function (e) {
             return -1 !== e.input.indexOf(n, t);
         },
         d = t,
-        f = '<>',
-        _ = '</>',
+        _ = '<>',
+        f = '</>',
         p = /<[A-Za-z0-9\\._:-]+\s*\/>/,
         h = /<[A-Za-z0-9\\._:-]+/,
         m = /\/[A-Za-z0-9\\._:-]+>|\/>/,
@@ -178,13 +178,13 @@ e.exports = function (e) {
                 _: [...i, ...a]
             }
         },
-        M = {
+        k = {
             label: 'use_strict',
             className: 'meta',
             relevance: 10,
             begin: /^\s*['"]use (strict|asm)['"]/
         },
-        k = {
+        M = {
             variants: [
                 {
                     match: [/function/, /\s+/, d, /(?=\s*\()/]
@@ -255,7 +255,7 @@ e.exports = function (e) {
                 binary: 'node',
                 relevance: 5
             }),
-            M,
+            k,
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
             T,
@@ -320,8 +320,8 @@ e.exports = function (e) {
                     {
                         variants: [
                             {
-                                begin: f,
-                                end: _
+                                begin: _,
+                                end: f
                             },
                             { match: p },
                             {
@@ -342,7 +342,7 @@ e.exports = function (e) {
                     }
                 ]
             },
-            k,
+            M,
             { beginKeywords: 'while if switch catch for' },
             {
                 begin: '\\b(?!function)' + e.UNDERSCORE_IDENT_RE + '\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{',

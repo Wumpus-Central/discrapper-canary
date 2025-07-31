@@ -21,8 +21,8 @@ var r = n(112456),
     c = n(424218),
     u = n(74538),
     d = n(981631),
-    f = n(474936),
-    _ = n(388032);
+    _ = n(474936),
+    f = n(388032);
 let p = 524288000,
     h = 524288000;
 function m(e, t) {
@@ -106,7 +106,7 @@ function v(e) {
         n = u.ZP.getUserMaxFileSize(t);
     if (null == e) return n;
     let r = s.Z.getGuild(e);
-    return Math.max(null != r ? f.HO[r.premiumTier].limits.fileSize : d.mBz, n);
+    return Math.max(null != r ? _.HO[r.premiumTier].limits.fileSize : d.mBz, n);
 }
 function I(e, t) {
     let n = v(t);
@@ -127,8 +127,8 @@ function A() {
 function N(e) {
     let { guildId: t, onClick: n } = e,
         r = (0, c.BU)(v(t) / 1024, { useKibibytes: !0 }),
-        i = (0, c.BU)(f.Uq / 1024, { useKibibytes: !0 });
-    return _.intl.format(_.t.tRuxk5, {
+        i = (0, c.BU)(_.Uq / 1024, { useKibibytes: !0 });
+    return f.intl.format(f.t.tRuxk5, {
         maxSize: r,
         premiumMaxSize: i,
         onClick: n

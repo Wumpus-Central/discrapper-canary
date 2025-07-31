@@ -17,8 +17,8 @@ n(867309);
 var c = n(442837),
     u = n(704215),
     d = n(692547),
-    f = n(680018),
-    _ = n(755721),
+    _ = n(680018),
+    f = n(755721),
     p = n(481060),
     h = n(493683),
     m = n(475179),
@@ -40,8 +40,8 @@ var c = n(442837),
     D = n(871118),
     L = n(565138),
     x = n(66999),
-    M = n(359110),
-    k = n(12168),
+    k = n(359110),
+    M = n(12168),
     j = n(237583),
     U = n(131704),
     G = n(592125),
@@ -71,7 +71,7 @@ var c = n(442837),
     ec = n(981631),
     eu = n(388032),
     ed = n(610220);
-function ef(e, t, n) {
+function e_(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -84,7 +84,7 @@ function ef(e, t, n) {
         e
     );
 }
-function e_(e) {
+function ef(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -95,7 +95,7 @@ function e_(e) {
                 })
             )),
             r.forEach(function (t) {
-                ef(e, t, n[t]);
+                e_(e, t, n[t]);
             }));
     }
     return e;
@@ -175,7 +175,7 @@ function ey(e) {
     });
 }
 function eO(e) {
-    let { channel: t, user: n, onReaction: a, entry: o, buttons: s = [], header: f, onVoiceChannelPreview: m } = e,
+    let { channel: t, user: n, onReaction: a, entry: o, buttons: s = [], header: _, onVoiceChannelPreview: m } = e,
         [g, E] = i.useState(!1),
         [b, y] = i.useState(null),
         v = (0, c.e7)([V.Z], () => null != t && ec.TPd.CONTENT_ENTRY_EMBEDS.has(t.type) && V.Z.can(ec.Plq.SEND_MESSAGES, t)),
@@ -191,7 +191,7 @@ function eO(e) {
         D = null != R && 0 === s.length ? [R] : s,
         L = D.length > 0,
         x = D.length >= 2,
-        [M, k] = i.useState(!L),
+        [k, M] = i.useState(!L),
         j = q.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
         U = null != t && g ? eu.intl.formatToPlainString(eu.t['8lzR/f'], { channel: '#'.concat(t.name) }) : eu.intl.formatToPlainString(eu.t['4c+CAw'], { channel: '@'.concat(j) }),
         B = g ? eu.intl.string(eu.t.Z2CUgo) : eu.intl.string(eu.t.XLGiTE),
@@ -261,12 +261,12 @@ function eO(e) {
                 }),
                 null == r || r(i, n));
         },
-        Y = null != f ? f : null != C ? C : null != w ? w : void 0,
+        Y = null != _ ? _ : null != C ? C : null != w ? w : void 0,
         W = () => {
-            (E((e) => !e), M && (null == b || b.focus()));
+            (E((e) => !e), k && (null == b || b.focus()));
         },
         z = (e) => {
-            (k(e), e && (null == b || b.focus()));
+            (M(e), e && (null == b || b.focus()));
         };
     return (0, r.jsxs)('div', {
         style: { pointerEvents: I ? 'none' : 'all' },
@@ -291,7 +291,7 @@ function eO(e) {
                       })
                   }),
             (0, r.jsxs)('div', {
-                className: M ? ed.inputContainerShareToChannel : ed.hiddenButRenderedInputField,
+                className: k ? ed.inputContainerShareToChannel : ed.hiddenButRenderedInputField,
                 children: [
                     (0, r.jsx)(O.A7, {
                         placeholder: U,
@@ -308,7 +308,7 @@ function eO(e) {
                                       children: (e) =>
                                           (0, r.jsx)(
                                               p.P3F,
-                                              eh(e_({}, e), {
+                                              eh(ef({}, e), {
                                                   className: ed.shareToChannelButton,
                                                   onClick: W,
                                                   children: g
@@ -340,19 +340,19 @@ function eO(e) {
                         })
                 ]
             }),
-            !1 === M &&
+            !1 === k &&
                 (0, r.jsxs)('div', {
                     className: ed.primaryActionPopoutActionButtons,
                     children: [
                         (0, r.jsx)(
-                            _.zx,
+                            f.zx,
                             {
                                 className: ed.secondaryButton,
-                                color: _.zx.Colors.PRIMARY,
-                                look: _.zx.Looks.FILLED,
+                                color: f.zx.Colors.PRIMARY,
+                                look: f.zx.Looks.FILLED,
                                 onClick: () => z(!0),
                                 innerClassName: ed.iconButton,
-                                size: x ? _.zx.Sizes.MIN : _.zx.Sizes.MEDIUM,
+                                size: x ? f.zx.Sizes.MIN : f.zx.Sizes.MEDIUM,
                                 children:
                                     !x &&
                                     (0, r.jsx)(p.Text, {
@@ -405,7 +405,7 @@ let ev = (e) => {
                               'aria-label': eu.intl.formatToPlainString(eu.t.kilW3t, { emojiName: t.name }),
                               color: p.ua7.Colors.PRIMARY,
                               shouldShow: !s && void 0,
-                              children: (0, r.jsx)(k.u, {
+                              children: (0, r.jsx)(M.u, {
                                   emoji: t,
                                   isDisabled: !a,
                                   onClick: () => n({ emoji: t }),
@@ -422,11 +422,11 @@ let ev = (e) => {
 function eI(e) {
     let { channel: t, userDescription: n, entry: i, disableGameProfileLinks: a, onUserPopoutClosed: s } = e,
         l = null == t ? void 0 : t.guild_id,
-        { displayParticipants: u, participant1: d, participant2: f, numOtherParticipants: _ } = (0, en.Z)(i, 3),
+        { displayParticipants: u, participant1: d, participant2: _, numOtherParticipants: f } = (0, en.Z)(i, 3),
         h = (0, c.e7)([H.default], () => H.default.getUser(i.author_id)),
         { streamPreviewUrl: m } = (0, er.Z)(i),
         g = null != m,
-        E = [d, f];
+        E = [d, _];
     return (0, r.jsxs)('div', {
         className: ed.popoutContentHeader,
         children: [
@@ -451,7 +451,7 @@ function eI(e) {
                         children: eu.intl.format(n, {
                             user0: q.ZP.getName(l, null == t ? void 0 : t.id, E[0]),
                             user1: q.ZP.getName(l, null == t ? void 0 : t.id, E[1]),
-                            countOthers: _,
+                            countOthers: f,
                             countOthersHook: (e, t) =>
                                 (0, r.jsx)(
                                     p.Text,
@@ -514,7 +514,7 @@ function eT(e) {
 }
 function eS(e) {
     var t,
-        { title: n, subtitle: i, badges: a, children: s, onClickThumbnail: l, onClickTitle: c, onClickSubtitle: u, headerIcons: d, disableGameProfileLinks: _ = !1, showCoverImage: h = !0, onUserPopoutClosed: m, trackRankingItemInteraction: g } = e,
+        { title: n, subtitle: i, badges: a, children: s, onClickThumbnail: l, onClickTitle: c, onClickSubtitle: u, headerIcons: d, disableGameProfileLinks: f = !1, showCoverImage: h = !0, onUserPopoutClosed: m, trackRankingItemInteraction: g } = e,
         E = em(e, ['title', 'subtitle', 'badges', 'children', 'onClickThumbnail', 'onClickTitle', 'onClickSubtitle', 'headerIcons', 'disableGameProfileLinks', 'showCoverImage', 'onUserPopoutClosed', 'trackRankingItemInteraction']);
     let { entry: b } = E,
         y = (0, Q.dX)(b),
@@ -523,7 +523,7 @@ function eS(e) {
         I = (0, P.Z)(
             {
                 location: 'ContentPopout',
-                applicationId: _ ? void 0 : O,
+                applicationId: f ? void 0 : O,
                 source: R.m1.ActivityCard,
                 trackEntryPointImpression: !0,
                 sourceUserId: b.author_id
@@ -538,7 +538,7 @@ function eS(e) {
     return (0, r.jsxs)('div', {
         className: ed.popoutContentWrapper,
         children: [
-            (0, r.jsx)(eI, eh(e_({ disableGameProfileLinks: _ }, E), { onUserPopoutClosed: m })),
+            (0, r.jsx)(eI, eh(ef({ disableGameProfileLinks: f }, E), { onUserPopoutClosed: m })),
             (0, r.jsxs)(eb, {
                 backgroundImgSrc: null == T ? void 0 : T.src,
                 children: [
@@ -588,7 +588,7 @@ function eS(e) {
                         ]
                     }),
                     null != v
-                        ? (0, r.jsx)(f.z, {
+                        ? (0, r.jsx)(_.z, {
                               icon: v.icon,
                               text: eu.intl.string(v.labelKey),
                               variant: 'secondary',
@@ -604,7 +604,7 @@ function eS(e) {
 }
 function eA(e) {
     var t,
-        { title: n, subtitle: a, badges: o, stream: s, onClickThumbnail: l, onClickTitle: u, onClickSubtitle: d, onUserPopoutClosed: _, trackRankingItemInteraction: h } = e,
+        { title: n, subtitle: a, badges: o, stream: s, onClickThumbnail: l, onClickTitle: u, onClickSubtitle: d, onUserPopoutClosed: f, trackRankingItemInteraction: h } = e,
         m = em(e, ['title', 'subtitle', 'badges', 'stream', 'onClickThumbnail', 'onClickTitle', 'onClickSubtitle', 'onUserPopoutClosed', 'trackRankingItemInteraction']);
     let b = (0, c.e7)([G.Z], () => G.Z.getChannel(null == s ? void 0 : s.channelId)),
         [y] = i.useMemo(() => (0, w.p9)(b, Y.Z, B.Z, V.Z, N.Z), [b]),
@@ -623,13 +623,13 @@ function eA(e) {
             { onOpened: () => (null == h ? void 0 : h(el.xP.OPENED_GAME_PROFILE)) }
         ),
         A = v ? S : void 0,
-        { activity: L, activityApplication: x, fallbackApplication: M } = (0, et.Z)(O),
-        { largeImage: k, smallImage: j } = (0, X.YC)(L, null != x ? x : M),
+        { activity: L, activityApplication: x, fallbackApplication: k } = (0, et.Z)(O),
+        { largeImage: M, smallImage: j } = (0, X.YC)(L, null != x ? x : k),
         { largeImage: U } = (0, X.rv)({ entry: O });
     return (0, r.jsxs)('div', {
         className: ed.popoutContentWrapper,
         children: [
-            (0, r.jsx)(eI, eh(e_({}, m), { onUserPopoutClosed: _ })),
+            (0, r.jsx)(eI, eh(ef({}, m), { onUserPopoutClosed: f })),
             (0, r.jsxs)(eb, {
                 backgroundImgSrc: null == U ? void 0 : U.src,
                 className: ed.streamingPopoutHero,
@@ -662,11 +662,11 @@ function eA(e) {
                     (0, r.jsxs)('div', {
                         className: ed.streamingPopoutHeader,
                         children: [
-                            null != k &&
+                            null != M &&
                                 (0, r.jsx)('div', {
                                     className: ed.popoutThumbnailContainer,
                                     children: (0, r.jsx)($.E, {
-                                        image: k,
+                                        image: M,
                                         smallImage: j,
                                         onClick: null != l ? l : A,
                                         size: $.J.SIZE_72
@@ -701,7 +701,7 @@ function eA(e) {
                         ]
                     }),
                     null != T
-                        ? (0, r.jsx)(f.z, {
+                        ? (0, r.jsx)(_.z, {
                               icon: T.icon,
                               text: eu.intl.string(T.labelKey),
                               variant: 'secondary',
@@ -718,11 +718,11 @@ function eN(e) {
     var { IconComponent: t, children: n, className: i } = e,
         a = em(e, ['IconComponent', 'children', 'className']);
     return (0, r.jsxs)(
-        _.zx,
-        eh(e_({}, a), {
+        f.zx,
+        eh(ef({}, a), {
             className: o()(i, ed.primaryButton),
             innerClassName: null != t ? ed.iconButton : void 0,
-            size: _.zx.Sizes.MEDIUM,
+            size: f.zx.Sizes.MEDIUM,
             children: [
                 null != t
                     ? (0, r.jsx)(t, {
@@ -754,7 +754,7 @@ function eC(e) {
                       children: [
                           (0, r.jsxs)(p.P3F, {
                               'aria-label': eu.intl.string(eu.t['W/A4Qk']),
-                              onClick: () => (0, M.Kh)(n.id),
+                              onClick: () => (0, k.Kh)(n.id),
                               className: ed.voiceChannelPopoutReactorChannel,
                               children: [
                                   (0, r.jsx)(L.Z, {
@@ -812,17 +812,17 @@ function eR(e) {
         { streamPreviewUrl: o, channel: s } = (0, er.Z)(n),
         { needSubscriptionToAccess: l } = (0, x.Z)(null == t ? void 0 : t.id),
         u = (0, c.e7)([B.Z], () => (null != s ? B.Z.getGuild(s.guild_id) : void 0)),
-        f = (0, c.Wu)([W.ZP], () => (null != s ? W.ZP.getVoiceStatesForChannel(s) : []), [s]),
+        _ = (0, c.Wu)([W.ZP], () => (null != s ? W.ZP.getVoiceStatesForChannel(s) : []), [s]),
         h = (0, c.e7)([Y.Z], () => Y.Z.isInChannel(null == s ? void 0 : s.id)),
         g = i.useMemo(() => {
-            for (let e of f) {
+            for (let e of _) {
                 let t = G.Z.getDMFromUserId(e.user.id),
                     n = null != t && Z.ZP.isChannelMuted(null, t),
                     r = F.Z.isBlockedOrIgnored(e.user.id);
                 if (n || r) return !0;
             }
             return !1;
-        }, [f]);
+        }, [_]);
     if (null == s || null == u)
         return {
             voiceBar: void 0,
@@ -830,7 +830,7 @@ function eR(e) {
         };
     let E = null != o,
         b = () => {
-            (m.Z.updateChatOpen(s.id, !0), (0, M.Kh)(s.id), null == a || a(s));
+            (m.Z.updateChatOpen(s.id, !0), (0, k.Kh)(s.id), null == a || a(s));
         },
         y = () => {
             v.Z.handleVoiceConnect({
@@ -879,7 +879,7 @@ function eR(e) {
                             children: (e) =>
                                 (0, r.jsxs)(
                                     p.P3F,
-                                    eh(e_({}, e), {
+                                    eh(ef({}, e), {
                                         'aria-label': eu.intl.string(eu.t.WIVYqK),
                                         onClick: b,
                                         className: ed.voiceChannelPopoutReactorChannel,
@@ -910,7 +910,7 @@ function eR(e) {
                         }),
                         (0, r.jsx)(j.Z, {
                             guildId: u.id,
-                            users: f,
+                            users: _,
                             max: 3,
                             renderUser: (e, t) =>
                                 (0, r.jsx)(p.qEK, {
@@ -941,8 +941,8 @@ function eR(e) {
                   children: (e) =>
                       (0, r.jsx)(
                           eN,
-                          eh(e_({}, e), {
-                              color: _.zx.Colors.GREEN,
+                          eh(ef({}, e), {
+                              color: f.zx.Colors.GREEN,
                               onClick: y,
                               IconComponent: E ? p.pzj : p.gj8,
                               children: E ? eu.intl.string(eu.t['I6JG4+']) : eu.intl.string(eu.t.VJlc0d)

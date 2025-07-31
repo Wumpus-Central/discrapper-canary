@@ -11,11 +11,11 @@ var r = n(48657),
             i = 3 === e,
             u = 4 === e,
             d = 6 === e,
-            f = 7 === e,
-            _ = 5 === e || d;
+            _ = 7 === e,
+            f = 5 === e || d;
         return function (p, h, m, g) {
-            for (var E, b, y = o(p), O = a(y), v = s(O), I = r(h, m), T = 0, S = g || l, A = t ? S(p, v) : n || f ? S(p, 0) : void 0; v > T; T++)
-                if ((_ || T in O) && ((b = I((E = O[T]), T, y)), e))
+            for (var E, b, y = o(p), O = a(y), v = s(O), I = r(h, m), T = 0, S = g || l, A = t ? S(p, v) : n || _ ? S(p, 0) : void 0; v > T; T++)
+                if ((f || T in O) && ((b = I((E = O[T]), T, y)), e))
                     if (t) A[T] = b;
                     else if (b)
                         switch (e) {

@@ -8,10 +8,10 @@ var r = n(255367),
     c = n(590921),
     u = n(761652),
     d = n(388032);
-function f(e) {
+function _(e) {
     return ''.concat(u.ME).concat(e.name);
 }
-function _(e) {
+function f(e) {
     return '<@$'.concat(e.id, '>');
 }
 let p = {
@@ -27,7 +27,7 @@ let p = {
                 onHover: s,
                 onClick: c
             } = e,
-            f = t.map((e, t) =>
+            _ = t.map((e, t) =>
                 (0, r.jsx)(
                     a.ZP.Game,
                     {
@@ -40,19 +40,19 @@ let p = {
                     e.id
                 )
             ),
-            _ = d.t.rPNimp,
+            f = d.t.rPNimp,
             p = 'Games';
         return (0, r.jsxs)(
             i.Fragment,
             {
                 children: [
                     (0, l.gm)({
-                        titleWithQuery: _,
+                        titleWithQuery: f,
                         titleWithoutQuery: p,
                         query: o,
                         getQuery: (e) => ''.concat(u.ME).concat(e)
                     }),
-                    f
+                    _
                 ]
             },
             'mentions'
@@ -65,6 +65,6 @@ let p = {
                 options: r
             } = e,
             i = t[n];
-        return (r.replaceInlineInput('gameMentionInput', f(i), _(i)), { type: c.z2.MENTION });
+        return (r.replaceInlineInput('gameMentionInput', _(i), f(i)), { type: c.z2.MENTION });
     }
 };

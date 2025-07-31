@@ -1,12 +1,12 @@
 (n.d(t, {
     $X: () => c,
-    IO: () => _,
+    IO: () => f,
     M_: () => o,
     U3: () => d,
     b4: () => l,
     c9: () => s,
     mu: () => u,
-    tA: () => f,
+    tA: () => _,
     zs: () => a
 }),
     n(388685));
@@ -19,7 +19,7 @@ let a = 'publicSuccessModalSeen',
     c = [i.Plq.ADMINISTRATOR, i.Plq.KICK_MEMBERS, i.Plq.BAN_MEMBERS, i.Plq.MANAGE_GUILD, i.Plq.MANAGE_CHANNELS, i.Plq.MANAGE_ROLES, i.Plq.MANAGE_MESSAGES, i.Plq.MANAGE_GUILD_EXPRESSIONS, i.Plq.CREATE_GUILD_EXPRESSIONS, i.Plq.MANAGE_EVENTS, i.Plq.CREATE_EVENTS, i.Plq.MODERATE_MEMBERS, i.Plq.MENTION_EVERYONE],
     u = r.$e(...c),
     d = 1000,
-    f = 'Enable Community Modal';
-var _ = (function (e) {
+    _ = 'Enable Community Modal';
+var f = (function (e) {
     return ((e.SAFETY_CHECK = 'safety_check'), (e.BASICS = 'basics'), (e.FINISH = 'finish'), e);
 })({});

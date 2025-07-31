@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(179360),
     d = n(40851),
-    f = n(906732),
-    _ = n(975298),
+    _ = n(906732),
+    f = n(975298),
     p = n(125529),
     h = n(124570),
     m = n(404380),
@@ -95,13 +95,13 @@ function w(e, t) {
     return i;
 }
 let D = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: A, targetBoostedGuildTier: C, onClose: w = () => {}, closeLayer: D = () => {}, pauseAnimation: L = !1, applicationId: x, handleSubscribeModalClose: M, withHighlight: k = !1, icon: j, intent: U } = e,
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: A, targetBoostedGuildTier: C, onClose: w = () => {}, closeLayer: D = () => {}, pauseAnimation: L = !1, applicationId: x, handleSubscribeModalClose: k, withHighlight: M = !1, icon: j, intent: U } = e,
         G = P(e, ['analyticsLocation', 'analyticsSourceLocation', 'guild', 'buttonText', 'targetBoostedGuildTier', 'onClose', 'closeLayer', 'pauseAnimation', 'applicationId', 'handleSubscribeModalClose', 'withHighlight', 'icon', 'intent']),
-        { analyticsLocations: B } = (0, f.ZP)(),
+        { analyticsLocations: B } = (0, _.ZP)(),
         V = (0, d.bp)() === v.IlC.POPOUT,
         [F, Z] = i.useState(!1),
         H = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
-        { fractionalState: Y } = (0, _.Z)(),
+        { fractionalState: Y } = (0, f.Z)(),
         W = (0, h.y)('guild_boosting_subscribe_button', H, Y),
         K = (0, s.e7)([E.Z], () => E.Z.hasFetched);
     i.useEffect(() => {
@@ -122,7 +122,7 @@ let D = (e) => {
                     closeLayer: D,
                     inPopout: V,
                     applicationId: x,
-                    handleSubscribeModalClose: M,
+                    handleSubscribeModalClose: k,
                     intent: U
                 }),
                 Z(!1));
@@ -170,7 +170,7 @@ let D = (e) => {
         : (0, r.jsx)(
               c.gtL,
               R(N({ size: l.zx.Sizes.SMALL }, G), {
-                  className: o()(G.className, { [S.buttonHighlighted]: k }),
+                  className: o()(G.className, { [S.buttonHighlighted]: M }),
                   submitting: F,
                   onClick: Q,
                   pauseAnimation: L,

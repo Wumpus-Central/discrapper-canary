@@ -11,16 +11,16 @@ var r = n(255367),
     p = n(367907),
     m = n(676742),
     f = n(1585),
-    _ = n(841762),
-    g = n(336197),
+    g = n(841762),
+    _ = n(336197),
     h = n(406432),
     b = n(348238),
     E = n(38267),
     C = n(884902),
-    O = n(670188),
-    v = n(695346),
-    y = n(271383),
-    x = n(594174),
+    v = n(670188),
+    O = n(695346),
+    x = n(271383),
+    y = n(594174),
     I = n(768581),
     j = n(900849),
     S = n(506071),
@@ -79,28 +79,28 @@ function M(e) {
     let { embedUrl: k, message: U, channel: F } = e,
         B = i.useRef(null),
         G = i.useRef(null),
-        H = (0, N.J)(k, U),
-        { setPopout: V } = (0, E.Z)(U.id, A.d$),
-        z = (0, b.qo)(U, F, V, !0),
-        W = v.QK.useSetting(),
+        V = (0, N.J)(k, U),
+        { setPopout: H } = (0, E.Z)(U.id, A.d$),
+        z = (0, b.qo)(U, F, H, !0),
+        W = O.QK.useSetting(),
         K = (0, S.n)(),
         [Y, X] = i.useState(!1),
-        [q, Q] = i.useState((null == H ? void 0 : H.coverImage) == null),
+        [q, Q] = i.useState((null == V ? void 0 : V.coverImage) == null),
         J = (0, c.e7)(
-            [y.ZP, x.default],
+            [x.ZP, y.default],
             () => {
                 var e;
-                return y.ZP.isMember(null == H ? void 0 : H.guildId, null == (e = x.default.getCurrentUser()) ? void 0 : e.id);
+                return x.ZP.isMember(null == V ? void 0 : V.guildId, null == (e = y.default.getCurrentUser()) ? void 0 : e.id);
             },
-            [H]
+            [V]
         ),
-        $ = (0, c.e7)([y.ZP], () => ((null == H ? void 0 : H.authorId) != null ? y.ZP.getMember(H.guildId, H.authorId) : null)),
-        ee = (0, m.Z)((null == $ ? void 0 : $.avatarDecoration) != null ? (null == $ ? void 0 : $.avatarDecoration) : null == H || null == (t = H.user) ? void 0 : t.avatarDecoration),
+        $ = (0, c.e7)([x.ZP], () => ((null == V ? void 0 : V.authorId) != null ? x.ZP.getMember(V.guildId, V.authorId) : null)),
+        ee = (0, m.Z)((null == $ ? void 0 : $.avatarDecoration) != null ? (null == $ ? void 0 : $.avatarDecoration) : null == V || null == (t = V.user) ? void 0 : t.avatarDecoration),
         [et, en, er] = i.useMemo(() => {
             var e, t;
             return [null != (e = null == $ ? void 0 : $.colorString) ? e : 'inherit', null != (t = null == $ ? void 0 : $.colorStrings) ? t : null, null == $ ? void 0 : $.colorRoleId];
         }, [$]),
-        ei = (0, C.X7)(null == $ ? void 0 : $.guildId, null != (l = null == H ? void 0 : H.authorId) ? l : void 0, en),
+        ei = (0, C.X7)(null == $ ? void 0 : $.guildId, null != (l = null == V ? void 0 : V.authorId) ? l : void 0, en),
         { reducedMotion: el } = i.useContext(u.Sfi),
         [ea, eo] = i.useState(!1),
         es = i.useCallback(() => {
@@ -110,27 +110,27 @@ function M(e) {
             X(!1);
         }, [X]),
         eu = i.useCallback(async () => {
-            null != H &&
+            null != V &&
                 ((0, p.yw)(P.rMx.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
-                    media_post_id: H.threadId,
+                    media_post_id: V.threadId,
                     channel_id: F.id,
-                    can_access: H.canAccess,
+                    can_access: V.canAccess,
                     is_member: J
                 }),
-                H.canAccess ? (0, g.Z)(P.Z5c.CHANNEL(H.guildId, H.threadId, H.messageId)) : J ? (0, g.Z)(P.Z5c.CHANNEL(H.guildId, H.parentChannelId)) : await j.Ub(H.guildId, {}, { channelId: H.parentChannelId }));
-        }, [H, F, J]);
-    if (null == H) return null;
+                V.canAccess ? (0, _.Z)(P.Z5c.CHANNEL(V.guildId, V.threadId, V.messageId)) : J ? (0, _.Z)(P.Z5c.CHANNEL(V.guildId, V.parentChannelId)) : await j.Ub(V.guildId, {}, { channelId: V.parentChannelId }));
+        }, [V, F, J]);
+    if (null == V) return null;
     let ed = (0, I.NZ)({
             avatarDecoration: ee,
             size: (0, f.y9)(u.EFr.SIZE_40),
             canAnimate: ea
         }),
-        ep = null == (n = H.user) ? void 0 : n.getAvatarURL(H.guildId, 40, ea),
+        ep = null == (n = V.user) ? void 0 : n.getAvatarURL(V.guildId, 40, ea),
         em = () => {
             el.enabled || eo((e) => !e);
         },
-        ef = H.coverImage,
-        e_ = null != ef && (0, h.d$)(ef);
+        ef = V.coverImage,
+        eg = null != ef && (0, h.d$)(ef);
     return (0, r.jsxs)('div', {
         className: Z.postPreviewContainer,
         children: [
@@ -140,25 +140,25 @@ function M(e) {
                 onMouseLeave: ec,
                 children: [
                     !q &&
-                        (!0 === H.shouldShowBlurredThumbnailImage
+                        (!0 === V.shouldShowBlurredThumbnailImage
                             ? (0, r.jsx)('img', {
                                   src: R,
                                   alt: w.intl.string(w.t.rIbh8P),
-                                  className: a()(Z.thumbnail, { [Z.spoiler]: H.shouldSpoiler }),
+                                  className: a()(Z.thumbnail, { [Z.spoiler]: V.shouldSpoiler }),
                                   onContextMenu: z,
                                   onError: () => Q(!0)
                               })
-                            : (0, r.jsx)(_.Z, {
-                                  src: !(K && (W || Y)) && e_ ? ''.concat(ef, '?format=png') : ef,
+                            : (0, r.jsx)(g.Z, {
+                                  src: !(K && (W || Y)) && eg ? ''.concat(ef, '?format=png') : ef,
                                   backgroundSrc: ''.concat(ef, '?format=png'),
                                   alt: w.intl.string(w.t.rIbh8P),
                                   aspectRatio: 16 / 9,
-                                  className: a()(Z.thumbnail, { [Z.spoiler]: H.shouldSpoiler }),
+                                  className: a()(Z.thumbnail, { [Z.spoiler]: V.shouldSpoiler }),
                                   imageChildClassName: Z.thumbnailImage,
                                   onContextMenu: z,
                                   onError: () => Q(!0)
                               })),
-                    null != H.coverImageOverlayText &&
+                    null != V.coverImageOverlayText &&
                         (0, r.jsx)(u.P3F, {
                             onClick: eu,
                             children: (0, r.jsx)('div', {
@@ -170,7 +170,7 @@ function M(e) {
                                         (0, r.jsx)(u.Text, {
                                             variant: 'text-sm/semibold',
                                             color: 'always-white',
-                                            children: H.coverImageOverlayText
+                                            children: V.coverImageOverlayText
                                         })
                                     ]
                                 })
@@ -188,29 +188,29 @@ function M(e) {
                                 variant: 'text-md/semibold',
                                 color: 'text-default',
                                 className: Z.descriptionHeaderText,
-                                children: H.title
+                                children: V.title
                             }),
                             (0, r.jsx)(u.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
                                 className: a()(Z.descriptionHeaderText, Z.descriptionSubtitle),
-                                children: H.subtitle
+                                children: V.subtitle
                             })
                         ]
                     }),
                     (0, r.jsxs)('div', {
                         className: Z.descriptionFooter,
                         children: [
-                            null != H.authorId &&
+                            null != V.authorId &&
                                 null != ep &&
-                                (0, r.jsx)(O.Z, {
+                                (0, r.jsx)(v.Z, {
                                     targetElementRef: G,
-                                    userId: H.authorId,
-                                    guildId: H.guildId,
+                                    userId: V.authorId,
+                                    guildId: V.guildId,
                                     channelId: F.id,
                                     messageId: U.id,
                                     roleId: er,
-                                    avatarUrl: H.avatarUrl,
+                                    avatarUrl: V.avatarUrl,
                                     newAnalyticsLocations: [d.Z.AVATAR],
                                     spacing: 12,
                                     children: (e) =>
@@ -235,7 +235,7 @@ function M(e) {
                                     (0, r.jsxs)('div', {
                                         className: Z.descriptionFooterChannelName,
                                         children: [
-                                            null != H.channelName &&
+                                            null != V.channelName &&
                                                 (0, r.jsx)(u.EAQ, {
                                                     size: 'md',
                                                     color: 'currentColor',
@@ -247,43 +247,43 @@ function M(e) {
                                                 children: (0, r.jsx)(u.X6q, {
                                                     variant: 'heading-md/semibold',
                                                     color: 'header-primary',
-                                                    children: null != (M = H.channelName) ? M : H.guildName
+                                                    children: null != (M = V.channelName) ? M : V.guildName
                                                 })
                                             })
                                         ]
                                     }),
-                                    null != H.authorName &&
+                                    null != V.authorName &&
                                         (0, r.jsx)(u.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'text-muted',
                                             className: Z.descriptionFooterAuthorContainer,
                                             children: w.intl.format(w.t.voIDKS, {
-                                                authorName: H.authorName,
+                                                authorName: V.authorName,
                                                 authorNameHook: () =>
-                                                    null == H.authorId
+                                                    null == V.authorId
                                                         ? (0, r.jsx)(u.rz2, {
-                                                              name: H.authorName,
+                                                              name: V.authorName,
                                                               colorString: et,
                                                               colorStrings: ei,
                                                               className: Z.authorName
                                                           })
                                                         : (0, r.jsx)(
-                                                              O.Z,
+                                                              v.Z,
                                                               {
                                                                   targetElementRef: B,
-                                                                  userId: H.authorId,
-                                                                  guildId: H.guildId,
+                                                                  userId: V.authorId,
+                                                                  guildId: V.guildId,
                                                                   channelId: F.id,
                                                                   messageId: U.id,
                                                                   roleId: er,
-                                                                  avatarUrl: H.avatarUrl,
+                                                                  avatarUrl: V.avatarUrl,
                                                                   newAnalyticsLocations: [d.Z.USERNAME],
                                                                   children: (e) =>
                                                                       (0, r.jsx)(
                                                                           u.rz2,
                                                                           L(D({}, e), {
                                                                               ref: B,
-                                                                              name: H.authorName,
+                                                                              name: V.authorName,
                                                                               colorString: et,
                                                                               colorStrings: ei,
                                                                               className: Z.authorName
@@ -296,16 +296,16 @@ function M(e) {
                                         })
                                 ]
                             }),
-                            H.canAccess
+                            V.canAccess
                                 ? (0, r.jsx)(u.zxk, {
                                       variant: 'primary',
                                       onClick: eu,
-                                      text: H.ctaText
+                                      text: V.ctaText
                                   })
                                 : (0, r.jsx)(u.zxk, {
                                       onClick: eu,
                                       variant: 'primary',
-                                      text: H.ctaText
+                                      text: V.ctaText
                                   })
                         ]
                     })

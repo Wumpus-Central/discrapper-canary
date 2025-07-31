@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function f(e, t) {
         e
     );
 }
-let _ = 600000,
+let f = 600000,
     p = 600000;
 function h(e, t, n) {
     let c = (0, i.e7)([a.Z], () => a.Z.hasLoadedExperiments),
@@ -72,13 +72,13 @@ function h(e, t, n) {
             if (!c || m) return;
             let r = Date.now() - b < p;
             if (E && r) return;
-            let i = f(u({}, e), {
+            let i = _(u({}, e), {
                     includeBundles: d,
                     variantsReturnStyle: h,
                     skipNumCategories: v
                 }),
                 a = !(0, o.oc)(g, i),
-                s = Date.now() - y < _;
+                s = Date.now() - y < f;
             (a || !s) && (0, o.F$)(i, t, n);
         }, [c, m, g, y, e, E, d, b, h, t, n, v]),
         {
@@ -86,7 +86,7 @@ function h(e, t, n) {
             categories: O,
             fetchCategoriesError: E,
             refreshCategories: (0, r.useCallback)(() => {
-                let t = f(u({}, e), {
+                let t = _(u({}, e), {
                     includeBundles: d,
                     skipNumCategories: v
                 });

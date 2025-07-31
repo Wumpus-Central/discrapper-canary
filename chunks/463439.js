@@ -1,131 +1,100 @@
-(n.d(e, { Z: () => g }), n(388685));
+(n.d(e, { Z: () => m }), n(388685));
 var r = n(255367),
-    s = n(73800),
-    i = n(755721),
-    o = n(481060),
-    c = n(442837),
-    a = n(194359),
-    l = n(782568),
-    u = n(726521),
+    i = n(73800),
+    s = n(481060),
+    a = n(442837),
+    o = n(194359),
+    c = n(782568),
+    l = n(726521),
     d = n(485664),
-    E = n(681678),
-    h = n(699516),
+    u = n(681678),
+    E = n(699516),
     _ = n(473092),
-    N = n(991981),
-    x = n(850165),
-    b = n(134612),
-    p = n(388032),
-    f = n(948582),
-    m = n(149355);
-function g(t) {
-    let { senderId: e, channelId: n, hasReported: g, onReport: C, trackAnalyticsEvent: I } = t,
-        A = (0, c.e7)([h.Z], () => h.Z.isBlocked(e)),
-        [T, S] = s.useState(A),
-        O = (0, d.o)(),
-        j = (0, d.Q)(),
-        [R, M] = s.useState(!1),
-        v = (0, N.q)(n),
-        y = s.useMemo(() => (O ? 0 : j ? 2 : 1), [O, j]),
-        z = () => {
-            (S(!0),
-                I(_.NM.USER_TAKEOVER_MODAL_BLOCK),
-                a.Z.blockUser(e, { location: b.DL }).then(() => {
-                    E.Z.showBlockSuccessToast(e, n);
+    h = n(991981),
+    p = n(850165),
+    f = n(134612),
+    x = n(388032),
+    N = n(948582),
+    g = n(149355);
+function m(t) {
+    let { senderId: e, channelId: n, hasReported: m, onReport: T, trackAnalyticsEvent: b } = t,
+        A = (0, a.e7)([E.Z], () => E.Z.isBlocked(e)),
+        [C, O] = i.useState(A),
+        v = (0, d.o)(),
+        I = (0, d.Q)(),
+        [S, j] = i.useState(!1),
+        y = (0, h.q)(n),
+        M = i.useMemo(() => (v ? 0 : I ? 2 : 1), [v, I]),
+        R = () => {
+            (O(!0),
+                b(_.NM.USER_TAKEOVER_MODAL_BLOCK),
+                o.Z.blockUser(e, { location: f.DL }).then(() => {
+                    u.Z.showBlockSuccessToast(e, n);
                 }));
         },
-        L = () => {
-            (S(!1), a.Z.unblockUser(e, { location: b.DL }), I(_.NM.USER_TAKEOVER_MODAL_UNBLOCK), E.Z.showUnblockSuccessToast(e, n));
+        w = () => {
+            (O(!1), o.Z.unblockUser(e, { location: f.DL }), b(_.NM.USER_TAKEOVER_MODAL_UNBLOCK), u.Z.showUnblockSuccessToast(e, n));
         },
-        w = async () => {
-            null != v &&
-                (M(!0),
-                await (0, u.J7)(
-                    v,
+        P = async () => {
+            null != y &&
+                (j(!0),
+                await (0, l.J7)(
+                    y,
                     () => {
-                        (E.Z.showReportSuccessToast(e, n), C());
+                        (u.Z.showReportSuccessToast(e, n), T());
                     },
                     () => {
-                        E.Z.showFailedToast();
+                        u.Z.showFailedToast();
                     }
                 ),
-                M(!1),
-                I(_.NM.USER_TAKEOVER_MODAL_REPORT));
+                j(!1),
+                b(_.NM.USER_TAKEOVER_MODAL_REPORT));
         },
-        P = (t) => {
-            0 === t ? ((0, l.Z)(b.EI), I(_.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === t ? ((0, l.Z)(b.$l), I(_.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, l.Z)(b.n4), I(_.NM.USER_TAKEOVER_MODAL_NO_FILTR));
+        D = (t) => {
+            0 === t ? ((0, c.Z)(f.EI), b(_.NM.USER_TAKEOVER_MODAL_CTL)) : 2 === t ? ((0, c.Z)(f.$l), b(_.NM.USER_TAKEOVER_MODAL_THROUGHLINE)) : ((0, c.Z)(f.n4), b(_.NM.USER_TAKEOVER_MODAL_NO_FILTR));
         },
-        D = s.useMemo(() => {
-            switch (y) {
+        L = i.useMemo(() => {
+            switch (M) {
                 case 0:
-                    return p.intl.string(p.t.sZf6c3);
+                    return x.intl.string(x.t.sZf6c3);
                 case 2:
-                    return p.intl.string(p.t.HQ2nKi);
+                    return x.intl.string(x.t.HQ2nKi);
                 default:
-                    return p.intl.string(p.t['65XQam']);
+                    return x.intl.string(x.t['65XQam']);
             }
-        }, [y]);
-    return (0, r.jsx)(x.Z, {
-        heroImageSrc: m,
-        heroImageAlt: p.intl.string(p.t.RVyYCA),
-        header: p.intl.string(p.t['mWO+ys']),
-        description: p.intl.string(p.t.S0XtKC),
+        }, [M]);
+    return (0, r.jsx)(p.Z, {
+        heroImageSrc: g,
+        heroImageAlt: x.intl.string(x.t.RVyYCA),
+        header: x.intl.string(x.t['mWO+ys']),
+        description: x.intl.string(x.t.S0XtKC),
         children: (0, r.jsxs)('div', {
-            className: f.buttonContainer,
+            className: N.buttonContainer,
             children: [
-                (0, r.jsxs)(i.zx, {
-                    color: i.zx.Colors.BRAND,
-                    size: i.zx.Sizes.LARGE,
-                    className: f.button,
-                    innerClassName: f.buttonInner,
+                (0, r.jsx)(s.zxk, {
+                    text: C ? x.intl.string(x.t.XyHpKC) : x.intl.string(x.t.l4EmaW),
+                    variant: 'primary',
+                    fullWidth: !0,
+                    icon: s.k$p,
                     onClick: () => {
-                        T ? L() : z();
-                    },
-                    children: [
-                        (0, r.jsx)(o.k$p, {
-                            size: 'custom',
-                            height: 20,
-                            width: 20,
-                            className: f.buttonIcon,
-                            color: 'currentColor'
-                        }),
-                        T ? p.intl.string(p.t.XyHpKC) : p.intl.string(p.t.l4EmaW)
-                    ]
+                        C ? w() : R();
+                    }
                 }),
-                (0, r.jsxs)(i.zx, {
-                    color: i.zx.Colors.PRIMARY,
-                    size: i.zx.Sizes.LARGE,
-                    className: f.button,
-                    innerClassName: f.buttonInner,
-                    onClick: w,
-                    submitting: R,
-                    disabled: g,
-                    children: [
-                        (0, r.jsx)(o.U65, {
-                            size: 'custom',
-                            height: 20,
-                            width: 20,
-                            className: f.buttonIcon,
-                            color: 'currentColor'
-                        }),
-                        g ? p.intl.string(p.t.QvwOJy) : p.intl.string(p.t['7fHyEx'])
-                    ]
+                (0, r.jsx)(s.zxk, {
+                    text: m ? x.intl.string(x.t.QvwOJy) : x.intl.string(x.t['7fHyEx']),
+                    variant: 'secondary',
+                    fullWidth: !0,
+                    icon: s.U65,
+                    onClick: P,
+                    loading: S,
+                    disabled: m
                 }),
-                (0, r.jsxs)(i.zx, {
-                    color: i.zx.Colors.PRIMARY,
-                    size: i.zx.Sizes.LARGE,
-                    className: f.button,
-                    innerClassName: f.buttonInner,
-                    onClick: () => P(y),
-                    children: [
-                        (0, r.jsx)(o.kBi, {
-                            size: 'custom',
-                            height: 20,
-                            width: 20,
-                            className: f.buttonIcon,
-                            color: 'currentColor'
-                        }),
-                        D
-                    ]
+                (0, r.jsx)(s.zxk, {
+                    text: L,
+                    variant: 'secondary',
+                    fullWidth: !0,
+                    icon: s.kBi,
+                    onClick: () => D(M)
                 })
             ]
         })

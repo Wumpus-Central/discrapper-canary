@@ -1,7 +1,7 @@
 n.d(t, {
     Rg: () => h,
     Xh: () => p,
-    ho: () => _
+    ho: () => f
 });
 var r = n(255367);
 n(73800);
@@ -13,17 +13,17 @@ var i = n(481060),
     c = n(561308),
     u = n(232174),
     d = n(981631);
-let f = function (e) {
+let _ = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (0, o.Z)(e) ? (t ? i.iWm : i.jje) : e.type === d.IIU.LISTENING ? i.RZG : e.type === d.IIU.WATCHING ? i.ARS : i.iWm;
 };
-function _(e) {
+function f(e) {
     var t, n, o;
     let { activity: c } = e,
         { enabled: d } = a.c.useExperiment({ location: 'UserProfileActivityBadges' }, { autoTrackExposure: !0 }),
-        _ = null != (o = null == (t = c.timestamps) ? void 0 : t.start) ? o : c.created_at;
-    if (null == _ || (0, u.Z)(c)) return null;
-    let p = f(c, d);
+        f = null != (o = null == (t = c.timestamps) ? void 0 : t.start) ? o : c.created_at;
+    if (null == f || (0, u.Z)(c)) return null;
+    let p = _(c, d);
     return (0, r.jsxs)(s.m7, {
         children: [
             (0, r.jsx)(p, {
@@ -32,7 +32,7 @@ function _(e) {
             }),
             (0, r.jsx)(l.x3, {
                 entry: {
-                    start: _,
+                    start: f,
                     end: null == (n = c.timestamps) ? void 0 : n.end
                 },
                 textColor: 'text-feedback-positive',

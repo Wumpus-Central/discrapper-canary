@@ -8,8 +8,8 @@ var r,
     c = n(865427),
     u = n(710845),
     d = n(314897),
-    f = n(626135),
-    _ = n(70956),
+    _ = n(626135),
+    f = n(70956),
     p = n(508825),
     h = n(981631);
 function m(e, t, n) {
@@ -113,12 +113,12 @@ let S = new u.Z('ApexExperimentStore'),
     w = {},
     D = 'apexTrackedExposures',
     L = 1,
-    x = 7 * _.Z.Millis.DAY,
-    M = {},
-    k = {};
+    x = 7 * f.Z.Millis.DAY,
+    k = {},
+    M = {};
 function j(e) {
-    let t = k[e];
-    return (null == t && ((t = a().v3(e)), (k[e] = t)), t);
+    let t = M[e];
+    return (null == t && ((t = a().v3(e)), (M[e] = t)), t);
 }
 class U extends (r = o.ZP.PersistedStore) {
     initialize(e) {
@@ -132,7 +132,7 @@ class U extends (r = o.ZP.PersistedStore) {
                 isOverride: !0
             };
         }
-        M = this.loadTrackedExposures();
+        k = this.loadTrackedExposures();
     }
     getState() {
         return {
@@ -226,33 +226,33 @@ class U extends (r = o.ZP.PersistedStore) {
         let o = j(''.concat(t, '|').concat(i, '|').concat(a, '|').concat(n));
         this.shouldTrackExposure(o) &&
             'user' === r &&
-            (f.default.track(h.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
+            (_.default.track(h.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
                 evaluation_id: e,
                 experiment: t,
                 exposure_location: n,
                 unit_type: r
             }),
-            (M[o] = Date.now()),
-            this.saveTrackedExposures(M));
+            (k[o] = Date.now()),
+            this.saveTrackedExposures(k));
     }
     trackCommonTriggerPointExposures(e) {
         for (let t of this.evaluationIds('user')) {
             let n = j(''.concat(t, '|').concat(e));
             this.shouldTrackExposure(n) &&
-                (f.default.track(h.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
+                (_.default.track(h.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
                     evaluation_id: t,
                     exposure_location: e,
                     unit_type: 'user'
                 }),
-                (M[n] = Date.now()),
-                this.saveTrackedExposures(M));
+                (k[n] = Date.now()),
+                this.saveTrackedExposures(k));
         }
     }
     trackExposureSuppression(e, t) {
         let n = C[e];
         null != n &&
             'user' === n.kind &&
-            f.default.track(h.rMx.EXPERIMENT_USER_EXPOSURE_SUPPRESSED, {
+            _.default.track(h.rMx.EXPERIMENT_USER_EXPOSURE_SUPPRESSED, {
                 experiment: e,
                 unit_type: 'user',
                 suppression_source: t
@@ -264,7 +264,7 @@ class U extends (r = o.ZP.PersistedStore) {
             .filter((e) => null != e);
     }
     shouldTrackExposure(e) {
-        let t = M[e];
+        let t = k[e];
         return null == t || Date.now() - t > x;
     }
     loadTrackedExposures() {
@@ -284,7 +284,7 @@ class U extends (r = o.ZP.PersistedStore) {
             });
         } catch (e) {
             (S.error('Error saving tracked exposures', e),
-                f.default.track(h.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
+                _.default.track(h.rMx.EXPERIMENT_SAVE_EXPOSURE_FAILED, {
                     module: 'discord_app',
                     call: 'ApexExperimentStore.saveTrackedExposures'
                 }));
@@ -300,7 +300,7 @@ class U extends (r = o.ZP.PersistedStore) {
         ((R = {}), (P = {}));
     }
     clearAllTrackedExposures() {
-        M = {};
+        k = {};
     }
     getHash(e) {
         return j(e);

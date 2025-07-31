@@ -18,8 +18,8 @@ var r = n(73800),
     c = n(668781),
     u = n(87051),
     d = n(181945),
-    f = n(149071),
-    _ = n(516373),
+    _ = n(149071),
+    f = n(516373),
     p = n(480294),
     h = n(650774),
     m = n(888369),
@@ -53,7 +53,7 @@ function x(e, t, n) {
         e
     );
 }
-function M(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -69,7 +69,7 @@ function M(e) {
     }
     return e;
 }
-function k(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -86,7 +86,7 @@ function j(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -95,7 +95,7 @@ function j(e, t) {
 function U(e, t) {
     let [n, i] = r.useState(R.nf),
         [a, s] = r.useState({});
-    (0, _.D)();
+    (0, f.D)();
     let l = (0, o.Wu)([g.Z], () => g.Z.getGuildsArray()),
         c = r.useCallback(() => {
             let r = {};
@@ -108,7 +108,7 @@ function U(e, t) {
         {
             guildPlans: u,
             overrideGuild: r.useCallback((e, t) => {
-                s((n) => j(M({}, n), { [e]: t }));
+                s((n) => j(k({}, n), { [e]: t }));
             }, []),
             setThresholds: i,
             getDebug: () => F(Object.values(u), t)
@@ -265,7 +265,7 @@ function Y(e) {
     return () => {
         y.default.track(
             P.rMx.NOTIFICATION_MIGRATION_COMPLETED,
-            j(M({}, n), {
+            j(k({}, n), {
                 auto_migrated: !0,
                 pre_selected_server_ids: Object.values(e)
                     .filter((e) => e.mode === R.AR.UseGreyDot)
@@ -286,7 +286,7 @@ function Y(e) {
 }
 async function W(e) {
     (await K(() => z()), await K(() => u.Z.setAccountFlag(C.c.USE_NEW_NOTIFICATIONS, !0)));
-    let t = await K(() => f.Z.saveUserGuildSettingsBulk(e));
+    let t = await K(() => _.Z.saveUserGuildSettingsBulk(e));
     (l.Z.dispatch({
         type: 'USER_GUILD_SETTINGS_FULL_UPDATE',
         userGuildSettings: t
@@ -344,7 +344,7 @@ function Q(e) {
         o = a().keyBy(null != (n = e.message_sends) ? n : [], 'channel_id');
     return (null != (r = e.channel_opens) ? r : [])
         .map((e) => {
-            var t, n, r, a, s, l, c, u, d, f, _;
+            var t, n, r, a, s, l, c, u, d, _, f;
             let p = null != (t = i[e.channel_id]) ? t : {},
                 h = null != (n = o[e.channel_id]) ? n : {};
             return {
@@ -356,8 +356,8 @@ function Q(e) {
                 num_messages: Number(null != (c = null == h ? void 0 : h.num_messages) ? c : 0),
                 num_year_voice_joins: Number(null != (u = null == p ? void 0 : p.year_opens) ? u : 0),
                 num_month_voice_joins: Number(null != (d = null == p ? void 0 : p.one_month_opens) ? d : 0),
-                num_three_month_voice_joins: Number(null != (f = null == p ? void 0 : p.three_month_opens) ? f : 0),
-                num_six_month_voice_joins: Number(null != (_ = null == p ? void 0 : p.six_month_opens) ? _ : 0)
+                num_three_month_voice_joins: Number(null != (_ = null == p ? void 0 : p.three_month_opens) ? _ : 0),
+                num_six_month_voice_joins: Number(null != (f = null == p ? void 0 : p.six_month_opens) ? f : 0)
             };
         })
         .filter(v.lm);

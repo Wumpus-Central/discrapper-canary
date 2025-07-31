@@ -2,7 +2,7 @@ n.d(t, {
     Ad: () => u,
     Bi: () => h,
     Kk: () => i,
-    Nv: () => _,
+    Nv: () => f,
     P9: () => g,
     Vj: () => a,
     _c: () => p,
@@ -58,9 +58,9 @@ function d() {
     let n = t && t.env ? t.env.devicePixelRatio : null;
     return (n && Number.isNaN((e = parseInt(n, 10))) && (e = 1), e || window.devicePixelRatio || 1);
 }
-let f = 16384;
-function _(e) {
-    (e.width > f || e.height > f) && (e.width > f && e.height > f ? (e.width > e.height ? ((e.height *= f / e.width), (e.width = f)) : ((e.width *= f / e.height), (e.height = f))) : e.width > f ? ((e.height *= f / e.width), (e.width = f)) : ((e.width *= f / e.height), (e.height = f)));
+let _ = 16384;
+function f(e) {
+    (e.width > _ || e.height > _) && (e.width > _ && e.height > _ ? (e.width > e.height ? ((e.height *= _ / e.width), (e.width = _)) : ((e.width *= _ / e.height), (e.height = _))) : e.width > _ ? ((e.height *= _ / e.width), (e.width = _)) : ((e.width *= _ / e.height), (e.height = _)));
 }
 function p(e, t = {}) {
     return new Promise(

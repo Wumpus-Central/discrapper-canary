@@ -8,7 +8,7 @@ var r,
     c = n(945577),
     u = n(861262),
     d = n(981631);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-let _ = 0.05,
+let f = 0.05,
     p = {};
 function h(e) {
     return (
@@ -87,7 +87,7 @@ function A(e) {
 }
 function N(e) {
     let { searchId: t } = e;
-    h(t).showNoResultsAlt = Math.random() < _;
+    h(t).showNoResultsAlt = Math.random() < f;
 }
 function C(e) {
     let { searchId: t, queryString: n, query: r, offset: i } = e,
@@ -125,7 +125,7 @@ class R extends (r = i.ZP.Store) {
         return null != e && null != p[e];
     }
 }
-f(R, 'displayName', 'SearchStore');
+_(R, 'displayName', 'SearchStore');
 let P = new R(a.Z, {
     CONNECTION_OPEN: I,
     SEARCH_RESULTS_QUERY_UPDATE: C,

@@ -40,7 +40,7 @@ e.exports = function (e) {
             endsWithParent: !0,
             relevance: 0
         },
-        f = {
+        _ = {
             variants: [{ begin: /'/ }, { begin: '`' }],
             contains: [
                 {
@@ -50,7 +50,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        _ = {
+        f = {
             className: 'name',
             relevance: 0,
             begin: t,
@@ -73,7 +73,7 @@ e.exports = function (e) {
                     endsWithParent: !0,
                     returnBegin: !0,
                     contains: [
-                        _,
+                        f,
                         {
                             endsParent: !0,
                             variants: [
@@ -90,17 +90,17 @@ e.exports = function (e) {
                         }
                     ]
                 },
-                _,
+                f,
                 d
             ]
         };
     return (
-        (d.contains = [a, o, s, c, u, f, p].concat(l)),
+        (d.contains = [a, o, s, c, u, _, p].concat(l)),
         {
             name: 'Scheme',
             aliases: ['scm'],
             illegal: /\S/,
-            contains: [e.SHEBANG(), o, s, u, f, p].concat(l)
+            contains: [e.SHEBANG(), o, s, u, _, p].concat(l)
         }
     );
 };

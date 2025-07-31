@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,12 +47,12 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -71,9 +71,9 @@ function p(e, t) {
 let h = (e) => {
     let { element: t, attributes: n, children: a } = e,
         u = (0, s.vt)(),
-        f = (0, s.UE)(),
+        _ = (0, s.UE)(),
         p = (0, s._7)(),
-        h = o()(c.inlineElement, c.optionPill, c.inlineFlex, { [c.selectedPill]: f && u }),
+        h = o()(c.inlineElement, c.optionPill, c.inlineFlex, { [c.selectedPill]: _ && u }),
         m = i.useCallback(() => {
             l.bN.isVoid(p, t);
         }, [p, t]),
@@ -83,7 +83,7 @@ let h = (e) => {
         });
     return (0, r.jsxs)(
         'span',
-        _(d({}, n), {
+        f(d({}, n), {
             className: h,
             children: [
                 (0, r.jsxs)('span', {

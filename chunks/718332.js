@@ -5,15 +5,15 @@ var r = n(102074),
     s = 2;
 e.exports = function (e, t, n, l, c, u) {
     var d = n & o,
-        f = e.length,
-        _ = t.length;
-    if (f != _ && !(d && _ > f)) return !1;
+        _ = e.length,
+        f = t.length;
+    if (_ != f && !(d && f > _)) return !1;
     var p = u.get(e);
     if (p && u.get(t)) return p == t;
     var h = -1,
         m = !0,
         g = n & s ? new r() : void 0;
-    for (u.set(e, t), u.set(t, e); ++h < f; ) {
+    for (u.set(e, t), u.set(t, e); ++h < _; ) {
         var E = e[h],
             b = t[h];
         if (l) var y = d ? l(b, E, h, t, e, u) : l(E, b, h, e, t, u);

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(803647),
     u = n(361291),
     d = n(131951),
-    f = n(358085),
-    _ = n(418469),
+    _ = n(358085),
+    f = n(418469),
     p = n(776031),
     h = n(981631),
     m = n(231338),
@@ -27,9 +27,9 @@ function b(e) {
         A = (0, a.e7)([d.Z], () => d.Z.supports(g.AN.SOUNDSHARE)),
         N = (0, a.e7)([d.Z], () => d.Z.supportsScreenSoundshare()),
         C = (0, p.Z)(t, v),
-        R = (0, _.Z)(t, v, m.Vq),
+        R = (0, f.Z)(t, v, m.Vq),
         P = null != I && A && (!I.startsWith('screen') || N),
-        w = (0, a.e7)([d.Z], () => d.Z.getUseSystemScreensharePicker() && (0, f.isLinux)()),
+        w = (0, a.e7)([d.Z], () => d.Z.getUseSystemScreensharePicker() && (0, _.isLinux)()),
         D = i.useCallback(() => {
             (null == I ? void 0 : I.startsWith('prepicked:'))
                 ? d.Z.getMediaEngine().eachConnection((e) => {
@@ -67,14 +67,14 @@ function b(e) {
             icon: o.hGI,
             action: n
         });
-    let x = f.isPlatformEmbedded
+    let x = _.isPlatformEmbedded
             ? (0, r.jsx)(o.sNh, {
                   id: 'stream-settings',
                   label: E.intl.string(E.t.ytAD9f),
                   children: C
               })
             : null,
-        M = P
+        k = P
             ? (0, r.jsx)(o.S89, {
                   id: 'stream-settings-audio-enable',
                   label: O ? E.intl.string(E.t.af2Tw8) : E.intl.string(E.t.ZJEHt7),
@@ -82,7 +82,7 @@ function b(e) {
                   action: L
               })
             : null,
-        k =
+        M =
             !S || y || w
                 ? null
                 : (0, r.jsx)(o.sNh, {
@@ -99,9 +99,9 @@ function b(e) {
         });
     return O
         ? (0, r.jsxs)(r.Fragment, {
-              children: [j, k, x, M]
+              children: [j, M, x, k]
           })
         : (0, r.jsxs)(r.Fragment, {
-              children: [x, b ? R : null, M, k, j]
+              children: [x, b ? R : null, k, M, j]
           });
 }

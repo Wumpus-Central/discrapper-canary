@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+(n.d(t, { Z: () => O }), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -43,11 +43,11 @@ function v(e) {
     return (0, r.jsxs)('div', {
         className: m.endScreenCtaContainer,
         children: [
-            (0, r.jsx)(g, {
+            (0, r.jsx)(E, {
                 title: n,
                 subtitle: l
             }),
-            (0, r.jsx)(b, {
+            (0, r.jsx)(g, {
                 label: t,
                 icon: s.d4D,
                 onClick: o
@@ -55,7 +55,7 @@ function v(e) {
         ]
     });
 }
-function g(e) {
+function E(e) {
     let { title: t, subtitle: n } = e;
     return (0, r.jsxs)('div', {
         className: m.endScreenCtaTitleContainer,
@@ -73,7 +73,7 @@ function g(e) {
         ]
     });
 }
-function b(e) {
+function g(e) {
     let { label: t, icon: n, onClick: o, className: a } = e,
         [c, u] = l.useState(!1),
         d = () => {
@@ -103,7 +103,7 @@ function b(e) {
         ]
     });
 }
-let E = function (e) {
+let O = function (e) {
     let { quest: t, ctaBtnLabel: n, title: o, subtitle: i, onCTAClick: s, sourceQuestContent: c } = e,
         d = l.useMemo(() => (0, u.z0)(t, a.X.WATCH_VIDEO, u.n1.VIDEO, u.O.THUMBNAIL), [t]);
     return (0, r.jsxs)(r.Fragment, {

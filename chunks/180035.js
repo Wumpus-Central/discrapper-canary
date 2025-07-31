@@ -9,14 +9,14 @@ function l(e, t) {
         c = (0, r.e7)([a.Z], () => a.Z.saturation),
         u = (0, r.e7)([a.Z], () => a.Z.isHighContrastModeEnabled),
         d = (0, o.Ml)('useToken'),
-        f = (0, o.CL)('useToken'),
-        _ = (0, o.VM)('useToken'),
+        _ = (0, o.CL)('useToken'),
+        f = (0, o.VM)('useToken'),
         p = (0, s.U)('useToken'),
         h = [];
     return (
         d && h.push('refresh-fast-follow-avatars'),
-        f && h.push('refresh-fast-follow-guild-bg'),
-        _ && h.push('refresh-fast-follow-distinct-borders'),
+        _ && h.push('refresh-fast-follow-guild-bg'),
+        f && h.push('refresh-fast-follow-distinct-borders'),
         p && h.push('mana-text-inputs'),
         e.resolve({
             theme: null != t ? t : n,

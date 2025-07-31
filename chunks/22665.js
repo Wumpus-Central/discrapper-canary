@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => v });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -11,32 +11,32 @@ var r = n(255367),
     p = n(223021),
     m = n(942951),
     f = n(594174),
-    _ = n(55935),
-    g = n(130883),
+    g = n(55935),
+    _ = n(130883),
     h = n(388032),
     b = n(537670),
     E = n(848697),
     C = n(328756);
-let O = (e) => {
-    let { reportingUserId: t, guildId: n, compact: l, channel: o, messageId: O, reportedTimestamp: v } = e,
-        y = f.default.getUser(t),
-        x = i.useMemo(() => (l ? (0, p.Z)((0, _.vc)(s()(), 'LT')) : null), [l]),
+let v = (e) => {
+    let { reportingUserId: t, guildId: n, compact: l, channel: o, messageId: v, reportedTimestamp: O } = e,
+        x = f.default.getUser(t),
+        y = i.useMemo(() => (l ? (0, p.Z)((0, g.vc)(s()(), 'LT')) : null), [l]),
         I = (0, m.l)({
-            user: y,
+            user: x,
             channelId: o.id,
             guildId: n,
-            messageId: O
-        })((0, u.JZ)(y, o)),
-        j = null != y ? y.getAvatarURL(n, (0, c.pxk)(c.EFr.SIZE_16)) : C,
+            messageId: v
+        })((0, u.JZ)(x, o)),
+        j = null != x ? x.getAvatarURL(n, (0, c.pxk)(c.EFr.SIZE_16)) : C,
         S =
-            null != y
-                ? h.intl.format(g.default['+zqXZm'], {
-                      username: y.username,
+            null != x
+                ? h.intl.format(_.default['+zqXZm'], {
+                      username: x.username,
                       onUserClick: I
                   })
-                : h.intl.string(g.default.xpRjfX);
+                : h.intl.string(_.default.xpRjfX);
     return (0, r.jsxs)('div', {
-        className: a()(E.messageSpine, E.repliedMessage, x),
+        className: a()(E.messageSpine, E.repliedMessage, y),
         children: [
             (0, r.jsx)(c.qEK, {
                 src: j,
@@ -59,7 +59,7 @@ let O = (e) => {
                         children: '\u2022'
                     }),
                     (0, r.jsx)(d.Z, {
-                        timestamp: v,
+                        timestamp: O,
                         className: b.timestamp
                     })
                 ]

@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(443487),
     u = n(314897),
     d = n(594174),
-    f = n(626135),
-    _ = n(5192),
+    _ = n(626135),
+    f = n(5192),
     p = n(873128),
     h = n(246627),
     m = n(709737),
@@ -48,14 +48,14 @@ function T(e) {
         r = null == t ? void 0 : t.leaderboard_id;
     i.useEffect(() => {
         null != r &&
-            f.default.track(b.rMx.LEADERBOARD_MEMBERLIST_CARD_VIEWED, {
+            _.default.track(b.rMx.LEADERBOARD_MEMBERLIST_CARD_VIEWED, {
                 leaderboard_id: r,
                 guild_id: n
             });
     }, [r, n]);
 }
 function S(e) {
-    var t, n, f, E, b;
+    var t, n, _, E, b;
     let y,
         { selected: v, channel: S, entry: N } = e,
         C = S.guild_id,
@@ -78,20 +78,20 @@ function S(e) {
             return [n, r];
         }, [R, P, w]),
         x = (0, a.e7)([d.default], () => d.default.getUser(null == D ? void 0 : D.userId)),
-        M = _.ZP.getName(C, void 0, x);
+        k = f.ZP.getName(C, void 0, x);
     T({
         leaderboard: R,
         guildId: C
     });
-    let k = (0, s.q)(null == R || null == (t = R.settings) ? void 0 : t.application_id);
-    if (null == R || null == k) return null;
+    let M = (0, s.q)(null == R || null == (t = R.settings) ? void 0 : t.application_id);
+    if (null == R || null == M) return null;
     if (0 === R.users.length || null == D || null == x)
         return (0, r.jsx)(A, {
-            application: k,
+            application: M,
             selected: v
         });
     let { sort_by_statistic_id: j } = R.guild_settings,
-        U = null != (b = null == L || null == (f = L.statistics) || null == (n = f[j]) ? void 0 : n.value) ? b : 0,
+        U = null != (b = null == L || null == (_ = L.statistics) || null == (n = _[j]) ? void 0 : n.value) ? b : 0,
         { currentRank: G } = D;
     return (
         (y =
@@ -99,14 +99,14 @@ function S(e) {
                 ? O.intl.formatToPlainString(O.t['eU+JxM'], { rank: G })
                 : O.intl.formatToPlainString(O.t['8BLSQ0'], {
                       rank: G,
-                      username: M
+                      username: k
                   })),
         (0, r.jsxs)(c.Zb, {
             selected: v,
             children: [
                 (0, r.jsxs)(c.e$, {
                     children: [
-                        (0, r.jsx)(I, { application: k }),
+                        (0, r.jsx)(I, { application: M }),
                         (0, r.jsx)(o.LZC, { size: 2 }),
                         (0, r.jsx)(c.ll, { children: y }),
                         (0, r.jsx)(l.Gk, {

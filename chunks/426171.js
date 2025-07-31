@@ -1,6 +1,6 @@
 (r.d(t, {
     Kp: () => S,
-    u9: () => v,
+    u9: () => C,
     xV: () => y
 }),
     r(413496),
@@ -25,11 +25,11 @@ var n = r(73800),
     m = r(981631);
 let _ = ''.concat('#').concat('itemSkuId', '='),
     O = new RegExp('^'.concat(_, '(\\d+)$')),
-    C = [m.Z5c.COLLECTIBLES_SHOP, m.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
-    v = (e) => {
+    v = [m.Z5c.COLLECTIBLES_SHOP, m.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
+    C = (e) => {
         let t = (0, l.TH)();
         n.useEffect(() => {
-            if (null != e && C.includes(t.pathname))
+            if (null != e && v.includes(t.pathname))
                 return () => {
                     window.location.hash.startsWith(_) && window.location.replace('#');
                 };

@@ -9,18 +9,18 @@ var r = n(255367),
     u = n(168551);
 function d(e) {
     var t, n;
-    let { theme: a, gradient: d, disableAdaptiveTheme: f, reduceAdaptiveTheme: _, children: p } = e,
+    let { theme: a, gradient: d, disableAdaptiveTheme: _, reduceAdaptiveTheme: f, children: p } = e,
         { theme: h } = i.useContext(s.Ni);
     return (0, r.jsx)(l.z, {
         theme: a,
         gradient: d,
-        disableAdaptiveTheme: f,
-        reduceAdaptiveTheme: _,
+        disableAdaptiveTheme: _,
+        reduceAdaptiveTheme: f,
         children: p(
             o()((0, c.Q)(null != (n = null != (t = null == d ? void 0 : d.theme) ? t : a) ? n : h), {
                 [u.e3]: null != d,
-                'disable-adaptive-theme': f,
-                'reduce-adaptive-theme': _
+                'disable-adaptive-theme': _,
+                'reduce-adaptive-theme': f
             })
         )
     });

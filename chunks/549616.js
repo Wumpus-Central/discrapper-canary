@@ -56,18 +56,18 @@ function d(e, t) {
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,8 +79,8 @@ function _(e, t) {
 let p = (e) => e === r.Z.VARIANTS_GROUP || e === r.Z.EXTERNAL_SKU;
 class h extends a.Z {
     static fromServer(e) {
-        var { products: t, logo: n, hero_ranking: r, pdp_bg: a, mobile_bg: l, success_modal_bg: u, mobile_banner: _, hero_banner: m, hero_banner_asset: g, featured_block: E, hero_logo: b, banner_text_color: y, hero_banner_config: O, hero_logo_display_config: v } = e,
-            I = f(e, ['products', 'logo', 'hero_ranking', 'pdp_bg', 'mobile_bg', 'success_modal_bg', 'mobile_banner', 'hero_banner', 'hero_banner_asset', 'featured_block', 'hero_logo', 'banner_text_color', 'hero_banner_config', 'hero_logo_display_config']);
+        var { products: t, logo: n, hero_ranking: r, pdp_bg: a, mobile_bg: l, success_modal_bg: u, mobile_banner: f, hero_banner: m, hero_banner_asset: g, featured_block: E, hero_logo: b, banner_text_color: y, hero_banner_config: O, hero_logo_display_config: v } = e,
+            I = _(e, ['products', 'logo', 'hero_ranking', 'pdp_bg', 'mobile_bg', 'success_modal_bg', 'mobile_banner', 'hero_banner', 'hero_banner_asset', 'featured_block', 'hero_logo', 'banner_text_color', 'hero_banner_config', 'hero_logo_display_config']);
         return new h(
             d(c({}, super.fromServer(I)), {
                 products: t.reduce((e, t) => {
@@ -92,7 +92,7 @@ class h extends a.Z {
                 pdpBg: a,
                 mobileBg: l,
                 successModalBg: u,
-                mobileBanner: _,
+                mobileBanner: f,
                 heroBanner: m,
                 heroBannerAsset: g,
                 featuredBlock: E,

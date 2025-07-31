@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => k }), r(388685));
+(r.d(t, { Z: () => I }), r(388685));
 var n = r(255367),
     l = r(73800),
     i = r(120356),
@@ -16,25 +16,25 @@ var n = r(255367),
     m = r(258939),
     _ = r(81136),
     O = r(953655),
-    C = r(548685),
-    v = r(580914),
+    v = r(548685),
+    C = r(580914),
     E = r(963278),
     S = r(921120),
     y = r(384067),
     x = r(215023),
     j = r(981631),
-    T = r(388032),
-    P = r(806734);
+    P = r(388032),
+    T = r(806734);
 let L = (e) => {
         var t;
         let { handleTransition: r, numVisibleItems: i, isFetchingCategories: s, tab: c, isFullScreen: u } = e,
             { noCache: p, includeUnpublished: m } = (0, _.Z)(),
             [S, j] = l.useState(!1),
             L = (0, d.sp)(),
-            k = null != (t = null == L ? void 0 : L.sessionId) ? t : '';
+            I = null != (t = null == L ? void 0 : L.sessionId) ? t : '';
         l.useEffect(() => {
             (0, g.n)({
-                sessionId: k,
+                sessionId: I,
                 checkpoint: g.a.SHOP_MOUNTED,
                 tab: c,
                 isFullScreen: u,
@@ -43,10 +43,10 @@ let L = (e) => {
             });
         }, [c]);
         let {
-                isFetchingShopHome: I,
-                fetchShopHomeError: N,
-                shopBlocks: A,
-                refreshShopHome: B
+                isFetchingShopHome: k,
+                fetchShopHomeError: w,
+                shopBlocks: N,
+                refreshShopHome: A
             } = (0, f.E)(
                 c,
                 {
@@ -56,52 +56,52 @@ let L = (e) => {
                     logPerf: !0
                 },
                 {
-                    sessionId: k,
+                    sessionId: I,
                     tab: c,
                     isFullScreen: u
                 }
             ),
-            w = l.useCallback(() => {
-                B();
-            }, [B]);
+            B = l.useCallback(() => {
+                A();
+            }, [A]);
         if (
             (l.useEffect(() => {
-                null != N ||
-                    I ||
-                    0 === A.length ||
+                null != w ||
+                    k ||
+                    0 === N.length ||
                     (0, g.n)({
-                        sessionId: k,
+                        sessionId: I,
                         checkpoint: g.a.SHOP_RENDERED,
                         tab: c,
                         isFullScreen: u,
                         unpublishedCategoriesShown: m,
                         cacheDisabled: p
                     });
-            }, [N, I, A.length, m, p, k, c, u]),
-            null != N)
+            }, [w, k, N.length, m, p, I, c, u]),
+            null != w)
         )
             return (0, n.jsx)(h.Z, {
-                onRetry: w,
+                onRetry: B,
                 errorOrigin: h.i.SHOP_PAGE,
-                errorMessage: N.message
+                errorMessage: w.message
             });
-        if (I || 0 === A.length)
+        if (k || 0 === N.length)
             return (0, n.jsxs)('div', {
-                className: P.loadingContainer,
+                className: T.loadingContainer,
                 children: [
-                    (0, n.jsx)(v.Z, {
-                        isLoading: I,
+                    (0, n.jsx)(C.Z, {
+                        isLoading: k,
                         handleTransition: r,
                         tab: c
                     }),
                     (0, n.jsx)(O.Z, {
-                        isLoading: I,
+                        isLoading: k,
                         handleTransition: r,
                         categories: []
                     }),
-                    (0, n.jsx)(C.Z, {
-                        isLoading: I,
-                        title: c === x.AW.ORBS ? T.intl.string(T.t.dFgeub) : T.intl.string(T.t.NSv5KS),
+                    (0, n.jsx)(v.Z, {
+                        isLoading: k,
+                        title: c === x.AW.ORBS ? P.intl.string(P.t.dFgeub) : P.intl.string(P.t.NSv5KS),
                         numVisibleItems: i,
                         hasSorting: c === x.AW.HOME,
                         tab: c
@@ -114,9 +114,9 @@ let L = (e) => {
             switch (e.type) {
                 case o.z.HERO:
                     l = (0, n.jsx)(
-                        v.Z,
+                        C.Z,
                         {
-                            isLoading: I,
+                            isLoading: k,
                             handleTransition: r,
                             heroBlock: e,
                             tab: c,
@@ -129,7 +129,7 @@ let L = (e) => {
                     l = (0, n.jsx)(
                         O.Z,
                         {
-                            isLoading: I,
+                            isLoading: k,
                             handleTransition: r,
                             featuredBlockRecord: e
                         },
@@ -139,10 +139,10 @@ let L = (e) => {
                 case o.z.FEED:
                     let d = e.sortedSkuIds;
                     l = (0, n.jsx)(
-                        C.Z,
+                        v.Z,
                         {
-                            title: c === x.AW.ORBS ? T.intl.string(T.t.dFgeub) : T.intl.string(T.t.NSv5KS),
-                            isLoading: I || s,
+                            title: c === x.AW.ORBS ? P.intl.string(P.t.dFgeub) : P.intl.string(P.t.NSv5KS),
+                            isLoading: k || s,
                             numVisibleItems: i,
                             sortedSkuIds: d,
                             hasSorting: c === x.AW.HOME,
@@ -186,30 +186,30 @@ let L = (e) => {
             return (0, n.jsx)(
                 'div',
                 {
-                    className: a()(P.blockContainer, { [P.topBlockContainer]: 0 === t }),
+                    className: a()(T.blockContainer, { [T.topBlockContainer]: 0 === t }),
                     children: l
                 },
                 t
             );
         };
-        return (0, n.jsx)(n.Fragment, { children: A.map((e, t) => R(e, t)) });
+        return (0, n.jsx)(n.Fragment, { children: N.map((e, t) => R(e, t)) });
     },
-    k = (e) => {
+    I = (e) => {
         let { isFullScreen: t, handleTransition: r, tab: i, transitionState: o } = e,
             f = l.useRef(null),
             { handleScroll: g } = (0, c.z)(f, i),
             h = (0, p.R)('CollectiblesFeedShop'),
             b = (0, m.R)(),
             _ = (0, d.sp)(),
-            [O, C] = l.useState(x.IV),
-            [v, E] = l.useState(!1);
+            [O, v] = l.useState(x.IV),
+            [C, E] = l.useState(!1);
         return (
             l.useEffect(() => {
                 if (null != f.current) {
                     let e = () => {
                             if (null == f.current) return;
                             let e = f.current.getDistanceFromBottom();
-                            O >= h ? E(e < 20) : e <= 200 && C((e) => e + x.IV);
+                            O >= h ? E(e < 20) : e <= 200 && v((e) => e + x.IV);
                         },
                         t = f.current.getScrollerNode();
                     return (
@@ -219,16 +219,16 @@ let L = (e) => {
                         }
                     );
                 }
-            }, [f, O, h, C, E]),
+            }, [f, O, h, v, E]),
             (0, n.jsx)(s.Den, {
-                className: P.shopScroll,
+                className: T.shopScroll,
                 ref: f,
                 onScroll: g,
                 children: (0, n.jsxs)('div', {
-                    className: P.shop,
+                    className: T.shop,
                     children: [
                         (0, n.jsxs)('div', {
-                            className: a()(P.content, P.mainContent),
+                            className: a()(T.content, T.mainContent),
                             children: [
                                 (0, n.jsx)(L, {
                                     handleTransition: r,
@@ -240,15 +240,15 @@ let L = (e) => {
                                 i !== x.AW.CATALOG &&
                                     O >= h &&
                                     (0, n.jsxs)('div', {
-                                        className: P.endOfFeed,
+                                        className: T.endOfFeed,
                                         children: [
                                             (0, n.jsx)(s.X6q, {
                                                 variant: 'heading-md/semibold',
-                                                children: T.intl.string(T.t.Yr70c3)
+                                                children: P.intl.string(P.t.Yr70c3)
                                             }),
                                             (0, n.jsx)(s.zxk, {
                                                 variant: 'primary',
-                                                text: T.intl.string(T.t.AfrvRE),
+                                                text: P.intl.string(P.t.AfrvRE),
                                                 onClick: () => {
                                                     (r('shop all button', void 0, !0),
                                                         u.default.track(j.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
@@ -268,12 +268,12 @@ let L = (e) => {
                             (0, n.jsxs)(n.Fragment, {
                                 children: [
                                     (0, n.jsx)(S.Z, {
-                                        peaking: v,
+                                        peaking: C,
                                         transitioning: o === x.f7.OUT
                                     }),
                                     (0, n.jsx)(S.Z, {
                                         style: { left: 1850 },
-                                        peaking: v,
+                                        peaking: C,
                                         transitioning: o === x.f7.OUT
                                     })
                                 ]

@@ -20,16 +20,16 @@ function u(e, t, n) {
     );
 }
 let d = !1;
-function f(e) {
+function _(e) {
     if (__OVERLAY__) return;
     let t = s.default.getCurrentUser();
     if (null == t) return;
     let n = o.Z.getChannelId(),
         r = a.Z.getDMFromUserId(l.I);
-    if (!t.hasUrgentMessages() || r === n) return _({ channelId: n });
+    if (!t.hasUrgentMessages() || r === n) return f({ channelId: n });
     d || ((d = !0), e());
 }
-function _(e) {
+function f(e) {
     let { channelId: t } = e,
         n = s.default.getCurrentUser(),
         i = t === a.Z.getDMFromUserId(l.I);
@@ -42,9 +42,9 @@ class p extends i.Z {
             u(this, 'actions', void 0),
             (this.handleShowUrgentMessageAlert = e),
             (this.actions = {
-                POST_CONNECTION_OPEN: () => f(this.handleShowUrgentMessageAlert),
-                MESSAGE_CREATE: () => f(this.handleShowUrgentMessageAlert),
-                CHANNEL_SELECT: _
+                POST_CONNECTION_OPEN: () => _(this.handleShowUrgentMessageAlert),
+                MESSAGE_CREATE: () => _(this.handleShowUrgentMessageAlert),
+                CHANNEL_SELECT: f
             }));
     }
 }

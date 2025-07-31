@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(699516),
     u = n(594174),
     d = n(388032);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -61,7 +61,7 @@ function h(e, t) {
     );
 }
 function m(e) {
-    let { user: t, location: f = 'ContextMenu', onFriendRequestSent: p, onFriendRemove: m, appContext: g } = e,
+    let { user: t, location: _ = 'ContextMenu', onFriendRequestSent: p, onFriendRemove: m, appContext: g } = e,
         { id: E, username: b, bot: y } = t,
         O = (0, a.e7)(
             [u.default],
@@ -83,13 +83,13 @@ function m(e) {
                     (0, r.jsx)(
                         e,
                         h(
-                            _(
+                            f(
                                 {
                                     header: d.intl.formatToPlainString(d.t.fPLvZW, { name: b }),
                                     confirmText: d.intl.string(d.t.cvSt1N),
                                     cancelText: d.intl.string(d.t['ETE/oK']),
                                     onConfirm: () => {
-                                        (s.Z.removeFriend(E, { location: f }), A(!1), null == m || m());
+                                        (s.Z.removeFriend(E, { location: _ }), A(!1), null == m || m());
                                     }
                                 },
                                 t
@@ -119,7 +119,7 @@ function m(e) {
                   S ||
                       (s.Z.addRelationship({
                           userId: E,
-                          context: { location: f }
+                          context: { location: _ }
                       }),
                       A(!0),
                       null == p || p());

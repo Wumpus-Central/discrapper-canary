@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -53,7 +53,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -110,18 +110,18 @@ function S(e) {
     if ((null == (t = r.threadMetadata) ? void 0 : t.archived) === !0) return N(r);
     {
         let e = null != (n = h[r.guild_id]) ? n : {};
-        h[r.guild_id] = p(f({}, e), { [r.parent_id]: p(f({}, e[r.parent_id]), { [r.id]: g(r) }) });
+        h[r.guild_id] = p(_({}, e), { [r.parent_id]: p(_({}, e[r.parent_id]), { [r.id]: g(r) }) });
     }
 }
 function A(e) {
     let { guildId: t, threads: n, channelIds: r } = e;
-    for (let e in (null == r && m.add(t), (h[t] = f({}, h[t])), h[t])) h[t][e] = f({}, h[t][e]);
+    for (let e in (null == r && m.add(t), (h[t] = _({}, h[t])), h[t])) h[t][e] = _({}, h[t][e]);
     n.forEach((e) => y(t, e));
 }
 function N(e) {
     let { guild_id: t, parent_id: n, id: r } = e;
     if (null == t || null == n || !(t in h) || !(n in h[t]) || !(r in h[t][n])) return !1;
-    ((h[t] = p(f({}, h[t]), { [n]: f({}, h[t][n]) })), delete h[t][n][r], a().isEmpty(h[t][n]) && delete h[t][n]);
+    ((h[t] = p(_({}, h[t]), { [n]: _({}, h[t][n]) })), delete h[t][n][r], a().isEmpty(h[t][n]) && delete h[t][n]);
 }
 function C(e) {
     let { channel: t } = e;
@@ -130,7 +130,7 @@ function C(e) {
 function R(e) {
     let { channel: t } = e;
     if (null == t.guild_id || !(t.guild_id in h)) return !1;
-    ((h[t.guild_id] = f({}, h[t.guild_id])), delete h[t.guild_id][t.id]);
+    ((h[t.guild_id] = _({}, h[t.guild_id])), delete h[t.guild_id][t.id]);
 }
 let P = {};
 class w extends (r = o.ZP.Store) {

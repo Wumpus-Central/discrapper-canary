@@ -8,8 +8,8 @@ var r,
     c = n(632243),
     u = n(314897),
     d = n(283595),
-    f = n(129542),
-    _ = n(70956),
+    _ = n(129542),
+    f = n(70956),
     p = n(780570),
     h = n(358085),
     m = n(804739),
@@ -70,7 +70,7 @@ function I(e, t) {
 }
 let T = 200,
     S = 200,
-    A = +_.Z.Millis.MINUTE,
+    A = +f.Z.Millis.MINUTE,
     N = {},
     C = 'content',
     R = 'file://',
@@ -79,8 +79,8 @@ let T = 200,
     D = 0,
     L = 0,
     x = [],
-    M = [],
     k = [],
+    M = [],
     j = !1;
 function U() {
     P = !1;
@@ -89,7 +89,7 @@ function G(e, t) {
     return t.some((t) => t.platforms.includes(e));
 }
 function B(e) {
-    let { build_id: t, target_build_id: n, manifest_ids: r, target_manifest_ids: i, application_id: o, branch_id: s, launch_commands: c, launch_options: u, storage: d, install_path: _, installed_size: p, repairing: m } = e,
+    let { build_id: t, target_build_id: n, manifest_ids: r, target_manifest_ids: i, application_id: o, branch_id: s, launch_commands: c, launch_options: u, storage: d, install_path: f, installed_size: p, repairing: m } = e,
         { should_patch: g } = e;
     switch ((null == g && (g = !0), e.state.type)) {
         case b.DJE.COMPLETE: {
@@ -99,9 +99,9 @@ function B(e) {
             if (m) e = b.vxO.REPAIRING;
             else if (null == t) e = b.vxO.INSTALL_REQUIRED;
             else if (g && (t !== n || (null != r && 0 !== a().difference(r, i).length))) e = b.vxO.UPDATE_REQUIRED;
-            else if (((e = b.vxO.UP_TO_DATE), null != _)) {
-                let e = l.Z.fileManager.join(_, C),
-                    t = (0, f.D)();
+            else if (((e = b.vxO.UP_TO_DATE), null != f)) {
+                let e = l.Z.fileManager.join(f, C),
+                    t = (0, _.D)();
                 if (null != u && 0 !== u.length) {
                     for (let n of (t !== b.QR$.WIN64 || G(t, u) || (t = b.QR$.WIN32), u))
                         if (n.platforms.includes(t)) {
@@ -144,7 +144,7 @@ function B(e) {
                 manifestIds: r,
                 targetBuildId: n,
                 targetManifestIds: i,
-                installPath: _,
+                installPath: f,
                 installedSize: p,
                 launchOptions: E,
                 defaultLaunchOptionId: y,
@@ -154,7 +154,7 @@ function B(e) {
         }
         case b.DJE.TRANSITION: {
             let a,
-                { stage: l, disk_progress: c, network_progress: u, reader_progress: d, progress: f, total: h, paused: E } = e.state,
+                { stage: l, disk_progress: c, network_progress: u, reader_progress: d, progress: _, total: h, paused: E } = e.state,
                 y = l.type;
             return {
                 type: (a = y === b.f07.UNINSTALLING ? b.vxO.UNINSTALLING : m ? b.vxO.REPAIRING : null == t ? b.vxO.INSTALLING : b.vxO.UPDATING),
@@ -165,12 +165,12 @@ function B(e) {
                 manifestIds: r,
                 targetBuildId: n,
                 targetManifestIds: i,
-                installPath: _,
+                installPath: f,
                 installedSize: p,
                 diskProgress: c,
                 networkProgress: u,
                 readerProgress: d,
-                progress: f,
+                progress: _,
                 total: h,
                 paused: E,
                 shouldPatch: g
@@ -189,12 +189,12 @@ function Z(e) {
     return e.type === b.vxO.INSTALLING || e.type === b.vxO.UPDATING || e.type === b.vxO.REPAIRING ? e.readerProgress : null;
 }
 function H(e) {
-    M = (M = [
+    k = (k = [
         {
             bytes: e,
             timestamp: Date.now()
         },
-        ...M
+        ...k
     ]).slice(0, S);
 }
 function Y(e) {
@@ -214,12 +214,12 @@ function Y(e) {
         });
 }
 function W(e) {
-    k = (k = [
+    M = (M = [
         {
             bytes: e,
             timestamp: Date.now()
         },
-        ...k
+        ...M
     ]).slice(0, S);
 }
 let K = a().throttle(H, T),
@@ -329,10 +329,10 @@ class J extends (r = o.ZP.Store) {
         return x;
     }
     getHistoricalTotalBytesDownloaded() {
-        return M;
+        return k;
     }
     getHistoricalTotalBytesWritten() {
-        return k;
+        return M;
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {

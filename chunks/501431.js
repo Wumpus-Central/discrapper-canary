@@ -206,7 +206,7 @@ let g = {
             })
         )
     ),
-    C = (e) => {
+    v = (e) => {
         let { itemTypeFilters: t, colorFilters: r, themeFilters: n, orbEligible: l, sort: i, searchQuery: a, queryPageSize: o, queryPageOffset: s } = e;
         return {
             item_types: Array.from(t),
@@ -220,7 +220,7 @@ let g = {
             search: '' !== a ? a : void 0
         };
     },
-    v = (e) => {
+    C = (e) => {
         let t = e.skus,
             r = e.pagination.total,
             n = e.pagination.has_more;
@@ -241,7 +241,7 @@ let g = {
                     r(!0);
                     try {
                         let t = await (0, s.y)(n);
-                        e(v(t));
+                        e(C(t));
                     } catch (e) {
                         var l;
                         t(null != (l = null == e ? void 0 : e.message) ? l : 'Unknown error');
@@ -251,8 +251,8 @@ let g = {
                 };
                 l && 0 !== n.limit && i();
             };
-            n(C(O.getState()));
-            let i = O.subscribe(C, n, { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }),
+            n(v(O.getState()));
+            let i = O.subscribe(v, n, { equalityFn: (e, t) => JSON.stringify(e) === JSON.stringify(t) }),
                 a = O.subscribe(
                     (e) => e.hasFilters(),
                     (e, t) => {

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(953529));
+(n.d(t, { Z: () => g }), n(953529));
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -71,8 +71,8 @@ function f(e) {
               children: i
           });
 }
-function _(e) {
-    let { imageUrl: t, name: n, description: i, formattedPrice: c, role: _, ctaComponent: g, shouldShowFullDescriptionButton: h = !0, onShowFullDescription: b, productType: E, onTapCard: C, actionMenu: O, showOpaqueBackground: v = !1, hideRoleTag: y = !1, lineClamp: x = 1, cardWidth: I = 332, cardHeight: j, thumbnailHeight: S = 187, descriptionTextVariant: T = 'text-sm/normal', isDraft: N = !1 } = e,
+function g(e) {
+    let { imageUrl: t, name: n, description: i, formattedPrice: c, role: g, ctaComponent: _, shouldShowFullDescriptionButton: h = !0, onShowFullDescription: b, productType: E, onTapCard: C, actionMenu: v, showOpaqueBackground: O = !1, hideRoleTag: x = !1, lineClamp: y = 1, cardWidth: I = 332, cardHeight: j, thumbnailHeight: S = 187, descriptionTextVariant: T = 'text-sm/normal', isDraft: N = !1 } = e,
         P = (0, o.hQ)(),
         A = (0, r.jsxs)(r.Fragment, {
             children: [
@@ -103,7 +103,7 @@ function _(e) {
                                     children: (0, r.jsx)(s.Z, {
                                         variant: T,
                                         color: 'text-muted',
-                                        lineClamp: x,
+                                        lineClamp: y,
                                         text: i
                                     })
                                 }),
@@ -112,14 +112,14 @@ function _(e) {
                                         onShowFullDescription: b,
                                         variant: T
                                     }),
-                                y || null == _ || '' === _.name
+                                x || null == g || '' === g.name
                                     ? null
                                     : (0, r.jsxs)(r.Fragment, {
-                                          children: [(0, r.jsx)(a.LZC, { size: 16 }), (0, r.jsx)(u.Z, { role: _ })]
+                                          children: [(0, r.jsx)(a.LZC, { size: 16 }), (0, r.jsx)(u.Z, { role: g })]
                                       })
                             ]
                         }),
-                        O
+                        v
                     ]
                 }),
                 (0, r.jsxs)('div', {
@@ -142,7 +142,7 @@ function _(e) {
                             onClick: (e) => {
                                 e.stopPropagation();
                             },
-                            children: g
+                            children: _
                         })
                     ]
                 })
@@ -150,7 +150,7 @@ function _(e) {
         });
     return null == C
         ? (0, r.jsx)('article', {
-              className: l()(p.productCard, v ? p.opaqueBackground : p.solidBackground),
+              className: l()(p.productCard, O ? p.opaqueBackground : p.solidBackground),
               'aria-labelledby': P,
               children: A
           })
@@ -162,7 +162,7 @@ function _(e) {
               children: (0, r.jsx)(a.kL8, {
                   tag: 'article',
                   'aria-label': d.intl.formatToPlainString(d.t['e+TmJS'], { productName: n }),
-                  className: l()(p.productCard, v ? p.opaqueBackground : p.solidBackground, p.cardClickableContainer),
+                  className: l()(p.productCard, O ? p.opaqueBackground : p.solidBackground, p.cardClickableContainer),
                   onClick: C,
                   children: A
               })

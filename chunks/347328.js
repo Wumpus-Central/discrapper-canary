@@ -9,18 +9,18 @@ var i = n(442837),
     c = n(740605),
     u = n(180335),
     d = n(553795),
-    f = n(981631),
-    _ = n(388032);
+    _ = n(981631),
+    f = n(388032);
 function p(e) {
     let { activity: t, entry: n, display: p, onAction: h, onClose: m } = e,
-        g = (0, i.e7)([d.Z], () => null != d.Z.getAccount(null, f.ABu.CRUNCHYROLL));
+        g = (0, i.e7)([d.Z], () => null != d.Z.getAccount(null, _.ABu.CRUNCHYROLL));
     if (!(0, l.Z)(t) && !(0, u.gr)(n)) return null;
     if (!g)
         return (0, r.jsx)(a.sNh, {
             id: 'connect-crunchyroll',
-            label: _.intl.formatToPlainString(_.t.XWSHTU, { platform: s.Z.get(f.ABu.CRUNCHYROLL).name }),
+            label: f.intl.formatToPlainString(f.t.XWSHTU, { platform: s.Z.get(_.ABu.CRUNCHYROLL).name }),
             action: () => {
-                (null == h || h({ action: 'PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM' }), o.Z.open(f.oAB.CONNECTIONS), null == m || m());
+                (null == h || h({ action: 'PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM' }), o.Z.open(_.oAB.CONNECTIONS), null == m || m());
             }
         });
     if ('recent' !== p || !(0, u.gr)(n)) return null;
@@ -29,7 +29,7 @@ function p(e) {
         ? null
         : (0, r.jsx)(a.sNh, {
               id: 'watch-on-crunchyroll',
-              label: _.intl.string(_.t.OpxQVF),
+              label: f.intl.string(f.t.OpxQVF),
               action: () => {
                   (null == h || h({ action: 'PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM' }), (0, c.Y)(E));
               }

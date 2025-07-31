@@ -11,13 +11,13 @@ var r,
     p = n(594174),
     m = n(630388),
     f = n(110630),
-    _ = n(981631);
-let g = 'ChannelFollowingBumpChannels',
+    g = n(981631);
+let _ = 'ChannelFollowingBumpChannels',
     h = new Set(),
     b = new Set();
 class E extends (r = a.ZP.Store) {
     initialize() {
-        (this.waitFor(c.default), (h = new Set(o.K.get(g))));
+        (this.waitFor(c.default), (h = new Set(o.K.get(_))));
     }
     shouldShowBump(e) {
         return b.has(e);
@@ -39,12 +39,12 @@ let C = new E(s.Z, {
         if (i || h.has(n)) return !1;
         let l = u.Z.getChannel(n),
             a = p.default.getCurrentUser();
-        if (!(null != l && l.type === _.d4z.GUILD_ANNOUNCEMENT && (0, f.Z)(r) && (null != a && (null == (t = r.author) ? void 0 : t.id) === a.id ? d.Z.can(_.Plq.SEND_MESSAGES, l) : d.Z.can(_.Plq.MANAGE_MESSAGES, l)) && !m.yE(Number(r.flags), _.iLy.CROSSPOSTED))) return !1;
+        if (!(null != l && l.type === g.d4z.GUILD_ANNOUNCEMENT && (0, f.Z)(r) && (null != a && (null == (t = r.author) ? void 0 : t.id) === a.id ? d.Z.can(g.Plq.SEND_MESSAGES, l) : d.Z.can(g.Plq.MANAGE_MESSAGES, l)) && !m.yE(Number(r.flags), g.iLy.CROSSPOSTED))) return !1;
         b.add(r.id);
     },
     MESSAGE_UPDATE: function (e) {
         let { message: t } = e;
-        b.has(t.id) && m.yE(Number(t.flags), _.iLy.CROSSPOSTED) && b.delete(t.id);
+        b.has(t.id) && m.yE(Number(t.flags), g.iLy.CROSSPOSTED) && b.delete(t.id);
     },
     CHANNEL_SELECT: function (e) {
         b.clear();
@@ -55,6 +55,6 @@ let C = new E(s.Z, {
     },
     CHANNEL_FOLLOWING_PUBLISH_BUMP_HIDE_PERMANENTLY: function (e) {
         let { channelId: t } = e;
-        (h.add(t), o.K.set(g, h), b.clear());
+        (h.add(t), o.K.set(_, h), b.clear());
     }
 });

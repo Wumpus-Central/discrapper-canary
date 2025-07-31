@@ -9,22 +9,22 @@ var i = n(512722),
     c = n(84615),
     u = n(430824),
     d = n(594174),
-    f = n(443002);
-let _ = 'BoostedGuildPerksModalConnected',
+    _ = n(443002);
+let f = 'BoostedGuildPerksModalConnected',
     p = (e) => {
         let { guildId: t, close: n, location: i } = e,
             c = (0, o.e7)([d.default], () => d.default.getCurrentUser());
         a()(null != c, 'PremiumGuildPerksModalConnected: currentUser cannot be undefined');
-        let _ = (0, o.e7)([u.Z], () => u.Z.getGuild(t), [t]),
+        let f = (0, o.e7)([u.Z], () => u.Z.getGuild(t), [t]),
             { analyticsLocations: p } = (0, l.ZP)(s.Z.BOOSTED_GUILD_PERKS_MODAL);
-        return null == _
+        return null == f
             ? null
             : (0, r.jsx)(l.Gt, {
                   value: p,
-                  children: (0, r.jsx)(f.Z, {
+                  children: (0, r.jsx)(_.Z, {
                       analyticsLocation: i,
                       onClose: n,
-                      guild: _
+                      guild: f
                   })
               });
     };
@@ -39,6 +39,6 @@ function h(e) {
                 location: n
             });
         },
-        { layerKey: _ }
+        { layerKey: f }
     );
 }

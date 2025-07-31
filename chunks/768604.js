@@ -33,18 +33,18 @@ function b() {
                 label: h.intl.string(h.t['D/157e'])
             }
         ],
-        E = [
+        O = [
             {
                 value: r.Q4.BLUR,
                 label: h.intl.string(h.t.S49UaW)
             }
         ],
-        O = {
+        E = {
             value: r.Q4.SHOW,
             label: h.intl.string(h.t['5k5OFh'])
         };
     return (
-        t && (j.unshift(O), E.unshift(O)),
+        t && (j.unshift(E), O.unshift(E)),
         (0, i.jsxs)(p.U, {
             setting: g.s6.GORE_MEDIA_REDACTION,
             children: [
@@ -97,7 +97,7 @@ function b() {
                         }),
                         (0, i.jsx)(s.q4e, {
                             look: s.qQH.CUSTOM,
-                            options: E,
+                            options: O,
                             value: n,
                             onChange: (e) => _({ goreContentGuilds: e }),
                             isDisabled: !t,

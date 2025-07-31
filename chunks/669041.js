@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(509212),
     u = n(388032),
     d = n(719969),
-    f = n(800010);
-function _(e, t, n) {
+    _ = n(800010);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,14 +37,14 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
 }
 function h(e) {
     let { transitionState: t, onClose: n } = e,
-        _ = (0, a.e7)([l.default], () => {
+        f = (0, a.e7)([l.default], () => {
             var e;
             return null == (e = l.default.getCurrentUser()) ? void 0 : e.email;
         }),
@@ -75,7 +75,7 @@ function h(e) {
             (0, r.jsx)('img', {
                 alt: '',
                 className: d.headerImage,
-                src: f
+                src: _
             }),
             (0, r.jsxs)(o.xBx, {
                 separator: !1,
@@ -118,8 +118,8 @@ function h(e) {
                             children: (0, r.jsx)(o.Text, {
                                 variant: 'text-md/normal',
                                 children: u.intl.format(u.t.qP5xYW, {
-                                    emailAddress: _,
-                                    emailAddressLink: 'mailto:'.concat(_)
+                                    emailAddress: f,
+                                    emailAddressLink: 'mailto:'.concat(f)
                                 })
                             })
                         }),

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+(n.d(t, { Z: () => x }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -11,33 +11,33 @@ var r = n(255367),
     p = n(223750),
     m = n(271383),
     f = n(496675),
-    _ = n(594174),
-    g = n(626135),
+    g = n(594174),
+    _ = n(626135),
     h = n(709054),
     b = n(838440),
     E = n(981631),
     C = n(18485);
-function O(e) {
+function v(e) {
     let { assets: t, currentUser: n, message: r } = e,
         i = (h.default.extractTimestamp(n.id) + h.default.extractTimestamp(r.id)) % t.length;
     return t[i];
 }
-function v(e) {
-    let { currentUser: t, channel: n, message: l, buttonLabels: d, stickers: m, event: f, eventProperties: _ } = e,
+function O(e) {
+    let { currentUser: t, channel: n, message: l, buttonLabels: d, stickers: m, event: f, eventProperties: g } = e,
         h = (0, p.t)(),
-        [E, v] = i.useState(!1),
-        y = i.useMemo(
+        [E, O] = i.useState(!1),
+        x = i.useMemo(
             () =>
-                O({
+                v({
                     assets: m,
                     currentUser: t,
                     message: l
                 }),
             [m, t, l]
         ),
-        x = i.useMemo(
+        y = i.useMemo(
             () =>
-                O({
+                v({
                     assets: d,
                     currentUser: t,
                     message: l
@@ -66,13 +66,13 @@ function v(e) {
                 })({
                     channel: n,
                     message: l,
-                    sticker: y
+                    sticker: x
                 }),
                 (function (e) {
                     var t, n;
                     let { sticker: r, event: i, eventProperties: l } = e;
                     null != i &&
-                        g.default.track(
+                        _.default.track(
                             i,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
@@ -115,40 +115,40 @@ function v(e) {
                             t)
                         );
                 })({
-                    sticker: y,
+                    sticker: x,
                     event: f,
-                    eventProperties: _
+                    eventProperties: g
                 }));
-        }, [n, l, y, f, _]);
+        }, [n, l, x, f, g]);
     return h
         ? (0, r.jsx)(a.zx, {
               variant: 'secondary',
               size: 'md',
               onClick: I,
-              text: x
+              text: y
           })
         : (0, r.jsxs)(o.zx, {
               'data-migration-pending': !0,
               className: C.CTAMessageButtonOuter,
               innerClassName: C.CTAMessageButton,
               color: o.Tt.PRIMARY,
-              onMouseEnter: () => v(!0),
-              onMouseLeave: () => v(!1),
+              onMouseEnter: () => O(!0),
+              onMouseLeave: () => O(!1),
               onClick: I,
               children: [
                   (0, r.jsx)(u.Z, {
                       className: C.CTAMessageSticker,
                       isInteracting: E,
-                      sticker: y,
+                      sticker: x,
                       size: 28
                   }),
-                  x
+                  y
               ]
           });
 }
-function y(e) {
+function x(e) {
     let { channel: t, message: n, buttonLabels: i, stickers: a, event: o, eventProperties: s } = e,
-        c = _.default.getCurrentUser(),
+        c = g.default.getCurrentUser(),
         u = (function (e) {
             let { channel: t, message: n, currentUser: r } = e;
             return (0, l.e7)([f.Z, m.ZP], () => {
@@ -169,7 +169,7 @@ function y(e) {
     return null != c && u
         ? (0, r.jsx)('div', {
               className: C.CTAMessage,
-              children: (0, r.jsx)(v, {
+              children: (0, r.jsx)(O, {
                   currentUser: c,
                   channel: t,
                   message: n,

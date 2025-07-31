@@ -33,7 +33,7 @@ function d(e) {
             });
         }));
 }
-function f(e) {
+function _(e) {
     let { message: t } = e;
     if (null == t.id || null == t.channel_id) return !1;
     let n = u(t),
@@ -47,7 +47,7 @@ function f(e) {
         !0)
     );
 }
-function _(e) {
+function f(e) {
     let { messageId: t, channelId: n } = e,
         r = u({
             id: t,
@@ -79,8 +79,8 @@ l(g, 'displayName', 'SearchMessageStore');
 let E = new g(a.Z, {
     SEARCH_MESSAGES_SUCCESS: d,
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: d,
-    MESSAGE_UPDATE: f,
+    MESSAGE_UPDATE: _,
     LOGOUT: p,
     CONNECTION_OPEN: h,
-    MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: _
+    MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: f
 });

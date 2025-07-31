@@ -14,8 +14,8 @@ var r = n(392711),
     c = n(846519),
     u = n(621012),
     d = n(314897),
-    f = n(526167),
-    _ = n(70956),
+    _ = n(526167),
+    f = n(70956),
     p = n(709054),
     h = n(798681),
     m = n(981631),
@@ -38,9 +38,9 @@ let b = 100,
     O = { any: 100 },
     v = 100,
     I = 3,
-    T = 30 * _.Z.Millis.SECOND,
-    S = 120 * _.Z.Millis.SECOND,
-    A = -1 !== (0, f.hY)();
+    T = 30 * f.Z.Millis.SECOND,
+    S = 120 * f.Z.Millis.SECOND,
+    A = -1 !== (0, _.hY)();
 var N = (function (e) {
     return ((e.UserSSRCUpdate = 'user-ssrc-update'), (e.Update = 'update'), e);
 })({});
@@ -247,17 +247,17 @@ class C extends a.Z {
                     let s = [],
                         u = !1,
                         d = null != (e = a.streamPixelCounts[a.streamIds[t]]) ? e : 0,
-                        f = a.getWantsLevel(d),
-                        _ = i[0].ssrc;
+                        _ = a.getWantsLevel(d),
+                        f = i[0].ssrc;
                     if (a.shouldReceiveFromUser(t)) {
                         let e = t === a.selectedParticipantId && r !== b && !a.pipOpen;
                         if (i.length > 1) {
-                            for (let t of i) t.quality === b ? (e ? ((o[t.ssrc] = b), (_ = t.ssrc)) : (o[t.ssrc] = y)) : e ? (o[t.ssrc] = y) : (c && (o[t.ssrc] = f), (_ = t.ssrc));
-                            if (a.supportsSeamless && !a.framesReceived[_]) for (let e of ((u = !0), (s = [_]), i)) e.ssrc !== _ && a.framesReceived[e.ssrc] && (e.quality === b ? (o[e.ssrc] = b) : (o[e.ssrc] = c ? f : r), s.push(e.ssrc));
-                        } else e ? (o[_] = b) : c && (o[_] = f);
+                            for (let t of i) t.quality === b ? (e ? ((o[t.ssrc] = b), (f = t.ssrc)) : (o[t.ssrc] = y)) : e ? (o[t.ssrc] = y) : (c && (o[t.ssrc] = _), (f = t.ssrc));
+                            if (a.supportsSeamless && !a.framesReceived[f]) for (let e of ((u = !0), (s = [f]), i)) e.ssrc !== f && a.framesReceived[e.ssrc] && (e.quality === b ? (o[e.ssrc] = b) : (o[e.ssrc] = c ? _ : r), s.push(e.ssrc));
+                        } else e ? (o[f] = b) : c && (o[f] = _);
                     } else for (let e of i) o[e.ssrc] = y;
                     let p = a.getSimulcastOverrideQuality(t);
-                    for (let e of (p === g.Z.HIGH ? (o[_] = b) : p === g.Z.LOW && (o[_] = 50), (a.supportsSeamless && u) || (s = [_]), i)) s.includes(e.ssrc) || delete a.framesReceived[e.ssrc];
+                    for (let e of (p === g.Z.HIGH ? (o[f] = b) : p === g.Z.LOW && (o[f] = 50), (a.supportsSeamless && u) || (s = [f]), i)) s.includes(e.ssrc) || delete a.framesReceived[e.ssrc];
                     (n.includes(t) || (void 0 !== a.remoteVideoSsrcs[t] && !(0, l.Z)(a.remoteVideoSsrcs[t], s))) && ((a.remoteVideoSsrcs[t] = [...s]), a.emit('user-ssrc-update', t, a.audioSsrcs[t], s));
                 }
                 for (let [e, n] of Object.entries(a.audioSsrcs)) (null == (t = a.connection) ? void 0 : t.getLocalMute(e)) && (o[n] = 0);

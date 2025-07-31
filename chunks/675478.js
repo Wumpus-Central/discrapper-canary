@@ -37,8 +37,8 @@ var r = n(512722),
     c = n(433517),
     u = n(570140),
     d = n(710845),
-    f = n(428967),
-    _ = n(605236),
+    _ = n(428967),
+    f = n(605236),
     p = n(626135),
     h = n(70956),
     m = n(915486),
@@ -320,7 +320,7 @@ function L(e, t, n, r) {
 }
 function x(e) {
     return (
-        M(e),
+        k(e),
         R.updateAsync(
             'userContent',
             (t) => {
@@ -331,10 +331,10 @@ function x(e) {
         )
     );
 }
-function M(e) {
-    !E.Z.hasLoaded(y.yP.PRELOADED_USER_SETTINGS) && (k(e) || p.default.track(O.rMx.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: o.z[e] }));
-}
 function k(e) {
+    !E.Z.hasLoaded(y.yP.PRELOADED_USER_SETTINGS) && (M(e) || p.default.track(O.rMx.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: o.z[e] }));
+}
+function M(e) {
     var t;
     let n = null == (t = E.Z.settings.userContent) ? void 0 : t.dismissedContents;
     return null != n && (0, m.jl)(n, e);
@@ -388,7 +388,7 @@ function F() {
         'userContent',
         (e) => {
             let t = new Uint8Array();
-            for (let n of f.V_) (0, f.O2)(n) ? (t = (0, m.GV)(t, n)) : (e.recurringDismissibleContentStates[n] = (0, _.F8)(n));
+            for (let n of _.V_) (0, _.O2)(n) ? (t = (0, m.GV)(t, n)) : (e.recurringDismissibleContentStates[n] = (0, f.F8)(n));
             e.dismissedContents = t;
         },
         y.fy.INFREQUENT_USER_ACTION

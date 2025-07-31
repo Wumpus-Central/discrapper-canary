@@ -20,12 +20,12 @@ function c(e, t, n) {
 }
 let u = 16,
     d = 600,
-    f = 900,
-    _ = !1;
+    _ = 900,
+    f = !1;
 class p {
     calculateFps(e, t, n) {
         if (-1 === this.prevFramesCodec[e] || t < this.prevFramesCodec[e] || n < this.prevTimestamp[e] || n > this.prevTimestamp[e] + 1000 * this.windowLength) return ((this.prevFramesCodec[e] = t), (this.prevTimestamp[e] = n), (this.perUserFpsWindow[e] = []), NaN);
-        if (n < this.prevTimestamp[e] + f) return NaN;
+        if (n < this.prevTimestamp[e] + _) return NaN;
         let r = this.elapsedSeconds(n, this.prevTimestamp[e]);
         this.prevTimestamp[e] = n;
         let i = (t - this.prevFramesCodec[e]) / r;
@@ -34,7 +34,7 @@ class p {
     updateFps(e, t, n) {
         if (!this.disabled && !this.streamDisabledUsers.has(e)) {
             let r = this.calculateFps(e, t, n);
-            if ((_ && this.logger.info('frames='.concat(t, ', timestamp=').concat(n, ' fps=').concat(r)), !(r < 0) && Number.isFinite(r))) (this.perUserFpsWindow[e].push(r), this.perUserFpsWindow[e].length < this.windowLength || (this.perUserFpsWindow[e].length > this.windowLength && this.perUserFpsWindow[e].shift(), this.perUserFpsWindow[e].filter((e) => e < this.fpsThreshold).length >= this.fpsWindowBorderlineCount ? (this.logger.info(''.concat(e, ': detected poor network quality, turning off video')), this.streamDisabledUsers.add(e), (this.currentVideoAutoToggleState[e] = l.ZUi.DISABLED), (0, o.Z)(e, l.ZUi.DISABLED), this.startReenableBackoffTimer(e)) : this.currentVideoAutoToggleState[e] === l.ZUi.AUTO_PROBING && ((this.currentVideoAutoToggleState[e] = l.ZUi.AUTO_ENABLED), this.logger.info('acceptable conditions reached, will reset and send a AUTO_ENABLED for user '.concat(e)), (0, o.Z)(e, l.ZUi.AUTO_ENABLED)), this.probingUserId === e && ((this.probingUserId = void 0), this.tryReenableQueue())));
+            if ((f && this.logger.info('frames='.concat(t, ', timestamp=').concat(n, ' fps=').concat(r)), !(r < 0) && Number.isFinite(r))) (this.perUserFpsWindow[e].push(r), this.perUserFpsWindow[e].length < this.windowLength || (this.perUserFpsWindow[e].length > this.windowLength && this.perUserFpsWindow[e].shift(), this.perUserFpsWindow[e].filter((e) => e < this.fpsThreshold).length >= this.fpsWindowBorderlineCount ? (this.logger.info(''.concat(e, ': detected poor network quality, turning off video')), this.streamDisabledUsers.add(e), (this.currentVideoAutoToggleState[e] = l.ZUi.DISABLED), (0, o.Z)(e, l.ZUi.DISABLED), this.startReenableBackoffTimer(e)) : this.currentVideoAutoToggleState[e] === l.ZUi.AUTO_PROBING && ((this.currentVideoAutoToggleState[e] = l.ZUi.AUTO_ENABLED), this.logger.info('acceptable conditions reached, will reset and send a AUTO_ENABLED for user '.concat(e)), (0, o.Z)(e, l.ZUi.AUTO_ENABLED)), this.probingUserId === e && ((this.probingUserId = void 0), this.tryReenableQueue())));
         }
     }
     startReenableBackoffTimer(e) {

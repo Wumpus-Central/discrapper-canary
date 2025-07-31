@@ -35,8 +35,8 @@ var a,
     u = n(264344),
     d = n.n(u);
 n(804098);
-var f = n(903772),
-    _ = n(627420),
+var _ = n(903772),
+    f = n(627420),
     p = n(433517),
     h = n(298444),
     m = n(979675),
@@ -110,7 +110,7 @@ if (null != P) {
         o = P.os.arch,
         s = P.os.appArch,
         l = P.remoteApp.getReleaseChannel(),
-        c = (0, _.qf)();
+        c = (0, f.qf)();
     switch (n) {
         case 'win32':
             e = 'Windows';
@@ -134,7 +134,7 @@ if (null != P) {
             os_arch: o,
             app_arch: s,
             system_locale: c,
-            has_client_mods: (0, f.e)(),
+            has_client_mods: (0, _.e)(),
             client_launch_id: g.s
         }),
         (null == (a = d().name) ? void 0 : a.toLocaleLowerCase()) === 'electron' && ((r.browser_user_agent = d().ua || ''), (r.browser_version = d().version || '')),
@@ -165,7 +165,7 @@ function x() {
     let e = document.referrer;
     return 0 === e.search('https?://(.*)google.([^/?]*)') ? 'google' : 0 === e.search('https?://(.*)bing.com') ? 'bing' : 0 === e.search('https?://(.*)yahoo.com') ? 'yahoo' : 0 === e.search('https?://(.*)duckduckgo.com') ? 'duckduckgo' : null;
 }
-function M() {
+function k() {
     let e = {},
         t = document.referrer,
         n = x(),
@@ -177,7 +177,7 @@ function M() {
     }
     return e;
 }
-function k() {
+function M() {
     let { userAgent: e, vendor: t = '' } = window.navigator,
         { opera: n } = window;
     if (n) return /Mini/.test(e) ? 'Opera Mini' : 'Opera';
@@ -219,7 +219,7 @@ function G() {
 }
 function B() {
     let e = {};
-    return ((e.os = j()), (e.browser = k()), (e.device = U()), (e.system_locale = (0, _.qf)()), (e.has_client_mods = (0, f.e)()), e);
+    return ((e.os = j()), (e.browser = M()), (e.device = U()), (e.system_locale = (0, f.qf)()), (e.has_client_mods = (0, _.e)()), e);
 }
 function V() {
     var e, t;
@@ -236,7 +236,7 @@ function V() {
 }
 function F() {
     let e = {};
-    return ((e.referrer = document.referrer), (e.referring_domain = G()), (e = I({}, e, L(window.location.href), M())));
+    return ((e.referrer = document.referrer), (e.referring_domain = G()), (e = I({}, e, L(window.location.href), k())));
 }
 function Z(e, t) {
     let n = {};
@@ -261,10 +261,10 @@ function W() {
     let n = {},
         r = window.GLOBAL_ENV.RELEASE_CHANNEL;
     r && (null == n.release_channel || '' === n.release_channel) && (n.release_channel = r.split('-')[0]);
-    let i = parseInt('425439', 10);
+    let i = parseInt('425519', 10);
     isNaN(i) || (n.client_build_number = i);
     let a = null == P || null == (e = (t = P.remoteApp).getBuildNumber) ? void 0 : e.call(t);
-    return (isNaN(a) || (n.native_build_number = a), (n.client_event_source = Y()), (n.has_client_mods = (0, f.e)()), (n.client_launch_id = g.s), n);
+    return (isNaN(a) || (n.native_build_number = a), (n.client_event_source = Y()), (n.has_client_mods = (0, _.e)()), (n.client_launch_id = g.s), n);
 }
 function K(e) {
     return null != C[e] && C[e] > Date.now();

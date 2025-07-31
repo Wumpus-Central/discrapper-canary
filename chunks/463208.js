@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,12 +47,12 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -109,24 +109,24 @@ function g(e, t, n, r, a, o) {
 }
 function E(e) {
     var t;
-    let { disabled: n = !1, editable: o, inputRef: l, focusProps: u, name: f = '', type: h = 'text', placeholder: E = '', maxLength: b = 999, value: y, defaultValue: O, minLength: v, error: I, defaultDirty: T = !1, leading: S, trailing: A, validateOn: N = 'change' } = e,
+    let { disabled: n = !1, editable: o, inputRef: l, focusProps: u, name: _ = '', type: h = 'text', placeholder: E = '', maxLength: b = 999, value: y, defaultValue: O, minLength: v, error: I, defaultDirty: T = !1, leading: S, trailing: A, validateOn: N = 'change' } = e,
         C = p(e, ['disabled', 'editable', 'inputRef', 'focusProps', 'name', 'type', 'placeholder', 'maxLength', 'value', 'defaultValue', 'minLength', 'error', 'defaultDirty', 'leading', 'trailing', 'validateOn']),
         R = m(y, O),
         { errorMessage: P, hasError: w, setShouldValidate: D } = g(N, I, y, v, b, T),
         L = (e) => {
             var t, n;
             let r = e.currentTarget.value;
-            (null == (t = C.onChange) || t.call(C, r, f), D(!0), null == (n = R.setHasValue) || n.call(R, '' !== r));
+            (null == (t = C.onChange) || t.call(C, r, _), D(!0), null == (n = R.setHasValue) || n.call(R, '' !== r));
         },
         x = (e) => {
             var t, n;
-            (null == (t = C.onFocus) || t.call(C, e, f), null == (n = R.setIsFocused) || n.call(R, !0));
+            (null == (t = C.onFocus) || t.call(C, e, _), null == (n = R.setIsFocused) || n.call(R, !0));
         },
-        M = (e) => {
+        k = (e) => {
             var t, n;
-            (null == (t = C.onBlur) || t.call(C, e, f), null == (n = R.setIsFocused) || n.call(R, !1));
+            (null == (t = C.onBlur) || t.call(C, e, _), null == (n = R.setIsFocused) || n.call(R, !1));
         },
-        k = i.useRef(null),
+        M = i.useRef(null),
         j = !1 === o || void 0;
     return (0, r.jsxs)('div', {
         className: c.container,
@@ -135,20 +135,20 @@ function E(e) {
                 className: c.wrapper,
                 'data-leading': null != S,
                 'data-trailing': null != A,
-                ref: k,
+                ref: M,
                 'data-error': w,
                 'data-read-only': j,
                 children: [
                     S,
                     (0, r.jsx)(
                         a.t,
-                        _(d({ ringTarget: k }, u), {
+                        f(d({ ringTarget: M }, u), {
                             children: (0, r.jsx)(
                                 'input',
-                                _(
+                                f(
                                     d(
                                         {
-                                            name: f,
+                                            name: _,
                                             className: c.input,
                                             disabled: n,
                                             readOnly: j,
@@ -164,7 +164,7 @@ function E(e) {
                                     {
                                         'aria-labelledby': null != (t = C['aria-labelledby']) ? t : R.titleId,
                                         onChange: L,
-                                        onBlur: M,
+                                        onBlur: k,
                                         onFocus: x,
                                         ref: l
                                     }

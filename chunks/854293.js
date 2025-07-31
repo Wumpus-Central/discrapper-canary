@@ -21,14 +21,14 @@ var r,
     d = function (e) {
         return l.test(e) || c.test(e);
     },
-    f = function () {
+    _ = function () {
         for (var e = document.querySelectorAll('script[src^="'.concat(o, '"]')), t = 0; t < e.length; t++) {
             var n = e[t];
             if (d(n.src)) return n;
         }
         return null;
     },
-    _ = function (e) {
+    f = function (e) {
         var t = e && !e.advancedFraudSignals ? '?advancedFraudSignals=false' : '',
             n = document.createElement('script');
         n.src = ''.concat(s).concat(t);
@@ -66,8 +66,8 @@ var r,
                   if ((window.Stripe && e && console.warn(u), window.Stripe)) return void t(window.Stripe);
                   try {
                       var r,
-                          i = f();
-                      (i && e ? console.warn(u) : i ? i && null !== g && null !== m && (i.removeEventListener('load', g), i.removeEventListener('error', m), null == (r = i.parentNode) || r.removeChild(i), (i = _(e))) : (i = _(e)), (g = b(t, n)), (m = E(n)), i.addEventListener('load', g), i.addEventListener('error', m));
+                          i = _();
+                      (i && e ? console.warn(u) : i ? i && null !== g && null !== m && (i.removeEventListener('load', g), i.removeEventListener('error', m), null == (r = i.parentNode) || r.removeChild(i), (i = f(e))) : (i = f(e)), (g = b(t, n)), (m = E(n)), i.addEventListener('load', g), i.addEventListener('error', m));
                   } catch (e) {
                       n(e);
                       return;

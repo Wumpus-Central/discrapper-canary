@@ -11,8 +11,8 @@ var r = n(255367),
     c = n(841784),
     u = n(420660),
     d = n(206074),
-    f = n(145843),
-    _ = n(429589),
+    _ = n(145843),
+    f = n(429589),
     p = n(757182),
     h = n(728345),
     m = n(706454),
@@ -34,7 +34,7 @@ var r = n(255367),
     D = n(797342),
     L = n(981631),
     x = n(388032);
-function M(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -58,7 +58,7 @@ function k(e) {
                 })
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                k(e, t, n[t]);
             }));
     }
     return e;
@@ -74,7 +74,7 @@ let j = {
         [a.z.PLAYSTATION]: g.Z
     },
     U = (e) => {
-        let { channel: t, entry: n, disableGameProfileLinks: g, onReaction: E, onVoiceChannelPreview: M, onUserPopoutClosed: U, trackRankingItemInteraction: G } = e,
+        let { channel: t, entry: n, disableGameProfileLinks: g, onReaction: E, onVoiceChannelPreview: k, onUserPopoutClosed: U, trackRankingItemInteraction: G } = e,
             { largeImage: B } = (0, y.rv)({ entry: n }),
             { user: V, details: F, appName: Z, activity: H } = (0, D.n)(n),
             { primaryColor: Y, secondaryColor: W } = (0, N.Z)(null == B ? void 0 : B.src),
@@ -150,10 +150,10 @@ let j = {
                       }),
             ec =
                 (0, l.Z)(H, L.xjy.JOIN) || (0, c.Z)(H)
-                    ? (0, r.jsx)(_.Z, {
+                    ? (0, r.jsx)(f.Z, {
                           activity: H,
                           user: V,
-                          ButtonComponent: (e) => (0, r.jsx)(P.Ll, k({ IconComponent: s.iWm }, e))
+                          ButtonComponent: (e) => (0, r.jsx)(P.Ll, M({ IconComponent: s.iWm }, e))
                       })
                     : null,
             eu = [
@@ -161,13 +161,13 @@ let j = {
                 (0, u.Z)(H)
                     ? (0, r.jsx)(p.Z, {
                           activity: H,
-                          ButtonComponent: (e) => (0, r.jsx)(P.Ll, k({ IconComponent: s.tEF }, e))
+                          ButtonComponent: (e) => (0, r.jsx)(P.Ll, M({ IconComponent: s.tEF }, e))
                       })
                     : null,
                 ea
-                    ? (0, r.jsx)(f.Z, {
+                    ? (0, r.jsx)(_.Z, {
                           application: ei,
-                          ButtonComponent: (e) => (0, r.jsx)(P.Ll, k({ IconComponent: s.v3n }, e)),
+                          ButtonComponent: (e) => (0, r.jsx)(P.Ll, M({ IconComponent: s.v3n }, e)),
                           location: 'MemberListGamingContentPopout'
                       })
                     : null
@@ -178,7 +178,7 @@ let j = {
                 (0, r.jsx)(P.St, {
                     children: (0, r.jsx)(P.WT, {
                         onReaction: E,
-                        onVoiceChannelPreview: M,
+                        onVoiceChannelPreview: k,
                         user: V,
                         channel: t,
                         generateReactionImage: eo,

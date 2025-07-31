@@ -39,7 +39,7 @@ var s = (function (e) {
 let l = {
         2: () => n.e('48221').then(n.bind(n, 740106)),
         1: () => n.e('17094').then(n.bind(n, 326379)),
-        0: () => Promise.resolve().then(n.bind(n, 669636))
+        0: () => n.e('96887').then(n.bind(n, 669636))
     },
     c = {
         2: i.lazy(l[2]),

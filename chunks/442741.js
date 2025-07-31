@@ -1,6 +1,6 @@
 n.d(t, {
     Y9: () => d,
-    rT: () => f
+    rT: () => _
 });
 var r = n(46973),
     i = n(569545),
@@ -47,10 +47,10 @@ function d() {
             rtcConnectionId: o.Z.getRTCConnectionId(),
             mediaContext: r.Yn.DEFAULT
         },
-        _()
+        f()
     );
 }
-function f(e) {
+function _(e) {
     var t;
     let { channelId: n, ownerId: a } = (0, i.my)(e),
         o = l.Z.getRTCConnection(e);
@@ -63,10 +63,10 @@ function f(e) {
             streamKey: e,
             userId: a
         },
-        _()
+        f()
     );
 }
-function _() {
+function f() {
     var e, t, n;
     return {
         videoDeviceName: null == (e = a.Z.getVideoDevices()[a.Z.getVideoDeviceId()]) ? void 0 : e.name,

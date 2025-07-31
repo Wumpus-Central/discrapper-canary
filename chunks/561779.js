@@ -8,8 +8,8 @@ var r,
     c = n.n(l),
     u = n(855659),
     d = n(374470),
-    f = n(143450),
-    _ = n(84735),
+    _ = n(143450),
+    f = n(84735),
     p = n(981729),
     h = n(607070),
     m = n(251574);
@@ -134,8 +134,8 @@ class T extends (r = a.PureComponent) {
     }
     render() {
         var e;
-        let { value: t, active: n, focused: r, sortedMarkers: a, markerPositions: o, closestMarkerIndex: l, newClosestIndex: c, min: d, max: f } = this.state,
-            { disabled: g, stickToMarkers: b, className: O, children: v, barStyles: I, fillStyles: T, mini: A, hideBubble: N, defaultValue: C, orientation: R, onValueRender: P, renderMarker: w, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: M = {}, markerPosition: k = 0, 'aria-hidden': j, 'aria-label': U, 'aria-labelledby': G, 'aria-describedby': B } = this.props,
+        let { value: t, active: n, focused: r, sortedMarkers: a, markerPositions: o, closestMarkerIndex: l, newClosestIndex: c, min: d, max: _ } = this.state,
+            { disabled: g, stickToMarkers: b, className: O, children: v, barStyles: I, fillStyles: T, mini: A, hideBubble: N, defaultValue: C, orientation: R, onValueRender: P, renderMarker: w, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: k = {}, markerPosition: M = 0, 'aria-hidden': j, 'aria-label': U, 'aria-labelledby': G, 'aria-describedby': B } = this.props,
             V = 0;
         b ? null != o && (null != c ? (V = o[c]) : null != l && (V = o[l])) : (V = this.scaleValue(t));
         let F = ''.concat(V, '%'),
@@ -150,8 +150,8 @@ class T extends (r = a.PureComponent) {
                               {
                                   className: s()(m.mark, {
                                       [m.defaultValue]: r,
-                                      [m.markAbove]: 0 === k,
-                                      [m.markBelow]: 1 === k
+                                      [m.markAbove]: 0 === M,
+                                      [m.markBelow]: 1 === M
                                   }),
                                   style: { left: ''.concat(e, '%') },
                                   children:
@@ -178,7 +178,7 @@ class T extends (r = a.PureComponent) {
             keyboardFocused: r && h.Z.keyboardModeEnabled,
             children: (e) => {
                 var a;
-                return (0, i.jsx)(_.t, {
+                return (0, i.jsx)(f.t, {
                     focusTarget: this.containerRef,
                     ringTarget: this.grabberRef,
                     children: (0, i.jsxs)(u.animated.div, {
@@ -189,7 +189,7 @@ class T extends (r = a.PureComponent) {
                         }),
                         style: null == e ? void 0 : e.sliderStyles,
                         'aria-valuemin': d,
-                        'aria-valuemax': f,
+                        'aria-valuemax': _,
                         'aria-valuenow': t,
                         'aria-disabled': g,
                         'aria-orientation': R,
@@ -237,7 +237,7 @@ class T extends (r = a.PureComponent) {
                                             'div',
                                             y(E({}, e), {
                                                 className: s()(m.grabber, x),
-                                                style: y(E({}, M), { left: F }),
+                                                style: y(E({}, k), { left: F }),
                                                 onMouseDown: this.handleMouseDown,
                                                 ref: this.grabberRef
                                             })
@@ -277,8 +277,8 @@ class T extends (r = a.PureComponent) {
         if (e.clientX <= l || e.clientX >= c) return;
         let u = c - l,
             d = (e.clientX - r) / u,
-            f = a[i] + 100 * d;
-        (null != (t = this.props.equidistant ? O(f, a) : O(this.unscaleValue(f), o)) && (null == s || s(o[t])), this.setState({ newClosestIndex: t }));
+            _ = a[i] + 100 * d;
+        (null != (t = this.props.equidistant ? O(_, a) : O(this.unscaleValue(_), o)) && (null == s || s(o[t])), this.setState({ newClosestIndex: t }));
     }
     constructor(e) {
         (super(e),
@@ -303,10 +303,10 @@ class T extends (r = a.PureComponent) {
                     { disabled: n, maxValue: r, minValue: i, asValueChanges: a, onValueChange: o, stickToMarkers: s } = this.props,
                     { sortedMarkers: l, markerPositions: c } = this.state;
                 if (n) return;
-                let { clientX: u, currentTarget: f } = e;
-                if (!(0, d.k)(f)) return;
-                let { left: _, width: p } = f.getBoundingClientRect(),
-                    h = (u - _) / p;
+                let { clientX: u, currentTarget: _ } = e;
+                if (!(0, d.k)(_)) return;
+                let { left: f, width: p } = _.getBoundingClientRect(),
+                    h = (u - f) / p;
                 if (s) {
                     let { nextClosestMarkerIndex: e } = c.reduce(
                         (e, t, n) => {
@@ -416,7 +416,7 @@ function S(e) {
     let { active: t, keyboardFocused: n, children: r } = e,
         [i, o] = a.useState(!1);
     return r({
-        sliderStyles: (0, f.q)({
+        sliderStyles: (0, _.q)({
             '--grabber-size': n || t || i ? '20px' : '16px',
             '--bar-size': n || t || i ? '6px' : '4px',
             config: y(E({}, u.config.stiff), { duration: 100 })

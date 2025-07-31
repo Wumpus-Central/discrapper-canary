@@ -22,7 +22,7 @@ var i = n(255367),
     x = n(981631),
     _ = n(388032),
     j = n(283806);
-function E(e, t, n) {
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function E(e, t, n) {
         e
     );
 }
-class O extends r.PureComponent {
+class E extends r.PureComponent {
     componentDidMount() {
         this._initTimeout.start(1000, this.setupVoiceActivity);
     }
@@ -152,20 +152,20 @@ class O extends r.PureComponent {
     }
     constructor(...e) {
         (super(...e),
-            E(this, '_initTimeout', new c.V7()),
-            E(this, '_silenceTimeout', new c.V7()),
-            E(this, '_messageTimeout', new c.V7()),
-            E(this, '_micTestStartTime', void 0),
-            E(this, 'state', {
+            O(this, '_initTimeout', new c.V7()),
+            O(this, '_silenceTimeout', new c.V7()),
+            O(this, '_messageTimeout', new c.V7()),
+            O(this, '_micTestStartTime', void 0),
+            O(this, 'state', {
                 volume: -100,
                 isMicTesting: !1,
                 isDetectingInput: !0,
                 didDeafenUser: !1
             }),
-            E(this, 'setupVoiceActivity', () => {
+            O(this, 'setupVoiceActivity', () => {
                 h.Z.getMediaEngine().on(o.aB.VoiceActivity, this.handleVoiceActivity);
             }),
-            E(this, 'handleVoiceActivity', (e) => {
+            O(this, 'handleVoiceActivity', (e) => {
                 let { isMicTesting: t } = this.state;
                 if (t && e <= -100) {
                     (this._silenceTimeout.isStarted() ||
@@ -181,7 +181,7 @@ class O extends r.PureComponent {
                         isDetectingInput: !0
                     }));
             }),
-            E(this, 'handleToggleMicTest', () => {
+            O(this, 'handleToggleMicTest', () => {
                 this.state.isMicTesting ? this._micTestStop() : this._micTestStart();
             }));
     }
@@ -227,7 +227,7 @@ function C(e) {
         b = (0, l.e7)([f.Z], () => f.Z.isConnected()),
         { ref: x, width: _ } = (0, p.ZP)();
     return (0, i.jsx)(
-        O,
+        E,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -239,7 +239,7 @@ function C(e) {
                         })
                     )),
                     i.forEach(function (t) {
-                        E(e, t, n[t]);
+                        O(e, t, n[t]);
                     }));
             }
             return e;

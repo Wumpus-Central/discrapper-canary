@@ -1,5 +1,5 @@
 (n.d(t, {
-    ZP: () => k,
+    ZP: () => M,
     wU: () => D
 }),
     n(388685));
@@ -12,8 +12,8 @@ var r,
     c = n(944486),
     u = n(585483),
     d = n(351780),
-    f = n(641033),
-    _ = n(524484),
+    _ = n(641033),
+    f = n(524484),
     p = n(981631);
 function h(e, t, n) {
     return (
@@ -151,8 +151,8 @@ function C(e) {
                                             multiplier: 1
                                         })
                                     ),
-                                    M.emitChange()));
-                        } else (C(E(m({}, e), { value: e.value - 1 })), M.emitChange());
+                                    k.emitChange()));
+                        } else (C(E(m({}, e), { value: e.value - 1 })), k.emitChange());
                     }
                 })));
 }
@@ -188,8 +188,8 @@ function L(e) {
             channelId: r
         })
     );
-    if (d.Z.screenshakeEnabled && d.Z.screenshakeEnabledLocations[_.oZ.MENTION] && null != i && null != i.find((e) => e.id === s)) {
-        let e = null != c ? (null != (n = (0, f.KH)(c, _.qi.LEVEL_4)) ? n : 0.001) : 4 * Math.random();
+    if (d.Z.screenshakeEnabled && d.Z.screenshakeEnabledLocations[f.oZ.MENTION] && null != i && null != i.find((e) => e.id === s)) {
+        let e = null != c ? (null != (n = (0, _.KH)(c, f.qi.LEVEL_4)) ? n : 0.001) : 4 * Math.random();
         return (
             u.S.dispatch(p.CkL.SHAKE_APP, {
                 duration: 1000,
@@ -211,7 +211,7 @@ class x extends (r = i.ZP.Store) {
                 channelId: t
             })
         );
-        return null == n ? 0 : (0, f.Eo)(n);
+        return null == n ? 0 : (0, _.Eo)(n);
     }
     getUserCombo(e, t) {
         return T.get(
@@ -236,13 +236,13 @@ class x extends (r = i.ZP.Store) {
     }
     getUserComboShakeIntensity(e, t, n, r) {
         let i = this.getUserCombo(e, t);
-        return null != i ? (0, f.KH)(i, r) * n : 0;
+        return null != i ? (0, _.KH)(i, r) * n : 0;
     }
 }
 h(x, 'displayName', 'PoggermodeStore');
-let M = new x(s.Z, {
+let k = new x(s.Z, {
         POGGERMODE_UPDATE_COMBO: P,
         POGGERMODE_UPDATE_MESSAGE_COMBO: w,
         MESSAGE_CREATE: L
     }),
-    k = M;
+    M = k;

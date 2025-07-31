@@ -1,6 +1,6 @@
 (n.d(t, {
-    Jl: () => i,
-    g9: () => o
+    Jl: () => o,
+    g9: () => i
 }),
     n(539854),
     n(35282));
@@ -13,7 +13,7 @@ let a = {
     [l.Qe.FILTER]: r.w,
     [l.Qe.ANSWER]: r.O
 };
-function i() {
+function o() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = [];
     return (
@@ -32,7 +32,7 @@ function i() {
         t
     );
 }
-function o(e, t) {
+function i(e, t) {
     let { focusOffset: n, anchorOffset: r } = t.getSelection();
     return (0, s.g9)(e, n, r);
 }

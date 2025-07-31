@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(906732),
     u = n(365710),
     d = n(174604),
-    f = n(302175),
-    _ = n(626135),
+    _ = n(302175),
+    f = n(626135),
     p = n(724884),
     h = n(355045),
     m = n(290799),
@@ -31,7 +31,7 @@ let A = function (e) {
         D = i.useRef(null),
         L = i.useRef(null),
         x = i.useRef(null),
-        M = i.useCallback(() => {
+        k = i.useCallback(() => {
             null != x.current &&
                 null != L.current &&
                 L.current.scrollTo({
@@ -39,9 +39,9 @@ let A = function (e) {
                     animate: !0
                 });
         }, []),
-        k = i.useCallback(() => {
+        M = i.useCallback(() => {
             (null == A || A(),
-                _.default.track(I.rMx.MODAL_DISMISSED, {
+                f.default.track(I.rMx.MODAL_DISMISSED, {
                     type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
                     location_stack: w,
                     location_section: t.section,
@@ -54,7 +54,7 @@ let A = function (e) {
             (e) => {
                 e &&
                     !R.current &&
-                    (_.default.track(I.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                    (f.default.track(I.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                         type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
                         location_stack: w,
                         location_section: t.section,
@@ -66,7 +66,7 @@ let A = function (e) {
             [t, w, n.id]
         );
     (i.useEffect(() => {
-        _.default.track(I.rMx.OPEN_MODAL, {
+        f.default.track(I.rMx.OPEN_MODAL, {
             type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
             location_stack: w,
             location_section: t.section,
@@ -76,7 +76,7 @@ let A = function (e) {
     }, [n.id, t, w]),
         i.useEffect(() => {
             function e(e) {
-                'Escape' === e.key && k();
+                'Escape' === e.key && M();
             }
             return (
                 window.addEventListener('keydown', e),
@@ -84,7 +84,7 @@ let A = function (e) {
                     window.removeEventListener('keydown', e);
                 }
             );
-        }, [k]));
+        }, [M]));
     let U = (0, u.U)('GuildBoostingMarketing');
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -93,7 +93,7 @@ let A = function (e) {
                     className: S.closeIconWrapper,
                     children: (0, r.jsx)(s.Z, {
                         className: S.closeIcon,
-                        closeAction: k,
+                        closeAction: M,
                         keybind: 'ESC',
                         variant: s.Z.Variants.BOLD
                     })
@@ -111,7 +111,7 @@ let A = function (e) {
                                     (0, r.jsx)(d.Z, {
                                         guild: e.guild,
                                         themeResponsive: !1,
-                                        onButtonClick: M
+                                        onButtonClick: k
                                     }),
                                     (0, r.jsx)(o.X6q, {
                                         className: S.heading,
@@ -121,7 +121,7 @@ let A = function (e) {
                                     }),
                                     (0, r.jsx)(h.Z, {
                                         guild: n,
-                                        closeLayer: k,
+                                        closeLayer: M,
                                         onCtaVisibilityChange: C
                                     }),
                                     (0, r.jsx)(E.Z, { guild: n }),
@@ -135,10 +135,10 @@ let A = function (e) {
                         className: S.middleBodyContentWrapper,
                         children: [
                             !U && (0, r.jsx)(O.ZP, {}),
-                            (0, r.jsx)(f.Z, {
+                            (0, r.jsx)(_.Z, {
                                 ref: x,
                                 guild: e.guild,
-                                onClose: k
+                                onClose: M
                             })
                         ]
                     }),
@@ -173,7 +173,7 @@ let A = function (e) {
             (0, r.jsx)(g.Z, {
                 guild: n,
                 isVisible: !N,
-                closeLayer: k
+                closeLayer: M
             })
         ]
     });

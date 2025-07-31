@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(208049),
     u = n(763296),
     d = n(294206),
-    f = n(592125),
-    _ = n(430824),
+    _ = n(592125),
+    f = n(430824),
     p = n(496675),
     h = n(594174),
     m = n(74538),
@@ -20,7 +20,7 @@ let y = 4;
 function O(e) {
     let t = (0, s.e7)([h.default], () => m.ZP.canUseSoundboardEverywhere(h.default.getCurrentUser())),
         n = (0, s.e7)([u.Z], () => u.Z.getSoundsForGuild(g.X8)),
-        r = (0, s.Wu)([_.Z], () => _.Z.getGuildIds()),
+        r = (0, s.Wu)([f.Z], () => f.Z.getGuildIds()),
         a = i.useMemo(() => p.Z.can(E.Pl.USE_EXTERNAL_SOUNDS, e), [e]);
     return i.useMemo(() => {
         let i = [];
@@ -41,16 +41,16 @@ function O(e) {
 let v = i.memo(function (e) {
     let { channelId: t, onSelectSoundmoji: n } = e,
         a = (0, s.e7)([u.Z], () => !u.Z.isFetching() && !u.Z.hasFetchedAllSounds(), []),
-        o = (0, s.e7)([f.Z], () => f.Z.getChannel(t)),
-        _ = O(o);
+        o = (0, s.e7)([_.Z], () => _.Z.getChannel(t)),
+        f = O(o);
     return (i.useEffect(() => {
         (0, c.w)();
     }, [a]),
-    0 === _.length)
+    0 === f.length)
         ? (0, r.jsx)(l.$jN, {})
         : (0, r.jsx)('div', {
               className: b.rowContainer,
-              children: _.map((e, t) =>
+              children: f.map((e, t) =>
                   (0, r.jsx)(
                       d.ZP,
                       {

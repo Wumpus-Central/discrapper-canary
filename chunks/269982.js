@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(981631),
     u = n(388032),
     d = n(717906);
-function f(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,13 +32,13 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
 }
 function p(e) {
-    let { product: t, onSecondaryClick: f } = e,
+    let { product: t, onSecondaryClick: _ } = e,
         { newestAnalyticsLocation: p } = (0, s.ZP)(),
         h = i.useCallback(() => {
             null != t &&
@@ -47,7 +47,7 @@ function p(e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            _(
+                            f(
                                 {
                                     collectableType: null == t ? void 0 : t.type,
                                     analyticsSource: p,
@@ -55,13 +55,13 @@ function p(e) {
                                         section: c.jXE.USER_PROFILE,
                                         object: c.qAy.BUTTON_CTA
                                     },
-                                    onSecondaryClick: f
+                                    onSecondaryClick: _
                                 },
                                 n
                             )
                         );
                 });
-        }, [t, p, f]),
+        }, [t, p, _]),
         m = i.useMemo(() => {
             switch (null == t ? void 0 : t.type) {
                 case a.Z.AVATAR_DECORATION:

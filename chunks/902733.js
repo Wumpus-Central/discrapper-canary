@@ -24,23 +24,20 @@ function d(e) {
     });
 }
 let _ = function (e) {
-    let { searchId: t, searchType: l, dismissFeedbackEntrypoint: _ } = e;
+    let { searchContext: t, dismissFeedbackEntrypoint: l } = e;
     i.useEffect(() => {
-        (0, o.bo)({
-            searchId: t,
-            searchType: l
-        });
-    }, [t, l]);
-    let E = i.useCallback(
+        (0, o.bo)({ searchContext: t });
+    }, [t]);
+    let _ = i.useCallback(
         (e) => {
-            (_(),
+            (l(),
                 (0, a.ZDy)(async () => {
                     let { default: i } = await n.e('11298').then(n.bind(n, 229612));
                     return (n) => {
-                        var a, o;
+                        var l, a;
                         return (0, r.jsx)(
                             i,
-                            ((a = (function (e) {
+                            ((l = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
                                         r = Object.keys(n);
@@ -65,14 +62,13 @@ let _ = function (e) {
                                 }
                                 return e;
                             })({}, n)),
-                            (o = o =
+                            (a = a =
                                 {
-                                    searchId: t,
-                                    searchType: l,
+                                    searchContext: t,
                                     rating: e
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(o))
+                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -80,15 +76,15 @@ let _ = function (e) {
                                           n.push.apply(n, r);
                                       }
                                       return n;
-                                  })(Object(o)).forEach(function (e) {
-                                      Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(o, e));
+                                  })(Object(a)).forEach(function (e) {
+                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                                   }),
-                            a)
+                            l)
                         );
                     };
                 }));
         },
-        [_, t, l]
+        [l, t]
     );
     return (0, r.jsxs)('div', {
         className: u.container,
@@ -103,11 +99,11 @@ let _ = function (e) {
                 children: [
                     (0, r.jsx)(d, {
                         rating: s.aZ.GOOD,
-                        onClick: E
+                        onClick: _
                     }),
                     (0, r.jsx)(d, {
                         rating: s.aZ.BAD,
-                        onClick: E
+                        onClick: _
                     })
                 ]
             })

@@ -10,7 +10,7 @@ let i = 'collectibles shop product details modal',
         let { product: t, category: a, shouldCheckoutWithOrbs: o, analyticsSource: s, analyticsLocations: c, returnRef: u, tab: d } = e;
         (0, l.ZDy)(
             async () => {
-                let { default: e } = await r.e('2026').then(r.bind(r, 702370));
+                let { default: e } = await Promise.all([r.e('25292'), r.e('31978'), r.e('40694'), r.e('78223'), r.e('60432')]).then(r.bind(r, 702370));
                 return (r) => {
                     var l, i;
                     return (0, n.jsx)(

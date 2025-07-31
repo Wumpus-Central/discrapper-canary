@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(678135),
     _ = n(643879),
     j = n(621853),
-    E = n(271383),
-    O = n(246946),
+    O = n(271383),
+    E = n(246946),
     C = n(594174),
     v = n(63063),
     S = n(74538),
@@ -87,7 +87,7 @@ function k(e) {
             return (a()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e);
         }),
         L = (0, l.e7)([j.Z], () => !j.Z.isFetchingProfile(k.id, null == n ? void 0 : n.id)),
-        B = (0, l.e7)([O.Z], () => O.Z.hidePersonalInformation),
+        B = (0, l.e7)([E.Z], () => E.Z.hidePersonalInformation),
         M = (0, l.cj)([N.Z], () => Z(D({}, N.Z.getAllPending()), { source: N.Z.getSource() })),
         { source: U, pendingAvatar: V, pendingNameplate: G } = M,
         F = (function (e, t) {
@@ -113,7 +113,7 @@ function k(e) {
             userId: k.id,
             image: V
         }),
-        W = (0, l.e7)([E.ZP], () => (null != n ? E.ZP.getMember(n.id, k.id) : null));
+        z = (0, l.e7)([O.ZP], () => (null != n ? O.ZP.getMember(n.id, k.id) : null));
     (r.useEffect(() => () => c.Z.wait(T.W3), []),
         r.useEffect(() => {
             null != U &&
@@ -123,7 +123,7 @@ function k(e) {
                     source: U
                 });
         }, [U]));
-    let { enabled: z } = h.Z.useConfig({ location: 'GuildIdentitySettingsPage' });
+    let { enabled: W } = h.Z.useConfig({ location: 'GuildIdentitySettingsPage' });
     return B
         ? (0, i.jsx)(d.Z, {})
         : L
@@ -155,15 +155,15 @@ function k(e) {
                                               onUpsellClick: w
                                           })
                                       ),
-                                      nameplatePreview: z
+                                      nameplatePreview: W
                                           ? (0, i.jsx)(g.Z, {
                                                 user: k,
                                                 nameplate: G,
-                                                nameplateData: void 0 === G ? (0, f.Pb)(null == W || null == (t = W.collectibles) ? void 0 : t.nameplate) : void 0,
+                                                nameplateData: void 0 === G ? (0, f.Pb)(null == z || null == (t = z.collectibles) ? void 0 : t.nameplate) : void 0,
                                                 isHighlighted: !0
                                             })
                                           : null,
-                                      children: (0, i.jsx)(y.Z, { nameplateEnabled: z })
+                                      children: (0, i.jsx)(y.Z, { nameplateEnabled: W })
                                   })
                               ]
                           })

@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(89057),
     _ = n(433811),
     j = n(214852),
-    E = n(246946),
-    O = n(594174),
+    O = n(246946),
+    E = n(594174),
     C = n(853872),
     v = n(78839),
     S = n(626135),
@@ -40,12 +40,12 @@ let L = function (e) {
         { sourceAnalyticsLocations: s, analyticsLocations: L } = (0, h.ZP)(g.Z.PREMIUM_MARKETING),
         B = (0, l.e7)([v.Z], () => v.Z.hasFetchedSubscriptions()),
         M = (0, l.e7)([C.Z], () => C.Z.hasFetchedPaymentSources),
-        U = (0, l.e7)([O.default], () => O.default.getCurrentUser()),
+        U = (0, l.e7)([E.default], () => E.default.getCurrentUser()),
         V = null == U ? void 0 : U.id,
         G = (0, P.N)(),
         F = (0, A.Ng)(),
         H = (0, b.V)(Z.nS),
-        [W, z] = r.useState(!0),
+        [z, W] = r.useState(!0),
         Y = r.useRef(0),
         K = (0, T.M5)(U, Z.p9.TIER_2),
         q = (0, y.Z)({ location: 'PremiumMarketingPage' }),
@@ -56,20 +56,20 @@ let L = function (e) {
         r.useEffect(() => {
             c.Z.wait(async () => {
                 let e = Date.now();
-                (await Promise.all([d.jg(), d.tZ(), (0, u.Y2)(null, null, w.JjL.DISCOVERY)]), (Y.current = Date.now() - e), z(!1));
+                (await Promise.all([d.jg(), d.tZ(), (0, u.Y2)(null, null, w.JjL.DISCOVERY)]), (Y.current = Date.now() - e), W(!1));
             });
         }, []),
         r.useEffect(() => {
-            W ||
+            z ||
                 S.default.track(w.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
                     location_stack: s,
                     load_duration_ms: Y.current
                 });
-        }, [s, W]),
+        }, [s, z]),
         r.useEffect(() => {
             n && (null != G || null != F) && (0, I.a)(G, F);
         }, [n, G, F]));
-    let J = (0, l.e7)([E.Z], () => E.Z.enabled),
+    let J = (0, l.e7)([O.Z], () => O.Z.enabled),
         Q = t === Z.EZ.ApplicationStoreHome,
         $ = J
             ? (0, i.jsx)(m.Z, {})

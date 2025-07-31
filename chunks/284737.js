@@ -1,7 +1,7 @@
 n.d(t, {
-    CO: () => f,
+    CO: () => _,
     Rz: () => p,
-    S1: () => _,
+    S1: () => f,
     T_: () => s,
     al: () => l,
     dx: () => u,
@@ -45,7 +45,7 @@ function d(e) {
         isElementFullscreen: (0, a.rB)(null, e.document)
     });
 }
-function f(e) {
+function _(e) {
     let t = (0, o.ZY)(e);
     i.Z.dispatch({
         type: 'WINDOW_VISIBILITY_CHANGE',
@@ -53,7 +53,7 @@ function f(e) {
         visible: 'visible' === e.document.visibilityState
     });
 }
-function _(e) {
+function f(e) {
     let t = (0, o.ZY)(e),
         n = e.document;
     i.Z.dispatch({

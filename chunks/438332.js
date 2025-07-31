@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,11 +57,11 @@ function f(e, t) {
         e
     );
 }
-let _ = { lastSeenNewlyAddedEmojiIds: {} },
-    p = _,
+let f = { lastSeenNewlyAddedEmojiIds: {} },
+    p = f,
     h = {};
 function m() {
-    ((p = _), (h = {}));
+    ((p = f), (h = {}));
 }
 function g(e) {
     var t;
@@ -73,7 +73,7 @@ function g(e) {
               lastSeen: Date.now(),
               acknowledged: !0
           })
-        : (h[n] = f(u({}, i), { acknowledged: !0 }));
+        : (h[n] = _(u({}, i), { acknowledged: !0 }));
 }
 function E(e) {
     var t;
@@ -90,11 +90,11 @@ function b() {
     for (let e in h) p.lastSeenNewlyAddedEmojiIds[e] = h[e];
 }
 function y() {
-    ((p = _), b());
+    ((p = f), b());
 }
 class O extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        p = null != e ? e : _;
+        p = null != e ? e : f;
     }
     getState() {
         return p;
