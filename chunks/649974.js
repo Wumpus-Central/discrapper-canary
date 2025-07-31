@@ -61,7 +61,7 @@ function h(e) {
     let t = !1;
     return (
         e.forEach((e) => {
-            t = !1 !== E(e) || t;
+            t = !1 !== y(e) || t;
         }),
         t
     );
@@ -72,7 +72,7 @@ function m(e) {
     let n = t.gameId;
     return (null != N[n] && ((N = p({}, N)), delete N[n][e], 0 === Object.values(N[n]).length && delete N[n]), (O = p({}, O)), delete O[e], !0);
 }
-function E(e) {
+function y(e) {
     let { user: t, activities: n } = e;
     if (null == t) return !1;
     let i = n.filter((e) => e.type !== u.IIU.CUSTOM_STATUS);
@@ -120,7 +120,7 @@ function S() {
                 let n = c.default.getUser(t);
                 null != n &&
                     (e =
-                        E({
+                        y({
                             user: n,
                             activities: o.Z.getActivities(t)
                         }) || e);
@@ -130,7 +130,7 @@ function S() {
         t
     );
 }
-class y extends (i = r.ZP.Store) {
+class E extends (i = r.ZP.Store) {
     initialize() {
         (this.waitFor(a.Z), this.syncWith([a.Z], S));
     }
@@ -150,8 +150,8 @@ class y extends (i = r.ZP.Store) {
         return O[e];
     }
 }
-d(y, 'displayName', 'NowPlayingStore');
-let I = new y(l.Z, {
+d(E, 'displayName', 'NowPlayingStore');
+let I = new E(l.Z, {
     CONNECTION_OPEN: function () {
         ((N = {}), (O = {}));
     },
@@ -171,7 +171,7 @@ let I = new y(l.Z, {
     },
     PRESENCE_UPDATES: function (e) {
         let { updates: t } = e;
-        return t.map((e) => E(e)).some((e) => e);
+        return t.map((e) => y(e)).some((e) => e);
     },
     PRESENCES_REPLACE: function (e) {
         let { presences: t } = e;

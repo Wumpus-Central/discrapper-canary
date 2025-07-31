@@ -220,7 +220,6 @@ function C(e) {
                                         }
                                         C(e);
                                     },
-                                    size: c.E1j.Sizes.MEDIUM,
                                     onClear: () => {
                                         (null === S && z(x), C(''));
                                     },

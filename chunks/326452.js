@@ -1,20 +1,15 @@
-(n.d(t, {
-    BK: () => O,
-    E1: () => v
-}),
-    n(388685));
+(n.d(t, { E: () => b }), n(388685));
 var r,
     i = n(255367),
     a = n(73800),
     o = n(120356),
     s = n.n(o),
-    l = n(1561),
-    c = n(84735),
-    u = n(922770),
-    d = n(481060),
-    _ = n(388032),
-    f = n(559122);
-function p(e, t, n) {
+    l = n(84735),
+    c = n(481060),
+    u = n(532425),
+    d = n(388032),
+    _ = n(559122);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +22,7 @@ function p(e, t, n) {
         e
     );
 }
-function h(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +33,12 @@ function h(e) {
                 })
             )),
             r.forEach(function (t) {
-                p(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
 }
-function m(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,29 +50,29 @@ function m(e, t) {
     }
     return n;
 }
-function g(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : m(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function E(e, t) {
+function g(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = b(e, t);
+        i = E(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function b(e, t) {
+function E(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -86,51 +81,7 @@ function b(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let y = Object.freeze({
-        SMALL: f.small,
-        MEDIUM: f.medium,
-        LARGE: f.large
-    }),
-    O = (e) => {
-        let { hasContent: t, onClear: n, className: r, isLoading: o, size: c = y.SMALL } = e;
-        return (0, i.jsx)(l.P, {
-            className: s()(r, f.iconLayout, c, { [f.pointer]: t }),
-            onClick: (e) => {
-                (e.stopPropagation(), null != n && n(e));
-            },
-            tabIndex: t ? 0 : -1,
-            'aria-hidden': !t,
-            onMouseDown: (e) => {
-                (e.preventDefault(), e.stopPropagation());
-            },
-            children: (0, i.jsx)('div', {
-                className: f.iconContainer,
-                children: o
-                    ? (0, i.jsx)(u.$, {
-                          type: u.$.Type.SPINNING_CIRCLE,
-                          className: s()(f.icon, f.visible)
-                      })
-                    : (0, i.jsxs)(a.Fragment, {
-                          children: [
-                              (0, i.jsx)(d._Ve, {
-                                  size: 'md',
-                                  color: 'currentColor',
-                                  className: s()(f.icon, { [f.visible]: !t }),
-                                  'aria-label': _.intl.string(_.t['5h0QOD'])
-                              }),
-                              (0, i.jsx)(d.Dio, {
-                                  size: 'md',
-                                  color: 'currentColor',
-                                  className: s()(f.clear, { [f.visible]: t }),
-                                  'aria-label': _.intl.string(_.t.VkKicX)
-                              })
-                          ]
-                      })
-            })
-        });
-    };
-O.Sizes = y;
-class v extends (r = a.PureComponent) {
+class b extends (r = a.PureComponent) {
     focus() {
         let { current: e } = this.inputRef;
         null == e || e.focus();
@@ -141,72 +92,88 @@ class v extends (r = a.PureComponent) {
     }
     render() {
         let e = this.props,
-            { query: t, autoFocus: n, onClear: r, className: a, placeholder: o = _.intl.string(_.t['5h0QOD']), iconClassName: l, onKeyDown: u, onKeyUp: d, onKeyPress: p, isLoading: m, size: b, disabled: y, onChange: v, onBlur: I, onFocus: T, autoComplete: S, inputProps: A, hideSearchIcon: N, 'aria-label': C = _.intl.string(_.t['5h0QOD']) } = e,
-            R = E(e, ['query', 'autoFocus', 'onClear', 'className', 'placeholder', 'iconClassName', 'onKeyDown', 'onKeyUp', 'onKeyPress', 'isLoading', 'size', 'disabled', 'onChange', 'onBlur', 'onFocus', 'autoComplete', 'inputProps', 'hideSearchIcon', 'aria-label']);
-        return (0, i.jsx)(c.t, {
-            focusTarget: this.inputRef,
-            ringTarget: this.containerRef,
-            children: (0, i.jsx)(
-                'div',
-                g(
-                    h(
-                        {
-                            className: s()(a, f.container, b, { [f.disabled]: y }),
-                            ref: this.containerRef
-                        },
-                        R
-                    ),
-                    {
-                        children: (0, i.jsxs)('div', {
-                            className: f.inner,
-                            children: [
-                                (0, i.jsx)(
-                                    'input',
-                                    g(h({}, A), {
-                                        onFocus: T,
-                                        onBlur: I,
-                                        className: f.input,
-                                        value: t,
-                                        onChange: this.handleOnChange,
-                                        onKeyDown: u,
-                                        onKeyUp: d,
-                                        onKeyPress: p,
-                                        placeholder: o,
-                                        disabled: y,
-                                        autoFocus: n,
-                                        autoComplete: S,
-                                        'aria-label': C,
-                                        ref: this.inputRef
-                                    })
-                                ),
-                                !N &&
-                                    (0, i.jsx)(O, {
-                                        size: b,
-                                        hasContent: t.length > 0,
-                                        onClear: r,
-                                        className: l,
-                                        isLoading: m
-                                    })
-                            ]
-                        })
-                    }
-                )
-            )
-        });
+            { query: t, autoFocus: n, onClear: r, className: a, placeholder: o = d.intl.string(d.t['5h0QOD']), onKeyDown: f, isLoading: h, size: E, disabled: b, onChange: y, onBlur: O, onFocus: v, autoComplete: I, inputProps: T, 'aria-label': S = d.intl.string(d.t['5h0QOD']) } = e,
+            A = g(e, ['query', 'autoFocus', 'onClear', 'className', 'placeholder', 'onKeyDown', 'isLoading', 'size', 'disabled', 'onChange', 'onBlur', 'onFocus', 'autoComplete', 'inputProps', 'aria-label']),
+            N = (0, i.jsx)(u.B, {
+                size: E,
+                hasContent: t.length > 0,
+                onClear: r,
+                isLoading: h
+            });
+        return null == a
+            ? (0, i.jsx)(
+                  c.oil,
+                  m(p({}, T), {
+                      onFocus: v,
+                      onBlur: O,
+                      value: t,
+                      onChange: y,
+                      onKeyDown: f,
+                      placeholder: o,
+                      disabled: b,
+                      autoFocus: n,
+                      autoComplete: I,
+                      'aria-label': S,
+                      inputRef: this.inputRef,
+                      trailing: N,
+                      size: E,
+                      fullWidth: !0
+                  })
+              )
+            : (0, i.jsx)(l.t, {
+                  focusTarget: this.inputRef,
+                  ringTarget: this.containerRef,
+                  children: (0, i.jsx)(
+                      'div',
+                      m(
+                          p(
+                              {
+                                  className: s()(a, _.container, _.wrapper, _[E], { [_.disabled]: b }),
+                                  ref: this.containerRef
+                              },
+                              A
+                          ),
+                          {
+                              children: (0, i.jsxs)('div', {
+                                  className: _.inner,
+                                  children: [
+                                      (0, i.jsx)(
+                                          'input',
+                                          m(p({}, T), {
+                                              onFocus: v,
+                                              onBlur: O,
+                                              className: _.input,
+                                              value: t,
+                                              onChange: this.handleOnChange,
+                                              onKeyDown: f,
+                                              placeholder: o,
+                                              disabled: b,
+                                              autoFocus: n,
+                                              autoComplete: I,
+                                              'aria-label': S,
+                                              ref: this.inputRef
+                                          })
+                                      ),
+                                      N
+                                  ]
+                              })
+                          }
+                      )
+                  )
+              });
     }
     constructor(...e) {
         (super(...e),
-            p(this, 'inputRef', a.createRef()),
-            p(this, 'containerRef', a.createRef()),
-            p(this, 'handleOnChange', (e) => {
+            f(this, 'inputRef', a.createRef()),
+            f(this, 'containerRef', a.createRef()),
+            f(this, 'handleOnChange', (e) => {
                 let { onChange: t } = this.props;
                 null == t || t(e.currentTarget.value);
             }));
     }
 }
-(p(v, 'Sizes', y),
-    p(v, 'defaultProps', {
-        size: y.SMALL,
-        isLoading: !1,
-        disabled: !1
-    }));
+f(b, 'defaultProps', {
+    size: 'md',
+    isLoading: !1,
+    disabled: !1
+});

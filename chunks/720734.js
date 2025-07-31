@@ -110,8 +110,8 @@ var i = n(255367),
     eQ = n(345243),
     e$ = n(115530),
     e0 = n(981631),
-    e1 = n(215023),
-    e3 = n(921944),
+    e3 = n(215023),
+    e1 = n(921944),
     e6 = n(46140),
     e8 = n(388032),
     e2 = n(239692);
@@ -392,12 +392,12 @@ class ti extends r.PureComponent {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(ea.Z, {
-                    groupName: e3.R.ACCOUNT_NAME_ZONE,
+                    groupName: e1.R.ACCOUNT_NAME_ZONE,
                     targetElementRef: this.avatarWithPopoutRef
                 }),
                 (0, i.jsx)(H.ZP, {
                     contentTypes: n.avatar,
-                    groupName: e3.R.ACCOUNT_NAME_ZONE,
+                    groupName: e1.R.ACCOUNT_NAME_ZONE,
                     children: (t) => {
                         let { visibleContent: n, markAsDismissed: r } = t;
                         switch (n) {
@@ -734,7 +734,7 @@ function ts() {
         w = (0, d.e7)([Y.Z], () => null != Y.Z.getAwaitingRemoteSessionInfo()),
         k = (0, d.e7)([eZ.Z], () => eZ.Z.getGuildId()),
         L = eW.ZP.canUsePremiumGuildMemberProfile(t),
-        B = (null == t || null == (e = t.avatarDecoration) ? void 0 : e.skuId) === e1.rL,
+        B = (null == t || null == (e = t.avatarDecoration) ? void 0 : e.skuId) === e3.rL,
         { voiceActivityStatusEnabled: M } = (0, E.U)({ location: 'Account' }),
         U = (0, J.m)(),
         [V, G] = (0, q.G)(null != k ? k : null),
@@ -1054,7 +1054,7 @@ function tl(e) {
                                                             'aria-label': e8.intl.string(e8.t.Hapb4O),
                                                             disabled: l,
                                                             onClick: (e) => {
-                                                                (s(e3.L.INDIRECT_ACTION), n(e), null != A && !q && P ? (0, eS.$)(() => X(!0)) : X(!q));
+                                                                (s(e1.L.INDIRECT_ACTION), n(e), null != A && !q && P ? (0, eS.$)(() => X(!0)) : X(!q));
                                                             }
                                                         },
                                                         r

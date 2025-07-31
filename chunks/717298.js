@@ -17,8 +17,8 @@ var r = n(255367),
     _ = n(100527),
     v = n(906732),
     j = n(594190),
-    S = n(72897),
-    b = n(695346),
+    b = n(72897),
+    S = n(695346),
     C = n(131951),
     y = n(19780),
     O = n(594174),
@@ -40,8 +40,8 @@ var r = n(255367),
     G = n(328242),
     W = n(565574),
     F = n(286420),
-    z = n(51708),
-    H = n(801604),
+    H = n(51708),
+    z = n(801604),
     V = n(577257),
     Y = n(70722),
     J = n(65154),
@@ -69,7 +69,7 @@ function $(e) {
         eo = (0, m.e7)([O.default], () => O.default.getCurrentUser()),
         ea = (0, A.Z)(),
         { state: ec, dispatch: ed } = (0, B.Ti)(a, eo, ea, (0, Z.isWindows)() && null != a && $ ? 'confirm' : 'source_select'),
-        [eu, ef] = (0, S.L)(J.h7.AUDIO_INPUT, { location: 'GoLiveModalV2' }),
+        [eu, ef] = (0, b.L)(J.h7.AUDIO_INPUT, { location: 'GoLiveModalV2' }),
         em = eu.concat(ef);
     (0, V.Z)(el, ed, 'confirm' === ec.modalStep);
     let eh = !w.ZP.canStreamQuality(w.ZP.StreamQuality.HIGH, eo),
@@ -88,8 +88,8 @@ function $(e) {
         e_ = 'confirm' === ec.modalStep,
         ev = !$ && null != a && !e_,
         ej = e_ || (!ev && ee && (!el || ec.sourceType === f.vA.CAMERA)),
-        eS = el && ec.sourceType !== f.vA.CAMERA,
-        eb = el || !(0, Z.isWindows)() || !et || e_,
+        eb = el && ec.sourceType !== f.vA.CAMERA,
+        eS = el || !(0, Z.isWindows)() || !et || e_,
         eC = en && eh,
         ey = e_ && et,
         eO = i.useMemo(() => {
@@ -118,7 +118,7 @@ function $(e) {
         { sourceType: eI } = ec,
         eZ = i.useCallback(
             async (e) => {
-                (b.eo.updateSetting(ec.notifyFriends), b.I0.updateSetting(ec.hidePreview));
+                (S.eo.updateSetting(ec.notifyFriends), S.I0.updateSetting(ec.hidePreview));
                 let [t, r] = await (0, P.Z)(e.hasOwnProperty('pid') ? e.pid : e, {
                     preset: ec.preset,
                     fps: ec.fps,
@@ -167,12 +167,12 @@ function $(e) {
                 (0, r.jsxs)('div', {
                     className: q.footerContent,
                     children: [
-                        (0, r.jsx)(H.Z, { nativePickerEnabled: el }),
+                        (0, r.jsx)(z.Z, { nativePickerEnabled: el }),
                         (0, r.jsxs)('div', {
                             className: q.rightButtonGroup,
                             children: [
                                 eC && (0, r.jsx)(F.Z, { onClose: n }),
-                                eS &&
+                                eb &&
                                     !ej &&
                                     (0, r.jsx)(M.Z, {
                                         mainCTADisabled: !eg && '' === ec.nativeSourceType,
@@ -184,7 +184,7 @@ function $(e) {
                                         hideOptionsButton: !eC
                                     }),
                                 ej &&
-                                    !eS &&
+                                    !eb &&
                                     (0, r.jsx)(M.Z, {
                                         mainCTADisabled: null == ec.selectedSource,
                                         mainCTAOnClick: () => {
@@ -194,7 +194,7 @@ function $(e) {
                                         hideOptionsButton: !eC,
                                         ctaText: K.intl.string(X.default['5AyH/v'])
                                     }),
-                                (!eC || !(ej || eS)) &&
+                                (!eC || !(ej || eb)) &&
                                     (0, r.jsx)(W.Z, {
                                         useSimplifiedMenu: ey,
                                         align: 'right'
@@ -203,7 +203,7 @@ function $(e) {
                         })
                     ]
                 }),
-                eh && (0, r.jsx)(z.Z, { onClose: n })
+                eh && (0, r.jsx)(H.Z, { onClose: n })
             ]
         }),
         eE = ep
@@ -235,7 +235,7 @@ function $(e) {
             children: [
                 ev
                     ? (0, r.jsx)(k.Z, {
-                          className: s()(q.channelSelectorComponent, { [q.withFooter]: eb }),
+                          className: s()(q.channelSelectorComponent, { [q.withFooter]: eS }),
                           onSelectChannel: ew
                       })
                     : e_
@@ -300,7 +300,7 @@ function $(e) {
                             ]
                         }),
                 ey && (0, r.jsx)(L.Z, {}),
-                eb && eE
+                eS && eE
             ]
         })
     });

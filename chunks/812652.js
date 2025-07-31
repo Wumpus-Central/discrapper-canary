@@ -1,6 +1,6 @@
 (n.d(t, {
-    PG: () => S,
-    Vf: () => b,
+    PG: () => b,
+    Vf: () => S,
     YX: () => C,
     ZP: () => O,
     l9: () => I
@@ -26,7 +26,7 @@ var i = n(268146),
     _ = n(676462),
     v = n(388032),
     j = n(864443);
-let S = [
+let b = [
         {
             value: x.tI.PRESET_VIDEO,
             canUse: (e) => !0
@@ -40,7 +40,7 @@ let S = [
             canUse: (e) => !0
         }
     ],
-    b = [
+    S = [
         {
             value: x.LY.RESOLUTION_720,
             canUse: (e) => !0
@@ -109,45 +109,47 @@ function O(e) {
         children: [
             (0, r.jsx)(l.kSQ, {
                 label: v.intl.string(_.default.P2pjm5),
-                children: S.filter((e) => {
-                    let { canUse: t } = e;
-                    return t(R);
-                }).map((e) => {
-                    let { value: t } = e;
-                    return (0, r.jsx)(
-                        l.k5B,
-                        {
-                            group: 'preset',
-                            id: 'stream-preset-'.concat(t),
-                            checked: T === t,
-                            label: (0, d.L)(t),
-                            subtext: (function (e) {
-                                switch (e) {
-                                    case x.tI.PRESET_VIDEO:
-                                        return v.intl.format(_.default.G5O1Mz, {
-                                            resolution: (0, u.M)(k),
-                                            frameRate: L
-                                        });
-                                    case x.tI.PRESET_DOCUMENTS:
-                                        return v.intl.format(_.default['8tcFLy'], {
-                                            resolution: (0, u.M)(D),
-                                            frameRate: B
-                                        });
-                                    case x.tI.PRESET_CUSTOM:
-                                        return;
-                                    default:
-                                        throw Error('No case implemented for '.concat(e));
-                                }
-                            })(t),
-                            action: () =>
-                                A({
-                                    type: 'set_preset',
-                                    preset: t
-                                })
-                        },
-                        t
-                    );
-                })
+                children: b
+                    .filter((e) => {
+                        let { canUse: t } = e;
+                        return t(R);
+                    })
+                    .map((e) => {
+                        let { value: t } = e;
+                        return (0, r.jsx)(
+                            l.k5B,
+                            {
+                                group: 'preset',
+                                id: 'stream-preset-'.concat(t),
+                                checked: T === t,
+                                label: (0, d.L)(t),
+                                subtext: (function (e) {
+                                    switch (e) {
+                                        case x.tI.PRESET_VIDEO:
+                                            return v.intl.format(_.default.G5O1Mz, {
+                                                resolution: (0, u.M)(k),
+                                                frameRate: L
+                                            });
+                                        case x.tI.PRESET_DOCUMENTS:
+                                            return v.intl.format(_.default['8tcFLy'], {
+                                                resolution: (0, u.M)(D),
+                                                frameRate: B
+                                            });
+                                        case x.tI.PRESET_CUSTOM:
+                                            return;
+                                        default:
+                                            throw Error('No case implemented for '.concat(e));
+                                    }
+                                })(t),
+                                action: () =>
+                                    A({
+                                        type: 'set_preset',
+                                        preset: t
+                                    })
+                            },
+                            t
+                        );
+                    })
             }),
             T === x.tI.PRESET_CUSTOM &&
                 (0, r.jsxs)(r.Fragment, {
@@ -156,32 +158,30 @@ function O(e) {
                         (0, r.jsx)(l.sNh, {
                             id: 'resolution',
                             label: v.intl.string(_.default.IG5n0d),
-                            children: b
-                                .filter((e) => {
-                                    let { canUse: t } = e;
-                                    return t(R);
-                                })
-                                .map((e) => {
-                                    let { value: t } = e;
-                                    return (0, r.jsx)(
-                                        l.k5B,
-                                        {
-                                            group: 'resolution',
-                                            id: 'stream-option-resolution-'.concat(t),
-                                            checked: E === t,
-                                            label: t !== x.LY.RESOLUTION_720 ? (0, r.jsx)(y, { label: (0, u.M)(t) }) : (0, u.M)(t),
-                                            action: () =>
-                                                (function (e) {
-                                                    if (!(0, c.Z)(T, e, P, a.default.getCurrentUser(), M)) return (j(), (0, h.E)({ analyticsLocation: s.Z.GO_LIVE_MODAL_SETTINGS_SELECTION }));
-                                                    A({
-                                                        type: 'set_resolution',
-                                                        resolution: e
-                                                    });
-                                                })(t)
-                                        },
-                                        t
-                                    );
-                                })
+                            children: S.filter((e) => {
+                                let { canUse: t } = e;
+                                return t(R);
+                            }).map((e) => {
+                                let { value: t } = e;
+                                return (0, r.jsx)(
+                                    l.k5B,
+                                    {
+                                        group: 'resolution',
+                                        id: 'stream-option-resolution-'.concat(t),
+                                        checked: E === t,
+                                        label: t !== x.LY.RESOLUTION_720 ? (0, r.jsx)(y, { label: (0, u.M)(t) }) : (0, u.M)(t),
+                                        action: () =>
+                                            (function (e) {
+                                                if (!(0, c.Z)(T, e, P, a.default.getCurrentUser(), M)) return (j(), (0, h.E)({ analyticsLocation: s.Z.GO_LIVE_MODAL_SETTINGS_SELECTION }));
+                                                A({
+                                                    type: 'set_resolution',
+                                                    resolution: e
+                                                });
+                                            })(t)
+                                    },
+                                    t
+                                );
+                            })
                         }),
                         (0, r.jsx)(l.sNh, {
                             id: 'frame-rate',

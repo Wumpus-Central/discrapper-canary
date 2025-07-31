@@ -8,7 +8,6 @@ e.exports = {
     section: 'section__6fdb8',
     sectionDivider: 'sectionDivider__6fdb8',
     customPillContainer: 'customPillContainer__6fdb8',
-    searchableSelectExamples: 'searchableSelectExamples__6fdb8',
     slider: 'slider__6fdb8',
     tabBar: 'tabBar__6fdb8',
     palette: 'palette__6fdb8',

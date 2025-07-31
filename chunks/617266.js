@@ -1,8 +1,8 @@
 n.d(t, { F: () => H });
 var r = n(255367),
     l = n(73800),
-    i = n(120356),
-    a = n.n(i),
+    a = n(120356),
+    i = n.n(a),
     s = n(913527),
     o = n.n(s),
     u = n(91192),
@@ -84,18 +84,18 @@ function I(e, t) {
             var n,
                 r,
                 l = {},
-                i = Object.keys(e);
-            for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
+                a = Object.keys(e);
+            for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
             return l;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var i = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
     }
     return l;
 }
 function F(e) {
-    let { destination: t, icon: n, label: i, subLabel: s, selected: o, disabled: c, onPressDestination: f, 'aria-setsize': h, 'aria-posinset': m } = e,
+    let { destination: t, icon: n, label: a, subLabel: s, selected: o, disabled: c, onPressDestination: f, 'aria-setsize': h, 'aria-posinset': m } = e,
         p = (0, u.JA)(t.id),
         g = l.useRef(!1),
         y = l.useCallback(() => {
@@ -116,7 +116,7 @@ function F(e) {
             R(
                 A(
                     {
-                        className: a()(k.destinationRow, { [k.disabled]: c }),
+                        className: i()(k.destinationRow, { [k.disabled]: c }),
                         onClick: y,
                         'aria-selected': o,
                         'aria-setsize': h,
@@ -141,7 +141,7 @@ function F(e) {
                                             className: k.label,
                                             variant: 'text-md/semibold',
                                             lineClamp: 1,
-                                            children: i
+                                            children: a
                                         }),
                                         (0, r.jsx)(d.Text, {
                                             className: k.subLabel,
@@ -169,8 +169,8 @@ function F(e) {
 function q(e) {
     var { user: t, subLabel: n } = e,
         l = I(e, ['user', 'subLabel']);
-    let i = L.ZP.useName(t),
-        a = L.ZP.useUserTag(t, { decoration: 'never' }),
+    let a = L.ZP.useName(t),
+        i = L.ZP.useUserTag(t, { decoration: 'never' }),
         s = (0, c.e7)([C.Z], () => C.Z.getNickname(t.id)),
         o = (0, c.e7)([P.Z], () => P.Z.getStatus(t.id));
     return (0, r.jsx)(
@@ -182,16 +182,16 @@ function q(e) {
                 user: t,
                 status: o
             }),
-            label: null != s ? s : i,
-            subLabel: null != n ? n : a
+            label: null != s ? s : a,
+            subLabel: null != n ? n : i
         })
     );
 }
 function U(e) {
     var { channel: t, subLabel: n } = e,
         l = I(e, ['channel', 'subLabel']);
-    let i = (0, p.ZP)(t),
-        a = (0, v._)(t);
+    let a = (0, p.ZP)(t),
+        i = (0, v._)(t);
     return (0, r.jsx)(
         F,
         R(A({}, l), {
@@ -201,22 +201,22 @@ function U(e) {
                 channel: t,
                 experimentLocation: 'application-command-modal'
             }),
-            label: i,
-            subLabel: null != n ? n : a
+            label: a,
+            subLabel: null != n ? n : i
         })
     );
 }
 function z(e) {
     var { channel: t, subLabel: n } = e,
         l = I(e, ['channel', 'subLabel']);
-    let i = (0, c.e7)([_.Z], () => _.Z.getGuild(null == t ? void 0 : t.guild_id)),
-        a = (0, p.ZP)(t),
+    let a = (0, c.e7)([_.Z], () => _.Z.getGuild(null == t ? void 0 : t.guild_id)),
+        i = (0, p.ZP)(t),
         s = (0, c.e7)([O.Z, E.default, C.Z], () => {
             let e = O.Z.getChannel(t.parent_id);
             return null == e ? null : (0, p.F6)(e, E.default, C.Z, !1);
         }),
         u = (0, c.e7)([w.ZP], () => w.ZP.lastMessageTimestamp(t.id, D.W.CHANNEL)),
-        f = null == i ? void 0 : i.name;
+        f = null == a ? void 0 : a.name;
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? d.Mmi : d.VL1;
         f = (0, r.jsxs)('div', {
@@ -257,16 +257,16 @@ function z(e) {
         R(A({}, l), {
             icon: (0, r.jsx)(y.Z, {
                 size: y.E.SMALL_32,
-                guild: i,
+                guild: a,
                 channel: t
             }),
-            label: a,
+            label: i,
             subLabel: null != n ? n : f
         })
     );
 }
 function H(e) {
-    var { rowData: t, selectedDestinations: n, handleToggleDestination: i, disableSelection: a, originDestination: s } = e,
+    var { rowData: t, selectedDestinations: n, handleToggleDestination: a, disableSelection: i, originDestination: s } = e,
         o = I(e, ['rowData', 'selectedDestinations', 'handleToggleDestination', 'disableSelection', 'originDestination']);
     let c = l.useMemo(() => [t.length], [t.length]),
         f = l.useCallback(() => 48, []),
@@ -307,15 +307,15 @@ function H(e) {
                         key: d,
                         destination: c,
                         subLabel: null != f ? f.label : void 0,
-                        disabled: (a && !h) || null != f,
+                        disabled: (i && !h) || null != f,
                         selected: h,
-                        onPressDestination: i,
+                        onPressDestination: a,
                         'aria-posinset': l + 1,
                         'aria-setsize': t.length
                     };
                 return o === m.h8.USER ? (0, r.jsx)(q, A({ user: u }, p)) : o === m.h8.GROUP_DM ? (0, r.jsx)(U, A({ channel: u }, p)) : o === m.h8.TEXT_CHANNEL || o === m.h8.VOICE_CHANNEL ? (0, r.jsx)(z, A({ channel: u }, p)) : void (0, Z.vE)(o);
             },
-            [a, i, s, t, b]
+            [i, a, s, t, b]
         ),
         g = l.useRef(null),
         y = (0, h.Z)('share-command-modal', g);

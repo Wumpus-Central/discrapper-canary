@@ -27,7 +27,7 @@ var r,
     P = n(981631),
     j = n(388032),
     A = n(833972);
-function x(e, t, n) {
+function Z(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,7 +40,7 @@ function x(e, t, n) {
         e
     );
 }
-function Z(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +51,7 @@ function Z(e) {
                 })
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                Z(e, t, n[t]);
             }));
     }
     return e;
@@ -86,7 +86,7 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
             a = r.libraryApplication.hasFlag(t);
         return (0, i.jsx)(h.ua7, {
             text: l,
-            children: (e) => (0, i.jsx)(n, Z({ className: o()(A.settingIcon, { [A.hidden]: !a }) }, e))
+            children: (e) => (0, i.jsx)(n, x({ className: o()(A.settingIcon, { [A.hidden]: !a }) }, e))
         });
     },
     M = [
@@ -118,7 +118,7 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
                                           children: (e) =>
                                               (0, i.jsx)(
                                                   h.SrA,
-                                                  Z(
+                                                  x(
                                                       {
                                                           size: 'md',
                                                           color: 'currentColor',
@@ -261,7 +261,7 @@ let L = (0, N.Mg)(d.Z.GAME_LIST_ROW_MIN_HEIGHT),
             onMouseEnter: () => l(t),
             onMouseLeave: a,
             onContextMenu: (e) => s(e, t),
-            children: (0, i.jsx)('div', Z({}, u))
+            children: (0, i.jsx)('div', x({}, u))
         });
     };
 class G extends (r = l.PureComponent) {
@@ -330,7 +330,7 @@ class G extends (r = l.PureComponent) {
             }
             e.num_applications_total++;
         }
-        C.default.track(P.rMx.LIBRARY_VIEWED, w(Z({}, e), { load_id: t.loadId }));
+        C.default.track(P.rMx.LIBRARY_VIEWED, w(x({}, e), { load_id: t.loadId }));
     }
     handleSort(e, t) {
         m.fS(e, t);
@@ -412,28 +412,28 @@ class G extends (r = l.PureComponent) {
     }
     constructor(...e) {
         (super(...e),
-            x(this, '_didUnmount', !1),
-            x(this, '_rowRefs', {}),
-            x(this, 'state', {
+            Z(this, '_didUnmount', !1),
+            Z(this, '_rowRefs', {}),
+            Z(this, 'state', {
                 overflowMenuRowKey: null,
                 highlightedApplicationKey: null != this.props.location.state ? this.props.location.state.applicationId : null
             }),
-            x(this, 'setActiveRowKey', (e) => {
+            Z(this, 'setActiveRowKey', (e) => {
                 this.setState({ overflowMenuRowKey: e.key });
             }),
-            x(this, 'clearActiveRowKey', () => {
+            Z(this, 'clearActiveRowKey', () => {
                 this._didUnmount || this.setState({ overflowMenuRowKey: null });
             }),
-            x(this, 'handleRowMouseEnter', (e) => {
+            Z(this, 'handleRowMouseEnter', (e) => {
                 this.props.isNavigatingByKeyboard || m.wX(e.key);
             }),
-            x(this, 'handleRowMouseLeave', () => {
+            Z(this, 'handleRowMouseLeave', () => {
                 this.props.isNavigatingByKeyboard || m.wX(null);
             }),
-            x(this, 'setRowRef', (e, t) => {
+            Z(this, 'setRowRef', (e, t) => {
                 this._rowRefs[t] = e;
             }),
-            x(this, 'handleApplicationContextMenu', (e, t) => {
+            Z(this, 'handleApplicationContextMenu', (e, t) => {
                 this.setActiveRowKey(t);
                 let { analyticsContext: r } = this.props;
                 (0, g.jW)(
@@ -443,7 +443,7 @@ class G extends (r = l.PureComponent) {
                         return (n) =>
                             (0, i.jsx)(
                                 e,
-                                w(Z({}, n), {
+                                w(x({}, n), {
                                     applicationId: t.libraryApplication.id,
                                     branchId: t.libraryApplication.branchId,
                                     analyticsContext: r
@@ -480,7 +480,7 @@ function V(e) {
         }));
     return (0, i.jsx)(
         G,
-        w(Z({}, e), {
+        w(x({}, e), {
             analyticsContext: t,
             location: n,
             applicationViewItems: r,
@@ -493,4 +493,4 @@ function V(e) {
         })
     );
 }
-x(G, 'defaultProps', { stickyHeader: !1 });
+Z(G, 'defaultProps', { stickyHeader: !1 });

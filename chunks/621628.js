@@ -188,7 +188,6 @@ function v() {
                 children: [
                     (0, i.jsx)(d.E1j, {
                         className: j.marginBottom20,
-                        size: d.E1j.Sizes.LARGE,
                         query: x,
                         onChange: O,
                         onClear: () => O('')

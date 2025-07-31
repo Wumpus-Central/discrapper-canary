@@ -31,7 +31,6 @@ function j(e) {
                 children: t ? g.intl.string(g.t.IB13DQ) : g.intl.string(g.t.cQYceX)
             }),
             (0, l.jsx)(o.E1j, {
-                size: o.E1j.Sizes.MEDIUM,
                 placeholder: g.intl.string(g.t.vf3ZTU),
                 'aria-label': g.intl.string(g.t.vf3ZTU),
                 className: f.selectSearch,

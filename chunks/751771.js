@@ -8,11 +8,11 @@ var u,
     m = n(823385),
     p = n(752048),
     v = n(823379),
-    I = n(971130),
-    x = n(592125),
+    x = n(971130),
+    I = n(592125),
     f = n(496675),
-    j = n(699516),
-    N = n(981631),
+    N = n(699516),
+    j = n(981631),
     _ = n(245335);
 let E = new Set(),
     S = [],
@@ -26,19 +26,19 @@ let E = new Set(),
 function O(e) {
     let t = new Set(),
         n = null == r || o === _.Iq.EMBEDDED_APPLICATION ? void 0 : r.id,
-        l = (0, I.rh)(E, n);
-    for (let e of (null == l || j.Z.isBlockedOrIgnored(l.id) || t.add(l.id), p.Z.getUserAffinities())) t.add(e.otherUserId);
+        l = (0, x.rh)(E, n);
+    for (let e of (null == l || N.Z.isBlockedOrIgnored(l.id) || t.add(l.id), p.Z.getUserAffinities())) t.add(e.otherUserId);
     let i = new Set();
     return (
         o === _.Iq.EMBEDDED_APPLICATION &&
             m.Z.getChannelHistory()
-                .map((e) => x.Z.getChannel(e))
+                .map((e) => I.Z.getChannel(e))
                 .filter(v.lm)
-                .filter((e) => e.type === N.d4z.GUILD_TEXT)
-                .filter((e) => f.Z.can(N.Plq.SEND_MESSAGES, e))
+                .filter((e) => e.type === j.d4z.GUILD_TEXT)
+                .filter((e) => f.Z.can(j.Plq.SEND_MESSAGES, e))
                 .slice(0, 3)
                 .forEach((e) => i.add(e.id)),
-        (0, I.an)({
+        (0, x.an)({
             query: e,
             omitUserIds: E,
             suggestedUserIds: t,
@@ -58,7 +58,7 @@ function y(e) {
 }
 class C extends (u = h.ZP.Store) {
     initialize() {
-        this.waitFor(j.Z, p.Z);
+        this.waitFor(N.Z, p.Z);
     }
     getInviteSuggestionRows() {
         return S;
@@ -101,8 +101,8 @@ let P = new C(g.Z, {
             (o = c),
             (E = new Set([
                 ...t,
-                ...j.Z.getBlockedOrIgnoredIDs(),
-                ...(0, I.Sz)({
+                ...N.Z.getBlockedOrIgnoredIDs(),
+                ...(0, x.Sz)({
                     channel: s,
                     applicationId: a,
                     inviteTargetType: c

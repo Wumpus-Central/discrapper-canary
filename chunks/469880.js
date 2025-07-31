@@ -13,6 +13,7 @@ function u(e) {
     return null != m && f > 0
         ? (0, i.jsx)(s.Z, {
               bar: (0, i.jsx)(l.E1j, {
+                  size: 'sm',
                   query: b,
                   onChange: g,
                   onClear: () => g('')

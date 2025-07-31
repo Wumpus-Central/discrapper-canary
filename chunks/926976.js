@@ -363,6 +363,7 @@ function D() {
             (0, n.jsx)('div', {
                 className: N.toolbar,
                 children: (0, n.jsx)(u.E1j, {
+                    size: 'sm',
                     className: N.searchBar,
                     query: t,
                     onChange: a,

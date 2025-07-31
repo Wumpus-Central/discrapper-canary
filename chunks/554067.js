@@ -26,6 +26,7 @@ function u(e) {
                 r !== o.AW.CATALOG && t(o.AW.CATALOG);
             },
             children: (0, n.jsx)(i.E1j, {
+                size: 'sm',
                 className: c.searchBar,
                 onKeyDown: (e) => {
                     'Enter' === e.key && d(p);

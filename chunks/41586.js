@@ -120,6 +120,7 @@ let N = l.forwardRef(function (e, t) {
                     children: (0, r.jsx)('div', {
                         className: _.searchHeader,
                         children: (0, r.jsx)(m.E1j, {
+                            size: 'sm',
                             className: _.searchBar,
                             query: R,
                             placeholder: y.intl.string(y.t.NVoAMz),

@@ -35,10 +35,10 @@ function _(e) {
             }),
             [_]
         ),
-        { search: m, query: p, results: E } = (0, d.Z)(g),
-        [b, y] = l.useState(h('')),
+        { search: m, query: p, results: b } = (0, d.Z)(g),
+        [E, y] = l.useState(h('')),
         I = l.useCallback((e) => y(h(e)), [y]),
-        { queryMode: S } = b,
+        { queryMode: S } = E,
         O = l.useRef(null),
         A = l.useRef(n),
         v = p !== O.current ? n : A.current;
@@ -46,12 +46,12 @@ function _(e) {
         (p !== O.current && (A.current = n), (O.current = p));
     }, [p, n]),
         l.useLayoutEffect(() => {
-            let { query: e, resultTypes: t } = b;
+            let { query: e, resultTypes: t } = E;
             m({
                 query: e,
                 resultTypes: t
             });
-        }, [m, b]),
+        }, [m, E]),
         (0, s.D)());
     let C = (0, r.e7)([c.Z], () => c.Z.getFrequentlyWithoutFetchingLatest()),
         x = (0, r.e7)([i.Z], () => i.Z.isConnected()),
@@ -60,7 +60,7 @@ function _(e) {
         results: l.useMemo(
             () =>
                 (0, u.ZP)({
-                    results: E,
+                    results: b,
                     hasQuery: P,
                     queryMode: S,
                     targetDestination: t,
@@ -71,7 +71,7 @@ function _(e) {
                     includeMissingDMs: f,
                     isConnected: x
                 }),
-            [E, P, S, t, C, n, v, a, f, x]
+            [b, P, S, t, C, n, v, a, f, x]
         ),
         updateSearchText: I
     };

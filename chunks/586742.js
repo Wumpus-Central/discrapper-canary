@@ -58,7 +58,7 @@ function k(e) {
     }
     return e;
 }
-function D(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -76,7 +76,7 @@ function D(e, t) {
         e
     );
 }
-let A = r.memo(function (e) {
+let D = r.memo(function (e) {
         var t;
         let { participant: n, channel: r, context: o } = e,
             l = null == (t = n.user) ? void 0 : t.id;
@@ -97,7 +97,7 @@ let A = r.memo(function (e) {
                             return (n) =>
                                 (0, i.jsx)(
                                     e,
-                                    D(k({}, n), {
+                                    A(k({}, n), {
                                         user: o,
                                         mediaEngineContext: t,
                                         onWatchStream: () => {
@@ -142,7 +142,7 @@ let A = r.memo(function (e) {
         return (0, i.jsx)(i.Fragment, {
             children: o.map((e) =>
                 (0, i.jsx)(
-                    A,
+                    D,
                     {
                         participant: e,
                         width: s,
@@ -295,7 +295,7 @@ function z(e) {
                     let { size: e, id: n, containerWidth: i, containerHeight: r, widget: o, widgetLayoutSpecs: a } = l.current;
                     if (!((t && e.height > e.width) || (!t && e.width > e.height))) return;
                     let { width: s, height: c } = M(
-                        D(k({}, a), {
+                        A(k({}, a), {
                             widget: o,
                             operation: I.B.RESIZE_NORTH,
                             computedSize: {
@@ -324,7 +324,7 @@ function z(e) {
         }),
         (0, i.jsx)(
             L,
-            D(k({}, e), {
+            A(k({}, e), {
                 channel: s,
                 participants: C,
                 participantsVersion: O,

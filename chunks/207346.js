@@ -30,7 +30,6 @@ function d(e) {
             }),
             (0, r.jsx)(a.E1j, {
                 autoFocus: !0,
-                size: a.E1j.Sizes.MEDIUM,
                 placeholder: c.intl.string(c.t['5h0QOD']),
                 className: u.queryInput,
                 query: t,

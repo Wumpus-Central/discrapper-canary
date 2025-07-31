@@ -335,7 +335,6 @@ function k(e) {
                             onChange: m,
                             onKeyDown: h,
                             onClear: g,
-                            size: o.E1j.Sizes.MEDIUM,
                             isLoading: s
                         }),
                         (0, r.jsx)('div', {

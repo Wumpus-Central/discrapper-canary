@@ -1,26 +1,26 @@
 r.d(t, { Z: () => d });
 var n = r(255367);
 r(73800);
-var l = r(120356),
-    i = r.n(l),
-    a = r(884697),
+var a = r(120356),
+    l = r.n(a),
+    i = r(884697),
     o = r(754433),
     s = r(409116),
     c = r(981631),
     u = r(561197);
 function d(e) {
     var t, r;
-    let { product: l, isPremiumUser: d, discount: p, className: f, discountOfferAmount: g, hideStrikethroughPrice: h = !1, nitroIconType: b, nitroIconSize: m = 'md' } = e,
-        _ = (0, a.ql)(l, c.tuJ.DEFAULT);
+    let { product: a, isPremiumUser: d, discount: p, className: b, discountOfferAmount: h, hideStrikethroughPrice: f = !1, nitroIconType: v, nitroIconSize: m = 'md' } = e,
+        _ = (0, i.ql)(a, c.tuJ.DEFAULT);
     if (null == _) return null;
     if (_.amount <= 0)
         return (0, n.jsx)('div', {
-            className: i()(u.priceTagsContainer, f),
+            className: l()(u.priceTagsContainer, b),
             children: (0, n.jsx)(s.F, { price: _ })
         });
-    let O = (0, a.ql)(l, c.tuJ.PREMIUM_TIER_2),
-        v =
-            (0, a.x6)(l) && d
+    let O = (0, i.ql)(a, c.tuJ.PREMIUM_TIER_2),
+        y =
+            (0, i.x6)(a) && d
                 ? ((t = (function (e) {
                       for (var t = 1; t < arguments.length; t++) {
                           var r = null != arguments[t] ? arguments[t] : {},
@@ -61,23 +61,23 @@ function d(e) {
                         }),
                   t)
                 : _,
-        C = d && null != O;
+        g = d && null != O;
     return (0, n.jsxs)('div', {
-        className: i()(u.priceTagsContainer, f),
+        className: l()(u.priceTagsContainer, b),
         children: [
-            h
+            f
                 ? null
                 : (0, n.jsx)(o.y, {
-                      price: v,
+                      price: y,
                       className: u.price
                   }),
             (0, n.jsx)(s.F, {
-                price: C ? O : v,
+                price: g ? O : y,
                 discount: p,
-                className: i()({ [u.price]: null == g }),
-                nitroIconType: C ? b : void 0,
+                className: l()({ [u.price]: null == h }),
+                nitroIconType: g ? v : void 0,
                 nitroIconSize: m,
-                discountOfferAmount: g
+                discountOfferAmount: h
             })
         ]
     });

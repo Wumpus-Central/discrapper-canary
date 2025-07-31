@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => S,
+    Z: () => b,
     c: () => j
 });
 var r = n(255367),
@@ -106,7 +106,7 @@ function j() {
         ]
     });
 }
-function S(e) {
+function b(e) {
     let { message: t, onClose: n, openStreamUpsellModal: i, glow: l = !1 } = e,
         o = {
             section: p.jXE.STREAM_SETTINGS,

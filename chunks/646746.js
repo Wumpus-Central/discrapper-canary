@@ -1,4 +1,4 @@
-n.d(t, { O: () => E });
+n.d(t, { O: () => b });
 var l = n(255367),
     r = n(73800),
     i = n(120356),
@@ -14,11 +14,11 @@ var l = n(255367),
     g = n(318616),
     m = n(388032),
     p = n(28447);
-function E(e) {
+function b(e) {
     let { message: t, forwardOptions: n, channel: i } = e,
-        E = _.jU.useSetting(),
+        b = _.jU.useSetting(),
         {
-            attachments: b,
+            attachments: E,
             embeds: y,
             hasContent: I,
             contentMessage: S
@@ -41,13 +41,13 @@ function E(e) {
                     : null,
             [S, I, t]
         ),
-        A = b.length,
+        A = E.length,
         v = null,
         C = null,
         x = null;
     if (A > 0 || y.length > 0) {
         var P, T, L, N;
-        let e = (0, s.countBy)(b, (e) => (0, d.aw)(e, !0)),
+        let e = (0, s.countBy)(E, (e) => (0, d.aw)(e, !0)),
             t = null != (L = e.IMAGE) ? L : 0,
             n = null != (N = e.VIDEO) ? N : 0;
         (t > 0 && n > 0
@@ -67,7 +67,7 @@ function E(e) {
                       children: [
                           (0, l.jsx)(u.ZP, {
                               className: p.thumbnail,
-                              src: b[0].proxy_url,
+                              src: E[0].proxy_url,
                               width: 56,
                               height: 56
                           }),
@@ -82,7 +82,7 @@ function E(e) {
                   ? (x = (0, l.jsx)('div', {
                         className: p.attachmentPreview,
                         children: (0, l.jsx)(u.ZP, {
-                            src: b[0].proxy_url,
+                            src: E[0].proxy_url,
                             width: 56,
                             height: 56
                         })
@@ -129,7 +129,7 @@ function E(e) {
                                 className: a()(p.forwardPreviewMessage, A > 0 && p.hasAttachments),
                                 message: t,
                                 content: O,
-                                compact: E
+                                compact: b
                             }),
                         A > 0 &&
                             (0, l.jsxs)('div', {

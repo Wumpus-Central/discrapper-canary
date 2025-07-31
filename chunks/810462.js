@@ -43,7 +43,6 @@ let d = i.forwardRef(function (e, t) {
             disabled: !d,
             query: E,
             ref: g,
-            size: s.E1j.Sizes.MEDIUM,
             placeholder: T(),
             onClear: I,
             onKeyDown: _,

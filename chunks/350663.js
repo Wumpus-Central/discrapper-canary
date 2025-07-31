@@ -118,8 +118,8 @@ let x = {
             P = f === h.C5.VERTICAL,
             T = b || Z !== b || w !== n,
             k = 0,
-            D = 0,
-            A = (0, s.Yzy)(
+            A = 0,
+            D = (0, s.Yzy)(
                 P
                     ? N.map((e, t) =>
                           O(y({}, e), {
@@ -129,7 +129,7 @@ let x = {
                       )
                     : N.map((e, t) =>
                           O(y({}, e), {
-                              x: (D += e.width + (t > 0 ? j : 0)) - e.width,
+                              x: (A += e.width + (t > 0 ? j : 0)) - e.width,
                               y: 0
                           })
                       ),
@@ -185,8 +185,8 @@ let x = {
                     [g.vertical]: P,
                     [g.horizontal]: !P
                 }),
-                style: P ? { height: k } : { width: D },
-                children: A((e, t, r, l) =>
+                style: P ? { height: k } : { width: A },
+                children: D((e, t, r, l) =>
                     (0, i.jsx)(a.animated.div, {
                         className: g.gridItem,
                         style: Object.assign({}, e, {

@@ -53,7 +53,6 @@ let p = i.forwardRef(function (e, t) {
                 disabled: !m,
                 query: E,
                 ref: g,
-                size: s.E1j.Sizes.MEDIUM,
                 placeholder: null != y ? y : m ? _.intl.string(_.t.dt5h1N) : _.intl.string(_.t['Pck/4e']),
                 onClear: I,
                 onKeyDown: n,

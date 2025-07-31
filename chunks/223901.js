@@ -1,13 +1,13 @@
-t.d(a, { default: () => d });
-var n = t(255367),
-    r = t(73800),
-    o = t(481060),
-    c = t(91159),
-    s = t(593130),
-    _ = t(388032),
-    i = t(137642);
+a.d(t, { default: () => d });
+var n = a(255367),
+    r = a(73800),
+    o = a(481060),
+    c = a(91159),
+    s = a(593130),
+    _ = a(388032),
+    i = a(137642);
 function d(e) {
-    let { channel: a, onClose: t, transitionState: d } = e;
+    let { channel: t, onClose: a, transitionState: d } = e;
     return (
         r.useEffect(() => {
             (0, c.U4)();
@@ -20,8 +20,8 @@ function d(e) {
             parentComponent: 'ThreadBrowserModal',
             children: (0, n.jsx)(s.Z, {
                 className: i.browser,
-                channel: a,
-                onClose: t
+                channel: t,
+                onClose: a
             })
         })
     );

@@ -60,8 +60,8 @@ function _(e, t) {
 let O = (0, h.Z)(
     (e) => {
         var t;
-        let { clientId: n, authorizations: u, scopes: d, parsedPermissions: h, responseType: O, redirectUri: E, codeChallenge: y, codeChallengeMethod: v, state: I, guildId: C, channelId: S, prompt: N, disableGuildSelect: T, disclosures: P, integrationType: j, pid: A, signal: x } = e,
-            Z = 'OAuth2Authorize_'.concat(n, '_').concat(C, '_').concat(S),
+        let { clientId: n, authorizations: u, scopes: d, parsedPermissions: h, responseType: O, redirectUri: E, codeChallenge: y, codeChallengeMethod: v, state: I, guildId: C, channelId: S, prompt: N, disableGuildSelect: T, disclosures: P, integrationType: j, pid: A, signal: Z } = e,
+            x = 'OAuth2Authorize_'.concat(n, '_').concat(C, '_').concat(S),
             w = null != j ? (null == u ? void 0 : u.get(j)) : void 0,
             L = null != (t = null == w ? void 0 : w.application) ? t : a.Z.getApplication(n);
         return new Promise((e, t) => {
@@ -132,7 +132,7 @@ let O = (0, h.Z)(
                             }
                         }
                     );
-                })(Z, x);
+                })(x, Z);
             (0, i.h7j)(
                 (e) =>
                     (0, r.jsx)(
@@ -158,7 +158,7 @@ let O = (0, h.Z)(
                         })
                     ),
                 {
-                    modalKey: Z,
+                    modalKey: x,
                     onCloseCallback: () => {
                         (k(), R || (t(new p.Z({ errorCode: g.lTL.OAUTH2_ERROR }, 'User cancelled authorization')), a.lock()));
                     }

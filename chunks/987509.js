@@ -48,7 +48,7 @@ async function p(e) {
             return;
         }
 }
-function E(e) {
+function b(e) {
     if ('user' !== e.type) return (0, a.Z)(e.id);
     {
         let t = u.default.getUser(e.id);
@@ -61,7 +61,7 @@ function E(e) {
             : null;
     }
 }
-function b(e, t) {
+function E(e, t) {
     let n,
         l = new Set();
     if (null != t) for (let e of t) l.add(e);
@@ -80,14 +80,14 @@ function y(e, t) {
 }
 function I(e) {
     let { results: t, hasQuery: n, queryMode: r, frequentChannels: i, targetDestination: o, selectedDestinations: c, pinnedDestinations: u, originDestination: d, includeMissingDMs: f } = e;
-    if (n) return b(y(t, f));
-    let h = null != u && u.length > 0 ? u.map((e) => E(e)) : [],
+    if (n) return E(y(t, f));
+    let h = null != u && u.length > 0 ? u.map((e) => b(e)) : [],
         _ = s.Z.getChannelHistory(),
         g = _.length > 0 ? _.map((e) => (0, a.Z)(e)) : [],
         m = i.length > 0 ? i.map((e) => (0, a.Z)(e.id)) : [],
-        p = y([...h, null != o ? E(o) : null, ...g, ...m], f),
+        p = y([...h, null != o ? b(o) : null, ...g, ...m], f),
         I = (null == c ? void 0 : c.find((e) => (0, l.isEqual)(e, d))) != null,
         S = null == d || I ? [] : [d.id];
-    return null != r ? b(p.filter((e) => e.type === r)) : b(p, S).slice(0, 15);
+    return null != r ? E(p.filter((e) => e.type === r)) : E(p, S).slice(0, 15);
 }
 n(388032);

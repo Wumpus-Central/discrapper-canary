@@ -17,15 +17,15 @@ var r = n(255367),
     g = n(388032),
     j = n(969957);
 function y(e) {
-    let { editPermissions: t, guildId: n, hasMemberSearch: l, headerText: s, onClose: y, overwrittenKeys: k, search: C, searchPlaceholderText: _, selectedPermissionCount: E, transitionState: v } = e,
+    let { editPermissions: t, guildId: n, hasMemberSearch: l, headerText: s, onClose: y, overwrittenKeys: k, search: C, searchPlaceholderText: _, selectedPermissionCount: v, transitionState: E } = e,
         w = (0, c.e7)([b.Z], () => b.Z.getGuild(n), [n]);
     o()(null != w, '');
     let [O, Z] = i.useState(null),
-        { query: N, results: T, setQuery: z } = C(n),
+        { query: N, results: T, setQuery: B } = C(n),
         [D, I] = i.useState({}),
-        M = i.useMemo(() => Object.keys(D).length, [D]),
-        S = M + E >= f._n,
-        B = i.useMemo(
+        S = i.useMemo(() => Object.keys(D).length, [D]),
+        X = S + v >= f._n,
+        q = i.useMemo(
             () =>
                 T.filter((e) => {
                     let t = (0, p.rE)(e.id, e.type);
@@ -33,7 +33,7 @@ function y(e) {
                 }),
             [k, T]
         ),
-        X = i.useCallback(
+        z = i.useCallback(
             (e, t) => {
                 I((n) => {
                     let r = (0, p.rE)(e, t),
@@ -65,7 +65,7 @@ function y(e) {
                     return (
                         r in n
                             ? delete i[r]
-                            : S ||
+                            : X ||
                               (i[r] = {
                                   id: e,
                                   permission: !0,
@@ -75,15 +75,15 @@ function y(e) {
                     );
                 });
             },
-            [S, I]
+            [X, I]
         ),
-        q = i.useCallback(() => {
+        M = i.useCallback(() => {
             (t(D, []), y());
         }, [t, y, D]);
     i.useEffect(() => () => clearTimeout(O), [O]);
     let P = i.useCallback(
             (e) => {
-                (z(e),
+                (B(e),
                     l &&
                         Z((t) =>
                             (clearTimeout(t), 0 === e.length)
@@ -93,14 +93,14 @@ function y(e) {
                                   }, 500)
                         ));
             },
-            [n, l, z, Z]
+            [n, l, B, Z]
         ),
         R = i.useCallback(
             (e) => {
-                let t = B[e],
+                let t = q[e],
                     n = (0, p.rE)(t.id, t.type),
                     i = n in D,
-                    l = S && !i;
+                    l = X && !i;
                 return (0, r.jsx)(
                     'div',
                     {
@@ -110,7 +110,7 @@ function y(e) {
                             className: a()({ [j.checkboxItemDisabled]: l }),
                             disabled: l,
                             value: i,
-                            onChange: () => X(t.id, t.type),
+                            onChange: () => z(t.id, t.type),
                             children: (0, r.jsx)(x.Z, {
                                 guild: w,
                                 id: t.id,
@@ -122,7 +122,7 @@ function y(e) {
                     n
                 );
             },
-            [B, w, S, X, D]
+            [q, w, X, z, D]
         );
     return (
         i.useEffect(() => {
@@ -130,7 +130,7 @@ function y(e) {
         }, [n]),
         (0, r.jsxs)(d.Y0X, {
             'aria-label': g.intl.string(g.t['N+InBQ']),
-            transitionState: v,
+            transitionState: E,
             parentComponent: 'AddPermissionsModal',
             children: [
                 (0, r.jsxs)(d.xBx, {
@@ -142,7 +142,7 @@ function y(e) {
                             className: j.header,
                             children: s
                         }),
-                        S
+                        X
                             ? (0, r.jsx)(d.X6q, {
                                   variant: 'heading-sm/medium',
                                   color: 'text-danger',
@@ -160,14 +160,13 @@ function y(e) {
                             placeholder: _,
                             'aria-label': _,
                             onChange: P,
-                            onClear: () => z(''),
-                            size: d.E1j.Sizes.MEDIUM
+                            onClear: () => B('')
                         }),
                         (0, r.jsx)(m.Z, {
                             role: 'listbox',
                             renderRow: R,
-                            rowCount: B.length,
-                            rowCountBySection: [B.length],
+                            rowCount: q.length,
+                            rowCountBySection: [q.length],
                             rowHeight: 36,
                             className: j.__invalid_list
                         })
@@ -181,8 +180,8 @@ function y(e) {
                                 variant: 'primary',
                                 text: g.intl.string(g.t.OYkgVl),
                                 type: 'submit',
-                                onClick: q,
-                                disabled: 0 === M
+                                onClick: M,
+                                disabled: 0 === S
                             }),
                             (0, r.jsx)(d.zxk, {
                                 variant: 'secondary',

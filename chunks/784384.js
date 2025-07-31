@@ -22,8 +22,8 @@ var l = n(73800),
     g = n(594174),
     m = n(408433),
     p = n(823379),
-    E = n(981631),
-    b = n(388032);
+    b = n(981631),
+    E = n(388032);
 function y(e) {
     let t = e.map(o.hl).find(p.lm),
         n = (0, i.e7)([f.Z], () => f.Z.getChannel(t), [t]);
@@ -40,10 +40,10 @@ function y(e) {
 }
 function I(e, t, n) {
     let l = n instanceof d.Sf;
-    if ((0, a.aC)(t) && !(l && (0, a.aC)(n))) return { label: b.intl.string(b.t.KgPx1N) };
+    if ((0, a.aC)(t) && !(l && (0, a.aC)(n))) return { label: E.intl.string(E.t.KgPx1N) };
     if (l && (0, d.Km)(n.type)) {
-        if ((e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) && !h.Z.can(E.Plq.ATTACH_FILES, n)) return { label: b.intl.string(b.t.P7yvbm) };
-        if ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) && !(0, m.eC)(n, h.Z) && !(0, m.En)(e)) return { label: b.intl.string(b.t.Wr4RIS) };
+        if ((e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) && !h.Z.can(b.Plq.ATTACH_FILES, n)) return { label: E.intl.string(E.t.P7yvbm) };
+        if ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) && !(0, m.eC)(n, h.Z) && !(0, m.En)(e)) return { label: E.intl.string(E.t.Wr4RIS) };
         let t = [
             ...(0, u.cv)(e),
             ...e.messageSnapshots.flatMap((e) => {
@@ -53,7 +53,7 @@ function I(e, t, n) {
         ];
         if (
             t.length > 0 &&
-            !h.Z.can(E.Plq.USE_EXTERNAL_STICKERS, n) &&
+            !h.Z.can(b.Plq.USE_EXTERNAL_STICKERS, n) &&
             t.some((e) =>
                 (function (e, t) {
                     let n = c.Z.getStickerById(e.id);
@@ -61,12 +61,12 @@ function I(e, t, n) {
                 })(e, n)
             )
         )
-            return { label: b.intl.string(b.t['0Yyrub']) };
-        if ((e.hasFlag(E.iLy.IS_VOICE_MESSAGE) || e.messageSnapshots.some((e) => e.message.hasFlag(E.iLy.IS_VOICE_MESSAGE))) && !h.Z.can(E.Plq.SEND_VOICE_MESSAGES, n)) return { label: b.intl.string(b.t.quj4DQ) };
+            return { label: E.intl.string(E.t['0Yyrub']) };
+        if ((e.hasFlag(b.iLy.IS_VOICE_MESSAGE) || e.messageSnapshots.some((e) => e.message.hasFlag(b.iLy.IS_VOICE_MESSAGE))) && !h.Z.can(b.Plq.SEND_VOICE_MESSAGES, n)) return { label: E.intl.string(E.t.quj4DQ) };
     }
 }
 function S(e, t) {
-    return !!(null != e.rateLimitPerUser && e.rateLimitPerUser > 0) && !(t.can(E.Plq.MANAGE_CHANNELS, e) || t.can(E.Plq.MANAGE_MESSAGES, e));
+    return !!(null != e.rateLimitPerUser && e.rateLimitPerUser > 0) && !(t.can(b.Plq.MANAGE_CHANNELS, e) || t.can(b.Plq.MANAGE_MESSAGES, e));
 }
 function O(e) {
     let t = (0, i.Wu)(

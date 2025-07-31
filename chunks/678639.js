@@ -130,7 +130,7 @@ function _() {
                 className: h.toolbar,
                 children: (0, n.jsx)(o.E1j, {
                     className: h.searchBar,
-                    size: o.E1j.Sizes.SMALL,
+                    size: 'sm',
                     query: t,
                     onChange: a,
                     onClear: () => a(''),

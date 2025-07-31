@@ -35,7 +35,7 @@ function T(e) {
         [O, T] = i.useState(!1),
         [P, j] = i.useState(!1),
         A = i.useRef(null),
-        x = i.useCallback(async () => {
+        Z = i.useCallback(async () => {
             T(!0);
             try {
                 await l(t.id);
@@ -43,7 +43,7 @@ function T(e) {
                 T(!1);
             }
         }, [t.id, l]),
-        Z = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 e && !f && (g(!0), null == o || o(t.id));
             },
@@ -141,13 +141,13 @@ function T(e) {
                 }),
             (0, r.jsx)(s.$, {
                 innerRef: A,
-                onChange: Z,
+                onChange: x,
                 active: !f,
                 threshold: 0.55,
                 children: (0, r.jsxs)(h.Z, {
                     ref: A,
                     className: I.card,
-                    onClick: x,
+                    onClick: Z,
                     disabled: O,
                     onContextMenu: w,
                     'aria-label': v.intl.string(v.t['M9wQ+f']),

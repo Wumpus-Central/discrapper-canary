@@ -76,7 +76,7 @@ let m = new Map(),
     B = (e) => {
         if (0 === e.shopHome.categories.length) return;
         let t = new Map(e.shopHome.categories.map((e) => [e.skuId, e]));
-        ((O = new Map([...O, ...t])), (v = new Map((0, f.Cs)(O, !0).map((e) => [e.skuId, e]))));
+        ((S = new Map([...(O = new Map([...O, ...t])).values()].map((e) => [e.storeListingId, e]))), (v = new Map((0, f.Cs)(O, !0).map((e) => [e.skuId, e]))));
     },
     V = (e, t) => {
         if (0 === e.length) {

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+(n.d(t, { Z: () => y }), n(388685));
 var i,
     r = n(392711),
     l = n.n(r),
@@ -54,7 +54,7 @@ class m extends (i = s.ZP.Store) {
     }
 }
 p(m, 'displayName', 'FriendSuggestionStore');
-let E = new m(a.Z, {
+let y = new m(a.Z, {
     CONNECTION_OPEN: function (e) {
         ((f = {}), (g = e.friendSuggestionCount) > 0 ? ((O = !0), !N && O && ((N = !0), (O = !1), u.Z.fetch())) : (0, d.Z)());
     },

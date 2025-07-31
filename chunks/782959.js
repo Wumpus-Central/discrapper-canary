@@ -1,15 +1,14 @@
 n.d(t, { Z: () => f });
-var r = n(255367);
-n(73800);
-var i = n(481060),
-    l = n(367907),
-    a = n(70097),
-    o = n(970731),
+var r = n(255367),
+    i = n(73800),
+    l = n(907862),
+    a = n(481060),
+    o = n(367907),
     s = n(626135),
     c = n(63063),
     u = n(981631),
-    d = n(388032),
-    p = n(966651);
+    d = n(921944),
+    p = n(388032);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -36,64 +35,66 @@ function h(e) {
     return e;
 }
 function f(e) {
-    let { guildId: t, markAsDismissed: f } = e,
-        g = (0, r.jsxs)(r.Fragment, {
-            children: [
-                (0, r.jsx)(i.Text, {
-                    color: 'always-white',
-                    variant: 'text-sm/normal',
-                    className: p.upsellBody,
-                    children: d.intl.string(d.t['yQ0X+f'])
-                }),
-                (0, r.jsx)(i.Text, {
-                    color: 'always-white',
-                    variant: 'text-sm/normal',
-                    children: d.intl.format(d.t['2Sapx8'], { hcArticleUrl: c.Z.getCreatorSupportArticleURL(u.BhN.MEDIA_CHANNEL) })
-                })
-            ]
-        });
-    return (0, r.jsx)(o.ZP, {
-        header: d.intl.string(d.t.fW7UqK),
-        content: g,
-        asset: (0, r.jsx)(a.Z, {
-            className: p.video,
-            src: 'https://cdn.discordapp.com/assets/media_channel/media_channel_upsell_demo.mp4',
-            autoPlay: !0,
-            loop: !0
-        }),
-        buttonCTA: d.intl.string(d.t.JzJpg4),
-        onClick: () => {
-            (s.default.track(u.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, h({}, (0, l.hH)(t))),
-                (0, i.ZDy)(async () => {
-                    let { default: e } = await Promise.all([n.e('45094'), n.e('45822')]).then(n.bind(n, 218613));
-                    return (n) => {
-                        var i, l;
-                        return (0, r.jsx)(
-                            e,
-                            ((i = h({}, n)),
-                            (l = l =
-                                {
-                                    channelType: u.d4z.GUILD_MEDIA,
-                                    guildId: t
-                                }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
-                                : (function (e, t) {
-                                      var n = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
-                                      }
-                                      return n;
-                                  })(Object(l)).forEach(function (e) {
-                                      Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
-                                  }),
-                            i)
-                        );
-                    };
-                }));
+    let { guildId: t, markAsDismissed: f, renderTargetElement: g } = e,
+        m = {
+            text: p.intl.string(p.t.JzJpg4),
+            onClick: () => {
+                (s.default.track(u.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, h({}, (0, o.hH)(t))),
+                    f(d.L.PRIMARY),
+                    (0, a.ZDy)(async () => {
+                        let { default: e } = await Promise.all([n.e('45094'), n.e('45822')]).then(n.bind(n, 218613));
+                        return (n) => {
+                            var i, l;
+                            return (0, r.jsx)(
+                                e,
+                                ((i = h({}, n)),
+                                (l = l =
+                                    {
+                                        channelType: u.d4z.GUILD_MEDIA,
+                                        guildId: t
+                                    }),
+                                Object.getOwnPropertyDescriptors
+                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                                    : (function (e, t) {
+                                          var n = Object.keys(e);
+                                          if (Object.getOwnPropertySymbols) {
+                                              var r = Object.getOwnPropertySymbols(e);
+                                              n.push.apply(n, r);
+                                          }
+                                          return n;
+                                      })(Object(l)).forEach(function (e) {
+                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                                      }),
+                                i)
+                            );
+                        };
+                    }));
+            },
+            variant: 'primary'
         },
-        secondaryButtonCTA: d.intl.string(d.t.WAI6xs),
-        markAsDismissed: f
+        b = i.useRef(null);
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsx)('div', {
+                ref: b,
+                children: g()
+            }),
+            (0, r.jsx)(l.Mb, {
+                title: p.intl.string(p.t.fW7UqK),
+                body: p.intl.string(p.t['yQ0X+f']),
+                caretConfig: {
+                    position: 'top',
+                    align: 'center'
+                },
+                assetUrl: 'https://cdn.discordapp.com/assets/media_channel/media_channel_upsell_demo.mp4',
+                action: m,
+                textLink: {
+                    link: c.Z.getCreatorSupportArticleURL(u.BhN.MEDIA_CHANNEL),
+                    text: p.intl.string(p.t.w4DutL)
+                },
+                targetElementRef: b,
+                onRequestClose: () => f(d.L.DISMISS)
+            })
+        ]
     });
 }

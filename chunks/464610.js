@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(472816), n(794429));
+(n.d(t, { Z: () => x }), n(472816), n(794429));
 var r = n(255367),
     i = n(73800),
     l = n(481060),
@@ -6,18 +6,19 @@ var r = n(255367),
     s = n(85960),
     o = n(676317),
     c = n(823379),
-    d = n(84613),
-    u = n(740903),
-    m = n(598622),
-    g = n(388032),
-    p = n(902893);
-function h(e) {
+    d = n(403170),
+    u = n(84613),
+    m = n(740903),
+    g = n(598622),
+    p = n(388032),
+    h = n(902893);
+function f(e) {
     let { title: t, subtitle: n, icon: i, page: a } = e;
     return (0, r.jsxs)('div', {
-        className: p.safetyStepRow,
+        className: h.safetyStepRow,
         children: [
             (0, r.jsxs)('div', {
-                className: p.safetyStepContent,
+                className: h.safetyStepContent,
                 children: [
                     (0, r.jsx)(l.qEK, {
                         src: i,
@@ -43,27 +44,27 @@ function h(e) {
             (0, r.jsx)(l.zxk, {
                 size: 'sm',
                 variant: 'secondary',
-                onClick: () => (0, d.K)(a),
-                text: g.intl.string(g.t.bt75u7)
+                onClick: () => (0, u.K)(a),
+                text: p.intl.string(p.t.bt75u7)
             })
         ]
     });
 }
-function f(e) {
+function x(e) {
     let { guild: t } = e;
     (0, a.RD)(t.id);
-    let d = (0, s.Z6)(t.id),
-        { rulesByTriggerType: f } = (0, a.pH)(t.id),
-        { numEnabledRules: x, numRules: b } = i.useMemo(() => {
+    let u = (0, s.Z6)(t.id),
+        { rulesByTriggerType: x } = (0, a.pH)(t.id),
+        { numEnabledRules: b, numRules: j } = i.useMemo(() => {
             let e = 0,
                 t = 0;
             return (
-                null == f ||
-                    Object.values(d)
+                null == x ||
+                    Object.values(u)
                         .flat()
                         .forEach((n) => {
                             var r;
-                            let i = null == (r = f[n]) ? void 0 : r.filter(c.lm);
+                            let i = null == (r = x[n]) ? void 0 : r.filter(c.lm);
                             if (null == i || 0 === i.length) return void t++;
                             i.forEach((n) => {
                                 (n.enabled && e++, t++);
@@ -74,66 +75,67 @@ function f(e) {
                     numRules: t
                 }
             );
-        }, [d, f]),
-        j = (0, m.Q)(t),
-        v = j[u.u.CAPTCHA_AND_RAID_PROTECTION],
-        _ = j[u.u.DM_AND_SPAM_PROTECTION],
-        O = j[u.u.PERMISSIONS],
-        y = (0, o.pr)(t.id);
+        }, [u, x]),
+        v = (0, g.Q)(t),
+        _ = v[m.u.CAPTCHA_AND_RAID_PROTECTION],
+        O = v[m.u.DM_AND_SPAM_PROTECTION],
+        y = v[m.u.PERMISSIONS],
+        C = (0, o.pr)(t.id);
     return (0, r.jsxs)('div', {
         children: [
             (0, r.jsx)(l.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
-                className: p.header,
-                children: g.intl.string(g.t['0A+VSE'])
+                className: h.header,
+                children: p.intl.string(p.t['0A+VSE'])
             }),
+            (0, r.jsx)(d.z, { guild: t }),
             (0, r.jsxs)('div', {
-                className: p.safetyChecklist,
+                className: h.safetyChecklist,
                 children: [
-                    (0, r.jsx)(h, {
+                    (0, r.jsx)(f, {
                         icon: n(14215),
-                        title: g.intl.string(g.t['53eF5u']),
-                        subtitle: g.intl.formatToPlainString(g.t.TG7NYG, {
-                            enabled: v.filter((e) => e.enabled).length,
-                            total: v.length
-                        }),
-                        page: u.u.CAPTCHA_AND_RAID_PROTECTION
-                    }),
-                    (0, r.jsx)('div', { className: p.divider }),
-                    (0, r.jsx)(h, {
-                        icon: n(128724),
-                        title: g.intl.string(g.t.O0SfFx),
-                        subtitle: g.intl.formatToPlainString(g.t.TG7NYG, {
+                        title: p.intl.string(p.t['53eF5u']),
+                        subtitle: p.intl.formatToPlainString(p.t.TG7NYG, {
                             enabled: _.filter((e) => e.enabled).length,
                             total: _.length
                         }),
-                        page: u.u.DM_AND_SPAM_PROTECTION
+                        page: m.u.CAPTCHA_AND_RAID_PROTECTION
                     }),
-                    (0, r.jsx)('div', { className: p.divider }),
-                    y &&
-                        (0, r.jsxs)(r.Fragment, {
-                            children: [
-                                (0, r.jsx)(h, {
-                                    icon: n(145136),
-                                    title: g.intl.string(g.t.uRelg4),
-                                    subtitle: g.intl.formatToPlainString(g.t.TG7NYG, {
-                                        enabled: x,
-                                        total: b
-                                    }),
-                                    page: u.u.AUTOMOD
-                                }),
-                                (0, r.jsx)('div', { className: p.divider })
-                            ]
-                        }),
-                    (0, r.jsx)(h, {
-                        icon: n(913414),
-                        title: g.intl.string(g.t.xrmhRU),
-                        subtitle: g.intl.formatToPlainString(g.t.TG7NYG, {
+                    (0, r.jsx)('div', { className: h.divider }),
+                    (0, r.jsx)(f, {
+                        icon: n(128724),
+                        title: p.intl.string(p.t.O0SfFx),
+                        subtitle: p.intl.formatToPlainString(p.t.TG7NYG, {
                             enabled: O.filter((e) => e.enabled).length,
                             total: O.length
                         }),
-                        page: u.u.PERMISSIONS
+                        page: m.u.DM_AND_SPAM_PROTECTION
+                    }),
+                    (0, r.jsx)('div', { className: h.divider }),
+                    C &&
+                        (0, r.jsxs)(r.Fragment, {
+                            children: [
+                                (0, r.jsx)(f, {
+                                    icon: n(145136),
+                                    title: p.intl.string(p.t.uRelg4),
+                                    subtitle: p.intl.formatToPlainString(p.t.TG7NYG, {
+                                        enabled: b,
+                                        total: j
+                                    }),
+                                    page: m.u.AUTOMOD
+                                }),
+                                (0, r.jsx)('div', { className: h.divider })
+                            ]
+                        }),
+                    (0, r.jsx)(f, {
+                        icon: n(913414),
+                        title: p.intl.string(p.t.xrmhRU),
+                        subtitle: p.intl.formatToPlainString(p.t.TG7NYG, {
+                            enabled: y.filter((e) => e.enabled).length,
+                            total: y.length
+                        }),
+                        page: m.u.PERMISSIONS
                     })
                 ]
             })

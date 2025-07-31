@@ -30,8 +30,8 @@ var r = n(255367),
     N = n(51144),
     w = n(981631),
     D = n(490897),
-    M = n(388032),
-    R = n(277580);
+    R = n(388032),
+    M = n(277580);
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,7 +57,7 @@ function k(e) {
     }
     return e;
 }
-function I(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -75,7 +75,7 @@ function I(e, t) {
         e
     );
 }
-function U(e, t) {
+function I(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -94,7 +94,7 @@ function U(e, t) {
     }
     return l;
 }
-function A(e) {
+function U(e) {
     let { destination: t, icon: n, label: a, subLabel: i, selected: u, disabled: c, onPressDestination: d, 'aria-setsize': b, 'aria-posinset': p } = e,
         h = (0, o.JA)(t.id),
         m = l.useCallback(() => {
@@ -102,10 +102,10 @@ function A(e) {
         }, [d, c, t]);
     return (0, r.jsxs)(
         f.P3F,
-        I(
+        A(
             k(
                 {
-                    className: s()(R.destinationRow, { [R.disabled]: c }),
+                    className: s()(M.destinationRow, { [M.disabled]: c }),
                     onClick: m,
                     'aria-selected': u,
                     'aria-setsize': b,
@@ -116,24 +116,24 @@ function A(e) {
             {
                 children: [
                     (0, r.jsxs)('div', {
-                        className: R.identity,
+                        className: M.identity,
                         children: [
                             (0, r.jsx)('div', {
-                                className: R.iconWrapper,
+                                className: M.iconWrapper,
                                 children: n
                             }),
                             (0, r.jsxs)('div', {
-                                className: R.labels,
+                                className: M.labels,
                                 children: [
                                     (0, r.jsx)(f.Text, {
                                         tag: 'strong',
-                                        className: R.label,
+                                        className: M.label,
                                         variant: 'text-md/semibold',
                                         lineClamp: 1,
                                         children: a
                                     }),
                                     (0, r.jsx)(f.Text, {
-                                        className: R.subLabel,
+                                        className: M.subLabel,
                                         variant: 'text-xs/normal',
                                         color: 'text-muted',
                                         children: i
@@ -147,7 +147,7 @@ function A(e) {
                         displayOnly: !0,
                         size: 24,
                         value: u,
-                        className: R.checkbox
+                        className: M.checkbox
                     })
                 ]
             }
@@ -156,14 +156,14 @@ function A(e) {
 }
 function H(e) {
     var { user: t, subLabel: n } = e,
-        l = U(e, ['user', 'subLabel']);
+        l = I(e, ['user', 'subLabel']);
     let a = N.ZP.useName(t),
         s = N.ZP.useUserTag(t, { decoration: 'never' }),
         i = (0, c.e7)([P.Z], () => P.Z.getNickname(t.id)),
         u = (0, c.e7)([O.Z], () => O.Z.getStatus(t.id));
     return (0, r.jsx)(
-        A,
-        I(k({}, l), {
+        U,
+        A(k({}, l), {
             icon: (0, r.jsx)(b.Z, {
                 'aria-hidden': !0,
                 size: f.EFr.SIZE_32,
@@ -177,12 +177,12 @@ function H(e) {
 }
 function F(e) {
     var { channel: t, subLabel: n } = e,
-        l = U(e, ['channel', 'subLabel']);
+        l = I(e, ['channel', 'subLabel']);
     let a = (0, m.ZP)(t),
         s = (0, x._)(t);
     return (0, r.jsx)(
-        A,
-        I(k({}, l), {
+        U,
+        A(k({}, l), {
             icon: (0, r.jsx)(g.Z, {
                 'aria-hidden': !0,
                 size: f.EFr.SIZE_32,
@@ -196,7 +196,7 @@ function F(e) {
 }
 function q(e) {
     var { channel: t, subLabel: n } = e,
-        l = U(e, ['channel', 'subLabel']);
+        l = I(e, ['channel', 'subLabel']);
     let a = (0, c.e7)([j.Z], () => j.Z.getGuild(null == t ? void 0 : t.guild_id)),
         s = (0, m.ZP)(t),
         i = (0, c.e7)([E.Z, C.default, P.Z], () => {
@@ -208,11 +208,11 @@ function q(e) {
     if (t.isThread() || t.isForumPost()) {
         let e = t.isForumPost() ? f.Mmi : f.VL1;
         d = (0, r.jsxs)('div', {
-            className: R.threadSubLabel,
+            className: M.threadSubLabel,
             children: [
                 (0, r.jsx)(e, {
                     color: f.TVs.colors.TEXT_SECONDARY,
-                    className: R.subLabelIcon
+                    className: M.subLabelIcon
                 }),
                 (0, r.jsx)(f.Text, {
                     variant: 'text-xs/medium',
@@ -224,7 +224,7 @@ function q(e) {
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(f.Text, {
-                                  className: R.subLabelSeparator,
+                                  className: M.subLabelSeparator,
                                   variant: 'text-xs/medium',
                                   color: 'text-secondary',
                                   children: '\u2022'
@@ -241,8 +241,8 @@ function q(e) {
         });
     }
     return (0, r.jsx)(
-        A,
-        I(k({}, l), {
+        U,
+        A(k({}, l), {
             icon: (0, r.jsx)(y.Z, {
                 size: y.E.SMALL_32,
                 guild: a,
@@ -255,7 +255,7 @@ function q(e) {
 }
 function z(e) {
     var { rowData: t, selectedDestinations: n, handleToggleDestination: a, disableSelection: s } = e,
-        i = U(e, ['rowData', 'selectedDestinations', 'handleToggleDestination', 'disableSelection']);
+        i = I(e, ['rowData', 'selectedDestinations', 'handleToggleDestination', 'disableSelection']);
     let u = l.useMemo(() => [t.length], [t.length]),
         c = l.useCallback(() => 48, []),
         f = l.useMemo(() => {
@@ -280,7 +280,7 @@ function z(e) {
                               },
                     c = (0, v.hC)(o),
                     d = (function (e) {
-                        if (e instanceof S.Sf && (0, S.Km)(e.type) && null != e.rateLimitPerUser && e.rateLimitPerUser > 0 && !(Z.Z.can(w.Plq.MANAGE_CHANNELS, e) || Z.Z.can(w.Plq.MANAGE_MESSAGES, e))) return { label: M.intl.string(M.t.Icu3bW) };
+                        if (e instanceof S.Sf && (0, S.Km)(e.type) && null != e.rateLimitPerUser && e.rateLimitPerUser > 0 && !(Z.Z.can(w.Plq.MANAGE_CHANNELS, e) || Z.Z.can(w.Plq.MANAGE_MESSAGES, e))) return { label: R.intl.string(R.t.Icu3bW) };
                     })(u),
                     b = f.includes(c),
                     p = {
@@ -304,10 +304,10 @@ function z(e) {
         children: (0, r.jsx)(o.SJ, {
             children: (e) => {
                 var { ref: t } = e,
-                    n = U(e, ['ref']);
+                    n = I(e, ['ref']);
                 return (0, r.jsx)(
                     d.Tv,
-                    I(
+                    A(
                         k(
                             {
                                 ref: (e) => {

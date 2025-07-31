@@ -20,16 +20,16 @@ var l = n(255367),
 let b = (e) => {
     var t, n;
     let { guildBoostSlots: s, selectedGuild: b, locationSection: y, transitionState: S, onClose: N } = e,
-        E = (0, h.vx)(m.Z.boostSlots);
+        O = (0, h.vx)(m.Z.boostSlots);
     (i()(null != s || null != b, 'Must either provide slots or an initial selected guild'), i()(!(null == s ? void 0 : s.some((e) => e.isOnCooldown())), 'If slots are provided, they must not be on cooldown'));
-    let O = [null == s ? 'UNUSED_QUANTITY_SELECT' : null, null == b ? 'GUILD_SELECT' : null, 'CONFIRM', 'SUCCESS'].filter((e) => null != e),
+    let E = [null == s ? 'UNUSED_QUANTITY_SELECT' : null, null == b ? 'GUILD_SELECT' : null, 'CONFIRM', 'SUCCESS'].filter((e) => null != e),
         [P, T] = (0, a.Wu)([d.Z], () => [d.Z.isModifyingAppliedBoost, d.Z.applyBoostError]),
         [Z, w] = r.useState(''),
-        [L, G] = r.useState(O[0]),
+        [L, G] = r.useState(E[0]),
         [I, M] = r.useState(!1),
         [D, k] = r.useState(b),
-        [U, B] = r.useState(null != s ? s : E.slice(0, 1)),
-        z = r.useMemo(
+        [U, B] = r.useState(null != s ? s : O.slice(0, 1)),
+        F = r.useMemo(
             () =>
                 null == U
                     ? []
@@ -39,7 +39,7 @@ let b = (e) => {
                       }).filter((e) => null != e),
             [U]
         ),
-        F = r.useMemo(() => {
+        z = r.useMemo(() => {
             var e;
             return (null == U || null == (e = U[0]) ? void 0 : e.premiumGuildSubscription) != null;
         }, [U]),
@@ -53,7 +53,7 @@ let b = (e) => {
         _ = {
             UNUSED_QUANTITY_SELECT: {
                 body: () => (
-                    i()(null != s || 0 !== E.length, 'Cannot provide no slots if there are no other available slots'),
+                    i()(null != s || 0 !== O.length, 'Cannot provide no slots if there are no other available slots'),
                     (0, l.jsxs)('div', {
                         className: v.quantitySelectorBody,
                         children: [
@@ -72,9 +72,9 @@ let b = (e) => {
                                 children: [
                                     (0, l.jsx)(o.FiK, {
                                         value: U.length,
-                                        onChange: (e) => B(E.slice(0, e)),
+                                        onChange: (e) => B(O.slice(0, e)),
                                         minValue: 1,
-                                        maxValue: E.length
+                                        maxValue: O.length
                                     }),
                                     (0, l.jsx)(o.Text, {
                                         className: v.quantitySelectorLabel,
@@ -108,7 +108,7 @@ let b = (e) => {
             GUILD_SELECT: {
                 header: () =>
                     (0, l.jsx)(g.g, {
-                        isTransfer: F,
+                        isTransfer: z,
                         query: Z,
                         setQuery: w
                     }),
@@ -119,8 +119,8 @@ let b = (e) => {
                         onSelectGuild: (e) => {
                             (k(e), G('CONFIRM'));
                         },
-                        isTransfer: F,
-                        selectedSlotGuilds: z,
+                        isTransfer: z,
+                        selectedSlotGuilds: F,
                         query: Z
                     })
             },
@@ -129,10 +129,10 @@ let b = (e) => {
                     if (null == D) return null;
                     let e = U.filter((e) => (0, h.tl)(e)).length,
                         t = U.length,
-                        n = z.length;
-                    return F
+                        n = F.length;
+                    return z
                         ? (0, l.jsx)(p.Z.TransferBody, {
-                              fromGuilds: z,
+                              fromGuilds: F,
                               toGuild: D,
                               blurb: C.intl.formatToPlainString(C.t.SSA2lp, {
                                   slotCount: t,
@@ -160,7 +160,7 @@ let b = (e) => {
                 },
                 footer() {
                     let e = U.length,
-                        t = 'CONFIRM' === O[0] ? R : () => G(O[O.indexOf(L) - 1]),
+                        t = 'CONFIRM' === E[0] ? R : () => G(E[E.indexOf(L) - 1]),
                         n = async () => {
                             if (null != D && (null == U ? void 0 : U.length) !== 0) {
                                 i()(!U.some((e) => e.isOnCooldown()), 'Cannot use a premium guild subscription slot while on cooldown');
@@ -185,8 +185,8 @@ let b = (e) => {
                             }
                         };
                     return (0, l.jsx)(p.Z.Footer, {
-                        confirmation: F ? C.intl.formatToPlainString(C.t.Oh6mxc, { slotCount: e }) : C.intl.formatToPlainString(C.t['ZU5x5+'], { slotCount: e }),
-                        confirmationLabel: F ? C.intl.formatToPlainString(C.t.fnZRmZ, { slotCount: e }) : C.intl.formatToPlainString(C.t.d0vwWV, { slotCount: e }),
+                        confirmation: z ? C.intl.formatToPlainString(C.t.Oh6mxc, { slotCount: e }) : C.intl.formatToPlainString(C.t['ZU5x5+'], { slotCount: e }),
+                        confirmationLabel: z ? C.intl.formatToPlainString(C.t.fnZRmZ, { slotCount: e }) : C.intl.formatToPlainString(C.t.d0vwWV, { slotCount: e }),
                         onConfirm: n,
                         onCancel: t,
                         isModifyingSubscription: P
@@ -197,7 +197,7 @@ let b = (e) => {
                 body: () =>
                     (0, l.jsx)(f.R7, {
                         guild: D,
-                        isTransfer: F,
+                        isTransfer: z,
                         guildBoostQuantity: U.length,
                         onClose: R,
                         didPurchaseOnFractionalPremium: !1
@@ -222,7 +222,7 @@ let b = (e) => {
                 className: A.bodyClass,
                 children: (0, l.jsx)(o.qBt, {
                     step: L,
-                    steps: O,
+                    steps: E,
                     children: A.body()
                 })
             }),

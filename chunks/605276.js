@@ -1,4 +1,4 @@
-t.d(n, { Z: () => Z });
+t.d(n, { Z: () => I });
 var l = t(255367),
     r = t(73800),
     a = t(399606),
@@ -17,7 +17,7 @@ var l = t(255367),
     b = t(981631),
     j = t(388032),
     C = t(617449);
-let _ = r.memo(function (e) {
+let v = r.memo(function (e) {
         let { guild: n } = e,
             { guildProfile: t, fetchGuildProfile: a } = (0, o.u)(n.id);
         return (r.useEffect(() => {
@@ -31,23 +31,23 @@ let _ = r.memo(function (e) {
                   disableGuildNameClick: !0
               });
     }),
-    v = (e) => {
+    _ = (e) => {
         let { channelId: n, title: t, icon: o } = e,
             d = (0, a.e7)([m.Z], () => m.Z.getChannel(n)),
             x = (0, a.e7)([h.Z], () => h.Z.getMessages(n)),
             j = (0, a.e7)([f.Z], () => f.Z.can(b.Plq.VIEW_CHANNEL, d)),
-            _ = x.first(),
-            v = (0, c.zy)(_, !1),
-            I = (null == v ? void 0 : v.length) > 0 ? v[0] : null,
-            Z = null != d && null == _ && !x.loadingMore && !x.ready && !x.hasFetched && j;
+            v = x.first(),
+            _ = (0, c.zy)(v, !1),
+            Z = (null == _ ? void 0 : _.length) > 0 ? _[0] : null,
+            I = null != d && null == v && !x.loadingMore && !x.ready && !x.hasFetched && j;
         r.useEffect(() => {
-            Z &&
+            I &&
                 s.Z.fetchMessages({
                     channelId: n,
                     after: n,
                     limit: 5
                 });
-        }, [n, Z]);
+        }, [n, I]);
         let y = (e) => {
             null != d &&
                 (e.shiftKey
@@ -76,11 +76,11 @@ let _ = r.memo(function (e) {
                                       alt: '',
                                       'aria-hidden': !0
                                   })
-                                : null != I
+                                : null != Z
                                   ? (0, l.jsx)('img', {
                                         className: C.resourceImage,
-                                        src: I.src,
-                                        alt: I.alt
+                                        src: Z.src,
+                                        alt: Z.alt
                                     })
                                   : (0, l.jsx)('div', {
                                         className: C.placeholderImage,
@@ -102,7 +102,7 @@ let _ = r.memo(function (e) {
             n
         );
     },
-    I = r.memo(function (e) {
+    Z = r.memo(function (e) {
         let { guild: n } = e,
             t = (0, x.Z)(n.id);
         return 0 === t.length
@@ -122,7 +122,7 @@ let _ = r.memo(function (e) {
                               className: C.resourceChannelsList,
                               children: t.map((e) =>
                                   (0, l.jsx)(
-                                      v,
+                                      _,
                                       {
                                           channelId: e.channelId,
                                           title: e.title,
@@ -136,10 +136,10 @@ let _ = r.memo(function (e) {
                   })
               });
     }),
-    Z = r.memo(function (e) {
+    I = r.memo(function (e) {
         let { guild: n, isNewMember: t } = e;
         return (0, l.jsxs)('aside', {
             className: C.sidebar,
-            children: [(0, l.jsx)(_, { guild: n }), t && (0, l.jsx)(I, { guild: n })]
+            children: [(0, l.jsx)(v, { guild: n }), t && (0, l.jsx)(Z, { guild: n })]
         });
     });

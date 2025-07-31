@@ -71,12 +71,12 @@ function I(e) {
         }, [t.applicationId, l]));
     let j = S.width / Math.max(S.height, 1) < O.I0,
         A = 0,
-        x = 0,
-        Z = (0, u.Z)(null == n ? void 0 : n.id);
-    if (!Z) {
+        Z = 0,
+        x = (0, u.Z)(null == n ? void 0 : n.id);
+    if (!x) {
         let e = S.width,
             t = S.height;
-        j ? ((t = S.width / O.I0) > S.height && (e = (t = S.height) * O.I0), (x = (S.height - t) / 2)) : ((e = Math.min(S.height * O.I0)) > S.width && (t = (e = S.width) / O.I0), (A = (S.width - e) / 2));
+        j ? ((t = S.width / O.I0) > S.height && (e = (t = S.height) * O.I0), (Z = (S.height - t) / 2)) : ((e = Math.min(S.height * O.I0)) > S.width && (t = (e = S.width) / O.I0), (A = (S.width - e) / 2));
     }
     let w = O.MI.NO_CHAT;
     if (null == n) return null;
@@ -125,12 +125,12 @@ function I(e) {
                     (0, r.jsx)('div', {
                         className: y.activityPanelContainer,
                         children: (0, r.jsx)('div', {
-                            className: a()(y.activityContainer, { [y.activityContainerNoMargin]: Z }),
+                            className: a()(y.activityContainer, { [y.activityContainerNoMargin]: x }),
                             style: {
                                 paddingLeft: A,
                                 paddingRight: A,
-                                paddingTop: x,
-                                paddingBottom: x
+                                paddingTop: Z,
+                                paddingBottom: Z
                             },
                             ref: C,
                             children: (0, r.jsx)(g.Z, {

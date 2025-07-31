@@ -1,49 +1,49 @@
-r.d(t, { d: () => b });
+r.d(t, { d: () => v });
 var n = r(255367);
 r(73800);
-var l = r(120356),
-    i = r.n(l),
-    a = r(780384),
+var a = r(120356),
+    l = r.n(a),
+    i = r(780384),
     o = r(481060),
     s = r(410030),
     c = r(876917),
     u = r(328456),
     d = r(619899),
     p = r(616066),
-    f = r(912397),
-    g = r(63243),
-    h = r(244488);
-let b = (e) => {
-    let { product: t, isPurchased: r, isHighlighted: l, user: b, forCollectedModal: m, containerClassName: _, profileEffectClassName: O, avatarDecorationClassName: v } = e,
-        { firstProfileEffect: C, firstAvatarDecoration: E } = (0, u.Rj)(t),
-        S = (0, d.O1)(E),
-        y = (0, s.ZP)(),
-        x = (0, a.ap)(y);
+    b = r(912397),
+    h = r(63243),
+    f = r(244488);
+let v = (e) => {
+    let { product: t, isPurchased: r, isHighlighted: a, user: v, forCollectedModal: m, containerClassName: _, profileEffectClassName: O, avatarDecorationClassName: y } = e,
+        { firstProfileEffect: g, firstAvatarDecoration: C } = (0, u.Rj)(t),
+        j = (0, d.O1)(C),
+        P = (0, s.ZP)(),
+        E = (0, i.ap)(P);
     return (0, n.jsxs)('div', {
-        className: i()(f.container, _),
+        className: l()(b.container, _),
         children: [
-            null != C
+            null != g
                 ? (0, n.jsx)('div', {
-                      className: i()(f.profileEffectShopPreview, O),
+                      className: l()(b.profileEffectShopPreview, O),
                       children: (0, n.jsx)(c.Z, {
-                          isHovering: l,
-                          profileEffectId: C.id,
+                          isHovering: a,
+                          profileEffectId: g.id,
                           isPurchased: r,
                           forCollectedModal: m,
                           removeSetHeight: !0
                       })
                   })
                 : null,
-            null != S
+            null != j
                 ? (0, n.jsx)('div', {
-                      className: i()(f.avatarDecorationPreview, v),
+                      className: l()(b.avatarDecorationPreview, y),
                       children: (0, n.jsx)(p.R, {
-                          item: S,
-                          user: b,
+                          item: j,
+                          user: v,
                           avatarSize: o.EFr.SIZE_120,
                           isPurchased: r,
-                          isHighlighted: l,
-                          avatarPlaceholderSrc: x ? h : g
+                          isHighlighted: a,
+                          avatarPlaceholderSrc: E ? f : h
                       })
                   })
                 : null

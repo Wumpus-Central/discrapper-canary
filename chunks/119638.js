@@ -95,7 +95,13 @@ class v extends (r = o.PureComponent) {
         let e = this.props,
             { className: t } = e,
             n = E(e, ['className']);
-        return (0, a.jsx)(d.E1, g(h({}, n), { className: l()(f.popoutListInput, t) }));
+        return (0, a.jsx)(
+            d.E,
+            g(h({}, n), {
+                size: 'sm',
+                className: l()(f.popoutListInput, t)
+            })
+        );
     }
 }
 p(v, 'defaultProps', { autoFocus: !0 });

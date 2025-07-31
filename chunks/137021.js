@@ -24,9 +24,9 @@ function E(e) {
         L = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
         [T, N] = l.useState(!1),
         [w, D] = l.useState(''),
-        [M, R] = l.useState('');
+        [R, M] = l.useState('');
     l.useEffect(() => {
-        R(
+        M(
             (0, o.H)({
                 applicationId: t,
                 referrerId: null == L ? void 0 : L.id,
@@ -34,11 +34,11 @@ function E(e) {
                 linkId: E
             })
         );
-    }, [t, L, n, E, R]);
+    }, [t, L, n, E, M]);
     let k = l.useRef(0),
-        [I, U] = l.useState([]),
-        A = I.length,
-        H = A >= 5;
+        [A, I] = l.useState([]),
+        U = A.length,
+        H = U >= 5;
     l.useEffect(() => {
         if ('' === w) {
             var e;
@@ -50,7 +50,7 @@ function E(e) {
         }, [D]),
         q = l.useRef(null),
         { results: z, updateSearchText: G } = (0, b.s)({
-            selectedDestinations: I,
+            selectedDestinations: A,
             includeMissingDMs: !0
         }),
         W = l.useCallback(
@@ -61,7 +61,7 @@ function E(e) {
         ),
         V = l.useCallback(
             (e) => {
-                U((t) => {
+                I((t) => {
                     let n = t.findIndex((t) => {
                         let { type: n, id: r } = t;
                         return n === e.type && r === e.id;
@@ -78,7 +78,7 @@ function E(e) {
                 if (null == C) return;
                 let t = x.intl.formatToMarkdownString(x.t.dZJpdH, {
                         applicationName: C.name,
-                        link: M
+                        link: R
                     }),
                     n = ''.concat(j, '\n\n').concat(t);
                 (N(!0),
@@ -90,13 +90,13 @@ function E(e) {
                     _(!0),
                     Z());
             },
-            [j, M, Z, _, C]
+            [j, R, Z, _, C]
         ),
         J = l.useCallback(() => {
-            (0, m.JG)(M, () => {
+            (0, m.JG)(R, () => {
                 (O(), (0, i.showToast)((0, i.createToast)(x.intl.string(x.t['t5VZ8/']), i.ToastType.SUCCESS)));
             });
-        }, [M, O]),
+        }, [R, O]),
         Q =
             z.length > 0
                 ? (0, r.jsx)(y.Q, {
@@ -104,7 +104,7 @@ function E(e) {
                       paddingTop: 8,
                       rowData: z,
                       handleToggleDestination: V,
-                      selectedDestinations: I,
+                      selectedDestinations: A,
                       disableSelection: H
                   })
                 : (0, r.jsxs)('div', {
@@ -130,7 +130,6 @@ function E(e) {
         size: 'md',
         input: (0, r.jsx)(i.E1j, {
             ref: q,
-            size: i.E1j.Sizes.MEDIUM,
             query: w,
             onChange: W,
             onClear: F,
@@ -147,9 +146,9 @@ function E(e) {
             {
                 text: x.intl.string(x.t.TXNS7e),
                 variant: 'primary',
-                onClick: () => X(I),
+                onClick: () => X(A),
                 loading: T,
-                disabled: !(A > 0)
+                disabled: !(U > 0)
             }
         ],
         children: Q

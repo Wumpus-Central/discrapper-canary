@@ -1,8 +1,8 @@
 n.d(t, { z: () => d });
 var r = n(255367),
     l = n(73800),
-    i = n(954654),
-    a = n(937889),
+    a = n(954654),
+    i = n(937889),
     s = n(930282),
     o = n(524444),
     u = n(695346),
@@ -10,7 +10,7 @@ var r = n(255367),
 function d(e) {
     let { previewMessage: t } = e,
         n = u.jU.useSetting(),
-        { content: d } = (0, a.ZP)(t, {
+        { content: d } = (0, i.ZP)(t, {
             allowHeading: !0,
             allowLinks: !0
         }),
@@ -41,7 +41,7 @@ function d(e) {
                     }),
                     f,
                     t.components.length > 0
-                        ? (0, r.jsx)(i.ZP, {
+                        ? (0, r.jsx)(a.ZP, {
                               message: t,
                               shouldDisableInteractiveComponents: !0
                           })

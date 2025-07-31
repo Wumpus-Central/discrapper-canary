@@ -1,4 +1,4 @@
-(t.d(n, { ZP: () => D }), t(388685), t(953529));
+(t.d(n, { ZP: () => L }), t(388685), t(953529));
 var l = t(255367),
     r = t(73800),
     a = t(120356),
@@ -17,15 +17,15 @@ var l = t(255367),
     b = t(695346),
     j = t(592125),
     C = t(984933),
-    _ = t(375954),
-    v = t(496675),
-    I = t(451478),
-    Z = t(768581),
+    v = t(375954),
+    _ = t(496675),
+    Z = t(451478),
+    I = t(768581),
     y = t(526120),
     N = t(689981),
     O = t(825334),
-    w = t(981631),
-    P = t(388032),
+    P = t(981631),
+    w = t(388032),
     E = t(79341),
     S = t(73433),
     A = t(931057);
@@ -39,21 +39,21 @@ function k(e) {
             channel: c
         }),
         m = (0, f.MC)(d),
-        p = (0, s.e7)([I.Z], () => I.Z.isFocused()),
+        p = (0, s.e7)([Z.Z], () => Z.Z.isFocused()),
         x = (0, h.d$)(r.src),
         C = b.QK.useSetting(),
-        { src: _, width: v, height: Z, alt: y } = r;
+        { src: v, width: _, height: I, alt: y } = r;
     return (
-        Z > v ? (t = 72) : (n = 72),
+        I > _ ? (t = 72) : (n = 72),
         (0, l.jsxs)('div', {
             className: E.media,
             children: [
                 (0, g.Yi)({
-                    src: _,
+                    src: v,
                     maxHeight: n,
                     maxWidth: t,
-                    width: v,
-                    height: Z,
+                    width: _,
+                    height: I,
                     alt: null != y && o && null != m ? m : y,
                     autoPlay: C,
                     animated: x && !o && p,
@@ -73,8 +73,8 @@ function k(e) {
 function M(e) {
     let { resource: n } = e,
         t = (0, s.e7)([j.Z], () => j.Z.getChannel(n.channelId)),
-        a = (0, s.e7)([_.Z], () => _.Z.getMessages(n.channelId)),
-        u = (0, s.e7)([v.Z], () => v.Z.can(w.Plq.VIEW_CHANNEL, t)),
+        a = (0, s.e7)([v.Z], () => v.Z.getMessages(n.channelId)),
+        u = (0, s.e7)([_.Z], () => _.Z.can(P.Plq.VIEW_CHANNEL, t)),
         h = a.first(),
         f = (0, N.Z)(h),
         g = (0, d.zy)(h, !1),
@@ -92,11 +92,11 @@ function M(e) {
         null == t || null == t.guild_id)
     )
         return null;
-    let C = Z.ZP.getResourceChannelIconURL({
+    let C = I.ZP.getResourceChannelIconURL({
             channelId: t.id,
             icon: n.icon
         }),
-        I = null == n.description || 0 === n.description.length;
+        Z = null == n.description || 0 === n.description.length;
     return (0, l.jsxs)(c.P3F, {
         className: E.row,
         onClick: (e) => {
@@ -118,7 +118,7 @@ function M(e) {
                         color: 'header-primary',
                         children: n.title
                     }),
-                    I &&
+                    Z &&
                         null != f &&
                         (0, l.jsx)(c.Text, {
                             className: E.messageContent,
@@ -130,7 +130,7 @@ function M(e) {
                                 channelId: t.id
                             })
                         }),
-                    !I &&
+                    !Z &&
                         (0, l.jsx)(c.Text, {
                             className: i()(E.messageContent, S.markup),
                             variant: 'text-sm/normal',
@@ -165,7 +165,7 @@ function M(e) {
         ]
     });
 }
-function D(e) {
+function L(e) {
     let { guild: n, isNewMember: t } = e,
         r = (0, O.Z)(n.id);
     return 0 === r.length
@@ -177,7 +177,7 @@ function D(e) {
                       (0, l.jsx)(c.X6q, {
                           variant: 'heading-xl/bold',
                           color: 'header-primary',
-                          children: P.intl.string(P.t.owvC9f)
+                          children: w.intl.string(w.t.owvC9f)
                       }),
                       (0, l.jsx)('img', {
                           className: E.emptyStateImage,
@@ -191,10 +191,10 @@ function D(e) {
                               variant: 'primary',
                               onClick: () => {
                                   let e = C.ZP.getDefaultChannel(n.id);
-                                  null != e && (0, p.uL)(w.Z5c.CHANNEL(n.id, e.id));
+                                  null != e && (0, p.uL)(P.Z5c.CHANNEL(n.id, e.id));
                               },
                               fullWidth: !0,
-                              text: P.intl.string(P.t['3iCBUl'])
+                              text: w.intl.string(w.t['3iCBUl'])
                           })
                       })
                   ]
@@ -205,7 +205,7 @@ function D(e) {
                   (0, l.jsx)(c.X6q, {
                       variant: 'heading-lg/bold',
                       color: 'header-primary',
-                      children: P.intl.string(P.t.xwY4LS)
+                      children: w.intl.string(w.t.xwY4LS)
                   }),
                   r.map((e) => (0, l.jsx)(M, { resource: e }, e.channelId))
               ]

@@ -2036,7 +2036,7 @@ function ep() {
         [c, d] = r.useState([]),
         [u, m] = r.useState([]);
     return (0, i.jsxs)('div', {
-        className: M.searchableSelectExamples,
+        className: M.section,
         children: [
             (0, i.jsx)(S.X6q, {
                 variant: 'heading-xl/semibold',
@@ -2107,12 +2107,24 @@ function eg() {
                 children: 'TextInput'
             }),
             (0, i.jsx)(S.xJW, {
-                children: (0, i.jsx)(S.E1j, {
-                    size: S.E1j.Sizes.MEDIUM,
-                    placeholder: 'Search...',
-                    onChange: (e) => l(e),
-                    query: a,
-                    onClear: () => l('')
+                title: 'Search',
+                children: (0, i.jsxs)(S.Kqy, {
+                    gap: 8,
+                    children: [
+                        (0, i.jsx)(S.E1j, {
+                            placeholder: 'Search...',
+                            onChange: (e) => l(e),
+                            query: a,
+                            onClear: () => l('')
+                        }),
+                        (0, i.jsx)(S.E1j, {
+                            size: 'sm',
+                            placeholder: 'Search...',
+                            onChange: (e) => l(e),
+                            query: a,
+                            onClear: () => l('')
+                        })
+                    ]
                 })
             }),
             (0, i.jsx)(S.xJW, {
@@ -2460,7 +2472,6 @@ function ex(e) {
             (0, i.jsx)(j.f, {
                 controls: p
                     ? (0, i.jsx)(S.E1j, {
-                          size: S.E1j.Sizes.MEDIUM,
                           placeholder: 'Search',
                           onChange: () => null,
                           query: ''
@@ -2620,7 +2631,6 @@ function e_(e) {
         size: 'md',
         title: 'Invite to server',
         input: (0, i.jsx)(S.E1j, {
-            size: S.E1j.Sizes.MEDIUM,
             placeholder: 'Search',
             onChange: () => null,
             query: ''

@@ -18,8 +18,8 @@ var i = n(120356),
     _ = n(615161),
     v = n(396678),
     j = n(37113),
-    S = n(65154),
-    b = n(676462),
+    b = n(65154),
+    S = n(676462),
     C = n(388032),
     y = n(326879);
 function O() {
@@ -62,7 +62,7 @@ function Z(e) {
             location: 'go_live_modal_refresh',
             autoTrackExposure: !1
         }),
-        [A, M] = (0, u.L)(S.h7.AUDIO_INPUT, { location: 'StreamSettingsSummary' }),
+        [A, M] = (0, u.L)(b.h7.AUDIO_INPUT, { location: 'StreamSettingsSummary' }),
         k = A.concat(M),
         [L, D] = null != (i = (0, v.Z)(g)) ? i : [Z, w],
         B = (0, p.L)(g),
@@ -70,8 +70,8 @@ function Z(e) {
         G = E === s.vA.CAMERA,
         W = null != T || (!!R && (!d || G)),
         F = null != T ? (null == T || null == (t = T.id) ? void 0 : t.startsWith(s.vA.CAMERA)) : G,
-        z = W ? void 0 : g === j.tI.PRESET_VIDEO ? C.intl.string(b.default.MuHUFR) : g === j.tI.PRESET_DOCUMENTS ? C.intl.string(b.default.y0JuYW) : void 0,
-        H = (0, o.e7)([f.Z], () => f.Z.getUseSystemScreensharePicker() && (0, m.isLinux)());
+        H = W ? void 0 : g === j.tI.PRESET_VIDEO ? C.intl.string(S.default.MuHUFR) : g === j.tI.PRESET_DOCUMENTS ? C.intl.string(S.default.y0JuYW) : void 0,
+        z = (0, o.e7)([f.Z], () => f.Z.getUseSystemScreensharePicker() && (0, m.isLinux)());
     return (0, r.jsxs)('div', {
         className: y.root,
         children: [
@@ -83,7 +83,7 @@ function Z(e) {
                         className: y.sourceOrPresetName,
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: W ? (null != (c = null == T ? void 0 : T.name) ? c : C.intl.string(b.default['hJMA+/'])) : B
+                        children: W ? (null != (c = null == T ? void 0 : T.name) ? c : C.intl.string(S.default['hJMA+/'])) : B
                     }),
                     (0, r.jsxs)(a.Text, {
                         className: y.summaryDetail,
@@ -107,9 +107,9 @@ function Z(e) {
                                         (0, r.jsx)(O, {})
                                     ]
                                 }),
-                            null != z &&
+                            null != H &&
                                 (0, r.jsxs)(r.Fragment, {
-                                    children: [(0, r.jsx)('span', { children: z }), (0, r.jsx)(O, {})]
+                                    children: [(0, r.jsx)('span', { children: H }), (0, r.jsx)(O, {})]
                                 }),
                             (0, r.jsx)('span', { children: U }),
                             (0, r.jsx)(O, {}),
@@ -126,16 +126,16 @@ function Z(e) {
                                                     size: 'xxs',
                                                     color: 'currentColor'
                                                 }),
-                                                C.intl.string(b.default.FzMGWV)
+                                                C.intl.string(S.default.FzMGWV)
                                             ]
                                         })
                                     ]
                                 }),
                             !N &&
                                 !F &&
-                                H &&
+                                z &&
                                 (0, r.jsxs)(r.Fragment, {
-                                    children: [(0, r.jsx)(O, {}), C.intl.string(b.default['n9/rUl'])]
+                                    children: [(0, r.jsx)(O, {}), C.intl.string(S.default['n9/rUl'])]
                                 }),
                             F
                                 ? (0, r.jsxs)(r.Fragment, {

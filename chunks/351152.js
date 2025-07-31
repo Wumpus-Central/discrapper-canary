@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(361932), n(187205));
+(n.d(t, { Z: () => S }), n(361932), n(187205));
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -18,7 +18,7 @@ var i = n(120356),
     _ = n(388032),
     v = n(347226),
     j = n(213510);
-function S(e) {
+function b(e) {
     let { guildId: t, onClick: n } = e,
         i = (0, a.e7)([f.Z], () => f.Z.getGuild(t)),
         l = (0, a.e7)([u.ZP, f.Z, m.Z], () =>
@@ -50,7 +50,7 @@ function S(e) {
           })
         : null;
 }
-function b(e) {
+function S(e) {
     let { onSelectGuild: t } = e,
         n = (0, a.e7)([h.ZP], () => h.ZP.getGuildFolders());
     return (0, r.jsx)(g.Z, {
@@ -60,7 +60,7 @@ function b(e) {
             let { guildIds: n } = e;
             return n.map((e) =>
                 (0, r.jsx)(
-                    S,
+                    b,
                     {
                         guildId: e,
                         onClick: t

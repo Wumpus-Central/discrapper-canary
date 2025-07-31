@@ -31,7 +31,6 @@ function d(e) {
             style: { marginBottom: '8px' },
             children: (0, r.jsx)(s.E1j, {
                 ref: p,
-                size: s.E1j.Sizes.MEDIUM,
                 query: n,
                 onClear: f,
                 onChange: c.yN,

@@ -22,9 +22,9 @@ var i,
     O = n(724757),
     h = n(620662),
     m = n(420660),
-    E = n(326255),
+    y = n(326255),
     S = n(956221),
-    y = n(771173),
+    E = n(771173),
     I = n(297781),
     b = n(82295),
     _ = n(554300),
@@ -43,12 +43,12 @@ var i,
     D = n(885110),
     x = n(594174),
     F = n(979651),
-    M = n(823379),
-    L = n(151459),
+    L = n(823379),
+    M = n(151459),
     q = n(981631),
     V = n(388032),
     Q = n(288779);
-function z(e) {
+function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -73,7 +73,7 @@ function z(e) {
     }
     return e;
 }
-function W(e, t) {
+function z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -125,8 +125,8 @@ let X = l.memo((e) => {
     let { user: t, activities: i = [], gameProfileEntry: s, index: O, closeParentPopout: b, isSuggestion: j, relationshipType: T, appContext: Z, nickname: A, onAction: U, onFriendVisible: x } = e,
         F = t.id,
         {
-            avatarDecorationSrc: M,
-            avatarSrc: L,
+            avatarDecorationSrc: L,
+            avatarSrc: M,
             eventHandlers: Y
         } = (0, w.Z)({
             userId: F,
@@ -179,7 +179,7 @@ let X = l.memo((e) => {
         eg = l.useCallback(() => {
             if (null != s) {
                 let e = s.traits,
-                    t = W(z({}, s), { traits: e.slice(0, 3) });
+                    t = z(W({}, s), { traits: e.slice(0, 3) });
                 return (0, r.jsx)(I.Gk, {
                     location: I.Gt.FRIENDS_POPOUT,
                     className: Q.badgesContainer,
@@ -187,7 +187,7 @@ let X = l.memo((e) => {
                 });
             }
             if (
-                !(0, E.Z)({
+                !(0, y.Z)({
                     activities: i,
                     status: el,
                     applicationStream: es,
@@ -205,7 +205,7 @@ let X = l.memo((e) => {
                           }),
                 user: t
             });
-            return (0, r.jsx)(y.Z, {
+            return (0, r.jsx)(E.Z, {
                 location: 'FriendsPopout',
                 user: t,
                 activities: i,
@@ -224,7 +224,7 @@ let X = l.memo((e) => {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                W(z({}, n), {
+                                z(W({}, n), {
                                     user: t,
                                     appContext: Z
                                 })
@@ -255,7 +255,7 @@ let X = l.memo((e) => {
             async (e, n) => {
                 if ((e.preventDefault(), e.stopPropagation(), null != n.application_id && '' !== n.application_id && !$[n.application_id]))
                     try {
-                        (ee((e) => W(z({}, e), { [n.application_id]: !0 })),
+                        (ee((e) => z(W({}, e), { [n.application_id]: !0 })),
                             await u.Z.sendActivityInviteUser({
                                 type: q.mFx.JOIN,
                                 userId: t.id,
@@ -263,18 +263,18 @@ let X = l.memo((e) => {
                                 location: q.Sbl.FRIENDS_POPOUT
                             }),
                             null == U || U('send_activity_invite', t.id),
-                            ee((e) => W(z({}, e), { [n.application_id]: !1 })));
+                            ee((e) => z(W({}, e), { [n.application_id]: !1 })));
                     } finally {
-                        ee((e) => W(z({}, e), { [n.application_id]: !1 }));
+                        ee((e) => z(W({}, e), { [n.application_id]: !1 }));
                     }
             },
             [U, $, t.id]
         ),
-        eE = l.useCallback(
+        ey = l.useCallback(
             async (e, n) => {
                 if ((e.preventDefault(), e.stopPropagation(), null != n.application_id && '' !== n.application_id && !$[n.application_id]))
                     try {
-                        (ee((e) => W(z({}, e), { [n.application_id]: !0 })),
+                        (ee((e) => z(W({}, e), { [n.application_id]: !0 })),
                             await u.Z.sendActivityInviteUser({
                                 type: q.mFx.JOIN_REQUEST,
                                 userId: t.id,
@@ -282,9 +282,9 @@ let X = l.memo((e) => {
                                 location: q.Sbl.FRIENDS_POPOUT
                             }),
                             null == U || U('ask_to_join', t.id),
-                            ee((e) => W(z({}, e), { [n.application_id]: !1 })));
+                            ee((e) => z(W({}, e), { [n.application_id]: !1 })));
                     } finally {
-                        ee((e) => W(z({}, e), { [n.application_id]: !1 }));
+                        ee((e) => z(W({}, e), { [n.application_id]: !1 }));
                     }
             },
             [U, $, t.id]
@@ -330,7 +330,7 @@ let X = l.memo((e) => {
                           onClick: eh
                       })
                     : null,
-        ey = () =>
+        eE = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     et.map((e) =>
@@ -339,7 +339,7 @@ let X = l.memo((e) => {
                             {
                                 label: $[e.application_id] ? V.intl.string(V.t['8BEiNj']) : V.intl.string(V.t.OKsSCQ),
                                 icon: $[e.application_id] ? c.dz2 : c.V9,
-                                onClick: (t) => eE(t, e)
+                                onClick: (t) => ey(t, e)
                             },
                             e.application_id
                         )
@@ -377,7 +377,7 @@ let X = l.memo((e) => {
                 children: [
                     (0, r.jsx)(
                         _.Z,
-                        z(
+                        W(
                             {
                                 innerClassName: Q.rowInner,
                                 onContextMenu: eN,
@@ -385,16 +385,16 @@ let X = l.memo((e) => {
                                 onMouseLeave: ef,
                                 avatar: (0, r.jsx)(
                                     c.qEK,
-                                    W(z({}, Y), {
+                                    z(W({}, Y), {
                                         size: H,
-                                        src: L,
+                                        src: M,
                                         isMobile: ea,
                                         isTyping: !1,
                                         status: eo,
                                         className: Q.avatar,
                                         'aria-label': t.username,
                                         statusTooltip: !0,
-                                        avatarDecoration: M
+                                        avatarDecoration: L
                                     })
                                 ),
                                 name: (0, r.jsx)('span', {
@@ -414,7 +414,7 @@ let X = l.memo((e) => {
                         className: Q.hoverBar,
                         children: [
                             eS(),
-                            ey(),
+                            eE(),
                             T !== q.OGo.PENDING_INCOMING &&
                                 T !== q.OGo.PENDING_OUTGOING &&
                                 (0, r.jsx)(C.sF, {
@@ -439,7 +439,7 @@ let $ = {
     searchType: T.S.FUZZY,
     searchStringGenerator: function (e) {
         let { user: t, activities: n, nickname: i } = e;
-        return [t.username, t.globalName, i, ...n.map((e) => e.name)].filter(M.lm);
+        return [t.username, t.globalName, i, ...n.map((e) => e.name)].filter(L.lm);
     },
     sortType: T.E.JARO_WINKLER,
     throttleMs: 100
@@ -451,9 +451,9 @@ function ee(e, t) {
 }
 let et = l.memo(function (e) {
     let { containerClassName: t, listClassName: i, closePopout: u, renderHeader: d, onAction: f, onFriendVisible: g, autoFocus: N = !1, appContext: h = q.IlC.APP } = e,
-        [m, E] = l.useState([J.SUGGESTIONS, J.FRIEND_REQUESTS]),
+        [m, y] = l.useState([J.SUGGESTIONS, J.FRIEND_REQUESTS]),
         S = l.useRef(null),
-        y = (0, O.Z)('friends-popout', S),
+        E = (0, O.Z)('friends-popout', S),
         I = (function () {
             let e = (0, o.Wu)([U.Z, x.default, R.Z], () => {
                     let e = [];
@@ -550,7 +550,7 @@ let et = l.memo(function (e) {
                                         activities: f ? p : d,
                                         nickname: o
                                     };
-                                f ? (r.sameActivity.push(g), l.delete(e)) : d.length > 0 ? r.activities.push(g) : u ? r.activities.push(W(z({}, g), { activities: a })) : s === q.Skl.ONLINE || s === q.Skl.IDLE || s === q.Skl.DND ? r.online.push(g) : r.offline.push(g);
+                                f ? (r.sameActivity.push(g), l.delete(e)) : d.length > 0 ? r.activities.push(g) : u ? r.activities.push(z(W({}, g), { activities: a })) : s === q.Skl.ONLINE || s === q.Skl.IDLE || s === q.Skl.DND ? r.online.push(g) : r.offline.push(g);
                             }
                             let s = (e, t) => {
                                 var n, i;
@@ -608,7 +608,7 @@ let et = l.memo(function (e) {
         { searchQuery: v, setSearchQuery: C, clearSearch: P } = _,
         T = Y(_, ['searchQuery', 'setSearchQuery', 'clearSearch']),
         Z = l.useCallback((e) => {
-            E((t) => (t.includes(e) ? t.filter((t) => t !== e) : [...t, e]));
+            y((t) => (t.includes(e) ? t.filter((t) => t !== e) : [...t, e]));
         }, []),
         w = l.useCallback(
             (0, s.debounce)(
@@ -634,11 +634,11 @@ let et = l.memo(function (e) {
             var e;
             (P(), w(), null == (e = S.current) || e.scrollToTop());
         }, [P, w]),
-        M = l.useCallback(
+        L = l.useCallback(
             (e) => {
                 ((0, p.jW)(e, async () => {
                     let { default: e } = await n.e('23087').then(n.bind(n, 29131));
-                    return (t) => (0, r.jsx)(e, W(z({}, t), { onClose: u }));
+                    return (t) => (0, r.jsx)(e, z(W({}, t), { onClose: u }));
                 }),
                     null == f || f('open_settings_modal'));
             },
@@ -647,7 +647,7 @@ let et = l.memo(function (e) {
         H = l.useCallback(() => {
             ((0, c.ZDy)(async () => {
                 let { default: e } = await n.e('49078').then(n.bind(n, 539725));
-                return (t) => (0, r.jsx)(e, z({}, t));
+                return (t) => (0, r.jsx)(e, W({}, t));
             }),
                 null == f || f('open_friend_modal'));
         }, [f]),
@@ -721,7 +721,7 @@ let et = l.memo(function (e) {
                     ? null
                     : (0, r.jsx)(
                           X,
-                          W(z({}, t), {
+                          z(W({}, t), {
                               index: e.row,
                               closeParentPopout: u,
                               isSuggestion: e.section === J.SUGGESTIONS,
@@ -734,7 +734,7 @@ let et = l.memo(function (e) {
             },
             [T, u, h, f, g]
         ),
-        { showSuggestions: $ } = (0, L.Z)(),
+        { showSuggestions: $ } = (0, M.Z)(),
         et = l.useMemo(() => {
             let e = $ ? (m.includes(J.SUGGESTIONS) ? Math.min(3, T.suggestions.length) : T.suggestions.length) : 0;
             return [m.includes(J.FRIEND_REQUESTS) ? Math.min(3, T.friendRequests.length) : T.friendRequests.length, T.sameActivity.length, T.activities.length, e, T.online.length, T.offline.length];
@@ -776,7 +776,7 @@ let et = l.memo(function (e) {
                                           color: 'currentColor'
                                       }),
                                       className: Q.controlButton,
-                                      onClick: M
+                                      onClick: L
                                   })
                               ]
                           })
@@ -789,7 +789,6 @@ let et = l.memo(function (e) {
                     onChange: G,
                     onClear: k,
                     placeholder: V.intl.string(V.t['5h0QOD']),
-                    size: c.E1j.Sizes.MEDIUM,
                     autoFocus: N
                 })
             }),
@@ -803,7 +802,7 @@ let et = l.memo(function (e) {
                       })
                   })
                 : (0, r.jsx)(a.bG, {
-                      navigator: y,
+                      navigator: E,
                       children: (0, r.jsx)(a.SJ, {
                           children: (e) => {
                               var { ref: t, role: n } = e,
@@ -812,7 +811,7 @@ let et = l.memo(function (e) {
                                   children: (e) =>
                                       (0, r.jsx)(
                                           c.aVo,
-                                          z(
+                                          W(
                                               {
                                                   innerRole: n,
                                                   innerAriaLabel: V.intl.string(V.t.TdEu5e),

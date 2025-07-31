@@ -4,7 +4,7 @@ var r = n(255367),
     a = n(120356),
     s = n.n(a),
     o = n(442837),
-    i = n(755721),
+    i = n(159691),
     c = n(481060),
     d = n(496675),
     u = n(346479),
@@ -114,13 +114,15 @@ function Z(e) {
                             : null,
                         (0, r.jsx)('div', { className: b.spacer }),
                         O
-                            ? (0, r.jsx)(i.zx, {
-                                  size: i.zx.Sizes.TINY,
+                            ? (0, r.jsx)('div', {
                                   className: b.createButton,
-                                  onClick: () => {
-                                      (a(), (0, j.R6)(t, void 0, 'Thread Browser Toolbar'));
-                                  },
-                                  children: p.intl.string(p.t.CumH4u)
+                                  children: (0, r.jsx)(i.zx, {
+                                      size: 'sm',
+                                      onClick: () => {
+                                          (a(), (0, j.R6)(t, void 0, 'Thread Browser Toolbar'));
+                                      },
+                                      text: p.intl.string(p.t.CumH4u)
+                                  })
                               })
                             : null,
                         (0, r.jsx)(c.P3F, {
@@ -153,8 +155,8 @@ function Z(e) {
 function y(e) {
     let { query: t, setQuery: n, submit: l, isLoading: a } = e;
     return (0, r.jsx)(c.E1j, {
+        size: 'sm',
         autoFocus: !0,
-        className: b.searchBox,
         query: t,
         isLoading: a,
         onChange: (e) => n(e),

@@ -27,7 +27,7 @@ var r = n(255367),
     S = n(388032),
     k = n(20484),
     Z = n(954292);
-function D(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function D(e) {
     }
     return e;
 }
-function L(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -75,28 +75,28 @@ let I = function (e) {
     let { clip: o, exporting: s, actionsDisabled: c, isNew: p, onDelete: m, onEdit: j, onShare: v } = e,
         w = (0, u.Wu)([x.default], () => o.users.map((e) => x.default.getUser(e)).filter(C.lm)),
         { analyticsLocations: N } = (0, g.ZP)(b.Z.CLIPS_GALLERY_ITEM),
-        [Z, D] = l.useState(!1),
-        L = l.useRef(null),
+        [Z, L] = l.useState(!1),
+        D = l.useRef(null),
         I = (0, y.Z)(null != (a = null == (t = o.editMetadata) ? void 0 : t.start) ? a : 0),
         _ = l.useRef(
             new d.sW(500, () => {
                 var e;
-                let t = L.current;
-                null != t && t.paused && ((t.currentTime = I.current), null == (e = L.current) || e.play());
+                let t = D.current;
+                null != t && t.paused && ((t.currentTime = I.current), null == (e = D.current) || e.play());
             })
         ),
-        R = l.useCallback(() => {
-            let e = L.current;
+        z = l.useCallback(() => {
+            let e = D.current;
             null != e && (e.pause(), (e.src = ''));
         }, []),
         A = l.useCallback(() => {
             var e;
-            (D(!0), null == (e = _.current) || e.delay());
+            (L(!0), null == (e = _.current) || e.delay());
         }, []),
         H = l.useCallback(() => {
             var e, t, n;
-            D(!1);
-            let r = L.current;
+            L(!1);
+            let r = D.current;
             (null == (e = _.current) || e.cancel(), null != r && (r.pause(), (r.currentTime = null != (n = null == (t = o.editMetadata) ? void 0 : t.start) ? n : 0)));
         }, [null == (n = o.editMetadata) ? void 0 : n.start]),
         V = l.useCallback(
@@ -132,7 +132,7 @@ let I = function (e) {
                 (0, r.jsx)(T, {
                     clip: o,
                     isNew: p,
-                    videoRef: L
+                    videoRef: D
                 }),
                 (0, r.jsxs)('div', {
                     className: k.clipFooter,
@@ -168,11 +168,11 @@ let I = function (e) {
                                     }
                                 }),
                                 Z &&
-                                    (0, r.jsx)(z, {
+                                    (0, r.jsx)(R, {
                                         clip: o,
                                         actionsDisabled: c,
                                         exporting: s,
-                                        onBeforeDelete: R,
+                                        onBeforeDelete: z,
                                         onDelete: m,
                                         onEdit: j,
                                         onShare: v,
@@ -336,7 +336,7 @@ function _(e) {
                 className: k.clipThumb
             });
 }
-function z(e) {
+function R(e) {
     let { clip: t, exporting: n, actionsDisabled: a, onBeforeDelete: i, onDelete: o, onEdit: s, onShare: u, onBlur: d } = e,
         p = (0, c.Z)(),
         b = l.useCallback(
@@ -366,7 +366,7 @@ function z(e) {
                     children: (e) =>
                         (0, r.jsx)(
                             m.zx,
-                            L(D({}, e), {
+                            D(L({}, e), {
                                 disabled: a,
                                 color: p ? m.zx.Colors.RED : m.zx.Colors.PRIMARY,
                                 onClick: b,
@@ -386,7 +386,7 @@ function z(e) {
                 children: (e) =>
                     (0, r.jsx)(
                         m.zx,
-                        L(D({}, e), {
+                        D(L({}, e), {
                             disabled: a,
                             color: m.zx.Colors.PRIMARY,
                             onClick: g,
@@ -422,7 +422,7 @@ function z(e) {
                         })(e, ['onBlur']);
                     return (0, r.jsx)(
                         m.zx,
-                        L(D({}, l), {
+                        D(L({}, l), {
                             disabled: a && !n,
                             submitting: n,
                             color: m.zx.Colors.BRAND,

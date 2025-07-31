@@ -168,7 +168,6 @@ function P(e) {
             className: I.searchContainer,
             children: [
                 (0, r.jsx)(d.E1j, {
-                    size: d.E1j.Sizes.MEDIUM,
                     query: n,
                     onChange: o,
                     onClear: c,

@@ -32,8 +32,8 @@ var r = n(255367),
     D = n(639539),
     Z = n(627325),
     L = n(981631),
-    M = n(354459),
-    k = n(474936),
+    k = n(354459),
+    M = n(474936),
     U = n(65154),
     R = n(48500),
     V = n(388032),
@@ -158,7 +158,6 @@ function W(e) {
                     }),
                 W &&
                     (0, r.jsx)(c.E1j, {
-                        size: c.E1j.Sizes.MEDIUM,
                         placeholder: V.intl.string(V.t.hHCZJS),
                         className: F.voiceFiltersHeader,
                         autoFocus: !0,
@@ -200,7 +199,7 @@ function W(e) {
                                     children: (0, r.jsx)(v.p, {
                                         showUpsell: !0,
                                         text: V.intl.format(V.t['XMDm8/'], {
-                                            nitroTierName: (0, j.Px)(k.p9.TIER_2),
+                                            nitroTierName: (0, j.Px)(M.p9.TIER_2),
                                             onClick: () => (0, _.i)()
                                         }),
                                         button: V.intl.string(V.t.cRCCJy),
@@ -249,7 +248,7 @@ function W(e) {
                                     renderOutputDevices: l,
                                     renderOutputVolume: l,
                                     onClose: t,
-                                    onInteraction: (0, h.u)('AudioDeviceMenu', J, { entrypoint: M.A5.THREE_DOT }),
+                                    onInteraction: (0, h.u)('AudioDeviceMenu', J, { entrypoint: k.A5.THREE_DOT }),
                                     minimal: !0
                                 }),
                             children: (e) =>

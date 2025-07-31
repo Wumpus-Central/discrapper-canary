@@ -103,7 +103,6 @@ class N extends i.PureComponent {
             default:
                 return (0, r.jsx)(c.E1j, {
                     className: O.searchBar,
-                    size: c.E1j.Sizes.MEDIUM,
                     query: e,
                     onChange: this.handleChangeQuery,
                     onClear: this.handleClearQuery,

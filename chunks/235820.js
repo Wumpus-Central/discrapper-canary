@@ -22,36 +22,34 @@ let o = {
         });
     },
     fetchRecentMentions(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.DJj,
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-            o = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
-            s = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4];
+        let { before: t, limit: n = a.DJj, guildId: o = null, roles: s = !0, everyone: l = !0, feature: c } = e;
         return (
             i.Z.dispatch({
                 type: 'LOAD_RECENT_MENTIONS',
-                guildId: n
+                guildId: o
             }),
             r.tn
                 .get({
                     url: a.ANM.MENTIONS,
                     query: {
-                        before: e,
-                        limit: t,
-                        guild_id: n,
-                        roles: o,
-                        everyone: s
+                        before: t,
+                        limit: n,
+                        guild_id: o,
+                        roles: s,
+                        everyone: l,
+                        feature: c
                     },
                     retries: 2,
                     oldFormErrors: !0,
                     rejectWithError: !0
                 })
                 .then(
-                    (t) => {
-                        let { body: n } = t;
+                    (e) => {
+                        let { body: n } = e;
                         i.Z.dispatch({
                             type: 'LOAD_RECENT_MENTIONS_SUCCESS',
                             messages: n,
-                            isAfter: null != e,
+                            isAfter: null != t,
                             hasMoreAfter: n.length >= a.DJj
                         });
                     },

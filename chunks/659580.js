@@ -30,8 +30,8 @@ function x(e) {
         name: i.ImpressionNames.AUDIO_DEVICE_MENU,
         properties: { location_stack: L }
     });
-    let M = (0, _.Z)(D),
-        k = (0, f.M)({
+    let k = (0, _.Z)(D),
+        M = (0, f.M)({
             deviceType: S.h7.AUDIO_INPUT,
             analyticsLocations: L,
             asSubmenu: A
@@ -60,7 +60,7 @@ function x(e) {
             navId: 'audio-device-context',
             'aria-label': I.intl.string(I.t.ZR1Ss7),
             children: [
-                x && k,
+                x && M,
                 n && U,
                 E && V,
                 !A && P && R !== O._.STUDIO
@@ -99,7 +99,7 @@ function x(e) {
                                   disabled: R === O._.STUDIO
                               })
                             : null,
-                        M
+                        k
                     ]
                 })
             ]

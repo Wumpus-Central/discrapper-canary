@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => L,
-    w: () => A
+    w: () => D
 }),
     n(388685),
     n(642613));
@@ -88,10 +88,10 @@ function k(e, t, n, i, r) {
         u = n * a + s;
     return (e === I.C5.HORIZONTAL ? (u = n) : (c = t), P(c + l, u + l));
 }
-function D(e, t, n) {
+function A(e, t, n) {
     return k(e, _.bt, _.fd, t, n);
 }
-let A = (e) => {
+let D = (e) => {
     let { operation: t, computedSize: n, originSize: i, borderWidth: r, padding: o, containerSpecs: l } = e,
         a = 2 * r + 2 * o,
         s = Math.max(1, i.width - a) / Math.max(1, i.height - a),
@@ -118,7 +118,7 @@ let A = (e) => {
 function R(e) {
     var { widgetId: t, size: n, borderWidth: i, padding: r, minSize: o, containerSpecs: l } = e,
         s = w(e, ['widgetId', 'size', 'borderWidth', 'padding', 'minSize', 'containerSpecs']);
-    let { width: c, height: u } = A(
+    let { width: c, height: u } = D(
             N(
                 {
                     operation: v.B.RESIZE_NORTH,
@@ -137,7 +137,7 @@ function R(e) {
                 s
             )
         ),
-        { width: d, height: p } = A(
+        { width: d, height: p } = D(
             N(
                 {
                     operation: v.B.RESIZE_NORTH,
@@ -171,7 +171,7 @@ function R(e) {
 }
 function L(e) {
     var t, n, a, v, x, P;
-    let { id: A, widget: L, size: M, locked: z, padding: U, borderWidth: V, opacity: W, horizontal: G, pinned: F, anchorTop: B, anchorLeft: H, showEmpty: Y = !0 } = e,
+    let { id: D, widget: L, size: M, locked: z, padding: U, borderWidth: V, opacity: W, horizontal: G, pinned: F, anchorTop: B, anchorLeft: H, showEmpty: Y = !0 } = e,
         Q = 2 * U + 2 * V,
         { width: K, height: X } = {
             width: 'number' == typeof M.width ? M.width : _.bt,
@@ -183,10 +183,10 @@ function L(e) {
             [y.Z],
             () => {
                 var e;
-                let t = y.Z.getWidget(A);
+                let t = y.Z.getWidget(D);
                 return !!(0, I.ZL)(t) && !z && (null == (e = t.meta.showAllStreams) || e);
             },
-            [A, z]
+            [D, z]
         ),
         en = !G,
         ei = (0, o.e7)([g.Z], () => g.Z.getChannel(J)),
@@ -252,7 +252,7 @@ function L(e) {
         })(z, ed, eu),
         eh = (0, o.e7)([f.Z], () => f.Z.getWindowState(S.$J)),
         em = {
-            id: A,
+            id: D,
             widget: L,
             layout: eu,
             participants: eo.length,
@@ -301,7 +301,7 @@ function L(e) {
                         {
                             widgetId: t,
                             size: T,
-                            minSize: D(a, 1, {
+                            minSize: A(a, 1, {
                                 padding: s,
                                 sizeOffset: r
                             }),
@@ -320,7 +320,7 @@ function L(e) {
                             padding: s,
                             sizeOffset: r
                         }),
-                        minSize: D(a, l, {
+                        minSize: A(a, l, {
                             padding: s,
                             sizeOffset: r
                         }),
@@ -341,11 +341,11 @@ function L(e) {
                         N(
                             {
                                 widgetId: t,
-                                size: D(n, a, {
+                                size: A(n, a, {
                                     padding: l,
                                     sizeOffset: i
                                 }),
-                                minSize: D(n, a, {
+                                minSize: A(n, a, {
                                     padding: l,
                                     sizeOffset: i
                                 }),
@@ -366,7 +366,7 @@ function L(e) {
                             {
                                 widgetId: t,
                                 size: T,
-                                minSize: D(n, 0, {
+                                minSize: A(n, 0, {
                                     padding: l,
                                     sizeOffset: i
                                 }),
@@ -378,7 +378,7 @@ function L(e) {
                     );
             }));
     })({
-        id: A,
+        id: D,
         streamParticipants: eo,
         layout: eu,
         widgetLayoutSpecs: em
@@ -400,7 +400,7 @@ function L(e) {
                 style: { opacity: W },
                 ref: ee,
                 children: (0, i.jsx)(_.ZP, {
-                    widgetId: A,
+                    widgetId: D,
                     tileWidth: ep,
                     tileHeight: ef,
                     locked: z,

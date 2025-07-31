@@ -290,7 +290,6 @@ function k(e) {
         className: S.searchContainer,
         children: [
             (0, r.jsx)(c.E1j, {
-                size: c.E1j.Sizes.MEDIUM,
                 query: t,
                 onChange: n,
                 onClear: () => n(''),

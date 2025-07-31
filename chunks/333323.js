@@ -1,4 +1,4 @@
-(t.d(n, { Z: () => D }), t(388685));
+(t.d(n, { Z: () => L }), t(388685));
 var l = t(255367),
     r = t(73800),
     a = t(120356),
@@ -17,15 +17,15 @@ var l = t(255367),
     b = t(563534),
     j = t(846121),
     C = t(460347),
-    _ = t(404488),
-    v = t(605276),
-    I = t(869764),
-    Z = t(919318),
+    v = t(404488),
+    _ = t(605276),
+    Z = t(869764),
+    I = t(919318),
     y = t(150512),
     N = t(981631),
     O = t(176505),
-    w = t(388032),
-    P = t(617449),
+    P = t(388032),
+    w = t(617449),
     E = t(100658);
 function S(e) {
     for (var n = 1; n < arguments.length; n++) {
@@ -70,40 +70,40 @@ function A(e, n) {
         e
     );
 }
-let k = _.q + 300 + 64,
+let k = v.q + 300 + 64,
     M = r.memo(function (e) {
         let { guild: n } = e;
         return (0, l.jsxs)(h.Z, {
             channelId: O.oC.GUILD_HOME,
             guildId: n.id,
-            className: i()(P.title, P.background),
-            innerClassname: P.headerBarInner,
+            className: i()(w.title, w.background),
+            innerClassname: w.headerBarInner,
             children: [
                 (0, l.jsx)(h.Z.Icon, {
                     icon: c.Vy8,
                     'aria-hidden': !0
                 }),
                 (0, l.jsxs)(h.Z.Title, {
-                    children: [(0, l.jsx)(c.nn4, { children: n.name }), w.intl.string(w.t.VbpLyc)]
+                    children: [(0, l.jsx)(c.nn4, { children: n.name }), P.intl.string(P.t.VbpLyc)]
                 })
             ]
         });
     });
-function D(e) {
+function L(e) {
     var n, t;
     let { guild: a, width: h } = e,
-        w = (0, s.e7)([g.ZP], () => g.ZP.getSection(O.oC.GUILD_HOME)),
-        [D, L] = r.useState(!1),
-        [T, R] = r.useState(N.$Y6),
-        B = w === N.ULH.SIDEBAR_CHAT,
-        H = (0, c.mFp)(),
+        P = (0, s.e7)([g.ZP], () => g.ZP.getSection(O.oC.GUILD_HOME)),
+        [L, T] = r.useState(!1),
+        [D, R] = r.useState(N.$Y6),
+        H = P === N.ULH.SIDEBAR_CHAT,
+        B = (0, c.mFp)(),
         W = (0, s.e7)([b.Z], () => b.Z.getSettings(a.id)),
         U = null == W ? void 0 : W.welcomeMessage,
-        z = (0, C.Z)(a.id),
-        G = !z && (null != (t = null == W || null == (n = W.resourceChannels) ? void 0 : n.length) ? t : 0) === 0,
-        q = (0, d.Z)('(max-width: 1300px)'),
-        F = h - N.PrS - T,
-        V = (B && F < k) || q || G;
+        G = (0, C.Z)(a.id),
+        q = !G && (null != (t = null == W || null == (n = W.resourceChannels) ? void 0 : n.length) ? t : 0) === 0,
+        z = (0, d.Z)('(max-width: 1300px)'),
+        F = h - N.PrS - D,
+        V = (H && F < k) || z || q;
     return (r.useEffect(() => {
         if (W === b.P) (0, x.cP)(a.id);
         else if (null != W) {
@@ -125,57 +125,57 @@ function D(e) {
         []
     ),
     r.useEffect(() => {
-        G && W !== b.P && o.Z.escapeToDefaultChannel(a.id);
-    }, [a.id, G, W]),
-    G)
+        q && W !== b.P && o.Z.escapeToDefaultChannel(a.id);
+    }, [a.id, q, W]),
+    q)
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsxs)('div', {
-                      className: i()(E.chat, P.background, {
-                          [E.threadSidebarOpen]: B,
-                          [E.threadSidebarFloating]: B && D
+                      className: i()(E.chat, w.background, {
+                          [E.threadSidebarOpen]: H,
+                          [E.threadSidebarFloating]: H && L
                       }),
                       children: [
                           (0, l.jsx)(M, { guild: a }),
                           (0, l.jsx)(
                               c.yWw,
-                              A(S({}, H), {
+                              A(S({}, B), {
                                   children: (0, l.jsxs)('div', {
-                                      className: i()(P.homeContainer, { [P.homeContainerCollapsed]: V }),
+                                      className: i()(w.homeContainer, { [w.homeContainerCollapsed]: V }),
                                       children: [
                                           (0, l.jsx)('div', {
-                                              className: P.maxWidthWrapper,
+                                              className: w.maxWidthWrapper,
                                               children: (0, l.jsx)(m.Z, {
                                                   guild: a,
-                                                  titleClassName: q ? P.emptyHeaderTitle : void 0
+                                                  titleClassName: z ? w.emptyHeaderTitle : void 0
                                               })
                                           }),
                                           (0, l.jsxs)('div', {
-                                              className: i()(P.homeContent, P.maxWidthWrapper),
+                                              className: i()(w.homeContent, w.maxWidthWrapper),
                                               children: [
                                                   (0, l.jsxs)('div', {
-                                                      className: P.mainContent,
+                                                      className: w.mainContent,
                                                       children: [
-                                                          z &&
+                                                          G &&
                                                               (0, l.jsx)(y.Z, {
                                                                   guildId: a.id,
                                                                   welcomeMessage: U
                                                               }),
-                                                          z && (0, l.jsx)(I.Z, { guildId: a.id }),
-                                                          !z || V
-                                                              ? (0, l.jsx)(Z.ZP, {
+                                                          G && (0, l.jsx)(Z.Z, { guildId: a.id }),
+                                                          !G || V
+                                                              ? (0, l.jsx)(I.ZP, {
                                                                     guild: a,
-                                                                    isNewMember: z
+                                                                    isNewMember: G
                                                                 })
                                                               : null
                                                       ]
                                                   }),
                                                   V
                                                       ? null
-                                                      : (0, l.jsx)(v.Z, {
+                                                      : (0, l.jsx)(_.Z, {
                                                             guild: a,
-                                                            isNewMember: z
+                                                            isNewMember: G
                                                         })
                                               ]
                                           })
@@ -185,11 +185,11 @@ function D(e) {
                           )
                       ]
                   }),
-                  B
-                      ? (0, l.jsx)(_.Z, {
+                  H
+                      ? (0, l.jsx)(v.Z, {
                             pageWidth: h,
                             onSidebarResize: (e, n) => {
-                                (L(n), R(e));
+                                (T(n), R(e));
                             }
                         })
                       : null

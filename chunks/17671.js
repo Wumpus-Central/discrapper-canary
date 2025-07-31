@@ -21,8 +21,8 @@ t(981888);
 var x = t(709054),
     Z = t(897285),
     O = t(518756),
-    P = t(554747),
-    C = t(710679),
+    C = t(554747),
+    P = t(710679),
     E = t(74562),
     N = t(576749),
     k = t(765305),
@@ -35,7 +35,7 @@ function _(e) {
         D = (0, g.Dt)(),
         G = (0, c.e7)([m.Z], () => m.Z.getGuild(_)),
         L = (0, O.Z)(null == G ? void 0 : G.id),
-        M = (0, P.ZP)(_),
+        M = (0, C.ZP)(_),
         R = r.useRef(j.ZP.ackMessageId(_, I.W.GUILD_EVENT)),
         U = (0, N.Z)();
     return (
@@ -173,7 +173,7 @@ function _(e) {
                         M.length > 0
                             ? M.map((e) =>
                                   (0, i.jsx)(
-                                      C.Z,
+                                      P.Z,
                                       {
                                           guildEvent: e,
                                           guildId: _,

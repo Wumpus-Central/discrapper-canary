@@ -1,6 +1,6 @@
 (n.d(t, {
-    K: () => S,
-    Z: () => b
+    K: () => b,
+    Z: () => S
 }),
     n(388685));
 var r = n(255367),
@@ -21,20 +21,20 @@ var r = n(255367),
     _ = n(729497),
     v = n(347226),
     j = n(20493);
-function S(e, t, n) {
+function b(e, t, n) {
     var r;
     let i = t.find((t) => t.id === e);
     if (null == i) return null;
     let l = a().reduce(n, (e, t) => ((0, c.stringSimilarity)(i.name, t.name) > (0, c.stringSimilarity)(i.name, e.name) ? t : e));
     return null != (r = null == l ? void 0 : l.id) ? r : null;
 }
-function b(e) {
+function S(e) {
     let { selectedSource: t, onChangeVideoDeviceSource: n, onChangeAudioDevice: l } = e;
     s()(null != t, 'Camera capture device cannot be null');
     let o = (0, p.Z)(),
         [a, c] = (0, m.L)(x.h7.AUDIO_INPUT, { location: 'CaptureDeviceConfig' }),
-        b = a.concat(c),
-        [C, y] = i.useState(S(t.id, o, b));
+        S = a.concat(c),
+        [C, y] = i.useState(b(t.id, o, S));
     return (
         null != C && l(C),
         (0, r.jsxs)(u.xJW, {

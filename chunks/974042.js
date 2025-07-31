@@ -248,19 +248,19 @@ class j {
     }
 }
 let A = !0,
-    x = !1,
-    Z = E.pJs.ONLINE,
+    Z = !1,
+    x = E.pJs.ONLINE,
     w = new j(),
     L = !0,
     R = !1;
 function D() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    A && (e || (Z !== E.pJs.ONLINE && Z !== E.pJs.ADD_FRIEND)) && !x && ((A = !1), (x = !0), s.Z.fetchRelationships());
+    A && (e || (x !== E.pJs.ONLINE && x !== E.pJs.ADD_FRIEND)) && !Z && ((A = !1), (Z = !0), s.Z.fetchRelationships());
 }
 function k() {
-    if (((A = !0), L ? (x = !1) : D(), (w = w.reset()), R)) return;
+    if (((A = !0), L ? (Z = !1) : D(), (w = w.reset()), R)) return;
     let e = w.getRelationshipCounts();
-    Z = 0 === e[E.OGo.FRIEND] ? (0 !== e[E.OGo.PENDING_INCOMING] ? E.pJs.PENDING : E.pJs.ADD_FRIEND) : E.pJs.ONLINE;
+    x = 0 === e[E.OGo.FRIEND] ? (0 !== e[E.OGo.PENDING_INCOMING] ? E.pJs.PENDING : E.pJs.ADD_FRIEND) : E.pJs.ONLINE;
 }
 function M() {
     w = L ? new j() : w.reset();
@@ -276,8 +276,8 @@ class G extends (r = a.ZP.Store) {
     }
     getState() {
         return {
-            fetching: x,
-            section: Z,
+            fetching: Z,
+            section: x,
             rows: w
         };
     }
@@ -288,19 +288,19 @@ let V = new G(o.Z, {
         k();
     },
     FRIENDS_SET_SECTION: function (e) {
-        ((Z = e.section), D());
+        ((x = e.section), D());
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
         return ((L = null != t), M(), !L);
     },
     LOAD_RELATIONSHIPS_SUCCESS: function () {
-        x = !1;
+        Z = !1;
     },
     LOAD_RELATIONSHIPS_FAILURE: function () {
-        ((A = !0), (x = !0));
+        ((A = !0), (Z = !0));
     },
     FRIENDS_SET_INITIAL_SECTION: function (e) {
-        ((Z = e.section), (R = !0));
+        ((x = e.section), (R = !0));
     }
 });

@@ -37,8 +37,8 @@ var i = n(255367),
     P = n(199902),
     T = n(592125),
     k = n(293273),
-    D = n(158776),
-    A = n(699516),
+    A = n(158776),
+    D = n(699516),
     R = n(594174),
     L = n(801077),
     M = n(237997),
@@ -213,7 +213,7 @@ function X(e) {
     let { entry: n, currentUserActivity: o } = e,
         l = (0, u.e7)([R.default], () => R.default.getUser(n.author_id)),
         a = null != (t = null == o ? void 0 : o.application_id) ? t : n.extra.application_id,
-        s = (0, u.e7)([D.Z], () => (null != l ? D.Z.getApplicationActivity(l.id, a) : null), [a, l]),
+        s = (0, u.e7)([A.Z], () => (null != l ? A.Z.getApplicationActivity(l.id, a) : null), [a, l]),
         [c, h] = r.useState('unsent');
     if (!(null != s && (0, v.Z)(s, F.xjy.JOIN))) return null;
     let m = async (e) => {
@@ -274,7 +274,7 @@ function J(e) {
         o = (0, u.e7)([R.default], () => R.default.getUser(t.author_id)),
         l = (0, u.e7)([P.Z], () => (null != o ? P.Z.getAnyStreamForUser(o.id) : null), [o]),
         { isMobileOnline: a, status: s } = (0, u.cj)(
-            [D.Z],
+            [A.Z],
             () =>
                 null == o
                     ? {
@@ -282,8 +282,8 @@ function J(e) {
                           status: void 0
                       }
                     : {
-                          isMobileOnline: D.Z.isMobileOnline(o.id),
-                          status: D.Z.getStatus(o.id)
+                          isMobileOnline: A.Z.isMobileOnline(o.id),
+                          status: A.Z.getStatus(o.id)
                       },
             [o]
         );
@@ -404,7 +404,7 @@ function ee(e) {
     });
     let l = (0, u.e7)([k.Z], () => (null == t ? null : k.Z.getApplicationActivity(t)), [t]),
         d = (0, u.Wu)(
-            [L.Z, A.Z, w.Z],
+            [L.Z, D.Z, w.Z],
             () => {
                 if (null == t) return [];
                 let e = L.Z.nowPlayingCards,
@@ -419,7 +419,7 @@ function ee(e) {
                     }, [])
                     .filter((e) => {
                         let t = e.activityUser.id,
-                            i = A.Z.isFriend(t);
+                            i = D.Z.isFriend(t);
                         return (function (e, t, n) {
                             let { v2: i } = n;
                             if (null == e) return t;

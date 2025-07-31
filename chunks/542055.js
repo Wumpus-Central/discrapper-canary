@@ -68,23 +68,23 @@ function E(e) {
     let { channelId: t, onClose: a, transitionState: o } = e,
         [E, S] = l.useState(''),
         [k, Z] = l.useState('descending'),
-        [D, L] = l.useState(!0),
+        [L, D] = l.useState(!0),
         [I, T] = l.useState(null),
         M = l.useDeferredValue(E),
         _ = (0, u.e7)([j.Z], () => j.Z.getClips()),
-        z = (0, u.e7)([j.Z], () => j.Z.getPendingClips()),
-        R = (0, u.e7)([j.Z], () => j.Z.getSettings().storageLocation),
+        R = (0, u.e7)([j.Z], () => j.Z.getPendingClips()),
+        z = (0, u.e7)([j.Z], () => j.Z.getSettings().storageLocation),
         A = (0, u.Wu)([j.Z], () => j.Z.getNewClipIds()),
         { analyticsLocations: H } = (0, f.ZP)(m.Z.CLIPS_GALLERY),
-        V = l.useMemo(() => [...z, ..._], [_, z]);
+        V = l.useMemo(() => [...R, ..._], [_, R]);
     ((0, b.Z)(
         {
             type: c.ImpressionTypes.MODAL,
             name: c.ImpressionNames.CLIP_GALLERY_VIEWED,
             properties: { number_of_clips_loaded: V.length }
         },
-        { disableTrack: D },
-        [V.length, D]
+        { disableTrack: L },
+        [V.length, L]
     ),
         l.useEffect(
             () => (
@@ -110,14 +110,14 @@ function E(e) {
     );
     l.useEffect(() => {
         !(async function () {
-            L(!0);
+            D(!0);
             try {
-                await y.jv(R);
+                await y.jv(z);
             } finally {
-                L(!1);
+                D(!1);
             }
         })();
-    }, [R]);
+    }, [z]);
     let F = l.useCallback(
             (e) => {
                 (0, p.ZDy)(
@@ -189,8 +189,8 @@ function E(e) {
             [B, A, I, G, Y, F]
         ),
         U =
-            D || 0 !== B.length
-                ? D
+            L || 0 !== B.length
+                ? L
                     ? (0, r.jsx)('div', {
                           className: P.spinnerContainer,
                           children: (0, r.jsx)(p.$jN, {})

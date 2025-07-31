@@ -109,17 +109,17 @@ let e0 = () => {
         let e = [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE];
         return (O.M.getCurrentConfig({ location: 'getAppearanceDCs' }).enabled && e.push(s.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE), e);
     },
-    e1 = () => {
+    e3 = () => {
         let e = e0(),
             [t] = (0, N.US)(e);
         return t === s.z.CLIENT_THEMES_SETTINGS_BADGE || t === s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE ? (0, i.jsx)(l.lBU, { text: eX.intl.string(eX.t.y2b7CA) }) : t === s.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE ? (0, i.jsx)(l.IGR, { text: eX.intl.string(eX.t.y2b7CA) }) : null;
     },
-    e3 = () => {
+    e1 = () => {
         let e = [];
         return (G.c.getCurrentConfig({ location: 'SettingsRendererConfig' }).enabled && e.push(s.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE), I.J.getCurrentConfig({ location: 'SettingsRendererConfig' }).enabled && e.push(s.z.DISPLAY_NAME_STYLES_NEW_BADGE), e.push(s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE), e);
     },
     e6 = () => {
-        let e = e3(),
+        let e = e1(),
             [t] = (0, N.US)(e);
         return t === s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE ? (0, i.jsx)(D.Z, {}) : t === s.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE || t === s.z.DISPLAY_NAME_STYLES_NEW_BADGE ? (0, i.jsx)(l.IGR, { text: eX.intl.string(eX.t.y2b7CA) }) : null;
     },
@@ -273,7 +273,7 @@ let e0 = () => {
                 ariaLabel: eX.intl.string(eX.t['vi7f+v']),
                 element: B.Z,
                 newIndicator: (0, i.jsx)(e6, {}),
-                newIndicatorDismissibleContentTypes: [...e3()],
+                newIndicatorDismissibleContentTypes: [...e1()],
                 notice: {
                     stores: [K.Z, P.Z],
                     element: L.Z
@@ -676,7 +676,7 @@ let e0 = () => {
                 label: eX.intl.string(eX.t['iHH+k5']),
                 ariaLabel: eX.intl.string(eX.t['iHH+k5']),
                 element: em.Z,
-                newIndicator: (0, i.jsx)(e1, {}),
+                newIndicator: (0, i.jsx)(e3, {}),
                 newIndicatorDismissibleContentTypes: e0(),
                 url: eY.Z5c.SETTINGS('appearance')
             },

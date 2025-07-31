@@ -39,7 +39,14 @@ function A(e, t, n) {
         i = t ? j.ZP.roleFilter : null,
         l = t ? j.ZP.everyoneFilter : null,
         o = null;
-    (null != e && null != r && (o = r === N.NgX.ALL_SERVERS ? null : e.getGuildId()), u.Z.fetchRecentMentions(n, N.DJj, o, i, l));
+    (null != e && null != r && (o = r === N.NgX.ALL_SERVERS ? null : e.getGuildId()),
+        u.Z.fetchRecentMentions({
+            before: n,
+            limit: N.DJj,
+            guildId: o,
+            roles: i,
+            everyone: l
+        }));
 }
 function R(e) {
     let { setTab: t, onJump: n, badgeState: l, closePopout: c } = e,

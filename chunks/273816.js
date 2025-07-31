@@ -64,21 +64,21 @@ function b(e) {
     let E = (0, a.e7)([p.Z], () => p.Z.getWindow(m.$J)),
         [_, x] = (0, u.m8)(b),
         { currentFPS: I, averageFrameTime: S, timeSinceLastDrop: j, onResetFrameData: C, droppedFramesRef: N, renderedFrameCount: w, bufferFramecountRef: Z, frameCheckerEffect: P } = (0, u.d6)(!0, _, !0),
-        [T, k, D] = (0, u.ZF)(b),
-        [A, R] = (0, u.Y5)(T, P, E),
+        [T, k, A] = (0, u.ZF)(b),
+        [D, R] = (0, u.Y5)(T, P, E),
         L = performance.now() - x.current < u.MC,
         M = k(S, Z.current);
     (0, c.ZP)(
         () => (
-            A(),
+            D(),
             () => {
                 R();
             }
         )
     );
     let z = r.useCallback(() => {
-            (C(), D(), A());
-        }, [C, D, A]),
+            (C(), A(), D());
+        }, [C, A, D]),
         [U, V] = r.useState(!0),
         [W, G] = r.useState(!0),
         [F, B] = r.useState(!0),

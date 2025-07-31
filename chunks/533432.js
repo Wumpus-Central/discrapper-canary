@@ -48,7 +48,6 @@ let m = i.forwardRef(function (e, t) {
                 autoFocus: b,
                 query: I,
                 ref: v,
-                size: c.E1j.Sizes.MEDIUM,
                 placeholder: null != S ? S : O,
                 onClear: N,
                 onKeyDown: C,

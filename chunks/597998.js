@@ -39,7 +39,7 @@ var r = n(255367),
     D = n(927923),
     Z = n(388032),
     L = n(850999);
-function M(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,7 +64,7 @@ function M(e) {
     }
     return e;
 }
-let k = (e) => {
+let M = (e) => {
         let { hangStatusActivity: t, iconClassName: n, isSelf: i } = e;
         return i && null == t
             ? (0, r.jsx)(
@@ -98,7 +98,7 @@ let k = (e) => {
         });
     };
 function R(e) {
-    let { className: t, mute: n, localMute: i, localVideoDisabled: l, serverMute: o, deaf: c, serverDeaf: u, collapsed: p, video: m, isStreaming: g, disabled: h, isWatching: v, iconClassName: _, embeddedApplication: y, otherClientSessionType: O, voicePlatform: S, application: I, guildId: j, channelId: x, user: E, disconnected: N, hangStatusActivity: M, showHangStatus: U, isSelf: R, handleHoverHangStatus: V, handleHoverIcons: B } = e,
+    let { className: t, mute: n, localMute: i, localVideoDisabled: l, serverMute: o, deaf: c, serverDeaf: u, collapsed: p, video: m, isStreaming: g, disabled: h, isWatching: v, iconClassName: _, embeddedApplication: y, otherClientSessionType: O, voicePlatform: S, application: I, guildId: j, channelId: x, user: E, disconnected: N, hangStatusActivity: k, showHangStatus: U, isSelf: R, handleHoverHangStatus: V, handleHoverIcons: B } = e,
         { enabled: W } = d.c.getCurrentConfig({ location: 'VoiceUserIcons' }, { autoTrackExposure: !0 });
     if (p || h) return null;
     let H = [],
@@ -225,7 +225,7 @@ function R(e) {
                 )
             ));
     let J = null != I && !(0, T.yE)(I.flags, A.udG.EMBEDDED),
-        K = null == M && J;
+        K = null == k && J;
     return 0 !== H.length || null != Y || U || K
         ? (0, r.jsxs)('div', {
               className: a()(L.icons, t),
@@ -253,8 +253,8 @@ function R(e) {
                                       },
                                       ''.concat(E.id, '-game')
                                   )
-                                : (0, r.jsx)(k, {
-                                      hangStatusActivity: M,
+                                : (0, r.jsx)(M, {
+                                      hangStatusActivity: k,
                                       iconClassName: _,
                                       isSelf: R
                                   })
@@ -286,7 +286,7 @@ let V = i.forwardRef(function (e, t) {
             }
             return i;
         })(e, ['avatarContainerClass', 'userNameClassName', 'size', 'selected', 'disabled', 'isOverlay']);
-    let { onClick: y, onKeyDown: O, onDoubleClick: P, onContextMenu: C, onMouseLeave: T, onMouseDown: D, priority: k, speaking: U, collapsed: V, mute: F, serverMute: G, guildId: B, nick: W, isGuest: H, flipped: Y, className: z, overlap: J, 'aria-label': K, ringing: q, user: X, channelId: Q } = v,
+    let { onClick: y, onKeyDown: O, onDoubleClick: P, onContextMenu: C, onMouseLeave: T, onMouseDown: D, priority: M, speaking: U, collapsed: V, mute: F, serverMute: G, guildId: B, nick: W, isGuest: H, flipped: Y, className: z, overlap: J, 'aria-label': K, ringing: q, user: X, channelId: Q } = v,
         { parentAnalyticsLocation: $ } = (0, m.ZP)(),
         ee = (0, u.bp)(),
         et = null != Q ? j.Z.getChannel(Q) : null,
@@ -333,10 +333,10 @@ let V = i.forwardRef(function (e, t) {
             children: (0, r.jsxs)('div', {
                 className: a()(L.content, { [L.flipped]: Y }),
                 children: [
-                    k && !V
+                    M && !V
                         ? (0, r.jsx)(s.ua7, {
                               text: Z.intl.string(Z.t.BVK71t),
-                              children: (e) => (0, r.jsx)('div', M({ className: a()(L.iconPriortySpeaker, { [L.iconPriortySpeakerSpeaking]: !F && !G && U }) }, e))
+                              children: (e) => (0, r.jsx)('div', k({ className: a()(L.iconPriortySpeaker, { [L.iconPriortySpeakerSpeaking]: !F && !G && U }) }, e))
                           })
                         : null,
                     (0, r.jsx)('div', {
@@ -376,7 +376,7 @@ let V = i.forwardRef(function (e, t) {
                         return !V || b
                             ? (0, r.jsx)(
                                   _.Z,
-                                  ((e = M({}, i)),
+                                  ((e = k({}, i)),
                                   (t = t = { children: n }),
                                   Object.getOwnPropertyDescriptors
                                       ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
@@ -394,7 +394,7 @@ let V = i.forwardRef(function (e, t) {
                               )
                             : null;
                     })(),
-                    (0, r.jsx)(R, M({ disabled: p }, v)),
+                    (0, r.jsx)(R, k({ disabled: p }, v)),
                     !V && en
                         ? (0, r.jsx)(s.DY3, {
                               text: Z.intl.string(Z.t['+1H47u']),

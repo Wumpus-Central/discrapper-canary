@@ -1,72 +1,72 @@
-n.d(t, { Z: () => h });
+n.d(e, { Z: () => O });
 var r = n(255367);
 n(73800);
 var l = n(120356),
     i = n.n(l),
     s = n(442837),
-    o = n(481060),
-    c = n(239091),
-    u = n(592125),
-    a = n(430824),
+    c = n(481060),
+    o = n(239091),
+    a = n(592125),
+    u = n(430824),
     d = n(924301),
     p = n(894017),
-    b = n(854698),
-    g = n(390966),
-    x = n(765305),
-    j = n(388032),
-    f = n(909846);
-function m(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
+    g = n(854698),
+    b = n(390966),
+    f = n(765305),
+    m = n(388032),
+    j = n(909846);
+function v(t) {
+    for (var e = 1; e < arguments.length; e++) {
+        var n = null != arguments[e] ? arguments[e] : {},
             r = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
             (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                Object.getOwnPropertySymbols(n).filter(function (t) {
+                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
                 })
             )),
-            r.forEach(function (t) {
+            r.forEach(function (e) {
                 var r;
-                ((r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
+                ((r = n[e]),
+                    e in t
+                        ? Object.defineProperty(t, e, {
                               value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r));
+                        : (t[e] = r));
             }));
     }
-    return e;
+    return t;
 }
-function h(e) {
-    let { recurrenceId: t, originalScheduledStartTime: l, guildEventId: h, onClick: O, isActive: v } = e,
-        y = (0, s.e7)([d.ZP], () => d.ZP.getGuildScheduledEvent(h)),
-        z = (0, p.Z)(t, null == y ? void 0 : y.id),
-        C = (0, s.e7)([a.Z], () => a.Z.getGuild(null == y ? void 0 : y.guild_id)),
-        P = (0, s.e7)([u.Z], () => u.Z.getChannel(null == y ? void 0 : y.channel_id));
-    if (null == y) return null;
-    let { is_canceled: k = !1 } = null != z ? z : {},
-        S = (null == z ? void 0 : z.scheduled_start_time) != null ? new Date(null == z ? void 0 : z.scheduled_start_time) : l,
-        N = (0, b.DK)(y),
-        w = k ? x.p1.CANCELED : x.p1.SCHEDULED;
-    N === t && (w = y.status);
-    let E = (null == y ? void 0 : y.scheduled_start_time) != null ? (0, b.lh)(z, S, new Date(null == y ? void 0 : y.scheduled_start_time)) : null,
-        _ = (e) => {
-            (e.stopPropagation(),
-                null != C &&
-                    (0, c.jW)(e, async () => {
-                        let { default: e } = await Promise.all([n.e('34261'), n.e('70274'), n.e('42743'), n.e('27434'), n.e('62318')]).then(n.bind(n, 215269));
+function O(t) {
+    let { recurrenceId: e, originalScheduledStartTime: l, guildEventId: O, onClick: h, isActive: y } = t,
+        x = (0, s.e7)([d.ZP], () => d.ZP.getGuildScheduledEvent(O)),
+        P = (0, p.Z)(e, null == x ? void 0 : x.id),
+        k = (0, s.e7)([u.Z], () => u.Z.getGuild(null == x ? void 0 : x.guild_id)),
+        w = (0, s.e7)([a.Z], () => a.Z.getChannel(null == x ? void 0 : x.channel_id));
+    if (null == x) return null;
+    let { is_canceled: C = !1 } = null != P ? P : {},
+        S = (null == P ? void 0 : P.scheduled_start_time) != null ? new Date(null == P ? void 0 : P.scheduled_start_time) : l,
+        E = (0, g.DK)(x),
+        D = C ? f.p1.CANCELED : f.p1.SCHEDULED;
+    E === e && (D = x.status);
+    let z = (null == x ? void 0 : x.scheduled_start_time) != null ? (0, g.lh)(P, S, new Date(null == x ? void 0 : x.scheduled_start_time)) : null,
+        Z = (t) => {
+            (t.stopPropagation(),
+                null != k &&
+                    (0, o.jW)(t, async () => {
+                        let { default: t } = await Promise.all([n.e('34261'), n.e('70274'), n.e('42743'), n.e('27434'), n.e('62318')]).then(n.bind(n, 215269));
                         return (n) =>
                             (0, r.jsx)(
-                                e,
-                                m(
+                                t,
+                                v(
                                     {
-                                        guildEventId: y.id,
-                                        recurrenceId: t,
-                                        channel: P,
-                                        guild: C,
+                                        guildEventId: x.id,
+                                        recurrenceId: e,
+                                        channel: w,
+                                        guild: k,
                                         isRecurrenceItem: !0
                                     },
                                     n
@@ -74,67 +74,67 @@ function h(e) {
                             );
                     }));
         };
-    return (0, r.jsxs)(o.kL8, {
-        className: i()(f.container, {
-            [f.canceled]: k,
-            [f.clickable]: null != O,
-            [f.active]: v
+    return (0, r.jsxs)(c.kL8, {
+        className: i()(j.container, {
+            [j.canceled]: C,
+            [j.clickable]: null != h,
+            [j.active]: y
         }),
-        onClick: (e) => {
-            (e.stopPropagation(), k || null == O || O(t));
+        onClick: (t) => {
+            (t.stopPropagation(), C || null == h || h(e));
         },
-        onContextMenu: _,
+        onContextMenu: Z,
         'aria-label': '',
         children: [
-            (0, r.jsx)(g.z, {
+            (0, r.jsx)(b.z, {
                 startTime: S.toISOString(),
-                status: null != E ? E : w,
-                eventType: y.entity_type,
-                guildEventId: y.id,
-                recurrenceId: t,
-                className: f.timeStatus
+                status: null != z ? z : D,
+                eventType: x.entity_type,
+                guildEventId: x.id,
+                recurrenceId: e,
+                className: j.timeStatus
             }),
-            k &&
-                (0, r.jsx)(o.Text, {
+            C &&
+                (0, r.jsx)(c.Text, {
                     variant: 'text-sm/semibold',
                     color: 'text-danger',
-                    className: f.canceledStatus,
-                    children: j.intl.string(j.t.fyBVRk)
+                    className: j.canceledStatus,
+                    children: m.intl.string(m.t.fyBVRk)
                 }),
-            (0, r.jsx)(o.ua7, {
-                text: j.intl.string(j.t.UKOtz8),
+            (0, r.jsx)(c.ua7, {
+                text: m.intl.string(m.t.UKOtz8),
                 position: 'top',
-                'aria-label': j.intl.string(j.t.bt75u7),
-                children: (e) => {
-                    var t, n;
+                'aria-label': m.intl.string(m.t.bt75u7),
+                children: (t) => {
+                    var e, n;
                     return (0, r.jsx)(
-                        o.P3F,
-                        ((t = m({}, e)),
+                        c.P3F,
+                        ((e = v({}, t)),
                         (n = n =
                             {
-                                onClick: _,
-                                className: f.iconButton,
-                                children: (0, r.jsx)(o.xhG, {
+                                onClick: Z,
+                                className: j.iconButton,
+                                children: (0, r.jsx)(c.xhG, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 20,
                                     height: 20,
-                                    className: f.icon
+                                    className: j.icon
                                 })
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
+                            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+                            : (function (t, e) {
+                                  var n = Object.keys(t);
                                   if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
+                                      var r = Object.getOwnPropertySymbols(t);
                                       n.push.apply(n, r);
                                   }
                                   return n;
-                              })(Object(n)).forEach(function (e) {
-                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                              })(Object(n)).forEach(function (t) {
+                                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
                               }),
-                        t)
+                        e)
                     );
                 }
             })

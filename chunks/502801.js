@@ -1,4 +1,4 @@
-(t.d(e, { default: () => j }), t(539854), t(642613), t(388685));
+(t.d(e, { default: () => M }), t(539854), t(642613), t(388685));
 var i = t(255367),
     l = t(73800),
     r = t(120356),
@@ -105,7 +105,7 @@ function b(n) {
               ]
           });
 }
-function M(n) {
+function j(n) {
     let { friends: e, searchQuery: t, disabled: r, onShareClip: d } = n,
         u = l.useMemo(() => (0 === t.length ? e : e.filter((n) => n.username.toLowerCase().includes(t.toLowerCase()))), [e, t]),
         c = (0, E.e7)([D.Z], () => D.Z.theme);
@@ -165,7 +165,7 @@ function M(n) {
               fade: !0
           });
 }
-function j(n) {
+function M(n) {
     let { clip: e, editMetadata: t, transitionState: r, onClose: o } = n,
         [s, A] = l.useState(''),
         [T, S] = l.useState(!1),
@@ -227,14 +227,13 @@ function j(n) {
                 className: Z.searchBar,
                 query: s,
                 onChange: A,
-                size: _.E1j.Sizes.MEDIUM,
                 onClear: function () {
                     A('');
                 },
                 placeholder: p.intl.string(p.t.CmSHY2)
             }),
             (0, i.jsx)('div', { className: a()(Z.divider, Z.topDivider) }),
-            (0, i.jsx)(M, {
+            (0, i.jsx)(j, {
                 searchQuery: s,
                 friends: R,
                 onShareClip: H,

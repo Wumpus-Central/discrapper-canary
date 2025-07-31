@@ -14,8 +14,8 @@ var l = n(255367),
     g = n(859155),
     m = n(822869),
     p = n(895442),
-    E = n(757853),
-    b = n(388275),
+    b = n(757853),
+    E = n(388275),
     y = n(912332),
     I = n(819727),
     S = n(388032),
@@ -102,8 +102,8 @@ function x(e) {
         U = r.useRef(0),
         H = r.useRef(0),
         [W, Q] = r.useState(x),
-        z = W.length,
-        V = z >= I.G,
+        V = W.length,
+        z = V >= I.G,
         [B, q] = r.useState(''),
         { results: K, updateSearchText: X } = (0, d.s)({
             selectedDestinations: W,
@@ -163,23 +163,23 @@ function x(e) {
                             let { type: n, id: l } = t;
                             return n === e.type && l === e.id;
                         });
-                        if (-1 === n) return V ? t : (Y(''), (U.current += 1), [e, ...t]);
+                        if (-1 === n) return z ? t : (Y(''), (U.current += 1), [e, ...t]);
                         let l = [...t];
                         return (l.splice(n, 1), (U.current += 1), l);
                     }));
             },
-            [j, V, Z, B, Y, G]
+            [j, z, Z, B, Y, G]
         ),
         er = r.useCallback(
             async function (e) {
                 var r;
                 let { withMessage: i, transitionToDestination: a, closeAfterSend: d } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                    E = null != (r = h.Z.getMessage(j, Z)) ? r : t;
-                if (null == E) return void (0, s.showToast)((0, s.createToast)(S.intl.string(S.t.R0RpRU), s.ToastType.FAILURE));
+                    b = null != (r = h.Z.getMessage(j, Z)) ? r : t;
+                if (null == b) return void (0, s.showToast)((0, s.createToast)(S.intl.string(S.t.R0RpRU), s.ToastType.FAILURE));
                 R(!0);
-                let b = (await Promise.all(e.map(u.qx))).filter(_.lm);
+                let E = (await Promise.all(e.map(u.qx))).filter(_.lm);
                 if (
-                    (0, p.Z)(E, b) &&
+                    (0, p.Z)(b, E) &&
                     !(await new Promise((e) => {
                         (0, s.ZDy)(async () => {
                             let { default: t } = await n.e('88643').then(n.bind(n, 466080));
@@ -195,9 +195,9 @@ function x(e) {
                     }))
                 )
                     return void R(!1);
-                (d && (0, y.mc)(), null == L || L(), a && (await o.Z.fetchMessages({ channelId: b[0] }), (0, c.Kh)(b[0], { openTextInVoiceIfVoiceChannel: !0 })));
-                let I = await g.Z.sendForwards(E, b, C(v({}, P), { withMessage: i })),
-                    O = b.some((e) => {
+                (d && (0, y.mc)(), null == L || L(), a && (await o.Z.fetchMessages({ channelId: E[0] }), (0, c.Kh)(E[0], { openTextInVoiceIfVoiceChannel: !0 })));
+                let I = await g.Z.sendForwards(b, E, C(v({}, P), { withMessage: i })),
+                    O = E.some((e) => {
                         let t = f.Z.getChannel(e);
                         return null != t && t.rateLimitPerUser > 0;
                     });
@@ -212,7 +212,7 @@ function x(e) {
                         messageId: Z,
                         hasError: !1,
                         hasContextMessage: null != i && '' !== i,
-                        numDestinations: b.length,
+                        numDestinations: E.length,
                         numDestinationChanges: U.current,
                         numQueryChanges: H.current,
                         anyDestinationHasSlowmode: O
@@ -225,14 +225,14 @@ function x(e) {
                     messageId: Z,
                     hasError: !0,
                     hasContextMessage: null != i && '' !== i,
-                    numDestinations: b.length,
+                    numDestinations: E.length,
                     numDestinationChanges: U.current,
                     numQueryChanges: H.current,
                     anyDestinationHasSlowmode: O
                 });
                 let A = e.filter((e, t) => 'rejected' === I[t].status);
                 (0, y.Np)({
-                    message: E,
+                    message: b,
                     failedDestinations: A,
                     forwardOptions: P
                 });
@@ -252,16 +252,16 @@ function x(e) {
     if (null == k || null == F) return null;
     let ea =
             K.length > 0
-                ? (0, l.jsx)(E.F, {
+                ? (0, l.jsx)(b.F, {
                       paddingBottom: 16,
                       paddingTop: 16,
                       rowData: K,
-                      rowMode: E.G.TOGGLE,
+                      rowMode: b.G.TOGGLE,
                       message: k,
                       originChannel: F,
                       handleToggleDestination: el,
                       selectedDestinations: W,
-                      disableSelection: V
+                      disableSelection: z
                   })
                 : (0, l.jsxs)(s.hzk, {
                       className: O.noResults,
@@ -278,7 +278,7 @@ function x(e) {
                           })
                       ]
                   }),
-        es = z <= 1 ? S.intl.string(S.t.TXNS7e) : S.intl.formatToPlainString(S.t.jWtYUl, { count: z });
+        es = V <= 1 ? S.intl.string(S.t.TXNS7e) : S.intl.formatToPlainString(S.t.jWtYUl, { count: V });
     return (0, l.jsxs)(
         s.Y0X,
         C(
@@ -305,7 +305,7 @@ function x(e) {
                                                 variant: 'heading-lg/semibold',
                                                 children: S.intl.string(S.t['+SkRRk'])
                                             }),
-                                            children: V
+                                            children: z
                                                 ? (0, l.jsx)(s.Text, {
                                                       variant: 'text-sm/normal',
                                                       color: 'text-feedback-warning',
@@ -326,7 +326,6 @@ function x(e) {
                             }),
                             (0, l.jsx)(s.E1j, {
                                 ref: et,
-                                size: s.E1j.Sizes.MEDIUM,
                                 query: B,
                                 onChange: J,
                                 onClear: $,
@@ -337,11 +336,11 @@ function x(e) {
                         ]
                     }),
                     ea,
-                    (0, l.jsx)(b.n, {
+                    (0, l.jsx)(E.n, {
                         message: k,
                         forwardOptions: P,
                         sendLabel: es,
-                        canSend: z > 0,
+                        canSend: V > 0,
                         selectedDestinations: W,
                         isSending: D,
                         onSend: ei

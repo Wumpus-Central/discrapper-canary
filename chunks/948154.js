@@ -64,7 +64,13 @@ function b(e, t) {
 let y = 5,
     O = 1500;
 function v(e) {
-    return a.Z.fetchRecentMentions(e, h.DJj, null, l.ZP.roleFilter, l.ZP.everyoneFilter);
+    return a.Z.fetchRecentMentions({
+        before: e,
+        limit: h.DJj,
+        roles: l.ZP.roleFilter,
+        everyone: l.ZP.everyoneFilter,
+        feature: p.Lr
+    });
 }
 let I = (0, r.throttle)(T, O);
 async function T(e) {
@@ -88,7 +94,8 @@ async function T(e) {
                 o.Z.fetchMessages({
                     channelId: e,
                     limit: a ? p.W9 : p.AQ,
-                    isPreload: a
+                    isPreload: a,
+                    feature: p.Lr
                 })
             );
     }
