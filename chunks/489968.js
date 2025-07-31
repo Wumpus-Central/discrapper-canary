@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(388032),
     _ = n(753514),
     j = n(450890),
-    E = n(145133);
-let O = (0, r.Un)({
+    O = n(145133);
+let E = (0, r.Un)({
     createPromise: () => n.e('67544').then(n.bind(n, 894308)),
     webpackId: 894308,
     name: 'ClickerGamePopoutWindow'
@@ -27,7 +27,7 @@ function C() {
     let e = (0, a.e7)([p.Z], () => p.Z.lifetimePoints > 0),
         t = (0, a.e7)([d.Z], () => d.Z.getWindowOpen(f.KJ3.CLICKER_GAME)),
         r = () => {
-            u.bA(f.KJ3.CLICKER_GAME, (e) => (0, i.jsx)(O, { windowKey: e }), {
+            u.bA(f.KJ3.CLICKER_GAME, (e) => (0, i.jsx)(E, { windowKey: e }), {
                 defaultWidth: 854,
                 defaultHeight: 768
             });
@@ -166,7 +166,7 @@ function C() {
                         })
                     }),
                     (0, i.jsx)('img', {
-                        src: E,
+                        src: O,
                         alt: x.intl.string(b.default.ABYTMz)
                     })
                 ]

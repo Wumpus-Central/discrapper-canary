@@ -17,8 +17,8 @@ var i = n(780384),
     x = n(673252),
     _ = n(869708),
     j = n(288829),
-    E = n(943323),
-    O = n(958657),
+    O = n(943323),
+    E = n(958657),
     C = n(605493);
 let v = {
         [l.VU.PREMIUM_TENURE_1_MONTH]: {
@@ -77,11 +77,11 @@ let v = {
         },
         [l.VU.PREMIUM_TENURE_36_MONTH]: {
             dark: p.Z,
-            light: E.Z
+            light: O.Z
         },
         [l.VU.PREMIUM_TENURE_60_MONTH]: {
             dark: g.Z,
-            light: O.Z
+            light: E.Z
         },
         [l.VU.PREMIUM_TENURE_72_MONTH]: {
             dark: h.Z,

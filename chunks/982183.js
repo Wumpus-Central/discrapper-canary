@@ -2,7 +2,7 @@ n.d(t, {
     $J: () => l,
     AQ: () => u,
     F7: () => f,
-    JP: () => o,
+    JP: () => s,
     KZ: () => p,
     Lr: () => _,
     V5: () => h,
@@ -12,22 +12,21 @@ n.d(t, {
     a7: () => b,
     by: () => E,
     fL: () => m,
-    ib: () => c,
-    yG: () => s
+    ib: () => c
 });
 var r = n(70956),
     i = n(411198),
-    a = n(388032);
-let o = 'Notifications Inbox',
-    s = 'notifications_inbox_guild_id',
+    a = n(981631),
+    o = n(388032);
+let s = 'Notifications Inbox',
     l = 88,
     c = r.Z.Millis.WEEK,
     u = 50,
     d = 10,
     _ = 'notifications-inbox',
     f = (0, i.yS)({
-        id: s,
-        name: a.intl.string(a.t.HcoRu7),
+        id: a.STv,
+        name: o.intl.string(o.t.HcoRu7),
         description: '',
         icon: void 0,
         features: []
@@ -42,16 +41,16 @@ var p = (function (e) {
         return ((e.ALL_MESSAGES_CHANNEL = 'ALL_MESSAGES_CHANNEL'), (e.MENTION = 'MENTION'), (e.BOOKMARK = 'BOOKMARK'), e);
     })({});
 let g = {
-        UNREAD: a.t.sRUdBw,
-        TODAY: a.t.F4jZQk,
-        YESTERDAY: a.t.gnv4pK,
-        OLDER: a.t.exrPZm
+        UNREAD: o.t.sRUdBw,
+        TODAY: o.t.F4jZQk,
+        YESTERDAY: o.t.gnv4pK,
+        OLDER: o.t.exrPZm
     },
     E = {
-        all: a.intl.string(a.t.iWyjNj),
-        bookmarks: a.intl.string(a.t['+rlGYW']),
-        announcements: a.intl.string(a.t.jR39HB),
-        mentions: a.intl.string(a.t['GRZF9/'])
+        all: o.intl.string(o.t.iWyjNj),
+        bookmarks: o.intl.string(o.t['+rlGYW']),
+        announcements: o.intl.string(o.t.jR39HB),
+        mentions: o.intl.string(o.t['GRZF9/'])
     };
 var b = (function (e) {
         return ((e.UNLOADED = 'unloaded'), (e.LOADED = 'loaded'), (e.LOADED_UNREAD = 'loadedUnread'), e);

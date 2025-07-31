@@ -45,7 +45,7 @@ function j() {
         j = (0, s.e7)([m.Z], () => m.Z.computePermissions(a)),
         _ = (0, s.e7)([m.Z], () => m.Z.computePermissions(r)),
         y = (0, c.ZP)(a, !0),
-        C = null != a ? (0, b.IG)(a, !1, !0) : null,
+        C = null != a ? (0, b.IG)(a, !1) : null,
         O = null != r ? h.Z.getGuildPermissionSpecMap(r) : null,
         T = Object.values(null != C ? C : {}).map((e) => {
             let { title: t, flag: a } = e,

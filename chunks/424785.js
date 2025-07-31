@@ -39,8 +39,8 @@ var r = n(255367),
     G = n(647086),
     B = n(388032),
     V = n(915887),
-    F = n(185346);
-function H(e, t, n) {
+    H = n(185346);
+function F(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -64,7 +64,7 @@ function z(e) {
                 })
             )),
             r.forEach(function (t) {
-                H(e, t, n[t]);
+                F(e, t, n[t]);
             }));
     }
     return e;
@@ -165,7 +165,7 @@ class K extends D.ZP {
                                                 {
                                                     ref: this.channelItemRef,
                                                     className: V.iconVisibility,
-                                                    iconClassName: o()({ [F.iconLive]: null != f }),
+                                                    iconClassName: o()({ [H.iconLive]: null != f }),
                                                     channel: e,
                                                     selected: !y && t,
                                                     connected: n,
@@ -208,21 +208,21 @@ class K extends D.ZP {
     }
     constructor(...e) {
         (super(...e),
-            H(this, 'channelItemRef', i.createRef()),
-            H(this, 'state', { shouldShowGuildVerificationPopout: !1 }),
-            H(this, 'closeGuildVerificationPopout', () => {
+            F(this, 'channelItemRef', i.createRef()),
+            F(this, 'state', { shouldShowGuildVerificationPopout: !1 }),
+            F(this, 'closeGuildVerificationPopout', () => {
                 this.setState({ shouldShowGuildVerificationPopout: !1 });
             }),
-            H(this, 'handleClick', () => {
+            F(this, 'handleClick', () => {
                 let { channel: e, locked: t, connected: n, unverifiedAccount: r } = this.props,
                     i = e.getGuildId();
                 (null != i && (0, m.n)(i) && (0, g.hk)(i), r && this.setState({ shouldShowGuildVerificationPopout: !0 }), t || n || e.isRoleSubscriptionTemplatePreviewChannel() || (0, y.Cq)(e), __OVERLAY__ || (0, O.Kh)(e.id));
             }),
-            H(this, 'handleClickChat', () => {
+            F(this, 'handleClickChat', () => {
                 let { channel: e, locked: t } = this.props;
                 __OVERLAY__ || t || (0, O.Kh)(e.id);
             }),
-            H(this, 'handleContextMenu', (e) => {
+            F(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
                     i = P.Z.getGuild(t.getGuildId());
                 null != i &&
@@ -238,7 +238,7 @@ class K extends D.ZP {
                             );
                     });
             }),
-            H(this, 'renderPopout', () => {
+            F(this, 'renderPopout', () => {
                 let { channel: e } = this.props,
                     { shouldShowGuildVerificationPopout: t } = this.state;
                 if (t)
@@ -249,7 +249,7 @@ class K extends D.ZP {
                     });
                 throw Error('VoiceChannel.renderPopout: There must always be something to render');
             }),
-            H(this, 'renderOpenChatButton', () => {
+            F(this, 'renderOpenChatButton', () => {
                 let { channel: e, locked: t, forceShowButtons: n } = this.props;
                 if (!t)
                     return (0, r.jsx)(s.ua7, {
@@ -275,11 +275,11 @@ class K extends D.ZP {
                         }
                     });
             }),
-            H(this, 'getTooltipText', () => {
+            F(this, 'getTooltipText', () => {
                 let { connected: e } = this.props;
                 return this.isFull() && !e ? B.intl.string(B.t.rZfiNj) : null;
             }),
-            H(this, 'renderSubtitle', () => {
+            F(this, 'renderSubtitle', () => {
                 var e;
                 let t = null == (e = this.props.stageInstance) ? void 0 : e.topic;
                 return null == t ? null : (0, r.jsx)(f.Z, { children: t });

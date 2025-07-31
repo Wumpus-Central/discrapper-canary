@@ -34,7 +34,7 @@ let y = null,
     I = 10,
     T = 3;
 function S(e) {
-    let t = (0, m.R6)(e.type);
+    let t = (0, m.R6)(e);
     return new Map([
         [E.dCx.FILTER_FROM, !d.Z.hidePersonalInformation],
         [E.dCx.FILTER_MENTIONS, !d.Z.hidePersonalInformation],
@@ -48,7 +48,7 @@ function S(e) {
 }
 function A(e) {
     let t = [E.dCx.FILTER_HAS];
-    return (d.Z.hidePersonalInformation || (t.push(E.dCx.FILTER_FROM), t.push(E.dCx.FILTER_MENTIONS)), (0, m.R6)(e.type) && t.push(E.dCx.FILTER_IN), t);
+    return (d.Z.hidePersonalInformation || (t.push(E.dCx.FILTER_FROM), t.push(E.dCx.FILTER_MENTIONS)), (0, m.R6)(e) && t.push(E.dCx.FILTER_IN), t);
 }
 function N(e) {
     let { searchContext: t, query: n, mode: r, tokens: i, cursorScope: a, autocompletes: s } = e,
@@ -172,7 +172,7 @@ function L(e) {
     let d = (0, m.WJ)(s),
         p = null != (n = null == o || null == (t = o.getFullMatch()) ? void 0 : t.trim()) ? n : '',
         b = a === E.dCx.FILTER_FROM || a === E.dCx.FILTER_MENTIONS;
-    if (s.type === E.aib.GUILD && b) {
+    if ((0, m.b7)(s) && b) {
         let e = v[d];
         if (null == e) i = null;
         else {
@@ -373,7 +373,7 @@ function H() {
 function Y(e) {
     let { channelId: t } = e;
     if (null == y) return !1;
-    if (y.type === E.aib.DMS && (0, m.R6)(y.type)) {
+    if (y.type === E.aib.DMS && (0, m.R6)(y)) {
         let e = s.Z.getChannel(t);
         if (null == e || !e.isPrivate()) return !1;
         let n = O[(0, m.WJ)(y)];

@@ -292,7 +292,7 @@ let J = (e) => {
                                         c = s.some((e) => (0, y.fI)(e));
                                     return {
                                         name: B.intl.string(B.t['/Ax2go']),
-                                        description: B.intl.string(B.t.oMIexc),
+                                        description: B.intl.string(B.t.gAIOfn),
                                         isDone: o && c,
                                         shouldWarn: o && !c,
                                         children: o

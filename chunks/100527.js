@@ -80,6 +80,7 @@ var r = (function (e) {
         (e.STREAM_QUALITY_INDICATOR = 'stream quality indicator'),
         (e.PREMIUM_TIER_0_TRIAL_ENDING_NOTICE = 'premium tier 0 trial ending notice'),
         (e.PREMIUM_TIER_2_TRIAL_ENDING_NOTICE = 'premium tier 2 trial ending notice'),
+        (e.PREMIUM_TIER_2_DISCOUNT_ENDING_NOTICE = 'premium tier 2 discount ending notice'),
         (e.BOOSTED_GUILD_PERKS_MODAL = 'boosted guild perks modal'),
         (e.GUILD_POWERUPS_OVERVIEW = 'guild powerups - overview'),
         (e.GUILD_POWERUPS_GUILD_SETTINGS_ROLE_EDIT = 'guild powerups - guild settings role edit'),

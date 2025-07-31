@@ -12,8 +12,8 @@ var i = n(255367),
 function p(e) {
     var t, n, p, g;
     let { transitionState: h, onSuccess: f, onClose: b, requirementsUpdated: x, noSkip: _ = !1 } = e,
-        [j, E] = r.useState(''),
-        [O, C] = r.useState(''),
+        [j, O] = r.useState(''),
+        [E, C] = r.useState(''),
         [v, S] = r.useState(''),
         [T, N] = r.useState(null),
         [I, y] = r.useState(null),
@@ -23,10 +23,10 @@ function p(e) {
     async function D(e) {
         (e.preventDefault(), (0, l.b9)());
         let t = !1;
-        if (('' === O ? (N(u.intl.string(u.t['/7/oPT'])), (t = !0)) : N(null), O !== v ? (y(u.intl.string(u.t.IEKYZ2)), (t = !0)) : y(null), t)) return;
+        if (('' === E ? (N(u.intl.string(u.t['/7/oPT'])), (t = !0)) : N(null), E !== v ? (y(u.intl.string(u.t.IEKYZ2)), (t = !0)) : y(null), t)) return;
         let n = await (0, l.Mn)({
             password: j,
-            newPassword: O
+            newPassword: E
         });
         if (null == n ? void 0 : n.ok) f();
         else {
@@ -80,7 +80,7 @@ function p(e) {
                                     children: (0, i.jsx)(a.oil, {
                                         type: 'password',
                                         value: j,
-                                        onChange: E,
+                                        onChange: O,
                                         inputRef: R
                                     })
                                 }),
@@ -90,7 +90,7 @@ function p(e) {
                                     error: null != (g = null != (p = null == A || null == (n = A.new_password) ? void 0 : n[0]) ? p : T) ? g : void 0,
                                     children: (0, i.jsx)(a.oil, {
                                         type: 'password',
-                                        value: O,
+                                        value: E,
                                         onChange: C
                                     })
                                 }),

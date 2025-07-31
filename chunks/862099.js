@@ -1,6 +1,6 @@
 (n.d(t, {
-    Co: () => X,
-    ZP: () => Q,
+    Co: () => Q,
+    ZP: () => X,
     bZ: () => q,
     gt: () => V
 }),
@@ -33,8 +33,8 @@ var r,
     P = n(151864),
     j = n(835184),
     A = n(725436),
-    Z = n(497656),
-    x = n(79874),
+    x = n(497656),
+    Z = n(79874),
     w = n(554747),
     L = n(230900),
     R = n(854698),
@@ -111,7 +111,7 @@ let V = l.memo(function (e) {
         ]
     });
 });
-function B(e) {
+function H(e) {
     let { guildEvent: t, channel: n } = e,
         r = (0, s.Wu)(
             [v.ZP],
@@ -136,14 +136,14 @@ function B(e) {
                       className: G.stageIcon
                   })
                 : null,
-        children: (0, i.jsx)(X, {
+        children: (0, i.jsx)(Q, {
             channel: n,
             speakers: r,
             voiceType: 1
         })
     });
 }
-function H(e) {
+function B(e) {
     let { guildEvent: t, noticeType: n } = e,
         r = (0, R.DK)(t),
         l = (0, s.e7)([N.ZP], () => N.ZP.isInterestedInEventRecurrence(t.id, r), [t.id, r]),
@@ -173,7 +173,7 @@ function F(e) {
         s = null != a ? (0, A.m)(a, !0) : null,
         u = (0, L.nE)(n),
         p = (0, d.KS)(u),
-        { startTime: h, endTime: f } = (0, x.ZP)(n),
+        { startTime: h, endTime: f } = (0, Z.ZP)(n),
         { startDateTimeString: g, upcomingEvent: m, diffMinutes: b } = (0, R.ub)(h.toISOString(), null == f ? void 0 : f.toISOString()),
         _ = m ? (b > 0 ? U.intl.formatToPlainString(U.t.PQlCWl, { minutes: b }) : U.intl.string(U.t.WINqKS)) : U.intl.formatToPlainString(U.t.DC6h3N, { date: g });
     return (
@@ -258,7 +258,7 @@ function F(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(H, {
+                (0, i.jsx)(B, {
                     guildEvent: n,
                     noticeType: r
                 })
@@ -344,7 +344,7 @@ function K(e) {
             className: G.stageIcon
         }),
         topic: t.topic,
-        children: (0, i.jsx)(X, {
+        children: (0, i.jsx)(Q, {
             channel: n,
             speakers: r,
             voiceType: 2
@@ -352,7 +352,7 @@ function K(e) {
     });
 }
 var q = (((r = {})[(r.VOICE = 1)] = 'VOICE'), (r[(r.STAGE = 2)] = 'STAGE'), (r[(r.STUDY_ROOM = 3)] = 'STUDY_ROOM'), r);
-function X(e) {
+function Q(e) {
     let { channel: t, speakers: n, voiceType: r } = e,
         a = t.getGuildId(),
         d = l.useMemo(() => n.slice(0, 3), [n]),
@@ -404,10 +404,10 @@ function X(e) {
               ]
           });
 }
-let Q = l.memo(function (e) {
+let X = l.memo(function (e) {
     let { guild: t } = e,
         { showRedesignedLiveChannelNotice: n } = (0, p.o)(!0),
-        r = (0, Z.y)(t.id),
+        r = (0, x.y)(t.id),
         l = (0, w.k5)(t.id),
         a = (0, w.Vm)(t.id),
         o = (0, s.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == r ? void 0 : r.id), [r]),
@@ -437,7 +437,7 @@ let Q = l.memo(function (e) {
             ? (d = (0, i.jsx)(z, { guildEvent: l }))
             : l.entity_type === k.WX.VOICE &&
               null != r &&
-              (d = (0, i.jsx)(B, {
+              (d = (0, i.jsx)(H, {
                   guildEvent: l,
                   channel: r
               }));

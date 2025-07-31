@@ -21,7 +21,7 @@
     Rt: () => eK,
     T4: () => K,
     U2: () => F,
-    UV: () => tG,
+    UV: () => tZ,
     UX: () => X,
     Ue: () => e$,
     V7: () => ef,
@@ -29,7 +29,7 @@
     Wz: () => tP,
     XK: () => e1,
     Z8: () => eO,
-    ZP: () => tB,
+    ZP: () => tH,
     Zx: () => e2,
     _O: () => tw,
     a5: () => eW,
@@ -56,9 +56,9 @@
     uZ: () => ey,
     v6: () => eL,
     v9: () => e4,
-    xG: () => tU,
-    xe: () => tx,
+    xG: () => tF,
     yd: () => A.yd,
+    yg: () => tk,
     zL: () => ed,
     zV: () => eB
 }),
@@ -932,7 +932,7 @@ function eS(e, t) {
 function eA(e, t, n, r) {
     let i = o()(r ? void 0 : e);
     if (t.length > 0) {
-        let e = tj(t);
+        let e = tV(t);
         i = i.add(e, 'hours');
     }
     if (!r && void 0 !== n) {
@@ -943,7 +943,7 @@ function eA(e, t, n, r) {
     return i.toDate();
 }
 function eN(e) {
-    let t = tj(e.unactivatedUnits);
+    let t = tV(e.unactivatedUnits);
     if (!(t > 0 && e.fractionalState === P.a$.NONE)) return '';
     let n = {
             days: D.t.fYmir6,
@@ -1491,20 +1491,32 @@ function tL(e) {
     return null != e && P.OT.includes(e) ? 1 : 2;
 }
 function tx(e) {
-    return e === P.Rt ? P.FL : P.ff;
+    return e === P.Rt ? P.NV : P.tL;
 }
-function tM(e) {
+function tM() {
+    return P.tL;
+}
+function tk(e) {
+    return tj(e) ? tx(e.trial_id) : tU(e) ? tM() : 0;
+}
+function tj(e) {
+    return null != e && 'trial_id' in e;
+}
+function tU(e) {
+    return null != e && 'discount_id' in e;
+}
+function tG(e) {
     if (e === P.rV.YEAR) return D.intl.string(D.t.tfqrho);
     if (e === P.rV.MONTH) return D.intl.string(D.t.FPybU1);
     throw Error('Invalid interval type: '.concat(e));
 }
-function tk(e) {
+function tB(e) {
     return null != e && !e.isProvisional && !e.bot;
 }
-function tj(e) {
-    return tU(e.map((e) => e.skuId));
+function tV(e) {
+    return tF(e.map((e) => e.skuId));
 }
-function tU(e) {
+function tF(e) {
     return e.reduce((e, t) => {
         let [n, r] = P.Cx[t],
             i = 1;
@@ -1518,7 +1530,7 @@ function tU(e) {
         return e + i * r;
     }, 0);
 }
-function tG(e) {
+function tZ(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     if (e.interval !== P.rV.YEAR) return;
@@ -1528,12 +1540,12 @@ function tG(e) {
         a = Y(e.id, !1, t, n);
     if (0 !== i.amount) return Math.floor(100 * (1 - a.amount / (12 * i.amount)));
 }
-let tB = Object.freeze({
+let tH = Object.freeze({
     isNewUser: tt,
     isPremiumAtLeast: A.yd,
     isPremium: A.I5,
     isPremiumExactly: A.M5,
-    isPremiumEligible: tk,
+    isPremiumEligible: tB,
     getPrice: Y,
     getDefaultPrice: H,
     getInterval: J,
@@ -1545,7 +1557,7 @@ let tB = Object.freeze({
     getPremiumPlanOptions: ef,
     getUpgradeEligibilities: em,
     getReverseTrialWeeks: tL,
-    formatInterval: tM,
+    formatInterval: tG,
     getPlanDescription: ec,
     isPremiumSku: e_,
     getClosestUpgrade: eg,
@@ -1574,9 +1586,9 @@ let tB = Object.freeze({
     getPremiumTypeFromSubscription: e7,
     getPremiumTypeFromSubscriptionRenewalMutations: e9,
     getPremiumGradientColor: te,
-    getUnactivatedFractionalPremiumHours: tj,
+    getUnactivatedFractionalPremiumHours: tV,
     castPremiumSubscriptionAsSkuId: tP,
-    calculateDiscountPercentageForYearlyPlan: tG,
+    calculateDiscountPercentageForYearlyPlan: tZ,
     canUseAnimatedEmojis: tn,
     canUseEmojisEverywhere: tr,
     canUseSoundboardEverywhere: ti,

@@ -104,21 +104,21 @@ let S = [],
         });
     };
 function P(e) {
-    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: N, modalDismissibleContent: P, modalTopExtra: j, header: A, headerClassName: Z, subHeader: x, subHeaderExtra: w, featureCards: L, changeLogId: R, button: D, body: k } = e,
+    let { className: t, renderModalProps: n, heroArt: l, heroArtClassName: N, modalDismissibleContent: P, modalTopExtra: j, header: A, headerClassName: x, subHeader: Z, subHeaderExtra: w, featureCards: L, changeLogId: R, button: D, body: k } = e,
         { onClose: M, transitionState: U } = n,
         G = (0, p.Dt)(),
         V = L.length % 2 == 0,
-        B = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        [H, F] = i.useState(Date.now()),
+        H = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        [B, F] = i.useState(Date.now()),
         [z, W] = i.useState(0),
         [Y, K] = i.useState(0),
-        [q, X] = i.useState(!1),
-        [Q, J] = i.useState(!0),
-        $ = i.useRef(H),
+        [q, Q] = i.useState(!1),
+        [X, J] = i.useState(!0),
+        $ = i.useRef(B),
         ee = i.useRef(z),
         et = i.useRef(Y),
         en = i.useRef(q),
-        er = i.useRef(Q),
+        er = i.useRef(X),
         [ei, el] = i.useState(S),
         ea = i.useRef(!1);
     function eo() {
@@ -162,8 +162,8 @@ function P(e) {
             [ei]
         ),
         i.useEffect(() => {
-            (($.current = H), (ee.current = z), (et.current = Y), (en.current = q), (er.current = Q));
-        }, [H, z, Y, q, Q]),
+            (($.current = B), (ee.current = z), (et.current = Y), (en.current = q), (er.current = X));
+        }, [B, z, Y, q, X]),
         i.useEffect(
             () => () => {
                 if ('video' === l.type || 'embed' === l.type) {
@@ -210,13 +210,13 @@ function P(e) {
                     children: [
                         (0, r.jsx)(s.X6q, {
                             variant: 'display-md',
-                            className: a()(v.headerText, Z),
+                            className: a()(v.headerText, x),
                             children: A
                         }),
                         'video' === l.type
                             ? (0, r.jsx)(h.Z, {
                                   className: a()(v.video, N),
-                                  autoPlay: !B,
+                                  autoPlay: !H,
                                   loop: !0,
                                   muted: !0,
                                   controls: !0,
@@ -224,16 +224,16 @@ function P(e) {
                                   src: l.src,
                                   poster: l.poster,
                                   onPlay: (e) => {
-                                      (b.default.track(O.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R }), F(Date.now()), X(!0), J(e.currentTarget.muted));
+                                      (b.default.track(O.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: R }), F(Date.now()), Q(!0), J(e.currentTarget.muted));
                                   },
                                   onEnded: (e) => {
-                                      (eo(), J(e.currentTarget.muted), X(!1));
+                                      (eo(), J(e.currentTarget.muted), Q(!1));
                                   },
                                   onVolumeChange: (e) => {
                                       (eo(), J(e.currentTarget.muted));
                                   },
                                   onPause: (e) => {
-                                      (eo(), J(e.currentTarget.muted), X(!1));
+                                      (eo(), J(e.currentTarget.muted), Q(!1));
                                   },
                                   disablePictureInPicture: !0,
                                   children:
@@ -284,7 +284,7 @@ function P(e) {
                             variant: 'text-md/normal',
                             color: 'text-secondary',
                             className: v.subHeader,
-                            children: [x, null == w ? void 0 : w()]
+                            children: [Z, null == w ? void 0 : w()]
                         }),
                         null != k &&
                             (0, r.jsx)(s.X6q, {

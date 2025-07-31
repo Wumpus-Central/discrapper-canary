@@ -51,7 +51,7 @@ function A(e) {
     }
     return e;
 }
-function Z(e) {
+function x(e) {
     var t;
     let { quest: n } = e,
         i = (0, f.B6)(n.config.expiresAt),
@@ -85,12 +85,12 @@ function Z(e) {
         ]
     });
 }
-function x(e) {
+function Z(e) {
     var t, n, l, u;
     let { nodeRef: _, quest: O } = e,
         E = (0, d.O5)(),
         T = (0, o.e7)([g.Z], () => g.Z.isEnrolling(O.id), [O]),
-        x = (0, o.e7)([g.Z], () => null != g.Z.questEnrollmentBlockedUntil, []),
+        Z = (0, o.e7)([g.Z], () => null != g.Z.questEnrollmentBlockedUntil, []),
         [w, L] = i.useState(!1),
         R = i.useCallback(() => L(!0), []),
         D = i.useCallback(() => L(!1), []),
@@ -134,8 +134,8 @@ function x(e) {
             questContent: m.jn.ACTIVITY_PANEL,
             sourceQuestContent: m.jn.ACTIVITY_PANEL
         }),
-        B = (0, f.tP)(O),
-        H = (null == (t = O.userStatus) ? void 0 : t.enrolledAt) != null,
+        H = (0, f.tP)(O),
+        B = (null == (t = O.userStatus) ? void 0 : t.enrolledAt) != null,
         F = (null == (n = O.userStatus) ? void 0 : n.completedAt) != null,
         z = (null == (l = O.userStatus) ? void 0 : l.claimedAt) != null,
         W = (null == O ? void 0 : O.userStatus) != null && (0, p.zE)(O.userStatus, m.jn.ACTIVITY_PANEL),
@@ -147,13 +147,13 @@ function x(e) {
             questContent: m.jn.ACTIVITY_PANEL,
             sourceQuestContent: m.jn.ACTIVITY_PANEL
         });
-    return W || B || z || x
+    return W || H || z || Z
         ? null
         : (0, r.jsxs)('div', {
               ref: (e) => {
                   _.current = e;
               },
-              className: a()(j.wrapper, { [j.wrapperQuestAccepted]: H }),
+              className: a()(j.wrapper, { [j.wrapperQuestAccepted]: B }),
               onClick: k,
               onKeyPress: k,
               onFocus: R,
@@ -164,7 +164,7 @@ function x(e) {
                   (0, r.jsxs)('div', {
                       className: j.utils,
                       children: [
-                          H ? (0, r.jsx)(Z, { quest: O }) : (0, r.jsx)(y.Z, {}),
+                          B ? (0, r.jsx)(x, { quest: O }) : (0, r.jsx)(y.Z, {}),
                           (0, r.jsx)(I.r, {
                               quest: O,
                               questContent: m.jn.ACTIVITY_PANEL,
@@ -203,10 +203,10 @@ function x(e) {
                           })
                       ]
                   }),
-                  !H &&
+                  !B &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(Z, { quest: O }),
+                              (0, r.jsx)(x, { quest: O }),
                               (0, r.jsx)('div', {
                                   className: j.instructions,
                                   children: (0, r.jsx)(c.Text, {
@@ -217,7 +217,7 @@ function x(e) {
                               })
                           ]
                       }),
-                  H &&
+                  B &&
                       !F &&
                       (0, r.jsx)(S.Z, {
                           autoplay: w,
@@ -231,7 +231,7 @@ function x(e) {
                   (0, r.jsxs)('div', {
                       className: j.ctas,
                       children: [
-                          !H &&
+                          !B &&
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsx)(s.zx, {
@@ -253,7 +253,7 @@ function x(e) {
                                       })
                                   ]
                               }),
-                          H &&
+                          B &&
                               !F &&
                               (0, r.jsx)(s.zx, {
                                   className: j.cta,
@@ -282,6 +282,6 @@ let w = function (e) {
         questOrQuests: e.quest,
         questContent: m.jn.ACTIVITY_PANEL,
         sourceQuestContent: m.jn.ACTIVITY_PANEL,
-        children: (t) => (0, r.jsx)(x, A({ nodeRef: t }, e))
+        children: (t) => (0, r.jsx)(Z, A({ nodeRef: t }, e))
     });
 };

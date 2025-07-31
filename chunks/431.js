@@ -149,7 +149,11 @@ class D extends (r = i.ZP.PersistedStore) {
     getAlmostExpiringTrialOffers(e) {
         let t = Object.values(f.nG).map((e) => e.id),
             n = c.default.getCurrentUser();
-        return (0, d.I5)(n) && !this.canFractionalPremiumUserUseOffer() ? [] : Object.values(y.userTrialOffers).filter((n) => t.includes(n.trial_id) && null != n.expires_at && null != n.subscription_trial && e.includes(n.subscription_trial.sku_id) && Date.parse(n.expires_at) < Date.now() + (0, d.xe)(n.trial_id));
+        return (0, d.I5)(n) && !this.canFractionalPremiumUserUseOffer() ? [] : Object.values(y.userTrialOffers).filter((n) => t.includes(n.trial_id) && null != n.expires_at && null != n.subscription_trial && e.includes(n.subscription_trial.sku_id) && Date.parse(n.expires_at) < Date.now() + (0, d.yg)(n));
+    }
+    getAlmostExpiringDiscountOffers(e) {
+        let t = c.default.getCurrentUser();
+        return (0, d.I5)(t) && !this.canFractionalPremiumUserUseOffer() ? [] : Object.values(y.userDiscountOffers).filter((t) => null != t.expires_at && null != t.discount && t.discount.plan_ids.some((t) => e.includes(f.GP[t].skuId)) && Date.parse(t.expires_at) < Date.now() + (0, d.yg)(t));
     }
     getAcknowledgedOffers(e) {
         let t = c.default.getCurrentUser();

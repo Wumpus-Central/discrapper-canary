@@ -16,7 +16,7 @@ let m = () => {
         if ('sidebar' !== e) return;
         let t = c.Z.getChannelId(),
             n = l.Z.getChannel(t);
-        return window.location.pathname.startsWith(u.Z5c.NOTIFICATIONS_INBOX()) && null != n ? (0, s.K)(n.guild_id, t) : (0, s.z)(u.Z5c.NOTIFICATIONS_INBOX(null != t ? t : void 0));
+        return window.location.pathname.startsWith(u.Z5c.CHANNEL(u.STv)) && null != n ? (0, s.K)(n.guild_id, t) : (0, s.z)(u.Z5c.CHANNEL(u.STv, null != t ? t : void 0));
     },
     p = {
         binds: ['mod+i'],

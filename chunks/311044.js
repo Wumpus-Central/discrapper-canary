@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => b });
 var r = n(255367),
     o = n(73800),
     i = n(481060),
@@ -12,22 +12,22 @@ var r = n(255367),
     m = n(252417),
     p = n(264481),
     g = n(714905);
-function x(e) {
-    let { user: t, guildId: n, channelId: x, onClose: b } = e,
+function b(e) {
+    let { user: t, guildId: n, channelId: b, onClose: x } = e,
         { analyticsLocations: _ } = (0, l.ZP)(),
-        { context: h, trackUserProfileAction: j } = (0, s.KZ)(),
-        { mutualFriends: y, mutualFriendsCount: I } = (0, d.Z)(t),
-        v = (0, a.Z)();
+        { context: j, trackUserProfileAction: h } = (0, s.KZ)(),
+        { mutualFriends: y, mutualFriendsCount: v } = (0, d.Z)(t),
+        I = (0, a.Z)();
     return (
         o.useEffect(() => {
-            (0, u.Z)(t.id, v);
-        }, [t.id, v]),
+            (0, u.Z)(t.id, I);
+        }, [t.id, I]),
         (0, r.jsx)(i.Ttm, {
             className: g.scroller,
             fade: !0,
             children:
                 null == y
-                    ? Array.from({ length: null != I ? I : 10 }).map((e, t) =>
+                    ? Array.from({ length: null != v ? v : 10 }).map((e, t) =>
                           (0, r.jsxs)(
                               'div',
                               {
@@ -56,11 +56,11 @@ function x(e) {
                                     user: o,
                                     status: i,
                                     guildId: n,
-                                    channelId: x,
+                                    channelId: b,
                                     onSelect: () => {
                                         var e, t;
-                                        (null == b || b(),
-                                            j({ action: 'PRESS_MUTUAL_FRIEND' }),
+                                        (null == x || x(),
+                                            h({ action: 'PRESS_MUTUAL_FRIEND' }),
                                             (0, f.openUserProfileModal)(
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
@@ -86,7 +86,7 @@ function x(e) {
                                                             }));
                                                     }
                                                     return e;
-                                                })({}, h)),
+                                                })({}, j)),
                                                 (t = t =
                                                     {
                                                         userId: o.id,

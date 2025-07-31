@@ -12,15 +12,15 @@ function d() {
 }
 let _ = {
     fetchTabMessages: function (e) {
-        let { searchContext: t, searchTabs: n, searchQueryString: r, pagination: s, trackExactTotalHits: d, getId: _, getLimit: E, onFetchStart: p, onFetchSuccess: S, searchMode: O = u.QIO.NEWEST } = e,
-            f = (0, o.kG)(r),
-            h = (0, o.$G)(f);
+        let { searchContext: t, searchTabs: n, searchQueryString: r, pagination: s, trackExactTotalHits: d, getId: _, getLimit: E, onFetchStart: p, onFetchSuccess: O, searchMode: S = u.QIO.NEWEST } = e,
+            I = (0, o.kG)(r),
+            f = (0, o.$G)(I);
         !(function (e) {
             if (!Array.isArray(e.pinned)) return;
             let t = e.pinned.some((e) => !0 === e);
             e.pinned = t;
-        })(h);
-        let I = (function (e) {
+        })(f);
+        let h = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
@@ -44,13 +44,13 @@ let _ = {
                         }));
                 }
                 return e;
-            })({}, h, (0, o.zH)(O)),
+            })({}, f, (0, o.zH)(S)),
             T = (0, o.s5)(t);
-        null != T && (0, o.jW)(I, T);
+        null != T && (0, o.jW)(h, T);
         let m = c.Z.create({
             id: (0, o.Tm)(t),
             searchContext: t,
-            searchQuery: I,
+            searchQuery: h,
             searchTabs: n,
             getLimit: E,
             pagination: s,
@@ -60,7 +60,7 @@ let _ = {
             p({
                 searchContext: t,
                 searchQueryString: r,
-                searchQuery: I
+                searchQuery: h
             });
         let g = n.map((e) => _(e));
         return (
@@ -94,8 +94,8 @@ let _ = {
                             };
                         })
                     }),
-                        null == S ||
-                            S({
+                        null == O ||
+                            O({
                                 searchContext: t,
                                 tabEntries: r
                             }));

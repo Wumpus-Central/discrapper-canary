@@ -42,7 +42,7 @@ function b(e) {
 }
 function y() {
     let { pathname: e } = (0, i.TH)();
-    return e.startsWith(g.Z5c.NOTIFICATIONS_INBOX());
+    return e.startsWith(g.Z5c.CHANNEL(g.STv));
 }
 function O(e) {
     o.Z.open(g.oAB.NOTIFICATIONS, void 0, { analyticsLocations: e });

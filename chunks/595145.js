@@ -12,30 +12,30 @@ var r = n(255367),
     m = n(313201),
     p = n(368326),
     g = n(429467),
-    x = n(320582),
-    b = n(246016),
+    b = n(320582),
+    x = n(246016),
     _ = n(680295),
-    h = n(189156),
-    j = n(699516),
+    j = n(189156),
+    h = n(699516),
     y = n(246946),
-    I = n(5192),
-    v = n(111361),
+    v = n(5192),
+    I = n(111361),
     O = n(785717),
-    N = n(221292),
-    P = n(687158),
+    P = n(221292),
+    N = n(687158),
     T = n(771362),
     Z = n(510659),
     A = n(113557),
-    C = n(648052),
-    w = n(867176),
+    w = n(648052),
+    C = n(867176),
     E = n(280885),
     S = n(537006),
     L = n(681837),
-    B = n(78806),
-    R = n(91433),
-    G = n(451834),
-    k = n(900927),
-    D = n(944043),
+    k = n(78806),
+    B = n(91433),
+    R = n(451834),
+    D = n(900927),
+    G = n(944043),
     U = n(502762),
     M = n(530),
     F = n(4517),
@@ -63,23 +63,23 @@ function $(e) {
             roleId: er,
             showGuildProfile: eu
         }),
-        ex = o.useRef(null),
-        eb = (0, s.Z)(ex),
+        eb = o.useRef(null),
+        ex = (0, s.Z)(eb),
         e_ = (0, Z.$m)(),
-        eh = (0, l.q_F)({
+        ej = (0, l.q_F)({
             opacity: +(null != e_.interactionType),
             config: { duration: 150 }
         }),
-        ej = o.useMemo(() => (null != ee ? { [ee]: [n.id] } : {}), [ee, n.id]);
-    (0, d.$)(ej);
-    let ey = (0, P.ZP)(n.id, eu ? ee : void 0),
-        eI = I.ZP.useName(null == ey ? void 0 : ey.guildId, et, n),
-        { relationshipType: ev, originApplicationId: eO } = (0, a.cj)([j.Z], () => ({
-            relationshipType: j.Z.getRelationshipType(n.id),
-            originApplicationId: j.Z.getOriginApplicationId(n.id)
+        eh = o.useMemo(() => (null != ee ? { [ee]: [n.id] } : {}), [ee, n.id]);
+    (0, d.$)(eh);
+    let ey = (0, N.ZP)(n.id, eu ? ee : void 0),
+        ev = v.ZP.useName(null == ey ? void 0 : ey.guildId, et, n),
+        { relationshipType: eI, originApplicationId: eO } = (0, a.cj)([h.Z], () => ({
+            relationshipType: h.Z.getRelationshipType(n.id),
+            originApplicationId: h.Z.getOriginApplicationId(n.id)
         })),
-        eN = (0, a.e7)([y.Z], () => y.Z.hidePersonalInformation),
-        eP =
+        eP = (0, a.e7)([y.Z], () => y.Z.hidePersonalInformation),
+        eN =
             null == ey
                 ? void 0
                 : ey.getBannerURL({
@@ -92,11 +92,11 @@ function $(e) {
             user: n,
             currentUser: $
         }),
-        eC = (0, b.Y)({ userId: n.id }),
-        ew = (0, x.vh)(n.id),
+        ew = (0, x.Y)({ userId: n.id }),
+        eC = (0, b.vh)(n.id),
         eE = (0, T.Z)(n.id),
         eS = (0, m.Dt)(),
-        eL = q.intl.format(q.t.KRe1Fh, { name: eI });
+        eL = q.intl.format(q.t.KRe1Fh, { name: ev });
     return (0, r.jsx)(f.Gt, {
         value: ep,
         children: (0, r.jsx)(O.Mt, {
@@ -152,29 +152,29 @@ function $(e) {
                                 displayProfile: ey,
                                 themeType: K.lY.MODAL_V2,
                                 children: [
-                                    null != eP &&
+                                    null != eN &&
                                         (0, r.jsx)('div', {
                                             className: Q.backgroundImage,
-                                            style: { backgroundImage: 'url('.concat(eP, ')') }
+                                            style: { backgroundImage: 'url('.concat(eN, ')') }
                                         }),
                                     null != e_.interactionType &&
                                         (0, r.jsx)(i.animated.div, {
-                                            style: eh,
+                                            style: ej,
                                             className: Q.backdrop
                                         }),
                                     (0, r.jsxs)('div', {
                                         className: Q.profile,
-                                        ref: (null == ey ? void 0 : ey.profileEffectId) != null ? ex : void 0,
+                                        ref: (null == ey ? void 0 : ey.profileEffectId) != null ? eb : void 0,
                                         children: [
                                             (0, r.jsxs)('div', {
                                                 className: Q.profileHeader,
                                                 children: [
-                                                    (0, r.jsx)(w.Z, {
+                                                    (0, r.jsx)(C.Z, {
                                                         user: n,
                                                         displayProfile: ey,
                                                         themeType: K.lY.MODAL_V2
                                                     }),
-                                                    (0, r.jsx)(G.Z, {
+                                                    (0, r.jsx)(R.Z, {
                                                         userId: n.id,
                                                         onClose: ed,
                                                         className: Q.toast
@@ -206,23 +206,23 @@ function $(e) {
                                                     (0, r.jsx)(M.Z, {
                                                         user: n,
                                                         onClose: ed,
-                                                        nickname: I.ZP.useName(null == ey ? void 0 : ey.guildId, et, n),
+                                                        nickname: v.ZP.useName(null == ey ? void 0 : ey.guildId, et, n),
                                                         nicknameIcons: (0, r.jsx)(L.Z, {
                                                             size: 'sm',
                                                             userId: n.id
                                                         }),
                                                         nicknameVariant: 'heading-xl/semibold',
                                                         pronouns: null == ey ? void 0 : ey.pronouns,
-                                                        tags: (0, r.jsx)(C.Z, {
+                                                        tags: (0, r.jsx)(w.Z, {
                                                             displayProfile: ey,
                                                             themeType: K.lY.MODAL_V2,
                                                             onClose: ed
                                                         })
                                                     }),
-                                                    ev === X.OGo.PENDING_INCOMING &&
+                                                    eI === X.OGo.PENDING_INCOMING &&
                                                         (0, r.jsx)(U.Z.Overlay, {
                                                             className: Q.profileOverlay,
-                                                            children: (0, r.jsx)(R.Z, {
+                                                            children: (0, r.jsx)(B.Z, {
                                                                 user: n,
                                                                 applicationId: eO,
                                                                 guildId: null != (t = null == ey ? void 0 : ey.guildId) ? t : void 0,
@@ -230,14 +230,14 @@ function $(e) {
                                                                 className: Q.profileBanner
                                                             })
                                                         }),
-                                                    ew.map((e) => {
+                                                    eC.map((e) => {
                                                         var t;
                                                         let { applicationId: o } = e;
                                                         return (0, r.jsx)(
                                                             U.Z.Overlay,
                                                             {
                                                                 className: Q.profileOverlay,
-                                                                children: (0, r.jsx)(R.Z, {
+                                                                children: (0, r.jsx)(B.Z, {
                                                                     user: n,
                                                                     guildId: null != (t = null == ey ? void 0 : ey.guildId) ? t : void 0,
                                                                     channelId: et,
@@ -260,7 +260,7 @@ function $(e) {
                                                                     color: 'currentColor'
                                                                 }),
                                                                 className: Q.profileBanner,
-                                                                children: (0, r.jsx)(h.n, {
+                                                                children: (0, r.jsx)(j.n, {
                                                                     userId: n.id,
                                                                     variant: 'text-sm/normal'
                                                                 })
@@ -268,10 +268,10 @@ function $(e) {
                                                         }),
                                                     n.id === $.id &&
                                                         (0, r.jsx)(S.Z, {
-                                                            isPremiumUser: (0, v.I5)($),
+                                                            isPremiumUser: (0, I.I5)($),
                                                             onInteraction: ed
                                                         }),
-                                                    (0, r.jsx)(D.Z, {
+                                                    (0, r.jsx)(G.Z, {
                                                         user: n,
                                                         className: Q.profileBanner
                                                     }),
@@ -283,25 +283,25 @@ function $(e) {
                                                             guildId: ee,
                                                             channelId: et,
                                                             displayProfile: ey,
-                                                            relationshipType: ev,
+                                                            relationshipType: eI,
                                                             onClose: ed
                                                         })
                                                     }),
                                                     (null == ey ? void 0 : ey.bio) != null &&
                                                         (null == ey ? void 0 : ey.bio) !== '' &&
-                                                        !eN &&
+                                                        !eP &&
                                                         (0, r.jsx)(E.Z, {
                                                             userBio: ey.bio,
                                                             setLineClamp: !1
                                                         }),
-                                                    eC.length > 0 &&
+                                                    ew.length > 0 &&
                                                         (0, r.jsx)(H.Z, {
                                                             heading: q.intl.string(q.t['Uv/eT0']),
-                                                            children: (0, r.jsx)(B.Z, { applicationIds: eC })
+                                                            children: (0, r.jsx)(k.Z, { applicationIds: ew })
                                                         }),
                                                     (0, r.jsx)(H.Z, {
                                                         heading: q.intl.string(q.t.a6XYDw),
-                                                        children: (0, r.jsx)(k.Z, {
+                                                        children: (0, r.jsx)(D.Z, {
                                                             userId: n.id,
                                                             guildId: null == ey ? void 0 : ey.guildId,
                                                             tooltipDelay: K.vB
@@ -335,7 +335,7 @@ function $(e) {
                                                             className: Q.profileNote,
                                                             autoFocus: ea === K.Tb.NOTE,
                                                             onUpdate: () =>
-                                                                (0, N.pQ)(
+                                                                (0, P.pQ)(
                                                                     (function (e) {
                                                                         for (var t = 1; t < arguments.length; t++) {
                                                                             var n = null != arguments[t] ? arguments[t] : {},
@@ -369,7 +369,7 @@ function $(e) {
                                             (null == ey ? void 0 : ey.profileEffectId) != null &&
                                                 (0, r.jsx)(_.Z, {
                                                     profileEffectId: null == ey ? void 0 : ey.profileEffectId,
-                                                    isHovering: eb
+                                                    isHovering: ex
                                                 })
                                         ]
                                     }),

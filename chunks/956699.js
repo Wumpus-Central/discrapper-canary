@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(491428),
     _ = n(225433),
     j = n(484614),
-    E = n(386506),
-    O = n(865427),
+    O = n(386506),
+    E = n(865427),
     C = n(802098),
     v = n(663993),
     S = n(600164),
@@ -190,7 +190,7 @@ class es extends r.Component {
 class ea extends r.Component {
     async refreshBuildOverrides() {
         this.setState({ loading: !0 });
-        let e = await (0, O.Ce)();
+        let e = await (0, E.Ce)();
         this.setState({
             loading: !1,
             buildOverrides: e,
@@ -445,7 +445,7 @@ class ea extends r.Component {
                 let { buildOverrides: e } = this.state;
                 if (null == e) return;
                 this.setState({ saving: !0 });
-                let t = await (0, E.aD)(e);
+                let t = await (0, O.aD)(e);
                 if (200 === t.status) {
                     let e = t.body;
                     this.setState({
@@ -800,7 +800,7 @@ class el extends r.Component {
                 if (this.isMobile() && 0 === this.state.allowedVersions.length) return void this.setAllowedVersionError('You must add at least one allowed version for iOS');
                 this.setStatusMessage(null);
                 let e = this.generatePayload(),
-                    t = await (0, E.M3)(e);
+                    t = await (0, O.M3)(e);
                 !1 !== t.error ? this.setStatusMessage(JSON.stringify(t.error), 0) : (this.setState({ publicLink: t.url.toString() }), 0 === e.meta.user_ids.length && this.setStatusMessage('Warning! No users added to the whitelist! This link could be used by anyone to override their build.', 1));
             }));
     }

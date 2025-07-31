@@ -96,7 +96,7 @@ function j(e) {
     var t, l;
     let d = i.useRef(null),
         { parentAnalyticsLocation: p } = (0, f.ZP)(),
-        { channel: O, user: j, nick: A, mute: Z, deaf: x, serverMute: w, serverDeaf: L } = e,
+        { channel: O, user: j, nick: A, mute: x, deaf: Z, serverMute: w, serverDeaf: L } = e,
         R = (0, o.e7)([E.Z], () => E.Z.isLocalMute(j.id)),
         D = (0, u.Z)({
             userId: j.id,
@@ -108,7 +108,7 @@ function j(e) {
         {
             icon: G,
             colorize: V,
-            getStatus: B
+            getStatus: H
         } = null !=
         (l = (function (e) {
             let { serverDeaf: t, deaf: n, serverMute: r, mute: i, localMute: l } = e;
@@ -119,18 +119,18 @@ function j(e) {
             if (i) return P.mute;
         })({
             serverDeaf: L,
-            deaf: x,
+            deaf: Z,
             serverMute: w,
-            mute: Z,
+            mute: x,
             localMute: R
         }))
             ? l
             : {},
-        H =
-            null != B
+        B =
+            null != H
                 ? I.intl.formatToPlainString(I.t['1+MVBA'], {
                       userName: U,
-                      status: B()
+                      status: H()
                   })
                 : U;
     function F(e) {
@@ -171,7 +171,7 @@ function j(e) {
         clickTrap: !0,
         children: (e) =>
             (0, r.jsx)(s.ua7, {
-                text: H,
+                text: B,
                 children: (t) =>
                     (0, r.jsx)(
                         s.P3F,

@@ -72,7 +72,7 @@ function R() {
         G = (0, s.e7)([C.Z], () => C.Z.getChannelId(N.I_8)),
         B = (0, s.e7)([y.Z], () => y.Z.getChannel(G)),
         V = (0, _.Z)((e) => e.guildId) === N.I_8,
-        { badge: F, unread: H } = (0, x.Z)(U),
+        { badge: H, unread: F } = (0, x.Z)(U),
         z = (function (e) {
             let t = (0, s.e7)([C.Z], () => C.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
@@ -108,7 +108,7 @@ function R() {
                 })
             );
         })(U),
-        W = F > 0 ? (0, b.N)(F) : null,
+        W = H > 0 ? (0, b.N)(H) : null,
         K = i.useCallback(() => {
             D();
         }, [D]);
@@ -117,7 +117,7 @@ function R() {
             (0, r.jsx)(f.Z, {
                 selected: V,
                 hovered: L,
-                unread: H && !k,
+                unread: F && !k,
                 className: T.pill
             }),
             (0, r.jsx)(P.Z, {
@@ -134,7 +134,7 @@ function R() {
                                 {
                                     ariaLabel: w.intl.formatToPlainString(w.t['/uzRsr'], {
                                         guildName: w.intl.string(w.t.wMWycn),
-                                        mentions: F
+                                        mentions: H
                                     }),
                                     'aria-selected': V,
                                     to: {

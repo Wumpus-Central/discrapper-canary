@@ -194,7 +194,7 @@ function Q(e) {
     t.startsWith('"') && t.endsWith('"') && (t = t.substring(1, t.length - 1).replaceAll(/\\(.)/g, (e, t) => t));
     let n = y.Z.getSelectedSearchContext();
     if (null == n) return !1;
-    if (n.type === A.aib.GUILD) return q(e, t, n.guildId);
+    if ((0, O.b7)(n)) return q(e, t, n.guildId);
     let r = (0, I.a)({ location: 'channelValidator' }),
         i = (0, T.J)({ location: 'channelValidator' }),
         a = r || i;
@@ -274,6 +274,8 @@ function ei(e) {
         };
     switch (r.type) {
         case A.aib.GUILD:
+        case A.aib.GUILD_CHANNEL:
+        case A.aib.THREAD:
             t = g.ZP.queryGuildUsers(w(R({}, o), { guildId: r.guildId }));
             break;
         case A.aib.CHANNEL:
@@ -422,7 +424,7 @@ function es(e, t, n) {
         .value();
 }
 function el(e, t, n) {
-    if ((e.startsWith('"') && e.endsWith('"') ? (e = e.substring(1, e.length - 1).replaceAll(/\\(.)/g, (e, t) => t)) : e.startsWith('"') && (e = e.substring(1).replaceAll(/\\(.)/g, (e, t) => t)), '#' === e[0] && (e = e.substring(1)), t.type === A.aib.GUILD)) return es(e, t.guildId, n);
+    if ((e.startsWith('"') && e.endsWith('"') ? (e = e.substring(1, e.length - 1).replaceAll(/\\(.)/g, (e, t) => t)) : e.startsWith('"') && (e = e.substring(1).replaceAll(/\\(.)/g, (e, t) => t)), '#' === e[0] && (e = e.substring(1)), (0, O.b7)(t))) return es(e, t.guildId, n);
     let r = (0, I.a)({ location: 'getInFilterAutocompletions' }),
         i = (0, T.J)({ location: 'getInFilterAutocompletions' }),
         a = r || i;
@@ -568,7 +570,7 @@ function ed() {
             plainText: N.intl.string(N.t.WNpFHR),
             validator: () => {
                 let e = y.Z.getSelectedSearchContext();
-                return null != e && (0, O.R6)(e.type);
+                return null != e && (0, O.R6)(e);
             },
             getAutocompletions(e) {
                 let { query: t, searchContext: n, maxResults: r } = e;

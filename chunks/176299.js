@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(652515),
     j = n(544978),
     A = n(540059),
-    Z = n(591472),
-    x = n(351051),
+    x = n(591472),
+    Z = n(351051),
     w = n(724383),
     L = n(135864),
     R = n(372900),
@@ -38,16 +38,16 @@ var r = n(255367),
     U = n(269675),
     G = n(242601),
     V = n(416568),
-    B = n(613609),
-    H = n(160404),
+    H = n(613609),
+    B = n(160404),
     F = n(225675),
     z = n(927723),
     W = n(745052),
     Y = n(285865),
     K = n(659971),
     q = n(821020),
-    X = n(147341),
-    Q = n(82409),
+    Q = n(147341),
+    X = n(82409),
     J = n(664608),
     $ = n(270759),
     ee = n(509212),
@@ -105,11 +105,11 @@ function eA(e) {
     }
     return e;
 }
-let eZ = (0, u.Un)({
+let ex = (0, u.Un)({
         createPromise: () => Promise.resolve().then(n.bind(n, 267161)),
         webpackId: 267161
     }),
-    ex = () =>
+    eZ = () =>
         (0, r.jsx)('div', {
             className: ej.loader,
             children: (0, r.jsx)(f.$jN, {})
@@ -118,37 +118,37 @@ let eZ = (0, u.Un)({
         createPromise: () => n.e('78431').then(n.bind(n, 650788)),
         webpackId: 650788,
         name: 'GuildShopPage',
-        renderLoader: ex
+        renderLoader: eZ
     }),
     eL = (0, u.Un)({
         createPromise: () => n.e('12009').then(n.bind(n, 231588)),
         webpackId: 231588,
         name: 'GuildHomePage',
-        renderLoader: ex
+        renderLoader: eZ
     }),
     eR = (0, u.Un)({
         createPromise: () => Promise.all([n.e('58175'), n.e('6850'), n.e('9924')]).then(n.bind(n, 545918)),
         webpackId: 545918,
         name: 'MemberSafetyPage',
-        renderLoader: ex
+        renderLoader: eZ
     }),
     eD = (0, u.Un)({
         createPromise: () => Promise.all([n.e('44156'), n.e('58227'), n.e('58121')]).then(n.bind(n, 603072)),
         webpackId: 603072,
         name: 'ChannelsAndRolesPage',
-        renderLoader: ex
+        renderLoader: eZ
     }),
     ek = (0, u.Un)({
         createPromise: () => Promise.all([n.e('44156'), n.e('37709')]).then(n.bind(n, 599263)),
         webpackId: 599263,
         name: 'GuildOnboardingPage',
-        renderLoader: ex
+        renderLoader: eZ
     }),
     eM = (0, u.Un)({
         createPromise: () => n.e('44799').then(n.bind(n, 393357)),
         webpackId: 393357,
         name: 'GuildPowerupsPage',
-        renderLoader: ex
+        renderLoader: eZ
     }),
     eU = (e) => {
         let { match: t } = e,
@@ -160,9 +160,9 @@ let eZ = (0, u.Un)({
             { guildId: l, channelId: a, messageId: o, threadId: c } = t.params,
             u = (0, p.e7)([ed.Z], () => ed.Z.getGuild(l)),
             d = (0, p.e7)([eu.ZP], () => (null == l ? null : eu.ZP.getSelfMember(l))),
-            h = (0, p.e7)([H.Z], () => {
+            h = (0, p.e7)([B.Z], () => {
                 if (null == l) return;
-                let e = H.Z.getData(l);
+                let e = B.Z.getData(l);
                 if ((null == e ? void 0 : e.type) === F.z.SERVER_SHOP)
                     switch (e.initialTab) {
                         case 'role_subscriptions':
@@ -240,8 +240,8 @@ let eZ = (0, u.Un)({
         let { guildId: e, channelId: t } = (0, er.Z)(),
             { notificationCenterVariant: n } = q.Lk.useExperiment({ location: 'Sidebar' }),
             i = (0, p.e7)([ep.Z], () => (null != t ? t : ep.Z.getChannelId(e)));
-        return window.location.pathname.startsWith(eC.Z5c.NOTIFICATIONS_INBOX())
-            ? ('sidebar' !== n && (0, ea.dL)(ec.Z.defaultRoute), (0, r.jsx)(Q.Z, { includePanelSpacing: !0 }))
+        return window.location.pathname.startsWith(eC.Z5c.CHANNEL(eC.STv))
+            ? ('sidebar' !== n && (0, ea.dL)(ec.Z.defaultRoute), (0, r.jsx)(X.Z, { includePanelSpacing: !0 }))
             : window.location.pathname.startsWith(eC.Z5c.GLOBAL_DISCOVERY) || window.location.pathname.startsWith(eC.Z5c.GUILD_DISCOVERY) || (0, ee.OG)()
               ? (0, r.jsx)(L.Z, {})
               : null != e
@@ -256,8 +256,8 @@ let eZ = (0, u.Un)({
                 : (0, r.jsx)(eE.Z, {});
     }),
     eV = (e) => (0, r.jsx)(eU, eA({}, e)),
-    eB = () => (0, r.jsx)(w.Z, {}),
-    eH = (e) => (null != e.match.params.channelId ? eV(e) : (0, r.jsx)(X.Z, {})),
+    eH = () => (0, r.jsx)(w.Z, {}),
+    eB = (e) => (null != e.match.params.channelId ? eV(e) : (0, r.jsx)(Q.Z, {})),
     eF = (e) => {
         let { match: t } = e;
         return null != t.params.guildId ? (0, r.jsx)(D.Z, { guildId: t.params.guildId }) : null;
@@ -265,7 +265,7 @@ let eZ = (0, u.Un)({
     ez = (e) => {
         let { match: t } = e;
         return null != t.params.guildId
-            ? (0, r.jsx)(B.Z, {
+            ? (0, r.jsx)(H.Z, {
                   guildId: t.params.guildId,
                   inviteCode: t.params.inviteCode
               })
@@ -292,8 +292,8 @@ let eZ = (0, u.Un)({
         };
     },
     eq = (e) => (0, r.jsx)(y.Z, eA({}, e)),
-    eX = () => (0, r.jsx)($.Z, {}),
-    eQ = () => (0, r.jsx)(W.Z, {}),
+    eQ = () => (0, r.jsx)($.Z, {}),
+    eX = () => (0, r.jsx)(W.Z, {}),
     eJ = () => (0, r.jsx)(J.Z, {}),
     e$ = (e) => {
         let { match: t } = e;
@@ -523,7 +523,7 @@ function e8() {
         O = (0, A.T)('AppView'),
         y = (0, T.useAppSidebarState)((e) => !e.isOpen),
         C = (0, p.e7)([I.Z], () => I.Z.isFullscreenInContext()),
-        N = (0, p.e7)([Z.Z], () => Z.Z.isFrameActive());
+        N = (0, p.e7)([x.Z], () => x.Z.isFrameActive());
     return (0, r.jsx)('div', {
         className: ej.container,
         children: (0, r.jsx)(R.Z.Provider, {
@@ -532,7 +532,7 @@ function e8() {
                 className: ej.base,
                 'data-fullscreen': C,
                 children: [
-                    !C && (0, r.jsx)(eZ, {}),
+                    !C && (0, r.jsx)(ex, {}),
                     d.tq ? null : (0, r.jsx)(eO.Z, {}),
                     (0, r.jsxs)('div', {
                         className: ej.content,
@@ -602,7 +602,7 @@ function e8() {
                                                 }),
                                                 (0, r.jsx)(v.Z, {
                                                     path: eC.Z5c.MESSAGE_REQUESTS,
-                                                    render: eQ,
+                                                    render: eX,
                                                     disableTrack: !0
                                                 }),
                                                 (0, r.jsx)(v.Z, {
@@ -613,14 +613,14 @@ function e8() {
                                                 (0, r.jsx)(v.Z, {
                                                     path: eC.Z5c.ME,
                                                     exact: !0,
-                                                    render: eX,
+                                                    render: eQ,
                                                     impressionName: c.ImpressionNames.FRIENDS,
                                                     disableTrack: !0
                                                 }),
                                                 f === q.jP.SIDEBAR &&
                                                     (0, r.jsx)(v.Z, {
-                                                        path: eC.Z5c.NOTIFICATIONS_INBOX(el.Hw.channelId({ optional: !0 }), ':messageId?'),
-                                                        render: eH,
+                                                        path: eC.Z5c.CHANNEL(eC.STv, el.Hw.channelId({ optional: !0 }), ':messageId?'),
+                                                        render: eB,
                                                         disableTrack: !0
                                                     }),
                                                 (0, r.jsx)(v.Z, {
@@ -631,32 +631,32 @@ function e8() {
                                                 }),
                                                 (0, r.jsx)(v.Z, {
                                                     path: eC.Z5c.GLOBAL_DISCOVERY,
-                                                    render: eB,
+                                                    render: eH,
                                                     impressionName: c.ImpressionNames.GLOBAL_DISCOVERY,
                                                     disableTrack: !0,
                                                     exact: !0
                                                 }),
                                                 (0, r.jsx)(v.Z, {
                                                     path: eC.Z5c.GLOBAL_DISCOVERY_SERVERS,
-                                                    render: eB,
+                                                    render: eH,
                                                     impressionName: c.ImpressionNames.GLOBAL_DISCOVERY,
                                                     disableTrack: !0
                                                 }),
                                                 (0, r.jsx)(v.Z, {
                                                     path: eC.Z5c.GLOBAL_DISCOVERY_APPS,
-                                                    render: eB,
+                                                    render: eH,
                                                     impressionName: c.ImpressionNames.GLOBAL_DISCOVERY_APPS,
                                                     disableTrack: !0
                                                 }),
                                                 (0, r.jsx)(v.Z, {
                                                     path: eC.Z5c.QUEST_HOME,
-                                                    render: eB,
+                                                    render: eH,
                                                     impressionName: c.ImpressionNames.QUEST_HOME,
                                                     disableTrack: !0
                                                 }),
                                                 (0, r.jsx)(v.Z, {
                                                     path: eC.Z5c.GUILD_DISCOVERY,
-                                                    render: eB,
+                                                    render: eH,
                                                     impressionName: c.ImpressionNames.GUILD_DISCOVERY,
                                                     disableTrack: !0
                                                 }),
@@ -689,7 +689,7 @@ function e8() {
                                                 })
                                             ]
                                         }),
-                                        N && (0, r.jsx)(x.Z, {})
+                                        N && (0, r.jsx)(Z.Z, {})
                                     ]
                                 })
                             })

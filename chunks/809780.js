@@ -1,5 +1,5 @@
 (n.d(t, {
-    As: () => H,
+    As: () => F,
     ZP: () => $,
     hC: () => W,
     jd: () => z
@@ -73,7 +73,7 @@ function V(e) {
     }
     return e;
 }
-function F(e, t) {
+function H(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -91,7 +91,7 @@ function F(e, t) {
         e
     );
 }
-var H = (((r = {})[(r.Favorite = 0)] = 'Favorite'), (r[(r.PrivateChannel = 1)] = 'PrivateChannel'), (r[(r.HighImportanceMentioned = 2)] = 'HighImportanceMentioned'), (r[(r.LowImportanceMentioned = 3)] = 'LowImportanceMentioned'), (r[(r.AllMessagesNotifications = 4)] = 'AllMessagesNotifications'), (r[(r.GuildChannel = 5)] = 'GuildChannel'), (r[(r.OldChannel = 6)] = 'OldChannel'), (r[(r.NoNotifications = 7)] = 'NoNotifications'), (r[(r.ReallyOldChannel = 8)] = 'ReallyOldChannel'), r),
+var F = (((r = {})[(r.Favorite = 0)] = 'Favorite'), (r[(r.PrivateChannel = 1)] = 'PrivateChannel'), (r[(r.HighImportanceMentioned = 2)] = 'HighImportanceMentioned'), (r[(r.LowImportanceMentioned = 3)] = 'LowImportanceMentioned'), (r[(r.AllMessagesNotifications = 4)] = 'AllMessagesNotifications'), (r[(r.GuildChannel = 5)] = 'GuildChannel'), (r[(r.OldChannel = 6)] = 'OldChannel'), (r[(r.NoNotifications = 7)] = 'NoNotifications'), (r[(r.ReallyOldChannel = 8)] = 'ReallyOldChannel'), r),
     z = (((i = {}).Loading = 'loading'), (i.Loaded = 'loaded'), (i.Done = 'done'), i);
 let W = 25;
 class K extends o.EventEmitter {
@@ -102,7 +102,7 @@ class K extends o.EventEmitter {
             r = t.map((e) => {
                 if (e.isFullyLoaded || e.deleted || n) return e;
                 if (e.collapsed)
-                    if (!e.hasLoadedAnything) return F(V({}, e), { hasLoadedAnything: !0 });
+                    if (!e.hasLoadedAnything) return H(V({}, e), { hasLoadedAnything: !0 });
                     else return e;
                 return ((e = this.populateInitialStateFromStore(e)).isFullyLoaded || (s()('nsfw' !== e.type, 'this channel should already be loaded'), 'messages' === e.type && this.loadChannelMessages(e) && (n = !0)), e);
             });
@@ -115,13 +115,13 @@ class K extends o.EventEmitter {
     populateInitialStateFromStore(e) {
         if ('messages' === e.type) return Y(e, !1);
         if ('nsfw' === e.type)
-            return F(V({}, e), {
+            return H(V({}, e), {
                 isFullyLoaded: !0,
                 hasLoadedAnything: !0
             });
         if ('forum' === e.type) {
             let t = C.Z.hasLoaded(e.guildId);
-            return F(V({}, e), {
+            return H(V({}, e), {
                 isFullyLoaded: t,
                 hasLoadedAnything: !0
             });
@@ -154,7 +154,7 @@ class K extends o.EventEmitter {
                             let n = Y(e, !0);
                             return (
                                 (0 === n.messages.length || n.messages.length === e.messages.length) &&
-                                    (n = F(V({}, n), {
+                                    (n = H(V({}, n), {
                                         hasLoadedAnything: !0,
                                         isFullyLoaded: !0,
                                         hasError: !t
@@ -171,7 +171,7 @@ class K extends o.EventEmitter {
                             var t;
                             return (
                                 s()('messages' === e.type, 'channel cannot change type'),
-                                F(V({}, Y(e, !0)), {
+                                H(V({}, Y(e, !0)), {
                                     isFullyLoaded: !0,
                                     hasError: !0,
                                     hasLoadedAnything: !0,
@@ -241,7 +241,7 @@ class K extends o.EventEmitter {
                 );
                 let r = this.state.channels.find((e) => e.channelId === t);
                 if ((null != r && this.undoStack.push(r), 1 === this.state.channels.length)) return void this.deleteChannel(t);
-                (this.setState({ channels: this.updateChannel(t, (e) => F(V({}, e), { deleted: !0 })) }), f.Z.useReducedMotion && this.deleteChannel(t), this.maybeLoadMore());
+                (this.setState({ channels: this.updateChannel(t, (e) => H(V({}, e), { deleted: !0 })) }), f.Z.useReducedMotion && this.deleteChannel(t), this.maybeLoadMore());
             }),
             (this.undoMarkChannelRead = () => {
                 if (0 === this.undoStack.length) return;
@@ -304,7 +304,7 @@ class K extends o.EventEmitter {
                         scrollToChannelIndex: o,
                         collapsedChannels: i,
                         loadState: 'done' !== l || s || a.isFullyLoaded ? l : 'loaded',
-                        channels: this.updateChannel(t, (e) => F(V({}, e), { collapsed: s }))
+                        channels: this.updateChannel(t, (e) => H(V({}, e), { collapsed: s }))
                     }),
                     a.collapsed ? a.isFullyLoaded || this.loadMore() : this.maybeLoadMore());
             }),
@@ -322,7 +322,7 @@ class K extends o.EventEmitter {
                     {
                         if (!e.hasLoadedAnything) return e;
                         let t = C.Z.hasLoaded(e.guildId);
-                        return F(V({}, e), {
+                        return H(V({}, e), {
                             isFullyLoaded: t,
                             hasLoadedAnything: !0
                         });
@@ -342,7 +342,7 @@ function Y(e, t) {
     let o = null != i.getAfter(e.oldestReadMessageId) || (null == (n = l[0]) ? void 0 : n.id) === e.oldestUnreadMessageId,
         a = l[l.length - 1],
         s = k.default.compare(null == a ? void 0 : a.id, e.newestUnreadMessageId) >= 0 || l.length >= W;
-    return F(V({}, e), {
+    return H(V({}, e), {
         messages: l,
         hasLoadedAnything: e.hasLoadedAnything || o || t,
         hasLoadedFirst: e.hasLoadedFirst || o || t,
@@ -450,11 +450,11 @@ function X(e, t, n, r) {
         order: 0
     };
     (0, m.aC)(i) && !N.Z.didAgree(i.guild_id)
-        ? t.push(F(V({}, u), { type: 'nsfw' }))
+        ? t.push(H(V({}, u), { type: 'nsfw' }))
         : i.isForumLikeChannel()
-          ? t.push(F(V({}, u), { type: 'forum' }))
+          ? t.push(H(V({}, u), { type: 'forum' }))
           : t.push(
-                F(V({}, u), {
+                H(V({}, u), {
                     type: 'messages',
                     messages: []
                 })

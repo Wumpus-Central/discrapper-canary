@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(526167),
     j = n(63063),
     A = n(113434),
-    Z = n(833435),
-    x = n(150560),
+    x = n(833435),
+    Z = n(150560),
     w = n(672188),
     L = n(558652),
     R = n(736683),
@@ -38,8 +38,8 @@ var r = n(255367),
     U = n(452081),
     G = n(46140),
     V = n(981631),
-    B = n(215023),
-    H = n(388032),
+    H = n(215023),
+    B = n(388032),
     F = n(87671),
     z = n(13299),
     W = n(606199),
@@ -85,8 +85,8 @@ function K(e) {
 let q = function () {
     let { selectedTab: e, onSelectTab: t, tabs: n } = (0, U.z)(),
         { onScroll: l, scrollPosition: s } = (0, b.M)(),
-        d = x.Z.getState().getUtmCurrentContext(),
-        m = (0, Z._)({ location: G.dr.QUEST_HOME_DESKTOP }) ? R.Z : R.j,
+        d = Z.Z.getState().getUtmCurrentContext(),
+        m = (0, x._)({ location: G.dr.QUEST_HOME_DESKTOP }) ? R.Z : R.j,
         P = (0, D.z)((e) => e.registerAssetLoad),
         w = i.useRef(d);
     (i.useEffect(() => {
@@ -112,10 +112,10 @@ let q = function () {
             if (z) return void window.open(V.EYA.PAID_TERMS_ORBS);
             window.open(j.Z.getArticleURL(V.BhN.QUESTS_LEARN_MORE));
         }, [z]);
-    (0, g.Tt)({ location: H.intl.string(H.t.JALI2N) });
-    let q = z ? H.intl.format(H.t.BCBIlp, {}) : H.intl.format(H.t.lmMBf3, {}),
-        X = z ? H.intl.format(H.t.U9FY0N, {}) : H.intl.string(H.t.oWCrBg),
-        Q = i.useRef(null),
+    (0, g.Tt)({ location: B.intl.string(B.t.JALI2N) });
+    let q = z ? B.intl.format(B.t.BCBIlp, {}) : B.intl.format(B.t.lmMBf3, {}),
+        Q = z ? B.intl.format(B.t.U9FY0N, {}) : B.intl.string(B.t.oWCrBg),
+        X = i.useRef(null),
         J = i.useCallback(() => {
             ((0, C.Y)({
                 pageType: V.ZY5.GLOBAL_DISCOVERY_QUESTS,
@@ -124,7 +124,7 @@ let q = function () {
             }),
                 (0, f.mK)({
                     openInLayer: !1,
-                    tab: B.AW.ORBS,
+                    tab: H.AW.ORBS,
                     analyticsLocations: [],
                     analyticsSource: p.Z.ORBS_BALANCE_MENU
                 }));
@@ -135,10 +135,10 @@ let q = function () {
             className: F.container,
             children: z
                 ? (0, r.jsx)(M.t.Provider, {
-                      value: Q,
+                      value: X,
                       children: (0, r.jsxs)(I.Z, {
                           onScroll: l,
-                          ref: Q,
+                          ref: X,
                           children: [
                               (0, r.jsx)(v.a, {
                                   selectedTabId: e,
@@ -148,24 +148,24 @@ let q = function () {
                                   children: (0, r.jsx)(T.V9, {
                                       analyticsPage: V.ZY5.GLOBAL_DISCOVERY_QUESTS,
                                       cardAlignment: T.ek.END,
-                                      ctaText: H.intl.string(H.t['J+vlIS']),
+                                      ctaText: B.intl.string(B.t['J+vlIS']),
                                       ctaOnClick: J
                                   })
                               }),
                               (0, r.jsxs)(_.Z, {
                                   title: q,
-                                  description: X,
+                                  description: Q,
                                   betaTag: z && W,
                                   button: z
                                       ? (0, r.jsxs)(r.Fragment, {
                                             children: [
                                                 (0, r.jsx)(u.zxk, {
                                                     variant: 'overlay-primary',
-                                                    text: H.intl.string(H.t['1Wm129']),
+                                                    text: B.intl.string(B.t['1Wm129']),
                                                     onClick: () =>
                                                         (0, f.mK)({
                                                             openInLayer: !1,
-                                                            tab: B.AW.ORBS,
+                                                            tab: H.AW.ORBS,
                                                             analyticsLocations: [],
                                                             analyticsSource: p.Z.INTRO_TO_ORBS_QUEST_BANNER
                                                         })
@@ -175,13 +175,13 @@ let q = function () {
                                                     color: c.Tt.CUSTOM,
                                                     className: F.orbsTermsButton,
                                                     onClick: Y,
-                                                    children: H.intl.string(H.t['7kTAgI'])
+                                                    children: B.intl.string(B.t['7kTAgI'])
                                                 })
                                             ]
                                         })
                                       : (0, r.jsx)(u.zxk, {
                                             variant: 'overlay-primary',
-                                            text: H.intl.string(H.t.hvVgAQ),
+                                            text: B.intl.string(B.t.hvVgAQ),
                                             onClick: Y,
                                             icon: u.Gr1,
                                             iconPosition: 'end'
@@ -200,17 +200,17 @@ let q = function () {
                               children: [(0, r.jsx)('div', { className: F.dragRegion }), (0, r.jsx)(y.z6, { scrollPosition: s }), (0, r.jsx)(y.aV, { icon: u.qDn })]
                           }),
                           (0, r.jsx)(M.t.Provider, {
-                              value: Q,
+                              value: X,
                               children: (0, r.jsxs)(I.Z, {
                                   onScroll: l,
-                                  ref: Q,
+                                  ref: X,
                                   children: [
                                       (0, r.jsxs)(_.Z, {
                                           title: q,
-                                          description: X,
+                                          description: Q,
                                           button: (0, r.jsx)(u.zxk, {
                                               variant: 'overlay-primary',
-                                              text: H.intl.string(H.t.hvVgAQ),
+                                              text: B.intl.string(B.t.hvVgAQ),
                                               onClick: Y,
                                               icon: u.Gr1,
                                               iconPosition: 'end'

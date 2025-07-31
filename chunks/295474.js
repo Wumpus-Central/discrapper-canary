@@ -1,77 +1,77 @@
 (n.d(t, {
-    Ux: () => f,
-    gS: () => h,
-    ww: () => I
+    Ux: () => g,
+    gS: () => f,
+    ww: () => C
 }),
     n(997841));
-var r = n(73800),
-    i = n(399606),
+var i = n(73800),
+    r = n(399606),
     l = n(230711),
-    a = n(18438),
-    o = n(314897),
-    s = n(271383),
+    o = n(18438),
+    s = n(314897),
+    a = n(271383),
     c = n(430824),
-    u = n(496675),
-    d = n(914010),
-    _ = n(715903),
-    E = n(981631),
-    p = n(372897),
-    S = n(526761),
-    O = n(388032);
-function f(e) {
-    return (0, i.e7)(
-        [o.default, s.ZP],
+    d = n(496675),
+    u = n(914010),
+    h = n(715903),
+    _ = n(981631),
+    E = n(372897),
+    p = n(526761),
+    I = n(388032);
+function g(e) {
+    return (0, r.e7)(
+        [s.default, a.ZP],
         () => {
             if (null == e) return !1;
-            let t = o.default.getId();
-            return (0, _.EY)(s.ZP.getMember(e, t));
+            let t = s.default.getId();
+            return (0, h.EY)(a.ZP.getMember(e, t));
         },
         [e]
     );
 }
-function h(e) {
-    return (0, i.cj)(
-        [o.default, s.ZP, d.Z, c.Z],
+function f(e) {
+    return (0, r.cj)(
+        [s.default, a.ZP, u.Z, c.Z],
         () => {
             let t = {
                     nick: void 0,
                     bio: void 0
                 },
-                n = d.Z.getGuildId(),
-                r = null != e ? e : n,
-                i = c.Z.getGuild(r);
-            if (null == i || null == r) return t;
-            let l = o.default.getId(),
-                a = s.ZP.getMember(r, l),
-                u = (0, _.Ow)(null == a ? void 0 : a.flags);
-            if (0 === u.size) return t;
-            if (u.has(p.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME))
+                n = u.Z.getGuildId(),
+                i = null != e ? e : n,
+                r = c.Z.getGuild(i);
+            if (null == r || null == i) return t;
+            let l = s.default.getId(),
+                o = a.ZP.getMember(i, l),
+                d = (0, h.Ow)(null == o ? void 0 : o.flags);
+            if (0 === d.size) return t;
+            if (d.has(E.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME))
                 if (null == e) {
-                    var E;
-                    t.nick = [O.intl.formatToPlainString(O.t.WBUh3N, { guildName: null != (E = i.name) ? E : '' })];
-                } else t.nick = [O.intl.string(O.t.EPZCrK)];
-            return (u.has(p.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [O.intl.string(O.t.dZh1v7)]), t);
+                    var _;
+                    t.nick = [I.intl.formatToPlainString(I.t.WBUh3N, { guildName: null != (_ = r.name) ? _ : '' })];
+                } else t.nick = [I.intl.string(I.t.EPZCrK)];
+            return (d.has(E.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [I.intl.string(I.t.dZh1v7)]), t);
         },
         [e]
     );
 }
-function I(e) {
-    let { guildId: t, scrollPosition: n, analyticsLocation: o, analyticsLocations: s, openWithoutBackstack: d } = e,
-        _ = (0, i.e7)([c.Z], () => c.Z.getGuild(t), [t]),
-        p = (0, i.e7)([u.Z], () => null != _ && u.Z.can(E.Plq.CHANGE_NICKNAME, _), [_]);
+function C(e) {
+    let { guildId: t, scrollPosition: n, analyticsLocation: s, analyticsLocations: a, openWithoutBackstack: u } = e,
+        h = (0, r.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+        E = (0, r.e7)([d.Z], () => null != h && d.Z.can(_.Plq.CHANGE_NICKNAME, h), [h]);
     return [
-        r.useCallback(() => {
-            if (null == _) return;
-            let e = E.oAB.PROFILE_CUSTOMIZATION,
-                t = S.NB.GUILD;
-            (p ? (0, a.Fq)(_) : (t = S.NB.USER_PROFILE),
+        i.useCallback(() => {
+            if (null == h) return;
+            let e = _.oAB.PROFILE_CUSTOMIZATION,
+                t = p.NB.GUILD;
+            (E ? (0, o.Fq)(h) : (t = p.NB.USER_PROFILE),
                 l.Z.open(e, t, {
                     scrollPosition: n,
-                    analyticsLocation: o,
-                    analyticsLocations: s,
-                    openWithoutBackstack: d
+                    analyticsLocation: s,
+                    analyticsLocations: a,
+                    openWithoutBackstack: u
                 }));
-        }, [p, n, o, s, d, _]),
-        p
+        }, [E, n, s, a, u, h]),
+        E
     ];
 }

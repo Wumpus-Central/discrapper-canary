@@ -1,10 +1,13 @@
 n.d(t, {
-    bN: () => o,
-    hX: () => a
+    aY: () => c,
+    bN: () => l,
+    hX: () => s
 });
 var r = n(688619),
-    i = n.n(r);
-function a(e) {
+    i = n.n(r),
+    a = n(522942),
+    o = n(660662);
+function s(e) {
     let t = i()(e),
         n = t.get('hsl.l');
     return {
@@ -15,7 +18,7 @@ function a(e) {
         dark2: t.set('hsl.l', Math.max(0, 0.2 * n)).hex()
     };
 }
-function o(e) {
+function l(e) {
     return null == e
         ? null
         : {
@@ -24,4 +27,17 @@ function o(e) {
               colors: e.colors
           };
 }
-(n(522942), n(660662));
+function c() {
+    let e,
+        t = o.mH[Math.floor(Math.random() * o.mH.length)],
+        n = o.P$[Math.floor(Math.random() * o.P$.length)];
+    if (t === a.m.GRADIENT) {
+        let t = o.vK[Math.floor(Math.random() * o.vK.length)];
+        e = [t.start, t.end];
+    } else e = [o.gD[Math.floor(Math.random() * o.gD.length)]];
+    return {
+        fontId: n,
+        effectId: t,
+        colors: e
+    };
+}

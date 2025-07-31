@@ -1,7 +1,7 @@
-n.d(t, { R: () => l });
-var o = n(818083),
-    r = n(751823);
-let i = (0, o.B)({
+n.d(t, { R: () => o });
+var r = n(818083),
+    l = n(751823);
+let i = (0, r.B)({
     kind: 'user',
     id: '2025-07_animated_faces',
     label: 'AV survey animated faces',
@@ -14,13 +14,13 @@ let i = (0, o.B)({
         }
     ]
 });
-function l(e) {
+function o(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
-        { isInHoldout: o } = r.L.useExperiment({ location: t }, { autoTrackExposure: n });
+        { isInHoldout: r } = l.L.useExperiment({ location: t }, { autoTrackExposure: n });
     return i.useExperiment(
         { location: t },
         {
-            disable: o,
+            disable: r,
             autoTrackExposure: n
         }
     );

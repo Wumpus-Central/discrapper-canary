@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(82659),
     _ = n(369585),
     j = n(103866),
-    E = n(213734),
-    O = n(37148),
+    O = n(213734),
+    E = n(37148),
     C = n(907862),
     v = n(466590),
     S = n(481060),
@@ -1026,8 +1026,8 @@ function eu() {
         [g, h] = r.useState(!1),
         [f, b] = r.useState(!1),
         [x, _] = r.useState(!1),
-        [j, E] = r.useState(!1),
-        [O, T] = r.useState(!1),
+        [j, O] = r.useState(!1),
+        [E, T] = r.useState(!1),
         [N, I] = r.useState(!1),
         [y, A] = r.useState(!1),
         [P, R] = r.useState(!1),
@@ -1056,7 +1056,7 @@ function eu() {
         ed = r.useRef(null),
         eu = r.useRef(null),
         em = r.useCallback(() => {
-            (t(!1), s(!1), l(!1), c(!1), u(!1), p(!1), h(!1), b(!1), _(!1), E(!1), T(!1), I(!1), A(!1), R(!1), Z(!1), k(!1), B(!1), V(!1), W(!1));
+            (t(!1), s(!1), l(!1), c(!1), u(!1), p(!1), h(!1), b(!1), _(!1), O(!1), T(!1), I(!1), A(!1), R(!1), Z(!1), k(!1), B(!1), V(!1), W(!1));
         }, []);
     return (0, i.jsxs)('div', {
         className: M.section,
@@ -1290,7 +1290,7 @@ function eu() {
             }),
             (0, i.jsx)(C.J2, {
                 targetElementRef: ei,
-                shouldShow: O,
+                shouldShow: E,
                 onRequestClose: em,
                 caretConfig: {
                     position: 'bottom',
@@ -1671,7 +1671,7 @@ function eu() {
                                 text: 'Left Center',
                                 buttonRef: en,
                                 onClick: () => {
-                                    (em(), E(!0));
+                                    (em(), O(!0));
                                 }
                             })
                         ]
@@ -2410,7 +2410,7 @@ function eb(e) {
         children: [
             (0, i.jsx)('div', {
                 className: M.modalOutlines,
-                children: (0, i.jsx)(O.x, {
+                children: (0, i.jsx)(E.x, {
                     title: 'Demo Modal',
                     subtitle: 'The ModalHeader can have leading and trailing items on either side of the text',
                     leading: (0, i.jsx)(r, {}),
@@ -2426,7 +2426,7 @@ function eb(e) {
             }),
             (0, i.jsx)('div', {
                 className: M.modalOutlines,
-                children: (0, i.jsx)(E.m, { children: (0, i.jsx)(r, { children: 'This is the ModalFooter' }) })
+                children: (0, i.jsx)(O.m, { children: (0, i.jsx)(r, { children: 'This is the ModalFooter' }) })
             }),
             (0, i.jsx)('div', {
                 className: M.modalOutlines,
@@ -2464,7 +2464,7 @@ function ex(e) {
         onClose: n,
         size: s,
         children: [
-            (0, i.jsx)(O.x, {
+            (0, i.jsx)(E.x, {
                 title: l,
                 subtitle: c,
                 alignCenter: u
@@ -2571,7 +2571,7 @@ function ex(e) {
                 })
             }),
             h &&
-                (0, i.jsxs)(E.m, {
+                (0, i.jsxs)(O.m, {
                     children: [
                         (0, i.jsx)(S.X6q, {
                             variant: 'heading-lg/semibold',
@@ -2686,7 +2686,7 @@ function ej(e) {
         ]
     });
 }
-function eE(e) {
+function eO(e) {
     let { transitionState: t, onClose: s } = e,
         [a, l] = r.useState(0),
         o = r.useMemo(
@@ -2747,7 +2747,7 @@ function eE(e) {
         })
     });
 }
-function eO(e) {
+function eE(e) {
     let { transitionState: t, onClose: n, modalCount: s = 1 } = e,
         [a, l] = r.useState('replace'),
         o = s < 3;
@@ -2770,7 +2770,7 @@ function eO(e) {
                           text: 'Open Next Modal',
                           onClick: () => {
                               let e = s + 1;
-                              (0, S.h7j)((t) => (0, i.jsx)(eO, W(z({}, t), { modalCount: e })), { stackingBehavior: a });
+                              (0, S.h7j)((t) => (0, i.jsx)(eE, W(z({}, t), { modalCount: e })), { stackingBehavior: a });
                           }
                       }
                   ]
@@ -2902,14 +2902,14 @@ function eC() {
                         variant: 'primary',
                         text: 'Open expressive modal',
                         onClick: () => {
-                            (0, S.h7j)((e) => (0, i.jsx)(eE, z({}, e)));
+                            (0, S.h7j)((e) => (0, i.jsx)(eO, z({}, e)));
                         }
                     }),
                     (0, i.jsx)(S.zxk, {
                         variant: 'primary',
                         text: 'Open Mana modal stacking demo',
                         onClick: () => {
-                            (0, S.h7j)((e) => (0, i.jsx)(eO, z({}, e)));
+                            (0, S.h7j)((e) => (0, i.jsx)(eE, z({}, e)));
                         }
                     })
                 ]

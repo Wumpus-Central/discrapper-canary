@@ -35,8 +35,8 @@ function _(e) {
         T = (0, f.n)((e) => e.clipsButtonRef),
         P = (0, f.n)((e) => e.setClipsButtonRef),
         j = (0, l.e7)([c.Z], () => c.Z.hasLayers()),
-        { preventIdle: A, allowIdle: Z } = (0, s.Y)('animation');
-    function x() {
+        { preventIdle: A, allowIdle: x } = (0, s.Y)('animation');
+    function Z() {
         (0, a.ZDy)(
             async () => {
                 let { default: e } = await Promise.all([n.e('2668'), n.e('71248')]).then(n.bind(n, 542055));
@@ -73,7 +73,7 @@ function _(e) {
             { modalKey: m.Qr }
         );
     }
-    return (i.useEffect(() => (S ? A() : Z(), () => Z()), [S, A, Z]), E && O && y)
+    return (i.useEffect(() => (S ? A() : x(), () => x()), [S, A, x]), E && O && y)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   null != T &&
@@ -85,7 +85,7 @@ function _(e) {
                       (0, r.jsx)(g.Z, {
                           clipIconRef: T,
                           lastClipsSession: I,
-                          onOpenClipsGallery: x
+                          onOpenClipsGallery: Z
                       }),
                   (0, r.jsx)('div', {
                       ref: P,
@@ -94,7 +94,7 @@ function _(e) {
                           icon: a.AlX,
                           showBadge: v,
                           tooltip: b.intl.string(b.t.MXaLEB),
-                          onClick: x
+                          onClick: Z
                       })
                   })
               ]

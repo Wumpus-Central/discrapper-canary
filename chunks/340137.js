@@ -155,7 +155,7 @@ function y() {
         t = i.useRef(null),
         { notificationCenterVariant: n } = h.Lk.useExperiment({ location: 'NotificationsInboxButton' }),
         l = (0, s.e7)([d.Z], () => d.Z.getChannelId()),
-        a = i.useMemo(() => b.Z5c.NOTIFICATIONS_INBOX(null != l ? l : void 0), [l]),
+        a = i.useMemo(() => b.Z5c.CHANNEL(b.STv, null != l ? l : void 0), [l]),
         c = (0, g.m)();
     return n === h.jP.SIDEBAR
         ? (0, r.jsx)(E, {

@@ -71,10 +71,10 @@ let T = (e) => {
         i.useEffect(() => {
             j || g.Z.fetchRequestToJoinGuilds();
         }, [j]));
-    let Z = i.useCallback(() => {
+    let x = i.useCallback(() => {
             (f(Math.max(h, I.hO.FILLING)), g.Z.removeGuildJoinRequest(t), (0, d.uL)(v.Z5c.ME));
         }, [t, h]),
-        x = (e, t) => () => {
+        Z = (e, t) => () => {
             (0, o.h7j)((n) => {
                 var i, l;
                 return (0, r.jsx)(
@@ -140,8 +140,8 @@ let T = (e) => {
         w = async () => {
             (await g.Z.resetGuildJoinRequest(t), (0, m.hk)(t));
         },
-        L = x(C.intl.format(C.t['9ZezpK'], { name: null == A ? void 0 : A.name }), Z),
-        R = x(C.intl.format(C.t.fJwWVl, { name: null == A ? void 0 : A.name }), Z);
+        L = Z(C.intl.format(C.t['9ZezpK'], { name: null == A ? void 0 : A.name }), x),
+        R = Z(C.intl.format(C.t.fJwWVl, { name: null == A ? void 0 : A.name }), x);
     return (0, r.jsxs)('div', {
         className: S.page,
         ref: n,

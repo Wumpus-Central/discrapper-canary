@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(631885),
     j = n(849862),
     A = n(522558),
-    Z = n(795448),
-    x = n(441623),
+    x = n(795448),
+    Z = n(441623),
     w = n(457396),
     L = n(108989),
     R = n(51596),
@@ -38,16 +38,16 @@ var r = n(255367),
     U = n(695346),
     G = n(283595),
     V = n(923834),
-    B = n(55563),
-    H = n(774343),
+    H = n(55563),
+    B = n(774343),
     F = n(974042),
     z = n(626135),
     W = n(814225),
     Y = n(515753),
     K = n(831218),
     q = n(339149),
-    X = n(981631),
-    Q = n(675654),
+    Q = n(981631),
+    X = n(675654),
     J = n(474936),
     $ = n(388032),
     ee = n(916723),
@@ -119,7 +119,7 @@ let el = (e) => {
             n = ei(e, ['selected']);
         let l = (0, c.JA)('friends'),
             a = (0, j.If)(),
-            o = (0, d.e7)([x.Z], () => x.Z.canShowFriendsTabBadge()),
+            o = (0, d.e7)([Z.Z], () => Z.Z.canShowFriendsTabBadge()),
             u = (0, d.e7)([_.Z], () => _.Z.useReducedMotion),
             { enabled: p } = A.w.useExperiment({ location: 'Friends Tab' }, { autoTrackExposure: !1 }),
             h = o && p;
@@ -142,11 +142,11 @@ let el = (e) => {
                             {
                                 onClick: () => {
                                     let e;
-                                    (h ? (z.default.track(X.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: J.hX.FRIEND_ANNIVERSARY }), (e = X.pJs.ALL), b.Z.setSection(X.pJs.ALL), (0, Z.Gk)()) : (e = F.ZP.getState().section), (0, O.Z)({ tab_opened: e }));
+                                    (h ? (z.default.track(Q.rMx.GIFT_INTENT_BADGE_CLICKED, { gift_intent_type: J.hX.FRIEND_ANNIVERSARY }), (e = Q.pJs.ALL), b.Z.setSection(Q.pJs.ALL), (0, x.Gk)()) : (e = F.ZP.getState().section), (0, O.Z)({ tab_opened: e }));
                                 },
                                 interactiveClassName: h ? et.friendsBadge : void 0,
                                 selected: t,
-                                route: X.Z5c.FRIENDS,
+                                route: Q.Z5c.FRIENDS,
                                 icon: g.iFz,
                                 text: $.intl.string($.t.TdEu5e),
                                 onMouseEnter: () => {
@@ -167,8 +167,8 @@ let el = (e) => {
                     (0, r.jsx)(L.Z, {
                         className: et.confetti,
                         wind: 0,
-                        sprites: Q.CA,
-                        spriteColors: Q.Br,
+                        sprites: X.CA,
+                        spriteColors: X.Br,
                         firing: f,
                         confettiConfig: {
                             opacity: {
@@ -197,7 +197,7 @@ let el = (e) => {
                 en(
                     {
                         selected: t,
-                        route: X.Z5c.APPLICATION_LIBRARY,
+                        route: Q.Z5c.APPLICATION_LIBRARY,
                         icon: g.vqy,
                         text: $.intl.string($.t.cw57am)
                     },
@@ -217,14 +217,14 @@ let el = (e) => {
             n = (0, c.JA)('messageRequests'),
             { channelId: i } = (0, C._)();
         if (!(0, N.a)()) return null;
-        let l = null == i ? void 0 : () => m.Z.preload(X.ME, i);
+        let l = null == i ? void 0 : () => m.Z.preload(Q.ME, i);
         return (0, r.jsx)(
             Y.Qj,
             er(
                 en(
                     {
                         selected: t,
-                        route: X.Z5c.MESSAGE_REQUESTS,
+                        route: Q.Z5c.MESSAGE_REQUESTS,
                         icon: g._XJ,
                         text: $.intl.string($.t.e7GWjY),
                         onClick: l
@@ -246,7 +246,7 @@ let el = (e) => {
                 en(
                     {
                         selected: t,
-                        route: X.Z5c.FAMILY_CENTER,
+                        route: Q.Z5c.FAMILY_CENTER,
                         icon: g.BFJ,
                         text: n,
                         onMouseEnter: () => {
@@ -298,14 +298,14 @@ let el = (e) => {
     ed = () => (0, R.$Z)('DM_SEARCH');
 function ep(e) {
     switch (e) {
-        case X.Z5c.APPLICATION_LIBRARY:
-            return X.ZY5.LIBRARY;
-        case X.Z5c.FRIENDS:
-            return X.ZY5.FRIENDS_LIST;
-        case X.Z5c.COLLECTIBLES_SHOP:
-            return X.ZY5.COLLECTIBLES_SHOP;
+        case Q.Z5c.APPLICATION_LIBRARY:
+            return Q.ZY5.LIBRARY;
+        case Q.Z5c.FRIENDS:
+            return Q.ZY5.FRIENDS_LIST;
+        case Q.Z5c.COLLECTIBLES_SHOP:
+            return Q.ZY5.COLLECTIBLES_SHOP;
     }
-    return e.startsWith(X.Z5c.APPLICATION_STORE) ? (e === X.Z5c.APPLICATION_STORE ? X.ZY5.STORE_DIRECTORY_HOME : e.startsWith(X.Z5c.APPLICATION_STORE) ? X.ZY5.STORE_DIRECTORY_BROWSE : X.ZY5.STORE_LISTING) : X.ZY5.DM_CHANNEL;
+    return e.startsWith(Q.Z5c.APPLICATION_STORE) ? (e === Q.Z5c.APPLICATION_STORE ? Q.ZY5.STORE_DIRECTORY_HOME : e.startsWith(Q.Z5c.APPLICATION_STORE) ? Q.ZY5.STORE_DIRECTORY_BROWSE : Q.ZY5.STORE_LISTING) : Q.ZY5.DM_CHANNEL;
 }
 let eh = i.memo(function (e) {
     let { showLibrary: t, hasLibraryApplication: n, homeLink: l, premiumTabSelected: o, shouldShowNitroTab: s, shouldShowMessageRequestsRow: c, shouldShowFamilyCenterRow: d, selectedChannelId: p, path: h } = e,
@@ -342,29 +342,29 @@ let eh = i.memo(function (e) {
                     showDMHeader: !0,
                     listScrollerRef: b,
                     children: [
-                        (0, r.jsx)(el, { selected: null != h ? h === X.Z5c.FRIENDS : l === X.Z5c.FRIENDS }, 'friends'),
+                        (0, r.jsx)(el, { selected: null != h ? h === Q.Z5c.FRIENDS : l === Q.Z5c.FRIENDS }, 'friends'),
                         n && t
                             ? (0, r.jsx)(
                                   ea,
                                   {
-                                      selected: null == h ? null != l && l.startsWith(X.Z5c.APPLICATION_LIBRARY) : h.startsWith(X.Z5c.APPLICATION_LIBRARY),
-                                      hideGameUpdateProgressIndicator: l === X.Z5c.APPLICATION_LIBRARY
+                                      selected: null == h ? null != l && l.startsWith(Q.Z5c.APPLICATION_LIBRARY) : h.startsWith(Q.Z5c.APPLICATION_LIBRARY),
+                                      hideGameUpdateProgressIndicator: l === Q.Z5c.APPLICATION_LIBRARY
                                   },
                                   'library'
                               )
                             : null,
-                        c ? (0, r.jsx)(es, { selected: null == h ? null != l && l.startsWith(X.Z5c.MESSAGE_REQUESTS) : h === X.Z5c.MESSAGE_REQUESTS }, 'message-requests') : null,
+                        c ? (0, r.jsx)(es, { selected: null == h ? null != l && l.startsWith(Q.Z5c.MESSAGE_REQUESTS) : h === Q.Z5c.MESSAGE_REQUESTS }, 'message-requests') : null,
                         s
                             ? (0, r.jsx)(
                                   w.g,
                                   {
-                                      selected: null == h ? o : h.startsWith(X.Z5c.APPLICATION_STORE),
-                                      route: X.Z5c.APPLICATION_STORE,
+                                      selected: null == h ? o : h.startsWith(Q.Z5c.APPLICATION_STORE),
+                                      route: Q.Z5c.APPLICATION_STORE,
                                       locationState: {
                                           analyticsSource: {
                                               page: ep(l),
-                                              section: X.jXE.NAVIGATION,
-                                              object: X.qAy.NAVIGATION_LINK
+                                              section: Q.jXE.NAVIGATION,
+                                              object: Q.qAy.NAVIGATION_LINK
                                           }
                                       }
                                   },
@@ -374,20 +374,20 @@ let eh = i.memo(function (e) {
                         (0, r.jsx)(
                             y.i,
                             {
-                                selected: h === X.Z5c.COLLECTIBLES_SHOP || (null == l ? void 0 : l.startsWith(X.Z5c.COLLECTIBLES_SHOP)),
+                                selected: h === Q.Z5c.COLLECTIBLES_SHOP || (null == l ? void 0 : l.startsWith(Q.Z5c.COLLECTIBLES_SHOP)),
                                 listItemRef: m,
                                 listScrollerRef: b,
                                 locationState: {
                                     analyticsSource: {
                                         page: ep(l),
-                                        section: X.jXE.NAVIGATION,
-                                        object: X.qAy.NAVIGATION_LINK
+                                        section: Q.jXE.NAVIGATION,
+                                        object: Q.qAy.NAVIGATION_LINK
                                     }
                                 }
                             },
                             'discord-shop'
                         ),
-                        d ? (0, r.jsx)(ec, { selected: (null != l && l.startsWith(X.Z5c.FAMILY_CENTER)) || (null != h && h.startsWith(X.Z5c.FAMILY_CENTER)) }, 'family-center') : null,
+                        d ? (0, r.jsx)(ec, { selected: (null != l && l.startsWith(Q.Z5c.FAMILY_CENTER)) || (null != h && h.startsWith(Q.Z5c.FAMILY_CENTER)) }, 'family-center') : null,
                         (0, r.jsx)(ef, {}, 'section-divider-top')
                     ]
                 })
@@ -399,15 +399,15 @@ function ef() {
     return (0, r.jsx)('div', { className: et.sectionDivider });
 }
 function eg() {
-    let e = (0, d.e7)([H.Z], () => H.Z.getHomeLink()),
+    let e = (0, d.e7)([B.Z], () => B.Z.getHomeLink()),
         t = (0, d.e7)(
-            [B.Z],
+            [H.Z],
             () => {
-                if (e === X.Z5c.APPLICATION_STORE) return !0;
+                if (e === Q.Z5c.APPLICATION_STORE) return !0;
                 let t = (0, W.ZK)(e);
                 if (null != t) {
                     var n, r;
-                    return null != (r = null == (n = B.Z.get(t)) ? void 0 : n.premium) && r;
+                    return null != (r = null == (n = H.Z.get(t)) ? void 0 : n.premium) && r;
                 }
                 return !1;
             },
@@ -421,7 +421,7 @@ function eg() {
             let { channelId: t, path: n } = e;
             return [t, n];
         }, o.X),
-        u = (0, w.i)({ selected: null == c ? t : c.startsWith(X.Z5c.APPLICATION_STORE) }),
+        u = (0, w.i)({ selected: null == c ? t : c.startsWith(Q.Z5c.APPLICATION_STORE) }),
         p = (0, N.a)(),
         h = (function () {
             let e = U.Ex.useSetting(),

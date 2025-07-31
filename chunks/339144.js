@@ -40,8 +40,8 @@ let I = i.memo(function (e) {
         }),
         { parentAnalyticsLocation: B } = (0, h.ZP)(),
         { changeLeaveCallAndActivityIcons: V } = (0, C.A)({ location: 'Activity Actions' }),
-        F = x(M, L, D),
-        H = i.useCallback(() => {
+        H = x(M, L, D),
+        F = i.useCallback(() => {
             (o()(null != L, 'Received null activity'),
                 (0, p.v)(B, p.d.INVITE),
                 y.default.track(j.rMx.OPEN_MODAL, {
@@ -155,10 +155,10 @@ let I = i.memo(function (e) {
                   }))
                 : null,
         q =
-            F && null == D
+            H && null == D
                 ? (0, r.jsx)(v.Z, {
                       tooltipText: E.intl.string(E.t['hC/Ze3']),
-                      onClick: H,
+                      onClick: F,
                       icon: a.ejJ
                   })
                 : null,

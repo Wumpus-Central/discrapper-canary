@@ -17,7 +17,7 @@ var i = n(255367),
     x = n(4046),
     _ = n(423741);
 let j = r.forwardRef((e, t) => {
-    let { className: n, isFooterVisible: s, isDarkMode: j, isReducedMotion: E, subscriptionTier: O } = e,
+    let { className: n, isFooterVisible: s, isDarkMode: j, isReducedMotion: O, subscriptionTier: E } = e,
         { analyticsLocations: C } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
         v = (0, m.Nx)(),
         S = (0, u.rO)(),
@@ -25,8 +25,8 @@ let j = r.forwardRef((e, t) => {
         [N, I] = r.useState(!1);
     return (
         r.useEffect(() => {
-            !s || E || N || null == T.current || T.current.play();
-        }, [s, E, N]),
+            !s || O || N || null == T.current || T.current.play();
+        }, [s, O, N]),
         (0, i.jsx)(c.Gt, {
             value: C,
             children: (0, i.jsxs)('div', {
@@ -40,7 +40,7 @@ let j = r.forwardRef((e, t) => {
                         children: h.intl.string(h.t.lEw32t)
                     }),
                     (0, i.jsx)(p.PK, {
-                        subscriptionTier: O,
+                        subscriptionTier: E,
                         inOfferExperience: v,
                         containerClassName: f.footerCTAContainer,
                         isApplicationHome: !0,

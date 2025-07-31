@@ -32,8 +32,8 @@ var r = n(255367),
     P = n(93237),
     j = n(924540),
     A = n(474486),
-    Z = n(497334),
-    x = n(119850),
+    x = n(497334),
+    Z = n(119850),
     w = n(938736),
     L = n(227140),
     R = n(474936),
@@ -47,7 +47,7 @@ let U = (e) => {
             i = (0, N.N)(),
             l = (0, S.Ng)(),
             o = (0, E.Vi)(),
-            s = (0, x.V)(),
+            s = (0, Z.V)(),
             c = (0, _.Qo)(n, r),
             u = (0, a.e7)([O.Z], () => O.Z.getCreatedAtOverride()),
             d = t || null != i || null != l || o || null != s || c,
@@ -58,7 +58,7 @@ let U = (e) => {
         let t, n, O;
         var G,
             V,
-            { selected: B, route: H, locationState: F } = e,
+            { selected: H, route: B, locationState: F } = e,
             z = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -81,8 +81,8 @@ let U = (e) => {
         let W = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
             Y = (0, a.e7)([m.Z], () => m.Z.getPremiumTypeSubscription()),
             K = (0, _.Qo)(W, Y),
-            { enabled: q, variant: X } = v.p1.useExperiment({ location: 'NitroTabButton' }),
-            { enabled: Q } = v.pd.useExperiment({ location: 'NitroTabButton' });
+            { enabled: q, variant: Q } = v.p1.useExperiment({ location: 'NitroTabButton' }),
+            { enabled: X } = v.pd.useExperiment({ location: 'NitroTabButton' });
         (v.VL.useConfig({ location: 'NitroTabButton' }), v.CF.useConfig({ location: 'NitroTabButton' }));
         let J = (0, l.JA)('nitro'),
             $ = (0, N.N)(),
@@ -90,7 +90,7 @@ let U = (e) => {
             et = (0, y.W)(),
             en = (0, E.Vi)(),
             er = (0, P.HI)({ trialOffer: $ }),
-            ei = (0, x.V)(),
+            ei = (0, Z.V)(),
             el = (0, w.Kn)('NitroTabButton'),
             { fractionalState: ea, startsAt: eo, endsAt: es } = (0, d.Z)({ forceFetch: !0 }),
             [ec, eu] = (0, f.bf)(ea !== R.a$.NONE ? o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
@@ -104,9 +104,9 @@ let U = (e) => {
         let [ef, eg] = (0, f.US)(eh, void 0, !0);
         if (
             (i.useEffect(() => {
-                !0 === B && null != ef && eg(k.L.AUTO_DISMISS);
-            }, [eg, B, ef]),
-            !U({ selected: B }))
+                !0 === H && null != ef && eg(k.L.AUTO_DISMISS);
+            }, [eg, H, ef]),
+            !U({ selected: H }))
         )
             return null;
         if (
@@ -126,7 +126,7 @@ let U = (e) => {
         else if (er) {
             let e = (0, P.$q)();
             ((n = (0, r.jsx)(j._y, {
-                isTabSelected: B,
+                isTabSelected: H,
                 badgeCopy: M.intl.string(M.t.OS9KPj),
                 offerExpiresAt: !0 === e ? (null == $ ? void 0 : $.expires_at) : null
             })),
@@ -134,13 +134,13 @@ let U = (e) => {
         } else
             ef === o.z.VOICE_FILTER_EARLY_ACCESS_PREMIUM_TAB_BADGE
                 ? ((n = (0, r.jsx)(j._y, {
-                      isTabSelected: B,
+                      isTabSelected: H,
                       badgeCopy: M.intl.string(M.t.y2b7CA),
                       offerExpiresAt: null
                   })),
                   (O = 2))
                 : et
-                  ? ((n = (0, r.jsx)(Z.S, { expiresAt: es })), (O = 4))
+                  ? ((n = (0, r.jsx)(x.S, { expiresAt: es })), (O = 4))
                   : null != ei
                     ? ((n = (0, r.jsx)(L.Z, {
                           copy: ei,
@@ -150,24 +150,24 @@ let U = (e) => {
                     : null != ee
                       ? ((n = (0, r.jsx)(j.GN, {
                             userDiscount: ee,
-                            isTabSelected: B,
+                            isTabSelected: H,
                             includesAmountOff: !1
                         })),
                         (O = 3))
                       : null == $ || ep
                         ? el &&
                           ((n = (0, r.jsx)(A.l, {
-                              isSelected: B,
+                              isSelected: H,
                               onSelect: () => (0, h.Q3)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: k.L.TAKE_ACTION })
                           })),
                           (O = 6))
                         : ((n = (0, r.jsx)(j.$H, {
                               trialOffer: $,
-                              isTabSelected: B
+                              isTabSelected: H
                           })),
                           (O = 4));
         let em = M.intl.string(M.t.Ipxkoq);
-        (K && Q && (em = M.intl.string(M.t['4gwVVl'])), !K && q && (X === v.Rx.TRY_NITRO && null != $ ? (em = M.intl.string(M.t['3O6A4e'])) : X === v.Rx.JOIN_NITRO ? (em = M.intl.string(M.t.brBiOz)) : X === v.Rx.GET_NITRO && (em = M.intl.string(M.t.GayC1t))));
+        (K && X && (em = M.intl.string(M.t['4gwVVl'])), !K && q && (Q === v.Rx.TRY_NITRO && null != $ ? (em = M.intl.string(M.t['3O6A4e'])) : Q === v.Rx.JOIN_NITRO ? (em = M.intl.string(M.t.brBiOz)) : Q === v.Rx.GET_NITRO && (em = M.intl.string(M.t.GayC1t))));
         let eb = (0, r.jsx)(
             c.Qj,
             ((G = (function (e) {
@@ -196,8 +196,8 @@ let U = (e) => {
                 return e;
             })(
                 {
-                    selected: B,
-                    route: H,
+                    selected: H,
+                    route: B,
                     icon: s.SrA,
                     text: em,
                     locationState: F,

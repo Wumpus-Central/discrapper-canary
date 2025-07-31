@@ -5,8 +5,8 @@ var E,
     e = n(392711),
     S = n.n(e),
     s = n(55935),
-    o = n(388032);
-function A(t, i, n) {
+    A = n(388032);
+function o(t, i, n) {
     return (
         i in t
             ? Object.defineProperty(t, i, {
@@ -19,7 +19,7 @@ function A(t, i, n) {
         t
     );
 }
-let P = () => [o.intl.string(o.t['6m/6nJ']), o.intl.string(o.t.n7dksL), o.intl.string(o.t['1LyF1t']), o.intl.string(o.t.QJyuxc)];
+let P = () => [A.intl.string(A.t['6m/6nJ']), A.intl.string(A.t.n7dksL), A.intl.string(A.t['1LyF1t']), A.intl.string(A.t.QJyuxc)];
 class _ extends (E = r.PureComponent) {
     componentDidMount() {
         let { intervalDuration: t, onInterval: i } = this.props;
@@ -63,17 +63,17 @@ class _ extends (E = r.PureComponent) {
         if (t === 1 / 0)
             return (0, l.jsx)('span', {
                 className: n,
-                'aria-label': o.intl.string(o.t.PqEzn5),
+                'aria-label': A.intl.string(A.t.PqEzn5),
                 children: '\u221E'
             });
         let r = (0, s.TD)(Date.now(), t, E);
         return null != i ? i(r, this.defaultRender.bind(this, r)) : this.defaultRender(r);
     }
     constructor(...t) {
-        (super(...t), A(this, '_interval', void 0));
+        (super(...t), o(this, '_interval', void 0));
     }
 }
-A(_, 'defaultProps', {
+o(_, 'defaultProps', {
     showDays: !0,
     showUnits: !1,
     stopAtOneSec: !1,

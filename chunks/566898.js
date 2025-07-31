@@ -1,10 +1,10 @@
 n.d(t, {
     M9: () => _,
-    Pb: () => b,
+    Pb: () => x,
     XX: () => g,
-    ZP: () => h,
+    ZP: () => j,
     ZT: () => f,
-    iv: () => x,
+    iv: () => b,
     pk: () => p
 });
 var r = n(255367);
@@ -41,7 +41,7 @@ function f(e) {
 function m(e) {
     let t,
         { groupStart: n = !1, compact: o = !1, attachmentSpecs: a, usernameWidth: d, usernameOpacity: m, className: p, style: g } = e,
-        x = o ? 50 : l().random(40, 50);
+        b = o ? 50 : l().random(40, 50);
     return (
         !o && n
             ? (t = (0, r.jsxs)(r.Fragment, {
@@ -62,7 +62,7 @@ function m(e) {
                   children: [
                       o &&
                           (0, r.jsx)(f, {
-                              width: x,
+                              width: b,
                               className: i()({
                                   [s.compactTimestamp]: !0,
                                   [s.hidden]: !n
@@ -146,10 +146,10 @@ function m(e) {
 }
 let p = 44,
     g = 22,
-    x = 26,
     b = 26,
+    x = 26,
     _ = 6;
-function h(e) {
+function j(e) {
     let { messages: t, groupSpacing: n = 0, compact: o = !1, attachmentSpecs: i, className: a } = e,
         c = null != i ? (i.last ? t - 1 : l().random(0, t - 1)) : -1,
         s = l().random(80, 120),

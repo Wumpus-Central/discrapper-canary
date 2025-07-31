@@ -8,7 +8,7 @@ var i = n(255367),
     c = n(686546),
     d = n(168301);
 let u = r.forwardRef(function (e, t) {
-    let { tooltipText: n, children: r, onContextMenu: s, onClick: u, disabled: m, icon: p, iconForeground: g, innerClassName: h, className: f, redGlow: b, orangeGlow: x, tooltipClassName: _, onMouseEnter: j, onMouseLeave: E, 'aria-label': O, 'aria-checked': C, role: v, tooltipColor: S, tooltipForceOpen: T, tooltipContentClassName: N, plated: I } = e,
+    let { tooltipText: n, children: r, onContextMenu: s, onClick: u, disabled: m, icon: p, iconForeground: g, innerClassName: h, className: f, redGlow: b, orangeGlow: x, tooltipClassName: _, onMouseEnter: j, onMouseLeave: O, 'aria-label': E, 'aria-checked': C, role: v, tooltipColor: S, tooltipForceOpen: T, tooltipContentClassName: N, plated: I } = e,
         y =
             'function' == typeof p
                 ? (0, i.jsx)(p, {
@@ -22,7 +22,7 @@ let u = r.forwardRef(function (e, t) {
     return (0, i.jsx)(o.ua7, {
         tooltipClassName: _,
         text: n,
-        'aria-label': O,
+        'aria-label': E,
         color: S,
         tooltipContentClassName: N,
         forceOpen: T,
@@ -30,7 +30,7 @@ let u = r.forwardRef(function (e, t) {
             var n,
                 o,
                 { onClick: p, onMouseEnter: g, onMouseLeave: _ } = e,
-                O = (function (e, t) {
+                E = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         i,
@@ -75,7 +75,7 @@ let u = r.forwardRef(function (e, t) {
                             }));
                     }
                     return e;
-                })({}, O)),
+                })({}, E)),
                 (o = o =
                     {
                         buttonRef: t,
@@ -99,7 +99,7 @@ let u = r.forwardRef(function (e, t) {
                             (null == g || g(), null == j || j());
                         },
                         onMouseLeave: () => {
-                            (null == _ || _(), null == E || E());
+                            (null == _ || _(), null == O || O());
                         },
                         onContextMenu: s,
                         role: v,

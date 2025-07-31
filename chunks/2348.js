@@ -78,7 +78,7 @@ function y(e) {
               className: a()(v.categoryRow, { [v.uncategorized]: 'null' === i.id }),
               onContextMenu: (e) => {
                   (0, c.jW)(e, async () => {
-                      let { default: e } = await Promise.all([n.e('68294'), n.e('8965'), n.e('34204')]).then(n.bind(n, 139035));
+                      let { default: e } = await Promise.all([n.e('90508'), n.e('68294'), n.e('8965'), n.e('34204')]).then(n.bind(n, 139035));
                       return (n) =>
                           (0, r.jsx)(
                               e,
@@ -170,7 +170,7 @@ let C = i.memo(function () {
             D = (e) => {
                 t.isGuildVocal()
                     ? (0, c.jW)(e, async () => {
-                          let { default: e } = await Promise.all([n.e('79695'), n.e('42743'), n.e('68294'), n.e('18320'), n.e('67096'), n.e('83331'), n.e('29929')]).then(n.bind(n, 213202));
+                          let { default: e } = await Promise.all([n.e('79695'), n.e('90508'), n.e('42743'), n.e('68294'), n.e('18320'), n.e('67096'), n.e('83331'), n.e('29929')]).then(n.bind(n, 213202));
                           return (n) =>
                               (0, r.jsx)(
                                   e,
@@ -181,7 +181,7 @@ let C = i.memo(function () {
                               );
                       })
                     : (0, c.jW)(e, async () => {
-                          let { default: e } = await Promise.all([n.e('14006'), n.e('8381'), n.e('40095'), n.e('79695'), n.e('80417'), n.e('66005'), n.e('24022'), n.e('64838'), n.e('83075'), n.e('42743'), n.e('12769'), n.e('7590'), n.e('68294'), n.e('16705'), n.e('15114'), n.e('1268'), n.e('35755'), n.e('24255'), n.e('37220'), n.e('46653'), n.e('91315'), n.e('18320'), n.e('67096'), n.e('60173'), n.e('47218'), n.e('63830')]).then(n.bind(n, 373651));
+                          let { default: e } = await Promise.all([n.e('14006'), n.e('8381'), n.e('40095'), n.e('79695'), n.e('80417'), n.e('90508'), n.e('66005'), n.e('24022'), n.e('64838'), n.e('83075'), n.e('42743'), n.e('12769'), n.e('7590'), n.e('68294'), n.e('16705'), n.e('15114'), n.e('1268'), n.e('35755'), n.e('24255'), n.e('37220'), n.e('46653'), n.e('91315'), n.e('18320'), n.e('67096'), n.e('60173'), n.e('47218'), n.e('63830')]).then(n.bind(n, 373651));
                           return (n) =>
                               (0, r.jsx)(
                                   e,

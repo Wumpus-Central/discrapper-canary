@@ -13,17 +13,17 @@ var o = n(755721),
     m = n(562831),
     p = n(981631);
 function g(e) {
-    let { user: t, currentUser: n, guildId: g, channelId: x, displayProfile: b, relationshipType: _, onClose: h } = e,
-        { newestAnalyticsLocation: j } = (0, a.ZP)(),
+    let { user: t, currentUser: n, guildId: g, channelId: b, displayProfile: x, relationshipType: _, onClose: j } = e,
+        { newestAnalyticsLocation: h } = (0, a.ZP)(),
         y = (0, l.Z)({
             user: t,
             guildId: g,
-            channelId: x,
-            displayProfile: b,
-            onClose: h
+            channelId: b,
+            displayProfile: x,
+            onClose: j
         }),
-        { gameFriends: I, hasOutgoingPendingGameFriends: v, hasIncomingPendingGameFriends: O } = (0, m.H)({ userId: t.id }),
-        N = I.length > 0 || v || O;
+        { gameFriends: v, hasOutgoingPendingGameFriends: I, hasIncomingPendingGameFriends: O } = (0, m.H)({ userId: t.id }),
+        P = v.length > 0 || I || O;
     return _ === p.OGo.BLOCKED
         ? null
         : t.id === n.id
@@ -32,9 +32,9 @@ function g(e) {
                     (0, r.jsx)(c.Z, {
                         user: t,
                         guildId: g,
-                        onClose: h
+                        onClose: j
                     }),
-                    (0, r.jsx)(u.Z, { onClose: h }),
+                    (0, r.jsx)(u.Z, { onClose: j }),
                     (0, r.jsx)(d.Z, {
                         type: 'icon',
                         user: t,
@@ -96,7 +96,7 @@ function g(e) {
                               relationshipType: _,
                               shouldShowTooltip: !0,
                               themeColor: 'secondary',
-                              analyticsLocation: j
+                              analyticsLocation: h
                           }),
                           (0, r.jsx)(d.Z, {
                               type: 'icon',
@@ -107,7 +107,7 @@ function g(e) {
                           })
                       ]
                   })
-                : _ === p.OGo.NONE && N
+                : _ === p.OGo.NONE && P
                   ? (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(s.Z, {
@@ -119,14 +119,14 @@ function g(e) {
                             (0, r.jsx)(f.k9, {
                                 type: 'icon',
                                 user: t,
-                                analyticsLocation: j,
+                                analyticsLocation: h,
                                 themeColor: 'secondary',
-                                gameFriends: I,
+                                gameFriends: v,
                                 tooltipPosition: 'top',
                                 tooltipAlign: 'center',
                                 shouldShowTooltip: !0,
                                 hasIncomingPendingGameFriends: O,
-                                hasOutgoingPendingGameFriends: v
+                                hasOutgoingPendingGameFriends: I
                             }),
                             (0, r.jsx)(d.Z, {
                                 type: 'icon',
@@ -142,7 +142,7 @@ function g(e) {
                             (0, r.jsx)(f.Z7, {
                                 type: 'text',
                                 userId: t.id,
-                                analyticsLocation: j,
+                                analyticsLocation: h,
                                 color: o.zx.Colors.BRAND,
                                 autoFocus: !0
                             }),

@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(16703),
     _ = n(785145),
     j = n(981631),
-    E = n(526761),
-    O = n(726985),
+    O = n(526761),
+    E = n(726985),
     C = n(388032),
     v = n(545784);
 function S() {
@@ -40,7 +40,7 @@ function S() {
                     b.S.dispatch(j.CkL.EMPHASIZE_NOTICE));
                 return;
             }
-            (t === E.NB.GUILD && null == e && null != S && (0, c.Fq)(S), I(t));
+            (t === O.NB.GUILD && null == e && null != S && (0, c.Fq)(S), I(t));
         }
     }
     r.useEffect(() => {
@@ -49,7 +49,7 @@ function S() {
     let R = !0,
         D = !0;
     return (
-        y && 1 === A.length && (A.includes(O.s6.PROFILE_SERVER_PROFILES) ? (P(E.NB.GUILD), (D = !1)) : A.includes(O.s6.PROFILE_USER_PROFILE) && (P(E.NB.USER_PROFILE), (R = !1))),
+        y && 1 === A.length && (A.includes(E.s6.PROFILE_SERVER_PROFILES) ? (P(O.NB.GUILD), (D = !1)) : A.includes(E.s6.PROFILE_USER_PROFILE) && (P(O.NB.USER_PROFILE), (R = !1))),
         (0, i.jsxs)(a.y5t, {
             component: (0, i.jsx)(a.X6q, {
                 variant: 'heading-lg/semibold',
@@ -68,10 +68,10 @@ function S() {
                                   a.njP.Item,
                                   {
                                       className: v.tabBarItem,
-                                      id: E.NB.USER_PROFILE,
+                                      id: O.NB.USER_PROFILE,
                                       children: C.intl.string(C.t['2p07FR'])
                                   },
-                                  E.NB.USER_PROFILE
+                                  O.NB.USER_PROFILE
                               )
                             : null,
                         R
@@ -79,15 +79,15 @@ function S() {
                                   a.njP.Item,
                                   {
                                       className: v.tabBarItem,
-                                      id: E.NB.GUILD,
+                                      id: O.NB.GUILD,
                                       children: C.intl.string(C.t.kPHroa)
                                   },
-                                  E.NB.GUILD
+                                  O.NB.GUILD
                               )
                             : null
                     ]
                 }),
-                N === E.NB.GUILD ? (0, i.jsx)(u.Z, { selectedGuild: S }) : (0, i.jsx)(p.Z, {})
+                N === O.NB.GUILD ? (0, i.jsx)(u.Z, { selectedGuild: S }) : (0, i.jsx)(p.Z, {})
             ]
         })
     );

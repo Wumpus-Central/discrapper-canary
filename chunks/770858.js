@@ -102,7 +102,7 @@ function x(e) {
         Z = P === b.jP.LEGACY ? c.xx7 : c.Dkj,
         A = (0, s.e7)([g.Z], () => g.Z.getChannelId()),
         R = i.useMemo(() => {
-            if (P === b.jP.SIDEBAR) return v.Z5c.NOTIFICATIONS_INBOX(null != A ? A : void 0);
+            if (P === b.jP.SIDEBAR) return v.Z5c.CHANNEL(v.STv, A);
         }, [P, A]);
     return (0, r.jsxs)(h.H, {
         ref: m,

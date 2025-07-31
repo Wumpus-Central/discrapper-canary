@@ -1,4 +1,4 @@
-(a.d(t, { default: () => j }), a(539854), a(953529), a(388685), a(457542));
+(a.d(t, { default: () => S }), a(539854), a(953529), a(388685), a(457542));
 var n = a(255367),
     r = a(73800),
     i = a(990547),
@@ -10,82 +10,79 @@ var n = a(255367),
     _ = a(218613),
     u = a(911969),
     p = a(313201),
-    b = a(456269),
-    h = a(408987),
-    m = a(312146),
-    x = a(60222),
-    f = a(131704),
-    g = a(324067),
-    I = a(430824),
-    v = a(934415),
-    L = a(700785),
-    w = a(573261),
-    C = a(981631),
-    N = a(231338),
-    y = a(388032),
-    S = a(720848);
-function j(e) {
+    b = a(408987),
+    h = a(312146),
+    m = a(60222),
+    x = a(131704),
+    f = a(324067),
+    g = a(430824),
+    I = a(934415),
+    v = a(700785),
+    L = a(573261),
+    w = a(981631),
+    C = a(231338),
+    N = a(388032),
+    y = a(720848);
+function S(e) {
     var t, a;
-    let { guildId: j, transitionState: B, onSubmit: D, onClose: E } = e,
+    let { guildId: S, transitionState: j, onSubmit: B, onClose: D } = e,
+        E = (0, p.Dt)(),
         T = (0, p.Dt)(),
         R = (0, p.Dt)(),
-        M = (0, p.Dt)(),
-        [W, G] = r.useState(C.Sc2),
-        [k, A] = r.useState(C.d4z.GUILD_TEXT),
-        [H, U] = r.useState(''),
-        [O, P] = r.useState(!1),
-        Z = (0, o.e7)([I.Z], () => I.Z.getGuild(j), [j]),
-        V = (0, x.m)(j),
-        z = (0, b.W3)(j),
-        F = (0, m.Ui)(Z),
-        X = r.useMemo(
+        [M, W] = r.useState(w.Sc2),
+        [G, k] = r.useState(w.d4z.GUILD_TEXT),
+        [A, H] = r.useState(''),
+        [U, O] = r.useState(!1),
+        P = (0, o.e7)([g.Z], () => g.Z.getGuild(S), [S]),
+        Z = (0, m.m)(S),
+        V = (0, h.Ui)(P),
+        z = r.useMemo(
             () =>
                 (function (e) {
-                    let { canCreateStageChannel: t, canCreateForumChannel: a, canCreateMediaChannel: r } = e,
-                        i = [
+                    let { canCreateStageChannel: t, canCreateMediaChannel: a } = e,
+                        r = [
                             {
                                 icon: s.VL1,
-                                label: y.intl.string(y.t.pnuRXF),
-                                value: C.d4z.GUILD_TEXT,
-                                description: y.intl.string(y.t.Hf5Lb2)
+                                label: N.intl.string(N.t.pnuRXF),
+                                value: w.d4z.GUILD_TEXT,
+                                description: N.intl.string(N.t.Hf5Lb2)
                             },
                             {
                                 icon: s.gj8,
-                                label: y.intl.string(y.t.Sx55Oj),
-                                value: C.d4z.GUILD_VOICE,
-                                description: y.intl.string(y.t.pqfkoK)
+                                label: N.intl.string(N.t.Sx55Oj),
+                                value: w.d4z.GUILD_VOICE,
+                                description: N.intl.string(N.t.pqfkoK)
                             }
                         ];
                     return (
                         t &&
-                            i.push({
+                            r.push({
                                 icon: s.ewx,
-                                label: y.intl.string(y.t.pNWst7),
-                                value: C.d4z.GUILD_STAGE_VOICE,
-                                description: y.intl.string(y.t.VPAwgo)
+                                label: N.intl.string(N.t.pNWst7),
+                                value: w.d4z.GUILD_STAGE_VOICE,
+                                description: N.intl.string(N.t.VPAwgo)
                             }),
+                        r.push({
+                            icon: s.Mmi,
+                            label: N.intl.string(N.t.eAVIDw),
+                            value: w.d4z.GUILD_FORUM,
+                            description: N.intl.string(N.t.iZ5pgo)
+                        }),
                         a &&
-                            (i.push({
-                                icon: s.Mmi,
-                                label: y.intl.string(y.t.eAVIDw),
-                                value: C.d4z.GUILD_FORUM,
-                                description: y.intl.string(y.t.iZ5pgo)
+                            r.push({
+                                icon: s.XBm,
+                                label: N.intl.string(N.t['6x6fVl']),
+                                value: w.d4z.GUILD_MEDIA,
+                                description: N.intl.string(N.t.JyCrwc),
+                                isBeta: !0
                             }),
-                            r &&
-                                i.push({
-                                    icon: s.XBm,
-                                    label: y.intl.string(y.t['6x6fVl']),
-                                    value: C.d4z.GUILD_MEDIA,
-                                    description: y.intl.string(y.t.JyCrwc),
-                                    isBeta: !0
-                                })),
-                        i.map((e) => {
+                        r.map((e) => {
                             let { icon: t, label: a, value: r, description: i, isBeta: o } = e;
                             return {
                                 name: (0, n.jsxs)('div', {
-                                    className: S.channelOptionWrapper,
+                                    className: y.channelOptionWrapper,
                                     children: [
-                                        (0, n.jsx)(t, { className: S.icon }),
+                                        (0, n.jsx)(t, { className: y.icon }),
                                         (0, n.jsxs)('div', {
                                             children: [
                                                 (0, n.jsxs)(s.Text, {
@@ -108,45 +105,44 @@ function j(e) {
                         })
                     );
                 })({
-                    canCreateStageChannel: V,
-                    canCreateForumChannel: z,
-                    canCreateMediaChannel: F
+                    canCreateStageChannel: Z,
+                    canCreateMediaChannel: V
                 }),
-            [V, z, F]
+            [Z, V]
         ),
-        q = (0, o.e7)([g.Z], () => g.Z.getCategories(j)._categories, [j]),
-        J = r.useMemo(
+        F = (0, o.e7)([f.Z], () => f.Z.getCategories(S)._categories, [S]),
+        X = r.useMemo(
             () =>
-                q.map((e) => {
+                F.map((e) => {
                     let { channel: t } = e;
                     return {
                         value: t.id,
                         label: t.name
                     };
                 }),
-            [q]
+            [F]
         ),
-        K = null != (a = null == (t = X.find((e) => e.value === k)) ? void 0 : t.channelIcon) ? a : N.Vq,
-        Y = '' !== H;
+        q = null != (a = null == (t = z.find((e) => e.value === G)) ? void 0 : t.channelIcon) ? a : C.Vq,
+        J = '' !== A;
     return (0, n.jsx)('form', {
         onSubmit: function (e) {
-            if ((e.preventDefault(), !Y)) return;
-            P(!0);
+            if ((e.preventDefault(), !J)) return;
+            O(!0);
             let t = {
-                type: k,
-                name: H,
-                parent_id: 'null' !== W ? W : void 0,
+                type: G,
+                name: A,
+                parent_id: 'null' !== M ? M : void 0,
                 permission_overwrites: [
                     {
-                        id: j,
+                        id: S,
                         type: u.BN.ROLE,
-                        allow: L.Hn,
-                        deny: C.Plq.VIEW_CHANNEL
+                        allow: v.Hn,
+                        deny: w.Plq.VIEW_CHANNEL
                     }
                 ]
             };
-            w.Z.post({
-                url: C.ANM.GUILD_CHANNELS(j),
+            L.Z.post({
+                url: w.ANM.GUILD_CHANNELS(S),
                 body: t,
                 oldFormErrors: !0,
                 trackedActionData: {
@@ -164,28 +160,28 @@ function j(e) {
             })
                 .then(
                     (e) => {
-                        (h.Z.checkGuildTemplateDirty(j), D(e.body.id), E());
+                        (b.Z.checkGuildTemplateDirty(S), B(e.body.id), D());
                     },
                     (e) => {}
                 )
                 .finally(() => {
-                    P(!1);
+                    O(!1);
                 });
         },
         children: (0, n.jsx)(c.Modal, {
-            transitionState: B,
-            title: y.intl.string(y.t['fUYU+v']),
-            onClose: E,
+            transitionState: j,
+            title: N.intl.string(N.t['fUYU+v']),
+            onClose: D,
             actionBarInput: (0, n.jsx)(s.Avr, {
-                text: y.intl.string(y.t['13/7kZ']),
-                onClick: E
+                text: N.intl.string(N.t['13/7kZ']),
+                onClick: D
             }),
             actions: [
                 {
                     variant: 'primary',
-                    text: y.intl.string(y.t.R3BPHx),
-                    loading: O,
-                    disabled: !Y,
+                    text: N.intl.string(N.t.R3BPHx),
+                    loading: U,
+                    disabled: !J,
                     type: 'submit'
                 }
             ],
@@ -193,47 +189,47 @@ function j(e) {
                 gap: 16,
                 children: [
                     (0, n.jsx)(s.xJW, {
-                        title: y.intl.string(y.t.vHCZws),
-                        titleId: T,
+                        title: N.intl.string(N.t.vHCZws),
+                        titleId: E,
                         children: (0, n.jsx)(s.q4e, {
-                            placeholder: y.intl.string(y.t['g/Rr2d']),
-                            value: W,
-                            options: J,
-                            onChange: (e) => G(e),
+                            placeholder: N.intl.string(N.t['g/Rr2d']),
+                            value: M,
+                            options: X,
+                            onChange: (e) => W(e),
+                            'aria-labelledby': E
+                        })
+                    }),
+                    (0, n.jsx)(s.xJW, {
+                        title: N.intl.string(N.t['7ZcXGx']),
+                        titleId: T,
+                        children: (0, n.jsx)(s.FXm, {
+                            options: z,
+                            value: G,
+                            onChange: (e) => {
+                                let { value: t } = e;
+                                return k(t);
+                            },
                             'aria-labelledby': T
                         })
                     }),
                     (0, n.jsx)(s.xJW, {
-                        title: y.intl.string(y.t['7ZcXGx']),
+                        title: N.intl.string(N.t.PVbHDg),
                         titleId: R,
-                        children: (0, n.jsx)(s.FXm, {
-                            options: X,
-                            value: k,
-                            onChange: (e) => {
-                                let { value: t } = e;
-                                return A(t);
-                            },
-                            'aria-labelledby': R
-                        })
-                    }),
-                    (0, n.jsx)(s.xJW, {
-                        title: y.intl.string(y.t.PVbHDg),
-                        titleId: M,
                         children: (0, n.jsx)(d.Is, {
-                            value: H,
+                            value: A,
                             onChange: function (e) {
-                                ((0, f.zi)(k) && (e = (0, v.Nj)(e)), U(e));
+                                ((0, x.zi)(G) && (e = (0, I.Nj)(e)), H(e));
                             },
-                            maxLength: C.HN8,
-                            placeholder: y.intl.string(y.t['bw/b8P']),
-                            className: S.inputWrapper,
-                            inputClassName: S.inputInner,
-                            prefixElement: (0, n.jsx)(K, {
-                                className: S.inputPrefix,
+                            maxLength: w.HN8,
+                            placeholder: N.intl.string(N.t['bw/b8P']),
+                            className: y.inputWrapper,
+                            inputClassName: y.inputInner,
+                            prefixElement: (0, n.jsx)(q, {
+                                className: y.inputPrefix,
                                 color: 'currentColor',
                                 'aria-hidden': !0
                             }),
-                            'aria-labelledby': M,
+                            'aria-labelledby': R,
                             autoFocus: !0
                         })
                     })

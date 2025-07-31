@@ -18,8 +18,8 @@ var r = n(512722),
     x = n(643879),
     _ = n(621853),
     j = n(271383),
-    E = n(594174),
-    O = n(74538),
+    O = n(594174),
+    E = n(74538),
     C = n(51144),
     v = n(18438),
     S = n(778825),
@@ -74,8 +74,8 @@ function R(e, t) {
 function D(e) {
     var t, n, r, D;
     let { guild: Z, nameplateEnabled: w } = e,
-        k = (0, a.e7)([E.default], () => {
-            let e = E.default.getCurrentUser();
+        k = (0, a.e7)([O.default], () => {
+            let e = O.default.getCurrentUser();
             return (s()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e);
         }),
         {
@@ -109,7 +109,7 @@ function D(e) {
     let Y = (0, o.gS)(W.id),
         K = (0, a.e7)([j.ZP], () => (null == W.id ? null : j.ZP.getMember(W.id, k.id))),
         q = (0, a.e7)([_.Z], () => _.Z.getGuildMemberProfile(k.id, W.id)),
-        X = O.ZP.canUsePremiumProfileCustomization(k),
+        X = E.ZP.canUsePremiumProfileCustomization(k),
         J = (0, c.gd)(L, null == K ? void 0 : K.avatar),
         Q = (0, c.f$)(M, null == q ? void 0 : q.banner),
         $ = (0, T.p)(G, null == q ? void 0 : q.themeColors),

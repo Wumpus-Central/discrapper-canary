@@ -34,7 +34,7 @@ function P(e) {
         k = i.useRef(null),
         [U, G] = (0, E.ZP)(k),
         { loadState: B, channels: V } = U,
-        { maybeLoadMore: F, markAllRead: H } = G;
+        { maybeLoadMore: H, markAllRead: F } = G;
     ((t = k),
         (n = U),
         (l = G),
@@ -121,7 +121,7 @@ function P(e) {
                 closePopout: L,
                 children: (0, r.jsx)(y.Z, {
                     type: 'top-header',
-                    onClick: H
+                    onClick: F
                 })
             }),
             (0, r.jsx)(c.bG, {
@@ -187,7 +187,7 @@ function P(e) {
                             )),
                             (n = n =
                                 {
-                                    onScroll: B === E.jd.Done ? void 0 : F,
+                                    onScroll: B === E.jd.Done ? void 0 : H,
                                     className: I.scroller,
                                     children: [R ? (0, r.jsx)(N, { setSeenTutorial: D }) : null, (0, j.Z)(V, G, A), B === E.jd.Done ? null : (0, r.jsx)(h.$jN, { className: I.spinner })]
                                 }),

@@ -1,26 +1,27 @@
 (n.d(t, {
-    $G: () => D,
-    AH: () => S,
-    BU: () => j,
-    Fr: () => Z,
-    Fz: () => F,
-    Ko: () => C,
-    Pe: () => H,
-    R6: () => Y,
+    $G: () => L,
+    AH: () => A,
+    BU: () => U,
+    Fr: () => H,
+    Fz: () => Z,
+    Ko: () => R,
+    Pe: () => Y,
+    R6: () => W,
     Tm: () => v,
-    Vj: () => N,
+    Vj: () => C,
     WJ: () => I,
-    WU: () => V,
-    X$: () => K,
-    X3: () => W,
-    cl: () => U,
-    g9: () => L,
-    i3: () => k,
-    jW: () => w,
-    kG: () => B,
-    qc: () => x,
+    WU: () => F,
+    X$: () => z,
+    X3: () => K,
+    b7: () => S,
+    cl: () => G,
+    g9: () => x,
+    i3: () => j,
+    jW: () => D,
+    kG: () => V,
+    qc: () => M,
     s5: () => T,
-    zH: () => A
+    zH: () => N
 }),
     n(539854),
     n(997841),
@@ -123,6 +124,9 @@ function T(e) {
     }
 }
 function S(e) {
+    return e.type === E.aib.GUILD || e.type === E.aib.GUILD_CHANNEL || e.type === E.aib.THREAD;
+}
+function A(e) {
     switch (e.type) {
         case E.aib.GUILD_CHANNEL:
         case E.aib.CHANNEL:
@@ -132,7 +136,7 @@ function S(e) {
             return null;
     }
 }
-function A(e) {
+function N(e) {
     switch (e) {
         case E.QIO.MOST_RELEVANT:
             return {
@@ -152,10 +156,10 @@ function A(e) {
             };
     }
 }
-function N(e) {
+function C(e) {
     return null == e.sort_by || null == e.sort_order ? E.QIO.NEWEST : 'relevance' === e.sort_by ? E.QIO.MOST_RELEVANT : 'asc' === e.sort_order ? E.QIO.OLDEST : E.QIO.NEWEST;
 }
-function C(e) {
+function R(e) {
     switch (e) {
         case E.dCx.FILTER_FROM:
             return b.intl.string(b.t.E466pK);
@@ -177,23 +181,23 @@ function C(e) {
             return b.intl.string(b.t.UJxL3d);
     }
 }
-let R = {
+let P = {
     [E.dCx.FILTER_BEFORE]: !0,
     [E.dCx.FILTER_AFTER]: !0,
     [E.dCx.FILTER_ON]: !0
 };
-function P(e) {
+function w(e) {
     let t = g.ZP[e],
         n = null != t ? t.queryKey : null;
     return (null == n && (n = 'content'), n);
 }
-function w(e, t) {
+function D(e, t) {
     if (c.Z.didAgree(t)) {
         let t = _.default.getCurrentUser();
         null != t && (e.include_nsfw = null == t.nsfwAllowed || t.nsfwAllowed);
     }
 }
-function D(e) {
+function L(e) {
     let t = {};
     for (let [n, r] of (e.forEach((e) => {
         let { type: n } = e;
@@ -207,7 +211,7 @@ function D(e) {
                 (r && (t.min_id = f.default.fromTimestamp(r)), i && (t.max_id = f.default.fromTimestamp(i)));
                 return;
         }
-        let a = P(n);
+        let a = w(n);
         null == t[a] && (t[a] = new Set());
         let o = t[a];
         switch (n) {
@@ -237,7 +241,7 @@ function D(e) {
         r instanceof Set && (t[n] = Array.from(r));
     return (t.content && ((t.content = t.content.join(' ').trim()), t.content || delete t.content), t);
 }
-function L(e, t, n) {
+function x(e, t, n) {
     let r,
         i,
         a = e.find((a, o) => (t >= a.start && t <= a.end && n >= a.start && n <= a.end ? (null != e[o + 1] && (i = e[o + 1]), !0) : ((r = a), !1)));
@@ -251,7 +255,7 @@ function L(e, t, n) {
               anchorOffset: n
           };
 }
-function x(e, t) {
+function M(e, t) {
     let n,
         { currentToken: r, nextToken: i, previousToken: o } = (e = null != e ? e : {});
     if (0 === t.length)
@@ -293,14 +297,14 @@ function x(e, t) {
               token: n
           });
 }
-function M(e) {
+function k(e) {
     if (null == e.match(/([\\" ])/g)) return e;
     {
         let t = e.replaceAll(/([\\"])/g, (e, t) => '\\'.concat(t));
         return '"'.concat(t, '"');
     }
 }
-function k(e, t) {
+function j(e, t) {
     let n = [];
     return (
         i()(e).forEach((e) => {
@@ -309,7 +313,7 @@ function k(e, t) {
             n = n.concat(
                 e.results.map((n) => {
                     let i = n.text;
-                    if ((null != n.channel && (i = M(i)), t.type === E.Sap.FILTER_ALL)) {
+                    if ((null != n.channel && (i = k(i)), t.type === E.Sap.FILTER_ALL)) {
                         var a;
                         r = null != (a = n.group) ? a : r;
                         let e = g.ZP[r];
@@ -329,39 +333,39 @@ function k(e, t) {
         })
     );
 }
-function j(e) {
+function U(e) {
     return e.reduce((e, t) => (null == t ? e : t.results.length + e), 0);
 }
-function U(e) {
+function G(e) {
     return null == e ? '' : e.map((e) => e.getFullMatch()).join('');
 }
-let G = new a.ZP();
-function B(e) {
-    return G.tokenize(e);
+let B = new a.ZP();
+function V(e) {
+    return B.tokenize(e);
 }
-function V() {
-    return G.clearCache();
+function F() {
+    return B.clearCache();
 }
-function F(e) {
-    return null != e ? R[e] : null;
+function Z(e) {
+    return null != e ? P[e] : null;
 }
-function Z(e, t) {
+function H(e, t) {
     let n = E.TNx.test(e.type);
     return (null != t || !n) && (null == t || !n || !!E.KA4.test(t.type));
 }
-function H() {
-    ((0, g.WK)(), G.reset(), i()(g.ZP).forOwn((e, t) => G.addRule(O({ type: t }, e))));
+function Y() {
+    ((0, g.WK)(), B.reset(), i()(g.ZP).forOwn((e, t) => B.addRule(O({ type: t }, e))));
 }
-function Y(e) {
-    if (e === E.aib.GUILD) return !0;
+function W(e) {
+    if (S(e)) return !0;
     {
         let t = (0, h.a)({ location: 'isChannelFilterSupported' }),
             n = (0, m.J)({ location: 'isChannelFilterSupported' }),
             r = t || n;
-        return e === E.aib.DMS && r && !d.Z.hidePersonalInformation;
+        return e.type === E.aib.DMS && r && !d.Z.hidePersonalInformation;
     }
 }
-function W(e) {
+function K(e) {
     let t = e.name,
         n = !1;
     if (e.isGroupDM()) t = (0, o.F6)(e, _.default, u.Z);
@@ -376,9 +380,9 @@ function W(e) {
         let r = l.ZP.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
         (null == r ? void 0 : r.name) != null && (t = r.name);
     }
-    return ((t = M(t)), n) ? '#'.concat(t) : t;
+    return ((t = k(t)), n) ? '#'.concat(t) : t;
 }
-function K() {
+function z() {
     var e, t;
     return null != (t = null == (e = _.default.getCurrentUser()) ? void 0 : e.isStaff()) && t;
 }

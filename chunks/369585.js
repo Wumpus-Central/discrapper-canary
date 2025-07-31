@@ -1,7 +1,8 @@
-n.d(t, {
+(n.d(t, {
     B: () => y,
     G: () => b
-});
+}),
+    n(856094));
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -87,25 +88,32 @@ function E(e, t) {
 }
 function b(e) {
     let { leading: t, actions: n = [], actionsFullWidth: i = !1 } = e;
-    return null == t && n.length < 1
-        ? null
-        : (0, r.jsxs)('footer', {
-              className: a()(_.actionBar, _.section),
-              children: [
-                  null != t &&
-                      (0, r.jsx)('div', {
-                          className: _.actionBarLeading,
-                          children: t
-                      }),
-                  (0, r.jsx)('div', {
-                      className: a()(_.actionBarTrailing, { [_.actionBarTrailingFullWidth]: i }),
-                      children: (0, r.jsx)(c.h, {
-                          fullWidth: i,
-                          children: null == n ? void 0 : n.map((e, t) => (0, r.jsx)(l.z, p({}, e), t))
-                      })
-                  })
-              ]
-          });
+    if (null == t && n.length < 1) return null;
+    let o = ['primary', 'critical-primary', 'expressive'],
+        s = n.findLastIndex((e) => null != e.variant && o.includes(e.variant));
+    return (0, r.jsxs)('footer', {
+        className: a()(_.actionBar, _.section),
+        children: [
+            null != t &&
+                (0, r.jsx)('div', {
+                    className: _.actionBarLeading,
+                    children: t
+                }),
+            (0, r.jsx)('div', {
+                className: a()(_.actionBarTrailing, { [_.actionBarTrailingFullWidth]: i }),
+                children: (0, r.jsx)(c.h, {
+                    fullWidth: i,
+                    children:
+                        null == n
+                            ? void 0
+                            : n.map((e, t) => {
+                                  var n;
+                                  return (0, r.jsx)(l.z, p({ autoFocus: null != (n = e.autoFocus) ? n : s === t }, e), t);
+                              })
+                })
+            })
+        ]
+    });
 }
 function y(e) {
     var { text: t } = e,

@@ -26,7 +26,7 @@ function C() {
         { tabs: S, selectedTab: N, setSelectedTab: T } = (0, b.Y)(),
         P = (0, h.lg)(N),
         j = !E.MU.has(N),
-        { searchQuery: A, onSearchTextChange: Z, onClearSearch: x, onSearchSubmit: w, isSearchVisible: L } = (0, m.H)({ loadId: e.current }),
+        { searchQuery: A, onSearchTextChange: x, onClearSearch: Z, onSearchSubmit: w, isSearchVisible: L } = (0, m.H)({ loadId: e.current }),
         R = f.Z.useField('searchBarState'),
         {
             onTabsAvailableWidthChange: D,
@@ -42,11 +42,11 @@ function C() {
         G = d.Z.useField('fetchedQuery'),
         V = i.useCallback(
             (e) => {
-                (T(e), L && x());
+                (T(e), L && Z());
             },
-            [L, x, T]
+            [L, Z, T]
         ),
-        B = i.useMemo(
+        H = i.useMemo(
             () =>
                 L
                     ? S.filter((e) => {
@@ -56,14 +56,14 @@ function C() {
                     : S,
             [S, L]
         ),
-        H = i.useRef(new p.Z(P)),
+        B = i.useRef(new p.Z(P)),
         { onGuildCardSeen: F, onGuildCardClick: z } = (0, g.H)({
-            guildDiscoveryCardSeenManager: H.current,
+            guildDiscoveryCardSeenManager: B.current,
             loadId: e.current
         });
     return (
         i.useEffect(() => {
-            H.current.flushSeenGuilds(e.current);
+            B.current.flushSeenGuilds(e.current);
         }, [P]),
         i.useEffect(() => {
             C();
@@ -81,13 +81,13 @@ function C() {
                         L
                             ? (0, r.jsx)(s.Cm, {
                                   icon: l.j9r,
-                                  onClick: x
+                                  onClick: Z
                               })
                             : (0, r.jsx)(s.aV, { icon: l.QTo }),
                         !L &&
                             (0, r.jsx)(c.Z, {
                                 className: U,
-                                tabs: B,
+                                tabs: H,
                                 selectedTab: L ? null : N,
                                 onTabSelect: V,
                                 onAvailableWidthChange: D
@@ -103,8 +103,8 @@ function C() {
                             (0, r.jsx)(u.Z, {
                                 query: A,
                                 placeholder: v.intl.string(v.t['5h0QOD']),
-                                onTextChange: Z,
-                                onClear: x,
+                                onTextChange: x,
+                                onClear: Z,
                                 onSubmit: w,
                                 onCollapsedClick: k,
                                 state: L ? y.GlobalDiscoverySearchBarState.DEFAULT : R,

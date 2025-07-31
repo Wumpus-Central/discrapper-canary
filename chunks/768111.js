@@ -13,35 +13,35 @@ function u(e) {
         m = null == f ? void 0 : f.length,
         p = (0, o.Z)(t),
         g = (0, r.k)({ location: 'useUserProfileModalV2TabBarItems' }),
-        x = (0, a.Z)(),
-        b = [],
+        b = (0, a.Z)(),
+        x = [],
         _ = t.id === (null == n ? void 0 : n.id),
-        h = x.length > 0;
+        j = b.length > 0;
     return (
         g &&
-            (h || _) &&
-            b.push({
+            (j || _) &&
+            x.push({
                 text: d.intl.string(d.t.laViw8),
                 section: s.oh.WIDGETS,
                 subsection: void 0
             }),
-        b.push({
+        x.push({
             text: d.intl.string(d.t.chq59f),
             section: s.oh.ACTIVITY,
             subsection: void 0
         }),
         t.id !== (null == n ? void 0 : n.id) &&
             p &&
-            (b.push({
+            (x.push({
                 text: (0, l.Z)(u),
                 section: s.oh.MUTUAL_FRIENDS,
                 subsection: void 0
             }),
-            b.push({
+            x.push({
                 text: (0, c.Z)(m),
                 section: s.oh.MUTUAL_GUILDS,
                 subsection: void 0
             })),
-        b
+        x
     );
 }

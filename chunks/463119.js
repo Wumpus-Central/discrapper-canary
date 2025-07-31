@@ -1,4 +1,4 @@
-(n.d(t, { i: () => H }), n(388685));
+(n.d(t, { i: () => B }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(91192),
@@ -27,7 +27,7 @@ var r = n(255367),
     P = n(921944),
     j = n(388032),
     A = n(560232);
-function Z(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function Z(e) {
     }
     return e;
 }
-function x(e, t) {
+function Z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -136,8 +136,8 @@ let L = (e) => {
                 y && (0, r.jsx)(R, {}),
                 (0, r.jsx)(
                     u.Qj,
-                    x(
-                        Z(
+                    Z(
+                        x(
                             {
                                 selected: t,
                                 route: C,
@@ -159,7 +159,7 @@ let L = (e) => {
             ]
         });
     },
-    k = (e) => (0, r.jsx)(D, x(Z({}, e), { children: (0, r.jsx)(L, {}) })),
+    k = (e) => (0, r.jsx)(D, Z(x({}, e), { children: (0, r.jsx)(L, {}) })),
     M = i.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: i, reducedMotion: l = !1 } = e,
@@ -229,7 +229,7 @@ let L = (e) => {
             V = i.useCallback((e) => {
                 (R(!1), null == e || e());
             }, []),
-            B = I.title();
+            H = I.title();
         return (0, r.jsx)(s.ua7, {
             text: (0, r.jsx)(M, {
                 displayOptions: I,
@@ -241,11 +241,11 @@ let L = (e) => {
             delay: 100,
             allowOverflow: !0,
             hideOnClick: !1,
-            'aria-label': 'string' == typeof B ? B : j.intl.string(j.t.rSXaxc),
+            'aria-label': 'string' == typeof H ? H : j.intl.string(j.t.rSXaxc),
             children: (e) =>
                 (0, r.jsxs)(
                     D,
-                    x(Z(x(Z({ className: null != I.entryPointClassName ? (0, O.l)(A, I.entryPointClassName) : void 0 }, C), { icon: I.entryPointIcon }), e), {
+                    Z(x(Z(x({ className: null != I.entryPointClassName ? (0, O.l)(A, I.entryPointClassName) : void 0 }, C), { icon: I.entryPointIcon }), e), {
                         onMouseEnter: () => G(e.onMouseEnter),
                         onMouseLeave: () => V(e.onMouseLeave),
                         children: [
@@ -286,7 +286,7 @@ let L = (e) => {
             delay: 100,
             hideOnClick: !1,
             'aria-label': t.title(),
-            children: (e) => (0, r.jsx)(D, x(Z({}, n, e), { children: (0, r.jsx)(L, { color: t.badgeColor }) }))
+            children: (e) => (0, r.jsx)(D, Z(x({}, n, e), { children: (0, r.jsx)(L, { color: t.badgeColor }) }))
         });
     },
     V = (e) => {
@@ -298,8 +298,8 @@ let L = (e) => {
             c = w(a, ['positionControlRef', 'onShopButtonClick']);
         return (0, r.jsx)(
             _.Pk,
-            x(
-                Z(
+            Z(
+                x(
                     {
                         targetElementRef: l,
                         positionControlRef: o
@@ -309,7 +309,7 @@ let L = (e) => {
                 {
                     children: (0, r.jsx)(
                         D,
-                        x(Z({}, n), {
+                        Z(x({}, n), {
                             listItemRef: l,
                             collectibleShopTab: N.AW.ORBS,
                             onClick: s
@@ -319,7 +319,7 @@ let L = (e) => {
             )
         );
     },
-    B = (e) => {
+    H = (e) => {
         var t,
             n,
             { displayOptions: l, dismissContent: a } = e,
@@ -335,7 +335,7 @@ let L = (e) => {
             children: [
                 (0, r.jsxs)(
                     D,
-                    x(Z({}, s), {
+                    Z(x({}, s), {
                         onClick: () => a(P.L.TAKE_ACTION),
                         listItemRef: c,
                         children: [
@@ -364,7 +364,7 @@ let L = (e) => {
             ]
         });
     },
-    H = (e) => {
+    B = (e) => {
         let { selected: t, onClick: n, locationState: i, listItemRef: l, listScrollerRef: a } = e,
             { shouldShow: o } = (0, _.EQ)({}),
             { shopButtonDisplayOptions: s, dismissShopButtonDC: c } = (0, I.Z)(),
@@ -376,17 +376,17 @@ let L = (e) => {
                 },
                 listItemRef: l
             };
-        if (o) return (0, r.jsx)(V, x(Z({}, u), { listScrollerRef: a }));
+        if (o) return (0, r.jsx)(V, Z(x({}, u), { listScrollerRef: a }));
         if (null != s)
             switch (s.type) {
                 case S.k2.TOOLTIP:
-                    return (0, r.jsx)(G, x(Z({}, u), { displayOptions: s }));
+                    return (0, r.jsx)(G, Z(x({}, u), { displayOptions: s }));
                 case S.k2.COACHTIP:
-                    return (0, r.jsx)(U, x(Z({}, u), { displayOptions: s }));
+                    return (0, r.jsx)(U, Z(x({}, u), { displayOptions: s }));
                 case S.k2.BADGE:
-                    return (0, r.jsx)(k, Z({}, u));
+                    return (0, r.jsx)(k, x({}, u));
                 case S.k2.COACHMARK:
-                    return (0, r.jsx)(B, x(Z({ dismissContent: c }, u), { displayOptions: s }));
+                    return (0, r.jsx)(H, Z(x({ dismissContent: c }, u), { displayOptions: s }));
             }
-        return (0, r.jsx)(D, Z({}, u));
+        return (0, r.jsx)(D, x({}, u));
     };

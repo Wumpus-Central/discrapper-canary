@@ -108,13 +108,13 @@ let Z = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 [M, Z, G, U]
             ),
             V = t.premiumTier < L && M >= S.oCV[L],
-            F = (0, E.Z)(t, f.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY, S.jXE.PREMIUM_GUILD_PROGRESS_BAR),
-            H = I.intl.formatToPlainString(I.t['2oNfMT'], { levelName: (0, y.e9)(L) }),
+            H = (0, E.Z)(t, f.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY, S.jXE.PREMIUM_GUILD_PROGRESS_BAR),
+            F = I.intl.formatToPlainString(I.t['2oNfMT'], { levelName: (0, y.e9)(L) }),
             z = I.intl.format(I.t.dhKnYm, {
                 numBoosts: Z,
                 numTotal: S.oCV[L]
             });
-        (R && ((H = (0, y.e9)(L)), (z = I.intl.format(I.t.B2byER, { numBoosts: Z }))), (H = H.toLocaleLowerCase()));
+        (R && ((F = (0, y.e9)(L)), (z = I.intl.format(I.t.B2byER, { numBoosts: Z }))), (F = F.toLocaleLowerCase()));
         let W = (0, s.JA)('boosts-'.concat(t.id)),
             K = i.useRef(null),
             [Y, q] = (0, g.US)(l),
@@ -139,7 +139,7 @@ let Z = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                         },
                         onClick: () => {
                             var t, n;
-                            (null == e || null == (t = e.onClick) || t.call(e), null == i || null == (n = i.onClick) || n.call(i), F());
+                            (null == e || null == (t = e.onClick) || t.call(e), null == i || null == (n = i.onClick) || n.call(i), H());
                         },
                         className: o()(N.container, { [N.containerWithMargin]: d }),
                         onContextMenu: (e) => {
@@ -161,7 +161,7 @@ let Z = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                             color: 'none',
                                             variant: 'text-sm/medium',
                                             lineClamp: 1,
-                                            children: H
+                                            children: F
                                         })
                                     }),
                                     (0, r.jsxs)('div', {
