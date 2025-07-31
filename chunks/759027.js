@@ -73,19 +73,19 @@ let g = {
     ];
 function y(e) {
     var t, a, l, h, y, C, O;
-    let { subscription: N, onUpdated: T } = e,
+    let { subscription: T, onUpdated: N } = e,
         [E, S] = r.useState(!1),
         [P, I] = r.useState(!1),
         [w, R] = r.useState(!1),
         [k, A] = r.useState(!1),
         [Z, D] = r.useState(null),
-        L = (e) => ((null == e && (e = N.status), e in g) ? g[e] : 'Unknown status '.concat(e)),
+        L = (e) => ((null == e && (e = T.status), e in g) ? g[e] : 'Unknown status '.concat(e)),
         M = (e) => {
             let t = new Date(e);
             return u.default.fromTimestamp(t.getTime());
         },
         U = async (e) => {
-            let { status: t = N.status, premiumStreakStart: a, endedAt: n } = e,
+            let { status: t = T.status, premiumStreakStart: a, endedAt: n } = e,
                 r = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var a = null != arguments[t] ? arguments[t] : {},
@@ -112,16 +112,16 @@ function y(e) {
                     return e;
                 })({ subscription_status: t }, null != a ? { premium_streak_started_at: M(a) } : null, null != n ? { ended_at: M(n) } : null);
             (await s.tn.patch({
-                url: '/debug/subscriptions/'.concat(N.id),
+                url: '/debug/subscriptions/'.concat(T.id),
                 body: r,
                 rejectWithError: !1
             }),
-                T());
+                N());
         },
         F = async () => {
             try {
                 await s.tn.post({
-                    url: '/debug/subscriptions/'.concat(N.id, '/transition'),
+                    url: '/debug/subscriptions/'.concat(T.id, '/transition'),
                     body: {
                         target_datetime: new Date().toISOString(),
                         payment_type: 0,
@@ -133,13 +133,13 @@ function y(e) {
             } catch (e) {
                 D(e.body.message);
             }
-            T();
+            N();
         },
-        B = (null == (t = b.GP[N.planIdFromItems]) ? void 0 : t.premiumType) === b.p9.TIER_0,
-        G = null == (a = N.metadata) ? void 0 : a.ended_at,
+        B = (null == (t = b.GP[T.planIdFromItems]) ? void 0 : t.premiumType) === b.p9.TIER_0,
+        G = null == (a = T.metadata) ? void 0 : a.ended_at,
         z = null != G ? new Date(G).toISOString().substring(0, 10) : '',
-        V = N.hasActiveTrial,
-        H = (null == (l = N.metadata) ? void 0 : l.active_discount_id) != null;
+        V = T.hasActiveTrial,
+        H = (null == (l = T.metadata) ? void 0 : l.active_discount_id) != null;
     return (0, n.jsxs)('div', {
         className: i()(f.card, B ? f.gradientWrapperTier0 : f.gradientWrapperTier2),
         children: [
@@ -169,7 +169,7 @@ function y(e) {
                         children: [
                             'Type: ',
                             (() => {
-                                let e = N.planIdFromItems;
+                                let e = T.planIdFromItems;
                                 return null == e ? 'No plan id' : e in b.GP ? b.GP[e].name : 'Unknown plan id '.concat(e);
                             })(),
                             ' '
@@ -177,28 +177,28 @@ function y(e) {
                     }),
                     (0, n.jsxs)(o.Text, {
                         variant: 'text-md/normal',
-                        children: ['ID: ', N.id, ' ']
+                        children: ['ID: ', T.id, ' ']
                     }),
-                    N.status !== p.O0b.ACTIVE &&
+                    T.status !== p.O0b.ACTIVE &&
                         (0, n.jsxs)(o.Text, {
                             variant: 'text-md/normal',
-                            children: ['Dates: ', (0, d.vc)(N.createdAt, 'LL'), ' - ', (0, d.vc)(N.currentPeriodEnd, 'LL')]
+                            children: ['Dates: ', (0, d.vc)(T.createdAt, 'LL'), ' - ', (0, d.vc)(T.currentPeriodEnd, 'LL')]
                         }),
                     (0, n.jsxs)(o.Text, {
                         variant: 'text-md/normal',
                         children: ['Status: ', L()]
                     }),
-                    N.status === p.O0b.PAUSED &&
+                    T.status === p.O0b.PAUSED &&
                         (0, n.jsxs)(n.Fragment, {
                             children: [
                                 (0, n.jsxs)(o.Text, {
                                     variant: 'text-md/normal',
-                                    children: ['Pause Reason: ', N.pauseReason in j ? j[N.pauseReason] : 'Unknown pause reason '.concat(N.pauseReason)]
+                                    children: ['Pause Reason: ', T.pauseReason in j ? j[T.pauseReason] : 'Unknown pause reason '.concat(T.pauseReason)]
                                 }),
-                                null != N.pauseEndsAt &&
+                                null != T.pauseEndsAt &&
                                     (0, n.jsxs)(o.Text, {
                                         variant: 'text-md/normal',
-                                        children: ['Pause Ends At: ', (0, d.vc)(N.pauseEndsAt, 'LL')]
+                                        children: ['Pause Ends At: ', (0, d.vc)(T.pauseEndsAt, 'LL')]
                                     })
                             ]
                         })
@@ -235,7 +235,7 @@ function y(e) {
                                             }),
                                             (0, n.jsx)(o.Text, {
                                                 variant: 'text-sm/normal',
-                                                children: N.trialId
+                                                children: T.trialId
                                             })
                                         ]
                                     }),
@@ -247,7 +247,7 @@ function y(e) {
                                             }),
                                             (0, n.jsx)(o.Text, {
                                                 variant: 'text-sm/normal',
-                                                children: null != N.trialEndsAt ? (0, d.vc)(N.trialEndsAt, 'LL') : 'N/A'
+                                                children: null != T.trialEndsAt ? (0, d.vc)(T.trialEndsAt, 'LL') : 'N/A'
                                             })
                                         ]
                                     })
@@ -286,7 +286,7 @@ function y(e) {
                                             }),
                                             (0, n.jsx)(o.Text, {
                                                 variant: 'text-sm/normal',
-                                                children: null == (h = N.metadata) ? void 0 : h.active_discount_id
+                                                children: null == (h = T.metadata) ? void 0 : h.active_discount_id
                                             })
                                         ]
                                     }),
@@ -298,7 +298,7 @@ function y(e) {
                                             }),
                                             (0, n.jsx)(o.Text, {
                                                 variant: 'text-sm/normal',
-                                                children: (null == (y = N.metadata) ? void 0 : y.active_discount_expires_at) != null ? (0, d.vc)(new Date(null == (C = N.metadata) ? void 0 : C.active_discount_expires_at), 'LL') : 'N/A'
+                                                children: (null == (y = T.metadata) ? void 0 : y.active_discount_expires_at) != null ? (0, d.vc)(new Date(null == (C = T.metadata) ? void 0 : C.active_discount_expires_at), 'LL') : 'N/A'
                                             })
                                         ]
                                     })
@@ -306,7 +306,7 @@ function y(e) {
                             })
                     ]
                 }),
-            null != N.metadata &&
+            null != T.metadata &&
                 (0, n.jsxs)('div', {
                     className: v.collapsablePane,
                     children: [
@@ -328,7 +328,7 @@ function y(e) {
                         E &&
                             (0, n.jsx)('ul', {
                                 className: v.collapsiblePaneList,
-                                children: Object.entries(N.metadata).map((e) => {
+                                children: Object.entries(T.metadata).map((e) => {
                                     let [t, a] = e;
                                     return (0, n.jsxs)(
                                         'li',
@@ -377,7 +377,7 @@ function y(e) {
                                     className: v.formSection,
                                     children: (0, n.jsx)(o.PhF, {
                                         serialize: (e) => L(e),
-                                        isSelected: (e) => e === N.status,
+                                        isSelected: (e) => e === T.status,
                                         options: _,
                                         select: (e) => U({ status: e }),
                                         popoutLayerContext: m.O$
@@ -409,7 +409,7 @@ function y(e) {
                                     children: [
                                         (0, n.jsx)('input', {
                                             type: 'date',
-                                            value: null == (O = N.premiumSince) ? void 0 : O.toISOString().substring(0, 10),
+                                            value: null == (O = T.premiumSince) ? void 0 : O.toISOString().substring(0, 10),
                                             onChange: (e) => U({ premiumStreakStart: e.target.value }),
                                             style: { marginBottom: '8px' }
                                         }),

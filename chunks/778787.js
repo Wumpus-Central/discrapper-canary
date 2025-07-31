@@ -111,12 +111,13 @@ class y extends l.Z {
                 items: b(c.items),
                 bundledProducts: null == a ? void 0 : a.map(o.Z.fromServer),
                 variants: null == l ? void 0 : l.map(O.fromServer),
-                googleSkuIds: c.google_sku_ids
+                googleSkuIds: c.google_sku_ids,
+                eligibleOffers: c.eligible_offers
             })
         );
     }
     constructor(e) {
-        (super(e), f(this, 'prices', void 0), f(this, 'type', void 0), f(this, 'premiumType', void 0), f(this, 'items', void 0), f(this, 'categorySkuId', void 0), f(this, 'bundledProducts', void 0), f(this, 'variants', void 0), f(this, 'variantGroupStoreListingId', void 0), f(this, 'googleSkuIds', void 0), (this.summary = e.summary), (this.type = e.type), (this.premiumType = e.premiumType), (this.items = e.items), (this.categorySkuId = e.categorySkuId), (this.prices = e.prices), (this.bundledProducts = e.bundledProducts), (this.googleSkuIds = e.googleSkuIds), (this.variants = e.variants));
+        (super(e), f(this, 'prices', void 0), f(this, 'type', void 0), f(this, 'premiumType', void 0), f(this, 'items', void 0), f(this, 'categorySkuId', void 0), f(this, 'bundledProducts', void 0), f(this, 'variants', void 0), f(this, 'variantGroupStoreListingId', void 0), f(this, 'googleSkuIds', void 0), f(this, 'eligibleOffers', void 0), (this.summary = e.summary), (this.type = e.type), (this.premiumType = e.premiumType), (this.items = e.items), (this.categorySkuId = e.categorySkuId), (this.prices = e.prices), (this.bundledProducts = e.bundledProducts), (this.googleSkuIds = e.googleSkuIds), (this.variants = e.variants), (this.eligibleOffers = e.eligibleOffers));
     }
 }
 class O extends y {

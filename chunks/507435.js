@@ -50,7 +50,7 @@ function O(e) {
           })
         : null;
 }
-function y(e) {
+function v(e) {
     let t;
     var { type: n } = e,
         i = (function (e, t) {
@@ -137,7 +137,7 @@ function y(e) {
         children: t
     });
 }
-function v(e) {
+function y(e) {
     let { className: t, data: n, onClickPollLink: l } = e,
         o = i.useMemo(
             () =>
@@ -167,7 +167,7 @@ function v(e) {
                 victorEmoji: n.victorEmoji
             }),
             (0, r.jsx)(
-                y,
+                v,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -211,7 +211,7 @@ function x(e) {
         g = i.useMemo(() => (0, _.Z)(d), [d]),
         C = (0, o.aF)(null != (t = null == g ? void 0 : g.questionText) ? t : '', h.Dv),
         O = (0, p.ZP)(n),
-        y = (0, m.l)({
+        v = (0, m.l)({
             user: n.author,
             channelId: l.id,
             guildId: l.guild_id,
@@ -237,12 +237,12 @@ function x(e) {
                       compact: a,
                       children: b.intl.format(b.t['VJcK4+'], {
                           username: O.nick,
-                          usernameHook: y(O),
+                          usernameHook: v(O),
                           title: C,
                           titleOnClick: I
                       })
                   }),
-                  (0, r.jsx)(v, {
+                  (0, r.jsx)(y, {
                       className: E.embed,
                       data: g,
                       onClickPollLink: u ? void 0 : I

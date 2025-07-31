@@ -26,8 +26,8 @@ var r = n(512722),
     E = n(869765),
     C = n(314897),
     O = n(592125),
-    y = n(703558),
-    v = n(607744),
+    v = n(703558),
+    y = n(607744),
     x = n(375954),
     I = n(117530),
     j = n(553803),
@@ -190,7 +190,7 @@ async function F(e) {
             title: A.intl.string(A.t.Qic1FB),
             body: A.intl.string(A.t['5sHHo6'])
         });
-    if (!v.Z.canChatInGuild(r.guild_id))
+    if (!y.Z.canChatInGuild(r.guild_id))
         return void d.Z.show({
             title: A.intl.string(A.t.p245ws),
             body: A.intl.string(A.t['U/uodn'])
@@ -440,7 +440,7 @@ let H = {
     handlePollActionTapped: G,
     createPoll: async function (e) {
         let { channel: t, question: n, answers: r, allowMultiSelect: i, duration: l, layout: a, onClose: s } = e,
-            c = I.Z.getUploads(t.id, y.d.Poll),
+            c = I.Z.getUploads(t.id, v.d.Poll),
             u = r.map((e) => {
                 var t, n;
                 let r = null == c ? void 0 : c.findIndex((t) => t.id === e.localCreationAnswerId),

@@ -19,7 +19,7 @@ var r = n(255367),
     C = n(388032);
 function O(e) {
     var t, n;
-    let { application: O, customId: y, customLink: v, embedUrl: x, referrerId: I } = e,
+    let { application: O, customId: v, customLink: y, embedUrl: x, referrerId: I } = e,
         j = null == O || null == (t = O.bot) ? void 0 : t.id,
         S = (0, c.ms)({
             context: { type: 'contextless' },
@@ -39,7 +39,7 @@ function O(e) {
         R = (0, i.e7)([h.ZP], () => h.ZP.getCurrentEmbeddedActivity()),
         D = (0, b.Z)(),
         L = w === E.jy.CAN_LAUNCH,
-        M = null != y ? y : v.customId,
+        M = null != v ? v : y.customId,
         k = [];
     (L &&
         k.push({
@@ -84,9 +84,9 @@ function O(e) {
             icon: O.icon,
             bot: O.bot
         }),
-        info: (0, r.jsx)('div', { children: v.description }),
-        staticBannerSrc: v.getAssetURL(),
-        title: v.title,
+        info: (0, r.jsx)('div', { children: y.description }),
+        staticBannerSrc: y.getAssetURL(),
+        title: y.title,
         trackingConfig: {
             id: O.id,
             linkType: u.U.CUSTOM_ACTIVITY_LINK,

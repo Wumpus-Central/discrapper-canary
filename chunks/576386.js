@@ -14,15 +14,15 @@ let b = (e) => {
         var t;
         let { nameplate: r, isPurchased: l = !1, isSelected: b = !1, onClick: f } = e,
             m = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
-            [h, y] = (0, i.useState)(!1);
+            [h, g] = (0, i.useState)(!1);
         return null == m
             ? null
             : (0, n.jsxs)(s.P3F, {
                   'aria-label': null != (t = r.label) ? t : p.intl.string(p.t.x5CoXV),
                   className: v.nameplateItem,
                   onClick: f,
-                  onMouseEnter: () => y(!0),
-                  onMouseLeave: () => y(!1),
+                  onMouseEnter: () => g(!0),
+                  onMouseLeave: () => g(!1),
                   children: [
                       (0, n.jsx)(c.Z, {
                           nameplate: r,

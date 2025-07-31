@@ -1,5 +1,5 @@
 (n.d(t, {
-    $: () => y,
+    $: () => v,
     s: () => O
 }),
     n(953529));
@@ -61,7 +61,7 @@ function O(e) {
         }),
         e());
 }
-function y(e) {
+function v(e) {
     let { channelId: t, messageId: n, isReportFalsePositiveLoading: l, analyticsContext: a, attachmentPreview: o, embedPreview: c, onConfirmPress: u, transitionState: d, onClose: p } = e,
         _ = (0, f.pn)('ExplicitMediaFalsePositiveModal'),
         h = i.useCallback(() => {

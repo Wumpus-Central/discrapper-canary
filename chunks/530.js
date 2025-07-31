@@ -39,7 +39,8 @@ function m(e) {
                             children: (0, r.jsx)(d.Z, {
                                 userName: m,
                                 displayNameStyles: t.displayNameStyles,
-                                effectDisplayType: u.F.ANIMATED
+                                effectDisplayType: u.F.ANIMATED,
+                                inProfile: !0
                             })
                         })
                     ),

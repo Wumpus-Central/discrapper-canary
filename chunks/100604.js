@@ -48,8 +48,8 @@ class _ {
             h = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.Z,
             b = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : a.Z,
             E = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : i.Z,
-            { snapshotIndex: C, parentMessage: O, messageSnapshot: y } = this,
-            v = (0, d.Xf)(y.message.timestamp),
+            { snapshotIndex: C, parentMessage: O, messageSnapshot: v } = this,
+            y = (0, d.Xf)(v.message.timestamp),
             x = m.getChannel(this.parentMessage.channel_id);
         if (null != x && x.guild_id === (null == (e = O.messageReference) ? void 0 : e.guild_id)) {
             let e = m.getChannel(null == (n = O.messageReference) ? void 0 : n.channel_id);
@@ -59,7 +59,7 @@ class _ {
                     ? { snapshotIndex: C }
                     : {
                           snapshotIndex: C,
-                          footerInfo: f(e, v)
+                          footerInfo: f(e, y)
                       };
             }
             if (!h.can(e.accessPermissions, e)) return { snapshotIndex: C };
@@ -68,10 +68,10 @@ class _ {
                 snapshotIndex: C,
                 footerInfo: {
                     originLabel: t,
-                    timestampLabel: v,
+                    timestampLabel: y,
                     accessibilityLabel: p.intl.formatToPlainString(p.t['+l04BA'], {
                         origin: t,
-                        timestamp: v
+                        timestamp: y
                     })
                 }
             };
@@ -83,7 +83,7 @@ class _ {
             ? { snapshotIndex: C }
             : {
                   snapshotIndex: C,
-                  footerInfo: f(j, v)
+                  footerInfo: f(j, y)
               };
     }
     constructor(e, t, n) {

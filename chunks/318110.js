@@ -5,7 +5,7 @@ var r = n(481060);
 let s = (e) => {
     let { analyticsLocations: t, guildId: s } = e;
     (0, r.ZDy)(async () => {
-        let { default: e } = await Promise.all([n.e('204'), n.e('55864')]).then(n.bind(n, 612293));
+        let { default: e } = await Promise.all([n.e('204'), n.e('22150')]).then(n.bind(n, 612293));
         return (n) => {
             var r, a;
             return (0, i.jsx)(

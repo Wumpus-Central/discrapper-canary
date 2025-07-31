@@ -1,6 +1,6 @@
-n.d(t, { Z: () => a });
-var r = n(442837),
-    i = n(317381);
-function a() {
-    return (0, r.e7)([i.ZP], () => i.ZP.getCurrentEmbeddedActivity());
+n.d(t, { Z: () => l });
+var i = n(442837),
+    r = n(317381);
+function l() {
+    return (0, i.e7)([r.ZP], () => r.ZP.getCurrentEmbeddedActivity());
 }

@@ -38,7 +38,8 @@ function f(e) {
 }
 function p(e) {
     var t;
-    let { prices: n, isPremiumUser: i, discount: a, product: l, hasSufficientOrbs: d, isProductDisabled: p } = e;
+    let { prices: n, isPremiumUser: i, discount: a, product: l, hasSufficientOrbs: d, isProductDisabled: p, discountOfferAmount: h } = e,
+        v = null != h;
     return 0 === n.length
         ? null
         : n[0].currency === u.pK.DISCORD_ORB
@@ -57,11 +58,12 @@ function p(e) {
                                 product: l,
                                 discount: a,
                                 isPremiumUser: i,
-                                hideStrikethroughPrice: !i,
+                                hideStrikethroughPrice: !i || v,
                                 nitroIconType: 'tooltip',
-                                nitroIconSize: 'xs'
+                                nitroIconSize: 'xs',
+                                discountOfferAmount: h
                             }),
-                            i ? null : (0, r.jsx)(o.Z, { product: l })
+                            i || v ? null : (0, r.jsx)(o.Z, { product: l })
                         ]
                     }),
                     n.length > 1 &&

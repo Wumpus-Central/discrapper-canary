@@ -18,8 +18,8 @@ var r = n(255367),
     E = n(36459),
     C = n(336197),
     O = n(359110),
-    y = n(726033),
-    v = n(496675),
+    v = n(726033),
+    y = n(496675),
     x = n(594174),
     I = n(5192),
     j = n(51144),
@@ -132,7 +132,7 @@ function K(e, t, n) {
         if (null != t && null != n)
             return (i) =>
                 (0, r.jsx)(
-                    y.Z,
+                    v.Z,
                     V(H({}, i), {
                         user: t,
                         currentUser: n,
@@ -323,7 +323,7 @@ function ee(e) {
     var t;
     let { id: n, compact: l, message: o, channel: s } = e,
         {
-            avatarSrc: y,
+            avatarSrc: v,
             eventHandlers: { onMouseEnter: x, onMouseLeave: I }
         } = (0, D.m)(!0),
         j = (0, c.JA)(null != n ? n : ''),
@@ -331,7 +331,7 @@ function ee(e) {
         N = z(j, ['onFocus']),
         { isFocused: w, handleFocus: R, handleBlur: M } = (0, Z.bb)(T),
         K = (0, d.e7)([f.Z], () => f.Z.keyboardModeEnabled),
-        q = (0, d.e7)([v.Z], () => v.Z.can(k.Plq.MANAGE_MESSAGES, s), [s]),
+        q = (0, d.e7)([y.Z], () => y.Z.can(k.Plq.MANAGE_MESSAGES, s), [s]),
         { ruleName: Q, embedChannel: ee, decisionId: et, keywordMatchedContent: en, keyword: er, content: ei, flaggedMessageId: el, timeoutDuration: ea, decisionReason: eo, alertActionsExecution: es, quarantineType: ec, interactionUserId: eu } = (0, h.ZP)(o),
         ed = i.useMemo(() => (0, S.k$)(ei, en, s.id), [ei, en, s]),
         ep = W(o, s),
@@ -364,14 +364,14 @@ function ee(e) {
         eE = (0, F.L9)(Number(ea)),
         eC = null != eo,
         eO = q && null != el && (null == es || !es.actions.hasOwnProperty(g.d.DELETE_USER_MESSAGE)),
-        ey = o.embeds.length > 0 ? (null == (t = o.embeds[0].fields.find((e) => 'channel_id' === e.rawName)) ? void 0 : t.rawValue) : null,
-        ev = null != ey;
+        ev = o.embeds.length > 0 ? (null == (t = o.embeds[0].fields.find((e) => 'channel_id' === e.rawName)) ? void 0 : t.rawValue) : null,
+        ey = null != ev;
     return (0, r.jsx)('div', {
         onMouseEnter: x,
         onMouseLeave: I,
         children: (0, r.jsx)(L.Z, {
             className: a()(G.mainContainer, { [G.compact]: l }),
-            iconNode: l ? null : (0, r.jsx)(D.S, { src: y }),
+            iconNode: l ? null : (0, r.jsx)(D.S, { src: v }),
             iconContainerClassName: G.iconContainer,
             compact: l,
             children: (0, r.jsxs)('div', {
@@ -520,14 +520,14 @@ function ee(e) {
                                         })
                                     ]
                                 }),
-                                ev
+                                ey
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)('div', { className: G.dot }),
                                               (0, r.jsx)('div', {
                                                   className: G.footerAction,
                                                   children: (0, r.jsx)(p.Avr, {
-                                                      onClick: () => eh(ey),
+                                                      onClick: () => eh(ev),
                                                       variant: 'primary',
                                                       size: 'sm',
                                                       textVariant: 'text-xs/normal',

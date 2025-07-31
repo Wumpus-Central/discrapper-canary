@@ -75,9 +75,9 @@ async function R(e) {
 }
 function b(e) {
     let { children: t, className: n, channelId: o, channelType: s, guildId: f, innerClassname: I, transparent: g = !1, showToolbar: N = !0, toolbar: b, mobileToolbar: y, 'aria-label': A, 'aria-labelledby': C, scrollable: P, role: D, hideSearch: M, showDivider: j, disableDoubleClick: x } = e,
-        k = null == o || (0, S.AB)(o) ? null : o,
-        v = (0, l.e7)([O.Z], () => O.Z.isInChannel(k) || !1),
-        L = (0, l.e7)([c.Z], () => null != k && c.Z.getParticipantsListOpen(k)),
+        v = null == o || (0, S.AB)(o) ? null : o,
+        k = (0, l.e7)([O.Z], () => O.Z.isInChannel(v) || !1),
+        L = (0, l.e7)([c.Z], () => null != v && c.Z.getParticipantsListOpen(v)),
         { enabled: U, inInbox: Z } = d.Z.useExperiment({ location: 'HeaderBar' }),
         { hasParticipantsPanel: F } = (0, u.Z)({ location: 'HeaderBar' });
     return (0, r.jsx)(h.ZP, {
@@ -105,13 +105,13 @@ function b(e) {
                           j && (0, r.jsx)(h.ZP.Divider, {}),
                           U && !Z ? (0, r.jsx)(_.Z, {}) : null,
                           F &&
-                              v &&
-                              null != k &&
+                              k &&
+                              null != v &&
                               !L &&
                               s === T.d4z.GROUP_DM &&
                               (0, r.jsxs)('div', {
                                   className: m.controlButtonWrapper,
-                                  children: [(0, r.jsx)(h.ZP.Divider, {}), (0, r.jsx)(p.Z, { onClick: () => a.Z.toggleParticipantsList(k, !L) })]
+                                  children: [(0, r.jsx)(h.ZP.Divider, {}), (0, r.jsx)(p.Z, { onClick: () => a.Z.toggleParticipantsList(v, !L) })]
                               })
                       ]
                   });

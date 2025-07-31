@@ -18,8 +18,8 @@ let _ = {},
     E = [],
     C = new Set(),
     O = {},
-    y = {},
-    v = new Set();
+    v = {},
+    y = new Set();
 function x(e) {
     let t = p.Z.createFromServer(e),
         n = t.code;
@@ -42,7 +42,7 @@ function x(e) {
 }
 function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    if (t && !v.has(e.channel_id)) return !1;
+    if (t && !y.has(e.channel_id)) return !1;
     let n = (0, m.Fp)(e) ? (0, m.Q_)((null == e ? void 0 : e.embeds) != null ? (null == e ? void 0 : e.embeds[0].url) : void 0) : (0, m.Q_)(e.content);
     return (
         0 !== n.length &&
@@ -62,7 +62,7 @@ function S(e) {
 }
 function T(e) {
     let { channelId: t, messages: n } = e;
-    (v.add(t), n.forEach((e) => I(e, !0)));
+    (y.add(t), n.forEach((e) => I(e, !0)));
 }
 function N(e) {
     let { firstMessages: t } = e;
@@ -75,7 +75,7 @@ class P extends (r = s.ZP.Store) {
         return null == t || t.isExpired() ? null : t;
     }
     getError(e) {
-        return null != e ? y[e] : null;
+        return null != e ? v[e] : null;
     }
     getForGifterSKUAndPlan(e, t, n) {
         return Array.from(g.values()).filter((r) => r.userId === e && r.skuId === t && (null == n || r.subscriptionPlanId === n) && !r.isExpired());
@@ -116,11 +116,11 @@ class P extends (r = s.ZP.Store) {
         : (P[i] = l));
 let A = new P(u.Z, {
         CONNECTION_OPEN: function () {
-            return (v.clear(), !1);
+            return (y.clear(), !1);
         },
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
-            return (null != t && v.add(t), !1);
+            return (null != t && y.add(t), !1);
         },
         GIFT_CODE_RESOLVE: j,
         GIFT_CODE_RESOLVE_SUCCESS: function (e) {
@@ -152,7 +152,7 @@ let A = new P(u.Z, {
             let { code: t, error: n } = e;
             b = b.filter((e) => e !== t);
             let r = g.get(t);
-            if (((y[t] = n), null != r))
+            if (((v[t] = n), null != r))
                 switch (n.code) {
                     case f.evJ.UNKNOWN_GIFT_CODE:
                         g.set(t, r.set('revoked', !0));

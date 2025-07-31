@@ -18,8 +18,8 @@ var r,
     E = n(739566),
     C = n(834129),
     O = n(981631),
-    y = n(388032),
-    v = n(573510);
+    v = n(388032),
+    y = n(573510);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -200,8 +200,8 @@ function k(e) {
                     return 'enter';
             }
         })(d, _),
-        y = T.includes(_),
-        x = y && 'exit' === d,
+        v = T.includes(_),
+        x = v && 'exit' === d,
         I = l.useCallback((e) => {
             m(e);
         }, []),
@@ -245,7 +245,7 @@ function k(e) {
             }
         }, [g, _, d, a]),
         l.useEffect(() => {
-            if (y && 'leaf_fall' === d) {
+            if (v && 'leaf_fall' === d) {
                 let e = A[_].leafRotationDirection;
                 C.createConfetti(
                     {
@@ -297,7 +297,7 @@ function k(e) {
                     { sprite: 'TOP_LEFT' === _ ? R : D }
                 );
             }
-        }, [y, C, _, d]),
+        }, [v, C, _, d]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(s.Ji, {
@@ -309,15 +309,15 @@ function k(e) {
                 }),
                 (0, i.jsx)(p.P3F, {
                     onClick: n,
-                    className: o()(v.easterEggAnimationClickTarget, {
-                        [v.easterEggAnimationClickTargetTopLeft]: 'TOP_LEFT' === _,
-                        [v.easterEggAnimationClickTargetTopRight]: 'TOP_RIGHT' === _,
-                        [v.easterEggAnimationClickTargetBottomLeft]: 'BOTTOM_LEFT' === _,
-                        [v.easterEggAnimationClickTargetBottomRight]: 'BOTTOM_RIGHT' === _
+                    className: o()(y.easterEggAnimationClickTarget, {
+                        [y.easterEggAnimationClickTargetTopLeft]: 'TOP_LEFT' === _,
+                        [y.easterEggAnimationClickTargetTopRight]: 'TOP_RIGHT' === _,
+                        [y.easterEggAnimationClickTargetBottomLeft]: 'BOTTOM_LEFT' === _,
+                        [y.easterEggAnimationClickTargetBottomRight]: 'BOTTOM_RIGHT' === _
                     }),
                     children: (0, i.jsx)(p.kci, {
                         animationRef: k,
-                        className: o()(v.easterEggAnimation, { [v.easterEggAnimationHideLeaf]: x }),
+                        className: o()(y.easterEggAnimation, { [y.easterEggAnimationHideLeaf]: x }),
                         nextScene: O,
                         sceneSegments: j,
                         onScenePlay: I,
@@ -355,24 +355,24 @@ function U(e) {
     t =
         null == c || null == a
             ? u > 1
-                ? y.intl.format(y.t.yfC9dn, {
+                ? v.intl.format(v.t.yfC9dn, {
                       username: P,
                       usernameHook: A,
                       numSubscriptions: u
                   })
-                : y.intl.format(y.t['57St//'], {
+                : v.intl.format(v.t['57St//'], {
                       username: P,
                       usernameHook: A
                   })
             : u > 1
-              ? y.intl.format(y.t.PO9uJC, {
+              ? v.intl.format(v.t.PO9uJC, {
                     username: P,
                     usernameHook: A,
                     numSubscriptions: u,
                     guildName: a.name,
                     newTierName: (0, b.nW)(c)
                 })
-              : y.intl.format(y.t.cUfTTE, {
+              : v.intl.format(v.t.cUfTTE, {
                     username: P,
                     usernameHook: A,
                     guildName: a.name,
@@ -401,12 +401,12 @@ function U(e) {
         );
     l.useEffect(() => x(L));
     let M = (0, i.jsx)(p.P3F, {
-        className: v.iconWrapper,
+        className: y.iconWrapper,
         innerRef: S,
         onClick: s,
         children: (0, i.jsx)(p.$Eu, {
             color: p.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-            className: v.icon,
+            className: y.icon,
             onMouseEnter: Z
         })
     });
@@ -417,13 +417,13 @@ function U(e) {
         children: [
             (0, i.jsx)('div', {
                 onClick: s,
-                className: v.message,
+                className: y.message,
                 children: t
             }),
             I
                 ? (0, i.jsx)(_.ZP, {
                       children: (0, i.jsx)('div', {
-                          className: v.cannonWrapper,
+                          className: y.cannonWrapper,
                           children: (0, i.jsx)(k, {
                               onAnimationComplete: R,
                               onClick: D

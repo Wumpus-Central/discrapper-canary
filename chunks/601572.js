@@ -16,10 +16,10 @@ var n = a(255367),
     b = a(898531),
     h = a(131951),
     y = a(594174),
-    S = a(626135),
-    O = a(747545),
-    C = a(981631),
-    T = a(388032),
+    T = a(626135),
+    S = a(747545),
+    O = a(981631),
+    C = a(388032),
     I = a(994950);
 function v(e) {
     let { transitionState: t, videoEnabled: a, onEnable: v, onClose: A } = e,
@@ -27,12 +27,12 @@ function v(e) {
         E = (0, p.Dt)(),
         R = (0, b.Z)(),
         w = _.qF.useSetting(),
-        [N, L] = r.useState((0, g.P)(y.default.getCurrentUser())),
+        [L, N] = r.useState((0, g.P)(y.default.getCurrentUser())),
         x = (0, s.O)(),
         { analyticsLocations: D } = (0, u.ZP)(l.Z.CAMERA_PREVIEW),
         j = r.useRef(null);
     (r.useEffect(() => {
-        S.default.track(C.rMx.OPEN_MODAL, { type: 'Camera Preview Modal' });
+        T.default.track(O.rMx.OPEN_MODAL, { type: 'Camera Preview Modal' });
     }, []),
         r.useEffect(() => {
             var e;
@@ -43,7 +43,7 @@ function v(e) {
         },
         U = async () => {
             try {
-                await (0, m.wG)(N, {
+                await (0, m.wG)(L, {
                     location: (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var a = null != arguments[t] ? arguments[t] : {},
@@ -68,15 +68,15 @@ function v(e) {
                                 }));
                         }
                         return e;
-                    })({ page: C.ZY5.PREVIEW_CAMERA_MODAL }, x.location)
+                    })({ page: O.ZY5.PREVIEW_CAMERA_MODAL }, x.location)
                 });
             } catch (e) {}
-            (await A(), (0, f.Up)(N));
+            (await A(), (0, f.Up)(L));
         };
     return (0, n.jsx)(u.Gt, {
         value: D,
         children: (0, n.jsx)(c.Z, {
-            page: C.ZY5.PREVIEW_CAMERA_MODAL,
+            page: O.ZY5.PREVIEW_CAMERA_MODAL,
             children: (0, n.jsxs)(i.Y0X, {
                 className: I.modalRoot,
                 size: i.CgR.DYNAMIC,
@@ -92,15 +92,15 @@ function v(e) {
                                 id: E,
                                 className: I.header,
                                 variant: 'heading-xl/semibold',
-                                children: a ? T.intl.string(T.t.LAwwbW) : T.intl.string(T.t['/HITVF'])
+                                children: a ? C.intl.string(C.t.LAwwbW) : C.intl.string(C.t['/HITVF'])
                             }),
-                            (0, n.jsx)(O.Z, {
+                            (0, n.jsx)(S.Z, {
                                 hidePreviewToggle: !0,
                                 showSmallBackgroundOptions: !0,
                                 hideDeviceHeader: !0,
                                 hideCameraSettingsLink: !0,
-                                selectedBackgroundOption: N,
-                                onSelectBackgroundOption: L,
+                                selectedBackgroundOption: L,
+                                onSelectBackgroundOption: N,
                                 hideDeviceSelector: a,
                                 renderCamera: (e) =>
                                     (0, n.jsxs)('div', {
@@ -115,7 +115,7 @@ function v(e) {
                                                     height: 207
                                                 })
                                             }),
-                                            (0, n.jsx)(O.S, {})
+                                            (0, n.jsx)(S.S, {})
                                         ]
                                     }),
                                 onLearnMore: A
@@ -126,7 +126,7 @@ function v(e) {
                         justify: d.Z.Justify.BETWEEN,
                         children: [
                             (() => {
-                                let e = a ? T.intl.string(T.t.KQENho) : T.intl.string(T.t.kgIe9f);
+                                let e = a ? C.intl.string(C.t.KQENho) : C.intl.string(C.t.kgIe9f);
                                 return (0, n.jsx)(i.zxk, {
                                     variant: 'primary',
                                     size: 'sm',
@@ -140,11 +140,11 @@ function v(e) {
                                 type: i.XZJ.Types.INVERTED,
                                 value: w,
                                 onChange: () => {
-                                    (_.qF.updateSetting(!w), S.default.track(C.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !w }));
+                                    (_.qF.updateSetting(!w), T.default.track(O.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: !w }));
                                 },
                                 children: (0, n.jsx)(i.Text, {
                                     variant: 'text-sm/normal',
-                                    children: T.intl.string(T.t['3Ppr1t'])
+                                    children: C.intl.string(C.t['3Ppr1t'])
                                 })
                             })
                         ]

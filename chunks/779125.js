@@ -18,9 +18,9 @@ var i = n(442837),
     b = n(981631);
 function E(e) {
     let { channel: t, onClick: n, beforeTransition: E, className: C, openChatWithoutConnecting: O } = e,
-        y = (0, i.e7)([_.default, f.Z], () => (null == t ? '' : (0, s.F6)(t, _.default, f.Z)), [t]);
+        v = (0, i.e7)([_.default, f.Z], () => (null == t ? '' : (0, s.F6)(t, _.default, f.Z)), [t]);
     return (0, r.jsx)(l.ua7, {
-        text: y,
+        text: v,
         position: 'top',
         children: (e) => {
             let { onMouseEnter: i, onMouseLeave: s } = e;
@@ -53,7 +53,7 @@ function E(e) {
                 onMouseEnter: i,
                 onMouseLeave: s,
                 iconType: (0, g.wl)(t),
-                children: y
+                children: v
             });
         }
     });

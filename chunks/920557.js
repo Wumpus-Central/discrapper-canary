@@ -4,7 +4,7 @@ var r = n(255367),
     l = n(120356),
     a = n.n(l),
     o = n(528708),
-    s = n(778141),
+    s = n(855659),
     c = n(278074),
     u = n(748780),
     d = n(481060),
@@ -42,21 +42,21 @@ function O(e) {
     }
     return e;
 }
-function y(e) {
+function v(e) {
     let { percentage: t, label: n, canShowVoterDetails: l, answerId: a } = e,
         s = (0, p.Dt)(),
         { channelId: c, messageId: u } = (0, b.pE)(),
         [g, h] = i.useState(''),
-        [E, y] = i.useState(!1),
-        v = '' !== g && E,
+        [E, v] = i.useState(!1),
+        y = '' !== g && E,
         x = i.useCallback(() => {
             h((0, _.e1)(u, c, a));
         }, [u, c, a]),
         I = i.useCallback(() => {
-            (x(), y(!0));
+            (x(), v(!0));
         }, [x]),
         j = i.useCallback(() => {
-            y(!1);
+            v(!1);
         }, []),
         S = i.useCallback(() => {
             (0, f.n)({
@@ -88,7 +88,7 @@ function y(e) {
                                       scaleFontToUserSetting: !0,
                                       children: g
                                   }),
-                                  forceOpen: v,
+                                  forceOpen: y,
                                   'aria-label': !1,
                                   children: (e) => {
                                       var t, i;
@@ -102,7 +102,7 @@ function y(e) {
                                                   onFocus: I,
                                                   onBlur: j,
                                                   onClick: S,
-                                                  'aria-describedby': v ? s : void 0,
+                                                  'aria-describedby': y ? s : void 0,
                                                   text: n,
                                                   variant: 'secondary',
                                                   textVariant: 'text-xs/semibold'
@@ -123,7 +123,7 @@ function y(e) {
                                       );
                                   }
                               }),
-                              v &&
+                              y &&
                                   (0, r.jsx)(o.T, {
                                       id: s,
                                       children: g
@@ -146,7 +146,7 @@ function y(e) {
         })
     );
 }
-function v(e) {
+function y(e) {
     let { percentage: t, shouldAnimate: n } = e,
         i = (0, d.q_F)(
             {
@@ -213,7 +213,7 @@ function I(e) {
         }),
         children: [
             l
-                ? (0, r.jsx)(v, {
+                ? (0, r.jsx)(y, {
                       percentage: t.votesPercentage,
                       shouldAnimate: m
                   })
@@ -232,7 +232,7 @@ function I(e) {
             }),
             t.didSelfVote && (0, r.jsx)(o.T, { children: E.intl.string(E.t['8DAM+/']) }),
             l &&
-                (0, r.jsx)(y, {
+                (0, r.jsx)(v, {
                     percentage: t.votesPercentage,
                     label: t.votes,
                     canShowVoterDetails: s,

@@ -1,106 +1,108 @@
 (n.d(t, {
     $7: () => k,
-    $8: () => eP,
+    $8: () => eD,
+    $X: () => eg,
     $e: () => f,
-    $n: () => eX,
+    $n: () => eJ,
     A5: () => G,
     AU: () => q,
-    Bo: () => e2,
+    Bo: () => e4,
     C: () => s,
     C2: () => Q,
     CL: () => _,
     CR: () => ea,
-    Cj: () => eV,
+    Cj: () => eZ,
     Cn: () => K,
-    Cx: () => e7,
+    Cx: () => te,
     EA: () => N,
     ET: () => $,
-    EZ: () => eG,
+    EZ: () => eV,
     F$: () => I,
     FL: () => H,
     F_: () => c,
     GP: () => C,
-    HO: () => eD,
+    HO: () => ex,
     IW: () => T,
-    Lw: () => eI,
-    M_: () => e1,
+    Lw: () => eS,
+    M_: () => e3,
     Nl: () => ep,
     OT: () => es,
-    QF: () => eC,
-    QI: () => eK,
-    QP: () => ex,
-    Qh: () => e4,
+    QF: () => eP,
+    QI: () => eq,
+    QP: () => ek,
+    Qh: () => e6,
     RU: () => ec,
     Rg: () => Y,
     Rr: () => L,
     Rt: () => en,
-    Se: () => e8,
+    Se: () => e9,
     Si: () => p,
-    T7: () => eH,
-    TD: () => eF,
+    T7: () => eW,
+    TD: () => eH,
     TL: () => X,
-    Tp: () => eY,
+    Tp: () => eK,
     UA: () => M,
     UD: () => y,
     Ue: () => j,
-    Uq: () => eS,
-    VU: () => e3,
-    Wt: () => e$,
-    X2: () => eJ,
-    XB: () => eg,
+    Uq: () => eN,
+    VU: () => e5,
+    Wt: () => e1,
+    X2: () => e0,
+    XB: () => eb,
     Xh: () => E,
-    Y1: () => eL,
+    Y1: () => eM,
     YQ: () => m,
     Z1: () => O,
     Zh: () => u,
-    _k: () => ew,
-    a$: () => e6,
-    a1: () => eZ,
+    _k: () => eL,
+    a$: () => e7,
+    a1: () => eY,
     a7: () => J,
     b6: () => d,
-    bg: () => eU,
+    bg: () => eB,
     cb: () => x,
-    cd: () => ey,
+    cd: () => ev,
     dB: () => ed,
     dJ: () => b,
     dO: () => ee,
     dT: () => eu,
-    eZ: () => eq,
+    eZ: () => eQ,
     ee: () => em,
     ff: () => Z,
     gW: () => eh,
     gh: () => B,
-    h1: () => eM,
+    h1: () => ej,
     h8: () => eo,
-    hX: () => eQ,
+    hX: () => e$,
     hs: () => el,
     i_: () => W,
     ih: () => e_,
-    in: () => eO,
-    jy: () => eW,
+    in: () => eI,
+    jy: () => ez,
     jz: () => ei,
-    kJ: () => ez,
+    kJ: () => eX,
     m8: () => V,
     mn: () => S,
-    nG: () => eb,
-    nH: () => ek,
-    nL: () => eB,
+    nC: () => eE,
+    nG: () => eO,
+    nH: () => eU,
+    nL: () => eF,
     nS: () => h,
     o4: () => v,
     p9: () => l,
-    pH: () => eR,
+    pH: () => ew,
     pj: () => R,
     rB: () => ef,
     rV: () => A,
     rX: () => F,
-    rt: () => e0,
-    vK: () => e5,
-    vL: () => ev,
-    w1: () => eE,
+    rt: () => e2,
+    vK: () => e8,
+    vL: () => eT,
+    w1: () => ey,
     wh: () => z,
     xT: () => et,
     y7: () => g,
-    ys: () => ej,
+    ys: () => eG,
     zp: () => U
 }),
     n(388685));
@@ -367,9 +369,11 @@ let C = Object.freeze({
     ep = '1223319122125783040',
     eh = '1223380890109870080',
     em = [ep, eh],
-    eg = 8,
-    eE = 96,
-    eb = Object.freeze({
+    eg = '1397626558063050855',
+    eE = '1397609029626232955',
+    eb = 8,
+    ey = 96,
+    eO = Object.freeze({
         [W]: {
             id: W,
             skus: ['521847234246082599']
@@ -411,7 +415,7 @@ let C = Object.freeze({
             skus: ['521847234246082599']
         }
     });
-var ey = (function (e) {
+var ev = (function (e) {
         return (
             (e.ANIMATED_GUILD_BANNER_TOOLTIP = 'animated_guild_banner_tooltip'),
             (e.EMOJI_PICKER_SEARCH = 'emoji_picker_search'),
@@ -512,40 +516,40 @@ var ey = (function (e) {
             e
         );
     })({}),
-    eO = (function (e) {
+    eI = (function (e) {
         return ((e[(e.PREMIUM_TIER_1 = 1)] = 'PREMIUM_TIER_1'), (e[(e.PREMIUM_TIER_2 = 2)] = 'PREMIUM_TIER_2'), (e[(e.GUILD_BOOST = 4)] = 'GUILD_BOOST'), (e[(e.PREMIUM_TIER_0 = 8)] = 'PREMIUM_TIER_0'), (e[(e.ON_REVERSE_TRIAL = 16)] = 'ON_REVERSE_TRIAL'), e);
     })({});
-let ev = Object.freeze({
+let eT = Object.freeze({
         '978380684370378762': 8,
         '521846918637420545': 1,
         '521847234246082599': 2,
         '590663762298667008': 4
     }),
-    eI = 52428800,
-    eT = 52428800,
-    eS = 524288000,
+    eS = 52428800,
     eA = 52428800,
-    eN = 104857600,
-    eC = 5,
-    eR = {
-        [i.Eu4.NONE]: eC,
+    eN = 524288000,
+    eC = 52428800,
+    eR = 104857600,
+    eP = 5,
+    ew = {
+        [i.Eu4.NONE]: eP,
         [i.Eu4.TIER_1]: 10,
         [i.Eu4.TIER_2]: 15,
         [i.Eu4.TIER_3]: 30
     },
-    eP = {
-        [i.Eu4.NONE]: eR[i.Eu4.NONE],
-        [i.Eu4.TIER_1]: eR[i.Eu4.NONE] + eR[i.Eu4.TIER_1],
-        [i.Eu4.TIER_2]: eR[i.Eu4.NONE] + eR[i.Eu4.TIER_1] + eR[i.Eu4.TIER_2],
-        [i.Eu4.TIER_3]: eR[i.Eu4.NONE] + eR[i.Eu4.TIER_1] + eR[i.Eu4.TIER_2] + eR[i.Eu4.TIER_3]
+    eD = {
+        [i.Eu4.NONE]: ew[i.Eu4.NONE],
+        [i.Eu4.TIER_1]: ew[i.Eu4.NONE] + ew[i.Eu4.TIER_1],
+        [i.Eu4.TIER_2]: ew[i.Eu4.NONE] + ew[i.Eu4.TIER_1] + ew[i.Eu4.TIER_2],
+        [i.Eu4.TIER_3]: ew[i.Eu4.NONE] + ew[i.Eu4.TIER_1] + ew[i.Eu4.TIER_2] + ew[i.Eu4.TIER_3]
     },
-    ew = {
-        [i.Eu4.NONE]: eg,
+    eL = {
+        [i.Eu4.NONE]: eb,
         [i.Eu4.TIER_1]: 24,
         [i.Eu4.TIER_2]: 36,
         [i.Eu4.TIER_3]: 48
     },
-    eD = Object.freeze({
+    ex = Object.freeze({
         [i.Eu4.NONE]: {
             features: [],
             limits: {
@@ -554,8 +558,8 @@ let ev = Object.freeze({
                 fileSize: i.mBz,
                 screenShareQualityFramerate: 30,
                 screenShareQualityResolution: '720p',
-                soundboardSounds: ew[i.Eu4.NONE],
-                stickers: eP[i.Eu4.NONE],
+                soundboardSounds: eL[i.Eu4.NONE],
+                stickers: eD[i.Eu4.NONE],
                 stageVideoUsers: i.B9o
             }
         },
@@ -567,8 +571,8 @@ let ev = Object.freeze({
                 fileSize: i.mBz,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '720p',
-                soundboardSounds: ew[i.Eu4.TIER_1],
-                stickers: eP[i.Eu4.TIER_1],
+                soundboardSounds: eL[i.Eu4.TIER_1],
+                stickers: eD[i.Eu4.TIER_1],
                 stageVideoUsers: i.B9o
             }
         },
@@ -577,11 +581,11 @@ let ev = Object.freeze({
             limits: {
                 emoji: 150,
                 bitrate: 256000,
-                fileSize: eA,
+                fileSize: eC,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
-                soundboardSounds: ew[i.Eu4.TIER_2],
-                stickers: eP[i.Eu4.TIER_2],
+                soundboardSounds: eL[i.Eu4.TIER_2],
+                stickers: eD[i.Eu4.TIER_2],
                 stageVideoUsers: i.eez
             }
         },
@@ -590,81 +594,81 @@ let ev = Object.freeze({
             limits: {
                 emoji: 250,
                 bitrate: 384000,
-                fileSize: eN,
+                fileSize: eR,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
-                soundboardSounds: ew[i.Eu4.TIER_3],
-                stickers: eP[i.Eu4.TIER_3],
+                soundboardSounds: eL[i.Eu4.TIER_3],
+                stickers: eD[i.Eu4.TIER_3],
                 stageVideoUsers: i.RcX
             }
         }
     }),
-    eL = ['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904'];
-var ex = (function (e) {
+    eM = ['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904'];
+var ek = (function (e) {
         return ((e.SOUNDBOARD_PLAY = 'soundboard play'), (e.PROFILE_THEME_COLOR = 'profile_theme_color'), (e.PROFILE_BANNER = 'profile_banner'), (e.ANIMATED_AVATAR = 'animated_avatar'), (e.AVATAR_DECORATION = 'avatar_decoration'), (e.CLIENT_THEME = 'client_theme'), (e.SHARED_CANVAS = 'shared_canvas'), (e.PROFILE_EFFECT = 'profile_effect'), (e.PRESET = 'preset'), e);
     })({}),
-    eM = (function (e) {
+    ej = (function (e) {
         return ((e.FREE = 'free'), (e.PREMIUM_STANDARD = 'premium-standard'), e);
     })({});
-let ek = {
+let eU = {
     '1024422698568122368': P,
     '511651876987469824': P,
     '511651885459963904': P,
     '944037208325619722': w,
     '642251038925127690': D
 };
-var ej = (function (e) {
+var eG = (function (e) {
     return ((e.HIGH_STREAMING_QUALITY = 'high_streaming_quality'), (e.MID_STREAMING_QUALITY = 'mid_streaming_quality'), e);
 })({});
-let eU = Object.freeze({
+let eB = Object.freeze({
     high_streaming_quality: 2,
     mid_streaming_quality: 1
 });
-var eG = (function (e) {
+var eV = (function (e) {
         return ((e[(e.UserSettings = 0)] = 'UserSettings'), (e[(e.ApplicationStoreHome = 1)] = 'ApplicationStoreHome'), e);
     })({}),
-    eB = (function (e) {
+    eF = (function (e) {
         return ((e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.WINTER = 1)] = 'WINTER'), e);
     })({}),
-    eV = (function (e) {
+    eZ = (function (e) {
         return ((e[(e.SNOWGLOBE = 1)] = 'SNOWGLOBE'), (e[(e.BOX = 2)] = 'BOX'), (e[(e.CUP = 3)] = 'CUP'), (e[(e.STANDARD_BOX = 4)] = 'STANDARD_BOX'), (e[(e.CAKE = 5)] = 'CAKE'), (e[(e.CHEST = 6)] = 'CHEST'), (e[(e.COFFEE = 7)] = 'COFFEE'), (e[(e.SEASONAL_STANDARD_BOX = 8)] = 'SEASONAL_STANDARD_BOX'), (e[(e.SEASONAL_CAKE = 9)] = 'SEASONAL_CAKE'), (e[(e.SEASONAL_CHEST = 10)] = 'SEASONAL_CHEST'), (e[(e.SEASONAL_COFFEE = 11)] = 'SEASONAL_COFFEE'), (e[(e.NITROWEEN_STANDARD = 12)] = 'NITROWEEN_STANDARD'), e);
     })({});
-let eF = Object.freeze({
+let eH = Object.freeze({
         IS_BLOCKED_IOS: 32,
         IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,
         SUPPRESS_NOTIFICATION: 128
     }),
-    eZ = Object.freeze({
-        3: { fileSize: eI },
-        1: { fileSize: eT },
-        2: { fileSize: eS }
+    eY = Object.freeze({
+        3: { fileSize: eS },
+        1: { fileSize: eA },
+        2: { fileSize: eN }
     });
-var eH = (function (e) {
+var eW = (function (e) {
     return ((e.BOOST = 'boost'), (e.DISMISS = 'dismiss'), e);
 })({});
-let eY = new Set(['PL', 'TR']),
-    eW = [1, 2, 3],
-    eK = [4, 5, 7, 6],
-    ez = [8, 9, 11, 10],
-    eq = ez.concat(eW),
-    eX = 190;
-var eQ = (function (e) {
+let eK = new Set(['PL', 'TR']),
+    ez = [1, 2, 3],
+    eq = [4, 5, 7, 6],
+    eX = [8, 9, 11, 10],
+    eQ = eX.concat(ez),
+    eJ = 190;
+var e$ = (function (e) {
         return ((e[(e.FRIEND_ANNIVERSARY = 0)] = 'FRIEND_ANNIVERSARY'), e);
     })({}),
-    eJ = (function (e) {
+    e0 = (function (e) {
         return ((e.VIEW_ALL = 'view_all'), (e.SEND_MESSAGE = 'send_message'), e);
     })({}),
-    e$ = (function (e) {
+    e1 = (function (e) {
         return ((e[(e.DM_CHANNEL = 0)] = 'DM_CHANNEL'), (e[(e.SHOP_PAGE = 1)] = 'SHOP_PAGE'), e);
     })({});
-let e0 = 3,
-    e1 = 30,
-    e2 = 20;
-var e3 = (function (e) {
+let e2 = 3,
+    e3 = 30,
+    e4 = 20;
+var e5 = (function (e) {
     return ((e.PREMIUM_TENURE_1_MONTH = 'premium_tenure_1_month_v2'), (e.PREMIUM_TENURE_3_MONTH = 'premium_tenure_3_month_v2'), (e.PREMIUM_TENURE_6_MONTH = 'premium_tenure_6_month_v2'), (e.PREMIUM_TENURE_12_MONTH = 'premium_tenure_12_month_v2'), (e.PREMIUM_TENURE_24_MONTH = 'premium_tenure_24_month_v2'), (e.PREMIUM_TENURE_36_MONTH = 'premium_tenure_36_month_v2'), (e.PREMIUM_TENURE_60_MONTH = 'premium_tenure_60_month_v2'), (e.PREMIUM_TENURE_72_MONTH = 'premium_tenure_72_month_v2'), e);
 })({});
-let e4 = ['premium_tenure_1_month_v2', 'premium_tenure_3_month_v2', 'premium_tenure_6_month_v2', 'premium_tenure_12_month_v2', 'premium_tenure_24_month_v2', 'premium_tenure_36_month_v2', 'premium_tenure_60_month_v2', 'premium_tenure_72_month_v2'],
-    e5 = {
+let e6 = ['premium_tenure_1_month_v2', 'premium_tenure_3_month_v2', 'premium_tenure_6_month_v2', 'premium_tenure_12_month_v2', 'premium_tenure_24_month_v2', 'premium_tenure_36_month_v2', 'premium_tenure_60_month_v2', 'premium_tenure_72_month_v2'],
+    e8 = {
         premium_tenure_1_month_v2: {
             id: 'premium_tenure_1_month_v2',
             nameUnformatted: o.t.LR1C0d,
@@ -722,13 +726,13 @@ let e4 = ['premium_tenure_1_month_v2', 'premium_tenure_3_month_v2', 'premium_ten
             glowColor: '#078292'
         }
     };
-var e6 = (function (e) {
+var e7 = (function (e) {
         return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.FP_ONLY = 1)] = 'FP_ONLY'), (e[(e.FP_SUB_PAUSED = 2)] = 'FP_SUB_PAUSED'), e);
     })({}),
-    e8 = (function (e) {
+    e9 = (function (e) {
         return ((e[(e.HOUR = 1)] = 'HOUR'), (e[(e.DAY = 2)] = 'DAY'), e);
     })({});
-let e7 = {
+let te = {
     [r.a.PREMIUM_TIER_2_1_HOUR]: [1, 1],
     [r.a.PREMIUM_TIER_2_1_DAY]: [2, 1],
     [r.a.PREMIUM_TIER_2_3_DAY]: [2, 3]

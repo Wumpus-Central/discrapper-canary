@@ -18,8 +18,8 @@ var r = n(255367),
     E = n(66420),
     C = n(981631),
     O = n(474936),
-    y = n(388032),
-    v = n(510064);
+    v = n(388032),
+    y = n(510064);
 function x(e) {
     var t, n, x, I;
     let j,
@@ -52,39 +52,39 @@ function x(e) {
     null == w)
         ? null
         : ((j = H
-              ? y.intl.format(y.t.z847Tk, { wallpaper_name: null != (n = null == M ? void 0 : M.label) ? n : y.intl.string(y.t['UQMV/P']) })
-              : y.intl.format(y.t['+lKndX'], {
+              ? v.intl.format(v.t.z847Tk, { wallpaper_name: null != (n = null == M ? void 0 : M.label) ? n : v.intl.string(v.t['UQMV/P']) })
+              : v.intl.format(v.t['+lKndX'], {
                     username: null == D ? void 0 : D.nick,
-                    wallpaper_name: null != (x = null == M ? void 0 : M.label) ? x : y.intl.string(y.t['UQMV/P'])
+                    wallpaper_name: null != (x = null == M ? void 0 : M.label) ? x : v.intl.string(v.t['UQMV/P'])
                 })),
           Z
               ? L || R
                   ? z && B
-                      ? (S = y.intl.formatToPlainString(y.t.PzTpVV, { wallpaperName: null != (I = null == M ? void 0 : M.label) ? I : y.intl.string(y.t['UQMV/P']) }))
+                      ? (S = v.intl.formatToPlainString(v.t.PzTpVV, { wallpaperName: null != (I = null == M ? void 0 : M.label) ? I : v.intl.string(v.t['UQMV/P']) }))
                       : H ||
                         V ||
                         !B ||
-                        (S = y.intl.format(y.t.JwUhHh, {
+                        (S = v.intl.format(v.t.JwUhHh, {
                             onClickNitro: () => {
                                 (0, d.uL)(C.Z5c.NITRO_HOME);
                             }
                         }))
-                  : (S = y.intl.format(y.t.dBxFsL, { learnMoreLink: m.Z.getArticleURL(C.BhN.DM_WALLPAPERS) }))
-              : (S = y.intl.string(y.t['6JSOu7'])),
+                  : (S = v.intl.format(v.t.dBxFsL, { learnMoreLink: m.Z.getArticleURL(C.BhN.DM_WALLPAPERS) }))
+              : (S = v.intl.string(v.t['6JSOu7'])),
           (null == F ? void 0 : F.isViewable) &&
               B &&
               !H &&
               (T = (0, r.jsx)('div', {
-                  className: v.action,
+                  className: y.action,
                   children: (0, r.jsx)(a.z, {
                       variant: 'primary',
-                      text: y.intl.string(z ? y.t.o6850d : y.t['/ubFp6']),
+                      text: v.intl.string(z ? v.t.o6850d : v.t['/ubFp6']),
                       loading: k,
                       onClick: () => {
                           h.X(P, w, {
                               shouldClear: !z,
                               onError: () => {
-                                  (0, o.showToast)((0, o.createToast)(y.intl.string(y.t.F8FvU1), o.ToastType.FAILURE));
+                                  (0, o.showToast)((0, o.createToast)(v.intl.string(v.t.F8FvU1), o.ToastType.FAILURE));
                               }
                           });
                       }

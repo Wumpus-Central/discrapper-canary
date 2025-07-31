@@ -711,7 +711,7 @@ function v() {
             }),
                 await (0, o.tZ)());
         },
-        N = async () => {
+        T = async () => {
             (await i.tn.del({
                 url: '/debug/rate-limits',
                 rejectWithError: !1
@@ -777,7 +777,7 @@ function v() {
                                 variant: 'primary',
                                 size: 'sm',
                                 text: 'Reset API Rate limits and reload app',
-                                onClick: N
+                                onClick: T
                             })
                         ]
                     }),

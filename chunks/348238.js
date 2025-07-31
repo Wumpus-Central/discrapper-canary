@@ -37,8 +37,8 @@ var r = n(255367),
     E = n(5967),
     C = n(630388),
     O = n(358085),
-    y = n(51144),
-    v = n(91047),
+    v = n(51144),
+    y = n(91047),
     x = n(50284),
     I = n(804063),
     j = n(981631);
@@ -53,7 +53,7 @@ function T(e, t, n) {
             let i = h.default.getUser(e);
             if (null == i) return;
             if ((r.preventDefault(), r.stopPropagation(), !r.shiftKey)) return void n();
-            let l = '@'.concat(y.ZP.getUserTag(i, { decoration: 'never' })),
+            let l = '@'.concat(v.ZP.getUserTag(i, { decoration: 'never' })),
                 a = '<@'.concat(e, '>');
             (b.S.dispatchToLastSubscribed(j.CkL.INSERT_TEXT, {
                 plainText: l,
@@ -188,7 +188,7 @@ function k(e, t) {
         (n) => {
             let r = h.default.getUser(e),
                 i = f.Z.getChannel(t);
-            null != r && null != i && (n.stopPropagation(), (0, v.Pv)(n, r, i));
+            null != r && null != i && (n.stopPropagation(), (0, y.Pv)(n, r, i));
         },
         [e, t]
     );
@@ -201,7 +201,7 @@ function U(e, t, n) {
             null != i &&
                 null != l &&
                 (r.stopPropagation(),
-                (0, v._j)(r, {
+                (0, y._j)(r, {
                     user: i,
                     channel: l,
                     moderationAlertId: n
@@ -215,7 +215,7 @@ function F(e, t) {
         (n) => {
             let r = h.default.getUser(e),
                 i = f.Z.getChannel(t);
-            null != r && null != i && (n.stopPropagation(), (0, v.xS)(n, r, i.guild_id));
+            null != r && null != i && (n.stopPropagation(), (0, y.xS)(n, r, i.guild_id));
         },
         [e, t]
     );
@@ -269,14 +269,14 @@ function G(e) {
             },
             [E, _, s, h]
         ),
-        y = i.useCallback(() => {
+        v = i.useCallback(() => {
             (b.S.dispatchKeyed(j.LPv.ANIMATE_CHAT_AVATAR, _, !1), C(!1));
         }, [_]);
     return {
         hasHovered: g.current,
         isHovered: E,
         handleMouseEnter: O,
-        handleMouseLeave: y
+        handleMouseLeave: v
     };
 }
 function H(e, t) {

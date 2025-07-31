@@ -1,78 +1,78 @@
-(n.d(t, { s: () => _ }), n(388685), n(35282));
-var l = n(73800),
-    r = n(442837),
-    i = n(38618),
-    a = n(51596),
-    s = n(516373),
-    o = n(314897),
-    c = n(580005),
-    u = n(987509),
+(n.d(t, { s: () => p }), n(388685), n(35282));
+var r = n(73800),
+    l = n(442837),
+    a = n(38618),
+    s = n(51596),
+    i = n(516373),
+    u = n(314897),
+    o = n(580005),
+    c = n(987509),
     d = n(601565),
     f = n(41837);
-function h(e) {
-    let { query: t, queryMode: n } = (0, a.F_)(e),
-        l = f.M,
-        r = null;
+function b(e) {
+    let { query: t, queryMode: n } = (0, s.F_)(e),
+        r = f.M,
+        l = null;
     return (
-        null != n && f.M.includes(n) && ((l = [n]), (r = n)),
+        null != n && f.M.includes(n) && ((r = [n]), (l = n)),
         {
             query: t,
-            queryMode: r,
-            resultTypes: l
+            queryMode: l,
+            resultTypes: r
         }
     );
 }
-function _(e) {
-    let { targetDestination: t, selectedDestinations: n, originDestination: a, includeMissingDMs: f = !1 } = e,
-        _ = (0, r.e7)([o.default], () => o.default.getId()),
-        g = l.useMemo(
+function p(e) {
+    let { targetDestination: t, selectedDestinations: n, originDestination: s, includeMissingDMs: f = !1 } = e,
+        p = (0, l.e7)([u.default], () => u.default.getId()),
+        h = r.useMemo(
             () => ({
                 searchOptions: {
-                    blacklist: new Set(['user:'.concat(_)]),
+                    blacklist: new Set(['user:'.concat(p)]),
                     frecencyBoosters: !0,
                     userFilters: null
                 }
             }),
-            [_]
+            [p]
         ),
-        { search: m, query: p, results: E } = (0, d.Z)(g),
-        [b, y] = l.useState(h('')),
-        I = l.useCallback((e) => y(h(e)), [y]),
-        { queryMode: S } = b,
-        O = l.useRef(null),
-        A = l.useRef(n),
-        v = p !== O.current ? n : A.current;
-    (l.useEffect(() => {
-        (p !== O.current && (A.current = n), (O.current = p));
-    }, [p, n]),
-        l.useLayoutEffect(() => {
-            let { query: e, resultTypes: t } = b;
+        { search: m, query: g, results: y } = (0, d.Z)(h),
+        [x, v] = r.useState(b('')),
+        S = r.useCallback((e) => v(b(e)), [v]),
+        { queryMode: E } = x,
+        j = r.useRef(null),
+        Z = r.useRef(n),
+        O = g !== j.current ? n : Z.current;
+    (r.useEffect(() => {
+        (g !== j.current && (Z.current = n), (j.current = g));
+    }, [g, n]),
+        r.useLayoutEffect(() => {
+            let { query: e, resultTypes: t } = x;
             m({
                 query: e,
                 resultTypes: t
             });
-        }, [m, b]),
-        (0, s.D)());
-    let C = (0, r.e7)([c.Z], () => c.Z.getFrequentlyWithoutFetchingLatest()),
-        x = (0, r.e7)([i.Z], () => i.Z.isConnected()),
-        P = '' !== p;
+        }, [m, x]),
+        (0, i.D)());
+    let _ = (0, l.e7)([o.Z], () => o.Z.getFrequentlyWithoutFetchingLatest()),
+        P = (0, l.e7)([a.Z], () => a.Z.isConnected()),
+        C = '' !== g;
     return {
-        results: l.useMemo(
+        results: r.useMemo(
             () =>
-                (0, u.ZP)({
-                    results: E,
-                    hasQuery: P,
-                    queryMode: S,
+                (0, c.ZP)({
+                    results: y,
+                    hasQuery: C,
+                    queryMode: E,
                     targetDestination: t,
-                    frequentChannels: C,
+                    frequentChannels: _,
                     selectedDestinations: n,
-                    pinnedDestinations: v,
-                    originDestination: a,
+                    pinnedDestinations: O,
+                    originDestination: s,
                     includeMissingDMs: f,
-                    isConnected: x
+                    isConnected: P
                 }),
-            [E, P, S, t, C, n, v, a, f, x]
+            [y, C, E, t, _, n, O, s, f, P]
         ),
-        updateSearchText: I
+        updateSearchText: S
     };
 }

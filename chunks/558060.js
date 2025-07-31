@@ -10,16 +10,16 @@ var l = r(120356),
     u = r(561197);
 function d(e) {
     var t, r;
-    let { product: l, isPremiumUser: d, discount: p, className: f, hideStrikethroughPrice: g = !1, nitroIconType: h, nitroIconSize: b = 'md' } = e,
-        m = (0, a.ql)(l, c.tuJ.DEFAULT);
-    if (null == m) return null;
-    if (m.amount <= 0)
+    let { product: l, isPremiumUser: d, discount: p, className: f, discountOfferAmount: g, hideStrikethroughPrice: h = !1, nitroIconType: b, nitroIconSize: m = 'md' } = e,
+        _ = (0, a.ql)(l, c.tuJ.DEFAULT);
+    if (null == _) return null;
+    if (_.amount <= 0)
         return (0, n.jsx)('div', {
             className: i()(u.priceTagsContainer, f),
-            children: (0, n.jsx)(s.F, { price: m })
+            children: (0, n.jsx)(s.F, { price: _ })
         });
-    let _ = (0, a.ql)(l, c.tuJ.PREMIUM_TIER_2),
-        O =
+    let O = (0, a.ql)(l, c.tuJ.PREMIUM_TIER_2),
+        C =
             (0, a.x6)(l) && d
                 ? ((t = (function (e) {
                       for (var t = 1; t < arguments.length; t++) {
@@ -45,7 +45,7 @@ function d(e) {
                               }));
                       }
                       return e;
-                  })({}, m)),
+                  })({}, _)),
                   (r = r = { amount: p.original }),
                   Object.getOwnPropertyDescriptors
                       ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
@@ -60,23 +60,24 @@ function d(e) {
                             Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                         }),
                   t)
-                : m,
-        C = d && null != _;
+                : _,
+        v = d && null != O;
     return (0, n.jsxs)('div', {
         className: i()(u.priceTagsContainer, f),
         children: [
-            g
+            h
                 ? null
                 : (0, n.jsx)(o.y, {
-                      price: O,
+                      price: C,
                       className: u.price
                   }),
             (0, n.jsx)(s.F, {
-                price: C ? _ : O,
+                price: v ? O : C,
                 discount: p,
-                className: u.price,
-                nitroIconType: C ? h : void 0,
-                nitroIconSize: b
+                className: i()({ [u.price]: null == g }),
+                nitroIconType: v ? b : void 0,
+                nitroIconSize: m,
+                discountOfferAmount: g
             })
         ]
     });

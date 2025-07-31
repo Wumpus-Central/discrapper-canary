@@ -4,9 +4,9 @@ var r = n(255367),
     l = n(481060),
     a = n(930362);
 function o(e) {
-    let { onPageChange: t, offset: n, totalCount: o, pageSize: s } = e,
-        c = Math.floor(n / s) + 1,
-        u = i.useCallback(
+    let { onPageChange: t, offset: n, totalCount: o, pageSize: s, renderPageWrapper: c } = e,
+        u = Math.floor(n / s) + 1,
+        d = i.useCallback(
             (e) => {
                 t(e - 1);
             },
@@ -15,11 +15,12 @@ function o(e) {
     return (0, r.jsx)('div', {
         className: a.container,
         children: (0, r.jsx)(l.DsT, {
-            currentPage: c,
+            currentPage: u,
             totalCount: o,
             pageSize: s,
-            onPageChange: u,
-            maxVisiblePages: 5
+            onPageChange: d,
+            maxVisiblePages: 5,
+            renderPageWrapper: c
         })
     });
 }

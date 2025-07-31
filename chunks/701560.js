@@ -18,7 +18,7 @@ var r,
     E = n(981631),
     C = n(388032),
     O = n(637214);
-function y(e, t, n) {
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function y(e, t, n) {
         e
     );
 }
-function v(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function v(e) {
                 })
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                v(e, t, n[t]);
             }));
     }
     return e;
@@ -67,7 +67,7 @@ function x(e, t) {
 }
 class I extends (r = l.PureComponent) {
     get analyticsLocation() {
-        return x(v({}, this.props.analyticsContext.location), { object: E.qAy.BUTTON_CTA });
+        return x(y({}, this.props.analyticsContext.location), { object: E.qAy.BUTTON_CTA });
     }
     renderDropdown() {
         let { dispatchState: e } = this.props;
@@ -103,7 +103,7 @@ class I extends (r = l.PureComponent) {
                 (0, i.jsx)(u.ua7, {
                     text: t,
                     position: o,
-                    children: (e) => (0, i.jsx)('div', v({ className: O.disabledButtonOverlay }, e))
+                    children: (e) => (0, i.jsx)('div', y({ className: O.disabledButtonOverlay }, e))
                 })
             ]
         });
@@ -132,7 +132,7 @@ class I extends (r = l.PureComponent) {
     }
     constructor(...e) {
         (super(...e),
-            y(this, 'handleDropdownClick', (e) => {
+            v(this, 'handleDropdownClick', (e) => {
                 e.stopPropagation();
                 let { libraryApplication: t, onDropdownOpen: r, onDropdownClose: l } = this.props;
                 if ((null == r || r(e), null == t)) throw Error('Unexpected missing libraryApplication');
@@ -143,7 +143,7 @@ class I extends (r = l.PureComponent) {
                         return (n) =>
                             (0, i.jsx)(
                                 e,
-                                x(v({}, n), {
+                                x(y({}, n), {
                                     libraryApplication: t,
                                     onPlay: this.handleClick
                                 })
@@ -152,7 +152,7 @@ class I extends (r = l.PureComponent) {
                     { onClose: l }
                 );
             }),
-            y(this, 'handleClick', () => {
+            v(this, 'handleClick', () => {
                 let { applicationId: e, libraryApplication: t, analyticsListSort: n, analyticsListIndex: r } = this.props;
                 b.playApplication(e, t, {
                     analyticsParams: {
@@ -172,7 +172,7 @@ function j(e) {
         c = (0, s.e7)([g.Z], () => (null != n ? g.Z.getState(n.id, n.branchId) : null), [n]);
     return (0, i.jsx)(
         I,
-        x(v({}, e), {
+        x(y({}, e), {
             analyticsContext: r,
             isLaunchable: l,
             isLaunching: a,
@@ -181,7 +181,7 @@ function j(e) {
         })
     );
 }
-y(I, 'defaultProps', {
+v(I, 'defaultProps', {
     fullWidth: !1,
     size: c.zx.Sizes.LARGE,
     tooltipPosition: 'top',

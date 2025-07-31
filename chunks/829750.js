@@ -1,17 +1,17 @@
 n.d(t, {
     Z: () => c,
-    t: () => s
+    t: () => d
 });
-var r = n(442837),
-    i = n(430824),
+var i = n(442837),
+    r = n(430824),
     o = n(938475),
     a = n(981631);
 function c(e) {
-    return (0, r.cj)(
-        [o.ZP, i.Z],
+    return (0, i.cj)(
+        [o.ZP, r.Z],
         () => {
             let t = o.ZP.countVoiceStatesForChannel(e.id),
-                n = i.Z.getGuild(e.getGuildId());
+                n = r.Z.getGuild(e.getGuildId());
             return null == n
                 ? {
                       reachedLimit: !1,
@@ -30,9 +30,9 @@ function c(e) {
         [e]
     );
 }
-function s(e) {
+function d(e) {
     let t = o.ZP.countVoiceStatesForChannel(e.id),
-        n = i.Z.getGuild(e.getGuildId());
+        n = r.Z.getGuild(e.getGuildId());
     return null == n
         ? {
               reachedLimit: !1,

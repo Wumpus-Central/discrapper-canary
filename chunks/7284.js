@@ -43,8 +43,9 @@ let s = {
     };
 function c(e) {
     var t;
-    let { displayNameStyles: n } = e;
-    if (!i.f.useExperiment({ location: 'useDisplayNameStylesFont' }).enabled || null == n) return '';
-    let r = l[n.fontId];
-    return null != (t = null == r ? void 0 : r.className) ? t : '';
+    let { displayNameStyles: n, inProfile: r } = e,
+        a = i.f.useExperiment({ location: 'useDisplayNameStylesFont' });
+    if (!a.enabled || (!r && !a.includeNonProfile) || null == n) return '';
+    let o = l[n.fontId];
+    return null != (t = null == o ? void 0 : o.className) ? t : '';
 }

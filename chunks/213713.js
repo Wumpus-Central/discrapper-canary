@@ -21,8 +21,8 @@ var n = a(255367),
     y = a(77498),
     C = a(823379),
     O = a(550532),
-    N = a(71585),
-    T = a(146282),
+    T = a(71585),
+    N = a(146282),
     E = a(780106),
     S = a(650613),
     P = a(789086),
@@ -66,7 +66,7 @@ let k = [
 function A(e) {
     var t, a;
     let { type: r } = e,
-        l = (0, u.e7)([T.Z], () => T.Z.getFilters()),
+        l = (0, u.e7)([N.Z], () => N.Z.getFilters()),
         i = null != (a = null == l || null == (t = l.types) ? void 0 : t.has(r)) && a;
     return (0, n.jsx)(p.XZJ, {
         value: i,
@@ -85,9 +85,9 @@ function A(e) {
 }
 function Z() {
     var e, t;
-    let a = (0, u.e7)([T.Z], () => T.Z.getFeed(I.YN.GLOBAL_FEED)),
-        l = (0, u.e7)([T.Z], () => T.Z.getDebugImpressionCappingDisabled()),
-        i = (0, u.e7)([N.Z], () => N.Z.getDebugFastImpressionCappingEnabled()),
+    let a = (0, u.e7)([N.Z], () => N.Z.getFeed(I.YN.GLOBAL_FEED)),
+        l = (0, u.e7)([N.Z], () => N.Z.getDebugImpressionCappingDisabled()),
+        i = (0, u.e7)([T.Z], () => T.Z.getDebugFastImpressionCappingEnabled()),
         s = (function (e) {
             let t = o().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
@@ -99,9 +99,9 @@ function Z() {
                 };
             });
         })(null == a || null == (e = a.entries) ? void 0 : e.map((e) => e.content)),
-        c = (0, u.e7)([T.Z], () => {
+        c = (0, u.e7)([N.Z], () => {
             var e;
-            return (null == (e = T.Z.getFeedState(I.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
+            return (null == (e = N.Z.getFeedState(I.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
         [A, Z] = r.useState(''),
         L = (0, u.e7)(

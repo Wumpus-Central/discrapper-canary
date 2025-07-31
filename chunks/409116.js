@@ -25,45 +25,48 @@ let p = (e) => {
             nitroIconType: l,
             nitroIconSize: p = 'md',
             className: f,
-            discount: g = s.f_,
-            variant: h = 'heading-md/semibold'
+            discountOfferAmount: g,
+            discount: h = s.f_,
+            variant: b = 'heading-md/semibold'
         } = e,
-        b = (0, o.qr)(t, r),
-        m =
-            g !== s.f_ && g.discountPercentage >= 5
+        m = null != g,
+        _ = (0, o.qr)(t, r),
+        O =
+            h !== s.f_ && h.discountPercentage >= 5 && !m
                 ? (0, n.jsxs)(n.Fragment, {
                       children: [
                           (0, n.jsx)(a.nn4, {
                               children: c.intl.format(c.t.niC6DA, {
-                                  price: b,
-                                  discountPercentage: g.discountPercentage
+                                  price: _,
+                                  discountPercentage: h.discountPercentage
                               })
                           }),
                           (0, n.jsx)('span', {
                               'aria-hidden': !0,
-                              children: b
+                              children: _
                           }),
                           (0, n.jsxs)(a.Text, {
-                              variant: h,
+                              variant: b,
                               color: 'text-feedback-positive',
                               className: u.discount,
                               'aria-hidden': !0,
-                              children: ['(-', g.discountPercentage, '%)']
+                              children: ['(-', h.discountPercentage, '%)']
                           })
                       ]
                   })
                 : (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, n.jsx)(a.nn4, { children: c.intl.format(c.t['6C36MD'], { price: b }) }),
+                          (0, n.jsx)(a.nn4, { children: c.intl.format(c.t['6C36MD'], { price: _ }) }),
                           (0, n.jsx)('span', {
                               'aria-hidden': !0,
-                              children: b
+                              className: i()({ [u.priceStrikethrough]: m }, f),
+                              children: _
                           })
                       ]
                   });
     return (0, n.jsxs)(a.Text, {
-        variant: h,
-        className: i()(u.container, f),
+        variant: b,
+        className: i()({ [u.discountBackgroundColor]: m }, u.container, f),
         children: [
             'tooltip' === l
                 ? (0, n.jsx)(a.ua7, {
@@ -136,7 +139,19 @@ let p = (e) => {
                         className: u.nitroIcon
                     })
                   : null,
-            m
+            O,
+            m &&
+                (0, n.jsxs)(a.X6q, {
+                    variant: 'heading-md/semibold',
+                    className: u.discountPill,
+                    children: [
+                        (0, n.jsx)(a.nn4, { children: c.intl.format(c.t.rItDb2, { discountOfferAmount: g }) }),
+                        (0, n.jsx)('span', {
+                            'aria-hidden': !0,
+                            children: c.intl.formatToPlainString(c.t.AYcXGR, { discountOfferAmount: g })
+                        })
+                    ]
+                })
         ]
     });
 };

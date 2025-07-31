@@ -18,8 +18,8 @@ var r = n(255367),
     E = n(825829),
     C = n(226192),
     O = n(36459),
-    y = n(434404),
-    v = n(518950),
+    v = n(434404),
+    y = n(518950),
     x = n(670188),
     I = n(592125),
     j = n(271383),
@@ -162,7 +162,7 @@ function G(e) {
             avatarSrc: u,
             avatarDecorationSrc: d,
             eventHandlers: p
-        } = (0, v.Z)({
+        } = (0, y.Z)({
             userId: null == a ? void 0 : a.id,
             guildId: o,
             size: 12
@@ -261,8 +261,8 @@ function H(e) {
     let { message: n, compact: l } = e,
         { joinAttempts: a, raidDatetime: o, dmsSent: u, raidType: _, resolvedReason: g } = (0, E.FL)(n),
         O = (0, p.e7)([I.Z], () => I.Z.getChannel(n.channel_id), [n.channel_id]),
-        y = null != (t = null == O ? void 0 : O.guild_id) ? t : null,
-        { shouldShowIncidentActions: v } = (0, h.mI)(y),
+        v = null != (t = null == O ? void 0 : O.guild_id) ? t : null,
+        { shouldShowIncidentActions: y } = (0, h.mI)(v),
         x = (0, N.sR)(n.author.id, n.channel_id),
         j = i.useCallback(() => {
             let e = null == O ? void 0 : O.guild_id;
@@ -321,7 +321,7 @@ function H(e) {
                       children: R.intl.format(R.t['4QIIZm'], { dateTime: o.toLocaleString(R.intl.currentLocale, b.pQ) })
                   })
                 : null,
-        footerButtons: v
+        footerButtons: y
             ? (0, r.jsxs)('div', {
                   className: D.footerRow,
                   children: [
@@ -423,7 +423,7 @@ function V(e) {
                         size: 'sm',
                         text: R.intl.string(R.t['1R7QIy']),
                         onClick: function () {
-                            null != a && y.Z.open(a, w.pNK.GUILD_AUTOMOD, void 0, w.KsC.AUTOMOD_MENTION_SPAM);
+                            null != a && v.Z.open(a, w.pNK.GUILD_AUTOMOD, void 0, w.KsC.AUTOMOD_MENTION_SPAM);
                         }
                     })
                 })

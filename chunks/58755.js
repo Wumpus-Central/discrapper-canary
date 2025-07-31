@@ -138,8 +138,8 @@ function g(e) {
 function j(e) {
     let { scale: t, setState: a, onClose: r } = e,
         { name: c, base: h, darkness: b, lightness: v, showColumnarPalettePreview: g, colorSpace: j, easingStrength: _ = 1, useP3ColorSpace: C, steps: O = 26 } = t,
-        N = (0, x.XM)(t),
-        T = (0, x.W6)(N, c);
+        T = (0, x.XM)(t),
+        N = (0, x.W6)(T, c);
     return (0, n.jsxs)(d.hjN, {
         className: p.paletteSettings,
         children: [
@@ -157,7 +157,7 @@ function j(e) {
                     }),
                     (0, n.jsx)(d.P3F, {
                         onClick: function () {
-                            let e = Object.entries(N).reduce((e, t) => {
+                            let e = Object.entries(T).reduce((e, t) => {
                                 let [a, n] = t;
                                 return (
                                     (e[a] = {
@@ -305,11 +305,11 @@ function j(e) {
                         children: (0, n.jsx)('div', {
                             className: p.paletteOverrides,
                             'data-columnar': g,
-                            children: Object.entries(N).map((e, a) => {
+                            children: Object.entries(T).map((e, a) => {
                                 let [r, c] = e,
                                     u = (0, x.HI)(c),
                                     m = (0, s.Z)((0, o.Z)('black'), c) > 4.5 ? 'black' : 'white',
-                                    p = T[r];
+                                    p = N[r];
                                 return (0, n.jsxs)(
                                     'div',
                                     {

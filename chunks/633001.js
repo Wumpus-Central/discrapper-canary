@@ -21,8 +21,8 @@ var n = a(255367),
     y = a(808506),
     C = a(572004),
     O = a(70956),
-    N = a(145597),
-    T = a(246992),
+    T = a(145597),
+    N = a(246992),
     E = a(981631),
     S = a(757744),
     P = a(388032),
@@ -619,7 +619,7 @@ let V = r.memo(function (e) {
     W = r.memo(function () {
         var e, t;
         let a = (0, o.cj)([b.default], () => b.default.getTrackedGames()),
-            r = (0, N.getPID)(),
+            r = (0, T.getPID)(),
             l = (0, o.e7)([b.default], () => b.default.isOverlayOOPEnabledForPid(r), [r]),
             [i, s] = (0, o.Wu)([g.Z], () => [g.Z.enabled, g.Z.keepOpen]),
             c = (0, o.e7)([y.default], () => y.default.getFocusedPID()),
@@ -942,7 +942,7 @@ let V = r.memo(function (e) {
                             isSelected: (e) => e === t,
                             options: i,
                             select: l,
-                            popoutLayerContext: T.O$
+                            popoutLayerContext: N.O$
                         })
                     })
                 )

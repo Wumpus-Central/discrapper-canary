@@ -64,11 +64,11 @@ let f = {
                 searchQueryString: r,
                 searchQuery: E
             });
-        let y = n.map((e) => u(e));
+        let v = n.map((e) => u(e));
         return (
             l.Z.dispatch({
                 type: 'SEARCH_MESSAGES_START',
-                ids: y
+                ids: v
             }),
             O.fetch(
                 (e) => {
@@ -105,13 +105,13 @@ let f = {
                 () => {
                     l.Z.dispatch({
                         type: 'SEARCH_MESSAGES_INDEXING',
-                        ids: y
+                        ids: v
                     });
                 },
                 (e) => {
                     l.Z.dispatch({
                         type: 'SEARCH_MESSAGES_FAILURE',
-                        ids: y,
+                        ids: v,
                         error: e
                     });
                 }

@@ -1,12 +1,12 @@
 (n.d(t, {
-    $z: () => k,
+    $z: () => v,
     I1: () => R,
     IZ: () => b,
     LQ: () => p,
     PJ: () => M,
     Qb: () => N,
     Yc: () => C,
-    bh: () => v,
+    bh: () => k,
     bo: () => P,
     cy: () => y,
     hM: () => T,
@@ -295,7 +295,7 @@ let j = new Map([
         [d.rtL.DATES, 'dates'],
         [d.rtL.SEARCH_OPTIONS, 'search_options']
     ]);
-function k(e) {
+function v(e) {
     let { searchId: t, searchHistoryIndex: n, searchHistoryTotalResults: i } = e,
         l = (0, s.g)(t);
     r.ZP.trackWithMetadata(d.rMx.SEARCH_HISTORY_CLICKED, {
@@ -306,7 +306,7 @@ function k(e) {
         search_history_total_results: i
     });
 }
-function v(e) {
+function k(e) {
     var t;
     let { searchId: n, searchQuery: i, searchQueryString: l, searchAutocompleteResultIndex: a, searchAutocompleteTotalResults: o, searchTokenType: c, searchAutocompleteGroup: u, isSearchFilterPrefix: _, isSearchFilterAnswer: p, isSearchFilterComplete: T, isInFilterForSelectedChannel: S, searchAutocompleteSelectAction: m } = e,
         g = (0, s.g)(n);

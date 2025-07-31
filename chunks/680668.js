@@ -18,8 +18,8 @@ var r = n(255367),
     E = n(388032),
     C = n(273254);
 function O(e) {
-    var t, O, y;
-    let v,
+    var t, O, v;
+    let y,
         x,
         I,
         { onTransitionToInviteChannel: j, onAcceptInstantInvite: S, guild: T, invite: N, message: P, currentUserId: A } = e,
@@ -56,7 +56,7 @@ function O(e) {
         }, [N, P, z, k, j, S]);
     if (null == T) {
         if (null == N.guild) return (0, r.jsx)(h.Z, {});
-        (T = _.Qs(N.guild)).premiumTier = null != (y = N.guild.premium_tier) ? y : b.Eu4.NONE;
+        (T = _.Qs(N.guild)).premiumTier = null != (v = N.guild.premium_tier) ? v : b.Eu4.NONE;
     }
     let J = (0, g.e)({
         isVoiceChannel: F,
@@ -104,7 +104,7 @@ function O(e) {
             })),
         F
             ? ((x = (0, r.jsx)(p.Z.Channel, { channel: M })),
-              (v = (0, r.jsxs)('span', {
+              (y = (0, r.jsxs)('span', {
                   className: C.infoTitle,
                   children: [
                       E.intl.format(E.t['2wimj4'], { guildName: T.name }),
@@ -118,12 +118,12 @@ function O(e) {
                   ]
               })))
             : (null != R && R >= 5) || (null != D && D > 0)
-              ? (v = (0, r.jsx)(p.Z.Data, {
+              ? (y = (0, r.jsx)(p.Z.Data, {
                     members: R,
                     membersOnline: D
                 }))
               : U &&
-                (v = (0, r.jsx)(p.Z.Channel, {
+                (y = (0, r.jsx)(p.Z.Channel, {
                     channel: M,
                     guild: T
                 })),
@@ -143,7 +143,7 @@ function O(e) {
                                 (0, r.jsx)(p.Z.Info, {
                                     title: x,
                                     onClick: q,
-                                    children: v
+                                    children: y
                                 })
                             ]
                         }),

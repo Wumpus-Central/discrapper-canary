@@ -38,7 +38,7 @@ async function h(e, t) {
         });
         return;
     }
-    let y = u.Z.getGuildIds()
+    let v = u.Z.getGuildIds()
         .filter(g)
         .map((e) => i.ZP.getUsableGuildEmoji(e))
         .flat()
@@ -53,8 +53,8 @@ async function h(e, t) {
                 })
         )
         .sort((e, t) => -m.default.compare(e.id, t.id));
-    if (y.length > 10) {
-        let n = y[Math.floor(Math.pow(Math.random(), 2) * y.length)];
+    if (v.length > 10) {
+        let n = v[Math.floor(Math.pow(Math.random(), 2) * v.length)];
         r.Z.sendMessage(t.id, l.ZP.parse(t, n.allNamesString), !1, {
             messageReference: {
                 guild_id: null != (f = t.getGuildId()) ? f : void 0,
@@ -64,8 +64,8 @@ async function h(e, t) {
         });
         return;
     }
-    let v = C.filter((e) => e.type === c.n0.STANDARD),
-        x = [v[Math.floor(Math.random() * v.length)].id];
+    let y = C.filter((e) => e.type === c.n0.STANDARD),
+        x = [y[Math.floor(Math.random() * y.length)].id];
     r.Z.sendStickers(t.id, x, '', {
         messageReference: {
             guild_id: null != (h = t.getGuildId()) ? h : void 0,

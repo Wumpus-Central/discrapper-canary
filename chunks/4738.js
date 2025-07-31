@@ -65,12 +65,12 @@ function p(e) {
             );
 }
 function h(e) {
-    let { currentPage: t, totalCount: n, pageSize: i, maxVisiblePages: a, disablePaginationGap: c, onPageChange: h, hideMaxPage: m = !1, className: g } = e,
-        E = Math.ceil(n / i);
-    function b(e) {
+    let { currentPage: t, totalCount: n, pageSize: i, maxVisiblePages: a, disablePaginationGap: c, onPageChange: h, hideMaxPage: m = !1, className: g, renderPageWrapper: E } = e,
+        b = Math.ceil(n / i);
+    function y(e) {
         null != h && h(e);
     }
-    function y(e) {
+    function O(e) {
         let { key: t, disabled: n, navigateToPage: i } = e;
         return (0, r.jsxs)(
             s.zx,
@@ -95,7 +95,7 @@ function h(e) {
             t
         );
     }
-    function O(e) {
+    function v(e) {
         let { key: t, disabled: n, navigateToPage: i } = e;
         return (0, r.jsxs)(
             s.zx,
@@ -120,7 +120,7 @@ function h(e) {
             t
         );
     }
-    function v(e) {
+    function I(e) {
         return (0, r.jsx)(
             l.P,
             {
@@ -133,19 +133,23 @@ function h(e) {
             e.key
         );
     }
-    function I(e) {
+    function T(e) {
+        let t = I(e);
+        return null != E ? E(e, t) : t;
+    }
+    function S(e) {
         return (0, r.jsx)(
             p,
             {
                 page: e,
-                totalPageCount: E,
+                totalPageCount: b,
                 disabled: !!c,
                 onPageChange: h
             },
             e.key
         );
     }
-    function T(e) {
+    function A(e) {
         let { pages: t, hasMultiplePages: n } = e;
         return n
             ? (0, r.jsx)('div', {
@@ -155,13 +159,13 @@ function h(e) {
                       children: t.map((e) => {
                           switch (e.type) {
                               case d.s.BACK:
-                                  return y(e);
-                              case d.s.PAGE:
-                                  return v(e);
-                              case d.s.GAP:
-                                  return I(e);
-                              case d.s.NEXT:
                                   return O(e);
+                              case d.s.PAGE:
+                                  return T(e);
+                              case d.s.GAP:
+                                  return S(e);
+                              case d.s.NEXT:
+                                  return v(e);
                               default:
                                   return null;
                           }
@@ -171,11 +175,11 @@ function h(e) {
             : null;
     }
     return (0, r.jsx)(d.W, {
-        totalPageCount: E,
+        totalPageCount: b,
         selectedPage: t,
         maxVisiblePages: a,
         hideMaxPage: m,
-        onPageChange: b,
-        children: T
+        onPageChange: y,
+        children: A
     });
 }

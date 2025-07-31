@@ -112,8 +112,8 @@ var i = n(255367),
     e0 = n(981631),
     e1 = n(215023),
     e3 = n(921944),
-    e8 = n(46140),
-    e6 = n(388032),
+    e6 = n(46140),
+    e8 = n(388032),
     e2 = n(239692);
 function e5(e, t, n) {
     return (
@@ -264,7 +264,7 @@ function tn(e) {
                                       var n;
                                       (null == (n = e.onClick) || n.call(e, t), null == c || c(t));
                                   },
-                                  'aria-label': e6.intl.string(e6.t['3Uj+2t']),
+                                  'aria-label': e8.intl.string(e8.t['3Uj+2t']),
                                   'data-jump-section': p,
                                   className: a()(e2.avatarWrapper, { [e2.plated]: null != m }),
                                   children: [
@@ -304,7 +304,7 @@ class ti extends r.PureComponent {
     }
     renderCopiedSuccess() {
         let { copiedStreak: e } = this.state,
-            t = [e6.intl.string(e6.t.MSaeTU), e6.intl.string(e6.t.UmrCw8), e6.intl.string(e6.t.gKE0Ji), e6.intl.string(e6.t['4DSKbm']), e6.intl.string(e6.t['+8ENdX']), e6.intl.string(e6.t.GlWHv7), e6.intl.string(e6.t.hIzxU1), e6.intl.string(e6.t['26uMPD']), e6.intl.string(e6.t.uFs7R0), e6.intl.string(e6.t.bLXdcX), e6.intl.string(e6.t.gPg9fX)],
+            t = [e8.intl.string(e8.t.MSaeTU), e8.intl.string(e8.t.UmrCw8), e8.intl.string(e8.t.gKE0Ji), e8.intl.string(e8.t['4DSKbm']), e8.intl.string(e8.t['+8ENdX']), e8.intl.string(e8.t.GlWHv7), e8.intl.string(e8.t.hIzxU1), e8.intl.string(e8.t['26uMPD']), e8.intl.string(e8.t.uFs7R0), e8.intl.string(e8.t.bLXdcX), e8.intl.string(e8.t.gPg9fX)],
             n = Math.min(Math.max(0, e - 1), t.length - 1);
         return (0, i.jsx)(f.UkV, {
             isShaking: this.isCopiedStreakGodlike,
@@ -632,7 +632,8 @@ class ti extends r.PureComponent {
                                       children: (0, i.jsx)(z.Z, {
                                           userName: eK.ZP.getName(t),
                                           displayNameStyles: e,
-                                          effectDisplayType: W.F.STATIC
+                                          effectDisplayType: W.F.STATIC,
+                                          inProfile: !0
                                       })
                                   })
                               }),
@@ -658,7 +659,7 @@ function tr(e) {
                 serverMute: s,
                 suppress: l,
                 awaitingRemote: r,
-                tooltipText: o ? e6.intl.string(e6.t['29gnR0']) : void 0,
+                tooltipText: o ? e8.intl.string(e8.t['29gnR0']) : void 0,
                 tooltipColor: o ? f.FGA.GREEN : void 0,
                 tooltipForceOpen: o || void 0,
                 onMouseEnter: u,
@@ -739,7 +740,7 @@ function ts() {
         [V, G] = (0, q.G)(null != k ? k : null),
         { analyticsLocations: F } = (0, I.ZP)(N.Z.ACCOUNT),
         H = (0, ee.K)({ user: t }),
-        W = (0, el.Ws)({ location: e8.dr.CONFLICT_CHECKS }),
+        W = (0, el.Ws)({ location: e6.dr.CONFLICT_CHECKS }),
         z = (0, d.e7)([eo.Z, eL.default, eA.Z], () => {
             let e,
                 t = eo.Z.getSyncingWith(),
@@ -815,7 +816,7 @@ function ta(e) {
                     e7(
                         {
                             ref: d,
-                            tooltipText: null != t ? e6.intl.formatToPlainString(e6.t.Gzh6ZG, { webBuildOverride: t.id }) : e6.intl.string(e6.t.cduTBA),
+                            tooltipText: null != t ? e8.intl.formatToPlainString(e8.t.Gzh6ZG, { webBuildOverride: t.id }) : e8.intl.string(e8.t.cduTBA),
                             onClick: s,
                             onContextMenu: a,
                             icon: (0, i.jsx)(m, {
@@ -844,7 +845,7 @@ function tl(e) {
         k = (0, d.e7)([eD.Z], () => eD.Z.isConnected()),
         { Component: L, events: B, play: M } = T,
         U = n || s ? f.v0G : L,
-        V = R ? e6.intl.string(e6.t.ARRV6u) : null,
+        V = R ? e8.intl.string(e8.t.ARRV6u) : null,
         G = (0, w.Z)(t, n, s, l),
         F =
             null != o
@@ -945,7 +946,7 @@ function tl(e) {
                     className: a()({ [e2.micButtonWithMenu]: z }),
                     orangeGlow: R,
                     redGlow: C,
-                    'aria-label': e6.intl.string(e6.t['w4m94+']),
+                    'aria-label': e8.intl.string(e8.t['w4m94+']),
                     'aria-checked': C,
                     disabled: l
                 }),
@@ -1027,18 +1028,18 @@ function tl(e) {
                                                                 ? (0, i.jsxs)(i.Fragment, {
                                                                       children: [
                                                                           (0, i.jsx)('img', {
-                                                                              alt: null != Z ? e6.intl.string(Z.name) : '',
+                                                                              alt: null != Z ? e8.intl.string(Z.name) : '',
                                                                               src: null == Z ? void 0 : Z.iconURL,
                                                                               draggable: !1
                                                                           }),
                                                                           (0, i.jsx)(f.Text, {
                                                                               variant: 'text-sm/medium',
                                                                               color: 'always-white',
-                                                                              children: e6.intl.string(e6.t.VlC1dX)
+                                                                              children: e8.intl.string(e8.t.VlC1dX)
                                                                           })
                                                                       ]
                                                                   })
-                                                                : e6.intl.string(e6.t.Hapb4O),
+                                                                : e8.intl.string(e8.t.Hapb4O),
                                                             icon: (0, i.jsx)(a, {
                                                                 className: e2.buttonChevronIcon,
                                                                 size: 'custom',
@@ -1050,7 +1051,7 @@ function tl(e) {
                                                             className: e2.buttonChevron,
                                                             orangeGlow: R,
                                                             redGlow: C,
-                                                            'aria-label': e6.intl.string(e6.t.Hapb4O),
+                                                            'aria-label': e8.intl.string(e8.t.Hapb4O),
                                                             disabled: l,
                                                             onClick: (e) => {
                                                                 (s(e3.L.INDIRECT_ACTION), n(e), null != A && !q && P ? (0, eS.$)(() => X(!0)) : X(!q));
@@ -1118,7 +1119,7 @@ function to(e) {
             iconForeground: u ? e2.strikethrough : void 0,
             role: 'switch',
             redGlow: u,
-            'aria-label': e6.intl.string(e6.t.wjcRFR),
+            'aria-label': e8.intl.string(e8.t.wjcRFR),
             'aria-checked': u,
             disabled: s
         })

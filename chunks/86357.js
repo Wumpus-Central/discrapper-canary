@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => v }), n(415506));
+(n.d(t, { Z: () => y }), n(415506));
 var r,
     i,
     l,
@@ -74,7 +74,7 @@ let _ = (e) => {
             children: p.intl.string(p.t.QQsaCQ)
         });
     };
-class y extends (r = o.PureComponent) {
+class v extends (r = o.PureComponent) {
     getState() {
         let { inLibrary: e, sku: t, hasEntitlementBranch: n } = this.props;
         if (n) return 5;
@@ -176,12 +176,12 @@ class y extends (r = o.PureComponent) {
         }
     }
 }
-(l = 'Types') in y
-    ? Object.defineProperty(y, l, {
+(l = 'Types') in v
+    ? Object.defineProperty(v, l, {
           value: f,
           enumerable: !0,
           configurable: !0,
           writable: !0
       })
-    : (y[l] = f);
-let v = y;
+    : (v[l] = f);
+let y = v;

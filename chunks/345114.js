@@ -90,7 +90,7 @@ function O(e) {
             message: h,
             author: E
         }),
-        y = (null == (t = h.roleSubscriptionData) ? void 0 : t.total_months_subscribed) != null && (null == (l = h.roleSubscriptionData) ? void 0 : l.total_months_subscribed) <= 1;
+        v = (null == (t = h.roleSubscriptionData) ? void 0 : t.total_months_subscribed) != null && (null == (l = h.roleSubscriptionData) ? void 0 : l.total_months_subscribed) <= 1;
     return null == O
         ? null
         : (0, r.jsxs)(r.Fragment, {
@@ -101,7 +101,7 @@ function O(e) {
                       compact: b,
                       children: O
                   }),
-                  y &&
+                  v &&
                       (0, r.jsx)(C, {
                           guildId: f.guild_id,
                           user: h.author,
