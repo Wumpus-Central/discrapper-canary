@@ -15,9 +15,9 @@ n(606206);
 var b = n(998502),
     m = n(145597);
 n(371467);
-var g = n(41534),
-    h = n(837268),
-    v = n(554370),
+var v = n(41534),
+    g = n(837268),
+    h = n(554370),
     y = n(371651),
     E = n(610394),
     I = n(757744),
@@ -30,7 +30,7 @@ async function S(e, t) {
         try {
             await b.ZP.isAlwaysOnTop(t);
         } catch (e) {
-            (C.error('Window does not exist while trying to show inactive', e), (0, g.D1)(e, h.gl.OutOfProcess));
+            (C.error('Window does not exist while trying to show inactive', e), (0, v.D1)(e, g.gl.OutOfProcess));
         }
         for (let a = 0; a < r; a++)
             try {
@@ -42,7 +42,7 @@ async function S(e, t) {
                 if ((null == (i = e.message) ? void 0 : i.includes('IPC')) && a < r - 1) {
                     let t = (n / 2) * Math.pow(2, a + 1);
                     (C.error('Failed to show inactive, retrying in '.concat(t, 'ms'), e), await new Promise((e) => setTimeout(e, t)));
-                } else throw ((0, g.D1)(e, h.gl.OutOfProcess), e);
+                } else throw ((0, v.D1)(e, g.gl.OutOfProcess), e);
             }
     }
 }
@@ -57,7 +57,7 @@ let P = i.memo(function (e) {
                     let e = _.default.getFocusedPID();
                     return !p.isPlatformEmbedded || (null != e && e !== m.UNSET_PID);
                 }),
-                [g, v] = i.useState(b),
+                [v, h] = i.useState(b),
                 [I, C] = i.useState(!1),
                 P = i.useCallback(() => {
                     let e = (0, m.getPID)(),
@@ -65,7 +65,7 @@ let P = i.memo(function (e) {
                     (l.Z.track(O.rMx.OVERLAY_INITIALIZED, {
                         voice_widget_connected: n,
                         text_widget_connected: E.ZP.isPinned(O.Odu.TEXT),
-                        overlay_render_method: h.gl[y.default.getOverlayMethod(e)],
+                        overlay_render_method: g.gl[y.default.getOverlayMethod(e)],
                         unpinned_widget_types: d.Z.getAllUnpinnedPinnedWidgets(t)
                     }),
                         l.Z.successfullyShown(e));
@@ -101,7 +101,7 @@ let P = i.memo(function (e) {
                                 return;
                             }
                             c.current = e.setTimeout(() => {
-                                (v(!0), C(!0), P(), (s.current = null));
+                                (h(!0), C(!0), P(), (s.current = null));
                             }, 100);
                         })));
                 },
@@ -109,10 +109,10 @@ let P = i.memo(function (e) {
             );
             return (
                 i.useEffect(() => {
-                    (!g || null == n) && b && b && null != n && A(n, e);
-                }, [A, g, b, e, n]),
+                    (!v || null == n) && b && b && null != n && A(n, e);
+                }, [A, v, b, e, n]),
                 (0, o.Ng)(() => {
-                    g && null != n && A(n, e);
+                    v && null != n && A(n, e);
                 }),
                 (0, o.zq)(() => {
                     null != s.current && s.current();
@@ -121,14 +121,14 @@ let P = i.memo(function (e) {
             );
         })(n, I.$S),
         b = (0, m.getPID)(),
-        g = (0, a.e7)([_.default], () => _.default.isInputLocked(b), [b]);
+        v = (0, a.e7)([_.default], () => _.default.isInputLocked(b), [b]);
     return c
         ? (0, r.jsx)(s.Z, {
               withTitleBar: t,
               windowKey: n,
               title: 'Discord Overlay',
-              hideModals: g,
-              children: (0, r.jsx)(v.Z, {})
+              hideModals: v,
+              children: (0, r.jsx)(h.Z, {})
           })
         : null;
 });

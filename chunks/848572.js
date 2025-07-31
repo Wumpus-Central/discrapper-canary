@@ -1,6 +1,6 @@
 n.d(t, {
     GG: () => _,
-    Rw: () => C,
+    Rw: () => E,
     SI: () => v,
     Vq: () => f,
     a1: () => x,
@@ -105,7 +105,7 @@ let j = () => {
             t = (0, a.e7)([d.Z], () => d.Z.getPremiumTypeSubscription());
         return null == e || null == t || null == t.premiumSince ? null : (0, l.RZ)(e, t.premiumSince);
     },
-    E = () => {
+    C = () => {
         let e = _(),
             t = Object.values(p.vK);
         if (null == e || null == t) return null;
@@ -119,11 +119,11 @@ let j = () => {
                   status: 'upcoming'
               });
     },
-    C = () => {
+    E = () => {
         let e = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
             t = v(null == e ? void 0 : e.id),
             n = O(),
-            i = E();
+            i = C();
         return null != t
             ? h(g({}, t), {
                   earnedOnDate: n,

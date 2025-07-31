@@ -78,27 +78,28 @@ function f(e, t) {
     return i;
 }
 function p(e) {
-    var { size: t = 'md', gradientColor: n = 'purple', graphic: l, title: u, subtitle: f, actionBarInput: p, actions: h, children: m } = e,
-        g = _(e, ['size', 'gradientColor', 'graphic', 'title', 'subtitle', 'actionBarInput', 'actions', 'children']);
+    var { size: t = 'md', gradientColor: n = 'purple', graphic: l, badge: u, title: f, subtitle: p, actionBarInput: h, actions: m, children: g } = e,
+        E = _(e, ['size', 'gradientColor', 'graphic', 'badge', 'title', 'subtitle', 'actionBarInput', 'actions', 'children']);
     return (0, r.jsxs)(
         i.I,
-        d(c({}, g), {
+        d(c({}, E), {
             size: t,
             paddingSize: 'lg',
             children: [
                 (0, r.jsx)(s.x, {
                     gradientColor: n,
                     graphic: l,
-                    title: u,
+                    badge: u,
+                    title: f,
                     titleTextVariant: 'heading-xl/semibold',
-                    subtitle: f,
+                    subtitle: p,
                     alignCenter: !0
                 }),
-                (0, r.jsx)(o.f, { children: m }),
+                (0, r.jsx)(o.f, { children: g }),
                 (0, r.jsx)(a.G, {
-                    leading: p,
-                    actions: h,
-                    actionsFullWidth: null == p
+                    leading: h,
+                    actions: m,
+                    actionsFullWidth: null == h
                 })
             ]
         })

@@ -15,13 +15,13 @@ var r = n(120356),
 function h() {
     var e, t, n, r, a;
     let h = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        f = '425774',
-        b = 'c4203e9019d7fdacf630a7752bb3d88f644d7360'.substring(0, 7),
+        f = '425880',
+        b = '7e831fadf1fe3dd360e2e3f54568288ae996e91d'.substring(0, 7),
         x = null === c.Z || void 0 === c.Z ? void 0 : c.Z.remoteApp.getVersion(),
         _ = null === c.Z || void 0 === c.Z || null == (e = (t = c.Z.remoteApp).getBuildNumber) ? void 0 : e.call(t),
         j = null === c.Z || void 0 === c.Z || null == (n = (r = c.Z.remoteApp).getAppArch) ? void 0 : n.call(r),
         O = null == (a = d.C.getCurrentBuildOverride().overrides) ? void 0 : a.discord_web,
-        E = (function () {
+        C = (function () {
             var e;
             let t = null === l() || void 0 === l() || null == (e = l().os) ? void 0 : e.toString();
             if (null == t || null == c.Z) return null;
@@ -29,13 +29,13 @@ function h() {
                 [i, r, s] = m.ZP.parsedOSRelease;
             return (t.includes('Windows 10') && void 0 !== s && s >= 22000 && (t = t.replace('Windows 10', 'Windows 11')), t.includes('OS X 10.15.7') && void 0 !== i && i >= 20 && (t = 'macOS '.concat(i >= 25 ? i + 1 : i - 9)), ''.concat(t, ' (').concat(n, ')'));
         })(),
-        C = [h, f, '('.concat(b, ')')];
+        E = [h, f, '('.concat(b, ')')];
     return (
-        null != x && (C.push('Host '.concat(x)), null != j && C.push(j.toLowerCase()), null != _ && C.push('('.concat(_, ')'))),
-        C.push('Build Override: '.concat(null != O ? O.id : 'N/A')),
-        null != E && C.push(E),
+        null != x && (E.push('Host '.concat(x)), null != j && E.push(j.toLowerCase()), null != _ && E.push('('.concat(_, ')'))),
+        E.push('Build Override: '.concat(null != O ? O.id : 'N/A')),
+        null != C && E.push(C),
         (0, i.jsx)(u.Z, {
-            copyValue: C.join(' '),
+            copyValue: E.join(' '),
             text: p.intl.string(p.t['9Al4QU']),
             'aria-label': !1,
             children: (e) => {
@@ -132,13 +132,13 @@ function h() {
                                               ]
                                           })
                                         : null,
-                                    null != E
+                                    null != C
                                         ? (0, i.jsx)(o.Text, {
                                               tag: 'span',
                                               className: s()(g.line, g.os),
                                               variant: 'text-xs/normal',
                                               color: 'text-muted',
-                                              children: E
+                                              children: C
                                           })
                                         : null
                                 ]

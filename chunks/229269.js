@@ -1,4 +1,4 @@
-(n.d(t, { f: () => C }), n(388685), n(49124));
+(n.d(t, { f: () => E }), n(388685), n(49124));
 var i = n(255367),
     r = n(73800),
     s = n(245364),
@@ -42,7 +42,7 @@ function O(e) {
     }
     return e;
 }
-function E(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,7 +60,7 @@ function E(e, t) {
         e
     );
 }
-function C() {
+function E() {
     return (0, i.jsx)(p.PaymentContextProvider, {
         stepConfigs: [],
         skuIDs: [],
@@ -214,7 +214,7 @@ function y() {
                 children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(
                         d.Z,
-                        E(O({}, e), {
+                        C(O({}, e), {
                             onChooseType: () => {},
                             paymentRequestWallets: ['googlePay', 'applePay']
                         })
@@ -226,7 +226,7 @@ function y() {
                 children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(
                         d.Z,
-                        E(O({}, e), {
+                        C(O({}, e), {
                             onChooseType: () => {},
                             paymentRequestWallets: []
                         })
@@ -238,7 +238,7 @@ function y() {
                 children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(
                         d.Z,
-                        E(O({}, e), {
+                        C(O({}, e), {
                             isEligibleForTrial: !0,
                             onChooseType: () => {},
                             paymentRequestWallets: []
@@ -251,7 +251,7 @@ function y() {
                 children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(
                         d.Z,
-                        E(O({}, e), {
+                        C(O({}, e), {
                             onChooseType: () => {},
                             paymentRequestWallets: [],
                             paymentSourceTypeRestrictions: [b.He.CARD.valueOf()]

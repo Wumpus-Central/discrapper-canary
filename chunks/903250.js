@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(105759),
     j = n(736519),
     O = n(422034),
-    E = n(710220),
-    C = n(635921),
+    C = n(710220),
+    E = n(635921),
     v = n(638631),
     S = n(869783),
     T = n(388032),
@@ -60,7 +60,7 @@ let P = r.forwardRef((e, t) => {
                                 children: G
                             }),
                             M
-                                ? (0, i.jsx)(E.Z, { referrer: B })
+                                ? (0, i.jsx)(C.Z, { referrer: B })
                                 : V &&
                                   (0, i.jsx)('div', {
                                       className: N.affinityDescriptionContainer,
@@ -78,7 +78,7 @@ let P = r.forwardRef((e, t) => {
                                           color: U
                                       })
                                   })
-                                : (0, i.jsx)(C.PK, {
+                                : (0, i.jsx)(E.PK, {
                                       subscriptionTier: s,
                                       inOfferExperience: k,
                                       containerClassName: a()(N.marketingPageCTAContainer, { [N.marketingPageCTAMargin]: !(V || M) }),
@@ -87,7 +87,7 @@ let P = r.forwardRef((e, t) => {
                                       isDarkMode: P,
                                       isEligibleForBogoPromotion: R
                                   }),
-                            (0, i.jsx)(C._O, {
+                            (0, i.jsx)(E._O, {
                                 variant: 'text-sm/normal',
                                 withBottomMargin: !1,
                                 isApplicationHome: !0

@@ -1,8 +1,8 @@
 (r.d(t, {
-    $0: () => f,
-    Tm: () => p,
-    ZP: () => g,
-    oT: () => m
+    $0: () => u,
+    Tm: () => d,
+    ZP: () => p,
+    oT: () => f
 }),
     r(388685),
     r(539854));
@@ -12,22 +12,18 @@ var n,
     o = r(597688),
     s = r(1870),
     c = r(884697),
-    a = r(594174),
-    u = r(74538),
-    d = r(388032),
-    f = (((n = {}).PURCHASE = 'purchase'), (n.PREMIUM_PURCHASE = 'premium_purchase'), (n.PREVIEW = 'preview'), n);
-let p = { id: 'None' },
-    m = { id: 'Shop' },
-    g = () => {
-        let e = (0, l.e7)([a.default], () => a.default.getCurrentUser()),
-            t = u.ZP.canUseCollectibles(e),
-            r = (0, l.e7)([s.Z], () => s.Z.purchases),
-            [n, f] = (0, l.Wu)([o.Z], () => [o.Z.categories, o.Z.products]);
+    a = r(388032),
+    u = (((n = {}).PURCHASE = 'purchase'), (n.PREMIUM_PURCHASE = 'premium_purchase'), (n.PREVIEW = 'preview'), n);
+let d = { id: 'None' },
+    f = { id: 'Shop' },
+    p = () => {
+        let e = (0, l.e7)([s.Z], () => s.Z.purchases),
+            [t, r] = (0, l.Wu)([o.Z], () => [o.Z.categories, o.Z.products]);
         return (0, i.useMemo)(() => {
-            let e = (0, c.yn)(r, n).reduce(
-                (e, n) => {
-                    let i = r.get(n.skuId);
-                    return ((0, c.qS)(i) ? e.premium_purchase.push(n) : null != i ? e.purchase.push(n) : !t && (0, c.G1)(f.get(n.skuId)) ? e.premium_purchase.push(n) : e.preview.push(n), e);
+            let n = (0, c.yn)(e, t).reduce(
+                (t, n) => {
+                    let i = e.get(n.skuId);
+                    return ((0, c.G1)(r.get(n.skuId)) ? t.premium_purchase.push(n) : null != i ? t.purchase.push(n) : t.preview.push(n), t);
                 },
                 {
                     purchase: [],
@@ -38,25 +34,25 @@ let p = { id: 'None' },
             return [
                 {
                     section: 'purchase',
-                    items: [p, m, ...e.purchase],
+                    items: [d, f, ...n.purchase],
                     height: 12,
-                    header: d.intl.string(d.t['9x1v/v'])
+                    header: a.intl.string(a.t['9x1v/v'])
                 },
                 {
                     section: 'premium_purchase',
-                    items: e.premium_purchase,
+                    items: n.premium_purchase,
                     height: 12,
-                    header: d.intl.string(d.t.TiLCg4)
+                    header: a.intl.string(a.t.TiLCg4)
                 },
                 {
                     section: 'preview',
-                    items: e.preview,
+                    items: n.preview,
                     height: 12,
-                    header: d.intl.string(d.t['1vbbeX'])
+                    header: a.intl.string(a.t['1vbbeX'])
                 }
             ].filter((e) => {
                 let { items: t } = e;
                 return t.length > 0;
             });
-        }, [n, f, r, t]);
+        }, [t, r, e]);
     };

@@ -100,66 +100,62 @@ function N(e) {
                         innerClassName: _.closeButton
                     })
                 }),
+                null != L &&
+                    (0, r.jsx)(b.Z, {
+                        user: w,
+                        displayProfile: A,
+                        themeType: y.lY.MODAL_V2,
+                        className: _.backgroundThemeContainer,
+                        forceUserTheme: !0,
+                        children: (0, r.jsx)('div', {
+                            className: _.bannerBackground,
+                            style: { backgroundImage: 'url('.concat(L, ')') }
+                        })
+                    }),
                 (0, r.jsx)(s.f6W, {
                     theme: B,
                     children: (e) =>
-                        (0, r.jsxs)(r.Fragment, {
+                        (0, r.jsxs)('div', {
+                            className: i()(_.previewCards, e),
+                            inert: !0,
                             children: [
-                                null != L &&
-                                    (0, r.jsx)(b.Z, {
-                                        user: w,
-                                        displayProfile: A,
-                                        themeType: y.lY.MODAL_V2,
-                                        className: _.backgroundThemeContainer,
-                                        forceUserTheme: !0,
-                                        children: (0, r.jsx)('div', {
-                                            className: _.bannerBackground,
-                                            style: { backgroundImage: 'url('.concat(L, ')') }
-                                        })
-                                    }),
-                                (0, r.jsxs)('div', {
-                                    className: i()(_.previewCards, e),
-                                    inert: !0,
-                                    children: [
-                                        (0, r.jsx)(m.Z, {
-                                            user: w,
-                                            canUsePremiumCustomization: !0,
-                                            pendingAvatar: void 0,
-                                            disabledInputs: !0,
-                                            hideCustomStatus: !0,
-                                            hideExampleButton: !0,
-                                            containerClassName: _.profile,
-                                            interactive: !1
-                                        }),
-                                        (0, r.jsx)(f.Z, {
-                                            author: (0, p.ij)(w, null),
-                                            message: (0, d.e5)(
-                                                P(
-                                                    S(
-                                                        {},
-                                                        (0, u.ZP)({
-                                                            channelId: '1337',
-                                                            content: v.intl.string(C.default.h5Cuen)
-                                                        })
-                                                    ),
-                                                    {
-                                                        state: O.yb.SENT,
-                                                        id: '0'
-                                                    }
-                                                )
+                                (0, r.jsx)(m.Z, {
+                                    user: w,
+                                    canUsePremiumCustomization: !0,
+                                    pendingAvatar: void 0,
+                                    disabledInputs: !0,
+                                    hideCustomStatus: !0,
+                                    hideExampleButton: !0,
+                                    containerClassName: _.profile,
+                                    interactive: !1
+                                }),
+                                (0, r.jsx)(f.Z, {
+                                    author: (0, p.ij)(w, null),
+                                    message: (0, d.e5)(
+                                        P(
+                                            S(
+                                                {},
+                                                (0, u.ZP)({
+                                                    channelId: '1337',
+                                                    content: v.intl.string(C.default.h5Cuen)
+                                                })
                                             ),
-                                            isGroupStart: !0,
-                                            hideSimpleEmbedContent: !0,
-                                            hideGuildTag: !0,
-                                            className: _.chatMessage
-                                        }),
-                                        (0, r.jsx)(c.Z, {
-                                            user: w,
-                                            nameplate: null,
-                                            nameplateData: w.nameplate,
-                                            className: _.nameplate
-                                        })
-                                    ]
+                                            {
+                                                state: O.yb.SENT,
+                                                id: '0'
+                                            }
+                                        )
+                                    ),
+                                    isGroupStart: !0,
+                                    hideSimpleEmbedContent: !0,
+                                    hideGuildTag: !0,
+                                    className: _.chatMessage
+                                }),
+                                (0, r.jsx)(c.Z, {
+                                    user: w,
+                                    nameplate: null,
+                                    nameplateData: w.nameplate,
+                                    className: _.nameplate
                                 })
                             ]
                         })

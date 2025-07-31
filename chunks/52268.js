@@ -1,22 +1,18 @@
-(r.d(t, { Z: () => C }), r(314940));
+(r.d(t, { Z: () => O }), r(314940));
 var n = r(255367),
     i = r(73800),
     l = r(120356),
     o = r.n(l),
     s = r(278074),
-    c = r(831209),
-    a = r(399606),
-    u = r(481060),
-    d = r(597688),
-    f = r(884697),
-    p = r(222062),
-    m = r(74538),
-    g = r(731896),
-    h = r(528439),
-    b = r(388032),
-    x = r(233966),
-    j = r(223223);
-function y(e) {
+    c = r(481060),
+    a = r(171019),
+    u = r(74538),
+    d = r(731896),
+    f = r(528439),
+    p = r(388032),
+    m = r(233966),
+    g = r(223223);
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -41,7 +37,7 @@ function y(e) {
     }
     return e;
 }
-function v(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,7 +55,7 @@ function v(e, t) {
         e
     );
 }
-function O(e, t) {
+function j(e, t) {
     if (null == e) return {};
     var r,
         n,
@@ -78,195 +74,160 @@ function O(e, t) {
     }
     return i;
 }
-let P = () => 80,
-    _ = (e) => {
+let y = () => 80,
+    x = (e) => {
         var { children: t, className: r, isSelected: i = !1 } = e,
-            l = O(e, ['children', 'className', 'isSelected']);
+            l = j(e, ['children', 'className', 'isSelected']);
         return (0, n.jsx)(
-            u.P3F,
-            v(y({ className: o()(x.effectGridItem, r, { [x.selected]: i }) }, l), {
+            c.P3F,
+            b(h({ className: o()(m.effectGridItem, r, { [m.selected]: i }) }, l), {
                 onClick: l.onSelect,
                 children: t
             })
         );
     },
-    E = (e) => {
+    v = (e) => {
         var t,
-            { user: r, profileEffect: l, innerRef: o, section: s, isSelected: P } = e,
-            E = O(e, ['user', 'profileEffect', 'innerRef', 'section', 'isSelected']);
-        let C = (0, g.V)(l.id),
-            w = (0, a.e7)([d.Z], () => {
-                let e = d.Z.getProduct(l.skuId);
-                return (0, f.G1)(e);
-            }),
-            I = (0, f.Yq)(l.skuId),
-            S = i.useRef(null),
-            { accessibilityLabel: Z, thumbnailPreviewSrc: N, title: D } = null != (t = null == C ? void 0 : C.config) ? t : {},
-            k = m.ZP.canUseCollectibles(r),
-            A = s === h.$0.PREMIUM_PURCHASE && !k,
-            T = (0, p.M)();
+            { profileEffect: r, innerRef: l, section: o, isSelected: s, canUsePremiumCollectibles: c } = e,
+            u = j(e, ['profileEffect', 'innerRef', 'section', 'isSelected', 'canUsePremiumCollectibles']);
+        let p = (0, d.V)(r.id),
+            y = i.useRef(null),
+            { accessibilityLabel: v, thumbnailPreviewSrc: O, title: P } = null != (t = null == p ? void 0 : p.config) ? t : {};
         return (0, n.jsxs)(
-            _,
-            v(
-                y(
+            x,
+            b(
+                h(
                     {
-                        className: !A || P || T ? void 0 : x.decorationGridItemChurned,
-                        innerRef: null != o ? o : S,
-                        isSelected: P
+                        innerRef: null != l ? l : y,
+                        isSelected: s
                     },
-                    E
+                    u
                 ),
                 {
                     children: [
                         (0, n.jsx)('img', {
-                            src: j,
-                            alt: Z,
-                            className: x.presetEffectBackground
+                            src: g,
+                            alt: v,
+                            className: m.presetEffectBackground
                         }),
                         (0, n.jsx)('img', {
-                            className: x.presetEffectImg,
-                            src: N,
-                            alt: D
+                            className: m.presetEffectImg,
+                            src: O,
+                            alt: P
                         }),
-                        s === h.$0.PURCHASE || (s === h.$0.PREMIUM_PURCHASE && k)
-                            ? null
-                            : I
-                              ? (0, n.jsx)(u.lBU, {
-                                    className: x.newBadge,
-                                    text: (0, n.jsxs)('div', {
-                                        className: x.newBadgeText,
-                                        children: [
-                                            (0, n.jsx)(u.mBM, {
-                                                size: 'xxs',
-                                                color: 'currentColor'
-                                            }),
-                                            b.intl.string(b.t.y2b7CA)
-                                        ]
-                                    })
-                                })
-                              : (0, n.jsx)(u.G2e, {
-                                    icon: w
-                                        ? () =>
-                                              (0, n.jsx)(u.SrA, {
-                                                  size: 'custom',
-                                                  color: 'currentColor',
-                                                  width: 14,
-                                                  height: 14
-                                              })
-                                        : () =>
-                                              (0, n.jsx)(u.mBM, {
-                                                  size: 'xxs',
-                                                  color: 'currentColor'
-                                              }),
-                                    color: c.Z.BACKGROUND_ACCENT,
-                                    className: x.lockBadge
-                                })
+                        (0, n.jsx)(a.Z, {
+                            isPurchaseSection: o === f.$0.PURCHASE,
+                            isPremiumSection: o === f.$0.PREMIUM_PURCHASE,
+                            canUsePremiumCollectibles: c,
+                            skuId: r.skuId
+                        })
                     ]
                 }
             )
         );
     },
-    C = (e) => {
-        let { user: t, guild: r, pendingProfileEffect: i, selectedProfileEffectRef: l, onSelect: o, onOpenShop: c } = e,
-            a = (0, h.ZP)(),
-            d = null != i;
+    O = (e) => {
+        let { user: t, guild: r, pendingProfileEffect: i, selectedProfileEffectRef: l, onSelect: o, onOpenShop: a } = e,
+            d = (0, f.ZP)(),
+            g = null != i,
+            j = u.ZP.canUseCollectibles(t);
         return (0, n.jsx)('section', {
-            className: x.section,
-            children: (0, n.jsx)(u.GMG, {
+            className: m.section,
+            children: (0, n.jsx)(c.GMG, {
                 fade: !0,
                 itemGutter: 12,
                 sectionGutter: 16,
                 paddingVertical: 0,
                 paddingHorizontal: 12,
-                className: x.list,
+                className: m.list,
                 columns: 3,
-                sections: a.map((e) => {
+                sections: d.map((e) => {
                     let { items: t } = e;
                     return t.length;
                 }),
-                renderItem: (e, f, p, m) => {
-                    let { section: g, items: j } = a[e];
-                    return (0, s.EQ)(j[f])
-                        .with(h.Tm, () =>
+                renderItem: (e, t, u, b) => {
+                    let { section: y, items: O } = d[e];
+                    return (0, s.EQ)(O[t])
+                        .with(f.Tm, () =>
                             (0, n.jsxs)(
-                                _,
+                                x,
                                 {
-                                    style: y({}, p),
-                                    isSelected: !d,
+                                    style: h({}, u),
+                                    isSelected: !g,
                                     onSelect: () => o(null),
                                     children: [
-                                        (0, n.jsx)(u.t6m, {
+                                        (0, n.jsx)(c.t6m, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            className: x.notAllowedIcon
+                                            className: m.notAllowedIcon
                                         }),
-                                        (0, n.jsx)(u.Text, {
+                                        (0, n.jsx)(c.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-primary',
-                                            children: null != r ? b.intl.string(b.t.CHf9iI) : b.intl.string(b.t.PoWNfX)
+                                            children: null != r ? p.intl.string(p.t.CHf9iI) : p.intl.string(p.t.PoWNfX)
                                         })
                                     ]
                                 },
-                                m
+                                b
                             )
                         )
-                        .with(h.oT, () =>
+                        .with(f.oT, () =>
                             (0, n.jsxs)(
-                                _,
+                                x,
                                 {
-                                    style: p,
-                                    onSelect: c,
+                                    style: u,
+                                    onSelect: a,
                                     children: [
-                                        (0, n.jsx)(u.EOn, {
+                                        (0, n.jsx)(c.EOn, {
                                             size: 'custom',
                                             width: 23,
                                             height: 23,
                                             color: 'currentColor',
-                                            className: x.shopIcon
+                                            className: m.shopIcon
                                         }),
-                                        (0, n.jsx)(u.Text, {
+                                        (0, n.jsx)(c.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-primary',
-                                            children: b.intl.string(b.t.pWG4zc)
+                                            children: p.intl.string(p.t.pWG4zc)
                                         })
                                     ]
                                 },
-                                m
+                                b
                             )
                         )
                         .otherwise((e) => {
-                            let r = i === e.id;
+                            let t = i === e.id;
                             return (0, n.jsx)(
-                                E,
+                                v,
                                 {
-                                    user: t,
-                                    style: y({}, p),
-                                    section: g,
+                                    style: h({}, u),
+                                    section: y,
                                     profileEffect: e,
-                                    innerRef: r ? l : void 0,
-                                    isSelected: r,
-                                    onSelect: () => o(e.id)
+                                    innerRef: t ? l : void 0,
+                                    isSelected: t,
+                                    onSelect: () => o(e.id),
+                                    canUsePremiumCollectibles: j
                                 },
-                                m
+                                b
                             );
                         });
                 },
                 renderSection: (e, t) => {
-                    let { header: r } = a[e];
+                    let { header: r } = d[e];
                     return (0, n.jsx)('div', {
-                        style: v(y({}, t), {
+                        style: b(h({}, t), {
                             height: ''.concat(16, 'px'),
                             position: 'absolute'
                         }),
-                        children: (0, n.jsx)(u.vwX, { children: r })
+                        children: (0, n.jsx)(c.vwX, { children: r })
                     });
                 },
                 getSectionHeight: () => 16,
                 getItemKey: (e, t) => {
                     var r, n;
-                    return null != (n = null == (r = a[e].items[t]) ? void 0 : r.id) ? n : null;
+                    return null != (n = null == (r = d[e].items[t]) ? void 0 : r.id) ? n : null;
                 },
-                getItemHeight: P,
+                getItemHeight: y,
                 removeEdgeItemGutters: !0
             })
         });

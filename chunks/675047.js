@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => C });
 var i = n(255367);
 n(73800);
 var r = n(924628),
@@ -38,7 +38,7 @@ function O() {
         children: [(0, i.jsx)(p.Z, {}), (0, i.jsx)(m.Z, {}), (0, i.jsx)(u.Z, {}), (0, i.jsx)(d.Z, {})]
     });
 }
-function E() {
+function C() {
     return (
         (0, s.ZP)(() => {
             ((0, r.I)(), (0, l.A)());

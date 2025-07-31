@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => c,
-    t: () => d
+    t: () => s
 });
 var i = n(442837),
     r = n(430824),
@@ -30,7 +30,7 @@ function c(e) {
         [e]
     );
 }
-function d(e) {
+function s(e) {
     let t = o.ZP.countVoiceStatesForChannel(e.id),
         n = r.Z.getGuild(e.getGuildId());
     return null == n

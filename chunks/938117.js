@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685));
+(n.d(t, { Z: () => E }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -42,7 +42,7 @@ function O(e) {
     }
     return e;
 }
-function E(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,8 +60,8 @@ function E(e, t) {
         e
     );
 }
-function C(e) {
-    let { onLearnMore: t, selectedBackgroundOption: C, onSelectBackgroundOption: v, currentDeviceId: S, smallerBackgroundOptions: T, className: N } = e,
+function E(e) {
+    let { onLearnMore: t, selectedBackgroundOption: E, onSelectBackgroundOption: v, currentDeviceId: S, smallerBackgroundOptions: T, className: N } = e,
         I = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
         [y, A] = r.useState(null),
         P = (0, g.Z)(),
@@ -75,7 +75,7 @@ function C(e) {
         k = {
             isVideoBackgroundSupported: P,
             onSelectBackgroundOption: v,
-            selectedBackgroundOption: C
+            selectedBackgroundOption: E
         },
         L = r.useRef(k);
     (r.useEffect(() => {
@@ -107,7 +107,7 @@ function C(e) {
                   (0, i.jsx)(h.Z, {
                       canUseCustomBackgrounds: R,
                       customBackgroundOptions: Z,
-                      selectedOption: C,
+                      selectedOption: E,
                       onSelectOption: B,
                       onUpsellClick: () => {
                           (0, a.ZDy)(async () => {
@@ -115,9 +115,9 @@ function C(e) {
                               return (n) =>
                                   (0, i.jsx)(
                                       e,
-                                      E(O({}, n), {
+                                      C(O({}, n), {
                                           onLearnMore: t,
-                                          analyticsSource: E(O({}, w.location), { object: b.qAy.BUTTON_CTA })
+                                          analyticsSource: C(O({}, w.location), { object: b.qAy.BUTTON_CTA })
                                       })
                                   );
                           });

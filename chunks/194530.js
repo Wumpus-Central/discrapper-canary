@@ -13,7 +13,7 @@ function p(e) {
     var t, n, p, g;
     let { transitionState: h, onSuccess: f, onClose: b, requirementsUpdated: x, noSkip: _ = !1 } = e,
         [j, O] = r.useState(''),
-        [E, C] = r.useState(''),
+        [C, E] = r.useState(''),
         [v, S] = r.useState(''),
         [T, N] = r.useState(null),
         [I, y] = r.useState(null),
@@ -23,10 +23,10 @@ function p(e) {
     async function D(e) {
         (e.preventDefault(), (0, l.b9)());
         let t = !1;
-        if (('' === E ? (N(u.intl.string(u.t['/7/oPT'])), (t = !0)) : N(null), E !== v ? (y(u.intl.string(u.t.IEKYZ2)), (t = !0)) : y(null), t)) return;
+        if (('' === C ? (N(u.intl.string(u.t['/7/oPT'])), (t = !0)) : N(null), C !== v ? (y(u.intl.string(u.t.IEKYZ2)), (t = !0)) : y(null), t)) return;
         let n = await (0, l.Mn)({
             password: j,
-            newPassword: E
+            newPassword: C
         });
         if (null == n ? void 0 : n.ok) f();
         else {
@@ -90,8 +90,8 @@ function p(e) {
                                     error: null != (g = null != (p = null == A || null == (n = A.new_password) ? void 0 : n[0]) ? p : T) ? g : void 0,
                                     children: (0, i.jsx)(a.oil, {
                                         type: 'password',
-                                        value: E,
-                                        onChange: C
+                                        value: C,
+                                        onChange: E
                                     })
                                 }),
                                 (0, i.jsx)(a.xJW, {

@@ -1,11 +1,11 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => f });
 var i = n(255367),
     r = n(73800),
     o = n(481060),
     a = n(372900),
     c = n(238246),
-    d = n(788983),
-    s = n(207035),
+    s = n(788983),
+    d = n(207035),
     l = n(823748),
     _ = n(981631),
     p = n(683146);
@@ -23,10 +23,10 @@ function u(e) {
         })
     });
 }
-function b(e, t) {
-    let n = (0, s.P)(t),
+function f(e, t) {
+    let n = (0, d.P)(t),
         a = r.useCallback(() => {
-            d.bA(
+            s.bA(
                 ''.concat(_.KJ3.CHANNEL_POPOUT, '-').concat(e.id),
                 (t) =>
                     (0, i.jsx)(u, {

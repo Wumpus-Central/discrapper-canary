@@ -28,8 +28,8 @@ var r = n(255367),
     P = n(747717),
     R = n(963123),
     N = n(281055),
-    k = n(46140),
-    I = n(981631),
+    I = n(46140),
+    k = n(981631),
     w = n(388032),
     A = n(844136);
 function L(e) {
@@ -77,11 +77,11 @@ function M(e, t) {
 }
 function V(e) {
     var t, n, o, a, C;
-    let { transitionState: x, onClose: N, quest: V, autoplay: B, videoSessionId: Z, impressionRef: F, parentModalOpenStartClockTime: q, sourceQuestContent: U } = e,
+    let { transitionState: x, onClose: N, quest: V, autoplay: B, videoSessionId: Z, impressionRef: F, parentModalOpenStartClockTime: U, sourceQuestContent: q } = e,
         H = (0, O.il)(V),
         Y = (0, b.tP)(V),
         Q = (0, u.e7)([v.Z], () => v.Z.getState().theme),
-        G = (0, d.wj)(Q) ? I.BRd.DARK : I.BRd.LIGHT,
+        G = (0, d.wj)(Q) ? k.BRd.DARK : k.BRd.LIGHT,
         z = (0, u.e7)([p.Z], () => p.Z.useReducedMotion),
         K = (0, g.aM)(),
         [X, W] = l.useState(H.progressSeconds),
@@ -95,10 +95,10 @@ function V(e) {
                 content: S.jn.VIDEO_MODAL,
                 ctaContent: E.jZ.COPY_QUEST_URL,
                 impressionId: K,
-                sourceQuestContent: U
+                sourceQuestContent: q
             }),
                 er());
-        }, [K, V.id, er, U]),
+        }, [K, V.id, er, q]),
         ea = async () => {
             if (null != N) {
                 let e = _.r.build(V.config).application.link;
@@ -108,7 +108,7 @@ function V(e) {
                 content: S.jn.VIDEO_MODAL,
                 ctaContent: E.jZ.OPEN_GAME_LINK,
                 impressionId: K,
-                sourceQuestContent: U
+                sourceQuestContent: q
             });
         },
         es = l.useMemo(() => _.r.build(V.config).defaultRewardName, [V]),
@@ -189,8 +189,8 @@ function V(e) {
                                                             quest: V,
                                                             questContent: S.jn.VIDEO_MODAL,
                                                             autoplay: !1,
-                                                            location: k.dr.VIDEO_MODAL,
-                                                            sourceQuestContent: U
+                                                            location: I.dr.VIDEO_MODAL,
+                                                            sourceQuestContent: q
                                                         })
                                                     })
                                                 })
@@ -204,9 +204,9 @@ function V(e) {
                             parentTransitionState: x,
                             onOptimisticProgressUpdate: W,
                             autoplay: B,
-                            performanceClockStartTime: q,
+                            performanceClockStartTime: U,
                             onClose: N,
-                            sourceQuestContent: U,
+                            sourceQuestContent: q,
                             orientation: ed
                         }),
                         (0, r.jsxs)('div', {
@@ -225,7 +225,7 @@ function V(e) {
                                         (0, r.jsx)(m.zx, {
                                             color: m.zx.Colors.PRIMARY,
                                             onClick: ei,
-                                            size: m.zx.Sizes.NONE,
+                                            size: m.zx.Sizes.MEDIUM,
                                             className: i()(A.copyLinkBtn, A.footerBtn),
                                             children: en
                                         }),
@@ -241,7 +241,7 @@ function V(e) {
                                                 ((0, O.xN)(V.config) || (0, O.Bg)(V.config)) && N();
                                             },
                                             questContent: S.jn.VIDEO_MODAL,
-                                            sourceQuestContent: U
+                                            sourceQuestContent: q
                                         })
                                     ]
                                 })

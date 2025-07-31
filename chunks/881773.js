@@ -158,14 +158,14 @@ let y = l.forwardRef(function (e, t) {
 });
 function j(e) {
     var t, n;
-    let { videoRef: o, playerState: O, animSpring: S, visible: j, seekForwardEnabled: x, hideCaptionBtn: T, hideTranscriptBtn: D, handlePlaybackBtnClick: P, handleTranscriptBtnClick: R, handleCaptionBtnClick: N, handleFullScreenBtnClick: k, handleSeekBackBtnClick: I, handleSeekForwardBtnClick: w, handleControlBarPendingInteraction: A, onVolumeChange: L } = e,
+    let { videoRef: o, playerState: O, animSpring: S, visible: j, seekForwardEnabled: x, hideCaptionBtn: T, hideTranscriptBtn: D, handlePlaybackBtnClick: P, handleTranscriptBtnClick: R, handleCaptionBtnClick: N, handleFullScreenBtnClick: I, handleSeekBackBtnClick: k, handleSeekForwardBtnClick: w, handleControlBarPendingInteraction: A, onVolumeChange: L } = e,
         M = (0, f.km)((e) => e.volume),
         V = (0, f.km)((e) => e.setVolume),
         B = (0, f.km)((e) => e.muted),
         Z = (0, f.km)((e) => e.setMuted),
         F = (0, f.km)((e) => e.transcriptEnabled),
-        q = (0, f.km)((e) => e.captionEnabled),
-        U = (0, f.km)((e) => e.fullScreenEnabled),
+        U = (0, f.km)((e) => e.captionEnabled),
+        q = (0, f.km)((e) => e.fullScreenEnabled),
         H = (0, s.e7)([m.Z], () => m.Z.useReducedMotion),
         Y = (0, s.e7)([m.Z], () => m.Z.keyboardModeEnabled),
         [Q, G] = l.useState(B ? 0 : M),
@@ -205,7 +205,7 @@ function j(e) {
                         Y || (e.preventDefault(), P());
                         break;
                     case g.Y1.SEEK_BACK:
-                        I();
+                        k();
                         break;
                     case g.Y1.SEEK_FORWARD:
                         w();
@@ -214,13 +214,13 @@ function j(e) {
                         N();
                         break;
                     case g.Y1.FULLSCREEN:
-                        k();
+                        I();
                         break;
                     case g.Y1.MUTE:
                         en();
                 }
             },
-            [N, k, P, I, w, en, Y]
+            [N, I, P, k, w, en, Y]
         );
     (l.useEffect(() => {
         null != ee.current && ee.current.focus();
@@ -267,7 +267,7 @@ function j(e) {
                         iconComponent: v.d,
                         animationTime: S,
                         visible: j,
-                        onClick: I,
+                        onClick: k,
                         ariaLabel: b.intl.string(b.t.r9s3Ul),
                         tooltipLabel: b.intl.string(b.t.r9s3Ul),
                         shortcut: g.Y1.SEEK_BACK
@@ -381,17 +381,17 @@ function j(e) {
                             iconComponent: p.c,
                             animationTime: S,
                             visible: j,
-                            active: q,
+                            active: U,
                             onClick: N,
                             ariaLabel: b.intl.string(b.t.bDSZOz),
                             tooltipLabel: b.intl.string(b.t.bDSZOz),
                             shortcut: g.Y1.CAPTION
                         }),
                     (0, r.jsx)(y, {
-                        iconComponent: U ? d.wvt : d.NpZ,
+                        iconComponent: q ? d.wvt : d.NpZ,
                         animationTime: S,
                         visible: j,
-                        onClick: k,
+                        onClick: I,
                         ariaLabel: b.intl.string(b.t.vKZT5u),
                         tooltipLabel: b.intl.string(b.t.vKZT5u),
                         shortcut: g.Y1.FULLSCREEN

@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(275388),
     j = n(720463),
     O = n(450272),
-    E = n(981631),
-    C = n(388032),
+    C = n(981631),
+    E = n(388032),
     v = n(751318);
 function S() {
     let { enabled: e } = (0, g.WX)({ location: 'revenue_storybook' });
@@ -55,8 +55,8 @@ function T() {
             (0, i.jsx)(O.E_, {
                 label: 'Balance Widget Menu',
                 children: (0, i.jsx)(b.V9, {
-                    ctaText: C.intl.string(C.t['J+vlIS']),
-                    ctaOnClick: E.dG4,
+                    ctaText: E.intl.string(E.t['J+vlIS']),
+                    ctaOnClick: C.dG4,
                     isCoachmarkEnabled: !1
                 })
             }),
@@ -82,7 +82,7 @@ function T() {
                     (0, i.jsx)(s.zx, {
                         onClick: () => {
                             ((0, l.xf)(),
-                                (0, u.s1)().location.pathname.includes(E.Z5c.COLLECTIBLES_SHOP) ||
+                                (0, u.s1)().location.pathname.includes(C.Z5c.COLLECTIBLES_SHOP) ||
                                     (0, d.mK)({
                                         openInLayer: !1,
                                         analyticsLocations: I,
@@ -181,9 +181,9 @@ function T() {
             (0, i.jsx)(O.E_, {
                 label: 'Balance Widget Card',
                 children: (0, i.jsx)(f.L, {
-                    ctaText: C.intl.string(C.t['H57f4+']),
-                    linkText: C.intl.string(C.t['7f4H7O']),
-                    ctaOnClick: E.dG4
+                    ctaText: E.intl.string(E.t['H57f4+']),
+                    linkText: E.intl.string(E.t['7f4H7O']),
+                    ctaOnClick: C.dG4
                 })
             })
         ]

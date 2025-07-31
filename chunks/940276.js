@@ -63,7 +63,7 @@ function f(e) {
 }
 let b = function () {
     let { guilds: e, searchQuery: t, setSearchQuery: n, sortOrder: s, setSortOrder: o, hasActivityRestrictedGuilds: d, onToggleAllActivityRestrictedGuilds: b, onToggleActivityRestrictedGuild: x, isActivityRestricted: _, numActivityRestrictedGuilds: j, numTotalGuilds: O } = (0, u.F)(),
-        E = (0, r.useId)();
+        C = (0, r.useId)();
     return (0, i.jsxs)('div', {
         className: h.wrapper,
         children: [
@@ -99,7 +99,7 @@ let b = function () {
                         placeholder: g.intl.string(g.t['H+nRY2']),
                         'aria-label': g.intl.string(g.t['5h0QOD']),
                         inputProps: {
-                            'aria-controls': E,
+                            'aria-controls': C,
                             'aria-expanded': !0
                         }
                     }),
@@ -159,7 +159,7 @@ let b = function () {
             }),
             (0, i.jsxs)('ul', {
                 className: h.guildsList,
-                id: E,
+                id: C,
                 'aria-label': g.intl.string(g.t['7hB4kp']),
                 children: [
                     0 === e.length &&

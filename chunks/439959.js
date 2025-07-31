@@ -1,8 +1,8 @@
 (n.d(t, {
-    $0: () => d,
-    Tm: () => _,
-    ZP: () => p,
-    oT: () => f
+    $0: () => c,
+    Tm: () => u,
+    ZP: () => _,
+    oT: () => d
 }),
     n(388685),
     n(539854));
@@ -11,55 +11,49 @@ var r = n(73800),
     a = n(597688),
     o = n(1870),
     s = n(884697),
-    l = n(594174),
-    c = n(74538),
-    u = n(388032),
-    d = (function (e) {
-        return ((e.PURCHASE = 'purchase'), (e.PREMIUM_PURCHASE = 'premium_purchase'), (e.PREVIEW = 'preview'), (e.PREMIUM_PREVIEW = 'premium_preview'), e);
+    l = n(388032),
+    c = (function (e) {
+        return ((e.PURCHASE = 'purchase'), (e.PREMIUM_PURCHASE = 'premium_purchase'), (e.PREVIEW = 'preview'), e);
     })({});
-let _ = { id: 'None' },
-    f = { id: 'Shop' },
-    p = () => {
-        let e = (0, i.e7)([l.default], () => l.default.getCurrentUser()),
-            t = c.ZP.canUseCollectibles(e),
-            n = (0, i.e7)([o.Z], () => o.Z.purchases),
-            [d, p] = (0, i.Wu)([a.Z], () => [a.Z.categories, a.Z.products]);
+let u = { id: 'None' },
+    d = { id: 'Shop' },
+    _ = () => {
+        let e = (0, i.e7)([o.Z], () => o.Z.purchases),
+            [t, n] = (0, i.Wu)([a.Z], () => [a.Z.categories, a.Z.products]);
         return (0, r.useMemo)(() => {
-            let e = (0, s.iC)(n, d).reduce(
-                (e, r) => {
-                    let i = n.get(r.skuId),
-                        a = (0, s.qS)(i);
-                    return ((a && 0 === e.premium_purchase.length && ((e.premium_purchase = e.premium_preview), (e.premium_preview = [])), a) ? e.premium_purchase.push(r) : null != i ? e.purchase.push(r) : !t && (0, s.G1)(p.get(r.skuId)) ? (e.premium_purchase.length > 0 ? e.premium_purchase : e.premium_preview).push(r) : e.preview.push(r), e);
+            let r = (0, s.iC)(e, t).reduce(
+                (t, r) => {
+                    let i = e.get(r.skuId);
+                    return ((0, s.G1)(n.get(r.skuId)) ? t.premium_purchase.push(r) : null != i ? t.purchase.push(r) : t.preview.push(r), t);
                 },
                 {
                     purchase: [],
                     premium_purchase: [],
-                    preview: [],
-                    premium_preview: []
+                    preview: []
                 }
             );
             return [
                 {
                     section: 'purchase',
-                    items: [_, f, ...e.purchase],
+                    items: [u, d, ...r.purchase],
                     height: 12,
-                    header: u.intl.string(u.t.VqmVqK)
+                    header: l.intl.string(l.t.VqmVqK)
                 },
                 {
-                    section: e.premium_purchase.length > 0 ? 'premium_purchase' : 'premium_preview',
-                    items: e.premium_purchase.length > 0 ? e.premium_purchase : e.premium_preview,
+                    section: 'premium_purchase',
+                    items: r.premium_purchase,
                     height: 12,
-                    header: u.intl.string(u.t.TiLCg4)
+                    header: l.intl.string(l.t.TiLCg4)
                 },
                 {
                     section: 'preview',
-                    items: e.preview,
+                    items: r.preview,
                     height: 12,
-                    header: u.intl.string(u.t['1vbbeX'])
+                    header: l.intl.string(l.t['1vbbeX'])
                 }
             ].filter((e) => {
                 let { items: t } = e;
                 return t.length > 0;
             });
-        }, [d, p, n, t]);
+        }, [t, n, e]);
     };

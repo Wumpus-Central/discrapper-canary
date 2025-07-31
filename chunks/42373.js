@@ -18,7 +18,7 @@ var i = n(255367),
     _ = n(869783),
     j = n(888723),
     O = n(790895);
-function E(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -43,7 +43,7 @@ function E(e) {
     }
     return e;
 }
-function C(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -211,10 +211,10 @@ let v = (e) => {
         return R
             ? (0, i.jsx)(
                   c.$,
-                  C(E({}, z), {
+                  E(C({}, z), {
                       color: 'purple',
                       children: (0, i.jsx)(H, {})
                   })
               )
-            : (0, i.jsx)('div', C(E({}, z), { children: (0, i.jsx)(H, {}) }));
+            : (0, i.jsx)('div', E(C({}, z), { children: (0, i.jsx)(H, {}) }));
     };

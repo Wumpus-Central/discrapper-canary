@@ -42,7 +42,7 @@ function O(e) {
     }
     return e;
 }
-function E(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,7 +60,7 @@ function E(e, t) {
         e
     );
 }
-let C = {
+let E = {
         [f.cq.THUMBNAIL]: null,
         [f.cq.STATIC]: null,
         [f.cq.REDUCED_MOTION]: null
@@ -75,7 +75,7 @@ let C = {
             [I, y] = r.useState(!1),
             [A, P] = r.useState(!1),
             [R, D] = r.useState([]),
-            [Z, w] = r.useState(C),
+            [Z, w] = r.useState(E),
             k = r.useRef([]),
             [L, B] = r.useState(t.name),
             M = L.toLowerCase().replace(/\s+/g, '_'),
@@ -101,7 +101,7 @@ let C = {
                 let n = V(t);
                 null != n &&
                     (0, f.i0)(n, (t) => {
-                        w((i) => E(O({}, i), { [e]: (0, f.z)(t, n) }));
+                        w((i) => C(O({}, i), { [e]: (0, f.z)(t, n) }));
                     });
             },
             F = (e, t) => {
@@ -126,7 +126,7 @@ let C = {
                     });
             },
             H = (e) => {
-                w((t) => E(O({}, t), { [e]: null }));
+                w((t) => C(O({}, t), { [e]: null }));
             };
         (r.useEffect(() => {
             let e = t.config.effects;
@@ -148,7 +148,7 @@ let C = {
                         let [t, n] = e;
                         if (null != n) {
                             let e = (0, f.$j)(n.base64);
-                            ((n.src = e), k.current.push(e), w((e) => E(O({}, e), { [t]: n })));
+                            ((n.src = e), k.current.push(e), w((e) => C(O({}, e), { [t]: n })));
                         }
                     });
             }, [t.config.stillFrames]));
@@ -364,9 +364,9 @@ let C = {
                                                   (0, i.jsx)(u.Z, {
                                                       fileContents: () =>
                                                           JSON.stringify(
-                                                              E(O({}, t), {
+                                                              C(O({}, t), {
                                                                   name: L,
-                                                                  config: E(O({}, t.config), {
+                                                                  config: C(O({}, t.config), {
                                                                       effects: R,
                                                                       stillFrames: Z
                                                                   })
@@ -469,7 +469,7 @@ let C = {
                                           variant: 'critical-secondary',
                                           text: 'Clear Assets',
                                           onClick: () => {
-                                              (D([]), w(C));
+                                              (D([]), w(E));
                                           }
                                       })
                                   }),

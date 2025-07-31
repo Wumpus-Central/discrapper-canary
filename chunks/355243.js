@@ -28,19 +28,19 @@ function v(e) {
     l.useEffect(() => {
         null != h && (null == O ? T(null) : T(p(O, g, h)));
     }, [h, O, g]);
-    let k = (0, c.Z)((e) => {
+    let I = (0, c.Z)((e) => {
             N(e.contentRect);
         }),
-        I = (0, s.y)(k);
+        k = (0, s.y)(I);
     (l.useLayoutEffect(() => {
-        null != I.current && N(I.current.getBoundingClientRect());
-    }, [I]),
+        null != k.current && N(k.current.getBoundingClientRect());
+    }, [k]),
         l.useEffect(() => {
             let e = () => {
-                null != I.current && N(I.current.getBoundingClientRect());
+                null != k.current && N(k.current.getBoundingClientRect());
             };
             return (window.addEventListener('resize', e), () => window.removeEventListener('resize', e));
-        }, [I]));
+        }, [k]));
     let w = (e) => {
             j(e.clientX);
         },
@@ -58,7 +58,7 @@ function v(e) {
         Z = null != x && null != h ? h.right - x : null;
     return (0, r.jsxs)('div', {
         className: m.cont,
-        ref: I,
+        ref: k,
         children: [
             (0, r.jsxs)(a.P3F, {
                 className: i()(m.hitboxArea, { [m.interactionEnabled]: o }),
@@ -67,7 +67,7 @@ function v(e) {
                     o && null != b && b(f(e.clientX, e.currentTarget.getBoundingClientRect(), g));
                 },
                 onMouseEnter: (e) => {
-                    o && (null != I.current && N(I.current.getBoundingClientRect()), P(!0), w(e));
+                    o && (null != k.current && N(k.current.getBoundingClientRect()), P(!0), w(e));
                 },
                 onMouseLeave: (e) => {
                     o && (P(!1), j(null));

@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(42818),
     j = n(314884),
     O = n(509545),
-    E = n(78839),
-    C = n(267642),
+    C = n(78839),
+    E = n(267642),
     v = n(74538),
     S = n(937615),
     T = n(518062),
@@ -87,7 +87,7 @@ async function R(e, t, n, i) {
             : (function () {
                   let e = Object.values(j.Z.boostSlots),
                       t = a().sortBy(
-                          e.filter((e) => !(0, C.tl)(e)),
+                          e.filter((e) => !(0, E.tl)(e)),
                           (e) => [null != e.premiumGuildSubscription, null != e.cooldownEndsAt ? new Date(e.cooldownEndsAt) : null]
                       )[0];
                   return null != t ? t.id : null;
@@ -108,8 +108,8 @@ async function R(e, t, n, i) {
 }
 function D(e) {
     var t, n, s;
-    let { premiumSubscription: a, guildBoostSlotId: c, fractionalPremiumInfo: d, onBack: p, onNext: j, onClose: E } = e,
-        [C, I] = r.useState(!1),
+    let { premiumSubscription: a, guildBoostSlotId: c, fractionalPremiumInfo: d, onBack: p, onNext: j, onClose: C } = e,
+        [E, I] = r.useState(!1),
         [P, D] = r.useState(null),
         [Z, w] = r.useMemo(() => {
             try {
@@ -118,9 +118,9 @@ function D(e) {
                 return [[], !0];
             }
         }, [a]),
-        k = r.useRef(E);
+        k = r.useRef(C);
     (r.useEffect(() => {
-        k.current = E;
+        k.current = C;
     }),
         r.useEffect(() => {
             w && k.current();
@@ -173,7 +173,7 @@ function D(e) {
         a.isPausedForFractionalPremium && d.fetched && (K = y.intl.format(y.t.eb0xgY, { expirationDate: d.endsAt.toDate() })),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(T.Z, { onClose: E }),
+                (0, i.jsx)(T.Z, { onClose: C }),
                 (0, i.jsxs)(o.hzk, {
                     className: A.body,
                     children: [
@@ -215,7 +215,7 @@ function D(e) {
                         (0, i.jsx)(o.zxk, {
                             variant: 'critical-primary',
                             text: y.intl.string(y.t['/AS/gI']),
-                            disabled: C,
+                            disabled: E,
                             onClick: async () => {
                                 try {
                                     (I(!0), D(null), await R(a, Z, M, c), j());
@@ -267,9 +267,9 @@ function w(e) {
     let t,
         { guildBoostSlot: n, transitionState: s, onClose: a } = e;
     r.useEffect(() => {
-        E.Z.hasFetchedSubscriptions() || (0, c.jg)();
+        C.Z.hasFetchedSubscriptions() || (0, c.jg)();
     }, []);
-    let d = (0, l.e7)([E.Z], () => E.Z.getPremiumTypeSubscription()),
+    let d = (0, l.e7)([C.Z], () => C.Z.getPremiumTypeSubscription()),
         g = (0, p.Z)(),
         [h, f] = r.useState(1),
         { analyticsLocations: b } = (0, m.ZP)(u.Z.GUILD_BOOST_CANCELLATION_MODAL);

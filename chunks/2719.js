@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(952306),
     j = n(299206),
     O = n(295474),
-    E = n(144114),
-    C = n(918505),
+    C = n(144114),
+    E = n(918505),
     v = n(332473),
     S = n(921801),
     T = n(485341),
@@ -88,7 +88,7 @@ function Y(e) {
     var t, s;
     let { className: l, user: o } = e,
         c = r.useRef(null),
-        u = (0, C.o9)(),
+        u = (0, E.o9)(),
         p = (0, v.b)(),
         g = (0, O.gS)(),
         h = null != (s = null == g || null == (t = g.nick) ? void 0 : t[0]) ? s : null,
@@ -444,7 +444,7 @@ function J(e) {
                                                   title: G.intl.string(G.t['3CTiKi']),
                                                   children: s.hasFlag(M.xW$.MFA_SMS) ? G.intl.string(G.t.jrhJys) : void 0,
                                                   actionText: G.intl.string(G.t.N86XcH),
-                                                  handleSubmit: (e) => E.Z.removePhone(e, E.L.USER_SETTINGS_UPDATE)
+                                                  handleSubmit: (e) => C.Z.removePhone(e, C.L.USER_SETTINGS_UPDATE)
                                               })
                                           )
                                       );
@@ -464,7 +464,7 @@ function J(e) {
                                     (0, m.ZDy)(
                                         async () => {
                                             let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
-                                            return (t) => (0, i.jsx)(e, H({ reason: E.L.USER_SETTINGS_UPDATE }, t));
+                                            return (t) => (0, i.jsx)(e, H({ reason: C.L.USER_SETTINGS_UPDATE }, t));
                                         },
                                         { modalKey: U.M }
                                     );

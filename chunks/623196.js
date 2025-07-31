@@ -35,9 +35,9 @@ function O() {
         })),
         [s, O] = r.useState(!1);
     if (null == e) return null;
-    let E = (0, m.$6)(t, e) || n,
-        C = null != t && a()().diff(a()(t.created_at), 'days') < b.eBq,
-        v = E && C,
+    let C = (0, m.$6)(t, e) || n,
+        E = null != t && a()().diff(a()(t.created_at), 'days') < b.eBq,
+        v = C && E,
         S = () => {
             j({
                 onConfirm: (e) => {
@@ -89,7 +89,7 @@ function O() {
                               return (0, i.jsx)(o.zxk, {
                                   variant: 'primary',
                                   text: x.intl.string(x.t.dmBSKi),
-                                  disabled: E,
+                                  disabled: C,
                                   onClick: S,
                                   onMouseEnter: t,
                                   onMouseLeave: r,
