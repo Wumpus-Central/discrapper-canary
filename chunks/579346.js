@@ -3,8 +3,8 @@ var r = n(255367),
     o = n(522942),
     l = n(793030),
     i = n(481060),
-    s = n(797967),
-    a = n(660662),
+    a = n(797967),
+    s = n(660662),
     c = n(698282),
     d = n(388032),
     u = n(235421),
@@ -27,11 +27,11 @@ function f(e) {
                     })
                 ]
             }),
-            (0, r.jsx)(s.default, {
+            (0, r.jsx)(a.default, {
                 className: u.colorPicker,
                 colorContainerClassName: u.colorPickerContainer,
                 defaultColor: m,
-                colors: b ? a.vK : a.gD,
+                colors: b ? s.vK : s.gD,
                 value: n[0],
                 secondaryValue: null != (t = n[1]) ? t : void 0,
                 onChange: (e) => f([e]),

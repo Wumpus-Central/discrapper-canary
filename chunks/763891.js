@@ -28,9 +28,9 @@ var n = r(255367),
     L = r(719138);
 function I(e) {
     var t;
-    let { isFetchingCategories: r, isFullScreen: I, scrollerRef: k, tab: w } = e,
-        N = (0, d.sp)(),
-        A = null != (t = null == N ? void 0 : N.sessionId) ? t : '',
+    let { isFetchingCategories: r, isFullScreen: I, scrollerRef: k, tab: N } = e,
+        w = (0, d.sp)(),
+        A = null != (t = null == w ? void 0 : w.sessionId) ? t : '',
         { noCache: B, includeUnpublished: R } = (0, _.Z)(),
         Z = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
         D = (0, a.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
@@ -42,7 +42,7 @@ function I(e) {
         W = (0, c.Fg)(),
         V = (0, o.ap)(W),
         [U, z, G] = l.useMemo(() => {
-            switch (w) {
+            switch (N) {
                 case O.AW.AVATAR_DECORATIONS:
                     return [v.intl.string(v.t.dRZYND), V ? x.Z : y.Z, i.Z.AVATAR_DECORATION];
                 case O.AW.PROFILE_EFFECTS:
@@ -52,7 +52,7 @@ function I(e) {
                 case O.AW.BUNDLES:
                     return [v.intl.string(v.t.FYFppq), V ? S.Z : E.Z, i.Z.BUNDLE];
             }
-        }, [w, V]),
+        }, [N, V]),
         q = (0, f.a)(),
         K = l.useMemo(
             () =>
@@ -69,7 +69,7 @@ function I(e) {
         (0, h.n)({
             sessionId: A,
             checkpoint: h.a.SHOP_MOUNTED,
-            tab: w,
+            tab: N,
             isFullScreen: I,
             unpublishedCategoriesShown: R,
             cacheDisabled: B
@@ -80,12 +80,12 @@ function I(e) {
             (0, h.n)({
                 sessionId: A,
                 checkpoint: h.a.SHOP_RENDERED,
-                tab: w,
+                tab: N,
                 isFullScreen: I,
                 unpublishedCategoriesShown: R,
                 cacheDisabled: B
             });
-    }, [A, I, R, B, r, w]),
+    }, [A, I, R, B, r, N]),
     r || null == Z)
         ? (0, n.jsx)(b.Z, {})
         : (0, n.jsxs)(n.Fragment, {
@@ -114,7 +114,7 @@ function I(e) {
                                                 product: e,
                                                 user: Z,
                                                 category: r,
-                                                tab: w
+                                                tab: N
                                             },
                                             e.skuId
                                         )

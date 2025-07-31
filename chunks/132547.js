@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(347475),
     j = n(342414),
     O = n(391110),
-    C = n(71363),
-    E = n(781800),
+    E = n(71363),
+    C = n(781800),
     v = n(981631),
     S = n(388032),
     T = n(614729),
@@ -70,7 +70,7 @@ let I = (e) => {
                                       variant: O.gM.PERKS_DISCOVERABILITY,
                                       noBackground: !0,
                                       leftAlignHeaders: !0,
-                                      showAllPerksButton: (0, i.jsx)(E.Z, {
+                                      showAllPerksButton: (0, i.jsx)(C.Z, {
                                           setIsAllPerksVisible: y,
                                           previousComponent: O.MQ.HOME
                                       })
@@ -105,7 +105,7 @@ let I = (e) => {
                           })
                       })
                   }),
-                  (0, i.jsx)(C.Z, {
+                  (0, i.jsx)(E.Z, {
                       isAllPerksVisible: I,
                       setIsAllPerksVisible: y,
                       previousComponent: O.MQ.HOME

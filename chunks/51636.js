@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(484239),
     j = n(658370),
     O = n(981631),
-    C = n(921944),
-    E = n(388032),
+    E = n(921944),
+    C = n(388032),
     v = n(593595);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -94,7 +94,7 @@ let N = r.memo((e) => {
     });
     let H = k !== s || null == s || R;
     return (r.useEffect(() => {
-        y && A && (D(!0), g.default.track(O.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != s && L(C.L.TAKE_ACTION));
+        y && A && (D(!0), g.default.track(O.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != s && L(E.L.TAKE_ACTION));
     }, [y, A, s, t, L]),
     (0, m.Z)({
         type: o.ImpressionTypes.VIEW,
@@ -156,7 +156,7 @@ let N = r.memo((e) => {
                                 [v.reducedMotion]: y
                             }),
                             onTransitionEnd: (e) => {
-                                A && 'transform' === e.propertyName && e.target.classList.contains(v.flipCard) && (D(!0), g.default.track(O.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != s && L(C.L.TAKE_ACTION));
+                                A && 'transform' === e.propertyName && e.target.classList.contains(v.flipCard) && (D(!0), g.default.track(O.rMx.PREMIUM_MARKETING_PERK_CARD_FLIPPED, { card_type: t }), null != s && L(E.L.TAKE_ACTION));
                             },
                             children: [
                                 (0, i.jsx)('div', {
@@ -176,7 +176,7 @@ let N = r.memo((e) => {
                                     className: v.flipCardButtonContainer,
                                     children: (0, i.jsx)(d.zxk, {
                                         variant: 'primary',
-                                        text: E.intl.string(E.t.dcztdX),
+                                        text: C.intl.string(C.t.dcztdX),
                                         onClick: () => P(!0)
                                     })
                                 })
@@ -189,19 +189,19 @@ let N = r.memo((e) => {
 N.displayName = 'PremiumPerkCard';
 let I = r.forwardRef((e, t) => {
     var n;
-    let { title: r, titleClassName: s = '', subtitle: l = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: u, onCtaClick: m, onMouseEnter: p, className: g, perkComponent: f, cardVariant: b, cardType: O, onClick: C, backgroundImage: E, pillText: S, perkImage: T, imageOverlayText: N, hasNitroGradientBackground: I } = e,
+    let { title: r, titleClassName: s = '', subtitle: l = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: u, onCtaClick: m, onMouseEnter: p, className: g, perkComponent: f, cardVariant: b, cardType: O, onClick: E, backgroundImage: C, pillText: S, perkImage: T, imageOverlayText: N, hasNitroGradientBackground: I } = e,
         y = O === x.gM.CARD_CAROUSEL_FIRST_ROW || O === x.gM.CARD_CAROUSEL_SECOND_ROW || O === x.gM.CARD_CAROUSEL_THIRD_ROW,
         A = '' !== o || '' !== c || ('' !== l && b === x.zW.REWARD),
         P = (0, h._)(b);
     return (0, i.jsxs)(d.P3F, {
         className: a()(v.card, g, null == (n = P.cardContainer) ? void 0 : n.className, {
-            [v.clickable]: null != C,
+            [v.clickable]: null != E,
             [v.hideOverflow]: y,
             [v.nitroGradientBackground]: I
         }),
         onMouseEnter: p,
-        style: { backgroundImage: null != E ? 'url('.concat(E, ')') : void 0 },
-        onClick: C,
+        style: { backgroundImage: null != C ? 'url('.concat(C, ')') : void 0 },
+        onClick: E,
         children: [
             null != S &&
                 (0, i.jsx)(d.Text, {

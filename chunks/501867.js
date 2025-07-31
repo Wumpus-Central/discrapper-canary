@@ -1,7 +1,4 @@
 e.exports = {
-    wrapper: 'wrapper__3add8',
-    heading: 'heading__3add8',
-    topPerksCards: 'topPerksCards__3add8',
     topPerksCard: 'topPerksCard__3add8',
     animatedTopPerksCard: 'animatedTopPerksCard__3add8',
     animate: 'animate__3add8',

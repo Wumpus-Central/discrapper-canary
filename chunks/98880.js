@@ -104,11 +104,11 @@ function z(e, t) {
     );
 }
 var q = (((l = {}).ICON = 'icon'), (l.ROW = 'row'), (l.NO_BANNER = 'no_banner'), (l.MEDIUM_BANNER = 'medium_banner'), (l.LARGE_BANNER = 'large_banner'), l);
-function Y(e) {
+function X(e) {
     var t;
     let { application: n, look: l = 'large_banner', onClick: r, imageStyle: a, enableVideoBanner: o = !0, children: s, sectionName: c, resultsPosition: u, sectionOverallPosition: d, tracksImpression: p = !0, disabled: f = !1, overrideImageUrl: h, showsPromoted: v } = e,
         y = null != (t = (0, m.Z)(f)) ? t : f;
-    return (0, i.jsx)(X, {
+    return (0, i.jsx)(Y, {
         application: n,
         onClick: r,
         sectionName: c,
@@ -136,7 +136,7 @@ function Y(e) {
                   })
     });
 }
-function X(e) {
+function Y(e) {
     let { application: t, onClick: n, children: l, sectionName: a, resultsPosition: s, sectionOverallPosition: c, tracksImpression: p, disabled: m, containerStyle: f, look: h } = e,
         v = r.useCallback(
             (e) => {
@@ -486,7 +486,7 @@ function ei(e) {
 }
 function er(e) {
     let { onClickAppCard: t } = ei(e);
-    return (0, i.jsx)(Y, z(G({}, e), { onClick: t }));
+    return (0, i.jsx)(X, z(G({}, e), { onClick: t }));
 }
 function ea(e) {
     var { context: t, application: n, location: l, sectionName: a, isOneClickCTA: o, fetchesApplication: d = !0 } = e,
@@ -529,7 +529,7 @@ function ea(e) {
     return g === b.JS.START || g === b.JS.JOIN
         ? o
             ? (0, i.jsx)(
-                  Y,
+                  X,
                   z(G({}, p), {
                       sectionName: a,
                       application: n,
@@ -554,7 +554,7 @@ function ea(e) {
                   })
               )
         : (0, i.jsx)(
-              Y,
+              X,
               z(G({}, p), {
                   sectionName: a,
                   application: n,

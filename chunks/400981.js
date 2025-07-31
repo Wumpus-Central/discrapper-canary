@@ -2,7 +2,7 @@ t.d(n, { Z: () => f });
 var i = t(255367);
 t(73800);
 var r = t(442837),
-    l = t(755721),
+    l = t(159691),
     s = t(481060),
     a = t(607070),
     o = t(906732),
@@ -38,6 +38,8 @@ function f(e) {
                               avatarDecoration: y
                           }),
                           (0, i.jsx)(l.zx, {
+                              variant: 'primary',
+                              text: S.collectRewardButtonText(),
                               onClick: () => {
                                   (n(),
                                       (0, d.Z)({
@@ -46,8 +48,7 @@ function f(e) {
                                           analyticsLocations: L,
                                           purchaseType: h.o8.PROMOTIONAL
                                       }));
-                              },
-                              children: S.collectRewardButtonText()
+                              }
                           })
                       ]
                   })

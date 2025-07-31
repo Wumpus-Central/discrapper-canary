@@ -21,9 +21,9 @@ var r = n(120356),
 let O = function (e) {
     let { className: t, guildId: n, boostingVariant: r } = e,
         O = (0, a.e7)([h.Z], () => h.Z.getGuild(n), [n]),
-        C = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
-        { fractionalState: E } = (0, c.Z)(),
-        v = (0, p.y)('guild_boosting_setting_guild_info_card', C, E),
+        E = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
+        { fractionalState: C } = (0, c.Z)(),
+        v = (0, p.y)('guild_boosting_setting_guild_info_card', E, C),
         S = (0, g.Z)(null == O ? void 0 : O.id).total;
     return null == O
         ? (0, i.jsx)('div', {

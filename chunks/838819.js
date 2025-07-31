@@ -28,8 +28,8 @@ var n = r(255367),
     L = r(963102),
     I = r(508498),
     k = r(681435),
-    w = r(215023),
-    N = r(981631),
+    N = r(215023),
+    w = r(981631),
     A = r(420212),
     B = r(484920);
 let R = (e) => {
@@ -47,7 +47,7 @@ let R = (e) => {
         );
     },
     Z = function (e) {
-        let { isFullScreen: t = !0, tab: r = w.AW.HOME } = e;
+        let { isFullScreen: t = !0, tab: r = N.AW.HOME } = e;
         (0, h.z)(g.f);
         let i = (0, p.Z)((0, o.Z)()),
             c = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
@@ -60,7 +60,7 @@ let R = (e) => {
         );
         let { onClose: Z } = (0, I.Db)(),
             { currentTab: D, hasFilters: F } = (0, j.S)(),
-            M = l.useMemo(() => (r === w.AW.HOME && D && F() ? D : r), [r, D, F]),
+            M = l.useMemo(() => (r === N.AW.HOME && D && F() ? D : r), [r, D, F]),
             { categories: H, refreshCategories: W } = (0, S.ZP)(
                 {
                     location: 'CollectiblesShop.web',
@@ -84,16 +84,16 @@ let R = (e) => {
         let Y = l.useCallback((e, t) => {
                 (K(e), z(t));
             }, []),
-            { selectedTab: X, transitionState: J, transitionToTab: Q } = (0, x.B)(M, t);
+            { selectedTab: X, transitionState: J, transitionToTab: $ } = (0, x.B)(M, t);
         ((0, E.q3)(i, X, G, J, q), (0, E.EB)(X, c));
-        let { dismissShopButtonDC: $ } = (0, k.Z)();
+        let { dismissShopButtonDC: Q } = (0, k.Z)();
         (l.useEffect(() => {
-            $();
-        }, [$]),
+            Q();
+        }, [Q]),
             l.useEffect(() => {
-                t || (0, d.Y)(N.Z5c.COLLECTIBLES_SHOP);
+                t || (0, d.Y)(w.Z5c.COLLECTIBLES_SHOP);
             }, [t]));
-        let ee = (0, s.e7)([_.Z], () => _.Z.getLayers().includes(N.S9g.COLLECTIBLES_SHOP)),
+        let ee = (0, s.e7)([_.Z], () => _.Z.getLayers().includes(w.S9g.COLLECTIBLES_SHOP)),
             et = l.useRef(null),
             er = l.useRef(null);
         (0, u.Tbt)(et);
@@ -114,7 +114,7 @@ let R = (e) => {
                       newValue: {
                           sessionId: i,
                           pageCategory: G,
-                          pageSize: w.kN
+                          pageSize: N.kN
                       },
                       children: (0, n.jsx)(R, {
                           onClose: Z,
@@ -125,23 +125,23 @@ let R = (e) => {
                               tabIndex: -1,
                               children: (0, n.jsxs)('div', {
                                   className: a()(B.shopViewWrapper, {
-                                      [B.visible]: J === w.f7.VISIBLE,
-                                      [B.in]: J === w.f7.IN,
-                                      [B.out]: J === w.f7.OUT
+                                      [B.visible]: J === N.f7.VISIBLE,
+                                      [B.in]: J === N.f7.IN,
+                                      [B.out]: J === N.f7.OUT
                                   }),
                                   children: [
                                       (0, n.jsx)(L.I, {
                                           isFullScreen: t,
                                           isLayer: ee,
                                           onClose: Z,
-                                          handleTransition: Q,
+                                          handleTransition: $,
                                           selectedTab: X
                                       }),
                                       (0, n.jsx)(P.Z, {
                                           tab: X,
                                           isFullScreen: t,
                                           refreshCategories: W,
-                                          transitionToTab: Q,
+                                          transitionToTab: $,
                                           transitionState: J,
                                           sortedCategories: V,
                                           updateAnalyticsState: Y

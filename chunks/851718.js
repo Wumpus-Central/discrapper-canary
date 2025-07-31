@@ -1,14 +1,28 @@
-(n.d(t, { Z: () => g }), n(388685));
+(n.d(t, { Z: () => b }), n(388685));
 var i = n(255367),
     r = n(73800),
-    s = n(823379),
-    a = n(106976),
-    l = n(270144),
-    o = n(301935),
-    c = n(630656),
-    d = n(10970),
-    u = n(388032);
-function m(e) {
+    s = n(481060),
+    a = n(823379),
+    l = n(106976),
+    o = n(270144),
+    c = n(301935),
+    d = n(630656),
+    u = n(10970),
+    m = n(388032);
+function p(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -19,21 +33,12 @@ function m(e) {
                 })
             )),
             i.forEach(function (t) {
-                var i;
-                ((i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = i));
+                p(e, t, n[t]);
             }));
     }
     return e;
 }
-function p(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -51,53 +56,73 @@ function p(e, t) {
         e
     );
 }
-function g(e) {
+class f extends r.PureComponent {
+    static getDerivedStateFromError(e) {
+        return { hasError: !0 };
+    }
+    render() {
+        return this.state.hasError
+            ? (0, i.jsxs)(s.qXd, {
+                  color: s.DM8.DANGER,
+                  style: { borderRadius: 0 },
+                  children: [m.intl.format(m.t.IIHUUF, { subscriptionId: this.props.subscription.id }), ' ', m.intl.format(m.t.fh65ER, { helpLink: 'https://support.discord.com/hc/en-us' })]
+              })
+            : this.props.children;
+    }
+    constructor(...e) {
+        (super(...e), p(this, 'state', { hasError: !1 }));
+    }
+}
+function b(e) {
     let { subscriptions: t, updateHeader: n } = e,
-        [g, h] = r.useState({ route: c.j.HOME }),
-        { route: f } = g,
-        b = () => {
-            h({ route: c.j.HOME });
+        [s, p] = r.useState({ route: d.j.HOME }),
+        { route: b } = s,
+        x = () => {
+            p({ route: d.j.HOME });
         },
-        x = (e) => {
-            (h(m({ route: c.j.SWITCH_APP_PLANS }, e)), n(u.intl.string(u.t.VFqtkJ), b));
+        _ = (e) => {
+            (p(g({ route: d.j.SWITCH_APP_PLANS }, e)), n(m.intl.string(m.t.VFqtkJ), x));
         },
-        [_, j] = r.useState({});
+        [j, O] = r.useState({});
     r.useEffect(() => {
         for (let n of t) {
             var e;
             let t = null == (e = n.items[0]) ? void 0 : e.planId;
             null != t &&
-                (j((e) => p(m({}, e), { [n.id]: o.G.LOADING })),
-                (0, a.vY)(t)
+                (O((e) => h(g({}, e), { [n.id]: c.G.LOADING })),
+                (0, l.vY)(t)
                     .then(() => {
-                        j((e) => p(m({}, e), { [n.id]: o.G.DONE }));
+                        O((e) => h(g({}, e), { [n.id]: c.G.DONE }));
                     })
                     .catch(() => {
-                        j((e) => p(m({}, e), { [n.id]: o.G.ERROR }));
+                        O((e) => h(g({}, e), { [n.id]: c.G.ERROR }));
                     }));
         }
     }, [t]);
-    let { loadState: O } = (0, l.qz)(),
-        C = O !== l.jd.LOADED;
-    switch (f) {
-        case c.j.HOME:
+    let { loadState: E } = (0, o.qz)(),
+        C = E !== o.jd.LOADED;
+    switch (b) {
+        case d.j.HOME:
             return (0, i.jsx)(i.Fragment, {
                 children: t.map((e) => {
                     var t;
                     return (0, i.jsx)(
-                        o.Z,
+                        f,
                         {
                             subscription: e,
-                            navigateToSwitchPlan: x,
-                            loadingState: C ? o.G.LOADING : null != (t = _[e.id]) ? t : o.G.LOADING
+                            children: (0, i.jsx)(c.Z, {
+                                subscription: e,
+                                navigateToSwitchPlan: _,
+                                loadingState: C ? c.G.LOADING : null != (t = j[e.id]) ? t : c.G.LOADING
+                            })
                         },
                         e.id
                     );
                 })
             });
-        case c.j.SWITCH_APP_PLANS:
-            let { route: E } = g,
-                v = (function (e, t) {
+        case d.j.SWITCH_APP_PLANS:
+            let { route: v } = s,
+                S = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         i,
@@ -115,9 +140,9 @@ function g(e) {
                         for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
                     }
                     return r;
-                })(g, ['route']);
-            return (0, i.jsx)(d.Z, p(m({}, v), { navigateToHome: b }));
+                })(s, ['route']);
+            return (0, i.jsx)(u.Z, h(g({}, S), { navigateToHome: x }));
         default:
-            (0, s.vE)(f);
+            (0, a.vE)(b);
     }
 }

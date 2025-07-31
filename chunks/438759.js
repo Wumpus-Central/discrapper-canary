@@ -4,8 +4,8 @@ n(73800);
 var o = n(120356),
     l = n.n(o),
     i = n(793030),
-    s = n(481060),
-    a = n(821795),
+    a = n(481060),
+    s = n(821795),
     c = n(892567),
     d = n(660662),
     u = n(698282),
@@ -22,9 +22,9 @@ function g(e) {
                 className: f.selectorHeading,
                 children: [
                     p.intl.string(u.default['1wilMz']),
-                    (0, r.jsx)(s.SrA, {
+                    (0, r.jsx)(a.SrA, {
                         size: 'xs',
-                        color: s.TVs.colors.TEXT_DEFAULT
+                        color: a.TVs.colors.TEXT_DEFAULT
                     })
                 ]
             }),
@@ -38,13 +38,13 @@ function g(e) {
                         d = e === t,
                         u = i.previewStyles;
                     return (0, r.jsx)(
-                        s.P3F,
+                        a.P3F,
                         {
                             className: l()(m.effectContainer, { [m.selected]: d }),
                             onClick: () => n(e),
                             children: (0, r.jsx)(c.Z, {
                                 userName: i.name,
-                                effectDisplayType: a.F.STATIC,
+                                effectDisplayType: s.F.STATIC,
                                 displayNameStyles: u,
                                 textClassName: m.effectText
                             })

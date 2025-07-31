@@ -16,8 +16,8 @@ let p = d.Z.Millis.SECOND,
 function b(e) {
     let { text: t, copyValue: n, children: d, onCopy: m, 'aria-label': b, delay: x = h } = e,
         [_, j] = r.useState(0),
-        [O, C] = r.useState(!1),
-        [E, v] = r.useState(!1),
+        [O, E] = r.useState(!1),
+        [C, v] = r.useState(!1),
         [S] = r.useState(() => new a.V7()),
         [T] = r.useState(() => new a.V7());
     if (
@@ -34,7 +34,7 @@ function b(e) {
         I = N ? l.FGA.RED : l.FGA.GREEN,
         y = O ? I : l.FGA.PRIMARY,
         A = () => {
-            (null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), E || j(_ + 1), v(!0), C(!0), S.start(p, () => v(!1)), T.start(g, () => j(0)));
+            (null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), C || j(_ + 1), v(!0), E(!0), S.start(p, () => v(!1)), T.start(g, () => j(0)));
         };
     return (0, i.jsx)(l.ua7, {
         text: (() => {
@@ -50,9 +50,9 @@ function b(e) {
         delay: x,
         'aria-label': b,
         color: y,
-        forceOpen: E,
+        forceOpen: C,
         onAnimationRest: (e, t) => {
-            !E && O && t.phase === u.UkZ.LEAVE && C(!1);
+            !C && O && t.phase === u.UkZ.LEAVE && E(!1);
         },
         children: (e) => {
             var t,

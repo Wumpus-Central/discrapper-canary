@@ -128,6 +128,7 @@ async function f(t) {
         ),
             s(o));
     } catch (n) {
-        'status' in n && 429 === n.status && e < 10 && (await f(t, e++));
+        if ('status' in n && 429 === n.status && e < 10) await f(t, ++e);
+        else throw n;
     }
 }

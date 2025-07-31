@@ -17,8 +17,8 @@ var r = n(442837),
     b = n(831169);
 function x(e) {
     var t;
-    let { app: n, currentSubscription: p, currentListing: h, alternativeListings: x, navigateToHome: j, subscriptionGroup: O, renewalSkuId: C } = e,
-        E = (0, a.y)(n, 100),
+    let { app: n, currentSubscription: p, currentListing: h, alternativeListings: x, navigateToHome: j, subscriptionGroup: O, renewalSkuId: E } = e,
+        C = (0, a.y)(n, 100),
         v = (0, m.KK)(O.flags),
         S = v ? s.QTo : s.tBG,
         T = v ? f.intl.string(f.t['46YF2N']) : f.intl.string(f.t.fFyGiI),
@@ -27,9 +27,9 @@ function x(e) {
         y = (0, r.e7)(
             [u.Z],
             () => {
-                if (null != C) return u.Z.get(C);
+                if (null != E) return u.Z.get(E);
             },
-            [C]
+            [E]
         ),
         A = (0, g.p)(p.currentPeriodEnd);
     return (0, i.jsxs)('div', {
@@ -37,9 +37,9 @@ function x(e) {
             (0, i.jsxs)('div', {
                 className: b.header,
                 children: [
-                    null != E &&
+                    null != C &&
                         (0, i.jsx)(s.Eep, {
-                            src: E.href,
+                            src: C.href,
                             imageClassName: b.appIcon,
                             width: 48,
                             height: 48
@@ -144,7 +144,7 @@ function x(e) {
                         })
                     }),
                     x.map((e) =>
-                        e.skuId === C
+                        e.skuId === E
                             ? (0, i.jsx)(
                                   o.Z,
                                   {

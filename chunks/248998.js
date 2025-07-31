@@ -21,8 +21,8 @@ function p(e) {
         _ = a ? 'header-secondary' : 'text-muted',
         j = l()(n),
         O = null != f && a,
-        C = O ? o.P3F : 'div';
-    return (0, i.jsxs)(C, {
+        E = O ? o.P3F : 'div';
+    return (0, i.jsxs)(E, {
         className: s()(m.container, O && m.actionable),
         onClick: () => {
             O && f();

@@ -3,8 +3,8 @@ var r = n(255367),
     o = n(73800),
     l = n(120356),
     i = n.n(l),
-    s = n(481060),
-    a = n(410030),
+    a = n(481060),
+    s = n(410030),
     c = n(22267),
     d = n(786761),
     u = n(3148),
@@ -19,9 +19,9 @@ var r = n(255367),
     O = n(981631),
     y = n(228168),
     C = n(698282),
-    v = n(388032),
-    _ = n(454507);
-function S(e) {
+    _ = n(388032),
+    S = n(454507);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -67,7 +67,7 @@ function P(e, t) {
 function N(e) {
     let { user: t, selectedFontId: n, selectedEffectId: l, selectedColors: N, onClose: T } = e,
         w = new j.Z(
-            P(S({}, t), {
+            P(v({}, t), {
                 displayNameStyles: {
                     fontId: n,
                     effectId: l,
@@ -75,9 +75,9 @@ function N(e) {
                 }
             })
         ),
-        D = (0, a.ZP)(),
-        E = (0, s.wjy)(D),
-        [R, I] = (0, o.useState)(E),
+        E = (0, s.ZP)(),
+        D = (0, a.wjy)(E),
+        [R, I] = (0, o.useState)(D),
         A = (0, g.ZP)(t.id, null),
         { bannerSrc: L } = (0, h.Z)({
             displayProfile: A,
@@ -86,18 +86,18 @@ function N(e) {
         }),
         B = R ? O.BRd.DARK : O.BRd.LIGHT;
     return (
-        ((E && R) || (!E && !R)) && (B = D),
+        ((D && R) || (!D && !R)) && (B = E),
         (0, r.jsxs)('div', {
-            className: _.previewSection,
+            className: S.previewSection,
             children: [
-                (0, r.jsx)(s.xBx, {
+                (0, r.jsx)(a.xBx, {
                     'data-migration-pending': !0,
                     separator: !1,
-                    className: _.sectionHeader,
-                    children: (0, r.jsx)(s.olH, {
+                    className: S.sectionHeader,
+                    children: (0, r.jsx)(a.olH, {
                         'data-migration-pending': !0,
                         onClick: T,
-                        innerClassName: _.closeButton
+                        innerClassName: S.closeButton
                     })
                 }),
                 null != L &&
@@ -105,18 +105,18 @@ function N(e) {
                         user: w,
                         displayProfile: A,
                         themeType: y.lY.MODAL_V2,
-                        className: _.backgroundThemeContainer,
+                        className: S.backgroundThemeContainer,
                         forceUserTheme: !0,
                         children: (0, r.jsx)('div', {
-                            className: _.bannerBackground,
+                            className: S.bannerBackground,
                             style: { backgroundImage: 'url('.concat(L, ')') }
                         })
                     }),
-                (0, r.jsx)(s.f6W, {
+                (0, r.jsx)(a.f6W, {
                     theme: B,
                     children: (e) =>
                         (0, r.jsxs)('div', {
-                            className: i()(_.previewCards, e),
+                            className: i()(S.previewCards, e),
                             inert: !0,
                             children: [
                                 (0, r.jsx)(m.Z, {
@@ -126,18 +126,18 @@ function N(e) {
                                     disabledInputs: !0,
                                     hideCustomStatus: !0,
                                     hideExampleButton: !0,
-                                    containerClassName: _.profile,
+                                    containerClassName: S.profile,
                                     interactive: !1
                                 }),
                                 (0, r.jsx)(f.Z, {
                                     author: (0, p.ij)(w, null),
                                     message: (0, d.e5)(
                                         P(
-                                            S(
+                                            v(
                                                 {},
                                                 (0, u.ZP)({
                                                     channelId: '1337',
-                                                    content: v.intl.string(C.default.h5Cuen)
+                                                    content: _.intl.string(C.default.h5Cuen)
                                                 })
                                             ),
                                             {
@@ -149,24 +149,24 @@ function N(e) {
                                     isGroupStart: !0,
                                     hideSimpleEmbedContent: !0,
                                     hideGuildTag: !0,
-                                    className: _.chatMessage
+                                    className: S.chatMessage
                                 }),
                                 (0, r.jsx)(c.Z, {
                                     user: w,
                                     nameplate: null,
                                     nameplateData: w.nameplate,
-                                    className: _.nameplate
+                                    className: S.nameplate
                                 })
                             ]
                         })
                 }),
                 (0, r.jsxs)('div', {
-                    className: _.themeToggleSection,
+                    className: S.themeToggleSection,
                     children: [
-                        (0, r.jsxs)(s.Text, {
+                        (0, r.jsx)(a.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-muted',
-                            children: [v.intl.string(C.default.Ccxyj4), (0, r.jsx)('br', {}), v.intl.format(C.default.qOUpJC, { helpArticleLink: x.Z.getArticleURL(O.BhN.FORUMS) })]
+                            children: _.intl.format(C.default.prQba2, { helpArticleLink: x.Z.getArticleURL(O.BhN.DISPLAY_NAME_STYLES) })
                         }),
                         (0, r.jsx)(k, {
                             darkPreview: R,
@@ -180,21 +180,21 @@ function N(e) {
 }
 function k(e) {
     let { darkPreview: t, onToggleTheme: n } = e;
-    return (0, r.jsx)(s.sY7, {
-        className: _.themeToggleControl,
-        optionClassName: _.themeToggleOption,
+    return (0, r.jsx)(a.sY7, {
+        className: S.themeToggleControl,
+        optionClassName: S.themeToggleOption,
         options: [
             {
                 name: '',
-                tooltip: v.intl.string(v.t.b8Cei4),
+                tooltip: _.intl.string(_.t.b8Cei4),
                 value: O.BRd.DARK,
-                icon: s.Z6G
+                icon: a.Z6G
             },
             {
                 name: '',
-                tooltip: v.intl.string(v.t.K2sFfn),
+                tooltip: _.intl.string(_.t.K2sFfn),
                 value: O.BRd.LIGHT,
-                icon: s.chG
+                icon: a.chG
             }
         ],
         value: t ? O.BRd.DARK : O.BRd.LIGHT,

@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(210887),
     j = n(78839),
     O = n(74538),
-    C = n(388032),
-    E = n(485312);
+    E = n(388032),
+    C = n(485312);
 async function v(e, t, n, i) {
     let r = (0, O.MY)(e, t);
     (await (0, m.bG)(n),
@@ -47,20 +47,20 @@ function S(e) {
                 children: [
                     (0, i.jsx)(d.vwX, {
                         tag: d.RB0.H4,
-                        children: C.intl.string(C.t.l52ih4)
+                        children: E.intl.string(E.t.l52ih4)
                     }),
                     (0, i.jsx)(d.olH, { onClick: u })
                 ]
             }),
             (0, i.jsxs)(d.hzk, {
-                className: E.body,
+                className: C.body,
                 children: [
                     null !== T &&
                         (0, i.jsx)(d.kzN, {
-                            className: E.error,
+                            className: C.error,
                             children: T
                         }),
-                    C.intl.string(C.t.DY2CXl)
+                    E.intl.string(E.t.DY2CXl)
                 ]
             }),
             (0, i.jsxs)(d.mzw, {
@@ -68,7 +68,7 @@ function S(e) {
                 children: [
                     (0, i.jsx)(d.zxk, {
                         variant: 'primary',
-                        text: C.intl.string(C.t.etZP4O),
+                        text: E.intl.string(E.t.etZP4O),
                         onClick: async () => {
                             try {
                                 (h(!0), N(null));
@@ -76,7 +76,7 @@ function S(e) {
                                 (a()((0, O.uV)(e) <= (0, O.uV)(t.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await v(t, e, n, S), s());
                             } catch (t) {
                                 let e = t instanceof p.HF ? t : new p.HF(t, t.code);
-                                (N(C.intl.string(e.code === g.SM.BILLING_PAUSE_INVALID_UPDATE ? C.t.dq4vq6 : C.t['5mlOCQ'])), h(!1));
+                                (N(E.intl.string(e.code === g.SM.BILLING_PAUSE_INVALID_UPDATE ? E.t.dq4vq6 : E.t['5mlOCQ'])), h(!1));
                             }
                         },
                         loading: m
@@ -86,7 +86,7 @@ function S(e) {
                         color: (0, o.ap)(j) ? c.zx.Colors.PRIMARY : c.zx.Colors.WHITE,
                         onClick: u,
                         disabled: m,
-                        children: C.intl.string(C.t.oEAioK)
+                        children: E.intl.string(E.t.oEAioK)
                     })
                 ]
             })
@@ -102,19 +102,19 @@ function T(e) {
                 children: [
                     (0, i.jsx)(d.vwX, {
                         tag: d.RB0.H4,
-                        children: C.intl.string(C.t.H9QUAA)
+                        children: E.intl.string(E.t.H9QUAA)
                     }),
                     (0, i.jsx)(d.olH, { onClick: t })
                 ]
             }),
             (0, i.jsxs)(d.hzk, {
-                className: E.body,
-                children: [(0, i.jsx)('div', { className: E.uncancelImage }), (0, i.jsx)('div', { children: C.intl.string(C.t.G27uHR) })]
+                className: C.body,
+                children: [(0, i.jsx)('div', { className: C.uncancelImage }), (0, i.jsx)('div', { children: E.intl.string(E.t.G27uHR) })]
             }),
             (0, i.jsx)(d.mzw, {
                 children: (0, i.jsx)(d.zxk, {
                     variant: 'primary',
-                    text: C.intl.string(C.t.BddRzc),
+                    text: E.intl.string(E.t.BddRzc),
                     onClick: t
                 })
             })

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(642613), n(539854));
+(n.d(t, { Z: () => C }), n(642613), n(539854));
 var i = n(255367),
     r = n(73800),
     s = n(524437),
@@ -190,7 +190,7 @@ function O() {
         })
     });
 }
-function C() {
+function E() {
     let e = u.JG.useSetting(),
         t = e === s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET ? s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL : e,
         n = [
@@ -225,14 +225,14 @@ function C() {
         ]
     });
 }
-function E() {
+function C() {
     let { showLoadingIndicator: e, slayerSdkApplications: t } = (0, m.Z)(!0);
     return (0, i.jsx)(p.Z, {
         children: e
             ? (0, i.jsx)(a.$jN, {})
             : t.length > 0
               ? (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(j, { applications: t }), (0, i.jsx)(O, {}), (0, i.jsx)('div', { className: _.divider }), (0, i.jsx)(C, {})]
+                    children: [(0, i.jsx)(j, { applications: t }), (0, i.jsx)(O, {}), (0, i.jsx)('div', { className: _.divider }), (0, i.jsx)(E, {})]
                 })
               : (0, i.jsxs)('div', {
                     className: _.emptyContainer,

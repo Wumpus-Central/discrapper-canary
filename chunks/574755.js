@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(233685),
     j = n(388032),
     O = n(922284),
-    C = n(802454),
-    E = n(20493);
+    E = n(802454),
+    C = n(20493);
 function v(e) {
     let { className: t, showHeader: n = !0 } = e,
         v = u.tU.useSetting(),
@@ -54,11 +54,11 @@ function v(e) {
                     }),
                 N && (0, i.jsx)(l.$i$, {}),
                 (0, i.jsxs)(l.hjN, {
-                    className: n || N ? E.marginTop20 : t,
+                    className: n || N ? C.marginTop20 : t,
                     children: [
                         (0, i.jsx)(l.j7V, {
                             hideBorder: !0,
-                            className: C.formItem,
+                            className: E.formItem,
                             value: v,
                             note: j.intl.string(j.t['wW9/zc']),
                             onChange: (e) => f.yg({ allowVoiceRecording: e }),
@@ -68,7 +68,7 @@ function v(e) {
                             y &&
                             (0, i.jsx)(l.j7V, {
                                 hideBorder: !0,
-                                className: C.formItem,
+                                className: E.formItem,
                                 value: I,
                                 note: j.intl.string(j.t['0vjy8P']),
                                 onChange: (e) =>

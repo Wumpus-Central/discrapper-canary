@@ -28,8 +28,8 @@ var n = r(255367),
     L = r(823941),
     I = r(38900),
     k = r(709999),
-    w = r(794324),
-    N = r(619899),
+    N = r(794324),
+    w = r(619899),
     A = r(215023),
     B = r(981631),
     R = r(388032),
@@ -99,14 +99,14 @@ let D = {
             q = (0, E.sp)(),
             { showBetaTag: K } = _.Z.useExperiment({ location: 'collectible_hero_block' }),
             Y = l.useMemo(() => (null != y ? y : F(c)), [y, c]),
-            { isPreviewingStaticBanner: X, bannerOverrides: J, bannerStyleOverrides: Q, logoStyleOverrides: $, heroLogo: ee, heroBannerStatic: et, heroBannerAnimated: er } = (0, w.hr)(Y),
+            { isPreviewingStaticBanner: X, bannerOverrides: J, bannerStyleOverrides: $, logoStyleOverrides: Q, heroLogo: ee, heroBannerStatic: et, heroBannerAnimated: er } = (0, N.hr)(Y),
             en = null == J ? void 0 : J.heroBanner,
-            el = null != (t = null == Q ? void 0 : Q.responsive) && t,
-            ei = null == Q ? void 0 : Q.backgroundStyle,
+            el = null != (t = null == $ ? void 0 : $.responsive) && t,
+            ei = null == $ ? void 0 : $.backgroundStyle,
             ea = l.useMemo(() => G(Y.rankedSkuIds), [r, G, Y.rankedSkuIds]),
             eo = (0, P.a)()(ea),
             es = (0, T.l)(eo).slice(0, 4),
-            ec = (0, N.St)(es),
+            ec = (0, w.St)(es),
             eu = L === A.AW.ORBS ? R.intl.string(R.t['1CdL8f']) : R.intl.formatToPlainString(R.t.wvKYCg, { category_name: Y.name }),
             ed = (0, x.FF)('CollectiblesContent');
         return null != z && (r || Y !== D)
@@ -129,7 +129,7 @@ let D = {
                                         autoPlay: !0,
                                         loop: !0
                                     }),
-                              (null == Q ? void 0 : Q.hideSideShadow) === !0
+                              (null == $ ? void 0 : $.hideSideShadow) === !0
                                   ? null
                                   : (0, n.jsx)(M, {
                                         heroBannerOverrides: en,
@@ -162,7 +162,7 @@ let D = {
                                                                     className: Z.heroHeaderLogo,
                                                                     src: ee,
                                                                     alt: Y.name,
-                                                                    style: null == $ ? void 0 : $.toDesktopStyles()
+                                                                    style: null == Q ? void 0 : Q.toDesktopStyles()
                                                                 }),
                                                             null != Y.title &&
                                                                 (0, n.jsxs)(d.X6q, {

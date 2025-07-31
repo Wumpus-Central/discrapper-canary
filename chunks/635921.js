@@ -23,26 +23,26 @@ var i = n(255367),
     _ = n(784238),
     j = n(422034),
     O = n(206127),
-    C = n(388032),
-    E = n(909176);
+    E = n(388032),
+    C = n(909176);
 let v = (e) => {
         let { inOfferExperience: t, subscriptionTier: n, containerClassName: r, buttonClassName: s, isApplicationHome: l, isDarkMode: c, isEligibleForBogoPromotion: d } = e,
             u = d
                 ? (0, i.jsx)(_.Z, {
                       color: c ? o.Tt.BRAND_INVERTED : void 0,
-                      className: a()(E.button, E.subButton, s, {
-                          [E.extendedButton]: t && l,
-                          [E.whiteSubButton]: l && !c
+                      className: a()(C.button, C.subButton, s, {
+                          [C.extendedButton]: t && l,
+                          [C.whiteSubButton]: l && !c
                       }),
-                      shinyButtonClassName: c ? void 0 : E.tier2Gradient,
+                      shinyButtonClassName: c ? void 0 : C.tier2Gradient,
                       subscriptionTier: n,
                       hasActivePromotion: !0
                   })
                 : (0, i.jsx)(_.Z, {
                       color: c || !l ? o.Tt.BRAND_INVERTED : void 0,
-                      className: a()(E.button, E.subButton, s, {
-                          [E.extendedButton]: t && l,
-                          [E.whiteSubButton]: l && !c
+                      className: a()(C.button, C.subButton, s, {
+                          [C.extendedButton]: t && l,
+                          [C.whiteSubButton]: l && !c
                       }),
                       subscriptionTier: n
                   }),
@@ -50,17 +50,17 @@ let v = (e) => {
                 t && l
                     ? null
                     : (0, i.jsx)(x.Z, {
-                          className: a()(E.button, s),
+                          className: a()(C.button, s),
                           color: l ? void 0 : o.Tt.WHITE
                       });
         return (0, i.jsxs)('div', {
-            className: a()(E.buttonContainer, r),
+            className: a()(C.buttonContainer, r),
             children: [u, ' ', m]
         });
     },
     S = () =>
         (0, i.jsxs)(i.Fragment, {
-            children: [(0, i.jsx)(m.A, { className: E.settingsSparkleStar1 }), (0, i.jsx)(m.A, { className: E.settingsSparkleStar2 }), (0, i.jsx)(m.A, { className: E.settingsSparkleStar3 }), (0, i.jsx)(m.A, { className: E.settingsSparkleStar4 })]
+            children: [(0, i.jsx)(m.A, { className: C.settingsSparkleStar1 }), (0, i.jsx)(m.A, { className: C.settingsSparkleStar2 }), (0, i.jsx)(m.A, { className: C.settingsSparkleStar3 }), (0, i.jsx)(m.A, { className: C.settingsSparkleStar4 })]
         });
 function T(e) {
     let { variant: t = 'text-lg/normal', withBottomMargin: n = !0, isApplicationHome: r } = e,
@@ -68,11 +68,11 @@ function T(e) {
     return (0, i.jsx)(c.Text, {
         variant: t,
         color: r ? 'text-secondary' : 'always-white',
-        className: a()(E.description, {
-            [E.descriptionBottomMargin]: n,
-            [E.descriptionV2]: r
+        className: a()(C.description, {
+            [C.descriptionBottomMargin]: n,
+            [C.descriptionV2]: r
         }),
-        children: C.intl.format(C.t.kt9wxs, { cheapestMonthlyPrice: s })
+        children: E.intl.format(E.t.kt9wxs, { cheapestMonthlyPrice: s })
     });
 }
 let N = r.forwardRef((e, t) => {
@@ -82,19 +82,19 @@ let N = r.forwardRef((e, t) => {
         N = (0, h.Nx)(),
         I = (0, g.Vi)(),
         y = (0, l.e7)([p.Z], () => p.Z.affinities).length > 0,
-        A = (0, b.Z)({ location: 'HeroHeading' }) ? C.intl.string(C.t['EW+VIS']) : C.intl.string(C.t.YCZldH);
+        A = (0, b.Z)({ location: 'HeroHeading' }) ? E.intl.string(E.t['EW+VIS']) : E.intl.string(E.t.YCZldH);
     return (0, i.jsx)(u.Gt, {
         value: _,
         children: (0, i.jsxs)('div', {
             ref: t,
-            className: a()(E.container, n, {
-                [E.settingsContainer]: !N,
-                [E.affinityHeight]: !N && y
+            className: a()(C.container, n, {
+                [C.settingsContainer]: !N,
+                [C.affinityHeight]: !N && y
             }),
             'data-testid': 'v2-marketing-page-hero-header',
             children: [
                 (0, i.jsxs)('div', {
-                    className: N ? E.fullscreenTextContainer : E.settingsTextContainer,
+                    className: N ? C.fullscreenTextContainer : C.settingsTextContainer,
                     children: [
                         (0, i.jsx)(c.X6q, {
                             variant: N ? 'display-lg' : 'display-md',
@@ -103,7 +103,7 @@ let N = r.forwardRef((e, t) => {
                         }),
                         y
                             ? (0, i.jsx)('div', {
-                                  className: E.affinityDescription,
+                                  className: C.affinityDescription,
                                   children: (0, i.jsx)(j.Z, {
                                       textColor: 'always-white',
                                       smallerText: !N
@@ -112,9 +112,9 @@ let N = r.forwardRef((e, t) => {
                             : (0, i.jsx)(T, {}),
                         I || O
                             ? (0, i.jsx)('div', {
-                                  className: E.buttonContainer,
+                                  className: C.buttonContainer,
                                   children: (0, i.jsx)(x.Z, {
-                                      className: a()(E.button, r),
+                                      className: a()(C.button, r),
                                       color: o.Tt.WHITE
                                   })
                               })

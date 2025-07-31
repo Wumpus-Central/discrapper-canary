@@ -25,17 +25,17 @@ function C(e) {
         { noCache: x, includeUnpublished: j } = (0, _.Z)(),
         P = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
         { skus: T, currentPage: L, totalCount: I, isFetchingResults: k } = (0, g.a)(),
-        w = (0, o.Wu)([d.Z], () => d.Z.getProductsBySkus(T)),
-        N = l.useCallback(() => {
+        N = (0, o.Wu)([d.Z], () => d.Z.getProductsBySkus(T)),
+        w = l.useCallback(() => {
             var e;
             null == C || null == (e = C.current) || e.scrollToTop({ animate: !0 });
         }, [C]),
         A = null == T ? void 0 : T.join('');
     l.useEffect(() => {
-        N();
-    }, [A, N]);
+        w();
+    }, [A, w]);
     let B = (0, p.a)(),
-        R = l.useMemo(() => B(w), [B, w]);
+        R = l.useMemo(() => B(N), [B, N]);
     l.useEffect(() => {
         r ||
             (0, h.n)({

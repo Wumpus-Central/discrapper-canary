@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(296533),
     j = n(901750),
     O = n(112863),
-    C = n(701157),
-    E = n(912152),
+    E = n(701157),
+    C = n(912152),
     v = n(615603),
     S = n(474936),
     T = n(551084);
@@ -51,7 +51,7 @@ function N(e) {
                 canAddBoosts: U
             }),
             !(0, u.y)('guild_boosting_settings', I, B) &&
-                (0, i.jsx)(E.Z, {
+                (0, i.jsx)(C.Z, {
                     hasAppliedGuildBoosts: w,
                     hasBoostPerk: V,
                     hasGuildAffinitiesOrInGuild: R,
@@ -76,7 +76,7 @@ function N(e) {
                 guildBoostSlots: N,
                 fractionalPremiumState: B
             }),
-            (0, i.jsx)(C.Z, {
+            (0, i.jsx)(E.Z, {
                 canAddBoosts: w && U,
                 canApplyBoosts: k
             }),

@@ -25,8 +25,8 @@ function h(e) {
             },
             badge: j,
             textLink: O,
-            onWatchVideo: C,
-            onRequestClose: E,
+            onWatchVideo: E,
+            onRequestClose: C,
             popoverRef: v
         } = e,
         S = (function (e, t) {
@@ -63,11 +63,11 @@ function h(e) {
             [b, h]
         ),
         y = r.useCallback(() => {
-            (null !== T.current && T.current.pause(), null == E || E());
-        }, [E]),
+            (null !== T.current && T.current.pause(), null == C || C());
+        }, [C]),
         A = r.useCallback(() => {
-            (null !== T.current && T.current.pause(), null == E || E());
-        }, [E]),
+            (null !== T.current && T.current.pause(), null == C || C());
+        }, [C]),
         P = r.useCallback(() => {
             null !== T.current && T.current.pause();
             let e = I();
@@ -77,9 +77,9 @@ function h(e) {
                 location: 'VideoPopover',
                 shouldHideMediaOptions: !0
             }),
-                null == E || E(),
-                null == C || C());
-        }, [I, C, E]),
+                null == C || C(),
+                null == E || E());
+        }, [I, E, C]),
         R = N
             ? (0, i.jsx)('img', {
                   src: b,

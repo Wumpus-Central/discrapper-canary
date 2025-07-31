@@ -4,8 +4,6 @@ e.exports = {
     commandContainer: 'commandContainer_c94584',
     command: 'command_c94584',
     commandFocusBlock: 'commandFocusBlock_c94584',
-    commandSentCTAButton: 'commandSentCTAButton_c94584',
     commandTextContainer: 'commandTextContainer_c94584',
-    commandTextContainerPlaceholder: 'commandTextContainerPlaceholder_c94584',
-    commandSentCTAButtonInner: 'commandSentCTAButtonInner_c94584'
+    commandTextContainerPlaceholder: 'commandTextContainerPlaceholder_c94584'
 };

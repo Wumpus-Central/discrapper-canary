@@ -12,6 +12,14 @@ let a = (0, r.B)({
             id: 1,
             label: 'Enables setting client theme color picker',
             config: { enabled: !0 }
+        },
+        {
+            id: 2,
+            label: 'Enables the V2 custom theme editor',
+            config: {
+                enabled: !0,
+                v2EditorEnabled: !0
+            }
         }
     ]
 });

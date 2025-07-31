@@ -12,7 +12,7 @@ let u = (e) => {
     var t;
     let { title: n, titleClassName: r, buttonClassName: u, perkImage: m, isCarousel: p, onCtaClick: g, perkComponent: h, subtitle: f = '', descriptionCta: b = '', cardVariant: x, subtitleClassName: _, imageOverlayText: j } = e,
         O = (0, o._)(x),
-        C = null != j;
+        E = null != j;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', { className: s()(d.cover, d.below) }),
@@ -31,9 +31,9 @@ let u = (e) => {
                         (0, i.jsx)('img', {
                             src: m,
                             alt: '',
-                            className: p ? (C ? d.carouselCardImageGrayscale : d.carouselCardImage) : ''
+                            className: p ? (E ? d.carouselCardImageGrayscale : d.carouselCardImage) : ''
                         }),
-                        C
+                        E
                             ? (0, i.jsx)('div', {
                                   className: d.imageOverlayTextContainer,
                                   children: (0, i.jsx)(l.Text, {

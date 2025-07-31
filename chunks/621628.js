@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => v,
-    u: () => C
+    u: () => E
 }),
     n(388685),
     n(539854),
@@ -58,7 +58,7 @@ function O(e) {
               children: r.join(', ')
           });
 }
-function C(e) {
+function E(e) {
     let { className: t, contents: n, content: r, onChange: s } = e,
         a = o.z[r],
         { isDismissed: l, handleToggleDismissState: c } = (0, x.Z)(a, n);
@@ -78,14 +78,14 @@ function C(e) {
         ]
     });
 }
-function E(e) {
+function C(e) {
     let { items: t, dismissedContents: n, handleChange: r } = e;
     return (0, i.jsx)(i.Fragment, {
         children: t
             .filter((e) => isNaN(Number(e)))
             .map((e) =>
                 (0, i.jsx)(
-                    C,
+                    E,
                     {
                         contents: n,
                         content: e,
@@ -109,7 +109,7 @@ function v() {
             newUserMinAgeRequiredOverridden: h.Z.newUserMinAgeRequiredOverridden
         })),
         [x, O] = r.useState(''),
-        C =
+        E =
             null !=
             (e = (0, l.e7)([p.Z], () => {
                 var e;
@@ -215,9 +215,9 @@ function v() {
                                       className: j.marginBottom20,
                                       children: (0, i.jsx)(d.vwX, { children: 'Recently Shown' })
                                   }),
-                                  (0, i.jsx)(E, {
+                                  (0, i.jsx)(C, {
                                       items: N,
-                                      dismissedContents: C,
+                                      dismissedContents: E,
                                       handleChange: T
                                   })
                               ]
@@ -230,9 +230,9 @@ function v() {
                                       className: j.marginBottom20,
                                       children: (0, i.jsx)(d.vwX, { children: 'Recent Overrides' })
                                   }),
-                                  (0, i.jsx)(E, {
+                                  (0, i.jsx)(C, {
                                       items: I,
-                                      dismissedContents: C,
+                                      dismissedContents: E,
                                       handleChange: T
                                   })
                               ]
@@ -242,9 +242,9 @@ function v() {
                         className: a()(j.marginBottom20, j.marginTop20),
                         children: (0, i.jsx)(d.vwX, { children: 'Available Dismissible Contents' })
                     }),
-                    (0, i.jsx)(E, {
+                    (0, i.jsx)(C, {
                         items: y,
-                        dismissedContents: C,
+                        dismissedContents: E,
                         handleChange: T
                     })
                 ]

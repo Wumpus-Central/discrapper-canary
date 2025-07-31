@@ -27,7 +27,7 @@ let j = (e) => {
     let { isLoading: r, title: i, sortedSkuIds: j, numVisibleItems: P, hasSorting: T, tab: L } = e,
         I = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
         k = h.ZP.canUseCollectibles(I),
-        { sortType: w, setSortType: N, sortedItems: A, sortOptions: B, shuffleProducts: R, showRecommendationOption: Z } = (0, _.N)(j, k),
+        { sortType: N, setSortType: w, sortedItems: A, sortOptions: B, shuffleProducts: R, showRecommendationOption: Z } = (0, _.N)(j, k),
         D = (0, E.St)(A),
         F = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         M = (0, o.e7)([p.Z], () => p.Z.isFocused()),
@@ -40,14 +40,14 @@ let j = (e) => {
             (e) => {
                 (V({
                     isShuffling: !1,
-                    onOutroComplete: () => N(e)
+                    onOutroComplete: () => w(e)
                 }),
                     f.default.track(S.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: z,
                         sort_type: e
                     }));
             },
-            [V, N, z]
+            [V, w, z]
         );
     return null == I
         ? null
@@ -134,7 +134,7 @@ let j = (e) => {
                                             options: B,
                                             select: q,
                                             className: x.sortSelect,
-                                            isSelected: (e) => e === w,
+                                            isSelected: (e) => e === N,
                                             serialize: (e) => e
                                         }),
                                         (0, n.jsx)(s.zxk, {

@@ -4778,6 +4778,7 @@ var nW = (function (e) {
             (e.SUMMER_BOGO_2025 = '32702667550743'),
             (e.FLAG_TO_MOD = '360044103651'),
             (e.CUSTOM_THEMES = '207260127#h_01JWYFJDVN6E9G80JTN2N86876'),
+            (e.DISPLAY_NAME_STYLES = '33833879643927'),
             e
         );
     })({}),

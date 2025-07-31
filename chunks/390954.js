@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685), n(642613));
+(n.d(t, { Z: () => C }), n(388685), n(642613));
 var i,
     r = n(255367),
     s = n(73800),
@@ -99,7 +99,7 @@ _(O, 'defaultProps', {
     hideDivider: !1,
     onEditClick: () => {}
 });
-class C extends s.PureComponent {
+class E extends s.PureComponent {
     renderFooter() {
         let { paymentSources: e } = this.props;
         return (0, r.jsxs)('div', {
@@ -249,4 +249,4 @@ class C extends s.PureComponent {
             }));
     }
 }
-let E = C;
+let C = E;

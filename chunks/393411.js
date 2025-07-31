@@ -23,8 +23,8 @@ var r = n(120356),
     _ = n(509545),
     j = n(931331),
     O = n(754347),
-    C = n(122289),
-    E = n(74538),
+    E = n(122289),
+    C = n(74538),
     v = n(212895),
     S = n(296848),
     T = n(140465),
@@ -261,7 +261,7 @@ let Y = function (e) {
         },
         ec = () => {
             if (!G.includes(r.status) || null == r.pauseEndsAt)
-                return void (0, C.q2)(Error('Invalid subscription to resume'), {
+                return void (0, E.q2)(Error('Invalid subscription to resume'), {
                     extra: {
                         subscriptionId: r.id,
                         status: r.status,
@@ -285,10 +285,10 @@ let Y = function (e) {
         eu = () => {
             el(D.R.WHAT_YOU_LOSE);
         },
-        em = E.ZP.getPlanIdFromInvoice(r, a);
+        em = C.ZP.getPlanIdFromInvoice(r, a);
     if ((0, b.Q0)(em)) return null;
-    let ep = E.ZP.getStatusFromInvoice(r, a),
-        eg = E.ZP.getPremiumType(em),
+    let ep = C.ZP.getStatusFromInvoice(r, a),
+        eg = C.ZP.getPremiumType(em),
         eh = {
             [L.tier0]: eg === Z.p9.TIER_0,
             [L.tier1]: eg === Z.p9.TIER_1,
@@ -296,7 +296,7 @@ let Y = function (e) {
             [L.canceled]: ep === w.O0b.CANCELED,
             [L.pausePending]: ep === w.O0b.PAUSE_PENDING,
             [L.paused]: ep === w.O0b.PAUSED && !J,
-            [L.failedPayment]: (0, E.zV)(ep)
+            [L.failedPayment]: (0, C.zV)(ep)
         },
         ef = null;
     switch (eg) {
@@ -330,7 +330,7 @@ let Y = function (e) {
                 className: L.planInfo,
                 children: ei
                     ? k.intl.format(k.t['/SfHws'], { weeks: 1 })
-                    : (0, E.qV)({
+                    : (0, C.qV)({
                           planId: em,
                           subscription: r,
                           renewalInvoicePreview: a,
@@ -342,7 +342,7 @@ let Y = function (e) {
         buttons: (() => {
             let { status: e } = r;
             if (r.isPurchasedExternally) {
-                let e = (0, E.JE)(r.paymentGateway, 'SUBSCRIPTION_MANAGEMENT');
+                let e = (0, C.JE)(r.paymentGateway, 'SUBSCRIPTION_MANAGEMENT');
                 return (0, i.jsx)(d.eee, {
                     href: e,
                     useDefaultUnderlineStyles: !1,
@@ -357,8 +357,8 @@ let Y = function (e) {
                 });
             }
             function t() {
-                let e = E.ZP.isSwitchingPlansDisabled(r) || (0, I.o)(Y, q, X),
-                    t = E.ZP.getSwitchingPlansDisabledMessage(r);
+                let e = C.ZP.isSwitchingPlansDisabled(r) || (0, I.o)(Y, q, X),
+                    t = C.ZP.getSwitchingPlansDisabledMessage(r);
                 return (0, i.jsxs)('div', {
                     className: L.toolsButtons,
                     children: [
@@ -404,7 +404,7 @@ let Y = function (e) {
                     ]
                 });
             }
-            if (E.ZP.isBaseSubscriptionCanceled(r))
+            if (C.ZP.isBaseSubscriptionCanceled(r))
                 return (0, i.jsx)('div', {
                     'data-button-hoisted-classname-wrapper': !0,
                     className: L.toolsButton,

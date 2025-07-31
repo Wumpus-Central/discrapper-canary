@@ -23,8 +23,8 @@ var i,
     _ = n(374649),
     j = n(908951),
     O = n(255078),
-    C = n(430824),
-    E = n(509545),
+    E = n(430824),
+    C = n(509545),
     v = n(55563),
     S = n(551428),
     T = n(937615),
@@ -82,34 +82,34 @@ var k = (((i = {})[(i.LOADING = 0)] = 'LOADING'), (i[(i.DONE = 1)] = 'DONE'), (i
 function L(e) {
     var t, n, i, l, c;
     let { subscription: u, navigateToSwitchPlan: h, loadingState: f } = e,
-        O = null == (t = u.metadata) ? void 0 : t.application_subscription_guild_id,
-        { renewalMutations: I, planId: A } = u,
+        j = null == (t = u.metadata) ? void 0 : t.application_subscription_guild_id,
+        { renewalMutations: O, planId: I } = u,
         {
-            appId: Z,
-            plan: w,
-            storeListing: k,
-            price: L,
-            isGuildSubscription: F,
+            appId: A,
+            plan: Z,
+            storeListing: w,
+            price: k,
+            isGuildSubscription: L,
             subscriptionForGuild: H,
             sku: z,
             isCancelled: W,
             renewalPlan: Y
         } = (0, o.cj)(
-            [E.Z, v.Z, S.Z, C.Z],
+            [C.Z, v.Z, S.Z, E.Z],
             () => {
                 let e,
-                    t = E.Z.get(A),
+                    t = C.Z.get(I),
                     n = null != t ? v.Z.get(t.skuId) : void 0,
                     i = null == n ? void 0 : n.applicationId,
                     r = null != t ? S.Z.getForSKU(t.skuId) : null,
                     s = null != t ? (0, T.og)((0, T.T4)(t.price, t.currency), t.interval, t.intervalCount) : null,
                     a = null != r && (0, N.KK)(r.skuFlags),
-                    l = a && null != O ? C.Z.getGuild(O) : void 0,
+                    l = a && null != j ? E.Z.getGuild(j) : void 0,
                     o = (0, N.Jf)(u, n);
-                if (!1 === o && null != I && I.items.length > 0) {
+                if (!1 === o && null != O && O.items.length > 0) {
                     var c;
-                    let t = I.items[0];
-                    e = null != (c = E.Z.get(t.planId)) ? c : void 0;
+                    let t = O.items[0];
+                    e = null != (c = C.Z.get(t.planId)) ? c : void 0;
                 }
                 return {
                     appId: i,
@@ -123,9 +123,9 @@ function L(e) {
                     renewalPlan: e
                 };
             },
-            [O, A, I, u]
+            [j, I, O, u]
         ),
-        { data: K } = (0, b.IX)(Z),
+        { data: K } = (0, b.IX)(A),
         q = s.useMemo(() => (null != K ? (0, g.y)(K, 100) : null), [K]),
         X = null != (n = null == z ? void 0 : z.deleted) && n,
         J = null != z && (0, N.OL)(z),
@@ -137,7 +137,7 @@ function L(e) {
             analyticsLocations: $,
             analyticsLocation: m.Z.APP_SUBSCRIPTION_PAYMENT_SOURCE_WITH_INVOICE
         }),
-        en = (null == et ? void 0 : et.code) === 100062 && null != O && null == H,
+        en = (null == et ? void 0 : et.code) === 100062 && null != j && null == H,
         ei = (0, y.p)(u.currentPeriodEnd),
         er = 0 === f;
     return (0, r.jsxs)(a.l, {
@@ -165,7 +165,7 @@ function L(e) {
                                           (0, r.jsx)(d.Text, {
                                               variant: 'text-sm/medium',
                                               color: 'header-secondary',
-                                              children: null != (l = null == w ? void 0 : w.name) ? l : R.intl.string(R.t.sqkbMD)
+                                              children: null != (l = null == Z ? void 0 : Z.name) ? l : R.intl.string(R.t.sqkbMD)
                                           })
                                       ]
                                   })
@@ -175,14 +175,14 @@ function L(e) {
                               className: D.headerButtons,
                               children:
                                   null != K &&
-                                  null != k &&
+                                  null != w &&
                                   null != z &&
                                   !1 === en &&
                                   (0, r.jsx)(V, {
                                       subscription: u,
                                       app: K,
                                       sku: z,
-                                      storeListing: k,
+                                      storeListing: w,
                                       isCancelled: W,
                                       navigateToSwitchPlan: h,
                                       renewalSkuId: null == Y ? void 0 : Y.skuId
@@ -212,7 +212,7 @@ function L(e) {
                 children: [
                     (0, r.jsx)(M, {
                         title: R.intl.string(R.t['5D/KEB']),
-                        content: F
+                        content: L
                             ? (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsxs)('span', {
@@ -241,10 +241,10 @@ function L(e) {
                                   children: [(0, r.jsx)(d.tBG, { size: 'xs' }), R.intl.string(R.t['6anEVl'])]
                               })
                     }),
-                    null != L &&
+                    null != k &&
                         (0, r.jsx)(M, {
                             title: R.intl.string(R.t.KI7ER0),
-                            content: L
+                            content: k
                         }),
                     (0, r.jsx)(M, {
                         title: R.intl.string(R.t.dnUzb2),
@@ -257,25 +257,19 @@ function L(e) {
                     })
                 ]
             }),
-            (0, r.jsxs)('div', {
-                className: D.payment,
-                children: [
-                    (0, r.jsx)(d.vwX, { children: R.intl.string(R.t.azZaZW) }),
-                    null != ee &&
-                        !(er || 2 === f) &&
-                        (0, r.jsx)(j.Z, {
-                            subscription: u,
-                            currentInvoicePreview: ee,
-                            disabled: X || W
-                        })
-                ]
+            (0, r.jsx)(F, {
+                subscription: u,
+                currentInvoicePreview: ee,
+                loadingState: f,
+                isDeleted: X,
+                isCancelled: W
             }),
             null != K &&
-                (null == k ? void 0 : k.benefits) != null &&
-                k.benefits.length > 0 &&
+                (null == w ? void 0 : w.benefits) != null &&
+                w.benefits.length > 0 &&
                 (0, r.jsx)(G, {
                     appId: K.id,
-                    listingBenefits: k.benefits
+                    listingBenefits: w.benefits
                 })
         ]
     });
@@ -340,14 +334,14 @@ function V(e) {
     let { app: t, storeListing: i, sku: a, subscription: l, isCancelled: m, guild: g, renewalSkuId: f, navigateToSwitchPlan: b } = e,
         x = (0, N.OL)(a),
         { analyticsLocations: _ } = (0, p.ZP)(),
-        [j, C] = s.useState(!1),
-        E = (0, h.q)(t.id),
+        [j, E] = s.useState(!1),
+        C = (0, h.q)(t.id),
         S = (0, o.e7)([v.Z], () => v.Z.getParentSKU(i.skuId), [i.skuId]),
-        T = s.useMemo(() => (null == S ? [] : (0, A.$)(i.id, S, E.subscriptions)), [i.id, E, S]),
+        T = s.useMemo(() => (null == S ? [] : (0, A.$)(i.id, S, C.subscriptions)), [i.id, C, S]),
         I = 0 !== T.length,
         y = async () => {
             try {
-                C(!0);
+                E(!0);
                 let { subscription: e } = await (0, u.pl)(l, _);
                 if (null == e) return;
                 (0, d.ZDy)(async () => {
@@ -362,7 +356,7 @@ function V(e) {
                         );
                 });
             } finally {
-                C(!1);
+                E(!1);
             }
         };
     return (0, r.jsxs)('div', {
@@ -458,4 +452,34 @@ function G(e) {
                 ]
             })
     });
+}
+function F(e) {
+    let { subscription: t, currentInvoicePreview: n, loadingState: i, isDeleted: s, isCancelled: a } = e;
+    return null == n
+        ? null
+        : 0 === i
+          ? (0, r.jsxs)('div', {
+                className: D.payment,
+                children: [(0, r.jsx)(d.vwX, { children: R.intl.string(R.t.azZaZW) }), (0, r.jsx)(d.$jN, { type: d.RAz.PULSING_ELLIPSIS })]
+            })
+          : 2 === i
+            ? (0, r.jsx)('div', {
+                  className: D.payment,
+                  children: (0, r.jsxs)(d.qXd, {
+                      color: d.DM8.DANGER,
+                      style: { borderRadius: 0 },
+                      children: [R.intl.format(R.t.IIHUUF, { subscriptionId: t.id }), (0, r.jsx)('br', {}), R.intl.format(R.t.fh65ER, { helpLink: 'https://support.discord.com/hc/en-us' })]
+                  })
+              })
+            : (0, r.jsxs)('div', {
+                  className: D.payment,
+                  children: [
+                      (0, r.jsx)(d.vwX, { children: R.intl.string(R.t.azZaZW) }),
+                      (0, r.jsx)(j.Z, {
+                          subscription: t,
+                          currentInvoicePreview: n,
+                          disabled: s || a
+                      })
+                  ]
+              });
 }
