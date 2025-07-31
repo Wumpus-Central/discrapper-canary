@@ -32361,6 +32361,10 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     background-color: CanvasText
 }
 
+.announcementScrollableContainer__74017 {
+    max-height: calc(var(--custom-channel-textarea-text-area-max-height) + 80px)
+}
+
 .divider__908e2 {
     align-items: center;
     border-top: thin solid var(--border-subtle);
