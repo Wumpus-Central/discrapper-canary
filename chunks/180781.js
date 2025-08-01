@@ -1,64 +1,64 @@
-n.d(e, { Z: () => b });
-var o = n(255367);
+n.d(e, { Z: () => f });
+var i = n(255367);
 n(73800);
-var r = n(442837),
-    i = n(755721),
-    a = n(481060),
+var o = n(442837),
+    a = n(755721),
+    r = n(481060),
     l = n(906732),
-    c = n(48217),
-    s = n(26323),
-    u = n(430824),
-    _ = n(914010),
-    d = n(981631),
-    f = n(30513),
-    m = n(388032),
-    p = n(273233);
-function b(t) {
-    let { analyticsSection: e, analyticsPage: n, isGIF: b, banner: g } = t,
-        v = (0, r.e7)([_.Z], () => _.Z.getGuildId()),
-        C = (0, r.e7)([u.Z], () => u.Z.getGuild(v)),
-        { analyticsLocations: x } = (0, l.ZP)();
-    return null == C || C.features.has(d.oNc.ANIMATED_BANNER) || (!b && C.features.has(d.oNc.BANNER))
+    s = n(48217),
+    d = n(26323),
+    c = n(430824),
+    u = n(914010),
+    _ = n(981631),
+    h = n(30513),
+    g = n(388032),
+    m = n(273233);
+function f(t) {
+    let { analyticsSection: e, analyticsPage: n, isGIF: f, banner: x } = t,
+        p = (0, o.e7)([u.Z], () => u.Z.getGuildId()),
+        N = (0, o.e7)([c.Z], () => c.Z.getGuild(p)),
+        { analyticsLocations: v } = (0, l.ZP)();
+    return null == N || N.features.has(_.oNc.ANIMATED_BANNER) || (!f && N.features.has(_.oNc.BANNER))
         ? null
-        : (0, o.jsxs)('div', {
-              className: p.container,
+        : (0, i.jsxs)('div', {
+              className: m.container,
               children: [
-                  (0, o.jsx)(a.$Eu, {
-                      color: a.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                      className: p.guildBoostingIcon
+                  (0, i.jsx)(r.$Eu, {
+                      color: r.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                      className: m.guildBoostingIcon
                   }),
-                  (0, o.jsx)(a.Text, {
+                  (0, i.jsx)(r.Text, {
                       color: 'header-primary',
                       variant: 'text-sm/semibold',
-                      children: m.intl.string(m.t['56M7xc'])
+                      children: g.intl.string(g.t['56M7xc'])
                   }),
-                  (0, o.jsx)(i.zx, {
-                      look: i.zx.Looks.LINK,
-                      color: i.zx.Colors.LINK,
-                      className: p.subscribeButton,
+                  (0, i.jsx)(a.zx, {
+                      look: a.zx.Looks.LINK,
+                      color: a.zx.Colors.LINK,
+                      className: m.subscribeButton,
                       onClick: () => {
-                          if (null == C) return;
+                          if (null == N) return;
                           let t = {
                               section: e,
                               page: n,
-                              object: d.qAy.UPSELL_HEADER
+                              object: _.qAy.UPSELL_HEADER
                           };
-                          null != g
-                              ? (0, c.c)({
-                                    analyticsLocations: x,
+                          null != x
+                              ? (0, s.c)({
+                                    analyticsLocations: v,
                                     analyticsLocation: t,
-                                    guild: C,
-                                    isGIF: b,
-                                    banner: g
+                                    guild: N,
+                                    isGIF: f,
+                                    banner: x
                                 })
-                              : (0, s.Z)({
-                                    analyticsLocations: x,
+                              : (0, d.Z)({
+                                    analyticsLocations: v,
                                     analyticsSourceLocation: t,
-                                    guild: C,
-                                    perks: b ? (0, f.zC)() : (0, f.XO)()
+                                    guild: N,
+                                    perks: f ? (0, h.zC)() : (0, h.XO)()
                                 });
                       },
-                      children: m.intl.string(m.t.WUHdZW)
+                      children: g.intl.string(g.t.WUHdZW)
                   })
               ]
           });

@@ -97,30 +97,30 @@ function P(e) {
         className: O.gradientBar,
         style: s,
         children: t.map((e, t) => {
-            let i = o[t],
-                s = t === n;
-            return (0, r.jsxs)(r.Fragment, {
-                children: [
-                    (0, r.jsx)(
-                        p.P3F,
-                        {
+            let s = o[t],
+                l = t === n;
+            return (0, r.jsxs)(
+                i.Fragment,
+                {
+                    children: [
+                        (0, r.jsx)(p.P3F, {
                             className: O.colorCircle,
                             style: {
-                                left: ''.concat(i, '%'),
+                                left: ''.concat(s, '%'),
                                 backgroundColor: e
                             },
                             onClick: () => a(t),
                             children: (0, r.jsx)('div', { className: O.colorCircleInner })
-                        },
-                        t
-                    ),
-                    s &&
-                        (0, r.jsx)('div', {
-                            className: O.colorCircleSelectedTriangle,
-                            style: { left: ''.concat(i, '%') }
-                        })
-                ]
-            });
+                        }),
+                        l &&
+                            (0, r.jsx)('div', {
+                                className: O.colorCircleSelectedTriangle,
+                                style: { left: ''.concat(s, '%') }
+                            })
+                    ]
+                },
+                t
+            );
         })
     });
 }
