@@ -1,11 +1,16 @@
-n.d(t, { V: () => p });
-var r = n(255367);
-n(73800);
-var i = n(66546),
-    a = n(481060),
-    o = n(699682),
-    s = n(165005);
-function l(e, t, n) {
+(n.d(t, {
+    V: () => g,
+    m: () => m
+}),
+    n(388685));
+var r = n(255367),
+    i = n(73800),
+    a = n(66546),
+    o = n(481060),
+    s = n(699682),
+    l = n(388032),
+    c = n(165005);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +23,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +34,12 @@ function c(e) {
                 })
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                u(e, t, n[t]);
             }));
     }
     return e;
 }
-function u(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,29 +51,29 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function _(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function f(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -77,9 +82,23 @@ function f(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-function p(e) {
+function m(e) {
+    let { validateOn: t, error: n, value: r, minLength: a, maxLength: o, defaultDirty: s } = e,
+        [c, u] = i.useState(s),
+        d = i.useMemo(() => {
+            var e, i;
+            return 'change' !== t ? null : null === n || '' === n ? null : null != n ? n : c ? (null != a && (null != (e = null == r ? void 0 : r.length) ? e : 0) < a ? l.intl.formatToPlainString(l.t['62rk1N'], { minLength: a }) : null != o && (null != (i = null == r ? void 0 : r.length) ? i : 0) > o ? l.intl.formatToPlainString(l.t.ICT5S0, { maxLength: o }) : null) : null;
+        }, [t, n, c, a, null == r ? void 0 : r.length, o]),
+        _ = (null != n && '' !== n) || null != d;
+    return {
+        errorMessage: d,
+        hasError: _,
+        setShouldValidate: u
+    };
+}
+function g(e) {
     let { error: t } = e,
-        n = (0, a.Yzy)(t, {
+        n = (0, o.Yzy)(t, {
             config: {
                 tension: 250,
                 clamp: !0
@@ -103,34 +122,34 @@ function p(e) {
                 transform: 'translate3d(0, -100%, 0)'
             }
         }),
-        l = (0, o.Z)(t);
+        i = (0, s.Z)(t);
     return (0, r.jsx)(r.Fragment, {
-        children: n((e, n, o) => {
-            let { key: u } = o,
-                { transform: f } = e,
-                p = _(e, ['transform']);
+        children: n((e, n, s) => {
+            let { key: l } = s,
+                { transform: u } = e,
+                _ = p(e, ['transform']);
             return null != n && '' !== n
                 ? (0, r.jsx)(
-                      i.animated.div,
+                      a.animated.div,
                       {
-                          style: d(c({}, p), { overflow: 'hidden' }),
-                          children: (0, r.jsxs)(i.animated.div, {
-                              style: { transform: f },
-                              className: s.inputError,
+                          style: f(d({}, _), { overflow: 'hidden' }),
+                          children: (0, r.jsxs)(a.animated.div, {
+                              style: { transform: u },
+                              className: c.inputError,
                               children: [
-                                  (0, r.jsx)(a.Mgn, {
+                                  (0, r.jsx)(o.Mgn, {
                                       size: 'xs',
-                                      color: a.TVs.colors.TEXT_DANGER.css
+                                      color: o.TVs.colors.TEXT_DANGER.css
                                   }),
-                                  (0, r.jsx)(a.Text, {
+                                  (0, r.jsx)(o.Text, {
                                       color: 'text-danger',
                                       variant: 'text-sm/medium',
-                                      children: null != t && '' !== t ? t : l
+                                      children: null != t && '' !== t ? t : i
                                   })
                               ]
                           })
                       },
-                      u
+                      l
                   )
                 : null;
         })

@@ -40,8 +40,8 @@ function x(e) {
         J = (0, O.Dt)(),
         G = (0, f.Z)(j),
         z = (0, f.Z)(P),
-        K = (0, f.Z)(D),
-        Y = (0, f.Z)(F),
+        Y = (0, f.Z)(D),
+        K = (0, f.Z)(F),
         X = (0, f.Z)(w),
         Q = null != P ? T[P] : null,
         V = null != Q;
@@ -50,10 +50,10 @@ function x(e) {
             u().isEqual(k, h) || $((0, g.Bi)(h, y));
         }, [h, k, y]),
         (0, c.ZP)(() => () => {
-            K.current({
+            Y.current({
                 problem: z.current,
                 dontShowAgain: G.current,
-                feedback: Y.current,
+                feedback: K.current,
                 closeClicked: X.current
             });
         }),
@@ -109,7 +109,7 @@ function x(e) {
                             ? (0, l.jsxs)(s.xJW, {
                                   className: N.problemInfo,
                                   children: [
-                                      (0, l.jsx)(s.Kx8, {
+                                      (0, l.jsx)(d.iS, {
                                           value: F,
                                           maxLength: S.iF,
                                           onChange: Z,

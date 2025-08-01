@@ -79,10 +79,10 @@ function f(e, t) {
 let p = (e) => e === r.Z.VARIANTS_GROUP || e === r.Z.EXTERNAL_SKU;
 class h extends a.Z {
     static fromServer(e) {
-        var { products: t, logo: n, hero_ranking: r, pdp_bg: a, mobile_bg: l, success_modal_bg: u, mobile_banner: f, hero_banner: m, hero_banner_asset: g, featured_block: E, hero_logo: b, banner_text_color: y, hero_banner_config: O, hero_logo_display_config: v } = e,
-            I = _(e, ['products', 'logo', 'hero_ranking', 'pdp_bg', 'mobile_bg', 'success_modal_bg', 'mobile_banner', 'hero_banner', 'hero_banner_asset', 'featured_block', 'hero_logo', 'banner_text_color', 'hero_banner_config', 'hero_logo_display_config']);
+        var { products: t, logo: n, hero_ranking: r, pdp_bg: a, mobile_bg: l, mobile_banner: u, hero_banner: f, hero_banner_asset: m, featured_block: g, hero_logo: E, banner_text_color: b, hero_banner_config: y, hero_logo_display_config: O } = e,
+            v = _(e, ['products', 'logo', 'hero_ranking', 'pdp_bg', 'mobile_bg', 'mobile_banner', 'hero_banner', 'hero_banner_asset', 'featured_block', 'hero_logo', 'banner_text_color', 'hero_banner_config', 'hero_logo_display_config']);
         return new h(
-            d(c({}, super.fromServer(I)), {
+            d(c({}, super.fromServer(v)), {
                 products: t.reduce((e, t) => {
                     let n = i.Z.fromServer(t);
                     return ((p(n.type) || 0 !== n.items.length) && e.push(n), e);
@@ -91,19 +91,18 @@ class h extends a.Z {
                 heroRanking: r,
                 pdpBg: a,
                 mobileBg: l,
-                successModalBg: u,
-                mobileBanner: f,
-                heroBanner: m,
-                heroBannerAsset: g,
-                featuredBlock: E,
-                heroLogo: b,
-                bannerTextColor: y,
-                heroBannerConfig: null != O ? o.Z.fromServer(O) : void 0,
-                heroLogoDisplayConfig: null != v ? s.X.fromServer(v) : void 0
+                mobileBanner: u,
+                heroBanner: f,
+                heroBannerAsset: m,
+                featuredBlock: g,
+                heroLogo: E,
+                bannerTextColor: b,
+                heroBannerConfig: null != y ? o.Z.fromServer(y) : void 0,
+                heroLogoDisplayConfig: null != O ? s.X.fromServer(O) : void 0
             })
         );
     }
     constructor(e) {
-        (super(e), l(this, 'products', void 0), l(this, 'logo', void 0), l(this, 'heroRanking', void 0), l(this, 'pdpBg', void 0), l(this, 'mobileBg', void 0), l(this, 'successModalBg', void 0), l(this, 'mobileBanner', void 0), l(this, 'heroBanner', void 0), l(this, 'heroBannerAsset', void 0), l(this, 'featuredBlock', void 0), l(this, 'heroLogo', void 0), l(this, 'bannerTextColor', void 0), l(this, 'heroBannerConfig', void 0), l(this, 'heroLogoDisplayConfig', void 0), (this.products = e.products), (this.logo = e.logo), (this.heroRanking = e.heroRanking), (this.pdpBg = e.pdpBg), (this.mobileBg = e.mobileBg), (this.successModalBg = e.successModalBg), (this.mobileBanner = e.mobileBanner), (this.heroBanner = e.heroBanner), (this.featuredBlock = e.featuredBlock), (this.heroLogo = e.heroLogo), (this.heroBannerAsset = e.heroBannerAsset), (this.bannerTextColor = e.bannerTextColor), (this.heroBannerConfig = e.heroBannerConfig), (this.heroLogoDisplayConfig = e.heroLogoDisplayConfig));
+        (super(e), l(this, 'products', void 0), l(this, 'logo', void 0), l(this, 'heroRanking', void 0), l(this, 'pdpBg', void 0), l(this, 'mobileBg', void 0), l(this, 'mobileBanner', void 0), l(this, 'heroBanner', void 0), l(this, 'heroBannerAsset', void 0), l(this, 'featuredBlock', void 0), l(this, 'heroLogo', void 0), l(this, 'bannerTextColor', void 0), l(this, 'heroBannerConfig', void 0), l(this, 'heroLogoDisplayConfig', void 0), (this.products = e.products), (this.logo = e.logo), (this.heroRanking = e.heroRanking), (this.pdpBg = e.pdpBg), (this.mobileBg = e.mobileBg), (this.mobileBanner = e.mobileBanner), (this.heroBanner = e.heroBanner), (this.featuredBlock = e.featuredBlock), (this.heroLogo = e.heroLogo), (this.heroBannerAsset = e.heroBannerAsset), (this.bannerTextColor = e.bannerTextColor), (this.heroBannerConfig = e.heroBannerConfig), (this.heroLogoDisplayConfig = e.heroLogoDisplayConfig));
     }
 }

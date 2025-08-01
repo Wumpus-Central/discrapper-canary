@@ -7,14 +7,14 @@ var r = n(255367);
 n(73800);
 var l = n(120356),
     o = n.n(l),
-    i = n(481060),
+    i = n(755721),
     a = n(489813),
     s = n(592286),
     c = n(388032),
     u = n(667084);
 function d(e) {
     let { value: t, placeholder: n, onChange: l, disabled: a, className: c, autofocus: d } = e;
-    return (0, r.jsx)(i.Kx8, {
+    return (0, r.jsx)(i.iS, {
         className: o()(u.paragraphFieldBody, c),
         maxLength: s.RS,
         value: null != t ? t : '',

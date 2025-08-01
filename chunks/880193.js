@@ -99,7 +99,7 @@ function O(e) {
                 title: j.intl.string(j.t['1w2WcX']),
                 titleId: G,
                 disabled: k,
-                children: (0, r.jsx)(s.Kx8, {
+                children: (0, r.jsx)(a.iS, {
                     placeholder: j.intl.string(j.t.p7Jr4O),
                     value: E,
                     rows: 2,

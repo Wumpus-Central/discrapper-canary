@@ -14,31 +14,32 @@ var r = n(255367),
     h = n(7284),
     m = n(482695);
 let g = i.memo(function (e) {
-    let { userName: t, displayNameStyles: n, effectDisplayType: i = f.F.STATIC, inProfile: a = !1, textClassName: s } = e,
-        g = _.f.useExperiment({ location: 'UserNameWithEffects' }),
-        b = (0, h.j)({
+    let { userName: t, displayNameStyles: n, effectDisplayType: i = f.F.STATIC, inProfile: a = !1, textClassName: s, loop: g = !1 } = e,
+        b = _.f.useExperiment({ location: 'UserNameWithEffects' }),
+        y = (0, h.j)({
             displayNameStyles: n,
             inProfile: a
         }),
         {
-            useReducedMotion: y,
-            saturation: O,
-            desaturateUserColors: v
+            useReducedMotion: O,
+            saturation: v,
+            desaturateUserColors: I
         } = (0, c.cj)([d.Z], () => ({
             useReducedMotion: d.Z.useReducedMotion,
             saturation: d.Z.saturation,
             desaturateUserColors: d.Z.desaturateUserColors
         }));
-    if (!g.enabled || (!a && !g.includeNonProfile) || null == n) return t;
-    let I = n.colors.map((e) => (0, l.ho)(e, !1, v ? O : null)),
-        T = (0, p.K)(n.effectId, I),
-        S = E(n.effectId);
+    if (!b.enabled || (!a && !b.includeNonProfile) || null == n) return t;
+    let T = n.colors.map((e) => (0, l.ho)(e, !1, I ? v : null)),
+        S = (0, p.K)(n.effectId, T),
+        A = E(n.effectId);
     return (0, r.jsx)('div', {
-        className: o()(m.container, S, b, s, {
+        className: o()(m.container, A, y, s, {
             [m.showEffect]: i !== f.F.PLAIN,
-            [m.animated]: i === f.F.ANIMATED && !y
+            [m.animated]: i === f.F.ANIMATED && !O,
+            [m.singleIteration]: !g
         }),
-        style: T,
+        style: S,
         'data-username-with-effects': (0, u.qgQ)(t),
         children: t
     });

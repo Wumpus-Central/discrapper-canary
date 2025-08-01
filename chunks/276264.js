@@ -190,7 +190,8 @@ let Z = (0, P.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                     ? (0, r.jsx)(y.Z, {
                           userName: null != a ? a : '',
                           displayNameStyles: s.displayNameStyles,
-                          effectDisplayType: u ? b.F.ANIMATED : b.F.STATIC
+                          effectDisplayType: u ? b.F.ANIMATED : b.F.STATIC,
+                          loop: !0
                       })
                     : (0, r.jsx)(c.PUh, {
                           roleName: t,

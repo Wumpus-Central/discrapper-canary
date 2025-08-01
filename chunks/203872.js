@@ -1,25 +1,25 @@
 n.d(t, { J: () => u });
-var r = n(73800),
-    o = n(522942),
+var o = n(73800),
+    r = n(522942),
     l = n(342905),
     i = n(242824),
-    a = n(660662),
-    s = n(698282),
+    s = n(660662),
+    a = n(698282),
     c = n(388032);
 let d = {
-    [o.m.SOLID]: s.default.OpWJ3d,
-    [o.m.GRADIENT]: s.default['i9e/u7'],
-    [o.m.GLOW]: s.default['Ra3/9/'],
-    [o.m.NEON]: s.default.x68b1N,
-    [o.m.TOON]: s.default.otpeeH,
-    [o.m.POP]: s.default.cjQOKS
+    [r.m.SOLID]: a.default.OpWJ3d,
+    [r.m.GRADIENT]: a.default['i9e/u7'],
+    [r.m.GLOW]: a.default['Ra3/9/'],
+    [r.m.NEON]: a.default.x68b1N,
+    [r.m.TOON]: a.default.otpeeH,
+    [r.m.POP]: a.default.cjQOKS
 };
 function u() {
     let e = (0, i.P)();
-    return r.useMemo(() => {
+    return o.useMemo(() => {
         let t = {};
         return (
-            a.mH.forEach((n) => {
+            s.mH.forEach((n) => {
                 t[n] = {
                     name: c.intl.string(d[n]),
                     defaultColors: e[n],

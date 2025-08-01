@@ -11,8 +11,8 @@ e.exports = {
     'neon-flicker-animation': 'neon-flicker-animation_dfb989',
     'neon-glow-flicker-animation': 'neon-glow-flicker-animation_dfb989',
     'toon-animation': 'toon-animation_dfb989',
-    'pop-text-movement': 'pop-text-movement_dfb989',
-    'pop-shadow-movement': 'pop-shadow-movement_dfb989',
-    'pop-shadow-color': 'pop-shadow-color_dfb989',
-    gradientUsernameAnimation: 'gradientUsernameAnimation_dfb989'
+    'pop-animation-main': 'pop-animation-main_dfb989',
+    'pop-animation-shadow': 'pop-animation-shadow_dfb989',
+    gradientUsernameAnimation: 'gradientUsernameAnimation_dfb989',
+    singleIteration: 'singleIteration_dfb989'
 };

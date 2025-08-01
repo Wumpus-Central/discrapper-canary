@@ -17,8 +17,8 @@ var l = n(255367),
     j = n(626135),
     g = n(720449),
     O = n(684269),
-    x = n(678865),
-    v = n(745579),
+    v = n(678865),
+    x = n(745579),
     C = n(875425),
     _ = n(981631),
     T = n(185923),
@@ -185,7 +185,7 @@ class I extends a.PureComponent {
                 options: C.wS.map((t) => ({
                     value: t,
                     key: t,
-                    label: (0, v.Z)(t)
+                    label: (0, x.Z)(t)
                 })),
                 onChange: this.handleChangeClearAfter
             })
@@ -273,7 +273,7 @@ class I extends a.PureComponent {
                 emojiInfo: null != this.props.customStatus ? this.props.customStatus.emoji : null,
                 text: null != this.props.customStatus && null != this.props.customStatus.state ? this.props.customStatus.state : '',
                 clearAfter: (0, O.Z)(),
-                status: (0, x.Z)()
+                status: (0, v.Z)()
             }),
             w(this, 'handleClearStatus', () => {
                 this.setState({

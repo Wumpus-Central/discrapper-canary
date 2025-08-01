@@ -397,9 +397,9 @@ let eo = i.memo(function (e) {
             {
                 formOpen: u,
                 nameError: m,
-                name: g,
-                textAreaState: x,
-                previewing: p
+                name: x,
+                textAreaState: p,
+                previewing: b
             } = (0, K.xH)((e) => {
                 let { formOpen: t, nameError: n, name: r, previewing: i, textAreaState: a, hasClickedForm: l, submitting: s } = e;
                 return {
@@ -412,41 +412,41 @@ let eo = i.memo(function (e) {
                     submitting: s
                 };
             }, c.X),
-            b = (0, K.AF)(),
-            j = null != t.topic && 0 !== t.topic.length,
-            v = V.Z.hasSeen(t.id),
-            _ = (0, G.ql)(t),
-            C = (0, h.e7)([F.default], () => F.default.getCurrentUser());
-        (o()(null != C, 'current user cannot be null'),
+            j = (0, K.AF)(),
+            v = null != t.topic && 0 !== t.topic.length,
+            _ = V.Z.hasSeen(t.id),
+            C = (0, G.ql)(t),
+            y = (0, h.e7)([F.default], () => F.default.getCurrentUser());
+        (o()(null != y, 'current user cannot be null'),
             (0, D.yp)({
                 event: ee.CkL.FOCUS_COMPOSER_TITLE,
                 handler: () => {
                     var e;
                     let t = n.current instanceof f.lcI ? (null == (e = n.current) ? void 0 : e._textArea) : n.current;
-                    (null == t || t.focus(), b.getState().setTitleFocused(!0), b.getState().setFormOpen(!0), b.getState().setHasClickedForm(!0));
+                    (null == t || t.focus(), j.getState().setTitleFocused(!0), j.getState().setFormOpen(!0), j.getState().setHasClickedForm(!0));
                 }
             }));
-        let y = i.useCallback(
+        let w = i.useCallback(
                 (e) => {
                     let n = e.clipboardData.files[0];
-                    null != n && n.type.startsWith('image/') && (e.preventDefault(), (0, B.d)([n], t, Z.d.FirstThreadMessage), b.getState().setFormOpenFromUserAction());
+                    null != n && n.type.startsWith('image/') && (e.preventDefault(), (0, B.d)([n], t, Z.d.FirstThreadMessage), j.getState().setFormOpenFromUserAction());
                 },
-                [t, b]
+                [t, j]
             ),
-            w = (0, H.Op)(m, { content: g });
+            T = (0, H.Op)(m, { content: x });
         return (0, r.jsxs)('div', {
             className: er.titleContainer,
-            onPaste: y,
+            onPaste: w,
             children: [
-                u && p
+                u && b
                     ? (0, r.jsx)(f.X6q, {
                           variant: 'heading-md/semibold',
                           className: er.title,
-                          children: g
+                          children: x
                       })
-                    : (0, r.jsx)(f.Kx8, {
-                          value: g,
-                          placeholder: a ? (u || (x.textValue.length > 0 && x.textValue.trim() !== _) ? en.intl.string(en.t.lU4dDQ) : en.intl.string(en.t.CjmivL)) : en.intl.string(en.t['5h0QOD']),
+                    : (0, r.jsx)(g.iS, {
+                          value: x,
+                          placeholder: a ? (u || (p.textValue.length > 0 && p.textValue.trim() !== C) ? en.intl.string(en.t.lU4dDQ) : en.intl.string(en.t.CjmivL)) : en.intl.string(en.t['5h0QOD']),
                           flex: !0,
                           autosize: u,
                           rows: 1,
@@ -455,36 +455,36 @@ let eo = i.memo(function (e) {
                           maxLength: ee.HN8,
                           onChange: (e) => {
                               let n = (0, I.Z)(e, !1);
-                              b.getState().setName(n);
+                              j.getState().setName(n);
                               let r = 0 === n.trim().length,
-                                  i = 0 === x.textValue.trim().length,
-                                  a = x.textValue.trim() === _;
-                              (r && (i || a) && b.getState().setHasClickedForm(!1), u || U.Z.updateForumSearchQuery(t.id, n));
+                                  i = 0 === p.textValue.trim().length,
+                                  a = p.textValue.trim() === C;
+                              (r && (i || a) && j.getState().setHasClickedForm(!1), u || U.Z.updateForumSearchQuery(t.id, n));
                           },
                           onFocus: () => {
-                              (b.getState().setTitleFocused(!0), b.getState().setBodyFocused(!1));
+                              (j.getState().setTitleFocused(!0), j.getState().setBodyFocused(!1));
                           },
                           onBlur: () => {
-                              b.getState().setTitleFocused(!1);
-                              let e = (0, I.Z)(g, !0);
-                              e !== g && (b.getState().setName(e), u || U.Z.updateForumSearchQuery(t.id, e));
+                              j.getState().setTitleFocused(!1);
+                              let e = (0, I.Z)(x, !0);
+                              e !== x && (j.getState().setName(e), u || U.Z.updateForumSearchQuery(t.id, e));
                           },
                           onKeyDown: (e) => {
                               var r, i;
                               'Enter' === e.key &&
                                   (e.preventDefault(),
                                   e.stopPropagation(),
-                                  u && g.length > 0
+                                  u && x.length > 0
                                       ? null == l || l.focus()
                                       : a && e.shiftKey
                                         ? ((0, q.nH)({
                                               guildId: t.guild_id,
                                               channelId: t.id
                                           }),
-                                          j && !v && b.getState().setGuidelinesOpen(!0),
-                                          b.getState().setFormOpenFromUserAction(),
-                                          g.trim().length > 0 && (b.getState().setBodyFocused(!0), null == l || l.focus()))
-                                        : u || !(g.length > 0) || null != d || s || U.Z.updateForumSearchQuery(t.id, g));
+                                          v && !_ && j.getState().setGuidelinesOpen(!0),
+                                          j.getState().setFormOpenFromUserAction(),
+                                          x.trim().length > 0 && (j.getState().setBodyFocused(!0), null == l || l.focus()))
+                                        : u || !(x.length > 0) || null != d || s || U.Z.updateForumSearchQuery(t.id, x));
                               let o = n.current instanceof f.lcI ? (null == (r = n.current) ? void 0 : r._textArea) : n.current;
                               if ('Home' === e.key || 'End' === e.key) {
                                   if (null == o) return;
@@ -492,14 +492,14 @@ let eo = i.memo(function (e) {
                                       let t = e.shiftKey ? Math.max(o.selectionStart, o.selectionEnd) : 0;
                                       o.setSelectionRange(0, t, 'backward');
                                   } else {
-                                      let t = e.shiftKey ? Math.min(o.selectionStart, o.selectionEnd) : g.length,
-                                          n = g.length;
+                                      let t = e.shiftKey ? Math.min(o.selectionStart, o.selectionEnd) : x.length,
+                                          n = x.length;
                                       o.setSelectionRange(t, n, 'forward');
                                   }
                               }
-                              'Escape' !== e.key || b.getState().submitting || (null == (i = n.current) || i.blur(), b.getState().setFormOpen(!1), b.getState().setTitleFocused(!1), b.getState().setBodyFocused(!1), b.getState().setPreviewing(!1));
+                              'Escape' !== e.key || j.getState().submitting || (null == (i = n.current) || i.blur(), j.getState().setFormOpen(!1), j.getState().setTitleFocused(!1), j.getState().setBodyFocused(!1), j.getState().setPreviewing(!1));
                           },
-                          error: w,
+                          error: T,
                           className: er.title,
                           inputRef: n
                       }),

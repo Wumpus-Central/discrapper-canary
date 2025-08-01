@@ -18,8 +18,8 @@ function v(e) {
     let { onClose: t, transitionState: n, clientSettingType: v, gameId: j } = e,
         [C, k] = r.useState('unreported'),
         [b, y] = r.useState(''),
-        [N, f] = r.useState(!1),
-        [S, R] = r.useState(!1),
+        [N, S] = r.useState(!1),
+        [f, R] = r.useState(!1),
         [z, w] = r.useState(!1),
         [I, M] = r.useState(!1),
         A = (0, i.e7)([u.Z, c.ZP], () => {
@@ -53,7 +53,7 @@ function v(e) {
                 (w(!0), await (0, s._v)(100), w(!1), M(!0));
                 return;
             }
-            (f(!0),
+            (S(!0),
                 await m.default.track(h.rMx.OVERLAY_DISABLED_SURVEY, {
                     reason: C,
                     comment: b,
@@ -63,7 +63,7 @@ function v(e) {
                     most_recent_overlay_render_method: B
                 }),
                 await (0, s._v)(1000),
-                f(!1),
+                S(!1),
                 R(!0),
                 await (0, s._v)(1500),
                 t());
@@ -141,7 +141,7 @@ function v(e) {
                                         className: p.commentHeader,
                                         children: g.intl.string(g.t.LYnrhY)
                                     }),
-                                    (0, a.jsx)(l.Kx8, {
+                                    (0, a.jsx)(o.iS, {
                                         autosize: !0,
                                         value: b,
                                         maxLength: 1000,
@@ -174,7 +174,7 @@ function v(e) {
                                 onClick: P,
                                 color: (() => {
                                     switch (!0) {
-                                        case S:
+                                        case f:
                                             return o.zx.Colors.GREEN;
                                         case z:
                                             return o.zx.Colors.PRIMARY;
@@ -184,7 +184,7 @@ function v(e) {
                                 })(),
                                 children: (() => {
                                     switch (!0) {
-                                        case S:
+                                        case f:
                                             return (0, a.jsx)(l.kmB, {});
                                         case N:
                                             return (0, a.jsx)(l.$jN, { type: l.RAz.PULSING_ELLIPSIS });

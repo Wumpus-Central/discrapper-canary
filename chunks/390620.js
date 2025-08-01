@@ -6,20 +6,20 @@ var l = n(120356),
     i = n(442837),
     s = n(481060),
     o = n(596454),
-    c = n(430824),
-    u = n(70956),
+    u = n(430824),
+    c = n(70956),
     d = n(388032),
     m = n(882714),
-    g = n(986449);
-let p = 6 * u.Z.Millis.SECOND;
-function h(e) {
+    h = n(986449);
+let g = 6 * c.Z.Millis.SECOND;
+function p(e) {
     let { emoji: t, guildId: n } = e,
-        l = (0, i.e7)([c.Z], () => {
+        l = (0, i.e7)([u.Z], () => {
             var e;
-            return null == (e = c.Z.getGuild(n)) ? void 0 : e.name;
+            return null == (e = u.Z.getGuild(n)) ? void 0 : e.name;
         });
     return (0, r.jsxs)('div', {
-        className: a()(g.toast, m.toast),
+        className: a()(h.toast, m.toast),
         children: [
             (0, r.jsx)(o.Z, {
                 emojiId: t.id,
@@ -63,11 +63,11 @@ function f(e) {
     (0, s.showToast)(
         (0, s.createToast)('', s.ToastType.CUSTOM, {
             position: s.ToastPosition.TOP,
-            component: (0, r.jsx)(h, {
+            component: (0, r.jsx)(p, {
                 emoji: t,
                 guildId: n
             }),
-            duration: p
+            duration: g
         })
     );
 }

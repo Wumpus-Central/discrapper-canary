@@ -159,79 +159,79 @@ function C(e) {
 }
 function N(e) {
     var t;
-    let { guildId: n, initialData: l, benefitTypeInput: a, descriptionPlaceholder: s, canSubmit: c, onSave: u, onDelete: g, transitionState: p, onClose: h } = e,
-        f = (0, m.Dt)(),
+    let { guildId: n, initialData: l, benefitTypeInput: a, descriptionPlaceholder: s, canSubmit: u, onSave: g, onDelete: p, transitionState: h, onClose: f } = e,
         x = (0, m.Dt)(),
-        [b, j] = i.useState(null != (t = null == l ? void 0 : l.description) ? t : ''),
-        [_, O] = i.useState(() => ({
+        b = (0, m.Dt)(),
+        [j, _] = i.useState(null != (t = null == l ? void 0 : l.description) ? t : ''),
+        [O, y] = i.useState(() => ({
             id: null == l ? void 0 : l.emoji_id,
             name: null == l ? void 0 : l.emoji_name
         })),
-        y = c && '' !== b && (null != _.id || null != _.name);
-    function N(e) {
+        N = u && '' !== j && (null != O.id || null != O.name);
+    function I(e) {
         (e.preventDefault(),
-            y &&
-                (u({
-                    description: b,
-                    emojiId: _.id,
-                    emojiName: _.name
+            N &&
+                (g({
+                    description: j,
+                    emojiId: O.id,
+                    emojiName: O.name
                 }),
-                h()));
+                f()));
     }
-    let I = [
+    let E = [
         {
             text: v.intl.string(v.t['ETE/oK']),
             variant: 'secondary',
-            onClick: h
+            onClick: f
         }
     ];
     return (
-        null != g &&
-            I.push({
+        null != p &&
+            E.push({
                 text: v.intl.string(v.t.oyYWHB),
                 variant: 'critical-secondary',
                 onClick: () => {
-                    (g(), h());
+                    (p(), f());
                 },
                 icon: d.XHJ
             }),
-        I.push({
+        E.push({
             text: null == l ? v.intl.string(v.t.OYkgVl) : v.intl.string(v.t.R3BPHx),
             variant: 'primary',
-            onClick: N,
-            disabled: !y
+            onClick: I,
+            disabled: !N
         }),
         (0, r.jsx)('form', {
-            onSubmit: N,
+            onSubmit: I,
             children: (0, r.jsx)(o.Modal, {
-                transitionState: p,
-                onClose: h,
+                transitionState: h,
+                onClose: f,
                 title: v.intl.string(v.t['2qf9EB']),
-                actions: I,
+                actions: E,
                 children: (0, r.jsxs)(d.Kqy, {
                     gap: 'md',
                     children: [
                         a,
                         (0, r.jsx)(d.hjN, {
                             title: v.intl.string(v.t['1Ts7QE']),
-                            titleId: f,
-                            children: (0, r.jsx)(d.Kx8, {
+                            titleId: x,
+                            children: (0, r.jsx)(c.iS, {
                                 placeholder: s,
-                                value: b,
+                                value: j,
                                 rows: 1,
                                 autosize: !0,
-                                onChange: j,
-                                'aria-labelledby': f
+                                onChange: _,
+                                'aria-labelledby': x
                             })
                         }),
                         (0, r.jsx)(d.hjN, {
                             title: v.intl.string(v.t.sMOuub),
-                            titleId: x,
+                            titleId: b,
                             children: (0, r.jsx)(C, {
                                 guildId: n,
-                                emojiData: _,
-                                onSelectEmoji: O,
-                                'aria-labelledby': x
+                                emojiData: O,
+                                onSelectEmoji: y,
+                                'aria-labelledby': b
                             })
                         })
                     ]
@@ -283,33 +283,33 @@ function I(e) {
 }
 function E(e) {
     var t;
-    let { initialData: n, onSave: l, transitionState: s, onClose: o, onDelete: c, guildId: u } = e,
-        [g, p] = i.useState(null != (t = null == n ? void 0 : n.name) ? t : ''),
-        h = (0, m.Dt)(),
-        f = (0, r.jsx)(d.hjN, {
+    let { initialData: n, onSave: l, transitionState: s, onClose: o, onDelete: u, guildId: g } = e,
+        [p, h] = i.useState(null != (t = null == n ? void 0 : n.name) ? t : ''),
+        f = (0, m.Dt)(),
+        x = (0, r.jsx)(d.hjN, {
             title: v.intl.string(v.t.NPOJra),
-            titleId: h,
-            children: (0, r.jsx)(d.Kx8, {
+            titleId: f,
+            children: (0, r.jsx)(c.iS, {
                 placeholder: v.intl.string(v.t.NPOJra),
-                value: g,
+                value: p,
                 rows: 1,
                 onChange: function (e) {
-                    p(e);
+                    h(e);
                 },
-                'aria-labelledby': h
+                'aria-labelledby': f
             })
         });
     return (0, r.jsx)(N, {
-        guildId: u,
+        guildId: g,
         initialData: n,
-        benefitTypeInput: f,
+        benefitTypeInput: x,
         descriptionPlaceholder: v.intl.string(v.t.ucP4Tk),
-        canSubmit: '' !== g,
+        canSubmit: '' !== p,
         onSave: function (e) {
-            (a()('' !== g, 'Cannot submit empty name'), l(y(O({}, e), { name: g })));
+            (a()('' !== p, 'Cannot submit empty name'), l(y(O({}, e), { name: p })));
         },
         transitionState: s,
         onClose: o,
-        onDelete: c
+        onDelete: u
     });
 }

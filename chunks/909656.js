@@ -236,7 +236,7 @@ function L(e) {
                 title: P.intl.string(P.t['1+Ho1d']),
                 titleId: q,
                 disabled: ee,
-                children: (0, r.jsx)(p.Kx8, {
+                children: (0, r.jsx)(g.iS, {
                     placeholder: l ? P.intl.string(P.t.SD6LRU) : P.intl.string(P.t['aVhW/f']),
                     maxLength: 1500,
                     value: x,

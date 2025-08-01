@@ -409,7 +409,7 @@ let P = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                         type: o.geA.DESCRIPTION,
                                                         children: S.intl.string(S.t.IBi6h4)
                                                     }),
-                                                    (0, r.jsx)(o.Kx8, {
+                                                    (0, r.jsx)(s.iS, {
                                                         value: null !== u.description ? u.description : '',
                                                         placeholder: S.intl.string(S.t.rFa9Ul),
                                                         onChange: (e) => {
@@ -476,7 +476,7 @@ let P = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                 children: S.intl.string(S.t.ozSi8v)
                                                             }),
                                                             (0, r.jsx)(
-                                                                o.Kx8,
+                                                                s.iS,
                                                                 {
                                                                     showCharacterCount: !0,
                                                                     className: T.textArea,

@@ -6,8 +6,8 @@ var i = n(120356),
     o = n(897037),
     s = n(184105);
 function l(e) {
-    let { readOnly: t, fullWidth: n = !1, children: i, error: l, className: c } = e,
-        u = null != l && '' !== l;
+    let { readOnly: t, fullWidth: n = !1, children: i, validation: l, className: c } = e,
+        u = null == l ? void 0 : l.hasError;
     return (0, r.jsxs)('div', {
         className: s.container,
         'data-full-width': n,
@@ -18,7 +18,7 @@ function l(e) {
                 'data-read-only': t,
                 children: i
             }),
-            (0, r.jsx)(o.V, { error: l })
+            (0, r.jsx)(o.V, { error: null == l ? void 0 : l.errorMessage })
         ]
     });
 }

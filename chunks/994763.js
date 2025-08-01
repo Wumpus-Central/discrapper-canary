@@ -149,9 +149,9 @@ function Z() {
         }, [k]));
     let V = (0, c.e7)([A.Z], () => A.Z.getCurrentPage()),
         W = (0, c.e7)([_.Z], () => null != B && _.Z.getEnabled(B)),
-        K = (0, c.e7)([S.Z], () => null != B && S.Z.isEmpty(B)),
-        Y = (0, y.F)(B).length > 0,
-        q = (0, f.o)(o);
+        Y = (0, c.e7)([S.Z], () => null != B && S.Z.isEmpty(B)),
+        q = (0, y.F)(B).length > 0,
+        K = (0, f.o)(o);
     return (0, n.jsx)(d.Gt, {
         value: j,
         children: (0, n.jsx)(
@@ -195,13 +195,13 @@ function Z() {
             )),
             (a = a =
                 {
-                    canUnlinkChannels: Y,
+                    canUnlinkChannels: q,
                     canViewGuildAnalytics: G.canViewGuildAnalytics,
                     onboardingStep: V,
                     onboardingEnabled: W,
-                    welcomeScreenEmpty: K,
+                    welcomeScreenEmpty: Y,
                     guildMetadata: h,
-                    pinPermissionMigrationAvailable: q
+                    pinPermissionMigrationAvailable: K
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(a))

@@ -64,7 +64,7 @@ function v(e) {
         N = (0, s.e7)([c.Z], () => c.Z.getGuild(t), [t]),
         C = !!(null == N ? void 0 : N.features.has(g.oNc.INVITES_DISABLED)),
         [E] = i.useState(!1),
-        [I, S] = i.useState(b.Fl),
+        [S, I] = i.useState(b.Fl),
         T = (0, s.e7)([p.Z], () => p.Z.getGuildIncident(t)),
         A = (0, x.BT)(N),
         D = (0, h.SG)(T) || C,
@@ -109,9 +109,9 @@ function v(e) {
                             placeholder: m.intl.string(m.t.vKYZzc),
                             options: (0, b.c1)(),
                             select: (e) => {
-                                (S(e), G(!0));
+                                (I(e), G(!0));
                             },
-                            isSelected: (e) => e === I,
+                            isSelected: (e) => e === S,
                             serialize: (e) => String(e)
                         }),
                         (0, r.jsxs)('div', {
@@ -188,7 +188,7 @@ function v(e) {
                             variant: 'primary',
                             text: m.intl.string(m.t['pwm/z8']),
                             onClick: () => {
-                                (D || w) && !P && !k ? ((0, u.n)(N.id, !1, !1), (0, a.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(j.Z, _(f({}, e), { guildId: t }))))) : (0, u.n)(N.id, P, k, I);
+                                (D || w) && !P && !k ? ((0, u.n)(N.id, !1, !1), (0, a.ZDy)(() => Promise.resolve((e) => (0, r.jsx)(j.Z, _(f({}, e), { guildId: t }))))) : (0, u.n)(N.id, P, k, S);
                                 let { source: e, alertType: n, messageId: i } = y;
                                 (d.default.track(g.rMx.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                                     guild_id: t,
@@ -197,7 +197,7 @@ function v(e) {
                                     raid_alert_type: n,
                                     intervention_type_enabled: (0, h.sO)(P, k),
                                     intervention_type_disabled: (0, h.lk)(P, k),
-                                    duration: 60 * I
+                                    duration: 60 * S
                                 }),
                                     v());
                             },

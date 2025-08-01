@@ -424,7 +424,8 @@ function ed(e) {
         eK = (0, i.jsx)(A.Z, {
             userName: eR,
             displayNameStyles: null == u ? void 0 : u.displayNameStyles,
-            effectDisplayType: X || l || em ? y.F.ANIMATED : y.F.PLAIN
+            effectDisplayType: X || l || em ? y.F.ANIMATED : y.F.PLAIN,
+            loop: !0
         }),
         eq = ev
             ? (0, i.jsxs)(i.Fragment, {

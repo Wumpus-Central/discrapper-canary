@@ -304,7 +304,7 @@ class eR extends l.PureComponent {
                               (0, i.jsx)(m.xJW, {
                                   title: ea.intl.string(ea.t.qk2jdX),
                                   className: ec.marginTop20,
-                                  children: (0, i.jsx)(m.Kx8, {
+                                  children: (0, i.jsx)(g.iS, {
                                       placeholder: ea.intl.string(ea.t.DDjD1N),
                                       value: I.ZP.translateSurrogatesToInlineEmoji(null != (r = e.template) ? r : ''),
                                       onChange: this.handleChangeTemplate,

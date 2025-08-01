@@ -44,7 +44,7 @@ function i(e, t) {
         e
     );
 }
-let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO_LOGO, r.jE.PDP_BACKGROUND, r.jE.PDP_LOGO, r.jE.COLLECTED_MODAL_BG, r.jE.MOBILE_BANNER, r.jE.MOBILE_BACKGROUND]),
+let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO_LOGO, r.jE.PDP_BACKGROUND, r.jE.PDP_LOGO, r.jE.MOBILE_BANNER, r.jE.MOBILE_BACKGROUND]),
     o = ['intro', 'idle', 'reduced_motion', 'static', 'thumbnail'],
     c = {
         max: 5000000,
@@ -85,7 +85,6 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
         [r.jE.MOBILE_BACKGROUND]: p,
         [r.jE.PDP_BACKGROUND]: p,
         [r.jE.PDP_LOGO]: p,
-        [r.jE.COLLECTED_MODAL_BG]: p,
         [r.jE.COACHTIP_AVATAR]: p
     },
     h = async (e) => {

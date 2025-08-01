@@ -1,15 +1,14 @@
 r.d(n, {
-    OR: () => v,
+    OR: () => m,
     YG: () => g,
     hr: () => d,
-    mB: () => m,
+    mB: () => v,
     t0: () => b
 });
 var l = r(73800),
     t = r(264181),
-    o = r(884697);
-r(318028);
-var a = r(823941),
+    o = r(884697),
+    a = r(823941),
     u = r(219778),
     i = r(619899),
     s = r(281598),
@@ -62,7 +61,7 @@ let d = (e) => {
             };
         }, [n, r, e]);
     },
-    v = (e, n) => {
+    m = (e, n) => {
         let r = (0, i.zL)(s.jE.PDP_BACKGROUND),
             t = (0, i.zL)(s.jE.PDP_LOGO);
         return l.useMemo(() => {
@@ -73,7 +72,7 @@ let d = (e) => {
             };
         }, [r, t, e, n]);
     },
-    m = (e) => {
+    v = (e) => {
         let n = (0, i.zL)(s.jE.SHOP_BUTTON_BG_HOVER),
             r = (0, i.zL)(s.jE.SHOP_BUTTON_BG_HOVER_DARK),
             o = (0, i.zL)(s.jE.SHOP_BUTTON_BG_HOVER_LIGHT),
@@ -83,13 +82,13 @@ let d = (e) => {
             d = (0, i.zL)(s.jE.COACHTIP_AVATAR);
         return l.useMemo(() => {
             var l, i, s, g, b;
-            let v = [n, r, o, a, u, c, d].some((e) => null != e);
+            let m = [n, r, o, a, u, c, d].some((e) => null != e);
             if ((null == e ? void 0 : e.type) === t.Z.COACHMARK) return { hasPreviewAssets: !1 };
-            let m = null == e || null == (l = e.refTargetBackground) ? void 0 : l.asset,
-                O = null == m ? void 0 : m.resting,
-                f = null == m ? void 0 : m.hovered;
+            let v = null == e || null == (l = e.refTargetBackground) ? void 0 : l.asset,
+                O = null == v ? void 0 : v.resting,
+                f = null == v ? void 0 : v.hovered;
             return {
-                hasPreviewAssets: v,
+                hasPreviewAssets: m,
                 buttonBGHoverDark: null != (i = null != r ? r : n) ? i : null == f ? void 0 : f.dark,
                 buttonBGHoverLight: null != (s = null != o ? o : n) ? s : null == f ? void 0 : f.light,
                 buttonBGRestingDark: null != (g = null != u ? u : a) ? g : null == O ? void 0 : O.dark,

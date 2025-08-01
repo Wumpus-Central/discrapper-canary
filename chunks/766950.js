@@ -1,10 +1,10 @@
 (n.d(t, { default: () => w }), n(953529), n(388685));
-var r = n(255367),
-    o = n(73800),
+var o = n(255367),
+    r = n(73800),
     l = n(522942),
     i = n(342905),
-    a = n(442837),
-    s = n(902704),
+    s = n(442837),
+    a = n(902704),
     c = n(481060),
     d = n(100527),
     u = n(906732),
@@ -16,63 +16,63 @@ var r = n(255367),
     b = n(922626),
     j = n(579346),
     x = n(438759),
-    O = n(512070),
-    y = n(305813),
+    y = n(512070),
+    O = n(305813),
     C = n(203872),
-    _ = n(981631),
-    S = n(474936),
-    v = n(698282),
+    S = n(981631),
+    v = n(474936),
+    _ = n(698282),
     P = n(388032),
     N = n(584794);
 function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            o = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (o = o.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                ((r = n[t]),
+            o.forEach(function (t) {
+                var o;
+                ((o = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: o,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r));
+                        : (e[t] = o));
             }));
     }
     return e;
 }
 function T(e) {
-    let { onApply: t, onSurpriseMe: n, onClose: o, canApply: l, isApplying: i } = e,
-        a = (0, m.m)(S.p9.TIER_2),
-        s = (0, r.jsx)(c.zxk, {
+    let { onApply: t, onSurpriseMe: n, onClose: r, canApply: l, isApplying: i } = e,
+        s = (0, m.m)(v.p9.TIER_2),
+        a = (0, o.jsx)(c.zxk, {
             variant: 'secondary',
             size: 'md',
             onClick: n,
             icon: c.T$Z,
             iconPosition: 'start',
-            text: P.intl.string(v.default.NOGFdn)
+            text: P.intl.string(_.default.NOGFdn)
         }),
-        d = (0, r.jsxs)('div', {
+        d = (0, o.jsxs)('div', {
             className: N.subscriberButtonContainer,
             children: [
-                s,
-                (0, r.jsx)(c.ua7, {
-                    text: P.intl.string(v.default.cVTpnp),
+                a,
+                (0, o.jsx)(c.ua7, {
+                    text: P.intl.string(_.default.cVTpnp),
                     shouldShow: !l,
                     children: (e) => {
-                        var n, o;
-                        return (0, r.jsx)(
+                        var n, r;
+                        return (0, o.jsx)(
                             c.zxk,
                             ((n = k({}, e)),
-                            (o = o =
+                            (r = r =
                                 {
                                     onClick: t,
                                     disabled: !l || i,
@@ -83,16 +83,16 @@ function T(e) {
                                     fullWidth: !0
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
+                                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
+                                          var o = Object.getOwnPropertySymbols(e);
+                                          n.push.apply(n, o);
                                       }
                                       return n;
-                                  })(Object(o)).forEach(function (e) {
-                                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
+                                  })(Object(r)).forEach(function (e) {
+                                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                                   }),
                             n)
                         );
@@ -100,16 +100,16 @@ function T(e) {
                 })
             ]
         }),
-        u = (0, r.jsxs)('div', {
+        u = (0, o.jsxs)('div', {
             className: N.upsell,
             children: [
-                (0, r.jsxs)('div', {
+                (0, o.jsxs)('div', {
                     className: N.descriptionContainer,
                     children: [
-                        (0, r.jsx)(c.ua7, {
+                        (0, o.jsx)(c.ua7, {
                             text: P.intl.string(P.t['5AFxuL']),
                             children: (e) =>
-                                (0, r.jsx)(
+                                (0, o.jsx)(
                                     c.SrA,
                                     k(
                                         {
@@ -120,134 +120,134 @@ function T(e) {
                                     )
                                 )
                         }),
-                        (0, r.jsx)(c.Text, {
+                        (0, o.jsx)(c.Text, {
                             variant: 'text-md/medium',
                             color: 'text-default',
                             className: N.description,
-                            children: P.intl.format(v.default.PWf0xc, {
+                            children: P.intl.format(_.default.PWf0xc, {
                                 onClickNitro: () => {
-                                    (0, p.$)(o);
+                                    (0, p.$)(r);
                                 }
                             })
                         })
                     ]
                 }),
-                (0, r.jsxs)('div', {
+                (0, o.jsxs)('div', {
                     className: N.buttonContainer,
                     children: [
-                        s,
-                        (0, r.jsx)(f.Z, {
+                        a,
+                        (0, o.jsx)(f.Z, {
                             premiumModalAnalyticsLocation: {
-                                section: _.jXE.DISPLAY_NAME_STYLES_MODAL_FOOTER,
-                                object: _.qAy.PREMIUM_UPSELL_BUTTON
+                                section: S.jXE.DISPLAY_NAME_STYLES_MODAL_FOOTER,
+                                object: S.qAy.PREMIUM_UPSELL_BUTTON
                             },
-                            subscriptionTier: S.Si.TIER_2
+                            subscriptionTier: v.Si.TIER_2
                         })
                     ]
                 })
             ]
         });
-    return (0, r.jsx)(c.mzw, {
+    return (0, o.jsx)(c.mzw, {
         'data-migration-pending': !0,
         className: N.footer,
-        children: a ? d : u
+        children: s ? d : u
     });
 }
 function w(e) {
-    var t, n, p, f, m, S, k, w, E, D;
-    let { transitionState: R, analyticsLocations: I, guild: A, onClose: L } = e,
-        B = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
-        Z = (0, C.J)(),
-        [G, H] = o.useState(null != (k = null == B || null == (t = B.displayNameStyles) ? void 0 : t.fontId) ? k : i.C.DEFAULT),
-        [M, F] = o.useState(null != (w = null == B || null == (n = B.displayNameStyles) ? void 0 : n.effectId) ? w : l.m.SOLID),
-        [z, U] = o.useState(null != (E = null == B || null == (p = B.displayNameStyles) ? void 0 : p.colors) ? E : Z[M].defaultColors),
-        { analyticsLocations: X } = (0, u.ZP)(I, d.Z.EDIT_DISPLAY_NAME_STYLES_MODAL),
-        { handleApplyDisplayNameStyles: Y, isApplying: q } = (0, b.Z)({
+    var t, n, p, f, m, v, k, w, E, D, R;
+    let { transitionState: I, analyticsLocations: A, guild: L, onClose: B } = e,
+        Z = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
+        G = (0, C.J)(),
+        [H, M] = r.useState(null != (E = null == Z || null == (t = Z.displayNameStyles) ? void 0 : t.fontId) ? E : i.C.DEFAULT),
+        [F, z] = r.useState(null != (D = null == Z || null == (n = Z.displayNameStyles) ? void 0 : n.effectId) ? D : l.m.SOLID),
+        [U, X] = r.useState((null == Z || null == (p = Z.displayNameStyles) ? void 0 : p.colors) != null && (null == Z || null == (f = Z.displayNameStyles) ? void 0 : f.colors.length) > 0 ? (null == Z || null == (m = Z.displayNameStyles) ? void 0 : m.colors) : G[F].defaultColors),
+        { analyticsLocations: Y } = (0, u.ZP)(A, d.Z.EDIT_DISPLAY_NAME_STYLES_MODAL),
+        { handleApplyDisplayNameStyles: q, isApplying: K } = (0, b.Z)({
             onSuccess: () => {
-                L();
+                B();
             },
             onError: (e) => {}
         }),
-        K = G !== (null == B || null == (f = B.displayNameStyles) ? void 0 : f.fontId) || M !== (null == B || null == (m = B.displayNameStyles) ? void 0 : m.effectId) || !(0, s.E)(z, null != (D = null == B || null == (S = B.displayNameStyles) ? void 0 : S.colors) ? D : []);
-    return (o.useEffect(() => {}, [X]), null == B)
+        V = H !== (null == Z || null == (v = Z.displayNameStyles) ? void 0 : v.fontId) || F !== (null == Z || null == (k = Z.displayNameStyles) ? void 0 : k.effectId) || !(0, a.E)(U, null != (R = null == Z || null == (w = Z.displayNameStyles) ? void 0 : w.colors) ? R : []);
+    return (r.useEffect(() => {}, [Y]), null == Z)
         ? null
-        : (0, r.jsx)(u.Gt, {
-              value: X,
-              children: (0, r.jsxs)(c.Y0X, {
+        : (0, o.jsx)(u.Gt, {
+              value: Y,
+              children: (0, o.jsxs)(c.Y0X, {
                   'data-migration-pending': !0,
-                  transitionState: R,
+                  transitionState: I,
                   size: c.CgR.LARGE,
                   parentComponent: 'DisplayNameStylesModal',
                   className: N.modalRoot,
                   children: [
-                      (0, r.jsxs)(c.hzk, {
+                      (0, o.jsxs)(c.hzk, {
                           'data-migration-pending': !0,
                           className: N.modalContent,
                           style: { overflow: 'hidden auto' },
                           children: [
-                              (0, r.jsxs)('div', {
+                              (0, o.jsxs)('div', {
                                   className: N.selectionSection,
                                   children: [
-                                      (0, r.jsx)(c.xBx, {
+                                      (0, o.jsx)(c.xBx, {
                                           'data-migration-pending': !0,
                                           separator: !1,
                                           className: N.sectionHeader,
-                                          children: (0, r.jsx)(c.X6q, {
+                                          children: (0, o.jsx)(c.X6q, {
                                               variant: 'heading-lg/semibold',
-                                              children: P.intl.string(v.default.ZPMAlZ)
+                                              children: P.intl.string(_.default.ZPMAlZ)
                                           })
                                       }),
-                                      (0, r.jsx)(O.Z, {
-                                          selectedFontId: G,
-                                          setSelectedFontId: H,
+                                      (0, o.jsx)(y.Z, {
+                                          selectedFontId: H,
+                                          setSelectedFontId: M,
                                           className: N.selectionSubSection
                                       }),
-                                      (0, r.jsx)(x.Z, {
-                                          selectedEffectId: M,
+                                      (0, o.jsx)(x.Z, {
+                                          selectedEffectId: F,
                                           setSelectedEffectId: (e) => {
-                                              (e === l.m.GRADIENT && 1 === z.length ? U(z.concat(_.p6O)) : (0 === z.length || (0, s.E)(z, Z[M].defaultColors)) && U(Z[e].defaultColors), F(e));
+                                              (e === l.m.GRADIENT && 1 === U.length ? X(U.concat(S.p6O)) : (0 === U.length || (0, a.E)(U, G[F].defaultColors)) && X(G[e].defaultColors), z(e));
                                           },
                                           className: N.selectionSubSection,
-                                          configs: Z
+                                          configs: G
                                       }),
-                                      (0, r.jsx)(j.Z, {
-                                          selectedColors: z,
-                                          setSelectedColors: U,
-                                          selectedEffectId: M,
+                                      (0, o.jsx)(j.Z, {
+                                          selectedColors: U,
+                                          setSelectedColors: X,
+                                          selectedEffectId: F,
                                           className: N.selectionSubSection,
-                                          defaultColor: Z[M].defaultColors[0]
+                                          defaultColor: G[F].defaultColors[0]
                                       })
                                   ]
                               }),
-                              (0, r.jsx)(y.Z, {
-                                  user: B,
-                                  selectedFontId: G,
-                                  selectedEffectId: M,
-                                  selectedColors: z,
-                                  onClose: L
+                              (0, o.jsx)(O.Z, {
+                                  user: Z,
+                                  selectedFontId: H,
+                                  selectedEffectId: F,
+                                  selectedColors: F === l.m.SOLID && (0, a.E)(U, G[F].defaultColors) ? [] : U,
+                                  onClose: B
                               })
                           ]
                       }),
-                      (0, r.jsx)(T, {
-                          isApplying: q,
+                      (0, o.jsx)(T, {
+                          isApplying: K,
                           onApply: () => {
-                              if (K) {
-                                  let e = z;
-                                  (M === l.m.SOLID && z.length > 0 && z[0] === Z[M].defaultColors[0] && (e = []),
-                                      Y({
-                                          fontId: G,
-                                          effectId: M,
+                              if (V) {
+                                  let e = U;
+                                  (F === l.m.SOLID && U.length > 0 && U[0] === G[F].defaultColors[0] && (e = []),
+                                      q({
+                                          fontId: H,
+                                          effectId: F,
                                           colors: e
                                       }));
                               }
                           },
                           onSurpriseMe: () => {
                               let e = (0, h.aY)();
-                              (H(e.fontId), F(e.effectId), U(e.colors));
+                              (M(e.fontId), z(e.effectId), X(e.colors));
                           },
-                          onClose: L,
-                          canApply: K,
-                          analyticsLocations: X
+                          onClose: B,
+                          canApply: V,
+                          analyticsLocations: Y
                       })
                   ]
               })

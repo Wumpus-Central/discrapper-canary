@@ -4283,6 +4283,7 @@ var nE = (function (e) {
             (e.RUNNING_GAME_CARD_STATE_CHANGED = 'running_game_card_state_changed'),
             (e.BILLING_IP_LOCATION_FETCH_ERROR = 'network_action_billing_ip_location_fetch_error'),
             (e.NITRO_PRIVATE_BROWSING_SURVEY_RESPONDED = 'nitro_privatebrowsing_surveyresponded'),
+            (e.EMOJI_STUDIO_ENDED = 'emoji_studio_ended'),
             e
         );
     })({}),

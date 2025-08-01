@@ -32,7 +32,7 @@ function h(e) {
                         variant: 'text-sm/normal',
                         children: c.intl.string(c.t.eOWEmJ)
                     }),
-                    (0, a.jsx)(o.Kx8, {
+                    (0, a.jsx)(i.iS, {
                         className: d.customMessageTextArea,
                         placeholder: c.intl.string(c.t.gDZw7O),
                         value: u,

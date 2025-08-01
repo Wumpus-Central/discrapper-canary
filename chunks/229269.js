@@ -313,10 +313,10 @@ let A = {
 function w() {
     let [e, t] = r.useState(Z(R)),
         [n, a] = r.useState(R),
-        [l, o] = r.useState(Z(D)),
-        [d, u] = r.useState(D),
-        [p, g] = r.useState(null),
-        [h, b] = r.useState(
+        [l, d] = r.useState(Z(D)),
+        [u, p] = r.useState(D),
+        [g, h] = r.useState(null),
+        [b, x] = r.useState(
             (0, i.jsx)(f.DS, {
                 errorLabel: A.CONFIGURABLE,
                 elementOptions: R,
@@ -340,7 +340,7 @@ function w() {
                 className: _.labelSpacing,
                 children: [(0, i.jsx)('b', { children: 'elements.options:' }), (0, i.jsx)('br', {}), (0, i.jsx)(f.lD, { href: 'https://github.com/stripe/stripe-js/blob/master/types/stripe-js/elements-group.d.ts#L632' })]
             }),
-            (0, i.jsx)(c.Kx8, {
+            (0, i.jsx)(o.iS, {
                 className: _.textarea,
                 placeholder: 'Stripe Elements Container Options',
                 showCharacterCount: !0,
@@ -352,18 +352,18 @@ function w() {
                 className: _.labelSpacing,
                 children: [(0, i.jsx)('b', { children: 'expressCheckoutElement.options:' }), (0, i.jsx)('br', {}), (0, i.jsx)(f.lD, { href: 'https://github.com/stripe/stripe-js/blob/master/types/stripe-js/elements/express-checkout.d.ts#L314' }), (0, i.jsx)('br', {}), (0, i.jsx)(f.lD, { href: 'https://docs.stripe.com/elements/express-checkout-element/migration#customize-express-checkout-element' })]
             }),
-            (0, i.jsx)(c.Kx8, {
+            (0, i.jsx)(o.iS, {
                 className: _.textarea,
                 placeholder: 'Stripe Express Checkout Element Options',
                 showCharacterCount: !0,
                 value: l,
-                onChange: o
+                onChange: d
             }),
-            null != p &&
+            null != g &&
                 (0, i.jsx)(c.Text, {
                     variant: 'text-md/normal',
                     color: 'text-danger',
-                    children: p
+                    children: g
                 }),
             (0, i.jsx)('div', {
                 'data-button-hoisted-classname-wrapper': !0,
@@ -376,8 +376,8 @@ function w() {
                         try {
                             let t = JSON.parse(e),
                                 n = JSON.parse(l);
-                            (b(null),
-                                b(
+                            (x(null),
+                                x(
                                     (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsxs)(c.Text, {
@@ -399,10 +399,10 @@ function w() {
                                     })
                                 ),
                                 a(t),
-                                u(n),
-                                g(null));
+                                p(n),
+                                h(null));
                         } catch (e) {
-                            (console.error('ConfigurableStripeExpressCheckoutElement - error parsing JSON: ', e), g('Error parsing JSON. Check console for more information.'));
+                            (console.error('ConfigurableStripeExpressCheckoutElement - error parsing JSON: ', e), h('Error parsing JSON. Check console for more information.'));
                         }
                     }
                 })
@@ -423,9 +423,9 @@ function w() {
             }),
             (0, i.jsx)(m.Z, {
                 className: _.markdown,
-                children: ''.concat('``', ' ').concat(Z(d), ' ').concat('``')
+                children: ''.concat('``', ' ').concat(Z(u), ' ').concat('``')
             }),
-            h
+            b
         ]
     });
 }

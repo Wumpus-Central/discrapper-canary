@@ -5,13 +5,13 @@ var r = n(255367),
     i = n(481060),
     s = n(339085),
     o = n(565138),
-    c = n(889564),
-    u = n(430824),
+    u = n(889564),
+    c = n(430824),
     d = n(496675),
     m = n(771845),
-    g = n(823379),
-    p = n(267642),
-    h = n(598117),
+    h = n(823379),
+    g = n(267642),
+    p = n(598117),
     f = n(981631),
     x = n(388032),
     v = n(588687);
@@ -22,27 +22,27 @@ let b = (e) => ({
     _ = (e) => d.Z.can(f.Plq.CREATE_GUILD_EXPRESSIONS, e),
     j = (e) => {
         let { onChange: t, selected: n, onError: d, labelledBy: j, isEmojiAnimated: O } = e,
-            N = (0, a.cj)([u.Z, m.ZP], () =>
+            E = (0, a.cj)([c.Z, m.ZP], () =>
                 Object.fromEntries(
                     m.ZP.getFlattenedGuildIds()
-                        .map((e) => u.Z.getGuild(e))
-                        .filter(g.lm)
+                        .map((e) => c.Z.getGuild(e))
+                        .filter(h.lm)
                         .map((e) => [e.id, e])
                 )
             ),
-            E = (0, a.cj)(
+            N = (0, a.cj)(
                 [s.ZP],
                 () =>
                     Object.fromEntries(
-                        Object.entries(N).map((e) => {
+                        Object.entries(E).map((e) => {
                             let [t, n] = e;
                             return [
                                 t,
                                 (function (e) {
                                     var t;
                                     let { guild: n, emojis: r, isEmojiAnimated: l } = e,
-                                        a = null != (t = r.filter((e) => e.animated === l && !(0, c.Kt)(e, n.id)).length) ? t : 0;
-                                    return (0, p.y4)(n) - a;
+                                        a = null != (t = r.filter((e) => e.animated === l && !(0, u.Kt)(e, n.id)).length) ? t : 0;
+                                    return (0, g.y4)(n) - a;
                                 })({
                                     guild: n,
                                     emojis: s.ZP.getGuildEmoji(t),
@@ -51,14 +51,14 @@ let b = (e) => ({
                             ];
                         })
                     ),
-                [N, O]
+                [E, O]
             ),
-            C = l.useMemo(() => Object.values(N).filter(_).map(b), [N]),
-            y = l.useCallback(
+            C = l.useMemo(() => Object.values(E).filter(_).map(b), [E]),
+            D = l.useCallback(
                 (e) => {
                     let [t] = e;
                     if (null == t || null == t.value) return null;
-                    let n = N[t.value];
+                    let n = E[t.value];
                     return null == n
                         ? null
                         : (0, r.jsxs)('div', {
@@ -78,12 +78,12 @@ let b = (e) => ({
                               ]
                           });
                 },
-                [N]
+                [E]
             ),
-            D = l.useCallback(
+            y = l.useCallback(
                 (e) => {
                     if (null == e || null == e.value) return null;
-                    let t = N[e.value];
+                    let t = E[e.value];
                     return null == t
                         ? null
                         : (0, r.jsxs)('div', {
@@ -107,28 +107,28 @@ let b = (e) => ({
                                               variant: 'text-xs/normal',
                                               color: 'text-tertiary',
                                               className: v.text,
-                                              children: x.intl.format(x.t.WkK72t, { count: E[e.value] })
+                                              children: x.intl.format(x.t.WkK72t, { count: N[e.value] })
                                           })
                                       ]
                                   })
                               ]
                           });
                 },
-                [E, N]
+                [N, E]
             );
         return (
             l.useEffect(() => {
                 var e;
-                C.length < 1 ? d(h.ze.NO_PERMISSIONS) : null != n && (null != (e = null == E ? void 0 : E[n]) ? e : 0) < 1 ? d(f.evJ.TOO_MANY_EMOJI) : d(null);
-            }, [C, t, d, n, E]),
+                C.length < 1 ? d(p.ze.NO_PERMISSIONS) : null != n && (null != (e = null == N ? void 0 : N[n]) ? e : 0) < 1 ? d(f.evJ.TOO_MANY_EMOJI) : d(null);
+            }, [C, t, d, n, N]),
             (0, r.jsx)(i.q4e, {
                 className: v.guildSelector,
                 onChange: t,
                 options: C,
                 popoutPosition: 'top',
                 popoutWidth: 240,
-                renderOptionLabel: D,
-                renderOptionValue: y,
+                renderOptionLabel: y,
+                renderOptionValue: D,
                 value: n,
                 'aria-labelledby': j,
                 placeholder: C.length < 1 ? x.intl.string(x.t.jHpxws) : x.intl.string(x.t['4mqeQE']),
