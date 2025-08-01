@@ -2728,6 +2728,7 @@ function eO(e) {
     return (0, i.jsx)(x.I, {
         transitionState: t,
         onClose: s,
+        gradientColor: 'nitro-pink',
         graphic: o,
         badge: 'beta',
         title: 'Expressive Modal',

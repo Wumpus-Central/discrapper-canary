@@ -1,94 +1,64 @@
-t.d(n, { default: () => d });
-var a = t(255367);
-t(73800);
-var r = t(755721),
-    i = t(481060),
-    o = t(701488),
-    s = t(388032),
-    l = t(661682),
-    c = t(221886);
-function d(e) {
-    var { application: n, onCancel: t, onClose: d, onConfirm: b } = e,
-        u = (function (e, n) {
-            if (null == e) return {};
-            var t,
-                a,
-                r = (function (e, n) {
-                    if (null == e) return {};
-                    var t,
-                        a,
-                        r = {},
-                        i = Object.keys(e);
-                    for (a = 0; a < i.length; a++) ((t = i[a]), n.indexOf(t) >= 0 || (r[t] = e[t]));
-                    return r;
-                })(e, n);
+e.d(n, { default: () => s });
+var r = e(255367),
+    i = e(82659),
+    a = e(481060),
+    o = e(701488),
+    l = e(388032);
+function s(t) {
+    var { application: n, onCancel: e, onClose: s, onConfirm: c } = t,
+        u = (function (t, n) {
+            if (null == t) return {};
+            var e,
+                r,
+                i = (function (t, n) {
+                    if (null == t) return {};
+                    var e,
+                        r,
+                        i = {},
+                        a = Object.keys(t);
+                    for (r = 0; r < a.length; r++) ((e = a[r]), n.indexOf(e) >= 0 || (i[e] = t[e]));
+                    return i;
+                })(t, n);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (a = 0; a < i.length; a++) ((t = i[a]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]));
+                var a = Object.getOwnPropertySymbols(t);
+                for (r = 0; r < a.length; r++) ((e = a[r]), !(n.indexOf(e) >= 0) && Object.prototype.propertyIsEnumerable.call(t, e) && (i[e] = t[e]));
             }
-            return r;
-        })(e, ['application', 'onCancel', 'onClose', 'onConfirm']);
-    return (0, a.jsxs)(i.Y0X, {
-        role: 'alertdialog',
+            return i;
+        })(t, ['application', 'onCancel', 'onClose', 'onConfirm']);
+    return (0, r.jsx)(i.Modal, {
         transitionState: u.transitionState,
-        className: l.modalRoot,
-        parentComponent: 'ExternalAppLaunchAlert',
-        children: [
-            (0, a.jsx)('div', {
-                className: l.birbContainer,
-                children: (0, a.jsx)('img', {
-                    src: c,
-                    className: l.announcementBirb,
-                    alt: s.intl.string(s.t.ElsOBA)
-                })
-            }),
-            (0, a.jsxs)(i.hzk, {
-                className: l.modalContent,
-                children: [
-                    (0, a.jsx)(i.Text, {
-                        variant: 'eyebrow',
-                        className: l.eyebrow,
-                        children: s.intl.string(s.t['06YebG'])
-                    }),
-                    (0, a.jsx)(i.X6q, {
-                        variant: 'heading-lg/bold',
-                        className: l.header,
-                        children: s.intl.format(s.t['Z/eMDQ'], { activityName: n.name })
-                    }),
-                    (0, a.jsx)(i.Text, {
-                        variant: 'text-sm/normal',
-                        className: l.subHeader,
-                        children: s.intl.string(s.t.z81WwM)
-                    }),
-                    (0, a.jsxs)('div', {
-                        className: l.buttonContainer,
-                        children: [
-                            (0, a.jsx)(r.zx, {
-                                size: r.zx.Sizes.LARGE,
-                                onClick: () => {
-                                    (b(), d());
-                                },
-                                children: s.intl.string(s.t['3PatS0'])
-                            }),
-                            (0, a.jsx)(r.zx, {
-                                size: r.zx.Sizes.LARGE,
-                                onClick: () => {
-                                    (t(), d());
-                                },
-                                color: r.zx.Colors.PRIMARY,
-                                children: s.intl.string(s.t['ETE/oK'])
-                            }),
-                            (0, a.jsx)(i.Text, {
-                                variant: 'text-xs/normal',
-                                children: (0, a.jsx)(i.eee, {
-                                    href: o.OF,
-                                    children: s.intl.string(s.t.E0gf5u)
-                                })
-                            })
-                        ]
+        onClose: s,
+        title: l.intl.string(l.t['06YebG']),
+        actions: [
+            {
+                text: l.intl.string(l.t['ETE/oK']),
+                onClick: () => {
+                    (e(), s());
+                },
+                variant: 'secondary'
+            },
+            {
+                text: l.intl.string(l.t['3PatS0']),
+                onClick: () => {
+                    (c(), s());
+                },
+                variant: 'primary'
+            }
+        ],
+        children: (0, r.jsxs)(a.Kqy, {
+            children: [
+                (0, r.jsxs)(a.Text, {
+                    variant: 'text-sm/normal',
+                    children: [l.intl.format(l.t['s+WDGx'], { activityName: n.name }), ' ']
+                }),
+                (0, r.jsx)(a.Text, {
+                    variant: 'text-sm/normal',
+                    children: (0, r.jsx)(a.eee, {
+                        href: o.OF,
+                        children: l.intl.string(l.t.E0gf5u)
                     })
-                ]
-            })
-        ]
+                })
+            ]
+        })
     });
 }

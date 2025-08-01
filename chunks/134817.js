@@ -1,39 +1,33 @@
-n.d(t, { default: () => p });
+n.d(t, { default: () => g });
 var r = n(255367),
-    s = n(73800),
-    i = n(512722),
-    a = n.n(i),
+    i = n(73800),
+    a = n(512722),
+    s = n.n(a),
     o = n(442837),
-    l = n(233787),
-    c = n(594174),
+    c = n(233787),
+    l = n(594174),
     u = n(74538),
-    d = n(388032);
-class g extends s.Component {
+    p = n(388032);
+class d extends i.Component {
     render() {
         let { user: e, transitionState: t, onClose: n } = this.props;
-        return (0, r.jsxs)(l.Z, {
+        return (0, r.jsx)(c.C, {
             transitionState: t,
-            'aria-label': d.intl.string(d.t.BNg1io),
-            children: [
-                (0, r.jsx)(l.Z.Header, {
-                    onClose: () => n(!1),
-                    children: d.intl.string(d.t.BNg1io)
-                }),
-                (0, r.jsx)(l.Z.Content, {
-                    type: l.Z.Types.UPGRADE,
-                    children: u.ZP.isPremium(e) && !u.ZP.canInstallPremiumApplications(e) ? d.intl.string(d.t.mKA9OD) : d.intl.string(d.t.sqSlm5)
-                }),
-                (0, r.jsx)(l.Z.Footer, {
-                    primary: {
-                        onClick: () => n(!0),
-                        label: d.intl.string(d.t.P3etAg)
-                    }
-                })
-            ]
+            onClose: async () => {
+                await n(!1);
+            },
+            'aria-label': p.intl.string(p.t.BNg1io),
+            title: p.intl.string(p.t.BNg1io),
+            premiumModalType: c.C.Types.UPGRADE,
+            primary: {
+                onClick: () => n(!0),
+                label: p.intl.string(p.t.P3etAg)
+            },
+            children: u.ZP.isPremium(e) && !u.ZP.canInstallPremiumApplications(e) ? p.intl.string(p.t.mKA9OD) : p.intl.string(p.t.sqSlm5)
         });
     }
 }
-let p = o.ZP.connectStores([c.default], () => {
-    let e = c.default.getCurrentUser();
-    return (a()(null != e, 'PremiumRequiredModal: user cannot be null'), { user: e });
-})(g);
+let g = o.ZP.connectStores([l.default], () => {
+    let e = l.default.getCurrentUser();
+    return (s()(null != e, 'PremiumRequiredModal: user cannot be null'), { user: e });
+})(d);

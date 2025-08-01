@@ -13,7 +13,7 @@ let i = {
         inlineRequire: () => n(802104).Z
     },
     AgeVerificationManager: {
-        actions: ['MESSAGE_CREATE'],
+        actions: ['POST_CONNECTION_OPEN', 'CURRENT_USER_UPDATE', 'MESSAGE_CREATE'],
         inlineRequire: () => n(225415).Z,
         neverLoadBeforeConnectionOpen: !0
     },

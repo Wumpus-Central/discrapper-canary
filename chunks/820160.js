@@ -1,22 +1,22 @@
-n.d(t, { Z: () => o });
-var i = n(255367);
-n(73800);
-var s = n(481060),
-    l = n(813197),
-    a = n(388032),
-    r = n(35398);
-function o(e) {
-    let { icon: t, onChange: n } = e;
-    return (0, i.jsx)(s.tEY, {
+e.d(n, { Z: () => d });
+var i = e(255367);
+e(73800);
+var l = e(481060),
+    a = e(813197),
+    s = e(388032),
+    r = e(35398);
+function d(t) {
+    let { icon: n, onChange: e } = t;
+    return (0, i.jsx)(l.tEY, {
         within: !0,
         children: (0, i.jsxs)('div', {
             className: r.iconContainer,
             children: [
-                null != t
+                null != n
                     ? (0, i.jsx)('img', {
                           alt: 'Your icon',
                           className: r.filledIcon,
-                          src: t
+                          src: n
                       })
                     : (0, i.jsxs)('svg', {
                           width: '80',
@@ -54,11 +54,11 @@ function o(e) {
                               })
                           ]
                       }),
-                (0, i.jsx)(l.ZP, {
-                    onChange: n,
+                (0, i.jsx)(a.ZP, {
+                    onChange: e,
                     multiple: !1,
                     tabIndex: 0,
-                    'aria-label': a.intl.string(a.t.DWB2YW)
+                    'aria-label': s.intl.string(s.t.DWB2YW)
                 })
             ]
         })
