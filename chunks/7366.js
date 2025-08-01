@@ -1,12 +1,13 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(834023),
     a = n(667202),
     o = n(648613),
     s = n(38273),
-    l = n(388032);
-function c(e, t, n) {
+    l = n(717975),
+    c = n(388032);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +20,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +31,12 @@ function u(e) {
                 })
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                u(e, t, n[t]);
             }));
     }
     return e;
 }
-function d(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,29 +48,29 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function f(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = p(e, t);
+        i = h(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function p(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -78,42 +79,44 @@ function p(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let h = (e) => {
-    var { gradientColor: t, title: n, subtitle: c, onClose: d, onSecondaryClick: p, videoSrc: h, loopAt: m } = e,
-        g = f(e, ['gradientColor', 'title', 'subtitle', 'onClose', 'onSecondaryClick', 'videoSrc', 'loopAt']);
-    let { subscribeButtonProps: E, subscriptionTier: b } = (0, s.G)({ defaultTextOverride: l.intl.string(l.t.pj0XBA) });
+let m = (e) => {
+    var { gradientColor: t, title: n, subtitle: u, onClose: _, onSecondaryClick: h, videoSrc: m, loopAt: g } = e,
+        E = p(e, ['gradientColor', 'title', 'subtitle', 'onClose', 'onSecondaryClick', 'videoSrc', 'loopAt']);
+    let { subscribeButtonProps: b, subscriptionTier: y } = (0, s.G)({ defaultTextOverride: c.intl.string(c.t.pj0XBA) }),
+        O = (0, l.Z)();
     return (0, r.jsx)(o.Z, {
-        subscriptionTier: b,
+        subscriptionTier: y,
         children: (e) => {
             let { onClick: o } = e;
             return (0, r.jsx)(
                 a.I,
-                u(
+                d(
                     {
                         size: 'md',
                         onClose: async () => {
-                            await d();
+                            await _();
                         },
                         gradientColor: t,
                         graphic: {
                             type: i.tK.LOOPING_VIDEO,
                             props: {
-                                src: h,
-                                loopAt: m
+                                src: m,
+                                loopAt: g
                             }
                         },
                         title: n,
-                        subtitle: c,
+                        subtitle: u,
                         actions: [
                             {
                                 variant: 'secondary',
-                                text: l.intl.string(l.t.ZnqyZ2),
-                                onClick: p
+                                text: c.intl.string(c.t.ZnqyZ2),
+                                onClick: h
                             },
-                            _(u({}, E), { onClick: o })
+                            f(d({}, b), { onClick: o })
                         ]
                     },
-                    g
+                    null != O && { badge: { text: O } },
+                    E
                 )
             );
         }

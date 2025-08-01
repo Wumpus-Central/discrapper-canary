@@ -39,8 +39,8 @@ var r = n(255367),
     G = n(98597),
     B = n(648501),
     V = n(473403),
-    H = n(830993),
-    F = n(653577),
+    F = n(830993),
+    H = n(653577),
     z = n(207055),
     W = n(981631),
     K = n(647086),
@@ -119,7 +119,7 @@ class $ extends G.ZP {
         let { channel: t, connected: n, enableHangStatus: i, allowChannelTopic: l } = this.props,
             o = null == (e = (0, y.D)(this.props.subtitle)) ? void 0 : e.subtitle,
             { hovered: a } = this.state;
-        return (0, r.jsx)(F.Z, {
+        return (0, r.jsx)(H.Z, {
             onClick: this.handleVoiceStatusClick,
             channel: t,
             connected: n,
@@ -341,7 +341,7 @@ class $ extends G.ZP {
                     { shouldShowActivities: a, shouldShowGuildVerificationPopout: s } = this.state;
                 if (a && !n && !i && !s) {
                     let n = T.SE.getSetting().includes(o.id);
-                    return (0, r.jsx)(H.Z, {
+                    return (0, r.jsx)(F.Z, {
                         onAction: this.closePopout,
                         guild: o,
                         channel: e,

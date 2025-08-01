@@ -80,7 +80,7 @@ function V(e, t) {
         e
     );
 }
-function H(e) {
+function F(e) {
     let { message: t, channel: n, focusProps: l, isSelected: a, isUnread: s, groupedMessages: d } = e,
         h = n.type === M.d4z.UNKNOWN ? u.VL1 : (0, f.KS)(n, null),
         m = (0, p.ZP)(n, !1),
@@ -242,7 +242,7 @@ function H(e) {
                                             marginTop: 4,
                                             marginBottom: 4
                                         },
-                                        children: (0, r.jsx)(F, { overflowMessages: d })
+                                        children: (0, r.jsx)(H, { overflowMessages: d })
                                     })
                             ]
                         })
@@ -252,7 +252,7 @@ function H(e) {
         )
     );
 }
-function F(e) {
+function H(e) {
     let { overflowMessages: t } = e,
         n = (0, a.uniqBy)(
             t.map((e) => e.author),
@@ -435,7 +435,7 @@ let K = (0, i.memo)(
                               { disableClickTrap: !0 }
                           ));
                   },
-                  children: (0, r.jsx)(H, {
+                  children: (0, r.jsx)(F, {
                       message: p,
                       channel: m,
                       isSelected: p.id === g.messageId,

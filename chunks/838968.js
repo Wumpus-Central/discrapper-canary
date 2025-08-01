@@ -1,29 +1,24 @@
-(n.d(t, {
-    Z: () => h,
-    u: () => E
-}),
-    n(388685));
+n.d(t, {
+    N4: () => x,
+    Q9: () => g,
+    aB: () => v,
+    uf: () => _
+});
 var r = n(255367),
     o = n(73800),
     i = n(120356),
     l = n.n(i),
     s = n(481060),
-    a = n(434650),
-    c = n(10765),
-    u = n(639777),
-    d = n(973772),
-    p = n(192371),
-    m = n(834209),
-    f = n(69323),
-    _ = n(279604),
-    x = n(535396),
-    g = n(93841),
-    v = n(388032),
-    b = n(117172);
-function j(e) {
+    a = n(377171),
+    c = n(192371),
+    u = n(834209),
+    d = n(93841),
+    p = n(388032),
+    m = n(246499);
+function f(e) {
     let { dateString: t } = e;
     return (0, r.jsxs)('div', {
-        className: b.inline,
+        className: m.inline,
         children: [
             (0, r.jsx)(s.Mgn, {
                 size: 'xs',
@@ -32,117 +27,129 @@ function j(e) {
             (0, r.jsx)(s.Text, {
                 color: 'status-warning',
                 variant: 'text-sm/bold',
-                children: v.intl.formatToMarkdownString(g.default['ol/ao6'], { dateString: (0, p.Z)(t) })
+                children: p.intl.formatToMarkdownString(d.default['ol/ao6'], { dateString: (0, c.Z)(t) })
             })
         ]
     });
 }
-function E(e) {
-    var t, n, o;
-    let { guildId: i, powerup: a, className: u } = e,
-        p = (0, d.Z)(i, a),
-        f = p.type !== x.A3.LEVEL_ACTIVATED,
-        _ = f ? b.labelContainer : b.labelContainerEnd,
-        E = (0, c.Z)(i, a, 'GuildPowerupCardBodyFooter'),
-        h = p.type === x.A3.LEVEL_ACTIVATED ? v.intl.formatToPlainString(g.default.WRRYUV, { perkName: null != (o = null == (t = p.sourcePowerup) ? void 0 : t.title) ? o : v.intl.string(v.t.BfF6EB) }) : p.type === x.A3.POWERUP_ACTIVATED ? v.intl.string(g.default.FFLkm5) : void 0;
+function _(e) {
+    let { cost: t, status: n, className: o } = e,
+        i = void 0 !== t ? m.labelContainer : m.labelContainerEnd;
     return (0, r.jsxs)('div', {
-        className: l()(_, u),
+        className: l()(i, o),
         children: [
-            f &&
+            void 0 !== t &&
                 (0, r.jsxs)('div', {
-                    className: l()(b.inline, b.inlineBoost),
+                    className: l()(m.inline, m.inlineBoost),
                     children: [
                         (0, r.jsx)(s.$Eu, {
                             size: 'sm',
                             color: s.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK
                         }),
                         (0, r.jsx)(s.Text, {
-                            className: b.price,
+                            className: m.price,
                             tag: 'div',
                             variant: 'heading-md/semibold',
                             color: 'text-secondary',
-                            children: v.intl.formatToPlainString(v.t.t2Wbo6, { required: a.cost })
+                            children: p.intl.formatToPlainString(p.t.t2Wbo6, { required: t })
                         })
                     ]
                 }),
-            (null == (n = p.sourceEntitlement) ? void 0 : n.ends_at) != null
-                ? (0, r.jsx)(j, { dateString: p.sourceEntitlement.ends_at })
-                : E && null != a.storeRemovalDate
-                  ? (0, r.jsxs)('div', {
-                        className: b.rollbackInline,
-                        children: [
-                            (0, r.jsx)(s.Mgn, {
-                                size: 'xs',
-                                color: s.TVs.colors.STATUS_WARNING
-                            }),
-                            (0, r.jsx)(s.Text, {
-                                color: 'status-warning',
-                                variant: 'text-sm/bold',
-                                children: v.intl.formatToPlainString(g.default['6e2ry8'], { dateString: (0, m.Z)(a.storeRemovalDate) })
-                            })
-                        ]
-                    })
-                  : null != h
-                    ? (0, r.jsxs)('div', {
-                          className: b.inline,
-                          children: [
-                              (0, r.jsx)(s.owK, {
-                                  size: 'xs',
-                                  color: s.TVs.colors.STATUS_POSITIVE
-                              }),
-                              (0, r.jsx)(s.Text, {
-                                  color: 'text-feedback-positive',
-                                  variant: 'text-sm/bold',
-                                  children: h
-                              })
-                          ]
-                      })
-                    : null
+            (null == n ? void 0 : n.type) === 'expiring' && (0, r.jsx)(f, { dateString: n.expiringAt }),
+            (null == n ? void 0 : n.type) === 'removing' &&
+                (0, r.jsxs)('div', {
+                    className: m.rollbackInline,
+                    children: [
+                        (0, r.jsx)(s.Mgn, {
+                            size: 'xs',
+                            color: s.TVs.colors.STATUS_WARNING
+                        }),
+                        (0, r.jsx)(s.Text, {
+                            color: 'status-warning',
+                            variant: 'text-sm/bold',
+                            children: p.intl.formatToPlainString(d.default['6e2ry8'], { dateString: (0, u.Z)(n.removingAt) })
+                        })
+                    ]
+                }),
+            (null == n ? void 0 : n.type) === 'active' &&
+                (0, r.jsxs)('div', {
+                    className: m.inline,
+                    children: [
+                        (0, r.jsx)(s.owK, {
+                            size: 'xs',
+                            color: s.TVs.colors.STATUS_POSITIVE
+                        }),
+                        (0, r.jsx)(s.Text, {
+                            color: 'text-feedback-positive',
+                            variant: 'text-sm/bold',
+                            children: n.statusText
+                        })
+                    ]
+                })
         ]
     });
 }
-function h(e) {
-    var t;
-    let { guildId: n, powerup: i, className: p, onHover: m, children: g } = e,
-        v = (0, u.Z)(n),
-        j = (0, d.Z)(n, i),
-        E = j.type !== x.A3.INACTIVE,
-        h = (null == (t = j.sourceEntitlement) ? void 0 : t.ends_at) != null,
-        C = (0, c.Z)(n, i, 'GuildPowerupCard'),
-        I = o.useRef(null),
-        { onShowMore: N } = (0, _.ZP)(n, i),
-        [O, Z] = o.useState(!1),
-        P = (0, a.O)(Z, 1);
-    return (0, r.jsxs)(r.Fragment, {
+function x(e) {
+    let { children: t } = e;
+    return (0, r.jsx)('div', {
+        className: m.buttonContainer,
+        children: t
+    });
+}
+function g(e) {
+    let { title: t, textColor: n, children: o, footer: i } = e;
+    return (0, r.jsxs)('div', {
+        className: m.contentContainer,
         children: [
-            (0, r.jsx)('div', {
-                className: l()(b.parentContainer, { [b.rollbackInactive]: C && !E }),
-                ref: (e) => {
-                    ((I.current = e), (P.current = e));
-                },
-                children: (0, r.jsx)(s.kL8, {
-                    'aria-label': i.title,
-                    onClick: N,
-                    onMouseOver: () => (null == m ? void 0 : m(!0)),
-                    onMouseLeave: () => (null == m ? void 0 : m(!1)),
-                    className: l()(
-                        b.container,
-                        {
-                            [b.active]: E,
-                            [b.warning]: h || (C && E)
-                        },
-                        p
-                    ),
-                    children: g
-                })
+            (0, r.jsxs)('div', {
+                children: [
+                    (0, r.jsx)('div', {
+                        className: m.headerContainer,
+                        children: (0, r.jsx)(s.X6q, {
+                            color: n,
+                            variant: 'heading-md/bold',
+                            children: t
+                        })
+                    }),
+                    o
+                ]
             }),
-            !C &&
-                v &&
-                (0, r.jsx)(f.Z, {
-                    powerup: i,
-                    targetRef: I,
-                    isCardVisible: O
-                })
+            i
         ]
     });
 }
+let v = o.forwardRef(function (e, t) {
+    let { className: n, label: o, isActive: i, isWarning: c, badge: u, canRollback: d, onClick: f, onMouseOver: _, onMouseLeave: x, children: g } = e;
+    return (0, r.jsx)('div', {
+        className: l()(m.parentContainer, { [m.rollbackInactive]: d && !i }),
+        ref: t,
+        children: (0, r.jsxs)(s.kL8, {
+            'aria-label': o,
+            onClick: f,
+            onMouseOver: _,
+            onMouseLeave: x,
+            className: l()(
+                m.container,
+                {
+                    [m.active]: i,
+                    [m.warning]: c || (d && i)
+                },
+                n
+            ),
+            children: [
+                'new' === u &&
+                    (0, r.jsx)(s.IGR, {
+                        className: m.new,
+                        text: p.intl.string(p.t.y2b7CA)
+                    }),
+                'beta' === u &&
+                    (0, r.jsx)(s.IGR, {
+                        className: m.new,
+                        text: p.intl.string(p.t.oW0eUV),
+                        color: a.Z.BG_BRAND
+                    }),
+                g
+            ]
+        })
+    });
+});

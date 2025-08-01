@@ -1,4 +1,4 @@
-(r.d(t, { Z: () => O }), r(314940));
+(r.d(t, { Z: () => v }), r(314940));
 var n = r(255367),
     i = r(73800),
     l = r(120356),
@@ -86,13 +86,13 @@ let y = () => 80,
             })
         );
     },
-    v = (e) => {
+    O = (e) => {
         var t,
             { profileEffect: r, innerRef: l, section: o, isSelected: s, canUsePremiumCollectibles: c } = e,
             u = j(e, ['profileEffect', 'innerRef', 'section', 'isSelected', 'canUsePremiumCollectibles']);
         let p = (0, d.V)(r.id),
             y = i.useRef(null),
-            { accessibilityLabel: v, thumbnailPreviewSrc: O, title: P } = null != (t = null == p ? void 0 : p.config) ? t : {};
+            { accessibilityLabel: O, thumbnailPreviewSrc: v, title: P } = null != (t = null == p ? void 0 : p.config) ? t : {};
         return (0, n.jsxs)(
             x,
             b(
@@ -107,12 +107,12 @@ let y = () => 80,
                     children: [
                         (0, n.jsx)('img', {
                             src: g,
-                            alt: v,
+                            alt: O,
                             className: m.presetEffectBackground
                         }),
                         (0, n.jsx)('img', {
                             className: m.presetEffectImg,
-                            src: O,
+                            src: v,
                             alt: P
                         }),
                         (0, n.jsx)(a.Z, {
@@ -126,7 +126,7 @@ let y = () => 80,
             )
         );
     },
-    O = (e) => {
+    v = (e) => {
         let { user: t, guild: r, pendingProfileEffect: i, selectedProfileEffectRef: l, onSelect: o, onOpenShop: a } = e,
             d = (0, f.ZP)(),
             g = null != i,
@@ -146,8 +146,8 @@ let y = () => 80,
                     return t.length;
                 }),
                 renderItem: (e, t, u, b) => {
-                    let { section: y, items: O } = d[e];
-                    return (0, s.EQ)(O[t])
+                    let { section: y, items: v } = d[e];
+                    return (0, s.EQ)(v[t])
                         .with(f.Tm, () =>
                             (0, n.jsxs)(
                                 x,
@@ -198,7 +198,7 @@ let y = () => 80,
                         .otherwise((e) => {
                             let t = i === e.id;
                             return (0, n.jsx)(
-                                v,
+                                O,
                                 {
                                     style: h({}, u),
                                     section: y,

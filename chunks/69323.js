@@ -26,16 +26,16 @@ function x(e) {
                 : null,
         j = [];
     null == b || g || !x || v || j.push(b.dismissibleContentType);
-    let [E, h] = (0, u.US)(j),
+    let [h, E] = (0, u.US)(j),
         C = o.useCallback(() => {
-            h(m.L.INDIRECT_ACTION);
-        }, [h]);
+            E(m.L.INDIRECT_ACTION);
+        }, [E]);
     return ((0, p.Z)({
         targetRef: n,
         onShouldClose: C,
-        enabled: null != E
+        enabled: null != h
     }),
-    null == b || null == E)
+    null == b || null == h)
         ? null
         : (0, r.jsx)(c.J2, {
               targetElementRef: n,
@@ -50,7 +50,7 @@ function x(e) {
               title: b.title,
               body: b.body,
               onRequestClose: () => {
-                  h(m.L.USER_DISMISS);
+                  E(m.L.USER_DISMISS);
               }
           });
 }

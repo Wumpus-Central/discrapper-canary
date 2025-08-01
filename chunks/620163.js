@@ -1082,7 +1082,7 @@ let e0 = () => {
                 section: eY.oAB.VOICE,
                 searchableTitles: [eX.intl.string(eX.t['4I0qzc'])],
                 parent: eW.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE,
-                predicate: () => Y.Z.supportsExperimentalSoundshare()
+                predicate: () => Y.Z.supportsExperimentalSoundshare() && Y.Z.supportsHookSoundshare()
             },
             [eW.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_SYSTEM_PICKER]: {
                 section: eY.oAB.VOICE,

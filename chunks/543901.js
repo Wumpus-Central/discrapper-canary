@@ -4,5 +4,6 @@ e.exports = {
     modalHeader: 'modalHeader_ced2f2',
     modalCloseButton: 'modalCloseButton_ced2f2',
     modalContent: 'modalContent_ced2f2',
-    modalPreview: 'modalPreview_ced2f2'
+    modalPreview: 'modalPreview_ced2f2',
+    modalFooter: 'modalFooter_ced2f2'
 };

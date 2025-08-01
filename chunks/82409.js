@@ -170,16 +170,43 @@ function U(e) {
         q = B(w, p),
         X = B(D, p);
     ((0, h.ZP)(() => {
-        var e, t;
-        if (v.Lk.getCurrentConfig({ location: 'NotificationsInboxSidebar' }).notificationCenterVariant !== v.jP.SIDEBAR) return;
-        let n = null == (e = q[q.length - 1]) ? void 0 : e.message,
-            r = null == (t = X[X.length - 1]) ? void 0 : t.message,
-            i = null != r ? r : n;
-        null != i &&
+        if ((u.Z.dispatch({ type: 'NOTIFICATIONS_INBOX_OPEN' }), v.Lk.getCurrentConfig({ location: 'NotificationsInboxSidebar' }).notificationCenterVariant !== v.jP.SIDEBAR)) return;
+        let { message: e, isUnread: t } = (function (e, t) {
+            var n, r, i;
+            let l = null == (n = e[e.length - 1]) ? void 0 : n.message,
+                o = null == (r = t[t.length - 1]) ? void 0 : r.message,
+                a = null != o ? o : l;
+            if (null != a)
+                return {
+                    message: a,
+                    isUnread: null != o
+                };
+            let s = x.Z.getNotifyingChannelIds();
+            if (null == s || 0 === s.length)
+                return {
+                    message: null,
+                    isUnread: !1
+                };
+            let c = s[0],
+                u = y.ZP.getTrackedAckMessageId(c);
+            return null == u
+                ? {
+                      message: null,
+                      isUnread: !1
+                  }
+                : {
+                      message: {
+                          id: u,
+                          channel_id: c
+                      },
+                      isUnread: null != (i = y.ZP.hasUnread(c)) && i
+                  };
+        })(q, X);
+        null != e &&
             j.Z.inboxItemClick({
-                message: i,
-                channel: { id: i.channel_id },
-                isUnread: null != r,
+                message: e,
+                channel: { id: e.channel_id },
+                isUnread: t,
                 isSidebar: !0,
                 track: !1,
                 viewId: a
@@ -229,11 +256,11 @@ function U(e) {
             ),
             children: [
                 Q === v.v8.TABS && (0, r.jsx)(T.Z, {}),
-                p === A.V5.ALL && (0, r.jsx)(F, { hideBanner: !G || p !== A.V5.ALL }),
+                p === A.V5.ALL && (0, r.jsx)(H, { hideBanner: !G || p !== A.V5.ALL }),
                 $ && (0, r.jsx)(z, { filter: p }),
                 (0, r.jsx)(Z.Z, {
                     className: L.messageList,
-                    renderMessageGroup: H,
+                    renderMessageGroup: F,
                     messages: p === A.V5.BOOKMARKS ? Y : q,
                     unreadMessages: p === A.V5.BOOKMARKS ? [] : X,
                     listName: 'notifications-inbox',
@@ -270,7 +297,7 @@ function B(e, t) {
 function V() {
     return (0, r.jsx)(N.Z, {});
 }
-function H(e, t) {
+function F(e, t) {
     return (0, r.jsx)(
         w.Z,
         {
@@ -281,7 +308,7 @@ function H(e, t) {
         e[0].id
     );
 }
-function F(e) {
+function H(e) {
     let { hideBanner: t } = e,
         n = (0, s.e7)([P.Z], () => P.Z.shouldHide);
     return (0, r.jsx)('div', {

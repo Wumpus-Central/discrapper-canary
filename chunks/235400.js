@@ -64,7 +64,8 @@ function C(e) {
             [l, _]
         ),
         Z = (0, p.M)(),
-        H = () =>
+        H = Z && (0, u.G1)(x),
+        Y = () =>
             (null != M && (!(0, u.qS)(M) || k)) || null === D
                 ? (0, r.jsx)(o.zxk, {
                       variant: 'primary',
@@ -120,20 +121,19 @@ function C(e) {
                 ]
             }),
             (0, r.jsxs)(o.mzw, {
+                className: N.modalFooter,
                 children: [
-                    (0, r.jsx)('div', { children: H() }),
-                    !Z &&
-                        (0, r.jsx)(o.zxk, {
-                            variant: 'secondary',
-                            text: A.intl.string(A.t['ETE/oK']),
-                            onClick: _
-                        }),
-                    Z &&
-                        (0, u.G1)(x) &&
-                        (0, r.jsx)(h.Z, {
-                            product: x,
-                            onSecondaryClick: _
-                        })
+                    Y(),
+                    H
+                        ? (0, r.jsx)(h.Z, {
+                              product: x,
+                              onSecondaryClick: _
+                          })
+                        : (0, r.jsx)(o.zxk, {
+                              variant: 'secondary',
+                              text: A.intl.string(A.t['ETE/oK']),
+                              onClick: _
+                          })
                 ]
             })
         ]
@@ -164,6 +164,7 @@ function R(e) {
                       className: N.modal,
                       size: S ? o.CgR.DYNAMIC : o.CgR.MEDIUM,
                       parentComponent: 'AvatarDecorationModal',
+                      'data-migration-pending': !0,
                       children: S
                           ? (0, r.jsx)(o.$jN, {
                                 className: N.spinner,

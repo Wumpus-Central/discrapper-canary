@@ -1927,10 +1927,13 @@ class rO extends (u = E.ZP.Store) {
     }
     getExperimentalSoundshare() {
         let e = tw().experimentalSoundshare2;
-        return this.supportsExperimentalSoundshare() && (null == e || e);
+        return this.supportsExperimentalSoundshare() && (null == e || e || !this.supportsHookSoundshare());
     }
     supportsExperimentalSoundshare() {
-        return eK.supports(eT.AN.EXPERIMENTAL_SOUNDSHARE) && m().satisfies(null === I.Z || void 0 === I.Z ? void 0 : I.Z.os.release, ey.I9);
+        return eK.supports(eT.AN.EXPERIMENTAL_SOUNDSHARE) && m().satisfies(null === I.Z || void 0 === I.Z ? void 0 : I.Z.os.release, ey.T6);
+    }
+    supportsHookSoundshare() {
+        return (0, eo.isWindows)() && eK.supports(eT.AN.SOUNDSHARE) && m().satisfies(null === I.Z || void 0 === I.Z ? void 0 : I.Z.os.release, ey.sA);
     }
     getUseSystemScreensharePicker() {
         let e = this.supportsSystemScreensharePicker(),

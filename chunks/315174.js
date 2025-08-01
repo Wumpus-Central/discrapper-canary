@@ -322,18 +322,18 @@ let D = i.memo(function (e) {
         U = !k && (0, O.Z)(v),
         G = !k && A,
         B = (0, _.xR)(j) && M && !g,
-        [V, H] = i.useState(!1),
-        F = i.useRef(!1),
+        [V, F] = i.useState(!1),
+        H = i.useRef(!1),
         z = i.useRef(null),
         W = null != t ? t : z,
         K = i.useRef(void 0),
         Y = m.QK.getSetting();
     (i.useEffect(() => {
-        if (B && n && !F.current && Y)
+        if (B && n && !H.current && Y)
             return (
-                H(!0),
+                F(!0),
                 (K.current = setTimeout(() => {
-                    H(!1);
+                    F(!1);
                 }, 5000)),
                 () => {
                     clearTimeout(K.current);
@@ -341,7 +341,7 @@ let D = i.memo(function (e) {
             );
     }, [B, n, Y]),
         i.useEffect(() => {
-            F.current = n;
+            H.current = n;
         }, [n]));
     let q = () => {
             let { renderBanner: t, guildBanner: n } = e;
@@ -411,9 +411,9 @@ let D = i.memo(function (e) {
                         ? (0, r.jsx)('div', {
                               className: E.animatedBannerHoverLayer,
                               onMouseEnter: () => {
-                                  (H(!0), clearTimeout(K.current));
+                                  (F(!0), clearTimeout(K.current));
                               },
-                              onMouseLeave: () => H(!1),
+                              onMouseLeave: () => F(!1),
                               style: { height: N }
                           })
                         : null

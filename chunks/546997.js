@@ -82,13 +82,17 @@ function f(e) {
         {
             videoHook: n,
             experimentalSoundshare: s,
-            useSystemScreensharePicker: o
+            supportsExperimentalSoundshare: o,
+            supportsHookSoundshare: u,
+            useSystemScreensharePicker: f
         } = (0, r.cj)([d.Z], () => ({
             videoHook: d.Z.getVideoHook(),
             experimentalSoundshare: d.Z.getExperimentalSoundshare(),
+            supportsExperimentalSoundshare: d.Z.supportsExperimentalSoundshare(),
+            supportsHookSoundshare: d.Z.supportsHookSoundshare(),
             useSystemScreensharePicker: d.Z.getUseSystemScreensharePicker()
         })),
-        u = (0, i.jsxs)(i.Fragment, {
+        b = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(c.F, {
                     setting: m.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_VIDEO_HOOK,
@@ -100,19 +104,21 @@ function f(e) {
                         children: p.intl.string(p.t.GmWk2N)
                     })
                 }),
-                (0, i.jsx)(c.F, {
-                    setting: m.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_EXPERIMENTAL_SOUNDSHARE,
-                    children: (0, i.jsx)(a.j7V, {
-                        value: s,
-                        onChange: (e) => l.Z.setExperimentalSoundshare(e),
-                        hideBorder: t,
-                        children: p.intl.string(p.t['4I0qzc'])
-                    })
-                }),
+                o &&
+                    u &&
+                    (0, i.jsx)(c.F, {
+                        setting: m.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_EXPERIMENTAL_SOUNDSHARE,
+                        children: (0, i.jsx)(a.j7V, {
+                            value: s,
+                            onChange: (e) => l.Z.setExperimentalSoundshare(e),
+                            hideBorder: t,
+                            children: p.intl.string(p.t['4I0qzc'])
+                        })
+                    }),
                 (0, i.jsx)(c.F, {
                     setting: m.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE_SYSTEM_PICKER,
                     children: (0, i.jsx)(a.j7V, {
-                        value: o,
+                        value: f,
                         onChange: h,
                         hideBorder: t,
                         children: p.intl.string(p.t.ie1mgY)
@@ -123,11 +129,11 @@ function f(e) {
     return (0, i.jsx)(c.F, {
         setting: m.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE,
         children: t
-            ? u
+            ? b
             : (0, i.jsx)(a.hjN, {
                   className: g.marginBottom20,
                   title: p.intl.string(p.t.NMCIf3),
-                  children: u
+                  children: b
               })
     });
 }

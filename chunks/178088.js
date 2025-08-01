@@ -68,8 +68,8 @@ function S(e) {
         }, [n, t, A]);
     i.useEffect(() => (m.S.subscribe(j.CkL.TOGGLE_INBOX, G), () => void m.S.unsubscribe(j.CkL.TOGGLE_INBOX, G)), [G]);
     let { enabled: B, inInbox: V } = h.Z.useExperiment({ location: 'RecentsPopout' }),
-        H = (0, o.e7)([p.Z], () => p.Z.hasOverdueReminder(), []) && B && V,
-        { enabled: F } = d.Z.useExperiment({ location: 'RecentsPopout' });
+        F = (0, o.e7)([p.Z], () => p.Z.hasOverdueReminder(), []) && B && V,
+        { enabled: H } = d.Z.useExperiment({ location: 'RecentsPopout' });
     i.useEffect(() => {
         D !== a.X.BOOKMARKS || B || V || L(a.X.MENTIONS);
     });
@@ -107,7 +107,7 @@ function S(e) {
                                     badgeState: x,
                                     closePopout: U
                                 })
-                              : F && D === a.X.GAME_INVITES
+                              : H && D === a.X.GAME_INVITES
                                 ? (0, r.jsx)(v.Z, {
                                       setTab: L,
                                       badgeState: x,
@@ -146,7 +146,7 @@ function S(e) {
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return S(G, n, e, H);
+                return S(G, n, e, F);
             }
         })
     });

@@ -27,8 +27,8 @@ var r = n(255367),
 let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
     N = (0, s.animated)(h.Kqy),
     w = i.memo(function (e) {
-        let { folderNode: t, setNodeRef: n, selected: l, expanded: s, mediaState: d, mentionCount: m = 0, isMentionLowImportance: w, unread: T = !1, defaultFolderName: Z, draggable: A = !1, sorting: R = !1, onDragStart: D, onDragEnd: L, onExpandCollapse: M, onContextMenu: k, renderChildNode: U, folderButtonSize: G, folderButtonContent: B, 'aria-setsize': V, 'aria-posinset': H } = e,
-            { id: F, name: z, children: W } = t,
+        let { folderNode: t, setNodeRef: n, selected: l, expanded: s, mediaState: d, mentionCount: m = 0, isMentionLowImportance: w, unread: T = !1, defaultFolderName: Z, draggable: A = !1, sorting: R = !1, onDragStart: D, onDragEnd: L, onExpandCollapse: M, onContextMenu: k, renderChildNode: U, folderButtonSize: G, folderButtonContent: B, 'aria-setsize': V, 'aria-posinset': F } = e,
+            { id: H, name: z, children: W } = t,
             [K, Y] = i.useState(!1),
             [q, X] = i.useState(!1),
             Q = K || q,
@@ -60,8 +60,8 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 [M, s]
             ),
             er = null != z && '' !== z ? z : null != Z && '' !== Z ? Z : S.intl.string(S.t.xV9hVl),
-            ei = (0, c.Ie)(''.concat(F)),
-            el = 'folder-items-'.concat(F),
+            ei = (0, c.Ie)(''.concat(H)),
+            el = 'folder-items-'.concat(H),
             eo = (function (e) {
                 let t = (0, h.dQu)(h.TVs.modules.guildbar.FOLDER_SIZE),
                     n = (0, h.dQu)(h.TVs.modules.guildbar.AVATAR_SIZE),
@@ -74,7 +74,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 leave: { height: 0 },
                 config: { duration: P }
             }),
-            es = i.useCallback((e) => (null == n ? void 0 : n(F, e)), [n, F]),
+            es = i.useCallback((e) => (null == n ? void 0 : n(H, e)), [n, H]),
             ec = (0, r.jsxs)(v.H, {
                 children: [
                     (0, r.jsx)(_.Z, {
@@ -118,7 +118,7 @@ let P = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                       treeItemProps: ei,
                                       folderButtonContent: B,
                                       'aria-setsize': V,
-                                      'aria-posinset': H
+                                      'aria-posinset': F
                                   })
                         })
                     }),

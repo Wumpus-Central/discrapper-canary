@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(539854), n(388685));
+(n.d(t, { Z: () => E }), n(539854), n(388685));
 var r = n(255367),
     o = n(793030),
     i = n(442837),
@@ -17,7 +17,7 @@ var r = n(255367),
     v = n(93841),
     b = n(388032),
     j = n(106180);
-function E() {
+function h() {
     return (0, r.jsx)('div', {
         className: j.staffContainer,
         children: (0, r.jsx)(o.xv, {
@@ -26,23 +26,23 @@ function E() {
         })
     });
 }
-function h(e) {
+function E(e) {
     let { guildId: t } = e,
         n = (0, i.e7)([a.Z], () => {
             var e;
             return (null == (e = a.Z.getGuild(t)) ? void 0 : e.features.has(g.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
         }),
-        h = (0, u.Z)(t),
-        C = h.length > 0,
+        E = (0, u.Z)(t),
+        C = E.length > 0,
         { shouldShow: I, notificationConfig: N } = (0, _._)(t, 'GuildPowerupNotificationContainer'),
         O = [];
     I && O.push(l.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
-    let [Z, P] = (0, s.ZT)(O, t),
-        S = null != Z && null != N,
-        w = (0, c.W)(t, 'GuildPowerupNotificationContainer'),
-        y = [];
-    S || C || (y.push(l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK), w && y.push(l.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL));
-    let [T, A] = (0, s.US)(y),
+    let [w, P] = (0, s.ZT)(O, t),
+        Z = null != w && null != N,
+        y = (0, c.W)(t, 'GuildPowerupNotificationContainer'),
+        S = [];
+    Z || C || (S.push(l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK), y && S.push(l.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL));
+    let [T, A] = (0, s.US)(S),
         R = ((e) => {
             let n = [];
             return (
@@ -52,12 +52,12 @@ function h(e) {
                             f.Z,
                             {
                                 guildId: t,
-                                powerups: h
+                                powerups: E
                             },
                             'expiring-powerups'
                         )
                     ),
-                S &&
+                Z &&
                     n.push(
                         (0, r.jsx)(
                             m.Z,
@@ -97,7 +97,7 @@ function h(e) {
                       color: 'text-secondary',
                       children: b.intl.string(v.default['3FRira'])
                   }),
-                  n && (0, r.jsx)(E, {}),
+                  n && (0, r.jsx)(h, {}),
                   R.map((e) => e)
               ]
           })

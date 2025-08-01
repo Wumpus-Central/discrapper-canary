@@ -107,8 +107,8 @@ function D(e) {
             isLoadingComplete: v.Z.isLoadingComplete,
             hasLoadedEver: v.Z.hasLoadedEver
         })),
-        H = !V && G,
-        { messageCategoryOpenStates: F, toggleOpenState: z } = (0, C.Z)(),
+        F = !V && G,
+        { messageCategoryOpenStates: H, toggleOpenState: z } = (0, C.Z)(),
         W = (function () {
             let e = (0, u.Wu)([v.Z], () => {
                 var e;
@@ -120,9 +120,8 @@ function D(e) {
                     let t = v.Z.getChannelInfoMap();
                     for (let r of e) {
                         var n;
-                        let e = t[r],
-                            i = null != (n = m.ZP.hasUnread(r)) && n;
-                        if ((null == e ? void 0 : e.loadState) === x.a7.UNLOADED && i) return !0;
+                        let e = t[r];
+                        if ((null == e || e.loadState === x.a7.UNLOADED) && null != (n = m.ZP.hasUnread(r)) && n) return !0;
                     }
                     return !1;
                 },
@@ -209,9 +208,9 @@ function D(e) {
                                           Z,
                                           {
                                               group: t,
-                                              isOpen: F[t],
+                                              isOpen: H[t],
                                               toggleOpenedState: () => {
-                                                  let e = F[t];
+                                                  let e = H[t];
                                                   (z(t),
                                                       (0, y.RZ)({
                                                           section: t,
@@ -223,11 +222,11 @@ function D(e) {
                                           t
                                       )
                                   ),
-                                  F[t] && e.push(...Y[t].map((e) => d(e, t === x.KZ.UNREAD))));
+                                  H[t] && e.push(...Y[t].map((e) => d(e, t === x.KZ.UNREAD))));
                           }),
                 e
             );
-        }, [t, n, a, F, z, Y, N, d, q, X, D]),
+        }, [t, n, a, H, z, Y, N, d, q, X, D]),
         J = Q[Q.length - 1],
         $ = i.isValidElement(J) && J.type === Z;
     i.useEffect(() => {
@@ -248,14 +247,14 @@ function D(e) {
         }, [o, l, t]);
     })({
         messagesByCategory: Y,
-        loadingInitial: H
+        loadingInitial: F
     });
     let et = i.useCallback(() => {
         var e;
-        let t = A.filter((e) => F[e]).reduce((e, t) => e + Y[t].length, 0),
+        let t = A.filter((e) => H[e]).reduce((e, t) => e + Y[t].length, 0),
             n = null == (e = L.current) ? void 0 : e.getScrollerState();
         return null == n ? 0 : Math.max(0, Math.ceil(n.offsetHeight / 64) - t);
-    }, [F, Y]);
+    }, [H, Y]);
     i.useEffect(() => {
         X || G || 0 >= et() || ((!$ || W) && (null == l || l(x.X.FILL_SCROLLER)));
     }, [et, l, X, G, $, W]);
