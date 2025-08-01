@@ -20773,6 +20773,10 @@ svg.radioIcon_c1e9c4 {
     z-index: -1
 }
 
+:not(.forceAnimate_dfb989) .animated_dfb989.singleIteration_dfb989 {
+    animation-iteration-count: 1
+}
+
 @keyframes pop-animation-main_dfb989 {
     0% {
         transform: translateZ(0)
