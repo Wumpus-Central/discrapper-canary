@@ -39617,17 +39617,6 @@ body .headerAnimation_b54a5b {
     width: 100%
 }
 
-.nitroIcon__9f4f9 {
-    height: 16px;
-    padding-right: 4px;
-    width: 16px
-}
-
-.innerButton__9f4f9 {
-    align-items: center;
-    display: flex
-}
-
 .paymentSourceNoticeCopy__1048e {
     margin-top: 5px
 }
@@ -41348,6 +41337,10 @@ body .headerAnimation_b54a5b {
     min-width: auto;
     padding: 2px 4px;
     width: auto
+}
+
+.modalFooter_e125f1 {
+    padding-top: var(--space-24) !important
 }
 
 .shopPageContainer__4485d {
