@@ -20601,29 +20601,45 @@ svg.radioIcon_c1e9c4 {
 
 .forceAnimate_dfb989 .container_dfb989.neon_dfb989,
 .showEffect_dfb989.neon_dfb989 {
-    color: var(--white-500);
     paint-order: stroke fill;
-    position: relative;
-    z-index: 1
-}
-
-.forceAnimate_dfb989 .container_dfb989.neon_dfb989,
-.forceAnimate_dfb989 .container_dfb989.neon_dfb989:before,
-.showEffect_dfb989.neon_dfb989,
-.showEffect_dfb989.neon_dfb989:before {
     -webkit-text-stroke-width: calc(1px + .04em);
-    -webkit-text-stroke-color: var(--custom-display-name-styles-main-color)
+    -webkit-text-stroke-color: gray;
+    color: var(--white-500);
+    position: relative;
+    z-index: 0
 }
 
 .forceAnimate_dfb989 .container_dfb989.neon_dfb989:before,
 .showEffect_dfb989.neon_dfb989:before {
-    color: var(--custom-display-name-styles-main-color);
+    background: linear-gradient(to bottom left, var(--custom-display-name-styles-light-2-color) 0, var(--custom-display-name-styles-light-2-color) 6%, var(--custom-display-name-styles-main-color) 20%, var(--custom-display-name-styles-light-1-color) 50%, var(--custom-display-name-styles-light-2-color) 56%, var(--custom-display-name-styles-main-color) 70%, var(--custom-display-name-styles-light-1-color) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-position: 100% 0;
+    background-size: 200% 200%;
     content: attr(data-username-with-effects);
-    filter: blur(calc(2px + .04em));
     left: 0;
     position: absolute;
     top: 0;
-    z-index: -1
+    z-index: -1;
+    -webkit-text-fill-color: transparent;
+    color: var(--custom-display-name-styles-main-color);
+    filter: blur(calc(2px + .12em));
+    -webkit-text-stroke-width: calc(1px + .04em);
+    -webkit-text-stroke-color: transparent
+}
+
+.forceAnimate_dfb989 .container_dfb989.neon_dfb989:after,
+.showEffect_dfb989.neon_dfb989:after {
+    color: transparent;
+    content: attr(data-username-with-effects);
+    left: 0;
+    paint-order: stroke fill;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    -webkit-text-stroke-width: calc(1px + .04em);
+    -webkit-text-stroke-color: var(--custom-display-name-styles-main-color);
+    mix-blend-mode: color
 }
 
 .forceAnimate_dfb989 .container_dfb989.toon_dfb989,
@@ -20637,7 +20653,7 @@ svg.radioIcon_c1e9c4 {
 
 .forceAnimate_dfb989 .container_dfb989.toon_dfb989:before,
 .showEffect_dfb989.toon_dfb989:before {
-    background: linear-gradient(180deg, var(--white-500) 0, var(--custom-display-name-styles-light-2-color) 8%, var(--custom-display-name-styles-light-1-color) 15%, var(--custom-display-name-styles-main-color) 25%, var(--custom-display-name-styles-light-2-color) 45%, var(--custom-display-name-styles-main-color) 55%, var(--white-500) 75%, var(--custom-display-name-styles-light-2-color) 83%, var(--custom-display-name-styles-light-1-color) 90%, var(--custom-display-name-styles-main-color) 100%);
+    background: linear-gradient(180deg, var(--white-500) 0, var(--custom-display-name-styles-light-2-color) 10%, var(--custom-display-name-styles-main-color) 25%, var(--custom-display-name-styles-light-2-color) 45%, var(--custom-display-name-styles-main-color) 55%, var(--white-500) 75%, var(--custom-display-name-styles-light-2-color) 85%, var(--custom-display-name-styles-main-color) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     background-size: 100% 400%;
@@ -20655,9 +20671,27 @@ svg.radioIcon_c1e9c4 {
     color: var(--white-500);
     paint-order: stroke fill;
     position: relative;
-    -webkit-text-stroke-width: .1em;
-    -webkit-text-stroke-color: var(--custom-display-name-styles-dark-2-color);
-    filter: drop-shadow(0 .08em 0 var(--custom-display-name-styles-main-color))
+    -webkit-text-stroke-width: calc(1.2px + .04em);
+    -webkit-text-stroke-color: var(--custom-display-name-styles-dark-2-color)
+}
+
+.forceAnimate_dfb989 .container_dfb989.pop_dfb989:before,
+.showEffect_dfb989.pop_dfb989:before {
+    color: var(--custom-display-name-styles-main-color);
+    content: attr(data-username-with-effects);
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    -webkit-text-stroke-width: calc(1.2px + .04em);
+    -webkit-text-stroke-color: transparent;
+    background: linear-gradient(to bottom left, var(--custom-display-name-styles-light-1-color) 0, var(--custom-display-name-styles-light-1-color) 6%, var(--custom-display-name-styles-main-color) 20%, var(--custom-display-name-styles-main-color) 50%, var(--custom-display-name-styles-light-1-color) 56%, var(--custom-display-name-styles-main-color) 70%, var(--custom-display-name-styles-main-color) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-position: 100% 0;
+    background-size: 200% 200%;
+    transform: translate3d(0, .08em, 0);
+    -webkit-text-fill-color: transparent
 }
 
 .forceAnimate_dfb989 .container_dfb989.solid_dfb989,
@@ -20674,7 +20708,7 @@ svg.radioIcon_c1e9c4 {
 
 .animated_dfb989.neon_dfb989:before,
 .forceAnimate_dfb989 .container_dfb989.neon_dfb989:before {
-    animation: neon-glow-flicker-animation_dfb989 4s cubic-bezier(.24, .31, .36, .93) infinite;
+    animation: neon-glow-flicker-animation_dfb989 4s linear infinite;
     animation-direction: normal;
     animation-fill-mode: forwards
 }
@@ -20699,7 +20733,16 @@ svg.radioIcon_c1e9c4 {
 
 .animated_dfb989.pop_dfb989,
 .forceAnimate_dfb989 .container_dfb989.pop_dfb989 {
-    animation: pop-text-movement_dfb989 1s linear 0s 1 alternate forwards, pop-shadow-movement_dfb989 1s linear 0s 1 forwards, pop-shadow-color_dfb989 2s ease-out 1s 3 alternate forwards
+    animation: pop-animation-main_dfb989 4s cubic-bezier(.44, .29, .48, 1) infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards
+}
+
+.animated_dfb989.pop_dfb989:before,
+.forceAnimate_dfb989 .container_dfb989.pop_dfb989:before {
+    animation: pop-animation-shadow_dfb989 4s cubic-bezier(.44, .29, .48, 1) infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards
 }
 
 .animated_dfb989.gradient_dfb989,
@@ -20730,46 +20773,43 @@ svg.radioIcon_c1e9c4 {
     z-index: -1
 }
 
-.theme-light .animated_dfb989,
-.theme-light .showEffect_dfb989 {
-    filter: brightness(.85)
-}
-
-@keyframes pop-text-movement_dfb989 {
-
-    0%,
-    to {
+@keyframes pop-animation-main_dfb989 {
+    0% {
         transform: translateZ(0)
     }
 
-    70% {
+    18% {
         transform: translate3d(0, -.05em, 0)
     }
+
+    35% {
+        transform: translate3d(0, .08em, 0)
+    }
+
+    50%,
+    to {
+        transform: translateZ(0)
+    }
 }
 
-@keyframes pop-shadow-movement_dfb989 {
+@keyframes pop-animation-shadow_dfb989 {
     0% {
-        filter: drop-shadow(0 0 0 var(--custom-display-name-styles-main-color))
+        background-position: 100% 0;
+        transform: translate3d(0, .08em, 0)
     }
 
-    70% {
-        filter: drop-shadow(0 .13em 0 var(--custom-display-name-styles-main-color))
+    18% {
+        transform: translate3d(0, .13em, 0)
     }
 
+    35% {
+        transform: translateZ(0)
+    }
+
+    50%,
     to {
-        filter: drop-shadow(0 .08em 0 var(--custom-display-name-styles-main-color))
-    }
-}
-
-@keyframes pop-shadow-color_dfb989 {
-
-    0%,
-    to {
-        filter: drop-shadow(0 .08em 0 var(--custom-display-name-styles-main-color))
-    }
-
-    70% {
-        filter: drop-shadow(0 .08em 0 var(--custom-display-name-styles-light-1-color))
+        background-position: 0 100%;
+        transform: translate3d(0, .08em, 0)
     }
 }
 
@@ -20819,26 +20859,12 @@ svg.radioIcon_c1e9c4 {
 }
 
 @keyframes neon-glow-flicker-animation_dfb989 {
-
-    0%,
-    15%,
-    18%,
-    20%,
-    23%,
-    25%,
-    50% {
-        color: var(--custom-display-name-styles-main-color)
+    0% {
+        background-position: 100% 0
     }
 
-    16%,
-    22%,
-    28% {
-        color: transparent
-    }
-
-    51%,
     to {
-        color: var(--custom-display-name-styles-main-color)
+        background-position: 0 100%
     }
 }
 
