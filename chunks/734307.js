@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => W }), n(388685));
+(n.d(t, { Z: () => z }), n(388685));
 var i,
     r,
     s,
@@ -94,7 +94,7 @@ function H(e) {
     let { guildScheduledEvent: t } = e;
     return R.updateSubtitles(t.guild_id);
 }
-class z extends (i = o.ZP.Store) {
+class W extends (i = o.ZP.Store) {
     initialize() {
         this.waitFor(g.Z, b.default, x.Z, _.Z, j.Z, d.ZP, O.Z, m.Z, p.ZP, h.Z, C.Z, E.ZP, v.Z, S.ZP, f.Z);
     }
@@ -120,15 +120,15 @@ class z extends (i = o.ZP.Store) {
     }
 }
 ((s = 'ChannelListStore'),
-    (r = 'displayName') in z
-        ? Object.defineProperty(z, r, {
+    (r = 'displayName') in W
+        ? Object.defineProperty(W, r, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (z[r] = s));
-let W = new z(c.Z, {
+        : (W[r] = s));
+let z = new W(c.Z, {
     APPLICATION_FETCH_FAIL: F,
     APPLICATION_FETCH_SUCCESS: F,
     APPLICATION_FETCH: F,

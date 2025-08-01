@@ -1,5 +1,5 @@
 (n.d(t, {
-    R: () => W,
+    R: () => z,
     Z: () => Y
 }),
     n(415506));
@@ -168,7 +168,7 @@ function H(e) {
         ]
     });
 }
-function z() {
+function W() {
     return (0, i.jsxs)('div', {
         className: L.wordMark,
         children: [
@@ -180,10 +180,10 @@ function z() {
         ]
     });
 }
-function W() {
+function z() {
     let { analyticsLocations: e } = (0, p.ZP)(m.Z.ACCOUNT_CREDIT_BANNER);
     return (0, i.jsx)(F, {
-        wordMark: (0, i.jsx)(z, {}),
+        wordMark: (0, i.jsx)(W, {}),
         subscriptionInfo: (0, i.jsx)('div', {
             className: L.planInfo,
             children: k.intl.string(k.t.R0GJLy)
@@ -203,7 +203,7 @@ function W() {
 }
 let Y = function (e) {
     var t;
-    let { subscription: r, renewalInvoicePreview: a, paymentSource: h, busy: P, analyticsLocation: W } = e,
+    let { subscription: r, renewalInvoicePreview: a, paymentSource: h, busy: P, analyticsLocation: z } = e,
         Y = 'subscription_header',
         { analyticsLocations: K } = (0, p.ZP)(m.Z.SUBSCRIPTION_HEADER),
         q = (0, o.e7)([x.default], () => x.default.getCurrentUser()),
@@ -233,7 +233,7 @@ let Y = function (e) {
                         t,
                         M(B({}, n), {
                             premiumSubscription: r,
-                            analyticsLocation: W,
+                            analyticsLocation: z,
                             analyticsLocations: K,
                             initialStep: e
                         })
@@ -253,7 +253,7 @@ let Y = function (e) {
                         : (0, f.Z)({
                               initialPlanId: r.premiumPlanIdFromItems,
                               analyticsLocations: K,
-                              analyticsLocation: W,
+                              analyticsLocation: z,
                               analyticsObject: V,
                               subscription: r
                           }));
@@ -272,7 +272,7 @@ let Y = function (e) {
                 ? (0, f.Z)({
                       initialPlanId: r.premiumPlanIdFromItems,
                       analyticsLocations: K,
-                      analyticsLocation: W,
+                      analyticsLocation: z,
                       analyticsObject: V,
                       subscription: r,
                       skipConfirm: !0
@@ -313,7 +313,7 @@ let Y = function (e) {
             });
             break;
         case Z.p9.TIER_1:
-            ef = (0, i.jsx)(z, {});
+            ef = (0, i.jsx)(W, {});
             break;
         case Z.p9.TIER_2:
             ef = (0, i.jsx)(j.Z, {
@@ -392,7 +392,7 @@ let Y = function (e) {
                                         onClick: () => {
                                             (0, f.Z)({
                                                 analyticsLocations: K,
-                                                analyticsLocation: W,
+                                                analyticsLocation: z,
                                                 analyticsObject: V,
                                                 subscription: r
                                             });

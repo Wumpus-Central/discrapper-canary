@@ -47,8 +47,8 @@ let H = () => {
         n = r.useRef(null),
         s = r.useRef(null),
         H = r.useRef(null),
-        z = r.useRef(null),
-        W = (0, l.e7)([m.Z], () => m.Z.useReducedMotion),
+        W = r.useRef(null),
+        z = (0, l.e7)([m.Z], () => m.Z.useReducedMotion),
         Y = (0, u.ZP)(),
         K = (0, c.wj)(Y),
         [q, X] = r.useState(!1),
@@ -75,7 +75,7 @@ let H = () => {
         eE = (0, i.jsxs)('div', {
             className: a()(eC.container, eC.responsiveContainer, {
                 [eC.containerBackground]: em || K,
-                [V.fadeInFromTop]: !W && em
+                [V.fadeInFromTop]: !z && em
             }),
             'data-cy': 'tier-0-marketing-page',
             children: [
@@ -136,7 +136,7 @@ let H = () => {
                             ref: ex.ref,
                             children: (0, i.jsx)(S.g, {
                                 shouldLoadVideo: ei,
-                                isReducedMotion: W,
+                                isReducedMotion: z,
                                 enablePremiumBrandRefreshDesign: em
                             })
                         }),
@@ -145,7 +145,7 @@ let H = () => {
                             ref: e_.ref,
                             children: (0, i.jsx)(S.G_, {
                                 shouldLoadVideo: ei,
-                                isReducedMotion: W,
+                                isReducedMotion: z,
                                 enablePremiumBrandRefreshDesign: em
                             })
                         }),
@@ -190,17 +190,17 @@ let H = () => {
                     })
                 }),
                 (0, i.jsx)(o.$, {
-                    innerRef: z,
+                    innerRef: W,
                     onChange: (e) => {
                         Q(e);
                     },
                     children: em
-                        ? (0, i.jsx)(y.Z, { ref: z })
+                        ? (0, i.jsx)(y.Z, { ref: W })
                         : (0, i.jsx)(D.Z, {
-                              ref: z,
+                              ref: W,
                               isFooterVisible: J,
                               isDarkMode: K,
-                              isReducedMotion: W,
+                              isReducedMotion: z,
                               subscriptionTier: eo
                           })
                 }),

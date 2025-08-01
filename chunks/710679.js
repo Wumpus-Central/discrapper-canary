@@ -1,11 +1,11 @@
-(t.d(n, { Z: () => P }), t(953529));
+(t.d(n, { Z: () => C }), t(953529));
 var i = t(255367);
 t(73800);
 var r = t(442837),
     l = t(724912),
     o = t(41776),
-    c = t(501655),
-    a = t(427679),
+    a = t(501655),
+    c = t(427679),
     s = t(592125),
     u = t(496675),
     d = t(19780),
@@ -21,48 +21,48 @@ var r = t(442837),
     x = t(405613),
     Z = t(460838),
     O = t(462179),
-    C = t(981631);
-function P(e) {
-    var n, t, P;
+    P = t(981631);
+function C(e) {
+    var n, t, C;
     let { guildEvent: E, guildId: N, truncate: k, onActionTaken: w, className: I, isNew: S } = e,
-        { id: T, guild_id: _, channel_id: D, creator_id: G, name: L, description: M, entity_type: R, image: U, recurrence_rule: H } = E,
+        { id: T, guild_id: _, channel_id: D, creator_id: G, name: L, description: R, entity_type: M, image: U, recurrence_rule: H } = E,
         A = (0, y.DK)(E),
-        z = (0, r.e7)([f.ZP], () => f.ZP.isInterestedInEventRecurrence(T, A), [T, A]),
-        B = (0, r.e7)([o.Z], () => o.Z.isLurking(_), [_]),
-        J = (0, r.e7)([a.Z], () => a.Z.getStageInstanceByChannel(D), [D]),
-        X = (0, r.e7)([s.Z], () => s.Z.getChannel(D), [D]),
+        B = (0, r.e7)([f.ZP], () => f.ZP.isInterestedInEventRecurrence(T, A), [T, A]),
+        J = (0, r.e7)([o.Z], () => o.Z.isLurking(_), [_]),
+        X = (0, r.e7)([c.Z], () => c.Z.getStageInstanceByChannel(D), [D]),
+        z = (0, r.e7)([s.Z], () => s.Z.getChannel(D), [D]),
         V = (0, r.e7)([g.default], () => g.default.getUser(G), [G]),
         { speakers: q } = (0, v.Z)({
             id: D,
             data: {
                 guild: null,
-                instance: J,
+                instance: X,
                 speakers: [],
                 participantCount: 0
             },
             context: {
                 guildId: _,
-                instance: J
+                instance: X
             }
         }),
         W = (0, r.e7)([d.Z], () => d.Z.getChannelId()),
         K = (0, f.xt)(E),
         F = W === D && null != W && K,
-        Q = q.filter((e) => e.type === c.Ui.VOICE),
+        Q = q.filter((e) => e.type === a.Ui.VOICE),
         Y = Q.length,
-        $ = (0, r.e7)([u.Z], () => u.Z.can(C.Plq.CONNECT, X), [X]),
+        $ = (0, r.e7)([u.Z], () => u.Z.can(P.Plq.CONNECT, z), [z]),
         ee = (0, h.ZP)(E),
         { isMember: en, guild: et } = (0, m.Z)(_, T),
         ei = (0, O.Z)({
             guild: et,
-            channel: X,
+            channel: z,
             guildScheduledEvent: E,
             isActive: K,
             recurrenceId: A,
             onActionTaken: w
         }),
         er = (0, l.Z)(N),
-        el = B
+        el = J
             ? void 0
             : (e) =>
                   (0, p.bO)({
@@ -99,28 +99,28 @@ function P(e) {
         })(
             {
                 guild: et,
-                channel: X,
+                channel: z,
                 creator: V,
                 name: L,
-                entityType: R,
-                description: null != M ? M : void 0,
+                entityType: M,
+                description: null != R ? R : void 0,
                 location: null != (n = (0, b.cS)(E)) ? n : void 0,
                 imageSource: null != U ? (0, x.Z)(E) : void 0,
                 imageLocation: Z.Q.THUMBNAIL,
                 isActive: K,
-                isUserLurking: B,
+                isUserLurking: J,
                 isJoined: F,
                 isMember: en,
                 isHub: er,
                 speakers: Q,
                 canConnect: $,
                 speakerCount: Y,
-                rsvped: z,
+                rsvped: B,
                 canInvite: ee
             },
             ei
         )),
-        (P = P =
+        (C = C =
             {
                 className: I,
                 onClick: el,
@@ -131,7 +131,7 @@ function P(e) {
                 recurrenceId: A
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(P))
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(C))
             : (function (e, n) {
                   var t = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
@@ -139,8 +139,8 @@ function P(e) {
                       t.push.apply(t, i);
                   }
                   return t;
-              })(Object(P)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(P, e));
+              })(Object(C)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(C, e));
               }),
         t)
     );

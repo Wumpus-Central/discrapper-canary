@@ -47,7 +47,8 @@ let v = function (e) {
                       null != v &&
                       ((0, b.d)(e, v, j, {
                           requireConfirm: O,
-                          showLargeMessageDialog: !1
+                          showLargeMessageDialog: !1,
+                          origin: 'drag_drop'
                       }),
                       g.S.dispatchToLastSubscribed(C.CkL.TEXTAREA_FOCUS));
               },

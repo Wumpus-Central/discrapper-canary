@@ -1,7 +1,7 @@
 n.d(t, { Z: () => o });
-var l = n(255367);
+var r = n(255367);
 n(73800);
-var r = n(481060),
+var l = n(481060),
     i = n(195367),
     a = n(388032),
     s = n(367612);
@@ -12,33 +12,33 @@ function o(e) {
         c = (function (e, t) {
             if (null == e) return {};
             var n,
-                l,
-                r = (function (e, t) {
+                r,
+                l = (function (e, t) {
                     if (null == e) return {};
                     var n,
-                        l,
-                        r = {},
+                        r,
+                        l = {},
                         i = Object.keys(e);
-                    for (l = 0; l < i.length; l++) ((n = i[l]), t.indexOf(n) >= 0 || (r[n] = e[n]));
-                    return r;
+                    for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
+                    return l;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (l = 0; l < i.length; l++) ((n = i[l]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
             }
-            return r;
+            return l;
         })(e, ['isSlideReady']);
-    return (0, l.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: s.__invalid_slideContainer,
         children: [
-            (0, l.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 className: s.header,
                 children: [
-                    (0, l.jsx)(r.X6q, {
+                    (0, r.jsx)(l.X6q, {
                         variant: 'heading-xl/semibold',
                         children: a.intl.string(a.t.GG6vbm)
                     }),
-                    (0, l.jsx)(r.Text, {
+                    (0, r.jsx)(l.Text, {
                         color: 'header-secondary',
                         className: s.text,
                         variant: 'text-sm/normal',
@@ -46,29 +46,29 @@ function o(e) {
                     })
                 ]
             }),
-            (0, l.jsx)(
+            (0, r.jsx)(
                 i.Z,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            l = Object.keys(n);
+                            r = Object.keys(n);
                         ('function' == typeof Object.getOwnPropertySymbols &&
-                            (l = l.concat(
+                            (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 })
                             )),
-                            l.forEach(function (t) {
-                                var l;
-                                ((l = n[t]),
+                            r.forEach(function (t) {
+                                var r;
+                                ((r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: l,
+                                              value: r,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = l));
+                                        : (e[t] = r));
                             }));
                     }
                     return e;
@@ -79,8 +79,8 @@ function o(e) {
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var l = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, l);
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
                           }
                           return n;
                       })(Object(n)).forEach(function (e) {

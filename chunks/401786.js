@@ -166,8 +166,8 @@ function D(e) {
             let { planId: t } = e;
             return N.Z1.has(t);
         }),
-        z = F || H ? G.total - U.total : -U.total,
-        { interval: W, intervalCount: Y } = L,
+        W = F || H ? G.total - U.total : -U.total,
+        { interval: z, intervalCount: Y } = L,
         K = y.intl.format(y.t['0W23cn'], { endDate: G.subscriptionPeriodStart });
     return (
         a.isPausedForFractionalPremium && d.fetched && (K = y.intl.format(y.t.eb0xgY, { expirationDate: d.endsAt.toDate() })),
@@ -189,7 +189,7 @@ function D(e) {
                                 (0, i.jsx)(b.Z9, { children: y.intl.string(y.t.iqhIp6) }),
                                 (0, i.jsx)(b.B1, {
                                     label: y.intl.format(y.t['Vg+LRk'], { subscriptionCount: 1 }),
-                                    value: (0, S.og)((0, S.T4)(z, a.currency), W, Y),
+                                    value: (0, S.og)((0, S.T4)(W, a.currency), z, Y),
                                     className: A.invoiceCancelRow
                                 }),
                                 null != V && V.length > 0

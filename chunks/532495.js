@@ -44,8 +44,8 @@ function R() {
             pendingPronouns: G,
             pendingAccentColor: F,
             pendingThemeColors: H,
-            pendingLegacyUsernameDisabled: z,
-            pendingPrimaryGuildId: W,
+            pendingLegacyUsernameDisabled: W,
+            pendingPrimaryGuildId: z,
             errors: Y
         } = (0, a.cj)([N.Z], () => {
             var e, t;
@@ -202,7 +202,7 @@ function R() {
             ei.length > 0 &&
                 (0, i.jsx)(c.Z, {
                     availablePrimaryGuilds: ei,
-                    pendingPrimaryGuildId: W,
+                    pendingPrimaryGuildId: z,
                     onChange: (e) => (0, l.s4)(e)
                 }),
             null != ee &&
@@ -210,7 +210,7 @@ function R() {
                     f.Z,
                     {
                         legacyUsername: ee,
-                        pendingLegacyUsernameDisabled: z
+                        pendingLegacyUsernameDisabled: W
                     },
                     'legacy_username'
                 )

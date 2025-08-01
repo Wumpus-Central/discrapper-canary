@@ -165,14 +165,14 @@ function k(e) {
             });
 }
 function T(e) {
-    let { className: n, guild: t, channel: r, creator: i, name: o, entityType: c, description: d, imageLocation: u = 0, imageSource: _, isActive: b, isUserLurking: p, isJoined: f = !1, isMember: j = !1, isHub: E = !1, speakers: P, speakerCount: N, rsvped: S, canInvite: Z, location: T, truncate: R, onContextMenu: U, onJoinClick: A, onJoinGuildClick: D, onGoToGuildClick: L, onRsvpClick: M, onStartClick: B, onInviteClick: F, onEndClick: H, onClick: G, isNew: z, guildEvent: q, eventPreview: W, recurrenceRule: V, recurrenceId: J } = e,
+    let { className: n, guild: t, channel: r, creator: i, name: o, entityType: c, description: d, imageLocation: u = 0, imageSource: _, isActive: b, isUserLurking: p, isJoined: f = !1, isMember: j = !1, isHub: E = !1, speakers: P, speakerCount: N, rsvped: S, canInvite: Z, location: T, truncate: R, onContextMenu: U, onJoinClick: A, onJoinGuildClick: D, onGoToGuildClick: L, onRsvpClick: B, onStartClick: M, onInviteClick: F, onEndClick: H, onClick: G, isNew: z, guildEvent: W, eventPreview: q, recurrenceRule: V, recurrenceId: J } = e,
         X = (0, h.Q)(r, c),
         Y = c === I.WX.EXTERNAL,
         K = Y ? (e) => e.stopPropagation() : void 0,
         Q = [];
     if (null != V && null != event) {
         let e = (0, m.Ho)(V);
-        Q = (0, m.PJ)(4, e, new Date(q.scheduled_start_time));
+        Q = (0, m.PJ)(4, e, new Date(W.scheduled_start_time));
     }
     let $ = Q.length > 0;
     return (0, a.jsxs)(s.kL8, {
@@ -201,8 +201,8 @@ function T(e) {
                         guildId: null == t ? void 0 : t.id,
                         isHub: E,
                         isNew: z,
-                        guildEvent: q,
-                        eventPreview: W,
+                        guildEvent: W,
+                        eventPreview: q,
                         recurrenceId: J
                     }),
                     b &&
@@ -234,7 +234,7 @@ function T(e) {
                                       isUserLurking: p,
                                       isMember: j,
                                       rsvped: S,
-                                      onRsvpClick: M,
+                                      onRsvpClick: B,
                                       onJoinGuildClick: D,
                                       onGoToGuildClick: L,
                                       guildName: null == t ? void 0 : t.name,
@@ -252,8 +252,8 @@ function T(e) {
                                       isChannelPublic: X,
                                       onContextMenu: U,
                                       onJoinClick: A,
-                                      onRsvpClick: M,
-                                      onStartClick: B,
+                                      onRsvpClick: B,
+                                      onStartClick: M,
                                       onInviteClick: F,
                                       onEndClick: H,
                                       onJoinGuildClick: D
@@ -267,7 +267,7 @@ function T(e) {
                 (0, a.jsx)(C.Z, {
                     guildId: null == t ? void 0 : t.id,
                     recurrenceRule: V,
-                    guildEventId: q.id,
+                    guildEventId: W.id,
                     onRecurrenceClick: G
                 })
         ]

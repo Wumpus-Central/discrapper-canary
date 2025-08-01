@@ -1,84 +1,83 @@
 (n.d(t, { default: () => W }), n(388685));
-var l,
-    r = n(255367),
+var r,
+    l = n(255367),
     i = n(73800),
     a = n(392711),
     s = n(442837),
-    o = n(755721),
-    c = n(481060),
-    u = n(447543),
-    d = n(607070),
-    x = n(745510),
-    m = n(96698),
-    g = n(313201),
-    v = n(433775),
-    h = n(984933),
-    f = n(430824),
-    p = n(971130),
-    j = n(981888),
-    y = n(924301),
-    b = n(482241),
-    E = n(951539),
-    O = n(545165),
-    N = n(236373),
-    C = n(230900),
-    T = n(854698),
-    S = n(334877),
-    I = n(785468),
-    Z = n(377329),
-    P = n(311166),
-    w = n(744782),
-    D = n(129526),
-    _ = n(765305),
-    R = n(981631),
-    A = n(388032),
-    k = n(365545);
-function L(e) {
+    o = n(481060),
+    c = n(447543),
+    u = n(607070),
+    d = n(745510),
+    x = n(96698),
+    m = n(313201),
+    g = n(433775),
+    v = n(984933),
+    h = n(430824),
+    f = n(971130),
+    p = n(981888),
+    j = n(924301),
+    y = n(482241),
+    b = n(951539),
+    E = n(545165),
+    O = n(236373),
+    N = n(230900),
+    C = n(854698),
+    T = n(334877),
+    S = n(785468),
+    I = n(377329),
+    Z = n(311166),
+    P = n(744782),
+    w = n(129526),
+    D = n(765305),
+    _ = n(981631),
+    R = n(388032),
+    A = n(365545);
+function G(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            l = Object.keys(n);
+            r = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            l.forEach(function (t) {
-                var l;
-                ((l = n[t]),
+            r.forEach(function (t) {
+                var r;
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: l,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = l));
+                        : (e[t] = r));
             }));
     }
     return e;
 }
-let { INVITE_OPTIONS_7_DAYS: G, INVITE_OPTIONS_UNLIMITED: M } = p.ZP;
-var z = (((l = z || {})[(l.ENTITY = 0)] = 'ENTITY'), (l[(l.SETTINGS = 1)] = 'SETTINGS'), (l[(l.PREVIEW = 2)] = 'PREVIEW'), (l[(l.SUCCESS = 3)] = 'SUCCESS'), l);
+let { INVITE_OPTIONS_7_DAYS: k, INVITE_OPTIONS_UNLIMITED: M } = f.ZP;
+var L = (((r = L || {})[(r.ENTITY = 0)] = 'ENTITY'), (r[(r.SETTINGS = 1)] = 'SETTINGS'), (r[(r.PREVIEW = 2)] = 'PREVIEW'), (r[(r.SUCCESS = 3)] = 'SUCCESS'), r);
 function X(e) {
     let { modal: t } = e,
-        { createMultipleConfetti: n } = i.useContext(x.h);
+        { createMultipleConfetti: n } = i.useContext(d.h);
     return (
         i.useEffect(() => {
             let e = null == t ? void 0 : t.getScrollerNode();
             if (null == e) return;
-            let l = e.getBoundingClientRect();
+            let r = e.getBoundingClientRect();
             (n(
                 {
                     position: {
                         type: 'static-random',
                         minValue: {
-                            x: l.left - 100,
-                            y: l.top - 100
+                            x: r.left - 100,
+                            y: r.top - 100
                         },
                         maxValue: {
-                            x: l.left + 100,
-                            y: l.top + 100
+                            x: r.left + 100,
+                            y: r.top + 100
                         }
                     },
                     velocity: {
@@ -100,12 +99,12 @@ function X(e) {
                         position: {
                             type: 'static-random',
                             minValue: {
-                                x: l.right - 100,
-                                y: l.top - 100
+                                x: r.right - 100,
+                                y: r.top - 100
                             },
                             maxValue: {
-                                x: l.right + 100,
-                                y: l.top + 100
+                                x: r.right + 100,
+                                y: r.top + 100
                             }
                         },
                         velocity: {
@@ -127,169 +126,175 @@ function X(e) {
     );
 }
 function V(e) {
-    let { guildId: t, guildEvent: n, guildEventId: l, editBroadcastInfoData: u, isEdit: x, formErrors: v, transitionState: h, loading: f, error: p, onChange: j, onSave: b, onClose: E, createdEvent: O } = e,
-        N = (0, g.Dt)(),
-        C = i.useRef(n),
-        T = !(0, a.isEqual)(C.current, n),
-        D = i.useMemo(
+    let { guildId: t, guildEvent: n, guildEventId: r, editBroadcastInfoData: c, isEdit: d, formErrors: g, transitionState: v, loading: h, error: f, onChange: p, onSave: y, onClose: b, createdEvent: E } = e,
+        O = (0, m.Dt)(),
+        N = i.useRef(n),
+        C = !(0, a.isEqual)(N.current, n),
+        w = i.useMemo(
             () => [
                 {
                     slideId: 0,
-                    label: A.intl.string(A.t['56QlKS']),
-                    valid: null == v.entity,
-                    userErrorMessage: v.entity
+                    label: R.intl.string(R.t['56QlKS']),
+                    valid: null == g.entity,
+                    userErrorMessage: g.entity
                 },
                 {
                     slideId: 1,
-                    label: A.intl.string(A.t['w5/ntb']),
-                    valid: null == v.schedule && null == v.topic && (!x || T),
-                    userErrorMessage: v.schedule
+                    label: R.intl.string(R.t['w5/ntb']),
+                    valid: null == g.schedule && null == g.topic && (!d || C),
+                    userErrorMessage: g.schedule
                 },
                 {
                     slideId: 2,
-                    label: A.intl.string(A.t['8aJzT0']),
+                    label: R.intl.string(R.t['8aJzT0']),
                     valid: !0
                 }
             ],
-            [v, x, T]
+            [g, d, C]
         ),
-        _ = Object.keys(z).length,
-        R = (0, y.xt)(n),
-        L = (e) => Math.max(0, Math.min(e, _ - 1)),
-        [G, M] = i.useState(+!!R),
+        D = Object.keys(L).length,
+        _ = (0, j.xt)(n),
+        G = (e) => Math.max(0, Math.min(e, D - 1)),
+        [k, M] = i.useState(+!!_),
         [V, W] = i.useState(!1),
-        U = i.useMemo(
+        z = i.useMemo(
             () =>
-                D.slice(0, G + 1)
+                w
+                    .slice(0, k + 1)
                     .map((e) => e.valid)
                     .every(Boolean),
-            [D, G]
+            [w, k]
         ),
-        B = G >= D.length ? 3 : D[L(G)].slideId,
-        F = 3 === B;
-    (0, S.l)((e) => e.onUpdateCanCloseModal)(F);
-    let q = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
-        H = i.useRef(null),
-        Y = (e) => {
-            (W(!1), M(L(e)));
+        U = k >= w.length ? 3 : w[G(k)].slideId,
+        B = 3 === U;
+    (0, T.l)((e) => e.onUpdateCanCloseModal)(B);
+    let F = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+        q = i.useRef(null),
+        H = (e) => {
+            (W(!1), M(G(e)));
         },
-        J = i.useRef(Y);
+        Y = i.useRef(H);
     (i.useEffect(() => {
-        J.current = Y;
+        Y.current = H;
     }),
         i.useEffect(() => {
-            (null == O ? void 0 : O.id) != null && J.current(3);
-        }, [null == O ? void 0 : O.id]));
-    let K = () => {
-            U && (2 === B ? b() : F ? E() : Y(G + 1));
+            (null == E ? void 0 : E.id) != null && Y.current(3);
+        }, [null == E ? void 0 : E.id]));
+    let J = () => {
+            z && (2 === U ? y() : B ? b() : H(k + 1));
         },
-        Q = () => {
-            Y(G - 1);
+        K = () => {
+            H(k - 1);
         },
-        $ = A.intl.string(A.t.PDTjLC);
+        Q = R.intl.string(R.t.PDTjLC);
     return (
-        2 === B && ($ = x ? A.intl.string(A.t.e5VEcH) : A.intl.string(A.t['60lJ0N'])),
-        (0, r.jsxs)(c.Y0X, {
-            transitionState: h,
-            'aria-labelledby': N,
-            size: c.CgR.DYNAMIC,
+        2 === U && (Q = d ? R.intl.string(R.t.e5VEcH) : R.intl.string(R.t['60lJ0N'])),
+        (0, l.jsxs)(o.Y0X, {
+            transitionState: v,
+            'aria-labelledby': O,
+            size: o.CgR.DYNAMIC,
             parentComponent: 'ScheduleEventModal',
+            'data-migration-pending': !0,
             children: [
-                !q && F ? (0, r.jsx)(X, { modal: H.current }) : null,
-                (0, r.jsxs)(c.hzk, {
-                    className: k.content,
-                    scrollerRef: H,
+                !F && B ? (0, l.jsx)(X, { modal: q.current }) : null,
+                (0, l.jsxs)(o.hzk, {
+                    className: A.content,
+                    scrollerRef: q,
+                    'data-migration-pending': !0,
                     children: [
-                        !F &&
-                            (0, r.jsx)(m.Z, {
-                                steps: D.map((e) => e.label),
-                                stepIndex: G,
+                        !B &&
+                            (0, l.jsx)(x.Z, {
+                                steps: w.map((e) => e.label),
+                                stepIndex: k,
                                 onClick: (e) => {
-                                    e < G ? Q() : e > G && K();
+                                    e < k ? K() : e > k && J();
                                 }
                             }),
-                        (0, r.jsxs)(c.MyZ, {
-                            activeSlide: B,
+                        (0, l.jsxs)(o.MyZ, {
+                            activeSlide: U,
                             width: 440,
                             onSlideReady: (e) => {
-                                W(e === B);
+                                W(e === U);
                             },
                             children: [
-                                (0, r.jsx)(c.Mi4, {
+                                (0, l.jsx)(o.Mi4, {
                                     id: 0,
-                                    children: (0, r.jsx)(I.Z, {
+                                    children: (0, l.jsx)(S.Z, {
                                         guildId: t,
                                         guildEvent: n,
-                                        validationErrorMessage: v.entity,
+                                        validationErrorMessage: g.entity,
                                         isSlideReady: V,
-                                        onChange: j
+                                        onChange: p
                                     })
                                 }),
-                                (0, r.jsx)(c.Mi4, {
+                                (0, l.jsx)(o.Mi4, {
                                     id: 1,
-                                    children: (0, r.jsx)(P.Z, {
+                                    children: (0, l.jsx)(Z.Z, {
                                         guildEvent: n,
-                                        guildEventId: l,
+                                        guildEventId: r,
                                         guildId: t,
-                                        editBroadcastInfoData: u,
-                                        onChange: j,
-                                        error: p,
-                                        validationErrorMessage: v.schedule,
+                                        editBroadcastInfoData: c,
+                                        onChange: p,
+                                        error: f,
+                                        validationErrorMessage: g.schedule,
                                         isSlideReady: V
                                     })
                                 }),
-                                (0, r.jsx)(c.Mi4, {
+                                (0, l.jsx)(o.Mi4, {
                                     id: 2,
-                                    children: (0, r.jsx)(Z.Z, {
+                                    children: (0, l.jsx)(I.Z, {
                                         guildId: t,
                                         guildEvent: n,
-                                        guildEventId: l,
-                                        error: p
+                                        guildEventId: r,
+                                        error: f
                                     })
                                 }),
-                                (0, r.jsx)(c.Mi4, {
+                                (0, l.jsx)(o.Mi4, {
                                     id: 3,
-                                    children: (0, r.jsx)(w.Z, {
-                                        onClose: E,
-                                        event: O
+                                    children: (0, l.jsx)(P.Z, {
+                                        onClose: b,
+                                        event: E
                                     })
                                 })
                             ]
                         })
                     ]
                 }),
-                !F &&
-                    (0, r.jsxs)(c.mzw, {
-                        className: k.footer,
+                !B &&
+                    (0, l.jsxs)(o.mzw, {
+                        className: A.footer,
+                        'data-migration-pending': !0,
                         children: [
-                            (0, r.jsxs)('div', {
-                                className: k.inline,
+                            (0, l.jsxs)('div', {
+                                className: A.inline,
                                 children: [
-                                    (0, r.jsx)(c.zxk, {
+                                    (0, l.jsx)(o.zxk, {
                                         variant: 'secondary',
-                                        text: A.intl.string(A.t['ETE/oK']),
-                                        onClick: E
+                                        text: R.intl.string(R.t['ETE/oK']),
+                                        onClick: b
                                     }),
-                                    (0, r.jsx)('div', {
+                                    (0, l.jsx)('div', {
                                         'data-button-hoisted-classname-wrapper': !0,
-                                        className: k.button,
-                                        children: (0, r.jsx)(c.zxk, {
+                                        className: A.button,
+                                        children: (0, l.jsx)(o.zxk, {
                                             variant: 'primary',
-                                            text: $,
-                                            onClick: K,
-                                            disabled: !U,
-                                            loading: f
+                                            text: Q,
+                                            onClick: J,
+                                            disabled: !z,
+                                            loading: h
                                         })
                                     })
                                 ]
                             }),
-                            0 !== B &&
-                                (0, r.jsx)(o.zx, {
-                                    look: o.zx.Looks.LINK,
-                                    size: o.zx.Sizes.MIN,
-                                    onClick: Q,
-                                    color: o.zx.Colors.LINK,
-                                    children: A.intl.string(A.t['13/7kZ'])
+                            0 !== U &&
+                                (0, l.jsx)('div', {
+                                    className: A.textButtonWrapper,
+                                    children: (0, l.jsx)(o.Avr, {
+                                        variant: 'secondary',
+                                        size: 'sm',
+                                        onClick: K,
+                                        text: R.intl.string(R.t['13/7kZ'])
+                                    })
                                 })
                         ]
                     })
@@ -298,103 +303,103 @@ function V(e) {
     );
 }
 function W(e) {
-    let { guildId: t, guildScheduledEventId: l, transitionState: a, onClose: o } = e,
-        d = (0, s.e7)([f.Z], () => f.Z.getGuild(t)),
-        x = (0, s.e7)([y.ZP], () => y.ZP.getGuildScheduledEvent(l), [l]),
-        m = (0, s.e7)([h.ZP], () => h.ZP.getDefaultChannel(t), [t]),
-        g = (0, N.j$)(x, m),
-        [p, S] = i.useState(g),
-        [I] = i.useState((0, N.Ql)(x)),
+    let { guildId: t, guildScheduledEventId: r, transitionState: a, onClose: u } = e,
+        d = (0, s.e7)([h.Z], () => h.Z.getGuild(t)),
+        x = (0, s.e7)([j.ZP], () => j.ZP.getGuildScheduledEvent(r), [r]),
+        m = (0, s.e7)([v.ZP], () => v.ZP.getDefaultChannel(t), [t]),
+        f = (0, O.j$)(x, m),
+        [T, S] = i.useState(f),
+        [I] = i.useState((0, O.Ql)(x)),
         [Z, P] = i.useState(null),
-        w = (e) => {
+        A = (e) => {
             var t;
-            let n = (0, E.so)(e),
-                l = null != (t = e.channel_id) ? t : null == m ? void 0 : m.id;
-            (null != l &&
-                u.ZP.createInvite(
-                    l,
+            let n = (0, b.so)(e),
+                r = null != (t = e.channel_id) ? t : null == m ? void 0 : m.id;
+            (null != r &&
+                c.ZP.createInvite(
+                    r,
                     {
-                        max_age: G.value,
+                        max_age: k.value,
                         max_uses: M.value
                     },
-                    R.t4x.GUILD_EVENTS
+                    _.t4x.GUILD_EVENTS
                 ),
-                n ? P(e) : o());
+                n ? P(e) : u());
         },
-        k = (0, v.Z)(d, null == x ? void 0 : x.id, p),
-        [z, { loading: X, error: W }] = (0, j.Z)(async () => {
+        L = (0, g.Z)(d, null == x ? void 0 : x.id, T),
+        [X, { loading: W, error: z }] = (0, p.Z)(async () => {
             if (null != Z) return;
-            let e = { broadcastToDirectoryChannels: k.broadcastToDirectoryChannels };
-            if (I && null != l) return (await b.Z.saveEvent(l, p, t, e), o());
-            let n = await b.Z.createGuildEvent(p, t, e);
-            return (w(n.body), n);
+            let e = { broadcastToDirectoryChannels: L.broadcastToDirectoryChannels };
+            if (I && null != r) return (await y.Z.saveEvent(r, T, t, e), u());
+            let n = await y.Z.createGuildEvent(T, t, e);
+            return (A(n.body), n);
         }),
-        U = i.useMemo(() => (0, D.Z)(p, I), [p, I]);
-    return (0, r.jsx)(V, {
+        U = i.useMemo(() => (0, w.Z)(T, I), [T, I]);
+    return (0, l.jsx)(V, {
         guildId: t,
-        guildEvent: p,
-        guildEventId: l,
-        editBroadcastInfoData: k,
+        guildEvent: T,
+        guildEventId: r,
+        editBroadcastInfoData: L,
         isEdit: I,
         formErrors: U,
         transitionState: a,
-        loading: X,
-        error: W,
+        loading: W,
+        error: z,
         onChange: (e) => {
             if (null != e.entityType) {
                 var n;
-                let l = (0, C.xC)(e.entityType),
-                    [r] = (0, O.SU)(t, l);
-                ((e.channelId = null != (n = null == r ? void 0 : r.id) ? n : null), e.entityType !== _.WX.EXTERNAL && p.entityType === _.WX.EXTERNAL && (e.entityMetadata = null));
+                let r = (0, N.xC)(e.entityType),
+                    [l] = (0, E.SU)(t, r);
+                ((e.channelId = null != (n = null == l ? void 0 : l.id) ? n : null), e.entityType !== D.WX.EXTERNAL && T.entityType === D.WX.EXTERNAL && (e.entityMetadata = null));
             }
-            S((t) => L({}, t, e));
+            S((t) => G({}, t, e));
         },
         onSave: () => {
-            null != p.recurrenceRule && I && (0, T.BP)(x, p)
-                ? (0, c.ZDy)(async () => {
+            null != T.recurrenceRule && I && (0, C.BP)(x, T)
+                ? (0, o.ZDy)(async () => {
                       let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
                       return (t) => {
-                          var n, l;
-                          return (0, r.jsxs)(
+                          var n, r;
+                          return (0, l.jsxs)(
                               e,
-                              ((n = L({}, t)),
-                              (l = l =
+                              ((n = G({}, t)),
+                              (r = r =
                                   {
-                                      header: A.intl.string(A.t.BW1Qoq),
-                                      confirmText: A.intl.string(A.t.e5VEcH),
-                                      cancelText: A.intl.string(A.t.oEAioK),
-                                      onConfirm: z,
+                                      header: R.intl.string(R.t.BW1Qoq),
+                                      confirmText: R.intl.string(R.t.e5VEcH),
+                                      cancelText: R.intl.string(R.t.oEAioK),
+                                      onConfirm: X,
                                       children: [
-                                          (0, r.jsx)(c.Text, {
+                                          (0, l.jsx)(o.Text, {
                                               variant: 'text-md/normal',
-                                              children: A.intl.string(A.t.aNCYam)
+                                              children: R.intl.string(R.t.aNCYam)
                                           }),
-                                          (0, r.jsx)('br', {}),
-                                          (0, r.jsx)(c.Text, {
+                                          (0, l.jsx)('br', {}),
+                                          (0, l.jsx)(o.Text, {
                                               variant: 'text-md/normal',
-                                              children: A.intl.format(A.t.RWBa5e, {})
+                                              children: R.intl.format(R.t.RWBa5e, {})
                                           })
                                       ]
                                   }),
                               Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                                  ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                   : (function (e, t) {
                                         var n = Object.keys(e);
                                         if (Object.getOwnPropertySymbols) {
-                                            var l = Object.getOwnPropertySymbols(e);
-                                            n.push.apply(n, l);
+                                            var r = Object.getOwnPropertySymbols(e);
+                                            n.push.apply(n, r);
                                         }
                                         return n;
-                                    })(Object(l)).forEach(function (e) {
-                                        Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                                    })(Object(r)).forEach(function (e) {
+                                        Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
                                     }),
                               n)
                           );
                       };
                   })
-                : z();
+                : X();
         },
-        onClose: o,
+        onClose: u,
         createdEvent: Z
     });
 }

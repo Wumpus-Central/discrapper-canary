@@ -37,7 +37,7 @@ let g = i.memo(function (e) {
         className: o()(m.container, A, y, s, {
             [m.showEffect]: i !== f.F.PLAIN,
             [m.animated]: i === f.F.ANIMATED && !O,
-            [m.singleIteration]: !g
+            [m.loop]: g
         }),
         style: S,
         'data-username-with-effects': (0, u.qgQ)(t),

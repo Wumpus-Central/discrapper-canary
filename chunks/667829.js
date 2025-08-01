@@ -370,7 +370,8 @@ class U extends i.Component {
                         if (null == i)
                             return l(e, E, u.drafts.type, {
                                 requireConfirm: !0,
-                                showLargeMessageDialog: t
+                                showLargeMessageDialog: t,
+                                origin: 'clipboard'
                             });
                         let a = null != (n = u.drafts.commandType) ? n : u.drafts.type,
                             o = null,

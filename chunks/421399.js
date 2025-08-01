@@ -133,7 +133,8 @@ function k(e) {
                 ? (0, i.jsx)(x.Z, {
                       userName: ex,
                       displayNameStyles: el,
-                      effectDisplayType: _.F.PLAIN
+                      effectDisplayType: _.F.PLAIN,
+                      loop: !0
                   })
                 : ex,
             'data-text': ee + et

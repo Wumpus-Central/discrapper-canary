@@ -1,11 +1,10 @@
-n.d(t, { t: () => d });
+n.d(t, { t: () => u });
 var r = n(255367),
-    i = n(755721),
-    a = n(481060),
-    o = n(502109),
-    s = n(388032),
-    l = n(646175);
-function c(e, t, n) {
+    i = n(481060),
+    a = n(502109),
+    o = n(388032),
+    s = n(646175);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +17,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,34 +28,33 @@ function u(e) {
                 })
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                l(e, t, n[t]);
             }));
     }
     return e;
 }
-function d(e) {
+function u(e) {
     let t,
-        { onChooseType: n, onStripePaymentMethodReceived: c, onPaymentRequestFailure: d, onValidPaymentRequest: _, paymentRequestRef: f, paymentRequestWallet: p } = e,
-        h = {
-            paymentLabel: s.intl.string(s.t.ZURqX1),
-            paymentRequestRef: f,
+        { onChooseType: n, onStripePaymentMethodReceived: l, onPaymentRequestFailure: u, onValidPaymentRequest: d, paymentRequestRef: _, paymentRequestWallet: f } = e,
+        p = {
+            paymentLabel: o.intl.string(o.t.ZURqX1),
+            paymentRequestRef: _,
             renderConnectorView: !0,
-            onStripePaymentMethodReceived: c,
-            onPaymentRequestFailure: d,
-            onValidPaymentRequest: _,
+            onStripePaymentMethodReceived: l,
+            onPaymentRequestFailure: u,
+            onValidPaymentRequest: d,
             onChooseType: n,
-            loadingComponent: (0, r.jsx)(i.zx, {
-                color: i.zx.Colors.TRANSPARENT,
-                submitting: !0,
-                look: i.zx.Looks.LINK
+            loadingComponent: (0, r.jsx)(i.$jN, {
+                style: { marginTop: 16 },
+                type: i.RAz.PULSING_ELLIPSIS
             })
         };
     return (
-        (t = 'applePay' === p ? (0, r.jsx)(o.Ch, u({}, h)) : (0, r.jsx)(o.Tr, u({}, h))),
+        (t = 'applePay' === f ? (0, r.jsx)(a.Ch, c({}, p)) : (0, r.jsx)(a.Tr, c({}, p))),
         (0, r.jsx)('div', {
-            className: l.body,
-            children: (0, r.jsx)(a.hjN, {
-                title: s.intl.string(s.t.eQ2bLi),
+            className: s.body,
+            children: (0, r.jsx)(i.hjN, {
+                title: o.intl.string(o.t.eQ2bLi),
                 children: t
             })
         })

@@ -571,6 +571,7 @@ class x extends y.ZP {
             (this.preCompressionSize = null != (o = null == (i = e.file) ? void 0 : i.size) ? o : 0),
             (this.currentSize = null != (s = null == (a = e.file) ? void 0 : a.size) ? s : 0),
             (this.reactNativeFileIndex = r),
-            (this._abortController = new AbortController()));
+            (this._abortController = new AbortController()),
+            e.platform === y.ow.WEB && null != e.origin && (this.uploadAnalytics.origin = e.origin));
     }
 }

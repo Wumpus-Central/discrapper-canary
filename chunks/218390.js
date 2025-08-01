@@ -45,8 +45,8 @@ var i = n(255367),
     G = n(533525),
     F = n(232076),
     H = n(736519),
-    z = n(767714),
-    W = n(382791),
+    W = n(767714),
+    z = n(382791),
     Y = n(823188),
     K = n(504865),
     q = n(179984),
@@ -74,10 +74,10 @@ function el(e) {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (a || !l) &&
-                    (0, i.jsx)(W.Cy, {
+                    (0, i.jsx)(z.Cy, {
                         text: a ? $.intl.string($.t.qYKftb) : $.intl.string($.t.EyjDRE),
                         className: ee.topRimPillWithSparkles,
-                        colorOptions: (0, u.wj)(s) ? W.VE.PREMIUM_TIER_2_WHITE_FILL : W.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
+                        colorOptions: (0, u.wj)(s) ? z.VE.PREMIUM_TIER_2_WHITE_FILL : z.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                     }),
                 (a || !l) && (0, i.jsx)('div', { className: ee.rimGlowTier2 }),
                 (0, i.jsx)(p.X6q, {
@@ -131,10 +131,10 @@ function eo() {
                     g && !o
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(W.mn, {
+                                  (0, i.jsx)(z.mn, {
                                       text: $.intl.string($.t.uXF4c3),
                                       className: ee.fractionalPremiumTopRimPill,
-                                      colorOptions: W.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
+                                      colorOptions: z.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                                   }),
                                   (0, i.jsx)(p.X6q, {
                                       variant: 'heading-md/normal',
@@ -154,10 +154,10 @@ function eo() {
                           : o
                             ? (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)(W.Cy, {
+                                      (0, i.jsx)(z.Cy, {
                                           text: $.intl.string($.t.qYKftb),
                                           className: ee.topRimPillWithSparkles,
-                                          colorOptions: (0, u.wj)(r) ? W.VE.PREMIUM_TIER_2_WHITE_FILL : W.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
+                                          colorOptions: (0, u.wj)(r) ? z.VE.PREMIUM_TIER_2_WHITE_FILL : z.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                                       }),
                                       (0, i.jsx)(p.X6q, {
                                           variant: 'heading-md/normal',
@@ -172,7 +172,7 @@ function eo() {
                     g && !d && (0, M.C)('nitro-settings-hero', e)
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(z.Z, {
+                                  (0, i.jsx)(W.Z, {
                                       textOptions: {
                                           textOverride: o ? $.intl.string($.t.YScQSE) : $.intl.string($.t['0b3YRk']),
                                           textClassName: ee.tierCardButtonCTA

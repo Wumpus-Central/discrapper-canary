@@ -107,7 +107,8 @@ let G = i.memo(function (e) {
                 ? (0, N.G)(V, [])
                 : (0, N.d)(e, V, z, {
                       requireConfirm: !0,
-                      showLargeMessageDialog: n
+                      showLargeMessageDialog: n,
+                      origin: 'file_picker'
                   }),
                 Z.S.dispatchToLastSubscribed(D.CkL.TEXTAREA_FOCUS));
         },

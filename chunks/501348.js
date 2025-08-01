@@ -53,7 +53,7 @@ function H(e, t, n) {
         e
     );
 }
-function z(e) {
+function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -69,7 +69,7 @@ function z(e) {
     }
     return e;
 }
-function W(e, t) {
+function z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -99,8 +99,8 @@ let Y = {
         let t = 0;
         return [
             (0, v.e5)(
-                W(
-                    z(
+                z(
+                    W(
                         {},
                         (0, S.ZP)({
                             channelId: J,
@@ -114,8 +114,8 @@ let Y = {
                 )
             ),
             (0, v.e5)(
-                W(
-                    z(
+                z(
+                    W(
                         {},
                         (0, S.ZP)({
                             channelId: J,
@@ -129,8 +129,8 @@ let Y = {
                 )
             ),
             (0, v.e5)(
-                W(
-                    z(
+                z(
+                    W(
                         {},
                         (0, S.ZP)({
                             channelId: J,
@@ -144,8 +144,8 @@ let Y = {
                 )
             ),
             (0, v.e5)(
-                W(
-                    z(
+                z(
+                    W(
                         {},
                         (0, S.ZP)({
                             channelId: J,
@@ -159,8 +159,8 @@ let Y = {
                 )
             ),
             (0, v.e5)(
-                W(
-                    z(
+                z(
+                    W(
                         {},
                         (0, S.ZP)({
                             channelId: J,
@@ -728,7 +728,7 @@ function ei() {
         });
     return (0, i.jsx)(
         et,
-        z(
+        W(
             {
                 messageDisplayCompact: e,
                 hideSimpleEmbedContent: t && n,

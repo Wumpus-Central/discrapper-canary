@@ -106,65 +106,67 @@ function R(e) {
     );
 }
 function P(e) {
-    var t, n, r, i, o, s, c;
-    let _,
-        h,
-        { reactions: m, interactionData: y } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        v = R(e),
-        T = null != (i = null == (t = e.mentions) ? void 0 : t.map((e) => e.id)) ? i : [],
-        A = null != (o = e.mention_roles) ? o : [],
-        P = null != (s = e.mention_channels) ? s : [],
-        w = e.message_reference,
-        D = N(e),
-        L = null,
-        M = null == e ? void 0 : e.gift_info,
-        U = e.gifting_prompt,
-        G = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
-        B = e.type === O.uaV.THREAD_STARTER_MESSAGE ? (null == (r = e.referenced_message) || null == (n = r.author) ? void 0 : n.id) : void 0,
-        V = e.content;
+    var t, n, r, i, o, s, c, _;
+    let h,
+        m,
+        { reactions: y, interactionData: v } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        T = R(e),
+        A = null != (i = null == (t = e.mentions) ? void 0 : t.map((e) => e.id)) ? i : [],
+        P = null != (o = e.mention_roles) ? o : [],
+        w = null != (s = e.mention_channels) ? s : [],
+        D = null != (c = e.mention_games) ? c : [],
+        L = e.message_reference,
+        M = N(e),
+        U = null,
+        G = null == e ? void 0 : e.gift_info,
+        B = e.gifting_prompt,
+        V = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
+        F = e.type === O.uaV.THREAD_STARTER_MESSAGE ? (null == (r = e.referenced_message) || null == (n = r.author) ? void 0 : n.id) : void 0,
+        Z = e.content;
     return new d.ZP(
-        (e.type === O.uaV.PREMIUM_REFERRAL ? ((_ = E.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (V = '')) : e.type === O.uaV.CHAT_WALLPAPER_SET && ((h = (0, a.Z)(e.content)), (V = '')), C(e))
-            ? S(I({}, L), {
+        (e.type === O.uaV.PREMIUM_REFERRAL ? ((h = E.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (Z = '')) : e.type === O.uaV.CHAT_WALLPAPER_SET && ((m = (0, a.Z)(e.content)), (Z = '')), C(e))
+            ? S(I({}, U), {
                   id: e.id,
                   channel_id: e.channel_id,
                   type: O.uaV.DEFAULT,
-                  author: D,
-                  timestamp: v.timestamp,
+                  author: M,
+                  timestamp: T.timestamp,
                   isUnsupported: !0
               })
-            : S(I({}, e, L, v.toJS()), {
-                  author: D,
+            : S(I({}, e, U, T.toJS()), {
+                  author: M,
                   webhookId: e.webhook_id,
-                  blocked: p.Z.isBlockedForMessage(e) || (null != B && p.Z.isBlocked(B)),
-                  ignored: p.Z.isIgnoredForMessage(e) || (null != B && p.Z.isIgnored(B)),
+                  blocked: p.Z.isBlockedForMessage(e) || (null != F && p.Z.isBlocked(F)),
+                  ignored: p.Z.isIgnoredForMessage(e) || (null != F && p.Z.isIgnored(F)),
                   mentionEveryone: e.mention_everyone,
-                  mentions: T,
-                  mentionRoles: A,
-                  mentionChannels: P,
-                  messageReference: w,
+                  mentions: A,
+                  mentionRoles: P,
+                  mentionChannels: w,
+                  mentionGames: D,
+                  messageReference: L,
                   mentioned: (0, b.Sz)({
                       userId: f.default.getId(),
                       channelId: e.channel_id,
-                      mentionEveryone: null != (c = e.mention_everyone) && c,
-                      mentionUsers: T,
-                      mentionRoles: A
+                      mentionEveryone: null != (_ = e.mention_everyone) && _,
+                      mentionUsers: A,
+                      mentionRoles: P
                   }),
                   giftCodes: (0, g.Fp)(e) ? (0, g.Q_)(null == e ? void 0 : e.embeds[0].url) : (0, g.Q_)(e.content),
-                  content: V,
-                  referralTrialOfferId: _,
-                  call: x(e.call, v.timestamp),
+                  content: Z,
+                  referralTrialOfferId: h,
+                  call: x(e.call, T.timestamp),
                   messageSnapshots: j(e),
-                  reactions: k(null != m ? m : e.reactions, e.poll),
-                  interaction: G,
-                  interactionData: null != y ? y : e.interaction_data,
+                  reactions: k(null != y ? y : e.reactions, e.poll),
+                  interaction: V,
+                  interactionData: null != v ? v : e.interaction_data,
                   interactionMetadata: e.interaction_metadata,
                   roleSubscriptionData: e.role_subscription_data,
                   purchaseNotification: e.purchase_notification,
                   poll: null == e.poll ? void 0 : (0, l.Z)(e.poll),
                   potions: e.potions,
-                  giftInfo: null == M ? void 0 : M,
-                  giftingPrompt: U,
-                  chatWallpaperInfo: h
+                  giftInfo: null == G ? void 0 : G,
+                  giftingPrompt: B,
+                  chatWallpaperInfo: m
               })
     );
 }
@@ -196,6 +198,7 @@ function D(e, t) {
                 t.mentions.map((e) => e.id)
             )),
             (r = !0)),
+        null != t.mention_games && ((n = n.set('mentionGames', t.mention_games)), (r = !0)),
         null != t.mention_everyone && ((n = n.set('mentionEveryone', t.mention_everyone)), (r = !0)),
         null != t.mention_roles && ((n = n.set('mentionRoles', t.mention_roles)), (r = !0)),
         null != t.potions && (n = n.set('potions', t.potions)),

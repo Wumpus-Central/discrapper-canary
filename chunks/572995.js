@@ -45,8 +45,8 @@ var i,
     G = n(712626),
     F = n(386014),
     H = n(845571),
-    z = n(220046),
-    W = n(385874),
+    W = n(220046),
+    z = n(385874),
     Y = n(371000),
     K = n(310960),
     q = n(815581),
@@ -92,7 +92,7 @@ let et = (e, t) =>
                 },
                 serverProfiles: {
                     thumbnail: j,
-                    assetUrl: e ? H.ZP : z.ZP
+                    assetUrl: e ? H.ZP : W.ZP
                 }
             },
             t
@@ -125,7 +125,7 @@ let et = (e, t) =>
                       },
                       showYourStyle: {
                           thumbnail: _,
-                          assetUrl: e ? W.Z : Y.Z
+                          assetUrl: e ? z.Z : Y.Z
                       },
                       yourSpace: {
                           thumbnail: x,

@@ -46,8 +46,8 @@ var i = n(255367),
     G = n(64220),
     F = n(427217),
     H = n(243778),
-    z = n(594928),
-    W = n(821795),
+    W = n(594928),
+    z = n(821795),
     Y = n(287647),
     K = n(892567),
     q = n(258609),
@@ -100,8 +100,8 @@ var i = n(255367),
     eG = n(768581),
     eF = n(572004),
     eH = n(459273),
-    ez = n(585483),
-    eW = n(70956),
+    eW = n(585483),
+    ez = n(70956),
     eY = n(823379),
     eK = n(74538),
     eq = n(374023),
@@ -165,8 +165,8 @@ function te(e, t) {
     );
 }
 let tt = eJ.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK,
-    tn = 2 * eW.Z.Millis.MINUTE,
-    ti = 3 * eW.Z.Millis.SECOND;
+    tn = 2 * ez.Z.Millis.MINUTE,
+    ti = 3 * ez.Z.Millis.SECOND;
 function tr(e) {
     let { ref: t, speaking: n, streaming: s, currentUser: l, status: o, handleClick: c, handleMouseLeave: d, renderNameTag: u, nameplate: m, 'data-jump-section': p } = e,
         g = r.useRef(null),
@@ -200,9 +200,9 @@ function tr(e) {
                         (null != r && i(r), null == (n = e.current) || n.call(e));
                     };
                     return (
-                        ez.S.subscribe(e3.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, t),
+                        eW.S.subscribe(e3.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, t),
                         () => {
-                            ez.S.unsubscribe(e3.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, t);
+                            eW.S.unsubscribe(e3.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, t);
                         }
                     );
                 }),
@@ -640,7 +640,7 @@ class ts extends r.PureComponent {
                                       children: (0, i.jsx)(K.Z, {
                                           userName: eX.ZP.getName(t),
                                           displayNameStyles: e,
-                                          effectDisplayType: W.F.STATIC,
+                                          effectDisplayType: z.F.STATIC,
                                           inProfile: !0
                                       })
                                   })
@@ -746,9 +746,9 @@ function tl() {
         { voiceActivityStatusEnabled: M } = (0, C.U)({ location: 'Account' }),
         U = (0, $.m)(),
         [V, G] = (0, J.G)(null != k ? k : null),
-        F = z.J.useExperiment({ location: 'Account' }).enabled,
+        F = W.J.useExperiment({ location: 'Account' }).enabled,
         { analyticsLocations: H } = (0, I.ZP)(N.Z.ACCOUNT),
-        W = (0, en.K)({ user: t }),
+        z = (0, en.K)({ user: t }),
         Y = (0, ec.Ws)({ location: e2.dr.CONFLICT_CHECKS }),
         K = (0, d.e7)([ed.Z, eM.default, eR.Z], () => {
             let e,
@@ -797,7 +797,7 @@ function tl() {
                 awaitingRemote: w,
                 isEligibleForPomelo: Z,
                 voiceActivityStatusEnabled: M,
-                nameplate: W,
+                nameplate: z,
                 selectedGuildId: k,
                 isQuestBarEmpty: Y,
                 isListenAlongVisible: K
@@ -877,8 +877,8 @@ function tc(e) {
                         ]
                     })
                   : G,
-        { analyticsLocations: z } = (0, I.ZP)(N.Z.AUDIO_INPUT_BUTTON),
-        W = (0, eb.Hu)({
+        { analyticsLocations: W } = (0, I.ZP)(N.Z.AUDIO_INPUT_BUTTON),
+        z = (0, eb.Hu)({
             location: N.Z.AUDIO_INPUT_BUTTON,
             autoTrackExposure: !0
         }),
@@ -889,9 +889,9 @@ function tc(e) {
     r.useEffect(() => () => M(), [E, M]);
     let K = r.useCallback(
             (e) => {
-                j(e, z);
+                j(e, W);
             },
-            [j, z]
+            [j, W]
         ),
         [q, X] = r.useState(!1),
         J = r.useCallback((e) => {
@@ -926,7 +926,7 @@ function tc(e) {
         en = E || R,
         ei = (0, el.Z)({ location: 'Account' });
     return (0, i.jsx)(I.Gt, {
-        value: z,
+        value: W,
         children: (0, i.jsxs)('div', {
             ref: v,
             className: a()(e4.micButtonParent, { [e4.hasColorGlow]: en }),
@@ -952,14 +952,14 @@ function tc(e) {
                     onClick: _,
                     onContextMenu: K,
                     role: 'switch',
-                    className: a()({ [e4.micButtonWithMenu]: W }),
+                    className: a()({ [e4.micButtonWithMenu]: z }),
                     orangeGlow: R,
                     redGlow: E,
                     'aria-label': e5.intl.string(e5.t['w4m94+']),
                     'aria-checked': E,
                     disabled: l
                 }),
-                W &&
+                z &&
                     (0, i.jsx)(f.yRy, {
                         targetElementRef: C,
                         position: 'top',

@@ -62,7 +62,13 @@ function S(e) {
                     className: C.fileInput,
                     ref: u,
                     onChange: (e) => {
-                        (null == a || a(), (0, j.d)(e.currentTarget.files, m, x.d.FirstThreadMessage, { requireConfirm: !0 }), b.S.dispatch(_.CkL.TEXTAREA_FOCUS), (e.currentTarget.value = null));
+                        (null == a || a(),
+                            (0, j.d)(e.currentTarget.files, m, x.d.FirstThreadMessage, {
+                                requireConfirm: !0,
+                                origin: 'file_picker'
+                            }),
+                            b.S.dispatch(_.CkL.TEXTAREA_FOCUS),
+                            (e.currentTarget.value = null));
                     },
                     multiple: m.rateLimitPerUser <= 0,
                     tabIndex: -1,

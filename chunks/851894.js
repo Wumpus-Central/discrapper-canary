@@ -113,7 +113,7 @@ function k(e) {
             userId: k.id,
             image: V
         }),
-        z = (0, l.e7)([O.ZP], () => (null != n ? O.ZP.getMember(n.id, k.id) : null));
+        W = (0, l.e7)([O.ZP], () => (null != n ? O.ZP.getMember(n.id, k.id) : null));
     (r.useEffect(() => () => c.Z.wait(T.W3), []),
         r.useEffect(() => {
             null != U &&
@@ -123,7 +123,7 @@ function k(e) {
                     source: U
                 });
         }, [U]));
-    let { enabled: W } = h.Z.useConfig({ location: 'GuildIdentitySettingsPage' });
+    let { enabled: z } = h.Z.useConfig({ location: 'GuildIdentitySettingsPage' });
     return B
         ? (0, i.jsx)(d.Z, {})
         : L
@@ -155,15 +155,15 @@ function k(e) {
                                               onUpsellClick: w
                                           })
                                       ),
-                                      nameplatePreview: W
+                                      nameplatePreview: z
                                           ? (0, i.jsx)(g.Z, {
                                                 user: k,
                                                 nameplate: G,
-                                                nameplateData: void 0 === G ? (0, f.Pb)(null == z || null == (t = z.collectibles) ? void 0 : t.nameplate) : void 0,
+                                                nameplateData: void 0 === G ? (0, f.Pb)(null == W || null == (t = W.collectibles) ? void 0 : t.nameplate) : void 0,
                                                 isHighlighted: !0
                                             })
                                           : null,
-                                      children: (0, i.jsx)(y.Z, { nameplateEnabled: W })
+                                      children: (0, i.jsx)(y.Z, { nameplateEnabled: z })
                                   })
                               ]
                           })
