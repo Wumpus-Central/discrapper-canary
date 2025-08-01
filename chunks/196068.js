@@ -1,4 +1,4 @@
-n.d(t, { c: () => R });
+n.d(t, { c: () => y });
 var r = n(255367),
     i = n(73800),
     l = n(793030),
@@ -11,25 +11,25 @@ var r = n(255367),
     _ = n(963249),
     E = n(163684),
     p = n(518638),
-    O = n(748770),
-    S = n(594174),
-    I = n(626135),
+    I = n(748770),
+    O = n(594174),
+    S = n(626135),
     f = n(74538),
     h = n(243778),
     T = n(921944),
     m = n(981631),
     g = n(474936),
     N = n(388032),
-    y = n(134772);
-let R = (e) => {
+    R = n(134772);
+let y = (e) => {
     let { dismissibleContent: t } = e,
         n = (0, p.a0)(),
-        R = (0, a.e7)([S.default], () => f.ZP.isPremiumExactly(S.default.getCurrentUser(), g.p9.TIER_2)),
+        y = (0, a.e7)([O.default], () => f.ZP.isPremiumExactly(O.default.getCurrentUser(), g.p9.TIER_2)),
         { enabled: A, getNitroCTA: b } = E.g.useExperiment(
             { location: 'OutboundPromotionNotice' },
             {
                 autoTrackExposure: !1,
-                disable: R
+                disable: y
             }
         ),
         { location: C } = (0, u.O)(),
@@ -86,10 +86,10 @@ let R = (e) => {
             });
         }, [P, C]),
         M = i.useCallback(() => {
-            (c.Z.open(m.oAB.INVENTORY), O.ZP.dismissOutboundPromotionNotice());
+            (c.Z.open(m.oAB.INVENTORY), I.ZP.dismissOutboundPromotionNotice());
         }, []),
         j = i.useCallback(() => {
-            (I.default.track(m.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), b ? D() : M());
+            (S.default.track(m.rMx.OUTBOUND_PROMOTION_NOTICE_CLICKED), b ? D() : M());
         }, [b, D, M]);
     if (null == n) return null;
     let x = (e) =>
@@ -99,19 +99,19 @@ let R = (e) => {
                 (0, r.jsx)(s.RyX, {
                     noticeType: m.kVF.OUTBOUND_PROMOTION,
                     onClick: () => {
-                        (O.ZP.dismissOutboundPromotionNotice(), null !== e && e(T.L.USER_DISMISS));
+                        (I.ZP.dismissOutboundPromotionNotice(), null !== e && e(T.L.USER_DISMISS));
                     }
                 }),
                 (0, r.jsx)(s.SrA, {
                     size: 'md',
                     color: 'currentColor',
-                    className: y.premiumIcon
+                    className: R.premiumIcon
                 }),
                 A
                     ? b
                         ? (0, r.jsxs)(l.xv, {
                               variant: 'text-sm/normal',
-                              className: y.text,
+                              className: R.text,
                               children: [N.intl.string(N.t['5JMiOj']), ' ', N.intl.format(N.t.fjSvsL, { onClick: M })]
                           })
                         : N.intl.string(N.t['5JMiOj'])

@@ -61,8 +61,8 @@ let j = function () {
     let e = r.useRef(null),
         { analyticsLocations: t } = (0, o.ZP)(),
         j = (0, s.e7)([p.default], () => p.default.getCurrentUser()),
-        { fractionalState: O } = (0, c.Z)(),
-        C = (0, m.y)('guild_boosting_boost_cta', j, O);
+        { fractionalState: C } = (0, c.Z)(),
+        O = (0, m.y)('guild_boosting_boost_cta', j, C);
     function E(n) {
         (null != e.current && (0, l.Mr3)(e.current),
             (0, u.u)({
@@ -89,7 +89,7 @@ let j = function () {
             }
         );
     }
-    let S = (0, g.aq)({ isBoostManagementDisabledForFractionalPremium: C });
+    let S = (0, g.aq)({ isBoostManagementDisabledForFractionalPremium: O });
     return (0, i.jsxs)('div', {
         className: b.wrapper,
         children: [

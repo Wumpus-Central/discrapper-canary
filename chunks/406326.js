@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => S });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -11,72 +11,72 @@ var r = n(255367),
     _ = n(945577),
     E = n(28964),
     p = n(981631),
-    O = n(388032),
-    S = n(107242);
-function I(e) {
-    let { searchContext: t, searchMode: n, onSearchModeChange: l, totalResults: c, isIndexing: I, isSearching: h, documentsIndexed: T } = e,
+    I = n(388032),
+    O = n(107242);
+function S(e) {
+    let { searchContext: t, searchMode: n, onSearchModeChange: l, totalResults: c, isIndexing: S, isSearching: h, documentsIndexed: T } = e,
         m = (0, _.U)({ location: 'SearchHeader' }),
         g = (0, E.xd)({
             isXDMSearch: t.type === p.aib.DMS,
             location: 'SearchHeader'
         }),
         N = (0, d.WJ)(t),
-        y = (0, o.e7)([u.Z], () => u.Z.getSearchResultsQueryString(N)),
-        R = i.useMemo(() => {
+        R = (0, o.e7)([u.Z], () => u.Z.getSearchResultsQueryString(N)),
+        y = i.useMemo(() => {
             if (t.type === p.aib.DMS && m) {
                 var e, n;
-                let t = (0, d.kG)(null != y ? y : ''),
+                let t = (0, d.kG)(null != R ? R : ''),
                     r = null != (n = null == (e = (0, d.$G)(t).channel_id) ? void 0 : e.length) ? n : 0;
-                return r > 0 ? O.intl.format(O.t.A2dqWF, { filterCount: r }) : O.intl.string(O.t.tc619f);
+                return r > 0 ? I.intl.format(I.t.A2dqWF, { filterCount: r }) : I.intl.string(I.t.tc619f);
             }
             return null;
-        }, [m, t.type, y]),
+        }, [m, t.type, R]),
         A = i.useMemo(
             () => [
                 {
-                    label: O.intl.string(O.t.CbaapK),
+                    label: I.intl.string(I.t.CbaapK),
                     value: p.QIO.NEWEST
                 },
                 {
-                    label: O.intl.string(O.t.OukXZm),
+                    label: I.intl.string(I.t.OukXZm),
                     value: p.QIO.OLDEST
                 },
                 {
-                    label: O.intl.string(O.t['q8gB5+']),
+                    label: I.intl.string(I.t['q8gB5+']),
                     value: p.QIO.MOST_RELEVANT
                 }
             ],
             []
         );
     return (0, r.jsxs)('header', {
-        className: a()(S.searchHeader, { [S.searchHeaderWithSubtitle]: null != R }),
+        className: a()(O.searchHeader, { [O.searchHeaderWithSubtitle]: null != y }),
         children: [
             (0, r.jsx)('div', {
-                className: S.totalResults,
+                className: O.totalResults,
                 role: 'status',
                 children: (0, r.jsx)(f, {
                     totalResults: c,
-                    subtitle: R,
-                    isIndexing: I,
+                    subtitle: y,
+                    isIndexing: S,
                     isSearching: h,
                     documentsIndexed: T
                 })
             }),
             g && t.type !== p.aib.DMS
                 ? (0, r.jsxs)('div', {
-                      className: S.searchModeAndFiltersContainer,
+                      className: O.searchModeAndFiltersContainer,
                       children: [
                           (0, r.jsx)(s.q4e, {
                               options: A,
                               value: n,
                               onChange: l,
                               look: s.qQH.CUSTOM,
-                              className: S.searchModeSelect,
+                              className: O.searchModeSelect,
                               popoutWidth: 130
                           }),
                           (0, r.jsx)(s.zxk, {
                               variant: 'secondary',
-                              text: O.intl.string(O.t.UdhTtr),
+                              text: I.intl.string(I.t.UdhTtr),
                               icon: s.gXV,
                               size: 'sm'
                           })
@@ -84,24 +84,24 @@ function I(e) {
                   })
                 : (0, r.jsxs)(s.njP, {
                       orientation: 'horizontal',
-                      className: S.searchHeaderTabList,
+                      className: O.searchHeaderTabList,
                       selectedItem: n,
                       onItemSelect: l,
                       children: [
                           (0, r.jsx)(s.njP.Item, {
-                              className: S.searchHeaderTab,
+                              className: O.searchHeaderTab,
                               id: p.QIO.NEWEST,
-                              children: O.intl.string(O.t.rLjqbW)
+                              children: I.intl.string(I.t.rLjqbW)
                           }),
                           (0, r.jsx)(s.njP.Item, {
-                              className: S.searchHeaderTab,
+                              className: O.searchHeaderTab,
                               id: p.QIO.OLDEST,
-                              children: O.intl.string(O.t.a1BaUl)
+                              children: I.intl.string(I.t.a1BaUl)
                           }),
                           (0, r.jsx)(s.njP.Item, {
-                              className: S.searchHeaderTab,
+                              className: O.searchHeaderTab,
                               id: p.QIO.MOST_RELEVANT,
-                              children: O.intl.string(O.t.FtR97u)
+                              children: I.intl.string(I.t.FtR97u)
                           })
                       ]
                   })
@@ -121,18 +121,18 @@ function f(e) {
 }
 function h() {
     return (0, r.jsx)('div', {
-        className: S.spinnerWrapper,
+        className: O.spinnerWrapper,
         children: (0, r.jsx)(s.$jN, {
             type: s.$jN.Type.SPINNING_CIRCLE,
-            className: S.spinner,
-            itemClassName: S.spinnerPath
+            className: O.spinner,
+            itemClassName: O.spinnerPath
         })
     });
 }
 function T(e) {
     let { documentsIndexed: t } = e;
     return (0, r.jsx)(s.ua7, {
-        text: O.intl.formatToPlainString(O.t['4Y3O+P'], { count: t }),
+        text: I.intl.formatToPlainString(I.t['4Y3O+P'], { count: t }),
         children: (e) => {
             var t, n;
             return (0, r.jsxs)(
@@ -161,7 +161,7 @@ function T(e) {
                             }));
                     }
                     return e;
-                })({ className: S.totalResultsWrapper }, e)),
+                })({ className: O.totalResultsWrapper }, e)),
                 (n = n =
                     {
                         children: [
@@ -169,9 +169,9 @@ function T(e) {
                                 variant: 'text-md/medium',
                                 color: 'text-muted',
                                 children: (0, r.jsx)(s.eee, {
-                                    className: S.helpdeskLink,
+                                    className: O.helpdeskLink,
                                     href: c.Z.getArticleURL(p.BhN.SEARCH_INDEXING),
-                                    children: O.intl.string(O.t['G3EA+/'])
+                                    children: I.intl.string(I.t['G3EA+/'])
                                 })
                             }),
                             (0, r.jsx)(h, {})
@@ -200,7 +200,7 @@ function m() {
             (0, r.jsx)(s.Text, {
                 variant: 'text-md/medium',
                 color: 'header-secondary',
-                children: O.intl.string(O.t.uixzLS)
+                children: I.intl.string(I.t.uixzLS)
             }),
             (0, r.jsx)(h, {})
         ]
@@ -212,11 +212,11 @@ function g(e) {
         a = (0, r.jsx)(s.Text, {
             variant: 'text-md/medium',
             color: 'header-primary',
-            children: O.intl.format(O.t.ZGVL3t, { count: l })
+            children: I.intl.format(I.t.ZGVL3t, { count: l })
         });
     return null != n
         ? (0, r.jsxs)('div', {
-              className: S.totalResultsWithSubtitle,
+              className: O.totalResultsWithSubtitle,
               children: [
                   a,
                   (0, r.jsx)(s.Text, {

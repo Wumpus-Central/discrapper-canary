@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     body: 'body_e1372c',
     errorBlock: 'errorBlock_e1372c',
     whatYouLoseButtonContainer: 'whatYouLoseButtonContainer_e1372c',

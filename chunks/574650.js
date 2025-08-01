@@ -12,9 +12,9 @@ var i = n(120356),
     _ = n(693546),
     E = n(305325),
     p = n(246364),
-    O = n(983736),
-    S = n(937111),
-    I = n(981631),
+    I = n(983736),
+    O = n(937111),
+    S = n(981631),
     f = n(176505),
     h = n(388032),
     T = n(246752),
@@ -48,11 +48,11 @@ let N = () => {
     var e, t;
     let i = (0, o.e7)([d.Z], () => d.Z.getGuildId(), []),
         N = (0, o.e7)([u.Z], () => u.Z.getGuild(i), [i]),
-        y = (0, o.e7)([S.Z], () => (null != i ? S.Z.getRequest(i) : null), [i]),
-        R = (0, a.TH)(),
-        A = (null == (e = (0, a.LX)(R.pathname, I.Z5c.CHANNEL(null == N ? void 0 : N.id, f.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
-    if (null == N || !(0, O.Dc)(N) || A) return null;
-    let b = null != (t = null == y ? void 0 : y.applicationStatus) ? t : p.wB.STARTED,
+        R = (0, o.e7)([O.Z], () => (null != i ? O.Z.getRequest(i) : null), [i]),
+        y = (0, a.TH)(),
+        A = (null == (e = (0, a.LX)(y.pathname, S.Z5c.CHANNEL(null == N ? void 0 : N.id, f.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
+    if (null == N || !(0, I.Dc)(N) || A) return null;
+    let b = null != (t = null == R ? void 0 : R.applicationStatus) ? t : p.wB.STARTED,
         C = null,
         P = null,
         D = null,

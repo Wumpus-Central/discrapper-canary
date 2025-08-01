@@ -11,9 +11,9 @@ var r = n(255367),
     _ = n(430824),
     E = n(914010),
     p = n(900849),
-    O = n(981631),
-    S = n(388032),
-    I = n(8940),
+    I = n(981631),
+    O = n(388032),
+    S = n(8940),
     f = n(240211);
 let h = () => {
     let e = (0, o.e7)([E.Z], () => E.Z.getGuildId(), []),
@@ -23,20 +23,20 @@ let h = () => {
     let h = async () => {
         l(!0);
         try {
-            (p.mT(t.id), await u.Z.joinGuild(t.id, { source: O.vtS.NOTICE_BAR }));
+            (p.mT(t.id), await u.Z.joinGuild(t.id, { source: I.vtS.NOTICE_BAR }));
         } catch (e) {
             l(!1);
         }
     };
     return (0, r.jsxs)('div', {
-        className: a()(I.notice, f.notice),
+        className: a()(S.notice, f.notice),
         children: [
             (0, r.jsxs)(s.zx, {
                 look: s.zx.Looks.OUTLINED,
                 color: s.zx.Colors.WHITE,
                 size: s.zx.Sizes.NONE,
-                className: a()(I.button, I.back),
-                innerClassName: I.iconButton,
+                className: a()(S.button, S.back),
+                innerClassName: S.iconButton,
                 onClick: () => {
                     (0, d.s1)().goBack();
                 },
@@ -44,24 +44,24 @@ let h = () => {
                     (0, r.jsx)(c.whL, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: I.arrow
+                        className: S.arrow
                     }),
-                    S.intl.string(S.t['13/7kZ'])
+                    O.intl.string(O.t['13/7kZ'])
                 ]
             }),
             (0, r.jsx)(c.Text, {
-                className: I.header,
+                className: S.header,
                 variant: 'text-sm/normal',
-                children: S.intl.string(S.t['N/y2WF'])
+                children: O.intl.string(O.t['N/y2WF'])
             }),
             (0, r.jsx)(s.zx, {
-                className: I.button,
+                className: S.button,
                 look: s.zx.Looks.OUTLINED,
                 color: s.zx.Colors.WHITE,
                 size: s.zx.Sizes.NONE,
                 submitting: n,
                 onClick: h,
-                children: S.intl.format(S.t.uHN7n5, { guild: t.name })
+                children: O.intl.format(O.t.uHN7n5, { guild: t.name })
             })
         ]
     });

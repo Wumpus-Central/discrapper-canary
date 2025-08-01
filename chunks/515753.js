@@ -23,8 +23,8 @@ var i = n(255367),
     x = n(326255),
     _ = n(956221),
     j = n(771173),
-    O = n(385499),
-    C = n(570908),
+    C = n(385499),
+    O = n(570908),
     E = n(702321),
     v = n(201895),
     S = n(43267),
@@ -212,7 +212,7 @@ let ei = X.ZP.getEnableHardwareAcceleration() ? p.Xo$ : p.qEK,
                         ),
                         {
                             children: [
-                                (0, i.jsx)(C.Z, {
+                                (0, i.jsx)(O.Z, {
                                     muted: !1,
                                     avatar: (0, i.jsx)(r, {
                                         size: 'refresh_sm',
@@ -248,9 +248,9 @@ function ed(e) {
             animateOnHover: !(l || X || ed || em)
         }),
         ej = t.isMultiUserDM(),
-        eO = t.isSystemDM(),
-        eC = (0, U.Q)(),
-        eE = !ej && !eO && t.type === J.d4z.DM,
+        eC = t.isSystemDM(),
+        eO = (0, U.Q)(),
+        eE = !ej && !eC && t.type === J.d4z.DM,
         ev = eE && (null == u ? void 0 : u.primaryGuild) != null,
         eS = (0, m.e7)([Y.ZP], () => Y.ZP.isChannelMuted(t.getGuildId(), t.id)),
         { ignored: eT, blocked: eN } = (0, m.cj)([W.Z], () => ({
@@ -467,7 +467,7 @@ function ed(e) {
                     eP ? (0, i.jsx)('div', { className: a()($.unreadPill, { [$.muted]: eA }) }) : null,
                     (0, i.jsxs)(p.vjx, {
                         className: a()($.interactive, {
-                            [$.interactiveSystemDM]: eC && eO,
+                            [$.interactiveSystemDM]: eO && eC,
                             [$.interactiveSelected]: l || em
                         }),
                         as: 'div',
@@ -498,7 +498,7 @@ function ed(e) {
                                         r
                                     ),
                                     {
-                                        children: (0, i.jsx)(C.Z, {
+                                        children: (0, i.jsx)(O.Z, {
                                             ref: eX,
                                             avatar: eY(),
                                             highlighted: eP && !eA,
@@ -509,9 +509,9 @@ function ed(e) {
                                                 children: eq
                                             }),
                                             decorators: t.isSystemDM()
-                                                ? (0, i.jsx)(O.Z, {
+                                                ? (0, i.jsx)(C.Z, {
                                                       className: $.decorator,
-                                                      type: O.Z.Types.SYSTEM_DM,
+                                                      type: C.Z.Types.SYSTEM_DM,
                                                       verified: !0
                                                   })
                                                 : null

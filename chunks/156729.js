@@ -17,8 +17,8 @@ var i,
     x = n(823379),
     _ = n(464179),
     j = n(211667),
-    O = n(244526),
-    C = n(388032),
+    C = n(244526),
+    O = n(388032),
     E = n(257646);
 function v(e, t, n) {
     return (
@@ -98,7 +98,7 @@ class I extends (i = s.PureComponent) {
                 (0, r.jsx)(m.Text, {
                     className: E.sectionHeader,
                     variant: 'text-sm/normal',
-                    children: C.intl.string(C.t['50Auo6'])
+                    children: O.intl.string(O.t['50Auo6'])
                 }),
                 (0, r.jsx)(
                     _.ZP,
@@ -122,7 +122,7 @@ class I extends (i = s.PureComponent) {
                 (0, r.jsx)(m.Text, {
                     className: E.sectionHeader,
                     variant: 'text-sm/normal',
-                    children: C.intl.string(C.t.Fo2YPz)
+                    children: O.intl.string(O.t.Fo2YPz)
                 }),
                 (0, r.jsx)(j.Z, {
                     expirationDate: n,
@@ -148,7 +148,7 @@ class I extends (i = s.PureComponent) {
                             children: [
                                 n
                                     ? (0, r.jsx)(m.ua7, {
-                                          text: C.intl.string(C.t['v6/z29']),
+                                          text: O.intl.string(O.t['v6/z29']),
                                           children: (e) =>
                                               (0, r.jsx)(
                                                   'div',
@@ -169,7 +169,7 @@ class I extends (i = s.PureComponent) {
                                     onClick: this.handleDelete,
                                     variant: 'critical-secondary',
                                     size: o.tq ? 'sm' : 'md',
-                                    text: o.tq ? C.intl.string(C.t.oyYWHB) : C.intl.string(C.t.yk5qfX)
+                                    text: o.tq ? O.intl.string(O.t.oyYWHB) : O.intl.string(O.t.yk5qfX)
                                 })
                             ]
                         })
@@ -183,7 +183,7 @@ class I extends (i = s.PureComponent) {
                                 onClick: this.handleCancel,
                                 variant: 'secondary',
                                 size: o.tq ? 'sm' : 'md',
-                                text: C.intl.string(C.t['ETE/oK'])
+                                text: O.intl.string(O.t['ETE/oK'])
                             }),
                             (0, r.jsx)(d.z, {
                                 loading: e,
@@ -191,7 +191,7 @@ class I extends (i = s.PureComponent) {
                                 type: 'submit',
                                 variant: 'active',
                                 size: o.tq ? 'sm' : 'md',
-                                text: C.intl.string(C.t.R3BPHx)
+                                text: O.intl.string(O.t.R3BPHx)
                             })
                         ]
                     })
@@ -214,7 +214,7 @@ class I extends (i = s.PureComponent) {
                     (0, r.jsxs)('div', {
                         className: E.__invalid_paymentSection,
                         children: [
-                            (0, r.jsx)(O.Z, {
+                            (0, r.jsx)(C.Z, {
                                 paymentSource: e,
                                 isDefault: t,
                                 isForSubscription: s,
@@ -225,12 +225,12 @@ class I extends (i = s.PureComponent) {
                             e.invalid
                                 ? (0, r.jsx)('div', {
                                       className: E.errorSubText,
-                                      children: C.intl.string(C.t['3R0U0d'])
+                                      children: O.intl.string(O.t['3R0U0d'])
                                   })
                                 : null,
                             (0, r.jsx)('div', {
                                 className: E.subText,
-                                children: o ? C.intl.format(C.t.w9WkBg, { paypalURL: 'https://www.paypal.com' }) : C.intl.string(C.t.VXndys)
+                                children: o ? O.intl.format(O.t.w9WkBg, { paypalURL: 'https://www.paypal.com' }) : O.intl.string(O.t.VXndys)
                             })
                         ]
                     }),
@@ -245,7 +245,7 @@ class I extends (i = s.PureComponent) {
                         children: (0, r.jsx)(m.Text, {
                             className: E.defaultCheckboxLabel,
                             variant: 'text-sm/normal',
-                            children: C.intl.string(C.t.nag9Oj)
+                            children: O.intl.string(O.t.nag9Oj)
                         })
                     }),
                     (0, r.jsx)(m.$i$, {}),

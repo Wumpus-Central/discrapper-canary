@@ -31,21 +31,21 @@ function b(e) {
             return (0, d.uZ)(t);
         });
     if (null == j) return null;
-    let O = j.subscriptionPlanId,
-        C = c.Z.get(O);
-    s()(null != C, 'Missing plan');
+    let C = j.subscriptionPlanId,
+        O = c.Z.get(C);
+    s()(null != O, 'Missing plan');
     let E = (0, u.T4)(x.total, x.currency);
     return (
-        C.interval === p.rV.YEAR
+        O.interval === p.rV.YEAR
             ? (t = h.intl.format(h.t['jPz/39'], {
                   price: E,
                   termsUrl: g.EYA.TERMS,
                   paidURL: g.EYA.PAID_TERMS,
                   privacyUrl: g.EYA.PRIVACY
               }))
-            : C.interval === p.rV.MONTH &&
+            : O.interval === p.rV.MONTH &&
               (t =
-                  1 === C.intervalCount
+                  1 === O.intervalCount
                       ? h.intl.format(h.t.m27GpK, {
                             price: E,
                             termsUrl: g.EYA.TERMS,
@@ -57,7 +57,7 @@ function b(e) {
                             termsUrl: g.EYA.TERMS,
                             paidURL: g.EYA.PAID_TERMS,
                             privacyUrl: g.EYA.PRIVACY,
-                            intervalCount: C.intervalCount
+                            intervalCount: O.intervalCount
                         })),
         (0, i.jsx)(a.Text, {
             color: 'text-muted',

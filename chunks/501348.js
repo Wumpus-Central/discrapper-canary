@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(627845),
     _ = n(514361),
     j = n(803038),
-    O = n(600164),
-    C = n(313201),
+    C = n(600164),
+    O = n(313201),
     E = n(266454),
     v = n(786761),
     S = n(3148),
@@ -91,9 +91,9 @@ let Y = {
         COZY: 'cozy',
         COMPACT: 'compact'
     },
-    K = (0, C.hQ)(),
-    q = (0, C.hQ)(),
-    X = (0, C.hQ)(),
+    K = (0, O.hQ)(),
+    q = (0, O.hQ)(),
+    X = (0, O.hQ)(),
     J = '1337',
     Q = (e) => {
         let t = 0;
@@ -246,8 +246,8 @@ class ee extends r.Component {
                     className: G.subtext,
                     children: 'Increase or decrease the size of the chat font'
                 }),
-                (0, i.jsx)(O.Z, {
-                    align: O.Z.Align.CENTER,
+                (0, i.jsx)(C.Z, {
+                    align: C.Z.Align.CENTER,
                     children: (0, i.jsx)(u.iRW, {
                         className: a()({
                             [F.marginTop20]: !1,

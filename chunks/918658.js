@@ -14,17 +14,17 @@ var r = n(255367),
     _ = n(819553),
     E = n(17181),
     p = n(303737),
-    O = n(434404),
-    S = n(703656),
-    I = n(944486),
+    I = n(434404),
+    O = n(703656),
+    S = n(944486),
     f = n(914010),
     h = n(671533),
     T = n(259580),
     m = n(358085),
     g = n(962086),
     N = n(160404),
-    y = n(889695),
-    R = n(981631),
+    R = n(889695),
+    y = n(981631),
     A = n(176505),
     b = n(302463),
     C = n(293810),
@@ -53,7 +53,7 @@ function j(e) {
 function x() {
     let e = i.useRef(null),
         t = (0, o.e7)([f.Z], () => f.Z.getGuildId()),
-        n = (0, o.e7)([I.Z], () => I.Z.getChannelId(t)),
+        n = (0, o.e7)([S.Z], () => S.Z.getChannelId(t)),
         {
             viewingRoles: l,
             backNavigationSection: a,
@@ -68,21 +68,21 @@ function x() {
     if (null == l || null == t) return null;
     let x = (function (e) {
             switch (e) {
-                case R.pNK.INTEGRATIONS:
+                case y.pNK.INTEGRATIONS:
                     return P.intl.string(P.t.k7LGdn);
-                case R.pNK.ROLE_SUBSCRIPTIONS:
+                case y.pNK.ROLE_SUBSCRIPTIONS:
                     return P.intl.string(P.t.bRqiqa);
-                case R.pNK.ONBOARDING:
+                case y.pNK.ONBOARDING:
                     return P.intl.string(P.t.qZpU3d);
                 default:
                     return P.intl.string(P.t.MTIXho);
             }
         })(a),
-        v = a === R.pNK.ROLE_SUBSCRIPTIONS ? P.intl.string(P.t.hZUCzc) : P.intl.string(P.t['/djIh4']),
+        v = a === y.pNK.ROLE_SUBSCRIPTIONS ? P.intl.string(P.t.hZUCzc) : P.intl.string(P.t['/djIh4']),
         k = n === A.oC.GUILD_ONBOARDING,
         Z = (e) => {
             let { backToSettings: n } = e;
-            null != t && (N.Z.isFullServerPreview(t) && (0, S.uL)(R.Z5c.CHANNEL(t)), _.ZP.shouldShowOnboarding(t) && (d.Z.finishOnboarding(t), (0, E.EI)(t)), (0, g.mL)(t), n && O.Z.open(t, a), a === R.pNK.ROLE_SUBSCRIPTIONS && (0, p.GN)(t));
+            null != t && (N.Z.isFullServerPreview(t) && (0, O.uL)(y.Z5c.CHANNEL(t)), _.ZP.shouldShowOnboarding(t) && (d.Z.finishOnboarding(t), (0, E.EI)(t)), (0, g.mL)(t), n && I.Z.open(t, a), a === y.pNK.ROLE_SUBSCRIPTIONS && (0, p.GN)(t));
         };
     return (0, r.jsxs)(u.qXd, {
         color: u.DM8.BRAND,
@@ -119,7 +119,7 @@ function x() {
                           (0, r.jsx)(u.yRy, {
                               targetElementRef: e,
                               position: 'bottom',
-                              renderPopout: () => (0, r.jsx)(y.Z, { guildId: t }),
+                              renderPopout: () => (0, r.jsx)(R.Z, { guildId: t }),
                               children: (t) => {
                                   let { onClick: n } = t;
                                   return (0, r.jsxs)(M, {
@@ -160,7 +160,7 @@ function x() {
                               })
                       ]
                   }),
-            c || a === R.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(j, { onClick: () => Z({ backToSettings: !1 }) })
+            c || a === y.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(j, { onClick: () => Z({ backToSettings: !1 }) })
         ]
     });
 }

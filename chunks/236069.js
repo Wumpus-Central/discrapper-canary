@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => I }), n(388685));
+(n.d(t, { Z: () => S }), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -36,7 +36,7 @@ function p(e) {
     }
     return e;
 }
-function O(e) {
+function I(e) {
     let { guildId: t, analyticsLocations: n, analyticsLocation: i } = e,
         [a, o] = (0, u.ww)({
             guildId: t,
@@ -57,7 +57,7 @@ function O(e) {
         ]
     });
 }
-function S() {
+function O() {
     let e = (0, a.Z)({ scrollPosition: _.Y_.GUILD_TAG });
     return (0, r.jsxs)(l.qXd, {
         color: l.DM8.DANGER,
@@ -70,7 +70,7 @@ function S() {
         ]
     });
 }
-function I(e) {
+function S(e) {
     let t = (0, i.e7)(
         [o.default, s.ZP],
         () => {
@@ -80,5 +80,5 @@ function I(e) {
         },
         [e.guildId]
     );
-    return t.has(d.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || t.has(d.q.AUTOMOD_QUARANTINED_BIO) ? (0, r.jsx)(O, p({}, e)) : t.has(d.q.AUTOMOD_QUARANTINED_SERVER_TAG) ? (0, r.jsx)(S, {}) : (0, r.jsx)(O, p({}, e));
+    return t.has(d.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || t.has(d.q.AUTOMOD_QUARANTINED_BIO) ? (0, r.jsx)(I, p({}, e)) : t.has(d.q.AUTOMOD_QUARANTINED_SERVER_TAG) ? (0, r.jsx)(O, {}) : (0, r.jsx)(I, p({}, e));
 }

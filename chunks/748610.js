@@ -12,9 +12,9 @@ function d() {
 }
 let _ = {
     fetchTabMessages: function (e) {
-        let { searchContext: t, searchTabs: n, searchQueryString: r, pagination: s, trackExactTotalHits: d, getId: _, getLimit: E, onFetchStart: p, onFetchSuccess: O, searchMode: S = u.QIO.NEWEST } = e,
-            I = (0, o.kG)(r),
-            f = (0, o.$G)(I);
+        let { searchContext: t, searchTabs: n, searchQueryString: r, pagination: s, trackExactTotalHits: d, getId: _, getLimit: E, onFetchStart: p, onFetchSuccess: I, searchMode: O = u.QIO.NEWEST } = e,
+            S = (0, o.kG)(r),
+            f = (0, o.$G)(S);
         !(function (e) {
             if (!Array.isArray(e.pinned)) return;
             let t = e.pinned.some((e) => !0 === e);
@@ -44,7 +44,7 @@ let _ = {
                         }));
                 }
                 return e;
-            })({}, f, (0, o.zH)(S)),
+            })({}, f, (0, o.zH)(O)),
             T = (0, o.s5)(t);
         null != T && (0, o.jW)(h, T);
         let m = c.Z.create({
@@ -94,8 +94,8 @@ let _ = {
                             };
                         })
                     }),
-                        null == O ||
-                            O({
+                        null == I ||
+                            I({
                                 searchContext: t,
                                 tabEntries: r
                             }));

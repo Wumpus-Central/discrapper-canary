@@ -1,4 +1,4 @@
-(n.d(e, { n: () => b }), n(539854), n(583741));
+(n.d(t, { n: () => b }), n(539854), n(583741));
 var r = n(255367),
     i = n(73800),
     o = n(512722),
@@ -15,20 +15,20 @@ var r = n(255367),
     C = n(594135),
     h = n(388032),
     x = n(515622);
-let y = (t) => {
-        let { churnUserDiscountOffer: e } = t;
-        return null == e
+let y = (e) => {
+        let { churnUserDiscountOffer: t } = e;
+        return null == t
             ? null
             : (0, r.jsx)('div', {
                   className: x.previewContainer,
-                  children: (0, r.jsx)(p.o, { userDiscountOffer: e })
+                  children: (0, r.jsx)(p.o, { userDiscountOffer: t })
               });
     },
     b = () => {
-        let { transitionState: t, onClose: e, premiumType: n, setStep: o, discountPrimary: p, churnUserDiscountOffer: x, isFetchingChurnDiscountOffer: b } = (0, C.a)(),
+        let { transitionState: e, onClose: t, premiumType: n, setStep: o, discountPrimary: p, churnUserDiscountOffer: x, isFetchingChurnDiscountOffer: b } = (0, C.a)(),
             g = (0, s.e7)([d.default], () => {
-                let t = d.default.getCurrentUser();
-                return (a()(null != t, 'ProfileItem: currentUser cannot be undefined'), t);
+                let e = d.default.getCurrentUser();
+                return (a()(null != e, 'ProfileItem: currentUser cannot be undefined'), e);
             });
         i.useEffect(() => {
             (0, u.Z)(g.id, g.getAvatarURL(null, 80));
@@ -37,11 +37,11 @@ let y = (t) => {
             j = 'US' === I.ipCountryCode && 'CA' === I.ipSubdivisionCode;
         if (b)
             return (0, r.jsx)(l.Modal, {
-                transitionState: t,
+                transitionState: e,
                 title: '',
                 actions: [],
                 onClose: async () => {
-                    e();
+                    t();
                 }
             });
         let P = [];
@@ -55,7 +55,7 @@ let y = (t) => {
                   })
                 : P.push({
                       text: h.intl.string(h.t.h9tkAA),
-                      onClick: () => e(),
+                      onClick: () => t(),
                       variant: 'secondary'
                   }),
             P.push({
@@ -65,16 +65,16 @@ let y = (t) => {
             }),
             p && null !== x && P.reverse(),
             (0, r.jsx)(l.Modal, {
-                transitionState: t,
+                transitionState: e,
                 title: h.intl.string(h.t.PWq8TE),
                 subtitle: h.intl.formatToPlainString(h.t.nsGVzs, {}),
                 actions: P,
                 preview: null !== x && (0, r.jsx)(y, { churnUserDiscountOffer: x }),
-                onClose: async () => e(),
+                onClose: async () => t(),
                 children: (0, r.jsx)(_.g, {
                     currentUser: g,
                     premiumType: n,
-                    onClose: e,
+                    onClose: t,
                     isDowngrade: !1,
                     isPremiumRebrand: !0
                 })

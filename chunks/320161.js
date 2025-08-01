@@ -16,7 +16,7 @@ let p = d.Z.Millis.SECOND,
 function b(e) {
     let { text: t, copyValue: n, children: d, onCopy: m, 'aria-label': b, delay: x = h } = e,
         [_, j] = r.useState(0),
-        [O, C] = r.useState(!1),
+        [C, O] = r.useState(!1),
         [E, v] = r.useState(!1),
         [S] = r.useState(() => new a.V7()),
         [T] = r.useState(() => new a.V7());
@@ -32,14 +32,14 @@ function b(e) {
         return (0, i.jsx)(i.Fragment, { children: d({}) });
     let N = _ >= f.length - 1,
         I = N ? l.FGA.RED : l.FGA.GREEN,
-        y = O ? I : l.FGA.PRIMARY,
+        y = C ? I : l.FGA.PRIMARY,
         A = () => {
-            (null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), E || j(_ + 1), v(!0), C(!0), S.start(p, () => v(!1)), T.start(g, () => j(0)));
+            (null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), E || j(_ + 1), v(!0), O(!0), S.start(p, () => v(!1)), T.start(g, () => j(0)));
         };
     return (0, i.jsx)(l.ua7, {
         text: (() => {
             var e;
-            if (!O) return t;
+            if (!C) return t;
             let n = (0, s.clamp)(_ - 1, 0, f.length - 1),
                 r = null != (e = f[n]) ? e : f[0];
             return (0, i.jsx)(l.UkV, {
@@ -52,7 +52,7 @@ function b(e) {
         color: y,
         forceOpen: E,
         onAnimationRest: (e, t) => {
-            !E && O && t.phase === u.UkZ.LEAVE && C(!1);
+            !E && C && t.phase === u.UkZ.LEAVE && O(!1);
         },
         children: (e) => {
             var t,
@@ -111,7 +111,7 @@ function b(e) {
                             (null == i || i(), A());
                         },
                         onMouseEnter: () => {
-                            if (!O) {
+                            if (!C) {
                                 null == r || r();
                                 return;
                             }

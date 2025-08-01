@@ -1,4 +1,4 @@
-(n.d(e, { I: () => I }), n(388685));
+(n.d(t, { I: () => I }), n(388685));
 var r = n(255367),
     i = n(73800),
     o = n(505266),
@@ -18,13 +18,13 @@ var r = n(255367),
     y = n(474936),
     b = n(981631),
     g = n(301692);
-let I = (t) => {
-    var e;
-    let { analyticsLocation: n, analyticsLocations: a, onClose: I, transitionState: j, premiumSubscription: P, discountPrimary: v } = t,
-        { initialStep: T } = t,
+let I = (e) => {
+    var t;
+    let { analyticsLocation: n, analyticsLocations: a, onClose: I, transitionState: j, premiumSubscription: P, discountPrimary: v } = e,
+        { initialStep: T } = e,
         E = i.useRef(new o.qA()),
         [O, S] = i.useState(null),
-        N = null == (e = (0, u.Af)(P)) ? void 0 : e.planId,
+        N = null == (t = (0, u.Af)(P)) ? void 0 : t.planId,
         R = null != N ? u.ZP.getPremiumType(N) : null;
     s()(null != R, 'Should not be cancelling Nitro without premiumType');
     let D = R === y.p9.TIER_0 || R === y.p9.TIER_1 || R === y.p9.TIER_2;
@@ -32,37 +32,37 @@ let I = (t) => {
     let [w, A, L, k] = (0, x.q)(T, P, a),
         M = (0, d.UV)(),
         { churnUserDiscountOffer: U, isFetchingChurnDiscountOffer: F } = (0, d.WR)(!M || w !== f.R.WHAT_YOU_LOSE),
-        B = (t) => {
+        B = (e) => {
             (I(),
                 c.default.track(
                     b.rMx.CANCELLATION_FLOW_STEP,
-                    (function (t) {
-                        for (var e = 1; e < arguments.length; e++) {
-                            var n = null != arguments[e] ? arguments[e] : {},
+                    (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
                             ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (t) {
-                                        return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     })
                                 )),
-                                r.forEach(function (e) {
+                                r.forEach(function (t) {
                                     var r;
-                                    ((r = n[e]),
-                                        e in t
-                                            ? Object.defineProperty(t, e, {
+                                    ((r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (t[e] = r));
+                                            : (e[t] = r));
                                 }));
                         }
-                        return t;
+                        return e;
                     })(
                         {
-                            from_step: f.O[t],
+                            from_step: f.O[e],
                             to_step: null,
                             step_duration_ms: Date.now() - L,
                             flow_duration_ms: Date.now() - k,

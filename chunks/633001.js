@@ -9,8 +9,8 @@ var n = a(255367),
     d = a(481060),
     u = a(765250),
     m = a(13245),
-    p = a(593472),
-    x = a(594190),
+    x = a(593472),
+    p = a(594190),
     h = a(837268),
     b = a(371651),
     f = a(829907),
@@ -146,9 +146,9 @@ function L(e) {
 }
 let M = r.memo(function (e) {
         let { trackedGame: t } = e,
-            a = (0, o.e7)([x.ZP], () => x.ZP.getGameForPID(t.pid)),
+            a = (0, o.e7)([p.ZP], () => p.ZP.getGameForPID(t.pid)),
             r = (0, o.e7)([_.Z], () => _.Z.getGameForPID(t.pid)),
-            l = (0, o.e7)([x.ZP], () => (null == a ? null : x.ZP.getGameOverlayStatus(a)));
+            l = (0, o.e7)([p.ZP], () => (null == a ? null : p.ZP.getGameOverlayStatus(a)));
         return (0, n.jsxs)('div', {
             className: I.panelGroup,
             children: [
@@ -272,7 +272,7 @@ let M = r.memo(function (e) {
             ]
         });
     }),
-    U = r.memo(function (e) {
+    F = r.memo(function (e) {
         let { pid: t } = e,
             a = (0, o.cj)([y.default], () => y.default.getOverlayPIDStatuses()),
             r = (0, o.cj)([b.default], () => b.default.getTrackedGames()),
@@ -358,7 +358,7 @@ let M = r.memo(function (e) {
             ]
         });
     });
-function F(e) {
+function U(e) {
     let t = D(Object.values((0, o.Wu)([j.Z], () => j.Z.getWidgetsForLayout(S.$S))), e);
     return [
         t,
@@ -377,7 +377,7 @@ function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return t ? ''.concat(e.toFixed(2), 'ms') : new Date(e).toLocaleTimeString();
 }
-let G = r.memo(function (e) {
+let z = r.memo(function (e) {
     var { pid: t } = e,
         a = (function (e, t) {
             if (null == e) return {};
@@ -417,7 +417,7 @@ let G = r.memo(function (e) {
         })
     );
 });
-function z() {
+function G() {
     let e = (0, o.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(h.GO.TrackFocusPIDs)),
         t = (0, o.Wu)([b.default], () => b.default.getDevToolsFocusedPidsWithTimestamp(), []),
         a = () => {
@@ -478,7 +478,7 @@ function z() {
                                                     variant: 'text-sm/medium',
                                                     color: l === h.d5.TRACK_FOCUS ? 'text-default' : 'text-danger',
                                                     children: [
-                                                        (0, n.jsx)(G, {
+                                                        (0, n.jsx)(z, {
                                                             pid: a,
                                                             tag: 'span'
                                                         }),
@@ -504,12 +504,12 @@ function z() {
 let V = r.memo(function (e) {
         let { pid: t } = e,
             a = (0, o.e7)(
-                [b.default, x.ZP],
+                [b.default, p.ZP],
                 () => {
                     var e, a, n;
                     if (null == t) return null;
                     let r = null == (e = b.default.getTrackedGameByPid(t)) ? void 0 : e.fullscreenType;
-                    return null != r ? r : null != (n = null == (a = x.ZP.getGameForPID(t)) ? void 0 : a.fullscreenType) ? n : p.Jx.UNKNOWN;
+                    return null != r ? r : null != (n = null == (a = p.ZP.getGameForPID(t)) ? void 0 : a.fullscreenType) ? n : x.Jx.UNKNOWN;
                 },
                 [t]
             );
@@ -528,7 +528,7 @@ let V = r.memo(function (e) {
             r.useEffect(
                 () => (
                     (l.current = setInterval(async () => {
-                        let e = x.ZP.getRunningGames(),
+                        let e = p.ZP.getRunningGames(),
                             t = [],
                             n = Date.now();
                         for (let a of e) t.push((0, f.hj)(a.pid, 0).then((e) => [a.pid, e, n]));
@@ -583,7 +583,7 @@ let V = r.memo(function (e) {
                                             'div',
                                             {
                                                 children: [
-                                                    (0, n.jsx)(G, {
+                                                    (0, n.jsx)(z, {
                                                         tag: 'div',
                                                         pid: e.pid
                                                     }),
@@ -633,7 +633,7 @@ let V = r.memo(function (e) {
                         color: 'text-default',
                         children: 'No tracked game times'
                     }),
-                Object.values(a).map((e) => (0, n.jsx)(U, { pid: e.pid }, e.pid)),
+                Object.values(a).map((e) => (0, n.jsx)(F, { pid: e.pid }, e.pid)),
                 (0, n.jsxs)('div', {
                     children: [
                         (0, n.jsxs)(d.Text, {
@@ -672,8 +672,8 @@ let V = r.memo(function (e) {
         });
     }),
     K = r.memo(function () {
-        let [e, t] = F(E.Odu.CLICK_ZONE_DEBUG),
-            [a, r] = F(E.Odu.PERFORMANCE_DEBUG),
+        let [e, t] = U(E.Odu.CLICK_ZONE_DEBUG),
+            [a, r] = U(E.Odu.PERFORMANCE_DEBUG),
             l = (0, o.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(h.GO.ClickZones)),
             i = (0, o.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(h.GO.WidgetAreas)),
             s = (0, o.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(h.GO.DisabledGPUBoost)),
@@ -681,10 +681,10 @@ let V = r.memo(function (e) {
             u = (e) => {
                 m.Z.setRenderDebugMode(!v.ZP.hasRenderDebugMode(e), e);
             },
-            p = () => {
+            x = () => {
                 u(h.GO.ClickZones);
             },
-            x = () => {
+            p = () => {
                 u(h.GO.WidgetAreas);
             },
             b = () => {
@@ -705,7 +705,7 @@ let V = r.memo(function (e) {
                             k(R({}, e), {
                                 children: (0, n.jsx)(d.XZJ, {
                                     value: l,
-                                    onChange: () => p(),
+                                    onChange: () => x(),
                                     size: 18,
                                     type: d.XZJ.Types.INVERTED,
                                     shape: d.XZJ.Shapes.BOX,
@@ -728,7 +728,7 @@ let V = r.memo(function (e) {
                             k(R({}, e), {
                                 children: (0, n.jsx)(d.XZJ, {
                                     value: i,
-                                    onChange: () => x(),
+                                    onChange: () => p(),
                                     size: 18,
                                     type: d.XZJ.Types.INVERTED,
                                     shape: d.XZJ.Shapes.BOX,
@@ -840,7 +840,7 @@ let V = r.memo(function (e) {
     }),
     X = r.memo(function () {
         let e = (0, o.cj)([b.default], () => b.default.getTrackedGames()),
-            t = (0, o.e7)([x.ZP], () => x.ZP.getRunningGames()).filter((t) => null == e[t.pid]);
+            t = (0, o.e7)([p.ZP], () => p.ZP.getRunningGames()).filter((t) => null == e[t.pid]);
         return (0, n.jsxs)(n.Fragment, {
             children: [
                 t.length > 0 &&
@@ -952,7 +952,7 @@ function J() {
     return (0, n.jsx)(d.w0Z, {
         children: (0, n.jsxs)('div', {
             className: i()(w.panel, I.panel),
-            children: [(0, n.jsx)(K, {}), (0, n.jsx)(Y, {}), (0, n.jsx)(X, {}), (0, n.jsx)(W, {}), (0, n.jsx)(z, {}), (0, n.jsx)(H, {})]
+            children: [(0, n.jsx)(K, {}), (0, n.jsx)(Y, {}), (0, n.jsx)(X, {}), (0, n.jsx)(W, {}), (0, n.jsx)(G, {}), (0, n.jsx)(H, {})]
         })
     });
 }

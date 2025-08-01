@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(311821),
     _ = n(42818),
     j = n(314884),
-    O = n(509545),
-    C = n(78839),
+    C = n(509545),
+    O = n(78839),
     E = n(267642),
     v = n(74538),
     S = n(937615),
@@ -108,7 +108,7 @@ async function R(e, t, n, i) {
 }
 function D(e) {
     var t, n, s;
-    let { premiumSubscription: a, guildBoostSlotId: c, fractionalPremiumInfo: d, onBack: p, onNext: j, onClose: C } = e,
+    let { premiumSubscription: a, guildBoostSlotId: c, fractionalPremiumInfo: d, onBack: p, onNext: j, onClose: O } = e,
         [E, I] = r.useState(!1),
         [P, D] = r.useState(null),
         [Z, w] = r.useMemo(() => {
@@ -118,18 +118,18 @@ function D(e) {
                 return [[], !0];
             }
         }, [a]),
-        k = r.useRef(C);
+        k = r.useRef(O);
     (r.useEffect(() => {
-        k.current = C;
+        k.current = O;
     }),
         r.useEffect(() => {
             w && k.current();
         }, [w]));
-    let { premiumSubscriptionPlan: L, premiumGuildPlan: B } = (0, l.cj)([O.Z], () => {
-            let e = O.Z.get(a.planId);
+    let { premiumSubscriptionPlan: L, premiumGuildPlan: B } = (0, l.cj)([C.Z], () => {
+            let e = C.Z.get(a.planId);
             return {
                 premiumSubscriptionPlan: e,
-                premiumGuildPlan: null != e ? O.Z.getForSkuAndInterval((0, v.Wz)(N.Si.GUILD), e.interval, e.intervalCount) : null
+                premiumGuildPlan: null != e ? C.Z.getForSkuAndInterval((0, v.Wz)(N.Si.GUILD), e.interval, e.intervalCount) : null
             };
         }),
         { analyticsLocations: M } = (0, m.ZP)(),
@@ -173,7 +173,7 @@ function D(e) {
         a.isPausedForFractionalPremium && d.fetched && (K = y.intl.format(y.t.eb0xgY, { expirationDate: d.endsAt.toDate() })),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(T.Z, { onClose: C }),
+                (0, i.jsx)(T.Z, { onClose: O }),
                 (0, i.jsxs)(o.hzk, {
                     className: A.body,
                     children: [
@@ -267,9 +267,9 @@ function w(e) {
     let t,
         { guildBoostSlot: n, transitionState: s, onClose: a } = e;
     r.useEffect(() => {
-        C.Z.hasFetchedSubscriptions() || (0, c.jg)();
+        O.Z.hasFetchedSubscriptions() || (0, c.jg)();
     }, []);
-    let d = (0, l.e7)([C.Z], () => C.Z.getPremiumTypeSubscription()),
+    let d = (0, l.e7)([O.Z], () => O.Z.getPremiumTypeSubscription()),
         g = (0, p.Z)(),
         [h, f] = r.useState(1),
         { analyticsLocations: b } = (0, m.ZP)(u.Z.GUILD_BOOST_CANCELLATION_MODAL);

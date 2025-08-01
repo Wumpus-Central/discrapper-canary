@@ -125,7 +125,7 @@ let u = '1340102344645283891',
             includedInLevel: void 0
         },
         [s.oNc.GUILD_TAGS_BADGE_PACK_FLEX]: {
-            boostPrice: 6,
+            boostPrice: 5,
             includedInLevel: void 0
         }
     },

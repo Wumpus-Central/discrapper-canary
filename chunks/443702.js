@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(853872),
     _ = n(78839),
     j = n(706454),
-    O = n(726985),
-    C = n(981631),
+    C = n(726985),
+    O = n(981631),
     E = n(388032),
     v = n(189435);
 let S = () =>
@@ -33,7 +33,7 @@ class T extends r.PureComponent {
         });
     }
     handleRedemptionRedirect() {
-        c.Z.setSection(C.oAB.INVENTORY);
+        c.Z.setSection(O.oAB.INVENTORY);
     }
     render() {
         let { syncing: e, hide: t, paymentSources: n, defaultPaymentSourceId: r, locale: s, premiumSubscription: l, isRemovingPaymentSource: o, isUpdatingPaymentSource: c } = this.props;
@@ -45,18 +45,18 @@ class T extends r.PureComponent {
                       e && 0 === Object.keys(n).length
                           ? (0, i.jsx)(S, {})
                           : (0, i.jsx)(g.F, {
-                                setting: O.s6.BILLING_PAYMENT_METHODS,
+                                setting: C.s6.BILLING_PAYMENT_METHODS,
                                 children: (0, i.jsx)(m.Z, {
                                     paymentSources: n,
                                     defaultPaymentSourceId: r,
-                                    premiumSubscriptionPaymentSourceId: null != l && l.status !== C.O0b.CANCELED ? l.paymentSourceId : null,
+                                    premiumSubscriptionPaymentSourceId: null != l && l.status !== O.O0b.CANCELED ? l.paymentSourceId : null,
                                     locale: s,
                                     removing: o,
                                     submitting: c
                                 })
                             }),
                       (0, i.jsx)(g.F, {
-                          setting: O.s6.BILLING_TRANSACTION_HISTORY,
+                          setting: C.s6.BILLING_TRANSACTION_HISTORY,
                           children: (0, i.jsx)('div', {
                               className: v.paymentHistory,
                               children: (0, i.jsxs)(a.y5t, {

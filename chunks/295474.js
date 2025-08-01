@@ -1,5 +1,5 @@
 (n.d(t, {
-    Ux: () => I,
+    Ux: () => S,
     gS: () => f,
     ww: () => h
 }),
@@ -16,9 +16,9 @@ var r = n(73800),
     _ = n(715903),
     E = n(981631),
     p = n(372897),
-    O = n(526761),
-    S = n(388032);
-function I(e) {
+    I = n(526761),
+    O = n(388032);
+function S(e) {
     return (0, i.e7)(
         [o.default, s.ZP],
         () => {
@@ -48,9 +48,9 @@ function f(e) {
             if (u.has(p.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME))
                 if (null == e) {
                     var E;
-                    t.nick = [S.intl.formatToPlainString(S.t.WBUh3N, { guildName: null != (E = i.name) ? E : '' })];
-                } else t.nick = [S.intl.string(S.t.EPZCrK)];
-            return (u.has(p.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [S.intl.string(S.t.dZh1v7)]), t);
+                    t.nick = [O.intl.formatToPlainString(O.t.WBUh3N, { guildName: null != (E = i.name) ? E : '' })];
+                } else t.nick = [O.intl.string(O.t.EPZCrK)];
+            return (u.has(p.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [O.intl.string(O.t.dZh1v7)]), t);
         },
         [e]
     );
@@ -63,8 +63,8 @@ function h(e) {
         r.useCallback(() => {
             if (null == _) return;
             let e = E.oAB.PROFILE_CUSTOMIZATION,
-                t = O.NB.GUILD;
-            (p ? (0, a.Fq)(_) : (t = O.NB.USER_PROFILE),
+                t = I.NB.GUILD;
+            (p ? (0, a.Fq)(_) : (t = I.NB.USER_PROFILE),
                 l.Z.open(e, t, {
                     scrollPosition: n,
                     analyticsLocation: o,

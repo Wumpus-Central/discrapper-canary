@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(954794),
     _ = n(112843),
     j = n(524484),
-    O = n(981631),
-    C = n(388032),
+    C = n(981631),
+    O = n(388032),
     E = n(966053);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -76,40 +76,40 @@ let T = {
     P = () => [
         {
             location: j.Hn.CHAT_INPUT,
-            title: C.intl.string(C.t.elTty8),
-            description: C.intl.string(C.t.HtKfMj)
+            title: O.intl.string(O.t.elTty8),
+            description: O.intl.string(O.t.HtKfMj)
         },
         {
             location: j.Hn.REACTION,
-            title: C.intl.string(C.t.Ik4VIS),
-            description: C.intl.string(C.t.y4rqKy)
+            title: O.intl.string(O.t.Ik4VIS),
+            description: O.intl.string(O.t.y4rqKy)
         },
         {
             location: j.Hn.MEMBER_USER,
-            title: C.intl.string(C.t.ZXBlAg),
-            description: C.intl.string(C.t['m9RD+f'])
+            title: O.intl.string(O.t.ZXBlAg),
+            description: O.intl.string(O.t['m9RD+f'])
         },
         {
             location: j.Hn.CALL_TILE,
-            title: C.intl.string(C.t.V66giY),
-            description: C.intl.string(C.t.fiHV7u)
+            title: O.intl.string(O.t.V66giY),
+            description: O.intl.string(O.t.fiHV7u)
         }
     ],
     R = () => [
         {
             location: j.oZ.CHAT_INPUT,
-            title: C.intl.string(C.t.vUcvPD),
-            description: C.intl.string(C.t.y00OrK)
+            title: O.intl.string(O.t.vUcvPD),
+            description: O.intl.string(O.t.y00OrK)
         },
         {
             location: j.oZ.VOICE_USER,
-            title: C.intl.string(C.t['TcRO5+']),
-            description: C.intl.string(C.t.YJCxVV)
+            title: O.intl.string(O.t['TcRO5+']),
+            description: O.intl.string(O.t.YJCxVV)
         },
         {
             location: j.oZ.MENTION,
-            title: C.intl.string(C.t.oW4shI),
-            description: C.intl.string(C.t['mqfw/P'])
+            title: O.intl.string(O.t.oW4shI),
+            description: O.intl.string(O.t['mqfw/P'])
         }
     ];
 function D(e) {
@@ -128,7 +128,7 @@ function D(e) {
             )
         );
     return (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(o.vwX, { children: C.intl.string(C.t.bWVN1N) }), a]
+        children: [(0, i.jsx)(o.vwX, { children: O.intl.string(O.t.bWVN1N) }), a]
     });
 }
 function Z(e) {
@@ -148,7 +148,7 @@ function w(e) {
         s = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, i.jsx)(o.j7V, {
         value: t,
-        note: C.intl.string(C.t.KuYbWF),
+        note: O.intl.string(O.t.KuYbWF),
         onChange: (e) => {
             (e || (0, g.T)(h.hn.DISABLE_POGGERMODE),
                 e && (!n || s)
@@ -158,9 +158,9 @@ function w(e) {
                               S(
                                   v(
                                       {
-                                          header: s ? C.intl.string(C.t['FxT+p6']) : C.intl.string(C.t.TAZ4Fx),
-                                          confirmText: C.intl.string(C.t.JFfinp),
-                                          cancelText: C.intl.string(C.t['ETE/oK']),
+                                          header: s ? O.intl.string(O.t['FxT+p6']) : O.intl.string(O.t.TAZ4Fx),
+                                          confirmText: O.intl.string(O.t.JFfinp),
+                                          cancelText: O.intl.string(O.t['ETE/oK']),
                                           onConfirm: () =>
                                               r(
                                                   s
@@ -176,7 +176,7 @@ function w(e) {
                                   {
                                       children: (0, i.jsx)(o.Text, {
                                           variant: 'text-md/normal',
-                                          children: s ? C.intl.string(C.t.gmixr6) : C.intl.string(C.t.jN3t3N)
+                                          children: s ? O.intl.string(O.t.gmixr6) : O.intl.string(O.t.jN3t3N)
                                       })
                                   }
                               )
@@ -184,7 +184,7 @@ function w(e) {
                       )
                     : r({ enabled: e }));
         },
-        children: C.intl.string(C.t.vuiXm5)
+        children: O.intl.string(O.t.vuiXm5)
     });
 }
 function k(e) {
@@ -195,21 +195,21 @@ function k(e) {
         c = !t || !n;
     return (0, i.jsxs)(o.hjN, {
         tag: o.RB0.H1,
-        title: C.intl.string(C.t.mqxwJC),
+        title: O.intl.string(O.t.mqxwJC),
         children: [
             (0, i.jsx)(o.j7V, {
                 disabled: !t,
                 value: n,
-                note: C.intl.string(C.t.O1Vflp),
+                note: O.intl.string(O.t.O1Vflp),
                 onChange: (e) => l({ confettiEnabled: e }, 0),
-                children: C.intl.string(C.t.s0KCgI)
+                children: O.intl.string(O.t.s0KCgI)
             }),
             (0, i.jsxs)(o.xJW, {
                 disabled: c,
-                title: C.intl.string(C.t['vd0D8/']),
+                title: O.intl.string(O.t['vd0D8/']),
                 className: E.formItem,
                 children: [
-                    (0, i.jsx)(Z, { children: C.intl.string(C.t.a18Sur) }),
+                    (0, i.jsx)(Z, { children: O.intl.string(O.t.a18Sur) }),
                     (0, i.jsx)(o.iRW, {
                         disabled: c,
                         markers: y,
@@ -224,10 +224,10 @@ function k(e) {
             }),
             (0, i.jsxs)(o.xJW, {
                 disabled: c,
-                title: C.intl.string(C.t.sPO3io),
+                title: O.intl.string(O.t.sPO3io),
                 className: E.formItem,
                 children: [
-                    (0, i.jsx)(Z, { children: C.intl.string(C.t.xoldVl) }),
+                    (0, i.jsx)(Z, { children: O.intl.string(O.t.xoldVl) }),
                     (0, i.jsx)(o.iRW, {
                         disabled: c,
                         markers: A,
@@ -257,28 +257,28 @@ function L(e) {
         l = !t || !n;
     return (0, i.jsxs)(o.hjN, {
         tag: o.RB0.H1,
-        title: C.intl.string(C.t.Xz0olZ),
+        title: O.intl.string(O.t.Xz0olZ),
         children: [
             (0, i.jsx)(o.j7V, {
                 disabled: !t,
                 value: n,
-                note: C.intl.string(C.t['31Z8ER']),
+                note: O.intl.string(O.t['31Z8ER']),
                 onChange: (e) => a({ combosEnabled: e }),
-                children: C.intl.string(C.t.o3iV7O)
+                children: O.intl.string(O.t.o3iV7O)
             }),
             (0, i.jsx)(o.j7V, {
                 disabled: !t,
                 value: r,
-                note: C.intl.string(C.t['9rgQEh']),
+                note: O.intl.string(O.t['9rgQEh']),
                 onChange: (e) => a({ comboSoundsEnabled: e }),
-                children: C.intl.string(C.t['Ax+Ioa'])
+                children: O.intl.string(O.t['Ax+Ioa'])
             }),
             (0, i.jsxs)(o.xJW, {
                 disabled: l,
-                title: C.intl.string(C.t.L0oQur),
+                title: O.intl.string(O.t.L0oQur),
                 className: E.formItem,
                 children: [
-                    (0, i.jsx)(Z, { children: C.intl.string(C.t['/OOFpK']) }),
+                    (0, i.jsx)(Z, { children: O.intl.string(O.t['/OOFpK']) }),
                     (0, i.jsx)(o.iRW, {
                         disabled: l,
                         markers: N,
@@ -307,22 +307,22 @@ function B(e) {
         };
     return (0, i.jsxs)(o.hjN, {
         tag: o.RB0.H1,
-        title: C.intl.string(C.t.wVS5SU),
+        title: O.intl.string(O.t.wVS5SU),
         children: [
             (0, i.jsx)(o.j7V, {
                 disabled: !t || c,
-                tooltipNote: c ? C.intl.string(C.t.GckHGx) : null,
+                tooltipNote: c ? O.intl.string(O.t.GckHGx) : null,
                 value: n && !c,
-                note: C.intl.string(C.t.Qq5W3t),
+                note: O.intl.string(O.t.Qq5W3t),
                 onChange: (e) => l({ screenshakeEnabled: e }, 1),
-                children: C.intl.string(C.t.N004zM)
+                children: O.intl.string(O.t.N004zM)
             }),
             (0, i.jsxs)(o.xJW, {
                 disabled: u,
-                title: C.intl.string(C.t.UxnnCw),
+                title: O.intl.string(O.t.UxnnCw),
                 className: E.formItem,
                 children: [
-                    (0, i.jsx)(Z, { children: C.intl.string(C.t.CEOEOT) }),
+                    (0, i.jsx)(Z, { children: O.intl.string(O.t.CEOEOT) }),
                     (0, i.jsx)(o.iRW, {
                         disabled: u,
                         markers: I,
@@ -332,7 +332,7 @@ function B(e) {
                         maxValue: I[I.length - 1],
                         initialValue: r,
                         onValueChange: (e) => m({ shakeIntensity: e }, 1),
-                        onMarkerRender: (e) => (e === I[I.length - 1] ? C.intl.string(C.t['4rbMWV']) : ''.concat(100 * e, '%'))
+                        onMarkerRender: (e) => (e === I[I.length - 1] ? O.intl.string(O.t['4rbMWV']) : ''.concat(100 * e, '%'))
                     })
                 ]
             }),
@@ -349,13 +349,13 @@ function M(e) {
     let { updateSettings: t } = e;
     return (0, i.jsx)(o.hjN, {
         tag: o.RB0.H1,
-        title: C.intl.string(C.t.EuXv2t),
+        title: O.intl.string(O.t.EuXv2t),
         children: (0, i.jsxs)(o.xJW, {
             className: E.formItem,
             children: [
                 (0, i.jsx)(o.R94, {
                     className: E.formItem,
-                    children: C.intl.string(C.t['1SLnkp'])
+                    children: O.intl.string(O.t['1SLnkp'])
                 }),
                 (0, i.jsx)('div', {
                     'data-button-hoisted-classname-wrapper': !0,
@@ -363,7 +363,7 @@ function M(e) {
                     children: (0, i.jsx)(o.zxk, {
                         variant: 'primary',
                         size: 'sm',
-                        text: C.intl.string(C.t.qz65yc),
+                        text: O.intl.string(O.t.qz65yc),
                         onClick: () => {
                             (t({
                                 enabled: !1,
@@ -398,12 +398,12 @@ function U(e) {
                             (0, i.jsx)(o.X6q, {
                                 variant: 'heading-md/semibold',
                                 color: 'header-primary',
-                                children: C.intl.string(C.t['6jI0hY'])
+                                children: O.intl.string(O.t['6jI0hY'])
                             }),
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-md/normal',
                                 color: 'header-secondary',
-                                children: C.intl.string(C.t.GuUItb)
+                                children: O.intl.string(O.t.GuUItb)
                             })
                         ]
                     }),
@@ -443,7 +443,7 @@ function G(e) {
                 var t;
                 (n(!0),
                     (0, m.GN)('poggermode_enabled'),
-                    p.S.dispatch(O.CkL.SHAKE_APP, {
+                    p.S.dispatch(C.CkL.SHAKE_APP, {
                         duration: 2000,
                         intensity: null != (t = e.shakeIntensity) ? t : s.shakeIntensity
                     }));
@@ -456,7 +456,7 @@ function G(e) {
             let i = u(s.screenshakeEnabled, e.screenshakeEnabled, s.enabled, e.enabled);
             if (1 === t && i) {
                 var r;
-                p.S.dispatch(O.CkL.SHAKE_APP, {
+                p.S.dispatch(C.CkL.SHAKE_APP, {
                     duration: 1000,
                     intensity: null != (r = e.shakeIntensity) ? r : s.shakeIntensity
                 });
@@ -475,7 +475,7 @@ function G(e) {
                 (0, i.jsx)(o.X6q, {
                     variant: 'heading-lg/semibold',
                     className: E.title,
-                    children: C.intl.string(C.t.AtCukJ)
+                    children: O.intl.string(O.t.AtCukJ)
                 }),
                 (0, i.jsx)(w, {
                     settings: s,

@@ -131,7 +131,10 @@ function P(e) {
         ? (0, r.jsx)(c.I, {
               transitionState: n,
               onClose: P,
-              graphic: { src: N },
+              graphic: {
+                  type: 'image',
+                  src: N
+              },
               title: S.intl.string(S.t['5CyJBQ']),
               subtitle: S.intl.string(S.t.NRBYjo),
               actions: [

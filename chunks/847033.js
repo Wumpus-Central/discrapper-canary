@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => A,
-    m: () => R
+    m: () => y
 }),
     n(539854),
     n(388685));
@@ -16,29 +16,29 @@ var r = n(255367),
     _ = n(994592),
     E = n(160404),
     p = n(703656),
-    O = n(984933),
-    S = n(430824),
-    I = n(626135),
+    I = n(984933),
+    O = n(430824),
+    S = n(626135),
     f = n(652515),
     h = n(550951),
     T = n(544978),
     m = n(333866),
     g = n(629481),
     N = n(981631);
-let y = i.createContext(void 0);
-function R() {
-    let e = i.useContext(y);
+let R = i.createContext(void 0);
+function y() {
+    let e = i.useContext(R);
     return (a()(null != e, 'must use useGuildShopDisplayContext within a GuildShopDisplayContextProvider'), e);
 }
 function A(e) {
     var t;
     let { children: n, initialTab: l, guildId: a } = e,
-        R = (0, o.e7)([S.Z], () => S.Z.getGuild(a)),
+        y = (0, o.e7)([O.Z], () => O.Z.getGuild(a)),
         A = (0, o.e7)([E.Z], () => E.Z.isViewingServerShop(a)),
-        b = (0, h.g)(R, 'guild_shop_page'),
+        b = (0, h.g)(y, 'guild_shop_page'),
         C = (0, f.RF)(a, 'guild_shop_page'),
-        P = (null == R ? void 0 : R.features.has(N.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0,
-        D = (0, _.mY)(null == R ? void 0 : R.id),
+        P = (null == y ? void 0 : y.features.has(N.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0,
+        D = (0, _.mY)(null == y ? void 0 : y.id),
         M = null == (t = (0, d.YB)(a)) ? void 0 : t.server_shop_tab_order,
         j = [],
         x = T.y.GUILD_SHOP_FULL_PREVIEW;
@@ -49,7 +49,7 @@ function A(e) {
         i.useEffect(() => {
             k(l);
         }, [l]),
-        (0, r.jsx)(y.Provider, {
+        (0, r.jsx)(R.Provider, {
             value: {
                 selectedTab: v,
                 setSelectedTab: k,
@@ -85,9 +85,9 @@ function A(e) {
                     if (v === T.y.GUILD_PRODUCTS_PREVIEW) (e.stopPropagation(), k(T.y.GUILD_ROLE_SUBSCRIPTIONS), (t.action_taken = g.mz.DISMISS_TAB_PREVIEW));
                     else {
                         var n;
-                        ((0, p.dL)(N.Z5c.CHANNEL(a, null == (n = O.ZP.getDefaultChannel(a)) ? void 0 : n.id)), (t.action_taken = g.mz.DISMISS_FULL_PREVIEW));
+                        ((0, p.dL)(N.Z5c.CHANNEL(a, null == (n = I.ZP.getDefaultChannel(a)) ? void 0 : n.id)), (t.action_taken = g.mz.DISMISS_FULL_PREVIEW));
                     }
-                    I.default.track(N.rMx.GUILD_SHOP_PREVIEW_CLICK, t);
+                    S.default.track(N.rMx.GUILD_SHOP_PREVIEW_CLICK, t);
                 }
             },
             children: n

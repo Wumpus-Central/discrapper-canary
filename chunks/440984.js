@@ -1,4 +1,4 @@
-(n.d(e, { D: () => b }), n(388685));
+(n.d(t, { D: () => b }), n(388685));
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -16,16 +16,16 @@ var r = n(255367),
     h = n(583532),
     x = n(982404),
     y = n(299156);
-function b(t) {
-    let { premiumSubscription: e, premiumType: n, onClose: b, confettiCanvas: g, userWasChurned: I = !1, userDiscountOffer: j } = t,
+function b(e) {
+    let { premiumSubscription: t, premiumType: n, onClose: b, confettiCanvas: g, userWasChurned: I = !1, userDiscountOffer: j } = e,
         P = (0, l.ZP)(),
         v = (0, a.wj)(P) ? x : y,
         T = i.useRef(null),
         [E, O] = i.useState(!1),
-        S = (0, _._)(e, f.Xh.PREMIUM_MONTH_TIER_2, j),
+        S = (0, _._)(t, f.Xh.PREMIUM_MONTH_TIER_2, j),
         N = (0, d.aS)(f.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
-            currency: e.currency,
-            paymentSourceId: e.paymentSourceId
+            currency: t.currency,
+            paymentSourceId: t.paymentSourceId
         }),
         R = (0, m.T4)(N.amount, N.currency),
         D = (0, o.e7)([c.Z], () => c.Z.useReducedMotion);

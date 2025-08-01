@@ -15,13 +15,13 @@ var r = n(120356),
 function h() {
     var e, t, n, r, a;
     let h = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        f = '426310',
-        b = '0fe9a64eeed2b40e087cbb720c67eea2a44d7a36'.substring(0, 7),
+        f = '426362',
+        b = '4b332647a609a5be87134f7f1a7a54153e3bf865'.substring(0, 7),
         x = null === c.Z || void 0 === c.Z ? void 0 : c.Z.remoteApp.getVersion(),
         _ = null === c.Z || void 0 === c.Z || null == (e = (t = c.Z.remoteApp).getBuildNumber) ? void 0 : e.call(t),
         j = null === c.Z || void 0 === c.Z || null == (n = (r = c.Z.remoteApp).getAppArch) ? void 0 : n.call(r),
-        O = null == (a = d.C.getCurrentBuildOverride().overrides) ? void 0 : a.discord_web,
-        C = (function () {
+        C = null == (a = d.C.getCurrentBuildOverride().overrides) ? void 0 : a.discord_web,
+        O = (function () {
             var e;
             let t = null === l() || void 0 === l() || null == (e = l().os) ? void 0 : e.toString();
             if (null == t || null == c.Z) return null;
@@ -32,8 +32,8 @@ function h() {
         E = [h, f, '('.concat(b, ')')];
     return (
         null != x && (E.push('Host '.concat(x)), null != j && E.push(j.toLowerCase()), null != _ && E.push('('.concat(_, ')'))),
-        E.push('Build Override: '.concat(null != O ? O.id : 'N/A')),
-        null != C && E.push(C),
+        E.push('Build Override: '.concat(null != C ? C.id : 'N/A')),
+        null != O && E.push(O),
         (0, i.jsx)(u.Z, {
             copyValue: E.join(' '),
             text: p.intl.string(p.t['9Al4QU']),
@@ -92,7 +92,7 @@ function h() {
                                         ]
                                     }),
                                     ' ',
-                                    null != O &&
+                                    null != C &&
                                         (0, i.jsx)(o.Text, {
                                             tag: 'span',
                                             className: g.line,
@@ -100,7 +100,7 @@ function h() {
                                             color: 'text-muted',
                                             children: (0, i.jsxs)('span', {
                                                 className: g.versionHash,
-                                                children: ['Build Override: ', O.id]
+                                                children: ['Build Override: ', C.id]
                                             })
                                         }),
                                     null != x
@@ -132,13 +132,13 @@ function h() {
                                               ]
                                           })
                                         : null,
-                                    null != C
+                                    null != O
                                         ? (0, i.jsx)(o.Text, {
                                               tag: 'span',
                                               className: s()(g.line, g.os),
                                               variant: 'text-xs/normal',
                                               color: 'text-muted',
-                                              children: C
+                                              children: O
                                           })
                                         : null
                                 ]

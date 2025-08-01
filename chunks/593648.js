@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(688465),
     _ = n(890022),
     j = n(688907),
-    O = n(487419),
-    C = n(197344),
+    C = n(487419),
+    O = n(197344),
     E = n(476756),
     v = n(734934),
     S = n(223683),
@@ -239,7 +239,7 @@ function $(e) {
                 sound: 'reconnect'
             }
         ],
-        g = null != C.Z.useHolidaySoundpack();
+        g = null != O.Z.useHolidaySoundpack();
     return (0, i.jsx)(P.F, {
         setting: F.s6.NOTIFICATIONS_SOUNDS,
         children: (0, i.jsxs)(u.hjN, {
@@ -291,7 +291,7 @@ function $(e) {
     });
 }
 function ee() {
-    let e = (0, c.e7)([O.Z], () => O.Z.getGuildAlertSettings()),
+    let e = (0, c.e7)([C.Z], () => C.Z.getGuildAlertSettings()),
         [t, n] = r.useState(null),
         s = M.default.keys(e).map((t) => {
             let n = e[t];

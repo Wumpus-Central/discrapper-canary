@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => S });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -12,13 +12,13 @@ var i = n(120356),
     _ = n(930180),
     E = n(388032),
     p = n(957991);
-function O(e) {
+function I(e) {
     let t = c.Z.getVoiceChannelId();
     if (null == t) return;
     let n = s.Z.getChannel(t);
     null != n && (0, u.RK)(n, e);
 }
-function S(e) {
+function O(e) {
     var t, n;
     let { channelId: i } = e,
         a = null != (t = (0, _._d)(i)) ? t : 0,
@@ -49,7 +49,7 @@ function S(e) {
               })
             : null;
 }
-function I() {
+function S() {
     let e = (0, d.Z)();
     return null == e
         ? null
@@ -58,12 +58,12 @@ function I() {
               color: o.DM8.DEFAULT,
               children: [
                   (0, r.jsx)('div', { children: E.intl.string(E.t.Ul1RJS) }),
-                  (0, r.jsx)(S, { channelId: e.id }),
+                  (0, r.jsx)(O, { channelId: e.id }),
                   (0, r.jsx)(a.zx, {
                       className: p.acceptButton,
                       size: a.zx.Sizes.MIN,
                       color: a.zx.Colors.WHITE,
-                      onClick: () => O(!1),
+                      onClick: () => I(!1),
                       children: (0, r.jsx)(o.Text, {
                           className: p.acceptText,
                           variant: 'text-xs/normal',
@@ -76,7 +76,7 @@ function I() {
                       look: a.zx.Looks.OUTLINED,
                       size: a.zx.Sizes.MIN,
                       color: a.zx.Colors.WHITE,
-                      onClick: () => O(!0),
+                      onClick: () => I(!0),
                       children: (0, r.jsx)(o.Text, {
                           className: p.declineText,
                           variant: 'text-xs/normal',

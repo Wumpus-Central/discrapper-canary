@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(730647),
     _ = n(584825),
     j = n(305342),
-    O = n(333867),
-    C = n(963249),
+    C = n(333867),
+    O = n(963249),
     E = n(87484),
     v = n(736519),
     S = n(365943),
@@ -201,7 +201,7 @@ let k = function () {
                                     variant: 'primary',
                                     text: 'Select Plan',
                                     onClick: () =>
-                                        (0, C.Z)({
+                                        (0, O.Z)({
                                             subscriptionTier: n,
                                             analyticsLocations: Y
                                         })
@@ -505,7 +505,7 @@ let k = function () {
                                     variant: 'primary',
                                     text: 'Open Collectibles Payment Modal for SKU',
                                     onClick: () =>
-                                        (0, O.Z)({
+                                        (0, C.Z)({
                                             skuId: ed,
                                             analyticsLocations: Y,
                                             variantsReturnStyle: em

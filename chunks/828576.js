@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     body: 'body__996b0',
     confirmDiscountContent: 'confirmDiscountContent__996b0',
     confirmDiscountDescription: 'confirmDiscountDescription__996b0',

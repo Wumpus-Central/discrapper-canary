@@ -20,24 +20,24 @@ var i = n(255367),
     x = n(335346),
     _ = n(981631),
     j = n(388032),
-    O = n(806539),
-    C = n(293401),
+    C = n(806539),
+    O = n(293401),
     E = n(447489),
     v = n(484885);
 let S = () => {
         let e = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
         return (0, i.jsx)('div', {
-            className: C.centerContent,
+            className: O.centerContent,
             children: e
                 ? (0, i.jsx)('img', {
                       src: E.Z,
-                      className: C.orbAsset,
+                      className: O.orbAsset,
                       alt: 'Orb'
                   })
                 : (0, i.jsxs)(d.Z, {
                       autoPlay: !0,
                       loop: !0,
-                      className: C.orbAsset,
+                      className: O.orbAsset,
                       children: [
                           (0, i.jsx)('source', {
                               src: v.Z,
@@ -45,7 +45,7 @@ let S = () => {
                           }),
                           (0, i.jsx)('img', {
                               src: E.Z,
-                              className: C.orbAsset,
+                              className: O.orbAsset,
                               alt: 'Orb'
                           })
                       ]
@@ -55,30 +55,30 @@ let S = () => {
     T = (e) => {
         let { descriptionText: t = j.intl.string(j.t['6If1Cw']), onClose: n = () => {} } = e;
         return (0, i.jsxs)('div', {
-            className: a()(C.container, O.baseCardOutline),
+            className: a()(O.container, C.baseCardOutline),
             children: [
                 (0, i.jsx)(b.s, { onClick: n }),
                 (0, i.jsx)(x.V, {
                     rightOffset: 20,
                     invertTail: !0,
-                    tailSpineClassName: C.coachmarkTailSpine,
-                    tailTargetInnerClassName: C.coachmarkTailTargetInner
+                    tailSpineClassName: O.coachmarkTailSpine,
+                    tailTargetInnerClassName: O.coachmarkTailTargetInner
                 }),
                 (0, i.jsx)(S, {}),
                 (0, i.jsx)('div', {
-                    className: C.contentContainer,
+                    className: O.contentContainer,
                     children: (0, i.jsxs)('div', {
-                        className: C.textContainer,
+                        className: O.textContainer,
                         children: [
                             (0, i.jsx)(o.X6q, {
                                 variant: 'heading-md/bold',
                                 color: 'header-primary',
-                                className: C.coachmarkTitle,
+                                className: O.coachmarkTitle,
                                 children: j.intl.string(j.t['D/nzVl'])
                             }),
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-sm/medium',
-                                className: C.coachmarkDescription,
+                                className: O.coachmarkDescription,
                                 children: t
                             })
                         ]
@@ -116,7 +116,7 @@ function N(e) {
             (await o(), n());
         }, [n, o]);
     return (0, i.jsxs)(f.E9, {
-        className: C.coachmarkModalContainer,
+        className: O.coachmarkModalContainer,
         backgroundElementRef: t,
         onGetBoundingRect: _.dG4,
         getOffsetsRelativeToElement: () => ({

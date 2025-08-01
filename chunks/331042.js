@@ -4,31 +4,31 @@ var o = l(255367),
     n = l(505266),
     i = l(979554),
     s = l(399606),
-    u = l(834023),
     a = l(667202),
+    u = l(481060),
     c = l(100527),
     d = l(906732),
     p = l(286961),
     C = l(300284),
     f = l(594174),
-    h = l(597688),
-    v = l(1870),
-    E = l(429368),
+    E = l(597688),
+    h = l(1870),
+    v = l(429368),
     P = l(884697),
     _ = l(587792),
-    L = l(228624),
-    x = l(635552),
+    A = l(228624),
+    L = l(635552),
     T = l(905357),
-    g = l(328456),
-    m = l(530618),
+    m = l(328456),
+    x = l(530618),
     I = l(372654),
-    S = l(197831),
-    k = l(58201),
-    O = l(391594),
-    Z = l(302800),
-    w = l(215023),
-    b = l(854402);
-let A = (e) => {
+    O = l(197831),
+    Z = l(58201),
+    g = l(391594),
+    S = l(302800),
+    k = l(215023),
+    y = l(854402);
+let R = (e) => {
         let t = (0, _.o)('CollectiblesCollectedModal'),
             l = (0, s.e7)([f.default], () => {
                 var e, t;
@@ -36,14 +36,14 @@ let A = (e) => {
             });
         return r.useMemo(() => {
             if (!t || e.type !== i.Z.AVATAR_DECORATION) return;
-            let o = (0, Z.R9)(e.skuId, l);
+            let o = (0, S.R9)(e.skuId, l);
             if (null == o) return;
-            let r = h.Z.getProduct(o);
+            let r = E.Z.getProduct(o);
             return null != r ? r : void 0;
         }, [t, e.skuId, e.type, l]);
     },
-    j = (e) => {
-        let { firstProfileEffect: t, firstAvatarDecoration: l } = (0, g.Rj)(e),
+    w = (e) => {
+        let { firstProfileEffect: t, firstAvatarDecoration: l } = (0, m.Rj)(e),
             o = (0, P.x6)(e);
         return {
             firstAvatarDecoration: l,
@@ -52,11 +52,11 @@ let A = (e) => {
             hasRequiredProductItems: o ? null != l && null != t : null != l || null != t || e.type === i.Z.NAMEPLATE
         };
     },
-    y = (e) => {
+    b = (e) => {
         var t;
-        let l = (0, L.ed)('CollectiblesCollectedModal'),
+        let l = (0, A.ed)('CollectiblesCollectedModal'),
             o = (0, p.Z)(),
-            r = (0, L.hv)('CollectiblesShopGiftButton'),
+            r = (0, A.hv)('CollectiblesShopGiftButton'),
             n = (0, C.Z)({ analyticsLocations: e });
         return {
             isVariantsGroupEnabled: l,
@@ -67,82 +67,84 @@ let A = (e) => {
         };
     },
     D = (e) => {
-        let { transitionState: t, product: l, onClose: r, analyticsLocations: i, overrideTitle: p, overrideDescription: C, shouldShowPromotionalExperience: f, purchaseType: h = w.o8.FIAT } = e,
-            P = (0, s.e7)([v.Z], () => v.Z.purchases),
-            _ = (0, E.o)(l, P),
-            L = (0, k.W)(l, _),
-            { analyticsLocations: g } = (0, d.ZP)([...i, c.Z.COLLECTIBLES_COLLECTED_MODAL]),
-            Z = A(L),
-            { hasRequiredProductItems: D } = j(L),
-            { isVariantsGroupEnabled: R, promotionalRewardCollectedText: B, variantsReturnStyle: M, openProfileSettings: U } = y(g),
-            { environment: N, modalRef: W, confettiCanvas: G, setConfettiCanvas: K, customConfettiDisplayOptions: V } = (0, O.$0)(L, h);
-        (0, O.f1)(L, g);
-        let $ = (0, T.k)(L),
-            q = (0, T.k)(Z),
-            { handleUseNow: F, isApplying: H } = (0, x.W)({
-                product: L,
+        let { transitionState: t, product: l, onClose: r, analyticsLocations: p, overrideTitle: C, overrideDescription: f, shouldShowPromotionalExperience: E, purchaseType: P = k.o8.FIAT } = e,
+            _ = (0, s.e7)([h.Z], () => h.Z.purchases),
+            A = (0, v.o)(l, _),
+            m = (0, Z.W)(l, A),
+            { analyticsLocations: S } = (0, d.ZP)([...p, c.Z.COLLECTIBLES_COLLECTED_MODAL]),
+            D = R(m),
+            { hasRequiredProductItems: j } = w(m),
+            { isVariantsGroupEnabled: M, promotionalRewardCollectedText: N, variantsReturnStyle: B, openProfileSettings: U } = b(S),
+            { environment: V, modalRef: W, confettiCanvas: $, setConfettiCanvas: G, customConfettiDisplayOptions: X } = (0, g.$0)(m, P);
+        (0, g.f1)(m, S);
+        let q = (0, T.k)(m),
+            F = (0, T.k)(D),
+            { handleUseNow: H, isApplying: K } = (0, L.W)({
+                product: m,
                 onSuccess: r,
                 onError: r
             }),
-            X = (0, O.Xw)({
-                product: L,
-                pairedProduct: Z,
-                overrideTitle: p,
-                isVariantsGroupEnabled: R,
-                shouldShowPromotionalExperience: f,
-                productName: $,
-                pairedProductName: q
+            z = (0, g.Xw)({
+                product: m,
+                pairedProduct: D,
+                overrideTitle: C,
+                isVariantsGroupEnabled: M,
+                shouldShowPromotionalExperience: E,
+                productName: q,
+                pairedProductName: F
             }),
-            z = (0, O.ys)({
-                product: L,
-                pairedProduct: Z,
-                overrideDescription: C,
-                productName: $,
-                pairedProductName: q,
-                shouldShowPromotionalExperience: f,
-                promotionalRewardCollectedText: B
+            J = (0, g.ys)({
+                product: m,
+                pairedProduct: D,
+                overrideDescription: f,
+                productName: q,
+                pairedProductName: F,
+                shouldShowPromotionalExperience: E,
+                promotionalRewardCollectedText: N
             }),
-            J = (0, O.cf)({
-                product: L,
-                pairedProduct: Z,
+            Q = (0, g.cf)({
+                product: m,
+                pairedProduct: D,
                 onClose: r,
-                analyticsLocations: g,
-                hasRequiredProductItems: D,
-                handleUseNow: F,
-                isApplying: H,
-                variantsReturnStyle: M,
+                analyticsLocations: S,
+                hasRequiredProductItems: j,
+                handleUseNow: H,
+                isApplying: K,
+                variantsReturnStyle: B,
                 openProfileSettings: U
             });
         return (0, o.jsx)(d.Gt, {
-            value: g,
+            value: S,
             children: (0, o.jsxs)('div', {
                 ref: W,
                 children: [
                     (0, o.jsx)(n.O_, {
-                        ref: K,
-                        className: b.confettiCanvas,
-                        environment: N
+                        ref: G,
+                        className: y.confettiCanvas,
+                        environment: V
                     }),
                     (0, o.jsx)(a.I, {
                         graphic: {
-                            type: u.tK.COLLECTIBLES_PREVIEW,
+                            type: 'dynamic',
+                            component: u.AX$.COLLECTIBLES_PREVIEW,
+                            aspectRatio: m.type === i.Z.NAMEPLATE || m.type === i.Z.AVATAR_DECORATION ? '16/9' : '6/4',
                             props: {
-                                product: L,
-                                pairedProduct: Z
+                                product: m,
+                                pairedProduct: D
                             }
                         },
-                        title: X,
-                        subtitle: null != z ? z : void 0,
+                        title: z,
+                        subtitle: null != J ? J : void 0,
                         onClose: r,
                         transitionState: t,
-                        actions: J
+                        actions: Q
                     }),
-                    null != V
-                        ? (0, o.jsx)(S.i, { options: V })
-                        : (0, o.jsx)(m.Z, {
+                    null != X
+                        ? (0, o.jsx)(O.i, { options: X })
+                        : (0, o.jsx)(x.Z, {
                               confettiTarget: W.current,
-                              confettiCanvas: G,
-                              sprites: (0, I.vK)(L.categorySkuId)
+                              confettiCanvas: $,
+                              sprites: (0, I.vK)(m.categorySkuId)
                           })
                 ]
             })

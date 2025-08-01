@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(163684),
     _ = n(178100),
     j = n(518638),
-    O = n(725727),
-    C = n(454982),
+    C = n(725727),
+    O = n(454982),
     E = n(767714),
     v = n(504983),
     S = n(703656),
@@ -38,7 +38,7 @@ function w(e) {
         [p, g] = r.useState(!1),
         h = () => m((e) => !e),
         x = (0, f.ZP)(),
-        O = (0, j.Pz)(n.id, x),
+        C = (0, j.Pz)(n.id, x),
         E = null != s,
         v = (0, _.Z)(n, E);
     E && c
@@ -80,7 +80,7 @@ function w(e) {
                                         className: Z.promotionIcon,
                                         children: (0, i.jsx)('img', {
                                             alt: '',
-                                            src: O,
+                                            src: C,
                                             className: Z.promotionIconImage
                                         })
                                     }),
@@ -125,7 +125,7 @@ function w(e) {
                     renderModal: (e) => {
                         var t, r;
                         return (0, i.jsx)(
-                            C.Z,
+                            O.Z,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -192,7 +192,7 @@ let k = function () {
             (0, p.Qv)().then(() => f(!0));
         });
     }, []);
-    let { promotionsLoaded: b, activeOutboundPromotions: _, claimedEndedOutboundPromotions: j, claimedOutboundPromotionCodeMap: C, addClaimedOutboundPromotionCode: k } = (0, O.lG)(),
+    let { promotionsLoaded: b, activeOutboundPromotions: _, claimedEndedOutboundPromotions: j, claimedOutboundPromotionCodeMap: O, addClaimedOutboundPromotionCode: k } = (0, C.lG)(),
         L = _.length + j.length > 0,
         B =
             x.g.useExperiment(
@@ -276,7 +276,7 @@ let k = function () {
                                                   w,
                                                   {
                                                       outboundPromotion: e,
-                                                      code: C[e.id],
+                                                      code: O[e.id],
                                                       addClaimedOutboundPromotionCode: k,
                                                       disabled: !s
                                                   },

@@ -9,8 +9,8 @@ var n = a(255367),
     d = a(347469),
     u = a(213609),
     m = a(213713),
-    p = a(665149),
-    x = a(238246),
+    x = a(665149),
+    p = a(238246),
     h = a(788983),
     b = a(906467),
     f = a(259580),
@@ -36,11 +36,11 @@ var _ = a(392750),
     D = a(246992),
     L = a(484662),
     M = a(496025),
-    U = a(442954),
-    F = a(925124),
+    F = a(442954),
+    U = a(925124),
     B = a(633001),
-    G = a(702904),
-    z = a(178821),
+    z = a(702904),
+    G = a(178821),
     V = a(891401),
     H = a(958328),
     W = a(315384),
@@ -126,7 +126,7 @@ function eo(e) {
                         id: 'performance',
                         name: 'Performance',
                         group: ea.v0.DEVELOPMENT,
-                        render: () => (0, n.jsx)(z.ZP, {})
+                        render: () => (0, n.jsx)(G.ZP, {})
                     }),
                     e.push({
                         id: 'feedback',
@@ -198,7 +198,7 @@ function eo(e) {
                     id: 'modals',
                     name: 'Modals',
                     group: ea.v0.UI,
-                    render: () => (0, n.jsx)(U.Z, {})
+                    render: () => (0, n.jsx)(F.Z, {})
                 }),
                 e.push({
                     id: 'layers',
@@ -248,13 +248,13 @@ function eo(e) {
                         id: 'offers',
                         name: 'Offers',
                         group: ea.v0.PREMIUM,
-                        render: () => (0, n.jsx)(F.Z, {})
+                        render: () => (0, n.jsx)(U.Z, {})
                     }),
                     e.push({
                         id: 'payments',
                         name: 'Payments',
                         group: ea.v0.BILLING,
-                        render: () => (0, n.jsx)(G.Z, {})
+                        render: () => (0, n.jsx)(z.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',
@@ -323,20 +323,20 @@ function eo(e) {
         }),
         (0, n.jsxs)(D.Gk, {
             children: [
-                (0, n.jsxs)(p.ZP, {
+                (0, n.jsxs)(x.ZP, {
                     className: ei.headerBar,
                     toolbar: a
                         ? null
                         : (0, n.jsxs)(n.Fragment, {
                               children: [
-                                  (0, n.jsx)(p.ZP.Icon, {
+                                  (0, n.jsx)(x.ZP.Icon, {
                                       icon: c.rgF,
                                       tooltip: 'Pop Out',
                                       onClick: () => {
                                           (0, h.bA)(
                                               en.KJ3.DEVTOOLS_POPOUT,
                                               () =>
-                                                  (0, n.jsx)(x.Z, {
+                                                  (0, n.jsx)(p.Z, {
                                                       windowKey: en.KJ3.DEVTOOLS_POPOUT,
                                                       title: 'DevTools',
                                                       withTitleBar: !0,
@@ -352,7 +352,7 @@ function eo(e) {
                                           );
                                       }
                                   }),
-                                  (0, n.jsx)(p.ZP.Icon, {
+                                  (0, n.jsx)(x.ZP.Icon, {
                                       icon: c.Dio,
                                       tooltip: er.intl.string(er.t.cpT0Cg),
                                       onClick: v.SO
@@ -360,11 +360,11 @@ function eo(e) {
                               ]
                           }),
                     children: [
-                        (0, n.jsx)(p.ZP.Icon, {
+                        (0, n.jsx)(x.ZP.Icon, {
                             icon: c.Ymb,
                             tooltip: 'DevTools'
                         }),
-                        (0, n.jsx)(p.ZP.Title, { children: 'DevTools' })
+                        (0, n.jsx)(x.ZP.Title, { children: 'DevTools' })
                     ]
                 }),
                 (0, n.jsx)(i, {}),
@@ -418,15 +418,15 @@ function ed() {
               className: el.container,
               children: (0, n.jsx)(c.P3F, {
                   onClick: v.SO,
-                  children: (0, n.jsxs)(p.ZP, {
+                  children: (0, n.jsxs)(x.ZP, {
                       className: i()(ei.headerBar, el.mobileHeaderCollapsed),
                       toolbar: (0, n.jsx)(f.Z, { direction: f.Z.Directions.UP }),
                       children: [
-                          (0, n.jsx)(p.ZP.Icon, {
+                          (0, n.jsx)(x.ZP.Icon, {
                               icon: c.Ymb,
                               tooltip: 'DevTools'
                           }),
-                          (0, n.jsx)(p.ZP.Title, { children: 'DevTools' })
+                          (0, n.jsx)(x.ZP.Title, { children: 'DevTools' })
                       ]
                   })
               })

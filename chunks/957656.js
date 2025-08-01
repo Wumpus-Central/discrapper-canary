@@ -5,8 +5,8 @@ var o = t(481060),
     i = t(198952),
     s = t(329242),
     c = t(916723),
-    a = t(388032),
-    l = t(305623);
+    l = t(388032),
+    a = t(305623);
 let d = (e) => {
     var r,
         t,
@@ -86,14 +86,14 @@ let d = (e) => {
 ((d.ButtonFooter = (e) => {
     let { children: r } = e;
     return (0, n.jsx)('div', {
-        className: l.footer,
+        className: a.footer,
         children: r
     });
 }),
     (d.Header = (e) => {
-        let { icon: r, currentUser: t, otherUser: c, header: a } = e;
+        let { icon: r, currentUser: t, otherUser: c, header: l } = e;
         return (0, n.jsxs)('div', {
-            className: l.header,
+            className: a.header,
             children: [
                 (0, n.jsx)(i.Z, {
                     currentUser: t,
@@ -101,11 +101,11 @@ let d = (e) => {
                     children: r
                 }),
                 (0, n.jsxs)('div', {
-                    className: l.heading,
+                    className: a.heading,
                     children: [
                         (0, n.jsx)(o.X6q, {
                             variant: 'text-lg/bold',
-                            children: a
+                            children: l
                         }),
                         (0, n.jsx)(s.Z, { user: c })
                     ]
@@ -116,19 +116,19 @@ let d = (e) => {
     (d.Content = (e) => {
         let { children: r } = e;
         return (0, n.jsx)('div', {
-            className: l.content,
+            className: a.content,
             children: r
         });
     }),
     (d.Notice = (e) => {
         let { notice: r } = e;
         return (0, n.jsxs)('div', {
-            className: l.notice,
+            className: a.notice,
             children: [
                 (0, n.jsx)(o.Text, {
                     variant: 'eyebrow',
                     color: 'header-primary',
-                    children: a.intl.string(c.default.cXgKMD)
+                    children: l.intl.string(c.default.cXgKMD)
                 }),
                 (0, n.jsx)(o.Text, {
                     variant: 'text-sm/normal',
@@ -143,7 +143,7 @@ let d = (e) => {
         return null == r
             ? null
             : (0, n.jsx)(o.kzN, {
-                  className: l.error,
+                  className: a.error,
                   onDismiss: t,
                   children: r
               });

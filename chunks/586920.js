@@ -1,4 +1,4 @@
-(n.d(e, { i: () => h }), n(388685));
+(n.d(t, { i: () => h }), n(388685));
 var r = n(255367),
     i = n(73800),
     o = n(442837),
@@ -14,7 +14,7 @@ var r = n(255367),
     f = n(997892),
     C = n(234286);
 let h = () => {
-    let { transitionState: t, onClose: e, premiumType: n, premiumSubscription: h, confettiCanvas: x, churnUserDiscountOffer: y } = (0, d.a)(),
+    let { transitionState: e, onClose: t, premiumType: n, premiumSubscription: h, confettiCanvas: x, churnUserDiscountOffer: y } = (0, d.a)(),
         b = (0, i.useRef)(null),
         [g, I] = (0, i.useState)(!1),
         j = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
@@ -30,7 +30,7 @@ let h = () => {
         T = [
             {
                 text: _.intl.string(_.t['/r8g/v']),
-                onClick: () => e(),
+                onClick: () => t(),
                 variant: 'primary',
                 fullWidth: !0
             }
@@ -39,12 +39,15 @@ let h = () => {
         ref: b,
         children: [
             (0, r.jsx)(a.I, {
-                graphic: { src: v ? C : f },
+                graphic: {
+                    type: 'image',
+                    src: v ? C : f
+                },
                 gradientColor: v ? 'nitro-pink' : 'nitro-green',
-                transitionState: t,
+                transitionState: e,
                 title: _.intl.string(_.t.PZSyRk),
                 actions: T,
-                onClose: async () => e(),
+                onClose: async () => t(),
                 children: (0, r.jsx)('div', {
                     className: p.offerDetailContainer,
                     children: (0, r.jsx)(u.o, {

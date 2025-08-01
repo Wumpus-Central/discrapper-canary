@@ -1,4 +1,4 @@
-(n.d(t, { h: () => O }), n(388685), n(953529));
+(n.d(t, { h: () => C }), n(388685), n(953529));
 var i = n(255367),
     r = n(73800),
     s = n(913527),
@@ -34,14 +34,14 @@ let _ = (e) => {
     },
     j = (e) => {
         var t;
-        let { transitionState: n, groupListing: r, guildId: s, listing: c, subscription: j, onClose: O } = e,
-            C = (0, m.Dt)(),
+        let { transitionState: n, groupListing: r, guildId: s, listing: c, subscription: j, onClose: C } = e,
+            O = (0, m.Dt)(),
             E = (0, g.YB)(s),
             v = (null == E || null == (t = E.cover_image_asset) ? void 0 : t.application_id) != null ? (0, p._W)(E.cover_image_asset.application_id, E.cover_image_asset, 440) : void 0,
             { analyticsLocations: S } = (0, u.ZP)(d.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
             { cancelSubscription: T, error: N, submitting: I } = _(S),
             y = async () => {
-                (await T(j.id)) && O();
+                (await T(j.id)) && C();
             },
             A = c.role_benefits.benefits.filter((e) => e.ref_type === f.Qs.CHANNEL),
             P = c.role_benefits.benefits.filter((e) => e.ref_type === f.Qs.INTANGIBLE),
@@ -54,7 +54,7 @@ let _ = (e) => {
         return (0, i.jsxs)(o.Y0X, {
             transitionState: n,
             className: x.__invalid_modal,
-            'aria-labelledby': C,
+            'aria-labelledby': O,
             parentComponent: 'CancelSubscriptionModal',
             children: [
                 (0, i.jsxs)('div', {
@@ -67,7 +67,7 @@ let _ = (e) => {
                         (0, i.jsx)(o.olH, {
                             withCircleBackground: !0,
                             className: x.closeButton,
-                            onClick: O
+                            onClick: C
                         })
                     ]
                 }),
@@ -76,7 +76,7 @@ let _ = (e) => {
                     className: x.content,
                     children: [
                         (0, i.jsx)(o.X6q, {
-                            id: C,
+                            id: O,
                             variant: 'text-md/medium',
                             className: x.title,
                             children: b.intl.string(b.t.O6l5tL)
@@ -106,7 +106,7 @@ let _ = (e) => {
                             look: l.zx.Looks.LINK,
                             color: l.zx.Colors.WHITE,
                             className: x.goBackButton,
-                            onClick: O,
+                            onClick: C,
                             children: b.intl.string(b.t.EP6EPT)
                         })
                     ]
@@ -114,7 +114,7 @@ let _ = (e) => {
             ]
         });
     },
-    O = (e) => {
+    C = (e) => {
         (0, o.h7j)((t) =>
             (0, i.jsx)(
                 j,

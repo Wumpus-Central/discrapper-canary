@@ -9,8 +9,8 @@ var n = a(255367),
     d = a(937579),
     u = a(675478),
     m = a(431),
-    p = a(572004),
-    x = a(74538),
+    x = a(572004),
+    p = a(74538),
     h = a(604776),
     b = a(246992),
     f = a(232867),
@@ -116,10 +116,10 @@ function S(e) {
     let D = null != I,
         L = null != I && new Date(I).getTime() < Date.now(),
         M = (null == k ? void 0 : k.sku_id) === g.Si.TIER_0,
-        U = async () => {
-            (N(!0), D ? await F({ expiresAt: null }) : await (0, d.a)(m), b(), N(!1));
+        F = async () => {
+            (N(!0), D ? await U({ expiresAt: null }) : await (0, d.a)(m), b(), N(!1));
         },
-        F = async (e) => {
+        U = async (e) => {
             N(!0);
             try {
                 await s.tn.patch({
@@ -191,7 +191,7 @@ function S(e) {
                 (0, n.jsxs)(c.P3F, {
                     className: i()(j.row, j.idRow),
                     onClick: () => {
-                        (0, p.JG)(P, () => _(!0));
+                        (0, x.JG)(P, () => _(!0));
                     },
                     children: [
                         (0, n.jsxs)(c.Text, {
@@ -215,7 +215,7 @@ function S(e) {
                 (0, n.jsxs)(c.P3F, {
                     className: i()(j.row, j.idRow),
                     onClick: () => {
-                        (0, p.JG)(R, () => C(!0));
+                        (0, x.JG)(R, () => C(!0));
                     },
                     children: [
                         (0, n.jsxs)(c.Text, {
@@ -244,7 +244,7 @@ function S(e) {
                         children: [
                             'Trial Length:',
                             ' ',
-                            (0, x.if)({
+                            (0, p.if)({
                                 intervalType: null != (l = null == k ? void 0 : k.interval) ? l : g.rV.MONTH,
                                 intervalCount: null != (o = null == k ? void 0 : k.interval_count) ? o : 1,
                                 capitalize: !1
@@ -263,7 +263,7 @@ function S(e) {
                         (0, n.jsx)('input', {
                             type: 'date',
                             value: null != I ? I.substring(0, 10) : '',
-                            onChange: (e) => F({ expiresAt: e.target.value })
+                            onChange: (e) => U({ expiresAt: e.target.value })
                         })
                     ]
                 }),
@@ -278,7 +278,7 @@ function S(e) {
                         (0, n.jsx)('input', {
                             type: 'text',
                             value: null != (u = null == A ? void 0 : A.id) ? u : '',
-                            onChange: (e) => F({ referrerId: e.target.value })
+                            onChange: (e) => U({ referrerId: e.target.value })
                         })
                     ]
                 }),
@@ -286,7 +286,7 @@ function S(e) {
                     className: j.badgeContainer,
                     children: [
                         (0, n.jsx)(c.P3F, {
-                            onClick: U,
+                            onClick: F,
                             className: i()(j.badge, j.clickable, {
                                 [j.acked]: D,
                                 [j.expired]: L
@@ -329,7 +329,7 @@ function S(e) {
 function P(e) {
     var t, a;
     let { offer: l, offerOptions: o, forceRefetch: u } = e,
-        [m, x] = r.useState(!1),
+        [m, p] = r.useState(!1),
         [h, b] = r.useState(!1),
         [f, g] = r.useState(!1),
         [_, y] = r.useState(!1);
@@ -376,7 +376,7 @@ function P(e) {
     r.useEffect(() => {
         if (m) {
             let e = setTimeout(() => {
-                x(!1);
+                p(!1);
             }, 3000);
             return () => {
                 clearTimeout(e);
@@ -421,7 +421,7 @@ function P(e) {
                 (0, n.jsxs)(c.P3F, {
                     className: i()(j.row, j.idRow),
                     onClick: () => {
-                        (0, p.JG)(C, () => x(!0));
+                        (0, x.JG)(C, () => p(!0));
                     },
                     children: [
                         (0, n.jsxs)(c.Text, {
@@ -445,7 +445,7 @@ function P(e) {
                 (0, n.jsxs)(c.P3F, {
                     className: i()(j.row, j.idRow),
                     onClick: () => {
-                        (0, p.JG)(E, () => b(!0));
+                        (0, x.JG)(E, () => b(!0));
                     },
                     children: [
                         (0, n.jsxs)(c.Text, {
@@ -527,16 +527,16 @@ function I() {
     let [e, t] = r.useState([]),
         [a, l] = r.useState([]),
         [i, s] = r.useState(),
-        [p, x] = r.useState(),
+        [x, p] = r.useState(),
         [g, O] = r.useState([]),
         [I, w] = r.useState([]),
         [R, k] = r.useState(!0),
         [A, Z] = r.useState(10080),
         [D, L] = r.useState([]),
-        { entitlements: M, deleteFractionalPremium: U, refreshEntitlementList: F } = (0, f.m)();
+        { entitlements: M, deleteFractionalPremium: F, refreshEntitlementList: U } = (0, f.m)();
     r.useEffect(() => {
-        F();
-    }, [F]);
+        U();
+    }, [U]);
     let B = (e) => e.filter((e) => e.sourceType === v.kNB.REVERSE_TRIAL && null != e.endsAt && e.endsAt > new Date());
     (r.useEffect(() => {
         L(B(M));
@@ -552,9 +552,9 @@ function I() {
                             label: t,
                             value: e.discount[t]
                         }));
-                    (t(a), l(n), null == i && s(a[0].value), null == p && x(n[0].value));
+                    (t(a), l(n), null == i && s(a[0].value), null == x && p(n[0].value));
                 });
-        }, [e, a, i, p, R]),
+        }, [e, a, i, x, R]),
         r.useEffect(() => {
             R &&
                 (k(!1),
@@ -564,18 +564,18 @@ function I() {
                     (O(e.trial.sort((e, t) => e.id.localeCompare(t.id))), w(e.discount.sort((e, t) => e.id.localeCompare(t.id))));
                 }));
         }, [R]));
-    let G = async () => {
+    let z = async () => {
             null != i && (await C(i, 'trial'), k(!0));
         },
-        z = async () => {
-            null != p && (await C(p, 'discount'), k(!0));
+        G = async () => {
+            null != x && (await C(x, 'discount'), k(!0));
         },
         V = async () => {
             (await N(), k(!0));
         },
         H = async () => {
             let e = new Date(Date.now() + 60 * A * 1000).toISOString();
-            (await E(e), F());
+            (await E(e), U());
         };
     return (0, n.jsx)(c.zJl, {
         className: _.panel,
@@ -603,6 +603,12 @@ function I() {
                                     size: 'sm',
                                     text: 'Clear Mobile Trials DismissibleContent',
                                     onClick: () => (0, u.w9)(o.z.PREMIUM_MOBILE_TRIAL_USER_SETTINGS_AVATAR_BADGE)
+                                }),
+                                (0, n.jsx)(c.zxk, {
+                                    variant: 'primary',
+                                    size: 'sm',
+                                    text: 'Clear Offer Nagbar DismissibleContent',
+                                    onClick: () => (0, u.Z1)(o.z.NAGBAR_NOTICE_OFFER_EXPIRING)
                                 }),
                                 (0, n.jsx)(c.zxk, {
                                     variant: 'primary',
@@ -636,7 +642,7 @@ function I() {
                                 (0, n.jsx)(c.zxk, {
                                     variant: 'primary',
                                     text: 'Create',
-                                    onClick: G
+                                    onClick: z
                                 })
                             ]
                         })
@@ -655,16 +661,16 @@ function I() {
                                 (0, n.jsx)(c.PhF, {
                                     className: j.input,
                                     options: a,
-                                    isSelected: (e) => p === e,
+                                    isSelected: (e) => x === e,
                                     placeholder: 'Discount Type',
                                     serialize: (e) => String(e),
-                                    select: (e) => x(e),
+                                    select: (e) => p(e),
                                     popoutLayerContext: b.O$
                                 }),
                                 (0, n.jsx)(c.zxk, {
                                     variant: 'primary',
                                     text: 'Create',
-                                    onClick: z
+                                    onClick: G
                                 })
                             ]
                         })
@@ -772,7 +778,7 @@ function I() {
                                         {
                                             entitlement: e,
                                             active: !0,
-                                            onDelete: () => U(e.id)
+                                            onDelete: () => F(e.id)
                                         },
                                         e.id
                                     )

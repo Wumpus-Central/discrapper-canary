@@ -24,9 +24,9 @@ function u(e) {
             textLink: x,
             gradientColor: _,
             onRequestClose: j,
-            popoverRef: O
+            popoverRef: C
         } = e,
-        C = (function (e, t) {
+        O = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -77,14 +77,14 @@ function u(e) {
                     }));
             }
             return e;
-        })({}, C)),
+        })({}, O)),
         (n = n =
             {
                 onRequestClose: E,
                 gradientColor: _,
                 caretConfig: p,
                 children: (0, i.jsxs)('div', {
-                    ref: O,
+                    ref: C,
                     children: [
                         (0, i.jsx)(c.u, {
                             onClick: v,

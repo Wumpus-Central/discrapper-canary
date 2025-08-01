@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     churnFooterContainer: 'churnFooterContainer__64988',
     churnFooterGlow: 'churnFooterGlow__64988',
     churnFooterTopBorder: 'churnFooterTopBorder__64988',

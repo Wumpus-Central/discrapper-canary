@@ -1,4 +1,4 @@
-(n.d(e, {
+(n.d(t, {
     Sz: () => P,
     of: () => j
 }),
@@ -24,51 +24,51 @@ var r = n(255367),
     y = n(981631),
     b = n(388032),
     g = n(714421);
-async function I(t) {
-    let { premiumSubscription: e, pauseDuration: n, onClose: r, setHasError: i, setIsCancelling: o, analyticsLocations: a, analyticsLocation: s } = t;
+async function I(e) {
+    let { premiumSubscription: t, pauseDuration: n, onClose: r, setHasError: i, setIsCancelling: o, analyticsLocations: a, analyticsLocation: s } = e;
     try {
         (o(!0),
             i(!1),
             await (0, d.Mg)(
-                e,
+                t,
                 { pauseDuration: n },
                 {
                     amount: 0,
-                    currency: e.currency
+                    currency: t.currency
                 },
-                (0, C.UX)(e.items, e.currency, e.paymentSourceId),
+                (0, C.UX)(t.items, t.currency, t.paymentSourceId),
                 a,
                 s
             ),
             r());
-    } catch (t) {
+    } catch (e) {
         (i(!0), o(!1));
     }
 }
-function j(t) {
-    let { premiumType: e, onClose: n, pauseDuration: o, setPauseDuration: a, footer: l, premiumSubscription: c } = t,
+function j(e) {
+    let { premiumType: t, onClose: n, pauseDuration: o, setPauseDuration: a, footer: l, premiumSubscription: c } = e,
         d = i.useCallback(
-            (t) => {
-                let { value: e } = t;
-                a(e);
+            (e) => {
+                let { value: t } = e;
+                a(t);
             },
             [a]
         ),
         _ = c.status === y.O0b.PAUSED ? b.intl.string(b.t.Lp9WoK) : b.intl.string(b.t.eSR83d),
-        p = (function (t) {
-            let e = t.status === y.O0b.PAUSED ? b.t.o3upfX : b.t.dBXZEh,
-                { durations: n, currentDaysPaused: r } = (0, h.AT)(t),
+        p = (function (e) {
+            let t = e.status === y.O0b.PAUSED ? b.t.o3upfX : b.t.dBXZEh,
+                { durations: n, currentDaysPaused: r } = (0, h.AT)(e),
                 i = [];
-            for (let t of n) {
-                let n = s.T[t];
+            for (let e of n) {
+                let n = s.T[e];
                 i.push({
-                    name: b.intl.formatToPlainString(e, { days: n - r }),
+                    name: b.intl.formatToPlainString(t, { days: n - r }),
                     value: n,
                     radioItemIconClassName: g.radioOption
                 });
             }
             return (
-                i.sort((t, e) => t.value - e.value),
+                i.sort((e, t) => e.value - t.value),
                 i.push({
                     name: b.intl.string(b.t.OCPUMz),
                     value: 0,
@@ -85,7 +85,7 @@ function j(t) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(x.Z, {
-                    premiumType: e,
+                    premiumType: t,
                     onClose: n
                 }),
                 (0, r.jsx)(u.xBx, {
@@ -122,17 +122,17 @@ function j(t) {
         })
     );
 }
-function P(t) {
-    let { premiumSubscription: e, premiumType: n, onClose: o, pauseDuration: s, analyticsLocation: d } = t,
+function P(e) {
+    let { premiumSubscription: t, premiumType: n, onClose: o, pauseDuration: s, analyticsLocation: d } = e,
         [m, C] = i.useState(!1),
         { analyticsLocations: h } = (0, p.ZP)(),
         [j, P] = i.useState(!1),
         v = (0, _.ZP)(),
         T = null,
         E = null,
-        O = [y.O0b.PAST_DUE, y.O0b.PAUSED].includes(e.status) ? e.currentPeriodStart : e.currentPeriodEnd,
+        O = [y.O0b.PAST_DUE, y.O0b.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd,
         S = a()(O).add(s, 'days').toDate();
-    switch (e.status) {
+    switch (t.status) {
         case y.O0b.PAST_DUE:
             E = b.intl.format(b.t['xaS18/'], {
                 pauseDuration: s,
@@ -194,7 +194,7 @@ function P(t) {
                                 disabled: j || null == s,
                                 onClick: async () => {
                                     await I({
-                                        premiumSubscription: e,
+                                        premiumSubscription: t,
                                         pauseDuration: s,
                                         setIsCancelling: P,
                                         setHasError: C,

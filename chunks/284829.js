@@ -1,4 +1,4 @@
-(n.d(e, { U: () => I }), n(388685));
+(n.d(t, { U: () => I }), n(388685));
 var r = n(255367),
     i = n(73800),
     o = n(544891),
@@ -19,7 +19,7 @@ var r = n(255367),
     b = n(997892),
     g = n(234286);
 let I = () => {
-    let { transitionState: t, onClose: e, premiumType: n, setStep: I, premiumSubscription: j, churnUserDiscountOffer: P } = (0, f.a)(),
+    let { transitionState: e, onClose: t, premiumType: n, setStep: I, premiumSubscription: j, churnUserDiscountOffer: P } = (0, f.a)(),
         [v, T] = (0, i.useState)(!1),
         [E, O] = (0, i.useState)(!1),
         S = (0, m._)(j, C.Xh.PREMIUM_MONTH_TIER_2, P),
@@ -38,7 +38,7 @@ let I = () => {
                     rejectWithError: !0
                 }),
                     I(p.R.DISCOUNT_APPLIED));
-            } catch (t) {
+            } catch (e) {
                 (O(!0), T(!1));
             }
         };
@@ -47,7 +47,7 @@ let I = () => {
         A = [
             {
                 text: x.intl.string(x.t.zl7LZm),
-                onClick: () => e(),
+                onClick: () => t(),
                 variant: 'secondary',
                 disabled: v
             },
@@ -61,12 +61,15 @@ let I = () => {
             }
         ];
     return (0, r.jsxs)(s.I, {
-        graphic: { src: w ? g : b },
+        graphic: {
+            type: 'image',
+            src: w ? g : b
+        },
         gradientColor: w ? 'nitro-pink' : 'nitro-green',
-        transitionState: t,
+        transitionState: e,
         title: ''.concat(x.intl.format(x.t.q9Vxu7, { percent: P.discount.amount })),
         actions: A,
-        onClose: async () => e(),
+        onClose: async () => t(),
         children: [
             (0, r.jsx)('div', {
                 className: y.offerDetailContainer,

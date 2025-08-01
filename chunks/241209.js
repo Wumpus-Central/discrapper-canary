@@ -61,8 +61,8 @@ function j(e, t) {
         e
     );
 }
-let O = new RegExp('https?://'.concat(null != (i = window.GLOBAL_ENV.CDN_HOST) ? i : ''));
-function C(e) {
+let C = new RegExp('https?://'.concat(null != (i = window.GLOBAL_ENV.CDN_HOST) ? i : ''));
+function O(e) {
     return 'string' == typeof e.content ? e.content : S(e.content);
 }
 let E = j(_({}, d().defaultRules), {
@@ -101,7 +101,7 @@ let E = j(_({}, d().defaultRules), {
                     'blockquote',
                     {
                         className: f.blockquote,
-                        children: C(e)
+                        children: O(e)
                     },
                     n.key
                 )
@@ -114,7 +114,7 @@ let E = j(_({}, d().defaultRules), {
                 let r = i.match(e, t, n);
                 if (null != r && Array.isArray(r) && r.length >= 3) {
                     let e = r[2];
-                    if ('string' == typeof e) return null != e.match(O) ? r : null;
+                    if ('string' == typeof e) return null != e.match(C) ? r : null;
                 }
                 return !1;
             }
@@ -126,7 +126,7 @@ let E = j(_({}, d().defaultRules), {
                     'code',
                     {
                         className: f.codeInline,
-                        children: C(e)
+                        children: O(e)
                     },
                     n.key
                 )
@@ -139,7 +139,7 @@ let E = j(_({}, d().defaultRules), {
                         {
                             children: (0, s.jsx)('code', {
                                 className: o()(b.scrollbarGhostHairline, 'hljs'),
-                                children: C(e)
+                                children: O(e)
                             })
                         },
                         i.key

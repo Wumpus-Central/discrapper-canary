@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => S }), n(415506));
+(n.d(t, { Z: () => O }), n(415506));
 var r = n(255367);
 n(73800);
 var i = n(990547),
@@ -12,11 +12,11 @@ var i = n(990547),
     _ = n(474936),
     E = n(981631),
     p = n(388032),
-    O = n(131715);
-let S = function (e) {
+    I = n(131715);
+let O = function (e) {
     var t;
-    let { dismissCurrentNotice: n, subscriptionTier: S } = e,
-        { analyticsLocations: I } = (0, s.ZP)(
+    let { dismissCurrentNotice: n, subscriptionTier: O } = e,
+        { analyticsLocations: S } = (0, s.ZP)(
             (function (e) {
                 switch (e) {
                     case _.Si.TIER_0:
@@ -26,11 +26,11 @@ let S = function (e) {
                     default:
                         throw Error('Unsupported subscription tier: '.concat(e));
                 }
-            })(S)
+            })(O)
         ),
         f = (0, d.N)(),
         h = (0, a.Z)(null != f && null != f.expires_at ? Date.parse(f.expires_at) : 0),
-        T = null == f || (null == (t = f.subscription_trial) ? void 0 : t.sku_id) !== S || null == f.expires_at || Object.values(h).every((e) => 0 === e);
+        T = null == f || (null == (t = f.subscription_trial) ? void 0 : t.sku_id) !== O || null == f.expires_at || Object.values(h).every((e) => 0 === e);
     return ((0, c.Z)(
         {
             type: i.ImpressionTypes.VIEW,
@@ -51,13 +51,13 @@ let S = function (e) {
                       default:
                           throw Error('Unsupported subscription tier: '.concat(e));
                   }
-              })(S),
+              })(O),
               children: [
                   (0, r.jsx)(l.RyX, { onClick: n }),
                   (0, r.jsx)(l.SrA, {
                       size: 'md',
                       color: 'currentColor',
-                      className: O.premiumIcon
+                      className: I.premiumIcon
                   }),
                   (function (e, t) {
                       switch (e) {
@@ -68,13 +68,13 @@ let S = function (e) {
                           default:
                               throw Error('Unsupported subscription tier: '.concat(e));
                       }
-                  })(S, h),
+                  })(O, h),
                   (0, r.jsx)(l.EyT, {
                       onClick: () => {
                           (0, u.Z)({
                               trialId: f.trial_id,
-                              subscriptionTier: S,
-                              analyticsLocations: I,
+                              subscriptionTier: O,
+                              analyticsLocations: S,
                               analyticsObject: {
                                   page: E.ZY5.IN_APP,
                                   section: E.jXE.NOTIFICATION_BAR,
@@ -91,7 +91,7 @@ let S = function (e) {
                               default:
                                   throw Error('Unsupported subscription tier: '.concat(e));
                           }
-                      })(S)
+                      })(O)
                   })
               ]
           });

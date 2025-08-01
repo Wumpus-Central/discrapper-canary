@@ -17,9 +17,9 @@ var r = n(442837),
     b = n(831169);
 function x(e) {
     var t;
-    let { app: n, currentSubscription: p, currentListing: h, alternativeListings: x, navigateToHome: j, subscriptionGroup: O, renewalSkuId: C } = e,
+    let { app: n, currentSubscription: p, currentListing: h, alternativeListings: x, navigateToHome: j, subscriptionGroup: C, renewalSkuId: O } = e,
         E = (0, a.y)(n, 100),
-        v = (0, m.KK)(O.flags),
+        v = (0, m.KK)(C.flags),
         S = v ? s.QTo : s.tBG,
         T = v ? f.intl.string(f.t['46YF2N']) : f.intl.string(f.t.fFyGiI),
         N = null == (t = p.metadata) ? void 0 : t.application_subscription_guild_id,
@@ -27,9 +27,9 @@ function x(e) {
         y = (0, r.e7)(
             [u.Z],
             () => {
-                if (null != C) return u.Z.get(C);
+                if (null != O) return u.Z.get(O);
             },
-            [C]
+            [O]
         ),
         A = (0, g.p)(p.currentPeriodEnd);
     return (0, i.jsxs)('div', {
@@ -144,7 +144,7 @@ function x(e) {
                         })
                     }),
                     x.map((e) =>
-                        e.skuId === C
+                        e.skuId === O
                             ? (0, i.jsx)(
                                   o.Z,
                                   {

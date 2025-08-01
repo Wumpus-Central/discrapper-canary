@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(539854), n(388685));
+(n.d(t, { Z: () => C }), n(539854), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -22,8 +22,8 @@ let j = [
         extensions: ['gif']
     }
 ];
-function O(e) {
-    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: O, changeAvatarButtonText: C, guildId: E, className: v, disabled: S = !1, isTryItOutFlow: T = !1, forcedDivider: N, withHighlight: I = !1 } = e,
+function C(e) {
+    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: C, changeAvatarButtonText: O, guildId: E, className: v, disabled: S = !1, isTryItOutFlow: T = !1, forcedDivider: N, withHighlight: I = !1 } = e,
         { newestAnalyticsLocation: y } = (0, d.ZP)(),
         A = I ? c.gtL : o.zx,
         P = (0, m.T)({ location: 'AvatarSection' }),
@@ -43,7 +43,7 @@ function O(e) {
         }, [E, y, T, Z]);
     return (0, i.jsx)(g.Z, {
         className: v,
-        title: O,
+        title: C,
         titleIcon: w
             ? (0, i.jsx)(c.IGR, {
                   text: x.intl.string(x.t.y2b7CA),
@@ -66,7 +66,7 @@ function O(e) {
                     className: a()({ [_.buttonHighlighted]: I }),
                     size: o.zx.Sizes.SMALL,
                     onClick: k,
-                    children: null != C ? C : x.intl.string(x.t['4OynCA'])
+                    children: null != O ? O : x.intl.string(x.t['4OynCA'])
                 }),
                 t &&
                     (0, i.jsx)('div', {

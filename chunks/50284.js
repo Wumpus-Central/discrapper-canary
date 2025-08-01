@@ -19,22 +19,22 @@ async function p(e, t) {
             .filter((e) => 0 > d.default.compare(e.id, t))
             .sort((e, t) => d.default.compare(e.id, t.id))
             .reverse()[0],
-        O = null == p ? d.default.atPreviousMillisecond(t) : p.id,
-        S = 0;
+        I = null == p ? d.default.atPreviousMillisecond(t) : p.id,
+        O = 0;
     i.forAll((e) => {
-        d.default.compare(e.id, O) > 0 && (0, c.Ex)(e, n) && S++;
+        d.default.compare(e.id, I) > 0 && (0, c.Ex)(e, n) && O++;
     });
-    let I = o.Z.getChannel(e);
-    (null != I && I.isThread() && (I.isArchivedThread() && (await a.Z.unarchiveThread(I, !1)), l.Z.hasJoined(e) || (await a.Z.joinThread(I, 'Mark Unread'))),
+    let S = o.Z.getChannel(e);
+    (null != S && S.isThread() && (S.isArchivedThread() && (await a.Z.unarchiveThread(S, !1)), l.Z.hasJoined(e) || (await a.Z.joinThread(S, 'Mark Unread'))),
         E.log('Marking unread', {
             channelId: e,
             messageId: t
         }),
         r.tn.post({
-            url: _.ANM.MESSAGE_ACK(e, O),
+            url: _.ANM.MESSAGE_ACK(e, I),
             body: {
                 manual: !0,
-                mention_count: S
+                mention_count: O
             },
             oldFormErrors: !0,
             rejectWithError: !0

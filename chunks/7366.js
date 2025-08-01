@@ -1,13 +1,12 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
-var i = n(834023),
-    a = n(667202),
-    o = n(648613),
-    s = n(38273),
-    l = n(717975),
-    c = n(388032);
-function u(e, t, n) {
+var i = n(667202),
+    a = n(648613),
+    o = n(38273),
+    s = n(717975),
+    l = n(388032);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +19,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,12 +30,12 @@ function d(e) {
                 })
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                c(e, t, n[t]);
             }));
     }
     return e;
 }
-function _(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,29 +47,29 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function p(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = p(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function h(e, t) {
+function p(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,44 +78,43 @@ function h(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let m = (e) => {
-    var { gradientColor: t, title: n, subtitle: u, onClose: _, onSecondaryClick: h, videoSrc: m, loopAt: g } = e,
-        E = p(e, ['gradientColor', 'title', 'subtitle', 'onClose', 'onSecondaryClick', 'videoSrc', 'loopAt']);
-    let { subscribeButtonProps: b, subscriptionTier: y } = (0, s.G)({ defaultTextOverride: c.intl.string(c.t.pj0XBA) }),
-        O = (0, l.Z)();
-    return (0, r.jsx)(o.Z, {
-        subscriptionTier: y,
+let h = (e) => {
+    var { gradientColor: t, title: n, subtitle: c, onClose: d, onSecondaryClick: p, videoSrc: h, loopAt: m } = e,
+        g = f(e, ['gradientColor', 'title', 'subtitle', 'onClose', 'onSecondaryClick', 'videoSrc', 'loopAt']);
+    let { subscribeButtonProps: E, subscriptionTier: b } = (0, o.G)({ defaultTextOverride: l.intl.string(l.t.pj0XBA) }),
+        y = (0, s.Z)();
+    return (0, r.jsx)(a.Z, {
+        subscriptionTier: b,
         children: (e) => {
-            let { onClick: o } = e;
+            let { onClick: a } = e;
             return (0, r.jsx)(
-                a.I,
-                d(
+                i.I,
+                u(
                     {
                         size: 'md',
                         onClose: async () => {
-                            await _();
+                            await d();
                         },
                         gradientColor: t,
                         graphic: {
-                            type: i.tK.LOOPING_VIDEO,
-                            props: {
-                                src: m,
-                                loopAt: g
-                            }
+                            type: 'video',
+                            src: h,
+                            loop: !0,
+                            loopAt: m
                         },
                         title: n,
-                        subtitle: u,
+                        subtitle: c,
                         actions: [
                             {
                                 variant: 'secondary',
-                                text: c.intl.string(c.t.ZnqyZ2),
-                                onClick: h
+                                text: l.intl.string(l.t.ZnqyZ2),
+                                onClick: p
                             },
-                            f(d({}, b), { onClick: o })
+                            _(u({}, E), { onClick: a })
                         ]
                     },
-                    null != O && { badge: { text: O } },
-                    E
+                    null != y && { badge: { text: y } },
+                    g
                 )
             );
         }

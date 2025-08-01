@@ -54,7 +54,7 @@ function g(e, t) {
 }
 function h(e) {
     let { guildBoostSlot: t, onClose: h, hasCancelableGuildBoostSlot: f, premiumSubscription: b, onSelect: x, fractionalState: _, user: j } = e,
-        O = {
+        C = {
             transfer: {
                 label: null != t.premiumGuildSubscription ? u.intl.string(u.t['PR0n//']) : u.intl.string(u.t['+fmEYG']),
                 subtext: t.isOnCooldown() ? u.intl.string(u.t.XnB8Mz) : null,
@@ -73,14 +73,14 @@ function h(e) {
         };
     switch (b.status) {
         case c.O0b.PAST_DUE:
-            ((O.cancel.disabled = !0), (O.cancel.subtext = u.intl.string(u.t.WnL6DQ)), (O.uncancel.disabled = !0));
+            ((C.cancel.disabled = !0), (C.cancel.subtext = u.intl.string(u.t.WnL6DQ)), (C.uncancel.disabled = !0));
             break;
         case c.O0b.PAUSE_PENDING:
         case c.O0b.PAUSED:
-            _ === d.a$.NONE && ((O.transfer.disabled = !0), (O.transfer.subtext = u.intl.string(u.t.LiLRRU)), (0, l.y)('guild_boost_slot_popout', j, _) || ((O.cancel.subtext = u.intl.string(u.t['1ywaWF'])), (O.cancel.disabled = !0), (O.uncancel.disabled = !0)));
+            _ === d.a$.NONE && ((C.transfer.disabled = !0), (C.transfer.subtext = u.intl.string(u.t.LiLRRU)), (0, l.y)('guild_boost_slot_popout', j, _) || ((C.cancel.subtext = u.intl.string(u.t['1ywaWF'])), (C.cancel.disabled = !0), (C.uncancel.disabled = !0)));
     }
-    (0, l.y)('guild_boost_slot_popout', j, _) && ((O.cancel.subtext = u.intl.string(u.t.dq4vq6)), (O.cancel.disabled = !0), (O.uncancel.disabled = !0));
-    let C = r.useMemo(
+    (0, l.y)('guild_boost_slot_popout', j, _) && ((C.cancel.subtext = u.intl.string(u.t.dq4vq6)), (C.cancel.disabled = !0), (C.uncancel.disabled = !0));
+    let O = r.useMemo(
         () =>
             b.isPausedOrPausePending && _ === d.a$.NONE
                 ? (0, i.jsx)(s.sNh, {
@@ -102,8 +102,8 @@ function h(e) {
         children: [
             (0, i.jsx)(s.sNh, {
                 id: 'apply',
-                label: O.transfer.label,
-                subtext: O.transfer.subtext,
+                label: C.transfer.label,
+                subtext: C.transfer.subtext,
                 action: function () {
                     (0, s.ZDy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 760558));
@@ -117,35 +117,35 @@ function h(e) {
                             );
                     });
                 },
-                disabled: O.transfer.disabled
+                disabled: C.transfer.disabled
             }),
             (0, o.tl)(t)
                 ? (0, i.jsx)(s.sNh, {
                       id: 'uncancel',
-                      label: O.uncancel.label,
-                      subtext: O.uncancel.subtext,
+                      label: C.uncancel.label,
+                      subtext: C.uncancel.subtext,
                       action: function () {
                           (0, s.ZDy)(async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 450468));
                               return (n) => (0, i.jsx)(e, g(p({}, n), { guildBoostSlotId: t.id }));
                           });
                       },
-                      disabled: O.uncancel.disabled
+                      disabled: C.uncancel.disabled
                   })
                 : (0, i.jsx)(s.sNh, {
                       id: 'cancel',
-                      label: O.cancel.label,
-                      subtext: O.cancel.subtext,
+                      label: C.cancel.label,
+                      subtext: C.cancel.subtext,
                       action: function () {
                           (0, s.ZDy)(async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 401786));
                               return (n) => (0, i.jsx)(e, g(p({}, n), { guildBoostSlot: t }));
                           });
                       },
-                      disabled: O.cancel.disabled,
+                      disabled: C.cancel.disabled,
                       color: 'danger'
                   }),
-            C
+            O
         ]
     });
 }

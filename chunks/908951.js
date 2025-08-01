@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(15640),
     _ = n(246946),
     j = n(853872),
-    O = n(509545),
-    C = n(74538),
+    C = n(509545),
+    O = n(74538),
     E = n(212895),
     v = n(296848),
     S = n(374649),
@@ -66,7 +66,7 @@ function A(e) {
                 : i(e, n, s);
         },
         z = (e) => {
-            let n = O.Z.get(t.planIdForCurrencies);
+            let n = C.Z.get(t.planIdForCurrencies);
             (o()(null != e, 'paymentSource not specified for change'), o()(null != n, 'Unable to fetch plan'));
             let i = (0, E.DE)(n.id, e.id, !1);
             return i.length > 0 ? i[0] : T.pKx.USD;
@@ -141,7 +141,7 @@ function A(e) {
         };
     if (t.isPurchasedExternally) {
         o()(null != t.paymentGateway, 'Expected payment gateway when managed externally');
-        let e = (0, C.JE)(t.paymentGateway, 'PAYMENT_SOURCE_MANAGEMENT');
+        let e = (0, O.JE)(t.paymentGateway, 'PAYMENT_SOURCE_MANAGEMENT');
         return (0, i.jsx)(u.eee, {
             href: e,
             useDefaultUnderlineStyles: !1,
@@ -163,7 +163,7 @@ function A(e) {
             children: N.intl.string(N.t.CpOiEB)
         });
     {
-        let e = O.Z.get(t.planIdForCurrencies);
+        let e = C.Z.get(t.planIdForCurrencies);
         o()(null != e, 'Unable to fetch plan');
         let n = (0, E.DE)(e, t.paymentSourceId, !1);
         return (0, i.jsxs)(i.Fragment, {

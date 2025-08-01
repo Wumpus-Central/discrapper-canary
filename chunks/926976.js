@@ -9,8 +9,8 @@ var n = a(255367),
     d = a(755721),
     u = a(481060),
     m = a(129861),
-    p = a(665149),
-    x = a(886118),
+    x = a(665149),
+    p = a(886118),
     h = a(301801),
     b = a(594174),
     f = a(572004),
@@ -116,18 +116,18 @@ let w = new Set(['client_performance_cpu', 'client_performance_memory']),
                         filteredEvents: c
                     } = e,
                     d = b.default.getUser(l),
-                    x = o()(r);
+                    p = o()(r);
                 return (0, n.jsxs)('div', {
                     'data-mtctest-ignore': 'true',
                     children: [
-                        (0, n.jsxs)(p.ZP, {
+                        (0, n.jsxs)(x.ZP, {
                             className: i()(E.headerBar, N.subPanelHeaderBar),
                             children: [
-                                (0, n.jsx)(p.ZP.Icon, {
+                                (0, n.jsx)(x.ZP.Icon, {
                                     icon: u.IeX,
                                     tooltip: t
                                 }),
-                                (0, n.jsxs)(p.ZP.Title, {
+                                (0, n.jsxs)(x.ZP.Title, {
                                     wrapperClassName: N.headerTitle,
                                     children: [
                                         t,
@@ -142,7 +142,7 @@ let w = new Set(['client_performance_cpu', 'client_performance_memory']),
                                         })
                                     ]
                                 }),
-                                (0, n.jsx)(p.ZP.Icon, {
+                                (0, n.jsx)(x.ZP.Icon, {
                                     icon: u.TIy,
                                     tooltip: 'Copy all properties',
                                     onClick: () => {
@@ -187,7 +187,7 @@ let w = new Set(['client_performance_cpu', 'client_performance_memory']),
                                         );
                                     }
                                 }),
-                                (0, n.jsx)(p.ZP.Icon, {
+                                (0, n.jsx)(x.ZP.Icon, {
                                     icon: u.k$p,
                                     tooltip: 'Close',
                                     onClick: s
@@ -202,8 +202,8 @@ let w = new Set(['client_performance_cpu', 'client_performance_memory']),
                                     copyValue: r.toISOString(),
                                     children: (0, n.jsxs)('time', {
                                         dateTime: r.toISOString(),
-                                        title: (0, v.vc)(x, 'LLLL'),
-                                        children: ['(', o().locale(), ') ', (0, v.Y4)(x)]
+                                        title: (0, v.vc)(p, 'LLLL'),
+                                        children: ['(', o().locale(), ') ', (0, v.Y4)(p)]
                                     })
                                 }),
                                 null != d &&
@@ -295,7 +295,7 @@ let w = new Set(['client_performance_cpu', 'client_performance_memory']),
         }
     },
     Z = {
-        searchType: x.S.REGEX,
+        searchType: p.S.REGEX,
         searchStringGenerator: (e) => {
             let { event: t, properties: a } = e;
             return null != a.location ? [t, a.location] : t;
@@ -307,11 +307,11 @@ function D() {
         [t, a] = r.useState(''),
         l = (0, c.e7)([g.Z], () => g.Z.loggedEventsVersion),
         [s, o] = r.useState(() => Object.keys(A)),
-        [m, p] = r.useState(g.Z.loggedEvents),
-        x = r.useCallback((e) => {
-            p(e);
+        [m, x] = r.useState(g.Z.loggedEvents),
+        p = r.useCallback((e) => {
+            x(e);
         }, []);
-    (0, h.BO)(t, g.Z.loggedEvents, x, Z, [l]);
+    (0, h.BO)(t, g.Z.loggedEvents, p, Z, [l]);
     let b = m.filter((e) => {
             for (let t of s) if (A[t].filter(e)) return !0;
             return !1;

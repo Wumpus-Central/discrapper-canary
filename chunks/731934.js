@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(419821),
     _ = n(367515),
     j = n(250285),
-    O = n(292352),
-    C = n(134612),
+    C = n(292352),
+    O = n(134612),
     E = n(916723),
     v = n(388032),
     S = n(589608),
@@ -152,7 +152,7 @@ function R(e) {
                           {
                               userId: a.id,
                               isLast: l,
-                              children: () => (t === O.ne.ACTIVE ? (0, i.jsx)(x.u, { user: a }) : (0, i.jsx)(_.B, { user: a }))
+                              children: () => (t === C.ne.ACTIVE ? (0, i.jsx)(x.u, { user: a }) : (0, i.jsx)(_.B, { user: a }))
                           },
                           a.id
                       );
@@ -235,8 +235,8 @@ function R(e) {
                                     var n;
                                     ((a.current = e), (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null));
                                 },
-                                sectionHeight: O.zE,
-                                rowHeight: O.ip,
+                                sectionHeight: C.zE,
+                                rowHeight: C.ip,
                                 renderSection: g,
                                 renderRow: p,
                                 sections: [s.length],
@@ -254,8 +254,8 @@ function R(e) {
 }
 let D = () => {
         let e = (0, g.Z)(),
-            t = (0, h.mq)(O.ne.ACTIVE),
-            n = e ? O.AG : O.i0,
+            t = (0, h.mq)(C.ne.ACTIVE),
+            n = e ? C.AG : C.i0,
             r = {
                 count: t.length,
                 max: n
@@ -263,7 +263,7 @@ let D = () => {
             s = (0, m.o)(v.intl.formatToPlainString(E.default['+tnO39'], r), v.intl.formatToPlainString(E.default['pu6/U1'], r));
         return t.length > 0
             ? (0, i.jsx)(R, {
-                  sectionType: O.ne.ACTIVE,
+                  sectionType: C.ne.ACTIVE,
                   sectionTitle: s,
                   requests: t
               })
@@ -285,7 +285,7 @@ let D = () => {
     },
     Z = () => {
         let e = (0, h.VM)(),
-            t = (0, g.Z)() ? O.AG : O.i0,
+            t = (0, g.Z)() ? C.AG : C.i0,
             n = (0, m.o)(v.intl.formatToPlainString(E.default['1/PzIi'], { maxConnections: t }), v.intl.formatToPlainString(E.default.RcTgiI, { maxConnections: t }));
         return e
             ? (0, i.jsx)('div', {
@@ -306,7 +306,7 @@ let D = () => {
                 throughline: t
             })
                 .with({ helpline: !0 }, () => v.intl.format(E.default.KOwsf3, { helpLink: 'https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line' }))
-                .with({ throughline: !0 }, () => v.intl.format(E.default['6tsC8v'], { helpLink: C.$l }))
+                .with({ throughline: !0 }, () => v.intl.format(E.default['6tsC8v'], { helpLink: O.$l }))
                 .otherwise(() => null);
         return null == n
             ? null
@@ -327,12 +327,12 @@ let D = () => {
               });
     },
     k = () => {
-        let e = (0, h.mq)(O.ne.PENDING),
+        let e = (0, h.mq)(C.ne.PENDING),
             t = (0, m.o)(v.intl.formatToPlainString(E.default.IkAgkJ, { count: e.length }), v.intl.formatToPlainString(E.default.Q8XnAQ, { count: e.length }));
         return 0 === e.length
             ? null
             : (0, i.jsx)(R, {
-                  sectionType: O.ne.PENDING,
+                  sectionType: C.ne.PENDING,
                   sectionTitle: t,
                   requests: e
               });

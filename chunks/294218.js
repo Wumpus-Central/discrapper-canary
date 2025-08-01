@@ -11,17 +11,17 @@ var r = n(255367),
     _ = n(592125),
     E = n(709054),
     p = n(786761),
-    O = n(739566),
-    S = n(492593),
-    I = n(453687),
+    I = n(739566),
+    O = n(492593),
+    S = n(453687),
     f = n(25015),
     h = n(689674),
     T = n(438075),
     m = n(963550),
     g = n(845080),
     N = n(295790),
-    y = n(145807),
-    R = n(56744),
+    R = n(145807),
+    y = n(56744),
     A = n(981631),
     b = n(30804);
 function C(e) {
@@ -102,7 +102,7 @@ let D = i.memo(function (e) {
         z = i.type === A.uaV.REPLY ? i.messageReference : void 0,
         Y = (0, s.e7)([d.Z], () => d.Z.getMessageByReference(z)),
         K = (0, o.JA)(i.id),
-        q = (0, O.ZP)(i),
+        q = (0, I.ZP)(i),
         Q = (0, s.e7)([_.Z], () => i.hasFlag(A.iLy.HAS_THREAD) && _.Z.getChannel(E.default.castMessageIdAsChannelId(i.id))),
         X = (0, c.p9)({
             guildId: v.guild_id,
@@ -113,10 +113,10 @@ let D = i.memo(function (e) {
             channel: v,
             enabled: F
         }),
-        $ = (0, I.iG)(i),
-        ee = (0, I.Gx)(i);
+        $ = (0, S.iG)(i),
+        ee = (0, S.Gx)(i);
     return (0, r.jsx)(
-        S.Z,
+        O.Z,
         C(
             {
                 compact: l,
@@ -125,8 +125,8 @@ let D = i.memo(function (e) {
                     [b.disableInteraction]: G
                 }),
                 disableInteraction: G,
-                childrenRepliedMessage: (0, R.Z)(i, v, z, Y, l),
-                childrenExecutedCommand: (0, y.Z)(i, v, l),
+                childrenRepliedMessage: (0, y.Z)(i, v, z, Y, l),
+                childrenExecutedCommand: (0, R.Z)(i, v, l),
                 childrenHeader: (0, g.Z)(
                     P(C({}, e), {
                         guildId: v.guild_id,

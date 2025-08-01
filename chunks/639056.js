@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => O }), n(388685));
+(n.d(t, { Z: () => C }), n(388685));
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -24,7 +24,7 @@ function j(e) {
     if (null == m || g.ZP.getInterval(r).intervalType !== f.rV.MONTH) return null;
     let h = null != p ? p.skuId : null,
         j = m.skuId === h,
-        O = g.ZP.getDisplayName(r);
+        C = g.ZP.getDisplayName(r);
     if (null != l) {
         let e;
         ((e = new Date(l.status === b.O0b.PAUSED && null != l.pauseEndsAt ? l.pauseEndsAt : l.currentPeriodEnd)), (t = (0, g.N1)(e, d)));
@@ -49,7 +49,7 @@ function j(e) {
                 children: [
                     (0, i.jsx)(c.X6q, {
                         variant: 'heading-md/semibold',
-                        children: x.intl.format(x.t.LzobT0, { planName: O })
+                        children: x.intl.format(x.t.LzobT0, { planName: C })
                     }),
                     n.hasFreePremium() || (null != l && l.isPurchasedExternally)
                         ? null
@@ -57,7 +57,7 @@ function j(e) {
                               className: _.rowApplied,
                               variant: 'heading-sm/semibold',
                               color: 'header-secondary',
-                              children: j && null != l ? x.intl.formatToPlainString(x.t['5CNRRE'], { date: null != t ? t : 0 }) : x.intl.formatToPlainString(x.t.eNXZ5O, { planName: O })
+                              children: j && null != l ? x.intl.formatToPlainString(x.t['5CNRRE'], { date: null != t ? t : 0 }) : x.intl.formatToPlainString(x.t.eNXZ5O, { planName: C })
                           })
                 ]
             }),
@@ -69,7 +69,7 @@ function j(e) {
         ]
     });
 }
-let O = function (e) {
+let C = function (e) {
     let { className: t, entitlements: n } = e,
         r = l()(Array.from(n))
             .filter((e) => {
@@ -82,8 +82,8 @@ let O = function (e) {
         u = (0, o.e7)([m.Z], () => m.Z.getPremiumSubscription()),
         g = (0, o.e7)([m.Z], () => null == m.Z.getPremiumTypeSubscription()),
         b = Object.keys(r).some((e) => e === f.Xh.PREMIUM_MONTH_TIER_1),
-        O = (0, o.e7)([d.default], () => d.default.getCurrentUser());
-    return null == O
+        C = (0, o.e7)([d.default], () => d.default.getCurrentUser());
+    return null == C
         ? null
         : (0, i.jsxs)('div', {
               children: [
@@ -96,7 +96,7 @@ let O = function (e) {
                                   planId: e,
                                   count: r[e].length,
                                   userPremiumSubscription: u,
-                                  user: O,
+                                  user: C,
                                   unconsumedFractionalPremiumUnits: a
                               },
                               e

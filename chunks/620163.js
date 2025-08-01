@@ -18,8 +18,8 @@ var r = n(990547),
     x = n(163379),
     _ = n(498646),
     j = n(489968),
-    O = n(803038),
-    C = n(703288),
+    C = n(803038),
+    O = n(703288),
     E = n(574755),
     v = n(994714),
     S = n(377171),
@@ -72,8 +72,8 @@ var r = n(990547),
     ex = n(177508),
     e_ = n(956699),
     ej = n(54942),
-    eO = n(293389),
-    eC = n(88624),
+    eC = n(293389),
+    eO = n(88624),
     eE = n(387747),
     ev = n(389650),
     eS = n(649157),
@@ -107,7 +107,7 @@ var r = n(990547),
     e$ = n(539452);
 let e0 = () => {
         let e = [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE];
-        return (O.M.getCurrentConfig({ location: 'getAppearanceDCs' }).enabled && e.push(s.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE), e);
+        return (C.M.getCurrentConfig({ location: 'getAppearanceDCs' }).enabled && e.push(s.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE), e);
     },
     e1 = () => {
         let e = e0(),
@@ -125,7 +125,7 @@ let e0 = () => {
     },
     e8 = ew.Z,
     e2 = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: O, impressionSource: N, numOfPendingFamilyRequests: I, isOverlaySupported: D, isClipsBetaTagShowing: G = !1, shouldMergeGameSettings: e2, isKeywordFilteringEnabled: e5, isStaff: e4, isInappropriateConversationWarningEnabled: e7, isInapproprateConversationsDefaultOn: e9, paymentsBlocked: te, isEligibleForQuests: tt, isStricterMessageRequestsEnabled: tn, hasLibraryApplication: ti, hasTOTPEnabled: tr, developerMode: ts, isAdultUser: ta, hasSecureFramesVerifiedUserIds: tl, hypeSquadRemoved: to, hasIgnoredUsers: tc, hasBlockedUsers: td, useRefreshedVoiceAndVideo: tu, isEligibleForSensitiveContentDefaults: tm, inputMode: tp, activeInputProfile: tg, isInputProfileCustom: th, isGoreContentFilteringEnabled: tf } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: C, impressionSource: N, numOfPendingFamilyRequests: I, isOverlaySupported: D, isClipsBetaTagShowing: G = !1, shouldMergeGameSettings: e2, isKeywordFilteringEnabled: e5, isStaff: e4, isInappropriateConversationWarningEnabled: e7, isInapproprateConversationsDefaultOn: e9, paymentsBlocked: te, isEligibleForQuests: tt, isStricterMessageRequestsEnabled: tn, hasLibraryApplication: ti, hasTOTPEnabled: tr, developerMode: ts, isAdultUser: ta, hasSecureFramesVerifiedUserIds: tl, hypeSquadRemoved: to, hasIgnoredUsers: tc, hasBlockedUsers: td, useRefreshedVoiceAndVideo: tu, isEligibleForSensitiveContentDefaults: tm, inputMode: tp, activeInputProfile: tg, isInputProfileCustom: th, isGoreContentFilteringEnabled: tf } = e;
         return Object.freeze({
             [eW.s6.SEARCH_NO_RESULTS]: {
                 section: p.ID.CUSTOM,
@@ -561,7 +561,7 @@ let e0 = () => {
                 searchableTitles: [eX.intl.string(eX.t.z2jK6e)],
                 label: eX.intl.string(eX.t.z2jK6e),
                 ariaLabel: eX.intl.string(eX.t.z2jK6e),
-                icon: G ? (0, i.jsx)(C.Z, {}) : void 0,
+                icon: G ? (0, i.jsx)(O.Z, {}) : void 0,
                 element: E.Z,
                 predicate: () => !e2,
                 url: eY.Z5c.SETTINGS('clips')
@@ -609,7 +609,7 @@ let e0 = () => {
                 searchableTitles: [eX.intl.string(eX.t.trSpHR)],
                 label: eX.intl.string(eX.t.trSpHR),
                 element: k.Z,
-                icon: O
+                icon: C
                     ? (0, i.jsx)(l.Mgn, {
                           size: 'xs',
                           color: a.Z.unsafe_rawColors.YELLOW_300.css
@@ -1545,7 +1545,7 @@ let e0 = () => {
                 section: eY.oAB.REGISTERED_GAMES,
                 searchableTitles: [eX.intl.string(eX.t.AVDyEh)],
                 label: eX.intl.string(eX.t.AVDyEh),
-                element: eO.Z,
+                element: eC.Z,
                 predicate: () => !e2 && (0, eB.Jw)()
             },
             [eW.s6.OVERLAY]: {
@@ -1582,7 +1582,7 @@ let e0 = () => {
                 section: eY.oAB.HYPESQUAD_ONLINE,
                 searchableTitles: [eX.intl.string(eX.t['k0R+4e'])],
                 label: eX.intl.string(eX.t['k0R+4e']),
-                element: eC.Z,
+                element: eO.Z,
                 predicate: () => !to
             },
             [eW.s6.TOWNHALL]: {

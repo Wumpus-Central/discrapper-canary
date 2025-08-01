@@ -23,8 +23,8 @@ function x() {
         x = p.cC.useSetting(),
         _ = p.vF.useSetting(),
         j = p.H1.useSetting(),
-        O = p.ev.useSetting(),
-        C = p.x4.useSetting(),
+        C = p.ev.useSetting(),
+        O = p.x4.useSetting(),
         E = p.RS.useSetting(),
         v = p.NA.useSetting(),
         S = p.nc.useSetting(),
@@ -53,7 +53,7 @@ function x() {
                         setting: g.s6.CHAT_INLINE_MEDIA_UPLOADS,
                         children: (0, i.jsx)(a.j7V, {
                             className: s()(b.marginTop8, b.marginBottom20),
-                            value: C,
+                            value: O,
                             note: f.intl.formatToPlainString(f.t.qjjvqK, { maxSize: 10 }),
                             onChange: p.x4.updateSetting,
                             children: f.intl.string(f.t.VP11Nj)
@@ -109,7 +109,7 @@ function x() {
                         setting: g.s6.CHAT_EMOJI_EMOTICONS,
                         children: (0, i.jsx)(a.j7V, {
                             className: b.marginBottom40,
-                            value: O,
+                            value: C,
                             note: c.Z.parse(f.intl.string(f.t['20dvub'])),
                             onChange: p.ev.updateSetting,
                             children: f.intl.string(f.t['79qal5'])

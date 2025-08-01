@@ -1,4 +1,4 @@
-(n.d(e, { Z: () => I }), n(388685));
+(n.d(t, { Z: () => I }), n(388685));
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -18,31 +18,31 @@ var r = n(255367),
     y = n(828576),
     b = n(982404),
     g = n(299156);
-let I = function (t) {
-    let { premiumSubscription: e, premiumType: n, onClose: o, onConfirm: I, userDiscountOffer: j } = t,
+let I = function (e) {
+    let { premiumSubscription: t, premiumType: n, onClose: o, onConfirm: I, userDiscountOffer: j } = e,
         [P, v] = i.useState(!1),
         [T, E] = i.useState(!1),
-        O = async (t) => {
+        O = async (e) => {
             try {
                 (E(!0),
                     v(!1),
                     await s.tn.post({
                         url: h.ANM.USER_OFFER_REDEEM,
-                        body: { user_discount_offer_id: t },
+                        body: { user_discount_offer_id: e },
                         rejectWithError: !0
                     }),
                     I());
-            } catch (t) {
+            } catch (e) {
                 v(!0);
             }
             E(!1);
         },
         S = (0, u.ZP)(),
         N = (0, l.wj)(S) ? b : g,
-        R = (0, p._)(e, C.Xh.PREMIUM_MONTH_TIER_2, j),
+        R = (0, p._)(t, C.Xh.PREMIUM_MONTH_TIER_2, j),
         D = (0, m.aS)(C.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
-            currency: e.currency,
-            paymentSourceId: e.paymentSourceId
+            currency: t.currency,
+            paymentSourceId: t.paymentSourceId
         }),
         w = (0, _.T4)(D.amount, D.currency);
     return null == j

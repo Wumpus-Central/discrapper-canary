@@ -24,8 +24,8 @@ let f = [18, 18, 16, 16, 14, 12, 10],
             _ = null,
             j = f[f.length - 1];
         if (null == n.icon && null != b) {
-            var O;
-            j = null != (O = f[(_ = (0, a.Zg)(b)).length - 1]) ? O : f[f.length - 1];
+            var C;
+            j = null != (C = f[(_ = (0, a.Zg)(b)).length - 1]) ? C : f[f.length - 1];
         }
         return (0, i.jsxs)('div', {
             className: h.container,

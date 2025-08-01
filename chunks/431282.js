@@ -80,8 +80,8 @@ function f(e) {
     var { id: t, label: n, sublabel: d, icon: f, hint: b, renderSubmenu: x } = e,
         _ = h(e, ['id', 'label', 'sublabel', 'icon', 'hint', 'renderSubmenu']);
     let j = (0, a.JA)(t),
-        { onFocus: O } = j,
-        C = h(j, ['onFocus']),
+        { onFocus: C } = j,
+        O = h(j, ['onFocus']),
         { id: E } = (0, a.f$)(),
         v = r.useRef(null),
         [S, T] = r.useState(!1),
@@ -95,7 +95,7 @@ function f(e) {
     let I = (e) =>
         (0, i.jsxs)(
             u.kF,
-            g(p({}, e, C, _), {
+            g(p({}, e, O, _), {
                 ref: v,
                 role: 'button',
                 look: o.zx.Looks.BLANK,
@@ -106,7 +106,7 @@ function f(e) {
                 fullWidth: !0,
                 onMouseEnter: () => {
                     var t;
-                    (null == e || null == (t = e.onMouseEnter) || t.call(e), O());
+                    (null == e || null == (t = e.onMouseEnter) || t.call(e), C());
                 },
                 children: [
                     (0, i.jsx)('div', {

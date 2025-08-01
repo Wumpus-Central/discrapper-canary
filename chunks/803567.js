@@ -18,8 +18,8 @@ var r = n(120356),
     x = n(738486),
     _ = n(726985),
     j = n(981631),
-    O = n(388032),
-    C = n(20493);
+    C = n(388032),
+    O = n(20493);
 let E = n(775322),
     v = n(853453),
     S = (0, u.hQ)(),
@@ -57,31 +57,31 @@ function I(e) {
     return (
         m &&
             p.push({
-                name: O.intl.string(O.t.rdoNzs),
+                name: C.intl.string(C.t.rdoNzs),
                 value: 2
             }),
         u &&
             p.push({
-                name: O.intl.string(O.t.qXeYHx),
+                name: C.intl.string(C.t.qXeYHx),
                 value: 1
             }),
         p.push({
-            name: O.intl.string(O.t.wkYAl5),
+            name: C.intl.string(C.t.wkYAl5),
             value: 0
         }),
         (0, i.jsxs)(o.hjN, {
-            className: t ? void 0 : C.marginBottom20,
+            className: t ? void 0 : O.marginBottom20,
             children: [
                 (0, i.jsx)(o.vwX, {
                     id: S,
                     tag: o.RB0.H3,
-                    className: C.marginBottom8,
-                    children: O.intl.string(O.t.t8QhiY)
+                    className: O.marginBottom8,
+                    children: C.intl.string(C.t.t8QhiY)
                 }),
                 (0, i.jsx)(o.R94, {
                     type: o.R94.Types.DESCRIPTION,
-                    className: C.marginBottom8,
-                    children: O.intl.string(O.t.najZCQ)
+                    className: O.marginBottom8,
+                    children: C.intl.string(C.t.najZCQ)
                 }),
                 (0, i.jsx)(o.FXm, {
                     options: p,
@@ -92,7 +92,7 @@ function I(e) {
                 }),
                 m &&
                     (0, i.jsx)(o.ToO, {
-                        className: C.marginBottom8,
+                        className: O.marginBottom8,
                         type: o.Dd5.PRIMARY,
                         imageData: {
                             src: (0, l.ap)(n) ? E : v,
@@ -103,7 +103,7 @@ function I(e) {
                         body: (0, i.jsx)(o.eee, {
                             href: f.Z.getArticleURL(j.BhN.NOISE_SUPPRESSION),
                             onClick: N,
-                            children: O.intl.string(O.t.hvVgAQ)
+                            children: C.intl.string(C.t.hvVgAQ)
                         })
                     }),
                 t ? null : (0, i.jsx)(o.$i$, {})
@@ -148,14 +148,14 @@ function y(e) {
             children: [
                 (b || E || v) &&
                     (0, i.jsx)(o.R94, {
-                        className: t ? void 0 : C.marginBottom20,
+                        className: t ? void 0 : O.marginBottom20,
                         type: o.R94.Types.DESCRIPTION,
-                        children: O.intl.string(O.t['/Whuzs'])
+                        children: C.intl.string(C.t['/Whuzs'])
                     }),
                 (0, i.jsx)(m.F, {
                     setting: _.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
                     children: (0, i.jsx)(o.j7V, {
-                        className: t ? void 0 : s()(C.marginTop8, C.marginBottom20),
+                        className: t ? void 0 : s()(O.marginTop8, O.marginBottom20),
                         value: l,
                         onChange: (e) =>
                             c.Z.setEchoCancellation(e, {
@@ -164,7 +164,7 @@ function y(e) {
                             }),
                         disabled: b,
                         hideBorder: t,
-                        children: O.intl.string(O.t.iWTwu7)
+                        children: C.intl.string(C.t.iWTwu7)
                     })
                 }),
                 (0, i.jsx)(m.F, {
@@ -176,10 +176,10 @@ function y(e) {
                     children: (0, i.jsx)(o.j7V, {
                         value: h,
                         onChange: (e) => c.Z.setMode(n, { vadUseKrisp: e }),
-                        note: O.intl.string(O.t.LoOB1N),
+                        note: C.intl.string(C.t.LoOB1N),
                         disabled: !S,
                         hideBorder: t,
-                        children: O.intl.string(O.t.BbESsr)
+                        children: C.intl.string(C.t.BbESsr)
                     })
                 }),
                 (0, i.jsx)(m.F, {
@@ -191,10 +191,10 @@ function y(e) {
                                 page: j.ZY5.USER_SETTINGS,
                                 section: j.jXE.SETTINGS_VOICE_AND_VIDEO
                             }),
-                        note: O.intl.string(O.t['6EjbvL']),
+                        note: C.intl.string(C.t['6EjbvL']),
                         disabled: v,
                         hideBorder: t,
-                        children: O.intl.string(O.t.cUMdHx)
+                        children: C.intl.string(C.t.cUMdHx)
                     })
                 }),
                 (0, i.jsx)(m.F, {
@@ -204,9 +204,9 @@ function y(e) {
                         onChange: (e) => {
                             c.Z.setBypassSystemInputProcessing(e);
                         },
-                        note: O.intl.string(O.t['UyRX+P']),
+                        note: C.intl.string(C.t['UyRX+P']),
                         hideBorder: t,
-                        children: O.intl.string(O.t.DFPXIC)
+                        children: C.intl.string(C.t.DFPXIC)
                     })
                 })
             ]
@@ -214,8 +214,8 @@ function y(e) {
     return t
         ? T
         : (0, i.jsx)(o.hjN, {
-              className: C.marginBottom20,
-              title: O.intl.string(O.t['6I6GUl']),
+              className: O.marginBottom20,
+              title: C.intl.string(C.t['6I6GUl']),
               children: T
           });
 }

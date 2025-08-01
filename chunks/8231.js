@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(230916),
     _ = n(694338),
     j = n(474936),
-    O = n(388032),
-    C = n(528880),
+    C = n(388032),
+    O = n(528880),
     E = n(102655),
     v = n(768236),
     S = n(314907),
@@ -68,20 +68,20 @@ function I(e, t) {
 }
 let y = () =>
         (0, i.jsx)('div', {
-            className: C.comparisonTablePill,
+            className: O.comparisonTablePill,
             children: (0, i.jsx)(c.X6q, {
-                className: C.mostPopularText,
+                className: O.mostPopularText,
                 variant: 'text-xs/bold',
-                children: O.intl.string(O.t.TR2B4e)
+                children: C.intl.string(C.t.TR2B4e)
             })
         }),
     A = () =>
         (0, i.jsx)('div', {
-            className: C.comparisonTablePill,
+            className: O.comparisonTablePill,
             children: (0, i.jsx)(c.X6q, {
-                className: C.mostPopularText,
+                className: O.mostPopularText,
                 variant: 'heading-deprecated-12/extrabold',
-                children: O.intl.string(O.t.IBYG5e)
+                children: C.intl.string(C.t.IBYG5e)
             })
         }),
     P = (e) => {
@@ -89,7 +89,7 @@ let y = () =>
         return (0, i.jsxs)(c.Text, {
             color: 'none',
             variant: null != r ? r : 'text-md/medium',
-            className: C.rowLabelText,
+            className: O.rowLabelText,
             children: [
                 t,
                 null != n &&
@@ -107,10 +107,10 @@ let y = () =>
                       (0, i.jsx)(c.dz2, {
                           size: 'md',
                           color: 'currentColor',
-                          className: n ? C.basicCheckMark : C.premiumCheckMark,
+                          className: n ? O.basicCheckMark : O.premiumCheckMark,
                           'aria-hidden': !0
                       }),
-                      (0, i.jsx)(c.nn4, { children: O.intl.string(O.t['tq+6t7']) })
+                      (0, i.jsx)(c.nn4, { children: C.intl.string(C.t['tq+6t7']) })
                   ]
               })
             : (0, i.jsxs)(i.Fragment, {
@@ -118,25 +118,25 @@ let y = () =>
                       (0, i.jsx)(c.Dio, {
                           size: 'md',
                           color: 'currentColor',
-                          className: C.closeIcon,
+                          className: O.closeIcon,
                           'aria-hidden': !0
                       }),
-                      (0, i.jsx)(c.nn4, { children: O.intl.string(O.t.l4qZrq) })
+                      (0, i.jsx)(c.nn4, { children: C.intl.string(C.t.l4qZrq) })
                   ]
               });
     },
     D = (e) => {
         let { label: t, tier0ColumnData: n, tier2ColumnData: r, withBottomMargin: s } = e;
         return (0, i.jsxs)('tr', {
-            className: a()(C.row, C.rowBottomBorder, { [C.bottomMargin]: s }),
+            className: a()(O.row, O.rowBottomBorder, { [O.bottomMargin]: s }),
             children: [
                 (0, i.jsx)('th', {
                     scope: 'row',
-                    className: C.labelCell,
+                    className: O.labelCell,
                     children: (0, i.jsx)(P, { text: t })
                 }),
                 (0, i.jsx)('td', {
-                    className: C.cell,
+                    className: O.cell,
                     children:
                         null != n.text
                             ? (0, i.jsx)(P, { text: n.text })
@@ -146,7 +146,7 @@ let y = () =>
                               })
                 }),
                 (0, i.jsx)('td', {
-                    className: C.cell,
+                    className: O.cell,
                     children: null != r.text ? (0, i.jsx)(P, { text: r.text }) : (0, i.jsx)(R, { isIncluded: !!r.includes })
                 })
             ]
@@ -157,11 +157,11 @@ let y = () =>
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('tr', {
-                    className: C.row,
+                    className: O.row,
                     children: [
                         (0, i.jsx)('th', {
                             scope: 'row',
-                            className: C.labelCell,
+                            className: O.labelCell,
                             children: (0, i.jsx)(P, {
                                 text: t,
                                 variant: 'text-lg/bold'
@@ -183,32 +183,32 @@ let y = () =>
         let s = (0, h.Px)(n);
         return (0, i.jsx)('img', {
             src: t,
-            className: C.logo,
+            className: O.logo,
             alt: s
         });
     },
     k = () =>
         (0, i.jsx)('thead', {
             children: (0, i.jsxs)('tr', {
-                className: a()(C.headerRow, C.topBorderRadius),
+                className: a()(O.headerRow, O.topBorderRadius),
                 children: [
                     (0, i.jsx)('th', {
                         scope: 'col',
-                        className: C.headerLabelCell,
+                        className: O.headerLabelCell,
                         children: (0, i.jsx)(c.X6q, {
-                            className: C.__invalid_textColor,
+                            className: O.__invalid_textColor,
                             variant: 'heading-xl/semibold',
-                            children: O.intl.string(O.t.XXENra)
+                            children: C.intl.string(C.t.XXENra)
                         })
                     }),
                     (0, i.jsx)('th', {
                         scope: 'col',
-                        className: C.headerCell,
+                        className: O.headerCell,
                         children: (0, i.jsx)(w, { premiumType: j.p9.TIER_0 })
                     }),
                     (0, i.jsx)('th', {
                         scope: 'col',
-                        className: a()(C.headerCell, C.topBorderRadius),
+                        className: a()(O.headerCell, O.topBorderRadius),
                         children: (0, i.jsx)(w, { premiumType: j.p9.TIER_2 })
                     })
                 ]
@@ -217,22 +217,22 @@ let y = () =>
     L = (e) => {
         let { tier0MonthlyPrice: t, tier2MonthlyPrice: n, shouldUseDiscountPrice: r, tier2DiscountedPriceString: s } = e;
         return (0, i.jsxs)('tr', {
-            className: a()(C.row, C.rowBottomBorder, C.bottomMargin),
+            className: a()(O.row, O.rowBottomBorder, O.bottomMargin),
             children: [
                 (0, i.jsx)('th', {
                     scope: 'row',
-                    className: C.labelCell,
+                    className: O.labelCell,
                     children: (0, i.jsx)(P, {
-                        text: O.intl.string(O.t['09yRKy']),
+                        text: C.intl.string(C.t['09yRKy']),
                         variant: 'text-lg/bold'
                     })
                 }),
                 (0, i.jsx)('td', {
-                    className: C.cell,
+                    className: O.cell,
                     children: (0, i.jsx)(P, { text: h.ZP.formatPriceString(t, j.rV.MONTH) })
                 }),
                 (0, i.jsx)('td', {
-                    className: C.cell,
+                    className: O.cell,
                     children: (0, i.jsx)(P, { text: r ? s : h.ZP.formatPriceString(n, j.rV.MONTH) })
                 })
             ]
@@ -242,7 +242,7 @@ let y = () =>
         var t;
         let n,
             { className: s, hidePill: o = !1, selectedPlanColumnClassName: c, selectedPlanTier: d = j.p9.TIER_2 } = e,
-            { analyticsLocations: O } = (0, m.ZP)(u.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+            { analyticsLocations: C } = (0, m.ZP)(u.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
             E = (0, l.e7)([g.Z], () => g.Z.hasFetchedSubscriptions()),
             v = (0, p.V)(j.nS),
             S = (0, b.N)(),
@@ -258,30 +258,30 @@ let y = () =>
         n = o ? null : null != S ? (0, i.jsx)(A, {}) : (0, i.jsx)(y, {});
         let V = T === j.Si.TIER_0 || d === j.p9.TIER_0;
         return (0, i.jsx)(m.Gt, {
-            value: O,
+            value: C,
             children: (0, i.jsx)('div', {
-                className: a()(C.root, s),
+                className: a()(O.root, s),
                 'data-testid': 'application-home-marketing-page-comparison-table',
                 children: (0, i.jsxs)('div', {
-                    className: C.tableWrapper,
+                    className: O.tableWrapper,
                     children: [
                         (0, i.jsxs)('div', {
                             className: a()(c, {
-                                [C.tier0ColumnPosition]: V,
-                                [C.tier2ColumnPosition]: !V
+                                [O.tier0ColumnPosition]: V,
+                                [O.tier2ColumnPosition]: !V
                             }),
                             children: [
                                 !V && n,
                                 (0, i.jsx)('div', {
                                     className: a()({
-                                        [C.tier0ColumnOuter]: V,
-                                        [C.tier2ColumnOuter]: !V
+                                        [O.tier0ColumnOuter]: V,
+                                        [O.tier2ColumnOuter]: !V
                                     })
                                 })
                             ]
                         }),
                         (0, i.jsxs)('table', {
-                            className: C.table,
+                            className: O.table,
                             children: [
                                 (0, i.jsx)(k, {}),
                                 (0, i.jsxs)('tbody', {

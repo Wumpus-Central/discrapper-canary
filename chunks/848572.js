@@ -100,12 +100,12 @@ let j = () => {
             return l >= i ? n : e;
         }, null);
     },
-    O = () => {
+    C = () => {
         let e = b(),
             t = (0, a.e7)([d.Z], () => d.Z.getPremiumTypeSubscription());
         return null == e || null == t || null == t.premiumSince ? null : (0, l.RZ)(e, t.premiumSince);
     },
-    C = () => {
+    O = () => {
         let e = _(),
             t = Object.values(p.vK);
         if (null == e || null == t) return null;
@@ -122,8 +122,8 @@ let j = () => {
     E = () => {
         let e = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
             t = v(null == e ? void 0 : e.id),
-            n = O(),
-            i = C();
+            n = C(),
+            i = O();
         return null != t
             ? h(g({}, t), {
                   earnedOnDate: n,

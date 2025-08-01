@@ -1,6 +1,6 @@
 (n.d(t, {
-    g: () => S,
-    mI: () => O
+    g: () => O,
+    mI: () => I
 }),
     n(388685));
 var r = n(149765),
@@ -15,7 +15,7 @@ var r = n(149765),
     _ = n(533244),
     E = n(487419),
     p = n(676770);
-function O(e) {
+function I(e) {
     let t = (0, i.e7)([a.Z, o.Z], () => {
             let t = a.Z.getGuild(e);
             if (null == t) return !1;
@@ -30,7 +30,7 @@ function O(e) {
         isUnderLockdown: l
     };
 }
-function S() {
+function O() {
     var e;
     let t = (function (e) {
             let t = c.default.getCurrentUser(),

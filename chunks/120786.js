@@ -1,4 +1,4 @@
-n.d(t, { L: () => O });
+n.d(t, { L: () => C });
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -44,7 +44,7 @@ let j = () => {
                   })
         });
     },
-    O = (e) => {
+    C = (e) => {
         let { ctaText: t, ctaOnClick: n, analyticsPage: s, linkPreText: l = h.intl.string(h.t['5qZv9P']), linkText: d = h.intl.string(h.t.XRdyj4) } = e,
             u = r.useCallback(() => {
                 null != s &&

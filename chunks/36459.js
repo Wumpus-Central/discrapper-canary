@@ -2,8 +2,8 @@
     $Y: () => g,
     JK: () => h,
     Je: () => T,
-    T9: () => R,
-    UE: () => y,
+    T9: () => y,
+    UE: () => R,
     Xx: () => N,
     mm: () => m,
     qY: () => f
@@ -26,7 +26,7 @@ function p(e) {
         metadata: (0, d.X)(e.metadata)
     };
 }
-function O(e) {
+function I(e) {
     var t, n;
     let r = (0, d.X)(e.triggerMetadata);
     return (
@@ -47,13 +47,13 @@ function O(e) {
         }
     );
 }
-function S(e) {
+function O(e) {
     return {
         type: e.type,
         metadata: (0, d.C)(e.metadata)
     };
 }
-function I(e) {
+function S(e) {
     var t, n, r;
     let i = {
         id: null != (t = e.id) ? t : c.default.fromTimestamp(Date.now()),
@@ -62,7 +62,7 @@ function I(e) {
         eventType: e.event_type,
         triggerType: e.trigger_type,
         triggerMetadata: (0, d.C)(e.trigger_metadata),
-        actions: e.actions.filter(s.lm).map(S),
+        actions: e.actions.filter(s.lm).map(O),
         enabled: e.enabled,
         creatorId: e.creator_id,
         position: e.position,
@@ -72,7 +72,7 @@ function I(e) {
     return (null != i.triggerMetadata && delete i.triggerMetadata.keywordLists, i);
 }
 async function f(e) {
-    let t = O(e),
+    let t = I(e),
         n = await r.tn.post({
             url: E.ANM.GUILD_AUTOMOD_VALIDATE_RULE(e.guildId),
             body: t,
@@ -81,10 +81,10 @@ async function f(e) {
     return (0, d.C)(n.body);
 }
 async function h(e) {
-    let t = O(e);
+    let t = I(e);
     return (
         delete t.id,
-        I(
+        S(
             (
                 await r.tn.post({
                     url: E.ANM.GUILD_AUTOMOD_RULES(e.guildId),
@@ -96,8 +96,8 @@ async function h(e) {
     );
 }
 async function T(e) {
-    let t = O(e);
-    return I(
+    let t = I(e);
+    return S(
         (
             await r.tn.patch({
                 url: E.ANM.GUILD_AUTOMOD_RULE(e.guildId, e.id),
@@ -121,7 +121,7 @@ async function g(e) {
         url: E.ANM.GUILD_AUTOMOD_RULES(e),
         rejectWithError: !1
     });
-    return Array.isArray(t.body) ? t.body.map(I) : [];
+    return Array.isArray(t.body) ? t.body.map(S) : [];
 }
 async function N(e, t, n) {
     o.Z.can(E.Plq.MANAGE_MESSAGES, t) &&
@@ -135,7 +135,7 @@ async function N(e, t, n) {
             rejectWithError: !1
         }));
 }
-function y(e, t, n) {
+function R(e, t, n) {
     let i = a.Z.getGuild(e);
     null != i &&
         o.Z.can(E.Plq.MANAGE_GUILD, i) &&
@@ -151,7 +151,7 @@ function y(e, t, n) {
                 n());
         });
 }
-function R(e) {
+function y(e) {
     i.Z.dispatch({
         type: 'AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS',
         guildId: e

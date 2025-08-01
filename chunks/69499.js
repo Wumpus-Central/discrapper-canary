@@ -1,6 +1,6 @@
 (n.d(t, {
     E: () => p,
-    Z: () => S
+    Z: () => O
 }),
     n(388685),
     n(642613));
@@ -33,7 +33,7 @@ let p = {
     Colors: s.Z.Colors,
     Looks: s.Z.Looks
 };
-class O extends i.PureComponent {
+class I extends i.PureComponent {
     render() {
         var e, t;
         let n = this.props,
@@ -131,7 +131,7 @@ class O extends i.PureComponent {
             }));
     }
 }
-let S = l.ZP.connectStores([u.Z, c.Z], (e) => {
+let O = l.ZP.connectStores([u.Z, c.Z], (e) => {
     var t;
     let { applicationId: n } = e,
         r = (0, d.uF)(n, c.Z, u.Z);
@@ -139,4 +139,4 @@ let S = l.ZP.connectStores([u.Z, c.Z], (e) => {
         skus: (null != (t = u.Z.getForApplication(n)) ? t : []).sort((e, t) => (null != r && e.id === r.id ? -1 : null != r && t.id === r.id ? 1 : e.name >= t.name ? -1 : 1)),
         primarySKU: r
     };
-})(O);
+})(I);

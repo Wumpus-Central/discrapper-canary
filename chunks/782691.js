@@ -17,7 +17,7 @@ var i = n(255367),
     x = n(662583),
     _ = n(346537),
     j = n(830318);
-function O(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -42,7 +42,7 @@ function O(e) {
     }
     return e;
 }
-function C(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -101,7 +101,7 @@ let E = {
                 let n = V(t);
                 null != n &&
                     (0, f.i0)(n, (t) => {
-                        w((i) => C(O({}, i), { [e]: (0, f.z)(t, n) }));
+                        w((i) => O(C({}, i), { [e]: (0, f.z)(t, n) }));
                     });
             },
             F = (e, t) => {
@@ -112,7 +112,7 @@ let E = {
                             let r = [...i],
                                 s = i[t];
                             if (null == s) return i;
-                            let a = O({}, s);
+                            let a = C({}, s);
                             return (
                                 null == a.randomizedSources && (a.randomizedSources = []),
                                 a.randomizedSources.push({
@@ -126,7 +126,7 @@ let E = {
                     });
             },
             H = (e) => {
-                w((t) => C(O({}, t), { [e]: null }));
+                w((t) => O(C({}, t), { [e]: null }));
             };
         (r.useEffect(() => {
             let e = t.config.effects;
@@ -148,7 +148,7 @@ let E = {
                         let [t, n] = e;
                         if (null != n) {
                             let e = (0, f.$j)(n.base64);
-                            ((n.src = e), k.current.push(e), w((e) => C(O({}, e), { [t]: n })));
+                            ((n.src = e), k.current.push(e), w((e) => O(C({}, e), { [t]: n })));
                         }
                     });
             }, [t.config.stillFrames]));
@@ -364,9 +364,9 @@ let E = {
                                                   (0, i.jsx)(u.Z, {
                                                       fileContents: () =>
                                                           JSON.stringify(
-                                                              C(O({}, t), {
+                                                              O(C({}, t), {
                                                                   name: L,
-                                                                  config: C(O({}, t.config), {
+                                                                  config: O(C({}, t.config), {
                                                                       effects: R,
                                                                       stillFrames: Z
                                                                   })

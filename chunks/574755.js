@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(491758),
     _ = n(233685),
     j = n(388032),
-    O = n(922284),
-    C = n(802454),
+    C = n(922284),
+    O = n(802454),
     E = n(20493);
 function v(e) {
     let { className: t, showHeader: n = !0 } = e,
@@ -41,7 +41,7 @@ function v(e) {
                         tag: l.RB0.H1,
                         title: n
                             ? (0, i.jsxs)('div', {
-                                  className: O.headerContainer,
+                                  className: C.headerContainer,
                                   children: [j.intl.string(j.t.z2jK6e), (0, i.jsx)(b.Z, {})]
                               })
                             : null,
@@ -58,7 +58,7 @@ function v(e) {
                     children: [
                         (0, i.jsx)(l.j7V, {
                             hideBorder: !0,
-                            className: C.formItem,
+                            className: O.formItem,
                             value: v,
                             note: j.intl.string(j.t['wW9/zc']),
                             onChange: (e) => f.yg({ allowVoiceRecording: e }),
@@ -68,7 +68,7 @@ function v(e) {
                             y &&
                             (0, i.jsx)(l.j7V, {
                                 hideBorder: !0,
-                                className: C.formItem,
+                                className: O.formItem,
                                 value: I,
                                 note: j.intl.string(j.t['0vjy8P']),
                                 onChange: (e) =>

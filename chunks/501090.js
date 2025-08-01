@@ -1,4 +1,4 @@
-(n.d(e, {
+(n.d(t, {
     b: () => c,
     q: () => l
 }),
@@ -8,63 +8,63 @@ var r = n(73800),
     o = n(74538),
     a = n(45474),
     s = n(981631);
-let l = (t, e, n) => {
-    let [o, l] = r.useState(t),
+let l = (e, t, n) => {
+    let [o, l] = r.useState(e),
         [u, d] = r.useState(Date.now()),
         [m] = r.useState(Date.now()),
         _ = r.useCallback(
-            (t) => {
+            (e) => {
                 (i.default.track(
                     s.rMx.CANCELLATION_FLOW_STEP,
-                    (function (t) {
-                        for (var e = 1; e < arguments.length; e++) {
-                            var n = null != arguments[e] ? arguments[e] : {},
+                    (function (e) {
+                        for (var t = 1; t < arguments.length; t++) {
+                            var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
                             ('function' == typeof Object.getOwnPropertySymbols &&
                                 (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (t) {
-                                        return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     })
                                 )),
-                                r.forEach(function (e) {
+                                r.forEach(function (t) {
                                     var r;
-                                    ((r = n[e]),
-                                        e in t
-                                            ? Object.defineProperty(t, e, {
+                                    ((r = n[t]),
+                                        t in e
+                                            ? Object.defineProperty(e, t, {
                                                   value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (t[e] = r));
+                                            : (e[t] = r));
                                 }));
                         }
-                        return t;
+                        return e;
                     })(
                         {
                             from_step: a.O[o],
-                            to_step: a.O[t],
+                            to_step: a.O[e],
                             step_duration_ms: Date.now() - u,
                             flow_duration_ms: Date.now() - m,
                             location_stack: n
                         },
-                        c(e)
+                        c(t)
                     )
                 ),
-                    l(t),
+                    l(e),
                     d(Date.now()));
             },
-            [n, m, u, o, e]
+            [n, m, u, o, t]
         );
     return [o, _, u, m];
 };
-function c(t) {
-    var e;
+function c(e) {
+    var t;
     return {
-        subscription_id: t.id,
-        subscription_type: t.type,
-        subscription_plan_id: null == (e = (0, o.Af)(t)) ? void 0 : e.id,
-        subscription_plan_gateway_plan_id: t.paymentGatewayPlanId,
-        subscription_status: t.status
+        subscription_id: e.id,
+        subscription_type: e.type,
+        subscription_plan_id: null == (t = (0, o.Af)(e)) ? void 0 : t.id,
+        subscription_plan_gateway_plan_id: e.paymentGatewayPlanId,
+        subscription_status: e.status
     };
 }

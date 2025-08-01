@@ -1,8 +1,8 @@
-e.d(i, { default: () => h });
+e.d(i, { default: () => p });
 var s = e(255367),
     n = e(73800),
-    r = e(704215),
-    o = e(667202),
+    o = e(704215),
+    r = e(667202),
     l = e(481060),
     c = e(266454),
     a = e(749681),
@@ -14,28 +14,32 @@ var s = e(255367),
     u = e(49898),
     _ = e(388032),
     C = e(676305);
-function h(t) {
-    let { guildId: i, transitionState: h, onClose: p, analyticsType: v = r.z.APP_DIRECTORY_UPSELL_MODAL } = t;
+function p(t) {
+    let { guildId: i, transitionState: p, onClose: h, analyticsType: v = o.z.APP_DIRECTORY_UPSELL_MODAL } = t;
     return (
         n.useEffect(() => {
             d.default.track(x.rMx.DISMISSIBLE_CONTENT_SHOWN, {
-                type: r.z[v],
+                type: o.z[v],
                 guild_id: i
             });
         }, [i, v]),
-        (0, s.jsx)(o.I, {
+        (0, s.jsx)(r.I, {
             title: _.intl.string(_.t['2tv5YG']),
             subtitle: _.intl.string(_.t.pgwlDw),
-            transitionState: h,
+            transitionState: p,
             size: 'sm',
-            graphic: { lottie: () => e.e('94792').then(e.t.bind(e, 972951, 19)) },
-            onClose: p,
+            graphic: {
+                type: 'lottie',
+                lottie: () => e.e('94792').then(e.t.bind(e, 972951, 19)),
+                aspectRatio: '6/4'
+            },
+            onClose: h,
             actions: [
                 {
                     variant: 'secondary',
                     text: _.intl.string(_.t.L5eIZ2),
                     onClick: () => {
-                        (p(),
+                        (h(),
                             (0, c.Q3)(v, {
                                 forceTrack: !0,
                                 dismissAction: I.L.SECONDARY,
@@ -47,7 +51,7 @@ function h(t) {
                     variant: 'primary',
                     text: _.intl.string(_.t['5e8Mrq']),
                     onClick: () => {
-                        (p(),
+                        (h(),
                             (0, c.Q3)(v, {
                                 forceTrack: !0,
                                 dismissAction: I.L.PRIMARY,

@@ -11,17 +11,17 @@ var r = n(255367),
     _ = n(933557),
     E = n(471445),
     p = n(95398),
-    O = n(905405),
-    S = n(255269),
-    I = n(937889),
+    I = n(905405),
+    O = n(255269),
+    S = n(937889),
     f = n(804063),
     h = n(703656),
     T = n(359110),
     m = n(695346),
     g = n(131704),
     N = n(592125),
-    y = n(430824),
-    R = n(496675),
+    R = n(430824),
+    y = n(496675),
     A = n(699516),
     b = n(944486),
     C = n(594174),
@@ -110,19 +110,19 @@ function L(e) {
     var t, n, l;
     let { channel: a, results: o, highlighter: c, startIndex: u, resultRefs: d, totalResults: f, scrollTo: h, renderEmbeds: g, offset: P, jumpToMessage: j, listNavigator: L, favoriteSearch: U } = e,
         F = m.cC.useSetting(),
-        w = (0, O.p)(),
+        w = (0, I.p)(),
         G = i.useCallback((e) => {
             if (e === b.Z.getChannelId()) return;
             let t = N.Z.getChannel(e);
-            null != t && (R.Z.can(M.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, T.Kh)(t.id);
+            null != t && (y.Z.can(M.Plq.VIEW_CHANNEL, t) || t.isPrivate()) && (0, T.Kh)(t.id);
         }, []),
         V = null != a ? (0, _.F6)(a, C.default, A.Z, !1) : '???',
-        B = U && null != a.guild_id ? (null == (t = y.Z.getGuild(a.guild_id)) ? void 0 : t.name) : null,
+        B = U && null != a.guild_id ? (null == (t = R.Z.getGuild(a.guild_id)) ? void 0 : t.name) : null,
         W = (null == a ? void 0 : a.parent_id) != null ? N.Z.getChannel(a.parent_id) : null,
         H = null != (n = null == W ? void 0 : W.name) ? n : null,
         z = null != (l = (0, E.KS)(a)) ? l : s.VL1,
-        Y = R.Z.can(M.Plq.MANAGE_MESSAGES, a),
-        { content: K } = (0, I.ZP)(
+        Y = y.Z.can(M.Plq.MANAGE_MESSAGES, a),
+        { content: K } = (0, S.ZP)(
             {
                 content: V,
                 embeds: []
@@ -140,7 +140,7 @@ function L(e) {
     }, []);
     let J = [V, H, B].filter((e) => null != e).join(', ');
     return (0, r.jsx)(p.aQ.Provider, {
-        value: (0, S.Z)(F, Y),
+        value: (0, O.Z)(F, Y),
         children: (0, r.jsxs)('ul', {
             role: 'group',
             className: x.searchResultGroup,
@@ -203,17 +203,17 @@ function L(e) {
 }
 let U = i.memo(function (e) {
     var t;
-    let { search: n, renderEmbeds: l, scrollTo: a, searchResults: _, blockCount: E, ignoreCount: p, onPageChange: O, onClick: S, paginationTotalCount: I, renderPageWrapper: T, onBlockedResultsClick: m, searchRequestAnalyticsId: g, searchResultsQuery: y, isFavoritesSearch: R } = e,
+    let { search: n, renderEmbeds: l, scrollTo: a, searchResults: _, blockCount: E, ignoreCount: p, onPageChange: I, onClick: O, paginationTotalCount: S, renderPageWrapper: T, onBlockedResultsClick: m, searchRequestAnalyticsId: g, searchResultsQuery: R, isFavoritesSearch: y } = e,
         { offset: b, totalResults: C, isSearching: D, showBlockedResults: Z } = n,
         U = i.useCallback(
             (e, t) => {
-                if ((null == S || S(e, t), (0, f.Z)(e))) {
+                if ((null == O || O(e, t), (0, f.Z)(e))) {
                     let t = N.Z.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
                     (c.Z.trackJump(e.channel_id, e.id, 'Search Results', { search_id: g }), (0, h.uL)(M.Z5c.CHANNEL(n, e.channel_id, e.id)));
                 }
             },
-            [S, g]
+            [O, g]
         ),
         F = i.useMemo(() => {
             let e;
@@ -265,7 +265,7 @@ let U = i.memo(function (e) {
             setFocus: V,
             onSelect: B
         }),
-        H = (0, u.nC)(null != (t = null == y ? void 0 : y.content) ? t : ''),
+        H = (0, u.nC)(null != (t = null == R ? void 0 : R.content) ? t : ''),
         z = F.map((e) => {
             let { channel: t, results: n, startIndex: i } = e;
             return (0, r.jsx)(
@@ -282,7 +282,7 @@ let U = i.memo(function (e) {
                     offset: b,
                     jumpToMessage: U,
                     listNavigator: W,
-                    favoriteSearch: null != R && R
+                    favoriteSearch: null != y && y
                 },
                 ''.concat(t.id, '-').concat(i)
             );
@@ -320,12 +320,12 @@ let U = i.memo(function (e) {
                   })
                 : null,
             !D &&
-                !R &&
+                !y &&
                 (0, r.jsx)(P.Z, {
                     renderPageWrapper: T,
-                    onPageChange: O,
+                    onPageChange: I,
                     offset: b,
-                    totalCount: null != I ? I : C,
+                    totalCount: null != S ? S : C,
                     pageSize: M.vpv
                 })
         ]

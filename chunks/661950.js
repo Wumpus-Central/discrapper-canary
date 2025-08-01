@@ -18,8 +18,8 @@ var r = n(481060),
     x = n(459674),
     _ = n(803567),
     j = n(269876),
-    O = n(976758),
-    C = n(726985),
+    C = n(976758),
+    O = n(726985),
     E = n(981631),
     v = n(388032);
 let S = ''.concat(a.Z.getArticleURL(E.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
@@ -29,20 +29,20 @@ function T() {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(o.Z, {
-                    webSetting: C.s6.VOICE_AND_VIDEO_VOICE,
+                    webSetting: O.s6.VOICE_AND_VIDEO_VOICE,
                     children: [
                         (0, i.jsxs)(c.Z, {
                             children: [
                                 (0, i.jsx)(s.F, {
-                                    setting: C.s6.VOICE_AND_VIDEO_DEVICES,
+                                    setting: O.s6.VOICE_AND_VIDEO_DEVICES,
                                     children: (0, i.jsx)(m.Z, {})
                                 }),
                                 (0, i.jsx)(s.F, {
-                                    setting: C.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
-                                    children: (0, i.jsx)(O.Z, {})
+                                    setting: O.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
+                                    children: (0, i.jsx)(C.Z, {})
                                 }),
                                 (0, i.jsxs)(s.F, {
-                                    setting: C.s6.VOICE_AND_VIDEO_MIC_TEST,
+                                    setting: O.s6.VOICE_AND_VIDEO_MIC_TEST,
                                     children: [
                                         (0, i.jsx)(h.Z, {}),
                                         (0, i.jsx)(r.R94, {
@@ -55,18 +55,18 @@ function T() {
                         }),
                         (0, i.jsx)(c.Z, {
                             children: (0, i.jsx)(s.F, {
-                                setting: C.s6.VOICE_AND_VIDEO_INPUT_PROFILE,
+                                setting: O.s6.VOICE_AND_VIDEO_INPUT_PROFILE,
                                 children: (0, i.jsx)(g.Z, {})
                             })
                         }),
                         (0, i.jsxs)(c.Z, {
                             children: [
                                 (0, i.jsx)(s.F, {
-                                    setting: C.s6.VOICE_AND_VIDEO_INPUT_MODE,
+                                    setting: O.s6.VOICE_AND_VIDEO_INPUT_MODE,
                                     children: (0, i.jsx)(p.Z, {})
                                 }),
                                 (0, i.jsx)(s.F, {
-                                    setting: C.s6.VOICE_AND_VIDEO_SENSITIVITY,
+                                    setting: O.s6.VOICE_AND_VIDEO_SENSITIVITY,
                                     children: (0, i.jsx)(j.Z, {})
                                 })
                             ]
@@ -74,13 +74,13 @@ function T() {
                     ]
                 }),
                 (0, i.jsx)(o.Z, {
-                    webSetting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
+                    webSetting: O.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
                     title: v.intl.string(v.t['6I6GUl']),
                     children: (0, i.jsx)(_.Z, { refreshStyles: !0 })
                 }),
                 (0, i.jsx)(o.Z, {
                     title: v.intl.string(v.t['8/udY2']),
-                    webSetting: C.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
+                    webSetting: O.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
                     children: (0, i.jsxs)(c.Z, {
                         children: [(0, i.jsx)(b.Z, { refreshStyles: !0 }), (0, i.jsx)(x.Z, { refreshStyles: !0 }), (0, i.jsx)(d.Z, { refreshStyles: !0 }), (0, i.jsx)(u.Z, { refreshStyles: !0 }), (0, i.jsx)(f.Z, { refreshStyles: !0 })]
                     })
