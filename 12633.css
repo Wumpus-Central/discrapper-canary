@@ -21476,16 +21476,23 @@ svg.radioIcon_c1e9c4 {
     color: var(--custom-display-name-styles-main-color)
 }
 
+.animated_dfb989.loop_dfb989.loop_dfb989,
+.animated_dfb989.loop_dfb989.loop_dfb989:before,
+.forceAnimate_dfb989 .container_dfb989.loop_dfb989.loop_dfb989,
+.forceAnimate_dfb989 .container_dfb989.loop_dfb989.loop_dfb989:before {
+    animation-iteration-count: infinite
+}
+
 .animated_dfb989.neon_dfb989,
 .forceAnimate_dfb989 .container_dfb989.neon_dfb989 {
-    animation: neon-flicker-animation_dfb989 4s cubic-bezier(.24, .31, .36, .93) infinite;
+    animation: neon-flicker-animation_dfb989 4s cubic-bezier(.24, .31, .36, .93);
     animation-direction: normal;
     animation-fill-mode: forwards
 }
 
 .animated_dfb989.neon_dfb989:before,
 .forceAnimate_dfb989 .container_dfb989.neon_dfb989:before {
-    animation: neon-glow-flicker-animation_dfb989 4s linear infinite;
+    animation: neon-glow-flicker-animation_dfb989 4s linear;
     animation-direction: normal;
     animation-fill-mode: forwards
 }
@@ -21502,7 +21509,7 @@ svg.radioIcon_c1e9c4 {
     -webkit-background-clip: text;
     background-size: 100% 400%;
     -webkit-text-fill-color: transparent;
-    animation: toon-animation_dfb989 4s cubic-bezier(.44, .29, .48, 1) infinite;
+    animation: toon-animation_dfb989 4s cubic-bezier(.44, .29, .48, 1);
     animation-direction: normal;
     animation-fill-mode: forwards;
     transition: opacity 266ms cubic-bezier(.43, .21, .27, .78)
@@ -21510,14 +21517,14 @@ svg.radioIcon_c1e9c4 {
 
 .animated_dfb989.pop_dfb989,
 .forceAnimate_dfb989 .container_dfb989.pop_dfb989 {
-    animation: pop-animation-main_dfb989 4s cubic-bezier(.44, .29, .48, 1) infinite;
+    animation: pop-animation-main_dfb989 4s cubic-bezier(.44, .29, .48, 1);
     animation-direction: normal;
     animation-fill-mode: forwards
 }
 
 .animated_dfb989.pop_dfb989:before,
 .forceAnimate_dfb989 .container_dfb989.pop_dfb989:before {
-    animation: pop-animation-shadow_dfb989 4s cubic-bezier(.44, .29, .48, 1) infinite;
+    animation: pop-animation-shadow_dfb989 4s cubic-bezier(.44, .29, .48, 1);
     animation-direction: normal;
     animation-fill-mode: forwards
 }
@@ -21529,7 +21536,7 @@ svg.radioIcon_c1e9c4 {
     -webkit-background-clip: text;
     background-size: 200% auto;
     -webkit-text-fill-color: transparent;
-    animation: gradientUsernameAnimation_dfb989 1.5s linear infinite;
+    animation: gradientUsernameAnimation_dfb989 1.5s linear;
     position: relative;
     z-index: 0
 }
@@ -21548,10 +21555,6 @@ svg.radioIcon_c1e9c4 {
     text-indent: 0;
     transition: opacity .1s ease-in-out;
     z-index: -1
-}
-
-:not(.forceAnimate_dfb989) .animated_dfb989.singleIteration_dfb989 {
-    animation-iteration-count: 1
 }
 
 @keyframes pop-animation-main_dfb989 {
