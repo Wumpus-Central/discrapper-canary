@@ -56,8 +56,8 @@ function _() {
         [n, s] = r.useState(),
         _ = r.useRef(null),
         j = (0, o.Wu)([m.Z], () => m.Z.profileEffects),
-        [O, E] = r.useState(''),
-        C = r.useMemo(
+        [O, C] = r.useState(''),
+        E = r.useMemo(
             () =>
                 '' === O
                     ? j
@@ -156,12 +156,12 @@ function _() {
                                 (0, i.jsx)('input', {
                                     value: O,
                                     onChange: (e) => {
-                                        E(e.target.value);
+                                        C(e.target.value);
                                     }
                                 }),
                                 (0, i.jsx)('div', {
                                     className: h.pfxGrid,
-                                    children: C.map((e) =>
+                                    children: E.map((e) =>
                                         (0, i.jsx)(
                                             c.P3F,
                                             {

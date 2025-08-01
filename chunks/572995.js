@@ -22,8 +22,8 @@ var i,
     _ = n(612253),
     j = n(872532),
     O = n(404583),
-    E = n(295349),
-    C = n(631572),
+    C = n(295349),
+    E = n(631572),
     v = n(999675),
     S = n(238027),
     T = n(997585),
@@ -110,8 +110,8 @@ let et = (e, t) =>
                           assetUrl: e ? D.Z : w.Z
                       },
                       emojis: {
-                          thumbnail: E.Z,
-                          assetUrl: e ? O.Z : C.Z
+                          thumbnail: C.Z,
+                          assetUrl: e ? O.Z : E.Z
                       },
                       noLimits: {
                           thumbnail: S.Z,
@@ -194,7 +194,7 @@ let et = (e, t) =>
                 onClick: t,
                 videoUrl: f.showYourStyle.assetUrl
             },
-            E = {
+            C = {
                 name: 'yourSpace',
                 title: h.intl.string(h.t.Wme3nZ),
                 description: h.intl.string(h.t['/aAIqa']),
@@ -208,7 +208,7 @@ let et = (e, t) =>
                 },
                 videoUrl: f.yourSpace.assetUrl
             },
-            C = {
+            E = {
                 name: 'emojis',
                 title: h.intl.string(h.t.zY5PPT),
                 description: h.intl.string(h.t.R5Xag4),
@@ -219,9 +219,9 @@ let et = (e, t) =>
             whatsNewBoxes: r ? [[b], [x, j]] : [[x], [_, j]],
             bestOfBoxes: [
                 [O],
-                [E],
+                [C],
                 [
-                    C,
+                    E,
                     {
                         name: 'noLimits',
                         title: h.intl.string(h.t['6b3ydH']),

@@ -18,12 +18,12 @@ function b(e) {
         { applicationId: b, benefits: x, description: _ } = n,
         j = r.useMemo(() => (null == n.thumbnail ? null : (0, g.q)(b, n.thumbnail, 256)), [b, n.thumbnail]),
         { data: O } = (0, d.X)(n.skuId),
-        E = r.useMemo(() => {
+        C = r.useMemo(() => {
             if (null == O || 0 === O.length) return null;
             let e = O[0];
             return (0, m.xg)(e);
         }, [O]);
-    return null == E
+    return null == C
         ? null
         : (0, i.jsxs)(l.l, {
               className: a()(f.wrapper, s),
@@ -47,7 +47,7 @@ function b(e) {
                                       }),
                                       (0, i.jsx)(c.Text, {
                                           variant: 'text-md/medium',
-                                          children: E
+                                          children: C
                                       })
                                   ]
                               })

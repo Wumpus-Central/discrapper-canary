@@ -49,8 +49,8 @@ function h(e) {
                 align: 'center'
             },
             size: O = 'md',
-            onStepChange: E,
-            onRequestClose: C,
+            onStepChange: C,
+            onRequestClose: E,
             popoverRef: v,
             shouldShow: S
         } = e,
@@ -78,20 +78,20 @@ function h(e) {
         S && I(0);
     }, [S]),
         r.useEffect(() => {
-            null == E || E(N);
-        }, [N, E]));
+            null == C || C(N);
+        }, [N, C]));
     let y = _[N],
         A = N + 1 === _.length,
         P = r.useCallback(() => {
             var e;
-            (null == y || null == (e = y.onCta) || e.call(y), A ? null == C || C() : I((e) => e + 1));
-        }, [y, A, C]),
+            (null == y || null == (e = y.onCta) || e.call(y), A ? null == E || E() : I((e) => e + 1));
+        }, [y, A, E]),
         R = r.useCallback(() => {
-            null == C || C();
-        }, [C]),
+            null == E || E();
+        }, [E]),
         D = r.useCallback(() => {
-            null == C || C();
-        }, [C]);
+            null == E || E();
+        }, [E]);
     if (!S || null == y) return null;
     let Z = g(
         {

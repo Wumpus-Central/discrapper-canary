@@ -1,20 +1,24 @@
-e.d(n, { Z: () => u });
+e.d(n, { Z: () => f });
 var i = e(255367);
 e(73800);
-var r = e(481060),
-    l = e(501517),
-    a = e(982168),
-    o = e(388032),
-    s = e(130883),
-    d = e(183446);
-function u(t) {
-    let n = t.isArchivedThread();
-    return !(0, a.P0)(t) || n
+var r = e(442837),
+    l = e(481060),
+    a = e(660189),
+    o = e(501517),
+    s = e(982168),
+    d = e(388032),
+    u = e(130883),
+    c = e(183446);
+function f(t) {
+    let n = t.isArchivedThread(),
+        e = (0, s.P0)(t),
+        { firstMessage: f } = (0, r.e7)([a.Z], () => a.Z.getMessage(t.id), [t.id]);
+    return !e || n || null == f
         ? null
-        : (0, i.jsx)(r.sNh, {
+        : (0, i.jsx)(l.sNh, {
               id: 'resolve-report',
-              label: o.intl.string(s.default['8yIKen']),
-              action: () => l.Z.resolveFlag(t.id),
-              className: d.menuItem
+              label: d.intl.string(u.default['8yIKen']),
+              action: () => o.Z.resolveFlag(t.id),
+              className: c.menuItem
           });
 }

@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(631885),
     j = n(240351),
     O = n(792258),
-    E = n(657825),
-    C = n(198952),
+    C = n(657825),
+    E = n(198952),
     v = n(329242),
     S = n(895328),
     T = n(292352),
@@ -86,7 +86,7 @@ function D(e) {
         { loadMore: u, isMoreLoading: g } = (0, h.G)({ onError: n }),
         b = T.tx.get(t),
         [_, j] = r.useState(T.iB),
-        C = (0, p.Xi)({ location: 'family_center_activity_section_web' }),
+        E = (0, p.Xi)({ location: 'family_center_activity_section_web' }),
         v = r.useCallback(() => {
             (j((e) => e + T.iB), u(t));
         }, [t, u]);
@@ -98,7 +98,7 @@ function D(e) {
                     n = l[t];
                 return (0, m.iB)(n)
                     ? (0, i.jsx)(
-                          E.Z,
+                          C.Z,
                           {
                               userId: n.entity_id,
                               timestamp: d.default.extractTimestamp(n.event_id),
@@ -127,12 +127,12 @@ function D(e) {
                                   className: A.sectionDescription,
                                   variant: 'text-md/medium',
                                   color: 'text-muted',
-                                  children: b.sectionDescription(null != s && s, C)
+                                  children: b.sectionDescription(null != s && s, E)
                               })
                             : null
                     ]
                 }),
-            [S, b, s, C]
+            [S, b, s, E]
         );
     if (0 === l.length) return null;
     let R = l.slice(0, _);
@@ -200,7 +200,7 @@ let Z = () => {
             : (0, i.jsxs)('div', {
                   className: A.accountRow,
                   children: [
-                      (0, i.jsx)(C.r, {
+                      (0, i.jsx)(E.r, {
                           user: s,
                           avatarSize: r
                       }),

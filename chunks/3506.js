@@ -19,8 +19,8 @@ var r = n(512722),
     _ = n(371651),
     j = n(624864),
     O = n(957148),
-    E = n(556296),
-    C = n(808506),
+    C = n(556296),
+    E = n(808506),
     v = n(237997),
     S = n(626135);
 n(63063);
@@ -33,17 +33,17 @@ function P(e) {
     var t;
     let n = v.default.getNotificationPositionMode(),
         i = n !== N._vf.DISABLED,
-        r = E.ZP.getOverlayKeybind(),
-        s = E.ZP.getOverlayChatKeybind();
+        r = C.ZP.getOverlayKeybind(),
+        s = C.ZP.getOverlayChatKeybind();
     return {
-        enabled: C.default.enabled,
+        enabled: E.default.enabled,
         notifications_enabled: i,
         notifications_position: i ? n : null,
         text_notifications_mode: j.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT) ? 'DISABLED' : 'ENABLED',
         hotkey: null != r ? (0, T.BB)(r.shortcut) : null,
         text_activation_hotkey: null != s ? (0, T.BB)(s.shortcut) : null,
         text_opacity_slider: v.default.getTextWidgetOpacity(),
-        old_enabled: null != (t = null == e ? void 0 : e.enabled) ? t : C.default.enabled
+        old_enabled: null != (t = null == e ? void 0 : e.enabled) ? t : E.default.enabled
     };
 }
 function R(e) {
@@ -58,7 +58,7 @@ function D(e) {
     let { className: t, showHeader: n = !0 } = e,
         { oopEnabled: r, legacyEnabled: a } = (0, o.cj)([_.default], () => _.default.getGlobalEnabledStatus()),
         {
-            avatarSizeMode: C,
+            avatarSizeMode: E,
             displayNameMode: T,
             displayUserMode: D,
             textChatDisabled: Z,
@@ -72,7 +72,7 @@ function D(e) {
             shouldShowKeybindIndicators: v.default.showKeybindIndicators,
             textChatDisabled: j.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT)
         })),
-        L = (0, o.e7)([E.ZP], () => E.ZP.getOverlayKeybind()),
+        L = (0, o.e7)([C.ZP], () => C.ZP.getOverlayKeybind()),
         B = (0, x.Z)({ location: 'overlay_user_settings' }),
         M = (0, p.$1)(),
         U = P(A);
@@ -179,7 +179,7 @@ function D(e) {
                                     let { value: t } = e;
                                     return u.Z.setAvatarSizeMode(t);
                                 },
-                                value: C
+                                value: E
                             })
                         }),
                         (0, i.jsx)(R, {

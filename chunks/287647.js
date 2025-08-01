@@ -21,7 +21,7 @@ function _(e) {
         O = (0, r.useCallback)(() => {
             (t(h.L.TAKE_ACTION), u.Z.open(g.oAB.PROFILE_CUSTOMIZATION, null, { analyticsLocations: j }), (0, p.I)({ analyticsLocations: j }));
         }, [t, j]),
-        E = (0, r.useCallback)(() => {
+        C = (0, r.useCallback)(() => {
             t(h.L.USER_DISMISS);
         }, [t]);
     return (0, i.jsxs)(i.Fragment, {
@@ -33,7 +33,7 @@ function _(e) {
                 align: 'right',
                 position: 'top',
                 children: [
-                    (0, i.jsx)(c.u, { onClick: E }),
+                    (0, i.jsx)(c.u, { onClick: C }),
                     (0, i.jsx)(d.Y, { title: b.intl.string(f.default['1AE46+']) }),
                     (0, i.jsxs)(s.xv, {
                         variant: 'text-sm/normal',

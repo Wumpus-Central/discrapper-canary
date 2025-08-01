@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685), n(953529));
+(n.d(t, { Z: () => E }), n(388685), n(953529));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -38,7 +38,7 @@ let j = (e) => (e ? x.intl.string(x.t.QX14gI) : x.intl.string(x.t.RGadQU)),
             ]
         });
     },
-    E = (e) => {
+    C = (e) => {
         let { title: t, description: n, className: r, imageSource: s, imageClassName: l, titleBadge: c, isNew: g = !1, isEarlyAccess: h = !1 } = e,
             { analyticsLocations: f } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD);
         return (0, i.jsx)(u.Gt, {
@@ -77,14 +77,14 @@ let j = (e) => (e ? x.intl.string(x.t.QX14gI) : x.intl.string(x.t.RGadQU)),
             })
         });
     },
-    C = (e) => {
+    E = (e) => {
         let { className: t, isSubscriberNitroHome: n = !1 } = e,
             [s, d] = r.useState(!1),
             m = (0, f.N)({ styles: _ }),
             p = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
             { analyticsLocations: x } = (0, u.ZP)(),
-            C = (0, g._f)(),
-            v = [m.emoji, m.streaming, m.upload, m.customAppIcons, m.soundboard, C ? m.remix : m.videoBackground, m.superReactions, m.stickersPremiumPerk, m.badgeAlt];
+            E = (0, g._f)(),
+            v = [m.emoji, m.streaming, m.upload, m.customAppIcons, m.soundboard, E ? m.remix : m.videoBackground, m.superReactions, m.stickersPremiumPerk, m.badgeAlt];
         return (0, i.jsxs)('div', {
             className: a()(_.perksContainer, t, {
                 [_.partiallyHidden]: n && !s,
@@ -103,7 +103,7 @@ let j = (e) => (e ? x.intl.string(x.t.QX14gI) : x.intl.string(x.t.RGadQU)),
                         (e) =>
                             null != e &&
                             (0, i.jsx)(
-                                E,
+                                C,
                                 (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},

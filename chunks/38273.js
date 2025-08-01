@@ -74,7 +74,7 @@ function u(e, t) {
     return i;
 }
 let d = (e) => {
-    var { subscriptionTier: t, hasActivePromotion: n = !1, useShorterCTA: a = !1, isPersistentCTA: s = !1 } = e,
+    var { subscriptionTier: t = null, hasActivePromotion: n = !1, useShorterCTA: a = !1, isPersistentCTA: s = !1 } = e,
         u = c(e, ['subscriptionTier', 'hasActivePromotion', 'useShorterCTA', 'isPersistentCTA']);
     let d = {
             subscriptionTier: t,

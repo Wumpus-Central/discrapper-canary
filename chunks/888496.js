@@ -123,7 +123,7 @@ function f(e) {
         c > -1 &&
             l.push(
                 (0, i.jsx)(
-                    C,
+                    E,
                     {
                         className: a,
                         label: m.intl.format(m.t['Y88M5+'], { count: c }),
@@ -136,7 +136,7 @@ function f(e) {
         d > -1 &&
             l.push(
                 (0, i.jsx)(
-                    C,
+                    E,
                     {
                         className: a,
                         label: m.intl.format(m.t['Y88M5+'], { count: d }),
@@ -293,7 +293,7 @@ function j(e) {
                 case u.xn.DATETIME_LESS_THAN_EQUAL:
                     r.push(
                         (0, i.jsx)(
-                            E,
+                            C,
                             {
                                 className: t,
                                 date: l,
@@ -344,7 +344,7 @@ function O(e) {
         })
     );
 }
-function E(e) {
+function C(e) {
     let { date: t, locale: n, label: r, className: a } = e;
     return (0, i.jsx)(o.Text, {
         className: s()(p.connectedAccountVanityMetadata, a),
@@ -356,7 +356,7 @@ function E(e) {
         })
     });
 }
-function C(e) {
+function E(e) {
     let { label: t, imageSrc: n, imageAlt: r, className: a } = e;
     return (0, i.jsxs)('div', {
         className: s()(p.connectedAccountVanityMetadata, p.connectedAccountVanityMetadataItem, a),

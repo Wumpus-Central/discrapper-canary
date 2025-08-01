@@ -22,8 +22,8 @@ var i = n(255367),
     _ = n(497321),
     j = n(410030),
     O = n(607070),
-    E = n(100527),
-    C = n(906732),
+    C = n(100527),
+    E = n(906732),
     v = n(211242),
     S = n(975298),
     T = n(15640),
@@ -367,7 +367,7 @@ function ed() {
 let eu = function () {
     let e = 'PremiumManagementSettings',
         t = (0, v.Q)(),
-        { analyticsLocations: n } = (0, C.ZP)(E.Z.PREMIUM_SETTINGS),
+        { analyticsLocations: n } = (0, E.ZP)(C.Z.PREMIUM_SETTINGS),
         s = (0, c.e7)([R.Z], () => R.Z.getPremiumTypeSubscription()),
         a = (0, c.e7)([R.Z], () => R.Z.hasFetchedSubscriptions()),
         l = (0, T.V)(J.nS),
@@ -394,7 +394,7 @@ let eu = function () {
         });
     if ((!P && !D) || o) return (0, i.jsx)(p.$jN, {});
     let w = !!(null == s ? void 0 : s.hasActiveTrial);
-    return (0, i.jsx)(C.Gt, {
+    return (0, i.jsx)(E.Gt, {
         value: n,
         children: (0, i.jsxs)(i.Fragment, {
             children: [

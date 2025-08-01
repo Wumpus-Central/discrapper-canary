@@ -2199,6 +2199,9 @@ class ef extends o.C {
                 case 29:
                     a.defaultGuildsActivityRestrictedV2 = e.int32();
                     break;
+                case 30:
+                    a.quests3PDataOptedOut = s.D5.internalBinaryRead(e, e.uint32(), n, a.quests3PDataOptedOut);
+                    break;
                 default:
                     let o = n.readUnknownField;
                     if ('throw' === o) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
@@ -2229,7 +2232,7 @@ class ef extends o.C {
             for (let n = 0; n < e.messageRequestRestrictedGuildIds.length; n++) t.fixed64(e.messageRequestRestrictedGuildIds[n]);
             t.join();
         }
-        (e.defaultMessageRequestRestricted && s.D5.internalBinaryWrite(e.defaultMessageRequestRestricted, t.tag(17, r.TD.LengthDelimited).fork(), n).join(), e.dropsOptedOut && s.D5.internalBinaryWrite(e.dropsOptedOut, t.tag(18, r.TD.LengthDelimited).fork(), n).join(), e.nonSpamRetrainingOptIn && s.D5.internalBinaryWrite(e.nonSpamRetrainingOptIn, t.tag(19, r.TD.LengthDelimited).fork(), n).join(), e.familyCenterEnabled && s.D5.internalBinaryWrite(e.familyCenterEnabled, t.tag(20, r.TD.LengthDelimited).fork(), n).join(), e.familyCenterEnabledV2 && s.D5.internalBinaryWrite(e.familyCenterEnabledV2, t.tag(21, r.TD.LengthDelimited).fork(), n).join(), e.hideLegacyUsername && s.D5.internalBinaryWrite(e.hideLegacyUsername, t.tag(22, r.TD.LengthDelimited).fork(), n).join(), e.inappropriateConversationWarnings && s.D5.internalBinaryWrite(e.inappropriateConversationWarnings, t.tag(23, r.TD.LengthDelimited).fork(), n).join(), e.recentGamesEnabled && s.D5.internalBinaryWrite(e.recentGamesEnabled, t.tag(24, r.TD.LengthDelimited).fork(), n).join(), 0 !== e.guildsLeaderboardOptOutDefault && t.tag(25, r.TD.Varint).int32(e.guildsLeaderboardOptOutDefault), e.allowGameFriendDmsInDiscord && s.D5.internalBinaryWrite(e.allowGameFriendDmsInDiscord, t.tag(26, r.TD.LengthDelimited).fork(), n).join(), e.defaultGuildsRestrictedV2 && s.D5.internalBinaryWrite(e.defaultGuildsRestrictedV2, t.tag(27, r.TD.LengthDelimited).fork(), n).join(), 0 !== e.slayerSdkReceiveDmsInGame && t.tag(28, r.TD.Varint).int32(e.slayerSdkReceiveDmsInGame), 0 !== e.defaultGuildsActivityRestrictedV2 && t.tag(29, r.TD.Varint).int32(e.defaultGuildsActivityRestrictedV2));
+        (e.defaultMessageRequestRestricted && s.D5.internalBinaryWrite(e.defaultMessageRequestRestricted, t.tag(17, r.TD.LengthDelimited).fork(), n).join(), e.dropsOptedOut && s.D5.internalBinaryWrite(e.dropsOptedOut, t.tag(18, r.TD.LengthDelimited).fork(), n).join(), e.nonSpamRetrainingOptIn && s.D5.internalBinaryWrite(e.nonSpamRetrainingOptIn, t.tag(19, r.TD.LengthDelimited).fork(), n).join(), e.familyCenterEnabled && s.D5.internalBinaryWrite(e.familyCenterEnabled, t.tag(20, r.TD.LengthDelimited).fork(), n).join(), e.familyCenterEnabledV2 && s.D5.internalBinaryWrite(e.familyCenterEnabledV2, t.tag(21, r.TD.LengthDelimited).fork(), n).join(), e.hideLegacyUsername && s.D5.internalBinaryWrite(e.hideLegacyUsername, t.tag(22, r.TD.LengthDelimited).fork(), n).join(), e.inappropriateConversationWarnings && s.D5.internalBinaryWrite(e.inappropriateConversationWarnings, t.tag(23, r.TD.LengthDelimited).fork(), n).join(), e.recentGamesEnabled && s.D5.internalBinaryWrite(e.recentGamesEnabled, t.tag(24, r.TD.LengthDelimited).fork(), n).join(), 0 !== e.guildsLeaderboardOptOutDefault && t.tag(25, r.TD.Varint).int32(e.guildsLeaderboardOptOutDefault), e.allowGameFriendDmsInDiscord && s.D5.internalBinaryWrite(e.allowGameFriendDmsInDiscord, t.tag(26, r.TD.LengthDelimited).fork(), n).join(), e.defaultGuildsRestrictedV2 && s.D5.internalBinaryWrite(e.defaultGuildsRestrictedV2, t.tag(27, r.TD.LengthDelimited).fork(), n).join(), 0 !== e.slayerSdkReceiveDmsInGame && t.tag(28, r.TD.Varint).int32(e.slayerSdkReceiveDmsInGame), 0 !== e.defaultGuildsActivityRestrictedV2 && t.tag(29, r.TD.Varint).int32(e.defaultGuildsActivityRestrictedV2), e.quests3PDataOptedOut && s.D5.internalBinaryWrite(e.quests3PDataOptedOut, t.tag(30, r.TD.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
@@ -2400,6 +2403,13 @@ class ef extends o.C {
                 name: 'default_guilds_activity_restricted_v2',
                 kind: 'enum',
                 T: () => ['discord_protos.discord_users.v1.GuildActivityStatusRestrictionDefaultV2', E]
+            },
+            {
+                no: 30,
+                name: 'quests_3p_data_opted_out',
+                kind: 'message',
+                jsonName: 'quests3pDataOptedOut',
+                T: () => s.D5
             }
         ]);
     }

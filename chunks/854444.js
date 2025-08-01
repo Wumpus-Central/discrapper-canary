@@ -23,8 +23,8 @@ var i = n(73800),
     _ = n(306680),
     j = n(944486),
     O = n(9156),
-    E = n(823379),
-    C = n(540126),
+    C = n(823379),
+    E = n(540126),
     v = n(647086),
     S = n(231338);
 let T = 12633 == n.j ? [l.ZP, o.Z, d.ZP, u.Z, m.Z, g.Z, h.Z, b.Z, x.Z, _.ZP, j.Z, O.ZP] : null;
@@ -66,10 +66,10 @@ function I() {
                 let d = null != i && (i.id === n.id || r === n.id),
                     m = null != i && i.isThread() && i.parent_id === n.id,
                     g = null != (c = d || m || !l ? u.Z.getActiveJoinedRelevantThreadsForParent(n.guild_id, n.id) : u.Z.getActiveJoinedUnreadThreadsForParent(n.guild_id, n.id)) ? c : {},
-                    h = (0, C.zR)(n, g, i, r, t),
+                    h = (0, E.zR)(n, g, i, r, t),
                     b = f.Z.isCollapsed(n.id),
                     j = O.ZP.isChannelMuted(n.guild_id, n.id),
-                    E = {
+                    C = {
                         id: n.id,
                         record: n,
                         category: a,
@@ -79,11 +79,11 @@ function I() {
                         isCollapsed: b,
                         isMuted: j,
                         isFirstVoiceChannel: !1,
-                        subtitle: (0, C.Bz)(n, b, !1)
+                        subtitle: (0, E.Bz)(n, b, !1)
                     };
-                return d || m || !s().isEmpty(g) || _.ZP.getMentionCount(n.id) > 0 ? E : (t && j) || (l && (j || o || (0, p.vd)(n.type) || ((0, p.vc)(n.type) && !1 === _.ZP.hasUnread(n.id)))) ? null : E;
+                return d || m || !s().isEmpty(g) || _.ZP.getMentionCount(n.id) > 0 ? C : (t && j) || (l && (j || o || (0, p.vd)(n.type) || ((0, p.vc)(n.type) && !1 === _.ZP.hasUnread(n.id)))) ? null : C;
             })
-            .filter(E.lm)
+            .filter(C.lm)
             .sortBy((e) => {
                 let { record: t } = e;
                 return t.isGuildVocal() ? t.position + 10000 : t.position;
@@ -149,13 +149,13 @@ function I() {
         voiceChannelsSectionNumber: -999,
         getSections() {
             let e = [];
-            ((e[C.Fq] = 0), (e[C.wZ] = 0), (e[C.p2] = 0), (e[C.PB] = 0), (e[C.wd] = T.channelList.length));
-            for (let t = 0; t < N.length; t++) e[C.wF + t] = Math.max(1, N[t].channelList.length);
+            ((e[E.Fq] = 0), (e[E.wZ] = 0), (e[E.p2] = 0), (e[E.PB] = 0), (e[E.wd] = T.channelList.length));
+            for (let t = 0; t < N.length; t++) e[E.wF + t] = Math.max(1, N[t].channelList.length);
             return e;
         },
-        isPlaceholderRow: (e, t) => !(e < C.wF) && 0 === t && 0 === N[e - C.wF].channelList.length,
-        getCategoryFromSection: (e) => (e === C.wd ? T : N[e - C.wF]),
-        getNamedCategoryFromSection: (e) => N[e - C.wF],
+        isPlaceholderRow: (e, t) => !(e < E.wF) && 0 === t && 0 === N[e - E.wF].channelList.length,
+        getCategoryFromSection: (e) => (e === E.wd ? T : N[e - E.wF]),
+        getNamedCategoryFromSection: (e) => N[e - E.wF],
         getChannelFromSectionRow(e, t) {
             let n = this.getCategoryFromSection(e);
             return null == n || null == n.channelList[t]
@@ -175,7 +175,7 @@ function I() {
                     if (t[n].channelList[i].id === e)
                         return [
                             {
-                                section: n + C.wd,
+                                section: n + E.wd,
                                 row: i
                             }
                         ];

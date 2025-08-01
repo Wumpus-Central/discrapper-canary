@@ -1,5 +1,5 @@
 n.d(t, {
-    C: () => C,
+    C: () => E,
     Z: () => v
 });
 var i,
@@ -22,8 +22,8 @@ var s = n(120356),
     _ = n(917062),
     j = n(579273),
     O = n(38874),
-    E = n(267201),
-    C = (((i = {}).SUBSCRIBER_HOME = 'SUBSCRIBER_HOME'), (i.NITRO_SETTINGS = 'SETTINGS'), (i.APPLICATION_NITRO_HOME = 'APPLICATION_NITRO_HOME'), i);
+    C = n(267201),
+    E = (((i = {}).SUBSCRIBER_HOME = 'SUBSCRIBER_HOME'), (i.NITRO_SETTINGS = 'SETTINGS'), (i.APPLICATION_NITRO_HOME = 'APPLICATION_NITRO_HOME'), i);
 let v = function (e) {
     let { variant: t } = e,
         n = (0, p.Vi)(),
@@ -137,7 +137,7 @@ let v = function (e) {
                                         className: x.settingsBannerRightImageContainer,
                                         children: (0, r.jsx)('img', {
                                             alt: '',
-                                            src: E.Z,
+                                            src: C.Z,
                                             className: x.settingsImage
                                         })
                                     })

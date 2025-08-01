@@ -22,7 +22,7 @@ let b = {
         END: f.alignRight
     },
     x = (e) => {
-        let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, anchorPillType: x, analyticsPage: _, isCoachmarkEnabled: j = !0, linkText: O = h.intl.string(h.t.XRdyj4), cardAlignment: E = b.START, className: C } = e,
+        let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, anchorPillType: x, analyticsPage: _, isCoachmarkEnabled: j = !0, linkText: O = h.intl.string(h.t.XRdyj4), cardAlignment: C = b.START, className: E } = e,
             { balance: v } = (0, d.A)(),
             [S, T] = r.useState(u.b.DEFAULT),
             [N, I] = r.useState(!1),
@@ -66,7 +66,7 @@ let b = {
                 [_, n, O, D, s]
             );
         return (0, i.jsxs)('div', {
-            className: a()(f.container, C, {
+            className: a()(f.container, E, {
                 [f.hidden]: y,
                 [f.visible]: !y
             }),
@@ -84,7 +84,7 @@ let b = {
                 }),
                 N &&
                     (0, i.jsx)('div', {
-                        className: a()(f.cardContainer, E, {
+                        className: a()(f.cardContainer, C, {
                             [f.hidden]: y,
                             [f.visible]: !y
                         }),

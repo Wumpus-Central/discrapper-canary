@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(726542),
     j = n(122021),
     O = n(275759),
-    E = n(231757),
-    C = n(888496),
+    C = n(231757),
+    E = n(888496),
     v = n(266454),
     S = n(565138),
     T = n(297700),
@@ -313,24 +313,24 @@ function W(e) {
                     s = (0, O.FI)(n[M.PC.CREATED_AT], h);
                 switch (e.type) {
                     case B.ABu.REDDIT:
-                        r = (0, C.oP)(n, G.metadataItem);
+                        r = (0, E.oP)(n, G.metadataItem);
                         break;
                     case B.ABu.STEAM:
-                        r = (0, C.Dq)(n, G.metadataItem);
+                        r = (0, E.Dq)(n, G.metadataItem);
                         break;
                     case B.ABu.BLUESKY:
                     case B.ABu.TWITTER:
                     case B.ABu.MASTODON:
-                        r = (0, C.rJ)(n, G.metadataItem);
+                        r = (0, E.rJ)(n, G.metadataItem);
                         break;
                     case B.ABu.EBAY:
-                        r = (0, C.ul)(n, G.metadataItem);
+                        r = (0, E.ul)(n, G.metadataItem);
                         break;
                     case B.ABu.PAYPAL:
-                        r = (0, C.li)(n, G.metadataItem);
+                        r = (0, E.li)(n, G.metadataItem);
                         break;
                     case B.ABu.TIKTOK:
-                        r = (0, C.hf)(n, G.metadataItem);
+                        r = (0, E.hf)(n, G.metadataItem);
                 }
                 null !== s &&
                     (null == r && (r = []),
@@ -441,7 +441,7 @@ function W(e) {
                             n = +!!e;
                         if (e && !t) {
                             (F(n),
-                                (0, E.Z)({
+                                (0, C.Z)({
                                     platformType: o.type,
                                     location: 'User Settings'
                                 }));
@@ -469,7 +469,7 @@ function W(e) {
                                     n = +!!e;
                                 if (e && !t) {
                                     (D(n),
-                                        (0, E.Z)({
+                                        (0, C.Z)({
                                             platformType: o.type,
                                             location: 'User Settings'
                                         }));
@@ -498,7 +498,7 @@ function W(e) {
                           className: G.integrationRevoked,
                           children: V.intl.format(V.t['6C4lgI'], {
                               onReconnect: function () {
-                                  (0, E.Z)({
+                                  (0, C.Z)({
                                       platformType: o.type,
                                       location: 'User Settings'
                                   });
@@ -553,7 +553,7 @@ function Y() {
 }
 function K(e) {
     let t = _.Z.get(e);
-    ((0, E.Z)({ platformType: t.type }),
+    ((0, C.Z)({ platformType: t.type }),
         P.default.track(B.rMx.ACCOUNT_LINK_STEP, {
             previous_step: 'desktop connections',
             current_step: 'desktop oauth',

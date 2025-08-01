@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(690221),
     j = n(332473),
     O = n(303172),
-    E = n(518560),
-    C = n(921801),
+    C = n(518560),
+    E = n(921801),
     v = n(577275),
     S = n(484459),
     T = n(430824),
@@ -205,7 +205,7 @@ class q extends r.PureComponent {
                           })
                       })
                     : null,
-                (0, i.jsx)(C.F, {
+                (0, i.jsx)(E.F, {
                     setting: V.s6.ACCOUNT_CHANGE_PASSWORD,
                     children: (0, i.jsx)('div', {
                         children: (0, i.jsx)('div', {
@@ -220,7 +220,7 @@ class q extends r.PureComponent {
                         })
                     })
                 }),
-                (0, i.jsx)(C.F, {
+                (0, i.jsx)(E.F, {
                     setting: V.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
                     children: (0, i.jsxs)(x.Z, {
                         align: x.Z.Align.STRETCH,
@@ -329,15 +329,15 @@ class q extends r.PureComponent {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 this.renderConfirmModals(),
-                (0, i.jsx)(C.F, {
+                (0, i.jsx)(E.F, {
                     setting: V.s6.ACCOUNT_PROFILE,
                     children: this.renderAccountSettings(!1)
                 }),
-                (0, i.jsx)(C.F, {
+                (0, i.jsx)(E.F, {
                     setting: V.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
                     children: this.renderSecuritySettings()
                 }),
-                (0, i.jsx)(C.F, {
+                (0, i.jsx)(E.F, {
                     setting: V.s6.ACCOUNT_REMOVAL,
                     children: this.renderAccountRemovalSettings()
                 })
@@ -364,7 +364,7 @@ class q extends r.PureComponent {
                     },
                     {
                         title: H.intl.string(H.t['Vov/9v']),
-                        component: E.Z,
+                        component: C.Z,
                         setting: V.s6.PRIVACY_AND_SAFETY_STANDING
                     }
                 ]

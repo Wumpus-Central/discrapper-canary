@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(785145),
     j = n(981631),
     O = n(526761),
-    E = n(726985),
-    C = n(388032),
+    C = n(726985),
+    E = n(388032),
     v = n(545784);
 function S() {
     o.Z.useExperiment({ location: 'profile_customization_auto' });
@@ -49,11 +49,11 @@ function S() {
     let R = !0,
         D = !0;
     return (
-        y && 1 === A.length && (A.includes(E.s6.PROFILE_SERVER_PROFILES) ? (P(O.NB.GUILD), (D = !1)) : A.includes(E.s6.PROFILE_USER_PROFILE) && (P(O.NB.USER_PROFILE), (R = !1))),
+        y && 1 === A.length && (A.includes(C.s6.PROFILE_SERVER_PROFILES) ? (P(O.NB.GUILD), (D = !1)) : A.includes(C.s6.PROFILE_USER_PROFILE) && (P(O.NB.USER_PROFILE), (R = !1))),
         (0, i.jsxs)(a.y5t, {
             component: (0, i.jsx)(a.X6q, {
                 variant: 'heading-lg/semibold',
-                children: C.intl.string(C.t['vi7f+v'])
+                children: E.intl.string(E.t['vi7f+v'])
             }),
             children: [
                 (0, i.jsxs)(a.njP, {
@@ -69,7 +69,7 @@ function S() {
                                   {
                                       className: v.tabBarItem,
                                       id: O.NB.USER_PROFILE,
-                                      children: C.intl.string(C.t['2p07FR'])
+                                      children: E.intl.string(E.t['2p07FR'])
                                   },
                                   O.NB.USER_PROFILE
                               )
@@ -80,7 +80,7 @@ function S() {
                                   {
                                       className: v.tabBarItem,
                                       id: O.NB.GUILD,
-                                      children: C.intl.string(C.t.kPHroa)
+                                      children: E.intl.string(E.t.kPHroa)
                                   },
                                   O.NB.GUILD
                               )

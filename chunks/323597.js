@@ -35,16 +35,17 @@ function b(t) {
             [t.id]
         ),
         { firstMessage: _ } = (0, r.e7)([d.Z], () => d.Z.getMessage(t.id), [t.id]),
-        j = n && (p || (e && O < 1)),
-        C = n && e && !p && O > 0 && null != _;
-    return m && !b && (p || j || C)
+        j = b && p && null == _,
+        C = n && (p || (e && O < 1) || j),
+        E = n && e && !p && O > 0 && null != _;
+    return m && (!b || j) && (p || C || E)
         ? (0, i.jsx)(l.sNh, {
               id: 'delete-channel',
-              label: t.type === g.d4z.GUILD_CATEGORY ? Z.intl.string(Z.t.ifbXnJ) : t.isForumPost() ? (j ? Z.intl.string(Z.t.nEOg1N) : Z.intl.string(Z.t.xwMqDw)) : t.isThread() ? Z.intl.string(Z.t.H7vTe3) : Z.intl.string(Z.t['8D8Rsb']),
+              label: t.type === g.d4z.GUILD_CATEGORY ? Z.intl.string(Z.t.ifbXnJ) : t.isForumPost() ? (C ? Z.intl.string(Z.t.nEOg1N) : Z.intl.string(Z.t.xwMqDw)) : t.isThread() ? Z.intl.string(Z.t.H7vTe3) : Z.intl.string(Z.t['8D8Rsb']),
               color: 'danger',
               action: () => {
                   (0, s.w)(t, function () {
-                      C ? o.Z.deleteMessage(t.id, v.default.castChannelIdAsMessageId(t.id)) : a.ZP.deleteChannel(t.id);
+                      E ? o.Z.deleteMessage(t.id, v.default.castChannelIdAsMessageId(t.id)) : a.ZP.deleteChannel(t.id);
                   });
               }
           })

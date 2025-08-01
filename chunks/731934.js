@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(367515),
     j = n(250285),
     O = n(292352),
-    E = n(134612),
-    C = n(916723),
+    C = n(134612),
+    E = n(916723),
     v = n(388032),
     S = n(589608),
     T = n(34997),
@@ -66,20 +66,20 @@ function A() {
                             (0, i.jsx)(c.X6q, {
                                 className: N.marginBottom8,
                                 variant: 'heading-xl/medium',
-                                children: (0, i.jsx)(c.y5t, { children: v.intl.string(C.default.pHEnV1) })
+                                children: (0, i.jsx)(c.y5t, { children: v.intl.string(E.default.pHEnV1) })
                             }),
                             (0, i.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'text-muted',
                                 className: N.marginBottom20,
-                                children: v.intl.string(C.default['1J/gZ2'])
+                                children: v.intl.string(E.default['1J/gZ2'])
                             })
                         ]
                     }),
                     (0, i.jsx)('img', {
                         className: T.bannerArt,
                         src: I,
-                        alt: v.intl.string(C.default['r+PDmp'])
+                        alt: v.intl.string(E.default['r+PDmp'])
                     })
                 ]
             }),
@@ -87,18 +87,18 @@ function A() {
                 className: T.steps,
                 children: [
                     (0, i.jsx)(y, {
-                        header: v.intl.string(C.default['7xxAnp']),
-                        description: v.intl.string(C.default['1M9So6']),
+                        header: v.intl.string(E.default['7xxAnp']),
+                        description: v.intl.string(E.default['1M9So6']),
                         stepNumber: 1
                     }),
                     (0, i.jsx)(y, {
-                        header: v.intl.string(C.default['AXgx+f']),
-                        description: v.intl.string(C.default.GzMFnZ),
+                        header: v.intl.string(E.default['AXgx+f']),
+                        description: v.intl.string(E.default.GzMFnZ),
                         stepNumber: 2
                     }),
                     (0, i.jsx)(y, {
-                        header: v.intl.string(C.default.MZn1tL),
-                        description: v.intl.string(C.default['8rLBxM']),
+                        header: v.intl.string(E.default.MZn1tL),
+                        description: v.intl.string(E.default['8rLBxM']),
                         stepNumber: 3
                     })
                 ]
@@ -116,13 +116,13 @@ function P() {
                     (0, i.jsx)(c.X6q, {
                         className: N.marginBottom8,
                         variant: 'heading-xl/medium',
-                        children: (0, i.jsx)(c.y5t, { children: v.intl.string(C.default.zUCWEB) })
+                        children: (0, i.jsx)(c.y5t, { children: v.intl.string(E.default.zUCWEB) })
                     }),
                     (0, i.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-muted',
                         className: N.marginBottom20,
-                        children: v.intl.format(C.default.yMnoDg, { link: 'https://support.discord.com/hc/articles/14155060633623' })
+                        children: v.intl.format(E.default.yMnoDg, { link: 'https://support.discord.com/hc/articles/14155060633623' })
                     }),
                     e ? null : (0, i.jsx)(b.Z, {})
                 ]
@@ -130,7 +130,7 @@ function P() {
             (0, i.jsx)('img', {
                 className: T.bannerArt,
                 src: I,
-                alt: v.intl.string(C.default['r+PDmp'])
+                alt: v.intl.string(E.default['r+PDmp'])
             })
         ]
     });
@@ -260,7 +260,7 @@ let D = () => {
                 count: t.length,
                 max: n
             },
-            s = (0, m.o)(v.intl.formatToPlainString(C.default['+tnO39'], r), v.intl.formatToPlainString(C.default['pu6/U1'], r));
+            s = (0, m.o)(v.intl.formatToPlainString(E.default['+tnO39'], r), v.intl.formatToPlainString(E.default['pu6/U1'], r));
         return t.length > 0
             ? (0, i.jsx)(R, {
                   sectionType: O.ne.ACTIVE,
@@ -278,7 +278,7 @@ let D = () => {
                       }),
                       (0, i.jsx)('div', {
                           className: T.box,
-                          children: (0, i.jsx)(f.Z, { text: v.intl.string(C.default.C4ScLC) })
+                          children: (0, i.jsx)(f.Z, { text: v.intl.string(E.default.C4ScLC) })
                       })
                   ]
               });
@@ -286,7 +286,7 @@ let D = () => {
     Z = () => {
         let e = (0, h.VM)(),
             t = (0, g.Z)() ? O.AG : O.i0,
-            n = (0, m.o)(v.intl.formatToPlainString(C.default['1/PzIi'], { maxConnections: t }), v.intl.formatToPlainString(C.default.RcTgiI, { maxConnections: t }));
+            n = (0, m.o)(v.intl.formatToPlainString(E.default['1/PzIi'], { maxConnections: t }), v.intl.formatToPlainString(E.default.RcTgiI, { maxConnections: t }));
         return e
             ? (0, i.jsx)('div', {
                   className: T.maxConnectionInfo,
@@ -305,8 +305,8 @@ let D = () => {
                 helpline: e,
                 throughline: t
             })
-                .with({ helpline: !0 }, () => v.intl.format(C.default.KOwsf3, { helpLink: 'https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line' }))
-                .with({ throughline: !0 }, () => v.intl.format(C.default['6tsC8v'], { helpLink: E.$l }))
+                .with({ helpline: !0 }, () => v.intl.format(E.default.KOwsf3, { helpLink: 'https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line' }))
+                .with({ throughline: !0 }, () => v.intl.format(E.default['6tsC8v'], { helpLink: C.$l }))
                 .otherwise(() => null);
         return null == n
             ? null
@@ -316,7 +316,7 @@ let D = () => {
                       (0, i.jsx)(c.X6q, {
                           className: T.supportHeader,
                           variant: 'heading-sm/semibold',
-                          children: (0, i.jsx)(c.y5t, { children: v.intl.string(C.default['7/tVho']) })
+                          children: (0, i.jsx)(c.y5t, { children: v.intl.string(E.default['7/tVho']) })
                       }),
                       (0, i.jsx)(c.Text, {
                           variant: 'text-xs/medium',
@@ -328,7 +328,7 @@ let D = () => {
     },
     k = () => {
         let e = (0, h.mq)(O.ne.PENDING),
-            t = (0, m.o)(v.intl.formatToPlainString(C.default.IkAgkJ, { count: e.length }), v.intl.formatToPlainString(C.default.Q8XnAQ, { count: e.length }));
+            t = (0, m.o)(v.intl.formatToPlainString(E.default.IkAgkJ, { count: e.length }), v.intl.formatToPlainString(E.default.Q8XnAQ, { count: e.length }));
         return 0 === e.length
             ? null
             : (0, i.jsx)(R, {

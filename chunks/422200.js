@@ -40,8 +40,8 @@ let y = (0, a.Z)(
             S = (0, j.Z)(n),
             I = (0, m.Z)(n),
             k = (0, O.Z)(n.id),
-            U = (0, g.Z)(n),
-            M = (0, C.Z)(n),
+            M = (0, g.Z)(n),
+            U = (0, C.Z)(n),
             F = (0, d.l)(n),
             w = (0, d.P)(n),
             D = (0, p.Z)(n);
@@ -61,7 +61,7 @@ let y = (0, a.Z)(
                 (0, i.jsxs)(
                     r.kSQ,
                     {
-                        children: [R, U, N, P, I, k, a]
+                        children: [R, M, N, P, I, k, a]
                     },
                     'thread-actions'
                 ),
@@ -76,7 +76,7 @@ let y = (0, a.Z)(
                 (0, i.jsxs)(
                     r.kSQ,
                     {
-                        children: [M, x, A, D]
+                        children: [U, x, A, D]
                     },
                     'admin-actions'
                 ),

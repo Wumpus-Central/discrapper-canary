@@ -4,7 +4,7 @@ n(73800);
 var i = n(834023),
     a = n(667202),
     o = n(648613),
-    s = n(864218),
+    s = n(38273),
     l = n(388032);
 function c(e, t, n) {
     return (
@@ -81,8 +81,9 @@ function p(e, t) {
 let h = (e) => {
     var { gradientColor: t, title: n, subtitle: c, onClose: d, onSecondaryClick: p, videoSrc: h, loopAt: m } = e,
         g = f(e, ['gradientColor', 'title', 'subtitle', 'onClose', 'onSecondaryClick', 'videoSrc', 'loopAt']);
-    let { subscribeButtonProps: E } = (0, s.F)({ defaultTextOverride: l.intl.string(l.t.pj0XBA) });
+    let { subscribeButtonProps: E, subscriptionTier: b } = (0, s.G)({ defaultTextOverride: l.intl.string(l.t.pj0XBA) });
     return (0, r.jsx)(o.Z, {
+        subscriptionTier: b,
         children: (e) => {
             let { onClick: o } = e;
             return (0, r.jsx)(
