@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
-var o = n(255367);
+var r = n(255367);
 n(73800);
-var r = n(120356),
-    l = n.n(r),
+var o = n(120356),
+    l = n.n(o),
     i = n(793030),
     s = n(481060),
     a = n(821795),
@@ -13,36 +13,36 @@ var r = n(120356),
     f = n(397419),
     m = n(395921);
 function g(e) {
-    let { selectedEffectId: t, setSelectedEffectId: n, configs: r, className: g } = e;
-    return (0, o.jsxs)('div', {
+    let { selectedEffectId: t, setSelectedEffectId: n, configs: o, className: g } = e;
+    return (0, r.jsxs)('div', {
         className: g,
         children: [
-            (0, o.jsxs)(i.X6, {
+            (0, r.jsxs)(i.X6, {
                 variant: 'heading-md/semibold',
                 className: f.selectorHeading,
                 children: [
                     p.intl.string(u.default['1wilMz']),
-                    (0, o.jsx)(s.SrA, {
+                    (0, r.jsx)(s.SrA, {
                         size: 'xs',
                         color: s.TVs.colors.TEXT_DEFAULT
                     })
                 ]
             }),
-            (0, o.jsx)(i.Kq, {
+            (0, r.jsx)(i.Kq, {
                 direction: 'horizontal',
                 align: 'center',
                 wrap: !0,
                 gap: 8,
                 children: d.mH.map((e) => {
-                    let i = r[e],
+                    let i = o[e],
                         d = e === t,
                         u = i.previewStyles;
-                    return (0, o.jsx)(
+                    return (0, r.jsx)(
                         s.P3F,
                         {
                             className: l()(m.effectContainer, { [m.selected]: d }),
                             onClick: () => n(e),
-                            children: (0, o.jsx)(c.Z, {
+                            children: (0, r.jsx)(c.Z, {
                                 userName: i.name,
                                 effectDisplayType: a.F.STATIC,
                                 displayNameStyles: u,

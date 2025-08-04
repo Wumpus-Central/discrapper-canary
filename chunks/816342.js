@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => b });
 var r = n(255367),
     a = n(73800),
     i = n(442837),
@@ -11,25 +11,25 @@ var r = n(255367),
     m = n(699516),
     p = n(5192),
     _ = n(981631),
-    b = n(388032);
-let g = (e) => {
-    let { user: t, channelId: n, reportId: g, reportType: x } = e,
+    g = n(388032);
+let b = (e) => {
+    let { user: t, channelId: n, reportId: b, reportType: x } = e,
         h = (0, i.e7)([m.Z], () => m.Z.isBlocked(t.id), [t.id]),
         f = (0, i.e7)([u.Z], () => u.Z.getChannel(n), [n]),
         v = a.useMemo(() => p.ZP.getName(null == f ? void 0 : f.guild_id, null == f ? void 0 : f.id, t), [f, t]),
         j = a.useCallback(() => {
             (s.ZP.trackWithMetadata(_.rMx.IAR_BLOCK_USER_BUTTON_CLICKED, {
                 other_user_id: t.id,
-                report_id: g
+                report_id: b
             }),
                 l.Z.blockUser(t.id, { location: 'ReportMenuBlockUser-iOS' }).then(() => {
                     c.Z.showBlockSuccessToast(t.id, n);
                 }));
-        }, [t, g, n]);
+        }, [t, b, n]);
     return (0, r.jsx)(d.ZP, {
-        title: b.intl.formatToPlainString(b.t['Q1o/f3'], { username: v }),
-        description: b.intl.string(b.t.G08MKi),
-        buttonText: h ? b.intl.string(b.t.ot2tSk) : b.intl.string(b.t['l+7PZW']),
+        title: g.intl.formatToPlainString(g.t['Q1o/f3'], { username: v }),
+        description: g.intl.string(g.t.G08MKi),
+        buttonText: h ? g.intl.string(g.t.ot2tSk) : g.intl.string(g.t['l+7PZW']),
         buttonDisabled: h,
         onButtonPress: j,
         buttonColor: 'application' === x.name && h ? o.zx.Colors.WHITE : o.zx.Colors.RED,

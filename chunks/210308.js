@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(981631),
     j = n(921944),
     C = n(46140),
-    O = n(388032),
-    E = n(669018);
+    E = n(388032),
+    O = n(669018);
 function v(e) {
     let { groupName: t, targetElementRef: n } = e,
         r = (0, f.Z)(),
@@ -65,11 +65,11 @@ function S(e) {
         }, [s, a]),
         f = x.vK[n];
     return (0, i.jsxs)('div', {
-        className: E.contents,
+        className: O.contents,
         children: [
             (0, i.jsx)(o.M0o, {
-                className: E.closeButton,
-                tooltip: O.intl.string(O.t.cpT0Cg),
+                className: O.closeButton,
+                tooltip: E.intl.string(E.t.cpT0Cg),
                 color: o.YX$.TERTIARY,
                 size: o.tT7.SIZE_24,
                 icon: (0, i.jsx)(o.Dio, {
@@ -81,26 +81,26 @@ function S(e) {
             null != u &&
                 (0, i.jsx)('img', {
                     src: u,
-                    alt: O.intl.string(f.nameUnformatted),
-                    className: E.badgeImage
+                    alt: E.intl.string(f.nameUnformatted),
+                    className: O.badgeImage
                 }),
             (0, i.jsx)(o.X6q, {
                 variant: 'heading-md/extrabold',
-                children: O.intl.string(O.t.VoDxsb)
+                children: E.intl.string(E.t.VoDxsb)
             }),
             (0, i.jsx)(o.Text, {
                 variant: 'text-sm/medium',
-                className: E.subtitle,
-                children: O.intl.formatToPlainString(O.t.ewkaVV, { timeMilestone: null == (t = (0, g.q)(f.id, f.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase() })
+                className: O.subtitle,
+                children: E.intl.formatToPlainString(E.t.ewkaVV, { timeMilestone: null == (t = (0, g.q)(f.id, f.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase() })
             }),
             (0, i.jsx)(l.zx, {
-                className: E.checkItOutButton,
+                className: O.checkItOutButton,
                 color: l.Tt.WHITE,
                 size: l.Ph.SMALL,
                 onClick: m,
-                children: O.intl.string(O.t.RzWDqa)
+                children: E.intl.string(E.t.RzWDqa)
             }),
-            (0, i.jsx)('div', { className: E.pointer })
+            (0, i.jsx)('div', { className: O.pointer })
         ]
     });
 }

@@ -11,29 +11,29 @@ var r = n(255367),
     m = n(592125),
     p = n(430824),
     _ = n(496675),
-    b = n(944486),
-    g = n(981631),
+    g = n(944486),
+    b = n(981631),
     x = n(388032);
 let h = (e) => {
     let { application: t, reportId: n } = e,
         [h, f] = a.useState(!1),
         [v, j] = a.useState(!1),
-        C = (0, i.e7)([b.Z, m.Z], () => {
+        y = (0, i.e7)([g.Z, m.Z], () => {
             var e;
-            return null == (e = m.Z.getChannel(b.Z.getChannelId())) ? void 0 : e.guild_id;
+            return null == (e = m.Z.getChannel(g.Z.getChannelId())) ? void 0 : e.guild_id;
         }),
-        [y, I] = a.useState(null);
+        [C, I] = a.useState(null);
     (a.useEffect(() => {
-        null != y && (f(!0), j(!0));
-    }, [y]),
+        null != C && (f(!0), j(!0));
+    }, [C]),
         a.useEffect(() => {
-            if (null == C) return;
+            if (null == y) return;
             let e = !1;
             return (
                 (async () => {
                     let n = null;
                     try {
-                        n = await (0, d.i)(C);
+                        n = await (0, d.i)(y);
                     } catch (e) {}
                     if (e || null == n) return;
                     let r = n.find((e) => {
@@ -46,31 +46,31 @@ let h = (e) => {
                     e = !0;
                 }
             );
-        }, [C, t.id]));
+        }, [y, t.id]));
     let O = a.useCallback(() => {
             (j(!1),
-                s.ZP.trackWithMetadata(g.rMx.IAR_REMOVE_APP_BUTTON_CLICKED, {
-                    guild_id: C,
+                s.ZP.trackWithMetadata(b.rMx.IAR_REMOVE_APP_BUTTON_CLICKED, {
+                    guild_id: y,
                     application_id: t.id,
                     report_id: n
                 }),
-                null != C &&
-                    null != y &&
-                    c.Z.disableIntegration(C, y.id).catch(() => {
+                null != y &&
+                    null != C &&
+                    c.Z.disableIntegration(y, C.id).catch(() => {
                         l.Z.show({
                             title: x.intl.string(x.t.wYqMmJ),
                             body: x.intl.string(x.t.A4Mnsr)
                         });
                     }));
-        }, [t.id, C, y, n]),
+        }, [t.id, y, C, n]),
         T = (0, i.e7)([_.Z, p.Z], () => {
-            let e = p.Z.getGuild(C);
+            let e = p.Z.getGuild(y);
             if (null == e) return !1;
-            let n = _.Z.can(g.Plq.MANAGE_GUILD, e),
-                r = null == t.bot || _.Z.canManageUser(g.Plq.MANAGE_GUILD, t.bot.id, e);
+            let n = _.Z.can(b.Plq.MANAGE_GUILD, e),
+                r = null == t.bot || _.Z.canManageUser(b.Plq.MANAGE_GUILD, t.bot.id, e);
             return n && r;
         });
-    return null != t && null != C && h && T
+    return null != t && null != y && h && T
         ? (0, r.jsx)(u.ZP, {
               title: x.intl.string(x.t['WV/CsL']),
               description: x.intl.string(x.t['FlcC+/']),

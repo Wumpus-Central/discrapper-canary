@@ -52,8 +52,8 @@ function j() {
             platformZoom: u.Z.zoom
         })),
         [j, C] = r.useState('upright'),
-        O = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
-        E = new Map([
+        E = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
+        O = new Map([
             ['normal', 400],
             ['medium', 500],
             ['semibold', 600],
@@ -191,7 +191,7 @@ function j() {
                     className: x.textGrid,
                     children: [
                         (0, i.jsx)('div', {}),
-                        O.map((e) =>
+                        E.map((e) =>
                             (0, i.jsx)(
                                 'div',
                                 {
@@ -229,7 +229,7 @@ function j() {
                                             },
                                             e
                                         ),
-                                        O.map((t) => {
+                                        E.map((t) => {
                                             var n;
                                             let r = null != (n = 'custom' === I ? T : I) ? n : '';
                                             return (0, i.jsx)(
@@ -241,7 +241,7 @@ function j() {
                                                         className: a()(x.text, { [x.breakAnywhere]: !r.includes(' ') }),
                                                         style: {
                                                             fontSize: e,
-                                                            fontWeight: E.get(t)
+                                                            fontWeight: O.get(t)
                                                         },
                                                         children: [
                                                             (0, i.jsx)('p', { children: r }),

@@ -1,5 +1,5 @@
 (n.d(t, {
-    F: () => E,
+    F: () => O,
     I: () => v
 }),
     n(953529),
@@ -67,12 +67,12 @@ let x = [
 function C(e, t) {
     return e.getFullYear() === t.getFullYear() && e.getMonth() === t.getMonth() && e.getDate() === t.getDate();
 }
-function O(e) {
+function E(e) {
     let { status: t, currentStatus: n, description: s } = e,
         { showTempStatusOptions: c, hasDefaultClickOption: d, hasButtonStyling: u } = o.Y.useExperiment({ location: 'UserProfileAccountPopout' }),
         f = c && t !== h.Skl.ONLINE,
-        [C, O] = r.useState(void 0),
-        E = void 0 !== C && t === n,
+        [C, E] = r.useState(void 0),
+        O = void 0 !== C && t === n,
         v = (0, i.jsx)(i.Fragment, {
             children: x.map((e) => {
                 let { duration: r, label: s } = e;
@@ -104,7 +104,7 @@ function O(e) {
                         id: ''.concat(t, '-').concat(r),
                         onClick: (e) => {
                             (e.stopPropagation(),
-                                O(r),
+                                E(r),
                                 (0, g.Z)({
                                     nextStatus: t,
                                     prevStatus: n,
@@ -146,12 +146,12 @@ function O(e) {
                             className: b.description,
                             children: s
                         }),
-                    f && u && E ? S : void 0
+                    f && u && O ? S : void 0
                 ]
             });
         },
         action: () => {
-            (O(f ? m.Z.Millis.DAY : void 0),
+            (E(f ? m.Z.Millis.DAY : void 0),
                 (0, g.Z)({
                     nextStatus: t,
                     prevStatus: n,
@@ -162,7 +162,7 @@ function O(e) {
         children: f && !u ? v : void 0
     });
 }
-function E(e) {
+function O(e) {
     if (null == e || '0' === e) return;
     let t = new Date(Number(e)),
         n = C(t, new Date()),
@@ -184,7 +184,7 @@ function v(e) {
         m = u.fv.useSetting(),
         p = e === h.Skl.DND,
         g = (i) => {
-            let r = E(n);
+            let r = O(n);
             if (e === i && null != r) return r;
             switch (i) {
                 case h.Skl.DND:
@@ -212,21 +212,21 @@ function v(e) {
                 );
             })
         }),
-        C = O({
+        C = E({
             status: h.Skl.ONLINE,
             currentStatus: e
         }),
-        v = O({
+        v = E({
             status: h.Skl.IDLE,
             currentStatus: e,
             description: g(h.Skl.IDLE)
         }),
-        S = O({
+        S = E({
             status: h.Skl.DND,
             currentStatus: e,
             description: g(h.Skl.DND)
         }),
-        T = O({
+        T = E({
             status: h.Skl.INVISIBLE,
             currentStatus: e,
             description: g(h.Skl.INVISIBLE)

@@ -11,22 +11,22 @@ var r = n(255367),
     m = n(267128),
     p = n(25015),
     _ = n(695346),
-    b = n(592125),
-    g = n(217702),
+    g = n(592125),
+    b = n(217702),
     x = n(388032),
     h = n(782544);
 let f = (e) => {
     let { message: t } = e,
         n = (0, s.ZP)(t),
-        f = (0, i.e7)([b.Z], () => b.Z.getChannel(t.channel_id)),
+        f = (0, i.e7)([g.Z], () => g.Z.getChannel(t.channel_id)),
         v = a.useMemo(() => (0, l.Z)(t), [t]),
         { content: j } = (0, p.Z)(v, { hideSimpleEmbedContent: !1 }),
-        C = _.jU.useSetting(),
-        y = a.useCallback(() => {
+        y = _.jU.useSetting(),
+        C = a.useCallback(() => {
             let { leadingIcon: e, trailingIcon: n } = (0, m.f)(t, j, !1, !1, '', {
                 leadingIconClass: h.attachmentIcon,
                 trailingIconClass: h.attachmentIcon,
-                iconSize: g.WW
+                iconSize: b.WW
             });
             return (0, r.jsxs)('div', {
                 className: h.contentContainer,
@@ -35,12 +35,12 @@ let f = (e) => {
                     (0, r.jsx)(d.ZP, {
                         message: t,
                         content: j,
-                        compact: C
+                        compact: y
                     }),
                     n
                 ]
             });
-        }, [t, j, C]);
+        }, [t, j, y]);
     return null == f
         ? null
         : (0, r.jsxs)('div', {
@@ -54,7 +54,7 @@ let f = (e) => {
                   (0, r.jsx)(o.Ttm, {
                       className: h.messagePreviewContainer,
                       children: (0, r.jsx)(c.Z, {
-                          childrenMessageContent: y(),
+                          childrenMessageContent: C(),
                           childrenHeader: (0, r.jsx)(u.ZP, {
                               message: t,
                               channel: f,

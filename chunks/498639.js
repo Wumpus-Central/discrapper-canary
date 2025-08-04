@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(584825),
     j = n(305342),
     C = n(333867),
-    O = n(963249),
-    E = n(87484),
+    E = n(963249),
+    O = n(87484),
     v = n(736519),
     S = n(365943),
     T = n(43747),
@@ -201,7 +201,7 @@ let k = function () {
                                     variant: 'primary',
                                     text: 'Select Plan',
                                     onClick: () =>
-                                        (0, O.Z)({
+                                        (0, E.Z)({
                                             subscriptionTier: n,
                                             analyticsLocations: Y
                                         })
@@ -478,7 +478,7 @@ let k = function () {
                                     variant: 'primary',
                                     text: 'Open Standard Payment Modal for SKU',
                                     onClick: () =>
-                                        (0, E.Z)({
+                                        (0, O.Z)({
                                             applicationId: ea,
                                             skuId: eo,
                                             analyticsLocations: Y

@@ -1,6 +1,6 @@
 (n.d(t, { Z: () => N }), n(388685));
-var o = n(255367),
-    r = n(73800),
+var r = n(255367),
+    o = n(73800),
     l = n(120356),
     i = n.n(l),
     s = n(481060),
@@ -18,30 +18,30 @@ var o = n(255367),
     x = n(63063),
     y = n(981631),
     O = n(228168),
-    C = n(698282),
+    v = n(698282),
     S = n(388032),
-    v = n(454507);
+    C = n(454507);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            o = Object.keys(n);
+            r = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (o = o.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            o.forEach(function (t) {
-                var o;
-                ((o = n[t]),
+            r.forEach(function (t) {
+                var r;
+                ((r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: o,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = o));
+                        : (e[t] = r));
             }));
     }
     return e;
@@ -54,8 +54,8 @@ function P(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var o = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, o);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -77,7 +77,7 @@ function N(e) {
         ),
         E = (0, a.ZP)(),
         D = (0, s.wjy)(E),
-        [R, I] = (0, r.useState)(D),
+        [R, I] = (0, o.useState)(D),
         A = (0, g.ZP)(t.id, null),
         { bannerSrc: L } = (0, h.Z)({
             displayProfile: A,
@@ -87,49 +87,49 @@ function N(e) {
         B = R ? y.BRd.DARK : y.BRd.LIGHT;
     return (
         ((D && R) || (!D && !R)) && (B = E),
-        (0, o.jsxs)('div', {
-            className: v.previewSection,
+        (0, r.jsxs)('div', {
+            className: C.previewSection,
             children: [
-                (0, o.jsx)(s.xBx, {
+                (0, r.jsx)(s.xBx, {
                     'data-migration-pending': !0,
                     separator: !1,
-                    className: v.sectionHeader,
-                    children: (0, o.jsx)(s.olH, {
+                    className: C.sectionHeader,
+                    children: (0, r.jsx)(s.olH, {
                         'data-migration-pending': !0,
                         onClick: T,
-                        innerClassName: v.closeButton
+                        innerClassName: C.closeButton
                     })
                 }),
                 null != L &&
-                    (0, o.jsx)(b.Z, {
+                    (0, r.jsx)(b.Z, {
                         user: w,
                         displayProfile: A,
                         themeType: O.lY.MODAL_V2,
-                        className: v.backgroundThemeContainer,
+                        className: C.backgroundThemeContainer,
                         forceUserTheme: !0,
-                        children: (0, o.jsx)('div', {
-                            className: v.bannerBackground,
+                        children: (0, r.jsx)('div', {
+                            className: C.bannerBackground,
                             style: { backgroundImage: 'url('.concat(L, ')') }
                         })
                     }),
-                (0, o.jsx)(s.f6W, {
+                (0, r.jsx)(s.f6W, {
                     theme: B,
                     children: (e) =>
-                        (0, o.jsxs)('div', {
-                            className: i()(v.previewCards, e),
+                        (0, r.jsxs)('div', {
+                            className: i()(C.previewCards, e),
                             inert: !0,
                             children: [
-                                (0, o.jsx)(m.Z, {
+                                (0, r.jsx)(m.Z, {
                                     user: w,
                                     canUsePremiumCustomization: !0,
                                     pendingAvatar: void 0,
                                     disabledInputs: !0,
                                     hideCustomStatus: !0,
                                     hideExampleButton: !0,
-                                    containerClassName: v.profile,
+                                    containerClassName: C.profile,
                                     interactive: !1
                                 }),
-                                (0, o.jsx)(f.Z, {
+                                (0, r.jsx)(f.Z, {
                                     author: (0, p.ij)(w, null),
                                     message: (0, d.e5)(
                                         P(
@@ -137,7 +137,7 @@ function N(e) {
                                                 {},
                                                 (0, u.ZP)({
                                                     channelId: '1337',
-                                                    content: S.intl.string(C.default.h5Cuen)
+                                                    content: S.intl.string(v.default.h5Cuen)
                                                 })
                                             ),
                                             {
@@ -149,26 +149,26 @@ function N(e) {
                                     isGroupStart: !0,
                                     hideSimpleEmbedContent: !0,
                                     hideGuildTag: !0,
-                                    className: v.chatMessage
+                                    className: C.chatMessage
                                 }),
-                                (0, o.jsx)(c.Z, {
+                                (0, r.jsx)(c.Z, {
                                     user: w,
                                     nameplate: null,
                                     nameplateData: w.nameplate,
-                                    className: v.nameplate
+                                    className: C.nameplate
                                 })
                             ]
                         })
                 }),
-                (0, o.jsxs)('div', {
-                    className: v.themeToggleSection,
+                (0, r.jsxs)('div', {
+                    className: C.themeToggleSection,
                     children: [
-                        (0, o.jsx)(s.Text, {
+                        (0, r.jsx)(s.Text, {
                             variant: 'text-xs/normal',
                             color: 'text-muted',
-                            children: S.intl.format(C.default.prQba2, { helpArticleLink: x.Z.getArticleURL(y.BhN.DISPLAY_NAME_STYLES) })
+                            children: S.intl.format(v.default.prQba2, { helpArticleLink: x.Z.getArticleURL(y.BhN.DISPLAY_NAME_STYLES) })
                         }),
-                        (0, o.jsx)(k, {
+                        (0, r.jsx)(k, {
                             darkPreview: R,
                             onToggleTheme: (e) => I(e === y.BRd.DARK)
                         })
@@ -180,9 +180,9 @@ function N(e) {
 }
 function k(e) {
     let { darkPreview: t, onToggleTheme: n } = e;
-    return (0, o.jsx)(s.sY7, {
-        className: v.themeToggleControl,
-        optionClassName: v.themeToggleOption,
+    return (0, r.jsx)(s.sY7, {
+        className: C.themeToggleControl,
+        optionClassName: C.themeToggleOption,
         options: [
             {
                 name: '',

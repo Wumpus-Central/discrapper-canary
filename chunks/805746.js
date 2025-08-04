@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => b }), n(388685));
+(n.d(t, { Z: () => g }), n(388685));
 var r = n(255367),
     a = n(73800),
     i = n(442837),
@@ -11,12 +11,12 @@ var r = n(255367),
     m = n(881998),
     p = n(981631),
     _ = n(388032);
-let b = (e) => {
+let g = (e) => {
     let { application: t, reportId: n } = e,
-        [b, g] = a.useState(!1),
+        [g, b] = a.useState(!1),
         x = (0, i.e7)([m.Z], () => m.Z.getNewestTokenForApplication(t.id));
     a.useEffect(() => {
-        null != x && g(!0);
+        null != x && b(!0);
     }, [x]);
     let h = a.useRef(!1);
     a.useEffect(() => {
@@ -25,7 +25,7 @@ let b = (e) => {
     let f = (0, i.e7)([s.ZP], () => s.ZP.getSelfEmbeddedActivities()),
         v = a.useCallback(() => {
             if (
-                (g(!1),
+                (b(!1),
                 d.ZP.trackWithMetadata(p.rMx.IAR_DEAUTHORIZE_APP_BUTTON_CLICKED, {
                     application_id: t.id,
                     report_id: n
@@ -47,10 +47,10 @@ let b = (e) => {
         : (0, r.jsx)(u.ZP, {
               title: _.intl.string(_.t.ygG62N),
               description: _.intl.string(_.t.S51EKi),
-              buttonText: b ? _.intl.string(_.t.xXpoGR) : _.intl.string(_.t.JsiUnJ),
-              buttonDisabled: !b,
-              buttonColor: b ? o.zx.Colors.RED : o.zx.Colors.WHITE,
-              buttonLook: b ? o.zx.Looks.FILLED : o.zx.Looks.LINK,
+              buttonText: g ? _.intl.string(_.t.xXpoGR) : _.intl.string(_.t.JsiUnJ),
+              buttonDisabled: !g,
+              buttonColor: g ? o.zx.Colors.RED : o.zx.Colors.WHITE,
+              buttonLook: g ? o.zx.Looks.FILLED : o.zx.Looks.LINK,
               onButtonPress: v
           });
 };

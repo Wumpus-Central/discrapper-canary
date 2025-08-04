@@ -1,6 +1,6 @@
 n.d(t, {
     X: () => b,
-    Z: () => q
+    Z: () => X
 });
 var r,
     i = n(442837),
@@ -108,6 +108,7 @@ let y = {
         systemPrefersContrast: 'no-preference',
         alwaysShowLinkDecorations: !1,
         roleStyle: 'username',
+        displayNameStylesEnabled: !0,
         submitButtonEnabled: !1,
         syncProfileThemeWithUserTheme: !1
     },
@@ -165,54 +166,57 @@ function L() {
 function x(e) {
     O.roleStyle = e.roleStyle;
 }
-function M() {
-    (O = p({}, O)).submitButtonEnabled = !O.submitButtonEnabled;
+function M(e) {
+    O.displayNameStylesEnabled = e.enabled;
 }
 function k() {
+    (O = p({}, O)).submitButtonEnabled = !O.submitButtonEnabled;
+}
+function j() {
     (O = p({}, O)).syncProfileThemeWithUserTheme = !O.syncProfileThemeWithUserTheme;
 }
-function j(e) {
+function U(e) {
     if (O.systemPrefersReducedMotion === e.systemPrefersReducedMotion) return !1;
     O = m(p({}, O), { systemPrefersReducedMotion: e.systemPrefersReducedMotion });
 }
-function U(e) {
+function G(e) {
     if (O.systemPrefersCrossfades === e.systemPrefersCrossfades) return !1;
     O = m(p({}, O), { systemPrefersCrossfades: e.systemPrefersCrossfades });
 }
-function G(e) {
+function B(e) {
     if (O.prefersReducedMotion === e.prefersReducedMotion) return !1;
     O = m(p({}, O), { prefersReducedMotion: e.prefersReducedMotion });
 }
-function B(e) {
+function V(e) {
     if (O.systemPrefersContrast === e.systemPrefersContrast) return !1;
     O = m(p({}, O), { systemPrefersContrast: e.systemPrefersContrast });
 }
-function V(e) {
+function F(e) {
     O = m(p({}, O), { alwaysShowLinkDecorations: e.alwaysShowLinkDecorations });
 }
-function F(e) {
+function Z(e) {
     var t;
     return ((O = m(p({}, O), { systemForcedColors: null != (t = e.systemForcedColors) ? t : 'none' })), !0);
 }
-function Z() {
+function H() {
     O.forcedColorsModalSeen = !0;
 }
-function H() {
+function Y() {
     O = m(p({}, O), { keyboardNavigationExplainerModalSeen: !0 });
 }
-function Y(e) {
+function W(e) {
     let { messageGroupSpacing: t } = e;
     O = m(p({}, O), { messageGroupSpacing: t });
 }
-function W(e) {
+function K(e) {
     let { contrast: t } = e;
     O = m(p({}, O), { contrast: t });
 }
-function K(e) {
+function z(e) {
     let { contrastMode: t } = e;
     O = m(p({}, O), { contrastMode: t });
 }
-class z extends (r = i.ZP.DeviceSettingsStore) {
+class q extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
         (this.waitFor(c.Z), isNaN((O = p({}, y, null != e ? e : null)).fontSize) && (O.fontSize = d.yqN.FONT_SIZE_DEFAULT), 0 > _.fP.indexOf(null != O.messageGroupSpacing ? O.messageGroupSpacing : -1) && (O.messageGroupSpacing = null));
     }
@@ -320,6 +324,9 @@ class z extends (r = i.ZP.DeviceSettingsStore) {
     get roleStyle() {
         return O.roleStyle;
     }
+    get displayNameStylesEnabled() {
+        return O.displayNameStylesEnabled;
+    }
     get isHighContrastModeEnabled() {
         return 'high' === O.contrastMode;
     }
@@ -327,9 +334,9 @@ class z extends (r = i.ZP.DeviceSettingsStore) {
         return O;
     }
 }
-(f(z, 'displayName', 'AccessibilityStore'),
-    f(z, 'persistKey', 'AccessibilityStore'),
-    f(z, 'migrations', [
+(f(q, 'displayName', 'AccessibilityStore'),
+    f(q, 'persistKey', 'AccessibilityStore'),
+    f(q, 'migrations', [
         () => {
             let e = 'a11yFontScale',
                 t = 'a11yZoom',
@@ -396,7 +403,7 @@ class z extends (r = i.ZP.DeviceSettingsStore) {
             return e;
         }
     ]));
-let q = new z(s.Z, {
+let X = new q(s.Z, {
     ACCESSIBILITY_SET_FONT_SIZE: T,
     ACCESSIBILITY_SET_ZOOM: S,
     ACCESSIBILITY_RESET_TO_DEFAULT: A,
@@ -406,19 +413,20 @@ let q = new z(s.Z, {
     ACCESSIBILITY_LOW_CONTRAST_TOGGLE: P,
     ACCESSIBILITY_SET_SATURATION: D,
     ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: L,
-    ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: F,
-    ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: B,
-    ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: j,
-    ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: U,
-    ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: G,
+    ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: Z,
+    ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: V,
+    ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: U,
+    ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: G,
+    ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: B,
     ACCESSIBILITY_SET_SYNC_FORCED_COLORS: w,
-    ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: V,
+    ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: F,
     ACCESSIBILITY_SET_ROLE_STYLE: x,
-    ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: Z,
-    KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: H,
-    ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: Y,
-    ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: M,
-    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: k,
-    ACCESSIBILITY_SET_CONTRAST: W,
-    ACCESSIBILITY_SET_CONTRAST_MODE: K
+    ACCESSIBILITY_SET_DISPLAY_NAME_STYLES_ENABLED: M,
+    ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: H,
+    KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: Y,
+    ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: W,
+    ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: k,
+    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: j,
+    ACCESSIBILITY_SET_CONTRAST: K,
+    ACCESSIBILITY_SET_CONTRAST_MODE: z
 });

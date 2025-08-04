@@ -12,7 +12,7 @@ var r = n(255367),
     p = n(388032);
 let _ = (e) => {
     let { user: t, channelId: n, reportId: _ } = e,
-        { isIgnored: b, isBlocked: g } = (0, i.cj)(
+        { isIgnored: g, isBlocked: b } = (0, i.cj)(
             [d.Z],
             () => ({
                 isIgnored: d.Z.isIgnored(t.id),
@@ -29,7 +29,7 @@ let _ = (e) => {
             }),
                 o.Z.ignoreUser(t.id, 'web_iar_ignore_user_element', n));
         }, [t, _, n]),
-        v = a.useMemo(() => b || g, [b, g]);
+        v = a.useMemo(() => g || b, [g, b]);
     return (0, r.jsx)(s.ZP, {
         title: p.intl.formatToPlainString(p.t.U3yyFh, { username: h }),
         description: p.intl.string(p.t.naWE6e),

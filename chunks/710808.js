@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(12647),
     j = n(569550),
     C = n(726985),
-    O = n(981631),
-    E = n(65154),
+    E = n(981631),
+    O = n(65154),
     v = n(388032),
     S = n(20493);
 function T(e) {
@@ -101,14 +101,14 @@ function A(e) {
             aecDumpSupported: b.Z.isAecDumpSupported(),
             debugLogging: b.Z.getDebugLogging(),
             aecDumpEnabled: b.Z.getAecDump(),
-            supportsConnectionReplay: b.Z.supports(E.AN.CONNECTION_REPLAY)
+            supportsConnectionReplay: b.Z.supports(O.AN.CONNECTION_REPLAY)
         })),
         R = (0, s.e7)([f.default], () => f.default.isStreamInfoOverlayEnabled),
         D = (0, s.e7)([x.ZP], () => x.ZP.shouldRecordNextConnection());
     async function Z() {
         u(!0);
         try {
-            (await b.Z.getMediaEngine().writeAudioDebugState(), await _.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }), await (0, p.E)(O.GU0.RTC));
+            (await b.Z.getMediaEngine().writeAudioDebugState(), await _.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }), await (0, p.E)(E.GU0.RTC));
             let e = v.intl.string(v.t['fKBB8/']),
                 t = v.intl.string(v.t.BvyxEx);
             (0, l.h7j)((n) =>

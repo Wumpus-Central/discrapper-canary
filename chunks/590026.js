@@ -22,8 +22,25 @@ function m(e) {
         (i = r.useMemo(() => (null == i ? void 0 : i.filter((e) => f.has(e.content_type))), [i])));
     let { entries: m, filteredIds: g } = (0, u.Z)(i);
     i = m;
-    let b = (0, d.i)(n);
-    i = r.useMemo(() => (null == i ? b : [...b, ...i]), [i, b]);
+    let b = (0, d.im)(n);
+    i = r.useMemo(() => {
+        if (null == i) return b;
+        let e = new Set();
+        for (let t of b) {
+            let n = ''.concat(t.author_id, ':').concat(t.extra.application_id);
+            e.add(n);
+        }
+        return [
+            ...b,
+            ...i.filter((t) => {
+                if ('application_id' in t.extra) {
+                    let n = ''.concat(t.author_id, ':').concat(t.extra.application_id);
+                    return !e.has(n);
+                }
+                return !0;
+            })
+        ];
+    }, [i, b]);
     let { entriesWithLeaderboard: _, hasLeaderboardEntry: y } = (0, a.Z)({
         entries: i,
         channelId: e

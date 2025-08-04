@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(440051),
     j = n(734934),
     C = n(300284),
-    O = n(680295),
-    E = n(785717),
+    E = n(680295),
+    O = n(785717),
     v = n(209698),
     S = n(687158),
     T = n(892001),
@@ -85,7 +85,7 @@ function ea(e) {
         ec = __OVERLAY__,
         ed = (0, S.ZP)(t.id),
         { analyticsLocations: eu } = (0, p.ZP)(m.Z.USER_PROFILE_ACCOUNT_POPOUT),
-        em = (0, E.ZB)({
+        em = (0, O.ZB)({
             layout: 'ACCOUNT_POPOUT',
             userId: t.id
         }),
@@ -102,8 +102,8 @@ function ea(e) {
         e_ = (0, a.e7)([H.Z], () => H.Z.hidePersonalInformation),
         ej = (0, j.p)(),
         eC = V.Sb.useSetting(),
-        eO = (0, Q.I)(eh),
-        eE = (0, q.g)(n),
+        eE = (0, Q.I)(eh),
+        eO = (0, q.g)(n),
         ev = (0, C.Z)({ analyticsLocations: eu }),
         eS = (0, Y.I5)(t),
         eT = (0, h.p)({ location: 'UserProfileAccountPopout' }),
@@ -144,7 +144,7 @@ function ea(e) {
         eU = (null == ed ? void 0 : ed.profileEffectId) != null && !ew.current;
     return (0, i.jsx)(p.Gt, {
         value: eu,
-        children: (0, i.jsx)(E.Mt, {
+        children: (0, i.jsx)(O.Mt, {
             value: em,
             openedAt: eo,
             fetchStartedAt: null == ed ? void 0 : ed.fetchStartedAt,
@@ -295,7 +295,7 @@ function ea(e) {
                                                                           className: ei.statusPickerModalMenu,
                                                                           'aria-label': en.intl.string(en.t.E13trK),
                                                                           onClose: t,
-                                                                          children: eO
+                                                                          children: eE
                                                                       });
                                                                   },
                                                             onClick: s.tq
@@ -342,7 +342,7 @@ function ea(e) {
                                                                                                           hideScroller: !0,
                                                                                                           onClose: r,
                                                                                                           onSelect: void 0,
-                                                                                                          children: eO
+                                                                                                          children: eE
                                                                                                       })
                                                                                                   }),
                                                                                               Object.getOwnPropertyDescriptors
@@ -387,7 +387,7 @@ function ea(e) {
                                                                     navId: 'switch-accounts-submenu',
                                                                     'aria-label': en.intl.string(en.t.wFhVqK),
                                                                     onClose: t,
-                                                                    children: eE
+                                                                    children: eO
                                                                 });
                                                             }
                                                         }),
@@ -416,7 +416,7 @@ function ea(e) {
                                 ]
                             }),
                             eU &&
-                                (0, i.jsx)(O.Z, {
+                                (0, i.jsx)(E.Z, {
                                     profileEffectId: null == ed ? void 0 : ed.profileEffectId,
                                     isHovering: eg
                                 })

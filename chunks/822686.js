@@ -12,21 +12,21 @@ var r = n(255367),
 let p = (e) => {
     let { message: t, reportId: n } = e,
         [p, _] = a.useState(!1),
-        b = a.useCallback(() => {
+        g = a.useCallback(() => {
             (_(!0), l.ZP.trackWithMetadata(u.rMx.IAR_DELETE_MESSAGE_BUTTON_CLICKED, { report_id: n }), o.Z.deleteMessage(t.getChannelId(), t.id));
         }, [t, n]),
-        g = a.useMemo(() => {
+        b = a.useMemo(() => {
             let e = c.Z.getChannel(t.getChannelId());
             return null != e && e.type !== u.d4z.DM && e.type !== u.d4z.GROUP_DM && d.Z.canWithPartialContext(u.Plq.MANAGE_MESSAGES, { channelId: e.id });
         }, [t]);
-    return null != t && g
+    return null != t && b
         ? (0, r.jsx)(s.ZP, {
               title: m.intl.string(m.t.c9BHLy),
               description: m.intl.string(m.t.dK8S09),
               buttonText: p ? m.intl.string(m.t.f3pnLC) : m.intl.string(m.t.ch2xbm),
               buttonDisabled: p,
               buttonColor: i.zx.Colors.RED,
-              onButtonPress: b
+              onButtonPress: g
           })
         : null;
 };

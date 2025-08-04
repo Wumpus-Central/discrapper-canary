@@ -21,8 +21,8 @@ var i = n(255367),
     _ = n(104494),
     j = n(639119),
     C = n(767714),
-    O = n(165583),
-    E = n(504983),
+    E = n(165583),
+    O = n(504983),
     v = n(984802),
     S = n(626135),
     T = n(210887),
@@ -61,10 +61,10 @@ let R = () => {
                         children: [
                             (0, i.jsx)(f.ZP.Basic, { className: P.basicThemeSelectors }),
                             (0, i.jsx)(Z, {}),
-                            (0, i.jsxs)(E.Z, {
+                            (0, i.jsxs)(O.Z, {
                                 className: P.featureBorder,
                                 isShown: a,
-                                type: E.Y.PREMIUM,
+                                type: O.Y.PREMIUM,
                                 children: [
                                     (0, i.jsx)(f.ZP.Gradient, {
                                         disabled: a,
@@ -99,7 +99,7 @@ let R = () => {
                                                     children: A.intl.string(A.t['E+COuL'])
                                                 }),
                                                 (0, i.jsx)('div', { className: P.premiumTier2Divider }),
-                                                (0, i.jsx)(O.ZP, {
+                                                (0, i.jsx)(E.ZP, {
                                                     type: y.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
                                                     subscriptionTier: y.Si.TIER_2
                                                 })

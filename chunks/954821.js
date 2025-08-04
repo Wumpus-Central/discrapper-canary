@@ -35,9 +35,9 @@ let _ = (e) => {
     j = (e) => {
         var t;
         let { transitionState: n, groupListing: r, guildId: s, listing: c, subscription: j, onClose: C } = e,
-            O = (0, m.Dt)(),
-            E = (0, g.YB)(s),
-            v = (null == E || null == (t = E.cover_image_asset) ? void 0 : t.application_id) != null ? (0, p._W)(E.cover_image_asset.application_id, E.cover_image_asset, 440) : void 0,
+            E = (0, m.Dt)(),
+            O = (0, g.YB)(s),
+            v = (null == O || null == (t = O.cover_image_asset) ? void 0 : t.application_id) != null ? (0, p._W)(O.cover_image_asset.application_id, O.cover_image_asset, 440) : void 0,
             { analyticsLocations: S } = (0, u.ZP)(d.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
             { cancelSubscription: T, error: N, submitting: I } = _(S),
             y = async () => {
@@ -54,7 +54,7 @@ let _ = (e) => {
         return (0, i.jsxs)(o.Y0X, {
             transitionState: n,
             className: x.__invalid_modal,
-            'aria-labelledby': O,
+            'aria-labelledby': E,
             parentComponent: 'CancelSubscriptionModal',
             children: [
                 (0, i.jsxs)('div', {
@@ -76,7 +76,7 @@ let _ = (e) => {
                     className: x.content,
                     children: [
                         (0, i.jsx)(o.X6q, {
-                            id: O,
+                            id: E,
                             variant: 'text-md/medium',
                             className: x.title,
                             children: b.intl.string(b.t.O6l5tL)

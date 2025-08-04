@@ -18,8 +18,8 @@ var i,
     _ = n(592125),
     j = n(58468),
     C = n(77498),
-    O = n(496675),
-    E = n(306680),
+    E = n(496675),
+    O = n(306680),
     v = n(944486),
     S = n(9156),
     T = n(823379),
@@ -96,7 +96,7 @@ function H(e) {
 }
 class W extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, b.default, x.Z, _.Z, j.Z, d.ZP, C.Z, m.Z, p.ZP, h.Z, O.Z, E.ZP, v.Z, S.ZP, f.Z);
+        this.waitFor(g.Z, b.default, x.Z, _.Z, j.Z, d.ZP, C.Z, m.Z, p.ZP, h.Z, E.Z, O.ZP, v.Z, S.ZP, f.Z);
     }
     getGuild(e, t) {
         var n, i;

@@ -40,14 +40,14 @@ function d(e) {
     });
 }
 function u(e) {
-    let { icon: t, title: n, titleVariant: a = 'text-md/semibold', description: c, descriptionVariant: d = 'text-xs/medium', iconClassName: u, color: m, buttonText: p, buttonColor: _ = o.zx.Colors.PRIMARY, buttonSize: b = o.zx.Sizes.SMALL, buttonLook: g = o.zx.Looks.FILLED, buttonDisabled: x, buttonIcon: h, buttonIconColor: f, buttonLoading: v, onButtonPress: j, listType: C = 'icon', index: y } = e,
+    let { icon: t, title: n, titleVariant: a = 'text-md/semibold', description: c, descriptionVariant: d = 'text-xs/medium', iconClassName: u, color: m, buttonText: p, buttonColor: _ = o.zx.Colors.PRIMARY, buttonSize: g = o.zx.Sizes.SMALL, buttonLook: b = o.zx.Looks.FILLED, buttonDisabled: x, buttonIcon: h, buttonIconColor: f, buttonLoading: v, onButtonPress: j, listType: y = 'icon', index: C } = e,
         I =
             null != p
                 ? (0, r.jsx)(o.zx, {
                       className: s.button,
-                      size: b,
+                      size: g,
                       color: _,
-                      look: g,
+                      look: b,
                       disabled: x,
                       'aria-label': p,
                       onClick: j,
@@ -68,12 +68,12 @@ function u(e) {
     return (0, r.jsxs)('div', {
         className: s.row,
         children: [
-            'numbered' === C && null != y
+            'numbered' === y && null != C
                 ? (0, r.jsx)(l.X6q, {
                       variant: 'heading-md/semibold',
                       color: 'text-brand',
                       className: s.number,
-                      children: y + 1
+                      children: C + 1
                   })
                 : null != t &&
                   (0, r.jsx)('div', {

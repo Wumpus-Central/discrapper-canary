@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+(n.d(t, { Z: () => O }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -18,7 +18,7 @@ var i = n(255367),
     _ = n(388032),
     j = n(631587),
     C = n(394637);
-function O() {
+function E() {
     let e = (0, r.useRef)(null),
         [t, n] = (0, r.useState)(!1),
         { analyticsLocations: s } = (0, m.ZP)(u.Z.HOLIDAY_COACHMARK),
@@ -108,8 +108,8 @@ function O() {
         })
     );
 }
-function E() {
+function O() {
     let e = (0, p.Nj)(o.z.CLICKER_COACHMARK),
         { enableGame: t } = h.C.getCurrentConfig({ location: 'Coachmark' });
-    return e || !t ? null : (0, i.jsx)(O, {});
+    return e || !t ? null : (0, i.jsx)(E, {});
 }

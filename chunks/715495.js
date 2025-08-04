@@ -229,7 +229,7 @@ function C() {
                                     children: Object.values(P).map((e) => {
                                         let { url: t } = e;
                                         return (0, i.jsx)(
-                                            O,
+                                            E,
                                             {
                                                 src: t,
                                                 onSetStatic: w,
@@ -248,7 +248,7 @@ function C() {
                                             lightBackground: e
                                         })
                                 }),
-                                (0, i.jsx)(E, {
+                                (0, i.jsx)(O, {
                                     label: 'set',
                                     onClick: () => {}
                                 })
@@ -260,7 +260,7 @@ function C() {
         })
     );
 }
-function O(e) {
+function E(e) {
     let { src: t, onSetStatic: n, removeAsset: r } = e;
     return (0, i.jsxs)('div', {
         className: x.uploaded,
@@ -292,7 +292,7 @@ function O(e) {
         ]
     });
 }
-function E(e) {
+function O(e) {
     let { label: t, onClick: n } = e;
     return (0, i.jsxs)('div', {
         className: x.flex,

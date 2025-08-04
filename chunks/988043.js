@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => O });
 var i = n(255367),
     r = n(73800),
     s = n(755721),
@@ -18,11 +18,11 @@ var i = n(255367),
     _ = n(736530),
     j = n(981631),
     C = n(388032);
-function O(e) {
+function E(e) {
     let { ingress: t, guildId: n } = e,
         b = (0, m.c_)(),
-        O = d.h2.useSetting().includes(n),
-        E = (0, c.q)(),
+        E = d.h2.useSetting().includes(n),
+        O = (0, c.q)(),
         v = (0, u.r)(),
         S = r.useCallback(
             (e) => {
@@ -66,7 +66,7 @@ function O(e) {
                 ? (0, i.jsx)(g.Z, {
                       title: I,
                       note: v ? C.intl.string(C.t.XXGmuL) : C.intl.string(C.t.wbYDfX),
-                      value: !E,
+                      value: !O,
                       onChange: (e) => {
                           N(!e);
                       }
@@ -74,15 +74,15 @@ function O(e) {
                 : (0, i.jsx)(g.Z, {
                       title: I,
                       note: b ? C.intl.string(C.t.V0ka0d) : v ? C.intl.string(C.t.F9WY3d) : C.intl.string(C.t.G7c3Xl),
-                      value: !O,
+                      value: !E,
                       onChange: S
                   })
     });
 }
-function E(e) {
+function O(e) {
     let { ingress: t = b.f4.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
         r = (0, m.is)();
-    return (0, i.jsx)(O, {
+    return (0, i.jsx)(E, {
         ingress: t,
         guildId: null != n ? n : r
     });

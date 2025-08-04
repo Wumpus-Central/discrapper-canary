@@ -18,8 +18,8 @@ var i = n(780384),
     _ = n(869708),
     j = n(288829),
     C = n(943323),
-    O = n(958657),
-    E = n(605493);
+    E = n(958657),
+    O = n(605493);
 let v = {
         [l.VU.PREMIUM_TENURE_1_MONTH]: {
             dark: ' #D76C1F, #F79C53',
@@ -81,11 +81,11 @@ let v = {
         },
         [l.VU.PREMIUM_TENURE_60_MONTH]: {
             dark: g.Z,
-            light: O.Z
+            light: E.Z
         },
         [l.VU.PREMIUM_TENURE_72_MONTH]: {
             dark: h.Z,
-            light: E.Z
+            light: O.Z
         }
     };
 function T() {

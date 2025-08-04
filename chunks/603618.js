@@ -123,7 +123,7 @@ function K(e) {
                         (l()(null != n, 'Send channel must be defined'),
                             (0, C.uL)(F.Z5c.CHANNEL(n.guild_id, n.id)),
                             (0, b.i)(F.IlC.OVERLAY, !0),
-                            !0 === t.extra.fake_inventory_item
+                            'fake_inventory_item' in t.extra && !0 === t.extra.fake_inventory_item
                                 ? await (0, I.k)({
                                       channel: n,
                                       content: B.intl.formatToPlainString(B.t.UVBA9v, { gameName: t.extra.game_name }),

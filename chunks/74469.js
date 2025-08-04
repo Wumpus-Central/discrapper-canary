@@ -19,12 +19,12 @@ let _ = (0, o.hQ)(),
     j = r.memo(function (e) {
         let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: o } = e,
             [j, C] = (0, c.US)([a.z.GUILD_TAG_USER_PROFILE_NEW_BADGE]),
-            O = r.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
-            E = (0, s.e7)([p.default], () => {
+            E = r.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
+            O = (0, s.e7)([p.default], () => {
                 var e;
                 return (0, d.Pb)(null == (e = p.default.getCurrentUser()) ? void 0 : e.primaryGuild).guildId;
             }),
-            v = void 0 !== n ? n : E,
+            v = void 0 !== n ? n : O,
             S = r.useMemo(
                 () =>
                     t.reduce((e, t) => {
@@ -44,7 +44,7 @@ let _ = (0, o.hQ)(),
                 (e) => {
                     var t, n, r;
                     if (null == e) return null;
-                    let s = O.get(e.value);
+                    let s = E.get(e.value);
                     if (null == s) return null;
                     let a = null == (t = s.profile) ? void 0 : t.tag;
                     return null == a
@@ -58,7 +58,7 @@ let _ = (0, o.hQ)(),
                               guildIconSize: 32
                           });
                 },
-                [O]
+                [E]
             ),
             N = r.useCallback(
                 (e) => {

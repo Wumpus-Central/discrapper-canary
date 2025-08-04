@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(367074),
     j = n(140465),
     C = n(286961),
-    O = n(639119),
-    E = n(8647),
+    E = n(639119),
+    O = n(8647),
     v = n(784238),
     S = n(218390),
     T = n(823188),
@@ -55,7 +55,7 @@ let M = (e) => {
             J = null != X ? (0, x.Af)(X) : null,
             Q = null != J ? x.ZP.getSkuIdForPlan(J.planId) : null,
             $ = null !== Q && Q !== D.Si.TIER_2 ? D.Si.TIER_2 : null,
-            ee = (0, O.N)(),
+            ee = (0, E.N)(),
             et = null == ee || null == (e = ee.subscription_trial) ? void 0 : e.sku_id,
             en = (0, j.Nx)(),
             ei = (0, _.Vi)(),
@@ -134,7 +134,7 @@ let M = (e) => {
                 }),
                 (0, i.jsx)('div', {
                     className: L.promoBannerContainer,
-                    children: (0, i.jsx)(E.Z, { variant: E.C.NITRO_SETTINGS })
+                    children: (0, i.jsx)(O.Z, { variant: O.C.NITRO_SETTINGS })
                 }),
                 el,
                 null != es &&

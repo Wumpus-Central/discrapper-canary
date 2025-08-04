@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(391110),
     j = n(75077),
     C = n(981631),
-    O = n(388032),
-    E = n(614729),
+    E = n(388032),
+    O = n(614729),
     v = n(865215);
 let S = (e) => {
     let t,
@@ -38,20 +38,20 @@ let S = (e) => {
         { fractionalState: w } = (0, p.Z)(),
         k = (0, h.W)();
     return (
-        Z ? ((t = O.intl.string(O.t['+vt7w8'])), (n = O.intl.string(O.t.LgHbnJ))) : ((t = O.intl.string(O.t.LgHbnJ)), (n = O.intl.string(O.t['+vt7w8']))),
+        Z ? ((t = E.intl.string(E.t['+vt7w8'])), (n = E.intl.string(E.t.LgHbnJ))) : ((t = E.intl.string(E.t.LgHbnJ)), (n = E.intl.string(E.t['+vt7w8']))),
         (0, i.jsx)(c.yWw, {
-            className: a()(E.allPerksScroller, {
-                [E.open]: s,
-                [E.openCloseReduceMotion]: D
+            className: a()(O.allPerksScroller, {
+                [O.open]: s,
+                [O.openCloseReduceMotion]: D
             }),
             ref: N,
             children: (0, i.jsx)('div', {
-                className: E.container,
+                className: O.container,
                 children: (0, i.jsxs)(m.Gt, {
                     value: A,
                     children: [
                         (0, i.jsx)(f.Z, {
-                            className: E.heroHeading,
+                            className: O.heroHeading,
                             onBackClick: () => {
                                 (S(!1),
                                     g.default.track(C.rMx.NITRO_HOME_NAVIGATION, {
@@ -62,16 +62,16 @@ let S = (e) => {
                             }
                         }),
                         (0, i.jsxs)('div', {
-                            className: E.column,
+                            className: O.column,
                             children: [
                                 (0, i.jsx)(c.X6q, {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
-                                    className: E.heading,
+                                    className: O.heading,
                                     children: t
                                 }),
                                 (0, i.jsx)(b.Z, {
-                                    className: E.cardCarousel,
+                                    className: O.cardCarousel,
                                     cards: (0, j.ZM)({
                                         perksCards: y,
                                         variant: _.gM.CARD_CAROUSEL_FIRST_ROW,
@@ -85,11 +85,11 @@ let S = (e) => {
                                 (0, i.jsx)(c.X6q, {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
-                                    className: E.heading,
+                                    className: O.heading,
                                     children: n
                                 }),
                                 (0, i.jsx)(b.Z, {
-                                    className: E.cardCarousel,
+                                    className: O.cardCarousel,
                                     cards: (0, j.ZM)({
                                         perksCards: y,
                                         variant: _.gM.CARD_CAROUSEL_SECOND_ROW,
@@ -103,11 +103,11 @@ let S = (e) => {
                                 (0, i.jsx)(c.X6q, {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
-                                    className: E.heading,
-                                    children: O.intl.string(O.t.LTaxu7)
+                                    className: O.heading,
+                                    children: E.intl.string(E.t.LTaxu7)
                                 }),
                                 (0, i.jsx)(b.Z, {
-                                    className: E.cardCarousel,
+                                    className: O.cardCarousel,
                                     cards: (0, j.ZM)({
                                         perksCards: y,
                                         variant: _.gM.CARD_CAROUSEL_THIRD_ROW,
@@ -120,7 +120,7 @@ let S = (e) => {
                                 })
                             ]
                         }),
-                        (0, i.jsx)('div', { className: E.footerSpacing }),
+                        (0, i.jsx)('div', { className: O.footerSpacing }),
                         (0, i.jsx)(o.$, {
                             innerRef: I,
                             onChange: (e) => {
@@ -128,15 +128,15 @@ let S = (e) => {
                             },
                             children: (0, i.jsx)('div', {
                                 ref: I,
-                                className: E.bottomOfPageVisibilitySensor
+                                className: O.bottomOfPageVisibilitySensor
                             })
                         }),
                         (0, i.jsx)('img', {
                             src: v,
-                            className: E.bottomIllustration,
+                            className: O.bottomIllustration,
                             width: 112,
                             height: 85,
-                            alt: O.intl.string(O.t.X4IxWF)
+                            alt: E.intl.string(E.t.X4IxWF)
                         })
                     ]
                 })

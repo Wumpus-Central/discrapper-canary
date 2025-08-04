@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(710220),
     j = n(164662),
     C = n(123274),
-    O = n(638631),
-    E = n(645616),
+    E = n(638631),
+    O = n(645616),
     v = n(388032),
     S = n(5943);
 let T = r.memo(
@@ -45,11 +45,11 @@ let T = r.memo(
                     children: (0, i.jsxs)('div', {
                         className: S.contentContainer,
                         children: [
-                            (0, i.jsx)(E.Z, { containerVisibilityPercentage: D }),
+                            (0, i.jsx)(O.Z, { containerVisibilityPercentage: D }),
                             N &&
                                 (0, i.jsx)('div', {
                                     className: S.offerPillContainer,
-                                    children: (0, i.jsx)(O.Z, { enablePremiumBrandRefresh: !0 })
+                                    children: (0, i.jsx)(E.Z, { enablePremiumBrandRefresh: !0 })
                                 }),
                             (0, i.jsx)('div', {
                                 className: S.marketingPageTextContainer,

@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(4046),
     _ = n(423741);
 let j = r.forwardRef((e, t) => {
-    let { className: n, isFooterVisible: s, isDarkMode: j, isReducedMotion: C, subscriptionTier: O } = e,
-        { analyticsLocations: E } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
+    let { className: n, isFooterVisible: s, isDarkMode: j, isReducedMotion: C, subscriptionTier: E } = e,
+        { analyticsLocations: O } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
         v = (0, m.Nx)(),
         S = (0, u.rO)(),
         T = r.useRef(null),
@@ -28,7 +28,7 @@ let j = r.forwardRef((e, t) => {
             !s || C || N || null == T.current || T.current.play();
         }, [s, C, N]),
         (0, i.jsx)(c.Gt, {
-            value: E,
+            value: O,
             children: (0, i.jsxs)('div', {
                 ref: t,
                 className: a()(f.container, n),
@@ -40,7 +40,7 @@ let j = r.forwardRef((e, t) => {
                         children: h.intl.string(h.t.lEw32t)
                     }),
                     (0, i.jsx)(p.PK, {
-                        subscriptionTier: O,
+                        subscriptionTier: E,
                         inOfferExperience: v,
                         containerClassName: f.footerCTAContainer,
                         isApplicationHome: !0,

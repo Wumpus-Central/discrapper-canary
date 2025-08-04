@@ -18,7 +18,7 @@ function x(e) {
     let { user: t, guild: n } = e,
         { analyticsLocations: x } = (0, o.ZP)(),
         _ = null != n,
-        { userNameplate: j, guildNameplate: C, pendingNameplate: O, pendingErrors: E } = (0, p.Zx)(t, null == n ? void 0 : n.id),
+        { userNameplate: j, guildNameplate: C, pendingNameplate: E, pendingErrors: O } = (0, p.Zx)(t, null == n ? void 0 : n.id),
         v = [s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE],
         [S, T] = (0, c.US)(v),
         N = S === s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,
@@ -35,7 +35,7 @@ function x(e) {
     return (0, i.jsx)(g.Z, {
         title: f.intl.string(f.t.x5CoXV),
         titleIcon: N ? (0, i.jsx)(u.Z, { className: b.newBadge }) : void 0,
-        errors: E,
+        errors: O,
         children: (0, i.jsxs)('div', {
             className: b.section,
             children: [
@@ -45,7 +45,7 @@ function x(e) {
                     text: f.intl.string(f.t.BwdeMz),
                     onClick: I
                 }),
-                (void 0 === O ? (_ ? C : j) != null : null != O) &&
+                (void 0 === E ? (_ ? C : j) != null : null != E) &&
                     (0, i.jsx)(a.zxk, {
                         variant: 'secondary',
                         size: 'sm',

@@ -18,7 +18,7 @@ var i = n(255367),
     _ = n(388032),
     j = n(296576),
     C = n(423931);
-function O(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -43,7 +43,7 @@ function O(e) {
     }
     return e;
 }
-function E(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -139,7 +139,7 @@ function T(e) {
                 type: d.RAz.PULSING_ELLIPSIS
             })
         };
-    return e.renderStepBody ? (0, i.jsx)(f.t, O({}, n, e)) : 'applePay' === e.paymentRequestWallet ? (0, i.jsx)(m.Ch, O({}, n, e)) : (0, i.jsx)(m.Tr, O({}, n, e));
+    return e.renderStepBody ? (0, i.jsx)(f.t, E({}, n, e)) : 'applePay' === e.paymentRequestWallet ? (0, i.jsx)(m.Ch, E({}, n, e)) : (0, i.jsx)(m.Tr, E({}, n, e));
 }
 function N(e) {
     let { children: t, footer: n, className: r } = e;
@@ -214,7 +214,7 @@ function A() {
                 children: (0, i.jsx)(y, {
                     children: (0, i.jsx)(
                         u.Z,
-                        E(O({}, e), {
+                        O(E({}, e), {
                             onChooseType: () => {},
                             paymentRequestWallets: ['googlePay', 'applePay']
                         })
@@ -226,7 +226,7 @@ function A() {
                 children: (0, i.jsx)(y, {
                     children: (0, i.jsx)(
                         u.Z,
-                        E(O({}, e), {
+                        O(E({}, e), {
                             onChooseType: () => {},
                             paymentRequestWallets: []
                         })
@@ -238,7 +238,7 @@ function A() {
                 children: (0, i.jsx)(y, {
                     children: (0, i.jsx)(
                         u.Z,
-                        E(O({}, e), {
+                        O(E({}, e), {
                             isEligibleForTrial: !0,
                             onChooseType: () => {},
                             paymentRequestWallets: []
@@ -251,7 +251,7 @@ function A() {
                 children: (0, i.jsx)(y, {
                     children: (0, i.jsx)(
                         u.Z,
-                        E(O({}, e), {
+                        O(E({}, e), {
                             onChooseType: () => {},
                             paymentRequestWallets: [],
                             paymentSourceTypeRestrictions: [x.He.CARD.valueOf()]

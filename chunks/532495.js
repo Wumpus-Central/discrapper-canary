@@ -19,8 +19,8 @@ var r = n(512722),
     _ = n(610966),
     j = n(513901),
     C = n(451392),
-    O = n(906364),
-    E = n(643879),
+    E = n(906364),
+    O = n(643879),
     v = n(350327),
     S = n(621853),
     T = n(687158),
@@ -93,7 +93,7 @@ function R() {
                 e
             );
         }),
-        K = (0, E.SD)({
+        K = (0, O.SD)({
             userId: k.id,
             image: B
         }),
@@ -118,7 +118,7 @@ function R() {
                 user: k
             }),
             (0, i.jsx)(
-                O.Z,
+                E.Z,
                 {
                     sectionTitle: A.intl.string(A.t['+T3RIy']),
                     errors: Y.pronouns,

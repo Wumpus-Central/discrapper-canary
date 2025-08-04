@@ -18,7 +18,7 @@ var i = n(255367),
     _ = n(981631),
     j = n(388032),
     C = n(49149);
-function O(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -43,7 +43,7 @@ function O(e) {
     }
     return e;
 }
-function E(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,7 +64,7 @@ function E(e, t) {
 function v(e) {
     let { transitionState: t, onClose: a, ticket: c, challenge: m } = e,
         b = (0, d.Dt)(),
-        [O, E] = r.useState(''),
+        [E, O] = r.useState(''),
         [v, S] = r.useState(!0),
         [T, N] = r.useState(x.x.INIT),
         [I, y] = r.useState(''),
@@ -179,7 +179,7 @@ function v(e) {
                         children: (0, i.jsxs)('form', {
                             onSubmit: (e) => {
                                 (e.preventDefault(),
-                                    (0, f.Sr)(O, c, I)
+                                    (0, f.Sr)(E, c, I)
                                         .then(async () => {
                                             await (0, u.Yn)(!1);
                                         })
@@ -207,9 +207,9 @@ function v(e) {
                                                 }),
                                                 (0, i.jsx)(l.Is, {
                                                     className: C.input,
-                                                    value: O,
+                                                    value: E,
                                                     onChange: (e) => {
-                                                        (E(e), S(0 === e.length));
+                                                        (O(e), S(0 === e.length));
                                                     },
                                                     autoFocus: !0,
                                                     minLength: 1
@@ -261,7 +261,7 @@ function S(e) {
                 action: () => {
                     (0, o.ZDy)(async () => {
                         let { default: e } = await n.e('804').then(n.bind(n, 89616));
-                        return (t) => (0, i.jsx)(e, O({ credential: r }, t));
+                        return (t) => (0, i.jsx)(e, E({ credential: r }, t));
                     });
                 }
             }),
@@ -312,7 +312,7 @@ function T() {
                                         color: l.zx.Colors.TRANSPARENT,
                                         size: l.zx.Sizes.ICON,
                                         onClick: (t) => {
-                                            (0, c.vq)(t, (t) => (0, i.jsx)(S, E(O({}, t), { credential: e })));
+                                            (0, c.vq)(t, (t) => (0, i.jsx)(S, O(E({}, t), { credential: e })));
                                         },
                                         'aria-label': j.intl.string(j.t['+nrTbG']),
                                         innerClassName: C.credentialOptions,
@@ -342,7 +342,7 @@ function T() {
                                     (0, o.h7j)((e) =>
                                         (0, i.jsx)(
                                             v,
-                                            E(O({}, e), {
+                                            O(E({}, e), {
                                                 ticket: t,
                                                 challenge: n
                                             })

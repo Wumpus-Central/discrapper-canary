@@ -16,20 +16,20 @@ var i = n(255367),
     b = n(142436);
 function x(e) {
     let { user: t, guild: n, className: s, sectionTitle: p, forcedDivider: x = !1, withTutorial: j = !1, isTryItOutFlow: C = !1 } = e,
-        { analyticsLocations: O } = (0, c.ZP)(),
-        E = null != n,
+        { analyticsLocations: E } = (0, c.ZP)(),
+        O = null != n,
         { userAvatarDecoration: v, guildAvatarDecoration: S, pendingAvatarDecoration: T, pendingErrors: N } = (0, g.$U)(t, n),
         I = (0, m.Z)('enable_avatar_decoration_uploads'),
         y = r.useCallback(
             () =>
                 (0, u.ps)({
-                    analyticsLocations: O,
+                    analyticsLocations: E,
                     isTryItOutFlow: C,
                     guild: n
                 }),
-            [O, C, n]
+            [E, C, n]
         ),
-        A = C || void 0 !== T ? null != T : (E ? S : v) != null,
+        A = C || void 0 !== T ? null != T : (O ? S : v) != null,
         P = j ? o.gtL : l.zx;
     return (0, i.jsxs)(h.Z, {
         className: s,

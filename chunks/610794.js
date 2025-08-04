@@ -18,13 +18,13 @@ var i = n(255367),
     _ = n(856651),
     j = n(388032),
     C = n(6318);
-function O(e) {
+function E(e) {
     var t;
     let { account: n, refreshed: a, handleRefresh: c } = e,
         [d, u] = r.useState(!1),
         p = null != (t = n.metadata) ? t : {},
         f = (0, s.e7)([h.default], () => h.default.locale),
-        O = r.useCallback(async () => {
+        E = r.useCallback(async () => {
             u(!0);
             try {
                 await c(n);
@@ -32,31 +32,31 @@ function O(e) {
                 u(!1);
             }
         }, [n, c]),
-        E = null;
+        O = null;
     switch (n.type) {
         case x.ABu.REDDIT:
-            E = (0, g.oP)(p, C.metadataItem);
+            O = (0, g.oP)(p, C.metadataItem);
             break;
         case x.ABu.STEAM:
-            E = (0, g.Dq)(p, C.metadataItem);
+            O = (0, g.Dq)(p, C.metadataItem);
             break;
         case x.ABu.TWITTER:
-            E = (0, g.rJ)(p, C.metadataItem);
+            O = (0, g.rJ)(p, C.metadataItem);
             break;
         case x.ABu.EBAY:
-            E = (0, g.ul)(p, C.metadataItem);
+            O = (0, g.ul)(p, C.metadataItem);
             break;
         case x.ABu.PAYPAL:
-            E = (0, g.li)(p, C.metadataItem);
+            O = (0, g.li)(p, C.metadataItem);
             break;
         case x.ABu.TIKTOK:
-            E = (0, g.hf)(p, C.metadataItem);
+            O = (0, g.hf)(p, C.metadataItem);
     }
     let v = (0, m.FI)(p[_.PC.CREATED_AT], f),
         S = null,
         T = j.intl.string(j.t.wzzjk5);
     return (
-        (null == E || 0 === E.length) &&
+        (null == O || 0 === O.length) &&
             null == v &&
             ((S = (0, i.jsx)(
                 o.Text,
@@ -73,14 +73,14 @@ function O(e) {
             className: C.metadataContainer,
             children: [
                 S,
-                null == E
+                null == O
                     ? void 0
-                    : E.map((e, t) =>
+                    : O.map((e, t) =>
                           (0, i.jsxs)(i.Fragment, {
-                              children: [e, t < E.length - 1 ? (0, i.jsx)('span', { className: C.dot }) : null]
+                              children: [e, t < O.length - 1 ? (0, i.jsx)('span', { className: C.dot }) : null]
                           })
                       ),
-                null != E && E.length > 0 && null != v ? (0, i.jsx)('div', { className: C.dot }) : null,
+                null != O && O.length > 0 && null != v ? (0, i.jsx)('div', { className: C.dot }) : null,
                 null != v
                     ? (0, i.jsx)(
                           o.Text,
@@ -102,7 +102,7 @@ function O(e) {
                         submitting: d,
                         disabled: a,
                         'aria-label': j.intl.string(j.t.sCkLYG),
-                        onClick: a ? void 0 : O,
+                        onClick: a ? void 0 : E,
                         children: T
                     },
                     'refresh-button'
@@ -111,7 +111,7 @@ function O(e) {
         })
     );
 }
-function E(e) {
+function O(e) {
     let { account: t, handleRefresh: n, refreshedAccountIds: s } = e,
         [l, m] = r.useState(t.visibility),
         [g, h] = r.useState(t.metadataVisibility),
@@ -158,7 +158,7 @@ function E(e) {
                                         children: b.name
                                     }),
                                     x &&
-                                        (0, i.jsx)(O, {
+                                        (0, i.jsx)(E, {
                                             account: t,
                                             refreshed: s.includes(t.id),
                                             handleRefresh: n
@@ -221,7 +221,7 @@ function v() {
                   }),
                   t.map((e) =>
                       (0, i.jsx)(
-                          E,
+                          O,
                           {
                               account: e,
                               handleRefresh: l,

@@ -22,11 +22,11 @@ function C(e) {
     let t = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
         n = (0, r.e7)([d.Z], () => d.Z.hidePersonalInformation),
         C = (0, r.e7)([o.Z], () => (0, s.wj)(o.Z.theme)),
-        { multiAccountUsers: O } = (0, f.L)(),
-        E = (e) => {
+        { multiAccountUsers: E } = (0, f.L)(),
+        O = (e) => {
             e !== (null == t ? void 0 : t.id) && (m.default.track(x.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: x.jXE.USER_PROFILE } }), g.yD(e));
         },
-        v = O.map((r) => {
+        v = E.map((r) => {
             let s = new c.Z(r),
                 o = s.id === (null == t ? void 0 : t.id),
                 d = r.tokenStatus === h.q.INVALID,
@@ -83,7 +83,7 @@ function C(e) {
                         });
                     },
                     action: () => {
-                        (null == e || e(), d ? (0, b.Z)() : E(s.id));
+                        (null == e || e(), d ? (0, b.Z)() : O(s.id));
                     }
                 },
                 s.id

@@ -33,15 +33,15 @@ let x = s().throttle(function (e, t) {
     let l,
         { channelPredicate: m = () => !0, guildPredicate: f = () => !0, guildFeaturePredicate: x = () => !1, ensureChatIsVisible: _ = () => !1, withVoiceChannels: j = !1 } = t,
         C = null != (r = o.Z.getState().guildId) ? r : h.ME,
-        O = o.Z.getState().channelId,
-        E = (function (e, t) {
+        E = o.Z.getState().channelId,
+        O = (function (e, t) {
             let n = [h.ME, ...u.ZP.getFlattenedGuildIds()],
                 i = n.indexOf(e);
             return t > 0 ? n.slice(i).concat(n.slice(0, i), e) : (n.splice(i, 0, e), n.slice(i + 1).concat(n.slice(0, i + 1)));
         })(C, e),
-        v = e > 0 ? 0 : E.length - 1,
+        v = e > 0 ? 0 : O.length - 1,
         S = b(C, j),
-        T = S.indexOf(O) + e;
+        T = S.indexOf(E) + e;
     for (; null != C && '' !== C; ) {
         if (((l = S[T]), f(C)))
             for (; null != l && '' !== l; ) {
@@ -105,7 +105,7 @@ let x = s().throttle(function (e, t) {
                     );
                 ((T += e), (l = S[T]));
             }
-        if (((v += e), null == (C = E[v]) || '' === C)) break;
+        if (((v += e), null == (C = O[v]) || '' === C)) break;
         ((S = b(C, j)), (T = e < 0 ? S.length - 1 : 0));
     }
     p.S.dispatch(h.CkL.SHAKE_APP, {

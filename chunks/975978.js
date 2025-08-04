@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(388032),
     j = n(975926),
     C = n(298632),
-    O = n(219242);
-function E(e) {
+    E = n(219242);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -119,7 +119,7 @@ let v = (e) => {
                         })
                     })
                 }),
-                n.map((e) => (0, i.jsx)(S, E({}, e), e.id))
+                n.map((e) => (0, i.jsx)(S, O({}, e), e.id))
             ]
         });
     },
@@ -230,7 +230,7 @@ let v = (e) => {
                                         className: j.gradientBackgroundContainer,
                                         children: [
                                             (0, i.jsx)('img', {
-                                                src: O,
+                                                src: E,
                                                 alt: '',
                                                 className: j.gradientBackgroundPosition
                                             }),
@@ -256,7 +256,7 @@ let v = (e) => {
                                         var t, n;
                                         return (0, r.createElement)(
                                             T,
-                                            ((t = E({}, e)),
+                                            ((t = O({}, e)),
                                             (n = n = { key: e.id }),
                                             Object.getOwnPropertyDescriptors
                                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

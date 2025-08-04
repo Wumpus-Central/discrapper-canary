@@ -61,6 +61,8 @@ function O(A) {
                 return M.oC.GUILD_HOME;
             case I.z.GUILD_ROLE_SUBSCRIPTIONS:
                 return M.oC.ROLE_SUBSCRIPTIONS;
+            case I.z.GUILD_MOD_DASH_MEMBER_SAFETY:
+                return M.oC.MEMBER_SAFETY;
         }
     for (let n = h.wd; n < A.voiceChannelsSectionNumber; n++)
         if (e[n] > 0) {

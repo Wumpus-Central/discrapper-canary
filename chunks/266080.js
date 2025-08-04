@@ -12,11 +12,11 @@ var r = n(255367),
 let p = (e) => {
     let { guildId: t, reportId: n } = e,
         [p, _] = a.useState(!1),
-        b = d.Z.getGuild(t),
-        g = null != b;
+        g = d.Z.getGuild(t),
+        b = null != g;
     a.useEffect(() => {
-        _(!g);
-    }, [g]);
+        _(!b);
+    }, [b]);
     let x = a.useCallback(() => {
         (_(!0),
             l.ZP.trackWithMetadata(u.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
@@ -25,11 +25,11 @@ let p = (e) => {
             }),
             s.Z.leaveGuild(t));
     }, [t, n]);
-    return null == b
+    return null == g
         ? null
         : (0, r.jsx)(c.ZP, {
               title: m.intl.string(m.t.cU96io),
-              description: m.intl.formatToPlainString(m.t['26mR6+'], { guildName: null == b ? void 0 : b.name }),
+              description: m.intl.formatToPlainString(m.t['26mR6+'], { guildName: null == g ? void 0 : g.name }),
               buttonText: p ? m.intl.string(m.t['9Ak99v']) : m.intl.string(m.t.F3qExs),
               buttonDisabled: p,
               buttonColor: i.zx.Colors.RED,
@@ -64,7 +64,7 @@ let p = (e) => {
                               return e;
                           })(
                               {
-                                  header: m.intl.formatToPlainString(m.t['1GX6Pz'], { name: b.name }),
+                                  header: m.intl.formatToPlainString(m.t['1GX6Pz'], { name: g.name }),
                                   confirmText: m.intl.string(m.t.J2TBi4),
                                   cancelText: m.intl.string(m.t['ETE/oK']),
                                   onConfirm: x
@@ -75,7 +75,7 @@ let p = (e) => {
                               {
                                   children: (0, r.jsx)(o.Text, {
                                       variant: 'text-md/normal',
-                                      children: m.intl.format(m.t.ZEXC0t, { name: b.name })
+                                      children: m.intl.format(m.t.ZEXC0t, { name: g.name })
                                   })
                               }),
                           Object.getOwnPropertyDescriptors

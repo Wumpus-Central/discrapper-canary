@@ -1,54 +1,55 @@
 n.d(t, {
-    j: () => c,
-    y: () => l
+    j: () => u,
+    y: () => c
 });
 var r = n(342905),
     i = n(594928),
-    a = n(698282),
-    o = n(772335);
-let s = {
-        name: a.default.ZEL6m5,
+    a = n(181430),
+    o = n(698282),
+    s = n(772335);
+let l = {
+        name: o.default.ZEL6m5,
         className: ''
     },
-    l = {
-        [r.C.DEFAULT]: s,
+    c = {
+        [r.C.DEFAULT]: l,
         [r.C.BIO_RHYME]: {
-            name: a.default['91ufEx'],
-            className: o.bioRhyme
+            name: o.default['91ufEx'],
+            className: s.bioRhyme
         },
         [r.C.CHERRY_BOMB]: {
-            name: a.default.rN7cub,
-            className: o.cherryBomb
+            name: o.default.rN7cub,
+            className: s.cherryBomb
         },
         [r.C.CHICLE]: {
-            name: a.default.CbHHnJ,
-            className: o.chicle
+            name: o.default.CbHHnJ,
+            className: s.chicle
         },
         [r.C.MUSEO_MODERNO]: {
-            name: a.default.iEcEKC,
-            className: o.museoModerno
+            name: o.default.iEcEKC,
+            className: s.museoModerno
         },
         [r.C.NEO_CASTEL]: {
-            name: a.default.DL7jLS,
-            className: o.neoCastel
+            name: o.default.DL7jLS,
+            className: s.neoCastel
         },
         [r.C.PIXELIFY]: {
-            name: a.default.jq4aRk,
-            className: o.pixelify
+            name: o.default.jq4aRk,
+            className: s.pixelify
         },
         [r.C.SINISTRE]: {
-            name: a.default.jV9DNz,
-            className: o.sinistre
+            name: o.default.jV9DNz,
+            className: s.sinistre
         },
-        [r.C.BANGERS]: s,
-        [r.C.COMPAGNON]: s,
-        [r.C.RIBES]: s
+        [r.C.BANGERS]: l,
+        [r.C.COMPAGNON]: l,
+        [r.C.RIBES]: l
     };
-function c(e) {
+function u(e) {
     var t;
     let { displayNameStyles: n, inProfile: r } = e,
-        a = i.f.useExperiment({ location: 'useDisplayNameStylesFont' });
-    if (!a.enabled || (!r && !a.includeNonProfile) || null == n) return '';
-    let o = l[n.fontId];
-    return null != (t = null == o ? void 0 : o.className) ? t : '';
+        { includeNonProfile: o } = i.f.useExperiment({ location: 'useDisplayNameStylesFont' });
+    if (!(0, a.Y)({ location: 'useDisplayNameStylesFont' }) || (!r && !o) || null == n) return '';
+    let s = c[n.fontId];
+    return null != (t = null == s ? void 0 : s.className) ? t : '';
 }

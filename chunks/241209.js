@@ -62,10 +62,10 @@ function j(e, t) {
     );
 }
 let C = new RegExp('https?://'.concat(null != (i = window.GLOBAL_ENV.CDN_HOST) ? i : ''));
-function O(e) {
+function E(e) {
     return 'string' == typeof e.content ? e.content : S(e.content);
 }
-let E = j(_({}, d().defaultRules), {
+let O = j(_({}, d().defaultRules), {
         heading: j(_({}, d().defaultRules.heading), {
             react(e, t, n) {
                 let i = 'h'.concat(e.level);
@@ -101,7 +101,7 @@ let E = j(_({}, d().defaultRules), {
                     'blockquote',
                     {
                         className: f.blockquote,
-                        children: O(e)
+                        children: E(e)
                     },
                     n.key
                 )
@@ -126,7 +126,7 @@ let E = j(_({}, d().defaultRules), {
                     'code',
                     {
                         className: f.codeInline,
-                        children: O(e)
+                        children: E(e)
                     },
                     n.key
                 )
@@ -139,7 +139,7 @@ let E = j(_({}, d().defaultRules), {
                         {
                             children: (0, s.jsx)('code', {
                                 className: o()(b.scrollbarGhostHairline, 'hljs'),
-                                children: O(e)
+                                children: E(e)
                             })
                         },
                         i.key
@@ -174,8 +174,8 @@ let E = j(_({}, d().defaultRules), {
             }
         })
     }),
-    v = d().parserFor(E),
-    S = d().reactFor(d().ruleOutput(E, 'react'));
+    v = d().parserFor(O),
+    S = d().reactFor(d().ruleOutput(O, 'react'));
 class T extends (r = a.PureComponent) {
     render() {
         let { className: e, children: t, state: n, parser: i, output: r } = this.props,
@@ -186,7 +186,7 @@ class T extends (r = a.PureComponent) {
         });
     }
 }
-(x(T, 'rules', E),
+(x(T, 'rules', O),
     x(T, 'defaultProps', {
         parser: v,
         output: S

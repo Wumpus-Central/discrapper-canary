@@ -23,7 +23,7 @@ let j = [
     }
 ];
 function C(e) {
-    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: C, changeAvatarButtonText: O, guildId: E, className: v, disabled: S = !1, isTryItOutFlow: T = !1, forcedDivider: N, withHighlight: I = !1 } = e,
+    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: C, changeAvatarButtonText: E, guildId: O, className: v, disabled: S = !1, isTryItOutFlow: T = !1, forcedDivider: N, withHighlight: I = !1 } = e,
         { newestAnalyticsLocation: y } = (0, d.ZP)(),
         A = I ? c.gtL : o.zx,
         P = (0, m.T)({ location: 'AvatarSection' }),
@@ -37,10 +37,10 @@ function C(e) {
                     uploadType: f.pC.AVATAR,
                     analyticsSource: y,
                     filters: T ? j : void 0,
-                    guildId: E,
+                    guildId: O,
                     isTryItOutFlow: T
                 }));
-        }, [E, y, T, Z]);
+        }, [O, y, T, Z]);
     return (0, i.jsx)(g.Z, {
         className: v,
         title: C,
@@ -66,7 +66,7 @@ function C(e) {
                     className: a()({ [_.buttonHighlighted]: I }),
                     size: o.zx.Sizes.SMALL,
                     onClick: k,
-                    children: null != O ? O : x.intl.string(x.t['4OynCA'])
+                    children: null != E ? E : x.intl.string(x.t['4OynCA'])
                 }),
                 t &&
                     (0, i.jsx)('div', {
@@ -75,7 +75,7 @@ function C(e) {
                         children: (0, i.jsx)(c.zxk, {
                             variant: 'secondary',
                             size: 'sm',
-                            text: null != E ? x.intl.string(x.t.TDjKDg) : x.intl.string(x.t.twB3f3),
+                            text: null != O ? x.intl.string(x.t.TDjKDg) : x.intl.string(x.t.twB3f3),
                             onClick: () => s(null)
                         })
                     })

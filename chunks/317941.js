@@ -18,8 +18,8 @@ var i = n(255367),
     _ = n(246946),
     j = n(509545),
     C = n(55563),
-    O = n(259580),
-    E = n(572004),
+    E = n(259580),
+    O = n(572004),
     v = n(669079),
     S = n(296848),
     T = n(474936),
@@ -67,7 +67,7 @@ class A extends r.PureComponent {
                     value: (0, v.Nz)(t.code),
                     text: this.copyButtonText,
                     mode: n,
-                    supportsCopy: E.wS,
+                    supportsCopy: O.wS,
                     hideMessage: e ? N.intl.string(N.t['0RLn4+']) : null,
                     onCopy: this.handleCopy,
                     buttonColor: c.Tt.BRAND,
@@ -98,7 +98,7 @@ class A extends r.PureComponent {
             y(this, 'handleCopy', (e) => {
                 let { giftCode: t, sku: n } = this.props;
                 ((0, v.dM)(t, n),
-                    (0, E.JG)(
+                    (0, O.JG)(
                         e,
                         () => this.setState({ copyMode: d.uA3.SUCCESS }),
                         () => this.setState({ copyMode: d.uA3.ERROR })
@@ -202,8 +202,8 @@ class P extends r.PureComponent {
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(O.Z, {
-                                    direction: u ? O.Z.Directions.UP : O.Z.Directions.DOWN,
+                                (0, i.jsx)(E.Z, {
+                                    direction: u ? E.Z.Directions.UP : E.Z.Directions.DOWN,
                                     className: I.expandIcon
                                 })
                             ]

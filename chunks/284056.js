@@ -1,5 +1,5 @@
 (n.d(t, {
-    Z: () => E,
+    Z: () => O,
     _: () => g._
 }),
     n(953529),
@@ -35,7 +35,7 @@ function C(e, t, n) {
         e
     );
 }
-class O extends r.PureComponent {
+class E extends r.PureComponent {
     componentDidMount() {
         this._initTimeout.start(1000, this.setupVoiceActivity);
     }
@@ -186,7 +186,7 @@ class O extends r.PureComponent {
             }));
     }
 }
-function E(e) {
+function O(e) {
     var t, n;
     let {
             inputDevice: r,
@@ -227,7 +227,7 @@ function E(e) {
         b = (0, l.e7)([f.Z], () => f.Z.isConnected()),
         { ref: x, width: _ } = (0, p.ZP)();
     return (0, i.jsx)(
-        O,
+        E,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
