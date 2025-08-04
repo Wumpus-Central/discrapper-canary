@@ -43275,6 +43275,8 @@ div.modalOverrideBody__34eac {
     align-items: center;
     background-color: var(--background-base-lowest);
     border-radius: 16px;
+    box-sizing: border-box;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     width: auto
