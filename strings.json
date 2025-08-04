@@ -10169,7 +10169,7 @@
   "hLOkp6": "Members of your server can help unlock levels by bestowing Boosts. For every level achieved, your server will help unlock perks for everyone.\\n\\nMembers can revoke their boost at any time. **Your server will keep perks for three days if a level is lost**. [Learn more about Server Boosting](Learn more about Server Boosting).\\n\\n",
   "qV3Erq": "Only {numLeft, plural, =1 { more boost} other { more boosts} } until the next level!",
   "0r7snZ": "{count, plural, =1 {** extremely cool person** has} other {** extremely cool people** have} } boosted this server",
-  "t2Wbo6": "{required, plural, =1 { Boost} other { Boosts} }",
+  "t2Wbo6": "{required, plural, =1 {!!{decorator}!! Boost} other {!!{decorator}!! Boosts} }",
   "7VXNOz": "{required, plural, =1 { Boost} other { Boosts} } required, tier locked",
   "nLovSU": "Server Boost Status",
   "dNGM0t": "Unlocked",
