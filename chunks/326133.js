@@ -98,76 +98,77 @@ let P = 490,
     L = 200,
     x = 120,
     M = i.forwardRef(function (e, t) {
-        var n, a, T, A, R;
-        let { channel: M, type: k, editorHeight: j, onVisibilityChange: U } = e,
-            G = (0, h.Dt)(),
-            B = (0, l.e7)(
+        var n, a, T, A, R, M, k;
+        let { channel: j, type: U, editorHeight: G, onVisibilityChange: B, editorScrollerRef: V, barsHeight: F } = e,
+            Z = (0, h.Dt)(),
+            H = (0, l.e7)(
                 [E.Z],
                 () => {
                     var e;
-                    return null != (e = E.Z.getGuild(M.guild_id)) ? e : null;
+                    return null != (e = E.Z.getGuild(j.guild_id)) ? e : null;
                 },
-                [M.guild_id]
+                [j.guild_id]
             ),
-            V = i.useRef(null),
-            [F, Z, H] = (0, O.Z)(N(S({}, e), { guild: B }), t, V),
-            Y = (null == (n = k.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
-            W = (0, f.DJ)(F.selectedIndex);
-        (0, p.KR)(G, F.isVisible, W);
-        let K = (0, y.Z)({
-                editorHeight: j,
-                type: k,
-                state: F
+            Y = i.useRef(null),
+            [W, K, z] = (0, O.Z)(N(S({}, e), { guild: H }), t, Y),
+            q = (null == (n = U.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
+            X = (0, f.DJ)(W.selectedIndex);
+        (0, p.KR)(Z, W.isVisible, X);
+        let Q = (0, y.Z)({
+                editorHeight: G,
+                type: U,
+                state: W
             }),
-            z = (0, l.e7)(
+            J = (0, l.e7)(
                 [d.ZP],
                 () => {
-                    let e = d.ZP.getSelfEmbeddedActivityForChannel(M.id),
+                    let e = d.ZP.getSelfEmbeddedActivityForChannel(j.id),
                         t = d.ZP.getActivityPanelMode();
-                    return (0, u.l5)(M) && null != e && (0, _.p)(e.location) === M.id && t === v.Ez.PANEL;
+                    return (0, u.l5)(j) && null != e && (0, _.p)(e.location) === j.id && t === v.Ez.PANEL;
                 },
-                [M]
+                [j]
             ),
-            q = i.useMemo(() => ((null == K ? void 0 : K.top) == null && (null == K ? void 0 : K.left) == null && (null == K ? void 0 : K.bottom) == null && (null == K ? void 0 : K.right) == null ? '' : String(Date.now())), [null == K ? void 0 : K.top, null == K ? void 0 : K.left, null == K ? void 0 : K.bottom, null == K ? void 0 : K.right]);
+            $ = i.useMemo(() => ((null == Q ? void 0 : Q.top) == null && (null == Q ? void 0 : Q.left) == null && (null == Q ? void 0 : Q.bottom) == null && (null == Q ? void 0 : Q.right) == null ? '' : String(Date.now())), [null == Q ? void 0 : Q.top, null == Q ? void 0 : Q.left, null == Q ? void 0 : Q.bottom, null == Q ? void 0 : Q.right]);
         if (
             (i.useEffect(() => {
-                U(F.isVisible);
-            }, [U, F.isVisible]),
-            !F.isVisible || null == F.query || void 0 === K)
+                B(W.isVisible);
+            }, [B, W.isVisible]),
+            !W.isVisible || null == W.query || void 0 === Q)
         )
             return null;
-        let X =
+        let ee =
             null !=
-            (a = F.query.typeInfo.renderResults({
-                results: F.query.results,
-                selectedIndex: F.selectedIndex,
-                channel: M,
-                guild: B,
-                query: F.query.queryText,
-                options: F.query.options,
-                onHover: (e) => Z.onResultHover(e),
-                onClick: (e) => Z.onResultClick(e)
+            (T = W.query.typeInfo.renderResults({
+                results: W.query.results,
+                selectedIndex: W.selectedIndex,
+                channel: j,
+                guild: H,
+                query: W.query.queryText,
+                options: W.query.options,
+                onHover: (e) => K.onResultHover(e),
+                onClick: (e) => K.onResultClick(e)
             }))
-                ? a
+                ? T
                 : null;
-        if (null == X) return null;
-        let Q = {
-                [I.autocompleteAttached]: null == K,
-                [I.autocompletePopout]: null != K,
-                [I.bottom]: null == K && 'bottom' === e.position,
-                [I.autocompleteTop]: z
+        if (null == ee) return null;
+        let et = {
+                [I.autocompleteAttached]: null == Q,
+                [I.autocompletePopout]: null != Q,
+                [I.bottom]: null == Q && 'bottom' === e.position,
+                [I.autocompleteTop]: J
             },
-            J = P;
-        null != K && (J = (null == (T = k.autocomplete) ? void 0 : T.small) ? L : (null == (A = F.query) ? void 0 : A.type) === b.eq.EMOJIS_AND_STICKERS ? w : D);
-        let $ = Math.min(0.5 * window.innerHeight, j);
-        J = Math.min(window.innerHeight - x - $, J);
-        let ee = (0, r.jsx)(f.ZP, {
-            id: G,
-            className: o()(I.autocomplete, Q),
+            en = P;
+        null != Q && (en = (null == (A = U.autocomplete) ? void 0 : A.small) ? L : (null == (R = W.query) ? void 0 : R.type) === b.eq.EMOJIS_AND_STICKERS ? w : D);
+        let er = Math.max(G, null != (M = null == V || null == (a = V.current) ? void 0 : a.clientHeight) ? M : 0),
+            ei = Math.min(0.5 * window.innerHeight, er);
+        en = Math.min(window.innerHeight - x - ei - (null != F ? F : 0), en);
+        let ea = (0, r.jsx)(f.ZP, {
+            id: Z,
+            className: o()(I.autocomplete, et),
             innerClassName: I.autocompleteInner,
             onMouseDown: (e) => e.preventDefault(),
             children: (0, r.jsx)(s.bG, {
-                navigator: H,
+                navigator: z,
                 children: (0, r.jsx)(s.SJ, {
                     children: (e) => {
                         var { ref: t } = e,
@@ -177,20 +178,20 @@ let P = 490,
                             N(
                                 S(
                                     {
-                                        id: G,
+                                        id: Z,
                                         ref: (e) => {
                                             var n;
-                                            ((t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null), (V.current = e));
+                                            ((t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null), (Y.current = e));
                                         }
                                     },
                                     n
                                 ),
                                 {
                                     className: I.scroller,
-                                    style: { maxHeight: J },
+                                    style: { maxHeight: en },
                                     role: 'listbox',
-                                    'aria-labelledby': (0, f.rp)(G),
-                                    children: X
+                                    'aria-labelledby': (0, f.rp)(Z),
+                                    children: ee
                                 }
                             )
                         );
@@ -198,19 +199,19 @@ let P = 490,
                 })
             })
         });
-        return null != K
-            ? (0, r.jsx)(Y, {
+        return null != Q
+            ? (0, r.jsx)(q, {
                   children: (0, r.jsx)(c.jRF, {
                       targetRef: e.targetRef,
-                      overrideTargetRect: K,
-                      positionKey: q,
-                      position: null != (R = e.position) ? R : 'top',
+                      overrideTargetRect: Q,
+                      positionKey: $,
+                      position: null != (k = e.position) ? k : 'top',
                       align: 'left',
                       spacing: 8,
                       autoInvert: !0,
                       nudgeAlignIntoViewport: !0,
-                      children: () => ee
+                      children: () => ea
                   })
               })
-            : ee;
+            : ea;
     });

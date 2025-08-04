@@ -352,7 +352,7 @@ function ef(e) {
                     tile_position: String(null == _ ? void 0 : _.tilePosition),
                     cta_name: 'claim with orbs button'
                 }),
-                    (0, j.q)({
+                    (0, j.qA)({
                         skuId: (0, $.S)({
                             product: t,
                             selectedVariantIndex: s

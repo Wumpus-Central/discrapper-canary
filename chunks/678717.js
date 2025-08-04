@@ -36,8 +36,8 @@ var _ = a(392750),
     D = a(246992),
     L = a(484662),
     M = a(496025),
-    F = a(442954),
-    U = a(925124),
+    U = a(442954),
+    F = a(925124),
     B = a(633001),
     z = a(702904),
     G = a(178821),
@@ -198,7 +198,7 @@ function eo(e) {
                     id: 'modals',
                     name: 'Modals',
                     group: ea.v0.UI,
-                    render: () => (0, n.jsx)(F.Z, {})
+                    render: () => (0, n.jsx)(U.Z, {})
                 }),
                 e.push({
                     id: 'layers',
@@ -248,7 +248,7 @@ function eo(e) {
                         id: 'offers',
                         name: 'Offers',
                         group: ea.v0.PREMIUM,
-                        render: () => (0, n.jsx)(U.Z, {})
+                        render: () => (0, n.jsx)(F.Z, {})
                     }),
                     e.push({
                         id: 'payments',

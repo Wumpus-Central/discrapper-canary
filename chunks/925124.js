@@ -116,10 +116,10 @@ function S(e) {
     let D = null != I,
         L = null != I && new Date(I).getTime() < Date.now(),
         M = (null == k ? void 0 : k.sku_id) === g.Si.TIER_0,
-        F = async () => {
-            (N(!0), D ? await U({ expiresAt: null }) : await (0, d.a)(m), b(), N(!1));
+        U = async () => {
+            (N(!0), D ? await F({ expiresAt: null }) : await (0, d.a)(m), b(), N(!1));
         },
-        U = async (e) => {
+        F = async (e) => {
             N(!0);
             try {
                 await s.tn.patch({
@@ -263,7 +263,7 @@ function S(e) {
                         (0, n.jsx)('input', {
                             type: 'date',
                             value: null != I ? I.substring(0, 10) : '',
-                            onChange: (e) => U({ expiresAt: e.target.value })
+                            onChange: (e) => F({ expiresAt: e.target.value })
                         })
                     ]
                 }),
@@ -278,7 +278,7 @@ function S(e) {
                         (0, n.jsx)('input', {
                             type: 'text',
                             value: null != (u = null == A ? void 0 : A.id) ? u : '',
-                            onChange: (e) => U({ referrerId: e.target.value })
+                            onChange: (e) => F({ referrerId: e.target.value })
                         })
                     ]
                 }),
@@ -286,7 +286,7 @@ function S(e) {
                     className: j.badgeContainer,
                     children: [
                         (0, n.jsx)(c.P3F, {
-                            onClick: F,
+                            onClick: U,
                             className: i()(j.badge, j.clickable, {
                                 [j.acked]: D,
                                 [j.expired]: L
@@ -533,10 +533,10 @@ function I() {
         [R, k] = r.useState(!0),
         [A, Z] = r.useState(10080),
         [D, L] = r.useState([]),
-        { entitlements: M, deleteFractionalPremium: F, refreshEntitlementList: U } = (0, f.m)();
+        { entitlements: M, deleteFractionalPremium: U, refreshEntitlementList: F } = (0, f.m)();
     r.useEffect(() => {
-        U();
-    }, [U]);
+        F();
+    }, [F]);
     let B = (e) => e.filter((e) => e.sourceType === v.kNB.REVERSE_TRIAL && null != e.endsAt && e.endsAt > new Date());
     (r.useEffect(() => {
         L(B(M));
@@ -575,7 +575,7 @@ function I() {
         },
         H = async () => {
             let e = new Date(Date.now() + 60 * A * 1000).toISOString();
-            (await E(e), U());
+            (await E(e), F());
         };
     return (0, n.jsx)(c.zJl, {
         className: _.panel,
@@ -778,7 +778,7 @@ function I() {
                                         {
                                             entitlement: e,
                                             active: !0,
-                                            onDelete: () => F(e.id)
+                                            onDelete: () => U(e.id)
                                         },
                                         e.id
                                     )

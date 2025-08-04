@@ -348,6 +348,7 @@ let i = {
     RobloxSubgameManager: {
         actions: ['RUNNING_GAMES_CHANGE', 'POST_CONNECTION_OPEN'],
         inlineRequire: () => n(277358).Z,
+        hasStoreChangeListeners: !0,
         neverLoadBeforeConnectionOpen: !0
     },
     DetectableGamesManager: {

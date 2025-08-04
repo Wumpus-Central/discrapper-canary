@@ -8,7 +8,6 @@ e.exports = {
     closeButton: 'closeButton__5a2df',
     sliderContainer: 'sliderContainer__5a2df',
     gradientDirectionSliderContainer: 'gradientDirectionSliderContainer__5a2df',
-    surpriseMeButton: 'surpriseMeButton__5a2df',
     footerContainer: 'footerContainer__5a2df',
     subscribeButton: 'subscribeButton__5a2df',
     coachmarkHeaderContainer: 'coachmarkHeaderContainer__5a2df',

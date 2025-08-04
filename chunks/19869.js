@@ -217,7 +217,7 @@ function N() {
                     }),
                     (0, i.jsx)(s.zx, {
                         onClick: () => {
-                            (0, _.q)({
+                            (0, _.qA)({
                                 skuId: e,
                                 onCheckoutSuccess: (e) => {
                                     let { skuId: t, entitlements: n } = e;

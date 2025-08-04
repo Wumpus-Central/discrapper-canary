@@ -115,9 +115,9 @@ function U(e) {
             },
             [p, a]
         ),
-        { hasLoadedEver: G, hasNotifyingChannels: W } = (0, s.cj)([x.Z], () => ({
+        { hasLoadedEver: G, canLoadMore: W } = (0, s.cj)([x.Z], () => ({
             hasLoadedEver: x.Z.hasLoadedEver,
-            hasNotifyingChannels: null != x.Z.getNotifyingChannelIds()
+            canLoadMore: x.Z.canLoadMore({})
         }));
     (i.useEffect(() => {
         W && !G && U(A.X.ON_OPEN);

@@ -1,10 +1,10 @@
-r.d(t, {
-    g: () => i,
-    o: () => a
+l.d(t, {
+    g: () => n,
+    o: () => i
 });
-var n = r(818083),
-    l = r(987338);
-let i = (0, n.B)({
+var o = l(818083),
+    r = l(987338);
+let n = (0, o.B)({
         kind: 'user',
         id: '2025-02_shop_paired_deco_upsell',
         label: 'Shop Paired Deco Upsell Experiment',
@@ -16,6 +16,6 @@ let i = (0, n.B)({
                 config: { showPairedDecoUpsell: !0 }
             }
         ],
-        commonTriggerPoint: l.$P.COLLECTIBLES_SHOP_OPEN
+        commonTriggerPoint: r.$P.COLLECTIBLES_SHOP_OPEN
     }),
-    a = (e) => i.useExperiment({ location: e }).showPairedDecoUpsell;
+    i = (e) => n.useExperiment({ location: e }).showPairedDecoUpsell;

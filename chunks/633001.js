@@ -272,7 +272,7 @@ let M = r.memo(function (e) {
             ]
         });
     }),
-    F = r.memo(function (e) {
+    U = r.memo(function (e) {
         let { pid: t } = e,
             a = (0, o.cj)([y.default], () => y.default.getOverlayPIDStatuses()),
             r = (0, o.cj)([b.default], () => b.default.getTrackedGames()),
@@ -358,7 +358,7 @@ let M = r.memo(function (e) {
             ]
         });
     });
-function U(e) {
+function F(e) {
     let t = D(Object.values((0, o.Wu)([j.Z], () => j.Z.getWidgetsForLayout(S.$S))), e);
     return [
         t,
@@ -633,7 +633,7 @@ let V = r.memo(function (e) {
                         color: 'text-default',
                         children: 'No tracked game times'
                     }),
-                Object.values(a).map((e) => (0, n.jsx)(F, { pid: e.pid }, e.pid)),
+                Object.values(a).map((e) => (0, n.jsx)(U, { pid: e.pid }, e.pid)),
                 (0, n.jsxs)('div', {
                     children: [
                         (0, n.jsxs)(d.Text, {
@@ -672,8 +672,8 @@ let V = r.memo(function (e) {
         });
     }),
     K = r.memo(function () {
-        let [e, t] = U(E.Odu.CLICK_ZONE_DEBUG),
-            [a, r] = U(E.Odu.PERFORMANCE_DEBUG),
+        let [e, t] = F(E.Odu.CLICK_ZONE_DEBUG),
+            [a, r] = F(E.Odu.PERFORMANCE_DEBUG),
             l = (0, o.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(h.GO.ClickZones)),
             i = (0, o.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(h.GO.WidgetAreas)),
             s = (0, o.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(h.GO.DisabledGPUBoost)),

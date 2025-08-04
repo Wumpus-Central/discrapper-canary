@@ -656,7 +656,9 @@ function eR(e, t) {
                             onSendMessage: tl,
                             onSendSticker: th,
                             onVisibilityChange: tS,
+                            editorScrollerRef: ez,
                             editorHeight: tE,
+                            barsHeight: 40 * tD.floating.length,
                             setValue: (e, t) => (null == ti ? void 0 : ti(null, e, t)),
                             position: ej
                         }),

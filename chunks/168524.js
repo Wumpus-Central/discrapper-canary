@@ -1,7 +1,11 @@
-n.d(t, { Z: () => c });
-var r = n(492423),
-    i = n(774073);
-function a(e, t, n) {
+n.d(t, { Z: () => f });
+var r = n(73800),
+    i = n(835473),
+    a = n(817788),
+    o = n(492423),
+    s = n(774073),
+    l = n(981631);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +18,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,12 +29,12 @@ function o(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                c(e, t, n[t]);
             }));
     }
     return e;
 }
-function s(e, t) {
+function d(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -42,29 +46,31 @@ function s(e, t) {
     }
     return n;
 }
-function l(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : s(Object(t)).forEach(function (n) {
+            : d(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function c(e) {
+function f(e) {
     let { onOpened: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { applicationId: n } = e,
-        a = (0, i.ZP)(e);
-    return a.shouldOpenGameProfile && null != n
-        ? (i) => {
-              (i.stopPropagation(),
-                  i.preventDefault(),
-                  r.Z.openGameProfileModal(
-                      l(o({}, e), {
-                          applicationId: n,
-                          gameProfileModalChecks: a
+        c = (0, i.q)(n),
+        d = r.useMemo(() => (null == c ? n : null != c.thirdPartySkus.find((e) => e.distributor === l.GQo.ROBLOX) ? a.eB : n), [c, n]),
+        f = (0, s.ZP)(_(u({}, e), { applicationId: d }));
+    return f.shouldOpenGameProfile && null != d
+        ? (n) => {
+              (n.stopPropagation(),
+                  n.preventDefault(),
+                  o.Z.openGameProfileModal(
+                      _(u({}, e), {
+                          applicationId: d,
+                          gameProfileModalChecks: f
                       })
                   ),
                   null == t || t());

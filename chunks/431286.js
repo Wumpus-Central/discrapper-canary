@@ -1,4 +1,4 @@
-(n.d(t, { t: () => S }), n(388685));
+(n.d(t, { t: () => x }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(636977),
@@ -16,21 +16,23 @@ var r = n(255367),
     b = n(507808),
     _ = n(822857),
     O = n(479766),
-    y = n(331663),
-    C = n(981631),
-    v = n(921944),
-    j = n(46140);
-let E = 'orb-announcement-modal-key';
-function S() {
+    y = n(275388),
+    C = n(331663),
+    v = n(981631),
+    j = n(921944),
+    E = n(46140);
+let S = 'orb-announcement-modal-key';
+function x() {
     let { enabled: e } = (0, _.hl)({ location: 'virtual_currency_announcement_modal' }),
         t = (0, o.e7)([O.Z], () => O.Z.onboardingModalOpenedPrior),
-        { user: S } = (0, o.cj)([g.default], () => ({ user: g.default.getCurrentUser() })),
-        x = (0, o.e7)([f.Z], () => f.Z.hasLayers()),
-        I = (0, c.s9z)(c.JQI),
-        P = t || (0, m.EO)(S) || x || I,
-        [N, w] = (0, h.US)(e && !P ? [a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...y.b.useSelectedDismissibleContent);
+        { user: x } = (0, o.cj)([g.default], () => ({ user: g.default.getCurrentUser() })),
+        I = (0, o.e7)([f.Z], () => f.Z.hasLayers()),
+        P = (0, y.GE)(S),
+        N = (0, m.EO)(x) || I || P,
+        [w, T] = (0, h.US)(e && !N ? [a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...C.b.useSelectedDismissibleContent);
     i.useEffect(() => {
-        N === a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
+        w !== a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL ||
+            t ||
             (u.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN' }),
             (0, s.ZD)(
                 async () => {
@@ -38,28 +40,28 @@ function S() {
                     return function (t) {
                         let { onClose: n, transitionState: i } = t,
                             o = async () => {
-                                (await n(), w(v.L.USER_DISMISS));
+                                (await n(), T(j.L.USER_DISMISS));
                             };
                         return (0, r.jsx)(e, {
                             transitionState: i,
                             onClose: o,
                             ctaOnClick: () => {
-                                (w(v.L.TAKE_ACTION),
+                                (T(j.L.TAKE_ACTION),
                                     (0, d.Q3)(a.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, {
-                                        dismissAction: v.L.INDIRECT_ACTION,
-                                        groupName: v.R.VIRTUAL_CURRENCY_ONBOARDING
+                                        dismissAction: j.L.INDIRECT_ACTION,
+                                        groupName: j.R.VIRTUAL_CURRENCY_ONBOARDING
                                     }),
                                     (0, d.Q3)(a.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
-                                        dismissAction: v.L.INDIRECT_ACTION,
-                                        groupName: v.R.VIRTUAL_CURRENCY_ONBOARDING
+                                        dismissAction: j.L.INDIRECT_ACTION,
+                                        groupName: j.R.VIRTUAL_CURRENCY_ONBOARDING
                                     }),
                                     (0, b.Y)({
-                                        pageType: C.ZY5.ORBS_ANNOUNCEMENT_MODAL,
-                                        sectionType: C.jXE.ORBS_ANNOUNCEMENT_MODAL,
-                                        ctaObject: C.qAy.CTA_TO_ORB_INTRO_QUEST
+                                        pageType: v.ZY5.ORBS_ANNOUNCEMENT_MODAL,
+                                        sectionType: v.jXE.ORBS_ANNOUNCEMENT_MODAL,
+                                        ctaObject: v.qAy.CTA_TO_ORB_INTRO_QUEST
                                     }),
                                     (0, p.navigateToQuestHome)({
-                                        questId: j.V6,
+                                        questId: E.V6,
                                         fromContent: l.j.ORBS_ANNOUNCEMENT_MODAL
                                     }),
                                     n());
@@ -68,11 +70,11 @@ function S() {
                     };
                 },
                 {
-                    modalKey: E,
+                    modalKey: S,
                     onCloseRequest: () => {
-                        (w(v.L.USER_DISMISS), (0, c.Mr3)(E));
+                        (T(j.L.USER_DISMISS), (0, c.Mr3)(S));
                     }
                 }
             ));
-    }, [N, e, t, w, x, I]);
+    }, [w, e, t, T, I]);
 }

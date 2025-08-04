@@ -1,6 +1,6 @@
 n.d(t, {
     Nn: () => O,
-    ZP: () => Z,
+    ZP: () => P,
     ms: () => N
 });
 var r = n(255367),
@@ -180,19 +180,19 @@ function O(e) {
     var { guildId: t, powerup: n, compact: i, onError: u } = e,
         d = E(e, ['guildId', 'powerup', 'compact', 'onError']);
     let { onActivate: m, isLoading: b, error: N, onShowDeactivate: O } = (0, f.ZP)(t, n),
-        w = (0, p.Z)(t, n).type !== _.A3.INACTIVE,
-        { disabled: P, reason: Z } = (0, c.Z)(t, n, w);
+        Z = (0, p.Z)(t, n).type !== _.A3.INACTIVE,
+        { disabled: w, reason: P } = (0, c.Z)(t, n, Z);
     return (
         o.useEffect(() => {
             null == u || u(N);
         }, [N, u]),
         (0, r.jsx)(a.ua7, {
             delay: 100,
-            'aria-label': null != Z ? Z : w ? g.intl.string(x.default.TZsu1d) : void 0,
+            'aria-label': null != P ? P : Z ? g.intl.string(x.default.TZsu1d) : void 0,
             text:
-                null != Z
-                    ? Z
-                    : w
+                null != P
+                    ? P
+                    : Z
                       ? (0, r.jsx)(I, {
                             guildId: t,
                             powerup: n
@@ -207,10 +207,10 @@ function O(e) {
                                 className: v.secondaryButton,
                                 innerClassName: v.buttonInner,
                                 wrapperClassName: l()(v.secondaryButton, { [v.buttonWrapper]: !0 === d.grow }),
-                                color: w ? s.Tt.PRIMARY : s.Tt.BRAND,
-                                'aria-label': g.intl.string(w ? x.default.TZsu1d : x.default.gSxlHR),
-                                disabled: P,
-                                onClick: w ? O : m,
+                                color: Z ? s.Tt.PRIMARY : s.Tt.BRAND,
+                                'aria-label': g.intl.string(Z ? x.default.TZsu1d : x.default.gSxlHR),
+                                disabled: w,
+                                onClick: Z ? O : m,
                                 submitting: b
                             }),
                             d
@@ -218,7 +218,7 @@ function O(e) {
                         {
                             children: (0, r.jsx)(C, {
                                 powerup: n,
-                                isActive: w,
+                                isActive: Z,
                                 compact: i
                             })
                         }
@@ -227,7 +227,7 @@ function O(e) {
         })
     );
 }
-function w(e) {
+function Z(e) {
     let { className: t, guildId: n, powerup: o } = e,
         { onShowMore: i } = (0, f.ZP)(n, o);
     return (0, r.jsx)('div', {
@@ -242,7 +242,7 @@ function w(e) {
         })
     });
 }
-function P(e) {
+function w(e) {
     let { className: t, guildId: n, powerup: o, onError: i } = e,
         s = (0, p.Z)(n, o).type !== _.A3.INACTIVE,
         a = (0, u.Z)(n, o, 'GuildPowerupCardFooterAdmin'),
@@ -267,7 +267,7 @@ function P(e) {
         ]
     });
 }
-function Z(e) {
+function P(e) {
     var t = b(
         {},
         (function (e) {
@@ -275,5 +275,5 @@ function Z(e) {
             return e;
         })(e)
     );
-    return (0, d.Z)(t.guildId) ? (0, r.jsx)(P, j({}, t)) : (0, r.jsx)(w, j({}, t));
+    return (0, d.Z)(t.guildId) ? (0, r.jsx)(w, j({}, t)) : (0, r.jsx)(Z, j({}, t));
 }

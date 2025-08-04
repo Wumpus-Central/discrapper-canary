@@ -274,7 +274,10 @@ let N = (e) => {
             children: [
                 (0, l.jsx)(u.Text, {
                     variant: 'text-md/normal',
-                    children: b.intl.format(b.t.t2Wbo6, { required: t })
+                    children: b.intl.format(b.t.t2Wbo6, {
+                        required: t,
+                        decorator: ''
+                    })
                 }),
                 (0, l.jsx)(u.mBM, {
                     size: 'md',

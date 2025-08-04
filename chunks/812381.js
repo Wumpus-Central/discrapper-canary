@@ -14,10 +14,12 @@ let d = () => {
                 label: 'DISABLED (no override)',
                 value: void 0
             },
-            ...Object.values(r.H).map((e) => ({
-                label: e,
-                value: e
-            }))
+            ...Object.values(r.H)
+                .filter((e) => e !== r.H.SUMMER_SALE_TAKEOVER)
+                .map((e) => ({
+                    label: e,
+                    value: e
+                }))
         ];
     return (0, n.jsxs)('div', {
         className: c.container,
