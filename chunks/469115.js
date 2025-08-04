@@ -1,8 +1,6 @@
 (n.d(t, {
-    Qf: () => p,
-    XV: () => f,
-    bV: () => h,
-    qt: () => m
+    XV: () => _,
+    qt: () => f
 }),
     n(388685));
 var r = n(392711),
@@ -499,46 +497,28 @@ let l = [
         getName: () => s.intl.string(s.t.Mfoe3t),
         midpointPercentage: 50
     },
-    _ = {
-        type: a.r.BACKGROUND_GRADIENT_PRESET,
-        id: i.Us.EASTER_EGG,
-        theme: o.BR.LIGHT,
-        colors: [
-            {
-                token: o.Il.BG_GRADIENT_EASTER_EGG_1,
-                stop: 4
-            },
-            {
-                token: o.Il.BG_GRADIENT_EASTER_EGG_2,
-                stop: 96
-            }
-        ],
-        angle: 180,
-        getName: () => s.intl.string(s.t.mFinbW),
-        midpointPercentage: 50
-    },
-    f = [...l, ...u, d, _],
-    p = [d, ...u, ...l, _],
-    h = [
+    _ = [
+        ...l,
+        ...u,
+        d,
         {
-            type: a.r.STANDARD_BACKGROUND_THEME,
-            theme: c,
-            getName: () => s.intl.string(s.t.b8Cei4)
-        },
-        {
-            type: a.r.STANDARD_BACKGROUND_THEME,
+            type: a.r.BACKGROUND_GRADIENT_PRESET,
+            id: i.Us.EASTER_EGG,
             theme: o.BR.LIGHT,
-            getName: () => s.intl.string(s.t.K2sFfn)
-        },
-        {
-            type: a.r.STANDARD_BACKGROUND_THEME,
-            theme: o.BR.MIDNIGHT,
-            getName: () => s.intl.string(s.t.pQwSpa)
-        },
-        {
-            type: a.r.STANDARD_BACKGROUND_THEME,
-            theme: 'system',
-            getName: () => s.intl.string(s.t.zlvNOj)
+            colors: [
+                {
+                    token: o.Il.BG_GRADIENT_EASTER_EGG_1,
+                    stop: 4
+                },
+                {
+                    token: o.Il.BG_GRADIENT_EASTER_EGG_2,
+                    stop: 96
+                }
+            ],
+            angle: 180,
+            getName: () => s.intl.string(s.t.mFinbW),
+            midpointPercentage: 50
         }
-    ],
-    m = (0, r.keyBy)(f, 'id');
+    ];
+([...u, ...l], a.r.STANDARD_BACKGROUND_THEME, a.r.STANDARD_BACKGROUND_THEME, o.BR.LIGHT, a.r.STANDARD_BACKGROUND_THEME, o.BR.MIDNIGHT, a.r.STANDARD_BACKGROUND_THEME, () => s.intl.string(s.t.zlvNOj));
+let f = (0, r.keyBy)(_, 'id');

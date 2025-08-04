@@ -37,70 +37,74 @@ function m(e) {
                 l.default.track(_.rMx.GAME_STORE_BUTTON_CLICKED, {
                     application_id: e.applicationId,
                     application_name: e.applicationName,
-                    platform: e.platform
+                    platform: e.platform,
+                    location: e.location
                 }),
                 window.open(e.url));
         }
     };
 }
-function g(e) {
-    var t;
-    let { enabled: n } = d.m.useExperiment({ location: 'useGameStoreLink' }, { autoTrackExposure: !1 }),
-        [l, g] = (0, r.useState)(!1);
+function g(e, t) {
+    var n;
+    let { enabled: l } = d.m.useExperiment({ location: 'useGameStoreLink' }, { autoTrackExposure: !1 }),
+        [g, E] = (0, r.useState)(!1);
     (0, r.useEffect)(() => {
-        c.Z.isProtocolRegistered('steam').then(g);
+        c.Z.isProtocolRegistered('steam').then(E);
     }, []);
-    let E = (0, o.q)(e),
-        b = (0, i.e7)([s.Z], () => (null != E ? s.Z.getGameByName(E.name) : null)),
-        y = null != (t = (0, o.q)(null == b ? void 0 : b.id)) ? t : E,
-        O = (0, i.e7)([u.Z], () => (null != y ? u.Z.getGame(y.id) : null)),
-        v = (0, r.useMemo)(() => {
+    let b = (0, o.q)(e),
+        y = (0, i.e7)([s.Z], () => (null != b ? s.Z.getGameByName(b.name) : null)),
+        O = null != (n = (0, o.q)(null == y ? void 0 : y.id)) ? n : b,
+        v = (0, i.e7)([u.Z], () => (null != O ? u.Z.getGame(O.id) : null)),
+        I = (0, r.useMemo)(() => {
             var e, t, n;
-            if (null == y) return null;
-            let r = null != (n = null != (t = null == (e = y.thirdPartySkus.find((e) => e.distributor === _.GQo.STEAM)) ? void 0 : e.id) ? t : null == O ? void 0 : O.steam_id) ? n : null;
+            if (null == O) return null;
+            let r = null != (n = null != (t = null == (e = O.thirdPartySkus.find((e) => e.distributor === _.GQo.STEAM)) ? void 0 : e.id) ? t : null == v ? void 0 : v.steam_id) ? n : null;
             return {
-                app: y,
+                app: O,
                 steamSku: r
             };
-        }, [y, O]),
-        I = (0, r.useMemo)(() => {
-            if (null == v) return null;
-            let { app: t, steamSku: n } = v,
-                r = p[t.id];
-            if (null != r && '' !== r)
+        }, [O, v]),
+        T = (0, r.useMemo)(() => {
+            if (null == I) return null;
+            let { app: n, steamSku: r } = I,
+                i = p[n.id];
+            if (null != i && '' !== i)
                 return m({
-                    url: r,
+                    url: i,
                     platform: 'battlenet',
                     icon: a.DvD,
                     labelKey: f.t['ZGax9/'],
                     applicationId: e,
-                    applicationName: t.name
+                    applicationName: n.name,
+                    location: t
                 });
-            let i = h[t.id];
-            return null != i && '' !== i
+            let o = h[n.id];
+            return null != o && '' !== o
                 ? m({
-                      url: i,
+                      url: o,
                       platform: 'riot',
                       icon: a.mVV,
                       labelKey: f.t['+KXANz'],
                       applicationId: e,
-                      applicationName: t.name
+                      applicationName: n.name,
+                      location: t
                   })
-                : null != n && '' !== n
+                : null != r && '' !== r
                   ? m({
-                        url: l ? 'steam://advertise/'.concat(n) : 'https://store.steampowered.com/app/'.concat(n),
+                        url: g ? 'steam://advertise/'.concat(r) : 'https://store.steampowered.com/app/'.concat(r),
                         platform: 'steam',
                         icon: a.xCj,
                         labelKey: f.t.OlubCw,
                         applicationId: e,
-                        applicationName: t.name
+                        applicationName: n.name,
+                        location: t
                     })
                   : null;
-        }, [v, e, l]);
+        }, [I, e, g, t]);
     return (
         (0, r.useEffect)(() => {
-            null != I && d.m.trackExposure({ location: 'GameStoreLink' });
-        }, [I]),
-        n ? I : null
+            null != T && d.m.trackExposure({ location: 'GameStoreLink' });
+        }, [T]),
+        l ? T : null
     );
 }

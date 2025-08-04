@@ -360,13 +360,13 @@ function et(e) {
         _ = i.useRef(!1),
         { colors: f, chassisMixAmount: m, gradientAngle: v, setColors: I, setChassisMixAmount: T, setGradientAngle: C } = (0, N.Ig)(),
         [x, k] = i.useState(null != (t = f[0]) ? t : N.Dp),
-        j = (0, s.e7)([A.Z], () => A.Z.theme),
-        B = (0, O.Nj)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
-        { analyticsLocations: V } = (0, b.ZP)(E.Z.CUSTOM_THEMES_EDITOR),
-        F = async () => {
+        B = (0, s.e7)([A.Z], () => A.Z.theme),
+        V = (0, O.Nj)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+        { analyticsLocations: F } = (0, b.ZP)(E.Z.CUSTOM_THEMES_EDITOR),
+        Z = async () => {
             ((_.current = !0),
                 await (0, h.ZI)({
-                    theme: j,
+                    theme: B,
                     customUserThemeSettings: {
                         colors: f,
                         gradientColorStops: [],
@@ -374,16 +374,16 @@ function et(e) {
                         baseMix: m
                     }
                 }),
-                (0, w.u7)(f, m, v, j, V),
+                (0, w.u7)(f, m, v, B, F),
                 null == a || a(M.L.TAKE_ACTION),
-                B || (0, O.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+                V || (0, O.Q3)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
                 (0, y.Ll)(),
                 (0, S.UD)());
         },
-        Z = () => {
+        H = () => {
             (d(R._m.RESET_BUTTON), (0, w.uf)());
         },
-        H = f.length > 0;
+        Y = f.length > 0;
     return (i.useEffect(
         () => () => {
             _.current || d(R._m.EDITOR_CLOSE);
@@ -408,44 +408,77 @@ function et(e) {
                                       markAsDismissed: a,
                                       isCoachmark: o
                                   }),
-                                  (0, r.jsx)(L.o, {}),
-                                  (0, r.jsx)(D.U, {
-                                      onChange: (e) => {
-                                          (k(e), 0 === f.length && (0, R.lT)(f, e, I));
-                                      },
-                                      value: x,
-                                      colors: f,
-                                      setColors: I
+                                  (0, r.jsxs)('div', {
+                                      className: G.section,
+                                      children: [
+                                          (0, r.jsx)(p.Text, {
+                                              variant: 'text-sm/semibold',
+                                              color: 'text-secondary',
+                                              children: U.intl.string(j.default.o2NfLC)
+                                          }),
+                                          (0, r.jsx)(L.o, {})
+                                      ]
                                   }),
-                                  f.length > 1 &&
-                                      (0, r.jsx)(q, {
-                                          gradientAngle: v,
-                                          setGradientAngle: C
-                                      }),
-                                  (0, r.jsx)(X, {
-                                      chassisMixAmount: m,
-                                      setChassisMixAmount: (e) => {
-                                          (T(e), 0 === f.length && (0, R.lT)(f, x, I));
-                                      }
+                                  (0, r.jsxs)('div', {
+                                      className: G.section,
+                                      children: [
+                                          (0, r.jsx)(p.Text, {
+                                              variant: 'text-sm/semibold',
+                                              color: 'text-secondary',
+                                              children: U.intl.string(j.default.uSL2Gx)
+                                          }),
+                                          (0, r.jsx)(D.U, {
+                                              onChange: (e) => {
+                                                  (k(e), 0 === f.length && (0, R.lT)(f, e, I));
+                                              },
+                                              value: x,
+                                              colors: f,
+                                              setColors: I
+                                          })
+                                      ]
                                   }),
-                                  (0, r.jsx)(c.z, {
-                                      variant: 'secondary',
-                                      onClick: Z,
-                                      icon: p.Oe7,
-                                      text: U.intl.string(U.t.yBZMsb),
-                                      fullWidth: !0
+                                  (0, r.jsxs)('div', {
+                                      className: G.section,
+                                      children: [
+                                          (0, r.jsx)(p.Text, {
+                                              variant: 'text-sm/semibold',
+                                              color: 'text-secondary',
+                                              children: U.intl.string(j.default.F1t0c3)
+                                          }),
+                                          f.length > 1 &&
+                                              (0, r.jsx)(q, {
+                                                  gradientAngle: v,
+                                                  setGradientAngle: C
+                                              }),
+                                          (0, r.jsx)(X, {
+                                              chassisMixAmount: m,
+                                              setChassisMixAmount: (e) => {
+                                                  (T(e), 0 === f.length && (0, R.lT)(f, x, I));
+                                              }
+                                          })
+                                      ]
+                                  }),
+                                  (0, r.jsx)('div', {
+                                      className: G.resetButton,
+                                      children: (0, r.jsx)(c.z, {
+                                          variant: 'secondary',
+                                          onClick: H,
+                                          icon: p.Oe7,
+                                          text: U.intl.string(U.t.yBZMsb),
+                                          fullWidth: !0
+                                      })
                                   })
                               ]
                           })
                       }),
                       o
                           ? (0, r.jsx)($, {
-                                onSaveTheme: F,
-                                canApply: H
+                                onSaveTheme: Z,
+                                canApply: Y
                             })
                           : (0, r.jsx)(ee, {
-                                onSaveTheme: F,
-                                canApply: H,
+                                onSaveTheme: Z,
+                                canApply: Y,
                                 metadata: n
                             })
                   ]

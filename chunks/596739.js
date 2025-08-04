@@ -1,35 +1,34 @@
-(n.d(t, { W: () => u }), n(953529));
+(n.d(t, { W: () => c }), n(953529));
 var r = n(255367),
     i = n(73800),
-    l = n(755721),
-    a = n(481060),
-    o = n(388032),
-    s = n(392819),
-    c = n(560580);
-function u(e) {
-    let { header: t, description: n, onDismiss: u, buttons: d, dismissible: p = !0 } = e,
-        h = i.useCallback(() => {
-            null == u || u();
-        }, [u]);
+    l = n(481060),
+    a = n(388032),
+    o = n(392819),
+    s = n(560580);
+function c(e) {
+    let { header: t, description: n, onDismiss: c, buttons: u, dismissible: d = !0 } = e,
+        p = i.useCallback(() => {
+            null == c || c();
+        }, [c]);
     return (0, r.jsxs)('div', {
-        className: s.safetyBanner,
+        className: o.safetyBanner,
         children: [
             (0, r.jsxs)('div', {
-                className: s.shieldAndHeading,
+                className: o.shieldAndHeading,
                 children: [
                     (0, r.jsx)('img', {
-                        className: s.safetyShieldIcon,
-                        src: c,
+                        className: o.safetyShieldIcon,
+                        src: s,
                         alt: ''
                     }),
                     (0, r.jsxs)('div', {
                         children: [
-                            (0, r.jsx)(a.X6q, {
+                            (0, r.jsx)(l.X6q, {
                                 variant: 'heading-md/semibold',
                                 color: 'text-primary',
                                 children: t
                             }),
-                            (0, r.jsx)(a.Text, {
+                            (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-primary',
                                 children: n
@@ -39,36 +38,34 @@ function u(e) {
                 ]
             }),
             (0, r.jsx)('div', {
-                className: s.buttons,
+                className: o.buttons,
                 children:
-                    null == d
+                    null == u
                         ? void 0
-                        : d.map((e, t) => {
+                        : u.map((e, t) => {
                               var n;
                               return (0, r.jsx)(
-                                  l.zx,
+                                  l.zxk,
                                   {
-                                      size: null != (n = e.size) ? n : l.zx.Sizes.SMALL,
-                                      color: e.color,
-                                      'aria-label': e.text,
-                                      onClick: e.onclick,
-                                      className: s.ctaButton,
-                                      children: e.text
+                                      text: e.text,
+                                      variant: null != (n = e.variant) ? n : 'secondary',
+                                      onClick: e.onClick,
+                                      size: 'sm'
                                   },
                                   t
                               );
                           })
             }),
-            p
-                ? (0, r.jsx)(a.P3F, {
-                      className: s.closeButton,
-                      onClick: h,
+            d
+                ? (0, r.jsx)(l.P3F, {
+                      className: o.closeButton,
+                      onClick: p,
                       role: 'button',
-                      'aria-label': o.intl.string(o.t.WAI6xs),
-                      children: (0, r.jsx)(a.Dio, {
+                      'aria-label': a.intl.string(a.t.WAI6xs),
+                      children: (0, r.jsx)(l.Dio, {
                           size: 'md',
                           color: 'currentColor',
-                          className: s.closeButton
+                          className: o.closeButton
                       })
                   })
                 : null

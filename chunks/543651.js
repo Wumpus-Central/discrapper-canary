@@ -55,7 +55,8 @@ let g = function (e) {
                       (0, r.jsx)(d.Z, {
                           maxUsers: 4,
                           users: y,
-                          guildId: g
+                          guildId: g,
+                          'aria-label': h.intl.string(h.t.WTozwc)
                       })
               ]
           });

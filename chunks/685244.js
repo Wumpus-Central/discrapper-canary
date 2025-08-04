@@ -86,7 +86,7 @@ function f(e) {
         [{ spring: j }, g] = (0, u.q_F)(() => ({ spring: 0 }), 'animate-always'),
         x = (0, u.dQu)(c.Z.colors.BACKGROUND_BASE_LOW).hex(),
         v = (0, u.dQu)(c.Z.colors.CONTROL_BRAND_FOREGROUND).hex(),
-        O = l.useCallback(() => {
+        y = l.useCallback(() => {
             (g({
                 spring: 1,
                 config: b
@@ -98,20 +98,20 @@ function f(e) {
                 }));
         }, [g]);
     l.useEffect(() => {
-        null != t && null != h && (o(t, h) || O());
-    }, [O, t, h, o]);
-    let y =
+        null != t && null != h && (o(t, h) || y());
+    }, [y, t, h, o]);
+    let O =
             null == j
                 ? void 0
                 : j.to({
                       range: [0, 1],
                       output: [''.concat(x, '00'), ''.concat(v, '27')]
                   }),
-        _ = null != s ? m(C({}, s), { backgroundColor: y }) : { backgroundColor: y };
+        H = null != s ? m(C({}, s), { backgroundColor: O }) : { backgroundColor: O };
     return (0, r.jsx)(
         a.animated.tr,
         m(C({}, f), {
-            style: _,
+            style: H,
             children: n
         })
     );

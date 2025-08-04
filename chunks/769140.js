@@ -158,12 +158,13 @@ function V(e) {
                               channelId: W.id,
                               maxUsers: w.W,
                               size: s.EFr.SIZE_16,
-                              onClick: (e) => {
+                              onClickOverflow: (e) => {
                                   (e.stopPropagation(), null == X || X({ action: 'PRESS_VOICE_CHANNEL_AVATARS' }));
                               },
                               onUserClick: (e) => e.stopPropagation(),
                               disableUserPopout: (e) => e === t.id,
-                              overflowCountColor: 'text-muted'
+                              overflowCountColor: 'text-muted',
+                              'aria-label': k.intl.string(k.t.jNqDh4)
                           }),
                           Z === x.lY.MODAL_V2 && ec()
                       ]

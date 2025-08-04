@@ -80,10 +80,10 @@ function h(e) {
                       };
                   });
         }, [x, g]),
-        O = new Intl.NumberFormat(b.intl.currentLocale).format(h),
-        y = (0, d.nX)(t.id),
-        _ = (0, d.xC)(t.id),
-        H = l.useMemo(() => 1 + +!!y + +!!_, [y, _]);
+        y = new Intl.NumberFormat(b.intl.currentLocale).format(h),
+        O = (0, d.nX)(t.id),
+        H = (0, d.xC)(t.id),
+        _ = l.useMemo(() => 1 + +!!O + +!!H, [O, H]);
     return 0 === h
         ? null
         : (0, r.jsxs)('tr', {
@@ -96,12 +96,12 @@ function h(e) {
                           variant: 'text-sm/normal',
                           color: 'always-white',
                           children: b.intl.format(b.t['/i5uJy'], {
-                              count: O,
+                              count: y,
                               date: j
                           })
                       })
                   }),
-                  (0, r.jsx)('td', { colSpan: H }),
+                  (0, r.jsx)('td', { colSpan: _ }),
                   (0, r.jsx)('td', {
                       colSpan: 2,
                       children: (0, r.jsx)('div', {

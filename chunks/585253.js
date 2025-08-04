@@ -1,33 +1,35 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(755721),
-    a = n(480086),
-    o = n(652853),
-    s = n(475413),
-    l = n(228168),
-    c = n(388032);
-function u(e) {
+    a = n(100527),
+    o = n(480086),
+    s = n(652853),
+    l = n(475413),
+    c = n(228168),
+    u = n(388032);
+function d(e) {
     let { activity: t, onAction: n } = e,
-        { themeType: u } = (0, o.z)(),
-        d = null == t ? void 0 : t.application_id,
-        _ = (0, a.u)(d);
-    return null == _
+        { themeType: d } = (0, s.z)(),
+        _ = null == t ? void 0 : t.application_id,
+        f = d === c.lY.MODAL_V2 ? a.Z.USER_PROFILE_MODAL : a.Z.USER_PROFILE_POPOUT,
+        p = (0, o.u)(_, f);
+    return null == p
         ? null
-        : u === l.lY.MODAL_V2
-          ? (0, r.jsx)(s.tG, {
-                icon: _.icon,
-                text: c.intl.string(_.labelKey),
+        : d === c.lY.MODAL_V2
+          ? (0, r.jsx)(l.tG, {
+                icon: p.icon,
+                text: u.intl.string(p.labelKey),
                 size: i.Ph.TINY,
                 themeColor: 'secondary',
-                onClick: _.openLink
+                onClick: p.openLink
             })
-          : (0, r.jsx)(s.tG, {
-                icon: _.icon,
-                text: c.intl.string(_.labelKey),
+          : (0, r.jsx)(l.tG, {
+                icon: p.icon,
+                text: u.intl.string(p.labelKey),
                 size: i.Ph.SMALL,
                 fullWidth: !0,
                 themeColor: 'secondary',
-                onClick: _.openLink
+                onClick: p.openLink
             });
 }

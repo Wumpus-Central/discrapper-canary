@@ -2,6 +2,8 @@ e.exports = {
     container: 'container__5a2df',
     containerInner: 'containerInner__5a2df',
     editorBody: 'editorBody__5a2df',
+    section: 'section__5a2df',
+    resetButton: 'resetButton__5a2df',
     headerContainer: 'headerContainer__5a2df',
     closeButton: 'closeButton__5a2df',
     sliderContainer: 'sliderContainer__5a2df',

@@ -72,7 +72,8 @@ function T(e) {
             }),
             (0, r.jsx)(u.Z, {
                 users: l,
-                maxUsers: 4
+                maxUsers: 3,
+                hideOverflowCount: !0
             })
         ]
     });

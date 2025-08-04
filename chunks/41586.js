@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(388685), n(781311));
+(n.d(t, { Z: () => O }), n(388685), n(781311));
 var r = n(255367),
     l = n(73800),
     o = n(954955),
@@ -7,21 +7,17 @@ var r = n(255367),
     s = n.n(a),
     c = n(149765),
     u = n(399606),
-    d = n(780384),
-    C = n(755721),
-    m = n(481060),
-    b = n(102560),
-    p = n(210887),
-    f = n(496675),
-    h = n(910693),
-    j = n(588215),
-    g = n(893966),
-    x = n(527379),
-    v = n(855935),
-    O = n(231338),
-    y = n(388032),
-    _ = n(630620);
-function H(e) {
+    d = n(481060),
+    C = n(102560),
+    m = n(496675),
+    b = n(910693),
+    p = n(893966),
+    f = n(527379),
+    h = n(855935),
+    j = n(231338),
+    g = n(388032),
+    x = n(630620);
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +42,7 @@ function H(e) {
     }
     return e;
 }
-function w(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,68 +60,66 @@ function w(e, t) {
         e
     );
 }
-let N = l.forwardRef(function (e, t) {
+let O = l.forwardRef(function (e, t) {
     let { guild: n } = e,
         o = l.useRef(null),
-        a = (0, u.e7)([g.Z], () => g.Z.hasDefaultSearchStateByGuildId(n.id), [n.id]),
-        N = (0, u.e7)([p.Z], () => (0, d.wj)(p.Z.theme)),
-        S = (0, u.e7)([f.Z], () => f.Z.can(c.$e(O.Pl.MANAGE_GUILD, O.Pl.KICK_MEMBERS), n)),
-        D = l.useCallback(() => {
-            null != n && S && (0, m.ZDy)(async () => (e) => (0, r.jsx)(b.Z, w(H({}, e), { guild: n })));
-        }, [n, S]),
-        Z = (0, u.e7)([g.Z], () => g.Z.getSearchStateByGuildId(n.id), [n.id], s()),
-        L = (0, h.gm)(n.id),
-        [R, I] = l.useState(Z.query),
-        P = null != Z.selectedSort && Z.selectedSort !== j.d$.ORDER_BY_GUILD_JOINED_AT_DESC && Z.selectedSort !== j.d$.ORDER_BY_UNSPECIFIED,
-        M = l.useCallback(
+        a = (0, u.e7)([p.Z], () => p.Z.hasDefaultSearchStateByGuildId(n.id), [n.id]),
+        O = (0, u.e7)([m.Z], () => m.Z.can(c.$e(j.Pl.MANAGE_GUILD, j.Pl.KICK_MEMBERS), n)),
+        H = l.useCallback(() => {
+            null != n && O && (0, d.ZDy)(async () => (e) => (0, r.jsx)(C.Z, y(v({}, e), { guild: n })));
+        }, [n, O]),
+        _ = (0, u.e7)([p.Z], () => p.Z.getSearchStateByGuildId(n.id), [n.id], s()),
+        w = (0, b.gm)(n.id),
+        [S, N] = l.useState(_.query),
+        Z = l.useCallback(
             (e) => {
                 let t = e.trim();
-                (t.length > 0 && L(), (0, x.Dr)(n.id, { query: t }));
+                (t.length > 0 && w(), (0, f.Dr)(n.id, { query: t }));
             },
-            [n.id, L]
+            [n.id, w]
         ),
-        V = l.useMemo(() => i()(M, 300), [M]),
-        E = l.useCallback(
+        D = l.useMemo(() => i()(Z, 300), [Z]),
+        L = l.useCallback(
             (e) => {
-                (I(e), V(e));
+                (N(e), D(e));
             },
-            [V]
+            [D]
         ),
-        T = l.useCallback(() => {
-            (I(''), M(''));
-        }, [M]);
+        R = l.useCallback(() => {
+            (N(''), Z(''));
+        }, [Z]);
     return (
         l.useImperativeHandle(t, () => ({
             resetSearchText() {
-                I('');
+                N('');
             }
         })),
         (0, r.jsxs)('div', {
-            className: _.searchHeaderContainer,
+            className: x.searchHeaderContainer,
             children: [
                 (0, r.jsx)('div', {
-                    className: _.searchHeader,
+                    className: x.searchHeader,
                     children: a
-                        ? (0, r.jsx)(m.X6q, {
+                        ? (0, r.jsx)(d.X6q, {
                               variant: 'heading-md/medium',
-                              children: y.intl.string(y.t.y12ALC)
+                              children: g.intl.string(g.t.y12ALC)
                           })
-                        : (0, r.jsx)(m.X6q, {
+                        : (0, r.jsx)(d.X6q, {
                               variant: 'heading-md/medium',
-                              children: y.intl.string(y.t.BUqwKy)
+                              children: g.intl.string(g.t.BUqwKy)
                           })
                 }),
                 (0, r.jsx)('div', {
-                    className: _.searchInput,
+                    className: x.searchInput,
                     children: (0, r.jsx)('div', {
-                        className: _.searchHeader,
-                        children: (0, r.jsx)(m.E1j, {
+                        className: x.searchHeader,
+                        children: (0, r.jsx)(d.E1j, {
                             size: 'sm',
-                            className: _.searchBar,
-                            query: R,
-                            placeholder: y.intl.string(y.t.NVoAMz),
-                            onChange: E,
-                            onClear: T,
+                            className: x.searchBar,
+                            query: S,
+                            placeholder: g.intl.string(g.t.NVoAMz),
+                            onChange: L,
+                            onClear: R,
                             autoComplete: 'off',
                             inputProps: {
                                 autoCapitalize: 'none',
@@ -136,14 +130,14 @@ let N = l.forwardRef(function (e, t) {
                     })
                 }),
                 (0, r.jsx)('div', {
-                    children: (0, r.jsx)(m.yRy, {
+                    children: (0, r.jsx)(d.yRy, {
                         targetElementRef: o,
-                        animation: m.yRy.Animation.FADE,
+                        animation: d.yRy.Animation.FADE,
                         position: 'bottom',
                         spacing: 4,
                         align: 'left',
                         renderPopout: () =>
-                            (0, r.jsx)(v.Z, {
+                            (0, r.jsx)(h.Z, {
                                 guildId: n.id,
                                 onClose: void 0
                             }),
@@ -169,47 +163,32 @@ let N = l.forwardRef(function (e, t) {
                                     return l;
                                 })(e, ['onClick']);
                             return (0, r.jsx)(
-                                C.zx,
-                                w(H({}, n), {
+                                d.zxk,
+                                y(v({}, n), {
                                     buttonRef: o,
+                                    text: g.intl.string(g.t.XvNMNj),
                                     onClick: t,
-                                    'aria-label': y.intl.string(y.t.XvNMNj),
-                                    color: N ? C.zx.Colors.PRIMARY : C.zx.Colors.TRANSPARENT,
-                                    look: N ? C.zx.Looks.FILLED : C.zx.Looks.OUTLINED,
-                                    size: C.zx.Sizes.SMALL,
-                                    children: (0, r.jsxs)('div', {
-                                        className: _.sortButton,
-                                        children: [
-                                            (0, r.jsx)(m.uVW, {
-                                                size: 'xs',
-                                                color: P ? m.TVs.colors.INTERACTIVE_ACTIVE.css : m.TVs.colors.HEADER_SECONDARY.css
-                                            }),
-                                            (0, r.jsx)(m.Text, {
-                                                variant: 'text-sm/medium',
-                                                color: P ? 'interactive-active' : 'header-secondary',
-                                                className: _.sortText,
-                                                children: y.intl.string(y.t.XvNMNj)
-                                            })
-                                        ]
-                                    })
+                                    size: 'sm',
+                                    variant: 'secondary',
+                                    icon: d.uVW
                                 })
                             );
                         }
                     })
                 }),
                 (0, r.jsx)('div', {
-                    className: _.tableOptions,
+                    className: x.tableOptions,
                     children:
-                        S &&
+                        O &&
                         (0, r.jsx)('div', {
                             'data-button-hoisted-classname-wrapper': !0,
-                            className: _.__invalid_pruneButton,
-                            children: (0, r.jsx)(m.zxk, {
+                            className: x.__invalid_pruneButton,
+                            children: (0, r.jsx)(d.zxk, {
                                 variant: 'critical-secondary',
                                 size: 'sm',
-                                text: y.intl.string(y.t['2mIlKS']),
-                                onClick: D,
-                                'aria-label': y.intl.string(y.t.zbyz7u)
+                                text: g.intl.string(g.t['2mIlKS']),
+                                onClick: H,
+                                'aria-label': g.intl.string(g.t.zbyz7u)
                             })
                         })
                 })

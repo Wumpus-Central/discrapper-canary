@@ -85,7 +85,7 @@ let I = function (e) {
                 null != t && t.paused && ((t.currentTime = I.current), null == (e = D.current) || e.play());
             })
         ),
-        z = l.useCallback(() => {
+        R = l.useCallback(() => {
             let e = D.current;
             null != e && (e.pause(), (e.src = ''));
         }, []),
@@ -160,19 +160,20 @@ let I = function (e) {
                                 (0, r.jsx)(h.Z, {
                                     maxUsers: 4,
                                     users: w,
-                                    onFocus: (e) => {
+                                    onFocusOverflow: (e) => {
                                         var t, n, r, l;
                                         let a = e.relatedTarget,
                                             i = null == (n = e.currentTarget.parentElement) || null == (t = n.parentElement) ? void 0 : t.parentElement;
                                         (null == a ? void 0 : a.parentElement) !== i && (null == a || null == (l = a.parentElement) || null == (r = l.parentElement) ? void 0 : r.parentElement) !== i && A();
-                                    }
+                                    },
+                                    'aria-label': S.intl.string(S.t.WTozwc)
                                 }),
                                 Z &&
-                                    (0, r.jsx)(R, {
+                                    (0, r.jsx)(z, {
                                         clip: o,
                                         actionsDisabled: c,
                                         exporting: s,
-                                        onBeforeDelete: z,
+                                        onBeforeDelete: R,
                                         onDelete: m,
                                         onEdit: j,
                                         onShare: v,
@@ -336,7 +337,7 @@ function _(e) {
                 className: k.clipThumb
             });
 }
-function R(e) {
+function z(e) {
     let { clip: t, exporting: n, actionsDisabled: a, onBeforeDelete: i, onDelete: o, onEdit: s, onShare: u, onBlur: d } = e,
         p = (0, c.Z)(),
         b = l.useCallback(

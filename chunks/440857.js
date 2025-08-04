@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => y }), n(388685));
+(n.d(t, { Z: () => O }), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(692547),
@@ -42,7 +42,7 @@ function v(e) {
     }
     return e;
 }
-function O(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,20 +60,20 @@ function O(e, t) {
         e
     );
 }
-function y(e) {
+function O(e) {
     let { guildId: t } = e,
-        y = (0, f.xC)(t),
-        { selectedUserIds: _, clearSelection: H } = (0, h.Z)(t),
-        w = _.size > 0,
-        N = async (e, t, n, r) => {
+        O = (0, f.xC)(t),
+        { selectedUserIds: H, clearSelection: _ } = (0, h.Z)(t),
+        w = H.size > 0,
+        S = async (e, t, n, r) => {
             try {
                 let l = await u.Z.banMultipleUsers(e, t, n, r);
                 ((0, c.showToast)((0, c.createToast)(g.intl.string(g.t.AsCe5O), c.ToastType.SUCCESS)),
                     b.default.track(
                         j.rMx.BULK_MODERATION_ACTION_COMPLETED,
-                        O(v({}, (0, C.hH)(e)), {
+                        y(v({}, (0, C.hH)(e)), {
                             action_type: p.jQ.BAN,
-                            target_user_ids: [..._],
+                            target_user_ids: [...H],
                             mod_user_id: m.default.getId(),
                             successful_user_ids: l.body.banned_users,
                             location
@@ -82,12 +82,12 @@ function y(e) {
             } catch (e) {
                 (0, c.showToast)((0, c.createToast)(g.intl.string(g.t.mICAWV), c.ToastType.FAILURE));
             }
-            H();
+            _();
         },
-        S = l.useCallback(() => {
-            H();
-        }, [H]),
-        D = (0, r.jsxs)('span', {
+        N = l.useCallback(() => {
+            _();
+        }, [_]),
+        Z = (0, r.jsxs)('span', {
             className: x.messageContainer,
             children: [
                 (0, r.jsx)(c.tBG, {
@@ -99,18 +99,15 @@ function y(e) {
                 (0, r.jsx)(c.Text, {
                     variant: 'heading-md/bold',
                     color: 'text-default',
-                    children: g.intl.format(g.t.TstoSU, { count: _.size })
+                    children: g.intl.format(g.t.TstoSU, { count: H.size })
                 }),
-                (0, r.jsx)(s.zx, {
-                    color: s.zx.Colors.LINK,
-                    look: s.zx.Looks.LINK,
-                    onClick: S,
-                    className: x.clearButton,
-                    children: g.intl.string(g.t.yW6ZdH)
+                (0, r.jsx)(c.Avr, {
+                    text: g.intl.string(g.t.yW6ZdH),
+                    onClick: N
                 })
             ]
         }),
-        Z = (0, r.jsxs)('span', {
+        D = (0, r.jsxs)('span', {
             className: x.buttonContainer,
             children: [
                 (0, r.jsx)(c.pgN, {
@@ -126,7 +123,7 @@ function y(e) {
                 })
             ]
         });
-    return y
+    return O
         ? (0, r.jsx)(i.W, {
               component: 'div',
               className: x.saveNoticeContainer,
@@ -137,9 +134,9 @@ function y(e) {
                           onSave: () => {
                               (b.default.track(
                                   j.rMx.BULK_MODERATION_ACTION_STARTED,
-                                  O(v({}, (0, C.hH)(t)), {
+                                  y(v({}, (0, C.hH)(t)), {
                                       action_type: p.jQ.BAN,
-                                      target_user_ids: [..._],
+                                      target_user_ids: [...H],
                                       mod_user_id: m.default.getId(),
                                       location
                                   })
@@ -149,18 +146,18 @@ function y(e) {
                                       return (n) =>
                                           (0, r.jsx)(
                                               e,
-                                              O(v({}, n), {
+                                              y(v({}, n), {
                                                   guildId: t,
-                                                  canBulkBan: y,
-                                                  userIds: _,
-                                                  onBanMultiple: N
+                                                  canBulkBan: O,
+                                                  userIds: H,
+                                                  onBanMultiple: S
                                               })
                                           );
                                   }));
                           },
-                          onSaveText: Z,
+                          onSaveText: D,
                           onSaveButtonColor: s.Tt.RED,
-                          message: D
+                          message: Z
                       })
                   })
           })

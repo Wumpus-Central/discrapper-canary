@@ -33,7 +33,7 @@ var r = n(230367),
         return ((e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.ACTIVE = 1)] = 'ACTIVE'), (e[(e.UNUSED = 2)] = 'UNUSED'), (e[(e.BURNED = 3)] = 'BURNED'), e);
     })({}),
     m = (function (e) {
-        return ((e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.DRAFT = 1)] = 'DRAFT'), (e[(e.TESTING = 2)] = 'TESTING'), (e[(e.TESTING_ENDED = 3)] = 'TESTING_ENDED'), (e[(e.ROLLING_OUT = 4)] = 'ROLLING_OUT'), (e[(e.ROLLED_OUT = 5)] = 'ROLLED_OUT'), (e[(e.ARCHIVED = 6)] = 'ARCHIVED'), e);
+        return ((e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.DRAFT = 1)] = 'DRAFT'), (e[(e.TESTING = 2)] = 'TESTING'), (e[(e.TESTING_ENDED = 3)] = 'TESTING_ENDED'), (e[(e.ROLLING_OUT = 4)] = 'ROLLING_OUT'), (e[(e.ROLLED_OUT = 5)] = 'ROLLED_OUT'), (e[(e.ARCHIVED = 6)] = 'ARCHIVED'), (e[(e.AA_MODE = 7)] = 'AA_MODE'), e);
     })({});
 class g extends o.C {
     create(e) {

@@ -1,8 +1,7 @@
-(n.d(t, { VK: () => a }), n(388685));
-var r = n(44315),
-    i = n(469115);
+n.d(t, { VK: () => i });
+var r = n(44315);
 n(231338);
-function a(e) {
+function i(e) {
     let { angle: t, colors: n } = e;
     return 'linear-gradient('.concat(t, 'deg, ').concat(
         n
@@ -14,4 +13,3 @@ function a(e) {
         ')'
     );
 }
-[...i.bV, ...i.Qf];

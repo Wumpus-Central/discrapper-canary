@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(781311), n(388685));
+(n.d(t, { Z: () => y }), n(781311), n(388685));
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -60,7 +60,7 @@ function _(e) {
         })
     );
 }
-let y = l.forwardRef(function (e, t) {
+let j = l.forwardRef(function (e, t) {
     let { iconComponent: n, animationTime: l, visible: o, ariaLabel: s, active: u, disabled: m, tooltipLabel: f, tooltipDelayMs: p = 1500, shortcut: v, onClick: E } = e,
         g = (e) => {
             var f, p;
@@ -156,20 +156,20 @@ let y = l.forwardRef(function (e, t) {
         });
     }
 });
-function j(e) {
+function y(e) {
     var t, n;
-    let { videoRef: o, playerState: O, animSpring: S, visible: j, seekForwardEnabled: x, hideCaptionBtn: T, hideTranscriptBtn: D, handlePlaybackBtnClick: P, handleTranscriptBtnClick: R, handleCaptionBtnClick: N, handleFullScreenBtnClick: I, handleSeekBackBtnClick: k, handleSeekForwardBtnClick: w, handleControlBarPendingInteraction: A, onVolumeChange: L } = e,
+    let { videoRef: o, playerState: O, animSpring: S, visible: y, seekForwardEnabled: x, hideCaptionBtn: D, hideTranscriptBtn: T, handlePlaybackBtnClick: P, handleTranscriptBtnClick: R, handleCaptionBtnClick: N, handleFullScreenBtnClick: I, handleSeekBackBtnClick: k, handleSeekForwardBtnClick: A, handleControlBarPendingInteraction: w, onVolumeChange: L } = e,
         M = (0, f.km)((e) => e.volume),
         V = (0, f.km)((e) => e.setVolume),
         B = (0, f.km)((e) => e.muted),
-        Z = (0, f.km)((e) => e.setMuted),
-        F = (0, f.km)((e) => e.transcriptEnabled),
+        F = (0, f.km)((e) => e.setMuted),
+        Z = (0, f.km)((e) => e.transcriptEnabled),
         U = (0, f.km)((e) => e.captionEnabled),
         q = (0, f.km)((e) => e.fullScreenEnabled),
-        H = (0, s.e7)([m.Z], () => m.Z.useReducedMotion),
-        Y = (0, s.e7)([m.Z], () => m.Z.keyboardModeEnabled),
-        [Q, G] = l.useState(B ? 0 : M),
-        [z, K] = l.useState(!1),
+        Y = (0, s.e7)([m.Z], () => m.Z.useReducedMotion),
+        H = (0, s.e7)([m.Z], () => m.Z.keyboardModeEnabled),
+        [Q, z] = l.useState(B ? 0 : M),
+        [G, K] = l.useState(!1),
         [X, W] = l.useState(!1),
         [{ volumeAnimSpring: $ }, J] = (0, d.q_F)(() => ({
             from: { volumeAnimSpring: 0 },
@@ -182,13 +182,13 @@ function j(e) {
         ee = l.useRef(null),
         et = l.useCallback(
             (e) => {
-                null != o.current && (e !== o.current.volume && (o.current.volume = e), e !== Q && G(e));
+                null != o.current && (e !== o.current.volume && (o.current.volume = e), e !== Q && z(e));
             },
             [o, Q]
         ),
         en = l.useCallback(() => {
-            null != o.current && (0 === Q ? (et(M), Z(!1), L(M)) : (V(Q), et(0), Z(!0), L(0)));
-        }, [o, Q, et, M, Z, V, L]),
+            null != o.current && (0 === Q ? (et(M), F(!1), L(M)) : (V(Q), et(0), F(!0), L(0)));
+        }, [o, Q, et, M, F, V, L]),
         er = () => {
             K(!0);
         },
@@ -202,13 +202,13 @@ function j(e) {
                         P();
                         break;
                     case g.Y1.SPACE:
-                        Y || (e.preventDefault(), P());
+                        H || (e.preventDefault(), P());
                         break;
                     case g.Y1.SEEK_BACK:
                         k();
                         break;
                     case g.Y1.SEEK_FORWARD:
-                        w();
+                        A();
                         break;
                     case g.Y1.CAPTION:
                         N();
@@ -220,7 +220,7 @@ function j(e) {
                         en();
                 }
             },
-            [N, I, P, k, w, en, Y]
+            [N, I, P, k, A, en, H]
         );
     (l.useEffect(() => {
         null != ee.current && ee.current.focus();
@@ -228,14 +228,14 @@ function j(e) {
         l.useEffect(
             () => (
                 J({
-                    volumeAnimSpring: X || z ? 1 : 0,
-                    immediate: H
+                    volumeAnimSpring: X || G ? 1 : 0,
+                    immediate: Y
                 }),
                 () => {
                     $.stop();
                 }
             ),
-            [X, z, J, H, $]
+            [X, G, J, Y, $]
         ),
         l.useEffect(
             () => (
@@ -253,30 +253,30 @@ function j(e) {
             (0, r.jsxs)('div', {
                 className: C.videoControlsGroup,
                 children: [
-                    (0, r.jsx)(y, {
+                    (0, r.jsx)(j, {
                         iconComponent: ea,
                         animationTime: S,
-                        visible: j,
+                        visible: y,
                         ariaLabel: es,
                         tooltipLabel: es,
                         shortcut: g.Y1.PLAYBACK,
                         onClick: P,
                         ref: ee
                     }),
-                    (0, r.jsx)(y, {
+                    (0, r.jsx)(j, {
                         iconComponent: v.d,
                         animationTime: S,
-                        visible: j,
+                        visible: y,
                         onClick: k,
                         ariaLabel: b.intl.string(b.t.r9s3Ul),
                         tooltipLabel: b.intl.string(b.t.r9s3Ul),
                         shortcut: g.Y1.SEEK_BACK
                     }),
-                    (0, r.jsx)(y, {
+                    (0, r.jsx)(j, {
                         iconComponent: E.o,
                         animationTime: S,
-                        visible: j,
-                        onClick: w,
+                        visible: y,
+                        onClick: A,
                         disabled: !x,
                         ariaLabel: x ? b.intl.string(b.t.zWDcND) : b.intl.string(b.t.xXh3y8),
                         tooltipLabel: x ? b.intl.string(b.t.zWDcND) : b.intl.string(b.t.xXh3y8),
@@ -295,7 +295,7 @@ function j(e) {
                                 output: [0, 1]
                             })
                         ],
-                        (e) => ''.concat(j ? e : Math.pow(e, 8))
+                        (e) => ''.concat(y ? e : Math.pow(e, 8))
                     )
                 },
                 children: [
@@ -306,10 +306,10 @@ function j(e) {
                         onBlur: el,
                         className: C.volumeControlGroup,
                         children: [
-                            (0, r.jsx)(y, {
+                            (0, r.jsx)(j, {
                                 iconComponent: ei,
                                 animationTime: S,
-                                visible: j,
+                                visible: y,
                                 onClick: en,
                                 ariaLabel: b.intl.string(b.t['eIl+AA']),
                                 tooltipLabel: b.intl.string(b.t['eIl+AA']),
@@ -325,7 +325,7 @@ function j(e) {
                                                 output: [0, 1]
                                             })
                                         ],
-                                        (e) => ''.concat(j ? e : Math.pow(e, 8))
+                                        (e) => ''.concat(y ? e : Math.pow(e, 8))
                                     ),
                                     width: (0, a.to)(
                                         [
@@ -344,10 +344,10 @@ function j(e) {
                                     minValue: 0,
                                     maxValue: 1,
                                     onValueChange: (e) => {
-                                        (et(e), V(e), L(e), X && (W(!1), A(!1)), B && e > 0 && Z(!1));
+                                        (et(e), V(e), L(e), X && (W(!1), w(!1)), B && e > 0 && F(!1));
                                     },
                                     asValueChanges: (e) => {
-                                        (et(e), X || (W(!0), A(!0)));
+                                        (et(e), X || (W(!0), w(!0)));
                                     },
                                     fillStyles: { backgroundColor: c.Z.colors.WHITE.css },
                                     orientation: 'horizontal',
@@ -365,32 +365,32 @@ function j(e) {
             (0, r.jsxs)('div', {
                 className: i()(C.videoControlsGroup, C.videoControlsGroupEnd),
                 children: [
-                    !D &&
-                        (0, r.jsx)(y, {
+                    !T &&
+                        (0, r.jsx)(j, {
                             iconComponent: d.hH0,
                             animationTime: S,
-                            visible: j,
+                            visible: y,
                             onClick: R,
-                            active: F && O !== g.rq.ENDED,
+                            active: Z && O !== g.rq.ENDED,
                             disabled: O === g.rq.ENDED,
                             ariaLabel: b.intl.string(b.t.KCzjTk),
                             tooltipLabel: b.intl.string(b.t.KCzjTk)
                         }),
-                    !T &&
-                        (0, r.jsx)(y, {
+                    !D &&
+                        (0, r.jsx)(j, {
                             iconComponent: p.c,
                             animationTime: S,
-                            visible: j,
+                            visible: y,
                             active: U,
                             onClick: N,
                             ariaLabel: b.intl.string(b.t.bDSZOz),
                             tooltipLabel: b.intl.string(b.t.bDSZOz),
                             shortcut: g.Y1.CAPTION
                         }),
-                    (0, r.jsx)(y, {
+                    (0, r.jsx)(j, {
                         iconComponent: q ? d.wvt : d.NpZ,
                         animationTime: S,
-                        visible: j,
+                        visible: y,
                         onClick: I,
                         ariaLabel: b.intl.string(b.t.vKZT5u),
                         tooltipLabel: b.intl.string(b.t.vKZT5u),

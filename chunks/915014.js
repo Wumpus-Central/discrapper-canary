@@ -33,7 +33,8 @@ function h(e) {
                               }),
                               size: _.EF.SIZE_16,
                               hideOverflowCount: !0,
-                              disableUsernameTooltip: !0
+                              disableUsernameTooltip: !0,
+                              'aria-hidden': !0
                           }),
                           (0, r.jsx)(i.Text, {
                               className: f.text,

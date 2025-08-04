@@ -53049,12 +53049,17 @@ html.disable-forced-colors * {
 }
 
 .section__5a2df {
-    display: flex;
-    flex-direction: column;
     gap: 12px
 }
 
+.resetButton__5a2df,
+.section__5a2df {
+    display: flex;
+    flex-direction: column
+}
+
 .resetButton__5a2df {
+    gap: 8px;
     margin-top: 44px
 }
 
@@ -53076,13 +53081,6 @@ html.disable-forced-colors * {
 
 .gradientDirectionSliderContainer__5a2df {
     margin-bottom: 4px
-}
-
-.surpriseMeButton__5a2df {
-    background: var(--background-modifier-hover);
-    border: 1px solid var(--border-faint);
-    border-radius: var(--radius-sm);
-    display: inline-flex
 }
 
 .footerContainer__5a2df {

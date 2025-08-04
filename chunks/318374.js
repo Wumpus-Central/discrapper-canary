@@ -5,12 +5,12 @@ var r = n(255367),
     o = n.n(a),
     s = n(392711),
     l = n.n(s),
-    c = n(755721),
-    u = n(481060),
-    d = n(239091),
-    _ = n(751688),
-    f = n(5192),
-    p = n(51144),
+    c = n(481060),
+    u = n(239091),
+    d = n(751688),
+    _ = n(5192),
+    f = n(51144),
+    p = n(388032),
     h = n(223390);
 function m(e, t, n) {
     return (
@@ -65,150 +65,168 @@ function b(e, t) {
     );
 }
 function y() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.EFr.SIZE_24;
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.EFr.SIZE_24;
     switch (e) {
-        case u.EFr.SIZE_16:
+        case c.EFr.SIZE_16:
             return h.size16;
-        case u.EFr.SIZE_20:
+        case c.EFr.SIZE_20:
             return h.size20;
-        case u.EFr.SIZE_24:
+        case c.EFr.SIZE_24:
         default:
             return h.size24;
     }
 }
 function O() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.EFr.SIZE_24;
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.EFr.SIZE_24;
     switch (e) {
-        case u.EFr.SIZE_16:
-        case u.EFr.SIZE_20:
+        case c.EFr.SIZE_16:
+        case c.EFr.SIZE_20:
             return 'text-xxs/semibold';
-        case u.EFr.SIZE_24:
+        case c.EFr.SIZE_24:
         default:
             return 'text-xs/medium';
     }
 }
 function v(e) {
-    let { users: t, maxUsers: a, guildId: s, channelId: m, className: E, size: v = u.EFr.SIZE_24, overflowCountVariant: I, overflowCountColor: T = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: A = !1, disableUsernameTooltip: N = !1, disableUserPopout: C = !1, onClick: R, onFocus: P, onUserClick: w, onUserPopoutRequestClose: D } = e,
-        [L, x] = i.useState(!1),
-        M = y(v),
-        k = i.useRef(null);
-    function j() {
-        return (0, r.jsx)(u.VqE, {
-            className: h.popoutWrapper,
-            children: (0, r.jsx)(u.Ttm, {
-                className: h.scroller,
-                children: t.map((e) =>
-                    (0, r.jsx)(
-                        _.Z,
-                        {
-                            user: e,
-                            guildId: s,
-                            channelId: m,
-                            nick: f.ZP.getNickname(s, m, e),
-                            disablePopout: 'function' == typeof C ? C(e.id) : C,
-                            onClick: w,
-                            onPopoutRequestClose: () => {
-                                (x(!1), null == D || D());
+    let { users: t, maxUsers: a, guildId: s, channelId: m, className: E, size: v = c.EFr.SIZE_24, overflowCountVariant: I, overflowCountColor: T = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: A = !1, disableUsernameTooltip: N = !1, disableUserPopout: C = !1, onClickOverflow: R, onFocusOverflow: P, onUserClick: w, onUserPopoutRequestClose: D, 'aria-label': L, 'aria-labelledby': x, 'aria-hidden': M } = e,
+        [k, j] = i.useState(!1),
+        U = y(v),
+        G = i.useRef(null),
+        B = t.length - a,
+        V = B + 1,
+        F = B > 0 && !A && !M,
+        Z = () =>
+            (0, r.jsx)(c.VqE, {
+                className: h.popoutWrapper,
+                'aria-label': L,
+                'aria-labelledby': x,
+                children: (0, r.jsx)(c.Ttm, {
+                    className: h.scroller,
+                    children: t.map((e) =>
+                        (0, r.jsx)(
+                            d.Z,
+                            {
+                                user: e,
+                                guildId: s,
+                                channelId: m,
+                                nick: _.ZP.getNickname(s, m, e),
+                                disablePopout: 'function' == typeof C ? C(e.id) : C,
+                                onClick: w,
+                                onPopoutRequestClose: () => {
+                                    (j(!1), null == D || D());
+                                },
+                                onContextMenu: (t) =>
+                                    (0, u.jW)(
+                                        t,
+                                        async () => {
+                                            let { default: t } = await Promise.all([n.e('70274'), n.e('79695'), n.e('69220'), n.e('70686')]).then(n.bind(n, 881351));
+                                            return (n) =>
+                                                (0, r.jsx)(
+                                                    t,
+                                                    b(g({}, n), {
+                                                        user: e,
+                                                        guildId: s,
+                                                        channelId: m
+                                                    })
+                                                );
+                                        },
+                                        { onClose: () => j(!1) }
+                                    )
                             },
-                            onContextMenu: (t) =>
-                                (0, d.jW)(
-                                    t,
-                                    async () => {
-                                        let { default: t } = await Promise.all([n.e('70274'), n.e('79695'), n.e('69220'), n.e('70686')]).then(n.bind(n, 881351));
-                                        return (n) =>
-                                            (0, r.jsx)(
-                                                t,
-                                                b(g({}, n), {
-                                                    user: e,
-                                                    guildId: s,
-                                                    channelId: m
-                                                })
-                                            );
-                                    },
-                                    { onClose: () => x(!1) }
-                                )
-                        },
-                        e.id
+                            e.id
+                        )
                     )
-                )
-            })
-        });
-    }
-    function U() {
-        let e = t.length - a,
-            n = e + 1,
-            i = e > 0 && !A,
-            d = Math.min(t.length, a) - 1,
-            _ = l()(t)
-                .take(a)
-                .map((e, t) => {
-                    let n = p.ZP.getName(e),
-                        a = t === d && !i,
-                        l = o()(h.avatar, M, a && h.isLast);
-                    return N
-                        ? (0, r.jsx)(
-                              'div',
-                              {
-                                  className: l,
-                                  children: (0, r.jsx)(u.qEK, {
-                                      src: e.getAvatarURL(s, 24),
-                                      'aria-label': n,
-                                      size: v
-                                  })
-                              },
-                              e.id
-                          )
-                        : (0, r.jsx)(
-                              u.DY3,
-                              {
-                                  text: n,
-                                  className: l,
-                                  children: (0, r.jsx)(u.qEK, {
-                                      src: e.getAvatarURL(s, 24),
-                                      'aria-label': n,
-                                      size: v
-                                  })
-                              },
-                              e.id
-                          );
                 })
-                .value();
-        if (i) {
-            let e = null != I ? I : O(v);
-            _[_.length - 1] = (0, r.jsx)(
-                u.yRy,
-                {
-                    targetElementRef: k,
-                    renderPopout: j,
-                    shouldShow: L,
-                    position: 'bottom',
-                    onRequestClose: () => x(!1),
-                    children: () =>
-                        (0, r.jsx)(c.zx, {
-                            buttonRef: k,
-                            className: o()(h.overflow, M, S),
-                            onFocus: P,
-                            onClick: (e) => {
-                                (null == R || R(e), x(!0));
+            }),
+        H = () => {
+            let e = F ? a - 1 : Math.min(t.length, a),
+                n = e - 1,
+                i = l()(t)
+                    .take(e)
+                    .map((e, t) => {
+                        let i = _.ZP.getNickname(s, m, e),
+                            a = null != i ? i : f.ZP.getName(e),
+                            l = t === n && !F,
+                            u = o()(h.avatar, U, l && h.isLast),
+                            d = (0, r.jsx)(c.qEK, {
+                                src: e.getAvatarURL(s, 24),
+                                size: v,
+                                'aria-hidden': !0
+                            });
+                        return (0, r.jsx)(
+                            'li',
+                            {
+                                className: u,
+                                children: N
+                                    ? (0, r.jsx)('span', {
+                                          role: 'img',
+                                          'aria-label': a,
+                                          children: d
+                                      })
+                                    : (0, r.jsx)(c.ua7, {
+                                          text: a,
+                                          'aria-label': !1,
+                                          children: (e) =>
+                                              (0, r.jsx)(
+                                                  'span',
+                                                  b(g({}, e), {
+                                                      role: 'img',
+                                                      'aria-label': a,
+                                                      children: d
+                                                  })
+                                              )
+                                      })
                             },
-                            look: c.zx.Looks.BLANK,
-                            size: c.zx.Sizes.NONE,
-                            children: (0, r.jsx)(u.Text, {
-                                variant: e,
-                                color: T,
-                                children: n > 99 ? '>99' : '+'.concat(n)
+                            e.id
+                        );
+                    })
+                    .value();
+            return (0, r.jsx)('ul', {
+                className: h.avatars,
+                children: i
+            });
+        },
+        Y = () => {
+            if (!F) return null;
+            let e = null != I ? I : O(v);
+            return (0, r.jsx)(
+                c.yRy,
+                {
+                    targetElementRef: G,
+                    renderPopout: Z,
+                    shouldShow: k,
+                    position: 'bottom',
+                    onRequestClose: () => j(!1),
+                    children: (t) =>
+                        (0, r.jsx)(
+                            c.P3F,
+                            b(g({}, t), {
+                                innerRef: G,
+                                className: o()(h.overflow, U, S),
+                                onFocus: P,
+                                onClick: (e) => {
+                                    (null == R || R(e), j(!0));
+                                },
+                                'aria-label': p.intl.formatToPlainString(p.t.R8Z8Qk, { count: V }),
+                                children: (0, r.jsx)(c.Text, {
+                                    variant: e,
+                                    color: T,
+                                    children: V > 99 ? '>99' : '+'.concat(V)
+                                })
                             })
-                        })
+                        )
                 },
                 'overflow'
             );
-        }
-        return _;
-    }
+        };
     return t.length <= 0
         ? null
-        : (0, r.jsx)('div', {
+        : (0, r.jsxs)('div', {
+              role: 'group',
+              'aria-label': L,
+              'aria-labelledby': x,
               className: o()(E, h.avatars),
-              children: U()
+              'aria-hidden': M,
+              children: [H(), Y()]
           });
 }

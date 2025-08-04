@@ -86,7 +86,8 @@ let T = (e) => [
                   size: s.EFr.SIZE_24,
                   overflowCountClassName: P.overflowCount,
                   overflowCountVariant: 'text-xs/semibold',
-                  disableUserPopout: !0
+                  disableUserPopout: !0,
+                  'aria-label': Z.intl.string(Z.t.TxqPQU)
               });
     }),
     R = r.memo(function (e) {

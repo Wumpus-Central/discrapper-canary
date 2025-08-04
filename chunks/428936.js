@@ -67,15 +67,15 @@ function p(e) {
             []
         ),
         v = new Intl.NumberFormat(d.intl.currentLocale).format(h),
-        O = d.intl.formatToPlainString(d.t.RNDnQ0, { count: g ? '...' : v }),
-        y = h > j.pageSize || g,
-        _ = h > a.LU['0'];
+        y = d.intl.formatToPlainString(d.t.RNDnQ0, { count: g ? '...' : v }),
+        O = h > j.pageSize || g,
+        H = h > a.LU['0'];
     return (0, r.jsxs)('div', {
         className: C.paginationContainer,
         children: [
             (0, r.jsx)('div', {
                 className: C.pageSizeSelection,
-                children: _
+                children: H
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(i.Text, {
@@ -84,7 +84,7 @@ function p(e) {
                                   children: d.intl.string(d.t.jNwLu7)
                               }),
                               (0, r.jsx)(i.PhF, {
-                                  'aria-label': O,
+                                  'aria-label': y,
                                   className: C.pageSizeInput,
                                   options: x,
                                   isSelected: (e) => e === j.pageSize,
@@ -112,7 +112,7 @@ function p(e) {
                                                   },
                                                   e
                                               ),
-                                              { children: O }
+                                              { children: y }
                                           )
                                       )
                               })
@@ -127,7 +127,7 @@ function p(e) {
             (0, r.jsx)('div', {
                 className: C.pagination,
                 children:
-                    y &&
+                    O &&
                     (0, r.jsx)(i.DsT, {
                         className: C.paginationInput,
                         totalCount: h,

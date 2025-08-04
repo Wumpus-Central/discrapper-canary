@@ -18,47 +18,47 @@ var r = n(255367),
     g = n(827657),
     x = n(472596),
     v = n(201756),
-    O = n(66747),
-    y = n(852479),
-    _ = n(420212),
-    H = n(172796);
+    y = n(66747),
+    O = n(852479),
+    H = n(420212),
+    _ = n(172796);
 let w = {
         transform: 'translate3d(15%, 0, 0)',
         opacity: 0.3
     },
-    N = {
+    S = {
         transform: 'translate3d(5%, 0, 0)',
         opacity: 0.5
     },
-    S = {
+    N = {
         transform: 'translate3d(0, 0, 0)',
         opacity: 1
     },
-    D = {
+    Z = {
         mass: 1.1,
         friction: 24,
         tension: 260
     },
-    Z = (e) => e.shiftKey || e.key === _.vn.SHIFT,
+    D = (e) => e.shiftKey || e.key === H.vn.SHIFT,
     L = (e) => e.metaKey || e.ctrlKey || ['Meta', 'Control'].includes(e.key),
     R = l.memo(
         function (e) {
             let { members: t, guild: n, className: o, searchState: a, compact: s, onSelectRow: m, onResetForNewMembers: b } = e,
                 f = (0, c.e7)([C.Z], () => C.Z.useReducedMotion),
-                _ = (0, u.f9)(),
+                H = (0, u.f9)(),
                 R = (0, p.n)(),
                 [I, P] = l.useState(!1),
                 [M, V] = l.useState(!1),
-                E = !_ && I && M;
+                E = !H && I && M;
             (l.useEffect(() => {
                 R || (P(!1), V(!1));
             }, [R]),
                 l.useLayoutEffect(() => {
                     let e = (e) => {
-                            (Z(e) && P(!0), L(e) && V(!0));
+                            (D(e) && P(!0), L(e) && V(!0));
                         },
                         t = (e) => {
-                            (Z(e) && P(!1), L(e) && V(!1));
+                            (D(e) && P(!1), L(e) && V(!1));
                         };
                     return (
                         window.addEventListener('keydown', e),
@@ -80,14 +80,14 @@ let w = {
                             r = h.Z.getLastRefreshTimestamp(n.id),
                             l = null == t || 0 === r,
                             o = null != t && t.refreshTimestamp === r;
-                        return l || !o ? S : T ? N : w;
+                        return l || !o ? N : T ? S : w;
                     },
-                    enter: S,
-                    config: D
+                    enter: N,
+                    config: Z
                 }),
                 A = !f && a === x.po.LOADING;
             return (0, r.jsxs)('table', {
-                className: i()(H.table, o),
+                className: i()(_.table, o),
                 children: [
                     (0, r.jsx)(v.Z, {
                         guildId: n.id,
@@ -98,13 +98,13 @@ let w = {
                             a === x.po.SUCCESS_FULL || a === x.po.LOADING
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
-                                          (0, r.jsx)(y.Z, {
+                                          (0, r.jsx)(O.Z, {
                                               guild: n,
                                               onSubmit: b
                                           }),
                                           k((e, t) =>
                                               (0, r.jsx)(
-                                                  O.Z,
+                                                  y.Z,
                                                   {
                                                       userId: t,
                                                       guildId: n.id,

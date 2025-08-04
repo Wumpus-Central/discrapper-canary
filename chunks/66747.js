@@ -18,15 +18,15 @@ var r = n(255367),
     g = n(189432),
     x = n(189357),
     v = n(172751),
-    O = n(493892),
-    y = n(884902),
-    _ = n(433355),
-    H = n(430824),
+    y = n(493892),
+    O = n(884902),
+    H = n(433355),
+    _ = n(430824),
     w = n(496675),
-    N = n(594174),
-    S = n(203893),
-    D = n(777288),
-    Z = n(5192),
+    S = n(594174),
+    N = n(203893),
+    Z = n(777288),
+    D = n(5192),
     L = n(709054),
     R = n(51144),
     I = n(815790),
@@ -40,8 +40,8 @@ var r = n(255367),
     B = n(285173),
     U = n(981631),
     F = n(176505),
-    z = n(50493),
-    q = n(388032),
+    q = n(50493),
+    z = n(388032),
     G = n(350381);
 function Y(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -95,7 +95,7 @@ let X = l.memo(function (e) {
             children: [
                 t.hasUnusualDmActivity &&
                     (0, r.jsx)(C.ua7, {
-                        text: q.intl.string(q.t.QrfVTk),
+                        text: z.intl.string(z.t.QrfVTk),
                         children: (e) => {
                             let { onMouseEnter: t, onMouseLeave: n } = e;
                             return (0, r.jsx)(C.b6m, {
@@ -110,12 +110,12 @@ let X = l.memo(function (e) {
                     }),
                 n &&
                     (0, r.jsx)(C.ua7, {
-                        'aria-label': q.intl.string(q.t['xfJP+v']),
+                        'aria-label': z.intl.string(z.t['xfJP+v']),
                         allowOverflow: !0,
                         text: (0, r.jsxs)('div', {
                             className: G.communicationDisabledTooltip,
                             children: [
-                                (0, r.jsx)('div', { children: q.intl.string(q.t['xfJP+v']) }),
+                                (0, r.jsx)('div', { children: z.intl.string(z.t['xfJP+v']) }),
                                 (0, r.jsx)(f.Z, {
                                     deadline: o,
                                     showUnits: !0,
@@ -135,12 +135,12 @@ let X = l.memo(function (e) {
                             });
                         }
                     }),
-                (0, O.He)(t.userId) &&
+                (0, y.He)(t.userId) &&
                     (0, r.jsx)(C.ua7, {
-                        text: q.intl.string(q.t.PK9FQ0),
+                        text: z.intl.string(z.t.PK9FQ0),
                         children: (e) => {
                             let { onMouseEnter: t, onMouseLeave: n } = e;
-                            return (0, r.jsx)(S.Z, {
+                            return (0, r.jsx)(N.Z, {
                                 width: 20,
                                 height: 20,
                                 onMouseEnter: t,
@@ -151,7 +151,7 @@ let X = l.memo(function (e) {
                     }),
                 (0, h.EY)(t) &&
                     (0, r.jsx)(C.ua7, {
-                        text: q.intl.string(q.t.qOVbaW),
+                        text: z.intl.string(z.t.qOVbaW),
                         children: (e) => {
                             let { onMouseEnter: t, onMouseLeave: n } = e;
                             return (0, r.jsx)(C.ics, {
@@ -169,9 +169,9 @@ let X = l.memo(function (e) {
     }),
     J = l.memo(function (e) {
         let { member: t, highestRole: n } = e,
-            o = (0, u.e7)([H.Z], () => H.Z.getGuild(t.guildId), [t.guildId]),
+            o = (0, u.e7)([_.Z], () => _.Z.getGuild(t.guildId), [t.guildId]),
             a = t.roles.length - 1,
-            s = l.useMemo(() => new Intl.NumberFormat(q.intl.currentLocale).format(a), [a]),
+            s = l.useMemo(() => new Intl.NumberFormat(z.intl.currentLocale).format(a), [a]),
             c = (0, A.vN)(t),
             d = (0, A.vN)(t, !0),
             m = (0, u.e7)([w.Z], () => w.Z.can(U.Plq.MANAGE_ROLES, o), [o]);
@@ -191,7 +191,7 @@ let X = l.memo(function (e) {
                               className: G.otherRoles,
                               onClick: (e) => d(e),
                               children: (0, r.jsx)(C.ua7, {
-                                  text: q.intl.string(q.t.DY6n4u),
+                                  text: z.intl.string(z.t.DY6n4u),
                                   children: (e) =>
                                       (0, r.jsxs)(
                                           C.Text,
@@ -212,7 +212,7 @@ let X = l.memo(function (e) {
                           }),
                       m &&
                           (0, r.jsx)(C.ua7, {
-                              text: q.intl.string(q.t.h3pSLS),
+                              text: z.intl.string(z.t.h3pSLS),
                               children: (e) => {
                                   let { onMouseEnter: t, onMouseLeave: n } = e;
                                   return (0, r.jsx)(C.P3F, {
@@ -236,7 +236,7 @@ let X = l.memo(function (e) {
     K = l.memo(function (e) {
         var t, n;
         let { member: l, user: o } = e,
-            i = (0, y.X7)(null == l ? void 0 : l.guildId, null == l ? void 0 : l.userId, null != (t = null == l ? void 0 : l.colorStrings) ? t : null);
+            i = (0, O.X7)(null == l ? void 0 : l.guildId, null == l ? void 0 : l.userId, null != (t = null == l ? void 0 : l.colorStrings) ? t : null);
         return null == o || null == l
             ? null
             : (0, r.jsxs)('div', {
@@ -254,7 +254,7 @@ let X = l.memo(function (e) {
                                   className: G.nameContainer,
                                   children: [
                                       (0, r.jsx)(C.PUh, {
-                                          name: Z.ZP.getName(l.guildId, null, o),
+                                          name: D.ZP.getName(l.guildId, null, o),
                                           colorString: null != (n = l.colorString) ? n : null,
                                           colorStrings: i,
                                           className: G.memberNameText
@@ -284,7 +284,7 @@ let X = l.memo(function (e) {
 function Q(e) {
     return {
         short: null == e ? null : (0, I.fv)(e, I.jq.JOINED_AT),
-        long: new Date(null != e ? e : 0).toLocaleDateString(q.intl.currentLocale, I.UG)
+        long: new Date(null != e ? e : 0).toLocaleDateString(z.intl.currentLocale, I.UG)
     };
 }
 function $(e) {
@@ -331,7 +331,7 @@ let ee = l.memo(function (e) {
                 let e = L.default.extractTimestamp(t.userId);
                 return {
                     accountCreationDateShort: (0, I.fv)(e, I.jq.ACCOUNT_AGE),
-                    accountCreationDateLong: new Date(e).toLocaleDateString(q.intl.currentLocale, I.I)
+                    accountCreationDateLong: new Date(e).toLocaleDateString(z.intl.currentLocale, I.I)
                 };
             }, [t.userId]),
             s = o ? 'text-brand' : 'text-default';
@@ -357,7 +357,7 @@ let ee = l.memo(function (e) {
     }),
     et = l.memo(function (e) {
         let { member: t, user: n, highestRole: o, isHoldingAdvancedInfoKey: a, onOpenModerationMenu: s, onOpenMemberView: d, compact: m, hasModViewPanelAccess: b } = e,
-            p = (0, u.e7)([w.Z, H.Z], () => w.Z.can(U.Plq.MANAGE_GUILD, H.Z.getGuild(t.guildId)), [t.guildId]),
+            p = (0, u.e7)([w.Z, _.Z], () => w.Z.can(U.Plq.MANAGE_GUILD, _.Z.getGuild(t.guildId)), [t.guildId]),
             { selectedUserIds: f, addUsers: h, removeUser: j } = (0, k.Z)(t.guildId),
             g = (0, M.xC)(t.guildId),
             x = (0, M.hB)(t.guildId, g, t.userId),
@@ -370,21 +370,21 @@ let ee = l.memo(function (e) {
                 [t.guildId],
                 c()
             ),
-            O = l.useCallback(
+            y = l.useCallback(
                 (e) => {
                     (e.stopPropagation(), e.preventDefault(), null != t && x && (f.has(t.userId) ? j(t.userId) : h([t.userId])));
                 },
                 [h, x, t, j, f]
             ),
-            y = v === P.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
-            _ = v === P.d$.ORDER_BY_USER_ID_ASC || v === P.d$.ORDER_BY_USER_ID_DESC;
+            O = v === P.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
+            H = v === P.d$.ORDER_BY_USER_ID_ASC || v === P.d$.ORDER_BY_USER_ID_DESC;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 g &&
                     (0, r.jsx)(C.ua7, {
                         tooltipClassName: G.disabledActionTooltip,
                         shouldShow: !x,
-                        text: q.intl.string(q.t['Se4c7+']),
+                        text: z.intl.string(z.t['Se4c7+']),
                         children: (e) =>
                             (0, r.jsx)(
                                 'td',
@@ -392,7 +392,7 @@ let ee = l.memo(function (e) {
                                     children: (0, r.jsx)('div', {
                                         className: i()(G.__invalid_checkbox, G.xsmallCol),
                                         children: (0, r.jsx)(C.P3F, {
-                                            onClick: O,
+                                            onClick: y,
                                             children: (0, r.jsx)(C.XZJ, {
                                                 type: C.XZJ.Types.INVERTED,
                                                 value: f.has(t.userId),
@@ -415,7 +415,7 @@ let ee = l.memo(function (e) {
                     children: (0, r.jsx)($, {
                         showLongDate: a,
                         member: t,
-                        isSortedBy: y
+                        isSortedBy: O
                     })
                 }),
                 (0, r.jsx)('td', {
@@ -423,7 +423,7 @@ let ee = l.memo(function (e) {
                     children: (0, r.jsx)(ee, {
                         showLongDate: a,
                         member: t,
-                        isSortedBy: _
+                        isSortedBy: H
                     })
                 }),
                 p &&
@@ -451,7 +451,7 @@ let ee = l.memo(function (e) {
                         className: G.actionCell,
                         children: [
                             (0, r.jsx)(C.ua7, {
-                                text: b ? q.intl.string(q.t.nHfkf3) : q.intl.string(q.t.uTre29),
+                                text: b ? z.intl.string(z.t.nHfkf3) : z.intl.string(z.t.uTre29),
                                 children: (e) => {
                                     let { onMouseEnter: t, onMouseLeave: n } = e;
                                     return (0, r.jsx)(C.P3F, {
@@ -460,7 +460,7 @@ let ee = l.memo(function (e) {
                                         onClick: d,
                                         className: G.button,
                                         children: b
-                                            ? (0, r.jsx)(D.Z, {
+                                            ? (0, r.jsx)(Z.Z, {
                                                   width: en,
                                                   height: en
                                               })
@@ -474,7 +474,7 @@ let ee = l.memo(function (e) {
                                 }
                             }),
                             (0, r.jsx)(C.ua7, {
-                                text: q.intl.string(q.t.x8Nn4O),
+                                text: z.intl.string(z.t.x8Nn4O),
                                 children: (e) => {
                                     let { onMouseEnter: t, onMouseLeave: n } = e;
                                     return (0, r.jsx)(C.P3F, {
@@ -502,32 +502,32 @@ let ee = l.memo(function (e) {
     el = l.memo(function (e) {
         let { userId: t, guildId: n, style: o, rowSelected: s, isLoading: d = !1, isHoldingAdvancedInfoKey: C = !1, compact: m = !1 } = e,
             { analyticsLocations: b } = (0, p.ZP)(),
-            f = (0, u.e7)([_.ZP], () => _.ZP.getGuildSidebarState(n), [n]),
+            f = (0, u.e7)([H.ZP], () => H.ZP.getGuildSidebarState(n), [n]),
             h = (null == f ? void 0 : f.details.userId) === t,
             j = (0, u.e7)([V.Z], () => V.Z.getEnhancedMember(n, t), [n, t]),
             v = (0, A.zq)(j),
-            O = (0, u.e7)([N.default], () => N.default.getUser(t), [t]),
-            y = (0, x.m)(n),
-            H = (0, A.RN)(null != j ? j : void 0),
+            y = (0, u.e7)([S.default], () => S.default.getUser(t), [t]),
+            O = (0, x.m)(n),
+            _ = (0, A.RN)(null != j ? j : void 0),
             w = l.useCallback(
                 (e) => {
-                    (e.stopPropagation(), e.preventDefault(), H(e));
+                    (e.stopPropagation(), e.preventDefault(), _(e));
                 },
-                [H]
+                [_]
             ),
-            S = l.useCallback(
+            N = l.useCallback(
                 (e) => {
                     (e.stopPropagation(), e.preventDefault(), null != j && (0, A.RE)(j, b));
                 },
                 [j, b]
             ),
-            D = l.useCallback(
+            Z = l.useCallback(
                 (e) => {
-                    (e.stopPropagation(), e.preventDefault(), null != j && (y ? (0, g.r)(j.guildId, j.userId, F.oC.MEMBER_SAFETY, { modViewPanel: z.k.INFO }) : (0, A.RE)(j, b)));
+                    (e.stopPropagation(), e.preventDefault(), null != j && (O ? (0, g.r)(j.guildId, j.userId, F.oC.MEMBER_SAFETY, { modViewPanel: q.k.INFO }) : (0, A.RE)(j, b)));
                 },
-                [j, b, y]
+                [j, b, O]
             ),
-            Z = l.useCallback((e, t) => c()((0, a.omit)(e, er), (0, a.omit)(t, er)), []);
+            D = l.useCallback((e, t) => c()((0, a.omit)(e, er), (0, a.omit)(t, er)), []);
         return null == j
             ? null
             : (0, r.jsx)(E.Z, {
@@ -535,18 +535,18 @@ let ee = l.memo(function (e) {
                   value: j,
                   style: o,
                   className: i()(G.roundedRow, G.memberRowContainer, s && G.selected, h && G.memberSelected, d && G.loading),
-                  equalityFn: Z,
-                  onClick: S,
+                  equalityFn: D,
+                  onClick: N,
                   onContextMenu: w,
                   children: (0, r.jsx)(et, {
                       member: j,
-                      user: O,
+                      user: y,
                       highestRole: v,
                       isHoldingAdvancedInfoKey: C,
                       onOpenModerationMenu: w,
-                      onOpenMemberView: D,
+                      onOpenMemberView: Z,
                       compact: m,
-                      hasModViewPanelAccess: y
+                      hasModViewPanelAccess: O
                   })
               });
     });
