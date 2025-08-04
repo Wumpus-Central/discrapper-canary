@@ -29,8 +29,8 @@ var n = r(255367),
 function I(e) {
     var t;
     let { isFetchingCategories: r, isFullScreen: I, scrollerRef: k, tab: N } = e,
-        w = (0, d.sp)(),
-        A = null != (t = null == w ? void 0 : w.sessionId) ? t : '',
+        A = (0, d.sp)(),
+        w = null != (t = null == A ? void 0 : A.sessionId) ? t : '',
         { noCache: B, includeUnpublished: R } = (0, _.Z)(),
         Z = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
         D = (0, a.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
@@ -67,7 +67,7 @@ function I(e) {
         Y = (0, g.l)(K);
     return (l.useEffect(() => {
         (0, h.n)({
-            sessionId: A,
+            sessionId: w,
             checkpoint: h.a.SHOP_MOUNTED,
             tab: N,
             isFullScreen: I,
@@ -78,14 +78,14 @@ function I(e) {
     l.useEffect(() => {
         r ||
             (0, h.n)({
-                sessionId: A,
+                sessionId: w,
                 checkpoint: h.a.SHOP_RENDERED,
                 tab: N,
                 isFullScreen: I,
                 unpublishedCategoriesShown: R,
                 cacheDisabled: B
             });
-    }, [A, I, R, B, r, N]),
+    }, [w, I, R, B, r, N]),
     r || null == Z)
         ? (0, n.jsx)(b.Z, {})
         : (0, n.jsxs)(n.Fragment, {

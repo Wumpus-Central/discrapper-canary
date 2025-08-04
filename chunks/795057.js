@@ -4,15 +4,15 @@ n.d(t, {
 });
 var r = n(255367);
 n(73800);
-var o = n(120356),
-    s = n.n(o),
+var s = n(120356),
+    o = n.n(s),
     a = n(481060);
 (n(509212), n(373370), n(566078), n(388032));
 var i = n(141572);
 function l(e) {
-    let { children: t, isComplete: n, hasNextStep: o } = e;
+    let { children: t, isComplete: n, hasNextStep: s } = e;
     return (0, r.jsxs)('li', {
-        className: s()(i.stepWrapper, { [i.stepWrapperComplete]: n }, { [i.stepWrapperWithNextStep]: o }),
+        className: o()(i.stepWrapper, { [i.stepWrapperComplete]: n }, { [i.stepWrapperWithNextStep]: s }),
         children: [
             (0, r.jsxs)('div', {
                 className: i.stepIndicator,
@@ -26,7 +26,7 @@ function l(e) {
                                 color: a.TVs.colors.WHITE
                             })
                     }),
-                    o && (0, r.jsx)('div', { className: i.stepConnector })
+                    s && (0, r.jsx)('div', { className: i.stepConnector })
                 ]
             }),
             (0, r.jsx)('div', {
@@ -45,7 +45,7 @@ function c(e) {
     });
 }
 let u = function (e) {
-    let { children: t, heading: n, steps: o } = e;
+    let { children: t, heading: n, steps: s } = e;
     return (0, r.jsxs)('div', {
         className: i.wrapper,
         children: [
@@ -61,12 +61,12 @@ let u = function (e) {
             (0, r.jsx)('div', {
                 className: i.stepsWrapper,
                 children: (0, r.jsx)('ul', {
-                    children: o.map((e, t) =>
+                    children: s.map((e, t) =>
                         (0, r.jsx)(
                             l,
                             {
                                 isComplete: e.isComplete,
-                                hasNextStep: t < o.length - 1,
+                                hasNextStep: t < s.length - 1,
                                 children: e.renderContent()
                             },
                             t

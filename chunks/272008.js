@@ -501,8 +501,7 @@ async function z(e) {
                     creative_id: null == (_ = b.ad_identifiers) ? void 0 : _.creative_id,
                     creative_type: null == (f = b.ad_identifiers) ? void 0 : f.creative_type,
                     decision_id: b.request_id,
-                    is_targeted: null != b.ad_identifiers,
-                    metadata_raw: b.metadata_raw
+                    is_targeted: null != b.ad_identifiers
                 },
                 adContext: b.ad_context,
                 placement: e

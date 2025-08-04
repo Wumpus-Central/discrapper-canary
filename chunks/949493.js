@@ -1,94 +1,87 @@
-n.d(t, { Z: () => k });
+n.d(t, { Z: () => Z });
 var i = n(255367);
 n(73800);
 var r = n(442837),
-    s = n(470734),
-    a = n(921801),
-    l = n(663389),
-    o = n(10298),
-    c = n(526156),
-    d = n(924356),
-    u = n(901151),
-    m = n(4188),
-    p = n(24400),
-    g = n(122897),
-    h = n(821035),
-    f = n(694569),
-    b = n(394655),
-    x = n(540204),
-    _ = n(546957),
-    j = n(893996),
-    C = n(273927),
-    E = n(211466),
-    O = n(864239),
-    v = n(190014),
-    S = n(301812),
-    T = n(988043),
-    N = n(919539),
-    I = n(726985),
-    y = n(583139),
-    A = n(981631),
-    P = n(388032);
-let R = () =>
-        (0, i.jsx)(j.Z, {
-            title: P.intl.string(P.t['y62Z/f']),
-            webSetting: I.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
-            children: (0, i.jsxs)(_.Z, {
+    s = n(921801),
+    a = n(663389),
+    l = n(10298),
+    o = n(526156),
+    c = n(924356),
+    d = n(901151),
+    u = n(4188),
+    m = n(24400),
+    p = n(122897),
+    g = n(694569),
+    h = n(394655),
+    f = n(540204),
+    b = n(546957),
+    x = n(893996),
+    _ = n(273927),
+    j = n(211466),
+    C = n(864239),
+    E = n(190014),
+    O = n(301812),
+    v = n(988043),
+    S = n(919539),
+    T = n(726985),
+    N = n(583139),
+    I = n(981631),
+    y = n(388032);
+let A = () =>
+        (0, i.jsx)(x.Z, {
+            title: y.intl.string(y.t['y62Z/f']),
+            webSetting: T.s6.PRIVACY_AND_SAFETY_SOCIAL_PERMISSIONS_CATEGORY,
+            children: (0, i.jsxs)(b.Z, {
                 children: [
-                    (0, i.jsx)(a.F, {
-                        setting: I.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
-                        children: (0, i.jsx)(x.Z, {})
+                    (0, i.jsx)(s.F, {
+                        setting: T.s6.PRIVACY_AND_SAFETY_SERVER_SELECTOR,
+                        children: (0, i.jsx)(f.Z, {})
                     }),
-                    (0, i.jsx)(T.Z, {}),
-                    (0, i.jsx)(N.Z, {}),
+                    (0, i.jsx)(v.Z, {}),
                     (0, i.jsx)(S.Z, {}),
-                    (0, i.jsx)(v.Z, {})
+                    (0, i.jsx)(O.Z, {}),
+                    (0, i.jsx)(E.Z, {})
                 ]
             })
         }),
-    D = (e) => {
-        let { isGoreFilterEligible: t } = e;
-        return (0, i.jsxs)(j.Z, {
-            title: P.intl.string(P.t.xVRG4O),
-            webSetting: I.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-            children: [t ? (0, i.jsx)(E.n, {}) : (0, i.jsx)(h.P, {}), (0, i.jsx)(g.Z, {}), (0, i.jsx)(b.Z, {}), (0, i.jsx)(p.Z, {}), (0, i.jsx)(d.Z, {}), (0, i.jsx)(O.Z, {})]
-        });
-    },
-    Z = () =>
-        (0, i.jsxs)(j.Z, {
-            title: P.intl.string(P.t['1Qn8iY']),
-            webSetting: I.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
-            children: [(0, i.jsx)(f.Z, {}), (0, i.jsx)(C.ZP, {})]
+    P = () =>
+        (0, i.jsxs)(x.Z, {
+            title: y.intl.string(y.t.xVRG4O),
+            webSetting: T.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
+            children: [(0, i.jsx)(j.n, {}), (0, i.jsx)(p.Z, {}), (0, i.jsx)(h.Z, {}), (0, i.jsx)(m.Z, {}), (0, i.jsx)(c.Z, {}), (0, i.jsx)(C.Z, {})]
         }),
-    w = (e) => {
-        let { isGoreFilterEligible: t } = e;
-        return (0, i.jsxs)(i.Fragment, {
-            children: [(0, i.jsx)(D, { isGoreFilterEligible: t }), (0, i.jsx)(R, {}), (0, i.jsx)(Z, {})]
+    R = () =>
+        (0, i.jsxs)(x.Z, {
+            title: y.intl.string(y.t['1Qn8iY']),
+            webSetting: T.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
+            children: [(0, i.jsx)(g.Z, {}), (0, i.jsx)(_.ZP, {})]
+        }),
+    D = () =>
+        (0, i.jsxs)(i.Fragment, {
+            children: [(0, i.jsx)(P, {}), (0, i.jsx)(A, {}), (0, i.jsx)(R, {})]
         });
-    };
-function k() {
-    let e = (0, r.e7)([l.Z], () => l.Z.getSubsection()),
-        t = (0, s.pn)('UserSettingsContentAndSocial'),
-        n = [
+function Z() {
+    let e = (0, r.e7)([a.Z], () => a.Z.getSubsection()),
+        t = [
             {
-                title: P.intl.string(P.t['/7xJCA']),
-                component: () => (0, i.jsx)(w, { isGoreFilterEligible: t }),
-                setting: I.s6.CONTENT_SOCIAL_DISCORD_TAB
+                title: y.intl.string(y.t['/7xJCA']),
+                component: () => (0, i.jsx)(D, {}),
+                setting: T.s6.CONTENT_SOCIAL_DISCORD_TAB
             },
             {
-                title: P.intl.string(P.t.YpCiMj),
-                component: u.Z,
-                setting: I.s6.CONTENT_SOCIAL_CONNECTED_GAMES
+                title: y.intl.string(y.t.YpCiMj),
+                component: d.Z,
+                setting: T.s6.CONTENT_SOCIAL_CONNECTED_GAMES
             }
         ];
-    return (0, i.jsx)(o.N, {
-        header: P.intl.string(P.t['+o1pDQ']),
-        notice: (0, i.jsx)(m.c, {}),
-        children: (0, i.jsx)(c.Z, {
-            parentSetting: I.s6.CONTENT_SOCIAL,
-            settingsSection: A.oAB.CONTENT_AND_SOCIAL,
-            tabs: n,
-            defaultTabIndex: e === y.C ? 1 : void 0
+    return (0, i.jsx)(l.N, {
+        header: y.intl.string(y.t['+o1pDQ']),
+        notice: (0, i.jsx)(u.c, {}),
+        children: (0, i.jsx)(o.Z, {
+            parentSetting: T.s6.CONTENT_SOCIAL,
+            settingsSection: I.oAB.CONTENT_AND_SOCIAL,
+            tabs: t,
+            defaultTabIndex: e === N.C ? 1 : void 0
         })
     });
 }

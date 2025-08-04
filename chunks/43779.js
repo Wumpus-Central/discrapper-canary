@@ -1,8 +1,8 @@
-(n.d(t, { Z: () => w }), n(953529));
+(n.d(t, { Z: () => S }), n(953529));
 var r = n(255367),
-    o = n(73800),
-    s = n(120356),
-    a = n.n(s),
+    s = n(73800),
+    o = n(120356),
+    a = n.n(o),
     i = n(66546),
     l = n(442837),
     c = n(481060),
@@ -18,24 +18,24 @@ var r = n(255367),
     j = n(19148),
     _ = n(69439),
     v = n(46140),
-    y = n(642145),
-    C = n(388032),
+    C = n(642145),
+    y = n(388032),
     O = n(882067);
 let E = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
-function w(e) {
-    var t, n, s, w, T;
+function S(e) {
+    var t, n, o, S, T;
     let { quest: P, questContent: A, isHovering: N, contentPosition: R, rowIndex: B, isVisibleInViewport: k, onReceiveErrorHints: I, sourceQuestContent: q } = e,
-        D = o.useMemo(() => g.r.build(P.config), [P.config]),
+        D = s.useMemo(() => g.r.build(P.config), [P.config]),
         Q = D.defaultRewardName,
         V = D.defaultRewardNameWithArticle,
         L = (null == (t = P.userStatus) ? void 0 : t.enrolledAt) != null,
         { ref: M, scrollHeight: W } = (0, u.kE)(),
         Z = 104 !== W,
-        { onAssetLoadComplete: U } = o.useContext(b.k),
+        { onAssetLoadComplete: U } = s.useContext(b.k),
         { expansionSpring: H } = (0, c.q_F)({
             expansionSpring: +!!N,
             config:
-                ((w = (function (e) {
+                ((S = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
@@ -59,10 +59,10 @@ function w(e) {
                             }));
                     }
                     return e;
-                })({}, y.Y)),
+                })({}, C.Y)),
                 (T = T = { clamp: !0 }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(w, Object.getOwnPropertyDescriptors(T))
+                    ? Object.defineProperties(S, Object.getOwnPropertyDescriptors(T))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -71,22 +71,22 @@ function w(e) {
                           }
                           return n;
                       })(Object(T)).forEach(function (e) {
-                          Object.defineProperty(w, e, Object.getOwnPropertyDescriptor(T, e));
+                          Object.defineProperty(S, e, Object.getOwnPropertyDescriptor(T, e));
                       }),
-                w)
+                S)
         }),
         z = (null == (n = P.userStatus) ? void 0 : n.completedAt) != null,
-        F = (null == (s = P.userStatus) ? void 0 : s.claimedAt) != null,
+        F = (null == (o = P.userStatus) ? void 0 : o.claimedAt) != null,
         X = (0, m.xN)(P.config),
         K = (0, m.LM)(P.config),
         { completedRatio: Y, completedRatioDisplay: G } = (0, f.I)(P),
         J = (0, f.Bd)(P, q),
-        $ = o.useMemo(
+        $ = s.useMemo(
             () =>
                 F && X
-                    ? C.intl.format(C.t['8Op4c3'], {
+                    ? y.intl.format(y.t['8Op4c3'], {
                           balanceHook: () =>
-                              (0, r.jsxs)(S, {
+                              (0, r.jsxs)(w, {
                                   questId: P.id,
                                   children: [
                                       (0, r.jsx)(p.Z, {
@@ -98,14 +98,14 @@ function w(e) {
                               })
                       })
                     : F
-                      ? (0, r.jsx)(S, {
+                      ? (0, r.jsx)(w, {
                             questId: P.id,
                             children: Q
                         })
                       : X
-                        ? C.intl.format(C.t.ro1szc, {
+                        ? y.intl.format(y.t.ro1szc, {
                               balanceHook: () =>
-                                  (0, r.jsxs)(S, {
+                                  (0, r.jsxs)(w, {
                                       questId: P.id,
                                       children: [
                                           (0, r.jsx)(p.Z, {
@@ -116,16 +116,16 @@ function w(e) {
                                       ]
                                   })
                           })
-                        : C.intl.format(C.t['0IUT4e'], {
+                        : y.intl.format(y.t['0IUT4e'], {
                               rewardWithArticleHook: () =>
-                                  (0, r.jsx)(S, {
+                                  (0, r.jsx)(w, {
                                       questId: P.id,
                                       children: V
                                   })
                           }),
             [Q, F, V, P.id, K, X]
         ),
-        ee = o.useMemo(() => {
+        ee = s.useMemo(() => {
             if (null != J)
                 return (0, r.jsx)(c.Text, {
                     variant: 'text-sm/medium',
@@ -206,7 +206,7 @@ function w(e) {
                                 variant: 'eyebrow',
                                 color: 'text-brand',
                                 className: O.questName,
-                                children: C.intl.format(C.t.EAYZAg, { questName: P.config.messages.questName })
+                                children: y.intl.format(y.t.EAYZAg, { questName: P.config.messages.questName })
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-md/semibold',
@@ -237,7 +237,7 @@ function w(e) {
         ]
     });
 }
-let S = o.memo(function (e) {
+let w = s.memo(function (e) {
     let { questId: t, children: n } = e;
     return (0, r.jsx)(
         c.Text,

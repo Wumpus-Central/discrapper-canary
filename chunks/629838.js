@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     container: 'container_f89b2c',
     layout: 'layout_f89b2c',
     base: 'base_f89b2c',

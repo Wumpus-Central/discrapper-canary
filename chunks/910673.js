@@ -1,4 +1,4 @@
-n.d(e, { default: () => v });
+n.d(e, { default: () => h });
 var r = n(255367),
     l = n(73800),
     a = n(481060),
@@ -10,32 +10,30 @@ var r = n(255367),
     u = n(880257),
     E = n(63063),
     _ = n(247206),
-    I = n(470734),
-    f = n(981631),
-    m = n(526761),
-    g = n(388032),
+    I = n(981631),
+    f = n(526761),
+    m = n(388032),
     C = n(618386),
-    h = n(444812);
-let v = (t) => {
-    let { channelId: e, messageId: v, transitionState: A, onClose: R } = t,
-        L = (0, u.Z)(),
-        p = (0, c.Jm)(),
+    g = n(444812);
+let h = (t) => {
+    let { channelId: e, messageId: h, transitionState: A, onClose: v } = t,
+        R = (0, u.Z)(),
+        L = (0, c.Jm)(),
         x = (0, _.m8)(),
-        b = (0, I.pn)('SensitiveContentFilterSetting'),
-        y = l.useMemo(() => p && x, [p, x]),
-        T = l.useCallback(
+        p = l.useMemo(() => L && x, [L, x]),
+        b = l.useCallback(
             (t) => {
                 (0, _.aP)({
                     action: t,
                     channelId: e,
-                    messageId: v
+                    messageId: h
                 });
             },
-            [e, v]
+            [e, h]
         ),
-        M = l.useCallback(() => {
-            (R(),
-                T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
+        y = l.useCallback(() => {
+            (v(),
+                b(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
                 (0, a.ZDy)(async () => {
                     let { default: t } = await n(788679);
                     return (n) =>
@@ -68,48 +66,48 @@ let v = (t) => {
                             })(
                                 {
                                     channelId: e,
-                                    messageId: v
+                                    messageId: h
                                 },
                                 n
                             )
                         );
                 }));
-        }, [e, v, R, T]);
+        }, [e, h, v, b]);
     l.useEffect(() => {
         (0, _.aP)({
             action: _.Yy.EXPLICIT_MEDIA_LEARN_MORE_VIEWED,
             channelId: e,
-            messageId: v
+            messageId: h
         });
-    }, [e, v]);
-    let O = l.useCallback(
+    }, [e, h]);
+    let T = l.useCallback(
         () =>
-            y
-                ? g.intl.format(g.t['TGqx+v'], {
+            p
+                ? m.intl.format(m.t['TGqx+v'], {
                       handleOnHelpUrlHook: () => {
-                          (s.Z.openUrl(E.Z.getArticleURL(f.BhN.TIGGER_PAWTECT_LEARN_MORE)), T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE));
+                          (s.Z.openUrl(E.Z.getArticleURL(I.BhN.TIGGER_PAWTECT_LEARN_MORE)), b(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE));
                       }
                   })
                 : x
                   ? null
-                  : g.intl.format(g.t.Ge0HUl, {
+                  : m.intl.format(m.t.Ge0HUl, {
                         handleFalsePositiveHook: () => {
-                            (M(), T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE));
+                            (y(), b(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE));
                         }
                     }),
-        [y, x, M, T]
+        [p, x, y, b]
     );
     return (0, r.jsxs)(a.Y0X, {
         transitionState: A,
-        'aria-label': g.intl.string(g.t.xdm3XF),
+        'aria-label': m.intl.string(m.t.xdm3XF),
         parentComponent: 'ExplicitMediaLearnMoreModal',
         children: [
             (0, r.jsx)(a.xBx, {
                 separator: !1,
                 className: C.modalHeader,
                 children: (0, r.jsx)('img', {
-                    src: h,
-                    alt: g.intl.string(g.t.id3fND),
+                    src: g,
+                    alt: m.intl.string(m.t.id3fND),
                     className: C.headerImg
                 })
             }),
@@ -119,59 +117,59 @@ let v = (t) => {
                     (0, r.jsx)(a.X6q, {
                         variant: 'heading-lg/bold',
                         className: C.modalInteriorHeader,
-                        children: g.intl.string(g.t.sGW77u)
+                        children: m.intl.string(m.t.sGW77u)
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         children: (function () {
-                            if (y) return g.intl.string(g.t.f3ARDQ);
-                            let t = b ? g.intl.string(g.t.RUw0ZG) : g.intl.string(g.t.XW3vjo),
-                                e = b ? g.intl.string(g.t['E/oQYG']) : g.intl.string(g.t.i4daNj);
-                            return L ? t : e;
+                            if (p) return m.intl.string(m.t.f3ARDQ);
+                            let t = m.intl.string(m.t.RUw0ZG),
+                                e = m.intl.string(m.t['E/oQYG']);
+                            return R ? t : e;
                         })()
                     }),
                     (0, r.jsxs)('div', {
                         className: C.buttonContainer,
                         children: [
-                            y
+                            p
                                 ? (0, r.jsx)(a.zxk, {
                                       variant: 'primary',
-                                      text: g.intl.string(g.t.KPGVWl),
+                                      text: m.intl.string(m.t.KPGVWl),
                                       onClick: function () {
-                                          (R(), T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY), s.Z.showAgeVerificationGetStartedModal(d.cU.SENSITIVE_MEDIA_LEARN_MORE));
+                                          (v(), b(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY), s.Z.showAgeVerificationGetStartedModal(d.cU.SENSITIVE_MEDIA_LEARN_MORE));
                                       },
                                       fullWidth: !0
                                   })
-                                : L
+                                : R
                                   ? (0, r.jsx)(a.zxk, {
                                         variant: 'primary',
-                                        text: g.intl.string(g.t['9D+zGR']),
+                                        text: m.intl.string(m.t['9D+zGR']),
                                         onClick: function () {
-                                            (T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), i.Z.open(f.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: m.FY.EXPLICIT_MEDIA_REDACTION_V2 }), R());
+                                            (b(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS), i.Z.open(I.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: f.FY.EXPLICIT_MEDIA_REDACTION_V2 }), v());
                                         },
                                         fullWidth: !0
                                     })
                                   : (0, r.jsx)(a.zxk, {
                                         variant: 'primary',
-                                        text: g.intl.string(g.t.hvVgAQ),
+                                        text: m.intl.string(m.t.hvVgAQ),
                                         onClick: () => {
-                                            (0, o.Z)(E.Z.getArticleURL(f.BhN.EXPLICIT_MEDIA_REDACTION));
+                                            (0, o.Z)(E.Z.getArticleURL(I.BhN.EXPLICIT_MEDIA_REDACTION));
                                         },
                                         fullWidth: !0
                                     }),
                             (0, r.jsx)(a.zxk, {
                                 variant: 'secondary',
-                                text: g.intl.string(g.t.bmbHPD),
+                                text: m.intl.string(m.t.bmbHPD),
                                 onClick: function () {
-                                    (R(), T(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS));
+                                    (v(), b(_.Yy.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS));
                                 },
                                 fullWidth: !0
                             }),
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
-                                children: O()
+                                children: T()
                             })
                         ]
                     })

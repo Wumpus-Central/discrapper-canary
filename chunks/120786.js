@@ -4,7 +4,7 @@ var i = n(255367),
     s = n(120356),
     a = n.n(s),
     l = n(442837),
-    o = n(693789),
+    o = n(159691),
     c = n(481060),
     d = n(607070),
     u = n(70097),
@@ -59,13 +59,11 @@ let j = () => {
             children: [
                 (0, i.jsx)(j, {}),
                 (0, i.jsx)(o.zx, {
-                    className: f.ctaButton,
-                    color: o.zx.Colors.BRAND,
-                    look: o.zx.Looks.FILLED,
-                    size: o.zx.Sizes.SMALL,
+                    text: t,
+                    variant: 'primary',
+                    size: 'sm',
                     onClick: n,
-                    fullWidth: !0,
-                    children: t
+                    fullWidth: !0
                 }),
                 (0, i.jsxs)('div', {
                     className: f.linkContainer,

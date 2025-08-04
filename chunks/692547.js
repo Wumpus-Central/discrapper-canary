@@ -102,6 +102,10 @@ function P(e, t) {
                 r = w(e, t, n),
                 i = r.num();
             return 1 !== r.alpha() ? (i << 8) | Math.round(255 * r.alpha()) : i;
+        },
+        rgba() {
+            let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+            return w(e, t, n).rgba();
         }
     };
 }

@@ -29,8 +29,8 @@ var n = r(255367),
     I = r(508498),
     k = r(681435),
     N = r(215023),
-    w = r(981631),
-    A = r(420212),
+    A = r(981631),
+    w = r(420212),
     B = r(484920);
 let R = (e) => {
         let { children: t, shouldAddEventListener: r, onClose: n } = e,
@@ -39,7 +39,7 @@ let R = (e) => {
             l.useEffect(() => {
                 if (!r || i) return;
                 let e = (e) => {
-                    e.key === A.mR.Escape && n();
+                    e.key === w.mR.Escape && n();
                 };
                 return (window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e));
             }, [r, i, n]),
@@ -51,12 +51,12 @@ let R = (e) => {
         (0, h.z)(g.f);
         let i = (0, p.Z)((0, o.Z)()),
             c = (0, s.e7)([O.default], () => O.default.getCurrentUser()),
-            { closeIntroToOrbsClaimedCoachmark: A } = (0, m.Z)({ location: 'CollectiblesShop' });
+            { closeIntroToOrbsClaimedCoachmark: w } = (0, m.Z)({ location: 'CollectiblesShop' });
         l.useEffect(
             () => () => {
-                A();
+                w();
             },
-            [i, A]
+            [i, w]
         );
         let { onClose: Z } = (0, I.Db)(),
             { currentTab: D, hasFilters: F } = (0, j.S)(),
@@ -91,9 +91,9 @@ let R = (e) => {
             $();
         }, [$]),
             l.useEffect(() => {
-                t || (0, d.Y)(w.Z5c.COLLECTIBLES_SHOP);
+                t || (0, d.Y)(A.Z5c.COLLECTIBLES_SHOP);
             }, [t]));
-        let ee = (0, s.e7)([_.Z], () => _.Z.getLayers().includes(w.S9g.COLLECTIBLES_SHOP)),
+        let ee = (0, s.e7)([_.Z], () => _.Z.getLayers().includes(A.S9g.COLLECTIBLES_SHOP)),
             et = l.useRef(null),
             er = l.useRef(null);
         (0, u.Tbt)(et);

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
-var o = n(120356),
-    s = n.n(o),
+var s = n(120356),
+    o = n.n(s),
     a = n(66546),
     i = n(481060),
     l = n(113434),
@@ -16,19 +16,19 @@ var o = n(120356),
     x = n(192214);
 let h = function (e) {
     var t;
-    let { className: n, expansionSpring: o, isExpanded: h, isExpansionAnimationComplete: b, quest: j, useReducedMotion: _ } = e,
+    let { className: n, expansionSpring: s, isExpanded: h, isExpansionAnimationComplete: b, quest: j, useReducedMotion: _ } = e,
         v = (null == (t = j.userStatus) ? void 0 : t.enrolledAt) != null,
-        { percentComplete: y } = (0, l.Rf)(j),
-        C = (0, l.Jf)(j),
-        O = null != C ? C.percentComplete > 0 : y > 0;
+        { percentComplete: C } = (0, l.Rf)(j),
+        y = (0, l.Jf)(j),
+        O = null != y ? y.percentComplete > 0 : C > 0;
     return (0, r.jsxs)(a.animated.div, {
         'aria-hidden': h && b,
-        className: s()(n, x.contentCollapsed, {
+        className: o()(n, x.contentCollapsed, {
             [x.contentCollapsedExpanded]: h,
             [x.contentCollapsedAccepted]: v
         }),
         style: {
-            opacity: o.to({
+            opacity: s.to({
                 range: [0, 1],
                 output: [1, 0]
             })

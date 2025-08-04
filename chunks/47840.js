@@ -21,6 +21,7 @@ let d = function (e) {
     return (0, i.jsx)(r.animated.div, {
         className: c.wrapper,
         style: u,
+        'data-mtctest-ignore': 'true',
         children: (0, i.jsxs)('div', {
             className: c.buttonContainer,
             children: [

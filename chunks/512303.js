@@ -25,8 +25,8 @@ function v(e) {
         Z = (0, a.e7)([O.default], () => O.default.getUser(E)),
         T = (0, a.e7)([m.Z], () => m.Z.getGuild(_)),
         I = p.Z.getChannel(e.channel_id),
-        N = null == I ? void 0 : I.getGuildId(),
-        A = (0, a.e7)([O.default], () => O.default.getUser(P));
+        A = null == I ? void 0 : I.getGuildId(),
+        N = (0, a.e7)([O.default], () => O.default.getUser(P));
     if (
         (i.useEffect(() => {
             null == Z && null != E && (0, s.PR)(E);
@@ -34,7 +34,7 @@ function v(e) {
         !(0, d.a)(e))
     )
         return null;
-    null == A && (A = new b.Z(null == (j = e.interactionMetadata) ? void 0 : j.user));
+    null == N && (N = new b.Z(null == (j = e.interactionMetadata) ? void 0 : j.user));
     let w = null;
     return (
         null != T
@@ -55,7 +55,7 @@ function v(e) {
                   action: () =>
                       (0, g.openUserProfileModal)({
                           userId: Z.id,
-                          guildId: N,
+                          guildId: A,
                           channelId: e.channel_id,
                           sourceAnalyticsLocations: S
                       }),
@@ -74,23 +74,23 @@ function v(e) {
             label: y.intl.string(y.t.Rjezb2),
             children: [
                 w,
-                null != A
+                null != N
                     ? (0, r.jsx)(o.sNh, {
                           action: () =>
                               (0, g.openUserProfileModal)({
-                                  userId: A.id,
-                                  guildId: N,
+                                  userId: N.id,
+                                  guildId: A,
                                   channelId: e.channel_id,
                                   sourceAnalyticsLocations: S
                               }),
                           className: h.interactionInfoMenuItem,
                           iconLeft: () =>
                               (0, r.jsx)(c.Z, {
-                                  user: A,
+                                  user: N,
                                   size: o.EFr.SIZE_20
                               }),
                           id: 'interaction-user',
-                          label: A.username,
+                          label: N.username,
                           subtext: y.intl.string(y.t['04gxNj'])
                       })
                     : null

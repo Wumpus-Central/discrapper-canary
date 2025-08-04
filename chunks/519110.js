@@ -68,8 +68,8 @@ function E(e) {
         Z = i.useMemo(() => j(v({}, P), { section: _ ? y.jXE.EXPRESSION_PICKER : y.jXE.CONTEXT_MENU }), [P, _]),
         T = (0, p.Go)(),
         I = (0, l.e7)([m.Z], () => (t === f.S.STICKER && null != n ? m.Z.getStickerById(n) : null)),
-        N = null != I && T.includes(I.id),
-        A = (0, l.e7)([u.ZP], () => {
+        A = null != I && T.includes(I.id),
+        N = (0, l.e7)([u.ZP], () => {
             if (t === f.S.EMOJI) {
                 if (null != n) return u.ZP.getDisambiguatedEmojiContext().getById(n);
                 else if (null != E) {
@@ -78,11 +78,11 @@ function E(e) {
                 }
             }
         }),
-        w = (0, c.C1)(null, A);
+        w = (0, c.C1)(null, N);
     return null != I && t === f.S.STICKER
         ? (0, O.J8)(I) && !(0, O.V9)(I)
             ? null
-            : N
+            : A
               ? (0, r.jsx)(a.sNh, {
                     id: 'unfavorite',
                     action: () => (0, g.hW)(I.id),
@@ -99,21 +99,21 @@ function E(e) {
                     },
                     label: h.intl.string(h.t.kWmiPT)
                 })
-        : null != A && t === f.S.EMOJI
+        : null != N && t === f.S.EMOJI
           ? w
               ? (0, r.jsx)(a.sNh, {
                     id: 'unfavorite',
-                    action: () => (0, o.Xe)(A),
+                    action: () => (0, o.Xe)(N),
                     label: h.intl.string(h.t.Ay49KC)
                 })
               : (0, r.jsx)(a.sNh, {
                     id: 'favorite',
                     action: () => {
                         ((0, c.J1)({
-                            emoji: A,
+                            emoji: N,
                             location: j(v({}, Z), { object: y.qAy.EMOJI })
                         }),
-                            (0, o.$K)(A));
+                            (0, o.$K)(N));
                     },
                     label: h.intl.string(h.t['nNsr6+'])
                 })

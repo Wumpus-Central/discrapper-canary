@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(97519),
     i = n(731965);
-let a = '#4394D4',
-    o = 20,
+let a = '#5865F2',
+    o = 74,
     s = (0, r.U)((e) => ({
         colors: [],
         chassisMixAmount: o,

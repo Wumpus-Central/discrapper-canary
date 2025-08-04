@@ -149,7 +149,8 @@ function P(e) {
                       channelId: e.channel_id,
                       mentionEveryone: null != (_ = e.mention_everyone) && _,
                       mentionUsers: A,
-                      mentionRoles: P
+                      mentionRoles: P,
+                      mentionGames: D.map((e) => e.id)
                   }),
                   giftCodes: (0, g.Fp)(e) ? (0, g.Q_)(null == e ? void 0 : e.embeds[0].url) : (0, g.Q_)(e.content),
                   content: Z,

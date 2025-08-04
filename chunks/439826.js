@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => D }), n(784620), n(973216));
 var r = n(255367),
-    o = n(73800),
-    s = n(120356),
-    a = n.n(s),
+    s = n(73800),
+    o = n(120356),
+    a = n.n(o),
     i = n(66546),
     l = n(780384),
     c = n(755721),
@@ -18,12 +18,12 @@ var r = n(255367),
     j = n(974390),
     _ = n(475595),
     v = n(18578),
-    y = n(623249),
-    C = n(685613),
+    C = n(623249),
+    y = n(685613),
     O = n(110560),
     E = n(670638),
-    w = n(251360),
-    S = n(19148),
+    S = n(251360),
+    w = n(19148),
     T = n(46140),
     P = n(642145),
     A = n(981631),
@@ -74,21 +74,21 @@ function k(e, t) {
 }
 function I(e) {
     var t;
-    let { quest: n, errorHints: s, warningHints: a, isDarkTheme: l, sourceQuestContent: p } = e,
-        { ref: f, height: g = 0 } = (0, d.ZP)([s]),
+    let { quest: n, errorHints: o, warningHints: a, isDarkTheme: l, sourceQuestContent: p } = e,
+        { ref: f, height: g = 0 } = (0, d.ZP)([o]),
         x = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
         b = (0, h.z)(n),
-        { type: j, hints: _ } = o.useMemo(
+        { type: j, hints: _ } = s.useMemo(
             () =>
                 x || b
                     ? {
                           type: 2,
                           hints: []
                       }
-                    : s.length > 0
+                    : o.length > 0
                       ? {
                             type: 0,
-                            hints: s.map((e) => e.message)
+                            hints: o.map((e) => e.message)
                         }
                       : a.length > 0
                         ? {
@@ -99,19 +99,19 @@ function I(e) {
                               type: 2,
                               hints: []
                           },
-            [s, x, b, a]
+            [o, x, b, a]
         ),
         v = 2 !== j,
-        C = (0, u.q_F)({
+        y = (0, u.q_F)({
             opacity: +!!v,
             height: v ? g : 0,
             config: P.Y
         }),
         O = 0 === j ? u.Mgn : u.d3s,
         E = (0, m.Lq)(A.Ilk.RED_345),
-        w = 0 === j ? E : l ? u.TVs.colors.TEXT_DEFAULT : u.TVs.colors.WHITE;
+        S = 0 === j ? E : l ? u.TVs.colors.TEXT_DEFAULT : u.TVs.colors.WHITE;
     return (0, r.jsx)(i.animated.div, {
-        style: C,
+        style: y,
         children: (0, r.jsxs)('div', {
             ref: f,
             className: R.hints,
@@ -121,7 +121,7 @@ function I(e) {
                     children: [
                         (0, r.jsx)(O, {
                             size: 'xs',
-                            color: w
+                            color: S
                         }),
                         (0, r.jsx)(u.Text, {
                             variant: 'text-xs/medium',
@@ -133,9 +133,9 @@ function I(e) {
                 0 === j &&
                     (0, r.jsx)(c.zx, {
                         onClick: () =>
-                            (0, y.y)({
+                            (0, C.y)({
                                 questId: n.id,
-                                errorHints: s,
+                                errorHints: o,
                                 sourceQuestContent: p
                             }),
                         size: c.Ph.MIN,
@@ -149,15 +149,15 @@ function I(e) {
     });
 }
 function q(e) {
-    let { quest: t, isHovering: n, showAssets: s } = e,
-        a = o.useMemo(() => (0, _.fh)(t, _.eC.HERO_IMAGE), [t]),
-        i = o.useMemo(() => (0, _.fh)(t, _.eC.HERO_VIDEO), [t]),
+    let { quest: t, isHovering: n, showAssets: o } = e,
+        a = s.useMemo(() => (0, _.fh)(t, _.eC.HERO_IMAGE), [t]),
+        i = s.useMemo(() => (0, _.fh)(t, _.eC.HERO_VIDEO), [t]),
         l = (0, j.h)(t, T.dr.QUEST_HOME_DESKTOP),
-        { onAssetLoadComplete: c } = o.useContext(w.k);
+        { onAssetLoadComplete: c } = s.useContext(S.k);
     return (0, r.jsx)('div', {
         className: R.heroAssetCont,
         children:
-            s &&
+            o &&
             (0, r.jsx)(v.K, {
                 imageAsset:
                     null != a
@@ -186,8 +186,8 @@ function q(e) {
     });
 }
 function D(e) {
-    var t, n, s, i, c;
-    let { quest: d, isHovering: m, errorHints: j, warningHints: _, isVisibleInViewport: v, onCtxMenuClose: y, onCtxMenuOpen: T, onCtxMenuSelect: P, sourceQuestContent: D } = e,
+    var t, n, o, i, c;
+    let { quest: d, isHovering: m, errorHints: j, warningHints: _, isVisibleInViewport: v, onCtxMenuClose: C, onCtxMenuOpen: T, onCtxMenuSelect: P, sourceQuestContent: D } = e,
         Q = (0, g.PB)(d),
         V = (0, p.ZP)(),
         L = ((0, l.wj)(V) ? A.BRd.DARK : A.BRd.LIGHT) === A.BRd.DARK,
@@ -198,9 +198,9 @@ function D(e) {
             day: 'numeric'
         }),
         U = (null == (n = d.userStatus) ? void 0 : n.enrolledAt) != null,
-        H = (null == (s = d.userStatus) ? void 0 : s.completedAt) != null,
-        { onAssetLoadComplete: z } = o.useContext(w.k),
-        F = o.useCallback(() => {
+        H = (null == (o = d.userStatus) ? void 0 : o.completedAt) != null,
+        { onAssetLoadComplete: z } = s.useContext(S.k),
+        F = s.useCallback(() => {
             Q &&
                 ((0, g.zi)(d) ||
                     U ||
@@ -271,7 +271,7 @@ function D(e) {
                                         }),
                                     (0, r.jsx)(E.r, {
                                         onOpen: T,
-                                        onClose: y,
+                                        onClose: C,
                                         onSelect: P,
                                         questContent: b.jn.QUEST_HOME_DESKTOP,
                                         quest: d,
@@ -295,16 +295,16 @@ function D(e) {
                                     })
                                 ]
                             }),
-                            (0, r.jsx)(S.E, {
+                            (0, r.jsx)(w.E, {
                                 showPlaceholder: !v,
                                 width: 100,
                                 height: 30,
                                 className: R.partnerBranding,
-                                children: (0, r.jsx)(C.ZP, {
+                                children: (0, r.jsx)(y.ZP, {
                                     className: R.partnerBranding,
                                     logotypeClassName: R.partnerLogotypes,
                                     quest: d,
-                                    separatorSpacing: C.US.MEDIUM,
+                                    separatorSpacing: y.US.MEDIUM,
                                     withGameTile: !1,
                                     onLoadComplete: z
                                 })

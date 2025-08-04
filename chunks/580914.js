@@ -29,8 +29,8 @@ var n = r(255367),
     I = r(38900),
     k = r(709999),
     N = r(794324),
-    w = r(619899),
-    A = r(215023),
+    A = r(619899),
+    w = r(215023),
     B = r(981631),
     R = r(388032),
     Z = r(806734);
@@ -58,7 +58,7 @@ let D = {
                   categorySkuId: e.skuId,
                   bannerAsset: e.heroBannerAsset,
                   fallbackBannerUrl: (0, y.uV)(null != (l = e.heroBanner) ? l : '', {
-                      size: A.pv,
+                      size: w.pv,
                       format: 'jpg'
                   }),
                   summary: e.summary,
@@ -106,8 +106,8 @@ let D = {
             ea = l.useMemo(() => z(Y.rankedSkuIds), [r, z, Y.rankedSkuIds]),
             eo = (0, P.a)()(ea),
             es = (0, T.l)(eo).slice(0, 4),
-            ec = (0, w.St)(es),
-            eu = L === A.AW.ORBS ? R.intl.string(R.t['1CdL8f']) : R.intl.formatToPlainString(R.t.wvKYCg, { category_name: Y.name }),
+            ec = (0, A.St)(es),
+            eu = L === w.AW.ORBS ? R.intl.string(R.t['1CdL8f']) : R.intl.formatToPlainString(R.t.wvKYCg, { category_name: Y.name }),
             ed = (0, x.FF)('CollectiblesContent');
         return null != G && (r || Y !== D)
             ? (0, n.jsxs)('div', {
@@ -169,7 +169,7 @@ let D = {
                                                                     variant: 'heading-xxl/bold',
                                                                     className: Z.title,
                                                                     color: 'header-primary',
-                                                                    children: [Y.title, L === A.AW.ORBS && K && (0, n.jsx)(h.Z, {})]
+                                                                    children: [Y.title, L === w.AW.ORBS && K && (0, n.jsx)(h.Z, {})]
                                                                 }),
                                                             '' !== Y.summary &&
                                                                 (0, n.jsx)(d.Text, {
@@ -188,7 +188,7 @@ let D = {
                                               children: (0, n.jsx)(d.zxk, {
                                                   variant: 'overlay-primary',
                                                   onClick: () => {
-                                                      L === A.AW.ORBS
+                                                      L === w.AW.ORBS
                                                           ? ((0, m.Y)({
                                                                 pageType: B.ZY5.SHOP_ORBS_TAB,
                                                                 sectionType: B.jXE.ORBS_SHOP_HERO_BLOCK,
@@ -211,7 +211,7 @@ let D = {
                                   ]
                               }),
                               (0, n.jsx)('div', {
-                                  className: a()(Z.row, Z.feed, { [Z.feedSingleRow]: L !== A.AW.ORBS }),
+                                  className: a()(Z.row, Z.feed, { [Z.feedSingleRow]: L !== w.AW.ORBS }),
                                   children: r
                                       ? (0, n.jsx)(n.Fragment, {
                                             children: [void 0, void 0, void 0, void 0].map((e, t) => (0, n.jsx)(I.K, {}, t))

@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => O }), n(388685));
 var r = n(255367),
-    o = n(73800),
-    s = n(120356),
-    a = n.n(s),
+    s = n(73800),
+    o = n(120356),
+    a = n.n(o),
     i = n(442837),
     l = n(755721),
     c = n(481060),
@@ -18,7 +18,7 @@ var r = n(255367),
     j = n(46140),
     _ = n(388032),
     v = n(142468);
-let y = [
+let C = [
     {
         value: j.cd.DESKTOP,
         get label() {
@@ -32,11 +32,11 @@ let y = [
         }
     }
 ];
-function C(e) {
+function y(e) {
     let t,
         n,
-        { value: o } = e;
-    switch (o) {
+        { value: s } = e;
+    switch (s) {
         case j.cd.DESKTOP:
             ((n = (0, r.jsx)(c.pzj, {})), (t = _.intl.string(_.t.QXc019)));
             break;
@@ -52,8 +52,8 @@ function C(e) {
     });
 }
 function O(e) {
-    var t, n, s, O;
-    let { quest: E, questContent: w, onReceiveErrorHints: S, contentPosition: T, rowIndex: P, sourceQuestContent: A } = e,
+    var t, n, o, O;
+    let { quest: E, questContent: S, onReceiveErrorHints: w, contentPosition: T, rowIndex: P, sourceQuestContent: A } = e,
         N = (0, i.e7)([u.Z], () => u.Z.useReducedMotion),
         R = (0, h.g2)({ useReducedMotion: N }),
         B = (0, d.O5)(),
@@ -74,7 +74,7 @@ function O(e) {
         })),
         L = (null == (t = E.userStatus) ? void 0 : t.enrolledAt) != null,
         M = (null == (n = E.userStatus) ? void 0 : n.completedAt) != null,
-        W = M && (null == (s = E.userStatus) ? void 0 : s.claimedAt) == null,
+        W = M && (null == (o = E.userStatus) ? void 0 : o.claimedAt) == null,
         Z = (0, p.iQ)(E),
         U = !(0, p.zi)(E),
         H = (0, m._Q)(E),
@@ -82,22 +82,22 @@ function O(e) {
         F = (0, p.PB)(E),
         X = (0, p.HJ)(E),
         K = (0, p.Vl)(E),
-        Y = o.useRef(null),
+        Y = s.useRef(null),
         G = (0, m.Rf)(E),
         [J, $, ee] = (0, m.me)(E, G),
         et = U && H === m.OH.ACCEPTED,
         en = et && J === g.LI.SELECT,
         er = et && !en && $.length > 1,
-        eo = o.useCallback(
+        es = s.useCallback(
             (e) => {
-                (ee(e), e === j.cd.DESKTOP && S([]));
+                (ee(e), e === j.cd.DESKTOP && w([]));
             },
-            [ee, S]
+            [ee, w]
         ),
-        { text: es, onClick: ea } = (0, h.Ks)({
+        { text: eo, onClick: ea } = (0, h.Ks)({
             progressState: H,
             quest: E,
-            questContent: w,
+            questContent: S,
             isCollectibleQuest: z,
             questContentPosition: T,
             questContentRowIndex: P,
@@ -112,7 +112,7 @@ function O(e) {
                 (R.startAnimation(),
                     B({
                         questId: E.id,
-                        questContent: w,
+                        questContent: S,
                         questContentCTA: d.jZ.DEFIBRILLATOR,
                         questContentPosition: T,
                         questContentRowIndex: P,
@@ -120,7 +120,7 @@ function O(e) {
                     }));
             },
             afterRequest: (e) => {
-                (R.stopAnimation(), S(e));
+                (R.stopAnimation(), w(e));
             }
         }),
         ec = (null == (O = E.userStatus) ? void 0 : O.claimedAt) != null,
@@ -131,7 +131,7 @@ function O(e) {
               submitting: D,
               onClick: null != ea ? ea : void 0,
               className: v.button,
-              children: es
+              children: eo
           }))
         : M
           ? (eu = F
@@ -144,7 +144,7 @@ function O(e) {
                               onClick: () => {
                                   (0, x.openVideoQuestModal)({
                                       quest: E,
-                                      questContent: w,
+                                      questContent: S,
                                       sourceQuestContent: A,
                                       sourceQuestContentCTA: d.jZ.WATCH_VIDEO,
                                       skipEnrollmentCheck: !0
@@ -159,7 +159,7 @@ function O(e) {
                               color: l.Tt.BRAND,
                               className: v.button,
                               onClick: null != ea ? ea : void 0,
-                              children: es
+                              children: eo
                           })
                       ]
                   })
@@ -167,7 +167,7 @@ function O(e) {
                       color: l.Tt.BRAND,
                       className: v.button,
                       onClick: null != ea ? ea : void 0,
-                      children: es
+                      children: eo
                   }))
           : U
             ? U && W
@@ -176,7 +176,7 @@ function O(e) {
                       submitting: D,
                       onClick: null != ea ? ea : void 0,
                       className: v.button,
-                      children: es
+                      children: eo
                   }))
                 : X
                   ? (eu = (0, r.jsx)(l.zx, {
@@ -190,10 +190,10 @@ function O(e) {
                           ? (0, r.jsx)(c.PhF, {
                                 className: v.platformSelectorPrimary,
                                 isSelected: () => !1,
-                                options: y,
+                                options: C,
                                 placeholder: _.intl.string(_.t.drVw4e),
-                                renderOptionLabel: C,
-                                select: eo,
+                                renderOptionLabel: y,
+                                select: es,
                                 serialize: (e) => {
                                     switch (e) {
                                         case j.cd.DESKTOP:
@@ -209,7 +209,7 @@ function O(e) {
                                       color: l.Tt.PRIMARY,
                                       className: v.button,
                                       onClick: null != ea ? ea : void 0,
-                                      children: es
+                                      children: eo
                                   })
                                 : (0, r.jsx)(l.zx, {
                                       color: l.Tt.PRIMARY,
@@ -226,7 +226,7 @@ function O(e) {
                                     color: l.Tt.BRAND,
                                     onClick: null != ea ? ea : void 0,
                                     className: v.button,
-                                    children: es
+                                    children: eo
                                 })
                               : (0, r.jsx)(l.zx, {
                                     color: l.Tt.PRIMARY,
@@ -248,7 +248,7 @@ function O(e) {
                                     (0, r.jsx)(l.zx, {
                                         color: l.Tt.BRAND,
                                         className: v.button,
-                                        onClick: () => (0, x.openQuestMinorEnrollmentBlockModal)(E, w, A),
+                                        onClick: () => (0, x.openQuestMinorEnrollmentBlockModal)(E, S, A),
                                         children: _.intl.string(_.t.vY9GgI)
                                     })
                                 ]
@@ -258,7 +258,7 @@ function O(e) {
                                 color: l.Tt.BRAND,
                                 onClick: null != ea ? ea : void 0,
                                 className: v.button,
-                                children: es
+                                children: eo
                             }))
             : (eu = (0, r.jsx)(l.zx, {
                   color: l.Tt.PRIMARY,
@@ -275,7 +275,7 @@ function O(e) {
                   er &&
                       (0, r.jsx)(b.U, {
                           popoutTargetRef: Y,
-                          onSelect: eo,
+                          onSelect: es,
                           quest: E,
                           questContent: g.jn.ACTIVITY_PANEL,
                           children: (e) => {

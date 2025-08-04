@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j });
 var r = n(255367),
-    o = n(73800),
-    s = n(120356),
-    a = n.n(s),
+    s = n(73800),
+    o = n(120356),
+    a = n.n(o),
     i = n(66546),
     l = n(481060),
     c = n(617136),
@@ -16,16 +16,16 @@ var r = n(255367),
     h = n(388032),
     b = n(74783);
 let j = (e) => {
-    let { quest: t, expansionSpring: n, onCtxMenuSelect: s, onCtxMenuOpen: j, onCtxMenuClose: _, useReducedMotion: v, isExpanded: y, isExpansionAnimationComplete: C } = e,
+    let { quest: t, expansionSpring: n, onCtxMenuSelect: o, onCtxMenuOpen: j, onCtxMenuClose: _, useReducedMotion: v, isExpanded: C, isExpansionAnimationComplete: y } = e,
         O = (0, u.aM)(),
-        E = o.useCallback(() => {
+        E = s.useCallback(() => {
             (0, f.openDisclosureModal)(t, {
                 content: p.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_DISCLOSURE,
                 sourceQuestContent: p.jn.QUEST_BAR_V2
             });
         }, [t]),
-        w = o.useCallback(() => {
+        S = s.useCallback(() => {
             (0, d.nc)(t, {
                 content: p.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_GAME_LINK,
@@ -33,10 +33,10 @@ let j = (e) => {
                 sourceQuestContent: p.jn.QUEST_BAR_V2
             });
         }, [O, t]),
-        S = y && C,
+        w = C && y,
         T = (0, r.jsx)(l.P3F, {
-            onClick: w,
-            className: a()(b.clickable, { [b.logo]: S }),
+            onClick: S,
+            className: a()(b.clickable, { [b.logo]: w }),
             children: (0, r.jsx)(m.ZP, {
                 quest: t,
                 logotypeClassName: b.rewardHighlightLogotype,
@@ -44,7 +44,7 @@ let j = (e) => {
             })
         });
     return (0, r.jsxs)(i.animated.div, {
-        className: a()(b.wrapper, b.rewardHighlightWrapper, { [b.interactable]: S }),
+        className: a()(b.wrapper, b.rewardHighlightWrapper, { [b.interactable]: w }),
         style: {
             transform: (0, i.to)(
                 [
@@ -69,7 +69,7 @@ let j = (e) => {
             (0, r.jsx)(x.Z, {
                 quest: t,
                 expansionSpring: n,
-                isFullyExpanded: S,
+                isFullyExpanded: w,
                 partnerBranding: T,
                 useReducedMotion: v
             }),
@@ -100,7 +100,7 @@ let j = (e) => {
                     (0, r.jsx)(g.r, {
                         onOpen: j,
                         onClose: _,
-                        onSelect: s,
+                        onSelect: o,
                         questContent: p.jn.QUEST_BAR_V2,
                         quest: t,
                         shouldShowDisclosure: !0,

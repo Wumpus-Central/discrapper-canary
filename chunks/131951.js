@@ -300,7 +300,7 @@ function tD(e) {
         vadKrispActivationThreshold: null != (t = n.modeOptions.vadKrispActivationThreshold) ? t : 0.5,
         vadLeading: n.modeOptions.vadLeading,
         vadTrailing: n.modeOptions.vadTrailing,
-        pttReleaseDelay: n.modeOptions.delay
+        pttReleaseDelay: Math.round(n.modeOptions.delay)
     });
 }
 function tL(e) {

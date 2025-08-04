@@ -119,14 +119,14 @@ let e1 = () => {
         let e = [];
         return (G.c.getCurrentConfig({ location: 'SettingsRendererConfig' }).enabled && e.push(s.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE), I.J.getCurrentConfig({ location: 'SettingsRendererConfig' }).enabled && e.push(s.z.DISPLAY_NAME_STYLES_NEW_BADGE), e.push(s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE), e);
     },
-    e8 = () => {
+    e2 = () => {
         let e = e6(),
             [t] = (0, N.US)(e);
         return t === s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE ? (0, i.jsx)(D.Z, {}) : t === s.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE || t === s.z.DISPLAY_NAME_STYLES_NEW_BADGE ? (0, i.jsx)(l.IGR, { text: eX.intl.string(eX.t.y2b7CA) }) : null;
     },
-    e2 = ew.Z,
+    e8 = ew.Z,
     e5 = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: C, impressionSource: N, numOfPendingFamilyRequests: I, isOverlaySupported: D, isClipsBetaTagShowing: G = !1, shouldMergeGameSettings: e5, isKeywordFilteringEnabled: e4, isStaff: e7, isInappropriateConversationWarningEnabled: e9, isInapproprateConversationsDefaultOn: te, paymentsBlocked: tt, isEligibleForQuests: tn, isStricterMessageRequestsEnabled: ti, hasLibraryApplication: tr, hasTOTPEnabled: ts, developerMode: ta, isAdultUser: tl, hasSecureFramesVerifiedUserIds: to, hypeSquadRemoved: tc, hasIgnoredUsers: td, hasBlockedUsers: tu, useRefreshedVoiceAndVideo: tm, isEligibleForSensitiveContentDefaults: tp, inputMode: tg, activeInputProfile: th, isInputProfileCustom: tf, isGoreContentFilteringEnabled: tb } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: C, impressionSource: N, numOfPendingFamilyRequests: I, isOverlaySupported: D, isClipsBetaTagShowing: G = !1, shouldMergeGameSettings: e5, isKeywordFilteringEnabled: e4, isStaff: e7, isInappropriateConversationWarningEnabled: e9, isInapproprateConversationsDefaultOn: te, paymentsBlocked: tt, isEligibleForQuests: tn, isStricterMessageRequestsEnabled: ti, hasLibraryApplication: tr, hasTOTPEnabled: ts, developerMode: ta, isAdultUser: tl, hasSecureFramesVerifiedUserIds: to, hypeSquadRemoved: tc, hasIgnoredUsers: td, hasBlockedUsers: tu, useRefreshedVoiceAndVideo: tm, isEligibleForSensitiveContentDefaults: tp, inputMode: tg, activeInputProfile: th, isInputProfileCustom: tf } = e;
         return Object.freeze({
             [eW.s6.SEARCH_NO_RESULTS]: {
                 section: p.ID.CUSTOM,
@@ -273,7 +273,7 @@ let e1 = () => {
                 label: eX.intl.string(eX.t['vi7f+v']),
                 ariaLabel: eX.intl.string(eX.t['vi7f+v']),
                 element: B.Z,
-                newIndicator: (0, i.jsx)(e8, {}),
+                newIndicator: (0, i.jsx)(e2, {}),
                 newIndicatorDismissibleContentTypes: [...e6()],
                 notice: {
                     stores: [K.Z, P.Z],
@@ -399,20 +399,17 @@ let e1 = () => {
             [eW.s6.SENSITIVE_CONTENT_FILTERS]: {
                 section: eY.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eX.intl.string(eX.t['Hj/Bur']), eX.intl.string(eX.t['N/oRIy']), eX.intl.string(eX.t.QVdYsL), eX.intl.string(eX.t['aWD+tr']), eX.intl.string(eX.t['5mnTa2']), eX.intl.string(eX.t.K0OWPz)],
-                parent: eW.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => tb
+                parent: eW.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY
             },
             [eW.s6.SEXUALLY_EXPLICIT_MEDIA_REDACTION]: {
                 section: eY.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eX.intl.string(eX.t['Hj/Bur']), eX.intl.string(eX.t['N/oRIy']), eX.intl.string(eX.t.QVdYsL), eX.intl.string(eX.t['aWD+tr']), eX.intl.string(eX.t['5mnTa2'])],
-                parent: eW.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => tb
+                parent: eW.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY
             },
             [eW.s6.GORE_MEDIA_REDACTION]: {
                 section: eY.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eX.intl.string(eX.t['Hj/Bur']), eX.intl.string(eX.t['N/oRIy']), eX.intl.string(eX.t.QVdYsL), eX.intl.string(eX.t['aWD+tr']), eX.intl.string(eX.t.K0OWPz)],
-                parent: eW.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => tb
+                parent: eW.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY
             },
             [eW.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2]: {
                 section: eY.oAB.CONTENT_AND_SOCIAL,
@@ -1426,7 +1423,7 @@ let e1 = () => {
                 section: eY.oAB.LINUX,
                 searchableTitles: [eX.intl.string(eX.t['7pPjTU'])],
                 label: eX.intl.string(eX.t['7pPjTU']),
-                element: e2,
+                element: e8,
                 predicate: () => Q.isPlatformEmbedded && (0, Q.isLinux)()
             },
             [eW.s6.STREAMER_MODE]: {

@@ -45,8 +45,8 @@ let L = (e) => {
         let {
                 isFetchingShopHome: k,
                 fetchShopHomeError: N,
-                shopBlocks: w,
-                refreshShopHome: A
+                shopBlocks: A,
+                refreshShopHome: w
             } = (0, f.E)(
                 c,
                 {
@@ -62,13 +62,13 @@ let L = (e) => {
                 }
             ),
             B = l.useCallback(() => {
-                A();
-            }, [A]);
+                w();
+            }, [w]);
         if (
             (l.useEffect(() => {
                 null != N ||
                     k ||
-                    0 === w.length ||
+                    0 === A.length ||
                     (0, g.n)({
                         sessionId: I,
                         checkpoint: g.a.SHOP_RENDERED,
@@ -77,7 +77,7 @@ let L = (e) => {
                         unpublishedCategoriesShown: m,
                         cacheDisabled: p
                     });
-            }, [N, k, w.length, m, p, I, c, u]),
+            }, [N, k, A.length, m, p, I, c, u]),
             null != N)
         )
             return (0, n.jsx)(h.Z, {
@@ -85,7 +85,7 @@ let L = (e) => {
                 errorOrigin: h.i.SHOP_PAGE,
                 errorMessage: N.message
             });
-        if (k || 0 === w.length)
+        if (k || 0 === A.length)
             return (0, n.jsxs)('div', {
                 className: T.loadingContainer,
                 children: [
@@ -192,7 +192,7 @@ let L = (e) => {
                 t
             );
         };
-        return (0, n.jsx)(n.Fragment, { children: w.map((e, t) => R(e, t)) });
+        return (0, n.jsx)(n.Fragment, { children: A.map((e, t) => R(e, t)) });
     },
     I = (e) => {
         let { isFullScreen: t, handleTransition: r, tab: i, transitionState: o } = e,

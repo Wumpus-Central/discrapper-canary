@@ -1,6 +1,6 @@
 (n.d(t, {
-    $: () => O,
-    s: () => v
+    $: () => v,
+    s: () => C
 }),
     n(953529));
 var r = n(255367),
@@ -14,57 +14,55 @@ var r = n(255367),
     d = n(406432),
     p = n(584656),
     m = n(247206),
-    f = n(470734),
-    g = n(719548),
-    _ = n(388032),
-    h = n(580297);
-let b = (e) => {
+    f = n(719548),
+    g = n(388032),
+    _ = n(580297);
+let h = (e) => {
         let { attachment: t } = e,
             { url: n, description: i } = t;
         return null == n
             ? null
-            : (0, r.jsx)(C, {
+            : (0, r.jsx)(E, {
                   url: n,
                   description: i
               });
     },
-    E = (e) => {
+    b = (e) => {
         var t, n, i;
         let { embed: l } = e;
-        if (!g.n2.has(l.type)) return null;
+        if (!f.n2.has(l.type)) return null;
         let a = void 0 !== l.video && l.type !== o.h.GIFV ? l.video.url : null != (i = null == (t = l.thumbnail) ? void 0 : t.url) ? i : null == (n = l.image) ? void 0 : n.url;
-        return null == a ? null : (0, r.jsx)(C, { url: a });
+        return null == a ? null : (0, r.jsx)(E, { url: a });
     },
-    C = (e) => {
+    E = (e) => {
         let { url: t, description: n } = e,
             i = (0, d.cb)(t);
         return (0, r.jsx)('div', {
-            className: h.mediaContainer,
+            className: _.mediaContainer,
             children: i
                 ? (0, r.jsx)(u.Z, {
-                      className: a()(h.video, h.media),
+                      className: a()(_.video, _.media),
                       controls: !0,
                       src: t
                   })
                 : (0, r.jsx)('img', {
-                      className: a()(h.image, h.media),
+                      className: a()(_.image, _.media),
                       src: t,
                       alt: n
                   })
         });
     };
-function v(e) {
+function C(e) {
     (c.Z.pop(),
         (0, p.t)({
             id: 'explicit-media-false-positive-modal',
-            text: _.intl.string(_.t.gFsTKi)
+            text: g.intl.string(g.t.gFsTKi)
         }),
         e());
 }
-function O(e) {
+function v(e) {
     let { channelId: t, messageId: n, isReportFalsePositiveLoading: l, analyticsContext: a, attachmentPreview: o, embedPreview: c, onConfirmPress: u, transitionState: d, onClose: p } = e,
-        g = (0, f.pn)('ExplicitMediaFalsePositiveModal'),
-        h = i.useCallback(() => {
+        f = i.useCallback(() => {
             ((0, m.aP)({
                 action: m.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
                 channelId: t,
@@ -73,7 +71,7 @@ function O(e) {
             }),
                 p());
         }, [t, n, a, p]),
-        C = i.useCallback(() => {
+        _ = i.useCallback(() => {
             (null == u || u(),
                 (0, m.aP)({
                     action: m.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
@@ -82,34 +80,35 @@ function O(e) {
                     context: a
                 }));
         }, [t, n, a, u]);
-    i.useEffect(() => {
-        (0, m.aP)({
-            action: m.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
-            channelId: t,
-            messageId: n,
-            context: a
-        });
-    }, [t, n, a]);
-    let v = i.useMemo(() => (g ? _.intl.string(_.t['z4du/P']) : _.intl.string(_.t.gg5Dp6)), [g]);
-    return (0, r.jsxs)(s.Modal, {
-        transitionState: d,
-        onClose: p,
-        title: _.intl.string(_.t.TPpVkJ),
-        subtitle: v,
-        actions: [
-            {
-                text: _.intl.string(_.t['ETE/oK']),
-                onClick: h,
-                variant: 'secondary',
-                disabled: l
-            },
-            {
-                text: _.intl.string(_.t['cY+Ooa']),
-                onClick: C,
-                loading: l,
-                disabled: l
-            }
-        ],
-        children: [null != o && (0, r.jsx)(b, { attachment: o }), null != c && (0, r.jsx)(E, { embed: c })]
-    });
+    return (
+        i.useEffect(() => {
+            (0, m.aP)({
+                action: m.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
+                channelId: t,
+                messageId: n,
+                context: a
+            });
+        }, [t, n, a]),
+        (0, r.jsxs)(s.Modal, {
+            transitionState: d,
+            onClose: p,
+            title: g.intl.string(g.t.TPpVkJ),
+            subtitle: g.intl.string(g.t['z4du/P']),
+            actions: [
+                {
+                    text: g.intl.string(g.t['ETE/oK']),
+                    onClick: f,
+                    variant: 'secondary',
+                    disabled: l
+                },
+                {
+                    text: g.intl.string(g.t['cY+Ooa']),
+                    onClick: _,
+                    loading: l,
+                    disabled: l
+                }
+            ],
+            children: [null != o && (0, r.jsx)(h, { attachment: o }), null != c && (0, r.jsx)(b, { embed: c })]
+        })
+    );
 }

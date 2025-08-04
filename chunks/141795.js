@@ -120,7 +120,7 @@ var D = (function (e) {
 })({});
 class L {
     constructor() {
-        (T(this, 'numUploadAttempts', void 0), T(this, 'timing', {}), T(this, 'compressAndExtractDisabled', void 0), T(this, 'fileAlreadyPrepped', void 0), T(this, 'imageCompressionQuality', void 0), T(this, 'videoCompressionQuality', void 0), T(this, 'convertedMimeType', void 0), T(this, 'sourceMediaWidth', void 0), T(this, 'sourceMediaHeight', void 0), T(this, 'sourceMediaFormat', void 0), T(this, 'sourceVideoBitrate', void 0), T(this, 'sourceVideoFramerate', void 0), T(this, 'videoDurationMs', void 0), T(this, 'sourceVideoProfile', void 0), T(this, 'sourceVideoLevel', void 0), T(this, 'targetVideoWidth', void 0), T(this, 'targetVideoHeight', void 0), T(this, 'targetVideoBitrate', void 0), T(this, 'targetVideoCodec', void 0), T(this, 'targetVideoFramerate', void 0), T(this, 'targetVideoIsHdr', void 0), T(this, 'hevcIsSupported', void 0), T(this, 'progressUpdateGranularity', void 0), T(this, 'validUploadHash', void 0), T(this, 'psnr', void 0), T(this, 'ssim', void 0), T(this, 'origin', void 0), T(this, 'psnrMeasurementLatencyMs', void 0), T(this, 'ssimMeasurementLatencyMs', void 0), T(this, 'uploadResumptionCount', 0), T(this, 'uploadResumptionPosition', 0), T(this, 'uploadResumptionReason', void 0));
+        (T(this, 'numUploadAttempts', void 0), T(this, 'timing', {}), T(this, 'compressAndExtractDisabled', void 0), T(this, 'fileAlreadyPrepped', void 0), T(this, 'imageCompressionQuality', void 0), T(this, 'videoCompressionQuality', void 0), T(this, 'convertedMimeType', void 0), T(this, 'sourceMediaWidth', void 0), T(this, 'sourceMediaHeight', void 0), T(this, 'sourceMediaFormat', void 0), T(this, 'sourceVideoBitrate', void 0), T(this, 'sourceVideoFramerate', void 0), T(this, 'videoDurationMs', void 0), T(this, 'sourceVideoProfile', void 0), T(this, 'sourceVideoLevel', void 0), T(this, 'targetVideoWidth', void 0), T(this, 'targetVideoHeight', void 0), T(this, 'targetVideoBitrate', void 0), T(this, 'targetVideoCodec', void 0), T(this, 'targetVideoFramerate', void 0), T(this, 'targetVideoIsHdr', void 0), T(this, 'hevcIsSupported', void 0), T(this, 'progressUpdateGranularity', void 0), T(this, 'validUploadHash', void 0), T(this, 'psnr', void 0), T(this, 'ssim', void 0), T(this, 'origin', void 0), T(this, 'psnrMeasurementLatencyMs', void 0), T(this, 'ssimMeasurementLatencyMs', void 0), T(this, 'uploadResumptionCount', 0), T(this, 'uploadResumptionPosition', 0), T(this, 'uploadResumptionReason', void 0), T(this, 'conversionFailureReason', void 0));
     }
 }
 class x extends y.ZP {
@@ -415,26 +415,28 @@ class x extends y.ZP {
     }
     async maybeConvertToWebP() {
         let e = (0, c.U)({ location: 'CloudUpload.maybeConvertToWebP' });
-        if (e.enabled) {
-            if (null == this.item.file) return void C.warn('webp conversion skipped for '.concat(this.id, ': no file'));
-            if (!this._aborted)
-                try {
-                    let r = await (0, v.LF)([this.item.file], {
-                        minFileSizeBytes: e.minFileSizeBytes,
-                        minSizeReductionPercent: e.minSizeReductionPercent
-                    });
-                    if (this._aborted) return;
-                    if (r.length > 0 && r[0].success) {
-                        let e = r[0];
-                        ((this.item.file = (0, v.ub)(e)), (this.currentSize = this.item.file.size), C.log('webp conversion worked for '.concat(this.id, ': ').concat(e.sizeBefore, ' -> ').concat(e.sizeAfter, ' bytes (').concat(e.compressionRatio.toFixed(2), 'x)')));
-                    } else {
-                        var t, n;
-                        C.log('webp conversion skipped for '.concat(this.id, ': ').concat(null != (n = null == (t = r[0]) ? void 0 : t.reason) ? n : 'unknown'));
-                    }
-                } catch (e) {
-                    C.warn('webp conversion failed for '.concat(this.id, ':'), e);
-                }
+        if (!e.enabled) return;
+        if (null == this.item.file) return void C.warn('webp conversion skipped for '.concat(this.id, ': no file'));
+        if (this._aborted) return;
+        let t = performance.now();
+        try {
+            let t = await (0, v.LF)([this.item.file], {
+                minFileSizeBytes: e.minFileSizeBytes,
+                minSizeReductionPercent: e.minSizeReductionPercent
+            });
+            if (this._aborted) return;
+            if (t.length > 0 && t[0].success) {
+                let e = t[0];
+                ((this.item.file = (0, v.ub)(e)), (this.currentSize = this.item.file.size), C.log('webp conversion worked for '.concat(this.id, ': ').concat(e.sizeBefore, ' -> ').concat(e.sizeAfter, ' bytes (').concat(e.compressionRatio.toFixed(2), 'x)')));
+            } else {
+                var n, r;
+                let e = null != (r = null == (n = t[0]) ? void 0 : n.reason) ? r : 'unknown';
+                ((this.uploadAnalytics.conversionFailureReason = e), C.log('webp conversion skipped for '.concat(this.id, ': ').concat(e)));
+            }
+        } catch (e) {
+            ((this.uploadAnalytics.conversionFailureReason = 'unknown_error'), C.warn('webp conversion failed for '.concat(this.id, ':'), e));
         }
+        this.uploadAnalytics.timing.compressTimeMs = Math.round(performance.now() - t);
     }
     handleError(e) {
         (this.setStatus('ERROR'), (this.error = e), this.trackUploadFinished('ERROR'));
@@ -535,6 +537,7 @@ class x extends y.ZP {
             upload_resumption_reason: this.uploadAnalytics.uploadResumptionReason,
             upload_resumption_position: this.uploadAnalytics.uploadResumptionPosition,
             upload_resumption_check_time_ms: this.uploadAnalytics.timing.resumptionCheckTimeMs,
+            conversion_failure_reason: this.uploadAnalytics.conversionFailureReason,
             connection_type: f.Z.getType(),
             effective_connection_speed: f.Z.getEffectiveConnectionSpeed(),
             service_provider: f.Z.getServiceProvider()

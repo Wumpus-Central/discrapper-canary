@@ -149,8 +149,8 @@ function N(e) {
     let { isFullScreen: t, isLayer: r, onClose: i, selectedTab: f, handleTransition: g } = e,
         y = (0, p.ZP)(),
         N = (0, s.e7)([v.default], () => v.default.getCurrentUser()),
-        w = (null == N ? void 0 : N.isStaff()) || (null == N ? void 0 : N.isStaffPersonal()) || !1,
-        { enabled: A } = (0, _.WX)({ location: 'collectibles_shop_header_bar' }),
+        A = (null == N ? void 0 : N.isStaff()) || (null == N ? void 0 : N.isStaffPersonal()) || !1,
+        { enabled: w } = (0, _.WX)({ location: 'collectibles_shop_header_bar' }),
         B = [
             {
                 tab: j.AW.HOME,
@@ -161,7 +161,7 @@ function N(e) {
                 displayText: T.intl.string(T.t.Ah5sJi)
             }
         ];
-    A &&
+    w &&
         B.push({
             tab: j.AW.ORBS,
             displayText: T.intl.string(T.t.EBYkzs)
@@ -184,8 +184,8 @@ function N(e) {
             (0, n.jsxs)(h.Z, {
                 disableDoubleClick: !0,
                 className: a()(e, L.headerBar, { [L.fullscreenHeaderBar]: t }),
-                innerClassname: A ? L.headerBarInner : void 0,
-                toolbar: t || !w ? null : (0, n.jsx)(l.Fragment, {}),
+                innerClassname: w ? L.headerBarInner : void 0,
+                toolbar: t || !A ? null : (0, n.jsx)(l.Fragment, {}),
                 children: [
                     (0, n.jsxs)(c.P3F, {
                         className: L.shopHomeLink,
@@ -220,7 +220,7 @@ function N(e) {
                                   );
                         })
                     }),
-                    (A || t || F) &&
+                    (w || t || F) &&
                         (0, n.jsxs)('div', {
                             className: L.alignedRightContent,
                             children: [
@@ -229,7 +229,7 @@ function N(e) {
                                         handleTransition: g,
                                         selectedTab: f
                                     }),
-                                A &&
+                                w &&
                                     (0, n.jsx)(O.V9, {
                                         anchorPillType: t ? 'SHOP_FULLSCREEN' : 'SHOP',
                                         analyticsPage: Z,

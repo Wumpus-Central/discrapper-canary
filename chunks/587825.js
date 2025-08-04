@@ -1,10 +1,10 @@
-n.d(t, { t: () => _ });
-var r = n(255367),
-    i = n(73800),
-    a = n(286263),
-    o = n(931989),
-    s = n(396704);
-function l(e, t, n) {
+n.d(t, { t: () => p });
+var r = n(255367);
+n(73800);
+var i = n(286263),
+    a = n(931989),
+    o = n(396704);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +17,7 @@ function l(e, t, n) {
         e
     );
 }
-function c(e) {
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,12 +28,12 @@ function c(e) {
                 })
             )),
             r.forEach(function (t) {
-                l(e, t, n[t]);
+                s(e, t, n[t]);
             }));
     }
     return e;
 }
-function u(e, t) {
+function c(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -45,20 +45,62 @@ function u(e, t) {
     }
     return n;
 }
-function d(e, t) {
+function u(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : u(Object(t)).forEach(function (n) {
+            : c(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let _ = i.forwardRef(function (e, t) {
-    let { status: n, buffer: i } = (0, s.VG)(a.Z),
-        l = (0, s.T3)(a.Z);
-    return n === s.Jt.Loading ? null : (0, r.jsx)(o.v, d(c(d(c({}, l ? { key: 'override' } : {}), { buffer: i }), e), { ref: t }));
-});
-_.riveSrc = a.Z;
+function d(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = _(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+    }
+    return i;
+}
+function _(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    return i;
+}
+let f = {
+    'box-wumpus': {},
+    '+++1_BOX_nested_comp_0': {},
+    '+++1_BOX_nested_comp_4': {},
+    '+++1_BOX_nested_comp_1': {},
+    '+++1_BOX_nested_comp_2': {},
+    '+++1_BOX_nested_comp_3': {}
+};
+function p(e) {
+    let { artboard: t = 'box-wumpus' } = e,
+        n = d(e, ['artboard']),
+        { status: s, buffer: c } = (0, o.VG)(i.Z),
+        _ = (0, o.T3)(i.Z);
+    return s === o.Jt.Loading
+        ? null
+        : (0, r.jsx)(
+              a.v,
+              l(
+                  u(l({}, _ ? { key: 'override' } : {}), {
+                      buffer: c,
+                      artboard: t,
+                      artboardProperties: f
+                  }),
+                  n
+              )
+          );
+}
+p.riveSrc = i.Z;

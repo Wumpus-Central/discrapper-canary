@@ -27,8 +27,8 @@ let j = (e) => {
     let { isLoading: r, title: i, sortedSkuIds: j, numVisibleItems: P, hasSorting: T, tab: L } = e,
         I = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
         k = h.ZP.canUseCollectibles(I),
-        { sortType: N, setSortType: w, sortedItems: A, sortOptions: B, shuffleProducts: R, showRecommendationOption: Z } = (0, _.N)(j, k),
-        D = (0, E.St)(A),
+        { sortType: N, setSortType: A, sortedItems: w, sortOptions: B, shuffleProducts: R, showRecommendationOption: Z } = (0, _.N)(j, k),
+        D = (0, E.St)(w),
         F = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         M = (0, o.e7)([p.Z], () => p.Z.isFocused()),
         H = !F && M,
@@ -40,14 +40,14 @@ let j = (e) => {
             (e) => {
                 (V({
                     isShuffling: !1,
-                    onOutroComplete: () => w(e)
+                    onOutroComplete: () => A(e)
                 }),
                     f.default.track(S.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: G,
                         sort_type: e
                     }));
             },
-            [V, w, G]
+            [V, A, G]
         );
     return null == I
         ? null

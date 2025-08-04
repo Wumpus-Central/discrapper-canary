@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => _ }), n(388685));
 var r = n(255367),
-    o = n(73800),
-    s = n(120356),
-    a = n.n(s),
+    s = n(73800),
+    o = n(120356),
+    a = n.n(o),
     i = n(617136),
     l = n(509212),
     c = n(113434),
@@ -17,35 +17,41 @@ var r = n(255367),
     b = n(168989);
 function j(e) {
     var t, n;
-    let { quest: s, className: u, questContent: d, contentPosition: j, rowIndex: _, impressionRef: v, sourceQuestContent: y } = e,
-        [C, O] = o.useState(!1),
-        [E, w] = o.useState([]),
-        S = (0, c.qb)(s),
-        T = o.useMemo(() => (0, l.q8)(s), [s]),
+    let { quest: o, className: u, questContent: d, contentPosition: j, rowIndex: _, impressionRef: v, sourceQuestContent: C } = e,
+        [y, O] = s.useState(!1),
+        [E, S] = s.useState([]),
+        w = (0, c.qb)(o),
+        T = s.useMemo(() => (0, l.q8)(o), [o]),
         P = (0, i._F)(),
-        A = o.useCallback(() => {
+        A = s.useCallback(() => {
             (O(!0),
                 P({
-                    questId: s.id,
+                    questId: o.id,
                     event: h.rMx.QUEST_HOVER,
-                    properties: (0, i.mH)(d),
-                    sourceQuestContent: y
+                    properties: {
+                        content_id: d,
+                        content_name: (0, i._b)(d)
+                    },
+                    sourceQuestContent: C
                 }),
                 T && (0, p.loadVideoQuestModal)());
-        }, [P, s.id, d, T, y]),
-        N = o.useCallback(() => {
+        }, [P, o.id, d, T, C]),
+        N = s.useCallback(() => {
             (O(!1),
                 P({
-                    questId: s.id,
+                    questId: o.id,
                     event: h.rMx.QUEST_HOVER_OFF,
-                    properties: (0, i.mH)(d),
-                    sourceQuestContent: y
+                    properties: {
+                        content_id: d,
+                        content_name: (0, i._b)(d)
+                    },
+                    sourceQuestContent: C
                 }));
-        }, [P, s.id, d, y]),
-        R = o.useContext(f.t),
+        }, [P, o.id, d, C]),
+        R = s.useContext(f.t),
         { visibilityElementRef: B, almostVisibleInViewport: k } = (function (e) {
-            let [t, n] = o.useState(!1),
-                r = o.useCallback((e) => {
+            let [t, n] = s.useState(!1),
+                r = s.useCallback((e) => {
                     e.isIntersecting && n(!0);
                 }, []);
             return {
@@ -62,7 +68,7 @@ function j(e) {
             };
         })(null != (n = null == R || null == (t = R.current) ? void 0 : t.getScrollerNode()) ? n : null);
     return (0, r.jsxs)('div', {
-        id: 'quest-tile-'.concat(s.id),
+        id: 'quest-tile-'.concat(o.id),
         ref: (e) => {
             ((v.current = e), (B.current = e));
         },
@@ -73,22 +79,22 @@ function j(e) {
         onBlur: N,
         children: [
             (0, r.jsx)(g.Z, {
-                quest: s,
-                isHovering: C,
+                quest: o,
+                isHovering: y,
                 errorHints: E,
-                warningHints: S,
+                warningHints: w,
                 isVisibleInViewport: k,
-                sourceQuestContent: y
+                sourceQuestContent: C
             }),
             (0, r.jsx)(x.Z, {
-                quest: s,
+                quest: o,
                 questContent: d,
-                isHovering: C,
+                isHovering: y,
                 contentPosition: j,
                 rowIndex: _,
-                onReceiveErrorHints: w,
+                onReceiveErrorHints: S,
                 isVisibleInViewport: k,
-                sourceQuestContent: y
+                sourceQuestContent: C
             })
         ]
     });
@@ -102,7 +108,7 @@ function _(e) {
         trackGuildAndChannelMetadata: e.questContent === u.jn.QUESTS_EMBED,
         sourceQuestContent: e.sourceQuestContent,
         children: (t) => {
-            var n, o;
+            var n, s;
             return (0, r.jsx)(
                 j,
                 ((n = (function (e) {
@@ -130,9 +136,9 @@ function _(e) {
                     }
                     return e;
                 })({}, e)),
-                (o = o = { impressionRef: t }),
+                (s = s = { impressionRef: t }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(s))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -140,8 +146,8 @@ function _(e) {
                               n.push.apply(n, r);
                           }
                           return n;
-                      })(Object(o)).forEach(function (e) {
-                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
+                      })(Object(s)).forEach(function (e) {
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(s, e));
                       }),
                 n)
             );

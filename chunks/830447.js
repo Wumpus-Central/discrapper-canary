@@ -373,7 +373,8 @@ function N(e) {
             navId: n,
             items: P.current,
             initialFocusPath: p.Z.keyboardModeEnabled && null != w ? [w] : [],
-            closeMenu: b
+            closeMenu: b,
+            defaultIsUsingKeyboardNavigation: p.Z.keyboardModeEnabled
         });
     i.useEffect(() => {
         D.isUsingKeyboardNavigation ? p.Z.keyboardModeEnabled || (0, f.Qj)() : p.Z.keyboardModeEnabled && (0, f.rf)();

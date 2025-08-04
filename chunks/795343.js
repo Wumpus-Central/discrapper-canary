@@ -26,14 +26,14 @@ function C(e) {
         P = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
         { skus: T, currentPage: L, totalCount: I, isFetchingResults: k } = (0, g.a)(),
         N = (0, o.Wu)([d.Z], () => d.Z.getProductsBySkus(T)),
-        w = l.useCallback(() => {
+        A = l.useCallback(() => {
             var e;
             null == C || null == (e = C.current) || e.scrollToTop({ animate: !0 });
         }, [C]),
-        A = null == T ? void 0 : T.join('');
+        w = null == T ? void 0 : T.join('');
     l.useEffect(() => {
-        w();
-    }, [A, w]);
+        A();
+    }, [w, A]);
     let B = (0, p.a)(),
         R = l.useMemo(() => B(N), [B, N]);
     l.useEffect(() => {

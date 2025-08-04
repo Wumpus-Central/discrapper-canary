@@ -1,13 +1,13 @@
 n.d(t, { E: () => i });
 var r = n(255367),
-    o = n(120356),
-    s = n.n(o),
+    s = n(120356),
+    o = n.n(s),
     a = n(701642);
 function i(e) {
-    let { width: t, height: n, showPlaceholder: o, children: i, className: l } = e;
-    return o
+    let { width: t, height: n, showPlaceholder: s, children: i, className: l } = e;
+    return s
         ? (0, r.jsx)('div', {
-              className: s()(a.placeholderElement, l),
+              className: o()(a.placeholderElement, l),
               style: {
                   width: t,
                   height: n

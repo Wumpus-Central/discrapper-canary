@@ -20,7 +20,11 @@ let a = [
         getLabel: () => l.intl.string(l.t['7MKr2N'])
     },
     {
-        getDueAt: () => i()().day(8).startOf('day').add(9, 'hours').toDate(),
+        getDueAt: () => {
+            let e,
+                t = i()().day();
+            return ((e = 0 === t || (1 === t && i()().startOf('day').add(9, 'hours').isAfter(i()())) ? 1 : 8), i()().day(e).startOf('day').add(9, 'hours').toDate());
+        },
         getLabel: () => l.intl.string(l.t['q+Ls09'])
     }
 ];

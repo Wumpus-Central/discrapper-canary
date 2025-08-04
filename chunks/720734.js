@@ -113,8 +113,8 @@ var i = n(255367),
     e1 = n(115530),
     e3 = n(981631),
     e6 = n(215023),
-    e8 = n(921944),
-    e2 = n(46140),
+    e2 = n(921944),
+    e8 = n(46140),
     e5 = n(388032),
     e4 = n(239692);
 function e7(e, t, n) {
@@ -394,12 +394,12 @@ class ts extends r.PureComponent {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(eo.Z, {
-                    groupName: e8.R.ACCOUNT_NAME_ZONE,
+                    groupName: e2.R.ACCOUNT_NAME_ZONE,
                     targetElementRef: this.avatarWithPopoutRef
                 }),
                 (0, i.jsx)(H.ZP, {
                     contentTypes: n.avatar,
-                    groupName: e8.R.ACCOUNT_NAME_ZONE,
+                    groupName: e2.R.ACCOUNT_NAME_ZONE,
                     children: (t) => {
                         let { visibleContent: n, markAsDismissed: r } = t;
                         switch (n) {
@@ -750,7 +750,7 @@ function tl() {
         F = W.J.useExperiment({ location: 'Account' }).enabled,
         { analyticsLocations: H } = (0, I.ZP)(N.Z.ACCOUNT),
         z = (0, en.K)({ user: t }),
-        Y = (0, ec.Ws)({ location: e2.dr.CONFLICT_CHECKS }),
+        Y = (0, ec.Ws)({ location: e8.dr.CONFLICT_CHECKS }),
         K = (0, d.e7)([ed.Z, eM.default, eR.Z], () => {
             let e,
                 t = ed.Z.getSyncingWith(),
@@ -1064,7 +1064,7 @@ function tc(e) {
                                                             'aria-label': e5.intl.string(e5.t.Hapb4O),
                                                             disabled: l,
                                                             onClick: (e) => {
-                                                                (s(e8.L.INDIRECT_ACTION), n(e), null != A && !q && P ? (0, eN.$)(() => X(!0)) : X(!q));
+                                                                (s(e2.L.INDIRECT_ACTION), n(e), null != A && !q && P ? (0, eN.$)(() => X(!0)) : X(!q));
                                                             }
                                                         },
                                                         r

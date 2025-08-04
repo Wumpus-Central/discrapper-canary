@@ -1,25 +1,23 @@
-n.d(t, { c: () => u });
+n.d(t, { c: () => d });
 var i = n(255367);
 n(73800);
-var r = n(470734),
-    s = n(925513),
-    a = n(880257),
-    l = n(907995),
-    o = n(63063),
-    c = n(484710),
-    d = n(388032);
-function u() {
+var r = n(925513),
+    s = n(880257),
+    a = n(907995),
+    l = n(63063),
+    o = n(484710),
+    c = n(388032);
+function d() {
     var e;
-    let t = null == (e = (0, a.Z)()) || e,
-        n = (0, r.pn)('SensitiveContentFilterSetting'),
-        u = (0, s.v6)();
-    return !t && n
-        ? (0, i.jsx)(l.f, {
-              label: d.t.EUo0ys,
+    let t = null == (e = (0, s.Z)()) || e,
+        n = (0, r.v6)();
+    return t
+        ? null
+        : (0, i.jsx)(a.f, {
+              label: c.t.EUo0ys,
               labelHook: () => {
-                  window.open(o.Z.getArticleURL(u), '_blank');
+                  window.open(l.Z.getArticleURL(n), '_blank');
               },
-              noticeType: c.nq.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE
-          })
-        : null;
+              noticeType: o.nq.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE
+          });
 }

@@ -64,12 +64,12 @@ function S(e, t) {
         { isLoading: S, saveRule: E, errorMessage: _ } = (0, d.w)(),
         { createNewEditingRule: P } = (0, d.V)(),
         [Z, T] = i.useState(!1),
-        [I, N] = (0, s.I2)(t),
-        { rulesByTriggerType: A, updateRule: w } = (0, s.pH)(t),
+        [I, A] = (0, s.I2)(t),
+        { rulesByTriggerType: N, updateRule: w } = (0, s.pH)(t),
         x = i.useMemo(() => {
             var e;
-            return null != (e = A[j]) ? e : [];
-        }, [A]),
+            return null != (e = N[j]) ? e : [];
+        }, [N]),
         M = 0 === x.length,
         D = n > x.length && !M;
     if (!i.useMemo(() => (0, u.ze)(t), [t]) || null == e || 0 === e.length || null == t) return null;
@@ -166,7 +166,7 @@ function S(e, t) {
             id: 'guild-automod-add-selection',
             label: O.intl.formatToPlainString(O.t.Kkjv1t, { keywordCount: R }),
             onFocus: () => {
-                Z || (T(!0), N());
+                Z || (T(!0), A());
             },
             children: G
         })
