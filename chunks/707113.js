@@ -31,16 +31,16 @@ function f(e) {
 function p(e) {
     let { guild: t, className: n, onPageChange: a, onMemberSelect: s } = e,
         p = t.id,
-        C = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(p), [p]),
-        v = (0, d.$j)(p),
-        g = (0, d.M3)(p),
+        v = (0, o.e7)([u.Z], () => u.Z.getEstimatedMemberSearchCountByGuildId(p), [p]),
+        g = (0, d.$j)(p),
+        C = (0, d.M3)(p),
         _ = r.useCallback(
             (e) => {
                 null != e && (null == s || s(e));
             },
             [s]
         ),
-        T = (0, m.xb)(g, v, C),
+        T = (0, m.xb)(C, g, v),
         E = r.useRef(null),
         N = r.useRef(null),
         S = r.useCallback(() => {

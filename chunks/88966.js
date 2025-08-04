@@ -1,24 +1,24 @@
-t.d(n, { Z: () => g });
-var l = t(255367);
-t(73800);
-var i = t(442837),
-    r = t(481060),
-    a = t(493683),
-    o = t(40851),
-    u = t(549879),
-    s = t(314897),
-    c = t(981631),
-    d = t(388032);
-function g(e, n, t) {
-    let g = (0, o.Aq)();
-    return (0, i.e7)([s.default], () => s.default.getId() === e) || n === c.IlC.POPOUT
+n.d(t, { Z: () => f });
+var r = n(255367);
+n(73800);
+var l = n(442837),
+    i = n(481060),
+    a = n(493683),
+    o = n(40851),
+    u = n(549879),
+    c = n(314897),
+    s = n(981631),
+    d = n(388032);
+function f(e, t, n) {
+    let f = (0, o.Aq)();
+    return (0, l.e7)([c.default], () => c.default.getId() === e) || t === s.IlC.POPOUT
         ? null
-        : (0, l.jsx)(r.sNh, {
+        : (0, r.jsx)(i.sNh, {
               id: 'message-user',
               label: d.intl.string(d.t.OAJQlJ),
               action: () => {
-                  ((0, u.i)(n, !0), a.Z.openPrivateChannel({ recipientIds: e }), g.dispatch(c.CkL.POPOUT_CLOSE), (0, r.pTH)());
+                  ((0, u.i)(t, !0), a.Z.openPrivateChannel({ recipientIds: e }), f.dispatch(s.CkL.POPOUT_CLOSE), (0, i.pTH)());
               },
-              icon: t
+              icon: n
           });
 }

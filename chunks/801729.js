@@ -99,8 +99,8 @@ function m(e) {
     return e < 1000 ? ''.concat(e) : ''.concat(Math.min(Math.floor(e / 1000), 9), 'k+');
 }
 let g = (e) => {
-        var { count: t, color: n = o.Z.STATUS_DANGER, disableColor: i = !1, shape: l = p.ROUND, className: u, style: f } = e,
-            g = _(e, ['count', 'color', 'disableColor', 'shape', 'className', 'style']);
+        var { count: t, color: n = o.Z.STATUS_DANGER, disableColor: i = !1, shape: l = p.ROUND, className: u, style: f, renderBadgeCount: g = m } = e,
+            E = _(e, ['count', 'color', 'disableColor', 'shape', 'className', 'style', 'renderBadgeCount']);
         return (0, r.jsx)(
             'div',
             d(
@@ -115,9 +115,9 @@ let g = (e) => {
                             f
                         )
                     },
-                    g
+                    E
                 ),
-                { children: m(t) }
+                { children: g(t) }
             )
         );
     },

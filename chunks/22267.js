@@ -1,4 +1,4 @@
-n.d(t, { Z: () => A });
+n.d(t, { Z: () => N });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -15,99 +15,102 @@ var r = n(255367),
     m = n(516817),
     g = n(654904),
     E = n(210887),
-    b = n(158776),
-    y = n(579407),
-    O = n(388032),
-    v = n(538566),
-    I = n(460400),
-    T = n(943549);
-let S = {
+    b = n(271383),
+    y = n(158776),
+    O = n(579407),
+    v = n(388032),
+    I = n(538566),
+    T = n(460400),
+    S = n(943549);
+let A = {
         xlarge: c.EFr.SIZE_48,
         large: c.EFr.SIZE_40,
         default: c.EFr.SIZE_32
     },
-    A = (e) => {
-        let { user: t, nameplate: n, nameplateData: a, className: A, innerClassName: N, isHighlighted: C, showStatus: R, showPlaceholderUser: P, pendingGlobalName: w, nameplatePreviewSize: D = 'default', isPurchased: L = !1 } = e,
-            x = (0, s.e7)([E.Z], () => (0, l.wj)(E.Z.theme)),
-            M = null != n ? (0, y.EU)(n) : a,
-            k = (0, s.e7)([b.Z], () => (null != t ? b.Z.getStatus(t.id) : c.Skl.ONLINE)),
-            j = x ? '#706F74' : '#aaaab2',
-            U = i.useRef(null),
-            G =
+    N = (e) => {
+        let { user: t, guildId: n, nameplate: a, nameplateData: N, className: C, innerClassName: R, isHighlighted: P, showStatus: w, showPlaceholderUser: D, pendingGlobalName: L, nameplatePreviewSize: x = 'default', isPurchased: M = !1 } = e,
+            k = (0, s.e7)([E.Z], () => (0, l.wj)(E.Z.theme)),
+            j = null != a ? (0, O.EU)(a) : N,
+            U = (0, s.e7)([y.Z], () => (null != t ? y.Z.getStatus(t.id) : c.Skl.ONLINE)),
+            G = k ? '#706F74' : '#aaaab2',
+            B = i.useRef(null),
+            V = (0, s.e7)([b.ZP], () => (null != n && null != t ? b.ZP.getMember(n, t.id) : null)),
+            F =
                 null != t
                     ? (0, g.Ly)({
                           pendingNickname: void 0,
-                          pendingGlobalName: w,
+                          pendingGlobalName: L,
                           user: t,
-                          guildMember: null
+                          guildMember: V
                       })
                     : void 0,
-            B = S[D];
+            Z = A[x];
         return (0, r.jsx)('div', {
             role: 'img',
-            'aria-label': O.intl.string(O.t.SZeUdX),
+            'aria-label': v.intl.string(v.t.SZeUdX),
             style: {
-                color: x ? 'white' : 'black',
+                color: k ? 'white' : 'black',
                 width: '100%'
             },
             children: (0, r.jsxs)(c.Rny, {
-                className: o()(A, v.nameplatePreview, {
-                    [v.nameplatePurchased]: L && !C,
-                    [v.large]: 'large' === D,
-                    [v.xlarge]: 'xlarge' === D
+                className: o()(C, I.nameplatePreview, {
+                    [I.nameplatePurchased]: M && !P,
+                    [I.large]: 'large' === x,
+                    [I.xlarge]: 'xlarge' === x
                 }),
                 children: [
-                    null != M &&
+                    null != j &&
                         (0, r.jsx)(
                             m.Z,
                             {
-                                nameplate: M,
-                                hovered: C,
+                                nameplate: j,
+                                hovered: P,
                                 placement: h.i.PREVIEW,
-                                content: P ? void 0 : U
+                                content: D ? void 0 : B
                             },
-                            null == n ? void 0 : n.id
+                            null == a ? void 0 : a.id
                         ),
                     (0, r.jsxs)('div', {
-                        className: v.overlayContainer,
+                        className: I.overlayContainer,
                         children: [
                             null != t
                                 ? (0, r.jsx)('div', {
-                                      className: o()(v.avatarContainer, !P && v.avatarVisible),
+                                      className: o()(I.avatarContainer, !D && I.avatarVisible),
                                       children: (0, r.jsx)(u.Z, {
-                                          ref: U,
+                                          ref: B,
                                           avatar: (0, r.jsx)(d.Z, {
                                               user: t,
-                                              guildId: null,
-                                              avatarSize: B,
-                                              status: R ? k : void 0,
+                                              guildId: n,
+                                              avatarSize: Z,
+                                              status: w ? U : void 0,
                                               'aria-hidden': !0
                                           }),
                                           decorators: (0, r.jsx)(p.ZP, {
                                               userId: t.id,
-                                              className: v.tagChiplet
+                                              contextGuildId: n,
+                                              className: I.tagChiplet
                                           }),
                                           name: (0, r.jsx)(f.Z, {
-                                              userName: G,
+                                              userName: F,
                                               displayNameStyles: t.displayNameStyles,
                                               effectDisplayType: _.F.ANIMATED
                                           }),
-                                          innerClassName: N
+                                          innerClassName: R
                                       })
                                   })
                                 : null,
                             (0, r.jsxs)('div', {
-                                className: o()(v.avatarContainer, P && v.avatarVisible),
+                                className: o()(I.avatarContainer, D && I.avatarVisible),
                                 children: [
                                     (0, r.jsx)(c.qEK, {
-                                        src: x ? I : T,
-                                        size: B,
+                                        src: k ? T : S,
+                                        size: Z,
                                         'aria-hidden': !0,
                                         status: c.Skl.ONLINE,
-                                        statusColor: j,
-                                        className: v.avatar
+                                        statusColor: G,
+                                        className: I.avatar
                                     }),
-                                    (0, r.jsx)('div', { className: v.placeholderUsername })
+                                    (0, r.jsx)('div', { className: I.placeholderUsername })
                                 ]
                             })
                         ]

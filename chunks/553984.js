@@ -244,7 +244,7 @@ function E(e) {
                               {
                                   onSelect: () => {},
                                   navId: 'notifications-sidebar-filters',
-                                  'aria-label': 'Notifications Sidebar Filters'
+                                  'aria-label': f.intl.string(f.t.UdhTtr)
                               },
                               i
                           ),

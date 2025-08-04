@@ -32,8 +32,8 @@ var r = n(255367),
     P = n(93237),
     j = n(924540),
     A = n(474486),
-    x = n(497334),
-    Z = n(119850),
+    Z = n(497334),
+    x = n(119850),
     w = n(938736),
     L = n(227140),
     R = n(474936),
@@ -47,7 +47,7 @@ let U = (e) => {
             i = (0, N.N)(),
             l = (0, S.Ng)(),
             o = (0, E.Vi)(),
-            s = (0, Z.V)(),
+            s = (0, x.V)(),
             c = (0, _.Qo)(n, r),
             u = (0, a.e7)([O.Z], () => O.Z.getCreatedAtOverride()),
             d = t || null != i || null != l || o || null != s || c,
@@ -90,7 +90,7 @@ let U = (e) => {
             et = (0, y.W)(),
             en = (0, E.Vi)(),
             er = (0, P.HI)({ trialOffer: $ }),
-            ei = (0, Z.V)(),
+            ei = (0, x.V)(),
             el = (0, w.Kn)('NitroTabButton'),
             { fractionalState: ea, startsAt: eo, endsAt: es } = (0, d.Z)({ forceFetch: !0 }),
             [ec, eu] = (0, f.bf)(ea !== R.a$.NONE ? o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
@@ -140,7 +140,7 @@ let U = (e) => {
                   })),
                   (O = 2))
                 : et
-                  ? ((n = (0, r.jsx)(x.S, { expiresAt: es })), (O = 4))
+                  ? ((n = (0, r.jsx)(Z.S, { expiresAt: es })), (O = 4))
                   : null != ei
                     ? ((n = (0, r.jsx)(L.Z, {
                           copy: ei,

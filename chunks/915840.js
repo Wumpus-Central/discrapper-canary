@@ -434,6 +434,114 @@ let { Themes: r } = n(15202).V,
                     opacity: 1
                 }
             },
+            BUTTON_FILLED_BRAND_BORDER: {
+                [r.DARK]: {
+                    raw: 'BLURPLE_18',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'BLURPLE_59',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'BLURPLE_24',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'BLURPLE_20',
+                    opacity: 1
+                }
+            },
+            BUTTON_OUTLINE_POSITIVE_BORDER: {
+                [r.DARK]: {
+                    raw: 'GREEN_NEW_20',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'GREEN_NEW_59',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'GREEN_NEW_26',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'GREEN_NEW_22',
+                    opacity: 1
+                }
+            },
+            BUTTON_OUTLINE_POSITIVE_BORDER_ACTIVE: {
+                [r.DARK]: {
+                    raw: 'GREEN_NEW_20',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'GREEN_NEW_59',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'GREEN_NEW_26',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'GREEN_NEW_22',
+                    opacity: 1
+                }
+            },
+            BUTTON_OUTLINE_POSITIVE_BORDER_HOVER: {
+                [r.DARK]: {
+                    raw: 'GREEN_NEW_20',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'GREEN_NEW_59',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'GREEN_NEW_26',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'GREEN_NEW_22',
+                    opacity: 1
+                }
+            },
+            BUTTON_OUTLINE_PRIMARY_BORDER: {
+                [r.DARK]: {
+                    raw: 'NEUTRAL_25',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'NEUTRAL_46',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'NEUTRAL_31',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'NEUTRAL_28',
+                    opacity: 1
+                }
+            },
+            BUTTON_POSITIVE_BORDER: {
+                [r.DARK]: {
+                    raw: 'GREEN_NEW_20',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'GREEN_NEW_59',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'GREEN_NEW_26',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'GREEN_NEW_22',
+                    opacity: 1
+                }
+            },
             CARD_SECONDARY_BG: {
                 [r.DARK]: {
                     raw: 'OPACITY_12',

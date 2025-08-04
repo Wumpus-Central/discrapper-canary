@@ -15,9 +15,9 @@ var l = n(255367),
     b = n(246364),
     f = n(98493),
     p = n(328977),
-    C = n(412222),
-    v = n(223312),
-    g = n(172751),
+    v = n(412222),
+    g = n(223312),
+    C = n(172751),
     _ = n(768762),
     T = n(892001),
     E = n(598077),
@@ -144,7 +144,7 @@ let O = r.memo(function (e) {
                             className: w.nameContainer,
                             children: [
                                 n.globalName,
-                                (0, l.jsx)(g.ZP, {
+                                (0, l.jsx)(C.ZP, {
                                     primaryGuild: null == n ? void 0 : n.primaryGuild,
                                     userId: null == n ? void 0 : n.id,
                                     contextGuildId: i,
@@ -176,8 +176,8 @@ let O = r.memo(function (e) {
             h = r.useMemo(() => new E.Z(t.user), [t.user]),
             j = (0, p.L)({ guildId: s }),
             f = (0, c.e7)([N.Z], () => N.Z.getGuild(s)),
-            C = x === b.wB.SUBMITTED,
-            v = (e) => {
+            v = x === b.wB.SUBMITTED,
+            g = (e) => {
                 (0, u.jW)(
                     e,
                     async () => {
@@ -261,7 +261,7 @@ let O = r.memo(function (e) {
                       (0, l.jsx)('td', {
                           className: R.moreOptionsCol,
                           children:
-                              C &&
+                              v &&
                               (0, l.jsx)(d.ua7, {
                                   text: P.intl.string(P.t.x8Nn4O),
                                   children: (e) => {
@@ -269,7 +269,7 @@ let O = r.memo(function (e) {
                                       return (0, l.jsx)(d.P3F, {
                                           onMouseEnter: t,
                                           onMouseLeave: n,
-                                          onClick: v,
+                                          onClick: g,
                                           className: w.button,
                                           children: (0, l.jsx)(d.Huf, {
                                               size: 'custom',
@@ -328,9 +328,9 @@ function B(e) {
     let { guildId: t, currentTab: n } = e,
         a = r.useRef(null),
         i = (0, c.e7)([N.Z], () => N.Z.getGuild(t)),
-        s = (0, C.C)({ guildId: t }),
+        s = (0, v.C)({ guildId: t }),
         o = (0, c.e7)([j.Z], () => j.Z.isFetching()),
-        { guildJoinRequests: u } = (0, v.j)({
+        { guildJoinRequests: u } = (0, g.j)({
             guildId: t,
             applicationStatus: n,
             sortOrder: s

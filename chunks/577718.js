@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(388032),
     j = n(540835),
     A = n(519254),
-    x = n(741160),
-    Z = n(829972),
+    Z = n(741160),
+    x = n(829972),
     w = n(31932),
     L = n(642301);
 function R(e) {
@@ -82,7 +82,7 @@ let M = i.memo(function (e) {
                 location_stack: u
             });
         },
-        U = (0, a.wj)(n) ? Z : w,
+        U = (0, a.wj)(n) ? x : w,
         [G, V] = (0, c.US)(t, S.R.GUILD_HEADER_TOOLTIPS);
     return (0, r.jsx)(r.Fragment, {
         children: (() => {
@@ -174,7 +174,7 @@ let M = i.memo(function (e) {
                             header: P.intl.string(P.t['36wK8/']),
                             asset: (0, r.jsx)('img', {
                                 alt: '',
-                                src: x,
+                                src: Z,
                                 className: A.fullWidthImage
                             }),
                             content: e,

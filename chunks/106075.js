@@ -26,7 +26,7 @@ function C() {
         { tabs: S, selectedTab: N, setSelectedTab: T } = (0, b.Y)(),
         P = (0, h.lg)(N),
         j = !E.MU.has(N),
-        { searchQuery: A, onSearchTextChange: x, onClearSearch: Z, onSearchSubmit: w, isSearchVisible: L } = (0, m.H)({ loadId: e.current }),
+        { searchQuery: A, onSearchTextChange: Z, onClearSearch: x, onSearchSubmit: w, isSearchVisible: L } = (0, m.H)({ loadId: e.current }),
         R = f.Z.useField('searchBarState'),
         {
             onTabsAvailableWidthChange: D,
@@ -42,9 +42,9 @@ function C() {
         G = d.Z.useField('fetchedQuery'),
         V = i.useCallback(
             (e) => {
-                (T(e), L && Z());
+                (T(e), L && x());
             },
-            [L, Z, T]
+            [L, x, T]
         ),
         H = i.useMemo(
             () =>
@@ -81,7 +81,7 @@ function C() {
                         L
                             ? (0, r.jsx)(s.Cm, {
                                   icon: l.j9r,
-                                  onClick: Z
+                                  onClick: x
                               })
                             : (0, r.jsx)(s.aV, { icon: l.QTo }),
                         !L &&
@@ -103,8 +103,8 @@ function C() {
                             (0, r.jsx)(u.Z, {
                                 query: A,
                                 placeholder: v.intl.string(v.t['5h0QOD']),
-                                onTextChange: x,
-                                onClear: Z,
+                                onTextChange: Z,
+                                onClear: x,
                                 onSubmit: w,
                                 onCollapsedClick: k,
                                 state: L ? y.GlobalDiscoverySearchBarState.DEFAULT : R,

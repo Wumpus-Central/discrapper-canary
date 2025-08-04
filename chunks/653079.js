@@ -11,11 +11,11 @@ var n = r(255367),
     p = r(388032),
     b = r(52431);
 let h = (e) => {
-    let { user: t, selectedNameplate: r, purchased: a } = e,
-        h = (0, i.e7)([s.Z], () => s.Z.getProduct(null == r ? void 0 : r.skuId)),
-        f = (0, i.e7)([d.Z], () => d.Z.getPendingGlobalName());
+    let { user: t, guildId: r, selectedNameplate: a, purchased: h } = e,
+        f = (0, i.e7)([s.Z], () => s.Z.getProduct(null == a ? void 0 : a.skuId)),
+        v = (0, i.e7)([d.Z], () => d.Z.getPendingGlobalName());
     return (0, n.jsxs)('div', {
-        className: l()(b.previewBorder, { [b.upsell]: !a && null != r }),
+        className: l()(b.previewBorder, { [b.upsell]: !h && null != a }),
         children: [
             (0, n.jsx)('div', {
                 className: b.previewBox,
@@ -32,8 +32,9 @@ let h = (e) => {
                         }),
                         (0, n.jsx)(u.Z, {
                             user: t,
-                            nameplate: r,
-                            pendingGlobalName: f,
+                            guildId: r,
+                            nameplate: a,
+                            pendingGlobalName: v,
                             isHighlighted: !0
                         }),
                         (0, n.jsx)(c.d, {
@@ -47,15 +48,15 @@ let h = (e) => {
                     ]
                 })
             }),
-            null != r
+            null != a
                 ? (0, n.jsxs)('div', {
                       className: b.previewDescription,
                       children: [
                           (0, n.jsx)(o.Text, {
                               variant: 'text-sm/semibold',
-                              children: null == h ? void 0 : h.name
+                              children: null == f ? void 0 : f.name
                           }),
-                          a
+                          h
                               ? null
                               : (0, n.jsx)(o.Text, {
                                     variant: 'text-sm/normal',

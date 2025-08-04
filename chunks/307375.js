@@ -90,17 +90,17 @@ function h(e) {
                                     children: [
                                         (0, r.jsx)(e.icon, {
                                             size: 'md',
-                                            color: n ? o.TVs.colors.INTERACTIVE_ACTIVE : o.TVs.colors.TEXT_MUTED
+                                            color: n ? o.TVs.colors.INTERACTIVE_ACTIVE : o.TVs.colors.INTERACTIVE_NORMAL
                                         }),
                                         (0, r.jsx)(o.Text, {
                                             tag: 'strong',
-                                            color: n ? 'interactive-active' : 'text-muted',
+                                            color: n ? 'interactive-active' : 'interactive-normal',
                                             variant: 'text-md/semibold',
                                             children: e.title
                                         }),
                                         (0, r.jsx)(o.Text, {
                                             tag: 'span',
-                                            color: n ? 'interactive-active' : 'text-muted',
+                                            color: n ? 'interactive-active' : 'interactive-normal',
                                             variant: 'text-xs/medium',
                                             children: e.body
                                         })

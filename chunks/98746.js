@@ -1,287 +1,259 @@
-(n.d(e, { default: () => C }), n(388685), n(781311));
+(n.d(e, { default: () => C }), n(388685), n(781311), n(539854));
 var l = n(255367),
     r = n(73800),
     i = n(120356),
     a = n.n(i),
     o = n(442837),
-    s = n(481060),
-    u = n(749210),
-    c = n(910693),
-    d = n(501517),
-    m = n(592125),
-    p = n(70956),
-    x = n(5192),
-    b = n(981631),
-    g = n(388032),
-    h = n(130883),
-    v = n(221166);
-function j() {
+    s = n(82659),
+    u = n(481060),
+    c = n(749210),
+    d = n(910693),
+    p = n(501517),
+    g = n(592125),
+    v = n(70956),
+    b = n(5192),
+    m = n(981631),
+    h = n(388032),
+    j = n(130883),
+    x = n(221166);
+function f() {
     return [
         {
             value: 0,
-            label: g.intl.string(g.t['4obaMT'])
+            label: h.intl.string(h.t['4obaMT'])
         },
         {
-            value: +p.Z.Seconds.HOUR,
-            label: g.intl.string(g.t.RKpitb)
+            value: +v.Z.Seconds.HOUR,
+            label: h.intl.string(h.t.RKpitb)
         },
         {
-            value: 6 * p.Z.Seconds.HOUR,
-            label: g.intl.string(g.t['8WfJZ2'])
+            value: 6 * v.Z.Seconds.HOUR,
+            label: h.intl.string(h.t['8WfJZ2'])
         },
         {
-            value: 12 * p.Z.Seconds.HOUR,
-            label: g.intl.string(g.t.p1up7u)
+            value: 12 * v.Z.Seconds.HOUR,
+            label: h.intl.string(h.t.p1up7u)
         },
         {
-            value: +p.Z.Seconds.DAY,
-            label: g.intl.string(g.t.XuVkkJ)
+            value: +v.Z.Seconds.DAY,
+            label: h.intl.string(h.t.XuVkkJ)
         },
         {
-            value: 3 * p.Z.Seconds.DAY,
-            label: g.intl.string(g.t.gMcDS0)
+            value: 3 * v.Z.Seconds.DAY,
+            label: h.intl.string(h.t.gMcDS0)
         },
         {
-            value: 7 * p.Z.Seconds.DAY,
-            label: g.intl.string(g.t.FA7IUl)
+            value: 7 * v.Z.Seconds.DAY,
+            label: h.intl.string(h.t.FA7IUl)
         }
     ];
 }
-let f = j()[1].value,
-    y = j()[0].value;
+let y = f()[1].value,
+    O = f()[0].value;
 function C(t) {
-    let { guildId: e, user: n, location: i, userIds: p, onBanMultiple: C, transitionState: O, onClose: k, canBulkBan: S = !1, modReportId: _ } = t,
-        [w, P] = r.useState(null != _ ? y : f),
-        [Z, T] = r.useState(''),
-        [N, I] = r.useState(null),
-        { isModReportClosed: K, isModReport: D } = (0, o.cj)([m.Z], () => {
-            let t = m.Z.getChannel(_);
+    let { guildId: e, user: n, location: i, userIds: v, onBanMultiple: C, transitionState: S, onClose: k, canBulkBan: P = !1, modReportId: Z } = t,
+        [w, _] = r.useState(null != Z ? O : y),
+        [T, I] = r.useState(''),
+        [M, N] = r.useState(null),
+        { isModReportClosed: D, isModReport: K } = (0, o.cj)([g.Z], () => {
+            let t = g.Z.getChannel(Z);
             return {
                 isModReportClosed: null == t ? void 0 : t.isArchivedThread(),
                 isModReport: null == t ? void 0 : t.isModeratorReportChannel()
             };
         }),
-        [M, R] = r.useState(!1),
-        [X, Y] = r.useState(!1),
-        E = (0, c.sE)(e, {
+        [R, E] = r.useState(!1),
+        [U, Y] = r.useState(!1),
+        F = (0, d.sE)(e, {
             location: i,
             targetUserId: null == n ? void 0 : n.id,
-            targets: p
+            targets: v
         }),
-        U = r.useCallback(() => {
-            let t = null != N ? N : Z;
+        J = r.useCallback(() => {
+            let t = null != M ? M : T;
             if (null != C) {
-                if (!(null != p && (null == p ? void 0 : p.size) > 0 && S) || M) return;
-                if ('' === Z.trim() && !M) return void R(!0);
-                C(e, [...p], w, t);
+                if (!(null != v && (null == v ? void 0 : v.size) > 0 && P) || R) return;
+                if ('' === T.trim() && !R) return void E(!0);
+                C(e, [...v], w, t);
             } else {
                 if (null == n) return;
-                u.Z.banUser(e, null == n ? void 0 : n.id, w, t, _).then(() => {
-                    X && null != _ && d.Z.resolveFlag(_);
+                c.Z.banUser(e, null == n ? void 0 : n.id, w, t, Z).then(() => {
+                    U && null != Z && p.Z.resolveFlag(Z);
                 });
             }
-            (E(c.jQ.BAN), k());
-        }, [N, Z, C, E, k, p, S, M, e, w, n, _, X]),
-        z = r.useCallback((t) => {
-            P(t);
+            (F(d.jQ.BAN), k());
+        }, [M, T, C, F, k, v, P, R, e, w, n, Z, U]),
+        X = r.useCallback((t) => {
+            _(t);
         }, []),
-        B = r.useCallback((t) => {
+        A = r.useCallback((t) => {
             let { value: e } = t;
-            (T(e), R(!1), I(null));
+            (I(e), E(!1), N(null));
         }, []),
-        F = r.useCallback(
+        B = r.useCallback(
             (t) => {
-                (I(t), M && R(!1));
+                (N(t), R && E(!1));
             },
-            [M]
+            [R]
         ),
-        J = [
+        W = K && !D && null != Z,
+        q = [
             {
-                name: g.intl.string(g.t.tamLhY),
-                value: g.intl.string(g.t.tamLhY)
+                name: h.intl.string(h.t.tamLhY),
+                value: h.intl.string(h.t.tamLhY)
             },
             {
-                name: g.intl.string(g.t.UmxjMj),
-                value: g.intl.string(g.t.UmxjMj)
+                name: h.intl.string(h.t.UmxjMj),
+                value: h.intl.string(h.t.UmxjMj)
             },
             {
-                name: g.intl.string(g.t.EXY1d3),
-                value: g.intl.string(g.t.EXY1d3)
+                name: h.intl.string(h.t.EXY1d3),
+                value: h.intl.string(h.t.EXY1d3)
             },
             {
-                name: g.intl.string(g.t.BcZTKi),
+                name: h.intl.string(h.t.BcZTKi),
                 value: 'other'
             }
         ],
-        q = (() => {
-            if (null != C && null != p) return g.intl.formatToPlainString(g.t.HVJexc, { count: null == p ? void 0 : p.size });
+        G = (() => {
+            if (null != C && null != v) return h.intl.formatToPlainString(h.t.HVJexc, { count: null == v ? void 0 : v.size });
             if (null == n) return '';
-            let t = x.ZP.getName(e, null, n);
-            return g.intl.formatToPlainString(null != _ ? g.t.WDR8XV : g.t.jeKpoq, { username: '@'.concat(t) });
+            let t = b.ZP.getName(e, null, n);
+            return h.intl.formatToPlainString(null != Z ? h.t.WDR8XV : h.t.jeKpoq, { username: '@'.concat(t) });
         })(),
-        A = null == _ ? null : g.intl.string(g.t.pQjhIC);
-    return (0, l.jsxs)(s.Y0X, {
-        transitionState: O,
-        parentComponent: 'BanConfirm',
-        children: [
-            (0, l.jsx)(s.xBx, {
-                separator: !1,
-                children: (0, l.jsx)(s.olH, {
-                    className: v.closeIcon,
-                    onClick: k
-                })
-            }),
-            (0, l.jsx)(s.hzk, {
-                className: v.modalContent,
-                children: (0, l.jsxs)(s.Kqy, {
+        H = null == Z ? null : h.intl.string(h.t.pQjhIC);
+    return (0, l.jsx)(s.Modal, {
+        onClose: k,
+        transitionState: S,
+        title: G,
+        subtitle: null != H ? H : void 0,
+        actions: (() => {
+            let t = [];
+            return (
+                K ||
+                    t.push({
+                        variant: 'secondary',
+                        text: h.intl.string(h.t['ETE/oK']),
+                        onClick: k
+                    }),
+                t.push({
+                    variant: 'critical-primary',
+                    text: h.intl.string(h.t['5MBJ5O']),
+                    onClick: J
+                }),
+                t
+            );
+        })(),
+        actionBarInput: W
+            ? (0, l.jsx)(u.XZJ, {
+                  value: U,
+                  onChange: (t, e) => Y(e),
+                  children: (0, l.jsx)(u.Text, {
+                      variant: 'text-md/normal',
+                      color: 'text-default',
+                      children: h.intl.string(j.default['8yIKen'])
+                  })
+              })
+            : void 0,
+        children: (0, l.jsxs)(u.Kqy, {
+            direction: 'vertical',
+            gap: 24,
+            children: [
+                (0, l.jsxs)(u.Kqy, {
                     direction: 'vertical',
-                    gap: 24,
+                    gap: 8,
                     children: [
-                        (0, l.jsxs)(s.Kqy, {
-                            direction: 'vertical',
-                            gap: 8,
+                        (0, l.jsxs)(u.xJW, {
+                            titleClassName: x.title,
+                            title: (0, l.jsx)(u.Text, {
+                                variant: 'text-md/medium',
+                                color: 'text-primary',
+                                children: h.intl.string(null != Z ? h.t['+KCLVl'] : h.t.w4Ivys)
+                            }),
                             children: [
-                                (0, l.jsx)(s.X6q, {
-                                    variant: 'heading-lg/semibold',
-                                    color: 'text-primary',
-                                    children: q
-                                }),
-                                null != A &&
-                                    (0, l.jsx)(s.Text, {
-                                        variant: 'text-md/medium',
-                                        color: 'text-secondary',
-                                        children: A
-                                    })
-                            ]
-                        }),
-                        (0, l.jsxs)(s.Kqy, {
-                            direction: 'vertical',
-                            gap: 8,
-                            children: [
-                                (0, l.jsxs)(s.xJW, {
-                                    titleClassName: v.title,
-                                    title: (0, l.jsx)(s.Text, {
-                                        variant: 'text-md/medium',
-                                        color: 'text-primary',
-                                        children: g.intl.string(null != _ ? g.t['+KCLVl'] : g.t.w4Ivys)
+                                R &&
+                                    (0, l.jsx)(u.kzN, {
+                                        className: x.error,
+                                        children: h.intl.string(h.t.IrYX19)
                                     }),
-                                    children: [
-                                        M &&
-                                            (0, l.jsx)(s.kzN, {
-                                                className: v.error,
-                                                children: g.intl.string(g.t.IrYX19)
-                                            }),
-                                        (0, l.jsx)(s.FXm, {
-                                            className: v.radioGroup,
-                                            value: Z,
-                                            options: J.map((t) => {
-                                                var e, n;
-                                                return (
-                                                    (e = (function (t) {
-                                                        for (var e = 1; e < arguments.length; e++) {
-                                                            var n = null != arguments[e] ? arguments[e] : {},
-                                                                l = Object.keys(n);
-                                                            ('function' == typeof Object.getOwnPropertySymbols &&
-                                                                (l = l.concat(
-                                                                    Object.getOwnPropertySymbols(n).filter(function (t) {
-                                                                        return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                                                                    })
-                                                                )),
-                                                                l.forEach(function (e) {
-                                                                    var l;
-                                                                    ((l = n[e]),
-                                                                        e in t
-                                                                            ? Object.defineProperty(t, e, {
-                                                                                  value: l,
-                                                                                  enumerable: !0,
-                                                                                  configurable: !0,
-                                                                                  writable: !0
-                                                                              })
-                                                                            : (t[e] = l));
-                                                                }));
-                                                        }
-                                                        return t;
-                                                    })({}, t)),
-                                                    (n = n = { radioBarClassName: v.radioItem }),
-                                                    Object.getOwnPropertyDescriptors
-                                                        ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-                                                        : (function (t, e) {
-                                                              var n = Object.keys(t);
-                                                              if (Object.getOwnPropertySymbols) {
-                                                                  var l = Object.getOwnPropertySymbols(t);
-                                                                  n.push.apply(n, l);
-                                                              }
-                                                              return n;
-                                                          })(Object(n)).forEach(function (t) {
-                                                              Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
-                                                          }),
-                                                    e
-                                                );
-                                            }),
-                                            onChange: B,
-                                            withTransparentBackground: !0
-                                        })
-                                    ]
-                                }),
-                                (0, l.jsx)('div', {
-                                    className: a()(v.reasonFreeText, { [v.hidden]: 'other' !== Z }),
-                                    children: (0, l.jsx)(s.Kx8, {
-                                        maxLength: b.GNZ,
-                                        onChange: F,
-                                        value: null != N ? N : '',
-                                        rows: 5,
-                                        autoFocus: !0
-                                    })
+                                (0, l.jsx)(u.FXm, {
+                                    className: x.radioGroup,
+                                    value: T,
+                                    options: q.map((t) => {
+                                        var e, n;
+                                        return (
+                                            (e = (function (t) {
+                                                for (var e = 1; e < arguments.length; e++) {
+                                                    var n = null != arguments[e] ? arguments[e] : {},
+                                                        l = Object.keys(n);
+                                                    ('function' == typeof Object.getOwnPropertySymbols &&
+                                                        (l = l.concat(
+                                                            Object.getOwnPropertySymbols(n).filter(function (t) {
+                                                                return Object.getOwnPropertyDescriptor(n, t).enumerable;
+                                                            })
+                                                        )),
+                                                        l.forEach(function (e) {
+                                                            var l;
+                                                            ((l = n[e]),
+                                                                e in t
+                                                                    ? Object.defineProperty(t, e, {
+                                                                          value: l,
+                                                                          enumerable: !0,
+                                                                          configurable: !0,
+                                                                          writable: !0
+                                                                      })
+                                                                    : (t[e] = l));
+                                                        }));
+                                                }
+                                                return t;
+                                            })({}, t)),
+                                            (n = n = { radioBarClassName: x.radioItem }),
+                                            Object.getOwnPropertyDescriptors
+                                                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+                                                : (function (t, e) {
+                                                      var n = Object.keys(t);
+                                                      if (Object.getOwnPropertySymbols) {
+                                                          var l = Object.getOwnPropertySymbols(t);
+                                                          n.push.apply(n, l);
+                                                      }
+                                                      return n;
+                                                  })(Object(n)).forEach(function (t) {
+                                                      Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+                                                  }),
+                                            e
+                                        );
+                                    }),
+                                    onChange: A,
+                                    withTransparentBackground: !0
                                 })
                             ]
                         }),
-                        (0, l.jsx)(s.xJW, {
-                            titleClassName: v.title,
-                            title: (0, l.jsx)(s.Text, {
-                                variant: 'text-md/medium',
-                                color: 'text-primary',
-                                children: g.intl.string(null != _ ? g.t.ERSM8P : g.t['8l3W09'])
-                            }),
-                            children: (0, l.jsx)(s.q4e, {
-                                options: j(),
-                                value: w,
-                                onChange: z
+                        (0, l.jsx)('div', {
+                            className: a()(x.reasonFreeText, { [x.hidden]: 'other' !== T }),
+                            children: (0, l.jsx)(u.Kx8, {
+                                maxLength: m.GNZ,
+                                onChange: B,
+                                value: null != M ? M : '',
+                                rows: 5,
+                                autoFocus: !0
                             })
                         })
                     ]
+                }),
+                (0, l.jsx)(u.xJW, {
+                    titleClassName: x.title,
+                    title: (0, l.jsx)(u.Text, {
+                        variant: 'text-md/medium',
+                        color: 'text-primary',
+                        children: h.intl.string(null != Z ? h.t.ERSM8P : h.t['8l3W09'])
+                    }),
+                    children: (0, l.jsx)(u.q4e, {
+                        options: f(),
+                        value: w,
+                        onChange: X
+                    })
                 })
-            }),
-            (() => {
-                let t = D && !K && null != _;
-                return (0, l.jsxs)(s.mzw, {
-                    className: v.footer,
-                    children: [
-                        t &&
-                            (0, l.jsx)(s.XZJ, {
-                                value: X,
-                                onChange: (t, e) => Y(e),
-                                children: (0, l.jsx)(s.Text, {
-                                    variant: 'text-md/normal',
-                                    color: 'text-default',
-                                    children: g.intl.string(h.default['8yIKen'])
-                                })
-                            }),
-                        !D &&
-                            (0, l.jsx)(s.zxk, {
-                                variant: 'secondary',
-                                text: g.intl.string(g.t['ETE/oK']),
-                                type: 'button',
-                                onClick: k
-                            }),
-                        (0, l.jsx)(s.zxk, {
-                            variant: 'critical-primary',
-                            text: g.intl.string(g.t['5MBJ5O']),
-                            type: 'submit',
-                            onClick: U
-                        })
-                    ]
-                });
-            })()
-        ]
+            ]
+        })
     });
 }

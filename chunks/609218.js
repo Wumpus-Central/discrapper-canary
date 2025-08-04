@@ -81,7 +81,7 @@ function j(e) {
                 }),
                 (0, r.jsxs)(c.$, {
                     color: t,
-                    className: o()(R.container, K()),
+                    className: R.container,
                     children: [
                         (0, r.jsxs)('div', {
                             className: R.content,

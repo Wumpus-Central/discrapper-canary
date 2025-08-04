@@ -60,7 +60,7 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
                   color: 'text-muted',
                   children: l
               }));
-        let x = null != _ ? ''.concat(_, 'px') : '16px';
+        let Z = null != _ ? ''.concat(_, 'px') : '16px';
         return (0, r.jsxs)('div', {
             className: a()(f.container, T),
             children: [
@@ -83,8 +83,8 @@ let g = (0, o.debounce)(u.ZP.trackWithMetadata, 500),
                         className: f.imageContainer,
                         style: {
                             marginTop: ''.concat(O, 'px'),
-                            marginLeft: x,
-                            marginRight: x
+                            marginLeft: Z,
+                            marginRight: Z
                         },
                         children: (0, r.jsx)('img', {
                             className: f.image,

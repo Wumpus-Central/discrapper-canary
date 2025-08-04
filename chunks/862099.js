@@ -33,8 +33,8 @@ var r,
     P = n(151864),
     j = n(835184),
     A = n(725436),
-    x = n(497656),
-    Z = n(79874),
+    Z = n(497656),
+    x = n(79874),
     w = n(554747),
     L = n(230900),
     R = n(854698),
@@ -173,7 +173,7 @@ function F(e) {
         s = null != a ? (0, A.m)(a, !0) : null,
         u = (0, L.nE)(n),
         p = (0, d.KS)(u),
-        { startTime: h, endTime: f } = (0, Z.ZP)(n),
+        { startTime: h, endTime: f } = (0, x.ZP)(n),
         { startDateTimeString: g, upcomingEvent: m, diffMinutes: b } = (0, R.ub)(h.toISOString(), null == f ? void 0 : f.toISOString()),
         _ = m ? (b > 0 ? U.intl.formatToPlainString(U.t.PQlCWl, { minutes: b }) : U.intl.string(U.t.WINqKS)) : U.intl.formatToPlainString(U.t.DC6h3N, { date: g });
     return (
@@ -407,7 +407,7 @@ function Q(e) {
 let X = l.memo(function (e) {
     let { guild: t } = e,
         { showRedesignedLiveChannelNotice: n } = (0, p.o)(!0),
-        r = (0, x.y)(t.id),
+        r = (0, Z.y)(t.id),
         l = (0, w.k5)(t.id),
         a = (0, w.Vm)(t.id),
         o = (0, s.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == r ? void 0 : r.id), [r]),

@@ -1,90 +1,68 @@
-(n.d(t, { default: () => u }), n(388685));
+(n.d(e, { default: () => d }), n(388685));
 var r = n(255367),
     i = n(73800),
-    l = n(481060),
-    c = n(369994),
+    l = n(82659),
+    c = n(481060),
+    o = n(369994),
     a = n(781208),
-    o = n(388032),
-    s = n(122238);
-function u(e) {
-    let { guildId: t, transitionState: n, onClose: u } = e,
-        [d, h] = i.useState([]),
-        _ = i.useCallback(() => {
-            ((0, c.KK)(t, d), (0, c.C4)(t), u());
-        }, [t, u, d]),
-        b = i.useCallback(
-            (e) => () => {
-                h((t) => (t.includes(e) ? t.filter((t) => t !== e) : [...t, e]));
+    s = n(388032),
+    u = n(122238);
+function d(t) {
+    let { guildId: e, transitionState: n, onClose: d } = t,
+        [_, b] = i.useState([]),
+        S = i.useCallback(() => {
+            ((0, o.KK)(e, _), (0, o.C4)(e), d());
+        }, [e, d, _]),
+        p = i.useCallback(
+            (t) => () => {
+                b((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
             },
             []
         ),
-        p = i.useCallback(() => {
+        f = i.useCallback(() => {
             open(a.RI);
         }, []);
-    return (0, r.jsxs)(l.Y0X, {
+    return (0, r.jsx)(l.Modal, {
         transitionState: n,
-        size: l.CgR.SMALL,
-        parentComponent: 'GuildAntiRaidReportModal',
-        children: [
-            (0, r.jsx)(l.xBx, {
-                separator: !1,
-                children: (0, r.jsx)(l.X6q, {
-                    color: 'header-primary',
-                    variant: 'heading-md/semibold',
-                    children: o.intl.string(o.t.uYPGsb)
-                })
-            }),
-            (0, r.jsxs)(l.hzk, {
-                children: [
-                    (0, r.jsx)(l.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'header-secondary',
-                        children: o.intl.format(o.t.Hg8Ee3, { onClick: p })
-                    }),
-                    (0, r.jsx)('div', {
-                        className: s.mainCheckboxContainer,
-                        children: a.Ud.map((e) =>
-                            (0, r.jsxs)(
-                                l.P3F,
-                                {
-                                    className: s.checkboxContainer,
-                                    onClick: b(e),
-                                    children: [
-                                        (0, r.jsx)(l.XZJ, {
-                                            type: l.XZJ.Types.INVERTED,
-                                            className: s.checkbox,
-                                            value: d.includes(e),
-                                            displayOnly: !0
-                                        }),
-                                        (0, r.jsx)(l.Text, {
-                                            variant: 'text-sm/normal',
-                                            children: (0, a.$l)(e)
-                                        })
-                                    ]
-                                },
-                                e
-                            )
-                        )
-                    })
-                ]
-            }),
-            (0, r.jsx)(l.mzw, {
-                children: (0, r.jsxs)(l.hE2, {
-                    direction: 'horizontal-reverse',
-                    children: [
-                        (0, r.jsx)(l.zxk, {
-                            variant: 'primary',
-                            text: o.intl.string(o.t.geKm7u),
-                            onClick: _
-                        }),
-                        (0, r.jsx)(l.zxk, {
-                            variant: 'secondary',
-                            text: o.intl.string(o.t['ETE/oK']),
-                            onClick: u
-                        })
-                    ]
-                })
-            })
-        ]
+        title: s.intl.string(s.t.uYPGsb),
+        subtitle: s.intl.format(s.t.Hg8Ee3, { onClick: f }),
+        actions: [
+            {
+                text: s.intl.string(s.t['ETE/oK']),
+                onClick: d,
+                variant: 'secondary'
+            },
+            {
+                text: s.intl.string(s.t.geKm7u),
+                onClick: S
+            }
+        ],
+        onClose: d,
+        children: (0, r.jsx)(c.Kqy, {
+            gap: 8,
+            className: u.mainCheckboxContainer,
+            children: a.Ud.map((t) =>
+                (0, r.jsxs)(
+                    c.P3F,
+                    {
+                        className: u.checkboxContainer,
+                        onClick: p(t),
+                        children: [
+                            (0, r.jsx)(c.XZJ, {
+                                type: c.XZJ.Types.INVERTED,
+                                className: u.checkbox,
+                                value: _.includes(t),
+                                displayOnly: !0
+                            }),
+                            (0, r.jsx)(c.Text, {
+                                variant: 'text-sm/normal',
+                                children: (0, a.$l)(t)
+                            })
+                        ]
+                    },
+                    t
+                )
+            )
+        })
     });
 }

@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(267161),
     j = n(652515),
     A = n(544978),
-    x = n(540059),
-    Z = n(591472),
+    Z = n(540059),
+    x = n(591472),
     w = n(351051),
     L = n(724383),
     R = n(135864),
@@ -81,7 +81,7 @@ var r = n(255367),
     eP = n(290511),
     ej = n(186901),
     eA = n(128654);
-function ex(e) {
+function eZ(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -106,7 +106,7 @@ function ex(e) {
     }
     return e;
 }
-let eZ = (0, u.Un)({
+let ex = (0, u.Un)({
         createPromise: () => Promise.resolve().then(n.bind(n, 267161)),
         webpackId: 267161
     }),
@@ -256,9 +256,9 @@ let eZ = (0, u.Un)({
                   )
                 : (0, r.jsx)(ey.Z, {});
     }),
-    eH = (e) => (0, r.jsx)(eG, ex({}, e)),
+    eH = (e) => (0, r.jsx)(eG, eZ({}, e)),
     eB = () => (0, r.jsx)(L.Z, {}),
-    eF = (e) => (0, r.jsx)(ez, ex({}, e)),
+    eF = (e) => (0, r.jsx)(ez, eZ({}, e)),
     ez = (e) => {
         let { channelId: t, messageId: n } = e.match.params;
         return (i.useEffect(() => {
@@ -297,7 +297,7 @@ let eZ = (0, u.Un)({
             return Object.values(eT.AW).includes(n)
                 ? (0, r.jsx)(
                       T.Z,
-                      ex(
+                      eZ(
                           {
                               isFullScreen: e,
                               tab: n
@@ -305,10 +305,10 @@ let eZ = (0, u.Un)({
                           t
                       )
                   )
-                : (0, r.jsx)(T.Z, ex({ isFullScreen: e }, t));
+                : (0, r.jsx)(T.Z, eZ({ isFullScreen: e }, t));
         };
     },
-    eX = (e) => (0, r.jsx)(v.Z, ex({}, e)),
+    eX = (e) => (0, r.jsx)(v.Z, eZ({}, e)),
     eJ = () => (0, r.jsx)(ee.Z, {}),
     e$ = () => (0, r.jsx)(Y.Z, {}),
     e0 = () => (0, r.jsx)($.Z, {}),
@@ -371,7 +371,7 @@ function e5(e) {
     let u = 'app view user trigger debugging';
     (b.R6.useExperiment({ location: u }, { autoTrackExposure: !1 }), b.R6.trackExposure({ location: u }));
     let g = (0, p.e7)([C.Z], () => C.Z.isFullscreenInContext()),
-        m = (0, x.T)('ChannelSidebar'),
+        m = (0, Z.T)('ChannelSidebar'),
         E = (0, P.useAppSidebarState)((e) => !e.isOpen) && m;
     (i.useLayoutEffect(() => {
         if (m) {
@@ -461,7 +461,7 @@ function e5(e) {
                             children: [
                                 (0, r.jsx)(
                                     'div',
-                                    ((t = ex({}, j)),
+                                    ((t = eZ({}, j)),
                                     (i = i = { children: (0, r.jsx)(eV, {}) }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
@@ -537,10 +537,10 @@ function e4() {
         m = (null == g || null == (e = g.params) ? void 0 : e.channelId) === eN.oC.GUILD_ONBOARDING,
         b = l || a || o || u || m,
         _ = i.useCallback(() => K.Z.openSidebar(), []),
-        O = (0, x.T)('AppView'),
+        O = (0, Z.T)('AppView'),
         E = (0, P.useAppSidebarState)((e) => !e.isOpen),
         v = (0, p.e7)([C.Z], () => C.Z.isFullscreenInContext()),
-        S = (0, p.e7)([Z.Z], () => Z.Z.isFrameActive());
+        S = (0, p.e7)([x.Z], () => x.Z.isFrameActive());
     return (0, r.jsx)('div', {
         className: eA.container,
         children: (0, r.jsx)(D.Z.Provider, {
@@ -549,7 +549,7 @@ function e4() {
                 className: eA.base,
                 'data-fullscreen': v,
                 children: [
-                    !v && (0, r.jsx)(eZ, {}),
+                    !v && (0, r.jsx)(ex, {}),
                     d.tq ? null : (0, r.jsx)(eE.Z, {}),
                     (0, r.jsxs)('div', {
                         className: eA.content,

@@ -158,6 +158,7 @@ function k(e) {
                                       nameplatePreview: z
                                           ? (0, i.jsx)(g.Z, {
                                                 user: k,
+                                                guildId: null == n ? void 0 : n.id,
                                                 nameplate: G,
                                                 nameplateData: void 0 === G ? (0, f.Pb)(null == W || null == (t = W.collectibles) ? void 0 : t.nameplate) : void 0,
                                                 isHighlighted: !0

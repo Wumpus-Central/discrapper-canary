@@ -15,9 +15,9 @@ var l = n(255367),
     b = n(666233),
     f = n(360328),
     p = n(172751),
-    C = n(892001),
-    v = n(598077),
-    g = n(430824),
+    v = n(892001),
+    g = n(598077),
+    C = n(430824),
     _ = n(709054),
     T = n(51144),
     E = n(981631),
@@ -50,7 +50,7 @@ function Z(e) {
     let { user: t, guildId: n, joinRequest: r } = e,
         { analyticsLocations: a } = (0, u.ZP)(),
         s = () => {
-            (0, C.openUserProfileModal)({
+            (0, v.openUserProfileModal)({
                 userId: t.id,
                 joinRequestId: r.joinRequestId,
                 sourceAnalyticsLocations: a
@@ -293,8 +293,8 @@ function A(e) {
             var e;
             return null != (e = null == n ? void 0 : n.formResponses) ? e : [];
         }, [null == n ? void 0 : n.formResponses]),
-        o = r.useMemo(() => (null != a ? new v.Z(a) : null), [a]),
-        u = (0, c.e7)([g.Z], () => g.Z.getGuild(t), [t]);
+        o = r.useMemo(() => (null != a ? new g.Z(a) : null), [a]),
+        u = (0, c.e7)([C.Z], () => C.Z.getGuild(t), [t]);
     return ((0, m.Tt)({
         subsection: S.intl.string(S.t.nqrK8f),
         location: null == u ? void 0 : u.name

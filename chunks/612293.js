@@ -113,6 +113,7 @@ function j(e) {
                     }),
                     (0, n.jsx)(m.Z, {
                         user: f,
+                        guildId: P,
                         selectedNameplate: I,
                         purchased: k
                     })
