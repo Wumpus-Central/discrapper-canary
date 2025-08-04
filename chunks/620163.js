@@ -18,14 +18,14 @@ var r = n(990547),
     x = n(163379),
     _ = n(498646),
     j = n(489968),
-    C = n(803038),
-    E = n(703288),
+    E = n(803038),
+    C = n(703288),
     O = n(574755),
     v = n(994714),
     S = n(377171),
     T = n(621628),
-    N = n(243778),
-    I = n(594928),
+    I = n(243778),
+    N = n(594928),
     y = n(890022),
     A = n(18438),
     P = n(778825),
@@ -72,14 +72,14 @@ var r = n(990547),
     ex = n(177508),
     e_ = n(956699),
     ej = n(54942),
-    eC = n(293389),
-    eE = n(88624),
+    eE = n(293389),
+    eC = n(88624),
     eO = n(387747),
     ev = n(389650),
     eS = n(649157),
     eT = n(593648),
-    eN = n(327885),
-    eI = n(595242),
+    eI = n(327885),
+    eN = n(595242),
     ey = n(463153),
     eA = n(36192),
     eP = n(889029),
@@ -106,27 +106,27 @@ var r = n(990547),
     eQ = n(698282),
     e$ = n(916723),
     e0 = n(539452);
-let e1 = () => {
+let e3 = () => {
         let e = [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE];
-        return (C.M.getCurrentConfig({ location: 'getAppearanceDCs' }).enabled && e.push(s.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE), e);
+        return (E.M.getCurrentConfig({ location: 'getAppearanceDCs' }).enabled && e.push(s.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE), e);
     },
-    e3 = () => {
-        let e = e1(),
-            [t] = (0, N.US)(e);
+    e1 = () => {
+        let e = e3(),
+            [t] = (0, I.US)(e);
         return t === s.z.CLIENT_THEMES_SETTINGS_BADGE || t === s.z.DEKSTOP_CUSTOM_APP_ICON_BADGE ? (0, i.jsx)(l.lBU, { text: eX.intl.string(eX.t.y2b7CA) }) : t === s.z.CLIENT_THEMES_APPEARANCE_SETTINGS_NEW_BADGE ? (0, i.jsx)(l.IGR, { text: eX.intl.string(eX.t.y2b7CA) }) : null;
     },
     e6 = () => {
         let e = [];
-        return (G.c.getCurrentConfig({ location: 'SettingsRendererConfig' }).enabled && e.push(s.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE), I.J.getCurrentConfig({ location: 'SettingsRendererConfig' }).enabled && e.push(s.z.DISPLAY_NAME_STYLES_NEW_BADGE), e.push(s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE), e);
+        return (G.c.getCurrentConfig({ location: 'SettingsRendererConfig' }).enabled && e.push(s.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE), N.J.getCurrentConfig({ location: 'SettingsRendererConfig' }).enabled && e.push(s.z.DISPLAY_NAME_STYLES_NEW_BADGE), e.push(s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE), e);
     },
-    e2 = () => {
+    e8 = () => {
         let e = e6(),
-            [t] = (0, N.US)(e);
+            [t] = (0, I.US)(e);
         return t === s.z.NAMEPLATE_USER_SETTINGS_MENU_NEW_BADGE ? (0, i.jsx)(D.Z, {}) : t === s.z.RECENT_AVATARS_SETTINGS_MENU_NEW_BADGE || t === s.z.DISPLAY_NAME_STYLES_NEW_BADGE ? (0, i.jsx)(l.IGR, { text: eX.intl.string(eX.t.y2b7CA) }) : null;
     },
-    e8 = ew.Z,
+    e2 = ew.Z,
     e5 = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: C, impressionSource: N, numOfPendingFamilyRequests: I, isOverlaySupported: D, isClipsBetaTagShowing: G = !1, shouldMergeGameSettings: e5, isKeywordFilteringEnabled: e4, isStaff: e7, isInappropriateConversationWarningEnabled: e9, isInapproprateConversationsDefaultOn: te, paymentsBlocked: tt, isEligibleForQuests: tn, isStricterMessageRequestsEnabled: ti, hasLibraryApplication: tr, hasTOTPEnabled: ts, developerMode: ta, isAdultUser: tl, hasSecureFramesVerifiedUserIds: to, hypeSquadRemoved: tc, hasIgnoredUsers: td, hasBlockedUsers: tu, useRefreshedVoiceAndVideo: tm, isEligibleForSensitiveContentDefaults: tp, inputMode: tg, activeInputProfile: th, isInputProfileCustom: tf } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: E, impressionSource: I, numOfPendingFamilyRequests: N, isOverlaySupported: D, isClipsBetaTagShowing: G = !1, shouldMergeGameSettings: e5, isKeywordFilteringEnabled: e4, isStaff: e7, isInappropriateConversationWarningEnabled: e9, isInapproprateConversationsDefaultOn: te, paymentsBlocked: tt, isEligibleForQuests: tn, isStricterMessageRequestsEnabled: ti, hasLibraryApplication: tr, hasTOTPEnabled: ts, developerMode: ta, isAdultUser: tl, hasSecureFramesVerifiedUserIds: to, hypeSquadRemoved: tc, hasIgnoredUsers: td, hasBlockedUsers: tu, useRefreshedVoiceAndVideo: tm, isEligibleForSensitiveContentDefaults: tp, inputMode: tg, activeInputProfile: th, isInputProfileCustom: tf } = e;
         return Object.freeze({
             [eW.s6.SEARCH_NO_RESULTS]: {
                 section: p.ID.CUSTOM,
@@ -273,7 +273,7 @@ let e1 = () => {
                 label: eX.intl.string(eX.t['vi7f+v']),
                 ariaLabel: eX.intl.string(eX.t['vi7f+v']),
                 element: B.Z,
-                newIndicator: (0, i.jsx)(e2, {}),
+                newIndicator: (0, i.jsx)(e8, {}),
                 newIndicatorDismissibleContentTypes: [...e6()],
                 notice: {
                     stores: [K.Z, P.Z],
@@ -500,7 +500,7 @@ let e1 = () => {
                 label: eX.intl.string(e$.default.gntCQU),
                 ariaLabel: eX.intl.string(e$.default.gntCQU),
                 element: ej.Z,
-                badgeCount: I,
+                badgeCount: N,
                 newIndicator: (0, i.jsx)(l.IGR, {
                     text: eX.intl.string(eX.t.y2b7CA),
                     color: S.Z.BG_BRAND
@@ -528,7 +528,7 @@ let e1 = () => {
                 element: eA.Z,
                 newIndicatorDismissibleContentTypes: [s.z.AUTH_SESSIONS_NEW],
                 impressionName: r.ImpressionNames.USER_SETTINGS_SESSIONS,
-                impressionProperties: { source: N }
+                impressionProperties: { source: I }
             },
             [eW.s6.CONNECTIONS]: {
                 section: eY.oAB.CONNECTIONS,
@@ -537,7 +537,7 @@ let e1 = () => {
                 ariaLabel: eX.intl.string(eX.t['3fe7U1']),
                 element: eh.Z,
                 impressionName: r.ImpressionNames.USER_SETTINGS_CONNECTIONS,
-                impressionProperties: { source: N },
+                impressionProperties: { source: I },
                 newIndicatorDismissibleContentTypes: [s.z.NEW_CRUNCHYROLL_CONNECTION],
                 url: eY.Z5c.SETTINGS('connections')
             },
@@ -559,7 +559,7 @@ let e1 = () => {
                 searchableTitles: [eX.intl.string(eX.t.z2jK6e)],
                 label: eX.intl.string(eX.t.z2jK6e),
                 ariaLabel: eX.intl.string(eX.t.z2jK6e),
-                icon: G ? (0, i.jsx)(E.Z, {}) : void 0,
+                icon: G ? (0, i.jsx)(C.Z, {}) : void 0,
                 element: O.Z,
                 predicate: () => !e5,
                 url: eY.Z5c.SETTINGS('clips')
@@ -599,7 +599,7 @@ let e1 = () => {
                 section: eY.oAB.GUILD_BOOSTING,
                 searchableTitles: [eX.intl.string(eX.t['+CbP2t'])],
                 label: eX.intl.string(eX.t['+CbP2t']),
-                element: eI.Z
+                element: eN.Z
             },
             [eW.s6.SUBSCRIPTIONS]: {
                 section: eY.oAB.SUBSCRIPTIONS,
@@ -607,7 +607,7 @@ let e1 = () => {
                 searchableTitles: [eX.intl.string(eX.t.trSpHR)],
                 label: eX.intl.string(eX.t.trSpHR),
                 element: k.Z,
-                icon: C
+                icon: E
                     ? (0, i.jsx)(l.Mgn, {
                           size: 'xs',
                           color: a.Z.unsafe_rawColors.YELLOW_300.css
@@ -674,8 +674,8 @@ let e1 = () => {
                 label: eX.intl.string(eX.t['iHH+k5']),
                 ariaLabel: eX.intl.string(eX.t['iHH+k5']),
                 element: em.Z,
-                newIndicator: (0, i.jsx)(e3, {}),
-                newIndicatorDismissibleContentTypes: e1(),
+                newIndicator: (0, i.jsx)(e1, {}),
+                newIndicatorDismissibleContentTypes: e3(),
                 url: eY.Z5c.SETTINGS('appearance')
             },
             [eW.s6.APPEARANCE_THEME]: {
@@ -1423,7 +1423,7 @@ let e1 = () => {
                 section: eY.oAB.LINUX,
                 searchableTitles: [eX.intl.string(eX.t['7pPjTU'])],
                 label: eX.intl.string(eX.t['7pPjTU']),
-                element: e8,
+                element: e2,
                 predicate: () => Q.isPlatformEmbedded && (0, Q.isLinux)()
             },
             [eW.s6.STREAMER_MODE]: {
@@ -1548,14 +1548,14 @@ let e1 = () => {
                 section: eY.oAB.REGISTERED_GAMES,
                 searchableTitles: [eX.intl.string(eX.t.AVDyEh)],
                 label: eX.intl.string(eX.t.AVDyEh),
-                element: eC.Z,
+                element: eE.Z,
                 predicate: () => !e5 && (0, eB.Jw)()
             },
             [eW.s6.OVERLAY]: {
                 section: eY.oAB.OVERLAY,
                 searchableTitles: [eX.intl.string(eX.t['9cb1U1']), eX.intl.string(eX.t.HcoRu7)],
                 label: eX.intl.string(eX.t['9cb1U1']),
-                element: eN.Z,
+                element: eI.Z,
                 predicate: () => !e5 && D
             },
             [eW.s6.CHANGELOG]: {
@@ -1585,7 +1585,7 @@ let e1 = () => {
                 section: eY.oAB.HYPESQUAD_ONLINE,
                 searchableTitles: [eX.intl.string(eX.t['k0R+4e'])],
                 label: eX.intl.string(eX.t['k0R+4e']),
-                element: eE.Z,
+                element: eC.Z,
                 predicate: () => !tc
             },
             [eW.s6.TOWNHALL]: {

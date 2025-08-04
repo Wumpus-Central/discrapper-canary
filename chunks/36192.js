@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(594174),
     _ = n(460562),
     j = n(823379),
-    C = n(981631),
-    E = n(921944),
+    E = n(981631),
+    C = n(921944),
     O = n(388032),
     v = n(232696);
 function S() {
@@ -28,7 +28,7 @@ function S() {
         a = (0, l.e7)([x.default], () => x.default.getCurrentUser()),
         [u, p] = r.useState(!1);
     r.useEffect(() => {
-        ((0, f.Q3)(c.z.AUTH_SESSIONS_NEW, { dismissAction: E.L.AUTO }), (0, g.fw)());
+        ((0, f.Q3)(c.z.AUTH_SESSIONS_NEW, { dismissAction: C.L.AUTO }), (0, g.fw)());
         let e = setTimeout(() => p(!0), 500);
         return () => {
             (clearTimeout(e), (0, g.$Z)());
@@ -36,7 +36,7 @@ function S() {
     }, []);
     let _ = () => {
             o.tn.post({
-                url: C.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG,
+                url: E.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG,
                 rejectWithError: !0
             });
         },
@@ -91,7 +91,7 @@ function S() {
                                                           e.id_hash
                                                       )
                                                   ),
-                                                  (null == a ? void 0 : a.mfaEnabled) ? null : (0, i.jsx)(N, {})
+                                                  (null == a ? void 0 : a.mfaEnabled) ? null : (0, i.jsx)(I, {})
                                               ]
                                           })
                                 ]
@@ -194,9 +194,9 @@ function T(e) {
                     };
             }
         })(null == (s = o.client_info) ? void 0 : s.os),
-        C = c ? null : (0, h.p)(o.approx_last_used_time),
-        E = [x, b].filter(j.lm),
-        S = [f, C].filter(j.lm);
+        E = c ? null : (0, h.p)(o.approx_last_used_time),
+        C = [x, b].filter(j.lm),
+        S = [f, E].filter(j.lm);
     return (0, i.jsxs)(
         'div',
         {
@@ -216,10 +216,10 @@ function T(e) {
                             variant: 'eyebrow',
                             className: v.sessionInfoRow,
                             children: [
-                                (0, i.jsx)('span', { children: E[0] }),
-                                E.length > 1 &&
+                                (0, i.jsx)('span', { children: C[0] }),
+                                C.length > 1 &&
                                     (0, i.jsxs)(i.Fragment, {
-                                        children: [(0, i.jsx)('span', { children: '\xB7' }), (0, i.jsx)('span', { children: E[1] })]
+                                        children: [(0, i.jsx)('span', { children: '\xB7' }), (0, i.jsx)('span', { children: C[1] })]
                                     })
                             ]
                         }),
@@ -264,7 +264,7 @@ function T(e) {
         o.id_hash
     );
 }
-function N() {
+function I() {
     return (0, i.jsxs)('div', {
         className: a()(v.session, v.legacySession),
         children: [
@@ -288,7 +288,7 @@ function N() {
                         variant: 'text-sm/medium',
                         className: v.sessionInfoRow,
                         color: 'text-muted',
-                        children: (0, i.jsx)('span', { children: O.intl.format(O.t['044+8v'], { onClick: () => u.Z.setSection(C.oAB.ACCOUNT, null, { analyticsLocations: [p.Z.USER_SETTINGS_SESSIONS] }) }) })
+                        children: (0, i.jsx)('span', { children: O.intl.format(O.t['044+8v'], { onClick: () => u.Z.setSection(E.oAB.ACCOUNT, null, { analyticsLocations: [p.Z.USER_SETTINGS_SESSIONS] }) }) })
                     })
                 ]
             })

@@ -1,125 +1,138 @@
-n.d(t, { J: () => u });
-var i = n(255367),
-    r = n(73800),
-    s = n(920155),
-    a = n(744399),
-    l = n(454028),
-    o = n(966902),
+n.d(t, { J: () => g });
+var r = n(255367),
+    i = n(73800),
+    a = n(920155),
+    o = n(744399),
+    s = n(454028),
+    l = n(966902),
     c = n(237872),
-    d = n(562618);
-function u(e) {
-    var t,
-        n,
-        {
-            title: u,
-            body: m,
-            caretConfig: p = {
+    u = n(562618);
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                d(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function _(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function p(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : _(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function h(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = m(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+    }
+    return i;
+}
+function m(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    return i;
+}
+function g(e) {
+    var {
+            title: t,
+            body: n,
+            caretConfig: d = {
                 position: 'bottom',
                 align: 'center'
             },
-            badge: g,
-            asset: h,
-            size: f = 'md',
-            actions: b,
-            textLink: x,
-            gradientColor: _,
-            onRequestClose: j,
-            popoverRef: C
+            badge: _,
+            asset: m,
+            size: g = 'md',
+            actions: E,
+            textLink: b,
+            gradientColor: y,
+            onRequestClose: O,
+            popoverRef: v
         } = e,
-        E = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                i,
-                r = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        i,
-                        r = {},
-                        s = Object.keys(e);
-                    for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
-                    return r;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
-            }
-            return r;
-        })(e, ['title', 'body', 'caretConfig', 'badge', 'asset', 'size', 'actions', 'textLink', 'gradientColor', 'onRequestClose', 'popoverRef']);
-    let O = r.useCallback(() => {
-            null == j || j();
-        }, [j]),
-        v = r.useCallback(() => {
-            null == j || j();
-        }, [j]);
-    return (0, i.jsx)(
-        s.m,
-        ((t = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    i = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
-                    (i = i.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
-                    )),
-                    i.forEach(function (t) {
-                        var i;
-                        ((i = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: i,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0
-                                  })
-                                : (e[t] = i));
-                    }));
-            }
-            return e;
-        })({}, E)),
-        (n = n =
-            {
-                onRequestClose: O,
-                gradientColor: _,
-                caretConfig: p,
-                children: (0, i.jsxs)('div', {
-                    ref: C,
-                    children: [
-                        (0, i.jsx)(c.u, {
-                            onClick: v,
-                            colorMix: null != _
-                        }),
-                        null != h
-                            ? (0, i.jsx)(l.V, {
-                                  asset: h,
-                                  size: f
-                              })
-                            : null,
-                        (0, i.jsx)(d.Y, {
-                            title: u,
-                            body: m,
-                            badge: g,
-                            textLink: x,
-                            hasBottomMargin: null != b
-                        }),
-                        null != b && b.length > 0 ? (0, i.jsx)(a.k, { actions: b }) : null,
-                        (0, i.jsx)(o.$, { caretConfig: p })
-                    ]
-                })
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-              }),
-        t)
+        I = h(e, ['title', 'body', 'caretConfig', 'badge', 'asset', 'size', 'actions', 'textLink', 'gradientColor', 'onRequestClose', 'popoverRef']);
+    let T = i.useCallback(() => {
+            null == O || O();
+        }, [O]),
+        S = i.useCallback(() => {
+            null == O || O();
+        }, [O]);
+    return (0, r.jsx)(
+        a.m,
+        p(f({}, I), {
+            onRequestClose: T,
+            gradientColor: y,
+            caretConfig: d,
+            children: (0, r.jsxs)('div', {
+                ref: v,
+                children: [
+                    (0, r.jsx)(c.u, {
+                        onClick: S,
+                        colorMix: null != y
+                    }),
+                    null != m
+                        ? (0, r.jsx)(s.V, {
+                              asset: m,
+                              size: g
+                          })
+                        : null,
+                    (0, r.jsx)(u.Y, {
+                        title: t,
+                        body: n,
+                        badge: _,
+                        textLink: b,
+                        hasBottomMargin: null != E
+                    }),
+                    null != E && E.length > 0 ? (0, r.jsx)(o.k, { actions: E }) : null,
+                    (0, r.jsx)(l.$, { caretConfig: d })
+                ]
+            })
+        })
     );
 }

@@ -1,6 +1,6 @@
 (n.d(t, {
-    XV: () => _,
-    qt: () => f
+    XV: () => f,
+    qt: () => _
 }),
     n(388685));
 var r = n(392711),
@@ -497,7 +497,7 @@ let l = [
         getName: () => s.intl.string(s.t.Mfoe3t),
         midpointPercentage: 50
     },
-    _ = [
+    f = [
         ...l,
         ...u,
         d,
@@ -521,4 +521,4 @@ let l = [
         }
     ];
 ([...u, ...l], a.r.STANDARD_BACKGROUND_THEME, a.r.STANDARD_BACKGROUND_THEME, o.BR.LIGHT, a.r.STANDARD_BACKGROUND_THEME, o.BR.MIDNIGHT, a.r.STANDARD_BACKGROUND_THEME, () => s.intl.string(s.t.zlvNOj));
-let f = (0, r.keyBy)(_, 'id');
+let _ = (0, r.keyBy)(f, 'id');

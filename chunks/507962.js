@@ -4,7 +4,7 @@ n.d(t, {
     J4: () => p,
     JL: () => m,
     Om: () => O,
-    P0: () => f,
+    P0: () => _,
     Vb: () => I,
     fR: () => E,
     gG: () => h,
@@ -13,7 +13,7 @@ n.d(t, {
     uf: () => v,
     w8: () => g,
     z3: () => b,
-    zW: () => _
+    zW: () => f
 });
 var r = n(73800),
     i = n(704215),
@@ -24,10 +24,10 @@ var r = n(73800),
     c = n(981631),
     u = n(474936);
 let d = 'manual',
-    _ = () => {
+    f = () => {
         ((d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'hex_input' }));
     },
-    f = () => {
+    _ = () => {
         ((d = 'manual'), l.default.track(c.rMx.CUSTOM_THEMES_EDITOR_CONTROLS_CHANGED, { control_name: 'color_picker' }));
     },
     p = () => {

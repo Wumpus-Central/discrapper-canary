@@ -10,13 +10,13 @@ var i = n(835473),
     u = n(992955);
 function d(e) {
     var t;
-    let { applicationId: n, onMouseDown: d, onMouseMove: _, onMouseLeave: f, onFocus: p, idle: h } = e,
+    let { applicationId: n, onMouseDown: d, onMouseMove: f, onMouseLeave: _, onFocus: p, idle: h } = e,
         m = (0, i.q)(n);
     return (0, r.jsxs)('div', {
         className: u.videoControls,
-        onMouseMove: _,
+        onMouseMove: f,
         onMouseDown: d,
-        onMouseLeave: f,
+        onMouseLeave: _,
         children: [
             (0, r.jsx)('div', {
                 className: u.topControls,

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(388685));
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(570140),
     i = n(147913),
     a = n(70956),
@@ -40,7 +40,7 @@ function d() {
     let r = Date.now() + a.Z.Millis.WEEK;
     n.saveData.dueAt.getTime() > r || (c = setTimeout(() => u(n), n.saveData.dueAt.getTime() - Date.now()));
 }
-class _ extends i.Z {
+class f extends i.Z {
     constructor(...e) {
         (super(...e),
             l(this, 'actions', {
@@ -53,4 +53,4 @@ class _ extends i.Z {
             }));
     }
 }
-let f = new _();
+let _ = new f();

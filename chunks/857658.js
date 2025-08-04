@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(608787),
     u = n(866442),
     d = n(19602),
-    _ = n(680018),
-    f = n(861066),
+    f = n(680018),
+    _ = n(861066),
     p = n(481060),
     h = n(408886),
     m = n(233398),
@@ -155,13 +155,13 @@ function D(e) {
         x = i.useCallback((e) => {
             R(e.hex);
         }, []),
-        M = (e) => {
+        k = (e) => {
             if (((0, E.P0)(), n(e.hex), o.length > 0)) {
                 let t = [...o];
                 ((t[v] = e.hex), s(t));
             }
         },
-        k = async () => {
+        M = async () => {
             if (null != c)
                 try {
                     let { sRGBHex: e } = await c.open();
@@ -198,7 +198,7 @@ function D(e) {
                 }),
             (0, r.jsx)(N, {
                 onChange: x,
-                onChangeComplete: M,
+                onChangeComplete: k,
                 color: A
             }),
             (0, r.jsxs)('div', {
@@ -221,7 +221,7 @@ function D(e) {
                                     tooltipClassName: O.eyeDropperTooltip,
                                     children: (e) =>
                                         (0, r.jsx)(
-                                            f.h,
+                                            _.h,
                                             S(
                                                 I(
                                                     {
@@ -231,7 +231,7 @@ function D(e) {
                                                     e
                                                 ),
                                                 {
-                                                    onClick: k,
+                                                    onClick: M,
                                                     icon: d.i,
                                                     'aria-label': y.intl.string(b.default['8QXO8v'])
                                                 }
@@ -243,7 +243,7 @@ function D(e) {
                                     text: y.intl.string(b.default['rTik5+']),
                                     children: (e) =>
                                         (0, r.jsx)(
-                                            f.h,
+                                            _.h,
                                             S(I({}, e), {
                                                 variant: 'icon-only',
                                                 size: 'sm',
@@ -258,7 +258,7 @@ function D(e) {
                 ]
             }),
             o.length < C &&
-                (0, r.jsx)(_.z, {
+                (0, r.jsx)(f.z, {
                     variant: 'secondary',
                     size: 'md',
                     onClick: j,

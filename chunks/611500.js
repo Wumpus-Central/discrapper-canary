@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function _(e, t) {
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,14 +79,14 @@ function p(e, t) {
 }
 function h(e) {
     var { applicationId: t, centerButton: n = !1 } = e,
-        c = f(e, ['applicationId', 'centerButton']);
+        c = _(e, ['applicationId', 'centerButton']);
     let d = i.useCallback(() => {
             (0, s.xT)({ applicationId: t });
         }, [t]),
         p = n ? o.d : o.Z;
     return (0, r.jsx)(
         p,
-        _(u({}, c), {
+        f(u({}, c), {
             isTrayButton: !1,
             onClick: d,
             iconComponent: a.Dio,

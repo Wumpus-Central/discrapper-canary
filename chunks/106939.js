@@ -20,14 +20,14 @@ var i = n(255367),
     x = n(313201),
     _ = n(266454),
     j = n(984370),
-    C = n(797614),
-    E = n(108427),
+    E = n(797614),
+    C = n(108427),
     O = n(210887),
     v = n(695346),
     S = n(594174),
     T = n(626135),
-    N = n(260722),
-    I = n(914788),
+    I = n(260722),
+    N = n(914788),
     y = n(841409),
     A = n(652262),
     P = n(880257),
@@ -151,7 +151,7 @@ function Y() {
     let e = (0, P.Z)(),
         t = (0, R.M8)(),
         n = (0, _.Nj)(d.z.FAMILY_CENTER_NEW_BADGE),
-        s = (0, c.e7)([I.Z], () => I.Z.getIsInitialized()),
+        s = (0, c.e7)([N.Z], () => N.Z.getIsInitialized()),
         a = (0, A.M)(),
         { selectedTab: l, handleTabChange: m } = (0, y.Z)(),
         h = (0, x.Dt)(),
@@ -159,8 +159,8 @@ function Y() {
         j = null != e,
         O = s && null != f && !j;
     (0, p.ZP)(() => {
-        ((0, E.e)('family-center'),
-            N.ZP.initialPageLoad(),
+        ((0, C.e)('family-center'),
+            I.ZP.initialPageLoad(),
             n ||
                 (0, _.Q3)(d.z.FAMILY_CENTER_NEW_BADGE, {
                     dismissAction: M.L.AUTO,
@@ -187,7 +187,7 @@ function Y() {
                 initial_page: k.QH[n],
                 source: k._6[k.Mu.SIDENAV]
             }),
-                C.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
+                E.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
         }
     }, [s, j]),
     r.useEffect(() => {
@@ -220,7 +220,7 @@ function K() {
         t = (0, P.Z)(),
         n = (0, R.M8)(),
         s = (0, _.Nj)(d.z.FAMILY_CENTER_NEW_BADGE),
-        l = (0, c.e7)([I.Z], () => I.Z.getIsInitialized()),
+        l = (0, c.e7)([N.Z], () => N.Z.getIsInitialized()),
         j = (0, A.M)(),
         D = (0, c.e7)([O.Z], () => O.Z.theme),
         { selectedTab: Z, handleTabChange: w } = (0, y.Z)(),
@@ -230,8 +230,8 @@ function K() {
         K = l && null != W && !Y;
     (0, p.ZP)(() => {
         (m.Y(L.Z5c.FAMILY_CENTER),
-            (0, E.e)('family-center'),
-            !I.Z.isLoading() && I.Z.canRefetch() && N.ZP.initialPageLoad(),
+            (0, C.e)('family-center'),
+            !N.Z.isLoading() && N.Z.canRefetch() && I.ZP.initialPageLoad(),
             s ||
                 (0, _.Q3)(d.z.FAMILY_CENTER_NEW_BADGE, {
                     dismissAction: M.L.AUTO,
@@ -259,7 +259,7 @@ function K() {
                     initial_page: k.QH[n],
                     source: k._6[k.Mu.SIDENAV]
                 }),
-                    C.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
+                    E.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
             }
         }, [l, Y]),
         r.useEffect(() => {

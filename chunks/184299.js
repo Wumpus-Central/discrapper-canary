@@ -64,14 +64,14 @@ function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,7 +80,7 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if ('object' !== h(e) || null === e) return e;
     var n = e[Symbol.toPrimitive];
     if (void 0 !== n) {
@@ -91,7 +91,7 @@ function f(e, t) {
     return ('string' === t ? String : Number)(e);
 }
 function p(e) {
-    var t = f(e, 'string');
+    var t = _(e, 'string');
     return 'symbol' === h(t) ? t : String(t);
 }
 function h(e) {

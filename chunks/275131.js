@@ -8,8 +8,8 @@ var r = n(664751),
     c = n(356164),
     u = n(726115),
     d = n(128449),
-    _ = n(981631);
-function f(e, t, n) {
+    f = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,16 +25,16 @@ function f(e, t, n) {
 class p extends s.Z {
     constructor(...e) {
         (super(...e),
-            f(this, 'actions', { POST_CONNECTION_OPEN: () => this.handleConnectionOpen() }),
-            f(this, 'queue', new Set()),
-            f(this, 'isFetchEnabled', !1),
-            f(this, 'handleConnectionOpen', () => {
+            _(this, 'actions', { POST_CONNECTION_OPEN: () => this.handleConnectionOpen() }),
+            _(this, 'queue', new Set()),
+            _(this, 'isFetchEnabled', !1),
+            _(this, 'handleConnectionOpen', () => {
                 ((this.isFetchEnabled = !0),
                     this.queue.forEach((e) => {
                         e === d.Hk ? this.fetchFeaturedGuilds() : this.fetchCategoryFeaturedGuilds({ categoryId: e });
                     }));
             }),
-            f(this, 'fetchFeaturedGuilds', async (e) => {
+            _(this, 'fetchFeaturedGuilds', async (e) => {
                 var t;
                 if (!this.isFetchEnabled) return void this.queue.add(d.Hk);
                 let n = null != (t = null == e ? void 0 : e.forceRefresh) && t,
@@ -47,7 +47,7 @@ class p extends s.Z {
                     });
                     try {
                         let e = await a.tn.get({
-                                url: _.ANM.GUILD_DISCOVERY,
+                                url: f.ANM.GUILD_DISCOVERY,
                                 query: r.stringify({
                                     offset: 0,
                                     limit: i.g.FEATURED_DEFAULT_LIMIT
@@ -73,7 +73,7 @@ class p extends s.Z {
                     }
                 }
             }),
-            f(this, 'fetchCategoryFeaturedGuilds', async (e) => {
+            _(this, 'fetchCategoryFeaturedGuilds', async (e) => {
                 let { categoryId: t, forceRefresh: n = !1 } = e;
                 if (!this.isFetchEnabled) return void this.queue.add(t);
                 let i = c.Z.getLastFetchTimestamp({ categoryId: t });
@@ -85,7 +85,7 @@ class p extends s.Z {
                     });
                     try {
                         let e = await a.tn.get({
-                                url: _.ANM.GUILD_DISCOVERY,
+                                url: f.ANM.GUILD_DISCOVERY,
                                 query: r.stringify({ categories: [t] }),
                                 oldFormErrors: !0,
                                 rejectWithError: !1

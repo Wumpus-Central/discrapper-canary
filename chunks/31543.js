@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(28546),
     u = n(453070),
     d = n(611480),
-    _ = n(388032),
-    f = n(419028);
+    f = n(388032),
+    _ = n(419028);
 let p = i.forwardRef(function (e, t) {
     let { onKeyDown: n, stickersListRef: p, channel: h } = e,
         m = (0, u.fQ)(h),
@@ -47,17 +47,17 @@ let p = i.forwardRef(function (e, t) {
             }
         }, [b]),
         (0, r.jsx)('div', {
-            className: f.wrapper,
+            className: _.wrapper,
             children: (0, r.jsx)(s.E1j, {
                 autoFocus: m,
                 disabled: !m,
                 query: E,
                 ref: g,
-                placeholder: null != y ? y : m ? _.intl.string(_.t.dt5h1N) : _.intl.string(_.t['Pck/4e']),
+                placeholder: null != y ? y : m ? f.intl.string(f.t.dt5h1N) : f.intl.string(f.t['Pck/4e']),
                 onClear: I,
                 onKeyDown: n,
                 onChange: v,
-                className: f.__invalid_searchBar,
+                className: _.__invalid_searchBar,
                 inputProps: {
                     'aria-haspopup': 'grid',
                     'aria-controls': d.Vr,

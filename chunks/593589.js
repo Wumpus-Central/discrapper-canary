@@ -1,13 +1,13 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => b });
 var i = n(255367),
     r = n(73800),
     o = n(481060),
     a = n(372900),
     c = n(238246),
-    s = n(788983),
-    d = n(207035),
-    l = n(823748),
-    _ = n(981631),
+    l = n(788983),
+    s = n(207035),
+    _ = n(823748),
+    d = n(981631),
     p = n(683146);
 function u(e) {
     let { windowKey: t, channel: n } = e;
@@ -19,15 +19,15 @@ function u(e) {
         contentClassName: p.popoutContent,
         children: (0, i.jsx)(a.Z.Provider, {
             value: n.guild_id,
-            children: (0, i.jsx)(l.Z, { providedChannel: n })
+            children: (0, i.jsx)(_.Z, { providedChannel: n })
         })
     });
 }
-function f(e, t) {
-    let n = (0, d.P)(t),
+function b(e, t) {
+    let n = (0, s.P)(t),
         a = r.useCallback(() => {
-            s.bA(
-                ''.concat(_.KJ3.CHANNEL_POPOUT, '-').concat(e.id),
+            l.bA(
+                ''.concat(d.KJ3.CHANNEL_POPOUT, '-').concat(e.id),
                 (t) =>
                     (0, i.jsx)(u, {
                         windowKey: t,

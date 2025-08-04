@@ -15,28 +15,28 @@ var i = n(255367),
     f = n(388032),
     b = n(142436);
 function x(e) {
-    let { user: t, guild: n, className: s, sectionTitle: p, forcedDivider: x = !1, withTutorial: j = !1, isTryItOutFlow: C = !1 } = e,
-        { analyticsLocations: E } = (0, c.ZP)(),
+    let { user: t, guild: n, className: s, sectionTitle: p, forcedDivider: x = !1, withTutorial: j = !1, isTryItOutFlow: E = !1 } = e,
+        { analyticsLocations: C } = (0, c.ZP)(),
         O = null != n,
-        { userAvatarDecoration: v, guildAvatarDecoration: S, pendingAvatarDecoration: T, pendingErrors: N } = (0, g.$U)(t, n),
-        I = (0, m.Z)('enable_avatar_decoration_uploads'),
+        { userAvatarDecoration: v, guildAvatarDecoration: S, pendingAvatarDecoration: T, pendingErrors: I } = (0, g.$U)(t, n),
+        N = (0, m.Z)('enable_avatar_decoration_uploads'),
         y = r.useCallback(
             () =>
                 (0, u.ps)({
-                    analyticsLocations: E,
-                    isTryItOutFlow: C,
+                    analyticsLocations: C,
+                    isTryItOutFlow: E,
                     guild: n
                 }),
-            [E, C, n]
+            [C, E, n]
         ),
-        A = C || void 0 !== T ? null != T : (O ? S : v) != null,
+        A = E || void 0 !== T ? null != T : (O ? S : v) != null,
         P = j ? o.gtL : l.zx;
     return (0, i.jsxs)(h.Z, {
         className: s,
         forcedDivider: x,
         hasBackground: !0,
         title: p,
-        errors: N,
+        errors: I,
         children: [
             (0, i.jsxs)('div', {
                 className: b.buttonsContainer,
@@ -62,7 +62,7 @@ function x(e) {
                         })
                 ]
             }),
-            t.isStaff() && I && (0, i.jsx)(_, { user: t })
+            t.isStaff() && N && (0, i.jsx)(_, { user: t })
         ]
     });
 }

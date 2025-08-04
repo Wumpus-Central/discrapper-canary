@@ -7,7 +7,7 @@ var r = n(867996),
     c = Object.prototype,
     u = Function.prototype.toString,
     d = c.hasOwnProperty,
-    _ = RegExp(
+    f = RegExp(
         '^' +
             u
                 .call(d)
@@ -16,5 +16,5 @@ var r = n(867996),
             '$'
     );
 e.exports = function (e) {
-    return !(!a(e) || i(e)) && (r(e) ? _ : l).test(o(e));
+    return !(!a(e) || i(e)) && (r(e) ? f : l).test(o(e));
 };

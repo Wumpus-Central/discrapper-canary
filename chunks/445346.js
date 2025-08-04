@@ -21,12 +21,12 @@ function c(e, t, n) {
 }
 let u = [],
     d = !1,
-    _ = new Promise((e) => {
+    f = new Promise((e) => {
         r = () => {
             (e(), (r = null));
         };
     });
-function f(e, t) {
+function _(e, t) {
     let n = null;
     return 0 === e
         ? function () {
@@ -75,7 +75,7 @@ class p {
                 i = () => {
                     r !== l.Z.getChangeSentinel() && ((r = l.Z.getChangeSentinel()), !1 !== t() && this.emitChange());
                 };
-            ((i = f(null != n ? n : 0, i)), e.forEach((e) => e.addChangeListener(i)));
+            ((i = _(null != n ? n : 0, i)), e.forEach((e) => e.addChangeListener(i)));
         } else
             e.forEach((e) => {
                 e._syncWiths.push({
@@ -125,4 +125,4 @@ class p {
             d && this.initializeIfNeeded());
     }
 }
-(c(p, 'displayName', void 0), c(p, 'initialized', _));
+(c(p, 'displayName', void 0), c(p, 'initialized', f));

@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(906732),
     u = n(335131),
     d = n(927513),
-    _ = n(768865),
-    f = n(617136),
+    f = n(768865),
+    _ = n(617136),
     p = n(497505),
     h = n(703656),
     m = n(317257),
@@ -59,7 +59,7 @@ function x(e) {
     }
     return e;
 }
-function M(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -71,12 +71,12 @@ function M(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -95,7 +95,7 @@ let j = (e) => {
 };
 function U(e) {
     var t;
-    let { badges: n, className: i, badgeClassName: d, displayProfile: g, onClose: L, shouldOpenBadgeTooltip: M, shouldGlowTenureBadge: U } = e,
+    let { badges: n, className: i, badgeClassName: d, displayProfile: g, onClose: L, shouldOpenBadgeTooltip: k, shouldGlowTenureBadge: U } = e,
         { analyticsLocations: G } = (0, c.ZP)(l.Z.BADGE),
         { context: B, trackUserProfileAction: V } = (0, v.KZ)(),
         F = E.default.getCurrentUser(),
@@ -143,7 +143,7 @@ function U(e) {
                         ) {
                             ((null == g ? void 0 : g.userId) === (null == F ? void 0 : F.id)
                                 ? (0, h.uL)(N.Z5c.NITRO_HOME)
-                                : (0, _.k)({
+                                : (0, f.k)({
                                       analyticsLocations: G,
                                       displayProfile: g
                                   }),
@@ -156,7 +156,7 @@ function U(e) {
                             return (null == L || L(), n(t));
                         }
                         return (
-                            (0, _.k)({
+                            (0, f.k)({
                                 analyticsLocations: G,
                                 displayProfile: g
                             }),
@@ -167,7 +167,7 @@ function U(e) {
                     if (null != n) return (null == L || L(), n(t));
                 },
                 v = () => {
-                    (e.id === T.i && b.default.track(N.rMx.QUEST_CONTENT_VIEWED, k(x({}, (0, f.mH)(p.jn.QUEST_BADGE)), { is_targeted: !1 })),
+                    (e.id === T.i && b.default.track(N.rMx.QUEST_CONTENT_VIEWED, M(x({}, (0, _.mH)(p.jn.QUEST_BADGE)), { is_targeted: !1 })),
                         V({ action: 'HOVER_BADGE' }),
                         (0, I.Qf)(
                             x(
@@ -189,7 +189,7 @@ function U(e) {
                 {
                     text: S,
                     'aria-label': e.description,
-                    forceOpen: null != M && M(e.id),
+                    forceOpen: null != k && k(e.id),
                     delay: A.vB,
                     children: (0, r.jsx)(o.eee, {
                         onClick: y,

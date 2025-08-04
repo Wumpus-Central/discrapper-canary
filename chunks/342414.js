@@ -18,14 +18,14 @@ var r = n(120356),
     x = n(367074),
     _ = n(775412),
     j = n(695349),
-    C = n(249689),
-    E = n(104494),
+    E = n(249689),
+    C = n(104494),
     O = n(639119),
     v = n(8647),
     S = n(533525),
     T = n(736519),
-    N = n(784238),
-    I = n(382791),
+    I = n(784238),
+    N = n(382791),
     y = n(184176),
     A = n(386733),
     P = n(474936),
@@ -41,11 +41,11 @@ let L = (e) => {
             u = g.default.getCurrentUser(),
             p = (0, a.e7)([h.Z], () => h.Z.getPremiumTypeSubscription()),
             f = (0, O.N)(),
-            b = (0, E.Ng)(),
-            x = (0, E.Wp)(b, P.Si.TIER_2) ? P.Si.TIER_2 : void 0,
+            b = (0, C.Ng)(),
+            x = (0, C.Wp)(b, P.Si.TIER_2) ? P.Si.TIER_2 : void 0,
             _ = null != p && p.status !== R.O0b.ACCOUNT_HOLD && p.hasAnyPremiumNitro,
             j = (0, m.Z)(),
-            v = (0, C.C)('nitro-home', u) && j.isFractionalPremiumActive && !_;
+            v = (0, E.C)('nitro-home', u) && j.isFractionalPremiumActive && !_;
         return (0, i.jsxs)('div', {
             className: s()(Z.container, r),
             'data-testid': 'subscriber-nitro-home-hero-header',
@@ -69,7 +69,7 @@ let L = (e) => {
                             className: Z.heroHeadingOriginalButtonContainer,
                             children: [
                                 v &&
-                                    (0, i.jsx)(N.Z, {
+                                    (0, i.jsx)(I.Z, {
                                         color: l.Tt.BRAND,
                                         className: s()(Z.button, Z.subscribeButton),
                                         subscriptionTier: null != (n = null == f || null == (t = f.subscription_trial) ? void 0 : t.sku_id) ? n : x
@@ -179,17 +179,17 @@ let L = (e) => {
             g = (0, _._O)(),
             h = D.intl.string(D.t.qYKftb),
             f = (0, S.b)(n),
-            C = (0, i.jsx)(L, { className: t }),
-            E = D.intl.string(D.t.ifwQZW),
+            E = (0, i.jsx)(L, { className: t }),
+            C = D.intl.string(D.t.ifwQZW),
             { fractionalState: O, endsAt: v } = (0, m.Z)(),
             T = (0, u.ZP)(v, u.aj.CREDITS_ENDS_IN);
-        a || l ? ((E = D.intl.string(D.t.ifwQZW)), (C = (0, i.jsx)(M, { isEligibleForBogoPromotion: l }))) : f && ((h = D.intl.string(D.t.qYKftb)), (E = D.intl.string(D.t.ifwQZW)), (C = (0, i.jsx)(B, {})));
-        let N = null;
+        a || l ? ((C = D.intl.string(D.t.ifwQZW)), (E = (0, i.jsx)(M, { isEligibleForBogoPromotion: l }))) : f && ((h = D.intl.string(D.t.qYKftb)), (C = D.intl.string(D.t.ifwQZW)), (E = (0, i.jsx)(B, {})));
+        let I = null;
         if (O === P.a$.NONE || a)
-            N = (0, i.jsx)(I.Cy, {
+            I = (0, i.jsx)(N.Cy, {
                 className: s()(Z.trialPill, { [Z.hidden]: !g }),
                 text: h,
-                colorOptions: I.VE.PREMIUM_TIER_2_WHITE_FILL
+                colorOptions: N.VE.PREMIUM_TIER_2_WHITE_FILL
             });
         else {
             g = !0;
@@ -201,7 +201,7 @@ let L = (e) => {
                     })
                 }),
                 t = D.intl.format(D.t['yR+oDA'], { helpCenterLink: b.Z.getArticleURL(R.BhN.FRACTIONAL_PREMIUM_ABOUT) });
-            N = (0, i.jsx)(p.Z, {
+            I = (0, i.jsx)(p.Z, {
                 text: t,
                 'aria-label': t.toString(),
                 tooltipClassName: Z.tooltip,
@@ -240,10 +240,10 @@ let L = (e) => {
                                 className: Z.pillContainer,
                                 children: (0, i.jsx)('div', {
                                     className: Z.flexCentered,
-                                    children: (0, i.jsx)(I.mn, {
+                                    children: (0, i.jsx)(N.mn, {
                                         className: s()(Z.trialPill, { [Z.hidden]: !g }),
                                         text: T,
-                                        colorOptions: I.VE.PREMIUM_TIER_2_WHITE_FILL,
+                                        colorOptions: N.VE.PREMIUM_TIER_2_WHITE_FILL,
                                         icon: e,
                                         gap: !1
                                     })
@@ -270,10 +270,10 @@ let L = (e) => {
             value: r,
             children: (0, i.jsx)(U.Provider, {
                 value: {
-                    headingText: E,
-                    headingTop: N
+                    headingText: C,
+                    headingTop: I
                 },
-                children: C
+                children: E
             })
         });
     };

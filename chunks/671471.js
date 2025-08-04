@@ -54,12 +54,12 @@ e.exports = function (e) {
                 e.C_BLOCK_COMMENT_MODE
             ]
         },
-        _ = {
+        f = {
             className: 'title',
             begin: t.optional(i) + e.IDENT_RE,
             relevance: 0
         },
-        f = t.optional(i) + e.IDENT_RE + '\\s*\\(',
+        _ = t.optional(i) + e.IDENT_RE + '\\s*\\(',
         p = {
             type: ['bool', 'char', 'char16_t', 'char32_t', 'char8_t', 'double', 'float', 'int', 'long', 'short', 'void', 'wchar_t', 'unsigned', 'signed', 'const', 'static'],
             keyword: ['alignas', 'alignof', 'and', 'and_eq', 'asm', 'atomic_cancel', 'atomic_commit', 'atomic_noexcept', 'auto', 'bitand', 'bitor', 'break', 'case', 'catch', 'class', 'co_await', 'co_return', 'co_yield', 'compl', 'concept', 'const_cast|10', 'consteval', 'constexpr', 'constinit', 'continue', 'decltype', 'default', 'delete', 'do', 'dynamic_cast|10', 'else', 'enum', 'explicit', 'export', 'extern', 'false', 'final', 'for', 'friend', 'goto', 'if', 'import', 'inline', 'module', 'mutable', 'namespace', 'new', 'noexcept', 'not', 'not_eq', 'nullptr', 'operator', 'or', 'or_eq', 'override', 'private', 'protected', 'public', 'reflexpr', 'register', 'reinterpret_cast|10', 'requires', 'return', 'sizeof', 'static_assert', 'static_cast|10', 'struct', 'switch', 'synchronized', 'template', 'this', 'thread_local', 'throw', 'transaction_safe', 'transaction_safe_dynamic', 'true', 'try', 'typedef', 'typeid', 'typename', 'union', 'using', 'virtual', 'volatile', 'while', 'xor', 'xor_eq'],
@@ -105,7 +105,7 @@ e.exports = function (e) {
         },
         E = {
             className: 'function',
-            begin: '(' + o + '[\\*&\\s]+)+' + f,
+            begin: '(' + o + '[\\*&\\s]+)+' + _,
             returnBegin: !0,
             end: /[{;=]/,
             excludeEnd: !0,
@@ -118,9 +118,9 @@ e.exports = function (e) {
                     relevance: 0
                 },
                 {
-                    begin: f,
+                    begin: _,
                     returnBegin: !0,
-                    contains: [_],
+                    contains: [f],
                     relevance: 0
                 },
                 {

@@ -17,7 +17,7 @@ var i = n(255367),
     x = n(662583),
     _ = n(346537),
     j = n(830318);
-function C(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -42,7 +42,7 @@ function C(e) {
     }
     return e;
 }
-function E(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,8 +71,8 @@ let O = {
             { upsertConfig: n } = (0, h.n6)(),
             s = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
             [S, T] = r.useState(!0),
-            N = r.useRef(null),
-            [I, y] = r.useState(!1),
+            I = r.useRef(null),
+            [N, y] = r.useState(!1),
             [A, P] = r.useState(!1),
             [R, D] = r.useState([]),
             [Z, w] = r.useState(O),
@@ -101,7 +101,7 @@ let O = {
                 let n = V(t);
                 null != n &&
                     (0, f.i0)(n, (t) => {
-                        w((i) => E(C({}, i), { [e]: (0, f.z)(t, n) }));
+                        w((i) => C(E({}, i), { [e]: (0, f.z)(t, n) }));
                     });
             },
             F = (e, t) => {
@@ -112,7 +112,7 @@ let O = {
                             let r = [...i],
                                 s = i[t];
                             if (null == s) return i;
-                            let a = C({}, s);
+                            let a = E({}, s);
                             return (
                                 null == a.randomizedSources && (a.randomizedSources = []),
                                 a.randomizedSources.push({
@@ -126,7 +126,7 @@ let O = {
                     });
             },
             H = (e) => {
-                w((t) => E(C({}, t), { [e]: null }));
+                w((t) => C(E({}, t), { [e]: null }));
             };
         (r.useEffect(() => {
             let e = t.config.effects;
@@ -148,7 +148,7 @@ let O = {
                         let [t, n] = e;
                         if (null != n) {
                             let e = (0, f.$j)(n.base64);
-                            ((n.src = e), k.current.push(e), w((e) => E(C({}, e), { [t]: n })));
+                            ((n.src = e), k.current.push(e), w((e) => C(E({}, e), { [t]: n })));
                         }
                     });
             }, [t.config.stillFrames]));
@@ -192,7 +192,7 @@ let O = {
                               className: a()(x.col, x.preview),
                               children: [
                                   (0, i.jsx)('img', {
-                                      src: I ? _ : j,
+                                      src: N ? _ : j,
                                       alt: '',
                                       width: 450
                                   }),
@@ -231,10 +231,10 @@ let O = {
                                                   }),
                                                   (0, i.jsx)('input', {
                                                       type: 'checkbox',
-                                                      checked: I,
+                                                      checked: N,
                                                       className: x.checkBox,
                                                       onChange: () => {
-                                                          y(!I);
+                                                          y(!N);
                                                       }
                                                   })
                                               ]
@@ -266,7 +266,7 @@ let O = {
                                               children: [
                                                   'Upload Animated Layer',
                                                   (0, i.jsx)(m.Z, {
-                                                      ref: N,
+                                                      ref: I,
                                                       onChange: (e) => {
                                                           let t = V(e);
                                                           null != t &&
@@ -293,7 +293,7 @@ let O = {
                                               children: [
                                                   'Upload thumbnail.png',
                                                   (0, i.jsx)(m.Z, {
-                                                      ref: N,
+                                                      ref: I,
                                                       onChange: (e) => G(f.cq.THUMBNAIL, e),
                                                       multiple: !1
                                                   })
@@ -304,7 +304,7 @@ let O = {
                                               children: [
                                                   'Upload static.png',
                                                   (0, i.jsx)(m.Z, {
-                                                      ref: N,
+                                                      ref: I,
                                                       onChange: (e) => G(f.cq.STATIC, e),
                                                       multiple: !1
                                                   })
@@ -315,7 +315,7 @@ let O = {
                                               children: [
                                                   'Upload reduced_motion.png',
                                                   (0, i.jsx)(m.Z, {
-                                                      ref: N,
+                                                      ref: I,
                                                       onChange: (e) => G(f.cq.REDUCED_MOTION, e),
                                                       multiple: !1
                                                   })
@@ -364,9 +364,9 @@ let O = {
                                                   (0, i.jsx)(u.Z, {
                                                       fileContents: () =>
                                                           JSON.stringify(
-                                                              E(C({}, t), {
+                                                              C(E({}, t), {
                                                                   name: L,
-                                                                  config: E(C({}, t.config), {
+                                                                  config: C(E({}, t.config), {
                                                                       effects: R,
                                                                       stillFrames: Z
                                                                   })
@@ -636,7 +636,7 @@ let O = {
                                                                       children: 'Add Alternative'
                                                                   }),
                                                                   (0, i.jsx)(m.Z, {
-                                                                      ref: N,
+                                                                      ref: I,
                                                                       onChange: (e) => F(e, t),
                                                                       multiple: !1
                                                                   })

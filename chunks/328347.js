@@ -23,10 +23,10 @@ let l = [],
         var t, n;
         ((c = null != (t = e.analyticsLocations) ? t : l), (u = null != (n = e.analyticsSource) ? n : null), (r = e.initialProductSkuId));
     },
-    _ = (e) => {
+    f = (e) => {
         ((c = l), (u = null));
     },
-    f = (e) => {
+    _ = (e) => {
         e.item.skuId === r && (r = void 0);
     };
 class p extends (i = a.ZP.Store) {
@@ -49,7 +49,7 @@ class p extends (i = a.ZP.Store) {
 s(p, 'displayName', 'CollectiblesShopStore');
 let h = new p(o.Z, {
     COLLECTIBLES_SHOP_OPEN: d,
-    COLLECTIBLES_SHOP_CLOSE: _,
-    COLLECTIBLES_PRODUCT_DETAILS_OPEN: f,
-    LOGOUT: _
+    COLLECTIBLES_SHOP_CLOSE: f,
+    COLLECTIBLES_PRODUCT_DETAILS_OPEN: _,
+    LOGOUT: f
 });

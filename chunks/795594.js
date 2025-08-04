@@ -1,5 +1,5 @@
 (n.d(t, {
-    J: () => ef,
+    J: () => e_,
     Z: () => ep
 }),
     n(997841),
@@ -17,8 +17,8 @@ var r = n(255367),
     c = n(512722),
     u = n.n(c),
     d = n(97519),
-    _ = n(243814),
-    f = n(442837),
+    f = n(243814),
+    _ = n(442837),
     p = n(921072),
     h = n(524437),
     m = n(1561),
@@ -40,8 +40,8 @@ var r = n(255367),
     D = n(600164),
     L = n(240991),
     x = n(713938),
-    M = n(973616),
-    k = n(881998),
+    k = n(973616),
+    M = n(881998),
     j = n(592125),
     U = n(944486),
     G = n(246946),
@@ -93,7 +93,7 @@ function eo(e) {
     }
     return e;
 }
-let es = f.ZP.connectStores([K.Z], () => ({ theme: K.Z.theme }))(E.ubH);
+let es = _.ZP.connectStores([K.Z], () => ({ theme: K.Z.theme }))(E.ubH);
 function el(e) {
     let { className: t, text: n } = e;
     return (0, r.jsxs)('div', {
@@ -239,12 +239,12 @@ let ec = (e) => {
               })
             : null;
     },
-    e_ = (e) => {
+    ef = (e) => {
         let { scopes: t, application: a, selectedChannelId: s, selectedGuildId: l, onDelete: c, disclosures: d, locale: p, id: g } = e,
             b = a.id,
-            I = i.useMemo(() => M.ZP.createFromServer(a), [a]),
+            I = i.useMemo(() => k.ZP.createFromServer(a), [a]),
             T = (0, F.yE)(I.flags, $.udG.EMBEDDED),
-            S = (0, f.e7)(
+            S = (0, _.e7)(
                 [q.Z],
                 () => {
                     var e, t, n, r;
@@ -254,23 +254,23 @@ let ec = (e) => {
             ),
             A = C.w.useExperiment({ location: 'oauth2_authorize' }),
             P = a.bot,
-            k = (0, f.e7)([j.Z], () => j.Z.getDMFromUserId(null == P ? void 0 : P.id)),
-            { appDMChannelMuteConfig: U, dmChannelMuted: G } = (0, f.cj)([B.ZP], () =>
-                null == k
+            M = (0, _.e7)([j.Z], () => j.Z.getDMFromUserId(null == P ? void 0 : P.id)),
+            { appDMChannelMuteConfig: U, dmChannelMuted: G } = (0, _.cj)([B.ZP], () =>
+                null == M
                     ? {
                           appDMChannelMuteConfig: null,
                           dmChannelMuted: !1
                       }
                     : {
-                          appDMChannelMuteConfig: B.ZP.getChannelMuteConfig(null, k),
-                          dmChannelMuted: B.ZP.isChannelMuted(null, k)
+                          appDMChannelMuteConfig: B.ZP.getChannelMuteConfig(null, M),
+                          dmChannelMuted: B.ZP.isChannelMuted(null, M)
                       }
             ),
             [Z, W] = i.useState(!1),
             [K, Q] = i.useState(!1),
             ea = () => {
                 let e = [];
-                for (let n of t) (e.push(...(0, x.CI)(n, t)), n === _.x.APPLICATIONS_COMMANDS && e.push(et.intl.string(et.t.Ls2XRk)));
+                for (let n of t) (e.push(...(0, x.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(et.intl.string(et.t.Ls2XRk)));
                 if (e.length > 0 || (null != d && d.length > 0))
                     return (0, r.jsx)(E.zF9, {
                         className: en.appDetailsSection,
@@ -352,7 +352,7 @@ let ec = (e) => {
                         children: (0, L.parseBioReact)(a.description)
                     });
             }, [a.description]),
-            e_ = () => {
+            ef = () => {
                 let e = null != a.description && '' !== a.description,
                     t = null != a.terms_of_service_url || null != a.privacy_policy_url;
                 return e || t
@@ -398,7 +398,7 @@ let ec = (e) => {
                       })
                     : null;
             },
-            ef = () => {
+            e_ = () => {
                 let e = V.ZP.getApplicationIconURL({
                         id: a.id,
                         icon: a.icon
@@ -458,7 +458,7 @@ let ec = (e) => {
             },
             eh = i.useCallback(async () => {
                 u()(null != P, 'dm channel mute setting requires having a bot user');
-                let e = k;
+                let e = M;
                 (null == e && (e = await y.Z.ensurePrivateChannel(P.id)),
                     G
                         ? O.Z.updateAppDMOverrideSettings(null, e, a.id, { muted: !1 }, H.ZB.Unmuted)
@@ -476,7 +476,7 @@ let ec = (e) => {
                                       )
                                   );
                           }));
-            }, [k, P, G, a.id]),
+            }, [M, P, G, a.id]),
             em = () =>
                 A.enabled
                     ? (0, r.jsxs)('div', {
@@ -562,31 +562,31 @@ let ec = (e) => {
         return (0, r.jsx)('div', {
             className: en.authedAppV2,
             children: (0, r.jsx)(E.y5t, {
-                component: ef(),
+                component: e_(),
                 children: (0, r.jsxs)('div', {
                     className: en.appDetailsContainer,
-                    children: [e_(), ea(), em(), eb()]
+                    children: [ef(), ea(), em(), eb()]
                 })
             })
         });
     },
-    ef = (0, d.U)(() => ({ searchQuery: '' })),
+    e_ = (0, d.U)(() => ({ searchQuery: '' })),
     ep = () => {
-        let e = (0, f.e7)([G.Z], () => G.Z.hidePersonalInformation),
-            { fetchState: t, appAuthTokens: n } = (0, f.cj)([k.Z], () => ({
-                fetchState: k.Z.getFetchState(),
-                appAuthTokens: k.Z.getNewestTokensForNonChildrenApplications()
+        let e = (0, _.e7)([G.Z], () => G.Z.hidePersonalInformation),
+            { fetchState: t, appAuthTokens: n } = (0, _.cj)([M.Z], () => ({
+                fetchState: M.Z.getFetchState(),
+                appAuthTokens: M.Z.getNewestTokensForNonChildrenApplications()
             })),
-            a = (0, f.e7)([W.default], () => W.default.locale),
-            o = (0, f.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivities()),
-            s = (0, f.e7)([j.Z, U.Z], () => j.Z.getChannel(U.Z.getChannelId())),
+            a = (0, _.e7)([W.default], () => W.default.locale),
+            o = (0, _.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivities()),
+            s = (0, _.e7)([j.Z, U.Z], () => j.Z.getChannel(U.Z.getChannelId())),
             c = null == s ? void 0 : s.getGuildId();
         (i.useEffect(() => {
             b.Z.fetch();
         }, []),
             i.useEffect(
                 () => () => {
-                    ef.setState({ searchQuery: '' });
+                    e_.setState({ searchQuery: '' });
                 },
                 []
             ));
@@ -601,13 +601,13 @@ let ec = (e) => {
                         showFeedback: !1
                     });
             },
-            d = ef((e) => e.searchQuery),
-            _ = (e) => ef.setState({ searchQuery: e }),
+            d = e_((e) => e.searchQuery),
+            f = (e) => e_.setState({ searchQuery: e }),
             p = (e) => {
-                _(e);
+                f(e);
             },
             h = () => {
-                _('');
+                f('');
             },
             m = () =>
                 (0, r.jsx)('div', {
@@ -633,7 +633,7 @@ let ec = (e) => {
                 return '' === e || null == n ? n : n.length < 100 ? n.filter((t) => l()(e, t.application.name.toLowerCase())) : n.filter((t) => t.application.name.toLowerCase().includes(e));
             }, [n, d]),
             O = () =>
-                null == n || null == y || t !== k.M.FETCHED
+                null == n || null == y || t !== M.M.FETCHED
                     ? (0, r.jsx)(E.$jN, {
                           className: ei.marginTop20,
                           type: E.$jN.Type.SPINNING_CIRCLE
@@ -651,7 +651,7 @@ let ec = (e) => {
                                       .sort((e, t) => Number(t.id) - Number(e.id))
                                       .map((e) =>
                                           (0, r.jsx)(
-                                              e_,
+                                              ef,
                                               eo(
                                                   {
                                                       locale: a,

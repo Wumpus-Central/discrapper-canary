@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(981631),
     u = n(65154),
     d = n(388032);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -80,9 +80,9 @@ function m(e) {
     }[e];
 }
 function g(e) {
-    let { deviceType: t, analyticsLocations: n, asSubmenu: o = !1, onDeviceSelect: u, showAllDevices: _ = !1, selectedDeviceId: p, menuGroupOverrideProps: g, menuItemOverrideProps: E, computeMenuRadioItemOverrideProps: b } = e,
+    let { deviceType: t, analyticsLocations: n, asSubmenu: o = !1, onDeviceSelect: u, showAllDevices: f = !1, selectedDeviceId: p, menuGroupOverrideProps: g, menuItemOverrideProps: E, computeMenuRadioItemOverrideProps: b } = e,
         { setDevice: y, getLabel: O, getLocation: v } = m(t),
-        [I, T] = i.useState(_),
+        [I, T] = i.useState(f),
         S = v(n[n.length - 1]),
         [A, N] = (0, l.L)(t, { location: S }),
         C = I ? A.concat(N) : A,
@@ -92,7 +92,7 @@ function g(e) {
             let { id: i, disabled: o, name: s } = e;
             return (0, r.jsx)(
                 a.k5B,
-                f(
+                _(
                     {
                         id: ''.concat(t, '-').concat(i),
                         group: ''.concat(t, '-devices'),
@@ -129,7 +129,7 @@ function g(e) {
         ? (0, r.jsxs)(
               a.sNh,
               h(
-                  f(
+                  _(
                       {
                           id: ''.concat(t, '-devices'),
                           label: O(),
@@ -144,7 +144,7 @@ function g(e) {
           )
         : (0, r.jsxs)(
               a.kSQ,
-              h(f({ label: O() }, g), {
+              h(_({ label: O() }, g), {
                   children: [D, x && L]
               })
           );

@@ -13,8 +13,8 @@ var a = n(442837),
     c = n(592125),
     u = n(271383),
     d = n(944486),
-    _ = n(594174),
-    f = n(388032),
+    f = n(594174),
+    _ = n(388032),
     p = n(951535);
 function h(e, t, n) {
     return (
@@ -44,10 +44,10 @@ class g extends (r = a.ZP.PersistedStore) {
 (h(g, 'displayName', 'PTOStore'), h(g, 'persistKey', 'PTOStore'));
 let E = new g(s.Z, {}),
     b = (e) =>
-        (0, a.e7)([u.ZP, _.default, E], () => {
-            let t = _.default.getCurrentUser();
+        (0, a.e7)([u.ZP, f.default, E], () => {
+            let t = f.default.getCurrentUser();
             if (null == t || !t.isStaff() || !e.isDM()) return !1;
-            let n = _.default.getUser(e.getRecipientId());
+            let n = f.default.getUser(e.getRecipientId());
             if (!(null == n ? void 0 : n.isStaff())) return !1;
             let r = u.ZP.getNicknames(n.id).some((e) => e.endsWith('[PTO]') || e.endsWith('[OOO]'));
             return r ? !E.hasId(n.id) && r : (m.delete(n.id) && E.emitChange(), !1);
@@ -64,7 +64,7 @@ let E = new g(s.Z, {}),
             children: [
                 (0, i.jsx)(o.Text, {
                     variant: 'text-sm/medium',
-                    children: f.intl.string(f.t['2UvR1N'])
+                    children: _.intl.string(_.t['2UvR1N'])
                 }),
                 (0, i.jsx)(l.B, { onClick: y })
             ]

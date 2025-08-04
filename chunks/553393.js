@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(755721),
     u = n(481060),
     d = n(287734),
-    _ = n(872810),
-    f = n(393238),
+    f = n(872810),
+    _ = n(393238),
     p = n(40851),
     h = n(607070),
     m = n(258609),
@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(981631),
     L = n(231338),
     x = n(388032),
-    M = n(777444);
-function k(e, t, n) {
+    k = n(777444);
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -56,7 +56,7 @@ function j(e) {
                 })
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                M(e, t, n[t]);
             }));
     }
     return e;
@@ -69,10 +69,10 @@ function V(e, t) {
 }
 function F(e) {
     var t, m, g, y, O;
-    let { quest: v, memberListItemRef: N, applicationStream: k, position: F, closePopout: Z, updatePosition: H, impressionRef: Y, name: W } = e,
+    let { quest: v, memberListItemRef: N, applicationStream: M, position: F, closePopout: Z, updatePosition: H, impressionRef: Y, name: W } = e,
         K = (0, s.e7)([b.Z], () => {
             var e;
-            return null != (e = b.Z.getChannel(null == k ? void 0 : k.channelId)) ? e : null;
+            return null != (e = b.Z.getChannel(null == M ? void 0 : M.channelId)) ? e : null;
         }),
         z = (0, P.hf)({
             quest: v,
@@ -86,7 +86,7 @@ function F(e) {
         $ = (0, s.e7)([E.Z], () => E.Z.getState().theme),
         ee = (0, l.wj)($) ? L.BR.DARK : L.BR.LIGHT,
         et = (0, s.e7)([h.Z], () => h.Z.useReducedMotion),
-        { ref: en, height: er } = (0, f.ZP)(),
+        { ref: en, height: er } = (0, _.ZP)(),
         [ei, ea] = i.useState(et),
         eo = (0, p.Aq)(),
         es = (0, o.eg)();
@@ -137,8 +137,8 @@ function F(e) {
             eo.dispatch(D.CkL.POPOUT_CLOSE);
         },
         ed = 'top' === F ? ''.concat(U, ' ').concat(U, ' 0 0') : '0 0 '.concat(U, ' ').concat(U);
-    if (null == v || q || (X && !V(k, K))) return null;
-    let e_ = () => {
+    if (null == v || q || (X && !V(M, K))) return null;
+    let ef = () => {
             ((0, I._3)({
                 questId: v.id,
                 questContent: S.jn.MEMBERS_LIST,
@@ -152,7 +152,7 @@ function F(e) {
                     sourceQuestContent: S.jn.MEMBERS_LIST
                 }));
         },
-        ef = () => {
+        e_ = () => {
             ((0, I._3)({
                 questId: v.id,
                 questContent: S.jn.MEMBERS_LIST,
@@ -166,10 +166,10 @@ function F(e) {
                 }));
         },
         ep = (e) => {
-            (e.stopPropagation(), e_());
+            (e.stopPropagation(), ef());
         },
         eh = () => {
-            V(k, K) && null != K
+            V(M, K) && null != K
                 ? ((0, I._3)({
                       questId: v.id,
                       questContent: S.jn.MEMBERS_LIST,
@@ -194,14 +194,14 @@ function F(e) {
                                               sourceQuestContent: S.jn.MEMBERS_LIST
                                           }),
                                           d.default.selectVoiceChannel(K.id),
-                                          (0, _.iV)(k)
+                                          (0, f.iV)(M)
                                       )
                                   },
                                   t
                               )
                           );
                   }))
-                : ef();
+                : e_();
         },
         em =
             J && !X
@@ -215,10 +215,10 @@ function F(e) {
                   ? {
                         headerText: x.intl.string(x.t.uH2sf3),
                         ctaText: x.intl.string(x.t.VN1Ajo),
-                        handleClickCta: ef,
+                        handleClickCta: e_,
                         tileAssetType: 'reward'
                     }
-                  : V(k, K)
+                  : V(M, K)
                     ? {
                           headerText: x.intl.string(x.t.Bz6SkJ),
                           ctaText: x.intl.string(x.t.BXFP39),
@@ -228,7 +228,7 @@ function F(e) {
                     : {
                           headerText: x.intl.string(x.t.Bz6SkJ),
                           ctaText: x.intl.string(x.t.BSXPZ2),
-                          handleClickCta: ef,
+                          handleClickCta: e_,
                           tileAssetType: 'game'
                       };
     return (0, r.jsx)(a.animated.div, {
@@ -236,7 +236,7 @@ function F(e) {
             Y.current = e;
         },
         'aria-expanded': ei,
-        className: M.wrapper,
+        className: k.wrapper,
         style: {
             width: null != (O = null == (y = N.current) ? void 0 : y.clientWidth) ? O : B,
             height: el.height,
@@ -247,21 +247,21 @@ function F(e) {
             ref: (e) => {
                 en.current = e;
             },
-            className: M.container,
+            className: k.container,
             style: { borderRadius: ed },
             children: [
                 (0, r.jsxs)('div', {
-                    className: M.top,
+                    className: k.top,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: M.left,
+                            className: k.left,
                             children: [
                                 (0, r.jsx)(u.X6q, {
                                     variant: 'heading-sm/semibold',
                                     children: em.headerText
                                 }),
                                 (0, r.jsxs)(u.P3F, {
-                                    className: M.help,
+                                    className: k.help,
                                     onClick: (e) => {
                                         (eu(), ep(e));
                                     },
@@ -269,12 +269,12 @@ function F(e) {
                                         (0, r.jsx)(u.Text, {
                                             variant: 'text-xs/medium',
                                             color: 'text-muted',
-                                            className: M.helpText,
+                                            className: k.helpText,
                                             children: x.intl.format(x.t['Lm8/mJ'], { gamePublisher: v.config.messages.gamePublisher })
                                         }),
                                         (0, r.jsx)(u.idN, {
                                             size: 'custom',
-                                            className: M.helpIcon,
+                                            className: k.helpIcon,
                                             width: G,
                                             height: G,
                                             color: u.TVs.colors.INTERACTIVE_NORMAL
@@ -284,16 +284,16 @@ function F(e) {
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: M.right,
+                            className: k.right,
                             children: (0, r.jsxs)('div', {
-                                className: M.imgWrapper,
+                                className: k.imgWrapper,
                                 children: [
                                     ec(
                                         (e, t) =>
                                             t &&
                                             (0, r.jsx)(a.animated.div, {
                                                 style: e,
-                                                className: M.imgUnderlay
+                                                className: k.imgUnderlay
                                             })
                                     ),
                                     'game' === em.tileAssetType &&
@@ -302,12 +302,12 @@ function F(e) {
                                                 gameTitle: v.config.messages.gameTitle,
                                                 gamePublisher: v.config.messages.gamePublisher
                                             }),
-                                            className: M.assetTile,
+                                            className: k.assetTile,
                                             src: (0, A.fh)(v, A.eC.GAME_TILE, ee).url
                                         }),
                                     'reward' === em.tileAssetType &&
                                         (0, r.jsx)(C.Z, {
-                                            className: M.assetTile,
+                                            className: k.assetTile,
                                             quest: v,
                                             questContent: S.jn.MEMBERS_LIST,
                                             learnMoreStyle: 'icon',
@@ -325,7 +325,7 @@ function F(e) {
                         (eu(), em.handleClickCta());
                     },
                     color: c.zx.Colors.CUSTOM,
-                    className: M.ctaButton,
+                    className: k.ctaButton,
                     children: em.ctaText
                 })
             ]

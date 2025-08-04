@@ -15,12 +15,12 @@ function a(e, t, n, a, o, s) {
     if ((0, i.cS)(c)) return l;
     l.nwdaymask = (0, i.rx)(0, n);
     for (var u = 0; u < c.length; u++)
-        for (var d = c[u], _ = d[0], f = d[1] - 1, p = 0; p < s.bynweekday.length; p++) {
+        for (var d = c[u], f = d[0], _ = d[1] - 1, p = 0; p < s.bynweekday.length; p++) {
             var h = void 0,
                 m = s.bynweekday[p],
                 g = m[0],
                 E = m[1];
-            (E < 0 ? ((h = f + (E + 1) * 7), (h -= (0, i.Vy)(o[h] - g, 7))) : ((h = _ + (E - 1) * 7), (h += (0, i.Vy)(7 - o[h] + g, 7))), _ <= h && h <= f && (l.nwdaymask[h] = 1));
+            (E < 0 ? ((h = _ + (E + 1) * 7), (h -= (0, i.Vy)(o[h] - g, 7))) : ((h = f + (E - 1) * 7), (h += (0, i.Vy)(7 - o[h] + g, 7))), f <= h && h <= _ && (l.nwdaymask[h] = 1));
         }
     return l;
 }

@@ -16,10 +16,10 @@ var r = n(73800),
     c = n(158776),
     u = n(709054),
     d = n(107866),
-    _ = n(206583);
-let f = (e, t) => {
-    let n = e.filter((e) => null != e.activity.application_id && _.yh.includes(e.activity.application_id)),
-        r = t.filter((e) => null != e.activity.application_id && _.yh.includes(e.activity.application_id));
+    f = n(206583);
+let _ = (e, t) => {
+    let n = e.filter((e) => null != e.activity.application_id && f.yh.includes(e.activity.application_id)),
+        r = t.filter((e) => null != e.activity.application_id && f.yh.includes(e.activity.application_id));
     if (n.length !== r.length) return !1;
     let i = new Set(n.map((e) => ''.concat(e.userId, '-').concat(e.activity.session_id, '-').concat(e.activity.application_id))),
         a = new Set(r.map((e) => ''.concat(e.userId, '-').concat(e.activity.session_id, '-').concat(e.activity.application_id)));
@@ -28,20 +28,20 @@ let f = (e, t) => {
     return !0;
 };
 function p(e) {
-    let t = (0, s.e7)([c.Z], () => (null != e && _.Hw.includes(e) ? _.yh.flatMap((e) => c.Z.getAllApplicationActivities(e)) : []), [e], f);
+    let t = (0, s.e7)([c.Z], () => (null != e && f.Hw.includes(e) ? f.yh.flatMap((e) => c.Z.getAllApplicationActivities(e)) : []), [e], _);
     return r.useMemo(() => (null == e || 0 === t.length ? [] : h(e, t)), [e, t]);
 }
 function h(e, t) {
-    if (!_.Hw.includes(e)) return [];
+    if (!f.Hw.includes(e)) return [];
     let n = [];
     return (
         t.forEach((t) => {
             var r, s, c;
             let d = t.userId;
             if (null == d || !l.ZP.isMember(e, d) || null == t.activity.application_id || '' === t.activity.name) return;
-            let _ = null != (c = null != (s = null == (r = t.activity.timestamps) ? void 0 : r.start) ? s : t.activity.created_at) ? c : Date.now(),
-                f = {
-                    id: u.default.fromTimestamp(_),
+            let f = null != (c = null != (s = null == (r = t.activity.timestamps) ? void 0 : r.start) ? s : t.activity.created_at) ? c : Date.now(),
+                _ = {
+                    id: u.default.fromTimestamp(f),
                     author_id: d,
                     author_type: i.i.USER,
                     content_type: a.s.PLAYED_GAME,
@@ -54,7 +54,7 @@ function h(e, t) {
                         },
                         {
                             type: o.N.DURATION_SECONDS,
-                            duration_seconds: Math.floor((Date.now() - _) / 1000)
+                            duration_seconds: Math.floor((Date.now() - f) / 1000)
                         }
                     ],
                     extra: {
@@ -64,7 +64,7 @@ function h(e, t) {
                         is_gamescom_demo_content: !0
                     }
                 };
-            n.push(f);
+            n.push(_);
         }),
         n
     );

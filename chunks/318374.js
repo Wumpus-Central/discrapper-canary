@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(239091),
     d = n(751688),
-    _ = n(5192),
-    f = n(51144),
+    f = n(5192),
+    _ = n(51144),
     p = n(388032),
     h = n(223390);
 function m(e, t, n) {
@@ -88,13 +88,13 @@ function O() {
     }
 }
 function v(e) {
-    let { users: t, maxUsers: a, guildId: s, channelId: m, className: E, size: v = c.EFr.SIZE_24, overflowCountVariant: I, overflowCountColor: T = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: A = !1, disableUsernameTooltip: N = !1, disableUserPopout: C = !1, onClickOverflow: R, onFocusOverflow: P, onUserClick: w, onUserPopoutRequestClose: D, 'aria-label': L, 'aria-labelledby': x, 'aria-hidden': M } = e,
-        [k, j] = i.useState(!1),
+    let { users: t, maxUsers: a, guildId: s, channelId: m, className: E, size: v = c.EFr.SIZE_24, overflowCountVariant: I, overflowCountColor: T = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: A = !1, disableUsernameTooltip: N = !1, disableUserPopout: C = !1, onClickOverflow: R, onFocusOverflow: P, onUserClick: w, onUserPopoutRequestClose: D, 'aria-label': L, 'aria-labelledby': x, 'aria-hidden': k } = e,
+        [M, j] = i.useState(!1),
         U = y(v),
         G = i.useRef(null),
         B = t.length - a,
         V = B + 1,
-        F = B > 0 && !A && !M,
+        F = B > 0 && !A && !k,
         Z = () =>
             (0, r.jsx)(c.VqE, {
                 className: h.popoutWrapper,
@@ -109,7 +109,7 @@ function v(e) {
                                 user: e,
                                 guildId: s,
                                 channelId: m,
-                                nick: _.ZP.getNickname(s, m, e),
+                                nick: f.ZP.getNickname(s, m, e),
                                 disablePopout: 'function' == typeof C ? C(e.id) : C,
                                 onClick: w,
                                 onPopoutRequestClose: () => {
@@ -144,8 +144,8 @@ function v(e) {
                 i = l()(t)
                     .take(e)
                     .map((e, t) => {
-                        let i = _.ZP.getNickname(s, m, e),
-                            a = null != i ? i : f.ZP.getName(e),
+                        let i = f.ZP.getNickname(s, m, e),
+                            a = null != i ? i : _.ZP.getName(e),
                             l = t === n && !F,
                             u = o()(h.avatar, U, l && h.isLast),
                             d = (0, r.jsx)(c.qEK, {
@@ -194,7 +194,7 @@ function v(e) {
                 {
                     targetElementRef: G,
                     renderPopout: Z,
-                    shouldShow: k,
+                    shouldShow: M,
                     position: 'bottom',
                     onRequestClose: () => j(!1),
                     children: (t) =>
@@ -226,7 +226,7 @@ function v(e) {
               'aria-label': L,
               'aria-labelledby': x,
               className: o()(E, h.avatars),
-              'aria-hidden': M,
+              'aria-hidden': k,
               children: [H(), Y()]
           });
 }

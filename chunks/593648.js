@@ -17,14 +17,14 @@ var i = n(255367),
     x = n(688465),
     _ = n(890022),
     j = n(688907),
-    C = n(487419),
-    E = n(197344),
+    E = n(487419),
+    C = n(197344),
     O = n(476756),
     v = n(734934),
     S = n(223683),
     T = n(312400),
-    N = n(115345),
-    I = n(392888),
+    I = n(115345),
+    N = n(392888),
     y = n(106371),
     A = n(995774),
     P = n(921801),
@@ -239,7 +239,7 @@ function $(e) {
                 sound: 'reconnect'
             }
         ],
-        g = null != E.Z.useHolidaySoundpack();
+        g = null != C.Z.useHolidaySoundpack();
     return (0, i.jsx)(P.F, {
         setting: F.s6.NOTIFICATIONS_SOUNDS,
         children: (0, i.jsxs)(u.hjN, {
@@ -291,7 +291,7 @@ function $(e) {
     });
 }
 function ee() {
-    let e = (0, c.e7)([C.Z], () => C.Z.getGuildAlertSettings()),
+    let e = (0, c.e7)([E.Z], () => E.Z.getGuildAlertSettings()),
         [t, n] = r.useState(null),
         s = M.default.keys(e).map((t) => {
             let n = e[t];
@@ -618,7 +618,7 @@ function er() {
                                               variant: 'primary',
                                               text: 'Launch Migration',
                                               onClick: () => {
-                                                  (0, I.R)(!0);
+                                                  (0, N.R)(!0);
                                               }
                                           })
                                       }),
@@ -647,13 +647,13 @@ async function es(e) {
     e(!0);
     let t = await (0, S.Tn)();
     (0 === t.length
-        ? await (0, N.oL)()
+        ? await (0, I.oL)()
         : m.Z.show({
               title: z.intl.string(z.t['cY+Ooa']),
               body: z.intl.format(z.t['7zTJJS'], { date: new Date(t[t.length - 1].recorded_at) }),
               cancelText: z.intl.string(z.t['ETE/oK']),
               confirmText: z.intl.string(z.t.Rm96T0),
-              onConfirm: N.oL
+              onConfirm: I.oL
           }),
         e(!1));
 }

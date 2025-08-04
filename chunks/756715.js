@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(84735),
     u = n(335854),
     d = n(645499),
-    _ = n(486044);
-function f(e, t, n) {
+    f = n(486044);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -82,12 +82,12 @@ function E(e, t) {
     return i;
 }
 function b(e) {
-    var { href: t, onClick: n, className: a, children: f, rel: h, target: E, useDefaultUnderlineStyles: b = !0, title: y, style: O, focusProps: v, ref: I } = e,
+    var { href: t, onClick: n, className: a, children: _, rel: h, target: E, useDefaultUnderlineStyles: b = !0, title: y, style: O, focusProps: v, ref: I } = e,
         T = g(e, ['href', 'onClick', 'className', 'children', 'rel', 'target', 'useDefaultUnderlineStyles', 'title', 'style', 'focusProps', 'ref']);
     null != t && null == n && (n = u.X.getDefaultLinkInterceptor(t));
     let S = i.useContext(s.g),
         A = {
-            className: o()(_.anchor, { [_.anchorUnderlineOnHover]: b }, a),
+            className: o()(f.anchor, { [f.anchorUnderlineOnHover]: b }, a),
             href: t,
             onClick: n,
             rel: null != h ? h : void 0,
@@ -102,7 +102,7 @@ function b(e) {
                   onClick: n,
                   focusProps: v,
                   innerRef: I,
-                  children: f
+                  children: _
               })
           )
         : (0, r.jsx)(
@@ -112,7 +112,7 @@ function b(e) {
                       'a',
                       m(p({}, T, A), {
                           ref: I,
-                          children: f
+                          children: _
                       })
                   )
               })

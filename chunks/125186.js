@@ -1,6 +1,6 @@
 (n.d(t, {
     LF: () => d,
-    ub: () => _
+    ub: () => f
 }),
     n(410992),
     n(227481),
@@ -137,28 +137,28 @@ async function u(e) {
             u = l.getContext('2d');
         if (null == u) throw Error('could not get canvas context');
         let d = new Image(),
-            _ = URL.createObjectURL(e);
+            f = URL.createObjectURL(e);
         try {
             (await new Promise((e, t) => {
-                ((d.onload = () => e()), (d.onerror = () => t(Error('failed to load image'))), (d.src = _));
+                ((d.onload = () => e()), (d.onerror = () => t(Error('failed to load image'))), (d.src = f));
             }),
                 (l.width = d.width),
                 (l.height = d.height),
                 u.drawImage(d, 0, 0));
         } finally {
-            URL.revokeObjectURL(_);
+            URL.revokeObjectURL(f);
         }
-        let f = await new Promise((e) => {
+        let _ = await new Promise((e) => {
             l.toBlob(e, 'image/webp', 1);
         });
-        if (null == f) throw Error('failed to convert to webp');
-        let p = e.size > 0 ? f.size / e.size : 1,
+        if (null == _) throw Error('failed to convert to webp');
+        let p = e.size > 0 ? _.size / e.size : 1,
             h = 1 - p,
             m = null != (o = t.minSizeReductionPercent) ? o : a;
-        if (h < m) return (r.verbose('[WebP] Insufficient savings: '.concat(Math.round(100 * h), '% < ').concat(100 * m, '%')), i('insufficient_savings', f.size));
+        if (h < m) return (r.verbose('[WebP] Insufficient savings: '.concat(Math.round(100 * h), '% < ').concat(100 * m, '%')), i('insufficient_savings', _.size));
         let g = e.name.lastIndexOf('.'),
             E = -1 === g ? e.name : e.name.substring(0, g),
-            b = new File([f], ''.concat(E, '.webp'), {
+            b = new File([_], ''.concat(E, '.webp'), {
                 type: 'image/webp',
                 lastModified: e.lastModified
             }),
@@ -170,7 +170,7 @@ async function u(e) {
                 originalFile: e,
                 convertedFile: b,
                 sizeBefore: e.size,
-                sizeAfter: f.size,
+                sizeAfter: _.size,
                 compressionRatio: p
             }
         );
@@ -185,6 +185,6 @@ async function d(e) {
         i = n.filter((e) => e.success).length;
     return (r.verbose('[WebP] Batch conversion complete: '.concat(i, '/').concat(e.length, ' successful')), n);
 }
-function _(e) {
+function f(e) {
     return e.success && null != e.convertedFile ? e.convertedFile : e.originalFile;
 }

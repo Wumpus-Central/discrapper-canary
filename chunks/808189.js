@@ -12,21 +12,21 @@ var i = n(120356),
     c = n(31698),
     u = n(528771),
     d = n(267642),
-    _ = n(981631),
-    f = n(474936),
+    f = n(981631),
+    _ = n(474936),
     p = n(388032),
     h = n(539964);
 let m = [
         {
-            tier: _.Eu4.TIER_1,
+            tier: f.Eu4.TIER_1,
             perks: [
                 {
                     icon: s.EO4,
-                    getCopy: () => p.intl.formatToPlainString(p.t.Tlz0x8, { numEmojiSlots: f.HO[_.Eu4.TIER_1].limits.emoji })
+                    getCopy: () => p.intl.formatToPlainString(p.t.Tlz0x8, { numEmojiSlots: _.HO[f.Eu4.TIER_1].limits.emoji })
                 },
                 {
                     icon: s.KY1,
-                    getCopy: () => p.intl.formatToPlainString(p.t['v+MIfn'], { numSoundboardSlots: f.HO[_.Eu4.TIER_1].limits.soundboardSounds }),
+                    getCopy: () => p.intl.formatToPlainString(p.t['v+MIfn'], { numSoundboardSlots: _.HO[f.Eu4.TIER_1].limits.soundboardSounds }),
                     isNew: !0
                 },
                 {
@@ -40,7 +40,7 @@ let m = [
             ]
         },
         {
-            tier: _.Eu4.TIER_2,
+            tier: f.Eu4.TIER_2,
             perks: [
                 {
                     icon: s.hGI,
@@ -61,7 +61,7 @@ let m = [
             ]
         },
         {
-            tier: _.Eu4.TIER_3,
+            tier: f.Eu4.TIER_3,
             perks: [
                 {
                     icon: s.xPt,
@@ -81,7 +81,7 @@ let m = [
                 },
                 {
                     icon: s.ewx,
-                    getCopy: () => p.intl.formatToPlainString(p.t.hsZ88f, { numStageSeats: _.RcX })
+                    getCopy: () => p.intl.formatToPlainString(p.t.hsZ88f, { numStageSeats: f.RcX })
                 }
             ]
         }
@@ -96,7 +96,7 @@ let m = [
                     {
                         className: h.tierCard,
                         children: [
-                            e.tier === _.Eu4.TIER_3 &&
+                            e.tier === f.Eu4.TIER_3 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)('div', { className: a()(h.tierCardBorderHighlight, h.tierCardBorderHighlightTopRight) }),
@@ -132,7 +132,7 @@ let m = [
                                         className: h.tierCardBoostRequirement,
                                         variant: 'text-md/normal',
                                         color: 'always-white',
-                                        children: p.intl.format(p.t.vbAsAw, { numBoostsRequired: _.oCV[e.tier] })
+                                        children: p.intl.format(p.t.vbAsAw, { numBoostsRequired: f.oCV[e.tier] })
                                     })
                                 ]
                             }),

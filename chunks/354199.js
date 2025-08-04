@@ -7,8 +7,8 @@ var r = n(754675),
     c = '[object Date]',
     u = '[object Map]',
     d = '[object Number]',
-    _ = '[object RegExp]',
-    f = '[object Set]',
+    f = '[object RegExp]',
+    _ = '[object Set]',
     p = '[object String]',
     h = '[object Symbol]',
     m = '[object ArrayBuffer]',
@@ -47,9 +47,9 @@ e.exports = function (e, t, n) {
         case d:
         case p:
             return new N(e);
-        case _:
-            return a(e);
         case f:
+            return a(e);
+        case _:
             return new N();
         case h:
             return o(e);

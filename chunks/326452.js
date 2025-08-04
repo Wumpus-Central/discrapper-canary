@@ -8,8 +8,8 @@ var r,
     c = n(481060),
     u = n(532425),
     d = n(388032),
-    _ = n(559122);
-function f(e, t, n) {
+    f = n(559122);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -92,7 +92,7 @@ class b extends (r = a.PureComponent) {
     }
     render() {
         let e = this.props,
-            { query: t, autoFocus: n, onClear: r, className: a, placeholder: o = d.intl.string(d.t['5h0QOD']), onKeyDown: f, isLoading: h, size: E, disabled: b, onChange: y, onBlur: O, onFocus: v, autoComplete: I, inputProps: T, 'aria-label': S = d.intl.string(d.t['5h0QOD']) } = e,
+            { query: t, autoFocus: n, onClear: r, className: a, placeholder: o = d.intl.string(d.t['5h0QOD']), onKeyDown: _, isLoading: h, size: E, disabled: b, onChange: y, onBlur: O, onFocus: v, autoComplete: I, inputProps: T, 'aria-label': S = d.intl.string(d.t['5h0QOD']) } = e,
             A = g(e, ['query', 'autoFocus', 'onClear', 'className', 'placeholder', 'onKeyDown', 'isLoading', 'size', 'disabled', 'onChange', 'onBlur', 'onFocus', 'autoComplete', 'inputProps', 'aria-label']),
             N = (0, i.jsx)(u.B, {
                 size: E,
@@ -108,7 +108,7 @@ class b extends (r = a.PureComponent) {
                       onBlur: O,
                       value: t,
                       onChange: y,
-                      onKeyDown: f,
+                      onKeyDown: _,
                       placeholder: o,
                       disabled: b,
                       autoFocus: n,
@@ -128,24 +128,24 @@ class b extends (r = a.PureComponent) {
                       m(
                           p(
                               {
-                                  className: s()(a, _.container, _.wrapper, _[E], { [_.disabled]: b }),
+                                  className: s()(a, f.container, f.wrapper, f[E], { [f.disabled]: b }),
                                   ref: this.containerRef
                               },
                               A
                           ),
                           {
                               children: (0, i.jsxs)('div', {
-                                  className: _.inner,
+                                  className: f.inner,
                                   children: [
                                       (0, i.jsx)(
                                           'input',
                                           m(p({}, T), {
                                               onFocus: v,
                                               onBlur: O,
-                                              className: _.input,
+                                              className: f.input,
                                               value: t,
                                               onChange: this.handleOnChange,
-                                              onKeyDown: f,
+                                              onKeyDown: _,
                                               placeholder: o,
                                               disabled: b,
                                               autoFocus: n,
@@ -164,15 +164,15 @@ class b extends (r = a.PureComponent) {
     }
     constructor(...e) {
         (super(...e),
-            f(this, 'inputRef', a.createRef()),
-            f(this, 'containerRef', a.createRef()),
-            f(this, 'handleOnChange', (e) => {
+            _(this, 'inputRef', a.createRef()),
+            _(this, 'containerRef', a.createRef()),
+            _(this, 'handleOnChange', (e) => {
                 let { onChange: t } = this.props;
                 null == t || t(e.currentTarget.value);
             }));
     }
 }
-f(b, 'defaultProps', {
+_(b, 'defaultProps', {
     size: 'md',
     isLoading: !1,
     disabled: !1

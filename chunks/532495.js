@@ -18,21 +18,21 @@ var r = n(512722),
     x = n(134795),
     _ = n(610966),
     j = n(513901),
-    C = n(451392),
-    E = n(906364),
+    E = n(451392),
+    C = n(906364),
     O = n(643879),
     v = n(350327),
     S = n(621853),
     T = n(687158),
-    N = n(25990),
-    I = n(594174),
+    I = n(25990),
+    N = n(594174),
     y = n(74538),
     A = n(388032),
     P = n(596677);
 function R() {
     var e, t, n, r, R, D, Z, w;
-    let k = (0, a.e7)([I.default], () => {
-            let e = I.default.getCurrentUser();
+    let k = (0, a.e7)([N.default], () => {
+            let e = N.default.getCurrentUser();
             return (s()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e);
         }),
         L = (0, a.e7)([S.Z], () => S.Z.getUserProfile(k.id)),
@@ -47,10 +47,10 @@ function R() {
             pendingLegacyUsernameDisabled: W,
             pendingPrimaryGuildId: z,
             errors: Y
-        } = (0, a.cj)([N.Z], () => {
+        } = (0, a.cj)([I.Z], () => {
             var e, t;
-            let n = N.Z.getAllPending(),
-                i = N.Z.getErrors();
+            let n = I.Z.getAllPending(),
+                i = I.Z.getErrors();
             return (
                 (e = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -118,7 +118,7 @@ function R() {
                 user: k
             }),
             (0, i.jsx)(
-                E.Z,
+                C.Z,
                 {
                     sectionTitle: A.intl.string(A.t['+T3RIy']),
                     errors: Y.pronouns,
@@ -169,7 +169,7 @@ function R() {
                               },
                               'banner'
                           ),
-                          (0, i.jsx)(C.Z, {
+                          (0, i.jsx)(E.Z, {
                               user: k,
                               pendingAvatarSrc: K,
                               pendingColors: H,

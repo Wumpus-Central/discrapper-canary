@@ -11,8 +11,8 @@ var r = n(255367),
     c = n(297781),
     u = n(594174),
     d = n(5192),
-    _ = n(709737),
-    f = n(986398),
+    f = n(709737),
+    _ = n(986398),
     p = n(69589),
     h = n(388032),
     m = n(588799);
@@ -42,7 +42,7 @@ function E(e) {
                     (0, r.jsxs)('div', {
                         className: m.gameTitleContainer,
                         children: [
-                            (0, r.jsx)(f.Z, {
+                            (0, r.jsx)(_.Z, {
                                 className: m.winnerImage,
                                 leaderboard: g
                             }),
@@ -66,11 +66,11 @@ function E(e) {
                     (0, r.jsxs)(c.Gk, {
                         location: c.Gt.EMBED,
                         children: [
-                            (0, r.jsx)(_.DC, {
+                            (0, r.jsx)(f.DC, {
                                 value: S,
                                 statisticId: O
                             }),
-                            (0, r.jsx)(_.Js, {
+                            (0, r.jsx)(f.Js, {
                                 intervalStart: g.interval_start,
                                 intervalEnd: g.interval_end
                             })

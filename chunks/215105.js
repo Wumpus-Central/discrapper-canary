@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(541716),
     u = n(752305),
     d = n(893718),
-    _ = n(131704),
-    f = n(823379),
+    f = n(131704),
+    _ = n(823379),
     p = n(5192),
     h = n(51144),
     m = n(698305),
@@ -20,7 +20,7 @@ var r = n(255367),
     O = n(420212),
     v = n(388032),
     I = n(42328);
-let T = (0, _.kt)({
+let T = (0, f.kt)({
         id: '1',
         type: s.d.DM
     }),
@@ -39,7 +39,7 @@ let T = (0, _.kt)({
                     c = '\n> '.concat(i);
                 return null != i ? ''.concat(E.jd).concat(l, '*').concat(c, '\n').concat(t) : ''.concat(E.jd).concat(l, '*\n').concat(t);
             default:
-                (0, f.vE)(r);
+                (0, _.vE)(r);
         }
     },
     A = (e) => {
@@ -51,15 +51,15 @@ let T = (0, _.kt)({
             case y.n_.STATUS:
                 return v.t.g9BTCA;
             default:
-                (0, f.vE)(e);
+                (0, _.vE)(e);
         }
     };
 function N(e) {
-    let { user: t, guildId: n, channelId: a, sourceType: s, sourceDetails: _, setPopoutRef: f, modalKey: E, onAction: N, onClose: C, entry: R } = e,
+    let { user: t, guildId: n, channelId: a, sourceType: s, sourceDetails: f, setPopoutRef: _, modalKey: E, onAction: N, onClose: C, entry: R } = e,
         { resetInteraction: P, setInteractionToast: w } = (0, g.Xo)(),
         { primaryColor: D } = (0, b.z)(),
         [L, x] = i.useState(''),
-        [M, k] = i.useState((0, u.JM)(L)),
+        [k, M] = i.useState((0, u.JM)(L)),
         j = i.useRef(!1),
         U = i.useRef(null),
         G = i.useCallback(
@@ -69,8 +69,8 @@ function N(e) {
             [P]
         );
     i.useEffect(() => {
-        null == f || f(null == U ? void 0 : U.current);
-    }, [U, f]);
+        null == _ || _(null == U ? void 0 : U.current);
+    }, [U, _]);
     let B = async (e) => {
             if (null == e) return;
             s === y.n_.AVATAR ? N({ action: 'SEND_REPLY_AVATAR' }) : s === y.n_.STATUS ? N({ action: 'SEND_REPLY_CUSTOM_STATUS' }) : N({ action: 'SEND_REPLY_ACTIVITY' });
@@ -78,7 +78,7 @@ function N(e) {
                 input: e,
                 username: h.ZP.getName(t),
                 sourceType: s,
-                sourceDetails: _
+                sourceDetails: f
             });
             w(null);
             try {
@@ -113,9 +113,9 @@ function N(e) {
                 placeholder: v.intl.formatToPlainString(A(s), { username: p.ZP.getName(n, a, t) }),
                 channel: T,
                 textValue: L,
-                richValue: M,
+                richValue: k,
                 onChange: (e, t, n) => {
-                    t !== L && (x(t), k(n));
+                    t !== L && (x(t), M(n));
                 },
                 focused: j.current,
                 onFocus: () => {

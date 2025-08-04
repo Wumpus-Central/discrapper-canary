@@ -17,8 +17,8 @@ var r = n(442837),
     c = n(430824),
     u = n(496675),
     d = n(979651),
-    _ = n(934415),
-    f = n(981631),
+    f = n(934415),
+    _ = n(981631),
     p = n(388032);
 function h(e, t, n) {
     var r;
@@ -26,7 +26,7 @@ function h(e, t, n) {
     if (e.isPrivate()) return !0;
     let o = t.getGuild(e.getGuildId()),
         s = null != (r = null == o ? void 0 : o.maxStageVideoChannelUsers) ? r : 0;
-    return (!e.isGuildStageVoice() || !(s <= 0)) && (!i || !!(0, a.Z)(e, n)) && !!n.can(f.Plq.STREAM, e) && null != o && o.afkChannelId !== e.id;
+    return (!e.isGuildStageVoice() || !(s <= 0)) && (!i || !!(0, a.Z)(e, n)) && !!n.can(_.Plq.STREAM, e) && null != o && o.afkChannelId !== e.id;
 }
 function m(e) {
     switch (e) {
@@ -60,13 +60,13 @@ function E(e, t, n, r, o) {
     let l;
     if (null == e) return [!1, 2];
     let c = t.isInChannel(e.id),
-        u = e instanceof s.Sf && (0, _.rY)(e, t, n),
+        u = e instanceof s.Sf && (0, f.rY)(e, t, n),
         d = (0, a.Z)(e, r),
-        f = null != o.getAwaitingRemoteSessionInfo() || null != o.getRemoteSessionId(),
+        _ = null != o.getAwaitingRemoteSessionInfo() || null != o.getRemoteSessionId(),
         p = (0, i.dl)() && (0, i.zd)(e.id);
-    f ? (l = 0) : p ? (l = 3) : d || c ? u && !c && (l = 1) : (l = 2);
+    _ ? (l = 0) : p ? (l = 3) : d || c ? u && !c && (l = 1) : (l = 2);
     let h = d && !u;
-    return [!__OVERLAY__ && !f && !p && (c || h), l];
+    return [!__OVERLAY__ && !_ && !p && (c || h), l];
 }
 function b(e) {
     return (0, r.Wu)([d.Z, c.Z, u.Z, o.Z], () => E(e, d.Z, c.Z, u.Z, o.Z));

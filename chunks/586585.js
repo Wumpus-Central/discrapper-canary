@@ -12,8 +12,8 @@ var i = n(793030),
     c = n(600164),
     u = n(563132),
     d = n(612853),
-    _ = n(388032),
-    f = n(240150);
+    f = n(388032),
+    _ = n(240150);
 function p(e, t, n) {
     return (
         t in e
@@ -70,7 +70,7 @@ var E = (function (e) {
     return ((e[(e.CONTINUE = 0)] = 'CONTINUE'), (e[(e.UPGRADE = 1)] = 'UPGRADE'), (e[(e.PURCHASE = 2)] = 'PURCHASE'), e);
 })({});
 let b = (e) => {
-        let { primaryIcon: t, primaryCTA: n, primaryType: i, primaryText: a, primaryDisabled: c, primarySubmitting: u, onPrimary: d, tooltipProps: _ } = e,
+        let { primaryIcon: t, primaryCTA: n, primaryType: i, primaryText: a, primaryDisabled: c, primarySubmitting: u, onPrimary: d, tooltipProps: f } = e,
             p = {
                 type: i,
                 disabled: c,
@@ -85,7 +85,7 @@ let b = (e) => {
                               submitting: u,
                               color: s.zx.Colors.GREEN
                           }),
-                          _
+                          f
                       ),
                       {
                           children:
@@ -93,7 +93,7 @@ let b = (e) => {
                                   ? null
                                   : (0, r.jsx)(t, {
                                         color: 'currentColor',
-                                        className: f.primaryIcon
+                                        className: _.primaryIcon
                                     })
                       }
                   )
@@ -111,22 +111,22 @@ let b = (e) => {
                                   : () =>
                                         (0, r.jsx)(t, {
                                             color: 'currentColor',
-                                            className: f.primaryIcon
+                                            className: _.primaryIcon
                                         })
                       }),
-                      _
+                      f
                   )
               );
     },
     y = (e) => {
-        let { onBack: t, backText: n, primaryIcon: o, primaryCTA: s, primaryType: f, primaryText: p, primaryTooltip: m, primaryDisabled: E, primarySubmitting: y, onPrimary: O } = e,
+        let { onBack: t, backText: n, primaryIcon: o, primaryCTA: s, primaryType: _, primaryText: p, primaryTooltip: m, primaryDisabled: E, primarySubmitting: y, onPrimary: O } = e,
             { premiumBrandRefreshBackgroundClassName: v } = (0, u.JL)(),
             I = () => {
                 if (null == s || null == p) return null;
                 let e = {
                     primaryIcon: o,
                     primaryCTA: s,
-                    primaryType: f,
+                    primaryType: _,
                     primaryText: p,
                     primaryDisabled: E,
                     primarySubmitting: y,
@@ -143,7 +143,7 @@ let b = (e) => {
                 null == t
                     ? null
                     : (0, r.jsx)(a.A, {
-                          text: null != n ? n : _.intl.string(_.t['13/7kZ']),
+                          text: null != n ? n : f.intl.string(f.t['13/7kZ']),
                           onClick: t,
                           variant: 'secondary'
                       });

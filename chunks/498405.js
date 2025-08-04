@@ -56,7 +56,7 @@ function u(e, t) {
     );
 }
 let d = '--';
-function _(e) {
+function f(e) {
     switch (e.key) {
         case a.R8.ENTER:
         case a.R8.SPACE:
@@ -71,7 +71,7 @@ function _(e) {
             return a.Us.NAVIGATE_OUT;
     }
 }
-function f(e, t) {
+function _(e, t) {
     return null != t ? ''.concat((0, o.qR)(e, t.join(d))) : e;
 }
 function p(e, t) {
@@ -121,7 +121,7 @@ function m(e) {
             (e) => {
                 if (!b.current) return;
                 e.key === a.R8.ESCAPE && null != g && (e.stopPropagation(), e.preventDefault(), g());
-                let n = _(e);
+                let n = f(e);
                 switch (n) {
                     case a.Us.NAVIGATE_UP:
                     case a.Us.NAVIGATE_DOWN:
@@ -133,7 +133,7 @@ function m(e) {
                         var r;
                         if (e.repeat || h(e.target)) return;
                         if ((e.preventDefault(), e.stopPropagation(), N(!1), v({ type: n }), null != c)) return void c(I);
-                        let i = p(null != (r = e.target.ownerDocument) ? r : document, f(t, I));
+                        let i = p(null != (r = e.target.ownerDocument) ? r : document, _(t, I));
                         null == i || i.click();
                 }
             },
@@ -156,7 +156,7 @@ function m(e) {
                 S(!1));
         }, []),
         x = r.useCallback((e) => e.every((e, t) => I[t] === e), [I]),
-        M = r.useCallback(
+        k = r.useCallback(
             () => ({
                 role: 'menu',
                 id: t,
@@ -169,7 +169,7 @@ function m(e) {
             }),
             [t, P, w, D, L, I]
         ),
-        k = r.useCallback(
+        M = r.useCallback(
             (e) => {
                 let { path: n } = e;
                 return {
@@ -210,12 +210,12 @@ function m(e) {
     return r.useMemo(
         () => ({
             dispatch: v,
-            getContainerProps: M,
-            getSubmenuProps: k,
+            getContainerProps: k,
+            getSubmenuProps: M,
             getItemProps: j,
             isFocused: x,
             isUsingKeyboardNavigation: A
         }),
-        [v, M, k, j, x, A]
+        [v, k, M, j, x, A]
     );
 }

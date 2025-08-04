@@ -57,14 +57,14 @@ function d(e) {
     var t,
         { impressionName: n, impressionProperties: s, disableTrack: u } = e,
         d = c(e, ['impressionName', 'impressionProperties', 'disableTrack']);
-    let _ = s;
+    let f = s;
     return (
-        'function' == typeof _ && (_ = _(d)),
+        'function' == typeof f && (f = f(d)),
         (0, o.Z)(
             {
                 type: a.ImpressionTypes.PAGE,
                 name: n,
-                properties: _
+                properties: f
             },
             { disableTrack: u },
             [null == (t = d.location) ? void 0 : t.pathname]

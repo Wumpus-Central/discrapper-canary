@@ -12,8 +12,8 @@ var i = n(442837),
     c = n(318374),
     u = n(565138),
     d = n(359110),
-    _ = n(769654),
-    f = n(496675),
+    f = n(769654),
+    _ = n(496675),
     p = n(323038),
     h = n(483517),
     m = n(652853),
@@ -28,14 +28,14 @@ function I(e) {
         { themeType: A } = (0, m.z)(),
         N = (0, p.Z)(I),
         C = (0, s.ZP)(I),
-        { canViewChannel: R, canConnect: P } = (0, i.cj)([f.Z], () => ({
-            canViewChannel: f.Z.can(b.Plq.VIEW_CHANNEL, I),
-            canConnect: I.isPrivate() || f.Z.can(b.Plq.CONNECT, I)
+        { canViewChannel: R, canConnect: P } = (0, i.cj)([_.Z], () => ({
+            canViewChannel: _.Z.can(b.Plq.VIEW_CHANNEL, I),
+            canConnect: I.isPrivate() || _.Z.can(b.Plq.CONNECT, I)
         }));
     if (!R) return null;
     let w = () => {
             let e = (e) => {
-                (e.stopPropagation(), (0, _.X)(n.id), null == T || T({ action: 'OPEN_VOICE_GUILD' }), null == S || S());
+                (e.stopPropagation(), (0, f.X)(n.id), null == T || T({ action: 'OPEN_VOICE_GUILD' }), null == S || S());
             };
             return (0, r.jsx)(a.DY3, {
                 text: n.name,

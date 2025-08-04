@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => y,
-    r: () => I
+    r: () => N
 }),
     n(539854),
     n(388685));
@@ -22,40 +22,40 @@ var i = n(255367),
     x = n(275909),
     _ = n(300037),
     j = n(981631),
-    C = n(474936),
-    E = n(388032),
+    E = n(474936),
+    C = n(388032),
     O = n(238045);
 function v(e) {
     let { guildTier: t, guildBoostSlot: n, showAltText: a, isCanceled: o, premiumSubscription: c, fractionalPremiumInfo: d } = e,
         u = r.useMemo(() => {
             if (o) {
                 let e = c.currentPeriodEnd;
-                return (c.isPausedForFractionalPremium && (e = d.endsAt.toDate()), E.intl.format(E.t.Z4ULRE, { date: e }));
+                return (c.isPausedForFractionalPremium && (e = d.endsAt.toDate()), C.intl.format(C.t.Z4ULRE, { date: e }));
             }
             let e = null != n.premiumGuildSubscription ? f.default.extractTimestamp(n.premiumGuildSubscription.id) : 0;
-            return E.intl.formatToPlainString(E.t.lY2Bur, { date: new Date(e) });
+            return C.intl.formatToPlainString(C.t.lY2Bur, { date: new Date(e) });
         }, [n, o, c, d]),
         m = r.useMemo(
             () =>
                 (function (e) {
                     if (null == e || e === j.Eu4.NONE) return '';
                     let t = [
-                        E.intl.formatToPlainString(E.t.dLlKX1, { numEmojiSlots: C.HO[e].limits.emoji }),
-                        E.intl.formatToPlainString(E.t['+ANIfn'], { numStickerSlots: C.HO[e].limits.stickers }),
-                        E.intl.formatToPlainString(E.t['4gt60d'], { numSoundboardSlots: C.HO[e].limits.soundboardSounds }),
-                        E.intl.formatToPlainString(E.t.XahSjY, {
-                            resolution: C.HO[e].limits.screenShareQualityResolution,
-                            framerate: C.HO[e].limits.screenShareQualityFramerate
+                        C.intl.formatToPlainString(C.t.dLlKX1, { numEmojiSlots: E.HO[e].limits.emoji }),
+                        C.intl.formatToPlainString(C.t['+ANIfn'], { numStickerSlots: E.HO[e].limits.stickers }),
+                        C.intl.formatToPlainString(C.t['4gt60d'], { numSoundboardSlots: E.HO[e].limits.soundboardSounds }),
+                        C.intl.formatToPlainString(C.t.XahSjY, {
+                            resolution: E.HO[e].limits.screenShareQualityResolution,
+                            framerate: E.HO[e].limits.screenShareQualityFramerate
                         }),
-                        E.intl.formatToPlainString(E.t.NbNs7e, { bitrate: C.HO[e].limits.bitrate / 1000 }),
-                        E.intl.formatToPlainString(E.t.VVKcpq, { filesize: C.HO[e].limits.fileSize / 1024 / 1024 }),
-                        E.intl.formatToPlainString(E.t.TbpCvr, { numVideoStageSeats: C.HO[e].limits.stageVideoUsers }),
-                        E.intl.string(E.t.LDyX3t),
-                        E.intl.string(E.t.YtGlPT)
+                        C.intl.formatToPlainString(C.t.NbNs7e, { bitrate: E.HO[e].limits.bitrate / 1000 }),
+                        C.intl.formatToPlainString(C.t.VVKcpq, { filesize: E.HO[e].limits.fileSize / 1024 / 1024 }),
+                        C.intl.formatToPlainString(C.t.TbpCvr, { numVideoStageSeats: E.HO[e].limits.stageVideoUsers }),
+                        C.intl.string(C.t.LDyX3t),
+                        C.intl.string(C.t.YtGlPT)
                     ];
-                    (e >= j.Eu4.TIER_2 && (t.push(E.intl.string(E.t.SztbtL)), t.push(E.intl.string(E.t['3GK91t']))), e >= j.Eu4.TIER_3 && t.push(E.intl.string(E.t.XUUJd3)));
+                    (e >= j.Eu4.TIER_2 && (t.push(C.intl.string(C.t.SztbtL)), t.push(C.intl.string(C.t['3GK91t']))), e >= j.Eu4.TIER_3 && t.push(C.intl.string(C.t.XUUJd3)));
                     let n = t[Math.floor(Math.random() * t.length)];
-                    return E.intl.format(E.t['/dOAmZ'], { perk: n });
+                    return C.intl.format(C.t['/dOAmZ'], { perk: n });
                 })(t),
             [t]
         ),
@@ -94,10 +94,10 @@ function S(e) {
         f = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
         _ = (0, a.e7)([p.default], () => p.default.getCurrentUser()),
         j = r.useMemo(() => (null != n.cooldownEndsAt ? new Date(n.cooldownEndsAt) : null), [n]),
-        C = r.useMemo(() => null != j && j > new Date(), [j]),
+        E = r.useMemo(() => null != j && j > new Date(), [j]),
         S = (0, g.tl)(n),
         T = (0, c.Z)(),
-        N = r.useRef(null);
+        I = r.useRef(null);
     return (0, i.jsxs)('div', {
         className: O.boostContainer,
         children: [
@@ -106,13 +106,13 @@ function S(e) {
                 children: [
                     (0, i.jsx)(x.Z, {
                         isCanceled: S,
-                        hasCooldown: C,
+                        hasCooldown: E,
                         useReducedMotion: f
                     }),
                     (0, i.jsx)('div', {
                         className: O.boostDescriptionContainer,
                         children:
-                            null != j && C && !S
+                            null != j && E && !S
                                 ? (0, i.jsx)(b.Z, {
                                       className: O.boostDescriptionInnerContainer,
                                       cooldown: j.getTime()
@@ -127,7 +127,7 @@ function S(e) {
                                   })
                     }),
                     (0, i.jsx)(l.yRy, {
-                        targetElementRef: N,
+                        targetElementRef: I,
                         renderPopout: function (e) {
                             let { closePopout: t } = e;
                             return (0, i.jsx)(d.Z, {
@@ -172,8 +172,8 @@ function S(e) {
                                 })({}, e)),
                                 (n = n =
                                     {
-                                        innerRef: N,
-                                        'aria-label': E.intl.string(E.t.PdRCRk),
+                                        innerRef: I,
+                                        'aria-label': C.intl.string(C.t.PdRCRk),
                                         className: O.boostSlotMenuIcon,
                                         children: (0, i.jsx)(l.Huf, {
                                             size: 'md',
@@ -229,7 +229,7 @@ function T(e) {
         ]
     });
 }
-function N(e) {
+function I(e) {
     let { guildId: t, appliedGuildBoosts: n, premiumSubscription: r } = e,
         s = (0, a.e7)([m.Z], () => m.Z.getGuild(t), [t]),
         l = f.default.fromTimestamp(Date.now());
@@ -277,7 +277,7 @@ function N(e) {
         ]
     });
 }
-function I(e) {
+function N(e) {
     let { appliedGuildBoosts: t, premiumSubscription: n } = e,
         s = r.useMemo(() => {
             let e = {};
@@ -298,7 +298,7 @@ function I(e) {
                       className: O.container,
                       children: f.default.keys(s).map((e) =>
                           (0, i.jsx)(
-                              N,
+                              I,
                               {
                                   guildId: e,
                                   premiumSubscription: n,

@@ -8,8 +8,8 @@ var r = n(622822),
     c = n(984933),
     u = n(944486),
     d = n(545408),
-    _ = n(189357),
-    f = n(50493),
+    f = n(189357),
+    _ = n(50493),
     p = n(981631),
     h = n(176505);
 function m(e, t, n) {
@@ -66,9 +66,9 @@ function b(e, t) {
 }
 function y(e, t, n) {
     var m, E, y;
-    let O = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { modViewPanel: f.k.INFO };
-    if (!(0, _.Y)(e)) return Promise.resolve();
-    let v = null != (m = O.modViewPanel) ? m : f.k.INFO,
+    let O = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { modViewPanel: _.k.INFO };
+    if (!(0, f.Y)(e)) return Promise.resolve();
+    let v = null != (m = O.modViewPanel) ? m : _.k.INFO,
         I = null != (E = O.sourceLocation) ? E : i.Z.MEMBER_SAFETY_PAGE,
         T = u.Z.getCurrentlySelectedChannelId(),
         S = null != T ? l.Z.getChannel(T) : null;
@@ -91,7 +91,7 @@ function y(e, t, n) {
                     },
                     O
                 ),
-                { modViewPanel: null != (y = O.modViewPanel) ? y : f.k.INFO }
+                { modViewPanel: null != (y = O.modViewPanel) ? y : _.k.INFO }
             )
         })
     );

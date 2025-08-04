@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(906732),
     u = n(174604),
     d = n(302175),
-    _ = n(626135),
-    f = n(724884),
+    f = n(626135),
+    _ = n(724884),
     p = n(355045),
     h = n(290799),
     m = n(394769),
@@ -39,7 +39,7 @@ let T = function (e) {
         }, []),
         x = i.useCallback(() => {
             (null == T || T(),
-                _.default.track(O.rMx.MODAL_DISMISSED, {
+                f.default.track(O.rMx.MODAL_DISMISSED, {
                     type: O.ZY5.PREMIUM_GUILD_USER_MODAL,
                     location_stack: R,
                     location_section: t.section,
@@ -48,11 +48,11 @@ let T = function (e) {
                     duration_open_ms: Date.now() - C
                 }));
         }, [T, t, R, C, n.id]),
-        M = i.useCallback(
+        k = i.useCallback(
             (e) => {
                 e &&
                     !N.current &&
-                    (_.default.track(O.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                    (f.default.track(O.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                         type: O.ZY5.PREMIUM_GUILD_USER_MODAL,
                         location_stack: R,
                         location_section: t.section,
@@ -65,7 +65,7 @@ let T = function (e) {
         );
     return (
         i.useEffect(() => {
-            _.default.track(O.rMx.OPEN_MODAL, {
+            f.default.track(O.rMx.OPEN_MODAL, {
                 type: O.ZY5.PREMIUM_GUILD_USER_MODAL,
                 location_stack: R,
                 location_section: t.section,
@@ -147,7 +147,7 @@ let T = function (e) {
                                             className: I.tierComparisonTable,
                                             guild: n
                                         }),
-                                        (0, r.jsx)(f.Z, {}),
+                                        (0, r.jsx)(_.Z, {}),
                                         (0, r.jsx)(h.Z, {})
                                     ]
                                 }),
@@ -157,7 +157,7 @@ let T = function (e) {
                         }),
                         (0, r.jsx)(a.$, {
                             innerRef: P,
-                            onChange: M,
+                            onChange: k,
                             children: (0, r.jsx)('div', {
                                 ref: P,
                                 className: I.persistentCtaSpacer

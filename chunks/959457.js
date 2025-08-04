@@ -8,8 +8,8 @@ var i,
     c = n(442837),
     u = n(46973),
     d = n(570140),
-    _ = n(594190),
-    f = n(444852),
+    f = n(594190),
+    _ = n(444852),
     p = n(569545),
     h = n(687516),
     m = n(139656),
@@ -44,7 +44,7 @@ let S = {},
 function L(e, t, n, i) {
     return (
         o()(null != r, 'Creating RTCConnection without session.'),
-        new f.Z({
+        new _.Z({
             sessionId: r,
             streamKey: e,
             serverId: t,
@@ -61,10 +61,10 @@ function x() {
         (e.destroy(e.isOwner ? 'sender-disconnect' : 'receiver-disconnect'), delete D[t], delete P[t]);
     });
 }
-function M(e) {
+function k(e) {
     ((r = e.sessionId), x());
 }
-function k() {
+function M() {
     ((r = null), x());
 }
 function j(e) {
@@ -85,7 +85,7 @@ function j(e) {
         (N[u] = a),
         null != a)
     ) {
-        let e = _.ZP.getGameForPID(a);
+        let e = f.ZP.getGameForPID(a);
         null != e &&
             (A[u] = {
                 name: e.name,
@@ -116,7 +116,7 @@ function G(e) {
         null == N[t] && (A[t] = null);
         let e = (0, p.my)(t);
         null == A[t] && null == C[t] && (A[t] = (0, h.L2)(e, y.Z));
-        let s = new f.A({
+        let s = new _.A({
             streamRegion: i,
             streamApplication: A[t],
             streamSourceType: X(C[t]),
@@ -288,8 +288,8 @@ let J = new Q(
     !b.Z.isSupported() || __OVERLAY__
         ? {}
         : {
-              CONNECTION_OPEN: M,
-              CONNECTION_CLOSED: k,
+              CONNECTION_OPEN: k,
+              CONNECTION_CLOSED: M,
               RTC_CONNECTION_STATE: Y,
               RTC_CONNECTION_PING: Y,
               RTC_CONNECTION_LOSS_RATE: Y,

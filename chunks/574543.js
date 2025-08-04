@@ -1,4 +1,4 @@
-n.d(t, { u: () => _ });
+n.d(t, { u: () => f });
 var r = n(141725),
     i = n(830651),
     a = n(164441),
@@ -45,7 +45,7 @@ function d(e, t, n) {
         e
     );
 }
-function _() {
+function f() {
     var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = arguments.length > 1 ? arguments[1] : void 0;
     return {

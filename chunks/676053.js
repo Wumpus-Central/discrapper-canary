@@ -1,187 +1,200 @@
-n.d(t, { M: () => h });
-var i = n(255367),
-    r = n(73800),
-    s = n(780842),
-    a = n(70097),
-    l = n(312097),
-    o = n(920155),
+n.d(t, { M: () => O });
+var r = n(255367),
+    i = n(73800),
+    a = n(780842),
+    o = n(70097),
+    s = n(312097),
+    l = n(920155),
     c = n(744399),
-    d = n(454028),
-    u = n(966902),
-    m = n(237872),
-    p = n(562618),
-    g = n(445689);
-function h(e) {
-    var t,
-        n,
-        {
-            title: h,
-            body: f,
-            assetUrl: b,
-            action: x,
-            caretConfig: _ = {
+    u = n(454028),
+    d = n(966902),
+    f = n(237872),
+    _ = n(562618),
+    p = n(445689);
+function h(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function m(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                h(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function g(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function E(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : g(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function b(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = y(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+    }
+    return i;
+}
+function y(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    return i;
+}
+function O(e) {
+    var {
+            title: t,
+            body: n,
+            assetUrl: h,
+            action: g,
+            caretConfig: y = {
                 position: 'bottom',
                 align: 'center'
             },
-            badge: j,
-            textLink: C,
-            onWatchVideo: E,
-            onRequestClose: O,
-            popoverRef: v
+            badge: O,
+            textLink: v,
+            onWatchVideo: I,
+            onRequestClose: T,
+            popoverRef: S
         } = e,
-        S = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                i,
-                r = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        i,
-                        r = {},
-                        s = Object.keys(e);
-                    for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
-                    return r;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
-            }
-            return r;
-        })(e, ['title', 'body', 'assetUrl', 'action', 'caretConfig', 'badge', 'textLink', 'onWatchVideo', 'onRequestClose', 'popoverRef']);
-    let T = r.useRef(null),
-        N = b.endsWith('.gif') || b.endsWith('.webp') || b.endsWith('.png'),
-        I = r.useCallback(
+        A = b(e, ['title', 'body', 'assetUrl', 'action', 'caretConfig', 'badge', 'textLink', 'onWatchVideo', 'onRequestClose', 'popoverRef']);
+    let N = i.useRef(null),
+        C = h.endsWith('.gif') || h.endsWith('.webp') || h.endsWith('.png'),
+        R = i.useCallback(
             () => ({
                 type: 'VIDEO',
-                url: b,
-                proxyUrl: b,
-                alt: h,
+                url: h,
+                proxyUrl: h,
+                alt: t,
                 width: 1280,
                 height: 720,
-                className: g.media
+                className: p.media
             }),
-            [b, h]
+            [h, t]
         ),
-        y = r.useCallback(() => {
-            (null !== T.current && T.current.pause(), null == O || O());
-        }, [O]),
-        A = r.useCallback(() => {
-            (null !== T.current && T.current.pause(), null == O || O());
-        }, [O]),
-        P = r.useCallback(() => {
-            null !== T.current && T.current.pause();
-            let e = I();
-            ((0, l.K)({
+        P = i.useCallback(() => {
+            (null !== N.current && N.current.pause(), null == T || T());
+        }, [T]),
+        w = i.useCallback(() => {
+            (null !== N.current && N.current.pause(), null == T || T());
+        }, [T]),
+        D = i.useCallback(() => {
+            null !== N.current && N.current.pause();
+            let e = R();
+            ((0, s.K)({
                 items: [e],
                 startingIndex: 0,
                 location: 'VideoPopover',
                 shouldHideMediaOptions: !0
             }),
-                null == O || O(),
-                null == E || E());
-        }, [I, E, O]),
-        R = N
-            ? (0, i.jsx)('img', {
-                  src: b,
+                null == T || T(),
+                null == I || I());
+        }, [R, I, T]),
+        L = C
+            ? (0, r.jsx)('img', {
+                  src: h,
                   alt: '',
                   draggable: !1,
-                  className: g.inlineAsset
+                  className: p.inlineAsset
               })
-            : (0, i.jsxs)(i.Fragment, {
+            : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, i.jsx)(a.Z, {
-                          ref: T,
-                          src: b,
+                      (0, r.jsx)(o.Z, {
+                          ref: N,
+                          src: h,
                           width: 240,
                           height: 135,
                           autoPlay: !0,
                           muted: !0,
                           loop: !0,
                           playsInline: !0,
-                          className: g.inlineAsset,
+                          className: p.inlineAsset,
                           controls: !1,
                           preload: 'metadata'
                       }),
-                      (0, i.jsx)('div', {
-                          className: g.playButton,
-                          children: (0, i.jsx)(s.J, {
+                      (0, r.jsx)('div', {
+                          className: p.playButton,
+                          children: (0, r.jsx)(a.J, {
                               playing: !1,
                               size: 'sm',
-                              'aria-label': 'Play video: '.concat(h),
-                              onClick: P
+                              'aria-label': 'Play video: '.concat(t),
+                              onClick: D
                           })
                       })
                   ]
               });
-    return (0, i.jsx)(
-        o.m,
-        ((t = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    i = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
-                    (i = i.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
-                    )),
-                    i.forEach(function (t) {
-                        var i;
-                        ((i = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: i,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0
-                                  })
-                                : (e[t] = i));
-                    }));
-            }
-            return e;
-        })({}, S)),
-        (n = n =
-            {
-                onRequestClose: y,
-                hasVideo: !0,
-                children: (0, i.jsxs)('div', {
-                    ref: v,
-                    children: [
-                        (0, i.jsx)(m.u, {
-                            onClick: A,
-                            colorMix: !0
+    return (0, r.jsx)(
+        l.m,
+        E(m({}, A), {
+            onRequestClose: P,
+            hasVideo: !0,
+            children: (0, r.jsxs)('div', {
+                ref: S,
+                children: [
+                    (0, r.jsx)(f.u, {
+                        onClick: w,
+                        colorMix: !0
+                    }),
+                    (0, r.jsx)(u.V, {
+                        asset: (0, r.jsx)('div', {
+                            className: p.assetContainer,
+                            children: L
                         }),
-                        (0, i.jsx)(d.V, {
-                            asset: (0, i.jsx)('div', {
-                                className: g.assetContainer,
-                                children: R
-                            }),
-                            size: 'video'
-                        }),
-                        (0, i.jsx)(p.Y, {
-                            title: h,
-                            body: f,
-                            badge: j,
-                            textLink: C,
-                            hasBottomMargin: null != x
-                        }),
-                        null != x ? (0, i.jsx)(c.k, { actions: [x] }) : null,
-                        (0, i.jsx)(u.$, { caretConfig: _ })
-                    ]
-                })
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-              }),
-        t)
+                        size: 'video'
+                    }),
+                    (0, r.jsx)(_.Y, {
+                        title: t,
+                        body: n,
+                        badge: O,
+                        textLink: v,
+                        hasBottomMargin: null != g
+                    }),
+                    null != g ? (0, r.jsx)(c.k, { actions: [g] }) : null,
+                    (0, r.jsx)(d.$, { caretConfig: y })
+                ]
+            })
+        })
     );
 }

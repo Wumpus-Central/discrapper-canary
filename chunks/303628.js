@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(442837),
     u = n(570140),
     d = n(166459),
-    _ = n(911969),
-    f = n(607070),
+    f = n(911969),
+    _ = n(607070),
     p = n(209613),
     h = n(998698),
     m = n(117530),
@@ -95,7 +95,7 @@ function R(e, t) {
 let P = [];
 function w(e) {
     let { channelId: t, type: n, ignoreFile: a, smallAttachments: T = !1 } = e,
-        A = (0, c.e7)([f.Z], () => f.Z.keyboardModeEnabled),
+        A = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled),
         R = (0, p.Z)('attachments', l.hy.HORIZONTAL),
         w = (0, c.e7)([m.Z], () => m.Z.getUploads(t, n.drafts.type)),
         {
@@ -117,7 +117,7 @@ function w(e) {
                 commandOptionStates: n
             };
         }),
-        M = i.useMemo(() => {
+        k = i.useMemo(() => {
             var e;
             return null !=
                 (e =
@@ -125,12 +125,12 @@ function w(e) {
                         ? void 0
                         : L.filter((e) => {
                               var t;
-                              return e.type === _.jw.ATTACHMENT && (null == x || null == (t = x[e.name]) ? void 0 : t.hasValue);
+                              return e.type === f.jw.ATTACHMENT && (null == x || null == (t = x[e.name]) ? void 0 : t.hasValue);
                           }))
                 ? e
                 : [];
         }, [L, x]),
-        [k, j] = i.useState([]);
+        [M, j] = i.useState([]);
     i.useEffect(() => {
         let e = () => {
             d.Z.clearAll(t, n.drafts.type);
@@ -146,8 +146,8 @@ function w(e) {
     });
     let G = {
             isApplicationCommand: D,
-            previousUploadOptions: k,
-            uploadOptions: M
+            previousUploadOptions: M,
+            uploadOptions: k
         },
         B = i.useRef(G);
     (i.useEffect(() => {
@@ -165,9 +165,9 @@ function w(e) {
                     }),
                     j(i));
             }
-        }, [t, M.length, n]));
+        }, [t, k.length, n]));
     let V = w.filter((e) => e.filename !== a);
-    return (!D && 0 === V.length) || (D && 0 === M.length)
+    return (!D && 0 === V.length) || (D && 0 === k.length)
         ? null
         : (0, r.jsx)(s.bG, {
               navigator: R,
@@ -180,7 +180,7 @@ function w(e) {
                           N(S({ ref: i }, a), {
                               className: o()(v.channelAttachmentArea, I.scrollbarGhost),
                               children: D
-                                  ? M.map((e) =>
+                                  ? k.map((e) =>
                                         (0, r.jsx)(
                                             b.Z,
                                             {

@@ -9,8 +9,8 @@ var i = n(442837),
     c = n(662975),
     u = n(724145),
     d = n(507962),
-    _ = n(726034),
-    f = n(884134),
+    f = n(726034),
+    _ = n(884134),
     p = n(266454),
     h = n(243778),
     m = n(819640),
@@ -32,7 +32,7 @@ let v = function () {
         R = N === a.z.CLIENT_THEMES_COACHMARK,
         P = N === a.z.CUSTOM_THEME_COACHMARK;
     if (((0, d.HA)(v, N), e)) return null;
-    let w = I ? f.Z : _.Z;
+    let w = I ? _.Z : f.Z;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (T === b.wh.CLIENT_THEMES || R) &&

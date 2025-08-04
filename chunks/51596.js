@@ -29,8 +29,8 @@ var i = n(481060),
     x = n(283595),
     _ = n(944486),
     j = n(914010),
-    C = n(626135),
-    E = n(777754),
+    E = n(626135),
+    C = n(777754),
     O = n(823385),
     v = n(981631),
     S = n(176505);
@@ -59,9 +59,9 @@ function T(e) {
     }
     return e;
 }
-let N = () => Promise.resolve();
-N = n(346329).playApplication;
-let I = Object.freeze({
+let I = () => Promise.resolve();
+I = n(346329).playApplication;
+let N = Object.freeze({
         [d.xQ.USER]: d.h8.USER,
         [d.xQ.TEXT_CHANNEL]: d.h8.TEXT_CHANNEL,
         [d.xQ.VOICE_CHANNEL]: d.h8.VOICE_CHANNEL,
@@ -72,7 +72,7 @@ let I = Object.freeze({
 function A(e) {
     var t;
     let n,
-        [i, r] = ((n = null != (t = I[e.charAt(0)]) ? t : null), [e.replace(y, ''), n]);
+        [i, r] = ((n = null != (t = N[e.charAt(0)]) ? t : null), [e.replace(y, ''), n]);
     return {
         query: i,
         queryMode: r
@@ -83,9 +83,9 @@ function P(e, t) {
         a = j.Z.getGuildId(),
         l = _.Z.getChannelId(a),
         o = n[(0, d.gJ)(d.a8.DOWN, -1, n)],
-        c = E.Z.isEmail(r),
-        u = E.Z.isPhoneNumber(r),
-        m = E.Z.isUserTagLike(r),
+        c = C.Z.isEmail(r),
+        u = C.Z.isPhoneNumber(r),
+        m = C.Z.isUserTagLike(r),
         p = null != l && (0, S.AB)(l),
         g = (e) => (null == e ? null : e.type === d.h8.IN_APP_NAVIGATION ? e.type + '_' + e.record.type : e.type),
         h = {
@@ -129,7 +129,7 @@ function P(e, t) {
                 h.selected_user_id = r.id;
         }
     }
-    C.default.track(e, h);
+    E.default.track(e, h);
 }
 function R() {
     r.Z.dispatch({ type: 'QUICKSWITCHER_HIDE' });
@@ -146,7 +146,7 @@ function D() {
             let e = b.Z.getChannel(i);
             t = null != e ? e.type : null;
         }
-        C.default.track(v.rMx.QUICKSWITCHER_OPENED, {
+        E.default.track(v.rMx.QUICKSWITCHER_OPENED, {
             source: e,
             current_guild_id: n,
             current_channel_id: i,
@@ -203,8 +203,8 @@ function L(e) {
             ((0, p.Kh)(_.id, { navigationReplace: !0 }), l.Z.channelListScrollTo(v.ME, _.id));
             break;
         case d.h8.APPLICATION:
-            let C = x.Z.getActiveLibraryApplication(_.id);
-            N(_.id, C, {
+            let E = x.Z.getActiveLibraryApplication(_.id);
+            I(_.id, E, {
                 analyticsParams: {
                     source: v.Sbl.QUICK_SWITCHER,
                     location: v.Sbl.QUICK_SWITCHER

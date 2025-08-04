@@ -12,15 +12,15 @@ e.exports = function (e, t, n, s) {
         if (u && d[2] ? d[1] !== e[d[0]] : !(d[0] in e)) return !1;
     }
     for (; ++l < c; ) {
-        var _ = (d = n[l])[0],
-            f = e[_],
+        var f = (d = n[l])[0],
+            _ = e[f],
             p = d[1];
         if (u && d[2]) {
-            if (void 0 === f && !(_ in e)) return !1;
+            if (void 0 === _ && !(f in e)) return !1;
         } else {
             var h = new r();
-            if (s) var m = s(f, p, _, e, t, h);
-            if (!(void 0 === m ? i(p, f, a | o, s, h) : m)) return !1;
+            if (s) var m = s(_, p, f, e, t, h);
+            if (!(void 0 === m ? i(p, _, a | o, s, h) : m)) return !1;
         }
     }
     return !0;

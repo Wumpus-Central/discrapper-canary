@@ -8,8 +8,8 @@ var r,
     c = n(570140),
     u = n(317381),
     d = n(212517),
-    _ = n(676035),
-    f = n(594190),
+    f = n(676035),
+    _ = n(594190),
     p = n(106301),
     h = n(406066),
     m = n(509003),
@@ -77,7 +77,7 @@ let C = [],
 function P() {
     let e = [],
         t = E.Ok.getSetting();
-    null != t && ('0' === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, _.I)(t));
+    null != t && ('0' === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, f.I)(t));
     let n = h.Z.getActivities();
     e.push(...n);
     let r = O.Z.getStream();
@@ -87,7 +87,7 @@ function P() {
         let [, n] = t;
         null != n.application_id && (i.add(n.name), e.push(n));
     });
-    let o = f.ZP.getVisibleGame(),
+    let o = _.ZP.getVisibleGame(),
         l = null != o && null != o.name && i.has(o.name),
         c = null != o && o.isLauncher,
         u = null != y.Z.getCurrentUserActiveStream(),
@@ -138,7 +138,7 @@ function x(e) {
     let { localActivities: t } = e;
     ((R = S({}, t)), P());
 }
-function M() {
+function k() {
     let e = {},
         t = !1;
     for (let [r, [i, a]] of Object.entries(R)) {
@@ -149,12 +149,12 @@ function M() {
     }
     return t ? ((R = e), 'APPLICATION_ACTIVITIES_CHANGED') : 'NO_CHANGES';
 }
-function k() {
-    (M(), P());
+function M() {
+    (k(), P());
 }
 class j extends (r = l.ZP.Store) {
     initialize() {
-        (this.waitFor(f.ZP, u.ZP, O.Z, y.Z, g.Z, b.Z, v.Z, p.Z), this.syncWith([h.Z, p.Z], () => P()));
+        (this.waitFor(_.ZP, u.ZP, O.Z, y.Z, g.Z, b.Z, v.Z, p.Z), this.syncWith([h.Z, p.Z], () => P()));
     }
     getActivities() {
         return C;
@@ -195,7 +195,7 @@ let U = new j(c.Z, {
     USER_CONNECTIONS_UPDATE: P,
     STREAM_START: P,
     STREAM_STOP: P,
-    USER_SETTINGS_PROTO_UPDATE: k,
+    USER_SETTINGS_PROTO_UPDATE: M,
     EMBEDDED_ACTIVITY_CLOSE: P,
     UPDATE_HANG_STATUS: P,
     RUNNING_GAME_TOGGLE_DETECTION: P

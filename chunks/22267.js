@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(481060),
     u = n(570908),
     d = n(204418),
-    _ = n(821795),
-    f = n(892567),
+    f = n(821795),
+    _ = n(892567),
     p = n(172751),
     h = n(359135),
     m = n(516817),
@@ -28,11 +28,11 @@ let A = {
         default: c.EFr.SIZE_32
     },
     N = (e) => {
-        let { user: t, guildId: n, nameplate: a, nameplateData: N, className: C, innerClassName: R, isHighlighted: P, showStatus: w, showPlaceholderUser: D, pendingGlobalName: L, nameplatePreviewSize: x = 'default', isPurchased: M = !1 } = e,
-            k = (0, s.e7)([E.Z], () => (0, l.wj)(E.Z.theme)),
+        let { user: t, guildId: n, nameplate: a, nameplateData: N, className: C, innerClassName: R, isHighlighted: P, showStatus: w, showPlaceholderUser: D, pendingGlobalName: L, nameplatePreviewSize: x = 'default', isPurchased: k = !1 } = e,
+            M = (0, s.e7)([E.Z], () => (0, l.wj)(E.Z.theme)),
             j = null != a ? (0, O.EU)(a) : N,
             U = (0, s.e7)([y.Z], () => (null != t ? y.Z.getStatus(t.id) : c.Skl.ONLINE)),
-            G = k ? '#706F74' : '#aaaab2',
+            G = M ? '#706F74' : '#aaaab2',
             B = i.useRef(null),
             V = (0, s.e7)([b.ZP], () => (null != n && null != t ? b.ZP.getMember(n, t.id) : null)),
             F =
@@ -49,12 +49,12 @@ let A = {
             role: 'img',
             'aria-label': v.intl.string(v.t.SZeUdX),
             style: {
-                color: k ? 'white' : 'black',
+                color: M ? 'white' : 'black',
                 width: '100%'
             },
             children: (0, r.jsxs)(c.Rny, {
                 className: o()(C, I.nameplatePreview, {
-                    [I.nameplatePurchased]: M && !P,
+                    [I.nameplatePurchased]: k && !P,
                     [I.large]: 'large' === x,
                     [I.xlarge]: 'xlarge' === x
                 }),
@@ -90,10 +90,10 @@ let A = {
                                               contextGuildId: n,
                                               className: I.tagChiplet
                                           }),
-                                          name: (0, r.jsx)(f.Z, {
+                                          name: (0, r.jsx)(_.Z, {
                                               userName: F,
                                               displayNameStyles: t.displayNameStyles,
-                                              effectDisplayType: _.F.ANIMATED
+                                              effectDisplayType: f.F.ANIMATED
                                           }),
                                           innerClassName: R
                                       })
@@ -103,7 +103,7 @@ let A = {
                                 className: o()(I.avatarContainer, D && I.avatarVisible),
                                 children: [
                                     (0, r.jsx)(c.qEK, {
-                                        src: k ? T : S,
+                                        src: M ? T : S,
                                         size: Z,
                                         'aria-hidden': !0,
                                         status: c.Skl.ONLINE,

@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => _,
+    ZP: () => f,
     oY: () => u,
     y: () => c
 });
@@ -25,7 +25,7 @@ function u(e, t, n) {
 function d(e, t, n) {
     return (0, r.e7)([a.ZP, i.Z, o.Z], () => u(e, t, n));
 }
-let _ = {
+let f = {
     getNickname: c,
     getName: u,
     useName: d

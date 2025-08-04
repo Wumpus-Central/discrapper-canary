@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(474936),
     _ = n(981631),
     j = n(921944),
-    C = n(46140),
-    E = n(388032),
+    E = n(46140),
+    C = n(388032),
     O = n(669018);
 function v(e) {
     let { groupName: t, targetElementRef: n } = e,
@@ -26,7 +26,7 @@ function v(e) {
         l = (0, h.Z)({ location: 'TenureLevelUpCoachmark' }),
         p = (0, d.Z)((e) => e.isOpen),
         g = (0, s.e7)([m.Z], () => m.Z.getLayers().includes(_.S9g.USER_SETTINGS)),
-        b = (0, u.Ws)({ location: C.dr.CONFLICT_CHECKS });
+        b = (0, u.Ws)({ location: E.dr.CONFLICT_CHECKS });
     return !l || null == r || p || g || !b
         ? null
         : (0, i.jsx)(c.Nq, {
@@ -69,7 +69,7 @@ function S(e) {
         children: [
             (0, i.jsx)(o.M0o, {
                 className: O.closeButton,
-                tooltip: E.intl.string(E.t.cpT0Cg),
+                tooltip: C.intl.string(C.t.cpT0Cg),
                 color: o.YX$.TERTIARY,
                 size: o.tT7.SIZE_24,
                 icon: (0, i.jsx)(o.Dio, {
@@ -81,24 +81,24 @@ function S(e) {
             null != u &&
                 (0, i.jsx)('img', {
                     src: u,
-                    alt: E.intl.string(f.nameUnformatted),
+                    alt: C.intl.string(f.nameUnformatted),
                     className: O.badgeImage
                 }),
             (0, i.jsx)(o.X6q, {
                 variant: 'heading-md/extrabold',
-                children: E.intl.string(E.t.VoDxsb)
+                children: C.intl.string(C.t.VoDxsb)
             }),
             (0, i.jsx)(o.Text, {
                 variant: 'text-sm/medium',
                 className: O.subtitle,
-                children: E.intl.formatToPlainString(E.t.ewkaVV, { timeMilestone: null == (t = (0, g.q)(f.id, f.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase() })
+                children: C.intl.formatToPlainString(C.t.ewkaVV, { timeMilestone: null == (t = (0, g.q)(f.id, f.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase() })
             }),
             (0, i.jsx)(l.zx, {
                 className: O.checkItOutButton,
                 color: l.Tt.WHITE,
                 size: l.Ph.SMALL,
                 onClick: m,
-                children: E.intl.string(E.t.RzWDqa)
+                children: C.intl.string(C.t.RzWDqa)
             }),
             (0, i.jsx)('div', { className: O.pointer })
         ]

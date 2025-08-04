@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(727637),
     u = n(171019),
     d = n(74538),
-    _ = n(864106),
-    f = n(439959),
+    f = n(864106),
+    _ = n(439959),
     p = n(125988),
     h = n(388032),
     m = n(725591);
@@ -104,8 +104,8 @@ let I = 3,
     R = (e) => {
         var { user: t, avatarDecoration: n, innerRef: a, section: o, isSelected: s = !1, canUsePremiumCollectibles: l } = e,
             d = O(e, ['user', 'avatarDecoration', 'innerRef', 'section', 'isSelected', 'canUsePremiumCollectibles']);
-        let _ = i.useRef(null),
-            h = (0, c.Z)(null != a ? a : _),
+        let f = i.useRef(null),
+            h = (0, c.Z)(null != a ? a : f),
             { avatarDecorationSrc: g } = (0, p.Z)({
                 user: t,
                 avatarDecorationOverride: n,
@@ -117,7 +117,7 @@ let I = 3,
             y(
                 E(
                     {
-                        innerRef: null != a ? a : _,
+                        innerRef: null != a ? a : f,
                         isSelected: s
                     },
                     d
@@ -130,8 +130,8 @@ let I = 3,
                             alt: n.label
                         }),
                         (0, r.jsx)(u.Z, {
-                            isPurchaseSection: o === f.$0.PURCHASE,
-                            isPremiumSection: o === f.$0.PREMIUM_PURCHASE,
+                            isPurchaseSection: o === _.$0.PURCHASE,
+                            isPremiumSection: o === _.$0.PREMIUM_PURCHASE,
                             canUsePremiumCollectibles: l,
                             skuId: n.skuId
                         })
@@ -142,12 +142,12 @@ let I = 3,
     },
     P = (e) => {
         let { user: t, guild: n, pendingAvatarDecoration: i, selectedAvatarDecorationRef: a, onSelect: o, onOpenShop: c } = e,
-            u = (0, f.ZP)(),
+            u = (0, _.ZP)(),
             p = d.ZP.canUseCollectibles(t),
             g = (e, d, g, b) => {
                 let { section: y, items: O } = u[e];
                 return (0, s.EQ)(O[d])
-                    .with(f.Tm, () =>
+                    .with(_.Tm, () =>
                         (0, r.jsxs)(
                             C,
                             {
@@ -163,14 +163,14 @@ let I = 3,
                                     (0, r.jsx)(l.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'header-primary',
-                                        children: (0, _.ad)(t, n) ? h.intl.string(h.t.CHf9iI) : h.intl.string(h.t.PoWNfX)
+                                        children: (0, f.ad)(t, n) ? h.intl.string(h.t.CHf9iI) : h.intl.string(h.t.PoWNfX)
                                     })
                                 ]
                             },
                             b
                         )
                     )
-                    .with(f.oT, () =>
+                    .with(_.oT, () =>
                         (0, r.jsxs)(
                             C,
                             {

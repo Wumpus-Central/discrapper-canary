@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(410030),
     u = n(388032),
     d = n(980362);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -61,7 +61,7 @@ function h(e, t) {
     );
 }
 function m(e) {
-    let { src: t, size: n, constrain: a = 'height', className: _, alt: p, fallbackSrc: m, 'aria-hidden': g, showTooltip: E = !1 } = e,
+    let { src: t, size: n, constrain: a = 'height', className: f, alt: p, fallbackSrc: m, 'aria-hidden': g, showTooltip: E = !1 } = e,
         b = (0, c.ZP)(),
         y = ''.concat(n, 'px'),
         [O, v] = i.useState(!1),
@@ -74,7 +74,7 @@ function m(e) {
             height: '100%',
             color: (0, s.wj)(b) ? l.TVs.colors.WHITE : l.TVs.colors.BLACK,
             style: { maxWidth: y },
-            className: o()(d.contentImage, _)
+            className: o()(d.contentImage, f)
         });
     let A =
         'height' === a
@@ -95,9 +95,9 @@ function m(e) {
             children: (e) =>
                 (0, r.jsx)(
                     'img',
-                    h(f({}, e), {
+                    h(_({}, e), {
                         style: A,
-                        className: o()(d.contentImage, _),
+                        className: o()(d.contentImage, f),
                         src: O && null != m ? m : t,
                         'aria-hidden': g,
                         alt: null != p ? p : g ? void 0 : u.intl.string(u.t['2B/phI']),

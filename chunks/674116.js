@@ -17,14 +17,14 @@ var i = n(255367),
     x = n(894939),
     _ = n(710808),
     j = n(625205),
-    C = n(325808),
-    E = n(823087),
+    E = n(325808),
+    C = n(823087),
     O = n(232388),
     v = n(546997),
     S = n(186934),
     T = n(716210),
-    N = n(520384),
-    I = n(459674),
+    I = n(520384),
+    N = n(459674),
     y = n(167540),
     A = n(267006),
     P = n(803567),
@@ -65,7 +65,7 @@ function V() {
                     (0, i.jsxs)(c.F, {
                         setting: w.s6.VOICE_AND_VIDEO_MIC_TEST,
                         children: [
-                            (0, i.jsx)(E.Z, {}),
+                            (0, i.jsx)(C.Z, {}),
                             (0, i.jsx)(a.R94, {
                                 className: M.marginBottom20,
                                 type: a.R94.Types.DESCRIPTION,
@@ -76,7 +76,7 @@ function V() {
                     }),
                     (0, i.jsx)(c.F, {
                         setting: w.s6.VOICE_AND_VIDEO_INPUT_MODE,
-                        children: (0, i.jsx)(C.Z, {})
+                        children: (0, i.jsx)(E.Z, {})
                     }),
                     (0, i.jsx)(c.F, {
                         setting: w.s6.VOICE_AND_VIDEO_SENSITIVITY,
@@ -121,14 +121,14 @@ function V() {
                             setting: w.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
                             children: (0, i.jsx)(P.Z, {})
                         }),
-                        (0, i.jsx)(N.Z, {}),
+                        (0, i.jsx)(I.Z, {}),
                         (0, i.jsx)(O.Z, {}),
                         (0, i.jsx)(h.Z, {}),
                         k && (0, i.jsx)(S.Z, {}),
                         (0, i.jsx)(b.Z, {}),
                         (0, i.jsx)(v.Z, {}),
                         (0, i.jsx)(T.Z, {}),
-                        (0, i.jsx)(I.Z, { refreshStyles: !0 }),
+                        (0, i.jsx)(N.Z, { refreshStyles: !0 }),
                         (0, i.jsx)(a.$i$, { className: M.marginBottom40 }),
                         (0, i.jsx)(c.F, {
                             setting: w.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,

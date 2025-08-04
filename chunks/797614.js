@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,12 +57,12 @@ function _(e, t) {
         e
     );
 }
-let f = new Set(['darwin', 'linux', 'win32', 'ios', 'android']);
+let _ = new Set(['darwin', 'linux', 'win32', 'ios', 'android']);
 function p() {
     if ((0, a.isWeb)()) return 'web';
     {
         let e = (0, a.getPlatformName)();
-        return f.has(e) ? e : null;
+        return _.has(e) ? e : null;
     }
 }
 function h() {
@@ -95,7 +95,7 @@ class E {
     }
     distribution(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = _(u({}, this._getMetricWithDefaults(e, 'distribution')), { value: t });
+            r = f(u({}, this._getMetricWithDefaults(e, 'distribution')), { value: t });
         (this._metrics.push(r), (n || this._metrics.length >= g) && this._flush());
     }
     _flush() {
@@ -107,8 +107,8 @@ class E {
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: '1754342499372',
-                            build_number: '426856'
+                            built_at: '1754347448471',
+                            build_number: '426925'
                         }
                     },
                     retries: 1,

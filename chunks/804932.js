@@ -17,8 +17,8 @@ var r = n(255367),
     c = n(626135),
     u = n(787879),
     d = n(370774),
-    _ = n(982183),
-    f = n(981631);
+    f = n(982183),
+    _ = n(981631);
 let p = i.createContext(''),
     h = (e) => {
         let { children: t } = e,
@@ -31,7 +31,7 @@ let p = i.createContext(''),
     m = () => i.useContext(p);
 function g(e) {
     let { variant: t, viewId: n, entrypoint: r } = e;
-    c.default.track(f.rMx.NOTIFICATIONS_INBOX_OPENED, {
+    c.default.track(_.rMx.NOTIFICATIONS_INBOX_OPENED, {
         inbox_variant: t,
         inbox_entrypoint: r,
         view_id: n
@@ -39,7 +39,7 @@ function g(e) {
 }
 function E(e) {
     let { timeToLoad: t, unreadsCount: n, totalMessagesCount: r, viewId: i, unreadsBadgeMentionCount: a, unreadsBadgeChannelCount: o, unreadMessageItemsCount: s, unreadMentionsCount: l } = e;
-    c.default.track(f.rMx.NOTIFICATIONS_INBOX_READY, {
+    c.default.track(_.rMx.NOTIFICATIONS_INBOX_READY, {
         time_to_load: t,
         unreads_count: n,
         total_messages_count: r,
@@ -55,7 +55,7 @@ var b = (function (e) {
 })({});
 function y(e) {
     let { message: t, interactionType: n, viewId: r } = e;
-    c.default.track(f.rMx.NOTIFICATIONS_INBOX_ITEM_INTERACTED, {
+    c.default.track(_.rMx.NOTIFICATIONS_INBOX_ITEM_INTERACTED, {
         interaction_type: n,
         message_id: t.id,
         channel_id: t.channel_id,
@@ -66,7 +66,7 @@ function y(e) {
 }
 function O(e) {
     let { section: t, enabled: n, viewId: r } = e;
-    c.default.track(f.rMx.NOTIFICATIONS_INBOX_SECTION_INTERACTED, {
+    c.default.track(_.rMx.NOTIFICATIONS_INBOX_SECTION_INTERACTED, {
         section: t,
         enabled: n,
         view_id: r
@@ -74,7 +74,7 @@ function O(e) {
 }
 function v(e) {
     let { unreadsCount: t, totalMessagesCount: n, unreadItemsCount: r, totalItemsCount: i, viewId: a } = e;
-    c.default.track(f.rMx.NOTIFICATIONS_INBOX_UNMOUNTED, {
+    c.default.track(_.rMx.NOTIFICATIONS_INBOX_UNMOUNTED, {
         unreads_count: t,
         total_messages_count: n,
         unread_items_count: r,
@@ -84,18 +84,18 @@ function v(e) {
 }
 function I(e) {
     let { timeToLoad: t, messagesCount: n, unreadMessagesCount: r, channelsFetched: i, mentionsFetched: a, loadingTrigger: o, viewId: s } = e;
-    c.default.track(f.rMx.NOTIFICATIONS_INBOX_DATA_LOADED, {
+    c.default.track(_.rMx.NOTIFICATIONS_INBOX_DATA_LOADED, {
         time_to_load: t,
         messages_count: n,
         unread_messages_count: r,
         channels_fetched: i,
         mentions_fetched: a,
-        loading_trigger: null != o ? o : _.X.UNKNOWN,
+        loading_trigger: null != o ? o : f.X.UNKNOWN,
         view_id: s
     });
 }
 function T(e) {
-    let { notificationCenterVariant: t, entrypoint: n, messages: r, unreadMessages: a, viewId: c, messagesByCategory: f } = e,
+    let { notificationCenterVariant: t, entrypoint: n, messages: r, unreadMessages: a, viewId: c, messagesByCategory: _ } = e,
         p = i.useRef(null),
         h = i.useRef(!1),
         m = (0, o.e7)([u.Z], () => u.Z.isLoading),
@@ -123,21 +123,21 @@ function T(e) {
                         totalMessagesCount: r.length,
                         unreadsBadgeMentionCount: O,
                         unreadsBadgeChannelCount: T.length,
-                        unreadMessageItemsCount: f.UNREAD.length,
-                        unreadMentionsCount: f.UNREAD.filter((e) => e.every((e) => e.kind === _.fL.MENTION)).length,
+                        unreadMessageItemsCount: _.UNREAD.length,
+                        unreadMentionsCount: _.UNREAD.filter((e) => e.every((e) => e.kind === f.fL.MENTION)).length,
                         viewId: c
                     }));
             }
-        }, [r, a, c, T, O, f]),
+        }, [r, a, c, T, O, _]),
         i.useEffect(() => {
-            let e = (null == y ? void 0 : y.loadingTrigger) === _.X.AUTO_LOAD;
+            let e = (null == y ? void 0 : y.loadingTrigger) === f.X.AUTO_LOAD;
             if (null != y && !0 === b && !1 === m && !e) {
                 var t;
                 I({
                     timeToLoad: null == y ? void 0 : y.timeToLoad,
                     messagesCount: r.length,
                     unreadMessagesCount: a.length,
-                    loadingTrigger: null != (t = null == y ? void 0 : y.loadingTrigger) ? t : _.X.UNKNOWN,
+                    loadingTrigger: null != (t = null == y ? void 0 : y.loadingTrigger) ? t : f.X.UNKNOWN,
                     viewId: null == y ? void 0 : y.viewId,
                     channelsFetched: null == y ? void 0 : y.channelsFetched,
                     mentionsFetched: null == y ? void 0 : y.mentionsFetched
@@ -149,8 +149,8 @@ function T(e) {
             v({
                 unreadsCount: null != (e = null == a ? void 0 : a.length) ? e : 0,
                 totalMessagesCount: null != (t = null == r ? void 0 : r.length) ? t : 0,
-                unreadItemsCount: f.UNREAD.length,
-                totalItemsCount: f.TODAY.length + f.YESTERDAY.length + f.OLDER.length,
+                unreadItemsCount: _.UNREAD.length,
+                totalItemsCount: _.TODAY.length + _.YESTERDAY.length + _.OLDER.length,
                 viewId: c
             });
         }));

@@ -2,10 +2,10 @@
     I8: () => p,
     Jc: () => g,
     LK: () => m,
-    ON: () => f,
+    ON: () => _,
     sD: () => h,
     x3: () => d,
-    yA: () => _
+    yA: () => f
 }),
     n(49124));
 var r = n(392711),
@@ -50,20 +50,20 @@ function d(e) {
     }
     return null;
 }
-function _(e, t) {
+function f(e, t) {
     return (null == e && null != t) || (null != e && null == t) || (null != e && null != t && !i().isEqual(e, t));
 }
-function f(e, t) {
+function _(e, t) {
     var n, r, i;
     let c = u({}, e),
         d = t.subgameInfo,
-        _ = t.application,
-        f = Number(null == (n = e.gameMetadata) ? void 0 : n[o.wF.ROBLOX_TIME_STARTED]);
-    if (((isNaN(f) || 0 === f) && (f = null != (r = e.start) ? r : Date.now()), null == d)) (c.id !== o.eB && ((c.id = o.eB), (c.name = s.EOG[s.GQo.ROBLOX])), (c.gameMetadata = void 0), (c.sku = void 0), (c.start = f));
+        f = t.application,
+        _ = Number(null == (n = e.gameMetadata) ? void 0 : n[o.wF.ROBLOX_TIME_STARTED]);
+    if (((isNaN(_) || 0 === _) && (_ = null != (r = e.start) ? r : Date.now()), null == d)) (c.id !== o.eB && ((c.id = o.eB), (c.name = s.EOG[s.GQo.ROBLOX])), (c.gameMetadata = void 0), (c.sku = void 0), (c.start = _));
     else {
         let t = {},
-            n = null != _ ? l.intl.formatToPlainString(l.t.G6BGd3, { subgameName: _.name }) : null;
-        (null != _ &&
+            n = null != f ? l.intl.formatToPlainString(l.t.G6BGd3, { subgameName: f.name }) : null;
+        (null != f &&
         null != n &&
         (0, a.ik)({
             exePath: e.exePath,
@@ -73,9 +73,9 @@ function f(e, t) {
             exePath: e.exePath,
             name: s.EOG[s.GQo.ROBLOX]
         })
-            ? ((c.id = _.id), (c.name = n), (c.start = Date.now()))
-            : ((c.id = o.eB), (c.name = s.EOG[s.GQo.ROBLOX]), (c.start = f)),
-            (t[o.wF.ROBLOX_TIME_STARTED] = f.toString()),
+            ? ((c.id = f.id), (c.name = n), (c.start = Date.now()))
+            : ((c.id = o.eB), (c.name = s.EOG[s.GQo.ROBLOX]), (c.start = _)),
+            (t[o.wF.ROBLOX_TIME_STARTED] = _.toString()),
             (c.sku = null != (i = d.universeId) ? i : void 0),
             null != d.placeId && (t[o.wF.PLACE_ID] = d.placeId),
             null != d.jobId && (t[o.wF.JOB_ID] = d.jobId),

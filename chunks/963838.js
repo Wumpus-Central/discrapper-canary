@@ -15,8 +15,8 @@ var r = n(392711),
     c = n(624833),
     u = n(944314),
     d = n(399358),
-    _ = n(945835),
-    f = n(912931),
+    f = n(945835),
+    _ = n(912931),
     p = n(966552),
     h = n(561763),
     m = n(529306),
@@ -41,11 +41,11 @@ let x = {
         start: 10,
         end: 15
     },
-    M = [a],
-    k = [o, s, l, c, u, d, _, f, p, h, m, g, E, b, y, O, v, I, T, S, A],
+    k = [a],
+    M = [o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A],
     j = {
-        [D.q.BASIC]: M,
-        [D.q.PREMIUM]: k
+        [D.q.BASIC]: k,
+        [D.q.PREMIUM]: M
     },
     U = i().memoize(
         (e) =>

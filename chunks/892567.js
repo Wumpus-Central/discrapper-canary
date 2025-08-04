@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(442837),
     u = n(481060),
     d = n(607070),
-    _ = n(594928),
-    f = n(181430),
+    f = n(594928),
+    _ = n(181430),
     p = n(821795),
     h = n(760692),
     m = n(7284),
@@ -29,8 +29,8 @@ let E = i.memo(function (e) {
             saturation: d.Z.saturation,
             desaturateUserColors: d.Z.desaturateUserColors
         })),
-        { includeNonProfile: T } = _.f.useExperiment({ location: 'useDisplayNameStylesFont' });
-    if (!(0, f.Y)({ location: 'UserNameWithEffects' }) || (!a && !T) || null == n) return t;
+        { includeNonProfile: T } = f.f.useExperiment({ location: 'useDisplayNameStylesFont' });
+    if (!(0, _.Y)({ location: 'UserNameWithEffects' }) || (!a && !T) || null == n) return t;
     let S = n.colors.map((e) => (0, l.ho)(e, !1, I ? v : null)),
         A = (0, h.K)(n.effectId, S),
         N = b(n.effectId);

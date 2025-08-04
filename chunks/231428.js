@@ -17,14 +17,14 @@ var i,
     x = n(600164),
     _ = n(239827),
     j = n(818035),
-    C = n(509545),
-    E = n(78839),
+    E = n(509545),
+    C = n(78839),
     O = n(74538),
     v = n(807160),
     S = n(981631),
     T = n(474936),
-    N = n(231338),
-    I = n(388032),
+    I = n(231338),
+    N = n(388032),
     y = n(474915),
     A = n(468590);
 function P(e, t, n) {
@@ -172,12 +172,12 @@ class w extends (i = s.PureComponent) {
                 children: [
                     (0, r.jsx)('div', {
                         className: y.externalRowHeader,
-                        children: I.intl.format(I.t['6mIX6u'], { paymentGatewayName: N.Vz[e.paymentGateway] })
+                        children: N.intl.format(N.t['6mIX6u'], { paymentGatewayName: I.Vz[e.paymentGateway] })
                     }),
                     (0, r.jsx)('div', {
                         className: y.externalRowBody,
-                        children: I.intl.format(I.t.eG0uZG, {
-                            paymentGatewayName: N.Vz[e.paymentGateway],
+                        children: N.intl.format(N.t.eG0uZG, {
+                            paymentGatewayName: I.Vz[e.paymentGateway],
                             billingHistoryLink: (0, O.JE)(e.paymentGateway, 'BILLING_HISTORY')
                         })
                     })
@@ -206,15 +206,15 @@ class w extends (i = s.PureComponent) {
                                                   children: [
                                                       (0, r.jsx)('div', {
                                                           className: A.date,
-                                                          children: I.intl.string(I.t['5t11BQ'])
+                                                          children: N.intl.string(N.t['5t11BQ'])
                                                       }),
                                                       (0, r.jsx)('div', {
                                                           className: y.paymentRowHeaderDescription,
-                                                          children: I.intl.string(I.t.yAAPb2)
+                                                          children: N.intl.string(N.t.yAAPb2)
                                                       }),
                                                       (0, r.jsx)('div', {
                                                           className: A.amount,
-                                                          children: I.intl.string(I.t['6MqHXV'])
+                                                          children: N.intl.string(N.t['6MqHXV'])
                                                       })
                                                   ]
                                               })
@@ -244,7 +244,7 @@ function k(e) {
 }
 function L(e) {
     let t = (0, u.e7)([j.Z], () => j.Z.getPayments()),
-        n = (0, u.e7)([E.Z], () => E.Z.getPremiumTypeSubscription()),
+        n = (0, u.e7)([C.Z], () => C.Z.getPremiumTypeSubscription()),
         i = s.useMemo(
             () =>
                 new Set(
@@ -265,7 +265,7 @@ function L(e) {
                 ),
             [t]
         ),
-        l = (0, u.Wu)([C.Z], () => C.Z.getPlanIdsForSkus(Array.from(a))),
+        l = (0, u.Wu)([E.Z], () => E.Z.getPlanIdsForSkus(Array.from(a))),
         o = s.useCallback(() => l.length === i.size, [l, i]),
         c = s.useMemo(() => t.filter((e) => e.currency !== S.pKx.DISCORD_ORB), [t]);
     return (

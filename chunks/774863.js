@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function _(e, t) {
         e
     );
 }
-let f = 2,
+let _ = 2,
     p = 14 * s.Z.Millis.DAY,
     h = Object.freeze([]),
     m = {},
@@ -77,7 +77,7 @@ function E(e) {
 function b(e) {
     let { messageId: t, channelId: n } = e,
         r = g[n];
-    null != r && ((g[n] = r.map((e) => (e.messageId === t ? _(u({}, e), { reportSubmit: !0 }) : e))), (m[t] = _(u({}, m[t]), { reportSubmit: !0 })));
+    null != r && ((g[n] = r.map((e) => (e.messageId === t ? f(u({}, e), { reportSubmit: !0 }) : e))), (m[t] = f(u({}, m[t]), { reportSubmit: !0 })));
 }
 function y() {
     v();
@@ -102,7 +102,7 @@ class I extends (i = a.ZP.Store) {
         return null != t && !t.reportSubmit && l.default.age(t.messageId) < p;
     }
     get validContentScanVersion() {
-        return null != r ? r : f;
+        return null != r ? r : _;
     }
 }
 c(I, 'displayName', 'FalsePositiveStore');

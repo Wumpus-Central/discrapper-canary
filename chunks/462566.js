@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(219929),
     u = n(594174),
     d = n(754103),
-    _ = n(12464),
-    f = n(388032),
+    f = n(12464),
+    _ = n(388032),
     p = n(142116),
     h = n(360797);
 function m(e, t, n) {
@@ -90,7 +90,7 @@ let y = function (e) {
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                 t = {};
-            return ((e || T.name) && '' === v.name && (t.name = f.intl.string(f.t.lIkVsr)), t);
+            return ((e || T.name) && '' === v.name && (t.name = _.intl.string(_.t.lIkVsr)), t);
         },
         [T, v]
     );
@@ -106,10 +106,10 @@ let y = function (e) {
             fields: [
                 {
                     name: 'cardNumber',
-                    title: () => f.intl.string(f.t.cVyJ3t),
+                    title: () => _.intl.string(_.t.cVyJ3t),
                     getClassNameForLayout: () => h.width100,
                     renderInput: () =>
-                        (0, r.jsx)(_.Z, {
+                        (0, r.jsx)(f.Z, {
                             stripeType: 'cardNumber',
                             flipped: m,
                             updateCompleted: (e) => P('cardNumber', e),
@@ -122,10 +122,10 @@ let y = function (e) {
             fields: [
                 {
                     name: 'cardExpiry',
-                    title: () => f.intl.string(f.t['CeBa//']),
+                    title: () => _.intl.string(_.t['CeBa//']),
                     getClassNameForLayout: () => h.width50,
                     renderInput: () =>
-                        (0, r.jsx)(_.Z, {
+                        (0, r.jsx)(f.Z, {
                             stripeType: 'cardExpiry',
                             updateCompleted: (e) => P('cardExpiry', e),
                             onFocus: R
@@ -133,10 +133,10 @@ let y = function (e) {
                 },
                 {
                     name: 'cardCvc',
-                    title: () => f.intl.string(f.t.Fd3rOz),
+                    title: () => _.intl.string(_.t.Fd3rOz),
                     getClassNameForLayout: () => h.width50,
                     renderInput: () =>
-                        (0, r.jsx)(_.Z, {
+                        (0, r.jsx)(f.Z, {
                             stripeType: 'cardCvc',
                             updateCompleted: (e) => P('cardCvc', e),
                             onFocus: () => {
@@ -154,9 +154,9 @@ let y = function (e) {
                 {
                     id: 'card-name',
                     name: 'name',
-                    title: () => f.intl.string(f.t.VUlFdX),
+                    title: () => _.intl.string(_.t.VUlFdX),
                     autoComplete: 'cc-name',
-                    placeholder: () => f.intl.string(f.t.yf7ms7),
+                    placeholder: () => _.intl.string(_.t.yf7ms7),
                     getClassNameForLayout: () => h.width100,
                     renderInput: (e) => (0, r.jsx)(l.oil, g({}, e))
                 }
@@ -168,9 +168,9 @@ let y = function (e) {
         let n = g({}, v),
             r = g({}, T),
             i = { name: A.name };
-        (T[t] || '' === e || (r[t] = !0), (n[t] = e), r[t] && '' === e ? 'name' === t && (i.name = f.intl.string(f.t.lIkVsr)) : delete i[t], I(n), S(r), N(i));
+        (T[t] || '' === e || (r[t] = !0), (n[t] = e), r[t] && '' === e ? 'name' === t && (i.name = _.intl.string(_.t.lIkVsr)) : delete i[t], I(n), S(r), N(i));
     }
-    function M() {
+    function k() {
         var e;
         return (null == (e = u.default.getCurrentUser()) ? void 0 : e.nsfwAllowed)
             ? (0, r.jsxs)('div', {
@@ -184,7 +184,7 @@ let y = function (e) {
     }
     return (0, r.jsxs)('div', {
         children: [
-            M(),
+            k(),
             (0, r.jsx)(d.Z, {
                 form: L,
                 errors: A,

@@ -47,7 +47,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function _(e, t) {
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,7 +80,7 @@ function p(e, t) {
 }
 let h = (e) => {
     var { gradientColor: t, title: n, subtitle: c, onClose: d, onSecondaryClick: p, videoSrc: h, loopAt: m } = e,
-        g = f(e, ['gradientColor', 'title', 'subtitle', 'onClose', 'onSecondaryClick', 'videoSrc', 'loopAt']);
+        g = _(e, ['gradientColor', 'title', 'subtitle', 'onClose', 'onSecondaryClick', 'videoSrc', 'loopAt']);
     let { subscribeButtonProps: E, subscriptionTier: b } = (0, o.G)({ defaultTextOverride: l.intl.string(l.t.pj0XBA) }),
         y = (0, s.Z)();
     return (0, r.jsx)(a.Z, {
@@ -110,7 +110,7 @@ let h = (e) => {
                                 text: l.intl.string(l.t.ZnqyZ2),
                                 onClick: p
                             },
-                            _(u({}, E), { onClick: a })
+                            f(u({}, E), { onClick: a })
                         ]
                     },
                     null != y && { badge: { text: y } },

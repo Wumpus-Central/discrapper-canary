@@ -1,4 +1,4 @@
-(n.d(t, { v: () => _ }), n(388685));
+(n.d(t, { v: () => f }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(103891),
@@ -8,14 +8,14 @@ var r = n(255367),
     c = n(40851),
     u = n(607070),
     d = n(912811);
-function _(e) {
-    let { buffer: t, autoplay: n = !0, className: a, fit: s, alignment: c, style: u, eventTargetRef: _, artboard: h, withReducedMotion: m = 'halt', ref: g, artboardProperties: E, dataBinding: b } = e,
+function f(e) {
+    let { buffer: t, autoplay: n = !0, className: a, fit: s, alignment: c, style: u, eventTargetRef: f, artboard: h, withReducedMotion: m = 'halt', ref: g, artboardProperties: E, dataBinding: b } = e,
         y = i.useContext(l.Sfi),
-        O = f(),
+        O = _(),
         [v, I] = i.useState(void 0),
         T = i.useRef(null),
         { rive: S, RiveComponent: A } = (0, o.useRive)({
-            eventTarget: null == _ ? void 0 : _.current,
+            eventTarget: null == f ? void 0 : f.current,
             buffer: t,
             autoplay: n,
             stateMachines: v,
@@ -113,7 +113,7 @@ function _(e) {
         })
     );
 }
-function f() {
+function _() {
     let { renderWindow: e } = i.useContext(c.ZP),
         [t, n] = i.useState(e.document.hasFocus());
     return (
@@ -135,8 +135,8 @@ function p(e) {
     let { rive: t, artboard: n, artboardProperties: r, dataBinding: a } = e,
         c = (0, o.useViewModel)(t);
     (0, o.useViewModelInstance)(c);
-    let { theme: d, saturation: _ } = (0, l.TCT)(),
-        f = (0, s.e7)([u.Z], () => u.Z.isHighContrastModeEnabled);
+    let { theme: d, saturation: f } = (0, l.TCT)(),
+        _ = (0, s.e7)([u.Z], () => u.Z.isHighContrastModeEnabled);
     i.useEffect(() => {
         if (null == t || null == t.viewModelInstance || null == a) return;
         let e = r[n];
@@ -149,8 +149,8 @@ function p(e) {
                     let [h, m, g, E] = u
                         .resolve({
                             theme: d,
-                            saturation: _,
-                            highContrastModeEnabled: f
+                            saturation: f,
+                            highContrastModeEnabled: _
                         })
                         .rgba();
                     null == (i = t.viewModelInstance) || null == (r = i.color(c)) || r.rgba(h, m, g, 255 * E);
@@ -174,6 +174,6 @@ function p(e) {
                     console.warn('Unknown property type: '.concat(p));
             }
         });
-    }, [a, t, n, r, d, null == t ? void 0 : t.viewModelInstance, _, f]);
+    }, [a, t, n, r, d, null == t ? void 0 : t.viewModelInstance, f, _]);
 }
 o.RuntimeLoader.setWasmUrl(a);

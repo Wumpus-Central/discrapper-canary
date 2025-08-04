@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(981631),
     _ = n(869783),
     j = n(888723),
-    C = n(790895);
-function E(e) {
+    E = n(790895);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -71,7 +71,7 @@ let v = (e) => {
             };
         return s
             ? (0, i.jsx)('div', {
-                  className: C.bentoBoxButton,
+                  className: E.bentoBoxButton,
                   children: (0, i.jsx)(o.z, {
                       variant: 'secondary',
                       onClick: g,
@@ -88,7 +88,7 @@ let v = (e) => {
     },
     S = (e) => {
         let t,
-            { name: n, title: s, description: o, descriptionCta: d, previewImage: u, videoUrl: p, shouldLoadVideo: S, index: T, customVideoStyle: N, isReducedMotion: I, onClick: y, badgeText: A, size: P, enablePremiumBrandRefreshDesign: R } = e,
+            { name: n, title: s, description: o, descriptionCta: d, previewImage: u, videoUrl: p, shouldLoadVideo: S, index: T, customVideoStyle: I, isReducedMotion: N, onClick: y, badgeText: A, size: P, enablePremiumBrandRefreshDesign: R } = e,
             D = (0, f.rO)(),
             Z = r.useRef(null),
             w = r.useRef(0),
@@ -125,12 +125,12 @@ let v = (e) => {
                 h.default.track(x.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(n) });
             }, 800),
             B = () => {
-                null == Z.current || I || ((Z.current.currentTime = w.current), Z.current.play());
+                null == Z.current || N || ((Z.current.currentTime = w.current), Z.current.play());
             },
             M = () => {
-                null == Z.current || I || ((w.current = Z.current.currentTime), Z.current.pause());
+                null == Z.current || N || ((w.current = Z.current.currentTime), Z.current.pause());
             },
-            U = R ? C : j;
+            U = R ? E : j;
         t = R ? (P === b.y$.LARGE ? 'heading-xxl/bold' : 'heading-xl/bold') : P === b.y$.SMALL ? 'heading-xl/extrabold' : 'heading-xxl/extrabold';
         let V = () =>
                 (0, i.jsxs)('div', {
@@ -182,7 +182,7 @@ let v = (e) => {
                             muted: !0,
                             poster: u,
                             loop: !0,
-                            className: a()(U.boxVideo, { [N]: null != N }),
+                            className: a()(U.boxVideo, { [I]: null != I }),
                             ref: Z,
                             children: (0, i.jsx)('source', {
                                 src: p,
@@ -202,7 +202,7 @@ let v = (e) => {
                           children: [(0, i.jsx)(G, {}), (0, i.jsx)(V, {})]
                       }),
             W = {
-                className: a()(R ? C.backgroundColor : k, U.boxContainer, U[''.concat(P)], R && C.gradientBackground),
+                className: a()(R ? E.backgroundColor : k, U.boxContainer, U[''.concat(P)], R && E.gradientBackground),
                 onMouseEnter: B,
                 onFocus: B,
                 onBlur: M,
@@ -211,10 +211,10 @@ let v = (e) => {
         return R
             ? (0, i.jsx)(
                   c.$,
-                  O(E({}, W), {
+                  O(C({}, W), {
                       color: 'purple',
                       children: (0, i.jsx)(H, {})
                   })
               )
-            : (0, i.jsx)('div', O(E({}, W), { children: (0, i.jsx)(H, {}) }));
+            : (0, i.jsx)('div', O(C({}, W), { children: (0, i.jsx)(H, {}) }));
     };

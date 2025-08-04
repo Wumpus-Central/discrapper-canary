@@ -12,8 +12,8 @@ var r,
     c = n(158776),
     u = n(146282),
     d = n(107866),
-    _ = n(561308);
-function f(e, t, n) {
+    f = n(561308);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -76,13 +76,13 @@ class v extends (r = s.ZP.Store) {
         (this.waitFor(u.Z, c.Z), this.syncWith([c.Z], O));
     }
     getMatchingActivity(e) {
-        return (0, _.n2)(e) ? null : h.get(m(e));
+        return (0, f.n2)(e) ? null : h.get(m(e));
     }
     constructor(...e) {
-        (super(...e), f(this, 'canRenderContent', (e) => !(0, _.n2)(e) && (!p.has(e.content_type) || null != this.getMatchingActivity(e))));
+        (super(...e), _(this, 'canRenderContent', (e) => !(0, f.n2)(e) && (!p.has(e.content_type) || null != this.getMatchingActivity(e))));
     }
 }
-f(v, 'displayName', 'ContentInventoryActivityStore');
+_(v, 'displayName', 'ContentInventoryActivityStore');
 let I = new v(l.Z, {
     CONNECTION_OPEN: y,
     CONTENT_INVENTORY_SET_FEED: b

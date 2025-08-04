@@ -9,8 +9,8 @@ var i = n(481060),
     c = n(708108),
     u = n(146078),
     d = n(228168),
-    _ = n(182294),
-    f = n(68646);
+    f = n(182294),
+    _ = n(68646);
 let p = 3;
 function h(e) {
     let { user: t, onOpenProfile: n } = e,
@@ -22,7 +22,7 @@ function h(e) {
     let y = () =>
             g
                 ? (0, r.jsxs)(i.P3F, {
-                      className: f.section,
+                      className: _.section,
                       onClick: () => (null == n ? void 0 : n(d.oh.MUTUAL_FRIENDS)),
                       children: [
                           (0, r.jsx)(a.Z, {
@@ -31,13 +31,13 @@ function h(e) {
                                   let { user: t } = e;
                                   return t;
                               }),
-                              size: _.EF.SIZE_16,
+                              size: f.EF.SIZE_16,
                               hideOverflowCount: !0,
                               disableUsernameTooltip: !0,
                               'aria-hidden': !0
                           }),
                           (0, r.jsx)(i.Text, {
-                              className: f.text,
+                              className: _.text,
                               variant: b,
                               color: 'interactive-normal',
                               children: (0, c.Z)(h.length)
@@ -49,13 +49,13 @@ function h(e) {
             g && E
                 ? (0, r.jsx)('div', {
                       'aria-hidden': 'true',
-                      className: f.spacer
+                      className: _.spacer
                   })
                 : null,
         v = () =>
             E
                 ? (0, r.jsxs)(i.P3F, {
-                      className: f.section,
+                      className: _.section,
                       onClick: () => (null == n ? void 0 : n(d.oh.MUTUAL_GUILDS)),
                       children: [
                           !g &&
@@ -70,7 +70,7 @@ function h(e) {
                                   disableGuildNameTooltip: !0
                               }),
                           (0, r.jsx)(i.Text, {
-                              className: f.text,
+                              className: _.text,
                               variant: b,
                               color: 'interactive-normal',
                               children: (0, u.Z)(m.length)
@@ -79,7 +79,7 @@ function h(e) {
                   })
                 : null;
     return (0, r.jsxs)('div', {
-        className: f.mutuals,
+        className: _.mutuals,
         children: [y(), O(), v()]
     });
 }

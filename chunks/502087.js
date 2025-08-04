@@ -56,50 +56,50 @@ function d(e, t) {
         e
     );
 }
-let _ = 'OverridePremiumTypeStore',
-    f = {
+let f = 'OverridePremiumTypeStore',
+    _ = {
         premiumTypeOverride: s.F_,
         premiumTypeActual: s.F_,
         createdAtOverride: s.Zh
     };
 function p(e) {
     let { premiumType: t } = e;
-    f.premiumTypeOverride = t;
+    _.premiumTypeOverride = t;
 }
 function h(e) {
     let { createdAt: t } = e;
-    f.createdAtOverride = t;
+    _.createdAtOverride = t;
 }
 function m(e) {
     let { user: t } = e;
-    f.premiumTypeActual = (0, o.G)(t.premium_type);
+    _.premiumTypeActual = (0, o.G)(t.premium_type);
 }
 class g extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
-            ((f.premiumTypeActual = null == e ? void 0 : e.premiumTypeActual), (f.premiumTypeOverride = null == e ? void 0 : e.premiumTypeOverride), null != e.createdAtOverride ? (f.createdAtOverride = new Date(e.createdAtOverride)) : (f.createdAtOverride = s.Zh));
+            ((_.premiumTypeActual = null == e ? void 0 : e.premiumTypeActual), (_.premiumTypeOverride = null == e ? void 0 : e.premiumTypeOverride), null != e.createdAtOverride ? (_.createdAtOverride = new Date(e.createdAtOverride)) : (_.createdAtOverride = s.Zh));
             return;
         }
-        ((f.premiumTypeOverride = s.F_), (f.createdAtOverride = s.Zh));
+        ((_.premiumTypeOverride = s.F_), (_.createdAtOverride = s.Zh));
     }
     getPremiumTypeOverride() {
-        return f.premiumTypeOverride;
+        return _.premiumTypeOverride;
     }
     getPremiumTypeActual() {
-        return f.premiumTypeActual;
+        return _.premiumTypeActual;
     }
     getCreatedAtOverride() {
-        return f.createdAtOverride;
+        return _.createdAtOverride;
     }
     getState() {
-        return f;
+        return _;
     }
     get premiumType() {
-        return f.premiumTypeOverride;
+        return _.premiumTypeOverride;
     }
 }
-(l(g, 'displayName', _),
-    l(g, 'persistKey', _),
+(l(g, 'displayName', f),
+    l(g, 'persistKey', f),
     l(g, 'migrations', [
         (e) => {
             if ((null == e ? void 0 : e.createdAtOverride) == null) return d(c({}, e), { createdAtOverride: s.Zh });

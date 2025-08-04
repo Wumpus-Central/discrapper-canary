@@ -17,19 +17,19 @@ var r = n(442837),
     b = n(831169);
 function x(e) {
     var t;
-    let { app: n, currentSubscription: p, currentListing: h, alternativeListings: x, navigateToHome: j, subscriptionGroup: C, renewalSkuId: E } = e,
+    let { app: n, currentSubscription: p, currentListing: h, alternativeListings: x, navigateToHome: j, subscriptionGroup: E, renewalSkuId: C } = e,
         O = (0, a.y)(n, 100),
-        v = (0, m.KK)(C.flags),
+        v = (0, m.KK)(E.flags),
         S = v ? s.QTo : s.tBG,
         T = v ? f.intl.string(f.t['46YF2N']) : f.intl.string(f.t.fFyGiI),
-        N = null == (t = p.metadata) ? void 0 : t.application_subscription_guild_id,
-        I = (0, r.e7)([d.Z], () => (v && null != N ? d.Z.getGuild(N) : void 0), [N, v]),
+        I = null == (t = p.metadata) ? void 0 : t.application_subscription_guild_id,
+        N = (0, r.e7)([d.Z], () => (v && null != I ? d.Z.getGuild(I) : void 0), [I, v]),
         y = (0, r.e7)(
             [u.Z],
             () => {
-                if (null != E) return u.Z.get(E);
+                if (null != C) return u.Z.get(C);
             },
-            [E]
+            [C]
         ),
         A = (0, g.p)(p.currentPeriodEnd);
     return (0, i.jsxs)('div', {
@@ -65,7 +65,7 @@ function x(e) {
                                             T
                                         ]
                                     }),
-                                    null != I &&
+                                    null != N &&
                                         (0, i.jsxs)(i.Fragment, {
                                             children: [
                                                 (0, i.jsx)(s.Text, {
@@ -76,13 +76,13 @@ function x(e) {
                                                     className: b.guildSubscription,
                                                     children: [
                                                         (0, i.jsx)(c.Z, {
-                                                            guild: I,
+                                                            guild: N,
                                                             size: c.Z.Sizes.SMOL
                                                         }),
                                                         (0, i.jsx)(s.X6q, {
                                                             variant: 'heading-md/semibold',
                                                             color: 'text-muted',
-                                                            children: f.intl.format(f.t['7ZD8p6'], { guildName: I.name })
+                                                            children: f.intl.format(f.t['7ZD8p6'], { guildName: N.name })
                                                         })
                                                     ]
                                                 })
@@ -144,7 +144,7 @@ function x(e) {
                         })
                     }),
                     x.map((e) =>
-                        e.skuId === E
+                        e.skuId === C
                             ? (0, i.jsx)(
                                   o.Z,
                                   {
@@ -161,7 +161,7 @@ function x(e) {
                                   _,
                                   {
                                       storeListing: e,
-                                      guildId: N,
+                                      guildId: I,
                                       navigateToHome: j
                                   },
                                   e.id

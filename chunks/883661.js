@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
     a = n(481060),
@@ -84,7 +84,7 @@ let d = (e) => {
                 return;
         }
     },
-    _ = i.memo(function (e) {
+    f = i.memo(function (e) {
         var { categoryId: t } = e,
             n = c(e, ['categoryId']);
         let i = d(t);

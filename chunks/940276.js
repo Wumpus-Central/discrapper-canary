@@ -62,8 +62,8 @@ function f(e) {
     });
 }
 let b = function () {
-    let { guilds: e, searchQuery: t, setSearchQuery: n, sortOrder: s, setSortOrder: o, hasActivityRestrictedGuilds: d, onToggleAllActivityRestrictedGuilds: b, onToggleActivityRestrictedGuild: x, isActivityRestricted: _, numActivityRestrictedGuilds: j, numTotalGuilds: C } = (0, u.F)(),
-        E = (0, r.useId)();
+    let { guilds: e, searchQuery: t, setSearchQuery: n, sortOrder: s, setSortOrder: o, hasActivityRestrictedGuilds: d, onToggleAllActivityRestrictedGuilds: b, onToggleActivityRestrictedGuild: x, isActivityRestricted: _, numActivityRestrictedGuilds: j, numTotalGuilds: E } = (0, u.F)(),
+        C = (0, r.useId)();
     return (0, i.jsxs)('div', {
         className: h.wrapper,
         children: [
@@ -78,7 +78,7 @@ let b = function () {
                                 interaction: 'search_cleared',
                                 sort_order: s,
                                 activity_restricted_guild_count: j,
-                                total_guild_count: C
+                                total_guild_count: E
                             }),
                                 n(''));
                         },
@@ -87,19 +87,19 @@ let b = function () {
                                 interaction: 'search_focused',
                                 sort_order: s,
                                 activity_restricted_guild_count: j,
-                                total_guild_count: C
+                                total_guild_count: E
                             }),
                         onBlur: () =>
                             c.default.track(m.rMx.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
                                 interaction: 'search_blurred',
                                 sort_order: s,
                                 activity_restricted_guild_count: j,
-                                total_guild_count: C
+                                total_guild_count: E
                             }),
                         placeholder: g.intl.string(g.t['H+nRY2']),
                         'aria-label': g.intl.string(g.t['5h0QOD']),
                         inputProps: {
-                            'aria-controls': E,
+                            'aria-controls': C,
                             'aria-expanded': !0
                         }
                     }),
@@ -134,7 +134,7 @@ let b = function () {
                                             interaction: 'sort_order_changed',
                                             sort_order: e,
                                             activity_restricted_guild_count: j,
-                                            total_guild_count: C
+                                            total_guild_count: E
                                         }),
                                             o(e));
                                     },
@@ -159,7 +159,7 @@ let b = function () {
             }),
             (0, i.jsxs)('ul', {
                 className: h.guildsList,
-                id: E,
+                id: C,
                 'aria-label': g.intl.string(g.t['7hB4kp']),
                 children: [
                     0 === e.length &&

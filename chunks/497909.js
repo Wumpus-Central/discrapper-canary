@@ -25,7 +25,7 @@ function d() {
     for (let t of l.Re) e[t.id] = t.getCurrentConfig();
     (null != u && (0, i.Z)(u, e)) || ((0, r.Md)().flushToCache(JSON.stringify(e)), (u = e));
 }
-function _() {
+function f() {
     l.Re.forEach((e) =>
         e.setExperiment(
             (0, o.B)({
@@ -45,13 +45,13 @@ function _() {
         )
     );
 }
-class f extends a.Z {
+class _ extends a.Z {
     _initialize() {
-        _();
+        f();
     }
     _terminate() {}
     constructor(...e) {
         (super(...e), c(this, 'actions', {}), c(this, 'stores', new Map().set(s.Z, d)));
     }
 }
-let p = new f();
+let p = new _();

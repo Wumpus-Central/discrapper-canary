@@ -20,8 +20,8 @@ let o = (e) => r(/\b/, e, /\w$/.test(e) ? /\b/ : /\B/),
     c = ['Any', 'Self'],
     u = ['actor', 'any', 'associatedtype', 'async', 'await', /as\?/, /as!/, 'as', 'borrowing', 'break', 'case', 'catch', 'class', 'consume', 'consuming', 'continue', 'convenience', 'copy', 'default', 'defer', 'deinit', 'didSet', 'distributed', 'do', 'dynamic', 'each', 'else', 'enum', 'extension', 'fallthrough', /fileprivate\(set\)/, 'fileprivate', 'final', 'for', 'func', 'get', 'guard', 'if', 'import', 'indirect', 'infix', /init\?/, /init!/, 'inout', /internal\(set\)/, 'internal', 'in', 'is', 'isolated', 'nonisolated', 'lazy', 'let', 'macro', 'mutating', 'nonmutating', /open\(set\)/, 'open', 'operator', 'optional', 'override', 'package', 'postfix', 'precedencegroup', 'prefix', /private\(set\)/, 'private', 'protocol', /public\(set\)/, 'public', 'repeat', 'required', 'rethrows', 'return', 'set', 'some', 'static', 'struct', 'subscript', 'super', 'switch', 'throws', 'throw', /try\?/, /try!/, 'try', 'typealias', /unowned\(safe\)/, /unowned\(unsafe\)/, 'unowned', 'var', 'weak', 'where', 'while', 'willSet'],
     d = ['false', 'nil', 'true'],
-    _ = ['assignment', 'associativity', 'higherThan', 'left', 'lowerThan', 'none', 'right'],
-    f = ['#colorLiteral', '#column', '#dsohandle', '#else', '#elseif', '#endif', '#error', '#file', '#fileID', '#fileLiteral', '#filePath', '#function', '#if', '#imageLiteral', '#keyPath', '#line', '#selector', '#sourceLocation', '#warning'],
+    f = ['assignment', 'associativity', 'higherThan', 'left', 'lowerThan', 'none', 'right'],
+    _ = ['#colorLiteral', '#column', '#dsohandle', '#else', '#elseif', '#endif', '#error', '#file', '#fileID', '#fileLiteral', '#filePath', '#function', '#if', '#imageLiteral', '#keyPath', '#line', '#selector', '#sourceLocation', '#warning'],
     p = ['abs', 'all', 'any', 'assert', 'assertionFailure', 'debugPrint', 'dump', 'fatalError', 'getVaList', 'isKnownUniquelyReferenced', 'max', 'min', 'numericCast', 'pointwiseMax', 'pointwiseMin', 'precondition', 'preconditionFailure', 'print', 'readLine', 'repeatElement', 'sequence', 'stride', 'swap', 'swift_unboxFromSwiftValueWithType', 'transcode', 'type', 'unsafeBitCast', 'unsafeDowncast', 'withExtendedLifetime', 'withUnsafeMutablePointer', 'withUnsafePointer', 'withVaList', 'withoutActuallyEscaping', 'zip'],
     h = a(/[/=\-+!*%<>&|^~?]/, /[\u00A1-\u00A7]/, /[\u00A9\u00AB]/, /[\u00AC\u00AE]/, /[\u00B0\u00B1]/, /[\u00B6\u00BB\u00BF\u00D7\u00F7]/, /[\u2016-\u2017]/, /[\u2020-\u2027]/, /[\u2030-\u203E]/, /[\u2041-\u2053]/, /[\u2055-\u205E]/, /[\u2190-\u23FF]/, /[\u2500-\u2775]/, /[\u2794-\u2BFF]/, /[\u2E00-\u2E7F]/, /[\u3001-\u3003]/, /[\u3008-\u3020]/, /[\u3030]/),
     m = a(h, /[\u0300-\u036F]/, /[\u1DC0-\u1DFF]/, /[\u20D0-\u20FF]/, /[\uFE00-\uFE0F]/, /[\uFE20-\uFE2F]/),
@@ -64,7 +64,7 @@ e.exports = function (e) {
         },
         N = {
             $pattern: a(/\b\w+/, /#\w+/),
-            keyword: S.concat(f),
+            keyword: S.concat(_),
             literal: d
         },
         C = [E, T, A],
@@ -97,11 +97,11 @@ e.exports = function (e) {
             relevance: 0,
             variants: [{ match: `\\b(${D})(\\.(${D}))?([eE][+-]?(${D}))?\\b` }, { match: `\\b0x(${L})(\\.(${L}))?([pP][+-]?(${D}))?\\b` }, { match: /\b0o([0-7]_*)+\b/ }, { match: /\b0b([01]_*)+\b/ }]
         },
-        M = (e = '') => ({
+        k = (e = '') => ({
             className: 'subst',
             variants: [{ match: r(/\\/, e, /[0\\tnr"']/) }, { match: r(/\\/, e, /u\{[0-9a-fA-F]{1,8}\}/) }]
         }),
-        k = (e = '') => ({
+        M = (e = '') => ({
             className: 'subst',
             match: r(/\\/, e, /[\t ]*(?:[\r\n]|\r\n)/)
         }),
@@ -114,12 +114,12 @@ e.exports = function (e) {
         U = (e = '') => ({
             begin: r(e, /"""/),
             end: r(/"""/, e),
-            contains: [M(e), k(e), j(e)]
+            contains: [k(e), M(e), j(e)]
         }),
         G = (e = '') => ({
             begin: r(e, /"/),
             end: r(/"/, e),
-            contains: [M(e), j(e)]
+            contains: [k(e), j(e)]
         }),
         B = {
             className: 'string',
@@ -320,7 +320,7 @@ e.exports = function (e) {
                 3: 'title'
             },
             contains: [z],
-            keywords: [..._, ...d],
+            keywords: [...f, ...d],
             end: /}/
         },
         er = {

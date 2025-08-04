@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M });
+n.d(t, { Z: () => k });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(780384),
     u = n(481060),
     d = n(436774),
-    _ = n(623624),
-    f = n(297700),
+    f = n(623624),
+    _ = n(297700),
     p = n(210887),
     h = n(271383),
     m = n(594174),
@@ -209,7 +209,7 @@ function x(e) {
         ]
     });
 }
-function M(e) {
+function k(e) {
     let t, n;
     var a,
         { guild: o, tooltipColor: l = u.ua7.Colors.BRAND, tooltipPosition: d, className: g, flowerStarClassName: E, iconClassName: b, badgeStrokeColor: v, badgeColor: T, disableBoostClick: A, 'aria-label': C = !1 } = e;
@@ -218,16 +218,16 @@ function M(e) {
             let e = m.default.getCurrentUser();
             return h.ZP.isMember(null == o ? void 0 : o.id, null == e ? void 0 : e.id);
         }),
-        M = (0, s.e7)([p.Z], () => p.Z.theme),
-        k = (0, O.XX)(o),
-        j = (0, y.i)(k),
-        U = i.useMemo(() => k.premium && L && !A, [A, k.premium, L]),
+        k = (0, s.e7)([p.Z], () => p.Z.theme),
+        M = (0, O.XX)(o),
+        j = (0, y.i)(M),
+        U = i.useMemo(() => M.premium && L && !A, [A, M.premium, L]),
         G = i.useCallback(
             (e) => {
                 U &&
                     (e.stopPropagation(),
                     e.preventDefault(),
-                    (0, _.f)({
+                    (0, f.f)({
                         guildId: o.id,
                         location: {
                             section: I.jXE.GUILD_HEADER,
@@ -240,9 +240,9 @@ function M(e) {
     if (j === y.Q.NONE) return null;
     let { IconComponent: B, backgroundDarkColor: V, backgroundLightColor: F, foregroundDarkColor: Z, foregroundLightColor: H, premiumBackgroundColor: Y, premiumForegroundColor: W, sizeAdjustment: K } = D[j];
     if (null == B) return null;
-    k.premium && ((t = W), (n = Y));
-    let z = (0, c.wj)(M) ? Z : H,
-        q = (0, c.wj)(M) ? V : F;
+    M.premium && ((t = W), (n = Y));
+    let z = (0, c.wj)(k) ? Z : H,
+        q = (0, c.wj)(k) ? V : F;
     ((t = null != t ? t : z), (n = null != n ? n : q));
     let X = Math.floor(0.75 * w) - (null != K ? K : 0);
     return (0, r.jsx)(u.ua7, {
@@ -251,7 +251,7 @@ function M(e) {
         'aria-label': C,
         text: (0, r.jsx)(x, {
             badgeType: j,
-            guildTraits: k
+            guildTraits: M
         }),
         tooltipContentClassName: S.tooltipRemovePadding,
         children: (e) =>
@@ -259,7 +259,7 @@ function M(e) {
                 onClick: G,
                 tabIndex: U ? 0 : -1,
                 children: (0, r.jsx)(
-                    f.Z,
+                    _.Z,
                     R(N({}, e), {
                         className: g,
                         flowerStarClassName: E,

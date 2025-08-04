@@ -1,6 +1,6 @@
 n.d(t, {
-    F: () => f,
-    Y: () => _
+    F: () => _,
+    Y: () => f
 });
 var r = n(255367),
     i = n(73800),
@@ -64,7 +64,7 @@ function d(e) {
             return null;
     }
 }
-function _(e, t) {
+function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.si,
         { position: r = c.si.position, component: i = c.si.component, duration: o = c.si.duration } = n;
     return {
@@ -78,7 +78,7 @@ function _(e, t) {
         }
     };
 }
-let f = i.memo(function (e) {
+let _ = i.memo(function (e) {
     let { message: t, type: n, id: i, options: { component: a = c.si.component } = c.si } = e;
     return null != a
         ? a

@@ -51,8 +51,8 @@ function j() {
             theme: h.Z.theme,
             platformZoom: u.Z.zoom
         })),
-        [j, C] = r.useState('upright'),
-        E = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
+        [j, E] = r.useState('upright'),
+        C = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
         O = new Map([
             ['normal', 400],
             ['medium', 500],
@@ -71,17 +71,17 @@ function j() {
             var e, t;
             return (0, p.fD)() ? (null == (t = m.C.getCurrentBuildOverride()) || null == (e = t.overrides) ? void 0 : e.discord_web) : null;
         }),
-        [T, N] = (0, d.R)('playground-overrideText', null),
-        [I, y] = (0, d.R)('playground-defaultText', _[0].value),
+        [T, I] = (0, d.R)('playground-overrideText', null),
+        [N, y] = (0, d.R)('playground-defaultText', _[0].value),
         A = r.useCallback(
             (e) => {
                 let t = _.find((t) => {
                     let { value: n } = t;
                     return n === e;
                 });
-                '' === e || null == e ? (y(_[0].value), N(null)) : null != t ? y(t.value) : (y('custom'), N(e));
+                '' === e || null == e ? (y(_[0].value), I(null)) : null != t ? y(t.value) : (y('custom'), I(e));
             },
-            [N, y]
+            [I, y]
         );
     return (0, i.jsx)('div', {
         style: {
@@ -121,7 +121,7 @@ function j() {
                                 className: x.select,
                                 options: _,
                                 onChange: (e) => A(e),
-                                value: I
+                                value: N
                             })
                         }),
                         (0, i.jsx)(o.xJW, {
@@ -180,7 +180,7 @@ function j() {
                                     }
                                 ],
                                 onChange: (e) => {
-                                    C(e.value);
+                                    E(e.value);
                                 },
                                 value: j
                             })
@@ -191,7 +191,7 @@ function j() {
                     className: x.textGrid,
                     children: [
                         (0, i.jsx)('div', {}),
-                        E.map((e) =>
+                        C.map((e) =>
                             (0, i.jsx)(
                                 'div',
                                 {
@@ -229,9 +229,9 @@ function j() {
                                             },
                                             e
                                         ),
-                                        E.map((t) => {
+                                        C.map((t) => {
                                             var n;
-                                            let r = null != (n = 'custom' === I ? T : I) ? n : '';
+                                            let r = null != (n = 'custom' === N ? T : N) ? n : '';
                                             return (0, i.jsx)(
                                                 'div',
                                                 {

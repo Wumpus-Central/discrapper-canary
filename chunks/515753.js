@@ -23,14 +23,14 @@ var i = n(255367),
     x = n(326255),
     _ = n(956221),
     j = n(771173),
-    C = n(385499),
-    E = n(570908),
+    E = n(385499),
+    C = n(570908),
     O = n(702321),
     v = n(201895),
     S = n(43267),
     T = n(933557),
-    N = n(163889),
-    I = n(111028),
+    I = n(163889),
+    N = n(111028),
     y = n(821795),
     A = n(892567),
     P = n(853856),
@@ -185,7 +185,7 @@ let ei = X.ZP.getEnableHardwareAcceleration() ? p.Xo$ : p.qEK,
     ec = (e) => {
         var { route: t, selected: n, icon: r, iconClassName: s, interactiveClassName: l, text: o, children: d, locationState: m, onClick: g, className: h, role: f, 'aria-posinset': b, 'aria-setsize': x, listItemRef: _ } = e,
             j = en(e, ['route', 'selected', 'icon', 'iconClassName', 'interactiveClassName', 'text', 'children', 'locationState', 'onClick', 'className', 'role', 'aria-posinset', 'aria-setsize', 'listItemRef']);
-        return (0, i.jsx)(N.Z, {
+        return (0, i.jsx)(I.Z, {
             className: a()($.channel, { [$.fullWidth]: u.tq }, h),
             onClick: g,
             role: f,
@@ -212,7 +212,7 @@ let ei = X.ZP.getEnableHardwareAcceleration() ? p.Xo$ : p.qEK,
                         ),
                         {
                             children: [
-                                (0, i.jsx)(E.Z, {
+                                (0, i.jsx)(C.Z, {
                                     muted: !1,
                                     avatar: (0, i.jsx)(r, {
                                         size: 'refresh_sm',
@@ -248,18 +248,18 @@ function ed(e) {
             animateOnHover: !(l || X || ed || em)
         }),
         ej = t.isMultiUserDM(),
-        eC = t.isSystemDM(),
-        eE = (0, U.Q)(),
-        eO = !ej && !eC && t.type === J.d4z.DM,
+        eE = t.isSystemDM(),
+        eC = (0, U.Q)(),
+        eO = !ej && !eE && t.type === J.d4z.DM,
         ev = eO && (null == u ? void 0 : u.primaryGuild) != null,
         eS = (0, m.e7)([Y.ZP], () => Y.ZP.isChannelMuted(t.getGuildId(), t.id)),
-        { ignored: eT, blocked: eN } = (0, m.cj)([W.Z], () => ({
+        { ignored: eT, blocked: eI } = (0, m.cj)([W.Z], () => ({
             ignored: W.Z.isIgnored(t.getRecipientId()),
             blocked: W.Z.isBlocked(t.getRecipientId())
         })),
-        eI = eO && eT,
-        ey = eO && eN,
-        eA = (eS || eI || ey) && !(l || X),
+        eN = eO && eT,
+        ey = eO && eI,
+        eA = (eS || eN || ey) && !(l || X),
         eP = (0, m.e7)([H.ZP], () => H.ZP.getMentionCount(t.id) > 0),
         eR = (0, T.ZP)(t),
         eD = (0, m.e7)([P.Z], () => P.Z.isFavorite(t.id)),
@@ -447,7 +447,7 @@ function ed(e) {
         children: (e) => {
             var { role: n } = e,
                 r = en(e, ['role']);
-            return (0, i.jsxs)(N.Z, {
+            return (0, i.jsxs)(I.Z, {
                 className: a()($.channel, $.dm),
                 role: n,
                 focusProps: et(ee({}, er), {
@@ -467,7 +467,7 @@ function ed(e) {
                     eP ? (0, i.jsx)('div', { className: a()($.unreadPill, { [$.muted]: eA }) }) : null,
                     (0, i.jsxs)(p.vjx, {
                         className: a()($.interactive, {
-                            [$.interactiveSystemDM]: eE && eC,
+                            [$.interactiveSystemDM]: eC && eE,
                             [$.interactiveSelected]: l || em
                         }),
                         as: 'div',
@@ -498,20 +498,20 @@ function ed(e) {
                                         r
                                     ),
                                     {
-                                        children: (0, i.jsx)(E.Z, {
+                                        children: (0, i.jsx)(C.Z, {
                                             ref: eX,
                                             avatar: eY(),
                                             highlighted: eP && !eA,
                                             muted: eA,
                                             subText: ez(),
-                                            name: (0, i.jsx)(I.Z, {
+                                            name: (0, i.jsx)(N.Z, {
                                                 className: a()($.overflowTooltip, { [$.withDisplayNameStyles]: null == u ? void 0 : u.displayNameStyles }),
                                                 children: eq
                                             }),
                                             decorators: t.isSystemDM()
-                                                ? (0, i.jsx)(C.Z, {
+                                                ? (0, i.jsx)(E.Z, {
                                                       className: $.decorator,
-                                                      type: C.Z.Types.SYSTEM_DM,
+                                                      type: E.Z.Types.SYSTEM_DM,
                                                       verified: !0
                                                   })
                                                 : null
@@ -520,7 +520,7 @@ function ed(e) {
                                 )
                             ),
                             eD ? (0, i.jsx)(ea, {}) : null,
-                            eI ? (0, i.jsx)(el, {}) : null,
+                            eN ? (0, i.jsx)(el, {}) : null,
                             ey ? (0, i.jsx)(eo, {}) : null,
                             eZ
                                 ? (0, i.jsx)(es, {

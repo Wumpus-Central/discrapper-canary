@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(570140),
     u = n(794295),
     d = n(663993),
-    _ = n(95398),
-    f = n(339085),
+    f = n(95398),
+    _ = n(339085),
     p = n(779699),
     h = n(359875),
     m = n(124072),
@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(382056),
     L = n(532901),
     x = n(311739),
-    M = n(981631),
-    k = n(176505),
+    k = n(981631),
+    M = n(176505),
     j = n(73433),
     U = n(283574);
 function G(e, t, n) {
@@ -113,7 +113,7 @@ function H(e) {
     return {
         react(e, i, a) {
             let { key: o, guildId: s, channelId: l, messageId: c, isInteracting: u } = a,
-                d = f.ZP.getDisambiguatedEmojiContext(s).getById(e.emojiId);
+                d = _.ZP.getDisambiguatedEmojiContext(s).getById(e.emojiId);
             if (null != d) {
                 let t = d.require_colons;
                 e = F(B({}, e), { name: t ? ':'.concat(d.name, ':') : d.name });
@@ -137,18 +137,18 @@ function Y(e, t, n) {
     let r = T.Z.getGuild(e);
     if (null == e || null == r) return;
     let i = (t) => {
-        r.features.has(M.oNc.COMMUNITY) && (0, O.uL)(M.Z5c.CHANNEL(e, t));
+        r.features.has(k.oNc.COMMUNITY) && (0, O.uL)(k.Z5c.CHANNEL(e, t));
     };
     switch (t) {
         case 'home':
         case 'guide':
-            i(k.oC.GUILD_HOME);
+            i(M.oC.GUILD_HOME);
             break;
         case 'browse':
-            i(k.oC.CHANNEL_BROWSER);
+            i(M.oC.CHANNEL_BROWSER);
             break;
         case 'customize':
-            i(k.oC.CUSTOMIZE_COMMUNITY);
+            i(M.oC.CUSTOMIZE_COMMUNITY);
             break;
         case 'linked-roles':
             if (null != n) {
@@ -279,9 +279,9 @@ let K = {
     spoiler: {
         react: (e, t, n) =>
             (0, r.jsx)(
-                _.ZP,
+                f.ZP,
                 {
-                    type: _.ZP.Types.TEXT,
+                    type: f.ZP.Types.TEXT,
                     inline: n.formatInline,
                     renderTextElement: (e, t) => (null == e || e.type !== u.Z || t ? e : i.cloneElement(e, { tabIndex: -1 })),
                     children: () => t(e.content, n)

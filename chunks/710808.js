@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(226961),
     _ = n(12647),
     j = n(569550),
-    C = n(726985),
-    E = n(981631),
+    E = n(726985),
+    C = n(981631),
     O = n(65154),
     v = n(388032),
     S = n(20493);
@@ -47,7 +47,7 @@ function T(e) {
     }
     return e;
 }
-function N(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,7 +65,7 @@ function N(e, t) {
         e
     );
 }
-async function I() {
+async function N() {
     let e = await u.Z.fileManager.getLogPath();
     u.Z.fileManager.showItemInFolder(e);
 }
@@ -73,7 +73,7 @@ function y(e) {
     (0, l.h7j)((t) =>
         (0, i.jsx)(
             l.ConfirmModal,
-            N(
+            I(
                 T(
                     {
                         header: v.intl.string(v.t['7UXEFx']),
@@ -108,13 +108,13 @@ function A(e) {
     async function Z() {
         u(!0);
         try {
-            (await b.Z.getMediaEngine().writeAudioDebugState(), await _.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }), await (0, p.E)(E.GU0.RTC));
+            (await b.Z.getMediaEngine().writeAudioDebugState(), await _.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }), await (0, p.E)(C.GU0.RTC));
             let e = v.intl.string(v.t['fKBB8/']),
                 t = v.intl.string(v.t.BvyxEx);
             (0, l.h7j)((n) =>
                 (0, i.jsx)(
                     l.ConfirmModal,
-                    N(
+                    I(
                         T(
                             {
                                 header: e,
@@ -142,7 +142,7 @@ function A(e) {
                 (0, l.h7j)((e) =>
                     (0, i.jsx)(
                         l.ConfirmModal,
-                        N(
+                        I(
                             T(
                                 {
                                     header: n,
@@ -181,7 +181,7 @@ function A(e) {
     let w = (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(h.F, {
-                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
+                setting: E.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
                 children: (0, i.jsx)(l.j7V, {
                     value: R,
                     onChange: (e) => {
@@ -193,7 +193,7 @@ function A(e) {
                 })
             }),
             (0, i.jsx)(h.F, {
-                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
+                setting: E.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP,
                 children: (0, i.jsx)(l.j7V, {
                     value: P,
                     onChange: (e) => o.Z.setAecDump(e),
@@ -203,7 +203,7 @@ function A(e) {
                 })
             }),
             (0, i.jsxs)(h.F, {
-                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
+                setting: E.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_CONNECTION_REPLAY,
                 children: [
                     (0, i.jsx)(l.j7V, {
                         hideBorder: !0,
@@ -231,7 +231,7 @@ function A(e) {
                 ]
             }),
             (0, i.jsx)(h.F, {
-                setting: C.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING,
+                setting: E.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING,
                 children: (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsx)(l.j7V, {
@@ -254,7 +254,7 @@ function A(e) {
                                     (0, i.jsx)(l.zxk, {
                                         variant: 'primary',
                                         text: v.intl.string(v.t.nuPtYm),
-                                        onClick: I
+                                        onClick: N
                                     })
                                 ]
                             })

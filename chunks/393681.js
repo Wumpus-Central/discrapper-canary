@@ -17,14 +17,14 @@ var i = n(255367),
     x = n(600164),
     _ = n(690221),
     j = n(332473),
-    C = n(303172),
-    E = n(518560),
+    E = n(303172),
+    C = n(518560),
     O = n(921801),
     v = n(577275),
     S = n(484459),
     T = n(430824),
-    N = n(325067),
-    I = n(246946),
+    I = n(325067),
+    N = n(246946),
     y = n(663389),
     A = n(594174),
     P = n(626135),
@@ -162,7 +162,7 @@ class q extends r.PureComponent {
                       '',
                       (0, i.jsx)(_.Z, {
                           className: W.noticeTextButton,
-                          onClick: () => (0, C.Z)(F.Kq.USER_SETTINGS),
+                          onClick: () => (0, E.Z)(F.Kq.USER_SETTINGS),
                           children: H.intl.string(H.t.LhlgY2)
                       })
                   ]
@@ -364,7 +364,7 @@ class q extends r.PureComponent {
                     },
                     {
                         title: H.intl.string(H.t['Vov/9v']),
-                        component: E.Z,
+                        component: C.Z,
                         setting: V.s6.PRIVACY_AND_SAFETY_STANDING
                     }
                 ]
@@ -423,8 +423,8 @@ let X = () => {
             let e = A.default.getCurrentUser();
             return (o()(null != e, 'ConnectedUserAccountSettings: currentUser cannot be undefined'), e);
         }),
-        t = (0, c.e7)([N.Z], () => N.Z.getBackupCodes()),
-        n = (0, c.e7)([I.Z], () => I.Z.hidePersonalInformation),
+        t = (0, c.e7)([I.Z], () => I.Z.getBackupCodes()),
+        n = (0, c.e7)([N.Z], () => N.Z.hidePersonalInformation),
         r = (0, c.e7)([D.Z], () => D.Z.theme),
         s = (0, j.b)(),
         a = (0, c.e7)([R.default], () => R.default.locale),

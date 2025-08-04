@@ -47,7 +47,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function _(e, t) {
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -80,13 +80,13 @@ function p(e, t) {
 }
 function h(e) {
     var { focusProps: t, lineClamp: n = 1, role: i = 'button', text: c, textVariant: d = 'text-md/medium', type: p = 'button', variant: h = 'primary', className: m, style: g } = e,
-        E = f(e, ['focusProps', 'lineClamp', 'role', 'text', 'textVariant', 'type', 'variant', 'className', 'style']);
+        E = _(e, ['focusProps', 'lineClamp', 'role', 'text', 'textVariant', 'type', 'variant', 'className', 'style']);
     return (0, r.jsx)(
         o.t,
-        _(u({}, t), {
+        f(u({}, t), {
             children: (0, r.jsx)(
                 'button',
-                _(
+                f(
                     u(
                         {
                             className: a()(l.textButton, l[h]),

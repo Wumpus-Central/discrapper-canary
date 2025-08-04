@@ -28,7 +28,7 @@ let u = new o.Z(l.ZP.isMember, (e, t) => {
 function d() {
     u.reset();
 }
-function _(e) {
+function f(e) {
     let { chunks: t } = e;
     for (let e of t)
         (e.members.forEach((t) => {
@@ -37,7 +37,7 @@ function _(e) {
             null != e.notFound && e.notFound.forEach((t) => u.acknowledge(e.guildId, t)));
     return !1;
 }
-function f() {
+function _() {
     return (u.requestUnacknowledged(), !1);
 }
 function p(e, t) {
@@ -100,8 +100,8 @@ c(b, 'displayName', 'GuildMemberRequesterStore');
 let y = new b(a.Z, {
     CONNECTION_CLOSED: d,
     CONNECTION_OPEN: d,
-    CONNECTION_RESUMED: f,
-    GUILD_MEMBERS_CHUNK_BATCH: _,
+    CONNECTION_RESUMED: _,
+    GUILD_MEMBERS_CHUNK_BATCH: f,
     SEARCH_MESSAGES_SUCCESS: E,
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: E,
     LOCAL_MESSAGES_LOADED: m,

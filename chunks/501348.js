@@ -17,14 +17,14 @@ var i = n(255367),
     x = n(627845),
     _ = n(514361),
     j = n(803038),
-    C = n(600164),
-    E = n(313201),
+    E = n(600164),
+    C = n(313201),
     O = n(266454),
     v = n(786761),
     S = n(3148),
     T = n(739566),
-    N = n(753206),
-    I = n(921801),
+    I = n(753206),
+    N = n(921801),
     y = n(984802),
     A = n(594174),
     P = n(358085),
@@ -91,9 +91,9 @@ let Y = {
         COZY: 'cozy',
         COMPACT: 'compact'
     },
-    K = (0, E.hQ)(),
-    q = (0, E.hQ)(),
-    X = (0, E.hQ)(),
+    K = (0, C.hQ)(),
+    q = (0, C.hQ)(),
+    X = (0, C.hQ)(),
     J = '1337',
     Q = (e) => {
         let t = 0;
@@ -246,8 +246,8 @@ class ee extends r.Component {
                     className: G.subtext,
                     children: 'Increase or decrease the size of the chat font'
                 }),
-                (0, i.jsx)(C.Z, {
-                    align: C.Z.Align.CENTER,
+                (0, i.jsx)(E.Z, {
+                    align: E.Z.Align.CENTER,
                     children: (0, i.jsx)(u.iRW, {
                         className: a()({
                             [F.marginTop20]: !1,
@@ -307,7 +307,7 @@ class ee extends r.Component {
                 'aria-hidden': !0,
                 children: s.map((t, n) =>
                     (0, i.jsx)(
-                        N.Z,
+                        I.Z,
                         {
                             author: (0, T.ZH)(t),
                             message: t,
@@ -392,7 +392,7 @@ class ee extends r.Component {
     }
     renderListSpacing() {
         let { density: e } = this.props;
-        return (0, i.jsxs)(I.F, {
+        return (0, i.jsxs)(N.F, {
             setting: L.s6.APPEARANCE_LIST_SPACING,
             children: [
                 (0, i.jsxs)(u.xJW, {
@@ -474,20 +474,20 @@ class ee extends r.Component {
             tag: u.RB0.H1,
             title: V.intl.string(V.t['iHH+k5']),
             children: [
-                (0, i.jsxs)(I.F, {
+                (0, i.jsxs)(N.F, {
                     setting: L.s6.APPEARANCE_THEME,
                     children: [this.renderPreview(), this.renderTheme()]
                 }),
-                (0, i.jsx)(I.F, {
+                (0, i.jsx)(N.F, {
                     setting: L.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
                     children: this.renderDisplayMode()
                 }),
                 this.renderListSpacing(),
-                (0, i.jsx)(I.F, {
+                (0, i.jsx)(N.F, {
                     setting: L.s6.APPEARANCE_SCALING_SPACING,
                     children: this.renderScalingAndSpacing()
                 }),
-                (0, i.jsxs)(I.F, {
+                (0, i.jsxs)(N.F, {
                     setting: L.s6.APPEARANCE_TIMESTAMP_HOUR_CYCLE,
                     children: [this.renderTimestampHourCycle(), (0, i.jsx)(u.$i$, { className: F.marginTop8 })]
                 }),
@@ -551,11 +551,11 @@ class ee extends r.Component {
 class et extends ee {
     render() {
         let { density: e } = this.props,
-            t = (0, i.jsxs)(I.F, {
+            t = (0, i.jsxs)(N.F, {
                 setting: L.s6.APPEARANCE_THEME,
                 children: [this.renderPreview(), this.renderTheme()]
             }),
-            n = (0, i.jsx)(I.F, {
+            n = (0, i.jsx)(N.F, {
                 setting: L.s6.APPEARANCE_ICON,
                 children: (0, i.jsx)(k.c, {})
             }),
@@ -573,7 +573,7 @@ class et extends ee {
                     value: c.Pi.COZY
                 }
             ],
-            s = (0, i.jsxs)(I.F, {
+            s = (0, i.jsxs)(N.F, {
                 setting: L.s6.APPEARANCE_LIST_SPACING,
                 children: [
                     (0, i.jsxs)(u.xJW, {
@@ -598,7 +598,7 @@ class et extends ee {
                     (0, i.jsx)(u.$i$, { className: G.divider })
                 ]
             }),
-            a = (0, i.jsxs)(I.F, {
+            a = (0, i.jsxs)(N.F, {
                 setting: L.s6.APPEARANCE_MESSAGE_DISPLAY_COMPACT,
                 children: [
                     (0, i.jsxs)(u.Kqy, {
@@ -657,7 +657,7 @@ class et extends ee {
                     (0, i.jsx)(u.$i$, { className: G.divider })
                 ]
             }),
-            l = (0, i.jsxs)(I.F, {
+            l = (0, i.jsxs)(N.F, {
                 setting: L.s6.APPEARANCE_SCALING_SPACING,
                 children: [
                     (0, i.jsx)(u.Text, {
@@ -670,7 +670,7 @@ class et extends ee {
                     (0, i.jsx)(u.$i$, { className: G.divider })
                 ]
             }),
-            o = (0, i.jsx)(I.F, {
+            o = (0, i.jsx)(N.F, {
                 setting: L.s6.APPEARANCE_TIMESTAMP_HOUR_CYCLE,
                 children: this.renderTimestampHourCycle()
             }),

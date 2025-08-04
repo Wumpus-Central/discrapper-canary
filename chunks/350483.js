@@ -32,24 +32,24 @@ let x = s().throttle(function (e, t) {
     var r, s;
     let l,
         { channelPredicate: m = () => !0, guildPredicate: f = () => !0, guildFeaturePredicate: x = () => !1, ensureChatIsVisible: _ = () => !1, withVoiceChannels: j = !1 } = t,
-        C = null != (r = o.Z.getState().guildId) ? r : h.ME,
-        E = o.Z.getState().channelId,
+        E = null != (r = o.Z.getState().guildId) ? r : h.ME,
+        C = o.Z.getState().channelId,
         O = (function (e, t) {
             let n = [h.ME, ...u.ZP.getFlattenedGuildIds()],
                 i = n.indexOf(e);
             return t > 0 ? n.slice(i).concat(n.slice(0, i), e) : (n.splice(i, 0, e), n.slice(i + 1).concat(n.slice(0, i + 1)));
-        })(C, e),
+        })(E, e),
         v = e > 0 ? 0 : O.length - 1,
-        S = b(C, j),
-        T = S.indexOf(E) + e;
-    for (; null != C && '' !== C; ) {
-        if (((l = S[T]), f(C)))
+        S = b(E, j),
+        T = S.indexOf(C) + e;
+    for (; null != E && '' !== E; ) {
+        if (((l = S[T]), f(E)))
             for (; null != l && '' !== l; ) {
                 if ('string' == typeof l) {
-                    if (m(C, l)) return (0, g.K)(C, l, !1, _(C, l));
+                    if (m(E, l)) return (0, g.K)(E, l, !1, _(E, l));
                 } else if ('object' == typeof l && x(l.resourceId, l.type))
                     return (
-                        C !== d.Z.getGuildId() && (0, g.K)(C, null == (s = c.ZP.getDefaultChannel(C)) ? void 0 : s.id),
+                        E !== d.Z.getGuildId() && (0, g.K)(E, null == (s = c.ZP.getDefaultChannel(E)) ? void 0 : s.id),
                         (0, a.ZDy)(async () => {
                             let { default: e } = await Promise.all([n.e('42743'), n.e('22347'), n.e('56236'), n.e('7549')]).then(n.bind(n, 17671));
                             return (t) =>
@@ -98,15 +98,15 @@ let x = s().throttle(function (e, t) {
                                             }
                                             return e;
                                         })({}, t),
-                                        { guildId: C }
+                                        { guildId: E }
                                     )
                                 );
                         })
                     );
                 ((T += e), (l = S[T]));
             }
-        if (((v += e), null == (C = O[v]) || '' === C)) break;
-        ((S = b(C, j)), (T = e < 0 ? S.length - 1 : 0));
+        if (((v += e), null == (E = O[v]) || '' === E)) break;
+        ((S = b(E, j)), (T = e < 0 ? S.length - 1 : 0));
     }
     p.S.dispatch(h.CkL.SHAKE_APP, {
         duration: 200,

@@ -8,8 +8,8 @@ var r = n(73800),
     c = n(607070),
     u = n(629935),
     d = n(168551),
-    _ = n(168631),
-    f = n(579132),
+    f = n(168631),
+    _ = n(579132),
     p = n(228168);
 function h(e, t, n) {
     return (
@@ -57,7 +57,7 @@ let g = {
 function y(e) {
     let { theme: t, themeType: n, primaryColor: i, secondaryColor: p, forceUserTheme: h = !1 } = e,
         [y, O] = (0, s.Wu)([c.Z], () => [c.Z.desaturateUserColors, c.Z.syncProfileThemeWithUserTheme]),
-        v = (0, f.f)(t),
+        v = (0, _.f)(t),
         I = O || h ? (null == v ? void 0 : v.overlaySyncedWithUserTheme) : null == v ? void 0 : v.overlay;
     return {
         profileThemeStyle: (0, r.useMemo)(() => {
@@ -68,8 +68,8 @@ function y(e) {
                     '--profile-gradient-primary-color': e(i),
                     '--profile-gradient-secondary-color': e(p),
                     '--profile-gradient-overlay-color': I,
-                    '--profile-gradient-button-color': e((0, _.ZB)(i)),
-                    '--profile-gradient-modal-background-color': e((0, _.oU)(i, p, O || h ? t : void 0))
+                    '--profile-gradient-button-color': e((0, f.ZB)(i)),
+                    '--profile-gradient-modal-background-color': e((0, f.oU)(i, p, O || h ? t : void 0))
                 },
                 (0, u.W4)({
                     enabled: !0,

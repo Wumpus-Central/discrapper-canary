@@ -12,9 +12,9 @@ function o(e) {
         [g, h] = i.useState(!1),
         [f, b] = i.useState(!1),
         [x, _] = i.useState(!1),
-        [j, C] = i.useState(!1),
-        [E, O] = i.useState(!1),
-        v = o || d || m || g || x || E,
+        [j, E] = i.useState(!1),
+        [C, O] = i.useState(!1),
+        v = o || d || m || g || x || C,
         S = i.useCallback(
             async (e) => {
                 if (!v) {
@@ -47,7 +47,7 @@ function o(e) {
             },
             [v, t, n]
         ),
-        N = i.useCallback(
+        I = i.useCallback(
             async (e) => {
                 if (!v) {
                     p(!0);
@@ -63,7 +63,7 @@ function o(e) {
             },
             [v, t, n]
         ),
-        I = i.useCallback(
+        N = i.useCallback(
             async (e) => {
                 if (!v) {
                     h(!0);
@@ -95,14 +95,14 @@ function o(e) {
         A = i.useCallback(
             async (e) => {
                 if (!j) {
-                    C(!0);
+                    E(!0);
                     try {
                         (await s.ZP.fetchTeenActivity(e), null == n || n());
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
                     } finally {
-                        C(!1);
+                        E(!1);
                     }
                 }
             },
@@ -111,8 +111,8 @@ function o(e) {
     return {
         acceptLinkRequest: S,
         declineLinkRequest: T,
-        disconnectLinkRequest: N,
-        cancelLinkRequest: I,
+        disconnectLinkRequest: I,
+        cancelLinkRequest: N,
         selectTeenUser: A,
         getLinkCode: y,
         requestLink: i.useCallback(
@@ -137,7 +137,7 @@ function o(e) {
                     i = n[n.length - 1],
                     l = a.Z.getStartId(),
                     o = a.Z.getSelectedTeenId();
-                if (!E && null != l && null != o) {
+                if (!C && null != l && null != o) {
                     O(!0);
                     try {
                         await s.ZP.fetchMoreTeenActivity(o, e, l, i.event_id);
@@ -149,7 +149,7 @@ function o(e) {
                     }
                 }
             },
-            [E, t]
+            [C, t]
         ),
         isAcceptLoading: o,
         isDeclineLoading: d,
@@ -158,6 +158,6 @@ function o(e) {
         isGetLinkCodeLoading: f,
         isSelectTeenUserLoading: j,
         isRequestingLink: x,
-        isMoreLoading: E
+        isMoreLoading: C
     };
 }

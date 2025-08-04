@@ -17,14 +17,14 @@ var i = n(255367),
     x = n(89057),
     _ = n(433811),
     j = n(214852),
-    C = n(246946),
-    E = n(594174),
+    E = n(246946),
+    C = n(594174),
     O = n(853872),
     v = n(78839),
     S = n(626135),
     T = n(111361),
-    N = n(357355),
-    I = n(937579),
+    I = n(357355),
+    N = n(937579),
     y = n(220654),
     A = n(104494),
     P = n(639119),
@@ -40,7 +40,7 @@ let L = function (e) {
         { sourceAnalyticsLocations: s, analyticsLocations: L } = (0, h.ZP)(g.Z.PREMIUM_MARKETING),
         B = (0, l.e7)([v.Z], () => v.Z.hasFetchedSubscriptions()),
         M = (0, l.e7)([O.Z], () => O.Z.hasFetchedPaymentSources),
-        U = (0, l.e7)([E.default], () => E.default.getCurrentUser()),
+        U = (0, l.e7)([C.default], () => C.default.getCurrentUser()),
         V = null == U ? void 0 : U.id,
         G = (0, P.N)(),
         F = (0, A.Ng)(),
@@ -49,7 +49,7 @@ let L = function (e) {
         Y = r.useRef(0),
         K = (0, T.M5)(U, Z.p9.TIER_2),
         q = (0, y.Z)({ location: 'PremiumMarketingPage' }),
-        X = (0, l.e7)([N.Z], () => N.Z.hasFetched);
+        X = (0, l.e7)([I.Z], () => I.Z.hasFetched);
     (r.useEffect(() => {
         X || d.MH();
     }, [X]),
@@ -67,9 +67,9 @@ let L = function (e) {
                 });
         }, [s, W]),
         r.useEffect(() => {
-            n && (null != G || null != F) && (0, I.a)(G, F);
+            n && (null != G || null != F) && (0, N.a)(G, F);
         }, [n, G, F]));
-    let J = (0, l.e7)([C.Z], () => C.Z.enabled),
+    let J = (0, l.e7)([E.Z], () => E.Z.enabled),
         Q = t === Z.EZ.ApplicationStoreHome,
         $ = J
             ? (0, i.jsx)(m.Z, {})

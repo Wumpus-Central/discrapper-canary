@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749));
+(n.d(t, { Z: () => E }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -58,13 +58,13 @@ function j(e, t) {
         e
     );
 }
-function C() {
+function E() {
     var e;
     let [t, n] = (0, r.useState)(!1),
         [s, l] = (0, r.useState)(!1),
         [d, g] = (0, r.useState)(null),
-        [f, C] = (0, r.useState)(320),
-        I = (0, r.useRef)(null),
+        [f, E] = (0, r.useState)(320),
+        N = (0, r.useRef)(null),
         y = (0, r.useRef)(null),
         A = (0, r.useRef)(null),
         P = (0, u.ZP)((e) => e.toolsCache),
@@ -111,9 +111,9 @@ function C() {
             [D]
         ),
         B = (0, r.useCallback)((e) => {
-            if (null != I.current) {
-                let t = I.current.getBoundingClientRect();
-                C(Math.max(264, Math.min(432, e.clientX - t.left)));
+            if (null != N.current) {
+                let t = N.current.getBoundingClientRect();
+                E(Math.max(264, Math.min(432, e.clientX - t.left)));
             }
         }, []),
         M = (0, r.useCallback)(
@@ -181,7 +181,7 @@ function C() {
                     className: x.main,
                     children: [
                         (0, i.jsxs)('div', {
-                            ref: I,
+                            ref: N,
                             className: x.previews,
                             style: { width: ''.concat(f, 'px') },
                             children: [
@@ -199,7 +199,7 @@ function C() {
                                     variant: 'text-sm/semibold',
                                     children: 'RTC'
                                 }),
-                                (0, i.jsx)(N, { nameplate: d }),
+                                (0, i.jsx)(I, { nameplate: d }),
                                 (0, i.jsx)('div', {
                                     className: x.resizeHandle,
                                     onMouseDown: M
@@ -229,7 +229,7 @@ function C() {
                                     children: Object.values(P).map((e) => {
                                         let { url: t } = e;
                                         return (0, i.jsx)(
-                                            E,
+                                            C,
                                             {
                                                 src: t,
                                                 onSetStatic: w,
@@ -260,7 +260,7 @@ function C() {
         })
     );
 }
-function E(e) {
+function C(e) {
     let { src: t, onSetStatic: n, removeAsset: r } = e;
     return (0, i.jsxs)('div', {
         className: x.uploaded,
@@ -403,7 +403,7 @@ function T(e) {
         })
     });
 }
-function N(e) {
+function I(e) {
     let { nameplate: t } = e;
     return (0, i.jsx)('div', {
         className: x.preview,

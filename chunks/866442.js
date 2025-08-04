@@ -1,6 +1,6 @@
 (n.d(t, {
-    Bd: () => _,
-    FX: () => f,
+    Bd: () => f,
+    FX: () => _,
     O: () => l,
     Rf: () => s,
     _i: () => o,
@@ -86,10 +86,10 @@ function d(e, t) {
         i = 255 & e;
     return 'rgba('.concat(n, ', ').concat(r, ', ').concat(i, ', ').concat(t, ')');
 }
-function _(e) {
+function f(e) {
     return 1 - (0.299 * ((e >> 16) & 255) + 0.587 * ((e >> 8) & 255) + 0.114 * (255 & e)) / 255;
 }
-function f(e) {
+function _(e) {
     return i().valid(e);
 }
 function p(e) {

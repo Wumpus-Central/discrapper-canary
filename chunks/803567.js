@@ -18,8 +18,8 @@ var r = n(120356),
     x = n(738486),
     _ = n(726985),
     j = n(981631),
-    C = n(388032),
-    E = n(20493);
+    E = n(388032),
+    C = n(20493);
 let O = n(775322),
     v = n(853453),
     S = (0, u.hQ)(),
@@ -27,7 +27,7 @@ let O = n(775322),
         page: j.ZY5.USER_SETTINGS,
         section: j.jXE.SETTINGS_VOICE_AND_VIDEO
     };
-function N(e) {
+function I(e) {
     let t = e.currentTarget;
     h.default.track(j.rMx.NOISE_CANCELLATION_LINK_CLICKED, {
         text: t.text,
@@ -38,7 +38,7 @@ function N(e) {
         }
     });
 }
-function I(e) {
+function N(e) {
     let { refreshStyles: t = !1 } = e,
         n = (0, a.e7)([b.Z], () => b.Z.theme),
         {
@@ -57,31 +57,31 @@ function I(e) {
     return (
         m &&
             p.push({
-                name: C.intl.string(C.t.rdoNzs),
+                name: E.intl.string(E.t.rdoNzs),
                 value: 2
             }),
         u &&
             p.push({
-                name: C.intl.string(C.t.qXeYHx),
+                name: E.intl.string(E.t.qXeYHx),
                 value: 1
             }),
         p.push({
-            name: C.intl.string(C.t.wkYAl5),
+            name: E.intl.string(E.t.wkYAl5),
             value: 0
         }),
         (0, i.jsxs)(o.hjN, {
-            className: t ? void 0 : E.marginBottom20,
+            className: t ? void 0 : C.marginBottom20,
             children: [
                 (0, i.jsx)(o.vwX, {
                     id: S,
                     tag: o.RB0.H3,
-                    className: E.marginBottom8,
-                    children: C.intl.string(C.t.t8QhiY)
+                    className: C.marginBottom8,
+                    children: E.intl.string(E.t.t8QhiY)
                 }),
                 (0, i.jsx)(o.R94, {
                     type: o.R94.Types.DESCRIPTION,
-                    className: E.marginBottom8,
-                    children: C.intl.string(C.t.najZCQ)
+                    className: C.marginBottom8,
+                    children: E.intl.string(E.t.najZCQ)
                 }),
                 (0, i.jsx)(o.FXm, {
                     options: p,
@@ -92,7 +92,7 @@ function I(e) {
                 }),
                 m &&
                     (0, i.jsx)(o.ToO, {
-                        className: E.marginBottom8,
+                        className: C.marginBottom8,
                         type: o.Dd5.PRIMARY,
                         imageData: {
                             src: (0, l.ap)(n) ? O : v,
@@ -102,8 +102,8 @@ function I(e) {
                         align: d.Z.Align.CENTER,
                         body: (0, i.jsx)(o.eee, {
                             href: f.Z.getArticleURL(j.BhN.NOISE_SUPPRESSION),
-                            onClick: N,
-                            children: C.intl.string(C.t.hvVgAQ)
+                            onClick: I,
+                            children: E.intl.string(E.t.hvVgAQ)
                         })
                     }),
                 t ? null : (0, i.jsx)(o.$i$, {})
@@ -148,14 +148,14 @@ function y(e) {
             children: [
                 (b || O || v) &&
                     (0, i.jsx)(o.R94, {
-                        className: t ? void 0 : E.marginBottom20,
+                        className: t ? void 0 : C.marginBottom20,
                         type: o.R94.Types.DESCRIPTION,
-                        children: C.intl.string(C.t['/Whuzs'])
+                        children: E.intl.string(E.t['/Whuzs'])
                     }),
                 (0, i.jsx)(m.F, {
                     setting: _.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ECHO_CANCELLATION,
                     children: (0, i.jsx)(o.j7V, {
-                        className: t ? void 0 : s()(E.marginTop8, E.marginBottom20),
+                        className: t ? void 0 : s()(C.marginTop8, C.marginBottom20),
                         value: l,
                         onChange: (e) =>
                             c.Z.setEchoCancellation(e, {
@@ -164,22 +164,22 @@ function y(e) {
                             }),
                         disabled: b,
                         hideBorder: t,
-                        children: C.intl.string(C.t.iWTwu7)
+                        children: E.intl.string(E.t.iWTwu7)
                     })
                 }),
                 (0, i.jsx)(m.F, {
                     setting: _.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION,
-                    children: (0, i.jsx)(I, { refreshStyles: t })
+                    children: (0, i.jsx)(N, { refreshStyles: t })
                 }),
                 (0, i.jsx)(m.F, {
                     setting: _.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_ADVANCED_VOICE_ACTIVITY,
                     children: (0, i.jsx)(o.j7V, {
                         value: h,
                         onChange: (e) => c.Z.setMode(n, { vadUseKrisp: e }),
-                        note: C.intl.string(C.t.LoOB1N),
+                        note: E.intl.string(E.t.LoOB1N),
                         disabled: !S,
                         hideBorder: t,
-                        children: C.intl.string(C.t.BbESsr)
+                        children: E.intl.string(E.t.BbESsr)
                     })
                 }),
                 (0, i.jsx)(m.F, {
@@ -191,10 +191,10 @@ function y(e) {
                                 page: j.ZY5.USER_SETTINGS,
                                 section: j.jXE.SETTINGS_VOICE_AND_VIDEO
                             }),
-                        note: C.intl.string(C.t['6EjbvL']),
+                        note: E.intl.string(E.t['6EjbvL']),
                         disabled: v,
                         hideBorder: t,
-                        children: C.intl.string(C.t.cUMdHx)
+                        children: E.intl.string(E.t.cUMdHx)
                     })
                 }),
                 (0, i.jsx)(m.F, {
@@ -204,9 +204,9 @@ function y(e) {
                         onChange: (e) => {
                             c.Z.setBypassSystemInputProcessing(e);
                         },
-                        note: C.intl.string(C.t['UyRX+P']),
+                        note: E.intl.string(E.t['UyRX+P']),
                         hideBorder: t,
-                        children: C.intl.string(C.t.DFPXIC)
+                        children: E.intl.string(E.t.DFPXIC)
                     })
                 })
             ]
@@ -214,8 +214,8 @@ function y(e) {
     return t
         ? T
         : (0, i.jsx)(o.hjN, {
-              className: E.marginBottom20,
-              title: C.intl.string(C.t['6I6GUl']),
+              className: C.marginBottom20,
+              title: E.intl.string(E.t['6I6GUl']),
               children: T
           });
 }

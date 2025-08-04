@@ -9,8 +9,8 @@ var i = n(481060),
     c = n(314884),
     u = n(509545),
     d = n(626135),
-    _ = n(267642),
-    f = n(852679),
+    f = n(267642),
+    _ = n(852679),
     p = n(981631);
 function h(e, t, n) {
     return (
@@ -104,8 +104,8 @@ async function v(e) {
         );
     let x = [];
     (u.Z.isLoadedForPremiumSKUs() || x.push((0, s.Y2)()), c.Z.hasFetched || (x.push(a.jg()), x.push((0, o.X8)())), x.length > 0 && (await Promise.allSettled(x)));
-    let M = (0, _.vx)(c.Z.boostSlots),
-        k = M.length,
+    let k = (0, f.vx)(c.Z.boostSlots),
+        M = k.length,
         j = (e) => {
             (null == v || v(), null == N || N(e));
         },
@@ -117,9 +117,9 @@ async function v(e) {
                     location_section: h.section
                 }));
         };
-    if (k > 0 && (null == y || k >= y)) {
+    if (M > 0 && (null == y || M >= y)) {
         let e;
-        (1 === k ? (e = M.slice(0, 1)) : null != y && (e = M.slice(0, y)),
+        (1 === M ? (e = k.slice(0, 1)) : null != y && (e = k.slice(0, y)),
             await (0, i.ZDy)(
                 async () => {
                     let { default: t } = await Promise.all([n.e('8016'), n.e('22646'), n.e('30419'), n.e('35761')]).then(n.bind(n, 760558));
@@ -148,7 +148,7 @@ async function v(e) {
                 }
             ));
     } else
-        (0, f.Z)({
+        (0, _.Z)({
             analyticsLocations: t,
             analyticsLocation: h,
             analyticsSourceLocation: g,

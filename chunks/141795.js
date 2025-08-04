@@ -16,8 +16,8 @@ var r = n(392711),
     c = n(893601),
     u = n(719755),
     d = n(873186),
-    _ = n(740492),
-    f = n(866960),
+    f = n(740492),
+    _ = n(866960),
     p = n(626135),
     h = n(510990),
     m = n(70956),
@@ -478,13 +478,13 @@ class x extends y.ZP {
         p.default.track(I.rMx.ATTACHMENT_UPLOAD_STARTED, {
             file_size: this.currentSize,
             mime_type: null != (e = this.mimeType) ? e : 'unknown',
-            video_upload_quality: _.ZP.videoUploadQuality,
-            data_saving_mode: _.ZP.dataSavingMode,
-            low_quality_image_mode: _.ZP.dataSavingMode,
+            video_upload_quality: f.ZP.videoUploadQuality,
+            data_saving_mode: f.ZP.dataSavingMode,
+            low_quality_image_mode: f.ZP.dataSavingMode,
             channel_id: this.channelId,
-            connection_type: f.Z.getType(),
-            effective_connection_speed: f.Z.getEffectiveConnectionSpeed(),
-            service_provider: f.Z.getServiceProvider()
+            connection_type: _.Z.getType(),
+            effective_connection_speed: _.Z.getEffectiveConnectionSpeed(),
+            service_provider: _.Z.getServiceProvider()
         });
     }
     trackUploadFinished(e) {
@@ -498,9 +498,9 @@ class x extends y.ZP {
             mime_type: null != (t = this.mimeType) ? t : 'unknown',
             num_upload_attempts: null != (n = this.uploadAnalytics.numUploadAttempts) ? n : 1,
             error_code: this.error,
-            video_upload_quality: _.ZP.videoUploadQuality,
-            data_saving_mode: _.ZP.dataSavingMode,
-            low_quality_image_mode: _.ZP.dataSavingMode,
+            video_upload_quality: f.ZP.videoUploadQuality,
+            data_saving_mode: f.ZP.dataSavingMode,
+            low_quality_image_mode: f.ZP.dataSavingMode,
             compress_time_ms: this.uploadAnalytics.timing.compressTimeMs,
             get_upload_url_time_ms: this.uploadAnalytics.timing.getUploadUrlTimeMs,
             upload_time_ms: this.uploadAnalytics.timing.uploadTimeMs,
@@ -538,9 +538,9 @@ class x extends y.ZP {
             upload_resumption_position: this.uploadAnalytics.uploadResumptionPosition,
             upload_resumption_check_time_ms: this.uploadAnalytics.timing.resumptionCheckTimeMs,
             conversion_failure_reason: this.uploadAnalytics.conversionFailureReason,
-            connection_type: f.Z.getType(),
-            effective_connection_speed: f.Z.getEffectiveConnectionSpeed(),
-            service_provider: f.Z.getServiceProvider()
+            connection_type: _.Z.getType(),
+            effective_connection_speed: _.Z.getEffectiveConnectionSpeed(),
+            service_provider: _.Z.getServiceProvider()
         });
     }
     constructor(e, t, n, r) {

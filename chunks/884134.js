@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(680018),
     u = n(146187),
     d = n(179538),
-    _ = n(755721),
-    f = n(481060),
+    f = n(755721),
+    _ = n(481060),
     p = n(153867),
     h = n(230711),
     m = n(493773),
@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(714097),
     L = n(981631),
     x = n(921944),
-    M = n(474936),
-    k = n(671147),
+    k = n(474936),
+    M = n(671147),
     j = n(388032),
     U = n(409403);
 function G(e, t, n) {
@@ -117,15 +117,15 @@ function Y() {
     return (0, r.jsxs)('div', {
         className: U.headerContainer,
         children: [
-            (0, r.jsx)(f.Text, {
+            (0, r.jsx)(_.Text, {
                 variant: 'text-md/bold',
-                children: j.intl.string(k.default['AsmU8/'])
+                children: j.intl.string(M.default['AsmU8/'])
             }),
-            (0, r.jsx)(f.ua7, {
+            (0, r.jsx)(_.ua7, {
                 text: j.intl.string(j.t['5AFxuL']),
                 children: (e) =>
                     (0, r.jsx)(
-                        f.SrA,
+                        _.SrA,
                         B(
                             {
                                 size: 'custom',
@@ -147,26 +147,26 @@ function W(e) {
 }
 function K(e) {
     let { markAsDismissed: t } = e,
-        n = (0, I.m)(M.p9.TIER_2);
+        n = (0, I.m)(k.p9.TIER_2);
     return (0, r.jsxs)('div', {
         className: U.coachmarkHeaderContainer,
         children: [
             (0, r.jsxs)('div', {
                 className: U.badgeAndCloseRow,
-                children: [(0, r.jsx)(f.lBU, { text: j.intl.string(j.t.oW0eUV) }), (0, r.jsx)(H, { markAsDismissed: t })]
+                children: [(0, r.jsx)(_.lBU, { text: j.intl.string(j.t.oW0eUV) }), (0, r.jsx)(H, { markAsDismissed: t })]
             }),
             (0, r.jsxs)('div', {
                 className: U.coachmarkHeaderTextContainer,
                 children: [
-                    (0, r.jsx)(f.X6q, {
+                    (0, r.jsx)(_.X6q, {
                         variant: 'heading-lg/extrabold',
-                        children: j.intl.string(k.default['23QUzs'])
+                        children: j.intl.string(M.default['23QUzs'])
                     }),
-                    (0, r.jsx)(f.Text, {
+                    (0, r.jsx)(_.Text, {
                         className: U.subtitle,
                         variant: 'text-sm/medium',
                         color: 'text-muted',
-                        children: j.intl.string(n ? k.default.TRCE4u : k.default['UV/Vtr'])
+                        children: j.intl.string(n ? M.default.TRCE4u : M.default['UV/Vtr'])
                     })
                 ]
             })
@@ -179,12 +179,12 @@ function z(e) {
     return (0, r.jsxs)('div', {
         className: o()(U.sliderContainer, U.gradientDirectionSliderContainer),
         children: [
-            (0, r.jsx)(f.Text, {
+            (0, r.jsx)(_.Text, {
                 variant: 'text-sm/medium',
-                children: j.intl.string(k.default.dZkwg4)
+                children: j.intl.string(M.default.dZkwg4)
             }),
             (0, r.jsx)(
-                f.iRW,
+                _.iRW,
                 {
                     initialValue: t,
                     defaultValue: 0,
@@ -207,12 +207,12 @@ function q(e) {
     return (0, r.jsxs)('div', {
         className: U.sliderContainer,
         children: [
-            (0, r.jsx)(f.Text, {
+            (0, r.jsx)(_.Text, {
                 variant: 'text-sm/medium',
-                children: j.intl.string(k.default.xlXkaG)
+                children: j.intl.string(M.default.xlXkaG)
             }),
             (0, r.jsx)(
-                f.iRW,
+                _.iRW,
                 {
                     initialValue: t,
                     defaultValue: A.BH,
@@ -239,16 +239,16 @@ function X() {
             chassisMixAmount: t.intensity
         });
     }, []);
-    return (0, r.jsx)(f.ua7, {
-        text: j.intl.string(k.default.c9MBEB),
+    return (0, r.jsx)(_.ua7, {
+        text: j.intl.string(M.default.c9MBEB),
         children: (t) =>
             (0, r.jsx)(
                 c.z,
                 F(B({}, t), {
                     variant: 'secondary',
                     onClick: e,
-                    icon: f.$2U,
-                    text: j.intl.string(k.default.c9MBEB),
+                    icon: _.$2U,
+                    text: j.intl.string(M.default.c9MBEB),
                     fullWidth: !0
                 })
             )
@@ -256,8 +256,8 @@ function X() {
 }
 function Q(e) {
     let { onApply: t, disabled: n, fullWidth: i } = e;
-    return (0, r.jsx)(f.ua7, {
-        text: j.intl.string(k.default.SFyHIC),
+    return (0, r.jsx)(_.ua7, {
+        text: j.intl.string(M.default.SFyHIC),
         shouldShow: n,
         children: (e) =>
             (0, r.jsx)(
@@ -274,7 +274,7 @@ function Q(e) {
 }
 function J(e) {
     let { onSaveTheme: t, canApply: n } = e,
-        i = (0, I.m)(M.p9.TIER_2);
+        i = (0, I.m)(k.p9.TIER_2);
     return (
         (0, P.hf)(i, g.Z.CUSTOM_THEMES_EDITOR_COACHMARK),
         (0, r.jsx)('div', {
@@ -291,16 +291,16 @@ function J(e) {
                           section: L.jXE.CUSTOM_THEMES_COACHMARK_FOOTER
                       },
                       textOptions: { subscribeText: j.intl.string(j.t.JST6jo) },
-                      subscriptionTier: M.Si.TIER_2,
+                      subscriptionTier: k.Si.TIER_2,
                       showGradient: !0,
-                      color: _.Tt.BRAND
+                      color: f.Tt.BRAND
                   })
         })
     );
 }
 function $(e) {
     let { onSaveTheme: t, canApply: n, metadata: i } = e,
-        a = (0, I.m)(M.p9.TIER_2);
+        a = (0, I.m)(k.p9.TIER_2);
     (0, P.hf)(a, g.Z.CUSTOM_THEMES_EDITOR);
     let o = () => {
         ((0, P.Vb)(), (0, y.Q3)(l.z.CUSTOM_THEME_COACHMARK), (null == i ? void 0 : i.from) === b.tE.SETTING ? (h.Z.open(), (0, b.Ll)()) : (null == i ? void 0 : i.from) === b.tE.CLIENT_THEMES_EDITOR ? (0, b.XO)(b.wh.CLIENT_THEMES) : (0, b.Ll)());
@@ -320,8 +320,8 @@ function $(e) {
                   })
                 : (0, r.jsx)(v.Z, {
                       className: U.subscribeButton,
-                      size: _.zx.Sizes.MEDIUM,
-                      subscriptionTier: M.Si.TIER_2,
+                      size: f.zx.Sizes.MEDIUM,
+                      subscriptionTier: k.Si.TIER_2,
                       showGradient: !0,
                       premiumModalAnalyticsLocation: {
                           page: L.ZY5.PREMIUM_UPSELL_CUSTOM_THEMES,
@@ -337,14 +337,14 @@ function ee(e) {
     let { metadata: n, markAsDismissed: a, isCoachmark: o } = e,
         u = R.M.useExperiment({ location: 'ClientThemeColorPickerTools' }).enabled,
         d = (0, C.jJ)(),
-        _ = i.useRef(!1),
+        f = i.useRef(!1),
         { colors: h, chassisMixAmount: O, gradientAngle: v, setColors: I, setChassisMixAmount: N, setGradientAngle: L } = (0, A.Ig)(),
-        [M, G] = i.useState(null != (t = h[0]) ? t : A.Dp),
+        [k, G] = i.useState(null != (t = h[0]) ? t : A.Dp),
         B = (0, s.e7)([S.Z], () => S.Z.theme),
         V = (0, y.Nj)(l.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
         { analyticsLocations: F } = (0, E.ZP)(g.Z.CUSTOM_THEMES_EDITOR),
         Z = async () => {
-            ((_.current = !0),
+            ((f.current = !0),
                 await (0, p.ZI)({
                     theme: B,
                     customUserThemeSettings: {
@@ -366,12 +366,12 @@ function ee(e) {
         Y = h.length > 0;
     return (i.useEffect(
         () => () => {
-            _.current || d(C._m.EDITOR_CLOSE);
+            f.current || d(C._m.EDITOR_CLOSE);
         },
         [d]
     ),
     (0, m.ZP)(() => {
-        o || (0, C.lT)(h, M, I);
+        o || (0, C.lT)(h, k, I);
     }),
     u)
         ? (0, r.jsx)('div', {
@@ -380,7 +380,7 @@ function ee(e) {
               children: (0, r.jsxs)('div', {
                   className: U.containerInner,
                   children: [
-                      (0, r.jsx)(f.Ttm, {
+                      (0, r.jsx)(_.Ttm, {
                           children: (0, r.jsxs)('div', {
                               className: U.editorBody,
                               children: [
@@ -391,10 +391,10 @@ function ee(e) {
                                   (0, r.jsxs)('div', {
                                       className: U.section,
                                       children: [
-                                          (0, r.jsx)(f.Text, {
+                                          (0, r.jsx)(_.Text, {
                                               variant: 'text-sm/semibold',
                                               color: 'text-secondary',
-                                              children: j.intl.string(k.default.o2NfLC)
+                                              children: j.intl.string(M.default.o2NfLC)
                                           }),
                                           (0, r.jsx)(D.o, {})
                                       ]
@@ -402,16 +402,16 @@ function ee(e) {
                                   (0, r.jsxs)('div', {
                                       className: U.section,
                                       children: [
-                                          (0, r.jsx)(f.Text, {
+                                          (0, r.jsx)(_.Text, {
                                               variant: 'text-sm/semibold',
                                               color: 'text-secondary',
-                                              children: j.intl.string(k.default.uSL2Gx)
+                                              children: j.intl.string(M.default.uSL2Gx)
                                           }),
                                           (0, r.jsx)(w.U, {
                                               onChange: (e) => {
                                                   (G(e), 0 === h.length && (0, C.lT)(h, e, I));
                                               },
-                                              value: M,
+                                              value: k,
                                               colors: h,
                                               setColors: I
                                           })
@@ -420,10 +420,10 @@ function ee(e) {
                                   (0, r.jsxs)('div', {
                                       className: U.section,
                                       children: [
-                                          (0, r.jsx)(f.Text, {
+                                          (0, r.jsx)(_.Text, {
                                               variant: 'text-sm/semibold',
                                               color: 'text-secondary',
-                                              children: j.intl.string(k.default.F1t0c3)
+                                              children: j.intl.string(M.default.F1t0c3)
                                           }),
                                           h.length > 1 &&
                                               (0, r.jsx)(z, {
@@ -433,7 +433,7 @@ function ee(e) {
                                           (0, r.jsx)(q, {
                                               chassisMixAmount: O,
                                               setChassisMixAmount: (e) => {
-                                                  (N(e), 0 === h.length && (0, C.lT)(h, M, I));
+                                                  (N(e), 0 === h.length && (0, C.lT)(h, k, I));
                                               }
                                           })
                                       ]

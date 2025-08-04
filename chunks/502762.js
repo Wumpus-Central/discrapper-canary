@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -8,9 +8,9 @@ var r = n(255367),
     c = n(213053),
     u = n(652853),
     d = n(750883);
-let _ = Object.assign(
+let f = Object.assign(
     i.forwardRef(function (e, t) {
-        let { user: n, displayProfile: i, themeType: a, className: _, pendingThemeColors: f, themeOverride: p, children: h, forceShowPremium: m = !1, forceUserTheme: g = !1 } = e,
+        let { user: n, displayProfile: i, themeType: a, className: f, pendingThemeColors: _, themeOverride: p, children: h, forceShowPremium: m = !1, forceUserTheme: g = !1 } = e,
             {
                 theme: E,
                 primaryColor: b,
@@ -18,7 +18,7 @@ let _ = Object.assign(
             } = (0, l.Z)({
                 user: n,
                 displayProfile: i,
-                pendingThemeColors: f,
+                pendingThemeColors: _,
                 isPreview: m,
                 forceUserTheme: g
             }),
@@ -30,7 +30,7 @@ let _ = Object.assign(
                 forceUserTheme: g
             });
         return (0, r.jsx)('div', {
-            className: o()(d.outer, v, _),
+            className: o()(d.outer, v, f),
             style: O,
             ref: t,
             children: (0, r.jsx)('div', {

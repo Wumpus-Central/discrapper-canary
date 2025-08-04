@@ -17,20 +17,20 @@ var r = n(120356),
 let b = (e) => {
     var t;
     let n,
-        { title: r, titleClassName: b = '', buttonClassName: x = '', subtitle: _ = '', description: j = '', descriptionCta: C = '', isPremiumGetCta: E, onCtaClick: O, cardVariant: v } = e,
+        { title: r, titleClassName: b = '', buttonClassName: x = '', subtitle: _ = '', description: j = '', descriptionCta: E = '', isPremiumGetCta: C, onCtaClick: O, cardVariant: v } = e,
         S = (0, d.N)(),
         T = null == S ? void 0 : S.subscription_trial,
-        N = (0, c.Ng)(),
-        I = (0, l.Rt)({
+        I = (0, c.Ng)(),
+        N = (0, l.Rt)({
             intervalType: null == T ? void 0 : T.interval,
             intervalCount: null == T ? void 0 : T.interval_count
         }),
         y = (0, o._)({
             defaultResponse: h.intl.string(h.t['8x0jKS']),
             onNonTier2Subscriber: h.intl.string(h.t.IJI7ys),
-            onTier2TrialOffer: I,
-            onTier0TrialOffer: I,
-            onDiscountOffer: h.intl.formatToPlainString(h.t.bkQ4bG, { percent: null == N ? void 0 : N.discount.amount })
+            onTier2TrialOffer: N,
+            onTier0TrialOffer: N,
+            onDiscountOffer: h.intl.formatToPlainString(h.t.bkQ4bG, { percent: null == I ? void 0 : I.discount.amount })
         }),
         A = (0, m._)(v);
     return (0, i.jsxs)('div', {
@@ -43,7 +43,7 @@ let b = (e) => {
                 subtitle: _,
                 description: j
             }),
-            E &&
+            C &&
                 (0, i.jsx)(u.Z, {
                     className: x,
                     look: a.zx.Looks.BLANK,
@@ -52,13 +52,13 @@ let b = (e) => {
                     textOptions: { textOverride: y },
                     showGradient: !0
                 }),
-            0 !== C.length &&
+            0 !== E.length &&
                 (null == (n = null == A ? void 0 : A.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
                 null != O &&
                 (0, i.jsx)(a.zx, {
                     className: x,
                     onClick: O,
-                    children: C
+                    children: E
                 })
         ]
     });

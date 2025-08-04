@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(726985),
     _ = n(981631),
     j = n(388032),
-    C = n(40713);
-function E(e) {
+    E = n(40713);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -53,18 +53,18 @@ function O() {
             h.bm.updateSetting(!e);
         }, []),
         T = r.useCallback((e) => {
-            e ? (0, a.h7j)((e) => (0, i.jsx)(b.Z, E({}, e))) : l.mc();
-        }, []),
-        N = r.useCallback((e) => {
-            (0, c.BV)(e, o.Z.USER_SETTINGS);
+            e ? (0, a.h7j)((e) => (0, i.jsx)(b.Z, C({}, e))) : l.mc();
         }, []),
         I = r.useCallback((e) => {
+            (0, c.BV)(e, o.Z.USER_SETTINGS);
+        }, []),
+        N = r.useCallback((e) => {
             (0, a.h7j)((t) => {
                 var n, r;
                 let s = e ? j.intl.format(j.t.LYXRxM, {}) : j.intl.format(j.t.uDP3Ky, {});
                 return (0, i.jsx)(
                     a.ConfirmModal,
-                    ((n = E(
+                    ((n = C(
                         {
                             header: j.intl.string(j.t.aqpAvr),
                             confirmText: j.intl.string(j.t.vT7ckp),
@@ -124,9 +124,9 @@ function O() {
             (0, i.jsx)(u.F, {
                 setting: x.s6.SETTINGS_ADVANCED_HARDWARE_ACCELERATION,
                 children: (0, i.jsx)(a.j7V, {
-                    className: e ? '' : C.formSwitchExtension,
+                    className: e ? '' : E.formSwitchExtension,
                     value: e,
-                    onChange: I,
+                    onChange: N,
                     note: j.intl.string(j.t.Afc7l5),
                     hideBorder: !e,
                     children: j.intl.string(j.t['eOC/Fx'])
@@ -139,7 +139,7 @@ function O() {
                             look: f.z.WARNING,
                             children: j.intl.string(j.t.j7S6IS)
                         }),
-                        (0, i.jsx)(a.$i$, { className: C.infoBoxDivider })
+                        (0, i.jsx)(a.$i$, { className: E.infoBoxDivider })
                     ]
                 }),
             (0, i.jsx)(u.F, {
@@ -165,7 +165,7 @@ function O() {
                 children: (0, i.jsx)(a.j7V, {
                     value: v,
                     note: j.intl.string(j.t['B/qU4O']),
-                    onChange: N,
+                    onChange: I,
                     children: j.intl.string(j.t.qDZryM)
                 })
             }),

@@ -8,7 +8,7 @@ var i,
     c = n(58654),
     u = n(84735),
     d = n(283574);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -150,11 +150,11 @@ class y extends (i = o.PureComponent) {
             { style: t, className: n, onResize: r } = e,
             i = m(e, ['style', 'className', 'onResize']);
         delete i.fontWidthEstimate;
-        let o = f({}, this.state, t);
+        let o = _({}, this.state, t);
         return (0, a.jsx)(u.t, {
             children: (0, a.jsx)(
                 'textarea',
-                h(f({}, i), {
+                h(_({}, i), {
                     className: l()(n, d.scrollbarGhostHairline),
                     ref: this.handleSetRef,
                     style: o,
@@ -165,18 +165,18 @@ class y extends (i = o.PureComponent) {
     }
     constructor(e) {
         (super(e),
-            _(this, '_textArea', void 0),
-            _(this, 'handleSetRef', (e) => {
+            f(this, '_textArea', void 0),
+            f(this, 'handleSetRef', (e) => {
                 this._textArea = e;
             }),
-            _(this, 'handleChange', (e) => {
+            f(this, 'handleChange', (e) => {
                 let { onChange: t } = this.props;
                 (null == t || t(e), this.calculateSize());
             }),
             (this.state = { height: void 0 }));
     }
 }
-_(y, 'defaultProps', {
+f(y, 'defaultProps', {
     autoFocus: !1,
     disabled: !1,
     autoCorrect: 'off'

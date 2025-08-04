@@ -8,8 +8,8 @@ var r = n(952265),
     c = n(653175),
     u = n(592125),
     d = n(430824),
-    _ = n(607744),
-    f = n(944486),
+    f = n(607744),
+    _ = n(944486),
     p = n(979651),
     h = n(934415);
 function m(e, t, n) {
@@ -47,7 +47,7 @@ let E = function (e, t) {
         { lockVoiceStateForResume: b = !1 } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         y = u.Z.getChannel(e),
         O = p.Z.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
-        v = null != y ? _.Z.getCheck(y.guild_id) : null;
+        v = null != y ? f.Z.getCheck(y.guild_id) : null;
     if (!(null != t && (0, a.n)(t)) && (null == v || v.canChat || (0, o.jU)(y))) {
         if (null != y && !O) {
             let e = (0, h.rY)(y, p.Z, d.Z);
@@ -69,7 +69,7 @@ let E = function (e, t) {
             type: 'VOICE_CHANNEL_SELECT',
             guildId: t,
             channelId: e,
-            currentVoiceChannelId: f.Z.getVoiceChannelId(),
+            currentVoiceChannelId: _.Z.getVoiceChannelId(),
             video: m,
             stream: E,
             lockVoiceStateForResume: b

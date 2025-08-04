@@ -2,13 +2,14 @@ n.d(t, { Z: () => g });
 var r = n(255367),
     o = n(73800),
     i = n(481060),
-    a = n(810568),
-    l = n(168524),
+    l = n(810568),
+    a = n(168524),
     c = n(817053),
     s = n(879877),
+    u = n(919498),
     d = n(388032),
-    u = n(467514),
-    f = n(418718);
+    f = n(467514),
+    p = n(418718);
 function m(e) {
     let { text: t } = e;
     return null == t
@@ -18,7 +19,7 @@ function m(e) {
                   (0, r.jsx)(i.PEf, {
                       size: 'xs',
                       color: i.TVs.colors.ICON_TERTIARY,
-                      className: f.icon
+                      className: p.icon
                   }),
                   (0, r.jsx)(i.Text, {
                       variant: 'text-sm/normal',
@@ -28,84 +29,84 @@ function m(e) {
               ]
           });
 }
-function p(e) {
+function b(e) {
     let { applicationId: t, userId: n, gameName: c, className: s, children: u } = e,
-        m = (0, l.Z)({
+        f = (0, a.Z)({
             location: 'UserProfileWidgetGameDetailsCard',
             applicationId: t,
-            source: a.m1.UserProfile,
+            source: l.m1.UserProfile,
             sourceUserId: n,
             trackEntryPointImpression: !0
         }),
-        p = o.useCallback(
+        m = o.useCallback(
             (e) => {
-                e.target === e.currentTarget && (null == m || m(e));
+                e.target === e.currentTarget && (null == f || f(e));
             },
-            [m]
+            [f]
         ),
-        g = null != c ? c : d.intl.string(d.t.GIWFlJ),
-        b = null != m;
+        b = null != c ? c : d.intl.string(d.t.GIWFlJ),
+        g = null != f;
     return (0, r.jsxs)('div', {
         className: s,
         children: [
-            b &&
+            g &&
                 (0, r.jsx)(i.P3F, {
-                    className: f.clickableCard,
-                    'aria-label': d.intl.formatToPlainString(d.t['8QLQBw'], { gameName: g }),
-                    onClick: p
+                    className: p.clickableCard,
+                    'aria-label': d.intl.formatToPlainString(d.t['8QLQBw'], { gameName: b }),
+                    onClick: m
                 }),
             u
         ]
     });
 }
 function g(e) {
-    let { userId: t, game: n, loading: o = !1, disableInteraction: a = !1 } = e,
-        { gameName: l, imageSrc: d, applicationId: g, comment: b, tags: x } = n,
-        _ = () =>
+    let { game: t, userId: n, guildId: o, channelId: l, loading: a = !1, disableInteraction: d = !1 } = e,
+        { gameName: g, imageSrc: y, applicationId: j, comment: O, tags: x } = t,
+        h = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(c.Z, {
-                        imageSrc: d,
-                        gameName: l,
-                        applicationId: g,
-                        userId: t,
+                        imageSrc: y,
+                        gameName: g,
+                        applicationId: j,
+                        userId: n,
                         disableInteraction: !0
                     }),
                     (0, r.jsxs)('div', {
-                        className: f.details,
+                        className: p.details,
                         children: [
                             (0, r.jsx)(i.X6q, {
                                 variant: 'text-md/normal',
                                 color: 'text-default',
-                                children: l
+                                children: g
                             }),
-                            (0, r.jsx)(m, { text: b }),
+                            (0, r.jsx)(m, { text: O }),
                             (0, r.jsx)(s.Z, { tags: x }),
-                            (0, r.jsx)(i.Text, {
-                                variant: 'text-xs/normal',
-                                color: 'text-secondary',
-                                className: f.socialProof,
-                                children: '3 people you know play this game'
+                            (0, r.jsx)(u.Z, {
+                                applicationId: j,
+                                guildId: o,
+                                channelId: l,
+                                className: p.socialProof
                             })
                         ]
                     })
                 ]
             });
-    return o
+    return a
         ? (0, r.jsxs)('div', {
-              className: f.card,
-              children: [(0, r.jsx)('div', { className: u.gameCover }), (0, r.jsx)('div', { className: f.details })]
+              className: p.card,
+              children: [(0, r.jsx)('div', { className: f.gameCover }), (0, r.jsx)('div', { className: p.details })]
           })
-        : a
+        : d
           ? (0, r.jsx)('div', {
-                className: f.card,
-                children: _()
+                className: p.card,
+                children: h()
             })
-          : (0, r.jsx)(p, {
-                applicationId: g,
-                userId: t,
-                gameName: l,
-                className: f.card,
-                children: _()
+          : (0, r.jsx)(b, {
+                applicationId: j,
+                userId: n,
+                gameName: g,
+                className: p.card,
+                children: h()
             });
 }

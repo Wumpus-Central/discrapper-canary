@@ -1,6 +1,6 @@
 (n.d(t, {
     PK: () => v,
-    ZP: () => N,
+    ZP: () => I,
     _O: () => T
 }),
     n(953529));
@@ -22,8 +22,8 @@ var i = n(255367),
     x = n(736519),
     _ = n(784238),
     j = n(422034),
-    C = n(206127),
-    E = n(388032),
+    E = n(206127),
+    C = n(388032),
     O = n(909176);
 let v = (e) => {
         let { inOfferExperience: t, subscriptionTier: n, containerClassName: r, buttonClassName: s, isApplicationHome: l, isDarkMode: c, isEligibleForBogoPromotion: d } = e,
@@ -64,7 +64,7 @@ let v = (e) => {
         });
 function T(e) {
     let { variant: t = 'text-lg/normal', withBottomMargin: n = !0, isApplicationHome: r } = e,
-        s = (0, C.$)();
+        s = (0, E.$)();
     return (0, i.jsx)(c.Text, {
         variant: t,
         color: r ? 'text-secondary' : 'always-white',
@@ -72,32 +72,32 @@ function T(e) {
             [O.descriptionBottomMargin]: n,
             [O.descriptionV2]: r
         }),
-        children: E.intl.format(E.t.kt9wxs, { cheapestMonthlyPrice: s })
+        children: C.intl.format(C.t.kt9wxs, { cheapestMonthlyPrice: s })
     });
 }
-let N = r.forwardRef((e, t) => {
+let I = r.forwardRef((e, t) => {
     let { className: n, buttonClassName: r, subscriptionTier: s, isDarkMode: m } = e,
         { analyticsLocations: _ } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_HERO_CTA),
-        C = (0, f._O)(),
-        N = (0, h.Nx)(),
-        I = (0, g.Vi)(),
+        E = (0, f._O)(),
+        I = (0, h.Nx)(),
+        N = (0, g.Vi)(),
         y = (0, l.e7)([p.Z], () => p.Z.affinities).length > 0,
-        A = (0, b.Z)({ location: 'HeroHeading' }) ? E.intl.string(E.t['EW+VIS']) : E.intl.string(E.t.YCZldH);
+        A = (0, b.Z)({ location: 'HeroHeading' }) ? C.intl.string(C.t['EW+VIS']) : C.intl.string(C.t.YCZldH);
     return (0, i.jsx)(u.Gt, {
         value: _,
         children: (0, i.jsxs)('div', {
             ref: t,
             className: a()(O.container, n, {
-                [O.settingsContainer]: !N,
-                [O.affinityHeight]: !N && y
+                [O.settingsContainer]: !I,
+                [O.affinityHeight]: !I && y
             }),
             'data-testid': 'v2-marketing-page-hero-header',
             children: [
                 (0, i.jsxs)('div', {
-                    className: N ? O.fullscreenTextContainer : O.settingsTextContainer,
+                    className: I ? O.fullscreenTextContainer : O.settingsTextContainer,
                     children: [
                         (0, i.jsx)(c.X6q, {
-                            variant: N ? 'display-lg' : 'display-md',
+                            variant: I ? 'display-lg' : 'display-md',
                             color: 'always-white',
                             children: A
                         }),
@@ -106,11 +106,11 @@ let N = r.forwardRef((e, t) => {
                                   className: O.affinityDescription,
                                   children: (0, i.jsx)(j.Z, {
                                       textColor: 'always-white',
-                                      smallerText: !N
+                                      smallerText: !I
                                   })
                               })
                             : (0, i.jsx)(T, {}),
-                        I || C
+                        N || E
                             ? (0, i.jsx)('div', {
                                   className: O.buttonContainer,
                                   children: (0, i.jsx)(x.Z, {
@@ -120,7 +120,7 @@ let N = r.forwardRef((e, t) => {
                               })
                             : (0, i.jsx)(v, {
                                   subscriptionTier: s,
-                                  inOfferExperience: N,
+                                  inOfferExperience: I,
                                   buttonClassName: r,
                                   isDarkMode: m
                               }),
@@ -131,7 +131,7 @@ let N = r.forwardRef((e, t) => {
                             })
                     ]
                 }),
-                !N && (0, i.jsx)(S, {})
+                !I && (0, i.jsx)(S, {})
             ]
         })
     });

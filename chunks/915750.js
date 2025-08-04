@@ -1,5 +1,5 @@
 (n.d(t, {
-    B5: () => M,
+    B5: () => k,
     PI: () => w,
     WD: () => U,
     aM: () => G,
@@ -19,8 +19,8 @@ var r = n(255367),
     c = n(110924),
     u = n(516796),
     d = n(186102),
-    _ = n(113544),
-    f = n(797614),
+    f = n(113544),
+    _ = n(797614),
     p = n(592125),
     h = n(430824),
     m = n(914010),
@@ -82,8 +82,8 @@ class x {
         let t = (0, v.d)(this.questContent),
             n = (0, y.VB)(this.questContent),
             r = (0, y.uN)(this.questContent),
-            i = (0, _.z5)(),
-            a = (0, _.QW)();
+            i = (0, f.z5)(),
+            a = (0, f.QW)();
         if (!t || !(null == r ? void 0 : r.is_campaign_ias_enabled) || !n || void 0 === i || void 0 === a) return null;
         let o = () => {
                 let e = i(),
@@ -149,7 +149,7 @@ class x {
                 : null;
         return (null !== d && (u.selected_guild_banner_url = d), u.guilds.length > C && ((u.guilds = u.guilds.slice(0, C)), (u.truncated = !0)), u.channels.length > C && ((u.channels = u.channels.slice(0, C)), (u.truncated = !0)), { brand_safety_context: JSON.stringify(u) });
     }
-    constructor({ questOrQuests: e, questContent: t, triggeredByStatusChange: n, trackGuildAndChannelMetadata: r, questContentPosition: i, questContentRowIndex: s, minViewTimeSeconds: l = P, isQuestEnrollmentBlocked: c, sourceQuestContent: _ }) {
+    constructor({ questOrQuests: e, questContent: t, triggeredByStatusChange: n, trackGuildAndChannelMetadata: r, questContentPosition: i, questContentRowIndex: s, minViewTimeSeconds: l = P, isQuestEnrollmentBlocked: c, sourceQuestContent: f }) {
         var p = this;
         (A(this, 'id', void 0),
             A(this, 'quests', void 0),
@@ -276,7 +276,7 @@ class x {
                             }));
                     }),
                     (0, I.a)('QuestImpressionTracker') &&
-                        f.Z.increment({
+                        _.Z.increment({
                             name: o.V.QUEST_CONTENT_IMPRESSION,
                             tags: ['quest_content:'.concat((0, b._b)(this.questContent))]
                         }),
@@ -296,10 +296,10 @@ class x {
             (this.triggeredByStatusChange = n),
             (this.questContentRowIndex = s),
             (this.isQuestEnrollmentBlocked = c),
-            (this.sourceQuestContent = _));
+            (this.sourceQuestContent = f));
     }
 }
-let M = (e, t) => {
+let k = (e, t) => {
         let n = Array.isArray(e)
             ? e
                   .sort()
@@ -308,7 +308,7 @@ let M = (e, t) => {
             : e.id;
         return ''.concat(n, '_').concat(t);
     },
-    k = (e) => {
+    M = (e) => {
         let t = Array.isArray(e) ? null : (0, b.uk)(e),
             n = (0, c.Z)(t);
         return t !== n;
@@ -324,20 +324,20 @@ function G() {
 }
 function B(e) {
     let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c, sourceQuestContent: u } = e,
-        d = k(e.questOrQuests),
-        _ = i.useRef(null),
-        f = (0, s.e7)([O.Z], () => null != O.Z.questEnrollmentBlockedUntil, []);
+        d = M(e.questOrQuests),
+        f = i.useRef(null),
+        _ = (0, s.e7)([O.Z], () => null != O.Z.questEnrollmentBlockedUntil, []);
     return (
         (0, l.ZP)(() => () => {
-            null != _.current && _.current.stop();
+            null != f.current && f.current.stop();
         }),
         i.useEffect(() => {
             let r = a && t,
                 i = (n || c || d) && r,
                 o = ((n || c) && !r) || d;
-            ((i || o) && null != _.current && _.current.stop(),
+            ((i || o) && null != f.current && f.current.stop(),
                 i &&
-                    ((_.current = new x({
+                    ((f.current = new x({
                         questOrQuests: e.questOrQuests,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
@@ -345,14 +345,14 @@ function B(e) {
                         triggeredByStatusChange: d,
                         trackGuildAndChannelMetadata: e.trackGuildAndChannelMetadata,
                         minViewTimeSeconds: e.minViewTimeSeconds,
-                        isQuestEnrollmentBlocked: f,
+                        isQuestEnrollmentBlocked: _,
                         sourceQuestContent: u
                     })),
-                    _.current.start()));
-        }, [a, t, c, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, d, e.minViewTimeSeconds, f, u]),
+                    f.current.start()));
+        }, [a, t, c, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, d, e.minViewTimeSeconds, _, u]),
         (0, r.jsx)(j.Provider, {
-            value: _,
-            children: e.children(o, _)
+            value: f,
+            children: e.children(o, f)
         })
     );
 }

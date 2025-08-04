@@ -17,16 +17,16 @@ var i = n(255367),
     x = n(4046),
     _ = n(423741);
 let j = r.forwardRef((e, t) => {
-    let { className: n, isFooterVisible: s, isDarkMode: j, isReducedMotion: C, subscriptionTier: E } = e,
+    let { className: n, isFooterVisible: s, isDarkMode: j, isReducedMotion: E, subscriptionTier: C } = e,
         { analyticsLocations: O } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
         v = (0, m.Nx)(),
         S = (0, u.rO)(),
         T = r.useRef(null),
-        [N, I] = r.useState(!1);
+        [I, N] = r.useState(!1);
     return (
         r.useEffect(() => {
-            !s || C || N || null == T.current || T.current.play();
-        }, [s, C, N]),
+            !s || E || I || null == T.current || T.current.play();
+        }, [s, E, I]),
         (0, i.jsx)(c.Gt, {
             value: O,
             children: (0, i.jsxs)('div', {
@@ -40,7 +40,7 @@ let j = r.forwardRef((e, t) => {
                         children: h.intl.string(h.t.lEw32t)
                     }),
                     (0, i.jsx)(p.PK, {
-                        subscriptionTier: E,
+                        subscriptionTier: C,
                         inOfferExperience: v,
                         containerClassName: f.footerCTAContainer,
                         isApplicationHome: !0,
@@ -55,7 +55,7 @@ let j = r.forwardRef((e, t) => {
                             poster: x.Z,
                             className: f.footerArt,
                             onEnded: () => {
-                                I(!0);
+                                N(!0);
                             },
                             ref: T,
                             children: (0, i.jsx)('source', {

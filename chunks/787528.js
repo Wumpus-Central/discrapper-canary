@@ -11,8 +11,8 @@ var r = n(586502),
     c = n(166870),
     u = n(79914),
     d = n(634071),
-    _ = n(557821),
-    f = n(111301),
+    f = n(557821),
+    _ = n(111301),
     p = n(841264),
     h = n(678579),
     m = n(545556),
@@ -23,10 +23,10 @@ var r = n(586502),
 let O = {
         [i.VU.PREMIUM_TENURE_1_MONTH]: {
             standard: a,
-            ambient: f.Z
+            ambient: _.Z
         },
         [i.VU.PREMIUM_TENURE_3_MONTH]: {
-            standard: _,
+            standard: f,
             ambient: p.Z
         },
         [i.VU.PREMIUM_TENURE_6_MONTH]: {

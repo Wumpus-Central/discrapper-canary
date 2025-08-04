@@ -17,14 +17,14 @@ var i = n(255367),
     x = n(81643),
     _ = n(952306),
     j = n(299206),
-    C = n(295474),
-    E = n(144114),
+    E = n(295474),
+    C = n(144114),
     O = n(918505),
     v = n(332473),
     S = n(921801),
     T = n(485341),
-    N = n(687158),
-    I = n(518950),
+    I = n(687158),
+    N = n(518950),
     y = n(184325),
     A = n(867176),
     P = n(25990),
@@ -90,7 +90,7 @@ function Y(e) {
         c = r.useRef(null),
         u = (0, O.o9)(),
         p = (0, v.b)(),
-        g = (0, C.gS)(),
+        g = (0, E.gS)(),
         h = null != (s = null == g || null == (t = g.nick) ? void 0 : t[0]) ? s : null,
         [f, b] = r.useState(!1);
     r.useEffect(() => {
@@ -220,7 +220,7 @@ function Y(e) {
 function K(e) {
     var t, n;
     let { user: s, className: l } = e,
-        o = (0, C.gS)(),
+        o = (0, E.gS)(),
         c = null != (n = null == o || null == (t = o.nick) ? void 0 : t[0]) ? n : null,
         u = Z.ZP.getGlobalName(s),
         p = r.useRef(null),
@@ -444,7 +444,7 @@ function J(e) {
                                                   title: G.intl.string(G.t['3CTiKi']),
                                                   children: s.hasFlag(M.xW$.MFA_SMS) ? G.intl.string(G.t.jrhJys) : void 0,
                                                   actionText: G.intl.string(G.t.N86XcH),
-                                                  handleSubmit: (e) => E.Z.removePhone(e, E.L.USER_SETTINGS_UPDATE)
+                                                  handleSubmit: (e) => C.Z.removePhone(e, C.L.USER_SETTINGS_UPDATE)
                                               })
                                           )
                                       );
@@ -464,7 +464,7 @@ function J(e) {
                                     (0, m.ZDy)(
                                         async () => {
                                             let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
-                                            return (t) => (0, i.jsx)(e, H({ reason: E.L.USER_SETTINGS_UPDATE }, t));
+                                            return (t) => (0, i.jsx)(e, H({ reason: C.L.USER_SETTINGS_UPDATE }, t));
                                         },
                                         { modalKey: U.M }
                                     );
@@ -567,12 +567,12 @@ function et() {
             let e = R.default.getCurrentUser();
             return (o()(null != e, 'UserSettingsAccountProfileCard: currentUser cannot be undefined'), e);
         }),
-        n = (0, N.ZP)(t.id),
+        n = (0, I.ZP)(t.id),
         r = (0, T.Z)(n),
         s = k.co.useSetting(),
         a = (0, c.e7)([P.Z], () => P.Z.getErrors()),
         l = null == a || null == (e = a.avatar) ? void 0 : e[0],
-        { avatarSrc: d, avatarDecorationSrc: u } = (0, I.Z)({
+        { avatarSrc: d, avatarDecorationSrc: u } = (0, N.Z)({
             userId: null == t ? void 0 : t.id,
             size: m.EFr.SIZE_80
         });

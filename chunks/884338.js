@@ -14,8 +14,8 @@ var r,
     c = n(686546),
     u = n(670188),
     d = n(598077),
-    _ = n(594174),
-    f = n(426563),
+    f = n(594174),
+    _ = n(426563),
     p = n(472840);
 function h(e, t, n) {
     return (
@@ -202,11 +202,11 @@ class N extends (r = a.PureComponent) {
                 children: [this.renderIcon(), this.renderUsers()]
             });
         let c = n.find((e) => e instanceof d.Z && e.id === l),
-            f = o && null == _.default.getUser(l);
+            _ = o && null == f.default.getUser(l);
         return (0, i.jsx)(u.Z, {
             targetElementRef: this._ref,
             userId: l,
-            user: f && null != c ? c : void 0,
+            user: _ && null != c ? c : void 0,
             guildId: r,
             fixed: !0,
             shouldShow: !0 === a && null != l,
@@ -240,8 +240,8 @@ class N extends (r = a.PureComponent) {
                 if (null == e)
                     if (!this.props.showDefaultAvatarsForNullUsers) return (0, i.jsx)('div', { className: s()(p.emptyUser, { [p.emptyUserDimmed]: u }) });
                     else {
-                        let e = (null != n ? n : 0) % f.Z.DEFAULT_AVATARS.length,
-                            t = f.Z.DEFAULT_AVATARS[e];
+                        let e = (null != n ? n : 0) % _.Z.DEFAULT_AVATARS.length,
+                            t = _.Z.DEFAULT_AVATARS[e];
                         return (0, i.jsx)('img', {
                             src: t,
                             alt: '',

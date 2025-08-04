@@ -1,18 +1,18 @@
-n.d(t, { u: () => l });
-var i = n(255367);
+n.d(t, { u: () => s });
+var r = n(255367);
 n(73800);
-var r = n(146187),
-    s = n(388032),
-    a = n(669546);
-function l(e) {
-    let { onClick: t, 'aria-label': n = s.intl.string(s.t.cpT0Cg), colorMix: l } = e;
-    return (0, i.jsx)('div', {
-        className: a.closeButton,
-        children: (0, i.jsx)(r.P, {
+var i = n(146187),
+    a = n(388032),
+    o = n(669546);
+function s(e) {
+    let { onClick: t, 'aria-label': n = a.intl.string(a.t.cpT0Cg), colorMix: s } = e;
+    return (0, r.jsx)('div', {
+        className: o.closeButton,
+        children: (0, r.jsx)(i.P, {
             size: 'sm',
             'aria-label': n,
             onClick: t,
-            colorMix: l
+            colorMix: s
         })
     });
 }

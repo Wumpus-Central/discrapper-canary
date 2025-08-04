@@ -1,12 +1,12 @@
 (n.d(t, {
-    Ce: () => f,
+    Ce: () => _,
     Ji: () => d,
     _G: () => E,
     _I: () => p,
     _S: () => m,
     fD: () => h,
     mG: () => y,
-    pU: () => _,
+    pU: () => f,
     r4: () => S
 }),
     n(35282),
@@ -26,11 +26,11 @@ n(981631);
 let c = void 0,
     u = '/__development/build_overrides',
     d = (0, o.isAndroid)() ? c.Version.split(' - ')[0] : (0, o.isIOS)() ? c.Version : void 0;
-function _(e) {
+function f(e) {
     return ''.concat(location.protocol, '//').concat(location.host).concat(e);
 }
-function f() {
-    let e = s.Z.safeParseWithQuery(_(u));
+function _() {
+    let e = s.Z.safeParseWithQuery(f(u));
     return null == e
         ? Promise.resolve(null)
         : ((e.search = null),

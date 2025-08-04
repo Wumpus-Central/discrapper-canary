@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => N }), n(413496), n(433524), n(35282));
+(n.d(t, { Z: () => I }), n(413496), n(433524), n(35282));
 var i,
     r,
     s = n(255367),
@@ -61,8 +61,8 @@ function j(e, t) {
         e
     );
 }
-let C = new RegExp('https?://'.concat(null != (i = window.GLOBAL_ENV.CDN_HOST) ? i : ''));
-function E(e) {
+let E = new RegExp('https?://'.concat(null != (i = window.GLOBAL_ENV.CDN_HOST) ? i : ''));
+function C(e) {
     return 'string' == typeof e.content ? e.content : S(e.content);
 }
 let O = j(_({}, d().defaultRules), {
@@ -101,7 +101,7 @@ let O = j(_({}, d().defaultRules), {
                     'blockquote',
                     {
                         className: f.blockquote,
-                        children: E(e)
+                        children: C(e)
                     },
                     n.key
                 )
@@ -114,7 +114,7 @@ let O = j(_({}, d().defaultRules), {
                 let r = i.match(e, t, n);
                 if (null != r && Array.isArray(r) && r.length >= 3) {
                     let e = r[2];
-                    if ('string' == typeof e) return null != e.match(C) ? r : null;
+                    if ('string' == typeof e) return null != e.match(E) ? r : null;
                 }
                 return !1;
             }
@@ -126,7 +126,7 @@ let O = j(_({}, d().defaultRules), {
                     'code',
                     {
                         className: f.codeInline,
-                        children: E(e)
+                        children: C(e)
                     },
                     n.key
                 )
@@ -139,7 +139,7 @@ let O = j(_({}, d().defaultRules), {
                         {
                             children: (0, s.jsx)('code', {
                                 className: o()(b.scrollbarGhostHairline, 'hljs'),
-                                children: E(e)
+                                children: C(e)
                             })
                         },
                         i.key
@@ -191,4 +191,4 @@ class T extends (r = a.PureComponent) {
         parser: v,
         output: S
     }));
-let N = T;
+let I = T;

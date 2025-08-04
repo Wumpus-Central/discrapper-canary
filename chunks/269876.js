@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685));
+(n.d(t, { Z: () => C }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -17,11 +17,11 @@ var i = n(255367),
     x = n(251574),
     _ = n(893354),
     j = n(20493);
-let C = (0, p.hQ)();
-function E() {
+let E = (0, p.hQ)();
+function C() {
     let [e, t] = r.useState(-100),
         [n, s] = r.useState(!1),
-        { threshold: E, autoThreshold: O } = (0, l.cj)([g.Z], () => ({
+        { threshold: C, autoThreshold: O } = (0, l.cj)([g.Z], () => ({
             threshold: g.Z.getModeOptions().threshold,
             autoThreshold: g.Z.getModeOptions().autoThreshold
         })),
@@ -34,10 +34,10 @@ function E() {
             automaticVADSupported: g.Z.supports(h.AN.AUTOMATIC_VAD),
             isEnabled: g.Z.isEnabled()
         }));
-    function N(e, n) {
+    function I(e, n) {
         (t(e), s((n & h.Dg.VOICE) === h.Dg.VOICE));
     }
-    function I(e, t) {
+    function N(e, t) {
         m.Z.setMode(v, {
             threshold: e,
             autoThreshold: t
@@ -47,22 +47,22 @@ function E() {
         let e = new c.V7();
         return (
             e.start(1000, () => {
-                (g.Z.getMediaEngine().on(o.aB.VoiceActivity, N), e.stop());
+                (g.Z.getMediaEngine().on(o.aB.VoiceActivity, I), e.stop());
             }),
             () => {
-                (g.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, N), e.stop());
+                (g.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, I), e.stop());
             }
         );
     }, []);
     let y = (0, i.jsx)('section', {
         className: a()(b.inputSensitivityToggle, b.manual),
         children: (0, i.jsx)(u.iRW, {
-            initialValue: E + 100,
+            initialValue: C + 100,
             onValueRender: (e) => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
-            onValueChange: (e) => I(-((100 - e) * 1), O),
+            onValueChange: (e) => N(-((100 - e) * 1), O),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
-            'aria-labelledby': C,
+            'aria-labelledby': E,
             children: (0, i.jsxs)('div', {
                 className: a()(b.sliderBar, b.microphone, b.inputSensitivityBar, x.bar),
                 children: [
@@ -93,7 +93,7 @@ function E() {
             })),
         (0, i.jsxs)(u.xJW, {
             title: f.intl.string(f.t['sqUm+v']),
-            titleId: C,
+            titleId: E,
             className: b.sensitivity,
             children: [
                 S &&
@@ -113,7 +113,7 @@ function E() {
                                     (0, i.jsx)(u.rsf, {
                                         id: e,
                                         checked: O,
-                                        onChange: (e) => I(E, e)
+                                        onChange: (e) => N(C, e)
                                     })
                                 ]
                             })

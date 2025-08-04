@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(206127),
     _ = n(710220),
     j = n(164662),
-    C = n(123274),
-    E = n(638631),
+    E = n(123274),
+    C = n(638631),
     O = n(645616),
     v = n(388032),
     S = n(5943);
@@ -26,8 +26,8 @@ let T = r.memo(
     r.forwardRef((e, t) => {
         let { className: n, subscriptionTier: r, isEligibleForBogoPromotion: s } = e,
             { analyticsLocations: T } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_HERO_CTA),
-            N = (0, p.Nx)(),
-            I = (0, x.$)(),
+            I = (0, p.Nx)(),
+            N = (0, x.$)(),
             y = (0, g.Z)(),
             A = null != y,
             P = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
@@ -46,14 +46,14 @@ let T = r.memo(
                         className: S.contentContainer,
                         children: [
                             (0, i.jsx)(O.Z, { containerVisibilityPercentage: D }),
-                            N &&
+                            I &&
                                 (0, i.jsx)('div', {
                                     className: S.offerPillContainer,
-                                    children: (0, i.jsx)(E.Z, { enablePremiumBrandRefresh: !0 })
+                                    children: (0, i.jsx)(C.Z, { enablePremiumBrandRefresh: !0 })
                                 }),
                             (0, i.jsx)('div', {
                                 className: S.marketingPageTextContainer,
-                                children: (0, i.jsx)(C.Z, { children: v.intl.string(v.t['EW+VIS']) })
+                                children: (0, i.jsx)(E.Z, { children: v.intl.string(v.t['EW+VIS']) })
                             }),
                             (0, i.jsxs)('div', {
                                 className: S.body,
@@ -77,15 +77,15 @@ let T = r.memo(
                                             })
                                         }),
                                     (0, i.jsxs)('div', {
-                                        className: N ? S.singleButtonContainer : S.twoButtonContainer,
+                                        className: I ? S.singleButtonContainer : S.twoButtonContainer,
                                         children: [
                                             (0, i.jsx)(f.Z, {
                                                 size: 'md',
-                                                fullWidth: N,
+                                                fullWidth: I,
                                                 hasActivePromotion: !!s,
                                                 subscriptionTier: r
                                             }),
-                                            !N &&
+                                            !I &&
                                                 (0, i.jsx)(h.Z, {
                                                     variant: 'secondary',
                                                     size: 'md'
@@ -97,7 +97,7 @@ let T = r.memo(
                                         children: (0, i.jsx)(o.Text, {
                                             color: 'text-tertiary',
                                             variant: 'text-xs/medium',
-                                            children: v.intl.format(v.t.kt9wxs, { cheapestMonthlyPrice: I })
+                                            children: v.intl.format(v.t.kt9wxs, { cheapestMonthlyPrice: N })
                                         })
                                     })
                                 ]

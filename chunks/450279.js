@@ -63,17 +63,17 @@ function c(e) {
 }
 function u(e, t, n, i, o) {
     var u, d;
-    let _ = {},
-        f = {},
+    let f = {},
+        _ = {},
         p = [],
         h = [];
     for (let t of e.values())
         switch (t.type) {
             case 'candidate-pair':
-                _[t.id] = t;
+                f[t.id] = t;
                 break;
             case 'codec':
-                f[t.id] = t;
+                _[t.id] = t;
                 break;
             case 'inbound-rtp':
                 p.push(t);
@@ -81,11 +81,11 @@ function u(e, t, n, i, o) {
             case 'outbound-rtp':
                 h.push(t);
         }
-    let m = Object.values(_).find((e) => 'succeeded' === e.state);
+    let m = Object.values(f).find((e) => 'succeeded' === e.state);
     if (void 0 === m) return null;
     let g = [];
     for (let e of h) {
-        let t = f[e.codecId];
+        let t = _[e.codecId];
         if (null == t) continue;
         let i = {
             type: e.kind,
@@ -126,7 +126,7 @@ function u(e, t, n, i, o) {
     }
     let E = {};
     for (let e of p) {
-        let o = f[e.codecId];
+        let o = _[e.codecId];
         if (null == o) continue;
         let c = t(e.ssrc);
         if (null == c) continue;

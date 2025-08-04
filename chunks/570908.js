@@ -5,10 +5,10 @@ var r = n(255367),
     o = n.n(a),
     s = n(462991);
 let l = i.forwardRef((e, t) => {
-    let { muted: n = !1, highlighted: i = !1, avatar: a, decorators: l, name: c, subText: u, avatarClassName: d, innerClassName: _ } = e;
+    let { muted: n = !1, highlighted: i = !1, avatar: a, decorators: l, name: c, subText: u, avatarClassName: d, innerClassName: f } = e;
     return (0, r.jsxs)('div', {
         ref: t,
-        className: o()(s.layout, _, {
+        className: o()(s.layout, f, {
             [s.muted]: n,
             [s.highlighted]: i
         }),

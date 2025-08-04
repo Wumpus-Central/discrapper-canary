@@ -1,6 +1,6 @@
 (n.d(t, {
     R9: () => g,
-    UY: () => f,
+    UY: () => _,
     k2: () => u,
     v: () => p
 }),
@@ -42,7 +42,7 @@ class d {
             (this.animated = n));
     }
 }
-let _ = {
+let f = {
         ROBERT: new d({
             src: o.Z,
             style: {
@@ -86,9 +86,9 @@ let _ = {
             }
         })
     },
-    f = (e) => {
+    _ = (e) => {
         let { purchaseType: t, skuId: n } = e;
-        if (t === r.o8.ORB) return _.ORB_PURCHASE;
+        if (t === r.o8.ORB) return f.ORB_PURCHASE;
         switch (n) {
             case '1267521289330102344':
             case '1267521289355268154':
@@ -102,16 +102,16 @@ let _ = {
             case '1266493591207940133':
             case '1266493591275044903':
             case '1220432740638523543':
-                return _.STORM;
+                return f.STORM;
             case '1220513977683935373':
             case '1220432647453409384':
             case '1220432697718083614':
-                return _.SHY;
+                return f.SHY;
             default:
                 return null;
         }
     },
-    p = (e) => ('1262491137386614805' === e ? _.ROBERT : null),
+    p = (e) => ('1262491137386614805' === e ? f.ROBERT : null),
     h = {
         '1333866045236314327': '1333866045261480007',
         '1333866045261480007': '1333866045236314327',

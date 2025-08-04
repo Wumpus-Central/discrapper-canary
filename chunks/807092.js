@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,12 +57,12 @@ function _(e, t) {
         e
     );
 }
-let f = {},
+let _ = {},
     p = {},
     h = {};
 function m(e) {
     let { channel: t, message: n, shouldMention: r = !0, showMentionToggle: i = !0, source: a } = e;
-    ((f[t.id] = {
+    ((_[t.id] = {
         channel: t,
         message: n,
         shouldMention: r,
@@ -81,16 +81,16 @@ function g(e) {
 }
 function E(e) {
     let { channelId: t, shouldMention: n } = e;
-    (t in f && (f[t] = _(u({}, f[t]), { shouldMention: n })), t in p && (p[t] = _(u({}, p[t]), { shouldMention: n })));
+    (t in _ && (_[t] = f(u({}, _[t]), { shouldMention: n })), t in p && (p[t] = f(u({}, p[t]), { shouldMention: n })));
 }
 function b(e) {
     let { channelId: t } = e;
-    (delete f[t], delete p[t]);
+    (delete _[t], delete p[t]);
 }
 function y(e) {
     var t, n, r;
     let { id: i, channelId: a } = e;
-    if ((null == (n = f[a]) || null == (t = n.message) ? void 0 : t.id) === i) (delete f[a], delete h[a]);
+    if ((null == (n = _[a]) || null == (t = n.message) ? void 0 : t.id) === i) (delete _[a], delete h[a]);
     else {
         if ((null == (r = p[a]) ? void 0 : r.messageId) !== i) return !1;
         (delete p[a], delete h[a]);
@@ -103,7 +103,7 @@ function O(e) {
     let n = s.Z.getMessage(e, t.messageId),
         r = o.Z.getChannel(t.channelId);
     if (null == n || null == r) return !1;
-    ((f[e] = {
+    ((_[e] = {
         channel: r,
         message: n,
         shouldMention: t.shouldMention,
@@ -125,12 +125,12 @@ function T() {
     });
 }
 function S() {
-    ((f = {}), (p = {}), (h = {}));
+    ((_ = {}), (p = {}), (h = {}));
 }
 class A extends (r = i.ZP.PersistedStore) {
     getState() {
         let e = {};
-        for (let [t, n] of l.default.entries(f))
+        for (let [t, n] of l.default.entries(_))
             e[t] = {
                 channelId: t,
                 messageId: n.message.id,
@@ -143,7 +143,7 @@ class A extends (r = i.ZP.PersistedStore) {
         (this.waitFor(s.Z, o.Z), (p = null != e ? e : {}));
     }
     getPendingReply(e) {
-        return f[e];
+        return _[e];
     }
     getPendingReplyActionSource(e) {
         return h[e];

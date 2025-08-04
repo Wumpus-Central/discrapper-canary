@@ -18,11 +18,11 @@ function x(e) {
     let { user: t, guild: n } = e,
         { analyticsLocations: x } = (0, o.ZP)(),
         _ = null != n,
-        { userNameplate: j, guildNameplate: C, pendingNameplate: E, pendingErrors: O } = (0, p.Zx)(t, null == n ? void 0 : n.id),
+        { userNameplate: j, guildNameplate: E, pendingNameplate: C, pendingErrors: O } = (0, p.Zx)(t, null == n ? void 0 : n.id),
         v = [s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE],
         [S, T] = (0, c.US)(v),
-        N = S === s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,
-        I = r.useCallback(() => {
+        I = S === s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,
+        N = r.useCallback(() => {
             (T(h.L.TAKE_ACTION),
                 (0, m.f)({
                     analyticsLocations: x,
@@ -34,7 +34,7 @@ function x(e) {
         }, [null == n ? void 0 : n.id]);
     return (0, i.jsx)(g.Z, {
         title: f.intl.string(f.t.x5CoXV),
-        titleIcon: N ? (0, i.jsx)(u.Z, { className: b.newBadge }) : void 0,
+        titleIcon: I ? (0, i.jsx)(u.Z, { className: b.newBadge }) : void 0,
         errors: O,
         children: (0, i.jsxs)('div', {
             className: b.section,
@@ -43,9 +43,9 @@ function x(e) {
                     variant: 'primary',
                     size: 'sm',
                     text: f.intl.string(f.t.BwdeMz),
-                    onClick: I
+                    onClick: N
                 }),
-                (void 0 === E ? (_ ? C : j) != null : null != E) &&
+                (void 0 === C ? (_ ? E : j) != null : null != C) &&
                     (0, i.jsx)(a.zxk, {
                         variant: 'secondary',
                         size: 'sm',

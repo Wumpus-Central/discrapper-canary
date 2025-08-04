@@ -1,4 +1,4 @@
-n.d(t, { S: () => _ });
+n.d(t, { S: () => f });
 var r = n(255367);
 n(73800);
 var i = n(979714),
@@ -31,7 +31,7 @@ let c = (0, a.vQ)('keydown', (e) => !!(0, l.Tm)(e) && (e.preventDefault(), !0)),
             }
         ]
     };
-function _(e) {
+function f(e) {
     let { children: t } = e;
     return (0, r.jsx)(a.WG, {
         options: d,

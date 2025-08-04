@@ -1,167 +1,179 @@
-(n.d(t, { e: () => h }), n(388685));
-var i = n(255367),
-    r = n(73800),
-    s = n(680018),
-    a = n(481060),
-    l = n(920155),
-    o = n(454028),
+(n.d(t, { e: () => y }), n(388685));
+var r = n(255367),
+    i = n(73800),
+    a = n(680018),
+    o = n(481060),
+    s = n(920155),
+    l = n(454028),
     c = n(966902),
-    d = n(237872),
-    u = n(562618),
-    m = n(388032),
-    p = n(669546);
-function g(e) {
+    u = n(237872),
+    d = n(562618),
+    f = n(388032),
+    _ = n(669546);
+function p(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            i.forEach(function (t) {
-                var i;
-                ((i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = i));
+            r.forEach(function (t) {
+                p(e, t, n[t]);
             }));
     }
     return e;
 }
-function h(e) {
+function m(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function g(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : m(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function E(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = b(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+    }
+    return i;
+}
+function b(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    return i;
+}
+function y(e) {
     var t,
         n,
-        h,
-        f,
-        b,
-        x,
+        p,
+        m,
         {
-            steps: _,
-            caretConfig: j = {
+            steps: b,
+            caretConfig: y = {
                 position: 'bottom',
                 align: 'center'
             },
-            size: C = 'md',
-            onStepChange: E,
-            onRequestClose: O,
-            popoverRef: v,
+            size: O = 'md',
+            onStepChange: v,
+            onRequestClose: I,
+            popoverRef: T,
             shouldShow: S
         } = e,
-        T = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                i,
-                r = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        i,
-                        r = {},
-                        s = Object.keys(e);
-                    for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
-                    return r;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
-            }
-            return r;
-        })(e, ['steps', 'caretConfig', 'size', 'onStepChange', 'onRequestClose', 'popoverRef', 'shouldShow']);
-    let [N, I] = r.useState(0);
-    (r.useEffect(() => {
-        S && I(0);
+        A = E(e, ['steps', 'caretConfig', 'size', 'onStepChange', 'onRequestClose', 'popoverRef', 'shouldShow']);
+    let [N, C] = i.useState(0);
+    (i.useEffect(() => {
+        S && C(0);
     }, [S]),
-        r.useEffect(() => {
-            null == E || E(N);
-        }, [N, E]));
-    let y = _[N],
-        A = N + 1 === _.length,
-        P = r.useCallback(() => {
+        i.useEffect(() => {
+            null == v || v(N);
+        }, [N, v]));
+    let R = b[N],
+        P = N + 1 === b.length,
+        w = i.useCallback(() => {
             var e;
-            (null == y || null == (e = y.onCta) || e.call(y), A ? null == O || O() : I((e) => e + 1));
-        }, [y, A, O]),
-        R = r.useCallback(() => {
-            null == O || O();
-        }, [O]),
-        D = r.useCallback(() => {
-            null == O || O();
-        }, [O]);
-    if (!S || null == y) return null;
-    let Z = g(
+            (null == R || null == (e = R.onCta) || e.call(R), P ? null == I || I() : C((e) => e + 1));
+        }, [R, P, I]),
+        D = i.useCallback(() => {
+            null == I || I();
+        }, [I]),
+        L = i.useCallback(() => {
+            null == I || I();
+        }, [I]);
+    if (!S || null == R) return null;
+    let x = h(
         {
-            text: null != (b = null == (h = y.action) ? void 0 : h.text) ? b : A ? m.intl.string(m.t.i4jeWV) : m.intl.string(m.t.PDTjLC),
-            variant: null != (x = null == (f = y.action) ? void 0 : f.variant) ? x : 'primary',
-            onClick: P
+            text: null != (p = null == (t = R.action) ? void 0 : t.text) ? p : P ? f.intl.string(f.t.i4jeWV) : f.intl.string(f.t.PDTjLC),
+            variant: null != (m = null == (n = R.action) ? void 0 : n.variant) ? m : 'primary',
+            onClick: w
         },
-        y.action
+        R.action
     );
-    return (0, i.jsx)(
-        l.m,
-        ((t = g({}, T)),
-        (n = n =
-            {
-                shouldShow: S,
-                onRequestClose: R,
-                gradientColor: y.gradientColor,
-                children: (0, i.jsxs)('div', {
-                    ref: v,
-                    children: [
-                        (0, i.jsx)(d.u, {
-                            onClick: D,
-                            colorMix: null != y.gradientColor
-                        }),
-                        null != y.asset
-                            ? (0, i.jsx)(o.V, {
-                                  asset: y.asset,
-                                  size: C
-                              })
-                            : null,
-                        (0, i.jsx)(u.Y, {
-                            title: y.title,
-                            body: y.body,
-                            badge: y.badge,
-                            textLink: y.textLink,
-                            hasBottomMargin: !0
-                        }),
-                        (0, i.jsx)('div', {
-                            className: p.actionBar,
-                            children: (0, i.jsxs)('div', {
-                                className: p.multistepActionLayout,
-                                children: [
-                                    (0, i.jsx)(a.Text, {
-                                        variant: 'text-xs/normal',
-                                        className: p.multistepIndicator,
-                                        children: m.intl.formatToPlainString(m.t.rO31eX, {
-                                            count: N + 1,
-                                            totalSteps: _.length
-                                        })
-                                    }),
-                                    (0, i.jsx)(s.z, g({ size: 'sm' }, Z))
-                                ]
-                            })
-                        }),
-                        (0, i.jsx)(c.$, { caretConfig: j })
-                    ]
-                })
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-              }),
-        t)
+    return (0, r.jsx)(
+        s.m,
+        g(h({}, A), {
+            shouldShow: S,
+            onRequestClose: D,
+            gradientColor: R.gradientColor,
+            children: (0, r.jsxs)('div', {
+                ref: T,
+                children: [
+                    (0, r.jsx)(u.u, {
+                        onClick: L,
+                        colorMix: null != R.gradientColor
+                    }),
+                    null != R.asset
+                        ? (0, r.jsx)(l.V, {
+                              asset: R.asset,
+                              size: O
+                          })
+                        : null,
+                    (0, r.jsx)(d.Y, {
+                        title: R.title,
+                        body: R.body,
+                        badge: R.badge,
+                        textLink: R.textLink,
+                        hasBottomMargin: !0
+                    }),
+                    (0, r.jsx)('div', {
+                        className: _.actionBar,
+                        children: (0, r.jsxs)('div', {
+                            className: _.multistepActionLayout,
+                            children: [
+                                (0, r.jsx)(o.Text, {
+                                    variant: 'text-xs/normal',
+                                    className: _.multistepIndicator,
+                                    children: f.intl.formatToPlainString(f.t.rO31eX, {
+                                        count: N + 1,
+                                        totalSteps: b.length
+                                    })
+                                }),
+                                (0, r.jsx)(a.z, h({ size: 'sm' }, x))
+                            ]
+                        })
+                    }),
+                    (0, r.jsx)(c.$, { caretConfig: y })
+                ]
+            })
+        })
     );
 }

@@ -35,7 +35,7 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,19 +47,19 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function p(e) {
-    let { color: t = 'default', disabled: n, isFocused: a, showDefaultFocus: u = !1, menuItemProps: _, children: p } = e,
+    let { color: t = 'default', disabled: n, isFocused: a, showDefaultFocus: u = !1, menuItemProps: f, children: p } = e,
         h = i.useRef(null);
     return (
         i.useLayoutEffect(() => {
@@ -72,7 +72,7 @@ function p(e) {
         }, [a]),
         (0, r.jsx)(
             'div',
-            f(
+            _(
                 d(
                     {
                         ref: h,
@@ -83,7 +83,7 @@ function p(e) {
                         }),
                         'aria-disabled': n
                     },
-                    _
+                    f
                 ),
                 { children: p }
             )

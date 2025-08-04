@@ -1,7 +1,7 @@
 (n.d(t, {
     $0: () => c,
     Tm: () => u,
-    ZP: () => _,
+    ZP: () => f,
     oT: () => d
 }),
     n(388685),
@@ -17,7 +17,7 @@ var r = n(73800),
     })({});
 let u = { id: 'None' },
     d = { id: 'Shop' },
-    _ = () => {
+    f = () => {
         let e = (0, i.e7)([o.Z], () => o.Z.purchases),
             [t, n] = (0, i.Wu)([a.Z], () => [a.Z.categories, a.Z.products]);
         return (0, r.useMemo)(() => {

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => C }), n(539854), n(388685));
+(n.d(t, { Z: () => E }), n(539854), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -22,10 +22,10 @@ let j = [
         extensions: ['gif']
     }
 ];
-function C(e) {
-    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: C, changeAvatarButtonText: E, guildId: O, className: v, disabled: S = !1, isTryItOutFlow: T = !1, forcedDivider: N, withHighlight: I = !1 } = e,
+function E(e) {
+    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: E, changeAvatarButtonText: C, guildId: O, className: v, disabled: S = !1, isTryItOutFlow: T = !1, forcedDivider: I, withHighlight: N = !1 } = e,
         { newestAnalyticsLocation: y } = (0, d.ZP)(),
-        A = I ? c.gtL : o.zx,
+        A = N ? c.gtL : o.zx,
         P = (0, m.T)({ location: 'AvatarSection' }),
         R = [];
     P && R.push(l.z.RECENT_AVATARS_SETTINGS_PROFILE_PAGE_NEW_BADGE);
@@ -43,7 +43,7 @@ function C(e) {
         }, [O, y, T, Z]);
     return (0, i.jsx)(g.Z, {
         className: v,
-        title: C,
+        title: E,
         titleIcon: w
             ? (0, i.jsx)(c.IGR, {
                   text: x.intl.string(x.t.y2b7CA),
@@ -58,15 +58,15 @@ function C(e) {
             : void 0,
         errors: n,
         disabled: S,
-        forcedDivider: N,
+        forcedDivider: I,
         children: (0, i.jsxs)('div', {
             className: _.buttonsContainer,
             children: [
                 (0, i.jsx)(A, {
-                    className: a()({ [_.buttonHighlighted]: I }),
+                    className: a()({ [_.buttonHighlighted]: N }),
                     size: o.zx.Sizes.SMALL,
                     onClick: k,
-                    children: null != E ? E : x.intl.string(x.t['4OynCA'])
+                    children: null != C ? C : x.intl.string(x.t['4OynCA'])
                 }),
                 t &&
                     (0, i.jsx)('div', {

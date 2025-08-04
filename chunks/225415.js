@@ -8,8 +8,8 @@ var r = n(470167),
     c = n(681678),
     u = n(128064),
     d = n(592125),
-    _ = n(375954),
-    f = n(944486),
+    f = n(375954),
+    _ = n(944486),
     p = n(594174),
     h = n(480916),
     m = n(81643),
@@ -32,7 +32,7 @@ let y = new l.Z('AgeVerificationManager');
 function O(e) {
     var t, n, i;
     let { channelId: a, message: o } = e,
-        s = _.Z.getMessage(a, o.id);
+        s = f.Z.getMessage(a, o.id);
     if ((null == s || null == (n = s.embeds) || null == (t = n[0]) ? void 0 : t.type) === r.h.AGE_VERIFICATION_SYSTEM_NOTIFICATION) {
         let e = null == (i = s.embeds[0].fields) ? void 0 : i.find((e) => e.rawName === m.g0.CONTENT_TYPE);
         (null == e ? void 0 : e.rawValue) === m.L0.ERROR ? (c.Z.showFailedToast(E.wQ.TIGGER_PAWTECT_ERROR), (0, h.zi)(h.o6.ERROR)) : (null == e ? void 0 : e.rawValue) === m.L0.VERIFIED_ADULT ? (c.Z.showSuccessToast(E.wQ.TIGGER_PAWTECT_VERIFIED), (0, h.zi)(h.o6.VERIFIED_ADULT)) : (null == e ? void 0 : e.rawValue) === m.L0.VERIFIED_TEEN && (c.Z.showSuccessToast(E.wQ.TIGGER_PAWTECT_VERIFIED), (0, h.zi)(h.o6.VERIFIED_TEEN));
@@ -52,7 +52,7 @@ class v extends o.Z {
                     r = null != (t = (0, p.transformUser)(n).ageVerificationStatus) ? t : null;
                 try {
                     if (this._previousAgeVerificationStatus !== r && r === a.F$.VERIFIED_ADULT && (0, u.c_)('age-verification-manager')) {
-                        let e = f.Z.getChannelId(),
+                        let e = _.Z.getChannelId(),
                             t = !1;
                         (s.Z.forEach((n) => {
                             let { channelId: r } = n,

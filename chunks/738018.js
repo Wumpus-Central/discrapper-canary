@@ -8,8 +8,8 @@ var r,
     c = n(430824),
     u = n(944486),
     d = n(246946),
-    _ = n(594174),
-    f = n(483360),
+    f = n(594174),
+    _ = n(483360),
     p = n(892880),
     h = n(51144),
     m = n(607802),
@@ -93,16 +93,16 @@ function R(e, t) {
     if (o === E.Sap.EMPTY || (o === E.Sap.FILTER && s !== E.dCx.FILTER_FROM && s !== E.dCx.FILTER_MENTIONS)) return;
     let l = T;
     (a.mode.type === E.Sap.FILTER && (l = I), (i.results = P(n, l)));
-    let { query: c, mode: u, tokens: d, cursorScope: _ } = a,
-        { autocompletes: f } = a;
-    ((f = U(e, u, d)),
+    let { query: c, mode: u, tokens: d, cursorScope: f } = a,
+        { autocompletes: _ } = a;
+    ((_ = U(e, u, d)),
         (O[r] = N({
             searchContext: e,
             query: c,
             mode: u,
             tokens: d,
-            cursorScope: _,
-            autocompletes: f
+            cursorScope: f,
+            autocompletes: _
         })),
         K.emitChange());
 }
@@ -111,7 +111,7 @@ function P(e) {
         n = [];
     for (let r of e) {
         if (n.length >= t) break;
-        let e = _.default.getUser(r.id);
+        let e = f.default.getUser(r.id);
         if (null == e) continue;
         let i = h.ZP.getUserTag(e);
         null != i &&
@@ -178,7 +178,7 @@ function L(e) {
         else {
             if (null == o || 0 === p.length) {
                 let t = u.Z.getCurrentlySelectedChannelId(s.guildId);
-                e.results = f.ZP.getRecentlyTalked(t, I).map((e) => {
+                e.results = _.ZP.getRecentlyTalked(t, I).map((e) => {
                     let { record: t } = e;
                     return {
                         user: t,
@@ -201,7 +201,7 @@ function L(e) {
                 : [];
     }
     if (null != i && b && (0, g.co)(p)) {
-        let e = _.default.getCurrentUser();
+        let e = f.default.getCurrentUser();
         null != e &&
             (i = i.filter((t) => {
                 let { user: n } = t;
@@ -227,7 +227,7 @@ function x(e, t) {
         results: i
     };
 }
-function M(e, t, n) {
+function k(e, t, n) {
     let r = (null != e ? e.getFullMatch() : '').trim(),
         i = [];
     return (
@@ -244,12 +244,12 @@ function M(e, t, n) {
                 });
                 null != a && i.push(a);
             }),
-            i.push(k(e, t))),
+            i.push(M(e, t))),
         5 > (0, m.BU)(i) && i.push(x(e, t)),
         i
     );
 }
-function k(e, t) {
+function M(e, t) {
     let n = (null != e ? e.getFullMatch() : '').trim();
     if (null != n && '' !== n) {
         var r, i, a, o, s, l, c, u, d;
@@ -264,7 +264,7 @@ function k(e, t) {
                     }))
                     ? void 0
                     : r[0],
-            _ =
+            f =
                 null == (l = g.ZP[E.dCx.FILTER_ON]) ||
                 null == (s = l.getAutocompletions) ||
                 null ==
@@ -275,7 +275,7 @@ function k(e, t) {
                     }))
                     ? void 0
                     : o[0],
-            f =
+            _ =
                 null == (d = g.ZP[E.dCx.FILTER_AFTER]) ||
                 null == (u = d.getAutocompletions) ||
                 null ==
@@ -289,8 +289,8 @@ function k(e, t) {
         if (null == e) return null;
         let p = [e];
         return (
-            null != _ && p.push(_),
             null != f && p.push(f),
+            null != _ && p.push(_),
             {
                 group: E.rtL.DATES,
                 results: p
@@ -326,7 +326,7 @@ function U(e, t, n) {
                   })
               )
             : t.type === E.Sap.FILTER_ALL
-              ? (r = M(t.token, e, n))
+              ? (r = k(t.token, e, n))
               : t.type === E.Sap.EMPTY && (r.push(x(t.token, e)), r.push(j(e))),
         r
     );

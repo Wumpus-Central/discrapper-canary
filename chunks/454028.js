@@ -1,21 +1,21 @@
-n.d(t, { V: () => l });
-var i = n(255367);
+n.d(t, { V: () => s });
+var r = n(255367);
 n(73800);
-var r = n(120356),
-    s = n.n(r),
-    a = n(669546);
-function l(e) {
-    let { asset: t, size: n = 'md', className: r } = e,
-        l = s()(
-            a.asset,
+var i = n(120356),
+    a = n.n(i),
+    o = n(669546);
+function s(e) {
+    let { asset: t, size: n = 'md', className: i } = e,
+        s = a()(
+            o.asset,
             {
-                [a.assetPlaceholder]: null == t && !1,
-                [a['asset--'.concat(n)]]: null != n
+                [o.assetPlaceholder]: null == t && !1,
+                [o['asset--'.concat(n)]]: null != n
             },
-            r
+            i
         );
-    return (0, i.jsx)('div', {
-        className: l,
+    return (0, r.jsx)('div', {
+        className: s,
         children: null != t ? t : null
     });
 }

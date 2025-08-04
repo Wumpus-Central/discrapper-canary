@@ -17,14 +17,14 @@ var i = n(255367),
     x = n(678135),
     _ = n(643879),
     j = n(621853),
-    C = n(271383),
-    E = n(246946),
+    E = n(271383),
+    C = n(246946),
     O = n(594174),
     v = n(63063),
     S = n(74538),
     T = n(18438),
-    N = n(778825),
-    I = n(856607),
+    I = n(778825),
+    N = n(856607),
     y = n(594496),
     A = n(856768),
     P = n(981631),
@@ -87,8 +87,8 @@ function k(e) {
             return (a()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e);
         }),
         L = (0, l.e7)([j.Z], () => !j.Z.isFetchingProfile(k.id, null == n ? void 0 : n.id)),
-        B = (0, l.e7)([E.Z], () => E.Z.hidePersonalInformation),
-        M = (0, l.cj)([N.Z], () => Z(D({}, N.Z.getAllPending()), { source: N.Z.getSource() })),
+        B = (0, l.e7)([C.Z], () => C.Z.hidePersonalInformation),
+        M = (0, l.cj)([I.Z], () => Z(D({}, I.Z.getAllPending()), { source: I.Z.getSource() })),
         { source: U, pendingAvatar: V, pendingNameplate: G } = M,
         F = (function (e, t) {
             if (null == e) return {};
@@ -113,7 +113,7 @@ function k(e) {
             userId: k.id,
             image: V
         }),
-        W = (0, l.e7)([C.ZP], () => (null != n ? C.ZP.getMember(n.id, k.id) : null));
+        W = (0, l.e7)([E.ZP], () => (null != n ? E.ZP.getMember(n.id, k.id) : null));
     (r.useEffect(() => () => c.Z.wait(T.W3), []),
         r.useEffect(() => {
             null != U &&
@@ -168,7 +168,7 @@ function k(e) {
                                   })
                               ]
                           })
-                        : (0, i.jsx)(I.Z, {})
+                        : (0, i.jsx)(N.Z, {})
                 ]
             })
           : (0, i.jsx)(o.$jN, {});

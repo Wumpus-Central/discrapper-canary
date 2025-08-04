@@ -18,8 +18,8 @@ var i = n(255367),
 let _ = (0, o.hQ)(),
     j = r.memo(function (e) {
         let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: o } = e,
-            [j, C] = (0, c.US)([a.z.GUILD_TAG_USER_PROFILE_NEW_BADGE]),
-            E = r.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
+            [j, E] = (0, c.US)([a.z.GUILD_TAG_USER_PROFILE_NEW_BADGE]),
+            C = r.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
             O = (0, s.e7)([p.default], () => {
                 var e;
                 return (0, d.Pb)(null == (e = p.default.getCurrentUser()) ? void 0 : e.primaryGuild).guildId;
@@ -44,7 +44,7 @@ let _ = (0, o.hQ)(),
                 (e) => {
                     var t, n, r;
                     if (null == e) return null;
-                    let s = E.get(e.value);
+                    let s = C.get(e.value);
                     if (null == s) return null;
                     let a = null == (t = s.profile) ? void 0 : t.tag;
                     return null == a
@@ -58,26 +58,26 @@ let _ = (0, o.hQ)(),
                               guildIconSize: 32
                           });
                 },
-                [E]
+                [C]
             ),
-            N = r.useCallback(
+            I = r.useCallback(
                 (e) => {
                     let t = e[0];
                     return null == t ? null : (0, i.jsx)(i.Fragment, { children: T(t) });
                 },
                 [T]
             ),
-            I = r.useCallback(
+            N = r.useCallback(
                 (e) => {
-                    (C(h.L.TAKE_ACTION), null == o || o(e));
+                    (E(h.L.TAKE_ACTION), null == o || o(e));
                 },
-                [C, o]
+                [E, o]
             ),
             y = r.useCallback((e) => e === v, [v]),
             A = r.useCallback((e) => e, []),
             P = r.useCallback(() => {
-                (C(h.L.TAKE_ACTION), null == o || o(null));
-            }, [C, o]),
+                (E(h.L.TAKE_ACTION), null == o || o(null));
+            }, [E, o]),
             R = r.useRef(null);
         return (
             (0, m.Z)(R, f.Y_.GUILD_TAG),
@@ -102,8 +102,8 @@ let _ = (0, o.hQ)(),
                         optionClassName: x.selectPopout,
                         isSelected: y,
                         options: S,
-                        select: I,
-                        renderOptionValue: N,
+                        select: N,
+                        renderOptionValue: I,
                         renderOptionLabel: T,
                         serialize: A,
                         clear: P,

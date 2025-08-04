@@ -39,7 +39,7 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,12 +51,12 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -89,10 +89,10 @@ function m(e) {
             var e, i;
             return 'change' !== t ? null : null === n || '' === n ? null : null != n ? n : c ? (null != a && (null != (e = null == r ? void 0 : r.length) ? e : 0) < a ? l.intl.formatToPlainString(l.t['62rk1N'], { minLength: a }) : null != o && (null != (i = null == r ? void 0 : r.length) ? i : 0) > o ? l.intl.formatToPlainString(l.t.ICT5S0, { maxLength: o }) : null) : null;
         }, [t, n, c, a, null == r ? void 0 : r.length, o]),
-        _ = (null != n && '' !== n) || null != d;
+        f = (null != n && '' !== n) || null != d;
     return {
         errorMessage: d,
-        hasError: _,
+        hasError: f,
         setShouldValidate: u
     };
 }
@@ -127,12 +127,12 @@ function g(e) {
         children: n((e, n, s) => {
             let { key: l } = s,
                 { transform: u } = e,
-                _ = p(e, ['transform']);
+                f = p(e, ['transform']);
             return null != n && '' !== n
                 ? (0, r.jsx)(
                       a.animated.div,
                       {
-                          style: f(d({}, _), { overflow: 'hidden' }),
+                          style: _(d({}, f), { overflow: 'hidden' }),
                           children: (0, r.jsxs)(a.animated.div, {
                               style: { transform: u },
                               className: c.inputError,

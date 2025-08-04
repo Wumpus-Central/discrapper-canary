@@ -1,7 +1,7 @@
 let r;
 n.d(t, {
-    Jc: () => k,
-    dx: () => M,
+    Jc: () => M,
+    dx: () => k,
     tE: () => G
 });
 var i,
@@ -48,7 +48,7 @@ var i,
     })();
 })(u);
 let d = u.exports;
-var _ = function (e, t, n, r, i, a, o, s) {
+var f = function (e, t, n, r, i, a, o, s) {
     if (!e) {
         var l;
         if (void 0 === t) l = Error('Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.');
@@ -64,7 +64,7 @@ var _ = function (e, t, n, r, i, a, o, s) {
         throw ((l.framesToPop = 1), l);
     }
 };
-function f(e, t, n) {
+function _(e, t, n) {
     if (/%$/.test(t)) return 3 === n ? parseFloat(t) / 100 : (255 * parseFloat(t)) / 100;
     if ('h' === e[n]) {
         if (/turn$/.test(t)) return 360 * parseFloat(t);
@@ -101,19 +101,19 @@ function h({ red: e, green: t, blue: n, alpha: r }) {
             lightness: u,
             alpha: r
         };
-    let _ = 0;
+    let f = 0;
     switch (s) {
         case i:
-            _ = ((a - o) / c) % 6;
+            f = ((a - o) / c) % 6;
             break;
         case a:
-            _ = (o - i) / c + 2;
+            f = (o - i) / c + 2;
             break;
         case o:
-            _ = (a - o) / c + 4;
+            f = (a - o) / c + 4;
     }
     return {
-        hue: 60 * _,
+        hue: 60 * f,
         saturation: d,
         lightness: u,
         alpha: r
@@ -154,7 +154,7 @@ class E {
             .split(/\s*[,/\s]\s*/)
             .map((e) => e.replace(',', '').trim())
             .filter((e) => '' !== e)
-            .map((e, t) => f(n, e, t));
+            .map((e, t) => _(n, e, t));
         if ('hsl' === n.substr(0, 3)) {
             let e = p({
                 hue: i[0],
@@ -260,8 +260,8 @@ class A {
         let c = null != (n = S(null == (t = e.styles[0]) ? void 0 : t.borderTopLeftRadius)) ? n : '0',
             u = null != (i = S(null == (r = e.styles[0]) ? void 0 : r.borderTopRightRadius)) ? i : '0',
             d = null != (o = S(null == (a = e.styles[0]) ? void 0 : a.borderBottomRightRadius)) ? o : '0',
-            _ = null != (l = S(null == (s = e.styles[0]) ? void 0 : s.borderBottomLeftRadius)) ? l : '0';
-        if ('0' !== c || '0' !== u || '0' !== d || '0' !== _) return `${c} ${u} ${d} ${_}`;
+            f = null != (l = S(null == (s = e.styles[0]) ? void 0 : s.borderBottomLeftRadius)) ? l : '0';
+        if ('0' !== c || '0' !== u || '0' !== d || '0' !== f) return `${c} ${u} ${d} ${f}`;
     }
     makePositionFromDOMRect(e) {
         var t, n, r, i;
@@ -333,7 +333,7 @@ function L() {
     (null == e || R(e, D) ? null != w && cancelAnimationFrame(w) : ((D = e), null == r || r.invalidate()), (w = requestAnimationFrame(L)));
 }
 let x = !1,
-    M = {
+    k = {
         get ringsEnabled() {
             return x;
         },
@@ -347,7 +347,7 @@ let x = !1,
             ((P = !1), null != w && cancelAnimationFrame(w));
         }
     };
-function k(e) {
+function M(e) {
     let { containerRef: t, children: n, themeOptions: r } = e,
         i = a.useRef(new A());
     return (
@@ -373,7 +373,7 @@ function j() {
             ),
             [e]
         ),
-        M.ringsEnabled && e.visible
+        k.ringsEnabled && e.visible
             ? (0, o.jsx)('div', {
                   className: d('focus-rings-ring', e.className),
                   style: e.getStyle()
@@ -383,12 +383,12 @@ function j() {
 }
 let U = 'u' > typeof window && (null == (i = window.document) ? void 0 : i.createElement) != null ? a.useLayoutEffect : a.useEffect;
 function G(e) {
-    let { within: t = !1, enabled: n = !0, focused: r, offset: i = 0, focusTarget: o, ringTarget: s, ringClassName: l, focusClassName: c, focusWithinClassName: u, children: f } = e;
-    (null != o && _(null != s, 'FocusRing was given a focusTarget but the required ringTarget was not provided. A ringTarget is required to avoid ambiguity of where the ring will be applied.'), null != r && _(null != s, 'FocusRing was given a controlled focused prop but no ringTarget to apply the ring to. A ringTarget is required since it cannot be inferred through regular focus events.'));
+    let { within: t = !1, enabled: n = !0, focused: r, offset: i = 0, focusTarget: o, ringTarget: s, ringClassName: l, focusClassName: c, focusWithinClassName: u, children: _ } = e;
+    (null != o && f(null != s, 'FocusRing was given a focusTarget but the required ringTarget was not provided. A ringTarget is required to avoid ambiguity of where the ring will be applied.'), null != r && f(null != s, 'FocusRing was given a controlled focused prop but no ringTarget to apply the ring to. A ringTarget is required since it cannot be inferred through regular focus events.'));
     let p = a.useRef(!1),
         [h, m] = a.useState(!1),
         g = a.useContext(C),
-        E = a.Children.only(f),
+        E = a.Children.only(_),
         { onBlur: b, onFocus: y, ...O } = E.props,
         v = a.useMemo(
             () => ({

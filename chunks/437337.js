@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(186325),
     u = n(84735),
     d = n(180035),
-    _ = n(481060),
-    f = n(333903);
+    f = n(481060),
+    _ = n(333903);
 function p(e, t, n) {
     return (
         t in e
@@ -114,7 +114,7 @@ let O = function (e) {
         [T, S] = i.useState(!1),
         A = (0, d.d)(l.Z.colors.INTERACTIVE_MUTED).spring(),
         N = (0, d.d)(l.Z.colors.BG_BRAND).spring(),
-        { state: C, opacity: R } = (0, _.q_F)(
+        { state: C, opacity: R } = (0, f.q_F)(
             {
                 config: E,
                 opacity: p ? 0.5 : 1,
@@ -138,9 +138,9 @@ let O = function (e) {
             within: !0,
             offset: -2,
             children: (0, r.jsxs)(s.animated.div, {
-                className: o()(f.container, m, {
-                    [f.checked]: a,
-                    [f.disabled]: p
+                className: o()(_.container, m, {
+                    [_.checked]: a,
+                    [_.disabled]: p
                 }),
                 onMouseDown: () => !p && S(!0),
                 onMouseUp: () => S(!1),
@@ -153,7 +153,7 @@ let O = function (e) {
                 },
                 children: [
                     (0, r.jsxs)(s.animated.svg, {
-                        className: f.slider,
+                        className: _.slider,
                         viewBox: '0 0 28 20',
                         preserveAspectRatio: 'xMinYMid meet',
                         style: {
@@ -193,7 +193,7 @@ let O = function (e) {
                         ref: (e) => {
                             ((I.current = e), null != O && (O.current = e));
                         },
-                        className: f.input,
+                        className: _.input,
                         tabIndex: p ? -1 : 0,
                         onKeyDown: w,
                         onKeyUp: D,

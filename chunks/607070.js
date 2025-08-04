@@ -11,8 +11,8 @@ var r,
     c = n(581883),
     u = n(12647),
     d = n(981631),
-    _ = n(959517);
-function f(e, t, n) {
+    f = n(959517);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -166,10 +166,10 @@ function L() {
 function x(e) {
     O.roleStyle = e.roleStyle;
 }
-function M(e) {
+function k(e) {
     O.displayNameStylesEnabled = e.enabled;
 }
-function k() {
+function M() {
     (O = p({}, O)).submitButtonEnabled = !O.submitButtonEnabled;
 }
 function j() {
@@ -218,7 +218,7 @@ function z(e) {
 }
 class q extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
-        (this.waitFor(c.Z), isNaN((O = p({}, y, null != e ? e : null)).fontSize) && (O.fontSize = d.yqN.FONT_SIZE_DEFAULT), 0 > _.fP.indexOf(null != O.messageGroupSpacing ? O.messageGroupSpacing : -1) && (O.messageGroupSpacing = null));
+        (this.waitFor(c.Z), isNaN((O = p({}, y, null != e ? e : null)).fontSize) && (O.fontSize = d.yqN.FONT_SIZE_DEFAULT), 0 > f.fP.indexOf(null != O.messageGroupSpacing ? O.messageGroupSpacing : -1) && (O.messageGroupSpacing = null));
     }
     get fontScale() {
         return (O.fontSize / d.yqN.FONT_SIZE_DEFAULT) * 100;
@@ -271,14 +271,14 @@ class q extends (r = i.ZP.DeviceSettingsStore) {
         return O.keyboardNavigationExplainerModalSeen;
     }
     get messageGroupSpacing() {
-        return null != O.messageGroupSpacing ? O.messageGroupSpacing : l.jU.getSetting() ? _.c8 : _.pq;
+        return null != O.messageGroupSpacing ? O.messageGroupSpacing : l.jU.getSetting() ? f.c8 : f.pq;
     }
     get isMessageGroupSpacingIncreased() {
-        let e = l.jU.getSetting() ? _.c8 : _.pq;
+        let e = l.jU.getSetting() ? f.c8 : f.pq;
         return this.messageGroupSpacing > e;
     }
     get isMessageGroupSpacingDecreased() {
-        let e = l.jU.getSetting() ? _.c8 : _.pq;
+        let e = l.jU.getSetting() ? f.c8 : f.pq;
         return this.messageGroupSpacing < e;
     }
     get isSubmitButtonEnabled() {
@@ -334,9 +334,9 @@ class q extends (r = i.ZP.DeviceSettingsStore) {
         return O;
     }
 }
-(f(q, 'displayName', 'AccessibilityStore'),
-    f(q, 'persistKey', 'AccessibilityStore'),
-    f(q, 'migrations', [
+(_(q, 'displayName', 'AccessibilityStore'),
+    _(q, 'persistKey', 'AccessibilityStore'),
+    _(q, 'migrations', [
         () => {
             let e = 'a11yFontScale',
                 t = 'a11yZoom',
@@ -421,11 +421,11 @@ let X = new q(s.Z, {
     ACCESSIBILITY_SET_SYNC_FORCED_COLORS: w,
     ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: F,
     ACCESSIBILITY_SET_ROLE_STYLE: x,
-    ACCESSIBILITY_SET_DISPLAY_NAME_STYLES_ENABLED: M,
+    ACCESSIBILITY_SET_DISPLAY_NAME_STYLES_ENABLED: k,
     ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: H,
     KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: Y,
     ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: W,
-    ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: k,
+    ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: M,
     ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: j,
     ACCESSIBILITY_SET_CONTRAST: K,
     ACCESSIBILITY_SET_CONTRAST_MODE: z

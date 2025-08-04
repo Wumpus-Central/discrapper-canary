@@ -8,8 +8,8 @@ var r,
     c = n(131704),
     u = n(592125),
     d = n(430824),
-    _ = n(306680),
-    f = n(944486),
+    f = n(306680),
+    _ = n(944486),
     p = n(709054),
     h = n(344185),
     m = n(569471),
@@ -76,7 +76,7 @@ let I = {},
     R = null,
     P = {};
 function w() {
-    for (let e in ((I = {}), (N = {}), (T = {}), (S = {}), (A = {}), (R = f.Z.getChannelId()), P)) clearTimeout(P[e]);
+    for (let e in ((I = {}), (N = {}), (T = {}), (S = {}), (A = {}), (R = _.Z.getChannelId()), P)) clearTimeout(P[e]);
     ((P = {}),
         h.Z.forEachGuild((e) => {
             L(e);
@@ -84,7 +84,7 @@ function w() {
         x());
 }
 function D(e) {
-    for (let t in (delete I[e], delete N[e], delete T[e], delete S[e], delete A[e], L(e), S[e])) k(e, t);
+    for (let t in (delete I[e], delete N[e], delete T[e], delete S[e], delete A[e], L(e), S[e])) M(e, t);
 }
 function L(e) {
     let t = h.Z.getThreadsForGuild(e);
@@ -103,29 +103,29 @@ function L(e) {
                 (ee(I, e, n, !1), ee(N, e, i ? n : null, !1), ee(T, e, r ? n : null, !1), a && Q(e, !0));
             } else {
                 ee(S, e, e, !1);
-                let t = _.ZP.isForumPostUnread(e.id);
+                let t = f.ZP.isForumPostUnread(e.id);
                 ee(A, e, t ? e : null, !1);
             }
         }
 }
 function x() {
-    for (let e in ((C = {}), S)) for (let t in S[e]) k(e, t);
+    for (let e in ((C = {}), S)) for (let t in S[e]) M(e, t);
 }
-function M(e) {
+function k(e) {
     let t = u.Z.getBasicChannel(e);
-    null != t && c.uC.has(t.type) && k(t.guild_id, t.id);
+    null != t && c.uC.has(t.type) && M(t.guild_id, t.id);
 }
-function k(e, t) {
+function M(e, t) {
     let n = u.Z.getChannel(t);
     if (null == n || !n.isForumLikeChannel() || (null == C[e] && (C[e] = {}), (C[e][t] = 0), null == S[e] || null == S[e][t])) return;
     let r = d.Z.getGuild(e);
     if (null == r) return;
-    let i = _.ZP.getTrackedAckMessageId(t);
+    let i = f.ZP.getTrackedAckMessageId(t);
     if (null == i) {
         let e = Date.now();
         (null != r.joinedAt && (r.joinedAt instanceof Date ? (e = r.joinedAt.getTime()) : 'string' == typeof r.joinedAt && (e = new Date(r.joinedAt).getTime())), (i = p.default.fromTimestamp(e)));
     }
-    for (let n in S[e][t]) t === R ? _.ZP.isNewForumThread(n, t, r) && C[e][t]++ : p.default.compare(n, i) > 0 && !_.ZP.hasOpenedThread(n) && C[e][t]++;
+    for (let n in S[e][t]) t === R ? f.ZP.isNewForumThread(n, t, r) && C[e][t]++ : p.default.compare(n, i) > 0 && !f.ZP.hasOpenedThread(n) && C[e][t]++;
 }
 function j(e, t, n) {
     if (null == t) return !1;
@@ -140,11 +140,11 @@ function j(e, t, n) {
                 { isUnread: t, isRelevant: n, isTimedRelevant: a } = X(r);
             (ee(I, r, e, !0), ee(N, r, n ? e : null, !0), ee(T, r, t ? e : null, !0), ee(S, r, null, !0), ee(A, r, null, !0), Q(r, a));
         } else {
-            let e = _.ZP.isForumPostUnread(r.id);
+            let e = f.ZP.isForumPostUnread(r.id);
             (ee(I, r, null, !0), ee(T, r, null, !0), ee(N, r, null, !0), ee(S, r, r, !0), ee(A, r, e ? r : null, !0), $(r.id));
         }
-        k(e, t);
-    } else (et(I, e, t, n), et(N, e, t, n), et(T, e, t, n), et(S, e, t, n), et(A, e, t, n), $(n), k(e, t));
+        M(e, t);
+    } else (et(I, e, t, n), et(N, e, t, n), et(T, e, t, n), et(S, e, t, n), et(A, e, t, n), $(n), M(e, t));
 }
 function U(e) {
     return j(e.channel.guild_id, e.channel.parent_id, e.channel.id);
@@ -171,7 +171,7 @@ function B(e, t) {
 function V(e) {
     let { channel: t } = e,
         n = !1;
-    return (null != t.guild_id && null != t.parent_id && (t.guild_id in I && t.parent_id in I[t.guild_id] && (delete I[t.guild_id][t.parent_id], (n = !0)), t.guild_id in T && t.parent_id in T[t.guild_id] && (delete T[t.guild_id][t.parent_id], (n = !0)), t.guild_id in N && t.parent_id in N[t.guild_id] && (p.default.keys(N[t.guild_id][t.parent_id]).forEach($), delete N[t.guild_id][t.parent_id], (n = !0)), t.guild_id in S && t.parent_id in S[t.guild_id] && (delete S[t.guild_id][t.parent_id], (n = !0)), t.guild_id in A && t.parent_id in A[t.guild_id] && (delete A[t.guild_id][t.parent_id], (n = !0)), n && k(t.guild_id, t.parent_id)), n);
+    return (null != t.guild_id && null != t.parent_id && (t.guild_id in I && t.parent_id in I[t.guild_id] && (delete I[t.guild_id][t.parent_id], (n = !0)), t.guild_id in T && t.parent_id in T[t.guild_id] && (delete T[t.guild_id][t.parent_id], (n = !0)), t.guild_id in N && t.parent_id in N[t.guild_id] && (p.default.keys(N[t.guild_id][t.parent_id]).forEach($), delete N[t.guild_id][t.parent_id], (n = !0)), t.guild_id in S && t.parent_id in S[t.guild_id] && (delete S[t.guild_id][t.parent_id], (n = !0)), t.guild_id in A && t.parent_id in A[t.guild_id] && (delete A[t.guild_id][t.parent_id], (n = !0)), n && M(t.guild_id, t.parent_id)), n);
 }
 function F(e) {
     let t = u.Z.getChannel(e.id);
@@ -184,7 +184,7 @@ function Z(e) {
         let { guild_id: e, parent_id: r } = t;
         if (!c.Ec.has(t.type)) {
             var n;
-            return Number(null == (n = C[e]) ? void 0 : n[t.id]) > 0 && (k(e, t.id), !0);
+            return Number(null == (n = C[e]) ? void 0 : n[t.id]) > 0 && (M(e, t.id), !0);
         }
         if (null == r) return !1;
         if (en(I, t)) {
@@ -196,10 +196,10 @@ function Z(e) {
             let l = I[e][r][t.id],
                 c = n ? l : null,
                 u = i ? l : null;
-            (ee(T, t, c, !0), ee(N, t, u, !0), k(e, r));
+            (ee(T, t, c, !0), ee(N, t, u, !0), M(e, r));
         } else {
             let e = en(A, t),
-                n = _.ZP.isForumPostUnread(t.id);
+                n = f.ZP.isForumPostUnread(t.id);
             if (n === e) return !1;
             ee(A, t, n ? t : null, !0);
         }
@@ -217,7 +217,7 @@ function H() {
         for (let t in S[e])
             for (let n in S[e][t]) {
                 let r = S[e][t][n];
-                _.ZP.isForumPostUnread(n) && ee(A, r, r, !1);
+                f.ZP.isForumPostUnread(n) && ee(A, r, r, !1);
             }
     x();
 }
@@ -237,12 +237,12 @@ function z(e) {
 }
 function q() {
     let e = R;
-    if ((R = f.Z.getChannelId()) === e) return !1;
-    (M(e), M(R));
+    if ((R = _.Z.getChannelId()) === e) return !1;
+    (k(e), k(R));
 }
 function X(e) {
-    let t = _.ZP.getMentionCount(e.id) > 0,
-        n = _.ZP.hasUnread(e.id) && !m.Z.isMuted(e.id),
+    let t = f.ZP.getMentionCount(e.id) > 0,
+        n = f.ZP.hasUnread(e.id) && !m.Z.isMuted(e.id),
         r = e.hasFlag(E.zZ.PINNED),
         i = e.isActiveThread(),
         a = i && (0, g.Z)(e) > Date.now();
@@ -291,7 +291,7 @@ let ei = {},
     el = {};
 class ec extends (r = o.ZP.Store) {
     initialize() {
-        (this.waitFor(h.Z, u.Z, m.Z, _.ZP), this.syncWith([f.Z], q));
+        (this.waitFor(h.Z, u.Z, m.Z, f.ZP), this.syncWith([_.Z], q));
     }
     hasActiveJoinedUnreadThreads(e, t) {
         return e in T && t in T[e];

@@ -9,8 +9,8 @@ var i = n(481060),
     c = n(374023),
     u = n(344532),
     d = n(981631),
-    _ = n(231338);
-function f(e, t, n) {
+    f = n(231338);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -91,14 +91,14 @@ class E extends o.Z {
                   },
                   {
                       modalKey: g,
-                      onCloseRequest: _.Vq,
+                      onCloseRequest: f.Vq,
                       instant: !0
                   }
               )
             : t && a.Z.logout('login_required_account_manager', d.Z5c.LOGIN);
     }
     constructor(...e) {
-        (super(...e), f(this, 'actions', { POST_CONNECTION_OPEN: this.handleConnectionOpen }));
+        (super(...e), _(this, 'actions', { POST_CONNECTION_OPEN: this.handleConnectionOpen }));
     }
 }
 let b = new E();

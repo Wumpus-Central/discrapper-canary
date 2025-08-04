@@ -9,16 +9,16 @@ var r = n(255367),
 let u = (e) => {
     let { className: t, animationState: n = 'on' } = e,
         u = (0, a.e7)([o.Z], () => o.Z.useReducedMotion),
-        [d, _] = (0, i.useState)(!1),
-        f = (0, i.useRef)(null),
+        [d, f] = (0, i.useState)(!1),
+        _ = (0, i.useRef)(null),
         p = 'on' === n || ('on_hover' === n && d);
     return (
         (0, i.useEffect)(() => {
-            null !== f.current && (p ? f.current.play() : ((f.current.currentTime = 0), f.current.pause()));
+            null !== _.current && (p ? _.current.play() : ((_.current.currentTime = 0), _.current.pause()));
         }, [p]),
         (0, r.jsx)('div', {
-            onMouseEnter: 'on_hover' === n ? () => _(!0) : void 0,
-            onMouseLeave: 'on_hover' === n ? () => _(!1) : void 0,
+            onMouseEnter: 'on_hover' === n ? () => f(!0) : void 0,
+            onMouseLeave: 'on_hover' === n ? () => f(!1) : void 0,
             children: u
                 ? (0, r.jsx)('img', {
                       src: l.Z,
@@ -29,7 +29,7 @@ let u = (e) => {
                       className: t,
                       autoPlay: !0,
                       loop: !0,
-                      ref: f,
+                      ref: _,
                       children: [
                           (0, r.jsx)('source', {
                               src: c.Z,

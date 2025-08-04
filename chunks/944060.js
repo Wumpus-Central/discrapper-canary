@@ -5,7 +5,7 @@ var r = n(255367),
     o = n(136954),
     s = ['children'];
 function l(e, t) {
-    return f(e) || _(e, t) || u(e, t) || c();
+    return _(e) || f(e, t) || u(e, t) || c();
 }
 function c() {
     throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
@@ -23,7 +23,7 @@ function d(e, t) {
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
     return r;
 }
-function _(e, t) {
+function f(e, t) {
     var n,
         r,
         i = null == e ? null : ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
@@ -45,7 +45,7 @@ function _(e, t) {
         return a;
     }
 }
-function f(e) {
+function _(e) {
     if (Array.isArray(e)) return e;
 }
 function p(e, t) {

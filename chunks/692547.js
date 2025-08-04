@@ -8,8 +8,8 @@ var r = n(688619),
     c = n(8800),
     u = n(240096),
     d = n(521904),
-    _ = n(915840),
-    f = n(196548),
+    f = n(915840),
+    _ = n(196548),
     p = n(387117),
     h = n(949180),
     m = n(868858),
@@ -18,11 +18,11 @@ let { Themes: E } = n(15202).V,
     { SemanticColors: b } = d.V,
     { RawColors: y } = c.V,
     { SemanticColorExperiments: O } = u.V,
-    { SemanticColorHighContrast: v } = _.V,
+    { SemanticColorHighContrast: v } = f.V,
     { Shadows: I } = m.V,
     { Spacing: T } = g.V,
     { Modules: S } = p.V,
-    { Layout: A, Space: N } = f.VV,
+    { Layout: A, Space: N } = _.VV,
     C = l()(y, (e) => i()(e)),
     R = {
         themes: E,
@@ -35,20 +35,20 @@ let { Themes: E } = n(15202).V,
                     var r, i, a, o, s, l, c;
                     let u = e[t.theme],
                         d = u.raw,
-                        _ = u.opacity;
+                        f = u.opacity;
                     if (n in O && null != t.enabledExperiments && t.enabledExperiments.length > 0)
                         for (let e of t.enabledExperiments) {
                             let s = null == (i = O[n]) || null == (r = i[e]) ? void 0 : r[t.theme];
-                            null != s && ((d = null != (a = s.raw) ? a : d), (_ = null != (o = s.opacity) ? o : _));
+                            null != s && ((d = null != (a = s.raw) ? a : d), (f = null != (o = s.opacity) ? o : f));
                         }
                     if (!0 === t.highContrastModeEnabled) {
                         let e = null == (s = v[n]) ? void 0 : s[t.theme];
-                        null != e && ((d = null != (l = e.raw) ? l : d), (_ = null != (c = e.opacity) ? c : _));
+                        null != e && ((d = null != (l = e.raw) ? l : d), (f = null != (c = e.opacity) ? c : f));
                     }
-                    if (1 === _) return R.unsafe_rawColors[d].resolve(t);
+                    if (1 === f) return R.unsafe_rawColors[d].resolve(t);
                     {
                         let e = C[d];
-                        return (0 !== e.alpha() && 1 !== _ && (e = e.alpha(_)), P(e, t.saturation));
+                        return (0 !== e.alpha() && 1 !== f && (e = e.alpha(f)), P(e, t.saturation));
                     }
                 }
             };

@@ -3,7 +3,7 @@
     Hc: () => w,
     J8: () => D,
     Q6: () => N,
-    V9: () => M,
+    V9: () => k,
     WD: () => P,
     Zt: () => I,
     Zv: () => S,
@@ -27,11 +27,11 @@ var r = n(134432),
     c = n(913663),
     u = n(11513),
     d = n(373228),
-    _ = n(611480),
-    f = n(981631);
+    f = n(611480),
+    _ = n(981631);
 let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: g, CDN_HOST: E } = window.GLOBAL_ENV,
     b = Object.values(d.og),
-    y = decodeURIComponent(f.ANM.STICKER_ASSET('[\\d]+', '('.concat(b.join('|'), ')'))),
+    y = decodeURIComponent(_.ANM.STICKER_ASSET('[\\d]+', '('.concat(b.join('|'), ')'))),
     O = RegExp('('.concat(location.protocol).concat(g, '|').concat(location.protocol).concat(h, ')(').concat(y, ')'), 'ig'),
     v = RegExp(''.concat(location.protocol).concat(p, '(').concat(y, ')'), 'ig'),
     I = (e) => {
@@ -72,12 +72,12 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
     },
     A = (e) => (null == e ? null : ''.concat(e.name, '.').concat(T(e.format_type))),
     N = function (e) {
-        let { isPreview: t = !1, size: n = _.lE } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        let { isPreview: t = !1, size: n = f.lE } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (null == e.format_type) return null;
         let i = e.format_type;
         e.format_type === d.u3.GIF && t && (i = d.u3.PNG);
         let a = T(i),
-            o = f.ANM.STICKER_ASSET(e.id, a),
+            o = _.ANM.STICKER_ASSET(e.id, a),
             s = a === d.og.WEBP ? '&quality=lossless' : '';
         if ('development' !== m) {
             if (e.format_type === d.u3.LOTTIE) return ''.concat(location.protocol).concat(g).concat(o);
@@ -101,7 +101,7 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         stickers: e.stickers,
         previewSticker: I(e)
     }),
-    P = (e, t) => (e === _.yr.ANIMATE_ON_INTERACTION ? t : e !== _.yr.NEVER_ANIMATE),
+    P = (e, t) => (e === f.yr.ANIMATE_ON_INTERACTION ? t : e !== f.yr.NEVER_ANIMATE),
     w = (e, t, n, r) => {
         if (o.Z.getUploadCount(n, r) > 0) return !0;
         let i = c.Z.getStickerPreview(n, r);
@@ -119,15 +119,15 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
     D = (e) => e.type === d.n0.GUILD,
     L = (e) => e.type === d.n0.STANDARD,
     x = (e) => (e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : []),
-    M = (e) => {
+    k = (e) => {
         if (null === e) return !1;
         let t = e.guild_id;
         return void 0 !== a.Z.getGuild(t);
     },
-    k = [];
+    M = [];
 function j() {
     var e, t;
-    return null != (t = null == (e = i.Z.frecencyWithoutFetchingLatest.favoriteStickers) ? void 0 : e.stickerIds) ? t : k;
+    return null != (t = null == (e = i.Z.frecencyWithoutFetchingLatest.favoriteStickers) ? void 0 : e.stickerIds) ? t : M;
 }
 function U(e) {
     return j().includes(e);

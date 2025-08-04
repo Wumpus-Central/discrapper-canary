@@ -1,21 +1,21 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => a });
 var r = n(255367);
 n(73800);
 var o = n(481060),
     i = n(388032),
-    a = n(196880);
-function l(e) {
-    let { title: t, subtitle: n, headingId: l } = e;
+    l = n(196880);
+function a(e) {
+    let { title: t, subtitle: n, headingId: a } = e;
     return (0, r.jsxs)('div', {
-        className: a.headerRow,
+        className: l.headerRow,
         children: [
             (0, r.jsxs)('div', {
-                className: a.title,
+                className: l.title,
                 children: [
                     (0, r.jsx)(o.X6q, {
                         variant: 'heading-sm/medium',
                         color: 'text-default',
-                        id: l,
+                        id: a,
                         children: t
                     }),
                     null != n &&
@@ -27,7 +27,7 @@ function l(e) {
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: a.actions,
+                className: l.actions,
                 children: [
                     (0, r.jsx)(o.zxk, {
                         size: 'sm',

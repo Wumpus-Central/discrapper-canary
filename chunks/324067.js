@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => k }), n(539854), n(388685));
+(n.d(t, { Z: () => M }), n(539854), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -8,8 +8,8 @@ var r,
     c = n(592125),
     u = n(984933),
     d = n(430824),
-    _ = n(981631);
-function f(e, t, n) {
+    f = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,7 +47,7 @@ function y(e) {
             });
         };
     return (
-        t[_.d4z.GUILD_CATEGORY].forEach((e) => {
+        t[f.d4z.GUILD_CATEGORY].forEach((e) => {
             let { channel: t } = e;
             (n._categories.push({
                 channel: t,
@@ -125,13 +125,13 @@ function D(e) {
     y(t);
 }
 function L() {
-    y(_.I_8);
+    y(f.I_8);
 }
 function x(e) {
     let t = h[e];
     return null != t ? t : y(e);
 }
-class M extends (r = i.ZP.Store) {
+class k extends (r = i.ZP.Store) {
     initialize() {
         (this.waitFor(u.ZP, d.Z, l.default, c.Z, s.Z), this.syncWith([s.Z], L));
     }
@@ -139,8 +139,8 @@ class M extends (r = i.ZP.Store) {
         return null != e ? x(e) : E;
     }
 }
-f(M, 'displayName', 'GuildCategoryStore');
-let k = new M(a.Z, {
+_(k, 'displayName', 'GuildCategoryStore');
+let M = new k(a.Z, {
     CHANNEL_SELECT: D,
     CONNECTION_OPEN: O,
     OVERLAY_INITIALIZE: O,

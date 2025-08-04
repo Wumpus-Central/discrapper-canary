@@ -1,48 +1,48 @@
-n.d(t, { Y: () => d });
-var i = n(255367),
-    r = n(120356),
-    s = n.n(r),
-    a = n(756715),
-    l = n(446673),
-    o = n(481060),
+n.d(t, { Y: () => u });
+var r = n(255367),
+    i = n(120356),
+    a = n.n(i),
+    o = n(756715),
+    s = n(446673),
+    l = n(481060),
     c = n(669546);
-function d(e) {
+function u(e) {
     var t;
-    let { title: n, body: r, badge: d, className: u, textLink: m, hasBottomMargin: p = !1 } = e,
-        g = null == (t = null == m ? void 0 : m.external) || t;
-    return (0, i.jsxs)('div', {
-        className: s()(c.header, u, { [c.hasActions]: p }),
+    let { title: n, body: i, badge: u, className: d, textLink: f, hasBottomMargin: _ = !1 } = e,
+        p = null == (t = null == f ? void 0 : f.external) || t;
+    return (0, r.jsxs)('div', {
+        className: a()(c.header, d, { [c.hasActions]: _ }),
         children: [
-            (0, i.jsxs)('div', {
+            (0, r.jsxs)('div', {
                 children: [
-                    null != d &&
-                        (0, i.jsx)('div', {
+                    null != u &&
+                        (0, r.jsx)('div', {
                             className: c.badgeContainer,
-                            children: (0, i.jsx)(l.C, { badge: d })
+                            children: (0, r.jsx)(s.C, { badge: u })
                         }),
-                    (0, i.jsx)(o.X6q, {
+                    (0, r.jsx)(l.X6q, {
                         variant: 'heading-md/semibold',
                         className: c.title,
                         children: n
                     })
                 ]
             }),
-            null != r &&
-                '' !== r &&
-                (0, i.jsx)(o.Text, {
+            null != i &&
+                '' !== i &&
+                (0, r.jsx)(l.Text, {
                     variant: 'text-sm/normal',
                     className: c.headerBody,
-                    children: r
+                    children: i
                 }),
-            null != m &&
-                (0, i.jsx)(a.Anchor, {
-                    href: m.link,
-                    target: g ? '_blank' : void 0,
-                    rel: g ? 'noopener noreferrer' : void 0,
-                    children: (0, i.jsx)(o.Text, {
+            null != f &&
+                (0, r.jsx)(o.Anchor, {
+                    href: f.link,
+                    target: p ? '_blank' : void 0,
+                    rel: p ? 'noopener noreferrer' : void 0,
+                    children: (0, r.jsx)(l.Text, {
                         variant: 'text-sm/normal',
                         className: c.footerLink,
-                        children: m.text
+                        children: f.text
                     })
                 })
         ]

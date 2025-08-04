@@ -17,14 +17,14 @@ var i = n(255367),
     x = n(313201),
     _ = n(594928),
     j = n(829716),
-    C = n(786761),
-    E = n(3148),
+    E = n(786761),
+    C = n(3148),
     O = n(739566),
     v = n(753206),
     S = n(440849),
     T = n(921801),
-    N = n(196051),
-    I = n(441729),
+    I = n(196051),
+    N = n(441729),
     y = n(626135),
     A = n(63063),
     P = n(695346),
@@ -90,7 +90,7 @@ let z = (0, x.hQ)(),
         (0, p.o2)(e);
     }, 250),
     X = o().debounce((e) => {
-        (0, N.Ct)(e);
+        (0, I.Ct)(e);
     }, 250);
 function J(e) {
     let t = h.U.useExperiment({ location: 'useAccessibilityItems' }, { autoTrackExposure: !0 }).enabled,
@@ -170,11 +170,11 @@ function J(e) {
 function Q() {
     let e = P.jU.useSetting(),
         [t] = r.useState(() => {
-            let e = (0, C.e5)(
+            let e = (0, E.e5)(
                 W(
                     H(
                         {},
-                        (0, E.ZP)({
+                        (0, C.ZP)({
                             channelId: '1337',
                             content: M.intl.formatToPlainString(M.t.bB80LC, { previewLink: 'https://discord.com/accessibility' })
                         })
@@ -571,7 +571,7 @@ function eo() {
 }
 function ec() {
     let e = P.OW.useSetting(),
-        t = (0, c.e7)([I.Z], () => I.Z.speechRate),
+        t = (0, c.e7)([N.Z], () => N.Z.speechRate),
         [n, s] = r.useState(!1);
     return m.Zh
         ? (0, i.jsxs)(i.Fragment, {
@@ -614,10 +614,10 @@ function ec() {
                                       text: M.intl.string(M.t.hymc8v),
                                       onClick: () => {
                                           if (n) {
-                                              ((0, N.NB)(), s(!1));
+                                              ((0, I.NB)(), s(!1));
                                               return;
                                           }
-                                          ((0, N.cP)(
+                                          ((0, I.cP)(
                                               M.intl.string(M.t.PKaNJC),
                                               !0,
                                               void 0,

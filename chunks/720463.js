@@ -1,6 +1,6 @@
 n.d(t, {
     E: () => T,
-    WrappedBalanceWidgetEarnedOrbsCoachmarkModal: () => I
+    WrappedBalanceWidgetEarnedOrbsCoachmarkModal: () => N
 });
 var i = n(255367),
     r = n(73800),
@@ -20,24 +20,24 @@ var i = n(255367),
     x = n(335346),
     _ = n(981631),
     j = n(388032),
-    C = n(806539),
-    E = n(293401),
+    E = n(806539),
+    C = n(293401),
     O = n(447489),
     v = n(484885);
 let S = () => {
         let e = (0, l.e7)([c.Z], () => c.Z.useReducedMotion);
         return (0, i.jsx)('div', {
-            className: E.centerContent,
+            className: C.centerContent,
             children: e
                 ? (0, i.jsx)('img', {
                       src: O.Z,
-                      className: E.orbAsset,
+                      className: C.orbAsset,
                       alt: 'Orb'
                   })
                 : (0, i.jsxs)(d.Z, {
                       autoPlay: !0,
                       loop: !0,
-                      className: E.orbAsset,
+                      className: C.orbAsset,
                       children: [
                           (0, i.jsx)('source', {
                               src: v.Z,
@@ -45,7 +45,7 @@ let S = () => {
                           }),
                           (0, i.jsx)('img', {
                               src: O.Z,
-                              className: E.orbAsset,
+                              className: C.orbAsset,
                               alt: 'Orb'
                           })
                       ]
@@ -55,30 +55,30 @@ let S = () => {
     T = (e) => {
         let { descriptionText: t = j.intl.string(j.t['6If1Cw']), onClose: n = () => {} } = e;
         return (0, i.jsxs)('div', {
-            className: a()(E.container, C.baseCardOutline),
+            className: a()(C.container, E.baseCardOutline),
             children: [
                 (0, i.jsx)(b.s, { onClick: n }),
                 (0, i.jsx)(x.V, {
                     rightOffset: 20,
                     invertTail: !0,
-                    tailSpineClassName: E.coachmarkTailSpine,
-                    tailTargetInnerClassName: E.coachmarkTailTargetInner
+                    tailSpineClassName: C.coachmarkTailSpine,
+                    tailTargetInnerClassName: C.coachmarkTailTargetInner
                 }),
                 (0, i.jsx)(S, {}),
                 (0, i.jsx)('div', {
-                    className: E.contentContainer,
+                    className: C.contentContainer,
                     children: (0, i.jsxs)('div', {
-                        className: E.textContainer,
+                        className: C.textContainer,
                         children: [
                             (0, i.jsx)(o.X6q, {
                                 variant: 'heading-md/bold',
                                 color: 'header-primary',
-                                className: E.coachmarkTitle,
+                                className: C.coachmarkTitle,
                                 children: j.intl.string(j.t['D/nzVl'])
                             }),
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-sm/medium',
-                                className: E.coachmarkDescription,
+                                className: C.coachmarkDescription,
                                 children: t
                             })
                         ]
@@ -87,7 +87,7 @@ let S = () => {
             ]
         });
     };
-function N(e) {
+function I(e) {
     var { backgroundElementRef: t, onClickPill: n, onClose: s, onCloseCallback: a } = e;
     !(function (e, t) {
         if (null != e) {
@@ -116,7 +116,7 @@ function N(e) {
             (await o(), n());
         }, [n, o]);
     return (0, i.jsxs)(f.E9, {
-        className: E.coachmarkModalContainer,
+        className: C.coachmarkModalContainer,
         backgroundElementRef: t,
         onGetBoundingRect: _.dG4,
         getOffsetsRelativeToElement: () => ({
@@ -139,11 +139,11 @@ function N(e) {
         ]
     });
 }
-function I(e) {
+function N(e) {
     return (0, i.jsx)(h.x, {
         errorSource: 'ORBS_EARNED_ORBS_COACHMARK_MODAL',
         children: (0, i.jsx)(
-            N,
+            I,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},

@@ -40,8 +40,8 @@ function l(e, t) {
 let c = 'com.discord',
     u = 985746746,
     d = 'com.hammerandchisel.discord',
-    _ = 'https://discordapp.page.link',
-    f = 'https://discordapp.onelink.me',
+    f = 'https://discordapp.page.link',
+    _ = 'https://discordapp.onelink.me',
     p = 'Hs5r';
 function h() {
     var e, t;
@@ -55,8 +55,8 @@ function m() {
     return (0, a.Z)();
 }
 function g(e) {
-    let t = e.startsWith(f),
-        n = e.startsWith(_);
+    let t = e.startsWith(_),
+        n = e.startsWith(f);
     if (!t && !n) return null;
     try {
         let t = new URL(e).searchParams,
@@ -87,12 +87,12 @@ function E(e, t) {
         O = null != a ? encodeURIComponent(a) : null,
         v = null != l ? encodeURIComponent(l) : null;
     if ((null == (r = window) || null == (n = r.location) ? void 0 : n.hash) === '#test') {
-        let e = ''.concat(f, '/').concat(p, '/?deep_link_value=').concat(E, '&pid=').concat(i, '&af_og_description=').concat(b, '&af_force_deeplink=').concat(y);
+        let e = ''.concat(_, '/').concat(p, '/?deep_link_value=').concat(E, '&pid=').concat(i, '&af_og_description=').concat(b, '&af_force_deeplink=').concat(y);
         return (null != O && (e += '&af_android_url='.concat(O)), null != v && (e += '&af_ios_url='.concat(v)), console.log('Redirecting to '.concat(e)), e);
     }
     {
         let e = encodeURIComponent(g.toString()),
-            t = ''.concat(_, '/?link=').concat(e, '&utm_source=').concat(i, '&apn=').concat(c, '&isi=').concat(u, '&ibi=').concat(d, '&sd=').concat(b, '&efr=').concat(y);
+            t = ''.concat(f, '/?link=').concat(e, '&utm_source=').concat(i, '&apn=').concat(c, '&isi=').concat(u, '&ibi=').concat(d, '&sd=').concat(b, '&efr=').concat(y);
         return (null != O && (t += '&afl='.concat(O)), null != v && (t += '&ifl='.concat(v)), t);
     }
 }

@@ -83,24 +83,24 @@ function b(e) {
         _ = (e) => {
             (p(g({ route: d.j.SWITCH_APP_PLANS }, e)), n(m.intl.string(m.t.VFqtkJ), x));
         },
-        [j, C] = r.useState({});
+        [j, E] = r.useState({});
     r.useEffect(() => {
         for (let n of t) {
             var e;
             let t = null == (e = n.items[0]) ? void 0 : e.planId;
             null != t &&
-                (C((e) => h(g({}, e), { [n.id]: c.G.LOADING })),
+                (E((e) => h(g({}, e), { [n.id]: c.G.LOADING })),
                 (0, l.vY)(t)
                     .then(() => {
-                        C((e) => h(g({}, e), { [n.id]: c.G.DONE }));
+                        E((e) => h(g({}, e), { [n.id]: c.G.DONE }));
                     })
                     .catch(() => {
-                        C((e) => h(g({}, e), { [n.id]: c.G.ERROR }));
+                        E((e) => h(g({}, e), { [n.id]: c.G.ERROR }));
                     }));
         }
     }, [t]);
-    let { loadState: E } = (0, o.qz)(),
-        O = E !== o.jd.LOADED;
+    let { loadState: C } = (0, o.qz)(),
+        O = C !== o.jd.LOADED;
     switch (b) {
         case d.j.HOME:
             return (0, i.jsx)(i.Fragment, {

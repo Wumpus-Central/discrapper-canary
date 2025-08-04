@@ -9,8 +9,8 @@ var i = n(120356),
     c = n(892567),
     u = n(813549),
     d = n(246946),
-    _ = n(51144),
-    f = n(388032),
+    f = n(51144),
+    _ = n(388032),
     p = n(350651);
 function h(e, t, n) {
     return (
@@ -88,19 +88,19 @@ function O(e) {
     return e.isSystemUser() ? u.J.SYSTEM_DM : e.bot ? u.J.BOT : null;
 }
 let v = (e) => {
-        let { primary: t, secondary: n, botType: i, botVerified: o, discriminatorClass: u, className: d, usernameClass: _, botClass: h, showStreamerModeTooltip: g, displayNameStyles: b } = e;
+        let { primary: t, secondary: n, botType: i, botVerified: o, discriminatorClass: u, className: d, usernameClass: f, botClass: h, showStreamerModeTooltip: g, displayNameStyles: b } = e;
         return (0, r.jsxs)('div', {
             className: a()(p.info, d),
             children: [
                 (0, r.jsx)(s.ua7, {
-                    text: f.intl.string(f.t.Br1ls7),
+                    text: _.intl.string(_.t.Br1ls7),
                     shouldShow: g,
                     'aria-label': !!g && void 0,
                     children: (e) =>
                         (0, r.jsx)(
                             'span',
                             E(m({}, e), {
-                                className: a()(p.__invalid_username, _),
+                                className: a()(p.__invalid_username, f),
                                 children:
                                     null != b
                                         ? (0, r.jsx)(c.Z, {
@@ -127,19 +127,19 @@ let v = (e) => {
         });
     },
     I = (e) => {
-        var { user: t, nick: n, forceUsername: i, showAccountIdentifier: a, overrideDiscriminator: s, forcePomelo: l, hideBotTag: c = !1, hideDiscriminator: f = !1 } = e,
+        var { user: t, nick: n, forceUsername: i, showAccountIdentifier: a, overrideDiscriminator: s, forcePomelo: l, hideBotTag: c = !1, hideDiscriminator: _ = !1 } = e,
             p = b(e, ['user', 'nick', 'forceUsername', 'showAccountIdentifier', 'overrideDiscriminator', 'forcePomelo', 'hideBotTag', 'hideDiscriminator']);
         let h = (0, o.e7)([d.Z], () => d.Z.hidePersonalInformation),
-            g = h || f || t.isNonUserBot(),
+            g = h || _ || t.isNonUserBot(),
             E = t.toString(),
             y = c ? null : O(t),
             I = t.isVerifiedBot(),
-            T = _.ZP.getName(t),
+            T = f.ZP.getName(t),
             S = i ? E : null != n ? n : T,
             A = t.hasUniqueUsername() || l;
         if (A || S !== E) {
-            let e = S === E && A && i ? _.ZP.getUserTag(t, { forcePomelo: l }) : S,
-                n = a && e !== '@'.concat(E) ? _.ZP.getUserTag(t) : void 0;
+            let e = S === E && A && i ? f.ZP.getUserTag(t, { forcePomelo: l }) : S,
+                n = a && e !== '@'.concat(E) ? f.ZP.getUserTag(t) : void 0;
             return (0, r.jsx)(
                 v,
                 m(
@@ -148,7 +148,7 @@ let v = (e) => {
                         secondary: n,
                         botType: y,
                         botVerified: I,
-                        showStreamerModeTooltip: h && _.ZP.isNameConcealed(e),
+                        showStreamerModeTooltip: h && f.ZP.isNameConcealed(e),
                         displayNameStyles: S !== E ? t.displayNameStyles : null
                     },
                     p

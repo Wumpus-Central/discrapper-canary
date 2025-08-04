@@ -50,7 +50,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,7 +61,7 @@ function _(e, t) {
         e
     );
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -87,10 +87,10 @@ function h(e) {
 }
 let m = i.forwardRef(function (e, t) {
         var { onClick: n, onContextMenu: i, className: a, selected: c = !1, children: d, disabled: p = !1, dangerous: h } = e,
-            m = f(e, ['onClick', 'onContextMenu', 'className', 'selected', 'children', 'disabled', 'dangerous']);
+            m = _(e, ['onClick', 'onContextMenu', 'className', 'selected', 'children', 'disabled', 'dangerous']);
         return (0, r.jsx)(
             s.P3F,
-            _(
+            f(
                 u(
                     {
                         innerRef: t,
@@ -111,6 +111,6 @@ let m = i.forwardRef(function (e, t) {
     }),
     g = function (e) {
         var { className: t, children: n } = e,
-            i = f(e, ['className', 'children']);
-        return (0, r.jsx)('div', _(u({ className: o()(t, l.wrapper) }, i), { children: n }));
+            i = _(e, ['className', 'children']);
+        return (0, r.jsx)('div', f(u({ className: o()(t, l.wrapper) }, i), { children: n }));
     };

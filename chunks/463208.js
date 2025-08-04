@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(557818),
     u = n(897037),
     d = n(953100);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,7 +32,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -98,7 +98,7 @@ function E(e, t) {
 }
 function b(e) {
     var t;
-    let { disabled: n = !1, editable: a, inputRef: l, focusProps: _, name: p = '', type: g = 'text', placeholder: b = '', maxLength: y = 999, value: O, defaultValue: v, minLength: I, error: T, defaultDirty: S = !1, leading: A, trailing: N, validateOn: C = 'change', size: R = 'md', fullWidth: P = !1 } = e,
+    let { disabled: n = !1, editable: a, inputRef: l, focusProps: f, name: p = '', type: g = 'text', placeholder: b = '', maxLength: y = 999, value: O, defaultValue: v, minLength: I, error: T, defaultDirty: S = !1, leading: A, trailing: N, validateOn: C = 'change', size: R = 'md', fullWidth: P = !1 } = e,
         w = m(e, ['disabled', 'editable', 'inputRef', 'focusProps', 'name', 'type', 'placeholder', 'maxLength', 'value', 'defaultValue', 'minLength', 'error', 'defaultDirty', 'leading', 'trailing', 'validateOn', 'size', 'fullWidth']),
         D = E(O, v),
         L = (0, u.m)({
@@ -110,12 +110,12 @@ function b(e) {
             defaultDirty: S
         }),
         { setShouldValidate: x } = L,
-        M = (e) => {
+        k = (e) => {
             var t, n;
             let r = e.currentTarget.value;
             (null == (t = w.onChange) || t.call(w, r, p), x(!0), null == (n = D.setHasValue) || n.call(D, '' !== r));
         },
-        k = (e) => {
+        M = (e) => {
             var t, n;
             (null == (t = w.onFocus) || t.call(w, e), null == (n = D.setIsFocused) || n.call(D, !0));
         },
@@ -137,11 +137,11 @@ function b(e) {
             A,
             (0, r.jsx)(
                 s.t,
-                h(f({ ringTarget: U }, _), {
+                h(_({ ringTarget: U }, f), {
                     children: (0, r.jsx)(
                         'input',
                         h(
-                            f(
+                            _(
                                 {
                                     name: p,
                                     className: d.input,
@@ -158,9 +158,9 @@ function b(e) {
                             ),
                             {
                                 'aria-labelledby': null != (t = w['aria-labelledby']) ? t : D.titleId,
-                                onChange: M,
+                                onChange: k,
                                 onBlur: j,
-                                onFocus: k,
+                                onFocus: M,
                                 ref: l
                             }
                         )

@@ -20,20 +20,20 @@ var i = n(255367),
     x = n(266454),
     _ = n(104494),
     j = n(639119),
-    C = n(767714),
-    E = n(165583),
+    E = n(767714),
+    C = n(165583),
     O = n(504983),
     v = n(984802),
     S = n(626135),
     T = n(210887),
-    N = n(981631),
-    I = n(921944),
+    I = n(981631),
+    N = n(921944),
     y = n(474936),
     A = n(388032),
     P = n(967655);
 let R = () => {
         ((0, x.Q3)(a.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
-            dismissAction: I.L.PRIMARY,
+            dismissAction: N.L.PRIMARY,
             forceTrack: !0
         }),
             (0, b.XO)(b.wh.CLIENT_THEMES),
@@ -49,7 +49,7 @@ let R = () => {
         return (
             r.useEffect(() => {
                 a &&
-                    S.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
+                    S.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: y.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                         location_stack: n
                     });
@@ -79,7 +79,7 @@ let R = () => {
                                                               text: A.intl.string(A.t['E+COuL']),
                                                               onClick: () => R()
                                                           }),
-                                                          (0, i.jsx)(C.Z, {
+                                                          (0, i.jsx)(E.Z, {
                                                               showGradient: !1,
                                                               subscriptionTier: y.Si.TIER_2,
                                                               textOptions: { textOverride: u ? A.intl.formatToPlainString(A.t.bkQ4bG, { percent: null == d ? void 0 : d.discount.amount }) : A.intl.string(A.t.mr4K7O) },
@@ -99,7 +99,7 @@ let R = () => {
                                                     children: A.intl.string(A.t['E+COuL'])
                                                 }),
                                                 (0, i.jsx)('div', { className: P.premiumTier2Divider }),
-                                                (0, i.jsx)(E.ZP, {
+                                                (0, i.jsx)(C.ZP, {
                                                     type: y.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
                                                     subscriptionTier: y.Si.TIER_2
                                                 })
@@ -125,12 +125,12 @@ function Z() {
             useForcedColors: m.Z.useForcedColors,
             gradientPreset: h.Z.gradientPreset
         }));
-    return t !== N.BRd.LIGHT
+    return t !== I.BRd.LIGHT
         ? null
         : (0, i.jsx)(c.j7V, {
               hideBorder: !0,
               value: e && (0, l.ap)(t) && !n,
-              disabled: t !== N.BRd.LIGHT || n || null != r,
+              disabled: t !== I.BRd.LIGHT || n || null != r,
               onChange: u.lq,
               className: P.darkSidebarToggle,
               children: (0, i.jsx)('span', {

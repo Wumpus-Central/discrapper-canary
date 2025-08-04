@@ -8,14 +8,14 @@ var r = n(252258),
     c = n(424291),
     u = n(966434),
     d = n(649591),
-    _ = n(16609),
-    f = n(224189),
+    f = n(16609),
+    _ = n(224189),
     p = n(574952),
     h = n(981631);
 async function m(e) {
     let { applicationId: t, channelId: n, guildId: o } = e;
     try {
-        return await (0, f.Z)(t, n);
+        return await (0, _.Z)(t, n);
     } catch (s) {
         let e = null != o ? r.E.GUILD_CHANNEL : r.E.PRIVATE_CHANNEL;
         i.Z.dispatch({
@@ -35,7 +35,7 @@ async function g(e) {
         (null == t ||
             !!(await new Promise((e) => {
                 let i = l.ZP.getSelfEmbeddedActivities().get(t.id),
-                    a = (0, _.p)(null == i ? void 0 : i.location),
+                    a = (0, f.p)(null == i ? void 0 : i.location),
                     s = o.Z.getChannel(a);
                 if (null == i || null == s) return void e(!0);
                 (null == r || r(),

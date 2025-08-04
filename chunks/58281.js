@@ -55,7 +55,7 @@ e.exports = function (e) {
             ],
             relevance: 0
         },
-        _ = {
+        f = {
             beforeMatch: /(^|\{|;)\s*/,
             begin: RegExp(`${i}(\\.${i})*\\s*=(?!=)`),
             returnBegin: !0,
@@ -68,7 +68,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        f = {
+        _ = {
             scope: 'subst',
             begin: /\$\{/,
             end: /\}/,
@@ -89,7 +89,7 @@ e.exports = function (e) {
                             scope: 'char.escape',
                             match: /''\$/
                         },
-                        f,
+                        _,
                         {
                             scope: 'char.escape',
                             match: /'''/
@@ -105,7 +105,7 @@ e.exports = function (e) {
                             scope: 'char.escape',
                             match: /\\\$/
                         },
-                        f,
+                        _,
                         p
                     ]
                 }
@@ -128,12 +128,12 @@ e.exports = function (e) {
             a,
             s,
             m,
-            _,
+            f,
             d,
             c
         ];
     return (
-        (f.contains = g),
+        (_.contains = g),
         {
             name: 'Nix',
             aliases: ['nixos'],

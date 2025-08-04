@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => f,
+    ZP: () => _,
     hf: () => d
 });
 var r = n(763296),
@@ -11,26 +11,26 @@ var r = n(763296),
     c = n(277078),
     u = n(981631);
 let d = /^<sound:(\d+):(\d+)>/;
-function _(e, t, n, a, l) {
+function f(e, t, n, a, l) {
     if (!o.zv.getCurrentConfig({ location: 'getSoundmojiASTFromString' }, { autoTrackExposure: !1 }).enabled) return;
     let d = r.Z.getSoundById(a),
-        _ = (0, c.Z)(d, e, t);
+        f = (0, c.Z)(d, e, t);
     if (null != n && null != t) {
         let e = (0, s.Z)(t, n, a, l);
-        if (_ && null == e) {
+        if (f && null == e) {
             let e = i.Z.getMessage(t, n);
             if ((null == e ? void 0 : e.state) !== u.yb.SENT) return d;
         }
         return e;
     }
-    if (_ && null != d) return d;
+    if (f && null != d) return d;
 }
-function f(e, t) {
+function _(e, t) {
     var n;
     let r = e[1],
         i = e[2],
         { guildId: o, channelId: s, messageId: c } = t,
-        u = _(o, s, c, i, t.soundboardSounds);
+        u = f(o, s, c, i, t.soundboardSounds);
     if (null == u)
         return {
             type: 'text',

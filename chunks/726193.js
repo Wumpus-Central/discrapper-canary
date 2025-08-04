@@ -40,10 +40,10 @@ function d(e, t, n) {
     }
     return e;
 }
-function _(e) {
+function f(e) {
     return document.documentElement.clientWidth <= e.clientX || document.documentElement.clientHeight <= e.clientY;
 }
-var f = function () {
+var _ = function () {
         if ('undefined' != typeof window && 'function' == typeof window.addEventListener) {
             var e = !1,
                 t = Object.defineProperty({}, 'passive', {
@@ -94,11 +94,11 @@ let y = function (e, t) {
                         }),
                         (i.enableOnClickOutside = function () {
                             if ('undefined' != typeof document && !m[i._uid]) {
-                                (void 0 === r && (r = f()), (m[i._uid] = !0));
+                                (void 0 === r && (r = _()), (m[i._uid] = !0));
                                 var e = i.props.eventTypes;
                                 (e.forEach || (e = [e]),
                                     (h[i._uid] = function (e) {
-                                        if (null !== i.componentNode && !(i.initTimeStamp > e.timeStamp)) (i.props.preventDefault && e.preventDefault(), i.props.stopPropagation && e.stopPropagation(), (i.props.excludeScrollbar && _(e)) || (d((e.composed && e.composedPath && e.composedPath().shift()) || e.target, i.componentNode, i.props.outsideClickIgnoreClass) === document && i.__outsideClickHandler(e)));
+                                        if (null !== i.componentNode && !(i.initTimeStamp > e.timeStamp)) (i.props.preventDefault && e.preventDefault(), i.props.stopPropagation && e.stopPropagation(), (i.props.excludeScrollbar && f(e)) || (d((e.composed && e.composedPath && e.composedPath().shift()) || e.target, i.componentNode, i.props.outsideClickIgnoreClass) === document && i.__outsideClickHandler(e)));
                                     }),
                                     e.forEach(function (e) {
                                         document.addEventListener(e, h[i._uid], b(c(i), e));

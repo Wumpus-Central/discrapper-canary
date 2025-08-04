@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(481060),
     u = n(596454),
     d = n(727637),
-    _ = n(313201),
-    f = n(543241),
+    f = n(313201),
+    _ = n(543241),
     p = n(318766),
     h = n(907040),
     m = n(633302),
@@ -80,17 +80,17 @@ let C = O.Hz.CHAT,
     R = [m.ZP.getByName('thumbsup'), m.ZP.getByName('eyes'), m.ZP.getByName('laughing'), m.ZP.getByName('watermelon'), m.ZP.getByName('fork_and_knife'), m.ZP.getByName('yum')].filter(b.lm);
 function P(e) {
     let { emoji: t, isDisabled: n = !1, onClick: a, className: s } = e,
-        _ = i.useRef(null),
-        f = (0, d.Z)(_);
+        f = i.useRef(null),
+        _ = (0, d.Z)(f);
     return (0, r.jsx)('span', {
-        ref: _,
+        ref: f,
         children: (0, r.jsx)(c.P3F, {
             onClick: a,
             focusProps: { enabled: !n },
             children: (0, r.jsx)(c.AMe, {
                 config: p.u,
                 from: { value: 0 },
-                to: { value: +!!f },
+                to: { value: +!!_ },
                 children: (e) => {
                     let { value: i } = e;
                     return (0, r.jsx)(l.animated.div, {
@@ -130,10 +130,10 @@ function w(e) {
 }
 function D(e) {
     let { channel: t, title: n, closePopout: a, onFocus: l, onSelectEmoji: u, onSelectDisabledEmoji: d, onExpandedToggle: p, emojiSearchProps: m, recentlyUsedEmojis: b, analyticsOverride: T, ref: A } = e,
-        D = (0, _.Dt)(),
+        D = (0, f.Dt)(),
         [L, x] = i.useState(!1),
-        M = (0, f.wC)(t.guild_id),
-        k = (0, s.uniqBy)([...M, ...R], 'name')
+        k = (0, _.wC)(t.guild_id),
+        M = (0, s.uniqBy)([...k, ...R], 'name')
             .filter(
                 (e) =>
                     !E.ZP.isEmojiFilteredOrLocked({
@@ -143,7 +143,7 @@ function D(e) {
                     })
             )
             .slice(0, y.e5);
-    null != b && b.length > 0 && k.splice(k.length - 1, 1, b[0]);
+    null != b && b.length > 0 && M.splice(M.length - 1, 1, b[0]);
     let j = (e) => {
             (x(e), null == p || p(e));
         },
@@ -195,7 +195,7 @@ function D(e) {
                         className: I.slotsContainer,
                         children: (0, r.jsx)('div', {
                             className: o()(I.slots, I.slotsWide),
-                            children: k.map((e) => {
+                            children: M.map((e) => {
                                 let n = E.ZP.isEmojiDisabled({
                                     emoji: e,
                                     channel: t,

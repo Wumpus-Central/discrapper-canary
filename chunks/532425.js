@@ -9,10 +9,10 @@ var i = n(120356),
     c = n(388032),
     u = n(159529);
 let d = (e) => {
-    let { hasContent: t, onClear: n, className: i, isLoading: d, size: _ = 'sm' } = e;
+    let { hasContent: t, onClear: n, className: i, isLoading: d, size: f = 'sm' } = e;
     return (0, r.jsx)(o.P, {
         className: a()(i, u.iconLayout, { [u.pointer]: t }),
-        'data-size': _,
+        'data-size': f,
         onClick: (e) => {
             (e.stopPropagation(), null != n && n(e));
         },

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => C });
 var i = n(255367);
 n(73800);
 var r = n(924628),
@@ -31,21 +31,21 @@ function j() {
         children: (0, i.jsx)(c.Z, {})
     });
 }
-function C() {
+function E() {
     return (0, i.jsxs)(h.Z, {
         title: x.intl.string(x.t.SRZyHh),
         webSetting: b.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
         children: [(0, i.jsx)(p.Z, {}), (0, i.jsx)(m.Z, {}), (0, i.jsx)(u.Z, {}), (0, i.jsx)(d.Z, {})]
     });
 }
-function E() {
+function C() {
     return (
         (0, s.ZP)(() => {
             ((0, r.I)(), (0, l.A)());
         }),
         (0, i.jsxs)(o.N, {
             header: x.intl.string(x.t.OAuOHB),
-            children: [(0, i.jsx)(C, {}), (0, i.jsx)(j, {}), (0, i.jsx)(_, {})]
+            children: [(0, i.jsx)(E, {}), (0, i.jsx)(j, {}), (0, i.jsx)(_, {})]
         })
     );
 }

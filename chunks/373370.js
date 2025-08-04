@@ -13,8 +13,8 @@ var r = n(73800),
     c = n(5881),
     u = n(566078),
     d = n(46140),
-    _ = n(474936),
-    f = n(388032);
+    f = n(474936),
+    _ = n(388032);
 function p(e, t, n) {
     return (
         t in e
@@ -69,7 +69,7 @@ function g(e, t) {
 }
 let E = (0, c.T)({});
 function b(e, t, n) {
-    return n ? f.intl.formatToParts(e, t) : f.intl.formatToPlainString(e, t);
+    return n ? _.intl.formatToParts(e, t) : _.intl.formatToPlainString(e, t);
 }
 function y(e) {
     let t,
@@ -77,10 +77,10 @@ function y(e) {
         l = u.r.build(n.config).defaultRewardNameWithArticle,
         { targetMinutes: c } = r,
         d = n.config.messages.gameTitle,
-        _ = (0, s.f$)(n.config),
+        f = (0, s.f$)(n.config),
         p = (0, s._p)(n.config);
     return b(
-        (t = a && _ ? (p ? f.t['eb/SnZ'] : f.t.ziB0HB) : _ || null != o ? f.t.AwuMRU : f.t.NIimTk),
+        (t = a && f ? (p ? _.t['eb/SnZ'] : _.t.ziB0HB) : f || null != o ? _.t.AwuMRU : _.t.NIimTk),
         {
             gameTitle: d,
             streamingDurationRequirement: c,
@@ -97,10 +97,10 @@ function O(e) {
         l = u.r.build(n.config).defaultRewardNameWithArticle,
         { targetMinutes: c } = r,
         d = n.config.messages.gameTitle,
-        _ = (0, s.f$)(n.config),
+        f = (0, s.f$)(n.config),
         p = (0, s._p)(n.config);
     return b(
-        (t = a && _ ? (p ? f.t['eb/SnZ'] : f.t.ziB0HB) : _ || null != o ? f.t.AwuMRU : f.t.NIimTk),
+        (t = a && f ? (p ? _.t['eb/SnZ'] : _.t.ziB0HB) : f || null != o ? _.t.AwuMRU : _.t.NIimTk),
         {
             gameTitle: d,
             targetMinutes: c,
@@ -117,10 +117,10 @@ function v(e) {
         l = u.r.build(n.config).defaultRewardNameWithArticle,
         { targetMinutes: c } = r,
         d = n.config.messages.gameTitle,
-        _ = (0, s.f$)(n.config),
+        f = (0, s.f$)(n.config),
         p = (0, s._p)(n.config);
     return b(
-        (t = a && _ ? (p ? f.t['eb/SnZ'] : f.t.ziB0HB) : _ || null != o ? f.t.AwuMRU : f.t.FZL5Q0),
+        (t = a && f ? (p ? _.t['eb/SnZ'] : _.t.ziB0HB) : f || null != o ? _.t.AwuMRU : _.t.FZL5Q0),
         {
             gameTitle: d,
             streamingDurationRequirement: c,
@@ -136,7 +136,7 @@ function I(e) {
         { targetMinutes: i } = n,
         a = t.config.messages.gameTitle;
     return b(
-        f.t['a/ia7O'],
+        _.t['a/ia7O'],
         {
             gameTitle: a,
             streamingDurationRequirement: i
@@ -150,10 +150,10 @@ function T(e, t, n, r) {
         o = u.r.build(e.config).defaultWatchVideoTask,
         l = null != (i = null == o ? void 0 : o.messages.videoTitle) ? i : 'video',
         c = u.r.build(e.config).defaultRewardNameWithArticle,
-        _ = (0, s.f$)(e.config),
+        f = (0, s.f$)(e.config),
         p = (0, s._p)(e.config);
     return b(
-        (a = _ && n ? (p ? f.t['xqX+r6'] : f.t['vs/xBg']) : _ || null != t ? f.t['W/HkLC'] : e.id === d.V6 ? f.t.Rsd5bG : f.t['g+InPD']),
+        (a = f && n ? (p ? _.t['xqX+r6'] : _.t['vs/xBg']) : f || null != t ? _.t['W/HkLC'] : e.id === d.V6 ? _.t.Rsd5bG : _.t['g+InPD']),
         {
             videoTitle: l,
             rewardNameWithArticle: c,
@@ -167,7 +167,7 @@ function S(e) {
         i = n.targetMinutes,
         a = u.r.build(t.config).defaultRewardNameWithArticle;
     return b(
-        f.t.VYwSSk,
+        _.t.VYwSSk,
         {
             streamingDurationRequirement: i,
             questReward: a
@@ -181,10 +181,10 @@ function A(e) {
         l = u.r.build(n.config).defaultRewardNameWithArticle,
         { targetMinutes: c } = r,
         d = n.config.messages.gameTitle,
-        _ = (0, s.f$)(n.config),
+        f = (0, s.f$)(n.config),
         p = (0, s._p)(n.config);
     return b(
-        (t = a && _ ? (p ? f.t['X8Yt//'] : f.t.smG9qq) : _ || null != o ? f.t.BLyDvL : f.t['hkJ+Gh']),
+        (t = a && f ? (p ? _.t['X8Yt//'] : _.t.smG9qq) : f || null != o ? _.t.BLyDvL : _.t['hkJ+Gh']),
         {
             gameTitle: d,
             streamingDurationRequirement: c,
@@ -196,7 +196,7 @@ function A(e) {
 }
 function N(e) {
     let { quest: t, taskDetails: n, thirdPartyTaskDetails: r, withoutMarkdown: i, currentUser: a } = e,
-        l = (0, o.I5)(a, _.p9.TIER_2),
+        l = (0, o.I5)(a, f.p9.TIER_2),
         c = (0, s.Kr)(t.config);
     if ((0, s.$J)(t) && (0, s.$H)(t))
         return y({
@@ -292,10 +292,10 @@ function L(e) {
     switch (D(t)) {
         case 0:
         case 1:
-            return f.intl.string(f.t.l7E81t);
+            return _.intl.string(_.t.l7E81t);
         case 2:
-            return f.intl.string(f.t.umdNio);
+            return _.intl.string(_.t.umdNio);
         case 3:
-            return t.config.features.includes(d.S7.START_QUEST_CTA) ? f.intl.string(f.t.ToGcxM) : f.intl.string(f.t.l7E81t);
+            return t.config.features.includes(d.S7.START_QUEST_CTA) ? _.intl.string(_.t.ToGcxM) : _.intl.string(_.t.l7E81t);
     }
 }

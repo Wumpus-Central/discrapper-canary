@@ -8,8 +8,8 @@ var r = n(392711),
     c = n(402235),
     u = n(11637),
     d = n(592125),
-    _ = n(77498),
-    f = n(485386),
+    f = n(77498),
+    _ = n(485386),
     p = n(430824),
     h = n(594174),
     m = n(768581),
@@ -43,7 +43,7 @@ function x(e, t, n) {
         e
     );
 }
-function M(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,7 +59,7 @@ function M(e) {
     }
     return e;
 }
-function k(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,7 +76,7 @@ function j(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -115,8 +115,8 @@ let H = (e) => {
     W = {
         newline: o().defaultRules.newline,
         paragraph: o().defaultRules.paragraph,
-        escape: j(M({}, o().defaultRules.escape), { match: (e, t, n) => (!1 === t.allowEscape ? null : o().defaultRules.escape.match(e, t, n)) }),
-        blockQuote: j(M({}, o().defaultRules.blockQuote), {
+        escape: j(k({}, o().defaultRules.escape), { match: (e, t, n) => (!1 === t.allowEscape ? null : o().defaultRules.escape.match(e, t, n)) }),
+        blockQuote: j(k({}, o().defaultRules.blockQuote), {
             requiredFirstCharacters: [' ', '>'],
             match(e, t) {
                 let { prevCapture: n, inQuote: r, nested: i } = t;
@@ -150,12 +150,12 @@ let H = (e) => {
             }
         }),
         link: v.ZP,
-        autolink: j(M({}, o().defaultRules.autolink), { parse: Z }),
-        mailto: j(M({}, o().defaultRules.mailto), {
+        autolink: j(k({}, o().defaultRules.autolink), { parse: Z }),
+        mailto: j(k({}, o().defaultRules.mailto), {
             match: o().inlineRegex(/^<([^\s<>@]+@[^\s<>@]+\.[^\s<>@]+)>/),
             requiredFirstCharacters: ['<']
         }),
-        tel: j(M({}, o().defaultRules.mailto), {
+        tel: j(k({}, o().defaultRules.mailto), {
             requiredFirstCharacters: ['<'],
             match: o().inlineRegex(/^<((?:(?:tel|sms):\+?|\+)(?:(?:[0-9]|\([0-9]+\)))(?:[- .\/]?(?:[0-9]|\([0-9]+\)))+)>/),
             parse(e) {
@@ -176,7 +176,7 @@ let H = (e) => {
                 );
             }
         }),
-        url: j(M({}, o().defaultRules.url), {
+        url: j(k({}, o().defaultRules.url), {
             requiredFirstCharacters: ['h', 's'],
             match(e, t) {
                 if (!t.inline) return null;
@@ -203,10 +203,10 @@ let H = (e) => {
         u: o().defaultRules.u,
         br: o().defaultRules.br,
         text: A.ZP,
-        inlineCode: j(M({}, o().defaultRules.inlineCode), {
+        inlineCode: j(k({}, o().defaultRules.inlineCode), {
             parse(e, t, n) {
                 let r = o().defaultRules.inlineCode.parse(e, t, n);
-                return !0 === n.parseInlineCodeChildContent ? j(M({}, r), { validationChildContent: t(r.content, n) }) : r;
+                return !0 === n.parseInlineCodeChildContent ? j(k({}, r), { validationChildContent: t(r.content, n) }) : r;
             }
         }),
         emoticon: {
@@ -244,20 +244,20 @@ let H = (e) => {
                         id: s
                     };
                 let u = Y(n),
-                    d = null != u ? f.Z.getRole(u.id, s) : null;
+                    d = null != u ? _.Z.getRole(u.id, s) : null;
                 if (null == d)
                     return {
                         type: 'text',
                         content: '@'.concat(L.intl.string(L.t['YV4F/v']))
                     };
-                let _ = (0, c.zI)(null == u ? void 0 : u.id, d) && !(0, l.Gr)(d);
+                let f = (0, c.zI)(null == u ? void 0 : u.id, d) && !(0, l.Gr)(d);
                 return {
                     type: 'mention',
                     channelId: n.channelId,
                     guildId: null != u ? u.id : null,
                     roleId: s,
                     roleColor: d.color,
-                    roleColors: _
+                    roleColors: f
                         ? {
                               primaryColor: null == (r = d.colors) ? void 0 : r.primary_color,
                               secondaryColor: null == (i = d.colors) ? void 0 : i.secondary_color,
@@ -368,7 +368,7 @@ let H = (e) => {
             match: (e, t) => (t.allowGameMentions ? /^<@\$(\d+)>/.exec(e) : null),
             parse(e, t, n) {
                 var r;
-                let i = _.Z.getDetectableGame(e[1]);
+                let i = f.Z.getDetectableGame(e[1]);
                 return {
                     type: 'gameMention',
                     applicationId: e[1],
@@ -532,7 +532,7 @@ let er = 10,
                 parse(e, t, n) {
                     var r;
                     let i = null != (r = n.parseDepth) ? r : 0,
-                        a = j(M({}, n), { parseDepth: i + 1 }),
+                        a = j(k({}, n), { parseDepth: i + 1 }),
                         o = t(e[2], a),
                         s = t(e[3], a);
                     return [

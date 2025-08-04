@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(524437),
     u = n(680018),
     d = n(755721),
-    _ = n(481060),
-    f = n(153867),
+    f = n(481060),
+    _ = n(153867),
     p = n(230711),
     h = n(351773),
     m = n(607070),
@@ -31,14 +31,14 @@ var r = n(255367),
     D = n(474936),
     L = n(388032),
     x = n(595532);
-let M = () =>
+let k = () =>
         (0, r.jsx)('div', {
             className: x.editorHeader,
             children: (0, r.jsxs)('div', {
                 className: x.bannerUpsell,
                 children: [
                     (0, r.jsx)(v.Z, { className: x.premiumIcon }),
-                    (0, r.jsx)(_.X6q, {
+                    (0, r.jsx)(f.X6q, {
                         variant: 'heading-md/bold',
                         color: 'always-white',
                         children: L.intl.string(L.t.POSLGR)
@@ -46,7 +46,7 @@ let M = () =>
                 ]
             })
         }),
-    k = (e) => {
+    M = (e) => {
         let { markAsDismissed: t } = e,
             n = (0, C.q)(),
             i = () => {
@@ -55,16 +55,16 @@ let M = () =>
         return (0, r.jsxs)('div', {
             className: x.editorHeader,
             children: [
-                (0, r.jsx)(_.P3F, {
+                (0, r.jsx)(f.P3F, {
                     className: x.closeCircleButton,
                     onClick: i,
-                    children: (0, r.jsx)(_.k$p, {
+                    children: (0, r.jsx)(f.k$p, {
                         size: 'md',
                         color: 'currentColor',
                         className: x.closeCircle
                     })
                 }),
-                (0, r.jsx)(_.X6q, {
+                (0, r.jsx)(f.X6q, {
                     variant: 'heading-lg/extrabold',
                     children: L.intl.string(L.t['xSR+a2'])
                 })
@@ -75,7 +75,7 @@ let M = () =>
         var t, n, i;
         let { onSubscribeSuccess: a, markAsDismissed: o } = e,
             { analyticsLocations: s } = (0, E.ZP)(g.Z.CLIENT_THEMES_EDITOR),
-            [u, _] = (0, l.Wu)([I.default, A.Z], () => [A.Z.gradientPreset, S.ZP.isPremium(I.default.getCurrentUser())]),
+            [u, f] = (0, l.Wu)([I.default, A.Z], () => [A.Z.gradientPreset, S.ZP.isPremium(I.default.getCurrentUser())]),
             p = (0, y.N)(),
             h = (0, S.Rt)({
                 intervalType: null == p || null == (t = p.subscription_trial) ? void 0 : t.interval,
@@ -91,14 +91,14 @@ let M = () =>
                             themeName: c.Us[u.id],
                             analyticsLocations: s
                         }),
-                        (0, f.ZI)({
+                        (0, _.ZI)({
                             backgroundGradientPresetId: u.id,
                             theme: u.theme
                         })));
             };
         return (0, r.jsx)(O.Z, {
             size: d.zx.Sizes.MEDIUM,
-            textOptions: { textOverride: _ ? L.intl.string(L.t.IJI7ys) : (null == p || null == (i = p.subscription_trial) ? void 0 : i.sku_id) === D.Si.TIER_2 ? h : L.intl.string(L.t.mr4K7O) },
+            textOptions: { textOverride: f ? L.intl.string(L.t.IJI7ys) : (null == p || null == (i = p.subscription_trial) ? void 0 : i.sku_id) === D.Si.TIER_2 ? h : L.intl.string(L.t.mr4K7O) },
             subscriptionTier: D.Si.TIER_2,
             onSubscribeModalClose: m
         });
@@ -108,10 +108,10 @@ let M = () =>
             { isPreview: a } = (0, l.cj)([A.Z], () => ({ isPreview: A.Z.isPreview })),
             [o, c] = i.useState(!1),
             d = (0, C.q)(),
-            _ = () => {
+            f = () => {
                 (null != t && t(w.L.DISMISS), d(P.rMx.CLIENT_THEME_PREVIEW_CLOSED), (0, N.C)(), n || p.Z.open());
             },
-            f = (0, s.EQ)({
+            _ = (0, s.EQ)({
                 isPreview: a,
                 isCoachmark: n,
                 forceShowCloseButton: o
@@ -131,9 +131,9 @@ let M = () =>
                     }),
                 (0, r.jsx)(u.z, {
                     fullWidth: !0,
-                    onClick: _,
+                    onClick: f,
                     variant: 'secondary',
-                    text: f
+                    text: _
                 })
             ]
         });
@@ -155,22 +155,22 @@ function G(e) {
                     location_stack: a
                 });
         }, [s, a]));
-    let f = (0, C.J)(),
-        p = (0, h.Z)(null, s ? f : P.dG4);
+    let _ = (0, C.J)(),
+        p = (0, h.Z)(null, s ? _ : P.dG4);
     return (
         i.useEffect(() => {
-            if (s && !u) return f;
-        }, [s, u, f]),
+            if (s && !u) return _;
+        }, [s, u, _]),
         (0, r.jsx)(E.Gt, {
             value: a,
             children: (0, r.jsx)('div', {
                 ref: p,
                 'data-app-right-panel': !0,
                 className: o()(x.themeEditor, c ? x.editorAnimate : null),
-                children: (0, r.jsxs)(_.y5t, {
+                children: (0, r.jsxs)(f.y5t, {
                     children: [
-                        n ? (0, r.jsx)(M, {}) : (0, r.jsx)(k, { markAsDismissed: t }),
-                        (0, r.jsx)(_.Ttm, {
+                        n ? (0, r.jsx)(k, {}) : (0, r.jsx)(M, { markAsDismissed: t }),
+                        (0, r.jsx)(f.Ttm, {
                             className: x.editorBody,
                             children: (0, r.jsxs)(R.ZP, {
                                 type: R.yH.EDITOR,

@@ -14,8 +14,8 @@ var r = n(772848),
     c = n(710845),
     u = n(38618),
     d = n(314897),
-    _ = n(517100),
-    f = n(19780),
+    f = n(517100),
+    _ = n(19780),
     p = n(626135),
     h = n(70956),
     m = n(960048),
@@ -64,8 +64,8 @@ let T = 25,
     D = 0,
     L = 0,
     x = { state: 'uninitialized' },
-    M = f.Z.getState(),
-    k = (0, E.H)(),
+    k = _.Z.getState(),
+    M = (0, E.H)(),
     j = d.default.getToken();
 function U() {
     if (null != P) return;
@@ -108,13 +108,13 @@ function B() {
 }
 function V() {
     var e;
-    let t = null != (e = _.Z.getIdleSince()) ? e : 0;
+    let t = null != (e = f.Z.getIdleSince()) ? e : 0;
     return {
-        is_idle: _.Z.isIdle(),
+        is_idle: f.Z.isIdle(),
         idle_duration_ms: Date.now() - t,
-        is_afk: _.Z.isAFK(),
-        is_system_suspended: _.Z.getSystemSuspended(),
-        is_system_locked: _.Z.getSystemLocked()
+        is_afk: f.Z.isAFK(),
+        is_system_suspended: f.Z.getSystemSuspended(),
+        is_system_locked: f.Z.getSystemLocked()
     };
 }
 async function F() {
@@ -146,7 +146,7 @@ function H() {}
 function Y() {
     let e = [];
     return (
-        null != j && (k && e.push('foregrounded'), M !== O.hes.DISCONNECTED && M !== O.hes.RTC_DISCONNECTED && e.push('rtc_connected')),
+        null != j && (M && e.push('foregrounded'), k !== O.hes.DISCONNECTED && k !== O.hes.RTC_DISCONNECTED && e.push('rtc_connected')),
         {
             active: e.length > 0,
             ver: T,
@@ -206,21 +206,21 @@ function ee() {
     (j !== e && ((j = e), Q()), K());
 }
 function et() {
-    ((M = f.Z.getState()), K());
+    ((k = _.Z.getState()), K());
 }
 function en(e) {
     let { focused: t } = e;
-    ((k = t), K());
+    ((M = t), K());
 }
 function er(e) {
     let { state: t } = e;
-    ((k = t === O.$7l.ACTIVE), K());
+    ((M = t === O.$7l.ACTIVE), K());
 }
 function ei() {
-    ((M = f.Z.getState()), (k = (0, E.H)()), ee());
+    ((k = _.Z.getState()), (M = (0, E.H)()), ee());
 }
 function ea() {
-    (m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), f.Z.addChangeListener(et), d.default.addChangeListener(ee), s.Z.subscribe('WINDOW_FOCUS', en), s.Z.subscribe('APP_STATE_UPDATE', er), s.Z.subscribe('CONNECTION_OPEN', $), K(), z(), a.ZP.initialized.then(ei));
+    (m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), _.Z.addChangeListener(et), d.default.addChangeListener(ee), s.Z.subscribe('WINDOW_FOCUS', en), s.Z.subscribe('APP_STATE_UPDATE', er), s.Z.subscribe('CONNECTION_OPEN', $), K(), z(), a.ZP.initialized.then(ei));
 }
 async function eo() {
     var e;

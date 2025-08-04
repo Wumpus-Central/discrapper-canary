@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(755733),
     _ = n(981631),
     j = n(388032),
-    C = n(49149);
-function E(e) {
+    E = n(49149);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -64,22 +64,22 @@ function O(e, t) {
 function v(e) {
     let { transitionState: t, onClose: a, ticket: c, challenge: m } = e,
         b = (0, d.Dt)(),
-        [E, O] = r.useState(''),
+        [C, O] = r.useState(''),
         [v, S] = r.useState(!0),
-        [T, N] = r.useState(x.x.INIT),
-        [I, y] = r.useState(''),
+        [T, I] = r.useState(x.x.INIT),
+        [N, y] = r.useState(''),
         [A, P] = r.useState(null),
         R = async () => {
             let e;
-            N(x.x.REGISTER);
+            I(x.x.REGISTER);
             let t = p.isPlatformEmbedded && h.ZP.supportsFeature(_.eRX.WEBAUTHN) ? h.ZP.webAuthnRegister(m) : s.Ue(JSON.parse(m)).then((e) => JSON.stringify(e));
             try {
                 e = await t;
             } catch (e) {
-                (g.Z.captureException(e), P(j.intl.string(j.t.xSCvBQ)), N(x.x.INIT));
+                (g.Z.captureException(e), P(j.intl.string(j.t.xSCvBQ)), I(x.x.INIT));
                 return;
             }
-            (y(e), N(x.x.NAME));
+            (y(e), I(x.x.NAME));
         };
     return (0, i.jsxs)(o.Y0X, {
         transitionState: t,
@@ -87,7 +87,7 @@ function v(e) {
         parentComponent: 'UserSettingsWebAuthn',
         children: [
             (0, i.jsxs)(o.xBx, {
-                className: C.header,
+                className: E.header,
                 separator: !1,
                 children: [
                     (0, i.jsxs)(o.X6q, {
@@ -97,7 +97,7 @@ function v(e) {
                     }),
                     (0, i.jsx)(o.olH, {
                         onClick: a,
-                        className: C.modalCloseButton
+                        className: E.modalCloseButton
                     })
                 ]
             }),
@@ -109,10 +109,10 @@ function v(e) {
                         id: x.x.INIT,
                         children: [
                             (0, i.jsxs)(o.hzk, {
-                                className: C.content,
+                                className: E.content,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: C.icon,
+                                        className: E.icon,
                                         children: (0, i.jsx)('img', {
                                             alt: '',
                                             src: n(773072)
@@ -148,10 +148,10 @@ function v(e) {
                         id: x.x.REGISTER,
                         children: [
                             (0, i.jsxs)(o.hzk, {
-                                className: C.content,
+                                className: E.content,
                                 children: [
                                     (0, i.jsx)('div', {
-                                        className: C.icon,
+                                        className: E.icon,
                                         children: (0, i.jsx)('img', {
                                             alt: '',
                                             src: n(773072)
@@ -179,21 +179,21 @@ function v(e) {
                         children: (0, i.jsxs)('form', {
                             onSubmit: (e) => {
                                 (e.preventDefault(),
-                                    (0, f.Sr)(E, c, I)
+                                    (0, f.Sr)(C, c, N)
                                         .then(async () => {
                                             await (0, u.Yn)(!1);
                                         })
                                         .then(() => a())
                                         .catch(() => {
-                                            (P(j.intl.string(j.t.fEptJC)), N(x.x.INIT));
+                                            (P(j.intl.string(j.t.fEptJC)), I(x.x.INIT));
                                         }));
                             },
                             children: [
                                 (0, i.jsxs)(o.hzk, {
-                                    className: C.content,
+                                    className: E.content,
                                     children: [
                                         (0, i.jsx)('div', {
-                                            className: C.icon,
+                                            className: E.icon,
                                             children: (0, i.jsx)('img', {
                                                 alt: '',
                                                 src: n(637163)
@@ -206,8 +206,8 @@ function v(e) {
                                                     children: j.intl.string(j.t['Jzd+z8'])
                                                 }),
                                                 (0, i.jsx)(l.Is, {
-                                                    className: C.input,
-                                                    value: E,
+                                                    className: E.input,
+                                                    value: C,
                                                     onChange: (e) => {
                                                         (O(e), S(0 === e.length));
                                                     },
@@ -219,7 +219,7 @@ function v(e) {
                                     ]
                                 }),
                                 (0, i.jsx)(o.mzw, {
-                                    className: C.footer,
+                                    className: E.footer,
                                     children: (0, i.jsxs)(o.hE2, {
                                         direction: 'horizontal-reverse',
                                         children: [
@@ -233,7 +233,7 @@ function v(e) {
                                                 variant: 'secondary',
                                                 text: j.intl.string(j.t['13/7kZ']),
                                                 onClick: () => {
-                                                    N(x.x.INIT);
+                                                    I(x.x.INIT);
                                                 }
                                             })
                                         ]
@@ -261,7 +261,7 @@ function S(e) {
                 action: () => {
                     (0, o.ZDy)(async () => {
                         let { default: e } = await n.e('804').then(n.bind(n, 89616));
-                        return (t) => (0, i.jsx)(e, E({ credential: r }, t));
+                        return (t) => (0, i.jsx)(e, C({ credential: r }, t));
                     });
                 }
             }),
@@ -287,21 +287,21 @@ function T() {
     let [n, s] = r.useState(!1);
     return (0, i.jsxs)(o.hjN, {
         title: j.intl.string(j.t.y7SXYW),
-        className: C.settings,
+        className: E.settings,
         children: [
             (0, i.jsx)(o.R94, {
                 type: o.R94.Types.DESCRIPTION,
-                className: C.description,
+                className: E.description,
                 children: j.intl.string(j.t.TMukAA)
             }),
             e.length > 0 &&
                 (0, i.jsx)('div', {
-                    className: C.credentialList,
+                    className: E.credentialList,
                     children: e.map((e) =>
                         (0, i.jsxs)(
                             'div',
                             {
-                                className: C.credentialItem,
+                                className: E.credentialItem,
                                 children: [
                                     (0, i.jsx)(o.Text, {
                                         variant: 'text-md/semibold',
@@ -312,14 +312,14 @@ function T() {
                                         color: l.zx.Colors.TRANSPARENT,
                                         size: l.zx.Sizes.ICON,
                                         onClick: (t) => {
-                                            (0, c.vq)(t, (t) => (0, i.jsx)(S, O(E({}, t), { credential: e })));
+                                            (0, c.vq)(t, (t) => (0, i.jsx)(S, O(C({}, t), { credential: e })));
                                         },
                                         'aria-label': j.intl.string(j.t['+nrTbG']),
-                                        innerClassName: C.credentialOptions,
+                                        innerClassName: E.credentialOptions,
                                         children: (0, i.jsx)(o.Huf, {
                                             size: 'md',
-                                            className: C.__invalid_overflowIcon,
-                                            colorClass: C.__invalid_overflowIconFg,
+                                            className: E.__invalid_overflowIcon,
+                                            colorClass: E.__invalid_overflowIconFg,
                                             'aria-hidden': !0
                                         })
                                     })
@@ -342,7 +342,7 @@ function T() {
                                     (0, o.h7j)((e) =>
                                         (0, i.jsx)(
                                             v,
-                                            O(E({}, e), {
+                                            O(C({}, e), {
                                                 ticket: t,
                                                 challenge: n
                                             })

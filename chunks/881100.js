@@ -17,14 +17,14 @@ var i = n(399606),
     x = n(97942),
     _ = n(269987),
     j = n(548629),
-    C = n(507084),
-    E = n(680313),
+    E = n(507084),
+    C = n(680313),
     O = n(926433),
     v = n(302036),
     S = n(994554),
     T = n(1549),
-    N = n(13327),
-    I = n(59137),
+    I = n(13327),
+    N = n(59137),
     y = n(405991),
     A = n(24615),
     P = n(193943),
@@ -105,7 +105,7 @@ let M = (e, t, n) => ((0, r.wj)(e) ? t : n),
             moreGuildsAlt: {
                 title: p.intl.string(p.t.Bv8Pfn),
                 description: p.intl.string(p.t.JMfaTU),
-                imageSource: M(n, C, E),
+                imageSource: M(n, E, C),
                 imageClassName: t.moreGuildsAltImage
             },
             remix: {
@@ -148,7 +148,7 @@ let M = (e, t, n) => ((0, r.wj)(e) ? t : n),
             superReactions: {
                 title: p.intl.string(p.t.uZt5q6),
                 description: p.intl.string(p.t.ZK3Zoa),
-                imageSource: M(n, T, N),
+                imageSource: M(n, T, I),
                 imageClassName: t.superReactionsImage
             },
             upload: {
@@ -160,7 +160,7 @@ let M = (e, t, n) => ((0, r.wj)(e) ? t : n),
             videoBackground: {
                 title: p.intl.string(p.t.NaGpTU),
                 description: p.intl.string(p.t['A8O/Q0']),
-                imageSource: M(n, I, y),
+                imageSource: M(n, N, y),
                 imageClassName: t.videoBackgroundImage
             }
         };

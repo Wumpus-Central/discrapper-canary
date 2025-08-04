@@ -1,10 +1,10 @@
 n.d(t, {
     Bv: () => h,
-    _m: () => f,
+    _m: () => _,
     ft: () => g,
     jJ: () => m,
     lT: () => E,
-    zu: () => _
+    zu: () => f
 });
 var r = n(73800),
     i = n(780384),
@@ -17,10 +17,10 @@ var l = n(233398),
 n(19790);
 var u = n(469115),
     d = n(231338);
-function _() {
+function f() {
     return !1;
 }
-var f = (function (e) {
+var _ = (function (e) {
     return ((e.RESET_BUTTON = 'reset_button'), (e.EDITOR_CLOSE = 'editor_close'), e);
 })({});
 function p(e) {
@@ -46,8 +46,8 @@ function m() {
                 chassisMixAmount: null != (i = null == d ? void 0 : d.baseMix) ? i : l.BH
             }),
                 'reset_button' === t ? h(p(null != (u = e.current) ? u : o.Z.theme)) : (0, a.UD)());
-            let _ = s.L1.getSetting().backgroundGradientPresetId;
-            null != _ && (0, c.zO)(_);
+            let f = s.L1.getSetting().backgroundGradientPresetId;
+            null != f && (0, c.zO)(f);
         }, [])
     );
 }

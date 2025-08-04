@@ -21,7 +21,7 @@ function j(e) {
     var t;
     let { isNested: n = !1 } = e,
         j = null == (t = (0, m.Z)()) || t,
-        { explicitContentGuilds: C, explicitContentFriendDm: E, explicitContentNonFriendDm: O } = (0, d.B)(),
+        { explicitContentGuilds: E, explicitContentFriendDm: C, explicitContentNonFriendDm: O } = (0, d.B)(),
         v = (e) => {
             let t = Object.values(e);
             if ((0, o.Ks)() && t.includes(r.Q4.SHOW)) return void a.Z.showAgeVerificationGetStartedModal(l.cU.SENSITIVE_MEDIA_FILTER_SETTINGS);
@@ -43,12 +43,12 @@ function j(e) {
                 label: x.intl.string(x.t.S49UaW)
             }
         ],
-        N = {
+        I = {
             value: r.Q4.SHOW,
             label: x.intl.string(x.t['5k5OFh'])
         };
     return (
-        j && (S.unshift(N), T.unshift(N)),
+        j && (S.unshift(I), T.unshift(I)),
         (0, i.jsx)(g.U, {
             setting: f.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             scrollPosition: h.FY.EXPLICIT_MEDIA_REDACTION_V2,
@@ -65,7 +65,7 @@ function j(e) {
                                   (0, i.jsx)(s.q4e, {
                                       look: s.qQH.CUSTOM,
                                       options: S,
-                                      value: E,
+                                      value: C,
                                       onChange: (e) => v({ explicitContentFriendDm: e }),
                                       renderOptionValue: (e) => {
                                           let [t] = e;
@@ -106,7 +106,7 @@ function j(e) {
                                   (0, i.jsx)(s.q4e, {
                                       look: s.qQH.CUSTOM,
                                       options: T,
-                                      value: C,
+                                      value: E,
                                       onChange: (e) => v({ explicitContentGuilds: e }),
                                       isDisabled: !j,
                                       renderOptionValue: (e) => {
@@ -136,7 +136,7 @@ function j(e) {
                               titleClassName: _.selectItemTitle,
                               children: (0, i.jsx)(s.q4e, {
                                   options: S,
-                                  value: E,
+                                  value: C,
                                   onChange: (e) => v({ explicitContentFriendDm: e })
                               })
                           }),
@@ -156,7 +156,7 @@ function j(e) {
                               titleClassName: _.selectItemTitle,
                               children: (0, i.jsx)(s.q4e, {
                                   options: T,
-                                  value: C,
+                                  value: E,
                                   onChange: (e) => v({ explicitContentGuilds: e }),
                                   isDisabled: !j
                               })

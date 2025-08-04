@@ -20,8 +20,8 @@ function c(e, t, n) {
 }
 let u = {},
     d = null,
-    _ = 86400000,
-    f = 3600000;
+    f = 86400000,
+    _ = 3600000;
 function p() {
     s.d.getCurrentConfig({ location: 'LibraryApplicationStatisticsStore.handleConnectionOpen' }).enabled && (0, o.N)();
 }
@@ -79,8 +79,8 @@ class E extends (r = i.ZP.Store) {
         let t = u[e],
             n = 0;
         if (null != t) {
-            let e = Math.floor((Date.now() - new Date(t.last_played_at).getTime()) / _),
-                r = Math.floor((1000 * t.total_duration) / f);
+            let e = Math.floor((Date.now() - new Date(t.last_played_at).getTime()) / f),
+                r = Math.floor((1000 * t.total_duration) / _);
             (0 === e ? (n += 50) : e >= 1 && e < 2 ? (n += 40) : e >= 2 && e < 4 ? (n += 30) : e >= 4 && e < 7 ? (n += 20) : e >= 7 && (n += 10), 0 === r ? (n += 0) : r >= 1 && r < 12 ? (n += 10) : r >= 12 && r < 168 ? (n += 20) : r >= 168 && r < 720 ? (n += 40) : r >= 720 && (n += 50));
         }
         return n;

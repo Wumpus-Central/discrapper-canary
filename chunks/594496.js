@@ -18,14 +18,14 @@ var r = n(512722),
     x = n(643879),
     _ = n(621853),
     j = n(271383),
-    C = n(594174),
-    E = n(74538),
+    E = n(594174),
+    C = n(74538),
     O = n(51144),
     v = n(18438),
     S = n(778825),
     T = n(52597),
-    N = n(430131),
-    I = n(291334),
+    I = n(430131),
+    N = n(291334),
     y = n(388032),
     A = n(565872);
 function P(e) {
@@ -74,8 +74,8 @@ function R(e, t) {
 function D(e) {
     var t, n, r, D;
     let { guild: Z, nameplateEnabled: w } = e,
-        k = (0, a.e7)([C.default], () => {
-            let e = C.default.getCurrentUser();
+        k = (0, a.e7)([E.default], () => {
+            let e = E.default.getCurrentUser();
             return (s()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e);
         }),
         {
@@ -109,7 +109,7 @@ function D(e) {
     let Y = (0, o.gS)(z.id),
         K = (0, a.e7)([j.ZP], () => (null == z.id ? null : j.ZP.getMember(z.id, k.id))),
         q = (0, a.e7)([_.Z], () => _.Z.getGuildMemberProfile(k.id, z.id)),
-        X = E.ZP.canUsePremiumProfileCustomization(k),
+        X = C.ZP.canUsePremiumProfileCustomization(k),
         J = (0, c.gd)(L, null == K ? void 0 : K.avatar),
         Q = (0, c.f$)(M, null == q ? void 0 : q.banner),
         $ = (0, T.p)(G, null == q ? void 0 : q.themeColors),
@@ -122,7 +122,7 @@ function D(e) {
         className: A.sectionsContainer,
         children: [
             (0, i.jsx)(
-                N.Z,
+                I.Z,
                 {
                     errors: null != (r = null == F ? void 0 : F.nick) ? r : null == Y ? void 0 : Y.nick,
                     username: O.ZP.getName(k),
@@ -145,7 +145,7 @@ function D(e) {
                 },
                 'pronouns'
             ),
-            (0, i.jsxs)(I.Z, {
+            (0, i.jsxs)(N.Z, {
                 user: k,
                 showOverlay: !X,
                 children: [

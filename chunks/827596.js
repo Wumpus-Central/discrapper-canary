@@ -60,14 +60,14 @@ function d(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = _(e, t);
+        i = f(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -76,21 +76,21 @@ function _(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let f = { 'Surprise Me': { fill: 'color' } };
+let _ = { 'Surprise Me': { fill: 'color' } };
 function p(e) {
     let { artboard: t = 'Surprise Me' } = e,
         n = d(e, ['artboard']),
         { status: s, buffer: c } = (0, o.VG)(i.Z),
-        _ = (0, o.T3)(i.Z);
+        f = (0, o.T3)(i.Z);
     return s === o.Jt.Loading
         ? null
         : (0, r.jsx)(
               a.v,
               l(
-                  u(l({}, _ ? { key: 'override' } : {}), {
+                  u(l({}, f ? { key: 'override' } : {}), {
                       buffer: c,
                       artboard: t,
-                      artboardProperties: f
+                      artboardProperties: _
                   }),
                   n
               )

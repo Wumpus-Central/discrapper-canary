@@ -1,48 +1,48 @@
-(n.d(t, { Z: () => d }), n(953529));
+(n.d(t, { Z: () => u }), n(953529));
 var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
     a = n(481060),
-    o = n(528027),
-    s = n(686807),
+    s = n(528027),
+    o = n(686807),
     c = n(113318),
-    u = n(277937);
-function d(e) {
+    d = n(277937);
+function u(e) {
     let { benefit: t, guildId: n } = e,
         i = (0, c.Z)(n, t.ref_id),
-        d = (0, r.jsx)(o.Z, {
+        u = (0, r.jsx)(s.Z, {
             guildId: n,
             emojiId: t.emoji_id,
             emojiName: t.emoji_name
         }),
-        p =
+        m =
             null != i
                 ? (0, r.jsx)(a.P3F, {
-                      className: u.__invalid_channelLink,
+                      className: d.__invalid_channelLink,
                       onClick: i.navigateToChannel,
                       'aria-label': i.ariaLabel,
                       role: 'link',
                       children: (0, r.jsx)(a.Text, {
                           variant: 'text-md/medium',
                           color: 'header-primary',
-                          className: l()(u.name, u.linkedName),
-                          children: (0, s.Z)(t)
+                          className: l()(d.name, d.linkedName),
+                          children: (0, o.Z)(t)
                       })
                   })
                 : (0, r.jsx)(a.Text, {
                       variant: 'text-md/medium',
                       color: 'header-primary',
-                      className: u.name,
-                      children: (0, s.Z)(t)
+                      className: d.name,
+                      children: (0, o.Z)(t)
                   });
     return (0, r.jsxs)('div', {
-        className: u.container,
+        className: d.container,
         children: [
             (0, r.jsxs)('div', {
-                className: u.infoContainer,
+                className: d.infoContainer,
                 children: [
-                    p,
+                    m,
                     (0, r.jsx)(a.Text, {
                         color: 'interactive-normal',
                         variant: 'text-sm/normal',
@@ -51,8 +51,8 @@ function d(e) {
                 ]
             }),
             (0, r.jsx)('div', {
-                className: u.emojiContainer,
-                children: d
+                className: d.emojiContainer,
+                children: u
             })
         ]
     });

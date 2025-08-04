@@ -18,7 +18,7 @@ function d(e, t, n) {
         e
     );
 }
-function _(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,7 +34,7 @@ function _(e) {
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -51,7 +51,7 @@ function p(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -106,7 +106,7 @@ function O(e) {
     {
         let e = new Map();
         (h.forEach((t, r) => {
-            e.set(r, p(_({}, t), { position: n }));
+            e.set(r, p(f({}, t), { position: n }));
         }),
             (h = e),
             (g = n));
@@ -126,7 +126,7 @@ function T(e) {
     {
         let e = h.get(t);
         if (null == e) return !1;
-        h.set(t, p(_({}, e), { hidden: !0 }));
+        h.set(t, p(f({}, e), { hidden: !0 }));
     }
 }
 function S(e) {
@@ -135,7 +135,7 @@ function S(e) {
     {
         let e = h.get(t);
         if (null == e) return !1;
-        h.set(t, p(_({}, e), { hidden: !1 }));
+        h.set(t, p(f({}, e), { hidden: !1 }));
     }
 }
 function A(e) {

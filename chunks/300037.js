@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => E });
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -18,14 +18,14 @@ var r = n(120356),
     x = n(981631),
     _ = n(388032),
     j = n(939400);
-let C = function (e) {
+let E = function (e) {
     let { className: t, guildId: n, boostingVariant: r } = e,
-        C = (0, a.e7)([h.Z], () => h.Z.getGuild(n), [n]),
-        E = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
+        E = (0, a.e7)([h.Z], () => h.Z.getGuild(n), [n]),
+        C = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
         { fractionalState: O } = (0, c.Z)(),
-        v = (0, p.y)('guild_boosting_setting_guild_info_card', E, O),
-        S = (0, g.Z)(null == C ? void 0 : C.id).total;
-    return null == C
+        v = (0, p.y)('guild_boosting_setting_guild_info_card', C, O),
+        S = (0, g.Z)(null == E ? void 0 : E.id).total;
+    return null == E
         ? (0, i.jsx)('div', {
               className: s()(t, j.guildContainer),
               children: (0, i.jsx)('div', {
@@ -41,7 +41,7 @@ let C = function (e) {
               children: [
                   (0, i.jsx)(d.Z, {
                       className: j.__invalid_guildIcon,
-                      guild: C,
+                      guild: E,
                       size: d.Z.Sizes.LARGER
                   }),
                   (0, i.jsxs)('div', {
@@ -49,7 +49,7 @@ let C = function (e) {
                       children: [
                           (0, i.jsx)(o.Text, {
                               variant: 'text-lg/bold',
-                              children: C.name
+                              children: E.name
                           }),
                           (0, i.jsxs)('div', {
                               className: j.guildBoostStatsContainer,
@@ -67,7 +67,7 @@ let C = function (e) {
                                   (0, i.jsx)(o.Text, {
                                       variant: 'text-sm/bold',
                                       color: 'text-muted',
-                                      children: (0, b.nW)(C.premiumTier, { useLevels: !1 })
+                                      children: (0, b.nW)(E.premiumTier, { useLevels: !1 })
                                   })
                               ]
                           })
@@ -75,7 +75,7 @@ let C = function (e) {
                   }),
                   r
                       ? (0, i.jsx)(m.Z, {
-                            guild: C,
+                            guild: E,
                             analyticsLocation: {
                                 page: x.ZY5.GUILD_BOOSTING_USER_SETTINGS,
                                 section: x.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
@@ -93,7 +93,7 @@ let C = function (e) {
                             text: _.intl.string(_.t.KLOhbG),
                             onClick: () => {
                                 (0, u.f)({
-                                    guildId: C.id,
+                                    guildId: E.id,
                                     location: { section: x.jXE.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA }
                                 });
                             },

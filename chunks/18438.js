@@ -10,11 +10,11 @@
     W3: () => O,
     b9: () => v,
     cV: () => d,
-    g_: () => f,
+    g_: () => _,
     iq: () => o,
     pG: () => y,
     sr: () => m,
-    xn: () => _,
+    xn: () => f,
     z5: () => g
 }),
     n(415506));
@@ -102,13 +102,13 @@ function d(e) {
         avatarDecoration: e
     });
 }
-function _(e) {
+function f(e) {
     i.Z.dispatch({
         type: 'GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID',
         profileEffectId: e
     });
 }
-function f(e) {
+function _(e) {
     i.Z.dispatch({
         type: 'GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER',
         banner: e

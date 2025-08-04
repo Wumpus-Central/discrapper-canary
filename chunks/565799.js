@@ -8,8 +8,8 @@ var r,
     c = n(759174),
     u = n(570140),
     d = n(569545),
-    _ = n(199902),
-    f = n(314897),
+    f = n(199902),
+    _ = n(314897),
     p = n(592125),
     h = n(430824),
     m = n(496675),
@@ -57,23 +57,23 @@ function D(e) {
         s()(p.Z.getMutableGuildChannelsForGuild(e))
             .values()
             .forEach((e) => {
-                M(e) && N.set(e.id, e);
+                k(e) && N.set(e.id, e);
             }));
 }
 function L(e) {
     let t = R[e];
     if (null != t) return t;
     let n = p.Z.getChannel(e);
-    return null != n && n.isGuildStageVoice() && (D(n.guild_id), M(n)) ? x(e) : null;
+    return null != n && n.isGuildStageVoice() && (D(n.guild_id), k(n)) ? x(e) : null;
 }
 function x(e) {
     let t = R[e];
     return (null == t && ((t = new v.ZP(e)), (R[e] = t), t.rebuild()), t);
 }
-function M(e) {
+function k(e) {
     return null != e && e.isGuildStageVoice() && O.ZP.countVoiceStatesForChannel(e.id) > 0;
 }
-function k(e, t) {
+function M(e, t) {
     let n = p.Z.getChannel(e);
     return null != n && n.isGuildStageVoice() ? (0 === t.size() ? B(n.id) : null == N.get(n.id) && N.set(n.id, n)) : B(e);
 }
@@ -81,7 +81,7 @@ function j(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w();
     return t.reduce((t, n) => {
         let r = x(n);
-        return e(r) ? (k(n, r), !0) : t;
+        return e(r) ? (M(n, r), !0) : t;
     }, !1);
 }
 function U(e) {
@@ -166,7 +166,7 @@ function $(e) {
 let ee = [];
 class et extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(f.default, b.default, p.Z, E.Z, y.Z, m.Z, O.ZP, h.Z, I.ZP, g.Z, T.Z, _.Z);
+        this.waitFor(_.default, b.default, p.Z, E.Z, y.Z, m.Z, O.ZP, h.Z, I.ZP, g.Z, T.Z, f.Z);
     }
     getParticipantsVersion(e) {
         var t, n;

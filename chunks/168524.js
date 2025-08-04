@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => _ });
 var r = n(73800),
     i = n(835473),
     a = n(817788),
@@ -46,7 +46,7 @@ function d(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,20 +57,20 @@ function _(e, t) {
         e
     );
 }
-function f(e) {
+function _(e) {
     let { onOpened: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { applicationId: n } = e,
         c = (0, i.q)(n),
         d = r.useMemo(() => (null == c ? n : null != c.thirdPartySkus.find((e) => e.distributor === l.GQo.ROBLOX) ? a.eB : n), [c, n]),
-        f = (0, s.ZP)(_(u({}, e), { applicationId: d }));
-    return f.shouldOpenGameProfile && null != d
+        _ = (0, s.ZP)(f(u({}, e), { applicationId: d }));
+    return _.shouldOpenGameProfile && null != d
         ? (n) => {
               (n.stopPropagation(),
                   n.preventDefault(),
                   o.Z.openGameProfileModal(
-                      _(u({}, e), {
+                      f(u({}, e), {
                           applicationId: d,
-                          gameProfileModalChecks: f
+                          gameProfileModalChecks: _
                       })
                   ),
                   null == t || t());

@@ -56,18 +56,18 @@ function d(e, t) {
         e
     );
 }
-function _(e, t) {
+function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = f(e, t);
+        i = _(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function f(e, t) {
+function _(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,8 +79,8 @@ function f(e, t) {
 let p = (e) => e === r.Z.VARIANTS_GROUP || e === r.Z.EXTERNAL_SKU;
 class h extends a.Z {
     static fromServer(e) {
-        var { products: t, logo: n, hero_ranking: r, pdp_bg: a, mobile_bg: l, mobile_banner: u, hero_banner: f, hero_banner_asset: m, featured_block: g, hero_logo: E, banner_text_color: b, hero_banner_config: y, hero_logo_display_config: O } = e,
-            v = _(e, ['products', 'logo', 'hero_ranking', 'pdp_bg', 'mobile_bg', 'mobile_banner', 'hero_banner', 'hero_banner_asset', 'featured_block', 'hero_logo', 'banner_text_color', 'hero_banner_config', 'hero_logo_display_config']);
+        var { products: t, logo: n, hero_ranking: r, pdp_bg: a, mobile_bg: l, mobile_banner: u, hero_banner: _, hero_banner_asset: m, featured_block: g, hero_logo: E, banner_text_color: b, hero_banner_config: y, hero_logo_display_config: O } = e,
+            v = f(e, ['products', 'logo', 'hero_ranking', 'pdp_bg', 'mobile_bg', 'mobile_banner', 'hero_banner', 'hero_banner_asset', 'featured_block', 'hero_logo', 'banner_text_color', 'hero_banner_config', 'hero_logo_display_config']);
         return new h(
             d(c({}, super.fromServer(v)), {
                 products: t.reduce((e, t) => {
@@ -92,7 +92,7 @@ class h extends a.Z {
                 pdpBg: a,
                 mobileBg: l,
                 mobileBanner: u,
-                heroBanner: f,
+                heroBanner: _,
                 heroBannerAsset: m,
                 featuredBlock: g,
                 heroLogo: E,

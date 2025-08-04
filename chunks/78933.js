@@ -17,14 +17,14 @@ var i = n(255367),
     x = n(243778),
     _ = n(440051),
     j = n(734934),
-    C = n(300284),
-    E = n(680295),
+    E = n(300284),
+    C = n(680295),
     O = n(785717),
     v = n(209698),
     S = n(687158),
     T = n(892001),
-    N = n(899007),
-    I = n(648052),
+    I = n(899007),
+    N = n(648052),
     y = n(867176),
     A = n(537006),
     P = n(483517),
@@ -101,14 +101,14 @@ function ea(e) {
         { expiringStatusProfileFeedback: ex } = _.Y.useExperiment({ location: 'UserProfileAccountPopout' }, { autoTrackExposure: !1 }),
         e_ = (0, a.e7)([H.Z], () => H.Z.hidePersonalInformation),
         ej = (0, j.p)(),
-        eC = V.Sb.useSetting(),
-        eE = (0, Q.I)(eh),
+        eE = V.Sb.useSetting(),
+        eC = (0, Q.I)(eh),
         eO = (0, q.g)(n),
-        ev = (0, C.Z)({ analyticsLocations: eu }),
+        ev = (0, E.Z)({ analyticsLocations: eu }),
         eS = (0, Y.I5)(t),
         eT = (0, h.p)({ location: 'UserProfileAccountPopout' }),
-        eN = (0, v.b)({ location: 'UserProfileAccountPopout' }),
-        eI = (0, g.Z)({ location: 'UserProfileAccountPopout' }),
+        eI = (0, v.b)({ location: 'UserProfileAccountPopout' }),
+        eN = (0, g.Z)({ location: 'UserProfileAccountPopout' }),
         ey = r.useRef(null),
         [eA, eP] = r.useState(String(Date.now()));
     (0, G.fu)({
@@ -118,7 +118,7 @@ function ea(e) {
             t && eP(String(Date.now()));
         }
     });
-    let [eR, eD] = (0, x.US)(eI ? [l.z.CUSTOM_STATUS_PROMPTS_COACHMARK] : []),
+    let [eR, eD] = (0, x.US)(eN ? [l.z.CUSTOM_STATUS_PROMPTS_COACHMARK] : []),
         eZ = eR === l.z.CUSTOM_STATUS_PROMPTS_COACHMARK,
         ew = r.useRef((0, K.Z)((e) => e.shouldRenderTenureLevelUp)),
         ek = r.useMemo(() => (0, f.Z)(), []),
@@ -168,7 +168,7 @@ function ea(e) {
                                         displayProfile: ed,
                                         themeType: et.lY.POPOUT
                                     }),
-                                    (0, i.jsx)(N.Z, {
+                                    (0, i.jsx)(I.Z, {
                                         user: t,
                                         displayProfile: ed,
                                         themeType: et.lY.POPOUT,
@@ -209,7 +209,7 @@ function ea(e) {
                                         nickname: z.ZP.getName(null, null, t),
                                         onOpenProfile: ec ? void 0 : eM,
                                         pronouns: null == ed ? void 0 : ed.pronouns,
-                                        tags: (0, i.jsx)(I.Z, {
+                                        tags: (0, i.jsx)(N.Z, {
                                             displayProfile: ed,
                                             themeType: et.lY.POPOUT,
                                             onClose: n,
@@ -236,7 +236,7 @@ function ea(e) {
                                         isPremiumUser: eS,
                                         onInteraction: n
                                     }),
-                                    eN
+                                    eI
                                         ? (0, i.jsx)(Z.Z, {
                                               user: t,
                                               currentUser: t,
@@ -295,7 +295,7 @@ function ea(e) {
                                                                           className: ei.statusPickerModalMenu,
                                                                           'aria-label': en.intl.string(en.t.E13trK),
                                                                           onClose: t,
-                                                                          children: eE
+                                                                          children: eC
                                                                       });
                                                                   },
                                                             onClick: s.tq
@@ -342,7 +342,7 @@ function ea(e) {
                                                                                                           hideScroller: !0,
                                                                                                           onClose: r,
                                                                                                           onSelect: void 0,
-                                                                                                          children: eE
+                                                                                                          children: eC
                                                                                                       })
                                                                                                   }),
                                                                                               Object.getOwnPropertyDescriptors
@@ -393,7 +393,7 @@ function ea(e) {
                                                         }),
                                                         !__OVERLAY__ &&
                                                             W.wS &&
-                                                            eC &&
+                                                            eE &&
                                                             (0, i.jsxs)(i.Fragment, {
                                                                 children: [
                                                                     (0, i.jsx)(P.Z, { className: ei.menuDivider }),
@@ -416,7 +416,7 @@ function ea(e) {
                                 ]
                             }),
                             eU &&
-                                (0, i.jsx)(E.Z, {
+                                (0, i.jsx)(C.Z, {
                                     profileEffectId: null == ed ? void 0 : ed.profileEffectId,
                                     isHovering: eg
                                 })

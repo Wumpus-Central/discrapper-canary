@@ -8,8 +8,8 @@ var r = n(73800),
     c = n(887490),
     u = n(271383),
     d = n(496675),
-    _ = n(246946),
-    f = n(594174),
+    f = n(246946),
+    _ = n(594174),
     p = n(106824),
     h = n(691841),
     m = n(981631),
@@ -71,18 +71,18 @@ function v(e, t, n) {
     let { channel: P, type: w } = e,
         [D, L] = r.useState(() => (0, p.PA)()),
         x = (0, i.Z)(),
-        M = (0, a.e7)([u.ZP, f.default], () => {
+        k = (0, a.e7)([u.ZP, _.default], () => {
             var e, t;
-            let n = f.default.getCurrentUser();
+            let n = _.default.getCurrentUser();
             return null != (t = null != P.guild_id && null != n ? (null == (e = u.ZP.getMember(P.guild_id, n.id)) ? void 0 : e.isPending) : null) && t;
         }),
-        { canMentionEveryone: k, hidePersonalInformation: j } = (0, a.cj)(
-            [d.Z, _.Z],
+        { canMentionEveryone: M, hidePersonalInformation: j } = (0, a.cj)(
+            [d.Z, f.Z],
             () => ({
-                canMentionEveryone: P.isPrivate() || M || w === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, P),
-                hidePersonalInformation: _.Z.hidePersonalInformation
+                canMentionEveryone: P.isPrivate() || k || w === l.Ie.RULES_INPUT || d.Z.can(m.Plq.MENTION_EVERYONE, P),
+                hidePersonalInformation: f.Z.hidePersonalInformation
             }),
-            [P, w, M]
+            [P, w, k]
         ),
         { activeCommand: U, activeCommandOption: G } = (0, a.cj)([s.Z], () => ({
             activeCommand: s.Z.getActiveCommand(P.id),
@@ -104,7 +104,7 @@ function v(e, t, n) {
             activeCommandOption: G,
             activeInlineAutocompleteInput: Z,
             canMentionUsers: null != (N = null == (v = w.users) ? void 0 : v.allowMentioning) && N,
-            canMentionEveryone: k,
+            canMentionEveryone: M,
             hidePersonalInformation: j,
             hideMentionDescription: w === l.Ie.RULES_INPUT,
             emojiIntention: w === l.Ie.RULES_INPUT ? g.Hz.COMMUNITY_CONTENT : g.Hz.CHAT,

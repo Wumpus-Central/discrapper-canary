@@ -36,7 +36,7 @@ function d(e) {
     }
     return e;
 }
-function _(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,12 +48,12 @@ function _(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -80,7 +80,7 @@ function h(e, t) {
     return i;
 }
 function m(e) {
-    var { centerButton: t = !1, onClick: n, onMouseEnter: u, onMouseLeave: _ } = e,
+    var { centerButton: t = !1, onClick: n, onMouseEnter: u, onMouseLeave: f } = e,
         h = p(e, ['centerButton', 'onClick', 'onMouseEnter', 'onMouseLeave']);
     let m = t ? l.d : l.Z,
         { changeLeaveCallAndActivityIcons: g } = (0, s.A)({ location: 'LeaveCallButton' }),
@@ -91,7 +91,7 @@ function m(e) {
         { Component: y, events: O } = (0, i.K)();
     return (0, r.jsx)(
         m,
-        f(d({}, h), {
+        _(d({}, h), {
             isTrayButton: !1,
             onClick: E,
             iconComponent: g ? a.PBZ : y,
@@ -99,7 +99,7 @@ function m(e) {
                 (null == u || u(e), O.onMouseEnter());
             },
             onMouseLeave: (e) => {
-                (null == _ || _(e), O.onMouseLeave());
+                (null == f || f(e), O.onMouseLeave());
             },
             label: b()
         })

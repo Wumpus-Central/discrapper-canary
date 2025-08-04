@@ -1,7 +1,7 @@
 n.d(t, {
     DG: () => o,
     me: () => s,
-    nP: () => _,
+    nP: () => f,
     sA: () => c,
     wm: () => u,
     zO: () => l
@@ -85,6 +85,6 @@ let d = (0, r.B)({
         }
     ]
 });
-function _(e) {
+function f(e) {
     return d.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
 }

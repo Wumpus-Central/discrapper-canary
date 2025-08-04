@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(255367),
     i = n(740594),
     a = n(38273);
@@ -74,8 +74,8 @@ function d(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-function _(e) {
-    var { subscriptionTier: t, hasActivePromotion: n, useShorterCTA: o, isPersistentCTA: l, buttonTextOverride: d, defaultTextOverride: _, iconOverride: f, variantOverride: p } = e,
+function f(e) {
+    var { subscriptionTier: t, hasActivePromotion: n, useShorterCTA: o, isPersistentCTA: l, buttonTextOverride: d, defaultTextOverride: f, iconOverride: _, variantOverride: p } = e,
         h = u(e, ['subscriptionTier', 'hasActivePromotion', 'useShorterCTA', 'isPersistentCTA', 'buttonTextOverride', 'defaultTextOverride', 'iconOverride', 'variantOverride']);
     let m = {
             subscriptionTier: t,
@@ -83,8 +83,8 @@ function _(e) {
             useShorterCTA: o,
             isPersistentCTA: l,
             buttonTextOverride: d,
-            defaultTextOverride: _,
-            iconOverride: f,
+            defaultTextOverride: f,
+            iconOverride: _,
             variantOverride: p
         },
         { subscribeButtonProps: g, subscriptionTier: E } = (0, a.G)(m);

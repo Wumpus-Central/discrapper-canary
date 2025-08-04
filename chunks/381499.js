@@ -3,7 +3,7 @@
     D5: () => y,
     Gm: () => v,
     T4: () => m,
-    r1: () => _,
+    r1: () => f,
     wA: () => p,
     yC: () => E
 }),
@@ -176,8 +176,8 @@ class d extends s.C {
         ]);
     }
 }
-let _ = new d();
-class f extends s.C {
+let f = new d();
+class _ extends s.C {
     internalJsonWrite(e, t) {
         return this.refJsonWriter.scalar(r.wx.UINT64, e.value, 'value', !1, !0);
     }
@@ -226,7 +226,7 @@ class f extends s.C {
         ]);
     }
 }
-let p = new f();
+let p = new _();
 class h extends s.C {
     internalJsonWrite(e, t) {
         return this.refJsonWriter.scalar(5, e.value, 'value', !1, !0);

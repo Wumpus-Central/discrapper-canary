@@ -1,8 +1,8 @@
 (n.d(t, {
     Fm: () => p,
     H6: () => h,
-    Qh: () => _,
-    Sn: () => f,
+    Qh: () => f,
+    Sn: () => _,
     Th: () => m,
     jd: () => d
 }),
@@ -22,10 +22,10 @@ function d(e) {
         guildId: e
     });
 }
-function _() {
+function f() {
     i.Z.dispatch({ type: 'GUILD_POWERUPS_RESET_NOTIFICATIONS' });
 }
-function f(e, t) {
+function _(e, t) {
     if (!0 === t) {
         let t = s.G.concat(s.W),
             n = {};

@@ -15,16 +15,16 @@ var r = n(995638),
     c = n(768943),
     u = n(175006),
     d = n(592125),
-    _ = n(430824);
+    f = n(430824);
 n(375954);
-var f = n(306680);
+var _ = n(306680);
 (n(594174), n(70956));
 var p = n(709054),
     h = n(787879),
     m = n(982183),
     g = n(981631);
 function E(e) {
-    let { messageId: t, channelId: n, guildId: r, ReadStateStore_: i = f.ZP, GuildStore_: a = _.Z } = e;
+    let { messageId: t, channelId: n, guildId: r, ReadStateStore_: i = _.ZP, GuildStore_: a = f.Z } = e;
     if (!i.hasUnread(n)) return !1;
     let o = a.getGuild(r);
     if (null == o || null == o.joinedAt) return !1;
@@ -52,14 +52,14 @@ function v() {
             var e;
             return null != (e = h.Z.getNotifyingChannelIds()) ? e : [];
         }),
-        t = (0, a.Wu)([f.ZP], () => e.filter((e) => f.ZP.hasUnread(e)), [e]),
+        t = (0, a.Wu)([_.ZP], () => e.filter((e) => _.ZP.hasUnread(e)), [e]),
         n = (0, a.Wu)([s.ZP], () => {
             var e;
             return null != (e = s.ZP.getSettingsFilteredMentions()) ? e : [];
         });
     return {
         unreadRecentMentionsCount: (0, a.e7)(
-            [f.ZP, d.Z, _.Z],
+            [_.ZP, d.Z, f.Z],
             () => {
                 var e, t;
                 return null !=
@@ -74,8 +74,8 @@ function v() {
                                         messageId: e.id,
                                         channelId: e.channel_id,
                                         guildId: t.guild_id,
-                                        ReadStateStore_: f.ZP,
-                                        GuildStore_: _.Z
+                                        ReadStateStore_: _.ZP,
+                                        GuildStore_: f.Z
                                     })
                                 );
                             }))

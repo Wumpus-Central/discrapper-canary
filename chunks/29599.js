@@ -17,14 +17,14 @@ var i = n(255367),
     x = n(163684),
     _ = n(178100),
     j = n(518638),
-    C = n(725727),
-    E = n(454982),
+    E = n(725727),
+    C = n(454982),
     O = n(767714),
     v = n(504983),
     S = n(703656),
     T = n(594174),
-    N = n(580130),
-    I = n(669079),
+    I = n(580130),
+    N = n(669079),
     y = n(74538),
     A = n(317941),
     P = n(981631),
@@ -38,7 +38,7 @@ function w(e) {
         [p, g] = r.useState(!1),
         h = () => m((e) => !e),
         x = (0, f.ZP)(),
-        C = (0, j.Pz)(n.id, x),
+        E = (0, j.Pz)(n.id, x),
         O = null != s,
         v = (0, _.Z)(n, O);
     O && c
@@ -64,7 +64,7 @@ function w(e) {
               }));
     let S = O ? D.intl.string(D.t['2cHUtr']) : D.intl.string(D.t.O13yh4),
         T = r.useCallback(() => g(!1), []),
-        { outboundTitle: N, outboundTermsAndConditions: I } = n;
+        { outboundTitle: I, outboundTermsAndConditions: N } = n;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
@@ -80,7 +80,7 @@ function w(e) {
                                         className: Z.promotionIcon,
                                         children: (0, i.jsx)('img', {
                                             alt: '',
-                                            src: C,
+                                            src: E,
                                             className: Z.promotionIconImage
                                         })
                                     }),
@@ -88,7 +88,7 @@ function w(e) {
                                         children: [
                                             (0, i.jsx)(u.X6q, {
                                                 variant: 'heading-md/semibold',
-                                                children: N
+                                                children: I
                                             }),
                                             (0, i.jsx)(u.Text, {
                                                 variant: 'text-sm/normal',
@@ -116,7 +116,7 @@ function w(e) {
                             className: Z.promotionLegalese,
                             variant: 'text-xs/normal',
                             color: 'header-secondary',
-                            children: b.Z.parse(I, !1, { allowLinks: !0 })
+                            children: b.Z.parse(N, !1, { allowLinks: !0 })
                         })
                 ]
             }),
@@ -125,7 +125,7 @@ function w(e) {
                     renderModal: (e) => {
                         var t, r;
                         return (0, i.jsx)(
-                            E.Z,
+                            C.Z,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -179,20 +179,20 @@ function w(e) {
     });
 }
 let k = function () {
-    let e = (0, c.Wu)([N.Z], () => N.Z.getGiftable()),
+    let e = (0, c.Wu)([I.Z], () => I.Z.getGiftable()),
         [t, n] = o().partition(e, (e) => {
             let { giftCodeBatchId: t } = e;
             return null == t;
         }),
         s = (0, c.e7)([T.default], () => y.ZP.isPremiumExactly(T.default.getCurrentUser(), R.p9.TIER_2)),
-        l = o().groupBy(t, (e) => (0, I.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
+        l = o().groupBy(t, (e) => (0, N.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
         [d, f] = r.useState(!1);
     r.useEffect(() => {
         m.Z.wait(() => {
             (0, p.Qv)().then(() => f(!0));
         });
     }, []);
-    let { promotionsLoaded: b, activeOutboundPromotions: _, claimedEndedOutboundPromotions: j, claimedOutboundPromotionCodeMap: E, addClaimedOutboundPromotionCode: k } = (0, C.lG)(),
+    let { promotionsLoaded: b, activeOutboundPromotions: _, claimedEndedOutboundPromotions: j, claimedOutboundPromotionCodeMap: C, addClaimedOutboundPromotionCode: k } = (0, E.lG)(),
         L = _.length + j.length > 0,
         B =
             x.g.useExperiment(
@@ -276,7 +276,7 @@ let k = function () {
                                                   w,
                                                   {
                                                       outboundPromotion: e,
-                                                      code: E[e.id],
+                                                      code: C[e.id],
                                                       addClaimedOutboundPromotionCode: k,
                                                       disabled: !s
                                                   },
@@ -293,7 +293,7 @@ let k = function () {
                                                         entitlements: [t],
                                                         giftCodeBatchId: R.m8
                                                     },
-                                                    (0, I.Bg)(t.skuId, t.subscriptionPlanId)
+                                                    (0, N.Bg)(t.skuId, t.subscriptionPlanId)
                                                 )
                                               : null,
                                           l.length > 0
@@ -306,7 +306,7 @@ let k = function () {
                                                         entitlements: l,
                                                         giftCodeBatchId: R.rX
                                                     },
-                                                    (0, I.Bg)(l[0].skuId, l[0].subscriptionPlanId)
+                                                    (0, N.Bg)(l[0].skuId, l[0].subscriptionPlanId)
                                                 )
                                               : null,
                                           c.length > 0
@@ -319,7 +319,7 @@ let k = function () {
                                                         entitlements: c,
                                                         giftCodeBatchId: R.rX
                                                     },
-                                                    (0, I.Bg)(c[0].skuId, c[0].subscriptionPlanId)
+                                                    (0, N.Bg)(c[0].skuId, c[0].subscriptionPlanId)
                                                 )
                                               : null
                                       ]
@@ -359,7 +359,7 @@ let k = function () {
                                   : o()
                                         .keys(l)
                                         .map((e) => {
-                                            let { skuId: t, subscriptionPlanId: n, giftStyle: r } = (0, I.Z0)(e);
+                                            let { skuId: t, subscriptionPlanId: n, giftStyle: r } = (0, N.Z0)(e);
                                             return (0, i.jsx)(
                                                 A.Z,
                                                 {

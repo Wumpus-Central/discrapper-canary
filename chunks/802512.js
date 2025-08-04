@@ -48,7 +48,7 @@ function d(e) {
     }
     ((u.subgameInfo = t), null != c[t.universeId] && null != c[t.universeId].application && (u.application = c[t.universeId].application), (u = l({}, u)));
 }
-function _(e) {
+function f(e) {
     var t;
     let { universeId: n, application: r } = e;
     ((c[n] = {
@@ -58,7 +58,7 @@ function _(e) {
         (c = l({}, c)),
         null != r && (null == (t = u.subgameInfo) ? void 0 : t.universeId) === n && ((u.application = r), (u = l({}, u))));
 }
-function f(e) {
+function _(e) {
     let { universeId: t } = e;
     ((c[t] = {
         application: null,
@@ -89,6 +89,6 @@ class p extends (r = i.ZP.PersistedStore) {
 (s(p, 'displayName', 'RobloxSubgameStore'), s(p, 'persistKey', 'robloxSubgame'));
 let h = new p(a.Z, {
     ROBLOX_SUBGAME_UPDATE: d,
-    ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: _,
-    ROBLOX_SUBGAME_APPLICATION_FETCH_FAILURE: f
+    ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: f,
+    ROBLOX_SUBGAME_APPLICATION_FETCH_FAILURE: _
 });

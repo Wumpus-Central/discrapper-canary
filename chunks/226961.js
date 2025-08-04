@@ -16,7 +16,7 @@ var r,
     c = n(594174),
     u = n(981631),
     d = n(65154);
-function _(e, t, n) {
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function _(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                f(e, t, n[t]);
             }));
     }
     return e;
@@ -86,17 +86,17 @@ class v {
     }
     put(e, t, n, r) {
         if ('' === r) {
-            let r = f({}, this.state);
+            let r = _({}, this.state);
             return (delete r[y(e, t, n)], new v(r));
         }
-        return new v(f({ [y(e, t, n)]: r }, this.state));
+        return new v(_({ [y(e, t, n)]: r }, this.state));
     }
     get(e, t, n) {
         let r = this.state[y(e, t, n)];
         return null != r ? r : null;
     }
     constructor(e) {
-        (_(this, 'state', void 0), (this.state = e));
+        (f(this, 'state', void 0), (this.state = e));
     }
 }
 let I = v.empty(),
@@ -139,7 +139,7 @@ function L(e) {
 function x(e) {
     h = e.section;
 }
-function M(e) {
+function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
         r = {};
@@ -152,12 +152,12 @@ function M(e) {
                 for (let e = 0; e < a.length; e++) {
                     let r = t[e],
                         i = 'object' == typeof r ? r : {};
-                    o.push(M(a[e], i, n));
+                    o.push(k(a[e], i, n));
                 }
             } else r[i] = a;
         else if ('object' == typeof a && null !== a) {
             let t = 'object' == typeof e && null !== e ? e : {};
-            r[i] = M(a, t, n);
+            r[i] = k(a, t, n);
         } else if (i in E && 'number' == typeof a) {
             let t = (r[i] = Array.isArray(e) ? e : []);
             (t.push({
@@ -169,7 +169,7 @@ function M(e) {
     }
     return r;
 }
-function k(e) {
+function M(e) {
     let { connectionStats: t } = e;
     Object.values(d.Yn).forEach((e) => {
         t.filter((t) => {
@@ -195,7 +195,7 @@ function j(e) {
             } = n;
             Object.keys(e).includes(a) || (h = p);
         }
-        i[r] = M(n, i[r]);
+        i[r] = k(n, i[r]);
     } else delete i[r];
 }
 function U(e) {
@@ -276,7 +276,7 @@ class Z extends (r = i.ZP.Store) {
         return g.has(n) ? g.get(n) : d.Z.NO_OVERRIDE;
     }
 }
-_(Z, 'displayName', 'RTCDebugStore');
+f(Z, 'displayName', 'RTCDebugStore');
 let H = new Z(o.Z, {
     RTC_DEBUG_MODAL_OPEN: P,
     RTC_DEBUG_MODAL_CLOSE: w,
@@ -288,5 +288,5 @@ let H = new Z(o.Z, {
     RTC_DEBUG_SET_SIMULCAST_OVERRIDE: F,
     VOICE_CHANNEL_SELECT: D,
     RTC_CONNECTION_VIDEO: L,
-    MEDIA_ENGINE_CONNECTION_STATS: k
+    MEDIA_ENGINE_CONNECTION_STATS: M
 });

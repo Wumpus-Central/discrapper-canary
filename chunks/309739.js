@@ -17,21 +17,21 @@ var i = n(255367),
     x = n(116841),
     _ = n(335082),
     j = n(921801),
-    C = n(553795),
-    E = n(430824),
+    E = n(553795),
+    C = n(430824),
     O = n(63063),
     v = n(358085),
     S = n(362352),
     T = n(413182),
-    N = n(695346),
-    I = n(726985),
+    I = n(695346),
+    N = n(726985),
     y = n(981631),
     A = n(388032),
     P = n(187382),
     R = n(20493);
 function D(e) {
     let t = () => {
-        N.SE.updateSetting(e ? E.Z.getGuildIds() : []);
+        I.SE.updateSetting(e ? C.Z.getGuildIds() : []);
     };
     (0, p.h7j)((e) => {
         var n, r;
@@ -95,15 +95,15 @@ function D(e) {
     });
 }
 function Z() {
-    let e = N.G6.useSetting(),
-        t = N.no.useSetting(),
+    let e = I.G6.useSetting(),
+        t = I.no.useSetting(),
         n = (0, S.Yd)('activity privacy tab'),
         r = v.isPlatformEmbedded ? A.intl.string(A.t.MznbeH) : A.intl.string(A.t.oKqC4u),
         s = (e) => {
-            (N.no.updateSetting(e ? d.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS : d.GI.ACTIVITY_STATUS_OFF), D(e));
+            (I.no.updateSetting(e ? d.GI.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS : d.GI.ACTIVITY_STATUS_OFF), D(e));
         },
         l = (e) => {
-            (N.no.updateSetting(e), D(e !== d.GI.ACTIVITY_STATUS_OFF));
+            (I.no.updateSetting(e), D(e !== d.GI.ACTIVITY_STATUS_OFF));
         },
         o = [
             {
@@ -120,7 +120,7 @@ function Z() {
             }
         ];
     return (0, i.jsx)(j.F, {
-        setting: I.s6.ACTIVITY_PRIVACY_STATUS,
+        setting: N.s6.ACTIVITY_PRIVACY_STATUS,
         children: (0, i.jsxs)(p.hjN, {
             children: [
                 (0, i.jsx)(p.vwX, {
@@ -130,7 +130,7 @@ function Z() {
                 }),
                 (0, i.jsx)(p.j7V, {
                     value: e,
-                    onChange: (e) => N.G6.updateSetting(e),
+                    onChange: (e) => I.G6.updateSetting(e),
                     note: r,
                     children: A.intl.string(A.t['4q/Ewc'])
                 }),
@@ -168,10 +168,10 @@ function Z() {
     });
 }
 function w() {
-    let e = N.cP.useSetting(),
-        t = N.Ou.useSetting();
+    let e = I.cP.useSetting(),
+        t = I.Ou.useSetting();
     return (0, i.jsx)(j.F, {
-        setting: I.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
+        setting: N.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
         children: (0, i.jsxs)(p.hjN, {
             className: R.marginBottom40,
             children: [
@@ -183,13 +183,13 @@ function w() {
                 (0, i.jsx)(p.j7V, {
                     value: e,
                     note: A.intl.string(A.t.Hdh7sb),
-                    onChange: (e) => N.cP.updateSetting(e),
+                    onChange: (e) => I.cP.updateSetting(e),
                     children: A.intl.string(A.t.WEWQQk)
                 }),
                 (0, i.jsx)(p.j7V, {
                     value: t,
                     note: A.intl.string(A.t.Czr3Bg),
-                    onChange: (e) => N.Ou.updateSetting(e),
+                    onChange: (e) => I.Ou.updateSetting(e),
                     children: A.intl.string(A.t.UUvJVl)
                 })
             ]
@@ -198,7 +198,7 @@ function w() {
 }
 function k() {
     return (0, i.jsx)(j.F, {
-        setting: I.s6.ACTIVITY_PRIVACY_TOS,
+        setting: N.s6.ACTIVITY_PRIVACY_TOS,
         children: (0, i.jsx)(p.hjN, {
             className: R.marginBottom40,
             children: (0, i.jsx)(p.ToO, {
@@ -267,7 +267,7 @@ function B(e) {
     });
 }
 function M() {
-    let e = (0, c.e7)([C.Z], () => C.Z.getAccounts()),
+    let e = (0, c.e7)([E.Z], () => E.Z.getAccounts()),
         t = r.useMemo(() => e.filter((e) => f.Z.isSupported(e.type) && y.vbS.has(e.type)), [e]),
         [n, s] = r.useState(''),
         a = r.useMemo(() => {
@@ -277,7 +277,7 @@ function M() {
     return 0 === t.length
         ? null
         : (0, i.jsx)(j.F, {
-              setting: I.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
+              setting: N.s6.ACTIVITY_PRIVACY_STATUS_DISPLAY,
               children: (0, i.jsxs)(p.hjN, {
                   className: R.marginBottom40,
                   children: [

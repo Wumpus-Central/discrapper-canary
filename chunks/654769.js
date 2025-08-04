@@ -8,8 +8,8 @@ var r,
     c = n(933557),
     u = n(710845),
     d = n(811627),
-    _ = n(863065),
-    f = n(691294),
+    f = n(863065),
+    _ = n(691294),
     p = n(460181),
     h = n(474873),
     m = n(135906),
@@ -79,19 +79,19 @@ function D(e, t) {
 }
 let L = A.isPlatformEmbedded && (0, A.isWindows)(),
     x = L && 10 > parseFloat(l.Z.os.release),
-    M = !0;
+    k = !0;
 if (L && !x) {
     let [e, , t] = l.Z.os.release.split('.');
-    M = parseInt(e) > 10 || parseInt(t) >= 15063;
+    k = parseInt(e) > 10 || parseInt(t) >= 15063;
 }
-let k = new u.Z('NotificationUtils'),
-    j = (L && M) || ('Chrome' === s().name && 47 > parseFloat(s().version)) || ('Firefox' === s().name && 52 > parseFloat(s().version));
+let M = new u.Z('NotificationUtils'),
+    j = (L && k) || ('Chrome' === s().name && 47 > parseFloat(s().version)) || ('Firefox' === s().name && 52 > parseFloat(s().version));
 async function U() {
     if (null === l.Z || void 0 === l.Z ? void 0 : l.Z.features.supports('notifications'))
         try {
             return await N.ZP.invoke('NOTIFICATIONS_GET_SETTINGS');
         } catch (e) {
-            k.warn('Fetching native notification settings failed with error: ', e);
+            M.warn('Fetching native notification settings failed with error: ', e);
         }
     return null;
 }
@@ -111,7 +111,7 @@ async function V(e) {
             await N.ZP.invoke('NOTIFICATIONS_SEND_NOTIFICATION', { sound: B(e, n) });
             return;
         } catch (e) {
-            k.warn('Native notification sound failed with error: ', e);
+            M.warn('Native notification sound failed with error: ', e);
         }
     (0, p.GN)(e, t, void 0, n);
 }
@@ -143,8 +143,8 @@ if (x) {
                     R(this, 'onshow', function () {}),
                     R(this, 'onclick', function () {}),
                     R(this, 'onclose', function () {}),
-                    t.includes('\0') ? (k.warn('Notification title contains null character, setting to empty string'), (this.title = '')) : (this.title = t),
-                    n.includes('\0') ? (k.warn('Notification body contains null character, setting to empty string'), (this.body = '')) : (this.body = n),
+                    t.includes('\0') ? (M.warn('Notification title contains null character, setting to empty string'), (this.title = '')) : (this.title = t),
+                    n.includes('\0') ? (M.warn('Notification body contains null character, setting to empty string'), (this.body = '')) : (this.body = n),
                     (this.icon = r),
                     setImmediate(() => this.onshow()),
                     (e[this.id] = this),
@@ -174,7 +174,7 @@ if (null === l.Z || void 0 === l.Z ? void 0 : l.Z.features.supports('notificatio
         }),
             N.ZP.invoke('NOTIFICATIONS_REMOVE_ALL_NOTIFICATIONS'));
     } catch (e) {
-        k.warn('Native notification setup failed with error: ', e);
+        M.warn('Native notification setup failed with error: ', e);
     }
     (null === l.Z || void 0 === l.Z ? void 0 : l.Z.features.supports('notifications_provisional')) &&
         z().then((e) => {
@@ -193,7 +193,7 @@ function W(e) {
                 });
             return;
         } catch (e) {
-            k.warn('Native notification authorization failed with error: ', e);
+            M.warn('Native notification authorization failed with error: ', e);
         }
     null != H &&
         H.requestPermission(async () => {
@@ -237,18 +237,18 @@ async function X(e, t, n, r, i) {
         }),
         z = W,
         X = W;
-    if (((r.banner = await (0, _.K)()), !Z)) {
+    if (((r.banner = await (0, f.K)()), !Z)) {
         null != i.sound && !1 !== i.playSoundIfDisabled && (q(i.sound, null != (a = i.volume) ? a : 1, i.soundpack), (r.ping = !0), i.omitViewTracking || I.default.track(C.rMx.NOTIFICATION_ACTION, P({ action: 'VIEW' }, r)));
         return;
     }
-    (t.includes('\0') && (k.warn('Notification title contains null character, setting to empty string'), (t = '')), n.includes('\0') && (k.warn('Notification body contains null character, setting to empty string'), (n = '')));
+    (t.includes('\0') && (M.warn('Notification title contains null character, setting to empty string'), (t = '')), n.includes('\0') && (M.warn('Notification body contains null character, setting to empty string'), (n = '')));
     let Q = null != (o = null == i ? void 0 : i.tag) ? o : null,
         J = G && (null == R ? void 0 : R.sound) === !0 && (null == R ? void 0 : R.authorizationStatus) === 'authorized',
         $ = (e, t) => {
             var n;
             (null == (n = i.onShown) || n.call(i), i.omitViewTracking || (I.default.track(C.rMx.NOTIFICATION_ACTION, P({ action: 'VIEW' }, t)), I.default.track(C.rMx.NOTIFICATION_VIEWED, X)), j && setTimeout(() => e.close(), 5000));
         };
-    if ((null == i.sound || J || (q(i.sound, null != (s = i.volume) ? s : 1, i.soundpack), (r.ping = !0)), i.isUserAvatar && null != e && (e = await (0, f.D)(e)), L && b.Z.taskbarFlash && N.ZP.flashFrame(!0), G)) {
+    if ((null == i.sound || J || (q(i.sound, null != (s = i.volume) ? s : 1, i.soundpack), (r.ping = !0)), i.isUserAvatar && null != e && (e = await (0, _.D)(e)), L && b.Z.taskbarFlash && N.ZP.flashFrame(!0), G)) {
         let a = {
             title: t,
             body: n
@@ -299,7 +299,7 @@ async function X(e, t, n, r, i) {
                     try {
                         N.ZP.invoke('NOTIFICATIONS_REMOVE_NOTIFICATIONS', [e]);
                     } catch (e) {
-                        k.warn('Native notification removal failed with error: ', e);
+                        M.warn('Native notification removal failed with error: ', e);
                     }
                 }
             };
@@ -311,7 +311,7 @@ async function X(e, t, n, r, i) {
                 }
             );
         } catch (e) {
-            k.warn('Native notification failed with error: ', e);
+            M.warn('Native notification failed with error: ', e);
         }
     }
     null != i.sound && G && (q(i.sound, null != (h = i.volume) ? h : 1, i.soundpack), (r.ping = !0));
@@ -333,7 +333,7 @@ async function X(e, t, n, r, i) {
         let n = '';
         null == (t = i.onClick) || t.call(i, n);
     }),
-    M)
+    k)
         ? {
               notification: m,
               trackingProps: r

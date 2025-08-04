@@ -1,79 +1,92 @@
-n.d(t, { J: () => l });
-var i = n(255367);
+n.d(t, { J: () => _ });
+var r = n(255367);
 n(73800);
-var r = n(657707),
-    s = n(780605),
-    a = n(388032);
+var i = n(657707),
+    a = n(780605),
+    o = n(388032);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function l(e) {
-    var t,
-        n,
-        { 'aria-label': l, playing: o } = e,
-        c = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                i,
-                r = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        i,
-                        r = {},
-                        s = Object.keys(e);
-                    for (i = 0; i < s.length; i++) ((n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
-                    return r;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var s = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < s.length; i++) ((n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
-            }
-            return r;
-        })(e, ['aria-label', 'playing']);
-    return (0, i.jsx)(
-        s.Y,
-        ((t = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    i = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
-                    (i = i.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
-                    )),
-                    i.forEach(function (t) {
-                        var i;
-                        ((i = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: i,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0
-                                  })
-                                : (e[t] = i));
-                    }));
-            }
-            return e;
-        })({}, c)),
-        (n = n =
-            {
-                'aria-label': null != l ? l : o ? a.intl.string(a.t.ZcgDJS) : a.intl.string(a.t.RscU7O),
-                icon: o ? r.fpf : r.o1U,
-                variant: 'overlay-secondary',
-                fullWidth: !1,
-                rounded: !0
-            }),
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
-        t)
+        e
+    );
+}
+function d(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = f(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+    }
+    return i;
+}
+function f(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    return i;
+}
+function _(e) {
+    var { 'aria-label': t, playing: n } = e,
+        s = d(e, ['aria-label', 'playing']);
+    return (0, r.jsx)(
+        a.Y,
+        u(l({}, s), {
+            'aria-label': null != t ? t : n ? o.intl.string(o.t.ZcgDJS) : o.intl.string(o.t.RscU7O),
+            icon: n ? i.fpf : i.o1U,
+            variant: 'overlay-secondary',
+            fullWidth: !1,
+            rounded: !0
+        })
     );
 }

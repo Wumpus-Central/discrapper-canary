@@ -12,10 +12,10 @@ var r = n(255367),
     c = n(745510),
     u = n(185091);
 let d = 200,
-    _ = 20,
-    f = 200;
+    f = 20,
+    _ = 200;
 function p(e) {
-    let { children: t, confettiTriggerRef: n, setConfettiCount: c, setShouldFireConfetti: _, tooltipProps: p } = e,
+    let { children: t, confettiTriggerRef: n, setConfettiCount: c, setShouldFireConfetti: f, tooltipProps: p } = e,
         [h, m] = i.useState(0),
         g = i.useRef(-1),
         E = i.useRef(!0),
@@ -43,15 +43,15 @@ function p(e) {
                   className: u.confettiTrigger,
                   onMouseDown: () => {
                       (m(1),
-                          _(!0),
-                          c((e) => Math.min(e + 2, f)),
+                          f(!0),
+                          c((e) => Math.min(e + 2, _)),
                           window.clearTimeout(g.current),
                           (g.current = window.setTimeout(() => {
                               E.current && c(0);
                           }, d)));
                   },
                   onMouseUp: () => {
-                      (m(0), _(!1));
+                      (m(0), f(!1));
                   },
                   onMouseEnter: () => {
                       var e;
@@ -96,7 +96,7 @@ let h = function (e) {
                         }
                     }
                 },
-                Math.max(t, _)
+                Math.max(t, f)
             );
         }, [t, n, s, r, u]),
         null

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => _ }), n(539854));
+(n.d(t, { Z: () => f }), n(539854));
 var r = n(255367);
 n(73800);
 var i = n(243814),
@@ -9,10 +9,10 @@ var i = n(243814),
     c = n(981631),
     u = n(388032),
     d = n(398032);
-function _(e) {
+function f(e) {
     let t,
         { application: n, accountScopes: a } = e,
-        _ = [],
+        f = [],
         p = (0, s.Z)(n);
     return (a.includes(i.x.SDK_SOCIAL_LAYER)
         ? ((t = p
@@ -21,7 +21,7 @@ function _(e) {
                     learnMoreURL: l.Z.getArticleURL(c.BhN.SOCIAL_LAYER_CONNECTIONS)
                 })
               : u.intl.format(u.t.DfBeUl, { learnMoreURL: l.Z.getArticleURL(c.BhN.SOCIAL_LAYER_CONNECTIONS) })),
-          _.push(
+          f.push(
               {
                   icon: o.iFz,
                   text: p ? u.intl.formatToPlainString(u.t.z9peam, { maxFriends: c.L4X }) : u.intl.formatToPlainString(u.t.WNKzo6, { maxFriends: c.L4X })
@@ -46,7 +46,7 @@ function _(e) {
                     learnMoreURL: l.Z.getArticleURL(c.BhN.SOCIAL_LAYER_CONNECTIONS)
                 })
               : u.intl.format(u.t.DfBeUl, { learnMoreURL: l.Z.getArticleURL(c.BhN.SOCIAL_LAYER_CONNECTIONS) })),
-          _.push(
+          f.push(
               {
                   icon: o.iFz,
                   text: p ? u.intl.formatToPlainString(u.t.z9peam, { maxFriends: c.L4X }) : u.intl.formatToPlainString(u.t.WNKzo6, { maxFriends: c.L4X })
@@ -60,7 +60,7 @@ function _(e) {
                   text: p ? u.intl.string(u.t.mSqazM) : u.intl.string(u.t.YFFVMz)
               }
           )),
-    0 === _.length)
+    0 === f.length)
         ? null
         : (0, r.jsxs)('div', {
               className: d.applicationEducation,
@@ -72,10 +72,10 @@ function _(e) {
                             children: t
                         })
                       : null,
-                  _.map((e, t) => {
+                  f.map((e, t) => {
                       let { icon: n, text: i } = e;
                       return (0, r.jsx)(
-                          f,
+                          _,
                           {
                               icon: n,
                               text: i
@@ -86,7 +86,7 @@ function _(e) {
               ]
           });
 }
-function f(e) {
+function _(e) {
     let { icon: t, text: n } = e;
     return (0, r.jsxs)('div', {
         className: d.entry,

@@ -10,7 +10,7 @@ var r = n(815329),
 e.exports = function (e, t, n) {
     if (!d(e)) throw new r('Assertion failed: Type(O) is not Object');
     if (!l(t)) throw new r('Assertion failed: P is not a Property Key');
-    var _ = i(n) ? n : u(n);
-    if (!i(_)) throw new r('Assertion failed: Desc is not a valid Property Descriptor');
-    return a(s, c, o, e, t, _);
+    var f = i(n) ? n : u(n);
+    if (!i(f)) throw new r('Assertion failed: Desc is not a valid Property Descriptor');
+    return a(s, c, o, e, t, f);
 };

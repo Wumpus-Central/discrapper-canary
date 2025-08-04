@@ -80,22 +80,22 @@ function f(e) {
     var { id: t, label: n, sublabel: d, icon: f, hint: b, renderSubmenu: x } = e,
         _ = h(e, ['id', 'label', 'sublabel', 'icon', 'hint', 'renderSubmenu']);
     let j = (0, a.JA)(t),
-        { onFocus: C } = j,
-        E = h(j, ['onFocus']),
+        { onFocus: E } = j,
+        C = h(j, ['onFocus']),
         { id: O } = (0, a.f$)(),
         v = r.useRef(null),
         [S, T] = r.useState(!1),
-        N = null != x;
+        I = null != x;
     r.useLayoutEffect(() => {
-        if (N)
+        if (I)
             return (0, s.N)(O, (e) => {
                 T(e === t);
             });
-    }, [t, O, N]);
-    let I = (e) =>
+    }, [t, O, I]);
+    let N = (e) =>
         (0, i.jsxs)(
             u.kF,
-            g(p({}, e, E, _), {
+            g(p({}, e, C, _), {
                 ref: v,
                 role: 'button',
                 look: o.zx.Looks.BLANK,
@@ -106,7 +106,7 @@ function f(e) {
                 fullWidth: !0,
                 onMouseEnter: () => {
                     var t;
-                    (null == e || null == (t = e.onMouseEnter) || t.call(e), C());
+                    (null == e || null == (t = e.onMouseEnter) || t.call(e), E());
                 },
                 children: [
                     (0, i.jsx)('div', {
@@ -125,7 +125,7 @@ function f(e) {
                             b
                         ]
                     }),
-                    N &&
+                    I &&
                         (0, i.jsx)(l.Fbu, {
                             size: 'xs',
                             color: 'currentColor'
@@ -133,16 +133,16 @@ function f(e) {
                 ]
             })
         );
-    return N
+    return I
         ? (0, i.jsx)(c.yRy, {
               targetElementRef: v,
               spacing: 0,
               renderPopout: x,
               shouldShow: S,
               onRequestClose: () => T(!0),
-              children: I
+              children: N
           })
-        : I();
+        : N();
 }
 function b(e) {
     let { id: t, children: n } = e,

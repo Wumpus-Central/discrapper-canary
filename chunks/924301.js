@@ -17,8 +17,8 @@ var r,
     c = n(314897),
     u = n(271383),
     d = n(709054),
-    _ = n(765305);
-function f(e, t, n) {
+    f = n(765305);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             }));
     }
     return e;
@@ -130,24 +130,24 @@ function w(e, t, n) {
 function D(e) {
     var t, n;
     let r = C(e.guild_scheduled_event_exception_id),
-        i = (null != (n = null == (t = S[e.guild_scheduled_event_id]) ? void 0 : t[r]) ? n : 0) + ((null != e.guild_scheduled_event_exception_id && e.response === _.gv.UNINTERESTED) || (null == e.guild_scheduled_event_exception_id && e.response === _.gv.INTERESTED) ? 1 : -1);
+        i = (null != (n = null == (t = S[e.guild_scheduled_event_id]) ? void 0 : t[r]) ? n : 0) + ((null != e.guild_scheduled_event_exception_id && e.response === f.gv.UNINTERESTED) || (null == e.guild_scheduled_event_exception_id && e.response === f.gv.INTERESTED) ? 1 : -1);
     w(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i);
 }
 function L(e) {
     var t, n;
     let r = C(e.guild_scheduled_event_exception_id),
-        i = (null != (n = null == (t = S[e.guild_scheduled_event_id]) ? void 0 : t[r]) ? n : 0) + ((null != e.guild_scheduled_event_exception_id && e.response === _.gv.UNINTERESTED) || (null == e.guild_scheduled_event_exception_id && e.response === _.gv.INTERESTED) ? -1 : 1);
+        i = (null != (n = null == (t = S[e.guild_scheduled_event_id]) ? void 0 : t[r]) ? n : 0) + ((null != e.guild_scheduled_event_exception_id && e.response === f.gv.UNINTERESTED) || (null == e.guild_scheduled_event_exception_id && e.response === f.gv.INTERESTED) ? -1 : 1);
     w(e.guild_scheduled_event_id, e.guild_scheduled_event_exception_id, i);
 }
 function x(e) {
     let { guilds: t } = e;
     return (y.clear(), (O = 0), (T = {}), (S = {}), v.forEach(A), t.forEach((e) => e.guild_scheduled_events.forEach((e) => A(e))), !0);
 }
-function M(e) {
+function k(e) {
     let { guildScheduledEvent: t } = e;
     A(t);
 }
-function k(e) {
+function M(e) {
     let { guildId: t, guildScheduledEvents: n } = e,
         r = y.values(g.GUILD_EVENT(t), !0).map((e) => e.id),
         i = n.map((e) => e.id);
@@ -250,13 +250,13 @@ function Q(e) {
     return null != n && (A(n), !0);
 }
 function J(e) {
-    return null != e && (null == e ? void 0 : e.status) === _.p1.ACTIVE;
+    return null != e && (null == e ? void 0 : e.status) === f.p1.ACTIVE;
 }
 function $(e) {
-    return !_.$I.has(e.status);
+    return !f.$I.has(e.status);
 }
 function ee(e) {
-    return null != e && _.$I.has(e.status);
+    return null != e && f.$I.has(e.status);
 }
 class et extends (r = o.ZP.Store) {
     getGuildScheduledEvent(e) {
@@ -285,9 +285,9 @@ class et extends (r = o.ZP.Store) {
         let n = c.default.getId(),
             r = this.getRsvp(e, null, n),
             i = this.getRsvp(e, t, n),
-            a = (null == r ? void 0 : r.response) === _.gv.INTERESTED,
-            o = (null == i ? void 0 : i.response) === _.gv.INTERESTED,
-            s = (null == i ? void 0 : i.response) === _.gv.UNINTERESTED;
+            a = (null == r ? void 0 : r.response) === f.gv.INTERESTED,
+            o = (null == i ? void 0 : i.response) === f.gv.INTERESTED,
+            s = (null == i ? void 0 : i.response) === f.gv.UNINTERESTED;
         return (a && !s) || o;
     }
     getUserCount(e, t) {
@@ -314,13 +314,13 @@ class et extends (r = o.ZP.Store) {
         return null != (r = null == (n = T[e]) ? void 0 : n[i]) ? r : {};
     }
 }
-f(et, 'displayName', 'GuildScheduledEventStore');
+_(et, 'displayName', 'GuildScheduledEventStore');
 let en = new et(l.Z, {
     CONNECTION_OPEN: x,
     GUILD_CREATE: j,
     GUILD_DELETE: U,
-    FETCH_GUILD_EVENT: M,
-    FETCH_GUILD_EVENTS_FOR_GUILD: k,
+    FETCH_GUILD_EVENT: k,
+    FETCH_GUILD_EVENTS_FOR_GUILD: M,
     GUILD_SCHEDULED_EVENT_CREATE: B,
     GUILD_SCHEDULED_EVENT_UPDATE: B,
     GUILD_SCHEDULED_EVENT_DELETE: V,

@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => j,
-    p: () => k
+    p: () => M
 }),
     n(953529));
 var r = n(255367),
@@ -12,8 +12,8 @@ var r = n(255367),
     c = n(304789),
     u = n(755721),
     d = n(481060),
-    _ = n(355467),
-    f = n(37234),
+    f = n(355467),
+    _ = n(37234),
     p = n(174609),
     h = n(703656),
     m = n(626135),
@@ -35,16 +35,16 @@ var r = n(255367),
     D = n(428946),
     L = n(42948),
     x = n(109194),
-    M = n(352812),
-    k = (function (e) {
+    k = n(352812),
+    M = (function (e) {
         return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e);
     })({});
 function j(e) {
-    let { containerContext: t, image: n, title: a, description: k, enableSocialProof: j, analyticsLocationSection: U, upsellViewedTrackingData: G, onClose: B, onDisplay: V, onLearnMore: F, isEmojiPickerOverlay: Z = !1 } = e,
+    let { containerContext: t, image: n, title: a, description: M, enableSocialProof: j, analyticsLocationSection: U, upsellViewedTrackingData: G, onClose: B, onDisplay: V, onLearnMore: F, isEmojiPickerOverlay: Z = !1 } = e,
         H = (0, s.e7)([b.Z], () => b.Z.affinities),
         Y = (0, s.e7)([b.Z], () => b.Z.hasFetched);
     (i.useEffect(() => {
-        !Y && j && _.MH();
+        !Y && j && f.MH();
     }, [Y, j]),
         i.useEffect(() => {
             (m.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, G), null == V || V());
@@ -59,7 +59,7 @@ function j(e) {
                 null == F || F(),
                 (0, p.Z)(),
                 B(),
-                (0, f.xf)(),
+                (0, _.xf)(),
                 (0, h.uL)(N.Z5c.APPLICATION_STORE));
         },
         q = (0, O.N)(),
@@ -71,7 +71,7 @@ function j(e) {
         J = (0, T.Z)();
     if (Q) {
         let e;
-        e = Z ? ((0, g.rO)() ? D.Z : L.Z) : (0, g.rO)() ? x.Z : M.Z;
+        e = Z ? ((0, g.rO)() ? D.Z : L.Z) : (0, g.rO)() ? x.Z : k.Z;
         let t = Z ? 'nitro-pink' : 'green';
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -113,7 +113,7 @@ function j(e) {
                                             variant: 'text-md/medium',
                                             color: 'text-secondary',
                                             className: R.body,
-                                            children: k
+                                            children: M
                                         })
                                     ]
                                 })
@@ -182,7 +182,7 @@ function j(e) {
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-sm/medium',
                                 className: P.body,
-                                children: k
+                                children: M
                             })
                         ]
                     }),

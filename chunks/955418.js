@@ -8,8 +8,8 @@ var r = n(255367),
     c = n(131704),
     u = n(5192),
     d = n(785717),
-    _ = n(698305),
-    f = n(981631),
+    f = n(698305),
+    _ = n(981631),
     p = n(388032),
     h = n(582970);
 function m(e, t, n) {
@@ -66,10 +66,10 @@ function b(e, t) {
 }
 let y = (0, c.kt)({
     id: '1',
-    type: f.d4z.DM
+    type: _.d4z.DM
 });
 function O(e) {
-    let { user: t, guildId: n, channelId: c, onClose: f, disableAutoFocus: m = !1 } = e,
+    let { user: t, guildId: n, channelId: c, onClose: _, disableAutoFocus: m = !1 } = e,
         { newestAnalyticsLocation: E } = (0, a.ZP)(),
         { trackUserProfileAction: O } = (0, d.KZ)(),
         [v, I] = i.useState(''),
@@ -99,12 +99,12 @@ function O(e) {
             try {
                 return (
                     O({ action: 'SEND_DIRECT_MESSAGE' }),
-                    await (0, _.Z)({
+                    await (0, f.Z)({
                         userId: t.id,
                         content: n.trim(),
                         location: E
                     }),
-                    null == f || f(),
+                    null == _ || _(),
                     {
                         shouldClear: !0,
                         shouldRefocus: !1

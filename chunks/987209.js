@@ -13,27 +13,27 @@ var r = n(255367),
     c = n(717401),
     u = n(975104),
     d = n(669079),
-    _ = n(563132),
-    f = n(981631),
+    f = n(563132),
+    _ = n(981631),
     p = n(474936),
     h = n(388032);
 let m = p.Cj.STANDARD_BOX,
     g = void 0,
     [E, b, y] = (0, u.Z)();
 function O(e) {
-    let { isGift: t = !1, giftRecipient: n, giftMessage: u, giftStyle: f, giftingOrigin: b, children: y } = e,
-        { selectedSkuId: O } = (0, _.JL)(),
+    let { isGift: t = !1, giftRecipient: n, giftMessage: u, giftStyle: _, giftingOrigin: b, children: y } = e,
+        { selectedSkuId: O } = (0, f.JL)(),
         [v, I] = i.useState(n),
         [T, S] = i.useState(),
         [A, N] = i.useState(!1),
         C = (0, d.pO)(v),
         R = (0, l.TX)(),
         P = g;
-    C && (P = R ? p.Cj.SEASONAL_STANDARD_BOX : null != f ? f : m);
+    C && (P = R ? p.Cj.SEASONAL_STANDARD_BOX : null != _ ? _ : m);
     let [w, D] = i.useState(P),
         L = (0, c.iE)(),
-        [x, M] = i.useState(),
-        [k, j] = i.useState(t && (0, d.MY)(v) === d.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == u ? h.intl.string(h.t.ZkOo1d) : u),
+        [x, k] = i.useState(),
+        [M, j] = i.useState(t && (0, d.MY)(v) === d.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && null == u ? h.intl.string(h.t.ZkOo1d) : u),
         [U, G] = i.useState(void 0),
         [B, V] = i.useState(void 0),
         F = (0, d.E5)(O, t),
@@ -72,7 +72,7 @@ function O(e) {
             setSoundEffect: G,
             emojiConfetti: B,
             setEmojiConfetti: V,
-            customGiftMessage: k,
+            customGiftMessage: M,
             setCustomGiftMessage: j,
             selectedGiftStyle: w,
             setSelectedGiftStyle: D,
@@ -84,26 +84,26 @@ function O(e) {
             giftingOrigin: b,
             claimableRewards: L,
             selectedGiftingPromotionReward: x,
-            setSelectedGiftingPromotionReward: M
+            setSelectedGiftingPromotionReward: k
         },
         children: y
     });
 }
 let v = {
         isGift: !1,
-        setGiftRecipient: f.dG4,
-        setGiftRecipientError: f.dG4,
-        setValidatingGiftRecipient: f.dG4,
+        setGiftRecipient: _.dG4,
+        setGiftRecipientError: _.dG4,
+        setValidatingGiftRecipient: _.dG4,
         selectedGiftStyle: void 0,
-        setSelectedGiftStyle: f.dG4,
+        setSelectedGiftStyle: _.dG4,
         giftCode: null,
-        sendGiftMessage: f.dG4,
+        sendGiftMessage: _.dG4,
         hasSentMessage: !1,
         isSendingMessage: !1,
         giftMessageError: void 0,
         recommendedGiftSkuIds: [],
         claimableRewards: void 0,
-        setSelectedGiftingPromotionReward: f.dG4
+        setSelectedGiftingPromotionReward: _.dG4
     },
     I = (e) => {
         let { children: t } = e;
