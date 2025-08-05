@@ -7003,29 +7003,32 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 }
 
 .combo_fcddc1 {
+    box-sizing: border-box;
     display: flex;
     font-size: 12px;
     font-weight: var(--font-weight-semibold);
+    height: 23px;
     line-height: 12px;
+    position: relative;
     text-transform: uppercase
 }
 
-.combo_fcddc1,
-.key_fcddc1 {
-    box-sizing: border-box;
-    height: 23px;
-    position: relative
+.systemFont_fcddc1 {
+    font-family: "system-ui", sans-serif
 }
 
 .key_fcddc1 {
     background-color: var(--background-mod-faint);
     border: 1px solid var(--border-strong);
     border-radius: 4px;
+    box-sizing: border-box;
     cursor: default;
     display: block;
+    height: 23px;
     min-height: 14px;
     min-width: 14px;
     padding: 3px 6px 4px;
+    position: relative;
     text-align: center
 }
 
