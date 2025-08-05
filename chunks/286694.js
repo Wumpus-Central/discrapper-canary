@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => m });
 var l = n(255367);
 n(73800);
 var i = n(442837),
@@ -7,23 +7,23 @@ var i = n(442837),
     o = n(430824),
     u = n(496675),
     s = n(594174),
-    c = n(471253),
-    d = n(88751),
+    d = n(471253),
+    c = n(88751),
     g = n(981631),
     f = n(388032);
-function P(e, t, n) {
-    var P;
-    let E = a.Z.getChannel(n),
-        Z = (0, i.e7)([o.Z], () => o.Z.getGuild(t), [t]),
-        b = (0, i.e7)([d.ZP], () => d.ZP.getPermissionsForUser(e.id, n), [n, e.id]),
-        m = (null == (P = s.default.getCurrentUser()) ? void 0 : P.id) === e.id,
-        O = (0, i.e7)([u.Z], () => null != n && u.Z.canWithPartialContext(g.Plq.MUTE_MEMBERS, { channelId: n }), [n]);
-    return null != E && null != Z && (O || m) && b.speaker
+function m(e, t, n) {
+    var m;
+    let Z = a.Z.getChannel(n),
+        P = (0, i.e7)([o.Z], () => o.Z.getGuild(t), [t]),
+        E = (0, i.e7)([c.ZP], () => c.ZP.getPermissionsForUser(e.id, n), [n, e.id]),
+        v = (null == (m = s.default.getCurrentUser()) ? void 0 : m.id) === e.id,
+        b = (0, i.e7)([u.Z], () => null != n && u.Z.canWithPartialContext(g.Plq.MUTE_MEMBERS, { channelId: n }), [n]);
+    return null != Z && null != P && (b || v) && E.speaker
         ? (0, l.jsx)(r.sNh, {
               id: 'audience',
-              label: m ? f.intl.string(f.t['6C6PJy']) : f.intl.string(f.t.VK3vQ0),
+              label: v ? f.intl.string(f.t['6C6PJy']) : f.intl.string(f.t.VK3vQ0),
               action: () => {
-                  m ? (0, c.yi)(E) : (0, c.hz)(e, E);
+                  v ? (0, d.yi)(Z) : (0, d.hz)(e, Z);
               }
           })
         : null;

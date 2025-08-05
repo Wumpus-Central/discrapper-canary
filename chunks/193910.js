@@ -7,8 +7,8 @@ var r = n(255367),
     s = n(481060),
     c = n(278323),
     u = n(566620),
-    d = n(403404),
-    p = n(906732),
+    d = n(906732),
+    p = n(397698),
     h = n(266454),
     f = n(706140),
     m = n(243778),
@@ -55,18 +55,18 @@ function N() {
 }
 function A(e) {
     let { channel: t, options: a, onFileUpload: f, onClose: m, onSelect: _, draftType: A, editorTextContent: w, setValue: R, openClips: M } = e,
-        { analyticsLocations: D } = (0, p.ZP)(),
-        k = (0, g.Dt)({ channel: t });
-    function L() {
+        { analyticsLocations: D, newestAnalyticsLocation: k } = (0, d.ZP)(),
+        L = (0, g.Dt)({ channel: t });
+    function U() {
         (0, b.R6)(t, void 0, 'Plus Button');
     }
-    function U() {
+    function B() {
         (y.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R('/', (0, j.JM)('/')));
     }
-    function B() {
+    function F() {
         M();
     }
-    function F() {
+    function H() {
         ((0, h.Q3)(o.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: S.L.TAKE_ACTION }),
             (0, s.ZDy)(
                 async () => {
@@ -120,20 +120,26 @@ function A(e) {
                 { modalKey: P.$z }
             ));
     }
-    function H() {
+    function G() {
         (y.default.track(E.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id
         }),
-            (0, d.Z)({
-                channel: t,
+            (0, p.Z)({
+                context:
+                    null != t
+                        ? {
+                              type: 'channel',
+                              channel: t
+                          }
+                        : { type: 'contextless' },
                 openInPopout: !1,
-                analyticsLocations: D
+                analyticsLocation: k
             }),
             (0, u.w1)({ guildId: t.guild_id }));
     }
-    function G() {
+    function V() {
         let e = w,
             n = 'txt',
             r = '',
@@ -194,7 +200,7 @@ function A(e) {
                             {
                                 id: 'upload-text-as-file',
                                 label: i,
-                                action: G
+                                action: V
                             },
                             'upload-text-as-file'
                         );
@@ -204,7 +210,7 @@ function A(e) {
                             {
                                 id: 'clips',
                                 label: i,
-                                action: B
+                                action: F
                             },
                             'clips'
                         );
@@ -214,7 +220,7 @@ function A(e) {
                             {
                                 id: 'poll',
                                 label: i,
-                                action: F
+                                action: H
                             },
                             'poll'
                         );
@@ -287,7 +293,7 @@ function A(e) {
                             {
                                 id: 'THREAD',
                                 label: i,
-                                action: L
+                                action: U
                             },
                             'THREAD'
                         );
@@ -297,7 +303,7 @@ function A(e) {
                             {
                                 id: 'SLASH_COMMAND',
                                 label: i,
-                                action: U
+                                action: B
                             },
                             'SLASH_COMMAND'
                         );
@@ -307,7 +313,7 @@ function A(e) {
                             {
                                 id: 'activity',
                                 label: i,
-                                action: H,
+                                action: G,
                                 hint: (0, r.jsx)(N, {})
                             },
                             'activity'
@@ -319,7 +325,7 @@ function A(e) {
                                 id: 'scheduled_message',
                                 label: i,
                                 action: () => (0, g.$f)({ channel: t }),
-                                children: k
+                                children: L
                             },
                             'scheduled_message'
                         );

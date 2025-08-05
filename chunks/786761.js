@@ -99,7 +99,7 @@ function R(e) {
             timestamp: new Date(e.timestamp),
             editedTimestamp: null != e.edited_timestamp ? new Date(e.edited_timestamp) : null,
             attachments: L(e),
-            embeds: k(e),
+            embeds: M(e),
             components: (0, s.uZ)(null != (t = e.components) ? t : [], { includeEmojiSrc: !1 }),
             codedLinks: e.type === O.uaV.THREAD_CREATED ? [] : (0, o.ZP)(e.content)
         })
@@ -116,7 +116,7 @@ function P(e) {
         w = null != (s = e.mention_channels) ? s : [],
         D = null != (c = e.mention_games) ? c : [],
         L = e.message_reference,
-        k = N(e),
+        M = N(e),
         U = null,
         G = null == e ? void 0 : e.gift_info,
         B = e.gifting_prompt,
@@ -129,12 +129,12 @@ function P(e) {
                   id: e.id,
                   channel_id: e.channel_id,
                   type: O.uaV.DEFAULT,
-                  author: k,
+                  author: M,
                   timestamp: T.timestamp,
                   isUnsupported: !0
               })
             : S(I({}, e, U, T.toJS()), {
-                  author: k,
+                  author: M,
                   webhookId: e.webhook_id,
                   blocked: p.Z.isBlockedForMessage(e) || (null != F && p.Z.isBlocked(F)),
                   ignored: p.Z.isIgnoredForMessage(e) || (null != F && p.Z.isIgnored(F)),
@@ -157,7 +157,7 @@ function P(e) {
                   referralTrialOfferId: h,
                   call: x(e.call, T.timestamp),
                   messageSnapshots: j(e),
-                  reactions: M(null != y ? y : e.reactions, e.poll),
+                  reactions: k(null != y ? y : e.reactions, e.poll),
                   interaction: V,
                   interactionData: null != v ? v : e.interaction_data,
                   interactionMetadata: e.interaction_metadata,
@@ -187,9 +187,9 @@ function D(e, t) {
         });
     let n = e,
         r = !1;
-    if ((null != t.call && (n = n.set('call', x(t.call, e.timestamp))), null != t.attachments && (n = n.set('attachments', L(t))), null != t.content && '' !== t.content && (n = n.set('content', t.content)), null != t.embeds && (n = n.set('embeds', k(t))), null != t.message_snapshots && (n = n.set('messageSnapshots', j(t))), t.pinned !== n.pinned && (n = n.set('pinned', t.pinned)), null != n.webhookId && null != t.author && (n = n.set('author', new f.Z(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set('flags', t.flags)), null != t.components && (n = n.set('components', (0, s.uZ)(t.components, { includeEmojiSrc: !1 }))), null != t.role_subscription_data && (n = n.set('roleSubscriptionData', t.role_subscription_data)), null != t.reactions)) {
+    if ((null != t.call && (n = n.set('call', x(t.call, e.timestamp))), null != t.attachments && (n = n.set('attachments', L(t))), null != t.content && '' !== t.content && (n = n.set('content', t.content)), null != t.embeds && (n = n.set('embeds', M(t))), null != t.message_snapshots && (n = n.set('messageSnapshots', j(t))), t.pinned !== n.pinned && (n = n.set('pinned', t.pinned)), null != n.webhookId && null != t.author && (n = n.set('author', new f.Z(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set('flags', t.flags)), null != t.components && (n = n.set('components', (0, s.uZ)(t.components, { includeEmojiSrc: !1 }))), null != t.role_subscription_data && (n = n.set('roleSubscriptionData', t.role_subscription_data)), null != t.reactions)) {
         var i;
-        n = n.set('reactions', M(null != (i = e.reactions) ? i : t.reactions));
+        n = n.set('reactions', k(null != (i = e.reactions) ? i : t.reactions));
     }
     return (
         null != t.poll && (n = n.set('poll', (0, l.Z)(t.poll))),
@@ -229,12 +229,12 @@ function x(e, t) {
     }
     return null;
 }
-function k(e) {
+function M(e) {
     if (null == e.embeds) return [];
     let t = e.embeds.map((t) => (0, m.kC)(e.channel_id, e.id, t));
     return (0, m.o3)(t);
 }
-function M(e, t) {
+function k(e, t) {
     var n;
     if (null == e && (null == t ? void 0 : t.results) == null) return [];
     let r =

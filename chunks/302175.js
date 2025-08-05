@@ -43,7 +43,7 @@ function x(e, t, n) {
         e
     );
 }
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,7 +59,7 @@ function k(e) {
     }
     return e;
 }
-function M(e, t) {
+function k(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,7 +76,7 @@ function j(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : M(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -89,7 +89,7 @@ function U(e) {
         y = n.skuId === c.A$,
         O = (0, A.Z)(t, n).type !== C.A3.INACTIVE,
         v = (0, S.Z)(t),
-        [x, M] = i.useState(!1),
+        [x, k] = i.useState(!1),
         [U, G] = i.useState(!1),
         B = U,
         V = i.useCallback(() => {
@@ -128,7 +128,7 @@ function U(e) {
             config: Z
         }),
         K = i.useCallback((e) => {
-            e && M(!0);
+            e && k(!0);
         }, []),
         z = (0, p.O)(K),
         q = (0, T.Z)(n, U);
@@ -151,7 +151,7 @@ function U(e) {
                 })
             }),
             (0, r.jsxs)(s.animated.div, {
-                style: j(k({}, Y), { transform: Y.y.to((e) => 'translateY('.concat(e, 'px)')) }),
+                style: j(M({}, Y), { transform: Y.y.to((e) => 'translateY('.concat(e, 'px)')) }),
                 className: o()(L.contentContainer, D.contentContainer),
                 children: [
                     (0, r.jsx)(E.xm, {

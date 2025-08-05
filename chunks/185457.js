@@ -1,37 +1,37 @@
-n.d(t, { Z: () => Z });
-var l = n(255367);
+n.d(t, { Z: () => f });
+var i = n(255367);
 n(73800);
-var i = n(481060),
+var l = n(481060),
     r = n(906732),
-    o = n(531301),
-    a = n(892001),
+    a = n(531301),
+    o = n(892001),
     s = n(314897),
     u = n(246946),
     d = n(981631),
     c = n(228168),
     g = n(388032);
-function Z(e) {
-    let { user: t, guildId: n, channelId: Z, context: f } = e,
-        { id: b } = t,
-        { loading: m, note: O } = (0, o.Z)(b),
-        h = !m && null != O && O.length > 0,
-        E = f === d.IlC.POPOUT || f === d.IlC.OVERLAY,
-        { analyticsLocations: j } = (0, r.ZP)();
-    return b === s.default.getId() || u.Z.hidePersonalInformation || E
+function f(e) {
+    let { user: t, guildId: n, channelId: f, context: b } = e,
+        { id: Z } = t,
+        { loading: m, note: v } = (0, a.Z)(Z),
+        p = !m && null != v && v.length > 0,
+        O = b === d.IlC.POPOUT || b === d.IlC.OVERLAY,
+        { analyticsLocations: h } = (0, r.ZP)();
+    return Z === s.default.getId() || u.Z.hidePersonalInformation || O
         ? null
-        : (0, l.jsx)(i.sNh, {
+        : (0, i.jsx)(l.sNh, {
               id: 'note',
-              label: m ? g.intl.string(g.t['WLKx//']) : h ? g.intl.string(g.t.sHHsOD) : g.intl.string(g.t.Dglxra),
+              label: m ? g.intl.string(g.t['WLKx//']) : p ? g.intl.string(g.t.sHHsOD) : g.intl.string(g.t.Dglxra),
               subtext: g.intl.string(g.t.r1BOdX),
               action: () => {
-                  (0, a.openUserProfileModal)({
+                  (0, o.openUserProfileModal)({
                       userId: t.id,
                       section: c.oh.USER_INFO,
                       subsection: c.Tb.NOTE,
                       guildId: n,
-                      channelId: Z,
-                      sourceAnalyticsLocations: j,
-                      appContext: f
+                      channelId: f,
+                      sourceAnalyticsLocations: h,
+                      appContext: b
                   });
               }
           });

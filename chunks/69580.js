@@ -51,8 +51,8 @@ var r = n(255367),
     D = n(973616),
     L = n(598077),
     x = n(314897),
-    k = n(630388),
-    M = n(700785),
+    M = n(630388),
+    k = n(700785),
     j = n(591759),
     U = n(807675),
     G = n(489863),
@@ -293,13 +293,13 @@ function ed(e) {
     }, [eR]);
     let [eP, ew] = i.useState(null),
         [eD, eL] = i.useState(null),
-        [ex, ek] = i.useState(null),
-        [eM, ej] = i.useState(!1),
+        [ex, eM] = i.useState(null),
+        [ek, ej] = i.useState(!1),
         [eU, eG] = i.useState(!1),
         eB = null == eP ? void 0 : eP.guilds,
         [eV, eF] = i.useState(null != e_ ? e_ : null),
         [eZ, eH] = i.useState(null != ep ? ep : null),
-        [eY, eW] = i.useState(M.Hn),
+        [eY, eW] = i.useState(k.Hn),
         [eK, ez] = i.useState(!1),
         eq = i.useMemo(() => ((null == eP ? void 0 : eP.user) != null ? new L.Z(eP.user) : null), [null == eP ? void 0 : eP.user]),
         eX = (0, A.Z)(null != (t = null == eP ? void 0 : eP.application) ? t : null),
@@ -330,7 +330,7 @@ function ed(e) {
         e8 = i.useMemo(() => {
             var e;
             let t = e0 ? d.vB(null != (e = null == e3 ? void 0 : e3.permissions) ? e : 0) : ef;
-            return null != t ? t : M.Hn;
+            return null != t ? t : k.Hn;
         }, [null == e3 ? void 0 : e3.permissions, ef, e0]),
         e7 = i.useRef(!1),
         [e9, te] = i.useState(null != eT ? eT : []),
@@ -345,7 +345,7 @@ function ed(e) {
             } catch (n) {
                 let { status: e, body: t } = n;
                 if (401 === e) return void (0, G.c$)(eC, 'oauth2_error_failed_disclosures');
-                ek(Error(null != t.message ? t.message : ''.concat(Object.keys(t)[0], ': ').concat(Object.values(t)[0])));
+                eM(Error(null != t.message ? t.message : ''.concat(Object.keys(t)[0], ': ').concat(Object.values(t)[0])));
             } finally {
                 e7.current = !1;
             }
@@ -354,7 +354,7 @@ function ed(e) {
             if (!x.default.isAuthenticated()) return void (0, G.c$)(eC, 'oauth2_error_not_authenticated');
             e();
         }
-    }, [P, eC, eT, te, ek, tn, eL]);
+    }, [P, eC, eT, te, eM, tn, eL]);
     let tr = i.useCallback(
             async (e) => {
                 if (null != ev) {
@@ -370,7 +370,7 @@ function ed(e) {
                         null == eI || eI());
                     return;
                 }
-                if (null == eJ) return void ek(Error('No integration type was selected.'));
+                if (null == eJ) return void eM(Error('No integration type was selected.'));
                 try {
                     ej(!0);
                     let n = await (0, G.Iq)({
@@ -417,7 +417,7 @@ function ed(e) {
                     } else ej(!1);
                 } catch (t) {
                     let e = t.body;
-                    ((null == e ? void 0 : e.message) != null && '' !== e.message ? ek(Error(e.message)) : ek(e), eL('AUTHORIZE_SCOPES'), ej(!1));
+                    ((null == e ? void 0 : e.message) != null && '' !== e.message ? eM(Error(e.message)) : eM(e), eL('AUTHORIZE_SCOPES'), ej(!1));
                 }
             },
             [ev, eE, eO, null == eP ? void 0 : eP.application, eQ, eI, P, e5, Q, et, ei, ea, eo, es, e8, eY, eV, eJ, eZ, e9, eK]
@@ -451,7 +451,7 @@ function ed(e) {
                 } catch (n) {
                     let { status: e, body: t } = n;
                     if (401 === e) return void (0, G.c$)(eC, 'oauth2_error_unauthorized');
-                    ek(Error(null != t.message ? t.message : ''.concat(Object.keys(t)[0], ': ').concat(Object.values(t)[0])));
+                    eM(Error(null != t.message ? t.message : ''.concat(Object.keys(t)[0], ': ').concat(Object.values(t)[0])));
                 } finally {
                     ti.current = !1;
                 }
@@ -495,7 +495,7 @@ function ed(e) {
             if (null == eJ || null != eP || null != ex) return;
             eJ === c.Y.USER_INSTALL && (eF(null), eH(null));
             let e = e5.filter((e) => !F.ak.includes(e));
-            0 === e5.length ? ek(Error('No scopes were provided.')) : e.length > 0 ? ek(Error('Invalid scope: '.concat(e[0]))) : (0, V._$)(e8) ? ek(Error('Invalid permission(s) provided.')) : ta();
+            0 === e5.length ? eM(Error('No scopes were provided.')) : e.length > 0 ? eM(Error('Invalid scope: '.concat(e[0]))) : (0, V._$)(e8) ? eM(Error('Invalid permission(s) provided.')) : ta();
         }, [tt, ta, e5, e8, eJ, eP, ex]));
     let tl = i.useCallback((e) => {
             e && eG(!0);
@@ -578,7 +578,7 @@ function ed(e) {
                 tb = null == eB ? void 0 : eB.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
                 ty = eJ === c.Y.GUILD_INSTALL && e5.includes(u.x.WEBHOOK_INCOMING),
                 tO = ty || (eJ === c.Y.GUILD_INSTALL && (e5.includes(u.x.BOT) || e5.includes(u.x.APPLICATIONS_COMMANDS))),
-                tv = (0, k.yE)(null != (n = eP.application.flags) ? n : 0, ee.udG.EMBEDDED) && eJ === c.Y.USER_INSTALL && e4.enabled;
+                tv = (0, M.yE)(null != (n = eP.application.flags) ? n : 0, ee.udG.EMBEDDED) && eJ === c.Y.USER_INSTALL && e4.enabled;
             ((h = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(Y.Z, {
@@ -630,7 +630,7 @@ function ed(e) {
                         : null
                 ]
             })),
-                e5.includes(u.x.BOT) && !d.fS(e8, M.Hn) && (v = 'AUTHORIZE_BOT_PERMISSIONS'),
+                e5.includes(u.x.BOT) && !d.fS(e8, k.Hn) && (v = 'AUTHORIZE_BOT_PERMISSIONS'),
                 to.length > 1 && (m = 'SELECT_INSTALL_TYPE'),
                 (t_ = (tO && null == eQ) || (ty && null == eZ)),
                 (tf = !0));
@@ -703,13 +703,13 @@ function ed(e) {
                     eU
                         ? {
                               onClick: null != v ? () => eL(v) : () => tr(!0),
-                              loading: eM,
+                              loading: ek,
                               disabled: null == N || t_,
                               text: t_ ? en.intl.string(en.t.BwwiSE) : null != v ? en.intl.string(en.t['3PatS0']) : en.intl.string(en.t['y+/PEx'])
                           }
                         : {
                               disabled: !0,
-                              loading: eM,
+                              loading: ek,
                               text: en.intl.string(en.t.N22i9P),
                               icon: g.cQm
                           }

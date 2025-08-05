@@ -1,5 +1,5 @@
 (n.d(t, {
-    B5: () => k,
+    B5: () => M,
     PI: () => w,
     WD: () => U,
     aM: () => G,
@@ -299,7 +299,7 @@ class x {
             (this.sourceQuestContent = f));
     }
 }
-let k = (e, t) => {
+let M = (e, t) => {
         let n = Array.isArray(e)
             ? e
                   .sort()
@@ -308,7 +308,7 @@ let k = (e, t) => {
             : e.id;
         return ''.concat(n, '_').concat(t);
     },
-    M = (e) => {
+    k = (e) => {
         let t = Array.isArray(e) ? null : (0, b.uk)(e),
             n = (0, c.Z)(t);
         return t !== n;
@@ -324,7 +324,7 @@ function G() {
 }
 function B(e) {
     let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c, sourceQuestContent: u } = e,
-        d = M(e.questOrQuests),
+        d = k(e.questOrQuests),
         f = i.useRef(null),
         _ = (0, s.e7)([O.Z], () => null != O.Z.questEnrollmentBlockedUntil, []);
     return (

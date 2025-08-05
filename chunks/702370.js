@@ -728,7 +728,7 @@ let eN = (e) => {
         s()(null != j, 'Selected product should not be null');
         let { analyticsLocations: w } = (0, P.ZP)([...u, v.Z.COLLECTIBLES_SHOP_DETAILS_MODAL]);
         (0, en.u9)(j.skuId);
-        let { pdpBackground: I, logo: T } = (0, eP.OR)(o, i);
+        let { pdpBackground: I, logo: T } = (0, eP.OR)(o);
         a.useEffect(() => {
             null != b && (0, N.Z)(b.id, b.getAvatarURL(void 0, 80));
         }, [b]);

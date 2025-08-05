@@ -3,7 +3,7 @@ n.d(t, {
     AB: () => B,
     JS: () => U,
     ZP: () => W,
-    hH: () => M,
+    hH: () => k,
     kO: () => H,
     oG: () => Y,
     v_: () => G,
@@ -68,12 +68,12 @@ function x(e) {
     }
     return e;
 }
-function k(e) {
+function M(e) {
     let t = 0;
     for (let n in e) t += 1;
     return t;
 }
-function M(e) {
+function k(e) {
     var t;
     if (null == e) return null;
     let n = m.Z.getGuild(e);
@@ -96,7 +96,7 @@ function M(e) {
         guild_member_perms: String(null != (t = E.Z.getGuildPermissions(n)) ? t : R.Hn),
         guild_is_vip: n.features.has(w.oNc.VIP_REGIONS),
         is_member: null != a,
-        num_voice_channels_active: k(c)
+        num_voice_channels_active: M(c)
     };
 }
 function j(e, t) {
@@ -160,7 +160,7 @@ function F(e) {
         i = 'guild_id' in t ? t.guild_id : r ? I.Z.getGuildId() : null,
         a = 'channel_id' in t ? t.channel_id : r ? v.Z.getChannelId(i) : null,
         o = d.Z.getChannel(a),
-        s = x({}, t, M(V(o, i)), null != i && null != a && (0, D.AB)(a) ? j(i, a) : G(o));
+        s = x({}, t, k(V(o, i)), null != i && null != a && (0, D.AB)(a) ? j(i, a) : G(o));
     N.default.track(e, s, { flush: n });
 }
 function Z(e) {

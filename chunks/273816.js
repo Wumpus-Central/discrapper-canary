@@ -63,11 +63,11 @@ function b(e) {
     (0, u.nU)();
     let E = (0, a.e7)([p.Z], () => p.Z.getWindow(m.$J)),
         [_, x] = (0, u.m8)(b),
-        { currentFPS: I, averageFrameTime: S, timeSinceLastDrop: j, onResetFrameData: C, droppedFramesRef: N, renderedFrameCount: w, bufferFramecountRef: Z, frameCheckerEffect: P } = (0, u.d6)(!0, _, !0),
-        [T, k, A] = (0, u.ZF)(b),
+        { currentFPS: S, averageFrameTime: I, timeSinceLastDrop: j, onResetFrameData: C, droppedFramesRef: N, renderedFrameCount: w, bufferFramecountRef: Z, frameCheckerEffect: P } = (0, u.d6)(!0, _, !0),
+        [T, A, k] = (0, u.ZF)(b),
         [D, R] = (0, u.Y5)(T, P, E),
         L = performance.now() - x.current < u.MC,
-        M = k(S, Z.current);
+        M = A(I, Z.current);
     (0, c.ZP)(
         () => (
             D(),
@@ -77,11 +77,11 @@ function b(e) {
         )
     );
     let z = r.useCallback(() => {
-            (C(), A(), D());
-        }, [C, A, D]),
+            (C(), k(), D());
+        }, [C, k, D]),
         [U, V] = r.useState(!0),
-        [W, G] = r.useState(!0),
-        [F, B] = r.useState(!0),
+        [W, F] = r.useState(!0),
+        [G, B] = r.useState(!0),
         [H, Y] = r.useState(!0),
         [Q, K] = r.useState(!0);
     return t && !n
@@ -112,8 +112,8 @@ function b(e) {
                                       (0, i.jsx)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: I < 30 ? 'text-danger' : I < 45 ? 'text-feedback-warning' : 'text-primary',
-                                          children: I.toFixed(2)
+                                          color: S < 30 ? 'text-danger' : S < 45 ? 'text-feedback-warning' : 'text-primary',
+                                          children: S.toFixed(2)
                                       })
                                   ]
                               })
@@ -129,7 +129,7 @@ function b(e) {
                                       children: (0, i.jsx)(s.XZJ, {
                                           size: 16,
                                           value: W,
-                                          onChange: (e, t) => G(t)
+                                          onChange: (e, t) => F(t)
                                       })
                                   }),
                               (0, i.jsxs)(s.Text, {
@@ -142,14 +142,14 @@ function b(e) {
                                       (0, i.jsxs)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: S > 1.1 * u.tO ? 'text-feedback-warning' : 'text-primary',
-                                          children: [S.toFixed(2), 'ms']
+                                          color: I > 1.1 * u.tO ? 'text-feedback-warning' : 'text-primary',
+                                          children: [I.toFixed(2), 'ms']
                                       })
                                   ]
                               })
                           ]
                       }),
-                  (F || !t) &&
+                  (G || !t) &&
                       (0, i.jsxs)('div', {
                           className: g.measurement,
                           children: [
@@ -158,7 +158,7 @@ function b(e) {
                                       className: g.measurementCheckbox,
                                       children: (0, i.jsx)(s.XZJ, {
                                           size: 16,
-                                          value: F,
+                                          value: G,
                                           onChange: (e, t) => B(t)
                                       })
                                   }),

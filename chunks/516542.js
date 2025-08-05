@@ -18,8 +18,8 @@ function O(e) {
     let { id: t, replyToMessageId: n, channel: O, onSend: b } = e,
         v = (0, h.Z)(),
         { placeholder: E, accessibilityLabel: _ } = (0, c.Z)({ channel: O }),
-        [x, I] = r.useState(() => (0, d.H2)()),
-        { textValue: S, richValue: j } = x,
+        [x, S] = r.useState(() => (0, d.H2)()),
+        { textValue: I, richValue: j } = x,
         [C, N] = r.useState(!1),
         w = r.useCallback(() => N(!0), []),
         Z = r.useCallback(() => N(!1), []);
@@ -37,7 +37,7 @@ function O(e) {
         );
     });
     let P = r.useCallback((e, t, n) => {
-            I({
+            S({
                 textValue: t,
                 richValue: n
             });
@@ -48,15 +48,15 @@ function O(e) {
             },
             [t]
         ),
-        k = r.useCallback(
+        A = r.useCallback(
             () => (
-                S.length > v || (o.Z.sendMessage(O.id, f.ZP.parse(O, S), !1), l.Z.setInputLocked(!0, (0, m.getPID)()), l.Z.updateNotificationStatus(t, g._1z.DISMISSED), null == b || b(S)),
+                I.length > v || (o.Z.sendMessage(O.id, f.ZP.parse(O, I), !1), l.Z.setInputLocked(!0, (0, m.getPID)()), l.Z.updateNotificationStatus(t, g._1z.DISMISSED), null == b || b(I)),
                 Promise.resolve({
                     shouldClear: !1,
                     shouldRefocus: !0
                 })
             ),
-            [S, v, O, t, b]
+            [I, v, O, t, b]
         );
     return (0, i.jsx)('div', {
         className: y.container,
@@ -66,14 +66,14 @@ function O(e) {
             placeholder: E,
             accessibilityLabel: _,
             channel: O,
-            textValue: S,
+            textValue: I,
             richValue: j,
             type: u.Ie.OVERLAY_INLINE_REPLY,
             allowNewLines: !1,
             onBlur: Z,
             onFocus: w,
             focused: C,
-            onSubmit: k,
+            onSubmit: A,
             onKeyDown: T,
             autoCompletePosition: 'bottom',
             disableThemedBackground: !0

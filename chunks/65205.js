@@ -11,7 +11,7 @@ function i(e, t, n) {
         y: t.y + ((t.y - e.y) / r) * n
     };
 }
-function o(e, t, n) {
+function s(e, t, n) {
     let r = {
             x: n.x,
             y: n.y
@@ -20,17 +20,17 @@ function o(e, t, n) {
             x: n.x + n.width,
             y: n.y
         },
-        o = {
+        s = {
             x: n.x,
             y: n.y + n.height
         },
-        s = {
+        a = {
             x: n.x + n.width,
             y: n.y + n.height
         };
-    return l(e, t, r, i) || l(e, t, i, s) || l(e, t, s, o) || l(e, t, o, r);
+    return l(e, t, r, i) || l(e, t, i, a) || l(e, t, a, s) || l(e, t, s, r);
 }
 n.d(t, {
-    Vr: () => o,
+    Vr: () => s,
     ld: () => i
 });

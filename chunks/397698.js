@@ -39,7 +39,7 @@ function _(e) {
     return e;
 }
 function p(e) {
-    let { context: t, openInPopout: f, analyticsLocation: p, initialState: h } = e;
+    let { context: t, openInPopout: f, analyticsLocation: p = 'open-activity-shelf', initialState: h } = e;
     f && (0, a.Z)(d.KJ3.CHANNEL_CALL_POPOUT);
     let m = f ? i.u1M : i.z1l;
     ((0, l.yT)(c.ti.DISMISSED), (0, l.__)(c._b.VOICE, void 0, h));

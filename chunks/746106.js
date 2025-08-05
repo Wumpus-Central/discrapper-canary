@@ -35,8 +35,8 @@ function I(e) {
             desaturateUserColors: D,
             useForcedColors: L,
             systemForcedColors: x,
-            useReducedMotion: k,
-            alwaysShowLinkDecorations: M,
+            useReducedMotion: M,
+            alwaysShowLinkDecorations: k,
             confettiMode: j,
             highContrastMode: U
         } = (0, s.cj)([g.default, c.Z, E.Z, b.Z, h.Z, m.Z], () => {
@@ -87,8 +87,8 @@ function I(e) {
             desaturateUserColors: D,
             useForcedColors: L,
             systemForcedColors: x,
-            useReducedMotion: k,
-            alwaysShowLinkDecorations: M,
+            useReducedMotion: M,
+            alwaysShowLinkDecorations: k,
             hardwareAccelerationEnabled: I,
             highContrastMode: G && U,
             rootClassName: o()({

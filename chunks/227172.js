@@ -34,8 +34,8 @@ var r = n(255367),
     D = n(410441),
     L = n(797342),
     x = n(981631),
-    k = n(388032);
-function M(e, t, n) {
+    M = n(388032);
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -59,7 +59,7 @@ function j(e) {
                 })
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                k(e, t, n[t]);
             }));
     }
     return e;
@@ -75,7 +75,7 @@ let U = {
         [a.z.PLAYSTATION]: E.Z
     },
     G = (e) => {
-        let { channel: t, entry: n, disableGameProfileLinks: E, onReaction: b, onVoiceChannelPreview: M, onUserPopoutClosed: G, trackRankingItemInteraction: B } = e,
+        let { channel: t, entry: n, disableGameProfileLinks: E, onReaction: b, onVoiceChannelPreview: k, onUserPopoutClosed: G, trackRankingItemInteraction: B } = e,
             { largeImage: V } = (0, O.rv)({ entry: n }),
             { user: F, details: Z, appName: H, activity: Y, embeddedActivity: W } = (0, L.n)(n),
             { primaryColor: K, secondaryColor: z } = (0, C.Z)(null == V ? void 0 : V.src),
@@ -128,9 +128,9 @@ let U = {
                                   : (0, r.jsx)(D.Z, {
                                         onClick: ea,
                                         Icon: er,
-                                        'aria-label': k.intl.string(k.t.YR4cHB)
+                                        'aria-label': M.intl.string(M.t.YR4cHB)
                                     }),
-                          userDescription: (0, T.kr)(n) ? k.t.vPg1JS : k.t.rPqqtr,
+                          userDescription: (0, T.kr)(n) ? M.t.vPg1JS : M.t.rPqqtr,
                           title: H,
                           subtitle: Z,
                           badges: eu,
@@ -144,7 +144,7 @@ let U = {
                           title: n.extra.game_name,
                           subtitle: Z,
                           badges: eu,
-                          userDescription: k.t['6oWFUF'],
+                          userDescription: M.t['6oWFUF'],
                           entry: n,
                           stream: Q,
                           onUserPopoutClosed: G,
@@ -180,7 +180,7 @@ let U = {
                 (0, r.jsx)(w.St, {
                     children: (0, r.jsx)(w.WT, {
                         onReaction: b,
-                        onVoiceChannelPreview: M,
+                        onVoiceChannelPreview: k,
                         user: F,
                         channel: t,
                         generateReactionImage: ec,

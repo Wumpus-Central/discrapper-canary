@@ -31,8 +31,8 @@ var r = n(255367),
     D = n(111361),
     L = n(74538),
     x = n(624138),
-    k = n(543241),
-    M = n(883661),
+    M = n(543241),
+    k = n(883661),
     j = n(880949),
     U = n(784222),
     G = n(172800),
@@ -167,7 +167,7 @@ let W = 0,
                                           })
                                         : null
                                     : null != a
-                                      ? (0, r.jsx)(M.Z, {
+                                      ? (0, r.jsx)(k.Z, {
                                             categoryId: a,
                                             height: ee,
                                             width: ee,
@@ -175,7 +175,7 @@ let W = 0,
                                         })
                                       : null,
                             u = null == i ? void 0 : i.name;
-                        null != a && (u = (0, k.Y1)(a, null == i ? void 0 : i.name));
+                        null != a && (u = (0, M.Y1)(a, null == i ? void 0 : i.name));
                         let d = W === e,
                             f = n.isNitroLocked,
                             p = f && !d,
@@ -251,7 +251,7 @@ let W = 0,
         };
     },
     eo = i.memo(function (e) {
-        let { diversitySurrogate: t, emojiGrid: n, emojiListRef: a, emojiSize: o, onEmojiSelect: s, onSelectSoundmoji: l, setUpsellConfigs: d, sectionDescriptors: f, rowCountBySection: _, collapsedSections: y, setCollapsedSections: O, getEmojiItemProps: I, getEmojiRowProps: T, rowCount: S, isUsingKeyboardNavigation: C, channelGuildId: x, channelId: k, messageId: M, isBurstReaction: j, listHeaderClassName: G } = e,
+        let { diversitySurrogate: t, emojiGrid: n, emojiListRef: a, emojiSize: o, onEmojiSelect: s, onSelectSoundmoji: l, setUpsellConfigs: d, sectionDescriptors: f, rowCountBySection: _, collapsedSections: y, setCollapsedSections: O, getEmojiItemProps: I, getEmojiRowProps: T, rowCount: S, isUsingKeyboardNavigation: C, channelGuildId: x, channelId: M, messageId: k, isBurstReaction: j, listHeaderClassName: G } = e,
             B = i.useRef(!1),
             F = E.kJ.useStore((e) => e.activeCategoryIndex),
             K = (0, b.Iu)((e) => e.searchQuery),
@@ -288,8 +288,8 @@ let W = 0,
                 isUsingKeyboardNavigation: C,
                 allowAnimatedEmoji: z,
                 channelGuildId: x,
-                channelId: k,
-                messageId: M,
+                channelId: M,
+                messageId: k,
                 isBurstReaction: j,
                 listHeaderClassName: G,
                 activeSectionIndex: $,

@@ -209,11 +209,11 @@ function L(e) {
 function x() {
     b.clear();
 }
-function k(e) {
+function M(e) {
     let { firstMessages: t } = e;
     return null != t && O(t, (e) => y(e));
 }
-function M(e) {
+function k(e) {
     let { threads: t } = e;
     return O(Object.values(t), (e) => {
         let { first_message: t } = e;
@@ -245,10 +245,10 @@ let U = new j(s.Z, {
     LOAD_MESSAGES_AROUND_SUCCESS: v,
     SEARCH_MESSAGES_SUCCESS: T,
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: T,
-    LOAD_THREADS_SUCCESS: k,
-    LOAD_ARCHIVED_THREADS_SUCCESS: k,
+    LOAD_THREADS_SUCCESS: M,
+    LOAD_ARCHIVED_THREADS_SUCCESS: M,
     MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: A,
-    LOAD_FORUM_POSTS: M,
+    LOAD_FORUM_POSTS: k,
     MESSAGE_CREATE: S,
     MESSAGE_UPDATE: N,
     MESSAGE_DELETE: w,

@@ -64,8 +64,8 @@ function w(e, t) {
         e
     );
 }
-let S = [g.gq.DISCOVERY, g.gq.VANITY_URL, g.gq.BOT, g.gq.HUB, g.gq.MANUAL_MEMBER_VERIFICATION, g.gq.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL];
-function N(e) {
+let N = [g.gq.DISCOVERY, g.gq.VANITY_URL, g.gq.BOT, g.gq.HUB, g.gq.MANUAL_MEMBER_VERIFICATION, g.gq.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL];
+function S(e) {
     let { type: t, text: n, size: l, vanityUrl: o, isFocused: a } = e,
         s = null != l ? l : 16,
         c = (function (e, t) {
@@ -238,14 +238,14 @@ function Z(e) {
                                   })
                               )
                       }),
-                      S.map((e) =>
+                      N.map((e) =>
                           (0, r.jsx)(
                               C.k5B,
                               {
                                   id: 'join-source-type-option-'.concat(e),
                                   label: (t) =>
                                       (0, r.jsx)(
-                                          N,
+                                          S,
                                           w(_({}, t), {
                                               type: e,
                                               vanityUrl: Z,
@@ -301,7 +301,7 @@ function Z(e) {
                                   id: 'join-source-type-option-'.concat(e),
                                   label: (t) =>
                                       (0, r.jsx)(
-                                          N,
+                                          S,
                                           w(_({}, t), {
                                               type: g.gq.INVITE,
                                               vanityUrl: Z,
@@ -338,7 +338,7 @@ function Z(e) {
                                                       ? (0, r.jsx)('div', {
                                                             className: O.selectedOption,
                                                             children: (0, r.jsx)(
-                                                                N,
+                                                                S,
                                                                 w(_({}, e), {
                                                                     size: 12,
                                                                     text: (0, g.bE)(I, Z, M),

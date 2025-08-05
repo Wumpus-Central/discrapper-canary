@@ -12,8 +12,8 @@ var r = n(255367),
     h = n(451576),
     f = n(526846),
     m = n(119315),
-    g = n(403404),
-    b = n(906732),
+    g = n(906732),
+    b = n(397698),
     _ = n(522651),
     y = n(243778),
     C = n(579185),
@@ -39,15 +39,21 @@ function S(e) {
             [R]
         ),
         B = (0, c.bp)() === j.IlC.POPOUT,
-        { analyticsLocations: F, parentAnalyticsLocation: H } = (0, b.ZP)(),
+        { parentAnalyticsLocation: F, newestAnalyticsLocation: H } = (0, g.ZP)(),
         G = i.useCallback(() => {
-            ((0, _.v)(H, _.d.ACTIVITY),
-                (0, g.Z)({
-                    channel: t,
+            ((0, _.v)(F, _.d.ACTIVITY),
+                (0, b.Z)({
+                    context:
+                        null != t
+                            ? {
+                                  type: 'channel',
+                                  channel: t
+                              }
+                            : { type: 'contextless' },
                     openInPopout: B,
-                    analyticsLocations: F
+                    analyticsLocation: H
                 }));
-        }, [F, t, B, H]),
+        }, [t, B, H, F]),
         V = [];
     (N || V.push(a.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, h.Z)(t.id) && !N && V.push(a.z.ACTIVITY_GDM_ROCKET_SPARKLE), N || V.push(a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP));
     let z = i.useRef(!1),

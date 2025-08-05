@@ -1,20 +1,20 @@
 let r;
-(n.d(t, { Z: () => P }), n(388685), n(539854), n(781311), n(35282));
+(n.d(t, { Z: () => S }), n(388685), n(539854), n(781311), n(35282));
 var l,
     i = n(442837),
-    o = n(570140),
-    s = n(278323),
-    a = n(212819),
+    s = n(570140),
+    a = n(278323),
+    o = n(212819),
     c = n(933557),
     u = n(592125),
     d = n(430824),
-    f = n(293273),
-    h = n(158776),
-    p = n(699516),
-    g = n(594174),
-    O = n(55589),
-    N = n(981631);
-function y(e, t, n) {
+    h = n(293273),
+    f = n(158776),
+    g = n(699516),
+    p = n(594174),
+    N = n(55589),
+    O = n(981631);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,14 +27,14 @@ function y(e, t, n) {
         e
     );
 }
-let b = [a.h8.TEXT_CHANNEL, a.h8.GROUP_DM, a.h8.USER],
-    x = null,
+let y = [o.h8.TEXT_CHANNEL, o.h8.GROUP_DM, o.h8.USER],
+    b = null,
     E = null,
     m = [],
-    v = [];
-function C(e) {
+    C = [];
+function T(e) {
     ((m = [...m, e]),
-        (v = v.map((e) => {
+        (C = C.map((e) => {
             var t, n;
             return (
                 (t = (function (e) {
@@ -48,7 +48,7 @@ function C(e) {
                                 })
                             )),
                             r.forEach(function (t) {
-                                y(e, t, n[t]);
+                                x(e, t, n[t]);
                             }));
                     }
                     return e;
@@ -69,60 +69,60 @@ function C(e) {
                 t
             );
         })),
-        S.emitChange());
+        _.emitChange());
 }
 function I() {
-    ((x = null), null != r && (r.destroy(), (r = null)), null != E && E());
+    ((b = null), null != r && (r.destroy(), (r = null)), null != E && E());
 }
-function T() {
-    let e = null != x && null != x.application_id ? f.Z.getApplicationActivity(x.application_id) : null;
-    if (null != x && (null == e || null == e.party || null == e.party.id)) return I();
+function v() {
+    let e = null != b && null != b.application_id ? h.Z.getApplicationActivity(b.application_id) : null;
+    if (null != b && (null == e || null == e.party || null == e.party.id)) return I();
 }
 class j extends (l = i.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z);
+        this.waitFor(h.Z);
     }
     getActivity() {
-        return x;
+        return b;
     }
     getQuery() {
         var e;
         return null != (e = null == r ? void 0 : r.query) ? e : '';
     }
     getResults() {
-        return v;
+        return C;
     }
 }
-y(j, 'displayName', 'ActivityInviteModalStore');
-let S = new j(o.Z, {
+x(j, 'displayName', 'ActivityInviteModalStore');
+let _ = new j(s.Z, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
-            ((x = e.activity),
+            ((b = e.activity),
                 (E = e.resolve),
                 (m = []),
                 null == r &&
-                    (r = new a.ZP(
+                    (r = new o.ZP(
                         (e, t) => {
-                            ((v = (
+                            ((C = (
                                 '' === t.trim()
                                     ? (function () {
                                           let e = [];
                                           return (
-                                              O.Z.getPrivateChannelIds().forEach((t) => {
+                                              N.Z.getPrivateChannelIds().forEach((t) => {
                                                   let n = u.Z.getChannel(t);
                                                   if (null != n)
-                                                      if (n.type === N.d4z.DM) {
+                                                      if (n.type === O.d4z.DM) {
                                                           let t = n.getRecipientId(),
-                                                              r = null != t ? g.default.getUser(t) : null;
+                                                              r = null != t ? p.default.getUser(t) : null;
                                                           null != r &&
                                                               e.push({
-                                                                  type: a.h8.USER,
+                                                                  type: o.h8.USER,
                                                                   record: r,
                                                                   score: 0
                                                               });
                                                       } else
                                                           n.isMultiUserDM() &&
                                                               e.push({
-                                                                  type: a.h8.GROUP_DM,
+                                                                  type: o.h8.GROUP_DM,
                                                                   record: n,
                                                                   score: 0
                                                               });
@@ -134,32 +134,32 @@ let S = new j(o.Z, {
                             )
                                 .map((e) => {
                                     switch (e.type) {
-                                        case a.h8.USER: {
+                                        case o.h8.USER: {
                                             let { record: t } = e;
                                             return {
-                                                type: a.h8.USER,
+                                                type: o.h8.USER,
                                                 sent: m.includes(t.id),
-                                                status: h.Z.getStatus(t.id),
+                                                status: f.Z.getStatus(t.id),
                                                 data: e
                                             };
                                         }
-                                        case a.h8.TEXT_CHANNEL: {
+                                        case o.h8.TEXT_CHANNEL: {
                                             var t;
                                             let { record: n } = e,
                                                 r = u.Z.getChannel(n.parent_id),
                                                 l = d.Z.getGuild(n.guild_id);
                                             return {
-                                                type: a.h8.TEXT_CHANNEL,
+                                                type: o.h8.TEXT_CHANNEL,
                                                 sent: m.includes(n.id),
-                                                categoryName: null != r ? (0, c.F6)(r, g.default, p.Z) : '',
+                                                categoryName: null != r ? (0, c.F6)(r, p.default, g.Z) : '',
                                                 guildName: null != (t = null == l ? void 0 : l.name) ? t : '',
                                                 data: e
                                             };
                                         }
-                                        case a.h8.GROUP_DM: {
+                                        case o.h8.GROUP_DM: {
                                             let { record: t } = e;
                                             return {
-                                                type: a.h8.GROUP_DM,
+                                                type: o.h8.GROUP_DM,
                                                 sent: m.includes(t.id),
                                                 data: e
                                             };
@@ -169,9 +169,9 @@ let S = new j(o.Z, {
                                     }
                                 })
                                 .filter((e) => null != e)),
-                                S.emitChange());
+                                _.emitChange());
                         },
-                        b,
+                        y,
                         100
                     )),
                 r.search(''));
@@ -181,30 +181,30 @@ let S = new j(o.Z, {
             null != r && r.search(t);
         },
         ACTIVITY_INVITE_MODAL_SEND: function (e) {
-            if (null == x) return;
+            if (null == b) return;
             let t = e.channelId,
                 n = e.userId;
             null != t
-                ? s.Z.sendActivityInvite({
+                ? a.Z.sendActivityInvite({
                       channelId: t,
-                      type: N.mFx.JOIN,
-                      activity: x,
+                      type: O.mFx.JOIN,
+                      activity: b,
                       location: 'Channel Text Area - Invite to Join Modal'
-                  }).then(() => C(t))
+                  }).then(() => T(t))
                 : null != n &&
-                  s.Z.sendActivityInviteUser({
+                  a.Z.sendActivityInviteUser({
                       userId: n,
-                      type: N.mFx.JOIN,
-                      activity: x,
+                      type: O.mFx.JOIN,
+                      activity: b,
                       location: 'Channel Text Area - Invite to Join Modal'
-                  }).then(() => C(n));
+                  }).then(() => T(n));
         },
         ACTIVITY_INVITE_MODAL_CLOSE: I,
         OVERLAY_SET_INPUT_LOCKED: function (e) {
             let { locked: t } = e;
-            return !!t && null != x && (I(), !0);
+            return !!t && null != b && (I(), !0);
         },
-        LOCAL_ACTIVITY_UPDATE: T,
-        RPC_APP_DISCONNECTED: T
+        LOCAL_ACTIVITY_UPDATE: v,
+        RPC_APP_DISCONNECTED: v
     }),
-    P = 12633 == n.j ? S : null;
+    S = 12633 == n.j ? _ : null;

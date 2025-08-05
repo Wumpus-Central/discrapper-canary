@@ -64,16 +64,16 @@ function E(e, t) {
     );
 }
 function b(e) {
-    let { color: t = 'default', label: n, icon: a, iconLeft: h, iconLeftSize: g = 'md', hint: b, subtext: y, subtextLineClamp: O, hasSubmenu: v, disabled: I, isFocused: T, menuItemProps: S, action: A, onClose: N, onFocus: C, className: R, focusedClassName: P, subMenuIconClassName: w, dontCloseOnActionIfHoldingShiftKey: D, dontCloseOnAction: L, iconProps: x, sparkle: k } = e,
-        { onSelect: M, onInteraction: j } = i.useContext(c.p),
+    let { color: t = 'default', label: n, icon: a, iconLeft: h, iconLeftSize: g = 'md', hint: b, subtext: y, subtextLineClamp: O, hasSubmenu: v, disabled: I, isFocused: T, menuItemProps: S, action: A, onClose: N, onFocus: C, className: R, focusedClassName: P, subMenuIconClassName: w, dontCloseOnActionIfHoldingShiftKey: D, dontCloseOnAction: L, iconProps: x, sparkle: M } = e,
+        { onSelect: k, onInteraction: j } = i.useContext(c.p),
         U = i.useRef(null),
         G = i.useCallback(
             (e) => {
                 var t;
                 if ((null == j || j({ type: c.U.DEFAULT }), null == A)) return !1;
-                ((e.shiftKey && D) || L || N(), e.persist(), null == M || M(), (null != (t = e.nativeEvent.view) ? t : window).requestAnimationFrame(() => A(e)));
+                ((e.shiftKey && D) || L || N(), e.persist(), null == k || k(), (null != (t = e.nativeEvent.view) ? t : window).requestAnimationFrame(() => A(e)));
             },
-            [A, N, M, D, L, j]
+            [A, N, k, D, L, j]
         );
     return (
         i.useEffect(() => {
@@ -137,7 +137,7 @@ function b(e) {
                                         color: 'currentColor',
                                         className: o()(p.caret, w)
                                     }),
-                                    k && (0, r.jsx)(f.K1N, { className: p.sparkles })
+                                    M && (0, r.jsx)(f.K1N, { className: p.sparkles })
                                 ]
                             })
                     ]

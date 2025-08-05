@@ -156,7 +156,7 @@ function m(e) {
                 S(!1));
         }, []),
         x = r.useCallback((e) => e.every((e, t) => I[t] === e), [I]),
-        k = r.useCallback(
+        M = r.useCallback(
             () => ({
                 role: 'menu',
                 id: t,
@@ -169,7 +169,7 @@ function m(e) {
             }),
             [t, P, w, D, L, I]
         ),
-        M = r.useCallback(
+        k = r.useCallback(
             (e) => {
                 let { path: n } = e;
                 return {
@@ -210,12 +210,12 @@ function m(e) {
     return r.useMemo(
         () => ({
             dispatch: v,
-            getContainerProps: k,
-            getSubmenuProps: M,
+            getContainerProps: M,
+            getSubmenuProps: k,
             getItemProps: j,
             isFocused: x,
             isUsingKeyboardNavigation: A
         }),
-        [v, k, M, j, x, A]
+        [v, M, k, j, x, A]
     );
 }

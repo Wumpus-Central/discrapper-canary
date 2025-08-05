@@ -54,9 +54,9 @@ function R(e) {
     return e;
 }
 function P(e) {
-    let { user: t, guildId: n, channelId: C, messageId: P, roleId: w, openedAt: D, setPopoutRef: L, closePopout: x, disableUserProfileLink: k = __OVERLAY__, newAnalyticsLocations: M = [], disableAutoFocus: j = !1 } = e,
+    let { user: t, guildId: n, channelId: C, messageId: P, roleId: w, openedAt: D, setPopoutRef: L, closePopout: x, disableUserProfileLink: M = __OVERLAY__, newAnalyticsLocations: k = [], disableAutoFocus: j = !1 } = e,
         U = (0, h.ZP)(t.id, n),
-        { analyticsLocations: G } = (0, l.ZP)([...M, s.Z.USER_PROFILE_POPOUT]),
+        { analyticsLocations: G } = (0, l.ZP)([...k, s.Z.USER_PROFILE_POPOUT]),
         B = (0, _.ZB)({
             layout: 'POPOUT',
             userId: t.id,
@@ -82,7 +82,7 @@ function P(e) {
                     )
                 ));
         },
-        H = !k && (0, c.Z)(t.id),
+        H = !M && (0, c.Z)(t.id),
         Y = () =>
             H
                 ? (0, r.jsx)(a.sNh, {

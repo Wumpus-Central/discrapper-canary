@@ -92,7 +92,7 @@ let v = (0, s.Z)(),
 function N(e) {
     var { value: t, placeholder: n = '', autoFocus: a = !1, minLength: s, maxLength: m, error: E, defaultDirty: O, showCharacterCountFullPadding: N, showCharacterCount: P, showRemainingCharacterCount: w, 'aria-labelledby': D, rows: L = 3 } = e,
         x = y(e, ['value', 'placeholder', 'autoFocus', 'minLength', 'maxLength', 'error', 'defaultDirty', 'showCharacterCountFullPadding', 'showCharacterCount', 'showRemainingCharacterCount', 'aria-labelledby', 'rows']);
-    let k = (0, f.m)({
+    let M = (0, f.m)({
             validateOn: 'change',
             error: E,
             value: t,
@@ -100,13 +100,13 @@ function N(e) {
             maxLength: m,
             defaultDirty: O
         }),
-        M = i.useContext(c.q3),
-        j = null != D ? D : null == M ? void 0 : M.titleId,
+        k = i.useContext(c.q3),
+        j = null != D ? D : null == k ? void 0 : k.titleId,
         U = i.useMemo(() => {
             let e = [],
-                t = null == M ? void 0 : M.errorId;
+                t = null == k ? void 0 : k.errorId;
             return (null != t && e.push(t), null != E ? e.push(v) : (null != m && e.push(T), null != s && e.push(I)), e.length > 0 ? e.join(' ') : void 0);
-        }, [E, null == M ? void 0 : M.errorId, m, s]),
+        }, [E, null == k ? void 0 : k.errorId, m, s]),
         G = i.useMemo(() => {
             if (null == m) return S;
             let e = ''.concat(m).length;
@@ -114,10 +114,10 @@ function N(e) {
         }, [m, N]),
         B = (e) => {
             let { onChange: t } = x;
-            (null == t || t(e.currentTarget.value), k.setShouldValidate(!0));
+            (null == t || t(e.currentTarget.value), M.setShouldValidate(!0));
         };
     return (0, r.jsxs)(d.J, {
-        validation: k,
+        validation: M,
         children: [
             (0, r.jsx)(l.t, {
                 children: (0, r.jsx)(
@@ -128,7 +128,7 @@ function N(e) {
                                 className: o()(p.textArea, h.scrollbarDefault),
                                 'aria-labelledby': j,
                                 'aria-describedby': U,
-                                'aria-invalid': k.hasError,
+                                'aria-invalid': M.hasError,
                                 style: { paddingRight: G },
                                 placeholder: n,
                                 value: t,
@@ -157,7 +157,7 @@ function N(e) {
                 ? (0, r.jsx)(C, {
                       value: t,
                       maxLength: m,
-                      hasError: k.hasError
+                      hasError: M.hasError
                   })
                 : null,
             P || !1 === w

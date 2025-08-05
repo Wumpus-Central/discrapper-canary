@@ -95,11 +95,11 @@ function x(e) {
     let { messages: t } = e;
     t.forEach((e) => B(e));
 }
-function k(e) {
+function M(e) {
     let { messages: t } = e;
     for (let e of t) B(e);
 }
-function M(e) {
+function k(e) {
     let { pins: t } = e;
     for (let e of t) B(e.message);
 }
@@ -224,8 +224,8 @@ let F = new V(l.Z, {
     LOCAL_MESSAGES_LOADED: x,
     MESSAGE_CREATE: D,
     MESSAGE_UPDATE: D,
-    LOAD_MESSAGES_SUCCESS: k,
-    LOAD_PINNED_MESSAGES_SUCCESS: M,
+    LOAD_MESSAGES_SUCCESS: M,
+    LOAD_PINNED_MESSAGES_SUCCESS: k,
     THREAD_LIST_SYNC: j,
     LOAD_THREADS_SUCCESS: U,
     LOAD_ARCHIVED_THREADS_SUCCESS: U,

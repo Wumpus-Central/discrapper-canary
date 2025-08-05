@@ -20,8 +20,8 @@ var i = n(255367),
     E = n(839662),
     _ = n(199902),
     x = n(314897),
-    I = n(131951),
-    S = n(594174),
+    S = n(131951),
+    I = n(594174),
     j = n(5192),
     C = n(444295),
     N = n(1226),
@@ -53,7 +53,7 @@ function T(e) {
     }
     return e;
 }
-function k(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ function k(e, t) {
         e
     );
 }
-function A(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         i,
@@ -94,10 +94,10 @@ function D(e) {
     let { participant: t } = e,
         n = t.user.id,
         o = (0, a.e7)(
-            [I.Z],
+            [S.Z],
             () => {
                 let e = (0, m.Z)(t.type);
-                return I.Z.isLocalMute(t.user.id, e);
+                return S.Z.isLocalMute(t.user.id, e);
             },
             [t]
         ),
@@ -111,10 +111,10 @@ function D(e) {
         text: p ? Z.intl.string(Z.t.YqAjX1) : Z.intl.string(Z.t['w4m94+']),
         children: (e) => {
             var { onClick: n } = e,
-                r = A(e, ['onClick']);
+                r = k(e, ['onClick']);
             return (0, i.jsx)(
                 c.P3F,
-                k(T({}, r), {
+                A(T({}, r), {
                     className: P.controlAction,
                     onClick: (e) => {
                         (e.stopPropagation(),
@@ -154,7 +154,7 @@ function R(e, t, r) {
                 return (n) =>
                     (0, i.jsx)(
                         r,
-                        k(T({}, n), {
+                        A(T({}, n), {
                             stream: e.stream,
                             exitFullscreen: () => {},
                             appContext: t
@@ -168,10 +168,10 @@ function L(e) {
         o = (0, h.bp)(),
         s = n.user,
         u = (0, a.e7)(
-            [S.default],
+            [I.default],
             () => {
                 var e;
-                return null != (e = S.default.getUser(s.id)) ? e : s;
+                return null != (e = I.default.getUser(s.id)) ? e : s;
             },
             [s]
         ),
@@ -187,7 +187,7 @@ function L(e) {
                         children: (e) =>
                             (0, i.jsxs)(
                                 c.P3F,
-                                k(T({}, e), {
+                                A(T({}, e), {
                                     className: P.watchButton,
                                     onClick: () => {
                                         var t;
@@ -263,10 +263,10 @@ function L(e) {
                                         text: Z.intl.string(Z.t['3D5yo6']),
                                         children: (e) => {
                                             var { onClick: t } = e,
-                                                r = A(e, ['onClick']);
+                                                r = k(e, ['onClick']);
                                             return (0, i.jsx)(
                                                 c.P3F,
-                                                k(T({}, r), {
+                                                A(T({}, r), {
                                                     className: P.controlAction,
                                                     onClick: R(n, o, t),
                                                     children: (0, i.jsx)(c.xhG, {

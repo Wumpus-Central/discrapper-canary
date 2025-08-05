@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => j,
-    p: () => M
+    p: () => k
 }),
     n(953529));
 var r = n(255367),
@@ -35,12 +35,12 @@ var r = n(255367),
     D = n(428946),
     L = n(42948),
     x = n(109194),
-    k = n(352812),
-    M = (function (e) {
+    M = n(352812),
+    k = (function (e) {
         return ((e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e);
     })({});
 function j(e) {
-    let { containerContext: t, image: n, title: a, description: M, enableSocialProof: j, analyticsLocationSection: U, upsellViewedTrackingData: G, onClose: B, onDisplay: V, onLearnMore: F, isEmojiPickerOverlay: Z = !1 } = e,
+    let { containerContext: t, image: n, title: a, description: k, enableSocialProof: j, analyticsLocationSection: U, upsellViewedTrackingData: G, onClose: B, onDisplay: V, onLearnMore: F, isEmojiPickerOverlay: Z = !1 } = e,
         H = (0, s.e7)([b.Z], () => b.Z.affinities),
         Y = (0, s.e7)([b.Z], () => b.Z.hasFetched);
     (i.useEffect(() => {
@@ -71,7 +71,7 @@ function j(e) {
         J = (0, T.Z)();
     if (Q) {
         let e;
-        e = Z ? ((0, g.rO)() ? D.Z : L.Z) : (0, g.rO)() ? x.Z : k.Z;
+        e = Z ? ((0, g.rO)() ? D.Z : L.Z) : (0, g.rO)() ? x.Z : M.Z;
         let t = Z ? 'nitro-pink' : 'green';
         return (0, r.jsxs)(r.Fragment, {
             children: [
@@ -113,7 +113,7 @@ function j(e) {
                                             variant: 'text-md/medium',
                                             color: 'text-secondary',
                                             className: R.body,
-                                            children: M
+                                            children: k
                                         })
                                     ]
                                 })
@@ -182,7 +182,7 @@ function j(e) {
                             (0, r.jsx)(d.Text, {
                                 variant: 'text-sm/medium',
                                 className: P.body,
-                                children: M
+                                children: k
                             })
                         ]
                     }),

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => k }), n(388685));
+(n.d(t, { Z: () => M }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -97,8 +97,8 @@ let P = 490,
     D = 245,
     L = 200,
     x = 120,
-    k = i.forwardRef(function (e, t) {
-        var n, a, T, A, R, k, M;
+    M = i.forwardRef(function (e, t) {
+        var n, a, T, A, R, M, k;
         let { channel: j, type: U, editorHeight: G, onVisibilityChange: B, editorScrollerRef: V, barsHeight: F } = e,
             Z = (0, h.Dt)(),
             H = (0, l.e7)(
@@ -159,7 +159,7 @@ let P = 490,
             },
             en = P;
         null != Q && (en = (null == (A = U.autocomplete) ? void 0 : A.small) ? L : (null == (R = W.query) ? void 0 : R.type) === b.eq.EMOJIS_AND_STICKERS ? w : D);
-        let er = Math.max(G, null != (k = null == V || null == (a = V.current) ? void 0 : a.clientHeight) ? k : 0),
+        let er = Math.max(G, null != (M = null == V || null == (a = V.current) ? void 0 : a.clientHeight) ? M : 0),
             ei = Math.min(0.5 * window.innerHeight, er);
         en = Math.min(window.innerHeight - x - ei - (null != F ? F : 0), en);
         let ea = (0, r.jsx)(_.ZP, {
@@ -205,7 +205,7 @@ let P = 490,
                       targetRef: e.targetRef,
                       overrideTargetRect: Q,
                       positionKey: $,
-                      position: null != (M = e.position) ? M : 'top',
+                      position: null != (k = e.position) ? k : 'top',
                       align: 'left',
                       spacing: 8,
                       autoInvert: !0,

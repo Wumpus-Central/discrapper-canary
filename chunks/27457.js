@@ -193,8 +193,8 @@ let ee = [K.fO.ACTIVITY],
                 [M, D]
             ),
             e3 = null,
-            e4 = null,
-            e6 = '';
+            e6 = null,
+            e4 = '';
         switch (D.type) {
             case K.fO.STREAM:
                 ((e3 = (0, r.jsx)(V.Z, {
@@ -208,7 +208,7 @@ let ee = [K.fO.ACTIVITY],
                     focused: eg,
                     inOverlayPopout: ev
                 })),
-                    (e4 = (0, r.jsx)(V._, {
+                    (e6 = (0, r.jsx)(V._, {
                         participant: D,
                         selected: eh,
                         width: es,
@@ -216,7 +216,7 @@ let ee = [K.fO.ACTIVITY],
                         idle: ej,
                         premiumIndicator: !1
                     })),
-                    (e6 = X.intl.formatToPlainString(X.t.gHPz3d, { streamerName: D.user.username })));
+                    (e4 = X.intl.formatToPlainString(X.t.gHPz3d, { streamerName: D.user.username })));
                 break;
             case K.fO.USER:
                 ((e3 = (0, r.jsx)(F.Z, {
@@ -234,11 +234,11 @@ let ee = [K.fO.ACTIVITY],
                     pulseSpeakingIndicator: ey,
                     inOverlayPopout: ev
                 })),
-                    (e4 = (0, r.jsx)(F.T, {
+                    (e6 = (0, r.jsx)(F.T, {
                         participant: D,
                         channelId: ea.id
                     })),
-                    (e6 = X.intl.formatToPlainString(X.t['iC/x/f'], { username: D.user.username })));
+                    (e4 = X.intl.formatToPlainString(X.t['iC/x/f'], { username: D.user.username })));
                 break;
             case K.fO.ACTIVITY:
                 ((e3 = (0, r.jsx)(G.ZP, {
@@ -248,7 +248,7 @@ let ee = [K.fO.ACTIVITY],
                     channel: ea,
                     width: es
                 })),
-                    (e6 = X.intl.formatToPlainString(X.t.YCvOsL, { activityName: null == eZ ? void 0 : eZ.name })));
+                    (e4 = X.intl.formatToPlainString(X.t.YCvOsL, { activityName: null == eZ ? void 0 : eZ.name })));
                 break;
             case K.fO.HIDDEN_STREAM:
                 e3 = (0, r.jsx)(V.Z, {
@@ -292,7 +292,7 @@ let ee = [K.fO.ACTIVITY],
                             style: el,
                             participantUserId: eT,
                             children: (0, r.jsxs)(u.kL8, {
-                                'aria-label': e6,
+                                'aria-label': e4,
                                 className: Q.tileChild,
                                 onDoubleClick: e0,
                                 onContextMenu: (e) => e1(e, D.type === K.fO.STREAM),
@@ -327,7 +327,7 @@ let ee = [K.fO.ACTIVITY],
                                         ? null
                                         : (0, r.jsx)('div', {
                                               className: Q.indicators,
-                                              children: e4
+                                              children: e6
                                           }),
                                     eh
                                         ? (0, r.jsx)('div', {

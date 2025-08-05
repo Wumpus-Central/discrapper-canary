@@ -1,70 +1,73 @@
-(t.d(n, { default: () => h }), t(388685));
-var l = t(255367);
-t(73800);
-var i = t(481060),
-    r = t(239091),
-    u = t(883385),
-    a = t(108843),
-    o = t(100527),
-    d = t(299206),
-    c = t(819403),
-    s = t(286694),
-    _ = t(314897),
-    E = t(238296),
-    f = t(933409),
-    g = t(981631),
-    A = t(388032);
-let h = (0, a.Z)(
+(n.d(t, { default: () => h }), n(388685));
+var r = n(255367);
+n(73800);
+var l = n(481060),
+    i = n(239091),
+    u = n(883385),
+    o = n(108843),
+    a = n(100527),
+    c = n(299206),
+    d = n(882188),
+    s = n(819403),
+    _ = n(286694),
+    f = n(314897),
+    E = n(238296),
+    g = n(933409),
+    b = n(981631),
+    O = n(388032);
+let h = (0, o.Z)(
     (0, u.Z)(
         function (e) {
-            let { user: n, channel: t, guildId: u, onSelect: a, onInteraction: o, context: g } = e,
-                h = t.id,
-                v = n.isNonUserBot(),
-                b = n.id === _.default.getId(),
-                T = (0, c.Z)(n),
-                O = (0, s.Z)(n, u, h),
+            let { user: t, channel: n, guildId: u, onSelect: o, onInteraction: a, context: b } = e,
+                h = n.id,
+                A = t.isNonUserBot(),
+                p = t.id === f.default.getId(),
+                v = (0, s.Z)(t),
+                y = (0, _.Z)(t, u, h),
                 S = (0, E.Y)({
-                    isOwnSettings: b,
-                    userId: n.id,
+                    isOwnSettings: p,
+                    userId: t.id,
                     channelId: h,
                     guildId: u,
-                    context: g
+                    context: b
                 }),
-                [I, y] = (0, E.E)(n, h, u),
-                p = (0, f.Z)(n, u, h),
-                M = (0, d.Z)({
-                    id: n.id,
-                    label: A.intl.string(A.t['/AXYnJ'])
-                });
-            return (0, l.jsx)(i.v2r, {
+                [T, I] = (0, E.E)(t, h, u),
+                P = (0, g.Z)(t, u, h),
+                m = (0, c.Z)({
+                    id: t.id,
+                    label: O.intl.string(O.t['/AXYnJ'])
+                }),
+                M = (0, d.Z)(t.id, n);
+            return (0, r.jsx)(l.v2r, {
                 navId: 'user-context',
-                onClose: r.Zy,
-                'aria-label': A.intl.string(A.t.liqwPD),
-                onSelect: a,
-                onInteraction: o,
+                onClose: i.Zy,
+                'aria-label': O.intl.string(O.t.liqwPD),
+                onSelect: o,
+                onInteraction: a,
                 variant: 'fixed',
                 children:
-                    !v &&
-                    (0, l.jsxs)(l.Fragment, {
+                    !A &&
+                    (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, l.jsxs)(i.kSQ, {
-                                children: [T, O]
+                            (0, r.jsxs)(l.kSQ, {
+                                children: [v, y]
                             }),
+                            M,
                             S,
-                            !b &&
-                                (0, l.jsx)(i.kSQ, {
-                                    children: (0, l.jsxs)(i.sNh, {
+                            !p &&
+                                (0, r.jsx)(l.kSQ, {
+                                    children: (0, r.jsxs)(l.sNh, {
                                         id: 'more-options',
-                                        label: A.intl.string(A.t.PdRCRk),
-                                        children: [I, (0, l.jsx)(i.kSQ, { children: p }), y]
+                                        label: O.intl.string(O.t.PdRCRk),
+                                        children: [T, (0, r.jsx)(l.kSQ, { children: P }), I]
                                     })
                                 }),
-                            b && (0, l.jsx)(i.kSQ, { children: M })
+                            p && (0, r.jsx)(l.kSQ, { children: m })
                         ]
                     })
             });
         },
-        { object: g.qAy.CONTEXT_MENU }
+        { object: b.qAy.CONTEXT_MENU }
     ),
-    [o.Z.VOICE_USER]
+    [a.Z.VOICE_USER]
 );

@@ -1,4 +1,4 @@
-(r.d(n, { Z: () => p }), r(35282));
+(r.d(n, { Z: () => f }), r(35282));
 var l = r(255367),
     t = r(73800),
     o = r(120356),
@@ -54,14 +54,14 @@ function v(e, n) {
     );
 }
 let O = (e) => null != e && /^http/i.test(e),
-    f = (e) => null != e && /^blob:https?:\/\/[^\/]+\//i.test(e),
-    p = (e) => {
-        let { asset: n, size: r = g.yV, className: o, style: p, children: y, categoryBannerOverride: j } = e,
-            h = (0, u.e7)([s.Z], () => s.Z.saturation),
-            B = t.useMemo(() => {
-                if (null == n) return p;
+    p = (e) => null != e && /^blob:https?:\/\/[^\/]+\//i.test(e),
+    f = (e) => {
+        let { asset: n, size: r = g.yV, className: o, style: f, children: y, categoryBannerOverride: j } = e,
+            B = (0, u.e7)([s.Z], () => s.Z.saturation),
+            h = t.useMemo(() => {
+                if (null == n) return f;
                 let e =
-                        O(n) || f(n)
+                        O(n) || p(n)
                             ? n
                             : (0, d.uV)(n, {
                                   size: r,
@@ -73,9 +73,9 @@ let O = (e) => null != e && /^http/i.test(e),
                               transform: 'scale(1.02)'
                           }
                         : {};
-                if (1 === h)
+                if (1 === B)
                     return m(
-                        v(m({}, p), {
+                        v(m({}, f), {
                             backgroundImage: (null == j ? void 0 : j.addGradient) ? 'url('.concat(e, '), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)') : 'url('.concat(e, ')'),
                             backgroundBlendMode: 'multiply',
                             backgroundSize: 'cover',
@@ -83,9 +83,9 @@ let O = (e) => null != e && /^http/i.test(e),
                         }),
                         l
                     );
-                let t = (0, c.aD)(i.Z.unsafe_rawColors.BLACK_500.resolve().hex(), 1 - h);
+                let t = (0, c.aD)(i.Z.unsafe_rawColors.BLACK_500.resolve().hex(), 1 - B);
                 return m(
-                    v(m({}, p), {
+                    v(m({}, f), {
                         backgroundImage: 'linear-gradient('.concat(t, ', ').concat(t, '), url(').concat(e, ')'),
                         backgroundBlendMode: 'saturation',
                         backgroundSize: 'cover',
@@ -93,10 +93,10 @@ let O = (e) => null != e && /^http/i.test(e),
                     }),
                     l
                 );
-            }, [n, r, h, p, null == j ? void 0 : j.blur, null == j ? void 0 : j.addGradient]);
+            }, [n, r, B, f, null == j ? void 0 : j.blur, null == j ? void 0 : j.addGradient]);
         return (0, l.jsx)('div', {
             className: a()(b.banner, o),
-            style: B,
+            style: h,
             children: y
         });
     };

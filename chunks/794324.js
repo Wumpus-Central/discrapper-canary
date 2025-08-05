@@ -61,16 +61,16 @@ let d = (e) => {
             };
         }, [n, r, e]);
     },
-    m = (e, n) => {
-        let r = (0, i.zL)(s.jE.PDP_BACKGROUND),
-            t = (0, i.zL)(s.jE.PDP_LOGO);
-        return l.useMemo(() => {
-            var l;
-            return {
-                pdpBackground: null != (l = null != r ? r : e.pdpBg) ? l : n.banner,
-                logo: null != t ? t : (0, o.uV)(e.logo, { size: a.n })
-            };
-        }, [r, t, e, n]);
+    m = (e) => {
+        let n = (0, i.zL)(s.jE.PDP_BACKGROUND),
+            r = (0, i.zL)(s.jE.PDP_LOGO);
+        return l.useMemo(
+            () => ({
+                pdpBackground: null != n ? n : e.pdpBg,
+                logo: null != r ? r : (0, o.uV)(e.logo, { size: a.n })
+            }),
+            [n, e.pdpBg, e.logo, r]
+        );
     },
     v = (e) => {
         let n = (0, i.zL)(s.jE.SHOP_BUTTON_BG_HOVER),
@@ -86,11 +86,11 @@ let d = (e) => {
             if ((null == e ? void 0 : e.type) === t.Z.COACHMARK) return { hasPreviewAssets: !1 };
             let v = null == e || null == (l = e.refTargetBackground) ? void 0 : l.asset,
                 O = null == v ? void 0 : v.resting,
-                f = null == v ? void 0 : v.hovered;
+                p = null == v ? void 0 : v.hovered;
             return {
                 hasPreviewAssets: m,
-                buttonBGHoverDark: null != (i = null != r ? r : n) ? i : null == f ? void 0 : f.dark,
-                buttonBGHoverLight: null != (s = null != o ? o : n) ? s : null == f ? void 0 : f.light,
+                buttonBGHoverDark: null != (i = null != r ? r : n) ? i : null == p ? void 0 : p.dark,
+                buttonBGHoverLight: null != (s = null != o ? o : n) ? s : null == p ? void 0 : p.light,
                 buttonBGRestingDark: null != (g = null != u ? u : a) ? g : null == O ? void 0 : O.dark,
                 buttonBGRestingLight: null != (b = null != c ? c : a) ? b : null == O ? void 0 : O.light,
                 coachtipAvatar: null != d ? d : null == e ? void 0 : e.avatar

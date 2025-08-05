@@ -94,8 +94,8 @@ let N = i.forwardRef(function (e, t) {
     let A,
         { canRemove: N, className: C, role: R, onRemove: P, guildId: w, disableBorderColor: D, onMouseDown: L } = e,
         x = (0, s.JA)(R.id),
-        { tabIndex: k } = x,
-        M = S(x, ['tabIndex']),
+        { tabIndex: M } = x,
+        k = S(x, ['tabIndex']),
         j = (0, g.p9)({
             roleId: R.id,
             size: 16,
@@ -157,7 +157,7 @@ let N = i.forwardRef(function (e, t) {
                       children: (0, r.jsxs)(d.P3F, {
                           className: o()(y.roleRemoveButtonCanRemove, y.roleRemoveButton),
                           onClick: P,
-                          tabIndex: k,
+                          tabIndex: M,
                           focusProps: { focusClassName: y.roleRemoveIconFocused },
                           'aria-hidden': !1,
                           'aria-label': b.intl.formatToPlainString(b.t.QrxwhY, { roleName: R.name }),
@@ -192,9 +192,9 @@ let N = i.forwardRef(function (e, t) {
                         onContextMenu: B,
                         onMouseDown: L,
                         'aria-label': R.name,
-                        tabIndex: k
+                        tabIndex: M
                     },
-                    M
+                    k
                 ),
                 {
                     children: [

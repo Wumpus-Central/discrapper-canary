@@ -68,19 +68,19 @@ function H(e) {
                     o = e.has(l.id);
                 return (s()(t.toLowerCase(), l.name.toLowerCase()) ? n.push(_(r, o)) : o && n.push(_(r, o)), n);
             }, []),
-        S = l.useCallback(
+        N = l.useCallback(
             (e) => {
                 ((0, j.Dr)(t, { selectedRoleIds: e }), o(e));
             },
             [t, o]
         ),
-        N = l.useMemo(() => u()(S, 300), [S]),
+        S = l.useMemo(() => u()(N, 300), [N]),
         Z = l.useCallback(
             (e) => {
                 let t;
-                (d((t = new Set(c.has(e) ? [...c].filter((t) => t !== e) : [...c, e]))), N(t));
+                (d((t = new Set(c.has(e) ? [...c].filter((t) => t !== e) : [...c, e]))), S(t));
             },
-            [c, N]
+            [c, S]
         );
     return (0, r.jsx)(b.DBG, {
         className: v.rolePopout,

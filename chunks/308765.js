@@ -478,6 +478,11 @@ let i = {
         actions: ['AUDIO_SET_INPUT_DEVICE', 'MEDIA_ENGINE_DEVICES', 'RTC_CONNECTION_STATE', 'AUDIO_INPUT_DEVICE_SAMPLE_RATE_CHANGED'],
         inlineRequire: () => n(550856).Z,
         neverLoadBeforeConnectionOpen: !0
+    },
+    RequestToStreamManager: {
+        actions: ['VOICE_STATE_UPDATES'],
+        inlineRequire: () => n(192229).Z,
+        neverLoadBeforeConnectionOpen: !0
     }
 };
 (0, r.j)(i);

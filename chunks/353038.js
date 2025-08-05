@@ -92,7 +92,7 @@ function _(e) {
 function x(e) {
     return 'auto' === e || null == e ? 'auto' : ''.concat(e, 'px');
 }
-function I(e, t) {
+function S(e, t) {
     let n = 0,
         i = 0;
     return {
@@ -100,7 +100,7 @@ function I(e, t) {
         height: 'auto' === t.height ? (null != e ? e.clientHeight : 0) : t.height
     };
 }
-function S(e, t) {
+function I(e, t) {
     let { top: n, left: i, bottom: r, right: o } = t;
     switch (e) {
         case 'RESIZE_EAST':
@@ -175,7 +175,7 @@ class C extends (i = l.Component) {
         } = this;
         if (null == n) return null;
         ((e = Math.max(Math.min(r, e), l)), (t = Math.max(Math.min(o, t), a)));
-        let { width: m, height: g } = I(n, this.size),
+        let { width: m, height: g } = S(n, this.size),
             y = t - f,
             O = e - d,
             b = (0, p.ou)(
@@ -192,7 +192,7 @@ class C extends (i = l.Component) {
                     g
                 )
             ),
-            v = u ? (0, p.R)(b) : S('RESIZE_SOUTH_EAST', b);
+            v = u ? (0, p.R)(b) : I('RESIZE_SOUTH_EAST', b);
         (this.setDOMPositions(v),
             this.setState(
                 {
@@ -471,7 +471,7 @@ class C extends (i = l.Component) {
                     }
                 } = this;
                 if (null == i || !o) return;
-                let { width: s, height: c } = I(i, this.size),
+                let { width: s, height: c } = S(i, this.size),
                     u = (0, p.PY)(this.anchor, l, a, s, c);
                 if ('MOVE' === e) {
                     let { x: e, y: i } = (function (e) {
@@ -488,7 +488,7 @@ class C extends (i = l.Component) {
                         offsetY: n - i
                     });
                 } else {
-                    let i = S(e, u);
+                    let i = I(e, u);
                     (this.setDOMPositions(i),
                         (this.dragState = y(g({}, this.dragState), {
                             startX: t,
@@ -515,12 +515,12 @@ class C extends (i = l.Component) {
                 let r = t
                     ? () => {
                           let { onUpdate: t, id: n } = this.props;
-                          t(e, n, this.anchor, this.size, I(this.ref.current, this.size));
+                          t(e, n, this.anchor, this.size, S(this.ref.current, this.size));
                       }
                     : void 0;
                 if (t) {
                     let { maxX: e, maxY: t } = this.props.container,
-                        { width: n, height: r } = I(this.ref.current, this.size),
+                        { width: n, height: r } = S(this.ref.current, this.size),
                         o = (0, p.PY)(this.anchor, e, t, n, r),
                         l = (0, p.R)(o);
                     (this.setDOMPositions(l),

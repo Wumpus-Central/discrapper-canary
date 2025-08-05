@@ -74,8 +74,8 @@ function D(e, t) {
 }
 let L = null,
     x = {},
-    k = null;
-function M() {
+    M = null;
+function k() {
     ((r = new Map()), (i = {}), (a = {}), (o = {}));
 }
 function j(e) {
@@ -276,7 +276,7 @@ function et(e) {
 }
 function en(e) {
     let { intent: t } = e;
-    k = t;
+    M = t;
 }
 function er(e, t) {
     let n = y.Z.getBasicChannel(t);
@@ -287,7 +287,7 @@ function ei(e) {
     let t = y.Z.getBasicChannel(e.channelId);
     return null != t && (0, h.p9)(t, A.Z, O.Z, I.Z, f.Z)[0];
 }
-M();
+k();
 class ea extends (c = u.ZP.PersistedStore) {
     initialize(e) {
         (this.syncWith([I.Z], () => !0), this.waitFor(_.ZP, I.Z), (null == e ? void 0 : e.selfStreamParticipantsHidden) !== void 0 && Object.assign(x, null == e ? void 0 : e.selfStreamParticipantsHidden));
@@ -381,7 +381,7 @@ class ea extends (c = u.ZP.PersistedStore) {
         return null != n ? n.viewerIds : [];
     }
     getCurrentAppIntent() {
-        return k;
+        return M;
     }
     getStreamingState() {
         return (0, m.Z)(v.Z)
@@ -417,7 +417,7 @@ let eo = new ea(d.Z, {
     SET_STREAM_APP_INTENT: en,
     RTC_CONNECTION_STATE: ee,
     CHANNEL_RTC_SELECT_PARTICIPANT: Q,
-    CONNECTION_OPEN: M,
-    CONNECTION_CLOSED: M,
-    LOGOUT: M
+    CONNECTION_OPEN: k,
+    CONNECTION_CLOSED: k,
+    LOGOUT: k
 });

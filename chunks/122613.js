@@ -1,14 +1,12 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => p });
 var r = n(592125),
     i = n(594174),
-    a = n(585483),
-    o = n(636449),
-    s = n(337682),
-    l = n(566620),
-    c = n(224189),
-    u = n(574952),
-    d = n(981631);
-function f(e, t, n) {
+    a = n(636449),
+    o = n(337682),
+    s = n(566620),
+    l = n(224189),
+    c = n(574952);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +19,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -32,12 +30,12 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                u(e, t, n[t]);
             }));
     }
     return e;
 }
-function p(e, t) {
+function f(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -49,53 +47,54 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-async function m(e) {
+async function p(e) {
     let t;
     if (null == e.targetApplicationId) return !1;
     let n = !1;
     try {
-        ((t = await (0, c.Z)(e.targetApplicationId, e.channelId)), (n = (0, o.R)()));
+        ((t = await (0, l.Z)(e.targetApplicationId, e.channelId)), (n = (0, a.R)()));
     } catch (e) {
         return !1;
     }
-    return (0, o.C)(n, () => g(h(_({}, e), { targetApplication: t })));
+    return (0, a.C)(n, () => h(_(d({}, e), { targetApplication: t })));
 }
-async function g(e) {
-    let { targetApplication: t, locationObject: n, channelId: o, analyticsLocations: c, componentId: f, commandOrigin: _, sectionName: p, source: h, onExecutedCallback: m, referrerId: g, customId: E, inviterUserId: b, onConfirmActivityLaunchChecksAlertOpen: y } = e,
-        O = (0, u.Z)(),
-        v = i.default.getCurrentUser();
-    return null == o
-        ? (a.S.dispatch(d.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: t.id }), !1)
-        : null != r.Z.getChannel(o) &&
-              null != v &&
-              null != t &&
-              (s.tZ(t.id),
-              await (0, l.G6)({
-                  channelId: o,
-                  applicationId: t.id,
-                  isStart: !0,
-                  embeddedActivitiesManager: O,
-                  componentId: f,
-                  commandOrigin: _,
-                  sectionName: p,
-                  locationObject: n,
-                  analyticsLocations: c,
-                  source: h,
-                  onExecutedCallback: m,
-                  referrerId: g,
-                  customId: E,
-                  inviterUserId: b,
-                  onConfirmActivityLaunchChecksAlertOpen: y
-              }));
+async function h(e) {
+    let { targetApplication: t, locationObject: n, channelId: a, analyticsLocations: l, componentId: u, commandOrigin: d, sectionName: f, source: _, onExecutedCallback: p, referrerId: h, customId: m, inviterUserId: g, onConfirmActivityLaunchChecksAlertOpen: E } = e,
+        b = (0, c.Z)(),
+        y = i.default.getCurrentUser();
+    return (
+        null != a &&
+        null != r.Z.getChannel(a) &&
+        null != y &&
+        null != t &&
+        (o.tZ(t.id),
+        await (0, s.G6)({
+            channelId: a,
+            applicationId: t.id,
+            isStart: !0,
+            embeddedActivitiesManager: b,
+            componentId: u,
+            commandOrigin: d,
+            sectionName: f,
+            locationObject: n,
+            analyticsLocations: l,
+            source: _,
+            onExecutedCallback: p,
+            referrerId: h,
+            customId: m,
+            inviterUserId: g,
+            onConfirmActivityLaunchChecksAlertOpen: E
+        }))
+    );
 }

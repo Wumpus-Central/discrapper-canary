@@ -26,9 +26,9 @@ var r = n(255367),
     T = n(374065),
     P = n(451576),
     j = n(119315),
-    A = n(403404),
-    Z = n(100527),
-    x = n(906732),
+    A = n(100527),
+    Z = n(906732),
+    x = n(397698),
     w = n(562129),
     L = n(793865),
     R = n(522651),
@@ -228,7 +228,7 @@ function eK() {
     });
 }
 function eq() {
-    let { parentAnalyticsLocation: e } = (0, x.ZP)(),
+    let { parentAnalyticsLocation: e } = (0, Z.ZP)(),
         t = (0, u.e7)([ei.Z], () => ei.Z.isMuted()),
         n = t ? eU.intl.string(eU.t.ScHlfn) : eU.intl.string(eU.t.zqxfra);
     return (0, r.jsx)(eZ.Z, {
@@ -243,7 +243,7 @@ function eq() {
 function eQ(e) {
     let { channel: t, enableActivities: n, disabled: l } = e,
         o = i.useRef(null),
-        { parentAnalyticsLocation: s } = (0, x.ZP)(),
+        { parentAnalyticsLocation: s } = (0, Z.ZP)(),
         c = (0, eo.Z)(),
         d = (0, ec.Z)(t),
         p = (0, u.e7)([C.ZP], () => null != C.ZP.getSelfEmbeddedActivityForLocation(C.ZP.getConnectedActivityLocation())),
@@ -371,7 +371,7 @@ function eQ(e) {
 function eX(e) {
     let { channel: t, enableActivities: n } = e,
         i = (0, I.bp)(),
-        { analyticsLocations: l, parentAnalyticsLocation: o } = (0, x.ZP)(),
+        { parentAnalyticsLocation: l, newestAnalyticsLocation: o } = (0, Z.ZP)(),
         s = i === eR.IlC.POPOUT,
         c = (0, T.KF)(t.id),
         p = (0, T.g5)(c),
@@ -405,13 +405,19 @@ function eX(e) {
                                       onClick: () => {
                                           var n;
                                           (E(),
-                                              (0, A.Z)({
-                                                  channel: t,
+                                              (0, x.Z)({
+                                                  context:
+                                                      null != t
+                                                          ? {
+                                                                type: 'channel',
+                                                                channel: t
+                                                            }
+                                                          : { type: 'contextless' },
                                                   openInPopout: s,
-                                                  analyticsLocations: l
+                                                  analyticsLocation: o
                                               }),
                                               null == (n = e.onClick) || n.call(e),
-                                              (0, R.v)(o, R.d.ACTIVITY),
+                                              (0, R.v)(l, R.d.ACTIVITY),
                                               i === d.z.ACTIVITIES_VOICE_LAUNCHER_BADGE && c(ek.L.TAKE_ACTION));
                                       },
                                       onMouseEnter: () => {
@@ -454,7 +460,7 @@ function eJ(e) {
     let t,
         { channel: n, canGoLive: l, enableActivities: o, disabled: s } = e,
         c = i.useRef(null),
-        { parentAnalyticsLocation: d } = (0, x.ZP)(),
+        { parentAnalyticsLocation: d } = (0, Z.ZP)(),
         h = (0, u.e7)([eS.default], () => eS.default.getCurrentUser()),
         f = (0, u.Wu)([em.Z], () => em.Z.getAllActiveStreams()),
         b = (0, ec.Z)(n),
@@ -471,8 +477,8 @@ function eJ(e) {
         N = b ? eU.intl.string(eU.t.fjBNo6) : eU.intl.string(eU.t.uQn9Bw),
         T = O || o || E,
         P = null != v,
-        { Component: j, events: A, play: Z } = (0, p.P)(P ? 'disable' : 'enable');
-    i.useEffect(() => () => Z(), [Z, P]);
+        { Component: j, events: A, play: x } = (0, p.P)(P ? 'disable' : 'enable');
+    i.useEffect(() => () => x(), [x, P]);
     let w = (0, r.jsx)(j, {
         size: 'md',
         color: 'currentColor',
@@ -716,20 +722,20 @@ class e$ extends i.PureComponent {
             eH(this, 'handleChannelLinkClick', (e) => {
                 var t;
                 let { guild: n, channel: r } = this.props;
-                (s()(null != r, 'Channel is null during navigation click'), e.stopPropagation(), O.Z.channelListScrollTo(null != (t = null == n ? void 0 : n.id) ? t : eR.ME, r.id), (0, R.v)(Z.Z.RTC_PANEL, R.d.CHANNEL_LINK));
+                (s()(null != r, 'Channel is null during navigation click'), e.stopPropagation(), O.Z.channelListScrollTo(null != (t = null == n ? void 0 : n.id) ? t : eR.ME, r.id), (0, R.v)(A.Z.RTC_PANEL, R.d.CHANNEL_LINK));
             }),
             eH(this, 'handleChannelLinkContextMenu', (e) => {
                 let { channel: t, analyticsLocations: i } = this.props;
                 (0, _.jW)(e, async () => {
                     let { default: e } = await n.e('56944').then(n.bind(n, 600830));
                     return (n) =>
-                        (0, r.jsx)(x.Gt, {
+                        (0, r.jsx)(Z.Gt, {
                             value: i,
                             children: (0, r.jsx)(
                                 e,
                                 eF(eB({}, n), {
                                     channel: t,
-                                    onInteraction: (0, D.u)('RTCConnectionMenu', Z.Z.RTC_PANEL)
+                                    onInteraction: (0, D.u)('RTCConnectionMenu', A.Z.RTC_PANEL)
                                 })
                             )
                         });
@@ -766,7 +772,7 @@ class e$ extends i.PureComponent {
 }
 function e0(e) {
     let { popoutProps: t, isShown: n, noiseCancellationActive: l, ref: a } = e,
-        { parentAnalyticsLocation: o } = (0, x.ZP)(),
+        { parentAnalyticsLocation: o } = (0, Z.ZP)(),
         { play: s, Component: c, events: u } = (0, f.P)(l ? 'disable' : 'enable');
     return (
         i.useEffect(() => () => s(), [l, s]),
@@ -850,15 +856,15 @@ let e1 = (0, y.Z)(function (e) {
                 ? t
                 : [];
         }, [I, C, N]),
-        [j, A] = i.useState(!1),
+        [j, x] = i.useState(!1),
         w = (0, M.Z)('RTCConnection');
     i.useEffect(() => {
-        (E || y) && A(!1);
-    }, [E, y, A]);
-    let { analyticsLocations: L } = (0, x.ZP)(Z.Z.RTC_PANEL),
+        (E || y) && x(!1);
+    }, [E, y, x]);
+    let { analyticsLocations: L } = (0, Z.ZP)(A.Z.RTC_PANEL),
         R = (0, S.Z)(null != d ? d : eR.lds, null == c ? void 0 : c.id),
         D = (0, P.Z)(null == c ? void 0 : c.id);
-    return (0, r.jsx)(x.Gt, {
+    return (0, r.jsx)(Z.Gt, {
         value: L,
         children: (0, r.jsxs)('div', {
             className: eG.wrapper,
@@ -900,7 +906,7 @@ let e1 = (0, y.Z)(function (e) {
                                   className: eG.viewAsRolesWarningButton,
                                   size: g.zx.Sizes.MIN,
                                   onClick: () => {
-                                      A(!0);
+                                      x(!0);
                                   },
                                   focusProps: eW,
                                   children: eU.intl.string(eU.t.WAI6xs)

@@ -30,13 +30,13 @@ function m(e) {
             }),
             s()
         ),
-        I = {
+        S = {
             timeToLiveMs: _,
             reappearTimeMs: x
         },
-        S = r.useRef(I);
+        I = r.useRef(S);
     (r.useEffect(() => {
-        S.current = I;
+        I.current = S;
     }),
         r.useEffect(
             () => (
@@ -46,8 +46,8 @@ function m(e) {
                         O((t) => {
                             if (0 === t) return e;
                             let n = e - t,
-                                i = S.current.timeToLiveMs,
-                                r = i + S.current.reappearTimeMs;
+                                i = I.current.timeToLiveMs,
+                                r = i + I.current.reappearTimeMs;
                             return n > i ? t + r : t;
                         }));
                 }, 100)),

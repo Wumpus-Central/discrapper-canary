@@ -82,24 +82,24 @@ function x(e) {
         R[e] = (null != (t = R[e]) ? t : 0) + 1;
     }
 }
-function k() {
+function M() {
     for (let e in ((N = {}), (C = {}), R)) R[e] += 1;
     P += 1;
 }
-function M() {
-    k();
+function k() {
+    M();
 }
 function j() {
     $();
 }
 function U() {
-    k();
+    M();
 }
 function G(e) {
     var t;
     let { user: n } = e;
     if (n.id !== (null == (t = I.default.getCurrentUser()) ? void 0 : t.id)) return !1;
-    k();
+    M();
 }
 function B(e) {
     let {
@@ -296,11 +296,11 @@ function $() {
 }
 A(J, 'displayName', 'PermissionStore');
 let ee = new J(l.Z, {
-    BACKGROUND_SYNC: M,
-    CONNECTION_OPEN: M,
-    OVERLAY_INITIALIZE: M,
-    CACHE_LOADED: M,
-    CACHE_LOADED_LAZY: M,
+    BACKGROUND_SYNC: k,
+    CONNECTION_OPEN: k,
+    OVERLAY_INITIALIZE: k,
+    CACHE_LOADED: k,
+    CACHE_LOADED_LAZY: k,
     CONNECTION_CLOSED: j,
     GUILD_CREATE: U,
     GUILD_UPDATE: U,

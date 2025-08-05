@@ -8,9 +8,9 @@ var r = (function (e) {
 })({});
 let i = {
     CALLABLE: new Set([1, 3]),
-    TEXTUAL: new Set([0, 1, 2, 3, 5, 10, 11, 12, 13]),
+    TEXTUAL: new Set([0, 1, 2, 3, 5, 10, 11, 12, 13, 17, 18]),
     GUILD_THREADS_ONLY: new Set([15, 16]),
-    STICKERS: new Set([0, 1, 2, 3, 5, 10, 11, 12, 13, 15, 16]),
+    STICKERS: new Set([0, 1, 2, 3, 5, 10, 11, 12, 13, 15, 16, 17, 18]),
     READABLE: new Set([0, 1, 2, 3, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18]),
     GUILD: new Set([0, 2, 4, 5, 6, 10, 11, 12, 13, 14, 15, 16]),
     GUILD_CHANNEL: new Set([0, 2, 4, 5, 6, 13, 14, 15, 16]),
@@ -26,7 +26,7 @@ let i = {
     VOICE_EFFECTS: new Set([1, 2, 3, 11, 12]),
     GUILD_TEXT_ONLY: new Set([0, 5, 10, 11, 12]),
     LIMITED_CHANNEL_NAME: new Set([0, 5, 10, 11, 12, 15, 16]),
-    SEARCHABLE: new Set([0, 1, 2, 3, 5, 10, 11, 12, 13, 15, 16]),
+    SEARCHABLE: new Set([0, 1, 2, 3, 5, 10, 11, 12, 13, 15, 16, 17, 18]),
     GUILD_USER_CONTENT: new Set([0, 2, 5, 10, 11, 12, 13, 15, 16]),
     GUILD_TOPICAL: new Set([0, 5, 13, 14, 15, 16]),
     GUILD_WEBHOOKS: new Set([0, 2, 5, 15, 16]),
@@ -43,7 +43,7 @@ let i = {
     ICON_EMOJIS: new Set([0, 2, 5, 13, 15]),
     SUMMARIZEABLE: new Set([0]),
     CONTENT_ENTRY_EMBEDS: new Set([0, 1, 5]),
-    POLLS: new Set([0, 1, 2, 3, 5, 10, 11, 12, 13]),
+    POLLS: new Set([0, 1, 2, 3, 5, 10, 11, 12, 13, 17, 18]),
     ACTIVITY_LAUNCHABLE: new Set([0, 1, 2, 3]),
     ALL: new Set([0, 1, 2, 3, 4, 5, 6, 10, 11, 12, 13, 14, 15, 16, 17, 18])
 };

@@ -33,7 +33,7 @@ let L = 500;
 function x(e) {
     var t, n;
     let a,
-        { handleStepChange: x, trialId: k, trialFooterMessageOverride: M, reviewWarningMessage: j, planGroup: U, openInvoiceId: G, analyticsData: B, analyticsLocation: V, referralTrialOfferId: F, initialPlanId: Z, subscriptionTier: H, handleClose: Y } = e,
+        { handleStepChange: x, trialId: M, trialFooterMessageOverride: k, reviewWarningMessage: j, planGroup: U, openInvoiceId: G, analyticsData: B, analyticsLocation: V, referralTrialOfferId: F, initialPlanId: Z, subscriptionTier: H, handleClose: Y } = e,
         { activeSubscription: W, setUpdatedSubscription: K, contextMetadata: z, currencies: q, paymentSourceId: X, paymentSources: Q, priceOptions: J, purchaseError: $, purchasePreviewError: ee, purchaseTokenAuthState: et, selectedPlan: en, selectedSkuId: er, setCurrency: ei, setPaymentSourceId: ea, setPurchaseState: eo, setPurchaseError: es, step: el, purchaseState: ec, isPremium: eu, setHasAcceptedTerms: ed, purchaseType: ef, setEntitlementsGranted: e_, startedPaymentFlowWithPaymentSourcesRef: ep, invoicePreview: eh, inReverseTrial: em, enablePremiumBrandRefresh: eg } = (0, g.JL)(),
         { isGift: eE, giftMessage: eb, giftRecipient: ey, claimableRewards: eO } = (0, m.wD)(),
         { paymentModalBanner: ev } = (0, b.zb)();
@@ -43,7 +43,7 @@ function x(e) {
     i.useEffect(() => {
         (0, p.t)();
     }, []);
-    let eA = null != (n = null != k ? k : F) ? n : null,
+    let eA = null != (n = null != M ? M : F) ? n : null,
         eN = null != eA && (!eu || R.nG[eA].skus.includes(er)) ? eA : null,
         eC = (0, d.N)(F),
         eR = (0, u.Ng)(),
@@ -67,7 +67,7 @@ function x(e) {
         eD = (0, S.m)(Q, X),
         eL = null != en && R.o4.has(en.id) && null != eD && !(0, l.aQ)(eD) ? Error(w.intl.string(w.t['2ik8io'])) : null,
         ex = i.useRef(null),
-        [ek, eM] = i.useState(null),
+        [eM, ek] = i.useState(null),
         ej = !eE && null != eC && null != er && R.nG[eC.trial_id].skus.includes(er),
         eU = null == eR || null == (t = eR.discount) ? void 0 : t.plan_ids,
         eG = !eE && null != eR && null != eU && null != en && eU.includes(en.id),
@@ -112,11 +112,11 @@ function x(e) {
                         legalTermsNodeRef: ex,
                         hasLegalTermsFlash: eT,
                         trialId: eN,
-                        trialFooterMessageOverride: M,
+                        trialFooterMessageOverride: k,
                         reviewWarningMessage: j,
                         purchaseState: ec,
                         referralTrialOfferId: F,
-                        isTrial: ej || (null != k && null != M),
+                        isTrial: ej || (null != M && null != k),
                         isDiscount: eG,
                         handleClose: Y
                     })))
@@ -133,7 +133,7 @@ function x(e) {
                         setHasAcceptedTerms: ed,
                         legalTermsNodeRef: ex,
                         hasLegalTermsFlash: eT,
-                        onInvoiceError: (e) => eM(e),
+                        onInvoiceError: (e) => ek(e),
                         planGroup: U,
                         currencies: q,
                         onCurrencyChange: (e) => ei(e),
@@ -157,7 +157,7 @@ function x(e) {
                         onPurchaseError: (e) => es(e),
                         legalTermsNodeRef: ex,
                         flashLegalTerms: () => eS(!0),
-                        invoiceError: ek,
+                        invoiceError: eM,
                         planError: eL,
                         analyticsLocation: V,
                         baseAnalyticsData: B,

@@ -334,7 +334,7 @@ function x(e, t, n, i) {
         rx: n.stroke
     });
 }
-function k(e) {
+function M(e) {
     let { status: t, isMobile: n, isTyping: r, size: i } = e,
         a = n && !r && t === m.Skl.ONLINE,
         o = (0, h.UC)(i);
@@ -351,7 +351,7 @@ function k(e) {
         })
     );
 }
-function M(e) {
+function k(e) {
     let { children: t, size: n, onClick: i, onMouseDown: a, onKeyDown: s, onContextMenu: c, onMouseEnter: u, onMouseLeave: d, className: f, tabIndex: _, ariaLabel: p, ariaHidden: m, status: E, isMobile: y = !1, isTyping: O = !1, avatarDecoration: v, typingOffset: I, specs: T } = e,
         S = {
             width: (0, h.px)(n),
@@ -438,9 +438,9 @@ function U(e) {
         R = (0, h.UC)(i),
         P = null != C ? Math.ceil((R.status * h.D6 - R.status) / 2) : 0,
         L = R.size + P,
-        k = (0, u.vj)(C, a);
+        M = (0, u.vj)(C, a);
     return (0, r.jsx)(
-        M,
+        k,
         I(O({}, e), {
             ariaLabel: S,
             ariaHidden: T,
@@ -482,7 +482,7 @@ function U(e) {
                                           (0, r.jsx)(
                                               'rect',
                                               I(O({}, e, D(R, C, s, l)), {
-                                                  fill: k,
+                                                  fill: M,
                                                   mask: 'url(#'.concat((0, u.rs)(C, s, l), ')'),
                                                   className: b.pointerEvents
                                               })
@@ -526,7 +526,7 @@ function V(e) {
         [Y] = i.useState(() =>
             O(
                 { fill: a },
-                k({
+                M({
                     size: E,
                     status: n,
                     isMobile: t,
@@ -538,7 +538,7 @@ function V(e) {
             () =>
                 O(
                     { fill: F },
-                    k({
+                    M({
                         size: E,
                         status: v,
                         isMobile: l,
@@ -577,7 +577,7 @@ function V(e) {
             [V, v]
         );
     return (0, r.jsx)(
-        M,
+        k,
         I(O({}, e), {
             ariaLabel: L,
             ariaHidden: D,

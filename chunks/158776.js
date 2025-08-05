@@ -104,7 +104,7 @@ function x(e, t) {
         hidden: a
     };
 }
-function k(e) {
+function M(e) {
     if ((delete v[e], delete I[e], delete T[e], delete S[e], null == O[e])) return;
     let t = Object.values(O[e]),
         n = t.reduce((e, t) => {
@@ -117,7 +117,7 @@ function k(e) {
     n.status !== E.Skl.OFFLINE || (null != n.hiddenActivities && n.hiddenActivities.length > 0)
         ? ((v[e] = n.status),
           (I[e] = n.activities),
-          (T[e] = M(
+          (T[e] = k(
               Object.values(t).flatMap((e) => {
                   var t;
                   return null != (t = e.hiddenActivities) ? t : [];
@@ -128,14 +128,14 @@ function k(e) {
           ? delete O[e]
           : n.status === E.Skl.OFFLINE &&
             t.some((e) => null != e.hiddenActivities && e.hiddenActivities.length > 0) &&
-            (T[e] = M(
+            (T[e] = k(
                 Object.values(t).flatMap((e) => {
                     var t;
                     return null != (t = e.hiddenActivities) ? t : [];
                 })
             ));
 }
-function M(e) {
+function k(e) {
     return 0 === e.length
         ? e
         : [
@@ -175,7 +175,7 @@ function U(e) {
         };
     else {
         let { visible: e, hidden: c } = x(o.length > 1 ? [...o].sort(L) : o, n),
-            d = M([...(null != s ? s : []), ...c]),
+            d = k([...(null != s ? s : []), ...c]),
             f = u[t];
         ((o = null != f && a()(f.activities, e) ? f.activities : e),
             (u[t] = {
@@ -186,7 +186,7 @@ function U(e) {
                 processedAtTimestamp: l
             }));
     }
-    return (delete A[n], k(n), !0);
+    return (delete A[n], M(n), !0);
 }
 function G(e) {
     let { guildId: t, userId: n, status: r, clientStatus: i, activities: a, hiddenActivities: o, processedAtTimestamp: s } = e;
@@ -207,7 +207,7 @@ function G(e) {
         };
     else {
         let { visible: e, hidden: l } = x(a.length > 1 ? [...a].sort(L) : a, n),
-            u = M([...(null != o ? o : []), ...l]);
+            u = k([...(null != o ? o : []), ...l]);
         c[t] = {
             status: r,
             clientStatus: i,
@@ -221,7 +221,7 @@ function B(e, t) {
     if (t === m.default.getId()) return !1;
     let n = O[t];
     if (null == n || null == n[e]) return !1;
-    (delete n[e], 0 === Object.keys(n).length && delete O[t], k(t));
+    (delete n[e], 0 === Object.keys(n).length && delete O[t], M(t));
 }
 function V(e) {
     for (let t of h.default.keys(O)) B(e, t);

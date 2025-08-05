@@ -47,7 +47,7 @@ function w(e) {
     }
     return e;
 }
-function S(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,7 +65,7 @@ function S(e, t) {
         e
     );
 }
-function N(e, t) {
+function S(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -86,7 +86,7 @@ function N(e, t) {
 }
 let Z = l.forwardRef(function (e, t) {
     var { label: n, onFilter: l, isFiltered: o, isSorted: a, className: s } = e,
-        c = N(e, ['label', 'onFilter', 'isFiltered', 'isSorted', 'className']);
+        c = S(e, ['label', 'onFilter', 'isFiltered', 'isSorted', 'className']);
     let d = o ? 'header-primary' : 'header-secondary';
     return (
         a && (d = 'text-brand'),
@@ -94,7 +94,7 @@ let Z = l.forwardRef(function (e, t) {
             className: i()(H.tableHeaderCellContainer, s),
             children: (0, r.jsxs)(
                 u.P3F,
-                S(w({}, c), {
+                N(w({}, c), {
                     innerRef: t,
                     onClick: l,
                     className: i()(H.tableHeaderCell, { [H.tableHeaderCellWithFilter]: null != l }),
@@ -160,7 +160,7 @@ function D(e) {
                             children: (e) =>
                                 (0, r.jsx)(
                                     u.P3F,
-                                    S(w({}, e), {
+                                    N(w({}, e), {
                                         onClick: K,
                                         className: H.tableHeaderCell,
                                         children: (0, r.jsx)(u.XZJ, {
@@ -187,10 +187,9 @@ function D(e) {
                                           guildId: t,
                                           onClose: y.dG4
                                       }),
-                                  closeOnScroll: !0,
                                   children: (e) => {
                                       var { onClick: t } = e,
-                                          n = N(e, ['onClick']);
+                                          n = S(e, ['onClick']);
                                       return (0, r.jsx)(
                                           Z,
                                           w(
@@ -218,10 +217,9 @@ function D(e) {
                                           guildId: t,
                                           onClose: y.dG4
                                       }),
-                                  closeOnScroll: !0,
                                   children: (e) => {
                                       var { onClick: t } = e,
-                                          n = N(e, ['onClick']);
+                                          n = S(e, ['onClick']);
                                       return (0, r.jsx)(
                                           Z,
                                           w(
@@ -264,10 +262,9 @@ function D(e) {
                                   guildId: t,
                                   onClose: y.dG4
                               }),
-                          closeOnScroll: !0,
                           children: (e) => {
                               var { onClick: t } = e,
-                                  n = N(e, ['onClick']);
+                                  n = S(e, ['onClick']);
                               return (0, r.jsx)(
                                   Z,
                                   w(
@@ -303,7 +300,7 @@ function D(e) {
                     },
                     children: (e) => {
                         var { onClick: t } = e,
-                            n = N(e, ['onClick']);
+                            n = S(e, ['onClick']);
                         return (0, r.jsx)(
                             Z,
                             w(
@@ -339,7 +336,6 @@ function D(e) {
                                     onClose: n
                                 });
                             },
-                            closeOnScroll: !0,
                             children: (t) =>
                                 (0, r.jsx)(Z, {
                                     ref: R,

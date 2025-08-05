@@ -132,8 +132,8 @@ function D(e) {
     let { channel: t, title: n, closePopout: a, onFocus: l, onSelectEmoji: u, onSelectDisabledEmoji: d, onExpandedToggle: p, emojiSearchProps: m, recentlyUsedEmojis: b, analyticsOverride: T, ref: A } = e,
         D = (0, f.Dt)(),
         [L, x] = i.useState(!1),
-        k = (0, _.wC)(t.guild_id),
-        M = (0, s.uniqBy)([...k, ...R], 'name')
+        M = (0, _.wC)(t.guild_id),
+        k = (0, s.uniqBy)([...M, ...R], 'name')
             .filter(
                 (e) =>
                     !E.ZP.isEmojiFilteredOrLocked({
@@ -143,7 +143,7 @@ function D(e) {
                     })
             )
             .slice(0, y.e5);
-    null != b && b.length > 0 && M.splice(M.length - 1, 1, b[0]);
+    null != b && b.length > 0 && k.splice(k.length - 1, 1, b[0]);
     let j = (e) => {
             (x(e), null == p || p(e));
         },
@@ -195,7 +195,7 @@ function D(e) {
                         className: I.slotsContainer,
                         children: (0, r.jsx)('div', {
                             className: o()(I.slots, I.slotsWide),
-                            children: M.map((e) => {
+                            children: k.map((e) => {
                                 let n = E.ZP.isEmojiDisabled({
                                     emoji: e,
                                     channel: t,

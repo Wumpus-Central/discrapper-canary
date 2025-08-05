@@ -23,8 +23,8 @@ var r = n(255367),
     H = n(433355),
     _ = n(430824),
     w = n(496675),
-    S = n(594174),
-    N = n(203893),
+    N = n(594174),
+    S = n(203893),
     Z = n(777288),
     D = n(5192),
     L = n(709054),
@@ -140,7 +140,7 @@ let X = l.memo(function (e) {
                         text: z.intl.string(z.t.PK9FQ0),
                         children: (e) => {
                             let { onMouseEnter: t, onMouseLeave: n } = e;
-                            return (0, r.jsx)(N.Z, {
+                            return (0, r.jsx)(S.Z, {
                                 width: 20,
                                 height: 20,
                                 onMouseEnter: t,
@@ -506,7 +506,7 @@ let ee = l.memo(function (e) {
             h = (null == f ? void 0 : f.details.userId) === t,
             j = (0, u.e7)([V.Z], () => V.Z.getEnhancedMember(n, t), [n, t]),
             v = (0, A.zq)(j),
-            y = (0, u.e7)([S.default], () => S.default.getUser(t), [t]),
+            y = (0, u.e7)([N.default], () => N.default.getUser(t), [t]),
             O = (0, x.m)(n),
             _ = (0, A.RN)(null != j ? j : void 0),
             w = l.useCallback(
@@ -515,7 +515,7 @@ let ee = l.memo(function (e) {
                 },
                 [_]
             ),
-            N = l.useCallback(
+            S = l.useCallback(
                 (e) => {
                     (e.stopPropagation(), e.preventDefault(), null != j && (0, A.RE)(j, b));
                 },
@@ -536,7 +536,7 @@ let ee = l.memo(function (e) {
                   style: o,
                   className: i()(G.roundedRow, G.memberRowContainer, s && G.selected, h && G.memberSelected, d && G.loading),
                   equalityFn: D,
-                  onClick: N,
+                  onClick: S,
                   onContextMenu: w,
                   children: (0, r.jsx)(et, {
                       member: j,

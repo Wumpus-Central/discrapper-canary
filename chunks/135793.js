@@ -85,8 +85,8 @@ function x(e, t) {
         e
     );
 }
-let k = 190,
-    M = 178,
+let M = 190,
+    k = 178,
     j = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
     U = (e) => {
         let { channelId: t, message: i, onRedeem: a, onClose: o, buttonUseState: c = 'activate', source: u } = e,
@@ -172,11 +172,11 @@ function B(e) {
             }
             return 0;
         }, [y, R, s]),
-        k = (0, i.useMemo)(() => (0 === x ? 1 : f ? 2 : 3 * (null == _)), [f, _, x]);
+        M = (0, i.useMemo)(() => (0 === x ? 1 : f ? 2 : 3 * (null == _)), [f, _, x]);
     return (0, r.jsx)(V, {
         channel: t,
         buttonPurchaseState: x,
-        buttonDisabledState: k,
+        buttonDisabledState: M,
         price: h,
         onActionClick: L,
         loading: P,
@@ -452,8 +452,8 @@ let V = (e) => {
                 children: [
                     (0, r.jsx)(l.Eep, {
                         src: P,
-                        width: M,
-                        height: k
+                        width: k,
+                        height: M
                     }),
                     (0, r.jsx)(l.Text, {
                         variant: 'text-md/normal',

@@ -85,20 +85,19 @@ let _ = (e) =>
           };
 class p extends o.Z {
     static fromServer(e) {
-        var { store_listing_id: t, sku_id: n, unpublished_at: r, banner_asset: i, styles: a } = e,
-            o = d(e, ['store_listing_id', 'sku_id', 'unpublished_at', 'banner_asset', 'styles']);
-        let s = null != r ? new Date(r) : null;
+        var { store_listing_id: t, sku_id: n, unpublished_at: r, styles: i } = e,
+            a = d(e, ['store_listing_id', 'sku_id', 'unpublished_at', 'styles']);
+        let o = null != r ? new Date(r) : null;
         return new p(
-            u(l({}, o), {
+            u(l({}, a), {
                 storeListingId: t,
                 skuId: n,
-                unpublishedAt: s,
-                bannerAsset: i,
-                styles: _(a)
+                unpublishedAt: o,
+                styles: _(i)
             })
         );
     }
     constructor(e) {
-        (super(), s(this, 'storeListingId', void 0), s(this, 'skuId', void 0), s(this, 'name', void 0), s(this, 'summary', void 0), s(this, 'banner', void 0), s(this, 'bannerAsset', void 0), s(this, 'unpublishedAt', void 0), s(this, 'styles', void 0), (this.storeListingId = e.storeListingId), (this.skuId = e.skuId), (this.name = e.name), (this.summary = e.summary.trim()), (this.banner = e.banner), (this.unpublishedAt = e.unpublishedAt), (this.styles = e.styles), (this.bannerAsset = e.bannerAsset));
+        (super(), s(this, 'storeListingId', void 0), s(this, 'skuId', void 0), s(this, 'name', void 0), s(this, 'summary', void 0), s(this, 'unpublishedAt', void 0), s(this, 'styles', void 0), (this.storeListingId = e.storeListingId), (this.skuId = e.skuId), (this.name = e.name), (this.summary = e.summary.trim()), (this.unpublishedAt = e.unpublishedAt), (this.styles = e.styles));
     }
 }

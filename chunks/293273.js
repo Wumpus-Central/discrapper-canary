@@ -138,7 +138,7 @@ function x(e) {
     let { localActivities: t } = e;
     ((R = S({}, t)), P());
 }
-function k() {
+function M() {
     let e = {},
         t = !1;
     for (let [r, [i, a]] of Object.entries(R)) {
@@ -149,8 +149,8 @@ function k() {
     }
     return t ? ((R = e), 'APPLICATION_ACTIVITIES_CHANGED') : 'NO_CHANGES';
 }
-function M() {
-    (k(), P());
+function k() {
+    (M(), P());
 }
 class j extends (r = l.ZP.Store) {
     initialize() {
@@ -195,7 +195,7 @@ let U = new j(c.Z, {
     USER_CONNECTIONS_UPDATE: P,
     STREAM_START: P,
     STREAM_STOP: P,
-    USER_SETTINGS_PROTO_UPDATE: M,
+    USER_SETTINGS_PROTO_UPDATE: k,
     EMBEDDED_ACTIVITY_CLOSE: P,
     UPDATE_HANG_STATUS: P,
     RUNNING_GAME_TOGGLE_DETECTION: P

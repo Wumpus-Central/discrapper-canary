@@ -209,10 +209,10 @@ function L(e) {
 function x(e) {
     return !('incomplete' in e);
 }
-function k(e) {
+function M(e) {
     if (null != e.users) for (let t of e.users) (t.id in y && x(t)) || (y[t.id] = new f.Z(t));
 }
-function M(e) {
+function k(e) {
     let { user: t } = e;
     if (!N(t)) return !1;
     C(t);
@@ -572,9 +572,9 @@ class eD extends m.Z {
             CONNECTION_OPEN: D,
             CONNECTION_OPEN_SUPPLEMENTAL: L,
             UPDATE_CLIENT_PREMIUM_TYPE: G,
-            OVERLAY_INITIALIZE: k,
+            OVERLAY_INITIALIZE: M,
             CACHE_LOADED: (e) => this.handleLoadCache(e),
-            USER_UPDATE: M,
+            USER_UPDATE: k,
             USER_PROFILE_FETCH_SUCCESS: j,
             CURRENT_USER_UPDATE: U,
             PRESENCE_UPDATES: ee,

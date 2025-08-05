@@ -1,5 +1,5 @@
 (n.d(t, {
-    As: () => M,
+    As: () => k,
     By: () => j,
     Lu: () => U,
     e9: () => Y,
@@ -132,7 +132,7 @@ function x(e, t, n, r) {
     }
     throw Error('Unexpected invoice plan: '.concat(e.subscriptionPlanId));
 }
-function k(e) {
+function M(e) {
     var t;
     let { invoiceItem: n, overrideAmount: i, showGuildSubscriptionAdjustmentTooltip: a, currency: o, className: s, isPrepaidPaymentSource: d, referralTrialOfferId: f, inTrialPeriod: _ } = e,
         h = (0, c.e7)([p.Z], () => p.Z.get(n.subscriptionPlanId)),
@@ -189,7 +189,7 @@ function k(e) {
         inTrialPeriod: _
     });
 }
-function M(e) {
+function k(e) {
     let { label: t, tooltipText: n, tooltipAriaLabel: i } = e;
     return (0, r.jsxs)('div', {
         className: N.invoiceItemLabelWithIcon,
@@ -230,7 +230,7 @@ function j(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != a
-                ? (0, r.jsx)(k, {
+                ? (0, r.jsx)(M, {
                       invoiceItem: a,
                       currency: t.currency,
                       isPrepaidPaymentSource: n
@@ -268,7 +268,7 @@ function U(e) {
         m = o.filter((e) => e.subscriptionPlanId === T.Xh.PREMIUM_MONTH_GUILD || e.subscriptionPlanId === T.Xh.PREMIUM_YEAR_GUILD).reduce((e, t) => e + t.amount, 0);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(k, {
+            (0, r.jsx)(M, {
                 invoiceItem: s,
                 currency: t.currency,
                 overrideAmount: p,
@@ -278,7 +278,7 @@ function U(e) {
             0 === h || f
                 ? null
                 : (0, r.jsx)(v.B1, {
-                      label: (0, r.jsx)(M, {
+                      label: (0, r.jsx)(k, {
                           label: A.intl.formatToPlainString(A.t.ZSVgeX, { planName: (0, g.PV)(n.id) ? (0, g.aq)(n.id) : n.name }),
                           tooltipText: A.intl.string(A.t.JmwQJC)
                       }),
@@ -286,7 +286,7 @@ function U(e) {
                   }),
             0 !== m
                 ? (0, r.jsx)(v.B1, {
-                      label: (0, r.jsx)(M, {
+                      label: (0, r.jsx)(k, {
                           label: A.intl.string(A.t['+as5ZW']),
                           tooltipText: A.intl.format(A.t.UDop9f, {}),
                           tooltipAriaLabel: A.intl.string(A.t.P68ePD)
@@ -346,7 +346,7 @@ function F(e) {
                           (0, r.jsx)(v.Z9, { children: A.intl.string(A.t.tuqjWV) }),
                           B(G((0, y.j)(n.invoiceItems))).map((e) =>
                               (0, r.jsx)(
-                                  k,
+                                  M,
                                   {
                                       invoiceItem: e,
                                       currency: n.currency,
@@ -363,7 +363,7 @@ function F(e) {
             B(G((0, y.j)(i.invoiceItems))).map((e) => {
                 let n = null != s && !s.some((t) => t.subscriptionPlanId === e.subscriptionPlanId && t.quantity === e.quantity);
                 return (0, r.jsx)(
-                    k,
+                    M,
                     {
                         invoiceItem: e,
                         currency: i.currency,

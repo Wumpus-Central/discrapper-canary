@@ -19,7 +19,7 @@
     i3: () => j,
     jW: () => D,
     kG: () => V,
-    qc: () => k,
+    qc: () => M,
     s5: () => T,
     zH: () => N
 }),
@@ -255,7 +255,7 @@ function x(e, t, n) {
               anchorOffset: n
           };
 }
-function k(e, t) {
+function M(e, t) {
     let n,
         { currentToken: r, nextToken: i, previousToken: o } = (e = null != e ? e : {});
     if (0 === t.length)
@@ -297,7 +297,7 @@ function k(e, t) {
               token: n
           });
 }
-function M(e) {
+function k(e) {
     if (null == e.match(/([\\" ])/g)) return e;
     {
         let t = e.replaceAll(/([\\"])/g, (e, t) => '\\'.concat(t));
@@ -313,7 +313,7 @@ function j(e, t) {
             n = n.concat(
                 e.results.map((n) => {
                     let i = n.text;
-                    if ((null != n.channel && (i = M(i)), t.type === E.Sap.FILTER_ALL)) {
+                    if ((null != n.channel && (i = k(i)), t.type === E.Sap.FILTER_ALL)) {
                         var a;
                         r = null != (a = n.group) ? a : r;
                         let e = g.ZP[r];
@@ -380,7 +380,7 @@ function K(e) {
         let r = l.ZP.getTextChannelNameDisambiguations(e.getGuildId())[e.id];
         (null == r ? void 0 : r.name) != null && (t = r.name);
     }
-    return ((t = M(t)), n) ? '#'.concat(t) : t;
+    return ((t = k(t)), n) ? '#'.concat(t) : t;
 }
 function z() {
     var e, t;

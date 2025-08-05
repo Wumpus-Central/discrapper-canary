@@ -92,8 +92,8 @@ class D {
 }
 let L = new l.Z('OverlayStoreV3'),
     x = new Set(),
-    k = new Set(),
-    M = {},
+    M = new Set(),
+    k = {},
     j = new D(),
     U = null,
     G = !1,
@@ -177,19 +177,19 @@ let X = new q(),
     Q = new Set();
 function J(e) {
     var t;
-    return null != (t = M[e]) ? t : {};
+    return null != (t = k[e]) ? t : {};
 }
 function $(e, t) {
     var n, r;
-    let i = null == (n = M[e]) ? void 0 : n.error,
-        a = null == (r = M[e]) ? void 0 : r.error_description;
-    ((M[e] = R({}, M[e], t)), null != i && (M[e].error = i), null != a && (M[e].error_description = a));
+    let i = null == (n = k[e]) ? void 0 : n.error,
+        a = null == (r = k[e]) ? void 0 : r.error_description;
+    ((k[e] = R({}, k[e], t)), null != i && (k[e].error = i), null != a && (k[e].error_description = a));
 }
 function ee(e) {
     var t, n, r;
-    if (null != M[e]) return;
+    if (null != k[e]) return;
     let i = u.ZP.getGameForPID(e);
-    M[e] = {
+    k[e] = {
         overlay_method: b.gl[null != (t = Y[e]) ? t : b.gl.OutOfProcess],
         success: !1,
         game_name: null != (n = null == i ? void 0 : i.name) ? n : null,
@@ -345,14 +345,14 @@ function e_() {
     } catch (e) {
         (L.error('Error setting background throttling:', e), en(null != V ? V : m.UNSET_PID, e));
     }
-    (ey(), k.clear(), O.Z.resetWindowState(!1), null != V && ep(V), (V = null), (0, m.setPID)(null != V ? V : m.UNSET_PID));
+    (ey(), M.clear(), O.Z.resetWindowState(!1), null != V && ep(V), (V = null), (0, m.setPID)(null != V ? V : m.UNSET_PID));
 }
 function ep(e) {
     p.default.track(N.rMx.OVERLAY_HOOK_RESULT, J(e));
 }
 function eh(e) {
     try {
-        (L.verbose('Refreshing OOP host window for pid '.concat(e)), eu(e), k.delete(null != V ? V : m.UNSET_PID), (V = e), (0, m.setPID)(null != V ? V : m.UNSET_PID));
+        (L.verbose('Refreshing OOP host window for pid '.concat(e)), eu(e), M.delete(null != V ? V : m.UNSET_PID), (V = e), (0, m.setPID)(null != V ? V : m.UNSET_PID));
         let t = d.Z.getWindow(A.$J),
             n = () =>
                 new Promise((e) => {
@@ -473,18 +473,18 @@ function ex(e) {
     let { oopEnabled: t } = e;
     eS(t);
 }
-function ek(e) {
+function eM(e) {
     let { zones: t } = e;
     X.setClickZones(t);
 }
-function eM(e) {
+function ek(e) {
     H[e.pid] = e.overlayState;
 }
 function ej(e) {
     let { locked: t, pid: n } = e,
         r = H[n];
     if (t || r !== b.mM.OVERLAY_CRASHED_DISABLED) {
-        if ((t ? k.delete(n) : k.add(n), null != Z && (clearTimeout(Z), (Z = null), t))) return;
+        if ((t ? M.delete(n) : M.add(n), null != Z && (clearTimeout(Z), (Z = null), t))) return;
         t
             ? ec(t)
             : (Z = setTimeout(() => {
@@ -518,7 +518,7 @@ class eH extends (r = i.ZP.Store) {
         (this.waitFor(u.ZP, f.default, c.Z), this.syncWith([c.Z], eV));
     }
     isInputLocked(e) {
-        return !k.has(e);
+        return !M.has(e);
     }
     isSupported() {
         return T.iP;
@@ -592,13 +592,13 @@ let eY = new eH(
                   RUNNING_GAMES_CHANGE: eN,
                   RUNNING_GAME_TOGGLE_OVERLAY: eC,
                   OVERLAY_FORCE_RENDER_MODE: eZ,
-                  OVERLAY_SET_CLICK_ZONES: ek,
+                  OVERLAY_SET_CLICK_ZONES: eM,
                   OVERLAY_SET_INPUT_LOCKED: ej,
                   OVERLAY_ACTIVATE_REGION: eU,
                   OVERLAY_DEACTIVATE_ALL_REGIONS: eG,
                   OVERLAY_RENDER_DEBUG_MODE: eB,
                   OVERLAY_UPDATE_OVERLAY_METHOD: eP,
-                  OVERLAY_UPDATE_OVERLAY_STATE: eM,
+                  OVERLAY_UPDATE_OVERLAY_STATE: ek,
                   OVERLAY_SET_GPU_BOOST_REQUESTED: eD,
                   OVERLAY_CRASHED: ew,
                   OVERLAY_FOCUSED: eO

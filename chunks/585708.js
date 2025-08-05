@@ -20,7 +20,7 @@ var r = n(13245),
     v = n(388032);
 function E(e, t, n, E) {
     var _;
-    let { icon: x, title: I, body: S } = (0, a.Xi)(e, t, n),
+    let { icon: x, title: S, body: I } = (0, a.Xi)(e, t, n),
         { trackView: j, trackClick: C } = (0, y.R)(O.n0.TextChat, {
             notif_type: O.n0.TextChat,
             notif_user_id: null == (_ = t.author) ? void 0 : _.id,
@@ -32,7 +32,7 @@ function E(e, t, n, E) {
         });
     return {
         icon: x,
-        title: I,
+        title: S,
         body:
             t.content.length > 0
                 ? (0, l.ZP)(t, {
@@ -40,7 +40,7 @@ function E(e, t, n, E) {
                       formatInline: !0,
                       hideSimpleEmbedContent: !1
                   }).content
-                : S,
+                : I,
         hint: (e, t) => (e && !t ? null : (0, g.Q)((0, y.P)(), v.t.ykjOAA, v.intl.string(v.t.jZkzVF))),
         maxBodyLines: 2,
         renderFooter: (n, r, o) =>

@@ -86,7 +86,7 @@ function v(e, t) {
 function I(e) {
     var t;
     let { legalTermsNodeRef: n, invoiceError: i, planError: a, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: g, isGift: b, planGroup: I, isPrepaid: T, isTrial: S, makePurchase: A, needsPaymentSource: N, inReverseTrial: C, onNext: R, onPaymentSourceAdd: P } = e,
-        { application: w, selectedPlan: D, hasAcceptedTerms: L, purchaseType: x, paymentSourceId: k, activeSubscription: M, devShelfFetchState: j, hasPaymentSources: U } = (0, c.JL)(),
+        { application: w, selectedPlan: D, hasAcceptedTerms: L, purchaseType: x, paymentSourceId: M, activeSubscription: k, devShelfFetchState: j, hasPaymentSources: U } = (0, c.JL)(),
         G = O({
             purchaseType: x,
             plan: D,
@@ -95,7 +95,7 @@ function I(e) {
             planGroup: I,
             isPrepaidPaymentSource: T,
             inReverseTrial: C,
-            paymentSourceId: k,
+            paymentSourceId: M,
             hasPaymentSources: U
         }),
         { analyticsLocations: B } = (0, l.ZP)();
@@ -203,12 +203,12 @@ function I(e) {
                     )
                 )
         });
-    else if (C && null != M && null != k)
+    else if (C && null != k && null != M)
         return (0, r.jsx)(_.Z, {
-            activeSubscription: M,
+            activeSubscription: k,
             onNext: R,
             isSubmitting: h,
-            paymentSourceId: k,
+            paymentSourceId: M,
             buttonLabel: G,
             analyticsLocations: B
         });

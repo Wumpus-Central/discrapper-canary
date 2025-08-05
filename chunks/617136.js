@@ -1,9 +1,9 @@
 (n.d(t, {
     Ic: () => x,
-    O5: () => M,
+    O5: () => k,
     Zk: () => j,
     _3: () => L,
-    _F: () => k,
+    _F: () => M,
     _b: () => N,
     dA: () => w,
     jZ: () => D,
@@ -159,7 +159,7 @@ function x(e) {
         sourceQuestContent: n
     });
 }
-function k() {
+function M() {
     let e = (0, _.WD)();
     return r.useCallback(
         (t) => {
@@ -168,8 +168,8 @@ function k() {
         [e]
     );
 }
-function M() {
-    let e = k();
+function k() {
+    let e = M();
     return r.useCallback(
         (t) => {
             let { questId: n, questContent: r, questContentCTA: o, questContentPosition: s, questContentRowIndex: c, trackGuildAndChannelMetadata: u = !1, sourceQuestContent: d } = t,

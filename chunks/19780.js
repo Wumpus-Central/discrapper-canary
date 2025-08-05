@@ -219,12 +219,12 @@ function L() {
 function x() {
     y = null;
 }
-function k(e) {
+function M(e) {
     let { guild: t } = e;
     if (null == r || r.guildId !== t.id) return !1;
     C();
 }
-function M(e) {
+function k(e) {
     let { channelId: t } = e;
     if (null == r || r.channelId !== t) return !1;
     C();
@@ -392,10 +392,10 @@ let z = new K(
               CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: L,
               REMOTE_SESSION_CONNECT: L,
               CLEAR_LAST_SESSION_VOICE_CHANNEL_ID: x,
-              GUILD_DELETE: k,
+              GUILD_DELETE: M,
               CHANNEL_DELETE: j,
               THREAD_DELETE: j,
-              CALL_DELETE: M,
+              CALL_DELETE: k,
               APP_STATE_UPDATE: G,
               RTC_DEBUG_SET_SIMULCAST_OVERRIDE: Y
           }

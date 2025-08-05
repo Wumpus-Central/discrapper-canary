@@ -211,8 +211,8 @@ let en = i.memo(
             }, []),
             { editorHeight: e3, handleResize: e7 } = (0, H.oR)(eo),
             {
-                handleTab: e5,
-                handleEnter: e8,
+                handleTab: e8,
+                handleEnter: e5,
                 handleMoveSelection: e6
             } = (function (e, t, n) {
                 let r = i.useCallback(() => {
@@ -361,8 +361,8 @@ let en = i.memo(
                                                             onFocus: ec,
                                                             onKeyDown: eu,
                                                             onSubmit: eQ,
-                                                            onTab: e5,
-                                                            onEnter: e8,
+                                                            onTab: e8,
+                                                            onEnter: e5,
                                                             onMoveSelection: e6,
                                                             onSelectionChanged: eK,
                                                             onMaybeShowAutocomplete: e0,

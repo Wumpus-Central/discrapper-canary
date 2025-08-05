@@ -40,8 +40,8 @@ var c = n(442837),
     D = n(102172),
     L = n(871118),
     x = n(565138),
-    k = n(66999),
-    M = n(359110),
+    M = n(66999),
+    k = n(359110),
     j = n(12168),
     U = n(237583),
     G = n(131704),
@@ -192,7 +192,7 @@ function ev(e) {
         D = null != R && 0 === s.length ? [R] : s,
         L = D.length > 0,
         x = D.length >= 2,
-        [k, M] = i.useState(!L),
+        [M, k] = i.useState(!L),
         j = X.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
         U = null != t && g ? ed.intl.formatToPlainString(ed.t['8lzR/f'], { channel: '#'.concat(t.name) }) : ed.intl.formatToPlainString(ed.t['4c+CAw'], { channel: '@'.concat(j) }),
         G = g ? ed.intl.string(ed.t.Z2CUgo) : ed.intl.string(ed.t.XLGiTE),
@@ -264,10 +264,10 @@ function ev(e) {
         },
         Y = null != f ? f : null != C ? C : null != w ? w : void 0,
         W = () => {
-            (E((e) => !e), k && (null == b || b.focus()));
+            (E((e) => !e), M && (null == b || b.focus()));
         },
         K = (e) => {
-            (M(e), e && (null == b || b.focus()));
+            (k(e), e && (null == b || b.focus()));
         };
     return (0, r.jsxs)('div', {
         style: { pointerEvents: I ? 'none' : 'all' },
@@ -292,7 +292,7 @@ function ev(e) {
                       })
                   }),
             (0, r.jsxs)('div', {
-                className: k ? ef.inputContainerShareToChannel : ef.hiddenButRenderedInputField,
+                className: M ? ef.inputContainerShareToChannel : ef.hiddenButRenderedInputField,
                 children: [
                     (0, r.jsx)(v.A7, {
                         placeholder: U,
@@ -341,7 +341,7 @@ function ev(e) {
                         })
                 ]
             }),
-            !1 === k &&
+            !1 === M &&
                 (0, r.jsxs)('div', {
                     className: ef.primaryActionPopoutActionButtons,
                     children: [
@@ -624,8 +624,8 @@ function eN(e) {
             { onOpened: () => (null == h ? void 0 : h(ec.xP.OPENED_GAME_PROFILE)) }
         ),
         N = I ? A : void 0,
-        { activity: x, activityApplication: k, fallbackApplication: M } = (0, en.Z)(v),
-        { largeImage: j, smallImage: U } = (0, Q.YC)(x, null != k ? k : M),
+        { activity: x, activityApplication: M, fallbackApplication: k } = (0, en.Z)(v),
+        { largeImage: j, smallImage: U } = (0, Q.YC)(x, null != M ? M : k),
         { largeImage: G } = (0, Q.rv)({ entry: v });
     return (0, r.jsxs)('div', {
         className: ef.popoutContentWrapper,
@@ -755,7 +755,7 @@ function eR(e) {
                       children: [
                           (0, r.jsxs)(p.P3F, {
                               'aria-label': ed.intl.string(ed.t['W/A4Qk']),
-                              onClick: () => (0, M.Kh)(n.id),
+                              onClick: () => (0, k.Kh)(n.id),
                               className: ef.voiceChannelPopoutReactorChannel,
                               children: [
                                   (0, r.jsx)(x.Z, {
@@ -811,7 +811,7 @@ function eR(e) {
 function eP(e) {
     let { channel: t, entry: n, onVoiceChannelPreview: a } = e,
         { streamPreviewUrl: o, channel: s } = (0, ei.Z)(n),
-        { needSubscriptionToAccess: l } = (0, k.Z)(null == t ? void 0 : t.id),
+        { needSubscriptionToAccess: l } = (0, M.Z)(null == t ? void 0 : t.id),
         u = (0, c.e7)([V.Z], () => (null != s ? V.Z.getGuild(s.guild_id) : void 0)),
         f = (0, c.Wu)([K.ZP], () => (null != s ? K.ZP.getVoiceStatesForChannel(s) : []), [s]),
         h = (0, c.e7)([W.Z], () => W.Z.isInChannel(null == s ? void 0 : s.id)),
@@ -831,7 +831,7 @@ function eP(e) {
         };
     let E = null != o,
         b = () => {
-            (m.Z.updateChatOpen(s.id, !0), (0, M.Kh)(s.id), null == a || a(s));
+            (m.Z.updateChatOpen(s.id, !0), (0, k.Kh)(s.id), null == a || a(s));
         },
         y = () => {
             I.Z.handleVoiceConnect({

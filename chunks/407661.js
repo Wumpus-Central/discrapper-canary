@@ -90,8 +90,8 @@ function A(e) {
         D = T(i, a),
         L = (0, h.NE)(i, a),
         x = n.showThreadPromptOnReply && D >= v && L,
-        k = () => (0, p.uL)(b.Z5c.CHANNEL(i.getGuildId(), i.id, a.id));
-    function M(e) {
+        M = () => (0, p.uL)(b.Z5c.CHANNEL(i.getGuildId(), i.id, a.id));
+    function k(e) {
         (e.stopPropagation(), (0, _.qx)(i.id, !s));
     }
     function j(e) {
@@ -106,7 +106,7 @@ function A(e) {
                     className: O.replyBar,
                     children: [
                         (0, r.jsx)(l.P3F, {
-                            onClick: k,
+                            onClick: M,
                             focusProps: {
                                 offset: {
                                     top: -8,
@@ -149,7 +149,7 @@ function A(e) {
                                                     return (0, r.jsx)(l.P3F, {
                                                         role: 'switch',
                                                         'aria-checked': s,
-                                                        onClick: M,
+                                                        onClick: k,
                                                         onMouseEnter: t,
                                                         onMouseLeave: n,
                                                         onFocus: i,

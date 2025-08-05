@@ -57,26 +57,27 @@ let d = {
                 }));
     },
     sendActivityInvite(e) {
-        let { channelId: t, type: n, activity: r, content: i, location: l } = e,
-            d = s.Z.getChannel(t);
-        if (null == d) return Promise.resolve(null);
-        let f = o.ZP.parse(d, null != i ? i : '');
-        return c.Z.sendMessage(d.id, f, !1, {
+        let { channelId: t, type: n, activity: r, content: i, targetUserId: l, location: d } = e,
+            f = s.Z.getChannel(t);
+        if (null == f) return Promise.resolve(null);
+        let _ = o.ZP.parse(f, null != i ? i : '');
+        return c.Z.sendMessage(f.id, _, !1, {
             activityAction: {
                 type: n,
-                activity: r
+                activity: r,
+                targetUserId: l
             }
         }).then(
             (e) => (
                 a.ZP.trackWithMetadata(u.rMx.INVITE_SENT, {
-                    location: l,
+                    location: d,
                     invite_type: r.type === u.IIU.LISTENING ? u.dAT.SPOTIFY : u.dAT.APPLICATION,
                     application_id: r.application_id,
-                    guild_id: d.getGuildId(),
-                    channel_id: d.id,
+                    guild_id: f.getGuildId(),
+                    channel_id: f.id,
                     message_id: null != e ? e.body.id : null
                 }),
-                Promise.resolve(d)
+                Promise.resolve(f)
             ),
             (e) => Promise.reject(e)
         );

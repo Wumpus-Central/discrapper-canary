@@ -65,11 +65,11 @@ function x(e) {
     let { userTrialOffer: t } = e;
     null != t && (m.delete(t.id), g.add(t.id), E.set(t.id, t));
 }
-function k(e) {
+function M(e) {
     let { userTrialOfferId: t } = e;
     (m.delete(t), g.add(t));
 }
-function M(e) {
+function k(e) {
     let { message: t } = e;
     G(t);
 }
@@ -149,12 +149,12 @@ let H = new Z(o.Z, {
     BILLING_CREATE_REFERRAL_SUCCESS: w,
     CREATE_REFERRALS_SUCCESS: D,
     BILLING_REFERRAL_RESOLVE_SUCCESS: x,
-    BILLING_REFERRAL_RESOLVE_FAIL: k,
+    BILLING_REFERRAL_RESOLVE_FAIL: M,
     REFERRALS_FETCH_ELIGIBLE_USER_START: B,
     REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: V,
     REFERRALS_FETCH_ELIGIBLE_USER_FAIL: F,
     LOAD_MESSAGES_SUCCESS: j,
-    MESSAGE_CREATE: M,
+    MESSAGE_CREATE: k,
     LOAD_MESSAGES_AROUND_SUCCESS: j,
     LOGOUT: A
 });

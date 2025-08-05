@@ -1,78 +1,91 @@
 n.d(t, {
-    $v: () => o,
-    dQ: () => a,
-    wR: () => s,
-    yy: () => c
+    $v: () => u,
+    _0: () => c,
+    dQ: () => s,
+    wR: () => d,
+    yy: () => p
 });
 var r = n(594174),
-    i = n(981631),
-    l = n(388032);
-function a(e, t) {
+    i = n(5192),
+    l = n(981631),
+    a = n(388032),
+    o = n(704483);
+function s(e, t) {
     switch (t) {
-        case i.mFx.LISTEN:
-            return l.intl.formatToPlainString(l.t['/8czHx'], { name: e });
-        case i.mFx.WATCH:
-            return l.intl.formatToPlainString(l.t.BBJXVl, { name: e });
-        case i.mFx.JOIN:
-            return l.intl.string(l.t.pkq6Vl);
-        case i.mFx.JOIN_REQUEST:
+        case l.mFx.LISTEN:
+            return a.intl.formatToPlainString(a.t['/8czHx'], { name: e });
+        case l.mFx.WATCH:
+            return a.intl.formatToPlainString(a.t.BBJXVl, { name: e });
+        case l.mFx.JOIN:
+            return a.intl.string(a.t.pkq6Vl);
+        case l.mFx.JOIN_REQUEST:
         default:
-            return l.intl.string(l.t.Ckxb6u);
+            return a.intl.string(a.t.Ckxb6u);
     }
 }
-function o(e, t, n, i, a) {
+function c(e, t, n, r, l) {
+    return e.author.id === r
+        ? a.intl.formatToPlainString(o.default['7pndSk'], { applicationName: t.name })
+        : a.intl.formatToPlainString(l ? o.default['o/An3t'] : o.default.s7bMT0, {
+              username: (0, i.oY)(n.guild_id, n.id, e.author),
+              applicationName: t.name
+          });
+}
+function u(e, t, n, i, l) {
     if (e.author.id === i) {
         if (n.isPrivate()) {
             let e = r.default.getUser(n.getRecipientId());
             if (null != e)
-                return a
-                    ? l.intl.formatToPlainString(l.t.JddpNz, {
+                return l
+                    ? a.intl.formatToPlainString(a.t.JddpNz, {
                           username: e.globalName,
                           appName: t.name
                       })
-                    : l.intl.formatToPlainString(l.t.gYVkSU, {
+                    : a.intl.formatToPlainString(a.t.gYVkSU, {
                           username: e.globalName,
                           appName: t.name
                       });
         }
-        return a ? l.intl.formatToPlainString(l.t['2N1kNT'], { appName: t.name }) : l.intl.formatToPlainString(l.t.IA6uDQ, { appName: t.name });
+        return l ? a.intl.formatToPlainString(a.t['2N1kNT'], { appName: t.name }) : a.intl.formatToPlainString(a.t.IA6uDQ, { appName: t.name });
     }
-    return a
-        ? l.intl.formatToPlainString(l.t.XE8axM, {
+    return l
+        ? a.intl.formatToPlainString(a.t.XE8axM, {
               username: e.author.globalName,
               appName: t.name
           })
-        : l.intl.formatToPlainString(l.t.hgcjOj, {
+        : a.intl.formatToPlainString(a.t.hgcjOj, {
               username: e.author.globalName,
               appName: t.name
           });
 }
-function s(e, t, n, r) {
-    var a;
-    switch (null == (a = e.activity) ? void 0 : a.type) {
-        case i.mFx.LISTEN:
-        case i.mFx.WATCH:
-        case i.mFx.JOIN:
-            return l.intl.string(l.t.x1UXGR);
-        case i.mFx.JOIN_REQUEST:
+function d(e, t, n, r) {
+    var i;
+    switch (null == (i = e.activity) ? void 0 : i.type) {
+        case l.mFx.LISTEN:
+        case l.mFx.WATCH:
+        case l.mFx.JOIN:
+            return a.intl.string(a.t.x1UXGR);
+        case l.mFx.STREAM_REQUEST:
+            return c(e, t, n, r, !0);
+        case l.mFx.JOIN_REQUEST:
         default:
-            return o(e, t, n, r, !0);
+            return u(e, t, n, r, !0);
     }
 }
-function c(e) {
+function p(e) {
     let t,
-        { activityActionType: n, maxPartySize: r, partySize: a } = e;
-    return n === i.mFx.LISTEN
+        { activityActionType: n, maxPartySize: r, partySize: i } = e;
+    return n === l.mFx.LISTEN
         ? r > 0
-            ? l.intl.formatToPlainString(l.t.Zogooq, {
-                  partySize: a,
+            ? a.intl.formatToPlainString(a.t.Zogooq, {
+                  partySize: i,
                   maxPartySize: r
               })
-            : l.intl.formatToPlainString(l.t.UGei0t, { partySize: a })
+            : a.intl.formatToPlainString(a.t.UGei0t, { partySize: i })
         : r > 0
-          ? l.intl.formatToPlainString(l.t.gLu7NT, {
-                partySize: a,
+          ? a.intl.formatToPlainString(a.t.gLu7NT, {
+                partySize: i,
                 maxPartySize: r
             })
-          : l.intl.formatToPlainString(l.t['65JnWF'], { partySize: a });
+          : a.intl.formatToPlainString(a.t['65JnWF'], { partySize: i });
 }

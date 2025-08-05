@@ -123,11 +123,11 @@ function x(e) {
     let { guildId: t, restrictions: n } = e;
     (0, s.uq)(n) ? I.add(t) : I.delete(t);
 }
-function k(e) {
+function M(e) {
     let { guildId: t } = e;
     I.add(t);
 }
-class M extends (r = i.ZP.Store) {
+class k extends (r = i.ZP.Store) {
     initialize() {
         (this.waitFor(E.Z, g.Z, h.Z, f.Z), l.Zo.subscribe({ location: '1' }, () => R()));
     }
@@ -146,8 +146,8 @@ class M extends (r = i.ZP.Store) {
         return !!(null != n && null != n.parent_id && _.Ec.has(null == n ? void 0 : n.type)) && this.isChannelOrThreadParentGated(e, n.parent_id);
     }
 }
-O(M, 'displayName', 'GatedChannelStore');
-let j = new M(a.Z, {
+O(k, 'displayName', 'GatedChannelStore');
+let j = new k(a.Z, {
     CONNECTION_OPEN: R,
     OVERLAY_INITIALIZE: R,
     CACHE_LOADED_LAZY: R,
@@ -163,5 +163,5 @@ let j = new M(a.Z, {
     CHANNEL_DELETE: D,
     CHANNEL_UPDATES: L,
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: x,
-    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: k
+    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: M
 });

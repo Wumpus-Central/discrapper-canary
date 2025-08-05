@@ -29,8 +29,8 @@ var r = n(255367),
     P = n(388032),
     w = n(200669);
 function D(e) {
-    let { user: t, currentUser: n, displayProfile: D, guild: L, isHovering: x, onOpenProfile: k, channelId: M, onClose: j } = e,
-        U = u.ZP.useName(null == L ? void 0 : L.id, M, t),
+    let { user: t, currentUser: n, displayProfile: D, guild: L, isHovering: x, onOpenProfile: M, channelId: k, onClose: j } = e,
+        U = u.ZP.useName(null == L ? void 0 : L.id, k, t),
         { relationshipType: G, originApplicationId: B } = (0, i.cj)([l.Z], () => ({
             relationshipType: l.Z.getRelationshipType(t.id),
             originApplicationId: l.Z.getOriginApplicationId(t.id)
@@ -46,7 +46,7 @@ function D(e) {
         children: [
             (0, r.jsx)(v.Z, {
                 user: t,
-                onOpenProfile: k,
+                onOpenProfile: M,
                 onClose: j,
                 usernameIcon:
                     t.hasAvatarForGuild(null == L ? void 0 : L.id) &&
@@ -68,7 +68,7 @@ function D(e) {
                             (0, r.jsx)(I.Z, {
                                 userId: t.id,
                                 isHovering: x,
-                                onOpenProfile: k
+                                onOpenProfile: M
                             })
                     ]
                 })
@@ -78,7 +78,7 @@ function D(e) {
                     children: (0, r.jsx)(g.Z, {
                         user: t,
                         guildId: null == L ? void 0 : L.id,
-                        channelId: M,
+                        channelId: k,
                         applicationId: B
                     })
                 }),
@@ -90,7 +90,7 @@ function D(e) {
                             user: t,
                             isGameRelationship: !0,
                             applicationId: e.applicationId,
-                            channelId: M
+                            channelId: k
                         })
                     },
                     e.applicationId
@@ -100,7 +100,7 @@ function D(e) {
             !H &&
                 (0, r.jsx)(N.Z, {
                     user: t,
-                    onOpenProfile: (e) => (null == k ? void 0 : k({ section: e }))
+                    onOpenProfile: (e) => (null == M ? void 0 : M({ section: e }))
                 }),
             t.isProvisional
                 ? (0, r.jsx)(O.Z.Overlay, {
@@ -132,7 +132,7 @@ function D(e) {
                       currentUser: n,
                       displayProfile: D,
                       guildId: null == L ? void 0 : L.id,
-                      onOpenUserProfileModal: k,
+                      onOpenUserProfileModal: M,
                       onClose: j
                   })
                 : (0, r.jsx)(h.Z, {

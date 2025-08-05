@@ -69,7 +69,7 @@ function x(e, t) {
     }
     return n;
 }
-function k(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function k(e, t) {
     );
 }
 new E.Z('ChannelEditor.tsx');
-let M = function () {
+let k = function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     },
     j = 1000;
@@ -210,7 +210,7 @@ class U extends i.Component {
     }
     render() {
         var e, t, n, i, a, s;
-        let { textValue: l, richValue: c, disabled: u, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, useSlate: E, spellcheckEnabled: b, useNewSlashCommands: O, canOnlyUseTextCommands: T, className: S, id: C, required: P, maxCharacterCount: D, allowNewLines: x, 'aria-describedby': M, 'aria-labelledby': j, accessibilityLabel: U } = this.props,
+        let { textValue: l, richValue: c, disabled: u, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, useSlate: E, spellcheckEnabled: b, useNewSlashCommands: O, canOnlyUseTextCommands: T, className: S, id: C, required: P, maxCharacterCount: D, allowNewLines: x, 'aria-describedby': k, 'aria-labelledby': j, accessibilityLabel: U } = this.props,
             { submitting: G, popup: B } = this.state,
             V = {
                 channel: m,
@@ -253,21 +253,21 @@ class U extends i.Component {
                 'aria-expanded': null !== B.id || void 0,
                 'aria-activedescendant': null != (s = B.activeDescendant) ? s : void 0,
                 'aria-invalid': l.length > D,
-                'aria-describedby': M,
+                'aria-describedby': k,
                 'aria-labelledby': j,
                 'aria-autocomplete': 'list'
             },
             F = E
                 ? (0, r.jsx)(
                       N.Z,
-                      k(L({ ref: this.ref }, V), {
+                      M(L({ ref: this.ref }, V), {
                           type: g,
                           value: u ? (0, I.JM)('') : c,
                           canUseCommands: null == (t = g.commands) ? void 0 : t.enabled,
                           canOnlyUseTextCommands: T
                       })
                   )
-                : (0, r.jsx)(A.Z, k(L({ ref: this.ref }, V), { value: u ? '' : l }));
+                : (0, r.jsx)(A.Z, M(L({ ref: this.ref }, V), { value: u ? '' : l }));
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(y.d9, {
@@ -399,7 +399,7 @@ class U extends i.Component {
                     O = null != s ? s : c,
                     { files: v } = G(e.clipboardData, u.uploadLongMessages ? O : null);
                 return (
-                    M(
+                    k(
                         'onPaste',
                         [...e.clipboardData.items].map((e) => {
                             if ('file' !== e.kind)

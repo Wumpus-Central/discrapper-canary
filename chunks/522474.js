@@ -97,8 +97,8 @@ let A = new d.Z('PopoutWindowStore'),
     D = new Set(),
     L = 'app-mount',
     x = () => $.emitChange(),
-    k = s().debounce(x, 150),
-    M = !1;
+    M = s().debounce(x, 150),
+    k = !1;
 function j(e, t) {
     let n = t.document,
         r = n.head;
@@ -125,7 +125,7 @@ function U(e) {
 }
 function G(e) {
     let t = R[e];
-    (a()(null != t, 'Popout window was null during unmount'), t.removeEventListener('focus', x), t.removeEventListener('blur', x), t.removeEventListener('resize', k));
+    (a()(null != t, 'Popout window was null during unmount'), t.removeEventListener('focus', x), t.removeEventListener('blur', x), t.removeEventListener('resize', M));
     let n = P[e];
     (a()(null != n, 'Window root was null while unmounting'), n.unmount(), delete R[e], delete C[e], delete w[e], delete P[e]);
 }
@@ -146,7 +146,7 @@ function F(e) {
         n = w[e];
     if (null == t) return void A.warn('Failed to open window', e);
     let r = t.document;
-    ((0, g.uF)(r, x), t.addEventListener('focus', x), t.addEventListener('blur', x), t.addEventListener('resize', k), M ? j(e, t) : V(e, t));
+    ((0, g.uF)(r, x), t.addEventListener('focus', x), t.addEventListener('blur', x), t.addEventListener('resize', M), k ? j(e, t) : V(e, t));
     let i = (0, l.createRoot)(r.getElementById(L));
     (a()(null != i, 'No render target for popout!'), (P[e] = i), i.render(n(e)));
 }

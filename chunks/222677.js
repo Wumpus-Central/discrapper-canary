@@ -165,13 +165,13 @@ async function P(e, t, n) {
         u = arguments.length > 4 ? arguments[4] : void 0,
         f = null != u && !!u.burst,
         p = null != u && !!u.isRetry;
-    if (!p && M(e, t, n, f))
+    if (!p && k(e, t, n, f))
         return void o.Z.show({
             title: b.intl.string(b.t['uaUU/v']),
             body: b.intl.string(b.t.psMorq),
             confirmText: b.intl.string(b.t['NX+WJC'])
         });
-    let h = await k(n, f);
+    let h = await M(n, f);
     return (
         A('MESSAGE_REACTION_ADD', e, t, n, {
             burst: f,
@@ -319,7 +319,7 @@ async function x(e) {
                         { isRetry: f }
                     )
                 ) {
-                    let e = await k(a, d);
+                    let e = await M(a, d);
                     (A('MESSAGE_REACTION_ADD', t, n, a, {
                         userId: s,
                         burst: d,
@@ -329,7 +329,7 @@ async function x(e) {
                 }
             }));
 }
-async function k(e, t) {
+async function M(e, t) {
     let n = [];
     if (t)
         try {
@@ -337,7 +337,7 @@ async function k(e, t) {
         } catch (e) {}
     return n;
 }
-function M(e, t, n, r) {
+function k(e, t, n, r) {
     let i = f.Z.getMessage(e, t);
     return null != i && i.userHasReactedWithEmoji(n, r);
 }

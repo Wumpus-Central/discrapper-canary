@@ -163,7 +163,7 @@ function x(e) {
         n = g.botUserIdToAppUsage[t];
     null != n && (g.botUserIdToAppUsage[t] = u(l({}, n), { lastUsedMs: Date.now() }));
 }
-function k(e) {
+function M(e) {
     let { applicationIds: t } = e,
         n = !1;
     for (let e of t) {
@@ -172,7 +172,7 @@ function k(e) {
     }
     return n;
 }
-function M(e) {
+function k(e) {
     let { entitlements: t } = e,
         n = !1;
     for (let { sku: e } of t) (null == e ? void 0 : e.application) != null && (b(o.ZP.createFromServer(e.application)), (n = !0));
@@ -316,11 +316,11 @@ let q = new z(a.Z, {
     APPLICATION_FETCH_FAIL: N,
     APPLICATIONS_FETCH: C,
     APPLICATIONS_FETCH_SUCCESS: w,
-    APPLICATIONS_FETCH_FAIL: k,
+    APPLICATIONS_FETCH_FAIL: M,
     APPLICATION_UPDATE: I,
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: M,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: M,
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: M,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: k,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: k,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: k,
     GUILD_APPLICATIONS_FETCH_SUCCESS: j,
     BILLING_PAYMENTS_FETCH_SUCCESS: U,
     PAYMENT_UPDATE: G,

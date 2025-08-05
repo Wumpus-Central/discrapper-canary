@@ -195,7 +195,7 @@ class _ extends o.C {
                 case 9:
                     a.filter = {
                         oneofKind: 'clientIp',
-                        clientIp: M.internalBinaryRead(e, e.uint32(), n, a.filter.clientIp)
+                        clientIp: k.internalBinaryRead(e, e.uint32(), n, a.filter.clientIp)
                     };
                     break;
                 case 10:
@@ -262,7 +262,7 @@ class _ extends o.C {
         return a;
     }
     internalBinaryWrite(e, t, n) {
-        ('clientVersion' === e.filter.oneofKind && z.internalBinaryWrite(e.filter.clientVersion, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), 'clientOs' === e.filter.oneofKind && U.internalBinaryWrite(e.filter.clientOs, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), 'staff' === e.filter.oneofKind && m.internalBinaryWrite(e.filter.staff, t.tag(4, r.TD.LengthDelimited).fork(), n).join(), 'userInGuild' === e.filter.oneofKind && E.internalBinaryWrite(e.filter.userInGuild, t.tag(5, r.TD.LengthDelimited).fork(), n).join(), 'userIds' === e.filter.oneofKind && y.internalBinaryWrite(e.filter.userIds, t.tag(6, r.TD.LengthDelimited).fork(), n).join(), 'clientLocale' === e.filter.oneofKind && T.internalBinaryWrite(e.filter.clientLocale, t.tag(7, r.TD.LengthDelimited).fork(), n).join(), 'clientLocation' === e.filter.oneofKind && C.internalBinaryWrite(e.filter.clientLocation, t.tag(8, r.TD.LengthDelimited).fork(), n).join(), 'clientIp' === e.filter.oneofKind && M.internalBinaryWrite(e.filter.clientIp, t.tag(9, r.TD.LengthDelimited).fork(), n).join(), 'userLocale' === e.filter.oneofKind && v.internalBinaryWrite(e.filter.userLocale, t.tag(10, r.TD.LengthDelimited).fork(), n).join(), 'bot' === e.filter.oneofKind && ei.internalBinaryWrite(e.filter.bot, t.tag(11, r.TD.LengthDelimited).fork(), n).join(), 'userAgeRange' === e.filter.oneofKind && eo.internalBinaryWrite(e.filter.userAgeRange, t.tag(12, r.TD.LengthDelimited).fork(), n).join(), 'userIdRange' === e.filter.oneofKind && eu.internalBinaryWrite(e.filter.userIdRange, t.tag(13, r.TD.LengthDelimited).fork(), n).join(), 'userHasFlag' === e.filter.oneofKind && ef.internalBinaryWrite(e.filter.userHasFlag, t.tag(14, r.TD.LengthDelimited).fork(), n).join(), 'unitIdInRangeByHash' === e.filter.oneofKind && ep.internalBinaryWrite(e.filter.unitIdInRangeByHash, t.tag(15, r.TD.LengthDelimited).fork(), n).join(), 'clientReleaseChannel' === e.filter.oneofKind && em.internalBinaryWrite(e.filter.clientReleaseChannel, t.tag(16, r.TD.LengthDelimited).fork(), n).join(), 'always' === e.filter.oneofKind && eE.internalBinaryWrite(e.filter.always, t.tag(17, r.TD.LengthDelimited).fork(), n).join(), 'clientSystemLocale' === e.filter.oneofKind && A.internalBinaryWrite(e.filter.clientSystemLocale, t.tag(18, r.TD.LengthDelimited).fork(), n).join());
+        ('clientVersion' === e.filter.oneofKind && z.internalBinaryWrite(e.filter.clientVersion, t.tag(2, r.TD.LengthDelimited).fork(), n).join(), 'clientOs' === e.filter.oneofKind && U.internalBinaryWrite(e.filter.clientOs, t.tag(3, r.TD.LengthDelimited).fork(), n).join(), 'staff' === e.filter.oneofKind && m.internalBinaryWrite(e.filter.staff, t.tag(4, r.TD.LengthDelimited).fork(), n).join(), 'userInGuild' === e.filter.oneofKind && E.internalBinaryWrite(e.filter.userInGuild, t.tag(5, r.TD.LengthDelimited).fork(), n).join(), 'userIds' === e.filter.oneofKind && y.internalBinaryWrite(e.filter.userIds, t.tag(6, r.TD.LengthDelimited).fork(), n).join(), 'clientLocale' === e.filter.oneofKind && T.internalBinaryWrite(e.filter.clientLocale, t.tag(7, r.TD.LengthDelimited).fork(), n).join(), 'clientLocation' === e.filter.oneofKind && C.internalBinaryWrite(e.filter.clientLocation, t.tag(8, r.TD.LengthDelimited).fork(), n).join(), 'clientIp' === e.filter.oneofKind && k.internalBinaryWrite(e.filter.clientIp, t.tag(9, r.TD.LengthDelimited).fork(), n).join(), 'userLocale' === e.filter.oneofKind && v.internalBinaryWrite(e.filter.userLocale, t.tag(10, r.TD.LengthDelimited).fork(), n).join(), 'bot' === e.filter.oneofKind && ei.internalBinaryWrite(e.filter.bot, t.tag(11, r.TD.LengthDelimited).fork(), n).join(), 'userAgeRange' === e.filter.oneofKind && eo.internalBinaryWrite(e.filter.userAgeRange, t.tag(12, r.TD.LengthDelimited).fork(), n).join(), 'userIdRange' === e.filter.oneofKind && eu.internalBinaryWrite(e.filter.userIdRange, t.tag(13, r.TD.LengthDelimited).fork(), n).join(), 'userHasFlag' === e.filter.oneofKind && ef.internalBinaryWrite(e.filter.userHasFlag, t.tag(14, r.TD.LengthDelimited).fork(), n).join(), 'unitIdInRangeByHash' === e.filter.oneofKind && ep.internalBinaryWrite(e.filter.unitIdInRangeByHash, t.tag(15, r.TD.LengthDelimited).fork(), n).join(), 'clientReleaseChannel' === e.filter.oneofKind && em.internalBinaryWrite(e.filter.clientReleaseChannel, t.tag(16, r.TD.LengthDelimited).fork(), n).join(), 'always' === e.filter.oneofKind && eE.internalBinaryWrite(e.filter.always, t.tag(17, r.TD.LengthDelimited).fork(), n).join(), 'clientSystemLocale' === e.filter.oneofKind && A.internalBinaryWrite(e.filter.clientSystemLocale, t.tag(18, r.TD.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? r.z.onWrite : i)(this.typeName, e, t), t);
     }
@@ -322,7 +322,7 @@ class _ extends o.C {
                 name: 'client_ip',
                 kind: 'message',
                 oneof: 'filter',
-                T: () => M
+                T: () => k
             },
             {
                 no: 10,
@@ -937,7 +937,7 @@ class L extends o.C {
     }
 }
 let x = new L();
-class k extends o.C {
+class M extends o.C {
     create(e) {
         let t = { blocks: [] };
         return (
@@ -981,7 +981,7 @@ class k extends o.C {
         ]);
     }
 }
-let M = new k();
+let k = new M();
 class j extends o.C {
     create(e) {
         let t = {};

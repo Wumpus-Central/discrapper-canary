@@ -3,7 +3,7 @@
     Hc: () => w,
     J8: () => D,
     Q6: () => N,
-    V9: () => k,
+    V9: () => M,
     WD: () => P,
     Zt: () => I,
     Zv: () => S,
@@ -119,15 +119,15 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
     D = (e) => e.type === d.n0.GUILD,
     L = (e) => e.type === d.n0.STANDARD,
     x = (e) => (e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : []),
-    k = (e) => {
+    M = (e) => {
         if (null === e) return !1;
         let t = e.guild_id;
         return void 0 !== a.Z.getGuild(t);
     },
-    M = [];
+    k = [];
 function j() {
     var e, t;
-    return null != (t = null == (e = i.Z.frecencyWithoutFetchingLatest.favoriteStickers) ? void 0 : e.stickerIds) ? t : M;
+    return null != (t = null == (e = i.Z.frecencyWithoutFetchingLatest.favoriteStickers) ? void 0 : e.stickerIds) ? t : k;
 }
 function U(e) {
     return j().includes(e);

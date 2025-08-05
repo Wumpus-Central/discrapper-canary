@@ -117,7 +117,7 @@ let y = 24,
               });
     },
     v = i.forwardRef(function (e, t) {
-        let { className: n, iconClassName: i, children: a, selected: s = !1, disabled: l = !1, showBadge: u = !1, badgePosition: f = 'bottom', color: p, foreground: m, background: g, icon: E, iconSize: b = y, onClick: O, onContextMenu: v, tooltip: I = null, tooltipColor: T, tooltipPosition: S = 'bottom', tooltipAlign: A, tooltipDisabled: N, tooltipSpacing: C, hideOnClick: R = !0, role: P, 'aria-label': w, 'aria-hidden': D, 'aria-checked': L, 'aria-expanded': x, 'aria-haspopup': k, 'data-jump-section': M } = e,
+        let { className: n, iconClassName: i, children: a, selected: s = !1, disabled: l = !1, showBadge: u = !1, badgePosition: f = 'bottom', color: p, foreground: m, background: g, icon: E, iconSize: b = y, onClick: O, onContextMenu: v, tooltip: I = null, tooltipColor: T, tooltipPosition: S = 'bottom', tooltipAlign: A, tooltipDisabled: N, tooltipSpacing: C, hideOnClick: R = !0, role: P, 'aria-label': w, 'aria-hidden': D, 'aria-checked': L, 'aria-expanded': x, 'aria-haspopup': M, 'data-jump-section': k } = e,
             j = null != g ? { secondaryColorClass: g } : {},
             U = (0, r.jsx)(
                 E,
@@ -193,10 +193,10 @@ let y = 24,
                               'aria-label': G,
                               'aria-hidden': D,
                               'aria-checked': L,
-                              'aria-haspopup': k,
+                              'aria-haspopup': M,
                               'aria-expanded': x,
                               tabIndex: l || null == O ? -1 : 0,
-                              'data-jump-section': M,
+                              'data-jump-section': k,
                               children: [
                                   u
                                       ? (0, r.jsx)(d.ZP, {

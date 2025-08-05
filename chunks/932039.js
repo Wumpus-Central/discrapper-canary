@@ -124,10 +124,10 @@ function y(e) {
                 label: b.intl.string(b.t.EPuP0t)
             }
         ],
-        [S, N] = o.useState(!1),
+        [N, S] = o.useState(!1),
         Z = 7 !== s ? null : null != t && null != n ? ''.concat(t, ' - ').concat(n) : null != t ? b.intl.formatToPlainString(b.t.ClmSzc, { date: t }) : null != n ? b.intl.formatToPlainString(b.t.YvNhsb, { date: n }) : null,
         D = o.useCallback(() => {
-            (N(!0), O());
+            (S(!0), O());
         }, [O]),
         L = o.useCallback(
             (e) => {
@@ -142,7 +142,7 @@ function y(e) {
             [_]
         ),
         I = o.useCallback(() => {
-            (null == i && null == r && y(0, null), N(!1));
+            (null == i && null == r && y(0, null), S(!1));
         }, [r, i, y]);
     return (0, l.jsx)(d.v2r, {
         navId: 'member-safety-guild-member-'.concat(j, '-menu'),
@@ -150,7 +150,7 @@ function y(e) {
         'aria-label': b.intl.string(b.t.k9m8Rk),
         onSelect: m.dG4,
         children: (0, l.jsx)(d.kSQ, {
-            children: S
+            children: N
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(d.sNh, {

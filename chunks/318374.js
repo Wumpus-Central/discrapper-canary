@@ -88,13 +88,13 @@ function O() {
     }
 }
 function v(e) {
-    let { users: t, maxUsers: a, guildId: s, channelId: m, className: E, size: v = c.EFr.SIZE_24, overflowCountVariant: I, overflowCountColor: T = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: A = !1, disableUsernameTooltip: N = !1, disableUserPopout: C = !1, onClickOverflow: R, onFocusOverflow: P, onUserClick: w, onUserPopoutRequestClose: D, 'aria-label': L, 'aria-labelledby': x, 'aria-hidden': k } = e,
-        [M, j] = i.useState(!1),
+    let { users: t, maxUsers: a, guildId: s, channelId: m, className: E, size: v = c.EFr.SIZE_24, overflowCountVariant: I, overflowCountColor: T = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: A = !1, disableUsernameTooltip: N = !1, disableUserPopout: C = !1, onClickOverflow: R, onFocusOverflow: P, onUserClick: w, onUserPopoutRequestClose: D, 'aria-label': L, 'aria-labelledby': x, 'aria-hidden': M } = e,
+        [k, j] = i.useState(!1),
         U = y(v),
         G = i.useRef(null),
         B = t.length - a,
         V = B + 1,
-        F = B > 0 && !A && !k,
+        F = B > 0 && !A && !M,
         Z = () =>
             (0, r.jsx)(c.VqE, {
                 className: h.popoutWrapper,
@@ -194,7 +194,7 @@ function v(e) {
                 {
                     targetElementRef: G,
                     renderPopout: Z,
-                    shouldShow: M,
+                    shouldShow: k,
                     position: 'bottom',
                     onRequestClose: () => j(!1),
                     children: (t) =>
@@ -226,7 +226,7 @@ function v(e) {
               'aria-label': L,
               'aria-labelledby': x,
               className: o()(E, h.avatars),
-              'aria-hidden': k,
+              'aria-hidden': M,
               children: [H(), Y()]
           });
 }

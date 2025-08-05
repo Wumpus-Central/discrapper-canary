@@ -48,7 +48,7 @@ let T = function (e) {
                     duration_open_ms: Date.now() - C
                 }));
         }, [T, t, R, C, n.id]),
-        k = i.useCallback(
+        M = i.useCallback(
             (e) => {
                 e &&
                     !N.current &&
@@ -157,7 +157,7 @@ let T = function (e) {
                         }),
                         (0, r.jsx)(a.$, {
                             innerRef: P,
-                            onChange: k,
+                            onChange: M,
                             children: (0, r.jsx)('div', {
                                 ref: P,
                                 className: I.persistentCtaSpacer

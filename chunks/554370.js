@@ -20,8 +20,8 @@ var i = n(255367),
     E = n(556296),
     _ = n(808506),
     x = n(237997),
-    I = n(451478),
-    S = n(585483),
+    S = n(451478),
+    I = n(585483),
     j = n(358085),
     C = n(13140),
     N = n(145597),
@@ -29,8 +29,8 @@ var i = n(255367),
     Z = n(486016),
     P = n(32300),
     T = n(681603),
-    k = n(915614),
-    A = n(268861),
+    A = n(915614),
+    k = n(268861),
     D = n(690336),
     R = n(333031),
     L = n(371651),
@@ -39,8 +39,8 @@ var i = n(255367),
     U = n(388627),
     V = n(319414),
     W = n(561064),
-    G = n(987650),
-    F = n(757744),
+    F = n(987650),
+    G = n(757744),
     B = n(981631),
     H = n(960972);
 let Y = !j.isPlatformEmbedded && !1,
@@ -91,8 +91,8 @@ function J(e) {
                 })({}, t)),
                 (r = r =
                     {
-                        layoutId: F.$S,
-                        version: F.HN
+                        layoutId: G.$S,
+                        version: G.HN
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -127,7 +127,7 @@ let q = r.memo(function (e) {
                 ? null
                 : (0, i.jsx)(R.Z, {
                       className: H.closeContainer,
-                      children: (0, i.jsx)(k.Z, {
+                      children: (0, i.jsx)(A.Z, {
                           keybind: t,
                           onClick: n,
                           IconComponent: c.Uz9
@@ -140,7 +140,7 @@ let q = r.memo(function (e) {
         return t && n
             ? (0, i.jsx)(R.Z, {
                   className: H.closeContainer,
-                  children: (0, i.jsx)(k.Z, {
+                  children: (0, i.jsx)(A.Z, {
                       onClick: () => d.Z.setInputLocked(!1, (0, N.getPID)()),
                       IconComponent: c.d$P
                   })
@@ -158,7 +158,7 @@ function en() {
 }
 function ei(e) {
     let t = z.ZP.isInputLocked((0, N.getPID)());
-    'alt' !== e.key.toLowerCase() || t || ('keyup' === e.type.toLowerCase() ? S.S.dispatch(B.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }) : 'keydown' === e.type.toLowerCase() && S.S.dispatch(B.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !1 }));
+    'alt' !== e.key.toLowerCase() || t || ('keyup' === e.type.toLowerCase() ? I.S.dispatch(B.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }) : 'keydown' === e.type.toLowerCase() && I.S.dispatch(B.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !1 }));
 }
 function er(e) {
     let { isEmbeddedActivity: t } = e,
@@ -168,11 +168,11 @@ function er(e) {
             focused: u,
             incompatibleApp: h,
             hasZeroSizeDimension: j,
-            keybind: k
+            keybind: A
         } = (0, a.cj)(
-            [z.ZP, x.default, I.Z, E.ZP],
+            [z.ZP, x.default, S.Z, E.ZP],
             () => {
-                let e = I.Z.windowSize((0, w.ZY)(n)),
+                let e = S.Z.windowSize((0, w.ZY)(n)),
                     t = E.ZP.getOverlayKeybind(),
                     i = (0, N.getPID)();
                 return {
@@ -238,24 +238,24 @@ function er(e) {
                     f = M.Z.isNotificationDisabled(Z.OverlayNotificationDisabledSetting.GAME_ACTIVITY),
                     h = [];
                 if (
-                    (a || h.push({ type: G.nc.WELCOME }),
+                    (a || h.push({ type: F.nc.WELCOME }),
                     !s &&
                         (c && u
                             ? h.push({
-                                  type: G.nc.GO_LIVE_VOICE,
+                                  type: F.nc.GO_LIVE_VOICE,
                                   game: n,
                                   voiceChannelId: i,
                                   voiceGuild: l
                               })
                             : c &&
                               h.push({
-                                  type: G.nc.GO_LIVE_NON_VOICE,
+                                  type: F.nc.GO_LIVE_NON_VOICE,
                                   game: n
                               })),
                     p &&
                         !f &&
                         h.push({
-                            type: G.nc.CONTENT_INVENTORY,
+                            type: F.nc.CONTENT_INVENTORY,
                             entries: []
                         }),
                     0 !== h.length)
@@ -272,7 +272,7 @@ function er(e) {
             }, [s, c, u, n, i, l, p]);
         })(),
         r.useEffect(() => {
-            if ((S.S.dispatch(B.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }), o)) {
+            if ((I.S.dispatch(B.CkL.OVERLAY_V3_SHOW_WIDGETS, { show: !0 }), o)) {
                 if (((0, s.Ay)(c.u1M), n.addEventListener('contextmenu', X, !1), null != K)) {
                     let e = Date.now() - K;
                     (d.Z.track(B.rMx.OVERLAY_LOCKED, { unlocked_duration: e }), (K = null));
@@ -298,7 +298,7 @@ function er(e) {
                                       !t && Q,
                                       (0, i.jsx)(q, {
                                           locked: o,
-                                          keybind: k,
+                                          keybind: A,
                                           onClick: ee
                                       }),
                                       (0, i.jsx)(D.Z, {
@@ -315,7 +315,7 @@ function er(e) {
                                               focused: u
                                           }),
                                       (0, i.jsx)(T.Z, {}),
-                                      (0, i.jsx)(A.Z, { locked: o }),
+                                      (0, i.jsx)(k.Z, { locked: o }),
                                       (0, i.jsx)(c.Ixi, {})
                                   ]
                               })

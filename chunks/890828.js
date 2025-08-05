@@ -20,8 +20,8 @@ var i = n(255367),
     E = n(984933),
     _ = n(430824),
     x = n(496675),
-    I = n(699516),
-    S = n(594174),
+    S = n(699516),
+    I = n(594174),
     j = n(979651),
     C = n(823379),
     N = n(136015),
@@ -31,14 +31,14 @@ var i = n(255367),
 let T = (e) => [
         e.userId,
         ...(function (e) {
-            let t = S.default.getUser(e.userId);
+            let t = I.default.getUser(e.userId);
             if (null == t) return [];
             let n = t.username,
                 i = (0, m.e3)(t);
             return Array.from(new Set([n, i.nick, ...Object.values(i.names)].flat().filter(C.lm)));
         })(e)
     ],
-    k = {
+    A = {
         searchType: y.S.FUZZY,
         sortType: y.E.JARO_WINKLER,
         searchStringGenerator: (e) => {
@@ -48,7 +48,7 @@ let T = (e) => [
         },
         throttleMs: 100
     },
-    A = {
+    k = {
         searchType: y.S.FUZZY,
         sortType: y.E.JARO_WINKLER,
         searchStringGenerator: T,
@@ -58,12 +58,12 @@ let T = (e) => [
         let { channel: t, query: n } = e,
             [o] = (0, a.e7)([j.Z], () => [j.Z.getVoiceStatesForChannel(t.id), j.Z.getVoiceStateVersion()], [t.id], N.Q),
             [l, c] = r.useState([]);
-        (0, O.BO)(n, Object.values(o), c, A);
+        (0, O.BO)(n, Object.values(o), c, k);
         let u = (0, a.Wu)(
-                [j.Z, S.default, b.Z, I.Z],
+                [j.Z, I.default, b.Z, S.Z],
                 () =>
                     Object.values(j.Z.getVoiceStatesForChannel(t.id))
-                        .map((e) => S.default.getUser(e.userId))
+                        .map((e) => I.default.getUser(e.userId))
                         .filter(C.lm)
                         .sort((e, t) => {
                             var i, r, o, a;
@@ -71,7 +71,7 @@ let T = (e) => [
                                 if (l.some((t) => t.userId === e.id)) return -1;
                                 if (l.some((e) => e.userId === t.id)) return 1;
                             }
-                            return I.Z.isFriend(e.id) && !I.Z.isFriend(t.id) ? -1 : !I.Z.isFriend(e.id) && I.Z.isFriend(t.id) ? 1 : (null != (o = null == (i = b.Z.getUserAffinity(t.id)) ? void 0 : i.vcProbability) ? o : 0) - (null != (a = null == (r = b.Z.getUserAffinity(e.id)) ? void 0 : r.vcProbability) ? a : 0);
+                            return S.Z.isFriend(e.id) && !S.Z.isFriend(t.id) ? -1 : !S.Z.isFriend(e.id) && S.Z.isFriend(t.id) ? 1 : (null != (o = null == (i = b.Z.getUserAffinity(t.id)) ? void 0 : i.vcProbability) ? o : 0) - (null != (a = null == (r = b.Z.getUserAffinity(e.id)) ? void 0 : r.vcProbability) ? a : 0);
                         }),
                 [t.id, l, n]
             ),
@@ -165,7 +165,7 @@ let T = (e) => [
                                           variant: b ? 'text-sm/semibold' : 'text-sm/medium',
                                           color: E,
                                           className: P.channelItemNameText,
-                                          children: (0, c.F6)(m, S.default, I.Z)
+                                          children: (0, c.F6)(m, I.default, S.Z)
                                       })
                                   ]
                               }),
@@ -250,15 +250,15 @@ function U(e) {
         { recentVoiceChannelIds: o, friendVoiceChannelIds: c } = (function () {
             let e = (function () {
                     let e = (0, a.Wu)(
-                        [S.default, I.Z, b.Z],
+                        [I.default, S.Z, b.Z],
                         () =>
-                            I.Z.getFriendIDs()
+                            S.Z.getFriendIDs()
                                 .sort((e, t) => {
                                     var n, i, r, o;
                                     return null == e && null == t ? 0 : null == e ? 1 : null == t ? -1 : (null != (r = null == (n = b.Z.getUserAffinity(t)) ? void 0 : n.communicationProbability) ? r : 0) - (null != (o = null == (i = b.Z.getUserAffinity(e)) ? void 0 : i.communicationProbability) ? o : 0);
                                 })
                                 .reduce((e, t) => {
-                                    let n = S.default.getUser(t);
+                                    let n = I.default.getUser(t);
                                     return (null != n && e.push(n), e);
                                 }, []),
                         []
@@ -335,7 +335,7 @@ function W(e) {
     var t, n;
     let { currentVoiceChannel: o, onClose: l, onSelect: c } = e,
         u = (0, a.Wu)(
-            [_.Z, E.ZP, j.Z, I.Z, x.Z],
+            [_.Z, E.ZP, j.Z, S.Z, x.Z],
             () =>
                 _.Z.getGuildsArray()
                     .reduce(
@@ -352,13 +352,13 @@ function W(e) {
                     )
                     .map((e) => ({
                         channel: e,
-                        voiceStates: Object.values(j.Z.getVoiceStatesForChannel(e.id)).filter((e) => I.Z.isFriend(e.userId))
+                        voiceStates: Object.values(j.Z.getVoiceStatesForChannel(e.id)).filter((e) => S.Z.isFriend(e.userId))
                     })),
             []
         ),
         [d, p] = r.useState(''),
         [f, h] = r.useState([]);
-    (0, O.BO)(d, u, h, k);
+    (0, O.BO)(d, u, h, A);
     let m = r.useCallback(
             (e) => {
                 'Escape' === e.key && l();
@@ -383,7 +383,7 @@ function W(e) {
     let y = '' !== d.trim(),
         b = f.length > 20,
         v = { count: b ? 20 : f.length },
-        S = r.useMemo(
+        I = r.useMemo(
             () => ({
                 onMouseDown: V,
                 onMouseMove: V,
@@ -419,7 +419,7 @@ function W(e) {
                     }));
             }
             return e;
-        })({ className: P.recentChannelsMenu }, S)),
+        })({ className: P.recentChannelsMenu }, I)),
         (n = n =
             {
                 children: [

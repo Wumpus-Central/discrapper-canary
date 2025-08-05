@@ -2,20 +2,20 @@
 var r = n(255367),
     l = n(73800),
     i = n(442837),
-    o = n(481060),
-    s = n(313201),
-    a = n(19780),
+    s = n(481060),
+    a = n(313201),
+    o = n(19780),
     c = n(979651),
     u = n(362446),
     d = n(571826),
-    f = n(277642),
-    h = n(441894),
-    p = n(160038),
-    g = n(586646),
-    O = n(760373),
-    N = n(388032),
-    y = n(935179);
-function b(e) {
+    h = n(277642),
+    f = n(441894),
+    g = n(160038),
+    p = n(586646),
+    N = n(760373),
+    O = n(388032),
+    x = n(935179);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function b(e) {
     }
     return e;
 }
-function x(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -60,7 +60,7 @@ function x(e, t) {
 }
 function E(e) {
     let { lobbyId: t, connectionTypeText: n, closePopout: l } = e,
-        o = (0, i.cj)([u.Z], () => ({
+        s = (0, i.cj)([u.Z], () => ({
             connectionState: u.Z.getConnectionState(t),
             hostname: u.Z.getHostname(t),
             averagePing: u.Z.getAveragePing(t),
@@ -69,8 +69,8 @@ function E(e) {
             outboundLossRate: u.Z.getOutboundLossRate(t)
         }));
     return (0, r.jsx)(
-        p.Z,
-        x(b({}, o), {
+        g.Z,
+        b(y({}, s), {
             closePopout: l,
             connectionTypeText: n
         })
@@ -78,46 +78,46 @@ function E(e) {
 }
 function m(e) {
     let { closePopout: t, connectionTypeText: n } = e,
-        l = (0, i.cj)([a.Z], () => ({
-            connectionState: a.Z.getState(),
-            hostname: a.Z.getHostname(),
-            averagePing: a.Z.getAveragePing(),
-            lastPing: a.Z.getLastPing(),
-            outboundLossRate: a.Z.getOutboundLossRate(),
-            pings: a.Z.getPings()
+        l = (0, i.cj)([o.Z], () => ({
+            connectionState: o.Z.getState(),
+            hostname: o.Z.getHostname(),
+            averagePing: o.Z.getAveragePing(),
+            lastPing: o.Z.getLastPing(),
+            outboundLossRate: o.Z.getOutboundLossRate(),
+            pings: o.Z.getPings()
         }));
     return (0, r.jsx)(
-        p.Z,
-        x(b({}, l), {
+        g.Z,
+        b(y({}, l), {
             closePopout: t,
             connectionTypeText: n
         })
     );
 }
-function v(e) {
+function C(e) {
     let { channelId: t, isOverlay: n, lobbyId: l, closePopout: i } = e,
-        o = (0, h.J)({ channelId: t }) ? N.intl.string(N.t['3BogKS']) : N.intl.string(N.t.ETIVvr);
+        s = (0, f.J)({ channelId: t }) ? O.intl.string(O.t['3BogKS']) : O.intl.string(O.t.ETIVvr);
     return n
         ? (0, r.jsx)(E, {
               lobbyId: l,
               closePopout: i,
-              connectionTypeText: o
+              connectionTypeText: s
           })
         : (0, r.jsx)(m, {
               closePopout: i,
-              connectionTypeText: o
+              connectionTypeText: s
           });
 }
-function C(e) {
+function T(e) {
     let t = (0, i.e7)([c.Z], () => c.Z.hasVideo(e.channelId)),
-        [n, a] = l.useState(O.tu.RTC_DEBUG_PANEL),
-        u = (0, s.Dt)(),
-        h = l.useMemo(() => {
+        [n, o] = l.useState(N.tu.RTC_DEBUG_PANEL),
+        u = (0, a.Dt)(),
+        f = l.useMemo(() => {
             switch (n) {
-                case O.tu.RTC_DEBUG_PANEL:
-                    return (0, r.jsx)(v, b({}, e));
-                case O.tu.RTC_SECURE_FRAMES:
-                    return (0, r.jsx)(g.Z, { channelId: e.channelId });
+                case N.tu.RTC_DEBUG_PANEL:
+                    return (0, r.jsx)(C, y({}, e));
+                case N.tu.RTC_SECURE_FRAMES:
+                    return (0, r.jsx)(p.Z, { channelId: e.channelId });
             }
         }, [e, n]);
     l.useEffect(() => {
@@ -126,58 +126,58 @@ function C(e) {
             selectedTab: n
         });
     }, [e.channelId, n]);
-    let p = (0, f.r)();
+    let g = (0, h.r)();
     return (
         l.useEffect(() => {
-            p && a(O.tu.RTC_DEBUG_PANEL);
-        }, [p]),
+            g && o(N.tu.RTC_DEBUG_PANEL);
+        }, [g]),
         (0, r.jsxs)('div', {
-            className: y.container,
+            className: x.container,
             children: [
-                (0, r.jsx)(o.X6q, {
-                    className: y.title,
+                (0, r.jsx)(s.X6q, {
+                    className: x.title,
                     variant: 'heading-lg/bold',
                     color: 'header-primary',
-                    children: t ? N.intl.string(N.t.IlHdW1) : N.intl.string(N.t.WsOisr)
+                    children: t ? O.intl.string(O.t.IlHdW1) : O.intl.string(O.t.WsOisr)
                 }),
-                (0, r.jsxs)(o.njP, {
-                    className: y.tabs,
+                (0, r.jsxs)(s.njP, {
+                    className: x.tabs,
                     selectedItem: n,
                     type: 'top',
                     look: 'brand',
-                    onItemSelect: a,
+                    onItemSelect: o,
                     children: [
-                        (0, r.jsx)(o.njP.Item, {
-                            id: O.tu.RTC_DEBUG_PANEL,
-                            className: y.tabBarItem,
-                            children: N.intl.string(N.t.MBY1Pj)
+                        (0, r.jsx)(s.njP.Item, {
+                            id: N.tu.RTC_DEBUG_PANEL,
+                            className: x.tabBarItem,
+                            children: O.intl.string(O.t.MBY1Pj)
                         }),
-                        p
+                        g
                             ? null
-                            : (0, r.jsx)(o.njP.Item, {
-                                  id: O.tu.RTC_SECURE_FRAMES,
-                                  className: y.tabBarItem,
-                                  children: N.intl.string(N.t.zC6o3t)
+                            : (0, r.jsx)(s.njP.Item, {
+                                  id: N.tu.RTC_SECURE_FRAMES,
+                                  className: x.tabBarItem,
+                                  children: O.intl.string(O.t.zC6o3t)
                               })
                     ]
                 }),
-                (0, r.jsx)(o.njP.Panel, {
+                (0, r.jsx)(s.njP.Panel, {
                     id: n,
                     'aria-labelledby': u,
-                    children: h
+                    children: f
                 })
             ]
         })
     );
 }
 function I(e) {
-    return (0, h.J)({ channelId: e.channelId })
-        ? (0, r.jsx)(C, b({}, e))
+    return (0, f.J)({ channelId: e.channelId })
+        ? (0, r.jsx)(T, y({}, e))
         : (0, r.jsx)('div', {
-              className: y.debugPanelStandalone,
+              className: x.debugPanelStandalone,
               children: (0, r.jsx)('section', {
-                  className: y.debugPanelSection,
-                  children: (0, r.jsx)(v, b({}, e))
+                  className: x.debugPanelSection,
+                  children: (0, r.jsx)(C, y({}, e))
               })
           });
 }

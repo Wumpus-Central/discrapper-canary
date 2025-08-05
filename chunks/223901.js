@@ -1,27 +1,27 @@
-s.d(e, { default: () => d });
-var n = s(255367),
-    r = s(73800),
-    t = s(481060),
-    o = s(91159),
-    i = s(593130),
-    l = s(388032),
-    c = s(137642);
-function d(a) {
-    let { channel: e, onClose: s, transitionState: d } = a;
+a.d(t, { default: () => d });
+var n = a(255367),
+    r = a(73800),
+    o = a(481060),
+    c = a(91159),
+    s = a(593130),
+    _ = a(388032),
+    i = a(137642);
+function d(e) {
+    let { channel: t, onClose: a, transitionState: d } = e;
     return (
         r.useEffect(() => {
-            (0, o.U4)();
+            (0, c.U4)();
         }, []),
-        (0, n.jsx)(t.Y0X, {
-            className: c.modal,
+        (0, n.jsx)(o.Y0X, {
+            className: i.modal,
             transitionState: d,
-            'aria-label': l.intl.string(l.t.B2panJ),
-            size: t.CgR.DYNAMIC,
+            'aria-label': _.intl.string(_.t.B2panJ),
+            size: o.CgR.DYNAMIC,
             parentComponent: 'ThreadBrowserModal',
-            children: (0, n.jsx)(i.Z, {
-                className: c.browser,
-                channel: e,
-                onClose: s
+            children: (0, n.jsx)(s.Z, {
+                className: i.browser,
+                channel: t,
+                onClose: a
             })
         })
     );

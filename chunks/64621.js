@@ -40,8 +40,8 @@ function A(e) {
         [L, x] = i.useState(!1);
     (0, c.Z)(() => x(!0), D() ? I : null);
     let {
-            asset: k,
-            assetClassName: M,
+            asset: M,
+            assetClassName: k,
             className: j,
             content: U,
             header: G,
@@ -85,8 +85,8 @@ function A(e) {
                     className: j,
                     asset: (0, r.jsx)('img', {
                         alt: '',
-                        src: k,
-                        className: M
+                        src: M,
+                        className: k
                     }),
                     buttonCTA: b.intl.string(b.t['+IrDzM']),
                     buttonLayout: f._F.STACKED,

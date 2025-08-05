@@ -70,20 +70,20 @@ function w(e, t) {
         e
     );
 }
-function S(e) {
+function N(e) {
     var t = (function (e, t) {
-        if ('object' !== N(e) || null === e) return e;
+        if ('object' !== S(e) || null === e) return e;
         var n = e[Symbol.toPrimitive];
         if (void 0 !== n) {
             var r = n.call(e, t || 'default');
-            if ('object' !== N(r)) return r;
+            if ('object' !== S(r)) return r;
             throw TypeError('@@toPrimitive must return a primitive value.');
         }
         return ('string' === t ? String : Number)(e);
     })(e, 'string');
-    return 'symbol' === N(t) ? t : String(t);
+    return 'symbol' === S(t) ? t : String(t);
 }
-function N(e) {
+function S(e) {
     return e && 'undefined' != typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e;
 }
 let Z = (0, p.hQ)(),
@@ -223,7 +223,7 @@ function k(e) {
             [a, C, h]
         ),
         v = l.useMemo(() => Object.keys(j), [j]),
-        [y, N] = l.useState(''),
+        [y, S] = l.useState(''),
         [L, V] = l.useState(!1),
         [E, k] = l.useState(!1),
         [A, B] = l.useState(!1),
@@ -282,7 +282,7 @@ function k(e) {
                 let t = _({}, j);
                 (I(e) ? (t[e.id] = M(e.record)) : R(e) && (t[e.id] = P(e.record)),
                     z(t),
-                    N(''),
+                    S(''),
                     G(),
                     setTimeout(() => {
                         var e;
@@ -360,13 +360,13 @@ function k(e) {
                                         for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
                                     }
                                     return l;
-                                })(j, [t].map(S))
+                                })(j, [t].map(N))
                             ),
-                                N(''),
+                                S(''),
                                 G());
                         },
                         onQueryChange: (e) => {
-                            N(e.trim().toLocaleLowerCase());
+                            S(e.trim().toLocaleLowerCase());
                         },
                         placeholder: null != b ? b : O.intl.string(O.t.uqHLzc),
                         sections: [v.length],
