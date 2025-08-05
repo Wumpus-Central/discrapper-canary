@@ -9,11 +9,11 @@ var r = n(255367),
     u = n(618460),
     d = n(105529),
     p = n(800869),
-    m = n(366751),
-    f = n(309945),
-    _ = n(385902),
+    f = n(366751),
+    m = n(309945),
+    g = n(385902),
     x = n(234368),
-    g = n(981631),
+    _ = n(981631),
     v = n(93841),
     b = n(388032),
     j = n(106180);
@@ -30,26 +30,26 @@ function E(e) {
     let { guildId: t } = e,
         n = (0, i.e7)([a.Z], () => {
             var e;
-            return (null == (e = a.Z.getGuild(t)) ? void 0 : e.features.has(g.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
+            return (null == (e = a.Z.getGuild(t)) ? void 0 : e.features.has(_.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
         }),
         E = (0, u.Z)(t),
         C = E.length > 0,
-        { shouldShow: I, notificationConfig: N } = (0, _._)(t, 'GuildPowerupNotificationContainer'),
-        O = [];
-    I && O.push(l.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
-    let [Z, w] = (0, s.ZT)(O, t),
-        P = null != Z && null != N,
-        S = (0, c.W)(t, 'GuildPowerupNotificationContainer'),
+        { shouldShow: O, notificationConfig: I } = (0, g._)(t, 'GuildPowerupNotificationContainer'),
         y = [];
-    P || C || (y.push(l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK), S && y.push(l.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL));
-    let [T, A] = (0, s.US)(y),
+    O && y.push(l.z.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION);
+    let [w, N] = (0, s.ZT)(y, t),
+        P = null != w && null != I,
+        Z = (0, c.W)(t, 'GuildPowerupNotificationContainer'),
+        S = [];
+    P || C || (S.push(l.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK), Z && S.push(l.z.BOOSTER_ENHANCED_ROLE_COLORS_ADMIN_UPSELL));
+    let [T, A] = (0, s.US)(S),
         R = ((e) => {
             let n = [];
             return (
                 C &&
                     n.push(
                         (0, r.jsx)(
-                            f.Z,
+                            m.Z,
                             {
                                 guildId: t,
                                 powerups: E
@@ -60,11 +60,11 @@ function E(e) {
                 P &&
                     n.push(
                         (0, r.jsx)(
-                            m.Z,
+                            f.Z,
                             {
-                                notificationConfig: N,
+                                notificationConfig: I,
                                 markAsDismissed: (e) => {
-                                    w(e);
+                                    N(e);
                                 }
                             },
                             'rollback-notification'

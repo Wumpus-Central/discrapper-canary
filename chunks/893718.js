@@ -32,10 +32,10 @@ var r = n(255367),
     g = n(607070),
     E = n(100527),
     b = n(906732),
-    y = n(541099),
-    O = n(998698),
-    v = n(271668),
-    I = n(307508),
+    y = n(989573),
+    O = n(541099),
+    v = n(998698),
+    I = n(271668),
     T = n(326133),
     S = n(570220),
     A = n(28546),
@@ -372,7 +372,7 @@ function eA(e, t, n, r) {
 }
 function eN(e, t, n) {
     let [r, a] = (0, A.Iu)((e) => [e.activeView, e.activeViewType], u.X),
-        o = (0, _.e7)([y.Z], () => y.Z.shouldShowPopup() && y.Z.activeViewType() === e);
+        o = (0, _.e7)([O.Z], () => O.Z.shouldShowPopup() && O.Z.activeViewType() === e);
     i.useEffect(
         () => () => {
             (0, A._Q)(e);
@@ -419,7 +419,7 @@ function eC(e, t, n) {
 }
 function eR(e, t) {
     var n, a, s, l, u;
-    let { textValue: f, richValue: h, className: y, innerClassName: A, editorClassName: C, id: R, required: D, disabled: L, placeholder: x, accessibilityLabel: M, channel: k, type: U, focused: G, error: B, renderAttachButton: F, renderApplicationCommandIcon: Z, renderAppLauncherButton: H, pendingReply: Y, onChange: W, onResize: J, onBlur: es, onFocus: ec, onKeyDown: eu, onSubmit: ed, promptToUpload: ef, highlighted: ep, canMentionRoles: eh, canMentionChannels: eR, maxCharacterCount: eP, showRemainingCharsAfterCount: ew, allowNewLines: eD = !0, characterCountClassName: eL, 'aria-describedby': ex, 'aria-labelledby': eM, setEditorRef: ek, autoCompletePosition: ej, children: eU, disableThemedBackground: eG = !1, emojiPickerCloseOnModalOuterClick: eB, parentModalKey: eV, onCommandSentinelTyped: eF, pendingScheduledMessage: eZ } = e;
+    let { textValue: f, richValue: h, className: O, innerClassName: A, editorClassName: C, id: R, required: D, disabled: L, placeholder: x, accessibilityLabel: M, channel: k, type: U, focused: G, error: B, renderAttachButton: F, renderApplicationCommandIcon: Z, renderAppLauncherButton: H, pendingReply: Y, onChange: W, onResize: J, onBlur: es, onFocus: ec, onKeyDown: eu, onSubmit: ed, promptToUpload: ef, highlighted: ep, canMentionRoles: eh, canMentionChannels: eR, maxCharacterCount: eP, showRemainingCharsAfterCount: ew, allowNewLines: eD = !0, characterCountClassName: eL, 'aria-describedby': ex, 'aria-labelledby': eM, setEditorRef: ek, autoCompletePosition: ej, children: eU, disableThemedBackground: eG = !1, emojiPickerCloseOnModalOuterClick: eB, parentModalKey: eV, onCommandSentinelTyped: eF, pendingScheduledMessage: eZ } = e;
     c()(null != U, 'chat input type must be set');
     let { analyticsLocations: eH } = (0, b.ZP)(E.Z.CHANNEL_TEXT_AREA),
         eY = eT(t),
@@ -428,17 +428,17 @@ function eR(e, t) {
         ez = i.useRef(null),
         eq = i.useRef(null);
     null == ek || ek(eK.current);
-    let eX = (0, I.Q)(k.id),
+    let eX = (0, y.Z)(k),
         [eQ, eJ] = i.useState(!eX);
     (0, m.PM)(eY, (e) => {
         let { width: t } = e;
         return eJ(!eX && (null == t || t > e_));
     });
-    let { activeCommand: e$, activeCommandSection: e0 } = (0, _.cj)([O.Z], () => {
+    let { activeCommand: e$, activeCommandSection: e0 } = (0, _.cj)([v.Z], () => {
             var e, t;
             return {
-                activeCommand: (null == (e = U.commands) ? void 0 : e.enabled) ? O.Z.getActiveCommand(k.id) : null,
-                activeCommandSection: (null == (t = U.commands) ? void 0 : t.enabled) ? O.Z.getActiveCommandSection(k.id) : null
+                activeCommand: (null == (e = U.commands) ? void 0 : e.enabled) ? v.Z.getActiveCommand(k.id) : null,
+                activeCommandSection: (null == (t = U.commands) ? void 0 : t.enabled) ? v.Z.getActiveCommandSection(k.id) : null
             };
         }),
         { isLurking: e1, isPendingMember: e2, disabled: e3, canAttachFiles: e4, canCreateThreads: e5, canEveryoneSendMessages: e6 } = eA(k, U, e$, L),
@@ -535,7 +535,7 @@ function eR(e, t) {
                       : null,
                 (0, r.jsxs)('div', {
                     ref: eY,
-                    className: o()(y, {
+                    className: o()(O, {
                         [el.channelTextArea]: !0,
                         [el.channelTextAreaDisabled]: tC,
                         [el.highlighted]: ep,
@@ -633,7 +633,7 @@ function eR(e, t) {
                         }),
                         e9
                             ? null
-                            : (0, r.jsx)(v.Z, {
+                            : (0, r.jsx)(I.Z, {
                                   ref: eW,
                                   channel: k,
                                   canOnlyUseTextCommands: tN

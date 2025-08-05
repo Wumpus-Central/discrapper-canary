@@ -1,57 +1,52 @@
-n.d(t, { Z: () => s });
-var r = n(924322),
-    o = n(379405),
-    i = n(296009),
+n.d(t, { Z: () => c });
+var r = n(379405),
+    o = n(296009),
     l = n(442837),
-    a = n(187162),
-    c = n(570911);
-function s() {
-    let e = (0, l.e7)([a.Z], () => a.Z.getOverrideWidgets());
+    i = n(187162),
+    a = n(570911);
+function c() {
+    let e = (0, l.e7)([i.Z], () => i.Z.getOverrideWidgets());
     if (null !== e) return e;
     let t = {
-            applicationId: c.J6['23'],
+            applicationId: a.J6['23'],
             comment: 'Hands down the best RPG ever'
         },
         n = [
             {
-                applicationId: c.J6['58'],
-                tags: [o._.NOOB]
+                applicationId: a.J6['58'],
+                tags: [r._.NOOB]
             },
             {
-                applicationId: c.J6['31'],
-                tags: [o._.LFG, o._.GOD_TIER]
+                applicationId: a.J6['31'],
+                tags: [r._.LFG, r._.GOD_TIER]
             },
             {
-                applicationId: c.J6['50'],
-                tags: [o._.LIKE_IT, o._.OPEN_TO_PLAY, o._.NOOB, o._.GOD_TIER, o._.LFG, o._.GETTING_GOOD, o._.LEARNING_THE_ROPES, o._.LOOKING_FOR_TIPS]
+                applicationId: a.J6['50'],
+                tags: [r._.LIKE_IT, r._.OPEN_TO_PLAY, r._.NOOB, r._.GOD_TIER, r._.LFG, r._.GETTING_GOOD, r._.LEARNING_THE_ROPES, r._.LOOKING_FOR_TIPS]
             }
         ],
-        s = [{ applicationId: c.J6['0'] }, { applicationId: c.J6['1'] }, { applicationId: c.J6['2'] }, { applicationId: c.J6['3'] }, { applicationId: c.J6['4'] }, { applicationId: c.J6['5'] }, { applicationId: c.J6['6'] }],
-        d = [{ applicationId: c.J6['14'] }, { applicationId: c.J6['15'] }, { applicationId: c.J6['16'] }, { applicationId: c.J6['17'] }, { applicationId: c.J6['18'] }, { applicationId: c.J6['19'] }, { applicationId: c.J6['20'] }];
+        c = [{ applicationId: a.J6['0'] }, { applicationId: a.J6['1'] }, { applicationId: a.J6['2'] }, { applicationId: a.J6['3'] }, { applicationId: a.J6['4'] }, { applicationId: a.J6['5'] }, { applicationId: a.J6['6'] }],
+        s = [{ applicationId: a.J6['14'] }, { applicationId: a.J6['15'] }, { applicationId: a.J6['16'] }, { applicationId: a.J6['17'] }, { applicationId: a.J6['18'] }, { applicationId: a.J6['19'] }, { applicationId: a.J6['20'] }];
     return [
         {
             id: '1',
-            type: i.l.GAME,
-            gameWidgetType: r.g.FAVORITE,
+            type: o.l.FAVORITE_GAMES,
             game: t
         },
         {
             id: '2',
-            type: i.l.GAME,
-            gameWidgetType: r.g.CURRENT,
+            type: o.l.CURRENT_GAMES,
             games: n
         },
         {
             id: '3',
-            type: i.l.GAME,
-            gameWidgetType: r.g.WANT_TO_PLAY,
-            games: s
+            type: o.l.WANT_TO_PLAY_GAMES,
+            games: c
         },
         {
             id: '4',
-            type: i.l.GAME,
-            gameWidgetType: r.g.PLAYED,
-            games: d
+            type: o.l.PLAYED_GAMES,
+            games: s
         }
     ];
 }

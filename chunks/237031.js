@@ -4,18 +4,18 @@ r.d(t, {
 });
 var n = r(255367);
 r(73800);
-var a = r(481060);
-let l = 'collectibles shop product details modal',
+var l = r(481060);
+let a = 'collectibles shop product details modal',
     i = (e) => {
         let { product: t, category: i, shouldCheckoutWithOrbs: o, analyticsSource: s, analyticsLocations: c, returnRef: u, tab: d } = e;
-        (0, a.ZDy)(
+        (0, l.ZDy)(
             async () => {
                 let { default: e } = await Promise.all([r.e('25292'), r.e('31978'), r.e('40694'), r.e('78223'), r.e('60432')]).then(r.bind(r, 702370));
                 return (r) => {
-                    var a, l;
+                    var l, a;
                     return (0, n.jsx)(
                         e,
-                        ((a = (function (e) {
+                        ((l = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var r = null != arguments[t] ? arguments[t] : {},
                                     n = Object.keys(r);
@@ -40,7 +40,7 @@ let l = 'collectibles shop product details modal',
                             }
                             return e;
                         })({}, r)),
-                        (l = l =
+                        (a = a =
                             {
                                 product: t,
                                 category: i,
@@ -51,7 +51,7 @@ let l = 'collectibles shop product details modal',
                                 tab: d
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(l))
+                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
                             : (function (e, t) {
                                   var r = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -59,16 +59,16 @@ let l = 'collectibles shop product details modal',
                                       r.push.apply(r, n);
                                   }
                                   return r;
-                              })(Object(l)).forEach(function (e) {
-                                  Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(l, e));
+                              })(Object(a)).forEach(function (e) {
+                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                               }),
-                        a)
+                        l)
                     );
                 };
             },
-            { modalKey: l }
+            { modalKey: a }
         );
     },
     o = () => {
-        (0, a.Mr3)(l);
+        (0, l.Mr3)(a);
     };

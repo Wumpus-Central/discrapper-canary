@@ -10,17 +10,17 @@ var o = n(990547),
     u = n(703656),
     d = n(430824),
     p = n(742139),
-    m = n(639777),
-    f = n(504392),
-    _ = n(981631);
+    f = n(639777),
+    m = n(504392),
+    g = n(981631);
 function x(e) {
     let { guildId: t, powerupSkuId: n } = e,
         x = (0, i.e7)([d.Z], () => d.Z.getGuild(t)),
-        g = (0, i.e7)([a.Z], () => a.Z.hasLoadedExperiments),
-        v = (0, m.Z)(t),
+        _ = (0, i.e7)([a.Z], () => a.Z.hasLoadedExperiments),
+        v = (0, f.Z)(t),
         b = (0, u.At)(),
         j = (0, p.V)('GuildPowerupsPage'),
-        h = !g || null == v || null == x,
+        h = !_ || null == v || null == x,
         E = (0, l.ZP)(null != b ? b : []);
     return ((0, s.Z)(
         {
@@ -33,14 +33,14 @@ function x(e) {
     h)
         ? null
         : v || j
-          ? (0, r.jsx)(f.Z, {
+          ? (0, r.jsx)(m.Z, {
                 guildId: t,
                 powerupSkuId: n
             })
           : (0, r.jsx)(c.Z, {
                 analyticsLocation: {
-                    section: _.jXE.CHANNEL_LIST,
-                    object: _.qAy.GUILD_POWERUPS_CHANNEL_LIST_ITEM
+                    section: g.jXE.CHANNEL_LIST,
+                    object: g.qAy.GUILD_POWERUPS_CHANNEL_LIST_ITEM
                 },
                 guild: x
             });

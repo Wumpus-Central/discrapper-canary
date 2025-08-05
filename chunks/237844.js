@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     notice: 'notice_d37fb3',
     noticeWithoutRightPadding: 'noticeWithoutRightPadding_d37fb3 notice_d37fb3',
     noticeWithRightPadding: 'noticeWithRightPadding_d37fb3 notice_d37fb3',

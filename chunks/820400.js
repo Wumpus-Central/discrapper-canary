@@ -1,7 +1,7 @@
 a.d(t, { Z: () => u });
 var n = a(255367);
 a(73800);
-var r = a(924322),
+var r = a(296009),
     l = a(481060),
     i = a(447448),
     s = a(187162),
@@ -27,22 +27,22 @@ function u() {
                                   (0, n.jsx)(l.zxk, {
                                       variant: 'primary',
                                       text: 'Favorite Game Widget',
-                                      onClick: () => (0, c.w6)(r.g.FAVORITE)
+                                      onClick: () => (0, c.w6)(r.l.FAVORITE_GAMES)
                                   }),
                                   (0, n.jsx)(l.zxk, {
                                       variant: 'primary',
                                       text: 'Current Game Widget',
-                                      onClick: () => (0, c.w6)(r.g.CURRENT)
+                                      onClick: () => (0, c.w6)(r.l.CURRENT_GAMES)
                                   }),
                                   (0, n.jsx)(l.zxk, {
                                       variant: 'primary',
                                       text: 'Want to Play Game Widget',
-                                      onClick: () => (0, c.w6)(r.g.WANT_TO_PLAY)
+                                      onClick: () => (0, c.w6)(r.l.WANT_TO_PLAY_GAMES)
                                   }),
                                   (0, n.jsx)(l.zxk, {
                                       variant: 'primary',
                                       text: 'Played Game Widget',
-                                      onClick: () => (0, c.w6)(r.g.PLAYED)
+                                      onClick: () => (0, c.w6)(r.l.PLAYED_GAMES)
                                   }),
                                   (0, n.jsx)(l.zxk, {
                                       variant: 'active',

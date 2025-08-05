@@ -63,6 +63,7 @@ function x(e) {
         R = !O && h ? I.image.animatedUrl : I.image.staticUrl;
     return (0, r.jsxs)(c.aB, {
         label: I.title,
+        isActive: y,
         badge: I.badge,
         onClick: () => I.openModal(j),
         onMouseOver: () => E(!0),

@@ -99,7 +99,7 @@ async function S(e) {
         o = _.Z.getNotifyingChannelIds();
     if (null == o) return;
     let s = n ? [] : T(o),
-        c = l.ZP.getSettingsFilteredMentions(),
+        c = l.ZP.getMentions(),
         u = null != c && c.length > 0 ? c[c.length - 1].id : null,
         d = !1;
     if ((l.ZP.hasMore && !l.ZP.loading && (s.push(v(u)), (d = !0)), 0 === s.length))

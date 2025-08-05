@@ -120,9 +120,12 @@ function O(e, t) {
         S = Math.max((null != (h = null == C ? void 0 : C.premiumSubscriberCount) ? h : 0) - O + E, 0);
     return {
         onActivate: i.useCallback(
-            (e) => {
+            function (e) {
                 var i;
-                if ((e.stopPropagation(), null != C && null != t))
+                let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                e.stopPropagation();
+                let { shouldCloseAllModals: a = !0 } = l;
+                if (null != C && null != t)
                     return S < t.cost
                         ? void (0, s.u)({
                               analyticsLocation: {
@@ -138,7 +141,7 @@ function O(e, t) {
                                   return null == (e = _(!0))
                                       ? void 0
                                       : e.then(() => {
-                                            ((0, o.pTH)(),
+                                            (a && (0, o.pTH)(),
                                                 (0, o.ZDy)(async () => {
                                                     let { default: e } = await n.e('13965').then(n.bind(n, 666083));
                                                     return (n) =>
@@ -159,7 +162,7 @@ function O(e, t) {
                         : null == (i = _(!0))
                           ? void 0
                           : i.then(() => {
-                                ((0, o.pTH)(),
+                                (a && (0, o.pTH)(),
                                     (0, o.ZDy)(async () => {
                                         let { default: e } = await n.e('13965').then(n.bind(n, 666083));
                                         return (n) =>

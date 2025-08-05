@@ -22,19 +22,19 @@ var r = n(255367),
     j = n(367907),
     O = n(450936),
     E = n(993766),
-    S = n(499254),
-    P = n(541099),
-    I = n(827498),
-    Z = n(533379),
-    T = n(555573),
-    N = n(456007),
-    A = n(10718),
-    w = n(998698),
-    R = n(895924),
-    M = n(581364),
-    D = n(667204),
-    k = n(104919),
-    L = n(307508),
+    S = n(989573),
+    P = n(499254),
+    I = n(541099),
+    Z = n(827498),
+    T = n(533379),
+    N = n(555573),
+    A = n(456007),
+    w = n(10718),
+    R = n(998698),
+    M = n(895924),
+    D = n(581364),
+    k = n(667204),
+    L = n(104919),
     U = n(541716),
     B = n(752305),
     F = n(190210),
@@ -217,8 +217,8 @@ class ta extends i.PureComponent {
     handleRecallLastCommand(e) {
         if (null == e.interactionData) return;
         let { channel: t } = this.props,
-            { commandKey: n, interactionOptions: r } = (0, M.XA)(e.interactionData),
-            { command: i, application: l } = A.Xq(
+            { commandKey: n, interactionOptions: r } = (0, D.XA)(e.interactionData),
+            { command: i, application: l } = w.Xq(
                 {
                     channel: t,
                     type: 'channel'
@@ -230,20 +230,20 @@ class ta extends i.PureComponent {
             let e =
                 null != l
                     ? {
-                          type: R.Qi.APPLICATION,
+                          type: M.Qi.APPLICATION,
                           id: l.id,
                           icon: l.icon,
                           name: null != (o = null == l || null == (a = l.bot) ? void 0 : a.username) ? o : l.name,
                           application: l
                       }
                     : null;
-            T.Po({
+            N.Po({
                 channelId: t.id,
                 command: i,
                 section: e,
-                location: R.Vh.RECALL,
-                initialValues: (0, N.Dw)(i, null != r ? r : []),
-                commandOrigin: R.bB.CHAT
+                location: M.Vh.RECALL,
+                initialValues: (0, A.Dw)(i, null != r ? r : []),
+                commandOrigin: M.bB.CHAT
             });
         }
     }
@@ -411,7 +411,7 @@ class ta extends i.PureComponent {
                 let { guild: u, channel: d, pendingReply: p, chatInputType: m } = this.props,
                     b = !1;
                 if (null != l) {
-                    if (l.inputType === R.iw.BUILT_IN_INTEGRATION)
+                    if (l.inputType === M.iw.BUILT_IN_INTEGRATION)
                         return (
                             eH.S.dispatch(e7.CkL.SHAKE_APP, {
                                 duration: 200,
@@ -422,9 +422,9 @@ class ta extends i.PureComponent {
                                 shouldRefocus: !0
                             })
                         );
-                    let e = w.Z.getCommandOrigin(d.id);
-                    if (null == e || e === R.bB.CHAT) {
-                        let { isAuthorized: e } = await (0, k.L)({
+                    let e = R.Z.getCommandOrigin(d.id);
+                    if (null == e || e === M.bB.CHAT) {
+                        let { isAuthorized: e } = await (0, L.L)({
                             applicationId: l.applicationId,
                             channel: d,
                             commandIntegrationTypes: l.integration_types
@@ -434,11 +434,11 @@ class ta extends i.PureComponent {
                                 shouldClear: !1,
                                 shouldRefocus: !0
                             });
-                    } else if (e === R.bB.APPLICATION_LAUNCHER || e === R.bB.IMAGE_RECS_MENU || e === R.bB.IMAGE_RECS_SUBMENU) {
+                    } else if (e === M.bB.APPLICATION_LAUNCHER || e === M.bB.IMAGE_RECS_MENU || e === M.bB.IMAGE_RECS_SUBMENU) {
                         var _;
                         let { location: t, sectionName: n } = null != (_ = (0, eQ._U)(l)) ? _ : {},
-                            r = e === R.bB.APPLICATION_LAUNCHER ? P.Z.lastShownEntrypoint() : I._b.TEXT,
-                            { isAuthorized: i } = await (0, k.L)({
+                            r = e === M.bB.APPLICATION_LAUNCHER ? I.Z.lastShownEntrypoint() : Z._b.TEXT,
+                            { isAuthorized: i } = await (0, L.L)({
                                 applicationId: l.applicationId,
                                 channel: d,
                                 commandIntegrationTypes: l.integration_types,
@@ -455,7 +455,7 @@ class ta extends i.PureComponent {
                             });
                         (0, eQ.SC)(l);
                     }
-                    let n = await (0, D.Z)({
+                    let n = await (0, k.Z)({
                         command: l,
                         optionValues: null != a ? a : {},
                         context: {
@@ -463,7 +463,7 @@ class ta extends i.PureComponent {
                             channel: d
                         }
                     });
-                    if (l.inputType !== R.iw.BUILT_IN_TEXT)
+                    if (l.inputType !== M.iw.BUILT_IN_TEXT)
                         return Promise.resolve({
                             shouldClear: !0,
                             shouldRefocus: !0
@@ -864,7 +864,7 @@ class to extends i.PureComponent {
             }),
             e9(this, 'handleOpenAppLauncher', (e) => {
                 let { applicationId: t } = e;
-                return S.__(I._b.TEXT, this.props.chatInputType, { applicationId: t });
+                return P.__(Z._b.TEXT, this.props.chatInputType, { applicationId: t });
             }),
             e9(this, 'handleChatInteract', () => {
                 var e;
@@ -930,22 +930,22 @@ let ts = i.memo(function (e) {
         g = (0, d.e7)([ef.Z], () => ef.Z.isEnabled()),
         _ = (0, eb.Z)(t.id),
         y = (0, el.Z)(t.id),
-        x = (0, Z.R)({
+        x = (0, T.R)({
             channel: t,
             chatInputType: l
         }),
-        j = (0, L.Q)(t.id),
-        S = (0, ej.k)(t.id),
-        I = (0, C.ZP)(),
-        T = (0, Q.Z)(t.id),
-        N = (0, X.Z)(null == T ? void 0 : T.wallpaperId),
+        j = (0, S.Z)(t),
+        P = (0, ej.k)(t.id),
+        Z = (0, C.ZP)(),
+        N = (0, Q.Z)(t.id),
+        A = (0, X.Z)(null == N ? void 0 : N.wallpaperId),
         {
-            isInitialLoading: A,
-            primaryEntryPointCommand: w,
-            isProfileFetching: R,
-            wasProfileFetching: M,
-            applicationId: D,
-            channelId: k,
+            isInitialLoading: w,
+            primaryEntryPointCommand: R,
+            isProfileFetching: M,
+            wasProfileFetching: D,
+            applicationId: k,
+            channelId: L,
             commands: U
         } = (0, O.Z)({
             context: {
@@ -954,14 +954,14 @@ let ts = i.memo(function (e) {
             }
         });
     (0, E.Z)({
-        isProfileFetching: R,
-        wasProfileFetching: M,
-        applicationId: D,
-        channelId: k,
+        isProfileFetching: M,
+        wasProfileFetching: D,
+        applicationId: k,
+        channelId: L,
         commands: U
     });
     let B = i.useRef(null),
-        F = (0, d.e7)([P.Z], () => P.Z.appDMChannelsWithFailedLoads().has(t.id)),
+        F = (0, d.e7)([I.Z], () => I.Z.appDMChannelsWithFailedLoads().has(t.id)),
         H = (0, d.e7)([eD.Z], () => eD.Z.getVoiceChannelId()),
         G = (0, d.e7)([eT.Z], () => eT.Z.getChannel(H)),
         V = (0, d.e7)([eL.default], () => (t.type !== e7.d4z.DM ? null : eL.default.getUser(t.getRecipientId()))),
@@ -991,16 +991,16 @@ let ts = i.memo(function (e) {
         showAutomodUserProfileChatBlocker: h && !m,
         showAppLauncherButton: x,
         showAppDMsUI: j,
-        isInitialLoading: A,
-        showEntryPointAppCommandButton: null != w,
+        isInitialLoading: w,
+        showEntryPointAppCommandButton: null != R,
         entryPointCommandButtonRef: B,
         isFailedAppDMLoad: F,
-        pendingScheduledMessage: S,
+        pendingScheduledMessage: P,
         recipientUser: V,
         voiceChannel: G,
-        theme: I,
-        chatWallpaperState: T,
-        wallpaperColorMix: N,
+        theme: Z,
+        chatWallpaperState: N,
+        wallpaperColorMix: A,
         messagesTypingGradient: $ && J,
         isChatInputBottomAligned: $,
         showLinkedLobbyApplicationLoadingIndicator: et,

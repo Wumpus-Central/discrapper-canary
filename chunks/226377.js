@@ -21,10 +21,10 @@ function I(t, e, a, r, n = {}) {
     let s = (0, c.HN)(),
         l = s ? (0, c.Gx)(s) : void 0,
         R = l && (0, c.XU)(l).description,
-        { unit: d, tags: N, timestamp: f } = n,
-        { release: A, environment: T } = E.getOptions(),
+        { unit: d, tags: N, timestamp: A } = n,
+        { release: f, environment: T } = E.getOptions(),
         p = {};
-    (A && (p.release = A),
+    (f && (p.release = f),
         T && (p.environment = T),
         R && (p.transaction = R),
         i.X && _.kg.log(`Adding value of ${r} to ${e} metric ${a}`),
@@ -37,7 +37,7 @@ function I(t, e, a, r, n = {}) {
                 ...p,
                 ...N
             },
-            f
+            A
         ));
 }
 function R(t, e, a, r) {

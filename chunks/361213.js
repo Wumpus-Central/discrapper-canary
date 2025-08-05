@@ -1,13 +1,13 @@
-n.d(t, { Z: () => i });
-var r = n(981631);
-function i(e, t) {
+n.d(t, { Z: () => r });
+var i = n(981631);
+function r(e, t) {
     let n,
-        i = window.GLOBAL_ENV.CDN_HOST,
+        r = window.GLOBAL_ENV.CDN_HOST,
         l = window.GLOBAL_ENV.API_ENDPOINT;
-    return null != i
-        ? 'https://'.concat(i, '/app-assets/').concat(e, '/store/').concat(t, '.mp4')
+    return null != r
+        ? 'https://'.concat(r, '/app-assets/').concat(e, '/store/').concat(t, '.mp4')
         : ''
               .concat(location.protocol)
               .concat(l)
-              .concat(r.ANM.STORE_ASSET(e, t, 'mp4'));
+              .concat(i.ANM.STORE_ASSET(e, t, 'mp4'));
 }

@@ -1,9 +1,9 @@
-let r;
-n.d(t, { Z: () => u });
-var i,
+let i;
+n.d(t, { Z: () => d });
+var r,
     l = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function s(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,23 +16,23 @@ function o(e, t, n) {
         e
     );
 }
-let s = { lastGuildDismissedTime: {} };
-class c extends (i = l.ZP.DeviceSettingsStore) {
+let a = { lastGuildDismissedTime: {} };
+class c extends (r = l.ZP.DeviceSettingsStore) {
     initialize() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s;
-        r = e;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a;
+        i = e;
     }
     getUserAgnosticState() {
-        return r;
+        return i;
     }
     getLastGuildDismissedTime(e) {
-        return r.lastGuildDismissedTime[e];
+        return i.lastGuildDismissedTime[e];
     }
 }
-(o(c, 'displayName', 'ApplicationSubscriptionChannelNoticeStore'), o(c, 'persistKey', 'ApplicationSubscriptionChannelNoticeStore'));
-let u = new c(a.Z, {
+(s(c, 'displayName', 'ApplicationSubscriptionChannelNoticeStore'), s(c, 'persistKey', 'ApplicationSubscriptionChannelNoticeStore'));
+let d = new c(o.Z, {
     APPLICATION_SUBSCRIPTIONS_CHANNEL_NOTICE_DISMISSED: function (e) {
         let { guildId: t } = e;
-        r.lastGuildDismissedTime[t] = Date.now();
+        i.lastGuildDismissedTime[t] = Date.now();
     }
 });

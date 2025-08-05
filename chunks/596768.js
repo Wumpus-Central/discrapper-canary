@@ -9,8 +9,8 @@ var n = a(255367),
     d = a.n(c),
     u = a(442837),
     m = a(755721),
-    p = a(481060),
-    x = a(570140),
+    x = a(481060),
+    p = a(570140),
     h = a(665149),
     b = a(55935),
     f = a(120816),
@@ -21,8 +21,8 @@ var n = a(255367),
     y = a(621060),
     C = a(388032),
     O = a(459100),
-    T = a(616257);
-let N = [
+    N = a(616257);
+let T = [
         {
             key: 'id',
             cellClassName: O.eventColumn,
@@ -61,10 +61,10 @@ let N = [
                 return (0, n.jsxs)(n.Fragment, {
                     children: [
                         (0, n.jsxs)(h.ZP, {
-                            className: i()(T.headerBar, O.subPanelHeaderBar),
+                            className: i()(N.headerBar, O.subPanelHeaderBar),
                             children: [
                                 (0, n.jsx)(h.ZP.Icon, {
-                                    icon: p.IeX,
+                                    icon: x.IeX,
                                     tooltip: t
                                 }),
                                 (0, n.jsx)(h.ZP.Title, { children: t })
@@ -131,14 +131,14 @@ function S() {
         { TabBar: b, renderSelectedTab: g } = (0, y.ZP)({ tabs: E }, []),
         S = (0, u.e7)([f.Z], () => f.Z.trackTriggers),
         P = r.useCallback((e) => {
-            x.Z.dispatch({
+            p.Z.dispatch({
                 type: 'SET_TRACK_TRIGGERS',
                 enabled: e
             });
         }, []);
     return (0, n.jsxs)('div', {
         ref: a,
-        className: i()(T.panel, O.panel),
+        className: i()(N.panel, O.panel),
         children: [
             (0, n.jsxs)('div', {
                 className: O.toolbar,
@@ -146,7 +146,7 @@ function S() {
                     (0, n.jsx)('div', {
                         title: 'Enables tracking of all triggers',
                         className: O.triggersEnable,
-                        children: (0, n.jsx)(p.rsf, {
+                        children: (0, n.jsx)(x.rsf, {
                             checked: S,
                             onChange: P,
                             className: O.__invalid_toolbarSwitch
@@ -159,14 +159,14 @@ function S() {
                         onClick: v.Zw,
                         children: (0, n.jsx)('span', {
                             title: C.intl.string(C.t.VkKicX),
-                            children: (0, n.jsx)(p.XHJ, {
+                            children: (0, n.jsx)(x.XHJ, {
                                 size: 'md',
                                 color: 'currentColor',
                                 'aria-label': C.intl.string(C.t.VkKicX)
                             })
                         })
                     }),
-                    (0, n.jsx)(p.E1j, {
+                    (0, n.jsx)(x.E1j, {
                         size: 'sm',
                         className: O.searchBar,
                         query: e,
@@ -177,7 +177,7 @@ function S() {
                 ]
             }),
             (0, n.jsx)(_.Z, {
-                columns: N,
+                columns: T,
                 data: s,
                 selectedRowKey: c,
                 onClickRow: (e) => d(e.key)

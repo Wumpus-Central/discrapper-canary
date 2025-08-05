@@ -9,11 +9,11 @@ var r = n(255367),
     u = n(899667),
     d = n(720202),
     p = n(271383),
-    m = n(430824),
-    f = n(709054),
-    _ = n(659679),
+    f = n(430824),
+    m = n(709054),
+    g = n(659679),
     x = n(388032),
-    g = n(211886);
+    _ = n(211886);
 function v(e) {
     let { guildId: t } = e,
         n = (0, s.Wu)(
@@ -24,7 +24,7 @@ function v(e) {
             },
             [t]
         ),
-        v = o.useMemo(() => n.sort((e, t) => (f.default.extractTimestamp(e.id) < f.default.extractTimestamp(t.id) ? 1 : -1)), [n]),
+        v = o.useMemo(() => n.sort((e, t) => (m.default.extractTimestamp(e.id) < m.default.extractTimestamp(t.id) ? 1 : -1)), [n]),
         b = (0, s.Wu)(
             [p.ZP],
             () => {
@@ -43,9 +43,9 @@ function v(e) {
     }, [t, b]);
     let j = o.useMemo(() => (b.length > 0 ? { [t]: b } : {}), [t, b]);
     (0, c.$)(j);
-    let h = (0, s.e7)([m.Z], () => {
+    let h = (0, s.e7)([f.Z], () => {
         var e;
-        return null == (e = m.Z.getGuild(t)) ? void 0 : e.premiumSubscriberCount;
+        return null == (e = f.Z.getGuild(t)) ? void 0 : e.premiumSubscriberCount;
     });
     return (o.useEffect(() => {
         h !== n.length && (0, a.C0)(t);
@@ -55,15 +55,15 @@ function v(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(l.X6, {
-                      className: g.header,
+                      className: _.header,
                       variant: 'eyebrow',
                       color: 'text-secondary',
                       children: x.intl.string(x.t.yM9Krq)
                   }),
                   (0, r.jsx)(i.zJ, {
-                      className: g.container,
+                      className: _.container,
                       fade: !0,
-                      children: v.map((e, t) => (0, r.jsx)(_.Z, { boost: e }, 'boost-activity-'.concat(t)))
+                      children: v.map((e, t) => (0, r.jsx)(g.Z, { boost: e }, 'boost-activity-'.concat(t)))
                   })
               ]
           });

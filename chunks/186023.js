@@ -16,10 +16,10 @@ let g = (e) => {
         v = (0, s.Dt)(),
         { nodes: j, root_node_id: y, success_node_id: C, fail_node_id: I } = n,
         [O, T] = a.useState(y),
-        [Z, S] = a.useState(void 0),
-        [N, P] = a.useState(void 0),
+        [Z, N] = a.useState(void 0),
+        [S, P] = a.useState(void 0),
         [k, E] = a.useState([]),
-        [M, w] = a.useState(void 0),
+        [w, M] = a.useState(void 0),
         [A, D] = a.useState(void 0),
         R = (e) => {
             var n, r, a;
@@ -72,7 +72,7 @@ let g = (e) => {
                           }),
                     r)
                 );
-            if ((E([...k, e]), null != u.key && (null == x || x(u.key)), S(void 0), P(void 0), t.name === d.b.MESSAGE || t.name === d.b.FIRST_DM)) {
+            if ((E([...k, e]), null != u.key && (null == x || x(u.key)), N(void 0), P(void 0), t.name === d.b.MESSAGE || t.name === d.b.FIRST_DM)) {
                 let e = t.record.id;
                 l.ZP.trackWithMetadata(p.rMx.IAR_NAVIGATE, {
                     message_id: e,
@@ -88,7 +88,7 @@ let g = (e) => {
             var r;
             let a = f ? await (0, u.ZD)(n, t, [...k, e]) : await (0, u.fw)(n, t, [...k, e], h),
                 i = null == a || null == (r = a.body) ? void 0 : r.report_id;
-            (null != i && w(i), D(j[e.nodeRef].report_type), null == b || b(i));
+            (null != i && M(i), D(j[e.nodeRef].report_type), null == b || b(i));
         },
         L = () => {
             var e, n;
@@ -106,9 +106,9 @@ let g = (e) => {
                     next_node: j[i].id
                 });
             }
-            (S(null == a || null == (e = a.multiSelect) ? void 0 : e.state), P(null == a ? void 0 : a.textInput), T(i), E(r), null == x || x('..'));
+            (N(null == a || null == (e = a.multiSelect) ? void 0 : e.state), P(null == a ? void 0 : a.textInput), T(i), E(r), null == x || x('..'));
         },
-        U = a.useMemo(() => {
+        z = a.useMemo(() => {
             let e = [],
                 t = [];
             for (let i in j) {
@@ -137,7 +137,7 @@ let g = (e) => {
             width: 440,
             activeSlide: O,
             centered: !1,
-            children: U.map((e) =>
+            children: z.map((e) =>
                 (0, r.jsx)(
                     o.Mi4,
                     {
@@ -153,11 +153,11 @@ let g = (e) => {
                                 onSelectChild: R,
                                 onNavigateBack: L,
                                 multiSelect: Z,
-                                textInput: N,
+                                textInput: S,
                                 successNodeId: C,
                                 failNodeId: I,
                                 onSubmit: B,
-                                reportId: M
+                                reportId: w
                             })
                         })
                     },

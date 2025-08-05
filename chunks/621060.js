@@ -15,8 +15,8 @@ var n,
     d = a(481060),
     u = a(393238),
     m = a(424625),
-    p = a(823379),
-    x = a(246992),
+    x = a(823379),
+    p = a(246992),
     h = a(616257),
     b = (((n = {}).NONE = ''), (n.EXPERIMENTS = 'Experiments'), (n.EVENTS = 'Events'), (n.PREMIUM = 'Premium'), (n.BILLING = 'Billing'), (n.USERS = 'Users'), (n.GUILDS = 'Guilds'), (n.UI = 'UI'), (n.GAMES = 'Games'), (n.AUDIO_VIDEO = 'Audio / Video'), (n.DEVELOPMENT = 'Development'), n);
 let f = ['Experiments', 'Events', 'Premium', 'Billing', 'Users', 'Guilds', 'UI', 'Games', 'Audio / Video', 'Development'],
@@ -124,7 +124,7 @@ function g(e) {
                                     t
                                 );
                         })
-                        .filter(p.lm),
+                        .filter(x.lm),
                     (0, r.jsx)('div', {
                         className: h.tabMeasurer,
                         children: t.map((e) => {
@@ -152,7 +152,7 @@ function g(e) {
                     s.size > 0 &&
                     (0, r.jsx)(d.yRy, {
                         targetElementRef: _,
-                        layerContext: x.O$,
+                        layerContext: p.O$,
                         renderPopout: y,
                         position: 'bottom',
                         align: 'right',

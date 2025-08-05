@@ -9,8 +9,8 @@ var n = a(255367),
     d = a(846027),
     u = a(304809),
     m = a(670863),
-    p = a(72897),
-    x = a(131951),
+    x = a(72897),
+    p = a(131951),
     h = a(246992),
     b = a(65154),
     f = a(203759),
@@ -84,14 +84,14 @@ function j(e) {
     });
 }
 function _() {
-    let { name: e } = (0, p.p)(b.h7.AUDIO_INPUT),
+    let { name: e } = (0, x.p)(b.h7.AUDIO_INPUT),
         [t, a] = r.useState(!1),
         [l, i] = r.useState([]),
-        g = (0, s.e7)([x.Z], () => x.Z.getKrispSuppressionLevel()),
+        g = (0, s.e7)([p.Z], () => p.Z.getKrispSuppressionLevel()),
         [_, y] = r.useState(null),
         C = r.useRef(null),
         O = r.useRef(null),
-        [T, N] = r.useState(0.5),
+        [N, T] = r.useState(0.5),
         {
             krispModels: E,
             krispModelOverride: S,
@@ -99,43 +99,43 @@ function _() {
             echoCancellation: I,
             autoThreshold: w,
             vadUseKrisp: R,
-            vadKrispActivationThreshold: k,
-            noiseCancellation: A,
+            vadKrispActivationThreshold: A,
+            noiseCancellation: k,
             noiseSuppression: Z,
             noiseSuppressionSupported: D,
             noiseCancellationSupported: L,
             noiseCancellationEnableStats: M
-        } = (0, s.cj)([x.Z], () => ({
-            krispModels: x.Z.getKrispModels(),
-            krispModelOverride: x.Z.getKrispModelOverride(),
-            echoCancellation: x.Z.getEchoCancellation(),
-            autoThreshold: x.Z.getModeOptions().autoThreshold,
-            vadUseKrisp: x.Z.getModeOptions().vadUseKrisp,
-            inputMode: x.Z.getMode(),
-            vadKrispActivationThreshold: x.Z.getKrispVadActivationThreshold(),
-            noiseCancellation: x.Z.getNoiseCancellation(),
-            noiseSuppression: x.Z.getNoiseSuppression(),
-            noiseSuppressionSupported: x.Z.isNoiseSuppressionSupported(),
-            noiseCancellationSupported: x.Z.isNoiseCancellationSupported(),
-            noiseCancellationEnableStats: x.Z.getKrispEnableStats()
+        } = (0, s.cj)([p.Z], () => ({
+            krispModels: p.Z.getKrispModels(),
+            krispModelOverride: p.Z.getKrispModelOverride(),
+            echoCancellation: p.Z.getEchoCancellation(),
+            autoThreshold: p.Z.getModeOptions().autoThreshold,
+            vadUseKrisp: p.Z.getModeOptions().vadUseKrisp,
+            inputMode: p.Z.getMode(),
+            vadKrispActivationThreshold: p.Z.getKrispVadActivationThreshold(),
+            noiseCancellation: p.Z.getNoiseCancellation(),
+            noiseSuppression: p.Z.getNoiseSuppression(),
+            noiseSuppressionSupported: p.Z.isNoiseSuppressionSupported(),
+            noiseCancellationSupported: p.Z.isNoiseCancellationSupported(),
+            noiseCancellationEnableStats: p.Z.getKrispEnableStats()
         })),
-        U = A ? 'KRISP' : Z ? 'STANDARD' : 'NONE',
+        U = k ? 'KRISP' : Z ? 'STANDARD' : 'NONE',
         F = (0, u.N)(),
-        B = r.useCallback(() => {
+        G = r.useCallback(() => {
             var e;
             (null == (e = C.current) || e.stop(), (C.current = null), y(null));
         }, []);
-    function G() {
-        x.Z.getMediaEngine().stopRecordingRawSamples();
+    function B() {
+        p.Z.getMediaEngine().stopRecordingRawSamples();
     }
     function z(e) {
-        if ((t && G(), B(), null == F)) return;
+        if ((t && B(), G(), null == F)) return;
         let a = F.createBufferSource();
-        ((a.buffer = e.audioBuffer), (O.current = F.createGain()), (O.current.gain.value = T), a.connect(O.current), O.current.connect(F.destination), (a.loop = !0), a.start(), (C.current = a), y(e));
+        ((a.buffer = e.audioBuffer), (O.current = F.createGain()), (O.current.gain.value = N), a.connect(O.current), O.current.connect(F.destination), (a.loop = !0), a.start(), (C.current = a), y(e));
     }
     r.useEffect(() => {
-        B();
-    }, [B]);
+        G();
+    }, [G]);
     let V = [];
     return (
         L &&
@@ -256,7 +256,7 @@ function _() {
                                                     title: 'Krisp VAD Activation Threshold',
                                                     tag: c.RB0.H3,
                                                     children: (0, n.jsx)(c.iRW, {
-                                                        initialValue: k,
+                                                        initialValue: A,
                                                         onValueChange: (e) => d.Z.setMode(b.pM.VOICE_ACTIVITY, { vadKrispActivationThreshold: e }),
                                                         minValue: 0,
                                                         maxValue: 1
@@ -281,12 +281,12 @@ function _() {
                         children: (0, n.jsx)(o.zx, {
                             color: t ? o.zx.Colors.RED : o.zx.Colors.BRAND,
                             onClick: t
-                                ? G
+                                ? B
                                 : function () {
-                                      (B(),
+                                      (G(),
                                           a(!0),
                                           d.Z.setLoopback('krisp_test', !0),
-                                          x.Z.getMediaEngine().startRecordingRawSamples((t, n, r) => {
+                                          p.Z.getMediaEngine().startRecordingRawSamples((t, n, r) => {
                                               (a(!1), d.Z.setLoopback('krisp_test', !1));
                                               let l = new AudioBuffer({
                                                   length: t.length,
@@ -318,9 +318,9 @@ function _() {
                         title: 'Volume',
                         tag: c.RB0.H3,
                         children: (0, n.jsx)(c.iRW, {
-                            initialValue: T,
+                            initialValue: N,
                             asValueChanges: function (e) {
-                                null != O.current && ((O.current.gain.value = e), N(e));
+                                null != O.current && ((O.current.gain.value = e), T(e));
                             },
                             minValue: 0,
                             maxValue: 1
@@ -336,7 +336,7 @@ function _() {
                                     recording: e,
                                     playing: e === _,
                                     onPlay: z,
-                                    onStop: B
+                                    onStop: G
                                 },
                                 t
                             )

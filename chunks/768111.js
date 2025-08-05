@@ -1,25 +1,25 @@
 (n.d(t, { Z: () => u }), n(539854));
 var r = n(447448),
     o = n(585305),
-    i = n(806729),
-    l = n(517157),
+    l = n(806729),
+    i = n(517157),
     a = n(708108),
     c = n(146078),
     s = n(228168),
     d = n(388032);
 function u(e) {
     let { user: t, currentUser: n } = e,
-        { mutualFriendsCount: u, mutualGuilds: f } = (0, i.Z)(t),
+        { mutualFriendsCount: u, mutualGuilds: f } = (0, l.Z)(t),
         p = null == f ? void 0 : f.length,
         m = (0, o.Z)(t),
-        g = (0, r.k)({ location: 'useUserProfileModalV2TabBarItems' }),
-        b = (0, l.Z)(),
+        b = (0, r.k)({ location: 'useUserProfileModalV2TabBarItems' }),
+        g = (0, i.Z)(),
         y = [],
-        O = t.id === (null == n ? void 0 : n.id),
-        h = b.length > 0;
+        _ = t.id === (null == n ? void 0 : n.id),
+        O = g.length > 0;
     return (
-        g &&
-            (h || O) &&
+        b &&
+            (O || _) &&
             y.push({
                 text: d.intl.string(d.t.laViw8),
                 section: s.oh.WIDGETS,

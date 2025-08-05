@@ -1,8 +1,8 @@
 (n.d(t, { Z: () => p }), n(388685));
 var r = n(255367),
     o = n(73800),
-    i = n(481060),
-    l = n(810568),
+    l = n(481060),
+    i = n(810568),
     a = n(168524),
     c = n(388032),
     s = n(467514);
@@ -33,14 +33,14 @@ function d(e) {
 }
 function u(e) {
     let { imageSrc: t, gameName: n } = e,
-        [l, a] = o.useState(!1),
+        [i, a] = o.useState(!1),
         d = null != n ? n : c.intl.string(c.t.GIWFlJ);
-    return l || null == t
+    return i || null == t
         ? (0, r.jsx)('div', {
               role: 'img',
               'aria-label': d,
               className: s.fallback,
-              children: (0, r.jsx)(i.Text, {
+              children: (0, r.jsx)(l.Text, {
                   variant: 'text-xxs/medium',
                   lineClamp: 3,
                   'aria-hidden': !0,
@@ -60,7 +60,7 @@ function f(e) {
         f = (0, a.Z)({
             location: 'GameCover',
             applicationId: o,
-            source: l.m1.UserProfile,
+            source: i.m1.UserProfile,
             sourceUserId: d,
             trackEntryPointImpression: !0
         });
@@ -70,7 +70,7 @@ function f(e) {
             gameName: n
         });
     let p = c.intl.formatToPlainString(c.t['8QLQBw'], { gameName: null != n ? n : c.intl.string(c.t.GIWFlJ) });
-    return (0, r.jsx)(i.P3F, {
+    return (0, r.jsx)(l.P3F, {
         onClick: f,
         'aria-label': p,
         className: s.clickable,
@@ -82,7 +82,7 @@ function f(e) {
 }
 function p(e) {
     var { applicationId: t, userId: n, disableInteraction: o = !1 } = e,
-        i = (function (e, t) {
+        l = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -91,18 +91,18 @@ function p(e) {
                     var n,
                         r,
                         o = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
             }
             return o;
         })(e, ['applicationId', 'userId', 'disableInteraction']);
     return o
-        ? (0, r.jsx)(u, d({}, i))
+        ? (0, r.jsx)(u, d({}, l))
         : (0, r.jsx)(
               f,
               d(
@@ -110,7 +110,7 @@ function p(e) {
                       applicationId: t,
                       userId: n
                   },
-                  i
+                  l
               )
           );
 }

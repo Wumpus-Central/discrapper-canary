@@ -1,8 +1,8 @@
 (n.d(t, { default: () => v }), n(388685), n(953529));
 var r = n(255367),
-    s = n(73800),
-    o = n(494497),
-    l = n(442837),
+    o = n(73800),
+    l = n(494497),
+    s = n(442837),
     a = n(304789),
     i = n(481060),
     c = n(905128),
@@ -20,44 +20,44 @@ var r = n(255367),
 function v(e) {
     var t,
         n,
-        { guildId: v, powerup: C } = e,
-        y = (function (e, t) {
+        { guildId: v, powerup: y } = e,
+        O = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                s = (function (e, t) {
+                o = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        s = {},
-                        o = Object.keys(e);
-                    for (r = 0; r < o.length; r++) ((n = o[r]), t.indexOf(n) >= 0 || (s[n] = e[n]));
-                    return s;
+                        o = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
+                    return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var o = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < o.length; r++) ((n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]));
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
             }
-            return s;
+            return o;
         })(e, ['guildId', 'powerup']);
-    let [k, O] = s.useState(void 0),
-        P = s.useMemo(() => {
-            switch (C.skuId) {
+    let [C, k] = o.useState(void 0),
+        P = o.useMemo(() => {
+            switch (y.skuId) {
                 case _.IN:
                     return (0, r.jsx)(f.E, { guildId: v });
                 case _.If:
                     return (0, r.jsx)(f.Z, {});
-                case o.A$:
+                case l.A$:
                     return (0, r.jsx)(b.Z, {});
                 default:
                     return;
             }
-        }, [C, v]);
-    (0, d.$)(v, C, d.w.DETAIL);
+        }, [y, v]);
+    (0, d.$)(v, y, d.w.DETAIL);
     let w = (0, u.Z)(v),
-        S = _.Rx[C.skuId],
+        S = _.Rx[y.skuId],
         I = null != S ? _.Cp[S] : null,
-        E = (0, l.e7)([c.Z], () => c.Z.getStateForGuild(v)),
+        E = (0, s.e7)([c.Z], () => c.Z.getStateForGuild(v)),
         N = null != I ? (null == E ? void 0 : E.allPowerups[I]) : null;
     return (0, r.jsxs)(
         i.Y0X,
@@ -90,7 +90,7 @@ function v(e) {
                 className: j.modal,
                 size: i.CgR.DYNAMIC
             },
-            y
+            O
         )),
         (n = n =
             {
@@ -105,19 +105,19 @@ function v(e) {
                                 children: [
                                     (0, r.jsx)(a.$, {
                                         className: j.powerupImage,
-                                        children: (0, r.jsx)(m.m, { powerup: C })
+                                        children: (0, r.jsx)(m.m, { powerup: y })
                                     }),
                                     (0, r.jsxs)('div', {
                                         className: j.contentContainer,
                                         children: [
                                             (0, r.jsx)(i.X6q, {
                                                 variant: 'heading-xl/extrabold',
-                                                children: C.title
+                                                children: y.title
                                             }),
                                             (0, r.jsx)(i.Text, {
                                                 className: j.description,
                                                 variant: 'text-sm/normal',
-                                                children: C.description
+                                                children: y.description
                                             }),
                                             null != N &&
                                                 (0, r.jsx)(i.Text, {
@@ -125,20 +125,20 @@ function v(e) {
                                                     variant: 'text-sm/normal',
                                                     children: x.intl.formatToPlainString(h.default.NAFGkJ, { level: N.title })
                                                 }),
-                                            (0, r.jsx)(g.q, { powerup: C }),
-                                            null != k &&
+                                            (0, r.jsx)(g.q, { powerup: y }),
+                                            null != C &&
                                                 (0, r.jsx)(i.Text, {
                                                     className: j.error,
                                                     color: 'status-danger',
                                                     variant: 'text-sm/semibold',
-                                                    children: k
+                                                    children: C
                                                 }),
                                             w &&
                                                 (0, r.jsx)(p.ZP, {
                                                     className: j.footer,
                                                     guildId: v,
-                                                    powerup: C,
-                                                    onError: O
+                                                    powerup: y,
+                                                    onError: k
                                                 })
                                         ]
                                     })
@@ -153,7 +153,7 @@ function v(e) {
                     }),
                     (0, r.jsx)(i.olH, {
                         className: j.close,
-                        onClick: y.onClose
+                        onClick: O.onClose
                     })
                 ]
             }),

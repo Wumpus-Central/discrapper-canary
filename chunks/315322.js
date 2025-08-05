@@ -44,8 +44,8 @@ function p(e) {
         search_type: t.type,
         search_id: n,
         prev_search_id: i,
-        search_session_id: s.Z.getSessionId(t),
-        search_query_id: s.Z.getQueryId(t),
+        search_session_id: s.ZP.getSessionId(t),
+        search_query_id: s.ZP.getQueryId(t),
         is_error: l,
         limit: a,
         offset: o,
@@ -66,8 +66,8 @@ function I(e) {
     l.default.track(u.rMx.SEARCH_RESULT_SELECTED, {
         search_type: t.type,
         search_id: n,
-        search_session_id: s.Z.getSessionId(t),
-        search_query_id: s.Z.getQueryId(t),
+        search_session_id: s.ZP.getSessionId(t),
+        search_query_id: s.ZP.getQueryId(t),
         message_id: r,
         guild_id: i,
         channel_id: a,
@@ -85,8 +85,8 @@ function O(e) {
     let { searchContext: t, searchRequestAnalyticsId: n, mode: i } = e;
     r.ZP.trackWithMetadata(u.rMx.SEARCH_RESULT_SORT_CHANGED, {
         search_id: n,
-        search_session_id: s.Z.getSessionId(t),
-        search_query_id: s.Z.getQueryId(t),
+        search_session_id: s.ZP.getSessionId(t),
+        search_query_id: s.ZP.getQueryId(t),
         search_type: t.type,
         new_sort_type: i
     });
@@ -95,8 +95,8 @@ function S(e) {
     let { searchContext: t, searchRequestAnalyticsId: n, newPageIndex: i } = e;
     r.ZP.trackWithMetadata(u.rMx.SEARCH_RESULT_PAGE_CHANGED, {
         search_id: n,
-        search_session_id: s.Z.getSessionId(t),
-        search_query_id: s.Z.getQueryId(t),
+        search_session_id: s.ZP.getSessionId(t),
+        search_query_id: s.ZP.getQueryId(t),
         search_type: t.type,
         new_page_index: i
     });
@@ -105,8 +105,8 @@ function f(e) {
     let { searchContext: t, searchRequestAnalyticsId: n, searchQueryString: i, searchQuery: l } = e;
     r.ZP.trackWithMetadata(u.rMx.SEARCH_RESULT_EMPTY, {
         search_id: n,
-        search_session_id: s.Z.getSessionId(t),
-        search_query_id: s.Z.getQueryId(t),
+        search_session_id: s.ZP.getSessionId(t),
+        search_query_id: s.ZP.getQueryId(t),
         search_type: t.type,
         search_query_length: d(i),
         search_query_content_length: _(l)
@@ -114,13 +114,13 @@ function f(e) {
 }
 function h(e) {
     let { searchContext: t } = e;
-    (s.Z.initialize({
+    (s.ZP.initialize({
         searchContext: t,
         initialTab: c.sR.MESSAGES
     }),
         r.ZP.trackWithMetadata(u.rMx.SEARCH_OPENED, {
             search_id: E(t),
-            search_session_id: s.Z.getSessionId(t),
+            search_session_id: s.ZP.getSessionId(t),
             search_type: t.type
         }));
 }
@@ -128,18 +128,18 @@ function T(e) {
     let { searchContext: t } = e;
     (r.ZP.trackWithMetadata(u.rMx.SEARCH_CLOSED, {
         search_id: E(t),
-        search_session_id: s.Z.getSessionId(t),
-        search_query_id: s.Z.getQueryId(t),
+        search_session_id: s.ZP.getSessionId(t),
+        search_query_id: s.ZP.getQueryId(t),
         search_type: t.type
     }),
-        s.Z.terminate(t));
+        s.ZP.terminate(t));
 }
 function m(e) {
     let { searchContext: t } = e;
     r.ZP.trackWithMetadata(u.rMx.SEARCH_INPUT_CLEARED, {
         search_id: E(t),
-        search_session_id: s.Z.getSessionId(t),
-        search_query_id: s.Z.getQueryId(t),
+        search_session_id: s.ZP.getSessionId(t),
+        search_query_id: s.ZP.getQueryId(t),
         search_type: t.type
     });
 }
@@ -162,10 +162,10 @@ function g(e) {
     c.forEach((e) => {
         e.type === u.dCx.ANSWER_IN ? p++ : e.type === u.dCx.ANSWER_USERNAME_FROM ? I++ : e.type === u.dCx.ANSWER_USERNAME_MENTIONS ? O++ : e.type === u.dCx.ANSWER_HAS ? S++ : e.type === u.dCx.ANSWER_BEFORE ? f++ : e.type === u.dCx.ANSWER_ON ? h++ : e.type === u.dCx.ANSWER_AFTER ? T++ : e.type === u.dCx.ANSWER_PINNED && m++;
     });
-    let g = s.Z.getQueryId(t);
+    let g = s.ZP.getQueryId(t);
     (r.ZP.trackWithMetadata(u.rMx.MESSAGES_SEARCH_STARTED, {
         search_id: E(t),
-        search_session_id: s.Z.getSessionId(t),
+        search_session_id: s.ZP.getSessionId(t),
         search_query_id: g,
         search_type: t.type,
         search_query_length: d(i),
@@ -182,8 +182,8 @@ function g(e) {
     }),
         r.ZP.trackWithMetadata(u.rMx.SEARCH_STARTED, {
             search_id: E(t),
-            search_session_id: s.Z.getSessionId(t),
-            search_query_id: s.Z.getQueryId(t),
+            search_session_id: s.ZP.getSessionId(t),
+            search_query_id: s.ZP.getQueryId(t),
             search_type: t.type,
             num_modifiers: l.length,
             modifiers: a
@@ -195,8 +195,8 @@ function N(e) {
         rating: t,
         search_id: E(n),
         search_type: n.type,
-        search_session_id: s.Z.getSessionId(n),
-        search_query_id: s.Z.getQueryId(n)
+        search_session_id: s.ZP.getSessionId(n),
+        search_query_id: s.ZP.getQueryId(n)
     });
 }
 function R(e) {
@@ -204,8 +204,8 @@ function R(e) {
     r.ZP.trackWithMetadata(u.rMx.SEARCH_RESULTS_FEEDBACK_ENTRYPOINT_VIEWED, {
         search_id: E(t),
         search_type: t.type,
-        search_session_id: s.Z.getSessionId(t),
-        search_query_id: s.Z.getQueryId(t)
+        search_session_id: s.ZP.getSessionId(t),
+        search_query_id: s.ZP.getQueryId(t)
     });
 }
 function y(e) {
@@ -213,8 +213,8 @@ function y(e) {
     r.ZP.trackWithMetadata(u.rMx.SEARCH_RESULTS_FEEDBACK_SUBMITTED, {
         search_id: E(n),
         search_type: n.type,
-        search_session_id: s.Z.getSessionId(n),
-        search_query_id: s.Z.getQueryId(n),
+        search_session_id: s.ZP.getSessionId(n),
+        search_query_id: s.ZP.getQueryId(n),
         rating: t,
         unsatisfied_question_option: i,
         unsatisfied_question_text: l,
@@ -224,14 +224,14 @@ function y(e) {
 }
 function A(e) {
     let { searchContext: t } = e;
-    (s.Z.initialize({
+    (s.ZP.initialize({
         searchContext: t,
         initialTab: c.sR.MESSAGES
     }),
         r.ZP.trackWithMetadata(u.rMx.SEARCH_MESSAGES_CHANNEL_PREFILL, {
             search_type: t.type,
             search_id: E(t),
-            search_session_id: s.Z.getSessionId(t)
+            search_session_id: s.ZP.getSessionId(t)
         }));
 }
 new i.Z('SearchTracking');
@@ -263,7 +263,7 @@ function P(e) {
     r.ZP.trackWithMetadata(u.rMx.SEARCH_HISTORY_CLICKED, {
         search_id: E(t),
         search_type: t.type,
-        search_session_id: s.Z.getSessionId(t),
+        search_session_id: s.ZP.getSessionId(t),
         search_history_index: n,
         search_history_total_results: i
     });
@@ -277,8 +277,8 @@ function D(e) {
     r.ZP.trackWithMetadata(u.rMx.SEARCH_MESSAGES_AUTOCOMPLETE_CLICKED, {
         search_id: E(n),
         search_type: n.type,
-        search_session_id: s.Z.getSessionId(n),
-        search_query_id: s.Z.getQueryId(n),
+        search_session_id: s.ZP.getSessionId(n),
+        search_query_id: s.ZP.getQueryId(n),
         search_query_length: d(l),
         search_query_content_length: _(i),
         search_autocomplete_result_index: a,
@@ -297,8 +297,8 @@ function M(e) {
     r.ZP.trackWithMetadata(u.rMx.SEARCH_MESSAGES_SELECTED_CHANNEL_FILTER_CLICKED, {
         search_id: E(t),
         search_type: t.type,
-        search_session_id: s.Z.getSessionId(t),
-        search_query_id: s.Z.getQueryId(t),
+        search_session_id: s.ZP.getSessionId(t),
+        search_query_id: s.ZP.getQueryId(t),
         search_autocomplete_select_action: n
     });
 }

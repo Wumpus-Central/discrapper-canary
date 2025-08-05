@@ -40,9 +40,9 @@ function u(t) {
         d = R.data || {},
         N = d[i.TE];
     null != N && (a.sample_rate = `${N}`);
-    let f = d[i.Zj],
-        A = R.description;
-    return ('url' !== f && A && (a.transaction = A), (a.sampled = String((0, c.Tt)(r))), e.emit('createDsc', a, r), a);
+    let A = d[i.Zj],
+        f = R.description;
+    return ('url' !== A && f && (a.transaction = f), (a.sampled = String((0, c.Tt)(r))), e.emit('createDsc', a, r), a);
 }
 function I(t) {
     let e = u(t);

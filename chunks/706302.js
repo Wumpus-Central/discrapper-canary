@@ -8,6 +8,6 @@ function r(e) {
             applicationId: n.id,
             botUserId: r
         }),
-        o = (0, i.Z)({ context: t });
+        o = (0, i.Z)('channel' === t.type ? t.channel : void 0);
     return a && null != r && !o;
 }

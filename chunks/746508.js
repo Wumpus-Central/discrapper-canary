@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(810788),
     K = n(160404),
     q = n(703656),
-    Q = n(917405),
-    X = n(641015),
+    X = n(917405),
+    Q = n(641015),
     J = n(848543),
     $ = n(565799),
     ee = n(501655),
@@ -240,14 +240,14 @@ function eq() {
         }
     });
 }
-function eQ(e) {
+function eX(e) {
     let { channel: t, enableActivities: n, disabled: l } = e,
         o = i.useRef(null),
         { parentAnalyticsLocation: s } = (0, Z.ZP)(),
         c = (0, eo.Z)(),
         d = (0, ec.Z)(t),
         p = (0, u.e7)([C.ZP], () => null != C.ZP.getSelfEmbeddedActivityForLocation(C.ZP.getConnectedActivityLocation())),
-        f = (0, X.Z)(t),
+        f = (0, Q.Z)(t),
         { reachedLimit: _, limit: O } = (0, es.Z)(t),
         E = i.useCallback(() => {
             (0, ed.Z)();
@@ -368,7 +368,7 @@ function eQ(e) {
         )
     );
 }
-function eX(e) {
+function eQ(e) {
     let { channel: t, enableActivities: n } = e,
         i = (0, I.bp)(),
         { parentAnalyticsLocation: l, newestAnalyticsLocation: o } = (0, Z.ZP)(),
@@ -466,7 +466,7 @@ function eJ(e) {
         b = (0, ec.Z)(n),
         _ = n.getGuildId(),
         O = (0, u.cj)([C.ZP], () => null != C.ZP.getSelfEmbeddedActivityForChannel(n.id)),
-        E = (0, X.Z)(n),
+        E = (0, Q.Z)(n),
         y = i.useCallback(() => {
             (0, eh.Z)(_, n.id, eR.jXE.ACTIVITY_PANEL);
         }, [_, n.id]),
@@ -558,7 +558,7 @@ class e$ extends i.PureComponent {
         let u = (0, k.F6)(t, eS.default, eC.Z);
         return (
             null != n ? ((e = eR.Z5c.CHANNEL(n.id, t.id)), (u = ''.concat(u, ' / ').concat(n.name))) : (e = eR.Z5c.CHANNEL(eR.ME, t.id)),
-            (0, r.jsx)(Q.Z, {
+            (0, r.jsx)(X.Z, {
                 channelId: t.id,
                 quality: i,
                 state: l,
@@ -651,7 +651,7 @@ class e$ extends i.PureComponent {
         return (0, r.jsxs)('div', {
             className: eG.actionButtons,
             children: [
-                (0, r.jsx)(eQ, {
+                (0, r.jsx)(eX, {
                     channel: e,
                     enableActivities: c,
                     disabled: !d && u
@@ -663,12 +663,12 @@ class e$ extends i.PureComponent {
                     disabled: e.isGuildStageVoice() && ((d && null == a) || (!d && u))
                 }),
                 c
-                    ? (0, r.jsx)(eX, {
+                    ? (0, r.jsx)(eQ, {
                           channel: e,
                           enableActivities: i
                       })
                     : null,
-                (0, X.Z)(e)
+                (0, Q.Z)(e)
                     ? (0, r.jsx)(J.Z, {
                           channel: e,
                           focusProps: eW

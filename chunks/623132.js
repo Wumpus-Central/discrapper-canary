@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y });
 var r = n(255367),
     o = n(73800),
-    i = n(481060),
-    l = n(810568),
+    l = n(481060),
+    i = n(810568),
     a = n(168524),
     c = n(5192),
     s = n(817053),
@@ -11,17 +11,17 @@ var r = n(255367),
     f = n(388032),
     p = n(467514),
     m = n(418718);
-function g(e) {
-    let { text: t, user: n, guildId: o, channelId: l } = e;
+function b(e) {
+    let { text: t, user: n, guildId: o, channelId: i } = e;
     return (0, r.jsxs)('div', {
         children: [
-            (0, r.jsx)(i.PEf, {
+            (0, r.jsx)(l.PEf, {
                 size: 'xxs',
-                color: i.TVs.colors.ICON_TERTIARY,
+                color: l.TVs.colors.ICON_TERTIARY,
                 className: m.icon
             }),
-            (0, r.jsx)(i.nn4, { children: f.intl.format(f.t.TM0XDQ, { name: c.ZP.getName(o, l, n) }) }),
-            (0, r.jsx)(i.Text, {
+            (0, r.jsx)(l.nn4, { children: f.intl.format(f.t.TM0XDQ, { name: c.ZP.getName(o, i, n) }) }),
+            (0, r.jsx)(l.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-tertiary',
                 children: t
@@ -29,12 +29,12 @@ function g(e) {
         ]
     });
 }
-function b(e) {
+function g(e) {
     let { applicationId: t, userId: n, gameName: c, className: s, children: d } = e,
         u = (0, a.Z)({
             location: 'UserProfileWidgetGameDetailsCard',
             applicationId: t,
-            source: l.m1.UserProfile,
+            source: i.m1.UserProfile,
             sourceUserId: n,
             trackEntryPointImpression: !0
         }),
@@ -44,15 +44,15 @@ function b(e) {
             },
             [u]
         ),
-        g = null != c ? c : f.intl.string(f.t.GIWFlJ),
-        b = null != u;
+        b = null != c ? c : f.intl.string(f.t.GIWFlJ),
+        g = null != u;
     return (0, r.jsxs)('div', {
         className: s,
         children: [
-            b &&
-                (0, r.jsx)(i.P3F, {
+            g &&
+                (0, r.jsx)(l.P3F, {
                     className: m.clickableCard,
-                    'aria-label': f.intl.formatToPlainString(f.t['8QLQBw'], { gameName: g }),
+                    'aria-label': f.intl.formatToPlainString(f.t['8QLQBw'], { gameName: b }),
                     onClick: p
                 }),
             d
@@ -60,36 +60,36 @@ function b(e) {
     });
 }
 function y(e) {
-    let { user: t, guildId: n, channelId: o, game: l, loading: a = !1, disableInteraction: c = !1 } = e,
-        { gameName: f, imageSrc: y, applicationId: O, comment: h, tags: j } = l,
-        x = () =>
+    let { user: t, guildId: n, channelId: o, game: i, loading: a = !1, disableInteraction: c = !1 } = e,
+        { gameName: f, imageSrc: y, applicationId: _, comment: O, tags: h } = i,
+        j = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(s.Z, {
                         imageSrc: y,
                         gameName: f,
-                        applicationId: O,
+                        applicationId: _,
                         userId: t.id,
                         disableInteraction: !0
                     }),
                     (0, r.jsxs)('div', {
                         className: m.details,
                         children: [
-                            (0, r.jsx)(i.X6q, {
+                            (0, r.jsx)(l.X6q, {
                                 variant: 'text-md/normal',
                                 color: 'text-default',
                                 children: f
                             }),
-                            null != h &&
-                                (0, r.jsx)(g, {
-                                    text: h,
+                            null != O &&
+                                (0, r.jsx)(b, {
+                                    text: O,
                                     user: t,
                                     guildId: n,
                                     channelId: o
                                 }),
-                            (0, r.jsx)(d.Z, { tags: j }),
+                            (0, r.jsx)(d.Z, { tags: h }),
                             (0, r.jsx)(u.Z, {
-                                applicationId: O,
+                                applicationId: _,
                                 guildId: n,
                                 channelId: o,
                                 className: m.socialProof
@@ -106,13 +106,13 @@ function y(e) {
         : c
           ? (0, r.jsx)('div', {
                 className: m.card,
-                children: x()
+                children: j()
             })
-          : (0, r.jsx)(b, {
-                applicationId: O,
+          : (0, r.jsx)(g, {
+                applicationId: _,
                 userId: t.id,
                 gameName: f,
                 className: m.card,
-                children: x()
+                children: j()
             });
 }

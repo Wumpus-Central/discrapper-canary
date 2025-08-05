@@ -108,6 +108,7 @@ function V(e) {
                 impressionId: W,
                 sourceQuestContent: H
             }),
+                (0, f.showToast)((0, f.createToast)(A.intl.string(A.t['+5kSoa']), f.ToastType.SUCCESS)),
                 es(!0),
                 null != ec.current && clearTimeout(ec.current),
                 (ec.current = setTimeout(() => {

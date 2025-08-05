@@ -1,98 +1,101 @@
-(n.d(t, { Z: () => O }), n(415506));
-var r = n(255367);
+(n.d(t, { Z: () => I }), n(415506));
+var i = n(255367);
 n(73800);
-var i = n(990547),
+var r = n(990547),
     l = n(481060),
-    a = n(774078),
-    o = n(100527),
-    s = n(906732),
+    o = n(774078),
+    s = n(100527),
+    a = n(906732),
     c = n(213609),
-    u = n(963249),
-    d = n(639119),
-    _ = n(474936),
-    E = n(981631),
-    p = n(388032),
-    I = n(131715);
-let O = function (e) {
-    var t;
-    let { dismissCurrentNotice: n, subscriptionTier: O } = e,
-        { analyticsLocations: S } = (0, s.ZP)(
-            (function (e) {
-                switch (e) {
-                    case _.Si.TIER_0:
-                        return o.Z.PREMIUM_TIER_0_TRIAL_ENDING_NOTICE;
-                    case _.Si.TIER_2:
-                        return o.Z.PREMIUM_TIER_2_TRIAL_ENDING_NOTICE;
-                    default:
-                        throw Error('Unsupported subscription tier: '.concat(e));
-                }
-            })(O)
-        ),
-        f = (0, d.N)(),
-        h = (0, a.Z)(null != f && null != f.expires_at ? Date.parse(f.expires_at) : 0),
-        T = null == f || (null == (t = f.subscription_trial) ? void 0 : t.sku_id) !== O || null == f.expires_at || Object.values(h).every((e) => 0 === e);
-    return ((0, c.Z)(
-        {
-            type: i.ImpressionTypes.VIEW,
-            name: i.ImpressionNames.TRIAL_NOTICE,
-            properties: { trial_id: null == f ? void 0 : f.trial_id }
-        },
-        { disableTrack: T }
-    ),
-    T)
-        ? null
-        : (0, r.jsxs)(l.qXd, {
-              color: (function (e) {
-                  switch (e) {
-                      case _.Si.TIER_0:
-                          return l.DM8.PREMIUM_TIER_0;
-                      case _.Si.TIER_2:
-                          return l.DM8.PREMIUM_TIER_2;
-                      default:
-                          throw Error('Unsupported subscription tier: '.concat(e));
-                  }
-              })(O),
-              children: [
-                  (0, r.jsx)(l.RyX, { onClick: n }),
-                  (0, r.jsx)(l.SrA, {
-                      size: 'md',
-                      color: 'currentColor',
-                      className: I.premiumIcon
-                  }),
-                  (function (e, t) {
-                      switch (e) {
-                          case _.Si.TIER_0:
-                              return t.days > 0 ? p.intl.formatToPlainString(p.t.sP5OqK, { days: t.days }) : t.hours > 0 ? p.intl.formatToPlainString(p.t['7Lhfu7'], { hours: t.hours }) : p.intl.formatToPlainString(p.t.coDiS0, { minutes: Math.max(t.minutes, 1) });
-                          case _.Si.TIER_2:
-                              return t.days > 0 ? p.intl.formatToPlainString(p.t['4prs5e'], { days: t.days }) : t.hours > 0 ? p.intl.formatToPlainString(p.t.OD5nIS, { hours: t.hours }) : p.intl.formatToPlainString(p.t.rvyXjI, { minutes: Math.max(t.minutes, 1) });
-                          default:
-                              throw Error('Unsupported subscription tier: '.concat(e));
-                      }
-                  })(O, h),
-                  (0, r.jsx)(l.EyT, {
-                      onClick: () => {
-                          (0, u.Z)({
-                              trialId: f.trial_id,
-                              subscriptionTier: O,
-                              analyticsLocations: S,
-                              analyticsObject: {
-                                  page: E.ZY5.IN_APP,
-                                  section: E.jXE.NOTIFICATION_BAR,
-                                  object: E.qAy.BUTTON_CTA
-                              }
-                          });
-                      },
-                      children: (function (e) {
+    d = n(963249),
+    u = n(639119),
+    h = n(474936),
+    _ = n(981631),
+    E = n(388032),
+    p = n(131715);
+let I =
+    12633 == n.j
+        ? function (e) {
+              var t;
+              let { dismissCurrentNotice: n, subscriptionTier: I } = e,
+                  { analyticsLocations: g } = (0, a.ZP)(
+                      (function (e) {
                           switch (e) {
-                              case _.Si.TIER_0:
-                                  return p.intl.string(p.t.mCG029);
-                              case _.Si.TIER_2:
-                                  return p.intl.string(p.t['7590PT']);
+                              case h.Si.TIER_0:
+                                  return s.Z.PREMIUM_TIER_0_TRIAL_ENDING_NOTICE;
+                              case h.Si.TIER_2:
+                                  return s.Z.PREMIUM_TIER_2_TRIAL_ENDING_NOTICE;
                               default:
                                   throw Error('Unsupported subscription tier: '.concat(e));
                           }
-                      })(O)
-                  })
-              ]
-          });
-};
+                      })(I)
+                  ),
+                  f = (0, u.N)(),
+                  C = (0, o.Z)(null != f && null != f.expires_at ? Date.parse(f.expires_at) : 0),
+                  O = null == f || (null == (t = f.subscription_trial) ? void 0 : t.sku_id) !== I || null == f.expires_at || Object.values(C).every((e) => 0 === e);
+              return ((0, c.Z)(
+                  {
+                      type: r.ImpressionTypes.VIEW,
+                      name: r.ImpressionNames.TRIAL_NOTICE,
+                      properties: { trial_id: null == f ? void 0 : f.trial_id }
+                  },
+                  { disableTrack: O }
+              ),
+              O)
+                  ? null
+                  : (0, i.jsxs)(l.qXd, {
+                        color: (function (e) {
+                            switch (e) {
+                                case h.Si.TIER_0:
+                                    return l.DM8.PREMIUM_TIER_0;
+                                case h.Si.TIER_2:
+                                    return l.DM8.PREMIUM_TIER_2;
+                                default:
+                                    throw Error('Unsupported subscription tier: '.concat(e));
+                            }
+                        })(I),
+                        children: [
+                            (0, i.jsx)(l.RyX, { onClick: n }),
+                            (0, i.jsx)(l.SrA, {
+                                size: 'md',
+                                color: 'currentColor',
+                                className: p.premiumIcon
+                            }),
+                            (function (e, t) {
+                                switch (e) {
+                                    case h.Si.TIER_0:
+                                        return t.days > 0 ? E.intl.formatToPlainString(E.t.sP5OqK, { days: t.days }) : t.hours > 0 ? E.intl.formatToPlainString(E.t['7Lhfu7'], { hours: t.hours }) : E.intl.formatToPlainString(E.t.coDiS0, { minutes: Math.max(t.minutes, 1) });
+                                    case h.Si.TIER_2:
+                                        return t.days > 0 ? E.intl.formatToPlainString(E.t['4prs5e'], { days: t.days }) : t.hours > 0 ? E.intl.formatToPlainString(E.t.OD5nIS, { hours: t.hours }) : E.intl.formatToPlainString(E.t.rvyXjI, { minutes: Math.max(t.minutes, 1) });
+                                    default:
+                                        throw Error('Unsupported subscription tier: '.concat(e));
+                                }
+                            })(I, C),
+                            (0, i.jsx)(l.EyT, {
+                                onClick: () => {
+                                    (0, d.Z)({
+                                        trialId: f.trial_id,
+                                        subscriptionTier: I,
+                                        analyticsLocations: g,
+                                        analyticsObject: {
+                                            page: _.ZY5.IN_APP,
+                                            section: _.jXE.NOTIFICATION_BAR,
+                                            object: _.qAy.BUTTON_CTA
+                                        }
+                                    });
+                                },
+                                children: (function (e) {
+                                    switch (e) {
+                                        case h.Si.TIER_0:
+                                            return E.intl.string(E.t.mCG029);
+                                        case h.Si.TIER_2:
+                                            return E.intl.string(E.t['7590PT']);
+                                        default:
+                                            throw Error('Unsupported subscription tier: '.concat(e));
+                                    }
+                                })(I)
+                            })
+                        ]
+                    });
+          }
+        : null;

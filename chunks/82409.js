@@ -170,8 +170,12 @@ function U(e) {
         q = B(w, p),
         X = B(D, p);
     ((0, h.ZP)(() => {
-        if ((u.Z.dispatch({ type: 'NOTIFICATIONS_INBOX_OPEN' }), v.Lk.getCurrentConfig({ location: 'NotificationsInboxSidebar' }).notificationCenterVariant !== v.jP.SIDEBAR)) return;
-        let { message: e, isUnread: t } = (function (e, t) {
+        var e;
+        u.Z.dispatch({ type: 'NOTIFICATIONS_INBOX_OPEN' });
+        let t = v.Lk.getCurrentConfig({ location: 'NotificationsInboxSidebar' }).notificationCenterVariant,
+            n = null == (e = x.Z.getDevOverrides().navOnClick) || e;
+        if (t !== v.jP.SIDEBAR || !1 === n) return;
+        let { message: r, isUnread: i } = (function (e, t) {
             var n, r, i;
             let l = null == (n = e[e.length - 1]) ? void 0 : n.message,
                 o = null == (r = t[t.length - 1]) ? void 0 : r.message,
@@ -202,11 +206,11 @@ function U(e) {
                       isUnread: null != (i = y.ZP.hasUnread(c)) && i
                   };
         })(q, X);
-        null != e &&
+        null != r &&
             j.Z.inboxItemClick({
-                message: e,
-                channel: { id: e.channel_id },
-                isUnread: t,
+                message: r,
+                channel: { id: r.channel_id },
+                isUnread: i,
                 isSidebar: !0,
                 track: !1,
                 viewId: a

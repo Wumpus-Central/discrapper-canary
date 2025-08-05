@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Q });
+n.d(t, { Z: () => X });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -83,7 +83,7 @@ function q(e) {
         onLoad: t
     });
 }
-let Q = function () {
+let X = function () {
     let { selectedTab: e, onSelectTab: t, tabs: n } = (0, G.z)(),
         { onScroll: l, scrollPosition: s } = (0, b.M)(),
         d = w.Z.getState().getUtmCurrentContext(),
@@ -115,8 +115,8 @@ let Q = function () {
         }, [L]);
     (0, g.Tt)({ location: F.intl.string(F.t.JALI2N) });
     let K = L ? F.intl.format(F.t.BCBIlp, {}) : F.intl.format(F.t.lmMBf3, {}),
-        Q = L ? F.intl.format(F.t.U9FY0N, {}) : F.intl.string(F.t.oWCrBg),
-        X = i.useRef(null),
+        X = L ? F.intl.format(F.t.U9FY0N, {}) : F.intl.string(F.t.oWCrBg),
+        Q = i.useRef(null),
         J = i.useCallback(() => {
             ((0, C.Y)({
                 pageType: H.ZY5.GLOBAL_DISCOVERY_QUESTS,
@@ -136,10 +136,10 @@ let Q = function () {
             className: z.container,
             children: L
                 ? (0, r.jsx)(U.t.Provider, {
-                      value: X,
+                      value: Q,
                       children: (0, r.jsxs)(I.Z, {
                           onScroll: l,
-                          ref: X,
+                          ref: Q,
                           children: [
                               (0, r.jsx)(v.a, {
                                   selectedTabId: e,
@@ -155,7 +155,7 @@ let Q = function () {
                               }),
                               (0, r.jsxs)(_.Z, {
                                   title: K,
-                                  description: Q,
+                                  description: X,
                                   betaTag: L && W,
                                   button: L
                                       ? (0, r.jsxs)(r.Fragment, {
@@ -201,14 +201,14 @@ let Q = function () {
                               children: [(0, r.jsx)('div', { className: z.dragRegion }), (0, r.jsx)(y.z6, { scrollPosition: s }), (0, r.jsx)(y.aV, { icon: u.qDn })]
                           }),
                           (0, r.jsx)(U.t.Provider, {
-                              value: X,
+                              value: Q,
                               children: (0, r.jsxs)(I.Z, {
                                   onScroll: l,
-                                  ref: X,
+                                  ref: Q,
                                   children: [
                                       (0, r.jsxs)(_.Z, {
                                           title: K,
-                                          description: Q,
+                                          description: X,
                                           button: (0, r.jsx)(u.zxk, {
                                               variant: 'overlay-primary',
                                               text: F.intl.string(F.t.hvVgAQ),

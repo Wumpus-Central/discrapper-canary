@@ -1,8 +1,8 @@
-r.d(t, { R: () => h });
+r.d(t, { R: () => f });
 var n = r(255367);
 r(73800);
-var a = r(120356),
-    l = r.n(a),
+var l = r(120356),
+    a = r.n(l),
     i = r(979554),
     o = r(481060),
     s = r(1585),
@@ -10,24 +10,24 @@ var a = r(120356),
     u = r(998502),
     d = r(388032),
     p = r(614490);
-let b = u.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK,
-    h = (e) => {
+let g = u.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK,
+    f = (e) => {
         var t, r;
-        let { item: a, user: u, isHighlighted: h = !1, isPurchased: f = !1, avatarSize: v = o.EFr.SIZE_152, avatarPlaceholderSrc: m } = e,
-            _ = (0, s.y9)(v),
+        let { item: l, user: u, isHighlighted: f = !1, isPurchased: h = !1, avatarSize: b = o.EFr.SIZE_152, avatarPlaceholderSrc: _ } = e,
+            m = (0, s.y9)(b),
             {
-                avatarDecorationSrc: O,
-                eventHandlers: y,
-                avatarPlaceholderSrc: g
+                avatarDecorationSrc: v,
+                eventHandlers: C,
+                avatarPlaceholderSrc: O
             } = (0, c.Z)({
                 user: u,
-                avatarDecorationOverride: (null == a ? void 0 : a.type) === i.Z.AVATAR_DECORATION ? a : void 0,
-                size: _,
-                onlyAnimateOnHover: !h
+                avatarDecorationOverride: (null == l ? void 0 : l.type) === i.Z.AVATAR_DECORATION ? l : void 0,
+                size: m,
+                onlyAnimateOnHover: !f
             }),
-            C = d.intl.formatToPlainString(d.t.Do2lxM, { a11y_text: a.label });
+            E = d.intl.formatToPlainString(d.t.Do2lxM, { a11y_text: l.label });
         return (0, n.jsx)(
-            b,
+            g,
             ((t = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var r = null != arguments[t] ? arguments[t] : {},
@@ -52,15 +52,15 @@ let b = u.ZP.getEnableHardwareAcceleration() ? o.Xo$ : o.qEK,
                         }));
                 }
                 return e;
-            })({}, y)),
+            })({}, C)),
             (r = r =
                 {
-                    avatarDecoration: O,
-                    src: h ? (null == u ? void 0 : u.getAvatarURL(void 0, 152, !0)) : null != m ? m : g,
-                    imageClassName: h ? p.fadeInAvatarImg : void 0,
-                    className: l()(p.avatar, { [p.avatarPurchased]: f && !h }),
-                    size: v,
-                    'aria-label': C
+                    avatarDecoration: v,
+                    src: f ? (null == u ? void 0 : u.getAvatarURL(void 0, 152, !0)) : null != _ ? _ : O,
+                    imageClassName: f ? p.fadeInAvatarImg : void 0,
+                    className: a()(p.avatar, { [p.avatarPurchased]: h && !f }),
+                    size: b,
+                    'aria-label': E
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))

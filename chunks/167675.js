@@ -1,29 +1,29 @@
 (n.d(t, { Z: () => f }), n(388685));
 var r = n(255367);
 n(73800);
-var l = n(442837),
-    i = n(481060),
+var i = n(442837),
+    l = n(481060),
     o = n(740492),
-    u = n(27584),
-    a = n(295510),
+    a = n(27584),
+    u = n(295510),
     c = n(394059),
     d = n(65154),
     s = n(388032);
 function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.Yn.DEFAULT,
-        [n, f, b] = (0, u.Z)(e, t),
-        g = (0, l.e7)([o.ZP], () => o.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
+        [n, f, b] = (0, a.Z)(e, t),
+        h = (0, i.e7)([o.ZP], () => o.ZP.disableHideSelfStreamAndVideoConfirmationAlert);
     return n
-        ? (0, r.jsx)(i.S89, {
+        ? (0, r.jsx)(l.S89, {
               id: 'self-video-hide',
               label: s.intl.string(s.t.MH8ESU),
               checked: !f,
               action: () => {
-                  if (g || f) return b(!f);
-                  (0, i.h7j)((e) => {
+                  if (h || f) return b(!f);
+                  (0, l.h7j)((e) => {
                       var t, n;
                       return (0, r.jsx)(
-                          a.Z,
+                          u.Z,
                           ((t = (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},

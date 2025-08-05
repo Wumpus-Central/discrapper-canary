@@ -1,16 +1,16 @@
 n.d(t, {
-    b: () => o,
-    e: () => a
+    b: () => s,
+    e: () => o
 });
-var r = n(399606),
-    i = n(594174),
+var i = n(399606),
+    r = n(594174),
     l = n(918505);
-let a = () => s(i.default.getCurrentUser(), (0, l.JH)()),
-    o = () =>
-        s(
-            (0, r.e7)([i.default], () => i.default.getCurrentUser()),
+let o = () => a(r.default.getCurrentUser(), (0, l.JH)()),
+    s = () =>
+        a(
+            (0, i.e7)([r.default], () => r.default.getCurrentUser()),
             (0, l.o9)()
         );
-function s(e, t) {
+function a(e, t) {
     return !(null == e || e.hasUniqueUsername()) && !!e.hasVerifiedEmailOrPhone() && !!t;
 }

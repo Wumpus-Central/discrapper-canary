@@ -9,8 +9,8 @@ var n = a(255367),
     d = a(126313),
     u = a(442837),
     m = a(433517),
-    p = a(755721),
-    x = a(481060),
+    x = a(755721),
+    p = a(481060),
     h = a(570140),
     b = a(812206),
     f = a(835473),
@@ -21,21 +21,21 @@ var n = a(255367),
     y = a(77498),
     C = a(823379),
     O = a(550532),
-    T = a(71585),
-    N = a(146282),
+    N = a(71585),
+    T = a(146282),
     E = a(780106),
     S = a(650613),
     P = a(789086),
     I = a(206583),
     w = a(403542),
     R = a(616257);
-let k = [
+let A = [
     {
         key: 'type',
         cellClassName: i()(w.cell, w.cellType),
         render(e) {
             let { type: t } = e;
-            return (0, n.jsx)(x.Text, {
+            return (0, n.jsx)(p.Text, {
                 variant: 'text-md/semibold',
                 children: c.s[t]
             });
@@ -47,7 +47,7 @@ let k = [
         render(e) {
             let { entries: t } = e;
             return (0, n.jsx)('div', {
-                children: (0, n.jsx)(x.Text, {
+                children: (0, n.jsx)(p.Text, {
                     variant: 'text-md/normal',
                     children: t.length
                 })
@@ -59,16 +59,16 @@ let k = [
         cellClassName: w.cell,
         render(e) {
             let { type: t } = e;
-            return (0, n.jsx)(A, { type: t });
+            return (0, n.jsx)(k, { type: t });
         }
     }
 ];
-function A(e) {
+function k(e) {
     var t, a;
     let { type: r } = e,
-        l = (0, u.e7)([N.Z], () => N.Z.getFilters()),
+        l = (0, u.e7)([T.Z], () => T.Z.getFilters()),
         i = null != (a = null == l || null == (t = l.types) ? void 0 : t.has(r)) && a;
-    return (0, n.jsx)(x.XZJ, {
+    return (0, n.jsx)(p.XZJ, {
         value: i,
         onClick: function () {
             i
@@ -85,9 +85,9 @@ function A(e) {
 }
 function Z() {
     var e, t;
-    let a = (0, u.e7)([N.Z], () => N.Z.getFeed(I.YN.GLOBAL_FEED)),
-        l = (0, u.e7)([N.Z], () => N.Z.getDebugImpressionCappingDisabled()),
-        i = (0, u.e7)([T.Z], () => T.Z.getDebugFastImpressionCappingEnabled()),
+    let a = (0, u.e7)([T.Z], () => T.Z.getFeed(I.YN.GLOBAL_FEED)),
+        l = (0, u.e7)([T.Z], () => T.Z.getDebugImpressionCappingDisabled()),
+        i = (0, u.e7)([N.Z], () => N.Z.getDebugFastImpressionCappingEnabled()),
         s = (function (e) {
             let t = o().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
@@ -99,18 +99,18 @@ function Z() {
                 };
             });
         })(null == a || null == (e = a.entries) ? void 0 : e.map((e) => e.content)),
-        c = (0, u.e7)([N.Z], () => {
+        c = (0, u.e7)([T.Z], () => {
             var e;
-            return (null == (e = N.Z.getFeedState(I.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
+            return (null == (e = T.Z.getFeedState(I.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
-        [A, Z] = r.useState(''),
+        [k, Z] = r.useState(''),
         L = (0, u.e7)(
             [y.Z, b.Z],
             () => {
                 var e, t, a;
-                return parseInt(A) > 0 ? A : null != (a = null == (e = y.Z.getGameByName(A)) ? void 0 : e.id) ? a : null == (t = b.Z.getApplicationByName(A)) ? void 0 : t.id;
+                return parseInt(k) > 0 ? k : null != (a = null == (e = y.Z.getGameByName(k)) ? void 0 : e.id) ? a : null == (t = b.Z.getApplicationByName(k)) ? void 0 : t.id;
             },
-            [A]
+            [k]
         ),
         M = (0, _.Z)({
             applicationId: L,
@@ -127,23 +127,23 @@ function Z() {
                 return t;
             }),
         F = (0, f.Z)(U).filter(C.lm),
-        B = (0, u.e7)([O.Z], () => O.Z.getFakeGameToShow());
+        G = (0, u.e7)([O.Z], () => O.Z.getFakeGameToShow());
     return (0, n.jsx)('div', {
         className: R.panel,
-        children: (0, n.jsxs)(x.zJl, {
+        children: (0, n.jsxs)(p.zJl, {
             className: w.content,
             children: [
-                (0, n.jsxs)(x.hjN, {
+                (0, n.jsxs)(p.hjN, {
                     children: [
-                        (0, n.jsx)(x.vwX, { children: 'Inventory' }),
+                        (0, n.jsx)(p.vwX, { children: 'Inventory' }),
                         s.length > 0 &&
                             (0, n.jsx)(g.Z, {
-                                columns: k,
+                                columns: A,
                                 data: s
                             }),
-                        (0, n.jsx)(x.LZC, { size: 8 }),
+                        (0, n.jsx)(p.LZC, { size: 8 }),
                         (0, n.jsx)(P.Z, {}),
-                        (0, n.jsx)(x.zxk, {
+                        (0, n.jsx)(p.zxk, {
                             variant: 'primary',
                             text: 'Refresh Now',
                             fullWidth: !0,
@@ -158,10 +158,10 @@ function Z() {
                         })
                     ]
                 }),
-                (0, n.jsxs)(x.hjN, {
+                (0, n.jsxs)(p.hjN, {
                     children: [
-                        (0, n.jsx)(x.vwX, { children: 'Impression Capping' }),
-                        (0, n.jsx)(x.zxk, {
+                        (0, n.jsx)(p.vwX, { children: 'Impression Capping' }),
+                        (0, n.jsx)(p.zxk, {
                             variant: 'primary',
                             text: 'Clear Impressions',
                             fullWidth: !0,
@@ -169,8 +169,8 @@ function Z() {
                                 h.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS' });
                             }
                         }),
-                        (0, n.jsx)(x.LZC, { size: 8 }),
-                        (0, n.jsx)(x.zxk, {
+                        (0, n.jsx)(p.LZC, { size: 8 }),
+                        (0, n.jsx)(p.zxk, {
                             variant: 'primary',
                             text: 'Log Impressions',
                             fullWidth: !0,
@@ -178,8 +178,8 @@ function Z() {
                                 h.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS' });
                             }
                         }),
-                        (0, n.jsx)(x.LZC, { size: 8 }),
-                        (0, n.jsx)(x.zxk, {
+                        (0, n.jsx)(p.LZC, { size: 8 }),
+                        (0, n.jsx)(p.zxk, {
                             variant: 'primary',
                             text: l ? 'Enable Impression Capping' : 'Disable Impression Capping',
                             fullWidth: !0,
@@ -187,8 +187,8 @@ function Z() {
                                 h.Z.dispatch({ type: 'CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING' });
                             }
                         }),
-                        (0, n.jsx)(x.LZC, { size: 8 }),
-                        (0, n.jsx)(x.zxk, {
+                        (0, n.jsx)(p.LZC, { size: 8 }),
+                        (0, n.jsx)(p.zxk, {
                             variant: 'primary',
                             text: i ? 'Disable Fast Impression Capping' : 'Enable Fast Impression Capping',
                             fullWidth: !0,
@@ -200,34 +200,34 @@ function Z() {
                 }),
                 !1,
                 (0, n.jsx)(S.Z, {}),
-                (0, n.jsxs)(x.hjN, {
+                (0, n.jsxs)(p.hjN, {
                     children: [
-                        (0, n.jsx)(x.vwX, { children: 'Game Profile' }),
-                        (0, n.jsx)(p.Is, {
+                        (0, n.jsx)(p.vwX, { children: 'Game Profile' }),
+                        (0, n.jsx)(x.Is, {
                             placeholder: 'App ID or full name',
                             onChange: (e) => (0 === e.length || e.length >= 18) && Z(e),
                             onKeyDown: (e) => {
-                                'Enter' === e.key && (A === e.currentTarget.value ? null == M || M(e) : Z(e.currentTarget.value));
+                                'Enter' === e.key && (k === e.currentTarget.value ? null == M || M(e) : Z(e.currentTarget.value));
                             },
-                            error: A.length > 0 && null == M ? 'No game profile for '.concat(null != L ? L : A + ' - try by id', '.') : void 0,
+                            error: k.length > 0 && null == M ? 'No game profile for '.concat(null != L ? L : k + ' - try by id', '.') : void 0,
                             style: null != M ? { border: '1px solid green' } : {}
                         }),
                         (0, n.jsx)('ul', { children: F.map((e) => (0, n.jsx)('li', { children: (0, n.jsx)(D, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]
                 }),
-                (0, n.jsxs)(x.hjN, {
+                (0, n.jsxs)(p.hjN, {
                     children: [
-                        (0, n.jsx)(x.vwX, { children: 'Activity Sharing' }),
-                        (0, n.jsx)(x.Text, {
+                        (0, n.jsx)(p.vwX, { children: 'Activity Sharing' }),
+                        (0, n.jsx)(p.Text, {
                             variant: 'text-md/normal',
                             children: 'Force show game:'
                         }),
-                        (0, n.jsx)(x.PhF, {
+                        (0, n.jsx)(p.PhF, {
                             options: E.h.map((e) => ({
                                 label: e,
                                 value: e
                             })),
-                            isSelected: (e) => e === B,
+                            isSelected: (e) => e === G,
                             select: function (e) {
                                 h.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING',
@@ -250,13 +250,13 @@ let D = (e) => {
             location: 'DevToolsContentInventory',
             source: j.m1.DevTools
         });
-    return (0, n.jsx)(x.P3F, {
+    return (0, n.jsx)(p.P3F, {
         onClick: a,
         style: {
             margin: '2px',
             cursor: 'pointer'
         },
-        children: (0, n.jsx)(x.Text, {
+        children: (0, n.jsx)(p.Text, {
             variant: 'text-xs/normal',
             color: 'text-muted',
             children: t.name

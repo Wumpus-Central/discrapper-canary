@@ -1,7 +1,7 @@
-n.d(t, { z: () => l });
+n.d(t, { z: () => i });
 var r = n(379405),
     o = n(481060);
-let i = {
+let l = {
         [r._.NOOB]: {
             text: 'Noob',
             icon: o.jrt
@@ -35,7 +35,7 @@ let i = {
             icon: o.lbB
         }
     },
-    l = (e) => {
-        let t = i[e];
+    i = (e) => {
+        let t = l[e];
         return null != t ? t : null;
     };

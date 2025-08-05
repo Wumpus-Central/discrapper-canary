@@ -1,8 +1,8 @@
 r.d(t, { U: () => c });
 var n = r(255367);
 r(73800);
-var a = r(120356),
-    l = r.n(a),
+var l = r(120356),
+    a = r.n(l),
     i = r(481060),
     o = r(388032),
     s = r(44615);
@@ -15,7 +15,7 @@ let c = (e) => {
               align: 'left',
               text: o.intl.string(o.t.y1VWkZ),
               children: (e) => {
-                  var r, a;
+                  var r, l;
                   return (0, n.jsxs)(
                       'div',
                       ((r = (function (e) {
@@ -42,8 +42,8 @@ let c = (e) => {
                                   }));
                           }
                           return e;
-                      })({ className: l()(s.partialOwnStateContainer, t) }, e)),
-                      (a = a =
+                      })({ className: a()(s.partialOwnStateContainer, t) }, e)),
+                      (l = l =
                           {
                               children: [
                                   (0, n.jsx)('span', {
@@ -61,7 +61,7 @@ let c = (e) => {
                               ]
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
+                          ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
                           : (function (e, t) {
                                 var r = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
@@ -69,8 +69,8 @@ let c = (e) => {
                                     r.push.apply(r, n);
                                 }
                                 return r;
-                            })(Object(a)).forEach(function (e) {
-                                Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
+                            })(Object(l)).forEach(function (e) {
+                                Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
                             }),
                       r)
                   );

@@ -4,18 +4,18 @@
     GU: () => Y,
     H8: () => q,
     HI: () => J,
-    HW: () => B,
+    HW: () => G,
     Ib: () => eo,
     KB: () => eu,
     S2: () => H,
     W6: () => en,
     XM: () => er,
-    YC: () => ep,
+    YC: () => ex,
     YE: () => ei,
     h9: () => es,
     iw: () => ea,
     jC: () => V,
-    jQ: () => G,
+    jQ: () => B,
     lT: () => X,
     rd: () => ed,
     t4: () => ec,
@@ -36,8 +36,8 @@ var n,
     d = a(694626),
     u = a(855930),
     m = a(385787),
-    p = a(566162),
-    x = a(567027),
+    x = a(566162),
+    p = a(567027),
     h = a(461195),
     b = a(857702),
     f = a(20450),
@@ -48,16 +48,16 @@ var n,
     y = a(81011),
     C = a(981613),
     O = a(762399),
-    T = a(232112),
-    N = a(53796),
+    N = a(232112),
+    T = a(53796),
     E = a(723757),
     S = a(375924),
     P = a(596136),
     I = a(341901),
     w = a(856308),
     R = a(665352),
-    k = a(394900),
-    A = a(661105),
+    A = a(394900),
+    k = a(661105),
     Z = a(525169),
     D = a(433517),
     L = a(521904),
@@ -105,7 +105,7 @@ function F(e, t) {
         e
     );
 }
-let B = {
+let G = {
         sRGB: i.Z,
         A98RGB: s.Z,
         ACEScc: o.Z,
@@ -113,8 +113,8 @@ let B = {
         HPLuv: d.Z,
         HSL: u.Z,
         HSLuv: m.Z,
-        HSV: p.Z,
-        HWB: x.Z,
+        HSV: x.Z,
+        HWB: p.Z,
         ICTCP: h.Z,
         JzCzHz: b.Z,
         Jzazbz: f.Z,
@@ -125,16 +125,16 @@ let B = {
         Luv: y.Z,
         OKLCH: C.Z,
         OKLab: O.Z,
-        P3: T.Z,
-        ProPhoto: N.Z,
+        P3: N.Z,
+        ProPhoto: T.Z,
         REC_2020: E.Z,
         REC_2100_HLG: S.Z,
         REC_2100_PQ: P.Z,
         XYZ_D50: I.Z,
         XYZ_D65: w.Z
     },
-    G = Object.fromEntries(Object.keys(B).map((e) => [e, e]));
-Object.values(B).forEach((e) => R.Z.register(e));
+    B = Object.fromEntries(Object.keys(G).map((e) => [e, e]));
+Object.values(G).forEach((e) => R.Z.register(e));
 let { SemanticColors: z } = L.V,
     V = z,
     H = CSS.supports('color', 'color(display-p3 1 0 0)') && CSS.supports('color', 'color(display-p3 1 0 0 / 1)');
@@ -182,7 +182,7 @@ function Y(e) {
     return F(U({}, e), { highlight: !e.highlight });
 }
 function J(e) {
-    return (0, k.Z)((0, A.Z)(e, i.Z), { format: 'hex' });
+    return (0, A.Z)((0, k.Z)(e, i.Z), { format: 'hex' });
 }
 var q = (((n = {}).TOKENS = 'Tokens'), (n.PALETTES = 'Palettes'), n);
 function $() {
@@ -232,8 +232,8 @@ function en(e, t) {
 }
 function er(e) {
     let { name: t, base: a, steps: n = 26, darkness: r, lightness: l, easingStrength: s = 1 } = e,
-        o = B[e.colorSpace],
-        c = (0, A.Z)(a, o),
+        o = G[e.colorSpace],
+        c = (0, k.Z)(a, o),
         d = (0, Z.CD)(c, 'white', 1 - r, {
             space: o,
             outputSpace: i.Z
@@ -243,27 +243,27 @@ function er(e) {
             outputSpace: i.Z
         }),
         m = Math.floor(n / 2),
-        p = n - m,
-        x = (0, Z.w6)(d, c, {
+        x = n - m,
+        p = (0, Z.w6)(d, c, {
             steps: m,
             outputSpace: o,
             space: o,
             progression: (e) => e ** s
         }),
         h = (0, Z.w6)(u, c, {
-            steps: p,
+            steps: x,
             outputSpace: o,
             space: o,
             progression: (e) => e ** s
         }),
         b = [];
     for (let e = 0; e < m; e++) {
-        let t = x(e / m);
+        let t = p(e / m);
         b.push(t);
     }
     b.push(c);
-    for (let e = 1; e < p; e++) {
-        let t = h(1 - e / p);
+    for (let e = 1; e < x; e++) {
+        let t = h(1 - e / x);
         b.push(t);
     }
     return Object.fromEntries(b.map((e, a) => [''.concat(t, '-').concat(a), e]));
@@ -292,6 +292,6 @@ function eu(e, t, a) {
 function em(e, t, a) {
     el(e, (e) => F(U({}, e), { useP3ColorSpace: t }), a);
 }
-function ep(e, t, a) {
+function ex(e, t, a) {
     el(e, (e) => F(U({}, e), { steps: t }), a);
 }

@@ -119,25 +119,25 @@ let R = (e) => {
                       children: (0, n.jsx)(R, {
                           onClose: Z,
                           shouldAddEventListener: t && !ee,
-                          children: (0, n.jsx)('div', {
+                          children: (0, n.jsxs)('div', {
                               className: B.shop,
                               ref: t ? et : er,
                               tabIndex: -1,
-                              children: (0, n.jsxs)('div', {
-                                  className: i()(B.shopViewWrapper, {
-                                      [B.visible]: J === N.f7.VISIBLE,
-                                      [B.in]: J === N.f7.IN,
-                                      [B.out]: J === N.f7.OUT
+                              children: [
+                                  (0, n.jsx)(L.I, {
+                                      isFullScreen: t,
+                                      isLayer: ee,
+                                      onClose: Z,
+                                      handleTransition: Q,
+                                      selectedTab: X
                                   }),
-                                  children: [
-                                      (0, n.jsx)(L.I, {
-                                          isFullScreen: t,
-                                          isLayer: ee,
-                                          onClose: Z,
-                                          handleTransition: Q,
-                                          selectedTab: X
+                                  (0, n.jsx)('div', {
+                                      className: i()(B.shopViewWrapper, {
+                                          [B.visible]: J === N.f7.VISIBLE,
+                                          [B.in]: J === N.f7.IN,
+                                          [B.out]: J === N.f7.OUT
                                       }),
-                                      (0, n.jsx)(P.Z, {
+                                      children: (0, n.jsx)(P.Z, {
                                           tab: X,
                                           isFullScreen: t,
                                           refreshCategories: W,
@@ -146,8 +146,8 @@ let R = (e) => {
                                           sortedCategories: V,
                                           updateAnalyticsState: Y
                                       })
-                                  ]
-                              })
+                                  })
+                              ]
                           })
                       })
                   })

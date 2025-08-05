@@ -1,26 +1,24 @@
 n.d(t, {
-    Nn: () => O,
-    ZP: () => P,
-    ms: () => N
+    ZP: () => E,
+    ms: () => b
 });
-var r = n(255367),
-    o = n(73800),
-    i = n(120356),
-    l = n.n(i),
-    s = n(755721),
-    a = n(481060),
-    c = n(762762),
-    u = n(10765),
-    d = n(639777),
-    p = n(973772),
-    m = n(827397),
-    f = n(279604),
-    _ = n(535396),
-    x = n(93841),
+var r = n(255367);
+n(73800);
+var o = n(120356),
+    i = n.n(o),
+    l = n(755721),
+    s = n(10765),
+    a = n(639777),
+    c = n(973772),
+    u = n(880419),
+    d = n(827397),
+    p = n(279604),
+    f = n(535396),
+    m = n(93841),
     g = n(388032),
-    v = n(503945);
-function b() {
-    return (b =
+    x = n(503945);
+function _() {
+    return (_ =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -30,7 +28,7 @@ function b() {
             return e;
         }).apply(this, arguments);
 }
-function j(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,11 +53,49 @@ function j(e) {
     }
     return e;
 }
-function h(e, t) {
-    return (
-        (t = null != t ? t : {}),
+function b(e) {
+    var t,
+        n,
+        { guildId: o, powerup: i, onClick: s } = e,
+        a = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                r,
+                o = (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        o = {},
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
+                    return o;
+                })(e, t);
+            if (Object.getOwnPropertySymbols) {
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
+            }
+            return o;
+        })(e, ['guildId', 'powerup', 'onClick']);
+    let c = (0, d.Z)(o, i),
+        { onShowMore: u } = (0, p.ZP)(o, i),
+        _ = f.uc.has(i.skuId);
+    return (0, r.jsx)(
+        l.zx,
+        ((t = v(
+            {
+                className: x.primaryButton,
+                innerClassName: x.buttonInner,
+                wrapperClassName: x.buttonWrapper,
+                grow: !0,
+                onClick: (e) => {
+                    (null == s || s(e), _ ? null == c || c(e) : null == u || u());
+                }
+            },
+            a
+        )),
+        (n = n = { children: _ ? g.intl.string(m.default['g5Ds6+']) : g.intl.string(g.t['0Q61kJ']) }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
@@ -67,213 +103,59 @@ function h(e, t) {
                       n.push.apply(n, r);
                   }
                   return n;
-              })(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              })(Object(n)).forEach(function (e) {
+                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
               }),
-        e
+        t)
     );
 }
-function E(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        o = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                r,
-                o = {},
-                i = Object.keys(e);
-            for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
-            return o;
-        })(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var i = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
-    }
-    return o;
-}
-function C(e) {
-    let { powerup: t, isActive: n, compact: o } = e,
-        i = n
-            ? (0, r.jsx)(a.mTd, {
-                  size: 'sm',
-                  color: 'currentColor'
-              })
-            : (0, r.jsx)(a.$Eu, {
-                  size: 'sm',
-                  color: 'currentColor'
-              }),
-        l = g.intl.string(n ? x.default.TZsu1d : x.default.gSxlHR);
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            !o && l,
-            !o &&
-                (0, r.jsx)('span', {
-                    className: v.dot,
-                    children: '\u2022'
-                }),
-            i,
-            (0, r.jsx)('span', { children: t.cost })
-        ]
-    });
-}
-function I(e) {
-    let { guildId: t, powerup: n } = e,
-        o = (0, p.Z)(t, n);
-    if (o.type === _.A3.LEVEL_ACTIVATED) {
-        var i, l;
-        return (0, r.jsxs)('div', {
-            className: v.tooltipContainer,
-            children: [
-                (0, r.jsx)(a.Text, {
-                    variant: 'text-xs/semibold',
-                    children: g.intl.string(x.default['9oYuvb'])
-                }),
-                (0, r.jsx)(a.Text, {
-                    variant: 'text-xs/medium',
-                    children: g.intl.formatToPlainString(x.default.WRRYUV, { perkName: null != (l = null == (i = o.sourcePowerup) ? void 0 : i.title) ? l : g.intl.string(g.t.BfF6EB) })
-                })
-            ]
-        });
-    }
-    if (o.type === _.A3.POWERUP_ACTIVATED)
-        return (0, r.jsxs)('div', {
-            className: v.tooltipContainer,
-            children: [
-                (0, r.jsx)(a.Text, {
-                    variant: 'text-xs/semibold',
-                    children: g.intl.string(x.default.TZsu1d)
-                }),
-                (0, r.jsx)(a.Text, {
-                    variant: 'text-xs/medium',
-                    children: g.intl.formatToPlainString(x.default['5HQUzM'], { boostCount: n.cost })
-                })
-            ]
-        });
-}
-function N(e) {
-    var { guildId: t, powerup: n, onClick: o } = e,
-        i = E(e, ['guildId', 'powerup', 'onClick']);
-    let l = (0, m.Z)(t, n),
-        { onShowMore: a } = (0, f.ZP)(t, n),
-        c = _.uc.has(n.skuId);
-    return (0, r.jsx)(
-        s.zx,
-        h(
-            j(
-                {
-                    className: v.primaryButton,
-                    innerClassName: v.buttonInner,
-                    wrapperClassName: v.buttonWrapper,
-                    grow: !0,
-                    onClick: (e) => {
-                        (null == o || o(e), c ? null == l || l(e) : null == a || a());
-                    }
-                },
-                i
-            ),
-            { children: c ? g.intl.string(x.default['g5Ds6+']) : g.intl.string(g.t['0Q61kJ']) }
-        )
-    );
-}
-function O(e) {
-    var { guildId: t, powerup: n, compact: i, onError: u } = e,
-        d = E(e, ['guildId', 'powerup', 'compact', 'onError']);
-    let { onActivate: m, isLoading: b, error: N, onShowDeactivate: O } = (0, f.ZP)(t, n),
-        Z = (0, p.Z)(t, n).type !== _.A3.INACTIVE,
-        { disabled: w, reason: P } = (0, c.Z)(t, n, Z);
-    return (
-        o.useEffect(() => {
-            null == u || u(N);
-        }, [N, u]),
-        (0, r.jsx)(a.ua7, {
-            delay: 100,
-            'aria-label': null != P ? P : Z ? g.intl.string(x.default.TZsu1d) : void 0,
-            text:
-                null != P
-                    ? P
-                    : Z
-                      ? (0, r.jsx)(I, {
-                            guildId: t,
-                            powerup: n
-                        })
-                      : void 0,
-            children: (e) =>
-                (0, r.jsx)(
-                    s.zx,
-                    h(
-                        j(
-                            h(j({}, e), {
-                                className: v.secondaryButton,
-                                innerClassName: v.buttonInner,
-                                wrapperClassName: l()(v.secondaryButton, { [v.buttonWrapper]: !0 === d.grow }),
-                                color: Z ? s.Tt.PRIMARY : s.Tt.BRAND,
-                                'aria-label': g.intl.string(Z ? x.default.TZsu1d : x.default.gSxlHR),
-                                disabled: w,
-                                onClick: Z ? O : m,
-                                submitting: b
-                            }),
-                            d
-                        ),
-                        {
-                            children: (0, r.jsx)(C, {
-                                powerup: n,
-                                isActive: Z,
-                                compact: i
-                            })
-                        }
-                    )
-                )
-        })
-    );
-}
-function Z(e) {
+function j(e) {
     let { className: t, guildId: n, powerup: o } = e,
-        { onShowMore: i } = (0, f.ZP)(n, o);
+        { onShowMore: s } = (0, p.ZP)(n, o);
     return (0, r.jsx)('div', {
-        className: l()(v.container, t),
-        children: (0, r.jsx)(s.zx, {
-            className: v.primaryButton,
-            innerClassName: v.buttonInner,
-            wrapperClassName: v.buttonWrapper,
+        className: i()(x.container, t),
+        children: (0, r.jsx)(l.zx, {
+            className: x.primaryButton,
+            innerClassName: x.buttonInner,
+            wrapperClassName: x.buttonWrapper,
             grow: !0,
-            onClick: i,
-            children: o.type === _.Us.LEVEL ? g.intl.string(g.t['0Q61kJ']) : g.intl.string(g.t.Xa11Eh)
+            onClick: s,
+            children: o.type === f.Us.LEVEL ? g.intl.string(g.t['0Q61kJ']) : g.intl.string(g.t.Xa11Eh)
         })
     });
 }
-function w(e) {
-    let { className: t, guildId: n, powerup: o, onError: i } = e,
-        s = (0, p.Z)(n, o).type !== _.A3.INACTIVE,
-        a = (0, u.Z)(n, o, 'GuildPowerupCardFooterAdmin'),
-        c = s || !a,
-        d = !s;
+function h(e) {
+    let { className: t, guildId: n, powerup: o, onError: l } = e,
+        a = (0, c.Z)(n, o).type !== f.A3.INACTIVE,
+        d = (0, s.Z)(n, o, 'GuildPowerupCardFooterAdmin'),
+        p = a || !d,
+        m = !a;
     return (0, r.jsxs)('div', {
-        className: l()(v.container, t),
+        className: i()(x.container, t),
         children: [
-            c &&
-                (0, r.jsx)(O, {
+            p &&
+                (0, r.jsx)(u.Z, {
                     guildId: n,
                     powerup: o,
-                    onError: i,
-                    grow: d,
-                    compact: !d
+                    onError: l,
+                    grow: m,
+                    compact: !m
                 }),
-            s &&
-                (0, r.jsx)(N, {
+            a &&
+                (0, r.jsx)(b, {
                     guildId: n,
                     powerup: o
                 })
         ]
     });
 }
-function P(e) {
-    var t = b(
+function E(e) {
+    var t = _(
         {},
         (function (e) {
             if (null == e) throw TypeError('Cannot destructure ' + e);
             return e;
         })(e)
     );
-    return (0, d.Z)(t.guildId) ? (0, r.jsx)(w, j({}, t)) : (0, r.jsx)(Z, j({}, t));
+    return (0, a.Z)(t.guildId) ? (0, r.jsx)(h, v({}, t)) : (0, r.jsx)(j, v({}, t));
 }

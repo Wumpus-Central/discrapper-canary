@@ -9,26 +9,26 @@ var r = n(255367),
     u = n(243778),
     d = n(819640),
     p = n(476044),
-    m = n(921944),
-    f = n(93841),
-    _ = n(388032);
+    f = n(921944),
+    m = n(93841),
+    g = n(388032);
 function x(e) {
     let { powerup: t, targetRef: n, isCardVisible: x } = e,
-        g = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
+        _ = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
         v = (0, a.f9)(),
         b =
             t.skuId === i.A$
                 ? {
-                      title: _.intl.string(f.default.YWo6VF),
-                      body: _.intl.string(f.default.gXVvKS),
+                      title: g.intl.string(m.default.YWo6VF),
+                      body: g.intl.string(m.default.gXVvKS),
                       dismissibleContentType: s.z.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER
                   }
                 : null,
         j = [];
-    null == b || g || !x || v || j.push(b.dismissibleContentType);
+    null == b || _ || !x || v || j.push(b.dismissibleContentType);
     let [h, E] = (0, u.US)(j),
         C = o.useCallback(() => {
-            E(m.L.INDIRECT_ACTION);
+            E(f.L.INDIRECT_ACTION);
         }, [E]);
     return ((0, p.Z)({
         targetRef: n,
@@ -50,7 +50,7 @@ function x(e) {
               title: b.title,
               body: b.body,
               onRequestClose: () => {
-                  E(m.L.USER_DISMISS);
+                  E(f.L.USER_DISMISS);
               }
           });
 }

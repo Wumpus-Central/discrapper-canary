@@ -1,9 +1,9 @@
 n.d(t, { Z: () => y });
 var r = n(255367);
 n(73800);
-var o = n(924322),
-    i = n(481060),
-    l = n(747101),
+var o = n(296009),
+    l = n(481060),
+    i = n(747101),
     a = n(517157),
     c = n(985748),
     s = n(566007),
@@ -36,7 +36,7 @@ function m(e) {
     }
     return e;
 }
-function g(e) {
+function b(e) {
     var { widget: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -47,39 +47,39 @@ function g(e) {
                     var n,
                         r,
                         o = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (o[n] = e[n]));
                     return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]));
             }
             return o;
         })(e, ['widget']);
-    switch (t.gameWidgetType) {
-        case o.g.FAVORITE:
+    switch (t.type) {
+        case o.l.FAVORITE_GAMES:
             return (0, r.jsx)(s.Z, m({ widget: t }, n));
-        case o.g.CURRENT:
+        case o.l.CURRENT_GAMES:
             return (0, r.jsx)(c.Z, m({ widget: t }, n));
-        case o.g.WANT_TO_PLAY:
+        case o.l.WANT_TO_PLAY_GAMES:
             return (0, r.jsx)(u.Z, m({ widget: t }, n));
-        case o.g.PLAYED:
+        case o.l.PLAYED_GAMES:
             return (0, r.jsx)(d.Z, m({ widget: t }, n));
         default:
             return null;
     }
 }
-function b(e) {
+function g(e) {
     let { user: t, guildId: n, channelId: o } = e,
-        i = (0, a.Z)(),
-        { widgets: c, isFetching: s } = (0, l.Z)(i);
+        l = (0, a.Z)(),
+        { widgets: c, isFetching: s } = (0, i.Z)(l);
     return 0 === c.length
         ? (0, r.jsx)(f.Z, {})
         : (0, r.jsx)(r.Fragment, {
               children: c.map((e) =>
                   (0, r.jsx)(
-                      g,
+                      b,
                       {
                           widget: e,
                           user: t,
@@ -93,9 +93,9 @@ function b(e) {
           });
 }
 function y(e) {
-    return (0, r.jsx)(i.Ttm, {
+    return (0, r.jsx)(l.Ttm, {
         className: p.scroller,
         fade: !0,
-        children: (0, r.jsx)(b, m({}, e))
+        children: (0, r.jsx)(g, m({}, e))
     });
 }

@@ -370,7 +370,7 @@ function Q(e) {
     let h = s.useCallback(
         (e) => {
             let { queryString: n, query: r } = e;
-            (R.Z.refreshSearchQueryAnalyticsId(t),
+            (R.ZP.refreshSearchQueryAnalyticsId(t),
                 (0, k.tI)({
                     searchContext: t,
                     query: r,
@@ -418,7 +418,7 @@ function U(e) {
     let h = s.useCallback(
         (e) => {
             let { queryString: n, query: r, searchEverywhere: s } = e;
-            (R.Z.refreshSearchQueryAnalyticsId(t),
+            (R.ZP.refreshSearchQueryAnalyticsId(t),
                 (0, k.tI)({
                     searchContext: t,
                     query: r,

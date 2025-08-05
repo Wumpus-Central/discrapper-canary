@@ -1,12 +1,12 @@
 (n.d(t, { N: () => f }), n(388685));
 var r = n(73800),
     o = n(392711),
-    i = n.n(o),
-    l = n(876215),
+    l = n.n(o),
+    i = n(876215),
     a = n(897674),
     c = n(709054),
     s = n(206583);
-let d = new Set([l.s.PLAYED_GAME, l.s.LAUNCHED_ACTIVITY]),
+let d = new Set([i.s.PLAYED_GAME, i.s.LAUNCHED_ACTIVITY]),
     u = (e) => d.has(e.content_type);
 function f(e) {
     let t = (0, a.Z)({ id: s.YN.GLOBAL_FEED }),
@@ -16,7 +16,7 @@ function f(e) {
         });
     return r.useMemo(
         () =>
-            i()(n)
+            l()(n)
                 .unionBy(t, (e) => e.id)
                 .filter(u)
                 .filter((t) => t.extra.application_id === e)

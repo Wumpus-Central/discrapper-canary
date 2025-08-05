@@ -10,11 +10,11 @@ var o = n(793030),
     u = n(430824),
     d = n(63063),
     p = n(317169),
-    m = n(639660),
-    f = n(767218),
-    _ = n(981631),
+    f = n(639660),
+    m = n(767218),
+    g = n(981631),
     x = n(93841),
-    g = n(388032),
+    _ = n(388032),
     v = n(466649);
 function b(e) {
     let { guildId: t } = e,
@@ -30,29 +30,29 @@ function b(e) {
                         (0, r.jsx)(o.xv, {
                             variant: 'eyebrow',
                             color: 'text-secondary',
-                            children: g.intl.string(x.default.hjvcLC)
+                            children: _.intl.string(x.default.hjvcLC)
                         }),
                         (0, r.jsx)(o.xv, {
                             className: v.learnMore,
                             variant: 'text-xs/semibold',
-                            children: g.intl.format(x.default.fXE30d, { helpDeskArticle: d.Z.getArticleURL(_.BhN.GUILD_BOOSTING_FAQ) })
+                            children: _.intl.format(x.default.fXE30d, { helpDeskArticle: d.Z.getArticleURL(g.BhN.GUILD_BOOSTING_FAQ) })
                         })
                     ]
                 }),
                 (0, r.jsxs)('div', {
                     className: v.contentContainer,
                     children: [
-                        (0, r.jsx)(f.Z, {
+                        (0, r.jsx)(m.Z, {
                             count: b,
-                            type: f.b.AVAILABLE
+                            type: m.b.AVAILABLE
                         }),
-                        (0, r.jsx)(f.Z, {
+                        (0, r.jsx)(m.Z, {
                             count: j,
-                            type: f.b.SPENT
+                            type: m.b.SPENT
                         }),
-                        (0, r.jsx)(f.Z, {
+                        (0, r.jsx)(m.Z, {
                             count: h,
-                            type: f.b.TOTAL
+                            type: m.b.TOTAL
                         })
                     ]
                 }),
@@ -60,8 +60,8 @@ function b(e) {
                     className: v.boostButton,
                     guild: n,
                     analyticsLocation: {
-                        page: _.ZY5.GUILD_POWERUPS_OVERVIEW,
-                        section: _.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR
+                        page: g.ZY5.GUILD_POWERUPS_OVERVIEW,
+                        section: g.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR
                     },
                     color: l.Tt.CUSTOM,
                     size: l.Ph.LARGE,
@@ -72,7 +72,7 @@ function b(e) {
                         color: s.TVs.unsafe_rawColors.GUILD_BOOSTING_PINK
                     })
                 }),
-                (0, r.jsx)(m.Z, { guildId: t })
+                (0, r.jsx)(f.Z, { guildId: t })
             ]
         });
 }

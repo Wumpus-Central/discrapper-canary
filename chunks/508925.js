@@ -1,15 +1,15 @@
 r.d(t, { b: () => s });
 var n = r(255367),
-    a = r(120356),
-    l = r.n(a),
+    l = r(120356),
+    a = r.n(l),
     i = r(755419),
     o = r(157570);
 let s = (e) => {
-    let { product: t, animationState: r, className: a } = e,
+    let { product: t, animationState: r, className: l } = e,
         s = i.K[t.skuId];
     return null != s
         ? (0, n.jsx)('div', {
-              className: l()(o.externalProductWrapper, a),
+              className: a()(o.externalProductWrapper, l),
               children:
                   null != s.render &&
                   s.render({

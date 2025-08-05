@@ -182,8 +182,8 @@ let k = function (e) {
             }
         }, [z, u]),
         q = i.useMemo(() => z.filter((e) => e.type === P.OGo.PENDING_INCOMING).length, [z]),
-        Q = u === P.pJs.PENDING && q > 0 && q >= T.yf,
-        X = i.useCallback(
+        X = u === P.pJs.PENDING && q > 0 && q >= T.yf,
+        Q = i.useCallback(
             (e) => {
                 (e.stopPropagation(), d.Z.confirmClearPendingRelationships(q));
             },
@@ -215,13 +215,13 @@ let k = function (e) {
                                       id: t,
                                       title: n
                                   }),
-                                  Q &&
+                                  X &&
                                       (0, r.jsx)(s.zx, {
                                           look: s.iL.LINK,
                                           color: s.Tt.LINK,
                                           className: A.clearButton,
                                           size: s.zx.Sizes.TINY,
-                                          onClick: X,
+                                          onClick: Q,
                                           'aria-label': j.intl.string(j.t.O8k7Oz),
                                           children: j.intl.string(j.t.O8k7Oz)
                                       })
@@ -241,7 +241,7 @@ let k = function (e) {
                           n
                       );
             },
-            [K, u, t, Q, X]
+            [K, u, t, X, Q]
         );
     if (
         (i.useEffect(() => {

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => i }), n(388685));
+(n.d(t, { ZP: () => i }), n(388685));
 var r = n(772848),
     s = n(710845),
     l = n(607802);
@@ -15,9 +15,10 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function o(e, t) {
     return {
         sessionId: (0, r.Z)(),
+        searchLocation: null != t ? t : null,
         selectedSearchTab: null != e ? e : null,
         searchCount: 0,
         searchWithFiltersCount: 0
@@ -77,6 +78,10 @@ let i = new (class {
         var t;
         return null == (t = this.getState(e)) ? void 0 : t.sessionId;
     }
+    getSearchLocation(e) {
+        var t;
+        return null == (t = this.getState(e)) ? void 0 : t.searchLocation;
+    }
     refreshSearchQueryAnalyticsId(e) {
         let t = (0, l.Tm)(e);
         this.searchQueryIds.set(t, (0, r.Z)());
@@ -90,13 +95,17 @@ let i = new (class {
         return null == (t = this.getState(e)) ? void 0 : t.selectedSearchTab;
     }
     initialize(e) {
-        let { searchContext: t, initialTab: n, initializeSearchQueryId: s } = e,
-            a = (0, l.Tm)(t);
-        (this.sessions.has(a) || this.sessions.set(a, o(n)), s && !this.searchQueryIds.has(a) && this.searchQueryIds.set(a, (0, r.Z)()));
+        let { searchContext: t, initialTab: n, initializeSearchQueryId: s, searchLocation: a } = e,
+            i = (0, l.Tm)(t);
+        (this.sessions.has(i) || this.sessions.set(i, o(n, a)), s && !this.searchQueryIds.has(i) && this.searchQueryIds.set(i, (0, r.Z)()));
     }
     terminate(e) {
         let t = (0, l.Tm)(e);
         (this.sessions.delete(t), this.searchQueryIds.delete(t));
+    }
+    hasSession(e) {
+        let t = (0, l.Tm)(e);
+        return this.sessions.has(t);
     }
     constructor() {
         (a(this, 'sessions', new Map()), a(this, 'searchQueryIds', new Map()));

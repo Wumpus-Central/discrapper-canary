@@ -9,8 +9,8 @@ var n = a(255367),
     d = a(755721),
     u = a(481060),
     m = a(129861),
-    p = a(665149),
-    x = a(886118),
+    x = a(665149),
+    p = a(886118),
     h = a(301801),
     b = a(594174),
     f = a(572004),
@@ -21,13 +21,13 @@ var n = a(255367),
     y = a(484036),
     C = a(681619),
     O = a(621060),
-    T = a(388032),
-    N = a(459100),
+    N = a(388032),
+    T = a(459100),
     E = a(616257);
 let S = [
     {
         key: 'event',
-        cellClassName: N.eventColumn,
+        cellClassName: T.eventColumn,
         render(e) {
             let { event: t } = e;
             return t;
@@ -35,7 +35,7 @@ let S = [
     },
     {
         key: 'location',
-        cellClassName: N.locationColumn,
+        cellClassName: T.locationColumn,
         render(e) {
             let { properties: t } = e;
             return null == t.location ? null : t.location;
@@ -45,7 +45,7 @@ let S = [
 function P(e) {
     let { children: t } = e;
     return (0, n.jsx)(u.zJl, {
-        className: N.customPropertiesContainer,
+        className: T.customPropertiesContainer,
         children: (0, n.jsx)('dl', { children: t })
     });
 }
@@ -60,16 +60,16 @@ function I(e) {
             }
         }, [i]),
         (0, n.jsxs)('div', {
-            className: N.customProperty,
+            className: T.customProperty,
             children: [
                 (0, n.jsx)('dt', {
-                    className: N.customPropertiesName,
+                    className: T.customPropertiesName,
                     children: t
                 }),
                 (0, n.jsx)('dd', { children: a }),
                 (0, n.jsx)(u.P3F, {
                     tag: 'span',
-                    className: N.copyPropertyButton,
+                    className: T.copyPropertyButton,
                     onClick: () => (0, f.JG)(JSON.stringify(l), () => s(!0)),
                     children: i
                         ? (0, n.jsx)(u.kmB, {
@@ -104,7 +104,7 @@ let w = new Set(['client_performance_cpu', 'client_performance_memory']),
             count: l
         };
     },
-    k = [
+    A = [
         {
             id: 'details',
             name: 'Details',
@@ -116,24 +116,24 @@ let w = new Set(['client_performance_cpu', 'client_performance_memory']),
                         filteredEvents: c
                     } = e,
                     d = b.default.getUser(l),
-                    x = o()(r);
+                    p = o()(r);
                 return (0, n.jsxs)('div', {
                     'data-mtctest-ignore': 'true',
                     children: [
-                        (0, n.jsxs)(p.ZP, {
-                            className: i()(E.headerBar, N.subPanelHeaderBar),
+                        (0, n.jsxs)(x.ZP, {
+                            className: i()(E.headerBar, T.subPanelHeaderBar),
                             children: [
-                                (0, n.jsx)(p.ZP.Icon, {
+                                (0, n.jsx)(x.ZP.Icon, {
                                     icon: u.IeX,
                                     tooltip: t
                                 }),
-                                (0, n.jsxs)(p.ZP.Title, {
-                                    wrapperClassName: N.headerTitle,
+                                (0, n.jsxs)(x.ZP.Title, {
+                                    wrapperClassName: T.headerTitle,
                                     children: [
                                         t,
                                         (0, n.jsx)(u.P3F, {
                                             tag: 'span',
-                                            className: N.copyEventButton,
+                                            className: T.copyEventButton,
                                             onClick: () => (0, f.JG)(t),
                                             children: (0, n.jsx)(u.TIy, {
                                                 color: 'currentColor',
@@ -142,7 +142,7 @@ let w = new Set(['client_performance_cpu', 'client_performance_memory']),
                                         })
                                     ]
                                 }),
-                                (0, n.jsx)(p.ZP.Icon, {
+                                (0, n.jsx)(x.ZP.Icon, {
                                     icon: u.TIy,
                                     tooltip: 'Copy all properties',
                                     onClick: () => {
@@ -187,7 +187,7 @@ let w = new Set(['client_performance_cpu', 'client_performance_memory']),
                                         );
                                     }
                                 }),
-                                (0, n.jsx)(p.ZP.Icon, {
+                                (0, n.jsx)(x.ZP.Icon, {
                                     icon: u.k$p,
                                     tooltip: 'Close',
                                     onClick: s
@@ -195,15 +195,15 @@ let w = new Set(['client_performance_cpu', 'client_performance_memory']),
                             ]
                         }),
                         (0, n.jsxs)(_.E, {
-                            className: N.commonProperties,
+                            className: T.commonProperties,
                             children: [
                                 (0, n.jsx)(_.Z9, {
                                     name: 'Timestamp (local)',
                                     copyValue: r.toISOString(),
                                     children: (0, n.jsxs)('time', {
                                         dateTime: r.toISOString(),
-                                        title: (0, v.vc)(x, 'LLLL'),
-                                        children: ['(', o().locale(), ') ', (0, v.Y4)(x)]
+                                        title: (0, v.vc)(p, 'LLLL'),
+                                        children: ['(', o().locale(), ') ', (0, v.Y4)(p)]
                                     })
                                 }),
                                 null != d &&
@@ -236,7 +236,7 @@ let w = new Set(['client_performance_cpu', 'client_performance_memory']),
                                                         null != r
                                                             ? (0, n.jsx)('code', { children: JSON.stringify(r) })
                                                             : (0, n.jsx)('code', {
-                                                                  className: N.emptyProperty,
+                                                                  className: T.emptyProperty,
                                                                   children: 'null'
                                                               })
                                                 },
@@ -266,11 +266,11 @@ let w = new Set(['client_performance_cpu', 'client_performance_memory']),
             }
         }
     ],
-    A = {
+    k = {
         events: {
             label: 'Events',
             filter: (e) =>
-                Object.entries(A)
+                Object.entries(k)
                     .filter((e) => {
                         let [t] = e;
                         return 'events' !== t;
@@ -295,7 +295,7 @@ let w = new Set(['client_performance_cpu', 'client_performance_memory']),
         }
     },
     Z = {
-        searchType: x.S.REGEX,
+        searchType: p.S.REGEX,
         searchStringGenerator: (e) => {
             let { event: t, properties: a } = e;
             return null != a.location ? [t, a.location] : t;
@@ -306,49 +306,49 @@ function D() {
     let e = r.useRef(null),
         [t, a] = r.useState(''),
         l = (0, c.e7)([g.Z], () => g.Z.loggedEventsVersion),
-        [s, o] = r.useState(() => Object.keys(A)),
-        [m, p] = r.useState(g.Z.loggedEvents),
-        x = r.useCallback((e) => {
-            p(e);
+        [s, o] = r.useState(() => Object.keys(k)),
+        [m, x] = r.useState(g.Z.loggedEvents),
+        p = r.useCallback((e) => {
+            x(e);
         }, []);
-    (0, h.BO)(t, g.Z.loggedEvents, x, Z, [l]);
+    (0, h.BO)(t, g.Z.loggedEvents, p, Z, [l]);
     let b = m.filter((e) => {
-            for (let t of s) if (A[t].filter(e)) return !0;
+            for (let t of s) if (k[t].filter(e)) return !0;
             return !1;
         }),
         [f, v] = r.useState(void 0),
         _ = b.find((e) => e.key === f),
-        { TabBar: P, renderSelectedTab: I } = (0, O.ZP)({ tabs: k }, []);
+        { TabBar: P, renderSelectedTab: I } = (0, O.ZP)({ tabs: A }, []);
     return (0, n.jsxs)('div', {
         ref: e,
-        className: i()(E.panel, N.panel),
+        className: i()(E.panel, T.panel),
         children: [
             (0, n.jsxs)('div', {
-                className: N.toolbar,
+                className: T.toolbar,
                 children: [
                     (0, n.jsx)(d.zx, {
-                        className: N.toolbarButton,
+                        className: T.toolbarButton,
                         look: d.zx.Looks.BLANK,
                         size: d.zx.Sizes.ICON,
                         onClick: j.Zw,
                         children: (0, n.jsx)('span', {
-                            title: T.intl.string(T.t.VkKicX),
+                            title: N.intl.string(N.t.VkKicX),
                             children: (0, n.jsx)(u.XHJ, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': T.intl.string(T.t.VkKicX)
+                                'aria-label': N.intl.string(N.t.VkKicX)
                             })
                         })
                     }),
-                    (0, n.jsx)('div', { className: N.toolbarDivider }),
+                    (0, n.jsx)('div', { className: T.toolbarDivider }),
                     (0, n.jsx)('div', {
-                        className: N.filters,
-                        children: Object.entries(A).map((e) => {
+                        className: T.filters,
+                        children: Object.entries(k).map((e) => {
                             let [t, a] = e;
                             return (0, n.jsx)(
                                 u.P3F,
                                 {
-                                    className: i()(N.filter, s.includes(t) && N.activeFilter),
+                                    className: i()(T.filter, s.includes(t) && T.activeFilter),
                                     onClick: () => {
                                         o((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
                                     },
@@ -361,10 +361,10 @@ function D() {
                 ]
             }),
             (0, n.jsx)('div', {
-                className: N.toolbar,
+                className: T.toolbar,
                 children: (0, n.jsx)(u.E1j, {
                     size: 'sm',
-                    className: N.searchBar,
+                    className: T.searchBar,
                     query: t,
                     onChange: a,
                     onClear: () => a(''),
@@ -379,7 +379,7 @@ function D() {
             }),
             null != _ &&
                 (0, n.jsxs)(y.Z, {
-                    className: N.subPanel,
+                    className: T.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
                     children: [

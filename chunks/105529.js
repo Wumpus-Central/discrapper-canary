@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => f }), n(953529));
+(n.d(t, { Z: () => m }), n(953529));
 var r = n(255367),
     o = n(793030),
     i = n(755721),
@@ -9,44 +9,44 @@ var r = n(255367),
     u = n(234368),
     d = n(981631),
     p = n(921944),
-    m = n(808353);
-function f(e) {
-    let { guildId: t, perk: n, markAsDismissed: f } = e,
-        _ = u._k[n],
+    f = n(808353);
+function m(e) {
+    let { guildId: t, perk: n, markAsDismissed: m } = e,
+        g = u._k[n],
         x = async () => {
             let e = a.Z.getSortedRoles(t).find(c.YB);
-            (await s.Z.open(t, d.pNK.ROLES), null != e && (await s.Z.selectRole(e.id)), f(p.L.SECONDARY));
+            (await s.Z.open(t, d.pNK.ROLES), null != e && (await s.Z.selectRole(e.id)), m(p.L.SECONDARY));
         };
     return (0, r.jsxs)('div', {
-        className: m.container,
+        className: f.container,
         children: [
             (0, r.jsx)('img', {
                 alt: '',
-                src: _.assetUrl,
-                className: m.image
+                src: g.assetUrl,
+                className: f.image
             }),
             (0, r.jsx)(l.olH, {
-                className: m.close,
-                innerClassName: m.innerClose,
+                className: f.close,
+                innerClassName: f.innerClose,
                 onClick: () => {
-                    f(p.L.USER_DISMISS);
+                    m(p.L.USER_DISMISS);
                 }
             }),
             (0, r.jsx)(o.xv, {
                 color: 'text-primary',
                 variant: 'text-md/semibold',
-                children: _.title
+                children: g.title
             }),
             (0, r.jsx)(o.xv, {
-                className: m.description,
+                className: f.description,
                 color: 'text-muted',
                 variant: 'text-sm/medium',
-                children: _.description
+                children: g.description
             }),
             (0, r.jsx)(i.zx, {
-                className: m.button,
+                className: f.button,
                 onClick: x,
-                children: _.cta
+                children: g.cta
             })
         ]
     });

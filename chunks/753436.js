@@ -2,13 +2,13 @@ n.d(t, { S: () => c });
 var r = n(255367);
 n(73800);
 var o = n(817053),
-    i = n(919498),
-    l = n(467514),
+    l = n(919498),
+    i = n(467514),
     a = n(987278);
 function c(e) {
     let { game: t, userId: n, guildId: c, channelId: s, loading: d = !1, disableInteraction: u = !1 } = e;
     return d
-        ? (0, r.jsx)('div', { className: l.gameCover })
+        ? (0, r.jsx)('div', { className: i.gameCover })
         : (0, r.jsxs)('div', {
               className: a.container,
               children: [
@@ -19,7 +19,7 @@ function c(e) {
                       userId: n,
                       disableInteraction: u
                   }),
-                  (0, r.jsx)(i.Z, {
+                  (0, r.jsx)(l.Z, {
                       applicationId: t.applicationId,
                       className: a.socialProof,
                       hideLabel: !0,
