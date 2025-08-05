@@ -1,28 +1,28 @@
-e.d(n, { Z: () => f });
-var i = e(255367);
-e(73800);
-var r = e(399606),
-    l = e(481060),
-    a = e(228392),
-    o = e(592125),
-    s = e(934415),
-    d = e(572004),
-    u = e(981631),
-    c = e(388032);
-function f(t, n, e) {
-    let f = (0, r.e7)([o.Z], () => (null != t ? o.Z.getChannel(t.parent_id) : null));
-    return null == t
+n.d(t, { Z: () => f });
+var i = n(255367);
+n(73800);
+var r = n(399606),
+    l = n(481060),
+    a = n(228392),
+    o = n(592125),
+    s = n(934415),
+    d = n(572004),
+    u = n(981631),
+    c = n(388032);
+function f(e, t, n) {
+    let f = (0, r.e7)([o.Z], () => (null != e ? o.Z.getChannel(e.parent_id) : null));
+    return null == e
         ? null
         : (0, i.jsx)(l.sNh, {
               id: 'channel-copy-link',
               label: c.intl.string(c.t.WqhZsr),
               action: () => {
-                  (t.isForumPost() &&
+                  (e.isForumPost() &&
                       (0, a.B)({
-                          postId: t.id,
+                          postId: e.id,
                           location: { section: u.jXE.CONTEXT_MENU }
                       }),
-                      (0, d.JG)((0, s.EO)(t, f, n, e)));
+                      (0, d.JG)((0, s.EO)(e, f, t, n)));
               }
           });
 }

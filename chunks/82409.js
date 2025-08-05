@@ -90,7 +90,7 @@ function U(e) {
                         GuildStore_: _.Z
                     }) &&
                     C.default.compare(e.id, P) > 0 &&
-                    e.id !== x.Z.lastClickedUnreadMessageId
+                    !(0, I.Tj)(e, x.Z.selectedItemInfo)
             )
         ),
         D = (0, s.Wu)([y.ZP, _.Z, x.Z], () =>
@@ -102,7 +102,7 @@ function U(e) {
                         guildId: e.guildId,
                         ReadStateStore_: y.ZP,
                         GuildStore_: _.Z
-                    }) || e.id === x.Z.lastClickedUnreadMessageId
+                    }) || (0, I.Tj)(e, x.Z.selectedItemInfo)
             )
         ),
         U = i.useCallback(
@@ -196,7 +196,7 @@ function U(e) {
                   }
                 : {
                       message: {
-                          id: u,
+                          id: C.default.atNextMillisecond(u),
                           channel_id: c
                       },
                       isUnread: null != (i = y.ZP.hasUnread(c)) && i

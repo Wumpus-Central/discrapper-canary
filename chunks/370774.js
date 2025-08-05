@@ -1,6 +1,7 @@
 n.d(t, {
     D: () => y,
     O4: () => v,
+    Tj: () => T,
     YH: () => E,
     bl: () => b,
     j4: () => O,
@@ -93,4 +94,7 @@ function I() {
     let { enabled: e, inInbox: t } = l.Z.useExperiment({ location: 'NotificationsInboxUtils' }),
         n = (0, a.e7)([c.Z], () => c.Z.getSavedMessageCount());
     return e && t && (n > 0 || (0, u.Z)());
+}
+function T(e, t) {
+    return null != t && e.channelId === t.channelId && p.default.compare(e.id, t.messageId) >= 0;
 }

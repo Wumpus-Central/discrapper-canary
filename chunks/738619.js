@@ -1,5 +1,5 @@
 (i.d(e, {
-    ZP: () => k,
+    ZP: () => R,
     d7: () => U,
     iD: () => M
 }),
@@ -27,10 +27,10 @@ var n = i(255367),
     E = i(111583),
     Z = i(594174),
     I = i(451478),
-    P = i(626135),
-    w = i(823379),
-    T = i(5192),
-    x = i(981631),
+    w = i(626135),
+    P = i(823379),
+    x = i(5192),
+    T = i(981631),
     j = i(388032),
     C = i(486850);
 function _(t, e, i) {
@@ -76,7 +76,7 @@ class F extends r.PureComponent {
         let t = this.props.activity.application_id;
         null != t &&
             -1 === N.indexOf(t) &&
-            (P.default.track(x.rMx.SHOW_TUTORIAL, {
+            (w.default.track(T.rMx.SHOW_TUTORIAL, {
                 tutorial: 'activity-invite-nux-inline',
                 application_id: t
             }),
@@ -111,69 +111,105 @@ class F extends r.PureComponent {
     }
 }
 function D(t) {
-    let { activityInviteEducationActivity: e, isFocused: i, typingUsers: r, className: s, channel: l, isThreadCreation: a, renderDots: d, poggermodeEnabled: u, isComboing: h, isInTextChannel: p } = t,
-        { rateLimitPerUser: g } = l;
-    if (0 === r.length && !(g > 0) && !h)
+    let { activityInviteEducationActivity: e, isFocused: i, typingUsers: s, className: l, channel: a, isThreadCreation: d, renderDots: u, poggermodeEnabled: h, isComboing: p, isInTextChannel: g } = t,
+        { rateLimitPerUser: m } = a,
+        O = r.useRef(null),
+        b = r.useRef(null),
+        [S, y] = r.useState(!1);
+    if (
+        (r.useLayoutEffect(() => {
+            if (null != O.current && null != b.current) {
+                let t = () => {
+                    if (null != O.current && null != b.current) {
+                        let t = O.current.getBoundingClientRect();
+                        b.current.scrollWidth + 48 > t.width ? y(!0) : y(!1);
+                    }
+                };
+                t();
+                let e = new ResizeObserver(() => {
+                    t();
+                });
+                return (
+                    e.observe(O.current),
+                    e.observe(b.current),
+                    () => {
+                        e.disconnect();
+                    }
+                );
+            }
+        }, []),
+        0 === s.length && !(m > 0) && !p)
+    )
         return null != e
             ? (0, n.jsx)(F, {
                   activity: e,
                   isFocused: i
               })
             : null;
-    let [m, O, b] = r,
-        S = '';
-    return (
-        1 === r.length
-            ? (S = j.intl.format(j.t.lJ9sZW, { a: m }))
-            : 2 === r.length
-              ? (S = j.intl.format(j.t.rB0CUV, {
-                    a: m,
-                    b: O
-                }))
-              : 3 === r.length
-                ? (S = j.intl.format(j.t.StKTho, {
-                      a: m,
-                      b: O,
-                      c: b
-                  }))
-                : r.length > 3 && (S = j.intl.string(j.t.uVDhqa)),
-        (0, n.jsxs)('div', {
-            className: o()(
-                C.typing,
-                {
-                    'stop-animation': !i,
-                    [C.isComboing]: u && h,
-                    [C.inTextChannel]: p
-                },
-                s
-            ),
-            children: [
-                (0, n.jsxs)('div', {
-                    className: C.typingDots,
-                    children: [
-                        r.length > 0 &&
-                            !1 !== d &&
-                            (0, n.jsx)(c.bbz, {
-                                className: C.ellipsis,
-                                dotRadius: 3.5,
-                                themed: !0
-                            }),
-                        (0, n.jsx)('span', {
-                            className: C.text,
-                            'aria-live': 'polite',
-                            'aria-atomic': !0,
-                            children: S
-                        })
-                    ]
-                }),
-                (0, n.jsx)(f.Z, {
-                    channel: l,
-                    isThreadCreation: a
-                }),
-                u && h && (0, n.jsx)(v.Z, { channelId: l.id })
-            ]
-        })
-    );
+    let [E, Z, I] = s,
+        w = '';
+    1 === s.length
+        ? (w = j.intl.format(j.t.lJ9sZW, { a: E }))
+        : 2 === s.length
+          ? (w = j.intl.format(j.t.rB0CUV, {
+                a: E,
+                b: Z
+            }))
+          : 3 === s.length
+            ? (w = j.intl.format(j.t.StKTho, {
+                  a: E,
+                  b: Z,
+                  c: I
+              }))
+            : s.length > 3 && (w = j.intl.format(j.t.Q8lUnJ, {}));
+    let P = S && s.length > 0 ? j.intl.format(j.t.Q8lUnJ, {}) : w;
+    return (0, n.jsxs)('div', {
+        className: o()(
+            C.typing,
+            {
+                'stop-animation': !i,
+                [C.isComboing]: h && p,
+                [C.inTextChannel]: g
+            },
+            l
+        ),
+        children: [
+            (0, n.jsxs)('div', {
+                className: C.typingDots,
+                ref: O,
+                children: [
+                    s.length > 0 &&
+                        !1 !== u &&
+                        (0, n.jsx)(c.bbz, {
+                            className: C.ellipsis,
+                            dotRadius: 3.5,
+                            themed: !0
+                        }),
+                    (0, n.jsx)('span', {
+                        className: C.text,
+                        'aria-live': 'polite',
+                        'aria-atomic': !0,
+                        children: P
+                    }),
+                    (0, n.jsx)('span', {
+                        className: C.text,
+                        style: {
+                            position: 'absolute',
+                            visibility: 'hidden'
+                        },
+                        'aria-hidden': !0,
+                        ref: b,
+                        children: w
+                    })
+                ]
+            }),
+            (0, n.jsx)(f.Z, {
+                channel: a,
+                isThreadCreation: d
+            }),
+            h && p && (0, n.jsx)(v.Z, { channelId: a.id })
+        ]
+    });
 }
 function M(t) {
     let e = (0, d.e7)([E.Z], () => E.Z.getTypingUsers(t.id)),
@@ -183,15 +219,15 @@ function M(t) {
         .filter((t) => t !== (null == i ? void 0 : i.id))
         .reject((t) => S.Z.isBlockedOrIgnored(t))
         .map((t) => Z.default.getUser(t))
-        .filter(w.lm)
-        .map((e) => T.ZP.getName(t.guild_id, t.id, e))
+        .filter(P.lm)
+        .map((e) => x.ZP.getName(t.guild_id, t.id, e))
         .value();
 }
 function U(t) {
     let e = (0, d.e7)([y.Z], () => y.Z.findActivity((t) => null != t.application_id));
     return (0, d.e7)([O.Z, g.Z, S.Z], () => (0, p.Z)(t, e, O.Z, g.Z, S.Z)) ? e : null;
 }
-function k(t) {
+function R(t) {
     var e,
         i,
         { channel: r, isThreadCreation: s = !1 } = t,

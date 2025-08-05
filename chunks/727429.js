@@ -11,6 +11,5 @@ function s(e) {
     return null != t ? t : e.getGuildId();
 }
 function l(e) {
-    let t = i.Z.getGuildId();
-    return t !== o.I_8 && t !== o.STv ? e.getGuildId() : t === o.STv ? o.STv : a.Z.isFavorite(e.id) || (e.isThread() && a.Z.isFavorite(e.parent_id)) ? o.I_8 : e.getGuildId();
+    return i.Z.getGuildId() !== o.I_8 ? e.getGuildId() : a.Z.isFavorite(e.id) || (e.isThread() && a.Z.isFavorite(e.parent_id)) ? o.I_8 : e.getGuildId();
 }

@@ -16,20 +16,17 @@ let s = async (e, t) =>
                 rejectWithError: !1
             })
         ).body,
-    l = async function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return (
+    l = async (e) =>
+        (
             await r.tn.get({
                 url: o.ANM.GUILD_ENTITLEMENTS(e),
                 query: {
                     with_sku: !0,
-                    with_application: !0,
-                    exclude_deleted: t
+                    with_application: !0
                 },
                 rejectWithError: !1
             })
-        ).body;
-    },
+        ).body,
     c = async (e) =>
         (
             await r.tn.get({

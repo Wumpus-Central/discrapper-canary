@@ -1,13 +1,14 @@
 (n.d(t, {
-    B_: () => _,
+    B_: () => p,
     Lm: () => c,
     Ol: () => u,
     P4: () => d,
-    Tk: () => m,
+    Tk: () => g,
     cO: () => f,
     cj: () => o,
-    qi: () => h,
-    qu: () => p
+    qi: () => m,
+    qu: () => h,
+    sd: () => _
 }),
     n(35282),
     n(415506));
@@ -47,12 +48,15 @@ function f(e) {
     return u(c(e) - 1);
 }
 function _(e) {
+    return u(c(e) + 1);
+}
+function p(e) {
     return Date.now() - c(e);
 }
-function p(e, t) {
+function h(e, t) {
     return e === t ? 0 : null == t ? 1 : null == e ? -1 : e.length > t.length ? 1 : e.length < t.length ? -1 : e > t ? 1 : -1;
 }
-function h(e) {
+function m(e) {
     if (null == e || !/^\d{17,19}$/.test(e)) return !1;
     try {
         return c(e) >= o;
@@ -60,7 +64,7 @@ function h(e) {
         return !1;
     }
 }
-class m {
+class g {
     next() {
         if (this.seq > s) throw Error('Snowflake sequence number overflow: '.concat(this.seq));
         return this.seq++;

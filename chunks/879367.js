@@ -1,36 +1,35 @@
-n.d(t, { default: () => A });
+n.d(t, { default: () => S });
 var i = n(255367),
-    l = n(73800),
-    o = n(120356),
-    s = n.n(o),
-    E = n(755721),
+    E = n(73800),
+    l = n(120356),
+    s = n.n(l),
     r = n(481060),
-    I = n(788080),
-    _ = n(81643),
-    a = n(469775),
-    c = n(388032),
-    N = n(23525);
-let A = function (e) {
-    let { onClose: t, onComplete: n, onCancel: o, transitionState: A, webviewUrl: L, useV1: S = !1 } = e,
-        u = (0, I.GE)(),
-        T = l.useCallback(() => {
+    a = n(788080),
+    I = n(81643),
+    _ = n(469775),
+    o = n(388032),
+    c = n(23525);
+let S = function (e) {
+    let { onClose: t, onComplete: n, onCancel: l, transitionState: S, webviewUrl: A, useV1: N = !1 } = e,
+        L = (0, a.GE)(),
+        u = E.useCallback(() => {
             (n(), t());
         }, [n, t]),
-        C = l.useCallback(() => {
-            (0, r.nfh)(a.zJ) && T();
-        }, [T]);
-    (0, _.F5)(C);
-    let d = l.useCallback(
+        T = E.useCallback(() => {
+            (0, r.nfh)(_.zJ) && u();
+        }, [u]);
+    (0, I.F5)(T);
+    let d = E.useCallback(
         (e) => {
-            if (u && '' !== L) {
+            if (L && '' !== A) {
                 var t;
-                (null == e || null == (t = e.data) ? void 0 : t.eventType) === 'Verification.Result' && T();
+                (null == e || null == (t = e.data) ? void 0 : t.eventType) === 'Verification.Result' && u();
             }
         },
-        [L, T, u]
+        [A, u, L]
     );
     return (
-        l.useEffect(
+        E.useEffect(
             () => (
                 window.addEventListener('message', d),
                 () => {
@@ -40,57 +39,54 @@ let A = function (e) {
             [d]
         ),
         (0, i.jsxs)(r.Y0X, {
-            transitionState: A,
-            className: N.root,
+            'data-migration-pending': !0,
+            transitionState: S,
+            className: c.root,
             parentComponent: 'AgeVerificationModal',
             size: r.CgR.MEDIUM,
             children: [
                 (0, i.jsxs)(r.hzk, {
-                    className: s()(N.content, { [N.fullbleed]: !S }),
+                    'data-migration-pending': !0,
+                    className: s()(c.content, { [c.fullbleed]: !N }),
                     scrollbarType: 'none',
                     children: [
-                        S &&
+                        N &&
                             (0, i.jsx)(r.X6q, {
                                 variant: 'heading-xl/bold',
-                                children: c.intl.string(c.t.tYNaXF)
+                                children: o.intl.string(o.t.tYNaXF)
                             }),
                         (0, i.jsx)('iframe', {
                             id: 'frame',
-                            src: L,
-                            className: N.iframe,
+                            src: A,
+                            className: c.iframe,
                             allow: 'camera; microphone'
                         })
                     ]
                 }),
                 (0, i.jsx)(r.mzw, {
-                    children: S
-                        ? (0, i.jsx)(E.zx, {
-                              color: E.zx.Colors.TRANSPARENT,
-                              look: E.zx.Looks.BLANK,
-                              onClick: t,
-                              className: N.cancelButton,
-                              children: c.intl.string(c.t['4gTnU1'])
+                    'data-migration-pending': !0,
+                    children: N
+                        ? (0, i.jsx)(r.Avr, {
+                              text: o.intl.string(o.t['4gTnU1']),
+                              onClick: t
                           })
-                        : (0, i.jsxs)('div', {
-                              className: N.footer,
-                              children: [
-                                  (0, i.jsx)(E.zx, {
-                                      color: E.zx.Colors.TRANSPARENT,
-                                      look: E.zx.Looks.BLANK,
-                                      onClick: t,
-                                      size: E.zx.Sizes.SMALL,
-                                      className: N.footerButton,
-                                      children: c.intl.string(c.t.fjKFaW)
-                                  }),
-                                  (0, i.jsx)(E.zx, {
-                                      color: E.zx.Colors.TRANSPARENT,
-                                      look: E.zx.Looks.BLANK,
-                                      size: E.zx.Sizes.SMALL,
-                                      onClick: o,
-                                      className: N.footerButton,
-                                      children: c.intl.string(c.t['4gTnU1'])
-                                  })
-                              ]
+                        : (0, i.jsx)('div', {
+                              className: c.footer,
+                              children: (0, i.jsxs)(r.hE2, {
+                                  justify: 'space-between',
+                                  children: [
+                                      (0, i.jsx)(r.Avr, {
+                                          variant: 'secondary',
+                                          text: o.intl.string(o.t.fjKFaW),
+                                          onClick: t
+                                      }),
+                                      (0, i.jsx)(r.Avr, {
+                                          variant: 'secondary',
+                                          text: o.intl.string(o.t['4gTnU1']),
+                                          onClick: l
+                                      })
+                                  ]
+                              })
                           })
                 })
             ]
