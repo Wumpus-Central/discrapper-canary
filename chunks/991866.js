@@ -1,0 +1,1 @@
+u.exports = JSON.parse('{"i9e/u7":"Dégradé","2akt9v":"Wumpus","x68b1N":"Néon","OpWJ3d":"Solide","rN7cub":"Sakura","JOpi7+":"Choisis ta couleur","cVTpnp":"Ajoute d\'abord des couleurs","NOGFdn":"Surprends-moi"}');
