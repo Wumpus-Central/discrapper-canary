@@ -17,7 +17,7 @@ var i = n(255367),
     x = n(662583),
     _ = n(346537),
     j = n(830318);
-function E(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -42,7 +42,7 @@ function E(e) {
     }
     return e;
 }
-function C(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -77,8 +77,8 @@ let O = {
             [R, D] = r.useState([]),
             [Z, w] = r.useState(O),
             k = r.useRef([]),
-            [L, B] = r.useState(t.name),
-            M = L.toLowerCase().replace(/\s+/g, '_'),
+            [L, M] = r.useState(t.name),
+            B = L.toLowerCase().replace(/\s+/g, '_'),
             U = r.useMemo(
                 () => ({
                     type: l.Z.PROFILE_EFFECT,
@@ -101,7 +101,7 @@ let O = {
                 let n = V(t);
                 null != n &&
                     (0, f.i0)(n, (t) => {
-                        w((i) => C(E({}, i), { [e]: (0, f.z)(t, n) }));
+                        w((i) => E(C({}, i), { [e]: (0, f.z)(t, n) }));
                     });
             },
             F = (e, t) => {
@@ -112,7 +112,7 @@ let O = {
                             let r = [...i],
                                 s = i[t];
                             if (null == s) return i;
-                            let a = E({}, s);
+                            let a = C({}, s);
                             return (
                                 null == a.randomizedSources && (a.randomizedSources = []),
                                 a.randomizedSources.push({
@@ -126,7 +126,7 @@ let O = {
                     });
             },
             H = (e) => {
-                w((t) => C(E({}, t), { [e]: null }));
+                w((t) => E(C({}, t), { [e]: null }));
             };
         (r.useEffect(() => {
             let e = t.config.effects;
@@ -148,20 +148,20 @@ let O = {
                         let [t, n] = e;
                         if (null != n) {
                             let e = (0, f.$j)(n.base64);
-                            ((n.src = e), k.current.push(e), w((e) => C(E({}, e), { [t]: n })));
+                            ((n.src = e), k.current.push(e), w((e) => E(C({}, e), { [t]: n })));
                         }
                     });
             }, [t.config.stillFrames]));
-        let W = {
+        let z = {
                 effect: t,
                 upsertConfig: n
             },
-            z = r.useRef(W);
+            W = r.useRef(z);
         return (r.useEffect(() => {
-            z.current = W;
+            W.current = z;
         }),
         r.useEffect(() => {
-            let { effect: e, upsertConfig: t } = z.current;
+            let { effect: e, upsertConfig: t } = W.current;
             e.readonly ||
                 t({
                     id: e.id,
@@ -214,7 +214,7 @@ let O = {
                                               value: L,
                                               className: x.input,
                                               onChange: (e) => {
-                                                  B(e.target.value);
+                                                  M(e.target.value);
                                               }
                                           })
                                       ]
@@ -354,7 +354,7 @@ let O = {
                                                   (0, i.jsx)(u.Z, {
                                                       fileContents: () => (0, f.yR)(R),
                                                       contentType: 'text/plain',
-                                                      fileName: ''.concat(M, '_timing_config.txt'),
+                                                      fileName: ''.concat(B, '_timing_config.txt'),
                                                       children: (0, i.jsx)(d.zxk, {
                                                           variant: 'primary',
                                                           size: 'sm',
@@ -364,16 +364,16 @@ let O = {
                                                   (0, i.jsx)(u.Z, {
                                                       fileContents: () =>
                                                           JSON.stringify(
-                                                              C(E({}, t), {
+                                                              E(C({}, t), {
                                                                   name: L,
-                                                                  config: C(E({}, t.config), {
+                                                                  config: E(C({}, t.config), {
                                                                       effects: R,
                                                                       stillFrames: Z
                                                                   })
                                                               })
                                                           ),
                                                       contentType: 'text/plain',
-                                                      fileName: ''.concat(M, '_config.txt'),
+                                                      fileName: ''.concat(B, '_config.txt'),
                                                       children: (0, i.jsx)(d.zxk, {
                                                           variant: 'primary',
                                                           size: 'sm',

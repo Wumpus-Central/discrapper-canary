@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var o = n(755721),
@@ -7,39 +7,39 @@ var o = n(755721),
     a = n(444141),
     c = n(705556),
     s = n(30556),
-    u = n(664794),
-    d = n(522182),
+    d = n(664794),
+    u = n(522182),
     f = n(821706),
     p = n(562831),
     m = n(981631);
-function b(e) {
-    let { user: t, currentUser: n, guildId: b, channelId: g, displayProfile: y, relationshipType: j, onClose: O } = e,
-        { newestAnalyticsLocation: x } = (0, l.ZP)(),
-        h = (0, a.Z)({
+function g(e) {
+    let { user: t, currentUser: n, guildId: g, channelId: b, displayProfile: y, relationshipType: O, onClose: h } = e,
+        { newestAnalyticsLocation: j } = (0, l.ZP)(),
+        x = (0, a.Z)({
             user: t,
-            guildId: b,
-            channelId: g,
+            guildId: g,
+            channelId: b,
             displayProfile: y,
-            onClose: O
+            onClose: h
         }),
         { gameFriends: _, hasOutgoingPendingGameFriends: v, hasIncomingPendingGameFriends: I } = (0, p.H)({ userId: t.id }),
         P = _.length > 0 || v || I;
-    return j === m.OGo.BLOCKED
+    return O === m.OGo.BLOCKED
         ? null
         : t.id === n.id
           ? (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(c.Z, {
                         user: t,
-                        guildId: b,
-                        onClose: O
+                        guildId: g,
+                        onClose: h
                     }),
-                    (0, r.jsx)(d.Z, { onClose: O }),
-                    (0, r.jsx)(u.Z, {
+                    (0, r.jsx)(u.Z, { onClose: h }),
+                    (0, r.jsx)(d.Z, {
                         type: 'icon',
                         user: t,
-                        guildId: b,
-                        viewProfileItem: h,
+                        guildId: g,
+                        viewProfileItem: x,
                         themeColor: 'secondary'
                     })
                 ]
@@ -53,16 +53,16 @@ function b(e) {
                           onClose: i.Z.popAll,
                           autoFocus: !0
                       }),
-                      (0, r.jsx)(u.Z, {
+                      (0, r.jsx)(d.Z, {
                           type: 'icon',
                           user: t,
-                          guildId: b,
-                          viewProfileItem: h,
+                          guildId: g,
+                          viewProfileItem: x,
                           themeColor: 'secondary'
                       })
                   ]
               })
-            : j === m.OGo.PENDING_INCOMING
+            : O === m.OGo.PENDING_INCOMING
               ? (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(s.Z, {
@@ -72,15 +72,15 @@ function b(e) {
                             onClose: i.Z.popAll,
                             autoFocus: !0
                         }),
-                        (0, r.jsx)(u.Z, {
+                        (0, r.jsx)(d.Z, {
                             type: 'icon',
                             user: t,
-                            guildId: b,
+                            guildId: g,
                             themeColor: 'secondary'
                         })
                     ]
                 })
-              : j === m.OGo.FRIEND || j === m.OGo.PENDING_OUTGOING
+              : O === m.OGo.FRIEND || O === m.OGo.PENDING_OUTGOING
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(s.Z, {
@@ -93,21 +93,21 @@ function b(e) {
                           (0, r.jsx)(f.g, {
                               type: 'icon',
                               user: t,
-                              relationshipType: j,
+                              relationshipType: O,
                               shouldShowTooltip: !0,
                               themeColor: 'secondary',
-                              analyticsLocation: x
+                              analyticsLocation: j
                           }),
-                          (0, r.jsx)(u.Z, {
+                          (0, r.jsx)(d.Z, {
                               type: 'icon',
                               user: t,
-                              guildId: b,
-                              viewProfileItem: h,
+                              guildId: g,
+                              viewProfileItem: x,
                               themeColor: 'secondary'
                           })
                       ]
                   })
-                : j === m.OGo.NONE && P
+                : O === m.OGo.NONE && P
                   ? (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(s.Z, {
@@ -119,7 +119,7 @@ function b(e) {
                             (0, r.jsx)(f.k9, {
                                 type: 'icon',
                                 user: t,
-                                analyticsLocation: x,
+                                analyticsLocation: j,
                                 themeColor: 'secondary',
                                 gameFriends: _,
                                 tooltipPosition: 'top',
@@ -128,11 +128,11 @@ function b(e) {
                                 hasIncomingPendingGameFriends: I,
                                 hasOutgoingPendingGameFriends: v
                             }),
-                            (0, r.jsx)(u.Z, {
+                            (0, r.jsx)(d.Z, {
                                 type: 'icon',
                                 user: t,
-                                guildId: b,
-                                viewProfileItem: h,
+                                guildId: g,
+                                viewProfileItem: x,
                                 themeColor: 'secondary'
                             })
                         ]
@@ -142,7 +142,7 @@ function b(e) {
                             (0, r.jsx)(f.Z7, {
                                 type: 'text',
                                 userId: t.id,
-                                analyticsLocation: x,
+                                analyticsLocation: j,
                                 color: o.zx.Colors.BRAND,
                                 autoFocus: !0
                             }),
@@ -152,11 +152,11 @@ function b(e) {
                                 onClose: i.Z.popAll,
                                 themeColor: 'secondary'
                             }),
-                            (0, r.jsx)(u.Z, {
+                            (0, r.jsx)(d.Z, {
                                 type: 'icon',
                                 user: t,
-                                guildId: b,
-                                viewProfileItem: h,
+                                guildId: g,
+                                viewProfileItem: x,
                                 themeColor: 'secondary'
                             })
                         ]

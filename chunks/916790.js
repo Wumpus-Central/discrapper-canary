@@ -9,8 +9,8 @@ var n = a(255367),
     d = a(755721),
     u = a(481060),
     m = a(570140),
-    x = a(665149),
-    p = a(886118),
+    p = a(665149),
+    x = a(886118),
     h = a(301801),
     b = a(4912),
     f = a(572004),
@@ -155,19 +155,19 @@ function w(e) {
         initialHeight: a,
         children: [
             (0, n.jsx)(s, {}),
-            (0, n.jsxs)(x.ZP, {
+            (0, n.jsxs)(p.ZP, {
                 className: i()(N.headerBar, T.subPanelHeaderBar),
                 children: [
-                    (0, n.jsx)(x.ZP.Icon, {
+                    (0, n.jsx)(p.ZP.Icon, {
                         icon: u.xVZ,
                         tooltip: t.name
                     }),
-                    (0, n.jsx)(x.ZP.Title, {
+                    (0, n.jsx)(p.ZP.Title, {
                         wrapperClassName: i()(N.headerTitle, N.dispatcherHeader),
                         className: N.headerTitleText,
                         children: t.name
                     }),
-                    (0, n.jsx)(x.ZP.Icon, {
+                    (0, n.jsx)(p.ZP.Icon, {
                         icon: u.TIy,
                         tooltip: 'Copy event data',
                         onClick: () => {
@@ -224,7 +224,7 @@ let R = [
         }
     ],
     k = {
-        searchType: p.S.REGEX,
+        searchType: x.S.REGEX,
         searchStringGenerator: (e) => {
             let { actionLog: t } = e;
             return t.name;
@@ -265,11 +265,11 @@ function A() {
             [l]
         ),
         [c, d] = r.useState(o),
-        [x, p] = r.useState(o),
+        [p, x] = r.useState(o),
         [b, f] = r.useState(!1),
         [v, g] = r.useState(),
         j = r.useCallback((e) => {
-            p(e);
+            x(e);
         }, []);
     (0, h.BO)(t, b ? c : o, j, k);
     let _ = r.useCallback(
@@ -279,7 +279,7 @@ function A() {
             [o]
         ),
         C = t.trim().length > 0,
-        O = r.useMemo(() => (C ? x : b ? c : o), [o, x, C, b, c]);
+        O = r.useMemo(() => (C ? p : b ? c : o), [o, p, C, b, c]);
     return (0, n.jsxs)('div', {
         ref: e,
         className: i()(N.panel, T.panel),

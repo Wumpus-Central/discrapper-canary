@@ -21,17 +21,17 @@ var i = n(255367),
 function E(e) {
     let t,
         { handleClose: n, planGroup: l, onSubscriptionConfirmation: E, renderPurchaseConfirmation: g, postSuccessGuild: b, followupSKUInfo: S, continueSessionToInitialStep: v } = e,
-        { activeSubscription: O, paymentSources: w, paymentSourceId: Z, selectedPlan: P, selectedSkuId: I, step: M, updatedSubscription: R, startingPremiumSubscriptionPlanIdRef: T, startingFractionalPremiumEndsAtRef: A } = (0, h.JL)(),
+        { activeSubscription: O, paymentSources: P, paymentSourceId: w, selectedPlan: Z, selectedSkuId: I, step: M, updatedSubscription: R, startingPremiumSubscriptionPlanIdRef: T, startingFractionalPremiumEndsAtRef: A } = (0, h.JL)(),
         { isGift: N, giftRecipient: U, giftCode: k, hasSentMessage: G, isSendingMessage: B, sendGiftMessage: H, claimableRewards: F, selectedGiftingPromotionReward: D } = (0, x.wD)(),
         { confirmationFooter: W } = (0, f.zb)(),
         z = null != W,
-        Y = (0, C.id)(P, N, F),
+        Y = (0, C.id)(Z, N, F),
         K = (0, d.Z)(),
-        V = (0, C.a5)(P),
+        V = (0, C.a5)(Z),
         q = (0, C.tK)(null == D ? void 0 : D.skuId),
-        J = (0, _.$)(w, Z),
+        J = (0, _.$)(P, w),
         Q = N && null != D && V;
-    (s()(null != P, 'Expected plan to selected'), s()(null != I, 'Expected selectedSkuId'), s()(null != M, 'Step should be set'));
+    (s()(null != Z, 'Expected plan to selected'), s()(null != I, 'Expected selectedSkuId'), s()(null != M, 'Step should be set'));
     let X = r.useCallback(() => {
         (n(), null == E || E());
     }, [n, E]);
@@ -44,17 +44,17 @@ function E(e) {
         }, [K, Y]),
         (t =
             null != g
-                ? g(P, X, R)
+                ? g(Z, X, R)
                 : null != v
                   ? (0, i.jsx)(c.VY, {})
                   : N
                     ? (0, i.jsx)(c.TB, {
-                          planId: P.id,
+                          planId: Z.id,
                           onClose: X
                       })
-                    : T.current === P.id
+                    : T.current === Z.id
                       ? (0, i.jsx)(c.ZP, {
-                            planId: P.id,
+                            planId: Z.id,
                             postSuccessGuild: b,
                             onClose: X,
                             paymentSourceType: J,
@@ -64,9 +64,9 @@ function E(e) {
                       : (0, i.jsx)(c.ZP, {
                             followupSKUInfo: S,
                             startingPremiumSubscriptionPlanId: T.current,
-                            planId: P.id,
+                            planId: Z.id,
                             onClose: X,
-                            isDowngrade: null != O && (0, p.GY)(O, P.id, l),
+                            isDowngrade: null != O && (0, p.GY)(O, Z.id, l),
                             paymentSourceType: J,
                             hideClose: z,
                             startingFractionalPremiumEndsAt: A.current

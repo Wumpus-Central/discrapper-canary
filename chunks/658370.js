@@ -17,7 +17,7 @@ var r = n(120356),
 let b = (e) => {
     var t;
     let n,
-        { title: r, titleClassName: b = '', buttonClassName: x = '', subtitle: _ = '', description: j = '', descriptionCta: E = '', isPremiumGetCta: C, onCtaClick: O, cardVariant: v } = e,
+        { title: r, titleClassName: b = '', buttonClassName: x = '', subtitle: _ = '', description: j = '', descriptionCta: C = '', isPremiumGetCta: E, onCtaClick: O, cardVariant: v } = e,
         S = (0, d.N)(),
         T = null == S ? void 0 : S.subscription_trial,
         I = (0, c.Ng)(),
@@ -43,7 +43,7 @@ let b = (e) => {
                 subtitle: _,
                 description: j
             }),
-            C &&
+            E &&
                 (0, i.jsx)(u.Z, {
                     className: x,
                     look: a.zx.Looks.BLANK,
@@ -52,13 +52,13 @@ let b = (e) => {
                     textOptions: { textOverride: y },
                     showGradient: !0
                 }),
-            0 !== E.length &&
+            0 !== C.length &&
                 (null == (n = null == A ? void 0 : A.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
                 null != O &&
                 (0, i.jsx)(a.zx, {
                     className: x,
                     onClick: O,
-                    children: E
+                    children: C
                 })
         ]
     });

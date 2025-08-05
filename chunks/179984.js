@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(74538),
     _ = n(367074),
     j = n(775412),
-    E = n(46062),
-    C = n(104494),
+    C = n(46062),
+    E = n(104494),
     O = n(639119),
     v = n(736519),
     S = n(784238),
@@ -58,7 +58,7 @@ function L(e) {
     }
     return e;
 }
-let B = () => {
+let M = () => {
         let e = (0, I.W)();
         return (0, i.jsx)(N.Cy, {
             text: e,
@@ -66,7 +66,7 @@ let B = () => {
             colorOptions: N.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
         });
     },
-    M = () =>
+    B = () =>
         (0, i.jsx)('div', {
             className: R.mostPopularPill,
             children: (0, i.jsx)(d.X6q, {
@@ -147,16 +147,16 @@ let B = () => {
             { className: s, hideCTAs: I = !1, headingOverride: D, hidePill: Z = !1, selectedPlanColumnClassName: w, selectedPlanTier: k = A.p9.TIER_2 } = e,
             { analyticsLocations: F } = (0, p.ZP)(m.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
             H = (0, l.e7)([b.Z], () => b.Z.hasFetchedSubscriptions()),
-            W = (0, h.V)(A.nS),
-            z = (0, u.ZP)(),
-            Y = (0, o.ap)(z),
+            z = (0, h.V)(A.nS),
+            W = (0, u.ZP)(),
+            Y = (0, o.ap)(W),
             K = (0, l.e7)([f.default], () => f.default.getCurrentUser()),
             q = (0, x.M5)(K, A.p9.TIER_2),
             X = (0, O.N)(),
             J = null == X || null == (t = X.subscription_trial) ? void 0 : t.sku_id,
             Q = (0, j.rT)(),
-            $ = (0, C.Ng)(),
-            ee = null != $ && (0, C.Wp)($, A.Si.TIER_2),
+            $ = (0, E.Ng)(),
+            ee = null != $ && (0, E.Wp)($, A.Si.TIER_2),
             et = (0, T.A)(A.Xh.PREMIUM_MONTH_TIER_2),
             en = ''.concat(et, '/').concat((0, x.eP)(A.rV.MONTH)),
             ei = (0, x.CY)(A.Xh.PREMIUM_MONTH_TIER_0),
@@ -164,8 +164,8 @@ let B = () => {
             es = (0, g.Z)(),
             ea = (0, y.n)(ei, er, ee, en, es.fractionalState),
             el = (0, _.Vi)(),
-            { enabled: eo } = E.T.useExperiment({ location: 'PlanComparisonTable' });
-        if (!H || !W) return null;
+            { enabled: eo } = C.T.useExperiment({ location: 'PlanComparisonTable' });
+        if (!H || !z) return null;
         let ec = eo ? P.intl.string(P.t.XXENra) : P.intl.string(P.t.ED4UVF),
             ed = {
                 label: (0, i.jsx)(d.X6q, {
@@ -248,8 +248,8 @@ let B = () => {
                         colorOptions: J === A.Si.TIER_0 ? (Y ? N.VE.PREMIUM_TIER_0_GRADIENT_FILL : N.VE.PREMIUM_TIER_0_WHITE_FILL) : Y ? (q ? N.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : N.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL) : N.VE.PREMIUM_TIER_2_WHITE_FILL
                     })
                   : el
-                    ? (0, i.jsx)(B, {})
-                    : (0, i.jsx)(M, {})));
+                    ? (0, i.jsx)(M, {})
+                    : (0, i.jsx)(B, {})));
         let eu = J === A.Si.TIER_0 || Q === A.p9.TIER_0 || k === A.p9.TIER_0;
         return (0, i.jsx)(p.Gt, {
             value: F,

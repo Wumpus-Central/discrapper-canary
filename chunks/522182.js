@@ -27,7 +27,7 @@ function s(e) {
             }
             return o;
         })(e, ['onClose']);
-    let { analyticsLocations: s, newestAnalyticsLocation: u } = (0, i.ZP)();
+    let { analyticsLocations: s, newestAnalyticsLocation: d } = (0, i.ZP)();
     return (0, r.jsx)(
         a.ef,
         (function (e) {
@@ -64,7 +64,7 @@ function s(e) {
                     ((0, l.mK)({
                         analyticsLocations: s,
                         openInLayer: !1,
-                        analyticsSource: u
+                        analyticsSource: d
                     }),
                         null == t || t());
                 }

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => M }), n(388685));
+(n.d(t, { Z: () => B }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(283595),
     _ = n(626135),
     j = n(251625),
-    E = n(358085),
-    C = n(210887),
+    C = n(358085),
+    E = n(210887),
     O = n(981631),
     v = n(388032),
     S = n(443474),
@@ -69,8 +69,8 @@ function P(e, t) {
         e
     );
 }
-let R = l.ZP.connectStores([C.Z], () => ({ theme: C.Z.theme }))(d.ubH),
-    D = (0, E.isWindows)();
+let R = l.ZP.connectStores([E.Z], () => ({ theme: E.Z.theme }))(d.ubH),
+    D = (0, C.isWindows)();
 function Z(e) {
     let { onClose: t } = e,
         n = (0, l.e7)([g.ZP], () => g.ZP.getCandidateGames()),
@@ -127,8 +127,8 @@ function w(e) {
     var t;
     let { rawGame: n, nowPlaying: s = !1, isOverride: c } = e,
         h = (0, l.cj)([g.ZP, b.Z, x.Z], () => (0, g.FZ)(n, g.ZP, b.Z, x.Z)),
-        [j, E] = r.useState(!1),
-        [C, T] = r.useState(null != (t = h.name) ? t : '???'),
+        [j, C] = r.useState(!1),
+        [E, T] = r.useState(null != (t = h.name) ? t : '???'),
         y = a()(I.flexCenter, {
             [S.game]: !s,
             [S.activeGame]: s,
@@ -146,7 +146,7 @@ function w(e) {
             game_name: h.name
         }),
             (0, d.showToast)((0, d.createToast)(v.intl.formatToPlainString(v.t['6klMOj'], { gameName: h.name }), d.ToastType.SUCCESS)),
-            E(!0));
+            C(!0));
     }
     return (0, i.jsxs)('div', {
         className: y,
@@ -193,9 +193,9 @@ function w(e) {
                               className: a()(S.gameName, S.gameNameInput),
                               type: 'text',
                               maxLength: 128,
-                              value: C,
+                              value: E,
                               onBlur: function () {
-                                  h.name !== C && u.Z.editName(h, C);
+                                  h.name !== E && u.Z.editName(h, E);
                               },
                               onKeyDown: function (e) {
                                   13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault());
@@ -365,16 +365,16 @@ function L(e) {
         ]
     });
 }
-let B = (0, j.oH)(function () {
+let M = (0, j.oH)(function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
         return new Set(t.map((e) => e.exePath));
     }),
-    M = function (e) {
+    B = function (e) {
         let { className: t, showHeader: n = !0 } = e,
             s = (0, l.Wu)([g.ZP], () => g.ZP.getGamesSeen(!0)),
             { runningGame: o, overrideExePaths: u } = (0, l.cj)([g.ZP], () => ({
                 runningGame: g.ZP.getVisibleGame(),
-                overrideExePaths: B(...g.ZP.getOverrides())
+                overrideExePaths: M(...g.ZP.getOverrides())
             })),
             m = r.useRef(null);
         return (

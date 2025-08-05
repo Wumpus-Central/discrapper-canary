@@ -75,9 +75,9 @@ let h = async (e) => {
                 m();
             }
             return (
-                C.S.subscribe(d.CkL.MODAL_CLOSE, e),
+                C.S.subscribe(d.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e),
                 () => {
-                    C.S.unsubscribe(d.CkL.MODAL_CLOSE, e);
+                    C.S.unsubscribe(d.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e);
                 }
             );
         }, []),

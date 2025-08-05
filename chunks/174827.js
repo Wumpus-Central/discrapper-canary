@@ -24,9 +24,9 @@ var i = n(255367),
     S = n(74538),
     v = n(987209),
     O = n(563132),
-    w = n(409813),
-    Z = n(107998),
-    P = n(51499),
+    P = n(409813),
+    w = n(107998),
+    Z = n(51499),
     I = n(456251),
     M = n(27034),
     R = n(435020),
@@ -42,7 +42,7 @@ function H(e) {
     let { handleStepChange: F, initialPlanId: D, planGroup: W, subscriptionTier: z, trialId: Y, referralTrialOfferId: K, handleClose: V } = e,
         { activeSubscription: q, hasFetchedSubscriptions: J, paymentSourceId: Q, paymentSources: X, selectedSkuId: $, selectedPlan: ee, step: et, defaultPlanId: en, priceOptions: ei, isPremium: er, premiumBrandRefreshBackgroundClassName: el } = (0, O.JL)(),
         { isGift: es, giftRecipient: ea, giftMessage: eo, claimableRewards: eC } = (0, v.wD)(),
-        { paymentModalBanner: ed } = (0, Z.zb)(),
+        { paymentModalBanner: ed } = (0, w.zb)(),
         ec = (0, p.a5)(ee),
         eu = (null == (t = (0, x.Z)()) ? void 0 : t.planSelectionBanner) != null,
         ep = es && ec && null != eC && eC.length > 0 && eu,
@@ -75,8 +75,8 @@ function H(e) {
                 quantity: 1
             }
         ],
-        [ew, eZ] = r.useState(eg),
-        [eP, eI] = (0, u.ED)({
+        [eP, ew] = r.useState(eg),
+        [eZ, eI] = (0, u.ED)({
             items: eO,
             renewal: !1,
             preventFetch: !eg,
@@ -86,14 +86,14 @@ function H(e) {
             currency: ei.currency
         });
     (r.useEffect(() => {
-        eg && eZ((null == eP ? void 0 : eP.subscriptionPeriodEnd) == null);
-    }, [eP, eg]),
+        eg && ew((null == eZ ? void 0 : eZ.subscriptionPeriodEnd) == null);
+    }, [eZ, eg]),
         (0, C.Z)(
             'Payment Modal Plan Select Step',
-            ew,
+            eP,
             5,
             {
-                proratedInvoicePreview: eP,
+                proratedInvoicePreview: eZ,
                 proratedInvoiceError: eI,
                 isEligibleForOffer: eg
             },
@@ -102,7 +102,7 @@ function H(e) {
     let eM = null != (H = null == eI ? void 0 : eI.message) ? H : G.intl.string(G.t.R0RpRU),
         eR = eg && null == eI,
         eT = eg && null != eI,
-        eA = eR && null == q && !!eg && (null == eP ? void 0 : eP.subscriptionPeriodEnd) == null,
+        eA = eR && null == q && !!eg && (null == eZ ? void 0 : eZ.subscriptionPeriodEnd) == null,
         eN = !es && (null == ev ? void 0 : ev.skuId) === k.Si.TIER_2 && (null == em ? void 0 : em.referrer_id) != null,
         eU = null;
     return ((eU = null != ed ? ed : eN ? (0, i.jsx)(_.Z, {}) : (0, i.jsx)(m.Z, {})), eA)
@@ -112,7 +112,7 @@ function H(e) {
           (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(T.P, { giftMessage: eo }),
-                  !(es && (0, g.pO)(ea)) && (0, i.jsx)(P.Z, { isEligibleForTrial: e_ }),
+                  !(es && (0, g.pO)(ea)) && (0, i.jsx)(Z.Z, { isEligibleForTrial: e_ }),
                   (0, i.jsxs)(M.C3, {
                       children: [
                           eR && (0, i.jsx)('hr', { className: B.planSelectSeparatorUpper }),
@@ -127,8 +127,8 @@ function H(e) {
                                     referralTrialOfferId: K,
                                     selectedPlanId: null == ee ? void 0 : ee.id,
                                     planGroup: W,
-                                    subscriptionPeriodEnd: null == eP ? void 0 : eP.subscriptionPeriodEnd,
-                                    discountInvoiceItems: eE ? (null == eP ? void 0 : eP.invoiceItems) : void 0,
+                                    subscriptionPeriodEnd: null == eZ ? void 0 : eZ.subscriptionPeriodEnd,
+                                    discountInvoiceItems: eE ? (null == eZ ? void 0 : eZ.invoiceItems) : void 0,
                                     useCompactGiftComponents: ep,
                                     handleClose: V
                                 }),
@@ -153,7 +153,7 @@ function H(e) {
                               className: el,
                               children: (0, i.jsx)(L.y, {
                                   onStepChange: F,
-                                  onBackClick: () => F(w.h8.SKU_SELECT),
+                                  onBackClick: () => F(P.h8.SKU_SELECT),
                                   showBackButton: null == D && null == z,
                                   planOptions: eb,
                                   shouldRenderUpdatedPaymentModal: eR,

@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(74538),
     _ = n(367074),
     j = n(140465),
-    E = n(286961),
-    C = n(639119),
+    C = n(286961),
+    E = n(639119),
     O = n(8647),
     v = n(784238),
     S = n(218390),
@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(388032),
     k = n(781793),
     L = n(536135),
-    B = n(865215);
-let M = (e) => {
+    M = n(865215);
+let B = (e) => {
         let { inOfferExperience: t } = e;
         return t ? (0, i.jsx)(N.Z, { lifted: t }) : null;
     },
@@ -48,19 +48,19 @@ let M = (e) => {
             U = (0, u.ZP)(),
             V = (0, c.wj)(U),
             [G, F] = r.useState(!1),
-            [H, W] = r.useState(!1),
-            [z, Y] = r.useState(!1),
+            [H, z] = r.useState(!1),
+            [W, Y] = r.useState(!1),
             [K, q] = r.useState(!1),
             X = (0, l.e7)([f.Z], () => f.Z.getPremiumTypeSubscription()),
             J = null != X ? (0, x.Af)(X) : null,
             Q = null != J ? x.ZP.getSkuIdForPlan(J.planId) : null,
             $ = null !== Q && Q !== D.Si.TIER_2 ? D.Si.TIER_2 : null,
-            ee = (0, C.N)(),
+            ee = (0, E.N)(),
             et = null == ee || null == (e = ee.subscription_trial) ? void 0 : e.sku_id,
             en = (0, j.Nx)(),
             ei = (0, _.Vi)(),
             er = null != ei && ei,
-            es = null == (t = (0, E.Z)()) ? void 0 : t.billingSettingsMarketingBanner,
+            es = null == (t = (0, C.Z)()) ? void 0 : t.billingSettingsMarketingBanner,
             { analyticsLocations: ea } = (0, p.ZP)(m.Z.PREMIUM_MARKETING);
         r.useEffect(() => {
             q(!0);
@@ -69,7 +69,7 @@ let M = (e) => {
             className: L.premiumTierCardsContainerSettings,
             children: (0, i.jsx)(o.$, {
                 innerRef: n,
-                onChange: (e) => W(e),
+                onChange: (e) => z(e),
                 threshold: 0.1,
                 active: !0,
                 children: (0, i.jsx)(T.IY, {
@@ -112,7 +112,7 @@ let M = (e) => {
                     premiumSubscription: X,
                     className: a()(L.existingSubscriberSpacing, { [L.zIndex1]: en })
                 }),
-                (0, i.jsx)(M, { inOfferExperience: en }),
+                (0, i.jsx)(B, { inOfferExperience: en }),
                 (0, i.jsx)('div', {
                     children: (0, i.jsx)(o.$, {
                         innerRef: s,
@@ -160,7 +160,7 @@ let M = (e) => {
                 (0, i.jsx)(o.$, {
                     innerRef: N,
                     onChange: (e) => {
-                        e && !z && (b.default.track(Z.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: ea }), Y(!0));
+                        e && !W && (b.default.track(Z.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: ea }), Y(!0));
                     },
                     children: (0, i.jsx)('div', {
                         ref: N,
@@ -168,7 +168,7 @@ let M = (e) => {
                     })
                 }),
                 (0, i.jsx)('img', {
-                    src: B,
+                    src: M,
                     className: L.bottomIllustration,
                     width: 112,
                     height: 85,

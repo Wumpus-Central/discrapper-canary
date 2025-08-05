@@ -1,1 +1,1 @@
-e.exports = { menuItem: 'menuItem_b7b1b7' };
+t.exports = { menuItem: 'menuItem_b7b1b7' };

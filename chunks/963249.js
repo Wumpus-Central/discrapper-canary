@@ -99,7 +99,7 @@ function A(e) {
         Q = (0, g.Wz)(k);
     return (0, s.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('8016'), n.e('94136'), n.e('17938'), n.e('84992'), n.e('54433'), n.e('20954')]).then(n.bind(n, 7305));
+            let { default: e } = await Promise.all([n.e('8016'), n.e('17938'), n.e('94136'), n.e('84992'), n.e('54433'), n.e('20954')]).then(n.bind(n, 7305));
             return (n) => {
                 var { onClose: a } = n,
                     o = T(n, ['onClose']);
@@ -117,7 +117,8 @@ function A(e) {
                         initialPlanId: t,
                         followupSKUInfo: i,
                         onClose: (e, t) => {
-                            (a(),
+                            (m.S.dispatch(E.CkL.PREMIUM_PAYMENT_MODAL_CLOSED),
+                                a(),
                                 null == y || y(e),
                                 e && (null == S || S(), (0, _.I)(D, q, t) && m.S.dispatch(E.CkL.PREMIUM_SUBSCRIPTION_CREATED)),
                                 l.Z.dispatch({
@@ -149,6 +150,9 @@ function A(e) {
             };
         },
         {
+            onCloseRequest: () => {
+                (m.S.dispatch(E.CkL.PREMIUM_PAYMENT_MODAL_CLOSED), (0, s.Mr3)(X));
+            },
             modalKey: X,
             onCloseCallback: () => {
                 (W ||

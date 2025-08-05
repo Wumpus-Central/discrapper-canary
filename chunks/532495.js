@@ -18,8 +18,8 @@ var r = n(512722),
     x = n(134795),
     _ = n(610966),
     j = n(513901),
-    E = n(451392),
-    C = n(906364),
+    C = n(451392),
+    E = n(906364),
     O = n(643879),
     v = n(350327),
     S = n(621853),
@@ -37,15 +37,15 @@ function R() {
         }),
         L = (0, a.e7)([S.Z], () => S.Z.getUserProfile(k.id)),
         {
-            pendingAvatar: B,
-            pendingGlobalName: M,
+            pendingAvatar: M,
+            pendingGlobalName: B,
             pendingBanner: U,
             pendingBio: V,
             pendingPronouns: G,
             pendingAccentColor: F,
             pendingThemeColors: H,
-            pendingLegacyUsernameDisabled: W,
-            pendingPrimaryGuildId: z,
+            pendingLegacyUsernameDisabled: z,
+            pendingPrimaryGuildId: W,
             errors: Y
         } = (0, a.cj)([I.Z], () => {
             var e, t;
@@ -95,11 +95,11 @@ function R() {
         }),
         K = (0, O.SD)({
             userId: k.id,
-            image: B
+            image: M
         }),
         q = (0, o.gS)(),
         X = y.ZP.canUsePremiumProfileCustomization(k),
-        J = (0, u.gd)(B, k.avatar),
+        J = (0, u.gd)(M, k.avatar),
         Q = (0, u.f$)(U, null == L ? void 0 : L.banner),
         $ = (0, T.ZP)(k.id),
         ee = null == $ ? void 0 : $.getLegacyUsername(),
@@ -113,12 +113,12 @@ function R() {
                 placeholder: k.username,
                 errors: et,
                 currentGlobalName: k.globalName,
-                pendingGlobalName: M,
+                pendingGlobalName: B,
                 onGlobalNameChange: l.W0,
                 user: k
             }),
             (0, i.jsx)(
-                C.Z,
+                E.Z,
                 {
                     sectionTitle: A.intl.string(A.t['+T3RIy']),
                     errors: Y.pronouns,
@@ -169,7 +169,7 @@ function R() {
                               },
                               'banner'
                           ),
-                          (0, i.jsx)(E.Z, {
+                          (0, i.jsx)(C.Z, {
                               user: k,
                               pendingAvatarSrc: K,
                               pendingColors: H,
@@ -202,7 +202,7 @@ function R() {
             ei.length > 0 &&
                 (0, i.jsx)(c.Z, {
                     availablePrimaryGuilds: ei,
-                    pendingPrimaryGuildId: z,
+                    pendingPrimaryGuildId: W,
                     onChange: (e) => (0, l.s4)(e)
                 }),
             null != ee &&
@@ -210,7 +210,7 @@ function R() {
                     f.Z,
                     {
                         legacyUsername: ee,
-                        pendingLegacyUsernameDisabled: W
+                        pendingLegacyUsernameDisabled: z
                     },
                     'legacy_username'
                 )

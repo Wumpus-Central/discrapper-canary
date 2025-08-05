@@ -6,7 +6,7 @@ var r = n(255367),
     a = n(168524),
     c = n(388032),
     s = n(467514);
-function u(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,41 +31,41 @@ function u(e) {
     }
     return e;
 }
-function d(e) {
+function u(e) {
     let { imageSrc: t, gameName: n } = e,
         [l, a] = o.useState(!1),
-        u = null != n ? n : c.intl.string(c.t.GIWFlJ);
+        d = null != n ? n : c.intl.string(c.t.GIWFlJ);
     return l || null == t
         ? (0, r.jsx)('div', {
               role: 'img',
-              'aria-label': u,
+              'aria-label': d,
               className: s.fallback,
               children: (0, r.jsx)(i.Text, {
                   variant: 'text-xxs/medium',
                   lineClamp: 3,
                   'aria-hidden': !0,
-                  children: u
+                  children: d
               })
           })
         : (0, r.jsx)('img', {
               src: t,
-              alt: u,
+              alt: d,
               className: s.gameCoverImage,
               onError: () => a(!0),
               onLoad: () => a(!1)
           });
 }
 function f(e) {
-    let { imageSrc: t, gameName: n, applicationId: o, userId: u } = e,
+    let { imageSrc: t, gameName: n, applicationId: o, userId: d } = e,
         f = (0, a.Z)({
             location: 'GameCover',
             applicationId: o,
             source: l.m1.UserProfile,
-            sourceUserId: u,
+            sourceUserId: d,
             trackEntryPointImpression: !0
         });
     if (null == f)
-        return (0, r.jsx)(d, {
+        return (0, r.jsx)(u, {
             imageSrc: t,
             gameName: n
         });
@@ -74,7 +74,7 @@ function f(e) {
         onClick: f,
         'aria-label': p,
         className: s.clickable,
-        children: (0, r.jsx)(d, {
+        children: (0, r.jsx)(u, {
             imageSrc: t,
             gameName: n
         })
@@ -102,10 +102,10 @@ function p(e) {
             return o;
         })(e, ['applicationId', 'userId', 'disableInteraction']);
     return o
-        ? (0, r.jsx)(d, u({}, i))
+        ? (0, r.jsx)(u, d({}, i))
         : (0, r.jsx)(
               f,
-              u(
+              d(
                   {
                       applicationId: t,
                       userId: n

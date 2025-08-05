@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(231338),
     _ = n(388032),
     j = n(296576),
-    E = n(423931);
-function C(e) {
+    C = n(423931);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -139,12 +139,12 @@ function T(e) {
                 type: d.RAz.PULSING_ELLIPSIS
             })
         };
-    return e.renderStepBody ? (0, i.jsx)(f.t, C({}, n, e)) : 'applePay' === e.paymentRequestWallet ? (0, i.jsx)(m.Ch, C({}, n, e)) : (0, i.jsx)(m.Tr, C({}, n, e));
+    return e.renderStepBody ? (0, i.jsx)(f.t, E({}, n, e)) : 'applePay' === e.paymentRequestWallet ? (0, i.jsx)(m.Ch, E({}, n, e)) : (0, i.jsx)(m.Tr, E({}, n, e));
 }
 function I(e) {
     let { children: t, footer: n, className: r } = e;
     return (0, i.jsx)('div', {
-        className: l()(E.root, E.focusLock, E.small, E.rootWithShadow, j.modal, r),
+        className: l()(C.root, C.focusLock, C.small, C.rootWithShadow, j.modal, r),
         'aria-label': _.intl.string(_.t.eQ2bLi),
         children: (0, i.jsxs)('form', {
             className: j.form,
@@ -214,7 +214,7 @@ function A() {
                 children: (0, i.jsx)(y, {
                     children: (0, i.jsx)(
                         u.Z,
-                        O(C({}, e), {
+                        O(E({}, e), {
                             onChooseType: () => {},
                             paymentRequestWallets: ['googlePay', 'applePay']
                         })
@@ -226,7 +226,7 @@ function A() {
                 children: (0, i.jsx)(y, {
                     children: (0, i.jsx)(
                         u.Z,
-                        O(C({}, e), {
+                        O(E({}, e), {
                             onChooseType: () => {},
                             paymentRequestWallets: []
                         })
@@ -238,7 +238,7 @@ function A() {
                 children: (0, i.jsx)(y, {
                     children: (0, i.jsx)(
                         u.Z,
-                        O(C({}, e), {
+                        O(E({}, e), {
                             isEligibleForTrial: !0,
                             onChooseType: () => {},
                             paymentRequestWallets: []
@@ -251,7 +251,7 @@ function A() {
                 children: (0, i.jsx)(y, {
                     children: (0, i.jsx)(
                         u.Z,
-                        O(C({}, e), {
+                        O(E({}, e), {
                             onChooseType: () => {},
                             paymentRequestWallets: [],
                             paymentSourceTypeRestrictions: [x.He.CARD.valueOf()]

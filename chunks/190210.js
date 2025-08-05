@@ -249,7 +249,7 @@ let en = i.memo(
         let [tl, ta] = i.useState(!1),
             to = q || tl || p.length > 0 || null != eP || eS.length > 0,
             { editorHeaderHeight: ts, paddingTop: tc } = (0, h.q_F)({
-                editorHeaderHeight: 120 * !!to,
+                editorHeaderHeight: 122 * !!to,
                 paddingTop: 16 * !!to,
                 config: {
                     tension: 120,

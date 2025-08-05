@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => b });
 var r = n(255367),
     o = n(73800),
     i = n(481060),
@@ -6,8 +6,8 @@ var r = n(255367),
     a = n(168524),
     c = n(817053),
     s = n(879877),
-    u = n(919498),
-    d = n(388032),
+    d = n(919498),
+    u = n(388032),
     f = n(467514),
     p = n(418718);
 function m(e) {
@@ -29,8 +29,8 @@ function m(e) {
               ]
           });
 }
-function b(e) {
-    let { applicationId: t, userId: n, gameName: c, className: s, children: u } = e,
+function g(e) {
+    let { applicationId: t, userId: n, gameName: c, className: s, children: d } = e,
         f = (0, a.Z)({
             location: 'UserProfileWidgetGameDetailsCard',
             applicationId: t,
@@ -44,31 +44,31 @@ function b(e) {
             },
             [f]
         ),
-        b = null != c ? c : d.intl.string(d.t.GIWFlJ),
-        g = null != f;
+        g = null != c ? c : u.intl.string(u.t.GIWFlJ),
+        b = null != f;
     return (0, r.jsxs)('div', {
         className: s,
         children: [
-            g &&
+            b &&
                 (0, r.jsx)(i.P3F, {
                     className: p.clickableCard,
-                    'aria-label': d.intl.formatToPlainString(d.t['8QLQBw'], { gameName: b }),
+                    'aria-label': u.intl.formatToPlainString(u.t['8QLQBw'], { gameName: g }),
                     onClick: m
                 }),
-            u
+            d
         ]
     });
 }
-function g(e) {
-    let { game: t, userId: n, guildId: o, channelId: l, loading: a = !1, disableInteraction: d = !1 } = e,
-        { gameName: g, imageSrc: y, applicationId: j, comment: O, tags: x } = t,
-        h = () =>
+function b(e) {
+    let { game: t, userId: n, guildId: o, channelId: l, loading: a = !1, disableInteraction: u = !1 } = e,
+        { gameName: b, imageSrc: y, applicationId: O, comment: h, tags: j } = t,
+        x = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(c.Z, {
                         imageSrc: y,
-                        gameName: g,
-                        applicationId: j,
+                        gameName: b,
+                        applicationId: O,
                         userId: n,
                         disableInteraction: !0
                     }),
@@ -78,12 +78,12 @@ function g(e) {
                             (0, r.jsx)(i.X6q, {
                                 variant: 'text-md/normal',
                                 color: 'text-default',
-                                children: g
+                                children: b
                             }),
-                            (0, r.jsx)(m, { text: O }),
-                            (0, r.jsx)(s.Z, { tags: x }),
-                            (0, r.jsx)(u.Z, {
-                                applicationId: j,
+                            (0, r.jsx)(m, { text: h }),
+                            (0, r.jsx)(s.Z, { tags: j }),
+                            (0, r.jsx)(d.Z, {
+                                applicationId: O,
                                 guildId: o,
                                 channelId: l,
                                 className: p.socialProof
@@ -97,16 +97,16 @@ function g(e) {
               className: p.card,
               children: [(0, r.jsx)('div', { className: f.gameCover }), (0, r.jsx)('div', { className: p.details })]
           })
-        : d
+        : u
           ? (0, r.jsx)('div', {
                 className: p.card,
-                children: h()
+                children: x()
             })
-          : (0, r.jsx)(b, {
-                applicationId: j,
+          : (0, r.jsx)(g, {
+                applicationId: O,
                 userId: n,
-                gameName: g,
+                gameName: b,
                 className: p.card,
-                children: h()
+                children: x()
             });
 }

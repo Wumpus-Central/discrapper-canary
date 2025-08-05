@@ -22,8 +22,8 @@ var i = n(255367),
     x = n(736519),
     _ = n(784238),
     j = n(422034),
-    E = n(206127),
-    C = n(388032),
+    C = n(206127),
+    E = n(388032),
     O = n(909176);
 let v = (e) => {
         let { inOfferExperience: t, subscriptionTier: n, containerClassName: r, buttonClassName: s, isApplicationHome: l, isDarkMode: c, isEligibleForBogoPromotion: d } = e,
@@ -64,7 +64,7 @@ let v = (e) => {
         });
 function T(e) {
     let { variant: t = 'text-lg/normal', withBottomMargin: n = !0, isApplicationHome: r } = e,
-        s = (0, E.$)();
+        s = (0, C.$)();
     return (0, i.jsx)(c.Text, {
         variant: t,
         color: r ? 'text-secondary' : 'always-white',
@@ -72,17 +72,17 @@ function T(e) {
             [O.descriptionBottomMargin]: n,
             [O.descriptionV2]: r
         }),
-        children: C.intl.format(C.t.kt9wxs, { cheapestMonthlyPrice: s })
+        children: E.intl.format(E.t.kt9wxs, { cheapestMonthlyPrice: s })
     });
 }
 let I = r.forwardRef((e, t) => {
     let { className: n, buttonClassName: r, subscriptionTier: s, isDarkMode: m } = e,
         { analyticsLocations: _ } = (0, u.ZP)(d.Z.PREMIUM_MARKETING_HERO_CTA),
-        E = (0, f._O)(),
+        C = (0, f._O)(),
         I = (0, h.Nx)(),
         N = (0, g.Vi)(),
         y = (0, l.e7)([p.Z], () => p.Z.affinities).length > 0,
-        A = (0, b.Z)({ location: 'HeroHeading' }) ? C.intl.string(C.t['EW+VIS']) : C.intl.string(C.t.YCZldH);
+        A = (0, b.Z)({ location: 'HeroHeading' }) ? E.intl.string(E.t['EW+VIS']) : E.intl.string(E.t.YCZldH);
     return (0, i.jsx)(u.Gt, {
         value: _,
         children: (0, i.jsxs)('div', {
@@ -110,7 +110,7 @@ let I = r.forwardRef((e, t) => {
                                   })
                               })
                             : (0, i.jsx)(T, {}),
-                        N || E
+                        N || C
                             ? (0, i.jsx)('div', {
                                   className: O.buttonContainer,
                                   children: (0, i.jsx)(x.Z, {

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749));
+(n.d(t, { Z: () => C }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749));
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -58,12 +58,12 @@ function j(e, t) {
         e
     );
 }
-function E() {
+function C() {
     var e;
     let [t, n] = (0, r.useState)(!1),
         [s, l] = (0, r.useState)(!1),
         [d, g] = (0, r.useState)(null),
-        [f, E] = (0, r.useState)(320),
+        [f, C] = (0, r.useState)(320),
         N = (0, r.useRef)(null),
         y = (0, r.useRef)(null),
         A = (0, r.useRef)(null),
@@ -110,24 +110,24 @@ function E() {
             },
             [D]
         ),
-        B = (0, r.useCallback)((e) => {
+        M = (0, r.useCallback)((e) => {
             if (null != N.current) {
                 let t = N.current.getBoundingClientRect();
-                E(Math.max(264, Math.min(432, e.clientX - t.left)));
+                C(Math.max(264, Math.min(432, e.clientX - t.left)));
             }
         }, []),
-        M = (0, r.useCallback)(
+        B = (0, r.useCallback)(
             (e) => {
                 (e.preventDefault(), e.stopPropagation());
                 let t = (e) => {
-                        (e.preventDefault(), B(e));
+                        (e.preventDefault(), M(e));
                     },
                     n = () => {
                         (null != y.current && (document.removeEventListener('mousemove', y.current), (y.current = null)), null != A.current && (document.removeEventListener('mouseup', A.current), (A.current = null)));
                     };
                 ((y.current = t), (A.current = n), document.addEventListener('mousemove', t), document.addEventListener('mouseup', n));
             },
-            [B]
+            [M]
         );
     return (
         (0, r.useEffect)(
@@ -202,7 +202,7 @@ function E() {
                                 (0, i.jsx)(I, { nameplate: d }),
                                 (0, i.jsx)('div', {
                                     className: x.resizeHandle,
-                                    onMouseDown: M
+                                    onMouseDown: B
                                 })
                             ]
                         }),
@@ -229,7 +229,7 @@ function E() {
                                     children: Object.values(P).map((e) => {
                                         let { url: t } = e;
                                         return (0, i.jsx)(
-                                            C,
+                                            E,
                                             {
                                                 src: t,
                                                 onSetStatic: w,
@@ -260,7 +260,7 @@ function E() {
         })
     );
 }
-function C(e) {
+function E(e) {
     let { src: t, onSetStatic: n, removeAsset: r } = e;
     return (0, i.jsxs)('div', {
         className: x.uploaded,

@@ -6,8 +6,8 @@ var o = n(817053),
     l = n(467514),
     a = n(987278);
 function c(e) {
-    let { game: t, userId: n, guildId: c, channelId: s, loading: u = !1, disableInteraction: d = !1 } = e;
-    return u
+    let { game: t, userId: n, guildId: c, channelId: s, loading: d = !1, disableInteraction: u = !1 } = e;
+    return d
         ? (0, r.jsx)('div', { className: l.gameCover })
         : (0, r.jsxs)('div', {
               className: a.container,
@@ -17,7 +17,7 @@ function c(e) {
                       gameName: t.gameName,
                       applicationId: t.applicationId,
                       userId: n,
-                      disableInteraction: d
+                      disableInteraction: u
                   }),
                   (0, r.jsx)(i.Z, {
                       applicationId: t.applicationId,

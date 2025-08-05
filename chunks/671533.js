@@ -10,8 +10,8 @@ var l = a(120356),
 let d = (e) => {
     var t,
         a,
-        { width: n = 24, height: l = 24, color: c = 'currentColor', direction: d, foreground: u, className: m, title: x } = e,
-        p = (function (e, t) {
+        { width: n = 24, height: l = 24, color: c = 'currentColor', direction: d, foreground: u, className: m, title: p } = e,
+        x = (function (e, t) {
             if (null == e) return {};
             var a,
                 n,
@@ -56,7 +56,7 @@ let d = (e) => {
                     }));
             }
             return e;
-        })({}, (0, s.Z)(p))),
+        })({}, (0, s.Z)(x))),
         (a = a =
             {
                 width: n,
@@ -84,7 +84,7 @@ let d = (e) => {
                 ),
                 viewBox: '0 0 24 24',
                 children: [
-                    null != x ? (0, r.jsx)('title', { children: x }) : null,
+                    null != p ? (0, r.jsx)('title', { children: p }) : null,
                     (0, r.jsx)('polygon', {
                         className: u,
                         fill: c,

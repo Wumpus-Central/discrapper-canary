@@ -6,8 +6,8 @@ var r = n(73800),
     a = n(897674),
     c = n(709054),
     s = n(206583);
-let u = new Set([l.s.PLAYED_GAME, l.s.LAUNCHED_ACTIVITY]),
-    d = (e) => u.has(e.content_type);
+let d = new Set([l.s.PLAYED_GAME, l.s.LAUNCHED_ACTIVITY]),
+    u = (e) => d.has(e.content_type);
 function f(e) {
     let t = (0, a.Z)({ id: s.YN.GLOBAL_FEED }),
         n = (0, a.Z)({
@@ -18,7 +18,7 @@ function f(e) {
         () =>
             i()(n)
                 .unionBy(t, (e) => e.id)
-                .filter(d)
+                .filter(u)
                 .filter((t) => t.extra.application_id === e)
                 .orderBy((e) => c.default.extractTimestamp(e.id), 'desc')
                 .uniqWith((e, t) => e.author_id === t.author_id && e.extra.application_id === t.extra.application_id)

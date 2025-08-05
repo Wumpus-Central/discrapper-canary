@@ -7,8 +7,8 @@ var o = n(442837),
     a = n(594174),
     c = n(823379),
     s = n(971082),
-    u = n(388032),
-    d = n(954775);
+    d = n(388032),
+    u = n(954775);
 function f(e) {
     var { applicationId: t, hideLabel: n = !1, className: f } = e,
         p = (function (e, t) {
@@ -51,7 +51,7 @@ function f(e) {
                 [t]
             );
         })(t),
-        b = m.length;
+        g = m.length;
     return m.length > 0
         ? (0, r.jsx)(
               s.Z,
@@ -81,11 +81,11 @@ function f(e) {
                   return e;
               })(
                   {
-                      label: u.intl.formatToPlainString(u.t.ujhJdH, { numFriends: b }),
+                      label: d.intl.formatToPlainString(d.t.ujhJdH, { numFriends: g }),
                       users: m,
                       maxUsers: 4,
                       size: i.EFr.SIZE_16,
-                      overflowCountClassName: d.overflowButton,
+                      overflowCountClassName: u.overflowButton,
                       className: f,
                       visuallyHideLabel: n
                   },

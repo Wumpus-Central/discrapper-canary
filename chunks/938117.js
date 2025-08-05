@@ -17,7 +17,7 @@ var i = n(255367),
     x = n(869783),
     _ = n(388032),
     j = n(635968);
-function E(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -42,7 +42,7 @@ function E(e) {
     }
     return e;
 }
-function C(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -85,7 +85,7 @@ function O(e) {
             let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = L.current;
             e ? (0, p.FU)(n, S, { track: !1 }).catch(() => t(null)) : null != n && t(null);
         }, [S]));
-    let B = (e) => {
+    let M = (e) => {
         (v(e),
             (0, p.FU)(e, S, { location: w.location })
                 .then(() => A(null))
@@ -108,16 +108,16 @@ function O(e) {
                       canUseCustomBackgrounds: R,
                       customBackgroundOptions: Z,
                       selectedOption: O,
-                      onSelectOption: B,
+                      onSelectOption: M,
                       onUpsellClick: () => {
                           (0, a.ZDy)(async () => {
                               let { default: e } = await n.e('87200').then(n.bind(n, 592163));
                               return (n) =>
                                   (0, i.jsx)(
                                       e,
-                                      C(E({}, n), {
+                                      E(C({}, n), {
                                           onLearnMore: t,
-                                          analyticsSource: C(E({}, w.location), { object: b.qAy.BUTTON_CTA })
+                                          analyticsSource: E(C({}, w.location), { object: b.qAy.BUTTON_CTA })
                                       })
                                   );
                           });
@@ -127,7 +127,7 @@ function O(e) {
                           return new Promise(async (i) => {
                               try {
                                   let i = await (0, d.Ff)(e, f.xV.BACKGROUND);
-                                  (B(i), (0, m.g5)(i, t.type === x.m.MP4, n), A(null));
+                                  (M(i), (0, m.g5)(i, t.type === x.m.MP4, n), A(null));
                               } catch (e) {
                                   A(e.message);
                               }

@@ -9,8 +9,8 @@ var n = a(255367),
     d = a(428530),
     u = a(484036),
     m = a(681619),
-    x = a(621060),
-    p = a(616257),
+    p = a(621060),
+    x = a(616257),
     h = a(564799);
 function b(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
@@ -49,7 +49,7 @@ let v = [
         {
             id: 'local',
             name: 'Local Variables',
-            group: x.v0.NONE,
+            group: p.v0.NONE,
             render(e) {
                 let { store: t } = e;
                 return null == t.__getLocalVars
@@ -66,7 +66,7 @@ let v = [
         {
             id: 'instance',
             name: 'Store Instance',
-            group: x.v0.NONE,
+            group: p.v0.NONE,
             render(e) {
                 let { store: t } = e;
                 return (0, n.jsx)(f, {
@@ -78,7 +78,7 @@ let v = [
     ];
 function j(e) {
     let { store: t, initialHeight: a } = e,
-        { TabBar: r, renderSelectedTab: l } = (0, x.ZP)({ tabs: g }, []);
+        { TabBar: r, renderSelectedTab: l } = (0, p.ZP)({ tabs: g }, []);
     return (0, n.jsxs)(u.Z, {
         className: h.subPanel,
         minHeight: 100,
@@ -86,7 +86,7 @@ function j(e) {
         children: [
             (0, n.jsx)(r, {}),
             (0, n.jsxs)(c.ZP, {
-                className: i()(p.headerBar, h.subPanelHeaderBar),
+                className: i()(x.headerBar, h.subPanelHeaderBar),
                 children: [
                     (0, n.jsx)(c.ZP.Icon, {
                         icon: o.lO_,
@@ -121,10 +121,10 @@ function _() {
                 })(e, t)
             ),
         [d, u] = r.useState(),
-        x = l.find((e) => e._dispatchToken === d);
+        p = l.find((e) => e._dispatchToken === d);
     return (0, n.jsxs)('div', {
         ref: e,
-        className: i()(p.panel, h.panel),
+        className: i()(x.panel, h.panel),
         children: [
             (0, n.jsx)('div', {
                 className: h.toolbar,
@@ -144,9 +144,9 @@ function _() {
                 selectedRowKey: d,
                 onClickRow: (e) => u(e.key)
             }),
-            null != x &&
+            null != p &&
                 (0, n.jsx)(j, {
-                    store: x,
+                    store: p,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
                 })
         ]

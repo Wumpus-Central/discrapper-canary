@@ -7,18 +7,18 @@ var o = n(481060),
     a = n(769654),
     c = n(785717),
     s = n(806729),
-    u = n(821179),
-    d = n(264481),
+    d = n(821179),
+    u = n(264481),
     f = n(714905);
 function p(e) {
     let { user: t, onClose: n } = e,
         { trackUserProfileAction: p } = (0, c.KZ)(),
-        { mutualGuilds: m, isFetching: b } = (0, s.Z)(t);
+        { mutualGuilds: m, isFetching: g } = (0, s.Z)(t);
     return (0, r.jsx)(o.Ttm, {
         className: f.scroller,
         fade: !0,
         children:
-            null == m && b
+            null == m && g
                 ? Array.from({ length: 10 }).map((e, t) =>
                       (0, r.jsxs)(
                           'div',
@@ -38,13 +38,13 @@ function p(e) {
                           t
                       )
                   )
-                : (null != m || b) && (null == m ? void 0 : m.length) !== 0
+                : (null != m || g) && (null == m ? void 0 : m.length) !== 0
                   ? null == m
                       ? void 0
                       : m.map((e) => {
                             let { guild: o, nick: l } = e;
                             return (0, r.jsx)(
-                                u.Z,
+                                d.Z,
                                 {
                                     user: t,
                                     guild: o,
@@ -56,6 +56,6 @@ function p(e) {
                                 o.id
                             );
                         })
-                  : (0, r.jsx)(d.b0, {})
+                  : (0, r.jsx)(u.b0, {})
     });
 }

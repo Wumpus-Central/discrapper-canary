@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => z }), n(388685));
+(n.d(t, { Z: () => W }), n(388685));
 var i,
     r,
     s,
@@ -17,8 +17,8 @@ var i,
     x = n(680089),
     _ = n(592125),
     j = n(58468),
-    E = n(77498),
-    C = n(496675),
+    C = n(77498),
+    E = n(496675),
     O = n(306680),
     v = n(944486),
     S = n(9156),
@@ -54,11 +54,11 @@ function L(e) {
     let { channelId: t } = e;
     return R.nonPositionalChannelIdUpdate(t);
 }
-function B(e) {
+function M(e) {
     let { channel: t } = e;
     return R.nonPositionalChannelIdUpdate(t.id);
 }
-function M(e) {
+function B(e) {
     let { id: t } = e;
     return R.nonPositionalChannelIdUpdate(t);
 }
@@ -94,9 +94,9 @@ function H(e) {
     let { guildScheduledEvent: t } = e;
     return R.updateSubtitles(t.guild_id);
 }
-class W extends (i = o.ZP.Store) {
+class z extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, b.default, x.Z, _.Z, j.Z, d.ZP, E.Z, m.Z, p.ZP, h.Z, C.Z, O.ZP, v.Z, S.ZP, f.Z);
+        this.waitFor(g.Z, b.default, x.Z, _.Z, j.Z, d.ZP, C.Z, m.Z, p.ZP, h.Z, E.Z, O.ZP, v.Z, S.ZP, f.Z);
     }
     getGuild(e, t) {
         var n, i;
@@ -120,15 +120,15 @@ class W extends (i = o.ZP.Store) {
     }
 }
 ((s = 'ChannelListStore'),
-    (r = 'displayName') in W
-        ? Object.defineProperty(W, r, {
+    (r = 'displayName') in z
+        ? Object.defineProperty(z, r, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (W[r] = s));
-let z = new W(c.Z, {
+        : (z[r] = s));
+let W = new z(c.Z, {
     APPLICATION_FETCH_FAIL: F,
     APPLICATION_FETCH_SUCCESS: F,
     APPLICATION_FETCH: F,
@@ -255,15 +255,15 @@ let z = new W(c.Z, {
     RECOMPUTE_READ_STATES: D,
     RESORT_THREADS: L,
     SET_RECENTLY_ACTIVE_COLLAPSED: D,
-    THREAD_CREATE: B,
+    THREAD_CREATE: M,
     THREAD_DELETE: function (e) {
         let { channel: t } = e;
         return R.nonPositionalChannelUpdate(t);
     },
     THREAD_LIST_SYNC: k,
-    THREAD_MEMBER_UPDATE: M,
-    THREAD_MEMBERS_UPDATE: M,
-    THREAD_UPDATE: B,
+    THREAD_MEMBER_UPDATE: B,
+    THREAD_MEMBERS_UPDATE: B,
+    THREAD_UPDATE: M,
     TRY_ACK: L,
     UPDATE_CHANNEL_DIMENSIONS: L,
     UPDATE_CHANNEL_LIST_SUBTITLES: function (e) {

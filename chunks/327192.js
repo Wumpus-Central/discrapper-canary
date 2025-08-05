@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(410030),
     _ = n(726542),
     j = n(122021),
-    E = n(275759),
-    C = n(231757),
+    C = n(275759),
+    E = n(231757),
     O = n(888496),
     v = n(266454),
     S = n(565138),
@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(494620),
     k = n(205266),
     L = n(216153),
-    B = n(981631),
-    M = n(856651),
+    M = n(981631),
+    B = n(856651),
     U = n(921944),
     V = n(388032),
     G = n(741138),
@@ -65,7 +65,7 @@ function H(e) {
     }
     return e;
 }
-let W = (e) => {
+let z = (e) => {
     var t, n;
     let r,
         { integration: s } = e,
@@ -135,7 +135,7 @@ let W = (e) => {
         })
     );
 };
-function z(e) {
+function W(e) {
     var t;
     let n,
         s,
@@ -147,7 +147,7 @@ function z(e) {
         [y, A] = r.useState(o.showActivity),
         [P, D] = r.useState(null),
         [U, F] = r.useState(null),
-        [z, Y] = r.useState(!1),
+        [W, Y] = r.useState(!1),
         [K, q] = r.useState([]),
         X = (0, j.rR)(o.type),
         J = _.Z.get(X);
@@ -203,10 +203,10 @@ function z(e) {
                 var t;
                 let n = _.Z.get(e.type),
                     r = _.Z.get(X),
-                    s = '1' === (null != (t = e.metadata) ? t : {})[M.PC.TWITTER_VERIFIED],
+                    s = '1' === (null != (t = e.metadata) ? t : {})[B.PC.TWITTER_VERIFIED],
                     a = null;
                 return (
-                    n.type === B.ABu.TWITTER &&
+                    n.type === M.ABu.TWITTER &&
                         s &&
                         (a = (0, i.jsx)(m.ua7, {
                             text: V.intl.string(V.t.Jebrw8),
@@ -295,12 +295,12 @@ function z(e) {
             })(o),
             o.twoWayLink
                 ? null
-                : o.type === B.ABu.XBOX
+                : o.type === M.ABu.XBOX
                   ? (0, i.jsx)('div', {
                         className: G.upsellWrapper,
                         children: (0, i.jsx)(L.Y, {})
                     })
-                  : o.type === B.ABu.PLAYSTATION
+                  : o.type === M.ABu.PLAYSTATION
                     ? (0, i.jsx)('div', {
                           className: G.upsellWrapper,
                           children: (0, i.jsx)(k.t, {})
@@ -310,26 +310,26 @@ function z(e) {
                 var t;
                 let n = null != (t = e.metadata) ? t : {},
                     r = null,
-                    s = (0, E.FI)(n[M.PC.CREATED_AT], h);
+                    s = (0, C.FI)(n[B.PC.CREATED_AT], h);
                 switch (e.type) {
-                    case B.ABu.REDDIT:
+                    case M.ABu.REDDIT:
                         r = (0, O.oP)(n, G.metadataItem);
                         break;
-                    case B.ABu.STEAM:
+                    case M.ABu.STEAM:
                         r = (0, O.Dq)(n, G.metadataItem);
                         break;
-                    case B.ABu.BLUESKY:
-                    case B.ABu.TWITTER:
-                    case B.ABu.MASTODON:
+                    case M.ABu.BLUESKY:
+                    case M.ABu.TWITTER:
+                    case M.ABu.MASTODON:
                         r = (0, O.rJ)(n, G.metadataItem);
                         break;
-                    case B.ABu.EBAY:
+                    case M.ABu.EBAY:
                         r = (0, O.ul)(n, G.metadataItem);
                         break;
-                    case B.ABu.PAYPAL:
+                    case M.ABu.PAYPAL:
                         r = (0, O.li)(n, G.metadataItem);
                         break;
-                    case B.ABu.TIKTOK:
+                    case M.ABu.TIKTOK:
                         r = (0, O.hf)(n, G.metadataItem);
                 }
                 null !== s &&
@@ -366,7 +366,7 @@ function z(e) {
                                 {
                                     variant: 'text-xs/normal',
                                     className: G.connectionMetadataUpsellDescription,
-                                    children: V.intl.format(V.t.Up2ni4, { helpdeskUrl: R.Z.getArticleURL(B.BhN.CONNECTION_DETAILS) })
+                                    children: V.intl.format(V.t.Up2ni4, { helpdeskUrl: R.Z.getArticleURL(M.BhN.CONNECTION_DETAILS) })
                                 },
                                 'label'
                             )
@@ -381,7 +381,7 @@ function z(e) {
                                 className: G.metadataRefreshButton,
                                 color: a ? u.zx.Colors.GREEN : u.zx.Colors.BRAND,
                                 size: u.zx.Sizes.SMALL,
-                                submitting: z,
+                                submitting: W,
                                 disabled: a,
                                 'aria-label': V.intl.string(V.t.sCkLYG),
                                 onClick: a
@@ -405,7 +405,7 @@ function z(e) {
                     })
                 );
             })(o),
-            (B.BFP.has(o.type) &&
+            (M.BFP.has(o.type) &&
                 (n = (0, i.jsx)(m.j7V, {
                     className: G.connectionOptionSwitch,
                     hideBorder: !0,
@@ -418,7 +418,7 @@ function z(e) {
                         children: V.intl.string(V.t['+KCMSk'])
                     })
                 })),
-            B.vbS.has(o.type) &&
+            M.vbS.has(o.type) &&
                 (s = (0, i.jsx)(m.j7V, {
                     className: G.connectionOptionSwitch,
                     hideBorder: !0,
@@ -441,7 +441,7 @@ function z(e) {
                             n = +!!e;
                         if (e && !t) {
                             (F(n),
-                                (0, C.Z)({
+                                (0, E.Z)({
                                     platformType: o.type,
                                     location: 'User Settings'
                                 }));
@@ -469,7 +469,7 @@ function z(e) {
                                     n = +!!e;
                                 if (e && !t) {
                                     (D(n),
-                                        (0, C.Z)({
+                                        (0, E.Z)({
                                             platformType: o.type,
                                             location: 'User Settings'
                                         }));
@@ -498,7 +498,7 @@ function z(e) {
                           className: G.integrationRevoked,
                           children: V.intl.format(V.t['6C4lgI'], {
                               onReconnect: function () {
-                                  (0, C.Z)({
+                                  (0, E.Z)({
                                       platformType: o.type,
                                       location: 'User Settings'
                                   });
@@ -517,7 +517,7 @@ function z(e) {
                                     children: V.intl.string(V.t.fOe3fX)
                                 })
                             }),
-                            (0, i.jsx)('div', { children: o.integrations.map((e) => (0, i.jsx)(W, { integration: e }, e.id)) })
+                            (0, i.jsx)('div', { children: o.integrations.map((e) => (0, i.jsx)(z, { integration: e }, e.id)) })
                         ]
                     })
                   : void 0
@@ -544,7 +544,7 @@ function Y() {
                 (0, i.jsx)(m.Text, {
                     variant: 'text-xs/normal',
                     color: 'header-secondary',
-                    children: V.intl.format(V.t['oYc+Gx'], { privacyPolicyUrl: B.EYA.PRIVACY })
+                    children: V.intl.format(V.t['oYc+Gx'], { privacyPolicyUrl: M.EYA.PRIVACY })
                 }),
                 (0, i.jsx)(q, {})
             ]
@@ -553,8 +553,8 @@ function Y() {
 }
 function K(e) {
     let t = _.Z.get(e);
-    ((0, C.Z)({ platformType: t.type }),
-        P.default.track(B.rMx.ACCOUNT_LINK_STEP, {
+    ((0, E.Z)({ platformType: t.type }),
+        P.default.track(M.rMx.ACCOUNT_LINK_STEP, {
             previous_step: 'desktop connections',
             current_step: 'desktop oauth',
             platform_type: t.type
@@ -631,7 +631,7 @@ function X(e) {
                     .filter((e) => _.Z.isSupported(e.type))
                     .map((e, t) =>
                         (0, i.jsx)(
-                            z,
+                            W,
                             {
                                 theme: s,
                                 account: e,

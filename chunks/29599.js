@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(163684),
     _ = n(178100),
     j = n(518638),
-    E = n(725727),
-    C = n(454982),
+    C = n(725727),
+    E = n(454982),
     O = n(767714),
     v = n(504983),
     S = n(703656),
@@ -38,7 +38,7 @@ function w(e) {
         [p, g] = r.useState(!1),
         h = () => m((e) => !e),
         x = (0, f.ZP)(),
-        E = (0, j.Pz)(n.id, x),
+        C = (0, j.Pz)(n.id, x),
         O = null != s,
         v = (0, _.Z)(n, O);
     O && c
@@ -80,7 +80,7 @@ function w(e) {
                                         className: Z.promotionIcon,
                                         children: (0, i.jsx)('img', {
                                             alt: '',
-                                            src: E,
+                                            src: C,
                                             className: Z.promotionIconImage
                                         })
                                     }),
@@ -125,7 +125,7 @@ function w(e) {
                     renderModal: (e) => {
                         var t, r;
                         return (0, i.jsx)(
-                            C.Z,
+                            E.Z,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -192,9 +192,9 @@ let k = function () {
             (0, p.Qv)().then(() => f(!0));
         });
     }, []);
-    let { promotionsLoaded: b, activeOutboundPromotions: _, claimedEndedOutboundPromotions: j, claimedOutboundPromotionCodeMap: C, addClaimedOutboundPromotionCode: k } = (0, E.lG)(),
+    let { promotionsLoaded: b, activeOutboundPromotions: _, claimedEndedOutboundPromotions: j, claimedOutboundPromotionCodeMap: E, addClaimedOutboundPromotionCode: k } = (0, C.lG)(),
         L = _.length + j.length > 0,
-        B =
+        M =
             x.g.useExperiment(
                 { location: 'EntitlementGifts' },
                 {
@@ -217,7 +217,7 @@ let k = function () {
                               variant: 'heading-md/semibold',
                               children: L ? D.intl.string(D.t.wFsj3N) : void 0
                           }),
-                          m = B
+                          m = M
                               ? (0, i.jsxs)('div', {
                                     className: Z.promoHeaderContainer,
                                     children: [
@@ -251,11 +251,11 @@ let k = function () {
                               L ? (0, i.jsx)(u.$i$, { className: Z.divider }) : null,
                               (0, i.jsx)(v.Z, {
                                   className: Z.gradientContainer,
-                                  isShown: B,
+                                  isShown: M,
                                   type: v.Y.PREMIUM,
                                   hasBackground: !0,
                                   children: (0, i.jsxs)(u.hjN, {
-                                      className: a()({ [Z.marginContainer]: !B }),
+                                      className: a()({ [Z.marginContainer]: !M }),
                                       children: [
                                           m,
                                           j.map((e) => {
@@ -276,7 +276,7 @@ let k = function () {
                                                   w,
                                                   {
                                                       outboundPromotion: e,
-                                                      code: C[e.id],
+                                                      code: E[e.id],
                                                       addClaimedOutboundPromotionCode: k,
                                                       disabled: !s
                                                   },

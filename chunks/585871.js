@@ -1,8 +1,12 @@
 e.exports = {
     table: 'table_fda3e4',
+    premiumRebrand: 'premiumRebrand_fda3e4',
+    hasError: 'hasError_fda3e4',
+    flex: 'flex_fda3e4',
     header: 'header_fda3e4',
     rowBase: 'rowBase_fda3e4',
     row: 'row_fda3e4 rowBase_fda3e4',
+    canceled: 'canceled_fda3e4',
     rowAmount: 'rowAmount_fda3e4',
     rowLabel: 'rowLabel_fda3e4',
     rowPercentDiscount: 'rowPercentDiscount_fda3e4',

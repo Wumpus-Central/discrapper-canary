@@ -27,7 +27,7 @@ function s() {
             }
         ],
         s = [{ applicationId: c.J6['0'] }, { applicationId: c.J6['1'] }, { applicationId: c.J6['2'] }, { applicationId: c.J6['3'] }, { applicationId: c.J6['4'] }, { applicationId: c.J6['5'] }, { applicationId: c.J6['6'] }],
-        u = [{ applicationId: c.J6['14'] }, { applicationId: c.J6['15'] }, { applicationId: c.J6['16'] }, { applicationId: c.J6['17'] }, { applicationId: c.J6['18'] }, { applicationId: c.J6['19'] }, { applicationId: c.J6['20'] }];
+        d = [{ applicationId: c.J6['14'] }, { applicationId: c.J6['15'] }, { applicationId: c.J6['16'] }, { applicationId: c.J6['17'] }, { applicationId: c.J6['18'] }, { applicationId: c.J6['19'] }, { applicationId: c.J6['20'] }];
     return [
         {
             id: '1',
@@ -51,7 +51,7 @@ function s() {
             id: '4',
             type: i.l.GAME,
             gameWidgetType: r.g.PLAYED,
-            games: u
+            games: d
         }
     ];
 }

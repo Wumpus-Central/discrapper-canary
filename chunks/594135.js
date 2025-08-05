@@ -1,21 +1,26 @@
 n.d(t, {
     D: () => a,
-    a: () => s
+    a: () => l
 });
-var r = n(73800),
-    i = n(257465),
-    o = n(474936);
-let a = r.createContext({
+var i = n(73800),
+    r = n(257465),
+    s = n(474936);
+let a = i.createContext({
         setStep: () => {},
-        premiumType: o.p9.TIER_0,
+        premiumType: s.p9.TIER_0,
         onClose: () => {},
-        transitionState: i.D.ENTERING,
+        transitionState: r.D.ENTERING,
         premiumSubscription: {},
         analyticsLocations: [],
         analyticsLocation: void 0,
         confettiCanvas: null,
         discountPrimary: !1,
         churnUserDiscountOffer: null,
-        isFetchingChurnDiscountOffer: !1
+        isFetchingChurnDiscountOffer: !1,
+        paymentsBlocked: !1,
+        renewalInvoice: null,
+        renewalInvoiceDetails: null,
+        handleCancellation: async () => {},
+        applyOffer: async () => {}
     }),
-    s = () => r.useContext(a);
+    l = () => i.useContext(a);

@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(243778),
     _ = n(440051),
     j = n(734934),
-    E = n(300284),
-    C = n(680295),
+    C = n(300284),
+    E = n(680295),
     O = n(785717),
     v = n(209698),
     S = n(687158),
@@ -34,15 +34,15 @@ var i = n(255367),
     w = n(502762),
     k = n(530),
     L = n(309494),
-    B = n(4517),
-    M = n(420654),
+    M = n(4517),
+    B = n(420654),
     U = n(785184),
     V = n(695346),
     G = n(622562),
     F = n(158776),
     H = n(246946),
-    W = n(572004),
-    z = n(5192),
+    z = n(572004),
+    W = n(5192),
     Y = n(74538),
     K = n(7093),
     q = n(474376),
@@ -101,10 +101,10 @@ function ea(e) {
         { expiringStatusProfileFeedback: ex } = _.Y.useExperiment({ location: 'UserProfileAccountPopout' }, { autoTrackExposure: !1 }),
         e_ = (0, a.e7)([H.Z], () => H.Z.hidePersonalInformation),
         ej = (0, j.p)(),
-        eE = V.Sb.useSetting(),
-        eC = (0, Q.I)(eh),
+        eC = V.Sb.useSetting(),
+        eE = (0, Q.I)(eh),
         eO = (0, q.g)(n),
-        ev = (0, E.Z)({ analyticsLocations: eu }),
+        ev = (0, C.Z)({ analyticsLocations: eu }),
         eS = (0, Y.I5)(t),
         eT = (0, h.p)({ location: 'UserProfileAccountPopout' }),
         eI = (0, v.b)({ location: 'UserProfileAccountPopout' }),
@@ -122,13 +122,13 @@ function ea(e) {
         eZ = eR === l.z.CUSTOM_STATUS_PROMPTS_COACHMARK,
         ew = r.useRef((0, K.Z)((e) => e.shouldRenderTenureLevelUp)),
         ek = r.useMemo(() => (0, f.Z)(), []),
-        [eL, eB] = r.useState(!0);
+        [eL, eM] = r.useState(!0);
     r.useEffect(() => {
         setTimeout(() => {
-            eB(!1);
+            eM(!1);
         }, 500);
     }, []);
-    let eM = (e) => {
+    let eB = (e) => {
             (null == n || n(),
                 (0, T.openUserProfileModal)(
                     es(
@@ -172,7 +172,7 @@ function ea(e) {
                                         user: t,
                                         displayProfile: ed,
                                         themeType: et.lY.POPOUT,
-                                        onOpenProfile: ec ? void 0 : eM
+                                        onOpenProfile: ec ? void 0 : eB
                                     }),
                                     eZ
                                         ? (0, i.jsx)(b.Z, {
@@ -181,7 +181,7 @@ function ea(e) {
                                               targetElementRef: ey,
                                               markAsDismissed: eD,
                                               children: () =>
-                                                  (0, i.jsx)(B.Z, {
+                                                  (0, i.jsx)(M.Z, {
                                                       ref: ey,
                                                       location: 'UserProfileAccountPopout',
                                                       user: t,
@@ -190,7 +190,7 @@ function ea(e) {
                                                       prompt: ek
                                                   })
                                           })
-                                        : (0, i.jsx)(B.Z, {
+                                        : (0, i.jsx)(M.Z, {
                                               location: 'UserProfileAccountPopout',
                                               user: t,
                                               themeType: et.lY.POPOUT,
@@ -206,8 +206,8 @@ function ea(e) {
                                     (0, i.jsx)(k.Z, {
                                         user: t,
                                         className: ei.username,
-                                        nickname: z.ZP.getName(null, null, t),
-                                        onOpenProfile: ec ? void 0 : eM,
+                                        nickname: W.ZP.getName(null, null, t),
+                                        onOpenProfile: ec ? void 0 : eB,
                                         pronouns: null == ed ? void 0 : ed.pronouns,
                                         tags: (0, i.jsx)(N.Z, {
                                             displayProfile: ed,
@@ -226,7 +226,7 @@ function ea(e) {
                                             ]
                                         })
                                     }),
-                                    (0, i.jsx)(M.Z, {
+                                    (0, i.jsx)(B.Z, {
                                         user: t,
                                         bio: null == ed ? void 0 : ed.bio,
                                         hidePersonalInformation: e_,
@@ -241,7 +241,7 @@ function ea(e) {
                                               user: t,
                                               currentUser: t,
                                               displayProfile: ed,
-                                              onOpenUserProfileModal: eM,
+                                              onOpenUserProfileModal: eB,
                                               onClose: n
                                           })
                                         : (0, i.jsx)(R.Z, {
@@ -295,7 +295,7 @@ function ea(e) {
                                                                           className: ei.statusPickerModalMenu,
                                                                           'aria-label': en.intl.string(en.t.E13trK),
                                                                           onClose: t,
-                                                                          children: eC
+                                                                          children: eE
                                                                       });
                                                                   },
                                                             onClick: s.tq
@@ -342,7 +342,7 @@ function ea(e) {
                                                                                                           hideScroller: !0,
                                                                                                           onClose: r,
                                                                                                           onSelect: void 0,
-                                                                                                          children: eC
+                                                                                                          children: eE
                                                                                                       })
                                                                                                   }),
                                                                                               Object.getOwnPropertyDescriptors
@@ -392,8 +392,8 @@ function ea(e) {
                                                             }
                                                         }),
                                                         !__OVERLAY__ &&
-                                                            W.wS &&
-                                                            eE &&
+                                                            z.wS &&
+                                                            eC &&
                                                             (0, i.jsxs)(i.Fragment, {
                                                                 children: [
                                                                     (0, i.jsx)(P.Z, { className: ei.menuDivider }),
@@ -403,7 +403,7 @@ function ea(e) {
                                                                         icon: c.VuL,
                                                                         label: en.intl.string(en.t['/AXYnJ']),
                                                                         onClick: () => {
-                                                                            ((0, W.JG)(t.id), n());
+                                                                            ((0, z.JG)(t.id), n());
                                                                         }
                                                                     })
                                                                 ]
@@ -416,7 +416,7 @@ function ea(e) {
                                 ]
                             }),
                             eU &&
-                                (0, i.jsx)(C.Z, {
+                                (0, i.jsx)(E.Z, {
                                     profileEffectId: null == ed ? void 0 : ed.profileEffectId,
                                     isHovering: eg
                                 })

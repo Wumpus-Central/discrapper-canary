@@ -136,44 +136,46 @@ function p(e) {
         c = (0, o.useViewModel)(t);
     (0, o.useViewModelInstance)(c);
     let { theme: d, saturation: f } = (0, l.TCT)(),
-        _ = (0, s.e7)([u.Z], () => u.Z.isHighContrastModeEnabled);
+        _ = (0, s.e7)([u.Z], () => u.Z.isHighContrastModeEnabled),
+        p = i.useRef(null);
     i.useEffect(() => {
         if (null == t || null == t.viewModelInstance || null == a) return;
         let e = r[n];
-        Object.entries(a).forEach((n) => {
-            var r, i, a, o, s, l;
-            let [c, u] = n,
-                p = e[c];
-            switch (p) {
+        (Object.entries(a).forEach((n) => {
+            var r, i, a, o, s, l, c, u;
+            let [h, m] = n,
+                g = e[h];
+            switch (g) {
                 case 'color':
-                    let [h, m, g, E] = u
+                    let [E, b, y, O] = m
                         .resolve({
                             theme: d,
                             saturation: f,
                             highContrastModeEnabled: _
                         })
                         .rgba();
-                    null == (i = t.viewModelInstance) || null == (r = i.color(c)) || r.rgba(h, m, g, 255 * E);
+                    null == (i = t.viewModelInstance) || null == (r = i.color(h)) || r.rgba(E, b, y, 255 * O);
                     break;
                 case 'number':
-                    let b = null == (a = t.viewModelInstance) ? void 0 : a.number(c);
-                    null != b && (b.value = u);
+                    let v = null == (a = t.viewModelInstance) ? void 0 : a.number(h);
+                    null != v && (v.value = m);
                     break;
                 case 'boolean':
-                    let y = null == (o = t.viewModelInstance) ? void 0 : o.boolean(c);
-                    null != y && (y.value = u);
+                    let I = null == (o = t.viewModelInstance) ? void 0 : o.boolean(h);
+                    null != I && (I.value = m);
                     break;
                 case 'trigger':
-                    u && (null == (s = t.viewModelInstance) || s.trigger(c));
+                    m && (null == (s = p.current) ? void 0 : s[h]) !== m && (null == (c = t.viewModelInstance) || null == (l = c.trigger(h)) || l.trigger());
                     break;
                 case 'string':
-                    let O = null == (l = t.viewModelInstance) ? void 0 : l.string(c);
-                    null != O && (O.value = u);
+                    let T = null == (u = t.viewModelInstance) ? void 0 : u.string(h);
+                    null != T && (T.value = m);
                     break;
                 default:
-                    console.warn('Unknown property type: '.concat(p));
+                    console.warn('Unknown property type: '.concat(g));
             }
-        });
+        }),
+            (p.current = a));
     }, [a, t, n, r, d, null == t ? void 0 : t.viewModelInstance, f, _]);
 }
 o.RuntimeLoader.setWasmUrl(a);

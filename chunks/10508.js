@@ -1,38 +1,34 @@
 n.d(t, {
-    o: () => f,
-    w: () => p
+    o: () => u,
+    w: () => d
 });
-var r,
-    i = n(255367);
+var i,
+    r = n(255367);
 n(73800);
-var o = n(793030),
-    a = n(74538),
-    s = n(937615),
-    l = n(230916),
-    c = n(594135),
-    u = n(474936),
-    d = n(388032),
-    m = n(930280),
-    _ = n(947866),
-    p = (((r = {}).NONE = 'none'), (r.CONFIRMING = 'confirming'), (r.APPLIED = 'applied'), r);
-let f = (e) => {
+var s = n(793030),
+    a = n(594135),
+    l = n(388032),
+    o = n(930280),
+    c = n(947866),
+    d = (((i = {}).NONE = 'none'), (i.CONFIRMING = 'confirming'), (i.APPLIED = 'applied'), i);
+let u = (e) => {
         let { userDiscountOffer: t, offerState: n = 'none' } = e;
-        return (0, i.jsxs)('div', {
-            className: m.discountOfferContainer,
+        return (0, r.jsxs)('div', {
+            className: o.discountOfferContainer,
             children: [
-                (0, i.jsx)('img', {
+                (0, r.jsx)('img', {
                     alt: '',
-                    src: _,
-                    className: m.nitroIcon
+                    src: c,
+                    className: o.nitroIcon
                 }),
-                (0, i.jsxs)('div', {
-                    className: m.discountOfferContent,
+                (0, r.jsxs)('div', {
+                    className: o.discountOfferContent,
                     children: [
-                        (0, i.jsx)(o.xv, {
+                        (0, r.jsx)(s.xv, {
                             variant: 'text-md/semibold',
-                            children: d.intl.format(d.t.tQvNlp, { numMonths: t.discount.user_usage_limit })
+                            children: l.intl.format(l.t.tQvNlp, { numMonths: t.discount.user_usage_limit })
                         }),
-                        (0, i.jsx)(C, {
+                        (0, r.jsx)(m, {
                             userDiscountOffer: t,
                             offerState: n
                         })
@@ -41,41 +37,35 @@ let f = (e) => {
             ]
         });
     },
-    C = (e) => {
+    m = (e) => {
         let { userDiscountOffer: t, offerState: n } = e,
-            { premiumSubscription: r } = (0, c.a)(),
-            m = (0, l._)(r, u.Xh.PREMIUM_MONTH_TIER_2, t),
-            _ = (0, a.aS)(u.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
-                currency: r.currency,
-                paymentSourceId: r.paymentSourceId
-            }),
-            p = (0, s.T4)(_.amount, _.currency);
+            { discountedPrice: i, fullPrice: o } = (0, a.a)();
         switch (n) {
             case 'applied':
-                return (0, i.jsx)(o.xv, {
+                return (0, r.jsx)(s.xv, {
                     variant: 'text-md/normal',
                     color: 'text-secondary',
-                    children: d.intl.formatToPlainString(d.t.gPzMHR, {
+                    children: l.intl.formatToPlainString(l.t.gPzMHR, {
                         numMonths: t.discount.user_usage_limit,
-                        discountedPrice: m,
-                        regularPrice: p
+                        discountedPrice: i,
+                        regularPrice: o
                     })
                 });
             case 'confirming':
-                return (0, i.jsx)(o.xv, {
+                return (0, r.jsx)(s.xv, {
                     variant: 'text-md/normal',
                     color: 'text-secondary',
-                    children: d.intl.formatToPlainString(d.t.Eq1RHB, {
+                    children: l.intl.formatToPlainString(l.t.Eq1RHB, {
                         percent: t.discount.amount,
                         numMonths: t.discount.user_usage_limit,
-                        price: p
+                        price: o
                     })
                 });
             default:
-                return (0, i.jsx)(o.xv, {
+                return (0, r.jsx)(s.xv, {
                     variant: 'text-md/normal',
                     color: 'text-secondary',
-                    children: d.intl.formatToPlainString(d.t['2gem09'], {
+                    children: l.intl.formatToPlainString(l.t['2gem09'], {
                         percent: t.discount.amount,
                         numMonths: t.discount.user_usage_limit
                     })

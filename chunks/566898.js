@@ -1,10 +1,10 @@
 n.d(t, {
-    M9: () => j,
+    M9: () => O,
     Pb: () => y,
-    XX: () => b,
-    ZP: () => O,
+    XX: () => g,
+    ZP: () => h,
     ZT: () => f,
-    iv: () => g,
+    iv: () => b,
     pk: () => m
 });
 var r = n(255367);
@@ -15,10 +15,10 @@ var o = n(120356),
     a = n.n(l),
     c = n(481060),
     s = n(881448);
-function u(e) {
+function d(e) {
     return ''.concat(e / 16, 'rem');
 }
-function d() {
+function u() {
     return (0, r.jsx)('div', {
         className: s.avatar,
         style: { opacity: 0.08 }
@@ -27,11 +27,11 @@ function d() {
 function f(e) {
     let { width: t, height: n, opacity: o, className: l } = e,
         c = {
-            width: u(t),
+            width: d(t),
             opacity: null != o ? o : a().random(0.02, 0.08)
         };
     return (
-        null != n && (c.height = u(n)),
+        null != n && (c.height = d(n)),
         (0, r.jsx)('div', {
             className: i()(l, { [s.blob]: !0 }),
             style: c
@@ -40,17 +40,17 @@ function f(e) {
 }
 function p(e) {
     let t,
-        { groupStart: n = !1, compact: o = !1, attachmentSpecs: l, usernameWidth: u, usernameOpacity: p, className: m, style: b } = e,
-        g = o ? 50 : a().random(40, 50);
+        { groupStart: n = !1, compact: o = !1, attachmentSpecs: l, usernameWidth: d, usernameOpacity: p, className: m, style: g } = e,
+        b = o ? 50 : a().random(40, 50);
     return (
         !o && n
             ? (t = (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(d, {}),
+                      (0, r.jsx)(u, {}),
                       (0, r.jsx)(c.H, {
                           className: s.header,
                           children: (0, r.jsx)(f, {
-                              width: u,
+                              width: d,
                               opacity: p,
                               className: s.__invalid_username
                           })
@@ -62,7 +62,7 @@ function p(e) {
                   children: [
                       o &&
                           (0, r.jsx)(f, {
-                              width: g,
+                              width: b,
                               className: i()({
                                   [s.compactTimestamp]: !0,
                                   [s.hidden]: !n
@@ -71,7 +71,7 @@ function p(e) {
                       (0, r.jsx)(c.H, {
                           className: s.header,
                           children: (0, r.jsx)(f, {
-                              width: u,
+                              width: d,
                               opacity: p
                           })
                       })
@@ -84,7 +84,7 @@ function p(e) {
                 [s.compact]: o,
                 [s.cozy]: !o
             }),
-            style: b,
+            style: g,
             children: [
                 (0, r.jsxs)('div', {
                     className: s.contents,
@@ -145,15 +145,15 @@ function p(e) {
     );
 }
 let m = 44,
-    b = 22,
-    g = 26,
+    g = 22,
+    b = 26,
     y = 26,
-    j = 6;
-function O(e) {
+    O = 6;
+function h(e) {
     let { messages: t, groupSpacing: n = 0, compact: o = !1, attachmentSpecs: i, className: l } = e,
         c = null != i ? (i.last ? t - 1 : a().random(0, t - 1)) : -1,
         s = a().random(80, 120),
-        d = a().random(0.1, 0.2);
+        u = a().random(0.1, 0.2);
     return (0, r.jsx)(r.Fragment, {
         children: Array(t)
             .fill(null)
@@ -164,10 +164,10 @@ function O(e) {
                         compact: o,
                         className: l,
                         usernameWidth: s,
-                        usernameOpacity: d,
+                        usernameOpacity: u,
                         groupStart: 0 === t,
                         attachmentSpecs: t === c ? i : void 0,
-                        style: 0 === t ? { marginTop: u(n) } : void 0
+                        style: 0 === t ? { marginTop: d(n) } : void 0
                     },
                     t
                 )

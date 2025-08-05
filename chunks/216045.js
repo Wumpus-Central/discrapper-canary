@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(22267),
     _ = n(266454),
     j = n(243778),
-    E = n(957730),
-    C = n(53691),
+    C = n(957730),
+    E = n(53691),
     O = n(267717),
     v = n(296810),
     S = n(678135),
@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(74538),
     k = n(413182),
     L = n(695346),
-    B = n(265159),
-    M = n(532495),
+    M = n(265159),
+    B = n(532495),
     U = n(981631),
     V = n(921944),
     G = n(388032),
@@ -48,7 +48,7 @@ function H() {
         }),
         s = (0, l.e7)([P.Z], () => P.Z.hidePersonalInformation),
         H = (0, l.cj)([R.Z], () => R.Z.getAllPending()),
-        { pendingBio: W, pendingAvatar: z, pendingNameplate: Y } = H,
+        { pendingBio: z, pendingAvatar: W, pendingNameplate: Y } = H,
         K = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -70,10 +70,10 @@ function H() {
         })(H, ['pendingBio', 'pendingAvatar', 'pendingNameplate']),
         q = (0, N.SD)({
             userId: n.id,
-            image: z
+            image: W
         }),
         X = (0, l.e7)([R.Z], () => R.Z.showNotice()),
-        J = L.dN.useSetting() && null != W ? E.ZP.parse(void 0, W).content : W,
+        J = L.dN.useSetting() && null != z ? C.ZP.parse(void 0, z).content : z,
         Q = w.ZP.canUsePremiumProfileCustomization(n),
         { analyticsLocations: $, newestAnalyticsLocation: ee } = (0, f.ZP)(h.Z.USER_SETTINGS_USER_PROFILE),
         et = (0, y.T)({ location: 'UserSettingsProfileCustomization' }),
@@ -131,7 +131,7 @@ function H() {
                               {
                                   user: n,
                                   canUsePremiumCustomization: Q,
-                                  onUpsellClick: B.Z,
+                                  onUpsellClick: M.Z,
                                   pendingBio: J
                               },
                               K
@@ -163,7 +163,7 @@ function H() {
                           className: F.nameplatePreview,
                           isHighlighted: !0
                       }),
-                      children: (0, i.jsx)(M.Z, {})
+                      children: (0, i.jsx)(B.Z, {})
                   }),
                   ec && (0, i.jsx)(T.Z, {}),
                   (0, i.jsx)(c.$, {
@@ -182,7 +182,7 @@ function H() {
                   }),
                   eu &&
                       !X &&
-                      (0, i.jsx)(C.p, {
+                      (0, i.jsx)(E.p, {
                           className: F.floatingNitroUpsell,
                           showUpsell: eu && !el,
                           text: G.intl.format(G.t.TmfgIy, { onClick: () => (0, O.y)({ analyticsSource: ee }) }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var o = n(120356),
@@ -7,9 +7,9 @@ var o = n(120356),
     a = n(313201),
     c = n(318374),
     s = n(448968);
-function u(e) {
+function d(e) {
     var { label: t, visuallyHideLabel: n = !1, className: o } = e,
-        u = (function (e, t) {
+        d = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -28,7 +28,7 @@ function u(e) {
             }
             return o;
         })(e, ['label', 'visuallyHideLabel', 'className']);
-    let d = (0, a.Dt)();
+    let u = (0, a.Dt)();
     return (0, r.jsxs)('div', {
         className: i()(o, s.container),
         children: [
@@ -60,21 +60,21 @@ function u(e) {
                     return e;
                 })(
                     {
-                        'aria-labelledby': d,
+                        'aria-labelledby': u,
                         overflowCountClassName: s.overflowButton
                     },
-                    u
+                    d
                 )
             ),
             n
                 ? (0, r.jsx)(l.nn4, {
-                      id: d,
+                      id: u,
                       children: t
                   })
                 : (0, r.jsx)(l.Text, {
                       variant: 'text-xs/normal',
                       color: 'text-secondary',
-                      id: d,
+                      id: u,
                       children: t
                   })
         ]

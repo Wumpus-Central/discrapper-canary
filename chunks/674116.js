@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(894939),
     _ = n(710808),
     j = n(625205),
-    E = n(325808),
-    C = n(823087),
+    C = n(325808),
+    E = n(823087),
     O = n(232388),
     v = n(546997),
     S = n(186934),
@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(726985),
     k = n(981631),
     L = n(65154),
-    B = n(388032),
-    M = n(20493);
+    M = n(388032),
+    B = n(20493);
 let U = ''.concat(m.Z.getArticleURL(k.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
 function V() {
     let { inputMode: e } = (0, s.cj)([d.Z], () => ({ inputMode: d.Z.getMode() })),
@@ -49,7 +49,7 @@ function V() {
     let k = (0, g.Z)();
     return (0, i.jsxs)(a.hjN, {
         tag: a.RB0.H1,
-        title: B.intl.string(B.t.NiTd0d),
+        title: M.intl.string(M.t.NiTd0d),
         children: [
             (0, i.jsxs)(c.F, {
                 setting: w.s6.VOICE_AND_VIDEO_VOICE,
@@ -65,24 +65,24 @@ function V() {
                     (0, i.jsxs)(c.F, {
                         setting: w.s6.VOICE_AND_VIDEO_MIC_TEST,
                         children: [
-                            (0, i.jsx)(C.Z, {}),
+                            (0, i.jsx)(E.Z, {}),
                             (0, i.jsx)(a.R94, {
-                                className: M.marginBottom20,
+                                className: B.marginBottom20,
                                 type: a.R94.Types.DESCRIPTION,
-                                children: B.intl.format(B.t['V+B3FB'], { guideURL: U })
+                                children: M.intl.format(M.t['V+B3FB'], { guideURL: U })
                             }),
-                            (0, i.jsx)(a.$i$, { className: M.marginBottom20 })
+                            (0, i.jsx)(a.$i$, { className: B.marginBottom20 })
                         ]
                     }),
                     (0, i.jsx)(c.F, {
                         setting: w.s6.VOICE_AND_VIDEO_INPUT_MODE,
-                        children: (0, i.jsx)(E.Z, {})
+                        children: (0, i.jsx)(C.Z, {})
                     }),
                     (0, i.jsx)(c.F, {
                         setting: w.s6.VOICE_AND_VIDEO_SENSITIVITY,
                         children: e === L.pM.VOICE_ACTIVITY && (0, i.jsx)(R.Z, {})
                     }),
-                    (0, i.jsx)(a.$i$, { className: M.marginBottom40 })
+                    (0, i.jsx)(a.$i$, { className: B.marginBottom40 })
                 ]
             }),
             (0, i.jsx)(c.F, {
@@ -111,8 +111,8 @@ function V() {
                 children: (0, i.jsxs)(a.y5t, {
                     component: (0, i.jsx)(a.vwX, {
                         tag: a.RB0.H1,
-                        className: M.marginBottom20,
-                        children: B.intl.string(B.t['8/udY2'])
+                        className: B.marginBottom20,
+                        children: M.intl.string(M.t['8/udY2'])
                     }),
                     children: [
                         (0, i.jsx)(f.Z, {}),
@@ -129,7 +129,7 @@ function V() {
                         (0, i.jsx)(v.Z, {}),
                         (0, i.jsx)(T.Z, {}),
                         (0, i.jsx)(N.Z, { refreshStyles: !0 }),
-                        (0, i.jsx)(a.$i$, { className: M.marginBottom40 }),
+                        (0, i.jsx)(a.$i$, { className: B.marginBottom40 }),
                         (0, i.jsx)(c.F, {
                             setting: w.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
                             children: (0, i.jsx)(_.Z, {})
@@ -140,9 +140,9 @@ function V() {
                                 children: (0, i.jsx)(a.zxk, {
                                     variant: 'critical-secondary',
                                     size: 'sm',
-                                    text: B.intl.string(B.t['/RXu6+']),
+                                    text: M.intl.string(M.t['/RXu6+']),
                                     onClick: () => {
-                                        (0, p.Z)(B.intl.string(B.t['/RXu6+']), B.intl.string(B.t.sQ42iY), l.Z.reset);
+                                        (0, p.Z)(M.intl.string(M.t['/RXu6+']), M.intl.string(M.t.sQ42iY), l.Z.reset);
                                     }
                                 })
                             })

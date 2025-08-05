@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => d }), n(539854), n(388685));
+(n.d(t, { Z: () => u }), n(539854), n(388685));
 var r = n(73800),
     o = n(924322),
     i = n(442837),
@@ -30,7 +30,7 @@ function s(e) {
     }
     return e;
 }
-function u(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -48,7 +48,7 @@ function u(e, t) {
         e
     );
 }
-function d(e) {
+function u(e) {
     let t = r.useMemo(
         () =>
             (function (e) {
@@ -76,43 +76,51 @@ function d(e) {
             })(e),
         [e]
     );
-    return (
-        r.useEffect(() => {
-            t.length > 0 && l.Z.getDetectableGamesSupplemental(t);
-        }, [t]),
-        {
-            isFetching: (0, i.e7)([a.Z], () => t.some((e) => a.Z.isFetching(e))),
-            widgets: r.useMemo(
-                () =>
-                    e.map((e) => {
-                        let t = e.gameWidgetType;
-                        switch (t) {
-                            case o.g.FAVORITE: {
-                                let t = a.Z.getGame(e.game.applicationId),
-                                    n = u(s({}, e.game), {
-                                        gameName: null == t ? void 0 : t.name,
-                                        imageSrc: null == t ? void 0 : t.coverImageUrl
-                                    });
-                                return u(s({}, e), { game: n });
-                            }
-                            case o.g.CURRENT:
-                            case o.g.WANT_TO_PLAY:
-                            case o.g.PLAYED: {
-                                let t = e.games.map((e) => {
-                                    let t = a.Z.getGame(e.applicationId);
-                                    return u(s({}, e), {
-                                        gameName: null == t ? void 0 : t.name,
-                                        imageSrc: null == t ? void 0 : t.coverImageUrl
-                                    });
+    r.useEffect(() => {
+        t.length > 0 && l.Z.getDetectableGamesSupplemental(t);
+    }, [t]);
+    let n = (0, i.e7)([a.Z], () => t.some((e) => a.Z.isFetching(e))),
+        u = (0, i.e7)([a.Z], () => {
+            let e = {};
+            return (
+                t.forEach((t) => {
+                    e[t] = a.Z.getGame(t);
+                }),
+                e
+            );
+        });
+    return {
+        isFetching: n,
+        widgets: r.useMemo(
+            () =>
+                e.map((e) => {
+                    let t = e.gameWidgetType;
+                    switch (t) {
+                        case o.g.FAVORITE: {
+                            let t = u[e.game.applicationId],
+                                n = d(s({}, e.game), {
+                                    gameName: null == t ? void 0 : t.name,
+                                    imageSrc: null == t ? void 0 : t.coverImageUrl
                                 });
-                                return u(s({}, e), { games: t });
-                            }
-                            default:
-                                return (0, c.vE)(t);
+                            return d(s({}, e), { game: n });
                         }
-                    }),
-                [e]
-            )
-        }
-    );
+                        case o.g.CURRENT:
+                        case o.g.WANT_TO_PLAY:
+                        case o.g.PLAYED: {
+                            let t = e.games.map((e) => {
+                                let t = u[e.applicationId];
+                                return d(s({}, e), {
+                                    gameName: null == t ? void 0 : t.name,
+                                    imageSrc: null == t ? void 0 : t.coverImageUrl
+                                });
+                            });
+                            return d(s({}, e), { games: t });
+                        }
+                        default:
+                            return (0, c.vE)(t);
+                    }
+                }),
+            [e, u]
+        )
+    };
 }

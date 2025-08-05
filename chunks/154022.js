@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(313201),
     _ = n(594928),
     j = n(829716),
-    E = n(786761),
-    C = n(3148),
+    C = n(786761),
+    E = n(3148),
     O = n(739566),
     v = n(753206),
     S = n(440849),
@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(726985),
     k = n(981631),
     L = n(611480),
-    B = n(653477),
-    M = n(388032),
+    M = n(653477),
+    B = n(388032),
     U = n(698282),
     V = n(855112),
     G = n(20493),
@@ -65,7 +65,7 @@ function H(e) {
     }
     return e;
 }
-function W(e, t) {
+function z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,7 +83,7 @@ function W(e, t) {
         e
     );
 }
-let z = (0, x.hQ)(),
+let W = (0, x.hQ)(),
     Y = (0, x.hQ)(),
     K = (0, x.hQ)(),
     q = o().debounce((e) => {
@@ -97,7 +97,7 @@ function J(e) {
         n = _.f.useExperiment({ location: 'UserSettingsAccessibility' }).enabled;
     return (0, i.jsxs)(d.hjN, {
         tag: d.RB0.H1,
-        title: M.intl.string(M.t.G0neg4),
+        title: B.intl.string(B.t.G0neg4),
         children: [
             (0, i.jsx)('div', {
                 className: G.marginBottom20,
@@ -156,7 +156,7 @@ function J(e) {
                     (0, i.jsx)(d.Text, {
                         className: G.marginTop20,
                         variant: 'text-md/normal',
-                        children: M.intl.format(M.t.DHpTjY, {
+                        children: B.intl.format(B.t.DHpTjY, {
                             onAppearanceClick() {
                                 u.Z.open(k.oAB.APPEARANCE);
                             }
@@ -170,13 +170,13 @@ function J(e) {
 function Q() {
     let e = P.jU.useSetting(),
         [t] = r.useState(() => {
-            let e = (0, E.e5)(
-                W(
+            let e = (0, C.e5)(
+                z(
                     H(
                         {},
-                        (0, C.ZP)({
+                        (0, E.ZP)({
                             channelId: '1337',
-                            content: M.intl.formatToPlainString(M.t.bB80LC, { previewLink: 'https://discord.com/accessibility' })
+                            content: B.intl.formatToPlainString(B.t.bB80LC, { previewLink: 'https://discord.com/accessibility' })
                         })
                     ),
                     {
@@ -198,7 +198,7 @@ function Q() {
                         (0, i.jsx)(d.zxk, {
                             variant: 'primary',
                             size: 'sm',
-                            text: M.intl.string(M.t['2RHHg4'])
+                            text: B.intl.string(B.t['2RHHg4'])
                         }),
                         (0, i.jsx)('div', {
                             className: V.previewAvatars,
@@ -206,7 +206,7 @@ function Q() {
                                 (0, i.jsx)(
                                     d.Xo$,
                                     {
-                                        'aria-label': M.intl.string(M.t.lqaIxM),
+                                        'aria-label': B.intl.string(B.t.lqaIxM),
                                         src: F,
                                         size: d.EFr.SIZE_32,
                                         status: e
@@ -221,7 +221,7 @@ function Q() {
                     className: V.previewMessage,
                     children: (0, i.jsx)(v.Z, {
                         compact: e,
-                        author: W(H({}, (0, O.ZH)(t)), { colorString: '#DD80F4' }),
+                        author: z(H({}, (0, O.ZH)(t)), { colorString: '#DD80F4' }),
                         message: t
                     })
                 })
@@ -251,18 +251,18 @@ function ee() {
         className: G.marginTop20,
         children: [
             (0, i.jsx)(d.vwX, {
-                id: z,
+                id: W,
                 className: G.marginBottom8,
-                children: M.intl.string(M.t['5PWWCQ'])
+                children: B.intl.string(B.t['5PWWCQ'])
             }),
             (0, i.jsx)(d.R94, {
                 id: Y,
                 type: d.R94.Types.DESCRIPTION,
                 className: G.marginBottom20,
-                children: M.intl.string(M.t['0PbE/P'])
+                children: B.intl.string(B.t['0PbE/P'])
             }),
             (0, i.jsx)(d.iRW, {
-                'aria-labelledby': z,
+                'aria-labelledby': W,
                 'aria-describedby': Y,
                 markers: k.yqN.SATURATION_INCREMENTS,
                 equidistant: !0,
@@ -280,8 +280,8 @@ function ee() {
                     className: a()(G.marginTop20, G.marginBottom20),
                     value: t,
                     onChange: p.f1,
-                    note: M.intl.string(M.t.nlAOER),
-                    children: M.intl.string(M.t.bQCodH)
+                    note: B.intl.string(B.t.nlAOER),
+                    children: B.intl.string(B.t.bQCodH)
                 })
             })
         ]
@@ -292,12 +292,12 @@ function et() {
     return (0, i.jsx)(d.xJW, {
         className: G.marginTop20,
         children: (0, i.jsx)(d.j7V, {
-            note: M.intl.string(M.t['72i5GB']),
+            note: B.intl.string(B.t['72i5GB']),
             value: e,
             onChange: function () {
                 (0, p.gs)(!e);
             },
-            children: M.intl.string(M.t.OLZFBw)
+            children: B.intl.string(B.t.OLZFBw)
         })
     });
 }
@@ -306,26 +306,26 @@ function en() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(d.xJW, {
-                title: M.intl.string(M.t.uSOPWl),
+                title: B.intl.string(B.t.uSOPWl),
                 className: G.marginTop20,
                 children: [
                     (0, i.jsx)(d.R94, {
                         type: d.R94.Types.DESCRIPTION,
                         className: G.marginBottom8,
-                        children: M.intl.string(M.t['86hjzc'])
+                        children: B.intl.string(B.t['86hjzc'])
                     }),
                     (0, i.jsx)(d.FXm, {
                         options: [
                             {
-                                name: M.intl.string(M.t.YEOEi4),
+                                name: B.intl.string(B.t.YEOEi4),
                                 value: 'username'
                             },
                             {
-                                name: M.intl.string(M.t.mQaro6),
+                                name: B.intl.string(B.t.mQaro6),
                                 value: 'dot'
                             },
                             {
-                                name: M.intl.string(M.t.Ji2EVF),
+                                name: B.intl.string(B.t.Ji2EVF),
                                 value: 'hidden'
                             }
                         ],
@@ -350,12 +350,12 @@ function ei() {
             onChange: function (e) {
                 (0, p.X2)(e);
             },
-            note: M.intl.format(U.default.L8U56u, {
+            note: B.intl.format(U.default.L8U56u, {
                 onClickOpenModal() {
                     (0, j.I)({ analyticsLocations: t });
                 }
             }),
-            children: M.intl.string(U.default['2gFUEx'])
+            children: B.intl.string(U.default['2gFUEx'])
         })
     });
 }
@@ -366,12 +366,12 @@ function er() {
         (0, D.Z)(t, Z.rP.SYNC_PROFILE_THEME_WITH_USER_THEME),
         (0, i.jsx)(d.xJW, {
             ref: t,
-            title: M.intl.string(M.t.BT8Bmp),
+            title: B.intl.string(B.t.BT8Bmp),
             className: a()(G.marginTop20, V.syncProfileThemeWithUserTheme),
             children: (0, i.jsx)(T.F, {
                 setting: w.s6.ACCESSIBILITY_PROFILE_COLORS_SYNC_THEMES,
                 children: (0, i.jsx)(d.j7V, {
-                    note: M.intl.format(M.t.u6UjrK, {
+                    note: B.intl.format(B.t.u6UjrK, {
                         onThemeClick() {
                             u.Z.open(k.oAB.APPEARANCE);
                         }
@@ -379,7 +379,7 @@ function er() {
                     className: G.marginTop20,
                     value: e,
                     onChange: p.Uv,
-                    children: M.intl.string(M.t['sSY+mJ'])
+                    children: B.intl.string(B.t['sSY+mJ'])
                 })
             })
         })
@@ -395,9 +395,9 @@ function es() {
     r.useEffect(() => {
         (null != s.current && (clearTimeout(s.current), (s.current = null)), t !== e && (s.current = setTimeout(() => (0, p.qz)(t), 150)));
     }, [t, e]);
-    let a = M.intl.format(M.t.GwEVEx, { learnMoreLink: A.Z.getArticleURL(k.BhN.FORCED_COLORS) });
+    let a = B.intl.format(B.t.GwEVEx, { learnMoreLink: A.Z.getArticleURL(k.BhN.FORCED_COLORS) });
     return (0, i.jsx)(d.xJW, {
-        title: M.intl.string(M.t.TYyfOz),
+        title: B.intl.string(B.t.TYyfOz),
         className: G.marginTop20,
         children: (0, i.jsx)(T.F, {
             setting: w.s6.ACCESSIBILITY_CONTRAST_SYNC_FORCED_COLORS,
@@ -405,7 +405,7 @@ function es() {
                 value: t,
                 note: a,
                 onChange: n,
-                children: M.intl.string(M.t.cguieX)
+                children: B.intl.string(B.t.cguieX)
             })
         })
     });
@@ -439,13 +439,13 @@ function ea() {
         }, []);
     return (0, i.jsxs)(d.xJW, {
         ref: m,
-        title: M.intl.string(M.t.e3TR1d),
+        title: B.intl.string(B.t.e3TR1d),
         className: a()(G.marginTop20, V.reducedMotion),
         children: [
             (0, i.jsx)(d.R94, {
                 type: d.R94.Types.DESCRIPTION,
                 className: G.marginBottom8,
-                children: M.intl.format(M.t['2l9U2t'], { helpdeskArticle: A.Z.getArticleURL(k.BhN.REDUCED_MOTION) })
+                children: B.intl.format(B.t['2l9U2t'], { helpdeskArticle: A.Z.getArticleURL(k.BhN.REDUCED_MOTION) })
             }),
             (0, i.jsx)(d.XZJ, {
                 className: a()(G.marginTop20, G.marginBottom20),
@@ -455,7 +455,7 @@ function ea() {
                 onChange: h,
                 children: (0, i.jsx)(d.Text, {
                     variant: 'text-sm/normal',
-                    children: M.intl.string(M.t['+Dx+HB'])
+                    children: B.intl.string(B.t['+Dx+HB'])
                 })
             }),
             (0, i.jsx)(T.F, {
@@ -463,7 +463,7 @@ function ea() {
                 children: (0, i.jsx)(d.j7V, {
                     value: n,
                     onChange: f,
-                    children: M.intl.string(M.t.b3XBzs)
+                    children: B.intl.string(B.t.b3XBzs)
                 })
             }),
             (0, i.jsx)(T.F, {
@@ -473,7 +473,7 @@ function ea() {
                     value: e,
                     note: null != o ? (0, S.Z)(o) : void 0,
                     onChange: P.QK.updateSetting,
-                    children: M.intl.string(M.t.Iayoh4)
+                    children: B.intl.string(B.t.Iayoh4)
                 })
             }),
             (0, i.jsx)(T.F, {
@@ -483,7 +483,7 @@ function ea() {
                     value: t,
                     note: null != u ? (0, S.Z)(u) : void 0,
                     onChange: P.Yk.updateSetting,
-                    children: M.intl.string(M.t.iIaOlZ)
+                    children: B.intl.string(B.t.iIaOlZ)
                 })
             })
         ]
@@ -497,26 +497,26 @@ function el() {
         }, []);
     return (0, i.jsxs)(d.xJW, {
         className: G.marginTop20,
-        title: M.intl.string(M.t['6NtAuL']),
+        title: B.intl.string(B.t['6NtAuL']),
         children: [
             (0, i.jsx)(d.R94, {
                 type: d.R94.Types.DESCRIPTION,
                 className: G.marginBottom8,
-                children: null != t ? (0, S.Z)(t) : M.intl.string(M.t.GRa6U1)
+                children: null != t ? (0, S.Z)(t) : B.intl.string(B.t.GRa6U1)
             }),
             (0, i.jsx)(d.FXm, {
                 options: [
                     {
-                        name: M.intl.string(M.t['Xp+X2d']),
+                        name: B.intl.string(B.t['Xp+X2d']),
                         value: L.yr.ALWAYS_ANIMATE
                     },
                     {
-                        name: M.intl.string(M.t.IlLT7e),
-                        desc: M.intl.string(M.t.bIW9Tk),
+                        name: B.intl.string(B.t.IlLT7e),
+                        desc: B.intl.string(B.t.bIW9Tk),
                         value: L.yr.ANIMATE_ON_INTERACTION
                     },
                     {
-                        name: M.intl.string(M.t.IGu8x8),
+                        name: B.intl.string(B.t.IGu8x8),
                         value: L.yr.NEVER_ANIMATE
                     }
                 ],
@@ -538,7 +538,7 @@ function eo() {
             children: [
                 (0, i.jsx)(d.vwX, {
                     className: G.marginBottom8,
-                    children: M.intl.string(M.t.onqU6u)
+                    children: B.intl.string(B.t.onqU6u)
                 }),
                 (0, i.jsx)(T.F, {
                     setting: w.s6.ACCESSIBILITY_MESSAGES_SEND_MESSAGE_BUTTON,
@@ -546,7 +546,7 @@ function eo() {
                         className: G.marginTop20,
                         value: e,
                         onChange: p.eN,
-                        children: M.intl.string(M.t['3Fztn5'])
+                        children: B.intl.string(B.t['3Fztn5'])
                     })
                 }),
                 (0, i.jsx)(T.F, {
@@ -554,7 +554,7 @@ function eo() {
                     children: (0, i.jsx)(d.j7V, {
                         className: G.marginTop8,
                         value: t,
-                        note: M.intl.string(M.t.Q7wgHR),
+                        note: B.intl.string(B.t.Q7wgHR),
                         onChange: (e) => {
                             (y.default.track(k.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
                                 enabled: e,
@@ -562,7 +562,7 @@ function eo() {
                             }),
                                 P.dN.updateSetting(e));
                         },
-                        children: M.intl.string(M.t.TZ2hZG)
+                        children: B.intl.string(B.t.TZ2hZG)
                     })
                 })
             ]
@@ -583,7 +583,7 @@ function ec() {
                           children: [
                               (0, i.jsx)(d.vwX, {
                                   className: G.marginBottom8,
-                                  children: M.intl.string(M.t.VpSKeH)
+                                  children: B.intl.string(B.t.VpSKeH)
                               }),
                               (0, i.jsx)(T.F, {
                                   setting: w.s6.ACCESSIBILITY_TEXT_TO_SPEECH_TTS_COMMAND,
@@ -591,7 +591,7 @@ function ec() {
                                       className: G.marginTop20,
                                       value: e,
                                       onChange: P.OW.updateSetting,
-                                      children: M.intl.string(M.t.qvTIwc)
+                                      children: B.intl.string(B.t.qvTIwc)
                                   })
                               })
                           ]
@@ -605,20 +605,20 @@ function ec() {
                               (0, i.jsx)(d.vwX, {
                                   id: K,
                                   className: G.marginBottom20,
-                                  children: M.intl.string(M.t.lsW5Eh)
+                                  children: B.intl.string(B.t.lsW5Eh)
                               }),
                               (0, i.jsx)('div', {
                                   className: V.ttsPreviewWrapper,
                                   children: (0, i.jsx)(d.zxk, {
                                       icon: n ? d.fpf : d.o1U,
-                                      text: M.intl.string(M.t.hymc8v),
+                                      text: B.intl.string(B.t.hymc8v),
                                       onClick: () => {
                                           if (n) {
                                               ((0, I.NB)(), s(!1));
                                               return;
                                           }
                                           ((0, I.cP)(
-                                              M.intl.string(M.t.PKaNJC),
+                                              B.intl.string(B.t.PKaNJC),
                                               !0,
                                               void 0,
                                               () => s(!0),
@@ -626,11 +626,11 @@ function ec() {
                                           ),
                                               s(!0));
                                       },
-                                      'aria-label': ''.concat(M.intl.string(M.t.hymc8v), ' ').concat(M.intl.string(M.t.lsW5Eh))
+                                      'aria-label': ''.concat(B.intl.string(B.t.hymc8v), ' ').concat(B.intl.string(B.t.lsW5Eh))
                                   })
                               }),
                               (0, i.jsx)(d.iRW, {
-                                  markers: B.q,
+                                  markers: M.q,
                                   initialValue: t,
                                   defaultValue: 1,
                                   stickToMarkers: !0,
@@ -640,12 +640,12 @@ function ec() {
                                       0 === e
                                           ? (0, i.jsx)('span', {
                                                 className: V.ttsSliderMarker,
-                                                children: M.intl.string(M.t['493lwc'])
+                                                children: B.intl.string(B.t['493lwc'])
                                             })
                                           : 10 === e
                                             ? (0, i.jsx)('span', {
                                                   className: V.ttsSliderMarker,
-                                                  children: M.intl.string(M.t.ZSZEdX)
+                                                  children: B.intl.string(B.t.ZSZEdX)
                                               })
                                             : 1 === e
                                               ? (0, i.jsx)('span', { children: 'x1.0' })

@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(667202),
     _ = n(82659),
     j = n(369585),
-    E = n(103866),
-    C = n(213734),
+    C = n(103866),
+    E = n(213734),
     O = n(37148),
     v = n(907862),
     S = n(466590),
@@ -34,15 +34,15 @@ var i = n(255367),
     w = n(554042),
     k = n(706705),
     L = n(726985),
-    B = n(981631),
-    M = n(231338),
+    M = n(981631),
+    B = n(231338),
     U = n(426617),
     V = n(177475),
     G = n(691739),
     F = n(453707),
     H = n(315416),
-    W = n(715720);
-function z(e) {
+    z = n(715720);
+function W(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -333,7 +333,7 @@ function er() {
         children: [
             (0, i.jsx)(D.Z, {
                 parentSetting: L.s6.DESIGN_SYSTEMS,
-                settingsSection: B.oAB.DESIGN_SYSTEMS,
+                settingsSection: M.oAB.DESIGN_SYSTEMS,
                 tabs: [
                     {
                         title: 'Components',
@@ -411,7 +411,7 @@ function es(e) {
         ),
         (0, i.jsx)(
             t,
-            Y(z({}, s), {
+            Y(W({}, s), {
                 loading: n ? a : void 0,
                 onClick: () => l(!a)
             })
@@ -954,7 +954,7 @@ function eu() {
                         children: (e) =>
                             (0, i.jsx)(
                                 T.zxk,
-                                z(
+                                W(
                                     {
                                         variant: 'primary',
                                         text: 'Tooltip on the top'
@@ -970,7 +970,7 @@ function eu() {
                         children: (e) =>
                             (0, i.jsx)(
                                 T.zxk,
-                                z(
+                                W(
                                     {
                                         variant: 'primary',
                                         text: 'Tooltip on the left'
@@ -986,7 +986,7 @@ function eu() {
                         children: (e) =>
                             (0, i.jsx)(
                                 T.zxk,
-                                z(
+                                W(
                                     {
                                         variant: 'primary',
                                         text: 'Tooltip on the bottom'
@@ -1002,7 +1002,7 @@ function eu() {
                         children: (e) =>
                             (0, i.jsx)(
                                 T.zxk,
-                                z(
+                                W(
                                     {
                                         variant: 'primary',
                                         text: 'Tooltip on the right'
@@ -1027,16 +1027,16 @@ function em() {
         [g, h] = r.useState(!1),
         [f, b] = r.useState(!1),
         [x, _] = r.useState(!1),
-        [j, E] = r.useState(!1),
-        [C, O] = r.useState(!1),
+        [j, C] = r.useState(!1),
+        [E, O] = r.useState(!1),
         [I, N] = r.useState(!1),
         [y, A] = r.useState(!1),
         [P, R] = r.useState(!1),
         [D, Z] = r.useState(!1),
         [w, k] = r.useState(!1),
-        [L, B] = r.useState(!1),
-        [M, V] = r.useState(!1),
-        [G, z] = r.useState(!1),
+        [L, M] = r.useState(!1),
+        [B, V] = r.useState(!1),
+        [G, W] = r.useState(!1),
         Y = r.useRef(null),
         K = r.useRef(null),
         q = r.useRef(null),
@@ -1057,7 +1057,7 @@ function em() {
         ed = r.useRef(null),
         eu = r.useRef(null),
         em = r.useCallback(() => {
-            (t(!1), s(!1), l(!1), c(!1), u(!1), p(!1), h(!1), b(!1), _(!1), E(!1), O(!1), N(!1), A(!1), R(!1), Z(!1), k(!1), B(!1), V(!1), z(!1));
+            (t(!1), s(!1), l(!1), c(!1), u(!1), p(!1), h(!1), b(!1), _(!1), C(!1), O(!1), N(!1), A(!1), R(!1), Z(!1), k(!1), M(!1), V(!1), W(!1));
         }, []);
     return (0, i.jsxs)('div', {
         className: U.section,
@@ -1291,7 +1291,7 @@ function em() {
             }),
             (0, i.jsx)(v.J2, {
                 targetElementRef: ei,
-                shouldShow: C,
+                shouldShow: E,
                 onRequestClose: em,
                 caretConfig: {
                     position: 'bottom',
@@ -1373,7 +1373,7 @@ function em() {
                 title: 'Voice Filters',
                 body: 'Experience enhanced voice quality with our latest filtering technology. Perfect for gaming and streaming.',
                 asset: (0, i.jsx)('img', {
-                    src: W.Z,
+                    src: z.Z,
                     alt: 'Voice Filters'
                 }),
                 badge: 'new',
@@ -1427,7 +1427,7 @@ function em() {
                         title: 'Earn Rewards',
                         body: 'Complete quests to earn Orbs and unlock exclusive rewards.',
                         asset: (0, i.jsx)('img', {
-                            src: W.Z,
+                            src: z.Z,
                             alt: 'Quest Rewards'
                         }),
                         action: { text: 'Next' },
@@ -1462,7 +1462,7 @@ function em() {
                 title: 'Experience Voice Filters',
                 body: 'Enhanced voice quality with our latest filtering technology. Try the expressive button!',
                 asset: (0, i.jsx)('img', {
-                    src: W.Z,
+                    src: z.Z,
                     alt: 'Voice Filters'
                 }),
                 badge: 'new',
@@ -1477,7 +1477,7 @@ function em() {
             }),
             (0, i.jsx)(S.e, {
                 targetElementRef: ed,
-                shouldShow: M,
+                shouldShow: B,
                 onRequestClose: em,
                 caretConfig: {
                     position: 'bottom',
@@ -1499,7 +1499,7 @@ function em() {
                         title: 'Unlock Potential',
                         body: 'Learn how to make the most of your Discord experience.',
                         asset: (0, i.jsx)('img', {
-                            src: W.Z,
+                            src: z.Z,
                             alt: 'Features'
                         }),
                         action: { text: 'Almost There' },
@@ -1672,7 +1672,7 @@ function em() {
                                 text: 'Left Center',
                                 buttonRef: en,
                                 onClick: () => {
-                                    (em(), E(!0));
+                                    (em(), C(!0));
                                 }
                             })
                         ]
@@ -1802,7 +1802,7 @@ function em() {
                                 text: 'Expressive Popover',
                                 buttonRef: ec,
                                 onClick: () => {
-                                    (em(), B(!0));
+                                    (em(), M(!0));
                                 }
                             }),
                             (0, i.jsx)(T.zxk, {
@@ -1818,7 +1818,7 @@ function em() {
                                 text: 'Expressive Video',
                                 buttonRef: eu,
                                 onClick: () => {
-                                    (em(), z(!0));
+                                    (em(), W(!0));
                                 }
                             })
                         ]
@@ -2386,7 +2386,7 @@ function eb(e) {
                                 text: 'Open Next Modal',
                                 onClick: () => {
                                     let e = s + 1;
-                                    (0, T.h7j)((t) => (0, i.jsx)(eb, Y(z({}, t), { modalCount: e })), { stackingBehavior: a });
+                                    (0, T.h7j)((t) => (0, i.jsx)(eb, Y(W({}, t), { modalCount: e })), { stackingBehavior: a });
                                 }
                             })
                     ]
@@ -2420,14 +2420,14 @@ function ex(e) {
             }),
             (0, i.jsx)('div', {
                 className: U.modalOutlines,
-                children: (0, i.jsx)(E.f, {
+                children: (0, i.jsx)(C.f, {
                     controls: (0, i.jsx)(r, { children: 'This ModalBody renders any controls here' }),
                     children: (0, i.jsx)(r, { children: 'This is the main ModalBody. This area scrolls if there is enough content' })
                 })
             }),
             (0, i.jsx)('div', {
                 className: U.modalOutlines,
-                children: (0, i.jsx)(C.m, { children: (0, i.jsx)(r, { children: 'This is the ModalFooter' }) })
+                children: (0, i.jsx)(E.m, { children: (0, i.jsx)(r, { children: 'This is the ModalFooter' }) })
             }),
             (0, i.jsx)('div', {
                 className: U.modalOutlines,
@@ -2470,7 +2470,7 @@ function e_(e) {
                 subtitle: c,
                 alignCenter: u
             }),
-            (0, i.jsx)(E.f, {
+            (0, i.jsx)(C.f, {
                 controls: p
                     ? (0, i.jsx)(T.E1j, {
                           placeholder: 'Search',
@@ -2572,7 +2572,7 @@ function e_(e) {
                 })
             }),
             h &&
-                (0, i.jsxs)(C.m, {
+                (0, i.jsxs)(E.m, {
                     children: [
                         (0, i.jsx)(T.X6q, {
                             variant: 'heading-lg/semibold',
@@ -2666,7 +2666,7 @@ function ej(e) {
         children: [(0, i.jsx)(s, { text: 'John Doe' }), (0, i.jsx)(s, { text: 'Mark' }), (0, i.jsx)(s, { text: 'KawaiiHermit' }), (0, i.jsx)(s, { text: 'YurBruhGio' }), (0, i.jsx)(s, { text: 'John Doe' }), (0, i.jsx)(s, { text: 'Mark' }), (0, i.jsx)(s, { text: 'KawaiiHermit' }), (0, i.jsx)(s, { text: 'YurBruhGio' }), (0, i.jsx)(s, { text: 'John Doe' }), (0, i.jsx)(s, { text: 'Mark' }), (0, i.jsx)(s, { text: 'KawaiiHermit' }), (0, i.jsx)(s, { text: 'YurBruhGio' }), (0, i.jsx)(s, { text: 'John Doe' }), (0, i.jsx)(s, { text: 'Mark' }), (0, i.jsx)(s, { text: 'KawaiiHermit' }), (0, i.jsx)(s, { text: 'YurBruhGio' })]
     });
 }
-function eE(e) {
+function eC(e) {
     let { transitionState: t, onClose: n } = e;
     return (0, i.jsx)(_.Modal, {
         transitionState: t,
@@ -2687,7 +2687,7 @@ function eE(e) {
         ]
     });
 }
-function eC(e) {
+function eE(e) {
     let { transitionState: t, onClose: s } = e,
         [a, l] = r.useState(0),
         o = r.useMemo(
@@ -2799,7 +2799,7 @@ function eO(e) {
                           text: 'Open Next Modal',
                           onClick: () => {
                               let e = s + 1;
-                              (0, T.h7j)((t) => (0, i.jsx)(eO, Y(z({}, t), { modalCount: e })), { stackingBehavior: a });
+                              (0, T.h7j)((t) => (0, i.jsx)(eO, Y(W({}, t), { modalCount: e })), { stackingBehavior: a });
                           }
                       }
                   ]
@@ -2868,7 +2868,7 @@ function ev() {
                         variant: 'primary',
                         text: 'Open modal',
                         onClick: () => {
-                            (0, T.h7j)((e) => (0, i.jsx)(ef, z({}, e)));
+                            (0, T.h7j)((e) => (0, i.jsx)(ef, W({}, e)));
                         }
                     }),
                     (0, i.jsx)(T.zxk, {
@@ -2887,7 +2887,7 @@ function ev() {
                         variant: 'primary',
                         text: 'Open modal stacking demo',
                         onClick: () => {
-                            (0, T.h7j)((e) => (0, i.jsx)(eb, z({}, e)));
+                            (0, T.h7j)((e) => (0, i.jsx)(eb, W({}, e)));
                         }
                     })
                 ]
@@ -2903,42 +2903,42 @@ function ev() {
                         variant: 'primary',
                         text: 'Open modal section visualizer',
                         onClick: () => {
-                            (0, T.h7j)((e) => (0, i.jsx)(ex, z({}, e)));
+                            (0, T.h7j)((e) => (0, i.jsx)(ex, W({}, e)));
                         }
                     }),
                     (0, i.jsx)(T.zxk, {
                         variant: 'primary',
                         text: 'Open demo modal',
                         onClick: () => {
-                            (0, T.h7j)((e) => (0, i.jsx)(e_, z({}, e)));
+                            (0, T.h7j)((e) => (0, i.jsx)(e_, W({}, e)));
                         }
                     }),
                     (0, i.jsx)(T.zxk, {
                         variant: 'primary',
                         text: 'Open sample invite modal',
                         onClick: () => {
-                            (0, T.h7j)((e) => (0, i.jsx)(ej, z({}, e)));
+                            (0, T.h7j)((e) => (0, i.jsx)(ej, W({}, e)));
                         }
                     }),
                     (0, i.jsx)(T.zxk, {
                         variant: 'primary',
                         text: 'Open sample alert modal',
                         onClick: () => {
-                            (0, T.h7j)((e) => (0, i.jsx)(eE, z({}, e)));
+                            (0, T.h7j)((e) => (0, i.jsx)(eC, W({}, e)));
                         }
                     }),
                     (0, i.jsx)(T.zxk, {
                         variant: 'primary',
                         text: 'Open expressive modal',
                         onClick: () => {
-                            (0, T.h7j)((e) => (0, i.jsx)(eC, z({}, e)));
+                            (0, T.h7j)((e) => (0, i.jsx)(eE, W({}, e)));
                         }
                     }),
                     (0, i.jsx)(T.zxk, {
                         variant: 'primary',
                         text: 'Open Mana modal stacking demo',
                         onClick: () => {
-                            (0, T.h7j)((e) => (0, i.jsx)(eO, z({}, e)));
+                            (0, T.h7j)((e) => (0, i.jsx)(eO, W({}, e)));
                         }
                     })
                 ]
@@ -2949,7 +2949,7 @@ function ev() {
 function eS() {
     let e = (0, c.e7)([N.Z], () => N.Z.gradientPreset);
     return (0, i.jsx)(T.f6W, {
-        theme: M.BR.DARKER,
+        theme: B.BR.DARKER,
         disableAdaptiveTheme: !0,
         children: (t) =>
             (0, i.jsxs)('div', {
@@ -2961,7 +2961,7 @@ function eS() {
                         fullWidth: !0
                     }),
                     (0, i.jsx)(T.f6W, {
-                        theme: M.BR.LIGHT,
+                        theme: B.BR.LIGHT,
                         children: (t) =>
                             (0, i.jsxs)('div', {
                                 className: a()(t, U.section),
@@ -2972,7 +2972,7 @@ function eS() {
                                         fullWidth: !0
                                     }),
                                     (0, i.jsx)(T.f6W, {
-                                        theme: M.BR.DARKER,
+                                        theme: B.BR.DARKER,
                                         children: (e) =>
                                             (0, i.jsx)('div', {
                                                 className: a()(e, U.section),

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => z }), n(388685), n(539854), n(781311), n(290780));
+(n.d(t, { Z: () => z }), n(388685), n(539854), n(781311), n(290780), n(35282));
 var r,
     i = n(442837),
     a = n(570140),
@@ -393,6 +393,61 @@ class W extends (r = i.ZP.Store) {
     }
     getSelectedSearchContext() {
         return y;
+    }
+    getFilterResults(e, t, n) {
+        var r, i, a;
+        let { tokens: o } = null != (r = O[(0, m.WJ)(e)]) ? r : {},
+            s = [];
+        switch (t) {
+            case E.dCx.FILTER_FROM:
+            case E.dCx.FILTER_MENTIONS:
+                if (E.Xyh.test(n) || (0, g.co)(n)) {
+                    let e = f.default.getUser(n);
+                    null != e &&
+                        (s = [
+                            {
+                                user: e,
+                                text: h.ZP.getUserTag(e)
+                            }
+                        ]);
+                }
+                if ((0, m.b7)(e)) {
+                    let t = u.Z.getCurrentlySelectedChannelId(e.guildId),
+                        r = _.ZP.getRecentlyTalked(t, I);
+                    if (0 === n.trim().length)
+                        return (
+                            r.forEach((e) => {
+                                let { record: t } = e;
+                                s.push({
+                                    user: t,
+                                    text: h.ZP.getUserTag(t)
+                                });
+                            }),
+                            s
+                        );
+                }
+                let l = null == (i = g.ZP[t]) ? void 0 : i.getAutocompletions;
+                return (s =
+                    null != l
+                        ? l({
+                              query: n,
+                              searchContext: e,
+                              maxResults: I,
+                              tokens: o
+                          })
+                        : []);
+            default:
+                let c = null == (a = g.ZP[t]) ? void 0 : a.getAutocompletions;
+                return (s =
+                    null != c
+                        ? c({
+                              query: n,
+                              searchContext: e,
+                              maxResults: I,
+                              tokens: o
+                          })
+                        : []);
+        }
     }
 }
 b(W, 'displayName', 'SearchAutocompleteStore');

@@ -18,8 +18,8 @@ var r = n(512722),
     x = n(809357),
     _ = n(371651),
     j = n(624864),
-    E = n(957148),
-    C = n(556296),
+    C = n(957148),
+    E = n(556296),
     O = n(808506),
     v = n(237997),
     S = n(626135);
@@ -33,8 +33,8 @@ function P(e) {
     var t;
     let n = v.default.getNotificationPositionMode(),
         i = n !== I._vf.DISABLED,
-        r = C.ZP.getOverlayKeybind(),
-        s = C.ZP.getOverlayChatKeybind();
+        r = E.ZP.getOverlayKeybind(),
+        s = E.ZP.getOverlayChatKeybind();
     return {
         enabled: O.default.enabled,
         notifications_enabled: i,
@@ -72,9 +72,9 @@ function D(e) {
             shouldShowKeybindIndicators: v.default.showKeybindIndicators,
             textChatDisabled: j.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT)
         })),
-        L = (0, o.e7)([C.ZP], () => C.ZP.getOverlayKeybind()),
-        B = (0, x.Z)({ location: 'overlay_user_settings' }),
-        M = (0, p.$1)(),
+        L = (0, o.e7)([E.ZP], () => E.ZP.getOverlayKeybind()),
+        M = (0, x.Z)({ location: 'overlay_user_settings' }),
+        B = (0, p.$1)(),
         U = P(A);
     return (
         l().isEqual(U, A) || (S.default.track(I.rMx.OVERLAY_SETTINGS_UPDATED, U), (A = U)),
@@ -95,14 +95,14 @@ function D(e) {
                                     children: (0, i.jsx)(c.j7V, {
                                         className: y.enableSwitch,
                                         value: a,
-                                        disabled: M,
-                                        note: M ? N.intl.string(N.t.Eb0lnJ) : null,
+                                        disabled: B,
+                                        note: B ? N.intl.string(N.t.Eb0lnJ) : null,
                                         hideBorder: !0,
                                         onChange: function (e) {
                                             var t, n;
                                             u.Z.setEnabled(e, r);
                                             let i = null != (n = null == (t = g.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id) ? n : null;
-                                            ((0, f.ou)(e, f.AE.LEGACY, i), !e && a && (0, E.l)(f.AE.LEGACY, i));
+                                            ((0, f.ou)(e, f.AE.LEGACY, i), !e && a && (0, C.l)(f.AE.LEGACY, i));
                                         },
                                         children: N.intl.string(N.t.vSP6c3)
                                     })
@@ -226,7 +226,7 @@ function D(e) {
                                 value: D
                             })
                         }),
-                        B &&
+                        M &&
                             (0, i.jsx)(R, {
                                 children: (0, i.jsx)(c.j7V, {
                                     value: k,

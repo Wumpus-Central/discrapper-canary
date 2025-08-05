@@ -2,7 +2,7 @@
     Gj: () => V,
     Pt: () => U,
     VO: () => F,
-    ji: () => z,
+    ji: () => W,
     q8: () => H
 }),
     n(836215),
@@ -29,8 +29,8 @@ var i = n(73800),
     x = n(977156),
     _ = n(921157),
     j = n(667172),
-    E = n(237292),
-    C = n(314897),
+    C = n(237292),
+    E = n(314897),
     O = n(906467),
     v = n(283595),
     S = n(131951),
@@ -46,22 +46,22 @@ var i = n(73800),
     w = n(839469),
     k = n(726985),
     L = n(46140),
-    B = n(388032);
-function M(e) {
+    M = n(388032);
+function B(e) {
     let { shouldMergeGameSettings: t, showRedesignedThirdPartyAccessSettings: n } = e,
         i = O.Z.isDeveloper,
         r = [
             {
-                header: B.intl.string(B.t.cduTBA),
+                header: M.intl.string(M.t.cduTBA),
                 settings: n ? [k.s6.ACCOUNT, k.s6.GAMES, k.s6.PROFILE_CUSTOMIZATION, k.s6.CONTENT_SOCIAL, k.s6.DATA_PRIVACY, k.s6.PRIVACY_FAMILY_CENTER, k.s6.THIRD_PARTY_ACCESS, k.s6.SESSIONS, k.s6.CLIPS] : [k.s6.ACCOUNT, k.s6.GAMES, k.s6.PROFILE_CUSTOMIZATION, k.s6.CONTENT_SOCIAL, k.s6.DATA_PRIVACY, k.s6.PRIVACY_FAMILY_CENTER, k.s6.AUTHORIZED_APPS, k.s6.SESSIONS, k.s6.CONNECTIONS, k.s6.CLIPS]
             },
             {
-                header: B.intl.string(B.t['4uOdGh']),
+                header: M.intl.string(M.t['4uOdGh']),
                 divider: !0,
                 settings: [k.s6.PREMIUM, k.s6.GUILD_BOOSTING, k.s6.SUBSCRIPTIONS, k.s6.GIFT_INVENTORY, k.s6.BILLING]
             },
             {
-                header: B.intl.string(B.t.f2n1TE),
+                header: M.intl.string(M.t.f2n1TE),
                 divider: !0,
                 settings: [k.s6.APPEARANCE, k.s6.ACCESSIBILITY, k.s6.VOICE_AND_VIDEO, k.s6.CLICKER_GAME, k.s6.POGGERMODE, k.s6.CHAT, k.s6.NOTIFICATIONS, k.s6.KEYBINDS, k.s6.LANGUAGE, k.s6.WINDOW_SETTINGS, k.s6.LINUX_SETTINGS, k.s6.STREAMER_MODE, k.s6.SETTINGS_ADVANCED]
             },
@@ -84,7 +84,7 @@ function M(e) {
             }
         ],
         s = {
-            header: B.intl.string(B.t.SmHCFR),
+            header: M.intl.string(M.t.SmHCFR),
             divider: !0,
             settings: [k.s6.ACTIVITY_PRIVACY, k.s6.REGISTERED_GAMES, k.s6.OVERLAY]
         };
@@ -96,18 +96,18 @@ function U() {
         A = (0, f.U)(),
         w = (0, r.e7)([I.Z], () => I.Z.getProps().impressionSource),
         k = (0, h.gU)(),
-        B = (0, Z.bC)(),
-        M = (0, o.Go)(),
-        [U] = (0, c.cv)(M ? [s.z.CLIPS_SETTINGS_BETA_TAG] : []),
+        M = (0, Z.bC)(),
+        B = (0, o.Go)(),
+        [U] = (0, c.cv)(B ? [s.z.CLIPS_SETTINGS_BETA_TAG] : []),
         { shouldMergeGameSettings: V } = y.b.useExperiment({ location: 'settings' }),
         G = (0, m.Xo)({ location: 'settings' }),
         F = null != (n = null == (e = N.default.getCurrentUser()) ? void 0 : e.isStaff()) && n,
-        H = (0, E.y0)({ location: 'settings' }),
-        W = (0, j.v4)({ location: 'settings' }),
-        z = (0, l.Q)(),
+        H = (0, C.y0)({ location: 'settings' }),
+        z = (0, j.v4)({ location: 'settings' }),
+        W = (0, l.Q)(),
         Y = (0, x.Zy)({ location: L.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         K = (0, r.e7)([v.Z], () => v.Z.hasLibraryApplication()),
-        q = (0, r.e7)([C.default], () => C.default.hasTOTPEnabled()),
+        q = (0, r.e7)([E.default], () => E.default.hasTOTPEnabled()),
         X = P.Sb.useSetting(),
         J = (0, p.Z)(),
         { hypeSquadRemoved: Q } = u.Z.useExperiment({ location: 'settings' }),
@@ -138,14 +138,14 @@ function U() {
                 showPrepaidPaymentPastDueWarning: A,
                 impressionSource: w,
                 numOfPendingFamilyRequests: k,
-                isOverlaySupported: B,
+                isOverlaySupported: M,
                 isClipsBetaTagShowing: U === s.z.CLIPS_SETTINGS_BETA_TAG,
                 shouldMergeGameSettings: V,
                 isKeywordFilteringEnabled: G,
                 isStaff: F,
                 isInappropriateConversationWarningEnabled: H,
-                isInapproprateConversationsDefaultOn: W,
-                paymentsBlocked: z,
+                isInapproprateConversationsDefaultOn: z,
+                paymentsBlocked: W,
                 isEligibleForQuests: Y,
                 isStricterMessageRequestsEnabled: J,
                 hasLibraryApplication: K,
@@ -162,7 +162,7 @@ function U() {
                 activeInputProfile: ea,
                 isInputProfileCustom: el
             }),
-        [X, U, et, en, K, ee, q, Q, w, $, Y, W, H, G, B, F, J, k, z, V, A, O, ei, er, es, ea, el]
+        [X, U, et, en, K, ee, q, Q, w, $, Y, z, H, G, M, F, J, k, W, V, A, O, ei, er, es, ea, el]
     );
 }
 function V(e) {
@@ -219,7 +219,7 @@ function V(e) {
 }
 function G(e, t, n) {
     let i = [],
-        r = W(t),
+        r = z(t),
         s = (function (e, t) {
             let n = new Map();
             return (
@@ -299,7 +299,7 @@ function F() {
         { showRedesign: n } = A.b.useExperiment({ location: 'settings' }),
         r = i.useMemo(
             () =>
-                M({
+                B({
                     shouldMergeGameSettings: t,
                     showRedesignedThirdPartyAccessSettings: n
                 }),
@@ -312,14 +312,14 @@ function H(e) {
         n = (function () {
             let { shouldMergeGameSettings: e } = y.b.useExperiment({ location: 'settings' }),
                 { showRedesign: t } = A.b.useExperiment({ location: 'settings' }),
-                n = M({
+                n = B({
                     shouldMergeGameSettings: e,
                     showRedesignedThirdPartyAccessSettings: t
                 });
             return i.useMemo(
                 () => [
                     {
-                        header: B.intl.string(B.t.zkoeq6),
+                        header: M.intl.string(M.t.zkoeq6),
                         settings: [
                             ...n
                                 .map((e) => {
@@ -336,7 +336,7 @@ function H(e) {
         })();
     return i.useMemo(() => G(n, t, new Set(e)), [n, t, e]);
 }
-function W(e) {
+function z(e) {
     return new Map(
         Object.entries(e).filter((e) => {
             let [t, n] = e;
@@ -344,8 +344,8 @@ function W(e) {
         })
     );
 }
-function z(e) {
-    return Array.from(W(e).entries()).map((e) => {
+function W(e) {
+    return Array.from(z(e).entries()).map((e) => {
         let [t, n] = e;
         return [t, n.searchableTitles];
     });

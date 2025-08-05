@@ -17,8 +17,8 @@ var i = n(255367),
     x = n(47280),
     _ = n(105759),
     j = n(736519),
-    E = n(422034),
-    C = n(710220),
+    C = n(422034),
+    E = n(710220),
     O = n(635921),
     v = n(638631),
     S = n(869783),
@@ -33,8 +33,8 @@ let P = r.forwardRef((e, t) => {
         w = (0, b._O)(),
         k = (0, f.Nx)(),
         L = (0, l.e7)([h.Z], () => h.Z.affinities),
-        B = (0, _.Z)(),
-        M = null != B,
+        M = (0, _.Z)(),
+        B = null != M,
         U = P ? o.Tt.WHITE : o.Tt.BRAND,
         V = L.length > 0,
         G = (0, x.Z)({ location: 'HeroHeading' }) ? T.intl.string(T.t['EW+VIS']) : T.intl.string(T.t.YCZldH),
@@ -59,12 +59,12 @@ let P = r.forwardRef((e, t) => {
                                 color: 'header-primary',
                                 children: G
                             }),
-                            M
-                                ? (0, i.jsx)(C.Z, { referrer: B })
+                            B
+                                ? (0, i.jsx)(E.Z, { referrer: M })
                                 : V &&
                                   (0, i.jsx)('div', {
                                       className: I.affinityDescriptionContainer,
-                                      children: (0, i.jsx)(E.Z, {
+                                      children: (0, i.jsx)(C.Z, {
                                           textColor: 'text-default',
                                           smallerText: !1,
                                           isApplicationHome: !0
@@ -72,7 +72,7 @@ let P = r.forwardRef((e, t) => {
                                   }),
                             w
                                 ? (0, i.jsx)('div', {
-                                      className: a()(I.buttonContainer, I.marketingPageCTAContainer, { [I.marketingPageCTAMargin]: !(V || M) }),
+                                      className: a()(I.buttonContainer, I.marketingPageCTAContainer, { [I.marketingPageCTAMargin]: !(V || B) }),
                                       children: (0, i.jsx)(j.Z, {
                                           className: a()(I.button, r),
                                           color: U
@@ -81,7 +81,7 @@ let P = r.forwardRef((e, t) => {
                                 : (0, i.jsx)(O.PK, {
                                       subscriptionTier: s,
                                       inOfferExperience: k,
-                                      containerClassName: a()(I.marketingPageCTAContainer, { [I.marketingPageCTAMargin]: !(V || M) }),
+                                      containerClassName: a()(I.marketingPageCTAContainer, { [I.marketingPageCTAMargin]: !(V || B) }),
                                       buttonClassName: r,
                                       isApplicationHome: !0,
                                       isDarkMode: P,

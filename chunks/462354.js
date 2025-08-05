@@ -10,12 +10,22 @@ let i = (0, n(818083).B)({
     treatments: [
         {
             id: 1,
-            label: '70% Affinity',
+            label: '60% Affinity',
             config: { enabled: !0 }
         },
         {
             id: 2,
-            label: '80% Affinity',
+            label: '70% Affinity',
+            config: { enabled: !0 }
+        },
+        {
+            id: 3,
+            label: '60% Affinity, no channel rate limit',
+            config: { enabled: !0 }
+        },
+        {
+            id: 4,
+            label: '50% Affinity, no channel rate limit',
             config: { enabled: !0 }
         }
     ]

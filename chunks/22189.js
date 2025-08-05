@@ -21,8 +21,8 @@ var s = n(399606),
     x = n(594174),
     _ = n(78839),
     j = n(585483),
-    E = n(424218),
-    C = n(63063),
+    C = n(424218),
+    E = n(63063),
     O = n(74538),
     v = n(229555),
     S = n(768865),
@@ -38,15 +38,15 @@ var s = n(399606),
     w = n(926433),
     k = n(302036),
     L = n(994554),
-    B = n(567396),
-    M = n(925309),
+    M = n(567396),
+    B = n(925309),
     U = n(46245),
     V = n(766491),
     G = n(193943),
     F = n(707046),
     H = n(488459),
-    W = n(334347),
-    z = n(132015),
+    z = n(334347),
+    W = n(132015),
     Y = n(142416),
     K = n(498730),
     q = n(607762),
@@ -67,7 +67,7 @@ var s = n(399606),
 let ed = () => {
     let { analyticsLocations: e } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_PERK_CARD),
         t = (0, o.ZP)(),
-        n = (0, E.BU)(N.Uq / 1024, { useKibibytes: !0 }),
+        n = (0, C.BU)(N.Uq / 1024, { useKibibytes: !0 }),
         i = (0, s.e7)([_.Z], () => _.Z.getPremiumTypeSubscription()),
         ec = null != i ? O.ZP.getPremiumPlanItem(i) : null,
         ed = (null != ec ? O.ZP.getSkuIdForPlan(ec.planId) : null) === N.Si.TIER_2,
@@ -91,10 +91,10 @@ let ed = () => {
         ej = () => {
             (0, h.uL)(y.Z5c.COLLECTIBLES_SHOP);
         },
-        eE = () => {
+        eC = () => {
             l.Z.open(y.oAB.APPEARANCE, null, { scrollPosition: P.h1.CUSTOM_APP_ICONS });
         },
-        eC = {
+        eE = {
             clientThemes: {
                 name: 'clientThemes',
                 title: D.intl.string(D.t.kWM48P),
@@ -107,7 +107,7 @@ let ed = () => {
                         analyticsLocations: e
                     });
                 },
-                perkImage: B
+                perkImage: M
             },
             clips: em
                 ? {
@@ -125,7 +125,7 @@ let ed = () => {
                                 });
                             }
                           : () => {
-                                window.open(C.Z.getArticleURL(y.BhN.CLIPS), '_blank');
+                                window.open(E.Z.getArticleURL(y.BhN.CLIPS), '_blank');
                             },
                       perkImage: V
                   }
@@ -177,14 +177,14 @@ let ed = () => {
                       description: D.intl.string(D.t.mUT8bG),
                       descriptionCta: D.intl.string(D.t.jVcuVV),
                       onCtaClick: e_,
-                      perkImage: z
+                      perkImage: W
                   }
                 : {
                       name: 'entranceSounds',
                       title: D.intl.string(D.t['f4M+Hx']),
                       subtitle: D.intl.string(D.t['7ZCYvL']),
                       description: D.intl.string(D.t['3smf/f']),
-                      perkImage: z
+                      perkImage: W
                   },
             entranceSoundsSeeAllVariation: em
                 ? {
@@ -210,7 +210,7 @@ let ed = () => {
                 description: D.intl.string(D.t.kWcDKy),
                 descriptionCta: D.intl.string(D.t.jVcuVV),
                 onCtaClick: ex,
-                perkImage: M
+                perkImage: B
             },
             remixing: em
                 ? {
@@ -335,13 +335,13 @@ let ed = () => {
                 perkImage: G,
                 description: D.intl.string(D.t.e7FKCg),
                 descriptionCta: D.intl.string(D.t.jVcuVV),
-                onCtaClick: eE
+                onCtaClick: eC
             },
             moreEmojiPower: {
                 name: 'moreEmojiPower',
                 title: D.intl.string(D.t['R2IV/f']),
                 subtitle: D.intl.string(D.t.R5Xag4),
-                perkImage: W,
+                perkImage: z,
                 description: D.intl.string(D.t['8lsjS0'])
             },
             customSoundsEverywhere: {
@@ -379,14 +379,14 @@ let ed = () => {
                 description: D.intl.string(D.t.ee7wQ0),
                 descriptionCta: em || ep ? D.intl.string(D.t.y9TxXV) : D.intl.string(D.t.d8o6lZ),
                 isPremiumGetCta: !(em || ep),
-                onCtaClick: em || ep ? eE : void 0,
+                onCtaClick: em || ep ? eC : void 0,
                 perkImage: q
             },
             referralProgram: {
                 name: 'referralProgram',
                 title: D.intl.string(D.t.tPY4o6),
                 subtitle: D.intl.string(D.t.JY0grK),
-                description: D.intl.format(D.t['2JqTFx'], { helpdeskArticle: C.Z.getArticleURL(y.BhN.REFERRAL_PROGRAM) }),
+                description: D.intl.format(D.t['2JqTFx'], { helpdeskArticle: E.Z.getArticleURL(y.BhN.REFERRAL_PROGRAM) }),
                 descriptionCta: D.intl.string(D.t.JST6jo),
                 isPremiumGetCta: !ed || void 0,
                 perkImage: J
@@ -404,7 +404,7 @@ let ed = () => {
                 name: 'permadecos',
                 title: D.intl.string(D.t['57ngoq']),
                 subtitle: D.intl.string(D.t.piFFjY),
-                description: D.intl.format(D.t.Pd7olp, { learnMoreLink: C.Z.getArticleURL(y.BhN.PERMADECOS) }),
+                description: D.intl.format(D.t.Pd7olp, { learnMoreLink: E.Z.getArticleURL(y.BhN.PERMADECOS) }),
                 descriptionCta: em ? D.intl.string(D.t.jVcuVV) : D.intl.string(D.t.JST6jo),
                 isPremiumGetCta: !em,
                 onCtaClick: em
@@ -440,7 +440,7 @@ let ed = () => {
     return (
         em &&
             ef &&
-            (eC.tenureBadge = {
+            (eE.tenureBadge = {
                 name: 'tenureBadge',
                 title: D.intl.string(D.t.rnsqpa),
                 pillText: D.intl.string(D.t.jyYgZ2).toLocaleUpperCase(),
@@ -448,6 +448,6 @@ let ed = () => {
                 cardVariant: T.zW.NITRO_GRADIENT_HOVER_BORDER,
                 onClick: () => (0, S.k)({ analyticsLocations: e })
             }),
-        eC
+        eE
     );
 };
