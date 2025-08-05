@@ -41611,6 +41611,7 @@ body .headerAnimation_b54a5b {
 .profileEffects__01370 {
     height: 100%;
     left: 0;
+    overflow: hidden;
     pointer-events: none;
     position: absolute;
     top: 0;
@@ -41624,10 +41625,8 @@ body .headerAnimation_b54a5b {
 }
 
 .inner__01370 {
-    border-radius: 8px;
     height: 100%;
     left: 0;
-    overflow: hidden;
     pointer-events: none;
     position: absolute;
     top: 0;
