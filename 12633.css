@@ -22008,34 +22008,6 @@ img.inlineAsset__9c640 {
     animation-fill-mode: forwards
 }
 
-.animated_dfb989.gradient_dfb989,
-.forceAnimate_dfb989 .container_dfb989.gradient_dfb989 {
-    background: linear-gradient(90deg, var(--custom-display-name-styles-gradient-start-color), var(--custom-display-name-styles-gradient-end-color), var(--custom-display-name-styles-gradient-start-color));
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-size: 200% auto;
-    -webkit-text-fill-color: transparent;
-    animation: gradientUsernameAnimation_dfb989 1.5s linear;
-    position: relative;
-    z-index: 0
-}
-
-.animated_dfb989.gradient_dfb989:after,
-.forceAnimate_dfb989 .container_dfb989.gradient_dfb989:after {
-    background: inherit;
-    background-clip: text;
-    -webkit-background-clip: text;
-    content: attr(data-username-with-effects) /"";
-    inset: 0;
-    position: absolute;
-    -webkit-text-fill-color: transparent;
-    filter: blur(4px);
-    opacity: .7;
-    text-indent: 0;
-    transition: opacity .1s ease-in-out;
-    z-index: -1
-}
-
 @keyframes pop-animation-main_dfb989 {
     0% {
         transform: translateZ(0)
