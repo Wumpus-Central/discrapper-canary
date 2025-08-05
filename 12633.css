@@ -40210,6 +40210,18 @@ body .headerAnimation_b54a5b {
     padding: var(--space-12)
 }
 
+.table_fda3e4.premiumRebrand_fda3e4 {
+    border: 1px solid var(--border-faint)
+}
+
+.table_fda3e4.hasError_fda3e4 {
+    margin-bottom: var(--space-16)
+}
+
+.flex_fda3e4 {
+    display: flex
+}
+
 .header_fda3e4 {
     color: var(--interactive-active);
     font-weight: var(--font-weight-semibold);
@@ -40235,6 +40247,10 @@ body .headerAnimation_b54a5b {
     align-items: flex-start;
     color: var(--interactive-normal);
     justify-content: space-between
+}
+
+.row_fda3e4.canceled_fda3e4 {
+    color: var(--text-feedback-critical)
 }
 
 .rowAmount_fda3e4 {
