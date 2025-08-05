@@ -1,45 +1,45 @@
-n.d(e, { Z: () => b });
-var i = n(255367),
-    o = n(73800),
-    r = n(442837),
+n.d(e, { Z: () => C });
+var o = n(255367),
+    r = n(73800),
+    i = n(442837),
     a = n(755721),
     l = n(100527),
     c = n(906732),
     s = n(767714),
     u = n(411477),
-    d = n(594174),
-    _ = n(626135),
-    g = n(74538),
+    _ = n(594174),
+    d = n(626135),
+    f = n(74538),
     m = n(981631),
-    h = n(486324),
-    f = n(474936),
-    p = n(388032),
-    x = n(886563);
-function b(t) {
+    p = n(486324),
+    b = n(474936),
+    g = n(388032),
+    v = n(886563);
+function C(t) {
     let { analyticsSection: e, type: n } = t,
-        b = (0, r.e7)([d.default], () => d.default.getCurrentUser()),
-        y = g.ZP.canUseAnimatedAvatar(b),
-        v = g.ZP.canUsePremiumProfileCustomization(b),
-        N = (n === h.pC.BANNER && v) || (n === h.pC.AVATAR && y),
-        { sourceAnalyticsLocations: C } = (0, c.ZP)(l.Z.PREMIUM_PREVIEW_UPSELL_HEADER);
+        C = (0, i.e7)([_.default], () => _.default.getCurrentUser()),
+        x = f.ZP.canUseAnimatedAvatar(C),
+        y = f.ZP.canUsePremiumProfileCustomization(C),
+        N = (n === p.pC.BANNER && y) || (n === p.pC.AVATAR && x),
+        { sourceAnalyticsLocations: h } = (0, c.ZP)(l.Z.PREMIUM_PREVIEW_UPSELL_HEADER);
     if (
-        (o.useEffect(() => {
+        (r.useEffect(() => {
             N ||
-                _.default.track(m.rMx.PREMIUM_UPSELL_VIEWED, {
+                d.default.track(m.rMx.PREMIUM_UPSELL_VIEWED, {
                     type: e,
-                    location_stack: C
+                    location_stack: h
                 });
-        }, [N, e, C]),
+        }, [N, e, h]),
         N)
     )
         return null;
-    let A = (0, i.jsx)(s.Z, {
-        className: x.__invalid_getNitroLink,
+    let A = (0, o.jsx)(s.Z, {
+        className: v.__invalid_getNitroLink,
         size: a.zx.Sizes.SMALL,
         look: a.zx.Looks.LINK,
         color: a.zx.Colors.LINK,
-        subscriptionTier: f.Si.TIER_2,
-        textOptions: { textOverride: p.intl.format(p.t['944tDg'], {}) },
+        subscriptionTier: b.Si.TIER_2,
+        textOptions: { textOverride: g.intl.format(g.t['944tDg'], {}) },
         showIcon: !1,
         premiumModalAnalyticsLocation: {
             section: e,
@@ -47,10 +47,10 @@ function b(t) {
         },
         disableShine: !0
     });
-    return (0, i.jsx)(u.Z, {
+    return (0, o.jsx)(u.Z, {
         reducedRightPadding: !0,
-        className: x.nitroPreviewUpsell,
-        text: p.intl.format(p.t.Og8039, {}),
+        className: v.nitroPreviewUpsell,
+        text: g.intl.format(g.t.Og8039, {}),
         button: A
     });
 }

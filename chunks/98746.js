@@ -1,6 +1,6 @@
 (n.d(e, { default: () => C }), n(388685), n(781311), n(539854));
-var r = n(255367),
-    l = n(73800),
+var l = n(255367),
+    r = n(73800),
     i = n(120356),
     a = n.n(i),
     o = n(442837),
@@ -12,197 +12,197 @@ var r = n(255367),
     g = n(592125),
     v = n(70956),
     b = n(5192),
-    h = n(981631),
-    m = n(388032),
+    m = n(981631),
+    h = n(388032),
     j = n(130883),
     x = n(221166);
-function O() {
+function f() {
     return [
         {
             value: 0,
-            label: m.intl.string(m.t['4obaMT'])
+            label: h.intl.string(h.t['4obaMT'])
         },
         {
             value: +v.Z.Seconds.HOUR,
-            label: m.intl.string(m.t.RKpitb)
+            label: h.intl.string(h.t.RKpitb)
         },
         {
             value: 6 * v.Z.Seconds.HOUR,
-            label: m.intl.string(m.t['8WfJZ2'])
+            label: h.intl.string(h.t['8WfJZ2'])
         },
         {
             value: 12 * v.Z.Seconds.HOUR,
-            label: m.intl.string(m.t.p1up7u)
+            label: h.intl.string(h.t.p1up7u)
         },
         {
             value: +v.Z.Seconds.DAY,
-            label: m.intl.string(m.t.XuVkkJ)
+            label: h.intl.string(h.t.XuVkkJ)
         },
         {
             value: 3 * v.Z.Seconds.DAY,
-            label: m.intl.string(m.t.gMcDS0)
+            label: h.intl.string(h.t.gMcDS0)
         },
         {
             value: 7 * v.Z.Seconds.DAY,
-            label: m.intl.string(m.t.FA7IUl)
+            label: h.intl.string(h.t.FA7IUl)
         }
     ];
 }
-let f = O()[1].value,
-    y = O()[0].value;
+let y = f()[1].value,
+    O = f()[0].value;
 function C(t) {
-    let { guildId: e, user: n, location: i, userIds: v, onBanMultiple: C, transitionState: S, onClose: _, canBulkBan: P = !1, modReportId: R } = t,
-        [T, k] = l.useState(null != R ? y : f),
-        [E, Z] = l.useState(''),
-        [M, w] = l.useState(null),
-        { isModReportClosed: N, isModReport: D } = (0, o.cj)([g.Z], () => {
-            let t = g.Z.getChannel(R);
+    let { guildId: e, user: n, location: i, userIds: v, onBanMultiple: C, transitionState: S, onClose: k, canBulkBan: P = !1, modReportId: Z } = t,
+        [w, _] = r.useState(null != Z ? O : y),
+        [T, I] = r.useState(''),
+        [M, N] = r.useState(null),
+        { isModReportClosed: D, isModReport: K } = (0, o.cj)([g.Z], () => {
+            let t = g.Z.getChannel(Z);
             return {
                 isModReportClosed: null == t ? void 0 : t.isArchivedThread(),
                 isModReport: null == t ? void 0 : t.isModeratorReportChannel()
             };
         }),
-        [I, A] = l.useState(!1),
-        [K, F] = l.useState(!1),
-        U = (0, d.sE)(e, {
+        [R, E] = r.useState(!1),
+        [U, Y] = r.useState(!1),
+        F = (0, d.sE)(e, {
             location: i,
             targetUserId: null == n ? void 0 : n.id,
             targets: v
         }),
-        Y = l.useCallback(() => {
-            let t = null != M ? M : E;
+        J = r.useCallback(() => {
+            let t = null != M ? M : T;
             if (null != C) {
-                if (!(null != v && (null == v ? void 0 : v.size) > 0 && P) || I) return;
-                if ('' === E.trim() && !I) return void A(!0);
-                C(e, [...v], T, t);
+                if (!(null != v && (null == v ? void 0 : v.size) > 0 && P) || R) return;
+                if ('' === T.trim() && !R) return void E(!0);
+                C(e, [...v], w, t);
             } else {
                 if (null == n) return;
-                c.Z.banUser(e, null == n ? void 0 : n.id, T, t, R).then(() => {
-                    K && null != R && p.Z.resolveFlag(R);
+                c.Z.banUser(e, null == n ? void 0 : n.id, w, t, Z).then(() => {
+                    U && null != Z && p.Z.resolveFlag(Z);
                 });
             }
-            (U(d.jQ.BAN), _());
-        }, [M, E, C, U, _, v, P, I, e, T, n, R, K]),
-        J = l.useCallback((t) => {
-            k(t);
+            (F(d.jQ.BAN), k());
+        }, [M, T, C, F, k, v, P, R, e, w, n, Z, U]),
+        X = r.useCallback((t) => {
+            _(t);
         }, []),
-        W = l.useCallback((t) => {
+        A = r.useCallback((t) => {
             let { value: e } = t;
-            (Z(e), A(!1), w(null));
+            (I(e), E(!1), N(null));
         }, []),
-        X = l.useCallback(
+        B = r.useCallback(
             (t) => {
-                (w(t), I && A(!1));
+                (N(t), R && E(!1));
             },
-            [I]
+            [R]
         ),
-        B = D && !N && null != R,
-        L = [
+        W = K && !D && null != Z,
+        q = [
             {
-                name: m.intl.string(m.t.tamLhY),
-                value: m.intl.string(m.t.tamLhY)
+                name: h.intl.string(h.t.tamLhY),
+                value: h.intl.string(h.t.tamLhY)
             },
             {
-                name: m.intl.string(m.t.UmxjMj),
-                value: m.intl.string(m.t.UmxjMj)
+                name: h.intl.string(h.t.UmxjMj),
+                value: h.intl.string(h.t.UmxjMj)
             },
             {
-                name: m.intl.string(m.t.EXY1d3),
-                value: m.intl.string(m.t.EXY1d3)
+                name: h.intl.string(h.t.EXY1d3),
+                value: h.intl.string(h.t.EXY1d3)
             },
             {
-                name: m.intl.string(m.t.BcZTKi),
+                name: h.intl.string(h.t.BcZTKi),
                 value: 'other'
             }
         ],
-        q = (() => {
-            if (null != C && null != v) return m.intl.formatToPlainString(m.t.HVJexc, { count: null == v ? void 0 : v.size });
+        G = (() => {
+            if (null != C && null != v) return h.intl.formatToPlainString(h.t.HVJexc, { count: null == v ? void 0 : v.size });
             if (null == n) return '';
             let t = b.ZP.getName(e, null, n);
-            return m.intl.formatToPlainString(null != R ? m.t.WDR8XV : m.t.jeKpoq, { username: '@'.concat(t) });
+            return h.intl.formatToPlainString(null != Z ? h.t.WDR8XV : h.t.jeKpoq, { username: '@'.concat(t) });
         })(),
-        G = null == R ? null : m.intl.string(m.t.pQjhIC);
-    return (0, r.jsx)(s.Modal, {
-        onClose: _,
+        H = null == Z ? null : h.intl.string(h.t.pQjhIC);
+    return (0, l.jsx)(s.Modal, {
+        onClose: k,
         transitionState: S,
-        title: q,
-        subtitle: null != G ? G : void 0,
+        title: G,
+        subtitle: null != H ? H : void 0,
         actions: (() => {
             let t = [];
             return (
-                D ||
+                K ||
                     t.push({
                         variant: 'secondary',
-                        text: m.intl.string(m.t['ETE/oK']),
-                        onClick: _
+                        text: h.intl.string(h.t['ETE/oK']),
+                        onClick: k
                     }),
                 t.push({
                     variant: 'critical-primary',
-                    text: m.intl.string(m.t['5MBJ5O']),
-                    onClick: Y
+                    text: h.intl.string(h.t['5MBJ5O']),
+                    onClick: J
                 }),
                 t
             );
         })(),
-        actionBarInput: B
-            ? (0, r.jsx)(u.XZJ, {
-                  value: K,
-                  onChange: (t, e) => F(e),
-                  children: (0, r.jsx)(u.Text, {
+        actionBarInput: W
+            ? (0, l.jsx)(u.XZJ, {
+                  value: U,
+                  onChange: (t, e) => Y(e),
+                  children: (0, l.jsx)(u.Text, {
                       variant: 'text-md/normal',
                       color: 'text-default',
-                      children: m.intl.string(j.default['8yIKen'])
+                      children: h.intl.string(j.default['8yIKen'])
                   })
               })
             : void 0,
-        children: (0, r.jsxs)(u.Kqy, {
+        children: (0, l.jsxs)(u.Kqy, {
             direction: 'vertical',
             gap: 24,
             children: [
-                (0, r.jsxs)(u.Kqy, {
+                (0, l.jsxs)(u.Kqy, {
                     direction: 'vertical',
                     gap: 8,
                     children: [
-                        (0, r.jsxs)(u.xJW, {
+                        (0, l.jsxs)(u.xJW, {
                             titleClassName: x.title,
-                            title: (0, r.jsx)(u.Text, {
+                            title: (0, l.jsx)(u.Text, {
                                 variant: 'text-md/medium',
                                 color: 'text-primary',
-                                children: m.intl.string(null != R ? m.t['+KCLVl'] : m.t.w4Ivys)
+                                children: h.intl.string(null != Z ? h.t['+KCLVl'] : h.t.w4Ivys)
                             }),
                             children: [
-                                I &&
-                                    (0, r.jsx)(u.kzN, {
+                                R &&
+                                    (0, l.jsx)(u.kzN, {
                                         className: x.error,
-                                        children: m.intl.string(m.t.IrYX19)
+                                        children: h.intl.string(h.t.IrYX19)
                                     }),
-                                (0, r.jsx)(u.FXm, {
+                                (0, l.jsx)(u.FXm, {
                                     className: x.radioGroup,
-                                    value: E,
-                                    options: L.map((t) => {
+                                    value: T,
+                                    options: q.map((t) => {
                                         var e, n;
                                         return (
                                             (e = (function (t) {
                                                 for (var e = 1; e < arguments.length; e++) {
                                                     var n = null != arguments[e] ? arguments[e] : {},
-                                                        r = Object.keys(n);
+                                                        l = Object.keys(n);
                                                     ('function' == typeof Object.getOwnPropertySymbols &&
-                                                        (r = r.concat(
+                                                        (l = l.concat(
                                                             Object.getOwnPropertySymbols(n).filter(function (t) {
                                                                 return Object.getOwnPropertyDescriptor(n, t).enumerable;
                                                             })
                                                         )),
-                                                        r.forEach(function (e) {
-                                                            var r;
-                                                            ((r = n[e]),
+                                                        l.forEach(function (e) {
+                                                            var l;
+                                                            ((l = n[e]),
                                                                 e in t
                                                                     ? Object.defineProperty(t, e, {
-                                                                          value: r,
+                                                                          value: l,
                                                                           enumerable: !0,
                                                                           configurable: !0,
                                                                           writable: !0
                                                                       })
-                                                                    : (t[e] = r));
+                                                                    : (t[e] = l));
                                                         }));
                                                 }
                                                 return t;
@@ -213,8 +213,8 @@ function C(t) {
                                                 : (function (t, e) {
                                                       var n = Object.keys(t);
                                                       if (Object.getOwnPropertySymbols) {
-                                                          var r = Object.getOwnPropertySymbols(t);
-                                                          n.push.apply(n, r);
+                                                          var l = Object.getOwnPropertySymbols(t);
+                                                          n.push.apply(n, l);
                                                       }
                                                       return n;
                                                   })(Object(n)).forEach(function (t) {
@@ -223,16 +223,16 @@ function C(t) {
                                             e
                                         );
                                     }),
-                                    onChange: W,
+                                    onChange: A,
                                     withTransparentBackground: !0
                                 })
                             ]
                         }),
-                        (0, r.jsx)('div', {
-                            className: a()(x.reasonFreeText, { [x.hidden]: 'other' !== E }),
-                            children: (0, r.jsx)(u.Kx8, {
-                                maxLength: h.GNZ,
-                                onChange: X,
+                        (0, l.jsx)('div', {
+                            className: a()(x.reasonFreeText, { [x.hidden]: 'other' !== T }),
+                            children: (0, l.jsx)(u.Kx8, {
+                                maxLength: m.GNZ,
+                                onChange: B,
                                 value: null != M ? M : '',
                                 rows: 5,
                                 autoFocus: !0
@@ -240,17 +240,17 @@ function C(t) {
                         })
                     ]
                 }),
-                (0, r.jsx)(u.xJW, {
+                (0, l.jsx)(u.xJW, {
                     titleClassName: x.title,
-                    title: (0, r.jsx)(u.Text, {
+                    title: (0, l.jsx)(u.Text, {
                         variant: 'text-md/medium',
                         color: 'text-primary',
-                        children: m.intl.string(null != R ? m.t.ERSM8P : m.t['8l3W09'])
+                        children: h.intl.string(null != Z ? h.t.ERSM8P : h.t['8l3W09'])
                     }),
-                    children: (0, r.jsx)(u.q4e, {
-                        options: O(),
-                        value: T,
-                        onChange: J
+                    children: (0, l.jsx)(u.q4e, {
+                        options: f(),
+                        value: w,
+                        onChange: X
                     })
                 })
             ]

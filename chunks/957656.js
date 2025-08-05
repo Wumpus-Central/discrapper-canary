@@ -3,15 +3,15 @@ var n = t(255367);
 t(73800);
 var o = t(481060),
     i = t(198952),
-    s = t(329242),
-    c = t(916723),
-    a = t(388032),
-    l = t(305623);
+    a = t(329242),
+    s = t(916723),
+    l = t(388032),
+    c = t(305623);
 let d = (e) => {
     var r,
         t,
-        { children: i, className: s } = e,
-        c = (function (e, r) {
+        { children: i, className: a } = e,
+        s = (function (e, r) {
             if (null == e) return {};
             var t,
                 n,
@@ -59,9 +59,9 @@ let d = (e) => {
         })(
             {
                 'data-migration-pending': !0,
-                className: s
+                className: a
             },
-            c
+            s
         )),
         (t = t =
             {
@@ -86,28 +86,28 @@ let d = (e) => {
 ((d.ButtonFooter = (e) => {
     let { children: r } = e;
     return (0, n.jsx)('div', {
-        className: l.footer,
+        className: c.footer,
         children: r
     });
 }),
     (d.Header = (e) => {
-        let { icon: r, currentUser: t, otherUser: c, header: a } = e;
+        let { icon: r, currentUser: t, otherUser: s, header: l } = e;
         return (0, n.jsxs)('div', {
-            className: l.header,
+            className: c.header,
             children: [
                 (0, n.jsx)(i.Z, {
                     currentUser: t,
-                    otherUser: c,
+                    otherUser: s,
                     children: r
                 }),
                 (0, n.jsxs)('div', {
-                    className: l.heading,
+                    className: c.heading,
                     children: [
                         (0, n.jsx)(o.X6q, {
                             variant: 'text-lg/bold',
-                            children: a
+                            children: l
                         }),
-                        (0, n.jsx)(s.Z, { user: c })
+                        (0, n.jsx)(a.Z, { user: s })
                     ]
                 })
             ]
@@ -116,19 +116,19 @@ let d = (e) => {
     (d.Content = (e) => {
         let { children: r } = e;
         return (0, n.jsx)('div', {
-            className: l.content,
+            className: c.content,
             children: r
         });
     }),
     (d.Notice = (e) => {
         let { notice: r } = e;
         return (0, n.jsxs)('div', {
-            className: l.notice,
+            className: c.notice,
             children: [
                 (0, n.jsx)(o.Text, {
                     variant: 'eyebrow',
                     color: 'header-primary',
-                    children: a.intl.string(c.default.cXgKMD)
+                    children: l.intl.string(s.default.cXgKMD)
                 }),
                 (0, n.jsx)(o.Text, {
                     variant: 'text-sm/normal',
@@ -143,7 +143,7 @@ let d = (e) => {
         return null == r
             ? null
             : (0, n.jsx)(o.kzN, {
-                  className: l.error,
+                  className: c.error,
                   onDismiss: t,
                   children: r
               });
