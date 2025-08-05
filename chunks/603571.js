@@ -1,6 +1,6 @@
 (n.r(t),
     n.d(t, {
-        default: () => a,
+        default: () => o,
         messagesLoader: () => i
     }));
 let { createLoader: r } = n(515149),
@@ -13,7 +13,7 @@ let { createLoader: r } = n(515149),
             el: () => n.e('15274').then(n.t.bind(n, 210273, 19)),
             'en-GB': () => n.e('45258').then(n.t.bind(n, 37600, 19)),
             'es-419': () => n.e('75860').then(n.t.bind(n, 303915, 19)),
-            'es-ES': () => n.e('22095').then(n.t.bind(n, 322274, 19)),
+            'es-ES': () => n.e('22095').then(n.t.bind(n, 835480, 19)),
             fi: () => n.e('6882').then(n.t.bind(n, 858182, 19)),
             fr: () => n.e('95742').then(n.t.bind(n, 833194, 19)),
             hi: () => n.e('94537').then(n.t.bind(n, 378080, 19)),
@@ -41,5 +41,5 @@ let { createLoader: r } = n(515149),
         },
         'en-US'
     ),
-    { makeMessagesProxy: l } = n(515149),
-    a = l(i);
+    { makeMessagesProxy: a } = n(515149),
+    o = a(i);
