@@ -94,6 +94,10 @@ function j(e) {
                                   children: v.intl.string(k.default.Du91RU)
                               });
                         break;
+                    case a.MB:
+                    case a.Vk:
+                        e = v.intl.string(k.default.Vf2ZcX);
+                        break;
                     default:
                         e = v.intl.formatToPlainString(k.default['4jSvr6'], {
                             perk: t.title,
