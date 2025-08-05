@@ -382,6 +382,7 @@ class ts extends r.PureComponent {
     renderNameZone(e) {
         let { currentUser: t, dismissibleContents: n, visibleRecurringAvatarDc: r, markRecurringAvatarDcAsDismissed: s } = this.props;
         if (null == t) return null;
+        if (!this.props.isQuestBarEmpty) return this.renderAvatarWithPopout({ focusSectionProps: e });
         if (r === u.z.GUILD_TAG_AVAILABLE_COACHMARK) {
             var a;
             return (0, i.jsx)(X.ZP, {

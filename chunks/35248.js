@@ -99,6 +99,7 @@ let I = (e) => {
             children: (0, r.jsxs)(s.mzw, {
                 justify: u.Z.Justify.BETWEEN,
                 align: u.Z.Align.CENTER,
+                'data-migration-pending': !0,
                 children: [
                     (0, r.jsx)(d.y, {
                         onClick: t,

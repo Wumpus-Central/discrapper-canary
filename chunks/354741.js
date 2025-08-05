@@ -1,62 +1,62 @@
-(n.r(t), n.d(t, { default: () => E }));
+(n.r(t), n.d(t, { default: () => S }));
 var i = n(255367);
 n(73800);
 var r = n(481060),
-    a = n(239091),
-    l = n(883385),
-    o = n(108843),
-    d = n(947440),
-    u = n(100527),
-    c = n(658138),
-    s = n(299206),
-    f = n(895563),
+    o = n(239091),
+    a = n(883385),
+    l = n(108843),
+    c = n(947440),
+    s = n(100527),
+    f = n(658138),
+    u = n(299206),
+    d = n(895563),
     b = n(212205),
-    v = n(62420),
-    h = n(769409),
-    p = n(122074),
+    p = n(62420),
+    g = n(769409),
+    y = n(122074),
     O = n(314897),
-    g = n(858687),
+    N = n(858687),
     _ = n(461535),
-    y = n(776568),
-    C = n(981631),
-    m = n(388032);
-let E = (0, o.Z)(
-    (0, l.Z)(
+    h = n(776568),
+    m = n(981631),
+    v = n(388032);
+let S = (0, l.Z)(
+    (0, a.Z)(
         function (e) {
-            let { channel: t, selected: l, onSelect: o } = e,
-                E = t.isOwner(O.default.getId()),
-                j = (0, _.Z)(t),
-                Z = (0, y.ZP)(t),
-                A = (0, p.Uf)(C.aIL, t.id, 'top'),
-                S = (0, g.Z)(t, l),
-                N = (0, s.Z)({
+            let { channel: t, selected: a, onSelect: l } = e,
+                S = t.isOwner(O.default.getId()),
+                T = (0, _.Z)(t),
+                j = (0, h.ZP)(t),
+                A = (0, y.Uf)(m.aIL, t.id, 'top'),
+                I = (0, N.Z)(t, a),
+                C = (0, u.Z)({
                     id: t.id,
-                    label: m.intl.string(m.t.gFHI3t)
+                    label: v.intl.string(v.t.gFHI3t)
                 }),
-                R = (0, d.Z)(t),
-                I = (0, f.l)(t),
-                U = (0, f.P)(t),
-                T = (0, b.Z)(t),
-                x = (0, v.Z)(t),
-                P = (0, c.D)(t);
+                E = (0, c.Z)(t),
+                P = (0, d.l)(t),
+                w = (0, d.P)(t),
+                x = (0, b.Z)(t),
+                Z = (0, p.Z)(t),
+                U = (0, f.D)(t);
             return null == t || t.isManaged()
                 ? null
                 : (0, i.jsxs)(r.v2r, {
                       navId: 'gdm-context',
-                      'aria-label': m.intl.string(m.t.Xm41aW),
-                      onClose: a.Zy,
-                      onSelect: o,
+                      'aria-label': v.intl.string(v.t.Xm41aW),
+                      onClose: o.Zy,
+                      onSelect: l,
                       children: [
-                          (0, i.jsx)(r.kSQ, { children: j }),
+                          (0, i.jsx)(r.kSQ, { children: T }),
                           (0, i.jsxs)(r.kSQ, {
-                              children: [I, T, x]
+                              children: [P, x, Z]
                           }),
                           (0, i.jsxs)(r.kSQ, {
                               children: [
-                                  E
+                                  S
                                       ? (0, i.jsx)(r.sNh, {
                                             id: 'instant-invites',
-                                            label: m.intl.string(m.t.ngRFjY),
+                                            label: v.intl.string(v.t.ngRFjY),
                                             action: () =>
                                                 (0, r.ZDy)(async () => {
                                                     let { default: e } = await n.e('97573').then(n.bind(n, 892382));
@@ -94,23 +94,23 @@ let E = (0, o.Z)(
                                       : null,
                                   (0, i.jsx)(r.sNh, {
                                       id: 'edit-gdm',
-                                      label: m.intl.string(m.t['5Q9+/P']),
-                                      action: () => (0, h.B)(t.id, u.Z.GROUP_DM_CONTEXT_MENU)
+                                      label: v.intl.string(v.t['5Q9+/P']),
+                                      action: () => (0, g.B)(t.id, s.Z.GROUP_DM_CONTEXT_MENU)
                                   }),
-                                  P
+                                  U
                               ]
                           }),
-                          (0, i.jsx)(r.kSQ, { children: R }),
+                          (0, i.jsx)(r.kSQ, { children: E }),
                           (0, i.jsxs)(r.kSQ, {
-                              children: [Z, A]
+                              children: [j, A]
                           }),
-                          (0, i.jsx)(r.kSQ, { children: S }),
-                          (0, i.jsx)(r.kSQ, { children: U }),
-                          (0, i.jsx)(r.kSQ, { children: N })
+                          (0, i.jsx)(r.kSQ, { children: I }),
+                          (0, i.jsx)(r.kSQ, { children: w }),
+                          (0, i.jsx)(r.kSQ, { children: C })
                       ]
                   });
         },
-        { object: C.qAy.CONTEXT_MENU }
+        { object: m.qAy.CONTEXT_MENU }
     ),
-    [u.Z.CONTEXT_MENU, u.Z.GROUP_DM_MENU]
+    [s.Z.CONTEXT_MENU, s.Z.GROUP_DM_MENU]
 );

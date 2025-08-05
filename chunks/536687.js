@@ -23,8 +23,8 @@ var r = n(255367),
     j = n(164495),
     y = n(472144),
     x = n(602667),
-    D = n(644646),
-    T = n(604162),
+    T = n(644646),
+    D = n(604162),
     P = n(747717),
     R = n(963123),
     N = n(281055),
@@ -87,7 +87,7 @@ function V(e) {
         [$, J] = l.useState(Q.progressSeconds),
         [ee, et] = l.useState(!1),
         { completedRatio: en, completedRatioDisplay: er } = (0, b.I)(F),
-        [el, eo] = (0, T.G6)(A.intl.string(A.t.RDE0SU), A.intl.string(A.t['+5kSoa']), 1700),
+        [el, eo] = (0, D.G6)(A.intl.string(A.t.RDE0SU), A.intl.string(A.t['+5kSoa']), 1700),
         ei = null != (0, O.LM)(F.config),
         [ea, es] = l.useState(!1),
         ec = l.useRef(null),
@@ -123,7 +123,7 @@ function V(e) {
     let ef = async () => {
             if (null != B) {
                 let e = _.r.build(F.config).application.link;
-                (await (0, T.qP)(e)) && B();
+                (await (0, D.qP)(e)) && B();
             }
             (0, O.nc)(F, {
                 content: S.jn.VIDEO_MODAL,
@@ -209,7 +209,7 @@ function V(e) {
                                                         percentComplete: en,
                                                         percentCompleteText: ee ? er : void 0,
                                                         percentCompleteTextVariant: 'text-sm/medium',
-                                                        children: (0, r.jsx)(D.Z, {
+                                                        children: (0, r.jsx)(T.Z, {
                                                             className: w.questProgressRewardTile,
                                                             quest: F,
                                                             questContent: S.jn.VIDEO_MODAL,
@@ -225,6 +225,7 @@ function V(e) {
                         }),
                         (0, r.jsx)(R.Z, {
                             quest: F,
+                            videoTask: eg,
                             videoSessionId: U,
                             parentTransitionState: V,
                             onOptimisticProgressUpdate: J,

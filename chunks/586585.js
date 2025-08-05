@@ -148,6 +148,7 @@ let b = (e) => {
                           variant: 'secondary'
                       });
         return (0, r.jsxs)(l.mzw, {
+            'data-migration-pending': !0,
             justify: c.Z.Justify.BETWEEN,
             align: c.Z.Align.CENTER,
             className: v,

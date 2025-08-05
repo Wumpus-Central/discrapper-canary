@@ -300,14 +300,14 @@ function z(e) {
                                     onClose: Q,
                                     appContext: et,
                                     disableAutoFocus: en
-                                })
+                                }),
+                                (null == el ? void 0 : el.profileEffectId) != null &&
+                                    (0, r.jsx)(y.Z, {
+                                        profileEffectId: null == el ? void 0 : el.profileEffectId,
+                                        isHovering: ec
+                                    })
                             ]
-                        }),
-                        (null == el ? void 0 : el.profileEffectId) != null &&
-                            (0, r.jsx)(y.Z, {
-                                profileEffectId: null == el ? void 0 : el.profileEffectId,
-                                isHovering: ec
-                            })
+                        })
                     ]
                 })
             })

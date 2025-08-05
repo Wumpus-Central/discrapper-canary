@@ -57,7 +57,7 @@ function a(e) {
             })(
                 {
                     game: n.game,
-                    userId: t.id
+                    user: t
                 },
                 a
             )

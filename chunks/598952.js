@@ -1,12 +1,12 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => s });
 var r = n(255367);
 n(73800);
 var a = n(481060),
     i = n(170086);
-function l(e) {
+function s(e) {
     var t;
     let { attachment: n } = e,
-        l = Math.round(((null != (t = n.size) ? t : 0) / 1024 / 1024) * 100) / 100;
+        s = Math.round(((null != (t = n.size) ? t : 0) / 1024 / 1024) * 100) / 100;
     return (0, r.jsxs)('div', {
         className: i.container,
         children: [
@@ -37,7 +37,7 @@ function l(e) {
             (0, r.jsxs)(a.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: [l, 'MB']
+                children: [s, 'MB']
             })
         ]
     });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => E });
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -7,27 +7,24 @@ var i = n(255367),
     o = n(481060),
     c = n(243778),
     d = n(7093),
-    u = n(667105),
-    m = n(819640),
-    p = n(585483),
-    g = n(553896),
-    h = n(101966),
-    f = n(804413),
-    b = n(787528),
-    x = n(474936),
-    _ = n(981631),
-    j = n(921944),
-    C = n(46140),
-    E = n(388032),
-    O = n(669018);
-function v(e) {
+    u = n(819640),
+    m = n(585483),
+    p = n(553896),
+    g = n(101966),
+    h = n(804413),
+    f = n(787528),
+    b = n(474936),
+    x = n(981631),
+    _ = n(921944),
+    j = n(388032),
+    C = n(669018);
+function E(e) {
     let { groupName: t, targetElementRef: n } = e,
-        r = (0, f.Z)(),
-        l = (0, h.Z)({ location: 'TenureLevelUpCoachmark' }),
-        p = (0, d.Z)((e) => e.isOpen),
-        g = (0, s.e7)([m.Z], () => m.Z.getLayers().includes(_.S9g.USER_SETTINGS)),
-        b = (0, u.Ws)({ location: C.dr.CONFLICT_CHECKS });
-    return !l || null == r || p || g || !b
+        r = (0, h.Z)(),
+        l = (0, g.Z)({ location: 'TenureLevelUpCoachmark' }),
+        m = (0, d.Z)((e) => e.isOpen),
+        p = (0, s.e7)([u.Z], () => u.Z.getLayers().includes(x.S9g.USER_SETTINGS));
+    return !l || null == r || m || p
         ? null
         : (0, i.jsx)(c.Nq, {
               contentType: a.z.NITRO_TENURE_BADGE_LEVEL_UP,
@@ -40,7 +37,7 @@ function v(e) {
                       position: 'top',
                       renderPopout: (e) => {
                           let { closePopout: t } = e;
-                          return (0, i.jsx)(S, {
+                          return (0, i.jsx)(O, {
                               recentlyLeveledTenureBadge: r,
                               markAsDismissed: s,
                               closePopout: t
@@ -52,24 +49,24 @@ function v(e) {
               }
           });
 }
-function S(e) {
+function O(e) {
     var t;
     let { recentlyLeveledTenureBadge: n, markAsDismissed: s, closePopout: a } = e,
-        c = x.Qh.indexOf(n),
-        u = (0, b.J)(x.Qh[c > 0 ? c - 1 : c], { ambient: !0 }),
-        m = (0, r.useCallback)(() => {
-            (s(j.L.TAKE_ACTION), a(), d.Z.setState({ shouldRenderTenureLevelUp: !0 }), p.S.dispatch(_.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {}));
+        c = b.Qh.indexOf(n),
+        u = (0, f.J)(b.Qh[c > 0 ? c - 1 : c], { ambient: !0 }),
+        g = (0, r.useCallback)(() => {
+            (s(_.L.TAKE_ACTION), a(), d.Z.setState({ shouldRenderTenureLevelUp: !0 }), m.S.dispatch(x.CkL.SHOW_ACCOUNT_PROFILE_POPOUT, {}));
         }, [s, a]),
         h = (0, r.useCallback)(() => {
-            (s(j.L.USER_DISMISS), a());
+            (s(_.L.USER_DISMISS), a());
         }, [s, a]),
-        f = x.vK[n];
+        E = b.vK[n];
     return (0, i.jsxs)('div', {
-        className: O.contents,
+        className: C.contents,
         children: [
             (0, i.jsx)(o.M0o, {
-                className: O.closeButton,
-                tooltip: E.intl.string(E.t.cpT0Cg),
+                className: C.closeButton,
+                tooltip: j.intl.string(j.t.cpT0Cg),
                 color: o.YX$.TERTIARY,
                 size: o.tT7.SIZE_24,
                 icon: (0, i.jsx)(o.Dio, {
@@ -81,26 +78,26 @@ function S(e) {
             null != u &&
                 (0, i.jsx)('img', {
                     src: u,
-                    alt: E.intl.string(f.nameUnformatted),
-                    className: O.badgeImage
+                    alt: j.intl.string(E.nameUnformatted),
+                    className: C.badgeImage
                 }),
             (0, i.jsx)(o.X6q, {
                 variant: 'heading-md/extrabold',
-                children: E.intl.string(E.t.VoDxsb)
+                children: j.intl.string(j.t.VoDxsb)
             }),
             (0, i.jsx)(o.Text, {
                 variant: 'text-sm/medium',
-                className: O.subtitle,
-                children: E.intl.formatToPlainString(E.t.ewkaVV, { timeMilestone: null == (t = (0, g.q)(f.id, f.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase() })
+                className: C.subtitle,
+                children: j.intl.formatToPlainString(j.t.ewkaVV, { timeMilestone: null == (t = (0, p.q)(E.id, E.tenureReqNumMonths)) ? void 0 : t.toLocaleLowerCase() })
             }),
             (0, i.jsx)(l.zx, {
-                className: O.checkItOutButton,
+                className: C.checkItOutButton,
                 color: l.Tt.WHITE,
                 size: l.Ph.SMALL,
-                onClick: m,
-                children: E.intl.string(E.t.RzWDqa)
+                onClick: g,
+                children: j.intl.string(j.t.RzWDqa)
             }),
-            (0, i.jsx)('div', { className: O.pointer })
+            (0, i.jsx)('div', { className: C.pointer })
         ]
     });
 }

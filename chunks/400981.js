@@ -28,6 +28,7 @@ function j(e) {
         : (0, i.jsx)(x.O3, {
               children: (0, i.jsx)(s.mzw, {
                   align: c.Z.Align.CENTER,
+                  'data-migration-pending': !0,
                   children: (0, i.jsxs)('div', {
                       className: f.promotionalFooter,
                       children: [

@@ -45,6 +45,7 @@ e.exports = {
     questProgressRewardTile: 'questProgressRewardTile_de2fa0',
     transcriptOverlay: 'transcriptOverlay_de2fa0',
     transcriptCont: 'transcriptCont_de2fa0',
+    transcriptContPortrait: 'transcriptContPortrait_de2fa0',
     transcriptScroller: 'transcriptScroller_de2fa0',
     transcriptBackBtn: 'transcriptBackBtn_de2fa0',
     transcriptHeader: 'transcriptHeader_de2fa0',

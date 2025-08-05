@@ -54,7 +54,8 @@ function T(e) {
                           }),
                           (0, r.jsx)(s.olH, {
                               onClick: T,
-                              className: v.closeButton
+                              className: v.closeButton,
+                              'data-migration-pending': !0
                           })
                       ]
                   }))

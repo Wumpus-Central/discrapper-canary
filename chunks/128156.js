@@ -23,13 +23,13 @@ var o = n(442837),
     v = n(388032),
     I = n(514656);
 function P(e) {
-    let { user: t, currentUser: n, displayProfile: P, guildId: w, channelId: N, subsection: T, onClose: E } = e,
+    let { user: t, currentUser: n, displayProfile: P, guildId: N, channelId: w, subsection: T, onClose: E } = e,
         { voiceActivityStatusEnabled: Z } = (0, l.U)({ location: 'UserProfileModalV2Activity' }),
         A = (0, f.b)({ location: 'UserProfileModalV2Activity' }),
         { live: C, recent: S, stream: L } = (0, p.Z)(t.id),
         { voiceChannel: k, voiceActivity: R } = (0, m.Z)({
             userId: t.id,
-            guildId: w
+            guildId: N
         }),
         D = (0, o.e7)([a.Z], () => a.Z.isFetchingUserOutbox(t.id)),
         G = t.id === n.id,
@@ -71,7 +71,7 @@ function P(e) {
             : (0, r.jsx)(h.P9, {
                   user: t,
                   guildId: null != (W = null == P ? void 0 : P.guildId) ? W : void 0,
-                  channelId: N,
+                  channelId: w,
                   onClose: E
               });
     }

@@ -32,6 +32,7 @@ function h(e) {
         ? (0, r.jsxs)(a.xBx, {
               className: p.modalHeaderCustomGift,
               separator: !1,
+              'data-migration-pending': !0,
               children: [
                   (0, r.jsx)(a.X6q, {
                       variant: 'heading-lg/semibold',
@@ -40,7 +41,8 @@ function h(e) {
                   (0, r.jsx)(a.olH, {
                       onClick: E,
                       className: p.closeButton,
-                      innerClassName: p.closeButtonInner
+                      innerClassName: p.closeButtonInner,
+                      'data-migration-pending': !0
                   })
               ]
           })

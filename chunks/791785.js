@@ -242,6 +242,7 @@ function J(e) {
         isShaking: ed && eb === x.A.PURCHASING,
         intensity: X,
         children: (0, r.jsx)(c.Y0X, {
+            'data-migration-pending': !0,
             className: o()(Y.root, eG, { [Y.withHeader]: null != e3 }),
             transitionState: N,
             hideShadow: ep,

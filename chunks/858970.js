@@ -46,7 +46,7 @@ function v(e) {
     return e;
 }
 function I(e) {
-    let { user: t, guildId: n, channelId: I, messageId: P, roleId: w, transitionState: N, openedAt: T, onHide: E, sourceAnalyticsLocations: Z = [] } = e,
+    let { user: t, guildId: n, channelId: I, messageId: P, roleId: N, transitionState: w, openedAt: T, onHide: E, sourceAnalyticsLocations: Z = [] } = e,
         A = n === j.ME ? void 0 : n,
         C = (0, o.e7)([d.Z], () => d.Z.isBlocked(t.id)),
         { analyticsLocations: S } = (0, c.ZP)([...Z, C ? a.Z.BLOCKED_PROFILE_MODAL : a.Z.IGNORED_PROFILE_MODAL]),
@@ -57,7 +57,7 @@ function I(e) {
             guildId: A,
             channelId: I,
             messageId: P,
-            roleId: w
+            roleId: N
         }),
         k = [
             {
@@ -81,7 +81,7 @@ function I(e) {
             fetchEndedAt: null == R ? void 0 : R.fetchEndedAt,
             isLoaded: null == R ? void 0 : R.isLoaded,
             children: (0, r.jsx)(l.Y0X, {
-                transitionState: N,
+                transitionState: w,
                 className: _.root,
                 'aria-label': G,
                 parentComponent: 'RestrictedUserProfileModalV2',
