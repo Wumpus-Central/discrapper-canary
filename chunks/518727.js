@@ -1,127 +1,98 @@
-(n.d(t, { Z: () => f }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749));
-var i = n(255367),
-    r = n(73800),
-    l = n(120356),
-    s = n.n(l),
-    a = n(544891),
-    o = n(70097),
-    C = n(585483),
-    d = n(981631),
-    c = n(794503),
-    u = n(279421),
-    p = n(410401),
-    x = n(701262);
-let h = async (e) => {
-        let [t, n, i] = await Promise.all([
-            a.tn.get({
-                url: u.Z,
-                binary: !0,
-                rejectWithError: !0
-            }),
-            a.tn.get({
-                url: p.Z,
-                binary: !0,
-                rejectWithError: !0
-            }),
-            a.tn.get({
-                url: x.Z,
-                binary: !0,
-                rejectWithError: !0
-            })
-        ]);
-        e({
-            modalGlowEntry: window.URL.createObjectURL(t.body),
-            modalGlowExit: window.URL.createObjectURL(n.body),
-            modalGlowIdle: window.URL.createObjectURL(i.body)
-        });
-    },
-    f = (e) => {
-        let { children: t, visible: n, shouldPrefetchWowMoment: l } = e,
-            [a, u] = (0, r.useState)({
-                modalGlowEntry: void 0,
-                modalGlowIdle: void 0,
-                modalGlowExit: void 0
-            }),
-            [p, x] = (0, r.useState)('entry'),
-            f = (0, r.useRef)(null),
-            j = (0, r.useRef)(null),
-            m = () => {
-                (x('exit'), null != j.current && j.current.play());
-            },
-            _ = (0, r.useRef)(!0);
-        return ((0, r.useEffect)(
-            () => (
-                (_.current = !0),
-                () => {
-                    _.current = !1;
-                }
-            ),
-            []
-        ),
-        (0, r.useEffect)(
-            () => () => {
-                (null != a.modalGlowEntry && window.URL.revokeObjectURL(a.modalGlowEntry), null != a.modalGlowIdle && window.URL.revokeObjectURL(a.modalGlowIdle), null != a.modalGlowExit && window.URL.revokeObjectURL(a.modalGlowExit));
-            },
-            [a.modalGlowEntry, a.modalGlowIdle, a.modalGlowExit]
-        ),
-        (0, r.useEffect)(() => {
-            l &&
-                h((e) => {
-                    _.current && u(e);
-                });
-        }, [l]),
-        (0, r.useEffect)(() => {
-            function e() {
-                m();
+(t.d(r, { Z: () => p }), t(388685));
+var n = t(255367),
+    i = t(73800),
+    l = t(120356),
+    o = t.n(l),
+    a = t(570140),
+    s = t(70097),
+    d = t(585483),
+    C = t(402426),
+    c = t(981631),
+    u = t(794503);
+let p = (e) => {
+    let { children: r, isConfirmationStep: t, isWowMomentConfirmationEligible: l } = e,
+        [p, _] = (0, i.useState)('entry'),
+        f = (0, i.useRef)(null),
+        x = (0, i.useRef)(null),
+        m = () => {
+            if ((_('exit'), null != x.current)) {
+                var e;
+                null == (e = x.current) || e.play();
             }
-            return (
-                C.S.subscribe(d.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e),
-                () => {
-                    C.S.unsubscribe(d.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e);
-                }
-            );
-        }, []),
-        n)
-            ? (0, i.jsxs)('div', {
-                  children: [
-                      (0, i.jsxs)('div', {
-                          className: c.videoContainer,
-                          children: [
-                              (0, i.jsx)('div', {
-                                  className: c.entryAnimationContainer,
-                                  children: (0, i.jsx)(o.Z, {
-                                      playsInline: !0,
-                                      muted: !0,
-                                      autoPlay: !0,
-                                      onEnded: () => {
-                                          (x('idle'), null != f.current && f.current.play());
-                                      },
-                                      className: s()(c.video, 'entry' === p ? c.visible : c.hidden),
-                                      children: (0, i.jsx)('source', { src: a.modalGlowEntry })
-                                  })
-                              }),
-                              (0, i.jsx)(o.Z, {
-                                  ref: f,
+        },
+        { mediaUrls: h, isSuccess: j } = (0, C.Z)(l);
+    (0, i.useEffect)(() => {
+        function e() {
+            m();
+        }
+        return (
+            d.S.subscribe(c.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e),
+            () => {
+                d.S.unsubscribe(c.CkL.PREMIUM_PAYMENT_MODAL_CLOSED, e);
+            }
+        );
+    }, []);
+    let L = l && t && j;
+    return ((0, i.useEffect)(() => {
+        L &&
+            a.Z.dispatch({
+                type: 'WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION',
+                value: L
+            });
+    }, [L]),
+    (0, i.useEffect)(
+        () => () => {
+            a.Z.dispatch({
+                type: 'WOW_MOMENT_CONFIRMATION_SET_IS_DISPLAYING_WOW_MOMENT_CONFIRMATION',
+                value: !1
+            });
+        },
+        []
+    ),
+    L)
+        ? (0, n.jsxs)('div', {
+              children: [
+                  (0, n.jsxs)('div', {
+                      className: u.videoContainer,
+                      children: [
+                          (0, n.jsx)('div', {
+                              className: u.entryAnimationContainer,
+                              children: (0, n.jsx)(s.Z, {
                                   playsInline: !0,
                                   muted: !0,
-                                  loop: !0,
-                                  className: s()(c.video, 'idle' === p ? c.visible : c.hidden),
-                                  children: (0, i.jsx)('source', { src: a.modalGlowIdle })
-                              }),
-                              (0, i.jsx)(o.Z, {
-                                  ref: j,
-                                  playsInline: !0,
-                                  muted: !0,
-                                  className: s()(c.video, 'exit' === p ? c.visible : c.hidden),
-                                  children: (0, i.jsx)('source', { src: a.modalGlowExit })
+                                  autoPlay: !0,
+                                  onEnded: () => {
+                                      if ((_('idle'), null != f.current)) {
+                                          var e;
+                                          null == (e = f.current) || e.play();
+                                      }
+                                  },
+                                  className: o()(u.video, 'entry' === p ? u.visible : u.hidden),
+                                  children: (0, n.jsx)('source', { src: h.modalGlowEntry })
                               })
-                          ]
-                      }),
-                      (0, i.jsx)('div', {
-                          className: c.entryAnimationContainer,
-                          children: t
-                      })
-                  ]
-              })
-            : t;
-    };
+                          }),
+                          (0, n.jsx)(s.Z, {
+                              ref: f,
+                              playsInline: !0,
+                              muted: !0,
+                              loop: !0,
+                              className: o()(u.video, 'idle' === p ? u.visible : u.hidden),
+                              children: (0, n.jsx)('source', { src: h.modalGlowIdle })
+                          }),
+                          (0, n.jsx)(s.Z, {
+                              ref: x,
+                              playsInline: !0,
+                              muted: !0,
+                              className: o()(u.video, 'exit' === p ? u.visible : u.hidden),
+                              children: (0, n.jsx)('source', { src: h.modalGlowExit })
+                          })
+                      ]
+                  }),
+                  (0, n.jsx)('div', {
+                      className: u.entryAnimationContainer,
+                      children: r
+                  })
+              ]
+          })
+        : r;
+};

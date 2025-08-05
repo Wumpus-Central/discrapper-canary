@@ -1,6 +1,6 @@
 (n.d(t, {
-    B5: () => M,
-    PI: () => w,
+    B5: () => k,
+    PI: () => P,
     WD: () => U,
     aM: () => G,
     ui: () => B
@@ -63,9 +63,9 @@ function N(e) {
     return e;
 }
 let C = 100,
-    R = 60,
-    P = 1,
-    w = 0.5,
+    w = 60,
+    R = 1,
+    P = 0.5,
     D = new Set();
 function L(e, t) {
     return ''.concat(e, '_').concat(t);
@@ -149,7 +149,7 @@ class x {
                 : null;
         return (null !== d && (u.selected_guild_banner_url = d), u.guilds.length > C && ((u.guilds = u.guilds.slice(0, C)), (u.truncated = !0)), u.channels.length > C && ((u.channels = u.channels.slice(0, C)), (u.truncated = !0)), { brand_safety_context: JSON.stringify(u) });
     }
-    constructor({ questOrQuests: e, questContent: t, triggeredByStatusChange: n, trackGuildAndChannelMetadata: r, questContentPosition: i, questContentRowIndex: s, minViewTimeSeconds: l = P, isQuestEnrollmentBlocked: c, sourceQuestContent: f }) {
+    constructor({ questOrQuests: e, questContent: t, triggeredByStatusChange: n, trackGuildAndChannelMetadata: r, questContentPosition: i, questContentRowIndex: s, minViewTimeSeconds: l = R, isQuestEnrollmentBlocked: c, sourceQuestContent: f }) {
         var p = this;
         (A(this, 'id', void 0),
             A(this, 'quests', void 0),
@@ -263,7 +263,7 @@ class x {
             A(this, 'start', () => {
                 (this.stop(!1),
                     (this.lastBeatTime = Date.now()),
-                    (this.heartbeatTimeoutId = window.setInterval(() => this.beat(), 1000 * R)),
+                    (this.heartbeatTimeoutId = window.setInterval(() => this.beat(), 1000 * w)),
                     (this.minViewTimeReachedTimeoutId = window.setTimeout(this.onMinViewTimeReached, 1000 * this.minViewTimeSeconds)),
                     this.quests.forEach((e) => {
                         ((0, T.T)().info(''.concat(e.config.messages.questName, ' Quest became visible at ').concat((0, b._b)(this.questContent)), { impressionId: this.id }),
@@ -290,7 +290,7 @@ class x {
             (this.questContent = t),
             (this.questContentPosition = i),
             (this.minViewTimeSeconds = l),
-            (this.minViewportPercentage = w),
+            (this.minViewportPercentage = P),
             (this.quests = Array.isArray(e) ? e : [e]),
             (this.trackGuildAndChannelMetadata = r),
             (this.triggeredByStatusChange = n),
@@ -299,7 +299,7 @@ class x {
             (this.sourceQuestContent = f));
     }
 }
-let M = (e, t) => {
+let k = (e, t) => {
         let n = Array.isArray(e)
             ? e
                   .sort()
@@ -308,14 +308,14 @@ let M = (e, t) => {
             : e.id;
         return ''.concat(n, '_').concat(t);
     },
-    k = (e) => {
+    j = (e) => {
         let t = Array.isArray(e) ? null : (0, b.uk)(e),
             n = (0, c.Z)(t);
         return t !== n;
     },
-    j = i.createContext(void 0);
+    M = i.createContext(void 0);
 function U() {
-    let e = i.useContext(j);
+    let e = i.useContext(M);
     return null == e ? void 0 : e.current;
 }
 function G() {
@@ -324,7 +324,7 @@ function G() {
 }
 function B(e) {
     let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c, sourceQuestContent: u } = e,
-        d = k(e.questOrQuests),
+        d = j(e.questOrQuests),
         f = i.useRef(null),
         _ = (0, s.e7)([O.Z], () => null != O.Z.questEnrollmentBlockedUntil, []);
     return (
@@ -350,7 +350,7 @@ function B(e) {
                     })),
                     f.current.start()));
         }, [a, t, c, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, d, e.minViewTimeSeconds, _, u]),
-        (0, r.jsx)(j.Provider, {
+        (0, r.jsx)(M.Provider, {
             value: f,
             children: e.children(o, f)
         })

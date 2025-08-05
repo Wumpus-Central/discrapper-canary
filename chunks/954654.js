@@ -1,138 +1,145 @@
-(r.d(t, {
-    ZP: () => I,
-    xX: () => N
+(n.d(t, {
+    ZP: () => D,
+    xX: () => R
 }),
-    r(388685));
-var n = r(255367);
-r(73800);
-var l = r(120356),
-    i = r.n(l),
-    o = r(481060),
-    a = r(911969),
-    c = r(23750),
-    s = r(970184),
-    u = r(197653),
-    d = r(987106),
-    p = r(927057),
-    f = r(574597),
-    b = r(378975),
-    m = r(732586),
-    O = r(988075),
-    y = r(12067),
-    j = r(676149),
-    g = r(861529),
-    h = r(568248),
-    v = r(770009),
-    P = r(889515),
-    x = r(985184),
-    S = r(892519),
-    w = r(841806);
-function C(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
-        ('function' == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                })
-            )),
-            n.forEach(function (t) {
-                var n;
-                ((n = r[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: n,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = n));
-            }));
-    }
-    return e;
-}
-function E(e, t) {
+    n(388685));
+var r = n(255367);
+n(73800);
+var i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    s = n(911969),
+    l = n(23750),
+    c = n(970184),
+    u = n(197653),
+    d = n(987106),
+    f = n(927057),
+    _ = n(574597),
+    p = n(378975),
+    h = n(732586),
+    m = n(988075),
+    g = n(12067),
+    E = n(676149),
+    b = n(861529),
+    y = n(568248),
+    O = n(770009),
+    v = n(889515),
+    I = n(985184),
+    T = n(892519),
+    S = n(841806);
+function A(e, t, n) {
     return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var r = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
-                  }
-                  return r;
-              })(Object(t)).forEach(function (r) {
-                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
-              }),
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
         e
     );
 }
 function N(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                A(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function C(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function w(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : C(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function R(e) {
     return e.map((e, t) =>
-        (0, n.jsxs)(n.Fragment, {
-            children: [
-                (function (e, t) {
-                    switch (e.type) {
-                        case a.re.ACTION_ROW:
-                            return (0, n.jsx)(P.Z, E(C({}, e), { renderComponents: N }), t);
-                        case a.re.BUTTON:
-                            return (0, n.jsx)(d.Z, C({}, e), t);
-                        case a.re.STRING_SELECT:
-                            return (0, n.jsx)(b.Z, C({}, e), t);
-                        case a.re.CHANNEL_SELECT:
-                            return (0, n.jsx)(p.Z, C({}, e), t);
-                        case a.re.USER_SELECT:
-                        case a.re.ROLE_SELECT:
-                        case a.re.MENTIONABLE_SELECT:
-                            return (0, n.jsx)(f.Z, C({}, e), t);
-                        case a.re.TEXT_INPUT:
-                            return (0, n.jsx)(m.Z, C({}, e), t);
-                        case a.re.SECTION:
-                            return (0, n.jsx)(S.Z, E(C({}, e), { renderComponents: N }), t);
-                        case a.re.TEXT_DISPLAY:
-                            return (0, n.jsx)(g.Z, C({}, e), t);
-                        case a.re.MEDIA_GALLERY:
-                            return (0, n.jsx)(y.Z, C({}, e), t);
-                        case a.re.THUMBNAIL:
-                            return (0, n.jsx)(h.Z, C({}, e), t);
-                        case a.re.FILE:
-                            return (0, n.jsx)(O.Z, C({}, e), t);
-                        case a.re.SEPARATOR:
-                            return (0, n.jsx)(j.Z, C({}, e), t);
-                        case a.re.CONTENT_INVENTORY_ENTRY:
-                            return (0, n.jsx)(v.Z, C({}, e), t);
-                        case a.re.CONTAINER:
-                            return (0, n.jsx)(x.ZP, E(C({}, e), { renderComponents: N }), t);
-                    }
-                })(e, t.toString()),
-                (0, n.jsx)(o.nn4, { children: ',' })
-            ]
+        (0, r.jsxs)(r.Fragment, {
+            children: [P(e, t.toString()), (0, r.jsx)(o.nn4, { children: ',' })]
         })
     );
 }
-function I(e) {
-    let { message: t, shouldDisableInteractiveComponents: r } = e,
-        { components: l } = t,
-        [o, a] = (0, u.e4)();
-    return 0 === l.length
+function P(e, t) {
+    switch (e.type) {
+        case s.re.ACTION_ROW:
+            return (0, r.jsx)(v.Z, w(N({}, e), { renderComponents: R }), t);
+        case s.re.BUTTON:
+            return (0, r.jsx)(d.Z, N({}, e), t);
+        case s.re.STRING_SELECT:
+            return (0, r.jsx)(p.Z, N({}, e), t);
+        case s.re.CHANNEL_SELECT:
+            return (0, r.jsx)(f.Z, N({}, e), t);
+        case s.re.USER_SELECT:
+        case s.re.ROLE_SELECT:
+        case s.re.MENTIONABLE_SELECT:
+            return (0, r.jsx)(_.Z, N({}, e), t);
+        case s.re.TEXT_INPUT:
+            return (0, r.jsx)(h.Z, N({}, e), t);
+        case s.re.SECTION:
+            return (0, r.jsx)(T.Z, w(N({}, e), { renderComponents: R }), t);
+        case s.re.TEXT_DISPLAY:
+            return (0, r.jsx)(b.Z, N({}, e), t);
+        case s.re.MEDIA_GALLERY:
+            return (0, r.jsx)(g.Z, N({}, e), t);
+        case s.re.THUMBNAIL:
+            return (0, r.jsx)(y.Z, N({}, e), t);
+        case s.re.FILE:
+            return (0, r.jsx)(m.Z, N({}, e), t);
+        case s.re.SEPARATOR:
+            return (0, r.jsx)(E.Z, N({}, e), t);
+        case s.re.CONTENT_INVENTORY_ENTRY:
+            return (0, r.jsx)(O.Z, N({}, e), t);
+        case s.re.CONTAINER:
+            return (0, r.jsx)(I.ZP, w(N({}, e), { renderComponents: R }), t);
+    }
+}
+function D(e) {
+    let { message: t, shouldDisableInteractiveComponents: n } = e,
+        { components: i } = t,
+        [o, s] = (0, u.e4)();
+    return 0 === i.length
         ? null
-        : (0, n.jsx)(s.Il, {
+        : (0, r.jsx)(c.Il, {
               message: t,
-              shouldDisableInteractiveComponents: r,
-              children: (0, n.jsx)(u.am.Root, {
-                  containerInnerWidth: a,
-                  children: (0, n.jsx)('div', {
+              shouldDisableInteractiveComponents: n,
+              children: (0, r.jsx)(u.am.Root, {
+                  containerInnerWidth: s,
+                  children: (0, r.jsx)('div', {
                       style: { width: '100%' },
                       ref: o,
-                      children: (0, n.jsx)(u.am.AutoMeasuredNestedContainer, {
+                      children: (0, r.jsx)(u.am.AutoMeasuredNestedContainer, {
                           children: (e) =>
-                              (0, n.jsx)('div', {
+                              (0, r.jsx)('div', {
                                   ref: e,
-                                  className: i()([w.container, { [w.isComponentsV2]: (0, c.hv)(t) }]),
-                                  children: N(l)
+                                  className: a()([S.container, { [S.isComponentsV2]: (0, l.hv)(t) }]),
+                                  children: R(i)
                               })
                       })
                   })

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => k }), n(388685), n(642613), n(539854));
+(n.d(t, { Z: () => j }), n(388685), n(642613), n(539854));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -182,7 +182,7 @@ function C(e) {
     for (let n in y) y[n].updateUserId(e) && (t = !0);
     return t;
 }
-function R(e) {
+function w(e) {
     let { presences: t } = e,
         n = a()(t)
             .map((e) => {
@@ -196,7 +196,7 @@ function R(e) {
     for (let e in y) y[e].updateMultipleUserIds(n) && (r = !0);
     return r;
 }
-function P(e) {
+function R(e) {
     let { chunks: t } = e,
         n = !1;
     for (let { guildId: e, members: r } of t) {
@@ -205,7 +205,7 @@ function P(e) {
     }
     return n;
 }
-function w(e) {
+function P(e) {
     var t;
     let { channel: n } = e;
     if (!(n.id in y) || (null == (t = n.threadMetadata) ? void 0 : t.archived) !== !0) return !1;
@@ -229,7 +229,7 @@ function x(e) {
     for (let e in y) n.has(y[e].parentId) && (y[e].rebuild(), (r = !0));
     return r;
 }
-class M extends (r = o.ZP.Store) {
+class k extends (r = o.ZP.Store) {
     initialize() {
         (this.waitFor(l.Z, c.ZP, u.Z, d.Z, f.Z, _.default),
             this.syncWith([u.Z], () => {
@@ -259,11 +259,11 @@ class M extends (r = o.ZP.Store) {
         return null != (i = null == o ? void 0 : o.canViewChannel) && i;
     }
 }
-b(M, 'displayName', 'ThreadMemberListStore');
-let k = new M(s.Z, {
+b(k, 'displayName', 'ThreadMemberListStore');
+let j = new k(s.Z, {
     CONNECTION_OPEN: v,
     THREAD_MEMBERS_UPDATE: I,
-    THREAD_UPDATE: w,
+    THREAD_UPDATE: P,
     THREAD_DELETE: D,
     CHANNEL_UPDATES: x,
     THREAD_MEMBER_LIST_UPDATE: T,
@@ -272,8 +272,8 @@ let k = new M(s.Z, {
     GUILD_MEMBER_ADD: S,
     GUILD_MEMBER_UPDATE: S,
     GUILD_MEMBER_REMOVE: S,
-    PRESENCES_REPLACE: R,
-    GUILD_MEMBERS_CHUNK_BATCH: P,
+    PRESENCES_REPLACE: w,
+    GUILD_MEMBERS_CHUNK_BATCH: R,
     GUILD_ROLE_UPDATE: L,
     GUILD_ROLE_DELETE: L,
     PASSIVE_UPDATE_V2: N

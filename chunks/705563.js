@@ -1,127 +1,141 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => v });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    l = n(481060),
-    a = n(665149),
-    o = n(892001),
-    s = n(650774),
+    a = n(481060),
+    o = n(665149),
+    s = n(892001),
+    l = n(650774),
     c = n(430824),
     u = n(496675),
     d = n(709054),
-    p = n(826581),
-    h = n(246364),
-    f = n(360328),
-    m = n(981631),
-    g = n(388032),
-    b = n(679848);
-function _(e) {
-    let { channelId: t, showProfile: n = !1, showTrailingDivider: _ = !1 } = e,
+    f = n(826581),
+    _ = n(246364),
+    p = n(360328),
+    h = n(981631),
+    m = n(388032),
+    g = n(679848);
+function E(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function b(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                E(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function y(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function O(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : y(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function v(e) {
+    let { channelId: t, showProfile: n = !1, showTrailingDivider: E = !1 } = e,
         y = d.default.cast(t),
         {
-            joinRequest: C,
-            isModmin: x,
-            guildId: v,
-            maxMembers: j
-        } = (0, i.cj)([p.Z, c.Z, u.Z], () => {
-            let e = p.Z.getRequest(y),
+            joinRequest: v,
+            isModmin: I,
+            guildId: T,
+            maxMembers: S
+        } = (0, i.cj)([f.Z, c.Z, u.Z], () => {
+            let e = f.Z.getRequest(y),
                 t = c.Z.getGuild(null == e ? void 0 : e.guildId);
             return {
                 joinRequest: e,
-                isModmin: null != t && u.Z.can(m.Plq.KICK_MEMBERS, t),
+                isModmin: null != t && u.Z.can(h.Plq.KICK_MEMBERS, t),
                 guildId: null == t ? void 0 : t.id,
                 maxMembers: null == t ? void 0 : t.maxMembers
             };
         }),
-        O = (0, i.e7)([s.Z], () => (null != v ? s.Z.getMemberCount(v) : 0)),
-        E = null != j && (null != O ? O : 0) >= j,
-        { approveRequest: S, rejectRequest: P, submitting: I } = (0, f.s)(null == C ? void 0 : C.guildId, null == C ? void 0 : C.userId, null == C ? void 0 : C.joinRequestId);
-    return null != C && C.applicationStatus === h.wB.SUBMITTED && x
-        ? (0, r.jsxs)('div', {
-              className: b.buttons,
-              children: [
-                  (0, r.jsx)(l.ua7, {
-                      text: g.intl.string(g.t.cdPGbG),
-                      shouldShow: E,
-                      children: (e) => {
-                          var t, n;
-                          return (0, r.jsx)(
-                              l.zxk,
-                              ((t = (function (e) {
-                                  for (var t = 1; t < arguments.length; t++) {
-                                      var n = null != arguments[t] ? arguments[t] : {},
-                                          r = Object.keys(n);
-                                      ('function' == typeof Object.getOwnPropertySymbols &&
-                                          (r = r.concat(
-                                              Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                  return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                              })
-                                          )),
-                                          r.forEach(function (t) {
-                                              var r;
-                                              ((r = n[t]),
-                                                  t in e
-                                                      ? Object.defineProperty(e, t, {
-                                                            value: r,
-                                                            enumerable: !0,
-                                                            configurable: !0,
-                                                            writable: !0
-                                                        })
-                                                      : (e[t] = r));
-                                          }));
-                                  }
-                                  return e;
-                              })(
-                                  {
-                                      variant: 'active',
-                                      size: 'sm',
-                                      text: g.intl.string(g.t.BzjDQE)
-                                  },
-                                  e
-                              )),
-                              (n = n =
-                                  {
-                                      loading: I,
-                                      onClick: S,
-                                      disabled: E
-                                  }),
-                              Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                                  : (function (e, t) {
-                                        var n = Object.keys(e);
-                                        if (Object.getOwnPropertySymbols) {
-                                            var r = Object.getOwnPropertySymbols(e);
-                                            n.push.apply(n, r);
-                                        }
-                                        return n;
-                                    })(Object(n)).forEach(function (e) {
-                                        Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                                    }),
-                              t)
-                          );
-                      }
-                  }),
-                  (0, r.jsx)(l.zxk, {
-                      variant: 'critical-primary',
-                      size: 'sm',
-                      text: g.intl.string(g.t.hDtbs7),
-                      onClick: P,
-                      disabled: I || C.applicationStatus !== h.wB.SUBMITTED
-                  }),
-                  n &&
-                      (0, r.jsx)(l.zxk, {
-                          onClick: () => {
-                              (0, o.openUserProfileModal)({
-                                  userId: C.userId,
-                                  guildId: C.guildId
-                              });
-                          },
-                          variant: 'secondary',
-                          size: 'sm',
-                          text: g.intl.string(g.t.iXAna2)
-                      }),
-                  _ && (0, r.jsx)(a.ZP.Divider, {})
-              ]
-          })
-        : null;
+        A = (0, i.e7)([l.Z], () => (null != T ? l.Z.getMemberCount(T) : 0)),
+        N = null != S && (null != A ? A : 0) >= S,
+        { approveRequest: C, rejectRequest: w, submitting: R } = (0, p.s)(null == v ? void 0 : v.guildId, null == v ? void 0 : v.userId, null == v ? void 0 : v.joinRequestId);
+    if (null == v || v.applicationStatus !== _.wB.SUBMITTED || !I) return null;
+    let P = () => {
+        (0, s.openUserProfileModal)({
+            userId: v.userId,
+            guildId: v.guildId
+        });
+    };
+    return (0, r.jsxs)('div', {
+        className: g.buttons,
+        children: [
+            (0, r.jsx)(a.ua7, {
+                text: m.intl.string(m.t.cdPGbG),
+                shouldShow: N,
+                children: (e) =>
+                    (0, r.jsx)(
+                        a.zxk,
+                        O(
+                            b(
+                                {
+                                    variant: 'active',
+                                    size: 'sm',
+                                    text: m.intl.string(m.t.BzjDQE)
+                                },
+                                e
+                            ),
+                            {
+                                loading: R,
+                                onClick: C,
+                                disabled: N
+                            }
+                        )
+                    )
+            }),
+            (0, r.jsx)(a.zxk, {
+                variant: 'critical-primary',
+                size: 'sm',
+                text: m.intl.string(m.t.hDtbs7),
+                onClick: w,
+                disabled: R || v.applicationStatus !== _.wB.SUBMITTED
+            }),
+            n &&
+                (0, r.jsx)(a.zxk, {
+                    onClick: P,
+                    variant: 'secondary',
+                    size: 'sm',
+                    text: m.intl.string(m.t.iXAna2)
+                }),
+            E && (0, r.jsx)(o.ZP.Divider, {})
+        ]
+    });
 }

@@ -3,8 +3,8 @@ var r,
     i,
     l,
     o = n(442837),
-    a = n(570140),
-    s = n(131704),
+    s = n(570140),
+    a = n(131704),
     c = n(251625),
     u = n(592125),
     d = n(306680),
@@ -19,12 +19,12 @@ function m() {
 function b() {
     return m();
 }
-function _(e) {
+function O(e) {
     let { channelId: t } = e,
         n = u.Z.getChannel(t);
-    return null != n && !!(0, s.hv)(n.type) && m();
+    return null != n && !!(0, a.hv)(n.type) && m();
 }
-class O extends (r = o.ZP.Store) {
+class _ extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(p.Z, u.Z, h.Z, d.ZP);
     }
@@ -33,23 +33,23 @@ class O extends (r = o.ZP.Store) {
     }
 }
 ((l = 'PrivateChannelReadStateStore'),
-    (i = 'displayName') in O
-        ? Object.defineProperty(O, i, {
+    (i = 'displayName') in _
+        ? Object.defineProperty(_, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (O[i] = l));
-let y = new O(a.Z, {
+        : (_[i] = l));
+let y = new _(s.Z, {
     CONNECTION_OPEN: b,
     OVERLAY_INITIALIZE: b,
-    MESSAGE_CREATE: _,
-    MESSAGE_ACK: _,
+    MESSAGE_CREATE: O,
+    MESSAGE_ACK: O,
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e,
             n = u.Z.getChannel(t);
-        return null != n && !!(0, s.hv)(n.type) && m();
+        return null != n && !!(0, a.hv)(n.type) && m();
     },
     CHANNEL_DELETE: function (e) {
         let {
@@ -59,21 +59,21 @@ let y = new O(a.Z, {
     },
     WINDOW_FOCUS: function () {
         let e = u.Z.getChannel(h.Z.getChannelId());
-        return null != e && !!(0, s.hv)(e.type) && m();
+        return null != e && !!(0, a.hv)(e.type) && m();
     },
     CHANNEL_CREATE: function (e) {
         let {
                 channel: { id: t }
             } = e,
             n = u.Z.getChannel(t);
-        return null != n && !!(0, s.hv)(n.type) && m();
+        return null != n && !!(0, a.hv)(n.type) && m();
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e,
             n = !1;
         for (let { id: e } of t) {
             let t = u.Z.getChannel(e);
-            null != t && (0, s.hv)(t.type) && (n = !0);
+            null != t && (0, a.hv)(t.type) && (n = !0);
         }
         return !!n && m();
     }

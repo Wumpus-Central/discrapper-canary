@@ -32,9 +32,9 @@ var r = n(98405),
     A = S && S.prototype,
     N = T.prototype,
     C = b.set,
-    R = b.getterFor(v),
-    P = 'stack' in new T(v),
-    w = function (e) {
+    w = b.getterFor(v),
+    R = 'stack' in new T(v),
+    P = function (e) {
         return f(g, e) && g[e].m ? g[e].c : 0;
     },
     D = function () {
@@ -42,7 +42,7 @@ var r = n(98405),
         var e = arguments.length,
             t = m(e < 1 ? void 0 : arguments[0]),
             n = m(e < 2 ? void 0 : arguments[1], 'Error'),
-            r = w(n);
+            r = P(n);
         if (
             (C(this, {
                 type: v,
@@ -51,7 +51,7 @@ var r = n(98405),
                 code: r
             }),
             y || ((this.name = n), (this.message = t), (this.code = r)),
-            P)
+            R)
         ) {
             var i = new T(t);
             ((i.name = v), c(this, 'stack', l(1, E(i.stack, 1))));
@@ -65,27 +65,27 @@ var r = n(98405),
             get: e
         };
     },
-    M = function (e) {
+    k = function (e) {
         return x(function () {
-            return R(this)[e];
+            return w(this)[e];
         });
     };
-(y && (d(L, 'code', M('code')), d(L, 'message', M('message')), d(L, 'name', M('name'))), c(L, 'constructor', l(1, D)));
-var k = o(function () {
+(y && (d(L, 'code', k('code')), d(L, 'message', k('message')), d(L, 'name', k('name'))), c(L, 'constructor', l(1, D)));
+var j = o(function () {
         return !(new S() instanceof T);
     }),
-    j =
-        k ||
+    M =
+        j ||
         o(function () {
             return N.toString !== h || '2: 1' !== String(new S(1, 2));
         }),
     U =
-        k ||
+        j ||
         o(function () {
             return 25 !== new S(1, 'DataCloneError').code;
         }),
-    G = k || 25 !== S[I] || 25 !== A[I],
-    B = O ? j || U || G : k;
+    G = j || 25 !== S[I] || 25 !== A[I],
+    B = O ? M || U || G : j;
 r(
     {
         global: !0,
@@ -94,23 +94,23 @@ r(
     },
     { DOMException: B ? D : S }
 );
-var V = i(v),
-    F = V.prototype;
-for (var Z in (j && (O || S === V) && u(F, 'toString', h),
+var Z = i(v),
+    F = Z.prototype;
+for (var V in (M && (O || S === Z) && u(F, 'toString', h),
 U &&
     y &&
-    S === V &&
+    S === Z &&
     d(
         F,
         'code',
         x(function () {
-            return w(p(this).name);
+            return P(p(this).name);
         })
     ),
 g))
-    if (f(g, Z)) {
-        var H = g[Z],
+    if (f(g, V)) {
+        var H = g[V],
             Y = H.s,
             W = l(6, H.c);
-        (f(V, Y) || c(V, Y, W), f(F, Y) || c(F, Y, W));
+        (f(Z, Y) || c(Z, Y, W), f(F, Y) || c(F, Y, W));
     }

@@ -1,6 +1,6 @@
 (n.d(t, {
-    X: () => m,
-    Z: () => f
+    X: () => f,
+    Z: () => g
 }),
     n(953529));
 var r = n(255367);
@@ -8,20 +8,20 @@ n(73800);
 var i = n(755721),
     l = n(481060),
     s = n(565138),
-    a = n(372769),
-    o = n(742593),
+    o = n(372769),
+    a = n(742593),
     c = n(390072),
     u = n(411198),
     d = n(230224),
     h = n(388032),
     p = n(807048);
-function g(e) {
+function m(e) {
     var t;
-    let { guildScheduledEvent: n, channel: l, onAcceptInvite: s, isSubmitting: a } = e;
+    let { guildScheduledEvent: n, channel: l, onAcceptInvite: s, isSubmitting: o } = e;
     return (0, r.jsxs)('div', {
         className: p.guildEventCard,
         children: [
-            (0, r.jsx)(o.ZP, {
+            (0, r.jsx)(a.ZP, {
                 name: n.name,
                 description: null != (t = n.description) ? t : void 0,
                 headerVariant: 'heading-md/medium',
@@ -42,18 +42,18 @@ function g(e) {
                 className: p.acceptButton,
                 color: i.zx.Colors.GREEN,
                 onClick: s,
-                submitting: a,
+                submitting: o,
                 children: h.intl.string(h.t.riu2R0)
             })
         ]
     });
 }
-function m(e) {
+function f(e) {
     var t;
     let { invite: n } = e,
         i = null != n.guild ? (0, u.Qs)(n.guild) : null;
     if (null == i) return null;
-    let o = null != (t = i.description) ? t : '';
+    let a = null != (t = i.description) ? t : '';
     return (0, r.jsxs)('div', {
         className: p.guildInfoCard,
         children: [
@@ -80,7 +80,7 @@ function m(e) {
                                 tag: 'span',
                                 children: [
                                     i.name,
-                                    (0, r.jsx)(a.Z, {
+                                    (0, r.jsx)(o.Z, {
                                         guild: i,
                                         className: p.guildBadge,
                                         tooltipPosition: 'left'
@@ -96,23 +96,23 @@ function m(e) {
                     })
                 ]
             }),
-            o.length > 0 &&
+            a.length > 0 &&
                 (0, r.jsx)('details', {
                     className: p.guildDescriptionContainer,
                     children: (0, r.jsx)(l.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: o
+                        children: a
                     })
                 })
         ]
     });
 }
-function f(e) {
+function g(e) {
     let { invite: t, channel: n, isSubmitting: i, onAcceptInvite: l } = e,
         { guild_scheduled_event: s } = t;
     return null != s
-        ? (0, r.jsx)(g, {
+        ? (0, r.jsx)(m, {
               guildScheduledEvent: s,
               channel: n,
               isSubmitting: i,

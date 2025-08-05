@@ -19,7 +19,7 @@ var r = n(255367),
     x = n(113434),
     h = n(569984),
     b = n(497505),
-    j = n(192023),
+    j = n(381176),
     _ = n(977156),
     v = n(5881),
     C = n(602667),
@@ -62,9 +62,9 @@ function B(e) {
         V = s.useRef(null),
         L = s.useMemo(() => (0, g.q8)(o), [o]),
         M = (null == (t = o.userStatus) ? void 0 : t.enrolledAt) != null,
-        W = (0, u.Z)(M),
-        Z = (null == (n = o.userStatus) ? void 0 : n.completedAt) != null,
-        U = (0, u.Z)(Z),
+        Z = (0, u.Z)(M),
+        W = (null == (n = o.userStatus) ? void 0 : n.completedAt) != null,
+        U = (0, u.Z)(W),
         { hasError: H, isLoading: z } = (0, O.d7)(),
         F = s.useContext(T.T) || (B && I && !z && !k),
         X = s.useRef(F),
@@ -91,11 +91,11 @@ function B(e) {
             $(!0);
         }, []),
         em = s.useCallback(() => {
-            ($(!1), G.current || Z || ec(!1));
-        }, [Z, ec]),
+            ($(!1), G.current || W || ec(!1));
+        }, [W, ec]),
         ef = s.useCallback(() => {
-            ($(!1), Z || ec(!1), (G.current = !1));
-        }, [Z, ec]),
+            ($(!1), W || ec(!1), (G.current = !1));
+        }, [W, ec]),
         eg = s.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -143,14 +143,14 @@ function B(e) {
                 eh());
         }, [eh, o, K.trackingCtx.content]);
     (s.useLayoutEffect(() => {
-        Z && K.shouldExpandOnQuestComplete && ed();
-    }, [ed, Z, K.shouldExpandOnQuestComplete]),
+        W && K.shouldExpandOnQuestComplete && ed();
+    }, [ed, W, K.shouldExpandOnQuestComplete]),
         s.useLayoutEffect(() => {
-            M && !W && G.current && ed();
-        }, [ed, M, W]),
+            M && !Z && G.current && ed();
+        }, [ed, M, Z]),
         s.useLayoutEffect(() => {
-            Z || !M || W || G.current || ec(!1);
-        }, [M, Z, W, ec]),
+            W || !M || Z || G.current || ec(!1);
+        }, [M, W, Z, ec]),
         s.useLayoutEffect(() => {
             (F !== X.current && eo(!1), (X.current = F));
         }, [F]));
@@ -190,8 +190,8 @@ function B(e) {
         L && (0, y.loadVideoQuestModal)();
     }, [L]),
         s.useLayoutEffect(() => {
-            Z && !U && K.canCollapseOnBlur && eu();
-        }, [Z, ed, K.canCollapseOnBlur, eu, U]),
+            W && !U && K.canCollapseOnBlur && eu();
+        }, [W, ed, K.canCollapseOnBlur, eu, U]),
         s.useEffect(() => {
             var e, t;
             (H &&

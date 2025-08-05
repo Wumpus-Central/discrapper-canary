@@ -1,9 +1,9 @@
 (n.d(t, {
     Eb: () => D,
-    Fx: () => M,
+    Fx: () => k,
     IM: () => L,
-    J2: () => V,
-    r$: () => w
+    J2: () => Z,
+    r$: () => P
 }),
     n(539854),
     n(388685),
@@ -100,21 +100,21 @@ function A(e, t) {
 }
 let N = new _.Z('ReadyPayloadUtils'),
     C = {},
-    R = null,
-    P = {};
-function w(e, t) {
+    w = null,
+    R = {};
+function P(e, t) {
     var n,
         { guilds: r, merged_members: i, merged_presences: a } = e,
         o = S(e, ['guilds', 'merged_members', 'merged_presences']);
-    let s = k(P, null == a ? void 0 : a.friends),
+    let s = j(R, null == a ? void 0 : a.friends),
         l =
             null !=
             (n =
                 null == r
                     ? void 0
                     : r.map((e, t) => {
-                          let n = k(P, null == a ? void 0 : a.guilds[t]),
-                              r = k(P, null == i ? void 0 : i[t]);
+                          let n = j(R, null == a ? void 0 : a.guilds[t]),
+                              r = j(R, null == i ? void 0 : i[t]);
                           return T(v({}, e), {
                               unavailable: void 0 === e.voice_states,
                               presences: n,
@@ -133,7 +133,7 @@ function w(e, t) {
         }));
     return (
         null != c && l.push(c),
-        (P = {}),
+        (R = {}),
         T(v({}, o), {
             presences: s,
             guilds: l
@@ -157,13 +157,13 @@ function L(e, t, n) {
         { users: a, relationships: s, private_channels: l, merged_members: c, guilds: u } = e,
         d = S(e, ['users', 'relationships', 'private_channels', 'merged_members', 'guilds']);
     U(n);
-    let f = k((P = o().keyBy(a, (e) => e.id)), s);
+    let f = j((R = o().keyBy(a, (e) => e.id)), s);
     null == l ||
         l.forEach((e) => {
             let t = e.recipient_ids;
-            (null != t && (e.recipients = t.map((e) => (i()(null != P[e], 'Missing user in compressed ready payload'), P[e]))), delete e.recipient_ids);
+            (null != t && (e.recipients = t.map((e) => (i()(null != R[e], 'Missing user in compressed ready payload'), R[e]))), delete e.recipient_ids);
         });
-    let _ = null != (r = null == u ? void 0 : u.map((e, t) => (!0 === e.unavailable ? e : ((e.members = k(P, null == c ? void 0 : c[t])), B(e))))) ? r : [],
+    let _ = null != (r = null == u ? void 0 : u.map((e, t) => (!0 === e.unavailable ? e : ((e.members = j(R, null == c ? void 0 : c[t])), B(e))))) ? r : [],
         p = x(t, u, (e) => B(e));
     return (
         null != p && _.push(p),
@@ -177,12 +177,12 @@ function L(e, t, n) {
     );
 }
 function x(e, t, n) {
-    return null == R || R.identifyTime !== e || (null != t && t.some((e) => e.id === R.guild.id)) ? null : n(R.guild);
+    return null == w || w.identifyTime !== e || (null != t && t.some((e) => e.id === w.guild.id)) ? null : n(w.guild);
 }
-function M(e, t) {
+function k(e, t) {
     var n, r, i;
     let a = E.Z.getGuild(e.id),
-        o = V(
+        o = Z(
             e,
             null == a
                 ? void 0
@@ -194,14 +194,14 @@ function M(e, t) {
                   }
         );
     return (
-        (R = {
+        (w = {
             guild: e,
             identifyTime: t
         }),
         o
     );
 }
-function k(e, t) {
+function j(e, t) {
     let n = [];
     return (
         null == t ||
@@ -213,7 +213,7 @@ function k(e, t) {
         n
     );
 }
-function j(e) {
+function M(e) {
     let t = C[e];
     return (delete C[e], t);
 }
@@ -251,7 +251,7 @@ function G(e, t, n) {
 }
 function B(e) {
     var t, n, r, i, a, o, s, l;
-    let c = j(e.id);
+    let c = M(e.id);
     if ('partial' !== e.data_mode)
         return {
             id: e.id,
@@ -310,9 +310,9 @@ function B(e) {
         hasThreadsSubscription: e.has_threads_subscription
     };
 }
-function V(e, t) {
+function Z(e, t) {
     var n, r, i, a, o, s, l, c;
-    if ((null == t && (t = j(e.id)), 'partial' !== e.data_mode))
+    if ((null == t && (t = M(e.id)), 'partial' !== e.data_mode))
         return {
             id: e.id,
             guild_scheduled_events: e.guild_scheduled_events,

@@ -83,7 +83,7 @@ let b = 57.75,
                         })
                     ));
             },
-            R = (e) => {
+            w = (e) => {
                 null == A.current || A.current.contains(e.relatedTarget) || (A.current.scrollTop = 0);
             };
         return h || null == a || '' === a
@@ -93,7 +93,7 @@ let b = 57.75,
                       (0, r.jsx)('div', {
                           ref: N,
                           className: o()(p.descriptionClamp, T && p.maxBioHeight),
-                          onBlur: R,
+                          onBlur: w,
                           children: (0, r.jsx)(f.Z, {
                               userBio: a,
                               setLineClamp: !1,

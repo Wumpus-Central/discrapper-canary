@@ -114,11 +114,11 @@ let O = function (e) {
                 v
             )
         ),
-        R = E(m({}, t), { backgroundColor: T });
+        w = E(m({}, t), { backgroundColor: T });
     return (
-        null != N && O && S && ((R.backgroundImage = 'url('.concat(N, ')')), (R.backgroundSize = 'cover')),
+        null != N && O && S && ((w.backgroundImage = 'url('.concat(N, ')')), (w.backgroundSize = 'cover')),
         (0, r.jsx)('div', {
-            style: R,
+            style: w,
             className: p.background,
             children: y
                 ? (0, r.jsx)(c.Z, {

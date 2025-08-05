@@ -2,16 +2,16 @@ n.d(t, { Z: () => u });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    l = n(100527),
-    a = n(769409),
-    o = n(739566),
-    s = n(834129),
+    a = n(100527),
+    o = n(769409),
+    s = n(739566),
+    l = n(834129),
     c = n(388032);
 function u(e) {
     let { message: t, usernameHook: n, compact: u } = e,
-        d = (0, o.ZP)(t),
-        p = n(d);
-    return (0, r.jsx)(s.Z, {
+        d = (0, s.ZP)(t),
+        f = n(d);
+    return (0, r.jsx)(l.Z, {
         iconNode: (0, r.jsx)(i.vdY, {
             size: 'xs',
             color: 'currentColor'
@@ -20,7 +20,7 @@ function u(e) {
         compact: u,
         children: c.intl.format(c.t['4wLp29'], {
             username: d.nick,
-            usernameHook: p,
+            usernameHook: f,
             editGroupButton: (0, r.jsx)(
                 i.Text,
                 {
@@ -31,7 +31,7 @@ function u(e) {
                 },
                 'edit-group-button-'.concat(t.id)
             ),
-            onEditGroup: () => (0, a.B)(t.channel_id, l.Z.GROUP_DM_SYSTEM_MESSAGE_ICON)
+            onEditGroup: () => (0, o.B)(t.channel_id, a.Z.GROUP_DM_SYSTEM_MESSAGE_ICON)
         })
     });
 }

@@ -3,7 +3,7 @@ var r = n(255367),
     i = n(73800),
     l = n(114858),
     s = n(215569);
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,7 +28,7 @@ function a(e) {
     }
     return e;
 }
-function o(e, t) {
+function a(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,27 +70,27 @@ class u extends i.Component {
         let e = this.props,
             { children: t, location: n, history: u, staticContext: d, match: h } = e,
             p = c(e, ['children', 'location', 'history', 'staticContext', 'match']),
-            g = null,
-            m = null;
+            m = null,
+            f = null;
         return (
             i.Children.forEach(t, (e) => {
-                if (null == g && i.isValidElement(e)) {
+                if (null == m && i.isValidElement(e)) {
                     let t = e.props,
                         { component: r, render: s } = t,
                         h = c(t, ['component', 'render']),
                         p = h.path || h.from;
-                    null != (g = null != p ? (0, l.LX)(n.pathname, o(a({}, h), { path: p })) : null) &&
-                        ((h = o(a({}, h), {
+                    null != (m = null != p ? (0, l.LX)(n.pathname, a(o({}, h), { path: p })) : null) &&
+                        ((h = a(o({}, h), {
                             key: p,
                             location: n,
-                            match: g,
+                            match: m,
                             history: u,
                             staticContext: d
                         })),
-                        null != r ? (m = i.createElement(r, h)) : null != s && (m = s(h)));
+                        null != r ? (f = i.createElement(r, h)) : null != s && (f = s(h)));
                 }
             }),
-            (0, r.jsx)(s.W, o(a({}, p), { children: m }))
+            (0, r.jsx)(s.W, a(o({}, p), { children: f }))
         );
     }
 }

@@ -116,7 +116,7 @@ function y() {
                 o = f(d(S, n), n),
                 l = o.pathname,
                 C = l && l.replace(/([.+*?=^!:${}()[\]|/\\])/g, '\\$1'),
-                R = C
+                w = C
                     ? (0, r.LX)(n.pathname, {
                           path: C,
                           exact: h,
@@ -124,13 +124,13 @@ function y() {
                           strict: I
                       })
                     : null,
-                P = !!(m ? m(R, n) : R),
-                w = P ? y(p, u) : p,
-                D = P ? (0, s.Z)({}, T, {}, _) : T,
+                R = !!(m ? m(w, n) : w),
+                P = R ? y(p, u) : p,
+                D = R ? (0, s.Z)({}, T, {}, _) : T,
                 L = (0, s.Z)(
                     {
-                        'aria-current': (P && i) || null,
-                        className: w,
+                        'aria-current': (R && i) || null,
+                        className: P,
                         style: D,
                         to: o
                     },

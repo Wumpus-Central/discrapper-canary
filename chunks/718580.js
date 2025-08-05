@@ -125,24 +125,24 @@ function S(e) {
     });
     let N = T.activeSlide,
         C = (0, d.Z)(T.activeSlide),
-        R = null != (t = T.directionOverride) ? t : v(null != C ? S[C] : null, S[N]),
-        { reducedMotion: P } = i.useContext(l.S),
-        w = i.useContext(f.Z),
+        w = null != (t = T.directionOverride) ? t : v(null != C ? S[C] : null, S[N]),
+        { reducedMotion: R } = i.useContext(l.S),
+        P = i.useContext(f.Z),
         D = S[N].impressionName,
         L = E(m({}, S[N].impressionProperties), { location_stack: A });
-    w({
+    P({
         type: o.ImpressionTypes.MODAL,
         name: D,
         properties: L,
         _stackContext: { isSlide: !0 }
     });
-    let { ref: x, width: M = 0, height: k = 0 } = (0, u.ZP)(N),
-        j = m({}, O, T.springConfig, P.enabled ? { clamp: !0 } : null),
+    let { ref: x, width: k = 0, height: j = 0 } = (0, u.ZP)(N),
+        M = m({}, O, T.springConfig, R.enabled ? { clamp: !0 } : null),
         U = (0, c.q_F)(
             {
-                width: null != (n = T.width) ? n : M,
-                height: k,
-                config: j
+                width: null != (n = T.width) ? n : k,
+                height: j,
+                config: M
             },
             null == C ? 'animate-never' : 'respect-motion-settings'
         ),
@@ -153,7 +153,7 @@ function S(e) {
                 from: { value: 1 },
                 enter: { value: 0 },
                 leave: { value: -1 },
-                config: j,
+                config: M,
                 onRest: (e, t) => {
                     let { item: n } = t;
                     n === N && null != T.onSlideReady && T.onSlideReady(n);
@@ -161,9 +161,9 @@ function S(e) {
             },
             null == C ? 'animate-never' : 'respect-motion-settings'
         ),
-        B = (0, p.Z)(R),
-        { width: V, centered: F = !0 } = T,
-        Z = s.tq ? '100%' : U.width.to((e) => ('string' == typeof e ? e : Math.round(e))),
+        B = (0, p.Z)(w),
+        { width: Z, centered: F = !0 } = T,
+        V = s.tq ? '100%' : U.width.to((e) => ('string' == typeof e ? e : Math.round(e))),
         H = s.tq ? '100%' : U.height.to((e) => Math.round(e)),
         Y = s.tq
             ? {}
@@ -178,7 +178,7 @@ function S(e) {
         style: m(
             {
                 position: 'relative',
-                minWidth: Z,
+                minWidth: V,
                 minHeight: H
             },
             W
@@ -196,10 +196,10 @@ function S(e) {
                             display: g,
                             flexDirection: 'column',
                             backfaceVisibility: 'hidden',
-                            width: s.tq ? '100%' : V
+                            width: s.tq ? '100%' : Z
                         },
                         Y,
-                        P.enabled
+                        R.enabled
                             ? o
                             : m(
                                   {

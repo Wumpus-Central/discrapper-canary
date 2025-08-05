@@ -13,6 +13,5 @@ e.exports = {
     'neon-glow-flicker-animation': 'neon-glow-flicker-animation_dfb989',
     'toon-animation': 'toon-animation_dfb989',
     'pop-animation-main': 'pop-animation-main_dfb989',
-    'pop-animation-shadow': 'pop-animation-shadow_dfb989',
-    gradientUsernameAnimation: 'gradientUsernameAnimation_dfb989'
+    'pop-animation-shadow': 'pop-animation-shadow_dfb989'
 };

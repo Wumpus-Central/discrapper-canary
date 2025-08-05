@@ -1,144 +1,155 @@
 (n.d(t, {
-    QN: () => p,
-    ZP: () => s,
-    gb: () => f,
-    uF: () => v
+    QN: () => m,
+    ZP: () => h,
+    gb: () => g,
+    uF: () => E
 }),
     n(388685),
     n(539854));
-var i = n(73800),
-    r = n(442837),
-    l = n(835473),
+var r = n(73800),
+    i = n(442837),
+    a = n(835473),
     o = n(158776),
-    u = n(594174),
-    a = n(823379),
+    s = n(594174),
+    l = n(823379),
     c = n(317381),
-    d = n(16609);
-function s(e, t) {
-    return f(
-        (0, r.Wu)([c.ZP], () => (null != e && null != e.id && '' !== e.id ? c.ZP.getEmbeddedActivitiesForChannel(e.id) : c.i6)),
+    u = n(16609);
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                d(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function _(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function p(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : _(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function h(e, t) {
+    return g(
+        (0, i.Wu)([c.ZP], () => (null != e && null != e.id && '' !== e.id ? c.ZP.getEmbeddedActivitiesForChannel(e.id) : c.i6)),
         t
     );
 }
-function p(e) {
-    let t = f((0, r.e7)([c.ZP], () => (null != e ? c.ZP.getEmbeddedActivitiesForGuild(e) : c.i6)));
-    return i.useMemo(() => {
+function m(e) {
+    let t = g((0, i.e7)([c.ZP], () => (null != e ? c.ZP.getEmbeddedActivitiesForGuild(e) : c.i6)));
+    return r.useMemo(() => {
         let e = new Map();
         return (
             t.forEach((t) => {
                 var n;
-                let i = (0, d.p)(t.embeddedActivity.location);
-                if (null == i) return;
-                let r = null != (n = e.get(i)) ? n : [];
-                (r.push(t), e.set(i, r));
+                let r = (0, u.p)(t.embeddedActivity.location);
+                if (null == r) return;
+                let i = null != (n = e.get(r)) ? n : [];
+                (i.push(t), e.set(r, i));
             }),
             e
         );
     }, [t]);
 }
-function f(e, t) {
+function g(e, t) {
     let n = e.map((e) => e.applicationId),
-        o = (0, l.Z)(n),
+        o = (0, a.Z)(n),
         c = new Set([]);
     for (let t of e) for (let e of t.userIds) c.add(e);
-    let d = (0, r.Wu)(
-        [u.default],
+    let u = (0, i.Wu)(
+        [s.default],
         () => {
             let e = [];
-            for (let t of c) e.push(u.default.getUser(t));
+            for (let t of c) e.push(s.default.getUser(t));
             return e;
         },
         [c]
     );
-    return i.useMemo(() => {
+    return r.useMemo(() => {
         let n = new Map();
         return (
-            d.forEach((e) => {
+            u.forEach((e) => {
                 null != e && n.set(e.id, e);
             }),
             e
-                .map((e, i) => {
-                    let r = o[i],
-                        l = [];
-                    if (null != l)
-                        for (let i of e.userIds) {
-                            let e = n.get(i);
+                .map((e, r) => {
+                    let i = o[r],
+                        a = [];
+                    if (null != a)
+                        for (let r of e.userIds) {
+                            let e = n.get(r);
                             if (null != e && null != t) {
                                 let n = t(e);
-                                null != n && l.push(n);
+                                null != n && a.push(n);
                             }
                         }
-                    return null == r
+                    return null == i
                         ? null
                         : {
                               embeddedActivity: e,
-                              application: r,
-                              userParticipantAvatarUrls: l
+                              application: i,
+                              userParticipantAvatarUrls: a
                           };
                 })
-                .filter(a.lm)
+                .filter(l.lm)
         );
-    }, [e, o, d, t]);
+    }, [e, o, u, t]);
 }
-function v(e) {
-    return (0, r.e7)(
+function E(e) {
+    return (0, i.e7)(
         [o.Z],
         () => {
             let t = new Map();
             return (
                 e.forEach((e) => {
-                    var n, i, r;
-                    let l = o.Z.findActivity(null == e ? void 0 : e.embeddedActivity.userIds.values().next().value, (t) => {
+                    var n;
+                    let r = o.Z.findActivity(null == e ? void 0 : e.embeddedActivity.userIds.values().next().value, (t) => {
                         var n;
                         return t.application_id === (null == e || null == (n = e.application) ? void 0 : n.id);
                     });
-                    t.set(
-                        null == e || null == (n = e.application) ? void 0 : n.id,
-                        ((i = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    i = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
-                                    (i = i.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
-                                    )),
-                                    i.forEach(function (t) {
-                                        var i;
-                                        ((i = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: i,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0
-                                                  })
-                                                : (e[t] = i));
-                                    }));
-                            }
-                            return e;
-                        })({}, e)),
-                        (r = r = { presenceActivity: l }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(r))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var i = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, i);
-                                  }
-                                  return n;
-                              })(Object(r)).forEach(function (e) {
-                                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(r, e));
-                              }),
-                        i)
-                    );
+                    t.set(null == e || null == (n = e.application) ? void 0 : n.id, p(f({}, e), { presenceActivity: r }));
                 }),
                 t
             );
         },
         [e],
-        r.pF
+        i.pF
     );
 }

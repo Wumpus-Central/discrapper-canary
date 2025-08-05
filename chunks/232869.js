@@ -1,65 +1,65 @@
-n.d(e, {
-    VR: () => h,
-    bc: () => s,
-    l3: () => o
+n.d(t, {
+    VR: () => l,
+    bc: () => o,
+    l3: () => s
 });
 var r = n(134994),
     i = n(492733);
-let s = (t, e, n) => (t & e) ^ (~t & n),
-    o = (t, e, n) => (t & e) ^ (t & n) ^ (e & n);
-class h extends i.kb {
-    constructor(t, e, n, r) {
-        (super(), (this.blockLen = t), (this.outputLen = e), (this.padOffset = n), (this.isLE = r), (this.finished = !1), (this.length = 0), (this.pos = 0), (this.destroyed = !1), (this.buffer = new Uint8Array(t)), (this.view = (0, i.GL)(this.buffer)));
+function a(e, t, n, r) {
+    if ('function' == typeof e.setBigUint64) return e.setBigUint64(t, n, r);
+    let i = BigInt(32),
+        a = BigInt(4294967295),
+        o = Number((n >> i) & a),
+        s = Number(n & a),
+        l = 4 * !!r,
+        c = 4 * !r;
+    (e.setUint32(t + l, o, r), e.setUint32(t + c, s, r));
+}
+let o = (e, t, n) => (e & t) ^ (~e & n),
+    s = (e, t, n) => (e & t) ^ (e & n) ^ (t & n);
+class l extends i.kb {
+    constructor(e, t, n, r) {
+        (super(), (this.blockLen = e), (this.outputLen = t), (this.padOffset = n), (this.isLE = r), (this.finished = !1), (this.length = 0), (this.pos = 0), (this.destroyed = !1), (this.buffer = new Uint8Array(e)), (this.view = (0, i.GL)(this.buffer)));
     }
-    update(t) {
+    update(e) {
         (0, r.Gg)(this);
-        let { view: e, buffer: n, blockLen: s } = this,
-            o = (t = (0, i.O0)(t)).length;
+        let { view: t, buffer: n, blockLen: a } = this,
+            o = (e = (0, i.O0)(e)).length;
         for (let r = 0; r < o; ) {
-            let h = Math.min(s - this.pos, o - r);
-            if (h === s) {
-                let e = (0, i.GL)(t);
-                for (; s <= o - r; r += s) this.process(e, r);
+            let s = Math.min(a - this.pos, o - r);
+            if (s === a) {
+                let t = (0, i.GL)(e);
+                for (; a <= o - r; r += a) this.process(t, r);
                 continue;
             }
-            (n.set(t.subarray(r, r + h), this.pos), (this.pos += h), (r += h), this.pos === s && (this.process(e, 0), (this.pos = 0)));
+            (n.set(e.subarray(r, r + s), this.pos), (this.pos += s), (r += s), this.pos === a && (this.process(t, 0), (this.pos = 0)));
         }
-        return ((this.length += t.length), this.roundClean(), this);
+        return ((this.length += e.length), this.roundClean(), this);
     }
-    digestInto(t) {
-        ((0, r.Gg)(this), (0, r.J8)(t, this), (this.finished = !0));
-        let { buffer: e, view: n, blockLen: s, isLE: o } = this,
-            { pos: h } = this;
-        ((e[h++] = 128), this.buffer.subarray(h).fill(0), this.padOffset > s - h && (this.process(n, 0), (h = 0)));
-        for (let t = h; t < s; t++) e[t] = 0;
-        (!(function (t, e, n, r) {
-            if ('function' == typeof t.setBigUint64) return t.setBigUint64(e, n, r);
-            let i = BigInt(32),
-                s = BigInt(4294967295),
-                o = Number((n >> i) & s),
-                h = Number(n & s),
-                a = 4 * !!r,
-                f = 4 * !r;
-            (t.setUint32(e + a, o, r), t.setUint32(e + f, h, r));
-        })(n, s - 8, BigInt(8 * this.length), o),
-            this.process(n, 0));
-        let a = (0, i.GL)(t),
-            f = this.outputLen;
-        if (f % 4) throw Error('_sha2: outputLen should be aligned to 32bit');
-        let c = f / 4,
-            l = this.get();
-        if (c > l.length) throw Error('_sha2: outputLen bigger than state');
-        for (let t = 0; t < c; t++) a.setUint32(4 * t, l[t], o);
+    digestInto(e) {
+        ((0, r.Gg)(this), (0, r.J8)(e, this), (this.finished = !0));
+        let { buffer: t, view: n, blockLen: o, isLE: s } = this,
+            { pos: l } = this;
+        ((t[l++] = 128), this.buffer.subarray(l).fill(0), this.padOffset > o - l && (this.process(n, 0), (l = 0)));
+        for (let e = l; e < o; e++) t[e] = 0;
+        (a(n, o - 8, BigInt(8 * this.length), s), this.process(n, 0));
+        let c = (0, i.GL)(e),
+            u = this.outputLen;
+        if (u % 4) throw Error('_sha2: outputLen should be aligned to 32bit');
+        let d = u / 4,
+            f = this.get();
+        if (d > f.length) throw Error('_sha2: outputLen bigger than state');
+        for (let e = 0; e < d; e++) c.setUint32(4 * e, f[e], s);
     }
     digest() {
-        let { buffer: t, outputLen: e } = this;
-        this.digestInto(t);
-        let n = t.slice(0, e);
+        let { buffer: e, outputLen: t } = this;
+        this.digestInto(e);
+        let n = e.slice(0, t);
         return (this.destroy(), n);
     }
-    _cloneInto(t) {
-        (t || (t = new this.constructor()), t.set(...this.get()));
-        let { blockLen: e, buffer: n, length: r, finished: i, destroyed: s, pos: o } = this;
-        return ((t.length = r), (t.pos = o), (t.finished = i), (t.destroyed = s), r % e && t.buffer.set(n), t);
+    _cloneInto(e) {
+        (e || (e = new this.constructor()), e.set(...this.get()));
+        let { blockLen: t, buffer: n, length: r, finished: i, destroyed: a, pos: o } = this;
+        return ((e.length = r), (e.pos = o), (e.finished = i), (e.destroyed = a), r % t && e.buffer.set(n), e);
     }
 }

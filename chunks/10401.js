@@ -1,10 +1,10 @@
-(n.d(t, { Z: () => C }), n(388685));
+(n.d(t, { Z: () => w }), n(388685));
 var r,
     i = n(873546),
-    l = n(442837),
-    a = n(570140),
-    o = n(38618),
-    s = n(268967),
+    a = n(442837),
+    o = n(570140),
+    s = n(38618),
+    l = n(268967),
     c = n(188785);
 function u(e, t, n) {
     return (
@@ -35,76 +35,93 @@ function d(e) {
     }
     return e;
 }
-function p(e, t) {
+function f(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let h = {},
-    f = {},
+let p = {},
+    h = {},
     m = !0,
     g = {},
-    b = !1;
-function _() {
+    E = !1;
+function b() {
+    return l.Z;
+}
+function y() {
     if (((g = {}), !m))
-        for (let [e, t] of Object.entries(s.Z)) {
-            let n = !1 !== h[e];
-            if (((g[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== h[n] && (g[e] = !1);
+        for (let [e, t] of Object.entries(b())) {
+            let n = !1 !== p[e];
+            if (((g[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== p[n] && (g[e] = !1);
         }
 }
-class y extends (r = l.ZP.Store) {
+function O(e) {
+    ((p = _(d({}, p), { [e.tutorialId]: !1 })), (h = d({}, h)), delete h[e.tutorialId], y());
+}
+function v(e) {
+    h = _(d({}, h), { [e.tutorialId]: e.renderData });
+}
+function I(e) {
+    ((h = d({}, h)), delete h[e.tutorialId]);
+}
+function T() {
+    m = !0;
+}
+function S(e) {
+    let { tutorial: t } = e;
+    ((E = !0), (m = !0), (p = {}), null != t && ((m = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (p[e] = !1))), y());
+}
+function A() {
+    E = !1;
+}
+function N(e) {
+    return i.tq && ['writing-messages', 'organize-by-topic'].includes(e);
+}
+class C extends (r = a.ZP.Store) {
     initialize() {
-        (_(), this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(o.Z));
+        (y(), this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(s.Z));
     }
     shouldShow(e) {
-        return !(!b || m || c.a || (i.tq && ['writing-messages', 'organize-by-topic'].includes(e))) && (g[e] || !1);
+        return !(!E || m || c.a || N(e)) && (g[e] || !1);
     }
     shouldShowAnyIndicators() {
         return !m;
     }
     getIndicators() {
-        return f;
+        return h;
     }
     getData() {
-        return s.Z;
+        return b();
     }
     getDefinition(e) {
         let t = this.getData();
         return null != t ? t[e] : null;
     }
 }
-u(y, 'displayName', 'TutorialIndicatorStore');
-let C = new y(a.Z, {
-    CONNECTION_OPEN: function (e) {
-        let { tutorial: t } = e;
-        ((b = !0), (m = !0), (h = {}), null != t && ((m = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (h[e] = !1))), _());
-    },
-    CONNECTION_CLOSED: function () {
-        b = !1;
-    },
-    TUTORIAL_INDICATOR_DISMISS: function (e) {
-        ((h = p(d({}, h), { [e.tutorialId]: !1 })), (f = d({}, f)), delete f[e.tutorialId], _());
-    },
-    TUTORIAL_INDICATOR_SHOW: function (e) {
-        f = p(d({}, f), { [e.tutorialId]: e.renderData });
-    },
-    TUTORIAL_INDICATOR_HIDE: function (e) {
-        ((f = d({}, f)), delete f[e.tutorialId]);
-    },
-    TUTORIAL_INDICATOR_SUPPRESS_ALL: function () {
-        m = !0;
-    }
+u(C, 'displayName', 'TutorialIndicatorStore');
+let w = new C(o.Z, {
+    CONNECTION_OPEN: S,
+    CONNECTION_CLOSED: A,
+    TUTORIAL_INDICATOR_DISMISS: O,
+    TUTORIAL_INDICATOR_SHOW: v,
+    TUTORIAL_INDICATOR_HIDE: I,
+    TUTORIAL_INDICATOR_SUPPRESS_ALL: T
 });

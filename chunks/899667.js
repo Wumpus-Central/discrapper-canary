@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => h }), n(388685));
+(n.d(t, { Z: () => m }), n(388685));
 var r,
     i,
     l,
@@ -10,11 +10,11 @@ let a = {},
     d = !1,
     f = !1,
     p = null,
-    g = null;
-function m() {
+    b = null;
+function O() {
     f = !0;
 }
-class b extends (r = s.ZP.Store) {
+class h extends (r = s.ZP.Store) {
     getAppliedGuildBoostsForGuild(e) {
         return null != a[e] ? a[e].subscriptions : null;
     }
@@ -34,7 +34,7 @@ class b extends (r = s.ZP.Store) {
         return p;
     }
     get unapplyBoostError() {
-        return g;
+        return b;
     }
     get cooldownEndsAt() {
         return c;
@@ -44,15 +44,15 @@ class b extends (r = s.ZP.Store) {
     }
 }
 ((l = 'AppliedGuildBoostStore'),
-    (i = 'displayName') in b
-        ? Object.defineProperty(b, i, {
+    (i = 'displayName') in h
+        ? Object.defineProperty(h, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (b[i] = l));
-let h = new b(o.Z, {
+        : (h[i] = l));
+let m = new h(o.Z, {
     GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function (e) {
         let { guildId: t, appliedBoosts: n } = e;
         a[t] = {
@@ -68,8 +68,8 @@ let h = new b(o.Z, {
         let { endsAt: t } = e;
         c = t;
     },
-    GUILD_UNAPPLY_BOOST_START: m,
-    GUILD_APPLY_BOOST_START: m,
+    GUILD_UNAPPLY_BOOST_START: O,
+    GUILD_APPLY_BOOST_START: O,
     GUILD_APPLY_BOOST_SUCCESS: function (e) {
         let { appliedGuildBoost: t } = e,
             n = new Set(t.map((e) => e.id));
@@ -85,7 +85,7 @@ let h = new b(o.Z, {
     },
     GUILD_UNAPPLY_BOOST_FAIL: function (e) {
         let { error: t } = e;
-        ((f = !1), (g = t));
+        ((f = !1), (b = t));
     },
     USER_APPLIED_BOOSTS_FETCH_START: function () {
         d = !0;

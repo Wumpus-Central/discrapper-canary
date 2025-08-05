@@ -49,12 +49,12 @@ var r = n(260674),
     },
     h = {},
     m = function e(t, n, a, o, s, c, d, f, m, g, E, b, y, O, v, I, T, S) {
-        for (var A, N = t, C = S, R = 0, P = !1; void 0 !== (C = C.get(h)) && !P; ) {
-            var w = C.get(t);
-            if (((R += 1), void 0 !== w))
-                if (w === R) throw RangeError('Cyclic object value');
-                else P = !0;
-            void 0 === C.get(h) && (R = 0);
+        for (var A, N = t, C = S, w = 0, R = !1; void 0 !== (C = C.get(h)) && !R; ) {
+            var P = C.get(t);
+            if (((w += 1), void 0 !== P))
+                if (P === w) throw RangeError('Cyclic object value');
+                else R = !0;
+            void 0 === C.get(h) && (w = 0);
         }
         if (
             ('function' == typeof g
@@ -81,17 +81,17 @@ var r = n(260674),
             A = E ? L.sort(E) : L;
         }
         var x = f ? String(n).replace(/\./g, '%2E') : String(n),
-            M = o && l(N) && 1 === N.length ? x + '[]' : x;
-        if (s && l(N) && 0 === N.length) return M + '[]';
-        for (var k = 0; k < A.length; ++k) {
-            var j = A[k],
-                U = 'object' == typeof j && j && void 0 !== j.value ? j.value : N[j];
+            k = o && l(N) && 1 === N.length ? x + '[]' : x;
+        if (s && l(N) && 0 === N.length) return k + '[]';
+        for (var j = 0; j < A.length; ++j) {
+            var M = A[j],
+                U = 'object' == typeof M && M && void 0 !== M.value ? M.value : N[M];
             if (!d || null !== U) {
-                var G = b && f ? String(j).replace(/\./g, '%2E') : String(j),
-                    B = l(N) ? ('function' == typeof a ? a(M, G) : M) : M + (b ? '.' + G : '[' + G + ']');
-                S.set(t, R);
-                var V = r();
-                (V.set(h, S), u(D, e(U, B, a, o, s, c, d, f, 'comma' === a && I && l(N) ? null : m, g, E, b, y, O, v, I, T, V)));
+                var G = b && f ? String(M).replace(/\./g, '%2E') : String(M),
+                    B = l(N) ? ('function' == typeof a ? a(k, G) : k) : k + (b ? '.' + G : '[' + G + ']');
+                S.set(t, w);
+                var Z = r();
+                (Z.set(h, S), u(D, e(U, B, a, o, s, c, d, f, 'comma' === a && I && l(N) ? null : m, g, E, b, y, O, v, I, T, Z)));
             }
         }
         return D;

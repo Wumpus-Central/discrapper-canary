@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(114858),
     o = n(704215),
-    a = n(266454),
-    s = n(703656),
+    s = n(266454),
+    a = n(703656),
     c = n(507808),
     u = n(822857),
     d = n(518121),
@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(921944),
     m = n(46140),
     b = n(388032);
-let _ = [p.Z5c.ME, p.Z5c.COLLECTIBLES_SHOP, p.Z5c.NITRO_HOME],
-    O = (e) => {
+let O = [p.Z5c.ME, p.Z5c.COLLECTIBLES_SHOP, p.Z5c.NITRO_HOME],
+    _ = (e) => {
         let { isVirtualCurrencyEnabled: t, onShowCoachmarkHandler: n } = e,
             r = (0, l.TH)().pathname,
             { shouldShow: u, closeCoachmarkIfOpen: d } = (0, h.M)({
@@ -25,7 +25,7 @@ let _ = [p.Z5c.ME, p.Z5c.COLLECTIBLES_SHOP, p.Z5c.NITRO_HOME],
             b = i.useCallback(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'CLOSE';
-                    ((0, a.Q3)(o.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
+                    ((0, s.Q3)(o.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
                         dismissAction: g.L.INDIRECT_ACTION,
                         groupName: g.R.VIRTUAL_CURRENCY_ONBOARDING
                     }),
@@ -33,8 +33,8 @@ let _ = [p.Z5c.ME, p.Z5c.COLLECTIBLES_SHOP, p.Z5c.NITRO_HOME],
                 },
                 [d]
             ),
-            O = i.useCallback(() => {
-                (d('CTA_CLICK'), _.includes(r) || (0, s.uL)(p.Z5c.COLLECTIBLES_SHOP_WITH_TAB(f.AW.ORBS)));
+            _ = i.useCallback(() => {
+                (d('CTA_CLICK'), O.includes(r) || (0, a.uL)(p.Z5c.COLLECTIBLES_SHOP_WITH_TAB(f.AW.ORBS)));
             }, [d, r]),
             y = i.useCallback(() => {
                 (b('CTA_CLICK'),
@@ -49,7 +49,7 @@ let _ = [p.Z5c.ME, p.Z5c.COLLECTIBLES_SHOP, p.Z5c.NITRO_HOME],
                   shouldShow: u,
                   questId: m.V6,
                   onClose: b,
-                  onCtaClick: O,
+                  onCtaClick: _,
                   onDiscoveryButtonClick: y
               }
             : {
@@ -62,15 +62,15 @@ let _ = [p.Z5c.ME, p.Z5c.COLLECTIBLES_SHOP, p.Z5c.NITRO_HOME],
     },
     y = (e) => {
         let { targetElementRef: t, scrollToBottom: n, renderDiscoveryButton: l, isGuildBarScrolling: o } = e,
-            { enabled: a } = (0, u.WX)({ location: 'orbs_discovery_onboarding_coachmark' }),
+            { enabled: s } = (0, u.WX)({ location: 'orbs_discovery_onboarding_coachmark' }),
             {
-                shouldShow: s,
+                shouldShow: a,
                 questId: c,
                 onClose: h,
                 onCtaClick: p,
                 onDiscoveryButtonClick: f
-            } = O({
-                isVirtualCurrencyEnabled: a,
+            } = _({
+                isVirtualCurrencyEnabled: s,
                 onShowCoachmarkHandler: (0, d.O5)({
                     targetElementRef: t,
                     scrollToBottom: n
@@ -91,7 +91,7 @@ let _ = [p.Z5c.ME, p.Z5c.COLLECTIBLES_SHOP, p.Z5c.NITRO_HOME],
             targetElementRef: t,
             targetQuestId: c,
             renderDiscoveryButton: l,
-            showingCoachmark: s,
+            showingCoachmark: a,
             isGuildBarScrolling: o,
             onDiscoveryButtonClick: f,
             innerCoachmarkProps: g

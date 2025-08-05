@@ -1,10 +1,10 @@
-n.d(t, { Z: () => r });
-var i = n(281215),
-    a = n(210275),
-    o = n(852469),
-    s = n(134582),
-    l = n(388032);
-let r = (0, i.k4)('NotificationsOverview', {
-    useTitle: () => l.intl.string(l.t['/dp6yc']),
-    layout: [a.Z, s.Z, o.Z]
+n.d(t, { Z: () => s });
+var i = n(509613),
+    o = n(210275),
+    l = n(852469),
+    a = n(134582),
+    r = n(388032);
+let s = (0, i.k4)('NotificationsOverview', {
+    useTitle: () => r.intl.string(r.t['/dp6yc']),
+    layout: [o.Z, a.Z, l.Z]
 });

@@ -6,9 +6,9 @@ let r, i, a;
     Wf: () => N,
     XU: () => y,
     dL: () => v,
-    eH: () => P,
+    eH: () => R,
     m1: () => A,
-    op: () => R,
+    op: () => w,
     s1: () => I,
     uL: () => b,
     uv: () => O
@@ -151,9 +151,9 @@ function N(e) {
 function C() {
     return h;
 }
-function R() {
+function w() {
     g() && ((i = null), r.goBack());
 }
-function P() {
+function R() {
     g() && ((i = null), r.goForward());
 }

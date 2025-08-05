@@ -52,7 +52,7 @@ function C(e) {
     }
     return e;
 }
-function R(e, t) {
+function w(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,18 +64,18 @@ function R(e, t) {
     }
     return n;
 }
-function P(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : R(Object(t)).forEach(function (n) {
+            : w(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function w(e) {
+function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (d.Z.isFullServerPreview(e)) return;
     let n = t ? O.Z.getOnboardingPromptsForOnboarding(e) : O.Z.getOnboardingPrompts(e),
@@ -159,7 +159,7 @@ let L = {
             removedOptionIds: s
         });
     },
-    updateOnboardingResponses: i().debounce(w, 1000),
+    updateOnboardingResponses: i().debounce(P, 1000),
     updateRolesLocal: D,
     completeOnboarding(e, t) {
         let n = t.length > 0 ? t[t.length - 1] : null,
@@ -170,12 +170,12 @@ let L = {
             [c, f] = (0, v.Ee)(e, t, o),
             b = [...a, ...o],
             N = b.map((e) => _.Z.getChannel(e)).filter(E.lm),
-            R = (0, I.v)(e, new Set(b), N, !0).length,
+            w = (0, I.v)(e, new Set(b), N, !0).length,
             D = null == n ? [] : n.options.map((e) => e.id);
         if (
             (m.default.track(
                 T.rMx.GUILD_ONBOARDING_STEP_COMPLETED,
-                P(C({}, (0, l.hH)(e)), {
+                R(C({}, (0, l.hH)(e)), {
                     step: t.length - 1,
                     options_selected: null == n ? 0 : r.filter((e) => D.includes(e.id)).length,
                     skipped: D.length > 0,
@@ -183,13 +183,13 @@ let L = {
                     in_onboarding: !0,
                     is_final_step: !0,
                     roles_granted: i.size,
-                    channels_granted: R,
+                    channels_granted: w,
                     guild_onboarding_covered_channel_ids: c.map((e) => e.id),
                     guild_onboarding_uncovered_channel_ids: f.map((e) => e.id)
                 })
             ),
             (0, s.Ju)(e, A.W.GUILD_ONBOARDING_QUESTION, y.default.fromTimestamp(Date.now())),
-            w(e, !0),
+            P(e, !0),
             d.Z.isFullServerPreview(e))
         ) {
             ((0, u.zS)(e, b, []), (0, u.aq)(e, { optInEnabled: !0 }), (0, u.og)(e, Array.from(i)));

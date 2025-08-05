@@ -1,77 +1,77 @@
 (n.d(t, {
     Ux: () => g,
-    gS: () => f,
-    ww: () => C
+    gS: () => E,
+    ww: () => b
 }),
     n(997841));
-var i = n(73800),
-    r = n(399606),
-    l = n(230711),
+var r = n(73800),
+    i = n(399606),
+    a = n(230711),
     o = n(18438),
     s = n(314897),
-    a = n(271383),
+    l = n(271383),
     c = n(430824),
-    d = n(496675),
-    u = n(914010),
-    h = n(715903),
+    u = n(496675),
+    d = n(914010),
+    f = n(715903),
     _ = n(981631),
-    E = n(372897),
-    p = n(526761),
-    I = n(388032);
+    p = n(372897),
+    h = n(526761),
+    m = n(388032);
 function g(e) {
-    return (0, r.e7)(
-        [s.default, a.ZP],
+    return (0, i.e7)(
+        [s.default, l.ZP],
         () => {
             if (null == e) return !1;
             let t = s.default.getId();
-            return (0, h.EY)(a.ZP.getMember(e, t));
+            return (0, f.EY)(l.ZP.getMember(e, t));
         },
         [e]
     );
 }
-function f(e) {
-    return (0, r.cj)(
-        [s.default, a.ZP, u.Z, c.Z],
+function E(e) {
+    return (0, i.cj)(
+        [s.default, l.ZP, d.Z, c.Z],
         () => {
             let t = {
                     nick: void 0,
                     bio: void 0
                 },
-                n = u.Z.getGuildId(),
-                i = null != e ? e : n,
-                r = c.Z.getGuild(i);
-            if (null == r || null == i) return t;
-            let l = s.default.getId(),
-                o = a.ZP.getMember(i, l),
-                d = (0, h.Ow)(null == o ? void 0 : o.flags);
-            if (0 === d.size) return t;
-            if (d.has(E.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME))
+                n = d.Z.getGuildId(),
+                r = null != e ? e : n,
+                i = c.Z.getGuild(r);
+            if (null == i || null == r) return t;
+            let a = s.default.getId(),
+                o = l.ZP.getMember(r, a),
+                u = (0, f.Ow)(null == o ? void 0 : o.flags);
+            if (0 === u.size) return t;
+            if (u.has(p.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME))
                 if (null == e) {
                     var _;
-                    t.nick = [I.intl.formatToPlainString(I.t.WBUh3N, { guildName: null != (_ = r.name) ? _ : '' })];
-                } else t.nick = [I.intl.string(I.t.EPZCrK)];
-            return (d.has(E.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [I.intl.string(I.t.dZh1v7)]), t);
+                    t.nick = [m.intl.formatToPlainString(m.t.WBUh3N, { guildName: null != (_ = i.name) ? _ : '' })];
+                } else t.nick = [m.intl.string(m.t.EPZCrK)];
+            return (u.has(p.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [m.intl.string(m.t.dZh1v7)]), t);
         },
         [e]
     );
 }
-function C(e) {
-    let { guildId: t, scrollPosition: n, analyticsLocation: s, analyticsLocations: a, openWithoutBackstack: u } = e,
-        h = (0, r.e7)([c.Z], () => c.Z.getGuild(t), [t]),
-        E = (0, r.e7)([d.Z], () => null != h && d.Z.can(_.Plq.CHANGE_NICKNAME, h), [h]);
+function b(e) {
+    let { guildId: t, scrollPosition: n, analyticsLocation: s, analyticsLocations: l, openWithoutBackstack: d } = e,
+        f = (0, i.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+        p = (0, i.e7)([u.Z], () => null != f && u.Z.can(_.Plq.CHANGE_NICKNAME, f), [f]);
     return [
-        i.useCallback(() => {
-            if (null == h) return;
+        r.useCallback(() => {
+            if (null == f) return;
             let e = _.oAB.PROFILE_CUSTOMIZATION,
-                t = p.NB.GUILD;
-            (E ? (0, o.Fq)(h) : (t = p.NB.USER_PROFILE),
-                l.Z.open(e, t, {
+                t = h.NB.GUILD;
+            (p ? (0, o.Fq)(f) : (t = h.NB.USER_PROFILE),
+                a.Z.open(e, t, {
                     scrollPosition: n,
                     analyticsLocation: s,
-                    analyticsLocations: a,
-                    openWithoutBackstack: u
+                    analyticsLocations: l,
+                    openWithoutBackstack: d
                 }));
-        }, [E, n, s, a, u, h]),
-        E
+        }, [p, n, s, l, d, f]),
+        p
     ];
 }

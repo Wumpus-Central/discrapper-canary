@@ -1,86 +1,97 @@
-r.d(t, { S: () => b });
-var n = r(255367),
-    l = r(73800),
-    i = r(120356),
-    o = r.n(i),
-    a = r(916616),
-    c = r(981729),
-    s = r(911969),
-    u = r(558522),
-    d = r(981631),
-    p = r(388032),
-    f = r(868327);
-function b(e) {
-    let t = l.useRef(null),
-        r = e.media;
-    if (r.loadingState === s.f.LOADED_NOT_FOUND)
-        return (0, n.jsx)(c.u, {
-            text: p.intl.string(p.t.UvDfMz),
+n.d(t, { S: () => E });
+var r = n(255367),
+    i = n(73800),
+    a = n(120356),
+    o = n.n(a),
+    s = n(916616),
+    l = n(981729),
+    c = n(911969),
+    u = n(558522),
+    d = n(981631),
+    f = n(388032),
+    _ = n(868327);
+function p(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                p(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function m(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function g(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : m(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function E(e) {
+    let t = i.useRef(null),
+        n = e.media;
+    if (n.loadingState === c.f.LOADED_NOT_FOUND)
+        return (0, r.jsx)(l.u, {
+            text: f.intl.string(f.t.UvDfMz),
             position: 'bottom',
             align: 'center',
             targetElementRef: t,
-            children: (r) => {
-                var l, i;
-                return (0, n.jsx)(
+            children: (n) =>
+                (0, r.jsx)(
                     'div',
-                    ((l = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var r = null != arguments[t] ? arguments[t] : {},
-                                n = Object.keys(r);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
-                                (n = n.concat(
-                                    Object.getOwnPropertySymbols(r).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                                    })
-                                )),
-                                n.forEach(function (t) {
-                                    var n;
-                                    ((n = r[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: n,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0
-                                              })
-                                            : (e[t] = n));
-                                }));
-                        }
-                        return e;
-                    })({}, r)),
-                    (i = i =
-                        {
-                            className: o()(e.className, f.notFoundPlaceholder, { [f.hiddenSpoilers]: e.hiddenSpoilers }),
-                            style: {
-                                width: e.placeholderWidth,
-                                height: e.placeholderHeight
-                            },
-                            role: 'img',
-                            children: (0, n.jsx)(u.Z, {
-                                ref: t,
-                                className: f.brokenImageIcon
-                            })
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
-                        : (function (e, t) {
-                              var r = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var n = Object.getOwnPropertySymbols(e);
-                                  r.push.apply(r, n);
-                              }
-                              return r;
-                          })(Object(i)).forEach(function (e) {
-                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
-                          }),
-                    l)
-                );
-            }
+                    g(h({}, n), {
+                        className: o()(e.className, _.notFoundPlaceholder, { [_.hiddenSpoilers]: e.hiddenSpoilers }),
+                        style: {
+                            width: e.placeholderWidth,
+                            height: e.placeholderHeight
+                        },
+                        role: 'img',
+                        children: (0, r.jsx)(u.Z, {
+                            ref: t,
+                            className: _.brokenImageIcon
+                        })
+                    })
+                )
         });
-    let i = r.loadingState === s.f.LOADING ? d.zo9.LOADING : d.zo9.ERROR;
-    return (0, n.jsx)(a.E, {
-        className: o()(e.className, { [f.hiddenSpoilers]: e.hiddenSpoilers }),
-        readyState: i,
+    let a = n.loadingState === c.f.LOADING ? d.zo9.LOADING : d.zo9.ERROR;
+    return (0, r.jsx)(s.E, {
+        className: o()(e.className, { [_.hiddenSpoilers]: e.hiddenSpoilers }),
+        readyState: a,
         src: '',
         width: e.placeholderWidth,
         height: e.placeholderHeight,

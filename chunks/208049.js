@@ -3,12 +3,12 @@
     AA: () => S,
     Db: () => L,
     Dx: () => I,
-    R: () => w,
+    R: () => P,
     TB: () => A,
-    XE: () => R,
+    XE: () => w,
     hs: () => N,
     w: () => v,
-    xR: () => P,
+    xR: () => R,
     xU: () => C,
     xz: () => D
 }),
@@ -142,7 +142,7 @@ async function C(e, t) {
         throw new l.Z(e);
     }
 }
-function R(e, t, n) {
+function w(e, t, n) {
     o.Z.dispatch({
         type: 'GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY',
         sound: t,
@@ -150,14 +150,14 @@ function R(e, t, n) {
         trigger: n
     });
 }
-function P(e, t) {
+function R(e, t) {
     o.Z.dispatch({
         type: 'GUILD_SOUNDBOARD_SOUND_PLAY_START',
         soundId: e,
         userId: t
     });
 }
-function w(e, t) {
+function P(e, t) {
     o.Z.dispatch({
         type: 'GUILD_SOUNDBOARD_SOUND_PLAY_END',
         soundId: e,

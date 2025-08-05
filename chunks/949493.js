@@ -8,7 +8,7 @@ var r = n(442837),
     o = n(526156),
     c = n(924356),
     d = n(901151),
-    u = n(4188),
+    u = n(931461),
     m = n(24400),
     p = n(122897),
     g = n(694569),
@@ -76,7 +76,7 @@ function Z() {
         ];
     return (0, i.jsx)(l.N, {
         header: y.intl.string(y.t['+o1pDQ']),
-        notice: (0, i.jsx)(u.c, {}),
+        notice: (0, i.jsx)(u.I, {}),
         children: (0, i.jsx)(o.Z, {
             parentSetting: T.s6.CONTENT_SOCIAL,
             settingsSection: N.oAB.CONTENT_AND_SOCIAL,

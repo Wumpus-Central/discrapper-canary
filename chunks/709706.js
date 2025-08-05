@@ -222,21 +222,21 @@ function C() {
         }),
         (E.sortedVoiceFilters = T(E.voiceFilters)));
 }
-function R(e) {
+function w(e) {
     let { modelId: t } = e;
     E.modelState[t] = h(_({}, E.modelState[t]), {
         status: u.L.DOWNLOADING,
         downloadedBytes: 0
     });
 }
-function P(e) {
+function R(e) {
     let { modelId: t, downloadedBytes: n, totalBytes: r } = e;
     E.modelState[t] = h(_({}, E.modelState[t]), {
         downloadedBytes: n,
         totalBytes: r
     });
 }
-function w(e) {
+function P(e) {
     var t;
     let { modelId: n, error: r } = e;
     (null == (t = E.modelState[n]) ? void 0 : t.status) !== u.L.DOWNLOADED && ((E.modelState[n] = h(_({}, E.modelState[n]), { status: u.L.MISSING })), 'USER_CANCELED_DOWNLOAD' in (null != r ? r : {}) || (E.error = 'ERROR_DOWNLOADING_DEPENDENCY'));
@@ -255,27 +255,27 @@ function L(e) {
 function x(e) {
     E.nativeVoiceFilterModuleState = e.state;
 }
-function M() {
+function k() {
     E.error = 'ERROR_ACTIVATING_VOICE_FILTER';
 }
-function k() {
+function j() {
     E.error = null;
 }
-function j() {
+function M() {
     b = Date.now();
 }
 f(N, 'displayName', 'VoiceFilterStore');
 let U = new N(s.Z, {
-    VOICE_FILTER_DOWNLOAD_STARTED: R,
-    VOICE_FILTER_DOWNLOAD_PROGRESS: P,
-    VOICE_FILTER_DOWNLOAD_FAILED: w,
+    VOICE_FILTER_DOWNLOAD_STARTED: w,
+    VOICE_FILTER_DOWNLOAD_PROGRESS: R,
+    VOICE_FILTER_DOWNLOAD_FAILED: P,
     VOICE_FILTER_FILE_READY: D,
     VOICE_FILTER_CATALOG_FETCH_SUCCESS: S,
     VOICE_FILTER_CATALOG_FETCH_FAILED: A,
     VOICE_FILTER_UPDATE_LIMITED_TIME_VOICES: C,
     VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME: L,
     VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE: x,
-    VOICE_FILTER_APPLY_FAILED: M,
-    VOICE_FILTER_REQUEST_SWITCH: k,
-    VOICE_FILTER_LAGGING: j
+    VOICE_FILTER_APPLY_FAILED: k,
+    VOICE_FILTER_REQUEST_SWITCH: j,
+    VOICE_FILTER_LAGGING: M
 });

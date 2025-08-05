@@ -1,128 +1,146 @@
-(n.d(t, { Z: () => m }), n(35282));
+(n.d(t, { Z: () => b }), n(35282));
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    l = n.n(i),
-    a = n(91192),
-    o = n(442837),
-    s = n(481060),
+    a = n.n(i),
+    o = n(91192),
+    s = n(442837),
+    l = n(481060),
     c = n(129861),
     u = n(700582),
     d = n(600164),
-    p = n(158776),
-    h = n(51144),
-    f = n(900054);
+    f = n(158776),
+    _ = n(51144),
+    p = n(900054);
+function h(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function m(e) {
-    var t, n;
-    let { user: i, row: m, hideDiscriminator: g, comparator: b, selected: _, checked: y, disabled: C = !1, inlineUsername: x = !0, onClick: v, onMouseEnter: j, 'aria-setsize': O, 'aria-posinset': E } = e,
-        S = (0, o.e7)([p.Z], () => p.Z.getStatus(i.id)),
-        P = (0, a.JA)(String(i.id));
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                h(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function g(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function E(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : g(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function b(e) {
+    let { user: t, row: n, hideDiscriminator: i, comparator: h, selected: g, checked: b, disabled: y = !1, inlineUsername: O = !0, onClick: v, onMouseEnter: I, 'aria-setsize': T, 'aria-posinset': S } = e,
+        A = (0, s.e7)([f.Z], () => f.Z.getStatus(t.id)),
+        N = () => (null != h && h === t.tag ? _.ZP.getName(t) : null != h && '' !== h ? h : _.ZP.getName(t)),
+        C = () => {
+            null != I && I(n);
+        },
+        w = () => {
+            null != v && v(t.id);
+        },
+        R = (0, o.JA)(String(t.id));
     return (0, r.jsx)(
-        s.P3F,
-        ((t = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
-                    )),
-                    r.forEach(function (t) {
-                        var r;
-                        ((r = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: r,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0
-                                  })
-                                : (e[t] = r));
-                    }));
-            }
-            return e;
-        })(
-            {
-                id: 'user-row-'.concat(m),
-                className: l()(f.friendWrapper, { [f.disabled]: C }),
-                onClick: () => {
-                    null != v && v(i.id);
+        l.P3F,
+        E(
+            m(
+                {
+                    id: 'user-row-'.concat(n),
+                    className: a()(p.friendWrapper, { [p.disabled]: y }),
+                    onClick: w,
+                    onMouseEnter: C
                 },
-                onMouseEnter: () => {
-                    null != j && j(m);
-                }
-            },
-            P
-        )),
-        (n = n =
+                R
+            ),
             {
                 role: 'option',
-                'aria-selected': y,
-                'aria-disabled': C,
-                'aria-setsize': O,
-                'aria-posinset': E,
+                'aria-selected': b,
+                'aria-disabled': y,
+                'aria-setsize': T,
+                'aria-posinset': S,
                 children: (0, r.jsxs)(d.Z, {
                     align: d.Z.Align.CENTER,
-                    className: l()(f.friend, {
-                        [f.friendSelected]: _,
-                        [f.twoRows]: !x
+                    className: a()(p.friend, {
+                        [p.friendSelected]: g,
+                        [p.twoRows]: !O
                     }),
                     children: [
                         (0, r.jsx)(u.Z, {
-                            user: i,
-                            status: S,
-                            className: f.avatar
+                            user: t,
+                            status: A,
+                            className: p.avatar
                         }),
                         (0, r.jsxs)(d.Z, {
-                            className: f.match,
+                            className: p.match,
                             align: d.Z.Align.BASELINE,
-                            direction: x ? d.Z.Direction.HORIZONTAL : d.Z.Direction.VERTICAL,
+                            direction: O ? d.Z.Direction.HORIZONTAL : d.Z.Direction.VERTICAL,
                             children: [
-                                (0, r.jsx)(s.Text, {
+                                (0, r.jsx)(l.Text, {
                                     tag: 'strong',
-                                    className: f.nickname,
+                                    className: p.nickname,
                                     'aria-hidden': !0,
                                     variant: 'text-md/medium',
-                                    children: null != b && b === i.tag ? h.ZP.getName(i) : null != b && '' !== b ? b : h.ZP.getName(i)
+                                    children: N()
                                 }),
-                                (0, r.jsx)(s.Text, {
+                                (0, r.jsx)(l.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
                                     children: (0, r.jsx)(c.Z, {
-                                        user: i,
-                                        hideDiscriminator: g,
-                                        className: f.discordTag,
-                                        usernameClass: f.__invalid_weightMedium,
-                                        discriminatorClass: f.__invalid_weightMedium,
+                                        user: t,
+                                        hideDiscriminator: i,
+                                        className: p.discordTag,
+                                        usernameClass: p.__invalid_weightMedium,
+                                        discriminatorClass: p.__invalid_weightMedium,
                                         forceUsername: !0
                                     })
                                 })
                             ]
                         }),
-                        (0, r.jsx)(s.XZJ, {
+                        (0, r.jsx)(l.XZJ, {
                             displayOnly: !0,
                             size: 22,
-                            value: y,
-                            disabled: C,
-                            className: f.checkbox
+                            value: b,
+                            disabled: y,
+                            className: p.checkbox
                         })
                     ]
                 })
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-              }),
-        t)
+            }
+        )
     );
 }

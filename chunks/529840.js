@@ -1,19 +1,19 @@
-r.d(t, { Z: () => d });
+r.d(t, { Z: () => C });
 var a = r(255367);
 r(73800);
-var s = r(120356),
-    i = r.n(s),
+var i = r(120356),
+    s = r.n(i),
     n = r(481060),
     l = r(518950),
     o = r(675465);
-function d(e) {
+function C(e) {
     var t;
-    let { user: r, checked: s, onChange: d, disabled: C } = e,
-        { avatarSrc: c, eventHandlers: u } = (0, l.Z)({
+    let { user: r, checked: i, onChange: C, disabled: d } = e,
+        { avatarSrc: c, eventHandlers: x } = (0, l.Z)({
             userId: null == r ? void 0 : r.id,
             size: n.EFr.SIZE_32
         }),
-        p = null != (t = r.globalName) ? t : r.username;
+        f = null != (t = r.globalName) ? t : r.username;
     return (0, a.jsxs)('div', {
         className: o.container,
         children: [
@@ -48,27 +48,27 @@ function d(e) {
                             return e;
                         })(
                             {
-                                className: i()({ [o.muted]: C }),
+                                className: s()({ [o.muted]: d }),
                                 src: c,
-                                'aria-label': p,
+                                'aria-label': f,
                                 size: n.EFr.SIZE_32
                             },
-                            u
+                            x
                         )
                     ),
                     (0, a.jsx)(n.Text, {
-                        color: C ? 'text-muted' : 'text-default',
+                        color: d ? 'text-muted' : 'text-default',
                         variant: 'text-md/semibold',
-                        children: p
+                        children: f
                     })
                 ]
             }),
             (0, a.jsx)('div', {
                 className: o.checkbox,
                 children: (0, a.jsx)(n.XZJ, {
-                    disabled: C,
-                    value: s,
-                    onChange: (e, t) => d(r, t)
+                    disabled: d,
+                    value: i,
+                    onChange: (e, t) => C(r, t)
                 })
             })
         ]

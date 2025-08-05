@@ -1,12 +1,12 @@
 (n.d(t, {
     $0: () => B,
     Lk: () => F,
-    Xg: () => Z,
-    ZP: () => k,
-    c7: () => j,
+    Xg: () => V,
+    ZP: () => j,
+    c7: () => M,
     j3: () => H,
     jO: () => U,
-    ks: () => V
+    ks: () => Z
 }),
     n(358797),
     n(539854),
@@ -37,8 +37,8 @@ var r = n(255367),
     A = n(787025),
     N = n(981631),
     C = n(388032),
-    R = n(986335);
-function P(e, t, n) {
+    w = n(986335);
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,7 +51,7 @@ function P(e, t, n) {
         e
     );
 }
-function w(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,7 +62,7 @@ function w(e) {
                 })
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                R(e, t, n[t]);
             }));
     }
     return e;
@@ -94,14 +94,14 @@ function x(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = M(e, t);
+        i = k(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function M(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -110,18 +110,18 @@ function M(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-function k(e) {
+function j(e) {
     let { message: t, footer: n, headerClassName: i, showsCloseWindowText: a, spinner: s } = e;
     return (
         (0, h.Tt)({ location: C.intl.string(C.t['3S249/']) }),
         (0, r.jsxs)('div', {
-            className: R.wrapper,
+            className: w.wrapper,
             children: [
                 s ? (0, r.jsx)(u.$, {}) : null,
-                (0, r.jsx)('div', { className: o()(R.header, i) }),
+                (0, r.jsx)('div', { className: o()(w.header, i) }),
                 (0, r.jsx)(_.X6q, {
                     variant: 'heading-lg/bold',
-                    className: R.text,
+                    className: w.text,
                     children: t
                 }),
                 null != n ? n : null,
@@ -129,7 +129,7 @@ function k(e) {
                     ? (0, r.jsx)(d.x, {
                           variant: 'text-sm/normal',
                           color: 'text-muted',
-                          className: R.cta,
+                          className: w.cta,
                           children: C.intl.string(C.t['k7J/w8'])
                       })
                     : null
@@ -137,8 +137,8 @@ function k(e) {
         })
     );
 }
-function j(e) {
-    return (0, r.jsx)(k, L(w({}, e), { headerClassName: R.headerSuccess }));
+function M(e) {
+    return (0, r.jsx)(j, L(P({}, e), { headerClassName: w.headerSuccess }));
 }
 function U(e) {
     var { guild: t, application: n } = e,
@@ -193,11 +193,11 @@ function U(e) {
                 })),
         (0, r.jsx)(
             A.j,
-            L(w({}, a), {
+            L(P({}, a), {
                 actions: S,
                 children: (0, r.jsx)(
                     G,
-                    w(
+                    P(
                         {
                             guild: t,
                             application: n
@@ -230,12 +230,12 @@ function G(e) {
         ),
         l = (0, r.jsx)(d.x, {
             variant: 'text-md/normal',
-            className: R.authorizedSuccessSubtext,
+            className: w.authorizedSuccessSubtext,
             children: s
         });
     return (0, r.jsx)(
-        j,
-        w(
+        M,
+        P(
             {
                 message: o,
                 footer: l
@@ -256,7 +256,7 @@ function B(e) {
     }, [a, t.id]);
     return (0, r.jsx)(
         A.j,
-        L(w({}, n), {
+        L(P({}, n), {
             actions: [
                 {
                     variant: 'primary',
@@ -265,11 +265,11 @@ function B(e) {
                 }
             ],
             children: (0, r.jsxs)('div', {
-                className: R.authorizedSuccessExternal,
+                className: w.authorizedSuccessExternal,
                 children: [
                     (0, r.jsx)(p.ZP, {
                         mask: p.QS.SQUIRCLE,
-                        className: R.authorizedSuccessExternalIcon,
+                        className: w.authorizedSuccessExternalIcon,
                         children: (0, r.jsx)('img', {
                             alt: t.name,
                             src: I.ZP.getApplicationIconURL({
@@ -279,7 +279,7 @@ function B(e) {
                         })
                     }),
                     (0, r.jsxs)('div', {
-                        className: R.authorizedSuccessExternalCopy,
+                        className: w.authorizedSuccessExternalCopy,
                         children: [
                             (0, r.jsx)(_.X6q, {
                                 variant: 'heading-xl/semibold',
@@ -298,10 +298,10 @@ function B(e) {
         })
     );
 }
-function V(e) {
+function Z(e) {
     return (0, r.jsx)(
         A.j,
-        L(w({}, e), {
+        L(P({}, e), {
             title: C.intl.string(C.t.j2d6Ki),
             subtitle: C.intl.string(C.t['/B7kX1']),
             actions: [
@@ -314,9 +314,9 @@ function V(e) {
     );
 }
 function F(e) {
-    return (0, r.jsx)(k, L(w({}, e), { headerClassName: R.headerFailure }));
+    return (0, r.jsx)(j, L(P({}, e), { headerClassName: w.headerFailure }));
 }
-function Z() {
+function V() {
     var e, t;
     let n = (0, l.TH)();
     return (0, r.jsx)(A.G, {

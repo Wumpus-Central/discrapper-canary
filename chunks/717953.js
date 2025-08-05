@@ -64,35 +64,35 @@ function v(e) {
         A = (0, _.Nj)(c.z.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
         N = (0, d.ZP)(),
         C = null != I,
-        R = (0, u.wjy)(N) ? y.darkOverlay : y.lightOverlay,
-        P = (null != (n = null == I || null == (t = I.colors) ? void 0 : t.length) ? n : 0) > 1,
-        w = i.useMemo(() => {
+        w = (0, u.wjy)(N) ? y.darkOverlay : y.lightOverlay,
+        R = (null != (n = null == I || null == (t = I.colors) ? void 0 : t.length) ? n : 0) > 1,
+        P = i.useMemo(() => {
             if (null == I || null == I.colors || 0 === I.colors.length) return;
             let e = I.colors[0];
-            if (P) {
+            if (R) {
                 let { colors: t, gradientAngle: n } = I;
                 e = 'linear-gradient('.concat(n, 'deg, ').concat(t.join(', '), ')');
             }
             return { background: 'var(--background-gradient), '.concat(e) };
-        }, [I, P]),
+        }, [I, R]),
         D = (0, f.Sl)(g.Il.WHITE).hex,
         L = (0, f.Sl)(g.Il.RED_430).hex,
         x = C ? D : void 0,
-        M = i.useCallback(() => {
+        k = i.useCallback(() => {
             (T && S(), null == v || v());
         }, [T, S, v]);
     return (0, r.jsxs)('div', {
         className: y.badgeContainer,
         children: [
             (0, r.jsxs)(h.S4, {
-                onSelect: a ? void 0 : M,
+                onSelect: a ? void 0 : k,
                 isSelected: !1,
                 showSelectionCircle: C,
                 name: b.intl.string(E.default.KSBBpK),
-                className: o()(y.container, C && R, a && y.disabled),
+                className: o()(y.container, C && w, a && y.disabled),
                 showBadge: !1,
                 showLockedBadge: !1,
-                style: w,
+                style: P,
                 children: [
                     !A && !C && (0, r.jsx)(O, {}),
                     (0, r.jsx)('div', { className: y.borderOverlay }),

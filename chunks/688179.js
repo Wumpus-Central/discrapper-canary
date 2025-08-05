@@ -1,11 +1,11 @@
-n.d(t, { m: () => o });
+n.d(t, { m: () => s });
 var r = n(806966),
     i = n(585483),
-    l = n(981631),
-    a = n(957825);
-function o(e) {
+    a = n(981631),
+    o = n(957825);
+function s(e) {
     let { stickerPack: t, stickerPickerCategories: n } = e;
-    i.S.dispatchToLastSubscribed(l.CkL.OPEN_EXPRESSION_PICKER, { activeView: a.X1.STICKER });
-    let o = n.findIndex((e) => e.id === t.id);
-    -1 !== o && r.ZN.setActiveCategoryIndex(o);
+    i.S.dispatchToLastSubscribed(a.CkL.OPEN_EXPRESSION_PICKER, { activeView: o.X1.STICKER });
+    let s = n.findIndex((e) => e.id === t.id);
+    -1 !== s && r.ZN.setActiveCategoryIndex(s);
 }

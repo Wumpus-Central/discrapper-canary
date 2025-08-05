@@ -1,81 +1,81 @@
-function n(t, e, r) {
+function r(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[e] = r),
-        t
+            : (e[t] = n),
+        e
     );
 }
-var i = r(169774),
-    o = r(630685),
-    a = r(319630),
-    u = r(65183),
-    s = r(581079),
-    c = r(467159),
-    l = u.Map,
-    f = {
+var i = n(169774),
+    a = n(630685),
+    o = n(319630),
+    s = n(65183),
+    l = n(581079),
+    c = n(467159),
+    u = s.Map,
+    d = {
         subtree: !0,
         characterData: !0,
         childList: !0,
         characterDataOldValue: !1,
         attributes: !1
     },
-    p = i.isBrowser('IE <= 11');
-t.exports = (function () {
-    function t(t) {
-        var e = this;
-        (n(this, 'observer', void 0), n(this, 'container', void 0), n(this, 'mutations', void 0), n(this, 'onCharData', void 0), (this.container = t), (this.mutations = l()));
-        var r = a(t);
-        r.MutationObserver && !p
-            ? (this.observer = new r.MutationObserver(function (t) {
-                  return e.registerMutations(t);
+    f = i.isBrowser('IE <= 11');
+e.exports = (function () {
+    function e(e) {
+        var t = this;
+        (r(this, 'observer', void 0), r(this, 'container', void 0), r(this, 'mutations', void 0), r(this, 'onCharData', void 0), (this.container = e), (this.mutations = u()));
+        var n = o(e);
+        n.MutationObserver && !f
+            ? (this.observer = new n.MutationObserver(function (e) {
+                  return t.registerMutations(e);
               }))
-            : (this.onCharData = function (t) {
-                  (t.target instanceof Node || s(!1),
-                      e.registerMutation({
+            : (this.onCharData = function (e) {
+                  (e.target instanceof Node || l(!1),
+                      t.registerMutation({
                           type: 'characterData',
-                          target: t.target
+                          target: e.target
                       }));
               });
     }
-    var e = t.prototype;
+    var t = e.prototype;
     return (
-        (e.start = function () {
-            this.observer ? this.observer.observe(this.container, f) : this.container.addEventListener('DOMCharacterDataModified', this.onCharData);
+        (t.start = function () {
+            this.observer ? this.observer.observe(this.container, d) : this.container.addEventListener('DOMCharacterDataModified', this.onCharData);
         }),
-        (e.stopAndFlushMutations = function () {
-            var t = this.observer;
-            t ? (this.registerMutations(t.takeRecords()), t.disconnect()) : this.container.removeEventListener('DOMCharacterDataModified', this.onCharData);
-            var e = this.mutations;
-            return ((this.mutations = l()), e);
+        (t.stopAndFlushMutations = function () {
+            var e = this.observer;
+            e ? (this.registerMutations(e.takeRecords()), e.disconnect()) : this.container.removeEventListener('DOMCharacterDataModified', this.onCharData);
+            var t = this.mutations;
+            return ((this.mutations = u()), t);
         }),
-        (e.registerMutations = function (t) {
-            for (var e = 0; e < t.length; e++) this.registerMutation(t[e]);
+        (t.registerMutations = function (e) {
+            for (var t = 0; t < e.length; t++) this.registerMutation(e[t]);
         }),
-        (e.getMutationTextContent = function (t) {
-            var e = t.type,
-                r = t.target,
-                n = t.removedNodes;
-            if ('characterData' === e) {
-                if ('' !== r.textContent) return p ? r.textContent.replace('\n', '') : r.textContent;
-            } else if ('childList' === e) {
-                if (n && n.length) return '';
-                else if ('' !== r.textContent) return r.textContent;
+        (t.getMutationTextContent = function (e) {
+            var t = e.type,
+                n = e.target,
+                r = e.removedNodes;
+            if ('characterData' === t) {
+                if ('' !== n.textContent) return f ? n.textContent.replace('\n', '') : n.textContent;
+            } else if ('childList' === t) {
+                if (r && r.length) return '';
+                else if ('' !== n.textContent) return n.textContent;
             }
             return null;
         }),
-        (e.registerMutation = function (t) {
-            var e = this.getMutationTextContent(t);
-            if (null != e) {
-                var r = c(o(t.target));
-                this.mutations = this.mutations.set(r, e);
+        (t.registerMutation = function (e) {
+            var t = this.getMutationTextContent(e);
+            if (null != t) {
+                var n = c(a(e.target));
+                this.mutations = this.mutations.set(n, t);
             }
         }),
-        t
+        e
     );
 })();

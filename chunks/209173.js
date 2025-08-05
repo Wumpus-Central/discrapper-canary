@@ -1,3 +1,4 @@
-n.d(t, { s: () => i });
-var l,
-    i = (((l = {})[(l.APPLICATION = 1)] = 'APPLICATION'), (l[(l.ACTIVITY_APPLICATION = 2)] = 'ACTIVITY_APPLICATION'), (l[(l.CONNECTION = 3)] = 'CONNECTION'), l);
+n.d(t, { s: () => r });
+var r = (function (e) {
+    return ((e[(e.APPLICATION = 1)] = 'APPLICATION'), (e[(e.ACTIVITY_APPLICATION = 2)] = 'ACTIVITY_APPLICATION'), (e[(e.CONNECTION = 3)] = 'CONNECTION'), e);
+})({});

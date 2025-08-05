@@ -91,10 +91,10 @@ function C(e) {
         n = e.aliases.map((e) => b(g({}, t), { name: e }));
     return [t, ...n];
 }
-function R(e) {
+function w(e) {
     return { id: e };
 }
-async function P(e) {
+async function R(e) {
     if (
         (Array.isArray(e) || (e = [e]),
         c.Z.isDeveloper ||
@@ -121,11 +121,11 @@ async function P(e) {
     }
     throw Error('could not find launchable');
 }
-function w(e, t, n) {
+function P(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
     if (e()) return void t();
     setTimeout(() => {
-        r * T <= S ? w(e, t, n, r + 1) : n();
+        r * T <= S ? P(e, t, n, r + 1) : n();
     }, T);
 }
 function D(e) {
@@ -137,15 +137,15 @@ function D(e) {
     );
 }
 let L = {
-    waitSubscribed: (e, t) => new Promise((n, r) => w(() => o.Z.isSubscribed(e, t), n, r)),
+    waitSubscribed: (e, t) => new Promise((n, r) => P(() => o.Z.isSubscribed(e, t), n, r)),
     waitConnected(e) {
-        return new Promise(w.bind(this, () => l.Z.isConnected(e)));
+        return new Promise(P.bind(this, () => l.Z.isConnected(e)));
     },
     isLaunchable: (e) =>
-        P(C(e))
+        R(C(e))
             .then((e) => null != e)
             .catch(() => !1),
-    launch: (e) => P(C(e)).then(D),
+    launch: (e) => R(C(e)).then(D),
     launchDispatchApplication(e, t, n, i, o) {
         let { launchOptions: l, defaultLaunchOptionId: c, installPath: f, applicationId: _, branchId: p, buildId: m, shouldPatch: g } = e;
         if (null == l || null == c || null == f) throw Error("Couldn't construct launchable for ".concat(e.applicationId));
@@ -189,10 +189,10 @@ let L = {
         });
     },
     isGameLaunchable: (e) =>
-        P(R(e))
+        R(w(e))
             .then((e) => null != e)
             .catch(() => !1),
-    launchGame: (e) => (l.Z.isConnected(e) ? Promise.resolve() : P(R(e)).then(D)),
+    launchGame: (e) => (l.Z.isConnected(e) ? Promise.resolve() : R(w(e)).then(D)),
     isProtocolRegistered: (e) =>
         N().then((t) => {
             var n, r;

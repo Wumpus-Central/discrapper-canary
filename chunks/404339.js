@@ -1,133 +1,133 @@
-(r.d(t, { default: () => h }), r(388685), r(290780));
-var n = r(255367);
+(r.d(n, { default: () => p }), r(388685), r(290780));
+var t = r(255367);
 r(73800);
 var s = r(990547),
     i = r(481060),
     a = r(785232),
     l = r(592125),
     o = r(594174),
-    c = r(626135),
-    u = r(33194),
-    d = r(343544),
-    _ = r(14251),
-    f = r(110223),
-    A = r(981631),
-    E = r(388032),
-    m = r(193728);
-let I = (e) => {
-        let { numOfBlockedUsers: t, numOfIgnoredUsers: r } = e,
-            s = t > 0,
+    d = r(626135),
+    c = r(33194),
+    m = r(343544),
+    u = r(14251),
+    _ = r(110223),
+    f = r(981631),
+    x = r(388032),
+    h = r(193728);
+let g = (e) => {
+        let { numOfBlockedUsers: n, numOfIgnoredUsers: r } = e,
+            s = n > 0,
             i = r > 0;
         return s && i
-            ? (0, n.jsxs)(n.Fragment, {
-                  children: [E.intl.string(E.t.aTORmJ), (0, n.jsx)('br', {}), E.intl.string(E.t.LXFz19)]
+            ? (0, t.jsxs)(t.Fragment, {
+                  children: [x.intl.string(x.t.aTORmJ), (0, t.jsx)('br', {}), x.intl.string(x.t.LXFz19)]
               })
             : s
-              ? (0, n.jsxs)(n.Fragment, {
-                    children: [E.intl.format(E.t['J/ZBu7'], { n: t }), (0, n.jsx)('br', {}), E.intl.string(E.t.tFvYm5)]
+              ? (0, t.jsxs)(t.Fragment, {
+                    children: [x.intl.format(x.t['J/ZBu7'], { n: n }), (0, t.jsx)('br', {}), x.intl.string(x.t.tFvYm5)]
                 })
               : i
-                ? (0, n.jsxs)(n.Fragment, {
-                      children: [E.intl.format(E.t['8mtcq6'], { n: r }), (0, n.jsx)('br', {}), E.intl.string(E.t.Z21Rp6)]
+                ? (0, t.jsxs)(t.Fragment, {
+                      children: [x.intl.format(x.t['8mtcq6'], { n: r }), (0, t.jsx)('br', {}), x.intl.string(x.t.Z21Rp6)]
                   })
                 : null;
     },
-    g = (e) => {
-        let { channelId: t, blockedUsers: r, ignoredUsers: s } = e,
-            o = l.Z.getChannel(t),
-            c = r.length > 0,
-            u = s.length > 0,
-            d = [
+    N = (e) => {
+        let { channelId: n, blockedUsers: r, ignoredUsers: s } = e,
+            o = l.Z.getChannel(n),
+            d = r.length > 0,
+            c = s.length > 0,
+            m = [
                 {
-                    icon: (0, n.jsx)('div', {
-                        className: m.icon,
-                        children: (0, n.jsx)(i.aNP, {})
+                    icon: (0, t.jsx)('div', {
+                        className: h.icon,
+                        children: (0, t.jsx)(i.aNP, {})
                     }),
-                    text: E.intl.string(E.t['7jN3FB']),
-                    className: m.row
+                    text: x.intl.string(x.t['7jN3FB']),
+                    className: h.row
                 }
             ];
-        if (c && u) {
+        if (d && c) {
             let e = [...r, ...s],
                 l = e.slice(0, 2).map((e) => e.id);
-            d.unshift({
-                icon: (0, n.jsx)('div', {
-                    className: m.icon,
-                    children: (0, n.jsx)(a.Z, {
+            m.unshift({
+                icon: (0, t.jsx)('div', {
+                    className: h.icon,
+                    children: (0, t.jsx)(a.Z, {
                         recipients: l,
                         size: i.EFr.SIZE_32
                     })
                 }),
-                text: (0, _.a)(l, e.length, null == o ? void 0 : o.guild_id, t),
-                className: m.row
+                text: (0, u.a)(l, e.length, null == o ? void 0 : o.guild_id, n),
+                className: h.row
             });
         } else {
-            let e = c ? r.slice(0, 2).map((e) => e.id) : s.slice(0, 2).map((e) => e.id),
-                i = c ? r.length : s.length;
-            d.unshift({
-                icon: (0, n.jsx)('div', {
-                    className: m.icon,
-                    children: (0, _.r)(e, null == o ? void 0 : o.guild_id)
+            let e = d ? r.slice(0, 2).map((e) => e.id) : s.slice(0, 2).map((e) => e.id),
+                i = d ? r.length : s.length;
+            m.unshift({
+                icon: (0, t.jsx)('div', {
+                    className: h.icon,
+                    children: (0, u.r)(e, null == o ? void 0 : o.guild_id)
                 }),
-                text: (0, _.a)(e, i, null == o ? void 0 : o.guild_id, t),
-                className: m.row
+                text: (0, u.a)(e, i, null == o ? void 0 : o.guild_id, n),
+                className: h.row
             });
         }
-        return d;
+        return m;
     };
-function h(e) {
-    let { channelId: t, blockedUserIds: r, ignoredUserIds: i, transitionState: a, onClose: l, onJoin: _ } = e,
-        m = Array.from(r)
+function p(e) {
+    let { channelId: n, blockedUserIds: r, ignoredUserIds: i, transitionState: a, onClose: l, onJoin: u } = e,
+        h = Array.from(r)
             .map((e) => o.default.getUser(e))
             .filter((e) => null !== e),
-        h = Array.from(i)
+        p = Array.from(i)
             .map((e) => o.default.getUser(e))
             .filter((e) => null !== e);
-    return 0 === m.length && 0 === h.length
+    return 0 === h.length && 0 === p.length
         ? null
-        : (0, n.jsx)(d.Z, {
-              headerText: E.intl.string(E.t.zPUmzc),
-              descriptionText: (0, n.jsx)(I, {
+        : (0, t.jsx)(m.Z, {
+              headerText: x.intl.string(x.t.zPUmzc),
+              descriptionText: (0, t.jsx)(g, {
                   numOfBlockedUsers: r.size,
                   numOfIgnoredUsers: i.size
               }),
-              infoRows: g({
-                  channelId: t,
-                  blockedUsers: m,
-                  ignoredUsers: h
+              infoRows: N({
+                  channelId: n,
+                  blockedUsers: h,
+                  ignoredUsers: p
               }),
               onDismissAndStay: () => {
-                  (_(),
+                  (u(),
                       l(),
-                      (0, u.dI)(new Set([...r, ...i])),
-                      c.default.track(A.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                          action: f.q.CLICK_TO_JOIN,
-                          channel_id: t,
+                      (0, c.dI)(new Set([...r, ...i])),
+                      d.default.track(f.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                          action: _.q.CLICK_TO_JOIN,
+                          channel_id: n,
                           blocked_user_ids: Array.from(r),
                           ignored_user_ids: Array.from(i),
-                          warning_surface: f.fz.PRE_JOIN_MODAL
+                          warning_surface: _.fz.PRE_JOIN_MODAL
                       }));
               },
               onDismissAndLeave: () => {
                   (l(),
-                      c.default.track(A.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
-                          action: f.q.CLICK_TO_LEAVE,
-                          channel_id: t,
+                      d.default.track(f.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                          action: _.q.CLICK_TO_LEAVE,
+                          channel_id: n,
                           blocked_user_ids: Array.from(r),
                           ignored_user_ids: Array.from(i),
-                          warning_surface: f.fz.PRE_JOIN_MODAL
+                          warning_surface: _.fz.PRE_JOIN_MODAL
                       }));
               },
-              leaveButtonText: E.intl.string(E.t.Trz9Ji),
-              stayButtonText: E.intl.string(E.t.kiODyM),
+              leaveButtonText: x.intl.string(x.t.Trz9Ji),
+              stayButtonText: x.intl.string(x.t.kiODyM),
               transitionState: a,
               onClose: l,
               impression: {
                   impressionName: s.ImpressionNames.VOICE_CHANNEL_BLOCKED_USER_WARNING,
                   impressionProperties: {
-                      channel_id: t,
+                      channel_id: n,
                       blocked_user_ids: Array.from(r),
-                      warning_surface: f.fz.PRE_JOIN_MODAL
+                      warning_surface: _.fz.PRE_JOIN_MODAL
                   }
               }
           });

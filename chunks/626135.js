@@ -1,6 +1,6 @@
 (n.r(t),
     n.d(t, {
-        AnalyticEventConfigs: () => V,
+        AnalyticEventConfigs: () => Z,
         AnalyticsContext: () => N,
         AnalyticsSchema: () => _,
         addExtraAnalyticsDecorator: () => B,
@@ -14,8 +14,8 @@
         isGameApplicationType: () => ea,
         launchSignature: () => U,
         setUTMContext: () => K,
-        startRecordingAnalyticsEvents: () => J,
-        stopRecordingAnalyticsEvents: () => $,
+        startRecordingAnalyticsEvents: () => Q,
+        stopRecordingAnalyticsEvents: () => J,
         trackNetworkAction: () => eo
     }),
     n(539854),
@@ -112,28 +112,28 @@ function S(e, t) {
 let A = { location: {} },
     N = r.createContext(A),
     C = {},
-    R = 10000,
-    P = 60000,
-    w = 120000,
+    w = 10000,
+    R = 60000,
+    P = 120000,
     D = 300000,
     L = 900000,
     x = 3600000,
-    M = 86400000,
-    k = 0.001,
-    j = performance.now(),
+    k = 86400000,
+    j = 0.001,
+    M = performance.now(),
     U = (0, s.X6)() ? (0, s.Ub)((0, o.R)()) : null;
 a.extendSuperProperties({ launch_signature: U });
 let G = [];
 function B(e) {
     G.push(e);
 }
-let V = {
+let Z = {
     [m.rMx.APP_OPENED]: {
         throttlePeriod: D,
         throttleKeys: () => []
     },
     [m.rMx.APP_BACKGROUND]: {
-        throttlePeriod: w,
+        throttlePeriod: P,
         throttleKeys: () => []
     },
     [m.rMx.ACK_MESSAGES]: (e) =>
@@ -168,7 +168,7 @@ let V = {
         throttleKeys: (e) => [e.server]
     },
     [m.rMx.ACTIVITY_UPDATED]: {
-        throttlePeriod: P,
+        throttlePeriod: R,
         throttleKeys: (e) => [e.application_id],
         deduplicate: !0
     },
@@ -177,7 +177,7 @@ let V = {
         throttleKeys: (e) => (null != e.channel_static_route ? [e.guild_id, e.channel_static_route, e.channel_view] : [e.channel_id, e.channel_view])
     },
     [m.rMx.TEXT_IN_VOICE_OPENED]: {
-        throttlePeriod: M,
+        throttlePeriod: k,
         throttleKeys: (e) => [e.channel_id]
     },
     [m.rMx.NOTIFICATION_VIEWED]: {
@@ -197,14 +197,14 @@ let V = {
         throttleKeys: () => []
     },
     [m.rMx.KEYBOARD_SHORTCUT_USED]: {
-        throttlePeriod: w,
+        throttlePeriod: P,
         throttleKeys: (e) => {
             var t;
             return [e.shortcut_name, e.location_object, ...(null != (t = e.source_class_list) ? t : [])];
         }
     },
     [m.rMx.QUICKSWITCHER_OPENED]: {
-        throttlePeriod: R,
+        throttlePeriod: w,
         throttleKeys: () => []
     },
     [m.rMx.CHAT_INPUT_COMPONENT_VIEWED]: {
@@ -212,7 +212,7 @@ let V = {
         throttleKeys: (e) => [e.type]
     },
     [m.rMx.ROLE_PAGE_VIEWED]: {
-        throttlePeriod: w,
+        throttlePeriod: P,
         throttleKeys: (e) => [e.role_id, e.tab_opened]
     },
     [m.rMx.VIDEO_INPUT_INITIALIZED]: {
@@ -232,33 +232,33 @@ let V = {
         throttleKeys: () => []
     },
     [m.rMx.RPC_SERVER_ERROR_CAUGHT]: {
-        throttlePeriod: M,
+        throttlePeriod: k,
         throttleKeys: () => []
     },
     [m.rMx.RPC_COMMAND_SENT]: {
-        throttlePeriod: M,
+        throttlePeriod: k,
         throttleKeys: (e) => [e.application_id, e.command],
-        throttlePercent: k
+        throttlePercent: j
     },
     [m.rMx.RPC_SUBSCRIPTION_REQUESTED]: {
-        throttlePeriod: M,
+        throttlePeriod: k,
         throttleKeys: (e) => [e.application_id, e.event],
-        throttlePercent: k
+        throttlePercent: j
     },
     [m.rMx.ACTIVITY_HANDSHAKE]: {
-        throttlePeriod: M,
+        throttlePeriod: k,
         throttleKeys: (e) => [e.application_id]
     },
     [m.rMx.CHANNEL_BANNER_VIEWED]: {
-        throttlePeriod: M,
+        throttlePeriod: k,
         throttleKeys: (e) => [e.banner_type, e.channel_id]
     },
     [m.rMx.PREMIUM_UPSELL_VIEWED]: {
-        throttlePeriod: P,
+        throttlePeriod: R,
         throttleKeys: (e) => [e.type]
     },
     [m.rMx.FORUM_CHANNEL_SEARCHED]: {
-        throttlePeriod: P,
+        throttlePeriod: R,
         throttleKeys: (e) => [e.guild_id, e.channel_id]
     },
     [m.rMx.FORUM_CHANNEL_SCROLLED]: {
@@ -266,11 +266,11 @@ let V = {
         throttleKeys: (e) => [e.guild_id, e.channel_id]
     },
     [m.rMx.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED]: {
-        throttlePeriod: P,
+        throttlePeriod: R,
         throttleKeys: (e) => [e.user_id]
     },
     [m.rMx.MEDIA_VIEWER_SESSION_COMPLETED]: {
-        throttlePeriod: P,
+        throttlePeriod: R,
         throttleKeys: () => []
     },
     [m.rMx.SUMMARIES_UNREAD_BAR_VIEWED]: {
@@ -298,7 +298,7 @@ let V = {
         throttleKeys: (e) => [e.guild_id]
     },
     [m.rMx.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED]: {
-        throttlePeriod: P,
+        throttlePeriod: R,
         throttleKeys: (e) => [e.guild_id, e.channel_id]
     },
     [m.rMx.LIVE_ACTIVITY_SETTINGS_UPDATED]: {
@@ -342,12 +342,12 @@ let V = {
     [m.rMx.OPEN_MODAL]: (e) =>
         e.type === m.jXE.MEDIA_VIEWER
             ? {
-                  throttlePeriod: P,
+                  throttlePeriod: R,
                   throttleKeys: (e) => [e.type]
               }
             : void 0,
     [m.rMx.MODERATOR_QUEUE_ACTION]: {
-        throttlePeriod: R,
+        throttlePeriod: w,
         throttleKeys: (e) => [e.guild_id]
     },
     [m.rMx.NOTIFICATION_PERMISSION_STATUS]: {
@@ -366,7 +366,7 @@ function F(e) {
               location_object_type: e.objectType
           };
 }
-function Z(e) {
+function V(e) {
     return 'string' == typeof e
         ? { source: e }
         : {
@@ -382,7 +382,7 @@ function Y(e) {
     H = e;
 }
 let W = (0, a.trackMaker)({
-    analyticEventConfigs: V,
+    analyticEventConfigs: Z,
     dispatcher: l.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
@@ -398,9 +398,9 @@ function z(e) {
     }
     if (null != a.source) {
         let { source: e } = a;
-        a = O({}, T(a, ['source']), Z(e));
+        a = O({}, T(a, ['source']), V(e));
     }
-    ((a.client_performance_cpu = p.Z.getCurrentCPUUsagePercent()), (a.client_performance_memory = p.Z.getCurrentMemoryUsageKB()), (a.cpu_core_count = p.Z.getCPUCoreCount()), (a.accessibility_features = H()), (a.rendered_locale = b.intl.currentLocale), (a.uptime_app = Math.floor((performance.now() - j) / 1000)));
+    ((a.client_performance_cpu = p.Z.getCurrentCPUUsagePercent()), (a.client_performance_memory = p.Z.getCurrentMemoryUsageKB()), (a.cpu_core_count = p.Z.getCPUCoreCount()), (a.accessibility_features = H()), (a.rendered_locale = b.intl.currentLocale), (a.uptime_app = Math.floor((performance.now() - M) / 1000)));
     let o = p.Z.getProcessUptime();
     null != o && (a.uptime_process_renderer = Math.floor(o));
     let { utmSource: s, utmMedium: l, utmCampaign: c, utmContent: u } = C;
@@ -410,24 +410,24 @@ function q(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     (f.default.isLoggingAnalyticsEvents && console.info('AnalyticsUtils.track(...):', e, t), n ? u.Hj('Analytics', e, t) : u.Hj('Analytics', e));
 }
-let X = !1,
-    Q = {};
-function J() {
-    X = !0;
+let $ = !1,
+    X = {};
+function Q() {
+    $ = !0;
 }
-function $() {
-    X = !1;
+function J() {
+    $ = !1;
 }
 function ee() {
-    return Q;
+    return X;
 }
 function et() {
-    Object.keys(Q).forEach((e) => {
-        delete Q[e];
+    Object.keys(X).forEach((e) => {
+        delete X[e];
     });
 }
 function en(e, t) {
-    return !!X && (null != t && (Array.isArray(Q[e]) ? Q[e].push(t) : (Q[e] = [t])), !0);
+    return !!$ && (null != t && (Array.isArray(X[e]) ? X[e].push(t) : (X[e] = [t])), !0);
 }
 function er(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
@@ -452,7 +452,7 @@ function er(e, t) {
     );
 }
 let ei = (0, a.trackMaker)({
-    analyticEventConfigs: V,
+    analyticEventConfigs: Z,
     dispatcher: l.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });

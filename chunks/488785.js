@@ -1,25 +1,55 @@
-(n.d(t, { Z: () => g }), n(388685));
+(n.d(t, { Z: () => b }), n(388685));
 var r = n(255367),
     i = n(73800),
-    l = n(120356),
-    a = n.n(l),
-    o = n(392711),
-    s = n(772848),
+    a = n(120356),
+    o = n.n(a),
+    s = n(392711),
+    l = n(772848),
     c = n(442837),
     u = n(570140),
     d = n(596454),
-    p = n(607070),
-    h = n(301222);
-let f = [h.emoji1, h.emoji2, h.emoji3, h.emoji4],
-    m = i.memo(function (e) {
+    f = n(607070),
+    _ = n(640264);
+function p(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                p(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+let m = 50,
+    g = [_.emoji1, _.emoji2, _.emoji3, _.emoji4],
+    E = i.memo(function (e) {
         var t;
-        let { emoji: n, onAnimationEnd: l } = e,
-            s = (0, o.sample)(f),
+        let { emoji: n, onAnimationEnd: a } = e,
+            l = (0, s.sample)(g),
             c = i.useCallback(() => {
-                l(n.key);
-            }, [n.key, l]);
+                a(n.key);
+            }, [n.key, a]);
         return (0, r.jsx)('div', {
-            className: a()(h.emoji, s),
+            className: o()(_.emoji, l),
             onAnimationEnd: c,
             children: (0, r.jsx)(d.Z, {
                 emojiId: n.id,
@@ -28,44 +58,14 @@ let f = [h.emoji1, h.emoji2, h.emoji3, h.emoji4],
             })
         });
     });
-function g(e) {
+function b(e) {
     let { channelId: t, callHeight: n } = e,
-        l = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
-        [a, o] = i.useState([]);
+        a = (0, c.e7)([f.Z], () => f.Z.useReducedMotion),
+        [o, s] = i.useState([]);
     i.useEffect(() => {
         function e(e) {
             let { channelId: n, emoji: r } = e;
-            n !== t ||
-                l ||
-                null == r ||
-                o((e) => [
-                    ...e,
-                    (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
-                                )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    ((r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: r,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0
-                                              })
-                                            : (e[t] = r));
-                                }));
-                        }
-                        return e;
-                    })({ key: (0, s.Z)() }, r)
-                ]);
+            n !== t || a || null == r || s((e) => [...e, h({ key: (0, l.Z)() }, r)]);
         }
         return (
             u.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', e),
@@ -73,22 +73,22 @@ function g(e) {
                 u.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
             }
         );
-    }, [t, l]);
+    }, [t, a]);
     let d = i.useCallback((e) => {
-        o((t) => t.filter((t) => t.key !== e));
+        s((t) => t.filter((t) => t.key !== e));
     }, []);
-    return l
+    return a
         ? null
         : (0, r.jsx)('div', {
-              className: h.container,
+              className: _.container,
               style: {
-                  top: n - 50,
+                  top: n - m,
                   left: '52%'
               },
               'aria-hidden': !0,
-              children: a.map((e) =>
+              children: o.map((e) =>
                   (0, r.jsx)(
-                      m,
+                      E,
                       {
                           emoji: e,
                           onAnimationEnd: d

@@ -1,33 +1,33 @@
 n.d(t, { Z: () => u });
 var r = n(255367),
     i = n(73800),
-    l = n(447543),
-    a = n(100527),
-    o = n(906732),
-    s = n(792766),
+    a = n(447543),
+    o = n(100527),
+    s = n(906732),
+    l = n(792766),
     c = n(955415);
 let u = (e) => {
-    let { invite: t, stageInstance: n, guild: u, message: d, isMember: p, onTransitionToInviteChannel: m, onAcceptInstantInvite: f } = e,
-        { analyticsLocations: g } = (0, o.ZP)(a.Z.INVITE_EMBED),
-        _ = i.useCallback(() => {
+    let { invite: t, stageInstance: n, guild: u, message: d, isMember: f, onTransitionToInviteChannel: _, onAcceptInstantInvite: p } = e,
+        { analyticsLocations: h } = (0, s.ZP)(o.Z.INVITE_EMBED),
+        m = i.useCallback(() => {
             let e = 'noop';
-            (p ? (m(), (e = 'transition')) : (f(), (e = 'accept')),
-                (0, l.r$)(
+            (f ? (_(), (e = 'transition')) : (p(), (e = 'accept')),
+                (0, a.r$)(
                     {
                         invite: t,
                         action: e,
                         inviter_id: d.author.id,
                         invite_message_id: d.id
                     },
-                    g
+                    h
                 ));
-        }, [t, d, g, p, m, f]);
+        }, [t, d, h, f, _, p]);
     return (0, r.jsx)(c.Z, {
-        children: (0, r.jsx)(s.Z, {
+        children: (0, r.jsx)(l.Z, {
             isEmbed: !0,
             stageInstance: n,
             guild: u,
-            onClick: _
+            onClick: m
         })
     });
 };

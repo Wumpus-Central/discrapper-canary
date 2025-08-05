@@ -71,7 +71,7 @@ function T() {
                 }
             );
         }, []));
-    let R = i.useCallback(() => {
+    let w = i.useCallback(() => {
         (0, l.ZDy)(
             async () => {
                 let { DesktopRefreshOnboardingModal: e } = await n.e('49910').then(n.bind(n, 239191));
@@ -88,9 +88,9 @@ function T() {
     i.useEffect(() => {
         if (N && !O && e) {
             let e = setTimeout(() => {
-                R();
+                w();
             }, I);
             return () => clearTimeout(e);
         }
-    }, [e, O, N, R]);
+    }, [e, O, N, w]);
 }

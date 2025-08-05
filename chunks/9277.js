@@ -87,10 +87,10 @@ function I(e, t) {
         event: h.CkL.FAVORITE_GIF,
         handler: C
     });
-    let R = i.useCallback(() => {
+    let w = i.useCallback(() => {
             (0, d.RO)(m.X1.GIF, a);
         }, [a]),
-        { Component: P, events: w, play: D } = (0, c.V)();
+        { Component: R, events: P, play: D } = (0, c.V)();
     if (n) return null;
     let L = T === m.X1.GIF && S === a;
     return (0, r.jsx)(u.ua7, {
@@ -110,10 +110,10 @@ function I(e, t) {
                     {
                         children: (0, r.jsx)(p.Z, {
                             className: E.button,
-                            onMouseEnter: w.onMouseEnter,
-                            onMouseLeave: w.onMouseLeave,
+                            onMouseEnter: P.onMouseEnter,
+                            onMouseLeave: P.onMouseLeave,
                             onClick: () => {
-                                (R(), D());
+                                (w(), D());
                             },
                             isActive: L,
                             pulse: b,
@@ -121,7 +121,7 @@ function I(e, t) {
                             'aria-expanded': L,
                             'aria-haspopup': 'dialog',
                             'aria-controls': A,
-                            children: (0, r.jsx)(P, {
+                            children: (0, r.jsx)(R, {
                                 size: 'refresh_sm',
                                 color: 'currentColor'
                             })

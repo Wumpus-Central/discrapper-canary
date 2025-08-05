@@ -52,10 +52,10 @@ function v(e) {
         { analyticsLocations: S, newestAnalyticsLocation: A } = (0, l.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
         N = c.J.useExperiment({ location: 'UserSettingsAuthedApps' }, { autoTrackExposure: !0 }).enabled,
         C = (0, a.e7)([g.Z], () => g.Z.getUserProfile(t.id)),
-        R = null == C ? void 0 : C.application,
-        P = (0, f.Z)({
+        w = null == C ? void 0 : C.application,
+        R = (0, f.Z)({
             user: t,
-            application: null != R ? R : void 0,
+            application: null != w ? w : void 0,
             guildId: n,
             onItemClick: () => {
                 (T({
@@ -65,7 +65,7 @@ function v(e) {
                     null == v || v());
             }
         }),
-        w = (0, _.Z)({
+        P = (0, _.Z)({
             user: t,
             guildId: n,
             location: A,
@@ -108,7 +108,7 @@ function v(e) {
                 })
         }),
         x = (0, d.Z)({
-            id: null == R ? void 0 : R.id,
+            id: null == w ? void 0 : w.id,
             label: b.intl.string(b.t['+NP/b2']),
             onSuccess: () =>
                 T({
@@ -116,13 +116,13 @@ function v(e) {
                     analyticsLocations: S
                 })
         }),
-        M = [
+        k = [
             [y],
-            N ? [P] : [],
-            [D, w, L],
+            N ? [R] : [],
+            [D, P, L],
             [
                 (0, u.Z)({
-                    application: R,
+                    application: w,
                     label: b.intl.string(b.t.WqhZsr),
                     onSuccess: () =>
                         T({
@@ -133,7 +133,7 @@ function v(e) {
                 x
             ]
         ];
-    return M.every((e) => e.every((e) => null == e))
+    return k.every((e) => e.every((e) => null == e))
         ? null
         : (0, r.jsx)(o.yRy, {
               targetElementRef: I,
@@ -144,7 +144,7 @@ function v(e) {
                       onSelect: void 0,
                       onClose: t,
                       'aria-label': b.intl.string(b.t.AXIHpa),
-                      children: M.map((e, t) => (0, r.jsx)(o.kSQ, { children: e.map((e) => e) }, t))
+                      children: k.map((e, t) => (0, r.jsx)(o.kSQ, { children: e.map((e) => e) }, t))
                   });
               },
               children: (e) =>

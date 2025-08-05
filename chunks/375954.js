@@ -25,9 +25,9 @@ var r,
     A = n(430824),
     N = n(496675),
     C = n(699516),
-    R = n(944486),
-    P = n(914010),
-    w = n(594174),
+    w = n(944486),
+    R = n(914010),
+    P = n(594174),
     D = n(981631);
 function L(e, t, n) {
     return (
@@ -43,9 +43,9 @@ function L(e, t, n) {
     );
 }
 let x = new Set(),
-    M = new d.Z('MessageStore'),
-    k = !1;
-function j() {
+    k = new d.Z('MessageStore'),
+    j = !1;
+function M() {
     (c.Z.forEach((e) => {
         c.Z.commit(
             e.mutate({
@@ -63,7 +63,7 @@ function U(e) {
         if (null == n) continue;
         let r = !1;
         if (!(n.cached || !r)) {
-            M.log('Skipping background message sync for '.concat(e, ' cached:').concat(n.cached, ' ') + 'ready:'.concat(n.ready, ' hasMoreAfter:').concat(n.hasMoreAfter, ' ') + 'isConnected:'.concat(r));
+            k.log('Skipping background message sync for '.concat(e, ' cached:').concat(n.cached, ' ') + 'ready:'.concat(n.ready, ' hasMoreAfter:').concat(n.hasMoreAfter, ' ') + 'isConnected:'.concat(r));
             continue;
         }
         n.mergeDelta(t[e].new_messages, t[e].modified_messages, t[e].deleted_message_ids);
@@ -74,20 +74,20 @@ function G() {
 }
 function B(e) {
     let { channelId: t, truncateBottom: n, truncateTop: r } = e;
-    M.log('Truncating messages for '.concat(t, ' bottom:').concat(n, ' top:').concat(r));
+    k.log('Truncating messages for '.concat(t, ' bottom:').concat(n, ' top:').concat(r));
     let i = c.Z.getOrCreate(t);
     ((i = i.truncate(n, r)), c.Z.commit(i));
 }
-function V(e) {
+function Z(e) {
     let { channelId: t } = e;
-    (M.log('Clearing messages for '.concat(t)), c.Z.clear(t), x.clear());
+    (k.log('Clearing messages for '.concat(t)), c.Z.clear(t), x.clear());
 }
 function F(e) {
     let { channelId: t, jump: n, focus: r, before: i, after: a, limit: o, truncate: s } = e,
         l = c.Z.getOrCreate(t);
     ((null == n ? void 0 : n.present) ? (l = l.jumpToPresent(o)) : (null == r ? void 0 : r.messageId) != null ? (l = l.focusOnMessage(r.messageId)) : (null == n ? void 0 : n.messageId) != null ? (l = l.jumpToMessage(n.messageId, n.flash, n.offset, n.returnMessageId, n.jumpType)) : (null != i || null != a) && (l = l.loadFromCache(null != i, o)), null != s && (null != i || null != a) && (null == i || null == a) && (l = l.truncate(null != i, null != a)), c.Z.commit(l));
 }
-function Z(e) {
+function V(e) {
     let { channelId: t, isBefore: n, isAfter: r, jump: i, hasMoreBefore: a, hasMoreAfter: o, messages: s, isStale: l, truncate: u, avoidInitialScroll: d } = e,
         f = c.Z.getOrCreate(t);
     ((f = f.loadComplete({
@@ -130,7 +130,7 @@ function K(e) {
     let { channelId: t, message: n, isPushNotification: r } = e,
         i = c.Z.getOrCreate(t);
     if (r) {
-        (M.log('Inserting message tapped on from a push notification', n.id, n.channel_id), c.Z.commit(i.receivePushNotification(n)));
+        (k.log('Inserting message tapped on from a push notification', n.id, n.channel_id), c.Z.commit(i.receivePushNotification(n)));
         return;
     }
     if (!i.ready) return !1;
@@ -153,7 +153,7 @@ function q(e) {
     }
     ((r = r.remove(t)), c.Z.commit(r), x.delete(t));
 }
-function X(e) {
+function $(e) {
     let { ids: t, channelId: n } = e,
         r = c.Z.getOrCreate(n);
     if (null == r) return !1;
@@ -168,20 +168,20 @@ function X(e) {
             x.delete(e);
         }));
 }
-function Q(e) {
+function X(e) {
     let t = e.message.id,
         n = e.message.channel_id,
         r = c.Z.getOrCreate(n);
     if (null == r || !r.has(t)) return !1;
     ((r = r.update(t, (t) => (0, h.wi)(t, e.message))), c.Z.commit(r));
 }
-function J(e) {
+function Q(e) {
     let { messageId: t, channelId: n } = e,
         r = c.Z.get(n);
     if (null == r || !r.has(t)) return !1;
     ((r = r.update(t, f.Cm)), c.Z.commit(r));
 }
-function $(e) {
+function J(e) {
     let t = e.messageId,
         n = e.channelId,
         r = c.Z.get(n);
@@ -233,7 +233,7 @@ function es(e) {
     if (null == i) return !1;
     ((i = i.update(n, (e) => {
         var t;
-        return e.addReactionBatch(r, null == (t = w.default.getCurrentUser()) ? void 0 : t.id);
+        return e.addReactionBatch(r, null == (t = P.default.getCurrentUser()) ? void 0 : t.id);
     })),
         c.Z.commit(i));
 }
@@ -280,12 +280,12 @@ function e_(e) {
 }
 function ep(e) {
     let { message: t } = e,
-        n = w.default.getCurrentUser();
-    null != t && null != t.author && null != n && t.author.id === n.id && (k = !0);
+        n = P.default.getCurrentUser();
+    null != t && null != t.author && null != n && t.author.id === n.id && (j = !0);
 }
 class eh extends (r = o.ZP.Store) {
     initialize() {
-        (this.waitFor(w.default, v.Z, I.Z, S.ZP, E.default, R.Z, P.Z, A.Z, C.Z, T.ZP), this.syncWith([p.Z], () => {}));
+        (this.waitFor(P.default, v.Z, I.Z, S.ZP, E.default, w.Z, R.Z, A.Z, C.Z, T.ZP), this.syncWith([p.Z], () => {}));
     }
     getMessages(e) {
         if (p.Z.hasViewingRoles()) {
@@ -299,13 +299,13 @@ class eh extends (r = o.ZP.Store) {
         return c.Z.getOrCreate(e).get(t);
     }
     getLastEditableMessage(e) {
-        let t = w.default.getCurrentUser();
+        let t = P.default.getCurrentUser();
         return a()(this.getMessages(e).toArray())
             .reverse()
             .find((e) => (0, m.Z)(e, null == t ? void 0 : t.id));
     }
     getLastChatCommandMessage(e) {
-        let t = w.default.getCurrentUser();
+        let t = P.default.getCurrentUser();
         return this.getMessages(e)
             .toArray()
             .reverse()
@@ -318,7 +318,7 @@ class eh extends (r = o.ZP.Store) {
         return a()(this.getMessages(e).toArray()).reverse().get(0);
     }
     getLastNonCurrentUserMessage(e) {
-        let t = w.default.getCurrentUser();
+        let t = P.default.getCurrentUser();
         return a()(this.getMessages(e).toArray())
             .reverse()
             .find((e) => e.author.id !== (null == t ? void 0 : t.id));
@@ -347,35 +347,35 @@ class eh extends (r = o.ZP.Store) {
         return c.Z.getOrCreate(e).loadingMore;
     }
     hasCurrentUserSentMessage(e) {
-        let t = w.default.getCurrentUser();
+        let t = P.default.getCurrentUser();
         return null != this.getMessages(e).findNewest((e) => e.author.id === (null == t ? void 0 : t.id));
     }
     hasCurrentUserSentMessageSinceAppStart() {
-        return k;
+        return j;
     }
 }
 L(eh, 'displayName', 'MessageStore');
 let em = new eh(s.Z, {
     BACKGROUND_SYNC_CHANNEL_MESSAGES: U,
-    CONNECTION_OPEN: j,
-    OVERLAY_INITIALIZE: j,
+    CONNECTION_OPEN: M,
+    OVERLAY_INITIALIZE: M,
     CACHE_LOADED: ef,
     LOAD_MESSAGES: G,
-    LOAD_MESSAGES_SUCCESS: Z,
+    LOAD_MESSAGES_SUCCESS: V,
     LOAD_MESSAGES_FAILURE: H,
     LOAD_MESSAGES_SUCCESS_CACHED: F,
     LOCAL_MESSAGES_LOADED: e_,
-    LOAD_MESSAGE_INTERACTION_DATA_SUCCESS: $,
+    LOAD_MESSAGE_INTERACTION_DATA_SUCCESS: J,
     TRUNCATE_MESSAGES: B,
-    CLEAR_MESSAGES: V,
+    CLEAR_MESSAGES: Z,
     MESSAGE_CREATE: K,
     MESSAGE_SEND_FAILED: z,
     MESSAGE_SEND_FAILED_AUTOMOD: el,
     MESSAGE_EDIT_FAILED_AUTOMOD: el,
-    MESSAGE_UPDATE: Q,
-    MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: J,
+    MESSAGE_UPDATE: X,
+    MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: Q,
     MESSAGE_DELETE: q,
-    MESSAGE_DELETE_BULK: X,
+    MESSAGE_DELETE_BULK: $,
     MESSAGE_REVEAL: er,
     THREAD_CREATE_LOCAL: ee,
     CHANNEL_DELETE: et,

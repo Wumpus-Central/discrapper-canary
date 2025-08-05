@@ -1,21 +1,21 @@
 (n.d(t, {
-    $0: () => R,
-    AN: () => k,
+    $0: () => w,
+    AN: () => j,
     Ct: () => A,
-    DU: () => V,
+    DU: () => Z,
     EQ: () => B,
     Ej: () => T,
     ME: () => m,
     O1: () => v,
-    O8: () => w,
+    O8: () => P,
     Pl: () => I,
     Uw: () => L,
-    ZE: () => M,
+    ZE: () => k,
     _G: () => O,
     _O: () => S,
     _y: () => g,
-    do: () => j,
-    g7: () => P,
+    do: () => M,
+    g7: () => R,
     g_: () => p,
     hs: () => b,
     j4: () => C,
@@ -77,26 +77,26 @@ let p = new _(r.q.ANIMATED_EMOJIS),
     A = new _('appIcons'),
     N = new _(r.q.CLIENT_THEMES),
     C = new _('boostDiscount'),
-    R = new _('freeBoosts'),
-    P = new _(r.q.STREAM_MID_QUALITY),
-    w = new _(r.q.STREAM_HIGH_QUALITY),
+    w = new _('freeBoosts'),
+    R = new _(r.q.STREAM_MID_QUALITY),
+    P = new _(r.q.STREAM_HIGH_QUALITY),
     D = new _(r.q.CUSTOM_NOTIFICATION_SOUNDS),
     L = new _('fancyVoiceChannelReactions'),
     x = new _('installPremiumApplications'),
-    M = new _('redeemPremiumPerks'),
-    k = new _(r.q.VIDEO_FILTER_ASSETS);
+    k = new _('redeemPremiumPerks'),
+    j = new _(r.q.VIDEO_FILTER_ASSETS);
 new o.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, a.h);
-let j = new _(r.q.INCREASED_GUILD_LIMIT),
+let M = new _(r.q.INCREASED_GUILD_LIMIT),
     U = new _(r.q.INCREASED_MESSAGE_LENGTH),
     G = new _('increasedVideoUploadQuality'),
     B = new _('uploadLargeFiles'),
-    V = new _(r.q.CHAT_WALLPAPERS),
+    Z = new _(r.q.CHAT_WALLPAPERS),
     F = Object.freeze({
-        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, k, G, B, A]),
-        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, y, O, I, C, P, L, G, B, A]),
-        [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [p, h, m, g, E, y, O, v, I, T, N, C, R, P, w, L, x, M, k, j, U, G, B, A, S, D, b, V])
+        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, j, G, B, A]),
+        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, y, O, I, C, R, L, G, B, A]),
+        [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [p, h, m, g, E, y, O, v, I, T, N, C, w, R, P, L, x, k, j, M, U, G, B, A, S, D, b, Z])
     }),
-    Z = [C, R];
+    V = [C, w];
 function H(e, t, n) {
-    return !((0, s.U)('canUserUse', t) || (null !== n && n === c.a$.FP_ONLY && Z.includes(e))) && e.getFeatureValue(t);
+    return !((0, s.U)('canUserUse', t) || (null !== n && n === c.a$.FP_ONLY && V.includes(e))) && e.getFeatureValue(t);
 }

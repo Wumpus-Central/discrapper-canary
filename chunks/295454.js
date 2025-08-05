@@ -1,7 +1,7 @@
-n.d(t, { K: () => s });
-var r = n(818083),
-    i = n(987338);
-let l = (0, r.B)({
+t.d(n, { K: () => a });
+var l = t(818083),
+    i = t(987338);
+let r = (0, l.B)({
     kind: 'user',
     id: '2025-06_guild_sidebar_voice_stage_in_suggested',
     label: 'voice and stage channels appear in suggested if user mentioned in them',
@@ -15,6 +15,6 @@ let l = (0, r.B)({
         }
     ]
 });
-function s(e) {
-    return l.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled;
+function a(e) {
+    return r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled;
 }

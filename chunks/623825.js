@@ -1,10 +1,12 @@
-function r(e) {
-    return e <= 220;
-}
-function l(e) {
-    return e <= 124;
-}
 n.d(t, {
-    K: () => r,
-    N: () => l
+    K: () => a,
+    N: () => o
 });
+let r = 124,
+    i = 220;
+function a(e) {
+    return e <= i;
+}
+function o(e) {
+    return e <= r;
+}

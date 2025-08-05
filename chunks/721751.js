@@ -3,44 +3,44 @@ let r;
 var i = n(255367),
     l = n(73800),
     s = n(873546),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     c = n(980591),
     u = n(605782),
     d = n(133853),
     h = n(568154),
     p = n(353926),
-    g = n(703656),
-    m = n(981631),
-    f = n(963865);
+    m = n(703656),
+    f = n(981631),
+    g = n(963865);
 let _ = n(575703),
     x = n(2984),
-    b = [m.Z5c.LOGIN, m.Z5c.LOGIN_HANDOFF, m.Z5c.REGISTER, m.Z5c.INVITE(''), m.Z5c.GIFT_CODE(''), m.Z5c.GUILD_TEMPLATE_LOGIN(''), m.Z5c.GUILD_TEMPLATE(''), m.Z5c.DISABLE_EMAIL_NOTIFICATIONS, m.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, m.Z5c.BILLING_PREMIUM_SUBSCRIBE, m.Z5c.BILLING_PAYMENT_SOURCES_CREATE, m.Z5c.BILLING_PAYMENTS, m.Z5c.BILLING_PREMIUM_SWITCH_PLAN, m.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, m.Z5c.VERIFY, m.Z5c.VERIFY_HUB_EMAIL, m.Z5c.REJECT_IP, m.Z5c.REJECT_MFA, m.Z5c.AUTHORIZE_IP, m.Z5c.AUTHORIZE_PAYMENT, m.Z5c.RESET, m.Z5c.HANDOFF, m.Z5c.REPORT, m.Z5c.REPORT_SECOND_LOOK, m.Z5c.ACCOUNT_REVERT('')];
+    b = [f.Z5c.LOGIN, f.Z5c.LOGIN_HANDOFF, f.Z5c.REGISTER, f.Z5c.INVITE(''), f.Z5c.GIFT_CODE(''), f.Z5c.GUILD_TEMPLATE_LOGIN(''), f.Z5c.GUILD_TEMPLATE(''), f.Z5c.DISABLE_EMAIL_NOTIFICATIONS, f.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, f.Z5c.BILLING_PREMIUM_SUBSCRIBE, f.Z5c.BILLING_PAYMENT_SOURCES_CREATE, f.Z5c.BILLING_PAYMENTS, f.Z5c.BILLING_PREMIUM_SWITCH_PLAN, f.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, f.Z5c.VERIFY, f.Z5c.VERIFY_HUB_EMAIL, f.Z5c.REJECT_IP, f.Z5c.REJECT_MFA, f.Z5c.AUTHORIZE_IP, f.Z5c.AUTHORIZE_PAYMENT, f.Z5c.RESET, f.Z5c.HANDOFF, f.Z5c.REPORT, f.Z5c.REPORT_SECOND_LOOK, f.Z5c.ACCOUNT_REVERT('')];
 function E(e) {
     return b.some((t) => e.startsWith(t));
 }
 let v = (e) => ((r = e), e);
-function I(e) {
+function j(e) {
     let { children: t } = e;
     switch (
         (function () {
             var e;
             let [t, n] = l.useState(!1),
                 [i, s] = l.useState(!0),
-                o = (0, a.e7)([p.Z], () => p.Z.hasLoadedExperiments);
-            return ((0, c.Z)(() => {}, 300), void 0 !== r) ? r : !i && o ? (t || n(!0), v(((e = 0), 'default'))) : i ? v('default') : 'loading';
+                a = (0, o.e7)([p.Z], () => p.Z.hasLoadedExperiments);
+            return ((0, c.Z)(() => {}, 300), void 0 !== r) ? r : !i && a ? (t || n(!0), v(((e = 0), 'default'))) : i ? v('default') : 'loading';
         })()
     ) {
         case 'default':
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)('img', {
-                        className: f.artwork,
+                        className: g.artwork,
                         src: _,
                         alt: ''
                     }),
                     (0, i.jsx)('img', {
-                        className: f.logoWithText,
+                        className: g.logoWithText,
                         src: x,
                         alt: ''
                     }),
@@ -52,7 +52,7 @@ function I(e) {
             return null;
     }
 }
-class j extends l.Component {
+class I extends l.Component {
     componentDidMount() {
         window.addEventListener('resize', this.handleResize);
     }
@@ -60,14 +60,14 @@ class j extends l.Component {
         window.removeEventListener('resize', this.handleResize);
     }
     mobileTransitionTo(e, t) {
-        if (E(e)) (0, g.uL)(e, t);
+        if (E(e)) (0, m.uL)(e, t);
         else {
             let n = null != t && null != t.search ? t.search : null;
             window.location = null == n ? e : ''.concat(e, '?').concat(n);
         }
     }
     mobileReplaceWith(e) {
-        E(e) ? (0, g.dL)(e) : (window.location = e);
+        E(e) ? (0, m.dL)(e) : (window.location = e);
     }
     renderDefault() {
         let { splash: e } = this.props,
@@ -75,14 +75,14 @@ class j extends l.Component {
                 component: l.Fragment,
                 children: l.Children.map(this.props.children, (e) =>
                     l.cloneElement(e, {
-                        transitionTo: g.uL,
-                        replaceWith: g.dL
+                        transitionTo: m.uL,
+                        replaceWith: m.dL
                     })
                 )
             });
         return (0, i.jsx)('div', {
-            className: f.characterBackground,
-            children: (0, i.jsx)(o.y5t, {
+            className: g.characterBackground,
+            children: (0, i.jsx)(a.y5t, {
                 forceLevel: 1,
                 children:
                     null != e
@@ -90,7 +90,7 @@ class j extends l.Component {
                               children: [
                                   (0, i.jsx)(d.Z, {
                                       show: !0,
-                                      className: f.logo
+                                      className: g.logo
                                   }),
                                   (0, i.jsx)(h.h, {
                                       splash: e,
@@ -98,7 +98,7 @@ class j extends l.Component {
                                   })
                               ]
                           })
-                        : (0, i.jsx)(I, { children: t })
+                        : (0, i.jsx)(j, { children: t })
             })
         });
     }
@@ -136,4 +136,4 @@ class j extends l.Component {
             (this.state = { isMobileWidth: window.innerWidth <= 485 }));
     }
 }
-let O = j;
+let O = I;

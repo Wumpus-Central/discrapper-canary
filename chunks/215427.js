@@ -1,47 +1,54 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => E });
 var r,
-    i,
-    l,
-    a = n(442837),
-    o = n(433517),
-    s = n(570140),
-    c = n(205355);
-let u = 'MaintenanceStore',
+    i = n(442837),
+    a = n(433517),
+    o = n(570140),
+    s = n(205355);
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let c = 'MaintenanceStore',
+    u = null,
     d = null,
-    p = null,
-    m = null;
-class f extends (l = a.ZP.Store) {
+    f = null;
+function _() {
+    ((u = null), s.Z.checkScheduledMaintenances());
+}
+function p(e) {
+    u = e.incident;
+}
+function h(e) {
+    d = e.maintenance;
+}
+function m() {
+    if (null == d) return !1;
+    ((f = d.id), a.K.set(c, f));
+}
+class g extends (r = i.ZP.Store) {
     initialize() {
-        m = o.K.get(u);
+        f = a.K.get(c);
     }
     getIncident() {
-        return d;
+        return u;
     }
     getScheduledMaintenance() {
-        return null != p && p.id !== m ? p : null;
+        return null != d && d.id !== f ? d : null;
     }
 }
-((i = 'MaintenanceStore'),
-    (r = 'displayName') in f
-        ? Object.defineProperty(f, r, {
-              value: i,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (f[r] = i));
-let g = new f(s.Z, {
-    CONNECTION_OPEN: function () {
-        ((d = null), c.Z.checkScheduledMaintenances());
-    },
-    STATUS_PAGE_INCIDENT: function (e) {
-        d = e.incident;
-    },
-    STATUS_PAGE_SCHEDULED_MAINTENANCE: function (e) {
-        p = e.maintenance;
-    },
-    STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK: function () {
-        if (null == p) return !1;
-        ((m = p.id), o.K.set(u, m));
-    }
+l(g, 'displayName', 'MaintenanceStore');
+let E = new g(o.Z, {
+    CONNECTION_OPEN: _,
+    STATUS_PAGE_INCIDENT: p,
+    STATUS_PAGE_SCHEDULED_MAINTENANCE: h,
+    STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK: m
 });

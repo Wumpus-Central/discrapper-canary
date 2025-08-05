@@ -4,36 +4,36 @@ n(73800);
 var i = n(81897),
     l = n(906732),
     a = n(566898),
-    o = n(769654),
-    s = n(785717),
+    s = n(769654),
+    o = n(785717),
     c = n(806729),
-    u = n(857302),
-    d = n(892001),
-    p = n(483517),
-    h = n(252417),
+    d = n(857302),
+    u = n(892001),
+    h = n(483517),
+    p = n(252417),
     f = n(821179),
-    m = n(502762),
-    g = n(686625),
+    g = n(502762),
+    m = n(686625),
     b = n(388032),
     _ = n(954767);
 function y(e) {
     let { user: t, channelId: n } = e,
         { analyticsLocations: y } = (0, l.ZP)(),
-        { context: C } = (0, s.KZ)(),
-        x = (0, i.Z)(),
-        { mutualFriendsCount: v, mutualFriends: j, mutualGuilds: O } = (0, c.Z)(t),
-        E = !t.bot && null != v && v > 0,
-        S = null != O && O.length > 0;
-    return E || S
-        ? (0, r.jsxs)(m.Z.Overlay, {
+        { context: j } = (0, o.KZ)(),
+        O = (0, i.Z)(),
+        { mutualFriendsCount: x, mutualFriends: v, mutualGuilds: C } = (0, c.Z)(t),
+        E = !t.bot && null != x && x > 0,
+        Z = null != C && C.length > 0;
+    return E || Z
+        ? (0, r.jsxs)(g.Z.Overlay, {
               className: _.overlay,
               children: [
-                  S &&
-                      (0, r.jsx)(g.Z, {
+                  Z &&
+                      (0, r.jsx)(m.Z, {
                           section: 'MUTUAL_GUILDS',
                           header: b.intl.string(b.t['4lTDZm']),
                           listClassName: _.list,
-                          items: O.map((e) => {
+                          items: C.map((e) => {
                               let { guild: n, nick: i } = e;
                               return (0, r.jsx)(
                                   f.Z,
@@ -41,22 +41,22 @@ function y(e) {
                                       user: t,
                                       guild: n,
                                       nick: i,
-                                      onSelect: () => (0, o.X)(n.id)
+                                      onSelect: () => (0, s.X)(n.id)
                                   },
                                   n.id
                               );
                           })
                       }),
-                  S && E && (0, r.jsx)(p.Z, { className: _.divider }),
+                  Z && E && (0, r.jsx)(h.Z, { className: _.divider }),
                   E &&
-                      (0, r.jsx)(g.Z, {
+                      (0, r.jsx)(m.Z, {
                           section: 'MUTUAL_FRIENDS',
                           header: b.intl.string(b.t['0mTJ3t']),
                           listClassName: _.list,
-                          onExpand: () => (0, u.Z)(t.id, x),
+                          onExpand: () => (0, d.Z)(t.id, O),
                           items:
-                              null == j
-                                  ? Array.from({ length: v }).map((e, t) =>
+                              null == v
+                                  ? Array.from({ length: x }).map((e, t) =>
                                         (0, r.jsxs)(
                                             'div',
                                             {
@@ -75,17 +75,17 @@ function y(e) {
                                             t
                                         )
                                     )
-                                  : j.map((e) => {
+                                  : v.map((e) => {
                                         let { key: t, user: i, status: l } = e;
                                         return (0, r.jsx)(
-                                            h.Z,
+                                            p.Z,
                                             {
                                                 user: i,
                                                 status: l,
                                                 channelId: n,
                                                 onSelect: () => {
                                                     var e, t;
-                                                    (0, d.openUserProfileModal)(
+                                                    (0, u.openUserProfileModal)(
                                                         ((e = (function (e) {
                                                             for (var t = 1; t < arguments.length; t++) {
                                                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -110,7 +110,7 @@ function y(e) {
                                                                     }));
                                                             }
                                                             return e;
-                                                        })({}, C)),
+                                                        })({}, j)),
                                                         (t = t =
                                                             {
                                                                 userId: i.id,

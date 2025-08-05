@@ -11,17 +11,17 @@ var i = t(481060),
     d = t(228168),
     g = t(388032);
 function Z(e) {
-    let { user: n, guildId: t, channelId: Z, context: b } = e,
-        { id: f } = n,
-        { loading: p, note: m } = (0, a.Z)(f),
-        O = !p && null != m && m.length > 0,
-        h = b === c.IlC.POPOUT || b === c.IlC.OVERLAY,
+    let { user: n, guildId: t, channelId: Z, context: f } = e,
+        { id: b } = n,
+        { loading: O, note: p } = (0, a.Z)(b),
+        m = !O && null != p && p.length > 0,
+        h = f === c.IlC.POPOUT || f === c.IlC.OVERLAY,
         { analyticsLocations: j } = (0, r.ZP)();
-    return f === u.default.getId() || s.Z.hidePersonalInformation || h
+    return b === u.default.getId() || s.Z.hidePersonalInformation || h
         ? null
         : (0, l.jsx)(i.sNh, {
               id: 'note',
-              label: p ? g.intl.string(g.t['WLKx//']) : O ? g.intl.string(g.t.sHHsOD) : g.intl.string(g.t.Dglxra),
+              label: O ? g.intl.string(g.t['WLKx//']) : m ? g.intl.string(g.t.sHHsOD) : g.intl.string(g.t.Dglxra),
               subtext: g.intl.string(g.t.r1BOdX),
               action: () => {
                   (0, o.openUserProfileModal)({
@@ -31,7 +31,7 @@ function Z(e) {
                       guildId: t,
                       channelId: Z,
                       sourceAnalyticsLocations: j,
-                      appContext: b
+                      appContext: f
                   });
               }
           });

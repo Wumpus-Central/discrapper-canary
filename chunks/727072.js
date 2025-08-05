@@ -1,21 +1,34 @@
 (n.d(t, {
-    I2: () => A,
-    RD: () => p,
-    mY: () => j,
-    pH: () => _
+    I2: () => v,
+    RD: () => I,
+    mY: () => O,
+    pH: () => T
 }),
     n(539854),
     n(388685));
 var r = n(73800),
-    l = n(94171),
-    i = n(362383),
-    a = n(731965),
-    u = n(881052),
-    o = n(36459),
-    s = n(866894),
-    c = n(273504),
-    f = n(981631);
-function E(e) {
+    i = n(94171),
+    a = n(362383),
+    o = n(731965),
+    s = n(881052),
+    l = n(36459),
+    c = n(866894),
+    u = n(273504),
+    d = n(981631);
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,47 +39,48 @@ function E(e) {
                 })
             )),
             r.forEach(function (t) {
-                var r;
-                ((r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r));
+                f(e, t, n[t]);
             }));
     }
     return e;
 }
-function g(e, t) {
+function p(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let d = {},
-    O = (e) => {
+let m = {},
+    g = 20000;
+function E(e) {
+    var t;
+    return Date.now() - (null != (t = m[e]) ? t : 0) > g;
+}
+let b = (e) => {
         let t = {
-            [c.fX.KEYWORD]: [],
-            [c.fX.ML_SPAM]: [],
-            [c.fX.DEFAULT_KEYWORD_LIST]: [],
-            [c.fX.MENTION_SPAM]: [],
-            [c.fX.USER_PROFILE]: [],
-            [c.fX.SERVER_POLICY]: []
+            [u.fX.KEYWORD]: [],
+            [u.fX.ML_SPAM]: [],
+            [u.fX.DEFAULT_KEYWORD_LIST]: [],
+            [u.fX.MENTION_SPAM]: [],
+            [u.fX.USER_PROFILE]: [],
+            [u.fX.SERVER_POLICY]: []
         };
         return (
             e.forEach((e) => {
@@ -77,91 +91,85 @@ let d = {},
             t
         );
     },
-    S = (0, i.F)((e, t) => ({
+    y = (0, a.F)((e, t) => ({
         rules: {},
         fetching: !1,
         error: null,
         updateRule: (n) => {
-            var r, l;
-            let { guildId: i, id: u, triggerType: o } = n,
-                { rules: c } = t(),
-                f = null != (r = c[i]) ? r : {},
-                d = null != (l = f[o]) ? l : [],
-                O = d.some((e) => e.id === u),
-                S = d.filter((e) => !(0, s.U)(e.id) || e.triggerType !== o),
-                j = O ? S.map((e) => (e.id === u ? n : e)) : [...S, n];
-            (0, a.j)(() => {
+            var r, i;
+            let { guildId: a, id: s, triggerType: l } = n,
+                { rules: u } = t(),
+                d = null != (r = u[a]) ? r : {},
+                f = null != (i = d[l]) ? i : [],
+                p = f.some((e) => e.id === s),
+                m = f.filter((e) => !(0, c.U)(e.id) || e.triggerType !== l),
+                g = p ? m.map((e) => (e.id === s ? n : e)) : [...m, n];
+            (0, o.j)(() => {
                 e({
-                    rules: g(E({}, c), { [i]: g(E({}, f), { [o]: j }) }),
+                    rules: h(_({}, u), { [a]: h(_({}, d), { [l]: g }) }),
                     error: null
                 });
             });
         },
         removeRule: (n, r) => {
-            let { rules: l } = t(),
-                i = l[r],
-                u = Object.keys(i).reduce((e, t) => {
+            let { rules: i } = t(),
+                a = i[r],
+                s = Object.keys(a).reduce((e, t) => {
                     var r;
-                    let l = Number(t),
-                        a = null != (r = i[l]) ? r : [];
-                    return ((e[l] = a.filter((e) => e.id !== n)), e);
+                    let i = Number(t),
+                        o = null != (r = a[i]) ? r : [];
+                    return ((e[i] = o.filter((e) => e.id !== n)), e);
                 }, {});
-            (0, a.j)(() => {
+            (0, o.j)(() => {
                 e({
-                    rules: g(E({}, l), { [r]: u }),
+                    rules: h(_({}, i), { [r]: s }),
                     error: null
                 });
             });
         },
         syncRules: async (n) => {
-            if (
-                (function (e) {
-                    var t;
-                    let n = Date.now();
-                    return n - (null != (t = d[e]) ? t : 0) > 20000;
-                })(n)
-            ) {
-                d[n] = Date.now();
+            if (E(n)) {
+                m[n] = Date.now();
                 try {
-                    let r = await (0, o.$Y)(n),
-                        l = O(r),
-                        i = t().rules;
-                    (0, a.j)(() => {
+                    let r = await (0, l.$Y)(n),
+                        i = b(r),
+                        a = t().rules;
+                    (0, o.j)(() => {
                         e({
-                            rules: g(E({}, i), { [n]: l }),
+                            rules: h(_({}, a), { [n]: i }),
                             error: null
                         });
                     });
                 } catch (n) {
-                    let t = new u.Hx(n);
-                    (0, a.j)(() => {
+                    let t = new s.Hx(n);
+                    (0, o.j)(() => {
                         e({ error: t });
                     });
                 }
             }
         }
     })),
-    j = (e, t) => {
+    O = (e, t) => {
         var n, r;
-        return (null != (r = null == (n = S.getState().rules[e]) ? void 0 : n[t]) ? r : []).length;
+        return (null != (r = null == (n = y.getState().rules[e]) ? void 0 : n[t]) ? r : []).length;
     };
-function A(e) {
+function v(e) {
     let [t, n] = r.useState(!1),
-        [i, a] = S((e) => [e.syncRules, e.fetching], l.X);
+        [a, o] = y((e) => [e.syncRules, e.fetching], i.X);
     return [
         t,
         r.useCallback(async () => {
-            if (!a && null != e)
+            if (!o && null != e)
                 try {
-                    (n(!0), await i(e));
+                    (n(!0), await a(e));
                 } finally {
                     n(!1);
                 }
-        }, [e, a, i])
+        }, [e, o, a])
     ];
 }
-function p(e) {
-    let [t, n] = A(e);
+function I(e) {
+    let [t, n] = v(e);
     return (
         r.useEffect(() => {
             (async () => {
@@ -171,13 +179,13 @@ function p(e) {
         [t, n]
     );
 }
-function _(e) {
-    return S((t) => {
+function T(e) {
+    return y((t) => {
         var n;
         return {
-            rulesByTriggerType: null != (n = t.rules[null != e ? e : f.lds]) ? n : {},
+            rulesByTriggerType: null != (n = t.rules[null != e ? e : d.lds]) ? n : {},
             updateRule: t.updateRule,
             removeRule: t.removeRule
         };
-    }, l.X);
+    }, i.X);
 }

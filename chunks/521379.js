@@ -3,8 +3,8 @@ var r,
     i = n(255367),
     l = n(73800),
     s = n(442837),
-    a = n(388905),
-    o = n(703656),
+    o = n(388905),
+    a = n(703656),
     c = n(108427),
     u = n(559786);
 function d(e, t, n) {
@@ -27,7 +27,7 @@ class h extends (r = l.PureComponent) {
     }
     render() {
         let { token: e } = this.props.match.params;
-        return (0, i.jsx)(a.ZP, {
+        return (0, i.jsx)(o.ZP, {
             style: { padding: 0 },
             children: (0, i.jsx)(
                 u.Z,
@@ -58,6 +58,6 @@ class h extends (r = l.PureComponent) {
     }
 }
 d(h, 'defaultProps', {
-    transitionTo: o.uL,
-    replaceWith: o.dL
+    transitionTo: a.uL,
+    replaceWith: a.dL
 });

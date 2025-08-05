@@ -2,14 +2,14 @@
     $p: () => T,
     FQ: () => I,
     Il: () => S,
-    Jf: () => R,
+    Jf: () => w,
     SA: () => L,
     Um: () => N,
-    eu: () => P,
+    eu: () => R,
     hW: () => x,
     lY: () => C,
     pk: () => A,
-    qB: () => w
+    qB: () => P
 }),
     n(953529),
     n(539854));
@@ -187,7 +187,7 @@ let I = async (e, t) => {
             n.body
         );
     },
-    R = async (e, t, n) =>
+    w = async (e, t, n) =>
         (
             await a.tn.patch({
                 url: m.ANM.GUILD_STICKER(e, t),
@@ -195,7 +195,7 @@ let I = async (e, t) => {
                 rejectWithError: !1
             })
         ).body;
-function P(e, t, n) {
+function R(e, t, n) {
     o.Z.dispatch({
         type: 'ADD_STICKER_PREVIEW',
         channelId: e,
@@ -203,7 +203,7 @@ function P(e, t, n) {
         draftType: n
     });
 }
-function w(e, t) {
+function P(e, t) {
     o.Z.dispatch({
         type: 'CLEAR_STICKER_PREVIEW',
         channelId: e,

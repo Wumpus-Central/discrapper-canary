@@ -8,7 +8,7 @@ var r = n(255367),
     c = n(314897),
     u = n(430824),
     d = n(785717),
-    f = n(475413),
+    f = n(732380),
     _ = n(388032),
     p = n(206435);
 function h(e, t, n) {
@@ -50,12 +50,13 @@ function g(e) {
         T = i.useRef(null);
     return b
         ? null == y
-            ? (0, r.jsx)(f.tG, {
+            ? (0, r.jsx)(f.O1, {
                   action: 'EDIT_PROFILE',
                   text: _.intl.string(_.t.s5vZlZ),
                   icon: o.vdY,
                   autoFocus: !0,
                   fullWidth: h,
+                  variant: 'primary',
                   onClick: () => {
                       (null == E || E(), v(), (0, s.i)(g));
                   }
@@ -94,14 +95,15 @@ function g(e) {
                   },
                   children: (e) =>
                       (0, r.jsx)(
-                          f.tG,
+                          f.O1,
                           m(
                               {
-                                  ref: T,
+                                  buttonRef: T,
                                   text: _.intl.string(_.t.s5vZlZ),
                                   icon: o.vdY,
                                   autoFocus: !0,
-                                  fullWidth: h
+                                  fullWidth: h,
+                                  variant: 'primary'
                               },
                               e
                           )

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => R });
 var r,
     i = n(442837),
     a = n(570140),
@@ -94,7 +94,7 @@ function C(e) {
         a = h(t);
     ((a.searchResultsQueryString = n), (a.searchResultsQuery = r), (a.searchResultsOffset = null != i ? i : 0));
 }
-class R extends (r = i.ZP.Store) {
+class w extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(l.Z, s.Z, o.Z);
     }
@@ -125,8 +125,8 @@ class R extends (r = i.ZP.Store) {
         return null != e && null != p[e];
     }
 }
-f(R, 'displayName', 'SearchStore');
-let P = new R(a.Z, {
+f(w, 'displayName', 'SearchStore');
+let R = new w(a.Z, {
     CONNECTION_OPEN: I,
     SEARCH_RESULTS_QUERY_UPDATE: C,
     SEARCH_EDITOR_STATE_CLEAR: O,

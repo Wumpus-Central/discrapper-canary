@@ -127,13 +127,13 @@ function C(e) {
     let { channel: t } = e;
     return N(t);
 }
-function R(e) {
+function w(e) {
     let { channel: t } = e;
     if (null == t.guild_id || !(t.guild_id in h)) return !1;
     ((h[t.guild_id] = f({}, h[t.guild_id])), delete h[t.guild_id][t.id]);
 }
-let P = {};
-class w extends (r = o.ZP.Store) {
+let R = {};
+class P extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }
@@ -142,11 +142,11 @@ class w extends (r = o.ZP.Store) {
     }
     getThreadsForGuild(e) {
         var t;
-        return null != (t = h[e]) ? t : P;
+        return null != (t = h[e]) ? t : R;
     }
     getThreadsForParent(e, t) {
         var n;
-        return null != (n = this.getThreadsForGuild(e)[t]) ? n : P;
+        return null != (n = this.getThreadsForGuild(e)[t]) ? n : R;
     }
     hasThreadsForChannel(e, t) {
         return !a().isEmpty(this.getThreadsForParent(e, t));
@@ -160,8 +160,8 @@ class w extends (r = o.ZP.Store) {
         return m.has(e);
     }
 }
-d(w, 'displayName', 'ActiveThreadsStore');
-let D = new w(s.Z, {
+d(P, 'displayName', 'ActiveThreadsStore');
+let D = new P(s.Z, {
     CONNECTION_OPEN: O,
     OVERLAY_INITIALIZE: v,
     GUILD_CREATE: I,
@@ -170,5 +170,5 @@ let D = new w(s.Z, {
     THREAD_UPDATE: S,
     THREAD_LIST_SYNC: A,
     THREAD_DELETE: C,
-    CHANNEL_DELETE: R
+    CHANNEL_DELETE: w
 });

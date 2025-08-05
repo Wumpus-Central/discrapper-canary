@@ -1,52 +1,45 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => l });
 var r = n(73800),
     i = n(442837),
-    l = n(499254),
-    a = n(213459),
-    o = n(592125);
-function s(e) {
-    let { isProfileFetching: t, wasProfileFetching: n, applicationId: s, channelId: c, commands: u } = e;
+    a = n(499254),
+    o = n(213459),
+    s = n(592125);
+function l(e) {
+    let { isProfileFetching: t, wasProfileFetching: n, applicationId: l, channelId: c, commands: u } = e;
     (r.useEffect(() => {
-        !t && n && null == s && (0, l.Tv)(c);
-    }, [t, n, s, c]),
+        !t && n && null == l && (0, a.Tv)(c);
+    }, [t, n, l, c]),
         r.useEffect(() => {
-            (0, l.Hm)(c);
+            (0, a.Hm)(c);
         }, [c]));
-    let d = (0, i.e7)([a.ZP], () => {
+    let d = (0, i.e7)([o.ZP], () => {
             var e, t;
-            return null != (t = null == (e = a.ZP.getApplicationState(s)) ? void 0 : e.fetchState.fetching) && t;
+            return null != (t = null == (e = o.ZP.getApplicationState(l)) ? void 0 : e.fetchState.fetching) && t;
         }),
-        p = (0, i.e7)([a.ZP, o.Z], () => {
+        f = (0, i.e7)([o.ZP, s.Z], () => {
             var e, t;
-            let n = o.Z.getChannel(c);
-            return (
-                null !=
-                    (t =
-                        null ==
-                        (e = a.ZP.getContextState(
-                            null != n
-                                ? {
-                                      channel: n,
-                                      type: 'channel'
-                                  }
-                                : { type: 'contextless' }
-                        ))
-                            ? void 0
-                            : e.fetchState.fetching) && t
-            );
+            let n = s.Z.getChannel(c),
+                r =
+                    null != n
+                        ? {
+                              channel: n,
+                              type: 'channel'
+                          }
+                        : { type: 'contextless' };
+            return null != (t = null == (e = o.ZP.getContextState(r)) ? void 0 : e.fetchState.fetching) && t;
         }),
-        h = r.useRef(!1),
-        f = r.useRef(!1);
+        _ = r.useRef(!1),
+        p = r.useRef(!1);
     (r.useEffect(() => {
-        ((h.current = !1), (f.current = !1));
+        ((_.current = !1), (p.current = !1));
     }, [c]),
         r.useEffect(() => {
-            d && (h.current = !0);
+            d && (_.current = !0);
         }, [d]),
         r.useEffect(() => {
-            p && (f.current = !0);
-        }, [p]),
+            f && (p.current = !0);
+        }, [f]),
         r.useEffect(() => {
-            !d && !p && h.current && f.current && 0 === u.length && (0, l.Tv)(c);
-        }, [d, p, u, c]));
+            !d && !f && _.current && p.current && 0 === u.length && (0, a.Tv)(c);
+        }, [d, f, u, c]));
 }

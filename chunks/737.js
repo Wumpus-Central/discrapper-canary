@@ -1,45 +1,46 @@
-(n.d(t, { Z: () => p }), n(388685), n(539854));
+(n.d(t, { Z: () => h }), n(388685), n(539854));
 var r = n(442837),
     i = n(963374),
-    l = n(735020),
-    a = n(627050),
-    o = n(905405),
-    s = n(937889),
+    a = n(735020),
+    o = n(627050),
+    s = n(905405),
+    l = n(937889),
     c = n(23750),
     u = n(699516),
     d = n(171900),
-    _ = n(518944);
-let E = [];
-function p(e) {
-    let t = (0, o.p)(),
-        n = a.d.useExperiment({ location: 'useMessageRenderedContent' }).enabled,
-        p = (0, r.e7)(
-            [_.Z, d.Z, l.Z],
+    f = n(518944);
+function _(e, t) {
+    let [n] = t,
+        r = n.getMessage(e.id, e.channel_id);
+    return (
+        null != r &&
+            (e = e.merge({
+                attachments: r.attachments,
+                embeds: r.embeds
+            })),
+        e
+    );
+}
+let p = [];
+function h(e) {
+    let t = (0, s.p)(),
+        n = o.d.useExperiment({ location: 'useMessageRenderedContent' }).enabled,
+        h = (0, r.e7)(
+            [f.Z, d.Z, a.Z],
             () => {
                 var r;
-                let a = _.Z.getSearchResultsQuery(e),
-                    o = d.Z.getMessages(e);
-                if (null == a || null == o || 0 === o.length) return E;
-                let u = (0, i.nC)(null != (r = a.content) ? r : ''),
-                    p = [];
+                let o = f.Z.getSearchResultsQuery(e),
+                    s = d.Z.getMessages(e);
+                if (null == o || null == s || 0 === s.length) return p;
+                let u = (0, i.nC)(null != (r = o.content) ? r : ''),
+                    h = [];
                 return (
-                    o.forEach((e) => {
+                    s.forEach((e) => {
                         let r = new c.ZP(e),
-                            i = (r = (function (e, t) {
-                                let [n] = t,
-                                    r = n.getMessage(e.id, e.channel_id);
-                                return (
-                                    null != r &&
-                                        (e = e.merge({
-                                            attachments: r.attachments,
-                                            embeds: r.embeds
-                                        })),
-                                    e
-                                );
-                            })(r, [l.Z])).isSearchHit
+                            i = (r = _(r, [a.Z])).isSearchHit
                                 ? r.set(
                                       'customRenderedContent',
-                                      (0, s.ZP)(r, {
+                                      (0, l.ZP)(r, {
                                           postProcessor: u,
                                           allowHeading: !0,
                                           allowList: !0,
@@ -48,9 +49,9 @@ function p(e) {
                                       })
                                   )
                                 : r;
-                        p.push([i]);
+                        h.push([i]);
                     }),
-                    p
+                    h
                 );
             },
             [n, e, t],
@@ -62,7 +63,7 @@ function p(e) {
             let e = 0,
                 t = 0;
             return {
-                searchResults: p.map((n) =>
+                searchResults: h.map((n) =>
                     n.filter((n) => {
                         let r = u.Z.isBlockedForMessage(n),
                             i = u.Z.isIgnoredForMessage(n);
@@ -73,7 +74,7 @@ function p(e) {
                 ignoreCount: t
             };
         },
-        [p],
+        [h],
         r.pF
     );
 }

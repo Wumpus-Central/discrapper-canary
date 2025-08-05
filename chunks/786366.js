@@ -5,16 +5,16 @@ var r = t(597312),
     i = t(442837),
     o = t(481060),
     s = t(860719),
-    c = t(621853),
+    d = t(621853),
     a = t(388032),
-    u = t(137861);
-function d(e) {
+    c = t(137861);
+function u(e) {
     let { icon: n, title: t, description: r } = e;
     return (0, l.jsxs)('div', {
-        className: u.row,
+        className: c.row,
         children: [
             (0, l.jsx)('div', {
-                className: u.rowIcon,
+                className: c.rowIcon,
                 children: (0, l.jsx)(n, {
                     size: 'custom',
                     width: 20,
@@ -23,7 +23,7 @@ function d(e) {
                 })
             }),
             (0, l.jsxs)('div', {
-                className: u.rowText,
+                className: c.rowText,
                 children: [
                     (0, l.jsx)(o.X6q, {
                         variant: 'text-xs/semibold',
@@ -40,29 +40,29 @@ function d(e) {
 }
 function f(e) {
     let { user: n } = e,
-        t = (0, i.e7)([c.Z], () => {
+        t = (0, i.e7)([d.Z], () => {
             var e;
-            return null == (e = c.Z.getUserProfile(n.id)) ? void 0 : e.application;
+            return null == (e = d.Z.getUserProfile(n.id)) ? void 0 : e.application;
         }),
-        { hasMessageContent: f, hasGuildPresences: p, hasGuildMembers: j } = (0, s.w)({ flags: null == t ? void 0 : t.flags });
+        { hasMessageContent: f, hasGuildPresences: p, hasGuildMembers: h } = (0, s.w)({ flags: null == t ? void 0 : t.flags });
     return (0, l.jsxs)(r.zJ, {
         fade: !0,
-        className: u.scroller,
+        className: c.scroller,
         children: [
             f &&
-                (0, l.jsx)(d, {
+                (0, l.jsx)(u, {
                     icon: o.kBi,
                     title: a.intl.string(a.t['7Tmhfn']),
                     description: a.intl.string(a.t['eu5x7+'])
                 }),
             p &&
-                (0, l.jsx)(d, {
+                (0, l.jsx)(u, {
                     icon: o.iWm,
                     title: a.intl.string(a.t.awYSsL),
                     description: a.intl.string(a.t.TpsXoK)
                 }),
-            j &&
-                (0, l.jsx)(d, {
+            h &&
+                (0, l.jsx)(u, {
                     icon: o.BFJ,
                     title: a.intl.string(a.t.WuKeSE),
                     description: a.intl.string(a.t.wOBmtb)

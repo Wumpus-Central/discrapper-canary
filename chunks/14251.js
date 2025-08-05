@@ -1,54 +1,54 @@
-(n.d(t, {
-    a: () => d,
-    r: () => u
+(t.d(n, {
+    a: () => u,
+    r: () => c
 }),
-    n(388685));
-var r = n(255367),
-    s = n(481060),
-    i = n(785232),
-    a = n(594174),
-    l = n(5192),
-    o = n(388032),
-    c = n(193728);
-let u = (e, t) => {
+    t(388685));
+var s = t(255367),
+    i = t(481060),
+    r = t(785232),
+    a = t(594174),
+    l = t(5192),
+    o = t(388032),
+    d = t(193728);
+let c = (e, n) => {
         if (1 === e.length) {
-            let n = a.default.getUser(e[0]);
-            return null != n
-                ? (0, r.jsx)(s.qEK, {
-                      src: n.getAvatarURL(t, 32),
-                      size: s.EFr.SIZE_32,
+            let t = a.default.getUser(e[0]);
+            return null != t
+                ? (0, s.jsx)(i.qEK, {
+                      src: t.getAvatarURL(n, 32),
+                      size: i.EFr.SIZE_32,
                       'aria-hidden': !0
                   })
-                : (0, r.jsx)(s.tBG, {});
+                : (0, s.jsx)(i.tBG, {});
         }
-        return (0, r.jsx)(i.Z, {
+        return (0, s.jsx)(r.Z, {
             recipients: e,
-            size: s.EFr.SIZE_32
+            size: i.EFr.SIZE_32
         });
     },
-    d = (e, t, n, i) => {
-        let u = [...e].map((e) => a.default.getUser(e)),
-            d = (e) =>
-                (0, r.jsx)(s.Text, {
+    u = (e, n, t, r) => {
+        let c = [...e].map((e) => a.default.getUser(e)),
+            u = (e) =>
+                (0, s.jsx)(i.Text, {
                     variant: 'text-md/semibold',
-                    className: c.username,
-                    children: l.ZP.getName(n, i, e)
+                    className: d.username,
+                    children: l.ZP.getName(t, r, e)
                 });
-        return t >= 4
+        return n >= 4
             ? o.intl.format(o.t.qfo6KS, {
-                  usernameHook1: () => d(u[0]),
-                  usernameHook2: () => d(u[1]),
-                  numberOfOtherUsers: t - e.length
+                  usernameHook1: () => u(c[0]),
+                  usernameHook2: () => u(c[1]),
+                  numberOfOtherUsers: n - e.length
               })
-            : 3 === t
+            : 3 === n
               ? o.intl.format(o.t['67ZE+/'], {
-                    usernameHook1: () => d(u[0]),
-                    usernameHook2: () => d(u[1])
+                    usernameHook1: () => u(c[0]),
+                    usernameHook2: () => u(c[1])
                 })
-              : 2 === t
+              : 2 === n
                 ? o.intl.format(o.t.veV4IC, {
-                      usernameHook1: () => d(u[0]),
-                      usernameHook2: () => d(u[1])
+                      usernameHook1: () => u(c[0]),
+                      usernameHook2: () => u(c[1])
                   })
-                : o.intl.format(o.t['4WHCtr'], { usernameHook: () => d(u[0]) });
+                : o.intl.format(o.t['4WHCtr'], { usernameHook: () => u(c[0]) });
     };

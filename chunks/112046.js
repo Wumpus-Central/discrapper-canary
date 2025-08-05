@@ -1,34 +1,38 @@
-var n = r(73800),
-    i = r(606166);
-t.exports = (function (t) {
-    function e() {
-        return t.apply(this, arguments) || this;
-    }
+function r(e, t) {
     ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
-    var r = e.prototype;
+}
+var i = n(73800),
+    a = n(606166);
+e.exports = (function (e) {
+    function t() {
+        return e.apply(this, arguments) || this;
+    }
+    r(t, e);
+    var n = t.prototype;
     return (
-        (r.shouldComponentUpdate = function (t) {
-            return this.props.text !== t.text || this.props.editorState.getSelection().getHasFocus() !== t.editorState.getSelection().getHasFocus();
+        (n.shouldComponentUpdate = function (e) {
+            return this.props.text !== e.text || this.props.editorState.getSelection().getHasFocus() !== e.editorState.getSelection().getHasFocus();
         }),
-        (r.render = function () {
-            var t = i({
-                'public/DraftEditorPlaceholder/root': !0,
-                'public/DraftEditorPlaceholder/hasFocus': this.props.editorState.getSelection().getHasFocus()
-            });
-            return n.createElement(
+        (n.render = function () {
+            var e = a({
+                    'public/DraftEditorPlaceholder/root': !0,
+                    'public/DraftEditorPlaceholder/hasFocus': this.props.editorState.getSelection().getHasFocus()
+                }),
+                t = { whiteSpace: 'pre-wrap' };
+            return i.createElement(
                 'div',
-                { className: t },
-                n.createElement(
+                { className: e },
+                i.createElement(
                     'div',
                     {
-                        className: i('public/DraftEditorPlaceholder/inner'),
+                        className: a('public/DraftEditorPlaceholder/inner'),
                         id: this.props.accessibilityID,
-                        style: { whiteSpace: 'pre-wrap' }
+                        style: t
                     },
                     this.props.text
                 )
             );
         }),
-        e
+        t
     );
-})(n.Component);
+})(i.Component);

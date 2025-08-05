@@ -1,93 +1,106 @@
-(n.d(e, { Z: () => s }), n(388685));
-var i = n(255367),
-    r = n(73800),
-    l = n(120356),
-    o = n.n(l),
-    a = n(349361),
-    u = n(806726);
-function s(t) {
-    var e,
-        n,
-        { children: l, gradientClassName: s } = t,
-        c = (function (t, e) {
-            if (null == t) return {};
-            var n,
-                i,
-                r = (function (t, e) {
-                    if (null == t) return {};
-                    var n,
-                        i,
-                        r = {},
-                        l = Object.keys(t);
-                    for (i = 0; i < l.length; i++) ((n = l[i]), e.indexOf(n) >= 0 || (r[n] = t[n]));
-                    return r;
-                })(t, e);
-            if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(t);
-                for (i = 0; i < l.length; i++) ((n = l[i]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (r[n] = t[n]));
-            }
-            return r;
-        })(t, ['children', 'gradientClassName']);
-    let d = r.useRef(null),
-        [p, f] = r.useState(!0),
-        S = () => {
-            var t;
-            (null == (t = d.current) ? void 0 : t.isScrolledToBottom()) === !0 ? f(!1) : f(!0);
+(n.d(t, { Z: () => h }), n(388685));
+var r = n(255367),
+    i = n(73800),
+    a = n(120356),
+    o = n.n(a),
+    s = n(349361),
+    l = n(806726);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function _(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = p(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+    }
+    return i;
+}
+function p(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    return i;
+}
+function h(e) {
+    var { children: t, gradientClassName: n } = e,
+        a = _(e, ['children', 'gradientClassName']);
+    let c = i.useRef(null),
+        [d, p] = i.useState(!0),
+        h = () => {
+            var e;
+            (null == (e = c.current) ? void 0 : e.isScrolledToBottom()) === !0 ? p(!1) : p(!0);
         };
-    return (0, i.jsxs)(i.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(
-                a.h2,
-                ((e = (function (t) {
-                    for (var e = 1; e < arguments.length; e++) {
-                        var n = null != arguments[e] ? arguments[e] : {},
-                            i = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
-                            (i = i.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (t) {
-                                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                                })
-                            )),
-                            i.forEach(function (e) {
-                                var i;
-                                ((i = n[e]),
-                                    e in t
-                                        ? Object.defineProperty(t, e, {
-                                              value: i,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0
-                                          })
-                                        : (t[e] = i));
-                            }));
-                    }
-                    return t;
-                })({ fade: !0 }, c)),
-                (n = n =
-                    {
-                        ref: (t) => {
-                            null != t && ((d.current = t), S());
-                        },
-                        onScroll: S,
-                        children: l
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-                    : (function (t, e) {
-                          var n = Object.keys(t);
-                          if (Object.getOwnPropertySymbols) {
-                              var i = Object.getOwnPropertySymbols(t);
-                              n.push.apply(n, i);
-                          }
-                          return n;
-                      })(Object(n)).forEach(function (t) {
-                          Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
-                      }),
-                e)
+            (0, r.jsx)(
+                s.h2,
+                f(u({ fade: !0 }, a), {
+                    ref: (e) => {
+                        null != e && ((c.current = e), h());
+                    },
+                    onScroll: h,
+                    children: t
+                })
             ),
-            (0, i.jsx)('div', {
-                className: o()(u.containerScrollGradient, s),
-                'data-shown': p
+            (0, r.jsx)('div', {
+                className: o()(l.containerScrollGradient, n),
+                'data-shown': d
             })
         ]
     });

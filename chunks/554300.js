@@ -82,15 +82,15 @@ function g(e, t) {
 }
 let E = function (e) {
     var t,
-        { ref: n, avatar: a, name: f, nameplate: p, children: g, subText: E, decorators: b, onClick: y, hovered: O, selected: v, muted: I, to: T, avatarClassName: S, selectedClassName: A, innerClassName: N, wrapContent: C, highlighted: R, focusProps: P } = e,
-        w = m(e, ['ref', 'avatar', 'name', 'nameplate', 'children', 'subText', 'decorators', 'onClick', 'hovered', 'selected', 'muted', 'to', 'avatarClassName', 'selectedClassName', 'innerClassName', 'wrapContent', 'highlighted', 'focusProps']);
-    ((w.className = o()(w.className, d.container, {
+        { ref: n, avatar: a, name: f, nameplate: p, children: g, subText: E, decorators: b, onClick: y, hovered: O, selected: v, muted: I, to: T, avatarClassName: S, selectedClassName: A, innerClassName: N, wrapContent: C, highlighted: w, focusProps: R } = e,
+        P = m(e, ['ref', 'avatar', 'name', 'nameplate', 'children', 'subText', 'decorators', 'onClick', 'hovered', 'selected', 'muted', 'to', 'avatarClassName', 'selectedClassName', 'innerClassName', 'wrapContent', 'highlighted', 'focusProps']);
+    ((P.className = o()(P.className, d.container, {
         [d.selected]: v,
-        [d.highlighted]: R,
+        [d.highlighted]: w,
         [null != A ? A : '']: v,
         [d.clickable]: !v && (null != T || null != y)
     })),
-        (w['aria-selected'] = null != (t = w['aria-selected']) ? t : v));
+        (P['aria-selected'] = null != (t = P['aria-selected']) ? t : v));
     let D = i.useRef(null),
         L = (0, r.jsxs)('div', {
             className: o()(d.childContainer, { [d.nameplated]: null != p }),
@@ -147,7 +147,7 @@ let E = function (e) {
     return null != T
         ? (0, r.jsx)(
               l.tEY,
-              h(_({}, P), {
+              h(_({}, R), {
                   children: (0, r.jsx)(
                       s.rU,
                       h(
@@ -156,7 +156,7 @@ let E = function (e) {
                                   to: T,
                                   onClick: y
                               },
-                              w
+                              P
                           ),
                           {
                               role: 'listitem',
@@ -174,9 +174,9 @@ let E = function (e) {
                     _(
                         {
                             onClick: y,
-                            focusProps: P
+                            focusProps: R
                         },
-                        w
+                        P
                     ),
                     {
                         role: 'listitem',
@@ -187,10 +187,10 @@ let E = function (e) {
             )
           : (0, r.jsx)(
                 l.tEY,
-                h(_({}, P), {
+                h(_({}, R), {
                     children: (0, r.jsx)(
                         'div',
-                        h(_({}, w), {
+                        h(_({}, P), {
                             role: 'listitem',
                             ref: n,
                             children: L

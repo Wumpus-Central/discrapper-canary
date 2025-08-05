@@ -89,9 +89,9 @@ let O = 'payment-modal',
     I = new Set([f.h8.REVIEW, f.h8.CONFIRM, f.h8.GIFT_CUSTOMIZATION]);
 function T(e) {
     let t,
-        { skuId: f, isGift: h = !1, giftMessage: g, giftingOrigin: y, onClose: T, onComplete: S, analyticsLocations: A, analyticsObject: N, giftRecipient: C, variantsReturnStyle: R } = e,
-        P = !1,
-        w = (0, i.Z)(),
+        { skuId: f, isGift: h = !1, giftMessage: g, giftingOrigin: y, onClose: T, onComplete: S, analyticsLocations: A, analyticsObject: N, giftRecipient: C, variantsReturnStyle: w } = e,
+        R = !1,
+        P = (0, i.Z)(),
         D = (e) => {
             t = e;
         },
@@ -123,7 +123,7 @@ function T(e) {
                 return (0, r.jsx)(
                     _.Z,
                     E(m({}, i), {
-                        loadId: w,
+                        loadId: P,
                         skuId: f,
                         isGift: h,
                         giftMessage: g,
@@ -134,7 +134,7 @@ function T(e) {
                             (t(), null == T || T(e));
                         },
                         onComplete: () => {
-                            ((P = !0), null == S || S());
+                            ((R = !0), null == S || S());
                         },
                         returnRef: n,
                         onStepChange: D
@@ -144,9 +144,9 @@ function T(e) {
             {
                 modalKey: L,
                 onCloseCallback: () => {
-                    (P ||
+                    (R ||
                         d.default.track(p.rMx.PAYMENT_FLOW_CANCELED, {
-                            load_id: w,
+                            load_id: P,
                             payment_type: p.Zuq[p.GZQ.ONE_TIME],
                             location: N,
                             is_gift: h,
@@ -155,10 +155,10 @@ function T(e) {
                         }),
                         (0, s.fw)(),
                         (0, l.p)(),
-                        null == T || T(P),
-                        P &&
+                        null == T || T(R),
+                        R &&
                             (0, c.qg)({
-                                variantsReturnStyle: R,
+                                variantsReturnStyle: w,
                                 location: 'openCollectiblesPaymentModal'
                             }));
                 },

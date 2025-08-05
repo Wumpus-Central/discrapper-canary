@@ -43,7 +43,7 @@ function N(e) {
 function C(e) {
     g[e.id] = c.Z.createFromServer(e);
 }
-function R(e) {
+function w(e) {
     delete m[e.id];
     let t = b[e.application_id];
     null != t && t.delete(e.id);
@@ -53,11 +53,11 @@ function R(e) {
         null != t && t.delete(e.id);
     }
 }
-function P(e) {
+function R(e) {
     let { applicationId: t } = e;
     I.add(t);
 }
-function w(e) {
+function P(e) {
     let { applicationId: t, entitlements: n } = e;
     for (let e of (I.delete(t), T.add(t), n)) !0 !== e.consumed && N(e);
 }
@@ -69,14 +69,14 @@ function L() {}
 function x() {
     y = !0;
 }
-function M(e) {
+function k(e) {
     let { entitlements: t, excludeEnded: n } = e;
     for (let e of ((O = !0), (y = !1), (v = !n), t)) N(e);
 }
-function k() {
+function j() {
     ((O = !1), (y = !1), (v = !1));
 }
-function j(e) {
+function M(e) {
     let { entitlements: t } = e;
     for (let e of t) N(e);
 }
@@ -88,9 +88,9 @@ function G(e) {
     return N(e.entitlement);
 }
 function B(e) {
-    return R(e.entitlement);
+    return w(e.entitlement);
 }
-class V extends (r = s.yh) {
+class Z extends (r = s.yh) {
     initialize() {
         this.syncWith([u.Z], () => !0);
     }
@@ -204,20 +204,20 @@ class V extends (r = s.yh) {
         );
     }
 }
-h(V, 'displayName', 'EntitlementStore');
-let F = new V(l.Z, {
-    ENTITLEMENT_FETCH_APPLICATION_START: P,
-    ENTITLEMENT_FETCH_APPLICATION_SUCCESS: w,
+h(Z, 'displayName', 'EntitlementStore');
+let F = new Z(l.Z, {
+    ENTITLEMENT_FETCH_APPLICATION_START: R,
+    ENTITLEMENT_FETCH_APPLICATION_SUCCESS: P,
     ENTITLEMENT_FETCH_APPLICATION_FAIL: L,
     ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: D,
-    SKU_PURCHASE_SUCCESS: j,
-    VIRTUAL_CURRENCY_REDEEM_SUCCESS: j,
+    SKU_PURCHASE_SUCCESS: M,
+    VIRTUAL_CURRENCY_REDEEM_SUCCESS: M,
     LIBRARY_FETCH_SUCCESS: U,
     ENTITLEMENT_CREATE: G,
     ENTITLEMENT_UPDATE: G,
     ENTITLEMENT_DELETE: B,
     LOGOUT: A,
     ENTITLEMENTS_FETCH_FOR_USER_START: x,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: M,
-    ENTITLEMENTS_FETCH_FOR_USER_FAIL: k
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: k,
+    ENTITLEMENTS_FETCH_FOR_USER_FAIL: j
 });

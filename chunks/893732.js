@@ -1,42 +1,42 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    l = n(388032),
-    a = n(892703);
-function o(e) {
+    a = n(388032),
+    o = n(892703);
+function s(e) {
     let { onClose: t, guildName: n } = e;
     return (0, r.jsxs)('div', {
-        className: a.container,
+        className: o.container,
         children: [
             (0, r.jsx)('div', {
-                className: a.iconContainer,
+                className: o.iconContainer,
                 children: (0, r.jsx)(i.YlB, {
                     size: 'custom',
                     color: 'currentColor',
-                    className: a.icon,
+                    className: o.icon,
                     width: 20,
                     height: 20
                 })
             }),
             (0, r.jsxs)('div', {
-                className: a.header,
+                className: o.header,
                 children: [
                     (0, r.jsx)(i.X6q, {
                         variant: 'heading-md/semibold',
-                        className: a.headerText,
-                        children: l.intl.string(l.t.LIIyeH)
+                        className: o.headerText,
+                        children: a.intl.string(a.t.LIIyeH)
                     }),
                     (0, r.jsx)(i.Text, {
                         variant: 'text-sm/normal',
-                        children: l.intl.format(l.t['4/6vQk'], { guildName: n })
+                        children: a.intl.format(a.t['4/6vQk'], { guildName: n })
                     }),
                     (0, r.jsx)('div', {
                         'data-button-hoisted-classname-wrapper': !0,
-                        className: a.button,
+                        className: o.button,
                         children: (0, r.jsx)(i.zxk, {
                             variant: 'primary',
-                            text: l.intl.string(l.t.BddRzc),
+                            text: a.intl.string(a.t.BddRzc),
                             onClick: t
                         })
                     })

@@ -1,66 +1,66 @@
-(l.r(n), l.d(n, { SubscriptionDetailsModal: () => j }), l(953529));
-var t = l(255367),
-    r = l(73800),
-    i = l(269210),
-    s = l(752843),
-    a = l(481060),
-    o = l(757746),
-    c = l(930155),
-    d = l(889989),
-    u = l(263519),
-    m = l(73346),
-    x = l(591759),
-    h = l(886253),
-    p = l(680005),
-    v = l(938337);
-function j(e) {
-    var n, l;
-    let { appId: j, subscriptionType: f, onClose: b, skuId: N, guildId: S, transitionState: g, onHeaderTitleClick: O } = e,
-        { data: I } = (0, c.H)(N),
-        C = I[0],
-        { data: y } = (0, o.Z)(N),
-        T = r.useMemo(() => {
+(n.r(t), n.d(t, { SubscriptionDetailsModal: () => g }), n(953529));
+var r = n(255367),
+    i = n(73800),
+    a = n(269210),
+    o = n(752843),
+    s = n(481060),
+    l = n(757746),
+    c = n(930155),
+    u = n(889989),
+    d = n(263519),
+    f = n(73346),
+    _ = n(591759),
+    p = n(886253),
+    h = n(680005),
+    m = n(938337);
+function g(e) {
+    var t, n;
+    let { appId: g, subscriptionType: E, onClose: b, skuId: y, guildId: O, transitionState: v, onHeaderTitleClick: I } = e,
+        { data: T } = (0, c.H)(y),
+        S = T[0],
+        { data: A } = (0, l.Z)(y),
+        N = i.useMemo(() => {
             var e;
-            return (null == y ? void 0 : y.thumbnail) != null && null != (e = x.Z.toURLSafe((0, m._W)(j, y.thumbnail, 256))) ? e : void 0;
-        }, [j, null == y ? void 0 : y.thumbnail]),
-        R = r.useMemo(() => {
-            let e = null == y ? void 0 : y.benefits;
+            return (null == A ? void 0 : A.thumbnail) != null && null != (e = _.Z.toURLSafe((0, f._W)(g, A.thumbnail, 256))) ? e : void 0;
+        }, [g, null == A ? void 0 : A.thumbnail]),
+        C = i.useMemo(() => {
+            let e = null == A ? void 0 : A.benefits;
             if (null != e && 0 !== e.length)
                 return e.map((e) => ({
                     id: e.id,
                     title: e.name,
                     description: e.description,
-                    icon: (0, d.n)(j, e.icon)
+                    icon: (0, u.n)(g, e.icon)
                 }));
-        }, [j, null == y ? void 0 : y.benefits]),
-        { openModal: k, subscriptionPurchaseButtonState: E } = (0, u.Z)({
-            skuId: N,
-            initialSubscribeForGuild: null != S ? S : void 0
+        }, [g, null == A ? void 0 : A.benefits]),
+        { openModal: w, subscriptionPurchaseButtonState: R } = (0, d.Z)({
+            skuId: y,
+            initialSubscribeForGuild: null != O ? O : void 0
         });
-    return null == y
+    return null == A
         ? null
-        : (0, t.jsx)(h.A, {
-              appId: j,
-              skuId: N,
-              transitionState: g,
-              onHeaderTitleClick: null != O ? O : b,
+        : (0, r.jsx)(p.A, {
+              appId: g,
+              skuId: y,
+              transitionState: v,
+              onHeaderTitleClick: null != I ? I : b,
               onClose: b,
-              footer: (0, t.jsx)(p.pV, {
-                  onClick: k,
-                  appId: j,
-                  subscriptionType: f,
-                  skuId: N,
-                  subscriptionPlan: C,
-                  state: E
+              footer: (0, r.jsx)(h.pV, {
+                  onClick: w,
+                  appId: g,
+                  subscriptionType: E,
+                  skuId: y,
+                  subscriptionPlan: S,
+                  state: R
               }),
-              children: (0, t.jsx)(v.i, {
-                  appId: j,
-                  skuId: N,
+              children: (0, r.jsx)(m.i, {
+                  appId: g,
+                  skuId: y,
                   benefits:
-                      null != R
-                          ? R.map((e) =>
-                                (0, t.jsx)(
-                                    i.Gm,
+                      null != C
+                          ? C.map((e) =>
+                                (0, r.jsx)(
+                                    a.Gm,
                                     {
                                         header: e.title,
                                         icon: e.icon,
@@ -70,11 +70,11 @@ function j(e) {
                                 )
                             )
                           : void 0,
-                  description: null != (n = y.description) ? n : void 0,
-                  imgSrc: T,
-                  title: null != (l = null == C ? void 0 : C.name) ? l : y.summary,
-                  tag: (0, t.jsx)(s.Z, { type: f }),
-                  FallbackIcon: a.Vh5
+                  description: null != (t = A.description) ? t : void 0,
+                  imgSrc: N,
+                  title: null != (n = null == S ? void 0 : S.name) ? n : A.summary,
+                  tag: (0, r.jsx)(o.Z, { type: E }),
+                  FallbackIcon: s.Vh5
               })
           });
 }

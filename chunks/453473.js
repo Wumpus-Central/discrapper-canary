@@ -1,43 +1,56 @@
 (n.d(t, {
-    K: () => H,
-    P: () => Q
+    K: () => Y,
+    P: () => W
 }),
     n(388685));
 var r = n(255367),
-    s = n(73800),
-    l = n(120356),
-    a = n.n(l),
-    o = n(512722),
-    i = n.n(o),
+    i = n(73800),
+    a = n(120356),
+    o = n.n(a),
+    s = n(512722),
+    l = n.n(s),
     c = n(913527),
     u = n.n(c),
-    h = n(990547),
-    d = n(91192),
-    p = n(442837),
-    f = n(481060),
-    g = n(239091),
+    d = n(990547),
+    f = n(91192),
+    _ = n(442837),
+    p = n(481060),
+    h = n(239091),
     m = n(494404),
-    y = n(724757),
-    x = n(213609),
+    g = n(724757),
+    E = n(213609),
     b = n(294218),
-    S = n(373662),
-    v = n(695346),
-    j = n(496675),
-    C = n(626135),
-    O = n(585483),
-    _ = n(70956),
-    P = n(324701),
-    R = n(575016),
-    E = n(768943),
-    I = n(686478),
-    T = n(664559),
-    N = n(767893),
-    k = n(206697),
-    w = n(74551),
-    Z = n(981631),
-    A = n(388032),
-    D = n(585693);
-function M(e) {
+    y = n(373662),
+    O = n(695346),
+    v = n(496675),
+    I = n(626135),
+    T = n(585483),
+    S = n(70956),
+    A = n(324701),
+    N = n(575016),
+    C = n(768943),
+    w = n(686478),
+    R = n(664559),
+    P = n(767893),
+    D = n(206697),
+    L = n(74551),
+    x = n(981631),
+    k = n(388032),
+    j = n(585693);
+function M(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,160 +61,159 @@ function M(e) {
                 })
             )),
             r.forEach(function (t) {
-                var r;
-                ((r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r));
+                M(e, t, n[t]);
             }));
     }
     return e;
 }
-function F(e, t) {
+function G(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function B(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : G(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let L = {
+function Z(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = F(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+    }
+    return i;
+}
+function F(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    return i;
+}
+let V = {
     offset: {
         left: 4,
         right: -12
     }
 };
-function B(e) {
+function H(e) {
     let { closePopout: t } = e;
-    return (0, r.jsx)(f.VqE, {
-        'aria-label': A.intl.string(A.t['2pAkDA']),
+    return (0, r.jsx)(p.VqE, {
+        'aria-label': k.intl.string(k.t['2pAkDA']),
         children: (0, r.jsxs)('div', {
-            className: D.popoutContainer,
+            className: j.popoutContainer,
             children: [
                 (0, r.jsx)(m.h4, {
-                    icon: f.plf,
-                    title: A.intl.string(A.t['2pAkDA'])
+                    icon: p.plf,
+                    title: k.intl.string(k.t['2pAkDA'])
                 }),
-                (0, r.jsx)(H, { closePopout: t })
+                (0, r.jsx)(Y, { closePopout: t })
             ]
         })
     });
 }
-function H(e) {
+function Y(e) {
     let { closePopout: t } = e,
-        n = (0, T.Z)();
-    return ((0, x.Z)(
+        n = (0, R.Z)();
+    return ((0, E.Z)(
         {
-            type: h.ImpressionTypes.POPOUT,
-            name: h.ImpressionNames.FOR_LATER_LIST_VIEWED,
+            type: d.ImpressionTypes.POPOUT,
+            name: d.ImpressionNames.FOR_LATER_LIST_VIEWED,
             properties: {
                 total_count: n.length,
-                overdue_count: E.Z.getOverdueMessageReminderCount()
+                overdue_count: C.Z.getOverdueMessageReminderCount()
             }
         },
         {},
         [n.length]
     ),
     0 === n.length)
-        ? (0, r.jsx)(k.w, {})
-        : (0, r.jsx)(U, {
+        ? (0, r.jsx)(D.w, {})
+        : (0, r.jsx)(K, {
               savedMessageKeys: n,
               closePopout: t
           });
 }
-function Q(e) {
-    let { onOpen: t, onClose: n, children: l, popoutPosition: a, popoutAlign: o } = e,
-        [i, c] = s.useState(!1),
-        u = s.useRef(null),
-        h = s.useCallback(() => {
-            (c(!1), i && (null == n || n()));
-        }, [n, i]),
-        d = s.useCallback(() => {
-            (c(!i), i ? null == n || n() : null == t || t());
-        }, [n, t, i]);
-    s.useEffect(() => (O.S.subscribe(Z.CkL.TOGGLE_FOR_LATER, d), () => void O.S.unsubscribe(Z.CkL.TOGGLE_FOR_LATER, d)), [d]);
-    let g = (0, p.e7)([E.Z], () => E.Z.hasOverdueReminder(), []);
-    return (0, r.jsx)(f.yRy, {
+function W(e) {
+    let { onOpen: t, onClose: n, children: a, popoutPosition: o, popoutAlign: s } = e,
+        [l, c] = i.useState(!1),
+        u = i.useRef(null),
+        d = i.useCallback(() => {
+            (c(!1), l && (null == n || n()));
+        }, [n, l]),
+        f = i.useCallback(() => {
+            (c(!l), l ? null == n || n() : null == t || t());
+        }, [n, t, l]);
+    i.useEffect(() => (T.S.subscribe(x.CkL.TOGGLE_FOR_LATER, f), () => void T.S.unsubscribe(x.CkL.TOGGLE_FOR_LATER, f)), [f]);
+    let h = (0, _.e7)([C.Z], () => C.Z.hasOverdueReminder(), []);
+    function m() {
+        return (0, r.jsx)(H, { closePopout: d });
+    }
+    return (0, r.jsx)(p.yRy, {
         targetElementRef: u,
-        animation: f.yRy.Animation.NONE,
-        position: a,
-        align: o,
+        animation: p.yRy.Animation.NONE,
+        position: o,
+        align: s,
         autoInvert: !1,
-        shouldShow: i,
-        onRequestClose: h,
-        renderPopout: function () {
-            return (0, r.jsx)(B, { closePopout: h });
-        },
+        shouldShow: l,
+        onRequestClose: d,
+        renderPopout: m,
         ignoreModalClicks: !0,
         children: (e, t) => {
             let { isShown: n } = t;
-            return l(d, n, e, g, u);
+            return a(f, n, e, h, u);
         }
     });
 }
-function U(e) {
+function K(e) {
     let { savedMessageKeys: t, closePopout: n } = e,
-        l = s.useRef(null),
-        a = (0, y.Z)('for-later', l),
-        [o, i] = s.useState(new Date());
+        a = i.useRef(null),
+        o = (0, g.Z)('for-later', a),
+        [s, l] = i.useState(new Date());
     return (
-        s.useEffect(() => {
-            let e = setInterval(() => i(new Date()), _.Z.Millis.MINUTE);
+        i.useEffect(() => {
+            let e = setInterval(() => l(new Date()), S.Z.Millis.MINUTE);
             return () => {
                 clearInterval(e);
             };
         }, []),
-        (0, r.jsx)(d.bG, {
-            navigator: a,
-            children: (0, r.jsx)(d.SJ, {
+        (0, r.jsx)(f.bG, {
+            navigator: o,
+            children: (0, r.jsx)(f.SJ, {
                 children: (e) => {
-                    var { ref: s } = e,
-                        a = (function (e, t) {
-                            if (null == e) return {};
-                            var n,
-                                r,
-                                s = (function (e, t) {
-                                    if (null == e) return {};
-                                    var n,
-                                        r,
-                                        s = {},
-                                        l = Object.keys(e);
-                                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (s[n] = e[n]));
-                                    return s;
-                                })(e, t);
-                            if (Object.getOwnPropertySymbols) {
-                                var l = Object.getOwnPropertySymbols(e);
-                                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (s[n] = e[n]));
-                            }
-                            return s;
-                        })(e, ['ref']);
+                    var { ref: i } = e,
+                        o = Z(e, ['ref']);
                     return (0, r.jsx)(
-                        f.h21,
-                        F(
-                            M(
+                        p.h21,
+                        B(
+                            U(
                                 {
                                     ref: (e) => {
                                         var t;
-                                        ((l.current = e), (s.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null));
+                                        ((a.current = e), (i.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null));
                                     },
-                                    className: D.messagesScroller
+                                    className: j.messagesScroller
                                 },
-                                a
+                                o
                             ),
                             {
                                 children: t.map((e) =>
@@ -210,7 +222,7 @@ function U(e) {
                                         {
                                             savedMessageKey: e,
                                             closePopout: n,
-                                            throttledNow: o
+                                            throttledNow: s
                                         },
                                         e.messageId
                                     )
@@ -223,87 +235,87 @@ function U(e) {
         })
     );
 }
-function W(e) {
-    let { savedMessage: t, closePopout: n, throttledNow: l } = e,
-        o = (0, R.gr)(t),
-        i = s.useCallback(
+function z(e) {
+    let { savedMessage: t, closePopout: n, throttledNow: a } = e,
+        s = (0, N.gr)(t),
+        l = i.useCallback(
             async (e) => {
                 var r;
-                (await (0, R.fC)(t, o),
+                (await (0, N.fC)(t, s),
                     e.shiftKey || n(),
-                    C.default.track(Z.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
+                    I.default.track(x.rMx.FOR_LATER_SAVED_MESSAGE_JUMP, {
                         channel_id: t.saveData.channelId,
                         message_id: t.saveData.messageId,
                         message_author_id: null == (r = t.message) ? void 0 : r.author.id,
-                        type: null != t.saveData.dueAt ? I._l.REMINDER : I._l.BOOKMARK,
+                        type: null != t.saveData.dueAt ? w._l.REMINDER : w._l.BOOKMARK,
                         due_duration: null != t.saveData.dueAt ? u()().diff(t.saveData.dueAt) : void 0
                     }));
             },
-            [n, t, o]
+            [n, t, s]
         ),
-        c = (0, p.e7)([j.Z], () => !!((null == o ? void 0 : o.type) === Z.d4z.UNKNOWN || (null == o ? void 0 : o.isPrivate())) || j.Z.can(Z.Plq.VIEW_CHANNEL, o));
-    return null != o && null != t.message && c
+        c = (0, _.e7)([v.Z], () => !!((null == s ? void 0 : s.type) === x.d4z.UNKNOWN || (null == s ? void 0 : s.isPrivate())) || v.Z.can(x.Plq.VIEW_CHANNEL, s));
+    return null != s && null != t.message && c
         ? (0, r.jsxs)('div', {
-              className: D.messageContainer,
+              className: j.messageContainer,
               children: [
-                  (0, r.jsx)(f.P3F, {
-                      className: D.clickableMessageBackground,
-                      onClick: i,
-                      'aria-label': A.intl.string(A.t['+TSRGB'])
+                  (0, r.jsx)(p.P3F, {
+                      className: j.clickableMessageBackground,
+                      onClick: l,
+                      'aria-label': k.intl.string(k.t['+TSRGB'])
                   }),
                   null != t.saveData.dueAt
-                      ? (0, r.jsx)(w.Z, {
+                      ? (0, r.jsx)(L.Z, {
                             reminder: t,
-                            throttledNow: l
+                            throttledNow: a
                         })
                       : null,
-                  (0, r.jsx)(N.Z, { channel: o }),
+                  (0, r.jsx)(P.Z, { channel: s }),
                   (0, r.jsx)(
                       b.Z,
                       {
                           message: t.message,
-                          channel: o,
-                          className: D.message,
-                          compact: v.jU.getSetting(),
+                          channel: s,
+                          className: j.message,
+                          compact: O.jU.getSetting(),
                           animateAvatar: !1,
-                          focusProps: L,
+                          focusProps: V,
                           trackAnnouncementViews: !0
                       },
                       t.message.id
                   ),
-                  (0, r.jsx)(S.ZP, {
-                      className: D.hoverBar,
-                      children: (0, r.jsx)(G, {
+                  (0, r.jsx)(y.ZP, {
+                      className: j.hoverBar,
+                      children: (0, r.jsx)($, {
                           savedMessage: t,
-                          jumpToMessage: i
+                          jumpToMessage: l
                       })
                   })
               ]
           })
         : (0, r.jsxs)('div', {
-              className: a()(D.messageContainer, D.deletedMessage),
+              className: o()(j.messageContainer, j.deletedMessage),
               children: [
                   (0, r.jsx)('div', {
-                      className: D.deleteIcon,
-                      children: (0, r.jsx)(f.Mgn, {
+                      className: j.deleteIcon,
+                      children: (0, r.jsx)(p.Mgn, {
                           size: 'xxs',
-                          color: f.TVs.colors.INTERACTIVE_ACTIVE
+                          color: p.TVs.colors.INTERACTIVE_ACTIVE
                       })
                   }),
-                  (0, r.jsx)(f.X6q, {
+                  (0, r.jsx)(p.X6q, {
                       variant: 'text-md/semibold',
                       color: 'header-secondary',
-                      children: null != t.saveData.dueAt ? A.intl.string(A.t['wuQm+v']) : A.intl.string(A.t.o572FR)
+                      children: null != t.saveData.dueAt ? k.intl.string(k.t['wuQm+v']) : k.intl.string(k.t.o572FR)
                   }),
-                  (0, r.jsx)(S.ZP, {
-                      className: D.hoverBar,
+                  (0, r.jsx)(y.ZP, {
+                      className: j.hoverBar,
                       children: (0, r.jsx)(
-                          S.sF,
+                          y.sF,
                           {
-                              label: A.intl.string(A.t.SvXS1d),
-                              icon: f.XHJ,
+                              label: k.intl.string(k.t.SvXS1d),
+                              icon: p.XHJ,
                               dangerous: !0,
-                              onClick: () => (0, P.x)(t.saveData)
+                              onClick: () => (0, A.x)(t.saveData)
                           },
                           'delete'
                       )
@@ -312,28 +324,28 @@ function W(e) {
           });
 }
 function q(e) {
-    let { savedMessageKey: t, closePopout: n, throttledNow: s } = e,
-        l = (0, p.e7)([E.Z], () => E.Z.getSavedMessage(t.channelId, t.messageId));
-    return null == l
+    let { savedMessageKey: t, closePopout: n, throttledNow: i } = e,
+        a = (0, _.e7)([C.Z], () => C.Z.getSavedMessage(t.channelId, t.messageId));
+    return null == a
         ? null
-        : (0, r.jsx)(W, {
-              savedMessage: l,
+        : (0, r.jsx)(z, {
+              savedMessage: a,
               closePopout: n,
-              throttledNow: s
+              throttledNow: i
           });
 }
-function G(e) {
-    let { savedMessage: t, jumpToMessage: s } = e;
-    return (i()(null != t.message, 'Saved message must be cached for For Later action buttons'), null != t.saveData.dueAt)
+function $(e) {
+    let { savedMessage: t, jumpToMessage: i } = e;
+    return (l()(null != t.message, 'Saved message must be cached for For Later action buttons'), null != t.saveData.dueAt)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(
-                      S.sF,
+                      y.sF,
                       {
-                          label: A.intl.string(A.t.yjGtdH),
-                          icon: f.dz2,
+                          label: k.intl.string(k.t.yjGtdH),
+                          icon: p.dz2,
                           onClick: () =>
-                              (0, P.z)({
+                              (0, A.z)({
                                   channelId: t.saveData.channelId,
                                   messageId: t.saveData.messageId,
                                   dueAt: void 0
@@ -342,18 +354,18 @@ function G(e) {
                       'mark-complete'
                   ),
                   (0, r.jsx)(
-                      S.sF,
+                      y.sF,
                       {
-                          label: A.intl.string(A.t.vrbqs7),
-                          icon: f.vdY,
+                          label: k.intl.string(k.t.vrbqs7),
+                          icon: p.vdY,
                           onClick: (e) =>
-                              (0, g.jW)(e, async () => {
-                                  let { MessageReminderEditMenu: e } = await n.e('69818').then(n.bind(n, 898150));
+                              (0, h.jW)(e, async () => {
+                                  let { MessageReminderEditMenu: e } = await Promise.resolve().then(n.bind(n, 898150));
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,
-                                          F(M({}, n), {
-                                              label: A.intl.string(A.t.roMu1N),
+                                          B(U({}, n), {
+                                              label: k.intl.string(k.t.roMu1N),
                                               message: t.message
                                           })
                                       );
@@ -361,22 +373,22 @@ function G(e) {
                       },
                       'edit-reminder'
                   ),
-                  (0, r.jsx)(S.fO, {}),
+                  (0, r.jsx)(y.fO, {}),
                   (0, r.jsx)(
-                      S.sF,
+                      y.sF,
                       {
-                          label: A.intl.string(A.t['+TSRGB']),
-                          icon: f.d4D,
-                          onClick: (e) => s(e)
+                          label: k.intl.string(k.t['+TSRGB']),
+                          icon: p.d4D,
+                          onClick: (e) => i(e)
                       },
                       'jump-to-message'
                   ),
                   (0, r.jsx)(
-                      S.sF,
+                      y.sF,
                       {
-                          label: A.intl.string(A.t.SvXS1d),
-                          icon: f.plf,
-                          onClick: () => (0, P.x)(t.saveData)
+                          label: k.intl.string(k.t.SvXS1d),
+                          icon: p.plf,
+                          onClick: () => (0, A.x)(t.saveData)
                       },
                       'remove-reminder'
                   )
@@ -385,18 +397,18 @@ function G(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(
-                      S.sF,
+                      y.sF,
                       {
-                          label: A.intl.string(A.t.mJ3P0N),
-                          icon: f.T39,
+                          label: k.intl.string(k.t.mJ3P0N),
+                          icon: p.T39,
                           onClick: (e) =>
-                              (0, g.jW)(e, async () => {
-                                  let { MessageReminderEditMenu: e } = await n.e('69818').then(n.bind(n, 898150));
+                              (0, h.jW)(e, async () => {
+                                  let { MessageReminderEditMenu: e } = await Promise.resolve().then(n.bind(n, 898150));
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,
-                                          F(M({}, n), {
-                                              label: A.intl.string(A.t.mJ3P0N),
+                                          B(U({}, n), {
+                                              label: k.intl.string(k.t.mJ3P0N),
                                               message: t.message
                                           })
                                       );
@@ -405,20 +417,20 @@ function G(e) {
                       'create-reminder'
                   ),
                   (0, r.jsx)(
-                      S.sF,
+                      y.sF,
                       {
-                          label: A.intl.string(A.t['+TSRGB']),
-                          icon: f.d4D,
-                          onClick: (e) => s(e)
+                          label: k.intl.string(k.t['+TSRGB']),
+                          icon: p.d4D,
+                          onClick: (e) => i(e)
                       },
                       'jump-to-message'
                   ),
                   (0, r.jsx)(
-                      S.sF,
+                      y.sF,
                       {
-                          label: A.intl.string(A.t.SvXS1d),
-                          icon: f.plf,
-                          onClick: () => (0, P.x)(t.saveData)
+                          label: k.intl.string(k.t.SvXS1d),
+                          icon: p.plf,
+                          onClick: () => (0, A.x)(t.saveData)
                       },
                       'remove-bookmark'
                   )

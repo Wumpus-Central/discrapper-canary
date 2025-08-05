@@ -92,11 +92,11 @@ let E = 20,
         }
     };
 function y(e) {
-    let { ref: t, className: n, disabled: i = !1, childClassName: a, iconClassName: _, icon: h, children: g, onClick: y, onDoubleClick: O, isActive: v, onMouseEnter: I, onMouseLeave: T, onFocus: S, onBlur: A, pulse: N, sparkle: C, notification: R, 'aria-label': P, 'aria-expanded': w, 'aria-haspopup': D, 'aria-controls': L, noHover: x } = e,
-        M = (0, l.Yzy)(null != g, m(p({}, b), { keys: (e) => (e ? 'children' : 'icon') })),
-        k = (e) => {
+    let { ref: t, className: n, disabled: i = !1, childClassName: a, iconClassName: _, icon: h, children: g, onClick: y, onDoubleClick: O, isActive: v, onMouseEnter: I, onMouseLeave: T, onFocus: S, onBlur: A, pulse: N, sparkle: C, notification: w, 'aria-label': R, 'aria-expanded': P, 'aria-haspopup': D, 'aria-controls': L, noHover: x } = e,
+        k = (0, l.Yzy)(null != g, m(p({}, b), { keys: (e) => (e ? 'children' : 'icon') })),
+        j = (e) => {
             let { component: t } = e;
-            return null != R
+            return null != w
                 ? (0, r.jsxs)('div', {
                       className: f.buttonContent,
                       children: [
@@ -114,8 +114,8 @@ function y(e) {
         };
     return (0, r.jsxs)(l.P3F, {
         innerRef: t,
-        'aria-label': P,
-        'aria-expanded': w,
+        'aria-label': R,
+        'aria-expanded': P,
         'aria-haspopup': D,
         'aria-controls': L,
         'aria-disabled': i,
@@ -138,7 +138,7 @@ function y(e) {
             }
         },
         children: [
-            M((e, t, n) => {
+            k((e, t, n) => {
                 let { key: i } = n;
                 return t
                     ? (0, r.jsx)(
@@ -146,7 +146,7 @@ function y(e) {
                           {
                               style: e,
                               className: o()(f.buttonWrapper, a),
-                              children: k({ component: g })
+                              children: j({ component: g })
                           },
                           i
                       )
@@ -156,7 +156,7 @@ function y(e) {
                             {
                                 style: e,
                                 className: o()(f.buttonWrapper, a),
-                                children: k({
+                                children: j({
                                     component: (0, r.jsx)(h, {
                                         className: o()(f.icon, _, { [f.pulseIcon]: N }),
                                         color: 'currentColor'

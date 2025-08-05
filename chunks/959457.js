@@ -1,5 +1,5 @@
 let r;
-(n.d(t, { Z: () => J }), n(388685));
+(n.d(t, { Z: () => Q }), n(388685));
 var i,
     a = n(512722),
     o = n.n(a),
@@ -37,9 +37,9 @@ let S = {},
     A = {},
     N = {},
     C = {},
+    w = {},
     R = {},
-    P = {},
-    w = v.hVg.THEATRE,
+    P = v.hVg.THEATRE,
     D = {};
 function L(e, t, n, i) {
     return (
@@ -49,7 +49,7 @@ function L(e, t, n, i) {
             streamKey: e,
             serverId: t,
             channelId: n,
-            initialLayout: w,
+            initialLayout: P,
             analyticsContext: i,
             isStreamer: null != A[e],
             parentMediaSessionId: O.Z.getMediaSessionId()
@@ -58,16 +58,16 @@ function L(e, t, n, i) {
 }
 function x() {
     l().forEach(D, (e, t) => {
-        (e.destroy(e.isOwner ? 'sender-disconnect' : 'receiver-disconnect'), delete D[t], delete P[t]);
+        (e.destroy(e.isOwner ? 'sender-disconnect' : 'receiver-disconnect'), delete D[t], delete R[t]);
     });
 }
-function M(e) {
+function k(e) {
     ((r = e.sessionId), x());
 }
-function k() {
+function j() {
     ((r = null), x());
 }
-function j(e) {
+function M(e) {
     let { streamType: t, guildId: n, channelId: r, appContext: i, pid: a, sourceId: o, nativePickerStyleUsed: s, goLiveModalDurationMs: c } = e,
         u = (0, p.V9)({
             streamType: t,
@@ -96,7 +96,7 @@ function j(e) {
                 gameMetadata: e.gameMetadata
             });
     }
-    null != c ? (R[u] = c) : delete R[u];
+    null != c ? (w[u] = c) : delete w[u];
 }
 function U(e) {
     let { appContext: t, streamKey: n } = e;
@@ -107,7 +107,7 @@ function U(e) {
         }),
         (C[n] = null),
         (N[n] = null),
-        delete R[n]);
+        delete w[n]);
 }
 function G(e) {
     let { streamKey: t, rtcServerId: n, rtcChannelId: r, region: i, viewerIds: a } = e,
@@ -119,14 +119,14 @@ function G(e) {
         let s = new _.A({
             streamRegion: i,
             streamApplication: A[t],
-            streamSourceType: X(C[t]),
+            streamSourceType: $(C[t]),
             actionContext: S[t],
             numViewers: null != a ? a.length : 0,
-            goLiveModalDurationMs: R[t]
+            goLiveModalDurationMs: w[t]
         });
         ((o = L(t, n, r, s)), (D[t] = o));
     }
-    (delete P[t],
+    (delete R[t],
         d.Z.dispatch({
             type: 'MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET',
             mediaEngineConnectionId: o.getMediaEngineConnectionId()
@@ -137,7 +137,7 @@ function B(e) {
     if (null == t) return !1;
     t.connect(e.endpoint, e.token);
 }
-function V(e) {
+function Z(e) {
     let { connectionStats: t } = e;
     l().forEach(D, (e, n) => {
         e.updateStats(t);
@@ -149,7 +149,7 @@ function F(e) {
     if (null == i) return !1;
     (null != n && i.analyticsContext.trackViewerCount(n.length), i.streamUpdate(r));
 }
-function Z(e) {
+function V(e) {
     let { streamKey: t } = e,
         n = D[t];
     if (null == n) return !1;
@@ -162,7 +162,7 @@ function Z(e) {
 }
 function H(e) {
     let { layout: t } = e;
-    ((w = t), Object.values(D).forEach((e) => e.layoutChange(t)));
+    ((P = t), Object.values(D).forEach((e) => e.layoutChange(t)));
 }
 function Y() {
     return !0;
@@ -184,7 +184,7 @@ function W(e) {
         })
     )
         return !1;
-    P[o] = performance.now();
+    R[o] = performance.now();
 }
 function K(e) {
     return l().some(D, (t) => t === e.connection);
@@ -201,7 +201,7 @@ function q(e) {
         null == e || e.setVideoSize(t, n, r);
     });
 }
-function X(e) {
+function $(e) {
     var t, n, r;
     if (null == e) return 'unknown';
     if (g.isPlatformEmbedded || (null == (t = platform) ? void 0 : t.name) === 'Chrome') {
@@ -214,7 +214,7 @@ function X(e) {
     else if ((null == (r = platform) ? void 0 : r.name) === 'Safari') return 'window';
     return 'unknown';
 }
-class Q extends (i = c.ZP.Store) {
+class X extends (i = c.ZP.Store) {
     getRTCConnections() {
         return D;
     }
@@ -262,7 +262,7 @@ class Q extends (i = c.ZP.Store) {
         return C[e];
     }
     getLastNonZeroRemoteVideoSinkWantsTime(e) {
-        return P[e];
+        return R[e];
     }
     getUserIds(e) {
         let t = D[e];
@@ -282,27 +282,27 @@ class Q extends (i = c.ZP.Store) {
         return null == r ? void 0 : r.get(t);
     }
 }
-T(Q, 'displayName', 'StreamRTCConnectionStore');
-let J = new Q(
+T(X, 'displayName', 'StreamRTCConnectionStore');
+let Q = new X(
     d.Z,
     !b.Z.isSupported() || __OVERLAY__
         ? {}
         : {
-              CONNECTION_OPEN: M,
-              CONNECTION_CLOSED: k,
+              CONNECTION_OPEN: k,
+              CONNECTION_CLOSED: j,
               RTC_CONNECTION_STATE: Y,
               RTC_CONNECTION_PING: Y,
               RTC_CONNECTION_LOSS_RATE: Y,
               RTC_CONNECTION_UPDATE_ID: K,
               RTC_CONNECTION_SECURE_FRAMES_UPDATE: Y,
               RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: W,
-              STREAM_START: j,
+              STREAM_START: M,
               STREAM_STOP: U,
               STREAM_CREATE: G,
               STREAM_SERVER_UPDATE: B,
               STREAM_UPDATE: F,
-              STREAM_DELETE: Z,
-              MEDIA_ENGINE_CONNECTION_STATS: V,
+              STREAM_DELETE: V,
+              MEDIA_ENGINE_CONNECTION_STATS: Z,
               STREAM_LAYOUT_UPDATE: H,
               RTC_DEBUG_SET_SIMULCAST_OVERRIDE: z,
               VIDEO_SIZE_UPDATE: q

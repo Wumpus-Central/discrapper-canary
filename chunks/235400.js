@@ -1,4 +1,4 @@
-(n.d(t, { default: () => R }), n(388685));
+(n.d(t, { default: () => w }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -27,9 +27,9 @@ var r = n(255367),
 function C(e) {
     let { user: t, categories: n, purchases: a, analyticsLocations: l, onClose: f, initialSelectedDecoration: E, initialSelectedDecorationId: b, isTryItOutFlow: T, guild: C } = e,
         {
-            pendingAvatarDecoration: R,
-            setPendingAvatarDecoration: P,
-            savedAvatarDecoration: w
+            pendingAvatarDecoration: w,
+            setPendingAvatarDecoration: R,
+            savedAvatarDecoration: P
         } = (0, g.Z)({
             analyticsLocations: l,
             isTryItOut: T,
@@ -39,18 +39,18 @@ function C(e) {
             var e, t;
             if (null != E) return E;
             let r = (0, u.iC)(a, n);
-            return null != b ? (null != (e = r.find((e) => e.id === b)) ? e : null) : void 0 !== R ? R : null == w ? null : null != (t = r.find((e) => (0, O.sr)(e, w))) ? t : null;
+            return null != b ? (null != (e = r.find((e) => e.id === b)) ? e : null) : void 0 !== w ? w : null == P ? null : null != (t = r.find((e) => (0, O.sr)(e, P))) ? t : null;
         }),
-        { product: x, purchase: M } = (0, d.Z)(null == D ? void 0 : D.skuId),
-        k = y.ZP.canUseCollectibles(t),
-        j = i.useRef(null),
+        { product: x, purchase: k } = (0, d.Z)(null == D ? void 0 : D.skuId),
+        j = y.ZP.canUseCollectibles(t),
+        M = i.useRef(null),
         U = (0, _.Z)(l),
-        G = (0, O.sr)(D, void 0 === R ? w : R),
+        G = (0, O.sr)(D, void 0 === w ? P : w),
         B = (e) => {
             (L(e), null != e && U(e));
         },
-        V = () => {
-            (P(D), f());
+        Z = () => {
+            (R(D), f());
         },
         F = i.useCallback(
             (e) => {
@@ -63,17 +63,17 @@ function C(e) {
             },
             [l, f]
         ),
-        Z = (0, p.M)(),
-        H = Z && (0, u.G1)(x),
+        V = (0, p.M)(),
+        H = V && (0, u.G1)(x),
         Y = () =>
-            (null != M && (!(0, u.qS)(M) || k)) || null === D
+            (null != k && (!(0, u.qS)(k) || j)) || null === D
                 ? (0, r.jsx)(o.zxk, {
                       variant: 'primary',
                       text: A.intl.string(A.t.Jh8fJy),
-                      onClick: V,
+                      onClick: Z,
                       disabled: G
                   })
-                : null == M && (k || !(0, u.G1)(x))
+                : null == k && (j || !(0, u.G1)(x))
                   ? (0, r.jsx)(o.zxk, {
                         variant: 'primary',
                         onClick: () => F(null == x ? void 0 : x.skuId),
@@ -81,8 +81,8 @@ function C(e) {
                     })
                   : (0, r.jsx)(m.Z, {
                         subscriptionTier: S.Si.TIER_2,
-                        showGradient: Z,
-                        textOptions: { textOverride: y.ZP.isPremium(t) ? A.intl.string(A.t.KXLX7u) : Z ? A.intl.string(A.t.pj0XBA) : A.intl.string(A.t.mr4K7O) }
+                        showGradient: V,
+                        textOptions: { textOverride: y.ZP.isPremium(t) ? A.intl.string(A.t.KXLX7u) : V ? A.intl.string(A.t.pj0XBA) : A.intl.string(A.t.mr4K7O) }
                     });
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -108,7 +108,7 @@ function C(e) {
                         user: t,
                         guild: C,
                         pendingAvatarDecoration: D,
-                        selectedAvatarDecorationRef: j,
+                        selectedAvatarDecorationRef: M,
                         onSelect: B,
                         onOpenShop: F
                     }),
@@ -139,7 +139,7 @@ function C(e) {
         ]
     });
 }
-function R(e) {
+function w(e) {
     let { transitionState: t, analyticsLocations: n, onClose: c, onCloseModal: u, initialSelectedDecoration: d, initialSelectedDecorationId: _, isTryItOutFlow: p, guild: h } = e,
         m = (0, a.e7)([E.default], () => E.default.getCurrentUser()),
         { analyticsLocations: g } = (0, l.ZP)(n, s.Z.EDIT_AVATAR_DECORATION_MODAL),

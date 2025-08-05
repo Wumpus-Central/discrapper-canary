@@ -1,5 +1,5 @@
 (n.d(t, {
-    Br: () => s,
+    Br: () => a,
     MH: () => c,
     Ol: () => u,
     TG: () => p,
@@ -11,9 +11,9 @@ var r = n(544891),
     i = n(570140),
     l = n(439849),
     o = n(358085),
-    a = n(981631);
-async function s(e) {
-    if (e.platform_type === a.ABu.XBOX) {
+    s = n(981631);
+async function a(e) {
+    if (e.platform_type === s.ABu.XBOX) {
         let t = e.parsed_launch_parameters.titleId,
             n = e.parsed_launch_parameters.inviteToken;
         if (!(0, o.isWindows)() || null == t || null == n) return;
@@ -28,14 +28,14 @@ async function s(e) {
     } else throw Error('Unsupported invite platform ' + e.platform_type);
 }
 async function c(e) {
-    if (e.platform_type === a.ABu.XBOX) {
+    if (e.platform_type === s.ABu.XBOX) {
         let t = e.parsed_launch_parameters.titleId;
         return !!(0, o.isWindows)() && null != t && (await g(t));
     }
     throw Error('Unsupported invite platform ' + e.platform_type);
 }
 async function u(e) {
-    if (e.platform_type === a.ABu.XBOX) {
+    if (e.platform_type === s.ABu.XBOX) {
         let t = e.parsed_launch_parameters.inviteToken;
         return !!(0, o.isWindows)() && null != t && (await b(t));
     }
@@ -46,13 +46,13 @@ function d() {
 }
 async function h(e) {
     await r.tn.del({
-        url: a.ANM.GAME_INVITE(e.invite_id),
+        url: s.ANM.GAME_INVITE(e.invite_id),
         rejectWithError: !1
     });
 }
 async function p() {
     await r.tn.del({
-        url: a.ANM.GAME_INVITES,
+        url: s.ANM.GAME_INVITES,
         rejectWithError: !1
     });
 }

@@ -1,12 +1,12 @@
 (n.d(t, {
-    NE: () => P,
+    NE: () => R,
     QN: () => A,
-    Qf: () => w,
+    Qf: () => P,
     RV: () => C,
     TY: () => D,
     pQ: () => N,
     te: () => T,
-    z7: () => R
+    z7: () => w
 }),
     n(539854),
     n(388685));
@@ -183,7 +183,7 @@ let v = (e) => {
                 })
             );
     },
-    R = (e) => {
+    w = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: i, action: a, display: o, activity: s, stream: l, entry: c, outbox: d, voiceChannelId: f } = e;
         u.default.track(
             m.rMx.USER_PROFILE_ACTIVITY_ACTION,
@@ -216,7 +216,7 @@ let v = (e) => {
             })
         );
     },
-    P = (e) => {
+    R = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: i, badge: a } = e;
         u.default.track(
             m.rMx.USER_PROFILE_BADGE_PRESSED,
@@ -226,7 +226,7 @@ let v = (e) => {
             })
         );
     },
-    w = (e) => {
+    P = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: i, badge: a } = e;
         u.default.track(
             m.rMx.USER_PROFILE_BADGE_HOVERED,

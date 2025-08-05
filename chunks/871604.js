@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => w });
 var r = n(255367),
     i = n(73800),
     a = n(442837),
@@ -70,31 +70,31 @@ function C(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-function R(e) {
+function w(e) {
     var { user: t, closePopout: n } = e,
         S = N(e, ['user', 'closePopout']);
     let C = i.useRef(null),
-        R = (0, a.e7)([y.Z], () => {
+        w = (0, a.e7)([y.Z], () => {
             var e;
             return null == (e = y.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
-        P = (0, a.e7)([h.Z, p.Z], () => p.Z.getChannel(h.Z.getChannelId())),
-        w = (0, s.Z)(P),
+        R = (0, a.e7)([h.Z, p.Z], () => p.Z.getChannel(h.Z.getChannelId())),
+        P = (0, s.Z)(R),
         D = t.id,
         L = i.useCallback(() => {
-            if (null != R)
-                if (w) {
+            if (null != w)
+                if (P) {
                     let e = h.Z.getCurrentlySelectedChannelId(),
                         t = p.Z.getChannel(e),
                         r = null != _.ZP.getSidebarState(e) || (null == t ? void 0 : t.isGuildVocal()) ? f.Ie.SIDEBAR : f.Ie.NORMAL;
-                    (l.__(c._b.TEXT, r, { applicationId: R.id }), (0, o.Mr3)((0, O.z)(D, null == P ? void 0 : P.guild_id)), null == n || n(), m.default.track(I.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: R.id }));
-                } else (0, b.L)(A({ applicationId: R.id }, R));
-        }, [R, w, D, null == P ? void 0 : P.guild_id, n]),
-        x = w ? T.intl.string(T.t['Cia+Aw']) : T.intl.string(T.t.NgXl3N);
-    if (null == R || !(0, d.Eb)(R)) return null;
-    let { customInstallUrl: M } = R,
-        k = null == M || E.Z.isDiscordUrl(M) ? o.qJs : o.Gr1,
-        j = w ? void 0 : k;
+                    (l.__(c._b.TEXT, r, { applicationId: w.id }), (0, o.Mr3)((0, O.z)(D, null == R ? void 0 : R.guild_id)), null == n || n(), m.default.track(I.rMx.APP_PROFILE_OPEN_APP_BUTTON_CLICKED, { application_id: w.id }));
+                } else (0, b.L)(A({ applicationId: w.id }, w));
+        }, [w, P, D, null == R ? void 0 : R.guild_id, n]),
+        x = P ? T.intl.string(T.t['Cia+Aw']) : T.intl.string(T.t.NgXl3N);
+    if (null == w || !(0, d.Eb)(w)) return null;
+    let { customInstallUrl: k } = w,
+        j = null == k || E.Z.isDiscordUrl(k) ? o.qJs : o.Gr1,
+        M = P ? void 0 : j;
     return g.wS
         ? (0, r.jsx)(o.yRy, {
               targetElementRef: C,
@@ -109,7 +109,7 @@ function R(e) {
                           children: (0, r.jsx)(o.sNh, {
                               id: 'copy',
                               label: T.intl.string(T.t.XWDiho),
-                              action: () => (0, g.JG)((0, u.J)(R))
+                              action: () => (0, g.JG)((0, u.J)(w))
                           })
                       })
                   });
@@ -124,7 +124,7 @@ function R(e) {
                               ref: C,
                               action: 'PRESS_ADD_APP',
                               text: x,
-                              icon: j,
+                              icon: M,
                               onContextMenu: t,
                               onClick: L
                           },
@@ -140,7 +140,7 @@ function R(e) {
                   {
                       action: 'PRESS_ADD_APP',
                       text: x,
-                      icon: j,
+                      icon: M,
                       onClick: L
                   },
                   S

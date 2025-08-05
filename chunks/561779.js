@@ -135,11 +135,11 @@ class T extends (r = a.PureComponent) {
     render() {
         var e;
         let { value: t, active: n, focused: r, sortedMarkers: a, markerPositions: o, closestMarkerIndex: l, newClosestIndex: c, min: d, max: f } = this.state,
-            { disabled: g, stickToMarkers: b, className: O, children: v, barStyles: I, fillStyles: T, mini: A, hideBubble: N, defaultValue: C, orientation: R, onValueRender: P, renderMarker: w, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: M = {}, markerPosition: k = 0, 'aria-hidden': j, 'aria-label': U, 'aria-labelledby': G, 'aria-describedby': B } = this.props,
-            V = 0;
-        b ? null != o && (null != c ? (V = o[c]) : null != l && (V = o[l])) : (V = this.scaleValue(t));
-        let F = ''.concat(V, '%'),
-            Z =
+            { disabled: g, stickToMarkers: b, className: O, children: v, barStyles: I, fillStyles: T, mini: A, hideBubble: N, defaultValue: C, orientation: w, onValueRender: R, renderMarker: P, getAriaValueText: D, barClassName: L, grabberClassName: x, grabberStyles: k = {}, markerPosition: j = 0, 'aria-hidden': M, 'aria-label': U, 'aria-labelledby': G, 'aria-describedby': B } = this.props,
+            Z = 0;
+        b ? null != o && (null != c ? (Z = o[c]) : null != l && (Z = o[l])) : (Z = this.scaleValue(t));
+        let F = ''.concat(Z, '%'),
+            V =
                 null != o && null != a
                     ? o.map((e, t) => {
                           let n = a[t],
@@ -150,13 +150,13 @@ class T extends (r = a.PureComponent) {
                               {
                                   className: s()(m.mark, {
                                       [m.defaultValue]: r,
-                                      [m.markAbove]: 0 === k,
-                                      [m.markBelow]: 1 === k
+                                      [m.markAbove]: 0 === j,
+                                      [m.markBelow]: 1 === j
                                   }),
                                   style: { left: ''.concat(e, '%') },
                                   children:
-                                      null != w
-                                          ? w(n)
+                                      null != P
+                                          ? P(n)
                                           : (0, i.jsxs)(i.Fragment, {
                                                 children: [
                                                     (0, i.jsx)('div', {
@@ -171,7 +171,7 @@ class T extends (r = a.PureComponent) {
                           );
                       })
                     : null,
-            H = null != P ? P(t) : ''.concat(V.toFixed(0), '%'),
+            H = null != R ? R(t) : ''.concat(Z.toFixed(0), '%'),
             Y = null != (e = null == D ? void 0 : D(t)) ? e : void 0;
         return (0, i.jsx)(S, {
             active: n,
@@ -183,7 +183,7 @@ class T extends (r = a.PureComponent) {
                     ringTarget: this.grabberRef,
                     children: (0, i.jsxs)(u.animated.div, {
                         className: s()(m.slider, O, {
-                            [m.hasMarks]: (null != (a = null == Z ? void 0 : Z.length) ? a : 0) > 0,
+                            [m.hasMarks]: (null != (a = null == V ? void 0 : V.length) ? a : 0) > 0,
                             [m.disabled]: g,
                             [m.mini]: A
                         }),
@@ -192,8 +192,8 @@ class T extends (r = a.PureComponent) {
                         'aria-valuemax': f,
                         'aria-valuenow': t,
                         'aria-disabled': g,
-                        'aria-orientation': R,
-                        'aria-hidden': j,
+                        'aria-orientation': w,
+                        'aria-hidden': M,
                         'aria-label': U,
                         'aria-labelledby': G,
                         'aria-describedby': B,
@@ -214,7 +214,7 @@ class T extends (r = a.PureComponent) {
                         children: [
                             (0, i.jsx)('div', {
                                 className: m.track,
-                                children: Z
+                                children: V
                             }),
                             (0, i.jsx)('div', {
                                 className: s()(m.bar, L),
@@ -237,7 +237,7 @@ class T extends (r = a.PureComponent) {
                                             'div',
                                             y(E({}, e), {
                                                 className: s()(m.grabber, x),
-                                                style: y(E({}, M), { left: F }),
+                                                style: y(E({}, k), { left: F }),
                                                 onMouseDown: this.handleMouseDown,
                                                 ref: this.grabberRef
                                             })

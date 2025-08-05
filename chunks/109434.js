@@ -1,57 +1,57 @@
-(i.d(e, {
-    H: () => b,
-    v: () => S
+(n.d(t, {
+    H: () => y,
+    v: () => j
 }),
-    i(388685));
-var n = i(512722),
-    r = i.n(n),
-    s = i(97519),
-    o = i(313361),
-    l = i(697988),
-    a = i(683860),
-    d = i(731965),
-    u = i(442837),
-    c = i(592125),
-    h = i(559241);
-function p(t, e, i) {
+    n(388685));
+var r = n(512722),
+    i = n.n(r),
+    l = n(97519),
+    a = n(313361),
+    s = n(697988),
+    o = n(683860),
+    c = n(731965),
+    d = n(442837),
+    u = n(592125),
+    h = n(559241);
+function p(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: i,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[e] = i),
-        t
+            : (e[t] = n),
+        e
     );
 }
-function g(t) {
-    for (var e = 1; e < arguments.length; e++) {
-        var i = null != arguments[e] ? arguments[e] : {},
-            n = Object.keys(i);
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(i).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(i, t).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            n.forEach(function (e) {
-                p(t, e, i[e]);
+            r.forEach(function (t) {
+                p(e, t, n[t]);
             }));
     }
-    return t;
+    return e;
 }
-let f = new Set(),
+let g = new Set(),
     m = {
-        layoutType: o.X.LIST,
-        sortOrder: a.z.CREATION_DATE,
-        tagFilter: f,
+        layoutType: a.X.LIST,
+        sortOrder: o.z.CREATION_DATE,
+        tagFilter: g,
         scrollPosition: 0,
-        tagSetting: l.z.MATCH_SOME
+        tagSetting: s.z.MATCH_SOME
     };
-class v {
-    constructor(t, e) {
+class b {
+    constructor(e, t) {
         (p(this, 'set', void 0),
             p(this, 'get', void 0),
             p(this, 'channelStates', void 0),
@@ -63,56 +63,56 @@ class v {
             p(this, 'setLayoutType', void 0),
             p(this, 'setTagSetting', void 0),
             p(this, 'setScrollPosition', void 0),
-            (this.set = t),
-            (this.get = e),
+            (this.set = e),
+            (this.get = t),
             (this.channelStates = {}),
-            (this.setChannelState = (t, e) => {
-                let i = this.get(),
-                    n = this.getChannelState(t),
-                    r = g({}, i.channelStates);
-                ((r[t] = g({}, n, e)), (0, d.j)(() => this.set({ channelStates: r })));
+            (this.setChannelState = (e, t) => {
+                let n = this.get(),
+                    r = this.getChannelState(e),
+                    i = f({}, n.channelStates);
+                ((i[e] = f({}, r, t)), (0, c.j)(() => this.set({ channelStates: i })));
             }),
-            (this.getChannelState = (t) => {
-                if (null == t) return m;
-                let { channelStates: e } = this.get(),
-                    i = e[t];
-                if (null == i) {
-                    let e = c.Z.getChannel(t);
-                    (r()(null != e, '[Forum Channel Store] The channel should not be missing.'),
-                        (i = {
-                            layoutType: e.getDefaultLayout(),
-                            sortOrder: e.getDefaultSortOrder(),
-                            tagFilter: f,
+            (this.getChannelState = (e) => {
+                if (null == e) return m;
+                let { channelStates: t } = this.get(),
+                    n = t[e];
+                if (null == n) {
+                    let t = u.Z.getChannel(e);
+                    (i()(null != t, '[Forum Channel Store] The channel should not be missing.'),
+                        (n = {
+                            layoutType: t.getDefaultLayout(),
+                            sortOrder: t.getDefaultSortOrder(),
+                            tagFilter: g,
                             scrollPosition: 0,
-                            tagSetting: e.getDefaultTagSetting()
+                            tagSetting: t.getDefaultTagSetting()
                         }));
                 }
-                return i;
+                return n;
             }),
-            (this.toggleTagFilter = (t, e) => {
-                let i = new Set(this.getChannelState(t).tagFilter);
-                (i.has(e) ? i.delete(e) : i.add(e), this.setTagFilter(t, i));
+            (this.toggleTagFilter = (e, t) => {
+                let n = new Set(this.getChannelState(e).tagFilter);
+                (n.has(t) ? n.delete(t) : n.add(t), this.setTagFilter(e, n));
             }),
-            (this.setTagFilter = (t, e) => {
-                (this.setChannelState(t, { tagFilter: e }), h.Z.setFilterTagIds(e));
+            (this.setTagFilter = (e, t) => {
+                (this.setChannelState(e, { tagFilter: t }), h.Z.setFilterTagIds(t));
             }),
-            (this.setSortOrder = (t, e) => {
-                (this.setChannelState(t, { sortOrder: e }), h.Z.setSortOrder(e));
+            (this.setSortOrder = (e, t) => {
+                (this.setChannelState(e, { sortOrder: t }), h.Z.setSortOrder(t));
             }),
-            (this.setLayoutType = (t, e) => {
-                (this.setChannelState(t, { layoutType: e }), h.Z.setLayout(e));
+            (this.setLayoutType = (e, t) => {
+                (this.setChannelState(e, { layoutType: t }), h.Z.setLayout(t));
             }),
-            (this.setTagSetting = (t, e) => {
-                (this.setChannelState(t, { tagSetting: e }), h.Z.setTagSetting(e));
+            (this.setTagSetting = (e, t) => {
+                (this.setChannelState(e, { tagSetting: t }), h.Z.setTagSetting(t));
             }),
-            (this.setScrollPosition = (t, e) => {
-                this.setChannelState(t, { scrollPosition: e });
+            (this.setScrollPosition = (e, t) => {
+                this.setChannelState(e, { scrollPosition: t });
             }));
     }
 }
-let O = (0, s.U)((t, e) => new v(t, e)),
-    b = (t) => {
-        let e = O();
-        return null == (0, u.e7)([c.Z], () => c.Z.getChannel(t)) ? m : e.getChannelState(t);
+let _ = (0, l.U)((e, t) => new b(e, t)),
+    y = (e) => {
+        let t = _();
+        return null == (0, d.e7)([u.Z], () => u.Z.getChannel(e)) ? m : t.getChannelState(e);
     },
-    S = () => O;
+    j = () => _;

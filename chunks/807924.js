@@ -38,9 +38,9 @@ let _ = {
                 A = g[b],
                 N = T - E[m] - g[y],
                 C = T / 2 - E[m] / 2 + S,
-                R = (0, l.u)(A, C, N),
-                P = h;
-            n.modifiersData[a] = ((t = {}), (t[P] = R), (t.centerOffset = R - C), t);
+                w = (0, l.u)(A, C, N),
+                R = h;
+            n.modifiersData[a] = ((t = {}), (t[R] = w), (t.centerOffset = w - C), t);
         }
     },
     effect: function (e) {

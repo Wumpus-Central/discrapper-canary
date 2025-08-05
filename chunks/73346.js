@@ -1,10 +1,10 @@
 (n.d(t, {
     Gg: () => x,
-    Kb: () => R,
-    Ww: () => k,
+    Kb: () => w,
+    Ww: () => j,
     ZI: () => A,
     _W: () => N,
-    uF: () => P
+    uF: () => R
 }),
     n(539854),
     n(388685),
@@ -117,7 +117,7 @@ function C() {
         } else (await (0, d.jg)(), e());
     });
 }
-async function R(e) {
+async function w(e) {
     var t, n, r, i;
     let a = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         o = _.default.isAuthenticated();
@@ -145,11 +145,11 @@ async function R(e) {
     }
     return u.tn.get(e);
 }
-function P(e, t, n) {
+function R(e, t, n) {
     let r = t.getApplication(e);
     return null == r || null == r.primarySkuId ? null : n.get(r.primarySkuId);
 }
-function w(e, t, n) {
+function P(e, t, n) {
     var r;
     let i = null != (r = n.getNowPlaying(e)) ? r : {},
         a = y.default
@@ -201,7 +201,7 @@ function x(e, t, n, r, a) {
     let s = o.applicationId,
         l = [],
         c = [],
-        u = w(s, n, r);
+        u = P(s, n, r);
     null != u &&
         (l.push(u),
         (c = u.userInfo.map((e) => {
@@ -218,11 +218,11 @@ function x(e, t, n, r, a) {
     }
     return l;
 }
-let M = [];
-function k(e, t, n) {
+let k = [];
+function j(e, t, n) {
     let r = t.get(e),
         i = n.getForSKU(e);
-    if (null == r || null == i) return M;
+    if (null == r || null == i) return k;
     let a = [];
     (0, E.yE)(r.flags, O.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({ type: O.AzA.HAS_FREE_PREMIUM_CONTENT });
     let s = r.releaseDate;

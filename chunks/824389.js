@@ -1,87 +1,99 @@
 n.d(t, {
-    Je: () => o,
-    gs: () => d,
-    mh: () => s,
-    p9: () => u,
-    uV: () => c
+    Je: () => _,
+    gs: () => g,
+    mh: () => p,
+    p9: () => m,
+    uV: () => h
 });
 var r = n(544891),
     i = n(881052),
-    l = n(73346),
-    a = n(981631);
-let o = async (e, t, n) => {
-        var l,
-            o,
-            { priceTier: s, imageName: c, createNewRole: u, unlinkRole: d } = n,
-            p = (function (e, t) {
-                if (null == e) return {};
-                var n,
-                    r,
-                    i = (function (e, t) {
-                        if (null == e) return {};
-                        var n,
-                            r,
-                            i = {},
-                            l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
-                        return i;
-                    })(e, t);
-                if (Object.getOwnPropertySymbols) {
-                    var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
-                }
-                return i;
-            })(n, ['priceTier', 'imageName', 'createNewRole', 'unlinkRole']);
+    a = n(73346),
+    o = n(981631);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function d(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = f(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+    }
+    return i;
+}
+function f(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    return i;
+}
+let _ = async (e, t, n) => {
+        var { priceTier: a, imageName: s, createNewRole: c, unlinkRole: f } = n,
+            _ = d(n, ['priceTier', 'imageName', 'createNewRole', 'unlinkRole']);
         try {
             return (
                 await r.tn.patch({
-                    url: a.ANM.GUILD_PRODUCT_LISTINGS(e, t),
-                    body:
-                        ((l = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
-                                    )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        ((r = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: r,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0
-                                                  })
-                                                : (e[t] = r));
-                                    }));
-                            }
-                            return e;
-                        })({}, p)),
-                        (o = {
-                            image_name: c,
-                            price_tier: s,
-                            create_new_role: u,
-                            unlink_role: d
-                        }),
-                        (o = null != o ? o : {}),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
-                                  }
-                                  return n;
-                              })(Object(o)).forEach(function (e) {
-                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
-                              }),
-                        l),
+                    url: o.ANM.GUILD_PRODUCT_LISTINGS(e, t),
+                    body: u(l({}, _), {
+                        image_name: s,
+                        price_tier: a,
+                        create_new_role: c,
+                        unlink_role: f
+                    }),
                     rejectWithError: !1
                 })
             ).body;
@@ -89,21 +101,21 @@ let o = async (e, t, n) => {
             throw new i.Hx(e);
         }
     },
-    s = async (e, t) => {
+    p = async (e, t) => {
         try {
             await r.tn.del({
-                url: a.ANM.GUILD_PRODUCT_LISTINGS(e, t),
+                url: o.ANM.GUILD_PRODUCT_LISTINGS(e, t),
                 rejectWithError: !1
             });
         } catch (e) {
             throw new i.Hx(e);
         }
     },
-    c = async (e) => {
+    h = async (e) => {
         try {
             return (
-                await (0, l.Kb)({
-                    url: a.ANM.GUILD_PRODUCT_LISTINGS(e),
+                await (0, a.Kb)({
+                    url: o.ANM.GUILD_PRODUCT_LISTINGS(e),
                     rejectWithError: !1
                 })
             ).body.listings;
@@ -111,11 +123,11 @@ let o = async (e, t, n) => {
             throw new i.Hx(e);
         }
     },
-    u = async (e, t) => {
+    m = async (e, t) => {
         try {
             return (
-                await (0, l.Kb)({
-                    url: a.ANM.GUILD_PRODUCT_LISTINGS(e, t),
+                await (0, a.Kb)({
+                    url: o.ANM.GUILD_PRODUCT_LISTINGS(e, t),
                     rejectWithError: !1
                 })
             ).body;
@@ -123,12 +135,12 @@ let o = async (e, t, n) => {
             throw new i.Hx(e);
         }
     },
-    d = async (e) => {
-        let { guildId: t, productId: n, attachmentId: l } = e;
+    g = async (e) => {
+        let { guildId: t, productId: n, attachmentId: a } = e;
         try {
             return (
                 await r.tn.post({
-                    url: a.ANM.GUILD_PRODUCT_ATTACHMENT_DOWNLOAD(t, n, l),
+                    url: o.ANM.GUILD_PRODUCT_ATTACHMENT_DOWNLOAD(t, n, a),
                     rejectWithError: !1
                 })
             ).body;

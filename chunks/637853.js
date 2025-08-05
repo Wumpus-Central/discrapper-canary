@@ -2,9 +2,9 @@
     Ee: () => O,
     L6: () => D,
     V7: () => I,
-    VF: () => w,
+    VF: () => P,
     b$: () => g,
-    d9: () => R,
+    d9: () => w,
     dF: () => v,
     dX: () => L,
     iF: () => T,
@@ -143,7 +143,7 @@ function C(e, t) {
         }
     return a;
 }
-function R(e, t) {
+function w(e, t) {
     let n = C(e, t),
         r = s.ZP.getChannels(e)[s.sH],
         i = {};
@@ -159,10 +159,10 @@ function R(e, t) {
         n
     ];
 }
-function P(e, t) {
+function R(e, t) {
     return e[0].length === t[0].length && e[1].length === t[1].length && (0, i.Z)(e[0], t[0]) && (0, i.Z)(e[1], t[1]);
 }
-function w(e, t) {
+function P(e, t) {
     return (0, r.e7)(
         [s.ZP],
         () => {
@@ -174,7 +174,7 @@ function w(e, t) {
             return [i, r];
         },
         [e, t],
-        P
+        R
     );
 }
 function D(e) {

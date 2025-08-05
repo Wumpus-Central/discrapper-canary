@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(239091),
-    o = n(108843),
-    c = n(100527),
+    c = n(108843),
+    o = n(100527),
     a = n(299206),
     u = n(423589),
     s = n(398048),
@@ -21,14 +21,14 @@ var i = n(481060),
     E = n(442754),
     _ = n(981631),
     Z = n(388032);
-let v = (0, o.Z)(
+let v = (0, c.Z)(
     function (e) {
-        let { channel: t, guild: n, includeTopic: o = !1, onSelect: c } = e,
+        let { channel: t, guild: n, includeTopic: c = !1, onSelect: o } = e,
             v = (0, E.Z)(t),
             N = (0, g.ZP)(t),
             w = (0, j.Z)(t),
-            C = (0, d.Z)(t),
-            x = (0, p.Z)(t),
+            x = (0, d.Z)(t),
+            C = (0, p.Z)(t),
             m = (0, O.Z)(t),
             S = (0, y.Z)(t, n),
             T = (0, s.Z)(t, n),
@@ -46,15 +46,15 @@ let v = (0, o.Z)(
             navId: 'channel-context',
             onClose: l.Zy,
             'aria-label': Z.intl.string(Z.t.Xm41aW),
-            onSelect: c,
+            onSelect: o,
             children: [
                 (0, r.jsx)(i.kSQ, { children: v }),
                 (0, r.jsx)(i.kSQ, { children: N }),
                 (0, r.jsxs)(i.kSQ, {
-                    children: [o ? x : M ? U : w, m]
+                    children: [c ? C : M ? U : w, m]
                 }),
                 (0, r.jsxs)(i.kSQ, {
-                    children: [S, C, T, A, D]
+                    children: [S, x, T, A, D]
                 }),
                 (0, r.jsx)(i.kSQ, { children: L }),
                 (0, r.jsx)(i.kSQ, { children: I }),
@@ -62,5 +62,5 @@ let v = (0, o.Z)(
             ]
         });
     },
-    [c.Z.CONTEXT_MENU, c.Z.CHANNEL_TITLE_MENU]
+    [o.Z.CONTEXT_MENU, o.Z.CHANNEL_TITLE_MENU]
 );

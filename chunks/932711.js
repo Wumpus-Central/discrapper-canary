@@ -1,19 +1,19 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => a });
 var r = n(255367),
     i = n(481060),
     l = n(821020),
     o = n(388032),
-    a = n(375613);
-function s(e) {
+    s = n(375613);
+function a(e) {
     let { children: t } = e,
         { notificationCenterVariant: n } = l.Lk.useExperiment({ location: 'NotificationsInboxTooltip' }),
-        s = n === l.jP.LEGACY ? o.intl.string(o.t.GSmTKC) : o.intl.string(o.t.HcoRu7);
+        a = n === l.jP.LEGACY ? o.intl.string(o.t.GSmTKC) : o.intl.string(o.t.HcoRu7);
     return (0, r.jsx)(i.ua7, {
         hideOnClick: !0,
         spacing: 12,
         position: 'right',
-        text: s,
-        tooltipClassName: a.listItemTooltip,
+        text: a,
+        tooltipClassName: s.listItemTooltip,
         children: (e) => {
             var n, i;
             return (0, r.jsx)(

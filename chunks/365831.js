@@ -1,21 +1,34 @@
-(n.d(t, { y: () => x }), n(388685), n(953529));
+(n.d(t, { y: () => C }), n(388685), n(953529));
 var r = n(255367),
     i = n(73800),
-    l = n(120356),
-    a = n.n(l),
-    o = n(66546),
-    s = n(442837),
+    a = n(120356),
+    o = n.n(a),
+    s = n(66546),
+    l = n(442837),
     c = n(481060),
     u = n(846027),
     d = n(110924),
     f = n(460181),
-    p = n(131951),
-    m = n(743498),
-    g = n(56848),
-    h = n(378441),
-    b = n(388032),
-    v = n(270217);
-function _(e) {
+    _ = n(131951),
+    p = n(743498),
+    h = n(56848),
+    m = n(378441),
+    g = n(388032),
+    E = n(270217);
+function b(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,140 +39,137 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                var r;
-                ((r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r));
+                b(e, t, n[t]);
             }));
     }
     return e;
 }
-function y(e, t) {
+function O(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let O = (e) => 1 - Math.pow(1 - e, 4),
-    S = {
+let I = (e) => 1 - Math.pow(1 - e, 4),
+    T = {
         mass: 1,
         friction: 64,
         tension: 1000,
         clamp: !0
     },
-    I = {
+    S = {
         mass: 1,
         friction: 64,
         tension: 1000
     },
-    j = {
+    A = {
         mass: 1,
         friction: 35,
         tension: 1000
     };
-function x(e) {
+function N() {
+    let { activeVoice: e } = (0, m.o)(),
+        t = (0, l.e7)([_.Z], () => _.Z.getVoiceFilterPlaybackEnabled()),
+        n = i.useCallback(() => {
+            ((0, f.GN)(t ? 'voice_filter_loopback_off' : 'voice_filter_loopback_on'), (0, p._j)(!t));
+        }, [t]);
+    return (
+        i.useEffect(
+            () => (
+                u.Z.setLoopback('voice_filter_preview', null != e && t),
+                () => {
+                    u.Z.setLoopback('voice_filter_preview', !1);
+                }
+            ),
+            [t, e]
+        ),
+        {
+            isLoopbackEnabled: t,
+            toggleLoopback: n
+        }
+    );
+}
+function C(e) {
     var t;
     let {} = e,
-        { activeVoice: n } = (0, h.o)(),
-        l = (0, d.Z)(n),
-        x = (0, g.z)(n),
-        { toggleLoopback: E, isLoopbackEnabled: P } = (function () {
-            let { activeVoice: e } = (0, h.o)(),
-                t = (0, s.e7)([p.Z], () => p.Z.getVoiceFilterPlaybackEnabled()),
-                n = i.useCallback(() => {
-                    ((0, f.GN)(t ? 'voice_filter_loopback_off' : 'voice_filter_loopback_on'), (0, m._j)(!t));
-                }, [t]);
-            return (
-                i.useEffect(
-                    () => (
-                        u.Z.setLoopback('voice_filter_preview', null != e && t),
-                        () => {
-                            u.Z.setLoopback('voice_filter_preview', !1);
-                        }
-                    ),
-                    [t, e]
-                ),
-                {
-                    isLoopbackEnabled: t,
-                    toggleLoopback: n
-                }
-            );
-        })(),
-        C = P ? c.Iy5 : c.X_q,
-        T = i.useCallback(() => (0, m.v6)(null), []),
-        N = (0, c.dQu)(c.TVs.colors.BACKGROUND_BASE_LOWER).hex(),
-        A = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
+        { activeVoice: n } = (0, m.o)(),
+        a = (0, d.Z)(n),
+        l = (0, h.z)(n),
+        { toggleLoopback: u, isLoopbackEnabled: f } = N(),
+        _ = f ? c.Iy5 : c.X_q,
+        b = i.useCallback(() => (0, p.v6)(null), []),
+        O = (0, c.dQu)(c.TVs.colors.BACKGROUND_BASE_LOWER).hex(),
+        C = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
         w = i.useRef(0),
-        D = n !== l ? w.current + 1 : w.current;
+        R = n !== a ? w.current + 1 : w.current;
     i.useEffect(() => {
-        w.current = D;
-    }, [D]);
-    let Z = null != n,
-        L = !Z,
-        k = Z && null != l,
-        M = null == n && null != l,
-        U = (0, c.q_F)(
+        w.current = R;
+    }, [R]);
+    let P = null != n,
+        D = !P,
+        L = P && null != a,
+        x = null == n && null != a,
+        k = (0, c.q_F)(
             {
-                opacity: +!!Z,
-                height: 72 * !!Z,
-                pointerEvents: Z ? 'auto' : 'none',
-                backgroundColor: null != (t = null == x ? void 0 : x.baseColor) ? t : N,
+                opacity: +!!P,
+                height: 72 * !!P,
+                pointerEvents: P ? 'auto' : 'none',
+                backgroundColor: null != (t = null == l ? void 0 : l.baseColor) ? t : O,
                 config: (e) =>
                     'backgroundColor' === e
                         ? {
-                              easing: O,
+                              easing: I,
                               duration: 200
                           }
-                        : S,
-                delay: 100 * !!k
+                        : T,
+                delay: 100 * !!L
             },
             'respect-motion-settings'
         ),
-        R = (0, c.Yzy)(
-            null == x ? void 0 : x.id,
+        j = (0, c.Yzy)(
+            null == l ? void 0 : l.id,
             {
-                key: D,
+                key: R,
                 from: {
                     opacity: 0,
-                    background: null == x ? void 0 : x.splashGradient
+                    background: null == l ? void 0 : l.splashGradient
                 },
                 enter: {
                     opacity: 1,
-                    delay: k ? 100 : 50
+                    delay: L ? 100 : 50
                 },
                 leave: {
                     opacity: 0,
-                    delay: k ? 100 : 150
+                    delay: L ? 100 : 150
                 },
                 config: {
-                    easing: O,
-                    duration: k ? 250 : 200
+                    easing: I,
+                    duration: L ? 250 : 200
                 }
             },
             'respect-motion-settings'
         ),
-        [V] = (0, c.bYB)(
+        [M] = (0, c.bYB)(
             2,
             (e) => ({
-                from: k
+                from: L
                     ? {
                           translateY: 0,
                           opacity: 1
@@ -174,7 +184,7 @@ function x(e) {
                               translateY: 16,
                               opacity: 0
                           }
-                        : k
+                        : L
                           ? null
                           : {
                                 translateY: 0,
@@ -183,23 +193,23 @@ function x(e) {
                 config: (e) =>
                     'opacity' === e
                         ? {
-                              easing: O,
+                              easing: I,
                               duration: 200
                           }
-                        : I,
-                delay: M ? 50 - 50 * e : 200 + 50 * e
+                        : S,
+                delay: x ? 50 - 50 * e : 200 + 50 * e
             }),
             'respect-motion-settings',
             [n]
         ),
-        F = (0, c.Yzy)(
-            null == x ? void 0 : x.iconURL,
+        U = (0, c.Yzy)(
+            null == l ? void 0 : l.iconURL,
             {
-                key: D,
+                key: R,
                 from: {
                     opacity: 0,
                     scale: 80 / 88,
-                    translateX: k ? -16 : 0
+                    translateX: L ? -16 : 0
                 },
                 enter: {
                     opacity: 1,
@@ -209,30 +219,30 @@ function x(e) {
                 },
                 leave: {
                     opacity: 0,
-                    scale: Z ? 80 / 88 : 1,
-                    translateX: 24 * !!Z,
-                    delay: 150 * !k
+                    scale: P ? 80 / 88 : 1,
+                    translateX: 24 * !!P,
+                    delay: 150 * !L
                 },
                 config: (e) =>
                     'opacity' === e
                         ? {
-                              easing: O,
+                              easing: I,
                               duration: 200
                           }
-                        : Z
-                          ? S
-                          : j
+                        : P
+                          ? T
+                          : A
             },
             'respect-motion-settings'
         ),
         G = (0, c.Yzy)(
-            null == x ? void 0 : x.name,
+            null == l ? void 0 : l.name,
             {
-                key: D,
+                key: R,
                 from: {
                     opacity: 0,
-                    scale: k ? 0.9 : 1,
-                    translateY: 16 * !k
+                    scale: L ? 0.9 : 1,
+                    translateY: 16 * !L
                 },
                 enter: {
                     opacity: 1,
@@ -243,53 +253,53 @@ function x(e) {
                     config: (e) =>
                         'opacity' === e
                             ? {
-                                  easing: O,
+                                  easing: I,
                                   duration: 200
                               }
-                            : k
-                              ? S
-                              : I
+                            : L
+                              ? T
+                              : S
                 },
                 leave: {
                     opacity: 0,
                     translateX: 24 * (null != n),
                     translateY: 16 * (null == n),
-                    delay: M ? 100 : 50,
+                    delay: x ? 100 : 50,
                     config: (e) =>
                         'opacity' === e
                             ? {
-                                  easing: O,
+                                  easing: I,
                                   duration: 200
                               }
-                            : k
-                              ? S
-                              : I
+                            : L
+                              ? T
+                              : S
                 }
             },
             'respect-motion-settings'
         ),
-        B = b.intl.string(P ? b.t.esVyo6 : b.t.UQqFCA);
-    return (0, r.jsxs)(o.animated.div, {
-        className: v.voiceFilterHero,
-        'aria-hidden': L,
-        style: U,
+        B = g.intl.string(f ? g.t.esVyo6 : g.t.UQqFCA);
+    return (0, r.jsxs)(s.animated.div, {
+        className: E.voiceFilterHero,
+        'aria-hidden': D,
+        style: k,
         children: [
             (0, r.jsx)('div', {
-                className: a()([v.bgGradient, v.bgGradientHighlight])
+                className: o()([E.bgGradient, E.bgGradientHighlight])
             }),
-            R((e) =>
-                (0, r.jsx)(o.animated.div, {
-                    className: v.bgGradient,
+            j((e) =>
+                (0, r.jsx)(s.animated.div, {
+                    className: E.bgGradient,
                     style: e
                 })
             ),
             (0, r.jsx)('div', {
-                className: v.iconWrapper,
-                children: F((e, t) =>
+                className: E.iconWrapper,
+                children: U((e, t) =>
                     (0, r.jsx)(
-                        o.animated.img,
+                        s.animated.img,
                         {
-                            className: v.activeVoiceIcon,
+                            className: E.activeVoiceIcon,
                             style: e,
                             alt: '',
                             src: t
@@ -299,73 +309,73 @@ function x(e) {
                 )
             }),
             (0, r.jsx)('div', {
-                className: v.descriptionWrapper,
+                className: E.descriptionWrapper,
                 children: G((e, t) =>
-                    (0, r.jsxs)(o.animated.div, {
-                        className: v.description,
+                    (0, r.jsxs)(s.animated.div, {
+                        className: E.description,
                         style: e,
                         children: [
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'always-white',
-                                className: v.offWhiteText,
-                                children: b.intl.string(b.t.WW5DAA)
+                                className: E.offWhiteText,
+                                children: g.intl.string(g.t.WW5DAA)
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 color: 'always-white',
-                                children: null != t ? b.intl.string(t) : ''
+                                children: null != t ? g.intl.string(t) : ''
                             })
                         ]
                     })
                 )
             }),
             (0, r.jsxs)('div', {
-                className: v.buttonWrapper,
+                className: E.buttonWrapper,
                 children: [
                     (0, r.jsx)(c.ua7, {
                         'aria-label': B,
-                        tooltipClassName: v.tooltip,
-                        tooltipContentClassName: v.tooltipContent,
-                        shouldShow: Z,
+                        tooltipClassName: E.tooltip,
+                        tooltipContentClassName: E.tooltipContent,
+                        shouldShow: P,
                         text: (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(c.X6q, {
                                     variant: 'heading-sm/normal',
                                     color: 'header-primary',
-                                    className: v.tooltipHeader,
+                                    className: E.tooltipHeader,
                                     children: B
                                 }),
                                 (0, r.jsx)(c.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'header-muted',
-                                    children: b.intl.string(P ? b.t.Sg6cfn : b.t.ZKhtw8)
+                                    children: g.intl.string(f ? g.t.Sg6cfn : g.t.ZKhtw8)
                                 })
                             ]
                         }),
                         children: (e) =>
-                            (0, r.jsx)(o.animated.div, {
-                                className: v.buttonWrapper,
-                                style: V[0],
+                            (0, r.jsx)(s.animated.div, {
+                                className: E.buttonWrapper,
+                                style: M[0],
                                 children: (0, r.jsx)(
                                     c.P3F,
-                                    y(
-                                        _(
+                                    v(
+                                        y(
                                             {
-                                                className: a()(v.button, { [v.loopbackEnabled]: P }),
-                                                'aria-hidden': L,
-                                                focusProps: { enabled: Z },
-                                                tabIndex: Z ? 0 : -1
+                                                className: o()(E.button, { [E.loopbackEnabled]: f }),
+                                                'aria-hidden': D,
+                                                focusProps: { enabled: P },
+                                                tabIndex: P ? 0 : -1
                                             },
                                             e
                                         ),
                                         {
-                                            onClick: () => E(),
-                                            children: (0, r.jsx)(C, {
+                                            onClick: () => u(),
+                                            children: (0, r.jsx)(_, {
                                                 size: 'custom',
                                                 width: 20,
                                                 height: 20,
-                                                color: A
+                                                color: C
                                             })
                                         }
                                     )
@@ -373,31 +383,31 @@ function x(e) {
                             })
                     }),
                     (0, r.jsx)(c.ua7, {
-                        shouldShow: Z,
-                        text: b.intl.string(b.t.UvMx7O),
+                        shouldShow: P,
+                        text: g.intl.string(g.t.UvMx7O),
                         children: (e) =>
-                            (0, r.jsx)(o.animated.div, {
-                                className: v.buttonWrapper,
-                                style: V[1],
+                            (0, r.jsx)(s.animated.div, {
+                                className: E.buttonWrapper,
+                                style: M[1],
                                 children: (0, r.jsx)(
                                     c.P3F,
-                                    y(
-                                        _(
+                                    v(
+                                        y(
                                             {
-                                                className: v.button,
-                                                'aria-hidden': L,
-                                                focusProps: { enabled: Z },
-                                                tabIndex: Z ? 0 : -1
+                                                className: E.button,
+                                                'aria-hidden': D,
+                                                focusProps: { enabled: P },
+                                                tabIndex: P ? 0 : -1
                                             },
                                             e
                                         ),
                                         {
-                                            onClick: T,
+                                            onClick: b,
                                             children: (0, r.jsx)(c.k$p, {
                                                 size: 'custom',
                                                 width: 20,
                                                 height: 20,
-                                                color: A
+                                                color: C
                                             })
                                         }
                                     )

@@ -1,95 +1,96 @@
 n.d(t, {
-    ZP: () => y,
-    c4: () => h,
-    st: () => O
+    ZP: () => O,
+    c4: () => g,
+    st: () => b
 });
 var r = n(255367),
-    l = n(73800),
-    o = n(120356),
-    i = n.n(o),
-    a = n(710251),
-    s = n(442837),
+    i = n(73800),
+    a = n(120356),
+    o = n.n(a),
+    s = n(710251),
+    l = n(442837),
     c = n(481060),
     u = n(292419),
     d = n(282397),
-    p = n(188597),
-    m = n(981631),
-    g = n(388032),
-    f = n(964732);
-function b(e) {
+    f = n(188597),
+    _ = n(981631),
+    p = n(388032),
+    h = n(964732);
+function m(e) {
     return {
         text: e,
         icon: (0, r.jsx)(c.bbz, {
-            className: f.icon,
+            className: h.icon,
             dotRadius: 3.5,
             themed: !0
         })
     };
 }
-function h(e) {
+function g(e) {
     return {
-        text: null != e ? e : g.intl.string(g.t.VCsUJi),
+        text: null != e ? e : p.intl.string(p.t.VCsUJi),
         color: 'text-danger',
         icon: (0, r.jsx)(c.Mgn, {
             size: 'xs',
             color: 'currentColor',
-            className: i()(f.icon, f.errorIcon)
+            className: o()(h.icon, h.errorIcon)
         })
     };
 }
-function O(e) {
-    let { className: t, icon: n, text: l, color: o } = e;
+function E(e, t) {
+    switch ((0, f.t$)(t, e)) {
+        case f.rQ.SENDING:
+            return m(p.intl.string(p.t.RiLfBQ));
+        case f.rQ.CREATED:
+            return m(p.intl.formatToPlainString(p.t['7ePV4u'], { applicationName: t.author.username }));
+        case f.rQ.TIMED_OUT:
+            return g(p.intl.string(p.t.h8hzPT));
+        case f.rQ.FAILED:
+            return g(t.interactionError);
+    }
+}
+function b(e) {
+    let { className: t, icon: n, text: i, color: a } = e;
     return (0, r.jsxs)('div', {
-        className: i()(f.wrapper, t),
+        className: o()(h.wrapper, t),
         children: [
             n,
             (0, r.jsx)(c.Text, {
                 variant: 'text-md/normal',
-                color: o,
+                color: a,
                 scaleFontToUserSetting: !0,
-                children: l
+                children: i
             })
         ]
     });
 }
-let y = l.memo(function (e) {
-    let { message: t, className: n, component: o } = e,
-        i = (0, a.Z)(),
-        c = (0, s.e7)([d.ZP], () => d.ZP.getInteraction(t), [t]);
-    l.useEffect(() => {
+function y(e) {
+    let { message: t, className: n, component: a } = e,
+        o = (0, s.Z)(),
+        c = (0, l.e7)([d.ZP], () => d.ZP.getInteraction(t), [t]);
+    i.useEffect(() => {
         let e = null;
-        if (t.hasFlag(m.iLy.LOADING) && null != c) {
-            let n = (0, p.ow)(t.id) - Date.now();
-            n > 0 && (e = setTimeout(() => i(), 1000 + n));
+        if (t.hasFlag(_.iLy.LOADING) && null != c) {
+            let n = (0, f.ow)(t.id) - Date.now();
+            n > 0 && (e = setTimeout(() => o(), 1000 + n));
         }
         return () => {
             clearTimeout(e);
         };
-    }, [i, c, t]);
-    let f = null;
-    if (null == o)
-        f = (function (e, t) {
-            switch ((0, p.t$)(t, e)) {
-                case p.rQ.SENDING:
-                    return b(g.intl.string(g.t.RiLfBQ));
-                case p.rQ.CREATED:
-                    return b(g.intl.formatToPlainString(g.t['7ePV4u'], { applicationName: t.author.username }));
-                case p.rQ.TIMED_OUT:
-                    return h(g.intl.string(g.t.h8hzPT));
-                case p.rQ.FAILED:
-                    return h(t.interactionError);
-            }
-        })(c, t);
+    }, [o, c, t]);
+    let p = null;
+    if (null == a) p = E(c, t);
     else {
-        let e = (0, u.SD)(c, t, o);
-        null != e && (f = h(e));
+        let e = (0, u.SD)(c, t, a);
+        null != e && (p = g(e));
     }
-    if (null == f) return null;
-    let { text: y, icon: v, color: j } = f;
-    return (0, r.jsx)(O, {
-        icon: v,
-        text: y,
+    if (null == p) return null;
+    let { text: h, icon: m, color: y } = p;
+    return (0, r.jsx)(b, {
+        icon: m,
+        text: h,
         className: n,
-        color: j
+        color: y
     });
-});
+}
+let O = i.memo(y);

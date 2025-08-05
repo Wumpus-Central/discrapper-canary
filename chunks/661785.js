@@ -1,26 +1,26 @@
-var n = r(65183),
-    i = r(475854),
-    o = r(581079),
-    a = n.Repeat;
-t.exports = function (t, e, r, n) {
-    e.isCollapsed() || o(!1);
-    var u = null;
-    if ((null != r && (u = r.length), null == u || 0 === u)) return t;
-    var s = t.getBlockMap(),
-        c = e.getStartKey(),
-        l = e.getStartOffset(),
-        f = s.get(c),
-        p = f.getText(),
-        h = f.merge({
-            text: p.slice(0, l) + r + p.slice(l, f.getLength()),
-            characterList: i(f.getCharacterList(), a(n, u).toList(), l)
+var r = n(65183),
+    i = n(475854),
+    a = n(581079),
+    o = r.Repeat;
+e.exports = function (e, t, n, r) {
+    t.isCollapsed() || a(!1);
+    var s = null;
+    if ((null != n && (s = n.length), null == s || 0 === s)) return e;
+    var l = e.getBlockMap(),
+        c = t.getStartKey(),
+        u = t.getStartOffset(),
+        d = l.get(c),
+        f = d.getText(),
+        _ = d.merge({
+            text: f.slice(0, u) + n + f.slice(u, d.getLength()),
+            characterList: i(d.getCharacterList(), o(r, s).toList(), u)
         }),
-        d = l + u;
-    return t.merge({
-        blockMap: s.set(c, h),
-        selectionAfter: e.merge({
-            anchorOffset: d,
-            focusOffset: d
+        p = u + s;
+    return e.merge({
+        blockMap: l.set(c, _),
+        selectionAfter: t.merge({
+            anchorOffset: p,
+            focusOffset: p
         })
     });
 };

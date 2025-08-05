@@ -16,7 +16,7 @@ function a(e) {
               icon: t ? i.VZI : void 0,
               action: () => {
                   (0, i.ZDy)(async () => {
-                      let { default: t } = await Promise.all([r.e('71418'), r.e('22347'), r.e('82758'), r.e('61'), r.e('56243')]).then(r.bind(r, 779250));
+                      let { default: t } = await Promise.all([r.e('22347'), r.e('82758'), r.e('58023'), r.e('7131')]).then(r.bind(r, 779250));
                       return (r) => {
                           var i, l;
                           return (0, n.jsx)(

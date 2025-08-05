@@ -48,27 +48,27 @@ function E(e) {
     let { header: m, isLargeModal: E, stepProps: b } = g(e),
         { step: y, stepConfigs: O, setBodyNode: v, setFooterNode: I, setModalOverlayNode: T, setReadySlideId: S, premiumBrandRefreshBackgroundClassName: A, selectedSkuId: N } = (0, d.JL)(),
         C = null != N && N in _.y7,
-        R = O.find((e) => e.key === y);
+        w = O.find((e) => e.key === y);
     (i.useEffect(() => {
         T(null);
     }, [y, T]),
-        l()(null != R, 'Unknown step for current payment flow.'));
-    let P = null != (c = null == R || null == (t = R.options) ? void 0 : t.hideSlider) && c,
-        w = null == R || null == (n = R.options) ? void 0 : n.bodyClassName,
-        D = null == R || null == (a = R.options) ? void 0 : a.sliderBodyClassName;
+        l()(null != w, 'Unknown step for current payment flow.'));
+    let R = null != (c = null == w || null == (t = w.options) ? void 0 : t.hideSlider) && c,
+        P = null == w || null == (n = w.options) ? void 0 : n.bodyClassName,
+        D = null == w || null == (a = w.options) ? void 0 : a.sliderBodyClassName;
     return (
         void 0 !== E && E && (D = p.sliderBodyLarge),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                null == (h = null == R || null == (s = R.options) ? void 0 : s.renderHeader) || h ? m : null,
-                R.renderStep(b),
-                null == y || P
+                null == (h = null == w || null == (s = w.options) ? void 0 : s.renderHeader) || h ? m : null,
+                w.renderStep(b),
+                null == y || R
                     ? null
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(u.hzk, {
                                   'data-migration-pending': !0,
-                                  className: o()(w, p.body, A, {
+                                  className: o()(P, p.body, A, {
                                       [p.reviewStep]: y === f.h8.REVIEW,
                                       [p.addPaymentStepForPremium]: y === f.h8.ADD_PAYMENT_STEPS && C
                                   }),

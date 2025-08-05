@@ -69,7 +69,7 @@ function d(e) {
                 (0, a.jW)(
                     e,
                     async () => {
-                        let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('86423')]).then(n.bind(n, 881351));
+                        let { default: e } = await Promise.all([n.e('79695'), n.e('69220')]).then(n.bind(n, 881351));
                         return (n) => (0, r.jsx)(e, u(c({}, n), { user: t }));
                     },
                     { onClose: i }
@@ -77,7 +77,7 @@ function d(e) {
             }
             handleGuildContextMenu(e, t) {
                 (0, a.jW)(e, async () => {
-                    let { default: e } = await Promise.all([n.e('1806'), n.e('71418'), n.e('58175'), n.e('7654'), n.e('44156'), n.e('99226'), n.e('6850'), n.e('58227'), n.e('54408'), n.e('20087'), n.e('94312'), n.e('87154'), n.e('33213'), n.e('15875')]).then(n.bind(n, 545135));
+                    let { default: e } = await Promise.all([n.e('1806'), n.e('7654'), n.e('58175'), n.e('44156'), n.e('13616'), n.e('6850'), n.e('58227'), n.e('54408'), n.e('20087'), n.e('22988'), n.e('87154'), n.e('33213'), n.e('15875')]).then(n.bind(n, 545135));
                     return (n) => (0, r.jsx)(e, u(c({}, n), { guild: t }));
                 });
             }

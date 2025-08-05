@@ -1,35 +1,35 @@
-i.d(n, { default: () => s });
-var e = i(255367);
-i(73800);
-var d = i(82659),
-    l = i(287734),
-    a = i(482241),
-    r = i(554747),
-    _ = i(388032);
-function s(t) {
-    let { channel: n, transitionState: i, onClose: s } = t,
-        p = (0, r.qY)(n.id);
-    if (null == p) return null;
-    let I = () => {
-        (l.default.selectVoiceChannel(null), s());
+n.d(i, { default: () => u });
+var l = n(255367);
+n(73800);
+var e = n(82659),
+    a = n(287734),
+    r = n(482241),
+    s = n(554747),
+    c = n(388032);
+function u(t) {
+    let { channel: i, transitionState: n, onClose: u } = t,
+        d = (0, s.qY)(i.id);
+    if (null == d) return null;
+    let o = () => {
+        (a.default.selectVoiceChannel(null), u());
     };
-    return (0, e.jsx)(d.Modal, {
-        transitionState: i,
-        title: _.intl.string(_.t['4Ao8LC']),
-        subtitle: _.intl.string(_.t['0I0B8f']),
-        onClose: s,
+    return (0, l.jsx)(e.Modal, {
+        transitionState: n,
+        title: c.intl.string(c.t['4Ao8LC']),
+        subtitle: c.intl.string(c.t['0I0B8f']),
+        onClose: u,
         actions: [
             {
-                onClick: I,
+                onClick: o,
                 variant: 'secondary',
-                text: _.intl.string(_.t.P60OAQ)
+                text: c.intl.string(c.t.P60OAQ)
             },
             {
                 onClick: () => {
-                    (a.Z.endEvent(p.id, p.guild_id), I());
+                    (r.Z.endEvent(d.id, d.guild_id), o());
                 },
                 variant: 'critical-primary',
-                text: _.intl.string(_.t.mjB9pa)
+                text: c.intl.string(c.t.mjB9pa)
             }
         ]
     });

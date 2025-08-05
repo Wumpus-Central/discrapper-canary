@@ -1,8 +1,10 @@
 n.d(t, {
-    W: () => i,
-    f: () => a
+    W: () => r,
+    f: () => i
 });
-var r,
-    l,
-    i = (((r = {}).LINE = 'line'), (r.EMOJI_HOSE = 'emoji_hose'), r),
-    a = (((l = {}).START = 'START'), (l.STOP = 'STOP'), l);
+var r = (function (e) {
+        return ((e.LINE = 'line'), (e.EMOJI_HOSE = 'emoji_hose'), e);
+    })({}),
+    i = (function (e) {
+        return ((e.START = 'START'), (e.STOP = 'STOP'), e);
+    })({});

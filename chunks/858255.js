@@ -1,14 +1,14 @@
-var n = r(322273),
-    i = r(550782);
-function o(t) {
-    return null == t ? t : String(t);
+var r = n(322273),
+    i = n(550782);
+function a(e) {
+    return null == e ? e : String(e);
 }
-t.exports = function (t, e) {
-    var r;
-    if (window.getComputedStyle && (r = window.getComputedStyle(t, null))) return o(r.getPropertyValue(i(e)));
+e.exports = function (e, t) {
+    var n;
+    if (window.getComputedStyle && (n = window.getComputedStyle(e, null))) return a(n.getPropertyValue(i(t)));
     if (document.defaultView && document.defaultView.getComputedStyle) {
-        if ((r = document.defaultView.getComputedStyle(t, null))) return o(r.getPropertyValue(i(e)));
-        if ('display' === e) return 'none';
+        if ((n = document.defaultView.getComputedStyle(e, null))) return a(n.getPropertyValue(i(t)));
+        if ('display' === t) return 'none';
     }
-    return t.currentStyle ? ('float' === e ? o(t.currentStyle.cssFloat || t.currentStyle.styleFloat) : o(t.currentStyle[n(e)])) : o(t.style && t.style[n(e)]);
+    return e.currentStyle ? ('float' === t ? a(e.currentStyle.cssFloat || e.currentStyle.styleFloat) : a(e.currentStyle[r(t)])) : a(e.style && e.style[r(t)]);
 };

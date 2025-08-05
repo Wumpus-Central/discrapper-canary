@@ -1,69 +1,74 @@
-var n = r(497727),
-    i = r(621796),
-    o = r(152477),
-    a = r(172367),
-    u = r(574369),
-    s = r(536574),
-    c = r(15543),
-    l = r(683289),
-    f = r(596464),
-    p = r(467159),
+var r = n(497727),
+    i = n(621796),
+    a = n(152477),
+    o = n(172367),
+    s = n(574369),
+    l = n(536574),
+    c = n(15543),
+    u = n(683289),
+    d = n(596464),
+    f = n(467159),
+    _ = 20,
+    p = !1,
     h = !1,
-    d = !1,
-    g = null,
-    y = {
-        onCompositionStart: function (t) {
-            ((d = !0), g || (g = new n(c(t))).start());
-        },
-        onCompositionEnd: function (t) {
-            ((h = !1),
-                (d = !1),
-                setTimeout(function () {
-                    h || y.resolveComposition(t);
-                }, 20));
-        },
-        onSelect: s,
-        onKeyDown: function (t, e) {
-            if (!d) {
-                (y.resolveComposition(t), t._onKeyDown(e));
-                return;
-            }
-            (e.which === u.RIGHT || e.which === u.LEFT) && e.preventDefault();
-        },
-        onKeyPress: function (t, e) {
-            e.which === u.RETURN && e.preventDefault();
-        },
-        resolveComposition: function (t) {
-            if (!d) {
-                var e = p(g).stopAndFlushMutations();
-                ((g = null), (h = !0));
-                var r = a.set(t._latestEditorState, { inCompositionMode: !1 });
-                if ((t.exitCurrentMode(), !e.size)) return void t.update(r);
-                var n = r.getCurrentContent();
-                e.forEach(function (t, e) {
-                    var u = o.decode(e),
-                        s = u.blockKey,
-                        c = u.decoratorKey,
-                        l = u.leafKey,
-                        p = r.getBlockTree(s).getIn([c, 'leaves', l]),
-                        h = p.start,
-                        d = p.end,
-                        g = r.getSelection().merge({
-                            anchorKey: s,
-                            focusKey: s,
-                            anchorOffset: h,
-                            focusOffset: d,
-                            isBackward: !1
-                        }),
-                        y = f(n, g),
-                        v = n.getBlockForKey(s).getInlineStyleAt(h);
-                    ((n = i.replaceText(n, g, t, v, y)), (r = a.set(r, { currentContent: n })));
-                });
-                var u = l(r, c(t)).selectionState;
-                t.restoreEditorDOM();
-                var s = a.acceptSelection(r, u);
-                t.update(a.push(s, n, 'insert-characters'));
-            }
+    m = null;
+function g(e) {
+    m || (m = new r(c(e))).start();
+}
+var E = {
+    onCompositionStart: function (e) {
+        ((h = !0), g(e));
+    },
+    onCompositionEnd: function (e) {
+        ((p = !1),
+            (h = !1),
+            setTimeout(function () {
+                p || E.resolveComposition(e);
+            }, _));
+    },
+    onSelect: l,
+    onKeyDown: function (e, t) {
+        if (!h) {
+            (E.resolveComposition(e), e._onKeyDown(t));
+            return;
         }
-    };
-t.exports = y;
+        (t.which === s.RIGHT || t.which === s.LEFT) && t.preventDefault();
+    },
+    onKeyPress: function (e, t) {
+        t.which === s.RETURN && t.preventDefault();
+    },
+    resolveComposition: function (e) {
+        if (!h) {
+            var t = f(m).stopAndFlushMutations();
+            ((m = null), (p = !0));
+            var n = o.set(e._latestEditorState, { inCompositionMode: !1 });
+            if ((e.exitCurrentMode(), !t.size)) return void e.update(n);
+            var r = n.getCurrentContent();
+            t.forEach(function (e, t) {
+                var s = a.decode(t),
+                    l = s.blockKey,
+                    c = s.decoratorKey,
+                    u = s.leafKey,
+                    f = n.getBlockTree(l).getIn([c, 'leaves', u]),
+                    _ = f.start,
+                    p = f.end,
+                    h = n.getSelection().merge({
+                        anchorKey: l,
+                        focusKey: l,
+                        anchorOffset: _,
+                        focusOffset: p,
+                        isBackward: !1
+                    }),
+                    m = d(r, h),
+                    g = r.getBlockForKey(l).getInlineStyleAt(_);
+                ((r = i.replaceText(r, h, e, g, m)), (n = o.set(n, { currentContent: r })));
+            });
+            var s = u(n, c(e)),
+                l = s.selectionState;
+            e.restoreEditorDOM();
+            var _ = o.acceptSelection(n, l);
+            e.update(o.push(_, r, 'insert-characters'));
+        }
+    }
+};
+e.exports = E;

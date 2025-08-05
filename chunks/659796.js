@@ -1,60 +1,63 @@
-var n = r(879154),
-    i = r(214788),
-    o = r(738766),
-    a = r(551558),
-    u = r(982716),
-    s = r(223138),
-    c = r(65183),
-    l = r(555159),
-    f = c.List,
-    p = c.Repeat,
-    h = s('draft_tree_data_support'),
-    d = h ? i : n;
-t.exports = {
-    processHTML: function (t, e) {
-        return o(t, u, e);
+function r(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                i(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function i(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+var a = n(879154),
+    o = n(214788),
+    s = n(738766),
+    l = n(551558),
+    c = n(982716),
+    u = n(223138),
+    d = n(65183),
+    f = n(555159),
+    _ = d.List,
+    p = d.Repeat,
+    h = u('draft_tree_data_support'),
+    m = h ? o : a;
+e.exports = {
+    processHTML: function (e, t) {
+        return s(e, c, t);
     },
-    processText: function (t, e, r) {
-        return t.reduce(function (t, n, i) {
-            n = l(n);
-            var o = a(),
-                u = {
+    processText: function (e, t, n) {
+        return e.reduce(function (e, i, a) {
+            i = f(i);
+            var o = l(),
+                s = {
                     key: o,
-                    type: r,
-                    text: n,
-                    characterList: f(p(e, n.length))
+                    type: n,
+                    text: i,
+                    characterList: _(p(t, i.length))
                 };
-            if (h && 0 !== i) {
-                var s = i - 1;
-                u = (function (t) {
-                    for (var e = 1; e < arguments.length; e++) {
-                        var r = null != arguments[e] ? arguments[e] : {},
-                            n = Object.keys(r);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
-                            (n = n.concat(
-                                Object.getOwnPropertySymbols(r).filter(function (t) {
-                                    return Object.getOwnPropertyDescriptor(r, t).enumerable;
-                                })
-                            )),
-                            n.forEach(function (e) {
-                                var n, i, o;
-                                ((n = t),
-                                    (i = e),
-                                    (o = r[e]),
-                                    i in n
-                                        ? Object.defineProperty(n, i, {
-                                              value: o,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0
-                                          })
-                                        : (n[i] = o));
-                            }));
-                    }
-                    return t;
-                })({}, u, { prevSibling: (t[s] = t[s].merge({ nextSibling: o })).getKey() });
+            if (h && 0 !== a) {
+                var c = a - 1;
+                s = r({}, s, { prevSibling: (e[c] = e[c].merge({ nextSibling: o })).getKey() });
             }
-            return (t.push(new d(u)), t);
+            return (e.push(new m(s)), e);
         }, []);
     }
 };

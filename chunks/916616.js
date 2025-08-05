@@ -102,28 +102,28 @@ let A = i.forwardRef((e, t) => {
             height: v,
             maxWidth: S = y,
             maxHeight: A = v,
-            minWidth: P = 0,
-            minHeight: w = 0,
+            minWidth: R = 0,
+            minHeight: P = 0,
             mediaLayoutType: D,
             limitResponsiveWidth: L = !0,
             accessory: x,
-            zoomable: M = !0,
-            original: k,
-            children: j = (e) => {
+            zoomable: k = !0,
+            original: j,
+            children: M = (e) => {
                 let { src: t, size: n, alt: i, className: a, mediaLayoutType: o } = e;
                 return (0, r.jsx)('img', {
                     className: null != a ? a : void 0,
                     alt: null != i ? i : m.intl.string(m.t.X4IxWF),
                     src: t,
-                    style: R(n, o)
+                    style: w(n, o)
                 });
             },
             renderAccessory: U,
             onClick: G,
             tabIndex: B,
-            dataSafeSrc: V,
+            dataSafeSrc: Z,
             useFullWidth: F = !1,
-            srcIsAnimated: Z
+            srcIsAnimated: V
         } = e,
         H = T(e, ['className', 'imageClassName', 'readyState', 'src', 'placeholder', 'placeholderVersion', 'alt', 'width', 'height', 'maxWidth', 'maxHeight', 'minWidth', 'minHeight', 'mediaLayoutType', 'limitResponsiveWidth', 'accessory', 'zoomable', 'original', 'children', 'renderAccessory', 'onClick', 'tabIndex', 'dataSafeSrc', 'useFullWidth', 'srcIsAnimated']);
     let Y = i.useRef(null),
@@ -134,12 +134,12 @@ let A = i.forwardRef((e, t) => {
             height: v,
             maxWidth: S,
             maxHeight: A,
-            minWidth: P,
-            minHeight: w
+            minWidth: R,
+            minHeight: P
         }),
         z = 0 !== K.width ? K.width / K.height : 1;
     ('' !== f && c !== p.zo9.ERROR
-        ? (n = j({
+        ? (n = M({
               src: f,
               size: K,
               alt: b,
@@ -157,7 +157,7 @@ let A = i.forwardRef((e, t) => {
             aspectRatio: z,
             placeholder: h,
             placeholderVersion: E,
-            placeholderStyle: R(K, D),
+            placeholderStyle: w(K, D),
             children: n
         })));
     let q = null != U ? U() : null;
@@ -176,7 +176,7 @@ let A = i.forwardRef((e, t) => {
                                 'imageWrapper',
                                 g.imageWrapper,
                                 {
-                                    [g.imageZoom]: M,
+                                    [g.imageZoom]: k,
                                     [g.imageWrapperBackground]: c !== p.zo9.READY,
                                     [g.clickable]: null != G
                                 },
@@ -188,16 +188,16 @@ let A = i.forwardRef((e, t) => {
                     ),
                     {
                         children: [
-                            null != k &&
+                            null != j &&
                                 (0, r.jsx)('a', {
                                     tabIndex: -1,
                                     onClick: G,
                                     'aria-hidden': !0,
                                     className: g.originalLink,
-                                    href: k,
+                                    href: j,
                                     ref: Y,
                                     'data-role': 'img',
-                                    'data-safe-src': null != V ? V : f
+                                    'data-safe-src': null != Z ? Z : f
                                 }),
                             null != G
                                 ? (0, r.jsx)(l.P3F, {
@@ -229,7 +229,7 @@ function N(e) {
         a = (0, c.ZP)();
     return (0, r.jsx)('div', {
         className: g.imageErrorWrapper,
-        style: P(t, n),
+        style: R(t, n),
         children: (0, r.jsx)('img', {
             src: (0, s.ap)(a) ? b : E,
             className: g.imageError,
@@ -254,7 +254,7 @@ function C(e, t, n, r) {
             }
           : e;
 }
-function R(e, t) {
+function w(e, t) {
     switch (t) {
         case h.hV.MOSAIC:
             return {
@@ -265,12 +265,12 @@ function R(e, t) {
                 maxWidth: 1 === (0, f.Z)() ? 'calc(100% + 1px)' : '100%'
             };
         case h.hV.RESPONSIVE:
-            return w(e);
+            return P(e);
         default:
             return e;
     }
 }
-function P(e, t) {
+function R(e, t) {
     switch (t) {
         case h.hV.MOSAIC:
             return {
@@ -281,12 +281,12 @@ function P(e, t) {
                 maxHeight: 'inherit'
             };
         case h.hV.RESPONSIVE:
-            return I(O({}, w(e)), { display: 'flex' });
+            return I(O({}, P(e)), { display: 'flex' });
         default:
             return e;
     }
 }
-function w(e) {
+function P(e) {
     let { width: t, height: n } = e;
     return {
         maxWidth: t,

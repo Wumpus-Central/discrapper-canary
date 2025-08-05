@@ -2,15 +2,15 @@
     n.d(t, {
         CaptchaCancelError: () => c,
         CaptchaError: () => s,
-        emitCaptchaDistributionMetric: () => o,
-        extractCaptchaPropsFromResponse: () => a
+        emitCaptchaDistributionMetric: () => a,
+        extractCaptchaPropsFromResponse: () => o
     }),
     n(415506));
 var r,
     i = n(644947),
     l = n(234888),
     s = (((r = {}).CANCEL = 'cancel'), (r.ERROR = 'error'), (r.EXPIRED = 'expired'), r);
-function a(e) {
+function o(e) {
     var t;
     return {
         captchaService: e.captcha_service,
@@ -24,7 +24,7 @@ function a(e) {
         }
     };
 }
-function o(e) {
+function a(e) {
     ((0, i._8)() && setTimeout(() => (0, i.Zq)(), l.i), (0, i.s$)(e));
 }
 class c extends Error {

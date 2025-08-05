@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    a = n(392711),
-    s = n.n(a),
+    s = n(392711),
+    a = n.n(s),
     c = n(91192),
     u = n(442837),
     d = n(755721),
@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(906732),
     m = n(306680),
     b = n(585483),
-    _ = n(709054),
-    O = n(821020),
+    O = n(709054),
+    _ = n(821020),
     y = n(804932),
     C = n(389160),
     v = n(787879),
@@ -27,10 +27,10 @@ var r = n(255367),
     P = n(144717),
     N = n(388032),
     w = n(709701);
-function T(e) {
+function Z(e) {
     e.stopPropagation();
 }
-function Z(e) {
+function T(e) {
     let { group: t, isOpen: n, toggleOpenedState: i } = e;
     return (0, r.jsx)(h.P3F, {
         'aria-expanded': n,
@@ -45,7 +45,7 @@ function Z(e) {
                     variant: 'text-sm/medium',
                     color: 'text-secondary',
                     className: w.messagesGroupHeader,
-                    children: (0, a.capitalize)(N.intl.string(x.Vv[t]).toLowerCase())
+                    children: (0, s.capitalize)(N.intl.string(x.Vv[t]).toLowerCase())
                 }),
                 (0, r.jsx)(h.CJ0, {
                     size: 'xxs',
@@ -93,11 +93,11 @@ function R() {
     });
 }
 function D(e) {
-    let { messages: t, unreadMessages: n, loadMore: l, renderLoadingState: a, renderMessageGroup: d, scrollerClassName: f, className: g, listName: P, ignoreGrouping: N = !1 } = e,
+    let { messages: t, unreadMessages: n, loadMore: l, renderLoadingState: s, renderMessageGroup: d, scrollerClassName: f, className: g, listName: P, ignoreGrouping: N = !1 } = e,
         D = (0, y.fJ)(),
         L = i.useRef(null),
         M = (0, p.Z)(P, L),
-        { entrypoint: k, notificationCenterVariant: U } = O.Lk.useExperiment({ location: 'NotificationsInboxSidebarList' }),
+        { entrypoint: k, notificationCenterVariant: U } = _.Lk.useExperiment({ location: 'NotificationsInboxSidebarList' }),
         {
             isLoading: G,
             isLoadingComplete: B,
@@ -173,16 +173,16 @@ function D(e) {
                 };
             return (
                 (t.length > 0 || n.length > 0) &&
-                    (s().each(n, (e) => {
+                    (a().each(n, (e) => {
                         e.kind === x.fL.MENTION ? r[x.KZ.UNREAD].push(e) : e.channelId in i[x.KZ.UNREAD] ? i[x.KZ.UNREAD][e.channelId].push(e) : (i[x.KZ.UNREAD][e.channelId] = [e]);
                     }),
-                    s().each(t, (e) => {
+                    a().each(t, (e) => {
                         let t = (0, j.bl)(e);
                         e.kind === x.fL.MENTION ? r[t].push(e) : e.channelId in i[t] ? i[t][e.channelId].push(e) : (i[t][e.channelId] = [e]);
                     }),
-                    s().each(A, (t) => {
+                    a().each(A, (t) => {
                         [...Object.values(i[t]).map((e) => e.reverse()), ...r[t].map((e) => [e])]
-                            .sort((e, t) => _.default.compare(t[0].id, e[0].id))
+                            .sort((e, t) => O.default.compare(t[0].id, e[0].id))
                             .forEach((n) => {
                                 e[t].push(n);
                             });
@@ -196,16 +196,16 @@ function D(e) {
             let e = [];
             return (
                 X
-                    ? e.push(a())
+                    ? e.push(s())
                     : q
                       ? e.push((0, r.jsx)(R, {}, 'empty-state'))
                       : N
                         ? (e.push(...n.map((e) => d([e], !0))), e.push(...t.map((e) => d([e], !1))))
-                        : s().each(A, (t) => {
+                        : a().each(A, (t) => {
                               0 !== Y[t].length &&
                                   (e.push(
                                       (0, r.jsx)(
-                                          Z,
+                                          T,
                                           {
                                               group: t,
                                               isOpen: H[t],
@@ -226,15 +226,15 @@ function D(e) {
                           }),
                 e
             );
-        }, [t, n, a, H, z, Y, N, d, q, X, D]),
+        }, [t, n, s, H, z, Y, N, d, q, X, D]),
         J = Q[Q.length - 1],
-        $ = i.isValidElement(J) && J.type === Z;
+        $ = i.isValidElement(J) && J.type === T;
     i.useEffect(() => {
         var e, t, n, r, i, l, o;
         if (X) return;
-        let a = 0 === Y.UNREAD.length,
-            s = null != (o = null != (l = null != (i = null == (t = (e = Y).TODAY[0]) ? void 0 : t[0]) ? i : null == (n = e.YESTERDAY[0]) ? void 0 : n[0]) ? l : null == (r = e.OLDER[0]) ? void 0 : r[0]) ? o : null;
-        E.Z.setInboxReadState(a, (null == s ? void 0 : s.id) != null ? _.default.extractTimestamp(null == s ? void 0 : s.id) : null);
+        let s = 0 === Y.UNREAD.length,
+            a = null != (o = null != (l = null != (i = null == (t = (e = Y).TODAY[0]) ? void 0 : t[0]) ? i : null == (n = e.YESTERDAY[0]) ? void 0 : n[0]) ? l : null == (r = e.OLDER[0]) ? void 0 : r[0]) ? o : null;
+        E.Z.setInboxReadState(s, (null == a ? void 0 : a.id) != null ? O.default.extractTimestamp(null == a ? void 0 : a.id) : null);
     }, [Y, X]);
     let ee = (t.length > 0 || n.length > 0) && null != l && G;
     !(function (e) {
@@ -276,8 +276,8 @@ function D(e) {
         }),
         (0, r.jsx)('div', {
             className: o()(g, w.messagesPopoutWrap),
-            onClick: T,
-            onDoubleClick: T,
+            onClick: Z,
+            onDoubleClick: Z,
             'aria-label': e['aria-label'],
             children: (0, r.jsx)(c.bG, {
                 navigator: M,

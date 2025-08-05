@@ -1,8 +1,8 @@
 (n.d(t, {
     AG: () => D,
-    Z$: () => M,
+    Z$: () => k,
     jH: () => L,
-    zH: () => k
+    zH: () => j
 }),
     n(388685));
 var r = n(255367),
@@ -97,11 +97,11 @@ function A(e, t) {
 }
 let N = i.lazy(() => Promise.all([n.e('21153'), n.e('28102')]).then(n.bind(n, 534828))),
     C = 7,
-    R = () => Promise.resolve();
-function P(e) {
+    w = () => Promise.resolve();
+function R(e) {
     return null == e ? null : 'string' == typeof e ? ((0, c.FX)(e) ? (0, c._i)(e) : null) : e;
 }
-function w(e) {
+function P(e) {
     let { color: t, isDefault: n = !1, isCustom: i = !1, isSelected: a = !1, disabled: l = !1, style: u = {}, onClick: d, isGradient: _ = !1, 'aria-label': h, gradientStart: g, gradientEnd: b } = e,
         O = (0, s.JA)('color-'.concat(t)),
         I = {};
@@ -180,7 +180,7 @@ function w(e) {
 class D extends i.PureComponent {
     render() {
         let { color: e, onChange: t, value: n, disabled: i } = this.props;
-        return (0, r.jsx)(w, {
+        return (0, r.jsx)(P, {
             isDefault: !0,
             color: e,
             isSelected: e === n || 0 === n,
@@ -192,7 +192,7 @@ class D extends i.PureComponent {
 class L extends i.PureComponent {
     render() {
         let { customColor: e, value: t, disabled: n, 'aria-label': i } = this.props;
-        return (0, r.jsx)(w, {
+        return (0, r.jsx)(P, {
             isCustom: !0,
             color: e,
             isSelected: t === e,
@@ -204,17 +204,17 @@ class L extends i.PureComponent {
 function x(e) {
     let { value: t, eagerUpdate: n = !1, onChange: a, onClose: s, suggestedColors: l, middle: f, footer: m, showEyeDropper: E, wrapperComponentType: O, className: I } = e,
         S = (0, h.Z)(),
-        A = P(t),
-        R = null != A ? A : 0,
-        w = (0, c.Rf)(R),
-        D = (0, c.O)(R),
+        A = R(t),
+        w = null != A ? A : 0,
+        P = (0, c.Rf)(w),
+        D = (0, c.O)(w),
         [L, x] = i.useState({
-            current: R,
+            current: w,
             pending: {
-                hex: w,
+                hex: P,
                 hsl: D
             },
-            input: w
+            input: P
         });
     (i.useEffect(() => {
         if (null == A || A === L.current) return;
@@ -230,7 +230,7 @@ function x(e) {
         });
     }, [A, L]),
         i.useEffect(() => s, [s]));
-    let M = (e) => {
+    let k = (e) => {
             let t = '#' === e[0] ? e : '#'.concat(e);
             if (!(0, c.FX)(t)) return void x((e) => T(v({}, e), { input: t }));
             let n = (0, c._i)(t),
@@ -245,14 +245,14 @@ function x(e) {
             }),
                 a(n));
         },
-        k = async () => {
+        j = async () => {
             if (null != S)
                 try {
                     let { sRGBHex: e } = await S.open();
-                    M(e);
+                    k(e);
                 } catch (e) {}
         },
-        j = i.useCallback(
+        M = i.useCallback(
             (e) => {
                 (x((t) =>
                     T(v({}, t), {
@@ -272,7 +272,7 @@ function x(e) {
                 (0, r.jsx)(i.Suspense, {
                     fallback: null,
                     children: (0, r.jsx)(N, {
-                        onChange: j,
+                        onChange: M,
                         onChangeComplete: (e) => {
                             let { hex: t } = e;
                             return U(t);
@@ -287,7 +287,7 @@ function x(e) {
                         E &&
                             null != S &&
                             (0, r.jsx)(g.JO, {
-                                onClick: k,
+                                onClick: j,
                                 tooltip: b.intl.string(b.t['0dU9Nz']),
                                 tooltipPosition: 'top',
                                 className: y.customColorPickerEyeDropper,
@@ -296,7 +296,7 @@ function x(e) {
                         (0, r.jsx)(_.Is, {
                             className: y.customColorPickerInput,
                             value: L.input,
-                            onChange: M,
+                            onChange: k,
                             maxLength: C
                         })
                     ]
@@ -312,7 +312,7 @@ function x(e) {
                                     'aria-label': '',
                                     style: { backgroundColor: e },
                                     className: y.suggestedColor,
-                                    onClick: () => M(e)
+                                    onClick: () => k(e)
                                 },
                                 ''.concat(e, '-').concat(t)
                             )
@@ -328,8 +328,8 @@ function x(e) {
         children: G
     });
 }
-let M = i.memo(x);
-function k(e) {
+let k = i.memo(x);
+function j(e) {
     let { className: t, defaultColor: n, customColor: i, colors: a, value: c, secondaryValue: u, disabled: d, onChange: f, renderDefaultButton: _, renderCustomButton: p, colorContainerClassName: h, isGradient: m, renderGradientCustomButton: g } = e,
         E = (e) =>
             (0, r.jsx)('div', {
@@ -337,7 +337,7 @@ function k(e) {
                 children: m
                     ? e.map((e) =>
                           (0, r.jsx)(
-                              w,
+                              P,
                               {
                                   gradientStart: e.start,
                                   gradientEnd: e.end,
@@ -353,7 +353,7 @@ function k(e) {
                       )
                     : e.map((e) =>
                           (0, r.jsx)(
-                              w,
+                              P,
                               {
                                   color: e,
                                   isSelected: e === c,
@@ -370,8 +370,8 @@ function k(e) {
         I = (0, l.ZP)({
             id: 'color-picker',
             isEnabled: !0,
-            scrollToStart: R,
-            scrollToEnd: R
+            scrollToStart: w,
+            scrollToEnd: w
         });
     return (0, r.jsx)(s.bG, {
         navigator: I,

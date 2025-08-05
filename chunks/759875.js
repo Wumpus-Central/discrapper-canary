@@ -2,18 +2,18 @@ n.d(t, { Z: () => c });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    l = n(868643),
-    a = n(245216),
-    o = n(996861),
-    s = n(388032);
+    a = n(868643),
+    o = n(245216),
+    s = n(996861),
+    l = n(388032);
 function c(e, t) {
-    return (0, l.a)(e)
+    return (0, a.a)(e)
         ? (0, r.jsx)(i.sNh, {
               id: 'forward',
-              label: s.intl.string(s.t.I3ltXF),
-              icon: a.Z,
+              label: l.intl.string(l.t.I3ltXF),
+              icon: o.Z,
               action: () => {
-                  (0, o.ts)(t, e);
+                  (0, s.ts)(t, e);
               }
           })
         : null;

@@ -1,10 +1,10 @@
-n.d(t, { v: () => a });
+n.d(t, { v: () => s });
 var r = n(255367);
 n(73800);
 var i = n(388032),
     l = n(263212),
     o = n(652430);
-let a = () =>
+let s = () =>
     (0, r.jsxs)('div', {
         className: l.container,
         children: [

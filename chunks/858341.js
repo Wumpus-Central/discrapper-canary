@@ -1,58 +1,58 @@
-i.d(n, { default: () => h });
-var l = i(255367);
-i(73800);
-var t = i(374470),
-    s = i(481060),
-    o = i(239091),
-    r = i(299206),
-    a = i(26737),
-    c = i(905041),
-    d = i(89013),
-    u = i(449751),
-    p = i(601184),
-    _ = i(168405),
-    I = i(536639),
-    b = i(388032);
-function h(e) {
-    var n;
-    let i,
-        h,
-        g,
-        { channel: f, message: m, target: v, attachment: x, onSelect: k } = e,
-        N = v;
-    if (null != x) h = i = x.url;
-    else for (; (0, t.k)(N); ) ((0, t.k)(N, HTMLImageElement) && null != N.src && (h = N.src), (0, t.k)(N, HTMLAnchorElement) && null != N.href && ((i = N.href), (g = N.textContent)), (N = N.parentNode));
-    let P = null == (n = document.getSelection()) ? void 0 : n.toString(),
-        T = (0, a.Z)(P),
-        Z = (0, d.Z)(P),
-        S = (0, I.Z)(m, f),
-        O = (0, _.Z)(m, f),
-        C = (0, u.Z)(m, f),
-        M = (0, p.Z)(m, f),
-        j = (0, c.Z)(null != i ? i : h, g),
-        A = (0, r.Z)({
-            id: m.id,
-            label: b.intl.string(b.t.zBoHlZ),
-            shiftId: ''.concat(m.channel_id, '-').concat(m.id)
+l.d(e, { default: () => p });
+var t = l(255367);
+l(73800);
+var i = l(374470),
+    r = l(481060),
+    s = l(239091),
+    c = l(299206),
+    d = l(26737),
+    a = l(905041),
+    o = l(89013),
+    h = l(449751),
+    u = l(601184),
+    k = l(168405),
+    Z = l(536639),
+    f = l(388032);
+function p(n) {
+    var e;
+    let l,
+        p,
+        S,
+        { channel: g, message: x, target: j, attachment: v, onSelect: b } = n,
+        m = j;
+    if (null != v) p = l = v.url;
+    else for (; (0, i.k)(m); ) ((0, i.k)(m, HTMLImageElement) && null != m.src && (p = m.src), (0, i.k)(m, HTMLAnchorElement) && null != m.href && ((l = m.href), (S = m.textContent)), (m = m.parentNode));
+    let C = null == (e = document.getSelection()) ? void 0 : e.toString(),
+        Q = (0, d.Z)(C),
+        w = (0, o.Z)(C),
+        H = (0, Z.Z)(x, g),
+        I = (0, k.Z)(x, g),
+        M = (0, h.Z)(x, g),
+        _ = (0, u.Z)(x, g),
+        E = (0, a.Z)(null != l ? l : p, S),
+        L = (0, c.Z)({
+            id: x.id,
+            label: f.intl.string(f.t.zBoHlZ),
+            shiftId: ''.concat(x.channel_id, '-').concat(x.id)
         }),
-        E = (0, r.Z)({
-            id: m.author.id,
-            label: b.intl.string(b.t.Muw4ws)
+        N = (0, c.Z)({
+            id: x.author.id,
+            label: f.intl.string(f.t.Muw4ws)
         });
-    return (0, l.jsxs)(s.v2r, {
+    return (0, t.jsxs)(r.v2r, {
         navId: 'message',
-        onClose: o.Zy,
-        'aria-label': b.intl.string(b.t.ChPNkJ),
-        onSelect: k,
+        onClose: s.Zy,
+        'aria-label': f.intl.string(f.t.ChPNkJ),
+        onSelect: b,
         children: [
-            (0, l.jsx)(s.kSQ, { children: T }),
-            (0, l.jsx)(s.kSQ, { children: Z }),
-            (0, l.jsxs)(s.kSQ, {
-                children: [S, O, C, M]
+            (0, t.jsx)(r.kSQ, { children: Q }),
+            (0, t.jsx)(r.kSQ, { children: w }),
+            (0, t.jsxs)(r.kSQ, {
+                children: [H, I, M, _]
             }),
-            (0, l.jsx)(s.kSQ, { children: j }),
-            (0, l.jsxs)(s.kSQ, {
-                children: [A, E]
+            (0, t.jsx)(r.kSQ, { children: E }),
+            (0, t.jsxs)(r.kSQ, {
+                children: [L, N]
             })
         ]
     });

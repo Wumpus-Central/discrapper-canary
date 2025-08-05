@@ -1,46 +1,46 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r = n(255367),
     i = n(73800),
-    l = n(481060),
-    a = n(980463),
-    o = n(328908),
-    s = n(992970),
+    a = n(481060),
+    o = n(980463),
+    s = n(328908),
+    l = n(992970),
     c = n(135793),
     u = n(576645),
     d = n(84040),
     f = n(626135),
-    g = n(981631),
-    b = n(388032);
-function p(e, t) {
+    _ = n(981631),
+    p = n(388032);
+function h(e, t) {
     let n = (0, d.Z)(t),
-        p = e.hasPotions(),
+        h = e.hasPotions(),
         m = (0, u.Nt)(),
-        O = i.useCallback(
+        g = i.useCallback(
             (n) => {
                 try {
-                    (0, a.qc)(t.id, e.id, n);
+                    (0, o.qc)(t.id, e.id, n);
                 } catch (e) {
-                    (0, l.showToast)((0, l.createToast)(b.intl.string(b.t.xsfC2d), l.ToastType.FAILURE));
+                    (0, a.showToast)((0, a.createToast)(p.intl.string(p.t.xsfC2d), a.ToastType.FAILURE));
                 }
             },
             [t.id, e.id]
         ),
-        y = i.useCallback(() => {
-            (f.default.track(g.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: s.MG.MessageContextMenu }),
+        E = i.useCallback(() => {
+            (f.default.track(_.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: l.MG.MessageContextMenu }),
                 (0, c.s)({
                     channelId: t.id,
                     message: e,
-                    onRedeem: O,
-                    onClose: o.Qy,
-                    source: s.YD.MessageContextMenu
+                    onRedeem: g,
+                    onClose: s.Qy,
+                    source: l.YD.MessageContextMenu
                 }));
-        }, [t.id, e, O]);
-    return n && !p && m
-        ? (0, r.jsx)(l.sNh, {
+        }, [t.id, e, g]);
+    return n && !h && m
+        ? (0, r.jsx)(a.sNh, {
               id: 'add-confetti-potion',
-              label: b.intl.string(b.t.icaJW1),
-              icon: l.l22,
-              action: y
+              label: p.intl.string(p.t.icaJW1),
+              icon: a.l22,
+              action: E
           })
         : null;
 }

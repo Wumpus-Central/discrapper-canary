@@ -1,43 +1,46 @@
-n.d(t, { R: () => m });
+n.d(t, { R: () => h });
 var r = n(255367),
     i = n(73800),
-    l = n(392711),
-    a = n(66546),
-    o = n(442837),
-    s = n(481060),
+    a = n(392711),
+    o = n(66546),
+    s = n(442837),
+    l = n(481060),
     c = n(709706),
     u = n(378441),
     d = n(358820),
     f = n(388032),
-    p = n(690410);
-function m() {
-    let { hasActiveDownloads: e, progress: t } = (function () {
-            let e = (0, o.cj)([c.Z], () => c.Z.getOngoingDownloads()),
-                t = i.useRef({});
-            i.useEffect(() => {
-                (0 === Object.entries(e).length && (t.current = {}), Object.assign(t.current, e));
-            }, [e]);
-            let n = Object.values(t.current),
-                r = n.some((e) => {
-                    let { downloadedBytes: t } = e;
-                    return (null != t ? t : 0) > 0;
-                }),
-                a = (0, l.sumBy)(n, (e) => {
-                    var t;
-                    return null != (t = null == e ? void 0 : e.downloadedBytes) ? t : 0;
-                }),
-                s = (0, l.sumBy)(n, (e) => {
-                    var t;
-                    return null != (t = null == e ? void 0 : e.totalBytes) ? t : 0;
-                });
-            return {
-                hasActiveDownloads: r,
-                progress: 0 === s ? 0 : Math.floor((a / s) * 100)
-            };
-        })(),
-        { activeVoice: n } = (0, u.o)();
-    return (0, s.Yzy)(
-        e ? (null != n ? 'voice-on' : 'voice-off') : null,
+    _ = n(690410);
+function p() {
+    let e = (0, s.cj)([c.Z], () => c.Z.getOngoingDownloads()),
+        t = i.useRef({});
+    i.useEffect(() => {
+        (0 === Object.entries(e).length && (t.current = {}), Object.assign(t.current, e));
+    }, [e]);
+    let n = Object.values(t.current),
+        r = n.some((e) => {
+            let { downloadedBytes: t } = e;
+            return (null != t ? t : 0) > 0;
+        }),
+        o = (0, a.sumBy)(n, (e) => {
+            var t;
+            return null != (t = null == e ? void 0 : e.downloadedBytes) ? t : 0;
+        }),
+        l = (0, a.sumBy)(n, (e) => {
+            var t;
+            return null != (t = null == e ? void 0 : e.totalBytes) ? t : 0;
+        });
+    return {
+        hasActiveDownloads: r,
+        progress: 0 === l ? 0 : Math.floor((o / l) * 100)
+    };
+}
+function h() {
+    let { hasActiveDownloads: e, progress: t } = p(),
+        { activeVoice: n } = (0, u.o)(),
+        i = null != n,
+        a = e ? (i ? 'voice-on' : 'voice-off') : null;
+    return (0, l.Yzy)(
+        a,
         {
             from: {
                 opacity: 0,
@@ -55,21 +58,21 @@ function m() {
         'respect-motion-settings'
     )((e, n) =>
         null != n
-            ? (0, r.jsx)(a.animated.div, {
+            ? (0, r.jsx)(o.animated.div, {
                   style: e,
-                  className: p.floaterWrapper,
+                  className: _.floaterWrapper,
                   children: (0, r.jsxs)('div', {
-                      className: p.visibleFloater,
+                      className: _.visibleFloater,
                       children: [
                           (0, r.jsxs)('div', {
-                              className: p.progressText,
+                              className: _.progressText,
                               children: [
-                                  (0, r.jsx)(s.Text, {
+                                  (0, r.jsx)(l.Text, {
                                       variant: 'text-sm/semibold',
                                       color: 'text-primary',
                                       children: f.intl.format(f.t['r+uZYW'], { progress: t })
                                   }),
-                                  (0, r.jsx)(s.Avr, {
+                                  (0, r.jsx)(l.Avr, {
                                       text: f.intl.string(f.t['ETE/oK']),
                                       onClick: d.ge,
                                       variant: 'always-white',
@@ -77,9 +80,9 @@ function m() {
                                   })
                               ]
                           }),
-                          (0, r.jsx)(s.Exd, {
+                          (0, r.jsx)(l.Exd, {
                               percent: t,
-                              size: s.Exd.Sizes.XSMALL
+                              size: l.Exd.Sizes.XSMALL
                           })
                       ]
                   })

@@ -1,4 +1,4 @@
-A.exports = {
+e.exports = {
     auditLogItem: 'auditLogItem_b2f52f',
     auditLogItemTitleContainer: 'auditLogItemTitleContainer_b2f52f',
     auditLogItemTitle: 'auditLogItemTitle_b2f52f',

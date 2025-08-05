@@ -1,84 +1,84 @@
-(r.d(t, { Z: () => v }), r(388685), r(35282));
+(r.d(t, { Z: () => h }), r(388685), r(35282));
 var n = r(255367),
-    i = r(73800),
-    a = r(120356),
-    l = r.n(a),
-    s = r(643872),
-    o = r(442837),
+    a = r(73800),
+    i = r(120356),
+    l = r.n(i),
+    o = r(643872),
+    s = r(442837),
     c = r(481060),
-    u = r(570140),
-    d = r(652898),
+    d = r(570140),
+    u = r(652898),
     m = r(93093),
     g = r(768581),
-    f = r(810568),
-    p = r(981631),
-    O = r(388032),
-    E = r(263930),
-    x = r(926921);
-function v(e) {
-    let { detectedGame: t, trackClick: r, onInviteResolved: a, closeModal: v } = e,
-        [h, j] = i.useState(),
-        b = (0, o.e7)([m.Z], () => {
+    p = r(810568),
+    f = r(981631),
+    x = r(388032),
+    j = r(263930),
+    v = r(926921);
+function h(e) {
+    let { detectedGame: t, trackClick: r, onInviteResolved: i, closeModal: h } = e,
+        [b, O] = a.useState(),
+        y = (0, s.e7)([m.Z], () => {
             var e, t;
-            return (null == h || null == (e = h.guild) ? void 0 : e.id) != null && m.Z.isMember(null == h || null == (t = h.guild) ? void 0 : t.id);
+            return (null == b || null == (e = b.guild) ? void 0 : e.id) != null && m.Z.isMember(null == b || null == (t = b.guild) ? void 0 : t.id);
         }),
-        I = i.useMemo(() => {
+        _ = a.useMemo(() => {
             var e;
             return null == (e = t.websites)
                 ? void 0
                 : e.find((e) => {
                       let { category: t } = e;
-                      return t === s.p.DISCORD;
+                      return t === o.p.DISCORD;
                   });
         }, [t.websites]);
     if (
-        (i.useEffect(() => {
+        (a.useEffect(() => {
             let e = async (e) => {
                 let t = e.split('/').pop();
                 if (null != t) {
-                    if (null != h && h.code.toLowerCase() === t.toLowerCase()) return;
-                    let e = await (0, d.Z)(t);
-                    !0 !== e.banned && (j(e.invite), null != e.invite && (null == a || a(e.invite)));
+                    if (null != b && b.code.toLowerCase() === t.toLowerCase()) return;
+                    let e = await (0, u.Z)(t);
+                    !0 !== e.banned && (O(e.invite), null != e.invite && (null == i || i(e.invite)));
                 }
             };
-            null != I && e(I.url);
-        }, [I, a, h]),
-        null == h || null == h.guild || !h.guild.features.includes(p.oNc.VERIFIED))
+            null != _ && e(_.url);
+        }, [_, i, b]),
+        null == b || null == b.guild || !b.guild.features.includes(f.oNc.VERIFIED))
     )
         return null;
-    let y = g.ZP.getGuildIconURL({
-        id: h.guild.id,
-        icon: h.guild.icon,
+    let w = g.ZP.getGuildIconURL({
+        id: b.guild.id,
+        icon: b.guild.icon,
         size: 32
     });
     return (0, n.jsxs)('div', {
-        className: E.column,
+        className: j.column,
         children: [
             (0, n.jsx)(c.X6q, {
-                className: E.sectionHeader,
+                className: j.sectionHeader,
                 variant: 'text-xs/semibold',
                 color: 'header-secondary',
-                children: O.intl.string(O.t.kBDZSE)
+                children: x.intl.string(x.t.kBDZSE)
             }),
             (0, n.jsxs)('div', {
-                className: l()(E.row, E.gapMd),
+                className: l()(j.row, j.gapMd),
                 children: [
                     (0, n.jsx)('img', {
-                        className: x.guildIcon,
-                        src: y,
-                        alt: O.intl.formatToPlainString(O.t.xm6W9P, { guildName: h.guild.name })
+                        className: v.guildIcon,
+                        src: w,
+                        alt: x.intl.formatToPlainString(x.t.xm6W9P, { guildName: b.guild.name })
                     }),
                     (0, n.jsxs)('div', {
-                        className: x.inviteInfo,
+                        className: v.inviteInfo,
                         children: [
                             (0, n.jsx)(c.Text, {
                                 variant: 'text-sm/normal',
-                                children: h.guild.name
+                                children: b.guild.name
                             }),
-                            null != h.approximate_member_count &&
+                            null != b.approximate_member_count &&
                                 (0, n.jsx)(c.Text, {
                                     variant: 'text-xxs/normal',
-                                    children: O.intl.format(O.t.zRl6XV, { count: h.approximate_member_count })
+                                    children: x.intl.format(x.t.zRl6XV, { count: b.approximate_member_count })
                                 })
                         ]
                     })
@@ -86,15 +86,15 @@ function v(e) {
             }),
             (0, n.jsx)(c.zxk, {
                 variant: 'secondary',
-                text: b ? O.intl.string(O.t.cEnaW1) : O.intl.string(O.t.XpeFYm),
+                text: y ? x.intl.string(x.t.cEnaW1) : x.intl.string(x.t.XpeFYm),
                 onClick: () => {
-                    (v(),
-                        r(f.as.JoinOfficialServer),
-                        u.Z.dispatch({
+                    (h(),
+                        r(p.as.JoinOfficialServer),
+                        d.Z.dispatch({
                             type: 'INVITE_MODAL_OPEN',
-                            invite: h,
-                            code: h.code,
-                            context: p.IlC.APP
+                            invite: b,
+                            code: b.code,
+                            context: f.IlC.APP
                         }));
                 }
             })

@@ -1,6 +1,6 @@
 (n.d(t, {
-    ZP: () => P,
-    yw: () => R
+    ZP: () => R,
+    yw: () => w
 }),
     n(388685),
     n(35282),
@@ -154,7 +154,7 @@ function C(e) {
     let n = e.split('/');
     return n.length < 3 || '' !== n[1] || d.Z.safeDecodeURIComponent(n[2]) !== n[2];
 }
-function R(e) {
+function w(e) {
     try {
         var t;
         if (C(e)) throw Error('Rejected due to suspicious characters in URL: ' + JSON.stringify(e));
@@ -173,7 +173,7 @@ function R(e) {
         return null;
     }
 }
-let P = g(h({}, l().defaultRules.link), {
+let R = g(h({}, l().defaultRules.link), {
     match: (e, t, n) => (t.allowLinks ? l().defaultRules.link.match(e, t, n) : null),
     parse(e, t, n) {
         let [r, a, o, s] = e,
@@ -188,29 +188,29 @@ let P = g(h({}, l().defaultRules.link), {
             m = d.whitespaceSanitized,
             E = _.fullySanitized,
             y = p.fullySanitized,
-            P = E.trim();
-        if (0 === m.trim().length || 0 === P.length) return u();
-        let w = R(l().unescapeUrl(o)),
-            D = null == w,
+            R = E.trim();
+        if (0 === m.trim().length || 0 === R.length) return u();
+        let P = w(l().unescapeUrl(o)),
+            D = null == P,
             L = (0, c.ZP)(a).length > 0 || (0, c.ZP)(s).length > 0;
         if (D || L) return u();
         let x = g(h({}, n), {
                 allowEscape: !1,
                 parseInlineCodeChildContent: !0
             }),
-            M = n.allowEmojiLinks ? v : O,
-            k = [...M, ...I],
-            j = [...T, ...S],
-            U = A(t(E, x), k, [f.b.EMOJI]),
-            G = A(t(y, x), j);
+            k = n.allowEmojiLinks ? v : O,
+            j = [...k, ...I],
+            M = [...T, ...S],
+            U = A(t(E, x), j, [f.b.EMOJI]),
+            G = A(t(y, x), M);
         if (null == U || null == G || 0 === N(U).trim().length) return u();
-        let B = i().pick(t.rules, M),
-            V = l().parserFor(B)(_.whitespaceSanitized, x),
+        let B = i().pick(t.rules, k),
+            Z = l().parserFor(B)(_.whitespaceSanitized, x),
             F = p.whitespaceSanitized,
-            { target: Z } = w;
+            { target: V } = P;
         return {
-            content: V,
-            target: Z,
+            content: Z,
+            target: V,
             title: F
         };
     }

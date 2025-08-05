@@ -19,7 +19,7 @@ var r = n(255367),
     _ = n(569984),
     v = n(497505),
     C = n(184299),
-    y = n(192023),
+    y = n(381176),
     O = n(373370),
     E = n(475595),
     S = n(720293),
@@ -38,7 +38,7 @@ var r = n(255367),
     V = n(743294),
     L = n(388032),
     M = n(921183);
-function W(e) {
+function Z(e) {
     var t, n;
     let { quest: o, onClick: i, reducedMotion: l, isExpanded: u } = e,
         [p, f] = s.useState(!1),
@@ -99,7 +99,7 @@ function W(e) {
         ]
     });
 }
-function Z(e) {
+function W(e) {
     let { quest: t } = e;
     return (0, r.jsx)(w.Z, {
         className: a()(M.rewardTile, M.hiddenRewardTile),
@@ -146,7 +146,7 @@ function H(e) {
                         (0, r.jsxs)('div', {
                             className: M.details,
                             children: [
-                                (0, r.jsx)(Z, { quest: t }),
+                                (0, r.jsx)(W, { quest: t }),
                                 (0, r.jsx)(m.X6q, {
                                     className: M.title,
                                     color: 'header-primary',
@@ -273,7 +273,7 @@ function F(e) {
         O = (0, j.z)(n),
         [E, S, w] = (0, j.me)(n, o),
         P = s.useRef(null),
-        Z = (0, j.B6)(n.config.expiresAt),
+        W = (0, j.B6)(n.config.expiresAt),
         U = (0, j._s)({ quest: n }),
         H = (0, h.q8)(n),
         z = (0, j.Jf)(n),
@@ -308,7 +308,7 @@ function F(e) {
                             (0, r.jsx)(m.Text, {
                                 variant: 'text-xxs/medium',
                                 className: a()(M.flex, M.headerText),
-                                children: L.intl.format(L.t['pX+fmp'], { expirationDate: Z })
+                                children: L.intl.format(L.t['pX+fmp'], { expirationDate: W })
                             }),
                             (0, r.jsx)(A.r, {
                                 onOpen: g,
@@ -415,7 +415,7 @@ function F(e) {
                     (0, r.jsxs)(N.n, {
                         children: [
                             H &&
-                                (0, r.jsx)(W, {
+                                (0, r.jsx)(Z, {
                                     isExpanded: d,
                                     quest: n,
                                     onClick: F,

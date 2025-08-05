@@ -73,7 +73,7 @@ function N(e, t) {
     );
 }
 let C = 150;
-function R(e, t) {
+function w(e, t) {
     switch (e) {
         case y.fO.ACTIVITY:
             return v.intl.formatToPlainString(v.t.TCM94e, { numUsers: t });
@@ -83,9 +83,9 @@ function R(e, t) {
             throw Error('Unknown participant type.');
     }
 }
-function P(e) {
+function R(e) {
     let { users: t, disableInteraction: n, guildId: i, participantType: a, channelId: s, handleUserContextMenu: l } = e,
-        c = R(a, t.length);
+        c = w(a, t.length);
     return (0, r.jsx)(d.VqE, {
         'aria-label': c,
         className: I.popoutWrapper,
@@ -119,9 +119,9 @@ function P(e) {
         })
     });
 }
-function w(e) {
+function P(e) {
     let { users: t, guildId: n, channelId: i, maxVisibleUsers: a = 3, className: s, participantType: l } = e,
-        c = R(l, t.length),
+        c = w(l, t.length),
         u =
             t.length < a
                 ? t.map((e) =>
@@ -158,10 +158,10 @@ let D = [];
 function L(e) {
     let { channelId: t, guildId: a, participant: s, className: h, compact: b = !1, disableInteraction: v = !1, maxVisibleUsers: T = 3 } = e,
         A = i.useRef(null),
-        R = (0, p.Z)(),
+        w = (0, p.Z)(),
         [L, x] = i.useState(!1),
-        M = i.useRef(new u.sW(C, () => x(!1))),
-        k = (0, c.Wu)(
+        k = i.useRef(new u.sW(C, () => x(!1))),
+        j = (0, c.Wu)(
             [m.Z, g.default],
             () => {
                 if (s.type === y.fO.STREAM) {
@@ -177,39 +177,39 @@ function L(e) {
             [s]
         );
     i.useEffect(() => {
-        R && (M.current.cancel(), x(!1));
-    }, [R]);
-    let j = i.useCallback(() => {
-            (M.current.cancel(), x(!0));
+        w && (k.current.cancel(), x(!1));
+    }, [w]);
+    let M = i.useCallback(() => {
+            (k.current.cancel(), x(!0));
         }, []),
         U = i.useCallback(() => {
-            M.current.delay();
+            k.current.delay();
         }, []),
         G = i.useCallback(
             (e, t) => {
-                (j(),
+                (M(),
                     (0, f.jW)(
                         e,
                         async () => {
-                            let { default: e } = await Promise.all([n.e('70274'), n.e('79695'), n.e('69220'), n.e('70686')]).then(n.bind(n, 881351));
+                            let { default: e } = await Promise.all([n.e('79695'), n.e('69220')]).then(n.bind(n, 881351));
                             return (n) => (0, r.jsx)(e, N(S({}, n), { user: t }));
                         },
                         { onClose: U }
                     ));
             },
-            [U, j]
+            [U, M]
         );
-    if (0 === k.length) return null;
+    if (0 === j.length) return null;
     if (b)
-        return (0, r.jsx)(w, {
+        return (0, r.jsx)(P, {
             maxVisibleUsers: T,
-            users: k,
+            users: j,
             guildId: a,
             channelId: t,
             className: h,
             participantType: s.type
         });
-    let B = l()(k)
+    let B = l()(j)
         .take(T)
         .map((e) =>
             (0, r.jsx)(
@@ -225,32 +225,32 @@ function L(e) {
         )
         .value();
     return (
-        k.length > T &&
+        j.length > T &&
             (B[B.length - 1] = (0, r.jsxs)(
                 'div',
                 {
                     className: I.overflow,
-                    children: ['+', k.length - T + 1]
+                    children: ['+', j.length - T + 1]
                 },
                 'overflow'
             )),
         (0, r.jsx)(_.Z, {
             section: O.jXE.STREAM_VIEWER_POPOUT,
             children: (0, r.jsx)('div', {
-                onMouseEnter: j,
+                onMouseEnter: M,
                 onMouseLeave: U,
                 children: (0, r.jsx)(d.yRy, {
                     targetElementRef: A,
                     renderPopout: () =>
-                        (0, r.jsx)(P, {
+                        (0, r.jsx)(R, {
                             participantType: s.type,
                             handleUserContextMenu: G,
                             guildId: a,
                             channelId: t,
-                            users: k,
+                            users: j,
                             disableInteraction: v
                         }),
-                    shouldShow: L && !R,
+                    shouldShow: L && !w,
                     position: 'top',
                     children: () =>
                         (0, r.jsx)('div', {

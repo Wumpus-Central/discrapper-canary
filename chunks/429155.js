@@ -13,33 +13,33 @@ let f = 20,
         let { categories: n, store: a, hasSearchResults: c, listPadding: _, renderRow: h, renderSection: m, renderSectionHeader: g, renderSectionFooter: E, renderInspector: b, renderEmptySearchState: y, rowCount: O, rowCountBySection: v, rowHeight: I, sectionHeaderHeight: T, sectionFooterHeight: S, renderUpsell: A } = e,
             N = i.useRef(!1),
             C = i.useRef(null),
-            R = (0, l.Iu)((e) => e.searchQuery),
-            P = a.useStore((e) => e.activeCategoryIndex),
-            w = n.map((e) => ((0, s._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
+            w = (0, l.Iu)((e) => e.searchQuery),
+            R = a.useStore((e) => e.activeCategoryIndex),
+            P = n.map((e) => ((0, s._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
             D = (0, u.Qs)({
-                activeCategoryIndex: P,
+                activeCategoryIndex: R,
                 isScrolling: N,
                 listRef: C,
                 onActiveCategoryIndexChange: a.setActiveCategoryIndex,
                 scrollOffset: f,
-                searchQuery: R
+                searchQuery: w
             }),
             L = i.useCallback(
                 (e) => {
                     (D(e),
                         p({
                             listRef: C,
-                            searchQuery: R,
-                            nitroLockedSectionStates: w,
+                            searchQuery: w,
+                            nitroLockedSectionStates: P,
                             scrollTop: e
                         }));
                 },
-                [D, R, w]
+                [D, w, P]
             );
         return (
             (0, u.Xs)({
-                searchQuery: R,
-                activeCategoryIndex: P,
+                searchQuery: w,
+                activeCategoryIndex: R,
                 listRef: C
             }),
             i.useImperativeHandle(
@@ -88,7 +88,7 @@ let f = 20,
             (0, r.jsxs)('div', {
                 className: d.wrapper,
                 children: [
-                    R.length > 0 && !c && null != y
+                    w.length > 0 && !c && null != y
                         ? y()
                         : (0, r.jsx)(o.Z, {
                               role: 'none presentation',

@@ -1,32 +1,32 @@
 (n.d(t, { Z: () => h }), n(388685));
 var r = n(255367),
-    a = n(73800),
+    l = n(73800),
     i = n(442837),
-    o = n(755721),
-    l = n(668781),
-    s = n(367907),
+    a = n(755721),
+    s = n(668781),
+    o = n(367907),
     c = n(434404),
     d = n(330010),
     u = n(138201),
     m = n(592125),
     p = n(430824),
-    _ = n(496675),
-    g = n(944486),
-    b = n(981631),
-    x = n(388032);
+    g = n(496675),
+    x = n(944486),
+    _ = n(981631),
+    b = n(388032);
 let h = (e) => {
     let { application: t, reportId: n } = e,
-        [h, f] = a.useState(!1),
-        [v, j] = a.useState(!1),
-        y = (0, i.e7)([g.Z, m.Z], () => {
+        [h, f] = l.useState(!1),
+        [v, j] = l.useState(!1),
+        y = (0, i.e7)([x.Z, m.Z], () => {
             var e;
-            return null == (e = m.Z.getChannel(g.Z.getChannelId())) ? void 0 : e.guild_id;
+            return null == (e = m.Z.getChannel(x.Z.getChannelId())) ? void 0 : e.guild_id;
         }),
-        [C, I] = a.useState(null);
-    (a.useEffect(() => {
-        null != C && (f(!0), j(!0));
-    }, [C]),
-        a.useEffect(() => {
+        [O, Z] = l.useState(null);
+    (l.useEffect(() => {
+        null != O && (f(!0), j(!0));
+    }, [O]),
+        l.useEffect(() => {
             if (null == y) return;
             let e = !1;
             return (
@@ -40,45 +40,45 @@ let h = (e) => {
                         var n;
                         return (null == (n = e.application) ? void 0 : n.id) === t.id;
                     });
-                    null != r && I(r);
+                    null != r && Z(r);
                 })(),
                 () => {
                     e = !0;
                 }
             );
         }, [y, t.id]));
-    let O = a.useCallback(() => {
+    let I = l.useCallback(() => {
             (j(!1),
-                s.ZP.trackWithMetadata(b.rMx.IAR_REMOVE_APP_BUTTON_CLICKED, {
+                o.ZP.trackWithMetadata(_.rMx.IAR_REMOVE_APP_BUTTON_CLICKED, {
                     guild_id: y,
                     application_id: t.id,
                     report_id: n
                 }),
                 null != y &&
-                    null != C &&
-                    c.Z.disableIntegration(y, C.id).catch(() => {
-                        l.Z.show({
-                            title: x.intl.string(x.t.wYqMmJ),
-                            body: x.intl.string(x.t.A4Mnsr)
+                    null != O &&
+                    c.Z.disableIntegration(y, O.id).catch(() => {
+                        s.Z.show({
+                            title: b.intl.string(b.t.wYqMmJ),
+                            body: b.intl.string(b.t.A4Mnsr)
                         });
                     }));
-        }, [t.id, y, C, n]),
-        T = (0, i.e7)([_.Z, p.Z], () => {
+        }, [t.id, y, O, n]),
+        C = (0, i.e7)([g.Z, p.Z], () => {
             let e = p.Z.getGuild(y);
             if (null == e) return !1;
-            let n = _.Z.can(b.Plq.MANAGE_GUILD, e),
-                r = null == t.bot || _.Z.canManageUser(b.Plq.MANAGE_GUILD, t.bot.id, e);
+            let n = g.Z.can(_.Plq.MANAGE_GUILD, e),
+                r = null == t.bot || g.Z.canManageUser(_.Plq.MANAGE_GUILD, t.bot.id, e);
             return n && r;
         });
-    return null != t && null != y && h && T
+    return null != t && null != y && h && C
         ? (0, r.jsx)(u.ZP, {
-              title: x.intl.string(x.t['WV/CsL']),
-              description: x.intl.string(x.t['FlcC+/']),
-              buttonText: v ? x.intl.string(x.t.aCJlq6) : x.intl.string(x.t['6I1F3t']),
+              title: b.intl.string(b.t['WV/CsL']),
+              description: b.intl.string(b.t['FlcC+/']),
+              buttonText: v ? b.intl.string(b.t.aCJlq6) : b.intl.string(b.t['6I1F3t']),
               buttonDisabled: !v,
-              buttonColor: v ? o.zx.Colors.RED : o.zx.Colors.WHITE,
-              buttonLook: v ? o.zx.Looks.FILLED : o.zx.Looks.LINK,
-              onButtonPress: O
+              buttonColor: v ? a.zx.Colors.RED : a.zx.Colors.WHITE,
+              buttonLook: v ? a.zx.Looks.FILLED : a.zx.Looks.LINK,
+              onButtonPress: I
           })
         : null;
 };

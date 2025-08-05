@@ -1,15 +1,15 @@
 (n.d(t, { Z: () => c }), n(388685));
-var i = n(281215),
-    a = n(960412),
-    o = n(151662),
-    s = n(352486),
-    l = n(611811),
-    r = n(388032);
+var i = n(509613),
+    o = n(960412),
+    l = n(151662),
+    a = n(352486),
+    r = n(611811),
+    s = n(388032);
 let c = (0, i.k4)('NotificationsEmail', {
-    useTitle: () => r.intl.string(r.t['w/qqKC']),
+    useTitle: () => s.intl.string(s.t['w/qqKC']),
     init: function () {
-        let { initialized: e } = o.Z.getEmailSettings();
-        e || (0, a.Y7)();
+        let { initialized: e } = l.Z.getEmailSettings();
+        e || (0, o.Y7)();
     },
-    layout: [...s.Z, l.Z]
+    layout: [...a.Z, r.Z]
 });

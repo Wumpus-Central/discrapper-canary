@@ -62,10 +62,10 @@ function N(e, t, n, r, a, o) {
 function C(e, t) {
     return N(e.type, t, void 0, void 0, void 0, e.props);
 }
-function R(e) {
+function w(e) {
     return 'object' == typeof e && null !== e && e.$$typeof === i;
 }
-function P(e) {
+function R(e) {
     var t = {
         '=': '=0',
         ':': '=2'
@@ -77,9 +77,9 @@ function P(e) {
         })
     );
 }
-var w = /\/+/g;
+var P = /\/+/g;
 function D(e, t) {
-    return 'object' == typeof e && null !== e && null != e.key ? P('' + e.key) : t.toString(36);
+    return 'object' == typeof e && null !== e && null != e.key ? R('' + e.key) : t.toString(36);
 }
 function L() {}
 function x(e) {
@@ -111,7 +111,7 @@ function x(e) {
     }
     throw e;
 }
-function M(e, t, n, r, o) {
+function k(e, t, n, r, o) {
     var s = typeof e;
     ('undefined' === s || 'boolean' === s) && (e = null);
     var l = !1;
@@ -130,7 +130,7 @@ function M(e, t, n, r, o) {
                         l = !0;
                         break;
                     case p:
-                        return M((l = e._init)(e._payload), t, n, r, o);
+                        return k((l = e._init)(e._payload), t, n, r, o);
                 }
         }
     if (l)
@@ -139,35 +139,35 @@ function M(e, t, n, r, o) {
             (l = '' === r ? '.' + D(e, 0) : r),
             T(o)
                 ? ((n = ''),
-                  null != l && (n = l.replace(w, '$&/') + '/'),
-                  M(o, t, n, '', function (e) {
+                  null != l && (n = l.replace(P, '$&/') + '/'),
+                  k(o, t, n, '', function (e) {
                       return e;
                   }))
-                : null != o && (R(o) && (o = C(o, n + (null == o.key || (e && e.key === o.key) ? '' : ('' + o.key).replace(w, '$&/') + '/') + l)), t.push(o)),
+                : null != o && (w(o) && (o = C(o, n + (null == o.key || (e && e.key === o.key) ? '' : ('' + o.key).replace(P, '$&/') + '/') + l)), t.push(o)),
             1
         );
     l = 0;
     var c = '' === r ? '.' : r + ':';
-    if (T(e)) for (var u = 0; u < e.length; u++) ((s = c + D((r = e[u]), u)), (l += M(r, t, n, s, o)));
-    else if ('function' == typeof (u = m(e))) for (e = u.call(e), u = 0; !(r = e.next()).done; ) ((s = c + D((r = r.value), u++)), (l += M(r, t, n, s, o)));
+    if (T(e)) for (var u = 0; u < e.length; u++) ((s = c + D((r = e[u]), u)), (l += k(r, t, n, s, o)));
+    else if ('function' == typeof (u = m(e))) for (e = u.call(e), u = 0; !(r = e.next()).done; ) ((s = c + D((r = r.value), u++)), (l += k(r, t, n, s, o)));
     else if ('object' === s) {
-        if ('function' == typeof e.then) return M(x(e), t, n, r, o);
+        if ('function' == typeof e.then) return k(x(e), t, n, r, o);
         throw Error('Objects are not valid as a React child (found: ' + ('[object Object]' === (t = String(e)) ? 'object with keys {' + Object.keys(e).join(', ') + '}' : t) + '). If you meant to render a collection of children, use an array instead.');
     }
     return l;
 }
-function k(e, t, n) {
+function j(e, t, n) {
     if (null == e) return e;
     var r = [],
         i = 0;
     return (
-        M(e, r, '', '', function (e) {
+        k(e, r, '', '', function (e) {
             return t.call(n, e, i++);
         }),
         r
     );
 }
-function j(e) {
+function M(e) {
     if (-1 === e._status) {
         var t = e._result;
         ((t = t()).then(
@@ -200,9 +200,9 @@ var U =
           };
 function G() {}
 ((t.Children = {
-    map: k,
+    map: j,
     forEach: function (e, t, n) {
-        k(
+        j(
             e,
             function () {
                 t.apply(this, arguments);
@@ -213,7 +213,7 @@ function G() {}
     count: function (e) {
         var t = 0;
         return (
-            k(e, function () {
+            j(e, function () {
                 t++;
             }),
             t
@@ -221,13 +221,13 @@ function G() {}
     },
     toArray: function (e) {
         return (
-            k(e, function (e) {
+            j(e, function (e) {
                 return e;
             }) || []
         );
     },
     only: function (e) {
-        if (!R(e)) throw Error('React.Children.only expected to receive a single React element child.');
+        if (!w(e)) throw Error('React.Children.only expected to receive a single React element child.');
         return e;
     }
 }),
@@ -300,7 +300,7 @@ function G() {}
             render: e
         };
     }),
-    (t.isValidElement = R),
+    (t.isValidElement = w),
     (t.lazy = function (e) {
         return {
             $$typeof: p,
@@ -308,7 +308,7 @@ function G() {}
                 _status: -1,
                 _result: e
             },
-            _init: j
+            _init: M
         };
     }),
     (t.memo = function (e, t) {

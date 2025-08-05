@@ -86,7 +86,7 @@ function I(e) {
                 window.open(f.Z.getArticleURL(m.BhN.NITRO_FAQ), '_blank');
             }
         }),
-        R = (0, r.jsx)('div', {
+        w = (0, r.jsx)('div', {
             className: E.body,
             children: (0, r.jsx)(o.Text, {
                 variant: 'text-sm/medium',
@@ -102,7 +102,7 @@ function I(e) {
                 enableArtBoxShadow: !1,
                 type: h.cd.UPLOAD_ERROR_UPSELL,
                 title: g.intl.string(g.t['9C+41t']),
-                body: R,
+                body: w,
                 context: g.intl.formatToPlainString(g.t.q5fTZm, { maxSize: N }),
                 glowUp: C,
                 analyticsLocation: { section: m.jXE.FILE_UPLOAD_POPOUT },

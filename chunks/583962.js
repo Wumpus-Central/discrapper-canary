@@ -8,8 +8,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    a = n(66546),
-    s = n(91192),
+    s = n(66546),
+    a = n(91192),
     c = n(442837),
     u = n(704215),
     d = n(477690),
@@ -19,8 +19,8 @@ var r = n(255367),
     g = n(243778),
     m = n(538445),
     b = n(151494),
-    _ = n(496675),
-    O = n(259580),
+    O = n(496675),
+    _ = n(259580),
     y = n(267642),
     C = n(624138),
     v = n(667815),
@@ -56,7 +56,7 @@ function w(e) {
     }
     return e;
 }
-function T(e, t) {
+function Z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,9 +74,9 @@ function T(e, t) {
         e
     );
 }
-let Z = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
+let T = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     A = 57,
-    R = 57 + Z,
+    R = 57 + T,
     D = {
         tension: 180,
         friction: 80
@@ -84,7 +84,7 @@ let Z = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     L = i.memo((e) => {
         let { guild: t, tooltipTypes: l, withMargin: d } = e,
             C = (0, y.Jh)(t.id),
-            Z = (0, b.Z)(t.id),
+            T = (0, b.Z)(t.id),
             A = (0, y.FZ)(C),
             R = null == A,
             L = null != A ? A : C,
@@ -92,30 +92,30 @@ let Z = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                 var e;
                 return null != (e = j.Z.getCountForGuild(t.id)) ? e : 0;
             }),
-            k = (0, c.e7)([_.Z], () => _.Z.can(S.Plq.MANAGE_GUILD, t));
+            k = (0, c.e7)([O.Z], () => O.Z.can(S.Plq.MANAGE_GUILD, t));
         i.useEffect(() => {
-            M !== Z && (0, v.v)(t.id, Z);
-        }, [t.id, M, Z]);
-        let U = R ? '100%' : ''.concat(Math.min(100, (Z / S.oCV[L]) * 100), '%'),
+            M !== T && (0, v.v)(t.id, T);
+        }, [t.id, M, T]);
+        let U = R ? '100%' : ''.concat(Math.min(100, (T / S.oCV[L]) * 100), '%'),
             { current: G } = i.useRef(U),
             [B] = (0, h.q_F)(
                 () => ({
-                    from: { width: M === Z ? G : '0%' },
+                    from: { width: M === T ? G : '0%' },
                     to: { width: U },
                     config: D
                 }),
                 'respect-motion-settings',
-                [M, Z, G, U]
+                [M, T, G, U]
             ),
             V = t.premiumTier < L && M >= S.oCV[L],
             F = (0, E.Z)(t, f.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY, S.jXE.PREMIUM_GUILD_PROGRESS_BAR),
             H = I.intl.formatToPlainString(I.t['2oNfMT'], { levelName: (0, y.e9)(L) }),
             z = I.intl.format(I.t.dhKnYm, {
-                numBoosts: Z,
+                numBoosts: T,
                 numTotal: S.oCV[L]
             });
-        (R && ((H = (0, y.e9)(L)), (z = I.intl.format(I.t.B2byER, { numBoosts: Z }))), (H = H.toLocaleLowerCase()));
-        let W = (0, s.JA)('boosts-'.concat(t.id)),
+        (R && ((H = (0, y.e9)(L)), (z = I.intl.format(I.t.B2byER, { numBoosts: T }))), (H = H.toLocaleLowerCase()));
+        let W = (0, a.JA)('boosts-'.concat(t.id)),
             K = i.useRef(null),
             [Y, q] = (0, g.US)(l),
             X = () =>
@@ -128,7 +128,7 @@ let Z = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             Q = (e, i) =>
                 (0, r.jsxs)(
                     h.P3F,
-                    T(w({}, W, e, i), {
+                    Z(w({}, W, e, i), {
                         'aria-label': void 0,
                         role: 'button',
                         focusProps: {
@@ -146,7 +146,7 @@ let Z = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                             k &&
                                 (0, p.jW)(e, async () => {
                                     let { default: e } = await n.e('8570').then(n.bind(n, 651138));
-                                    return (n) => (0, r.jsx)(e, T(w({}, n), { guild: t }));
+                                    return (n) => (0, r.jsx)(e, Z(w({}, n), { guild: t }));
                                 });
                         },
                         children: [
@@ -174,11 +174,11 @@ let Z = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                                 lineClamp: 1,
                                                 children: z
                                             }),
-                                            (0, r.jsx)(O.Z, {
+                                            (0, r.jsx)(_.Z, {
                                                 className: N.count,
                                                 height: 16,
                                                 width: 16,
-                                                direction: O.Z.Directions.RIGHT
+                                                direction: _.Z.Directions.RIGHT
                                             })
                                         ]
                                     })
@@ -187,7 +187,7 @@ let Z = (0, C.Mg)(d.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                             (0, r.jsxs)('div', {
                                 className: o()(N.progressBarContainer, { [N.progressBarContainerComplete]: R }),
                                 children: [
-                                    (0, r.jsx)(a.animated.div, {
+                                    (0, r.jsx)(s.animated.div, {
                                         className: N.progressBar,
                                         style: B
                                     }),

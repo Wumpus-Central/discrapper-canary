@@ -1,34 +1,34 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => R });
 var r = n(255367),
     i = n(73800),
     l = n(597312),
     a = n(755721),
-    o = n(727637),
-    s = n(410030),
+    s = n(727637),
+    o = n(410030),
     c = n(100527),
-    u = n(906732),
-    d = n(580552),
-    p = n(680295),
-    h = n(5192),
+    d = n(906732),
+    u = n(580552),
+    h = n(680295),
+    p = n(5192),
     f = n(785717),
-    m = n(221292),
-    g = n(687158),
+    g = n(221292),
+    m = n(687158),
     b = n(892001),
     _ = n(899007),
     y = n(648052),
-    C = n(867176),
-    x = n(280885),
-    v = n(900927),
-    j = n(678738),
-    O = n(502762),
+    j = n(867176),
+    O = n(280885),
+    x = n(900927),
+    v = n(678738),
+    C = n(502762),
     E = n(530),
-    S = n(679332),
-    P = n(544989),
-    I = n(228168),
-    Z = n(388032),
+    Z = n(679332),
+    I = n(544989),
+    S = n(228168),
+    P = n(388032),
     T = n(638414),
     N = n(283189);
-function A(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,65 +53,65 @@ function A(e) {
     }
     return e;
 }
-function w(e) {
+function R(e) {
     let { user: t, channel: n } = e,
-        w = __OVERLAY__ || !(0, d.Z)(t.id),
-        R = (0, g.ZP)(t.id),
-        M = (0, s.ZP)(),
-        D = i.useRef(Date.now()),
-        { analyticsLocations: k } = (0, u.ZP)(c.Z.USER_PROFILE_SIDEBAR),
-        L = (0, f.ZB)({
+        R = __OVERLAY__ || !(0, u.Z)(t.id),
+        A = (0, m.ZP)(t.id),
+        D = (0, o.ZP)(),
+        L = i.useRef(Date.now()),
+        { analyticsLocations: M } = (0, d.ZP)(c.Z.USER_PROFILE_SIDEBAR),
+        k = (0, f.ZB)({
             layout: 'SIDEBAR',
             userId: t.id,
             channelId: n.id
         }),
         U = i.useRef(null),
-        B = (0, o.Z)(U),
+        G = (0, s.Z)(U),
         F = (e) => {
             (0, b.openUserProfileModal)(
-                A(
+                w(
                     {
-                        sourceAnalyticsLocations: k,
+                        sourceAnalyticsLocations: M,
                         hideRestrictedProfile: !0
                     },
-                    L,
+                    k,
                     e
                 )
             );
         };
-    return (0, r.jsx)(u.Gt, {
-        value: k,
+    return (0, r.jsx)(d.Gt, {
+        value: M,
         children: (0, r.jsx)(f.Mt, {
-            value: L,
-            openedAt: D.current,
-            fetchStartedAt: null == R ? void 0 : R.fetchStartedAt,
-            fetchEndedAt: null == R ? void 0 : R.fetchEndedAt,
-            isLoaded: null == R ? void 0 : R.isLoaded,
-            children: (0, r.jsxs)(O.Z, {
+            value: k,
+            openedAt: L.current,
+            fetchStartedAt: null == A ? void 0 : A.fetchStartedAt,
+            fetchEndedAt: null == A ? void 0 : A.fetchEndedAt,
+            isLoaded: null == A ? void 0 : A.isLoaded,
+            children: (0, r.jsxs)(C.Z, {
                 ref: U,
                 user: t,
-                displayProfile: R,
-                themeType: I.lY.SIDEBAR,
-                themeOverride: M,
+                displayProfile: A,
+                themeType: S.lY.SIDEBAR,
+                themeOverride: D,
                 children: [
                     (0, r.jsxs)(l.u2, {
                         children: [
-                            (0, r.jsx)(P.Z, { children: (0, r.jsx)(S.Z, { user: t }) }),
+                            (0, r.jsx)(I.Z, { children: (0, r.jsx)(Z.Z, { user: t }) }),
                             (0, r.jsxs)('div', {
                                 className: T.header,
                                 children: [
-                                    (0, r.jsx)(C.Z, {
+                                    (0, r.jsx)(j.Z, {
                                         user: t,
-                                        displayProfile: R,
-                                        themeType: I.lY.SIDEBAR,
-                                        animateOnHover: !B
+                                        displayProfile: A,
+                                        themeType: S.lY.SIDEBAR,
+                                        animateOnHover: !G
                                     }),
                                     (0, r.jsx)(_.Z, {
                                         user: t,
-                                        displayProfile: R,
+                                        displayProfile: A,
                                         channelId: n.id,
-                                        themeType: I.lY.SIDEBAR,
-                                        onOpenProfile: w ? void 0 : F
+                                        themeType: S.lY.SIDEBAR,
+                                        onOpenProfile: R ? void 0 : F
                                     })
                                 ]
                             }),
@@ -120,31 +120,31 @@ function w(e) {
                                 children: [
                                     (0, r.jsx)(E.Z, {
                                         user: t,
-                                        nickname: h.ZP.getName(null, n.id, t),
-                                        pronouns: null == R ? void 0 : R.pronouns,
-                                        onOpenProfile: w ? void 0 : F,
+                                        nickname: p.ZP.getName(null, n.id, t),
+                                        pronouns: null == A ? void 0 : A.pronouns,
+                                        onOpenProfile: R ? void 0 : F,
                                         tags: (0, r.jsx)(y.Z, {
-                                            displayProfile: R,
-                                            themeType: I.lY.SIDEBAR
+                                            displayProfile: A,
+                                            themeType: S.lY.SIDEBAR
                                         })
                                     }),
-                                    (0, r.jsxs)(O.Z.Overlay, {
+                                    (0, r.jsxs)(C.Z.Overlay, {
                                         className: N.overlay,
                                         children: [
-                                            (0, r.jsx)(j.Z, {
-                                                heading: Z.intl.string(Z.t['61W33d']),
+                                            (0, r.jsx)(v.Z, {
+                                                heading: P.intl.string(P.t['61W33d']),
                                                 headingColor: 'header-primary',
-                                                children: (0, r.jsx)(x.Z, {
-                                                    userBio: null == R ? void 0 : R.bio,
+                                                children: (0, r.jsx)(O.Z, {
+                                                    userBio: null == A ? void 0 : A.bio,
                                                     userId: t.id,
                                                     animateOnHover: !0,
-                                                    isHovering: B
+                                                    isHovering: G
                                                 })
                                             }),
-                                            (0, r.jsx)(j.Z, {
-                                                heading: Z.intl.string(Z.t['A//N4u']),
+                                            (0, r.jsx)(v.Z, {
+                                                heading: P.intl.string(P.t['A//N4u']),
                                                 headingColor: 'header-primary',
-                                                children: (0, r.jsx)(v.Z, { userId: t.id })
+                                                children: (0, r.jsx)(x.Z, { userId: t.id })
                                             })
                                         ]
                                     })
@@ -152,7 +152,7 @@ function w(e) {
                             })
                         ]
                     }),
-                    !w &&
+                    !R &&
                         (0, r.jsx)('div', {
                             className: T.footer,
                             children: (0, r.jsx)(a.zx, {
@@ -162,23 +162,23 @@ function w(e) {
                                 color: T.footerButtonColor,
                                 onClick: () => {
                                     (F(),
-                                        (0, m.pQ)(
-                                            A(
+                                        (0, g.pQ)(
+                                            w(
                                                 {
                                                     action: 'PRESS_VIEW_PROFILE',
-                                                    analyticsLocations: k
+                                                    analyticsLocations: M
                                                 },
-                                                L
+                                                k
                                             )
                                         ));
                                 },
-                                children: Z.intl.string(Z.t['+Xp3ho'])
+                                children: P.intl.string(P.t['+Xp3ho'])
                             })
                         }),
-                    (null == R ? void 0 : R.profileEffectId) != null &&
-                        (0, r.jsx)(p.Z, {
-                            profileEffectId: null == R ? void 0 : R.profileEffectId,
-                            isHovering: B
+                    (null == A ? void 0 : A.profileEffectId) != null &&
+                        (0, r.jsx)(h.Z, {
+                            profileEffectId: null == A ? void 0 : A.profileEffectId,
+                            isHovering: G
                         })
                 ]
             })

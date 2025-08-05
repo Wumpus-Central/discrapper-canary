@@ -1,20 +1,20 @@
-n.d(t, { X: () => a });
+n.d(t, { X: () => o });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    l = n(299491);
-function a(e) {
+    a = n(299491);
+function o(e) {
     let { tooltipText: t, textColor: n } = e;
     return (0, r.jsxs)('span', {
-        className: l.tooltipTextContainer,
+        className: a.tooltipTextContainer,
         children: [
             (0, r.jsx)(i.SrA, {
                 size: 'md',
                 color: 'currentColor',
-                className: l.nitroWheel
+                className: a.nitroWheel
             }),
             (0, r.jsx)(i.Text, {
-                className: l.tooltipText,
+                className: a.tooltipText,
                 variant: 'text-sm/medium',
                 color: null != n ? n : 'text-default',
                 children: t

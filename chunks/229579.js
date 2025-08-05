@@ -51,21 +51,21 @@ var r = n(430901),
             A = g + b,
             N = T + v,
             C = O + I,
-            R = m ? e.offsetHeight - C - e.clientHeight : 0,
-            P = h ? e.offsetWidth - N - e.clientWidth : 0,
-            w = o ? S + N : 0,
+            w = m ? e.offsetHeight - C - e.clientHeight : 0,
+            R = h ? e.offsetWidth - N - e.clientWidth : 0,
+            P = o ? S + N : 0,
             D = o ? A + C : 0,
-            L = r ? r.width : d(n.width) - w - P,
-            x = r ? r.height : d(n.height) - D - R,
-            M = L + S + P + N,
-            k = x + A + R + C,
-            j = Object.freeze({
+            L = r ? r.width : d(n.width) - P - R,
+            x = r ? r.height : d(n.height) - D - w,
+            k = L + S + R + N,
+            j = x + A + w + C,
+            M = Object.freeze({
                 devicePixelContentBoxSize: f(Math.round(L * devicePixelRatio), Math.round(x * devicePixelRatio), p),
-                borderBoxSize: f(M, k, p),
+                borderBoxSize: f(k, j, p),
                 contentBoxSize: f(L, x, p),
                 contentRect: new i.N(y, g, L, x)
             });
-        return (s.set(e, j), j);
+        return (s.set(e, M), M);
     },
     h = function (e, t, n) {
         var i = p(e, n),

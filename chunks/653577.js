@@ -1,10 +1,10 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => O });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    a = n(442837),
-    s = n(481060),
+    s = n(442837),
+    a = n(481060),
     c = n(362721),
     u = n(12498),
     d = n(111028),
@@ -14,13 +14,13 @@ var r = n(255367),
     g = n(388032),
     m = n(32066),
     b = n(73433);
-function _(e) {
-    let { channel: t, connected: n, hovered: l, subtitle: _, onClick: O, enableHangStatus: y, allowChannelTopic: C } = e,
-        v = (0, a.e7)([u.Z], () => u.Z.getChannelStatus(t)),
+function O(e) {
+    let { channel: t, connected: n, hovered: l, subtitle: O, onClick: _, enableHangStatus: y, allowChannelTopic: C } = e,
+        v = (0, s.e7)([u.Z], () => u.Z.getChannelStatus(t)),
         j = null != v && v.length > 0,
         E = (0, c.ZP)(t, !0),
         S = (!y || !!C) && E,
-        x = null != _ && _.length > 0;
+        x = null != O && O.length > 0;
     if (
         (i.useEffect(() => {
             j &&
@@ -34,26 +34,26 @@ function _(e) {
         return null;
     let I = o()(m.statusDiv, n && S ? m.hoverable : null);
     return j
-        ? (0, r.jsx)(s.P3F, {
+        ? (0, r.jsx)(a.P3F, {
               className: I,
-              onClick: S ? O : void 0,
-              children: (0, r.jsx)(s.Text, {
+              onClick: S ? _ : void 0,
+              children: (0, r.jsx)(a.Text, {
                   variant: 'text-xs/medium',
                   className: o()(m.statusText, b.markup),
                   children: (0, r.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(v, !0, { channelId: t.id }) })
               })
           })
         : n && S && (!x || l)
-          ? (0, r.jsxs)(s.P3F, {
+          ? (0, r.jsxs)(a.P3F, {
                 className: I,
-                onClick: O,
+                onClick: _,
                 children: [
-                    (0, r.jsx)(s.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-xs/medium',
                         className: m.statusText,
                         children: g.intl.string(g.t.Mgpxi4)
                     }),
-                    (0, r.jsx)(s.vdY, {
+                    (0, r.jsx)(a.vdY, {
                         color: 'currentColor',
                         className: m.pencilIcon,
                         size: 'xxs'
@@ -61,6 +61,6 @@ function _(e) {
                 ]
             })
           : x
-            ? (0, r.jsx)(d.Z, { children: _ })
+            ? (0, r.jsx)(d.Z, { children: O })
             : null;
 }

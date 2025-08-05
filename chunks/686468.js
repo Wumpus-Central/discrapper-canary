@@ -3,66 +3,66 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     a = n.n(l),
-    o = n(442837),
-    s = n(692547),
+    s = n(442837),
+    o = n(692547),
     c = n(481060),
-    u = n(884338),
-    d = n(688641),
-    p = n(596449),
-    h = n(459502),
+    d = n(884338),
+    u = n(688641),
+    h = n(596449),
+    p = n(459502),
     f = n(856691),
-    m = n(357156),
-    g = n(546247),
+    g = n(357156),
+    m = n(546247),
     b = n(496675),
     _ = n(146085),
     y = n(979339),
-    C = n(643632),
-    x = n(388032),
-    v = n(941188);
-function j(e) {
+    j = n(643632),
+    O = n(388032),
+    x = n(941188);
+function v(e) {
     let { onClick: t, className: n } = e,
         i = c.S6n;
-    return (0, r.jsx)(d.Z, {
-        iconContainerClassName: a()({ [v.continueIconContainer]: !1 }),
+    return (0, r.jsx)(u.Z, {
+        iconContainerClassName: a()({ [x.continueIconContainer]: !1 }),
         icon: (0, r.jsx)(i, {
             size: 'custom',
             color: 'currentColor',
-            className: v.continueIcon,
+            className: x.continueIcon,
             height: 20,
             width: 20
         }),
-        color: s.Z.unsafe_rawColors.PRIMARY_700.css,
-        title: x.intl.string(x.t.jMLfp6),
-        description: x.intl.string(x.t['Vd/rER']),
+        color: o.Z.unsafe_rawColors.PRIMARY_700.css,
+        title: O.intl.string(O.t.jMLfp6),
+        description: O.intl.string(O.t['Vd/rER']),
         onClick: t,
         className: n
     });
 }
-function O(e) {
+function C(e) {
     let { channel: t } = e,
         { participants: n, usersInSummary: i } = (0, y.Z)(t.id);
     return (0, r.jsxs)('div', {
-        className: v.audienceSummary,
+        className: x.audienceSummary,
         children: [
-            (0, r.jsx)(u.ZP, {
-                className: v.summaryItem,
+            (0, r.jsx)(d.ZP, {
+                className: x.summaryItem,
                 guildId: t.guild_id,
                 users: i,
-                size: u.u8.SIZE_16
+                size: d.u8.SIZE_16
             }),
             (0, r.jsx)(c.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
                 children: (function (e) {
                     if (0 === e.length) return '';
-                    if (1 === e.length) return x.intl.formatToPlainString(x.t['5ULgaW'], { first: e[0].userNick });
+                    if (1 === e.length) return O.intl.formatToPlainString(O.t['5ULgaW'], { first: e[0].userNick });
                     if (2 === e.length)
-                        return x.intl.formatToPlainString(x.t.BHK0Oj, {
+                        return O.intl.formatToPlainString(O.t.BHK0Oj, {
                             first: e[0].userNick,
                             second: e[1].userNick
                         });
                     let t = e.length - 2;
-                    return x.intl.formatToPlainString(x.t.T3MT4u, {
+                    return O.intl.formatToPlainString(O.t.T3MT4u, {
                         first: e[0].userNick,
                         second: e[1].userNick,
                         numOthers: t
@@ -74,55 +74,55 @@ function O(e) {
 }
 function E(e) {
     let { channel: t, onContinueClick: n } = e,
-        l = (0, o.e7)([b.Z], () => b.Z.can(_.yP, t), [t]),
-        s = t.guild_id,
-        { canCreateGuildEvent: u } = (0, m.XJ)(t),
-        d = (0, C.Z)(t.id),
+        l = (0, s.e7)([b.Z], () => b.Z.can(_.yP, t), [t]),
+        o = t.guild_id,
+        { canCreateGuildEvent: d } = (0, g.XJ)(t),
+        u = (0, j.Z)(t.id),
         y = i.useRef(null);
     return (0, r.jsxs)('div', {
-        className: v.container,
+        className: x.container,
         ref: y,
         children: [
-            (0, r.jsx)(g.Z, { eventTargetRef: y }),
+            (0, r.jsx)(m.Z, { eventTargetRef: y }),
             (0, r.jsxs)('div', {
-                className: v.content,
+                className: x.content,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: v.headerContainer,
+                        className: x.headerContainer,
                         children: [
                             (0, r.jsx)(c.X6q, {
-                                className: v.__invalid_title,
+                                className: x.__invalid_title,
                                 variant: 'heading-xxl/normal',
-                                children: x.intl.string(x.t.QGnDLi)
+                                children: O.intl.string(O.t.QGnDLi)
                             }),
                             (0, r.jsx)(c.Text, {
                                 tag: 'div',
-                                className: v.subtitle,
+                                className: x.subtitle,
                                 variant: 'heading-lg/normal',
-                                children: x.intl.string(x.t.djfK39)
+                                children: O.intl.string(O.t.djfK39)
                             })
                         ]
                     }),
-                    d ? null : (0, r.jsx)(h.Z, { channelId: t.id }),
+                    u ? null : (0, r.jsx)(p.Z, { channelId: t.id }),
                     l
                         ? (0, r.jsx)(f.Z, {
-                              className: v.eventPrompt,
+                              className: x.eventPrompt,
                               channel: t
                           })
                         : null,
-                    u
-                        ? (0, r.jsx)(p.Z, {
-                              className: v.eventPrompt,
-                              guildId: s
+                    d
+                        ? (0, r.jsx)(h.Z, {
+                              className: x.eventPrompt,
+                              guildId: o
                           })
                         : null,
                     l
-                        ? (0, r.jsx)(j, {
-                              className: a()({ [v.eventPrompt]: !0 }),
+                        ? (0, r.jsx)(v, {
+                              className: a()({ [x.eventPrompt]: !0 }),
                               onClick: n
                           })
                         : null,
-                    (0, r.jsx)(O, { channel: t })
+                    (0, r.jsx)(C, { channel: t })
                 ]
             })
         ]

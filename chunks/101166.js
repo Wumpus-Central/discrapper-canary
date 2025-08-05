@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     BOLD: { fontWeight: 'bold' },
     CODE: {
         fontFamily: 'monospace',

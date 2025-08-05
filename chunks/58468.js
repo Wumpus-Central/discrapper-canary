@@ -1,65 +1,65 @@
-(n.d(t, { Z: () => p }), n(388685));
-var r,
-    i = n(442837),
-    l = n(570140),
-    s = n(709054),
-    o = n(592125);
-function a(e, t, n) {
+(t.d(n, { Z: () => f }), t(388685));
+var l,
+    i = t(442837),
+    r = t(570140),
+    a = t(709054),
+    u = t(592125);
+function s(e, n, t) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: t,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = t),
         e
     );
 }
-let c = {},
-    u = c;
-function d() {
-    s.default.keys(u).forEach((e) => {
-        null == o.Z.getChannel(e) && delete u[e];
+let o = {},
+    d = o;
+function c() {
+    a.default.keys(d).forEach((e) => {
+        null == u.Z.getChannel(e) && delete d[e];
     });
 }
-class f extends (r = i.ZP.PersistedStore) {
+class g extends (l = i.ZP.PersistedStore) {
     initialize(e) {
-        (this.waitFor(o.Z), (u = null != e ? e : c));
+        (this.waitFor(u.Z), (d = null != e ? e : o));
     }
     getState() {
-        return u;
+        return d;
     }
     getCollapsed() {
-        return u;
+        return d;
     }
     isCollapsed(e) {
-        return u[e] || !1;
+        return d[e] || !1;
     }
 }
-(a(f, 'displayName', 'CollapsedVoiceChannelStore'), a(f, 'persistKey', 'collapsedChannels'));
-let p = new f(l.Z, {
-    CONNECTION_OPEN: d,
-    OVERLAY_INITIALIZE: d,
+(s(g, 'displayName', 'CollapsedVoiceChannelStore'), s(g, 'persistKey', 'collapsedChannels'));
+let f = new g(r.Z, {
+    CONNECTION_OPEN: c,
+    OVERLAY_INITIALIZE: c,
     CHANNEL_COLLAPSE: function (e) {
-        let { channelId: t } = e;
-        (u[t] ? delete u[t] : (u[t] = !0),
-            (u = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+        let { channelId: n } = e;
+        (d[n] ? delete d[n] : (d[n] = !0),
+            (d = (function (e) {
+                for (var n = 1; n < arguments.length; n++) {
+                    var t = null != arguments[n] ? arguments[n] : {},
+                        l = Object.keys(t);
                     ('function' == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        (l = l.concat(
+                            Object.getOwnPropertySymbols(t).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(t, e).enumerable;
                             })
                         )),
-                        r.forEach(function (t) {
-                            a(e, t, n[t]);
+                        l.forEach(function (n) {
+                            s(e, n, t[n]);
                         }));
                 }
                 return e;
-            })({}, u)));
+            })({}, d)));
     }
 });

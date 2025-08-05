@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => P }), n(314940));
+(n.d(t, { Z: () => R }), n(314940));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -101,7 +101,7 @@ let I = 3,
             })
         );
     },
-    R = (e) => {
+    w = (e) => {
         var { user: t, avatarDecoration: n, innerRef: a, section: o, isSelected: s = !1, canUsePremiumCollectibles: l } = e,
             d = O(e, ['user', 'avatarDecoration', 'innerRef', 'section', 'isSelected', 'canUsePremiumCollectibles']);
         let f = i.useRef(null),
@@ -140,7 +140,7 @@ let I = 3,
             )
         );
     },
-    P = (e) => {
+    R = (e) => {
         let { user: t, guild: n, pendingAvatarDecoration: i, selectedAvatarDecorationRef: a, onSelect: o, onOpenShop: c } = e,
             u = (0, _.ZP)(),
             p = d.ZP.canUseCollectibles(t),
@@ -197,7 +197,7 @@ let I = 3,
                     .otherwise((e) => {
                         let n = (null == i ? void 0 : i.id) === e.id;
                         return (0, r.jsx)(
-                            R,
+                            w,
                             {
                                 style: E({}, g),
                                 user: t,

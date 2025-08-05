@@ -1,36 +1,36 @@
-(n.d(t, { Z: () => m }), n(388685));
+(n.d(t, { Z: () => g }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     a = n(481060),
-    o = n(622822),
-    s = n(665149),
+    s = n(622822),
+    o = n(665149),
     c = n(731290),
-    u = n(594174),
-    d = n(91159),
-    p = n(593130),
-    h = n(388032),
+    d = n(594174),
+    u = n(91159),
+    h = n(593130),
+    p = n(388032),
     f = n(522634);
-function m(e) {
+function g(e) {
     let { channel: t } = e,
-        [n, m] = i.useState(!1),
-        g = i.useRef(null),
+        [n, g] = i.useState(!1),
+        m = i.useRef(null),
         b = (0, l.e7)(
-            [c.Z, u.default],
+            [c.Z, d.default],
             () => {
-                let e = u.default.getCurrentUser();
-                return null == e || ((0, o.aC)(t) && (!e.nsfwAllowed || !c.Z.didAgree(t.getGuildId())));
+                let e = d.default.getCurrentUser();
+                return null == e || ((0, s.aC)(t) && (!e.nsfwAllowed || !c.Z.didAgree(t.getGuildId())));
             },
             [t]
         ),
         _ = i.useCallback(() => {
-            m(!1);
+            g(!1);
         }, []),
         y = i.useCallback(() => {
-            (n || (0, d.U4)('Popout'), m(!n));
+            (n || (0, u.U4)('Popout'), g(!n));
         }, [n]);
     return (0, r.jsx)(a.yRy, {
-        targetElementRef: g,
+        targetElementRef: m,
         animation: a.yRy.Animation.NONE,
         position: 'bottom',
         align: 'right',
@@ -39,7 +39,7 @@ function m(e) {
         onRequestClose: _,
         renderPopout: function () {
             return (0, r.jsx)(a.VqE, {
-                children: (0, r.jsx)(p.Z, {
+                children: (0, r.jsx)(h.Z, {
                     className: f.browser,
                     channel: t,
                     onClose: _
@@ -51,7 +51,7 @@ function m(e) {
             var n, i;
             let { isShown: l } = t;
             return (0, r.jsx)(
-                s.JO,
+                o.JO,
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -79,12 +79,12 @@ function m(e) {
                 })({}, e)),
                 (i = i =
                     {
-                        ref: g,
+                        ref: m,
                         className: f.icon,
                         onClick: y,
                         icon: a.or_,
-                        'aria-label': h.intl.string(h.t.B2panJ),
-                        tooltip: l ? null : h.intl.string(h.t.B2panJ),
+                        'aria-label': p.intl.string(p.t.B2panJ),
+                        tooltip: l ? null : p.intl.string(p.t.B2panJ),
                         disabled: b,
                         selected: l
                     }),

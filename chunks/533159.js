@@ -1,31 +1,31 @@
-n.d(e, { Z: () => a });
-var i = n(255367);
+n.d(t, { Z: () => s });
+var r = n(255367);
 n(73800);
-var r = n(794295),
-    l = n(388032),
+var i = n(794295),
+    a = n(388032),
     o = n(71851);
-function a(t) {
-    let { termsOfServiceUrl: e, privacyPolicyUrl: n } = t;
-    return null == e && null == n
+function s(e) {
+    let { termsOfServiceUrl: t, privacyPolicyUrl: n } = e;
+    return null == t && null == n
         ? null
-        : (0, i.jsxs)('span', {
+        : (0, r.jsxs)('span', {
               className: o.text,
               children: [
-                  null != e &&
-                      (0, i.jsx)(r.Z, {
-                          href: e,
-                          children: l.intl.string(l.t['8S0kcH'])
+                  null != t &&
+                      (0, r.jsx)(i.Z, {
+                          href: t,
+                          children: a.intl.string(a.t['8S0kcH'])
                       }),
-                  null != e &&
+                  null != t &&
                       null != n &&
-                      (0, i.jsx)('span', {
+                      (0, r.jsx)('span', {
                           'aria-disabled': 'true',
                           children: '\u2022'
                       }),
                   null != n &&
-                      (0, i.jsx)(r.Z, {
+                      (0, r.jsx)(i.Z, {
                           href: n,
-                          children: l.intl.string(l.t.ZpyeCg)
+                          children: a.intl.string(a.t.ZpyeCg)
                       })
               ]
           });

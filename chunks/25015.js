@@ -1,77 +1,77 @@
-(n.d(t, { Z: () => h }), n(388685));
+(n.d(t, { Z: () => g }), n(388685));
 var r = n(255367),
-    l = n(73800),
-    o = n(627050),
-    i = n(905405),
-    a = n(626135),
-    s = n(750030),
+    i = n(73800),
+    a = n(627050),
+    o = n(905405),
+    s = n(626135),
+    l = n(750030),
     c = n(937889),
     u = n(761910),
     d = n(488968),
-    p = n(479398),
-    m = n(981631),
-    g = n(388032),
-    f = n(875231);
-let b = l.lazy(() => Promise.all([n.e('87597'), n.e('85831')]).then(n.bind(n, 120314)));
-function h(e, t) {
-    let { hideSimpleEmbedContent: h, formatInline: O = !1, noStyleAndInteraction: y = !1, isInteracting: v = !1, allowHeading: j = !1, allowList: P = !1, allowLinks: x = !1, allowDevLinks: w = !1, previewLinkTarget: C = !1, viewingChannelId: S } = t,
-        E = (0, i.p)(),
-        N = o.d.useExperiment({ location: 'useMessageRenderedContent' }).enabled,
-        T = (0, p.o)({ location: 'useMessageRenderedContent' }),
-        [Z, R] = l.useState(!1),
-        I = l.useCallback((e) => {
-            e && R(!0);
+    f = n(479398),
+    _ = n(981631),
+    p = n(388032),
+    h = n(875231);
+let m = i.lazy(() => Promise.all([n.e('87597'), n.e('85831')]).then(n.bind(n, 120314)));
+function g(e, t) {
+    let { hideSimpleEmbedContent: g, formatInline: E = !1, noStyleAndInteraction: b = !1, isInteracting: y = !1, allowHeading: O = !1, allowList: v = !1, allowLinks: I = !1, allowDevLinks: T = !1, previewLinkTarget: S = !1, viewingChannelId: A } = t,
+        N = (0, o.p)(),
+        C = a.d.useExperiment({ location: 'useMessageRenderedContent' }).enabled,
+        w = (0, f.o)({ location: 'useMessageRenderedContent' }),
+        [R, P] = i.useState(!1),
+        D = i.useCallback((e) => {
+            e && P(!0);
         }, []);
     return (
-        l.useEffect(() => {
-            R(!1);
+        i.useEffect(() => {
+            P(!1);
         }, [e.content]),
-        l.useMemo(() => {
+        i.useMemo(() => {
             if (null != e.customRenderedContent) return e.customRenderedContent;
             if (e.isUnsupported)
                 return {
-                    content: g.intl.string(g.t.sWi5ER),
+                    content: p.intl.string(p.t.sWi5ER),
                     hasSpoilerEmbeds: !1
                 };
-            if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(m.iLy.LOADING)) return (0, u.Z)(e);
-            if (e.type === m.uaV.CHANGELOG) {
+            if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(_.iLy.LOADING)) return (0, u.Z)(e);
+            if (e.type === _.uaV.CHANGELOG) {
                 let { renderChangelogMessageMarkup: t } = n(55406);
-                return t(e, f, {
+                return t(e, h, {
                     track: (e, t) => {
-                        a.default.track(e, t);
+                        s.default.track(e, t);
                     }
                 });
             }
-            return T.enabled
+            return w.enabled
                 ? {
-                      content: (0, r.jsx)(l.Suspense, {
+                      content: (0, r.jsx)(i.Suspense, {
                           children: (0, r.jsx)(d.v.Provider, {
                               value: {
                                   messageId: e.id,
                                   channelId: e.channel_id,
-                                  viewingChannelId: S,
-                                  guildId: (0, s.k)(e),
-                                  setHasSpoilerEmbeds: I
+                                  viewingChannelId: A,
+                                  guildId: (0, l.k)(e),
+                                  setHasSpoilerEmbeds: D
                               },
-                              children: (0, r.jsx)(b, { content: e.content })
+                              children: (0, r.jsx)(m, { content: e.content })
                           })
                       }),
-                      hasSpoilerEmbeds: Z
+                      hasSpoilerEmbeds: R
                   }
                 : (0, c.ZP)(e, {
-                      hideSimpleEmbedContent: h,
-                      formatInline: O,
-                      noStyleAndInteraction: y,
-                      isInteracting: v,
-                      allowHeading: j,
-                      allowList: P,
-                      allowLinks: x,
-                      allowDevLinks: w,
-                      previewLinkTarget: C,
-                      shouldFilterKeywords: E,
-                      viewingChannelId: S,
-                      allowGameMentions: N
+                      hideSimpleEmbedContent: g,
+                      formatInline: E,
+                      noStyleAndInteraction: b,
+                      isInteracting: y,
+                      allowHeading: O,
+                      allowList: v,
+                      allowLinks: I,
+                      allowDevLinks: T,
+                      previewLinkTarget: S,
+                      shouldFilterKeywords: N,
+                      viewingChannelId: A,
+                      allowGameMentions: C
                   });
-        }, [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, h, O, y, v, j, P, x, C, E, w, S, T.enabled, N, Z])
+        }, [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, g, E, b, y, O, v, I, S, N, T, A, w.enabled, C, R])
     );
 }

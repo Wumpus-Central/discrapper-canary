@@ -4,8 +4,8 @@ n(73800);
 var i = n(442837),
     l = n(692547),
     o = n(481060),
-    a = n(619915),
-    s = n(456269),
+    s = n(619915),
+    a = n(456269),
     c = n(921711),
     u = n(368442),
     d = n(601070),
@@ -15,8 +15,8 @@ var i = n(442837),
     g = n(979651),
     m = n(968358),
     b = n(790901),
-    _ = n(714794),
-    O = n(355363),
+    O = n(714794),
+    _ = n(355363),
     y = n(687352),
     C = n(876548),
     v = n(25601),
@@ -26,31 +26,31 @@ var i = n(442837),
     x = n(990252);
 function I(e) {
     var t;
-    let { channel: n, isChannelSelected: I, isChannelCollapsed: P, voiceStates: N, enableConnectedUserLimit: w, enableActivities: T, isSubscriptionGated: Z, needSubscriptionToAccess: A, isNewChannel: R, muted: D, resolvedUnreadSetting: L } = e,
+    let { channel: n, isChannelSelected: I, isChannelCollapsed: P, voiceStates: N, enableConnectedUserLimit: w, enableActivities: Z, isSubscriptionGated: T, needSubscriptionToAccess: A, isNewChannel: R, muted: D, resolvedUnreadSetting: L } = e,
         M = (0, i.e7)([f.ZP], () => f.ZP.getMentionCount(n.id)),
         k = (0, i.e7)([f.ZP], () => f.ZP.getIsMentionLowImportance(n.id)),
-        U = (0, a.ZP)(n),
+        U = (0, s.ZP)(n),
         G = (0, i.e7)([p.Z], () => !p.Z.can(j.Plq.CONNECT, n)),
         B = (0, i.e7)([g.Z], () => g.Z.hasVideo(n.id)),
         V = (0, u.PK)(n.id) && n.isGuildStageVoice(),
-        F = (0, O.ZP)({
+        F = (0, _.ZP)({
             channel: n,
             locked: G,
             video: B || V,
             selected: I
         }),
         H = (0, i.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)),
-        z = (0, s.n2)(n.guild_id, n.id),
+        z = (0, a.n2)(n.guild_id, n.id),
         W = (0, i.e7)([h.Z], () => {
             var e, t;
             return null != (t = null == (e = h.Z.getGuild(n.guild_id)) ? void 0 : e.features.has(j.oNc.COMMUNITY)) && t;
         });
-    if ((0, _.Z)(M))
+    if ((0, O.Z)(M))
         return (0, r.jsx)(v.Z, {
             mentionsCount: M,
             isMentionLowImportance: k
         });
-    if ((0, c.O)(Z)) return (0, r.jsx)(c.Z, { locked: A });
+    if ((0, c.O)(T)) return (0, r.jsx)(c.Z, { locked: A });
     if (R)
         return (0, r.jsx)(o.IGR, {
             text: S.intl.string(S.t.y2b7CA),
@@ -81,7 +81,7 @@ function I(e) {
                 text: S.intl.string(S.t.dI3q4u),
                 color: l.Z.unsafe_rawColors.RED_400.css
             })
-          : null != T && T && (0, b.u)(U)
+          : null != Z && Z && (0, b.u)(U)
             ? (0, r.jsx)(y.Z, {
                   embeddedApps: U,
                   muted: D

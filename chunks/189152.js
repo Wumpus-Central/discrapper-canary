@@ -8,5 +8,6 @@ e.exports = {
     resizeHandleTopRight: 'resizeHandleTopRight__6341f',
     resizeHandleTopLeft: 'resizeHandleTopLeft__6341f',
     resizeHandleBottomRight: 'resizeHandleBottomRight__6341f',
-    resizeHandleBottomLeft: 'resizeHandleBottomLeft__6341f'
+    resizeHandleBottomLeft: 'resizeHandleBottomLeft__6341f',
+    belowSidebar: 'belowSidebar__6341f'
 };

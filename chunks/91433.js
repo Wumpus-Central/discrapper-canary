@@ -28,20 +28,20 @@ function b(e) {
             isGameRelationship: y,
             location: A
         }),
-        R = i.useCallback(() => {
+        w = i.useCallback(() => {
             (N(), S({ action: y ? 'ACCEPT_GAME_FRIEND_REQUEST' : 'ACCEPT_FRIEND_REQUEST' }));
         }, [N, y, S]),
-        P = i.useCallback(() => {
+        R = i.useCallback(() => {
             (C(), S({ action: y ? 'IGNORE_GAME_FRIEND_REQUEST' : 'IGNORE_FRIEND_REQUEST' }));
         }, [C, y, S]),
-        w = null != b,
+        P = null != b,
         D = (0, u.q)(b);
-    return w && null == D
+    return P && null == D
         ? null
         : (0, r.jsxs)('div', {
               className: o()(E.container, O),
               children: [
-                  w
+                  P
                       ? (0, r.jsx)(l.Text, {
                             variant: 'text-sm/normal',
                             children: g.intl.format(y ? g.t.syHjLC : g.t.V15uUF, {
@@ -71,7 +71,7 @@ function b(e) {
                               color: I ? s.zx.Colors.PRIMARY : o()(s.zx.Colors.BRAND, E.color),
                               size: s.zx.Sizes.SMALL,
                               className: E.button,
-                              onClick: R,
+                              onClick: w,
                               children: g.intl.string(g.t.ZcibdX)
                           }),
                           (0, r.jsx)(s.zx, {
@@ -79,7 +79,7 @@ function b(e) {
                               color: s.zx.Colors.PRIMARY,
                               size: s.zx.Sizes.SMALL,
                               className: E.button,
-                              onClick: P,
+                              onClick: R,
                               children: g.intl.string(g.t.xuio0N)
                           })
                       ]

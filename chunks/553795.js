@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => P }), n(388685));
+(n.d(t, { Z: () => R }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -95,7 +95,7 @@ function C(e) {
         openid_params: r
     });
 }
-class R extends (r = i.ZP.Store) {
+class w extends (r = i.ZP.Store) {
     isJoining(e) {
         return E[e] || !1;
     }
@@ -130,8 +130,8 @@ class R extends (r = i.ZP.Store) {
         return b.has(e);
     }
 }
-u(R, 'displayName', 'ConnectedAccountsStore');
-let P = new R(a.Z, {
+u(w, 'displayName', 'ConnectedAccountsStore');
+let R = new w(a.Z, {
     CONNECTION_OPEN: I,
     USER_CONNECTIONS_UPDATE: T,
     USER_CONNECTIONS_INTEGRATION_JOINING: S,

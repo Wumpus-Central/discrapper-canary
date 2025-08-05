@@ -1,4 +1,4 @@
-(t.d(n, { Z: () => E }), t(388685));
+(t.d(n, { Z: () => S }), t(388685));
 var o = t(255367),
     c = t(73800),
     i = t(66546),
@@ -8,52 +8,52 @@ var o = t(255367),
     l = t(616780),
     s = t(100527),
     u = t(906732),
-    _ = t(313201),
+    p = t(313201),
     f = t(368326),
-    p = t(429467),
+    _ = t(429467),
     m = t(680295),
     I = t(699516),
     h = t(5192),
     x = t(785717),
-    b = t(687158),
-    y = t(510659),
+    y = t(687158),
+    b = t(510659),
     v = t(113557),
     j = t(867176),
     Z = t(451834),
-    g = t(502762),
-    A = t(4517),
+    A = t(502762),
+    g = t(4517),
     O = t(314386),
     N = t(62154),
     C = t(277094),
     P = t(228168),
     T = t(388032),
-    w = t(405666);
-function E(e) {
-    let { user: n, currentUser: t, guildId: E, channelId: S, messageId: M, roleId: L, sessionId: D, initialSection: R, initialSubsection: B, transitionState: G, customStatusPrompt: k, openedAt: F, onClose: U, showGuildProfile: V = !0, sourceAnalyticsLocations: Y = [] } = e,
+    E = t(405666);
+function S(e) {
+    let { user: n, currentUser: t, guildId: S, channelId: M, messageId: w, roleId: L, sessionId: D, initialSection: B, initialSubsection: R, transitionState: k, customStatusPrompt: G, openedAt: F, onClose: U, showGuildProfile: V = !0, sourceAnalyticsLocations: Y = [] } = e,
         { analyticsLocations: W } = (0, u.ZP)([...Y, s.Z.USER_PROFILE_MODAL]),
         q = (0, x.ZB)({
             layout: 'MODAL',
             userId: n.id,
             sourceSessionId: D,
-            guildId: E,
-            channelId: S,
-            messageId: M,
+            guildId: S,
+            channelId: M,
+            messageId: w,
             roleId: L,
             showGuildProfile: V
         }),
-        K = (0, y.$m)(),
+        K = (0, b.$m)(),
         H = (0, r.q_F)({
             opacity: +(null != K.interactionType),
             config: { duration: 150 }
         }),
-        z = (0, b.ZP)(n.id, V ? E : void 0),
-        X = h.ZP.getName(null == z ? void 0 : z.guildId, S, n),
-        J = (0, _.Dt)(),
+        z = (0, y.ZP)(n.id, V ? S : void 0),
+        X = h.ZP.getName(null == z ? void 0 : z.guildId, M, n),
+        J = (0, p.Dt)(),
         Q = (0, a.e7)([I.Z], () => I.Z.getRelationshipType(n.id)),
         $ = n.id === t.id,
         ee = (0, f.p)({ location: 'UserProfileModal' }),
-        en = c.useMemo(() => (null != k ? k : (0, p.Z)()), [k]),
-        et = c.useMemo(() => (null != E ? { [E]: [n.id] } : {}), [E, n.id]);
+        en = c.useMemo(() => (null != G ? G : (0, _.Z)()), [G]),
+        et = c.useMemo(() => (null != S ? { [S]: [n.id] } : {}), [S, n.id]);
     (0, l.$)(et);
     let eo = c.useRef(null),
         ec = (0, d.Z)(eo);
@@ -65,11 +65,11 @@ function E(e) {
             fetchStartedAt: null == z ? void 0 : z.fetchStartedAt,
             fetchEndedAt: null == z ? void 0 : z.fetchEndedAt,
             isLoaded: null == z ? void 0 : z.isLoaded,
-            children: (0, o.jsx)(y.NJ, {
+            children: (0, o.jsx)(b.NJ, {
                 value: K,
                 children: (0, o.jsxs)(r.Y0X, {
-                    transitionState: G,
-                    className: w.root,
+                    transitionState: k,
+                    className: E.root,
                     hideShadow: !0,
                     'aria-labelledby': J,
                     parentComponent: 'UserProfileModal',
@@ -81,7 +81,7 @@ function E(e) {
                                     children: T.intl.format(T.t.KRe1Fh, { name: X })
                                 })
                             }),
-                            children: (0, o.jsxs)(g.Z, {
+                            children: (0, o.jsxs)(A.Z, {
                                 user: n,
                                 displayProfile: z,
                                 themeType: P.lY.MODAL,
@@ -89,8 +89,8 @@ function E(e) {
                                 children: [
                                     (0, o.jsx)(O.Z, {
                                         user: n,
-                                        guildId: E,
-                                        channelId: S,
+                                        guildId: S,
+                                        channelId: M,
                                         displayProfile: z,
                                         onClose: U
                                     }),
@@ -104,39 +104,39 @@ function E(e) {
                                             (0, o.jsx)(Z.Z, {
                                                 userId: n.id,
                                                 onClose: U,
-                                                className: w.toast
+                                                className: E.toast
                                             }),
                                             null != K.interactionType &&
                                                 (0, o.jsx)(i.animated.div, {
                                                     style: H,
-                                                    className: w.backdrop
+                                                    className: E.backdrop
                                                 }),
                                             (0, o.jsxs)('div', {
-                                                className: w.headerInner,
+                                                className: E.headerInner,
                                                 children: [
                                                     (0, o.jsx)(v.Z, {
                                                         location: 'UserProfileModal',
                                                         user: n,
                                                         displayProfile: z,
-                                                        guildId: E,
-                                                        channelId: S,
+                                                        guildId: S,
+                                                        channelId: M,
                                                         themeType: P.lY.MODAL
                                                     }),
-                                                    (0, o.jsx)(A.Z, {
+                                                    (0, o.jsx)(g.Z, {
                                                         location: 'UserProfileModal',
                                                         user: n,
-                                                        guildId: E,
-                                                        channelId: S,
+                                                        guildId: S,
+                                                        channelId: M,
                                                         themeType: P.lY.MODAL,
-                                                        hasEntered: G === r.Dvm.ENTERED,
+                                                        hasEntered: k === r.Dvm.ENTERED,
                                                         prompt: ee && $ ? en : null
                                                     }),
                                                     (0, o.jsx)('div', {
-                                                        className: w.headerButtons,
+                                                        className: E.headerButtons,
                                                         children: (0, o.jsx)(C.Z, {
                                                             user: n,
                                                             currentUser: t,
-                                                            guildId: E,
+                                                            guildId: S,
                                                             relationshipType: Q,
                                                             onClose: U
                                                         })
@@ -148,11 +148,11 @@ function E(e) {
                                     (0, o.jsx)(N.Z, {
                                         user: n,
                                         currentUser: t,
-                                        guildId: E,
-                                        channelId: S,
+                                        guildId: S,
+                                        channelId: M,
                                         displayProfile: z,
-                                        initialSection: R,
-                                        initialSubsection: B,
+                                        initialSection: B,
+                                        initialSubsection: R,
                                         onClose: U
                                     })
                                 ]

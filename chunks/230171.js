@@ -1,6 +1,6 @@
 (n.d(t, {
-    O: () => R,
-    U: () => T.Un
+    O: () => x,
+    U: () => C.Un
 }),
     n(539854),
     n(784620),
@@ -9,133 +9,133 @@
     n(388685));
 var r = n(255367),
     i = n(73800),
-    l = n(373793),
-    a = n(705512),
-    o = n(442837),
-    s = n(481060),
+    a = n(373793),
+    o = n(705512),
+    s = n(442837),
+    l = n(481060),
     c = n(566620),
     u = n(574952),
     d = n(100527),
-    p = n(906732),
-    m = n(915346),
-    f = n(783097),
-    g = n(812236),
-    _ = n(561308),
-    h = n(567409),
-    b = n(706454),
-    E = n(314897),
-    C = n(699516),
-    v = n(914010),
-    O = n(594174),
-    x = n(768581),
-    y = n(433534),
-    I = n(506895),
-    j = n(758199),
-    S = n(943762),
-    T = n(914498),
-    N = n(172109),
-    P = n(880251),
-    A = n(515344),
-    w = n(388032),
-    Z = n(758364);
-function R(e) {
-    let { app: t, embedUrl: n, linkType: l, activityCustomId: a, activityReferrerId: s, onView: _ } = e,
-        { name: h, bot: b } = (t = (0, N.O)(t)),
-        C = null == b ? void 0 : b.id,
-        v = (0, f.ye)(t),
-        O = x.ZP.getApplicationIconURL({
+    f = n(906732),
+    _ = n(915346),
+    p = n(783097),
+    h = n(812236),
+    m = n(561308),
+    g = n(567409),
+    E = n(706454),
+    b = n(314897),
+    y = n(699516),
+    O = n(914010),
+    v = n(594174),
+    I = n(768581),
+    T = n(433534),
+    S = n(506895),
+    A = n(758199),
+    N = n(943762),
+    C = n(914498),
+    w = n(172109),
+    R = n(880251),
+    P = n(515344),
+    D = n(388032),
+    L = n(758364);
+function x(e) {
+    let { app: t, embedUrl: n, linkType: a, activityCustomId: o, activityReferrerId: l, onView: m } = e,
+        { name: g, bot: E } = (t = (0, w.O)(t)),
+        y = null == E ? void 0 : E.id,
+        O = (0, p.ye)(t),
+        v = I.ZP.getApplicationIconURL({
             id: t.id,
             icon: t.icon,
-            bot: b
+            bot: E
         }),
-        { staticBannerSrc: y, videoBannerSrc: S, bannerAspectRatio: Z } = (0, P.E)(t),
-        R = (0, o.e7)([E.default], () => (null != s ? s : E.default.getId()), [s]),
-        { analyticsLocations: M } = (0, p.ZP)(d.Z.APP_MESSAGE_EMBED),
-        { currentChannelId: k, instanceId: U, isCurrentlyInInstance: F, canLaunchInChannel: B } = (0, I.c)(t.id),
-        G = (0, u.Z)(),
-        V = (0, g.ms)({
+        { staticBannerSrc: T, videoBannerSrc: N, bannerAspectRatio: L } = (0, R.E)(t),
+        x = (0, s.e7)([b.default], () => (null != l ? l : b.default.getId()), [l]),
+        { analyticsLocations: M } = (0, f.ZP)(d.Z.APP_MESSAGE_EMBED),
+        { currentChannelId: U, instanceId: G, isCurrentlyInInstance: B, canLaunchInChannel: Z } = (0, S.c)(t.id),
+        F = (0, u.Z)(),
+        V = (0, h.ms)({
             context: { type: 'contextless' },
             applicationId: t.id,
-            botUserId: null == b ? void 0 : b.id
+            botUserId: null == E ? void 0 : E.id
         }),
-        H = null != C && v && V,
-        z = B && v,
-        W = (0, A.G)(t),
-        K = (0, A.z)(t),
-        Y = i.useMemo(() => {
+        H = null != y && O && V,
+        Y = Z && O,
+        W = (0, P.G)(t),
+        K = (0, P.z)(t),
+        z = i.useMemo(() => {
             let e = [];
             return (
-                v
-                    ? (z &&
+                O
+                    ? (Y &&
                           e.push({
-                              label: null == U ? w.intl.string(w.t.RscU7O) : w.intl.string(w.t.VJlc0d),
-                              trackingArea: T.j_.PLAY,
+                              label: null == G ? D.intl.string(D.t.RscU7O) : D.intl.string(D.t.VJlc0d),
+                              trackingArea: C.j_.PLAY,
                               onClick() {
                                   (0, c.G6)({
-                                      channelId: null != k ? k : void 0,
+                                      channelId: null != U ? U : void 0,
                                       applicationId: t.id,
-                                      isStart: null == U,
-                                      embeddedActivitiesManager: G,
-                                      customId: a,
-                                      referrerId: R,
+                                      isStart: null == G,
+                                      embeddedActivitiesManager: F,
+                                      customId: o,
+                                      referrerId: x,
                                       analyticsLocations: M
                                   });
                               },
-                              disabledReason: F ? w.intl.string(w.t.wJNK8P) : void 0
+                              disabledReason: B ? D.intl.string(D.t.wJNK8P) : void 0
                           }),
-                      !z &&
+                      !Y &&
                           H &&
                           e.push({
-                              label: w.intl.string(w.t.JeK1Wl),
-                              trackingArea: T.j_.PLAY,
+                              label: D.intl.string(D.t.JeK1Wl),
+                              trackingArea: C.j_.PLAY,
                               onClick() {
-                                  (0, m.W)({
+                                  (0, _.W)({
                                       appId: t.id,
-                                      botId: C,
+                                      botId: y,
                                       analyticsLocations: M,
-                                      customId: a,
-                                      referrerId: R
+                                      customId: o,
+                                      referrerId: x
                                   });
                               }
                           }))
                     : null != K && e.push(K),
                 e
             );
-        }, [z, H, U, F, k, t.id, G, a, R, M, v, K, C]),
-        X = v ? (0, r.jsx)(L, { app: t }) : (0, r.jsx)(D, { app: t });
-    return (0, r.jsx)(j.W, {
-        title: h,
-        staticBannerSrc: y,
-        videoBannerSrc: S,
+        }, [Y, H, G, B, U, t.id, F, o, x, M, O, K, y]),
+        q = O ? (0, r.jsx)(j, { app: t }) : (0, r.jsx)(k, { app: t });
+    return (0, r.jsx)(A.W, {
+        title: g,
+        staticBannerSrc: T,
+        videoBannerSrc: N,
         onClickBanner: W,
-        bannerAspectRatio: Z,
-        iconSrc: O,
+        bannerAspectRatio: L,
+        iconSrc: v,
         embedUrl: n,
-        info: X,
-        actions: Y,
+        info: q,
+        actions: z,
         onClickContent: W,
         trackingConfig: {
             id: t.id,
-            linkType: l,
-            referrerId: R,
-            activityCustomId: a,
-            onView: _
+            linkType: a,
+            referrerId: x,
+            activityCustomId: o,
+            onView: m
         }
     });
 }
-function D(e) {
-    var t, n, a;
+function k(e) {
+    var t, n, o;
     let { app: c } = e,
         u =
-            (0, y.Eb)({
+            (0, T.Eb)({
                 customInstallUrl: c.customInstallUrl,
                 installParams: c.installParams,
                 integrationTypesConfig: c.integrationTypesConfig
             }) &&
             null != c.integrationTypesConfig &&
-            l.Y.GUILD_INSTALL in c.integrationTypesConfig,
-        d = (0, o.e7)([b.default], () => b.default.locale, []),
-        p = i.useMemo(() => {
+            a.Y.GUILD_INSTALL in c.integrationTypesConfig,
+        d = (0, s.e7)([E.default], () => E.default.locale, []),
+        f = i.useMemo(() => {
             var e, t;
             if (!u) return null;
             let n = new Intl.NumberFormat(d, {
@@ -143,114 +143,114 @@ function D(e) {
                     compactDisplay: 'short'
                 }),
                 r = null != (t = null == (e = c.directoryEntry) ? void 0 : e.guild_count) ? t : 0;
-            return 0 === r ? null : w.intl.format(w.t['6IW6Wl'], { guildCount: n.format(r) });
+            return 0 === r ? null : D.intl.format(D.t['6IW6Wl'], { guildCount: n.format(r) });
         }, [null == (t = c.directoryEntry) ? void 0 : t.guild_count, u, d]),
-        m = null == (a = c.categories) || null == (n = a.at(0)) ? void 0 : n.name;
+        _ = null == (o = c.categories) || null == (n = o.at(0)) ? void 0 : n.name;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            null != m &&
-                (0, r.jsx)(s.Text, {
+            null != _ &&
+                (0, r.jsx)(l.Text, {
                     variant: 'text-xs/medium',
-                    className: Z.description,
+                    className: L.description,
                     color: 'none',
-                    children: m
+                    children: _
                 }),
-            null != p &&
-                (0, r.jsxs)(s.Text, {
+            null != f &&
+                (0, r.jsxs)(l.Text, {
                     variant: 'text-xs/normal',
-                    className: Z.tagline,
+                    className: L.tagline,
                     color: 'none',
                     lineClamp: 1,
                     children: [
-                        (0, r.jsx)(s.Jmo, {
+                        (0, r.jsx)(l.Jmo, {
                             size: 'xxs',
                             color: 'currentColor'
                         }),
-                        p
+                        f
                     ]
                 })
         ]
     });
 }
-function L(e) {
+function j(e) {
     let { app: t } = e,
-        { tags: n, maxParticipants: l = 0 } = t,
-        c = (0, o.e7)(
-            [v.Z],
+        { tags: n, maxParticipants: a = 0 } = t,
+        c = (0, s.e7)(
+            [O.Z],
             () => {
                 var e;
-                return null != (e = v.Z.getGuildId()) ? e : void 0;
+                return null != (e = O.Z.getGuildId()) ? e : void 0;
             },
             []
         ),
-        u = (0, h.N)(t.id),
-        d = (0, o.Wu)(
-            [O.default, C.Z],
+        u = (0, g.N)(t.id),
+        d = (0, s.Wu)(
+            [v.default, y.Z],
             () => {
                 let e = [];
                 for (let [t, n] of u.entries()) {
                     if (t >= 5) break;
-                    let r = O.default.getUser(n.author_id),
-                        i = C.Z.isFriend(n.author_id);
+                    let r = v.default.getUser(n.author_id),
+                        i = y.Z.isFriend(n.author_id);
                     null != r && i && e.push(r);
                 }
                 return e;
             },
             [u]
         ),
-        p = i.useMemo(() => {
+        f = i.useMemo(() => {
             if (d.length > 0)
-                return (0, r.jsx)(S.K, {
+                return (0, r.jsx)(N.K, {
                     activityUsers: d,
                     guildId: c,
-                    activityText: w.intl.formatToPlainString(w.t['IJa+4+'], { count: d.length })
+                    activityText: D.intl.formatToPlainString(D.t['IJa+4+'], { count: d.length })
                 });
-            if (u.some((e) => (0, _.ig)(e) === a.o.GLOBAL))
+            if (u.some((e) => (0, m.ig)(e) === o.o.GLOBAL))
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsx)(s.YqE, {
+                        (0, r.jsx)(l.YqE, {
                             size: 'xxs',
                             color: 'currentColor'
                         }),
-                        w.intl.string(w.t.TsWCdX)
+                        D.intl.string(D.t.TsWCdX)
                     ]
                 });
-            let e = l > 0 ? w.intl.format(w.t.z8EAJS, { count: l }) : w.intl.string(w.t.RjceQU);
+            let e = a > 0 ? D.intl.format(D.t.z8EAJS, { count: a }) : D.intl.string(D.t.RjceQU);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(s.tBG, {
+                    (0, r.jsx)(l.tBG, {
                         size: 'xxs',
                         color: 'currentColor'
                     }),
                     e
                 ]
             });
-        }, [u, d, c, l]);
+        }, [u, d, c, a]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             n.length > 0 &&
-                (0, r.jsx)(s.Text, {
+                (0, r.jsx)(l.Text, {
                     variant: 'text-xs/medium',
-                    className: Z.description,
+                    className: L.description,
                     color: 'none',
                     lineClamp: 1,
                     children: n.map((e, t) =>
                         (0, r.jsx)(
                             'span',
                             {
-                                className: Z.tag,
+                                className: L.tag,
                                 children: e
                             },
                             t
                         )
                     )
                 }),
-            (0, r.jsx)(s.Text, {
+            (0, r.jsx)(l.Text, {
                 variant: 'text-xs/normal',
-                className: Z.tagline,
+                className: L.tagline,
                 color: 'none',
                 lineClamp: 1,
-                children: p
+                children: f
             })
         ]
     });

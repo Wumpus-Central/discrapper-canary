@@ -112,7 +112,7 @@ function L() {
     };
 }
 let M = '1193992107035983872',
-    W = {
+    Z = {
         id: M,
         preview: !0,
         config: {
@@ -180,9 +180,9 @@ let M = '1193992107035983872',
         userStatus: null,
         targetedContent: []
     };
-function Z() {
-    var e, t, o, u, B, V, M, Z;
-    let [U, H] = s.useState(W),
+function W() {
+    var e, t, o, u, B, V, M, W;
+    let [U, H] = s.useState(Z),
         z = s.useCallback((e) => {
             H(I(k({}, e), { preview: !0 }));
         }, []),
@@ -191,8 +191,8 @@ function Z() {
         [G, J] = s.useState(!1),
         [$, ee] = s.useState(null),
         et =
-            ((Z = U.config),
-            (0, i.EQ)(Z)
+            ((W = U.config),
+            (0, i.EQ)(W)
                 .with({ configVersion: 2 }, (e) => e.rewardsConfig.rewards)
                 .exhaustive());
     function en(e, t) {
@@ -850,7 +850,7 @@ class U extends s.Component {
                           })
                   ]
               })
-            : (0, r.jsx)(Z, {}, t);
+            : (0, r.jsx)(W, {}, t);
     }
     constructor(...e) {
         (super(...e),

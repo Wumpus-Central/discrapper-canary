@@ -1,7 +1,7 @@
-(n.d(t, { V: () => l }), n(388685));
+(n.d(t, { V: () => a }), n(388685));
 var r = n(442837),
     i = n(375954);
-function l(e, t) {
+function a(e, t) {
     return (0, r.e7)(
         [i.Z],
         () => {

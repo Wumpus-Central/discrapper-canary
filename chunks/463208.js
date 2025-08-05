@@ -98,8 +98,8 @@ function E(e, t) {
 }
 function b(e) {
     var t;
-    let { disabled: n = !1, editable: a, inputRef: l, focusProps: f, name: p = '', type: g = 'text', placeholder: b = '', maxLength: y = 999, value: O, defaultValue: v, minLength: I, error: T, defaultDirty: S = !1, leading: A, trailing: N, validateOn: C = 'change', size: R = 'md', fullWidth: P = !1 } = e,
-        w = m(e, ['disabled', 'editable', 'inputRef', 'focusProps', 'name', 'type', 'placeholder', 'maxLength', 'value', 'defaultValue', 'minLength', 'error', 'defaultDirty', 'leading', 'trailing', 'validateOn', 'size', 'fullWidth']),
+    let { disabled: n = !1, editable: a, inputRef: l, focusProps: f, name: p = '', type: g = 'text', placeholder: b = '', maxLength: y = 999, value: O, defaultValue: v, minLength: I, error: T, defaultDirty: S = !1, leading: A, trailing: N, validateOn: C = 'change', size: w = 'md', fullWidth: R = !1 } = e,
+        P = m(e, ['disabled', 'editable', 'inputRef', 'focusProps', 'name', 'type', 'placeholder', 'maxLength', 'value', 'defaultValue', 'minLength', 'error', 'defaultDirty', 'leading', 'trailing', 'validateOn', 'size', 'fullWidth']),
         D = E(O, v),
         L = (0, u.m)({
             validateOn: C,
@@ -110,26 +110,26 @@ function b(e) {
             defaultDirty: S
         }),
         { setShouldValidate: x } = L,
-        M = (e) => {
-            var t, n;
-            let r = e.currentTarget.value;
-            (null == (t = w.onChange) || t.call(w, r, p), x(!0), null == (n = D.setHasValue) || n.call(D, '' !== r));
-        },
         k = (e) => {
             var t, n;
-            (null == (t = w.onFocus) || t.call(w, e), null == (n = D.setIsFocused) || n.call(D, !0));
+            let r = e.currentTarget.value;
+            (null == (t = P.onChange) || t.call(P, r, p), x(!0), null == (n = D.setHasValue) || n.call(D, '' !== r));
         },
         j = (e) => {
             var t, n;
-            (null == (t = w.onBlur) || t.call(w, e), null == (n = D.setIsFocused) || n.call(D, !1));
+            (null == (t = P.onFocus) || t.call(P, e), null == (n = D.setIsFocused) || n.call(D, !0));
+        },
+        M = (e) => {
+            var t, n;
+            (null == (t = P.onBlur) || t.call(P, e), null == (n = D.setIsFocused) || n.call(D, !1));
         },
         U = i.useRef(null),
         G = !1 === a || void 0;
     return (0, r.jsxs)(c.J, {
         validation: L,
-        fullWidth: P,
+        fullWidth: R,
         readOnly: G,
-        className: o()(d[R], {
+        className: o()(d[w], {
             [d.leading]: null != A,
             [d.trailing]: null != N
         }),
@@ -154,13 +154,13 @@ function b(e) {
                                     value: O,
                                     defaultValue: v
                                 },
-                                w
+                                P
                             ),
                             {
-                                'aria-labelledby': null != (t = w['aria-labelledby']) ? t : D.titleId,
-                                onChange: M,
-                                onBlur: j,
-                                onFocus: k,
+                                'aria-labelledby': null != (t = P['aria-labelledby']) ? t : D.titleId,
+                                onChange: k,
+                                onBlur: M,
+                                onFocus: j,
                                 ref: l
                             }
                         )

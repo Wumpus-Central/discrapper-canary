@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => T }), n(388685), n(642613), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529));
+(n.d(t, { Z: () => P }), n(388685), n(642613), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529));
 var i = n(255367),
     r = n(73800),
     l = n(120356),
@@ -23,10 +23,10 @@ var i = n(255367),
     C = n(709054),
     N = n(486199),
     S = n(981631),
-    Z = n(388032),
-    I = n(796920),
-    E = n(20493);
-function w(e) {
+    I = n(388032),
+    w = n(796920),
+    Z = n(20493);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -51,31 +51,31 @@ function w(e) {
     }
     return e;
 }
-function T(e) {
+function P(e) {
     let t,
-        { guild: n, integration: l, editedIntegration: a, isExpanded: T, onToggleExpand: P, onDisable: k, onEnable: A } = e,
-        [D, R] = r.useState(!1),
+        { guild: n, integration: l, editedIntegration: a, isExpanded: P, onToggleExpand: T, onDisable: k, onEnable: A } = e,
+        [R, D] = r.useState(!1),
         L = (0, d.e7)([v.Z], () => v.Z.hidePersonalInformation),
         M = r.useCallback(() => {
-            (R(!0), A(l));
+            (D(!0), A(l));
         }, [l, A]),
         B = r.useCallback(() => {
             l.syncing ||
                 (0, p.h7j)((e) => {
                     var t, n;
-                    let r = 0 === l.expire_behavior ? Z.intl.string(Z.t['6kpw4u']) : Z.intl.string(Z.t.fQUQIC);
+                    let r = 0 === l.expire_behavior ? I.intl.string(I.t['6kpw4u']) : I.intl.string(I.t.fQUQIC);
                     return (0, i.jsx)(
                         p.ConfirmModal,
-                        ((t = w({}, e)),
+                        ((t = E({}, e)),
                         (n = n =
                             {
-                                header: Z.intl.string(Z.t.emx3lJ),
+                                header: I.intl.string(I.t.emx3lJ),
                                 confirmText: r,
-                                cancelText: Z.intl.string(Z.t['ETE/oK']),
+                                cancelText: I.intl.string(I.t['ETE/oK']),
                                 onConfirm: () => k(l),
                                 children: (0, i.jsx)(p.Text, {
                                     variant: 'text-md/normal',
-                                    children: l.type === c.b.YOUTUBE ? Z.intl.string(Z.t.anKQWV) : Z.intl.string(Z.t['BW/xtr'])
+                                    children: l.type === c.b.YOUTUBE ? I.intl.string(I.t.anKQWV) : I.intl.string(I.t['BW/xtr'])
                                 })
                             }),
                         Object.getOwnPropertyDescriptors
@@ -122,19 +122,19 @@ function T(e) {
             switch (l.type) {
                 case c.b.YOUTUBE:
                     return {
-                        serviceName: Z.intl.string(Z.t.aS6cKy),
-                        expireBehaviorLabel: Z.intl.string(Z.t.A5MiqK),
-                        syncLabel: Z.intl.string(Z.t['7vHKVV']),
-                        subscribersText: Z.intl.formatToPlainString(Z.t['7lNtcX'], { subscribers: null != (i = l.subscriber_count) ? i : 0 }),
+                        serviceName: I.intl.string(I.t.aS6cKy),
+                        expireBehaviorLabel: I.intl.string(I.t.A5MiqK),
+                        syncLabel: I.intl.string(I.t['7vHKVV']),
+                        subscribersText: I.intl.formatToPlainString(I.t['7lNtcX'], { subscribers: null != (i = l.subscriber_count) ? i : 0 }),
                         channelURL: o
                     };
                 case c.b.TWITCH:
                 default:
                     return {
-                        serviceName: Z.intl.string(Z.t.q4pBGx),
-                        expireBehaviorLabel: Z.intl.string(Z.t['S/WCrK']),
-                        syncLabel: Z.intl.string(Z.t['0jbPKy']),
-                        subscribersText: Z.intl.formatToPlainString(Z.t.RdUTrq, { subscribers: null != (r = l.subscriber_count) ? r : 0 }),
+                        serviceName: I.intl.string(I.t.q4pBGx),
+                        expireBehaviorLabel: I.intl.string(I.t['S/WCrK']),
+                        syncLabel: I.intl.string(I.t['0jbPKy']),
+                        subscribersText: I.intl.formatToPlainString(I.t.RdUTrq, { subscribers: null != (r = l.subscriber_count) ? r : 0 }),
                         channelURL: o
                     };
             }
@@ -148,17 +148,17 @@ function T(e) {
                           onClick: W,
                           children: K.name
                       })
-                    : Z.intl.string(Z.t.PoWNfX);
+                    : I.intl.string(I.t.PoWNfX);
             let n = b.Z.get(l.type);
             return {
                 roleLink: e,
                 syncDescriptionText:
                     l.revoked && null != n
-                        ? Z.intl.formatToPlainString(Z.t.G16Wjo, {
+                        ? I.intl.formatToPlainString(I.t.G16Wjo, {
                               user: l.user,
                               platformName: n.name
                           })
-                        : Z.intl.formatToPlainString(Z.t.unl3AA, { datetime: s()(l.synced_at).calendar() })
+                        : I.intl.formatToPlainString(I.t.unl3AA, { datetime: s()(l.synced_at).calendar() })
             };
         }, [K, W, l.revoked, l.synced_at, l.type, l.user]),
         X = (0, d.e7)([j.Z], () => j.Z.getSortedRoles(n.id)),
@@ -169,7 +169,7 @@ function T(e) {
         }, [n.id, X, l.enable_emoticons, l.id, l.role_id]);
     if (
         (r.useEffect(() => {
-            (null == a ? void 0 : a.id) === l.id && (null == a ? void 0 : a.enabled) === !0 && R(!1);
+            (null == a ? void 0 : a.id) === l.id && (null == a ? void 0 : a.enabled) === !0 && D(!1);
         }, [a, l.id]),
         l.enabled && null != l.user)
     )
@@ -177,8 +177,8 @@ function T(e) {
             {
                 icon: p.T39,
                 text: L
-                    ? Z.intl.formatToPlainString(Z.t.gcdJ8P, { timestamp: C.default.extractTimestamp(l.id) })
-                    : Z.intl.formatToPlainString(Z.t.Nu9sam, {
+                    ? I.intl.formatToPlainString(I.t.gcdJ8P, { timestamp: C.default.extractTimestamp(l.id) })
+                    : I.intl.formatToPlainString(I.t.Nu9sam, {
                           user: null != l.user ? new x.Z(l.user).tag : null,
                           timestamp: C.default.extractTimestamp(l.id)
                       })
@@ -188,7 +188,7 @@ function T(e) {
         let e = new URL(G);
         t = [
             {
-                text: Z.intl.format(Z.t.BegylZ, {
+                text: I.intl.format(I.t.BegylZ, {
                     serviceName: H,
                     accountUrl: G,
                     accountUrlText: e.hostname + e.pathname
@@ -197,12 +197,12 @@ function T(e) {
         ];
     }
     let J = (0, i.jsxs)(g.Z, {
-            className: I.header,
+            className: w.header,
             align: g.Z.Align.CENTER,
             children: [
                 (0, i.jsx)(N.Z, {
                     name: ''.concat(l.name),
-                    detailsClassName: I.description,
+                    detailsClassName: w.description,
                     details: t
                 }),
                 l.enabled
@@ -210,8 +210,8 @@ function T(e) {
                           shrink: 0,
                           grow: 0,
                           children: (0, i.jsx)(O.Z, {
-                              className: I.expandIcon,
-                              expanded: T && !D,
+                              className: w.expandIcon,
+                              expanded: P && !R,
                               'aria-hidden': !0
                           })
                       })
@@ -222,27 +222,27 @@ function T(e) {
                               size: u.zx.Sizes.SMALL,
                               color: u.zx.Colors.PRIMARY,
                               onClick: M,
-                              disabled: D,
-                              children: D
+                              disabled: R,
+                              children: R
                                   ? (0, i.jsx)(y.Z, {
                                         width: 24,
                                         height: 24
                                     })
-                                  : (0, i.jsx)(i.Fragment, { children: Z.intl.string(Z.t['7sCN8v']) })
+                                  : (0, i.jsx)(i.Fragment, { children: I.intl.string(I.t['7sCN8v']) })
                           })
                       })
             ]
         }),
         Q = null;
     return (
-        T &&
-            !D &&
+        P &&
+            !R &&
             null != a &&
             (Q = (0, i.jsxs)(g.Z, {
-                className: I.body,
+                className: w.body,
                 direction: g.Z.Direction.VERTICAL,
                 children: [
-                    (0, i.jsx)(p.$i$, { className: I.topDivider }),
+                    (0, i.jsx)(p.$i$, { className: w.topDivider }),
                     (function (e) {
                         let { integration: t, labelText: n, subscribersText: r, descriptionText: l, roleLink: o, onSync: a } = e;
                         return (0, i.jsxs)(g.Z, {
@@ -251,11 +251,11 @@ function T(e) {
                                     basis: '50%',
                                     children: [
                                         (0, i.jsx)(p.vwX, {
-                                            className: E.marginBottom8,
-                                            children: Z.intl.string(Z.t.eBtNBQ)
+                                            className: Z.marginBottom8,
+                                            children: I.intl.string(I.t.eBtNBQ)
                                         }),
                                         (0, i.jsx)(p.Text, {
-                                            className: I.syncedRole,
+                                            className: w.syncedRole,
                                             color: 'header-primary',
                                             variant: 'text-sm/normal',
                                             children: o
@@ -266,7 +266,7 @@ function T(e) {
                                     basis: '50%',
                                     children: [
                                         (0, i.jsx)(p.vwX, {
-                                            className: E.marginBottom8,
+                                            className: Z.marginBottom8,
                                             children: n
                                         }),
                                         (0, i.jsxs)(g.Z, {
@@ -308,7 +308,7 @@ function T(e) {
                         roleLink: q,
                         onSync: U
                     }),
-                    (0, i.jsx)(p.$i$, { className: I.midDivider }),
+                    (0, i.jsx)(p.$i$, { className: w.midDivider }),
                     (function (e) {
                         let { integration: t, labelText: n, onBehaviorChange: r, onGracePeriodChange: l } = e;
                         return (0, i.jsxs)(g.Z, {
@@ -317,7 +317,7 @@ function T(e) {
                                     basis: '50%',
                                     children: [
                                         (0, i.jsx)(p.vwX, {
-                                            className: E.marginBottom8,
+                                            className: Z.marginBottom8,
                                             children: n
                                         }),
                                         (0, i.jsx)(p.q4e, {
@@ -326,11 +326,11 @@ function T(e) {
                                             options: [
                                                 {
                                                     value: '0',
-                                                    label: Z.intl.string(Z.t['6kpw4u'])
+                                                    label: I.intl.string(I.t['6kpw4u'])
                                                 },
                                                 {
                                                     value: '1',
-                                                    label: Z.intl.string(Z.t.fQUQIC)
+                                                    label: I.intl.string(I.t.fQUQIC)
                                                 }
                                             ],
                                             isDisabled: t.syncing,
@@ -342,16 +342,16 @@ function T(e) {
                                     basis: '50%',
                                     children: [
                                         (0, i.jsx)(p.vwX, {
-                                            className: E.marginBottom8,
-                                            children: Z.intl.string(Z.t.uiXMo6)
+                                            className: Z.marginBottom8,
+                                            children: I.intl.string(I.t.uiXMo6)
                                         }),
                                         (0, i.jsx)(p.q4e, {
-                                            placeholder: Z.intl.string(Z.t.uiXMo6),
+                                            placeholder: I.intl.string(I.t.uiXMo6),
                                             maxVisibleItems: 5,
                                             value: ''.concat(t.expire_grace_period),
                                             options: [1, 3, 7, 14, 30].map((e) => ({
                                                 value: ''.concat(e),
-                                                label: Z.intl.formatToPlainString(Z.t.eGjmy8, { days: e })
+                                                label: I.intl.formatToPlainString(I.t.eGjmy8, { days: e })
                                             })),
                                             onChange: (e) => l(parseInt(e)),
                                             isDisabled: t.syncing
@@ -378,18 +378,18 @@ function T(e) {
                                   children: [
                                       (0, i.jsx)(p.XZJ, {
                                           type: p.XZJ.Types.INVERTED,
-                                          className: o()(E.marginTop20, E.marginBottom8),
+                                          className: o()(Z.marginTop20, Z.marginBottom8),
                                           value: t.enable_emoticons,
                                           disabled: t.syncing,
                                           onChange: (e) => {
                                               let { currentTarget: t } = e;
                                               return r(t.checked);
                                           },
-                                          children: (0, i.jsx)(p.R94, { children: Z.intl.string(Z.t['7r4OKi']) })
+                                          children: (0, i.jsx)(p.R94, { children: I.intl.string(I.t['7r4OKi']) })
                                       }),
                                       (0, i.jsx)(g.Z, {
                                           wrap: g.Z.Wrap.WRAP,
-                                          className: I.__invalid_twitchEmojis,
+                                          className: w.__invalid_twitchEmojis,
                                           children: n.map((e, t) =>
                                               (0, i.jsx)(
                                                   p.ua7,
@@ -398,11 +398,11 @@ function T(e) {
                                                       children: (t) =>
                                                           (0, i.jsx)(
                                                               'img',
-                                                              w(
+                                                              E(
                                                                   {
-                                                                      alt: Z.intl.formatToPlainString(Z.t.n6ZZn5, { name: e.name }),
+                                                                      alt: I.intl.formatToPlainString(I.t.n6ZZn5, { name: e.name }),
                                                                       draggable: !1,
-                                                                      className: o()(I.emoji, 'emoji', 'jumboable'),
+                                                                      className: o()(w.emoji, 'emoji', 'jumboable'),
                                                                       src: _.ZP.getEmojiURL({
                                                                           id: e.id,
                                                                           animated: e.animated,
@@ -428,30 +428,30 @@ function T(e) {
                               }
                           })
                         : null,
-                    (0, i.jsx)(p.$i$, { className: I.bottomDivider }),
+                    (0, i.jsx)(p.$i$, { className: w.bottomDivider }),
                     (0, i.jsx)(g.Z, {
                         children: (0, i.jsx)(u.zx, {
-                            className: I.disableButton,
+                            className: w.disableButton,
                             size: u.zx.Sizes.SMALL,
                             color: u.zx.Colors.RED,
                             look: u.zx.Looks.LINK,
                             onClick: B,
-                            children: Z.intl.string(Z.t.M6q6eX)
+                            children: I.intl.string(I.t.M6q6eX)
                         })
                     })
                 ]
             })),
         (0, i.jsx)(p.Zbd, {
             editable: !0,
-            className: I.card,
+            className: w.card,
             children: (0, i.jsxs)(g.Z, {
                 direction: g.Z.Direction.VERTICAL,
                 children: [
                     l.enabled
                         ? (0, i.jsx)(p.P3F, {
-                              className: I.expandableHeader,
-                              'aria-expanded': T && !D,
-                              onClick: P,
+                              className: w.expandableHeader,
+                              'aria-expanded': P && !R,
+                              onClick: T,
                               children: J
                           })
                         : J,

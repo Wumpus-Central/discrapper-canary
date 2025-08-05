@@ -1,24 +1,24 @@
-(n.d(t, { Z: () => S }), n(388685));
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(255367),
-    o = n(73800),
-    i = n(120356),
-    a = n.n(i),
-    l = n(913527),
-    s = n.n(l),
+    l = n(73800),
+    o = n(120356),
+    a = n.n(o),
+    i = n(913527),
+    s = n.n(i),
     c = n(481060),
     d = n(446411),
-    u = n(468846),
-    p = n(600164),
-    m = n(70097),
-    _ = n(299379),
-    b = n(454585),
-    g = n(524444),
-    h = n(55406),
-    f = n(981631),
-    y = n(388032),
-    x = n(875231),
+    h = n(468846),
+    u = n(600164),
+    g = n(70097),
+    p = n(299379),
+    m = n(454585),
+    x = n(524444),
+    f = n(55406),
+    j = n(981631),
+    C = n(388032),
+    b = n(875231),
     O = n(321250);
-function k(e, t, n) {
+function y(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,20 +31,20 @@ function k(e, t, n) {
         e
     );
 }
-let j = b.Z.reactParserFor(h.default.getDefaultRules(x)),
-    C = {};
-class v extends o.PureComponent {
+let k = m.Z.reactParserFor(f.default.getDefaultRules(b)),
+    S = {};
+class E extends l.PureComponent {
     track(e, t, n) {
         this.props.track(e, t, n);
     }
     renderFooter() {
         return (0, r.jsxs)('div', {
-            className: x.footer,
+            className: b.footer,
             children: [
                 (0, r.jsx)(c.eee, {
-                    'aria-label': y.intl.string(y.t['/84uiI']),
-                    className: x.socialLink,
-                    href: (0, _.Z)(f.RK.TWITTER),
+                    'aria-label': C.intl.string(C.t['/84uiI']),
+                    className: b.socialLink,
+                    href: (0, p.Z)(j.RK.TWITTER),
                     target: 'blank',
                     children: (0, r.jsx)(c.TAi, {
                         size: 'xs',
@@ -52,9 +52,9 @@ class v extends o.PureComponent {
                     })
                 }),
                 (0, r.jsx)(c.eee, {
-                    'aria-label': y.intl.string(y.t['h0or/v']),
-                    className: x.socialLink,
-                    href: f.fK7.FACEBOOK_URL,
+                    'aria-label': C.intl.string(C.t['h0or/v']),
+                    className: b.socialLink,
+                    href: j.fK7.FACEBOOK_URL,
                     target: 'blank',
                     children: (0, r.jsx)(c.tdR, {
                         size: 'xs',
@@ -62,9 +62,9 @@ class v extends o.PureComponent {
                     })
                 }),
                 (0, r.jsx)(c.eee, {
-                    'aria-label': y.intl.string(y.t['5uVPyc']),
-                    className: x.socialLink,
-                    href: f.fK7.INSTAGRAM_URL,
+                    'aria-label': C.intl.string(C.t['5uVPyc']),
+                    className: b.socialLink,
+                    href: j.fK7.INSTAGRAM_URL,
                     target: 'blank',
                     children: (0, r.jsx)(c.gST, {
                         size: 'xs',
@@ -73,7 +73,7 @@ class v extends o.PureComponent {
                 }),
                 (0, r.jsx)(c.Text, {
                     variant: 'text-xs/normal',
-                    children: y.intl.string(y.t.EjVVIy)
+                    children: C.intl.string(C.t.EjVVIy)
                 })
             ]
         });
@@ -81,11 +81,11 @@ class v extends o.PureComponent {
     renderVideo() {
         let { changeLog: e } = this.props,
             t = e.youtube_video_id,
-            o = e.video,
-            i = e.image;
+            l = e.video,
+            o = e.image;
         if (null != t && '' !== t)
             return (0, r.jsx)(d.BC, {
-                className: x.video,
+                className: b.video,
                 allowFullScreen: !1,
                 href: 'https://youtu.be/'.concat(t),
                 thumbnail: {
@@ -98,37 +98,37 @@ class v extends o.PureComponent {
                     width: 451,
                     height: 254
                 },
-                provider: u.pn.YOUTUBE,
+                provider: h.pn.YOUTUBE,
                 maxWidth: 451,
                 maxHeight: 254,
-                renderVideoComponent: g.lV,
-                renderImageComponent: g.Yi,
-                renderLinkComponent: g.iT,
+                renderVideoComponent: x.lV,
+                renderImageComponent: x.Yi,
+                renderLinkComponent: x.iT,
                 onPlay: () => {
-                    this.track(f.rMx.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
+                    this.track(j.rMx.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
                 }
             });
-        if (null != o && '' !== o) {
-            let e = o.startsWith('https://') ? o : n(595173)('./'.concat(o));
-            return (0, r.jsx)(m.Z, {
+        if (null != l && '' !== l) {
+            let e = l.startsWith('https://') ? l : n(595173)('./'.concat(l));
+            return (0, r.jsx)(g.Z, {
                 src: e,
-                poster: i,
+                poster: o,
                 width: 451,
                 height: 254,
                 loop: !0,
                 muted: !0,
                 autoPlay: !0,
-                className: x.video,
+                className: b.video,
                 onPlay: () => {
-                    this.track(f.rMx.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
+                    this.track(j.rMx.CHANGE_LOG_VIDEO_INTERACTED, {}, !0);
                 }
             });
         }
-        if (null == i || '' === i) return null;
+        if (null == o || '' === o) return null;
         {
-            let e = i.startsWith('https://') ? i : n(595173)('./'.concat(i));
+            let e = o.startsWith('https://') ? o : n(595173)('./'.concat(o));
             return (0, r.jsx)('img', {
-                className: x.image,
+                className: b.image,
                 alt: '',
                 src: e,
                 width: 451,
@@ -144,36 +144,36 @@ class v extends o.PureComponent {
             parentComponent: 'ChangelogStandardTemplate',
             children: [
                 (0, r.jsxs)(c.xBx, {
-                    align: p.Z.Justify.BETWEEN,
+                    align: u.Z.Justify.BETWEEN,
                     separator: !1,
                     children: [
                         this.renderHeader(),
-                        (0, r.jsx)(p.Z.Child, {
+                        (0, r.jsx)(u.Z.Child, {
                             grow: 0,
                             children: (0, r.jsx)(c.olH, { onClick: this.props.onClose })
                         })
                     ]
                 }),
                 (0, r.jsx)(c.hzk, {
-                    className: a()(O.content, x.container, {}),
+                    className: a()(O.content, b.container, {}),
                     scrollerRef: this.scrollerRef,
                     onScroll: this.handleScroll,
                     children: (0, r.jsxs)('div', {
                         tabIndex: 0,
                         role: 'region',
-                        'aria-label': y.intl.string(y.t.HzBchI),
+                        'aria-label': C.intl.string(C.t.HzBchI),
                         children: [
                             this.renderVideo(),
-                            j(e.body, !1, {
+                            k(e.body, !1, {
                                 changeLog: this,
-                                interpolations: C,
+                                interpolations: S,
                                 onLinkClick: this.trackLinkClick
                             })
                         ]
                     })
                 }),
                 (0, r.jsx)(c.mzw, {
-                    direction: p.Z.Direction.HORIZONTAL,
+                    direction: u.Z.Direction.HORIZONTAL,
                     children: this.renderFooter()
                 })
             ]
@@ -181,17 +181,17 @@ class v extends o.PureComponent {
     }
     constructor(...e) {
         (super(...e),
-            k(this, 'scrollerRef', o.createRef()),
-            k(this, 'handleScroll', () => {
+            y(this, 'scrollerRef', l.createRef()),
+            y(this, 'handleScroll', () => {
                 let { current: e } = this.scrollerRef;
                 if (null != e) {
                     var t, n;
                     null == (t = (n = this.props).onScroll) || t.call(n, e);
                 }
             }),
-            k(this, 'trackLinkClick', (e) => {
+            y(this, 'trackLinkClick', (e) => {
                 this.props.track(
-                    f.rMx.CHANGE_LOG_CTA_CLICKED,
+                    j.rMx.CHANGE_LOG_CTA_CLICKED,
                     {
                         cta_type: 'inline_link',
                         target: e
@@ -199,24 +199,24 @@ class v extends o.PureComponent {
                     !1
                 );
             }),
-            k(this, 'renderHeader', () => {
+            y(this, 'renderHeader', () => {
                 let { changeLog: e } = this.props;
-                return (0, r.jsxs)(p.Z.Child, {
+                return (0, r.jsxs)(u.Z.Child, {
                     grow: 1,
                     shrink: 1,
                     children: [
                         (0, r.jsx)(c.X6q, {
                             variant: 'heading-lg/semibold',
-                            children: y.intl.string(y.t.LRmNAg)
+                            children: C.intl.string(C.t.LRmNAg)
                         }),
                         (0, r.jsx)(c.Text, {
                             variant: 'text-xs/normal',
-                            className: x.date,
-                            children: y.intl.format(y.t.Fb8xx8, { date: null != e.date && '' !== e.date ? s()(e.date).toDate() : new Date() })
+                            className: b.date,
+                            children: C.intl.format(C.t.Fb8xx8, { date: null != e.date && '' !== e.date ? s()(e.date).toDate() : new Date() })
                         })
                     ]
                 });
             }));
     }
 }
-let S = v;
+let _ = E;

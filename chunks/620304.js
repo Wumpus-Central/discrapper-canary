@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    a = n(66546),
-    s = n(793030),
+    s = n(66546),
+    a = n(793030),
     c = n(442837),
     u = n(704215),
     d = n(481060),
@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(667815),
     m = n(531572),
     b = n(259580),
-    _ = n(538445),
-    O = n(639777),
+    O = n(538445),
+    _ = n(639777),
     y = n(495804),
     C = n(441536),
     v = n(921944),
@@ -68,21 +68,21 @@ function I(e, t) {
 function P(e) {
     let { guild: t, tooltipTypes: l, withMargin: P } = e,
         N = (0, y.Z)(t, 'GuildPowerupsProgressBar'),
-        w = (0, O.Z)(t.id),
-        T = i.useCallback(() => {
+        w = (0, _.Z)(t.id),
+        Z = i.useCallback(() => {
             (0, C.Z)(t.id, p.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
-        Z = (0, c.e7)([m.Z], () => {
+        T = (0, c.e7)([m.Z], () => {
             var e;
             return null != (e = m.Z.getCountForGuild(t.id)) ? e : 0;
         });
     i.useEffect(() => {
-        Z !== t.premiumSubscriberCount && (0, g.v)(t.id, t.premiumSubscriberCount);
-    }, [t.id, Z, t.premiumSubscriberCount]);
-    let A = Math.min((Z / N) * 100, 100),
+        T !== t.premiumSubscriberCount && (0, g.v)(t.id, t.premiumSubscriberCount);
+    }, [t.id, T, t.premiumSubscriberCount]);
+    let A = Math.min((T / N) * 100, 100),
         [R, D] = (0, d.q_F)(
             () => ({
-                width: Z === t.premiumSubscriberCount ? 'calc('.concat(A, '% - 4px)') : '0%',
+                width: T === t.premiumSubscriberCount ? 'calc('.concat(A, '% - 4px)') : '0%',
                 config: {
                     tension: 250,
                     damping: 5,
@@ -90,12 +90,12 @@ function P(e) {
                 }
             }),
             'respect-motion-settings',
-            [Z, t.premiumSubscriberCount]
+            [T, t.premiumSubscriberCount]
         );
     i.useEffect(() => {
         D({ width: 'calc('.concat(A, '% - 4px)') });
     }, [A, D]);
-    let L = Z >= N,
+    let L = T >= N,
         M = i.useRef(null),
         [k, U] = (0, f.US)(l),
         G = (e) =>
@@ -112,7 +112,7 @@ function P(e) {
                     },
                     onClick: () => {
                         var t;
-                        (null == e || null == (t = e.onClick) || t.call(e), T());
+                        (null == e || null == (t = e.onClick) || t.call(e), Z());
                     },
                     className: o()(S.container, { [S.containerWithMargin]: P }),
                     onContextMenu: (e) => {
@@ -126,7 +126,7 @@ function P(e) {
                         className: S.contentContainer,
                         children: [
                             (0, r.jsx)('div', { className: S.progressContainer }),
-                            (0, r.jsx)(a.animated.div, {
+                            (0, r.jsx)(s.animated.div, {
                                 className: o()(S.progress, { [S.progressLow]: A <= 5 }),
                                 style: R
                             }),
@@ -136,13 +136,13 @@ function P(e) {
                                     (0, r.jsxs)('div', {
                                         className: S.textContentContainer,
                                         children: [
-                                            (0, r.jsx)(s.xv, {
+                                            (0, r.jsx)(a.xv, {
                                                 className: S.text,
                                                 variant: 'text-xs/semibold',
                                                 children: E.intl.string(j.default.NI6IhY)
                                             }),
                                             t.premiumSubscriberCount >= N &&
-                                                (0, r.jsx)(s.xv, {
+                                                (0, r.jsx)(a.xv, {
                                                     className: S.text,
                                                     variant: 'text-xs/semibold',
                                                     children: '\uD83C\uDF89'
@@ -152,13 +152,13 @@ function P(e) {
                                     (0, r.jsxs)('div', {
                                         className: S.textContentContainer,
                                         children: [
-                                            (0, r.jsx)(s.xv, {
+                                            (0, r.jsx)(a.xv, {
                                                 className: o()(S.text, S.boostCountText),
                                                 variant: 'text-xs/semibold',
                                                 children: L
-                                                    ? E.intl.formatToPlainString(j.default['Ehpq+/'], { appliedBoostCount: Z })
+                                                    ? E.intl.formatToPlainString(j.default['Ehpq+/'], { appliedBoostCount: T })
                                                     : E.intl.formatToPlainString(j.default['/rbPDg'], {
-                                                          appliedBoostCount: Z,
+                                                          appliedBoostCount: T,
                                                           maxBoostCount: N
                                                       })
                                             }),
@@ -181,7 +181,7 @@ function P(e) {
               targetElementRef: M,
               renderPopout: () =>
                   k === u.z.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK
-                      ? (0, r.jsx)(_.Z, {
+                      ? (0, r.jsx)(O.Z, {
                             guild: t,
                             markAsDismissed: U
                         })

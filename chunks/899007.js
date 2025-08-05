@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => R }), n(388685));
+(n.d(t, { Z: () => w }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -73,22 +73,22 @@ function N(e, t) {
     );
 }
 let C = h.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
-function R(e) {
-    let { user: t, displayProfile: n, guildId: a, channelId: h, themeType: T, animateOnHover: A, onOpenProfile: R, className: P, previewStatus: w } = e,
+function w(e) {
+    let { user: t, displayProfile: n, guildId: a, channelId: h, themeType: T, animateOnHover: A, onOpenProfile: w, className: R, previewStatus: P } = e,
         { theme: D } = (0, b.z)(),
         { analyticsLocations: L } = (0, d.ZP)(u.Z.AVATAR),
         { trackUserProfileAction: x } = (0, m.KZ)(),
-        M = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2),
-        k = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
-        { live: j } = (0, g.Z)(t.id),
-        [U] = j,
+        k = p.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2),
+        j = i.useMemo(() => t.isNonUserBot() || (0, f.W)(t, h), [t, h]),
+        { live: M } = (0, g.Z)(t.id),
+        [U] = M,
         { status: G, isMobileOnline: B } = (0, s.cj)([_.Z], () => ({
             status: (0, c.Z)(U) ? O.Skl.STREAMING : _.Z.getStatus(t.id),
             isMobileOnline: _.Z.isMobileOnline(t.id)
         })),
-        V = void 0 !== w ? w : G,
+        Z = void 0 !== P ? P : G,
         F = [y.lY.MODAL, y.lY.MODAL_V2].includes(T) ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
-        Z = o()(I.avatar, P),
+        V = o()(I.avatar, R),
         {
             avatarDecorationSrc: H,
             avatarSrc: Y,
@@ -104,32 +104,32 @@ function R(e) {
             avatarDecoration: H,
             size: F,
             'aria-label': t.username,
-            imageClassName: null != R ? I.overlay : void 0,
-            status: k ? O.Skl.UNKNOWN : V,
-            statusBackdropColor: M && !k ? (0, l.QFD)(D) : void 0,
+            imageClassName: null != w ? I.overlay : void 0,
+            status: j ? O.Skl.UNKNOWN : Z,
+            statusBackdropColor: k && !j ? (0, l.QFD)(D) : void 0,
             isMobile: B,
             statusTooltip: !0,
             statusTooltipDelay: y.vB
         });
-    return null == R
+    return null == w
         ? (0, r.jsx)(
               'div',
               N(S({}, W), {
-                  className: Z,
+                  className: V,
                   children: K
               })
           )
         : (0, r.jsx)(
               l.P3F,
               N(S({}, W), {
-                  className: o()(Z, I.clickable),
+                  className: o()(V, I.clickable),
                   focusProps: { ringClassName: I.focusRing },
                   onClick: () => {
                       (x({
                           action: 'PRESS_VIEW_PROFILE',
                           analyticsLocations: L
                       }),
-                          null == R || R());
+                          null == w || w());
                   },
                   children: K
               })

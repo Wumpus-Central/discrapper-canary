@@ -1,111 +1,111 @@
-(r.d(s, { default: () => L }), r(953529));
-var o = r(255367);
-r(73800);
-var i = r(512722),
-    n = r.n(i),
-    a = r(990547),
-    t = r(442837),
-    d = r(481060),
-    l = r(782568),
-    c = r(213609),
-    p = r(357352),
-    m = r(313201),
-    u = r(70097),
-    _ = r(434404),
-    h = r(690221),
-    b = r(695346),
-    g = r(430824),
-    x = r(63063),
-    N = r(981631),
-    S = r(921944),
-    C = r(20281),
-    R = r(476047);
-let v = [N.oNc.CREATOR_MONETIZABLE, N.oNc.CREATOR_MONETIZABLE_PROVISIONAL];
-function L(e) {
-    let { transitionState: s, onClose: r, guildId: i, markAsDismissed: L } = e,
-        j = (0, m.Dt)(),
-        I = (0, t.e7)([g.Z], () => g.Z.getGuild(i));
-    (n()(null != I, 'Guild must be defined'),
-        (0, c.Z)({
-            type: C.n.MODAL,
-            name: a.ImpressionNames.GUILD_SHOP_UPSELL,
-            properties: { passed_in_guild_id: i }
+(t.d(r, { default: () => x }), t(953529));
+var n = t(255367);
+t(73800);
+var o = t(512722),
+    s = t.n(o),
+    i = t(990547),
+    a = t(442837),
+    l = t(481060),
+    c = t(782568),
+    u = t(213609),
+    d = t(357352),
+    p = t(313201),
+    b = t(70097),
+    m = t(434404),
+    f = t(690221),
+    g = t(695346),
+    O = t(430824),
+    h = t(63063),
+    y = t(981631),
+    _ = t(921944),
+    j = t(20281),
+    v = t(476047);
+let P = [y.oNc.CREATOR_MONETIZABLE, y.oNc.CREATOR_MONETIZABLE_PROVISIONAL];
+function x(e) {
+    let { transitionState: r, onClose: t, guildId: o, markAsDismissed: x } = e,
+        S = (0, p.Dt)(),
+        C = (0, a.e7)([O.Z], () => O.Z.getGuild(o));
+    (s()(null != C, 'Guild must be defined'),
+        (0, u.Z)({
+            type: j.n.MODAL,
+            name: i.ImpressionNames.GUILD_SHOP_UPSELL,
+            properties: { passed_in_guild_id: o }
         }));
-    let O = b.QK.useSetting();
-    return (0, o.jsxs)(d.Y0X, {
-        size: d.CgR.LARGE,
-        className: R.__invalid_root,
-        transitionState: s,
-        'aria-labelledby': j,
+    let N = g.QK.useSetting();
+    return (0, n.jsxs)(l.Y0X, {
+        size: l.CgR.LARGE,
+        className: v.__invalid_root,
+        transitionState: r,
+        'aria-labelledby': S,
         parentComponent: 'GuildProductsUpsellModal',
         children: [
-            (0, o.jsxs)(d.xBx, {
+            (0, n.jsxs)(l.xBx, {
                 separator: !1,
-                className: R.header,
+                className: v.header,
                 children: [
-                    (0, o.jsx)(d.olH, {
-                        className: R.closeButton,
-                        onClick: r
+                    (0, n.jsx)(l.olH, {
+                        className: v.closeButton,
+                        onClick: t
                     }),
-                    (0, o.jsx)(d.X6q, {
+                    (0, n.jsx)(l.X6q, {
                         variant: 'heading-xl/medium',
                         color: 'header-primary',
-                        id: j,
+                        id: S,
                         children: 'Server Shop is now open for business!'
                     }),
-                    (0, o.jsx)(d.LZC, { size: 6 }),
-                    (0, o.jsx)(d.Text, {
+                    (0, n.jsx)(l.LZC, { size: 6 }),
+                    (0, n.jsx)(l.Text, {
                         variant: 'text-md/normal',
-                        className: R.description,
+                        className: v.description,
                         color: 'header-secondary',
                         children: 'Introducing a single place to sell downloadable products, monthly Server Subscriptions, and Premium Roles right inside Discord. From PDF guides and digital stickers to gated channels and premium roles, Server Shop gives you two new ways to engage your community\u2014and earn from your expertise.'
                     }),
-                    (0, o.jsx)(d.LZC, { size: 8 }),
-                    (0, o.jsx)(h.Z, {
+                    (0, n.jsx)(l.LZC, { size: 8 }),
+                    (0, n.jsx)(f.Z, {
                         onClick: () => {
-                            L(S.L.SECONDARY);
-                            let e = ''.concat(x.Z.getCreatorSupportArticleURL(N.BhN.SERVER_SUBSCRIPTION_AND_PRODUCTS), '#docs-internal-guid-918e991a-7fff-03d5-8326-5d065e5edeb1');
-                            (0, l.Z)(e, !0);
+                            x(_.L.SECONDARY);
+                            let e = ''.concat(h.Z.getCreatorSupportArticleURL(y.BhN.SERVER_SUBSCRIPTION_AND_PRODUCTS), '#docs-internal-guid-918e991a-7fff-03d5-8326-5d065e5edeb1');
+                            (0, c.Z)(e, !0);
                         },
                         children: 'Learn more'
                     })
                 ]
             }),
-            (0, o.jsx)('div', { className: R.divider }),
-            (0, o.jsxs)(d.hzk, {
-                className: R.content,
+            (0, n.jsx)('div', { className: v.divider }),
+            (0, n.jsxs)(l.hzk, {
+                className: v.content,
                 children: [
-                    O
-                        ? (0, o.jsx)('img', {
-                              src: (0, p.b)('server_products/upsell/demo2.png'),
+                    N
+                        ? (0, n.jsx)('img', {
+                              src: (0, d.b)('server_products/upsell/demo2.png'),
                               alt: '',
-                              className: R.demo
+                              className: v.demo
                           })
-                        : (0, o.jsx)(u.Z, {
+                        : (0, n.jsx)(b.Z, {
                               autoPlay: !0,
                               loop: !0,
-                              className: R.demo,
+                              className: v.demo,
                               width: 400,
-                              poster: (0, p.b)('server_products/upsell/demo2.png'),
-                              src: (0, p.b)('server_products/upsell/demo.mp4')
+                              poster: (0, d.b)('server_products/upsell/demo2.png'),
+                              src: (0, d.b)('server_products/upsell/demo.mp4')
                           }),
-                    (0, o.jsx)('img', {
-                        src: (0, p.b)('server_products/upsell/new_sales.png'),
+                    (0, n.jsx)('img', {
+                        src: (0, d.b)('server_products/upsell/new_sales.png'),
                         alt: '',
-                        className: R.earningsImage
+                        className: v.earningsImage
                     })
                 ]
             }),
-            (0, o.jsxs)(d.mzw, {
+            (0, n.jsxs)(l.mzw, {
                 children: [
-                    (0, o.jsx)(d.zxk, {
+                    (0, n.jsx)(l.zxk, {
                         variant: 'primary',
                         text: 'Check it out',
                         onClick: () => {
-                            (v.some((e) => I.features.has(e)) ? _.Z.open(i, N.pNK.GUILD_PRODUCTS) : _.Z.open(i, N.pNK.ROLE_SUBSCRIPTIONS), L(S.L.PRIMARY), r());
+                            (P.some((e) => C.features.has(e)) ? m.Z.open(o, y.pNK.GUILD_PRODUCTS) : m.Z.open(o, y.pNK.ROLE_SUBSCRIPTIONS), x(_.L.PRIMARY), t());
                         }
                     }),
-                    (0, o.jsx)(d.LZC, {
+                    (0, n.jsx)(l.LZC, {
                         size: 12,
                         horizontal: !0
                     })

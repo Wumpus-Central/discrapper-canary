@@ -1,12 +1,12 @@
 (n.d(t, {
-    j: () => a,
-    t: () => o
+    j: () => o,
+    t: () => l
 }),
     n(415506));
 var i = n(73800);
-let a = i.createContext(void 0);
-function o() {
-    let e = i.useContext(a);
+let o = i.createContext(void 0);
+function l() {
+    let e = i.useContext(o);
     if (null == e) throw Error('useSettingsV2Context must be used within a SettingsV2Provider');
     return e;
 }

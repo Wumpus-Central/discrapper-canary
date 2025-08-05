@@ -73,9 +73,9 @@ function A(e, t) {
 }
 function N(e) {
     let { summary: t, channel: f, members: b, guildId: I, unread: S, onClick: N } = e,
-        [C, R] = i.useState(!1),
-        P = (0, u.Ye)(h.default.extractTimestamp(t.startId)),
-        w = (0, a.e7)([m.Z], () => m.Z.summaryFeedback(t)),
+        [C, w] = i.useState(!1),
+        R = (0, u.Ye)(h.default.extractTimestamp(t.startId)),
+        P = (0, a.e7)([m.Z], () => m.Z.summaryFeedback(t)),
         D = (e, n) => {
             (e.stopPropagation(),
                 (0, g.Z)({
@@ -96,8 +96,8 @@ function N(e) {
         className: v.container,
         onClick: N,
         onContextMenu: x,
-        onMouseEnter: () => R(!0),
-        onMouseLeave: () => R(!1),
+        onMouseEnter: () => w(!0),
+        onMouseLeave: () => w(!1),
         children: [
             (0, r.jsx)(c.Z, {
                 hovered: C,
@@ -113,7 +113,7 @@ function N(e) {
                             className: v.timestamp,
                             color: 'interactive-normal',
                             variant: 'text-xs/normal',
-                            children: P
+                            children: R
                         }),
                         (0, r.jsx)(l.Z, {
                             height: 4,
@@ -156,7 +156,7 @@ function N(e) {
                 })
             }),
             C &&
-                !w &&
+                !P &&
                 (0, r.jsxs)('div', {
                     className: v.feedbackContainer,
                     children: [

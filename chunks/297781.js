@@ -1,23 +1,23 @@
 n.d(t, {
-    Af: () => j,
+    Af: () => M,
     An: () => W,
     E6: () => Y,
     EE: () => G,
-    Gk: () => Q,
+    Gk: () => X,
     Gt: () => D,
     OV: () => U,
-    PZ: () => $,
-    Rg: () => X,
+    PZ: () => J,
+    Rg: () => $,
     U9: () => z,
     XF: () => B,
     Yl: () => q,
-    ej: () => k,
+    ej: () => j,
     f: () => H,
-    m7: () => M,
+    m7: () => k,
     n8: () => K,
     pQ: () => F,
-    v1: () => Z,
-    wO: () => V
+    v1: () => V,
+    wO: () => Z
 });
 var r = n(255367),
     i = n(73800),
@@ -93,18 +93,18 @@ function C(e, t) {
         e
     );
 }
-function R(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = P(e, t);
+        i = R(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function P(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -113,12 +113,12 @@ function P(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let w = {
+let P = {
     [c.s.TOP_ARTIST]: [W],
-    [c.s.PLAYED_GAME]: [U, G, j, z, V, H, K, Z, F],
+    [c.s.PLAYED_GAME]: [U, G, M, z, Z, H, K, V, F],
     [c.s.TOP_GAME]: [Y],
-    [c.s.WATCHED_MEDIA]: [q, X],
-    [c.s.LAUNCHED_ACTIVITY]: [U, G, j, z, K, F]
+    [c.s.WATCHED_MEDIA]: [q, $],
+    [c.s.LAUNCHED_ACTIVITY]: [U, G, M, z, K, F]
 };
 var D = (function (e) {
     return ((e[(e.CARD = 0)] = 'CARD'), (e[(e.POPOUT = 1)] = 'POPOUT'), (e[(e.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (e[(e.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (e[(e.USER_PROFILE = 4)] = 'USER_PROFILE'), (e[(e.EMBED = 5)] = 'EMBED'), (e[(e.LEADERBOARD_POPOUT = 6)] = 'LEADERBOARD_POPOUT'), (e[(e.OVERLAY = 7)] = 'OVERLAY'), (e[(e.FRIENDS_POPOUT = 8)] = 'FRIENDS_POPOUT'), (e[(e.APP_LAUNCHER = 9)] = 'APP_LAUNCHER'), e);
@@ -127,12 +127,12 @@ let L = i.createContext({});
 function x() {
     return i.useContext(L);
 }
-function M(e) {
+function k(e) {
     var { children: t } = e,
-        n = R(e, ['children']);
+        n = w(e, ['children']);
     return (0, r.jsx)('div', C(A({ className: T.badgeContainer }, n), { children: t }));
 }
-function k(e) {
+function j(e) {
     let { Icon: t, text: n, iconColor: i, tooltipText: a, showTooltip: o } = e,
         { defaultTextColor: s, defaultIconColor: l, location: c } = x();
     return (0, r.jsx)(f.ua7, {
@@ -140,7 +140,7 @@ function k(e) {
         shouldShow: o,
         children: (e) =>
             (0, r.jsxs)(
-                M,
+                k,
                 C(A({}, e), {
                     children: [
                         (0, r.jsx)(t, {
@@ -159,13 +159,13 @@ function k(e) {
             )
     });
 }
-function j(e) {
+function M(e) {
     let { entry: t } = e,
         { channel: n } = (0, E.Z)(t),
         { location: i } = x();
     return null == n || (0, h.Hi)(i, [1, 2, 3, 4])
         ? null
-        : (0, r.jsx)(k, {
+        : (0, r.jsx)(j, {
               Icon: f.gj8,
               text: n.name
           });
@@ -179,7 +179,7 @@ function U(e) {
         { streamPreviewUrl: u } = (0, E.Z)(t),
         { enabled: d } = _.c.useExperiment({ location: 'GameTimestampBadge' }, { autoTrackExposure: !0 }),
         p = null != u ? f.hGI : (0, g.Mq)(t) && !d ? f.jje : f.iWm;
-    return (0, r.jsxs)(M, {
+    return (0, r.jsxs)(k, {
         children: [
             (0, r.jsx)(p, {
                 size: 'xxs',
@@ -202,7 +202,7 @@ function G(e) {
         s = (0, b.bT)(a, o);
     return null == s
         ? null
-        : (0, r.jsxs)(M, {
+        : (0, r.jsxs)(k, {
               children: [
                   (0, r.jsx)(f.BFJ, {
                       size: 'xxs',
@@ -239,12 +239,12 @@ function B(e) {
         ]
     });
 }
-function V(e) {
+function Z(e) {
     let { entry: t } = e,
         { location: n } = x(),
         i = (0, h.Hi)(n, [0, 3]) ? f.TVs.colors.STATUS_POSITIVE : void 0;
     return (0, b.Ol)(t)
-        ? (0, r.jsx)(k, {
+        ? (0, r.jsx)(j, {
               Icon: f._IE,
               text: I.intl.string(I.t.keY6mZ),
               iconColor: i
@@ -260,21 +260,21 @@ function F(e) {
         { text: o, tooltipText: s } = (0, b.zo)(t);
     return null == o
         ? null
-        : (0, r.jsx)(k, {
+        : (0, r.jsx)(j, {
               Icon: f.ANZ,
               text: o,
               tooltipText: s,
               showTooltip: a
           });
 }
-function Z(e) {
+function V(e) {
     let { entry: t } = e,
         { location: n } = x(),
         i = 0 !== n,
         a = (0, b.dw)(t);
     if (null == a) return null;
     let o = (0, b.GE)(a);
-    return (0, r.jsx)(k, {
+    return (0, r.jsx)(j, {
         Icon: f.Oe7,
         showTooltip: !i,
         tooltipText: o,
@@ -286,7 +286,7 @@ function H(e) {
         { location: n } = x(),
         i = (0, b.vU)(t);
     return (0, b.q_)(t)
-        ? (0, r.jsx)(k, {
+        ? (0, r.jsx)(j, {
               Icon: f.qOE,
               showTooltip: 0 === n,
               text: I.intl.formatToPlainString(I.t['Klie/P'], { days: i }),
@@ -302,7 +302,7 @@ function Y(e) {
     if (null == a) return null;
     let o = i ? ' \u2014 ' : ': ',
         s = i ? I.t.C0Axoa : I.t.SDRHgo;
-    return (0, r.jsx)(k, {
+    return (0, r.jsx)(j, {
         Icon: f.rm8,
         text: (0, r.jsxs)(r.Fragment, {
             children: [I.intl.string(I.t['/50eHh']), o, I.intl.format(s, { hours: Math.round(a / p.Z.Seconds.HOUR) })]
@@ -316,7 +316,7 @@ function W(e) {
         a = null == (t = (0, b.PJ)(n, u.N.AGGREGATE_COUNT)) ? void 0 : t.count;
     if (null == a) return null;
     let o = (0, h.Hi)(i, [1, 2, 5]) ? I.intl.formatToPlainString(I.t.HtifnJ, { count: a }) : I.intl.formatToPlainString(I.t['jq/Bmp'], { count: a });
-    return (0, r.jsx)(k, {
+    return (0, r.jsx)(j, {
         Icon: f.rm8,
         text: o
     });
@@ -328,7 +328,7 @@ function K(e) {
     let i = (0, b.ig)(t);
     return null == i || i === d.o.TRENDING_TYPE_UNSPECIFIED
         ? null
-        : (0, r.jsx)(k, {
+        : (0, r.jsx)(j, {
               Icon: f.YqE,
               text: I.intl.string(I.t.kAlUs7)
           });
@@ -340,7 +340,7 @@ function z(e) {
     let i = m.default.extractTimestamp(t.extra.application_id);
     return l()().diff(l()(i), 'days') > v.G
         ? null
-        : (0, r.jsx)(k, {
+        : (0, r.jsx)(j, {
               Icon: f.rIT,
               text: I.intl.string(I.t.vYuyWV)
           });
@@ -367,17 +367,17 @@ function q(e) {
         ]
     });
 }
-function X(e) {
+function $(e) {
     let { entry: t } = e,
         n = (0, b.ap)(t.extra.media_assets_large_text);
     return null == n
         ? null
-        : (0, r.jsx)(k, {
+        : (0, r.jsx)(j, {
               Icon: f.sVe,
               text: n
           });
 }
-function Q(e) {
+function X(e) {
     let t,
         { location: n, children: i, className: a } = e;
     return (
@@ -413,28 +413,28 @@ function Q(e) {
         })
     );
 }
-function J(e) {
+function Q(e) {
     switch (e.content_type) {
         case c.s.TOP_ARTIST:
-            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return P[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.PLAYED_GAME:
-            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return P[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.TOP_GAME:
-            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return P[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.WATCHED_MEDIA:
-            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return P[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         case c.s.LAUNCHED_ACTIVITY:
-            return w[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+            return P[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
         default:
             return null;
     }
 }
-function $(e) {
+function J(e) {
     let { entry: t, location: n, className: i } = e,
-        a = J(t);
+        a = Q(t);
     return null == a
         ? null
-        : (0, r.jsx)(Q, {
+        : (0, r.jsx)(X, {
               location: n,
               className: i,
               children: a

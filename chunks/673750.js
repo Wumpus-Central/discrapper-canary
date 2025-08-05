@@ -1,8 +1,8 @@
 (n.d(t, {
     $V: () => N,
-    Bz: () => R,
+    Bz: () => w,
     ZP: () => L,
-    hc: () => P
+    hc: () => R
 }),
     n(539854),
     n(388685),
@@ -101,9 +101,9 @@ var N = (function (e) {
     return ((e[(e.SEND = 0)] = 'SEND'), (e[(e.EDIT = 1)] = 'EDIT'), (e[(e.COMMAND = 2)] = 'COMMAND'), (e[(e.SEND_ANNOUNCEMENT = 3)] = 'SEND_ANNOUNCEMENT'), e);
 })({});
 let C = (e) => 0 === e.type || 3 === e.type,
-    R = (e) => 1 === e.type,
-    P = (e) => (C(e) ? e.message.nonce : R(e) ? e.message.messageId : e.message.data.id),
-    w = [+p.Z.Millis.MINUTE, 5 * p.Z.Millis.MINUTE];
+    w = (e) => 1 === e.type,
+    R = (e) => (C(e) ? e.message.nonce : w(e) ? e.message.messageId : e.message.data.id),
+    P = [+p.Z.Millis.MINUTE, 5 * p.Z.Millis.MINUTE];
 class D extends m.Z {
     isFull() {
         return this.queue.length >= this.maxSize;
@@ -138,7 +138,7 @@ class D extends m.Z {
         return (this.queue.push(...n), this.logger.log('Cancel pending send requests', t.length), t);
     }
     startQueueMetricTimers(e) {
-        let t = w.map((e) =>
+        let t = P.map((e) =>
             setTimeout(() => {
                 (0, s.yw)(b.rMx.SEND_MESSAGE_QUEUED, { queued_duration_ms: e });
             }, e)

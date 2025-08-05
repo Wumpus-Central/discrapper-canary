@@ -1,52 +1,53 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => f });
 var r = n(73800),
     i = n(106351),
-    l = n(442837),
-    a = n(434650),
-    o = n(430824),
-    s = n(63205),
+    a = n(442837),
+    o = n(434650),
+    s = n(430824),
+    l = n(63205),
     c = n(529726),
     u = n(981631);
-function d(e) {
+let d = 0;
+function f(e) {
     var t, n;
-    let { message: d, channel: p, enabled: m = !0 } = e,
-        f = (0, l.e7)(
-            [o.Z],
+    let { message: f, channel: _, enabled: p = !0 } = e,
+        h = (0, a.e7)(
+            [s.Z],
             () => {
                 var e;
-                let t = o.Z.getGuild(p.guild_id);
+                let t = s.Z.getGuild(_.guild_id);
                 return null != (e = null == t ? void 0 : t.features.has(u.oNc.COMMUNITY)) && e;
             },
-            [p.guild_id]
+            [_.guild_id]
         ),
-        g = (null == (t = d.messageReference) ? void 0 : t.guild_id) != null && null != d.webhookId && d.hasFlag(u.iLy.IS_CROSSPOST) && null != p.guild_id,
-        _ = p.type === i.d.GUILD_ANNOUNCEMENT && f,
-        h = !d.hasFlag(u.iLy.EPHEMERAL) && (g || _),
-        b = g && null != d.messageReference ? d.messageReference.message_id : d.id,
-        E = g && null != d.messageReference ? d.messageReference.channel_id : p.id,
-        C = g && (null == (n = d.messageReference) ? void 0 : n.guild_id) != null ? d.messageReference.guild_id : p.guild_id,
+        m = (null == (t = f.messageReference) ? void 0 : t.guild_id) != null && null != f.webhookId && f.hasFlag(u.iLy.IS_CROSSPOST) && null != _.guild_id,
+        g = _.type === i.d.GUILD_ANNOUNCEMENT && h,
+        E = !f.hasFlag(u.iLy.EPHEMERAL) && (m || g),
+        b = m && null != f.messageReference ? f.messageReference.message_id : f.id,
+        y = m && null != f.messageReference ? f.messageReference.channel_id : _.id,
+        O = m && (null == (n = f.messageReference) ? void 0 : n.guild_id) != null ? f.messageReference.guild_id : _.guild_id,
         v = r.useCallback(
             (e) => {
                 e
                     ? c.Z.handleMessageBecameVisible({
                           messageId: b,
-                          channelId: p.id,
-                          guildId: p.guild_id,
-                          sourceChannelId: E,
-                          sourceGuildId: C
+                          channelId: _.id,
+                          guildId: _.guild_id,
+                          sourceChannelId: y,
+                          sourceGuildId: O
                       })
                     : c.Z.handleMessageLostVisibility(b);
             },
-            [b, p.id, p.guild_id, E, C]
+            [b, _.id, _.guild_id, y, O]
         ),
-        O = s.Z.useExperiment(
+        I = l.Z.useExperiment(
             { location: '836a4b_1' },
             {
-                disable: !h || !m,
+                disable: !E || !p,
                 autoTrackExposure: !0
             }
         ).enabled,
-        x = (0, a.O)(v, 0, O);
+        T = (0, o.O)(v, d, I);
     return (
         r.useEffect(
             () => () => {
@@ -54,6 +55,6 @@ function d(e) {
             },
             [b]
         ),
-        x
+        T
     );
 }

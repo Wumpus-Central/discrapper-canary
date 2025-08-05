@@ -85,8 +85,8 @@ function v(e, t) {
 }
 function I(e) {
     var t;
-    let { legalTermsNodeRef: n, invoiceError: i, planError: a, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: g, isGift: b, planGroup: I, isPrepaid: T, isTrial: S, makePurchase: A, needsPaymentSource: N, inReverseTrial: C, onNext: R, onPaymentSourceAdd: P } = e,
-        { application: w, selectedPlan: D, hasAcceptedTerms: L, purchaseType: x, paymentSourceId: M, activeSubscription: k, devShelfFetchState: j, hasPaymentSources: U } = (0, c.JL)(),
+    let { legalTermsNodeRef: n, invoiceError: i, planError: a, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: g, isGift: b, planGroup: I, isPrepaid: T, isTrial: S, makePurchase: A, needsPaymentSource: N, inReverseTrial: C, onNext: w, onPaymentSourceAdd: R } = e,
+        { application: P, selectedPlan: D, hasAcceptedTerms: L, purchaseType: x, paymentSourceId: k, activeSubscription: j, devShelfFetchState: M, hasPaymentSources: U } = (0, c.JL)(),
         G = O({
             purchaseType: x,
             plan: D,
@@ -95,7 +95,7 @@ function I(e) {
             planGroup: I,
             isPrepaidPaymentSource: T,
             inReverseTrial: C,
-            paymentSourceId: M,
+            paymentSourceId: k,
             hasPaymentSources: U
         }),
         { analyticsLocations: B } = (0, l.ZP)();
@@ -122,7 +122,7 @@ function I(e) {
                         {
                             type: 'submit',
                             'data-testid': 'submitButton',
-                            onClick: P
+                            onClick: R
                         }
                     )
                 )
@@ -149,7 +149,7 @@ function I(e) {
                     )
                 )
         });
-    if ((0, u.yE)(null != (t = null == w ? void 0 : w.flags) ? t : 0, p.udG.EMBEDDED) && j === s.O.LOADING)
+    if ((0, u.yE)(null != (t = null == P ? void 0 : P.flags) ? t : 0, p.udG.EMBEDDED) && M === s.O.LOADING)
         return (0, r.jsx)(o.ua7, {
             text: m.intl.string(m.t.cjA5tr),
             children: (e) =>
@@ -203,12 +203,12 @@ function I(e) {
                     )
                 )
         });
-    else if (C && null != k && null != M)
+    else if (C && null != j && null != k)
         return (0, r.jsx)(_.Z, {
-            activeSubscription: k,
-            onNext: R,
+            activeSubscription: j,
+            onNext: w,
             isSubmitting: h,
-            paymentSourceId: M,
+            paymentSourceId: k,
             buttonLabel: G,
             analyticsLocations: B
         });

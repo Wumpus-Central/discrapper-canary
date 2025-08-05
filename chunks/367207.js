@@ -4,8 +4,8 @@ n(73800);
 var i = n(481060),
     l = n(570140),
     o = n(317770),
-    a = n(100527),
-    s = n(963249),
+    s = n(100527),
+    a = n(963249),
     c = n(93127),
     u = n(594174),
     d = n(431),
@@ -15,7 +15,7 @@ var i = n(481060),
     g = n(937579),
     m = n(522558),
     b = n(11352);
-function _(e, t, n) {
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function _(e, t, n) {
         e
     );
 }
-function O(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,7 +39,7 @@ function O(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                O(e, t, n[t]);
             }));
     }
     return e;
@@ -76,7 +76,7 @@ class C extends o.Z {
             return (n) =>
                 (0, r.jsx)(
                     e,
-                    O(
+                    _(
                         {
                             channel: t,
                             content: l
@@ -89,8 +89,8 @@ class C extends o.Z {
     openPremiumPaymentModalInApp(e) {
         if (__OVERLAY__) throw Error('Should not use this function from the overlay, use ModalAPI.openModal instead');
         return new Promise((t, n) => {
-            (0, s.Z)(
-                y(O({}, e), {
+            (0, a.Z)(
+                y(_({}, e), {
                     onClose: (e) => {
                         e ? t() : n();
                     }
@@ -115,9 +115,9 @@ class C extends o.Z {
     }
     constructor(...e) {
         (super(...e),
-            _(this, '_premiumPaymentModalCloseResolve', null),
-            _(this, '_premiumPaymentModalCloseReject', null),
-            _(this, '_maybeFetchPremiumOffer', async () => {
+            O(this, '_premiumPaymentModalCloseResolve', null),
+            O(this, '_premiumPaymentModalCloseReject', null),
+            O(this, '_maybeFetchPremiumOffer', async () => {
                 let e = u.default.getCurrentUser();
                 if (null != e && e.verified) {
                     let t = (d.Z.canFractionalPremiumUserUseOffer() || !(0, h.I5)(e)) && !d.Z.isFetchingOffer();
@@ -125,21 +125,21 @@ class C extends o.Z {
                 }
                 l.Z.dispatch({ type: 'PREMIUM_MARKETING_DATA_READY' });
             }),
-            _(this, '_maybeFetchCheckoutRecovery', async () => {
+            O(this, '_maybeFetchCheckoutRecovery', async () => {
                 let e = u.default.getCurrentUser();
                 null != e && e.verified && !(0, h.I5)(e) && f.Z.shouldFetchCheckoutRecovery() && (await (0, p.o)());
             }),
-            _(this, '_maybeFetchUserAffinities', () => {
+            O(this, '_maybeFetchUserAffinities', () => {
                 let { enabled: e } = m.w.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
                 e && (0, c._)();
             }),
-            _(this, '_trackCustomNotificationSoundsExposure', () => {
+            O(this, '_trackCustomNotificationSoundsExposure', () => {
                 b.Y.trackExposure({ location: 'PremiumManager' });
             }),
-            _(this, '_handlePremiumPaymentModalOpen', (e) => {
-                (0, s.Z)(
-                    y(O({}, e), {
-                        analyticsLocations: [a.Z.OVERLAY],
+            O(this, '_handlePremiumPaymentModalOpen', (e) => {
+                (0, a.Z)(
+                    y(_({}, e), {
+                        analyticsLocations: [s.Z.OVERLAY],
                         onClose: (e) => {
                             l.Z.dispatch({
                                 type: 'PREMIUM_PAYMENT_MODAL_CLOSE',
@@ -149,7 +149,7 @@ class C extends o.Z {
                     })
                 );
             }),
-            _(this, '_handlePremiumPaymentModalClose', (e) => {
+            O(this, '_handlePremiumPaymentModalClose', (e) => {
                 let { didSucceed: t } = e;
                 (t && null != this._premiumPaymentModalCloseResolve ? this._premiumPaymentModalCloseResolve() : null != this._premiumPaymentModalCloseReject && this._premiumPaymentModalCloseReject(), (this._premiumPaymentModalCloseResolve = null), (this._premiumPaymentModalCloseReject = null));
             }));

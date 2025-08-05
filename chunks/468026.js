@@ -17,14 +17,14 @@ let h = (e) => {
         a,
         { body: h, cancelText: m, className: g, confirmColor: E, confirmText: b = _.intl.string(_.t.BddRzc), secondaryConfirmText: y, onCancel: O, onClose: v, onConfirm: I, onConfirmSecondary: T, title: S, transitionState: A, titleClassName: N } = e,
         C = s.zx.Sizes.MEDIUM,
-        [R, P] = i.useState(!1);
+        [w, R] = i.useState(!1);
     i.useEffect(
         () => () => {
-            R && (null == T || T());
+            w && (null == T || T());
         },
-        [R, T]
+        [w, T]
     );
-    let w = () => {
+    let P = () => {
             (null == v || v(), null == O || O());
         },
         D = (e) => {
@@ -37,7 +37,7 @@ let h = (e) => {
                 type: 'button',
                 size: C,
                 color: s.zx.Colors.PRIMARY,
-                onClick: w,
+                onClick: P,
                 className: p.secondaryButton,
                 children: m
             })),
@@ -54,8 +54,8 @@ let h = (e) => {
         null != y &&
             '' !== y &&
             (a = (0, r.jsx)(d.XZJ, {
-                value: R,
-                onChange: (e, t) => P(t),
+                value: w,
+                onChange: (e, t) => R(t),
                 type: d.XZJ.Types.DEFAULT,
                 children: (0, r.jsx)(u.x, {
                     variant: 'text-sm/normal',

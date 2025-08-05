@@ -25,28 +25,28 @@ var r = n(255367),
     A = n(960870),
     N = n(139793),
     C = n(510659),
-    R = n(287954),
-    P = n(660579),
-    w = n(652853),
+    w = n(287954),
+    R = n(660579),
+    P = n(652853),
     D = n(64621),
     L = n(336383),
     x = n(194811),
-    M = n(265386),
-    k = n(668700),
-    j = n(384298),
+    k = n(265386),
+    j = n(668700),
+    M = n(384298),
     U = n(386019),
     G = n(228168),
     B = n(981631),
-    V = n(388032),
+    Z = n(388032),
     F = n(227832),
-    Z = n(162509),
+    V = n(162509),
     H = n(924482),
     Y = n(774797);
 function W(e) {
     let { user: t, currentUser: n, stream: a, className: W, onClose: K, profileGuildId: z } = e,
         q = i.useRef(null),
-        { themeType: X, theme: Q } = (0, w.z)(),
-        { interactionSource: J, interactionSourceId: $ } = (0, C.Xo)(),
+        { themeType: $, theme: X } = (0, P.z)(),
+        { interactionSource: Q, interactionSourceId: J } = (0, C.Xo)(),
         ee = (0, s.e7)([v.Z], () => v.Z.getGuild(null == a ? void 0 : a.guildId)),
         et = (0, s.e7)([O.Z], () => O.Z.getChannel(null == a ? void 0 : a.channelId)),
         en = (0, s.Wu)([S.ZP], () =>
@@ -76,47 +76,47 @@ function W(e) {
         ef = (0, s.e7)([I.Z], () => null != et && !ec && I.Z.canBasicChannel(B.S7T.CONNECT, et)),
         e_ = (0, d.Z)(ed ? null : eu),
         ep = ed || null == eu ? e_ : eu;
-    if (null == ee || null == et || !1 === a.discoverable || null === X) return null;
+    if (null == ee || null == et || !1 === a.discoverable || null === $) return null;
     let eh = () => {
             let e = (e) => {
                 (e.stopPropagation(), es && (ea({ action: 'PRESS_IMAGE' }), c.default.selectVoiceChannel(a.channelId), (0, u.iV)(a), null == K || K()));
             };
             return null == ep && ed
                 ? (0, r.jsx)('div', {
-                      className: Z.preview,
+                      className: V.preview,
                       children: (0, r.jsx)(l.$jN, {})
                   })
                 : null == ep || ec
                   ? (0, r.jsxs)(l.P3F, {
-                        className: o()(Z.preview, Z.overlay, es ? Z.clickable : Z.disabled),
+                        className: o()(V.preview, V.overlay, es ? V.clickable : V.disabled),
                         onClick: e,
                         'aria-label': (0, y.gR)(el),
                         'aria-disabled': !es,
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
-                                src: Q === B.BRd.LIGHT ? Y : H
+                                src: X === B.BRd.LIGHT ? Y : H
                             }),
-                            X !== G.lY.MODAL &&
-                                X !== G.lY.MODAL_V2 &&
+                            $ !== G.lY.MODAL &&
+                                $ !== G.lY.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(l.Text, {
-                                            className: Z.overlayText,
+                                            className: V.overlayText,
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
                                             children: (0, y.P9)(el)
                                         }),
                                         (0, r.jsx)(l.Text, {
                                             variant: 'text-sm/medium',
-                                            children: ef ? V.intl.string(V.t.uQZTBQ) : V.intl.string(V.t.pgUTZG)
+                                            children: ef ? Z.intl.string(Z.t.uQZTBQ) : Z.intl.string(Z.t.pgUTZG)
                                         })
                                     ]
                                 })
                         ]
                     })
                   : (0, r.jsxs)(l.P3F, {
-                        className: o()(Z.preview, Z.overlay, es ? Z.clickable : Z.disabled),
+                        className: o()(V.preview, V.overlay, es ? V.clickable : V.disabled),
                         onClick: e,
                         'aria-label': (0, y.gR)(el),
                         'aria-disabled': !es,
@@ -124,14 +124,14 @@ function W(e) {
                             (0, r.jsx)('img', {
                                 alt: '',
                                 src: ep,
-                                className: Z.image
+                                className: V.image
                             }),
-                            X !== G.lY.MODAL &&
-                                X !== G.lY.MODAL_V2 &&
+                            $ !== G.lY.MODAL &&
+                                $ !== G.lY.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(l.Text, {
-                                            className: Z.overlayText,
+                                            className: V.overlayText,
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
                                             children: (0, y.P9)(el)
@@ -139,7 +139,7 @@ function W(e) {
                                         (0, r.jsx)(l.gw7, {
                                             size: 'xs',
                                             color: 'currentColor',
-                                            className: Z.clyde
+                                            className: V.clyde
                                         })
                                     ]
                                 })
@@ -147,12 +147,12 @@ function W(e) {
                     });
         },
         em = () =>
-            X !== G.lY.MODAL && X !== G.lY.MODAL_V2
+            $ !== G.lY.MODAL && $ !== G.lY.MODAL_V2
                 ? null
                 : (0, r.jsxs)('div', {
                       className: F.details,
                       children: [
-                          (0, r.jsx)(M.Z, {
+                          (0, r.jsx)(k.Z, {
                               channel: et,
                               guild: ee,
                               onAction: ea,
@@ -162,7 +162,7 @@ function W(e) {
                               users: en,
                               guildId: ee.id,
                               channelId: et.id,
-                              maxUsers: k.W,
+                              maxUsers: j.W,
                               size: l.EFr.SIZE_16,
                               onClickOverflow: (e) => {
                                   (null == e || e.stopPropagation(), null == ea || ea({ action: 'PRESS_VOICE_CHANNEL_AVATARS' }));
@@ -170,15 +170,15 @@ function W(e) {
                               onUserClick: (e) => e.stopPropagation(),
                               disableUserPopout: (e) => e === t.id,
                               overflowCountColor: 'text-muted',
-                              'aria-label': V.intl.string(V.t.jNqDh4)
+                              'aria-label': Z.intl.string(Z.t.jNqDh4)
                           }),
-                          X === G.lY.MODAL_V2 && eE()
+                          $ === G.lY.MODAL_V2 && eE()
                       ]
                   }),
         eg = () =>
-            X === G.lY.MODAL || X === G.lY.MODAL_V2
+            $ === G.lY.MODAL || $ === G.lY.MODAL_V2
                 ? null
-                : (0, r.jsx)(k.Z, {
+                : (0, r.jsx)(j.Z, {
                       user: t,
                       guild: ee,
                       channel: et,
@@ -190,31 +190,31 @@ function W(e) {
                 ? null
                 : (0, r.jsx)('div', {
                       className: F.actions,
-                      children: (0, r.jsx)(j.Z, {
+                      children: (0, r.jsx)(M.Z, {
                           channel: et,
                           onAction: ea,
                           onClose: K
                       })
                   }),
         eb = eu,
-        ey = J === G.n_.ACTIVITY && $ === eb,
-        eO = null != er ? V.intl.formatToPlainString(V.t['4CQq9f'], { name: er.name }) : V.intl.string(V.t['Jpkr/v']);
+        ey = Q === G.n_.ACTIVITY && J === eb,
+        eO = null != er ? Z.intl.formatToPlainString(Z.t['4CQq9f'], { name: er.name }) : Z.intl.string(Z.t['Jpkr/v']);
     return (0, r.jsx)(m.Gt, {
         value: ei,
         children: (0, r.jsx)(D.Z, {
             targetElementRef: q,
             sourceType: G.n_.ACTIVITY,
             user: t,
-            children: (0, r.jsx)(R.Z, {
+            children: (0, r.jsx)(w.Z, {
                 user: t,
                 guildId: z,
-                themeType: X,
+                themeType: $,
                 sourceId: eb,
                 sourceDetails: eO,
                 sourceType: G.n_.ACTIVITY,
                 onAction: ea,
                 children: () =>
-                    (0, r.jsx)(P.Z, {
+                    (0, r.jsx)(R.Z, {
                         ref: q,
                         user: t,
                         className: F.toolbarContainer,
@@ -245,12 +245,12 @@ function W(e) {
                                     children: [
                                         (0, r.jsxs)('div', {
                                             className: F.content,
-                                            children: [eh(), em(), X === G.lY.MODAL && eE()]
+                                            children: [eh(), em(), $ === G.lY.MODAL && eE()]
                                         }),
                                         eg()
                                     ]
                                 }),
-                                X !== G.lY.MODAL && X !== G.lY.MODAL_V2 && eE()
+                                $ !== G.lY.MODAL && $ !== G.lY.MODAL_V2 && eE()
                             ]
                         })
                     })

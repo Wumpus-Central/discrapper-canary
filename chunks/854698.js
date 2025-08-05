@@ -1,8 +1,8 @@
 (n.d(t, {
-    BP: () => Q,
+    BP: () => X,
     DK: () => H,
     G3: () => p,
-    Ho: () => V,
+    Ho: () => Z,
     Ib: () => h,
     P8: () => C,
     PJ: () => F,
@@ -10,14 +10,14 @@
     Uq: () => G,
     Y4: () => B,
     hn: () => b,
-    iA: () => M,
-    ib: () => R,
-    lh: () => J,
+    iA: () => k,
+    ib: () => w,
+    lh: () => Q,
     mF: () => q,
     ub: () => D,
-    v1: () => j,
-    x6: () => k,
-    zi: () => X
+    v1: () => M,
+    x6: () => j,
+    zi: () => $
 }),
     n(388685),
     n(539854));
@@ -95,15 +95,15 @@ function C(e) {
         a
     );
 }
-let R = () => {
+let w = () => {
         let e = a()().add(1, 'hour'),
             t = e.hour();
         return (e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0));
     },
-    P = (e, t) => (0, l.vc)(e, e.get('years') === t.get('years') ? m : g),
-    w = (e, t) => {
+    R = (e, t) => (0, l.vc)(e, e.get('years') === t.get('years') ? m : g),
+    P = (e, t) => {
         let n = (0, l.wY)(e.toDate(), t.toDate());
-        return n > 1 || n < 0 ? P(e, t) : (0, l.vc)(e, e.localeData().calendar(n < 1 ? 'sameDay' : 'nextDay', e, t));
+        return n > 1 || n < 0 ? R(e, t) : (0, l.vc)(e, e.localeData().calendar(n < 1 ? 'sameDay' : 'nextDay', e, t));
     };
 function D(e, t, n) {
     null == n && (n = a()());
@@ -111,8 +111,8 @@ function D(e, t, n) {
         i = null != t && '' !== t ? a()(t) : void 0,
         o = null != t && r.isSame(i, 'day');
     return {
-        startDateTimeString: w(r, n),
-        endDateTimeString: null != i ? (o ? i.format(E) : P(i, n)) : void 0,
+        startDateTimeString: P(r, n),
+        endDateTimeString: null != i ? (o ? i.format(E) : R(i, n)) : void 0,
         currentOrPastEvent: r <= n,
         upcomingEvent: r <= a()().add(1, 'hour'),
         withinStartWindow: r <= a()().add(15, 'minute'),
@@ -134,7 +134,7 @@ function x(e, t) {
         n
     );
 }
-function M(e, t) {
+function k(e, t) {
     let n = U(t),
         r = a()(u.default.extractTimestamp(e)),
         i = (null == n ? void 0 : n.endDate) != null ? r.clone().add(n.endDate.diff(n.startDate)) : void 0;
@@ -143,7 +143,7 @@ function M(e, t) {
         endDate: i
     };
 }
-function k(e, t) {
+function j(e, t) {
     var n;
     if (null == t) return e;
     let r = null != (n = t.scheduled_end_time) ? n : e.endDate;
@@ -152,7 +152,7 @@ function k(e, t) {
         endDate: null != r ? a()(r) : void 0
     };
 }
-function j(e) {
+function M(e) {
     return x(e.scheduledStartTime, e.scheduledEndTime);
 }
 function U(e) {
@@ -164,7 +164,7 @@ function G(e, t) {
 function B(e, t) {
     return null == e || null == t ? null == e && null == t : G(e.startDate, t.startDate) && G(e.endDate, t.endDate);
 }
-function V(e) {
+function Z(e) {
     var t;
     let n = null != e.byWeekday ? [...e.byWeekday] : null,
         r = null == (t = e.byNWeekday) ? void 0 : t.map((e) => new o.OG(e.day, e.n)),
@@ -192,12 +192,12 @@ function F(e, t, n) {
     let o = t.between(i, a, !0, (t, n) => n < e + 1);
     return r && o.length > 0 && n.getTime() === o[0].getTime() ? o.slice(1) : o.slice(0, e);
 }
-function Z(e) {
+function V(e) {
     return null == e.recurrence_rule ? null : new Date(e.scheduled_start_time);
 }
 function H(e) {
     if (null == e) return null;
-    let t = Z(e);
+    let t = V(e);
     return null != t ? u.default.fromTimestamp(Math.floor(t.getTime() / c.Z.Millis.SECOND) * c.Z.Millis.SECOND) : null;
 }
 function Y(e, t) {
@@ -293,9 +293,9 @@ function q(e, t) {
         count: f
     };
 }
-function X(e, t) {
+function $(e, t) {
     if (null == t) return d.z.NONE;
-    let n = V(t);
+    let n = Z(t);
     switch (n.options.freq) {
         case o.Ci.WEEKLY:
             if (n.options.interval < 1 || n.options.interval > 2) return d.z.NONE;
@@ -312,9 +312,9 @@ function X(e, t) {
             return d.z.NONE;
     }
 }
-function Q(e, t) {
+function X(e, t) {
     return (null == e ? void 0 : e.scheduled_start_time) !== t.scheduledStartTime || e.scheduled_end_time !== t.scheduledEndTime || !(0, r.isEqual)(e.recurrence_rule, t.recurrenceRule);
 }
-function J(e, t, n) {
+function Q(e, t, n) {
     return (null == e ? void 0 : e.is_canceled) ? f.p1.CANCELED : t < n ? f.p1.COMPLETED : null != e ? f.p1.SCHEDULED : null;
 }

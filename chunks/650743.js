@@ -55,7 +55,7 @@ function T(e) {
         A = (0, i.e7)([_.Z], () => _.Z.getGuild(null == t ? void 0 : t.guildId)),
         N = (0, i.e7)([l.Z], () => l.Z.useReducedMotion, []),
         C = (0, i.e7)([h.Z], () => h.Z.isFocused()),
-        R = (0, i.e7)([p.ZP], () => p.ZP.getKeybindForAction(b.kg4.SOUNDBOARD_HOLD));
+        w = (0, i.e7)([p.ZP], () => p.ZP.getKeybindForAction(b.kg4.SOUNDBOARD_HOLD));
     if (null != t && T.length > 0)
         return (0, r.jsx)(f.Z, {
             graphicPrimary:
@@ -81,24 +81,24 @@ function T(e) {
             titleSecondary: null == A ? void 0 : A.name,
             isFavorite: S
         });
-    let P = () => {
+    let R = () => {
             (v(),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('58120').then(n.bind(n, 355453));
                     return (t) => (0, r.jsx)(e, I({}, t));
                 }));
         },
-        w = (0, c.zu)(a.z.SOUNDBOARD_KEYBIND_TIP),
+        P = (0, c.zu)(a.z.SOUNDBOARD_KEYBIND_TIP),
         D = () => (0, c.Q3)(a.z.SOUNDBOARD_KEYBIND_TIP),
         L =
-            null != R && (0, m.isWindows)() && !w
+            null != w && (0, m.isWindows)() && !P
                 ? y.intl.format(y.t.udMTtr, {
-                      keybind: (0, g.BB)(R.shortcut, !0),
+                      keybind: (0, g.BB)(w.shortcut, !0),
                       openSettingsHook: (e, t) =>
                           (0, r.jsx)(
                               o.eee,
                               {
-                                  onClick: P,
+                                  onClick: R,
                                   children: e
                               },
                               t

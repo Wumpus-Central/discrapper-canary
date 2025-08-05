@@ -25,7 +25,7 @@ function E(e) {
     function C(e, t, n) {
         t !== I && (T(t), A(n), a(t));
     }
-    function R() {
+    function w() {
         return new Promise((e) => {
             e({
                 shouldClear: !1,
@@ -67,7 +67,7 @@ function E(e) {
                             N.current = !0;
                         },
                         focused: N.current,
-                        onSubmit: R,
+                        onSubmit: w,
                         disableThemedBackground: v
                     }),
                     (0, r.jsx)(s.nn4, { children: h.intl.format(h.t['+DFxLS'], { maxLength: _.$n }) })

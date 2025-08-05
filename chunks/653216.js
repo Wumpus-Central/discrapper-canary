@@ -1,93 +1,94 @@
-var n = r(214788),
-    i = r(551558),
-    o = r(65183),
-    a = r(581079),
-    u = r(170261),
-    s = o.List,
-    c = o.Map,
-    l = function (t, e, r) {
-        if (t) {
-            var n = e.get(t);
-            n && e.set(t, r(n));
+var r = n(214788),
+    i = n(551558),
+    a = n(65183),
+    o = n(581079),
+    s = n(170261),
+    l = a.List,
+    c = a.Map,
+    u = function (e, t, n) {
+        if (e) {
+            var r = t.get(e);
+            r && t.set(e, n(r));
         }
+    },
+    d = function (e, t, n) {
+        return e.withMutations(function (e) {
+            var r = t.getKey(),
+                i = n.getKey();
+            (u(t.getParentKey(), e, function (e) {
+                var t = e.getChildKeys(),
+                    n = t.indexOf(r) + 1,
+                    a = t.toArray();
+                return (a.splice(n, 0, i), e.merge({ children: l(a) }));
+            }),
+                u(t.getNextSiblingKey(), e, function (e) {
+                    return e.merge({ prevSibling: i });
+                }),
+                u(r, e, function (e) {
+                    return e.merge({ nextSibling: i });
+                }),
+                u(i, e, function (e) {
+                    return e.merge({ prevSibling: r });
+                }));
+        });
     };
-t.exports = function (t, e) {
-    e.isCollapsed() || a(!1);
-    var r = e.getAnchorKey(),
-        o = t.getBlockMap(),
-        f = o.get(r),
-        p = f.getText();
-    if (!p) {
-        var h = f.getType();
-        if ('unordered-list-item' === h || 'ordered-list-item' === h)
-            return u(t, e, function (t) {
-                return t.merge({
+e.exports = function (e, t) {
+    t.isCollapsed() || o(!1);
+    var n = t.getAnchorKey(),
+        a = e.getBlockMap(),
+        l = a.get(n),
+        u = l.getText();
+    if (!u) {
+        var f = l.getType();
+        if ('unordered-list-item' === f || 'ordered-list-item' === f)
+            return s(e, t, function (e) {
+                return e.merge({
                     type: 'unstyled',
                     depth: 0
                 });
             });
     }
-    var d = e.getAnchorOffset(),
-        g = f.getCharacterList(),
-        y = i(),
-        v = f instanceof n,
-        m = f.merge({
-            text: p.slice(0, d),
-            characterList: g.slice(0, d)
+    var _ = t.getAnchorOffset(),
+        p = l.getCharacterList(),
+        h = i(),
+        m = l instanceof r,
+        g = l.merge({
+            text: u.slice(0, _),
+            characterList: p.slice(0, _)
         }),
-        _ = m.merge({
-            key: y,
-            text: p.slice(d),
-            characterList: g.slice(d),
+        E = g.merge({
+            key: h,
+            text: u.slice(_),
+            characterList: p.slice(_),
             data: c()
         }),
-        b = o.toSeq().takeUntil(function (t) {
-            return t === f;
+        b = a.toSeq().takeUntil(function (e) {
+            return e === l;
         }),
-        S = o
+        y = a
             .toSeq()
-            .skipUntil(function (t) {
-                return t === f;
+            .skipUntil(function (e) {
+                return e === l;
             })
             .rest(),
-        w = b
+        O = b
             .concat(
                 [
-                    [r, m],
-                    [y, _]
+                    [n, g],
+                    [h, E]
                 ],
-                S
+                y
             )
             .toOrderedMap();
     return (
-        v &&
-            (f.getChildKeys().isEmpty() || a(!1),
-            (w = w.withMutations(function (t) {
-                var e = m.getKey(),
-                    r = _.getKey();
-                (l(m.getParentKey(), t, function (t) {
-                    var n = t.getChildKeys(),
-                        i = n.indexOf(e) + 1,
-                        o = n.toArray();
-                    return (o.splice(i, 0, r), t.merge({ children: s(o) }));
-                }),
-                    l(m.getNextSiblingKey(), t, function (t) {
-                        return t.merge({ prevSibling: r });
-                    }),
-                    l(e, t, function (t) {
-                        return t.merge({ nextSibling: r });
-                    }),
-                    l(r, t, function (t) {
-                        return t.merge({ prevSibling: e });
-                    }));
-            }))),
-        t.merge({
-            blockMap: w,
-            selectionBefore: e,
-            selectionAfter: e.merge({
-                anchorKey: y,
+        m && (l.getChildKeys().isEmpty() || o(!1), (O = d(O, g, E))),
+        e.merge({
+            blockMap: O,
+            selectionBefore: t,
+            selectionAfter: t.merge({
+                anchorKey: h,
                 anchorOffset: 0,
-                focusKey: y,
+                focusKey: h,
                 focusOffset: 0,
                 isBackward: !1
             })

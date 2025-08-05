@@ -1,6 +1,6 @@
 n.d(t, {
     O: () => o,
-    h: () => a
+    h: () => s
 });
 var r = n(593472),
     i = n(70956),
@@ -28,4 +28,4 @@ let o = {
             distributor: l.GQo.STEAM
         }
     },
-    a = Object.keys(o);
+    s = Object.keys(o);

@@ -139,37 +139,37 @@ function I() {
     });
 }
 function T(e) {
-    var { look: t = b.FILLED, color: n = y.BRAND, size: a = O.MEDIUM, fullWidth: s = !1, grow: _ = !0, disabled: h = !1, submitting: E = !1, type: T = 'button', style: S, wrapperClassName: A, className: N, innerClassName: C, onClick: R, onDoubleClick: P, onMouseDown: w, onMouseUp: D, onMouseEnter: L, onMouseLeave: x, onKeyDown: M, children: k, rel: j, buttonRef: U, focusProps: G, 'aria-label': B, submittingStartedLabel: V, submittingFinishedLabel: F } = e,
-        Z = g(e, ['look', 'color', 'size', 'fullWidth', 'grow', 'disabled', 'submitting', 'type', 'style', 'wrapperClassName', 'className', 'innerClassName', 'onClick', 'onDoubleClick', 'onMouseDown', 'onMouseUp', 'onMouseEnter', 'onMouseLeave', 'onKeyDown', 'children', 'rel', 'buttonRef', 'focusProps', 'aria-label', 'submittingStartedLabel', 'submittingFinishedLabel']);
+    var { look: t = b.FILLED, color: n = y.BRAND, size: a = O.MEDIUM, fullWidth: s = !1, grow: _ = !0, disabled: h = !1, submitting: E = !1, type: T = 'button', style: S, wrapperClassName: A, className: N, innerClassName: C, onClick: w, onDoubleClick: R, onMouseDown: P, onMouseUp: D, onMouseEnter: L, onMouseLeave: x, onKeyDown: k, children: j, rel: M, buttonRef: U, focusProps: G, 'aria-label': B, submittingStartedLabel: Z, submittingFinishedLabel: F } = e,
+        V = g(e, ['look', 'color', 'size', 'fullWidth', 'grow', 'disabled', 'submitting', 'type', 'style', 'wrapperClassName', 'className', 'innerClassName', 'onClick', 'onDoubleClick', 'onMouseDown', 'onMouseUp', 'onMouseEnter', 'onMouseLeave', 'onKeyDown', 'children', 'rel', 'buttonRef', 'focusProps', 'aria-label', 'submittingStartedLabel', 'submittingFinishedLabel']);
     let H = h || E,
         Y = H && (null != L || null != x),
         W = Y ? null : A,
         K = v(G, t),
         z = i.useRef(!1);
     i.useEffect(() => {
-        (!0 === E && ((z.current = !0), l.u.announce(null != V ? V : d.intl.string(d.t.pfChQk))), !1 === E && !0 === z.current && l.u.announce(null != F ? F : d.intl.string(d.t.SVPara)));
-    }, [E, V, F]);
+        (!0 === E && ((z.current = !0), l.u.announce(null != Z ? Z : d.intl.string(d.t.pfChQk))), !1 === E && !0 === z.current && l.u.announce(null != F ? F : d.intl.string(d.t.SVPara)));
+    }, [E, Z, F]);
     let q = (0, r.jsx)(
         c.t,
         m(p({}, G), {
             offset: K,
             children: (0, r.jsxs)(
                 'button',
-                m(p({}, H ? null : Z), {
+                m(p({}, H ? null : V), {
                     'aria-label': B,
                     'aria-busy': !!E || void 0,
                     ref: U,
-                    onClick: H ? (e) => e.preventDefault() : R,
-                    onDoubleClick: H ? (e) => e.preventDefault() : P,
+                    onClick: H ? (e) => e.preventDefault() : w,
+                    onDoubleClick: H ? (e) => e.preventDefault() : R,
                     onMouseUp: h ? void 0 : D,
-                    onMouseDown: h ? void 0 : w,
+                    onMouseDown: h ? void 0 : P,
                     onMouseEnter: L,
                     onMouseLeave: x,
-                    onKeyDown: h ? void 0 : M,
+                    onKeyDown: h ? void 0 : k,
                     type: T,
                     disabled: h,
                     style: S,
-                    rel: j,
+                    rel: M,
                     className: o()(
                         N,
                         I({
@@ -193,7 +193,7 @@ function T(e) {
                             : null,
                         (0, r.jsx)('div', {
                             className: o()(f.contents, C),
-                            children: k
+                            children: j
                         })
                     ]
                 })

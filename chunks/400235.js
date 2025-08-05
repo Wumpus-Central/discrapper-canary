@@ -52,9 +52,9 @@ function u(e) {
         A = (0, o.D)(p || E, y, S),
         N = A.state,
         C = A.styles,
-        R = A.forceUpdate,
-        P = A.update,
-        w = r.useMemo(
+        w = A.forceUpdate,
+        R = A.update,
+        P = r.useMemo(
             function () {
                 return {
                     ref: O,
@@ -66,11 +66,11 @@ function u(e) {
                         style: C.arrow,
                         ref: T
                     },
-                    forceUpdate: R || s,
-                    update: P || l
+                    forceUpdate: w || s,
+                    update: R || l
                 };
             },
-            [O, T, n, N, C, P, R]
+            [O, T, n, N, C, R, w]
         );
-    return (0, a.$p)(g)(w);
+    return (0, a.$p)(g)(P);
 }

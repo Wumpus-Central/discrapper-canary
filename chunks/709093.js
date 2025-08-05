@@ -75,16 +75,16 @@ function A(e) {
 let N = function (e) {
     var t, n, i;
     let { hideCloseButton: f = !1, hideCloseOnFullScreen: b, onClose: y, upgradeToPremiumType: O, isEligibleForTrial: v = !1, showTrialBadge: N = !1, showDiscountBadge: C = !1 } = e,
-        R = (0, s.apv)((0, l.ZP)()),
-        P = O === g.p9.TIER_2,
-        w = (0, d.Fv)(v),
+        w = (0, s.apv)((0, l.ZP)()),
+        R = O === g.p9.TIER_2,
+        P = (0, d.Fv)(v),
         D = (0, h.Ng)(),
         L = null == D || null == (t = D.discount) ? void 0 : t.amount,
-        x = P ? T : I,
-        M = P ? p.Z : _.Z,
-        { step: k, breadcrumbs: j, startedPaymentFlowWithPaymentSourcesRef: U } = (0, c.JL)();
-    if (null == j || 0 === j.length) return null;
-    let G = j.flatMap((e) => {
+        x = R ? T : I,
+        k = R ? p.Z : _.Z,
+        { step: j, breadcrumbs: M, startedPaymentFlowWithPaymentSourcesRef: U } = (0, c.JL)();
+    if (null == M || 0 === M.length) return null;
+    let G = M.flatMap((e) => {
         let t = e.useBreadcrumbLabel(v),
             n = e.sectionHeaderText;
         return null != t
@@ -100,18 +100,18 @@ let N = function (e) {
             let t = e.id !== u.h8.ADD_PAYMENT_STEPS,
                 n = e.id === u.h8.ADD_PAYMENT_STEPS && !U.current;
             return !v || (v && (t || n));
-        })).find((e) => e.id === k),
-        V = null != (i = null == B || null == (n = B.sectionHeaderText) ? void 0 : n.call(B)) ? i : null == B ? void 0 : B.label,
-        F = null != V && null != k,
-        Z = w && F && k === u.h8.REVIEW;
+        })).find((e) => e.id === j),
+        Z = null != (i = null == B || null == (n = B.sectionHeaderText) ? void 0 : n.call(B)) ? i : null == B ? void 0 : B.label,
+        F = null != Z && null != j,
+        V = P && F && j === u.h8.REVIEW;
     return (0, r.jsxs)('div', {
         className: E.container,
         children: [
             (0, r.jsxs)(o.$, {
-                color: P ? 'nitro-pink' : 'nitro-green',
+                color: R ? 'nitro-pink' : 'nitro-green',
                 className: a()(E.headerContainer, { [E.containerBottomPadding]: !F }),
                 children: [
-                    (0, r.jsx)(A, { isTier2: P }),
+                    (0, r.jsx)(A, { isTier2: R }),
                     !f &&
                         (0, r.jsx)(s.olH, {
                             hideOnFullscreen: b,
@@ -121,12 +121,12 @@ let N = function (e) {
                     (0, r.jsx)('img', {
                         src: x,
                         alt: '',
-                        className: Z ? E.bigWumpus : E.wumpus
+                        className: V ? E.bigWumpus : E.wumpus
                     }),
                     (0, r.jsx)('div', {
                         className: E.textContainer,
-                        children: (0, r.jsx)(M, {
-                            color: R ? 'black' : 'white',
+                        children: (0, r.jsx)(k, {
+                            color: w ? 'black' : 'white',
                             className: E.wordmark
                         })
                     })
@@ -135,12 +135,12 @@ let N = function (e) {
             (N || C) && (0, r.jsx)(m.Z, { discountAmount: L }),
             F &&
                 (0, r.jsx)(S, {
-                    isOneStepCheckout: w,
-                    headerText: V,
-                    step: k,
+                    isOneStepCheckout: P,
+                    headerText: Z,
+                    step: j,
                     filteredBreadcrumbs: G
                 }),
-            Z &&
+            V &&
                 (0, r.jsx)('div', {
                     className: E.bodyGradientContainer,
                     children: (0, r.jsx)('div', { className: E.bodyGradient })

@@ -1,37 +1,37 @@
 (n.d(t, { Z: () => d }), n(388685));
-var l = n(255367),
+var r = n(255367),
     i = n(73800),
-    r = n(755721),
-    a = n(626135),
-    o = n(827498),
-    s = n(915346),
+    a = n(755721),
+    o = n(626135),
+    s = n(827498),
+    l = n(915346),
     c = n(981631),
     u = n(388032);
 function d(e) {
-    let { botUserId: t, applicationId: n, buttonSize: d, analyticsLocations: p } = e,
-        [m, f] = i.useState(!1),
+    let { botUserId: t, applicationId: n, buttonSize: d, analyticsLocations: f } = e,
+        [_, p] = i.useState(!1),
         h = i.useRef(null),
-        v = i.useCallback(async () => {
-            (a.default.track(c.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
+        m = i.useCallback(async () => {
+            (o.default.track(c.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                 application_id: n,
-                button_action: o._y.OPEN_APP_DM
+                button_action: s._y.OPEN_APP_DM
             }),
-                f(!0));
+                p(!0));
             try {
-                await (0, s.W)({
+                await (0, l.W)({
                     appId: n,
                     botId: t,
-                    analyticsLocations: p
+                    analyticsLocations: f
                 });
             } catch (e) {}
-            (clearTimeout(h.current), f(!1));
-        }, [t, n, p]);
-    return (0, l.jsx)(r.zx, {
+            (clearTimeout(h.current), p(!1));
+        }, [t, n, f]);
+    return (0, r.jsx)(a.zx, {
         type: 'submit',
         size: d,
-        color: r.zx.Colors.PRIMARY,
-        submitting: m,
-        onClick: v,
+        color: a.zx.Colors.PRIMARY,
+        submitting: _,
+        onClick: m,
         'aria-label': u.intl.string(u.t.AUM8hY),
         children: u.intl.string(u.t.AUM8hY)
     });

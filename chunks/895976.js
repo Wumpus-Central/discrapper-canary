@@ -8,7 +8,7 @@ var l = n(73800),
     u = n(981631);
 function d(e) {
     let { guild: t, inviteChannel: n, inviteTargetType: d, applicationId: c } = e,
-        [h, g, m, p] = (0, i.Wu)([s.Z, a.ZP], () => [s.Z.getInviteSuggestionRows(), s.Z.getTotalSuggestionsCount() >= 1, s.Z.getInitialCounts(), null == n ? null : a.ZP.getVoiceStatesForChannel(n)], [n]),
+        [g, h, m, p] = (0, i.Wu)([s.Z, a.ZP], () => [s.Z.getInviteSuggestionRows(), s.Z.getTotalSuggestionsCount() >= 1, s.Z.getInitialCounts(), null == n ? null : a.ZP.getVoiceStatesForChannel(n)], [n]),
         v = l.useMemo(() => {
             let e = new Set();
             return (
@@ -32,8 +32,8 @@ function d(e) {
             }).catch(u.VqG);
         }, [v, t, n, c, d]),
         {
-            rows: h,
-            showFriends: g,
+            rows: g,
+            showFriends: h,
             initialCounts: m
         }
     );

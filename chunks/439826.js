@@ -192,8 +192,8 @@ function D(e) {
         V = (0, p.ZP)(),
         L = ((0, l.wj)(V) ? A.BRd.DARK : A.BRd.LIGHT) === A.BRd.DARK,
         M = (0, h.tP)(d),
-        W = (null == (t = d.userStatus) ? void 0 : t.claimedAt) != null,
-        Z = (0, h.B6)(d.config.expiresAt, {
+        Z = (null == (t = d.userStatus) ? void 0 : t.claimedAt) != null,
+        W = (0, h.B6)(d.config.expiresAt, {
             month: 'numeric',
             day: 'numeric'
         }),
@@ -317,12 +317,12 @@ function D(e) {
                                         color: L ? 'text-muted' : 'always-white',
                                         children: N.intl.format(N.t.buEvBw, { brandName: null != (c = null == (i = d.config.cosponsorMetadata) ? void 0 : i.name) ? c : d.config.messages.gamePublisher })
                                     }),
-                                    M || W
+                                    M || Z
                                         ? null
                                         : (0, r.jsx)(u.Text, {
                                               variant: 'text-sm/medium',
                                               color: L ? 'text-muted' : 'always-white',
-                                              children: N.intl.format(N.t['7D8r4O'], { expiryDate: Z })
+                                              children: N.intl.format(N.t['7D8r4O'], { expiryDate: W })
                                           })
                                 ]
                             })

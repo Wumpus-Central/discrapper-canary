@@ -1,18 +1,18 @@
 (n.d(t, {
     AT: () => m,
     DQ: () => T,
-    Hz: () => R,
+    Hz: () => w,
     LD: () => S,
     MD: () => I,
     SI: () => C,
     UJ: () => N,
     X6: () => O,
-    aQ: () => k,
+    aQ: () => j,
     g4: () => A,
-    hi: () => w,
+    hi: () => P,
     kC: () => y,
     kh: () => b,
-    px: () => j,
+    px: () => M,
     rb: () => g
 }),
     n(388685),
@@ -39,18 +39,18 @@ let h = -1,
             return null == e.isEligible || (null == (t = e.isEligible) ? void 0 : t.call(e));
         }),
     g = (e) => {
-        let { channelId: t, authorId: n } = j(e);
+        let { channelId: t, authorId: n } = M(e);
         return null == t || null == e ? p.qn.NONE : E(t, n);
     },
     E = (e, t) => {
         let n = c.default.getCurrentUser();
         if (null == n || t === n.id) return p.qn.NONE;
-        let r = w(e, t, [s.Z, l.Z]);
+        let r = P(e, t, [s.Z, l.Z]);
         return null == r ? p.qn.NONE : b(r);
     },
     b = (e) => {
         let t = m();
-        return null == e ? p.qn.NONE : R(t.map((t) => (k(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(d.lm));
+        return null == e ? p.qn.NONE : w(t.map((t) => (j(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(d.lm));
     };
 function y(e) {
     let t = g(e);
@@ -193,17 +193,17 @@ function T(e) {
 }
 function S(e, t) {
     if (t === p.qn.NONE) return [];
-    let n = P(t);
+    let n = R(t);
     return 0 === n.length ? [] : n.filter((t) => C(t, e)).map((e) => p.Fj[e].obscureReason);
 }
 function A(e, t) {
     if (t === p.qn.NONE) return !1;
-    let n = P(t);
+    let n = R(t);
     return 0 !== n.length && n.filter((t) => C(t, e)).length > 0;
 }
 function N(e, t) {
     if (t === p.qn.NONE || a.ZP.get('explicit_media_redaction_ignore_pending_scan')) return !1;
-    let n = P(t);
+    let n = R(t);
     if (0 === n.length) return !1;
     switch (e.type) {
         case f.l.Embed:
@@ -232,7 +232,7 @@ function C(e, t) {
             return !1;
     }
 }
-function R(e) {
+function w(e) {
     let t = p.qn.NONE;
     for (let n of e)
         switch (n) {
@@ -244,13 +244,13 @@ function R(e) {
         }
     return t;
 }
-function P(e) {
+function R(e) {
     if (e === p.qn.NONE) return [];
     let t = [];
     for (let n of m()) (e & n.bitmask) > 0 && t.push(n.harmType);
     return t;
 }
-function w(e, t) {
+function P(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [s.Z, l.Z],
         [r, i] = n,
         a = r.getChannel(e),
@@ -275,7 +275,7 @@ function D(e, t) {
             ('thumbnail' in e && null != e.thumbnail && (null == (i = e.thumbnail) ? void 0 : i.width) === 0 && (null == (a = e.thumbnail) ? void 0 : a.height) === 0) ||
             ('image' in e && null != e.image && (null == (o = e.image) ? void 0 : o.width) === 0 && (null == (s = e.image) ? void 0 : s.height) === 0) ||
             ('images' in e && (null == (l = e.images) ? void 0 : l.some((e) => null != e && 0 === e.width && 0 === e.height)))
-        ) && M(U(e), t)
+        ) && k(U(e), t)
     );
 }
 function L(e, t) {
@@ -290,7 +290,7 @@ function L(e, t) {
                         media: e
                     })
             ).length &&
-        M(null != (n = e.content_scan_version) ? n : e.contentScanVersion, t)
+        k(null != (n = e.content_scan_version) ? n : e.contentScanVersion, t)
     );
 }
 function x(e, t) {
@@ -305,17 +305,17 @@ function x(e, t) {
                         media: e
                     })
             ).length &&
-        M(null == (n = e.contentScanMetadata) ? void 0 : n.version, t)
+        k(null == (n = e.contentScanMetadata) ? void 0 : n.version, t)
     );
 }
-function M(e, t) {
+function k(e, t) {
     let n = _.Z.validContentScanVersion;
     return e !== h && (t.includes(p._.GORE) ? null == e || e < n : null == e);
 }
-function k(e) {
+function j(e) {
     return null != e && [r.Q4.BLOCK, r.Q4.BLUR].includes(e);
 }
-function j(e) {
+function M(e) {
     let t = null,
         n = null;
     if (null == e)

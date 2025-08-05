@@ -52,19 +52,19 @@ let d = {
                         );
                     }, []),
                     C = t.rects.reference,
-                    R = t.rects.popper,
-                    P = new Map(),
-                    w = !0,
+                    w = t.rects.popper,
+                    R = new Map(),
+                    P = !0,
                     D = N[0],
                     L = 0;
                 L < N.length;
                 L++
             ) {
                 var x = N[L],
-                    M = (0, i.Z)(x),
-                    k = (0, c.Z)(x) === l.BL,
-                    j = [l.we, l.I].indexOf(M) >= 0,
-                    U = j ? 'width' : 'height',
+                    k = (0, i.Z)(x),
+                    j = (0, c.Z)(x) === l.BL,
+                    M = [l.we, l.I].indexOf(k) >= 0,
+                    U = M ? 'width' : 'height',
                     G = (0, o.Z)(t, {
                         placement: x,
                         boundary: g,
@@ -72,28 +72,28 @@ let d = {
                         altBoundary: b,
                         padding: m
                     }),
-                    B = j ? (k ? l.F2 : l.t$) : k ? l.I : l.we;
-                C[U] > R[U] && (B = (0, r.Z)(B));
-                var V = (0, r.Z)(B),
+                    B = M ? (j ? l.F2 : l.t$) : j ? l.I : l.we;
+                C[U] > w[U] && (B = (0, r.Z)(B));
+                var Z = (0, r.Z)(B),
                     F = [];
                 if (
-                    (f && F.push(G[M] <= 0),
-                    p && F.push(G[B] <= 0, G[V] <= 0),
+                    (f && F.push(G[k] <= 0),
+                    p && F.push(G[B] <= 0, G[Z] <= 0),
                     F.every(function (e) {
                         return e;
                     }))
                 ) {
-                    ((D = x), (w = !1));
+                    ((D = x), (P = !1));
                     break;
                 }
-                P.set(x, F);
+                R.set(x, F);
             }
-            if (w)
+            if (P)
                 for (
-                    var Z = O ? 3 : 1,
+                    var V = O ? 3 : 1,
                         H = function (e) {
                             var t = N.find(function (t) {
-                                var n = P.get(t);
+                                var n = R.get(t);
                                 if (n)
                                     return n.slice(0, e).every(function (e) {
                                         return e;
@@ -101,7 +101,7 @@ let d = {
                             });
                             if (t) return ((D = t), 'break');
                         },
-                        Y = Z;
+                        Y = V;
                     Y > 0 && 'break' !== H(Y);
                     Y--
                 );

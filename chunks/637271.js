@@ -1,10 +1,10 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var r,
     i = n(442837),
-    l = n(570140),
-    a = n(592125),
-    o = n(176505);
-function s(e, t, n) {
+    a = n(570140),
+    o = n(592125),
+    s = n(176505);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +19,23 @@ function s(e, t, n) {
 }
 let c = {},
     u = {};
-class d extends (r = i.ZP.PersistedStore) {
+function d(e) {
+    let { channelId: t, guildId: n } = e;
+    if (null == n || t === s.oC.GUILD_HOME) return;
+    let r = o.Z.getChannel(t),
+        i = c[n],
+        a = u[n];
+    ((null == r ? void 0 : r.isThread()) && (null == r ? void 0 : r.parent_id) != null && [a, i].includes(null == r ? void 0 : r.parent_id)) || (t !== i && delete c[n], t !== a && delete u[n]);
+}
+function f(e) {
+    let { channelId: t, guildId: n } = e;
+    (null == t ? delete u[n] : (c[n] = t), delete u[n]);
+}
+function _(e) {
+    let { channelId: t, guildId: n } = e;
+    (delete c[n], (u[n] = t));
+}
+class p extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         var t;
         c = null != (t = null == e ? void 0 : e.selectedResourceChannelIdByGuildId) ? t : {};
@@ -35,22 +51,9 @@ class d extends (r = i.ZP.PersistedStore) {
         return null == e ? null : null != (t = c[e]) ? t : u[e];
     }
 }
-(s(d, 'displayName', 'GuildOnboardingHomeNavigationStore'), s(d, 'persistKey', 'GuildOnboardingHomeNavigationStore'));
-let p = new d(l.Z, {
-    CHANNEL_SELECT: function (e) {
-        let { channelId: t, guildId: n } = e;
-        if (null == n || t === o.oC.GUILD_HOME) return;
-        let r = a.Z.getChannel(t),
-            i = c[n],
-            l = u[n];
-        ((null == r ? void 0 : r.isThread()) && (null == r ? void 0 : r.parent_id) != null && [l, i].includes(null == r ? void 0 : r.parent_id)) || (t !== i && delete c[n], t !== l && delete u[n]);
-    },
-    SELECT_HOME_RESOURCE_CHANNEL: function (e) {
-        let { channelId: t, guildId: n } = e;
-        (null == t ? delete u[n] : (c[n] = t), delete u[n]);
-    },
-    SELECT_NEW_MEMBER_ACTION_CHANNEL: function (e) {
-        let { channelId: t, guildId: n } = e;
-        (delete c[n], (u[n] = t));
-    }
+(l(p, 'displayName', 'GuildOnboardingHomeNavigationStore'), l(p, 'persistKey', 'GuildOnboardingHomeNavigationStore'));
+let h = new p(a.Z, {
+    CHANNEL_SELECT: d,
+    SELECT_HOME_RESOURCE_CHANNEL: f,
+    SELECT_NEW_MEMBER_ACTION_CHANNEL: _
 });

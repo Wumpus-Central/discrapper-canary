@@ -1,13 +1,13 @@
-var e = {
-    isImage: function (t) {
-        return 'image' === r(t)[0];
+var t = {
+    isImage: function (e) {
+        return 'image' === n(e)[0];
     },
-    isJpeg: function (t) {
-        var n = r(t);
-        return e.isImage(t) && ('jpeg' === n[1] || 'pjpeg' === n[1]);
+    isJpeg: function (e) {
+        var r = n(e);
+        return t.isImage(e) && ('jpeg' === r[1] || 'pjpeg' === r[1]);
     }
 };
-function r(t) {
-    return t.split('/');
+function n(e) {
+    return e.split('/');
 }
-t.exports = e;
+e.exports = t;

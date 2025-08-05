@@ -1,79 +1,90 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    l = n(607187),
-    a = n(112560),
-    o = n(981631),
-    s = n(388032),
+    a = n(607187),
+    o = n(112560),
+    s = n(981631),
+    l = n(388032),
     c = n(91490),
     u = n(800350);
-function d(e) {
-    let { channel: t, guild: d, width: p, inPopout: h } = e;
-    return (0, r.jsx)(l.Z, {
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                d(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function _(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function p(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : _(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function h(e) {
+    let { channel: t, guild: d, width: _, inPopout: h } = e;
+    return (0, r.jsx)(a.Z, {
         className: c.root,
-        children: (0, r.jsx)(a.Z, {
+        children: (0, r.jsx)(o.Z, {
             artURL: u,
-            size: (0, a.L)(p),
-            header: s.intl.string(s.t.O4FiWl),
+            size: (0, o.L)(_),
+            header: l.intl.string(l.t.O4FiWl),
             onCTAClick: () =>
                 (0, i.ZDy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e('7654'), n.e('34946')]).then(n.bind(n, 560114));
-                        return (n) => {
-                            var i, l;
-                            return (0, r.jsx)(
+                        let { default: e } = await Promise.all([n.e('7654'), n.e('49049'), n.e('29328')]).then(n.bind(n, 560114));
+                        return (n) =>
+                            (0, r.jsx)(
                                 e,
-                                ((i = (function (e) {
-                                    for (var t = 1; t < arguments.length; t++) {
-                                        var n = null != arguments[t] ? arguments[t] : {},
-                                            r = Object.keys(n);
-                                        ('function' == typeof Object.getOwnPropertySymbols &&
-                                            (r = r.concat(
-                                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                })
-                                            )),
-                                            r.forEach(function (t) {
-                                                var r;
-                                                ((r = n[t]),
-                                                    t in e
-                                                        ? Object.defineProperty(e, t, {
-                                                              value: r,
-                                                              enumerable: !0,
-                                                              configurable: !0,
-                                                              writable: !0
-                                                          })
-                                                        : (e[t] = r));
-                                            }));
-                                    }
-                                    return e;
-                                })({}, n)),
-                                (l = l =
-                                    {
-                                        guild: d,
-                                        channel: t,
-                                        source: o.t4x.CHANNEL_CALL
-                                    }),
-                                Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
-                                    : (function (e, t) {
-                                          var n = Object.keys(e);
-                                          if (Object.getOwnPropertySymbols) {
-                                              var r = Object.getOwnPropertySymbols(e);
-                                              n.push.apply(n, r);
-                                          }
-                                          return n;
-                                      })(Object(l)).forEach(function (e) {
-                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
-                                      }),
-                                i)
+                                p(f({}, n), {
+                                    guild: d,
+                                    channel: t,
+                                    source: s.t4x.CHANNEL_CALL
+                                })
                             );
-                        };
                     },
                     { contextKey: h ? i.u1M : i.z1l }
                 ),
-            callToAction: s.intl.string(s.t.VINpSE)
+            callToAction: l.intl.string(l.t.VINpSE)
         })
     });
 }

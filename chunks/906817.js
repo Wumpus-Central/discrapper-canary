@@ -1,14 +1,14 @@
 n.d(t, {
     EM: () => m,
     WW: () => b,
-    ZP: () => _
+    ZP: () => O
 });
 var r = n(255367),
     i = n(73800),
     l = n(481060),
     o = n(997638),
-    a = n(362658),
-    s = n(216306),
+    s = n(362658),
+    a = n(216306),
     c = n(155409),
     u = n(540126),
     d = n(301342),
@@ -49,16 +49,16 @@ function b(e, t) {
         }
     }
 }
-let _ = i.memo(function (e) {
-    let { sectionIndex: t, guild: n, guildChannels: m, guildChannelsVersion: b, selectedChannelId: _, disableManageChannels: O } = e,
-        { isFavoritesPerk: y } = (0, a.z)('ChannelListSection'),
+let O = i.memo(function (e) {
+    let { sectionIndex: t, guild: n, guildChannels: m, guildChannelsVersion: b, selectedChannelId: O, disableManageChannels: _ } = e,
+        { isFavoritesPerk: y } = (0, s.z)('ChannelListSection'),
         C = i.useCallback(() => {
             let e = m.getCategoryFromSection(m.recentsSectionNumber);
             if (null == e) return;
             let t = null,
                 r = e.getShownChannelAndThreadIds();
-            (null != _ && r.includes(_) && (t = (0, s.KY)(m)), (0, s.Uo)(n.id, r, t));
-        }, [n.id, _, m, b]),
+            (null != O && r.includes(O) && (t = (0, a.KY)(m)), (0, a.Uo)(n.id, r, t));
+        }, [n.id, O, m, b]),
         { density: v } = (0, l.TCT)(),
         j = 'compact' === v ? 8 : h.$k;
     switch (t) {
@@ -95,7 +95,7 @@ let _ = i.memo(function (e) {
             return (0, r.jsx)(d.ZP, {
                 channel: e.record,
                 position: e.position,
-                disableManageChannels: O,
+                disableManageChannels: _,
                 children: (0, r.jsx)(c.Z, {
                     inlineSpecs: h.MF,
                     arrowAlignment: o.cy.TOP,
@@ -110,7 +110,7 @@ let _ = i.memo(function (e) {
             return (0, r.jsx)(d.ZP, {
                 channel: e.record,
                 position: e.position,
-                disableManageChannels: O
+                disableManageChannels: _
             });
         }
     }

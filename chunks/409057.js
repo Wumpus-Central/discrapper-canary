@@ -26,19 +26,19 @@ var i = n(120356),
     A = n(652853),
     N = n(979038),
     C = n(448980),
-    R = n(336383),
-    P = n(194811),
-    w = n(373826),
+    w = n(336383),
+    R = n(194811),
+    P = n(373826),
     D = n(668700),
     L = n(262210),
     x = n(670451),
-    M = n(881530),
-    k = n(228168),
-    j = n(981631),
+    k = n(881530),
+    j = n(228168),
+    M = n(981631),
     U = n(701488),
     G = n(388032),
     B = n(227832);
-function V(e, t, n) {
+function Z(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -62,12 +62,12 @@ function F(e) {
                 })
             )),
             r.forEach(function (t) {
-                V(e, t, n[t]);
+                Z(e, t, n[t]);
             }));
     }
     return e;
 }
-function Z(e, t) {
+function V(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -84,19 +84,19 @@ function H(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : Z(Object(t)).forEach(function (n) {
+            : V(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function Y(e) {
-    let { user: t, currentUser: n, activity: i, application: V, voiceGuild: Z, voiceChannel: Y, className: W, onClose: K, appContext: z } = e,
+    let { user: t, currentUser: n, activity: i, application: Z, voiceGuild: V, voiceChannel: Y, className: W, onClose: K, appContext: z } = e,
         q = (0, g.Dt)(),
-        X = (0, g.Dt)(),
-        { analyticsLocations: Q } = (0, f.ZP)(d.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        { themeType: J } = (0, A.z)(),
-        $ = (0, m.Z)({
+        $ = (0, g.Dt)(),
+        { analyticsLocations: X } = (0, f.ZP)(d.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        { themeType: Q } = (0, A.z)(),
+        J = (0, m.Z)({
             activity: i,
             user: t
         }),
@@ -104,8 +104,8 @@ function Y(e) {
             display: 'live',
             user: t,
             activity: i,
-            entry: $,
-            analyticsLocations: Q
+            entry: J,
+            analyticsLocations: X
         }),
         et = (0, I.Z)({
             userId: t.id,
@@ -113,23 +113,23 @@ function Y(e) {
         }),
         en = (0, T.Z)(i),
         er = null != en.text && '' !== en.text,
-        { largeImage: ei, smallImage: ea } = (0, _.FO)(i, V),
-        eo = (0, M.Z)({
+        { largeImage: ei, smallImage: ea } = (0, _.FO)(i, Z),
+        eo = (0, k.Z)({
             location: 'UserProfileActivityCard',
             user: t,
             currentUser: n,
             activity: i,
-            application: V,
-            entry: $,
+            application: Z,
+            entry: J,
             onClose: K
         }),
         es = () => {
             let e = (0, s.Z)(i) ? 'crunchyroll' : 'default',
-                t = J === k.lY.MODAL_V2 ? h.J.SIZE_100 : h.J.SIZE_60;
-            return i.type === j.IIU.HANG_STATUS
+                t = Q === j.lY.MODAL_V2 ? h.J.SIZE_100 : h.J.SIZE_60;
+            return i.type === M.IIU.HANG_STATUS
                 ? (0, r.jsx)(b.Z, {
                       hangStatusActivity: i,
-                      className: a()(B.hangStatusIcon, B.image, { [B.small]: J !== k.lY.MODAL_V2 })
+                      className: a()(B.hangStatusIcon, B.image, { [B.small]: Q !== j.lY.MODAL_V2 })
                   })
                 : null == eo
                   ? (0, r.jsx)(h.E, {
@@ -151,8 +151,8 @@ function Y(e) {
                     });
         },
         el = () =>
-            i.type === j.IIU.HANG_STATUS
-                ? (0, r.jsx)(w.f, {
+            i.type === M.IIU.HANG_STATUS
+                ? (0, r.jsx)(P.f, {
                       variant: 'heading-sm/semibold',
                       text: (0, E.O8)(i),
                       id: q
@@ -166,7 +166,7 @@ function Y(e) {
                                 color: o.TVs.colors.TEXT_DEFAULT,
                                 className: B.voiceIcon
                             }),
-                            (0, r.jsx)(w.f, {
+                            (0, r.jsx)(P.f, {
                                 variant: 'heading-sm/semibold',
                                 text: Y.name,
                                 id: q
@@ -174,7 +174,7 @@ function Y(e) {
                         ]
                     })
                   : (0, c.Z)(i) || (0, O.dS)(i)
-                    ? (0, r.jsx)(w.f, {
+                    ? (0, r.jsx)(P.f, {
                           variant: 'heading-sm/semibold',
                           text: i.name,
                           id: q
@@ -182,45 +182,45 @@ function Y(e) {
                     : null != i.details
                       ? (0, r.jsx)(p._, {
                             href: i.details_url,
-                            children: (0, r.jsx)(w.f, {
+                            children: (0, r.jsx)(P.f, {
                                 variant: 'heading-sm/semibold',
                                 text: i.details,
                                 id: q
                             })
                         })
-                      : (0, r.jsx)(w.f, {
+                      : (0, r.jsx)(P.f, {
                             variant: 'heading-sm/semibold',
                             text: i.name,
                             id: q
                         }),
         ec = () => {
-            if (i.type === j.IIU.HANG_STATUS) return null;
-            if ((0, u.Z)(i) && null != Z)
-                return (0, r.jsx)(w.Z, {
+            if (i.type === M.IIU.HANG_STATUS) return null;
+            if ((0, u.Z)(i) && null != V)
+                return (0, r.jsx)(P.Z, {
                     variant: 'text-xs/normal',
-                    text: G.intl.formatToPlainString(G.t['hq/Qzc'], { guildName: Z.name }),
+                    text: G.intl.formatToPlainString(G.t['hq/Qzc'], { guildName: V.name }),
                     onClick: () => {
-                        ((0, y.X)(Z.id), ee({ action: 'OPEN_VOICE_GUILD' }), null == K || K());
+                        ((0, y.X)(V.id), ee({ action: 'OPEN_VOICE_GUILD' }), null == K || K());
                     }
                 });
             if ((0, c.Z)(i))
                 return (0, r.jsx)(p._, {
                     href: i.details_url,
-                    children: (0, r.jsx)(w.Z, {
+                    children: (0, r.jsx)(P.Z, {
                         variant: 'text-xs/normal',
                         text: i.details
                     })
                 });
             if ((0, O.dS)(i)) {
                 var e;
-                return (0, r.jsx)(w.Z, {
+                return (0, r.jsx)(P.Z, {
                     variant: 'text-xs/normal',
                     text: null == i || null == (e = i.assets) ? void 0 : e.small_text
                 });
             }
             return (0, r.jsx)(p._, {
                 href: i.state_url,
-                children: (0, r.jsx)(w.Z, {
+                children: (0, r.jsx)(P.Z, {
                     variant: 'text-xs/normal',
                     text: i.state
                 })
@@ -228,14 +228,14 @@ function Y(e) {
         },
         eu = () => {
             var e, t, n, a, o, s, l, u;
-            if (i.type === j.IIU.WATCHING) return null;
+            if (i.type === M.IIU.WATCHING) return null;
             if ((0, c.Z)(i)) return ed();
             if ((0, O.dS)(i) && (null == (e = i.party) ? void 0 : e.size) != null && (null == (t = i.party) ? void 0 : t.size.length) >= 2) {
                 let e = G.intl.formatToPlainString(G.t['JC/3x8'], {
                     numSpeakers: null == (a = i.party) ? void 0 : a.size[0],
                     numListeners: (null == (o = i.party) ? void 0 : o.size[1]) - (null == (s = i.party) ? void 0 : s.size[0])
                 });
-                return (0, r.jsx)(w.Z, {
+                return (0, r.jsx)(P.Z, {
                     variant: 'text-xs/normal',
                     text: e
                 });
@@ -243,7 +243,7 @@ function Y(e) {
             return (null == (n = i.assets) ? void 0 : n.large_text) != null
                 ? (0, r.jsx)(p._, {
                       href: null == (l = i.assets) ? void 0 : l.large_url,
-                      children: (0, r.jsx)(w.Z, {
+                      children: (0, r.jsx)(P.Z, {
                           text: null == (u = i.assets) ? void 0 : u.large_text,
                           variant: 'text-xs/normal'
                       })
@@ -258,16 +258,16 @@ function Y(e) {
                       children: [
                           (0, r.jsx)(p._, {
                               href: i.state_url,
-                              children: (0, r.jsx)(w.Z, {
+                              children: (0, r.jsx)(P.Z, {
                                   variant: 'text-xs/normal',
                                   text: i.state
                               })
                           }),
-                          (0, r.jsx)(w.Z, {
+                          (0, r.jsx)(P.Z, {
                               variant: 'text-xs/normal',
                               text: G.intl.formatToPlainString(G.t['u//9Bw'], {
                                   count: '0',
-                                  max: null != (a = null == V ? void 0 : V.getMaxParticipants()) ? a : 0
+                                  max: null != (a = null == Z ? void 0 : Z.getMaxParticipants()) ? a : 0
                               })
                           })
                       ]
@@ -278,12 +278,12 @@ function Y(e) {
                         children: [
                             (0, r.jsx)(p._, {
                                 href: i.state_url,
-                                children: (0, r.jsx)(w.Z, {
+                                children: (0, r.jsx)(P.Z, {
                                     variant: 'text-xs/normal',
                                     text: i.state
                                 })
                             }),
-                            (0, r.jsx)(w.Z, {
+                            (0, r.jsx)(P.Z, {
                                 variant: 'text-xs/normal',
                                 text:
                                     0 === i.party.size[1]
@@ -298,7 +298,7 @@ function Y(e) {
                   : null == i.party
                     ? (0, r.jsx)(p._, {
                           href: i.state_url,
-                          children: (0, r.jsx)(w.Z, {
+                          children: (0, r.jsx)(P.Z, {
                               variant: 'text-xs/normal',
                               text: i.state
                           })
@@ -326,11 +326,11 @@ function Y(e) {
                       children: [el(), ec(), eu()]
                   }),
         ep = () =>
-            null == Z || null == Y
+            null == V || null == Y
                 ? null
                 : (0, r.jsx)(D.Z, {
                       user: t,
-                      guild: Z,
+                      guild: V,
                       channel: Y,
                       onAction: ee,
                       onClose: K
@@ -345,26 +345,26 @@ function Y(e) {
                           user: t,
                           onAction: ee,
                           onClose: K,
-                          application: V
+                          application: Z
                       })
                   });
     return (0, r.jsx)(f.Gt, {
-        value: Q,
-        children: (0, r.jsxs)(R.Z, {
+        value: X,
+        children: (0, r.jsxs)(w.Z, {
             ref: et,
             className: a()(B.card, W),
             onAction: ee,
             onClose: K,
-            'aria-labelledby': er ? ''.concat(X, ' ').concat(q) : q,
+            'aria-labelledby': er ? ''.concat($, ' ').concat(q) : q,
             children: [
                 (0, r.jsx)(
-                    P.Z,
-                    H(F({ textId: X }, en), {
+                    R.Z,
+                    H(F({ textId: $ }, en), {
                         contextMenu: (0, r.jsx)(x.Z, {
                             display: 'live',
                             user: t,
                             activity: i,
-                            entry: $,
+                            entry: J,
                             onClose: K,
                             appContext: z
                         })
@@ -388,16 +388,16 @@ function Y(e) {
                                                 className: B.badges
                                             }),
                                         ef(),
-                                        J === k.lY.MODAL_V2 && eh()
+                                        Q === j.lY.MODAL_V2 && eh()
                                     ]
                                 }),
-                                J === k.lY.MODAL && eh()
+                                Q === j.lY.MODAL && eh()
                             ]
                         }),
                         ep()
                     ]
                 }),
-                J !== k.lY.MODAL && J !== k.lY.MODAL_V2 && eh()
+                Q !== j.lY.MODAL && Q !== j.lY.MODAL_V2 && eh()
             ]
         })
     });

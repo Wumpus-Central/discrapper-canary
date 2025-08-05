@@ -1,19 +1,19 @@
-var n = r(581079);
-t.exports = function (t, e) {
-    var r = [];
+var r = n(581079);
+e.exports = function (e, t) {
+    var n = [];
     return (
-        t.findEntityRanges(
-            function (t) {
-                return t.getEntity() === e;
+        e.findEntityRanges(
+            function (e) {
+                return e.getEntity() === t;
             },
-            function (t, e) {
-                r.push({
-                    start: t,
-                    end: e
+            function (e, t) {
+                n.push({
+                    start: e,
+                    end: t
                 });
             }
         ),
-        r.length || n(!1),
-        r
+        n.length || r(!1),
+        n
     );
 };

@@ -107,10 +107,10 @@ function S(e) {
         { media: n, obscured: i = !1, maxWidth: a, maxHeight: l, onContextMenu: u } = e,
         { width: d, height: _, url: g, proxyUrl: b, alt: v, type: I, maxWidth: S, maxHeight: A } = n,
         C = O(n, ['width', 'height', 'url', 'proxyUrl', 'alt', 'type', 'maxWidth', 'maxHeight']),
-        { zoomed: R } = (0, p.Y)(),
-        P = N(R, g, b),
-        w = null != d && 0 !== d && null != _ && 0 !== _;
-    if ('VIDEO' === I && w && null != b) {
+        { zoomed: w } = (0, p.Y)(),
+        R = N(w, g, b),
+        P = null != d && 0 !== d && null != _ && 0 !== _;
+    if ('VIDEO' === I && P && null != b) {
         var D;
         let e = T(b);
         if (null == e) return null;
@@ -118,7 +118,7 @@ function S(e) {
         return (0, r.jsx)(
             s.Z,
             y(E({}, C), {
-                src: P,
+                src: R,
                 width: d,
                 height: _,
                 maxWidth: a,
@@ -140,11 +140,11 @@ function S(e) {
     }
     return (
         'IMAGE' === I &&
-            (t = w
+            (t = P
                 ? (0, r.jsx)(
                       o.ZP,
                       y(E({}, C), {
-                          src: P,
+                          src: R,
                           width: d,
                           height: _,
                           maxWidth: a,
@@ -159,7 +159,7 @@ function S(e) {
                       })
                   )
                 : (0, r.jsx)('img', {
-                      src: P,
+                      src: R,
                       alt: v,
                       onContextMenu: u,
                       className: m.dimensionlessImage,

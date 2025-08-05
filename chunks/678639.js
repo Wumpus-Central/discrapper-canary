@@ -12,10 +12,10 @@ var n = a(255367),
     x = a(621060),
     p = a(616257),
     h = a(564799);
-function b(e, t) {
+function f(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
-function f(e) {
+function b(e) {
     let { store: t, dataGetter: a } = e,
         [l, i] = r.useState(a(t));
     return (
@@ -45,7 +45,7 @@ let v = [
             }
         }
     ],
-    g = [
+    j = [
         {
             id: 'local',
             name: 'Local Variables',
@@ -57,7 +57,7 @@ let v = [
                           className: h.inspectorContainer,
                           children: ['Store is missing ', (0, n.jsx)('code', { children: '__getLocalVars' }), ' method.']
                       })
-                    : (0, n.jsx)(f, {
+                    : (0, n.jsx)(b, {
                           store: t,
                           dataGetter: (e) => e.__getLocalVars()
                       });
@@ -69,16 +69,16 @@ let v = [
             group: x.v0.NONE,
             render(e) {
                 let { store: t } = e;
-                return (0, n.jsx)(f, {
+                return (0, n.jsx)(b, {
                     store: t,
                     dataGetter: (e) => e
                 });
             }
         }
     ];
-function j(e) {
+function g(e) {
     let { store: t, initialHeight: a } = e,
-        { TabBar: r, renderSelectedTab: l } = (0, x.ZP)({ tabs: g }, []);
+        { TabBar: r, renderSelectedTab: l } = (0, x.ZP)({ tabs: j }, []);
     return (0, n.jsxs)(u.Z, {
         className: h.subPanel,
         minHeight: 100,
@@ -111,7 +111,7 @@ function _() {
                             key: e._dispatchToken,
                             store: e
                         }))
-                        .sort(b),
+                        .sort(f),
                 [l]
             )
             .filter((e) =>
@@ -145,7 +145,7 @@ function _() {
                 onClickRow: (e) => u(e.key)
             }),
             null != x &&
-                (0, n.jsx)(j, {
+                (0, n.jsx)(g, {
                     store: x,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
                 })

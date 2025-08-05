@@ -1,51 +1,60 @@
-var n = r(147521),
-    i = r(574369),
-    o = r(169774),
-    a = o.isPlatform('Mac OS X'),
-    u = a && o.isBrowser('Firefox < 29'),
-    s = n.hasCommandModifier,
-    c = n.isCtrlKeyCommand;
-function l(t) {
-    return (a && t.altKey) || c(t);
+var r = n(147521),
+    i = n(574369),
+    a = n(169774),
+    o = a.isPlatform('Mac OS X'),
+    s = o && a.isBrowser('Firefox < 29'),
+    l = r.hasCommandModifier,
+    c = r.isCtrlKeyCommand;
+function u(e) {
+    return (o && e.altKey) || c(e);
 }
-t.exports = function (t) {
-    switch (t.keyCode) {
+function d(e) {
+    return l(e) ? (e.shiftKey ? 'redo' : 'undo') : null;
+}
+function f(e) {
+    return !o && e.shiftKey ? null : u(e) ? 'delete-word' : 'delete';
+}
+function _(e) {
+    return l(e) && o ? 'backspace-to-start-of-line' : u(e) ? 'backspace-word' : 'backspace';
+}
+e.exports = function (e) {
+    switch (e.keyCode) {
         case 66:
-            return s(t) ? 'bold' : null;
+            return l(e) ? 'bold' : null;
         case 68:
-            return c(t) ? 'delete' : null;
+            return c(e) ? 'delete' : null;
         case 72:
-            return c(t) ? 'backspace' : null;
+            return c(e) ? 'backspace' : null;
         case 73:
-            return s(t) ? 'italic' : null;
+            return l(e) ? 'italic' : null;
         case 74:
-            return s(t) ? 'code' : null;
+            return l(e) ? 'code' : null;
         case 75:
-            return a && c(t) ? 'secondary-cut' : null;
+            return o && c(e) ? 'secondary-cut' : null;
         case 77:
         case 79:
-            return c(t) ? 'split-block' : null;
+            return c(e) ? 'split-block' : null;
         case 84:
-            return a && c(t) ? 'transpose-characters' : null;
+            return o && c(e) ? 'transpose-characters' : null;
         case 85:
-            return s(t) ? 'underline' : null;
+            return l(e) ? 'underline' : null;
         case 87:
-            return a && c(t) ? 'backspace-word' : null;
+            return o && c(e) ? 'backspace-word' : null;
         case 89:
-            if (c(t)) return a ? 'secondary-paste' : 'redo';
+            if (c(e)) return o ? 'secondary-paste' : 'redo';
             return null;
         case 90:
-            return (s(t) ? (t.shiftKey ? 'redo' : 'undo') : null) || null;
+            return d(e) || null;
         case i.RETURN:
             return 'split-block';
         case i.DELETE:
-            return !a && t.shiftKey ? null : l(t) ? 'delete-word' : 'delete';
+            return f(e);
         case i.BACKSPACE:
-            return s(t) && a ? 'backspace-to-start-of-line' : l(t) ? 'backspace-word' : 'backspace';
+            return _(e);
         case i.LEFT:
-            return u && s(t) ? 'move-selection-to-start-of-block' : null;
+            return s && l(e) ? 'move-selection-to-start-of-block' : null;
         case i.RIGHT:
-            return u && s(t) ? 'move-selection-to-end-of-block' : null;
+            return s && l(e) ? 'move-selection-to-end-of-block' : null;
         default:
             return null;
     }

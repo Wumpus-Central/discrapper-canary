@@ -14,7 +14,7 @@ var r = n(255367),
     h = n(408886),
     m = n(233398),
     g = n(866419),
-    E = n(507962),
+    E = n(771934),
     b = n(671147),
     y = n(388032),
     O = n(936631);
@@ -83,13 +83,13 @@ let N = (0, c.Un)({
         renderLoader: A
     }),
     C = 5;
-function R(e, t) {
+function w(e, t) {
     return e.length < 1 ? 0 : (t / (e.length - 1)) * 80 + 10;
 }
-function P(e) {
+function R(e) {
     let { colors: t, selectedIndex: n, onColorSelect: a } = e,
         [o, s] = i.useMemo(() => {
-            let e = t.map((e, n) => R(t, n)),
+            let e = t.map((e, n) => w(t, n)),
                 n = t.map((t, n) => ''.concat(t, ' ').concat(e[n], '%')).join(', ');
             return [e, { background: 'linear-gradient(to right, '.concat(n, ')') }];
         }, [t]);
@@ -124,7 +124,7 @@ function P(e) {
         })
     });
 }
-function w(e) {
+function P(e) {
     if (!(0, u.FX)(e)) return e;
     let t = o()(e);
     return t.set('hsl.h', (t.get('hsl.h') + 15) % 360).hex();
@@ -133,11 +133,11 @@ function D(e) {
     let { value: t, onChange: n, className: a, colors: o, setColors: s } = e,
         c = (0, h.Z)(),
         [v, T] = i.useState(0),
-        [A, R] = i.useState(t);
+        [A, w] = i.useState(t);
     i.useEffect(() => {
         if (o.length > 0 && v < o.length) {
             let e = o[v];
-            (0, u.FX)(e) && (R(e), n(e));
+            (0, u.FX)(e) && (w(e), n(e));
         }
         v >= o.length && T(0);
     }, [v, o, n]);
@@ -147,32 +147,32 @@ function D(e) {
         },
         L = (e) => {
             let t = D(e);
-            if ((R(t), (0, u.FX)(t) && ((0, E.zW)(), n(t), o.length > 0))) {
+            if ((w(t), (0, u.FX)(t) && ((0, E.zW)(), n(t), o.length > 0))) {
                 let e = [...o];
                 ((e[v] = t), s(e));
             }
         },
         x = i.useCallback((e) => {
-            R(e.hex);
+            w(e.hex);
         }, []),
-        M = (e) => {
+        k = (e) => {
             if (((0, E.P0)(), n(e.hex), o.length > 0)) {
                 let t = [...o];
                 ((t[v] = e.hex), s(t));
             }
         },
-        k = async () => {
+        j = async () => {
             if (null != c)
                 try {
                     let { sRGBHex: e } = await c.open();
                     ((0, E.J4)(), L(e));
                 } catch (e) {}
         },
-        j = () => {
+        M = () => {
             if (o.length === C) return;
             (0 === o.length && (0, g.ft)(), (0, E.gG)());
             let e = o.length > 0 ? o[o.length - 1] : A,
-                t = o.length > 0 ? w(e) : e,
+                t = o.length > 0 ? P(e) : e,
                 n = [...o, t];
             (s(n), T(n.length - 1));
         },
@@ -204,7 +204,7 @@ function D(e) {
                             (0, r.jsx)(
                                 p.P3F,
                                 S(I({}, e), {
-                                    onClick: o.length === C ? void 0 : j,
+                                    onClick: o.length === C ? void 0 : M,
                                     className: l()(O.addColorButton, { [O.disabled]: o.length === C }),
                                     children: (0, r.jsx)(p.Text, {
                                         variant: 'text-sm/medium',
@@ -217,14 +217,14 @@ function D(e) {
                 ]
             }),
             B &&
-                (0, r.jsx)(P, {
+                (0, r.jsx)(R, {
                     colors: o,
                     selectedIndex: v,
                     onColorSelect: G
                 }),
             (0, r.jsx)(N, {
                 onChange: x,
-                onChangeComplete: M,
+                onChangeComplete: k,
                 color: A
             }),
             (0, r.jsxs)('div', {
@@ -257,7 +257,7 @@ function D(e) {
                                                     e
                                                 ),
                                                 {
-                                                    onClick: k,
+                                                    onClick: j,
                                                     icon: d.i,
                                                     'aria-label': y.intl.string(b.default['8QXO8v'])
                                                 }

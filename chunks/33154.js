@@ -1,88 +1,89 @@
 (n.d(t, {
-    Z: () => b,
-    s: () => g
+    Z: () => m,
+    s: () => h
 }),
     n(388685));
-var i,
-    r = n(255367),
-    l = n(73800),
-    o = n(442837),
-    a = n(755721),
+var r = n(255367),
+    i = n(73800),
+    a = n(442837),
+    o = n(755721),
     s = n(481060),
-    c = n(749210),
-    u = n(313201),
-    d = n(823379),
-    h = n(41776),
-    p = n(981631),
-    m = n(388032),
-    f = n(695256),
-    g = (((i = {})[(i.CHAT = 0)] = 'CHAT'), (i[(i.REACTIONS = 1)] = 'REACTIONS'), i);
-let b = (e) => {
-    let { type: t, guild: i, closePopout: g, ctaRef: b } = e,
-        j = (0, u.Dt)(),
-        [O, y] = l.useState(!1),
-        v = (0, o.e7)([h.Z], () => h.Z.isLurking(i.id), [i.id]);
-    l.useEffect(() => {
-        O && !v && g();
-    }, [O, v, g]);
-    let T = null,
-        S = m.intl.string(m.t.d7b1p6);
+    l = n(749210),
+    c = n(313201),
+    u = n(823379),
+    d = n(41776),
+    f = n(981631),
+    _ = n(388032),
+    p = n(695256),
+    h = (function (e) {
+        return ((e[(e.CHAT = 0)] = 'CHAT'), (e[(e.REACTIONS = 1)] = 'REACTIONS'), e);
+    })({});
+let m = (e) => {
+    let { type: t, guild: h, closePopout: m, ctaRef: g } = e,
+        E = (0, c.Dt)(),
+        [b, y] = i.useState(!1),
+        O = (0, a.e7)([d.Z], () => d.Z.isLurking(h.id), [h.id]);
+    i.useEffect(() => {
+        b && !O && m();
+    }, [b, O, m]);
+    let v = null,
+        I = _.intl.string(_.t.d7b1p6);
     switch (t) {
         case 0:
-            T = m.intl.string(m.t.Xiwf1d);
+            v = _.intl.string(_.t.Xiwf1d);
             break;
         case 1:
-            T = m.intl.string(m.t.GXvlU1);
+            v = _.intl.string(_.t.GXvlU1);
             break;
         default:
-            return (0, d.vE)(t);
+            return (0, u.vE)(t);
     }
-    if (null == T) return null;
-    let x = async () => {
+    if (null == v) return null;
+    let T = async () => {
         y(!0);
         try {
-            (await c.Z.joinGuild(i.id, { source: p.vtS.CHAT_INPUT_BLOCKER }), g());
+            (await l.Z.joinGuild(h.id, { source: f.vtS.CHAT_INPUT_BLOCKER }), m());
         } catch (e) {
             y(!1);
         }
     };
     return (0, r.jsxs)(s.VqE, {
-        className: f.container,
-        'aria-labelledby': j,
+        className: p.container,
+        'aria-labelledby': E,
         children: [
             (0, r.jsx)('img', {
                 alt: '',
-                className: f.image,
+                className: p.image,
                 src: n(64395)
             }),
             (0, r.jsxs)('div', {
-                className: f.content,
+                className: p.content,
                 children: [
                     (0, r.jsx)(s.X6q, {
                         variant: 'heading-md/semibold',
-                        id: j,
-                        children: T
+                        id: E,
+                        children: v
                     }),
                     (0, r.jsx)(s.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: S
+                        children: I
                     }),
                     (0, r.jsxs)('div', {
-                        className: f.buttonContainer,
+                        className: p.buttonContainer,
                         children: [
                             (0, r.jsx)(s.zxk, {
                                 variant: 'primary',
-                                text: m.intl.string(m.t['9VLmlZ']),
-                                buttonRef: b,
-                                onClick: x,
-                                loading: O
+                                text: _.intl.string(_.t['9VLmlZ']),
+                                buttonRef: g,
+                                onClick: T,
+                                loading: b
                             }),
-                            (0, r.jsx)(a.zx, {
-                                onClick: g,
-                                look: a.zx.Looks.BLANK,
-                                className: f.cancel,
-                                children: m.intl.string(m.t['2m+Sqq'])
+                            (0, r.jsx)(o.zx, {
+                                onClick: m,
+                                look: o.zx.Looks.BLANK,
+                                className: p.cancel,
+                                children: _.intl.string(_.t['2m+Sqq'])
                             })
                         ]
                     })

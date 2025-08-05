@@ -29,15 +29,15 @@ function I(e) {
             focused: A,
             currentWindow: N,
             fontScale: C,
-            fontScaleClass: R,
-            keyboardModeEnabled: P,
-            saturation: w,
+            fontScaleClass: w,
+            keyboardModeEnabled: R,
+            saturation: P,
             desaturateUserColors: D,
             useForcedColors: L,
             systemForcedColors: x,
-            useReducedMotion: M,
-            alwaysShowLinkDecorations: k,
-            confettiMode: j,
+            useReducedMotion: k,
+            alwaysShowLinkDecorations: j,
+            confettiMode: M,
             highContrastMode: U
         } = (0, s.cj)([g.default, c.Z, E.Z, b.Z, h.Z, m.Z], () => {
             var e;
@@ -61,18 +61,18 @@ function I(e) {
         }),
         G = u.U.useExperiment({ location: 'RootThemeContextProvider' }, { autoTrackExposure: !0 }).enabled,
         B = (0, _.Z)(N, __OVERLAY__ || A),
-        V = 0;
-    1 !== w && (V = (0, l.OdO)(V, l.bgu.REDUCE_SATURATION_ENABLED));
+        Z = 0;
+    1 !== P && (Z = (0, l.OdO)(Z, l.bgu.REDUCE_SATURATION_ENABLED));
     let F = (0, O.A)(),
-        Z = (0, p.Ml)('RootThemeContextProvider'),
+        V = (0, p.Ml)('RootThemeContextProvider'),
         H = (0, p.CL)('RootThemeContextProvider'),
         Y = (0, p.VM)('RootThemeContextProvider'),
         W = f.M.useExperiment({ location: 'RootThemeContextProvider' }).enabled,
         K = (0, d.Z)('RootThemeContextProvider');
     return (0, r.jsx)(l.wMY, {
         theme: S,
-        flags: V,
-        saturation: w,
+        flags: Z,
+        saturation: P,
         density: F,
         children: (0, r.jsx)(v.cE, {
             lang: T,
@@ -80,20 +80,20 @@ function I(e) {
             density: F,
             focused: A,
             fontScale: C,
-            fontScaleClass: R,
-            keyboardModeEnabled: P,
+            fontScaleClass: w,
+            keyboardModeEnabled: R,
             mouseMode: B,
-            saturation: w,
+            saturation: P,
             desaturateUserColors: D,
             useForcedColors: L,
             systemForcedColors: x,
-            useReducedMotion: M,
-            alwaysShowLinkDecorations: k,
+            useReducedMotion: k,
+            alwaysShowLinkDecorations: j,
             hardwareAccelerationEnabled: I,
             highContrastMode: G && U,
             rootClassName: o()({
-                'confetti-mode': j,
-                'refresh-fast-follow-avatars': Z && !K,
+                'confetti-mode': M,
+                'refresh-fast-follow-avatars': V && !K,
                 'refresh-fast-follow-guild-bg': H,
                 'refresh-fast-follow-distinct-borders': Y,
                 'client-theme-color-picker': W,

@@ -25,9 +25,9 @@ var r = n(255367),
     A = n(973772),
     N = n(441536),
     C = n(535396),
-    R = n(981631),
-    P = n(93841),
-    w = n(388032),
+    w = n(981631),
+    R = n(93841),
+    P = n(388032),
     D = n(840969),
     L = n(501867);
 function x(e, t, n) {
@@ -43,7 +43,7 @@ function x(e, t, n) {
         e
     );
 }
-function M(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,7 +59,7 @@ function M(e) {
     }
     return e;
 }
-function k(e, t) {
+function j(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -71,12 +71,12 @@ function k(e, t) {
     }
     return n;
 }
-function j(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : j(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -89,16 +89,16 @@ function U(e) {
         y = n.skuId === c.A$,
         O = (0, A.Z)(t, n).type !== C.A3.INACTIVE,
         v = (0, S.Z)(t),
-        [x, k] = i.useState(!1),
+        [x, j] = i.useState(!1),
         [U, G] = i.useState(!1),
         B = U,
-        V = i.useCallback(() => {
+        Z = i.useCallback(() => {
             let e = b.Z.getGuild(t);
             null != e &&
                 (0, g.u)({
                     analyticsLocation: {
-                        page: R.ZY5.GUILD_POWERUPS_MARKETING,
-                        section: R.jXE.GUILD_POWERUPS_MARKETING_PERKS_SECTION
+                        page: w.ZY5.GUILD_POWERUPS_MARKETING,
+                        section: w.jXE.GUILD_POWERUPS_MARKETING_PERKS_SECTION
                     },
                     numberOfBoostsToAdd: 1,
                     analyticsLocations: u,
@@ -108,7 +108,7 @@ function U(e) {
         F = i.useCallback(() => {
             (a(), (0, N.Z)(t, h.Z.GUILD_POWERUPS_MARKETING, n.skuId));
         }, [t, n.skuId, a]),
-        Z = {
+        V = {
             tension: 400,
             friction: 30
         },
@@ -116,19 +116,19 @@ function U(e) {
             transform: B ? 'translateX(-50%) translateY(16px) scale(1)' : 'translateX(-50%) translateY(24px) scale(1.40)',
             borderRadius: '0px',
             transformOrigin: 'center 0%',
-            config: Z
+            config: V
         }),
         Y = (0, _.q_F)({
             y: B ? -25 : 0,
-            config: Z
+            config: V
         }),
         W = (0, _.q_F)({
             opacity: +!!B,
             transform: B ? 'translateY(0)' : 'translateY(20px)',
-            config: Z
+            config: V
         }),
         K = i.useCallback((e) => {
-            e && k(!0);
+            e && j(!0);
         }, []),
         z = (0, p.O)(K),
         q = (0, T.Z)(n, U);
@@ -151,13 +151,13 @@ function U(e) {
                 })
             }),
             (0, r.jsxs)(s.animated.div, {
-                style: j(M({}, Y), { transform: Y.y.to((e) => 'translateY('.concat(e, 'px)')) }),
+                style: M(k({}, Y), { transform: Y.y.to((e) => 'translateY('.concat(e, 'px)')) }),
                 className: o()(L.contentContainer, D.contentContainer),
                 children: [
                     (0, r.jsx)(E.xm, {
                         heading: n.title,
                         description: n.description,
-                        label: w.intl.formatToPlainString(P.default.QOacIS, { quantity: n.cost }),
+                        label: P.intl.formatToPlainString(R.default.QOacIS, { quantity: n.cost }),
                         isEnabled: O
                     }),
                     (0, r.jsxs)(s.animated.div, {
@@ -166,10 +166,10 @@ function U(e) {
                         children: [
                             (0, r.jsx)(f.zx, {
                                 grow: !0,
-                                onClick: V,
+                                onClick: Z,
                                 color: f.zx.Colors.BRAND,
                                 className: L.button,
-                                children: w.intl.string(w.t['oPAx7+'])
+                                children: P.intl.string(P.t['oPAx7+'])
                             }),
                             v &&
                                 (0, r.jsx)(f.zx, {
@@ -177,7 +177,7 @@ function U(e) {
                                     onClick: F,
                                     color: f.zx.Colors.PRIMARY,
                                     className: L.button,
-                                    children: w.intl.string(w.t.GoCQxc)
+                                    children: P.intl.string(P.t.GoCQxc)
                                 })
                         ]
                     })
@@ -187,12 +187,12 @@ function U(e) {
                 !y &&
                 (0, r.jsx)(_.IGR, {
                     className: L.topPerksCardNew,
-                    text: w.intl.string(w.t.y2b7CA)
+                    text: P.intl.string(P.t.y2b7CA)
                 }),
             y &&
                 (0, r.jsx)(_.IGR, {
                     className: L.topPerksCardNew,
-                    text: w.intl.string(w.t.oW0eUV),
+                    text: P.intl.string(P.t.oW0eUV),
                     color: l.Z.BG_BRAND
                 }),
             x && (0, r.jsx)('div', { className: L.shineLine })
@@ -215,11 +215,11 @@ let G = i.forwardRef((e, t) => {
               children: [
                   (0, r.jsx)(u.X6, {
                       variant: 'heading-xxl/extrabold',
-                      children: w.intl.string(P.default.wjI18f)
+                      children: P.intl.string(R.default.wjI18f)
                   }),
                   (0, r.jsx)(u.xv, {
                       variant: 'text-lg/medium',
-                      children: w.intl.format(P.default.S562fn, { helpDeskArticle: y.Z.getArticleURL(R.BhN.GUILD_BOOSTING_FAQ) })
+                      children: P.intl.format(R.default.S562fn, { helpDeskArticle: y.Z.getArticleURL(w.BhN.GUILD_BOOSTING_FAQ) })
                   }),
                   (0, r.jsx)('div', {
                       className: D.powerupsContainer,

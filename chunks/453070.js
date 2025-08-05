@@ -1,9 +1,9 @@
 (n.d(t, {
-    Go: () => R,
+    Go: () => w,
     LZ: () => D,
     Pq: () => v,
-    RJ: () => P,
-    Sd: () => M,
+    RJ: () => R,
+    Sd: () => k,
     XW: () => x,
     el: () => T,
     fP: () => A,
@@ -183,26 +183,26 @@ let v = (e) => {
         }, [t, n, o, e]);
     },
     C = [];
-function R() {
+function w() {
     var e, t;
     return null != (t = null == (e = (0, s.D)().favoriteStickers) ? void 0 : e.stickerIds) ? t : C;
 }
-function P() {
-    let e = R();
+function R() {
+    let e = w();
     return (0, i.Wu)([g.Z], () => e.map((e) => g.Z.getStickerById(e)).filter((e) => null != e && (!(0, b.J8)(e) || (0, b.V9)(e))), [e]);
 }
-function w() {
+function P() {
     var e, t;
     let n = (0, s.D)(),
         r = C;
     return ((null == n || null == (e = n.stickerFrecency) ? void 0 : e.stickers) != null && (r = Object.keys(null == n || null == (t = n.stickerFrecency) ? void 0 : t.stickers)), r);
 }
 function D() {
-    let e = w();
+    let e = P();
     return (0, i.Wu)([g.Z], () => e.map((e) => g.Z.getStickerById(e)).filter((e) => void 0 !== e), [e]);
 }
 let L = (e) => {
-        let t = P(),
+        let t = R(),
             { packs: n, frequentlyUsedStickers: a } = (0, i.cj)(
                 [g.Z, m.Z],
                 () => ({
@@ -280,7 +280,7 @@ let L = (e) => {
             ? [e, s]
             : [null != n ? n : null, s];
     },
-    M = (e) => {
+    k = (e) => {
         let t = L(e);
         return r.useMemo(() => t.filter((e) => e.type === E.Ih.EMPTY_GUILD_UPSELL || e.stickers.length > 0, []), [t]);
     };

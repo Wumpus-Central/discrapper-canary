@@ -1,25 +1,25 @@
-t.exports = {
-    getRemovalRange: function (t, e, r, n, i) {
-        var o,
-            a = r.split(' ');
-        a = a.map(function (t, e) {
+e.exports = {
+    getRemovalRange: function (e, t, n, r, i) {
+        var a,
+            o = n.split(' ');
+        o = o.map(function (e, t) {
             if ('forward' === i) {
-                if (e > 0) return ' ' + t;
-            } else if (e < a.length - 1) return t + ' ';
-            return t;
+                if (t > 0) return ' ' + e;
+            } else if (t < o.length - 1) return e + ' ';
+            return e;
         });
-        for (var u = n, s = null, c = null, l = 0; l < a.length; l++) {
-            if (t < (o = u + a[l].length) && u < e) (null !== s || (s = u), (c = o));
-            else if (null !== s) break;
-            u = o;
+        for (var s = r, l = null, c = null, u = 0; u < o.length; u++) {
+            if (e < (a = s + o[u].length) && s < t) (null !== l || (l = s), (c = a));
+            else if (null !== l) break;
+            s = a;
         }
-        var f = n + r.length,
-            p = s === n,
-            h = c === f;
+        var d = r + n.length,
+            f = l === r,
+            _ = c === d;
         return (
-            ((!p && h) || (p && !h)) && ('forward' === i ? c !== f && c++ : s !== n && s--),
+            ((!f && _) || (f && !_)) && ('forward' === i ? c !== d && c++ : l !== r && l--),
             {
-                start: s,
+                start: l,
                 end: c
             }
         );

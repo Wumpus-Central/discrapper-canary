@@ -1,10 +1,10 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(481060),
-    a = n(554747),
-    s = n(434479),
+    s = n(554747),
+    a = n(434479),
     c = n(593364),
     u = n(703656),
     d = n(944486),
@@ -55,7 +55,7 @@ function b(e, t) {
         e
     );
 }
-let _ = [
+let O = [
         {
             key: 'EVENTS',
             renderIcon: (e) =>
@@ -114,7 +114,7 @@ let _ = [
             getName: () => g.intl.string(g.t.MJQOuL),
             handler: (e, t) =>
                 (0, o.ZDy)(async () => {
-                    let { default: i } = await Promise.all([n.e('7654'), n.e('34946')]).then(n.bind(n, 560114));
+                    let { default: i } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
                     return (n) =>
                         (0, r.jsx)(
                             i,
@@ -127,9 +127,9 @@ let _ = [
                 })
         }
     ],
-    O = (e) => {
+    _ = (e) => {
         let { guild: t, channel: n } = e,
-            o = (0, a.ZP)(t.id);
+            o = (0, s.ZP)(t.id);
         i.useEffect(() => {
             h.Z.trackExposure({
                 guildId: t.id,
@@ -147,15 +147,15 @@ let _ = [
             g = i.useMemo(() => ({ numEvents: o.length }), [o.length]),
             m = (0, p.t)(n);
         return (0, r.jsx)(r.Fragment, {
-            children: _.map((e) => {
-                let { key: i, getName: l, handler: o, renderIcon: a } = e;
+            children: O.map((e) => {
+                let { key: i, getName: l, handler: o, renderIcon: s } = e;
                 if (!u && 'EVENTS' === i) return null;
                 let d = ''.concat(i, '-').concat(t.id);
                 return (0, r.jsx)(
-                    s.m,
+                    a.m,
                     {
                         id: d,
-                        renderIcon: a,
+                        renderIcon: s,
                         text: l(g),
                         selected: f && 'JOIN_SERVERS' === i,
                         onClick: null != n ? () => o(t, n) : void 0,

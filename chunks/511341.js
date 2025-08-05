@@ -41,11 +41,11 @@ function v(e) {
         { resetInteraction: S, setInteractionToast: A } = (0, f.Xo)(),
         { theme: N } = (0, p.z)(),
         C = (0, a.e7)([l.Z], () => l.Z.theme),
-        R = (0, o.wj)(C) ? !(0, o.wj)(N) : (0, o.wj)(N),
-        P = i.useRef(null);
+        w = (0, o.wj)(C) ? !(0, o.wj)(N) : (0, o.wj)(N),
+        R = i.useRef(null);
     (i.useEffect(() => {
-        null == v || v(null == P ? void 0 : P.current);
-    }, [P, v]),
+        null == v || v(null == R ? void 0 : R.current);
+    }, [R, v]),
         i.useEffect(() => {
             let e = (e) => {
                 e.key === g.vn.ESCAPE && (e.stopPropagation(), S());
@@ -57,7 +57,7 @@ function v(e) {
                 }
             );
         }, [T, S]));
-    let w = async (e) => {
+    let P = async (e) => {
         if (null == e) return;
         _ === h.n_.AVATAR ? I({ action: 'SEND_REACT_AVATAR' }) : _ === h.n_.STATUS ? I({ action: 'SEND_REACT_CUSTOM_STATUS' }) : I({ action: 'SEND_REACT_ACTIVITY' });
         let n = O({
@@ -80,12 +80,12 @@ function v(e) {
         A(h.P.REACT);
     };
     return (0, r.jsx)(s.Z, {
-        headerClassName: R ? y.noBoxShadowMargin : void 0,
+        headerClassName: w ? y.noBoxShadowMargin : void 0,
         guildId: null != n ? n : void 0,
         closePopout: E.dG,
         onSelectEmoji: async (e) => {
             let { emoji: t, willClose: n } = e;
-            (await w(t), n && (S(), null == T || T()));
+            (await P(t), n && (S(), null == T || T()));
         },
         pickerIntention: m.Hz.PROFILE
     });

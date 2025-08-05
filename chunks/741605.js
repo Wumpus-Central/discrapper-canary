@@ -1,54 +1,51 @@
-n.d(e, { n: () => o });
+n.d(t, { n: () => l });
 var r = n(134994),
     i = n(8170),
-    s = n(492733);
-function o(t, e, n, o) {
-    var h;
-    let a,
+    a = n(492733);
+function o(e, t, n, o) {
+    (0, r.vp)(e);
+    let {
+        c: s,
+        dkLen: l,
+        asyncTick: c
+    } = (0, a.U5)(
         {
-            c: f,
-            dkLen: c,
-            DK: l,
-            PRF: u,
-            PRFSalt: d
-        } = (function (t, e, n, o) {
-            (0, r.vp)(t);
-            let {
-                c: h,
-                dkLen: a,
-                asyncTick: f
-            } = (0, s.U5)(
-                {
-                    dkLen: 32,
-                    asyncTick: 10
-                },
-                o
-            );
-            if (((0, r.Rx)(h), (0, r.Rx)(a), (0, r.Rx)(f), h < 1)) throw Error('PBKDF2: iterations (c) should be >= 1');
-            let c = (0, s.O0)(e),
-                l = (0, s.O0)(n),
-                u = new Uint8Array(a),
-                d = i.b.create(t, c),
-                x = d._cloneInto().update(l);
-            return {
-                c: h,
-                dkLen: a,
-                asyncTick: f,
-                DK: u,
-                PRF: d,
-                PRFSalt: x
-            };
-        })(t, e, n, o),
-        x = new Uint8Array(4),
-        p = (0, s.GL)(x),
-        b = new Uint8Array(u.outputLen);
-    for (let t = 1, e = 0; e < c; t++, e += u.outputLen) {
-        let n = l.subarray(e, e + u.outputLen);
-        (p.setInt32(0, t, !1), (a = d._cloneInto(a)).update(x).digestInto(b), n.set(b.subarray(0, n.length)));
-        for (let t = 1; t < f; t++) {
-            u._cloneInto(a).update(b).digestInto(b);
-            for (let t = 0; t < n.length; t++) n[t] ^= b[t];
+            dkLen: 32,
+            asyncTick: 10
+        },
+        o
+    );
+    if (((0, r.Rx)(s), (0, r.Rx)(l), (0, r.Rx)(c), s < 1)) throw Error('PBKDF2: iterations (c) should be >= 1');
+    let u = (0, a.O0)(t),
+        d = (0, a.O0)(n),
+        f = new Uint8Array(l),
+        _ = i.b.create(e, u),
+        p = _._cloneInto().update(d);
+    return {
+        c: s,
+        dkLen: l,
+        asyncTick: c,
+        DK: f,
+        PRF: _,
+        PRFSalt: p
+    };
+}
+function s(e, t, n, r, i) {
+    return (e.destroy(), t.destroy(), r && r.destroy(), i.fill(0), n);
+}
+function l(e, t, n, r) {
+    let i,
+        { c: l, dkLen: c, DK: u, PRF: d, PRFSalt: f } = o(e, t, n, r),
+        _ = new Uint8Array(4),
+        p = (0, a.GL)(_),
+        h = new Uint8Array(d.outputLen);
+    for (let e = 1, t = 0; t < c; e++, t += d.outputLen) {
+        let n = u.subarray(t, t + d.outputLen);
+        (p.setInt32(0, e, !1), (i = f._cloneInto(i)).update(_).digestInto(h), n.set(h.subarray(0, n.length)));
+        for (let e = 1; e < l; e++) {
+            d._cloneInto(i).update(h).digestInto(h);
+            for (let e = 0; e < n.length; e++) n[e] ^= h[e];
         }
     }
-    return ((h = a), u.destroy(), d.destroy(), h && h.destroy(), b.fill(0), l);
+    return s(d, f, u, i, h);
 }

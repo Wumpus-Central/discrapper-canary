@@ -21,14 +21,14 @@ var i = n(255367),
     C = n(146085),
     N = n(192079),
     S = n(277053),
-    O = n(271383),
-    E = n(485386),
-    T = n(430824),
+    E = n(271383),
+    O = n(485386),
+    Z = n(430824),
     w = n(496675),
-    Z = n(594174),
+    T = n(594174),
     R = n(903386),
-    I = n(700785),
-    _ = n(605436),
+    _ = n(700785),
+    I = n(605436),
     P = n(27544),
     A = n(415236),
     L = n(182905),
@@ -174,7 +174,7 @@ function W(e) {
                         (0, i.jsx)(c.Text, {
                             color: 'text-muted',
                             variant: 'text-xs/normal',
-                            children: _.zB(h.rowType)
+                            children: I.zB(h.rowType)
                         }),
                         h.rowType !== D.aC.EMPTY_STATE &&
                             (0, i.jsx)(c.DY3, {
@@ -232,9 +232,9 @@ function W(e) {
 }
 function G(e) {
     let { guild: t, channel: l, permissionUpdates: r } = e,
-        o = (0, a.e7)([E.Z], () => E.Z.getSortedRoles(t.id)),
-        d = _.RZ(t, o, l, C.yP, r),
-        u = (0, a.e7)([O.ZP], () => _.cR(O.ZP.getMemberIds(t.id), l, t, C.yP, r)),
+        o = (0, a.e7)([O.Z], () => O.Z.getSortedRoles(t.id)),
+        d = I.RZ(t, o, l, C.yP, r),
+        u = (0, a.e7)([E.ZP], () => I.cR(E.ZP.getMemberIds(t.id), l, t, C.yP, r)),
         h = (0, y.nG)(l.id);
     function g() {
         (0, c.ZDy)(async () => {
@@ -309,11 +309,11 @@ function G(e) {
 function F(e) {
     let { guild: t, channel: l, isPrivateGuildChannel: r, roles: d, members: u } = e,
         h = (0, a.e7)([w.Z], () => w.Z.can(k.Pl.ADMINISTRATOR, t)),
-        g = I.Uu(k.Pl.VIEW_CHANNEL, t),
-        m = I.Uu(k.Pl.ADMINISTRATOR, t);
+        g = _.Uu(k.Pl.VIEW_CHANNEL, t),
+        m = _.Uu(k.Pl.ADMINISTRATOR, t);
     async function p() {
         let e = l.accessPermissions,
-            s = Z.default.getCurrentUser();
+            s = T.default.getCurrentUser();
         if (!r && null != (await (0, b.T)(t.id, l.id)))
             return void (0, c.ZDy)(async () => {
                 let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 878678));
@@ -335,7 +335,7 @@ function F(e) {
                         })
                     );
             });
-        (_.$e(l, e, r), r || null == s || h || _.Yh(l, e));
+        (I.$e(l, e, r), r || null == s || h || I.Yh(l, e));
     }
     let f = {
         title: B.intl.string(B.t.aUI70t),
@@ -419,7 +419,7 @@ function F(e) {
                                         channel: l,
                                         roles: d,
                                         members: u,
-                                        getRemoveTooltipHint: _.yv
+                                        getRemoveTooltipHint: I.yv
                                     })
                                 ]
                             })
@@ -442,7 +442,7 @@ function z(e) {
         ]
     });
 }
-let X = a.ZP.connectStores([S.Z, w.Z, O.ZP, T.Z, E.Z], () => {
+let X = a.ZP.connectStores([S.Z, w.Z, E.ZP, Z.Z, O.Z], () => {
     let e,
         t = S.Z.channel,
         n = S.Z.category,
@@ -451,17 +451,17 @@ let X = a.ZP.connectStores([S.Z, w.Z, O.ZP, T.Z, E.Z], () => {
         r = {},
         s = !1;
     if (null != t) {
-        e = T.Z.getGuild(t.getGuildId());
-        let n = O.ZP.getMemberIds(null == e ? void 0 : e.id);
+        e = Z.Z.getGuild(t.getGuildId());
+        let n = E.ZP.getMemberIds(null == e ? void 0 : e.id);
         if (null != e) {
-            let a = E.Z.getSortedRoles(e.id);
+            let a = O.Z.getSortedRoles(e.id);
             ((r = S.Z.editedPermissionIds.reduce((e, t) => {
                 let n = S.Z.getPermissionOverwrite(t);
                 return (null != n && (e[t] = n), e);
             }, {})),
-                (i = _.kA(e, a, t, t.accessPermissions, r)),
-                (l = _.cR(n, t, e, t.accessPermissions, r)),
-                (s = _.Yk(t, r)));
+                (i = I.kA(e, a, t, t.accessPermissions, r)),
+                (l = I.cR(n, t, e, t.accessPermissions, r)),
+                (s = I.Yk(t, r)));
         }
     }
     return {
@@ -477,7 +477,7 @@ let X = a.ZP.connectStores([S.Z, w.Z, O.ZP, T.Z, E.Z], () => {
     };
 })(function (e) {
     let { canSyncChannel: t, category: r, channel: s, filteredMembers: a, filteredRoles: o, guild: d, isPrivateGuildChannel: u, locked: g, permissionUpdates: m } = e,
-        [p, f] = l.useState(!I.Uu(k.Pl.SEND_MESSAGES, s));
+        [p, f] = l.useState(!_.Uu(k.Pl.SEND_MESSAGES, s));
     if (null == s || null == d) return null;
     let x = {
         title: B.intl.string(B.t.BAZMBg),
@@ -517,7 +517,7 @@ let X = a.ZP.connectStores([S.Z, w.Z, O.ZP, T.Z, E.Z], () => {
                                                       onConfirm: async () => {
                                                           let { guild_id: e } = r,
                                                               t = U({}, r.permissionOverwrites);
-                                                          (null != e && null == t[e] && (t[e] = I.we(e)), (await (0, j.u)(s, t[e].deny, t[e].allow)) && (0, h.wk)(s.id, { permissionOverwrites: Object.values(t) }));
+                                                          (null != e && null == t[e] && (t[e] = _.we(e)), (await (0, j.u)(s, t[e].deny, t[e].allow)) && (0, h.wk)(s.id, { permissionOverwrites: Object.values(t) }));
                                                       }
                                                   })
                                               );

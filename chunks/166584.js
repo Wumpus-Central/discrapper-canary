@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => M }), n(388685), n(539854), n(642613));
+(n.d(t, { Z: () => k }), n(388685), n(539854), n(642613));
 var r = n(255367),
     i = n(73800),
     a = n(772848),
@@ -76,14 +76,14 @@ function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = R(e, t);
+        i = w(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function R(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -92,13 +92,13 @@ function R(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let P = 4,
-    w = 268,
+let R = 4,
+    P = 268,
     D = 2,
     L = (e) => {
         if (null == e) return 0;
         let { width: t } = e.getBoundingClientRect();
-        return t > 0 ? t + P : 0;
+        return t > 0 ? t + R : 0;
     };
 function x(e) {
     let { user: t, currentUser: n, guild: l, guildMember: u, roles: d, highestRole: f, canManageRoles: _, onAddRole: p, onRemoveRole: E } = e,
@@ -106,39 +106,39 @@ function x(e) {
         A = (e, t) => {
             null != t ? (T.current[e] = t) : delete T.current[e];
         },
-        [R, x] = i.useState(d),
-        [M, k] = i.useState(w),
-        [j, U] = i.useState(!1),
+        [w, x] = i.useState(d),
+        [k, j] = i.useState(P),
+        [M, U] = i.useState(!1),
         G = i.useRef(null),
         B = i.useRef(null),
-        V = i.useRef(0);
+        Z = i.useRef(0);
     (i.useLayoutEffect(() => {
-        V.current = 0;
+        Z.current = 0;
     }, [d]),
         i.useLayoutEffect(() => {
-            if (j) return;
+            if (M) return;
             let e = L(G.current),
                 t = L(B.current),
                 n = [],
-                r = w - e - t;
+                r = P - e - t;
             for (let e = 0; e < D; e++) {
-                let t = e === D - 1 ? r : w;
+                let t = e === D - 1 ? r : P;
                 for (let e = 0, r = n.length; r < d.length; r++) {
                     let i = d[r],
                         a = T.current[i.id];
                     if (null == a) {
-                        0 === V.current && n.push(i);
+                        0 === Z.current && n.push(i);
                         continue;
                     }
                     let o = Math.min(a.getBoundingClientRect().width, t);
                     if (e + o > t) break;
-                    ((e += o + P), n.push(i));
+                    ((e += o + R), n.push(i));
                 }
             }
-            (x(n.length === R.length ? R : n), k(r), V.current++);
-        }, [d, R, j]));
+            (x(n.length === w.length ? w : n), j(r), Z.current++);
+        }, [d, w, M]));
     let F = i.useMemo(() => 'roles-'.concat((0, a.Z)()), []),
-        Z = (0, o.ZP)({
+        V = (0, o.ZP)({
             id: F,
             isEnabled: !0,
             scrollToStart: O.Cyb,
@@ -147,14 +147,14 @@ function x(e) {
         }),
         H = d.length,
         Y = 0 === H ? v.intl.string(v.t['vR7M+/']) : v.intl.formatToPlainString(v.t.PCs0oq, { numRoles: H }),
-        W = (j ? d : R).map((e, i) => {
+        W = (M ? d : w).map((e, i) => {
             var a;
             return (0, r.jsx)(
                 b.Z,
                 {
                     role: e,
                     guildId: l.id,
-                    style: { maxWidth: j || i !== R.length - 1 ? w : M },
+                    style: { maxWidth: M || i !== w.length - 1 ? P : k },
                     disableBorderColor: !0,
                     ref: (t) => A(e.id, t),
                     onRemove: () => E(e),
@@ -171,7 +171,7 @@ function x(e) {
             (U(!1), K({ action: 'COLLAPSE_ROLES' }));
         }, [K]);
     return (0, r.jsx)(s.bG, {
-        navigator: Z,
+        navigator: V,
         children: (0, r.jsx)(s.SJ, {
             children: (e) => {
                 var { ref: t } = e,
@@ -190,8 +190,8 @@ function x(e) {
                         {
                             children: [
                                 W,
-                                R.length < d.length
-                                    ? j
+                                w.length < d.length
+                                    ? M
                                         ? (0, r.jsx)(c.DY3, {
                                               text: v.intl.string(v.t.XnXtCg),
                                               children: (0, r.jsx)(c.P3F, {
@@ -212,7 +212,7 @@ function x(e) {
                                                   className: I.expandButton,
                                                   children: (0, r.jsx)(c.Text, {
                                                       variant: 'text-xs/medium',
-                                                      children: '+'.concat(d.length - R.length)
+                                                      children: '+'.concat(d.length - w.length)
                                                   })
                                               })
                                           })
@@ -235,7 +235,7 @@ function x(e) {
         })
     });
 }
-function M(e) {
+function k(e) {
     let { user: t, currentUser: n, guild: a } = e,
         { trackUserProfileAction: o } = (0, g.KZ)(),
         s = (0, l.e7)([f.ZP], () => f.ZP.getMember(a.id, t.id)),

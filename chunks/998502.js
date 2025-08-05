@@ -1,6 +1,6 @@
 (n.d(t, {
     ZP: () => q,
-    jK: () => Z,
+    jK: () => V,
     mD: () => W,
     tS: () => H
 }),
@@ -84,36 +84,36 @@ let I = window.DiscordNative,
     A = (e) => e.startsWith('image/'),
     N = 5,
     C = null,
+    w = null,
     R = null,
-    P = null,
-    w = {};
+    P = {};
 null != I &&
     ((C = I.remoteApp
         .getVersion()
         .split('.')
         .map((e) => parseInt(e))),
-    (P = null == (r = (i = I.remoteApp).getModuleVersions) ? void 0 : r.call(i)),
-    (R = null == (a = (o = I.remoteApp).getBuildNumber) ? void 0 : a.call(o)));
+    (R = null == (r = (i = I.remoteApp).getModuleVersions) ? void 0 : r.call(i)),
+    (w = null == (a = (o = I.remoteApp).getBuildNumber) ? void 0 : a.call(o)));
 let D = new Set(['discord_erlpack', 'discord_game_utils', 'discord_rpc', 'discord_spellcheck', 'discord_utils', 'discord_voice']),
     L = !1,
     x = 'lastImageSaveDirectory',
-    M = /[<>:"/\\|?*@]/g,
-    k = /(\.[a-zA-Z0-9]+):[^.]*$/,
-    j = /(\.[a-zA-Z0-9]+)%3A.+$/,
+    k = /[<>:"/\\|?*@]/g,
+    j = /(\.[a-zA-Z0-9]+):[^.]*$/,
+    M = /(\.[a-zA-Z0-9]+)%3A.+$/,
     U = /[^a-zA-Z0-9]/g,
     G = /\.[^.]*$/;
 function B(e) {
     try {
         let t = decodeURIComponent(e);
-        return (t = (t = t.replace(k, '$1')).replace(/(.+)@([a-zA-Z0-9]+)$/, '$1.$2')).replace(M, '_');
+        return (t = (t = t.replace(j, '$1')).replace(/(.+)@([a-zA-Z0-9]+)$/, '$1.$2')).replace(k, '_');
     } catch (t) {
         return e
-            .replace(j, '$1')
+            .replace(M, '$1')
             .replace(/(.+)%40([a-zA-Z0-9]+)$/, '$1.$2')
-            .replace(M, '_');
+            .replace(k, '_');
     }
 }
-async function V(e) {
+async function Z(e) {
     let t = {
             method: 'GET',
             mode: 'cors'
@@ -124,9 +124,9 @@ async function V(e) {
     return (l()(null != r, 'Data is null'), r);
 }
 function F(e) {
-    return V(e);
+    return Z(e);
 }
-var Z = (function (e) {
+var V = (function (e) {
         return ((e[(e.Camera = 0)] = 'Camera'), (e[(e.Microphone = 1)] = 'Microphone'), (e[(e.Photo = 2)] = 'Photo'), (e[(e.InputMonitoring = 3)] = 'InputMonitoring'), (e[(e.ScreenRecording = 4)] = 'ScreenRecording'), e);
     })({}),
     H = (function (e) {
@@ -135,7 +135,7 @@ var Z = (function (e) {
 function Y(e) {
     var t, n, r, i, a, o, s, l, c;
     return {
-        id: w[null != (t = e.id) ? t : ''],
+        id: P[null != (t = e.id) ? t : ''],
         nativeProcessObserverId: parseInt(null != (n = e.id) ? n : '', 10),
         name: null != (r = e.gameName) ? r : e.name,
         origGameName: e.origGameName,
@@ -210,13 +210,13 @@ let z = {
         },
         setObservedGamesCallback(e, t) {
             try {
-                w = {};
+                P = {};
                 let n = 0;
                 this.getDiscordUtils().setObservedGamesCallback(
                     e.map((e) => {
                         let t = ++n;
                         return (
-                            null != e.id && (w[t] = e.id),
+                            null != e.id && (P[t] = e.id),
                             v(y({}, e), {
                                 cmdline: e.cmdLine,
                                 id: t
@@ -336,10 +336,10 @@ let z = {
             return C;
         },
         get buildNumber() {
-            return R;
+            return w;
         },
         get moduleVersions() {
-            return P;
+            return R;
         },
         get parsedOSRelease() {
             if (!h.isPlatformEmbedded) return [];
@@ -395,7 +395,7 @@ let z = {
             if (null == r) return null;
             let i = null != (n = null != t ? t : r.pathname.split('/').pop()) ? n : 'unknown';
             null == t && (i = B(i));
-            let a = await V(e),
+            let a = await Z(e),
                 o = E.from(a);
             return I.fileManager.saveWithDialog(o, i);
         },

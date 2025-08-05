@@ -1,37 +1,37 @@
 (n.d(t, {
-    Ie: () => g,
-    mv: () => p
+    Ie: () => h,
+    mv: () => j
 }),
     n(388685));
 var r = n(255367);
 n(73800);
-var i = n(442837),
-    o = n(692547),
-    l = n(481060),
-    c = n(239091),
-    s = n(584511),
-    a = n(699516),
-    u = n(51144),
-    d = n(88751),
-    h = n(930180),
-    b = n(388032),
-    _ = n(193132);
-let p = (e) => {
+var o = n(442837),
+    s = n(692547),
+    c = n(481060),
+    a = n(239091),
+    i = n(584511),
+    l = n(699516),
+    d = n(51144),
+    u = n(88751),
+    b = n(930180),
+    m = n(388032),
+    x = n(193132);
+let j = (e) => {
         let { channelId: t } = e;
-        return (0, r.jsx)(m, { channelId: t });
+        return (0, r.jsx)(p, { channelId: t });
     },
-    m = (e) => {
+    p = (e) => {
         let { channelId: t } = e,
-            n = (0, h._d)(t),
-            i = (0, h.K3)(t);
-        if (0 === n && 0 === i) return null;
-        let s = (e) => {
-            (0, c.vq)(
+            n = (0, b._d)(t),
+            o = (0, b.K3)(t);
+        if (0 === n && 0 === o) return null;
+        let i = (e) => {
+            (0, a.vq)(
                 e,
                 (e) => {
-                    var n, i;
+                    var n, o;
                     return (0, r.jsx)(
-                        f,
+                        g,
                         ((n = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -57,9 +57,9 @@ let p = (e) => {
                             }
                             return e;
                         })({}, e)),
-                        (i = i = { channelId: t }),
+                        (o = o = { channelId: t }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(o))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -67,8 +67,8 @@ let p = (e) => {
                                       n.push.apply(n, r);
                                   }
                                   return n;
-                              })(Object(i)).forEach(function (e) {
-                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                              })(Object(o)).forEach(function (e) {
+                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(o, e));
                               }),
                         n)
                     );
@@ -79,104 +79,104 @@ let p = (e) => {
                 }
             );
         };
-        return n > 0 && i > 0
+        return n > 0 && o > 0
             ? (0, r.jsxs)('div', {
-                  className: _.blockedNotice,
+                  className: x.blockedNotice,
                   children: [
-                      (0, r.jsx)(l.t6m, {
+                      (0, r.jsx)(c.t6m, {
                           size: 'lg',
-                          color: o.Z.unsafe_rawColors.RED_400.css
+                          color: s.Z.unsafe_rawColors.RED_400.css
                       }),
-                      (0, r.jsx)(l.Text, {
+                      (0, r.jsx)(c.Text, {
                           variant: 'text-xs/normal',
                           color: 'header-secondary',
-                          children: b.intl.string(b.t['P/KFX1'])
+                          children: m.intl.string(m.t['P/KFX1'])
                       }),
-                      (0, r.jsx)(l.P3F, {
-                          className: _.blockedButton,
-                          onClick: s,
-                          children: b.intl.string(b.t.rUEjBQ)
+                      (0, r.jsx)(c.P3F, {
+                          className: x.blockedButton,
+                          onClick: i,
+                          children: m.intl.string(m.t.rUEjBQ)
                       })
                   ]
               })
-            : i > 0
+            : o > 0
               ? (0, r.jsxs)('div', {
-                    className: _.blockedNotice,
+                    className: x.blockedNotice,
                     children: [
-                        (0, r.jsx)(l.kZF, { size: 'lg' }),
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(c.kZF, { size: 'lg' }),
+                        (0, r.jsx)(c.Text, {
                             variant: 'text-xs/normal',
                             color: 'header-secondary',
-                            children: b.intl.format(b.t.Ri3o39, { number: i })
+                            children: m.intl.format(m.t.Ri3o39, { number: o })
                         }),
-                        (0, r.jsx)(l.P3F, {
-                            className: _.blockedButton,
-                            onClick: s,
-                            children: b.intl.string(b.t.rUEjBQ)
+                        (0, r.jsx)(c.P3F, {
+                            className: x.blockedButton,
+                            onClick: i,
+                            children: m.intl.string(m.t.rUEjBQ)
                         })
                     ]
                 })
               : (0, r.jsxs)('div', {
-                    className: _.blockedNotice,
+                    className: x.blockedNotice,
                     children: [
-                        (0, r.jsx)(l.t6m, {
+                        (0, r.jsx)(c.t6m, {
                             size: 'lg',
-                            color: o.Z.unsafe_rawColors.RED_400.css
+                            color: s.Z.unsafe_rawColors.RED_400.css
                         }),
-                        (0, r.jsx)(l.Text, {
+                        (0, r.jsx)(c.Text, {
                             variant: 'text-xs/normal',
                             color: 'header-secondary',
-                            children: b.intl.format(b.t['6Tcdt7'], { number: n })
+                            children: m.intl.format(m.t['6Tcdt7'], { number: n })
                         }),
-                        (0, r.jsx)(l.P3F, {
-                            className: _.blockedButton,
-                            onClick: s,
-                            children: b.intl.string(b.t.rUEjBQ)
+                        (0, r.jsx)(c.P3F, {
+                            className: x.blockedButton,
+                            onClick: i,
+                            children: m.intl.string(m.t.rUEjBQ)
                         })
                     ]
                 });
     },
-    g = (e) => {
-        let { user: t, showStatus: n, speaker: o, channelId: c } = e,
-            h = (0, i.e7)([d.ZP], () => d.ZP.isModerator(t.id, c)),
-            p = (0, i.e7)([a.Z], () => a.Z.isBlocked(t.id)),
-            m = null;
+    h = (e) => {
+        let { user: t, showStatus: n, speaker: s, channelId: a } = e,
+            b = (0, o.e7)([u.ZP], () => u.ZP.isModerator(t.id, a)),
+            j = (0, o.e7)([l.Z], () => l.Z.isBlocked(t.id)),
+            p = null;
         return (
-            n && (m = o ? b.intl.string(b.t.LqMmGx) : h ? b.intl.string(b.t.GMZqSk) : b.intl.string(b.t.suRAp6)),
+            n && (p = s ? m.intl.string(m.t.LqMmGx) : b ? m.intl.string(m.t.GMZqSk) : m.intl.string(m.t.suRAp6)),
             (0, r.jsxs)('div', {
-                className: _.user,
+                className: x.user,
                 children: [
                     (0, r.jsx)(
-                        s.Z,
+                        i.Z,
                         {
                             src: t.getAvatarURL(null, 32),
-                            size: l.EFr.SIZE_32,
+                            size: c.EFr.SIZE_32,
                             muted: !1,
                             deafen: !1,
                             speaking: !1,
                             ringing: !1,
-                            renderIcon: o
+                            renderIcon: s
                                 ? () =>
-                                      (0, r.jsx)(l.S6n, {
+                                      (0, r.jsx)(c.S6n, {
                                           size: 'md',
                                           color: 'currentColor',
-                                          className: _.icon
+                                          className: x.icon
                                       })
                                 : null
                         },
                         t.id
                     ),
                     (0, r.jsxs)('div', {
-                        className: _.userInfo,
+                        className: x.userInfo,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: _.username,
+                                className: x.username,
                                 children: [
-                                    (0, r.jsx)(l.Text, {
+                                    (0, r.jsx)(c.Text, {
                                         variant: n ? 'text-md/normal' : 'text-sm/normal',
-                                        children: u.ZP.getName(t)
+                                        children: d.ZP.getName(t)
                                     }),
-                                    (0, r.jsx)(l.Text, {
+                                    (0, r.jsx)(c.Text, {
                                         variant: n ? 'text-md/normal' : 'text-sm/normal',
                                         color: 'text-secondary',
                                         children: '#'.concat(t.discriminator)
@@ -184,17 +184,17 @@ let p = (e) => {
                                 ]
                             }),
                             (0, r.jsxs)('div', {
-                                className: _.username,
+                                className: x.username,
                                 children: [
-                                    (0, r.jsx)(l.Text, {
+                                    (0, r.jsx)(c.Text, {
                                         variant: 'text-xs/normal',
-                                        color: p ? 'text-danger' : 'text-default',
-                                        children: p ? b.intl.string(b.t['4bDptL']) : b.intl.string(b.t.tFY5ZW)
+                                        color: j ? 'text-danger' : 'text-default',
+                                        children: j ? m.intl.string(m.t['4bDptL']) : m.intl.string(m.t.tFY5ZW)
                                     }),
-                                    (0, r.jsxs)(l.Text, {
+                                    (0, r.jsxs)(c.Text, {
                                         variant: 'text-xs/normal',
                                         color: 'text-muted',
-                                        children: ['| ', m]
+                                        children: ['| ', p]
                                     })
                                 ]
                             })
@@ -204,16 +204,16 @@ let p = (e) => {
             })
         );
     },
-    f = (e) => {
+    g = (e) => {
         let { channelId: t } = e,
-            n = (0, h.z)(t),
-            i = (0, h.bA)(t);
-        return (0, r.jsx)(l.Ttm, {
-            className: _.container,
-            children: [...n, ...i].map((e) => {
+            n = (0, b.z)(t),
+            o = (0, b.bA)(t);
+        return (0, r.jsx)(c.Ttm, {
+            className: x.container,
+            children: [...n, ...o].map((e) => {
                 let { user: n } = e;
                 return (0, r.jsx)(
-                    g,
+                    h,
                     {
                         user: n,
                         channelId: t

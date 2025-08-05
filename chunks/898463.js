@@ -84,7 +84,7 @@ function N(e, t) {
     );
 }
 let C = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'image/avif', 'video/quicktime', 'video/mp4'];
-function R(e) {
+function w(e) {
     let { alt: t, spoiler: n, renderContent: a, size: o } = e,
         [s, l] = i.useState(!1);
     return (0, r.jsx)(p.aQ.Provider, {
@@ -128,7 +128,7 @@ function R(e) {
         })
     });
 }
-function P(e) {
+function R(e) {
     let { file: t, alt: n, spoiler: a, size: s = O.q.MEDIUM, onMouseEnter: c } = e,
         [u, d] = i.useState(),
         [f, _] = i.useState({
@@ -197,7 +197,7 @@ function P(e) {
         children: (0, r.jsx)(l.P3F, {
             onClick: g,
             className: I.clickableMedia,
-            children: (0, r.jsx)(R, {
+            children: (0, r.jsx)(w, {
                 size: s,
                 alt: n,
                 spoiler: a,
@@ -206,7 +206,7 @@ function P(e) {
         })
     });
 }
-function w(e) {
+function P(e) {
     let { file: t, alt: n, spoiler: a, size: s = O.q.MEDIUM, onMouseEnter: l, onVideoLoadError: c } = e,
         [u, d] = i.useState(),
         f = i.useRef(null);
@@ -224,7 +224,7 @@ function w(e) {
         (0, r.jsx)('div', {
             onMouseEnter: l,
             className: I.mediaContainer,
-            children: (0, r.jsx)(R, {
+            children: (0, r.jsx)(w, {
                 size: s,
                 alt: n,
                 spoiler: a,
@@ -250,7 +250,7 @@ function D(e) {
         [l, c] = i.useState(!1),
         u = a === O.q.SMALL;
     return n.isImage && n.item.platform === d.ow.WEB
-        ? (0, r.jsx)(P, {
+        ? (0, r.jsx)(R, {
               file: n.item.file,
               alt: n.description,
               spoiler: n.spoiler,
@@ -258,7 +258,7 @@ function D(e) {
               onMouseEnter: s
           })
         : !l && n.isVideo && n.item.platform === d.ow.WEB
-          ? (0, r.jsx)(w, {
+          ? (0, r.jsx)(P, {
                 file: n.item.file,
                 size: a,
                 alt: n.description,
@@ -287,11 +287,11 @@ function L(e) {
     let { channelId: t, draftType: n, upload: a, keyboardModeEnabled: d, label: p, size: h = O.q.MEDIUM, canEdit: m = !0, hideFileName: E = !1, clip: T } = e,
         A = null != T,
         C = (h = A ? O.q.CLIP : h) === O.q.SMALL,
-        R = (0, s.e7)([g.Z], () => {
+        w = (0, s.e7)([g.Z], () => {
             var e;
             return null == (e = g.Z.getChannel(t)) ? void 0 : e.guild_id;
         }),
-        P = (e) => {
+        R = (e) => {
             (e.stopPropagation(),
                 (0, l.h7j)((e) =>
                     (0, r.jsx)(
@@ -337,7 +337,7 @@ function L(e) {
                     ? (0, r.jsx)(y.Z, {
                           className: o()({ [I.action]: C }),
                           tooltip: v.intl.string(v.t.Y8ujqq),
-                          onClick: P,
+                          onClick: R,
                           children: (0, r.jsx)(l.vdY, {
                               size: 'xs',
                               color: 'currentColor',
@@ -361,7 +361,7 @@ function L(e) {
         draftType: n,
         id: a.id,
         channelId: t,
-        handleEditModal: P,
+        handleEditModal: R,
         keyboardModeEnabled: d,
         size: h,
         className: o()({ [I.attachmentItemSmall]: C }),
@@ -389,7 +389,7 @@ function L(e) {
                             participantIds: T.users,
                             applicationId: T.applicationId,
                             title: T.name,
-                            guildId: R
+                            guildId: w
                         }),
                         (0, r.jsx)(l.IGR, {
                             color: _.Z.BG_BRAND,

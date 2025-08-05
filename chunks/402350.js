@@ -1,93 +1,95 @@
-function n(t) {
-    for (var e = 1; e < arguments.length; e++) {
-        var r = null != arguments[e] ? arguments[e] : {},
-            n = Object.keys(r);
+function r(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(r, t).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            n.forEach(function (e) {
-                var n, i, o;
-                ((n = t),
-                    (i = e),
-                    (o = r[e]),
-                    i in n
-                        ? Object.defineProperty(n, i, {
-                              value: o,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (n[i] = o));
+            r.forEach(function (t) {
+                i(e, t, n[t]);
             }));
     }
-    return t;
+    return e;
 }
-var i = r(551558),
-    o = r(581079),
-    a = function (t, e) {
-        for (var r = [].concat(t).reverse(); r.length; ) {
-            var n = r.pop();
-            e(n);
-            var i = n.children;
-            (Array.isArray(i) || o(!1), (r = r.concat([].concat(i.reverse()))));
+function i(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+var a = n(551558),
+    o = n(581079),
+    s = function (e, t) {
+        for (var n = [].concat(e).reverse(); n.length; ) {
+            var r = n.pop();
+            t(r);
+            var i = r.children;
+            (Array.isArray(i) || o(!1), (n = n.concat([].concat(i.reverse()))));
         }
     },
-    u = function (t) {
-        if (!(t && t.type)) return !1;
-        var e = t.type;
-        return 'unordered-list-item' === e || 'ordered-list-item' === e;
+    l = function (e) {
+        if (!(e && e.type)) return !1;
+        var t = e.type;
+        return 'unordered-list-item' === t || 'ordered-list-item' === t;
     },
-    s = function (t) {
-        Array.isArray(t.children) &&
-            (t.children = t.children.map(function (e) {
-                return e.type === t.type ? n({}, e, { depth: (t.depth || 0) + 1 }) : e;
+    c = function (e) {
+        Array.isArray(e.children) &&
+            (e.children = e.children.map(function (t) {
+                return t.type === e.type ? r({}, t, { depth: (e.depth || 0) + 1 }) : t;
             }));
     };
-t.exports = {
-    fromRawTreeStateToRawState: function (t) {
-        var e = t.blocks,
-            r = [];
-        return (Array.isArray(e) || o(!1), Array.isArray(e) && e.length)
-            ? (a(e, function (t) {
-                  var e = n({}, t);
-                  (u(t) && ((e.depth = e.depth || 0), s(t), null != t.children && t.children.length > 0)) || (delete e.children, r.push(e));
+e.exports = {
+    fromRawTreeStateToRawState: function (e) {
+        var t = e.blocks,
+            n = [];
+        return (Array.isArray(t) || o(!1), Array.isArray(t) && t.length)
+            ? (s(t, function (e) {
+                  var t = r({}, e);
+                  (l(e) && ((t.depth = t.depth || 0), c(e), null != e.children && e.children.length > 0)) || (delete t.children, n.push(t));
               }),
-              (t.blocks = r),
-              n({}, t, { blocks: r }))
-            : t;
+              (e.blocks = n),
+              r({}, e, { blocks: n }))
+            : e;
     },
-    fromRawStateToRawTreeState: function (t) {
-        var e = [],
-            r = [];
+    fromRawStateToRawTreeState: function (e) {
+        var t = [],
+            n = [];
         return (
-            t.blocks.forEach(function (t) {
-                var o = u(t),
-                    a = t.depth || 0,
-                    s = n({}, t, { children: [] });
-                if (!o) return void e.push(s);
-                var c = r[0];
-                if (null == c && 0 === a) e.push(s);
-                else if (null == c || c.depth < a - 1) {
-                    var l = {
-                        key: i(),
+            e.blocks.forEach(function (e) {
+                var i = l(e),
+                    o = e.depth || 0,
+                    s = r({}, e, { children: [] });
+                if (!i) return void t.push(s);
+                var c = n[0];
+                if (null == c && 0 === o) t.push(s);
+                else if (null == c || c.depth < o - 1) {
+                    var u = {
+                        key: a(),
                         text: '',
-                        depth: a - 1,
-                        type: t.type,
+                        depth: o - 1,
+                        type: e.type,
                         children: [],
                         entityRanges: [],
                         inlineStyleRanges: []
                     };
-                    (r.unshift(l), 1 === a ? e.push(l) : null != c && c.children.push(l), l.children.push(s));
-                } else if (c.depth === a - 1) c.children.push(s);
+                    (n.unshift(u), 1 === o ? t.push(u) : null != c && c.children.push(u), u.children.push(s));
+                } else if (c.depth === o - 1) c.children.push(s);
                 else {
-                    for (; null != c && c.depth >= a; ) (r.shift(), (c = r[0]));
-                    a > 0 ? c.children.push(s) : e.push(s);
+                    for (; null != c && c.depth >= o; ) (n.shift(), (c = n[0]));
+                    o > 0 ? c.children.push(s) : t.push(s);
                 }
             }),
-            n({}, t, { blocks: e })
+            r({}, e, { blocks: t })
         );
     }
 };

@@ -28,33 +28,33 @@ function b(e, t, n) {
         A,
         N,
         C,
+        w,
         R,
         P,
-        w,
         D,
         L,
         x,
-        M,
-        k = String(t),
-        j = (0, f.j)(),
-        U = null != (m = null != (g = null == n ? void 0 : n.locale) ? g : j.locale) ? m : _.Z,
-        G = (0, u.Z)(null != (b = null != (O = null != (v = null != (I = null == n ? void 0 : n.firstWeekContainsDate) ? I : null == n || null == (T = n.locale) || null == (S = T.options) ? void 0 : S.firstWeekContainsDate) ? v : j.firstWeekContainsDate) ? O : null == (A = j.locale) || null == (N = A.options) ? void 0 : N.firstWeekContainsDate) ? b : 1);
+        k,
+        j = String(t),
+        M = (0, f.j)(),
+        U = null != (m = null != (g = null == n ? void 0 : n.locale) ? g : M.locale) ? m : _.Z,
+        G = (0, u.Z)(null != (b = null != (O = null != (v = null != (I = null == n ? void 0 : n.firstWeekContainsDate) ? I : null == n || null == (T = n.locale) || null == (S = T.options) ? void 0 : S.firstWeekContainsDate) ? v : M.firstWeekContainsDate) ? O : null == (A = M.locale) || null == (N = A.options) ? void 0 : N.firstWeekContainsDate) ? b : 1);
     if (!(G >= 1 && G <= 7)) throw RangeError('firstWeekContainsDate must be between 1 and 7 inclusively');
-    var B = (0, u.Z)(null != (C = null != (R = null != (P = null != (w = null == n ? void 0 : n.weekStartsOn) ? w : null == n || null == (D = n.locale) || null == (L = D.options) ? void 0 : L.weekStartsOn) ? P : j.weekStartsOn) ? R : null == (x = j.locale) || null == (M = x.options) ? void 0 : M.weekStartsOn) ? C : 0);
+    var B = (0, u.Z)(null != (C = null != (w = null != (R = null != (P = null == n ? void 0 : n.weekStartsOn) ? P : null == n || null == (D = n.locale) || null == (L = D.options) ? void 0 : L.weekStartsOn) ? R : M.weekStartsOn) ? w : null == (x = M.locale) || null == (k = x.options) ? void 0 : k.weekStartsOn) ? C : 0);
     if (!(B >= 0 && B <= 6)) throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
     if (!U.localize) throw RangeError('locale must contain localize property');
     if (!U.formatLong) throw RangeError('locale must contain formatLong property');
-    var V = (0, a.default)(e);
-    if (!(0, r.default)(V)) throw RangeError('Invalid time value');
-    var F = (0, l.Z)(V),
-        Z = (0, i.Z)(V, F),
+    var Z = (0, a.default)(e);
+    if (!(0, r.default)(Z)) throw RangeError('Invalid time value');
+    var F = (0, l.Z)(Z),
+        V = (0, i.Z)(Z, F),
         H = {
             firstWeekContainsDate: G,
             weekStartsOn: B,
             locale: U,
-            _originalDate: V
+            _originalDate: Z
         };
-    return k
+    return j
         .match(h)
         .map(function (e) {
             var t = e[0];
@@ -67,7 +67,7 @@ function b(e, t, n) {
             var i = r[0];
             if ("'" === i) return y(r);
             var a = o.Z[i];
-            if (a) return (!(null != n && n.useAdditionalWeekYearTokens) && (0, c.Do)(r) && (0, c.qp)(r, t, String(e)), !(null != n && n.useAdditionalDayOfYearTokens) && (0, c.Iu)(r) && (0, c.qp)(r, t, String(e)), a(Z, r, U.localize, H));
+            if (a) return (!(null != n && n.useAdditionalWeekYearTokens) && (0, c.Do)(r) && (0, c.qp)(r, t, String(e)), !(null != n && n.useAdditionalDayOfYearTokens) && (0, c.Iu)(r) && (0, c.qp)(r, t, String(e)), a(V, r, U.localize, H));
             if (i.match(E)) throw RangeError('Format string contains an unescaped latin alphabet character `' + i + '`');
             return r;
         })

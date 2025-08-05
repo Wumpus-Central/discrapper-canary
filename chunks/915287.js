@@ -161,8 +161,8 @@ function v(e, t, n, a) {
             });
         });
     return i.forwardRef(function (a, p) {
-        var { className: g, onScroll: v, onResize: I = null, onContentResize: T = null, dir: S = 'ltr', sections: A, sectionHeight: N, rowHeight: C, footerHeight: R = 0, sidebarHeight: P, listHeaderHeight: w = 0, renderSection: D, renderRow: L, renderFooter: x, renderSidebar: M, renderListHeader: k, stickyListHeader: j, wrapSection: U, getAnchorId: G, paddingTop: B, paddingBottom: V, fade: F = !1, customTheme: Z = !1, chunkSize: H, style: Y, innerId: W, innerRole: K, innerAriaLabel: z, innerAriaMultiselectable: q, innerAriaOrientation: X, innerClassName: Q, innerTag: J = 'div' } = a,
-            $ = m(a, ['className', 'onScroll', 'onResize', 'onContentResize', 'dir', 'sections', 'sectionHeight', 'rowHeight', 'footerHeight', 'sidebarHeight', 'listHeaderHeight', 'renderSection', 'renderRow', 'renderFooter', 'renderSidebar', 'renderListHeader', 'stickyListHeader', 'wrapSection', 'getAnchorId', 'paddingTop', 'paddingBottom', 'fade', 'customTheme', 'chunkSize', 'style', 'innerId', 'innerRole', 'innerAriaLabel', 'innerAriaMultiselectable', 'innerAriaOrientation', 'innerClassName', 'innerTag']);
+        var { className: g, onScroll: v, onResize: I = null, onContentResize: T = null, dir: S = 'ltr', sections: A, sectionHeight: N, rowHeight: C, footerHeight: w = 0, sidebarHeight: R, listHeaderHeight: P = 0, renderSection: D, renderRow: L, renderFooter: x, renderSidebar: k, renderListHeader: j, stickyListHeader: M, wrapSection: U, getAnchorId: G, paddingTop: B, paddingBottom: Z, fade: F = !1, customTheme: V = !1, chunkSize: H, style: Y, innerId: W, innerRole: K, innerAriaLabel: z, innerAriaMultiselectable: q, innerAriaOrientation: $, innerClassName: X, innerTag: Q = 'div' } = a,
+            J = m(a, ['className', 'onScroll', 'onResize', 'onContentResize', 'dir', 'sections', 'sectionHeight', 'rowHeight', 'footerHeight', 'sidebarHeight', 'listHeaderHeight', 'renderSection', 'renderRow', 'renderFooter', 'renderSidebar', 'renderListHeader', 'stickyListHeader', 'wrapSection', 'getAnchorId', 'paddingTop', 'paddingBottom', 'fade', 'customTheme', 'chunkSize', 'style', 'innerId', 'innerRole', 'innerAriaLabel', 'innerAriaMultiselectable', 'innerAriaOrientation', 'innerClassName', 'innerTag']);
         let ee = i.useRef(null),
             et = i.useRef(null),
             [en, er] = i.useState(!1),
@@ -186,11 +186,11 @@ function v(e, t, n, a) {
                 sections: A,
                 sectionHeight: N,
                 rowHeight: C,
-                footerHeight: R,
-                sidebarHeight: P,
-                listHeaderHeight: w,
+                footerHeight: w,
+                sidebarHeight: R,
+                listHeaderHeight: P,
                 paddingTop: B,
-                paddingBottom: V,
+                paddingBottom: Z,
                 chunkSize: H,
                 getScrollerState: eo,
                 getAnchorId: G
@@ -279,32 +279,32 @@ function v(e, t, n, a) {
                             className: o()(g, {
                                 [e]: !0,
                                 [t]: F,
-                                [n]: Z,
+                                [n]: V,
                                 [d.scrolling]: en
                             }),
                             style: (0, u.uT)(Y)
                         },
-                        $
+                        J
                     ),
                     {
                         children: [
                             i.useMemo(
                                 () =>
-                                    (0, r.jsx)(J, {
+                                    (0, r.jsx)(Q, {
                                         id: W,
                                         role: K,
                                         'aria-label': z,
                                         'aria-multiselectable': q,
-                                        'aria-orientation': X,
+                                        'aria-orientation': $,
                                         style: { height: el },
-                                        className: o()(d.content, Q),
+                                        className: o()(d.content, X),
                                         ref: et,
                                         children: (0, r.jsx)(c.J, {
                                             containerRef: et,
                                             children: y({
                                                 items: ec,
-                                                renderListHeader: k,
-                                                stickyListHeader: j,
+                                                renderListHeader: j,
+                                                stickyListHeader: M,
                                                 renderSection: D,
                                                 renderRow: L,
                                                 renderFooter: x,
@@ -313,17 +313,17 @@ function v(e, t, n, a) {
                                             })
                                         })
                                     }),
-                                [J, W, K, z, q, X, el, Q, ec, k, j, D, L, x, U, es]
+                                [Q, W, K, z, q, $, el, X, ec, j, M, D, L, x, U, es]
                             ),
                             i.useMemo(
                                 () =>
                                     O({
                                         isSidebarVisible: eu,
-                                        renderSidebar: M,
-                                        sidebarHeight: P,
+                                        renderSidebar: k,
+                                        sidebarHeight: R,
                                         isListVisible: 0 !== ec.length
                                     }),
-                                [eu, M, P, ec.length]
+                                [eu, k, R, ec.length]
                             )
                         ]
                     }

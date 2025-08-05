@@ -1,16 +1,16 @@
-(r.d(t, { Z: () => d }), r(388685));
+(r.d(t, { Z: () => u }), r(388685));
 var n = r(255367),
-    i = r(73800),
-    a = r(481060),
+    a = r(73800),
+    i = r(481060),
     l = r(312097),
-    s = r(810568),
-    o = r(388032),
+    o = r(810568),
+    s = r(388032),
     c = r(263930),
-    u = r(301736);
-function d(e) {
+    d = r(301736);
+function u(e) {
     let { detectedGame: t, trackAction: r } = e,
-        d = i.useRef(null),
-        m = i.useMemo(() => {
+        u = a.useRef(null),
+        m = a.useMemo(() => {
             let e = t.artwork.map((e) => ({
                 url: e,
                 type: 'IMAGE'
@@ -24,10 +24,10 @@ function d(e) {
             ];
         }, [t.artwork, t.screenshots]),
         g = m.length > 2;
-    function f(e) {
-        if (null == d.current) return;
-        let t = d.current.getScrollerState().scrollLeft;
-        d.current.scrollTo({
+    function p(e) {
+        if (null == u.current) return;
+        let t = u.current.getScrollerState().scrollLeft;
+        u.current.scrollTo({
             to: t + 280 * e,
             animate: !0
         });
@@ -36,30 +36,30 @@ function d(e) {
         ? null
         : (0, n.jsxs)('div', {
               children: [
-                  (0, n.jsx)(a.X6q, {
+                  (0, n.jsx)(i.X6q, {
                       className: c.sectionHeader,
                       variant: 'text-md/semibold',
                       color: 'header-primary',
-                      children: o.intl.string(o.t['bNdK5+'])
+                      children: s.intl.string(s.t['bNdK5+'])
                   }),
                   (0, n.jsxs)('div', {
-                      className: g ? u.gameProfileMediaSmall : u.gameProfileMediaLarge,
+                      className: g ? d.gameProfileMediaSmall : d.gameProfileMediaLarge,
                       children: [
-                          (0, n.jsx)(a.xVE, {
-                              ref: d,
-                              className: u.imageScroller,
+                          (0, n.jsx)(i.xVE, {
+                              ref: u,
+                              className: d.imageScroller,
                               orientation: 'horizontal',
                               children: m.map((e, t) =>
                                   (0, n.jsx)(
-                                      a.P3F,
+                                      i.P3F,
                                       {
-                                          className: u.imageClickable,
+                                          className: d.imageClickable,
                                           focusProps: {
                                               offset: 4,
-                                              ringClassName: u.gameArtworkFocusRing
+                                              ringClassName: d.gameArtworkFocusRing
                                           },
                                           onClick: () => {
-                                              (r(s.as.ClickImage),
+                                              (r(o.as.ClickImage),
                                                   (0, l.K)({
                                                       items: m,
                                                       startingIndex: t,
@@ -69,8 +69,8 @@ function d(e) {
                                           },
                                           children: (0, n.jsx)('img', {
                                               src: e.url,
-                                              className: u.gameArtwork,
-                                              alt: o.intl.formatToPlainString(o.t.COYYrq, { game: name })
+                                              className: d.gameArtwork,
+                                              alt: s.intl.formatToPlainString(s.t.COYYrq, { game: name })
                                           })
                                       },
                                       t
@@ -79,23 +79,23 @@ function d(e) {
                           }),
                           g &&
                               (0, n.jsxs)('div', {
-                                  className: u.mediaOverlay,
+                                  className: d.mediaOverlay,
                                   children: [
-                                      (0, n.jsx)('div', { className: u.gradientLeft }),
-                                      (0, n.jsx)(a.P3F, {
-                                          className: u.arrowClickable,
-                                          onClick: () => f(-1),
-                                          children: (0, n.jsx)(a.whL, {
-                                              className: u.arrow,
+                                      (0, n.jsx)('div', { className: d.gradientLeft }),
+                                      (0, n.jsx)(i.P3F, {
+                                          className: d.arrowClickable,
+                                          onClick: () => p(-1),
+                                          children: (0, n.jsx)(i.whL, {
+                                              className: d.arrow,
                                               color: 'currentColor'
                                           })
                                       }),
-                                      (0, n.jsx)('div', { className: u.gradientRight }),
-                                      (0, n.jsx)(a.P3F, {
-                                          className: u.arrowClickable,
-                                          onClick: () => f(1),
-                                          children: (0, n.jsx)(a.ZSh, {
-                                              className: u.arrow,
+                                      (0, n.jsx)('div', { className: d.gradientRight }),
+                                      (0, n.jsx)(i.P3F, {
+                                          className: d.arrowClickable,
+                                          onClick: () => p(1),
+                                          children: (0, n.jsx)(i.ZSh, {
+                                              className: d.arrow,
                                               color: 'currentColor'
                                           })
                                       })

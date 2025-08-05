@@ -23,13 +23,13 @@ let A = T.QZA.CLOSED,
 function C() {
     ((A = T.QZA.OPEN), (N = {}));
 }
-function R() {
+function w() {
     ((A = T.QZA.CLOSED), (N = {}));
 }
-function P() {
+function R() {
     ((A = T.QZA.SUBMITTING), (N = {}));
 }
-function w(e) {
+function P(e) {
     var t;
     if (A !== T.QZA.SUBMITTING) return !1;
     ((A = T.QZA.OPEN), (N = null != (t = e.errors) ? t : {}));
@@ -46,15 +46,15 @@ function x(e) {
     let { globalName: t } = e;
     i = t;
 }
-function M(e) {
+function k(e) {
     let { legacyUsernameDisabled: t } = e;
     _ = t;
 }
-function k(e) {
+function j(e) {
     let { avatarDecoration: t } = e;
     a = t;
 }
-function j(e) {
+function M(e) {
     let { nameplate: t } = e;
     s = t;
 }
@@ -70,7 +70,7 @@ function B(e) {
     let { banner: t } = e;
     l = t;
 }
-function V(e) {
+function Z(e) {
     let { bio: t } = e;
     c = t;
 }
@@ -78,7 +78,7 @@ function F(e) {
     let { pronouns: t } = e;
     u = t;
 }
-function Z(e) {
+function V(e) {
     let { color: t } = e;
     d = t;
 }
@@ -106,18 +106,18 @@ function q(e) {
     let { profileEffectId: t } = e;
     E = t;
 }
-function X(e) {
+function $(e) {
     let { banner: t } = e;
     b = t;
 }
-function Q(e) {
+function X(e) {
     let { banner: t, themeColors: n, avatarDecoration: r } = e;
     ((b = t), (h = n), (g = r));
 }
-function J() {
+function Q() {
     r = void 0;
 }
-function $() {
+function J() {
     N = {};
 }
 function ee() {
@@ -142,7 +142,7 @@ function eo() {
     p = void 0;
 }
 function es() {
-    (ee(), er(), R());
+    (ee(), er(), w());
 }
 class el extends (y = v.ZP.Store) {
     getFormState() {
@@ -234,30 +234,30 @@ let ec = new el(I.Z, {
     USER_SETTINGS_MODAL_INIT: C,
     USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS: C,
     USER_SETTINGS_MODAL_SET_SECTION: D,
-    USER_SETTINGS_ACCOUNT_CLOSE: R,
+    USER_SETTINGS_ACCOUNT_CLOSE: w,
     USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM: es,
-    USER_SETTINGS_ACCOUNT_SUBMIT: P,
-    USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: w,
+    USER_SETTINGS_ACCOUNT_SUBMIT: R,
+    USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: P,
     USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: L,
     USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME: x,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_LEGACY_USERNAME_DISABLED: M,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: k,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_NAMEPLATE: j,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_LEGACY_USERNAME_DISABLED: k,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION: j,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_NAMEPLATE: M,
     USER_SETTINGS_ACCOUNT_SET_SINGLE_TRY_IT_OUT_COLLECTIBLES_ITEM: G,
     USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID: U,
     USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER: B,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_BIO: V,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_BIO: Z,
     USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS: F,
-    USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR: Z,
+    USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR: V,
     USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS: H,
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR: K,
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION: z,
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PROFILE_EFFECT_ID: q,
-    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: X,
+    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER: $,
     USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS: W,
-    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET: Q,
+    USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET: X,
     USER_SETTINGS_SET_PENDING_PRIMARY_GUILD_ID: Y,
-    USER_SETTINGS_CLEAR_ERRORS: $,
+    USER_SETTINGS_CLEAR_ERRORS: J,
     USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: et,
     USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: en,
     USER_SETTINGS_RESET_ALL_PENDING: ee,
@@ -265,5 +265,5 @@ let ec = new el(I.Z, {
     USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: ei,
     USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED: ea,
     USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: eo,
-    LOGOUT: J
+    LOGOUT: Q
 });

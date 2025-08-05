@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(636977),
     o = n(442837),
-    a = n(704215),
-    s = n(952265),
+    s = n(704215),
+    a = n(952265),
     c = n(481060),
     u = n(570140),
     d = n(266454),
@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(594174),
     m = n(74538),
     b = n(507808),
-    _ = n(822857),
-    O = n(479766),
+    O = n(822857),
+    _ = n(479766),
     y = n(275388),
     C = n(331663),
     v = n(981631),
@@ -23,35 +23,35 @@ var r = n(255367),
     E = n(46140);
 let S = 'orb-announcement-modal-key';
 function x() {
-    let { enabled: e } = (0, _.hl)({ location: 'virtual_currency_announcement_modal' }),
-        t = (0, o.e7)([O.Z], () => O.Z.onboardingModalOpenedPrior),
+    let { enabled: e } = (0, O.hl)({ location: 'virtual_currency_announcement_modal' }),
+        t = (0, o.e7)([_.Z], () => _.Z.onboardingModalOpenedPrior),
         { user: x } = (0, o.cj)([g.default], () => ({ user: g.default.getCurrentUser() })),
         I = (0, o.e7)([f.Z], () => f.Z.hasLayers()),
         P = (0, y.GE)(S),
         N = (0, m.EO)(x) || I || P,
-        [w, T] = (0, h.US)(e && !N ? [a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...C.b.useSelectedDismissibleContent);
+        [w, Z] = (0, h.US)(e && !N ? [s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...C.b.useSelectedDismissibleContent);
     i.useEffect(() => {
-        w !== a.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL ||
+        w !== s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL ||
             t ||
             (u.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN' }),
-            (0, s.ZD)(
+            (0, a.ZD)(
                 async () => {
                     let { WrappedAnnouncementModal: e } = await n.e('86653').then(n.bind(n, 993318));
                     return function (t) {
                         let { onClose: n, transitionState: i } = t,
                             o = async () => {
-                                (await n(), T(j.L.USER_DISMISS));
+                                (await n(), Z(j.L.USER_DISMISS));
                             };
                         return (0, r.jsx)(e, {
                             transitionState: i,
                             onClose: o,
                             ctaOnClick: () => {
-                                (T(j.L.TAKE_ACTION),
-                                    (0, d.Q3)(a.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, {
+                                (Z(j.L.TAKE_ACTION),
+                                    (0, d.Q3)(s.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, {
                                         dismissAction: j.L.INDIRECT_ACTION,
                                         groupName: j.R.VIRTUAL_CURRENCY_ONBOARDING
                                     }),
-                                    (0, d.Q3)(a.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
+                                    (0, d.Q3)(s.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, {
                                         dismissAction: j.L.INDIRECT_ACTION,
                                         groupName: j.R.VIRTUAL_CURRENCY_ONBOARDING
                                     }),
@@ -72,9 +72,9 @@ function x() {
                 {
                     modalKey: S,
                     onCloseRequest: () => {
-                        (T(j.L.USER_DISMISS), (0, c.Mr3)(S));
+                        (Z(j.L.USER_DISMISS), (0, c.Mr3)(S));
                     }
                 }
             ));
-    }, [w, e, t, T, I]);
+    }, [w, e, t, Z, I]);
 }

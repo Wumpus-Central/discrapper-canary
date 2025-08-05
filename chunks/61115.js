@@ -81,7 +81,7 @@ function S(e) {
             from: { width: '0%' },
             config: { duration: I }
         })),
-        R = (e) => {
+        w = (e) => {
             (f(),
                 O(1),
                 null != p &&
@@ -93,7 +93,7 @@ function S(e) {
                         })
                     ));
         },
-        P = async (e) => {
+        R = async (e) => {
             1 === e && (await N({ width: '100%' }), o());
         };
     return (
@@ -109,7 +109,7 @@ function S(e) {
             children: (0, r.jsxs)(l.MyZ, {
                 activeSlide: b,
                 width: T,
-                onSlideReady: P,
+                onSlideReady: R,
                 children: [
                     (0, r.jsxs)(l.Mi4, {
                         id: 0,
@@ -146,7 +146,7 @@ function S(e) {
                                         A,
                                         {
                                             choice: e,
-                                            onClick: R
+                                            onClick: w
                                         },
                                         e.key
                                     )

@@ -1,14 +1,14 @@
-n.d(t, { T: () => s });
+n.d(t, { T: () => a });
 var i = n(255367),
-    a = n(670304),
-    o = n(594263);
-function s(e) {
+    o = n(670304),
+    l = n(594263);
+function a(e) {
     let { node: t } = e,
-        n = t.data.render;
+        n = t.render;
     return null != n
         ? (0, i.jsx)(n, {})
         : (0, i.jsx)('div', {
-              className: o.panel,
-              children: (0, i.jsx)(a.Z, { node: t })
+              className: l.panel,
+              children: (0, i.jsx)(o.Z, { node: t })
           });
 }

@@ -1,140 +1,142 @@
-(n.d(t, { Z: () => g }), n(388685));
+(n.d(t, { Z: () => E }), n(388685));
 var r = n(255367),
     i = n(73800),
-    l = n(692547),
-    a = n(780384),
-    o = n(755721),
-    s = n(481060),
+    a = n(692547),
+    o = n(780384),
+    s = n(755721),
+    l = n(481060),
     c = n(367907),
     u = n(210887),
     d = n(626135),
-    p = n(981631),
-    h = n(388032),
-    f = n(41281),
-    m = n(73433);
+    f = n(981631),
+    _ = n(388032),
+    p = n(41281),
+    h = n(73433);
+function m(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function g(e) {
-    let { onClose: t, onConfirm: g, onCancel: b, channel: _, analyticsType: y, popoutText: C, animation: x } = e;
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                m(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function E(e) {
+    let { onClose: t, onConfirm: m, onCancel: E, channel: b, analyticsType: y, popoutText: O, animation: v } = e;
     i.useEffect(() => {
-        d.default.track(
-            p.rMx.OPEN_POPOUT,
-            (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
-                        )),
-                        r.forEach(function (t) {
-                            var r;
-                            ((r = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: r,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0
-                                      })
-                                    : (e[t] = r));
-                        }));
-                }
-                return e;
-            })({ type: y }, (0, c.v_)(_))
-        );
-    }, [y, _]);
-    let v = i.useCallback(() => {
-            (null == g || g(), t());
-        }, [g, t]),
-        j = i.useCallback(() => {
-            (null == b || b(), t());
-        }, [b, t]),
-        O = i.useRef(null);
+        d.default.track(f.rMx.OPEN_POPOUT, g({ type: y }, (0, c.v_)(b)));
+    }, [y, b]);
+    let I = i.useCallback(() => {
+            (null == m || m(), t());
+        }, [m, t]),
+        T = i.useCallback(() => {
+            (null == E || E(), t());
+        }, [E, t]),
+        S = i.useRef(null);
     return (
         i.useEffect(() => {
             let e,
                 t = u.Z.theme,
                 r = !1;
             return (
-                null != x &&
+                null != v &&
                     (async () => {
-                        let [{ default: i }, l] = await Promise.all([Promise.resolve().then(n.t.bind(n, 500923, 23)), (0, a.wj)(t) ? x.dark() : x.light()]);
+                        let [{ default: i }, a] = await Promise.all([Promise.resolve().then(n.t.bind(n, 500923, 23)), (0, o.wj)(t) ? v.dark() : v.light()]);
                         r ||
-                            null == O.current ||
+                            null == S.current ||
                             (e = i.loadAnimation({
-                                container: O.current,
+                                container: S.current,
                                 renderer: 'svg',
                                 loop: !0,
                                 autoplay: !0,
-                                animationData: l
+                                animationData: a
                             }));
                     })(),
                 () => {
                     ((r = !0), null != e && (e.destroy(), (e = void 0)));
                 }
             );
-        }, [x]),
-        (0, r.jsx)(s.VqE, {
+        }, [v]),
+        (0, r.jsx)(l.VqE, {
             'aria-labelledby': 'content-warning-popout-label',
             children: (0, r.jsxs)('form', {
-                className: f.contentWarningPopout,
-                onSubmit: v,
+                className: p.contentWarningPopout,
+                onSubmit: I,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: f.body,
+                        className: p.body,
                         children: [
-                            null != x &&
+                            null != v &&
                                 (0, r.jsx)('div', {
-                                    className: f.animation,
-                                    ref: O
+                                    className: p.animation,
+                                    ref: S
                                 }),
                             (0, r.jsxs)('div', {
-                                className: f.content,
+                                className: p.content,
                                 children: [
                                     (0, r.jsx)('div', {
-                                        className: f.header,
-                                        children: h.intl.string(h.t.mY3Y39)
+                                        className: p.header,
+                                        children: _.intl.string(_.t.mY3Y39)
                                     }),
-                                    (0, r.jsx)(s.Text, {
+                                    (0, r.jsx)(l.Text, {
                                         id: 'content-warning-popout-label',
-                                        className: m.markup,
+                                        className: h.markup,
                                         variant: 'text-sm/normal',
-                                        children: C.body
+                                        children: O.body
                                     }),
                                     (0, r.jsxs)('div', {
-                                        className: f.buttonWrapper,
+                                        className: p.buttonWrapper,
                                         children: [
                                             (0, r.jsxs)('div', {
-                                                className: f.buttonContainer,
+                                                className: p.buttonContainer,
                                                 children: [
-                                                    (0, r.jsx)(o.zx, {
-                                                        className: f.button,
-                                                        color: o.zx.Colors.PRIMARY,
-                                                        onClick: j,
-                                                        children: h.intl.string(h.t.fsBWmZ)
+                                                    (0, r.jsx)(s.zx, {
+                                                        className: p.button,
+                                                        color: s.zx.Colors.PRIMARY,
+                                                        onClick: T,
+                                                        children: _.intl.string(_.t.fsBWmZ)
                                                     }),
-                                                    (0, r.jsx)(s.Text, {
+                                                    (0, r.jsx)(l.Text, {
                                                         variant: 'text-xs/normal',
-                                                        className: f.buttonHint,
-                                                        children: h.intl.format(h.t['0LzVPT'], {})
+                                                        className: p.buttonHint,
+                                                        children: _.intl.format(_.t['0LzVPT'], {})
                                                     })
                                                 ]
                                             }),
                                             (0, r.jsxs)('div', {
-                                                className: f.buttonContainer,
+                                                className: p.buttonContainer,
                                                 children: [
-                                                    (0, r.jsx)(o.zx, {
-                                                        className: f.button,
-                                                        onClick: v,
+                                                    (0, r.jsx)(s.zx, {
+                                                        className: p.button,
+                                                        onClick: I,
                                                         type: 'submit',
                                                         autoFocus: !0,
-                                                        children: h.intl.string(h.t.KJnHq6)
+                                                        children: _.intl.string(_.t.KJnHq6)
                                                     }),
-                                                    (0, r.jsx)(s.Text, {
+                                                    (0, r.jsx)(l.Text, {
                                                         variant: 'text-xs/normal',
-                                                        className: f.buttonHint,
-                                                        children: h.intl.format(h.t.khjqdH, {})
+                                                        className: p.buttonHint,
+                                                        children: _.intl.format(_.t.khjqdH, {})
                                                     })
                                                 ]
                                             })
@@ -144,18 +146,18 @@ function g(e) {
                             })
                         ]
                     }),
-                    null != C.footer && '' !== C.footer
+                    null != O.footer && '' !== O.footer
                         ? (0, r.jsxs)('div', {
-                              className: f.footer,
+                              className: p.footer,
                               children: [
-                                  (0, r.jsx)(s.d3s, {
+                                  (0, r.jsx)(l.d3s, {
                                       size: 'xs',
-                                      color: l.Z.unsafe_rawColors.PRIMARY_400.css,
-                                      className: f.icon
+                                      color: a.Z.unsafe_rawColors.PRIMARY_400.css,
+                                      className: p.icon
                                   }),
-                                  (0, r.jsx)(s.Text, {
+                                  (0, r.jsx)(l.Text, {
                                       variant: 'text-sm/normal',
-                                      children: C.footer
+                                      children: O.footer
                                   })
                               ]
                           })

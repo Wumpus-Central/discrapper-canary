@@ -1,67 +1,67 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => E });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    l = n(758371),
-    a = n(758199),
-    o = n(914498),
-    s = n(880251),
+    a = n(758371),
+    o = n(758199),
+    s = n(914498),
+    l = n(880251),
     c = n(594190),
     u = n(562224),
     d = n(199902),
-    p = n(19780),
-    m = n(768581),
-    f = n(709054),
-    g = n(915553),
-    _ = n(704483),
-    h = n(388032);
-function b(e) {
+    f = n(19780),
+    _ = n(768581),
+    p = n(709054),
+    h = n(915553),
+    m = n(704483),
+    g = n(388032);
+function E(e) {
     let t,
-        { currentUserId: n, message: b, application: E, channel: C, onView: v } = e,
-        { staticBannerSrc: O, videoBannerSrc: x, bannerAspectRatio: y } = (0, s.E)(E),
-        I = m.ZP.getApplicationIconURL({
-            id: E.id,
-            icon: E.icon
+        { currentUserId: n, message: E, application: b, channel: y, onView: O } = e,
+        { staticBannerSrc: v, videoBannerSrc: I, bannerAspectRatio: T } = (0, l.E)(b),
+        S = _.ZP.getApplicationIconURL({
+            id: b.id,
+            icon: b.icon
         }),
-        j = (0, i.e7)([c.ZP], () =>
-            null != b.application
+        A = (0, i.e7)([c.ZP], () =>
+            null != E.application
                 ? c.ZP.getRunningGames().find((e) => {
                       let { id: t } = e;
-                      return null != b.application && t === b.application.id;
+                      return null != E.application && t === E.application.id;
                   })
                 : null
         ),
-        S = (0, i.e7)([d.Z], () => d.Z.getCurrentUserActiveStream()),
-        T = (0, i.e7)([p.Z], () => p.Z.getChannelId()),
-        N = f.default.extractTimestamp(b.id) + g.e < Date.now(),
-        P = (0, r.jsx)(r.Fragment, { children: (0, l._0)(b, E, C, n, !1) });
+        N = (0, i.e7)([d.Z], () => d.Z.getCurrentUserActiveStream()),
+        C = (0, i.e7)([f.Z], () => f.Z.getChannelId()),
+        w = p.default.extractTimestamp(E.id) + h.e < Date.now(),
+        R = (0, r.jsx)(r.Fragment, { children: (0, a._0)(E, b, y, n, !1) });
     return (
-        N ? (t = h.intl.string(_.default.u4QmWl)) : null != S ? (t = h.intl.string(_.default.P0wwmJ)) : T !== C.id ? (t = h.intl.string(_.default.qRXatr)) : null == j && (t = h.intl.string(_.default['43zohI'])),
-        (0, r.jsx)(a.W, {
-            header: h.intl.string(_.default.DKHheX),
-            title: E.name,
-            staticBannerSrc: O,
-            videoBannerSrc: x,
-            bannerAspectRatio: y,
-            iconSrc: null != I ? I : void 0,
-            info: P,
+        w ? (t = g.intl.string(m.default.u4QmWl)) : null != N ? (t = g.intl.string(m.default.P0wwmJ)) : C !== y.id ? (t = g.intl.string(m.default.qRXatr)) : null == A && (t = g.intl.string(m.default['43zohI'])),
+        (0, r.jsx)(o.W, {
+            header: g.intl.string(m.default.DKHheX),
+            title: b.name,
+            staticBannerSrc: v,
+            videoBannerSrc: I,
+            bannerAspectRatio: T,
+            iconSrc: null != S ? S : void 0,
+            info: R,
             actions:
-                b.author.id === n
+                E.author.id === n
                     ? []
                     : [
                           {
-                              label: h.intl.string(_.default['5+172d']),
-                              trackingArea: o.j_.STREAM,
+                              label: g.intl.string(m.default['5+172d']),
+                              trackingArea: s.j_.STREAM,
                               disabledReason: t,
                               onClick: () => {
-                                  null != j && (0, u.Z)(j.pid);
+                                  null != A && (0, u.Z)(A.pid);
                               }
                           }
                       ],
             trackingConfig: {
-                id: E.id,
-                linkType: o.Un.REQUEST_TO_STREAM,
-                onView: v
+                id: b.id,
+                linkType: s.Un.REQUEST_TO_STREAM,
+                onView: O
             }
         })
     );

@@ -98,12 +98,12 @@ function C() {
     var e, t, n;
     return N(null != (t = d.Z.getGuildFolders()) ? t : [], null != (n = null == (e = d.Z.settings.guildFolders) ? void 0 : e.guildPositions) ? n : []);
 }
-function R() {
+function w() {
     var e, t;
     let n = d.Z.getGuildFolders();
     return !(null != r && a()(r, n)) && N(null != (r = n) ? r : [], null != (t = null == (e = d.Z.settings.guildFolders) ? void 0 : e.guildPositions) ? t : []);
 }
-function P(e) {
+function R(e) {
     let { sourceId: t, targetId: n, moveToBelow: r, combine: i } = e,
         a = T.getNode(t),
         o = T.getNode(n);
@@ -113,7 +113,7 @@ function P(e) {
         T.moveInto(a, e, r);
     } else T.moveNextTo(a, o, r);
 }
-function w(e) {
+function P(e) {
     let { sourceIds: t, name: n } = e,
         r = t.shift();
     if (null == r) return !1;
@@ -173,20 +173,20 @@ function x(e) {
     let o = 'string' == typeof n ? new Date(n) : n;
     return o !== a.joinedAt && null != o && C();
 }
-function M(e) {
+function k(e) {
     let { folderId: t } = e,
         n = T.getNode(t),
         r = p.Z.isFolderExpanded(t);
     if (null == n || n.type !== c.eD.FOLDER || n.expanded === r) return !1;
     U(n, r);
 }
-function k(e) {
+function j(e) {
     let { folderId: t, expanded: n } = e,
         r = T.getNode(t);
     if (null == r || r.type !== c.eD.FOLDER || r.expanded === n) return !1;
     U(r, n);
 }
-function j() {
+function M() {
     for (let e of T.allNodes()) e.type === c.eD.FOLDER && e.expanded && U(e, !1);
 }
 function U(e, t) {
@@ -195,7 +195,7 @@ function U(e, t) {
 }
 let G = (0, f.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
     B = (0, f.oH)((e, t) => e.getRoots().map(A)),
-    V = (0, f.oH)((e, t) => {
+    Z = (0, f.oH)((e, t) => {
         let n = [];
         function r(e) {
             switch (e.type) {
@@ -208,7 +208,7 @@ let G = (0, f.oH)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
         return (r(e.root), n);
     }),
     F = (0, f.oH)((e, t) => e.root.children.map(A));
-class Z extends E.Z {
+class V extends E.Z {
     initialize() {
         this.waitFor(g.Z, b.ZP, d.Z, h.Z, u.Z, p.Z, l.Z);
     }
@@ -225,7 +225,7 @@ class Z extends E.Z {
         return G(T, T.version);
     }
     getFlattenedGuildFolderList() {
-        return V(T, T.version);
+        return Z(T, T.version);
     }
     getCompatibleGuildFolders() {
         return F(T, T.version);
@@ -235,7 +235,7 @@ class Z extends E.Z {
     }
     takeSnapshot() {
         return {
-            version: Z.LATEST_SNAPSHOT_VERSION,
+            version: V.LATEST_SNAPSHOT_VERSION,
             data: { tree: T.getSnapshot() }
         };
     }
@@ -247,21 +247,21 @@ class Z extends E.Z {
             GUILD_CREATE: C,
             GUILD_DELETE: C,
             GUILD_MEMBER_ADD: x,
-            USER_SETTINGS_PROTO_UPDATE: R,
-            GUILD_MOVE_BY_ID: P,
-            GUILD_FOLDER_CREATE_LOCAL: w,
+            USER_SETTINGS_PROTO_UPDATE: w,
+            GUILD_MOVE_BY_ID: R,
+            GUILD_FOLDER_CREATE_LOCAL: P,
             GUILD_FOLDER_EDIT_LOCAL: D,
             GUILD_FOLDER_DELETE_LOCAL: L,
-            TOGGLE_GUILD_FOLDER_EXPAND: M,
-            SET_GUILD_FOLDER_EXPANDED: k,
-            GUILD_FOLDER_COLLAPSE: j
+            TOGGLE_GUILD_FOLDER_EXPAND: k,
+            SET_GUILD_FOLDER_EXPANDED: j,
+            GUILD_FOLDER_COLLAPSE: M
         }),
             O(this, 'loadCache', () => {
-                let e = this.readSnapshot(Z.LATEST_SNAPSHOT_VERSION),
+                let e = this.readSnapshot(V.LATEST_SNAPSHOT_VERSION),
                     t = null == e ? void 0 : e.tree;
                 if (null != t) for (let e of ((T = new c.g8()).loadSnapshot(t), T.allNodes())) e.type === c.eD.FOLDER && (e.expanded = p.Z.isFolderExpanded(e.id));
             }));
     }
 }
-(O(Z, 'displayName', 'SortedGuildStore'), O(Z, 'LATEST_SNAPSHOT_VERSION', 2));
-let H = new Z();
+(O(V, 'displayName', 'SortedGuildStore'), O(V, 'LATEST_SNAPSHOT_VERSION', 2));
+let H = new V();

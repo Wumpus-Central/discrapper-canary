@@ -1,169 +1,178 @@
-(n.d(t, { Z: () => L }), n(997841));
-var l = n(255367),
+(n.d(t, { Z: () => x }), n(997841));
+var r = n(255367),
     i = n(73800),
-    r = n(120356),
-    a = n.n(r),
-    o = n(442837),
-    s = n(481060),
+    a = n(120356),
+    o = n.n(a),
+    s = n(442837),
+    l = n(481060),
     c = n(367907),
     u = n(895924),
     d = n(970321),
-    p = n(311819),
-    m = n(433534),
-    f = n(299206),
+    f = n(311819),
+    _ = n(433534),
+    p = n(299206),
     h = n(726521),
-    v = n(973616),
-    y = n(914010),
-    x = n(594174),
+    m = n(973616),
+    g = n(914010),
+    E = n(594174),
     b = n(626135),
-    g = n(572004),
-    j = n(630388),
-    N = n(135431),
-    C = n(541099),
-    E = n(783097),
-    P = n(570949),
-    O = n(314734),
-    A = n(981631),
-    I = n(388032),
-    _ = n(640724);
-function S(e) {
+    y = n(572004),
+    O = n(630388),
+    v = n(135431),
+    I = n(541099),
+    T = n(783097),
+    S = n(570949),
+    A = n(314734),
+    N = n(981631),
+    C = n(388032),
+    w = n(640724);
+function R(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            l = Object.keys(n);
+            r = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            l.forEach(function (t) {
-                var l;
-                ((l = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: l,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = l));
+            r.forEach(function (t) {
+                R(e, t, n[t]);
             }));
     }
     return e;
 }
-function T(e, t) {
+function D(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var l = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, l);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : D(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function L(e) {
+function x(e) {
     var t;
-    let { application: r, context: L, className: R, sectionName: Z } = e,
-        w = i.useRef(null),
-        k = (0, o.e7)([C.Z], () => C.Z.entrypoint()),
-        M = (0, E.L1)(r),
-        U = (0, m.Eb)(M),
-        D = (0, d.R)(r.id),
-        H = (0, o.e7)(
-            [y.Z],
+    let { application: a, context: R, className: D, sectionName: x } = e,
+        k = i.useRef(null),
+        j = (0, s.e7)([I.Z], () => I.Z.entrypoint()),
+        M = (0, T.L1)(a),
+        U = (0, _.Eb)(M),
+        G = (0, d.R)(a.id),
+        B = (0, s.e7)(
+            [g.Z],
             () => {
                 var e;
-                return null != (e = y.Z.getGuildId()) ? e : void 0;
+                return null != (e = g.Z.getGuildId()) ? e : void 0;
             },
             []
         ),
-        V = {
+        Z = {
             location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
-            application_id: r.id,
-            section_name: Z,
-            source: C.Z.lastShownEntrypoint()
+            application_id: a.id,
+            section_name: x,
+            source: I.Z.lastShownEntrypoint()
         },
-        B = x.default.getCurrentUser(),
-        W = (0, f.Z)({
-            id: r.id,
-            label: I.intl.string(I.t['+NP/b2'])
+        F = E.default.getCurrentUser(),
+        V = (0, p.Z)({
+            id: a.id,
+            label: C.intl.string(C.t['+NP/b2'])
         }),
-        F = (0, P.P)({ application: r }),
-        G = (0, j.yE)(null != (t = r.flags) ? t : 0, A.udG.EMBEDDED),
-        z = 'channel' === L.type ? L.channel : void 0;
-    return (0, l.jsxs)('div', {
-        className: _.container,
+        H = (0, S.P)({ application: a }),
+        Y = (0, O.yE)(null != (t = a.flags) ? t : 0, N.udG.EMBEDDED),
+        W = 'channel' === R.type ? R.channel : void 0;
+    return (0, r.jsxs)('div', {
+        className: w.container,
         children: [
-            (0, l.jsx)(s.P3F, {
+            (0, r.jsx)(l.P3F, {
                 onClick: () => {
-                    let e = G
-                        ? (0, p.H)({
-                              applicationId: r.id,
-                              referrerId: null == B ? void 0 : B.id
+                    let e = Y
+                        ? (0, f.H)({
+                              applicationId: a.id,
+                              referrerId: null == F ? void 0 : F.id
                           })
-                        : (0, p.J)(S({ id: r.id }, M));
-                    ((0, g.JG)(e, () => (0, s.showToast)((0, s.createToast)(I.intl.string(I.t['L/PwZW']), s.ToastType.SUCCESS))),
-                        b.default.track(A.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
-                            application_id: r.id,
-                            source: k
+                        : (0, f.J)(P({ id: a.id }, M));
+                    ((0, y.JG)(e, () => (0, l.showToast)((0, l.createToast)(C.intl.string(C.t['L/PwZW']), l.ToastType.SUCCESS))),
+                        b.default.track(N.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
+                            application_id: a.id,
+                            source: j
                         }));
                 },
-                className: a()(_.clickable, R),
-                'aria-label': I.intl.string(I.t.WqhZsr),
-                children: (0, l.jsx)(s.xPt, {
+                className: o()(w.clickable, D),
+                'aria-label': C.intl.string(C.t.WqhZsr),
+                children: (0, r.jsx)(l.xPt, {
                     size: 'sm',
-                    color: s.TVs.colors.INTERACTIVE_ACTIVE
+                    color: l.TVs.colors.INTERACTIVE_ACTIVE
                 })
             }),
-            (0, l.jsx)(s.yRy, {
-                targetElementRef: w,
+            (0, r.jsx)(l.yRy, {
+                targetElementRef: k,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, l.jsxs)(s.v2r, {
-                        className: O.NN,
+                    return (0, r.jsxs)(l.v2r, {
+                        className: A.NN,
                         navId: 'app-details-more-menu',
                         onClose: t,
-                        'aria-label': I.intl.string(I.t.AXIHpa),
+                        'aria-label': C.intl.string(C.t.AXIHpa),
                         onSelect: void 0,
                         children: [
-                            (0, l.jsxs)(s.kSQ, {
+                            (0, r.jsxs)(l.kSQ, {
                                 children: [
-                                    D &&
-                                        (0, l.jsx)(s.sNh, {
+                                    G &&
+                                        (0, r.jsx)(l.sNh, {
                                             id: 'open-storefront',
-                                            label: I.intl.string(I.t.kRvlKC),
+                                            label: C.intl.string(C.t.kRvlKC),
                                             action: () => {
-                                                (0, s.ZDy)(async () => {
-                                                    let { default: e } = await Promise.all([n.e('74891'), n.e('77803'), n.e('17883')]).then(n.bind(n, 7225));
+                                                (0, l.ZDy)(async () => {
+                                                    let { default: e } = await Promise.all([n.e('77803'), n.e('83372')]).then(n.bind(n, 7225));
                                                     return (t) =>
-                                                        (0, l.jsx)(e, {
+                                                        (0, r.jsx)(e, {
                                                             transitionState: t.transitionState,
                                                             onClose: t.onClose,
-                                                            appId: r.id,
-                                                            guildId: H
+                                                            appId: a.id,
+                                                            guildId: B
                                                         });
                                                 });
                                             }
                                         }),
                                     U
-                                        ? (0, l.jsx)(s.sNh, {
+                                        ? (0, r.jsx)(l.sNh, {
                                               id: 'add-app',
-                                              label: I.intl.string(I.t.NgXl3N),
+                                              label: C.intl.string(C.t.NgXl3N),
                                               action: () => {
-                                                  (null == M.customInstallUrl && (0, c.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, V),
-                                                      (0, N.L)(
-                                                          T(S({}, M), {
+                                                  (null == M.customInstallUrl && (0, c.yw)(N.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, Z),
+                                                      (0, v.L)(
+                                                          L(P({}, M), {
                                                               oauth2Callback: (e) => {
                                                                   let { location: t } = e;
-                                                                  null != t && (0, c.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, V);
+                                                                  null != t && (0, c.yw)(N.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, Z);
                                                               },
                                                               source: 'app_launcher_app_details'
                                                           })
@@ -171,41 +180,41 @@ function L(e) {
                                               }
                                           })
                                         : null,
-                                    r instanceof v.ZP
-                                        ? (0, l.jsx)(s.sNh, {
+                                    a instanceof m.ZP
+                                        ? (0, r.jsx)(l.sNh, {
                                               id: 'report-app',
                                               color: 'danger',
-                                              label: I.intl.string(I.t.jhJze3),
+                                              label: C.intl.string(C.t.jhJze3),
                                               action: () => {
                                                   var e;
                                                   (0, h.uu)({
-                                                      application: r,
+                                                      application: a,
                                                       entrypoint: 'app_launcher',
-                                                      contextualGuildId: null != (e = null == z ? void 0 : z.getGuildId()) ? e : void 0,
-                                                      contextualChannelId: null == z ? void 0 : z.id
+                                                      contextualGuildId: null != (e = null == W ? void 0 : W.getGuildId()) ? e : void 0,
+                                                      contextualChannelId: null == W ? void 0 : W.id
                                                   });
                                               }
                                           })
                                         : null,
-                                    F
+                                    H
                                 ]
                             }),
-                            (0, l.jsx)(s.kSQ, { children: W })
+                            (0, r.jsx)(l.kSQ, { children: V })
                         ]
                     });
                 },
                 align: 'right',
                 position: 'bottom',
                 children: (e) =>
-                    (0, l.jsx)(
-                        s.P3F,
-                        T(S({ innerRef: w }, e), {
+                    (0, r.jsx)(
+                        l.P3F,
+                        L(P({ innerRef: k }, e), {
                             onClick: e.onClick,
-                            className: a()(_.clickable, R),
-                            'aria-label': I.intl.string(I.t.UKOtz8),
-                            children: (0, l.jsx)(s.xhG, {
+                            className: o()(w.clickable, D),
+                            'aria-label': C.intl.string(C.t.UKOtz8),
+                            children: (0, r.jsx)(l.xhG, {
                                 size: 'sm',
-                                color: s.TVs.colors.INTERACTIVE_ACTIVE
+                                color: l.TVs.colors.INTERACTIVE_ACTIVE
                             })
                         })
                     )

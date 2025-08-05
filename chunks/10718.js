@@ -273,10 +273,10 @@ let N = {
 };
 function C(e, t) {
     let n = [];
-    for (let r = 0; r < e; r++) n.push(R(r, t));
+    for (let r = 0; r < e; r++) n.push(w(r, t));
     return n;
 }
-function R(e, t) {
+function w(e, t) {
     return {
         type: t,
         inputType: u.iw.PLACEHOLDER,

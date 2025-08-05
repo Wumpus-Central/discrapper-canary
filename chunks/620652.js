@@ -1,55 +1,57 @@
 n.d(t, {
-    M: () => g,
-    Z: () => j
+    M: () => h,
+    Z: () => g
 });
-var i,
-    r = n(255367),
-    l = n(73800),
-    o = n(120356),
-    a = n.n(o),
+var r = n(255367),
+    i = n(73800),
+    a = n(120356),
+    o = n.n(a),
     s = n(500923),
-    c = n.n(s),
-    u = n(570140),
-    d = n(960020),
-    h = n(831244),
-    p = n(815605),
-    m = n(981631),
-    f = n(872333),
-    g = (((i = {})[(i.NORMAL = 20)] = 'NORMAL'), (i[(i.LARGE = 32)] = 'LARGE'), i);
-let b = async (e) => {
+    l = n.n(s),
+    c = n(570140),
+    u = n(960020),
+    d = n(831244),
+    f = n(815605),
+    _ = n(981631),
+    p = n(872333),
+    h = (function (e) {
+        return ((e[(e.NORMAL = 20)] = 'NORMAL'), (e[(e.LARGE = 32)] = 'LARGE'), e);
+    })({});
+let m = async (e) => {
     var t;
     let { effect: n } = e,
-        i = await (0, h.T)(n.channelId, null != (t = n.messageId) ? t : m.lds, n.emoji.name),
-        r = await (0, p.aB)(''.concat(n.channelId, ':').concat(n.messageId, ':').concat(n.emoji.name), n.url, i, n.color);
-    return ((r.assets[0].p = n.url), r);
+        r = await (0, d.T)(n.channelId, null != (t = n.messageId) ? t : _.lds, n.emoji.name),
+        i = await (0, f.aB)(''.concat(n.channelId, ':').concat(n.messageId, ':').concat(n.emoji.name), n.url, r, n.color);
+    return ((i.assets[0].p = n.url), i);
 };
-function j(e) {
-    let { className: t, effect: n, onComplete: i, emojiSize: o = 20 } = e,
-        s = l.useRef(null),
-        h = o * p.Vz,
-        m = (h + o) / 2;
+function g(e) {
+    let { className: t, effect: n, onComplete: a, emojiSize: s = 20 } = e,
+        d = i.useRef(null),
+        _ = s * f.Vz,
+        h = (_ + s) / 2,
+        g = 'translateY('.concat(h, 'px)');
     return (
-        l.useEffect(() => {
+        i.useEffect(() => {
             let e;
             if (null != n)
                 return (
                     !(async function () {
-                        if (null != s.current) {
-                            let t = await b({ effect: n });
-                            ((e = c().loadAnimation({
-                                container: s.current,
+                        if (null != d.current) {
+                            let t = await m({ effect: n });
+                            ((e = l().loadAnimation({
+                                container: d.current,
                                 renderer: 'svg',
                                 loop: !1,
                                 autoplay: !0,
                                 animationData: t
                             })).addEventListener('complete', () => {
-                                (null == i || i(), e.destroy());
+                                (null == a || a(), e.destroy());
                             }),
                                 null != n.channelId &&
                                     null != n.messageId &&
                                     null != n.emoji &&
-                                    n.key === d.I.HOVER &&
-                                    u.Z.dispatch({
+                                    n.key === u.I.HOVER &&
+                                    c.Z.dispatch({
                                         type: 'BURST_REACTION_ANIMATION_ADD',
                                         channelId: n.channelId,
                                         messageId: n.messageId,
@@ -62,17 +64,17 @@ function j(e) {
                         null != e && e.destroy();
                     }
                 );
-        }, [i, n, o]),
+        }, [a, n, s]),
         (0, r.jsx)('div', {
-            className: f.effectsWrapper,
+            className: p.effectsWrapper,
             children: (0, r.jsx)('div', {
-                className: a()(f.effect, t),
+                className: o()(p.effect, t),
                 style: {
-                    transform: 'translateY('.concat(m, 'px)'),
-                    height: h,
-                    width: h
+                    transform: g,
+                    height: _,
+                    width: _
                 },
-                ref: s
+                ref: d
             })
         })
     );

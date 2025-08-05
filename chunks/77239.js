@@ -20,46 +20,46 @@ e.exports = function (e, t, n, p, h, m, g, E) {
         A,
         N,
         C = E.bits,
+        w = 0,
         R = 0,
         P = 0,
-        w = 0,
         D = 0,
         L = 0,
         x = 0,
-        M = 0,
         k = 0,
         j = 0,
+        M = 0,
         U = 0,
         G = null,
         B = 0,
-        V = new r.Buf16(i + 1),
+        Z = new r.Buf16(i + 1),
         F = new r.Buf16(i + 1),
-        Z = null,
+        V = null,
         H = 0;
-    for (R = 0; R <= i; R++) V[R] = 0;
-    for (P = 0; P < p; P++) V[t[n + P]]++;
-    for (L = C, D = i; D >= 1 && 0 === V[D]; D--);
+    for (w = 0; w <= i; w++) Z[w] = 0;
+    for (R = 0; R < p; R++) Z[t[n + R]]++;
+    for (L = C, D = i; D >= 1 && 0 === Z[D]; D--);
     if ((L > D && (L = D), 0 === D)) return ((h[m++] = 20971520), (h[m++] = 20971520), (E.bits = 1), 0);
-    for (w = 1; w < D && 0 === V[w]; w++);
-    for (L < w && (L = w), k = 1, R = 1; R <= i; R++) if (((k <<= 1), (k -= V[R]) < 0)) return -1;
-    if (k > 0 && (e === s || 1 !== D)) return -1;
-    for (R = 1, F[1] = 0; R < i; R++) F[R + 1] = F[R] + V[R];
-    for (P = 0; P < p; P++) 0 !== t[n + P] && (g[F[t[n + P]]++] = P);
-    if ((e === s ? ((G = Z = g), (T = 19)) : e === l ? ((G = u), (B -= 257), (Z = d), (H -= 257), (T = 256)) : ((G = f), (Z = _), (T = -1)), (U = 0), (P = 0), (R = w), (I = m), (x = L), (M = 0), (O = -1), (v = (j = 1 << L) - 1), (e === l && j > a) || (e === c && j > o))) return 1;
+    for (P = 1; P < D && 0 === Z[P]; P++);
+    for (L < P && (L = P), j = 1, w = 1; w <= i; w++) if (((j <<= 1), (j -= Z[w]) < 0)) return -1;
+    if (j > 0 && (e === s || 1 !== D)) return -1;
+    for (w = 1, F[1] = 0; w < i; w++) F[w + 1] = F[w] + Z[w];
+    for (R = 0; R < p; R++) 0 !== t[n + R] && (g[F[t[n + R]]++] = R);
+    if ((e === s ? ((G = V = g), (T = 19)) : e === l ? ((G = u), (B -= 257), (V = d), (H -= 257), (T = 256)) : ((G = f), (V = _), (T = -1)), (U = 0), (R = 0), (w = P), (I = m), (x = L), (k = 0), (O = -1), (v = (M = 1 << L) - 1), (e === l && M > a) || (e === c && M > o))) return 1;
     for (;;) {
-        ((S = R - M), g[P] < T ? ((A = 0), (N = g[P])) : g[P] > T ? ((A = Z[H + g[P]]), (N = G[B + g[P]])) : ((A = 96), (N = 0)), (b = 1 << (R - M)), (w = y = 1 << x));
-        do h[I + (U >> M) + (y -= b)] = (S << 24) | (A << 16) | N | 0;
+        ((S = w - k), g[R] < T ? ((A = 0), (N = g[R])) : g[R] > T ? ((A = V[H + g[R]]), (N = G[B + g[R]])) : ((A = 96), (N = 0)), (b = 1 << (w - k)), (P = y = 1 << x));
+        do h[I + (U >> k) + (y -= b)] = (S << 24) | (A << 16) | N | 0;
         while (0 !== y);
-        for (b = 1 << (R - 1); U & b; ) b >>= 1;
-        if ((0 !== b ? ((U &= b - 1), (U += b)) : (U = 0), P++, 0 == --V[R])) {
-            if (R === D) break;
-            R = t[n + g[P]];
+        for (b = 1 << (w - 1); U & b; ) b >>= 1;
+        if ((0 !== b ? ((U &= b - 1), (U += b)) : (U = 0), R++, 0 == --Z[w])) {
+            if (w === D) break;
+            w = t[n + g[R]];
         }
-        if (R > L && (U & v) !== O) {
-            for (0 === M && (M = L), I += w, k = 1 << (x = R - M); x + M < D && !((k -= V[x + M]) <= 0); ) (x++, (k <<= 1));
-            if (((j += 1 << x), (e === l && j > a) || (e === c && j > o))) return 1;
+        if (w > L && (U & v) !== O) {
+            for (0 === k && (k = L), I += P, j = 1 << (x = w - k); x + k < D && !((j -= Z[x + k]) <= 0); ) (x++, (j <<= 1));
+            if (((M += 1 << x), (e === l && M > a) || (e === c && M > o))) return 1;
             h[(O = U & v)] = (L << 24) | (x << 16) | (I - m) | 0;
         }
     }
-    return (0 !== U && (h[I + U] = ((R - M) << 24) | 4194304), (E.bits = L), 0);
+    return (0 !== U && (h[I + U] = ((w - k) << 24) | 4194304), (E.bits = L), 0);
 };

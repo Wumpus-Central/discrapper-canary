@@ -1,140 +1,140 @@
-n.d(t, { ForwardFailedAlertModal: () => L });
-var i = n(255367),
-    r = n(73800),
-    a = n(442837),
-    l = n(755721),
-    s = n(481060),
-    c = n(700582),
-    o = n(933557),
-    u = n(266076),
-    d = n(810123),
-    f = n(592125),
-    p = n(430824),
-    b = n(158776),
-    E = n(699516),
-    I = n(594174),
-    _ = n(51144),
-    g = n(912332),
-    y = n(388032),
-    A = n(547754);
-function S(e) {
-    let { icon: t, label: n } = e;
-    return (0, i.jsxs)('div', {
-        className: A.failedRow,
+t.d(n, { ForwardFailedAlertModal: () => S });
+var l = t(255367),
+    r = t(73800),
+    i = t(442837),
+    c = t(755721),
+    o = t(481060),
+    a = t(700582),
+    s = t(933557),
+    u = t(266076),
+    d = t(810123),
+    f = t(592125),
+    h = t(430824),
+    m = t(158776),
+    p = t(699516),
+    j = t(594174),
+    b = t(51144),
+    g = t(912332),
+    y = t(388032),
+    O = t(547754);
+function x(e) {
+    let { icon: n, label: t } = e;
+    return (0, l.jsxs)('div', {
+        className: O.failedRow,
         children: [
-            t,
-            (0, i.jsx)(s.Text, {
-                className: A.label,
+            n,
+            (0, l.jsx)(o.Text, {
+                className: O.label,
                 variant: 'text-md/medium',
                 lineClamp: 1,
-                children: n
+                children: t
             })
         ]
     });
 }
-function O(e) {
-    let { channel: t } = e,
-        n = (0, o.ZP)(t);
-    return (0, i.jsx)(S, {
-        icon: (0, i.jsx)(u.Z, {
+function _(e) {
+    let { channel: n } = e,
+        t = (0, s.ZP)(n);
+    return (0, l.jsx)(x, {
+        icon: (0, l.jsx)(u.Z, {
             'aria-hidden': !0,
-            size: s.EFr.SIZE_32,
-            channel: t,
+            size: o.EFr.SIZE_32,
+            channel: n,
             experimentLocation: 'forward-failed-retry-modal'
         }),
-        label: n
+        label: t
     });
 }
-function h(e) {
-    let { user: t } = e,
-        n = _.ZP.useName(t),
-        r = (0, a.e7)([E.Z], () => E.Z.getNickname(t.id)),
-        l = (0, a.e7)([b.Z], () => b.Z.getStatus(t.id));
-    return (0, i.jsx)(S, {
-        icon: (0, i.jsx)(c.Z, {
+function v(e) {
+    let { user: n } = e,
+        t = b.ZP.useName(n),
+        r = (0, i.e7)([p.Z], () => p.Z.getNickname(n.id)),
+        c = (0, i.e7)([m.Z], () => m.Z.getStatus(n.id));
+    return (0, l.jsx)(x, {
+        icon: (0, l.jsx)(a.Z, {
             'aria-hidden': !0,
-            size: s.EFr.SIZE_32,
-            user: t,
-            status: l
+            size: o.EFr.SIZE_32,
+            user: n,
+            status: c
         }),
-        label: null != r ? r : n
+        label: null != r ? r : t
     });
 }
-function m(e) {
-    let { channel: t } = e,
-        n = (0, a.e7)([p.Z], () => p.Z.getGuild(null == t ? void 0 : t.guild_id)),
-        r = (0, o.ZP)(t);
-    return (0, i.jsx)(S, {
-        icon: (0, i.jsx)(d.Z, {
+function w(e) {
+    let { channel: n } = e,
+        t = (0, i.e7)([h.Z], () => h.Z.getGuild(null == n ? void 0 : n.guild_id)),
+        r = (0, s.ZP)(n);
+    return (0, l.jsx)(x, {
+        icon: (0, l.jsx)(d.Z, {
             size: d.E.SMALL_32,
-            guild: n,
-            channel: t
+            guild: t,
+            channel: n
         }),
         label: r
     });
 }
-function j(e) {
-    let { destination: t } = e,
-        { channel: n, user: r } = (0, a.cj)([f.Z, I.default], () => ({
-            channel: 'channel' === t.type ? f.Z.getChannel(t.id) : null,
-            user: 'user' === t.type ? I.default.getUser(t.id) : null
+function P(e) {
+    let { destination: n } = e,
+        { channel: t, user: r } = (0, i.cj)([f.Z, j.default], () => ({
+            channel: 'channel' === n.type ? f.Z.getChannel(n.id) : null,
+            user: 'user' === n.type ? j.default.getUser(n.id) : null
         }));
-    return (null == n ? void 0 : n.isGroupDM()) ? (0, i.jsx)(O, { channel: n }) : null != r ? (0, i.jsx)(h, { user: r }) : null != n ? (0, i.jsx)(m, { channel: n }) : null;
+    return (null == t ? void 0 : t.isGroupDM()) ? (0, l.jsx)(_, { channel: t }) : null != r ? (0, l.jsx)(v, { user: r }) : null != t ? (0, l.jsx)(w, { channel: t }) : null;
 }
-function L(e) {
-    var t,
-        n,
-        { message: a, failedDestinations: c, forwardOptions: o } = e,
-        u = (function (e, t) {
+function S(e) {
+    var n,
+        t,
+        { message: i, failedDestinations: a, forwardOptions: s } = e,
+        u = (function (e, n) {
             if (null == e) return {};
-            var n,
-                i,
-                r = (function (e, t) {
+            var t,
+                l,
+                r = (function (e, n) {
                     if (null == e) return {};
-                    var n,
-                        i,
+                    var t,
+                        l,
                         r = {},
-                        a = Object.keys(e);
-                    for (i = 0; i < a.length; i++) ((n = a[i]), t.indexOf(n) >= 0 || (r[n] = e[n]));
+                        i = Object.keys(e);
+                    for (l = 0; l < i.length; l++) ((t = i[l]), n.indexOf(t) >= 0 || (r[t] = e[t]));
                     return r;
-                })(e, t);
+                })(e, n);
             if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (i = 0; i < a.length; i++) ((n = a[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]));
+                var i = Object.getOwnPropertySymbols(e);
+                for (l = 0; l < i.length; l++) ((t = i[l]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]));
             }
             return r;
         })(e, ['message', 'failedDestinations', 'forwardOptions']);
     let d = r.useCallback(() => {
         (0, g.l8)({
-            message: a,
+            message: i,
             source: 'retry-modal',
-            initialSelectedDestinations: c,
-            forwardOptions: o
+            initialSelectedDestinations: a,
+            forwardOptions: s
         });
-    }, [c, a, o]);
-    return (0, i.jsxs)(
-        s.ConfirmModal,
-        ((t = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    i = Object.keys(n);
+    }, [a, i, s]);
+    return (0, l.jsxs)(
+        o.ConfirmModal,
+        ((n = (function (e) {
+            for (var n = 1; n < arguments.length; n++) {
+                var t = null != arguments[n] ? arguments[n] : {},
+                    l = Object.keys(t);
                 ('function' == typeof Object.getOwnPropertySymbols &&
-                    (i = i.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                    (l = l.concat(
+                        Object.getOwnPropertySymbols(t).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
                         })
                     )),
-                    i.forEach(function (t) {
-                        var i;
-                        ((i = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: i,
+                    l.forEach(function (n) {
+                        var l;
+                        ((l = t[n]),
+                            n in e
+                                ? Object.defineProperty(e, n, {
+                                      value: l,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = i));
+                                : (e[n] = l));
                     }));
             }
             return e;
@@ -143,36 +143,36 @@ function L(e) {
                 header: y.intl.string(y.t['/OPIaG']),
                 confirmText: y.intl.string(y.t['5911LS']),
                 cancelText: y.intl.string(y.t['ETE/oK']),
-                confirmButtonColor: l.zx.Colors.BRAND,
+                confirmButtonColor: c.zx.Colors.BRAND,
                 onConfirm: d
             },
             u
         )),
-        (n = n =
+        (t = t =
             {
                 children: [
-                    (0, i.jsx)(s.Text, {
+                    (0, l.jsx)(o.Text, {
                         variant: 'text-md/medium',
-                        children: y.intl.format(y.t.cn9vFR, { count: c.length })
+                        children: y.intl.format(y.t.cn9vFR, { count: a.length })
                     }),
-                    (0, i.jsx)('div', {
-                        className: A.failedDestinations,
-                        children: c.map((e, t) => (0, i.jsx)(j, { destination: e }, t))
+                    (0, l.jsx)('div', {
+                        className: O.failedDestinations,
+                        children: a.map((e, n) => (0, l.jsx)(P, { destination: e }, n))
                     })
                 ]
             }),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-            : (function (e, t) {
-                  var n = Object.keys(e);
+            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(t))
+            : (function (e, n) {
+                  var t = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
+                      var l = Object.getOwnPropertySymbols(e);
+                      t.push.apply(t, l);
                   }
-                  return n;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                  return t;
+              })(Object(t)).forEach(function (e) {
+                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(t, e));
               }),
-        t)
+        n)
     );
 }

@@ -1,5 +1,5 @@
 let r;
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => M });
 var i,
     a = n(569048),
     o = n.n(a),
@@ -55,10 +55,10 @@ function C(e) {
     var t;
     ((b[e.invite.code] = _.Z.createFromServer(e.invite)), (r = null != (t = o()(l()(u()(Object.values(b), 'createdAt')))) ? t : null), (v = !1));
 }
-function R() {
+function w() {
     v = !1;
 }
-function P(e) {
+function R(e) {
     var t;
     (null != e.invites &&
         e.invites.forEach((e) => {
@@ -67,7 +67,7 @@ function P(e) {
         (r = null != (t = o()(l()(u()(Object.values(b), 'createdAt')))) ? t : null),
         (O = !1));
 }
-function w() {
+function P() {
     O = !0;
 }
 function D() {
@@ -85,10 +85,10 @@ function x(e) {
         (r = null != (t = o()(l()(u()(Object.values(b), 'createdAt')))) ? t : null),
         (y = !1));
 }
-function M(e) {
+function k(e) {
     delete m[e.channelId];
 }
-class k extends (i = d.ZP.Store) {
+class j extends (i = d.ZP.Store) {
     getInvite(e) {
         var t, n;
         let { targetType: r, targetUserId: i, targetApplicationId: a } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -104,19 +104,19 @@ class k extends (i = d.ZP.Store) {
         return null != r && !O && !v;
     }
 }
-h(k, 'displayName', 'InstantInviteStore');
-let j = new k(f.Z, {
+h(j, 'displayName', 'InstantInviteStore');
+let M = new j(f.Z, {
     CONNECTION_OPEN: I,
     CHANNEL_DELETE: T,
     FRIEND_INVITE_CREATE_SUCCESS: C,
-    FRIEND_INVITE_CREATE_FAILURE: R,
-    FRIEND_INVITE_REVOKE_SUCCESS: P,
+    FRIEND_INVITE_CREATE_FAILURE: w,
+    FRIEND_INVITE_REVOKE_SUCCESS: R,
     INSTANT_INVITE_CREATE_SUCCESS: S,
     INSTANT_INVITE_CREATE_FAILURE: A,
     INSTANT_INVITE_REVOKE_SUCCESS: N,
-    FRIEND_INVITE_REVOKE_REQUEST: w,
+    FRIEND_INVITE_REVOKE_REQUEST: P,
     FRIEND_INVITE_CREATE_REQUEST: D,
     FRIEND_INVITES_FETCH_REQUEST: L,
     FRIEND_INVITES_FETCH_RESPONSE: x,
-    INSTANT_INVITE_CLEAR: M
+    INSTANT_INVITE_CLEAR: k
 });

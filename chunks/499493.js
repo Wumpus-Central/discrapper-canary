@@ -1,62 +1,62 @@
-r.d(t, { Z: () => v });
+r.d(t, { Z: () => h });
 var n = r(255367),
-    i = r(73800),
-    a = r(120356),
-    l = r.n(a),
-    s = r(442837),
-    o = r(481060),
+    a = r(73800),
+    i = r(120356),
+    l = r.n(i),
+    o = r(442837),
+    s = r(481060),
     c = r(592125),
-    u = r(944486),
-    d = r(594174),
+    d = r(944486),
+    u = r(594174),
     m = r(5192),
     g = r(178762),
-    f = r(91140),
-    p = r(297781),
-    O = r(388032),
-    E = r(152790),
-    x = r(263930);
-let v = (e) => {
-    let { entry: t, onClose: r, onReaction: a, onRequestOpen: v, disableActivityProfileLinks: h, customCTA: j, popoutClassname: b, popoutPosition: I = 'right' } = e,
-        y = i.useRef(null),
-        _ = (0, s.e7)([u.Z, c.Z], () => c.Z.getChannel(u.Z.getChannelId())),
-        S = (0, s.e7)([d.default], () => d.default.getUser(t.author_id)),
-        { nick: P, avatar: N } = i.useMemo(() => {
-            let e = null == S ? void 0 : S.getAvatarURL(null == _ ? void 0 : _.guild_id, 48, !1);
+    p = r(91140),
+    f = r(297781),
+    x = r(388032),
+    j = r(152790),
+    v = r(263930);
+let h = (e) => {
+    let { entry: t, onClose: r, onReaction: i, onRequestOpen: h, disableActivityProfileLinks: b, customCTA: O, popoutClassname: y, popoutPosition: _ = 'right' } = e,
+        w = a.useRef(null),
+        I = (0, o.e7)([d.Z, c.Z], () => c.Z.getChannel(d.Z.getChannelId())),
+        P = (0, o.e7)([u.default], () => u.default.getUser(t.author_id)),
+        { nick: E, avatar: S } = a.useMemo(() => {
+            let e = null == P ? void 0 : P.getAvatarURL(null == I ? void 0 : I.guild_id, 48, !1);
             return {
-                nick: m.ZP.getName(null == _ ? void 0 : _.guild_id, null == _ ? void 0 : _.id, S),
+                nick: m.ZP.getName(null == I ? void 0 : I.guild_id, null == I ? void 0 : I.id, P),
                 avatar: e
             };
-        }, [S, _]);
-    return null == S
+        }, [P, I]);
+    return null == P
         ? null
-        : (0, n.jsx)(o.yRy, {
-              targetElementRef: y,
-              position: I,
+        : (0, n.jsx)(s.yRy, {
+              targetElementRef: w,
+              position: _,
               renderPopout: (e) => {
-                  let { closePopout: i, updatePosition: l } = e;
+                  let { closePopout: a, updatePosition: l } = e;
                   return (0, n.jsx)('div', {
-                      className: b,
+                      className: y,
                       children: (0, n.jsx)(g.J, {
                           entry: t,
-                          closePopout: i,
+                          closePopout: a,
                           updatePopoutPosition: l,
                           onReaction: () => {
-                              (null == a || a(), r(), i());
+                              (null == i || i(), r(), a());
                           },
-                          onUserPopoutClosed: () => i(),
+                          onUserPopoutClosed: () => a(),
                           disableGameProfileLinks: !0,
-                          disableActivityProfileLinks: h
+                          disableActivityProfileLinks: b
                       })
                   });
               },
               positionKey: "'content-entry-".concat(t.id),
               onRequestOpen: () => {
-                  null == v || v();
+                  null == h || h();
               },
               children: (e) => {
-                  var r, i;
+                  var r, a;
                   return (0, n.jsx)(
-                      o.P3F,
+                      s.P3F,
                       ((r = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var r = null != arguments[t] ? arguments[t] : {},
@@ -81,11 +81,11 @@ let v = (e) => {
                                   }));
                           }
                           return e;
-                      })({ innerRef: y }, e)),
-                      (i = i =
+                      })({ innerRef: w }, e)),
+                      (a = a =
                           {
-                              className: E.profileEntryCard,
-                              children: (0, n.jsx)(o.tEY, {
+                              className: j.profileEntryCard,
+                              children: (0, n.jsx)(s.tEY, {
                                   offset: {
                                       top: 4,
                                       bottom: 4,
@@ -95,40 +95,40 @@ let v = (e) => {
                                   children: (0, n.jsxs)(n.Fragment, {
                                       children: [
                                           (0, n.jsx)('img', {
-                                              className: E.avatar,
-                                              src: N,
-                                              alt: O.intl.formatToPlainString(O.t.IzVXxc, { userName: P })
+                                              className: j.avatar,
+                                              src: S,
+                                              alt: x.intl.formatToPlainString(x.t.IzVXxc, { userName: E })
                                           }),
                                           (0, n.jsx)('div', {
-                                              className: E.playerInfo,
+                                              className: j.playerInfo,
                                               children: (0, n.jsxs)('div', {
-                                                  className: l()(x.column, x.gapXs),
+                                                  className: l()(v.column, v.gapXs),
                                                   children: [
-                                                      (0, n.jsx)(o.Text, {
+                                                      (0, n.jsx)(s.Text, {
                                                           variant: 'text-md/medium',
                                                           color: 'text-primary',
                                                           lineClamp: 1,
-                                                          children: P
+                                                          children: E
                                                       }),
-                                                      (0, n.jsx)(p.Gk, {
-                                                          location: p.Gt.APP_LAUNCHER,
-                                                          children: f.W.map((e, r) => (0, n.jsx)(e, { entry: t }, r))
+                                                      (0, n.jsx)(f.Gk, {
+                                                          location: f.Gt.APP_LAUNCHER,
+                                                          children: p.W.map((e, r) => (0, n.jsx)(e, { entry: t }, r))
                                                       })
                                                   ]
                                               })
                                           }),
-                                          null != j
-                                              ? j
+                                          null != O
+                                              ? O
                                               : (0, n.jsx)('div', {
-                                                    className: E.reactions,
-                                                    children: (0, n.jsx)(o.n$P, { size: 'sm' })
+                                                    className: j.reactions,
+                                                    children: (0, n.jsx)(s.n$P, { size: 'sm' })
                                                 })
                                       ]
                                   })
                               })
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
+                          ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
                           : (function (e, t) {
                                 var r = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
@@ -136,8 +136,8 @@ let v = (e) => {
                                     r.push.apply(r, n);
                                 }
                                 return r;
-                            })(Object(i)).forEach(function (e) {
-                                Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
+                            })(Object(a)).forEach(function (e) {
+                                Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
                             }),
                       r)
                   );

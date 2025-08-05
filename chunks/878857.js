@@ -1,5 +1,5 @@
 n.d(t, {
-    Q: () => l,
+    Q: () => a,
     Z: () => i
 });
 let r = (0, n(818083).B)({
@@ -21,6 +21,6 @@ let r = (0, n(818083).B)({
         ]
     }),
     i = r;
-function l() {
+function a() {
     return r.getCurrentConfig({ location: '0a5674_1' }, { autoTrackExposure: !1 }).systemDMRedesignEnabled;
 }

@@ -1,6 +1,6 @@
 var r = {
     './neo-castel/neocastel-400-normal.woff2': ['759857'],
-    './noto-sans/notosans-600-semibold.woff2': ['381176'],
+    './noto-sans/notosans-600-semibold.woff2': ['81972'],
     './gg-mono/ggmono-600-semibold.woff2': ['750499', '44999'],
     './bangers/bangers-400-normal.woff2': ['707341'],
     './gg-mono/ggmono-700-bold.woff2': ['757883'],

@@ -57,11 +57,11 @@ function N(e) {
         O = (0, s.e7)([g.Z], () => g.Z.getGuild(t.guildId)),
         v = !E && null != O,
         [N, C] = i.useState(),
-        R = (0, b.V2)({ location: 'SoundmojiGuildInfo' }),
-        P = E || v || null != N || !R,
-        [w, D] = i.useState(!P);
+        w = (0, b.V2)({ location: 'SoundmojiGuildInfo' }),
+        R = E || v || null != N || !w,
+        [P, D] = i.useState(!R);
     i.useEffect(() => {
-        P ||
+        R ||
             (D(!0),
             (0, p.xU)(t.soundId, t.guildId)
                 .then((e) => {
@@ -70,12 +70,12 @@ function N(e) {
                 .finally(() => {
                     (D(!1), u());
                 }));
-    }, [u, P, t.guildId, t.soundId]);
+    }, [u, R, t.guildId, t.soundId]);
     let { buttonType: L, description: x } = (0, y.Z)(t, n, v, N),
-        M = L === y.y.JOIN_GUILD,
-        k = !E && w,
-        j = i.useMemo(() => (v ? d.JO.createFromGuildRecord(O) : null != N ? d.JO.createFromDiscoverableGuild(N) : void 0), [O, v, N]);
-    return k
+        k = L === y.y.JOIN_GUILD,
+        j = !E && P,
+        M = i.useMemo(() => (v ? d.JO.createFromGuildRecord(O) : null != N ? d.JO.createFromDiscoverableGuild(N) : void 0), [O, v, N]);
+    return j
         ? (0, r.jsx)(_.SE, {})
         : (0, r.jsxs)('div', {
               className: S.infoContainer,
@@ -98,7 +98,7 @@ function N(e) {
                                   })
                               ]
                           }),
-                          null != j &&
+                          null != M &&
                               (0, r.jsxs)('div', {
                                   className: S.infoExpandedGuildContainer,
                                   children: [
@@ -111,9 +111,9 @@ function N(e) {
                                       (0, r.jsx)('div', {
                                           className: S.infoExpandedGuildInfo,
                                           children: (0, r.jsx)(f.Oe, {
-                                              expressionSourceGuild: j,
+                                              expressionSourceGuild: M,
                                               hasJoinedExpressionSourceGuild: v,
-                                              isDisplayingJoinGuildButtonInPopout: M
+                                              isDisplayingJoinGuildButtonInPopout: k
                                           })
                                       }),
                                       (0, r.jsx)(A, {

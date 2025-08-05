@@ -1,9 +1,9 @@
 (n.d(t, {
-    As: () => k,
-    By: () => j,
+    As: () => j,
+    By: () => M,
     Lu: () => U,
     e9: () => Y,
-    hG: () => V,
+    hG: () => Z,
     nd: () => H,
     yT: () => W
 }),
@@ -48,7 +48,7 @@ function C(e, t, n) {
         e
     );
 }
-function R(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -64,7 +64,7 @@ function R(e) {
     }
     return e;
 }
-function P(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -76,12 +76,12 @@ function P(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -132,7 +132,7 @@ function x(e, t, n, r) {
     }
     throw Error('Unexpected invoice plan: '.concat(e.subscriptionPlanId));
 }
-function M(e) {
+function k(e) {
     var t;
     let { invoiceItem: n, overrideAmount: i, showGuildSubscriptionAdjustmentTooltip: a, currency: o, className: s, isPrepaidPaymentSource: d, referralTrialOfferId: f, inTrialPeriod: _ } = e,
         h = (0, c.e7)([p.Z], () => p.Z.get(n.subscriptionPlanId)),
@@ -161,8 +161,8 @@ function M(e) {
                     children: (e) =>
                         (0, r.jsx)(
                             u.idN,
-                            w(
-                                R(
+                            P(
+                                w(
                                     {
                                         size: 'md',
                                         color: 'currentColor'
@@ -189,7 +189,7 @@ function M(e) {
         inTrialPeriod: _
     });
 }
-function k(e) {
+function j(e) {
     let { label: t, tooltipText: n, tooltipAriaLabel: i } = e;
     return (0, r.jsxs)('div', {
         className: N.invoiceItemLabelWithIcon,
@@ -203,8 +203,8 @@ function k(e) {
                 children: (e) =>
                     (0, r.jsx)(
                         u.idN,
-                        w(
-                            R(
+                        P(
+                            w(
                                 {
                                     size: 'md',
                                     color: 'currentColor'
@@ -218,7 +218,7 @@ function k(e) {
         ]
     });
 }
-function j(e) {
+function M(e) {
     let { invoice: t, isPrepaidPaymentSource: n } = e,
         i = (0, y.j)(t.invoiceItems),
         a = i.find((e) => !(0, g.Z8)(e.subscriptionPlanId) && e.amount >= 0),
@@ -230,7 +230,7 @@ function j(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != a
-                ? (0, r.jsx)(M, {
+                ? (0, r.jsx)(k, {
                       invoiceItem: a,
                       currency: t.currency,
                       isPrepaidPaymentSource: n
@@ -268,7 +268,7 @@ function U(e) {
         m = o.filter((e) => e.subscriptionPlanId === T.Xh.PREMIUM_MONTH_GUILD || e.subscriptionPlanId === T.Xh.PREMIUM_YEAR_GUILD).reduce((e, t) => e + t.amount, 0);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(M, {
+            (0, r.jsx)(k, {
                 invoiceItem: s,
                 currency: t.currency,
                 overrideAmount: p,
@@ -278,7 +278,7 @@ function U(e) {
             0 === h || f
                 ? null
                 : (0, r.jsx)(v.B1, {
-                      label: (0, r.jsx)(k, {
+                      label: (0, r.jsx)(j, {
                           label: A.intl.formatToPlainString(A.t.ZSVgeX, { planName: (0, g.PV)(n.id) ? (0, g.aq)(n.id) : n.name }),
                           tooltipText: A.intl.string(A.t.JmwQJC)
                       }),
@@ -286,7 +286,7 @@ function U(e) {
                   }),
             0 !== m
                 ? (0, r.jsx)(v.B1, {
-                      label: (0, r.jsx)(k, {
+                      label: (0, r.jsx)(j, {
                           label: A.intl.string(A.t['+as5ZW']),
                           tooltipText: A.intl.format(A.t.UDop9f, {}),
                           tooltipAriaLabel: A.intl.string(A.t.P68ePD)
@@ -320,7 +320,7 @@ function B(e) {
         return t !== T.Xh.NONE_MONTH && t !== T.Xh.NONE_YEAR;
     });
 }
-function V(e) {
+function Z(e) {
     let { proratedInvoice: t, renewalInvoice: n, overrideRenewalDate: i } = e,
         { intervalType: a, intervalCount: o } = (0, g.dn)(t),
         { intervalType: s, intervalCount: l } = (0, g.dn)(n);
@@ -346,7 +346,7 @@ function F(e) {
                           (0, r.jsx)(v.Z9, { children: A.intl.string(A.t.tuqjWV) }),
                           B(G((0, y.j)(n.invoiceItems))).map((e) =>
                               (0, r.jsx)(
-                                  M,
+                                  k,
                                   {
                                       invoiceItem: e,
                                       currency: n.currency,
@@ -363,7 +363,7 @@ function F(e) {
             B(G((0, y.j)(i.invoiceItems))).map((e) => {
                 let n = null != s && !s.some((t) => t.subscriptionPlanId === e.subscriptionPlanId && t.quantity === e.quantity);
                 return (0, r.jsx)(
-                    M,
+                    k,
                     {
                         invoiceItem: e,
                         currency: i.currency,
@@ -383,7 +383,7 @@ function F(e) {
         ]
     });
 }
-function Z(e) {
+function V(e) {
     var t;
     let { proratedInvoice: n, renewalInvoice: i, isTrial: a, isUpdate: o, overrideRenewalDate: s, trialFooterMessageOverride: l } = e,
         c = null == (t = (0, O.N)()) ? void 0 : t.subscription_trial,
@@ -417,7 +417,7 @@ function Z(e) {
 function H(e) {
     let { premiumSubscription: t, proratedInvoice: n, renewalInvoice: a, overrideRenewalDate: o, isUpdate: s = !1, isTrial: l = !1, priceOptions: c, isPrepaidPaymentSource: d = !1, trialFooterMessageOverride: p, hideSubscriptionDetails: m = !1 } = e,
         { analyticsLocations: g } = (0, _.ZP)(),
-        E = R(
+        E = w(
             {
                 subscriptionId: null == t ? void 0 : t.id,
                 renewal: !0,
@@ -434,7 +434,7 @@ function H(e) {
             d
                 ? null
                 : (0, r.jsx)(v.P7, {
-                      children: (0, r.jsx)(Z, {
+                      children: (0, r.jsx)(V, {
                           proratedInvoice: n,
                           renewalInvoice: a,
                           isTrial: l,

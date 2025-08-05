@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => P });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -28,14 +28,14 @@ function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = R(e, t);
+        i = w(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function R(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -44,7 +44,7 @@ function R(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-function P(e) {
+function R(e) {
     switch (e) {
         case I.cd.ANIMATED_AVATAR_MODAL_UPSELL:
         case I.cd.ANIMATED_BANNER_MODAL_UPSELL:
@@ -58,11 +58,11 @@ function P(e) {
             return !1;
     }
 }
-function w(e) {
+function P(e) {
     var t,
         n,
         a,
-        { title: R, type: w, guildBoostProps: D, analyticsSource: L, analyticsLocation: x, body: M, context: k, glowUp: j, modalClassName: U, modalContentClassName: G, artContainerClassName: B, artClassName: V, headerClassName: F, bodyClassName: Z, transitionState: H, onClose: Y, onSubscribeClick: W, onSubscribeFinish: K, onSecondaryClick: z, secondaryCTA: q, secondaryCTAClassName: X, subscribeButtonText: Q, showNewBadge: J = !1, showBetaBadge: $ = !1, enableArtBoxShadow: ee = !0, subscriptionTier: et = I.Si.TIER_2, isLoading: en = !1, hideBackButton: er, backButtonText: ei, showEnhancedUpsell: ea, useSubscribeButtonGradient: eo, subscribeButtonClassname: es, hidePremiumOfferUpsell: el, children: ec, LeadingComponent: eu, backgroundElements: ed, smallText: ef = !1, footerClassName: e_ } = e,
+        { title: w, type: P, guildBoostProps: D, analyticsSource: L, analyticsLocation: x, body: k, context: j, glowUp: M, modalClassName: U, modalContentClassName: G, artContainerClassName: B, artClassName: Z, headerClassName: F, bodyClassName: V, transitionState: H, onClose: Y, onSubscribeClick: W, onSubscribeFinish: K, onSecondaryClick: z, secondaryCTA: q, secondaryCTAClassName: $, subscribeButtonText: X, showNewBadge: Q = !1, showBetaBadge: J = !1, enableArtBoxShadow: ee = !0, subscriptionTier: et = I.Si.TIER_2, isLoading: en = !1, hideBackButton: er, backButtonText: ei, showEnhancedUpsell: ea, useSubscribeButtonGradient: eo, subscribeButtonClassname: es, hidePremiumOfferUpsell: el, children: ec, LeadingComponent: eu, backgroundElements: ed, smallText: ef = !1, footerClassName: e_ } = e,
         ep = C(e, ['title', 'type', 'guildBoostProps', 'analyticsSource', 'analyticsLocation', 'body', 'context', 'glowUp', 'modalClassName', 'modalContentClassName', 'artContainerClassName', 'artClassName', 'headerClassName', 'bodyClassName', 'transitionState', 'onClose', 'onSubscribeClick', 'onSubscribeFinish', 'onSecondaryClick', 'secondaryCTA', 'secondaryCTAClassName', 'subscribeButtonText', 'showNewBadge', 'showBetaBadge', 'enableArtBoxShadow', 'subscriptionTier', 'isLoading', 'hideBackButton', 'backButtonText', 'showEnhancedUpsell', 'useSubscribeButtonGradient', 'subscribeButtonClassname', 'hidePremiumOfferUpsell', 'children', 'LeadingComponent', 'backgroundElements', 'smallText', 'footerClassName']);
     let eh = null != D,
         em = (0, b.N)(),
@@ -74,7 +74,7 @@ function w(e) {
             analyticsLocations: eb,
             analyticsSource: L,
             guildBoostProps: D,
-            type: w
+            type: P
         },
         eO = i.useRef(ey);
     (i.useEffect(() => {
@@ -100,7 +100,7 @@ function w(e) {
                   });
         }, [eh, et, en]));
     let ev = (0, s.e7)([g.Z], () => g.Z.affinities),
-        eI = ev.length > 1 && P(w),
+        eI = ev.length > 1 && R(P),
         eT = (0, s.e7)([g.Z], () => g.Z.hasFetched);
     i.useEffect(() => {
         eT || u.MH();
@@ -132,7 +132,7 @@ function w(e) {
                     (null == W || W(), Y());
                 },
                 onSubscribeModalClose: K,
-                textOptions: { textOverride: null != Q ? Q : e }
+                textOptions: { textOverride: null != X ? X : e }
             });
         },
         eA = ee ? o()(A.artContainer, A.artContainerBoxShadow, B) : o()(A.artContainer, B),
@@ -140,14 +140,14 @@ function w(e) {
     return (
         null != ep.artURL
             ? (eN = (0, r.jsx)('img', {
-                  className: o()(V, A.art),
+                  className: o()(Z, A.art),
                   alt: '',
                   src: ep.artURL
               }))
             : null != ep.artElement && (eN = ep.artElement),
         (0, r.jsxs)(c.Y0X, {
             className: o()(A.root, !eE && U),
-            'aria-label': R,
+            'aria-label': w,
             transitionState: H,
             parentComponent: 'PremiumUpsellModal',
             children: [
@@ -156,7 +156,7 @@ function w(e) {
                         className: eA,
                         children: [
                             eN,
-                            J
+                            Q
                                 ? (0, r.jsx)('img', {
                                       className: A.sparkleBadge,
                                       alt: '',
@@ -173,14 +173,14 @@ function w(e) {
                         : eE
                           ? (0, r.jsx)(O.ZP, {
                                 onClose: Y,
-                                type: w,
+                                type: P,
                                 subscriptionTier: null != (a = null == em || null == (n = em.subscription_trial) ? void 0 : n.sku_id) ? a : I.Si.TIER_2,
-                                headingText: R,
-                                context: k,
+                                headingText: w,
+                                context: j,
                                 analyticsLocationObject: x,
                                 discountOffer: eg,
                                 trialOffer: em,
-                                children: j
+                                children: M
                             })
                           : (0, r.jsxs)('div', {
                                 className: A.contentContainer,
@@ -192,14 +192,14 @@ function w(e) {
                                             (0, r.jsxs)(c.X6q, {
                                                 className: o()(A.header, { [A.enhancedHeader]: ea }, F),
                                                 variant: 'heading-xl/bold',
-                                                children: [R, $ ? (0, r.jsx)(_.Z, { className: A.betaTag }) : null]
+                                                children: [w, J ? (0, r.jsx)(_.Z, { className: A.betaTag }) : null]
                                             }),
                                             eI ? (0, r.jsx)(v.Z, { affinities: ev }) : void 0,
                                             ec,
                                             (0, r.jsx)(c.Text, {
                                                 variant: ef ? 'text-sm/normal' : 'text-md/normal',
-                                                className: o()(Z, A.subHeader),
-                                                children: M
+                                                className: o()(V, A.subHeader),
+                                                children: k
                                             })
                                         ]
                                     })
@@ -214,7 +214,7 @@ function w(e) {
                             children: [
                                 null != q
                                     ? (0, r.jsx)(l.zx, {
-                                          className: o()(A.secondaryAction, X, { [A.enhancedSecondaryAction]: ea }),
+                                          className: o()(A.secondaryAction, $, { [A.enhancedSecondaryAction]: ea }),
                                           onClick: z,
                                           size: l.zx.Sizes.SMALL,
                                           color: ea ? l.zx.Colors.CUSTOM : l.zx.Colors.PRIMARY,

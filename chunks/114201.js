@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => w });
 var r = n(255367),
     i = n(73800),
     a = n(99815),
@@ -110,17 +110,17 @@ function C(e, t) {
         subtext: i
     };
 }
-function R(e) {
+function w(e) {
     let { guildId: t, leaderboardId: p } = e,
         I = (0, o.e7)([c.default], () => c.default.getId()),
         S = (0, o.e7)([u.Z], () => u.Z.getAccount(null, y.ABu.RIOT_GAMES)),
         N = (0, o.e7)([u.Z], () => u.Z.getAccount(null, y.ABu.LEAGUE_OF_LEGENDS)),
-        R = (0, g.Z)({
+        w = (0, g.Z)({
             guildId: t,
             leaderboardId: p
         }),
-        { leaderboardsDisabled: P } = (0, m.O)(t, p),
-        w =
+        { leaderboardsDisabled: R } = (0, m.O)(t, p),
+        P =
             null != N && null != S
                 ? () => {
                       (_.default.track(y.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
@@ -133,15 +133,15 @@ function R(e) {
                           }));
                   }
                 : y.dG4,
-        D = null == S || P ? O.intl.string(O.t['0yRXHx']) : O.intl.string(O.t['KWpU6+']),
+        D = null == S || R ? O.intl.string(O.t['0yRXHx']) : O.intl.string(O.t['KWpU6+']),
         { lastUpdateRequested: L, statisticLastUpdatedDate: x } = (0, E.Z)({
             userId: I,
             guildId: t,
             leaderboardId: p,
             statisticId: a.E.LOL_TOTAL_KILLS
         }),
-        { disabled: M, subtext: k } = C(L, x),
-        j = (0, o.e7)(
+        { disabled: k, subtext: j } = C(L, x),
+        M = (0, o.e7)(
             [f.Z, d.Z],
             () => {
                 let e = d.Z.getGuild(t);
@@ -150,7 +150,7 @@ function R(e) {
             [t]
         ),
         U = i.useRef(null);
-    return null == R
+    return null == w
         ? null
         : (0, r.jsx)(s.yRy, {
               targetElementRef: U,
@@ -168,14 +168,14 @@ function R(e) {
                       onSelect: void 0,
                       children: (0, r.jsxs)(s.kSQ, {
                           children: [
-                              R.leaderboard_id === b.z &&
+                              w.leaderboard_id === b.z &&
                                   null != S &&
                                   (0, r.jsx)(s.sNh, {
                                       id: 'refresh-my-data',
                                       label: O.intl.string(O.t.iopWUV),
-                                      action: w,
-                                      disabled: M,
-                                      subtext: k
+                                      action: P,
+                                      disabled: k,
+                                      subtext: j
                                   }),
                               (0, r.jsx)(s.sNh, {
                                   id: 'leaderboard-modal',
@@ -188,14 +188,14 @@ function R(e) {
                                                   e,
                                                   A(T({}, n), {
                                                       guildId: t,
-                                                      leaderboard: R
+                                                      leaderboard: w
                                                   })
                                               );
                                       }),
                                           null == i || i());
                                   }
                               }),
-                              j
+                              M
                                   ? (0, r.jsx)(s.sNh, {
                                         id: 'leaderboard-settings-modal',
                                         label: O.intl.string(O.t['QV4/6u']),

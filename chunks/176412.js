@@ -1,142 +1,154 @@
 n.d(t, {
-    Bm: () => M,
-    P7: () => D,
-    X: () => T,
-    ae: () => j
+    Bm: () => P,
+    P7: () => R,
+    X: () => D,
+    ae: () => w
 });
-var i,
-    r,
-    l = n(73800),
-    o = n(392711),
-    u = n.n(o),
-    a = n(442837),
-    c = n(25209),
-    d = n(755721),
-    s = n(2052),
-    p = n(542094),
-    f = n(513202),
-    v = n(367907),
-    y = n(213459),
-    b = n(895924),
-    m = n(691424),
-    E = n(428595),
-    O = n(364458),
-    Z = n(585483),
-    h = n(499254),
-    g = n(541099),
-    P = n(827498),
-    _ = n(346683),
-    w = n(981631),
-    A = n(388032);
-let I =
-        ((i = (function (e) {
+var r = n(73800),
+    i = n(392711),
+    a = n.n(i),
+    o = n(442837),
+    s = n(25209),
+    l = n(755721),
+    c = n(2052),
+    u = n(542094),
+    d = n(513202),
+    f = n(367907),
+    _ = n(213459),
+    p = n(895924),
+    h = n(691424),
+    m = n(428595),
+    g = n(364458),
+    E = n(585483),
+    b = n(499254),
+    y = n(541099),
+    O = n(827498),
+    v = n(346683),
+    I = n(981631),
+    T = n(388032);
+function S(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function A(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+let N = (function (e, t) {
+        return (
+            (t = null != t ? t : {}),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                : A(Object(t)).forEach(function (n) {
+                      Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                  }),
+            e
+        );
+    })(
+        (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
-                    i = Object.keys(n);
+                    r = Object.keys(n);
                 ('function' == typeof Object.getOwnPropertySymbols &&
-                    (i = i.concat(
+                    (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
                     )),
-                    i.forEach(function (t) {
-                        var i;
-                        ((i = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: i,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0
-                                  })
-                                : (e[t] = i));
+                    r.forEach(function (t) {
+                        S(e, t, n[t]);
                     }));
             }
             return e;
-        })({}, E.Z.RULES.commandMention)),
-        (r = r = { parse: (e, t, n) => ({ content: E.Z.RULES.commandMention.parse(e, t, n).content }) }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(r))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
-                  }
-                  return n;
-              })(Object(r)).forEach(function (e) {
-                  Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(r, e));
-              }),
-        i),
-    S = u().pick(
-        (0, O.Z)([
-            E.Z.RULES,
-            { commandMention: I },
-            (0, m.Z)({
+        })({}, m.Z.RULES.commandMention),
+        { parse: (e, t, n) => ({ content: m.Z.RULES.commandMention.parse(e, t, n).content }) }
+    ),
+    C = a().pick(
+        (0, g.Z)([
+            m.Z.RULES,
+            { commandMention: N },
+            (0, h.Z)({
                 enableBuildOverrides: !1,
                 enableEmojiClick: !1
             })
         ]),
         ['commandMention', 'customEmoji', 'em', 'emoji', 'emoticon', 'highlight', 'inlineCode', 'looseEm', 's', 'strong', 'text', 'timestamp', 'u', 'spoiler']
     ),
-    j = c.w4(S);
-function D(e) {
-    let { context: t, application: n, location: i, sectionName: r, commandName: o, autoDismissOnClick: u = !0, launchingComponentId: c, submitting: m = !1, fetchesApplication: E = !0, onConfirmActivityLaunchChecksAlertOpen: O } = e,
-        Z = (0, s.O)(),
-        I = (0, p.Qv)({
+    w = s.w4(C);
+function R(e) {
+    let { context: t, application: n, location: i, sectionName: a, commandName: s, autoDismissOnClick: h = !0, launchingComponentId: m, submitting: g = !1, fetchesApplication: E = !0, onConfirmActivityLaunchChecksAlertOpen: S } = e,
+        A = (0, c.O)(),
+        N = (0, u.Qv)({
             context: t,
             applicationId: n.id,
             fetchesApplication: E
         }),
-        S = (0, _.Q)(I),
-        j = (0, a.e7)([g.Z], () => g.Z.entrypoint()),
-        D = l.useMemo(() => {
-            var e, i, r;
-            if ('channel' !== t.type) return null != (r = null == (e = n.bot) ? void 0 : e.id) ? r : null == (i = (0, y.If)(t, n.id).descriptor) ? void 0 : i.botId;
+        C = (0, v.Q)(N),
+        w = (0, o.e7)([y.Z], () => y.Z.entrypoint()),
+        R = r.useMemo(() => {
+            var e, r, i;
+            if ('channel' !== t.type) return null != (i = null == (e = n.bot) ? void 0 : e.id) ? i : null == (r = (0, _.If)(t, n.id).descriptor) ? void 0 : r.botId;
         }, [t, n.id, n.bot]),
-        M = (0, p.w1)({
+        P = (0, u.w1)({
             application: n,
-            botUserIdForAppDM: D,
-            embeddedActivitiesManager: f.Z,
+            botUserIdForAppDM: R,
+            embeddedActivitiesManager: d.Z,
             context: t,
-            locationObject: Z.location,
+            locationObject: A.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
-                (u && h.yT(P.ti.ACTIVITY),
-                    (0, v.yw)(w.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+                (h && b.yT(O.ti.ACTIVITY),
+                    (0, f.yw)(I.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: t,
-                        section_name: r,
-                        action: S,
-                        source: j
+                        section_name: a,
+                        action: C,
+                        source: w
                     }));
             },
-            launchingComponentId: c,
-            commandOrigin: b.bB.APPLICATION_LAUNCHER,
-            sectionName: r,
-            source: j,
+            launchingComponentId: m,
+            commandOrigin: p.bB.APPLICATION_LAUNCHER,
+            sectionName: a,
+            source: w,
             fetchesApplication: E,
-            onConfirmActivityLaunchChecksAlertOpen: O
+            onConfirmActivityLaunchChecksAlertOpen: S
         }),
-        T = d.Tt.BRAND,
-        L = null != o ? o : A.intl.string(A.t.zKX8Nj);
+        D = l.Tt.BRAND,
+        L = null != s ? s : T.intl.string(T.t.zKX8Nj);
     return (
-        S === p.JS.JOIN ? ((T = d.Tt.GREEN), (L = A.intl.string(A.t.d9PsMj))) : S !== p.JS.LEAVE || m || ((T = d.Tt.RED), (L = A.intl.string(A.t['Hi1/aW']))),
+        C === u.JS.JOIN ? ((D = l.Tt.GREEN), (L = T.intl.string(T.t.d9PsMj))) : C !== u.JS.LEAVE || g || ((D = l.Tt.RED), (L = T.intl.string(T.t['Hi1/aW']))),
         {
-            onActivityItemSelected: M,
-            activityAction: S,
-            buttonColor: T,
+            onActivityItemSelected: P,
+            activityAction: C,
+            buttonColor: D,
             buttonText: L
         }
     );
 }
-function M(e, t) {
-    let n = g.Z.entrypoint(),
-        i = l.useMemo(
+function P(e, t) {
+    let n = y.Z.entrypoint(),
+        a = r.useMemo(
             () =>
-                (0, o.debounce)(
+                (0, i.debounce)(
                     (e, t) => {
-                        (0, v.yw)(w.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
+                        (0, f.yw)(I.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
                             type: e,
                             source: t
                         });
@@ -149,10 +161,10 @@ function M(e, t) {
                 ),
             []
         );
-    l.useEffect(() => {
-        null != e && i(e, n);
-    }, [e, t, n, i]);
+    r.useEffect(() => {
+        null != e && a(e, n);
+    }, [e, t, n, a]);
 }
-function T(e) {
-    Z.S.dispatchToLastSubscribed(w.CkL.OPEN_APP_LAUNCHER, { applicationId: e });
+function D(e) {
+    E.S.dispatchToLastSubscribed(I.CkL.OPEN_APP_LAUNCHER, { applicationId: e });
 }

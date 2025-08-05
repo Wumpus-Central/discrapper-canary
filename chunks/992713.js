@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => w }), n(388685), n(642613));
+(n.d(t, { Z: () => P }), n(388685), n(642613));
 var r = n(108131),
     i = n.n(r),
     a = n(442837),
@@ -48,7 +48,7 @@ function O(e) {
     let n = null == (t = p.Z.getGuild(e.guild_id)) ? void 0 : t.name;
     (b.fileOnly('received deleted guild entities (id: '.concat(e.guild_id, ', name: ').concat(n, ')')),
         a.ZP.Emitter.batched(() => {
-            (null != e.channels && N(e.guild_id, new Set(e.channels)), null != e.roles && C(e.guild_id, new Set(e.roles)), null != e.emojis && R(e.guild_id, new Set(e.emojis)), null != e.stickers && P(e.guild_id, new Set(e.stickers)));
+            (null != e.channels && N(e.guild_id, new Set(e.channels)), null != e.roles && C(e.guild_id, new Set(e.roles)), null != e.emojis && w(e.guild_id, new Set(e.emojis)), null != e.stickers && R(e.guild_id, new Set(e.stickers)));
         }));
 }
 function v() {
@@ -104,7 +104,7 @@ function C(e, t) {
             });
     });
 }
-function R(e, t) {
+function w(e, t) {
     let n = u.ZP.getGuildEmoji(e),
         r = n.filter((e) => t.has(e.id));
     n.length !== r.length &&
@@ -114,7 +114,7 @@ function R(e, t) {
             emojis: r
         });
 }
-function P(e, t) {
+function R(e, t) {
     var n;
     let r = null != (n = d.Z.getStickersByGuildId(e)) ? n : [],
         i = r.filter((e) => t.has(e.id));
@@ -125,4 +125,4 @@ function P(e, t) {
             stickers: i
         });
 }
-let w = new y();
+let P = new y();

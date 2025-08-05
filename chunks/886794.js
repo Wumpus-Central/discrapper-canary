@@ -4,22 +4,22 @@ var l = t(255367),
     i = t(481060),
     o = t(727637),
     s = t(100527),
-    c = t(906732),
+    d = t(906732),
     a = t(313201),
-    u = t(680295),
-    d = t(5192),
+    c = t(680295),
+    u = t(5192),
     f = t(785717),
     p = t(687158),
-    j = t(899007),
+    h = t(899007),
     g = t(648052),
-    h = t(867176),
-    v = t(280885),
+    v = t(867176),
+    j = t(280885),
     m = t(900927),
     b = t(678738),
     x = t(502762),
-    y = t(530),
-    O = t(679332),
-    Z = t(544989),
+    Z = t(530),
+    y = t(679332),
+    O = t(544989),
     I = t(228168),
     P = t(981631),
     E = t(388032),
@@ -27,65 +27,65 @@ var l = t(255367),
     S = t(349966),
     N = t(923243);
 function A(e) {
-    let { user: n, guildId: t, channelId: A, messageId: C, roleId: w, sessionId: _, transitionState: R, openedAt: M, onClose: U, sourceAnalyticsLocations: D = [] } = e,
-        L = t === P.ME ? void 0 : t,
-        B = (0, p.ZP)(n.id, L),
-        k = d.ZP.getName(L, A, n),
-        G = (0, a.Dt)(),
-        { analyticsLocations: Y } = (0, c.ZP)([...D, s.Z.USER_PROFILE_MODAL]),
+    let { user: n, guildId: t, channelId: A, messageId: C, roleId: _, sessionId: M, transitionState: R, openedAt: w, onClose: U, sourceAnalyticsLocations: L = [] } = e,
+        D = t === P.ME ? void 0 : t,
+        G = (0, p.ZP)(n.id, D),
+        B = u.ZP.getName(D, A, n),
+        k = (0, a.Dt)(),
+        { analyticsLocations: Y } = (0, d.ZP)([...L, s.Z.USER_PROFILE_MODAL]),
         V = (0, f.ZB)({
             layout: 'MODAL',
             userId: n.id,
-            sourceSessionId: _,
-            guildId: L,
+            sourceSessionId: M,
+            guildId: D,
             channelId: A,
             messageId: C,
-            roleId: w
+            roleId: _
         }),
         F = r.useRef(null),
         W = (0, o.Z)(F);
-    return (0, l.jsx)(c.Gt, {
+    return (0, l.jsx)(d.Gt, {
         value: Y,
         children: (0, l.jsx)(f.Mt, {
             value: V,
-            openedAt: M,
-            fetchStartedAt: null == B ? void 0 : B.fetchStartedAt,
-            fetchEndedAt: null == B ? void 0 : B.fetchEndedAt,
-            isLoaded: null == B ? void 0 : B.isLoaded,
+            openedAt: w,
+            fetchStartedAt: null == G ? void 0 : G.fetchStartedAt,
+            fetchEndedAt: null == G ? void 0 : G.fetchEndedAt,
+            isLoaded: null == G ? void 0 : G.isLoaded,
             children: (0, l.jsxs)(i.Y0X, {
                 transitionState: R,
                 className: T.root,
                 hideShadow: !0,
-                'aria-labelledby': G,
+                'aria-labelledby': k,
                 parentComponent: 'NonUserBotProfileModal',
                 children: [
                     (0, l.jsx)(i.y5t, {
                         component: (0, l.jsx)(i.nn4, {
                             children: (0, l.jsx)(i.H, {
-                                id: G,
-                                children: E.intl.format(E.t.KRe1Fh, { name: k })
+                                id: k,
+                                children: E.intl.format(E.t.KRe1Fh, { name: B })
                             })
                         }),
                         children: (0, l.jsxs)(x.Z, {
                             user: n,
-                            displayProfile: B,
+                            displayProfile: G,
                             themeType: I.lY.MODAL,
-                            ref: (null == B ? void 0 : B.profileEffectId) != null ? F : void 0,
+                            ref: (null == G ? void 0 : G.profileEffectId) != null ? F : void 0,
                             children: [
-                                (0, l.jsx)(Z.Z, { children: (0, l.jsx)(O.Z, { user: n }) }),
+                                (0, l.jsx)(O.Z, { children: (0, l.jsx)(y.Z, { user: n }) }),
                                 (0, l.jsxs)('div', {
                                     children: [
-                                        (0, l.jsx)(h.Z, {
+                                        (0, l.jsx)(v.Z, {
                                             user: n,
-                                            displayProfile: B,
+                                            displayProfile: G,
                                             themeType: I.lY.MODAL
                                         }),
                                         (0, l.jsx)('div', {
                                             className: T.headerInner,
-                                            children: (0, l.jsx)(j.Z, {
+                                            children: (0, l.jsx)(h.Z, {
                                                 user: n,
-                                                displayProfile: B,
-                                                guildId: L,
+                                                displayProfile: G,
+                                                guildId: D,
                                                 channelId: A,
                                                 themeType: I.lY.MODAL
                                             })
@@ -95,14 +95,14 @@ function A(e) {
                                 (0, l.jsxs)('div', {
                                     className: T.body,
                                     children: [
-                                        (0, l.jsx)(y.Z, {
+                                        (0, l.jsx)(Z.Z, {
                                             className: T.username,
                                             user: n,
-                                            nickname: k,
-                                            pronouns: null == B ? void 0 : B.pronouns,
+                                            nickname: B,
+                                            pronouns: null == G ? void 0 : G.pronouns,
                                             nicknameVariant: 'heading-xl/bold',
                                             tags: (0, l.jsx)(g.Z, {
-                                                displayProfile: B,
+                                                displayProfile: G,
                                                 themeType: I.lY.MODAL,
                                                 onClose: U
                                             })
@@ -133,16 +133,16 @@ function A(e) {
                                                     fade: !0,
                                                     className: S.scroller,
                                                     children: [
-                                                        (0, l.jsx)(v.Z, {
+                                                        (0, l.jsx)(j.Z, {
                                                             userId: n.id,
-                                                            userBio: null == B ? void 0 : B.bio,
+                                                            userBio: null == G ? void 0 : G.bio,
                                                             setLineClamp: !1
                                                         }),
                                                         (0, l.jsx)(b.Z, {
                                                             heading: E.intl.string(E.t['A//N4u']),
                                                             children: (0, l.jsx)(m.Z, {
                                                                 userId: n.id,
-                                                                guildId: L,
+                                                                guildId: D,
                                                                 tooltipDelay: I.vB
                                                             })
                                                         })
@@ -155,9 +155,9 @@ function A(e) {
                             ]
                         })
                     }),
-                    (null == B ? void 0 : B.profileEffectId) != null &&
-                        (0, l.jsx)(u.Z, {
-                            profileEffectId: null == B ? void 0 : B.profileEffectId,
+                    (null == G ? void 0 : G.profileEffectId) != null &&
+                        (0, l.jsx)(c.Z, {
+                            profileEffectId: null == G ? void 0 : G.profileEffectId,
                             isHovering: W
                         })
                 ]

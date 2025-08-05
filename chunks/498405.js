@@ -101,7 +101,7 @@ function m(e) {
     let { focusPath: I } = y,
         [T, S] = r.useState(!1),
         [A, N] = r.useState(E),
-        [{ onItemFocusMemoizer: C, onItemMouseEnterMemoizer: R }] = r.useState(() => ({
+        [{ onItemFocusMemoizer: C, onItemMouseEnterMemoizer: w }] = r.useState(() => ({
             onItemFocusMemoizer: new o.$o((e) => () => {
                 (S(!0),
                     O({
@@ -117,7 +117,7 @@ function m(e) {
                     }));
             })
         })),
-        P = r.useCallback(
+        R = r.useCallback(
             (e) => {
                 if (!b.current) return;
                 e.key === a.R8.ESCAPE && null != g && (e.stopPropagation(), e.preventDefault(), g());
@@ -139,7 +139,7 @@ function m(e) {
             },
             [v, t, I, c, g]
         ),
-        w = r.useCallback(() => {
+        P = r.useCallback(() => {
             T || S(!0);
         }, [T]),
         D = r.useCallback(
@@ -156,20 +156,20 @@ function m(e) {
                 S(!1));
         }, []),
         x = r.useCallback((e) => e.every((e, t) => I[t] === e), [I]),
-        M = r.useCallback(
+        k = r.useCallback(
             () => ({
                 role: 'menu',
                 id: t,
                 tabIndex: -1,
-                onKeyDown: P,
-                onFocus: w,
+                onKeyDown: R,
+                onFocus: P,
                 onBlur: D,
                 onMouseLeave: L,
                 'aria-activedescendant': I.length > 0 ? (0, o.qR)(t, I.join(d)) : void 0
             }),
-            [t, P, w, D, L, I]
+            [t, R, P, D, L, I]
         ),
-        k = r.useCallback(
+        j = r.useCallback(
             (e) => {
                 let { path: n } = e;
                 return {
@@ -182,7 +182,7 @@ function m(e) {
             },
             [t, I, x, y.focusIndex, A]
         ),
-        j = r.useCallback(
+        M = r.useCallback(
             (e) => {
                 let { path: n, hasSubmenu: r = !1, navigable: i = !0, role: a = 'menuitem' } = e,
                     s = n.join(d);
@@ -201,21 +201,21 @@ function m(e) {
                         id: (0, o.qR)(t, s),
                         tabIndex: -1,
                         onFocus: i ? C.get(s) : () => {},
-                        onMouseEnter: i ? R.get(s) : () => {}
+                        onMouseEnter: i ? w.get(s) : () => {}
                     }
                 );
             },
-            [t, x, C, R]
+            [t, x, C, w]
         );
     return r.useMemo(
         () => ({
             dispatch: v,
-            getContainerProps: M,
-            getSubmenuProps: k,
-            getItemProps: j,
+            getContainerProps: k,
+            getSubmenuProps: j,
+            getItemProps: M,
             isFocused: x,
             isUsingKeyboardNavigation: A
         }),
-        [v, M, k, j, x, A]
+        [v, k, j, M, x, A]
     );
 }

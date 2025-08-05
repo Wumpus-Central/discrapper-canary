@@ -47,15 +47,15 @@ function C(e) {
     let { avatarDecoration: t } = e;
     i = t;
 }
-function R(e) {
+function w(e) {
     let { profileEffectId: t } = e;
     o = t;
 }
-function P(e) {
+function R(e) {
     let { banner: t } = e;
     s = t;
 }
-function w(e) {
+function P(e) {
     let { bio: t } = e;
     l = t;
 }
@@ -71,14 +71,14 @@ function x(e) {
     let { themeColors: t } = e;
     d = t;
 }
-function M(e) {
+function k(e) {
     let { nameplate: t } = e;
     a = t;
 }
-function k() {
-    (j(), U(), (y = {}), (b = g.QZA.OPEN));
-}
 function j() {
+    (M(), U(), (y = {}), (b = g.QZA.OPEN));
+}
+function M() {
     ((r = void 0), (u = void 0), (i = void 0), (a = void 0));
 }
 function U() {
@@ -88,9 +88,9 @@ function G() {
     y = {};
 }
 function B() {
-    (k(), v());
+    (j(), v());
 }
-class V extends (p = h.ZP.Store) {
+class Z extends (p = h.ZP.Store) {
     getFormState() {
         return b;
     }
@@ -153,8 +153,8 @@ class V extends (p = h.ZP.Store) {
         return _;
     }
 }
-E(V, 'displayName', 'GuildIdentitySettingsStore');
-let F = new V(m.Z, {
+E(Z, 'displayName', 'GuildIdentitySettingsStore');
+let F = new Z(m.Z, {
     GUILD_IDENTITY_SETTINGS_INIT: O,
     GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: B,
     GUILD_IDENTITY_SETTINGS_SET_GUILD: T,
@@ -163,16 +163,16 @@ let F = new V(m.Z, {
     USER_PROFILE_UPDATE_FAILURE: A,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: N,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR_DECORATION: C,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_NAMEPLATE: M,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID: R,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: P,
-    GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: w,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_NAMEPLATE: k,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_PROFILE_EFFECT_ID: w,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: R,
+    GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: P,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: D,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: L,
     GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS: x,
-    GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: j,
+    GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: M,
     GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: U,
-    GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: k,
-    GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: k,
+    GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: j,
+    GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: j,
     GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: G
 });

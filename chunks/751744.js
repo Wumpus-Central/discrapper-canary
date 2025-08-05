@@ -1,139 +1,139 @@
-(e.d(n, { default: () => j }), e(953529));
-var i = e(255367),
-    o = e(73800),
-    r = e(442837),
-    l = e(755721),
-    s = e(481060),
-    a = e(168107),
-    c = e(138201),
-    d = e(331692),
-    x = e(103879),
-    u = e(236289),
-    m = e(800530),
-    h = e(388032),
-    b = e(822566);
-let f = [
+(n.d(e, { default: () => g }), n(953529));
+var i = n(255367),
+    s = n(73800),
+    o = n(442837),
+    r = n(755721),
+    a = n(481060),
+    l = n(168107),
+    c = n(138201),
+    d = n(331692),
+    f = n(103879),
+    h = n(236289),
+    x = n(800530),
+    m = n(388032),
+    p = n(822566);
+let u = [
         {
-            title: h.intl.string(h.t['1+E7LC']),
-            description: h.intl.string(h.t.BXiat7)
+            title: m.intl.string(m.t['1+E7LC']),
+            description: m.intl.string(m.t.BXiat7)
         },
         {
-            title: h.intl.string(h.t.iMQXtL),
-            description: h.intl.string(h.t.oQ0vws)
+            title: m.intl.string(m.t.iMQXtL),
+            description: m.intl.string(m.t.oQ0vws)
         },
         {
-            title: h.intl.string(h.t['oY/z1d']),
-            description: h.intl.string(h.t.wtj02d)
+            title: m.intl.string(m.t['oY/z1d']),
+            description: m.intl.string(m.t.wtj02d)
         }
     ],
-    j = function (t) {
-        let { onClose: n, transitionState: e, classificationId: j } = t,
-            _ = (0, r.e7)([u.Z], () => u.Z.getAgeVerificationWebviewUrl()),
-            v = (0, r.e7)([u.Z], () => u.Z.getIsLoadingAgeVerification()),
-            N = o.useCallback(() => {
-                (n(), d.Z.close());
-            }, [n]),
-            p = o.useCallback(() => {
-                (d.Z.success(), N(), d.Z.start_verification_check());
-            }, [N]);
+    g = function (t) {
+        let { onClose: e, transitionState: n, classificationId: g } = t,
+            N = (0, o.e7)([h.Z], () => h.Z.getAgeVerificationWebviewUrl()),
+            _ = (0, o.e7)([h.Z], () => h.Z.getIsLoadingAgeVerification()),
+            b = s.useCallback(() => {
+                (e(), d.Z.close());
+            }, [e]),
+            j = s.useCallback(() => {
+                (d.Z.success(), b(), d.Z.start_verification_check());
+            }, [b]);
         return (
-            o.useEffect(() => {
-                '' !== _ &&
-                    a.Z.showAgeVerification({
-                        webviewUrl: _,
-                        onComplete: p,
+            s.useEffect(() => {
+                '' !== N &&
+                    l.Z.showAgeVerification({
+                        webviewUrl: N,
+                        onComplete: j,
                         useV1: !0
                     });
-            }, [_, p]),
-            (0, i.jsxs)(s.Y0X, {
-                transitionState: e,
-                className: b.root,
+            }, [N, j]),
+            (0, i.jsxs)(a.Y0X, {
+                transitionState: n,
+                className: p.root,
                 parentComponent: 'AutomatedUnderageAppealModal',
                 children: [
-                    (0, i.jsxs)(s.hzk, {
-                        className: b.content,
+                    (0, i.jsxs)(a.hzk, {
+                        className: p.content,
                         children: [
                             (0, i.jsxs)('div', {
-                                className: b.header,
+                                className: p.header,
                                 children: [
-                                    (0, i.jsx)(s.X6q, {
+                                    (0, i.jsx)(a.X6q, {
                                         variant: 'heading-xl/bold',
-                                        children: h.intl.string(h.t['9SDLnp'])
+                                        children: m.intl.string(m.t['9SDLnp'])
                                     }),
-                                    (0, i.jsx)(s.X6q, {
+                                    (0, i.jsx)(a.X6q, {
                                         variant: 'heading-md/normal',
                                         color: 'header-secondary',
-                                        children: h.intl.string(h.t['yvx///'])
+                                        children: m.intl.string(m.t['yvx///'])
                                     })
                                 ]
                             }),
                             (0, i.jsx)('div', {
-                                className: b.listContent,
+                                className: p.listContent,
                                 children: (0, i.jsx)('div', {
-                                    className: b.table,
-                                    children: f.map((t, n) => {
-                                        let { title: e, description: o } = t;
+                                    className: p.table,
+                                    children: u.map((t, e) => {
+                                        let { title: n, description: s } = t;
                                         return (0, i.jsx)(
                                             c.JZ,
                                             {
-                                                title: e,
-                                                description: o,
-                                                index: n,
+                                                title: n,
+                                                description: s,
+                                                index: e,
                                                 listType: 'numbered',
                                                 titleVariant: 'text-md/medium'
                                             },
-                                            n
+                                            e
                                         );
                                     })
                                 })
                             }),
                             (0, i.jsxs)('div', {
-                                className: b.anotherOption,
+                                className: p.anotherOption,
                                 children: [
-                                    (0, i.jsx)(s.Text, {
+                                    (0, i.jsx)(a.Text, {
                                         variant: 'text-sm/semibold',
-                                        className: b.optionEyebrow,
+                                        className: p.optionEyebrow,
                                         color: 'header-secondary',
-                                        children: h.intl.string(h.t.WPwp1d)
+                                        children: m.intl.string(m.t.WPwp1d)
                                     }),
                                     (0, i.jsx)('div', {
-                                        className: b.table,
+                                        className: p.table,
                                         children: (0, i.jsx)(c.ZP, {
-                                            title: h.intl.string(h.t.N9WJMD),
-                                            description: h.intl.string(h.t['NHq38/']),
-                                            buttonText: h.intl.string(h.t['9iy4lJ']),
-                                            buttonColor: l.zx.Colors.PRIMARY,
+                                            title: m.intl.string(m.t.N9WJMD),
+                                            description: m.intl.string(m.t['NHq38/']),
+                                            buttonText: m.intl.string(m.t['9iy4lJ']),
+                                            buttonColor: r.zx.Colors.PRIMARY,
                                             titleVariant: 'text-md/medium',
-                                            onButtonPress: () => window.open(m.sQ.AGE_VERIFICATION_LINK, '_blank')
+                                            onButtonPress: () => window.open(x.sQ.AGE_VERIFICATION_LINK, '_blank')
                                         })
                                     }),
                                     (0, i.jsx)('div', {
-                                        className: b.learnMore,
-                                        children: (0, i.jsx)(s.X6q, {
+                                        className: p.learnMore,
+                                        children: (0, i.jsx)(a.X6q, {
                                             variant: 'heading-sm/medium',
                                             color: 'text-secondary',
-                                            children: h.intl.format(h.t.ZbWsOD, { learnMoreLink: m.sQ.LEARN_MORE_UU_APPEAL_LINK })
+                                            children: m.intl.format(m.t.ZbWsOD, { learnMoreLink: x.sQ.LEARN_MORE_UU_APPEAL_LINK })
                                         })
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, i.jsxs)(s.mzw, {
-                        className: b.footer,
+                    (0, i.jsxs)(a.mzw, {
+                        className: p.footer,
                         children: [
-                            (0, i.jsx)(s.zxk, {
+                            (0, i.jsx)(a.zxk, {
                                 variant: 'primary',
-                                text: h.intl.string(h.t['54b8V1']),
-                                onClick: () => (0, x.FN)(j),
-                                loading: v
+                                text: m.intl.string(m.t['54b8V1']),
+                                onClick: () => (0, f.FN)(g),
+                                loading: _
                             }),
-                            (0, i.jsx)(l.zx, {
-                                color: l.zx.Colors.TRANSPARENT,
-                                look: l.zx.Looks.BLANK,
-                                onClick: N,
-                                className: b.cancelButton,
-                                children: h.intl.string(h.t.dKacJy)
+                            (0, i.jsx)(r.zx, {
+                                color: r.zx.Colors.TRANSPARENT,
+                                look: r.zx.Looks.BLANK,
+                                onClick: b,
+                                className: p.cancelButton,
+                                children: m.intl.string(m.t.dKacJy)
                             })
                         ]
                     })

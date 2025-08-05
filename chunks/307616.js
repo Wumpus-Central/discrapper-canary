@@ -1,5 +1,5 @@
 (n.d(t, {
-    n: () => P,
+    n: () => R,
     v: () => N
 }),
     n(388685),
@@ -148,10 +148,10 @@ function C(e) {
     }
     return t;
 }
-let R = [];
-function P() {
+let w = [];
+function R() {
     let e = N(),
-        t = (0, g.s9)((t) => (void 0 !== t[e] ? t[e] : R)),
+        t = (0, g.s9)((t) => (void 0 !== t[e] ? t[e] : w)),
         n = i.useMemo(() => C(t), [t]),
         a = (0, _.q)('Modals'),
         o = i.useRef(void 0);

@@ -1,17 +1,17 @@
 (n.d(t, {
     BU: () => L,
-    Cd: () => j,
-    DZ: () => P,
+    Cd: () => M,
+    DZ: () => R,
     PS: () => D,
     T6: () => N,
     Z1: () => B,
-    aj: () => w,
+    aj: () => P,
     bE: () => F,
     fy: () => y.fy,
-    hW: () => R,
+    hW: () => w,
     m9: () => U,
     nm: () => x,
-    sr: () => V,
+    sr: () => Z,
     w9: () => G
 }),
     n(415506),
@@ -306,22 +306,22 @@ class C {
             (this.logger = new d.Z(this.ProtoClass.typeName)));
     }
 }
-let R = new C(l.o8, y.yP.PRELOADED_USER_SETTINGS),
-    P = new C(s.ji, y.yP.FRECENCY_AND_FAVORITES_SETTINGS),
-    w = {
-        [y.yP.PRELOADED_USER_SETTINGS]: R,
-        [y.yP.FRECENCY_AND_FAVORITES_SETTINGS]: P
+let w = new C(l.o8, y.yP.PRELOADED_USER_SETTINGS),
+    R = new C(s.ji, y.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+    P = {
+        [y.yP.PRELOADED_USER_SETTINGS]: w,
+        [y.yP.FRECENCY_AND_FAVORITES_SETTINGS]: R
     };
 function D(e, t, n) {
-    return R.updateAsync('guilds', (n) => (0, b.u0)(n, e, t), n);
+    return w.updateAsync('guilds', (n) => (0, b.u0)(n, e, t), n);
 }
 function L(e, t, n, r) {
     return D(e, (e) => (0, b.uL)(e, t, n), r);
 }
 function x(e) {
     return (
-        M(e),
-        R.updateAsync(
+        k(e),
+        w.updateAsync(
             'userContent',
             (t) => {
                 if ((0, m.jl)(t.dismissedContents, e)) return !1;
@@ -331,16 +331,16 @@ function x(e) {
         )
     );
 }
-function M(e) {
-    !E.Z.hasLoaded(y.yP.PRELOADED_USER_SETTINGS) && (k(e) || p.default.track(O.rMx.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: o.z[e] }));
-}
 function k(e) {
+    !E.Z.hasLoaded(y.yP.PRELOADED_USER_SETTINGS) && (j(e) || p.default.track(O.rMx.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN, { content_type: o.z[e] }));
+}
+function j(e) {
     var t;
     let n = null == (t = E.Z.settings.userContent) ? void 0 : t.dismissedContents;
     return null != n && (0, m.jl)(n, e);
 }
-async function j(e, t) {
-    return await R.updateAsync(
+async function M(e, t) {
+    return await w.updateAsync(
         'userContent',
         (n) => {
             n.recurringDismissibleContentStates[e] = I({}, n.recurringDismissibleContentStates[e], t);
@@ -358,7 +358,7 @@ async function U(e, t, n) {
     );
 }
 function G(e) {
-    return R.updateAsync(
+    return w.updateAsync(
         'userContent',
         (t) => {
             if (!(0, m.jl)(t.dismissedContents, e)) return !1;
@@ -368,14 +368,14 @@ function G(e) {
     );
 }
 function B(e) {
-    return j(e, {
+    return M(e, {
         lastDismissedVersion: 0,
         lastDismissedAtMs: '0',
         lastDismissedObjectId: '0'
     });
 }
-function V() {
-    return R.updateAsync(
+function Z() {
+    return w.updateAsync(
         'userContent',
         (e) => {
             ((e.dismissedContents = new Uint8Array()), (e.recurringDismissibleContentStates = {}));
@@ -384,7 +384,7 @@ function V() {
     );
 }
 function F() {
-    return R.updateAsync(
+    return w.updateAsync(
         'userContent',
         (e) => {
             let t = new Uint8Array();

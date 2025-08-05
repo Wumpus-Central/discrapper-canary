@@ -4,14 +4,14 @@ n(73800);
 var i = n(755721),
     l = n(973616),
     s = n(131704),
-    a = n(598077),
-    o = n(411198),
+    o = n(598077),
+    a = n(411198),
     c = n(230224),
     u = n(258356),
     d = n(981631),
     h = n(388032),
     p = n(15282);
-function g(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function g(e) {
     }
     return e;
 }
-function m(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,7 +54,7 @@ function m(e, t) {
         e
     );
 }
-let f = (e) => {
+let g = (e) => {
     let { state: t } = e;
     switch (t) {
         case d.r2o.ACCEPTING:
@@ -67,12 +67,12 @@ let f = (e) => {
 function _(e) {
     let { invite: t, onAcceptInvite: n, disableUser: _ = !1 } = e;
     if (null == t) return null;
-    let x = null != t.guild ? (0, o.Qs)(t.guild) : null,
+    let x = null != t.guild ? (0, a.Qs)(t.guild) : null,
         b = null != t.channel ? (0, s.jD)(t.channel) : null,
         E = null != t.target_application ? new l.ZP(t.target_application) : null,
-        v = _ || null == t.inviter ? null : new a.Z(t.inviter),
-        I = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != x && x.features.has(d.oNc.COMMUNITY))) && null != v && (0, c.WT)(t),
-        j = f(t),
+        v = _ || null == t.inviter ? null : new o.Z(t.inviter),
+        j = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != x && x.features.has(d.oNc.COMMUNITY))) && null != v && (0, c.WT)(t),
+        I = g(t),
         O = {
             invite: t,
             user: v,
@@ -84,7 +84,7 @@ function _(e) {
         ? (0, r.jsx)(u.Z, {
               invite: t,
               channel: b,
-              isSubmitting: j,
+              isSubmitting: I,
               onAcceptInvite: n
           })
         : (0, r.jsxs)('div', {
@@ -93,14 +93,14 @@ function _(e) {
                   (0, r.jsx)(c.GB, {
                       application: E,
                       guild: x,
-                      user: I || (0, c.X7)(t) ? v : null
+                      user: j || (0, c.X7)(t) ? v : null
                   }),
-                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, m(g({}, O), { showBigUserIcon: I })),
-                  (0, r.jsx)(c.UM, m(g({}, O), { showBigUserIcon: I })),
-                  (0, r.jsx)(c.V6, g({}, O)),
+                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, f(m({}, O), { showBigUserIcon: j })),
+                  (0, r.jsx)(c.UM, f(m({}, O), { showBigUserIcon: j })),
+                  (0, r.jsx)(c.V6, m({}, O)),
                   (0, r.jsx)(i.zx, {
                       onClick: n,
-                      submitting: j,
+                      submitting: I,
                       className: p.acceptButton,
                       children: h.intl.string(h.t.ohMvm5)
                   })

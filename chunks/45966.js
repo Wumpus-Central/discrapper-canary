@@ -106,13 +106,13 @@ function N(e) {
         onboardingPromptsSeen: o,
         onboardingResponsesSeen: s
     }),
-        u || w(t, a),
+        u || P(t, a),
         (O[t] = Date.now()));
 }
 function C() {
     v = !1;
 }
-function R(e) {
+function w(e) {
     var t, n, r, i, a, o, s, l, c;
     let { guildId: u, updates: d } = e,
         f = null != (a = null != (i = d.onboardingPromptsSeen) ? i : null == (t = b[u]) ? void 0 : t.onboardingPromptsSeen) ? a : {},
@@ -120,11 +120,11 @@ function R(e) {
         p = A(null != (c = null != (l = d.prompts) ? l : null == (r = b[u]) ? void 0 : r.prompts) ? c : [], f, _);
     b[u] = E(m({}, b[u], d), { prompts: p });
 }
-function P(e) {
+function R(e) {
     let { guildId: t, optionId: n, selected: r, removedOptionIds: i } = e;
     return !!l.Z.isFullServerPreview(t) || (null != b[t] && (null != i && i.length > 0 && a().pullAll(b[t].responses, i), r ? b[t].responses.push(n) : a().pull(b[t].responses, n), null == y[t] && (y[t] = {}), (y[t][n] = r), null != i && i.forEach((e) => (y[t][e] = !1)), (y[t] = m({}, y[t])), !0));
 }
-function w(e, t) {
+function P(e, t) {
     if (null == y[e]) return;
     let n = {};
     (Object.keys(y[e]).forEach((r) => {
@@ -139,7 +139,7 @@ function w(e, t) {
 }
 function D(e) {
     let { guildId: t, options: n, prompts_seen: r, options_seen: i } = e;
-    w(t, n);
+    P(t, n);
     let a = b[t];
     if (null == a) return !1;
     let o = A(a.prompts, r, i);
@@ -159,24 +159,24 @@ function x(e) {
         r = b[t];
     null != r && (r.mode = n);
 }
-let M = [],
-    k = [],
-    j = [];
+let k = [],
+    j = [],
+    M = [];
 class U extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, _.ZP, l.Z);
     }
     getOnboardingPromptsForOnboarding(e) {
         var t, n;
-        return null != (n = null == (t = b[e]) ? void 0 : t.onboardingPrompts) ? n : M;
+        return null != (n = null == (t = b[e]) ? void 0 : t.onboardingPrompts) ? n : k;
     }
     getOnboardingPrompts(e) {
         var t, n;
-        return null != (n = null == (t = b[e]) ? void 0 : t.prompts) ? n : M;
+        return null != (n = null == (t = b[e]) ? void 0 : t.prompts) ? n : k;
     }
     getOnboardingResponses(e) {
         var t, n, r;
-        return l.Z.isFullServerPreview(e) ? Array.from(null != (n = l.Z.getOnboardingResponses(e)) ? n : k) : null != (r = null == (t = b[e]) ? void 0 : t.responses) ? r : k;
+        return l.Z.isFullServerPreview(e) ? Array.from(null != (n = l.Z.getOnboardingResponses(e)) ? n : j) : null != (r = null == (t = b[e]) ? void 0 : t.responses) ? r : j;
     }
     getSelectedOptions(e) {
         let t = this.getOnboardingResponses(e);
@@ -187,10 +187,10 @@ class U extends (r = o.ZP.Store) {
     }
     getOnboardingResponsesForPrompt(e, t) {
         let n = b[e];
-        if (null == n) return k;
+        if (null == n) return j;
         let r = n.prompts.find((e) => e.id === t);
         return null == r
-            ? k
+            ? j
             : a().intersection(
                   r.options.map((e) => e.id),
                   this.getOnboardingResponses(e)
@@ -199,11 +199,11 @@ class U extends (r = o.ZP.Store) {
     getEnabledOnboardingPrompts(e) {
         var t, n;
         let r = b[e];
-        return l.Z.isFullServerPreview(e) ? (null != (t = null == r ? void 0 : r.prompts) ? t : M) : null != r && r.enabled && null != (n = r.prompts) ? n : M;
+        return l.Z.isFullServerPreview(e) ? (null != (t = null == r ? void 0 : r.prompts) ? t : k) : null != r && r.enabled && null != (n = r.prompts) ? n : k;
     }
     getDefaultChannelIds(e) {
         var t, n;
-        return null != (n = null == (t = b[e]) ? void 0 : t.defaultChannelIds) ? n : j;
+        return null != (n = null == (t = b[e]) ? void 0 : t.defaultChannelIds) ? n : M;
     }
     getEnabled(e) {
         var t, n;
@@ -254,10 +254,10 @@ let G = new U(s.Z, {
     GUILD_ONBOARDING_PROMPTS_FETCH_START: I,
     GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: N,
     GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: C,
-    GUILD_ONBOARDING_SELECT_OPTION: P,
+    GUILD_ONBOARDING_SELECT_OPTION: R,
     GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS: D,
-    GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE: R,
-    GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: R,
+    GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE: w,
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: w,
     GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: L,
     GUILD_SETTINGS_ONBOARDING_SET_MODE: x
 });

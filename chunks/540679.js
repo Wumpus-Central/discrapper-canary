@@ -1,54 +1,54 @@
-n.d(e, { default: () => f });
-var i = n(255367);
-n(73800);
-var l = n(442837),
-    a = n(481060),
-    r = n(87051),
-    u = n(776568),
-    c = n(9156),
-    s = n(621600),
-    o = n(388032),
-    d = n(908023);
-let f = (t) => {
-    let { onClose: e, channelId: n, applicationId: f, transitionState: g } = t,
-        p = (0, l.e7)([c.ZP], () => c.ZP.getChannelMuteConfig(null, n)),
-        b = (t) => {
-            r.Z.updateAppDMOverrideSettings(null, n, f, (0, u.u9)(t), s.ZB.Muted);
+e.d(n, { default: () => g });
+var i = e(255367);
+e(73800);
+var l = e(442837),
+    a = e(481060),
+    s = e(87051),
+    u = e(776568),
+    d = e(9156),
+    c = e(621600),
+    r = e(388032),
+    o = e(908023);
+let g = (t) => {
+    let { onClose: n, channelId: e, applicationId: g, transitionState: p } = t,
+        _ = (0, l.e7)([d.ZP], () => d.ZP.getChannelMuteConfig(null, e)),
+        h = (t) => {
+            s.Z.updateAppDMOverrideSettings(null, e, g, (0, u.u9)(t), c.ZB.Muted);
         };
     return (0, i.jsxs)(a.Y0X, {
-        transitionState: g,
+        transitionState: p,
         size: a.CgR.SMALL,
-        'aria-label': o.intl.string(o.t.uAmAiI),
+        'aria-label': r.intl.string(r.t.uAmAiI),
         parentComponent: 'MuteAppNotificationsModalV2',
         children: [
             (0, i.jsx)(a.hzk, {
-                className: d.content,
+                className: o.content,
                 children: (0, i.jsx)(a.xJW, {
-                    title: o.intl.string(o.t.NkwaBg),
+                    title: r.intl.string(r.t.NkwaBg),
                     tag: 'h1',
                     children: (0, i.jsx)(a.FXm, {
                         options: (0, u.k)().map((t) => {
-                            let { label: e, value: n } = t;
+                            let { label: n, value: e } = t;
                             return {
-                                name: e,
-                                value: n
+                                name: n,
+                                value: e
                             };
                         }),
-                        onChange: (t) => b(t.value),
-                        value: null == p ? void 0 : p.selected_time_window
+                        onChange: (t) => h(t.value),
+                        value: null == _ ? void 0 : _.selected_time_window
                     })
                 })
             }),
             (0, i.jsx)(a.olH, {
-                className: d.closeButton,
-                onClick: e
+                className: o.closeButton,
+                onClick: n
             }),
             (0, i.jsx)(a.mzw, {
                 children: (0, i.jsx)(a.zxk, {
                     variant: 'secondary',
-                    text: o.intl.string(o.t.cpT0Cg),
+                    text: r.intl.string(r.t.cpT0Cg),
                     type: 'button',
-                    onClick: e
+                    onClick: n
                 })
             })
         ]

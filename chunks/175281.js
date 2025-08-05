@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    a = n(512722),
-    s = n.n(a),
+    s = n(512722),
+    a = n.n(s),
     c = n(392711),
     u = n.n(c),
     d = n(748780),
@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(612226),
     m = n(951483),
     b = n(714338),
-    _ = n(607070),
-    O = n(460181),
+    O = n(607070),
+    _ = n(460181),
     y = n(585483),
     C = n(264549),
     v = n(981631),
@@ -35,10 +35,10 @@ function S(e, t, n) {
     );
 }
 let x = {
-    UP: u().throttle(() => (0, O.GN)('ddr-up'), 100),
-    DOWN: u().throttle(() => (0, O.GN)('ddr-down'), 100),
-    LEFT: u().throttle(() => (0, O.GN)('ddr-left'), 100),
-    RIGHT: u().throttle(() => (0, O.GN)('ddr-right'), 100)
+    UP: u().throttle(() => (0, _.GN)('ddr-up'), 100),
+    DOWN: u().throttle(() => (0, _.GN)('ddr-down'), 100),
+    LEFT: u().throttle(() => (0, _.GN)('ddr-left'), 100),
+    RIGHT: u().throttle(() => (0, _.GN)('ddr-right'), 100)
 };
 function I(e) {
     switch (e.keyCode) {
@@ -137,7 +137,7 @@ function w() {
         })
     });
 }
-class T extends i.PureComponent {
+class Z extends i.PureComponent {
     componentDidMount() {
         ((this.lastInputedKeys = []), y.S.subscribe(v.CkL.SCROLL_PAGE_UP, this.scrollPageUp), y.S.subscribe(v.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.addEventListener('keyup', this.handleKeyUp, { capture: !0 }));
     }
@@ -167,25 +167,25 @@ class T extends i.PureComponent {
                 (0, r.jsxs)('div', {
                     className: E.ddrArrows,
                     children: [
-                        (0, r.jsx)(Z, {
+                        (0, r.jsx)(T, {
                             arrow: 'LEFT',
                             isActive: n,
                             className: E.left,
                             children: 'left'
                         }),
-                        (0, r.jsx)(Z, {
+                        (0, r.jsx)(T, {
                             arrow: 'DOWN',
                             isActive: t,
                             className: E.down,
                             children: 'down'
                         }),
-                        (0, r.jsx)(Z, {
+                        (0, r.jsx)(T, {
                             arrow: 'UP',
                             isActive: e,
                             className: E.up,
                             children: 'up'
                         }),
-                        (0, r.jsx)(Z, {
+                        (0, r.jsx)(T, {
                             arrow: 'RIGHT',
                             isActive: i,
                             className: E.right,
@@ -217,11 +217,11 @@ class T extends i.PureComponent {
             S(this, 'lastInputedKeys', []),
             S(this, 'scrollPageUp', () => {
                 let e = this.scrollerRef.current;
-                (s()(null != e, 'Scroller is pagedUp when not mounted'), e.scrollPageUp({ animate: !0 }));
+                (a()(null != e, 'Scroller is pagedUp when not mounted'), e.scrollPageUp({ animate: !0 }));
             }),
             S(this, 'scrollPageDown', () => {
                 let e = this.scrollerRef.current;
-                (s()(null != e, 'Scroller is pagedDown when not mounted'), e.scrollPageDown({ animate: !0 }));
+                (a()(null != e, 'Scroller is pagedDown when not mounted'), e.scrollPageDown({ animate: !0 }));
             }),
             S(this, 'arrowUp', (e) => {
                 let { direction: t } = e;
@@ -282,38 +282,38 @@ class T extends i.PureComponent {
             }));
     }
 }
-function Z(e) {
-    let { isActive: t, arrow: n, className: l, children: a } = e,
-        [s, c] = i.useState(t),
+function T(e) {
+    let { isActive: t, arrow: n, className: l, children: s } = e,
+        [a, c] = i.useState(t),
         u = i.useCallback(() => {
             (x[n](), c(!0));
         }, [n]);
     return (
         i.useEffect(() => {
-            if (s) {
+            if (a) {
                 let e = setTimeout(() => c(!1), 500);
                 return () => clearTimeout(e);
             }
-        }, [s]),
+        }, [a]),
         (0, r.jsx)(f.P3F, {
             onClick: u,
-            className: o()(E.arrow, l, { [E.active]: t || s }),
-            children: a
+            className: o()(E.arrow, l, { [E.active]: t || a }),
+            children: s
         })
     );
 }
 function A(e) {
     let { transitionState: t, onClose: n } = e,
-        [l, a] = i.useState(!1),
-        [s, c] = i.useState(!1),
+        [l, s] = i.useState(!1),
+        [a, c] = i.useState(!1),
         u = i.useMemo(() => (__OVERLAY__ ? (0, m.Zg)() : (0, g.Rv)()), []),
-        { keyboardModeEnabled: d, useReducedMotion: O } = (0, h.cj)([_.Z], () => ({
-            keyboardModeEnabled: _.Z.keyboardModeEnabled,
-            useReducedMotion: _.Z.useReducedMotion
+        { keyboardModeEnabled: d, useReducedMotion: _ } = (0, h.cj)([O.Z], () => ({
+            keyboardModeEnabled: O.Z.keyboardModeEnabled,
+            useReducedMotion: O.Z.useReducedMotion
         }));
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(N, { showBackdrop: s }),
+            (0, r.jsx)(N, { showBackdrop: a }),
             (0, r.jsx)(f.Y0X, {
                 className: o()(E.noBackground, { [E.noShadow]: l }),
                 size: f.CgR.DYNAMIC,
@@ -333,12 +333,12 @@ function A(e) {
                               'raging-demo'
                           )
                         : (0, r.jsx)(
-                              T,
+                              Z,
                               {
                                   content: u,
                                   keyboardModeEnabled: d,
                                   activateRagingDemon: function () {
-                                      O || (b.Z.disable(), a(!0), c(!0));
+                                      _ || (b.Z.disable(), s(!0), c(!0));
                                   }
                               },
                               'modal'

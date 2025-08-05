@@ -1,5 +1,5 @@
 let r, i, a;
-(n.d(t, { Z: () => R }), n(388685));
+(n.d(t, { Z: () => w }), n(388685));
 var o,
     s = n(442837),
     l = n(570140),
@@ -210,7 +210,7 @@ class C extends (o = s.ZP.PersistedStore) {
             };
         }
     ]));
-let R = new C(l.Z, {
+let w = new C(l.Z, {
     PICTURE_IN_PICTURE_OPEN: b,
     PICTURE_IN_PICTURE_CLOSE: y,
     PICTURE_IN_PICTURE_MOVE: O,

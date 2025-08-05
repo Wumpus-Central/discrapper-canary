@@ -1,22 +1,35 @@
-(n.d(t, { Z: () => E }), n(704826), n(35282));
+(n.d(t, { Z: () => S }), n(704826), n(35282));
 var r = n(255367),
     i = n(73800),
-    l = n(442837),
-    a = n(481060),
-    o = n(80932),
-    s = n(2052),
+    a = n(442837),
+    o = n(481060),
+    s = n(80932),
+    l = n(2052),
     c = n(543241),
     u = n(339085),
     d = n(633302),
     f = n(691251),
-    g = n(268350),
-    b = n(217590),
-    p = n(453070),
+    _ = n(268350),
+    p = n(217590),
+    h = n(453070),
     m = n(926491),
-    O = n(378233),
-    y = n(981631),
-    h = n(388032);
-function v(e) {
+    g = n(378233),
+    E = n(981631),
+    b = n(388032);
+function y(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -27,95 +40,91 @@ function v(e) {
                 })
             )),
             r.forEach(function (t) {
-                var r;
-                ((r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r));
+                y(e, t, n[t]);
             }));
     }
     return e;
 }
-function j(e, t) {
+function v(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function S(e) {
+function T(e) {
     return d.ZP.getByName(e.replace(/(^:|:$)/g, ''));
 }
-function E(e) {
-    let { type: t, id: n, name: E, isInExpressionPicker: _ = !1 } = e,
-        { location: P } = (0, s.O)(),
-        Z = i.useMemo(() => j(v({}, P), { section: _ ? y.jXE.EXPRESSION_PICKER : y.jXE.CONTEXT_MENU }), [P, _]),
-        T = (0, p.Go)(),
-        I = (0, l.e7)([m.Z], () => (t === f.S.STICKER && null != n ? m.Z.getStickerById(n) : null)),
-        A = null != I && T.includes(I.id),
-        N = (0, l.e7)([u.ZP], () => {
+function S(e) {
+    let { type: t, id: n, name: y, isInExpressionPicker: v = !1 } = e,
+        { location: S } = (0, l.O)(),
+        A = i.useMemo(() => I(O({}, S), { section: v ? E.jXE.EXPRESSION_PICKER : E.jXE.CONTEXT_MENU }), [S, v]),
+        N = (0, h.Go)(),
+        C = (0, a.e7)([m.Z], () => (t === f.S.STICKER && null != n ? m.Z.getStickerById(n) : null)),
+        w = null != C && N.includes(C.id),
+        R = (0, a.e7)([u.ZP], () => {
             if (t === f.S.EMOJI) {
                 if (null != n) return u.ZP.getDisambiguatedEmojiContext().getById(n);
-                else if (null != E) {
+                else if (null != y) {
                     var e;
-                    return null != (e = S(E)) ? e : S(d.ZP.convertSurrogateToName(E));
+                    return null != (e = T(y)) ? e : T(d.ZP.convertSurrogateToName(y));
                 }
             }
         }),
-        w = (0, c.C1)(null, N);
-    return null != I && t === f.S.STICKER
-        ? (0, O.J8)(I) && !(0, O.V9)(I)
+        P = (0, c.C1)(null, R);
+    return null != C && t === f.S.STICKER
+        ? (0, g.J8)(C) && !(0, g.V9)(C)
             ? null
-            : A
-              ? (0, r.jsx)(a.sNh, {
+            : w
+              ? (0, r.jsx)(o.sNh, {
                     id: 'unfavorite',
-                    action: () => (0, g.hW)(I.id),
-                    label: h.intl.string(h.t.XhzKyM)
+                    action: () => (0, _.hW)(C.id),
+                    label: b.intl.string(b.t.XhzKyM)
                 })
-              : (0, r.jsx)(a.sNh, {
+              : (0, r.jsx)(o.sNh, {
                     id: 'favorite',
                     action: () => {
-                        ((0, b.cQ)({
-                            sticker: I,
-                            location: j(v({}, Z), { object: y.qAy.STICKER })
+                        ((0, p.cQ)({
+                            sticker: C,
+                            location: I(O({}, A), { object: E.qAy.STICKER })
                         }),
-                            (0, g.SA)(null == I ? void 0 : I.id));
+                            (0, _.SA)(null == C ? void 0 : C.id));
                     },
-                    label: h.intl.string(h.t.kWmiPT)
+                    label: b.intl.string(b.t.kWmiPT)
                 })
-        : null != N && t === f.S.EMOJI
-          ? w
-              ? (0, r.jsx)(a.sNh, {
+        : null != R && t === f.S.EMOJI
+          ? P
+              ? (0, r.jsx)(o.sNh, {
                     id: 'unfavorite',
-                    action: () => (0, o.Xe)(N),
-                    label: h.intl.string(h.t.Ay49KC)
+                    action: () => (0, s.Xe)(R),
+                    label: b.intl.string(b.t.Ay49KC)
                 })
-              : (0, r.jsx)(a.sNh, {
+              : (0, r.jsx)(o.sNh, {
                     id: 'favorite',
                     action: () => {
                         ((0, c.J1)({
-                            emoji: N,
-                            location: j(v({}, Z), { object: y.qAy.EMOJI })
+                            emoji: R,
+                            location: I(O({}, A), { object: E.qAy.EMOJI })
                         }),
-                            (0, o.$K)(N));
+                            (0, s.$K)(R));
                     },
-                    label: h.intl.string(h.t['nNsr6+'])
+                    label: b.intl.string(b.t['nNsr6+'])
                 })
           : void 0;
 }

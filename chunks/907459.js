@@ -25,9 +25,9 @@ var r = n(255367),
     A = n(981631),
     N = n(921944),
     C = n(474936),
-    R = n(388032),
-    P = n(362450);
-let w = () => {
+    w = n(388032),
+    R = n(362450);
+let P = () => {
         var e, t, n;
         let i = (0, s.e7)([y.default], () => v.ZP.isPremium(y.default.getCurrentUser())),
             a = (0, g.N)(),
@@ -36,13 +36,13 @@ let w = () => {
             size: c.zx.Sizes.MEDIUM,
             textOptions: {
                 textOverride: i
-                    ? R.intl.string(R.t.IJI7ys)
+                    ? w.intl.string(w.t.IJI7ys)
                     : o
                       ? (0, v.Rt)({
                             intervalType: null == a || null == (t = a.subscription_trial) ? void 0 : t.interval,
                             intervalCount: null == a || null == (n = a.subscription_trial) ? void 0 : n.interval_count
                         })
-                      : R.intl.string(R.t.mr4K7O)
+                      : w.intl.string(w.t.mr4K7O)
             },
             subscriptionTier: C.Si.TIER_2
         });
@@ -53,25 +53,25 @@ let w = () => {
                 (null == t || t(N.L.DISMISS), (0, m.Ll)(), (0, I.O)());
             };
         return (0, r.jsxs)('div', {
-            className: P.editorHeader,
+            className: R.editorHeader,
             children: [
                 (0, r.jsx)(u.P3F, {
-                    className: P.closeCircleButton,
+                    className: R.closeCircleButton,
                     onClick: () => n(),
                     children: (0, r.jsx)(u.k$p, {
                         size: 'md',
                         color: 'currentColor',
-                        className: P.closeCircle
+                        className: R.closeCircle
                     })
                 }),
                 (0, r.jsxs)('div', {
-                    className: P.title,
+                    className: R.title,
                     children: [
                         (0, r.jsx)(u.X6q, {
                             variant: 'heading-lg/extrabold',
-                            children: R.intl.string(R.t['hb/wEx'])
+                            children: w.intl.string(w.t['hb/wEx'])
                         }),
-                        (0, r.jsx)(b.Z, { className: P.premiumIcon })
+                        (0, r.jsx)(b.Z, { className: R.premiumIcon })
                     ]
                 })
             ]
@@ -84,14 +84,14 @@ let w = () => {
                 (null == n || n(N.L.DISMISS), (0, m.Ll)(), (0, I.O)(), t || d.Z.open());
             };
         return (0, r.jsxs)('div', {
-            className: P.editorFooter,
+            className: R.editorFooter,
             children: [
-                i && (0, r.jsx)(w, {}),
+                i && (0, r.jsx)(P, {}),
                 (0, r.jsx)(l.z, {
                     onClick: a,
                     variant: 'secondary',
                     fullWidth: !0,
-                    text: i || t ? R.intl.string(R.t['dqH+qq']) : R.intl.string(R.t.Olc2Ky)
+                    text: i || t ? w.intl.string(w.t['dqH+qq']) : w.intl.string(w.t.Olc2Ky)
                 })
             ]
         });
@@ -122,15 +122,15 @@ function x(e) {
               value: a,
               children: (0, r.jsx)('div', {
                   ref: E,
-                  className: o()(P.editor, d ? P.editorAnimate : null),
+                  className: o()(R.editor, d ? R.editorAnimate : null),
                   'data-app-right-panel': !0,
                   children: (0, r.jsxs)(u.y5t, {
                       children: [
                           (0, r.jsx)(D, { markAsDismissed: n }),
                           (0, r.jsx)(u.Ttm, {
-                              className: P.editorBody,
+                              className: R.editorBody,
                               children: (0, r.jsx)(S.Z, {
-                                  className: P.selectionGroup,
+                                  className: R.selectionGroup,
                                   isEditor: !0
                               })
                           }),

@@ -1,16 +1,16 @@
-(n.d(t, { default: () => h }), n(388685));
+(n.d(t, { default: () => f }), n(388685));
 var r = n(255367),
-    o = n(73800),
-    i = n(481060),
+    l = n(73800),
+    o = n(481060),
     a = n(661111),
-    l = n(766411),
+    i = n(766411),
     s = n(626135),
     c = n(388080),
     d = n(981631),
-    u = n(596401),
-    p = n(388032),
-    m = n(104313);
-function _(e, t, n) {
+    h = n(596401),
+    u = n(388032),
+    g = n(104313);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,7 +23,7 @@ function _(e, t, n) {
         e
     );
 }
-function b(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,12 +34,12 @@ function b(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             }));
     }
     return e;
 }
-class g extends o.PureComponent {
+class x extends l.PureComponent {
     componentDidMount() {
         ((this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(d.rMx.CHANGE_LOG_OPENED, {}, !0));
     }
@@ -50,7 +50,7 @@ class g extends o.PureComponent {
         var e, t;
         return (0, r.jsx)(
             c.Z,
-            ((e = b({}, this.props)),
+            ((e = m({}, this.props)),
             (t = t =
                 {
                     onClose: this.close,
@@ -76,77 +76,77 @@ class g extends o.PureComponent {
         var t;
         (super(...e),
             (t = this),
-            _(this, 'maxScrolledPercentage', 0),
-            _(this, 'mountedAt', 0),
-            _(this, 'close', () => {
-                (0, i.Mr3)(u.Xd);
+            p(this, 'maxScrolledPercentage', 0),
+            p(this, 'mountedAt', 0),
+            p(this, 'close', () => {
+                (0, o.Mr3)(h.Xd);
             }),
-            _(this, 'handleScroll', (e) => {
+            p(this, 'handleScroll', (e) => {
                 let { offsetHeight: t, scrollHeight: n, scrollTop: r } = e.getScrollerState();
                 this.maxScrolledPercentage = Math.min(Math.max(this.maxScrolledPercentage, r / (n - t)), 1);
             }),
-            _(this, 'track', function (e) {
+            p(this, 'track', function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    { changeLog: o } = t.props,
-                    { date: i, revision: a } = o,
-                    l = b({ change_log_id: ''.concat(i, ':').concat(a) }, n);
+                    { changeLog: l } = t.props,
+                    { date: o, revision: a } = l,
+                    i = m({ change_log_id: ''.concat(o, ':').concat(a) }, n);
                 (r ||
-                    (l = b(
+                    (i = m(
                         {
                             seconds_open: Math.round((Date.now() - t.mountedAt) / 1000),
                             max_scrolled_percentage: 100 * parseInt(t.maxScrolledPercentage.toPrecision(4), 10)
                         },
-                        l
+                        i
                     )),
-                    s.default.track(e, l));
+                    s.default.track(e, i));
             }));
     }
 }
-function h(e) {
-    let { changelog: t, loaded: n, clientTooOld: s } = (0, l.E)();
+function f(e) {
+    let { changelog: t, loaded: n, clientTooOld: s } = (0, i.E)();
     if (
-        (o.useEffect(() => {
+        (l.useEffect(() => {
             if (n && null != t) return () => a.Z.markChangelogAsSeen(t.id, t.date);
         }, [n, t]),
         s)
     )
-        return (0, r.jsx)(i.Y0X, {
+        return (0, r.jsx)(o.Y0X, {
             transitionState: e.transitionState,
             parentComponent: 'ChangeLog',
             children: (0, r.jsx)('div', {
-                className: m.empty,
-                children: (0, r.jsx)(i.X6q, {
+                className: g.empty,
+                children: (0, r.jsx)(o.X6q, {
                     variant: 'heading-lg/medium',
-                    children: p.intl.string(p.t.V9ospq)
+                    children: u.intl.string(u.t.V9ospq)
                 })
             })
         });
     if (null == t)
         if (n)
-            return (0, r.jsx)(i.Y0X, {
+            return (0, r.jsx)(o.Y0X, {
                 transitionState: e.transitionState,
                 parentComponent: 'ChangeLog',
                 children: (0, r.jsx)('div', {
-                    className: m.empty,
-                    children: (0, r.jsx)(i.Text, {
+                    className: g.empty,
+                    children: (0, r.jsx)(o.Text, {
                         variant: 'text-md/semibold',
-                        children: p.intl.string(p.t.O1iRT0)
+                        children: u.intl.string(u.t.O1iRT0)
                     })
                 })
             });
         else
-            return (0, r.jsx)(i.Y0X, {
+            return (0, r.jsx)(o.Y0X, {
                 transitionState: e.transitionState,
                 parentComponent: 'ChangeLog',
                 children: (0, r.jsx)('div', {
-                    className: m.empty,
-                    children: (0, r.jsx)(i.$jN, { type: i.$jN.Type.WANDERING_CUBES })
+                    className: g.empty,
+                    children: (0, r.jsx)(o.$jN, { type: o.$jN.Type.WANDERING_CUBES })
                 })
             });
-    return (0, r.jsx)(i.Y0X, {
+    return (0, r.jsx)(o.Y0X, {
         transitionState: e.transitionState,
         parentComponent: 'ChangeLog',
-        children: (0, r.jsx)(g, { changeLog: t })
+        children: (0, r.jsx)(x, { changeLog: t })
     });
 }

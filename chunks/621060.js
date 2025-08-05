@@ -1,6 +1,6 @@
 (a.d(t, {
-    ZP: () => j,
-    v0: () => b
+    ZP: () => g,
+    v0: () => f
 }),
     a(388685),
     a(539854),
@@ -18,8 +18,8 @@ var n,
     x = a(823379),
     p = a(246992),
     h = a(616257),
-    b = (((n = {}).NONE = ''), (n.EXPERIMENTS = 'Experiments'), (n.EVENTS = 'Events'), (n.PREMIUM = 'Premium'), (n.BILLING = 'Billing'), (n.USERS = 'Users'), (n.GUILDS = 'Guilds'), (n.UI = 'UI'), (n.GAMES = 'Games'), (n.AUDIO_VIDEO = 'Audio / Video'), (n.DEVELOPMENT = 'Development'), n);
-let f = ['Experiments', 'Events', 'Premium', 'Billing', 'Users', 'Guilds', 'UI', 'Games', 'Audio / Video', 'Development'],
+    f = (((n = {}).NONE = ''), (n.EXPERIMENTS = 'Experiments'), (n.EVENTS = 'Events'), (n.PREMIUM = 'Premium'), (n.BILLING = 'Billing'), (n.USERS = 'Users'), (n.GUILDS = 'Guilds'), (n.UI = 'UI'), (n.GAMES = 'Games'), (n.AUDIO_VIDEO = 'Audio / Video'), (n.DEVELOPMENT = 'Development'), n);
+let b = ['Experiments', 'Events', 'Premium', 'Billing', 'Users', 'Guilds', 'UI', 'Games', 'Audio / Video', 'Development'],
     v = l.forwardRef(function (e, t) {
         let { id: a, selected: n, onClick: l, children: i } = e;
         return (0, r.jsx)(d.P3F, {
@@ -30,20 +30,20 @@ let f = ['Experiments', 'Events', 'Premium', 'Billing', 'Users', 'Guilds', 'UI',
             children: i
         });
     });
-function g(e) {
+function j(e) {
     let { tabs: t, selectedTabId: a, onSelectTab: n } = e,
         i = l.useRef(new Map()),
-        [s, b] = l.useState(() => new Set()),
-        { ref: g, width: j } = (0, u.ZP)(),
+        [s, f] = l.useState(() => new Set()),
+        { ref: j, width: g } = (0, u.ZP)(),
         _ = l.useRef(null);
     l.useEffect(() => {
         var e, n, r, l;
-        if (null == j) return;
+        if (null == g) return;
         let s = new Set(),
-            o = null != j ? j : 0;
+            o = null != g ? g : 0;
         for (let c of ((o -= null != (n = null == (e = i.current.get(a)) ? void 0 : e.getBoundingClientRect().width) ? n : 0), t)) c.id !== a && (o -= null != (l = null == (r = i.current.get(c.id)) ? void 0 : r.getBoundingClientRect().width) ? l : 0) < 0 && s.add(c.id);
-        b(s);
-    }, [t, j, g, a]);
+        f(s);
+    }, [t, g, j, a]);
     let y = l.useCallback(
         (e) => {
             var a, l, i;
@@ -51,7 +51,7 @@ function g(e) {
                 c = t.filter((e) => null == e.group),
                 u = {};
             for (let e of t) null != e.group && (null != u[(a = e.group)] || (u[a] = []), u[e.group].push(e));
-            for (let e of f)
+            for (let e of b)
                 null == (i = u[e]) ||
                     i.sort((e, t) => {
                         var a, n;
@@ -76,7 +76,7 @@ function g(e) {
                             t
                         );
                     }),
-                    f.map((e) =>
+                    b.map((e) =>
                         (0, r.jsx)(
                             d.kSQ,
                             {
@@ -107,7 +107,7 @@ function g(e) {
         children: [
             (0, r.jsxs)('div', {
                 className: h.tabBar,
-                ref: g,
+                ref: j,
                 children: [
                     t
                         .map((e) => {
@@ -218,14 +218,14 @@ function g(e) {
         ]
     });
 }
-function j(e, t) {
+function g(e, t) {
     var a, n, i;
     let { tabs: s, initialSelectedTabId: o, onChangeTab: c } = e,
         [d, u] = l.useState(null != o ? o : null == (a = s[0]) ? void 0 : a.id);
     return {
         TabBar: l.useCallback(
             () =>
-                (0, r.jsx)(g, {
+                (0, r.jsx)(j, {
                     tabs: s,
                     selectedTabId: d,
                     onSelectTab: (e) => {

@@ -1,81 +1,86 @@
-n.d(t, { n: () => f });
+n.d(t, { n: () => g });
 var r = n(255367),
     i = n(442837),
-    l = n(755721),
-    a = n(481060),
-    o = n(384275),
-    s = n(468026),
+    a = n(755721),
+    o = n(481060),
+    s = n(384275),
+    l = n(468026),
     c = n(317381),
     u = n(513202),
     d = n(626135),
-    p = n(981631),
-    h = n(388032);
-let f = (e) => {
-    let { className: t, channel: n, user: f, application: m, oauth2Token: g } = e,
-        b = (0, i.e7)([c.ZP], () => c.ZP.getSelfEmbeddedActivities());
-    if (!f.bot || null == m) return null;
-    function _() {
-        o.Z.delete(g.id);
-        let e = b.get(m.id);
+    f = n(981631),
+    _ = n(388032);
+function p(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function h(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                p(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function m(e, t, n) {
+    let i = _.intl.formatToPlainString(_.t.QWGvxM, { applicationName: e.name });
+    ((0, o.h7j)((e) =>
+        (0, r.jsx)(
+            l.default,
+            h(
+                {
+                    title: _.intl.string(_.t.DT39Aw),
+                    body: i,
+                    confirmText: _.intl.string(_.t.xUqheH),
+                    confirmColor: a.Tt.RED,
+                    cancelText: _.intl.string(_.t['ETE/oK']),
+                    onConfirm: t
+                },
+                e
+            )
+        )
+    ),
+        d.default.track(f.rMx.APP_MANAGE_CTA_CLICKED, {
+            application_id: e.id,
+            channel_id: n.id,
+            channel_type: n.type
+        }));
+}
+let g = (e) => {
+    let { className: t, channel: n, user: o, application: l, oauth2Token: d } = e,
+        f = (0, i.e7)([c.ZP], () => c.ZP.getSelfEmbeddedActivities());
+    if (!o.bot || null == l) return null;
+    function p() {
+        s.Z.delete(d.id);
+        let e = f.get(l.id);
         null != e &&
             u.Z.leaveActivity({
                 location: e.location,
-                applicationId: m.id
+                applicationId: l.id
             });
     }
-    return (0, r.jsx)(l.zx, {
+    return (0, r.jsx)(a.zx, {
         className: t,
-        size: l.Ph.SMALL,
-        color: l.zx.Colors.PRIMARY,
-        onClick: () =>
-            (function (e, t, n) {
-                let i = h.intl.formatToPlainString(h.t.QWGvxM, { applicationName: e.name });
-                ((0, a.h7j)((e) =>
-                    (0, r.jsx)(
-                        s.default,
-                        (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
-                                    )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        ((r = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: r,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0
-                                                  })
-                                                : (e[t] = r));
-                                    }));
-                            }
-                            return e;
-                        })(
-                            {
-                                title: h.intl.string(h.t.DT39Aw),
-                                body: i,
-                                confirmText: h.intl.string(h.t.xUqheH),
-                                confirmColor: l.Tt.RED,
-                                cancelText: h.intl.string(h.t['ETE/oK']),
-                                onConfirm: t
-                            },
-                            e
-                        )
-                    )
-                ),
-                    d.default.track(p.rMx.APP_MANAGE_CTA_CLICKED, {
-                        application_id: e.id,
-                        channel_id: n.id,
-                        channel_type: n.type
-                    }));
-            })(m, _, n),
-        children: h.intl.string(h.t['5S3sQE'])
+        size: a.Ph.SMALL,
+        color: a.zx.Colors.PRIMARY,
+        onClick: () => m(l, p, n),
+        children: _.intl.string(_.t['5S3sQE'])
     });
 };

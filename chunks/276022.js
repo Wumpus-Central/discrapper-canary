@@ -23,8 +23,8 @@ function g(e) {
         A = !0,
         N = (0, c.LD)(b, A),
         C = (0, c.PL)(S, A),
-        R = (0, a.e7)([f.Z], () => null != f.Z.getNewestTokenForApplication(v)),
-        { isUserApp: P, isGuildApp: w } = i.useMemo(() => {
+        w = (0, a.e7)([f.Z], () => null != f.Z.getNewestTokenForApplication(v)),
+        { isUserApp: R, isGuildApp: P } = i.useMemo(() => {
             var e, t, n, r;
             if (null == v)
                 return {
@@ -58,7 +58,7 @@ function g(e) {
     if (y === h.IlC.POPOUT) return null;
     let x = [];
     return (
-        w &&
+        P &&
             T &&
             x.push(
                 (0, r.jsx)(
@@ -71,8 +71,8 @@ function g(e) {
                     'manage-server-integration'
                 )
             ),
-        P &&
-            R &&
+        R &&
+            w &&
             x.push(
                 (0, r.jsx)(
                     o.sNh,

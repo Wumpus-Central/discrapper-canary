@@ -1,17 +1,30 @@
-(n.d(t, { Y: () => _ }), n(388685));
+(n.d(t, { Y: () => y }), n(388685));
 var r = n(255367),
     i = n(73800),
-    l = n(286379),
-    a = n(442837),
-    o = n(481060),
-    s = n(797614),
+    a = n(286379),
+    o = n(442837),
+    s = n(481060),
+    l = n(797614),
     c = n(699516),
     u = n(378298),
     d = n(359119),
-    p = n(473092),
-    h = n(177342),
-    f = n(134612),
-    m = n(388032);
+    f = n(473092),
+    _ = n(177342),
+    p = n(134612),
+    h = n(388032);
+function m(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -23,128 +36,124 @@ function g(e) {
                 })
             )),
             r.forEach(function (t) {
-                var r;
-                ((r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r));
+                m(e, t, n[t]);
             }));
     }
     return e;
+}
+function E(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
 }
 function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function _(e) {
-    let { channelId: t, warningId: _, senderId: y } = e,
-        C = i.useCallback(() => {
-            (0, u.T)(t, [_]);
-        }, [t, _]),
-        x = (0, a.e7)([c.Z], () => c.Z.isBlocked(y)),
+function y(e) {
+    let { channelId: t, warningId: m, senderId: E } = e,
+        y = i.useCallback(() => {
+            (0, u.T)(t, [m]);
+        }, [t, m]),
+        O = (0, o.e7)([c.Z], () => c.Z.isBlocked(E)),
         v = i.useMemo(
             () => ({
                 channelId: t,
-                warningId: _,
-                senderId: y,
+                warningId: m,
+                senderId: E,
                 warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2
             }),
-            [t, _, y]
+            [t, m, E]
         );
     i.useEffect(() => {
-        ((0, p.KQ)(b(g({}, v), { viewName: p.pb.SAFETY_WARNING_BANNER })), s.Z.increment({ name: l.V.SAFETY_WARNING_VIEW }));
+        ((0, f.KQ)(b(g({}, v), { viewName: f.pb.SAFETY_WARNING_BANNER })), l.Z.increment({ name: a.V.SAFETY_WARNING_VIEW }));
     }, [v]);
-    let j = i.useCallback(
+    let I = i.useCallback(
             (e) => {
-                (0, p.qc)(b(g({}, v), { cta: e }));
+                (0, f.qc)(b(g({}, v), { cta: e }));
             },
             [v]
         ),
-        O = i.useCallback(() => {
-            ((0, o.ZDy)(
+        T = i.useCallback(() => {
+            ((0, s.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e('49508'), n.e('89650')]).then(n.bind(n, 611446));
+                    let { default: e } = await Promise.all([n.e('49508'), n.e('9738'), n.e('28433')]).then(n.bind(n, 611446));
                     return (n) => {
-                        let { transitionState: i, onClose: l } = n;
+                        let { transitionState: i, onClose: a } = n;
                         return (0, r.jsx)(e, {
-                            otherUserId: y,
+                            otherUserId: E,
                             channelId: t,
-                            warningId: _,
+                            warningId: m,
                             warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
                             transitionState: i,
-                            onClose: l
+                            onClose: a
                         });
                     };
                 },
-                { modalKey: f.X_ }
+                { modalKey: p.X_ }
             ),
-                j(p.NM.USER_BANNER_OPEN_SAFETY_TOOLS));
-        }, [t, y, _, j]),
-        E = i.useCallback(() => {
-            (C(), j(p.NM.USER_BANNER_BLOCK_CONFIRM));
-        }, [C, j]),
+                I(f.NM.USER_BANNER_OPEN_SAFETY_TOOLS));
+        }, [t, E, m, I]),
         S = i.useCallback(() => {
-            (C(), j(p.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM));
-        }, [C, j]),
-        P = i.useCallback(() => {
-            (0, o.ZDy)(async () => {
+            (y(), I(f.NM.USER_BANNER_BLOCK_CONFIRM));
+        }, [y, I]),
+        A = i.useCallback(() => {
+            (y(), I(f.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM));
+        }, [y, I]),
+        N = i.useCallback(() => {
+            (0, s.ZDy)(async () => {
                 let { default: e } = await n.e('19538').then(n.bind(n, 699783));
                 return (n) => {
-                    let { transitionState: i, onClose: l } = n;
+                    let { transitionState: i, onClose: a } = n;
                     return (0, r.jsx)(e, {
                         transitionState: i,
-                        onBlock: E,
-                        onBlockAndReport: S,
+                        onBlock: S,
+                        onBlockAndReport: A,
                         onCancel: () => {
-                            (null == l || l(), j(p.NM.USER_BANNER_BLOCK_CANCEL));
+                            (null == a || a(), I(f.NM.USER_BANNER_BLOCK_CANCEL));
                         },
-                        onClose: l,
-                        userId: y,
+                        onClose: a,
+                        userId: E,
                         channelId: t
                     });
                 };
             });
-        }, [E, S, y, t, j]);
-    return (0, r.jsx)(h.Q, {
+        }, [S, A, E, t, I]);
+    return (0, r.jsx)(_.Q, {
         channelId: t,
-        warningId: _,
-        senderId: y,
+        warningId: m,
+        senderId: E,
         warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
-        header: m.intl.string(m.t.ZzlB5u),
-        description: m.intl.string(m.t['D1aU+v']),
-        onDismiss: C,
+        header: h.intl.string(h.t.ZzlB5u),
+        description: h.intl.string(h.t['D1aU+v']),
+        onDismiss: y,
         buttons: [
             {
-                text: m.intl.string(m.t.Qyu4UF),
+                text: h.intl.string(h.t.Qyu4UF),
                 variant: 'primary',
-                onClick: O
+                onClick: T
             },
-            ...(x
+            ...(O
                 ? []
                 : [
                       {
-                          text: m.intl.string(m.t['7q0bNT']),
+                          text: h.intl.string(h.t['7q0bNT']),
                           variant: 'secondary',
-                          onClick: P
+                          onClick: N
                       }
                   ])
         ]

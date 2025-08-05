@@ -1,6 +1,6 @@
 (n.d(t, {
     Z: () => D,
-    u: () => P
+    u: () => R
 }),
     n(388685));
 var r = n(255367),
@@ -77,8 +77,8 @@ function N(e, t) {
     );
 }
 let C = O.Hz.CHAT,
-    R = [m.ZP.getByName('thumbsup'), m.ZP.getByName('eyes'), m.ZP.getByName('laughing'), m.ZP.getByName('watermelon'), m.ZP.getByName('fork_and_knife'), m.ZP.getByName('yum')].filter(b.lm);
-function P(e) {
+    w = [m.ZP.getByName('thumbsup'), m.ZP.getByName('eyes'), m.ZP.getByName('laughing'), m.ZP.getByName('watermelon'), m.ZP.getByName('fork_and_knife'), m.ZP.getByName('yum')].filter(b.lm);
+function R(e) {
     let { emoji: t, isDisabled: n = !1, onClick: a, className: s } = e,
         f = i.useRef(null),
         _ = (0, d.Z)(f);
@@ -109,7 +109,7 @@ function P(e) {
         })
     });
 }
-function w(e) {
+function P(e) {
     let { otherAccessories: t, isEmojiPickerExpanded: n, onSetExpanded: i, onFocus: a } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -132,8 +132,8 @@ function D(e) {
     let { channel: t, title: n, closePopout: a, onFocus: l, onSelectEmoji: u, onSelectDisabledEmoji: d, onExpandedToggle: p, emojiSearchProps: m, recentlyUsedEmojis: b, analyticsOverride: T, ref: A } = e,
         D = (0, f.Dt)(),
         [L, x] = i.useState(!1),
-        M = (0, _.wC)(t.guild_id),
-        k = (0, s.uniqBy)([...M, ...R], 'name')
+        k = (0, _.wC)(t.guild_id),
+        j = (0, s.uniqBy)([...k, ...w], 'name')
             .filter(
                 (e) =>
                     !E.ZP.isEmojiFilteredOrLocked({
@@ -143,17 +143,17 @@ function D(e) {
                     })
             )
             .slice(0, y.e5);
-    null != b && b.length > 0 && k.splice(k.length - 1, 1, b[0]);
-    let j = (e) => {
+    null != b && b.length > 0 && j.splice(j.length - 1, 1, b[0]);
+    let M = (e) => {
             (x(e), null == p || p(e));
         },
         U = (e) => {
             let { emoji: t, willClose: n } = e;
             if (null == t && n) return void a();
-            (null != t && u(t), j(!n), n && g.kJ.setSearchPlaceholder(null));
+            (null != t && u(t), M(!n), n && g.kJ.setSearchPlaceholder(null));
         },
         G = (e) => {
-            null != e && e.key !== v.vn.TAB && (e.key !== v.vn.ENTER || e.shiftKey ? j(!0) : j(!L));
+            null != e && e.key !== v.vn.TAB && (e.key !== v.vn.ENTER || e.shiftKey ? M(!0) : M(!L));
         };
     return (0, r.jsxs)(c.VqE, {
         'aria-labelledby': D,
@@ -182,10 +182,10 @@ function D(e) {
                         wrapper: 'div',
                         pickerIntention: C,
                         searchProps: N(S({}, m), {
-                            accessory: (0, r.jsx)(w, {
+                            accessory: (0, r.jsx)(P, {
                                 otherAccessories: null == m ? void 0 : m.accessory,
                                 isEmojiPickerExpanded: L,
-                                onSetExpanded: j,
+                                onSetExpanded: M,
                                 onFocus: l
                             }),
                             onKeyDown: G
@@ -195,7 +195,7 @@ function D(e) {
                         className: I.slotsContainer,
                         children: (0, r.jsx)('div', {
                             className: o()(I.slots, I.slotsWide),
-                            children: k.map((e) => {
+                            children: j.map((e) => {
                                 let n = E.ZP.isEmojiDisabled({
                                     emoji: e,
                                     channel: t,
@@ -211,7 +211,7 @@ function D(e) {
                                             'aria-label': e.name,
                                             tooltipClassName: I.tooltipContainer,
                                             color: c.ua7.Colors.BRAND,
-                                            children: (0, r.jsx)(P, {
+                                            children: (0, r.jsx)(R, {
                                                 emoji: e,
                                                 isDisabled: n,
                                                 onClick: () => {

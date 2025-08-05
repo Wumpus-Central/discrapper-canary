@@ -102,9 +102,9 @@ function O(e) {
         N = null != c && null != c.primaryColor && null != c.secondaryColor,
         C = S && N,
         {
-            gradientStyle: R,
-            gradientClassname: P,
-            gradientGlowClassname: w
+            gradientStyle: w,
+            gradientClassname: R,
+            gradientGlowClassname: P
         } = (0, f.Ic)({
             colorStrings: c,
             roleStyle: 'username',
@@ -114,15 +114,15 @@ function O(e) {
         L = {
             className: o()(p.name, g, {
                 [p.username]: S,
-                [P]: C
+                [R]: C
             }),
             children: D
         },
         x = {
-            className: o()(p.nameGlow, w),
+            className: o()(p.nameGlow, P),
             children: n
         },
-        M = A
+        k = A
             ? (0, r.jsx)(_.F, {
                   color: a,
                   colors: N ? c : null,
@@ -136,10 +136,10 @@ function O(e) {
         onMouseEnter: I,
         onMouseLeave: T,
         children: [
-            'left' === d && M,
+            'left' === d && k,
             (0, r.jsxs)('span', {
                 className: p.nameContainer,
-                style: m({ color: S && !N && null != a ? a : void 0 }, C ? R : {}),
+                style: m({ color: S && !N && null != a ? a : void 0 }, C ? w : {}),
                 children: [
                     null != b
                         ? (0, r.jsx)(
@@ -171,7 +171,7 @@ function O(e) {
                             : (0, r.jsx)('span', m({ 'aria-hidden': !0 }, x)))
                 ]
             }),
-            'right' === d && M
+            'right' === d && k
         ]
     });
 }

@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(755721),
     o = n(298213),
-    a = n(388032),
-    s = n(884492);
+    s = n(388032),
+    a = n(884492);
 function c(e) {
     let { userId: t, applicationId: n } = e,
         [c, u] = i.useState(!1),
@@ -40,27 +40,27 @@ function c(e) {
             [n, t]
         );
     return (0, r.jsxs)('div', {
-        className: s.friendRequestContainer,
+        className: a.friendRequestContainer,
         children: [
             (0, r.jsx)(l.zx, {
-                className: s.acceptButton,
+                className: a.acceptButton,
                 look: l.zx.Looks.FILLED,
                 color: l.zx.Colors.GREEN,
                 size: l.zx.Sizes.NONE,
                 submitting: c,
                 disabled: d,
                 onClick: f,
-                children: a.intl.string(a.t.ZcibdX)
+                children: s.intl.string(s.t.ZcibdX)
             }),
             (0, r.jsx)(l.zx, {
-                className: s.ignoreButton,
+                className: a.ignoreButton,
                 look: l.zx.Looks.FILLED,
                 color: l.zx.Colors.PRIMARY,
                 size: l.zx.Sizes.NONE,
                 submitting: d,
                 disabled: c,
                 onClick: p,
-                children: a.intl.string(a.t.xuio0N)
+                children: s.intl.string(s.t.xuio0N)
             })
         ]
     });

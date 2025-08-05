@@ -1,10 +1,10 @@
-(n.d(t, { V: () => O }), n(388685));
+(n.d(t, { V: () => _ }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(481060),
-    a = n(550532),
-    s = n(371991),
+    s = n(550532),
+    a = n(371991),
     c = n(561308),
     u = n(594190),
     d = n(695346),
@@ -26,17 +26,17 @@ function b(e) {
         })
     });
 }
-function _(e) {
+function O(e) {
     var t;
     let { onClick: n } = e,
-        h = (0, l.e7)([a.Z], () => a.Z.getFakeGameData()),
+        h = (0, l.e7)([s.Z], () => s.Z.getFakeGameData()),
         p = (0, l.e7)([u.ZP], () => u.ZP.getVisibleGame()),
         b = null != (t = null == h ? void 0 : h.start) ? t : null == p ? void 0 : p.start,
-        _ = d.SE.useSetting().length > 0,
-        { now: O } = (0, s.tS)(),
-        y = (0, i.useMemo)(() => (null == b ? null : (0, c.T_)({ start: b }, O)), [b, O]);
+        O = d.SE.useSetting().length > 0,
+        { now: _ } = (0, a.tS)(),
+        y = (0, i.useMemo)(() => (null == b ? null : (0, c.T_)({ start: b }, _)), [b, _]);
     if (null == b) return null;
-    let C = [...(_ ? [g.intl.string(f.default.jfDsyM)] : []), g.intl.string(g.t.BMTj29), y];
+    let C = [...(O ? [g.intl.string(f.default.jfDsyM)] : []), g.intl.string(g.t.BMTj29), y];
     return (0, r.jsx)(o.P3F, {
         className: m.container,
         onClick: n,
@@ -49,10 +49,10 @@ function _(e) {
         })
     });
 }
-function O(e) {
+function _(e) {
     let { onClick: t } = e,
         { isEnabled: n, showActivitySharingIndicatorWhenSharing: i } = (0, p.D)('not sharing link'),
-        a = d.G6.useSetting(),
-        s = (0, l.e7)([h.Z], () => h.Z.getStatus());
-    return !n || __OVERLAY__ ? null : a && s !== o.Skl.INVISIBLE ? (i ? (0, r.jsx)(_, { onClick: t }) : null) : (0, r.jsx)(b, { onClick: t });
+        s = d.G6.useSetting(),
+        a = (0, l.e7)([h.Z], () => h.Z.getStatus());
+    return !n || __OVERLAY__ ? null : s && a !== o.Skl.INVISIBLE ? (i ? (0, r.jsx)(O, { onClick: t }) : null) : (0, r.jsx)(b, { onClick: t });
 }

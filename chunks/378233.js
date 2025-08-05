@@ -1,17 +1,17 @@
 (n.d(t, {
     B0: () => C,
-    Hc: () => w,
+    Hc: () => P,
     J8: () => D,
     Q6: () => N,
-    V9: () => M,
-    WD: () => P,
+    V9: () => k,
+    WD: () => R,
     Zt: () => I,
     Zv: () => S,
     _V: () => A,
     cv: () => x,
     gM: () => U,
     jl: () => L,
-    z: () => R
+    z: () => w
 }),
     n(413496),
     n(433524),
@@ -94,15 +94,15 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
         return ''.concat(location.protocol).concat(p).concat(o);
     },
     C = (e) => null != e.match('development' !== m ? O : v),
-    R = (e) => ({
+    w = (e) => ({
         type: d.Ih.PACK,
         id: e.id,
         name: e.name,
         stickers: e.stickers,
         previewSticker: I(e)
     }),
-    P = (e, t) => (e === f.yr.ANIMATE_ON_INTERACTION ? t : e !== f.yr.NEVER_ANIMATE),
-    w = (e, t, n, r) => {
+    R = (e, t) => (e === f.yr.ANIMATE_ON_INTERACTION ? t : e !== f.yr.NEVER_ANIMATE),
+    P = (e, t, n, r) => {
         if (o.Z.getUploadCount(n, r) > 0) return !0;
         let i = c.Z.getStickerPreview(n, r);
         if (null != i && i.length > 0) return !0;
@@ -119,16 +119,16 @@ let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: 
     D = (e) => e.type === d.n0.GUILD,
     L = (e) => e.type === d.n0.STANDARD,
     x = (e) => (e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : []),
-    M = (e) => {
+    k = (e) => {
         if (null === e) return !1;
         let t = e.guild_id;
         return void 0 !== a.Z.getGuild(t);
     },
-    k = [];
-function j() {
+    j = [];
+function M() {
     var e, t;
-    return null != (t = null == (e = i.Z.frecencyWithoutFetchingLatest.favoriteStickers) ? void 0 : e.stickerIds) ? t : k;
+    return null != (t = null == (e = i.Z.frecencyWithoutFetchingLatest.favoriteStickers) ? void 0 : e.stickerIds) ? t : j;
 }
 function U(e) {
-    return j().includes(e);
+    return M().includes(e);
 }

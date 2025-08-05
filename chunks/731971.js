@@ -5,10 +5,10 @@
     _J: () => m,
     aP: () => f,
     e7: () => g,
-    h6: () => _,
+    h6: () => O,
     oE: () => p,
     pB: () => h,
-    y: () => O,
+    y: () => _,
     yS: () => C,
     yr: () => v
 }),
@@ -17,7 +17,7 @@ var r = n(97519),
     i = n(524437),
     l = n(695346),
     o = n(594174);
-function a(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function a(e) {
     }
     return e;
 }
-function s(e, t) {
+function a(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -79,49 +79,49 @@ let d = (0, r.U)((e) => ({
         touched: !1,
         setNickname: (t) =>
             e((e) =>
-                s(a({}, e), {
+                a(s({}, e), {
                     nickname: t,
                     touched: !0
                 })
             ),
         setDmsAllowed: (t) =>
             e((e) =>
-                s(a({}, e), {
+                a(s({}, e), {
                     dmsAllowed: t,
                     touched: !0
                 })
             ),
         setShowActivity: (t) =>
             e((e) =>
-                s(a({}, e), {
+                a(s({}, e), {
                     showActivity: t,
                     touched: !0
                 })
             ),
         setMutedServer: (t) =>
             e((e) =>
-                s(a({}, e), {
+                a(s({}, e), {
                     mutedServer: t,
                     touched: !0
                 })
             ),
         setInviteCode: (t) =>
             e((e) =>
-                s(a({}, e), {
+                a(s({}, e), {
                     inviteCode: t,
                     touched: !0
                 })
             ),
         setGuildId: (t) =>
             e((e) =>
-                s(a({}, e), {
+                a(s({}, e), {
                     guildId: t,
                     touched: !0
                 })
             ),
         initialize: (t, n, r) =>
             e((e) =>
-                s(a({}, e), {
+                a(s({}, e), {
                     guildSize: t,
                     inviteCode: n,
                     guildId: r,
@@ -155,8 +155,8 @@ let d = (0, r.U)((e) => ({
     g = () => d.getState().inviteCode,
     m = () => d.getState().guildId,
     b = () => d.getState().touched,
-    _ = () => d.getState().dmsAllowed,
-    O = () => d.getState().nickname,
+    O = () => d.getState().dmsAllowed,
+    _ = () => d.getState().nickname,
     y = () => d.getState().showActivity,
     C = () => d.getState().mutedServer,
     v = () => {

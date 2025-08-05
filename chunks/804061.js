@@ -35,14 +35,14 @@ r(
                 A,
                 N = o(this),
                 C = 0,
-                R = '';
+                w = '';
             if (!l(e)) {
                 if ((n = c(e)) && !~E(u(o(f(e))), 'g')) throw new g('`.replaceAll` does not allow non-global regexes');
                 if ((r = d(e, m))) return i(r, e, N, t);
                 if (h && n) return b(u(N), e, t);
             }
-            for (a = u(N), p = u(e), (v = s(t)) || (t = u(t)), T = O(1, (I = p.length)), S = E(a, p); -1 !== S; ) ((A = v ? u(t(p, S, a)) : _(p, a, S, [], void 0, t)), (R += y(a, C, S) + A), (C = S + I), (S = S + T > a.length ? -1 : E(a, p, S + T)));
-            return (C < a.length && (R += y(a, C)), R);
+            for (a = u(N), p = u(e), (v = s(t)) || (t = u(t)), T = O(1, (I = p.length)), S = E(a, p); -1 !== S; ) ((A = v ? u(t(p, S, a)) : _(p, a, S, [], void 0, t)), (w += y(a, C, S) + A), (C = S + I), (S = S + T > a.length ? -1 : E(a, p, S + T)));
+            return (C < a.length && (w += y(a, C)), w);
         }
     }
 );

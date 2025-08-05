@@ -76,14 +76,14 @@ function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = R(e, t);
+        i = w(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function R(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -92,12 +92,12 @@ function R(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let P = [];
-function w(e) {
+let R = [];
+function P(e) {
     let { channelId: t, type: n, ignoreFile: a, smallAttachments: T = !1 } = e,
         A = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled),
-        R = (0, p.Z)('attachments', l.hy.HORIZONTAL),
-        w = (0, c.e7)([m.Z], () => m.Z.getUploads(t, n.drafts.type)),
+        w = (0, p.Z)('attachments', l.hy.HORIZONTAL),
+        P = (0, c.e7)([m.Z], () => m.Z.getUploads(t, n.drafts.type)),
         {
             isApplicationCommand: D,
             commandOptions: L,
@@ -107,7 +107,7 @@ function w(e) {
             if (null == e)
                 return {
                     isApplicationCommand: !1,
-                    commandOptions: P,
+                    commandOptions: R,
                     commandOptionStates: null
                 };
             let n = h.Z.getOptionStates(t);
@@ -117,7 +117,7 @@ function w(e) {
                 commandOptionStates: n
             };
         }),
-        M = i.useMemo(() => {
+        k = i.useMemo(() => {
             var e;
             return null !=
                 (e =
@@ -130,7 +130,7 @@ function w(e) {
                 ? e
                 : [];
         }, [L, x]),
-        [k, j] = i.useState([]);
+        [j, M] = i.useState([]);
     i.useEffect(() => {
         let e = () => {
             d.Z.clearAll(t, n.drafts.type);
@@ -138,16 +138,16 @@ function w(e) {
         return (u.Z.subscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e), () => u.Z.unsubscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e));
     }, [t, n]);
     let U = i.useCallback(() => {
-        R.focusFirstVisibleItem();
-    }, [R]);
+        w.focusFirstVisibleItem();
+    }, [w]);
     (0, g.yp)({
         event: O.CkL.FOCUS_ATTACHMENT_AREA,
         handler: U
     });
     let G = {
             isApplicationCommand: D,
-            previousUploadOptions: k,
-            uploadOptions: M
+            previousUploadOptions: j,
+            uploadOptions: k
         },
         B = i.useRef(G);
     (i.useEffect(() => {
@@ -163,14 +163,14 @@ function w(e) {
                     e.forEach((e) => {
                         d.Z.remove(t, e.name, n.drafts.type);
                     }),
-                    j(i));
+                    M(i));
             }
-        }, [t, M.length, n]));
-    let V = w.filter((e) => e.filename !== a);
-    return (!D && 0 === V.length) || (D && 0 === M.length)
+        }, [t, k.length, n]));
+    let Z = P.filter((e) => e.filename !== a);
+    return (!D && 0 === Z.length) || (D && 0 === k.length)
         ? null
         : (0, r.jsx)(s.bG, {
-              navigator: R,
+              navigator: w,
               children: (0, r.jsx)(s.SJ, {
                   children: (e) => {
                       var { ref: i } = e,
@@ -180,7 +180,7 @@ function w(e) {
                           N(S({ ref: i }, a), {
                               className: o()(v.channelAttachmentArea, I.scrollbarGhost),
                               children: D
-                                  ? M.map((e) =>
+                                  ? k.map((e) =>
                                         (0, r.jsx)(
                                             b.Z,
                                             {
@@ -191,7 +191,7 @@ function w(e) {
                                             e.name
                                         )
                                     )
-                                  : V.map((e) =>
+                                  : Z.map((e) =>
                                         (0, r.jsx)(
                                             y.Z,
                                             {
@@ -214,7 +214,7 @@ function w(e) {
 function D(e) {
     let { channelId: t, type: n, canAttachFiles: i, ignoreFile: a, smallAttachments: o = !1 } = e;
     return i
-        ? (0, r.jsx)(w, {
+        ? (0, r.jsx)(P, {
               channelId: t,
               type: n,
               ignoreFile: a,

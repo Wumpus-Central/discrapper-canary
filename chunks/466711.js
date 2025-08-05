@@ -63,7 +63,7 @@ function C(e, t) {
     }
     return n;
 }
-function R(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,7 +74,7 @@ function R(e, t) {
         e
     );
 }
-function P(e) {
+function R(e) {
     return (0, r.jsx)(y.Z, {
         className: S.button,
         'aria-label': I.intl.string(I.t.Z1RnTk),
@@ -92,7 +92,7 @@ function P(e) {
         })
     });
 }
-function w(e) {
+function P(e) {
     let { Component: t, events: n, play: i } = (0, s.$)(),
         a = () => {
             var t;
@@ -100,7 +100,7 @@ function w(e) {
         };
     return (0, r.jsx)(
         y.Z,
-        R(
+        w(
             N(
                 {
                     className: S.button,
@@ -148,11 +148,11 @@ function L(e) {
         A = (0, a.e7)([h.Z], () => !(null === h.Z || void 0 === h.Z ? void 0 : h.Z.hasLayers())),
         N = (0, a.e7)([m.default], () => m.default.getCurrentUser()),
         C = null != N ? E.default.age(N.id) : 0,
-        { giftBoxAnimation: R, trinketsAnimation: L } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
+        { giftBoxAnimation: w, trinketsAnimation: L } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
         x = null != n.firstTimeNotice && !s && A && C >= D,
-        [M, k] = (0, f.XR)(x ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, d.t)(o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
-        j = null != M,
-        U = I || j,
+        [k, j] = (0, f.XR)(x ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, d.t)(o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
+        M = null != k,
+        U = I || M,
         G = (0, b.Ft)(g);
     if (s) return null;
     let B = () => {
@@ -169,21 +169,21 @@ function L(e) {
                 }
             });
         },
-        V = () => {
-            (S(!1), k(v.L.TAKE_ACTION), B());
+        Z = () => {
+            (S(!1), j(v.L.TAKE_ACTION), B());
         },
         F =
-            void 0 !== R
-                ? (0, r.jsx)(P, {
-                      config: R,
+            void 0 !== w
+                ? (0, r.jsx)(R, {
+                      config: w,
                       hovered: U,
-                      onClick: V
+                      onClick: Z
                   })
                 : void 0 !== L
-                  ? (0, r.jsx)(w, {
+                  ? (0, r.jsx)(P, {
                         config: L,
                         hovered: U,
-                        onClick: V
+                        onClick: Z
                     })
                   : (0, r.jsx)(l.OgN, {});
     return (0, r.jsx)('div', {
@@ -195,11 +195,11 @@ function L(e) {
             S(!1);
         },
         children:
-            void 0 !== n.firstTimeNotice && j
+            void 0 !== n.firstTimeNotice && M
                 ? (0, r.jsx)(p.Z, {
                       onComplete: () => S(!1),
                       onCheckItOutClick: B,
-                      markAsDismissed: k,
+                      markAsDismissed: j,
                       config: n.firstTimeNotice,
                       children: F
                   })

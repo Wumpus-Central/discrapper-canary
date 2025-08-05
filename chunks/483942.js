@@ -7,7 +7,7 @@ n.d(t, {
     J9: () => c,
     Jg: () => T,
     L$: () => s,
-    OP: () => R,
+    OP: () => w,
     Pv: () => f,
     Qj: () => p,
     d3: () => N,
@@ -349,7 +349,7 @@ let o = (0, i.Z)({
         ],
         commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN
     }),
-    R = (0, i.Z)({
+    w = (0, i.Z)({
         id: '2025-07_apex_aa_validation__clientside__collectiblesshopopen__usercountry',
         kind: 'user',
         label: 'Apex AA Validation Collectibles Shop Open User Country',

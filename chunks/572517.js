@@ -1,45 +1,45 @@
-n.d(t, { c: () => x });
-var i = n(255367),
-    r = n(442837),
-    l = n(780384),
-    s = n(481060),
-    a = n(410030),
-    o = n(607070),
-    C = n(987209),
-    d = n(717401),
-    c = n(286961),
-    u = n(897942),
-    p = n(42154);
-function x() {
+t.d(r, { c: () => _ });
+var n = t(255367),
+    i = t(442837),
+    l = t(780384),
+    o = t(481060),
+    a = t(410030),
+    s = t(607070),
+    d = t(987209),
+    C = t(717401),
+    c = t(286961),
+    u = t(897942),
+    p = t(42154);
+function _() {
     var e;
-    let t = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
-        n = (0, a.ZP)(),
-        x = (0, l.wj)(n),
-        h = (0, c.Z)(),
-        f = null == h ? void 0 : h.planSelectionBanner,
-        { claimableRewards: j } = (0, C.wD)();
-    if (null == f || null == j) return null;
-    let m =
-            null == (e = f.gradientConfig)
+    let r = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+        t = (0, a.ZP)(),
+        _ = (0, l.wj)(t),
+        f = (0, c.Z)(),
+        x = null == f ? void 0 : f.planSelectionBanner,
+        { claimableRewards: m } = (0, d.wD)();
+    if (null == x || null == m) return null;
+    let h =
+            null == (e = x.gradientConfig)
                 ? void 0
-                : e.call(f, {
-                      isDarkMode: x,
+                : e.call(x, {
+                      isDarkMode: _,
                       isAndroid: !1
                   }),
-        _ = (0, d.Tl)(m);
-    return (0, i.jsxs)('div', {
+        j = (0, C.Tl)(h);
+    return (0, n.jsxs)('div', {
         className: p.promotionalFooterBanner,
-        style: _,
+        style: j,
         children: [
-            (0, i.jsx)(u.Z, {
-                claimableRewards: j,
-                maxRewardImageSrc: f.getImageUrl(x, t),
-                size: s.EFr.SIZE_40
+            (0, n.jsx)(u.Z, {
+                claimableRewards: m,
+                maxRewardImageSrc: x.getImageUrl(_, r),
+                size: o.EFr.SIZE_40
             }),
-            (0, i.jsx)(s.Text, {
+            (0, n.jsx)(o.Text, {
                 variant: 'text-md/medium',
                 className: p.bannerText,
-                children: f.desktopBannerText(j.length)
+                children: x.desktopBannerText(m.length)
             })
         ]
     });

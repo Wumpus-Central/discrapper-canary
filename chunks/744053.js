@@ -1,4 +1,4 @@
-e.exports = {
+A.exports = {
     container: 'container_fcf29c',
     flexContainer: 'flexContainer_fcf29c',
     shrinkingContainer: 'shrinkingContainer_fcf29c',

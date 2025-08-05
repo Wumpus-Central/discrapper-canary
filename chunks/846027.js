@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => R });
 var r = n(570140),
     i = n(710845),
     a = n(460181),
@@ -79,8 +79,8 @@ let S = {
         trackToggleSelfMute(e) {},
         trackToggleSelfDeaf(e) {}
     },
-    { enable: A, isNotSupported: N, trackToggleSelfMute: C, trackToggleSelfDeaf: R } = (S = n(929782)),
-    P = {
+    { enable: A, isNotSupported: N, trackToggleSelfMute: C, trackToggleSelfDeaf: w } = (S = n(929782)),
+    R = {
         enable: A,
         toggleSelfMute() {
             var e;
@@ -127,7 +127,7 @@ let S = {
         toggleSelfDeaf() {
             let { context: e = E.Yn.DEFAULT, syncRemote: t = !0, usedKeybind: n = !1, location: i } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
             N() ||
-                (R({
+                (w({
                     usedKeybind: n,
                     location: i
                 }),

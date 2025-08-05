@@ -1,7 +1,7 @@
 n.d(t, {
-    Wf: () => R,
-    ZP: () => w,
-    wz: () => P
+    Wf: () => w,
+    ZP: () => P,
+    wz: () => R
 });
 var r = n(255367),
     i = n(73800),
@@ -144,7 +144,7 @@ function C(e, t, n, i, a) {
           )
         : d();
 }
-function R(e) {
+function w(e) {
     var t;
     let { node: n, stateKey: o, children: s } = e,
         l = (0, a.e7)(
@@ -195,7 +195,7 @@ function R(e) {
               children: [O.GI, s]
           });
 }
-function P(e) {
+function R(e) {
     let { commandId: t, commandName: n, commandDescription: i, applicationId: l, onClick: c } = e,
         d = (0, a.e7)([g.Z], () => g.Z.getChannelId()),
         f = (e) => {
@@ -218,10 +218,10 @@ function P(e) {
         }
     });
 }
-function w(e) {
+function P(e) {
     return {
         react: (e, t, n) =>
-            (0, r.jsx)(R, {
+            (0, r.jsx)(w, {
                 node: e,
                 stateKey: n.key,
                 children: t(e.content, n)

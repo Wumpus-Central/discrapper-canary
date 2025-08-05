@@ -1,12 +1,12 @@
 (n.d(t, {
     J9: () => l.J,
     Jt: () => x,
-    K0: () => P,
+    K0: () => R,
     Pd: () => g,
     f$: () => s.f$,
     lg: () => D,
     sX: () => s.Hx,
-    tn: () => R,
+    tn: () => w,
     yZ: () => c.H
 }),
     n(388685),
@@ -112,7 +112,7 @@ function E(e, t, n, r, o) {
             }),
         null != t.context)
     ) {
-        let e = M(t.context);
+        let e = k(t.context);
         null != e && b.set('X-Context-Properties', e);
     }
     (null != t.retried && 0 !== t.retried && b.set('X-Failed-Requests', ''.concat(t.retried)),
@@ -126,7 +126,7 @@ function E(e, t, n, r, o) {
     let y = () => {
         ((t.backoff = null != t.backoff ? t.backoff : new a.Z()), (t.retried = (null != t.retried ? t.retried : 0) + 1), t.backoff.fail(() => L(t.url).then(() => E(e, t, n, r, o))));
     };
-    (null == w || null == (d = w.prepareRequest) || d.call(w, b),
+    (null == P || null == (d = P.prepareRequest) || d.call(P, b),
         b.ok((e) => null != e.status),
         b.then(
             (i) => {
@@ -158,7 +158,7 @@ function E(e, t, n, r, o) {
                                     err: e
                                 }));
                     };
-                if ((null == t || null == (a = t.interceptResponse) ? void 0 : a.call(t, i, h, b)) !== !0 && (null == w || null == (c = w.interceptResponse) ? void 0 : c.call(w, i, h, b)) !== !0) {
+                if ((null == t || null == (a = t.interceptResponse) ? void 0 : a.call(t, i, h, b)) !== !0 && (null == P || null == (c = P.interceptResponse) ? void 0 : c.call(P, i, h, b)) !== !0) {
                     if (i.ok) n(d);
                     else {
                         if (t.oldFormErrors && (null == d || null == (u = d.body) ? void 0 : u.code) === s.f$) {
@@ -266,7 +266,7 @@ let T = I.bind(null, 'get'),
     A = I.bind(null, 'put'),
     N = I.bind(null, 'patch'),
     C = I.bind(null, 'del'),
-    R = {
+    w = {
         get: T,
         post: S,
         put: A,
@@ -284,19 +284,19 @@ if (n.g.isServerRendering) {
         });
     ((T = e), (S = e), (A = e), (N = e), (C = e));
 }
-function P() {
+function R() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return 'https:' + window.GLOBAL_ENV.API_ENDPOINT + (e ? '/v'.concat(window.GLOBAL_ENV.API_VERSION) : '');
 }
-let w = null;
+let P = null;
 function D(e) {
-    w = e;
+    P = e;
 }
 let L = () => Promise.resolve();
 function x(e) {
     L = e;
 }
-function M(e) {
+function k(e) {
     try {
         return u.from(JSON.stringify(e)).toString('base64');
     } catch (e) {

@@ -1,30 +1,30 @@
-e.d(n, { default: () => c });
-var i = e(255367);
-e(73800);
-var r = e(82659),
-    l = e(287734),
-    a = e(471253),
-    u = e(388032);
-function c(t) {
-    let { channel: n, transitionState: e, onClose: c } = t;
-    function o() {
-        (l.default.disconnect(), c());
+n.d(i, { default: () => o });
+var a = n(255367);
+n(73800);
+var s = n(82659),
+    r = n(287734),
+    c = n(471253),
+    e = n(388032);
+function o(t) {
+    let { channel: i, transitionState: n, onClose: o } = t;
+    function l() {
+        (r.default.disconnect(), o());
     }
-    return (0, i.jsx)(r.Modal, {
-        transitionState: e,
-        title: u.intl.string(u.t.pADdJi),
-        subtitle: u.intl.string(u.t.mT7jwM),
-        onClose: c,
+    return (0, a.jsx)(s.Modal, {
+        transitionState: n,
+        title: e.intl.string(e.t.pADdJi),
+        subtitle: e.intl.string(e.t.mT7jwM),
+        onClose: o,
         actions: [
             {
-                text: u.intl.string(u.t.xTwqz8),
-                onClick: o,
+                text: e.intl.string(e.t.xTwqz8),
+                onClick: l,
                 variant: 'secondary'
             },
             {
-                text: u.intl.string(u.t['sBP/1t']),
+                text: e.intl.string(e.t['sBP/1t']),
                 onClick: function () {
-                    ((0, a.NZ)(n), o());
+                    ((0, c.NZ)(i), l());
                 },
                 variant: 'critical-primary'
             }

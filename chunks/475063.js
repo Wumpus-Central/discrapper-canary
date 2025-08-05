@@ -90,9 +90,9 @@ let v = (0, s.Z)(),
     S = 10,
     A = 7.23;
 function N(e) {
-    var { value: t, placeholder: n = '', autoFocus: a = !1, minLength: s, maxLength: m, error: E, defaultDirty: O, showCharacterCountFullPadding: N, showCharacterCount: P, showRemainingCharacterCount: w, 'aria-labelledby': D, rows: L = 3 } = e,
+    var { value: t, placeholder: n = '', autoFocus: a = !1, minLength: s, maxLength: m, error: E, defaultDirty: O, showCharacterCountFullPadding: N, showCharacterCount: R, showRemainingCharacterCount: P, 'aria-labelledby': D, rows: L = 3 } = e,
         x = y(e, ['value', 'placeholder', 'autoFocus', 'minLength', 'maxLength', 'error', 'defaultDirty', 'showCharacterCountFullPadding', 'showCharacterCount', 'showRemainingCharacterCount', 'aria-labelledby', 'rows']);
-    let M = (0, f.m)({
+    let k = (0, f.m)({
             validateOn: 'change',
             error: E,
             value: t,
@@ -100,13 +100,13 @@ function N(e) {
             maxLength: m,
             defaultDirty: O
         }),
-        k = i.useContext(c.q3),
-        j = null != D ? D : null == k ? void 0 : k.titleId,
+        j = i.useContext(c.q3),
+        M = null != D ? D : null == j ? void 0 : j.titleId,
         U = i.useMemo(() => {
             let e = [],
-                t = null == k ? void 0 : k.errorId;
+                t = null == j ? void 0 : j.errorId;
             return (null != t && e.push(t), null != E ? e.push(v) : (null != m && e.push(T), null != s && e.push(I)), e.length > 0 ? e.join(' ') : void 0);
-        }, [E, null == k ? void 0 : k.errorId, m, s]),
+        }, [E, null == j ? void 0 : j.errorId, m, s]),
         G = i.useMemo(() => {
             if (null == m) return S;
             let e = ''.concat(m).length;
@@ -114,10 +114,10 @@ function N(e) {
         }, [m, N]),
         B = (e) => {
             let { onChange: t } = x;
-            (null == t || t(e.currentTarget.value), M.setShouldValidate(!0));
+            (null == t || t(e.currentTarget.value), k.setShouldValidate(!0));
         };
     return (0, r.jsxs)(d.J, {
-        validation: M,
+        validation: k,
         children: [
             (0, r.jsx)(l.t, {
                 children: (0, r.jsx)(
@@ -126,9 +126,9 @@ function N(e) {
                         g(
                             {
                                 className: o()(p.textArea, h.scrollbarDefault),
-                                'aria-labelledby': j,
+                                'aria-labelledby': M,
                                 'aria-describedby': U,
-                                'aria-invalid': M.hasError,
+                                'aria-invalid': k.hasError,
                                 style: { paddingRight: G },
                                 placeholder: n,
                                 value: t,
@@ -153,16 +153,16 @@ function N(e) {
                     id: T,
                     children: _.intl.format(_.t['+DFxLS'], { maxLength: m })
                 }),
-            P
+            R
                 ? (0, r.jsx)(C, {
                       value: t,
                       maxLength: m,
-                      hasError: M.hasError
+                      hasError: k.hasError
                   })
                 : null,
-            P || !1 === w
+            R || !1 === P
                 ? null
-                : (0, r.jsx)(R, {
+                : (0, r.jsx)(w, {
                       value: t,
                       maxLength: m
                   })
@@ -178,7 +178,7 @@ function C(e) {
         children: [null != (t = null == n ? void 0 : n.length) ? t : 0, ' ', null != i && '/ '.concat(i)]
     });
 }
-function R(e) {
+function w(e) {
     let { value: t, maxLength: n } = e,
         a = i.useMemo(() => (null == n ? null : n - (null != t ? t.length : 0)), [n, t]);
     return null == a

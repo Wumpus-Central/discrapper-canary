@@ -1,17 +1,30 @@
-n.d(t, { h: () => _ });
+n.d(t, { h: () => v });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    l = n.n(i),
-    a = n(990547),
-    o = n(755721),
-    s = n(481060),
+    a = n.n(i),
+    o = n(990547),
+    s = n(755721),
+    l = n(481060),
     c = n(213609),
     u = n(626135),
     d = n(738672),
-    p = n(981631),
-    h = n(388032),
-    f = n(504619);
+    f = n(981631),
+    _ = n(388032),
+    p = n(504619);
+function h(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function m() {
     return (m =
         Object.assign ||
@@ -24,6 +37,10 @@ function m() {
         }).apply(this, arguments);
 }
 function g(e) {
+    if (null == e) throw TypeError('Cannot destructure ' + e);
+    return e;
+}
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -34,71 +51,85 @@ function g(e) {
                 })
             )),
             r.forEach(function (t) {
-                var r;
-                ((r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r));
+                h(e, t, n[t]);
             }));
     }
     return e;
 }
-function b(e) {
+function b(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function y(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : b(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function O(e) {
     let { hidden: t, onDismiss: n } = e;
     return (
         (0, c.Z)(
             {
-                type: a.ImpressionTypes.VIEW,
-                name: a.ImpressionNames.HD_STREAMING_POPOUT
+                type: o.ImpressionTypes.VIEW,
+                name: o.ImpressionNames.HD_STREAMING_POPOUT
             },
             { disableTrack: t },
             [t]
         ),
         (0, r.jsxs)('div', {
-            className: l()(f.popoutContainer, { [f.hidden]: t }),
+            className: a()(p.popoutContainer, { [p.hidden]: t }),
             children: [
                 (0, r.jsx)('img', {
-                    className: f.image,
+                    className: p.image,
                     src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
                     alt: 'HD Streaming Nitro Perk'
                 }),
-                (0, r.jsx)(o.zx, {
-                    className: f.closeButton,
-                    'aria-label': h.intl.string(h.t.cpT0Cg),
-                    look: o.zx.Looks.BLANK,
-                    size: o.zx.Sizes.NONE,
+                (0, r.jsx)(s.zx, {
+                    className: p.closeButton,
+                    'aria-label': _.intl.string(_.t.cpT0Cg),
+                    look: s.zx.Looks.BLANK,
+                    size: s.zx.Sizes.NONE,
                     onClick: () => {
-                        (n(), u.default.track(p.rMx.HD_STREAMING_POPOUT_DISMISSED));
+                        (n(), u.default.track(f.rMx.HD_STREAMING_POPOUT_DISMISSED));
                     },
-                    children: (0, r.jsx)(s.Dio, {
+                    children: (0, r.jsx)(l.Dio, {
                         size: 'xs',
-                        className: f.closeIcon,
+                        className: p.closeIcon,
                         color: 'white'
                     })
                 }),
                 (0, r.jsx)('div', {
-                    className: f.infoContainerParent,
+                    className: p.infoContainerParent,
                     children: (0, r.jsxs)('div', {
-                        className: f.infoContainer,
+                        className: p.infoContainer,
                         children: [
-                            (0, r.jsx)(s.Text, {
-                                className: f.infoText,
+                            (0, r.jsx)(l.Text, {
+                                className: p.infoText,
                                 variant: 'text-sm/medium',
-                                children: h.intl.format(h.t.ruvD7u, {})
+                                children: _.intl.format(_.t.ruvD7u, {})
                             }),
                             (0, r.jsxs)('div', {
-                                className: f.poweredByNitroContainer,
+                                className: p.poweredByNitroContainer,
                                 children: [
-                                    (0, r.jsx)(s.SrA, { size: 'xs' }),
-                                    (0, r.jsx)(s.Text, {
-                                        className: f.infoText,
+                                    (0, r.jsx)(l.SrA, { size: 'xs' }),
+                                    (0, r.jsx)(l.Text, {
+                                        className: p.infoText,
                                         variant: 'text-sm/medium',
-                                        children: h.intl.string(h.t['BMw+7O'])
+                                        children: _.intl.string(_.t['BMw+7O'])
                                     })
                                 ]
                             })
@@ -109,32 +140,7 @@ function b(e) {
         })
     );
 }
-function _(e) {
-    var t,
-        n,
-        i = m(
-            {},
-            (function (e) {
-                if (null == e) throw TypeError('Cannot destructure ' + e);
-                return e;
-            })(e)
-        );
-    return (0, r.jsx)(
-        d.h,
-        ((t = g({}, i)),
-        (n = n = { renderComponent: (e) => (0, r.jsx)(b, g({}, e)) }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-              }),
-        t)
-    );
+function v(e) {
+    var t = m({}, g(e));
+    return (0, r.jsx)(d.h, y(E({}, t), { renderComponent: (e) => (0, r.jsx)(O, E({}, e)) }));
 }

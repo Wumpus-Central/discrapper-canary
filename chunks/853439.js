@@ -1,51 +1,56 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => p });
 var r,
-    i,
-    l,
-    a = n(442837),
-    o = n(570140),
-    s = n(131704),
-    c = n(592125);
-let u = {},
-    d = {};
-class p extends (l = a.ZP.Store) {
+    i = n(442837),
+    a = n(570140),
+    o = n(131704),
+    s = n(592125);
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let c = {},
+    u = {};
+function d(e) {
+    let { templates: t, guildId: n } = e;
+    c[n] = t;
+}
+function f(e) {
+    let { selectedTemplate: t, guildId: n } = e,
+        r = Object.values(s.Z.getMutableGuildChannelsForGuild(n));
+    t.listings.forEach((e) => {
+        e.channels.forEach((e) => {
+            let t = r.find((t) => t.name === e.name);
+            if (void 0 !== t) e.id = t.id;
+            else if (!(e.id in u)) {
+                let t = (0, o.kt)(e);
+                u[e.id] = t;
+            }
+        });
+    });
+}
+class _ extends (r = i.ZP.Store) {
     getTemplates(e) {
-        return u[e];
+        return c[e];
     }
     getTemplateWithCategory(e, t) {
         var n;
-        return null == (n = u[e]) ? void 0 : n.find((e) => e.category === t);
+        return null == (n = c[e]) ? void 0 : n.find((e) => e.category === t);
     }
     getChannel(e) {
-        return d[e];
+        return u[e];
     }
 }
-((i = 'GuildRoleSubscriptionTierTemplatesStore'),
-    (r = 'displayName') in p
-        ? Object.defineProperty(p, r, {
-              value: i,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (p[r] = i));
-let m = new p(o.Z, {
-    GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS: function (e) {
-        let { selectedTemplate: t, guildId: n } = e,
-            r = Object.values(c.Z.getMutableGuildChannelsForGuild(n));
-        t.listings.forEach((e) => {
-            e.channels.forEach((e) => {
-                let t = r.find((t) => t.name === e.name);
-                if (void 0 !== t) e.id = t.id;
-                else if (!(e.id in d)) {
-                    let t = (0, s.kt)(e);
-                    d[e.id] = t;
-                }
-            });
-        });
-    },
-    GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES: function (e) {
-        let { templates: t, guildId: n } = e;
-        u[n] = t;
-    }
+l(_, 'displayName', 'GuildRoleSubscriptionTierTemplatesStore');
+let p = new _(a.Z, {
+    GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS: f,
+    GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES: d
 });

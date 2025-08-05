@@ -3,17 +3,17 @@ var r = n(255367),
     i = n(73800),
     l = n(481060),
     o = n(833592),
-    a = n(388032);
-let s = (e) => {
+    s = n(388032);
+let a = (e) => {
         let { item: t, closePopout: n } = e;
         return (0, r.jsx)(l.v2r, {
             navId: 'notification-actions',
             onClose: n,
             onSelect: n,
-            'aria-label': a.intl.string(a.t.ljs3OT),
+            'aria-label': s.intl.string(s.t.ljs3OT),
             children: (0, r.jsx)(l.sNh, {
                 id: 'delete',
-                label: a.intl.string(a.t.oyYWHB),
+                label: s.intl.string(s.t.oyYWHB),
                 icon: l.XHJ,
                 action: async () => {
                     await (0, o.g3)(t);
@@ -29,7 +29,7 @@ let s = (e) => {
             renderPopout: (e) => {
                 var n, i;
                 return (0, r.jsx)(
-                    s,
+                    a,
                     ((n = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -78,7 +78,7 @@ let s = (e) => {
                 let { onClick: t } = e;
                 return (0, r.jsx)(l.M0o, {
                     ref: n,
-                    tooltip: a.intl.string(a.t.UKOtz8),
+                    tooltip: s.intl.string(s.t.UKOtz8),
                     color: l.YX$.TERTIARY,
                     icon: (0, r.jsx)(l.xhG, {
                         size: 'xs',

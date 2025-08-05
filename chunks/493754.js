@@ -1,24 +1,37 @@
 n.d(t, {
-    W: () => C,
-    Z: () => x
+    W: () => S,
+    Z: () => A
 });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    l = n.n(i),
-    a = n(512722),
-    o = n.n(a),
-    s = n(442837),
+    a = n.n(i),
+    o = n(512722),
+    s = n.n(o),
+    l = n(442837),
     c = n(755721),
     u = n(481060),
     d = n(924301),
-    p = n(786915),
-    h = n(430824),
-    f = n(496675),
-    m = n(981631),
-    g = n(388032),
-    b = n(729910);
-function _(e) {
+    f = n(786915),
+    _ = n(430824),
+    p = n(496675),
+    h = n(981631),
+    m = n(388032),
+    g = n(729910);
+function E(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,132 +42,133 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                var r;
-                ((r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r));
+                E(e, t, n[t]);
             }));
     }
     return e;
 }
 function y(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function C(e) {
-    let { guild: t, channel: i, streamUserId: l, applicationId: a, appContext: o, exitFullScreen: s, analyticsLocation: c, guildScheduledEvent: d } = e;
-    (null == s || s(),
+function v(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = I(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+    }
+    return i;
+}
+function I(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    return i;
+}
+function T(e, t) {
+    return null != e && null != t && p.Z.can(h.Plq.CREATE_INSTANT_INVITE, t);
+}
+function S(e) {
+    let { guild: t, channel: i, streamUserId: a, applicationId: o, appContext: s, exitFullScreen: l, analyticsLocation: c, guildScheduledEvent: d } = e;
+    (null == l || l(),
         (0, u.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('7654'), n.e('34946')]).then(n.bind(n, 560114));
+                let { default: e } = await Promise.all([n.e('7654'), n.e('49049'), n.e('29328')]).then(n.bind(n, 560114));
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        y(_({}, n), {
+                        O(b({}, n), {
                             guild: t,
                             channel: i,
-                            streamUserId: l,
-                            applicationId: a,
+                            streamUserId: a,
+                            applicationId: o,
                             analyticsLocation: c,
-                            source: i.isGuildStageVoice() ? m.t4x.STAGE_CHANNEL : m.t4x.STREAM_INVITE,
+                            source: i.isGuildStageVoice() ? h.t4x.STAGE_CHANNEL : h.t4x.STREAM_INVITE,
                             guildScheduledEvent: d
                         })
                     );
             },
             {
                 modalKey: 'stream-invite-modal',
-                contextKey: o === m.IlC.POPOUT ? u.u1M : u.z1l
+                contextKey: s === h.IlC.POPOUT ? u.u1M : u.z1l
             }
         ));
 }
-function x(e) {
+function A(e) {
     var t,
-        { stream: n, applicationId: i, channel: a, exitFullScreen: u, appContext: x, analyticsLocation: v, className: j } = e,
-        O = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                r,
-                i = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
-                    return i;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
-            }
-            return i;
-        })(e, ['stream', 'applicationId', 'channel', 'exitFullScreen', 'appContext', 'analyticsLocation', 'className']);
-    let E = null == a ? void 0 : a.getGuildId(),
-        S = null == a ? void 0 : a.id,
-        P = (0, s.e7)([h.Z], () => (null != E ? h.Z.getGuild(E) : null), [E]),
-        I = (0, s.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(S), [S]);
-    if (!(null != P && null != a && f.Z.can(m.Plq.CREATE_INSTANT_INVITE, a))) return null;
-    let Z = g.intl.string(g.t.VINpSE);
+        { stream: n, applicationId: i, channel: o, exitFullScreen: u, appContext: p, analyticsLocation: h, className: E } = e,
+        y = v(e, ['stream', 'applicationId', 'channel', 'exitFullScreen', 'appContext', 'analyticsLocation', 'className']);
+    let I = null == o ? void 0 : o.getGuildId(),
+        A = null == o ? void 0 : o.id,
+        N = (0, l.e7)([_.Z], () => (null != I ? _.Z.getGuild(I) : null), [I]),
+        C = (0, l.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(A), [A]);
+    if (!T(N, o)) return null;
+    let w = m.intl.string(m.t.VINpSE);
     return (
-        null != n ? (Z = g.intl.string(g.t['6VQaqa'])) : null != i && (Z = g.intl.string(g.t['OzOM/v'])),
+        null != n ? (w = m.intl.string(m.t['6VQaqa'])) : null != i && (w = m.intl.string(m.t['OzOM/v'])),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(
                     c.zx,
-                    y(
-                        _(
+                    O(
+                        b(
                             {
-                                size: null != (t = O.size) ? t : c.zx.Sizes.SMALL,
-                                color: b.buttonColor,
+                                size: null != (t = y.size) ? t : c.zx.Sizes.SMALL,
+                                color: g.buttonColor,
                                 onClick: () => {
-                                    (o()(null != P, 'guild cannot be null'),
-                                        o()(null != a, 'channel cannot be null'),
-                                        C({
-                                            guild: P,
-                                            channel: a,
+                                    (s()(null != N, 'guild cannot be null'),
+                                        s()(null != o, 'channel cannot be null'),
+                                        S({
+                                            guild: N,
+                                            channel: o,
                                             streamUserId: null == n ? void 0 : n.ownerId,
                                             applicationId: i,
-                                            appContext: x,
+                                            appContext: p,
                                             exitFullScreen: u,
-                                            analyticsLocation: v,
-                                            guildScheduledEvent: I
+                                            analyticsLocation: h,
+                                            guildScheduledEvent: C
                                         }));
                                 },
-                                className: l()(j, b.textButton)
+                                className: a()(E, g.textButton)
                             },
-                            O
+                            y
                         ),
-                        { children: Z }
+                        { children: w }
                     )
                 ),
-                (0, r.jsx)(p.Z, {
-                    channel: a,
+                (0, r.jsx)(f.Z, {
+                    channel: o,
                     stream: n,
-                    appContext: x,
-                    className: l()(j, b.iconButton),
+                    appContext: p,
+                    className: a()(E, g.iconButton),
                     exitFullScreen: u,
-                    analyticsLocation: v,
-                    guildScheduledEvent: I
+                    analyticsLocation: h,
+                    guildScheduledEvent: C
                 })
             ]
         })

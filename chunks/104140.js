@@ -153,15 +153,15 @@ function v(e) {
         },
         N = null != m,
         C = null != O,
-        R = i.useId(),
-        P = ''.concat(R, '-upper_badge_masks'),
-        w = ''.concat(R, '-lower_badge_masks'),
-        D = ''.concat(R, '-blob_mask'),
-        L = ''.concat(R, '-stroke_mask'),
-        x = ''.concat(R, '-highlight_mask'),
-        M = (null == f ? void 0 : f.width) != null ? f.width : g,
-        k = (null == f ? void 0 : f.height) != null ? f.height : g,
-        j = {
+        w = i.useId(),
+        R = ''.concat(w, '-upper_badge_masks'),
+        P = ''.concat(w, '-lower_badge_masks'),
+        D = ''.concat(w, '-blob_mask'),
+        L = ''.concat(w, '-stroke_mask'),
+        x = ''.concat(w, '-highlight_mask'),
+        k = (null == f ? void 0 : f.width) != null ? f.width : g,
+        j = (null == f ? void 0 : f.height) != null ? f.height : g,
+        M = {
             width: d ? n : n + 8,
             height: d ? n : n + 8,
             x: d ? 0 : -4,
@@ -180,9 +180,9 @@ function v(e) {
                 (0, r.jsxs)(
                     'svg',
                     {
-                        width: j.width,
-                        height: j.height,
-                        viewBox: ''.concat(j.x, ' ').concat(j.y, ' ').concat(j.width, ' ').concat(j.height),
+                        width: M.width,
+                        height: M.height,
+                        viewBox: ''.concat(M.x, ' ').concat(M.y, ' ').concat(M.width, ' ').concat(M.height),
                         className: o()(u.svg, {
                             [u.noContain]: _,
                             [u.shiftSVG]: !d
@@ -203,7 +203,7 @@ function v(e) {
                                     }),
                                     null != m
                                         ? (0, r.jsx)('rect', {
-                                              id: P,
+                                              id: R,
                                               className: u.badgeStroke,
                                               x: n - U + p,
                                               y: -p,
@@ -215,12 +215,12 @@ function v(e) {
                                         : null,
                                     null != O
                                         ? (0, r.jsx)('rect', {
-                                              id: w,
+                                              id: P,
                                               className: u.badgeStroke,
-                                              x: n - (M + 2 * p) + p,
-                                              y: n - (k + 2 * p) + p,
-                                              width: M + 2 * p,
-                                              height: k + 2 * p,
+                                              x: n - (k + 2 * p) + p,
+                                              y: n - (j + 2 * p) + p,
+                                              width: k + 2 * p,
+                                              height: j + 2 * p,
                                               rx: h / 2,
                                               ry: h / 2
                                           })
@@ -228,7 +228,7 @@ function v(e) {
                                 ]
                             }),
                             (0, r.jsxs)('mask', {
-                                id: R,
+                                id: w,
                                 fill: 'black',
                                 x: 0,
                                 y: 0,
@@ -247,13 +247,13 @@ function v(e) {
                                     }),
                                     N
                                         ? (0, r.jsx)('use', {
-                                              href: '#'.concat(P),
+                                              href: '#'.concat(R),
                                               fill: 'black'
                                           })
                                         : null,
                                     C
                                         ? (0, r.jsx)('use', {
-                                              href: '#'.concat(w),
+                                              href: '#'.concat(P),
                                               fill: 'black'
                                           })
                                         : null
@@ -272,13 +272,13 @@ function v(e) {
                                           }),
                                           N
                                               ? (0, r.jsx)('use', {
-                                                    href: '#'.concat(P),
+                                                    href: '#'.concat(R),
                                                     fill: 'black'
                                                 })
                                               : null,
                                           C
                                               ? (0, r.jsx)('use', {
-                                                    href: '#'.concat(w),
+                                                    href: '#'.concat(P),
                                                     fill: 'black'
                                                 })
                                               : null
@@ -295,7 +295,7 @@ function v(e) {
                                           }),
                                           (0, r.jsxs)('g', {
                                               className: u.focusFill,
-                                              children: [null != m ? (0, r.jsx)('use', { href: '#'.concat(P) }) : null, null != O ? (0, r.jsx)('use', { href: '#'.concat(w) }) : null]
+                                              children: [null != m ? (0, r.jsx)('use', { href: '#'.concat(R) }) : null, null != O ? (0, r.jsx)('use', { href: '#'.concat(P) }) : null]
                                           })
                                       ]
                                   })
@@ -311,7 +311,7 @@ function v(e) {
                             (0, r.jsx)(
                                 'foreignObject',
                                 {
-                                    mask: 'url(#'.concat(R, ')'),
+                                    mask: 'url(#'.concat(w, ')'),
                                     x: 0,
                                     y: 0,
                                     className: c,

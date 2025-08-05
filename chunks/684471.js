@@ -9,21 +9,21 @@ var i = n(481060),
     l = n(955708),
     d = n(850165),
     u = n(388032),
-    E = n(948582),
-    _ = n(282668);
+    x = n(948582),
+    p = n(282668);
 function h(t) {
     let { senderId: e, trackAnalyticsEvent: n, onNavigate: h } = t,
-        p = (0, s.e7)([a.default], () => {
+        f = (0, s.e7)([a.default], () => {
             let t = a.default.getUser(e);
             return o.ZP.getName(t);
         });
     return (0, r.jsx)(d.Z, {
         header: u.intl.string(u.t.sSMgCw),
-        description: u.intl.formatToPlainString(u.t.q2QrTU, { username: p }),
-        heroImageSrc: _,
+        description: u.intl.formatToPlainString(u.t.q2QrTU, { username: f }),
+        heroImageSrc: p,
         heroImageAlt: u.intl.string(u.t['3QhxXF']),
         children: (0, r.jsxs)('div', {
-            className: E.buttonContainer,
+            className: x.buttonContainer,
             children: [
                 (0, r.jsx)(i.zxk, {
                     text: u.intl.string(u.t['+o4Q7e']),

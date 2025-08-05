@@ -9,24 +9,24 @@ var c = t(755721),
     l = t(821706),
     s = t(562831),
     u = t(981631),
-    _ = t(887910);
+    p = t(887910);
 function f(e) {
-    let { user: n, currentUser: t, guildId: f, relationshipType: p, onClose: m } = e,
+    let { user: n, currentUser: t, guildId: f, relationshipType: _, onClose: m } = e,
         { newestAnalyticsLocation: I } = (0, a.ZP)(),
-        { gameFriends: h, hasOutgoingPendingGameFriends: x, hasIncomingPendingGameFriends: b } = (0, s.H)({ userId: n.id });
-    if (p === u.OGo.BLOCKED) return null;
+        { gameFriends: h, hasOutgoingPendingGameFriends: x, hasIncomingPendingGameFriends: y } = (0, s.H)({ userId: n.id });
+    if (_ === u.OGo.BLOCKED) return null;
     if (n.id === t.id)
         return (0, o.jsx)('div', {
-            className: _.container,
+            className: p.container,
             children: (0, o.jsx)(r.Z, {
                 user: n,
                 guildId: f,
                 onClose: m
             })
         });
-    if (p === u.OGo.FRIEND || n.bot)
+    if (_ === u.OGo.FRIEND || n.bot)
         return (0, o.jsx)('div', {
-            className: _.container,
+            className: p.container,
             children: (0, o.jsx)(d.Z, {
                 type: 'text',
                 userId: n.id,
@@ -34,14 +34,14 @@ function f(e) {
                 autoFocus: !0
             })
         });
-    if (p === u.OGo.PENDING_OUTGOING || p === u.OGo.PENDING_INCOMING)
+    if (_ === u.OGo.PENDING_OUTGOING || _ === u.OGo.PENDING_INCOMING)
         return (0, o.jsxs)('div', {
-            className: _.container,
+            className: p.container,
             children: [
                 (0, o.jsx)(l.g, {
                     type: 'icon',
                     user: n,
-                    relationshipType: p,
+                    relationshipType: _,
                     shouldShowTooltip: !0,
                     analyticsLocation: I
                 }),
@@ -53,10 +53,10 @@ function f(e) {
                 })
             ]
         });
-    let y = h.length > 0 || x || b;
-    return p === u.OGo.NONE && y
+    let b = h.length > 0 || x || y;
+    return _ === u.OGo.NONE && b
         ? (0, o.jsxs)('div', {
-              className: _.container,
+              className: p.container,
               children: [
                   (0, o.jsx)(l.k9, {
                       type: 'icon',
@@ -64,7 +64,7 @@ function f(e) {
                       analyticsLocation: I,
                       gameFriends: h,
                       shouldShowTooltip: !0,
-                      hasIncomingPendingGameFriends: b,
+                      hasIncomingPendingGameFriends: y,
                       hasOutgoingPendingGameFriends: x
                   }),
                   (0, o.jsx)(d.Z, {
@@ -76,7 +76,7 @@ function f(e) {
               ]
           })
         : (0, o.jsxs)('div', {
-              className: _.container,
+              className: p.container,
               children: [
                   (0, o.jsx)(d.Z, {
                       type: 'icon',

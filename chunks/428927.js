@@ -5,27 +5,27 @@ var r = t(481060),
     i = t(37234),
     o = t(769654),
     s = t(785717),
-    c = t(806729),
+    d = t(806729),
     a = t(821179),
-    u = t(388032),
-    d = t(301150);
+    c = t(388032),
+    u = t(301150);
 function f(e) {
     let { user: n, onClose: t } = e,
         { trackUserProfileAction: f } = (0, s.KZ)(),
-        { mutualGuilds: p, isFetching: j } = (0, c.Z)(n),
+        { mutualGuilds: p, isFetching: h } = (0, d.Z)(n),
         g = (e) => {
             ((0, o.X)(e), t(), (0, i.xf)());
         };
     return (0, l.jsx)(r.zJl, {
-        className: d.listScroller,
+        className: u.listScroller,
         fade: !0,
         children:
-            null == p && j
+            null == p && h
                 ? (0, l.jsx)('div', {
-                      className: d.empty,
+                      className: u.empty,
                       children: (0, l.jsx)(r.$jN, {})
                   })
-                : (null != p || j) && (null == p ? void 0 : p.length) !== 0
+                : (null != p || h) && (null == p ? void 0 : p.length) !== 0
                   ? null == p
                       ? void 0
                       : p.map((e) => {
@@ -44,12 +44,12 @@ function f(e) {
                             );
                         })
                   : (0, l.jsxs)('div', {
-                        className: d.empty,
+                        className: u.empty,
                         children: [
-                            (0, l.jsx)('div', { className: d.emptyIconGuilds }),
+                            (0, l.jsx)('div', { className: u.emptyIconGuilds }),
                             (0, l.jsx)('div', {
-                                className: d.emptyText,
-                                children: u.intl.string(u.t.zjVh8v)
+                                className: u.emptyText,
+                                children: c.intl.string(c.t.zjVh8v)
                             })
                         ]
                     })

@@ -25,7 +25,7 @@ var i = n(620662),
 function S(e) {
     let { user: t, activity: n, onAction: S, onClose: A, application: N } = e,
         C = (0, c.q)(N, 'UserProfileActivityButtons'),
-        R = (0, u.L)(null != n ? n : void 0, void 0);
+        w = (0, u.L)(null != n ? n : void 0, void 0);
     if ((0, s.Z)(n))
         return (0, r.jsx)(E.Z, {
             platformType: I.ABu.XBOX,
@@ -43,15 +43,15 @@ function S(e) {
             activity: n,
             onAction: S
         });
-    let P = (0, i.Z)(n, I.xjy.JOIN) || (0, a.Z)(n),
-        w = (null == n ? void 0 : n.application_id) != null;
-    return !R && C && null != N
+    let R = (0, i.Z)(n, I.xjy.JOIN) || (0, a.Z)(n),
+        P = (null == n ? void 0 : n.application_id) != null;
+    return !w && C && null != N
         ? (0, r.jsx)(v.Z, {
               application: N,
               onAction: S,
               onClose: A
           })
-        : P && w
+        : R && P
           ? (0, r.jsxs)('div', {
                 className: T.buttonContainer,
                 children: [
@@ -67,7 +67,7 @@ function S(e) {
                     })
                 ]
             })
-          : P
+          : R
             ? (0, r.jsx)(m.Z, {
                   user: t,
                   activity: n,
@@ -87,7 +87,7 @@ function S(e) {
                       activity: n,
                       onAction: S
                   })
-                : w
+                : P
                   ? (0, r.jsx)(y.Z, {
                         activity: n,
                         onAction: S

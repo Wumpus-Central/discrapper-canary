@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => E }), n(35282), n(388685), n(539854));
+(n.d(t, { Z: () => Z }), n(35282), n(388685), n(539854));
 var i = n(255367),
     r = n(73800),
     l = n(120356),
@@ -64,12 +64,12 @@ function S(e, t) {
         e
     );
 }
-let Z = (e) => {
+let I = (e) => {
     if (null == e) return null;
     let t = new g.Z(e);
     return v.ZP.getUserTag(t);
 };
-function I(e, t) {
+function w(e, t) {
     return null != t && /^data:/.test(t)
         ? t
         : (0, h.ov)({
@@ -78,17 +78,17 @@ function I(e, t) {
               discriminator: y.fo$
           });
 }
-function E(e) {
-    let { id: t, webhook: n, editedWebhook: l, channelOptions: g, isExpanded: h, isNew: v, errors: E, onToggleExpand: w } = e,
-        [T, P] = r.useState(!1),
+function Z(e) {
+    let { id: t, webhook: n, editedWebhook: l, channelOptions: g, isExpanded: h, isNew: v, errors: Z, onToggleExpand: E } = e,
+        [P, T] = r.useState(!1),
         [k] = r.useState(new s.V7());
     r.useEffect(() => () => k.stop(), [k]);
-    let A = r.useMemo(() => I(n, n.avatar), [n]),
-        D = r.useCallback(() => {
+    let A = r.useMemo(() => w(n, n.avatar), [n]),
+        R = r.useCallback(() => {
             let e = ''.concat((0, a.K0)(!1)).concat(y.ANM.WEBHOOK_INTEGRATION(n.id, n.token));
             (0, x.JG)(e);
         }, [n]),
-        R = r.useCallback(() => {
+        D = r.useCallback(() => {
             (0, c.h7j)((e) =>
                 (0, i.jsx)(
                     c.ConfirmModal,
@@ -123,7 +123,7 @@ function E(e) {
         ? L.push({
               icon: c.T39,
               text: _.intl.formatToPlainString(_.t['7EcUbm'], {
-                  user: Z(n.user),
+                  user: I(n.user),
                   timestamp: j.default.extractTimestamp(n.id)
               })
           })
@@ -153,15 +153,15 @@ function E(e) {
                                             onChange: (e) => {
                                                 u.Z.updateWebhook({ avatar: e });
                                             },
-                                            makeURL: (e) => I(n, e),
+                                            makeURL: (e) => w(n, e),
                                             imageClassName: C.avatarUploaderInner,
                                             showIcon: !0
                                         }),
-                                        null != E.avatar && '' !== E.avatar
+                                        null != Z.avatar && '' !== Z.avatar
                                             ? (0, i.jsx)(c.Text, {
                                                   color: 'text-danger',
                                                   variant: 'text-sm/normal',
-                                                  children: E.avatar
+                                                  children: Z.avatar
                                               })
                                             : null
                                     ]
@@ -182,7 +182,7 @@ function E(e) {
                                                             u.Z.updateWebhook({ name: e });
                                                         },
                                                         maxLength: 80,
-                                                        error: E.name
+                                                        error: Z.name
                                                     })
                                                 })
                                             }),
@@ -207,7 +207,7 @@ function E(e) {
                                         children: [
                                             (0, i.jsx)(c.ua7, {
                                                 text: _.intl.string(_.t.wwdb3t),
-                                                forceOpen: T,
+                                                forceOpen: P,
                                                 color: c.FGA.GREEN,
                                                 disableTooltipPointerEvents: !0,
                                                 children: (e) => {
@@ -248,7 +248,7 @@ function E(e) {
                                                                 {
                                                                     'aria-label': '',
                                                                     onClick: () => {
-                                                                        (null == t || t(), P(!0), c.uvj.announce(_.intl.string(_.t.wwdb3t)), k.start(1000, () => P(!1)), D());
+                                                                        (null == t || t(), T(!0), c.uvj.announce(_.intl.string(_.t.wwdb3t)), k.start(1000, () => T(!1)), R());
                                                                     },
                                                                     disabled: null == n.token || '' === n.token
                                                                 }
@@ -261,7 +261,7 @@ function E(e) {
                                                 variant: 'critical-secondary',
                                                 size: 'sm',
                                                 text: _.intl.string(_.t.jVrUnJ),
-                                                onClick: R
+                                                onClick: D
                                             })
                                         ]
                                     })
@@ -281,7 +281,7 @@ function E(e) {
                     (0, i.jsx)(c.P3F, {
                         className: C.header,
                         'aria-expanded': h,
-                        onClick: w,
+                        onClick: E,
                         children: (0, i.jsxs)(m.Z, {
                             align: m.Z.Align.CENTER,
                             children: [

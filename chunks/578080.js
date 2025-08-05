@@ -96,7 +96,7 @@ function L(e) {
 }
 let M = s.forwardRef(function (e, t) {
     var n, o;
-    let { children: y, className: M, collapsedHeight: W, expansionSpring: Z, isExpanded: U, isExpansionAnimationComplete: H, onCtxMenuOpen: z, onCtxMenuClose: F, onCtxMenuSelect: X, quest: K, useReducedMotion: Y } = e,
+    let { children: y, className: M, collapsedHeight: Z, expansionSpring: W, isExpanded: U, isExpansionAnimationComplete: H, onCtxMenuOpen: z, onCtxMenuClose: F, onCtxMenuSelect: X, quest: K, useReducedMotion: Y } = e,
         G = (0, l.e7)([v.Z], () => v.Z.isEnrolling(K.id), [K]),
         J = (0, h.aM)(),
         $ = (0, _.B6)(K.config.expiresAt),
@@ -163,13 +163,13 @@ let M = s.forwardRef(function (e, t) {
                 ? void 0
                 : (0, i.to)(
                       [
-                          Z.to({
+                          W.to({
                               range: [0, 1],
                               output: [0, -100]
                           }),
-                          Z.to({
+                          W.to({
                               range: [0, 1],
-                              output: [0, W]
+                              output: [0, Z]
                           })
                       ],
                       (e, t) => 'translateY(calc('.concat(e, '% + ').concat(t, 'px))')

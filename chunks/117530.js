@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => P }), n(388685), n(539854), n(953529));
+(n.d(t, { Z: () => R }), n(388685), n(539854), n(953529));
 var r,
     i = n(392711),
     a = n.n(i),
@@ -102,7 +102,7 @@ function C(e) {
     let { baseChannelId: t } = e;
     b(t, d.d.FirstThreadMessage, []);
 }
-class R extends (r = o.ZP.Store) {
+class w extends (r = o.ZP.Store) {
     getFirstUpload(e, t) {
         let n = g(e, t);
         return n.length > 0 ? n[0] : null;
@@ -125,8 +125,8 @@ class R extends (r = o.ZP.Store) {
         return g(e, t).find(n);
     }
 }
-p(R, 'displayName', 'UploadAttachmentStore');
-let P = new R(s.Z, {
+p(w, 'displayName', 'UploadAttachmentStore');
+let R = new w(s.Z, {
     UPLOAD_ATTACHMENT_POP_FILE: y,
     UPLOAD_ATTACHMENT_ADD_FILES: O,
     UPLOAD_ATTACHMENT_UPDATE_FILE: T,

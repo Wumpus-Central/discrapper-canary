@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    a = n(866442),
-    s = n(399606),
+    s = n(866442),
+    a = n(399606),
     c = n(481060),
     u = n(100527),
     d = n(906732),
@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(970731),
     m = n(485386),
     b = n(594174),
-    _ = n(5192),
-    O = n(944888),
+    O = n(5192),
+    _ = n(944888),
     y = n(234368),
     C = n(981631),
     v = n(921944),
@@ -30,7 +30,7 @@ function N(e) {
         l = (null == t ? void 0 : t.premiumProgressBarEnabled) === !0 ? g.DF.LEFT_TOP : g.DF.TOP_CENTER,
         N = l === g.DF.TOP_CENTER || l === g.DF.LEFT_TOP ? S[l] : '',
         { analyticsLocations: w } = (0, d.ZP)(u.Z.GUILD_BOOSTING_ENHANCED_ROLE_COLOR_COACHMARK),
-        T = i.useCallback(() => {
+        Z = i.useCallback(() => {
             (0, p.u)({
                 analyticsLocation: { section: C.jXE.BOOSTER_ENHANCED_ROLE_COLORS_COACHMARK },
                 numberOfBoostsToAdd: 1,
@@ -38,14 +38,14 @@ function N(e) {
                 guild: t
             });
         }, [t, w]),
-        Z = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
+        T = (0, a.e7)([b.default], () => b.default.getCurrentUser()),
         A = (function (e) {
-            let t = (0, s.e7)([m.Z], () => m.Z.getSortedRoles(e).find(O.YB));
+            let t = (0, a.e7)([m.Z], () => m.Z.getSortedRoles(e).find(_.YB));
             return (null == t ? void 0 : t.colorStrings) != null
                 ? t.colorStrings
                 : {
-                      primaryColor: (0, a.Rf)(y.oC.primary_color),
-                      secondaryColor: (0, a.Rf)(y.oC.secondary_color),
+                      primaryColor: (0, s.Rf)(y.oC.primary_color),
+                      secondaryColor: (0, s.Rf)(y.oC.secondary_color),
                       tertiaryColor: null
                   };
         })(t.id),
@@ -59,19 +59,19 @@ function N(e) {
         asset: (0, r.jsxs)('div', {
             className: S.imageContainer,
             children: [
-                null != Z
+                null != T
                     ? (0, r.jsx)('div', {
                           className: S.messageContainer,
                           children: (0, r.jsx)(f.l, {
                               avatar: (0, r.jsx)(h.Z, {
-                                  user: Z,
+                                  user: T,
                                   guildId: t.id,
                                   avatarSize: c.EFr.SIZE_40,
                                   'aria-hidden': !0
                               }),
                               usernameStyle: R,
                               usernameClassName: o()(D, x.animateGradient),
-                              username: _.ZP.getName(t.id, null, Z),
+                              username: O.ZP.getName(t.id, null, T),
                               asset: (0, r.jsx)('img', {
                                   alt: '',
                                   src: I.Z
@@ -100,7 +100,7 @@ function N(e) {
             children: E.intl.string(j.default['/DTbiY'])
         }),
         buttonCTA: E.intl.string(E.t['oPAx7+']),
-        onClick: T,
+        onClick: Z,
         className: o()(S.container, N),
         caretPosition: l,
         markAsDismissed: n

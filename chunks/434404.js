@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => w }), n(953529));
+(n.d(t, { Z: () => P }), n(953529));
 var r = n(990547),
     i = n(544891),
     a = n(570140),
@@ -91,8 +91,8 @@ function C(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let R = new s.Z('GuildSettingsActionCreators'),
-    P = {
+let w = new s.Z('GuildSettingsActionCreators'),
+    R = {
         init(e, t, n, r) {
             a.Z.dispatch({
                 type: 'GUILD_SETTINGS_INIT',
@@ -104,7 +104,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
         },
         async open(e, t, r, i) {
             var a;
-            (await Promise.all([n.e('66549'), n.e('95355'), n.e('1806'), n.e('44947'), n.e('70274'), n.e('25292'), n.e('31978'), n.e('22878'), n.e('74891'), n.e('85372'), n.e('6380'), n.e('28467'), n.e('8739'), n.e('16766'), n.e('86282'), n.e('24037'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('44421'), n.e('30424'), n.e('40694'), n.e('94313'), n.e('94136'), n.e('67501'), n.e('71418'), n.e('58175'), n.e('7654'), n.e('44156'), n.e('69150'), n.e('38697'), n.e('49049'), n.e('99226'), n.e('6850'), n.e('58227'), n.e('54408'), n.e('20087'), n.e('94312'), n.e('96812'), n.e('79381'), n.e('64679'), n.e('7210'), n.e('56534'), n.e('79465')]).then(n.bind(n, 994763)), (null == (a = g.Z.getGuild(e)) ? void 0 : a.features.has(O.oNc.COMMUNITY)) && (t === O.pNK.GUILD_AUTOMOD && ((t = O.pNK.SAFETY), (i = O.KsC.SAFETY_AUTOMOD)), t === O.pNK.MEMBER_VERIFICATION && ((t = O.pNK.SAFETY), (i = O.KsC.SAFETY_DM_AND_SPAM_PROTECTION))), P.init(e, t, r, i), p.Z.closeGuildSidebar(e), (0, o.jN)(O.S9g.GUILD_SETTINGS));
+            (await Promise.all([n.e('1806'), n.e('92078'), n.e('7654'), n.e('94136'), n.e('2686'), n.e('4192'), n.e('58175'), n.e('72762'), n.e('49049'), n.e('44156'), n.e('62117'), n.e('13616'), n.e('6850'), n.e('58227'), n.e('62856'), n.e('54408'), n.e('20087'), n.e('22988'), n.e('71824'), n.e('16745'), n.e('56534'), n.e('34075')]).then(n.bind(n, 994763)), (null == (a = g.Z.getGuild(e)) ? void 0 : a.features.has(O.oNc.COMMUNITY)) && (t === O.pNK.GUILD_AUTOMOD && ((t = O.pNK.SAFETY), (i = O.KsC.SAFETY_AUTOMOD)), t === O.pNK.MEMBER_VERIFICATION && ((t = O.pNK.SAFETY), (i = O.KsC.SAFETY_DM_AND_SPAM_PROTECTION))), R.init(e, t, r, i), p.Z.closeGuildSidebar(e), (0, o.jN)(O.S9g.GUILD_SETTINGS));
         },
         close() {
             a.Z.dispatch({ type: 'GUILD_SETTINGS_CLOSE' });
@@ -228,7 +228,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
             );
         },
         saveGuild(e, t) {
-            let { name: n, description: r, icon: o, splash: s, banner: u, homeHeader: d, afkChannelId: f, afkTimeout: _, systemChannelId: p, verificationLevel: h, defaultMessageNotifications: m, explicitContentFilter: g, features: E, systemChannelFlags: b, preferredLocale: y, rulesChannelId: v, safetyAlertsChannelId: I, ownerConfiguredContentLevel: S, discoverySplash: N, publicUpdatesChannelId: C, premiumProgressBarEnabled: P, profile: w, moderatorReportingEnabled: D } = t,
+            let { name: n, description: r, icon: o, splash: s, banner: u, homeHeader: d, afkChannelId: f, afkTimeout: _, systemChannelId: p, verificationLevel: h, defaultMessageNotifications: m, explicitContentFilter: g, features: E, systemChannelFlags: b, preferredLocale: y, rulesChannelId: v, safetyAlertsChannelId: I, ownerConfiguredContentLevel: S, discoverySplash: N, publicUpdatesChannelId: C, premiumProgressBarEnabled: R, profile: P, moderatorReportingEnabled: D } = t,
                 L = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
                 x = A(
                     T(
@@ -254,10 +254,10 @@ let R = new s.Z('GuildSettingsActionCreators'),
                             public_updates_channel_id: C,
                             safety_alerts_channel_id: I
                         },
-                        null != P ? { premium_progress_bar_enabled: P } : null
+                        null != R ? { premium_progress_bar_enabled: R } : null
                     ),
                     {
-                        profile: null != w ? (0, l.n)(w) : w,
+                        profile: null != P ? (0, l.n)(P) : P,
                         moderator_reporting_enabled: D
                     }
                 );
@@ -285,7 +285,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
                                     type: 'GUILD_SETTINGS_SUBMIT_FAILURE',
                                     errors: e.body
                                 }),
-                                R.error('Failed to save guild settings', { errors: e.body }),
+                                w.error('Failed to save guild settings', { errors: e.body }),
                                 L.throwErr)
                             )
                                 throw e.body;
@@ -371,7 +371,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
                     checkEnabled: !1
                 }
             ).then(() => {
-                P.close();
+                R.close();
             }),
         async leaveGuild(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -382,7 +382,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
                 oldFormErrors: !0,
                 rejectWithError: !1
             }),
-                P.close(),
+                R.close(),
                 t && n && (0, _.uL)(O.Z5c.GUILD_DISCOVERY));
         },
         async updateMemberRoles(e, t, n, r, o) {
@@ -475,4 +475,4 @@ let R = new s.Z('GuildSettingsActionCreators'),
                 );
         }
     },
-    w = P;
+    P = R;

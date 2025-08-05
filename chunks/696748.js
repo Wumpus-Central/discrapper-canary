@@ -1,69 +1,69 @@
-(n.d(e, { a: () => j }), n(953529), n(415506), n(388685));
-var i = n(255367),
-    r = n(73800),
-    l = n(913527),
-    a = n.n(l),
-    o = n(442837),
-    s = n(755721),
+(n.d(t, { a: () => T }), n(953529), n(415506), n(388685));
+var r = n(255367),
+    i = n(73800),
+    a = n(913527),
+    o = n.n(a),
+    s = n(442837),
+    l = n(755721),
     c = n(481060),
-    d = n(372123),
-    u = n(224706),
-    p = n(812206),
-    h = n(600164),
-    f = n(293245),
-    y = n(626135),
-    C = n(981631),
-    O = n(388032),
-    g = n(50611),
-    m = n(20493);
-function b(t, e, n) {
+    u = n(372123),
+    d = n(224706),
+    f = n(812206),
+    _ = n(600164),
+    p = n(293245),
+    h = n(626135),
+    m = n(981631),
+    g = n(388032),
+    E = n(50611),
+    b = n(20493);
+function y(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
+        t in e
+            ? Object.defineProperty(e, t, {
                   value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[e] = n),
-        t
+            : (e[t] = n),
+        e
     );
 }
-function N(t) {
-    for (var e = 1; e < arguments.length; e++) {
-        var n = null != arguments[e] ? arguments[e] : {},
-            i = Object.keys(n);
+function O(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(n, t).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            i.forEach(function (e) {
-                b(t, e, n[e]);
+            r.forEach(function (t) {
+                y(e, t, n[t]);
             }));
     }
-    return t;
+    return e;
 }
-class T extends r.PureComponent {
-    renderConflictButton(t, e, n, r) {
-        return (0, i.jsxs)(s.zx, {
-            className: g.conflictButton,
-            innerClassName: g.conflictButtonInner,
-            onClick: r,
+class v extends i.PureComponent {
+    renderConflictButton(e, t, n, i) {
+        return (0, r.jsxs)(l.zx, {
+            className: E.conflictButton,
+            innerClassName: E.conflictButtonInner,
+            onClick: i,
             children: [
-                (0, i.jsx)('div', { className: n }),
-                (0, i.jsxs)('div', {
-                    className: g.buttonBody,
+                (0, r.jsx)('div', { className: n }),
+                (0, r.jsxs)('div', {
+                    className: E.buttonBody,
                     children: [
-                        (0, i.jsx)('div', {
-                            className: g.conflictTitle,
-                            children: t
+                        (0, r.jsx)('div', {
+                            className: E.conflictTitle,
+                            children: e
                         }),
-                        (0, i.jsx)('div', { children: O.intl.string(O.t.gflHOz) }),
-                        (0, i.jsx)('div', {
-                            className: g.timestamp,
-                            children: a()(e).calendar()
+                        (0, r.jsx)('div', { children: g.intl.string(g.t.gflHOz) }),
+                        (0, r.jsx)('div', {
+                            className: E.timestamp,
+                            children: o()(t).calendar()
                         })
                     ]
                 })
@@ -71,49 +71,49 @@ class T extends r.PureComponent {
         });
     }
     renderError() {
-        let { application: t } = this.props;
-        return (0, i.jsxs)(r.Fragment, {
+        let { application: e } = this.props;
+        return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(c.hzk, {
+                (0, r.jsxs)(c.hzk, {
                     children: [
-                        (0, i.jsx)(h.Z, {
-                            justify: h.Z.Justify.CENTER,
-                            children: (0, i.jsx)('div', { className: g.errorArt })
+                        (0, r.jsx)(_.Z, {
+                            justify: _.Z.Justify.CENTER,
+                            children: (0, r.jsx)('div', { className: E.errorArt })
                         }),
-                        (0, i.jsx)('div', {
-                            className: g.description,
-                            children: O.intl.format(O.t.RAaWyc, { applicationName: t.name })
+                        (0, r.jsx)('div', {
+                            className: E.description,
+                            children: g.intl.format(g.t.RAaWyc, { applicationName: e.name })
                         })
                     ]
                 }),
-                (0, i.jsx)(c.mzw, {
-                    children: (0, i.jsxs)(h.Z, {
-                        justify: h.Z.Justify.BETWEEN,
+                (0, r.jsx)(c.mzw, {
+                    children: (0, r.jsxs)(_.Z, {
+                        justify: _.Z.Justify.BETWEEN,
                         children: [
-                            (0, i.jsx)(s.zx, {
-                                className: g.linkButton,
-                                size: g.linkButtonSize,
-                                look: s.zx.Looks.LINK,
-                                color: s.zx.Colors.PRIMARY,
+                            (0, r.jsx)(l.zx, {
+                                className: E.linkButton,
+                                size: E.linkButtonSize,
+                                look: l.zx.Looks.LINK,
+                                color: l.zx.Colors.PRIMARY,
                                 onClick: this.onClose,
-                                children: O.intl.string(O.t['ETE/oK'])
+                                children: g.intl.string(g.t['ETE/oK'])
                             }),
-                            (0, i.jsxs)(h.Z, {
-                                direction: h.Z.Direction.HORIZONTAL,
-                                justify: h.Z.Justify.END,
+                            (0, r.jsxs)(_.Z, {
+                                direction: _.Z.Direction.HORIZONTAL,
+                                justify: _.Z.Justify.END,
                                 children: [
-                                    (0, i.jsx)('div', {
+                                    (0, r.jsx)('div', {
                                         'data-button-hoisted-classname-wrapper': !0,
-                                        className: g.retryButton,
-                                        children: (0, i.jsx)(c.zxk, {
+                                        className: E.retryButton,
+                                        children: (0, r.jsx)(c.zxk, {
                                             variant: 'secondary',
-                                            text: O.intl.string(O.t['5911LS']),
+                                            text: g.intl.string(g.t['5911LS']),
                                             onClick: () => this.handlePlay()
                                         })
                                     }),
-                                    (0, i.jsx)(c.zxk, {
+                                    (0, r.jsx)(c.zxk, {
                                         variant: 'primary',
-                                        text: O.intl.string(O.t['359PbW']),
+                                        text: g.intl.string(g.t['359PbW']),
                                         onClick: () => this.handlePlay(!1)
                                     })
                                 ]
@@ -125,111 +125,111 @@ class T extends r.PureComponent {
         });
     }
     renderConflict() {
-        let { application: t, cloudSyncState: e } = this.props;
-        if (e.type !== C.TzF.CONFLICT) throw Error('Cannot render conflict for non conflict type');
-        return (0, i.jsxs)(c.hzk, {
-            className: m.marginBottom20,
+        let { application: e, cloudSyncState: t } = this.props;
+        if (t.type !== m.TzF.CONFLICT) throw Error('Cannot render conflict for non conflict type');
+        return (0, r.jsxs)(c.hzk, {
+            className: b.marginBottom20,
             children: [
-                (0, i.jsx)('div', {
-                    className: g.description,
-                    children: O.intl.format(O.t.eyXUPz, { applicationName: t.name })
+                (0, r.jsx)('div', {
+                    className: E.description,
+                    children: g.intl.format(g.t.eyXUPz, { applicationName: e.name })
                 }),
-                this.renderConflictButton(O.intl.string(O.t.AQUmkp), e.remote.timestamp, g.conflictDownloadArt, this.handleChooseDownload),
-                (0, i.jsxs)(h.Z, {
-                    className: g.choiceWrapper,
-                    align: h.Z.Align.CENTER,
+                this.renderConflictButton(g.intl.string(g.t.AQUmkp), t.remote.timestamp, E.conflictDownloadArt, this.handleChooseDownload),
+                (0, r.jsxs)(_.Z, {
+                    className: E.choiceWrapper,
+                    align: _.Z.Align.CENTER,
                     children: [
-                        (0, i.jsx)('div', { className: g.choiceLine }),
-                        (0, i.jsx)('div', {
-                            className: g.choiceTitle,
-                            children: O.intl.string(O.t.WUsA2N)
+                        (0, r.jsx)('div', { className: E.choiceLine }),
+                        (0, r.jsx)('div', {
+                            className: E.choiceTitle,
+                            children: g.intl.string(g.t.WUsA2N)
                         }),
-                        (0, i.jsx)('div', { className: g.choiceLine })
+                        (0, r.jsx)('div', { className: E.choiceLine })
                     ]
                 }),
-                this.renderConflictButton(O.intl.string(O.t.AXVws7), e.next.timestamp, g.conflictUploadArt, this.handleChooseUpload)
+                this.renderConflictButton(g.intl.string(g.t.AXVws7), t.next.timestamp, E.conflictUploadArt, this.handleChooseUpload)
             ]
         });
     }
     render() {
-        let { cloudSyncState: t, transitionState: e } = this.props,
-            n = t.type === C.TzF.CONFLICT ? O.intl.string(O.t.oNbO1d) : O.intl.string(O.t.as4Tgo);
-        return (0, i.jsxs)(c.Y0X, {
-            transitionState: e,
-            className: g.modal,
+        let { cloudSyncState: e, transitionState: t } = this.props,
+            n = e.type === m.TzF.CONFLICT ? g.intl.string(g.t.oNbO1d) : g.intl.string(g.t.as4Tgo);
+        return (0, r.jsxs)(c.Y0X, {
+            transitionState: t,
+            className: E.modal,
             'aria-label': n,
             parentComponent: 'CloudSyncResolutionModal',
             children: [
-                (0, i.jsxs)(c.xBx, {
+                (0, r.jsxs)(c.xBx, {
                     separator: !1,
                     children: [
-                        (0, i.jsx)(c.olH, {
-                            className: g.closeButton,
+                        (0, r.jsx)(c.olH, {
+                            className: E.closeButton,
                             onClick: this.onClose
                         }),
-                        (0, i.jsx)(c.vwX, {
+                        (0, r.jsx)(c.vwX, {
                             tag: 'h2',
-                            className: m.marginReset,
+                            className: b.marginReset,
                             children: n
                         })
                     ]
                 }),
-                t.type === C.TzF.CONFLICT ? this.renderConflict() : this.renderError()
+                e.type === m.TzF.CONFLICT ? this.renderConflict() : this.renderError()
             ]
         });
     }
-    constructor(...t) {
-        var e;
-        (super(...t),
-            (e = this),
-            b(this, 'onClose', () => {
+    constructor(...e) {
+        var t;
+        (super(...e),
+            (t = this),
+            y(this, 'onClose', () => {
                 this.props.onClose();
             }),
-            b(this, 'handlePlay', function () {
-                let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
+            y(this, 'handlePlay', function () {
+                let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-                    { libraryApplication: i, analyticsParams: r } = e.props;
-                (e.onClose(),
-                    j(i.id, i, {
-                        analyticsParams: r,
-                        cloudSync: t,
+                    { libraryApplication: r, analyticsParams: i } = t.props;
+                (t.onClose(),
+                    T(r.id, r, {
+                        analyticsParams: i,
+                        cloudSync: e,
                         cloudSyncForceHash: n
                     }));
             }),
-            b(this, 'handleChooseDownload', () => {
-                let { cloudSyncState: t } = this.props;
-                t.type === C.TzF.CONFLICT && this.handlePlay(!0, t.remote.hash);
+            y(this, 'handleChooseDownload', () => {
+                let { cloudSyncState: e } = this.props;
+                e.type === m.TzF.CONFLICT && this.handlePlay(!0, e.remote.hash);
             }),
-            b(this, 'handleChooseUpload', () => {
-                let { cloudSyncState: t } = this.props;
-                t.type === C.TzF.CONFLICT && this.handlePlay(!0, t.next.hash);
+            y(this, 'handleChooseUpload', () => {
+                let { cloudSyncState: e } = this.props;
+                e.type === m.TzF.CONFLICT && this.handlePlay(!0, e.next.hash);
             }));
     }
 }
-let A = o.ZP.connectStores([f.Z, p.Z], (t) => {
-    let { libraryApplication: e, branchId: n } = t;
+let I = s.ZP.connectStores([p.Z, f.Z], (e) => {
+    let { libraryApplication: t, branchId: n } = e;
     return {
-        cloudSyncState: f.Z.getState(e.id, n),
-        application: p.Z.getApplication(e.id)
+        cloudSyncState: p.Z.getState(t.id, n),
+        application: f.Z.getApplication(t.id)
     };
-})(T);
-async function j(t, e, n) {
-    let r = p.Z.getApplication(t);
-    if (null == r) return;
-    let { cloudSync: l = !0, cloudSyncForceHash: a = null, analyticsParams: o } = n;
-    if (l && null != e) {
-        let t = e.branchId;
+})(v);
+async function T(e, t, n) {
+    let i = f.Z.getApplication(e);
+    if (null == i) return;
+    let { cloudSync: a = !0, cloudSyncForceHash: o = null, analyticsParams: s } = n;
+    if (a && null != t) {
+        let e = t.branchId;
         try {
-            await d.Z(e.id, t, a);
+            await u.Z(t.id, e, o);
         } catch (n) {
             (0, c.h7j)((n) =>
-                (0, i.jsx)(
-                    A,
-                    N(
+                (0, r.jsx)(
+                    I,
+                    O(
                         {
-                            libraryApplication: e,
-                            analyticsParams: o,
-                            branchId: t
+                            libraryApplication: t,
+                            analyticsParams: s,
+                            branchId: e
                         },
                         n
                     )
@@ -239,21 +239,21 @@ async function j(t, e, n) {
         }
     }
     return (
-        y.default.track(
-            C.rMx.APPLICATION_OPENED,
-            N(
+        h.default.track(
+            m.rMx.APPLICATION_OPENED,
+            O(
                 {
-                    application_id: r.id,
-                    application_name: r.name,
-                    type: C.q5t.LAUNCH,
-                    distributor: null != e ? e.getDistributor() : null
+                    application_id: i.id,
+                    application_name: i.name,
+                    type: m.q5t.LAUNCH,
+                    distributor: null != t ? t.getDistributor() : null
                 },
-                o
+                s
             )
         ),
-        u.Z.launch({
-            applicationId: r.id,
-            branchId: null == e ? void 0 : e.branchId
+        d.Z.launch({
+            applicationId: i.id,
+            branchId: null == t ? void 0 : t.branchId
         })
     );
 }

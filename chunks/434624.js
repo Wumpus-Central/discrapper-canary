@@ -1,149 +1,159 @@
-(n.d(t, { l: () => h }), n(388685));
+(n.d(t, { l: () => T }), n(388685));
 var r = n(255367),
     i = n(73800),
-    l = n(120356),
-    a = n.n(l),
-    o = n(866442),
-    s = n(596454),
+    a = n(120356),
+    o = n.n(a),
+    s = n(866442),
+    l = n(596454),
     c = n(434650),
     u = n(446489),
     d = n(56314),
-    p = n(566006),
-    m = n(287151),
-    f = n(92254),
-    g = n(588429);
-let _ = i.memo(function (e) {
-        let t,
-            n,
-            { useChatFontScaling: i, hideEmoji: l, emoji: c, className: _, count: h, me: b, me_burst: E, burst_count: C, burst_colors: v, readOnly: O, isLurking: x, isGuest: y, isPendingMember: I, type: j, emojiSize: S } = e,
-            T = j === p.O.BURST,
-            N = (0, m.y4)(b, E, j),
-            P = (0, d.v)(T && null != v ? v : []),
-            A = i ? g : f,
-            w = T ? C : h,
-            Z = (0, u.y)(w, m.aO),
-            R = {};
-        if (T && null != P) {
-            var D;
-            let { accentColor: e, backgroundColor: r, opacity: i } = P,
-                l = null != (D = (0, o.wK)(null != r ? r : '', i)) ? D : '';
-            (N && (R.borderColor = r), (R.background = l), (t = e), (n = e));
-        }
-        let L = {
-            minWidth: Z,
-            color: t,
-            borderColor: n
-        };
-        return (0, r.jsxs)('div', {
-            className: a()(A.reaction, A.reactionInner, _, {
-                [A.reactionMe]: N,
-                [A.reactionReadOnly]: O && !x && !I && !y
+    f = n(566006),
+    _ = n(287151),
+    p = n(92254),
+    h = n(588429);
+function m(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function g(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                m(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function E(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : E(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function y(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = O(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+    }
+    return i;
+}
+function O(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    return i;
+}
+let v = i.memo(function (e) {
+    let t,
+        n,
+        { useChatFontScaling: i, hideEmoji: a, emoji: c, className: m, count: g, me: E, me_burst: b, burst_count: y, burst_colors: O, readOnly: v, isLurking: I, isGuest: T, isPendingMember: S, type: A, emojiSize: N } = e,
+        C = A === f.O.BURST,
+        w = (0, _.y4)(E, b, A),
+        R = (0, d.v)(C && null != O ? O : []),
+        P = i ? h : p,
+        D = C ? y : g,
+        L = (0, u.y)(D, _.aO),
+        x = {};
+    if (C && null != R) {
+        var k;
+        let { accentColor: e, backgroundColor: r, opacity: i } = R,
+            a = null != (k = (0, s.wK)(null != r ? r : '', i)) ? k : '';
+        (w && (x.borderColor = r), (x.background = a), (t = e), (n = e));
+    }
+    let j = {
+        minWidth: L,
+        color: t,
+        borderColor: n
+    };
+    return (0, r.jsxs)('div', {
+        className: o()(P.reaction, P.reactionInner, m, {
+            [P.reactionMe]: w,
+            [P.reactionReadOnly]: v && !I && !S && !T
+        }),
+        style: x,
+        children: [
+            (0, r.jsx)(l.Z, {
+                className: o()({ [P.hideEmoji]: a }),
+                emojiId: c.id,
+                emojiName: c.name,
+                size: N,
+                animated: C && c.animated
             }),
-            style: R,
-            children: [
-                (0, r.jsx)(s.Z, {
-                    className: a()({ [A.hideEmoji]: l }),
-                    emojiId: c.id,
-                    emojiName: c.name,
-                    size: S,
-                    animated: T && c.animated
-                }),
-                (0, r.jsx)('div', {
-                    className: A.reactionCount,
-                    style: L,
-                    children: w
-                })
-            ]
-        });
-    }),
-    h = i.memo(function (e) {
-        var { showImmediate: t, reactions: n } = e,
-            l = (function (e, t) {
-                if (null == e) return {};
-                var n,
-                    r,
-                    i = (function (e, t) {
-                        if (null == e) return {};
-                        var n,
-                            r,
-                            i = {},
-                            l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
-                        return i;
-                    })(e, t);
-                if (Object.getOwnPropertySymbols) {
-                    var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
-                }
-                return i;
-            })(e, ['showImmediate', 'reactions']);
-        let [a, o] = i.useState(!1),
-            [s, u] = i.useTransition(),
-            d = i.useCallback(
-                (e) => {
-                    !e ||
-                        a ||
-                        s ||
-                        u(() => {
-                            o(!0);
-                        });
-                },
-                [a, s]
-            ),
-            f = (0, c.O)(d),
-            g = (a && !s) || t ? m.le : _;
-        return (0, r.jsxs)(r.Fragment, {
-            children: [
-                (0, r.jsx)('div', { ref: f }),
-                n.map((e) => {
-                    var t, n, i;
-                    return (0, r.jsx)(
-                        g,
-                        ((t = (function (e) {
-                            for (var t = 1; t < arguments.length; t++) {
-                                var n = null != arguments[t] ? arguments[t] : {},
-                                    r = Object.keys(n);
-                                ('function' == typeof Object.getOwnPropertySymbols &&
-                                    (r = r.concat(
-                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                        })
-                                    )),
-                                    r.forEach(function (t) {
-                                        var r;
-                                        ((r = n[t]),
-                                            t in e
-                                                ? Object.defineProperty(e, t, {
-                                                      value: r,
-                                                      enumerable: !0,
-                                                      configurable: !0,
-                                                      writable: !0
-                                                  })
-                                                : (e[t] = r));
-                                    }));
-                            }
-                            return e;
-                        })({}, l, e)),
-                        (n = n = { emojiSize: 'reaction' }),
-                        Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                            : (function (e, t) {
-                                  var n = Object.keys(e);
-                                  if (Object.getOwnPropertySymbols) {
-                                      var r = Object.getOwnPropertySymbols(e);
-                                      n.push.apply(n, r);
-                                  }
-                                  return n;
-                              })(Object(n)).forEach(function (e) {
-                                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                              }),
-                        t),
-                        ''
-                            .concat(e.type === p.O.BURST ? 'burst:' : '')
-                            .concat(null != (i = e.emoji.id) ? i : 0, ':')
-                            .concat(e.emoji.name)
-                    );
-                })
-            ]
-        });
+            (0, r.jsx)('div', {
+                className: P.reactionCount,
+                style: j,
+                children: D
+            })
+        ]
     });
+});
+function I(e) {
+    var t;
+    return ''
+        .concat(e.type === f.O.BURST ? 'burst:' : '')
+        .concat(null != (t = e.emoji.id) ? t : 0, ':')
+        .concat(e.emoji.name);
+}
+let T = i.memo(function (e) {
+    var { showImmediate: t, reactions: n } = e,
+        a = y(e, ['showImmediate', 'reactions']);
+    let [o, s] = i.useState(!1),
+        [l, u] = i.useTransition(),
+        d = i.useCallback(
+            (e) => {
+                !e ||
+                    o ||
+                    l ||
+                    u(() => {
+                        s(!0);
+                    });
+            },
+            [o, l]
+        ),
+        f = (0, c.O)(d),
+        p = (o && !l) || t ? _.le : v;
+    return (0, r.jsxs)(r.Fragment, {
+        children: [(0, r.jsx)('div', { ref: f }), n.map((e) => (0, r.jsx)(p, b(g({}, a, e), { emojiSize: 'reaction' }), I(e)))]
+    });
+});

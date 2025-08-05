@@ -37,11 +37,11 @@ let S = new c.Z('GameConsoleManager'),
     A = 3000,
     N = 60000,
     C = 180000;
-async function R(e) {
+async function w(e) {
     let t = f.Z.getChannelId();
     (i()(null == t, 'Syncing to remote while in voice!'), e.selfMute !== d.Z.isSelfMute() && (await s.Z.toggleSelfMute({ syncRemote: !1 })), e.selfDeaf !== d.Z.isSelfDeaf() && s.Z.toggleSelfDeaf({ syncRemote: !1 }));
 }
-function P(e) {
+function R(e) {
     let t = E.Z.getAwaitingRemoteSessionInfo();
     return e.find((e) => {
         let n = O.al.has(e.clientInfo.os),
@@ -50,7 +50,7 @@ function P(e) {
         return n && i && r;
     });
 }
-class w extends l.Z {
+class P extends l.Z {
     constructor(...e) {
         (super(...e),
             T(this, 'rollbackCommandTimeout', new a.V7()),
@@ -67,11 +67,11 @@ class w extends l.Z {
                 REMOTE_SESSION_DISCONNECT: () => this.handleRemoteSessionDisconnect()
             }),
             T(this, 'maybeConnect', (e) => {
-                let t = P(e);
+                let t = R(e);
                 if (null == t) return null;
                 (this.awaitRemoteTimeout.stop(), (0, m.ef)(t.sessionId));
                 let n = p.Z.getVoiceStateForSession(u.default.getId(), t.sessionId);
-                null != n && R(n);
+                null != n && w(n);
             }),
             T(this, 'handleAudioStateToggle', (e) => {
                 let { syncRemote: t, context: n } = e;
@@ -89,7 +89,7 @@ class w extends l.Z {
                         selfMute: i
                     }),
                     this.rollbackCommandTimeout.start(A, () => {
-                        R(s);
+                        w(s);
                     }));
             }),
             T(this, 'handleVoiceStateUpdates', (e) => {
@@ -108,7 +108,7 @@ class w extends l.Z {
                     let { sessionId: t } = e;
                     return t === n;
                 });
-                null != r && (this.rollbackCommandTimeout.stop(), R(r));
+                null != r && (this.rollbackCommandTimeout.stop(), w(r));
             }),
             T(this, 'handleSessionsChanged', () => {
                 let e = E.Z.getRemoteSessionId();
@@ -156,4 +156,4 @@ class w extends l.Z {
             }));
     }
 }
-let D = new w();
+let D = new P();

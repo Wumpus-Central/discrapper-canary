@@ -3,38 +3,38 @@ var r = n(255367),
     i = n(73800),
     l = n(399606),
     a = n(704215),
-    o = n(952265),
-    s = n(481060),
+    s = n(952265),
+    o = n(481060),
     c = n(243778),
-    u = n(38618),
-    d = n(914010),
-    p = n(921944);
-function h(e) {
-    return 'dismissible_content_'.concat(p.R.GUILD_TAKEOVER_MODAL, '-').concat(e);
+    d = n(38618),
+    u = n(914010),
+    h = n(921944);
+function p(e) {
+    return 'dismissible_content_'.concat(h.R.GUILD_TAKEOVER_MODAL, '-').concat(e);
 }
 let f = i.memo(function () {
-    let e = ((0, l.e7)([u.Z], () => u.Z.isConnected()), []),
-        [t, f] = (0, c.US)(e, p.R.GUILD_TAKEOVER_MODAL),
-        m = (0, o.f9)(),
-        g = i.useRef(null);
+    let e = ((0, l.e7)([d.Z], () => d.Z.isConnected()), []),
+        [t, f] = (0, c.US)(e, h.R.GUILD_TAKEOVER_MODAL),
+        g = (0, s.f9)(),
+        m = i.useRef(null);
     return (
         i.useEffect(() => {
             if (null == t) {
-                g.current = null;
+                m.current = null;
                 return;
             }
-            m ||
-                g.current === t ||
+            g ||
+                m.current === t ||
                 (!(function (e) {
                     let { dismissibleContent: t, markAsDismissed: i } = e,
                         l = {
-                            onCloseCallback: (e) => i(null != e ? e : p.L.UNKNOWN),
-                            modalKey: h(t)
+                            onCloseCallback: (e) => i(null != e ? e : h.L.UNKNOWN),
+                            modalKey: p(t)
                         },
-                        o = d.Z.getGuildId();
+                        s = u.Z.getGuildId();
                     t === a.z.SERVER_SHOP_UPSELL &&
-                        null != o &&
-                        (0, s.ZDy)(async () => {
+                        null != s &&
+                        (0, o.ZDy)(async () => {
                             let { default: e } = await n.e('7302').then(n.bind(n, 756779));
                             return (t) => {
                                 var n, l;
@@ -67,7 +67,7 @@ let f = i.memo(function () {
                                     })({}, t)),
                                     (l = l =
                                         {
-                                            guildId: o,
+                                            guildId: s,
                                             markAsDismissed: i
                                         }),
                                     Object.getOwnPropertyDescriptors
@@ -90,11 +90,11 @@ let f = i.memo(function () {
                     dismissibleContent: t,
                     markAsDismissed: f
                 }),
-                (g.current = t));
-        }, [t, m, f]),
+                (m.current = t));
+        }, [t, g, f]),
         i.useEffect(
             () => () => {
-                null != t && (0, o.Mr)(h(t));
+                null != t && (0, s.Mr)(p(t));
             },
             [t]
         ),

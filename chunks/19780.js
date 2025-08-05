@@ -190,13 +190,13 @@ function C() {
         (O = null),
         (A = !1));
 }
-function R(e) {
+function w(e) {
     return ((i = e.sessionId), (b = null), (y = null), C(), !1);
 }
-function P() {
+function R() {
     ((i = null), (b = null), (y = null), C());
 }
-function w(e) {
+function P(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         var n, a, o;
@@ -219,17 +219,17 @@ function L() {
 function x() {
     y = null;
 }
-function M(e) {
+function k(e) {
     let { guild: t } = e;
     if (null == r || r.guildId !== t.id) return !1;
     C();
 }
-function k(e) {
+function j(e) {
     let { channelId: t } = e;
     if (null == r || r.channelId !== t) return !1;
     C();
 }
-function j(e) {
+function M(e) {
     let { channel: t } = e;
     if (null == r || r.channelId !== t.id) return !1;
     C();
@@ -245,13 +245,13 @@ function G(e) {
 function B(e) {
     return (e.state === p.hes.RTC_CONNECTED && (T = !0), !0);
 }
-function V(e) {
+function Z(e) {
     null == r || r.setNoiseCancellationEnabled(e.enabled);
 }
 function F() {
     return !0;
 }
-function Z(e) {
+function V(e) {
     let { context: t, wants: n } = e;
     if (
         t !== h.Yn.DEFAULT ||
@@ -374,8 +374,8 @@ let z = new K(
     __OVERLAY__
         ? {}
         : {
-              CONNECTION_OPEN: R,
-              CONNECTION_CLOSED: P,
+              CONNECTION_OPEN: w,
+              CONNECTION_CLOSED: R,
               RTC_CONNECTION_STATE: B,
               RTC_CONNECTION_PING: F,
               RTC_CONNECTION_LOSS_RATE: F,
@@ -383,19 +383,19 @@ let z = new K(
               RTC_CONNECTION_SECURE_FRAMES_UPDATE: F,
               RTC_CONNECTION_CLIENT_CONNECT: F,
               RTC_CONNECTION_CLIENT_DISCONNECT: F,
-              RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: Z,
+              RTC_CONNECTION_REMOTE_VIDEO_SINK_WANTS: V,
               VIDEO_SIZE_UPDATE: W,
-              VOICE_STATE_UPDATES: w,
+              VOICE_STATE_UPDATES: P,
               VOICE_CHANNEL_SELECT: U,
-              AUDIO_SET_NOISE_CANCELLATION: V,
+              AUDIO_SET_NOISE_CANCELLATION: Z,
               VOICE_SERVER_UPDATE: D,
               CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID: L,
               REMOTE_SESSION_CONNECT: L,
               CLEAR_LAST_SESSION_VOICE_CHANNEL_ID: x,
-              GUILD_DELETE: M,
-              CHANNEL_DELETE: j,
-              THREAD_DELETE: j,
-              CALL_DELETE: k,
+              GUILD_DELETE: k,
+              CHANNEL_DELETE: M,
+              THREAD_DELETE: M,
+              CALL_DELETE: j,
               APP_STATE_UPDATE: G,
               RTC_DEBUG_SET_SIMULCAST_OVERRIDE: Y
           }

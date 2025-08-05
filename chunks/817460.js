@@ -1,17 +1,17 @@
 n.d(t, {
-    JE: () => o,
-    ab: () => s,
+    JE: () => u,
+    ab: () => o,
     iG: () => a,
-    lL: () => u,
+    lL: () => s,
     rC: () => c
 });
 var r = n(293810),
     i = n(474936),
     l = n(388032);
-function s(e) {
+function o(e) {
     return 'roles' in e ? 'emoji-'.concat(e.id) : ''.concat(e.ref_type, '-').concat(e.emoji_id, '-').concat(e.name, '-').concat(e.ref_id);
 }
-function o(e) {
+function u(e) {
     let { interval: t, interval_count: n } = e;
     return l.intl.format(
         (function (e) {
@@ -42,6 +42,6 @@ function a(e) {
 function c(e) {
     return e.ref_type === r.Qs.CHANNEL;
 }
-function u(e) {
+function s(e) {
     return e.ref_type === r.Qs.INTANGIBLE;
 }

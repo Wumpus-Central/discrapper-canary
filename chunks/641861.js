@@ -2,85 +2,85 @@ n.d(t, { Z: () => v });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    l = n.n(i),
-    a = n(990547),
-    o = n(442837),
-    s = n(680018),
+    a = n.n(i),
+    o = n(990547),
+    s = n(442837),
+    l = n(680018),
     c = n(481060),
     u = n(26151),
     d = n(213609),
-    p = n(358221),
-    h = n(985588),
-    f = n(686546),
-    m = n(359110),
-    g = n(601964),
-    b = n(430824),
-    _ = n(933557),
-    y = n(354459),
-    C = n(388032),
-    x = n(249671);
+    f = n(358221),
+    _ = n(985588),
+    p = n(686546),
+    h = n(359110),
+    m = n(601964),
+    g = n(430824),
+    E = n(933557),
+    b = n(354459),
+    y = n(388032),
+    O = n(249671);
 function v(e) {
     let { recipientUser: t, voiceChannel: n } = e,
-        i = (0, _.ZP)(n),
-        s = (0, h.s)(t, 'RingToVoiceBanner', n.id),
-        { userIsInCall: u, isUserRinging: m } = (0, o.cj)([p.Z], () => {
+        i = (0, E.ZP)(n),
+        l = (0, _.s)(t, 'RingToVoiceBanner', n.id),
+        { userIsInCall: u, isUserRinging: h } = (0, s.cj)([f.Z], () => {
             let e = null;
             return (
-                s && null != n.id && (e = p.Z.getParticipant(n.id, t.id)),
+                l && null != n.id && (e = f.Z.getParticipant(n.id, t.id)),
                 {
                     userIsInCall: null != e,
-                    isUserRinging: null != e && e.type === y.fO.USER && e.ringing
+                    isUserRinging: null != e && e.type === b.fO.USER && e.ringing
                 }
             );
         }),
-        v = (0, o.e7)([b.Z], () => b.Z.getGuild(n.guild_id)),
-        O = null != v ? (0, g.EB)(v, 32, !0) : null,
-        E = !s || (u && !m);
+        v = (0, s.e7)([g.Z], () => g.Z.getGuild(n.guild_id)),
+        T = null != v ? (0, m.EB)(v, 32, !0) : null,
+        S = !l || (u && !h);
     return ((0, d.Z)(
         {
-            type: a.ImpressionTypes.PAGE,
-            name: a.ImpressionNames.RING_TO_GUILD_VC_BANNER_SHOWN,
+            type: o.ImpressionTypes.PAGE,
+            name: o.ImpressionNames.RING_TO_GUILD_VC_BANNER_SHOWN,
             properties: {
                 voice_channel_id: null == n ? void 0 : n.id,
                 voice_guild_id: null == n ? void 0 : n.guild_id
             }
         },
-        { disableTrack: E },
+        { disableTrack: S },
         [t.id]
     ),
-    E)
+    S)
         ? null
         : (0, r.jsxs)('div', {
-              className: l()(x.themed, x.chatHeaderBar),
+              className: a()(O.themed, O.chatHeaderBar),
               children: [
                   (0, r.jsxs)('div', {
-                      className: x.chatHeaderBarInfo,
+                      className: O.chatHeaderBarInfo,
                       children: [
-                          (0, r.jsx)(f.ZP, {
-                              className: x.mask,
-                              mask: f.QS.SQUIRCLE,
+                          (0, r.jsx)(p.ZP, {
+                              className: O.mask,
+                              mask: p.QS.SQUIRCLE,
                               width: 24,
                               height: 24,
                               children:
-                                  null == O
+                                  null == T
                                       ? (0, r.jsx)('div', {
-                                            className: l()(x.guildIcon, x.guildIconWithoutImage),
+                                            className: a()(O.guildIcon, O.guildIconWithoutImage),
                                             children: (0, r.jsx)('div', {
-                                                className: x.guildAcronym,
-                                                children: null != v ? (0, g.gM)(v) : null
+                                                className: O.guildAcronym,
+                                                children: null != v ? (0, m.gM)(v) : null
                                             })
                                         })
                                       : (0, r.jsx)('img', {
                                             alt: null == v ? void 0 : v.name,
-                                            src: O,
-                                            className: x.guildIcon
+                                            src: T,
+                                            className: O.guildIcon
                                         })
                           }),
                           (0, r.jsx)(c.Text, {
-                              className: x.chatHeaderBarText,
+                              className: O.chatHeaderBarText,
                               variant: 'text-md/medium',
                               color: 'header-secondary',
-                              children: C.intl.format(C.t.f2tNxM, {
+                              children: y.intl.format(y.t.f2tNxM, {
                                   username: null == t ? void 0 : t.globalName,
                                   channelName: (0, r.jsx)(
                                       c.Text,
@@ -95,28 +95,29 @@ function v(e) {
                           })
                       ]
                   }),
-                  (0, r.jsx)(j, {
+                  (0, r.jsx)(I, {
                       channelId: n.id,
                       recipientUserId: t.id,
-                      isUserRinging: m
+                      isUserRinging: h
                   })
               ]
           });
 }
-function j(e) {
+function I(e) {
     let { channelId: t, recipientUserId: n, isUserRinging: i } = e,
-        l = i ? C.intl.string(C.t.ygslb2) : C.intl.string(C.t['3Hv9qa']),
-        a = i
+        a = i ? 'critical-secondary' : 'secondary',
+        o = i ? y.intl.string(y.t.ygslb2) : y.intl.string(y.t['3Hv9qa']),
+        s = i
             ? () => u.Z.stopRinging(t, [n])
             : () => {
-                  (u.Z.ring(t, [n], 'dm_banner'), (0, m.Kh)(t));
+                  (u.Z.ring(t, [n], 'dm_banner'), (0, h.Kh)(t));
               };
-    return (0, r.jsx)(s.z, {
-        variant: i ? 'critical-secondary' : 'secondary',
+    return (0, r.jsx)(l.z, {
+        variant: a,
         size: 'sm',
-        text: l,
+        text: o,
         iconPosition: 'start',
         icon: c.gj8,
-        onClick: a
+        onClick: s
     });
 }

@@ -1,27 +1,27 @@
-(n.d(t, { default: () => b }), n(388685));
+(n.d(t, { default: () => _ }), n(388685));
 var i = n(255367),
-    r = n(73800),
-    s = n(755721),
+    s = n(73800),
+    r = n(755721),
     a = n(481060),
     l = n(626135),
     c = n(115345),
     o = n(57927),
     d = n(273236),
     m = n(931839),
-    u = n(905987),
-    x = n(789662),
-    h = n(981631),
+    x = n(905987),
+    h = n(789662),
+    u = n(981631),
     j = n(388032),
     g = n(699343);
-function b(e) {
-    let { onClose: t, transitionState: n, dismissable: o, guildPain: b, myUsage: v } = e,
-        [_, p] = r.useState(m.O.Intro),
-        { submitted: N, submitting: y, saveSettings: O } = (0, c.vo)(t),
-        { guildPlans: C, overrideGuild: w, getDebug: T } = (0, c.F6)(b, v),
-        P = r.useRef(null);
+function _(e) {
+    let { onClose: t, transitionState: n, dismissable: o, guildPain: _, myUsage: v } = e,
+        [f, N] = s.useState(m.O.Intro),
+        { submitted: p, submitting: C, saveSettings: y } = (0, c.vo)(t),
+        { guildPlans: T, overrideGuild: w, getDebug: O } = (0, c.F6)(_, v),
+        I = s.useRef(null);
     return (
-        r.useEffect(() => {
-            l.default.track(h.rMx.OPEN_MODAL, { type: 'notification_migration_modal' });
+        s.useEffect(() => {
+            l.default.track(u.rMx.OPEN_MODAL, { type: 'notification_migration_modal' });
         }, []),
         (0, i.jsxs)(a.Y0X, {
             className: g.__invalid_modal,
@@ -31,22 +31,22 @@ function b(e) {
             parentComponent: 'NotificationMigrationModal',
             children: [
                 (0, i.jsx)(m.Z, {
-                    selectedTab: _,
-                    onClick: p,
-                    submitted: N
+                    selectedTab: f,
+                    onClick: N,
+                    submitted: p
                 }),
-                _ === m.O.Intro
-                    ? (0, i.jsx)(d.Z, { ref: P })
-                    : _ === m.O.Customize
-                      ? (0, i.jsx)(f, {
-                            guildPlans: C,
+                f === m.O.Intro
+                    ? (0, i.jsx)(d.Z, { ref: I })
+                    : f === m.O.Customize
+                      ? (0, i.jsx)(b, {
+                            guildPlans: T,
                             overrideGuild: w,
-                            getDebug: T
+                            getDebug: O
                         })
-                      : (0, i.jsx)(u.Z, {
-                            count: Object.values(C).filter((e) => {
+                      : (0, i.jsx)(x.Z, {
+                            count: Object.values(T).filter((e) => {
                                 var t;
-                                return (null != (t = e.overrideMode) ? t : e.mode) === x.AR.UseGreyDot;
+                                return (null != (t = e.overrideMode) ? t : e.mode) === h.AR.UseGreyDot;
                             }).length
                         }),
                 (0, i.jsxs)(a.mzw, {
@@ -55,7 +55,7 @@ function b(e) {
                         (0, i.jsxs)('div', {
                             className: g.__invalid_left,
                             children: [
-                                o || (_ !== m.O.Tips && _ !== m.O.Customize)
+                                o || (f !== m.O.Tips && f !== m.O.Customize)
                                     ? null
                                     : (0, i.jsx)(a.eee, {
                                           className: g.dismiss,
@@ -66,7 +66,7 @@ function b(e) {
                                               children: j.intl.string(j.t.hvVgAQ)
                                           })
                                       }),
-                                o && _ === m.O.Intro
+                                o && f === m.O.Intro
                                     ? (0, i.jsx)(a.P3F, {
                                           className: g.dismiss,
                                           onClick: t,
@@ -77,7 +77,7 @@ function b(e) {
                                           })
                                       })
                                     : null,
-                                o && _ === m.O.Customize
+                                o && f === m.O.Customize
                                     ? (0, i.jsx)(a.P3F, {
                                           className: g.dismiss,
                                           onClick: t,
@@ -93,7 +93,7 @@ function b(e) {
                         (0, i.jsxs)('div', {
                             className: g.right,
                             children: [
-                                _ === m.O.Customize
+                                f === m.O.Customize
                                     ? (0, i.jsx)(a.Text, {
                                           className: g.warning,
                                           variant: 'text-xs/medium',
@@ -101,11 +101,11 @@ function b(e) {
                                           children: j.intl.string(j.t.nlpqxM)
                                       })
                                     : null,
-                                _ !== m.O.Customize || N
+                                f !== m.O.Customize || p
                                     ? null
-                                    : (0, i.jsxs)(s.zx, {
-                                          onClick: () => p(m.O.Intro),
-                                          color: s.zx.Colors.TRANSPARENT,
+                                    : (0, i.jsxs)(r.zx, {
+                                          onClick: () => N(m.O.Intro),
+                                          color: r.zx.Colors.TRANSPARENT,
                                           children: [
                                               (0, i.jsx)(a.whL, {
                                                   size: 'xs',
@@ -115,11 +115,11 @@ function b(e) {
                                               j.intl.string(j.t['13/7kZ'])
                                           ]
                                       }),
-                                _ === m.O.Intro
-                                    ? (0, i.jsxs)(s.zx, {
+                                f === m.O.Intro
+                                    ? (0, i.jsxs)(r.zx, {
                                           onClick: () => {
                                               var e;
-                                              (null == (e = P.current) ? void 0 : e.maybeChangeToAfterTab()) && p(m.O.Customize);
+                                              (null == (e = I.current) ? void 0 : e.maybeChangeToAfterTab()) && N(m.O.Customize);
                                           },
                                           children: [
                                               j.intl.string(j.t.uw9zIy),
@@ -130,10 +130,10 @@ function b(e) {
                                               })
                                           ]
                                       })
-                                    : _ === m.O.Customize
-                                      ? (0, i.jsxs)(s.zx, {
+                                    : f === m.O.Customize
+                                      ? (0, i.jsxs)(r.zx, {
                                             onClick: () => {
-                                                (p(m.O.Tips), O(C));
+                                                (N(m.O.Tips), y(T));
                                             },
                                             children: [
                                                 j.intl.string(j.t['1Qm829']),
@@ -147,7 +147,7 @@ function b(e) {
                                       : (0, i.jsx)(a.zxk, {
                                             variant: 'primary',
                                             text: j.intl.string(j.t.cpT0Cg),
-                                            loading: y,
+                                            loading: C,
                                             onClick: t
                                         })
                             ]
@@ -158,7 +158,7 @@ function b(e) {
         })
     );
 }
-function f(e) {
+function b(e) {
     let { guildPlans: t, overrideGuild: n } = e;
     return (0, i.jsxs)(a.Ttm, {
         className: g.content,

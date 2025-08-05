@@ -3,16 +3,16 @@ var r = n(255367),
     i = n(73800),
     l = n(593473),
     s = n(114858),
-    a = n(442837),
-    o = n(893776),
+    o = n(442837),
+    a = n(893776),
     c = n(899742),
     u = n(493773),
     d = n(743142),
     h = n(893607),
     p = n(703656),
-    g = n(314897),
-    m = n(781428),
-    f = n(981631),
+    m = n(314897),
+    f = n(781428),
+    g = n(981631),
     _ = n(176505);
 function x(e) {
     var t, n;
@@ -21,7 +21,7 @@ function x(e) {
                 if (
                     (function (e) {
                         var t;
-                        let n = (0, s.LX)(e, { path: f.Z5c.CHANNEL(h.Hw.guildId(), h.Hw.channelId()) });
+                        let n = (0, s.LX)(e, { path: g.Z5c.CHANNEL(h.Hw.guildId(), h.Hw.channelId()) });
                         return (null == n || null == (t = n.params) ? void 0 : t.channelId) === _.oC.ROLE_SUBSCRIPTIONS;
                     })(t)
                 )
@@ -33,13 +33,13 @@ function x(e) {
             },
             [e.transitionTo]
         ),
-        { isAuthenticated: b, loginStatus: E } = (0, a.cj)([g.default], () => ({
-            isAuthenticated: g.default.isAuthenticated(),
-            loginStatus: g.default.getLoginStatus()
+        { isAuthenticated: b, loginStatus: E } = (0, o.cj)([m.default], () => ({
+            isAuthenticated: m.default.isAuthenticated(),
+            loginStatus: m.default.getLoginStatus()
         })),
-        { location: v, redirectTo: I } = e,
-        [j, O] = i.useState(b);
-    function S(e) {
+        { location: v, redirectTo: j } = e,
+        [I, O] = i.useState(b);
+    function N(e) {
         let { handoffKey: t, handoffToken: n, handoffSource: r } = e;
         ((0, c.Yz)({
             handoffKey: t,
@@ -52,16 +52,16 @@ function x(e) {
         if (null != v) {
             let { handoff_key: e, handoff_token: t } = (0, l.parse)(v.search);
             if (null != e && null != t) {
-                let n = null != I ? (0, d.L)(I) : void 0;
-                j
-                    ? o.Z.logout('handoff', null).finally(() => {
-                          S({
+                let n = null != j ? (0, d.L)(j) : void 0;
+                I
+                    ? a.Z.logout('handoff', null).finally(() => {
+                          N({
                               handoffKey: e,
                               handoffToken: t,
                               handoffSource: n
                           });
                       })
-                    : S({
+                    : N({
                           handoffKey: e,
                           handoffToken: t,
                           handoffSource: n
@@ -69,10 +69,10 @@ function x(e) {
             }
         }
     }),
-    j || E === f.u34.LOGGING_IN)
-        ? (0, r.jsx)(m.q, {})
+    I || E === g.u34.LOGGING_IN)
+        ? (0, r.jsx)(f.q, {})
         : (0, r.jsx)(
-              m.Z,
+              f.Z,
               ((t = (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},

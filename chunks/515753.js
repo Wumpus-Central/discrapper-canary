@@ -299,7 +299,7 @@ function ed(e) {
                     ? (0, h.jW)(
                           e,
                           async () => {
-                              let { default: e } = await Promise.all([n.e('79695'), n.e('90508'), n.e('70205'), n.e('53912'), n.e('19549')]).then(n.bind(n, 354741));
+                              let { default: e } = await Promise.all([n.e('79695'), n.e('70205'), n.e('53912'), n.e('19549')]).then(n.bind(n, 354741));
                               return (n) =>
                                   (0, i.jsx)(
                                       e,
@@ -317,7 +317,7 @@ function ed(e) {
                     : (0, h.jW)(
                           e,
                           async () => {
-                              let { default: e } = await Promise.all([n.e('79695'), n.e('90508'), n.e('70205'), n.e('98783'), n.e('53912'), n.e('15114'), n.e('56826'), n.e('10815')]).then(n.bind(n, 131404));
+                              let { default: e } = await Promise.all([n.e('79695'), n.e('70205'), n.e('53912'), n.e('98783'), n.e('56826'), n.e('67326')]).then(n.bind(n, 131404));
                               return (n) =>
                                   (0, i.jsx)(
                                       e,

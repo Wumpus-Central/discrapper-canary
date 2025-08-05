@@ -1,16 +1,16 @@
 (n.d(t, { Z: () => c }), n(361932), n(187205), n(388685), n(539854), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529));
 var r = n(73800),
     i = n(399606),
-    a = n(541716),
-    l = n(117530),
+    l = n(541716),
+    a = n(117530),
     s = n(154135),
     o = n(337077);
 function c(e, t) {
     var n, c;
     let { mediaAttachments: d, hasThumbnail: u } = (function (e) {
             let [t, n] = r.useState(null),
-                o = (0, i.Wu)([l.Z], () => {
-                    let t = l.Z.getUploads(e.id, a.Ie.CREATE_FORUM_POST.drafts.type),
+                o = (0, i.Wu)([a.Z], () => {
+                    let t = a.Z.getUploads(e.id, l.Ie.CREATE_FORUM_POST.drafts.type),
                         n = t.find((e) => e.isThumbnail);
                     return null != n ? [n] : t.filter((e) => e.isVideo || e.isImage);
                 }),

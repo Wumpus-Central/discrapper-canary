@@ -86,11 +86,11 @@ let I = 2700,
 function N(e) {
     let { user: t, sourceType: n, isVisible: a, isExpandable: b, interactionSourceId: O, targetRef: I, onAction: T, renderMoreButtonPopout: N } = e,
         C = i.useRef(null),
-        R = (0, s.e7)([f.default], () => f.default.getId() === t.id),
-        P = (0, _.Z)(t.id),
-        { themeType: w } = (0, h.z)(),
+        w = (0, s.e7)([f.default], () => f.default.getId() === t.id),
+        R = (0, _.Z)(t.id),
+        { themeType: P } = (0, h.z)(),
         { onInteraction: D, onInteractionPopoutTargetRefChange: L } = (0, p.Xo)();
-    if (t.bot || R || !P) return null;
+    if (t.bot || w || !R) return null;
     let x = () => {
             (L(I),
                 n === m.n_.AVATAR ? T({ action: 'PRESS_REACT_AVATAR' }) : n === m.n_.STATUS ? T({ action: 'PRESS_REACT_CUSTOM_STATUS' }) : T({ action: 'PRESS_REACT_ACTIVITY' }),
@@ -100,9 +100,9 @@ function N(e) {
                         interactionSource: n,
                         interactionSourceId: O
                     }),
-                w === m.lY.POPOUT && (0, d.Q3)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK));
+                P === m.lY.POPOUT && (0, d.Q3)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK));
         },
-        M = () => {
+        k = () => {
             (L(I),
                 n === m.n_.AVATAR ? T({ action: 'PRESS_REPLY_AVATAR' }) : n === m.n_.STATUS ? T({ action: 'PRESS_REPLY_CUSTOM_STATUS' }) : T({ action: 'PRESS_REPLY_ACTIVITY' }),
                 null == D ||
@@ -111,7 +111,7 @@ function N(e) {
                         interactionSource: n,
                         interactionSourceId: O
                     }),
-                w === m.lY.POPOUT && (0, d.Q3)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK));
+                P === m.lY.POPOUT && (0, d.Q3)(l.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK));
         };
     return (0, r.jsxs)(u.ZP, {
         className: o()(E.popover, {
@@ -146,7 +146,7 @@ function N(e) {
                 delay: 0,
                 'aria-label': !1,
                 children: (0, r.jsx)(u.zx, {
-                    onClick: M,
+                    onClick: k,
                     className: E.button,
                     'aria-label': A[n](),
                     'aria-haspopup': 'dialog',

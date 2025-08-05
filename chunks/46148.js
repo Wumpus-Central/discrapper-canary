@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(704215),
-    a = n(481060),
-    s = n(515753),
+    s = n(481060),
+    a = n(515753),
     c = n(266454),
     u = n(243778),
     d = n(612659),
@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(680783),
     m = n(13186),
     b = n(981631),
-    _ = n(921944),
-    O = n(474936),
+    O = n(921944),
+    _ = n(474936),
     y = n(388032),
     C = n(706442),
     v = n(777091);
@@ -68,11 +68,11 @@ let E = (e, t) => {
                 location: 'ChatWallpaperDMListCoachmark',
                 channelId: t
             }),
-            T = w === p.FN.CONTEXT_MENU,
-            [Z, A] = (0, u.US)(I && T && n && N && !P ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
-            R = (0, d.m)(O.p9.TIER_2),
+            Z = w === p.FN.CONTEXT_MENU,
+            [T, A] = (0, u.US)(I && Z && n && N && !P ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
+            R = (0, d.m)(_.p9.TIER_2),
             D = (0, g.Z)(t),
-            L = Z === o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
+            L = T === o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
             M = (0, i.useRef)(null),
             k = (0, i.useRef)(null),
             U = (0, i.useRef)(null),
@@ -91,16 +91,16 @@ let E = (e, t) => {
             }, [L]),
             !L)
         )
-            return (0, r.jsx)(s.ZP, j({}, e));
+            return (0, r.jsx)(a.ZP, j({}, e));
         let V = () => {
-                A(_.L.USER_DISMISS);
+                A(O.L.USER_DISMISS);
             },
             F = E(R, null != D ? D : null),
             H = S(F),
             z = x(F);
         return (0, r.jsx)('div', {
             ref: M,
-            children: (0, r.jsx)(a.yRy, {
+            children: (0, r.jsx)(s.yRy, {
                 targetElementRef: k,
                 align: G,
                 position: 'right',
@@ -123,7 +123,7 @@ let E = (e, t) => {
                 children: (t) => {
                     var n, i;
                     return (0, r.jsx)(
-                        s.ZP,
+                        a.ZP,
                         ((n = j({}, e)),
                         (i = i = { ref: k }),
                         Object.getOwnPropertyDescriptors

@@ -117,8 +117,8 @@ let y = 24,
               });
     },
     v = i.forwardRef(function (e, t) {
-        let { className: n, iconClassName: i, children: a, selected: s = !1, disabled: l = !1, showBadge: u = !1, badgePosition: f = 'bottom', color: p, foreground: m, background: g, icon: E, iconSize: b = y, onClick: O, onContextMenu: v, tooltip: I = null, tooltipColor: T, tooltipPosition: S = 'bottom', tooltipAlign: A, tooltipDisabled: N, tooltipSpacing: C, hideOnClick: R = !0, role: P, 'aria-label': w, 'aria-hidden': D, 'aria-checked': L, 'aria-expanded': x, 'aria-haspopup': M, 'data-jump-section': k } = e,
-            j = null != g ? { secondaryColorClass: g } : {},
+        let { className: n, iconClassName: i, children: a, selected: s = !1, disabled: l = !1, showBadge: u = !1, badgePosition: f = 'bottom', color: p, foreground: m, background: g, icon: E, iconSize: b = y, onClick: O, onContextMenu: v, tooltip: I = null, tooltipColor: T, tooltipPosition: S = 'bottom', tooltipAlign: A, tooltipDisabled: N, tooltipSpacing: C, hideOnClick: w = !0, role: R, 'aria-label': P, 'aria-hidden': D, 'aria-checked': L, 'aria-expanded': x, 'aria-haspopup': k, 'data-jump-section': j } = e,
+            M = null != g ? { secondaryColorClass: g } : {},
             U = (0, r.jsx)(
                 E,
                 h(
@@ -132,10 +132,10 @@ let y = 24,
                         colorClass: null != m ? m : void 0,
                         color: null != p ? p : 'currentColor'
                     },
-                    j
+                    M
                 )
             ),
-            G = w;
+            G = P;
         return (
             null == G && 'string' == typeof I && (G = I),
             (0, r.jsx)(c.ua7, {
@@ -143,7 +143,7 @@ let y = 24,
                 color: T,
                 position: S,
                 align: A,
-                hideOnClick: R,
+                hideOnClick: w,
                 shouldShow: !N,
                 spacing: C,
                 children: (e) => {
@@ -170,7 +170,7 @@ let y = 24,
                                           onFocus: I,
                                           onBlur: T
                                       },
-                                      j
+                                      M
                                   )
                               )
                           })
@@ -189,14 +189,14 @@ let y = 24,
                                   [_.selected]: s,
                                   [_.iconDisabled]: l
                               }),
-                              role: P,
+                              role: R,
                               'aria-label': G,
                               'aria-hidden': D,
                               'aria-checked': L,
-                              'aria-haspopup': M,
+                              'aria-haspopup': k,
                               'aria-expanded': x,
                               tabIndex: l || null == O ? -1 : 0,
-                              'data-jump-section': k,
+                              'data-jump-section': j,
                               children: [
                                   u
                                       ? (0, r.jsx)(d.ZP, {

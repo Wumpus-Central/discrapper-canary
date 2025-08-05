@@ -1,48 +1,48 @@
 n.d(t, {
-    $A: () => _,
-    j8: () => y
+    $A: () => E,
+    j8: () => b
 });
 var r = n(255367);
 n(73800);
 var i = n(512722),
-    l = n.n(i),
-    a = n(442837),
-    o = n(481060),
-    s = n(40851);
+    a = n.n(i),
+    o = n(442837),
+    s = n(481060),
+    l = n(40851);
 (n(358221), n(431368), n(167675), n(418469), n(673539));
 var c = n(218035),
     u = n(775666),
     d = n(423589),
-    p = n(592125),
-    h = n(496675),
-    f = n(881824),
-    m = n(146085),
-    g = n(427679);
+    f = n(592125),
+    _ = n(496675),
+    p = n(881824),
+    h = n(146085),
+    m = n(427679);
 n(354459);
-var b = n(388032);
-function _(e) {
-    let t = (0, a.e7)([p.Z], () => p.Z.getChannel(e), [e]),
-        n = (0, a.e7)([h.Z], () => h.Z.can(m.yP, t)),
-        i = (0, a.e7)([g.Z], () => g.Z.getStageInstanceByChannel(e), [e]),
-        l = (0, s.bp)(),
-        c = () => null != t && (0, f.T)(t, l);
+var g = n(388032);
+function E(e) {
+    let t = (0, o.e7)([f.Z], () => f.Z.getChannel(e), [e]),
+        n = (0, o.e7)([_.Z], () => _.Z.can(h.yP, t)),
+        i = (0, o.e7)([m.Z], () => m.Z.getStageInstanceByChannel(e), [e]),
+        a = (0, l.bp)(),
+        c = () => null != t && (0, p.T)(t, a);
     return (null == t ? void 0 : t.isGuildStageVoice()) && n
         ? null != i
-            ? (0, r.jsx)(o.sNh, {
+            ? (0, r.jsx)(s.sNh, {
                   id: 'edit-stage',
-                  label: b.intl.string(b.t['I+9bLy']),
+                  label: g.intl.string(g.t['I+9bLy']),
                   action: c
               })
-            : (0, r.jsx)(o.sNh, {
+            : (0, r.jsx)(s.sNh, {
                   id: 'start-stage',
-                  label: b.intl.string(b.t.OYbHfn),
+                  label: g.intl.string(g.t.OYbHfn),
                   action: c
               })
         : null;
 }
-function y(e) {
-    let t = (0, a.e7)([p.Z], () => p.Z.getChannel(e), [e]);
-    l()(null != t, 'useNotificationSettingsItem: channel cannot be undefined');
+function b(e) {
+    let t = (0, o.e7)([f.Z], () => f.Z.getChannel(e), [e]);
+    a()(null != t, 'useNotificationSettingsItem: channel cannot be undefined');
     let n = (0, d.Mn)('StageChannelCallOverflowMenu'),
         r = (0, u.ZP)(t),
         i = (0, c.Z)(t);

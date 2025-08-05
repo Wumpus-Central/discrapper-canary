@@ -1,110 +1,111 @@
 (n.d(t, {
-    Z: () => h,
-    r: () => p
+    Z: () => f,
+    r: () => d
 }),
     n(539854));
-var r,
-    i = n(481060),
-    l = n(620662),
+var r = n(481060),
+    i = n(620662),
     a = n(933557),
     o = n(377171),
     s = n(699516),
-    c = n(594174),
-    u = n(981631),
-    d = n(388032),
-    p = (((r = {}).UPLOAD_A_FILE = 'UPLOAD_A_FILE'), (r.UPLOAD_TEXT_AS_FILE = 'UPLOAD_TEXT_AS_FILE'), (r.INVITE_TO_PLAY_GAME = 'INVITE_TO_GAME'), (r.INVITE_TO_LISTEN = 'INVITE_TO_LISTEN'), (r.INVITE_TO_WATCH = 'INVITE_TO_WATCH'), (r.CREATE_THREAD = 'CREATE_THREAD'), (r.SLASH_COMMAND = 'SLASH_COMMAND'), (r.CLIPS = 'CLIPS'), (r.POLL = 'POLL'), (r.ACTIVITY = 'ACTIVITY'), (r.SCHEDULED_MESSAGE = 'SCHEDULED_MESSAGE'), r);
-function h(e) {
-    let { canAttachFiles: t, canStartThreads: n, useSlate: r, canUseApplicationCommands: p, hasClips: h, channel: f, activities: m, newClipsCount: g, canPostPolls: b, canLaunchActivities: _, appContext: y, canSendScheduledMessages: C } = e,
-        x = [];
+    l = n(594174),
+    c = n(981631),
+    u = n(388032),
+    d = (function (e) {
+        return ((e.UPLOAD_A_FILE = 'UPLOAD_A_FILE'), (e.UPLOAD_TEXT_AS_FILE = 'UPLOAD_TEXT_AS_FILE'), (e.INVITE_TO_PLAY_GAME = 'INVITE_TO_GAME'), (e.INVITE_TO_LISTEN = 'INVITE_TO_LISTEN'), (e.INVITE_TO_WATCH = 'INVITE_TO_WATCH'), (e.CREATE_THREAD = 'CREATE_THREAD'), (e.SLASH_COMMAND = 'SLASH_COMMAND'), (e.CLIPS = 'CLIPS'), (e.POLL = 'POLL'), (e.ACTIVITY = 'ACTIVITY'), (e.SCHEDULED_MESSAGE = 'SCHEDULED_MESSAGE'), e);
+    })({});
+function f(e) {
+    let { canAttachFiles: t, canStartThreads: n, useSlate: d, canUseApplicationCommands: f, hasClips: _, channel: p, activities: h, newClipsCount: m, canPostPolls: g, canLaunchActivities: E, appContext: b, canSendScheduledMessages: y } = e,
+        O = [];
     return (
         t &&
-            (x.push({
+            (O.push({
                 type: 'UPLOAD_A_FILE',
-                icon: i.xD0,
-                display: d.intl.string(d.t['d3+iYm'])
+                icon: r.xD0,
+                display: u.intl.string(u.t['d3+iYm'])
             }),
-            x.push({
+            O.push({
                 type: 'UPLOAD_TEXT_AS_FILE',
-                icon: i.xD0,
-                display: d.intl.string(d.t['G9s+EB'])
+                icon: r.xD0,
+                display: u.intl.string(u.t['G9s+EB'])
             })),
-        h &&
+        _ &&
             t &&
-            y !== u.IlC.POPOUT &&
-            x.push({
+            b !== c.IlC.POPOUT &&
+            O.push({
                 type: 'CLIPS',
-                icon: i.AlX,
-                display: d.intl.string(d.t.o034cn),
-                badgeVal: g,
+                icon: r.AlX,
+                display: u.intl.string(u.t.o034cn),
+                badgeVal: m,
                 badgeColor: o.Z.BG_BRAND
             }),
         n &&
-            x.push({
+            O.push({
                 type: 'CREATE_THREAD',
-                icon: i.YPH,
-                display: d.intl.string(d.t.rBIGBA)
+                icon: r.YPH,
+                display: u.intl.string(u.t.rBIGBA)
             }),
-        b &&
-            x.push({
+        g &&
+            O.push({
                 type: 'POLL',
-                icon: i.QDj,
-                display: d.intl.string(d.t.Flr51t)
+                icon: r.QDj,
+                display: u.intl.string(u.t.Flr51t)
             }),
-        r &&
-            p &&
-            x.push({
+        d &&
+            f &&
+            O.push({
                 type: 'SLASH_COMMAND',
-                icon: i.jje,
-                display: d.intl.string(d.t.Bbvp6O)
+                icon: r.jje,
+                display: u.intl.string(u.t.Bbvp6O)
             }),
-        _ &&
-            x.push({
+        E &&
+            O.push({
                 type: 'ACTIVITY',
-                icon: i.nG3,
-                display: d.intl.string(d.t['16Lfra'])
+                icon: r.nG3,
+                display: u.intl.string(u.t['16Lfra'])
             }),
-        m.forEach((e) => {
-            !(0, l.Z)(e, u.xjy.EMBEDDED) &&
-                (e.type === u.IIU.PLAYING &&
-                    (0, l.Z)(e, u.xjy.JOIN) &&
-                    x.push({
+        h.forEach((e) => {
+            !(0, i.Z)(e, c.xjy.EMBEDDED) &&
+                (e.type === c.IIU.PLAYING &&
+                    (0, i.Z)(e, c.xjy.JOIN) &&
+                    O.push({
                         type: 'INVITE_TO_GAME',
-                        icon: i.xoD,
-                        display: d.intl.formatToPlainString(d.t['KHLo+P'], {
-                            channel: (0, a.F6)(f, c.default, s.Z, !0),
+                        icon: r.xoD,
+                        display: u.intl.formatToPlainString(u.t['KHLo+P'], {
+                            channel: (0, a.F6)(p, l.default, s.Z, !0),
                             game: null != e ? e.name : ''
                         }),
                         activity: e
                     }),
-                e.type === u.IIU.LISTENING &&
-                    (0, l.Z)(e, u.xjy.SYNC) &&
-                    x.push({
+                e.type === c.IIU.LISTENING &&
+                    (0, i.Z)(e, c.xjy.SYNC) &&
+                    O.push({
                         type: 'INVITE_TO_LISTEN',
-                        icon: i.iOO,
-                        display: d.intl.formatToPlainString(d.t.I479p6, {
-                            channel: (0, a.F6)(f, c.default, s.Z, !0),
+                        icon: r.iOO,
+                        display: u.intl.formatToPlainString(u.t.I479p6, {
+                            channel: (0, a.F6)(p, l.default, s.Z, !0),
                             name: null != e ? e.name : ''
                         }),
                         activity: e
                     }),
-                e.type === u.IIU.WATCHING &&
-                    (0, l.Z)(e, u.xjy.SYNC) &&
-                    x.push({
+                e.type === c.IIU.WATCHING &&
+                    (0, i.Z)(e, c.xjy.SYNC) &&
+                    O.push({
                         type: 'INVITE_TO_WATCH',
-                        icon: i.tEF,
-                        display: d.intl.formatToPlainString(d.t['EvCP/v'], {
-                            channel: (0, a.F6)(f, c.default, s.Z, !0),
+                        icon: r.tEF,
+                        display: u.intl.formatToPlainString(u.t['EvCP/v'], {
+                            channel: (0, a.F6)(p, l.default, s.Z, !0),
                             name: null != e ? e.name : ''
                         }),
                         activity: e
                     }));
         }),
-        C &&
-            x.push({
+        y &&
+            O.push({
                 type: 'SCHEDULED_MESSAGE',
-                icon: i.T39,
-                display: d.intl.string(d.t['3+ii4O'])
+                icon: r.T39,
+                display: u.intl.string(u.t['3+ii4O'])
             }),
-        x
+        O
     );
 }

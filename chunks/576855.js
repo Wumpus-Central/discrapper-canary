@@ -1,33 +1,45 @@
 n.d(t, { Z: () => p });
 var r,
-    i,
-    l = n(255367),
+    i = n(255367),
     a = n(73800),
     o = n(120356),
     s = n.n(o),
-    c = n(481060),
-    u = n(388032),
-    d = n(108921);
-let _ = {
-    BLOCK: d.block,
-    INLINE: d.inline
+    l = n(481060),
+    c = n(388032),
+    u = n(108921);
+function d(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let f = {
+    BLOCK: u.block,
+    INLINE: u.inline
 };
-class E extends (i = a.PureComponent) {
+class _ extends (r = a.PureComponent) {
     render() {
-        let { children: e, className: t, textClassName: n, type: r = _.BLOCK, style: i } = this.props;
-        return (0, l.jsxs)('div', {
+        let { children: e, className: t, textClassName: n, type: r = f.BLOCK, style: a } = this.props;
+        return (0, i.jsxs)('div', {
             className: s()(t, r),
-            style: i,
+            style: a,
             children: [
-                (0, l.jsxs)(c.Text, {
+                (0, i.jsxs)(l.Text, {
                     variant: 'text-sm/bold',
                     tag: 'div',
                     color: 'text-feedback-positive',
-                    className: d.pro,
-                    children: [u.intl.string(u.t['8tvIiI']), ':']
+                    className: u.pro,
+                    children: [c.intl.string(c.t['8tvIiI']), ':']
                 }),
-                (0, l.jsx)(c.Text, {
-                    className: s()(d.tip, n),
+                (0, i.jsx)(l.Text, {
+                    className: s()(u.tip, n),
                     variant: 'text-sm/normal',
                     children: e
                 })
@@ -35,12 +47,5 @@ class E extends (i = a.PureComponent) {
         });
     }
 }
-(r = 'Types') in E
-    ? Object.defineProperty(E, r, {
-          value: _,
-          enumerable: !0,
-          configurable: !0,
-          writable: !0
-      })
-    : (E[r] = _);
-let p = E;
+d(_, 'Types', f);
+let p = _;

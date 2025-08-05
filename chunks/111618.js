@@ -1,27 +1,29 @@
 n.d(t, { Z: () => u });
 var r,
-    i,
-    l,
-    a = n(442837),
-    o = n(570140);
+    i = n(442837),
+    a = n(570140);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 let s = {};
-class c extends (l = a.ZP.Store) {
+function l(e) {
+    let { message: t, sendMessageOptions: n } = e;
+    (null != n && (s[t.id] = n), null != t.nonce && t.nonce in s && delete s[t.nonce]);
+}
+class c extends (r = i.ZP.Store) {
     getOptions(e) {
         return s[e];
     }
 }
-((i = 'SendMessageOptionsStore'),
-    (r = 'displayName') in c
-        ? Object.defineProperty(c, r, {
-              value: i,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (c[r] = i));
-let u = new c(o.Z, {
-    MESSAGE_CREATE: function (e) {
-        let { message: t, sendMessageOptions: n } = e;
-        (null != n && (s[t.id] = n), null != t.nonce && t.nonce in s && delete s[t.nonce]);
-    }
-});
+o(c, 'displayName', 'SendMessageOptionsStore');
+let u = new c(a.Z, { MESSAGE_CREATE: l });

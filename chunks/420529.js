@@ -1,116 +1,128 @@
-e.d(n, { Z: () => U });
-var i = e(255367);
-e(73800);
-var l = e(399606),
-    d = e(481060),
-    r = e(231757),
-    a = e(397639),
-    _ = e(19780),
-    s = e(979651),
-    p = e(951206),
-    u = e(446226),
-    I = e(937393),
-    o = e(721351),
-    c = e(981631),
-    E = e(388032);
-function T(t) {
-    for (var n = 1; n < arguments.length; n++) {
-        var e = null != arguments[n] ? arguments[n] : {},
-            i = Object.keys(e);
-        ('function' == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(e).filter(function (t) {
-                    return Object.getOwnPropertyDescriptor(e, t).enumerable;
-                })
-            )),
-            i.forEach(function (n) {
-                var i;
-                ((i = e[n]),
-                    n in t
-                        ? Object.defineProperty(t, n, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (t[n] = i));
-            }));
-    }
-    return t;
-}
-function g(t, n) {
+n.d(t, { Z: () => v });
+var r = n(255367);
+n(73800);
+var i = n(399606),
+    a = n(481060),
+    o = n(231757),
+    s = n(397639),
+    l = n(19780),
+    c = n(979651),
+    u = n(951206),
+    d = n(446226),
+    f = n(937393),
+    _ = n(721351),
+    p = n(981631),
+    h = n(388032);
+function m(e, t, n) {
     return (
-        (n = null != n ? n : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-            : (function (t, n) {
-                  var e = Object.keys(t);
-                  if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(t);
-                      e.push.apply(e, i);
-                  }
-                  return e;
-              })(Object(n)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-              }),
-        t
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
     );
 }
-function U(t) {
-    let n = (0, l.e7)([_.Z], () => _.Z.getChannelId() === t.id),
-        U = (0, u.Z)(),
-        L = (null == U ? void 0 : U.channelId) === t.id,
-        y = (0, a.V)(t) && !t.isPrivate(),
-        D = (0, a.Z)(t),
-        m = (!(0, l.e7)([s.Z], () => s.Z.isInChannel(t.id)) && D) || y,
-        O = (0, I.Z)();
-    if (!L && 0 === O.length) return null;
-    let G = (n) => {
-        if (!n.twoWayLink || n.revoked)
-            return void (0, r.Z)({
-                platformType: n.type,
-                location: 'Console Transfer Item'
+function g(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                m(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function E(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : E(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let y = 'Console Transfer Item';
+function O(e, t) {
+    return e === p.ABu.XBOX ? (t ? h.intl.string(h.t['qVE/VF']) : h.intl.string(h.t.E8euSk)) : e === p.ABu.PLAYSTATION ? (t ? h.intl.string(h.t.vzfxmZ) : h.intl.string(h.t.QxEYDg)) : e === p.ABu.PLAYSTATION_STAGING ? (t ? h.intl.string(h.t.BDiXtb) : h.intl.string(h.t['bhdB9/'])) : void 0;
+}
+function v(e) {
+    let t = (0, i.e7)([l.Z], () => l.Z.getChannelId() === e.id),
+        m = (0, d.Z)(),
+        E = (null == m ? void 0 : m.channelId) === e.id,
+        v = (0, s.V)(e) && !e.isPrivate(),
+        I = (0, s.Z)(e),
+        T = (!(0, i.e7)([c.Z], () => c.Z.isInChannel(e.id)) && I) || v,
+        S = (0, f.Z)();
+    if (!E && 0 === S.length) return null;
+    let A = (t) => {
+        if (!t.twoWayLink || t.revoked)
+            return void (0, o.Z)({
+                platformType: t.type,
+                location: y
             });
-        n.type === c.ABu.XBOX
-            ? (0, d.ZDy)(async () => {
-                  let { default: n } = await Promise.all([e.e('26051'), e.e('522')]).then(e.bind(e, 200623));
-                  return (e) => (0, i.jsx)(n, g(T({}, e), { channel: t }));
+        t.type === p.ABu.XBOX
+            ? (0, a.ZDy)(async () => {
+                  let { default: t } = await Promise.all([n.e('26051'), n.e('522')]).then(n.bind(n, 200623));
+                  return (n) => (0, r.jsx)(t, b(g({}, n), { channel: e }));
               })
-            : (n.type === c.ABu.PLAYSTATION || n.type === c.ABu.PLAYSTATION_STAGING) &&
-              (0, d.ZDy)(async () => {
-                  let { default: l } = await e.e('638').then(e.bind(e, 543974));
-                  return (e) =>
-                      (0, i.jsx)(
-                          l,
-                          g(T({}, e), {
-                              platform: n.type,
-                              channel: t
+            : (t.type === p.ABu.PLAYSTATION || t.type === p.ABu.PLAYSTATION_STAGING) &&
+              (0, a.ZDy)(async () => {
+                  let { default: i } = await n.e('638').then(n.bind(n, 543974));
+                  return (n) =>
+                      (0, r.jsx)(
+                          i,
+                          b(g({}, n), {
+                              platform: t.type,
+                              channel: e
                           })
                       );
               });
     };
-    return L
-        ? (0, i.jsx)(d.sNh, {
-              label: E.intl.string(E.t.PlwgdX),
+    return E
+        ? (0, r.jsx)(a.sNh, {
+              label: h.intl.string(h.t.PlwgdX),
               id: 'handoff',
               action: () => {
-                  (0, p.F)(U);
+                  (0, u.F)(m);
               },
-              icon: (0, o.Z)(void 0),
-              disabled: m
+              icon: (0, _.Z)(void 0),
+              disabled: T
           })
-        : O.map((t) => {
-              var e, l;
-              return (0, i.jsx)(
-                  d.sNh,
+        : S.map((e) =>
+              (0, r.jsx)(
+                  a.sNh,
                   {
-                      id: 'transfer-'.concat(t.type, '-').concat(t.id),
-                      label: ((e = t.type), (l = n), e === c.ABu.XBOX ? (l ? E.intl.string(E.t['qVE/VF']) : E.intl.string(E.t.E8euSk)) : e === c.ABu.PLAYSTATION ? (l ? E.intl.string(E.t.vzfxmZ) : E.intl.string(E.t.QxEYDg)) : e === c.ABu.PLAYSTATION_STAGING ? (l ? E.intl.string(E.t.BDiXtb) : E.intl.string(E.t['bhdB9/'])) : void 0),
-                      action: () => G(t),
-                      icon: (0, o.Z)(t.type),
-                      disabled: m
+                      id: 'transfer-'.concat(e.type, '-').concat(e.id),
+                      label: O(e.type, t),
+                      action: () => A(e),
+                      icon: (0, _.Z)(e.type),
+                      disabled: T
                   },
-                  t.id
-              );
-          });
+                  e.id
+              )
+          );
 }

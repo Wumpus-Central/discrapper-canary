@@ -44,8 +44,8 @@ e.exports = function (e, t, n, r, v, T, S) {
             var C = S.get(e);
             if (C) return C == t;
             ((r |= u), S.set(e, t));
-            var R = o(A(e), A(t), r, v, T, S);
-            return (S.delete(e), R);
+            var w = o(A(e), A(t), r, v, T, S);
+            return (S.delete(e), w);
         case b:
             if (I) return I.call(e) == I.call(t);
     }

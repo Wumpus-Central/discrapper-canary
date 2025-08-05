@@ -340,18 +340,18 @@ function C(e) {
             isDisabled: _
         }),
         { ref: C } = N,
-        R = y(N, ['ref']),
-        P = m.some((e) => e.value === l);
+        w = y(N, ['ref']),
+        R = m.some((e) => e.value === l);
     return (0, i.jsx)(
         'div',
-        b(g({}, R), {
+        b(g({}, w), {
             ref: C,
             className: s()(h.container, o),
             children: m.map((e) =>
                 (0, i.jsx)(
                     S,
                     {
-                        hasSelection: P,
+                        hasSelection: R,
                         disabled: _,
                         checked: l === e.value,
                         option: e,

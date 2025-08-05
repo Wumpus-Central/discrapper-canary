@@ -1,10 +1,10 @@
-n.d(t, { Z: () => l });
-var i = n(281215),
-    a = n(381426),
-    o = n(388032);
-let s = (0, i.CB)('NotificationsAdvancedAccordion', {
-        useTitle: (e) => (e ? o.intl.string(o.t.RyimDg) : o.intl.string(o.t.CUICbG)),
-        useSubtitle: () => o.intl.string(o.t.SwKADQ),
-        layout: [a.Z]
+n.d(t, { Z: () => r });
+var i = n(509613),
+    o = n(381426),
+    l = n(388032);
+let a = (0, i.CB)('NotificationsAdvancedAccordion', {
+        useTitle: (e) => (e ? l.intl.string(l.t.RyimDg) : l.intl.string(l.t.CUICbG)),
+        useSubtitle: () => l.intl.string(l.t.SwKADQ),
+        layout: [o.Z]
     }),
-    l = (0, i.k4)('NotificationsAdvanced', { layout: [s] });
+    r = (0, i.k4)('NotificationsAdvanced', { layout: [a] });

@@ -1,82 +1,82 @@
-(n.d(t, { f: () => O }), n(388685));
+(n.d(t, { f: () => v }), n(388685));
 var r = n(255367),
     i = n(73800),
-    l = n(442837),
-    a = n(159691),
-    o = n(755721),
-    s = n(541716),
+    a = n(442837),
+    o = n(159691),
+    s = n(755721),
+    l = n(541716),
     c = n(419922),
     u = n(665906),
     d = n(271383),
-    p = n(430824),
-    m = n(496675),
-    f = n(594174),
-    g = n(838440),
-    _ = n(779139),
-    h = n(223750),
-    b = n(981631),
-    E = n(388032),
-    C = n(429495);
-let v = (e) => {
+    f = n(430824),
+    _ = n(496675),
+    p = n(594174),
+    h = n(838440),
+    m = n(779139),
+    g = n(223750),
+    E = n(981631),
+    b = n(388032),
+    y = n(429495);
+let O = (e) => {
         let { channel: t, message: n } = e,
-            l = (0, h.t)(),
+            a = (0, g.t)(),
             [u, d] = i.useState(!1),
-            p = (0, _.y6)(n.id),
-            m = i.useCallback(() => {
-                (0, g.v)({
-                    type: s.Ie.FORM,
+            f = (0, m.y6)(n.id),
+            _ = i.useCallback(() => {
+                (0, h.v)({
+                    type: l.Ie.FORM,
                     content: '',
                     channel: t
                 }).then((e) => {
                     let { valid: r } = e;
-                    r && (0, _.TZ)(t, n, p.id);
+                    r && (0, m.TZ)(t, n, f.id);
                 });
-            }, [t, n, p]);
+            }, [t, n, f]);
         return (0, r.jsx)('div', {
-            className: C.welcomeCTA,
-            children: l
-                ? (0, r.jsx)(a.zx, {
+            className: y.welcomeCTA,
+            children: a
+                ? (0, r.jsx)(o.zx, {
                       variant: 'secondary',
                       size: 'md',
-                      onClick: m,
-                      text: E.intl.string(E.t['7Tj6HR'])
+                      onClick: _,
+                      text: b.intl.string(b.t['7Tj6HR'])
                   })
-                : (0, r.jsxs)(o.zx, {
+                : (0, r.jsxs)(s.zx, {
                       'data-migration-pending': !0,
-                      className: C.welcomeCTAButtonOuter,
-                      innerClassName: C.welcomeCTAButton,
-                      color: o.Tt.PRIMARY,
+                      className: y.welcomeCTAButtonOuter,
+                      innerClassName: y.welcomeCTAButton,
+                      color: s.Tt.PRIMARY,
                       onMouseEnter: () => d(!0),
                       onMouseLeave: () => d(!1),
-                      onClick: m,
+                      onClick: _,
                       children: [
                           (0, r.jsx)(c.Z, {
-                              className: C.welcomeCTASticker,
+                              className: y.welcomeCTASticker,
                               isInteracting: u,
-                              sticker: p,
+                              sticker: f,
                               size: 28
                           }),
-                          E.intl.string(E.t['7Tj6HR'])
+                          b.intl.string(b.t['7Tj6HR'])
                       ]
                   })
         });
     },
-    O = (e) => {
+    v = (e) => {
         let { message: t, channel: n } = e,
             i = n.getGuildId(),
-            a = (0, l.e7)([f.default, m.Z, p.Z, d.ZP], () => {
+            o = (0, a.e7)([p.default, _.Z, f.Z, d.ZP], () => {
                 var e;
-                let r = f.default.getCurrentUser(),
-                    l = (0, u.xl)(n),
-                    a = m.Z.can(b.Plq.SEND_MESSAGES, n),
-                    o = null != i && null != r && (null == (e = d.ZP.getMember(i, r.id)) ? void 0 : e.isPending),
-                    s = t.author.bot,
-                    c = p.Z.getGuild(i),
-                    g = null != c && (c.systemChannelFlags & b.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
-                return a && !l && !o && !s && g;
+                let r = p.default.getCurrentUser(),
+                    a = (0, u.xl)(n),
+                    o = _.Z.can(E.Plq.SEND_MESSAGES, n),
+                    s = null != i && null != r && (null == (e = d.ZP.getMember(i, r.id)) ? void 0 : e.isPending),
+                    l = t.author.bot,
+                    c = f.Z.getGuild(i),
+                    h = null != c && (c.systemChannelFlags & E.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
+                return o && !a && !s && !l && h;
             });
-        return null != i && a
-            ? (0, r.jsx)(v, {
+        return null != i && o
+            ? (0, r.jsx)(O, {
                   message: t,
                   channel: n
               })

@@ -1,71 +1,69 @@
-(n.d(t, { Z: () => C }), n(388685));
-var i = n(255367),
-    r = n(73800),
-    l = n(120356),
-    o = n.n(l),
+(n.d(t, { Z: () => b }), n(388685));
+var r = n(255367),
+    i = n(73800),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
-    a = n(755721),
+    l = n(755721),
     c = n(481060),
-    d = n(749210),
-    u = n(703656),
-    h = n(430824),
+    u = n(749210),
+    d = n(703656),
+    f = n(430824),
     _ = n(914010),
-    E = n(900849),
-    p = n(981631),
-    I = n(388032),
+    p = n(900849),
+    h = n(981631),
+    m = n(388032),
     g = n(8940),
-    f = n(240211);
-let C =
-    12633 == n.j
-        ? () => {
-              let e = (0, s.e7)([_.Z], () => _.Z.getGuildId(), []),
-                  t = (0, s.e7)([h.Z], () => h.Z.getGuild(e), [e]),
-                  [n, l] = r.useState(!1);
-              if (null == t) return null;
-              let C = async () => {
-                  l(!0);
-                  try {
-                      (E.mT(t.id), await d.Z.joinGuild(t.id, { source: p.vtS.NOTICE_BAR }));
-                  } catch (e) {
-                      l(!1);
-                  }
-              };
-              return (0, i.jsxs)('div', {
-                  className: o()(g.notice, f.notice),
-                  children: [
-                      (0, i.jsxs)(a.zx, {
-                          look: a.zx.Looks.OUTLINED,
-                          color: a.zx.Colors.WHITE,
-                          size: a.zx.Sizes.NONE,
-                          className: o()(g.button, g.back),
-                          innerClassName: g.iconButton,
-                          onClick: () => {
-                              (0, u.s1)().goBack();
-                          },
-                          children: [
-                              (0, i.jsx)(c.whL, {
-                                  size: 'xs',
-                                  color: 'currentColor',
-                                  className: g.arrow
-                              }),
-                              I.intl.string(I.t['13/7kZ'])
-                          ]
-                      }),
-                      (0, i.jsx)(c.Text, {
-                          className: g.header,
-                          variant: 'text-sm/normal',
-                          children: I.intl.string(I.t['N/y2WF'])
-                      }),
-                      (0, i.jsx)(a.zx, {
-                          className: g.button,
-                          look: a.zx.Looks.OUTLINED,
-                          color: a.zx.Colors.WHITE,
-                          size: a.zx.Sizes.NONE,
-                          submitting: n,
-                          onClick: C,
-                          children: I.intl.format(I.t.uHN7n5, { guild: t.name })
-                      })
-                  ]
-              });
-          }
-        : null;
+    E = n(240211);
+let b = () => {
+    let e = (0, s.e7)([_.Z], () => _.Z.getGuildId(), []),
+        t = (0, s.e7)([f.Z], () => f.Z.getGuild(e), [e]),
+        [n, a] = i.useState(!1);
+    if (null == t) return null;
+    let b = () => {
+            (0, d.s1)().goBack();
+        },
+        y = async () => {
+            a(!0);
+            try {
+                (p.mT(t.id), await u.Z.joinGuild(t.id, { source: h.vtS.NOTICE_BAR }));
+            } catch (e) {
+                a(!1);
+            }
+        };
+    return (0, r.jsxs)('div', {
+        className: o()(g.notice, E.notice),
+        children: [
+            (0, r.jsxs)(l.zx, {
+                look: l.zx.Looks.OUTLINED,
+                color: l.zx.Colors.WHITE,
+                size: l.zx.Sizes.NONE,
+                className: o()(g.button, g.back),
+                innerClassName: g.iconButton,
+                onClick: b,
+                children: [
+                    (0, r.jsx)(c.whL, {
+                        size: 'xs',
+                        color: 'currentColor',
+                        className: g.arrow
+                    }),
+                    m.intl.string(m.t['13/7kZ'])
+                ]
+            }),
+            (0, r.jsx)(c.Text, {
+                className: g.header,
+                variant: 'text-sm/normal',
+                children: m.intl.string(m.t['N/y2WF'])
+            }),
+            (0, r.jsx)(l.zx, {
+                className: g.button,
+                look: l.zx.Looks.OUTLINED,
+                color: l.zx.Colors.WHITE,
+                size: l.zx.Sizes.NONE,
+                submitting: n,
+                onClick: y,
+                children: m.intl.format(m.t.uHN7n5, { guild: t.name })
+            })
+        ]
+    });
+};

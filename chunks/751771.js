@@ -3,19 +3,19 @@ let l, i, r, s, a, o;
 var u,
     d,
     c,
-    h = n(442837),
-    g = n(570140),
+    g = n(442837),
+    h = n(570140),
     m = n(823385),
     p = n(752048),
     v = n(823379),
     x = n(971130),
     I = n(592125),
     f = n(496675),
-    N = n(699516),
-    j = n(981631),
+    j = n(699516),
+    N = n(981631),
     _ = n(245335);
-let E = new Set(),
-    S = [],
+let S = new Set(),
+    E = [],
     b = new Map(),
     T = {
         numFriends: 0,
@@ -26,21 +26,21 @@ let E = new Set(),
 function O(e) {
     let t = new Set(),
         n = null == r || o === _.Iq.EMBEDDED_APPLICATION ? void 0 : r.id,
-        l = (0, x.rh)(E, n);
-    for (let e of (null == l || N.Z.isBlockedOrIgnored(l.id) || t.add(l.id), p.Z.getUserAffinities())) t.add(e.otherUserId);
+        l = (0, x.rh)(S, n);
+    for (let e of (null == l || j.Z.isBlockedOrIgnored(l.id) || t.add(l.id), p.Z.getUserAffinities())) t.add(e.otherUserId);
     let i = new Set();
     return (
         o === _.Iq.EMBEDDED_APPLICATION &&
             m.Z.getChannelHistory()
                 .map((e) => I.Z.getChannel(e))
                 .filter(v.lm)
-                .filter((e) => e.type === j.d4z.GUILD_TEXT)
-                .filter((e) => f.Z.can(j.Plq.SEND_MESSAGES, e))
+                .filter((e) => e.type === N.d4z.GUILD_TEXT)
+                .filter((e) => f.Z.can(N.Plq.SEND_MESSAGES, e))
                 .slice(0, 3)
                 .forEach((e) => i.add(e.id)),
         (0, x.an)({
             query: e,
-            omitUserIds: E,
+            omitUserIds: S,
             suggestedUserIds: t,
             maxRowsWithoutQuery: 100,
             omitGuildId: n,
@@ -50,18 +50,18 @@ function O(e) {
     );
 }
 function y(e) {
-    ((S = e),
+    ((E = e),
         (b = new Map()),
         e.forEach((e, t) => {
             b.set(e, { index: t });
         }));
 }
-class C extends (u = h.ZP.Store) {
+class C extends (u = g.ZP.Store) {
     initialize() {
-        this.waitFor(N.Z, p.Z);
+        this.waitFor(j.Z, p.Z);
     }
     getInviteSuggestionRows() {
-        return S;
+        return E;
     }
     getTotalSuggestionsCount() {
         return l;
@@ -76,7 +76,7 @@ class C extends (u = h.ZP.Store) {
             ? {
                   rowNum: t.index,
                   isAffinitySuggestion: e.isSuggested,
-                  numTotal: S.length,
+                  numTotal: E.length,
                   numAffinityConnections: n.length,
                   isFiltered: i
               }
@@ -92,16 +92,16 @@ class C extends (u = h.ZP.Store) {
               writable: !0
           })
         : (C[d] = c));
-let P = new C(g.Z, {
+let P = new C(h.Z, {
     LOAD_INVITE_SUGGESTIONS: function (e) {
         let { omitUserIds: t, guild: n, channel: u, applicationId: d, inviteTargetType: c } = e;
         ((r = null != u ? n : null),
             (s = u),
             (a = d),
             (o = c),
-            (E = new Set([
+            (S = new Set([
                 ...t,
-                ...N.Z.getBlockedOrIgnoredIDs(),
+                ...j.Z.getBlockedOrIgnoredIDs(),
                 ...(0, x.Sz)({
                     channel: s,
                     applicationId: a,
@@ -109,8 +109,8 @@ let P = new C(g.Z, {
                 })
             ])),
             (i = !1));
-        let { rows: h, counts: g } = O('');
-        (y(h), (T = g), (l = S.length));
+        let { rows: g, counts: h } = O('');
+        (y(g), (T = h), (l = E.length));
     },
     INVITE_SUGGESTIONS_SEARCH: function (e) {
         let { query: t } = e;

@@ -92,15 +92,15 @@ let T = {
     },
     S = function (e) {
         let { children: t, confettiTriggerRef: n, guild: i, isProgressBarAnimationComplete: b, setConfettiCount: O, setShouldFireConfetti: S, tier: A, tierMarkerAnimationPosition: N, totalAvailableBoostsCount: C } = e,
-            { analyticsLocations: R } = (0, l.ZP)(),
-            P = (0, c.Z)(),
-            w = p.oCV[A],
-            D = w - C,
+            { analyticsLocations: w } = (0, l.ZP)(),
+            R = (0, c.Z)(),
+            P = p.oCV[A],
+            D = P - C,
             L = A <= N || b,
             x = L && A <= i.premiumTier,
-            M = L && A < i.premiumTier,
-            k = L && A === i.premiumTier,
-            j = i.premiumTier < A && C >= w,
+            k = L && A < i.premiumTier,
+            j = L && A === i.premiumTier,
+            M = i.premiumTier < A && C >= P,
             { scaleFactor: U } = (0, s.q_F)({
                 from: { scaleFactor: 0 },
                 to: { scaleFactor: N >= A || (b && N + 1 === A) || (b && -1 === N && A === p.Eu4.NONE) ? 1 : 0 },
@@ -116,7 +116,7 @@ let T = {
                         style: { transform: U.to((e) => 'translate(-50%, -50%) scale('.concat(e, ')')) }
                     }),
                     A !== p.Eu4.NONE
-                        ? j
+                        ? M
                             ? (0, r.jsx)(s.mTd, {
                                   className: a()(E.boostedTierIcon, E.disabledIndicator),
                                   size: 'xxs',
@@ -132,9 +132,9 @@ let T = {
             });
         function B() {
             L &&
-                (j ||
+                (M ||
                     (0, f.u)({
-                        analyticsLocations: R,
+                        analyticsLocations: w,
                         analyticsLocation: {
                             page: p.ZY5.PREMIUM_GUILD_USER_MODAL,
                             section: p.jXE.PREMIUM_GUILD_USER_MODAL_PROGRESS_BAR,
@@ -145,14 +145,14 @@ let T = {
                         guild: i
                     }));
         }
-        let V = !x && P.fractionalState === h.a$.NONE,
-            F = V ? s.P3F : 'div',
-            Z = V ? { onClick: B } : {};
+        let Z = !x && R.fractionalState === h.a$.NONE,
+            F = Z ? s.P3F : 'div',
+            V = Z ? { onClick: B } : {};
         return (0, r.jsx)(s.ua7, {
             tooltipClassName: E.tooltip,
             text: x
                 ? m.intl.formatToPlainString(m.t['1o48kp'], { tierName: (0, d.nW)(A, { useLevels: !1 }) })
-                : j
+                : M
                   ? m.intl.formatToPlainString(g.default['9CtPjo'], { perk: (0, d.nW)(A, { useLevels: !1 }) })
                   : m.intl.formatToPlainString(m.t.r6NN6e, {
                         numBoostsRequired: D,
@@ -167,14 +167,14 @@ let T = {
                             {
                                 className: a()(E.progressBarMarker, {
                                     [E.progressBarMarkerUnlocked]: x,
-                                    [E.progressBarMarkerLocked]: V,
-                                    [E.progressBarMarkerLower]: M,
-                                    [E.progressBarMarkerCurrent]: k
+                                    [E.progressBarMarkerLocked]: Z,
+                                    [E.progressBarMarkerLower]: k,
+                                    [E.progressBarMarkerCurrent]: j
                                 }),
                                 style: { left: ''.concat(100 * T[A], '%') }
                             },
                             e,
-                            Z
+                            V
                         ),
                         {
                             children: [

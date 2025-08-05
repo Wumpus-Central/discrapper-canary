@@ -103,13 +103,13 @@ function y(e) {
         asset: A,
         markAsDismissed: N,
         caretPosition: C = 'caretTopCenter',
-        buttonLayout: R = 0
+        buttonLayout: w = 0
     } = e;
     (0, l.ZP)(() => {
         null == S || S();
     });
-    let P = null != y,
-        w = (e) => {
+    let R = null != y,
+        P = (e) => {
             (O(e), null == N || N(c.L.PRIMARY));
         },
         D = () => {
@@ -133,18 +133,18 @@ function y(e) {
                 variant: 'text-sm/normal',
                 children: _
             }),
-            null != m || P
+            null != m || R
                 ? (0, r.jsxs)('div', {
                       className: a()(u.upsellButtonsContainer, {
-                          [u.upsellButtonsAdjacent]: 0 === R,
-                          [u.upsellButtonsStacked]: 1 === R
+                          [u.upsellButtonsAdjacent]: 0 === w,
+                          [u.upsellButtonsStacked]: 1 === w
                       }),
                       children: [
-                          P
+                          R
                               ? (0, r.jsx)(
                                     o.zx,
                                     p(f({}, T), {
-                                        fullWidth: 1 === R,
+                                        fullWidth: 1 === w,
                                         onClick: D,
                                         children: y
                                     })
@@ -155,8 +155,8 @@ function y(e) {
                               : (0, r.jsx)(
                                     o.zx,
                                     p(f({}, I), {
-                                        fullWidth: !P || 1 === R,
-                                        onClick: w,
+                                        fullWidth: !R || 1 === w,
+                                        onClick: P,
                                         children: m
                                     })
                                 )

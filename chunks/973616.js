@@ -178,7 +178,7 @@ class m extends h {
         );
     }
     mergeFromApplicationUpdate(e) {
-        var t, n, r, i, a, o, s, l, c, d, f, _, p, h, g, E, b, y, O, v, I, T, S, A, N, C, R, P, w, D, L, x, M, k, j, U, G, B, V, F, Z, H;
+        var t, n, r, i, a, o, s, l, c, d, f, _, p, h, g, E, b, y, O, v, I, T, S, A, N, C, w, R, P, D, L, x, k, j, M, U, G, B, Z, F, V, H;
         return new m({
             id: null != (t = e.id) ? t : this.id,
             name: null != (n = e.name) ? n : this.name,
@@ -206,21 +206,21 @@ class m extends h {
             bot: null != (A = e.bot) ? A : this.bot,
             flags: null != (N = e.flags) ? N : this.flags,
             maxParticipants: null != (C = e.maxParticipants) ? C : this.maxParticipants,
-            tags: null != (R = e.tags) ? R : this.tags,
-            embeddedActivityConfig: null != (P = e.embeddedActivityConfig) ? P : null != this.embeddedActivityConfig ? u({}, this.embeddedActivityConfig) : void 0,
-            type: null != (w = e.type) ? w : this.type,
+            tags: null != (w = e.tags) ? w : this.tags,
+            embeddedActivityConfig: null != (R = e.embeddedActivityConfig) ? R : null != this.embeddedActivityConfig ? u({}, this.embeddedActivityConfig) : void 0,
+            type: null != (P = e.type) ? P : this.type,
             team: null != (D = e.team) ? D : this.team,
             roleConnectionsVerificationUrl: null != (L = e.roleConnectionsVerificationUrl) ? L : this.roleConnectionsVerificationUrl,
             integrationTypesConfig: null != (x = e.integrationTypesConfig) ? x : this.integrationTypesConfig,
-            isMonetized: null != (M = e.isMonetized) ? M : this.isMonetized,
-            storefront_available: null != (k = e.storefront_available) ? k : this.storefront_available,
-            termsOfServiceUrl: null != (j = e.termsOfServiceUrl) ? j : this.termsOfServiceUrl,
+            isMonetized: null != (k = e.isMonetized) ? k : this.isMonetized,
+            storefront_available: null != (j = e.storefront_available) ? j : this.storefront_available,
+            termsOfServiceUrl: null != (M = e.termsOfServiceUrl) ? M : this.termsOfServiceUrl,
             privacyPolicyUrl: null != (U = e.privacyPolicyUrl) ? U : this.privacyPolicyUrl,
             isVerified: null != (G = e.isVerified) ? G : this.isVerified,
             customInstallUrl: null != (B = e.customInstallUrl) ? B : this.customInstallUrl,
-            installParams: null != (V = e.installParams) ? V : this.installParams,
+            installParams: null != (Z = e.installParams) ? Z : this.installParams,
             isDiscoverable: null != (F = e.isDiscoverable) ? F : this.isDiscoverable,
-            directoryEntry: null != (Z = e.directoryEntry) ? Z : this.directoryEntry,
+            directoryEntry: null != (V = e.directoryEntry) ? V : this.directoryEntry,
             categories: null != (H = e.categories) ? H : this.categories
         });
     }

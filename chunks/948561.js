@@ -29,9 +29,9 @@ var r = n(952639),
     A = n(629710),
     N = n(590773),
     C = n(799525),
-    R = n(981631),
-    P = n(526761);
-function w(e, t, n) {
+    w = n(981631),
+    R = n(526761);
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,19 +47,19 @@ function w(e, t, n) {
 let D = 3000,
     L = 800,
     x = {};
-function M(e) {
+function k(e) {
     return ''.concat(e.channel_id, ':').concat(e.id);
 }
-function k() {
+function j() {
     (Object.values(x).forEach((e) => {
         let { timeout: t } = e;
         clearTimeout(t);
     }),
         (x = {}));
 }
-function j(e, t) {
+function M(e, t) {
     if (null == e.id || null == e.channel_id) return !1;
-    let n = M(e);
+    let n = k(e);
     if (null != x[n]) {
         let { timeout: r, setAt: i } = x[n];
         return (U(e, t, i), clearTimeout(r), delete x[n], !0);
@@ -95,7 +95,7 @@ function U(e, t, n) {
     (0, I.OP)(n, t);
 }
 function G(e) {
-    if (j(e, I.Pq.TIMEOUT)) {
+    if (M(e, I.Pq.TIMEOUT)) {
         let t = m.Z.getMessage(e.channel_id, e.id);
         if (null != t) {
             let { attachmentIds: n, embedIds: r } = (0, A.DQ)(t);
@@ -122,14 +122,14 @@ let B = (e, t) => {
         );
     }
 };
-function V(e) {
-    return null == x[M(e)];
+function Z(e) {
+    return null == x[k(e)];
 }
 function F(e, t) {
     let { forceBatchScan: n = !1, jitter: r = !1 } = null != t ? t : {},
-        i = (null == t ? void 0 : t.isMessageUpdate) ? e.filter((e) => (0, A.MD)(e)).filter(V) : e.filter(V);
+        i = (null == t ? void 0 : t.isMessageUpdate) ? e.filter((e) => (0, A.MD)(e)).filter(Z) : e.filter(Z);
     i.forEach((e) => {
-        let t = M(e);
+        let t = k(e);
         null == x[t] &&
             (d.Z.increment({ name: s.V.EXPLICIT_MEDIA_SCAN_CLIENT_TIMEOUT_CREATE }),
             (x[t] = {
@@ -143,13 +143,13 @@ function F(e, t) {
     r
         ? setTimeout(() => {
               B(
-                  i.filter((e) => null != x[M(e)]),
+                  i.filter((e) => null != x[k(e)]),
                   a
               );
           }, Math.random() * L)
         : B(i, a);
 }
-function Z(e) {
+function V(e) {
     let t = {},
         n = {};
     return (
@@ -256,7 +256,7 @@ function H(e) {
     r.length > 0 && (n = [...n, ...r]);
     let i = o()(n, (e, t) => e.id === t.id && e.channel_id === t.channel_id),
         a = i.filter((e) => (0, A.MD)(e)),
-        s = Z(i);
+        s = V(i);
     return {
         messagesPendingScan: a,
         attributesByMessageId: s.messageLookup,
@@ -270,7 +270,7 @@ function Y(e) {
     let n = e.filter((e) => (0, y.t)(e) && 0 !== (0, A.rb)(e)),
         r = e
             .map((e) => {
-                if (R.OBS.has(e.type) && null != e.messageReference) {
+                if (w.OBS.has(e.type) && null != e.messageReference) {
                     let t = f.Z.getMessageByReference(e.messageReference);
                     if (t.state === f.Y.LOADED && null != t.message && (0, y.t)(t.message) && 0 !== (0, A.rb)(t.message)) return t.message;
                 }
@@ -279,7 +279,7 @@ function Y(e) {
     r.length > 0 && (n = [...n, ...r]);
     let i = o()(n, (e, t) => e.id === t.id && e.channel_id === t.channel_id),
         a = i.filter((e) => (0, A.MD)(e)),
-        s = Z(i);
+        s = V(i);
     return {
         messagesPendingScan: a,
         attributesByChannelId: s.channelLookup,
@@ -352,7 +352,7 @@ function z(e) {
     if (null == s.channel_id || null == s.id || (null == (t = s.author) ? void 0 : t.id) === _.default.getId() || (null == s.embeds && null == s.attachments) || ((null == (n = s.embeds) ? void 0 : n.length) === 0 && (null == (r = s.attachments) ? void 0 : r.length) === 0)) return !1;
     if (!(0, A.MD)(s)) {
         let e = null != (o = null != (a = m.Z.getMessage(s.channel_id, s.id)) ? a : T.Z.getMessage(s.id, s.channel_id)) ? o : null == (i = f.Z.getMessage(s.channel_id, s.id)) ? void 0 : i.message;
-        null == e || (0, A.MD)((0, u.wi)(e, s)) || j(e, I.Pq.UPDATE);
+        null == e || (0, A.MD)((0, u.wi)(e, s)) || M(e, I.Pq.UPDATE);
     }
     let l = g.Z.getChannelId(),
         c = p.ZP.getCurrentSidebarChannelId(l);
@@ -373,14 +373,14 @@ function q(e) {
         f = (null == u ? void 0 : u.memberCount) == null || (null == u ? void 0 : u.memberCount) > 100;
     return W([i], { jitter: d && f });
 }
-function X(e) {
+function $(e) {
     let { channelId: t, messages: n } = e;
     if (null == t || null == n) return !1;
     let r = g.Z.getChannelId(),
         i = p.ZP.getCurrentSidebarChannelId(r);
     return (t === r || t === i) && W(n);
 }
-function Q(e) {
+function X(e) {
     let { data: t } = e,
         n = !1;
     return (
@@ -392,7 +392,7 @@ function Q(e) {
         n
     );
 }
-function J(e) {
+function Q(e) {
     let { pins: t } = e;
     return W(
         t.map((e) => {
@@ -401,7 +401,7 @@ function J(e) {
         })
     );
 }
-function $(e) {
+function J(e) {
     let { guildId: t, threads: n } = e;
     return null != n && E.Z.getGuildId() === t && W(b.default.keys(n).map((e) => n[e].first_message));
 }
@@ -419,7 +419,7 @@ function en(e) {
 }
 function er(e) {
     let { settings: t, local: n } = e;
-    if (!n || t.type !== P.yP.PRELOADED_USER_SETTINGS) return !1;
+    if (!n || t.type !== R.yP.PRELOADED_USER_SETTINGS) return !1;
     let r = g.Z.getChannelId();
     return null != r && ea(r);
 }
@@ -434,19 +434,19 @@ function ea(e) {
 class eo extends c.Z {
     constructor(...e) {
         (super(...e),
-            w(this, 'actions', {
-                LOAD_MESSAGES_SUCCESS: X,
-                LOAD_FORUM_POSTS: $,
+            P(this, 'actions', {
+                LOAD_MESSAGES_SUCCESS: $,
+                LOAD_FORUM_POSTS: J,
                 LOAD_THREADS_SUCCESS: ee,
                 LOAD_ARCHIVED_THREADS_SUCCESS: ee,
                 SIDEBAR_VIEW_CHANNEL: et,
                 MESSAGE_CREATE: q,
                 MESSAGE_UPDATE: z,
-                LOGOUT: k,
-                SEARCH_MESSAGES_SUCCESS: Q,
-                MOD_VIEW_SEARCH_MESSAGES_SUCCESS: Q,
+                LOGOUT: j,
+                SEARCH_MESSAGES_SUCCESS: X,
+                MOD_VIEW_SEARCH_MESSAGES_SUCCESS: X,
                 CHANNEL_SELECT: en,
-                LOAD_PINNED_MESSAGES_SUCCESS: J,
+                LOAD_PINNED_MESSAGES_SUCCESS: Q,
                 USER_SETTINGS_PROTO_UPDATE: er,
                 CHANNEL_RTC_UPDATE_CHAT_OPEN: ei
             }));

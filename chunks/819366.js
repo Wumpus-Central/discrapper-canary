@@ -93,37 +93,37 @@ function T(e) {
     let { className: t, userId: u, channelId: b, parsedUserId: O, content: T, inlinePreview: S = !1, viewingChannelId: A } = e,
         N = i.useRef(null),
         { analyticsLocations: C } = (0, c.ZP)(l.Z.USER_MENTION),
-        R = (0, o.e7)([m.default], () => m.default.getUser(u)),
-        P = (0, o.e7)([_.Z], () => _.Z.getChannel(b)),
-        w = null != P ? P.getGuildId() : null,
+        w = (0, o.e7)([m.default], () => m.default.getUser(u)),
+        R = (0, o.e7)([_.Z], () => _.Z.getChannel(b)),
+        P = null != R ? R.getGuildId() : null,
         D =
-            S || null == R || null == w || null == b
+            S || null == w || null == P || null == b
                 ? void 0
                 : (e) => {
-                      null != P &&
+                      null != R &&
                           (0, s.jW)(e, async () => {
-                              let { default: e } = await Promise.all([n.e('14006'), n.e('70274'), n.e('79695'), n.e('80417'), n.e('98783'), n.e('8982'), n.e('7717'), n.e('94470')]).then(n.bind(n, 757387));
+                              let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('8982'), n.e('7717'), n.e('12658')]).then(n.bind(n, 757387));
                               return (t) =>
                                   (0, r.jsx)(
                                       e,
                                       v(y({}, t), {
                                           viewingChannelId: A,
-                                          user: R,
-                                          channel: P,
-                                          guildId: w
+                                          user: w,
+                                          channel: R,
+                                          guildId: P
                                       })
                                   );
                           });
                   },
-        L = E.ZP.useName(R),
-        x = (0, o.e7)([_.Z, p.ZP, h.Z], () => g.ZP.getNickname(w, b, R));
-    if (null == R)
+        L = E.ZP.useName(w),
+        x = (0, o.e7)([_.Z, p.ZP, h.Z], () => g.ZP.getNickname(P, b, w));
+    if (null == w)
         return (0, r.jsx)(I, {
             userId: O,
             className: t,
             children: T
         });
-    let M = (e) =>
+    let k = (e) =>
         (0, r.jsx)(
             d.Z,
             v(
@@ -141,18 +141,18 @@ function T(e) {
     return S
         ? (0, r.jsx)(c.Gt, {
               value: C,
-              children: M()
+              children: k()
           })
         : (0, r.jsx)(c.Gt, {
               value: C,
               children: (0, r.jsx)(f.Z, {
                   targetElementRef: N,
-                  user: R,
-                  guildId: null != w ? w : void 0,
+                  user: w,
+                  guildId: null != P ? P : void 0,
                   channelId: b,
                   position: a.tq ? 'top' : 'right',
                   clickTrap: !0,
-                  children: (e) => M(e)
+                  children: (e) => k(e)
               })
           });
 }

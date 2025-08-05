@@ -23,39 +23,39 @@ async function O(e) {
     let t,
         { applicationId: n, activityChannelId: l, locationObject: y, analyticsLocations: O, componentId: v, sectionName: I, source: T, inviterUserId: S, customId: A, referrerId: N } = e,
         C = (0, h.Z)(),
-        R = i.Z.getChannel(l),
-        P = null == R ? void 0 : R.getGuildId(),
-        w = null == P || '' === P,
+        w = i.Z.getChannel(l),
+        R = null == w ? void 0 : w.getGuildId(),
+        P = null == R || '' === R,
         D = o.default.getCurrentUser();
     if (null == D) return !1;
-    if (null == R || (w && !R.isPrivate()) || null == l) return Promise.resolve(!1);
+    if (null == w || (P && !w.isPrivate()) || null == l) return Promise.resolve(!1);
     let L = u.ZP.getCurrentEmbeddedActivity();
-    if (((null == L ? void 0 : L.applicationId) != null && (t = r.Z.getApplication(null == L ? void 0 : L.applicationId)), a.Z.getVoiceChannelId() === l && null != L && L.applicationId === n && (0, _.p)(L.location) === a.Z.getVoiceChannelId())) return ((0, E.Z)(P, L.location), Promise.resolve(!0));
+    if (((null == L ? void 0 : L.applicationId) != null && (t = r.Z.getApplication(null == L ? void 0 : L.applicationId)), a.Z.getVoiceChannelId() === l && null != L && L.applicationId === n && (0, _.p)(L.location) === a.Z.getVoiceChannelId())) return ((0, E.Z)(R, L.location), Promise.resolve(!0));
     let x = await (0, p.Z)(n, l);
     if (
         !(await (0, f.p)({
             applicationId: n,
             application: x,
-            channel: R,
+            channel: w,
             currentEmbeddedApplication: t,
             embeddedActivitiesManager: C,
             user: D
         }))
     )
         return !1;
-    if (null != R) {
-        let e = (0, m.Z)(R.id),
-            n = b.wP.includes(R.type);
+    if (null != w) {
+        let e = (0, m.Z)(w.id),
+            n = b.wP.includes(w.type);
         if (e) {
             if (
                 !(await (0, g.Z)({
-                    channelId: R.id,
+                    channelId: w.id,
                     bypassChangeModal: null != t
                 }))
             )
                 return !1;
-        } else if (!(0, s.WS)(R) || !n) return !1;
-    } else if (null == R) return !1;
+        } else if (!(0, s.WS)(w) || !n) return !1;
+    } else if (null == w) return !1;
     return (
         null != l && (0, d.Z)(l),
         null != L && (0, c.cG)(L.location),

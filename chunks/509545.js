@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => R }), n(388685), n(642613), n(539854));
+(n.d(t, { Z: () => w }), n(388685), n(642613), n(539854));
 var r,
     i = n(442837),
     a = n(570140),
@@ -150,7 +150,7 @@ class C extends (r = i.ZP.Store) {
     }
 }
 d(C, 'displayName', 'SubscriptionPlanStore');
-let R = new C(a.Z, {
+let w = new C(a.Z, {
     SUBSCRIPTION_PLANS_FETCH: O,
     SUBSCRIPTION_PLANS_FETCH_SUCCESS: v,
     SUBSCRIPTION_PLANS_FETCH_FAILURE: T,

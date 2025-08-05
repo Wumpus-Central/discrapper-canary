@@ -1,32 +1,33 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    l = n.n(i),
-    a = n(755721),
-    o = n(481060),
-    s = n(626786),
+    a = n.n(i),
+    o = n(755721),
+    s = n(481060),
+    l = n(626786),
     c = n(815756);
-function u(e) {
-    let { className: t, roleColor: n, roleName: i, hasRemoveIcon: u = !1, onClick: d, disabled: p = !1, verified: h = !1 } = e;
-    return (0, r.jsx)(a.zx, {
-        className: l()(t, c.button),
-        look: a.zx.Looks.BLANK,
-        size: a.zx.Sizes.NONE,
-        onClick: d,
-        disabled: p,
-        children: (0, r.jsx)(s.Z, {
+let u = 6;
+function d(e) {
+    let { className: t, roleColor: n, roleName: i, hasRemoveIcon: d = !1, onClick: f, disabled: _ = !1, verified: p = !1 } = e;
+    return (0, r.jsx)(o.zx, {
+        className: a()(t, c.button),
+        look: o.zx.Looks.BLANK,
+        size: o.zx.Sizes.NONE,
+        onClick: f,
+        disabled: _,
+        children: (0, r.jsx)(l.Z, {
             className: c.role,
             roleColor: n,
             roleName: i,
-            verified: h,
+            verified: p,
             children:
-                u &&
-                (0, r.jsx)(o.Dio, {
+                d &&
+                (0, r.jsx)(s.Dio, {
                     size: 'custom',
                     color: 'currentColor',
-                    height: 6,
-                    width: 6,
+                    height: u,
+                    width: u,
                     className: c.removeRole,
                     colorClass: c.removeRoleIcon
                 })

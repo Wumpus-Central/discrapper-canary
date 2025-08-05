@@ -45,49 +45,49 @@ function g(e, t) {
         [S, A] = i.useState(null),
         N = i.useRef(null),
         C = i.useRef(null),
-        R = i.useRef(null),
-        P =
+        w = i.useRef(null),
+        R =
             'custom' === g
                 ? {
                       width: E,
                       height: b
                   }
                 : (0, u.m)(g),
-        w = !(0, _.Z)('lottie_hover_multiple_loop'),
+        P = !(0, _.Z)('lottie_hover_multiple_loop'),
         D = i.useContext(c.S).reducedMotion.enabled,
         { enabled: L } = d.Z.useExperiment({ location: 'LottieIcon web entry point' }),
         x = D || !L,
-        M = i.useRef(O);
+        k = i.useRef(O);
     return (
         (0, f.zq)(() => {
             var e, t;
-            null == T || T({ finalFrame: null != (t = null == (e = R.current) ? void 0 : e.currentFrame) ? t : null });
+            null == T || T({ finalFrame: null != (t = null == (e = w.current) ? void 0 : e.currentFrame) ? t : null });
         }),
         i.useImperativeHandle(
             t,
             () => ({
                 play: (e) => {
-                    if (null == R.current) return;
+                    if (null == w.current) return;
                     let t = null == C.current;
                     if (((C.current = e), x)) {
                         let t = I[e];
-                        (R.current.resetSegments(!0), R.current.setSegment(t.start + t.duration, t.start + t.duration), R.current.stop());
+                        (w.current.resetSegments(!0), w.current.setSegment(t.start + t.duration, t.start + t.duration), w.current.stop());
                     } else {
-                        (R.current.setLoop(!w && e.includes('hover')), R.current.resetSegments(!0));
+                        (w.current.setLoop(!P && e.includes('hover')), w.current.resetSegments(!0));
                         let n = t && null != v && v >= I[e].start && v <= I[e].start + I[e].duration ? v : I[e].start;
-                        R.current.playSegments([n, I[e].start + I[e].duration], !0);
+                        w.current.playSegments([n, I[e].start + I[e].duration], !0);
                     }
                 },
                 stop: () => {
-                    if (null == R.current || x) return;
+                    if (null == w.current || x) return;
                 },
                 stopIfPlaying: (e) => {
-                    null == R.current || x || (C.current === e && (R.current.resetSegments(!0), R.current.setSegment(I[e].start, I[e].start), R.current.stop()));
+                    null == w.current || x || (C.current === e && (w.current.resetSegments(!0), w.current.setSegment(I[e].start, I[e].start), w.current.stop()));
                 },
-                getDuration: (e) => (null == R.current ? null : R.current.getDuration(e)),
-                getCurrentFrame: () => (null == R.current ? null : R.current.currentFrame)
+                getDuration: (e) => (null == w.current ? null : w.current.getDuration(e)),
+                getCurrentFrame: () => (null == w.current ? null : w.current.currentFrame)
             }),
-            [x, w, I, v]
+            [x, P, I, v]
         ),
         i.useEffect(() => {
             null == S && h().then((e) => A(e.default));
@@ -101,13 +101,13 @@ function g(e, t) {
                         let r,
                             { default: i } = e,
                             a = 1 === Object.keys(I).length ? Object.values(I)[0].name : void 0,
-                            o = null != (n = null != (t = C.current) ? t : M.current) ? n : a;
+                            o = null != (n = null != (t = C.current) ? t : k.current) ? n : a;
                         if (null != o && null != I[o]) {
                             let e = I[o];
                             r = [x ? e.start : null != v ? v : e.start, e.start + e.duration];
                         }
                         null != N.current &&
-                            (R.current = i.loadAnimation({
+                            (w.current = i.loadAnimation({
                                 container: N.current,
                                 renderer: 'svg',
                                 loop: !1,
@@ -118,7 +118,7 @@ function g(e, t) {
                     }),
                 () => {
                     var e;
-                    null == (e = R.current) || e.destroy();
+                    null == (e = w.current) || e.destroy();
                 }
             ),
             [S, I, v, x]
@@ -129,7 +129,7 @@ function g(e, t) {
                     '--__lottieIconColor': null != a && 'string' == typeof a ? a : null == a ? void 0 : a.css,
                     display: 'flex'
                 },
-                P
+                R
             ),
             className: o()(p.lottieIcon, s ? void 0 : p.lottieIconColors, y),
             ref: N

@@ -76,15 +76,15 @@ function v(e) {
             frame_id: T,
             platform: h.S4.DESKTOP
         }),
-        [C, R] = i.useState(!1),
-        P = u.Z.theme,
-        w = b({}, a);
+        [C, w] = i.useState(!1),
+        R = u.Z.theme,
+        P = b({}, a);
     function D(e) {
         var n;
         (null == o || o(e.target), (S.current = e.target), A(!0), null == (n = e.target.contentWindow) || n.postMessage([c.Z.HELLO, N], null != t ? t : ''));
     }
     return (
-        P === m.BRd.LIGHT ? (w.colorScheme = 'light') : (w.colorScheme = 'dark'),
+        R === m.BRd.LIGHT ? (P.colorScheme = 'light') : (P.colorScheme = 'dark'),
         i.useEffect(
             () => (
                 d.S.dispatch(m.CkL.IFRAME_MOUNT, { id: T }),
@@ -97,7 +97,7 @@ function v(e) {
         i.useEffect(() => {
             let e = (e) => {
                 let { resizing: t } = e;
-                R(t);
+                w(t);
             };
             return (
                 d.S.subscribe(m.CkL.MANUAL_IFRAME_RESIZING, e),
@@ -106,10 +106,10 @@ function v(e) {
                 }
             );
         }, []),
-        C && (w.pointerEvents = 'none'),
+        C && (P.pointerEvents = 'none'),
         null != t
             ? (0, r.jsx)('iframe', {
-                  style: w,
+                  style: P,
                   allow: 'autoplay; encrypted-media',
                   referrerPolicy: v,
                   onLoad: D,

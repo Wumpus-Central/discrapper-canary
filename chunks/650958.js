@@ -86,8 +86,8 @@ function g(e) {
         S = v(n[n.length - 1]),
         [A, N] = (0, l.L)(t, { location: S }),
         C = I ? A.concat(N) : A,
-        { id: R, name: P } = (0, l.p)(t),
-        w = null != p ? p : R,
+        { id: w, name: R } = (0, l.p)(t),
+        P = null != p ? p : w,
         D = C.map((e) => {
             let { id: i, disabled: o, name: s } = e;
             return (0, r.jsx)(
@@ -98,7 +98,7 @@ function g(e) {
                         group: ''.concat(t, '-devices'),
                         disabled: o,
                         label: s,
-                        checked: i === w,
+                        checked: i === P,
                         action: () => {
                             var e;
                             (null == (e = null == u ? void 0 : u(i)) || e) && y(i, { analyticsLocations: n });
@@ -133,7 +133,7 @@ function g(e) {
                       {
                           id: ''.concat(t, '-devices'),
                           label: O(),
-                          subtext: P
+                          subtext: R
                       },
                       E
                   ),

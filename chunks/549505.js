@@ -1,78 +1,78 @@
-a.d(t, { default: () => b });
+a.d(t, { default: () => _ });
 var s = a(255367);
 a(73800);
-var n = a(755721),
-    i = a(481060),
-    r = a(688465),
-    o = a(547972),
-    l = a(63063),
-    c = a(981631),
+var n = a(481060),
+    i = a(688465),
+    r = a(547972),
+    o = a(63063),
+    l = a(981631),
     d = a(332325),
-    m = a(388032),
-    x = a(347383),
-    _ = a(83173);
-function b(e) {
+    c = a(388032),
+    m = a(347383),
+    x = a(83173);
+function _(e) {
     let { transitionState: t, onClose: a } = e;
-    return (0, s.jsxs)(i.Y0X, {
+    return (0, s.jsxs)(n.Y0X, {
         transitionState: t,
-        size: i.CgR.DYNAMIC,
-        className: x.modalRoot,
+        size: n.CgR.DYNAMIC,
+        className: m.modalRoot,
         parentComponent: 'MemberListContentLearnMoreModal',
         children: [
-            (0, s.jsxs)(i.xBx, {
+            (0, s.jsxs)(n.xBx, {
                 separator: !1,
-                className: x.modalHeader,
+                className: m.modalHeader,
                 children: [
                     (0, s.jsx)('div', {
-                        className: x.imageFrame,
+                        className: m.imageFrame,
                         children: (0, s.jsx)('img', {
-                            alt: m.intl.string(m.t.AWkQTk),
-                            src: _,
-                            className: x.heroImage
+                            alt: c.intl.string(c.t.AWkQTk),
+                            src: x,
+                            className: m.heroImage
                         })
                     }),
                     (0, s.jsxs)('div', {
-                        className: x.headerWrapper,
+                        className: m.headerWrapper,
                         children: [
-                            (0, s.jsx)(i.X6q, {
+                            (0, s.jsx)(n.X6q, {
                                 variant: 'heading-xl/bold',
-                                children: m.intl.string(m.t.gb37Ky)
+                                children: c.intl.string(c.t.gb37Ky)
                             }),
-                            (0, s.jsx)(r.Z, { className: x.betaTag })
+                            (0, s.jsx)(i.Z, { className: m.betaTag })
                         ]
                     })
                 ]
             }),
-            (0, s.jsxs)(i.hzk, {
-                className: x.modalContent,
+            (0, s.jsxs)(n.hzk, {
+                className: m.modalContent,
                 children: [
                     (0, s.jsxs)('div', {
-                        className: x.modalContentFrame,
+                        className: m.modalContentFrame,
                         children: [
-                            (0, s.jsx)(i.Text, {
+                            (0, s.jsx)(n.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-secondary',
-                                children: m.intl.string(m.t.WKxo8v)
+                                children: c.intl.string(c.t.WKxo8v)
                             }),
                             (0, s.jsx)(h, {})
                         ]
                     }),
                     (0, s.jsxs)('div', {
-                        className: x.modalFooter,
+                        className: m.modalFooter,
                         children: [
-                            (0, s.jsx)(n.zx, {
+                            (0, s.jsx)(n.zxk, {
                                 onClick: a,
-                                className: x.button,
-                                children: m.intl.string(m.t['x/26d3'])
+                                variant: 'primary',
+                                fullWidth: !0,
+                                text: c.intl.string(c.t['x/26d3'])
                             }),
-                            (0, s.jsx)(i.Text, {
+                            (0, s.jsx)(n.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'text-muted',
-                                className: x.disclosureText,
-                                children: m.intl.format(m.t['5Ey5Dw'], {
-                                    recentActivityURL: l.Z.getArticleURL(c.BhN.MEMBER_LIST_ACTIVITY_FEED),
+                                className: m.disclosureText,
+                                children: c.intl.format(c.t['5Ey5Dw'], {
+                                    recentActivityURL: o.Z.getArticleURL(l.BhN.MEMBER_LIST_ACTIVITY_FEED),
                                     handleActivityPrivacyClick: () => {
-                                        (a(), (0, o.Z)(d.Z.ACTIVITY_PRIVACY));
+                                        (a(), (0, r.Z)(d.Z.ACTIVITY_PRIVACY));
                                     }
                                 })
                             })
@@ -86,38 +86,38 @@ function b(e) {
 let h = () => {
     let e = [
         {
-            icon: (0, s.jsx)(i.iFz, { className: x.icon }),
-            text: m.intl.string(m.t.vXBrdn)
+            icon: (0, s.jsx)(n.iFz, { className: m.icon }),
+            text: c.intl.string(c.t.vXBrdn)
         },
         {
-            icon: (0, s.jsx)(i.iWm, { className: x.icon }),
-            text: m.intl.string(m.t.aExjOz)
+            icon: (0, s.jsx)(n.iWm, { className: m.icon }),
+            text: c.intl.string(c.t.aExjOz)
         },
         {
-            icon: (0, s.jsx)(i.kBi, { className: x.icon }),
-            text: m.intl.string(m.t['i7/QHB'])
+            icon: (0, s.jsx)(n.kBi, { className: m.icon }),
+            text: c.intl.string(c.t['i7/QHB'])
         },
         {
-            icon: (0, s.jsx)(i.lMe, { className: x.icon }),
-            text: m.intl.string(m.t.ZmBfKC)
+            icon: (0, s.jsx)(n.lMe, { className: m.icon }),
+            text: c.intl.string(c.t.ZmBfKC)
         }
     ];
     return (0, s.jsx)('div', {
-        className: x.notes,
+        className: m.notes,
         children: e.map((e, t) => {
-            let { icon: a, text: n } = e;
+            let { icon: a, text: i } = e;
             return (0, s.jsxs)(
                 'div',
                 {
-                    className: x.badgeNote,
+                    className: m.badgeNote,
                     children: [
                         (0, s.jsx)('div', {
-                            className: x.badge,
+                            className: m.badge,
                             children: a
                         }),
-                        (0, s.jsx)(i.Text, {
+                        (0, s.jsx)(n.Text, {
                             variant: 'text-sm/medium',
-                            children: n
+                            children: i
                         })
                     ]
                 },

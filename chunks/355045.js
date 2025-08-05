@@ -27,9 +27,9 @@ let A = function (e) {
         A = i.useRef(null),
         N = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
         C = (0, s.e7)([E.Z], () => E.Z.boostSlots),
-        { analyticsLocations: R } = (0, d.ZP)(),
-        { fractionalState: P } = (0, f.Z)({ forceFetch: !1 }),
-        w = i.useMemo(
+        { analyticsLocations: w } = (0, d.ZP)(),
+        { fractionalState: R } = (0, f.Z)({ forceFetch: !1 }),
+        P = i.useMemo(
             () =>
                 Object.keys(C).filter((e) => {
                     let t = C[e];
@@ -43,7 +43,7 @@ let A = function (e) {
         (0, p.Z)({
             initialPlanId: null,
             subscriptionTier: I.Si.TIER_2,
-            analyticsLocations: R,
+            analyticsLocations: w,
             analyticsObject: {
                 page: v.ZY5.PREMIUM_GUILD_USER_MODAL,
                 section: v.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
@@ -53,12 +53,12 @@ let A = function (e) {
             onClose: (e) => e && t()
         });
     }
-    function M() {
+    function k() {
         (0, p.Z)({
             initialPlanId: null,
             subscriptionTier: I.Si.TIER_2,
             isGift: !0,
-            analyticsLocations: R,
+            analyticsLocations: w,
             analyticsObject: {
                 page: v.ZY5.PREMIUM_GUILD_USER_MODAL,
                 section: v.jXE.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
@@ -99,11 +99,11 @@ let A = function (e) {
                             })
                         ]
                     }),
-                    w > 0
+                    P > 0
                         ? (0, r.jsx)(u.Text, {
                               className: S.guildBoostCountCurrentUser,
                               variant: 'text-sm/normal',
-                              children: T.intl.format(T.t.Jeto2t, { numSubscriptions: w })
+                              children: T.intl.format(T.t.Jeto2t, { numSubscriptions: P })
                           })
                         : null
                 ]
@@ -140,13 +140,13 @@ let A = function (e) {
                             })
                         })
                     }),
-                    y.ZP.hasFreeBoosts(N, P) || y.ZP.isPremium(N, I.p9.TIER_2)
+                    y.ZP.hasFreeBoosts(N, R) || y.ZP.isPremium(N, I.p9.TIER_2)
                         ? (0, r.jsxs)(c.zx, {
                               className: o()(S.guildBoostCta, S.guildBoostCtaSecondary),
                               innerClassName: o()(S.__invalid_guildBoostCtaContent, S.guildBoostCtaGiftContent),
                               look: c.zx.Looks.OUTLINED,
                               color: c.zx.Colors.WHITE,
-                              onClick: M,
+                              onClick: k,
                               size: c.zx.Sizes.LARGE,
                               children: [
                                   (0, r.jsx)(u.OgN, {

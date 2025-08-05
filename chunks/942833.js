@@ -1,19 +1,19 @@
 n.d(t, {
-    C: () => a,
-    k: () => o
+    C: () => o,
+    k: () => s
 });
 var r = n(73800),
     i = n(937615),
-    l = n(388032);
-function a(e) {
+    a = n(388032);
+function o(e) {
     return r.useMemo(() => {
         if (null == e) return;
         let t = null != e.role_id,
             n = e.attachments_count > 0;
-        return t && n ? l.intl.string(l.t.ih4QMT) : t ? l.intl.string(l.t.o9xphY) : n ? l.intl.string(l.t.DWYJub) : void 0;
+        return t && n ? a.intl.string(a.t.ih4QMT) : t ? a.intl.string(a.t.o9xphY) : n ? a.intl.string(a.t.DWYJub) : void 0;
     }, [e]);
 }
-function o(e) {
+function s(e) {
     return r.useMemo(() => {
         if ((null == e ? void 0 : e.price) == null) return;
         let { amount: t, currency: n } = e.price;

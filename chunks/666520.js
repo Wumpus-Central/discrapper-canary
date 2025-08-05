@@ -4,15 +4,15 @@ var l = t(255367),
     i = t(442837),
     o = t(481060),
     s = t(34854),
-    c = t(531301),
+    d = t(531301),
     a = t(246946),
-    u = t(981631),
-    d = t(388032),
+    c = t(981631),
+    u = t(388032),
     f = t(343074);
 function p(e) {
-    let { autoFocus: n = !1, className: t, userId: p, onUpdate: j } = e,
+    let { autoFocus: n = !1, className: t, userId: p, onUpdate: h } = e,
         g = (0, i.e7)([a.Z], () => a.Z.hidePersonalInformation),
-        { loading: h, note: v } = (0, c.Z)(p),
+        { loading: v, note: j } = (0, d.Z)(p),
         m = r.useRef(null);
     return (r.useEffect(() => {
         if (!n || g) return;
@@ -26,12 +26,12 @@ function p(e) {
               children: (0, l.jsx)(o.lcI, {
                   ref: m,
                   className: f.textarea,
-                  disabled: h,
-                  placeholder: h ? d.intl.string(d.t['WLKx//']) : d.intl.string(d.t.VBhOe3),
-                  'aria-label': d.intl.string(d.t.PbMNh4),
+                  disabled: v,
+                  placeholder: v ? u.intl.string(u.t['WLKx//']) : u.intl.string(u.t.VBhOe3),
+                  'aria-label': u.intl.string(u.t.PbMNh4),
                   onBlur: (e) => {
                       let n = e.currentTarget.value;
-                      (null != v ? v : '') !== n && (null == j || j(), s.Z.updateNote(p, n));
+                      (null != j ? j : '') !== n && (null == h || h(), s.Z.updateNote(p, n));
                   },
                   onKeyPress: (e) => {
                       if (13 === e.which)
@@ -39,10 +39,10 @@ function p(e) {
                               var n;
                               (null != (n = e.currentTarget.value.match(/\n/g)) ? n : []).length >= 5 && e.preventDefault();
                           } else (e.preventDefault(), e.currentTarget.blur());
-                      else e.which === u.yXg.SPACE && e.stopPropagation();
+                      else e.which === c.yXg.SPACE && e.stopPropagation();
                   },
-                  defaultValue: null != v ? v : void 0,
-                  maxLength: u.vuo
+                  defaultValue: null != j ? j : void 0,
+                  maxLength: c.vuo
               })
           });
 }

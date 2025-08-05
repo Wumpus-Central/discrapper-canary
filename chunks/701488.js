@@ -4,7 +4,7 @@
     Ev: () => s,
     Fu: () => m,
     GM: () => L,
-    Gu: () => w,
+    Gu: () => P,
     In: () => p,
     JT: () => h,
     K8: () => O,
@@ -22,8 +22,8 @@
     jT: () => f,
     qm: () => l,
     um: () => A,
-    wP: () => P,
-    wT: () => R,
+    wP: () => R,
+    wT: () => w,
     xK: () => T
 }),
     n(388685));
@@ -72,7 +72,7 @@ let C = {
         label_until: null,
         omit_badge_from_surfaces: []
     },
-    R = {
+    w = {
         application_id: '',
         requires_age_gate: !1,
         legacy_responsive_aspect_ratio: !1,
@@ -87,8 +87,8 @@ let C = {
         has_csp_exception: !1,
         displays_advertisements: !1
     },
-    P = [i.d4z.GUILD_TEXT, i.d4z.DM, i.d4z.GROUP_DM],
-    w = [...P, i.d4z.GUILD_VOICE],
+    R = [i.d4z.GUILD_TEXT, i.d4z.DM, i.d4z.GROUP_DM],
+    P = [...R, i.d4z.GUILD_VOICE],
     D = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';
 var L = (function (e) {
     return ((e.NORMAL = 'normal'), (e.FULL_SCREEN = 'full-screen'), e);

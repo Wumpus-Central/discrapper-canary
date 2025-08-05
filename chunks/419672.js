@@ -1,4 +1,4 @@
-(n.d(e, { Z: () => x }), n(388685));
+(n.d(e, { Z: () => _ }), n(388685));
 var i = n(255367),
     r = n(73800),
     s = n(481060),
@@ -10,15 +10,15 @@ var i = n(255367),
     d = n(981631),
     T = n(526761),
     S = n(388032),
-    _ = n(621164);
-let x = function (t) {
+    x = n(621164);
+let _ = function (t) {
     let { onClose: e, channelId: n } = t,
-        [x, b] = r.useState(!1),
-        p = r.useCallback(() => {
+        [_, b] = r.useState(!1),
+        O = r.useCallback(() => {
             (l.Z.open(d.oAB.CONTENT_AND_SOCIAL, null, { scrollPosition: T.FY.DM_SAFETY_ALERTS_V2 }), e());
         }, [e]),
-        O = r.useCallback(() => {
-            x ||
+        E = r.useCallback(() => {
+            _ ||
                 (b(!0),
                 (0, o.Uj)(n)
                     .then(() => {
@@ -31,9 +31,9 @@ let x = function (t) {
                     .catch(() => {
                         (b(!1), (0, s.showToast)((0, s.createToast)(S.intl.string(S.t.R0RpRU), s.ToastType.FAILURE)));
                     }));
-        }, [n, e, x]);
+        }, [n, e, _]);
     return (0, i.jsxs)(u.Z, {
-        style: _.wrapperStyle,
+        style: x.wrapperStyle,
         children: [
             (0, i.jsx)(s.Text, {
                 variant: 'text-md/normal',
@@ -43,22 +43,22 @@ let x = function (t) {
             (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsx)(s.zxk, {
-                        onClick: p,
+                        onClick: O,
                         fullWidth: !0,
                         text: S.intl.string(S.t.qpWnyM)
                     }),
                     (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
-                        className: _.reportFalsePositiveText,
+                        className: x.reportFalsePositiveText,
                         children: S.intl.format(S.t['2uYViI'], {
                             reportFalsePositiveHook: (t, e) =>
                                 (0, i.jsx)(
                                     s.P3F,
                                     {
-                                        className: _.reportFalsePositiveButton,
+                                        className: x.reportFalsePositiveButton,
                                         tag: 'span',
-                                        onClick: O,
+                                        onClick: E,
                                         children: t
                                     },
                                     e

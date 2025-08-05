@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => R }), n(388685));
+(n.d(t, { Z: () => w }), n(388685));
 var r = n(255367),
     i = n(73800),
     a = n(392711),
@@ -146,4 +146,4 @@ class C extends i.PureComponent {
             S(this, 'discordErrorsSet', !1));
     }
 }
-let R = C;
+let w = C;

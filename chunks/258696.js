@@ -37,22 +37,22 @@ function S(e) {
 }
 function A(e) {
     var t, n, i, f, _, p, y;
-    let { type: O, disabled: A, channel: C, handleSubmit: R, isEmpty: P, showAllButtons: w, children: D } = e,
+    let { type: O, disabled: A, channel: C, handleSubmit: w, isEmpty: R, showAllButtons: P, children: D } = e,
         L = (0, o.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
-        x = N(C.id, O, P),
-        { activeCommand: M, activeCommandOption: k } = (0, o.cj)([c.Z], () => ({
+        x = N(C.id, O, R),
+        { activeCommand: k, activeCommandOption: j } = (0, o.cj)([c.Z], () => ({
             activeCommand: c.Z.getActiveCommand(C.id),
             activeCommandOption: c.Z.getActiveOption(C.id)
         })),
-        { paymentsBlocked: j } = u.Z.useExperiment({ location: 'dc120b_3' }, { autoTrackExposure: !1 }),
+        { paymentsBlocked: M } = u.Z.useExperiment({ location: 'dc120b_3' }, { autoTrackExposure: !1 }),
         U = [],
         G = !C.isDM() || void 0 === C.recipients || C.recipients.length > 1,
         B = (0, o.e7)([h.default], () => (G ? null : h.default.getUser(C.recipients[0]))),
-        V = (0, d.Nt)() && (null == (t = O.confetti) ? void 0 : t.button) != null;
+        Z = (0, d.Nt)() && (null == (t = O.confetti) ? void 0 : t.button) != null;
     return (a.tq ||
         ((null == (_ = O.gifts) ? void 0 : _.button) != null &&
-            null == M &&
-            !j &&
+            null == k &&
+            !M &&
             (null == B || m.ZP.isPremiumEligible(B)) &&
             U.push(
                 (0, r.jsx)(
@@ -65,8 +65,8 @@ function A(e) {
                 )
             ),
         (null == (p = O.gifs) ? void 0 : p.button) != null &&
-            null == M &&
-            w &&
+            null == k &&
+            P &&
             U.push(
                 (0, r.jsx)(
                     E.Z,
@@ -77,8 +77,8 @@ function A(e) {
                     'gif'
                 )
             ),
-        V &&
-            null == M &&
+        Z &&
+            null == k &&
             U.push(
                 (0, r.jsx)(
                     b.Z,
@@ -89,10 +89,10 @@ function A(e) {
                     'confetti'
                 )
             ),
-        !V &&
+        !Z &&
             (null == (y = O.stickers) ? void 0 : y.button) != null &&
-            null == M &&
-            w &&
+            null == k &&
+            P &&
             U.push(
                 (0, r.jsx)(
                     I.Z,
@@ -104,7 +104,7 @@ function A(e) {
                 )
             )),
     (null == (n = O.emojis) ? void 0 : n.button) != null &&
-        (null == M || (null != k && k.type !== s.jw.ATTACHMENT)) &&
+        (null == k || (null != j && j.type !== s.jw.ATTACHMENT)) &&
         U.push(
             (0, r.jsx)(
                 g.Z,
@@ -122,7 +122,7 @@ function A(e) {
             (0, r.jsx)(
                 v.Z,
                 {
-                    onClick: R,
+                    onClick: w,
                     disabled: A || x
                 },
                 'submit'

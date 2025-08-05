@@ -28,31 +28,31 @@ function f(e, t) {
         A = (0, u.Z)('number' != typeof S ? S : (0, d.Z)(S, l.mv)),
         N = O === l.k5 ? l.YP : l.k5,
         C = e.rects.popper,
-        R = e.elements[I ? N : O],
-        P = (0, r.Z)((0, c.kK)(R) ? R : R.contextElement || (0, i.Z)(e.elements.popper), g, b, h),
-        w = (0, a.Z)(e.elements.reference),
+        w = e.elements[I ? N : O],
+        R = (0, r.Z)((0, c.kK)(w) ? w : w.contextElement || (0, i.Z)(e.elements.popper), g, b, h),
+        P = (0, a.Z)(e.elements.reference),
         D = (0, o.Z)({
-            reference: w,
+            reference: P,
             element: C,
             strategy: 'absolute',
             placement: _
         }),
         L = (0, s.Z)(Object.assign({}, C, D)),
-        x = O === l.k5 ? L : w,
-        M = {
-            top: P.top - x.top + A.top,
-            bottom: x.bottom - P.bottom + A.bottom,
-            left: P.left - x.left + A.left,
-            right: x.right - P.right + A.right
+        x = O === l.k5 ? L : P,
+        k = {
+            top: R.top - x.top + A.top,
+            bottom: x.bottom - R.bottom + A.bottom,
+            left: R.left - x.left + A.left,
+            right: x.right - R.right + A.right
         },
-        k = e.modifiersData.offset;
-    if (O === l.k5 && k) {
-        var j = k[_];
-        Object.keys(M).forEach(function (e) {
+        j = e.modifiersData.offset;
+    if (O === l.k5 && j) {
+        var M = j[_];
+        Object.keys(k).forEach(function (e) {
             var t = [l.F2, l.I].indexOf(e) >= 0 ? 1 : -1,
                 n = [l.we, l.I].indexOf(e) >= 0 ? 'y' : 'x';
-            M[e] += j[n] * t;
+            k[e] += M[n] * t;
         });
     }
-    return M;
+    return k;
 }

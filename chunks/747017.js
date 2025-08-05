@@ -19,11 +19,11 @@ var r = n(255367),
     y = n(981631),
     O = n(843280);
 function v(e) {
-    let { user: t, activities: n, applicationStream: a, voiceChannel: v, textClassName: I, iconClassName: T, textSize: S = 'xs', animateEmoji: A = !0, hasQuest: N = !1, hideEmoji: C = !1, hideTooltip: R = !1 } = e;
+    let { user: t, activities: n, applicationStream: a, voiceChannel: v, textClassName: I, iconClassName: T, textSize: S = 'xs', animateEmoji: A = !0, hasQuest: N = !1, hideEmoji: C = !1, hideTooltip: w = !1 } = e;
     (0, u.Z)(null == t ? void 0 : t.id);
-    let P = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
-        w = (0, l.e7)([f.default], () => f.default.getId() === (null == t ? void 0 : t.id)),
-        D = (0, l.e7)([d.Z], () => (w ? d.Z.getHangStatusActivity() : null != n ? n.find((e) => e.type === y.IIU.HANG_STATUS) : null)),
+    let R = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
+        P = (0, l.e7)([f.default], () => f.default.getId() === (null == t ? void 0 : t.id)),
+        D = (0, l.e7)([d.Z], () => (P ? d.Z.getHangStatusActivity() : null != n ? n.find((e) => e.type === y.IIU.HANG_STATUS) : null)),
         L = i.useMemo(() => {
             var e, t;
             let r =
@@ -39,18 +39,18 @@ function v(e) {
         }, [n]);
     if ((0, l.e7)([_.Z], () => _.Z.isBlockedOrIgnored(null == t ? void 0 : t.id))) return null;
     let x = (null == t ? void 0 : t.bot) === !0,
-        M = (null == L ? void 0 : L.state) != null && 'xs' === S,
-        k = () => {
-            if (null != P)
+        k = (null == L ? void 0 : L.state) != null && 'xs' === S,
+        j = () => {
+            if (null != R)
                 return (0, r.jsx)(h.Z, {
-                    stream: P,
+                    stream: R,
                     game: null == n ? void 0 : n.find(c.Z),
                     textVariant: 'text-'.concat(S, '/medium'),
                     textClassName: I,
                     iconClassName: T,
-                    hideText: M,
+                    hideText: k,
                     hideIcon: x,
-                    hideTooltip: R
+                    hideTooltip: w
                 });
             let e =
                 null == n
@@ -65,9 +65,9 @@ function v(e) {
                       textVariant: 'text-'.concat(S, '/medium'),
                       textClassName: I,
                       iconClassName: T,
-                      hideText: M,
+                      hideText: k,
                       hideIcon: x,
-                      hideTooltip: R
+                      hideTooltip: w
                   })
                 : null != v
                   ? (0, r.jsx)(E.Z, {
@@ -75,12 +75,12 @@ function v(e) {
                         textVariant: 'text-'.concat(S, '/medium'),
                         textClassName: I,
                         iconClassName: T,
-                        hideText: M,
-                        hideTooltip: R
+                        hideText: k,
+                        hideTooltip: w
                     })
                   : null;
         },
-        j = o()(O.container, {
+        M = o()(O.container, {
             [O.textXs]: 'xs' === S,
             [O.textSm]: 'sm' === S
         }),
@@ -92,17 +92,17 @@ function v(e) {
                       textSize: S,
                       animateEmoji: A,
                       hideEmoji: C,
-                      hideTooltip: R,
+                      hideTooltip: w,
                       textClassName: I,
                       iconClassName: T,
-                      tooltipClassName: j,
+                      tooltipClassName: M,
                       voiceChannel: v,
                       hangStatus: D
                   });
     return (0, r.jsxs)('div', {
-        className: j,
+        className: M,
         children: [
-            k(),
+            j(),
             (0, r.jsx)(s.xv, {
                 variant: 'text-'.concat(S, '/normal'),
                 className: o()(O.truncated, O.dot, I),

@@ -184,20 +184,20 @@ function N(e) {
 function C(e) {
     return b.deleteChannelCache(e.channel.id);
 }
-function R() {
+function w() {
     if (0 === b.retainWhere((e) => null != u.Z.getChannel(e))) return !1;
 }
-function P(e, t) {
+function R(e, t) {
     if (!b.has(e, t)) return !1;
     b.set(e, t, { state: 2 });
 }
-function w(e) {
+function P(e) {
     let { id: t, channelId: n } = e;
-    return P(n, t);
+    return R(n, t);
 }
 function D(e) {
     let { ids: t, channelId: n } = e;
-    return O(t, (e) => P(n, e));
+    return O(t, (e) => R(n, e));
 }
 function L(e) {
     let { message: t } = e;
@@ -209,18 +209,18 @@ function L(e) {
 function x() {
     b.clear();
 }
-function M(e) {
+function k(e) {
     let { firstMessages: t } = e;
     return null != t && O(t, (e) => y(e));
 }
-function k(e) {
+function j(e) {
     let { threads: t } = e;
     return O(Object.values(t), (e) => {
         let { first_message: t } = e;
         return null != t && y(t);
     });
 }
-class j extends (r = o.ZP.Store) {
+class M extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(d.Z, u.Z);
     }
@@ -237,26 +237,26 @@ class j extends (r = o.ZP.Store) {
         return (null != e && (t = b.getCachedMessageIdsForChannel(e)), null != t ? t : m);
     }
 }
-_(j, 'displayName', 'ReferencedMessageStore');
-let U = new j(s.Z, {
+_(M, 'displayName', 'ReferencedMessageStore');
+let U = new M(s.Z, {
     CACHE_LOADED: I,
     LOCAL_MESSAGES_LOADED: v,
     LOAD_MESSAGES_SUCCESS: v,
     LOAD_MESSAGES_AROUND_SUCCESS: v,
     SEARCH_MESSAGES_SUCCESS: T,
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: T,
-    LOAD_THREADS_SUCCESS: M,
-    LOAD_ARCHIVED_THREADS_SUCCESS: M,
+    LOAD_THREADS_SUCCESS: k,
+    LOAD_ARCHIVED_THREADS_SUCCESS: k,
     MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: A,
-    LOAD_FORUM_POSTS: k,
+    LOAD_FORUM_POSTS: j,
     MESSAGE_CREATE: S,
     MESSAGE_UPDATE: N,
-    MESSAGE_DELETE: w,
+    MESSAGE_DELETE: P,
     MESSAGE_DELETE_BULK: D,
     CREATE_PENDING_REPLY: L,
     CHANNEL_DELETE: C,
     THREAD_DELETE: C,
-    GUILD_DELETE: R,
+    GUILD_DELETE: w,
     CONNECTION_OPEN: x,
     LOGOUT: x
 });

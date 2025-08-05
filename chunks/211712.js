@@ -40,7 +40,7 @@ let r = {
             themeColors: [6094952, 1007678],
             getName: () => i.intl.string(i.t.UdNuqq),
             getHeaderSrc: () => n(338430).Z,
-            getBannerSrc: (e) => (e ? n(217258).Z : n(892814).Z)
+            getBannerSrc: (e) => (e ? n(217258).Z : n(187812).Z)
         }
     },
     s = (e) => r[e];

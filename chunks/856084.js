@@ -1,27 +1,32 @@
-var n = r(581079),
-    i = null;
-function o(t) {
-    return 'LTR' === t || 'RTL' === t;
+var r = n(581079),
+    i = 'LTR',
+    a = 'RTL',
+    o = null;
+function s(e) {
+    return e === i || e === a;
 }
-function a(t) {
-    return (o(t) || n(!1), 'LTR' === t ? 'ltr' : 'rtl');
+function l(e) {
+    return (s(e) || r(!1), e === i ? 'ltr' : 'rtl');
 }
-t.exports = {
+function c(e, t) {
+    return (s(e) || r(!1), s(t) || r(!1), e === t ? null : l(e));
+}
+function u(e) {
+    o = e;
+}
+function d() {
+    u(i);
+}
+e.exports = {
     NEUTRAL: 'NEUTRAL',
-    LTR: 'LTR',
-    RTL: 'RTL',
-    isStrong: o,
-    getHTMLDir: a,
-    getHTMLDirIfDifferent: function (t, e) {
-        return (o(t) || n(!1), o(e) || n(!1), t === e ? null : a(t));
-    },
-    setGlobalDir: function (t) {
-        i = t;
-    },
-    initGlobalDir: function () {
-        i = 'LTR';
-    },
+    LTR: i,
+    RTL: a,
+    isStrong: s,
+    getHTMLDir: l,
+    getHTMLDirIfDifferent: c,
+    setGlobalDir: u,
+    initGlobalDir: d,
     getGlobalDir: function () {
-        return (i || this.initGlobalDir(), i || n(!1), i);
+        return (o || this.initGlobalDir(), o || r(!1), o);
     }
 };

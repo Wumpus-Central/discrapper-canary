@@ -81,20 +81,20 @@ function C(e) {
     let { storeListing: t } = e;
     A(t);
 }
-function R(e) {
+function w(e) {
     let { entitlements: t } = e;
     for (let e of t) null != e.sku && g(e.sku);
 }
-function P() {
+function R() {
     ((d = new Map()), (f = new Set()), (_ = new Set()), (p = new Map()), (h = new Map()), (m = new Map()));
 }
-function w() {
+function P() {
     if (r === s.default.locale) return !1;
-    ((r = s.default.locale), P());
+    ((r = s.default.locale), R());
 }
 class D extends (i = a.yh) {
     initialize() {
-        (this.waitFor(s.default, c.Z), this.syncWith([s.default], w), (r = s.default.locale));
+        (this.waitFor(s.default, c.Z), this.syncWith([s.default], P), (r = s.default.locale));
     }
     get(e) {
         return p.get(e);
@@ -128,8 +128,8 @@ let L = new D(o.Z, {
     SKU_FETCH_SUCCESS: T,
     SKU_FETCH_FAIL: v,
     SKUS_FETCH_SUCCESS: S,
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: R,
-    APPLICATION_STORE_CLEAR_DATA: P,
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: R,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: R
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: w,
+    APPLICATION_STORE_CLEAR_DATA: R,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: w,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: w
 });

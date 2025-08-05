@@ -1,43 +1,40 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => d });
 var r = n(73800),
-    l = n(442837),
-    i = n(569545),
-    a = n(959457),
-    o = n(626135),
-    u = n(981631),
-    s = n(474936);
-function c(e, t) {
-    let { handleMouseDown: n, handleMouseMove: c, handleMouseUp: d, handleMouseEnter: f } = e,
-        p = r.useRef(null),
-        m = (0, l.e7)([a.Z], () => a.Z.getRTCConnection((0, i.V9)(t))),
-        E = r.useCallback(
+    i = n(442837),
+    a = n(569545),
+    o = n(959457),
+    s = n(626135),
+    l = n(981631),
+    c = n(474936);
+function u(e, t, n) {
+    s.default.track(l.rMx.PREMIUM_FEATURE_USAGE, {
+        feature_name: ''.concat(c.QP.SHARED_CANVAS, '_').concat(e.type),
+        feature_tier: c.h1.FREE,
+        media_session_id: t.getMediaSessionId(),
+        parent_media_session_id: t.parentMediaSessionId,
+        guild_id: t.guildId,
+        duration: n
+    });
+}
+function d(e, t) {
+    let { handleMouseDown: n, handleMouseMove: s, handleMouseUp: l, handleMouseEnter: c } = e,
+        d = r.useRef(null),
+        f = (0, i.e7)([o.Z], () => o.Z.getRTCConnection((0, a.V9)(t))),
+        _ = r.useCallback(
             (e, t, r) => {
-                ((p.current = Date.now()), n(e, t, r));
+                ((d.current = Date.now()), n(e, t, r));
             },
             [n]
         );
     return {
         handleMouseUp: r.useCallback(
             (e, t, n) => {
-                if ((d(e, t, n), null != p.current)) {
-                    var r;
-                    (null != m &&
-                        ((r = Date.now() - p.current),
-                        o.default.track(u.rMx.PREMIUM_FEATURE_USAGE, {
-                            feature_name: ''.concat(s.QP.SHARED_CANVAS, '_').concat(e.type),
-                            feature_tier: s.h1.FREE,
-                            media_session_id: m.getMediaSessionId(),
-                            parent_media_session_id: m.parentMediaSessionId,
-                            guild_id: m.guildId,
-                            duration: r
-                        })),
-                        (p.current = null));
-                }
+                (l(e, t, n), null != d.current && (null != f && u(e, f, Date.now() - d.current), (d.current = null)));
             },
-            [d, m]
+            [l, f]
         ),
-        handleMouseDown: E,
-        handleMouseMove: c,
-        handleMouseEnter: f
+        handleMouseDown: _,
+        handleMouseMove: s,
+        handleMouseEnter: c
     };
 }

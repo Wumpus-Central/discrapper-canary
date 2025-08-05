@@ -1,12 +1,12 @@
 n.d(t, {
-    Cg: () => w,
+    Cg: () => P,
     Y0: () => x,
     YA: () => B,
     fM: () => L,
-    hz: () => j,
+    hz: () => M,
     mz: () => U,
     ol: () => G,
-    xB: () => M
+    xB: () => k
 });
 var r = n(255367),
     i = n(73800),
@@ -82,18 +82,18 @@ function C(e, t) {
         e
     );
 }
-function R(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = P(e, t);
+        i = R(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function P(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -102,7 +102,7 @@ function P(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-var w = (function (e) {
+var P = (function (e) {
     return ((e.SMALL = 'small'), (e.MEDIUM = 'medium'), (e.LARGE = 'large'), (e.DYNAMIC = 'dynamic'), e);
 })({});
 let D = Object.freeze({
@@ -117,8 +117,8 @@ var L = (function (e) {
 function x(e) {
     var t,
         { transitionState: n, children: a, size: u = 'small', role: _ = 'dialog', className: m, fullscreenOnMobile: g = !0, hideShadow: E = !1, onAnimationEnd: y = v.dG, returnRef: I, animation: S = 'default', parentComponent: N } = e,
-        P = R(e, ['transitionState', 'children', 'size', 'role', 'className', 'fullscreenOnMobile', 'hideShadow', 'onAnimationEnd', 'returnRef', 'animation', 'parentComponent']);
-    let w = n === O.Dv.ENTERING || n === O.Dv.ENTERED;
+        R = w(e, ['transitionState', 'children', 'size', 'role', 'className', 'fullscreenOnMobile', 'hideShadow', 'onAnimationEnd', 'returnRef', 'animation', 'parentComponent']);
+    let P = n === O.Dv.ENTERING || n === O.Dv.ENTERED;
     i.useContext(b.Z)({
         type: l.ImpressionTypes.PAGE,
         name: l.ImpressionNames.MODAL_ROOT_LEGACY,
@@ -127,8 +127,8 @@ function x(e) {
     let { reducedMotion: L } = i.useContext(f.S),
         x = (0, d.q)(
             {
-                opacity: +!!w,
-                transform: w || L.enabled || 'subtle' === S ? 'scale(1)' : 'scale(0.7)',
+                opacity: +!!P,
+                transform: P || L.enabled || 'subtle' === S ? 'scale(1)' : 'scale(0.7)',
                 config: {
                     duration: 200,
                     easing: c.Z.Easing.out(c.Z.Easing.quad),
@@ -138,17 +138,17 @@ function x(e) {
             },
             'animate-always'
         ),
-        M = i.useRef(null),
-        k = null != P['aria-label'],
-        j = null != P['aria-labelledby'],
+        k = i.useRef(null),
+        j = null != R['aria-label'],
+        M = null != R['aria-labelledby'],
         U = i.useId(),
-        G = null != (t = P['aria-labelledby']) ? t : U,
+        G = null != (t = R['aria-labelledby']) ? t : U,
         B = i.useMemo(
             () => ({
                 headerId: G,
-                headerIdIsManaged: j
+                headerIdIsManaged: M
             }),
-            [G, j]
+            [G, M]
         );
     return (0, r.jsx)(O.zM.Provider, {
         value: B,
@@ -161,9 +161,9 @@ function x(e) {
                         role: _,
                         returnRef: I,
                         impressionType: l.ImpressionTypes.MODAL,
-                        'aria-labelledby': k ? void 0 : B.headerId
+                        'aria-labelledby': j ? void 0 : B.headerId
                     },
-                    P
+                    R
                 ),
                 {
                     children: (0, r.jsx)(s.animated.div, {
@@ -171,10 +171,10 @@ function x(e) {
                             [T.fullscreenOnMobile]: g,
                             [T.rootWithShadow]: !E
                         }),
-                        ref: M,
+                        ref: k,
                         style: x,
                         children: (0, r.jsx)(h.J, {
-                            containerRef: M,
+                            containerRef: k,
                             children: a
                         })
                     })
@@ -183,7 +183,7 @@ function x(e) {
         )
     });
 }
-function M(e) {
+function k(e) {
     var t, n, a, s, l;
     let { headerId: c, headerIdIsManaged: u } = i.useContext(O.zM);
     return (0, r.jsx)(y.Z, {
@@ -198,7 +198,7 @@ function M(e) {
         children: e.children
     });
 }
-function k(e) {
+function j(e) {
     switch (null != e ? e : 'thin') {
         case 'auto':
             return g.yW;
@@ -208,10 +208,10 @@ function k(e) {
             return g.h2;
     }
 }
-function j(e) {
+function M(e) {
     let { className: t, children: n, scrollerRef: i, scrollbarType: a } = e,
-        s = R(e, ['className', 'children', 'scrollerRef', 'scrollbarType']),
-        l = k(a);
+        s = w(e, ['className', 'children', 'scrollerRef', 'scrollbarType']),
+        l = j(a);
     return (0, r.jsx)(
         l,
         C(
@@ -260,7 +260,7 @@ function G(e) {
 }
 function B(e) {
     var { className: t, scrollerRef: n } = e,
-        i = R(e, ['className', 'scrollerRef']);
+        i = w(e, ['className', 'scrollerRef']);
     return (0, r.jsx)(
         m.Tv,
         A(

@@ -24,9 +24,9 @@ let I = function (e) {
         { className: n, quest: a, autoplay: I = !0, learnMoreStyle: T = null, sourceQuestContent: S, lazyLoad: A = !1 } = e,
         N = (0, _.O5)(),
         C = (0, l.e7)([f.Z], () => f.Z.isFocused()),
-        R = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-        P = i.useMemo(() => (0, h.fh)(a, h.eC.REWARD), [a]),
-        w = i.useMemo(() => (0, h.fh)(a, h.eC.REWARD_IMAGE), [a]),
+        w = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
+        R = i.useMemo(() => (0, h.fh)(a, h.eC.REWARD), [a]),
+        P = i.useMemo(() => (0, h.fh)(a, h.eC.REWARD_IMAGE), [a]),
         D = i.useCallback(
             (t) => {
                 var n;
@@ -48,18 +48,18 @@ let I = function (e) {
         ),
         L = i.useRef(null),
         x = i.useRef(I),
-        M = (0, p.Bg)(a.config);
+        k = (0, p.Bg)(a.config);
     return (
         i.useEffect(() => {
             if (null != L.current) {
-                if (!P.isAnimated || R) {
+                if (!R.isAnimated || w) {
                     ((L.current.currentTime = 0), L.current.pause());
                     return;
                 }
                 (I && !x.current ? L.current.play() : !I && x.current && ((L.current.currentTime = 0), L.current.pause()), (x.current = I));
             }
-        }, [I, P, R]),
-        (t = M
+        }, [I, R, w]),
+        (t = k
             ? (0, r.jsx)(y.Fl, {
                   id: 'QuestRewardTile_rewardTileNitro',
                   children: (e) =>
@@ -71,23 +71,23 @@ let I = function (e) {
             : A
               ? (0, r.jsx)(g.K, {
                     imageAsset:
-                        null != w
+                        null != P
                             ? {
-                                  asset: w,
+                                  asset: P,
                                   assetId: 'QuestRewardTile_rewardTileStatic',
                                   className: v.imageVideoOverlay,
                                   alt: O.intl.string(O.t.UMclVF)
                               }
                             : void 0,
                     videoAsset: {
-                        asset: P,
+                        asset: R,
                         assetId: 'QuestRewardTile_rewardTileAnimated',
                         className: o()(v.questRewardTileAsset, v.questRewardTileAssetLazyVideo)
                     },
                     videoActive: I,
                     onLoadComplete: e.onLoadComplete
                 })
-              : P.isAnimated
+              : R.isAnimated
                 ? (0, r.jsx)(y.Fl, {
                       id: 'QuestRewardTile_rewardTileAnimated',
                       children: (t) => {
@@ -96,7 +96,7 @@ let I = function (e) {
                               ref: (e) => {
                                   ((t.current = e), (L.current = e));
                               },
-                              autoPlay: !R && I,
+                              autoPlay: !w && I,
                               loop: !0,
                               muted: !0,
                               playsInline: !0,
@@ -104,8 +104,8 @@ let I = function (e) {
                               controls: !1,
                               onProgress: e.onLoadComplete,
                               children: (0, r.jsx)('source', {
-                                  src: P.url,
-                                  type: null != (n = P.mimetype) ? n : void 0
+                                  src: R.url,
+                                  type: null != (n = R.mimetype) ? n : void 0
                               })
                           });
                       }
@@ -117,7 +117,7 @@ let I = function (e) {
                               ref: t,
                               alt: m.r.build(a.config).defaultRewardName,
                               className: o()(v.questRewardTileAsset, v.questRewardTileAssetStatic),
-                              src: P.url,
+                              src: R.url,
                               onLoad: e.onLoadComplete
                           })
                   })),
@@ -134,7 +134,7 @@ let I = function (e) {
                       (0, r.jsx)(c.ZX5, {
                           className: v.shine,
                           shineSize: c.rHe.SMALL,
-                          shinePaused: !C || R
+                          shinePaused: !C || w
                       }),
                       'text' === T &&
                           (0, r.jsx)(c.Text, {

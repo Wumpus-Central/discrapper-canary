@@ -4,8 +4,8 @@ n(73800);
 var i = n(392711),
     l = n.n(i),
     o = n(661824),
-    a = n(289481),
-    s = n(809780),
+    s = n(289481),
+    a = n(809780),
     c = n(388032),
     u = n(739910);
 function d(e, t, n) {
@@ -17,7 +17,7 @@ function d(e, t, n) {
         let l = [];
         return (
             t &&
-                (e.hasLoadedAnything && e.sortOrder === s.As.ReallyOldChannel
+                (e.hasLoadedAnything && e.sortOrder === a.As.ReallyOldChannel
                     ? l.push(
                           (0, r.jsx)(
                               o.Z,
@@ -30,7 +30,7 @@ function d(e, t, n) {
                           )
                       )
                     : e.hasLoadedAnything &&
-                      e.sortOrder === s.As.NoNotifications &&
+                      e.sortOrder === a.As.NoNotifications &&
                       l.push(
                           (0, r.jsx)(
                               o.Z,
@@ -44,7 +44,7 @@ function d(e, t, n) {
                       )),
             l.push(
                 (0, r.jsx)(
-                    a.Z,
+                    s.Z,
                     {
                         channel: e,
                         markChannelRead: i,

@@ -61,14 +61,14 @@ function g(e) {
 }
 function y(e) {
     let { user: t, guildId: n, channelId: o, game: i, loading: a = !1, disableInteraction: c = !1 } = e,
-        { gameName: f, imageSrc: y, applicationId: _, comment: O, tags: h } = i,
-        j = () =>
+        { gameName: f, imageSrc: y, applicationId: O, comment: j, tags: _ } = i,
+        x = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(s.Z, {
                         imageSrc: y,
                         gameName: f,
-                        applicationId: _,
+                        applicationId: O,
                         userId: t.id,
                         disableInteraction: !0
                     }),
@@ -80,16 +80,16 @@ function y(e) {
                                 color: 'text-default',
                                 children: f
                             }),
-                            null != O &&
+                            null != j &&
                                 (0, r.jsx)(b, {
-                                    text: O,
+                                    text: j,
                                     user: t,
                                     guildId: n,
                                     channelId: o
                                 }),
-                            (0, r.jsx)(d.Z, { tags: h }),
+                            (0, r.jsx)(d.Z, { tags: _ }),
                             (0, r.jsx)(u.Z, {
-                                applicationId: _,
+                                applicationId: O,
                                 guildId: n,
                                 channelId: o,
                                 className: m.socialProof
@@ -106,13 +106,13 @@ function y(e) {
         : c
           ? (0, r.jsx)('div', {
                 className: m.card,
-                children: j()
+                children: x()
             })
           : (0, r.jsx)(g, {
-                applicationId: _,
+                applicationId: O,
                 userId: t.id,
                 gameName: f,
                 className: m.card,
-                children: j()
+                children: x()
             });
 }

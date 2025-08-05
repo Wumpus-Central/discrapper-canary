@@ -1,23 +1,23 @@
-n.d(e, { default: () => u });
-var l = n(255367);
-n(73800);
-var i = n(481060),
-    a = n(239091),
-    r = n(358085),
-    o = n(29264),
-    c = n(905041),
-    s = n(388032);
-function u(t) {
-    let { src: e, onSelect: n } = t,
-        u = (0, o.Z)(e),
-        d = (0, c.Z)(e, null);
-    return r.isPlatformEmbedded
-        ? (0, l.jsxs)(i.v2r, {
+t.d(e, { default: () => o });
+var i = t(255367);
+t(73800);
+var l = t(481060),
+    r = t(239091),
+    s = t(358085),
+    a = t(29264),
+    d = t(905041),
+    c = t(388032);
+function o(n) {
+    let { src: e, onSelect: t } = n,
+        o = (0, a.Z)(e),
+        u = (0, d.Z)(e, null);
+    return s.isPlatformEmbedded
+        ? (0, i.jsxs)(l.v2r, {
               navId: 'image-context',
-              onClose: a.Zy,
-              'aria-label': s.intl.string(s.t.Zow2V1),
-              onSelect: n,
-              children: [(0, l.jsx)(i.kSQ, { children: u }), (0, l.jsx)(i.kSQ, { children: d })]
+              onClose: r.Zy,
+              'aria-label': c.intl.string(c.t.Zow2V1),
+              onSelect: t,
+              children: [(0, i.jsx)(l.kSQ, { children: o }), (0, i.jsx)(l.kSQ, { children: u })]
           })
         : null;
 }

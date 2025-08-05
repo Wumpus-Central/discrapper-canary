@@ -118,7 +118,7 @@ let A = {
         [A.LARGER]: [19, 19, 17, 17, 15, 13, 11],
         [A.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
     };
-class R extends a.PureComponent {
+class w extends a.PureComponent {
     renderAcronym() {
         let { guild: e, iconSrc: t } = this.props;
         return null != e.icon || null != t
@@ -143,8 +143,8 @@ class R extends a.PureComponent {
     renderIcon() {
         var e, t;
         let n = this.props,
-            { guild: r, className: a, showBadge: o, active: l, size: c, style: u = {}, textScale: f, showTooltip: _, tooltipPosition: p, onClick: m, to: g, badgeStrokeColor: y, animate: v, tabIndex: S, iconSrc: A, 'aria-hidden': N, lossless: R, iconSize: P } = n,
-            w = T(n, ['guild', 'className', 'showBadge', 'active', 'size', 'style', 'textScale', 'showTooltip', 'tooltipPosition', 'onClick', 'to', 'badgeStrokeColor', 'animate', 'tabIndex', 'iconSrc', 'aria-hidden', 'lossless', 'iconSize']),
+            { guild: r, className: a, showBadge: o, active: l, size: c, style: u = {}, textScale: f, showTooltip: _, tooltipPosition: p, onClick: m, to: g, badgeStrokeColor: y, animate: v, tabIndex: S, iconSrc: A, 'aria-hidden': N, lossless: w, iconSize: R } = n,
+            P = T(n, ['guild', 'className', 'showBadge', 'active', 'size', 'style', 'textScale', 'showTooltip', 'tooltipPosition', 'onClick', 'to', 'badgeStrokeColor', 'animate', 'tabIndex', 'iconSrc', 'aria-hidden', 'lossless', 'iconSize']),
             D = C[c],
             L = null != m ? d.P3F : 'div',
             x = (0, h.gM)(r);
@@ -163,7 +163,7 @@ class R extends a.PureComponent {
                         onClick: null != g || null == m ? void 0 : m,
                         tabIndex: S
                     },
-                    w
+                    P
                 ),
                 {
                     children: [this.renderAcronym(), this.renderBadge()]
@@ -198,17 +198,17 @@ class R extends a.PureComponent {
             : this.renderTooltip();
     }
 }
-let P = c.ZP.connectStores([m.Z], (e) => {
+let R = c.ZP.connectStores([m.Z], (e) => {
     let { guild: t, animate: n, iconSrc: r, style: i, size: a, iconSize: o, lossless: s } = e;
     return (null == r && (r = t instanceof _.JO ? t.getIconURL(null != o ? o : N[a], n && m.Z.isFocused()) : (0, h.EB)(t, null != o ? o : N[a], n && m.Z.isFocused(), s)), { style: I(O({}, i), { backgroundImage: (0, g.rv)(r) }) });
-})((0, f.N)((e) => (0, i.jsx)(R, O({}, e))));
-class w extends (r = a.PureComponent) {
+})((0, f.N)((e) => (0, i.jsx)(w, O({}, e))));
+class P extends (r = a.PureComponent) {
     render() {
-        return (0, i.jsx)(P, O({}, this.props));
+        return (0, i.jsx)(R, O({}, this.props));
     }
 }
-(y(w, 'Sizes', A),
-    y(w, 'defaultProps', {
+(y(P, 'Sizes', A),
+    y(P, 'defaultProps', {
         size: A.LARGE,
         textScale: 1,
         showBadge: !1,
@@ -218,4 +218,4 @@ class w extends (r = a.PureComponent) {
         badgeStrokeColor: u.Z.unsafe_rawColors.WHITE_500.css,
         animate: !1
     }));
-let D = w;
+let D = P;

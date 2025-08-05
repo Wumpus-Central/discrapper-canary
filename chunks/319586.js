@@ -1,5 +1,5 @@
-n.r(
-    (e.exports = {
+e.r(
+    (A.exports = {
         standardSidebarView: 'standardSidebarView__23e6b',
         withUpsell: 'withUpsell__23e6b',
         sidebarRegion: 'sidebarRegion__23e6b',

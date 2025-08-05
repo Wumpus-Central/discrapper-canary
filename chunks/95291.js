@@ -1,15 +1,15 @@
 n.d(t, { Z: () => s });
 var r = n(255367);
 n(73800);
-var l = n(120356),
-    i = n.n(l),
-    a = n(912306);
+var i = n(120356),
+    a = n.n(i),
+    o = n(912306);
 function s(e) {
     let { source: t, className: n } = e;
     return null == t
         ? null
         : (0, r.jsx)('div', {
-              className: i()(a.container, n),
+              className: a()(o.container, n),
               style: { backgroundImage: 'url('.concat(t, ')') }
           });
 }

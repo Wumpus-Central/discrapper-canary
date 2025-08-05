@@ -1,1 +1,1 @@
-e.exports = { forumPost: 'forumPost__02068' };
+t.exports = { forumPost: 'forumPost__02068' };

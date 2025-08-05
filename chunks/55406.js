@@ -1,18 +1,31 @@
 let r;
 (n.r(t),
     n.d(t, {
-        default: () => S,
-        renderChangelogMessageMarkup: () => E
+        default: () => C,
+        renderChangelogMessageMarkup: () => w
     }),
     n(35282),
     n(704826));
-var l = n(159635),
-    o = n.n(l),
-    i = n(800927),
-    a = n(945884),
-    s = n(594199),
+var i = n(159635),
+    a = n.n(i),
+    o = n(800927),
+    s = n(945884),
+    l = n(594199),
     c = n(454585);
-function u(e) {
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -23,70 +36,66 @@ function u(e) {
                 })
             )),
             r.forEach(function (t) {
-                var r;
-                ((r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r));
+                u(e, t, n[t]);
             }));
     }
     return e;
 }
-function d(e, t) {
+function f(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : f(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let p = o().defaultRules.lheading,
-    m = o().defaultRules.heading,
-    g = o().defaultRules.link,
-    f = o().defaultRules.image,
-    b = o().defaultRules.list,
-    h = o().defaultRules.blockQuote,
-    O = o().defaultRules.paragraph,
-    y = /\{(.+?)}/,
+let p = a().defaultRules.lheading,
+    h = a().defaultRules.heading,
+    m = a().defaultRules.link,
+    g = a().defaultRules.image,
+    E = a().defaultRules.list,
+    b = a().defaultRules.blockQuote,
+    y = a().defaultRules.paragraph,
+    O = /\{(.+?)}/,
     v = /^\$(\w+?)\$/;
 r = n(235375);
-let j = (e) => {
+let I = (e) => {
         let { transformUpperCase: t = !1 } = e;
         return (e, n, r) => {
-            let l = y.exec(e[1]),
-                i = e[1].replace(y, '');
+            let i = O.exec(e[1]),
+                o = e[1].replace(O, '');
             return (
-                t && (i = i.toUpperCase()),
+                t && (o = o.toUpperCase()),
                 {
-                    className: null != l ? l[1] : null,
+                    className: null != i ? i[1] : null,
                     level: '=' === e[2] ? 1 : 2,
-                    content: o().parseInline(n, i, r)
+                    content: a().parseInline(n, o, r)
                 }
             );
         };
     },
-    P = (e) =>
-        d(u({}, r.baseRules), {
-            image: u({}, f, 'function' == typeof r.customRules.image ? r.customRules.image(e) : r.customRules.image),
-            link: u({}, g, 'function' == typeof r.customRules.link ? r.customRules.link(e) : r.customRules.link),
-            list: u({}, b, 'function' == typeof r.customRules.list ? r.customRules.list(e) : r.customRules.list),
+    T = (e) =>
+        _(d({}, r.baseRules), {
+            image: d({}, g, 'function' == typeof r.customRules.image ? r.customRules.image(e) : r.customRules.image),
+            link: d({}, m, 'function' == typeof r.customRules.link ? r.customRules.link(e) : r.customRules.link),
+            list: d({}, E, 'function' == typeof r.customRules.list ? r.customRules.list(e) : r.customRules.list),
             interpolation: {
-                order: s.ZP.order,
+                order: l.ZP.order,
                 match: (e) => v.exec(e),
                 parse(e, t, n) {
                     let r = n.interpolations[e[1]];
@@ -102,30 +111,30 @@ let j = (e) => {
                 },
                 react: (e) => e.renderer()
             },
-            lheading: u(d(u({}, p), { parse: j({ transformUpperCase: !0 }) }), 'function' == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading),
-            heading: u({}, m, 'function' == typeof r.customRules.heading ? r.customRules.heading(e) : r.customRules.heading),
-            blockQuote: u({}, h, 'function' == typeof r.customRules.blockQuote ? r.customRules.blockQuote(e) : r.customRules.blockQuote),
-            paragraph: u({}, O, 'function' == typeof r.customRules.paragraph ? r.customRules.paragraph(e) : r.customRules.paragraph)
+            lheading: d(_(d({}, p), { parse: I({ transformUpperCase: !0 }) }), 'function' == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading),
+            heading: d({}, h, 'function' == typeof r.customRules.heading ? r.customRules.heading(e) : r.customRules.heading),
+            blockQuote: d({}, b, 'function' == typeof r.customRules.blockQuote ? r.customRules.blockQuote(e) : r.customRules.blockQuote),
+            paragraph: d({}, y, 'function' == typeof r.customRules.paragraph ? r.customRules.paragraph(e) : r.customRules.paragraph)
         }),
-    x = (e) => ({ lheading: u(d(u({}, p), { parse: j({ transformUpperCase: !1 }) }), 'function' == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading) }),
-    w = (e) =>
-        d(u({}, P(e)), {
-            newline: u({}, o().defaultRules.newline),
-            text: s.ZP,
-            list: i.Z,
-            subtext: a.Z
+    S = (e) => ({ lheading: d(_(d({}, p), { parse: I({ transformUpperCase: !1 }) }), 'function' == typeof r.customRules.lheading ? r.customRules.lheading(e) : r.customRules.lheading) }),
+    A = (e) =>
+        _(d({}, T(e)), {
+            newline: d({}, a().defaultRules.newline),
+            text: l.ZP,
+            list: o.Z,
+            subtext: s.Z
         });
-function C(e) {
-    return u({}, P(e));
+function N(e) {
+    return d({}, T(e));
 }
-let S = {
-    getDefaultRules: C,
-    getSpecialRules: (e) => u({}, P(e), x(e)),
-    getMessageRules: (e) => u({}, w(e))
+let C = {
+    getDefaultRules: N,
+    getSpecialRules: (e) => d({}, T(e), S(e)),
+    getMessageRules: (e) => d({}, A(e))
 };
-function E(e, t, n) {
+function w(e, t, n) {
     return {
         hasSpoilerEmbeds: !1,
-        content: c.Z.reactParserFor(C(t))(e.content, !1, null != n ? { changeLog: n } : {})
+        content: c.Z.reactParserFor(N(t))(e.content, !1, null != n ? { changeLog: n } : {})
     };
 }

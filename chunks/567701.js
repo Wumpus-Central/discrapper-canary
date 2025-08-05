@@ -1,76 +1,83 @@
-!(function (r, n) {
-    var i = 'function',
-        o = 'undefined',
-        a = 'object',
-        u = 'string',
-        s = 'major',
-        c = 'model',
-        l = 'name',
-        f = 'type',
+!(function (n, r) {
+    var i = '',
+        a = '?',
+        o = 'function',
+        s = 'undefined',
+        l = 'object',
+        c = 'string',
+        u = 'major',
+        d = 'model',
+        f = 'name',
+        _ = 'type',
         p = 'vendor',
         h = 'version',
-        d = 'architecture',
+        m = 'architecture',
         g = 'console',
-        y = 'mobile',
-        v = 'tablet',
-        m = 'smarttv',
-        _ = 'wearable',
-        b = 'embedded',
-        S = 'Amazon',
-        w = 'Apple',
-        x = 'ASUS',
-        k = 'BlackBerry',
+        E = 'mobile',
+        b = 'tablet',
+        y = 'smarttv',
+        O = 'wearable',
+        v = 'embedded',
+        I = 500,
+        T = 'Amazon',
+        S = 'Apple',
+        A = 'ASUS',
+        N = 'BlackBerry',
         C = 'Browser',
-        E = 'Chrome',
-        D = 'Firefox',
-        O = 'Google',
-        K = 'Huawei',
-        T = 'Microsoft',
-        M = 'Motorola',
-        A = 'Opera',
-        I = 'Samsung',
-        B = 'Sharp',
-        L = 'Sony',
-        R = 'Xiaomi',
-        N = 'Zebra',
+        w = 'Chrome',
+        R = 'Firefox',
+        P = 'Google',
+        D = 'Huawei',
+        L = 'LG',
+        x = 'Microsoft',
+        k = 'Motorola',
+        j = 'Opera',
+        M = 'Samsung',
+        U = 'Sharp',
+        G = 'Sony',
+        B = 'Xiaomi',
+        Z = 'Zebra',
         F = 'Facebook',
-        z = 'Chromium OS',
-        P = 'Mac OS',
-        j = ' Browser',
-        U = function (t, e) {
-            var r = {};
-            for (var n in t) e[n] && e[n].length % 2 == 0 ? (r[n] = e[n].concat(t[n])) : (r[n] = t[n]);
-            return r;
+        V = 'Chromium OS',
+        H = 'Mac OS',
+        Y = ' Browser',
+        W = function (e, t) {
+            var n = {};
+            for (var r in e) t[r] && t[r].length % 2 == 0 ? (n[r] = t[r].concat(e[r])) : (n[r] = e[r]);
+            return n;
         },
-        q = function (t) {
-            for (var e = {}, r = 0; r < t.length; r++) e[t[r].toUpperCase()] = t[r];
-            return e;
+        K = function (e) {
+            for (var t = {}, n = 0; n < e.length; n++) t[e[n].toUpperCase()] = e[n];
+            return t;
         },
-        H = function (t, e) {
-            return typeof t === u && -1 !== W(e).indexOf(W(t));
+        z = function (e, t) {
+            return typeof e === c && -1 !== q(t).indexOf(q(e));
         },
-        W = function (t) {
-            return t.toLowerCase();
+        q = function (e) {
+            return e.toLowerCase();
         },
-        V = function (t, e) {
-            if (typeof t === u) return ((t = t.replace(/^\s\s*/, '')), typeof e === o ? t : t.substring(0, 500));
+        $ = function (e) {
+            return typeof e === c ? e.replace(/[^\d\.]/g, i).split('.')[0] : void 0;
         },
-        G = function (t, e) {
-            for (var r, o, u, s, c, l, f = 0; f < e.length && !c; ) {
-                var p = e[f],
-                    h = e[f + 1];
-                for (r = o = 0; r < p.length && !c && p[r]; ) if ((c = p[r++].exec(t))) for (u = 0; u < h.length; u++) ((l = c[++o]), typeof (s = h[u]) === a && s.length > 0 ? (2 === s.length ? (typeof s[1] == i ? (this[s[0]] = s[1].call(this, l)) : (this[s[0]] = s[1])) : 3 === s.length ? (typeof s[1] !== i || (s[1].exec && s[1].test) ? (this[s[0]] = l ? l.replace(s[1], s[2]) : void 0) : (this[s[0]] = l ? s[1].call(this, l, s[2]) : void 0)) : 4 === s.length && (this[s[0]] = l ? s[3].call(this, l.replace(s[1], s[2])) : n)) : (this[s] = l || n));
-                f += 2;
+        X = function (e, t) {
+            if (typeof e === c) return ((e = e.replace(/^\s\s*/, i)), typeof t === s ? e : e.substring(0, I));
+        },
+        Q = function (e, t) {
+            for (var n, i, a, s, c, u, d = 0; d < t.length && !c; ) {
+                var f = t[d],
+                    _ = t[d + 1];
+                for (n = i = 0; n < f.length && !c && f[n]; ) if ((c = f[n++].exec(e))) for (a = 0; a < _.length; a++) ((u = c[++i]), typeof (s = _[a]) === l && s.length > 0 ? (2 === s.length ? (typeof s[1] == o ? (this[s[0]] = s[1].call(this, u)) : (this[s[0]] = s[1])) : 3 === s.length ? (typeof s[1] !== o || (s[1].exec && s[1].test) ? (this[s[0]] = u ? u.replace(s[1], s[2]) : void 0) : (this[s[0]] = u ? s[1].call(this, u, s[2]) : r)) : 4 === s.length && (this[s[0]] = u ? s[3].call(this, u.replace(s[1], s[2])) : r)) : (this[s] = u || r));
+                d += 2;
             }
         },
-        J = function (t, e) {
-            for (var r in e)
-                if (typeof e[r] === a && e[r].length > 0) {
-                    for (var i = 0; i < e[r].length; i++) if (H(e[r][i], t)) return '?' === r ? n : r;
-                } else if (H(e[r], t)) return '?' === r ? n : r;
-            return e.hasOwnProperty('*') ? e['*'] : t;
+        J = function (e, t) {
+            for (var n in t)
+                if (typeof t[n] === l && t[n].length > 0) {
+                    for (var i = 0; i < t[n].length; i++) if (z(t[n][i], e)) return n === a ? r : n;
+                } else if (z(t[n], e)) return n === a ? r : n;
+            return t.hasOwnProperty('*') ? t['*'] : e;
         },
-        X = {
+        ee = {
             ME: '4.90',
             'NT 3.11': 'NT3.51',
             'NT 4.0': 'NT4.0',
@@ -83,99 +90,99 @@
             10: ['NT 6.4', 'NT 10.0'],
             RT: 'ARM'
         },
-        Y = {
+        et = {
             browser: [
                 [/\b(?:crmo|crios)\/([\w\.]+)/i],
-                [h, [l, 'Chrome']],
+                [h, [f, 'Chrome']],
                 [/edg(?:e|ios|a)?\/([\w\.]+)/i],
-                [h, [l, 'Edge']],
+                [h, [f, 'Edge']],
                 [/(opera mini)\/([-\w\.]+)/i, /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i, /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i],
-                [l, h],
+                [f, h],
                 [/opios[\/ ]+([\w\.]+)/i],
-                [h, [l, A + ' Mini']],
+                [h, [f, j + ' Mini']],
                 [/\bop(?:rg)?x\/([\w\.]+)/i],
-                [h, [l, A + ' GX']],
+                [h, [f, j + ' GX']],
                 [/\bopr\/([\w\.]+)/i],
-                [h, [l, A]],
+                [h, [f, j]],
                 [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
-                [h, [l, 'Baidu']],
+                [h, [f, 'Baidu']],
                 [/\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i],
-                [h, [l, 'Maxthon']],
+                [h, [f, 'Maxthon']],
                 [/(kindle)\/([\w\.]+)/i, /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i, /(avant|iemobile|slim(?:browser|boat|jet))[\/ ]?([\d\.]*)/i, /(?:ms|\()(ie) ([\w\.]+)/i, /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon)\/([-\w\.]+)/i, /(heytap|ovi|115)browser\/([\d\.]+)/i, /(weibo)__([\d\.]+)/i],
-                [l, h],
+                [f, h],
                 [/quark(?:pc)?\/([-\w\.]+)/i],
-                [h, [l, 'Quark']],
+                [h, [f, 'Quark']],
                 [/\bddg\/([\w\.]+)/i],
-                [h, [l, 'DuckDuckGo']],
+                [h, [f, 'DuckDuckGo']],
                 [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-                [h, [l, 'UC' + C]],
+                [h, [f, 'UC' + C]],
                 [/microm.+\bqbcore\/([\w\.]+)/i, /\bqbcore\/([\w\.]+).+microm/i, /micromessenger\/([\w\.]+)/i],
-                [h, [l, 'WeChat']],
+                [h, [f, 'WeChat']],
                 [/konqueror\/([\w\.]+)/i],
-                [h, [l, 'Konqueror']],
+                [h, [f, 'Konqueror']],
                 [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
-                [h, [l, 'IE']],
+                [h, [f, 'IE']],
                 [/ya(?:search)?browser\/([\w\.]+)/i],
-                [h, [l, 'Yandex']],
+                [h, [f, 'Yandex']],
                 [/slbrowser\/([\w\.]+)/i],
-                [h, [l, 'Smart Lenovo ' + C]],
+                [h, [f, 'Smart Lenovo ' + C]],
                 [/(avast|avg)\/([\w\.]+)/i],
-                [[l, /(.+)/, '$1 Secure ' + C], h],
+                [[f, /(.+)/, '$1 Secure ' + C], h],
                 [/\bfocus\/([\w\.]+)/i],
-                [h, [l, D + ' Focus']],
+                [h, [f, R + ' Focus']],
                 [/\bopt\/([\w\.]+)/i],
-                [h, [l, A + ' Touch']],
+                [h, [f, j + ' Touch']],
                 [/coc_coc\w+\/([\w\.]+)/i],
-                [h, [l, 'Coc Coc']],
+                [h, [f, 'Coc Coc']],
                 [/dolfin\/([\w\.]+)/i],
-                [h, [l, 'Dolphin']],
+                [h, [f, 'Dolphin']],
                 [/coast\/([\w\.]+)/i],
-                [h, [l, A + ' Coast']],
+                [h, [f, j + ' Coast']],
                 [/miuibrowser\/([\w\.]+)/i],
-                [h, [l, 'MIUI' + j]],
+                [h, [f, 'MIUI' + Y]],
                 [/fxios\/([\w\.-]+)/i],
-                [h, [l, D]],
+                [h, [f, R]],
                 [/\bqihoobrowser\/?([\w\.]*)/i],
-                [h, [l, '360']],
+                [h, [f, '360']],
                 [/\b(qq)\/([\w\.]+)/i],
-                [[l, /(.+)/, '$1Browser'], h],
+                [[f, /(.+)/, '$1Browser'], h],
                 [/(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i],
-                [[l, /(.+)/, '$1' + j], h],
+                [[f, /(.+)/, '$1' + Y], h],
                 [/samsungbrowser\/([\w\.]+)/i],
-                [h, [l, I + ' Internet']],
+                [h, [f, M + ' Internet']],
                 [/metasr[\/ ]?([\d\.]+)/i],
-                [h, [l, 'Sogou Explorer']],
+                [h, [f, 'Sogou Explorer']],
                 [/(sogou)mo\w+\/([\d\.]+)/i],
-                [[l, 'Sogou Mobile'], h],
+                [[f, 'Sogou Mobile'], h],
                 [/(electron)\/([\w\.]+) safari/i, /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i, /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i],
-                [l, h],
+                [f, h],
                 [/(lbbrowser|rekonq)/i, /\[(linkedin)app\]/i],
-                [l],
+                [f],
                 [/ome\/([\w\.]+) \w* ?(iron) saf/i, /ome\/([\w\.]+).+qihu (360)[es]e/i],
-                [h, l],
+                [h, f],
                 [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
-                [[l, F], h],
+                [[f, F], h],
                 [/(Klarna)\/([\w\.]+)/i, /(kakao(?:talk|story))[\/ ]([\w\.]+)/i, /(naver)\(.*?(\d+\.[\w\.]+).*\)/i, /safari (line)\/([\w\.]+)/i, /\b(line)\/([\w\.]+)\/iab/i, /(alipay)client\/([\w\.]+)/i, /(twitter)(?:and| f.+e\/([\w\.]+))/i, /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i],
-                [l, h],
+                [f, h],
                 [/\bgsa\/([\w\.]+) .*safari\//i],
-                [h, [l, 'GSA']],
+                [h, [f, 'GSA']],
                 [/musical_ly(?:.+app_?version\/|_)([\w\.]+)/i],
-                [h, [l, 'TikTok']],
+                [h, [f, 'TikTok']],
                 [/headlesschrome(?:\/([\w\.]+)| )/i],
-                [h, [l, E + ' Headless']],
+                [h, [f, w + ' Headless']],
                 [/ wv\).+(chrome)\/([\w\.]+)/i],
-                [[l, E + ' WebView'], h],
+                [[f, w + ' WebView'], h],
                 [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-                [h, [l, 'Android ' + C]],
+                [h, [f, 'Android ' + C]],
                 [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
-                [l, h],
+                [f, h],
                 [/version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i],
-                [h, [l, 'Mobile Safari']],
+                [h, [f, 'Mobile Safari']],
                 [/version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i],
-                [h, l],
+                [h, f],
                 [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
                 [
-                    l,
+                    f,
                     [
                         h,
                         J,
@@ -192,116 +199,116 @@
                     ]
                 ],
                 [/(webkit|khtml)\/([\w\.]+)/i],
-                [l, h],
+                [f, h],
                 [/(navigator|netscape\d?)\/([-\w\.]+)/i],
-                [[l, 'Netscape'], h],
+                [[f, 'Netscape'], h],
                 [/(wolvic|librewolf)\/([\w\.]+)/i],
-                [l, h],
+                [f, h],
                 [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-                [h, [l, D + ' Reality']],
+                [h, [f, R + ' Reality']],
                 [/ekiohf.+(flow)\/([\w\.]+)/i, /(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror)[\/ ]?([\w\.\+]+)/i, /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i, /(firefox)\/([\w\.]+)/i, /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i, /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|obigo|mosaic|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i, /(links) \(([\w\.]+)/i],
-                [l, [h, /_/g, '.']],
+                [f, [h, /_/g, '.']],
                 [/(cobalt)\/([\w\.]+)/i],
-                [l, [h, /master.|lts./, '']]
+                [f, [h, /master.|lts./, '']]
             ],
-            cpu: [[/(?:(amd|x(?:(?:86|64)[-_])?|wow|win)64)[;\)]/i], [[d, 'amd64']], [/(ia32(?=;))/i], [[d, W]], [/((?:i[346]|x)86)[;\)]/i], [[d, 'ia32']], [/\b(aarch64|arm(v?8e?l?|_?64))\b/i], [[d, 'arm64']], [/\b(arm(?:v[67])?ht?n?[fl]p?)\b/i], [[d, 'armhf']], [/windows (ce|mobile); ppc;/i], [[d, 'arm']], [/((?:ppc|powerpc)(?:64)?)(?: mac|;|\))/i], [[d, /ower/, '', W]], [/(sun4\w)[;\)]/i], [[d, 'sparc']], [/((?:avr32|ia64(?=;))|68k(?=\))|\barm(?=v(?:[1-7]|[5-7]1)l?|;|eabi)|(?=atmel )avr|(?:irix|mips|sparc)(?:64)?\b|pa-risc)/i], [[d, W]]],
+            cpu: [[/(?:(amd|x(?:(?:86|64)[-_])?|wow|win)64)[;\)]/i], [[m, 'amd64']], [/(ia32(?=;))/i], [[m, q]], [/((?:i[346]|x)86)[;\)]/i], [[m, 'ia32']], [/\b(aarch64|arm(v?8e?l?|_?64))\b/i], [[m, 'arm64']], [/\b(arm(?:v[67])?ht?n?[fl]p?)\b/i], [[m, 'armhf']], [/windows (ce|mobile); ppc;/i], [[m, 'arm']], [/((?:ppc|powerpc)(?:64)?)(?: mac|;|\))/i], [[m, /ower/, i, q]], [/(sun4\w)[;\)]/i], [[m, 'sparc']], [/((?:avr32|ia64(?=;))|68k(?=\))|\barm(?=v(?:[1-7]|[5-7]1)l?|;|eabi)|(?=atmel )avr|(?:irix|mips|sparc)(?:64)?\b|pa-risc)/i], [[m, q]]],
             device: [
                 [/\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i],
-                [c, [p, I], [f, v]],
+                [d, [p, M], [_, b]],
                 [/\b((?:s[cgp]h|gt|sm)-(?![lr])\w+|sc[g-]?[\d]+a?|galaxy nexus)/i, /samsung[- ]((?!sm-[lr])[-\w]+)/i, /sec-(sgh\w+)/i],
-                [c, [p, I], [f, y]],
+                [d, [p, M], [_, E]],
                 [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
-                [c, [p, w], [f, y]],
+                [d, [p, S], [_, E]],
                 [/\((ipad);[-\w\),; ]+apple/i, /applecoremedia\/[\w\.]+ \((ipad)/i, /\b(ipad)\d\d?,\d\d?[;\]].+ios/i],
-                [c, [p, w], [f, v]],
+                [d, [p, S], [_, b]],
                 [/(macintosh);/i],
-                [c, [p, w]],
+                [d, [p, S]],
                 [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
-                [c, [p, B], [f, y]],
+                [d, [p, U], [_, E]],
                 [/(?:honor)([-\w ]+)[;\)]/i],
-                [c, [p, 'Honor'], [f, y]],
+                [d, [p, 'Honor'], [_, E]],
                 [/\b((?:ag[rs][23]?|bah2?|sht?|btv)-a?[lw]\d{2})\b(?!.+d\/s)/i],
-                [c, [p, K], [f, v]],
+                [d, [p, D], [_, b]],
                 [/(?:huawei)([-\w ]+)[;\)]/i, /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i],
-                [c, [p, K], [f, y]],
+                [d, [p, D], [_, E]],
                 [/\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i, /\b; (\w+) build\/hm\1/i, /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i, /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i, /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|; wv|\))/i, /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite|pro)?)(?: bui|\))/i],
                 [
-                    [c, /_/g, ' '],
-                    [p, R],
-                    [f, y]
+                    [d, /_/g, ' '],
+                    [p, B],
+                    [_, E]
                 ],
                 [/oid[^\)]+; (2\d{4}(283|rpbf)[cgl])( bui|\))/i, /\b(mi[-_ ]?(?:pad)(?:[\w_ ]+))(?: bui|\))/i],
                 [
-                    [c, /_/g, ' '],
-                    [p, R],
-                    [f, v]
+                    [d, /_/g, ' '],
+                    [p, B],
+                    [_, b]
                 ],
                 [/; (\w+) bui.+ oppo/i, /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i],
-                [c, [p, 'OPPO'], [f, y]],
+                [d, [p, 'OPPO'], [_, E]],
                 [/\b(opd2\d{3}a?) bui/i],
-                [c, [p, 'OPPO'], [f, v]],
+                [d, [p, 'OPPO'], [_, b]],
                 [/vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
-                [c, [p, 'Vivo'], [f, y]],
+                [d, [p, 'Vivo'], [_, E]],
                 [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
-                [c, [p, 'Realme'], [f, y]],
+                [d, [p, 'Realme'], [_, E]],
                 [/\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i, /\bmot(?:orola)?[- ](\w*)/i, /((?:moto[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i],
-                [c, [p, M], [f, y]],
+                [d, [p, k], [_, E]],
                 [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-                [c, [p, M], [f, v]],
+                [d, [p, k], [_, b]],
                 [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-                [c, [p, 'LG'], [f, v]],
+                [d, [p, L], [_, b]],
                 [/(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i, /\blg[-e;\/ ]+((?!browser|netcast|android tv)\w+)/i, /\blg-?([\d\w]+) bui/i],
-                [c, [p, 'LG'], [f, y]],
+                [d, [p, L], [_, E]],
                 [/(ideatab[-\w ]+)/i, /lenovo ?(s[56]000[-\w]+|tab(?:[\w ]+)|yt[-\d\w]{6}|tb[-\d\w]{6})/i],
-                [c, [p, 'Lenovo'], [f, v]],
+                [d, [p, 'Lenovo'], [_, b]],
                 [/(?:maemo|nokia).*(n900|lumia \d+)/i, /nokia[-_ ]?([-\w\.]*)/i],
                 [
-                    [c, /_/g, ' '],
+                    [d, /_/g, ' '],
                     [p, 'Nokia'],
-                    [f, y]
+                    [_, E]
                 ],
                 [/(pixel c)\b/i],
-                [c, [p, O], [f, v]],
+                [d, [p, P], [_, b]],
                 [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
-                [c, [p, O], [f, y]],
+                [d, [p, P], [_, E]],
                 [/droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
-                [c, [p, L], [f, y]],
+                [d, [p, G], [_, E]],
                 [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
                 [
-                    [c, 'Xperia Tablet'],
-                    [p, L],
-                    [f, v]
+                    [d, 'Xperia Tablet'],
+                    [p, G],
+                    [_, b]
                 ],
                 [/ (kb2005|in20[12]5|be20[12][59])\b/i, /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i],
-                [c, [p, 'OnePlus'], [f, y]],
+                [d, [p, 'OnePlus'], [_, E]],
                 [/(alexa)webm/i, /(kf[a-z]{2}wi|aeo(?!bc)\w\w)( bui|\))/i, /(kf[a-z]+)( bui|\)).+silk\//i],
-                [c, [p, S], [f, v]],
+                [d, [p, T], [_, b]],
                 [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
                 [
-                    [c, /(.+)/g, 'Fire Phone $1'],
-                    [p, S],
-                    [f, y]
+                    [d, /(.+)/g, 'Fire Phone $1'],
+                    [p, T],
+                    [_, E]
                 ],
                 [/(playbook);[-\w\),; ]+(rim)/i],
-                [c, p, [f, v]],
+                [d, p, [_, b]],
                 [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
-                [c, [p, k], [f, y]],
+                [d, [p, N], [_, E]],
                 [/(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i],
-                [c, [p, x], [f, v]],
+                [d, [p, A], [_, b]],
                 [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-                [c, [p, x], [f, y]],
+                [d, [p, A], [_, E]],
                 [/(nexus 9)/i],
-                [c, [p, 'HTC'], [f, v]],
+                [d, [p, 'HTC'], [_, b]],
                 [/(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i, /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i, /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i],
-                [p, [c, /_/g, ' '], [f, y]],
+                [p, [d, /_/g, ' '], [_, E]],
                 [/droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])\w*(\)| bui)/i],
-                [c, [p, 'TCL'], [f, v]],
+                [d, [p, 'TCL'], [_, b]],
                 [/(itel) ((\w+))/i],
                 [
-                    [p, W],
-                    c,
+                    [p, q],
+                    d,
                     [
-                        f,
+                        _,
                         J,
                         {
                             tablet: ['p10001l', 'w7001'],
@@ -310,236 +317,235 @@
                     ]
                 ],
                 [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
-                [c, [p, 'Acer'], [f, v]],
+                [d, [p, 'Acer'], [_, b]],
                 [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
-                [c, [p, 'Meizu'], [f, y]],
+                [d, [p, 'Meizu'], [_, E]],
                 [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
-                [c, [p, 'Ulefone'], [f, y]],
+                [d, [p, 'Ulefone'], [_, E]],
                 [/; (energy ?\w+)(?: bui|\))/i, /; energizer ([\w ]+)(?: bui|\))/i],
-                [c, [p, 'Energizer'], [f, y]],
+                [d, [p, 'Energizer'], [_, E]],
                 [/; cat (b35);/i, /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i],
-                [c, [p, 'Cat'], [f, y]],
+                [d, [p, 'Cat'], [_, E]],
                 [/((?:new )?andromax[\w- ]+)(?: bui|\))/i],
-                [c, [p, 'Smartfren'], [f, y]],
+                [d, [p, 'Smartfren'], [_, E]],
                 [/droid.+; (a(?:015|06[35]|142p?))/i],
-                [c, [p, 'Nothing'], [f, y]],
+                [d, [p, 'Nothing'], [_, E]],
                 [/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i, /; (imo) ((?!tab)[\w ]+?)(?: bui|\))/i, /(hp) ([\w ]+\w)/i, /(asus)-?(\w+)/i, /(microsoft); (lumia[\w ]+)/i, /(lenovo)[-_ ]?([-\w]+)/i, /(jolla)/i, /(oppo) ?([\w ]+) bui/i],
-                [p, c, [f, y]],
+                [p, d, [_, E]],
                 [/(imo) (tab \w+)/i, /(kobo)\s(ereader|touch)/i, /(archos) (gamepad2?)/i, /(hp).+(touchpad(?!.+tablet)|tablet)/i, /(kindle)\/([\w\.]+)/i, /(nook)[\w ]+build\/(\w+)/i, /(dell) (strea[kpr\d ]*[\dko])/i, /(le[- ]+pan)[- ]+(\w{1,9}) bui/i, /(trinity)[- ]*(t\d{3}) bui/i, /(gigaset)[- ]+(q\w{1,9}) bui/i, /(vodafone) ([\w ]+)(?:\)| bui)/i],
-                [p, c, [f, v]],
+                [p, d, [_, b]],
                 [/(surface duo)/i],
-                [c, [p, T], [f, v]],
+                [d, [p, x], [_, b]],
                 [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
-                [c, [p, 'Fairphone'], [f, y]],
+                [d, [p, 'Fairphone'], [_, E]],
                 [/(u304aa)/i],
-                [c, [p, 'AT&T'], [f, y]],
+                [d, [p, 'AT&T'], [_, E]],
                 [/\bsie-(\w*)/i],
-                [c, [p, 'Siemens'], [f, y]],
+                [d, [p, 'Siemens'], [_, E]],
                 [/\b(rct\w+) b/i],
-                [c, [p, 'RCA'], [f, v]],
+                [d, [p, 'RCA'], [_, b]],
                 [/\b(venue[\d ]{2,7}) b/i],
-                [c, [p, 'Dell'], [f, v]],
+                [d, [p, 'Dell'], [_, b]],
                 [/\b(q(?:mv|ta)\w+) b/i],
-                [c, [p, 'Verizon'], [f, v]],
+                [d, [p, 'Verizon'], [_, b]],
                 [/\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i],
-                [c, [p, 'Barnes & Noble'], [f, v]],
+                [d, [p, 'Barnes & Noble'], [_, b]],
                 [/\b(tm\d{3}\w+) b/i],
-                [c, [p, 'NuVision'], [f, v]],
+                [d, [p, 'NuVision'], [_, b]],
                 [/\b(k88) b/i],
-                [c, [p, 'ZTE'], [f, v]],
+                [d, [p, 'ZTE'], [_, b]],
                 [/\b(nx\d{3}j) b/i],
-                [c, [p, 'ZTE'], [f, y]],
+                [d, [p, 'ZTE'], [_, E]],
                 [/\b(gen\d{3}) b.+49h/i],
-                [c, [p, 'Swiss'], [f, y]],
+                [d, [p, 'Swiss'], [_, E]],
                 [/\b(zur\d{3}) b/i],
-                [c, [p, 'Swiss'], [f, v]],
+                [d, [p, 'Swiss'], [_, b]],
                 [/\b((zeki)?tb.*\b) b/i],
-                [c, [p, 'Zeki'], [f, v]],
+                [d, [p, 'Zeki'], [_, b]],
                 [/\b([yr]\d{2}) b/i, /\b(dragon[- ]+touch |dt)(\w{5}) b/i],
-                [[p, 'Dragon Touch'], c, [f, v]],
+                [[p, 'Dragon Touch'], d, [_, b]],
                 [/\b(ns-?\w{0,9}) b/i],
-                [c, [p, 'Insignia'], [f, v]],
+                [d, [p, 'Insignia'], [_, b]],
                 [/\b((nxa|next)-?\w{0,9}) b/i],
-                [c, [p, 'NextBook'], [f, v]],
+                [d, [p, 'NextBook'], [_, b]],
                 [/\b(xtreme\_)?(v(1[045]|2[015]|[3469]0|7[05])) b/i],
-                [[p, 'Voice'], c, [f, y]],
+                [[p, 'Voice'], d, [_, E]],
                 [/\b(lvtel\-)?(v1[12]) b/i],
-                [[p, 'LvTel'], c, [f, y]],
+                [[p, 'LvTel'], d, [_, E]],
                 [/\b(ph-1) /i],
-                [c, [p, 'Essential'], [f, y]],
+                [d, [p, 'Essential'], [_, E]],
                 [/\b(v(100md|700na|7011|917g).*\b) b/i],
-                [c, [p, 'Envizen'], [f, v]],
+                [d, [p, 'Envizen'], [_, b]],
                 [/\b(trio[-\w\. ]+) b/i],
-                [c, [p, 'MachSpeed'], [f, v]],
+                [d, [p, 'MachSpeed'], [_, b]],
                 [/\btu_(1491) b/i],
-                [c, [p, 'Rotor'], [f, v]],
+                [d, [p, 'Rotor'], [_, b]],
                 [/(shield[\w ]+) b/i],
-                [c, [p, 'Nvidia'], [f, v]],
+                [d, [p, 'Nvidia'], [_, b]],
                 [/(sprint) (\w+)/i],
-                [p, c, [f, y]],
+                [p, d, [_, E]],
                 [/(kin\.[onetw]{3})/i],
                 [
-                    [c, /\./g, ' '],
-                    [p, T],
-                    [f, y]
+                    [d, /\./g, ' '],
+                    [p, x],
+                    [_, E]
                 ],
                 [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-                [c, [p, N], [f, v]],
+                [d, [p, Z], [_, b]],
                 [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-                [c, [p, N], [f, y]],
+                [d, [p, Z], [_, E]],
                 [/smart-tv.+(samsung)/i],
-                [p, [f, m]],
+                [p, [_, y]],
                 [/hbbtv.+maple;(\d+)/i],
                 [
-                    [c, /^/, 'SmartTV'],
-                    [p, I],
-                    [f, m]
+                    [d, /^/, 'SmartTV'],
+                    [p, M],
+                    [_, y]
                 ],
                 [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
                 [
-                    [p, 'LG'],
-                    [f, m]
+                    [p, L],
+                    [_, y]
                 ],
                 [/(apple) ?tv/i],
-                [p, [c, w + ' TV'], [f, m]],
+                [p, [d, S + ' TV'], [_, y]],
                 [/crkey/i],
                 [
-                    [c, E + 'cast'],
-                    [p, O],
-                    [f, m]
+                    [d, w + 'cast'],
+                    [p, P],
+                    [_, y]
                 ],
                 [/droid.+aft(\w+)( bui|\))/i],
-                [c, [p, S], [f, m]],
+                [d, [p, T], [_, y]],
                 [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
-                [c, [p, B], [f, m]],
+                [d, [p, U], [_, y]],
                 [/(bravia[\w ]+)( bui|\))/i],
-                [c, [p, L], [f, m]],
+                [d, [p, G], [_, y]],
                 [/(mitv-\w{5}) bui/i],
-                [c, [p, R], [f, m]],
+                [d, [p, B], [_, y]],
                 [/Hbbtv.*(technisat) (.*);/i],
-                [p, c, [f, m]],
+                [p, d, [_, y]],
                 [/\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i, /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i],
                 [
-                    [p, V],
-                    [c, V],
-                    [f, m]
+                    [p, X],
+                    [d, X],
+                    [_, y]
                 ],
                 [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
-                [[f, m]],
+                [[_, y]],
                 [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
-                [p, c, [f, g]],
+                [p, d, [_, g]],
                 [/droid.+; (shield) bui/i],
-                [c, [p, 'Nvidia'], [f, g]],
+                [d, [p, 'Nvidia'], [_, g]],
                 [/(playstation [345portablevi]+)/i],
-                [c, [p, L], [f, g]],
+                [d, [p, G], [_, g]],
                 [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-                [c, [p, T], [f, g]],
+                [d, [p, x], [_, g]],
                 [/\b(sm-[lr]\d\d[05][fnuw]?s?)\b/i],
-                [c, [p, I], [f, _]],
+                [d, [p, M], [_, O]],
                 [/((pebble))app/i],
-                [p, c, [f, _]],
+                [p, d, [_, O]],
                 [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
-                [c, [p, w], [f, _]],
+                [d, [p, S], [_, O]],
                 [/droid.+; (glass) \d/i],
-                [c, [p, O], [f, _]],
+                [d, [p, P], [_, O]],
                 [/droid.+; (wt63?0{2,3})\)/i],
-                [c, [p, N], [f, _]],
+                [d, [p, Z], [_, O]],
                 [/droid.+; (glass) \d/i],
-                [c, [p, O], [f, _]],
+                [d, [p, P], [_, O]],
                 [/(pico) (4|neo3(?: link|pro)?)/i],
-                [p, c, [f, _]],
+                [p, d, [_, O]],
                 [/; (quest( \d| pro)?)/i],
-                [c, [p, F], [f, _]],
+                [d, [p, F], [_, O]],
                 [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
-                [p, [f, b]],
+                [p, [_, v]],
                 [/(aeobc)\b/i],
-                [c, [p, S], [f, b]],
+                [d, [p, T], [_, v]],
                 [/droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+? mobile safari/i],
-                [c, [f, y]],
+                [d, [_, E]],
                 [/droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i],
-                [c, [f, v]],
+                [d, [_, b]],
                 [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
-                [[f, v]],
+                [[_, b]],
                 [/(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i],
-                [[f, y]],
+                [[_, E]],
                 [/(android[-\w\. ]{0,9});.+buil/i],
-                [c, [p, 'Generic']]
+                [d, [p, 'Generic']]
             ],
-            engine: [[/windows.+ edge\/([\w\.]+)/i], [h, [l, 'EdgeHTML']], [/(arkweb)\/([\w\.]+)/i], [l, h], [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i], [h, [l, 'Blink']], [/(presto)\/([\w\.]+)/i, /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i, /ekioh(flow)\/([\w\.]+)/i, /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i, /(icab)[\/ ]([23]\.[\d\.]+)/i, /\b(libweb)/i], [l, h], [/rv\:([\w\.]{1,9})\b.+(gecko)/i], [h, l]],
+            engine: [[/windows.+ edge\/([\w\.]+)/i], [h, [f, 'EdgeHTML']], [/(arkweb)\/([\w\.]+)/i], [f, h], [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i], [h, [f, 'Blink']], [/(presto)\/([\w\.]+)/i, /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i, /ekioh(flow)\/([\w\.]+)/i, /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i, /(icab)[\/ ]([23]\.[\d\.]+)/i, /\b(libweb)/i], [f, h], [/rv\:([\w\.]{1,9})\b.+(gecko)/i], [h, f]],
             os: [
                 [/microsoft (windows) (vista|xp)/i],
-                [l, h],
+                [f, h],
                 [/(windows (?:phone(?: os)?|mobile))[\/ ]?([\d\.\w ]*)/i],
-                [l, [h, J, X]],
+                [f, [h, J, ee]],
                 [/windows nt 6\.2; (arm)/i, /windows[\/ ]?([ntce\d\. ]+\w)(?!.+xbox)/i, /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i],
                 [
-                    [h, J, X],
-                    [l, 'Windows']
+                    [h, J, ee],
+                    [f, 'Windows']
                 ],
                 [/ip[honead]{2,4}\b(?:.*os ([\w]+) like mac|; opera)/i, /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i, /cfnetwork\/.+darwin/i],
                 [
                     [h, /_/g, '.'],
-                    [l, 'iOS']
+                    [f, 'iOS']
                 ],
                 [/(mac os x) ?([\w\. ]*)/i, /(macintosh|mac_powerpc\b)(?!.+haiku)/i],
                 [
-                    [l, P],
+                    [f, H],
                     [h, /_/g, '.']
                 ],
                 [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
-                [h, l],
+                [h, f],
                 [/(android|webos|qnx|bada|rim tablet os|maemo|meego|sailfish|openharmony)[-\/ ]?([\w\.]*)/i, /(blackberry)\w*\/([\w\.]*)/i, /(tizen|kaios)[\/ ]([\w\.]+)/i, /\((series40);/i],
-                [l, h],
+                [f, h],
                 [/\(bb(10);/i],
-                [h, [l, k]],
+                [h, [f, N]],
                 [/(?:symbian ?os|symbos|s60(?=;)|series60)[-\/ ]?([\w\.]*)/i],
-                [h, [l, 'Symbian']],
+                [h, [f, 'Symbian']],
                 [/mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i],
-                [h, [l, D + ' OS']],
+                [h, [f, R + ' OS']],
                 [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
-                [h, [l, 'webOS']],
+                [h, [f, 'webOS']],
                 [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],
-                [h, [l, 'watchOS']],
+                [h, [f, 'watchOS']],
                 [/crkey\/([\d\.]+)/i],
-                [h, [l, E + 'cast']],
+                [h, [f, w + 'cast']],
                 [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
-                [[l, z], h],
+                [[f, V], h],
                 [/panasonic;(viera)/i, /(netrange)mmh/i, /(nettv)\/(\d+\.[\w\.]+)/i, /(nintendo|playstation) ([wids345portablevuch]+)/i, /(xbox); +xbox ([^\);]+)/i, /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i, /(mint)[\/\(\) ]?(\w*)/i, /(mageia|vectorlinux)[; ]/i, /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i, /(hurd|linux) ?([\w\.]*)/i, /(gnu) ?([\w\.]*)/i, /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i, /(haiku) (\w+)/i],
-                [l, h],
+                [f, h],
                 [/(sunos) ?([\w\.\d]*)/i],
-                [[l, 'Solaris'], h],
+                [[f, 'Solaris'], h],
                 [/((?:open)?solaris)[-\/ ]?([\w\.]*)/i, /(aix) ((\d)(?=\.|\)| )[\w\.])*/i, /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux|serenityos)/i, /(unix) ?([\w\.]*)/i],
-                [l, h]
+                [f, h]
             ]
         },
-        $ = function (t, e) {
-            if ((typeof t === a && ((e = t), (t = n)), !(this instanceof $))) return new $(t, e).getResult();
-            var g = typeof r !== o && r.navigator ? r.navigator : n,
-                m = t || (g && g.userAgent ? g.userAgent : ''),
-                _ = g && g.userAgentData ? g.userAgentData : n,
-                b = e ? U(Y, e) : Y,
-                S = g && g.userAgent == m;
+        en = function (e, t) {
+            if ((typeof e === l && ((t = e), (e = r)), !(this instanceof en))) return new en(e, t).getResult();
+            var a = typeof n !== s && n.navigator ? n.navigator : r,
+                g = e || (a && a.userAgent ? a.userAgent : i),
+                y = a && a.userAgentData ? a.userAgentData : r,
+                O = t ? W(et, t) : et,
+                v = a && a.userAgent == g;
             return (
                 (this.getBrowser = function () {
-                    var t,
-                        e = {};
-                    return ((e[l] = n), (e[h] = n), G.call(e, m, b.browser), (e[s] = typeof (t = e[h]) === u ? t.replace(/[^\d\.]/g, '').split('.')[0] : n), S && g && g.brave && typeof g.brave.isBrave == i && (e[l] = 'Brave'), e);
+                    var e = {};
+                    return ((e[f] = r), (e[h] = r), Q.call(e, g, O.browser), (e[u] = $(e[h])), v && a && a.brave && typeof a.brave.isBrave == o && (e[f] = 'Brave'), e);
                 }),
                 (this.getCPU = function () {
-                    var t = {};
-                    return ((t[d] = n), G.call(t, m, b.cpu), t);
+                    var e = {};
+                    return ((e[m] = r), Q.call(e, g, O.cpu), e);
                 }),
                 (this.getDevice = function () {
-                    var t = {};
-                    return ((t[p] = n), (t[c] = n), (t[f] = n), G.call(t, m, b.device), S && !t[f] && _ && _.mobile && (t[f] = y), S && 'Macintosh' == t[c] && g && typeof g.standalone !== o && g.maxTouchPoints && g.maxTouchPoints > 2 && ((t[c] = 'iPad'), (t[f] = v)), t);
+                    var e = {};
+                    return ((e[p] = r), (e[d] = r), (e[_] = r), Q.call(e, g, O.device), v && !e[_] && y && y.mobile && (e[_] = E), v && 'Macintosh' == e[d] && a && typeof a.standalone !== s && a.maxTouchPoints && a.maxTouchPoints > 2 && ((e[d] = 'iPad'), (e[_] = b)), e);
                 }),
                 (this.getEngine = function () {
-                    var t = {};
-                    return ((t[l] = n), (t[h] = n), G.call(t, m, b.engine), t);
+                    var e = {};
+                    return ((e[f] = r), (e[h] = r), Q.call(e, g, O.engine), e);
                 }),
                 (this.getOS = function () {
-                    var t = {};
-                    return ((t[l] = n), (t[h] = n), G.call(t, m, b.os), S && !t[l] && _ && _.platform && 'Unknown' != _.platform && (t[l] = _.platform.replace(/chrome os/i, z).replace(/macos/i, P)), t);
+                    var e = {};
+                    return ((e[f] = r), (e[h] = r), Q.call(e, g, O.os), v && !e[f] && y && y.platform && 'Unknown' != y.platform && (e[f] = y.platform.replace(/chrome os/i, V).replace(/macos/i, H)), e);
                 }),
                 (this.getResult = function () {
                     return {
@@ -552,38 +558,38 @@
                     };
                 }),
                 (this.getUA = function () {
-                    return m;
+                    return g;
                 }),
-                (this.setUA = function (t) {
-                    return ((m = typeof t === u && t.length > 500 ? V(t, 500) : t), this);
+                (this.setUA = function (e) {
+                    return ((g = typeof e === c && e.length > I ? X(e, I) : e), this);
                 }),
-                this.setUA(m),
+                this.setUA(g),
                 this
             );
         };
-    (($.VERSION = '0.7.40'),
-        ($.BROWSER = q([l, h, s])),
-        ($.CPU = q([d])),
-        ($.DEVICE = q([c, p, f, g, y, m, v, _, b])),
-        ($.ENGINE = $.OS = q([l, h])),
-        typeof e !== o
-            ? (t.exports && (e = t.exports = $), (e.UAParser = $))
-            : typeof define === i && define.amd
+    ((en.VERSION = '0.7.40'),
+        (en.BROWSER = K([f, h, u])),
+        (en.CPU = K([m])),
+        (en.DEVICE = K([d, p, _, g, E, y, b, O, v])),
+        (en.ENGINE = en.OS = K([f, h])),
+        typeof t !== s
+            ? ('object' !== s && e.exports && (t = e.exports = en), (t.UAParser = en))
+            : typeof define === o && define.amd
               ? define(function () {
-                    return $;
+                    return en;
                 })
-              : typeof r !== o && (r.UAParser = $));
-    var Z = typeof r !== o && (r.jQuery || r.Zepto);
-    if (Z && !Z.ua) {
-        var Q = new $();
-        ((Z.ua = Q.getResult()),
-            (Z.ua.get = function () {
-                return Q.getUA();
+              : typeof n !== s && (n.UAParser = en));
+    var er = typeof n !== s && (n.jQuery || n.Zepto);
+    if (er && !er.ua) {
+        var ei = new en();
+        ((er.ua = ei.getResult()),
+            (er.ua.get = function () {
+                return ei.getUA();
             }),
-            (Z.ua.set = function (t) {
-                Q.setUA(t);
-                var e = Q.getResult();
-                for (var r in e) Z.ua[r] = e[r];
+            (er.ua.set = function (e) {
+                ei.setUA(e);
+                var t = ei.getResult();
+                for (var n in t) er.ua[n] = t[n];
             }));
     }
 })('object' == typeof window ? window : this);

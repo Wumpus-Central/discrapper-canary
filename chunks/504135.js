@@ -64,16 +64,16 @@ function E(e, t) {
     );
 }
 function b(e) {
-    let { color: t = 'default', label: n, icon: a, iconLeft: h, iconLeftSize: g = 'md', hint: b, subtext: y, subtextLineClamp: O, hasSubmenu: v, disabled: I, isFocused: T, menuItemProps: S, action: A, onClose: N, onFocus: C, className: R, focusedClassName: P, subMenuIconClassName: w, dontCloseOnActionIfHoldingShiftKey: D, dontCloseOnAction: L, iconProps: x, sparkle: M } = e,
-        { onSelect: k, onInteraction: j } = i.useContext(c.p),
+    let { color: t = 'default', label: n, icon: a, iconLeft: h, iconLeftSize: g = 'md', hint: b, subtext: y, subtextLineClamp: O, hasSubmenu: v, disabled: I, isFocused: T, menuItemProps: S, action: A, onClose: N, onFocus: C, className: w, focusedClassName: R, subMenuIconClassName: P, dontCloseOnActionIfHoldingShiftKey: D, dontCloseOnAction: L, iconProps: x, sparkle: k } = e,
+        { onSelect: j, onInteraction: M } = i.useContext(c.p),
         U = i.useRef(null),
         G = i.useCallback(
             (e) => {
                 var t;
-                if ((null == j || j({ type: c.U.DEFAULT }), null == A)) return !1;
-                ((e.shiftKey && D) || L || N(), e.persist(), null == k || k(), (null != (t = e.nativeEvent.view) ? t : window).requestAnimationFrame(() => A(e)));
+                if ((null == M || M({ type: c.U.DEFAULT }), null == A)) return !1;
+                ((e.shiftKey && D) || L || N(), e.persist(), null == j || j(), (null != (t = e.nativeEvent.view) ? t : window).requestAnimationFrame(() => A(e)));
             },
-            [A, N, k, D, L, j]
+            [A, N, j, D, L, M]
         );
     return (
         i.useEffect(() => {
@@ -85,10 +85,10 @@ function b(e) {
                 m(
                     {
                         innerRef: U,
-                        className: o()(p.item, p.labelContainer, _._[t], R, {
+                        className: o()(p.item, p.labelContainer, _._[t], w, {
                             [p.disabled]: I,
                             [p.focused]: T,
-                            [null != P ? P : '']: T
+                            [null != R ? R : '']: T
                         }),
                         onClick: I ? void 0 : G,
                         'aria-disabled': I
@@ -135,9 +135,9 @@ function b(e) {
                                     (0, r.jsx)(f.Fbu, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: o()(p.caret, w)
+                                        className: o()(p.caret, P)
                                     }),
-                                    M && (0, r.jsx)(f.K1N, { className: p.sparkles })
+                                    k && (0, r.jsx)(f.K1N, { className: p.sparkles })
                                 ]
                             })
                     ]

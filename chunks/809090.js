@@ -93,10 +93,10 @@ function E(e) {
         C = i.useCallback(() => {
             (S(!0), null == O || O());
         }, [O]),
-        R = i.useCallback(() => {
+        w = i.useCallback(() => {
             (S(!1), null == v || v());
         }, [v]),
-        P = i.useMemo(() => {
+        R = i.useMemo(() => {
             var e;
             return t.type !== c.Qi.APPLICATION
                 ? d
@@ -118,7 +118,7 @@ function E(e) {
             onFocus: A,
             onBlur: N,
             onMouseOver: C,
-            onMouseLeave: R,
+            onMouseLeave: w,
             children: (0, r.jsx)(s.ZP, {
                 className: u.mask,
                 mask: E || (g && (n || T)) ? s.QS.SQUIRCLE : s.QS.AVATAR_DEFAULT,
@@ -131,7 +131,7 @@ function E(e) {
                         width: a,
                         height: f
                     },
-                    src: P
+                    src: R
                 })
             })
         })

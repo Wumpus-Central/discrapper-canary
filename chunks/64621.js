@@ -25,29 +25,29 @@ let I = 200,
 function A(e) {
     let { sourceType: t, children: n, user: A, targetElementRef: N } = e,
         { themeType: C } = (0, m.z)(),
-        R = (0, h.T)({ location: 'UserProfilePopoutInteractionCoachmark' }),
-        P = (0, a.e7)([p.default], () => {
+        w = (0, h.T)({ location: 'UserProfilePopoutInteractionCoachmark' }),
+        R = (0, a.e7)([p.default], () => {
             var e;
             return (null == (e = p.default.getCurrentUser()) ? void 0 : e.id) === A.id;
         }),
-        w = (0, a.e7)([_.Z], () =>
+        P = (0, a.e7)([_.Z], () =>
             _.Z.findActivity(A.id, (e) => {
                 let { type: t } = e;
                 return t === E.IIU.CUSTOM_STATUS;
             })
         ),
-        D = () => !P && C === g.lY.POPOUT && (t === g.n_.AVATAR ? R && null == w : t === g.n_.STATUS ? R : t === g.n_.ACTIVITY && !R),
+        D = () => !R && C === g.lY.POPOUT && (t === g.n_.AVATAR ? w && null == P : t === g.n_.STATUS ? w : t === g.n_.ACTIVITY && !w),
         [L, x] = i.useState(!1);
     (0, c.Z)(() => x(!0), D() ? I : null);
     let {
-            asset: M,
-            assetClassName: k,
-            className: j,
+            asset: k,
+            assetClassName: j,
+            className: M,
             content: U,
             header: G,
             spacing: B,
-            dismissibleContentType: V
-        } = R
+            dismissibleContentType: Z
+        } = w
             ? {
                   asset: v,
                   assetClassName: y.profileImage,
@@ -67,8 +67,8 @@ function A(e) {
                   dismissibleContentType: o.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ACTIVITY
               },
         F = (0, u.Nj)(o.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
-        Z = L && !F ? [V] : [],
-        [H, Y] = (0, d.US)(Z);
+        V = L && !F ? [Z] : [],
+        [H, Y] = (0, d.US)(V);
     return (0, r.jsx)(l.yRy, {
         targetElementRef: N,
         align: 'center',
@@ -82,11 +82,11 @@ function A(e) {
                     null == i || i(e);
                 },
                 children: (0, r.jsx)(f.ZP, {
-                    className: j,
+                    className: M,
                     asset: (0, r.jsx)('img', {
                         alt: '',
-                        src: M,
-                        className: k
+                        src: k,
+                        className: j
                     }),
                     buttonCTA: b.intl.string(b.t['+IrDzM']),
                     buttonLayout: f._F.STACKED,

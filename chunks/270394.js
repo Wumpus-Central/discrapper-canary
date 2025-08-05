@@ -23,16 +23,16 @@ var i = n(255367),
     C = n(933557),
     N = n(346486),
     S = n(600164),
-    Z = n(925329),
-    I = n(666657),
-    E = n(664452),
-    w = n(560114),
-    T = n(685929),
-    P = n(592125),
+    I = n(925329),
+    w = n(666657),
+    Z = n(664452),
+    E = n(560114),
+    P = n(685929),
+    T = n(592125),
     k = n(699516),
     A = n(594174),
-    D = n(630388),
-    R = n(965638),
+    R = n(630388),
+    D = n(965638),
     L = n(757539),
     M = n(981631),
     B = n(388032),
@@ -186,7 +186,7 @@ function q(e) {
                 children: o ? '...' : n.code
             }),
             inviteSourceTrailingContent:
-                !o && (0, D.yE)(null != (t = n.flags) ? t : 0, u.$.IS_APPLICATION_BYPASS)
+                !o && (0, R.yE)(null != (t = n.flags) ? t : 0, u.$.IS_APPLICATION_BYPASS)
                     ? (0, i.jsxs)('div', {
                           className: U.bypass,
                           children: [
@@ -231,7 +231,7 @@ function Y(e) {
             var e;
             return A.default.getUser(null == (e = r.linkedLobby) ? void 0 : e.linked_by);
         }),
-        c = (0, T.Y)(r);
+        c = (0, P.Y)(r);
     return (0, i.jsx)(K, {
         isDisabled: o,
         inviter: s,
@@ -240,9 +240,9 @@ function Y(e) {
         inviteSource: (0, i.jsxs)('div', {
             className: U.linkedChannelJoinSource,
             children: [
-                (0, i.jsx)(Z.Z, {
+                (0, i.jsx)(I.Z, {
                     game: a,
-                    size: Z.Z.Sizes.XXSMALL
+                    size: I.Z.Sizes.XXSMALL
                 }),
                 (0, i.jsx)(g.Text, {
                     className: U.linkedChannelJoinSourceText,
@@ -277,8 +277,8 @@ function X(e) {
     let { invites: t, guild: l, hide: o, canCreateInvites: a, withV2Actions: c, channel: u = null, showChannel: f = !1, loading: h = !1 } = e;
     s()(null != l, 'guild is required');
     let x = (0, y.ZP)(),
-        j = (0, R.MQ)(l),
-        O = (0, R.O4)(l),
+        j = (0, D.MQ)(l),
+        O = (0, D.O4)(l),
         _ = r.useMemo(
             () =>
                 null == t || h
@@ -291,7 +291,7 @@ function X(e) {
                           .value(),
             [t, h]
         ),
-        C = (0, p.Wu)([P.Z], () => P.Z.getSortedLinkedChannelsForGuild(l.id).filter((e) => null == u || e.id === u.id)),
+        C = (0, p.Wu)([T.Z], () => T.Z.getSortedLinkedChannelsForGuild(l.id).filter((e) => null == u || e.id === u.id)),
         N = r.useMemo(
             () =>
                 h
@@ -308,11 +308,11 @@ function X(e) {
                       ],
             [_, C, h]
         ),
-        Z = () => {
+        I = () => {
             (0, g.ZDy)(
                 async () => (e) =>
                     (0, i.jsx)(
-                        w.default,
+                        E.default,
                         z(G({}, e), {
                             channel: u,
                             guild: l,
@@ -321,13 +321,13 @@ function X(e) {
                     )
             );
         },
-        [T, k] = r.useState(62),
+        [P, k] = r.useState(62),
         A = () => {
-            let e = { source: I.Zu.GUILD_SETTINGS };
+            let e = { source: w.Zu.GUILD_SETTINGS };
             (0, g.ZDy)(
                 async () => (t) =>
                     (0, i.jsx)(
-                        E.default,
+                        Z.default,
                         z(G({}, t), {
                             guildId: l.id,
                             analyticsData: e
@@ -413,7 +413,7 @@ function X(e) {
                             (0, i.jsx)(g.R94, {
                                 className: H.marginBottom20,
                                 type: g.geA.DESCRIPTION,
-                                children: !0 === a ? B.intl.format(B.t['97VdNj'], { onCreateInvite: Z }) : B.intl.string(B.t.WDw38P)
+                                children: !0 === a ? B.intl.format(B.t['97VdNj'], { onCreateInvite: I }) : B.intl.string(B.t.WDw38P)
                             }),
                             (0, i.jsxs)('div', {
                                 className: U.inviteDisabledContainer,
@@ -455,7 +455,7 @@ function X(e) {
                         hasInvites: _.length > 0,
                         setHeight: k,
                         onShowDisableInvites: A,
-                        onShowInviteModal: Z,
+                        onShowInviteModal: I,
                         hasInviteDisabledPermission: j,
                         invitesDisabled: O,
                         canCreateInvites: a
@@ -502,7 +502,7 @@ function X(e) {
                 }
             }
         },
-        rowHeight: (e, t) => (e === V.HEADER ? 64 : e === V.ACTIONS_V1 ? 109 : e === V.ACTIONS_V2 ? T : e === V.TABLE ? (0 === N.length && 0 === t && h ? 62 : 62 * (null != N[t])) : 0),
+        rowHeight: (e, t) => (e === V.HEADER ? 64 : e === V.ACTIONS_V1 ? 109 : e === V.ACTIONS_V2 ? P : e === V.TABLE ? (0 === N.length && 0 === t && h ? 62 : 62 * (null != N[t])) : 0),
         sectionHeight: (e) => (e === V.TABLE ? (0 !== N.length || h ? 28 : 240) : 0)
     });
 }

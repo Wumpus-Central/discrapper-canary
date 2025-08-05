@@ -73,9 +73,9 @@ function A(e, t) {
 }
 let N = 50,
     C = 0.9,
-    R = 0.1,
-    P = 0,
-    w = {
+    w = 0.1,
+    R = 0,
+    P = {
         fec: !0,
         packetLossRate: 0.3
     };
@@ -304,7 +304,7 @@ class x extends _.Z {
                           fec: !1,
                           packetLossRate: 0
                       }
-                    : w;
+                    : P;
         (this.conn.setTransportOptions(T({}, r, i)), this.videoEncoderFallbackPending && (this.videoEncoderFallbackPending = !1));
     }
     getStats() {
@@ -858,7 +858,7 @@ class x extends _.Z {
                     postponeDecodeLevel: this.postponeDecodeLevel
                 },
                 this.getAttenuationOptions(),
-                w
+                P
             ),
             {
                 qos: this.qos,
@@ -930,7 +930,7 @@ class x extends _.Z {
     }
     constructor(e, t, n) {
         (super(e, t),
-            I(this, 'mediaEngineConnectionId', 'Native-'.concat(P++)),
+            I(this, 'mediaEngineConnectionId', 'Native-'.concat(R++)),
             I(this, 'goLiveSourceIdentifier', void 0),
             I(this, 'selfVideo', !1),
             I(this, 'forceAudioNormal', !1),
@@ -1018,7 +1018,7 @@ class x extends _.Z {
                             let n = Math.floor(e.bitrate * C);
                             n = i()(n, null != (r = s.minBitrate) ? r : 0, null != (a = s.maxBitrate) ? a : n);
                             let l = null != (o = s.targetBitrate) ? o : 0;
-                            (Math.abs(n - l) / ((n + l) / 2) > R || void 0 === s.targetBitrate) && (this.logger.info('Updating target bitrate for SSRC '.concat(t, ' from ').concat(s.targetBitrate, ' to ').concat(n)), this.videoQualityManager.setGoLiveSimulcastLQTargetBitrate(n), this.updateVideoQuality());
+                            (Math.abs(n - l) / ((n + l) / 2) > w || void 0 === s.targetBitrate) && (this.logger.info('Updating target bitrate for SSRC '.concat(t, ' from ').concat(s.targetBitrate, ' to ').concat(n)), this.videoQualityManager.setGoLiveSimulcastLQTargetBitrate(n), this.updateVideoQuality());
                         }
                     });
                 }

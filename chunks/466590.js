@@ -107,51 +107,51 @@ function y(e) {
         i.useEffect(() => {
             null == v || v(N);
         }, [N, v]));
-    let R = b[N],
-        P = N + 1 === b.length,
-        w = i.useCallback(() => {
+    let w = b[N],
+        R = N + 1 === b.length,
+        P = i.useCallback(() => {
             var e;
-            (null == R || null == (e = R.onCta) || e.call(R), P ? null == I || I() : C((e) => e + 1));
-        }, [R, P, I]),
+            (null == w || null == (e = w.onCta) || e.call(w), R ? null == I || I() : C((e) => e + 1));
+        }, [w, R, I]),
         D = i.useCallback(() => {
             null == I || I();
         }, [I]),
         L = i.useCallback(() => {
             null == I || I();
         }, [I]);
-    if (!S || null == R) return null;
+    if (!S || null == w) return null;
     let x = h(
         {
-            text: null != (p = null == (t = R.action) ? void 0 : t.text) ? p : P ? f.intl.string(f.t.i4jeWV) : f.intl.string(f.t.PDTjLC),
-            variant: null != (m = null == (n = R.action) ? void 0 : n.variant) ? m : 'primary',
-            onClick: w
+            text: null != (p = null == (t = w.action) ? void 0 : t.text) ? p : R ? f.intl.string(f.t.i4jeWV) : f.intl.string(f.t.PDTjLC),
+            variant: null != (m = null == (n = w.action) ? void 0 : n.variant) ? m : 'primary',
+            onClick: P
         },
-        R.action
+        w.action
     );
     return (0, r.jsx)(
         s.m,
         g(h({}, A), {
             shouldShow: S,
             onRequestClose: D,
-            gradientColor: R.gradientColor,
+            gradientColor: w.gradientColor,
             children: (0, r.jsxs)('div', {
                 ref: T,
                 children: [
                     (0, r.jsx)(u.u, {
                         onClick: L,
-                        colorMix: null != R.gradientColor
+                        colorMix: null != w.gradientColor
                     }),
-                    null != R.asset
+                    null != w.asset
                         ? (0, r.jsx)(l.V, {
-                              asset: R.asset,
+                              asset: w.asset,
                               size: O
                           })
                         : null,
                     (0, r.jsx)(d.Y, {
-                        title: R.title,
-                        body: R.body,
-                        badge: R.badge,
-                        textLink: R.textLink,
+                        title: w.title,
+                        body: w.body,
+                        badge: w.badge,
+                        textLink: w.textLink,
                         hasBottomMargin: !0
                     }),
                     (0, r.jsx)('div', {

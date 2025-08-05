@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(255367);
 n(73800);
 var i = n(313361),
-    a = n(697988),
-    l = n(683860),
+    l = n(697988),
+    a = n(683860),
     s = n(481060),
     o = n(869382),
     c = n(109434),
@@ -17,7 +17,7 @@ function g(e) {
         { showResolvedFlags: p, setShowResolvedFlags: b } = (0, o.N)(t.id),
         j = (0, c.v)(),
         v = t.isMediaChannel(),
-        _ = (e) => {
+        C = (e) => {
             ((0, d.KR)({
                 guildId: t.guild_id,
                 channelId: t.id,
@@ -26,7 +26,7 @@ function g(e) {
                 j.getState().setSortOrder(t.id, e),
                 n());
         },
-        C = (e) => {
+        _ = (e) => {
             ((0, d.Do)({
                 guildId: t.guild_id,
                 channelId: t.id,
@@ -38,7 +38,7 @@ function g(e) {
         y = (e) => {
             (j.getState().setTagSetting(t.id, e), n());
         },
-        w = null != t.availableTags && t.availableTags.length > 0;
+        O = null != t.availableTags && t.availableTags.length > 0;
     return (0, r.jsx)('div', {
         className: h.container,
         children: (0, r.jsxs)(s.v2r, {
@@ -55,15 +55,15 @@ function g(e) {
                             id: 'sort-by-recent-activity',
                             group: 'sort-by',
                             label: u.intl.string(u.t.jOPmcH),
-                            action: () => _(l.z.LATEST_ACTIVITY),
-                            checked: g === l.z.LATEST_ACTIVITY
+                            action: () => C(a.z.LATEST_ACTIVITY),
+                            checked: g === a.z.LATEST_ACTIVITY
                         }),
                         (0, r.jsx)(s.k5B, {
                             id: 'sort-by-date-posted',
                             group: 'sort-by',
                             label: u.intl.string(u.t.UIltXV),
-                            action: () => _(l.z.CREATION_DATE),
-                            checked: g === l.z.CREATION_DATE
+                            action: () => C(a.z.CREATION_DATE),
+                            checked: g === a.z.CREATION_DATE
                         })
                     ]
                 }),
@@ -86,19 +86,19 @@ function g(e) {
                                   id: 'view-as-list',
                                   group: 'view-as',
                                   label: u.intl.string(u.t['NJFr+v']),
-                                  action: () => C(i.X.LIST),
+                                  action: () => _(i.X.LIST),
                                   checked: f === i.X.LIST
                               }),
                               (0, r.jsx)(s.k5B, {
                                   id: 'view-as-grid',
                                   group: 'view-as',
                                   label: u.intl.string(u.t.wKeggY),
-                                  action: () => C(i.X.GRID),
+                                  action: () => _(i.X.GRID),
                                   checked: f === i.X.GRID
                               })
                           ]
                       }),
-                w
+                O
                     ? (0, r.jsxs)(s.kSQ, {
                           label: u.intl.string(u.t.Paxaur),
                           children: [
@@ -106,15 +106,15 @@ function g(e) {
                                   id: 'match-some',
                                   group: 'tag-setting',
                                   label: u.intl.string(u.t.rQ0ctb),
-                                  action: () => y(a.z.MATCH_SOME),
-                                  checked: x === a.z.MATCH_SOME
+                                  action: () => y(l.z.MATCH_SOME),
+                                  checked: x === l.z.MATCH_SOME
                               }),
                               (0, r.jsx)(s.k5B, {
                                   id: 'match-all',
                                   group: 'tag-setting',
                                   label: u.intl.string(u.t.FCXUu7),
-                                  action: () => y(a.z.MATCH_ALL),
-                                  checked: x === a.z.MATCH_ALL
+                                  action: () => y(l.z.MATCH_ALL),
+                                  checked: x === l.z.MATCH_ALL
                               })
                           ]
                       })
@@ -129,7 +129,7 @@ function g(e) {
                             children: u.intl.string(u.t['3b//lJ'])
                         }),
                         action: () => {
-                            (_(t.getDefaultSortOrder()), C(t.getDefaultLayout()), y(t.getDefaultTagSetting()));
+                            (C(t.getDefaultSortOrder()), _(t.getDefaultLayout()), y(t.getDefaultTagSetting()));
                         }
                     })
                 })

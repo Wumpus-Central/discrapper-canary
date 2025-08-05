@@ -1,18 +1,18 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => j });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     a = n.n(l),
-    o = n(481060),
-    s = n(239091),
+    s = n(481060),
+    o = n(239091),
     c = n(586902),
-    u = n(40851),
-    d = n(906732),
-    p = n(795318),
-    h = n(670188),
+    d = n(40851),
+    u = n(906732),
+    h = n(795318),
+    p = n(670188),
     f = n(237583),
-    m = n(768581),
-    g = n(529853);
+    g = n(768581),
+    m = n(529853);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -59,13 +59,13 @@ function _(e, t) {
 function y(e) {
     let { channel: t, speaker: l, className: f } = e,
         y = i.useRef(null),
-        { newestAnalyticsLocation: C } = (0, d.ZP)(),
-        x = (0, u.bp)(),
-        { reducedMotion: v } = i.useContext(o.Sfi),
-        j = (0, c.Z)({ userId: l.id }),
-        O = null != l.member ? (0, m.CA)(l.member) : null,
+        { newestAnalyticsLocation: j } = (0, u.ZP)(),
+        O = (0, d.bp)(),
+        { reducedMotion: x } = i.useContext(s.Sfi),
+        v = (0, c.Z)({ userId: l.id }),
+        C = null != l.member ? (0, g.CA)(l.member) : null,
         E = (e) => {
-            (0, s.jW)(
+            (0, o.jW)(
                 e,
                 async () => {
                     let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('8982'), n.e('7717'), n.e('74800')]).then(n.bind(n, 757387));
@@ -79,49 +79,49 @@ function y(e) {
                                 showMediaItems: !0,
                                 showStageChannelItems: !0,
                                 showChatItems: !1,
-                                onInteraction: (0, p.u)('GuildChannelUserContextMenu', C)
+                                onInteraction: (0, h.u)('GuildChannelUserContextMenu', j)
                             })
                         );
                 },
-                { context: x }
+                { context: O }
             );
         };
-    return (0, r.jsx)(h.Z, {
+    return (0, r.jsx)(p.Z, {
         targetElementRef: y,
         user: l.user,
         guildId: t.guild_id,
         channelId: t.id,
         clickTrap: !0,
         children: (e) =>
-            (0, r.jsx)(o.ua7, {
+            (0, r.jsx)(s.ua7, {
                 targetElementRef: y,
                 text: l.userNick,
                 position: 'bottom',
                 children: (n) =>
                     (0, r.jsx)(
-                        o.P3F,
+                        s.P3F,
                         _(b({}, n, e), {
                             innerRef: y,
                             onClick: (t) => {
                                 (t.stopPropagation(), e.onClick(t));
                             },
                             onContextMenu: E,
-                            children: (0, r.jsx)(o.qEK, {
-                                src: null != O ? O : l.user.getAvatarURL(t.guild_id, 24),
-                                size: o.EFr.SIZE_24,
-                                className: a()(g.avatar, f),
+                            children: (0, r.jsx)(s.qEK, {
+                                src: null != C ? C : l.user.getAvatarURL(t.guild_id, 24),
+                                size: s.EFr.SIZE_24,
+                                className: a()(m.avatar, f),
                                 'aria-label': l.userNick,
-                                isSpeaking: j && !v.enabled
+                                isSpeaking: v && !x.enabled
                             })
                         })
                     )
             })
     });
 }
-function C(e) {
+function j(e) {
     let { speakers: t, channel: n } = e;
     return (0, r.jsx)(f.Z, {
-        className: g.summary,
+        className: m.summary,
         guildId: n.guild_id,
         users: t,
         max: 10,
@@ -139,7 +139,7 @@ function C(e) {
             (0, r.jsx)(
                 'div',
                 {
-                    className: a()(g.speakers, t),
+                    className: a()(m.speakers, t),
                     children: e
                 },
                 n

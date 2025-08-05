@@ -1,10 +1,10 @@
-n.d(t, { T: () => _ });
+n.d(t, { T: () => O });
 var r = n(255367),
     i = n(73800),
     l = n(91192),
     o = n(442837),
-    a = n(481060),
-    s = n(44315),
+    s = n(481060),
+    a = n(44315),
     c = n(563534),
     u = n(846121),
     d = n(703656),
@@ -15,7 +15,7 @@ var r = n(255367),
     m = n(509775);
 function b(e, t) {
     return (0, r.jsx)(
-        a.Text,
+        s.Text,
         {
             variant: 'text-xs/bold',
             color: 'text-default',
@@ -24,27 +24,27 @@ function b(e, t) {
         t
     );
 }
-let _ = i.memo(function (e) {
+let O = i.memo(function (e) {
     var t, n;
-    let { guild: _ } = e,
-        O = (0, o.e7)([c.Z], () => c.Z.getNewMemberActions(_.id), [_.id]),
-        y = (0, o.e7)([u.Z], () => u.Z.getCompletedActions(_.id)),
+    let { guild: O } = e,
+        _ = (0, o.e7)([c.Z], () => c.Z.getNewMemberActions(O.id), [O.id]),
+        y = (0, o.e7)([u.Z], () => u.Z.getCompletedActions(O.id)),
         C = i.useMemo(() => {
-            if (null == O || null == y) return 0;
+            if (null == _ || null == y) return 0;
             let e = 0;
             return (
-                O.forEach((t) => {
+                _.forEach((t) => {
                     null != y[t.channelId] && e++;
                 }),
                 e
             );
-        }, [y, O]),
-        v = null == O ? 0 : O.length,
-        j = (0, l.JA)('progress-bar-'.concat(_.id));
+        }, [y, _]),
+        v = null == _ ? 0 : _.length,
+        j = (0, l.JA)('progress-bar-'.concat(O.id));
     return (0, r.jsxs)('li', {
         children: [
             (0, r.jsxs)(
-                a.P3F,
+                s.P3F,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -76,20 +76,20 @@ let _ = i.memo(function (e) {
                         focusProps: { offset: { right: 4 } },
                         className: m.progressBarContainer,
                         onClick: function () {
-                            (0, d.uL)(p.Z5c.CHANNEL(_.id, f.oC.GUILD_HOME));
+                            (0, d.uL)(p.Z5c.CHANNEL(O.id, f.oC.GUILD_HOME));
                         },
                         children: [
                             (0, r.jsxs)('div', {
                                 className: m.progressBarText,
                                 children: [
-                                    (0, r.jsx)(a.X6q, {
+                                    (0, r.jsx)(s.X6q, {
                                         variant: 'heading-sm/bold',
                                         children: g.intl.string(g.t.SnrR39)
                                     }),
                                     (0, r.jsxs)('div', {
                                         className: m.rightContainer,
                                         children: [
-                                            (0, r.jsx)(a.Text, {
+                                            (0, r.jsx)(s.Text, {
                                                 variant: 'text-xs/medium',
                                                 color: 'text-muted',
                                                 className: m.rightText,
@@ -109,9 +109,9 @@ let _ = i.memo(function (e) {
                                     })
                                 ]
                             }),
-                            (0, r.jsx)(a.Exd, {
+                            (0, r.jsx)(s.Exd, {
                                 className: m.progressBar,
-                                foregroundGradientColor: [(0, s.Lq)(p.Ilk.GREEN_300), (0, s.Lq)(p.Ilk.GREEN_230)],
+                                foregroundGradientColor: [(0, a.Lq)(p.Ilk.GREEN_300), (0, a.Lq)(p.Ilk.GREEN_230)],
                                 percent: (C / v) * 100 + 3,
                                 animate: !0
                             })

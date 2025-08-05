@@ -42,8 +42,8 @@ var A = a(m),
 if (N.constructor !== A) {
     for (var C in (h || s(N, 'constructor', o(1, A)), f))
         if (l(f, C)) {
-            var R = f[C],
-                P = R.s;
-            l(A, P) || s(A, P, o(6, R.c));
+            var w = f[C],
+                R = w.s;
+            l(A, R) || s(A, R, o(6, w.c));
         }
 }

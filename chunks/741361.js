@@ -1,40 +1,40 @@
 n.d(t, {
-    Aj: () => a,
-    S1: () => s,
-    d$: () => o,
-    hw: () => c,
+    Aj: () => s,
+    S1: () => c,
+    d$: () => l,
+    hw: () => u,
     kU: () => d,
-    kY: () => u
+    kY: () => o
 });
 var r = n(570140),
     i = n(156699),
-    l = n(493683);
-async function u(e, t, n, l) {
-    let u = e.getGuildId();
-    if (null != u && t === u && !(await (0, i.u)(e, l, n))) return !1;
+    a = n(493683);
+async function o(e, t, n, a) {
+    let o = e.getGuildId();
+    if (null != o && t === o && !(await (0, i.u)(e, a, n))) return !1;
     r.Z.dispatch({
         type: 'CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION',
         id: t,
         allow: n,
-        deny: l
+        deny: a
     });
 }
-function a(e) {
+function s(e) {
     r.Z.dispatch({
         type: 'CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION',
         id: e
     });
 }
-function o(e) {
+function l(e) {
     r.Z.dispatch({
         type: 'CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE',
         advancedMode: e
     });
 }
-function s() {
+function c() {
     r.Z.dispatch({ type: 'CHANNEL_SETTINGS_PERMISSIONS_INIT' });
 }
-function c(e, t, n) {
+function u(e, t, n) {
     return d(e, t, [], n);
 }
 function d(e, t, n, i) {
@@ -46,11 +46,11 @@ function d(e, t, n, i) {
                 if (t.length > 0) {
                     let n = t.pop();
                     if (null == n) return i();
-                    l.Z.updatePermissionOverwrite(e, n).then(i, i);
+                    a.Z.updatePermissionOverwrite(e, n).then(i, i);
                 } else {
                     let t = n.pop();
                     if (null == t) return i();
-                    l.Z.clearPermissionOverwrite(e, t).then(i, i);
+                    a.Z.clearPermissionOverwrite(e, t).then(i, i);
                 }
             };
             i();

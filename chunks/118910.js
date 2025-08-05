@@ -21,7 +21,7 @@ function l(e) {
     };
     (0, i.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('49508'), n.e('59650')]).then(n.bind(n, 955708));
+            let { default: e } = await Promise.all([n.e('49508'), n.e('5749')]).then(n.bind(n, 955708));
             return (n) =>
                 (0, r.jsx)(e, {
                     channelId: t,

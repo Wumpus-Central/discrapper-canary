@@ -1,4 +1,4 @@
-A.exports = {
+e.exports = {
     modInfoItemContainer: 'modInfoItemContainer__96c0b',
     modInfoItem: 'modInfoItem__96c0b',
     modInfoItemIcon: 'modInfoItemIcon__96c0b',

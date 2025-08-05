@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => k }), n(388685), n(539854));
+(n.d(t, { Z: () => j }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -37,7 +37,7 @@ function C(e, t, n) {
         e
     );
 }
-function R(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function R(e) {
     }
     return e;
 }
-function P(e, t) {
+function R(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,12 +65,12 @@ function P(e, t) {
     }
     return n;
 }
-function w(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : P(Object(t)).forEach(function (n) {
+            : R(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -81,17 +81,17 @@ let D = 250,
 function x(e, t) {
     switch (t.type) {
         case 'MEASUREMENT_COMPLETE':
-            return w(R({}, e), {
+            return P(w({}, e), {
                 animationPhase: 'ready',
                 height: t.height
             });
         case 'START_EXPAND_ANIMATION':
-            return w(R({}, e), {
+            return P(w({}, e), {
                 animationPhase: 'animating',
                 height: t.height
             });
         case 'ANIMATION_COMPLETE':
-            return w(R({}, e), {
+            return P(w({}, e), {
                 animationPhase: 'done',
                 height: 'auto'
             });
@@ -99,35 +99,35 @@ function x(e, t) {
             return (0, m.vE)(t);
     }
 }
-let M = {
+let k = {
     animationPhase: 'awaitingInput',
     height: 'auto'
 };
-function k(e) {
-    let { user: t, currentUser: n, displayProfile: a, guildId: m, onOpenUserProfileModal: C, onClose: P } = e,
-        w = (0, _.Dt)(),
-        { analyticsLocations: k } = (0, f.ZP)(),
-        { trackUserProfileAction: j } = (0, g.KZ)(),
+function j(e) {
+    let { user: t, currentUser: n, displayProfile: a, guildId: m, onOpenUserProfileModal: C, onClose: R } = e,
+        P = (0, _.Dt)(),
+        { analyticsLocations: j } = (0, f.ZP)(),
+        { trackUserProfileAction: M } = (0, g.KZ)(),
         { live: U, stream: G } = (0, E.Z)(t.id),
-        { voiceChannel: B, voiceActivity: V } = (0, b.Z)({
+        { voiceChannel: B, voiceActivity: Z } = (0, b.Z)({
             userId: t.id,
             guildId: m
         }),
         F = t.id === n.id,
-        Z = (0, s.e7)([h.Z, p.Z], () => {
+        V = (0, s.e7)([h.Z, p.Z], () => {
             let e = F ? h.Z.getStatus() : p.Z.getStatus(t.id, m);
             return e === S.Sk.OFFLINE || e === S.Sk.INVISIBLE;
         }),
         { voiceActivityStatusEnabled: H } = (0, d.U)({ location: 'UserProfileStackedActivity' }),
-        Y = H && null == G && null == V && null != B,
+        Y = H && null == G && null == Z && null != B,
         W = (0, y.yi)(),
         K = (null == W ? void 0 : W.interactionSource) === T.n_.ACTIVITY,
         z = i.useRef(null),
         q = i.useRef(null),
+        $ = i.useRef(null),
         X = i.useRef(null),
-        Q = i.useRef(null),
-        [J, $] = i.useReducer(x, M),
-        { height: ee, animationPhase: et } = J,
+        [Q, J] = i.useReducer(x, k),
+        { height: ee, animationPhase: et } = Q,
         en = 'awaitingInput' !== et,
         er = 'animating' === et || 'done' === et,
         ei = [],
@@ -135,13 +135,13 @@ function k(e) {
             user: t,
             currentUser: n,
             className: N.card,
-            onClose: P
+            onClose: R
         };
     (null != G &&
         ei.push(
             (0, r.jsx)(
                 v.Z,
-                R(
+                w(
                     {
                         location: 'UserProfileStackedActivity',
                         stream: G,
@@ -156,7 +156,7 @@ function k(e) {
             ei.push(
                 (0, r.jsx)(
                     O.Z,
-                    R(
+                    w(
                         {
                             activity: e,
                             profileGuildId: null == a ? void 0 : a.guildId
@@ -167,7 +167,7 @@ function k(e) {
                 )
             );
         }),
-        Y && ei.push((0, r.jsx)(I.Z, R({ voiceChannel: B }, ea), 'voice')));
+        Y && ei.push((0, r.jsx)(I.Z, w({ voiceChannel: B }, ea), 'voice')));
     let [eo, ...es] = ei,
         el = es.length > 0,
         ec =
@@ -178,9 +178,9 @@ function k(e) {
                       color: l.zx.Colors.TRANSPARENT,
                       className: o()(N.viewAllButton, er && N.isShown),
                       onClick: () => {
-                          (j({
+                          (M({
                               action: 'PRESS_VIEW_PROFILE',
-                              analyticsLocations: k
+                              analyticsLocations: j
                           }),
                               C({ section: T.oh.ACTIVITY }));
                       },
@@ -192,43 +192,43 @@ function k(e) {
                   })
                 : null,
         eu = i.useCallback(() => {
-            if (null == z.current || null == X.current) return;
-            j({
+            if (null == z.current || null == $.current) return;
+            M({
                 action: 'PRESS_SHOW_MORE_ACTIVITY',
-                analyticsLocations: k
+                analyticsLocations: j
             });
             let e = z.current.getBoundingClientRect().height,
-                t = X.current.getBoundingClientRect().height;
-            ($({
+                t = $.current.getBoundingClientRect().height;
+            (J({
                 type: 'MEASUREMENT_COMPLETE',
                 height: e
             }),
                 requestAnimationFrame(() => {
-                    ($({
+                    (J({
                         type: 'START_EXPAND_ANIMATION',
                         height: e + t - L
                     }),
-                        (Q.current = setTimeout(() => {
+                        (X.current = setTimeout(() => {
                             var e;
-                            ($({
+                            (J({
                                 type: 'ANIMATION_COMPLETE',
                                 height: 'auto'
                             }),
                                 null == (e = q.current) || e.focus());
                         }, D)));
                 }));
-        }, [k, j]);
+        }, [j, M]);
     return ((0, u.zq)(() => {
-        null != Q.current && window.clearTimeout(Q.current);
+        null != X.current && window.clearTimeout(X.current);
     }),
-    Z || 0 === ei.length)
+    V || 0 === ei.length)
         ? null
         : (0, r.jsxs)('section', {
-              'aria-labelledby': w,
+              'aria-labelledby': P,
               children: [
                   (0, r.jsx)(c.nn4, {
                       children: (0, r.jsx)(c.H, {
-                          id: w,
+                          id: P,
                           children: A.intl.string(A.t.J6STd3)
                       })
                   }),
@@ -240,7 +240,7 @@ function k(e) {
                           (0, r.jsxs)('ul', {
                               ref: q,
                               className: N.cardsList,
-                              'aria-labelledby': w,
+                              'aria-labelledby': P,
                               tabIndex: -1,
                               children: [
                                   (0, r.jsxs)('li', {
@@ -285,7 +285,7 @@ function k(e) {
                   }),
                   el &&
                       (0, r.jsxs)('div', {
-                          ref: X,
+                          ref: $,
                           className: o()(N.cardsList, N.remainingCardsCopyToMeasure),
                           children: [es, ec]
                       })

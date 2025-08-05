@@ -55,18 +55,18 @@ let T = (0, f.kt)({
         }
     };
 function N(e) {
-    let { user: t, guildId: n, channelId: a, sourceType: s, sourceDetails: f, setPopoutRef: _, modalKey: E, onAction: N, onClose: C, entry: R } = e,
-        { resetInteraction: P, setInteractionToast: w } = (0, g.Xo)(),
+    let { user: t, guildId: n, channelId: a, sourceType: s, sourceDetails: f, setPopoutRef: _, modalKey: E, onAction: N, onClose: C, entry: w } = e,
+        { resetInteraction: R, setInteractionToast: P } = (0, g.Xo)(),
         { primaryColor: D } = (0, b.z)(),
         [L, x] = i.useState(''),
-        [M, k] = i.useState((0, u.JM)(L)),
-        j = i.useRef(!1),
+        [k, j] = i.useState((0, u.JM)(L)),
+        M = i.useRef(!1),
         U = i.useRef(null),
         G = i.useCallback(
             (e) => {
-                e.key === O.vn.ESCAPE && (e.stopPropagation(), P());
+                e.key === O.vn.ESCAPE && (e.stopPropagation(), R());
             },
-            [P]
+            [R]
         );
     i.useEffect(() => {
         null == _ || _(null == U ? void 0 : U.current);
@@ -80,7 +80,7 @@ function N(e) {
                 sourceType: s,
                 sourceDetails: f
             });
-            w(null);
+            P(null);
             try {
                 await (0, m.Z)({
                     userId: t.id,
@@ -88,12 +88,12 @@ function N(e) {
                     location: 'UserProfileReplyPopout',
                     openChannel: !1,
                     whenReady: !1,
-                    entry: R
+                    entry: w
                 });
             } catch (e) {}
-            w(y.P.REPLY);
+            P(y.P.REPLY);
         },
-        V = {
+        Z = {
             [I.status]: s === y.n_.STATUS,
             [I.avatar]: s === y.n_.AVATAR,
             [I.activity]: s === y.n_.ACTIVITY
@@ -102,7 +102,7 @@ function N(e) {
         ref: U,
         onKeyDown: G,
         children: (0, r.jsx)('div', {
-            className: o()(I.container, V, { [I.customProfileTheme]: null != D }),
+            className: o()(I.container, Z, { [I.customProfileTheme]: null != D }),
             children: (0, r.jsx)(d.ZP, {
                 parentModalKey: E,
                 emojiPickerCloseOnModalOuterClick: !0,
@@ -113,13 +113,13 @@ function N(e) {
                 placeholder: v.intl.formatToPlainString(A(s), { username: p.ZP.getName(n, a, t) }),
                 channel: T,
                 textValue: L,
-                richValue: M,
+                richValue: k,
                 onChange: (e, t, n) => {
-                    t !== L && (x(t), k(n));
+                    t !== L && (x(t), j(n));
                 },
-                focused: j.current,
+                focused: M.current,
                 onFocus: () => {
-                    j.current = !0;
+                    M.current = !0;
                 },
                 onSubmit: async (e) => {
                     let { value: t } = e,
@@ -132,7 +132,7 @@ function N(e) {
                     try {
                         return (
                             await B(n),
-                            P(),
+                            R(),
                             null == C || C(),
                             {
                                 shouldClear: !0,

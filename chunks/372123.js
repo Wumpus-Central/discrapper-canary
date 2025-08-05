@@ -1,62 +1,65 @@
-(n.d(e, { Z: () => c }), n(415506));
-var i = n(570140),
-    r = n(710845),
-    l = n(209492),
-    a = n(981631);
-let o = new r.Z('CloudSync');
-class s {
-    constructor(t) {
-        var e, n;
-        ((n = void 0),
-            (e = 'message') in this
-                ? Object.defineProperty(this, e, {
-                      value: n,
-                      enumerable: !0,
-                      configurable: !0,
-                      writable: !0
-                  })
-                : (this[e] = n),
-            (this.message = t));
+(n.d(t, { Z: () => u }), n(415506));
+var r = n(570140),
+    i = n(710845),
+    a = n(209492),
+    o = n(981631);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let l = new i.Z('CloudSync');
+class c {
+    constructor(e) {
+        (s(this, 'message', void 0), (this.message = e));
     }
 }
-async function c(t, e) {
+async function u(e, t) {
     let n,
-        r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-    i.Z.dispatch({
+        i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+    r.Z.dispatch({
         type: 'GAME_CLOUD_SYNC_START',
-        applicationId: t,
-        branchId: e
+        applicationId: e,
+        branchId: t
     });
     try {
-        if ((n = await l.j(t, e, r)).type === a.QCD.CONFLICT)
+        if ((n = await a.j(e, t, i)).type === o.QCD.CONFLICT)
             throw (
-                i.Z.dispatch({
+                r.Z.dispatch({
                     type: 'GAME_CLOUD_SYNC_CONFLICT',
-                    applicationId: t,
-                    branchId: e,
+                    applicationId: e,
+                    branchId: t,
                     next: n.next,
                     remote: n.remote
                 }),
-                new s('Conflict in cloud sync.')
+                new c('Conflict in cloud sync.')
             );
-        (n.type === a.QCD.PULL || n.type === a.QCD.PUSH) && o.info('Sync complete', n);
+        (n.type === o.QCD.PULL || n.type === o.QCD.PUSH) && l.info('Sync complete', n);
     } catch (n) {
-        if (n instanceof s) throw n;
+        if (n instanceof c) throw n;
         throw (
-            i.Z.dispatch({
+            r.Z.dispatch({
                 type: 'GAME_CLOUD_SYNC_ERROR',
-                applicationId: t,
-                branchId: e
+                applicationId: e,
+                branchId: t
             }),
-            o.error('Failed to cloud sync:', n),
+            l.error('Failed to cloud sync:', n),
             Error('Failed to cloud sync.')
         );
     }
     return (
-        i.Z.dispatch({
+        r.Z.dispatch({
             type: 'GAME_CLOUD_SYNC_COMPLETE',
-            applicationId: t,
-            branchId: e
+            applicationId: e,
+            branchId: t
         }),
         n
     );

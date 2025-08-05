@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => w }), n(388685), n(704826), n(35282));
+(n.d(t, { Z: () => P }), n(388685), n(704826), n(35282));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -76,14 +76,14 @@ function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = R(e, t);
+        i = w(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function R(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -92,7 +92,7 @@ function R(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-class P extends i.PureComponent {
+class R extends i.PureComponent {
     componentDidMount() {
         this.props.editor.events.addListener('onChange', this.handleOnChange);
     }
@@ -407,4 +407,4 @@ class P extends i.PureComponent {
                   }));
     }
 }
-let w = P;
+let P = R;

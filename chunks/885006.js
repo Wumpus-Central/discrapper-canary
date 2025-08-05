@@ -1,6 +1,6 @@
-(r.d(t, { Z: () => i }), r(388685));
+(r.d(t, { Z: () => a }), r(388685));
 var n = r(73800);
-function i() {
+function a() {
     arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     let [e, t] = n.useState(
         (function () {

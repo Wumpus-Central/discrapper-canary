@@ -1,8 +1,8 @@
 (n.d(t, {
-    ZP: () => d,
-    k$: () => f,
-    p6: () => k,
-    rs: () => g
+    ZP: () => y,
+    k$: () => v,
+    p6: () => g,
+    rs: () => m
 }),
     n(388685),
     n(781311),
@@ -11,69 +11,81 @@
     n(865427));
 var r = n(830121),
     i = n(202131),
-    o = n(454585),
-    c = n(408433),
-    a = n(960048),
-    s = n(981631);
-let u = new Set([s.hBH.IMAGE, s.hBH.GIFV]),
-    l = new Set(['strong', 'em', 'u', 'text', 'inlineCode', 's', 'spoiler']);
-function g(e, t) {
-    var n, r, i;
-    let o = k({
+    a = n(454585),
+    o = n(408433),
+    s = n(960048),
+    l = n(981631);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let _ = 30,
+    p = new Set([l.hBH.IMAGE, l.hBH.GIFV]),
+    h = new Set(['strong', 'em', 'u', 'text', 'inlineCode', 's', 'spoiler']);
+function m(e, t) {
+    var n;
+    let r = g({
             channelId: e.channel_id,
             messageId: e.id,
             renderOptions: t
         }),
-        c = null != e.webhookId;
-    return (
-        (r = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
-                    )),
-                    r.forEach(function (t) {
-                        var r;
-                        ((r = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: r,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0
-                                  })
-                                : (e[t] = r));
-                    }));
-            }
-            return e;
-        })({}, o)),
-        (i = i =
-            {
-                allowLinks: c || o.allowLinks,
-                allowEmojiLinks: c,
-                mentionChannels: e.mentionChannels,
-                soundboardSounds: null != (n = e.soundboardSounds) ? n : []
-            }),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(i)).forEach(function (e) {
-                  Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
-              }),
-        r
-    );
+        i = null != e.webhookId;
+    return f(u({}, r), {
+        allowLinks: i || r.allowLinks,
+        allowEmojiLinks: i,
+        mentionChannels: e.mentionChannels,
+        soundboardSounds: null != (n = e.soundboardSounds) ? n : []
+    });
 }
-function k(e) {
+function g(e) {
     let { channelId: t, messageId: n, renderOptions: r } = e;
     return {
         channelId: t,
@@ -98,79 +110,44 @@ function k(e) {
         forceWhite: !!r.forceWhite
     };
 }
-function d(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return (function (e, t, n) {
-        var o;
-        let { toAST: s = !1, hideSimpleEmbedContent: k = !0, formatInline: d = !1, postProcessor: f, shouldFilterKeywords: b, contentMessage: m } = n,
-            y = !1,
-            w = (null != m ? m : t).content,
-            j = e(
-                b
-                    ? (0, i.N)(w, {
-                          escapeReplacement: !0,
-                          messageId: t.id,
-                          channelId: t.channel_id,
-                          authorId: null == (o = t.author) ? void 0 : o.id
-                      })
-                    : w,
-                !0,
-                g(t, n),
-                (e, n) => {
-                    var i, o;
-                    return (
-                        Array.isArray(e) || (e = [e]),
-                        k &&
-                            (e = (function (e, t) {
-                                if (1 !== e.length || 1 !== t.length) return e;
-                                let n = e[0],
-                                    r = t[0];
-                                return ('link' === n.type || 'attachmentLink' === n.type) && u.has(r.type) && (0, c.dY)(r) ? [] : e;
-                            })(e, (null != m ? m : t).embeds)),
-                        d || ((i = e), (e = n ? h(i) : ('paragraph' === i[0].type && i[0].content instanceof Array && (i[0].content = h(i[0].content)), i))),
-                        (e = (function (e) {
-                            let t = e.some((e) => 'link' !== e.type);
-                            return e.filter((e) => {
-                                let n = 'link' === e.type,
-                                    i = null != e.target ? (0, r.el)(e.target) : null;
-                                return !(n && null != i && !t);
-                            });
-                        })(e)),
-                        t.embeds.length > 0 && ((o = e), (y = n ? p(o) : 'paragraph' === o[0].type && o[0].content instanceof Array && p(o[0].content))),
-                        d &&
-                            (e = (function e(t) {
-                                return (
-                                    t.forEach((t) => {
-                                        l.has(t.type) &&
-                                            null != t.content &&
-                                            (Array.isArray(t.content)
-                                                ? e(t.content)
-                                                : 'string' == typeof t.content
-                                                  ? (t.content = t.content.replace(/\n/g, ' '))
-                                                  : a.Z.captureMessage(
-                                                        'AST node type:'
-                                                            .concat(t.type, ' with content typeof ')
-                                                            .concat(typeof t.content, '. Keys ')
-                                                            .concat(Object.keys(t))
-                                                    ));
-                                    }),
-                                    t
-                                );
-                            })(e)),
-                        null != f && (e = f(e, n)),
-                        e
-                    );
-                }
-            );
-        return {
-            hasSpoilerEmbeds: y,
-            content: j
-        };
-    })(t.formatInline ? o.Z.parseInlineReply : o.Z.parse, e, t);
+function E(e, t, n) {
+    var r;
+    let { toAST: a = !1, hideSimpleEmbedContent: o = !0, formatInline: s = !1, postProcessor: l, shouldFilterKeywords: c, contentMessage: u } = n,
+        d = !1,
+        f = (null != u ? u : t).content,
+        _ = e(
+            c
+                ? (0, i.N)(f, {
+                      escapeReplacement: !0,
+                      messageId: t.id,
+                      channelId: t.channel_id,
+                      authorId: null == (r = t.author) ? void 0 : r.id
+                  })
+                : f,
+            !0,
+            m(t, n),
+            (e, n) => (Array.isArray(e) || (e = [e]), o && (e = C(e, (null != u ? u : t).embeds)), s || (e = I(e, n)), (e = b(e)), t.embeds.length > 0 && (d = S(e, n)), s && (e = w(e)), null != l && (e = l(e, n)), e)
+        );
+    return {
+        hasSpoilerEmbeds: d,
+        content: _
+    };
 }
-function f(e, t, n) {
-    return (0, o.Z.parseAutoModerationSystemMessage)(
-        e,
+function b(e) {
+    let t = e.some((e) => 'link' !== e.type);
+    return e.filter((e) => {
+        let n = 'link' === e.type,
+            i = null != (null != e.target ? (0, r.el)(e.target) : null);
+        return !(n && i && !t);
+    });
+}
+function y(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    return E(t.formatInline ? a.Z.parseInlineReply : a.Z.parse, e, t);
+}
+function O(e, t, n, r) {
+    return e(
+        t,
         !0,
         {
             allowLinks: !1,
@@ -185,33 +162,67 @@ function f(e, t, n) {
             allowList: !1,
             allowGameMentions: !1,
             disableAutoBlockNewlines: !0,
-            highlightWord: t,
+            highlightWord: n,
             disableAnimatedEmoji: !1,
-            channelId: n,
+            channelId: r,
             muted: !1
         },
         (e) => (Array.isArray(e) || (e = [e]), e)
     );
 }
-function h(e) {
+function v(e, t, n) {
+    return O(a.Z.parseAutoModerationSystemMessage, e, t, n);
+}
+function I(e, t) {
+    return t ? T(e) : ('paragraph' === e[0].type && e[0].content instanceof Array && (e[0].content = T(e[0].content)), e);
+}
+function T(e) {
     if (e.some((e) => 'emoji' !== e.type && 'customEmoji' !== e.type && 'soundboard' !== e.type && ('string' != typeof e.content || '' !== e.content.trim()))) return e;
     let t = 0;
     return (
         e.forEach((e) => {
-            if ((('emoji' === e.type || 'customEmoji' === e.type || 'soundboard' === e.type) && (t += 1), t > 30)) return !1;
+            if ((('emoji' === e.type || 'customEmoji' === e.type || 'soundboard' === e.type) && (t += 1), t > _)) return !1;
         }),
-        t > 30 ||
+        t > _ ||
             e.forEach((e) => {
                 e.jumboable = !0;
             }),
         e
     );
 }
-function b(e, t) {
-    if (e instanceof Array) return e.some((e) => b(e, t));
-    let n = t(e);
-    return null != n ? n : e.content instanceof Array ? b(e.content, t) : e.items instanceof Array && e.items.some((e) => b(e, t));
+function S(e, t) {
+    return t ? N(e) : 'paragraph' === e[0].type && e[0].content instanceof Array && N(e[0].content);
 }
-function p(e) {
-    return b(e, (e) => ('spoiler' === e.type ? b(e, (e) => 'link' === e.type || 'attachmentLink' === e.type || null) : null));
+function A(e, t) {
+    if (e instanceof Array) return e.some((e) => A(e, t));
+    let n = t(e);
+    return null != n ? n : e.content instanceof Array ? A(e.content, t) : e.items instanceof Array && e.items.some((e) => A(e, t));
+}
+function N(e) {
+    return A(e, (e) => ('spoiler' === e.type ? A(e, (e) => 'link' === e.type || 'attachmentLink' === e.type || null) : null));
+}
+function C(e, t) {
+    if (1 !== e.length || 1 !== t.length) return e;
+    let n = e[0],
+        r = t[0];
+    return ('link' === n.type || 'attachmentLink' === n.type) && p.has(r.type) && (0, o.dY)(r) ? [] : e;
+}
+function w(e) {
+    return (
+        e.forEach((e) => {
+            h.has(e.type) &&
+                null != e.content &&
+                (Array.isArray(e.content)
+                    ? w(e.content)
+                    : 'string' == typeof e.content
+                      ? (e.content = e.content.replace(/\n/g, ' '))
+                      : s.Z.captureMessage(
+                            'AST node type:'
+                                .concat(e.type, ' with content typeof ')
+                                .concat(typeof e.content, '. Keys ')
+                                .concat(Object.keys(e))
+                        ));
+        }),
+        e
+    );
 }

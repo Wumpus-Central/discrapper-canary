@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    a = n(392711),
-    s = n(114858),
+    s = n(392711),
+    a = n(114858),
     c = n(442837),
     u = n(481060),
     d = n(239091),
@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(111028),
     m = n(978003),
     b = n(245216),
-    _ = n(739566),
-    O = n(930282),
+    O = n(739566),
+    _ = n(930282),
     y = n(318713),
     C = n(47930),
     v = n(123145),
@@ -27,8 +27,8 @@ var r = n(255367),
     P = n(592125),
     N = n(720202),
     w = n(430824),
-    T = n(821020),
-    Z = n(948154),
+    Z = n(821020),
+    T = n(948154),
     A = n(804932),
     R = n(993609),
     D = n(987889),
@@ -81,11 +81,11 @@ function V(e, t) {
     );
 }
 function F(e) {
-    let { message: t, channel: n, focusProps: l, isSelected: a, isUnread: s, groupedMessages: d } = e,
+    let { message: t, channel: n, focusProps: l, isSelected: s, isUnread: a, groupedMessages: d } = e,
         h = n.type === M.d4z.UNKNOWN ? u.VL1 : (0, f.KS)(n, null),
         m = (0, p.ZP)(n, !1),
         b = (0, c.e7)([w.Z], () => w.Z.getGuild(n.getGuildId())),
-        { nick: O, colorString: y } = (0, _.ZP)(t),
+        { nick: _, colorString: y } = (0, O.ZP)(t),
         { avatarSrc: j, eventHandlers: E } = (0, S.Z)({
             userId: t.author.id,
             size: u.EFr.SIZE_32,
@@ -100,7 +100,7 @@ function F(e) {
             compact: !0,
             isRepliedMessage: !0
         }),
-        T = (0, r.jsx)('div', {
+        Z = (0, r.jsx)('div', {
             className: G.usernameTagContainer,
             inert: !0,
             children: (0, r.jsx)(v.Z, {
@@ -123,7 +123,7 @@ function F(e) {
                     onMouseEnter: E.onMouseEnter,
                     className: G.messageContainer,
                     children: [
-                        s && !a && (0, r.jsx)('div', { className: G.unreadDot }),
+                        a && !s && (0, r.jsx)('div', { className: G.unreadDot }),
                         (0, r.jsx)(u.Kqy, {
                             align: 'start',
                             style: {
@@ -168,7 +168,7 @@ function F(e) {
                                                       (0, r.jsx)('div', {
                                                           className: G.username,
                                                           style: { color: null != y ? y : void 0 },
-                                                          children: (0, r.jsx)(g.Z, { children: T })
+                                                          children: (0, r.jsx)(g.Z, { children: Z })
                                                       }),
                                                       P
                                                   ]
@@ -190,9 +190,9 @@ function F(e) {
                                                 (0, r.jsx)(D.Z, {
                                                     message: t,
                                                     channel: n,
-                                                    isUnread: s
+                                                    isUnread: a
                                                 }),
-                                                t.mentioned && s
+                                                t.mentioned && a
                                                     ? (0, r.jsx)(u.mAB, {
                                                           className: G.mentionBadge,
                                                           count: 1
@@ -208,8 +208,8 @@ function F(e) {
                                     gap: 4,
                                     inert: !0,
                                     className: o()(G.channelName, {
-                                        [G.unread]: s,
-                                        [G.selected]: a
+                                        [G.unread]: a,
+                                        [G.selected]: s
                                     }),
                                     children: [
                                         null !== h &&
@@ -221,17 +221,17 @@ function F(e) {
                                             variant: 'text-sm/medium',
                                             lineClamp: 1,
                                             className: o()(G.channelName, {
-                                                [G.unread]: s,
-                                                [G.selected]: a
+                                                [G.unread]: a,
+                                                [G.selected]: s
                                             }),
-                                            children: [m, !x && ' \xB7 '.concat(O)]
+                                            children: [m, !x && ' \xB7 '.concat(_)]
                                         })
                                     ]
                                 }),
                                 (0, r.jsx)(W, {
                                     message: t,
-                                    isUnread: s,
-                                    isSelected: a,
+                                    isUnread: a,
+                                    isSelected: s,
                                     channel: n
                                 }),
                                 d.length > 0 &&
@@ -254,7 +254,7 @@ function F(e) {
 }
 function H(e) {
     let { overflowMessages: t } = e,
-        n = (0, a.uniqBy)(
+        n = (0, s.uniqBy)(
             t.map((e) => e.author),
             (e) => e.id
         ).slice(0, 3);
@@ -288,10 +288,10 @@ function z(e) {
     });
 }
 function W(e) {
-    let { message: t, channel: n, isUnread: l, isSelected: a } = e,
-        { previewContent: s, Icon: c } = (function (e) {
+    let { message: t, channel: n, isUnread: l, isSelected: s } = e,
+        { previewContent: a, Icon: c } = (function (e) {
             let { message: t, isUnread: n, isSelected: l } = e,
-                { content: a } = (0, j.Z)(t, {
+                { content: s } = (0, j.Z)(t, {
                     hideSimpleEmbedContent: !0,
                     allowList: !1,
                     allowHeading: !0,
@@ -303,7 +303,7 @@ function W(e) {
             return (0, i.useMemo)(() => {
                 let e = '' === t.content,
                     i = t.embeds.some((e) => e.type === M.hBH.GIFV),
-                    s = (function (e) {
+                    a = (function (e) {
                         let t = e.embeds.some((e) => e.type === M.hBH.GIFV);
                         return e.attachments.length + +!!t;
                     })(t),
@@ -313,8 +313,8 @@ function W(e) {
                     p = t.type === M.uaV.POLL_RESULT,
                     f = t.hasFlag(M.iLy.IS_VOICE_MESSAGE),
                     g = t.type === M.uaV.USER_JOIN,
-                    _ = null;
-                1 === s ? (_ = u.XBm) : s > 1 ? (_ = u.Ka2) : c ? (_ = b.Z) : h || p ? (_ = u.QDj) : d ? (_ = u.SlE) : f && (_ = u.gj8);
+                    O = null;
+                1 === a ? (O = u.XBm) : a > 1 ? (O = u.Ka2) : c ? (O = b.Z) : h || p ? (O = u.QDj) : d ? (O = u.SlE) : f && (O = u.gj8);
                 let y = !0,
                     C = null;
                 if (e)
@@ -322,11 +322,11 @@ function W(e) {
                     else if (h) {
                         var v;
                         ((y = !1), (C = null == (v = t.poll) ? void 0 : v.question.text));
-                    } else C = p ? U.intl.string(U.t.sad2PD) : i ? U.intl.string(U.t.p0oZm5) : s > 1 ? U.intl.formatToPlainString(U.t.rtfTKi, { count: s }) : 1 === s ? U.intl.string(U.t.tCcq5u) : d ? U.intl.format(U.t.zY4v1N, { stickerName: t.stickerItems[0].name }) : f ? U.intl.string(U.t.slFYgo) : g ? U.intl.string(U.t.Yvvfw8) : U.intl.string(U.t.sDqZHB);
+                    } else C = p ? U.intl.string(U.t.sad2PD) : i ? U.intl.string(U.t.p0oZm5) : a > 1 ? U.intl.formatToPlainString(U.t.rtfTKi, { count: a }) : 1 === a ? U.intl.string(U.t.tCcq5u) : d ? U.intl.format(U.t.zY4v1N, { stickerName: t.stickerItems[0].name }) : f ? U.intl.string(U.t.slFYgo) : g ? U.intl.string(U.t.Yvvfw8) : U.intl.string(U.t.sDqZHB);
                 else
                     ((y = !1),
-                        (C = (0, r.jsx)(O.ZP, {
-                            content: a,
+                        (C = (0, r.jsx)(_.ZP, {
+                            content: s,
                             message: t,
                             compact: !1,
                             className: o()(G.message, {
@@ -346,15 +346,15 @@ function W(e) {
                         })),
                     {
                         previewContent: C,
-                        Icon: _
+                        Icon: O
                     }
                 );
-            }, [t, a, n, l]);
+            }, [t, s, n, l]);
         })({
             message: t,
             channel: n,
             isUnread: l,
-            isSelected: a
+            isSelected: s
         });
     return (0, r.jsxs)(u.Kqy, {
         direction: 'horizontal',
@@ -371,7 +371,7 @@ function W(e) {
                 variant: 'text-sm/normal',
                 lineClamp: 1,
                 className: G.message,
-                children: s
+                children: a
             })
         ]
     });
@@ -379,10 +379,10 @@ function W(e) {
 let K = (0, i.memo)(
     function (e) {
         var t;
-        let { message: l, groupedMessages: a, isUnread: h } = e,
+        let { message: l, groupedMessages: s, isUnread: h } = e,
             p = l.message,
             f = (0, A.fJ)(),
-            { params: g } = (0, s.$B)(),
+            { params: g } = (0, a.$B)(),
             m = (0, c.e7)([P.Z], () => {
                 if (null == p) return null;
                 let e = P.Z.getChannel(l.channelId);
@@ -399,23 +399,23 @@ let K = (0, i.memo)(
                 var t;
                 return e.isMenuOpenForMessage(null != (t = null == p ? void 0 : p.id) ? t : null);
             }),
-            { notificationCenterVariant: _ } = T.Lk.useExperiment({ location: 'NotificationsInboxMessageUnit' }),
-            O = i.useMemo(() => ''.concat(null == p ? void 0 : p.author.username, ': ').concat(null == m ? void 0 : m.name), [null == p ? void 0 : p.author.username, null == m ? void 0 : m.name]),
-            y = null != (t = null == a ? void 0 : a.map((e) => e.message).filter((e) => null != e)) ? t : [];
+            { notificationCenterVariant: O } = Z.Lk.useExperiment({ location: 'NotificationsInboxMessageUnit' }),
+            _ = i.useMemo(() => ''.concat(null == p ? void 0 : p.author.username, ': ').concat(null == m ? void 0 : m.name), [null == p ? void 0 : p.author.username, null == m ? void 0 : m.name]),
+            y = null != (t = null == s ? void 0 : s.map((e) => e.message).filter((e) => null != e)) ? t : [];
         return null == p || null == m
             ? null
             : (0, r.jsx)(u.kL8, {
-                  'aria-label': O,
+                  'aria-label': _,
                   className: o()(G.messageClickableContainer, {
                       [G.selected]: p.id === g.messageId,
                       [G.actionMenuOpen]: b
                   }),
                   onClick: () => {
-                      Z.Z.inboxItemClick({
+                      T.Z.inboxItemClick({
                           message: p,
                           channel: m,
                           isUnread: h,
-                          isSidebar: _ === T.jP.SIDEBAR,
+                          isSidebar: O === Z.jP.SIDEBAR,
                           viewId: f
                       });
                   },

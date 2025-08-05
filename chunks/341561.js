@@ -53,17 +53,17 @@ let T = 8,
     A = 4,
     N = 40,
     C = 6;
-function R(e, t) {
+function w(e, t) {
     return (0, r.jsx)(f.Z, {
         sticker: e,
         isInteracting: t,
         size: 40
     });
 }
-function P(e) {
+function R(e) {
     return ''.concat(E.Iv).concat(e.name).concat(E.Iv);
 }
-function w(e) {
+function P(e) {
     var t;
     let n = e.animated ? 'a' : '';
     return e.managed || null == e.id
@@ -196,7 +196,7 @@ let D = {
                     getProps: (e) => {
                         let { comparator: t, sticker: n } = e;
                         return {
-                            renderSticker: R,
+                            renderSticker: w,
                             queryMatch: t !== n.name.toLocaleLowerCase() ? t : void 0,
                             sticker: n,
                             key: n.id
@@ -242,7 +242,7 @@ let D = {
         if (a < t.length) {
             let e = t[a];
             return (
-                o.insertText(P(e), w(e)),
+                o.insertText(R(e), P(e)),
                 {
                     type: g.z2.EMOJI,
                     metadata: {

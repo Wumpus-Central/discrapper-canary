@@ -1,48 +1,48 @@
 n.d(t, { d: () => d });
 var i = n(255367),
-    a = n(873546),
-    o = n(755721),
-    s = n(481060),
-    l = n(950796),
-    r = n(59662),
+    o = n(873546),
+    l = n(755721),
+    a = n(481060),
+    r = n(950796),
+    s = n(59662),
     c = n(254204);
 function u(e) {
-    let { icon: t, onClick: n, disabled: a } = e;
-    return (0, i.jsx)(o.zx, {
-        look: o.zx.Looks.BLANK,
-        size: o.zx.Sizes.NONE,
+    let { icon: t, onClick: n, disabled: o } = e;
+    return (0, i.jsx)(l.zx, {
+        look: l.zx.Looks.BLANK,
+        size: l.zx.Sizes.NONE,
         className: c.topBarButton,
         innerClassName: c.iconButtonInner,
         onClick: n,
-        disabled: a,
+        disabled: o,
         children: (0, i.jsx)(t, { size: 'sm' })
     });
 }
 function d(e) {
     let { onClose: t } = e,
-        { history: n, activeIndex: o, forward: d, back: f } = (0, r.t)();
+        { history: n, activeIndex: l, forward: d, back: f } = (0, s.t)();
     return (0, i.jsx)('div', {
         className: c.topBar,
-        children: (0, i.jsx)(l.TF, {
+        children: (0, i.jsx)(r.TF, {
             leading: (0, i.jsxs)('div', {
                 className: c.arrowButtons,
                 children: [
                     (0, i.jsx)(u, {
-                        icon: s.whL,
-                        disabled: 0 === o,
+                        icon: a.whL,
+                        disabled: 0 === l,
                         onClick: f
                     }),
                     (0, i.jsx)(u, {
-                        icon: s.ZSh,
-                        disabled: o === n.length - 1,
+                        icon: a.ZSh,
+                        disabled: l === n.length - 1,
                         onClick: d
                     })
                 ]
             }),
             trailing:
-                a.tq &&
+                o.tq &&
                 (0, i.jsx)(u, {
-                    icon: s.Dio,
+                    icon: a.Dio,
                     onClick: t
                 })
         })

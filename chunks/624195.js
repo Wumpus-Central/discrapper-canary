@@ -1,43 +1,45 @@
-(t.d(l, { Z: () => u }), t(413496), t(433524), t(35282));
-var r = t(255367);
-t(73800);
-var n = t(120356),
-    i = t.n(n),
-    s = t(729594),
-    a = t(94488);
-let o = RegExp('^music\\.amazon\\.(?:com|co\\.uk|de|co\\.jp|es|fr|it|com\\.au|in|ca|com\\.mx|com\\.br)');
+(n.d(t, { Z: () => f }), n(413496), n(433524), n(35282));
+var r = n(255367);
+n(73800);
+var i = n(120356),
+    a = n.n(i),
+    o = n(729594),
+    s = n(94488);
+let l = RegExp('^music\\.amazon\\.(?:com|co\\.uk|de|co\\.jp|es|fr|it|com\\.au|in|ca|com\\.mx|com\\.br)'),
+    c = 500,
+    u = 400;
 function d(e) {
-    let l = null,
-        t = null,
+    let t = null,
+        n = null,
         r = null;
     try {
-        ((l = (r = s.parse(e, !0)).host), (t = r.pathname));
+        ((t = (r = o.parse(e, !0)).host), (n = r.pathname));
     } catch (e) {
         return null;
     }
-    return null != r && o.test(null != l ? l : '') && null != t ? r : null;
+    return null != r && l.test(null != t ? t : '') && null != n ? r : null;
 }
-function u(e) {
+function f(e) {
     let {
-        className: l,
-        embed: { url: t, thumbnail: n }
+        className: t,
+        embed: { url: n, thumbnail: i }
     } = e;
-    if (null == t || null == n) return null;
-    let s = d(t);
-    if (null == s) return null;
-    let o = s.query.iframe_url;
-    if (null == o || Array.isArray(o) || null == d(o)) return null;
-    let { width: u, height: c } = n,
-        h = u,
-        m = c;
+    if (null == n || null == i) return null;
+    let o = d(n);
+    if (null == o) return null;
+    let l = o.query.iframe_url;
+    if (null == l || Array.isArray(l) || null == d(l)) return null;
+    let { width: f, height: _ } = i,
+        p = f,
+        h = _;
     return (
-        (u > 500 || c > 400) && (u > c ? ((h = 500), (m = (500 * c) / u)) : ((h = (400 * u) / c), (m = 400))),
+        (f > c || _ > u) && (f > _ ? ((p = c), (h = (c * _) / f)) : ((p = (u * f) / _), (h = u))),
         (0, r.jsx)('iframe', {
-            className: i()(a.embedAmazonMusic, l),
-            src: o,
+            className: a()(s.embedAmazonMusic, t),
+            src: l,
             style: {
-                width: h,
-                height: m
+                width: p,
+                height: h
             },
             frameBorder: 0,
             sandbox: 'allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts'

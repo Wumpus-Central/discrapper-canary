@@ -1,140 +1,147 @@
-(n.d(t, { Z: () => N }), n(539854), n(388685));
-var i = n(255367);
+(n.d(t, { Z: () => A }), n(539854), n(388685));
+var r = n(255367);
 n(73800);
-var r = n(120356),
-    l = n.n(r);
-if (12633 == n.j) var o = n(114858);
-var s = n(442837),
-    a = n(755721),
+var i = n(120356),
+    a = n.n(i),
+    o = n(114858),
+    s = n(442837),
+    l = n(755721),
     c = n(481060),
-    d = n(430824),
-    u = n(914010),
-    h = n(693546),
+    u = n(430824),
+    d = n(914010),
+    f = n(693546),
     _ = n(305325),
-    E = n(246364),
-    p = n(983736),
-    I = n(937111),
+    p = n(246364),
+    h = n(983736),
+    m = n(937111),
     g = n(981631),
-    f = n(176505),
-    C = n(388032),
-    O = n(246752),
-    T = n(240211);
-function S(e) {
+    E = n(176505),
+    b = n(388032),
+    y = n(246752),
+    O = n(240211);
+function v(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            i.forEach(function (t) {
-                var i;
-                ((i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = i));
+            r.forEach(function (t) {
+                v(e, t, n[t]);
             }));
     }
     return e;
 }
-let N =
-    12633 == n.j
-        ? () => {
-              var e, t;
-              let r = (0, s.e7)([u.Z], () => u.Z.getGuildId(), []),
-                  N = (0, s.e7)([d.Z], () => d.Z.getGuild(r), [r]),
-                  m = (0, s.e7)([I.Z], () => (null != r ? I.Z.getRequest(r) : null), [r]),
-                  R = (0, o.TH)(),
-                  A = (null == (e = (0, o.LX)(R.pathname, g.Z5c.CHANNEL(null == N ? void 0 : N.id, f.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
-              if (null == N || !(0, p.Dc)(N) || A) return null;
-              let y = null != (t = null == m ? void 0 : m.applicationStatus) ? t : E.wB.STARTED,
-                  b = null,
-                  P = null,
-                  D = null,
-                  v = [O.notice, T.notice];
-              switch (y) {
-                  case E.wB.SUBMITTED:
-                      ((b = C.intl.string(C.t['5iLvS0'])),
-                          (P = C.intl.string(C.t.mqtdmZ)),
-                          (D = () => {
-                              (0, c.h7j)((e) => {
-                                  var t, n;
-                                  return (0, i.jsx)(
-                                      c.ConfirmModal,
-                                      ((t = S(
-                                          {
-                                              header: C.intl.string(C.t.aIz1oa),
-                                              confirmText: C.intl.string(C.t['cY+Ooa']),
-                                              cancelText: C.intl.string(C.t['ETE/oK']),
-                                              onConfirm: () => h.Z.removeGuildJoinRequest(N.id),
-                                              confirmButtonColor: a.zx.Colors.BRAND
-                                          },
-                                          e
-                                      )),
-                                      (n = n =
-                                          {
-                                              children: (0, i.jsx)(c.Text, {
-                                                  variant: 'text-md/normal',
-                                                  children: C.intl.string(C.t['13tjTU'])
-                                              })
-                                          }),
-                                      Object.getOwnPropertyDescriptors
-                                          ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                                          : (function (e, t) {
-                                                var n = Object.keys(e);
-                                                if (Object.getOwnPropertySymbols) {
-                                                    var i = Object.getOwnPropertySymbols(e);
-                                                    n.push.apply(n, i);
-                                                }
-                                                return n;
-                                            })(Object(n)).forEach(function (e) {
-                                                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                                            }),
-                                      t)
-                                  );
-                              });
-                          }));
-                      break;
-                  case E.wB.REJECTED:
-                      ((b = C.intl.string(C.t.lk30cX)),
-                          (P = C.intl.string(C.t['8RrsHh'])),
-                          (D = () => {
-                              (0, c.ZDy)(async () => {
-                                  let { default: e } = await n.e('3378').then(n.bind(n, 76075));
-                                  return (t) => (0, i.jsx)(e, S({ guildId: N.id }, t));
-                              });
-                          }),
-                          v.push(O.error));
-                      break;
-                  default:
-                      ((b = C.intl.string(C.t.G5YKXF)),
-                          (P = C.intl.string(C.t['r8/DT0'])),
-                          (D = () => {
-                              (0, _.hk)(N.id);
-                          }));
-              }
-              return (0, i.jsxs)('div', {
-                  className: l()(...v),
-                  children: [
-                      (0, i.jsx)(c.Text, {
-                          className: O.header,
-                          variant: 'text-sm/normal',
-                          children: b
-                      }),
-                      (0, i.jsx)(c.zxk, {
-                          variant: 'overlay-primary',
-                          size: 'sm',
-                          onClick: D,
-                          text: P
-                      })
-                  ]
-              });
-          }
-        : null;
+function T(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function S(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : T(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let A = () => {
+    var e, t;
+    let i = (0, s.e7)([d.Z], () => d.Z.getGuildId(), []),
+        v = (0, s.e7)([u.Z], () => u.Z.getGuild(i), [i]),
+        T = (0, s.e7)([m.Z], () => (null != i ? m.Z.getRequest(i) : null), [i]),
+        A = (0, o.TH)(),
+        N = (null == (e = (0, o.LX)(A.pathname, g.Z5c.CHANNEL(null == v ? void 0 : v.id, E.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
+    if (null == v || !(0, h.Dc)(v) || N) return null;
+    let C = () => {
+            (0, _.hk)(v.id);
+        },
+        w = () => {
+            (0, c.h7j)((e) =>
+                (0, r.jsx)(
+                    c.ConfirmModal,
+                    S(
+                        I(
+                            {
+                                header: b.intl.string(b.t.aIz1oa),
+                                confirmText: b.intl.string(b.t['cY+Ooa']),
+                                cancelText: b.intl.string(b.t['ETE/oK']),
+                                onConfirm: () => f.Z.removeGuildJoinRequest(v.id),
+                                confirmButtonColor: l.zx.Colors.BRAND
+                            },
+                            e
+                        ),
+                        {
+                            children: (0, r.jsx)(c.Text, {
+                                variant: 'text-md/normal',
+                                children: b.intl.string(b.t['13tjTU'])
+                            })
+                        }
+                    )
+                )
+            );
+        },
+        R = () => {
+            (0, c.ZDy)(async () => {
+                let { default: e } = await n.e('3378').then(n.bind(n, 76075));
+                return (t) => (0, r.jsx)(e, I({ guildId: v.id }, t));
+            });
+        },
+        P = null != (t = null == T ? void 0 : T.applicationStatus) ? t : p.wB.STARTED,
+        D = null,
+        L = null,
+        x = null,
+        k = [y.notice, O.notice];
+    switch (P) {
+        case p.wB.SUBMITTED:
+            ((D = b.intl.string(b.t['5iLvS0'])), (L = b.intl.string(b.t.mqtdmZ)), (x = w));
+            break;
+        case p.wB.REJECTED:
+            ((D = b.intl.string(b.t.lk30cX)), (L = b.intl.string(b.t['8RrsHh'])), (x = R), k.push(y.error));
+            break;
+        default:
+            ((D = b.intl.string(b.t.G5YKXF)), (L = b.intl.string(b.t['r8/DT0'])), (x = C));
+    }
+    return (0, r.jsxs)('div', {
+        className: a()(...k),
+        children: [
+            (0, r.jsx)(c.Text, {
+                className: y.header,
+                variant: 'text-sm/normal',
+                children: D
+            }),
+            (0, r.jsx)(c.zxk, {
+                variant: 'overlay-primary',
+                size: 'sm',
+                onClick: x,
+                text: L
+            })
+        ]
+    });
+};

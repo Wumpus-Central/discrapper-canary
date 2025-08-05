@@ -1,10 +1,10 @@
 (n.d(t, {
-    D$: () => P,
-    N4: () => k,
-    UI: () => R,
+    D$: () => R,
+    N4: () => j,
+    UI: () => w,
     Uu: () => S,
-    cS: () => w,
-    cZ: () => j,
+    cS: () => P,
+    cZ: () => M,
     e1: () => B,
     eQ: () => C,
     fw: () => N,
@@ -103,13 +103,13 @@ function C(e) {
     for (let t of e.reactions) if (null == t.me_vote) return !0;
     return !1;
 }
-function R(e) {
+function w(e) {
     return (0, s.e7)([p.Z], () => null != e && e.id !== l.V && !!b.TPd.POLLS.has(e.type) && (!!e.isPrivate() || (p.Z.can(b.Plq.SEND_MESSAGES, e) && p.Z.can(b.Plq.SEND_POLLS, e))));
 }
-function P(e, t) {
-    return 0 === e.length && null == t.find((e) => w(e));
+function R(e, t) {
+    return 0 === e.length && null == t.find((e) => P(e));
 }
-function w(e) {
+function P(e) {
     var t;
     let n = null == (t = e.text) ? void 0 : t.trim();
     return null != n && n.length > 0;
@@ -151,20 +151,20 @@ function x(e) {
         answers: n
     });
 }
-function M(e, t) {
+function k(e, t) {
     var n, r, i, a;
     let s = null != (a = null == (i = e.embeds[0]) || null == (r = i.fields) || null == (n = r.find((e) => 'poll_question_text' === e.rawName)) ? void 0 : n.rawValue) ? a : '';
     return null != t ? (0, o.aF)(s, t) : s;
 }
-function k(e) {
+function j(e) {
     let t = (0, u.ZH)(e),
-        n = M(e, E.Dv);
+        n = k(e, E.Dv);
     return y.intl.format(y.t.Vn97KS, {
         username: t.nick,
         title: n
     });
 }
-function j(e) {
+function M(e) {
     return e.reduce((e, t) => {
         var n, r;
         return e + (null != (r = null == (n = t.count_details) ? void 0 : n.vote) ? r : 0);

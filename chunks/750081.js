@@ -26,25 +26,25 @@ var d = n(155458),
     A = n(534713),
     N = n(358085),
     C = n(703656),
-    R = n(284737),
-    P = n(473159),
-    w = n(846519),
+    w = n(284737),
+    R = n(473159),
+    P = n(846519),
     D = n(579806),
     L = n(896361),
     x = n(746106),
-    M = n(177692);
+    k = n(177692);
 n(635153);
-var k = n(857192),
-    j = n(891086),
+var j = n(857192),
+    M = n(891086),
     U = n(44163),
     G = n(710845),
     B = n(70956),
-    V = n(378799);
-(k.default.cssDebuggingEnabled && n.e('34600').then(n.bind(n, 671996)), (0, V.s5)());
+    Z = n(378799);
+(j.default.cssDebuggingEnabled && n.e('34600').then(n.bind(n, 671996)), (0, Z.s5)());
 let F = 5 * B.Z.Millis.MINUTE,
-    Z = document.getElementById('app-mount');
-(_()(null != Z, 'Could not find app-mount'), (Z.className = __OVERLAY__ ? '' : j.appMount));
-let H = (0, d.createRoot)(Z),
+    V = document.getElementById('app-mount');
+(_()(null != V, 'Could not find app-mount'), (V.className = __OVERLAY__ ? '' : M.appMount));
+let H = (0, d.createRoot)(V),
     Y = { '/oauth2/authorize': A.Z };
 function W(e, t, n) {
     var r;
@@ -77,22 +77,22 @@ if (null != D.Z) {
     let d = null == (l = (c = D.Z.remoteApp).getReleaseChannel) ? void 0 : l.call(c);
     (('ptb' === d || 'canary' === d || 'development' === d) && T.ZP.pauseFrameEvictor(), T.ZP.initializeExitHook(), T.ZP.initializeWERHandler());
 }
-if (((0, P.O)(window), __OVERLAY__)) K(p.Z.Overlay);
+if (((0, R.O)(window), __OVERLAY__)) K(p.Z.Overlay);
 else if (null != window.require && null == window.DiscordNative) K(p.Z.OutdatedClient);
 else {
     if ((document.addEventListener('scroll', (e) => e.preventDefault()), N.isPlatformEmbedded)) {
         ((window.onbeforeunload = () => T.ZP.beforeUnload()), T.ZP.on('HELP_OPEN', () => window.open(v.Z.getCommunityURL())));
-        let e = new w.sW(F, () => T.ZP.purgeMemory());
+        let e = new P.sW(F, () => T.ZP.purgeMemory());
         (T.ZP.on('MAIN_WINDOW_BLUR', () => {
-            (e.delay(), T.ZP.setFocused(!1), (0, R.T_)(window, !1));
+            (e.delay(), T.ZP.setFocused(!1), (0, w.T_)(window, !1));
         }),
             T.ZP.on('MAIN_WINDOW_FOCUS', () => {
-                (e.cancel(), T.ZP.setFocused(!0), (0, R.T_)(window, !0));
+                (e.cancel(), T.ZP.setFocused(!0), (0, w.T_)(window, !0));
             }),
             T.ZP.on('MAIN_WINDOW_PATH', W),
             T.ZP.on('MAIN_WINDOW_HIDDEN', () => {
-                (0, R.al)(window);
+                (0, w.al)(window);
             }));
     }
-    (E.Z.initialize(), h.Z.initialize(), m.Z.init(), y.Z.init(), U.Z.init(), g.Z.initialize(), I.Z.initialize(), S.Z.initialize(), b.j(), (0, M.Mn)(), K(p.Z.App));
+    (E.Z.initialize(), h.Z.initialize(), m.Z.init(), y.Z.init(), U.Z.init(), g.Z.initialize(), I.Z.initialize(), S.Z.initialize(), b.j(), (0, k.Mn)(), K(p.Z.App));
 }

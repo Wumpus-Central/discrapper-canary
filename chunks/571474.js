@@ -1,34 +1,37 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var r,
-    i,
-    l,
-    a = n(442837),
-    o = n(570140),
-    s = n(70956),
-    c = n(709054),
-    u = n(314897),
-    d = n(699516);
-let p = 180 * s.Z.Millis.DAY,
-    m = !1;
-class f extends (l = a.ZP.Store) {
+    i = n(442837),
+    a = n(570140),
+    o = n(70956),
+    s = n(709054),
+    l = n(314897),
+    c = n(699516);
+function u(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let d = 10,
+    f = 180 * o.Z.Millis.DAY,
+    _ = !1;
+function p() {
+    return _ !== (_ = c.Z.getFriendIDs().length >= d && s.default.extractTimestamp(l.default.getId()) < Date.now() - f);
+}
+class h extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(d.Z, u.default);
+        this.waitFor(c.Z, l.default);
     }
     isEligible() {
-        return m;
+        return _;
     }
 }
-((i = 'PremiumPromoStore'),
-    (r = 'displayName') in f
-        ? Object.defineProperty(f, r, {
-              value: i,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (f[r] = i));
-let g = new f(o.Z, {
-    CONNECTION_OPEN: function () {
-        return m !== (m = d.Z.getFriendIDs().length >= 10 && c.default.extractTimestamp(u.default.getId()) < Date.now() - p);
-    }
-});
+u(h, 'displayName', 'PremiumPromoStore');
+let m = new h(a.Z, { CONNECTION_OPEN: p });

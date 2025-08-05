@@ -88,7 +88,7 @@ function I(e) {
 }
 function T(e) {
     let { threads: t } = e;
-    t.forEach(R);
+    t.forEach(w);
 }
 function S(e) {
     let { channel: t } = e;
@@ -100,7 +100,7 @@ function A(e) {
 }
 function N(e) {
     let t = !1;
-    for (let n of e.messages) t = R(n.thread) || t;
+    for (let n of e.messages) t = w(n.thread) || t;
     return t;
 }
 function C(e) {
@@ -111,29 +111,29 @@ function C(e) {
             let { threads: t, messages: r } = e;
             (r.forEach((e) => {
                 e.forEach((e) => {
-                    n = R(e.thread) || n;
+                    n = w(e.thread) || n;
                 });
             }),
                 t.forEach((e) => {
-                    n = R(e) || n;
+                    n = w(e) || n;
                 }));
         }),
         n
     );
 }
-function R(e) {
+function w(e) {
     if (null != e && !(e.id in f)) {
         let t = c.Z.getChannel(e.id);
         if (null != t) return (g(t), !0);
     }
     return !1;
 }
-function P(e) {
+function R(e) {
     let t = f[e.id];
     if (null == t) return !1;
     (null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview), (t.memberCount = e.memberCount));
 }
-class w extends (r = o.ZP.Store) {
+class P extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }
@@ -149,8 +149,8 @@ class w extends (r = o.ZP.Store) {
         return f;
     }
 }
-u(w, 'displayName', 'ThreadMembersStore');
-let D = new w(s.Z, {
+u(P, 'displayName', 'ThreadMembersStore');
+let D = new P(s.Z, {
     CONNECTION_OPEN: E,
     OVERLAY_INITIALIZE: b,
     GUILD_CREATE: y,
@@ -159,7 +159,7 @@ let D = new w(s.Z, {
     THREAD_CREATE: v,
     THREAD_UPDATE: v,
     THREAD_LIST_SYNC: I,
-    THREAD_MEMBERS_UPDATE: P,
+    THREAD_MEMBERS_UPDATE: R,
     SEARCH_MESSAGES_SUCCESS: C,
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: C,
     LOAD_THREADS_SUCCESS: T,

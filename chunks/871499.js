@@ -89,12 +89,12 @@ function v(e, t) {
     return i;
 }
 function I(e) {
-    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: a, onMouseLeave: u, onContextMenu: d, className: f, wrapperClassName: p, iconClassName: h, iconColor: g = 'currentColor', iconComponent: b, themeable: v = !1, disabled: I = !1, isActive: T = !1, tooltipPosition: S = 'top', shouldShowTooltip: A = !0, forceTooltipOpen: N = !1, buttonRef: C, grow: R, 'aria-label': P, look: w, buttonText: D, size: L, color: x } = e;
+    let { label: t, onClick: n, onKeyDown: i, onMouseEnter: a, onMouseLeave: u, onContextMenu: d, className: f, wrapperClassName: p, iconClassName: h, iconColor: g = 'currentColor', iconComponent: b, themeable: v = !1, disabled: I = !1, isActive: T = !1, tooltipPosition: S = 'top', shouldShowTooltip: A = !0, forceTooltipOpen: N = !1, buttonRef: C, grow: w, 'aria-label': R, look: P, buttonText: D, size: L, color: x } = e;
     return (0, r.jsx)(_.Z, {
         children: (0, r.jsx)(c.ua7, {
             position: S,
             text: t,
-            'aria-label': P,
+            'aria-label': R,
             shouldShow: A,
             forceOpen: N,
             children: (e) => {
@@ -105,7 +105,7 @@ function I(e) {
                     y(
                         E(
                             {
-                                look: null != w ? w : l.zx.Looks.BLANK,
+                                look: null != P ? P : l.zx.Looks.BLANK,
                                 size: null != L ? L : l.zx.Sizes.NONE,
                                 color: x,
                                 onKeyDown: (e) => {
@@ -137,8 +137,8 @@ function I(e) {
                                 className: o()({ [m.active]: T }, f),
                                 wrapperClassName: p,
                                 buttonRef: C,
-                                grow: R,
-                                'aria-label': P
+                                grow: w,
+                                'aria-label': R
                             },
                             A
                         ),
@@ -188,34 +188,34 @@ let T = {
     };
 function A(e) {
     var t,
-        { ref: n, color: a, caretColor: s, isActive: l = !1, className: g, iconClassName: b, onPopoutClick: v, popoutOpen: A = !1, popoutDisabled: N = !1, isTrayButton: C, applyStyles: R = !1 } = e,
-        P = O(e, ['ref', 'color', 'caretColor', 'isActive', 'className', 'iconClassName', 'onPopoutClick', 'popoutOpen', 'popoutDisabled', 'isTrayButton', 'applyStyles']);
-    let w = (0, p.Z)(a, l),
-        D = null != s ? s : w,
+        { ref: n, color: a, caretColor: s, isActive: l = !1, className: g, iconClassName: b, onPopoutClick: v, popoutOpen: A = !1, popoutDisabled: N = !1, isTrayButton: C, applyStyles: w = !1 } = e,
+        R = O(e, ['ref', 'color', 'caretColor', 'isActive', 'className', 'iconClassName', 'onPopoutClick', 'popoutOpen', 'popoutDisabled', 'isTrayButton', 'applyStyles']);
+    let P = (0, p.Z)(a, l),
+        D = null != s ? s : P,
         L = (0, u.Z)('(max-width: 456px)'),
         x = i.useRef(null),
-        M = i.useContext(f.h9);
+        k = i.useContext(f.h9);
     i.useEffect(() => {
-        null != x.current && (M ? x.current.pause() : x.current.play());
-    }, [M]);
-    let k = null != (t = P.onContextMenu) ? t : v,
-        j = null == v && !C,
+        null != x.current && (k ? x.current.pause() : x.current.play());
+    }, [k]);
+    let j = null != (t = R.onContextMenu) ? t : v,
+        M = null == v && !C,
         U = null != v && !C,
         G = C && null != v,
         B = (0, r.jsx)(
             I,
-            y(E({}, P), {
+            y(E({}, R), {
                 grow: !1,
-                onContextMenu: k,
-                iconClassName: o()(b, m.centerIcon, j && m.fullRegionIcon),
-                className: o()(L || R ? g : null, l && m.active, m.centerButton, S[w], j && m.fullRegionButton, G && m.attachedButton)
+                onContextMenu: j,
+                iconClassName: o()(b, m.centerIcon, M && m.fullRegionIcon),
+                className: o()(L || w ? g : null, l && m.active, m.centerButton, S[P], M && m.fullRegionButton, G && m.attachedButton)
             })
         );
     return L
         ? B
         : (0, r.jsxs)('div', {
               ref: n,
-              className: o()(m.attachedCaretButtonContainer, A && m.popoutOpen, g, U && [m.fullRegionDropdownButton, T[w]]),
+              className: o()(m.attachedCaretButtonContainer, A && m.popoutOpen, g, U && [m.fullRegionDropdownButton, T[P]]),
               children: [
                   B,
                   null != v

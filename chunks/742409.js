@@ -1,30 +1,30 @@
-t.d(e, {
-    Z: () => u,
-    l: () => E
+e.d(t, {
+    Z: () => s,
+    l: () => w
 });
-var n = t(255367);
-t(73800);
-var r = t(120356),
-    l = t.n(r),
-    i = t(481060),
-    s = t(957537),
-    a = t(737770),
-    o = t(839008),
-    g = t(685184),
-    f = t(369509),
-    v = t(195196),
-    c = t(388032),
-    h = t(668271);
-function E(A) {
-    return (0, n.jsxs)('div', {
-        className: l()(h.messageContainer, A.className),
+var r = e(255367);
+e(73800);
+var g = e(120356),
+    v = e.n(g),
+    n = e(481060),
+    f = e(957537),
+    B = e(737770),
+    l = e(839008),
+    h = e(685184),
+    i = e(369509),
+    o = e(195196),
+    C = e(388032),
+    a = e(668271);
+function w(A) {
+    return (0, r.jsxs)('div', {
+        className: v()(a.messageContainer, A.className),
         children: [
-            (0, n.jsx)('div', {
-                className: h.avatarContainer,
+            (0, r.jsx)('div', {
+                className: a.avatarContainer,
                 children:
                     'string' == typeof A.avatar
-                        ? (0, n.jsx)('img', {
-                              className: h.avatar,
+                        ? (0, r.jsx)('img', {
+                              className: a.avatar,
                               src: A.avatar,
                               alt: ''.concat(A.username, ' avatar'),
                               width: 40,
@@ -32,14 +32,14 @@ function E(A) {
                           })
                         : A.avatar
             }),
-            (0, n.jsxs)('div', {
-                className: h.contentContainer,
+            (0, r.jsxs)('div', {
+                className: a.contentContainer,
                 children: [
-                    (0, n.jsxs)('div', {
-                        className: h.usernameContainer,
+                    (0, r.jsxs)('div', {
+                        className: a.usernameContainer,
                         children: [
                             'string' == typeof A.username
-                                ? (0, n.jsx)(i.Text, {
+                                ? (0, r.jsx)(n.Text, {
                                       'data-text': A.username,
                                       className: A.usernameClassName,
                                       variant: 'text-md/semibold',
@@ -48,14 +48,14 @@ function E(A) {
                                   })
                                 : A.username,
                             void 0 !== A.decorations &&
-                                (0, n.jsx)('div', {
-                                    className: h.decorationsContainer,
+                                (0, r.jsx)('div', {
+                                    className: a.decorationsContainer,
                                     children: A.decorations
                                 })
                         ]
                     }),
                     null != A.message &&
-                        (0, n.jsx)(i.Text, {
+                        (0, r.jsx)(n.Text, {
                             variant: 'text-md/medium',
                             children: A.message
                         }),
@@ -65,91 +65,91 @@ function E(A) {
         ]
     });
 }
-let u = function (A) {
-    var { className: e } = A,
-        t = (function (A, e) {
+let s = function (A) {
+    var { className: t } = A,
+        e = (function (A, t) {
             if (null == A) return {};
-            var t,
-                n,
-                r = (function (A, e) {
+            var e,
+                r,
+                g = (function (A, t) {
                     if (null == A) return {};
-                    var t,
-                        n,
-                        r = {},
-                        l = Object.keys(A);
-                    for (n = 0; n < l.length; n++) ((t = l[n]), e.indexOf(t) >= 0 || (r[t] = A[t]));
-                    return r;
-                })(A, e);
+                    var e,
+                        r,
+                        g = {},
+                        v = Object.keys(A);
+                    for (r = 0; r < v.length; r++) ((e = v[r]), t.indexOf(e) >= 0 || (g[e] = A[e]));
+                    return g;
+                })(A, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(A);
-                for (n = 0; n < l.length; n++) ((t = l[n]), !(e.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(A, t) && (r[t] = A[t]));
+                var v = Object.getOwnPropertySymbols(A);
+                for (r = 0; r < v.length; r++) ((e = v[r]), !(t.indexOf(e) >= 0) && Object.prototype.propertyIsEnumerable.call(A, e) && (g[e] = A[e]));
             }
-            return r;
+            return g;
         })(A, ['className']);
-    return (0, n.jsxs)('div', {
-        className: l()(h.container, e),
+    return (0, r.jsxs)('div', {
+        className: v()(a.container, t),
         children: [
-            (0, n.jsx)(E, {
-                className: h.unfocusedMessage,
-                avatar: s.Z,
+            (0, r.jsx)(w, {
+                className: a.unfocusedMessage,
+                avatar: f.Z,
                 username: 'Roka',
                 usernameStyle: { color: 'var(--brand-400)' },
-                message: c.intl.string(v.default.bpghV1)
+                message: C.intl.string(o.default.bpghV1)
             }),
-            (0, n.jsx)(E, {
-                className: h.unfocusedMessage,
-                avatar: a.Z,
+            (0, r.jsx)(w, {
+                className: a.unfocusedMessage,
+                avatar: B.Z,
                 username: 'hongo',
                 usernameStyle: { color: 'var(--green-230)' },
-                message: c.intl.string(v.default['rnpv7+'])
+                message: C.intl.string(o.default['rnpv7+'])
             }),
-            (0, n.jsx)(E, {
-                avatar: o.Z,
+            (0, r.jsx)(w, {
+                avatar: l.Z,
                 username: 'Lily',
                 usernameStyle: { color: 'var(--orange-300)' },
-                message: c.intl.string(v.default.u7tjsr),
-                decorations: (0, n.jsx)(
-                    f.S,
+                message: C.intl.string(o.default.u7tjsr),
+                decorations: (0, r.jsx)(
+                    i.S,
                     (function (A) {
-                        for (var e = 1; e < arguments.length; e++) {
-                            var t = null != arguments[e] ? arguments[e] : {},
-                                n = Object.keys(t);
+                        for (var t = 1; t < arguments.length; t++) {
+                            var e = null != arguments[t] ? arguments[t] : {},
+                                r = Object.keys(e);
                             ('function' == typeof Object.getOwnPropertySymbols &&
-                                (n = n.concat(
-                                    Object.getOwnPropertySymbols(t).filter(function (A) {
-                                        return Object.getOwnPropertyDescriptor(t, A).enumerable;
+                                (r = r.concat(
+                                    Object.getOwnPropertySymbols(e).filter(function (A) {
+                                        return Object.getOwnPropertyDescriptor(e, A).enumerable;
                                     })
                                 )),
-                                n.forEach(function (e) {
-                                    var n;
-                                    ((n = t[e]),
-                                        e in A
-                                            ? Object.defineProperty(A, e, {
-                                                  value: n,
+                                r.forEach(function (t) {
+                                    var r;
+                                    ((r = e[t]),
+                                        t in A
+                                            ? Object.defineProperty(A, t, {
+                                                  value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (A[e] = n));
+                                            : (A[t] = r));
                                 }));
                         }
                         return A;
-                    })({}, t)
+                    })({}, e)
                 )
             }),
-            (0, n.jsx)(E, {
-                className: h.unfocusedMessage,
-                avatar: g.Z,
+            (0, r.jsx)(w, {
+                className: a.unfocusedMessage,
+                avatar: h.Z,
                 username: 'sharon',
                 usernameStyle: { color: 'var(--brand-400)' },
-                message: c.intl.string(v.default.GlWVJC)
+                message: C.intl.string(o.default.GlWVJC)
             }),
-            (0, n.jsx)(E, {
-                className: h.unfocusedMessage,
-                avatar: o.Z,
+            (0, r.jsx)(w, {
+                className: a.unfocusedMessage,
+                avatar: l.Z,
                 username: 'Lily',
                 usernameStyle: { color: 'var(--orange-300)' },
-                message: c.intl.string(v.default.AIp9ho)
+                message: C.intl.string(o.default.AIp9ho)
             })
         ]
     });

@@ -1,7 +1,7 @@
 n.d(t, {
-    $H: () => m,
-    GN: () => b,
-    _y: () => h
+    $H: () => O,
+    GN: () => h,
+    _y: () => m
 });
 var r = n(255367),
     i = n(73800),
@@ -14,14 +14,14 @@ var r = n(255367),
     d = n(639119),
     f = n(388032),
     p = n(952849);
-function g(e) {
+function b(e) {
     let { isTabSelected: t, expiresAt: n, trialDuration: l, className: u } = e,
         d = i.useMemo(() => Date.parse(n), [n]),
-        g = (0, a.Z)(d, 60000);
-    return Object.values(g).every((e) => 0 === e)
+        b = (0, a.Z)(d, 60000);
+    return Object.values(b).every((e) => 0 === e)
         ? null
         : (0, r.jsx)(o.ua7, {
-              text: (0, c.QX)(g, {
+              text: (0, c.QX)(b, {
                   days: f.t.qVGNkZ,
                   hours: f.t.wyg9a2,
                   minutes: f.t.IzmIlZ
@@ -89,7 +89,7 @@ function g(e) {
               }
           });
 }
-function m(e) {
+function O(e) {
     var t;
     let { isTabSelected: n, trialOffer: i } = e,
         l = null == (t = (0, d.N)()) ? void 0 : t.subscription_trial,
@@ -97,25 +97,25 @@ function m(e) {
             intervalType: null == l ? void 0 : l.interval,
             intervalCount: null == l ? void 0 : l.interval_count
         });
-    return (0, r.jsx)(h, {
+    return (0, r.jsx)(m, {
         isTabSelected: n,
         badgeCopy: s,
         offerExpiresAt: i.expires_at
     });
 }
-function b(e) {
+function h(e) {
     let { isTabSelected: t, userDiscount: n, includesAmountOff: i } = e,
         l = f.intl.formatToPlainString(f.t.iiLbvr, { percent: n.discount.amount });
-    return (0, r.jsx)(h, {
+    return (0, r.jsx)(m, {
         isTabSelected: t,
         badgeCopy: i ? l : f.intl.string(f.t['/DTtr6']),
         offerExpiresAt: n.expires_at
     });
 }
-function h(e) {
+function m(e) {
     let { isTabSelected: t, badgeCopy: n, offerExpiresAt: i } = e;
     return null != i
-        ? (0, r.jsx)(g, {
+        ? (0, r.jsx)(b, {
               expiresAt: i,
               isTabSelected: t,
               trialDuration: n

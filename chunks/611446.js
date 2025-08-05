@@ -1,5 +1,5 @@
 (n.d(e, {
-    O: () => x,
+    O: () => _,
     default: () => b
 }),
     n(388685));
@@ -14,24 +14,24 @@ var i,
     d = n(858597),
     T = n(486213),
     S = n(388032),
-    _ = n(692056),
-    x = (((i = {}).ACTIONS = 'ACTIONS'), (i.SAFETY_TIPS = 'SAFETY_TIPS'), (i.ABOUT_SAFETY_ALERTS = 'ABOUT_SAFETY_ALERTS'), i);
+    x = n(692056),
+    _ = (((i = {}).ACTIONS = 'ACTIONS'), (i.SAFETY_TIPS = 'SAFETY_TIPS'), (i.ABOUT_SAFETY_ALERTS = 'ABOUT_SAFETY_ALERTS'), i);
 let b = (t) => {
-    let { onClose: e, channelId: n, warningId: i, warningType: x, otherUserId: b, transitionState: p } = t,
-        O = null != (0, o.M)(n),
-        [h, E] = s.useState('ACTIONS'),
-        m = s.useCallback(
+    let { onClose: e, channelId: n, warningId: i, warningType: _, otherUserId: b, transitionState: O } = t,
+        E = null != (0, o.M)(n),
+        [h, p] = s.useState('ACTIONS'),
+        g = s.useCallback(
             (t) => {
                 (0, c.qc)({
                     channelId: n,
                     warningId: i,
-                    warningType: x,
+                    warningType: _,
                     senderId: b,
                     cta: t,
-                    isNudgeWarning: O
+                    isNudgeWarning: E
                 });
             },
-            [n, i, x, b, O]
+            [n, i, _, b, E]
         ),
         A = s.useCallback((t) => {
             let { text: e, onClick: n } = t;
@@ -42,19 +42,19 @@ let b = (t) => {
                 textVariant: 'text-sm/normal'
             });
         }, []),
-        f = s.useCallback(() => {
+        j = s.useCallback(() => {
             switch (h) {
                 case 'SAFETY_TIPS':
                 case 'ABOUT_SAFETY_ALERTS':
                     return (0, r.jsx)(A, {
                         text: S.intl.string(S.t['13/7kZ']),
-                        onClick: () => E('ACTIONS')
+                        onClick: () => p('ACTIONS')
                     });
                 default:
                     return null;
             }
         }, [h, A]),
-        g = s.useCallback(() => {
+        m = s.useCallback(() => {
             switch (h) {
                 case 'SAFETY_TIPS':
                     return S.intl.string(S.t.EtNxi4);
@@ -64,25 +64,25 @@ let b = (t) => {
                     return S.intl.string(S.t.MAhAp6);
             }
         }, [h]),
-        j = s.useCallback(
+        f = s.useCallback(
             (t) => {
-                E(t);
+                p(t);
             },
-            [E]
+            [p]
         );
     return (0, r.jsxs)(l.Y0X, {
-        transitionState: p,
+        transitionState: O,
         'aria-label': S.intl.string(S.t.eXlt09),
         size: l.CgR.SMALL,
         parentComponent: 'SafetyToolsModal',
         children: [
             (0, r.jsx)(l.xBx, {
                 separator: !1,
-                className: _.modalHeader,
+                className: x.modalHeader,
                 justify: a.Z.Justify.CENTER,
                 children: (0, r.jsx)(l.X6q, {
                     variant: 'heading-xl/semibold',
-                    children: g()
+                    children: m()
                 })
             }),
             (0, r.jsx)(l.Ttm, {
@@ -96,8 +96,8 @@ let b = (t) => {
                                 otherUserId: b,
                                 channelId: n,
                                 warningId: i,
-                                warningType: x,
-                                transitionToSlide: j
+                                warningType: _,
+                                transitionToSlide: f
                             })
                         }),
                         (0, r.jsx)(l.Mi4, {
@@ -105,7 +105,7 @@ let b = (t) => {
                             children: (0, r.jsx)(u.Z, {
                                 channelId: n,
                                 onClose: () => {
-                                    (e(), m(c.NM.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS));
+                                    (e(), g(c.NM.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS));
                                 }
                             })
                         }),
@@ -122,10 +122,10 @@ let b = (t) => {
                     (0, r.jsx)(A, {
                         text: S.intl.string(S.t.cpT0Cg),
                         onClick: () => {
-                            (e(), m(c.NM.USER_SAFETY_TOOLS_DISMISS));
+                            (e(), g(c.NM.USER_SAFETY_TOOLS_DISMISS));
                         }
                     }),
-                    f()
+                    j()
                 ]
             })
         ]

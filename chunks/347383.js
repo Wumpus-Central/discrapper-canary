@@ -11,7 +11,6 @@ e.exports = {
     badgeNote: 'badgeNote__91f7b',
     badge: 'badge__91f7b',
     icon: 'icon__91f7b',
-    button: 'button__91f7b',
     modalFooter: 'modalFooter__91f7b',
     disclosureText: 'disclosureText__91f7b'
 };

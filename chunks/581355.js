@@ -1,4 +1,4 @@
-n.d(t, { default: () => x });
+n.d(t, { default: () => v });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -8,28 +8,28 @@ var r = n(255367),
     c = n(427679),
     d = n(939863),
     u = n(540186),
-    h = n(609776),
-    g = n(289584),
-    _ = n(180899),
-    m = n(157925),
+    x = n(609776),
+    m = n(289584),
+    h = n(180899),
+    g = n(157925),
     b = n(388032),
-    f = n(879656);
-function p(e) {
-    let { guild: t, channel: n, stageInstance: i, headerId: l, onClose: o, loading: s, error: c, onSave: u, defaultOptions: g, isSlideReady: _ } = e;
+    p = n(879656);
+function f(e) {
+    let { guild: t, channel: n, stageInstance: i, headerId: l, onClose: o, loading: s, error: c, onSave: u, defaultOptions: m, isSlideReady: h } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: f.content,
+                className: p.content,
                 children: [
                     (0, r.jsx)(d.Z, {
                         children: (0, r.jsx)('div', {
-                            className: f.stageIconBackground,
+                            className: p.stageIconBackground,
                             children: (0, r.jsx)(a.ewx, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 32,
                                 height: 32,
-                                className: f.stageIcon
+                                className: p.stageIcon
                             })
                         })
                     }),
@@ -37,35 +37,35 @@ function p(e) {
                         id: l,
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        className: f.headerTitle,
+                        className: p.headerTitle,
                         children: null == i ? b.intl.string(b.t.DDF0cH) : b.intl.string(b.t.YPdQOj)
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        className: f.headerSubtitle,
+                        className: p.headerSubtitle,
                         children: null == i ? b.intl.string(b.t.bqQIwc) : b.intl.string(b.t['I+9bLy'])
                     })
                 ]
             }),
-            (0, r.jsx)(h.Z, {
+            (0, r.jsx)(x.Z, {
                 guild: t,
                 channel: n,
                 onSave: u,
                 error: c,
                 loading: s,
                 onClose: o,
-                defaultOptions: g,
-                isSlideReady: _
+                defaultOptions: m,
+                isSlideReady: h
             })
         ]
     });
 }
-function x(e) {
+function v(e) {
     var t,
         n,
-        { channel: d, onClose: h, transitionState: b } = e,
-        x = (function (e, t) {
+        { channel: d, onClose: x, transitionState: b } = e,
+        v = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -84,27 +84,27 @@ function x(e) {
             }
             return i;
         })(e, ['channel', 'onClose', 'transitionState']);
-    let v = (0, o.Dt)(),
+    let _ = (0, o.Dt)(),
         j = (0, l.e7)([s.Z], () => s.Z.getGuild(d.guild_id)),
         N = i.useMemo(() => c.Z.getStageInstanceByChannel(d.id), [d.id]),
-        { loading: y, error: I, onSave: O } = (0, g.Z)(d, h),
+        { loading: C, error: I, onSave: y } = (0, m.Z)(d, x),
         {
-            modalStep: C,
-            setModalStep: E,
-            readySlide: S,
-            handleSlideReady: T,
-            savedOptions: w,
-            handleSettingsSave: P,
-            handleDelayedSave: k
-        } = (0, _.Z)({
+            modalStep: O,
+            setModalStep: S,
+            readySlide: E,
+            handleSlideReady: w,
+            savedOptions: T,
+            handleSettingsSave: k,
+            handleDelayedSave: P
+        } = (0, h.Z)({
             stageInstance: N,
-            defaultStep: m.lv.STAGE_CHANNEL_SETTINGS,
+            defaultStep: g.lv.STAGE_CHANNEL_SETTINGS,
             error: I,
-            onSave: O
+            onSave: y
         });
     return (i.useEffect(() => {
-        null == j && h();
-    }, [j, h]),
+        null == j && x();
+    }, [j, x]),
     null == j)
         ? null
         : (0, r.jsx)(
@@ -136,50 +136,50 @@ function x(e) {
               })(
                   {
                       transitionState: b,
-                      'aria-labelledby': v
+                      'aria-labelledby': _
                   },
-                  x
+                  v
               )),
               (n = n =
                   {
                       size: a.CgR.SMALL,
                       parentComponent: 'StageChannelSettingsModal',
                       children: (0, r.jsxs)(a.MyZ, {
-                          activeSlide: C,
+                          activeSlide: O,
                           width: 440,
-                          onSlideReady: T,
+                          onSlideReady: w,
                           children: [
                               (0, r.jsx)(a.Mi4, {
-                                  id: m.lv.STAGE_CHANNEL_SETTINGS,
+                                  id: g.lv.STAGE_CHANNEL_SETTINGS,
                                   children: (0, r.jsx)('div', {
-                                      className: f.slideContainer,
-                                      children: (0, r.jsx)(p, {
+                                      className: p.slideContainer,
+                                      children: (0, r.jsx)(f, {
                                           guild: j,
                                           channel: d,
                                           stageInstance: N,
-                                          headerId: v,
-                                          onClose: h,
-                                          loading: y,
+                                          headerId: _,
+                                          onClose: x,
+                                          loading: C,
                                           error: I,
-                                          onSave: P,
-                                          defaultOptions: w,
-                                          isSlideReady: S === m.lv.STAGE_CHANNEL_SETTINGS
+                                          onSave: k,
+                                          defaultOptions: T,
+                                          isSlideReady: E === g.lv.STAGE_CHANNEL_SETTINGS
                                       })
                                   })
                               }),
                               (0, r.jsx)(a.Mi4, {
-                                  id: m.lv.PUBLIC_STAGE_PREVIEW,
+                                  id: g.lv.PUBLIC_STAGE_PREVIEW,
                                   children: (0, r.jsx)('div', {
-                                      className: f.slideContainer,
+                                      className: p.slideContainer,
                                       children: (0, r.jsx)(u.Z, {
-                                          headerId: v,
+                                          headerId: _,
                                           guild: j,
                                           channel: d,
-                                          stageData: w,
-                                          loading: y,
-                                          onNext: k,
-                                          onCancel: h,
-                                          onBack: () => E(m.lv.STAGE_CHANNEL_SETTINGS)
+                                          stageData: T,
+                                          loading: C,
+                                          onNext: P,
+                                          onCancel: x,
+                                          onBack: () => S(g.lv.STAGE_CHANNEL_SETTINGS)
                                       })
                                   })
                               })

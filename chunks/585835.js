@@ -21,10 +21,10 @@ var i = n(255367),
     y = n(694095);
 function _(e) {
     var t, n, l;
-    let { name: _, icon: C, imageSrc: N, iconBackgroundColor: S, iconClassName: Z, iconWrapperClassName: I, details: E, integration: w, buttonText: T, buttonDisabled: P, hasNextSection: k, onButtonClick: A, guildId: D, isScrolling: R, canShowMigrationTooltip: L, trailing: M } = e,
+    let { name: _, icon: C, imageSrc: N, iconBackgroundColor: S, iconClassName: I, iconWrapperClassName: w, details: Z, integration: E, buttonText: P, buttonDisabled: T, hasNextSection: k, onButtonClick: A, guildId: R, isScrolling: D, canShowMigrationTooltip: L, trailing: M } = e,
         [B, U] = r.useState(!1),
         [W, H] = r.useState(!1),
-        G = L && !R && !W && void 0 !== D && null != w,
+        G = L && !D && !W && void 0 !== R && null != E,
         z = r.useRef(null),
         F = r.useRef(null),
         V = r.useCallback(
@@ -61,7 +61,7 @@ function _(e) {
                             children: e
                         }),
             [z, F]
-        )(T, P, k, A);
+        )(P, T, k, A);
     r.useEffect(() => {
         var e, t;
         G &&
@@ -91,10 +91,10 @@ function _(e) {
                             }));
                     }
                     return e;
-                })({}, (0, u.hH)(D))),
+                })({}, (0, u.hH)(R))),
                 (t = t =
                     {
-                        application_id: null == w ? void 0 : w.application.id,
+                        application_id: null == E ? void 0 : E.application.id,
                         location: 'overview'
                     }),
                 Object.getOwnPropertyDescriptors
@@ -111,14 +111,14 @@ function _(e) {
                       }),
                 e)
             );
-    }, [D, null == w ? void 0 : w.application.id, G]);
+    }, [R, null == E ? void 0 : E.application.id, G]);
     let K = G
             ? (0, i.jsx)(d.yRy, {
                   targetElementRef: k ? F : z,
                   renderPopout: () =>
                       (0, i.jsx)(d.P3F, {
                           onClick: (e) => {
-                              (e.stopPropagation(), H(!0), j.Z.dismissOverviewTooltip(D, w.integration));
+                              (e.stopPropagation(), H(!0), j.Z.dismissOverviewTooltip(R, E.integration));
                           },
                           children: (0, i.jsx)(g.ZP, {
                               content: O.intl.string(O.t.TyMJwM),
@@ -134,10 +134,10 @@ function _(e) {
             : V,
         q = (0, s.Wu)([b.Z], () => {
             var e;
-            return null != w && null != D && null != (e = b.Z.getApplicationEntitlementsForGuild(w.application.id, D)) ? e : [];
+            return null != E && null != R && null != (e = b.Z.getApplicationEntitlementsForGuild(E.application.id, R)) ? e : [];
         }),
-        Y = (0, p.LD)(D, !0),
-        X = (null == w ? void 0 : w.application) != null && Object.keys(null != (l = null == (n = Y.result) || null == (t = n.sections[w.application.id]) ? void 0 : t.commands) ? l : {}).length > 0,
+        Y = (0, p.LD)(R, !0),
+        X = (null == E ? void 0 : E.application) != null && Object.keys(null != (l = null == (n = Y.result) || null == (t = n.sections[E.application.id]) ? void 0 : t.commands) ? l : {}).length > 0,
         $ = (0, i.jsxs)(m.Z, {
             children: [
                 (0, i.jsx)(x.Z, {
@@ -145,9 +145,9 @@ function _(e) {
                     icon: C,
                     imageSrc: N,
                     iconBackgroundColor: S,
-                    iconClassName: Z,
-                    iconWrapperClassName: I,
-                    details: E,
+                    iconClassName: I,
+                    iconWrapperClassName: w,
+                    details: Z,
                     isPremium: q.length > 0
                 }),
                 (0, i.jsx)(m.Z.Child, {
@@ -218,7 +218,7 @@ function _(e) {
                                         ),
                                     o
                                 );
-                            })(w, B, X),
+                            })(E, B, X),
                             K,
                             M
                         ]
@@ -229,7 +229,7 @@ function _(e) {
     return k
         ? (0, i.jsx)(d.P3F, {
               onClick: () => {
-                  (L && null != D && null != w && j.Z.dismissOverviewTooltip(D, w.integration), null == A || A());
+                  (L && null != R && null != E && j.Z.dismissOverviewTooltip(R, E.integration), null == A || A());
               },
               onFocus: () => U(!0),
               onBlur: () => U(!1),

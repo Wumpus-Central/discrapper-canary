@@ -1,62 +1,76 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => O });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
+    a = n(688619),
     o = n.n(a),
-    s = n(522942),
-    l = n(866442),
-    c = n(442837),
-    u = n(481060),
-    d = n(607070),
-    f = n(594928),
-    _ = n(181430),
-    p = n(821795),
-    h = n(760692),
-    m = n(7284),
-    g = n(482695);
-let E = i.memo(function (e) {
-    let { userName: t, displayNameStyles: n, effectDisplayType: i = p.F.STATIC, inProfile: a = !1, textClassName: s, loop: E = !1 } = e,
-        y = (0, m.j)({
-            displayNameStyles: n,
-            inProfile: a
-        }),
-        {
-            useReducedMotion: O,
-            saturation: v,
-            desaturateUserColors: I
-        } = (0, c.cj)([d.Z], () => ({
-            useReducedMotion: d.Z.useReducedMotion,
-            saturation: d.Z.saturation,
-            desaturateUserColors: d.Z.desaturateUserColors
-        })),
-        { includeNonProfile: T } = f.f.useExperiment({ location: 'useDisplayNameStylesFont' });
-    if (!(0, _.Y)({ location: 'UserNameWithEffects' }) || (!a && !T) || null == n) return t;
-    let S = n.colors.map((e) => (0, l.ho)(e, !1, I ? v : null)),
-        A = (0, h.K)(n.effectId, S),
-        N = b(n.effectId);
-    return (0, r.jsx)('div', {
-        className: o()(g.container, N, y, s, {
-            [g.showEffect]: i !== p.F.PLAIN,
-            [g.animated]: i === p.F.ANIMATED && !O,
-            [g.loop]: E
-        }),
-        style: A,
-        'data-username-with-effects': (0, u.qgQ)(t),
-        children: t
+    s = n(120356),
+    l = n.n(s),
+    c = n(522942),
+    u = n(442837),
+    d = n(481060),
+    f = n(607070),
+    _ = n(302221),
+    p = n(594928),
+    h = n(181430),
+    m = n(821795),
+    g = n(760692),
+    E = n(7284),
+    b = n(482695);
+let y = 3,
+    O = i.memo(function (e) {
+        let { userName: t, displayNameStyles: n, effectDisplayType: a = m.F.STATIC, inProfile: s = !1, textClassName: O, loop: I = !1 } = e,
+            T = (0, E.j)({
+                displayNameStyles: n,
+                inProfile: s
+            }),
+            {
+                useReducedMotion: S,
+                saturation: A,
+                desaturateUserColors: N
+            } = (0, u.cj)([f.Z], () => ({
+                useReducedMotion: f.Z.useReducedMotion,
+                saturation: f.Z.saturation,
+                desaturateUserColors: f.Z.desaturateUserColors
+            })),
+            { includeNonProfile: C } = p.f.useExperiment({ location: 'useDisplayNameStylesFont' }),
+            w = (0, h.Y)({ location: 'UserNameWithEffects' }),
+            R = (0, d.dQu)(d.TVs.colors.BACKGROUND_BASE_LOW).hex(),
+            P = i.useMemo(
+                () =>
+                    null != n && w
+                        ? n.colors.map((e) => {
+                              let t = o()(e);
+                              return (N && (t = t.desaturate(1 - A)), (0, _.aP)(t.hex(), n.effectId === c.m.TOON ? '#333' : R, y));
+                          })
+                        : [],
+                [n, w, N, A, R]
+            );
+        if (!w || (!s && !C) || null == n) return t;
+        let D = (0, g.K)(n.effectId, P),
+            L = v(n.effectId);
+        return (0, r.jsx)('div', {
+            className: l()(b.container, L, T, O, {
+                [b.showEffect]: a !== m.F.PLAIN,
+                [b.animated]: a === m.F.ANIMATED && !S,
+                [b.loop]: I
+            }),
+            style: D,
+            'data-username-with-effects': (0, d.qgQ)(t),
+            children: t
+        });
     });
-});
-function b(e) {
+function v(e) {
     switch (e) {
-        case s.m.GRADIENT:
-            return g.gradient;
-        case s.m.NEON:
-            return g.neon;
-        case s.m.TOON:
-            return g.toon;
-        case s.m.POP:
-            return g.pop;
-        case s.m.SOLID:
-            return g.solid;
+        case c.m.GRADIENT:
+            return b.gradient;
+        case c.m.NEON:
+            return b.neon;
+        case c.m.TOON:
+            return b.toon;
+        case c.m.POP:
+            return b.pop;
+        case c.m.SOLID:
+            return b.solid;
         default:
             return '';
     }

@@ -1,18 +1,18 @@
-(n.d(t, { Z: () => C }), n(388685));
+(n.d(t, { Z: () => v }), n(388685));
 var r = n(255367),
     i = n(73800),
-    l = n(120356),
-    a = n.n(l),
-    o = n(374470),
-    s = n(481060),
+    a = n(120356),
+    o = n.n(a),
+    s = n(374470),
+    l = n(481060),
     c = n(239091),
     u = n(454585),
     d = n(984370),
-    p = n(981631),
-    h = n(388032),
-    f = n(916560),
-    m = n(73433);
-function g(e, t, n) {
+    f = n(981631),
+    _ = n(388032),
+    p = n(916560),
+    h = n(73433);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function g(e, t, n) {
         e
     );
 }
-function b(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,15 +36,38 @@ function b(e) {
                 })
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                m(e, t, n[t]);
             }));
     }
     return e;
 }
-function _(e) {
+function E(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : E(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function y(e) {
     return e.matches('a') || 'highlight' === e.className || e.className.includes('mention');
 }
-class y extends i.Component {
+class O extends i.Component {
     render() {
         let { channel: e } = this.props;
         if (e.isMultiUserDM()) return null;
@@ -54,19 +77,19 @@ class y extends i.Component {
                   children: [
                       (0, r.jsx)(d.Z.Divider, {}),
                       (0, r.jsxs)('div', {
-                          className: a()(f.topic, f.expandable, m.markup),
+                          className: o()(p.topic, p.expandable, h.markup),
                           onMouseDown: this.onMouseDown,
                           onMouseMove: this.onMouseMove,
                           onMouseUp: this.onMouseUp,
                           onContextMenu: this.handleContextMenu,
                           onClick: this.handleClick,
                           children: [
-                              (0, r.jsx)(s.P3F, {
+                              (0, r.jsx)(l.P3F, {
                                   onClick: this.handleClick,
-                                  'aria-label': h.intl.string(h.t.mKwsSk),
-                                  className: f.topicClickTarget
+                                  'aria-label': _.intl.string(_.t.mKwsSk),
+                                  className: p.topicClickTarget
                               }),
-                              null == e.linkedLobby || t ? u.Z.parseTopic(e.topic, !0, { channelId: e.id }) : h.intl.string(h.t.XJVlf3)
+                              null == e.linkedLobby || t ? u.Z.parseTopic(e.topic, !0, { channelId: e.id }) : _.intl.string(_.t.XJVlf3)
                           ]
                       })
                   ]
@@ -75,62 +98,45 @@ class y extends i.Component {
     }
     constructor(...e) {
         (super(...e),
-            g(this, '_mouseDown', !1),
-            g(this, '_mouseUp', !1),
-            g(this, 'handleOpenTopic', (e) => {
+            m(this, '_mouseDown', !1),
+            m(this, '_mouseUp', !1),
+            m(this, 'handleOpenTopic', (e) => {
                 let t = e.target;
-                if ((0, o.k)(t)) {
-                    if (_(t)) return;
+                if ((0, s.k)(t)) {
+                    if (y(t)) return;
                     let e = t.parentNode;
-                    if ((0, o.k)(e) && _(e)) return;
+                    if ((0, s.k)(e) && y(e)) return;
                 }
-                (0, s.ZDy)(async () => {
+                (0, l.ZDy)(async () => {
                     let { default: e } = await n.e('65631').then(n.bind(n, 10722));
-                    return (t) => (0, r.jsx)(e, b({}, t, this.props));
+                    return (t) => (0, r.jsx)(e, g({}, t, this.props));
                 });
             }),
-            g(this, 'onMouseDown', () => {
+            m(this, 'onMouseDown', () => {
                 this._mouseDown = !0;
             }),
-            g(this, 'onMouseMove', () => {
+            m(this, 'onMouseMove', () => {
                 this._mouseDown && (this._mouseDown = !1);
             }),
-            g(this, 'onMouseUp', (e) => {
-                (this._mouseDown && e.button !== p.AeJ.SECONDARY && this.handleOpenTopic(e), (this._mouseUp = !0), (this._mouseDown = !1));
+            m(this, 'onMouseUp', (e) => {
+                (this._mouseDown && e.button !== f.AeJ.SECONDARY && this.handleOpenTopic(e), (this._mouseUp = !0), (this._mouseDown = !1));
             }),
-            g(this, 'handleContextMenu', (e) => {
+            m(this, 'handleContextMenu', (e) => {
                 let { channel: t, guild: i } = this.props;
                 (0, c.jW)(e, async () => {
-                    let { default: e } = await n.e('24783').then(n.bind(n, 439635));
-                    return (n) => {
-                        var l, a;
-                        return (0, r.jsx)(
+                    let { default: e } = await Promise.all([n.e('25548'), n.e('2686'), n.e('49049'), n.e('62856'), n.e('16459'), n.e('71824'), n.e('46154'), n.e('91315'), n.e('49152'), n.e('24783'), n.e('26735')]).then(n.bind(n, 439635));
+                    return (n) =>
+                        (0, r.jsx)(
                             e,
-                            ((l = b({}, n)),
-                            (a = a =
-                                {
-                                    channel: t,
-                                    guild: i,
-                                    includeTopic: !0
-                                }),
-                            Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
-                                : (function (e, t) {
-                                      var n = Object.keys(e);
-                                      if (Object.getOwnPropertySymbols) {
-                                          var r = Object.getOwnPropertySymbols(e);
-                                          n.push.apply(n, r);
-                                      }
-                                      return n;
-                                  })(Object(a)).forEach(function (e) {
-                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
-                                  }),
-                            l)
+                            b(g({}, n), {
+                                channel: t,
+                                guild: i,
+                                includeTopic: !0
+                            })
                         );
-                    };
                 });
             }),
-            g(this, 'handleClick', (e) => {
+            m(this, 'handleClick', (e) => {
                 if (this._mouseUp) {
                     this._mouseUp = !1;
                     return;
@@ -139,4 +145,4 @@ class y extends i.Component {
             }));
     }
 }
-let C = y;
+let v = O;

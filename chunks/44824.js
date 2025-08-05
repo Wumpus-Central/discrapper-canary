@@ -1,138 +1,151 @@
-(t.d(l, { Z: () => u }), t(853839), t(570086), t(479048));
-var r = t(255367),
-    n = t(73800),
-    i = t(70097),
-    s = t(947849),
-    a = t(981631),
-    o = t(388032);
-function d(e) {
-    let { poster: l, src: t, width: s, height: o, naturalWidth: d, naturalHeight: u, play: c = !0, className: h, alt: m, responsive: p } = e,
-        g = n.useRef(null);
-    return (n.useEffect(() => {
-        let { current: e } = g;
+(n.d(t, { Z: () => m }), n(853839), n(570086), n(479048));
+var r = n(255367),
+    i = n(73800),
+    a = n(70097),
+    o = n(947849),
+    s = n(981631),
+    l = n(388032);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function _(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = p(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+    }
+    return i;
+}
+function p(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    return i;
+}
+function h(e) {
+    let { poster: t, src: n, width: o, height: l, naturalWidth: c, naturalHeight: u, play: d = !0, className: f, alt: _, responsive: p } = e,
+        h = i.useRef(null);
+    return (i.useEffect(() => {
+        let { current: e } = h;
         null != e &&
-            (c
+            (d
                 ? e.play().catch((e) => {
                       if (!(e instanceof DOMException) || 'NotAllowedError' !== e.name) throw e;
                   })
                 : e.pause());
-    }, [c]),
-    (d <= a.N_j && u <= a.XKF) || (d <= a.XKF && u <= a.N_j))
-        ? (0, r.jsx)(i.Z, {
-              ref: g,
-              className: h,
-              poster: l,
-              src: t,
-              width: s,
-              height: o,
+    }, [d]),
+    (c <= s.N_j && u <= s.XKF) || (c <= s.XKF && u <= s.N_j))
+        ? (0, r.jsx)(a.Z, {
+              ref: h,
+              className: f,
+              poster: t,
+              src: n,
+              width: o,
+              height: l,
               responsive: p,
               muted: !0,
               loop: !0,
-              autoPlay: c,
+              autoPlay: d,
               playsInline: !0,
               preload: 'none',
-              'aria-label': m
+              'aria-label': _
           })
         : (0, r.jsx)('img', {
               alt: '',
-              src: l,
-              width: s,
-              height: o
+              src: t,
+              width: o,
+              height: l
           });
 }
-function u(e) {
-    var { src: l, poster: t, naturalWidth: n, naturalHeight: i, responsive: a, autoPlay: u, className: c, playable: h = !0, renderImageComponent: m, alt: p = o.intl.string(o.t.I5gL2N), sourceMetadata: g } = e,
-        b = (function (e, l) {
-            if (null == e) return {};
-            var t,
-                r,
-                n = (function (e, l) {
-                    if (null == e) return {};
-                    var t,
-                        r,
-                        n = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) ((t = i[r]), l.indexOf(t) >= 0 || (n[t] = e[t]));
-                    return n;
-                })(e, l);
-            if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++) ((t = i[r]), !(l.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (n[t] = e[t]));
-            }
-            return n;
-        })(e, ['src', 'poster', 'naturalWidth', 'naturalHeight', 'responsive', 'autoPlay', 'className', 'playable', 'renderImageComponent', 'alt', 'sourceMetadata']);
-    return (0, r.jsx)(s.h.Consumer, {
-        children: (e) => {
-            var s, o;
-            return m(
-                ((s = (function (e) {
-                    for (var l = 1; l < arguments.length; l++) {
-                        var t = null != arguments[l] ? arguments[l] : {},
-                            r = Object.keys(t);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(t).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
-                                })
-                            )),
-                            r.forEach(function (l) {
-                                var r;
-                                ((r = t[l]),
-                                    l in e
-                                        ? Object.defineProperty(e, l, {
-                                              value: r,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0
-                                          })
-                                        : (e[l] = r));
-                            }));
-                    }
-                    return e;
-                })({}, b)),
-                (o = o =
-                    {
-                        alt: p,
-                        src: t,
-                        containerClassName: c,
-                        autoPlay: u,
-                        animated: h,
-                        responsive: a,
-                        renderAccessory: e,
-                        tabIndex: h ? 0 : -1,
-                        dataSafeSrc: l,
-                        children(e) {
-                            let { src: t, size: s, animating: o, alt: u } = e;
-                            return (0, r.jsx)(d, {
-                                alt: u,
-                                className: c,
-                                poster: t,
-                                src: l,
-                                width: s.width,
-                                height: s.height,
-                                naturalWidth: n,
-                                naturalHeight: i,
-                                responsive: a,
-                                play: h && o
-                            });
-                        },
-                        sourceMetadata: g,
-                        analyticsSource: 'LazyGIFV'
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(s, Object.getOwnPropertyDescriptors(o))
-                    : (function (e, l) {
-                          var t = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              t.push.apply(t, r);
-                          }
-                          return t;
-                      })(Object(o)).forEach(function (e) {
-                          Object.defineProperty(s, e, Object.getOwnPropertyDescriptor(o, e));
-                      }),
-                s)
-            );
-        }
+function m(e) {
+    var { src: t, poster: n, naturalWidth: i, naturalHeight: a, responsive: s, autoPlay: c, className: d, playable: p = !0, renderImageComponent: m, alt: g = l.intl.string(l.t.I5gL2N), sourceMetadata: E } = e,
+        b = _(e, ['src', 'poster', 'naturalWidth', 'naturalHeight', 'responsive', 'autoPlay', 'className', 'playable', 'renderImageComponent', 'alt', 'sourceMetadata']);
+    return (0, r.jsx)(o.h.Consumer, {
+        children: (e) =>
+            m(
+                f(u({}, b), {
+                    alt: g,
+                    src: n,
+                    containerClassName: d,
+                    autoPlay: c,
+                    animated: p,
+                    responsive: s,
+                    renderAccessory: e,
+                    tabIndex: p ? 0 : -1,
+                    dataSafeSrc: t,
+                    children(e) {
+                        let { src: n, size: o, animating: l, alt: c } = e;
+                        return (0, r.jsx)(h, {
+                            alt: c,
+                            className: d,
+                            poster: n,
+                            src: t,
+                            width: o.width,
+                            height: o.height,
+                            naturalWidth: i,
+                            naturalHeight: a,
+                            responsive: s,
+                            play: p && l
+                        });
+                    },
+                    sourceMetadata: E,
+                    analyticsSource: 'LazyGIFV'
+                })
+            )
     });
 }

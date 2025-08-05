@@ -25,9 +25,9 @@ function _() {
 function p(e) {
     let { rootClassName: t, lang: n, theme: a, density: _, focused: p, fontScale: h, fontScaleClass: m, mouseMode: g, keyboardModeEnabled: E, saturation: b, desaturateUserColors: y, useForcedColors: O, systemForcedColors: v, useReducedMotion: I, alwaysShowLinkDecorations: T, hardwareAccelerationEnabled: S, highContrastMode: A, children: N } = e,
         C = window.CSS.supports('selector(::-webkit-scrollbar)'),
-        R = 'font-size: '.concat(h, '%; --saturation-factor: ').concat(b, ';'),
-        P = (0, d.Z)('highlight_mana_buttons'),
-        w = (0, d.Z)('highlight_mana_components'),
+        w = 'font-size: '.concat(h, '%; --saturation-factor: ').concat(b, ';'),
+        R = (0, d.Z)('highlight_mana_buttons'),
+        P = (0, d.Z)('highlight_mana_components'),
         D = (0, d.Z)('highlight_void_buttons'),
         L = o()(
             (0, c.Z)(),
@@ -52,8 +52,8 @@ function p(e) {
                 'hardware-acceleration-disabled': !S,
                 'visual-refresh-chat-input': !1,
                 'mana-text-inputs': (0, u.U)('RootElementContextProvider'),
-                'highlight-mana-buttons': P,
-                'highlight-mana-components': w,
+                'highlight-mana-buttons': R,
+                'highlight-mana-components': P,
                 'highlight-void-buttons': D,
                 'high-contrast-mode': A
             },
@@ -62,10 +62,10 @@ function p(e) {
         x = i.useMemo(
             () => ({
                 lang: n,
-                style: R,
+                style: w,
                 className: L
             }),
-            [n, R, L]
+            [n, w, L]
         );
     return (0, r.jsx)(f.Provider, {
         value: x,

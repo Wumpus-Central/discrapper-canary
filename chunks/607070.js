@@ -1,6 +1,6 @@
 n.d(t, {
     X: () => b,
-    Z: () => X
+    Z: () => $
 });
 var r,
     i = n(442837),
@@ -148,13 +148,13 @@ function C() {
     if (!O.keyboardModeEnabled) return !1;
     (O = p({}, O)).keyboardModeEnabled = !1;
 }
-function R() {
+function w() {
     (O = p({}, O)).colorblindMode = !O.colorblindMode;
 }
-function P() {
+function R() {
     (O = p({}, O)).lowContrastMode = !O.lowContrastMode;
 }
-function w(e) {
+function P(e) {
     O.syncForcedColors = e.syncForcedColors;
 }
 function D(e) {
@@ -166,13 +166,13 @@ function L() {
 function x(e) {
     O.roleStyle = e.roleStyle;
 }
-function M(e) {
+function k(e) {
     O.displayNameStylesEnabled = e.enabled;
 }
-function k() {
+function j() {
     (O = p({}, O)).submitButtonEnabled = !O.submitButtonEnabled;
 }
-function j() {
+function M() {
     (O = p({}, O)).syncProfileThemeWithUserTheme = !O.syncProfileThemeWithUserTheme;
 }
 function U(e) {
@@ -187,14 +187,14 @@ function B(e) {
     if (O.prefersReducedMotion === e.prefersReducedMotion) return !1;
     O = m(p({}, O), { prefersReducedMotion: e.prefersReducedMotion });
 }
-function V(e) {
+function Z(e) {
     if (O.systemPrefersContrast === e.systemPrefersContrast) return !1;
     O = m(p({}, O), { systemPrefersContrast: e.systemPrefersContrast });
 }
 function F(e) {
     O = m(p({}, O), { alwaysShowLinkDecorations: e.alwaysShowLinkDecorations });
 }
-function Z(e) {
+function V(e) {
     var t;
     return ((O = m(p({}, O), { systemForcedColors: null != (t = e.systemForcedColors) ? t : 'none' })), !0);
 }
@@ -403,30 +403,30 @@ class q extends (r = i.ZP.DeviceSettingsStore) {
             return e;
         }
     ]));
-let X = new q(s.Z, {
+let $ = new q(s.Z, {
     ACCESSIBILITY_SET_FONT_SIZE: T,
     ACCESSIBILITY_SET_ZOOM: S,
     ACCESSIBILITY_RESET_TO_DEFAULT: A,
     ACCESSIBILITY_KEYBOARD_MODE_ENABLE: N,
     ACCESSIBILITY_KEYBOARD_MODE_DISABLE: C,
-    ACCESSIBILITY_COLORBLIND_TOGGLE: R,
-    ACCESSIBILITY_LOW_CONTRAST_TOGGLE: P,
+    ACCESSIBILITY_COLORBLIND_TOGGLE: w,
+    ACCESSIBILITY_LOW_CONTRAST_TOGGLE: R,
     ACCESSIBILITY_SET_SATURATION: D,
     ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: L,
-    ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: Z,
-    ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: V,
+    ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: V,
+    ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: Z,
     ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: U,
     ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: G,
     ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: B,
-    ACCESSIBILITY_SET_SYNC_FORCED_COLORS: w,
+    ACCESSIBILITY_SET_SYNC_FORCED_COLORS: P,
     ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: F,
     ACCESSIBILITY_SET_ROLE_STYLE: x,
-    ACCESSIBILITY_SET_DISPLAY_NAME_STYLES_ENABLED: M,
+    ACCESSIBILITY_SET_DISPLAY_NAME_STYLES_ENABLED: k,
     ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: H,
     KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: Y,
     ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: W,
-    ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: k,
-    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: j,
+    ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: j,
+    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: M,
     ACCESSIBILITY_SET_CONTRAST: K,
     ACCESSIBILITY_SET_CONTRAST_MODE: z
 });

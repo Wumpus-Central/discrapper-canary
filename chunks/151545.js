@@ -22,7 +22,7 @@ function O(e) {
         S = (0, h.T)({ location: 'UserProfileActivityCardWrapper' }),
         A = t.id === n.id,
         N = S && !A && !t.bot,
-        { voiceGuild: C, voiceChannel: R } = (0, a.cj)([f.Z, _.Z, d.Z], () => {
+        { voiceGuild: C, voiceChannel: w } = (0, a.cj)([f.Z, _.Z, d.Z], () => {
             var e, n;
             let r = (0, o.Z)(O);
             if (!r && (null == O ? void 0 : O.type) !== y.IIU.HANG_STATUS) return {};
@@ -33,20 +33,20 @@ function O(e) {
                 voiceChannel: a
             };
         }),
-        P = (0, u.E)('UserProfileActivityCardWrapper', R),
-        w = (null == O ? void 0 : O.type) === y.IIU.HANG_STATUS && P ? R : null;
+        R = (0, u.E)('UserProfileActivityCardWrapper', w),
+        P = (null == O ? void 0 : O.type) === y.IIU.HANG_STATUS && R ? w : null;
     (0, c.q)(null == O ? void 0 : O.application_id);
     let D = (0, a.e7)([l.Z], () => ((null == O ? void 0 : O.application_id) != null ? l.Z.getApplication(O.application_id) : (null == O ? void 0 : O.name) != null ? l.Z.getApplicationByName(O.name) : null));
     return (i.useEffect(() => {
         (null == O ? void 0 : O.type) === y.IIU.HANG_STATUS &&
-            P &&
+            R &&
             p.default.track(y.rMx.VIEW_HANG_STATUS, {
                 source: 'UserProfilePopout',
-                guild_id: null == w ? void 0 : w.guild_id,
-                channel_id: null == w ? void 0 : w.id
+                guild_id: null == P ? void 0 : P.guild_id,
+                channel_id: null == P ? void 0 : P.id
             });
-    }, [null == O ? void 0 : O.type, P, null == w ? void 0 : w.id, null == w ? void 0 : w.guild_id]),
-    (null == O ? void 0 : O.type) !== y.IIU.CUSTOM_STATUS && ((null == O ? void 0 : O.type) !== y.IIU.HANG_STATUS || P))
+    }, [null == O ? void 0 : O.type, R, null == P ? void 0 : P.id, null == P ? void 0 : P.guild_id]),
+    (null == O ? void 0 : O.type) !== y.IIU.CUSTOM_STATUS && ((null == O ? void 0 : O.type) !== y.IIU.HANG_STATUS || R))
         ? (0, s.Z)(O)
             ? N
                 ? (0, r.jsx)(b.Z, {
@@ -71,7 +71,7 @@ function O(e) {
                     activity: O,
                     application: D,
                     voiceGuild: C,
-                    voiceChannel: R,
+                    voiceChannel: w,
                     profileGuildId: T,
                     className: v,
                     onClose: I
@@ -82,7 +82,7 @@ function O(e) {
                     activity: O,
                     application: D,
                     voiceGuild: C,
-                    voiceChannel: R,
+                    voiceChannel: w,
                     className: v,
                     onClose: I
                 })

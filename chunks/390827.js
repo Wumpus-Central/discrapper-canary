@@ -27,19 +27,19 @@ var r,
 f(function () {
     r = s.location;
 });
-var R = function (e) {
+var w = function (e) {
         if (d(N, e)) {
             var t = N[e];
             (delete N[e], t());
         }
     },
-    P = function (e) {
+    R = function (e) {
         return function () {
-            R(e);
+            w(e);
         };
     },
-    w = function (e) {
-        R(e.data);
+    P = function (e) {
+        w(e.data);
     },
     D = function (e) {
         s.postMessage(S(e), r.protocol + '//' + r.host);
@@ -62,25 +62,25 @@ var R = function (e) {
     }),
     E
         ? (i = function (e) {
-              O.nextTick(P(e));
+              O.nextTick(R(e));
           })
         : v && v.now
           ? (i = function (e) {
-                v.now(P(e));
+                v.now(R(e));
             })
           : T && !g
-            ? ((o = (a = new T()).port2), (a.port1.onmessage = w), (i = c(o.postMessage, o)))
+            ? ((o = (a = new T()).port2), (a.port1.onmessage = P), (i = c(o.postMessage, o)))
             : s.addEventListener && u(s.postMessage) && !s.importScripts && r && 'file:' !== r.protocol && !f(D)
-              ? ((i = D), s.addEventListener('message', w, !1))
+              ? ((i = D), s.addEventListener('message', P, !1))
               : (i =
                     C in h('script')
                         ? function (e) {
                               _.appendChild(h('script'))[C] = function () {
-                                  (_.removeChild(this), R(e));
+                                  (_.removeChild(this), w(e));
                               };
                           }
                         : function (e) {
-                              setTimeout(P(e), 0);
+                              setTimeout(R(e), 0);
                           })),
     (e.exports = {
         set: b,

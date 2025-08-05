@@ -25,16 +25,16 @@ let T = 300000,
     A = {},
     N = new f.V7(),
     C = !1,
-    R = window.document.createElement('canvas'),
-    P = 512,
-    w = 288;
-((R.width = 512), (R.height = w));
-let D = R.getContext('2d');
+    w = window.document.createElement('canvas'),
+    R = 512,
+    P = 288;
+((w.width = 512), (w.height = P));
+let D = w.getContext('2d');
 function L() {
     (N.stop(), null != r && (u.Z.removeSink(r, A), (r = null)));
 }
 let x = s().debounce((e, t, n, r) => {
-    k(
+    j(
         e,
         (0, y.V9)({
             streamType: null != t ? O.lo.GUILD : O.lo.CALL,
@@ -44,11 +44,11 @@ let x = s().debounce((e, t, n, r) => {
         })
     );
 }, 500);
-function M(e) {
-    let t = Math.min(P / e.width, w / e.height),
+function k(e) {
+    let t = Math.min(R / e.width, P / e.height),
         n = e.width * t,
         r = e.height * t;
-    ((R.width = n), (R.height = r));
+    ((w.width = n), (w.height = r));
     let i = window.document.createElement('canvas'),
         a = i.getContext('2d');
     ((i.width = e.width), (i.height = e.height));
@@ -60,14 +60,14 @@ function M(e) {
         })
     );
 }
-async function k(e, t) {
+async function j(e, t) {
     if (r !== e || ((0, E.isWeb)() && h.I0.getSetting()) || m.Z.getIsActiveStreamPreviewDisabled(t)) return;
-    let n = () => k(e, t);
+    let n = () => j(e, t);
     if (!C)
         try {
-            let n = await j(e, 60);
-            await M(n);
-            let r = R.toDataURL('image/jpeg');
+            let n = await M(e, 60);
+            await k(n);
+            let r = w.toDataURL('image/jpeg');
             if (
                 (_.Z.dispatch({
                     type: 'STREAM_PREVIEW_FETCH_SUCCESS',
@@ -99,7 +99,7 @@ async function k(e, t) {
         }
     r === e && (C ? N.start(S, n) : N.start(T, n));
 }
-function j(e, t) {
+function M(e, t) {
     let n = 0;
     return (E.isPlatformEmbedded ? G : U)(e, (e) => {
         if (new Uint32Array(e.data.buffer).some((e) => 0 !== e)) return !0;
@@ -113,7 +113,7 @@ function U(e, t) {
     let { width: r, height: i } = n.getVideoTracks()[0].getSettings(),
         a = document.createElement('video'),
         o = document.createElement('canvas');
-    ((a.width = o.width = null != r ? r : P), (a.height = o.height = null != i ? i : w), (a.srcObject = n), a.play());
+    ((a.width = o.width = null != r ? r : R), (a.height = o.height = null != i ? i : P), (a.srcObject = n), a.play());
     let s = o.getContext('2d');
     return new Promise((e, n) => {
         a.ontimeupdate = () => {

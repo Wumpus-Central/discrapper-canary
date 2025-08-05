@@ -68,7 +68,7 @@ e.exports = function (e) {
             literal: d
         },
         C = [E, T, A],
-        R = [
+        w = [
             {
                 match: r(/\./, a(...p)),
                 relevance: 0
@@ -78,12 +78,12 @@ e.exports = function (e) {
                 match: r(/\b/, a(...p), /(?=\()/)
             }
         ],
-        P = {
+        R = {
             match: /->/,
             relevance: 0
         },
-        w = [
-            P,
+        P = [
+            R,
             {
                 className: 'operator',
                 relevance: 0,
@@ -97,15 +97,15 @@ e.exports = function (e) {
             relevance: 0,
             variants: [{ match: `\\b(${D})(\\.(${D}))?([eE][+-]?(${D}))?\\b` }, { match: `\\b0x(${L})(\\.(${L}))?([pP][+-]?(${D}))?\\b` }, { match: /\b0o([0-7]_*)+\b/ }, { match: /\b0b([01]_*)+\b/ }]
         },
-        M = (e = '') => ({
+        k = (e = '') => ({
             className: 'subst',
             variants: [{ match: r(/\\/, e, /[0\\tnr"']/) }, { match: r(/\\/, e, /u\{[0-9a-fA-F]{1,8}\}/) }]
         }),
-        k = (e = '') => ({
+        j = (e = '') => ({
             className: 'subst',
             match: r(/\\/, e, /[\t ]*(?:[\r\n]|\r\n)/)
         }),
-        j = (e = '') => ({
+        M = (e = '') => ({
             className: 'subst',
             label: 'interpol',
             begin: r(/\\/, e, /\(/),
@@ -114,18 +114,18 @@ e.exports = function (e) {
         U = (e = '') => ({
             begin: r(e, /"""/),
             end: r(/"""/, e),
-            contains: [M(e), k(e), j(e)]
+            contains: [k(e), j(e), M(e)]
         }),
         G = (e = '') => ({
             begin: r(e, /"/),
             end: r(/"/, e),
-            contains: [M(e), j(e)]
+            contains: [k(e), M(e)]
         }),
         B = {
             className: 'string',
             variants: [U(), U('#'), U('##'), U('###'), G(), G('#'), G('##'), G('###')]
         },
-        V = [
+        Z = [
             e.BACKSLASH_ESCAPE,
             {
                 begin: /\[/,
@@ -137,16 +137,16 @@ e.exports = function (e) {
         F = {
             begin: /\/[^\s](?=[^/\n]*\/)/,
             end: /\//,
-            contains: V
+            contains: Z
         },
-        Z = (e) => {
+        V = (e) => {
             let t = r(e, /\//),
                 n = r(/\//, e);
             return {
                 begin: t,
                 end: n,
                 contains: [
-                    ...V,
+                    ...Z,
                     {
                         scope: 'comment',
                         begin: `#(?!.*${n})`,
@@ -157,7 +157,7 @@ e.exports = function (e) {
         },
         H = {
             scope: 'regexp',
-            variants: [Z('###'), Z('##'), Z('#'), F]
+            variants: [V('###'), V('##'), V('#'), F]
         },
         Y = { match: r(/`/, y, /`/) },
         W = [
@@ -181,7 +181,7 @@ e.exports = function (e) {
                             begin: /\(/,
                             end: /\)/,
                             keywords: I,
-                            contains: [...w, x, B]
+                            contains: [...P, x, B]
                         }
                     ]
                 }
@@ -226,10 +226,10 @@ e.exports = function (e) {
             begin: /</,
             end: />/,
             keywords: N,
-            contains: [...h, ...C, ...K, P, z]
+            contains: [...h, ...C, ...K, R, z]
         };
     z.contains.push(q);
-    let X = {
+    let $ = {
             begin: /\(/,
             end: /\)/,
             relevance: 0,
@@ -244,8 +244,8 @@ e.exports = function (e) {
                 ...h,
                 H,
                 ...C,
-                ...R,
                 ...w,
+                ...P,
                 x,
                 B,
                 ...W,
@@ -253,13 +253,13 @@ e.exports = function (e) {
                 z
             ]
         },
-        Q = {
+        X = {
             begin: /</,
             end: />/,
             keywords: 'repeat each',
             contains: [...h, z]
         },
-        J = {
+        Q = {
             begin: /\(/,
             end: /\)/,
             keywords: N,
@@ -281,29 +281,29 @@ e.exports = function (e) {
                 },
                 ...h,
                 ...C,
-                ...w,
+                ...P,
                 x,
                 B,
                 ...K,
                 z,
-                X
+                $
             ],
             endsParent: !0,
             illegal: /["']/
         },
-        $ = {
+        J = {
             match: [/(func|macro)/, /\s+/, a(Y.match, y, g)],
             className: {
                 1: 'keyword',
                 3: 'title.function'
             },
-            contains: [Q, J, t],
+            contains: [X, Q, t],
             illegal: [/\[/, /%/]
         },
         ee = {
             match: [/\b(?:subscript|init[?!]?)/, /\s*(?=[<(])/],
             className: { 1: 'keyword' },
-            contains: [Q, J, t],
+            contains: [X, Q, t],
             illegal: /\[|%/
         },
         et = {
@@ -346,7 +346,7 @@ e.exports = function (e) {
             },
             keywords: N,
             contains: [
-                Q,
+                X,
                 ...C,
                 {
                     begin: /:/,
@@ -366,7 +366,7 @@ e.exports = function (e) {
     for (let e of B.variants) {
         let t = e.contains.find((e) => 'interpol' === e.label);
         t.keywords = N;
-        let n = [...C, ...R, ...w, x, B, ...W];
+        let n = [...C, ...w, ...P, x, B, ...W];
         t.contains = [
             ...n,
             {
@@ -381,7 +381,7 @@ e.exports = function (e) {
         keywords: N,
         contains: [
             ...h,
-            $,
+            J,
             ee,
             er,
             ei,
@@ -396,14 +396,14 @@ e.exports = function (e) {
             },
             H,
             ...C,
-            ...R,
             ...w,
+            ...P,
             x,
             B,
             ...W,
             ...K,
             z,
-            X
+            $
         ]
     };
 };

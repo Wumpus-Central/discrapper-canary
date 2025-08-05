@@ -1,6 +1,6 @@
 (n.d(t, {
     M: () => D,
-    h: () => R
+    h: () => w
 }),
     n(467055),
     n(388685));
@@ -232,7 +232,7 @@ let S = [d.h8.PAYMENT_ELEMENT],
             ]
         });
     },
-    R = (e) => {
+    w = (e) => {
         var { onSetupError: t } = e,
             n = I(e, ['onSetupError']);
         let { elementsOptions: i, isLoading: o, setupError: s } = (0, p.S)({ onSetupError: t }),
@@ -248,8 +248,8 @@ let S = [d.h8.PAYMENT_ELEMENT],
                   children: (0, r.jsx)(C, y({}, n))
               });
     },
-    P = ['city', 'country', 'line1'],
-    w = ['link'],
+    R = ['city', 'country', 'line1'],
+    P = ['link'],
     D = (e) => {
         let { step: t, handleStepChange: n, paymentElementsEnabled: r, logger: a, onBillingAddressChange: o, shouldLogOnChangeEvents: s, continueSessionToInitialStep: l } = e,
             u = i.useRef(null),
@@ -261,7 +261,7 @@ let S = [d.h8.PAYMENT_ELEMENT],
                     onChange: (e) => {
                         (s && null != a && a.log('PaymentElements onChange event:', e), _(e.complete), m((0, h.hR)(e.value.type)));
                     },
-                    wallets: w
+                    wallets: P
                 }),
                 [a, s]
             ),
@@ -283,7 +283,7 @@ let S = [d.h8.PAYMENT_ELEMENT],
                                 postalCode: r.postal_code
                             },
                             s =
-                                P.every((e) => {
+                                R.every((e) => {
                                     let t = a[e];
                                     return null != t && '' !== t;
                                 }) && n;

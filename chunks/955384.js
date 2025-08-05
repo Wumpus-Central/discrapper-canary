@@ -1,10 +1,10 @@
-(n.d(t, { Z: () => h }), n(388685));
+(n.d(t, { Z: () => _ }), n(388685));
 var r = n(255367),
     i = n(73800),
-    l = n(911969),
-    a = n(925975),
-    o = n(957730),
-    s = n(981631),
+    a = n(911969),
+    o = n(925975),
+    s = n(957730),
+    l = n(981631),
     c = n(388032),
     u = n(224079);
 function d(e, t, n) {
@@ -20,35 +20,35 @@ function d(e, t, n) {
         e
     );
 }
-function p(e) {
+function f(e) {
     e.stopPropagation();
 }
-class h extends i.PureComponent {
+class _ extends i.PureComponent {
     render() {
-        let { className: e, textValue: t, richValue: n, message: i, channel: l, onCancel: a, children: o } = this.props,
-            s = (0, r.jsx)('div', {
+        let { className: e, textValue: t, richValue: n, message: i, channel: a, onCancel: o, children: s } = this.props,
+            l = (0, r.jsx)('div', {
                 className: u.operations,
                 children: c.intl.format(c.t.wDsPXl, {
-                    onCancel: () => a(l.id),
+                    onCancel: () => o(a.id),
                     onSave: this.onClickSave
                 })
             });
         return (0, r.jsxs)('div', {
             className: e,
             ref: this.node,
-            onContextMenu: p,
+            onContextMenu: f,
             children: [
-                o({
+                s({
                     textValue: t,
                     richValue: n,
                     message: i,
-                    channel: l,
+                    channel: a,
                     onChange: this.onChange,
                     onSubmit: this.onSubmit,
                     onKeyDown: this.onKeyDown,
-                    renderLeftAccessories: () => s
+                    renderLeftAccessories: () => l
                 }),
-                s
+                l
             ]
         });
     }
@@ -78,19 +78,19 @@ class h extends i.PureComponent {
                                   shouldClear: !1,
                                   shouldRefocus: !1
                               });
-                          let d = (0, a.g)(e, {
+                          let d = (0, o.g)(e, {
                               channel: n,
                               isEdit: !0
                           });
-                          if (((null == d ? void 0 : d.content) != null && (e = d.content), t.hasFlag(s.iLy.IS_COMPONENTS_V2) && this.props.channel.type === s.d4z.GUILD_ANNOUNCEMENT)) {
-                              let t = o.ZP.parse(this.props.channel, e),
-                                  n = this.props.message.components.filter((e) => e.type === l.re.TEXT_DISPLAY);
+                          if (((null == d ? void 0 : d.content) != null && (e = d.content), t.hasFlag(l.iLy.IS_COMPONENTS_V2) && this.props.channel.type === l.d4z.GUILD_ANNOUNCEMENT)) {
+                              let t = s.ZP.parse(this.props.channel, e),
+                                  n = this.props.message.components.filter((e) => e.type === a.re.TEXT_DISPLAY);
                               if (1 === n.length) {
                                   let r = n[0];
                                   e !== r.content && c(this.props.channel.id, this.props.message.id, t);
                               }
                           } else {
-                              let t = o.ZP.parse(this.props.channel, e);
+                              let t = s.ZP.parse(this.props.channel, e);
                               t.content !== this.props.message.content && c(this.props.channel.id, this.props.message.id, t);
                           }
                           return (
@@ -107,7 +107,7 @@ class h extends i.PureComponent {
                 i(r.id, t, n);
             }),
             d(this, 'onKeyDown', (e) => {
-                if (e.keyCode === s.yXg.ESCAPE && !e.shiftKey) {
+                if (e.keyCode === l.yXg.ESCAPE && !e.shiftKey) {
                     let { channel: t, onCancel: n } = this.props;
                     (e.preventDefault(), e.stopPropagation(), n(t.id));
                 }

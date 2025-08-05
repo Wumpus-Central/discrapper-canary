@@ -14,9 +14,9 @@ var r = n(255367),
     b = n(714905);
 function g(e) {
     let { user: t, guildId: n, channelId: g, onClose: y } = e,
-        { analyticsLocations: _ } = (0, a.ZP)(),
-        { context: O, trackUserProfileAction: h } = (0, s.KZ)(),
-        { mutualFriends: j, mutualFriendsCount: x } = (0, d.Z)(t),
+        { analyticsLocations: O } = (0, a.ZP)(),
+        { context: j, trackUserProfileAction: _ } = (0, s.KZ)(),
+        { mutualFriends: x, mutualFriendsCount: h } = (0, d.Z)(t),
         v = (0, i.Z)();
     return (
         o.useEffect(() => {
@@ -26,8 +26,8 @@ function g(e) {
             className: b.scroller,
             fade: !0,
             children:
-                null == j
-                    ? Array.from({ length: null != x ? x : 10 }).map((e, t) =>
+                null == x
+                    ? Array.from({ length: null != h ? h : 10 }).map((e, t) =>
                           (0, r.jsxs)(
                               'div',
                               {
@@ -46,9 +46,9 @@ function g(e) {
                               t
                           )
                       )
-                    : 0 === j.length
+                    : 0 === x.length
                       ? (0, r.jsx)(m.s_, {})
-                      : j.map((e) => {
+                      : x.map((e) => {
                             let { key: t, user: o, status: l } = e;
                             return (0, r.jsx)(
                                 p.Z,
@@ -60,7 +60,7 @@ function g(e) {
                                     onSelect: () => {
                                         var e, t;
                                         (null == y || y(),
-                                            h({ action: 'PRESS_MUTUAL_FRIEND' }),
+                                            _({ action: 'PRESS_MUTUAL_FRIEND' }),
                                             (0, f.openUserProfileModal)(
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
@@ -86,11 +86,11 @@ function g(e) {
                                                             }));
                                                     }
                                                     return e;
-                                                })({}, O)),
+                                                })({}, j)),
                                                 (t = t =
                                                     {
                                                         userId: o.id,
-                                                        sourceAnalyticsLocations: _
+                                                        sourceAnalyticsLocations: O
                                                     }),
                                                 Object.getOwnPropertyDescriptors
                                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))

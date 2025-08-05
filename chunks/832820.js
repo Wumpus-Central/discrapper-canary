@@ -52,16 +52,16 @@ let y = function (e) {
     i.useEffect(() => {
         !1 === l && I();
     }, [l, I]);
-    let R = i.useCallback(() => {
+    let w = i.useCallback(() => {
             C(!1);
         }, []),
-        P = i.useCallback(
+        R = i.useCallback(
             (e) => {
                 (v(e), C(!1));
             },
             [v]
         ),
-        w = i.useCallback(() => {
+        P = i.useCallback(() => {
             (0, _.s)({
                 channelId: t.id,
                 onRedeem: () => {},
@@ -76,8 +76,8 @@ let y = function (e) {
             (0, r.jsx)(p.Z, {
                 channel: t,
                 shouldShow: N,
-                onRequestClose: R,
-                setEmojiConfetti: P,
+                onRequestClose: w,
+                setEmojiConfetti: R,
                 positionRef: D,
                 position: 'top',
                 align: 'left',
@@ -104,7 +104,7 @@ let y = function (e) {
                     (0, r.jsx)(o.zx, {
                         look: o.zx.Looks.LINK,
                         size: o.zx.Sizes.SMALL,
-                        onClick: w,
+                        onClick: P,
                         color: o.zx.Colors.TRANSPARENT,
                         className: E.learnMoreButton,
                         children: (0, r.jsx)(a.xv, {

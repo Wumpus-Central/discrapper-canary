@@ -1,3 +1,3 @@
-t.exports = function (t) {
-    return !!t && !!t.ownerDocument && t.nodeType === Node.ELEMENT_NODE;
+e.exports = function (e) {
+    return !!e && !!e.ownerDocument && e.nodeType === Node.ELEMENT_NODE;
 };

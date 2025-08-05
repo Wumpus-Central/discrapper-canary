@@ -24,7 +24,7 @@ let { Themes: E } = n(15202).V,
     { Modules: S } = p.V,
     { Layout: A, Space: N } = _.VV,
     C = l()(y, (e) => i()(e)),
-    R = {
+    w = {
         themes: E,
         modules: S,
         colors: l()(b, (e, t) => {
@@ -45,10 +45,10 @@ let { Themes: E } = n(15202).V,
                         let e = null == (s = v[n]) ? void 0 : s[t.theme];
                         null != e && ((d = null != (l = e.raw) ? l : d), (f = null != (c = e.opacity) ? c : f));
                     }
-                    if (1 === f) return R.unsafe_rawColors[d].resolve(t);
+                    if (1 === f) return w.unsafe_rawColors[d].resolve(t);
                     {
                         let e = C[d];
-                        return (0 !== e.alpha() && 1 !== f && (e = e.alpha(f)), P(e, t.saturation));
+                        return (0 !== e.alpha() && 1 !== f && (e = e.alpha(f)), R(e, t.saturation));
                     }
                 }
             };
@@ -60,7 +60,7 @@ let { Themes: E } = n(15202).V,
                 css: L(n),
                 resolve(e) {
                     var t;
-                    return P(r, null != (t = null == e ? void 0 : e.saturation) ? t : 1);
+                    return R(r, null != (t = null == e ? void 0 : e.saturation) ? t : 1);
                 }
             };
         }),
@@ -83,33 +83,33 @@ let { Themes: E } = n(15202).V,
             }
         }))
     };
-function P(e, t) {
+function R(e, t) {
     return {
         spring() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return w(e, t, n).hex('rgba');
+            return P(e, t, n).hex('rgba');
         },
         hsl() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return w(e, t, n).css('hsl');
+            return P(e, t, n).css('hsl');
         },
         hex() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return w(e, t, n).hex();
+            return P(e, t, n).hex();
         },
         int() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                r = w(e, t, n),
+                r = P(e, t, n),
                 i = r.num();
             return 1 !== r.alpha() ? (i << 8) | Math.round(255 * r.alpha()) : i;
         },
         rgba() {
             let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return w(e, t, n).rgba();
+            return P(e, t, n).rgba();
         }
     };
 }
-function w(e, t, n) {
+function P(e, t, n) {
     var r;
     let i = o()(null != (r = n.opacity) ? r : 1, 0, 1),
         a = e;
@@ -123,4 +123,4 @@ function L(e, t) {
         r = D(e);
     return 'var(--'.concat([n, r].filter(Boolean).join('-'), ')');
 }
-let x = R;
+let x = w;

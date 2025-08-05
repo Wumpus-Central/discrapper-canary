@@ -1,17 +1,17 @@
-i.d(e, { Z: () => o });
-var n = i(570140),
-    r = i(626135),
-    s = i(981631);
+n.d(t, { Z: () => o });
+var r = n(570140),
+    i = n(626135),
+    a = n(981631);
 let o = {
-    dismissForApplicationId(t) {
-        (n.Z.dispatch({
+    dismissForApplicationId(e) {
+        (r.Z.dispatch({
             type: 'ACTIVITY_INVITE_EDUCATION_DISMISS',
-            key: t,
+            key: e,
             value: !0
         }),
-            r.default.track(s.rMx.CLOSE_TUTORIAL, {
+            i.default.track(a.rMx.CLOSE_TUTORIAL, {
                 tutorial: 'activity-invite-nux-inline',
-                application_id: t,
+                application_id: e,
                 acknowledged: !0
             }));
     }

@@ -4,8 +4,8 @@ n(73800);
 var i = n(120356),
     l = n.n(i),
     o = n(91192),
-    a = n(589440),
-    s = n(481060),
+    s = n(589440),
+    a = n(481060),
     c = n(440185),
     u = n(915887),
     d = n(768107);
@@ -54,7 +54,7 @@ function p(e, t) {
 }
 function f(e) {
     var t,
-        { id: n, className: i, innerClassName: f, renderIcon: g, text: m, selected: b, trailing: _, background: O, showUnread: y = !1, ref: C } = e,
+        { id: n, className: i, innerClassName: f, renderIcon: g, text: m, selected: b, trailing: O, background: _, showUnread: y = !1, ref: C } = e,
         v = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -75,11 +75,11 @@ function f(e) {
             return i;
         })(e, ['id', 'className', 'innerClassName', 'renderIcon', 'text', 'selected', 'trailing', 'background', 'showUnread', 'ref']);
     let j = (0, o.JA)(n),
-        E = null != (t = (0, a.qg)(m)) ? t : '';
+        E = null != (t = (0, s.qg)(m)) ? t : '';
     return (0, r.jsx)('li', {
         ref: C,
         children: (0, r.jsxs)(
-            s.kL8,
+            a.kL8,
             p(h({}, v), {
                 buttonProps: p(h({}, j), {
                     id: n,
@@ -102,7 +102,7 @@ function f(e) {
                           },
                 className: l()(u.containerDefault, d.wrapper, { [d.modeSelected]: b }, i),
                 children: [
-                    O,
+                    _,
                     y ? (0, r.jsx)('div', { className: l()(d.unread, d.unreadImportant) }) : null,
                     (0, r.jsx)('div', {
                         className: l()([d.link, d.basicChannelRowLink, f]),
@@ -118,7 +118,7 @@ function f(e) {
                                     'aria-hidden': !0,
                                     children: m
                                 }),
-                                _
+                                O
                             ]
                         })
                     })

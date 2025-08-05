@@ -98,7 +98,7 @@ function T(e) {
         }),
         { ref: N } = A,
         C = v(A, ['ref']),
-        R = (e) => {
+        w = (e) => {
             s.Z.dispatch({
                 type: 'APP_ICON_UPDATED',
                 id: e
@@ -155,7 +155,7 @@ function T(e) {
                                         {
                                             icon: e,
                                             isSelected: I === e.id,
-                                            onSelect: (e) => R(e),
+                                            onSelect: (e) => w(e),
                                             disabled: n,
                                             tabIndex: 0 !== t || n ? void 0 : 0,
                                             locked: !1

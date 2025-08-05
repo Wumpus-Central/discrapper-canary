@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M });
+n.d(t, { Z: () => k });
 var r,
     i = n(442837),
     a = n(780384),
@@ -100,13 +100,13 @@ class N extends (r = i.ZP.PersistedStore) {
 function C() {
     return (0 === y && ((O = b(g({}, O), { [p.zd.DARK]: h.BRd.DARKER })), (y = 1)), A());
 }
-function R() {
+function w() {
     return (0, a.ap)(S());
 }
-function P(e) {
+function R(e) {
     return ((T = null), !e.isSwitchingAccount && I !== h.BRd.DARK && ((I = h.BRd.DARK), (0, u.Z)(I), A()));
 }
-function w(e) {
+function P(e) {
     let { systemTheme: t } = e;
     return ((v = t), A());
 }
@@ -128,17 +128,17 @@ function x() {
         },
         (e) => e
     ]));
-let M = new N(o.Z, {
+let k = new N(o.Z, {
     CACHE_LOADED: A,
     CONNECTION_OPEN: C,
-    LOGOUT: P,
+    LOGOUT: R,
     OVERLAY_INITIALIZE: A,
     SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: A,
     UNSYNCED_USER_SETTINGS_UPDATE: A,
     USER_SETTINGS_PROTO_UPDATE: A,
     RESET_PREVIEW_CLIENT_THEME: A,
-    SYSTEM_THEME_CHANGE: w,
-    ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: R,
+    SYSTEM_THEME_CHANGE: P,
+    ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: w,
     UPDATE_THEME_PREFERENCES: D,
     SET_THEME_OVERRIDE: L,
     CLEAR_THEME_OVERRIDE: x

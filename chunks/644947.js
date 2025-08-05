@@ -8,7 +8,7 @@ var r = n(97519),
     i = n(286379),
     l = n(731965),
     s = n(797614);
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +33,7 @@ function a(e) {
     }
     return e;
 }
-function o(e, t) {
+function a(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,7 +57,7 @@ function u() {
 }
 function d(e) {
     (0, l.j)(() => {
-        c.setState((t) => (null == e ? t : e in t.captchaServeVolume ? { captchaServeVolume: o(a({}, t.captchaServeVolume), { [e]: t.captchaServeVolume[e] + 1 }) } : { captchaServeVolume: o(a({}, t.captchaServeVolume), { [e]: 1 }) }));
+        c.setState((t) => (null == e ? t : e in t.captchaServeVolume ? { captchaServeVolume: a(o({}, t.captchaServeVolume), { [e]: t.captchaServeVolume[e] + 1 }) } : { captchaServeVolume: a(o({}, t.captchaServeVolume), { [e]: 1 }) }));
     });
 }
 function h() {

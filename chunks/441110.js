@@ -1,75 +1,78 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
-var l = n(481060),
-    o = n(493773),
-    i = n(367907),
-    a = n(524444),
-    s = n(297047),
+var i = n(481060),
+    a = n(493773),
+    o = n(367907),
+    s = n(524444),
+    l = n(297047),
     c = n(592125),
     u = n(944486),
     d = n(626135),
-    p = n(981631),
-    m = n(388032),
-    g = n(400822);
-let f = function (e) {
-    let { guild: t, message: n, onClose: f } = e,
-        b = c.Z.getChannel(u.Z.getChannelId(t.id));
-    return ((0, o.ZP)(() => {
-        d.default.track(p.rMx.OPEN_POPOUT, {
-            type: 'New Member Badge Popout',
-            guild_id: t.id,
-            channel_id: null == b ? void 0 : b.id
-        });
-    }),
-    null == b)
-        ? null
-        : (0, r.jsx)(a.W_, {
-              className: g.messagePopoutContent,
-              children: (0, r.jsxs)('div', {
-                  className: g.popoutContainer,
-                  children: [
-                      (0, r.jsxs)('div', {
-                          className: g.mainContent,
-                          children: [
-                              (0, r.jsx)('div', {
-                                  className: g.iconContainer,
-                                  children: (0, r.jsx)(l.hg2, {
-                                      size: 'custom',
-                                      color: 'currentColor',
-                                      width: 40,
-                                      height: 40
-                                  })
-                              }),
-                              (0, r.jsxs)('div', {
-                                  children: [
-                                      (0, r.jsx)(l.X6q, {
-                                          variant: 'heading-md/semibold',
-                                          className: g.header,
-                                          children: m.intl.string(m.t['v/OYd3'])
-                                      }),
-                                      (0, r.jsx)(l.Text, {
-                                          variant: 'text-sm/normal',
-                                          children: m.intl.string(m.t.Z85MlJ)
-                                      })
-                                  ]
-                              })
-                          ]
-                      }),
-                      (0, r.jsx)('div', {
-                          'data-button-hoisted-classname-wrapper': !0,
-                          className: g.ctaButton,
-                          children: (0, r.jsx)(l.zxk, {
-                              variant: 'primary',
-                              size: 'sm',
-                              text: m.intl.format(m.t['+xsVS0'], { username: n.author.username }),
-                              fullWidth: !0,
-                              onClick: () => {
-                                  (i.ZP.trackWithMetadata(p.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), f(), (0, s.q)(n.author, b.id));
-                              }
-                          })
-                      })
-                  ]
-              })
-          });
+    f = n(981631),
+    _ = n(388032),
+    p = n(400822);
+let h = function (e) {
+    let { guild: t, message: n, onClose: h } = e,
+        m = c.Z.getChannel(u.Z.getChannelId(t.id));
+    if (
+        ((0, a.ZP)(() => {
+            d.default.track(f.rMx.OPEN_POPOUT, {
+                type: 'New Member Badge Popout',
+                guild_id: t.id,
+                channel_id: null == m ? void 0 : m.id
+            });
+        }),
+        null == m)
+    )
+        return null;
+    let g = () => {
+        (o.ZP.trackWithMetadata(f.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), h(), (0, l.q)(n.author, m.id));
+    };
+    return (0, r.jsx)(s.W_, {
+        className: p.messagePopoutContent,
+        children: (0, r.jsxs)('div', {
+            className: p.popoutContainer,
+            children: [
+                (0, r.jsxs)('div', {
+                    className: p.mainContent,
+                    children: [
+                        (0, r.jsx)('div', {
+                            className: p.iconContainer,
+                            children: (0, r.jsx)(i.hg2, {
+                                size: 'custom',
+                                color: 'currentColor',
+                                width: 40,
+                                height: 40
+                            })
+                        }),
+                        (0, r.jsxs)('div', {
+                            children: [
+                                (0, r.jsx)(i.X6q, {
+                                    variant: 'heading-md/semibold',
+                                    className: p.header,
+                                    children: _.intl.string(_.t['v/OYd3'])
+                                }),
+                                (0, r.jsx)(i.Text, {
+                                    variant: 'text-sm/normal',
+                                    children: _.intl.string(_.t.Z85MlJ)
+                                })
+                            ]
+                        })
+                    ]
+                }),
+                (0, r.jsx)('div', {
+                    'data-button-hoisted-classname-wrapper': !0,
+                    className: p.ctaButton,
+                    children: (0, r.jsx)(i.zxk, {
+                        variant: 'primary',
+                        size: 'sm',
+                        text: _.intl.format(_.t['+xsVS0'], { username: n.author.username }),
+                        fullWidth: !0,
+                        onClick: g
+                    })
+                })
+            ]
+        })
+    });
 };

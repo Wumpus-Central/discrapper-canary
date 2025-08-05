@@ -84,17 +84,17 @@ function S(e) {
 function A(e) {
     let { reply: t, chatInputType: n } = e,
         { channel: i, message: a, shouldMention: s, showMentionToggle: c } = t,
-        { guildId: m, nick: g, colorString: I, colorStrings: A, colorRoleName: N, authorId: C, displayNameStyles: R } = (0, d.ZP)(a),
-        P = (0, f.X7)(m, C, A),
-        w = (0, u.j)({ displayNameStyles: R }),
+        { guildId: m, nick: g, colorString: I, colorStrings: A, colorRoleName: N, authorId: C, displayNameStyles: w } = (0, d.ZP)(a),
+        R = (0, f.X7)(m, C, A),
+        P = (0, u.j)({ displayNameStyles: w }),
         D = T(i, a),
         L = (0, h.NE)(i, a),
         x = n.showThreadPromptOnReply && D >= v && L,
-        M = () => (0, p.uL)(b.Z5c.CHANNEL(i.getGuildId(), i.id, a.id));
-    function k(e) {
+        k = () => (0, p.uL)(b.Z5c.CHANNEL(i.getGuildId(), i.id, a.id));
+    function j(e) {
         (e.stopPropagation(), (0, _.qx)(i.id, !s));
     }
-    function j(e) {
+    function M(e) {
         (e.stopPropagation(), (0, _.A6)(i.id));
     }
     return (0, r.jsx)('div', {
@@ -106,7 +106,7 @@ function A(e) {
                     className: O.replyBar,
                     children: [
                         (0, r.jsx)(l.P3F, {
-                            onClick: M,
+                            onClick: k,
                             focusProps: {
                                 offset: {
                                     top: -8,
@@ -127,9 +127,9 @@ function A(e) {
                                                 className: O.name,
                                                 name: g,
                                                 colorString: I,
-                                                colorStrings: P,
+                                                colorStrings: R,
                                                 roleName: N,
-                                                nameTextClassName: w
+                                                nameTextClassName: P
                                             },
                                             t
                                         )
@@ -149,7 +149,7 @@ function A(e) {
                                                     return (0, r.jsx)(l.P3F, {
                                                         role: 'switch',
                                                         'aria-checked': s,
-                                                        onClick: k,
+                                                        onClick: j,
                                                         onMouseEnter: t,
                                                         onMouseLeave: n,
                                                         onFocus: i,
@@ -177,7 +177,7 @@ function A(e) {
                                             })
                                         ]
                                     }),
-                                (0, r.jsx)(E.B, { onClick: j })
+                                (0, r.jsx)(E.B, { onClick: M })
                             ]
                         })
                     ]

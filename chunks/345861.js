@@ -9,8 +9,8 @@ var i = n(120356),
 function c(e) {
     var t,
         n,
-        { buttonCTA: i, onChange: c, onFileSizeError: u, 'aria-label': d, multiple: f = !1, disabled: p = !1, submitting: g = !1, maxFileSizeBytes: m, filters: b, className: h } = e,
-        v = (function (e, t) {
+        { buttonCTA: i, onChange: c, onFileSizeError: u, 'aria-label': d, multiple: f = !1, disabled: p = !1, submitting: b = !1, maxFileSizeBytes: O, filters: h, className: m } = e,
+        g = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -58,10 +58,10 @@ function c(e) {
                                 }));
                         }
                         return e;
-                    })({}, v)),
+                    })({}, g)),
                     (n = n =
                         {
-                            submitting: g,
+                            submitting: b,
                             disabled: p
                         }),
                     Object.getOwnPropertyDescriptors
@@ -78,7 +78,7 @@ function c(e) {
                           }),
                     t)
                 ),
-                h
+                m
             ),
             style: { width: 'max-content' },
             'aria-disabled': p,
@@ -92,8 +92,8 @@ function c(e) {
                     onChange: c,
                     onFileSizeError: u,
                     multiple: f,
-                    maxFileSizeBytes: m,
-                    filters: b,
+                    maxFileSizeBytes: O,
+                    filters: h,
                     'aria-label': null != d ? d : i,
                     disabled: p
                 })

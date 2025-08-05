@@ -3,21 +3,21 @@
     Cm: () => N,
     HU: () => x,
     IV: () => C,
-    J0: () => P,
+    J0: () => R,
     K8: () => L,
     RE: () => T,
-    Vt: () => k,
+    Vt: () => j,
     ZS: () => h,
     a$: () => D,
     aK: () => S,
     aP: () => B,
     f7: () => O,
     i0: () => y,
-    kN: () => w,
+    kN: () => P,
     lb: () => A,
     o0: () => U,
-    o8: () => M,
-    pv: () => R,
+    o8: () => k,
+    pv: () => w,
     rL: () => m,
     xg: () => G,
     yf: () => b
@@ -154,21 +154,21 @@ let I = ['avatar-decorations', 'profile-effects', 'nameplates', 'bundles'],
     A = 800,
     N = 604800000,
     C = 12,
-    R = 1128,
-    P = 518,
-    w = 5,
+    w = 1128,
+    R = 518,
+    P = 5,
     D = new Date('2025-02-15T23:59:00-08:00'),
     L = 3,
     x = ['1212569433839636530', '1212570343567261736', '1212582298893946880'];
-var M = (function (e) {
+var k = (function (e) {
     return ((e[(e.FIAT = 0)] = 'FIAT'), (e[(e.ORB = 1)] = 'ORB'), (e[(e.PREMIUM_PURCHASE = 2)] = 'PREMIUM_PURCHASE'), (e[(e.PROMOTIONAL = 3)] = 'PROMOTIONAL'), (e[(e.TENURE_REWARD = 4)] = 'TENURE_REWARD'), (e[(e.GIFT = 5)] = 'GIFT'), e);
 })({});
-let k = {
+let j = {
         ORB_PROFILE_BADGE: '1342211853484429445',
         FRACTIONAL_PREMIUM: _.a.PREMIUM_TIER_2_3_DAY
     },
-    j = new Set(Object.values(k)),
-    U = (e) => j.has(e),
+    M = new Set(Object.values(j)),
+    U = (e) => M.has(e),
     G = [c.G.AVATAR_DECORATION, c.G.PROFILE_EFFECT, c.G.NAMEPLATE, c.G.BUNDLE],
     B = [
         {

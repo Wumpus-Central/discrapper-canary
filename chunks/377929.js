@@ -1,26 +1,26 @@
-(n.d(t, { Z: () => P }), n(388685));
+(n.d(t, { Z: () => I }), n(388685));
 var r = n(255367),
     i = n(73800),
     l = n(392711),
     a = n.n(l),
-    o = n(442837),
-    s = n(481060),
+    s = n(442837),
+    o = n(481060),
     c = n(32750),
-    u = n(109764),
-    d = n(323597),
-    p = n(438536),
-    h = n(251746),
+    d = n(109764),
+    u = n(323597),
+    h = n(438536),
+    p = n(251746),
     f = n(193987),
-    m = n(933793),
-    g = n(13736),
+    g = n(933793),
+    m = n(13736),
     b = n(732393),
     _ = n(137591),
     y = n(299206),
-    C = n(665149),
-    x = n(695346),
-    v = n(979651),
-    j = n(488131),
-    O = n(388032);
+    j = n(665149),
+    O = n(695346),
+    x = n(979651),
+    v = n(488131),
+    C = n(388032);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -46,7 +46,7 @@ function E(e) {
     }
     return e;
 }
-function S(e, t) {
+function Z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,34 +64,34 @@ function S(e, t) {
         e
     );
 }
-function P(e) {
+function I(e) {
     let { channel: t } = e,
         [n, l] = i.useState(!1),
         a = i.useRef(null);
-    function o() {
+    function s() {
         l((e) => !e);
     }
-    let c = O.intl.string(O.t.UKOtz8);
-    return (0, r.jsx)(s.yRy, {
+    let c = C.intl.string(C.t.UKOtz8);
+    return (0, r.jsx)(o.yRy, {
         targetElementRef: a,
         shouldShow: n,
-        animation: s.yRy.Animation.NONE,
+        animation: o.yRy.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
         onRequestClose: () => l(!1),
         renderPopout: function (e) {
-            return (0, r.jsx)(I, S(E({}, e), { channel: t }));
+            return (0, r.jsx)(S, Z(E({}, e), { channel: t }));
         },
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, r.jsx)(
-                C.ZP.Icon,
-                S(E({}, e), {
+                j.ZP.Icon,
+                Z(E({}, e), {
                     ref: a,
-                    onClick: o,
+                    onClick: s,
                     tooltip: n ? null : c,
-                    icon: s.xhG,
+                    icon: o.xhG,
                     'aria-label': c,
                     selected: n
                 })
@@ -99,54 +99,54 @@ function P(e) {
         }
     });
 }
-function I(e) {
+function S(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         l = (0, c.Z)(t),
-        C = (0, f.Z)(t),
+        j = (0, f.Z)(t),
         E = (0, b.Z)(t.id),
-        S = (0, g.Z)(t),
-        P = (0, y.Z)({
+        Z = (0, m.Z)(t),
+        I = (0, y.Z)({
             id: t.id,
-            label: O.intl.string(O.t.DQ797u)
+            label: C.intl.string(C.t.DQ797u)
         }),
-        I = (0, u.Z)(t),
-        Z = (0, d.Z)(t),
-        T = (0, p.Z)(t, 'Toolbar Overflow'),
-        N = (0, m.Z)(t),
-        A = (0, h.Z)(t),
-        w = (0, _.Z)(t),
-        R = x.vF.useSetting(),
-        M = (0, o.e7)([v.Z], () => !a().isEmpty(v.Z.getVoiceStatesForChannel(t.id)));
-    return (0, r.jsxs)(s.v2r, {
+        S = (0, d.Z)(t),
+        P = (0, u.Z)(t),
+        T = (0, h.Z)(t, 'Toolbar Overflow'),
+        N = (0, g.Z)(t),
+        w = (0, p.Z)(t),
+        R = (0, _.Z)(t),
+        A = O.vF.useSetting(),
+        D = (0, s.e7)([x.Z], () => !a().isEmpty(x.Z.getVoiceStatesForChannel(t.id)));
+    return (0, r.jsxs)(o.v2r, {
         navId: 'thread-context',
         onClose: n,
-        'aria-label': O.intl.string(O.t['1NBjqa']),
+        'aria-label': C.intl.string(C.t['1NBjqa']),
         onSelect: i,
         children: [
-            (0, r.jsxs)(s.kSQ, {
-                children: [T, A]
+            (0, r.jsxs)(o.kSQ, {
+                children: [T, w]
             }),
-            (0, r.jsxs)(s.kSQ, {
+            (0, r.jsxs)(o.kSQ, {
                 children: [
-                    S,
+                    Z,
                     N,
                     E,
-                    R && !M
-                        ? (0, r.jsx)(s.sNh, {
+                    A && !D
+                        ? (0, r.jsx)(o.sNh, {
                               id: 'open',
-                              label: O.intl.string(O.t.bX7EaG),
+                              label: C.intl.string(C.t.bX7EaG),
                               action: function () {
-                                  (0, j.ok)(t);
+                                  (0, v.ok)(t);
                               }
                           })
                         : null
                 ]
             }),
-            (0, r.jsxs)(s.kSQ, {
-                children: [w, l, C, Z]
+            (0, r.jsxs)(o.kSQ, {
+                children: [R, l, j, P]
             }),
-            (0, r.jsxs)(s.kSQ, {
-                children: [I, P]
+            (0, r.jsxs)(o.kSQ, {
+                children: [S, I]
             })
         ]
     });

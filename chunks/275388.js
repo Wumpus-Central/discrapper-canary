@@ -7,8 +7,8 @@ var r = n(255367),
     i = n(772848),
     l = n(952265),
     o = n(481060),
-    a = n(396639),
-    s = n(981631),
+    s = n(396639),
+    a = n(981631),
     c = n(602091);
 let u = 'orb-checkout-payment-modal-key',
     d = () => (0, o.VXO)(u),
@@ -99,7 +99,7 @@ let u = 'orb-checkout-payment-modal-key',
                 onCloseCallback: d,
                 onCloseRequest() {
                     (f ||
-                        (0, a._Y)(s.rMx.PAYMENT_FLOW_CANCELED, {
+                        (0, s._Y)(a.rMx.PAYMENT_FLOW_CANCELED, {
                             loadId: g,
                             skuId: t,
                             analyticsLocations: l,

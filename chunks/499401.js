@@ -1,15 +1,15 @@
-n.d(e, { Y: () => l });
+n.d(t, { Y: () => i });
 var r = n(388032);
-function l(t) {
-    let { application: e, username: n, usernameOnClick: l } = t;
-    return null != e
+function i(e) {
+    let { application: t, username: n, usernameOnClick: i } = e;
+    return null != t
         ? r.intl.formatToParts(r.t.Tes5Oj, {
               username: n,
-              applicationName: e.name,
-              usernameOnClick: l
+              applicationName: t.name,
+              usernameOnClick: i
           })
         : r.intl.formatToParts(r.t.PUJtgo, {
               username: n,
-              usernameOnClick: l
+              usernameOnClick: i
           });
 }

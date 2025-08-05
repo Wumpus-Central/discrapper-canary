@@ -1,12 +1,12 @@
-n.d(e, { y: () => r });
-var i = n(591759);
-function r(t, e) {
-    let n = t.getIconSource(e);
+n.d(t, { y: () => i });
+var r = n(591759);
+function i(e, t) {
+    let n = e.getIconSource(t);
     if (null != n && 'number' != typeof n) {
-        let t;
-        if ((Array.isArray(n) ? n.length > 0 && (t = n[0].uri) : (t = n.uri), null != t)) {
-            var r;
-            return null != (r = i.Z.toURLSafe(t)) ? r : void 0;
+        let e;
+        if ((Array.isArray(n) ? n.length > 0 && (e = n[0].uri) : (e = n.uri), null != e)) {
+            var i;
+            return null != (i = r.Z.toURLSafe(e)) ? i : void 0;
         }
     }
 }

@@ -1,16 +1,16 @@
 (n.d(t, {
     C1: () => H,
     Gh: () => Y,
-    N0: () => k,
-    T1: () => j,
+    N0: () => j,
+    T1: () => M,
     Tm: () => W,
-    _Q: () => M,
+    _Q: () => k,
     eL: () => K,
     eU: () => G,
     em: () => x,
     jv: () => q,
-    rO: () => Q,
-    sS: () => X,
+    rO: () => X,
+    sS: () => $,
     yg: () => L,
     yi: () => U,
     yl: () => B,
@@ -45,7 +45,7 @@ var r = n(46973),
     A = n(259612),
     N = n(356659),
     C = n(981631);
-function R(e, t, n) {
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -58,7 +58,7 @@ function R(e, t, n) {
         e
     );
 }
-function P(e) {
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -69,12 +69,12 @@ function P(e) {
                 })
             )),
             r.forEach(function (t) {
-                R(e, t, n[t]);
+                w(e, t, n[t]);
             }));
     }
     return e;
 }
-function w(e, t) {
+function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -91,7 +91,7 @@ function D(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : w(Object(t)).forEach(function (n) {
+            : P(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -105,12 +105,12 @@ async function x(e) {
     let { clipsEnabled: t, guildId: n, trackAnalytics: r = !1 } = e;
     (await a.Z.dispatch({
         type: 'CLIPS_SETTINGS_UPDATE',
-        settings: P({ clipsEnabled: t }, !t && { decoupledClipsEnabled: !1 })
+        settings: R({ clipsEnabled: t }, !t && { decoupledClipsEnabled: !1 })
     }),
         r &&
             b.default.track(
                 C.rMx.CLIPS_SETTINGS_UPDATED,
-                P(
+                R(
                     {
                         clips_enabled: t,
                         guild_id: n
@@ -119,22 +119,22 @@ async function x(e) {
                 )
             ));
 }
-function M(e) {
+function k(e) {
     let { enabled: t, trackAnalytics: n = !1 } = e;
     (a.Z.dispatch({
         type: 'CLIPS_SETTINGS_UPDATE',
-        settings: D(P({}, t && { clipsEnabled: !0 }), { decoupledClipsEnabled: t })
+        settings: D(R({}, t && { clipsEnabled: !0 }), { decoupledClipsEnabled: t })
     }),
-        n && b.default.track(C.rMx.CLIPS_SETTINGS_UPDATED, D(P({}, t && { clips_enabled: !0 }), { decoupled_clips_enabled: t })));
+        n && b.default.track(C.rMx.CLIPS_SETTINGS_UPDATED, D(R({}, t && { clips_enabled: !0 }), { decoupled_clips_enabled: t })));
 }
-function k(e) {
+function j(e) {
     (a.Z.dispatch({
         type: 'CLIPS_SETTINGS_UPDATE',
         settings: { remindersEnabled: e }
     }),
         b.default.track(C.rMx.CLIPS_SETTINGS_UPDATED, { reminders_enabled: e }));
 }
-function j(e) {
+function M(e) {
     a.Z.dispatch({
         type: 'CLIPS_SETTINGS_UPDATE',
         settings: { storageLocation: e }
@@ -160,7 +160,7 @@ function B(e) {
     }),
         n && b.default.track(C.rMx.CLIPS_SETTINGS_UPDATED, { viewer_clips_enabled: t }));
 }
-function V(e) {
+function Z(e) {
     var t;
     let n, r, i;
     if (null != e) {
@@ -192,7 +192,7 @@ function F(e, t) {
             a = null != (n = p.get(i)) ? n : 0;
         p.set(i, a + r);
     }
-    return D(P({}, e), {
+    return D(R({}, e), {
         frames_encoded_nvidia_cuda: null != (r = p.get(s.Su.NVIDIA_CUDA)) ? r : 0,
         frames_encoded_nvidia_direct3d: null != (i = p.get(s.Su.NVIDIA_DIRECT_3D)) ? i : 0,
         frames_encoded_openh264: null != (a = p.get(s.Su.OPENH264)) ? a : 0,
@@ -220,7 +220,7 @@ function F(e, t) {
         saved_at: t.savedAt
     });
 }
-async function Z(e) {
+async function V(e) {
     let t = O.Z.getSettings().storageLocation,
         n = (0, I.Z)(e),
         r = ''.concat((0, v.Z)(n.applicationName.substring(0, 20)), '_').concat(n.id, '.mp4'),
@@ -228,11 +228,11 @@ async function Z(e) {
         s = m.Z.getMediaEngine(),
         l = JSON.stringify(n),
         u = null != e ? (0, c.my)(e).ownerId : void 0,
-        d = V(e);
+        d = Z(e);
     null != e &&
         a.Z.dispatch({
             type: 'CLIPS_SAVE_CLIP_PLACEHOLDER',
-            clip: D(P({}, n), { filepath: i })
+            clip: D(R({}, n), { filepath: i })
         });
     try {
         var f;
@@ -240,7 +240,7 @@ async function Z(e) {
             r = F(d, t);
         ((r.clip_save_time_ms = t.clipSaveTimeMs), (r.clip_size_bytes = t.clipSizeBytes), null != t.viewerDecodeFps && ((r.decode_fps_during_clip = t.viewerDecodeFps), (r.encode_fps_during_clip = t.viewerEncodeFps), (r.target_fps = null)), b.default.track(C.rMx.CLIP_SAVED, r));
         let a = await (0, A.R)(o.Z.clips.getClipProtocolURLFromPath(i), 0);
-        return ((n.thumbnail = a), (n.length = e), N.jF.info('Clip save succeeded with '.concat(e, 'ms and thumbnail ').concat(null != (f = null == a ? void 0 : a.length) ? f : 0, ' bytes thumbnail.')), await s.updateClipMetadata(i, JSON.stringify(n)), D(P({}, n), { filepath: i }));
+        return ((n.thumbnail = a), (n.length = e), N.jF.info('Clip save succeeded with '.concat(e, 'ms and thumbnail ').concat(null != (f = null == a ? void 0 : a.length) ? f : 0, ' bytes thumbnail.')), await s.updateClipMetadata(i, JSON.stringify(n)), D(R({}, n), { filepath: i }));
     } catch (i) {
         if (
             (null != e &&
@@ -294,7 +294,7 @@ async function H(e) {
     let T = (0, d.GN)('clip_save', 0.5),
         S = performance.now();
     try {
-        let e = await Z(y);
+        let e = await V(y);
         a.Z.dispatch({
             type: 'CLIPS_SAVE_CLIP',
             clip: e
@@ -314,7 +314,7 @@ function Y(e, t) {
 async function W(e, t) {
     let n = O.Z.getClips().find((t) => t.id === e);
     if (null == n) return;
-    let r = P({}, n, t);
+    let r = R({}, n, t);
     null != (await (0, T.w)(r)) &&
         (await m.Z.getMediaEngine().updateClipMetadata(r.filepath, JSON.stringify(r)),
         b.default.track(C.rMx.CLIP_EDITED, { clip_id: r.id }),
@@ -335,7 +335,7 @@ async function q(e) {
     let n = await o.Z.clips.loadClipsDirectory(e),
         r = [];
     for (let e of n) {
-        let t = await (0, T.w)(D(P({}, e.metadata), { filepath: e.filepath }));
+        let t = await (0, T.w)(D(R({}, e.metadata), { filepath: e.filepath }));
         null != t && r.push(t);
     }
     a.Z.dispatch({
@@ -343,7 +343,7 @@ async function q(e) {
         clips: r
     });
 }
-async function X(e) {
+async function $(e) {
     var t;
     (0, y.isDesktop)() &&
         (null == (t = o.Z.clips) ? void 0 : t.deleteClip) != null &&
@@ -353,7 +353,7 @@ async function X(e) {
             filepath: e
         }));
 }
-async function Q(e, t) {
+async function X(e, t) {
     let n = m.Z.getMediaEngine(),
         r = await n.exportClip(e.filepath, t);
     return (0, S.Z)(r);

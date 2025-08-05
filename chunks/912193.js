@@ -1,52 +1,57 @@
-n.d(t, { b: () => u });
-var i = n(255367);
+n.d(t, { b: () => _ });
+var r = n(255367);
 n(73800);
-var r = n(481060),
-    l = n(846027),
+var i = n(481060),
+    a = n(846027),
     o = n(468026),
     s = n(388032);
-let a = null;
-function c() {
-    (null !== a && (0, r.Mr3)(a), (a = null));
+function l(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
+function c(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                l(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+let u = null;
 function d() {
-    l.Z.setSilenceWarning(!1);
+    (null !== u && (0, i.Mr3)(u), (u = null));
 }
-function u() {
-    a = (0, r.h7j)((e) =>
-        (0, i.jsx)(
+function f() {
+    a.Z.setSilenceWarning(!1);
+}
+function _() {
+    u = (0, i.h7j)((e) =>
+        (0, r.jsx)(
             o.default,
-            (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        i = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
-                        (i = i.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
-                        )),
-                        i.forEach(function (t) {
-                            var i;
-                            ((i = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: i,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0
-                                      })
-                                    : (e[t] = i));
-                        }));
-                }
-                return e;
-            })(
+            c(
                 {
                     title: s.intl.string(s.t['zQ1+Jy']),
                     body: s.intl.string(s.t.K1gWXl),
                     secondaryConfirmText: s.intl.string(s.t.XAiAgI),
-                    onConfirmSecondary: d,
-                    onConfirm: c,
+                    onConfirmSecondary: f,
+                    onConfirm: d,
                     confirmText: s.intl.string(s.t.BddRzc)
                 },
                 e

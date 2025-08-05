@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(388685), n(35282), n(415506));
+(n.d(t, { Z: () => M }), n(388685), n(35282), n(415506));
 var r = n(664751),
     i = n(990547),
     a = n(243814),
@@ -25,13 +25,13 @@ var r = n(664751),
     A = n(58642),
     N = n(254854),
     C = n(981631),
-    R = n(701488),
-    P = n(388032);
-let w = 3,
+    w = n(701488),
+    R = n(388032);
+let P = 3,
     D = 20;
 function L(e) {
-    let { applicationId: t, secret: n, channelId: r, intent: i = R.Ws.PLAY, embedded: a = !1, source: o, locationObject: s, analyticsLocations: c } = e;
-    k({
+    let { applicationId: t, secret: n, channelId: r, intent: i = w.Ws.PLAY, embedded: a = !1, source: o, locationObject: s, analyticsLocations: c } = e;
+    j({
         applicationId: t,
         channelId: r,
         embedded: a,
@@ -64,7 +64,7 @@ function x(e, t) {
               sku: t
           };
 }
-function M(e) {
+function k(e) {
     return o.tn
         .post({
             url: C.ANM.OAUTH2_AUTHORIZE,
@@ -95,7 +95,7 @@ function M(e) {
             }
         );
 }
-async function k(e) {
+async function j(e) {
     let { applicationId: t, branchId: n, channelId: r, embedded: i = !1, source: a, locationObject: o = {}, analyticsLocations: s = [] } = e;
     if (i) {
         let e = u.Z.getApplication(t);
@@ -123,7 +123,7 @@ async function k(e) {
         if (null == e) throw Error('Missing dispatch game when launching');
         let i = E.Z.getLibraryApplication(t, n);
         if (null == i) throw Error('Missing library application when launching');
-        d = M(t).then((t) => v.Z.launchDispatchApplication(e, t, h.default.locale, i.getBranchName(), r));
+        d = k(t).then((t) => v.Z.launchDispatchApplication(e, t, h.default.locale, i.getBranchName(), r));
     } else {
         let e = u.Z.getApplication(t);
         d = null != e ? v.Z.launch(e) : v.Z.launchGame(t);
@@ -148,7 +148,7 @@ async function k(e) {
                   });
               })
               .catch((e) => {
-                  (N.Z.show(C.kVF.LAUNCH_GAME_FAILURE, P.intl.string(P.t.YZEBdn)),
+                  (N.Z.show(C.kVF.LAUNCH_GAME_FAILURE, R.intl.string(R.t.YZEBdn)),
                       l.Z.dispatch({
                           type: 'GAME_LAUNCH_FAIL',
                           applicationId: t,
@@ -162,7 +162,7 @@ async function k(e) {
           }),
           Promise.reject(p));
 }
-let j = {
+let M = {
     addGame(e, t) {
         (l.Z.dispatch({
             type: 'RUNNING_GAME_ADD_OVERRIDE',
@@ -311,7 +311,7 @@ let j = {
                         distributor_application: x(i, a),
                         executable: c,
                         publisher: r,
-                        report_version: w
+                        report_version: P
                     },
                     retries: 1,
                     oldFormErrors: !0,
@@ -348,9 +348,9 @@ let j = {
             game: e
         });
     },
-    launch: k,
+    launch: j,
     async join(e) {
-        let { userId: t, sessionId: n, applicationId: r, channelId: i, messageId: a, intent: o = R.Ws.PLAY, embedded: s = !1, source: c, locationObject: u, analyticsLocations: d } = e;
+        let { userId: t, sessionId: n, applicationId: r, channelId: i, messageId: a, intent: o = w.Ws.PLAY, embedded: s = !1, source: c, locationObject: u, analyticsLocations: d } = e;
         if (__OVERLAY__)
             return (
                 l.Z.dispatch({

@@ -1,10 +1,10 @@
 (n.d(t, { y: () => u }), n(388685), n(704826), n(35282));
 var r = n(255367),
     l = n(73800),
-    a = n(755721),
-    i = n(176354),
-    s = n(388032),
-    o = n(139797);
+    i = n(755721),
+    a = n(176354),
+    o = n(388032),
+    s = n(139797);
 let u = (e) => {
     let { name: t, onNameChange: n } = e,
         u = l.useRef(null),
@@ -13,7 +13,7 @@ let u = (e) => {
         h = l.useCallback(
             (e) => {
                 var t;
-                ((c.current = null == (t = u.current) ? void 0 : t.selectionStart), n((e = (e = e.replace(/\s/g, '_')).length < 2 ? e : i.ZP.sanitizeEmojiName(e))));
+                ((c.current = null == (t = u.current) ? void 0 : t.selectionStart), n((e = (e = e.replace(/\s/g, '_')).length < 2 ? e : a.ZP.sanitizeEmojiName(e))));
             },
             [n]
         );
@@ -23,23 +23,23 @@ let u = (e) => {
             (null == (e = u.current) || e.setSelectionRange(c.current, c.current), (c.current = null));
         }
     });
-    let g = l.useCallback(() => {
+    let f = l.useCallback(() => {
             m(!1);
         }, []),
-        p = l.useCallback(() => {
+        g = l.useCallback(() => {
             m(!0);
         }, []);
-    return (0, r.jsx)(a.Is, {
+    return (0, r.jsx)(i.Is, {
         inputRef: u,
-        inputClassName: o.input,
+        inputClassName: s.input,
         error: d ? '' : void 0,
         minLength: 2,
         value: t,
         onChange: h,
-        placeholder: s.intl.string(s.t.U2JFHR),
+        placeholder: o.intl.string(o.t.U2JFHR),
         name: 'emoji_name',
-        onBlur: g,
-        onFocus: p,
+        onBlur: f,
+        onFocus: g,
         required: !0
     });
 };

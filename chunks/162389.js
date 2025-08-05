@@ -99,8 +99,8 @@ function y(e) {
         ),
         {
             handleDragStart: S,
-            handleDragReset: O,
-            handleDragComplete: E
+            handleDragReset: E,
+            handleDragComplete: O
         } = (0, h.Z)(t.availableTags, (e) => {
             (0, d.pW)({ availableTags: e });
         });
@@ -116,8 +116,8 @@ function y(e) {
                               availableTags: t.availableTags,
                               canManageChannels: r,
                               onTagClick: N,
-                              onDragComplete: E,
-                              onDragReset: O,
+                              onDragComplete: O,
+                              onDragReset: E,
                               onDragStart: S
                           },
                           e.id

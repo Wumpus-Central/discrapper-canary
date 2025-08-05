@@ -1,39 +1,43 @@
-(n.d(t, { Z: () => g }), n(388685));
+(n.d(t, { Z: () => m }), n(388685));
 var r = n(255367),
     i = n(442837),
-    l = n(481060),
-    a = n(251794),
-    o = n(386696),
-    s = n(71619),
+    a = n(481060),
+    o = n(251794),
+    s = n(386696),
+    l = n(71619),
     c = n(271383),
     u = n(430824),
     d = n(496675),
-    p = n(594174),
-    h = n(796263),
-    f = n(130883),
-    m = n(388032);
-function g(e) {
-    let { channel: t, user: n, guild: g } = e,
-        b = (0, i.e7)([p.default, u.Z, d.Z], () => null != n && null != g && (0, o.F)(g.id, n.id, [p.default, u.Z, d.Z])),
-        [_, y] = (0, s.ZP)(null == n ? void 0 : n.id, t.guild_id),
-        C = (0, i.e7)([c.ZP], () => null != g && null != n && null != c.ZP.getMember(g.id, n.id));
-    if (!b || !C) return null;
-    let x = 'timeout-user-'.concat(null == n ? void 0 : n.id);
+    f = n(594174),
+    _ = n(796263),
+    p = n(130883),
+    h = n(388032);
+function m(e) {
+    let { channel: t, user: n, guild: m } = e,
+        g = (0, i.e7)([f.default, u.Z, d.Z], () => null != n && null != m && (0, s.F)(m.id, n.id, [f.default, u.Z, d.Z])),
+        [E, b] = (0, l.ZP)(null == n ? void 0 : n.id, t.guild_id),
+        y = (0, i.e7)([c.ZP], () => null != m && null != n && null != c.ZP.getMember(m.id, n.id));
+    if (!g || !y) return null;
+    let O = () => {
+        null != n &&
+            (0, o.z)({
+                guildId: t.guild_id,
+                userId: n.id,
+                modReportId: t.id
+            });
+    };
+    function v() {
+        return b ? h.intl.string(p.default['6uMZbm']) : h.intl.string(p.default['Sgg/uL']);
+    }
+    let I = 'timeout-user-'.concat(null == n ? void 0 : n.id);
     return (0, r.jsx)(
-        h.Z,
+        _.Z,
         {
-            text: y ? m.intl.string(f.default['6uMZbm']) : m.intl.string(f.default['Sgg/uL']),
-            icon: l.T39,
-            onClick: () => {
-                null != n &&
-                    (0, a.z)({
-                        guildId: t.guild_id,
-                        userId: n.id,
-                        modReportId: t.id
-                    });
-            },
-            disabled: y
+            text: v(),
+            icon: a.T39,
+            onClick: O,
+            disabled: b
         },
-        x
+        I
     );
 }

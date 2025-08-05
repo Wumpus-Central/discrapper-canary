@@ -1,7 +1,7 @@
 (n.d(t, {
-    U: () => k,
-    default: () => P,
-    t: () => Z
+    U: () => M,
+    default: () => B,
+    t: () => G
 }),
     n(953529),
     n(388685),
@@ -11,308 +11,320 @@
     n(35282),
     n(539854));
 var r = n(255367),
-    l = n(73800),
-    i = n(442837),
-    a = n(755721),
+    i = n(73800),
+    a = n(442837),
+    o = n(755721),
     s = n(481060),
-    o = n(741361),
+    l = n(741361),
     c = n(794433),
-    d = n(600164),
-    u = n(313201),
-    m = n(131704),
-    x = n(592125),
-    h = n(271383),
-    b = n(485386),
-    y = n(430824),
-    f = n(626135),
-    p = n(934415),
-    g = n(892880),
-    j = n(226951),
-    v = n(605436),
-    E = n(971628),
-    S = n(71080),
+    u = n(600164),
+    d = n(313201),
+    f = n(131704),
+    _ = n(592125),
+    p = n(271383),
+    h = n(485386),
+    m = n(430824),
+    g = n(626135),
+    E = n(934415),
+    b = n(892880),
+    y = n(226951),
+    O = n(605436),
+    v = n(971628),
+    I = n(71080),
     T = n(981631),
-    w = n(494831),
-    R = n(388032),
-    O = n(208838);
-function C(e) {
-    var t = (function (e, t) {
-        if ('object' !== N(e) || null === e) return e;
-        var n = e[Symbol.toPrimitive];
-        if (void 0 !== n) {
-            var r = n.call(e, t || 'default');
-            if ('object' !== N(r)) return r;
-            throw TypeError('@@toPrimitive must return a primitive value.');
-        }
-        return ('string' === t ? String : Number)(e);
-    })(e, 'string');
-    return 'symbol' === N(t) ? t : String(t);
+    S = n(494831),
+    A = n(388032),
+    N = n(208838);
+function C(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
 }
-function N(e) {
+function w(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                C(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function R(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = P(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+    }
+    return i;
+}
+function P(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    return i;
+}
+function D(e, t) {
+    if ('object' !== x(e) || null === e) return e;
+    var n = e[Symbol.toPrimitive];
+    if (void 0 !== n) {
+        var r = n.call(e, t || 'default');
+        if ('object' !== x(r)) return r;
+        throw TypeError('@@toPrimitive must return a primitive value.');
+    }
+    return ('string' === t ? String : Number)(e);
+}
+function L(e) {
+    var t = D(e, 'string');
+    return 'symbol' === x(t) ? t : String(t);
+}
+function x(e) {
     return e && 'undefined' != typeof Symbol && e.constructor === Symbol ? 'symbol' : typeof e;
 }
-let M = (0, u.hQ)();
-function L(e, t) {
+let k = (0, d.hQ)();
+function j(e, t) {
     return t ? e.slice(1) : e;
 }
-function k(e) {
+function M(e) {
     let t,
-        { guild: n, channel: a, permission: s, pendingAdditions: o, setPendingAdditions: d, isStageChannel: u = null != a && a.isGuildStageVoice(), description: m } = e,
-        [x, y] = l.useState(!1),
-        [f, p] = l.useState(''),
-        T = (0, i.e7)([b.Z], () => b.Z.getSortedRoles(n.id));
-    function w(e) {
-        let t = L(f.trim(), x);
-        return RegExp(''.concat(j.Z.escape(t)), 'i').test(e);
+        { guild: n, channel: o, permission: s, pendingAdditions: l, setPendingAdditions: u, isStageChannel: d = null != o && o.isGuildStageVoice(), description: f } = e,
+        [_, m] = i.useState(!1),
+        [g, E] = i.useState(''),
+        T = (0, a.e7)([h.Z], () => h.Z.getSortedRoles(n.id));
+    function S(e) {
+        let t = j(g.trim(), _);
+        return RegExp(''.concat(y.Z.escape(t)), 'i').test(e);
     }
-    let O = (0, i.Wu)([h.ZP], () => h.ZP.getMemberIds(n.id));
-    x ? (t = []) : u ? (t = v.Wx(n, T, a, s, w)) : 0 === (t = v.ik(n, T, a, s, w)).length && '' === f.trim() && 1 === T.length && (t = v.aq());
-    let N = v.iI(O, a, n, s, w),
-        {
-            placeholderText: M,
-            hintText: k,
-            renderEmptyText: P
-        } = {
-            placeholderText: R.intl.string(R.t.iezLLi),
-            hintText: R.intl.string(R.t['rwFx8/']),
-            renderEmptyText: (e) => R.intl.format(R.t.ErpIY2, { query: e })
-        };
-    return (0, r.jsx)(Z, {
-        pendingAdditions: o,
-        query: f,
-        onQueryChange: function (e) {
-            let t = e.trim(),
-                r = '@' === t.charAt(0);
-            (g.Z.requestMembers(n.id, L(t, r), S.EQ), p(e), y(r));
-        },
-        onClickRow: function (e) {
-            let t = (0, E.G)(e);
-            d((n) => {
-                let r = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
-                            )),
-                            r.forEach(function (t) {
-                                var r;
-                                ((r = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: r,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0
-                                          })
-                                        : (e[t] = r));
-                            }));
-                    }
-                    return e;
-                })({}, n);
-                if (t in r) delete r[t];
-                else {
-                    let n;
-                    (e.rowType === S.aC.ROLE || e.rowType === S.aC.ADMINISTRATOR
-                        ? (n = {
-                              type: c.F.ROLE,
-                              label: e.name,
-                              color: e.colorString
-                          })
-                        : (e.rowType === S.aC.MEMBER || e.rowType === S.aC.OWNER) &&
-                          (n = {
-                              type: c.F.MEMBER,
-                              label: e.name,
-                              avatar: e.avatarURL
-                          }),
-                        null != n &&
-                            (r[t] = {
-                                display: n,
-                                row: e
-                            }));
-                }
-                return r;
-            });
-        },
-        onRemovePendingAddition: function (e) {
-            d((t) => {
-                let { [e]: n } = t;
-                return (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        r,
-                        l = (function (e, t) {
-                            if (null == e) return {};
-                            var n,
-                                r,
-                                l = {},
-                                i = Object.keys(e);
-                            for (r = 0; r < i.length; r++) ((n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]));
-                            return l;
-                        })(e, t);
-                    if (Object.getOwnPropertySymbols) {
-                        var i = Object.getOwnPropertySymbols(e);
-                        for (r = 0; r < i.length; r++) ((n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]));
-                    }
-                    return l;
-                })(t, [e].map(C));
-            });
-        },
+    let A = (0, a.Wu)([p.ZP], () => p.ZP.getMemberIds(n.id));
+    _ ? (t = []) : d ? (t = O.Wx(n, T, o, s, S)) : 0 === (t = O.ik(n, T, o, s, S)).length && '' === g.trim() && 1 === T.length && (t = O.aq());
+    let N = O.iI(A, o, n, s, S);
+    function C(e) {
+        let t = e.trim(),
+            r = '@' === t.charAt(0);
+        (b.Z.requestMembers(n.id, j(t, r), I.EQ), E(e), m(r));
+    }
+    function P(e) {
+        let t = (0, v.G)(e);
+        u((n) => {
+            let r = w({}, n);
+            if (t in r) delete r[t];
+            else {
+                let n;
+                (e.rowType === I.aC.ROLE || e.rowType === I.aC.ADMINISTRATOR
+                    ? (n = {
+                          type: c.F.ROLE,
+                          label: e.name,
+                          color: e.colorString
+                      })
+                    : (e.rowType === I.aC.MEMBER || e.rowType === I.aC.OWNER) &&
+                      (n = {
+                          type: c.F.MEMBER,
+                          label: e.name,
+                          avatar: e.avatarURL
+                      }),
+                    null != n &&
+                        (r[t] = {
+                            display: n,
+                            row: e
+                        }));
+            }
+            return r;
+        });
+    }
+    function D(e) {
+        u((t) => {
+            let { [e]: n } = t;
+            return R(t, [e].map(L));
+        });
+    }
+    let { placeholderText: x, hintText: k, renderEmptyText: M } = U();
+    return (0, r.jsx)(G, {
+        pendingAdditions: l,
+        query: g,
+        onQueryChange: C,
+        onClickRow: P,
+        onRemovePendingAddition: D,
         roles: t,
         members: N,
-        placeholderText: M,
+        placeholderText: x,
         hintText: k,
-        renderEmptyText: P,
-        isStageChannel: u,
-        description: m
+        renderEmptyText: M,
+        isStageChannel: d,
+        description: f
     });
 }
-function Z(e) {
-    let t,
-        { listClassName: n, pendingAdditions: l, query: i, onQueryChange: a, onClickRow: o, onRemovePendingAddition: c, roles: d, members: u, placeholderText: m, hintText: x, renderEmptyText: h, isStageChannel: b, focusSearchAfterReady: y, isReady: f, description: p } = e;
-    return (0, r.jsxs)('div', {
-        className: O.content,
-        children: [
-            (null == (t = p) && b && (t = R.intl.string(R.t.f7VbhI)), null == t || '' === t)
+function U() {
+    return {
+        placeholderText: A.intl.string(A.t.iezLLi),
+        hintText: A.intl.string(A.t['rwFx8/']),
+        renderEmptyText: (e) => A.intl.format(A.t.ErpIY2, { query: e })
+    };
+}
+function G(e) {
+    let { listClassName: t, pendingAdditions: n, query: i, onQueryChange: a, onClickRow: o, onRemovePendingAddition: l, roles: c, members: u, placeholderText: d, hintText: f, renderEmptyText: _, isStageChannel: p, focusSearchAfterReady: h, isReady: m, description: g } = e,
+        E = () => {
+            let e = g;
+            return (null == e && p && (e = A.intl.string(A.t.f7VbhI)), null == e || '' === e)
                 ? null
                 : (0, r.jsx)(s.Text, {
                       color: 'header-secondary',
-                      className: O.description,
+                      className: N.description,
                       variant: 'text-sm/normal',
-                      children: t
-                  }),
-            (0, r.jsx)(E.Z, {
-                listClassName: n,
-                pendingAdditions: l,
+                      children: e
+                  });
+        };
+    return (0, r.jsxs)('div', {
+        className: N.content,
+        children: [
+            E(),
+            (0, r.jsx)(v.Z, {
+                listClassName: t,
+                pendingAdditions: n,
                 query: i,
                 onQueryChange: a,
                 onClickRow: o,
-                onRemovePendingAddition: c,
-                roles: d,
+                onRemovePendingAddition: l,
+                roles: c,
                 members: u,
-                placeholderText: m,
-                hintText: x,
-                renderEmptyText: h,
-                disabledText: b ? R.intl.string(R.t.MVVOCg) : null,
-                focusSearchAfterReady: y,
-                isReady: f,
-                maxCount: w.ey
+                placeholderText: d,
+                hintText: f,
+                renderEmptyText: _,
+                disabledText: p ? A.intl.string(A.t.MVVOCg) : null,
+                focusSearchAfterReady: h,
+                isReady: m,
+                maxCount: S.ey
             })
         ]
     });
 }
-function P(e) {
-    let { transitionState: t, onClose: n, channelId: c, newChannel: u, inSettings: h } = e,
-        [b, g] = l.useState(!1),
-        [j, v] = l.useState({}),
-        E = (0, i.e7)([x.Z], () => x.Z.getChannel(c), [c]),
-        w = (0, i.e7)([y.Z], () => y.Z.getGuild(null == E ? void 0 : E.getGuildId()));
+function B(e) {
+    let { transitionState: t, onClose: n, channelId: l, newChannel: c, inSettings: d } = e,
+        [p, h] = i.useState(!1),
+        [E, b] = i.useState({}),
+        y = (0, a.e7)([_.Z], () => _.Z.getChannel(l), [l]),
+        O = (0, a.e7)([m.Z], () => m.Z.getGuild(null == y ? void 0 : y.getGuildId()));
     if (
-        (l.useEffect(() => {
-            f.default.track(T.rMx.OPEN_MODAL, { type: 'Grant Channel Access' });
+        (i.useEffect(() => {
+            g.default.track(T.rMx.OPEN_MODAL, { type: 'Grant Channel Access' });
         }, []),
-        null == E || null == w)
+        null == y || null == O)
     )
         return null;
-    let C = u && 0 === Object.keys(j).length;
-    async function N() {
-        if (null == E || 0 === Object.keys(j).length) return void n();
-        g(!0);
+    let v = c && 0 === Object.keys(E).length;
+    async function I() {
+        if (null == y || 0 === Object.keys(E).length) return void n();
+        h(!0);
         try {
-            (await (function (e, t, n) {
-                let r = [];
-                return (
-                    Object.values(t).forEach((t) => {
-                        let { row: n } = t;
-                        null != n.id && '' !== n.id && (n.rowType === S.aC.ROLE ? r.push((0, p.rX)(n.id, e.type)) : n.rowType === S.aC.MEMBER && r.push((0, p.jZ)(n.id, e.type)));
-                    }),
-                    (0, o.hw)(e.id, r, n)
-                );
-            })(E, j, h),
-                n(),
-                g(!1));
+            (await Z(y, E, d), n(), h(!1));
         } catch (e) {
-            g(!1);
+            h(!1);
         }
     }
-    let L = (0, m.zi)(E.type) ? s.W4G : s.gjC;
+    let S = (0, f.zi)(y.type) ? s.W4G : s.gjC;
     return (0, r.jsxs)(s.Y0X, {
         transitionState: t,
         size: s.CgR.SMALL,
-        'aria-labelledby': M,
-        className: O.modalRoot,
+        'aria-labelledby': k,
+        className: N.modalRoot,
         parentComponent: 'AddMembersModal',
         children: [
             (0, r.jsxs)(s.xBx, {
                 separator: !1,
-                direction: d.Z.Direction.VERTICAL,
-                align: d.Z.Align.CENTER,
-                className: O.header,
+                direction: u.Z.Direction.VERTICAL,
+                align: u.Z.Align.CENTER,
+                className: N.header,
                 children: [
                     (0, r.jsx)(s.X6q, {
-                        id: M,
+                        id: k,
                         variant: 'heading-xl/semibold',
-                        children: R.intl.string(R.t.dMJ3Y2)
+                        children: A.intl.string(A.t.dMJ3Y2)
                     }),
                     (0, r.jsxs)(s.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: O.headerSubtitle,
+                        className: N.headerSubtitle,
                         children: [
-                            (0, r.jsx)(L, {
+                            (0, r.jsx)(S, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: O.headerSubtitleIcon
+                                className: N.headerSubtitleIcon
                             }),
-                            E.name
+                            y.name
                         ]
                     })
                 ]
             }),
-            (0, r.jsx)(k, {
-                guild: w,
-                channel: E,
-                permission: E.accessPermissions,
-                pendingAdditions: j,
-                setPendingAdditions: v
+            (0, r.jsx)(M, {
+                guild: O,
+                channel: y,
+                permission: y.accessPermissions,
+                pendingAdditions: E,
+                setPendingAdditions: b
             }),
             (0, r.jsxs)(s.mzw, {
                 children: [
-                    !C &&
+                    !v &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)('div', {
                                     'data-button-hoisted-classname-wrapper': !0,
-                                    className: O.button,
+                                    className: N.button,
                                     children: (0, r.jsx)(s.zxk, {
                                         variant: 'primary',
                                         size: 'sm',
-                                        text: R.intl.string(R.t.i4jeWV),
-                                        onClick: N,
-                                        loading: b
+                                        text: A.intl.string(A.t.i4jeWV),
+                                        onClick: I,
+                                        loading: p
                                     })
                                 }),
-                                (0, r.jsx)(a.zx, {
-                                    look: a.zx.Looks.LINK,
-                                    color: a.zx.Colors.TRANSPARENT,
+                                (0, r.jsx)(o.zx, {
+                                    look: o.zx.Looks.LINK,
+                                    color: o.zx.Colors.TRANSPARENT,
                                     onClick: n,
-                                    size: a.zx.Sizes.SMALL,
-                                    children: R.intl.string(R.t['ETE/oK'])
+                                    size: o.zx.Sizes.SMALL,
+                                    children: A.intl.string(A.t['ETE/oK'])
                                 })
                             ]
                         }),
-                    C &&
+                    v &&
                         (0, r.jsx)(s.zxk, {
                             variant: 'secondary',
                             size: 'sm',
-                            text: R.intl.string(R.t.u46sxc),
+                            text: A.intl.string(A.t.u46sxc),
                             onClick: n
                         })
                 ]
             })
         ]
     });
+}
+function Z(e, t, n) {
+    let r = [];
+    return (
+        Object.values(t).forEach((t) => {
+            let { row: n } = t;
+            null != n.id && '' !== n.id && (n.rowType === I.aC.ROLE ? r.push((0, E.rX)(n.id, e.type)) : n.rowType === I.aC.MEMBER && r.push((0, E.jZ)(n.id, e.type)));
+        }),
+        (0, l.hw)(e.id, r, n)
+    );
 }

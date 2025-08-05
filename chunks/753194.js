@@ -1,81 +1,92 @@
-(a.d(t, { Z: () => u }), a(388685));
-var n = a(255367);
-a(73800);
-var r = a(866442),
-    l = a(442837),
-    i = a(692547),
-    s = a(481060),
-    o = a(607070),
-    c = a(297700),
-    d = a(388032);
-function u(e) {
-    let t,
-        { color: a, size: u, forcedIconColor: m, className: x, iconClassName: p, tooltipText: h } = e,
-        [b, f] = (0, l.Wu)([o.Z], () => [o.Z.desaturateUserColors, o.Z.saturation]),
-        v = (0, s.dQu)(i.Z.unsafe_rawColors.PRIMARY_300).hex(),
-        g = (0, r._i)(null != a ? a : v),
-        j = (0, r.ho)(g, !1, b ? f : null);
+(n.d(t, { Z: () => h }), n(388685));
+var r = n(255367);
+n(73800);
+var i = n(866442),
+    a = n(442837),
+    o = n(692547),
+    s = n(481060),
+    l = n(607070),
+    c = n(297700),
+    u = n(388032);
+function d(e, t, n) {
     return (
-        (t = null != m ? m : 0.3 > (0, r.Bd)(g) ? i.Z.unsafe_rawColors.PRIMARY_630.css : i.Z.unsafe_rawColors.WHITE_500.css),
-        (0, n.jsx)(s.ua7, {
-            text: null != h ? h : d.intl.string(d.t.T3PvV1),
-            children: (e) => {
-                var a, r;
-                return (0, n.jsx)(
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                d(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function _(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function p(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : _(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function h(e) {
+    let t,
+        { color: n, size: d, forcedIconColor: _, className: h, iconClassName: m, tooltipText: g } = e,
+        [E, b] = (0, a.Wu)([l.Z], () => [l.Z.desaturateUserColors, l.Z.saturation]),
+        y = (0, s.dQu)(o.Z.unsafe_rawColors.PRIMARY_300).hex(),
+        O = (0, i._i)(null != n ? n : y),
+        v = (0, i.ho)(O, !1, E ? b : null);
+    return (
+        (t = null != _ ? _ : 0.3 > (0, i.Bd)(O) ? o.Z.unsafe_rawColors.PRIMARY_630.css : o.Z.unsafe_rawColors.WHITE_500.css),
+        (0, r.jsx)(s.ua7, {
+            text: null != g ? g : u.intl.string(u.t.T3PvV1),
+            children: (e) =>
+                (0, r.jsx)(
                     c.Z,
-                    ((a = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var a = null != arguments[t] ? arguments[t] : {},
-                                n = Object.keys(a);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
-                                (n = n.concat(
-                                    Object.getOwnPropertySymbols(a).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(a, e).enumerable;
-                                    })
-                                )),
-                                n.forEach(function (t) {
-                                    var n;
-                                    ((n = a[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: n,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0
-                                              })
-                                            : (e[t] = n));
-                                }));
-                        }
-                        return e;
-                    })({}, e)),
-                    (r = r =
-                        {
-                            className: x,
-                            color: j,
-                            size: u,
-                            children: (0, n.jsx)(s.kmB, {
-                                size: 'custom',
-                                color: t,
-                                height: u,
-                                width: u,
-                                className: p
-                            })
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(r))
-                        : (function (e, t) {
-                              var a = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var n = Object.getOwnPropertySymbols(e);
-                                  a.push.apply(a, n);
-                              }
-                              return a;
-                          })(Object(r)).forEach(function (e) {
-                              Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(r, e));
-                          }),
-                    a)
-                );
-            }
+                    p(f({}, e), {
+                        className: h,
+                        color: v,
+                        size: d,
+                        children: (0, r.jsx)(s.kmB, {
+                            size: 'custom',
+                            color: t,
+                            height: d,
+                            width: d,
+                            className: m
+                        })
+                    })
+                )
         })
     );
 }

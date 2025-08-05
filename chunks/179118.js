@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => k }), n(388685), n(642613));
+(n.d(t, { Z: () => j }), n(388685), n(642613));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -25,24 +25,24 @@ var r = n(255367),
     A = n(572004),
     N = n(669079),
     C = n(74538),
-    R = n(51144),
-    P = n(987209),
-    w = n(981631),
+    w = n(51144),
+    R = n(987209),
+    P = n(981631),
     D = n(474936),
     L = n(388032),
     x = n(136266);
-let M = 1500;
-function k(e) {
+let k = 1500;
+function j(e) {
     let { giftCode: t, application: n, sku: a, subscriptionPlan: s, selectedGiftStyle: l, onClose: u, hasSentMessage: _, giftRecipient: p, giftMessageError: g, isSendingMessage: y } = e,
         [O, I] = i.useState(f.kO8.Modes.DEFAULT),
         S = (0, c.e7)([T.Z], () => T.Z.enabled),
-        k = _ || (null != l && null != p),
-        U = (null == a ? void 0 : a.productLine) === w.POd.COLLECTIBLES,
+        j = _ || (null != l && null != p),
+        U = (null == a ? void 0 : a.productLine) === P.POd.COLLECTIBLES,
         G = (0, b.Z)(),
-        { selectedGiftingPromotionReward: B } = (0, P.wD)(),
-        V = null == G ? void 0 : G.giftPurchaseConfirmation,
+        { selectedGiftingPromotionReward: B } = (0, R.wD)(),
+        Z = null == G ? void 0 : G.giftPurchaseConfirmation,
         F = (0, E.tK)(null == B ? void 0 : B.skuId),
-        Z = (0, E.a5)(s) && null != F && null != V,
+        V = (0, E.a5)(s) && null != F && null != Z,
         H = () => (null != s ? s.skuId : null != a ? a.id : null),
         Y = () => {
             let e;
@@ -50,7 +50,7 @@ function k(e) {
                 ? L.intl.string(L.t.qB8ayc)
                 : null == s
                   ? null
-                  : ((e = s.interval === D.rV.MONTH ? (k ? (Z ? V.monthGiftText : L.t['4ZJ+7e']) : L.t['P+z55e']) : k ? (Z ? V.yearGiftText : L.t.p0pZXF) : L.t.bXqk3t),
+                  : ((e = s.interval === D.rV.MONTH ? (j ? (V ? Z.monthGiftText : L.t['4ZJ+7e']) : L.t['P+z55e']) : j ? (V ? Z.yearGiftText : L.t.p0pZXF) : L.t.bXqk3t),
                     L.intl.format(e, {
                         skuName: (0, C.aq)(s.id),
                         intervalCount: s.intervalCount
@@ -73,7 +73,7 @@ function k(e) {
                 ),
                 setTimeout(() => {
                     I(f.kO8.Modes.DEFAULT);
-                }, M));
+                }, k));
         },
         z = () => {
             let e;
@@ -119,7 +119,7 @@ function k(e) {
                         children: Y()
                     }),
                     null == g &&
-                        (0, r.jsx)(j, {
+                        (0, r.jsx)(M, {
                             giftCode: t,
                             onClose: u
                         }),
@@ -127,7 +127,7 @@ function k(e) {
                     z()
                 ]
             }),
-        X = () =>
+        $ = () =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(h.Z, {
@@ -138,11 +138,11 @@ function k(e) {
                     (0, r.jsx)(f.X6q, {
                         className: x.giftRecipientName,
                         variant: 'heading-md/semibold',
-                        children: R.ZP.getName(p)
+                        children: w.ZP.getName(p)
                     }),
                     (0, r.jsxs)('div', {
                         className: x.giftRecipientTag,
-                        children: [' ', R.ZP.getUserTag(p)]
+                        children: [' ', w.ZP.getUserTag(p)]
                     }),
                     (0, r.jsx)('div', {
                         className: x.giftSentMessage,
@@ -166,7 +166,7 @@ function k(e) {
               ]
           })
         : (0, r.jsxs)('div', {
-              className: o()(x.confirmation, { [x.seasonalConfirmationPadding]: Z }),
+              className: o()(x.confirmation, { [x.seasonalConfirmationPadding]: V }),
               children: [
                   null != n
                       ? (0, r.jsx)(m.Z, {
@@ -184,11 +184,11 @@ function k(e) {
                       }),
                       children: W()
                   }),
-                  (_ && null != p && null == g) || k ? X() : q()
+                  (_ && null != p && null == g) || j ? $() : q()
               ]
           });
 }
-let j = (e) => {
+let M = (e) => {
     let { giftCode: t, onClose: n } = e;
     i.useEffect(() => {
         (p.Z.fetchRelationships(), (0, y._)());
@@ -204,9 +204,9 @@ let j = (e) => {
         A = (0, c.e7)([I.Z], () => I.Z.getFriendIDs()),
         N = l().difference(A, T),
         C = [...T, ...N],
-        P = (0, c.e7)([S.default], () => S.default.filter((e) => C.includes(e.id) && !e.bot), [C]);
-    if (null == P || 0 === P.length) return null;
-    let w = l().sortBy(P, (e) => C.indexOf(e.id));
+        R = (0, c.e7)([S.default], () => S.default.filter((e) => C.includes(e.id) && !e.bot), [C]);
+    if (null == R || 0 === R.length) return null;
+    let P = l().sortBy(R, (e) => C.indexOf(e.id));
     return (0, r.jsxs)('div', {
         className: x.giftRecipientSection,
         children: [
@@ -230,9 +230,9 @@ let j = (e) => {
                         onChange: (e) => {
                             (o(e), d(!1));
                         },
-                        options: w.map((e) => ({
+                        options: P.map((e) => ({
                             value: e,
-                            label: ''.concat(R.ZP.getUserTag(e))
+                            label: ''.concat(w.ZP.getUserTag(e))
                         }))
                     }),
                     (0, r.jsx)(u.z, {

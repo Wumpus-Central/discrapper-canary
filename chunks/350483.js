@@ -51,7 +51,7 @@ let x = s().throttle(function (e, t) {
                     return (
                         C !== d.Z.getGuildId() && (0, g.K)(C, null == (s = c.ZP.getDefaultChannel(C)) ? void 0 : s.id),
                         (0, a.ZDy)(async () => {
-                            let { default: e } = await Promise.all([n.e('42743'), n.e('22347'), n.e('56236'), n.e('7549')]).then(n.bind(n, 17671));
+                            let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('78036')]).then(n.bind(n, 17671));
                             return (t) =>
                                 (0, i.jsx)(
                                     e,

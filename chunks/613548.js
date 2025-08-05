@@ -1,35 +1,48 @@
-(n.d(t, { Z: () => D }), n(539854));
+(n.d(t, { Z: () => G }), n(539854));
 var r = n(255367),
     i = n(73800),
-    l = n(120356),
-    a = n.n(l),
-    o = n(392711),
-    s = n.n(o),
+    a = n(120356),
+    o = n.n(a),
+    s = n(392711),
+    l = n.n(s),
     c = n(442837),
     u = n(481060),
     d = n(475179),
-    p = n(100527),
-    h = n(906732),
-    f = n(194082),
-    m = n(236091),
-    g = n(517525),
-    b = n(2818),
-    _ = n(954551),
-    y = n(44136),
-    C = n(651183),
-    x = n(853476),
+    f = n(100527),
+    _ = n(906732),
+    p = n(194082),
+    h = n(236091),
+    m = n(517525),
+    g = n(2818),
+    E = n(954551),
+    b = n(44136),
+    y = n(651183),
+    O = n(853476),
     v = n(390322),
-    j = n(616286),
-    O = n(975146),
-    E = n(597998),
-    S = n(606304),
-    P = n(358221),
-    I = n(355827),
-    Z = n(185935),
-    T = n(354459),
-    N = n(388032),
-    A = n(232989);
-function w(e) {
+    I = n(616286),
+    T = n(975146),
+    S = n(597998),
+    A = n(606304),
+    N = n(358221),
+    C = n(355827),
+    w = n(185935),
+    R = n(354459),
+    P = n(388032),
+    D = n(232989);
+function L(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,47 +53,44 @@ function w(e) {
                 })
             )),
             r.forEach(function (t) {
-                var r;
-                ((r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r));
+                L(e, t, n[t]);
             }));
     }
     return e;
 }
-function R(e, t) {
+function k(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : k(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function M(e) {
+let M = 3;
+function U(e) {
     let { channelId: t, guildId: n } = e,
-        i = (0, c.Wu)([S.Z, P.Z], () => {
+        i = (0, c.Wu)([A.Z, N.Z], () => {
             let e = Date.now();
-            return s()(S.Z.getSpeakers())
-                .map((e) => P.Z.getParticipant(t, e))
-                .filter((e) => null != e && e.type === T.fO.USER && e.speaking && !(0, y.ZP)(e))
-                .sortBy((t) => -S.Z.getSpeakingDuration(t.user.id, e))
-                .slice(0, 3)
+            return l()(A.Z.getSpeakers())
+                .map((e) => N.Z.getParticipant(t, e))
+                .filter((e) => null != e && e.type === R.fO.USER && e.speaking && !(0, b.ZP)(e))
+                .sortBy((t) => -A.Z.getSpeakingDuration(t.user.id, e))
+                .slice(0, M)
                 .value();
         });
     return 0 === i.length
@@ -92,12 +102,12 @@ function M(e) {
                       {
                           position: 'bottom',
                           color: u.ua7.Colors.GREY,
-                          text: N.intl.formatToPlainString(N.t.JjdizM, { username: e.user.username }),
-                          children: (l) =>
+                          text: P.intl.formatToPlainString(P.t.JjdizM, { username: e.user.username }),
+                          children: (a) =>
                               (0, r.jsx)(
-                                  E.ZP,
-                                  R(w({}, l), {
-                                      className: a()(A.speaker, { [A.last]: t === i.length - 1 }),
+                                  S.ZP,
+                                  j(x({}, a), {
+                                      className: o()(D.speaker, { [D.last]: t === i.length - 1 }),
                                       user: e.user,
                                       speaking: !0,
                                       collapsed: !0,
@@ -110,107 +120,107 @@ function M(e) {
               )
           });
 }
-function D(e) {
+function G(e) {
     let { channel: t, isChatOpen: n } = e,
-        l = i.useRef(null),
-        { analyticsLocations: o } = (0, h.ZP)(p.Z.VOICE_CHANNEL_HEADER),
-        s = t.id,
+        a = i.useRef(null),
+        { analyticsLocations: s } = (0, _.ZP)(f.Z.VOICE_CHANNEL_HEADER),
+        l = t.id,
         {
-            voiceParticipantsHidden: y,
-            selectedParticipant: E,
-            userParticipantCount: S,
-            participantsListOpen: N
+            voiceParticipantsHidden: b,
+            selectedParticipant: S,
+            userParticipantCount: A,
+            participantsListOpen: P
         } = (0, c.cj)(
-            [P.Z],
+            [N.Z],
             () => ({
-                selectedParticipant: P.Z.getSelectedParticipant(s),
-                voiceParticipantsHidden: P.Z.getVoiceParticipantsHidden(s),
-                userParticipantCount: P.Z.getUserParticipantCount(s),
-                participantsListOpen: P.Z.getParticipantsListOpen(s)
+                selectedParticipant: N.Z.getSelectedParticipant(l),
+                voiceParticipantsHidden: N.Z.getVoiceParticipantsHidden(l),
+                userParticipantCount: N.Z.getUserParticipantCount(l),
+                participantsListOpen: N.Z.getParticipantsListOpen(l)
             }),
-            [s]
+            [l]
         ),
-        D = t.isGuildVoice() && !n,
-        { hasParticipantsPanel: k } = (0, Z.Z)({ location: 'ChannelCallHeaderToolbar' }),
-        L = !N && k && (t.isGuildVoice() || t.isGroupDM()),
-        { enabled: U, inInbox: B } = b.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
-        F = [];
+        L = t.isGuildVoice() && !n,
+        { hasParticipantsPanel: k } = (0, w.Z)({ location: 'ChannelCallHeaderToolbar' }),
+        M = !P && k && (t.isGuildVoice() || t.isGroupDM()),
+        { enabled: G, inInbox: B } = g.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
+        Z = [];
     return (
-        y &&
-            F.push(
+        b &&
+            Z.push(
                 (0, r.jsx)(
-                    M,
+                    U,
                     {
-                        channelId: s,
+                        channelId: l,
                         guildId: t.guild_id
                     },
                     'current-speaker'
                 )
             ),
-        F.push(
+        Z.push(
             (0, r.jsx)(
-                m.Z,
+                h.Z,
                 {
-                    className: A.button,
-                    channelId: s
+                    className: D.button,
+                    channelId: l
                 },
                 'clips-enabled-indicator'
             )
         ),
-        (null == E ? void 0 : E.type) === T.fO.STREAM &&
-            (F.push(
+        (null == S ? void 0 : S.type) === R.fO.STREAM &&
+            (Z.push(
                 (0, r.jsx)(
-                    C.Z,
+                    y.Z,
                     {
-                        className: A.button,
-                        participant: E
+                        className: D.button,
+                        participant: S
                     },
                     'warning'
                 )
             ),
-            F.push(
+            Z.push(
                 (0, r.jsx)(
-                    g.Z,
+                    m.Z,
                     {
-                        size: f.ZP.Sizes.LARGE,
-                        className: A.button,
-                        participant: E,
+                        size: p.ZP.Sizes.LARGE,
+                        className: D.button,
+                        participant: S,
                         showQuality: !0,
                         premiumIndicator: !1
                     },
                     'live-indicator'
                 )
             )),
-        (null == E ? void 0 : E.type) === T.fO.USER &&
-            F.push(
+        (null == S ? void 0 : S.type) === R.fO.USER &&
+            Z.push(
                 (0, r.jsx)(
-                    x.Z,
+                    O.Z,
                     {
-                        className: A.button,
-                        userId: E.id
+                        className: D.button,
+                        userId: S.id
                     },
                     'video-warning'
                 )
             ),
-        y &&
+        b &&
             !k &&
-            F.push(
+            Z.push(
                 (0, r.jsx)(
                     u.yRy,
                     {
-                        targetElementRef: l,
+                        targetElementRef: a,
                         position: 'bottom',
-                        renderPopout: () => (0, r.jsx)(v.Z, { children: (0, r.jsx)(I.Z, { channel: t }) }),
+                        renderPopout: () => (0, r.jsx)(v.Z, { children: (0, r.jsx)(C.Z, { channel: t }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, i.createElement)(
-                                O.Z,
-                                R(w({}, e), {
-                                    buttonRef: l,
+                                T.Z,
+                                j(x({}, e), {
+                                    buttonRef: a,
                                     isActive: n,
-                                    count: S,
+                                    count: A,
                                     key: 'call-members',
-                                    className: A.button
+                                    className: D.button
                                 })
                             );
                         }
@@ -218,33 +228,33 @@ function D(e) {
                     'call-members-popout'
                 )
             ),
-        U && !B && F.push((0, r.jsx)(_.Z, { className: A.button }, 'for-later')),
-        L &&
-            F.push(
+        G && !B && Z.push((0, r.jsx)(E.Z, { className: D.button }, 'for-later')),
+        M &&
+            Z.push(
                 (0, r.jsx)(
-                    O.Z,
+                    T.Z,
                     {
-                        className: a()(A.button, { [A.lastButton]: n }),
-                        onClick: () => d.Z.toggleParticipantsList(t.id, !N)
+                        className: o()(D.button, { [D.lastButton]: n }),
+                        onClick: () => d.Z.toggleParticipantsList(t.id, !P)
                     },
                     'participants-list-button'
                 )
             ),
-        D &&
-            F.push(
+        L &&
+            Z.push(
                 (0, r.jsx)(
-                    j.T,
+                    I.T,
                     {
                         channelId: t.id,
-                        className: a()(A.button, { [A.lastButton]: N }),
+                        className: o()(D.button, { [D.lastButton]: P }),
                         disabled: n
                     },
                     'chat-spacer'
                 )
             ),
-        (0, r.jsx)(h.Gt, {
-            value: o,
-            children: F
+        (0, r.jsx)(_.Gt, {
+            value: s,
+            children: Z
         })
     );
 }

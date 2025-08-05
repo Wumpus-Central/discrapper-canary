@@ -41,9 +41,9 @@ var r,
     A = n(143988),
     N = n(764459),
     C = n(138676),
-    R = n(365088),
-    P = n(947599),
-    w = {},
+    w = n(365088),
+    R = n(947599),
+    P = {},
     D = 'undefined' != typeof Uint8Array && A ? A(Uint8Array) : r,
     L = {
         __proto__: null,
@@ -52,10 +52,10 @@ var r,
         '%ArrayBuffer%': 'undefined' == typeof ArrayBuffer ? r : ArrayBuffer,
         '%ArrayIteratorPrototype%': S && A ? A([][Symbol.iterator]()) : r,
         '%AsyncFromSyncIteratorPrototype%': r,
-        '%AsyncFunction%': w,
-        '%AsyncGenerator%': w,
-        '%AsyncGeneratorFunction%': w,
-        '%AsyncIteratorPrototype%': w,
+        '%AsyncFunction%': P,
+        '%AsyncGenerator%': P,
+        '%AsyncGeneratorFunction%': P,
+        '%AsyncIteratorPrototype%': P,
         '%Atomics%': 'undefined' == typeof Atomics ? r : Atomics,
         '%BigInt%': 'undefined' == typeof BigInt ? r : BigInt,
         '%BigInt64Array%': 'undefined' == typeof BigInt64Array ? r : BigInt64Array,
@@ -75,7 +75,7 @@ var r,
         '%Float64Array%': 'undefined' == typeof Float64Array ? r : Float64Array,
         '%FinalizationRegistry%': 'undefined' == typeof FinalizationRegistry ? r : FinalizationRegistry,
         '%Function%': b,
-        '%GeneratorFunction%': w,
+        '%GeneratorFunction%': P,
         '%Int8Array%': 'undefined' == typeof Int8Array ? r : Int8Array,
         '%Int16Array%': 'undefined' == typeof Int16Array ? r : Int16Array,
         '%Int32Array%': 'undefined' == typeof Int32Array ? r : Int32Array,
@@ -115,8 +115,8 @@ var r,
         '%WeakMap%': 'undefined' == typeof WeakMap ? r : WeakMap,
         '%WeakRef%': 'undefined' == typeof WeakRef ? r : WeakRef,
         '%WeakSet%': 'undefined' == typeof WeakSet ? r : WeakSet,
-        '%Function.prototype.call%': P,
-        '%Function.prototype.apply%': R,
+        '%Function.prototype.call%': R,
+        '%Function.prototype.apply%': w,
         '%Object.defineProperty%': v,
         '%Object.getPrototypeOf%': N,
         '%Math.abs%': f,
@@ -135,7 +135,7 @@ if (A)
         var x = A(A(e));
         L['%Error.prototype%'] = x;
     }
-var M = function e(t) {
+var k = function e(t) {
         var n;
         if ('%AsyncFunction%' === t) n = y('async function () {}');
         else if ('%GeneratorFunction%' === t) n = y('function* () {}');
@@ -149,7 +149,7 @@ var M = function e(t) {
         }
         return ((L[t] = n), n);
     },
-    k = {
+    j = {
         __proto__: null,
         '%ArrayBufferPrototype%': ['ArrayBuffer', 'prototype'],
         '%ArrayPrototype%': ['Array', 'prototype'],
@@ -203,13 +203,13 @@ var M = function e(t) {
         '%WeakMapPrototype%': ['WeakMap', 'prototype'],
         '%WeakSetPrototype%': ['WeakSet', 'prototype']
     },
-    j = n(390976),
+    M = n(390976),
     U = n(706165),
-    G = j.call(P, Array.prototype.concat),
-    B = j.call(R, Array.prototype.splice),
-    V = j.call(P, String.prototype.replace),
-    F = j.call(P, String.prototype.slice),
-    Z = j.call(P, RegExp.prototype.exec),
+    G = M.call(R, Array.prototype.concat),
+    B = M.call(w, Array.prototype.splice),
+    Z = M.call(R, String.prototype.replace),
+    F = M.call(R, String.prototype.slice),
+    V = M.call(R, RegExp.prototype.exec),
     H = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
     Y = /\\(\\)?/g,
     W = function (e) {
@@ -219,8 +219,8 @@ var M = function e(t) {
         if ('%' === n && '%' !== t) throw new c('invalid intrinsic syntax, expected opening `%`');
         var r = [];
         return (
-            V(e, H, function (e, t, n, i) {
-                r[r.length] = n ? V(i, Y, '$1') : t || e;
+            Z(e, H, function (e, t, n, i) {
+                r[r.length] = n ? Z(i, Y, '$1') : t || e;
             }),
             r
         );
@@ -228,9 +228,9 @@ var M = function e(t) {
     K = function (e, t) {
         var n,
             r = e;
-        if ((U(k, r) && (r = '%' + (n = k[r])[0] + '%'), U(L, r))) {
+        if ((U(j, r) && (r = '%' + (n = j[r])[0] + '%'), U(L, r))) {
             var i = L[r];
-            if ((i === w && (i = M(r)), void 0 === i && !t)) throw new u('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
+            if ((i === P && (i = k(r)), void 0 === i && !t)) throw new u('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
             return {
                 alias: n,
                 name: r,
@@ -242,7 +242,7 @@ var M = function e(t) {
 e.exports = function (e, t) {
     if ('string' != typeof e || 0 === e.length) throw new u('intrinsic name must be a non-empty string');
     if (arguments.length > 1 && 'boolean' != typeof t) throw new u('"allowMissing" argument must be a boolean');
-    if (null === Z(/^%?[^%]*%?$/, e)) throw new c('`%` may not be present anywhere but at the beginning and end of the intrinsic name');
+    if (null === V(/^%?[^%]*%?$/, e)) throw new c('`%` may not be present anywhere but at the beginning and end of the intrinsic name');
     var n = W(e),
         r = n.length > 0 ? n[0] : '',
         i = K('%' + r + '%', t),

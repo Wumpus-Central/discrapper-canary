@@ -1,6 +1,6 @@
-n.d(t, { Z: () => g });
-var r = n(525654),
-    i = n.n(r),
+n.d(t, { Z: () => v });
+var i = n(525654),
+    r = n.n(i),
     l = n(39612),
     a = n(271579),
     s = n(756647),
@@ -9,14 +9,14 @@ var r = n(525654),
     d = n(314897),
     u = n(896797),
     m = n(626135),
-    p = n(954824),
-    f = n(981631);
-async function h(e) {
+    f = n(954824),
+    h = n(981631);
+async function g(e) {
     var t, n;
-    let r = null == (t = i().os) ? void 0 : t.family;
-    if ('Android' === r || 'iOS' === r) {
+    let i = null == (t = r().os) ? void 0 : t.family;
+    if ('Android' === i || 'iOS' === i) {
         let t = null != (n = d.default.getFingerprint()) ? n : d.default.getId(),
-            r = (0, a.WS)();
+            i = (0, a.WS)();
         if (null == t && d.default.isAuthenticated())
             try {
                 (await (0, o.k)(), (t = d.default.getId()));
@@ -24,21 +24,21 @@ async function h(e) {
         return (0, a.ZP)((0, l.Gk)(), {
             utmSource: e,
             fingerprint: t,
-            attemptId: r
+            attemptId: i
         });
     }
     return 'discord://';
 }
-async function g(e) {
-    let t = await h(e),
+async function v(e) {
+    let t = await g(e),
         n = (0, a.zS)(t);
     (null != n &&
-        m.default.track(f.rMx.DEEP_LINK_CLICKED, {
+        m.default.track(h.rMx.DEEP_LINK_CLICKED, {
             fingerprint: (0, s.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource
         }),
-        p.Z.launch(t, (e) => {
+        f.Z.launch(t, (e) => {
             e || (0, c.dL)(u.Z.fallbackRoute);
         }));
 }

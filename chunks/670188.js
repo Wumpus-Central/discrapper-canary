@@ -97,9 +97,9 @@ let E = (0, o.pxk)(o.EFr.SIZE_80),
     };
 function O(e) {
     var { children: t, user: n, currentUser: a, guildId: s, channelId: d, messageId: f, roleId: p, disableUserProfileLink: g, newAnalyticsLocations: b, appContext: y, avatarUrl: O, preload: v, renderPopout: I, onRequestOpen: T, onRequestClose: S, onClosePopout: A, shouldShow: N, shouldPreload: C = !0 } = e,
-        R = m(e, ['children', 'user', 'currentUser', 'guildId', 'channelId', 'messageId', 'roleId', 'disableUserProfileLink', 'newAnalyticsLocations', 'appContext', 'avatarUrl', 'preload', 'renderPopout', 'onRequestOpen', 'onRequestClose', 'onClosePopout', 'shouldShow', 'shouldPreload']);
-    let P = i.useRef(void 0),
-        w = i.useCallback(
+        w = m(e, ['children', 'user', 'currentUser', 'guildId', 'channelId', 'messageId', 'roleId', 'disableUserProfileLink', 'newAnalyticsLocations', 'appContext', 'avatarUrl', 'preload', 'renderPopout', 'onRequestOpen', 'onRequestClose', 'onClosePopout', 'shouldShow', 'shouldPreload']);
+    let R = i.useRef(void 0),
+        P = i.useCallback(
             () =>
                 null != v
                     ? v()
@@ -114,8 +114,8 @@ function O(e) {
         ),
         D = i.useCallback(
             (e) =>
-                ((P.current = Date.now()), null != I)
-                    ? I(e, P.current)
+                ((R.current = Date.now()), null != I)
+                    ? I(e, R.current)
                     : (0, r.jsx)(
                           c.Z,
                           h(_({}, e), {
@@ -128,7 +128,7 @@ function O(e) {
                               disableUserProfileLink: g,
                               newAnalyticsLocations: b,
                               appContext: y,
-                              openedAt: P.current,
+                              openedAt: R.current,
                               closePopout: () => {
                                   (e.closePopout(), null == A || A());
                               }
@@ -143,12 +143,12 @@ function O(e) {
                 {
                     popoutKey: u.Tg,
                     shouldShow: N,
-                    preload: C ? w : void 0,
+                    preload: C ? P : void 0,
                     renderPopout: D,
                     onRequestOpen: T,
                     onRequestClose: S
                 },
-                R
+                w
             ),
             { children: t }
         )

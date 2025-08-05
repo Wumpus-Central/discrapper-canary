@@ -1,7 +1,7 @@
 (n.d(t, {
     Vh: () => S,
     f: () => I,
-    hR: () => R,
+    hR: () => w,
     xF: () => T
 }),
     n(35282),
@@ -144,7 +144,7 @@ function C(e, t, n, r) {
     }
     return i;
 }
-async function R(e, t) {
+async function w(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
     o.Z.dispatch({
         type: 'APPLICATION_ASSETS_FETCH',
@@ -167,7 +167,7 @@ async function R(e, t) {
         assets: a
     }),
     C(t, r, a, n))
-        ? O(e).then(() => R(e, t, n - 1))
+        ? O(e).then(() => w(e, t, n - 1))
         : (o.Z.dispatch({
               type: 'APPLICATION_ASSETS_FETCH_SUCCESS',
               applicationId: e

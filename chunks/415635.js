@@ -1,74 +1,75 @@
-(n.d(t, { Z: () => h }), n(388685));
+(n.d(t, { Z: () => g }), n(388685));
 var r = n(255367),
     i = n(73800),
-    l = n(772848),
-    a = n(442837),
-    o = n(570140),
-    s = n(607070),
+    a = n(772848),
+    o = n(442837),
+    s = n(570140),
+    l = n(607070),
     c = n(367907),
     u = n(37091),
     d = n(721264),
     f = n(963838),
-    p = n(39127),
-    m = n(981631),
-    g = n(490650);
-function h(e) {
-    let { channelId: t, guildId: n, userId: h, containerDimensions: b } = e,
-        v = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        [_, y] = i.useState([]),
-        O = _.length < 50;
+    _ = n(39127),
+    p = n(981631),
+    h = n(490650);
+let m = 50;
+function g(e) {
+    let { channelId: t, guildId: n, userId: g, containerDimensions: E } = e,
+        b = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
+        [y, O] = i.useState([]),
+        v = y.length < m;
     i.useEffect(() => {
         function e(e) {
             var r;
-            let { channelId: i, userId: a, emoji: o, animationType: s, animationId: p } = e;
-            if ((null != h && h !== a) || (u.Z.getEnabled() && (0, d.Z)(null != (r = null == o ? void 0 : o.name) ? r : ''))) return;
-            let g = null != o && null != s && null != p;
-            if (i === t && !v && O && g) {
-                let e = (0, f._r)(o),
-                    r = null != o.id && !o.animated,
+            let { channelId: i, userId: o, emoji: s, animationType: l, animationId: _ } = e;
+            if ((null != g && g !== o) || (u.Z.getEnabled() && (0, d.Z)(null != (r = null == s ? void 0 : s.name) ? r : ''))) return;
+            let h = null != s && null != l && null != _;
+            if (i === t && !b && v && h) {
+                let e = (0, f._r)(s),
+                    r = null != s.id && !s.animated,
                     i = {
-                        id: (0, l.Z)(),
-                        animationType: s,
-                        animationId: p,
+                        id: (0, a.Z)(),
+                        animationType: l,
+                        animationId: _,
                         shouldResize: r,
                         url: e,
-                        userId: a
+                        userId: o
                     };
-                (y((e) => [...e, i]),
-                    c.ZP.trackWithMetadata(m.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
+                (O((e) => [...e, i]),
+                    c.ZP.trackWithMetadata(p.rMx.VOICE_CHANNEL_EFFECT_VIEWED, {
                         channel_id: t,
                         guild_id: n
                     }));
             }
         }
         return (
-            o.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', e),
+            s.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', e),
             () => {
-                o.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
+                s.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', e);
             }
         );
-    }, [t, n, h, v, O]);
-    let S = i.useCallback((e) => {
-        y((t) => {
+    }, [t, n, g, b, v]);
+    let I = i.useCallback((e) => {
+        O((t) => {
             let n = [...t],
                 r = n.findIndex((t) => t.id === e);
             return (n.splice(r, 1), n);
         });
     }, []);
-    return v
+    return b
         ? null
         : (0, r.jsx)('div', {
-              className: g.effectsWrapper,
-              style: { width: b.width },
+              className: h.effectsWrapper,
+              style: { width: E.width },
               children: (0, r.jsx)('div', {
-                  className: g.effects,
-                  children: _.map((e) =>
+                  className: h.effects,
+                  children: y.map((e) =>
                       (0, r.jsx)(
-                          p.Z,
+                          _.Z,
                           {
-                              containerDimensions: b,
+                              containerDimensions: E,
                               effect: e,
-                              onComplete: S
+                              onComplete: I
                           },
                           e.id
                       )

@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(481060),
-    a = n(746916),
-    s = n(965638),
+    s = n(746916),
+    a = n(965638),
     c = n(905423),
     u = n(486472),
     d = n(888369),
@@ -15,28 +15,28 @@ var r = n(255367),
     m = n(240848);
 let b = i.memo(function (e) {
     var t, n;
-    let { guildNode: b, lowerBadge: _ } = e,
-        O = b.id,
-        y = (0, l.e7)([h.Z], () => h.Z.getGuild(O)),
-        C = (0, a.E)(y),
+    let { guildNode: b, lowerBadge: O } = e,
+        _ = b.id,
+        y = (0, l.e7)([h.Z], () => h.Z.getGuild(_)),
+        C = (0, s.E)(y),
         v = (0, l.e7)([p.Z], () => p.Z.isFocused()),
-        j = (0, l.e7)([u.Z], () => u.Z.isUnavailable(O)),
+        j = (0, l.e7)([u.Z], () => u.Z.isUnavailable(_)),
         E = (0, c.Z)((e) => e.guildId),
-        S = (0, f.Z)(O),
+        S = (0, f.Z)(_),
         {
             badge: x,
             unread: I,
             isMentionLowImportance: P
         } = (0, l.cj)([d.default], () => ({
-            badge: d.default.getMentionCount(O),
-            isMentionLowImportance: d.default.getIsMentionLowImportance(O),
-            unread: d.default.hasUnread(O)
+            badge: d.default.getMentionCount(_),
+            isMentionLowImportance: d.default.getIsMentionLowImportance(_),
+            unread: d.default.hasUnread(_)
         })),
-        N = (0, s.Ij)(y) && 0 === x,
+        N = (0, a.Ij)(y) && 0 === x,
         w = i.useMemo(
             () =>
-                null != _
-                    ? _
+                null != O
+                    ? O
                     : N
                       ? (0, r.jsx)('div', {
                             className: m.pauseBackground,
@@ -49,7 +49,7 @@ let b = i.memo(function (e) {
                             })
                         })
                       : null,
-            [_, N]
+            [O, N]
         );
     return (0, r.jsx)(
         g.Z,
@@ -83,7 +83,7 @@ let b = i.memo(function (e) {
                 guild: y,
                 unavailable: j,
                 animatable: v,
-                selected: E === O,
+                selected: E === _,
                 badge: x,
                 isMentionLowImportance: P,
                 lowerBadge: w,

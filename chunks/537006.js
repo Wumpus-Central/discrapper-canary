@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w });
+n.d(t, { Z: () => P });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -25,7 +25,7 @@ var r = n(255367),
     A = n(474936),
     N = n(388032),
     C = n(869310);
-function R(e) {
+function w(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(u.P3F, {
         'aria-label': N.intl.string(N.t.WAI6xs),
@@ -38,7 +38,7 @@ function R(e) {
         })
     });
 }
-function P(e) {
+function R(e) {
     let { tiny: t, isPremiumUser: n, onInteraction: i } = e,
         { analyticsLocations: a, newestAnalyticsLocation: o } = (0, d.ZP)(),
         { trackUserProfileAction: s } = (0, y.KZ)();
@@ -105,7 +105,7 @@ function P(e) {
         ]
     });
 }
-function w(e) {
+function P(e) {
     let { isPremiumUser: t, onInteraction: n, className: a } = e,
         c = (0, _.Dt)(),
         { themeType: d } = (0, O.z)(),
@@ -130,7 +130,7 @@ function w(e) {
             id: c,
             children: N.intl.string(N.t.EIYbj4)
         }),
-        v = (0, r.jsx)(R, {
+        v = (0, r.jsx)(w, {
             onClose: () => {
                 (0, h.Q3)(l.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS, {
                     dismissAction: S.L.USER_DISMISS,
@@ -139,7 +139,7 @@ function w(e) {
                 });
             }
         }),
-        T = (0, r.jsx)(P, {
+        T = (0, r.jsx)(R, {
             isPremiumUser: t,
             onInteraction: n,
             tiny: f

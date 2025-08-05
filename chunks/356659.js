@@ -17,9 +17,9 @@ n.d(t, {
     XH: () => b,
     dJ: () => o,
     f_: () => I,
-    i$: () => P,
+    i$: () => R,
     jF: () => d,
-    ji: () => R,
+    ji: () => w,
     jp: () => C,
     mg: () => m,
     nU: () => h,
@@ -60,6 +60,6 @@ let c = 'alt+c',
     A = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
     N = 15,
     C = 30000,
-    R = 30,
-    P = 10;
+    w = 30,
+    R = 10;
 i.Z.Millis.DAY;

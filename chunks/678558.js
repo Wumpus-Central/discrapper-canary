@@ -63,7 +63,7 @@ function C(e, t) {
     }
     return n;
 }
-function R(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,18 +74,18 @@ function R(e, t) {
         e
     );
 }
-function P(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = w(e, t);
+        i = P(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function w(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -95,11 +95,11 @@ function w(e, t) {
     return i;
 }
 let D = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: A, targetBoostedGuildTier: C, onClose: w = () => {}, closeLayer: D = () => {}, pauseAnimation: L = !1, applicationId: x, handleSubscribeModalClose: M, withHighlight: k = !1, icon: j, intent: U } = e,
-        G = P(e, ['analyticsLocation', 'analyticsSourceLocation', 'guild', 'buttonText', 'targetBoostedGuildTier', 'onClose', 'closeLayer', 'pauseAnimation', 'applicationId', 'handleSubscribeModalClose', 'withHighlight', 'icon', 'intent']),
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: A, targetBoostedGuildTier: C, onClose: P = () => {}, closeLayer: D = () => {}, pauseAnimation: L = !1, applicationId: x, handleSubscribeModalClose: k, withHighlight: j = !1, icon: M, intent: U } = e,
+        G = R(e, ['analyticsLocation', 'analyticsSourceLocation', 'guild', 'buttonText', 'targetBoostedGuildTier', 'onClose', 'closeLayer', 'pauseAnimation', 'applicationId', 'handleSubscribeModalClose', 'withHighlight', 'icon', 'intent']),
         { analyticsLocations: B } = (0, f.ZP)(),
-        V = (0, d.bp)() === v.IlC.POPOUT,
-        [F, Z] = i.useState(!1),
+        Z = (0, d.bp)() === v.IlC.POPOUT,
+        [F, V] = i.useState(!1),
         H = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
         { fractionalState: Y } = (0, _.Z)(),
         W = (0, h.y)('guild_boosting_subscribe_button', H, Y),
@@ -109,33 +109,33 @@ let D = (e) => {
     }, [K]);
     let z = (0, y.vx)(E.Z.boostSlots),
         q = null != C ? Math.max((0, y.KK)(a, C), 1) : 1,
-        X = (0, y.aq)({ isBoostManagementDisabledForFractionalPremium: W }),
-        Q = async () => {
-            (Z(!0),
+        $ = (0, y.aq)({ isBoostManagementDisabledForFractionalPremium: W }),
+        X = async () => {
+            (V(!0),
                 await (0, O.u)({
                     analyticsLocations: B,
                     analyticsLocation: t,
                     analyticsSourceLocation: n,
                     guild: a,
                     numberOfBoostsToAdd: q,
-                    onClose: w,
+                    onClose: P,
                     closeLayer: D,
-                    inPopout: V,
+                    inPopout: Z,
                     applicationId: x,
-                    handleSubscribeModalClose: M,
+                    handleSubscribeModalClose: k,
                     intent: U
                 }),
-                Z(!1));
+                V(!1));
         },
-        J = b.Z.getPremiumTypeSubscription(),
-        $ = (0, r.jsxs)('div', {
+        Q = b.Z.getPremiumTypeSubscription(),
+        J = (0, r.jsxs)('div', {
             className: S.button,
-            children: [j, null != A ? A : T.intl.string(T.t.gKmQ1N)]
+            children: [M, null != A ? A : T.intl.string(T.t.gKmQ1N)]
         }),
         ee = (0, m.o)('GuildBoostingSubscribeButton', H, Y),
         et = !1;
-    return ((et = null !== J && !(z.length > 0) && (null == J ? void 0 : J.isPausedOrPausePending) && (Y === I.a$.NONE || ee)) &&
-        (($ = (0, r.jsxs)('div', {
+    return ((et = null !== Q && !(z.length > 0) && (null == Q ? void 0 : Q.isPausedOrPausePending) && (Y === I.a$.NONE || ee)) &&
+        ((J = (0, r.jsxs)('div', {
             className: S.button,
             children: [
                 (0, r.jsx)(c.mBM, {
@@ -143,38 +143,38 @@ let D = (e) => {
                     className: S.buttonIcon
                 }),
                 ' ',
-                $
+                J
             ]
         })),
         (G.disabled = !0)),
-    null != X)
+    null != $)
         ? (0, r.jsx)(p.Z, {
-              text: X,
+              text: $,
               'aria-label': !1,
               children: (e) =>
                   (0, r.jsx)(
                       c.gtL,
-                      R(
+                      w(
                           N(
-                              R(N({}, e), {
+                              w(N({}, e), {
                                   disabled: !0,
                                   size: l.zx.Sizes.SMALL,
                                   pauseAnimation: L
                               }),
                               G
                           ),
-                          { children: $ }
+                          { children: J }
                       )
                   )
           })
         : (0, r.jsx)(
               c.gtL,
-              R(N({ size: l.zx.Sizes.SMALL }, G), {
-                  className: o()(G.className, { [S.buttonHighlighted]: k }),
+              w(N({ size: l.zx.Sizes.SMALL }, G), {
+                  className: o()(G.className, { [S.buttonHighlighted]: j }),
                   submitting: F,
-                  onClick: Q,
+                  onClick: X,
                   pauseAnimation: L,
-                  children: $
+                  children: J
               })
           );
 };

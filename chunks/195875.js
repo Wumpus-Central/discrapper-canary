@@ -1,88 +1,91 @@
-var n = r(381538);
+var r = n(381538);
 function i() {
     return (i =
-        n ||
-        function (t) {
-            for (var e = 1; e < arguments.length; e++) {
-                var r = arguments[e];
-                for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (t[n] = r[n]);
+        r ||
+        function (e) {
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
             }
-            return t;
+            return e;
         }).apply(this, arguments);
 }
-var o = r(691099),
-    a = r(152477),
-    u = r(73800),
-    s = r(467159);
-t.exports = (function (t) {
-    function e() {
-        return t.apply(this, arguments) || this;
-    }
+function a(e, t) {
     ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
-    var r = e.prototype;
+}
+var o = n(691099),
+    s = n(152477),
+    l = n(73800),
+    c = n(467159);
+e.exports = (function (e) {
+    function t() {
+        return e.apply(this, arguments) || this;
+    }
+    a(t, e);
+    var n = t.prototype;
     return (
-        (r.shouldComponentUpdate = function (t) {
-            var e = this.props.editorState,
-                r = t.editorState;
-            if (e.getDirectionMap() !== r.getDirectionMap() || e.getSelection().getHasFocus() !== r.getSelection().getHasFocus()) return !0;
-            var n = r.getNativelyRenderedContent(),
-                i = e.isInCompositionMode(),
-                o = r.isInCompositionMode();
-            if (e === r || (null !== n && r.getCurrentContent() === n) || (i && o)) return !1;
-            var a = e.getCurrentContent(),
-                u = r.getCurrentContent(),
-                s = e.getDecorator(),
-                c = r.getDecorator();
-            return i !== o || a !== u || s !== c || r.mustForceSelection();
+        (n.shouldComponentUpdate = function (e) {
+            var t = this.props.editorState,
+                n = e.editorState;
+            if (t.getDirectionMap() !== n.getDirectionMap() || t.getSelection().getHasFocus() !== n.getSelection().getHasFocus()) return !0;
+            var r = n.getNativelyRenderedContent(),
+                i = t.isInCompositionMode(),
+                a = n.isInCompositionMode();
+            if (t === n || (null !== r && n.getCurrentContent() === r) || (i && a)) return !1;
+            var o = t.getCurrentContent(),
+                s = n.getCurrentContent(),
+                l = t.getDecorator(),
+                c = n.getDecorator();
+            return i !== a || o !== s || l !== c || n.mustForceSelection();
         }),
-        (r.render = function () {
-            for (var t = this.props, e = t.blockRenderMap, r = t.blockRendererFn, n = t.blockStyleFn, c = t.customStyleMap, l = t.customStyleFn, f = t.editorState, p = t.editorKey, h = t.textDirectionality, d = f.getCurrentContent(), g = f.getSelection(), y = f.mustForceSelection(), v = f.getDecorator(), m = s(f.getDirectionMap()), _ = d.getBlocksAsArray()[0], b = [], S = _; S; ) {
-                var w = S.getKey(),
-                    x = {
-                        blockRenderMap: e,
-                        blockRendererFn: r,
-                        blockStyleFn: n,
-                        contentState: d,
-                        customStyleFn: l,
-                        customStyleMap: c,
-                        decorator: v,
-                        editorKey: p,
-                        editorState: f,
-                        forceSelection: y,
-                        selection: g,
-                        block: S,
-                        direction: h || m.get(w),
-                        tree: f.getBlockTree(w)
+        (n.render = function () {
+            for (var e = this.props, t = e.blockRenderMap, n = e.blockRendererFn, r = e.blockStyleFn, a = e.customStyleMap, u = e.customStyleFn, d = e.editorState, f = e.editorKey, _ = e.textDirectionality, p = d.getCurrentContent(), h = d.getSelection(), m = d.mustForceSelection(), g = d.getDecorator(), E = c(d.getDirectionMap()), b = p.getBlocksAsArray()[0], y = [], O = b; O; ) {
+                var v = O.getKey(),
+                    I = {
+                        blockRenderMap: t,
+                        blockRendererFn: n,
+                        blockStyleFn: r,
+                        contentState: p,
+                        customStyleFn: u,
+                        customStyleMap: a,
+                        decorator: g,
+                        editorKey: f,
+                        editorState: d,
+                        forceSelection: m,
+                        selection: h,
+                        block: O,
+                        direction: _ || E.get(v),
+                        tree: d.getBlockTree(v)
                     },
-                    k = (e.get(S.getType()) || e.get('unstyled')).wrapper;
-                b.push({
-                    block: u.createElement(o, i({ key: w }, x)),
-                    wrapperTemplate: k,
-                    key: w,
-                    offsetKey: a.encode(w, 0, 0)
+                    T = (t.get(O.getType()) || t.get('unstyled')).wrapper;
+                y.push({
+                    block: l.createElement(o, i({ key: v }, I)),
+                    wrapperTemplate: T,
+                    key: v,
+                    offsetKey: s.encode(v, 0, 0)
                 });
-                var C = S.getNextSiblingKey();
-                S = C ? d.getBlockForKey(C) : null;
+                var S = O.getNextSiblingKey();
+                O = S ? p.getBlockForKey(S) : null;
             }
-            for (var E = [], D = 0; D < b.length; ) {
-                var O = b[D];
-                if (O.wrapperTemplate) {
-                    var K = [];
-                    do (K.push(b[D].block), D++);
-                    while (D < b.length && b[D].wrapperTemplate === O.wrapperTemplate);
-                    var T = u.cloneElement(
-                        O.wrapperTemplate,
+            for (var A = [], N = 0; N < y.length; ) {
+                var C = y[N];
+                if (C.wrapperTemplate) {
+                    var w = [];
+                    do (w.push(y[N].block), N++);
+                    while (N < y.length && y[N].wrapperTemplate === C.wrapperTemplate);
+                    var R = l.cloneElement(
+                        C.wrapperTemplate,
                         {
-                            key: O.key + '-wrap',
-                            'data-offset-key': O.offsetKey
+                            key: C.key + '-wrap',
+                            'data-offset-key': C.offsetKey
                         },
-                        K
+                        w
                     );
-                    E.push(T);
-                } else (E.push(O.block), D++);
+                    A.push(R);
+                } else (A.push(C.block), N++);
             }
-            return u.createElement('div', { 'data-contents': 'true' }, E);
+            return l.createElement('div', { 'data-contents': 'true' }, A);
         }),
-        e
+        t
     );
-})(u.Component);
+})(l.Component);

@@ -1,4 +1,4 @@
-(n.d(t, { Z: () => j }), n(388685));
+(n.d(t, { Z: () => M }), n(388685));
 var r,
     i = n(442837),
     a = n(570140),
@@ -98,14 +98,14 @@ function C(e, t) {
         o = A(r, i);
     return a !== o && (o ? n.add(t) : n.delete(t), !0);
 }
-function R() {
+function w() {
     ((v = {}), I.clear());
 }
-function P(e) {
+function R(e) {
     let { guild: t } = e;
     delete v[t.id];
 }
-function w(e) {
+function P(e) {
     let { guildId: t } = e;
     delete v[t];
 }
@@ -123,13 +123,13 @@ function x(e) {
     let { guildId: t, restrictions: n } = e;
     (0, s.uq)(n) ? I.add(t) : I.delete(t);
 }
-function M(e) {
+function k(e) {
     let { guildId: t } = e;
     I.add(t);
 }
-class k extends (r = i.ZP.Store) {
+class j extends (r = i.ZP.Store) {
     initialize() {
-        (this.waitFor(E.Z, g.Z, h.Z, f.Z), l.Zo.subscribe({ location: '1' }, () => R()));
+        (this.waitFor(E.Z, g.Z, h.Z, f.Z), l.Zo.subscribe({ location: '1' }, () => w()));
     }
     isChannelGated(e, t) {
         if (null == e) return !1;
@@ -146,22 +146,22 @@ class k extends (r = i.ZP.Store) {
         return !!(null != n && null != n.parent_id && _.Ec.has(null == n ? void 0 : n.type)) && this.isChannelOrThreadParentGated(e, n.parent_id);
     }
 }
-O(k, 'displayName', 'GatedChannelStore');
-let j = new k(a.Z, {
-    CONNECTION_OPEN: R,
-    OVERLAY_INITIALIZE: R,
-    CACHE_LOADED_LAZY: R,
-    GUILD_CREATE: P,
-    GUILD_UPDATE: P,
-    GUILD_DELETE: P,
-    GUILD_ROLE_CREATE: w,
-    GUILD_ROLE_UPDATE: w,
-    GUILD_ROLE_DELETE: w,
-    IMPERSONATE_UPDATE: w,
-    IMPERSONATE_STOP: w,
+O(j, 'displayName', 'GatedChannelStore');
+let M = new j(a.Z, {
+    CONNECTION_OPEN: w,
+    OVERLAY_INITIALIZE: w,
+    CACHE_LOADED_LAZY: w,
+    GUILD_CREATE: R,
+    GUILD_UPDATE: R,
+    GUILD_DELETE: R,
+    GUILD_ROLE_CREATE: P,
+    GUILD_ROLE_UPDATE: P,
+    GUILD_ROLE_DELETE: P,
+    IMPERSONATE_UPDATE: P,
+    IMPERSONATE_STOP: P,
     CHANNEL_CREATE: D,
     CHANNEL_DELETE: D,
     CHANNEL_UPDATES: L,
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: x,
-    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: M
+    GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: k
 });

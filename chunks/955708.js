@@ -1,6 +1,6 @@
 (n.d(e, {
-    default: () => x,
-    x: () => f
+    default: () => g,
+    x: () => m
 }),
     n(388685));
 var r,
@@ -12,8 +12,8 @@ var r,
     l = n(684471),
     d = n(745982),
     u = n(463439),
-    E = n(388032),
-    _ = n(257025);
+    x = n(388032),
+    p = n(257025);
 function h(t) {
     for (var e = 1; e < arguments.length; e++) {
         var n = null != arguments[e] ? arguments[e] : {},
@@ -39,7 +39,7 @@ function h(t) {
     }
     return t;
 }
-function p(t, e) {
+function f(t, e) {
     return (
         (e = null != e ? e : {}),
         Object.getOwnPropertyDescriptors
@@ -57,42 +57,42 @@ function p(t, e) {
         t
     );
 }
-var f = (((r = {})[(r.INTRO = 0)] = 'INTRO'), (r[(r.SAFETY_TIPS = 1)] = 'SAFETY_TIPS'), (r[(r.TAKE_ACTION = 2)] = 'TAKE_ACTION'), r);
-let x = (t) => {
-    let { warningId: e, warningType: n, senderId: r, modalProps: f, channelId: x } = t,
-        [N, g] = s.useState(0),
-        m = s.useMemo(
+var m = (((r = {})[(r.INTRO = 0)] = 'INTRO'), (r[(r.SAFETY_TIPS = 1)] = 'SAFETY_TIPS'), (r[(r.TAKE_ACTION = 2)] = 'TAKE_ACTION'), r);
+let g = (t) => {
+    let { warningId: e, warningType: n, senderId: r, modalProps: m, channelId: g } = t,
+        [_, b] = s.useState(0),
+        O = s.useMemo(
             () => ({
-                channelId: x,
+                channelId: g,
                 senderId: r,
                 warningId: e,
                 warningType: n,
                 isNudgeWarning: !1
             }),
-            [x, r, e, n]
+            [g, r, e, n]
         );
     s.useEffect(() => {
-        (0, c.KQ)(p(h({}, m), { viewName: c.pb.SAFETY_TAKEOVER_MODAL }));
-    }, [m]);
-    let T = s.useCallback(
+        (0, c.KQ)(f(h({}, O), { viewName: c.pb.SAFETY_TAKEOVER_MODAL }));
+    }, [O]);
+    let v = s.useCallback(
             (t) => {
-                (0, c.qc)(p(h({}, m), { cta: t }));
+                (0, c.qc)(f(h({}, O), { cta: t }));
             },
-            [m]
+            [O]
         ),
-        [b, A] = s.useState(!1);
-    function C(t) {
-        g(t);
+        [j, T] = s.useState(!1);
+    function E(t) {
+        b(t);
     }
     return (0, i.jsxs)(a.Y0X, {
-        transitionState: f.transitionState,
+        transitionState: m.transitionState,
         parentComponent: 'InappropriateConversationModal',
         children: [
             (0, i.jsx)('div', {
-                className: _.container,
+                className: p.container,
                 children: (0, i.jsxs)(a.MyZ, {
                     width: 440,
-                    activeSlide: N,
+                    activeSlide: _,
                     centered: !1,
                     overflow: 'visible',
                     contentDisplay: 'flex',
@@ -102,8 +102,8 @@ let x = (t) => {
                             children: (0, i.jsx)(l.Z, {
                                 warningId: e,
                                 senderId: r,
-                                trackAnalyticsEvent: T,
-                                onNavigate: C
+                                trackAnalyticsEvent: v,
+                                onNavigate: E
                             })
                         }),
                         (0, i.jsx)(a.Mi4, {
@@ -111,7 +111,7 @@ let x = (t) => {
                             children: (0, i.jsx)(d.Z, {
                                 warningId: e,
                                 senderId: r,
-                                trackAnalyticsEvent: T
+                                trackAnalyticsEvent: v
                             })
                         }),
                         (0, i.jsx)(a.Mi4, {
@@ -119,11 +119,11 @@ let x = (t) => {
                             children: (0, i.jsx)(u.Z, {
                                 warningId: e,
                                 senderId: r,
-                                trackAnalyticsEvent: T,
-                                channelId: x,
-                                hasReported: b,
+                                trackAnalyticsEvent: v,
+                                channelId: g,
+                                hasReported: j,
                                 onReport: function () {
-                                    A(!0);
+                                    T(!0);
                                 }
                             })
                         })
@@ -131,24 +131,24 @@ let x = (t) => {
                 })
             }),
             (0, i.jsxs)(a.mzw, {
-                className: _.footer,
+                className: p.footer,
                 children: [
                     (0, i.jsx)(a.Avr, {
                         variant: 'secondary',
                         size: 'sm',
-                        text: E.intl.string(E.t.cpT0Cg),
+                        text: x.intl.string(x.t.cpT0Cg),
                         onClick: function () {
-                            (f.onClose(), (0, o.T)(x, [e]), T(c.NM.USER_TAKEOVER_MODAL_DISMISS));
+                            (m.onClose(), (0, o.T)(g, [e]), v(c.NM.USER_TAKEOVER_MODAL_DISMISS));
                         },
                         textVariant: 'text-sm/normal'
                     }),
-                    0 !== N &&
+                    0 !== _ &&
                         (0, i.jsx)(a.Avr, {
                             variant: 'secondary',
                             size: 'sm',
-                            text: E.intl.string(E.t['13/7kZ']),
+                            text: x.intl.string(x.t['13/7kZ']),
                             textVariant: 'text-sm/normal',
-                            onClick: () => C(0)
+                            onClick: () => E(0)
                         })
                 ]
             })

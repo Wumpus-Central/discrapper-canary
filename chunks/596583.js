@@ -1,45 +1,45 @@
-(r.d(t, { Z: () => w }), r(388685));
+(r.d(t, { Z: () => Z }), r(388685));
 var a = r(255367);
 r(73800);
-var s = r(120356),
-    i = r.n(s),
+var i = r(120356),
+    s = r.n(i),
     n = r(512722),
     l = r.n(n),
     o = r(442837),
-    d = r(780384),
-    C = r(481060),
+    C = r(780384),
+    d = r(481060),
     c = r(493683),
-    u = r(37234),
-    p = r(410030),
-    h = r(518950),
-    f = r(819640),
-    x = r(63063),
-    g = r(51144),
-    m = r(281494),
+    x = r(37234),
+    f = r(410030),
+    p = r(518950),
+    u = r(819640),
+    h = r(63063),
+    m = r(51144),
+    j = r(281494),
     _ = r(276444),
-    j = r(792451),
-    y = r(814667),
-    L = r(263885),
+    g = r(792451),
+    L = r(814667),
+    y = r(263885),
     v = r(981631),
-    b = r(388032),
-    S = r(974149);
-let R = (e, t) => {
-        (f.Z.hasLayers() && (0, u.xf)(), c.Z.openPrivateChannel({ recipientIds: e }), t());
+    S = r(388032),
+    w = r(974149);
+let b = (e, t) => {
+        (u.Z.hasLayers() && (0, x.xf)(), c.Z.openPrivateChannel({ recipientIds: e }), t());
     },
-    E = (e) => {
-        let { user: t, trialCreationResult: r, onClose: s } = e,
-            { avatarSrc: n, eventHandlers: l } = (0, h.Z)({
+    N = (e) => {
+        let { user: t, trialCreationResult: r, onClose: i } = e,
+            { avatarSrc: n, eventHandlers: l } = (0, p.Z)({
                 userId: null == t ? void 0 : t.id,
-                size: C.EFr.SIZE_56
+                size: d.EFr.SIZE_56
             }),
-            o = g.ZP.getName(t),
-            d = t.username !== o && r === m.Fz.SUCCESS,
-            c = r === m.Fz.FAIL;
+            o = m.ZP.getName(t),
+            C = t.username !== o && r === j.Fz.SUCCESS,
+            c = r === j.Fz.FAIL;
         return (0, a.jsxs)('div', {
-            className: S.referredUserRowContainer,
+            className: w.referredUserRowContainer,
             children: [
                 (0, a.jsx)(
-                    C.qEK,
+                    d.qEK,
                     (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var r = null != arguments[t] ? arguments[t] : {},
@@ -66,54 +66,54 @@ let R = (e, t) => {
                         return e;
                     })(
                         {
-                            imageClassName: i()({ [S.erroredAvatar]: c }),
+                            imageClassName: s()({ [w.erroredAvatar]: c }),
                             src: n,
                             'aria-label': o,
-                            size: C.EFr.SIZE_56
+                            size: d.EFr.SIZE_56
                         },
                         l
                     )
                 ),
                 (0, a.jsxs)('div', {
-                    className: S.referredUserRowBody,
+                    className: w.referredUserRowBody,
                     children: [
                         c
                             ? (0, a.jsxs)(a.Fragment, {
                                   children: [
-                                      (0, a.jsx)(C.Text, {
-                                          className: S.errorDisplayName,
+                                      (0, a.jsx)(d.Text, {
+                                          className: w.errorDisplayName,
                                           variant: 'text-md/medium',
                                           children: o
                                       }),
-                                      (0, a.jsx)(C.Text, {
+                                      (0, a.jsx)(d.Text, {
                                           variant: 'text-md/medium',
-                                          className: S.userName,
-                                          children: b.intl.format(b.t.RO3T4O, { userName: o })
+                                          className: w.userName,
+                                          children: S.intl.format(S.t.RO3T4O, { userName: o })
                                       })
                                   ]
                               })
-                            : (0, a.jsx)(C.ua7, {
-                                  text: b.intl.string(b.t.xkVQPD),
+                            : (0, a.jsx)(d.ua7, {
+                                  text: S.intl.string(S.t.xkVQPD),
                                   position: 'right',
                                   children: (e) => {
-                                      let { onMouseEnter: r, onMouseLeave: i } = e;
-                                      return (0, a.jsx)(C.P3F, {
-                                          onClick: () => R(t.id, s),
-                                          className: S.displayNameClickableContainer,
+                                      let { onMouseEnter: r, onMouseLeave: s } = e;
+                                      return (0, a.jsx)(d.P3F, {
+                                          onClick: () => b(t.id, i),
+                                          className: w.displayNameClickableContainer,
                                           onMouseEnter: r,
-                                          onMouseLeave: i,
-                                          children: (0, a.jsx)(C.Text, {
+                                          onMouseLeave: s,
+                                          children: (0, a.jsx)(d.Text, {
                                               variant: 'text-md/medium',
-                                              className: S.displayName,
+                                              className: w.displayName,
                                               children: o
                                           })
                                       });
                                   }
                               }),
-                        d &&
-                            (0, a.jsx)(C.Text, {
+                        C &&
+                            (0, a.jsx)(d.Text, {
                                 variant: 'text-md/medium',
-                                className: S.userName,
+                                className: w.userName,
                                 children: t.username
                             })
                     ]
@@ -121,55 +121,55 @@ let R = (e, t) => {
             ]
         });
     },
-    w = (e) => {
-        let { selectedUsers: t, trialCreationResult: r, onClose: s } = e,
-            i = [...t].map((e) =>
+    Z = (e) => {
+        let { selectedUsers: t, trialCreationResult: r, onClose: i } = e,
+            s = [...t].map((e) =>
                 (0, a.jsx)(
-                    E,
+                    N,
                     {
                         user: e,
                         trialCreationResult: r.get(e.id),
-                        onClose: s
+                        onClose: i
                     },
                     e.id
                 )
             ),
             n = (0, o.e7)([_.Z], () => _.Z.getReferralsRemaining());
         l()(null !== n, 'Referrals remaining should not be null');
-        let c = (0, p.Fg)(),
-            u = (0, d.ap)(c) ? y.Z : j.Z,
-            h = b.intl.string(b.t.Pcb7KC),
-            f = [...r.values()].filter((e) => e === m.Fz.SUCCESS).length;
+        let c = (0, f.Fg)(),
+            x = (0, C.ap)(c) ? L.Z : g.Z,
+            p = S.intl.string(S.t.Pcb7KC),
+            u = [...r.values()].filter((e) => e === j.Fz.SUCCESS).length;
         return (
-            n > 0 && (h = b.intl.formatToPlainString(b.t.iWtOfH, { numReferrals: f })),
-            0 === f && (h = b.intl.string(b.t['7VBEub'])),
+            n > 0 && (p = S.intl.formatToPlainString(S.t.iWtOfH, { numReferrals: u })),
+            0 === u && (p = S.intl.string(S.t['7VBEub'])),
             (0, a.jsxs)('div', {
-                className: S.confrimationContainer,
+                className: w.confrimationContainer,
                 children: [
-                    (0, a.jsx)(C.P3F, {
-                        onClick: s,
-                        className: S.closeButtonContainer,
-                        children: (0, a.jsx)(C.Dio, {
+                    (0, a.jsx)(d.P3F, {
+                        onClick: i,
+                        className: w.closeButtonContainer,
+                        children: (0, a.jsx)(d.Dio, {
                             size: 'custom',
                             width: 20,
                             height: 20
                         })
                     }),
-                    (0, a.jsx)(u, { className: S.headerIcon }),
-                    (0, a.jsx)(C.X6q, {
+                    (0, a.jsx)(x, { className: w.headerIcon }),
+                    (0, a.jsx)(d.X6q, {
                         variant: 'heading-lg/bold',
-                        className: S.heading,
-                        children: h
+                        className: w.heading,
+                        children: p
                     }),
                     (0, a.jsx)('div', {
-                        className: S.confirmedUserContainer,
-                        children: i
+                        className: w.confirmedUserContainer,
+                        children: s
                     }),
-                    (0, a.jsx)(C.Text, {
+                    (0, a.jsx)(d.Text, {
                         variant: 'text-md/medium',
-                        children: b.intl.format(b.t.CZaMHh, {
-                            days: L.p,
-                            helpdeskArticle: x.Z.getArticleURL(v.BhN.REFERRAL_PROGRAM)
+                        children: S.intl.format(S.t.CZaMHh, {
+                            days: y.p,
+                            helpdeskArticle: h.Z.getArticleURL(v.BhN.REFERRAL_PROGRAM)
                         })
                     })
                 ]

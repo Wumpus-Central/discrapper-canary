@@ -1,4 +1,4 @@
-t.d(n, { Z: () => f });
+t.d(n, { Z: () => b });
 var l = t(255367);
 t(73800);
 var i = t(442837),
@@ -11,29 +11,29 @@ var i = t(442837),
     d = t(699516),
     g = t(944486),
     Z = t(981631),
-    b = t(388032);
-function f(e) {
-    let { user: n, context: f, label: p, joinCallVideo: m, id: O, onCall: h } = e,
+    f = t(388032);
+function b(e) {
+    let { user: n, context: b, label: O, joinCallVideo: p, id: m, onCall: h } = e,
         j = (0, o.Aq)(),
         P = (0, i.e7)([s.default], () => s.default.getId() === n.id),
         v = (0, i.e7)([d.Z], () => d.Z.isBlocked(n.id)),
         x = (0, i.e7)([g.Z, c.Z], () => g.Z.getVoiceChannelId() === c.Z.getDMFromUserId(n.id));
-    if (P || f === Z.IlC.POPOUT || x || n.bot || n.isProvisional) return null;
-    let _ = () => {
+    if (P || b === Z.IlC.POPOUT || x || n.bot || n.isProvisional) return null;
+    let y = () => {
             (null == h || h(),
                 a.Z.openPrivateChannel({
                     recipientIds: n.id,
                     joinCall: !0,
-                    joinCallVideo: m
+                    joinCallVideo: p
                 }),
                 j.dispatch(Z.CkL.POPOUT_CLOSE),
                 (0, r.pTH)());
         },
-        y = !u.ZP.disableCallUserConfirmationPrompt;
+        N = !u.ZP.disableCallUserConfirmationPrompt;
     return (0, l.jsx)(r.sNh, {
-        id: null != O ? O : 'call',
-        label: null != p ? p : b.intl.string(b.t.JJogjo),
-        action: y
+        id: null != m ? m : 'call',
+        label: null != O ? O : f.intl.string(f.t.JJogjo),
+        action: N
             ? () => {
                   (0, r.ZDy)(async () => {
                       let { default: e } = await t.e('27157').then(t.bind(t, 736454));
@@ -64,11 +64,11 @@ function f(e) {
                                           }));
                                   }
                                   return e;
-                              })({ onSubmit: _ }, n)
+                              })({ onSubmit: y }, n)
                           );
                   });
               }
-            : _,
+            : y,
         disabled: v
     });
 }

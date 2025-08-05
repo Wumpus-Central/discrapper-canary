@@ -1,26 +1,39 @@
 n.d(t, { Z: () => C });
 var r = n(255367);
 n(73800);
-var l = n(442837),
-    o = n(481060),
-    i = n(493773),
-    a = n(367907),
-    s = n(111028),
+var i = n(442837),
+    a = n(481060),
+    o = n(493773),
+    s = n(367907),
+    l = n(111028),
     c = n(91218),
     u = n(829883),
     d = n(623624),
-    p = n(973542),
-    m = n(703656),
-    g = n(592125),
-    f = n(485386),
-    b = n(944486),
-    h = n(626135),
-    O = n(524444),
-    y = n(981631),
-    v = n(176505),
-    j = n(388032),
-    P = n(854422);
-function x(e) {
+    f = n(973542),
+    _ = n(703656),
+    p = n(592125),
+    h = n(485386),
+    m = n(944486),
+    g = n(626135),
+    E = n(524444),
+    b = n(981631),
+    y = n(176505),
+    O = n(388032),
+    v = n(854422);
+function I(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,116 +44,113 @@ function x(e) {
                 })
             )),
             r.forEach(function (t) {
-                var r;
-                ((r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r));
+                I(e, t, n[t]);
             }));
     }
     return e;
 }
-function w(e, t) {
+function S(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let C = (e) => {
-    let { roleIcon: t, guild: n } = e,
-        { name: C } = t;
-    (0, i.ZP)(() => {
-        h.default.track(
-            y.rMx.OPEN_POPOUT,
-            x(
-                {
-                    type: 'Role Icon Popout',
-                    guild_id: n.id
-                },
-                (0, a.v_)(g.Z.getChannel(b.Z.getChannelId(n.id)))
-            )
-        );
-    });
-    let S = (0, l.e7)([f.Z], () => (null != t.roleId ? f.Z.getRole(n.id, t.roleId) : void 0)),
-        E = (0, p.Z)(S),
-        N = E ? j.intl.formatToPlainString(j.t.t0928f, { name: C }) : j.intl.formatToPlainString(j.t.UDDkGx, { name: C }),
-        T = w(x({}, t), {
-            src: null == t.src ? t.src : (0, u.o)(t.src, 40),
-            size: 40
-        }),
-        Z = E
-            ? () => {
-                  (0, m.uL)(y.Z5c.CHANNEL(n.id, v.oC.ROLE_SUBSCRIPTIONS));
-              }
-            : () => {
-                  (0, d.f)({
-                      guildId: n.id,
-                      location: { section: y.jXE.ROLE_ICON_POPOUT }
-                  });
-              };
-    return (0, r.jsx)(o.VqE, {
-        children: (0, r.jsx)(O.W_, {
-            children: (0, r.jsxs)('div', {
-                className: P.popoutContainer,
-                children: [
-                    (0, r.jsxs)('div', {
-                        className: P.mainContent,
-                        children: [
-                            (0, r.jsx)('div', {
-                                className: P.roleIconContainer,
-                                children: (0, r.jsx)(
-                                    c.Z,
-                                    w(x({}, T), {
-                                        enableTooltip: !1,
-                                        className: P.__invalid_roleIcon,
-                                        enableHeight: !1
-                                    })
-                                )
-                            }),
-                            (0, r.jsxs)('div', {
-                                className: P.truncatingText,
-                                children: [
-                                    (0, r.jsx)(o.X6q, {
-                                        variant: 'heading-md/semibold',
-                                        className: P.roleName,
-                                        children: (0, r.jsx)(s.Z, { children: C })
-                                    }),
-                                    (0, r.jsx)(o.Text, {
-                                        variant: 'text-sm/normal',
-                                        children: N
-                                    })
-                                ]
-                            })
-                        ]
-                    }),
-                    (0, r.jsx)(o.zxk, {
-                        size: 'sm',
-                        variant: 'secondary',
-                        text: j.intl.string(j.t['H930+P']),
-                        onClick: Z,
-                        icon: o.$Eu,
-                        fullWidth: !0,
-                        autoFocus: !0
-                    })
-                ]
+let N = 40,
+    C = (e) => {
+        let { roleIcon: t, guild: n } = e,
+            { name: I } = t;
+        (0, o.ZP)(() => {
+            g.default.track(
+                b.rMx.OPEN_POPOUT,
+                T(
+                    {
+                        type: 'Role Icon Popout',
+                        guild_id: n.id
+                    },
+                    (0, s.v_)(p.Z.getChannel(m.Z.getChannelId(n.id)))
+                )
+            );
+        });
+        let S = (0, i.e7)([h.Z], () => (null != t.roleId ? h.Z.getRole(n.id, t.roleId) : void 0)),
+            C = (0, f.Z)(S),
+            w = C ? O.intl.formatToPlainString(O.t.t0928f, { name: I }) : O.intl.formatToPlainString(O.t.UDDkGx, { name: I }),
+            R = A(T({}, t), {
+                src: null == t.src ? t.src : (0, u.o)(t.src, N),
+                size: N
+            }),
+            P = () => {
+                (0, d.f)({
+                    guildId: n.id,
+                    location: { section: b.jXE.ROLE_ICON_POPOUT }
+                });
+            },
+            D = () => {
+                (0, _.uL)(b.Z5c.CHANNEL(n.id, y.oC.ROLE_SUBSCRIPTIONS));
+            },
+            L = C ? D : P;
+        return (0, r.jsx)(a.VqE, {
+            children: (0, r.jsx)(E.W_, {
+                children: (0, r.jsxs)('div', {
+                    className: v.popoutContainer,
+                    children: [
+                        (0, r.jsxs)('div', {
+                            className: v.mainContent,
+                            children: [
+                                (0, r.jsx)('div', {
+                                    className: v.roleIconContainer,
+                                    children: (0, r.jsx)(
+                                        c.Z,
+                                        A(T({}, R), {
+                                            enableTooltip: !1,
+                                            className: v.__invalid_roleIcon,
+                                            enableHeight: !1
+                                        })
+                                    )
+                                }),
+                                (0, r.jsxs)('div', {
+                                    className: v.truncatingText,
+                                    children: [
+                                        (0, r.jsx)(a.X6q, {
+                                            variant: 'heading-md/semibold',
+                                            className: v.roleName,
+                                            children: (0, r.jsx)(l.Z, { children: I })
+                                        }),
+                                        (0, r.jsx)(a.Text, {
+                                            variant: 'text-sm/normal',
+                                            children: w
+                                        })
+                                    ]
+                                })
+                            ]
+                        }),
+                        (0, r.jsx)(a.zxk, {
+                            size: 'sm',
+                            variant: 'secondary',
+                            text: O.intl.string(O.t['H930+P']),
+                            onClick: L,
+                            icon: a.$Eu,
+                            fullWidth: !0,
+                            autoFocus: !0
+                        })
+                    ]
+                })
             })
-        })
-    });
-};
+        });
+    };

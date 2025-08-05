@@ -1,22 +1,22 @@
-a.d(t, { Z: () => c });
-var n = a(114858),
-    r = a(362383),
-    l = a(731965),
-    i = a(893607),
-    s = a(981631);
-function o(e) {
-    let t = (0, n.LX)(null != e ? e : '', { path: s.Z5c.CHANNEL(i.Hw.guildId(), i.Hw.channelId({ optional: !0 }), ':messageId?') });
+n.d(t, { Z: () => c });
+var r = n(114858),
+    i = n(362383),
+    a = n(731965),
+    o = n(893607),
+    s = n(981631);
+function l(e) {
+    let t = (0, r.LX)(null != e ? e : '', { path: s.Z5c.CHANNEL(o.Hw.guildId(), o.Hw.channelId({ optional: !0 }), ':messageId?') });
     if (null != t) {
-        let { guildId: e, channelId: a } = t.params;
+        let { guildId: e, channelId: n } = t.params;
         return {
             guildId: e === s.ME ? null : e,
-            channelId: null != a ? a : null
+            channelId: null != n ? n : null
         };
     }
-    let a = (0, n.LX)(null != e ? e : '', { path: s.Z5c.GUILD_BOOSTING_MARKETING(i.Hw.guildId()) });
-    return null != a
+    let n = (0, r.LX)(null != e ? e : '', { path: s.Z5c.GUILD_BOOSTING_MARKETING(o.Hw.guildId()) });
+    return null != n
         ? {
-              guildId: a.params.guildId,
+              guildId: n.params.guildId,
               channelId: null
           }
         : {
@@ -24,28 +24,28 @@ function o(e) {
               channelId: null
           };
 }
-let c = (0, r.F)((e) => ({
+let c = (0, i.F)((e) => ({
     path: null,
     basePath: '/',
     guildId: null,
     channelId: null,
     updatePath(t) {
-        let { guildId: a, channelId: n } = o(t);
-        (0, l.j)(() =>
+        let { guildId: n, channelId: r } = l(t);
+        (0, a.j)(() =>
             e({
                 path: t,
-                guildId: a,
-                channelId: n
+                guildId: n,
+                channelId: r
             })
         );
     },
     resetPath(t) {
-        let { guildId: a, channelId: n } = o(t);
-        (0, l.j)(() =>
+        let { guildId: n, channelId: r } = l(t);
+        (0, a.j)(() =>
             e({
                 path: null,
-                guildId: a,
-                channelId: n,
+                guildId: n,
+                channelId: r,
                 basePath: t
             })
         );

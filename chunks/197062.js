@@ -1,34 +1,36 @@
-i.d(e, { Z: () => s });
-var r = i(255367);
-i(73800);
-var n = i(481060),
-    E = i(388032);
-let l = (t, e) =>
-        (0, r.jsxs)(
-            n.Text,
+n.d(t, { Z: () => s });
+var r = n(255367);
+n(73800);
+var i = n(481060),
+    a = n(388032);
+let o = (e, t) => {
+        let n = {
+            display: 'flex',
+            gap: '4px',
+            margin: '8px 0 4px 0',
+            alignItems: 'center'
+        };
+        return (0, r.jsxs)(
+            i.Text,
             {
                 color: 'text-danger',
-                style: {
-                    display: 'flex',
-                    gap: '4px',
-                    margin: '8px 0 4px 0',
-                    alignItems: 'center'
-                },
+                style: n,
                 variant: 'text-sm/normal',
                 children: [
-                    (0, r.jsx)(n.Mgn, {
+                    (0, r.jsx)(i.Mgn, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 14,
                         height: 14
                     }),
-                    t
+                    e
                 ]
             },
-            e
-        ),
+            t
+        );
+    },
     s = {
         getForumChannelPermissionText: function () {
-            return E.intl.format(E.t.zlXUVV, { warningHook: l });
+            return a.intl.format(a.t.zlXUVV, { warningHook: o });
         }
     };

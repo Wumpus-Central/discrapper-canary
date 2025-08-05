@@ -74,8 +74,8 @@ function O(e) {
         })),
         L = (null == (t = E.userStatus) ? void 0 : t.enrolledAt) != null,
         M = (null == (n = E.userStatus) ? void 0 : n.completedAt) != null,
-        W = M && (null == (o = E.userStatus) ? void 0 : o.claimedAt) == null,
-        Z = (0, p.iQ)(E),
+        Z = M && (null == (o = E.userStatus) ? void 0 : o.claimedAt) == null,
+        W = (0, p.iQ)(E),
         U = !(0, p.zi)(E),
         H = (0, m._Q)(E),
         z = (0, p.Xv)(E.config),
@@ -125,7 +125,7 @@ function O(e) {
         }),
         ec = (null == (O = E.userStatus) ? void 0 : O.claimedAt) != null,
         eu = null;
-    return (Z && W
+    return (W && Z
         ? (eu = (0, r.jsx)(l.zx, {
               color: l.Tt.BRAND,
               submitting: D,
@@ -170,7 +170,7 @@ function O(e) {
                       children: eo
                   }))
           : U
-            ? U && W
+            ? U && Z
                 ? (eu = (0, r.jsx)(l.zx, {
                       color: l.Tt.BRAND,
                       submitting: D,

@@ -74,7 +74,7 @@ function O(e) {
     var t;
     let { transitionState: n, animationVariant: a = 'default', size: m = 'md', paddingSize: E = 'sm', fullScreenOnMobile: y = !0, returnRef: O, role: v = 'dialog', 'aria-label': I, onClose: T, contentOutsideContainer: S, trackingProps: A, children: N } = e,
         C = i.useId(),
-        R = i.useMemo(
+        w = i.useMemo(
             () => ({
                 id: C,
                 headingId: 'heading-'.concat(C),
@@ -82,20 +82,20 @@ function O(e) {
             }),
             [C, T]
         ),
-        P = 0 === n || 1 === n,
-        { reducedMotion: w } = i.useContext(d.S),
-        D = P || w.enabled || 'subtle' === a ? 'scale(1)' : 'scale(0.9)',
+        R = 0 === n || 1 === n,
+        { reducedMotion: P } = i.useContext(d.S),
+        D = R || P.enabled || 'subtle' === a ? 'scale(1)' : 'scale(0.9)',
         L = (0, u.q)(
             {
-                opacity: +!!P,
+                opacity: +!!R,
                 transform: D,
-                config: P ? p.jF : p.W$,
-                delay: 64 * !!P
+                config: R ? p.jF : p.W$,
+                delay: 64 * !!R
             },
             'animate-always'
         );
     return (0, r.jsx)(_.t.Provider, {
-        value: R,
+        value: w,
         children: (0, r.jsx)(
             f.V,
             b(
@@ -104,7 +104,7 @@ function O(e) {
                         id: C,
                         role: v,
                         'aria-label': I,
-                        'aria-labelledby': null != I ? void 0 : R.headingId,
+                        'aria-labelledby': null != I ? void 0 : w.headingId,
                         returnRef: O
                     },
                     A

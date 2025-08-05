@@ -1,30 +1,32 @@
-n.d(t, { Z: () => d });
-var i = n(255367);
+n.d(t, { Z: () => u });
+var r = n(255367);
 n(73800);
-var l = n(481060),
-    r = n(332148),
-    s = n(257559),
-    a = n(151007),
-    o = n(981631),
+var i = n(481060),
+    a = n(332148),
+    o = n(257559),
+    s = n(151007),
+    l = n(981631),
     c = n(388032);
-function d(e, t) {
-    return e.state !== o.yb.SEND_FAILED && (0, a.Z)(e, t)
+function u(e, t) {
+    function n(n) {
+        n.shiftKey ? a.Z.pinMessage(t, e.id) : o.Z.confirmPin(t, e);
+    }
+    function u(n) {
+        n.shiftKey ? a.Z.unpinMessage(t, e.id) : o.Z.confirmUnpin(t, e);
+    }
+    return e.state !== l.yb.SEND_FAILED && (0, s.Z)(e, t)
         ? !1 === e.pinned
-            ? (0, i.jsx)(l.sNh, {
+            ? (0, r.jsx)(i.sNh, {
                   id: 'pin',
-                  action: function (n) {
-                      n.shiftKey ? r.Z.pinMessage(t, e.id) : s.Z.confirmPin(t, e);
-                  },
+                  action: n,
                   label: c.intl.string(c.t['CvQ18/']),
-                  icon: l.qQX
+                  icon: i.qQX
               })
-            : (0, i.jsx)(l.sNh, {
+            : (0, r.jsx)(i.sNh, {
                   id: 'unpin',
-                  action: function (n) {
-                      n.shiftKey ? r.Z.unpinMessage(t, e.id) : s.Z.confirmUnpin(t, e);
-                  },
+                  action: u,
                   label: c.intl.string(c.t['Bse+Fx']),
-                  icon: l.qQX
+                  icon: i.qQX
               })
         : null;
 }

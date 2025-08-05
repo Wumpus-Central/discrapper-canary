@@ -1,91 +1,94 @@
-var n = r(359282),
-    i = r(720379),
-    o = r(65183),
-    a = o.List,
-    u = o.Map,
-    s = o.OrderedSet,
-    c = o.Record,
-    l = o.Repeat,
-    f = s(),
-    p = {
+function r(e, t) {
+    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
+}
+var i = n(359282),
+    a = n(720379),
+    o = n(65183),
+    s = o.List,
+    l = o.Map,
+    c = o.OrderedSet,
+    u = o.Record,
+    d = o.Repeat,
+    f = c(),
+    _ = {
         parent: null,
-        characterList: a(),
-        data: u(),
+        characterList: s(),
+        data: l(),
         depth: 0,
         key: '',
         text: '',
         type: 'unstyled',
-        children: a(),
+        children: s(),
         prevSibling: null,
         nextSibling: null
     },
-    h = function (t, e) {
-        return t.getStyle() === e.getStyle();
+    p = function (e, t) {
+        return e.getStyle() === t.getStyle();
     },
-    d = function (t, e) {
-        return t.getEntity() === e.getEntity();
+    h = function (e, t) {
+        return e.getEntity() === t.getEntity();
     },
-    g = function (t) {
-        if (!t) return t;
-        var e = t.characterList,
-            r = t.text;
-        return (r && !e && (t.characterList = a(l(n.EMPTY, r.length))), t);
+    m = function (e) {
+        if (!e) return e;
+        var t = e.characterList,
+            n = e.text;
+        return (n && !t && (e.characterList = s(d(i.EMPTY, n.length))), e);
     };
-t.exports = (function (t) {
-    function e() {
-        var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : p;
-        return t.call(this, g(e)) || this;
+e.exports = (function (e) {
+    function t() {
+        var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _;
+        return e.call(this, m(t)) || this;
     }
-    ((e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t));
-    var r = e.prototype;
+    r(t, e);
+    var n = t.prototype;
     return (
-        (r.getKey = function () {
+        (n.getKey = function () {
             return this.get('key');
         }),
-        (r.getType = function () {
+        (n.getType = function () {
             return this.get('type');
         }),
-        (r.getText = function () {
+        (n.getText = function () {
             return this.get('text');
         }),
-        (r.getCharacterList = function () {
+        (n.getCharacterList = function () {
             return this.get('characterList');
         }),
-        (r.getLength = function () {
+        (n.getLength = function () {
             return this.getText().length;
         }),
-        (r.getDepth = function () {
+        (n.getDepth = function () {
             return this.get('depth');
         }),
-        (r.getData = function () {
+        (n.getData = function () {
             return this.get('data');
         }),
-        (r.getInlineStyleAt = function (t) {
-            var e = this.getCharacterList().get(t);
-            return e ? e.getStyle() : f;
+        (n.getInlineStyleAt = function (e) {
+            var t = this.getCharacterList().get(e);
+            return t ? t.getStyle() : f;
         }),
-        (r.getEntityAt = function (t) {
-            var e = this.getCharacterList().get(t);
-            return e ? e.getEntity() : null;
+        (n.getEntityAt = function (e) {
+            var t = this.getCharacterList().get(e);
+            return t ? t.getEntity() : null;
         }),
-        (r.getChildKeys = function () {
+        (n.getChildKeys = function () {
             return this.get('children');
         }),
-        (r.getParentKey = function () {
+        (n.getParentKey = function () {
             return this.get('parent');
         }),
-        (r.getPrevSiblingKey = function () {
+        (n.getPrevSiblingKey = function () {
             return this.get('prevSibling');
         }),
-        (r.getNextSiblingKey = function () {
+        (n.getNextSiblingKey = function () {
             return this.get('nextSibling');
         }),
-        (r.findStyleRanges = function (t, e) {
-            i(this.getCharacterList(), h, t, e);
+        (n.findStyleRanges = function (e, t) {
+            a(this.getCharacterList(), p, e, t);
         }),
-        (r.findEntityRanges = function (t, e) {
-            i(this.getCharacterList(), d, t, e);
+        (n.findEntityRanges = function (e, t) {
+            a(this.getCharacterList(), h, e, t);
         }),
-        e
+        t
     );
-})(c(p));
+})(u(_));

@@ -25,9 +25,9 @@ var r = n(255367),
     A = n(981631),
     N = n(616922),
     C = n(388032),
-    R = n(292199),
-    P = n(610220);
-function w(e, t) {
+    w = n(292199),
+    R = n(610220);
+function P(e, t) {
     return C.intl.formatToPlainString(C.t.h2yWWV, {
         username: t.username,
         activity: e
@@ -64,18 +64,18 @@ function L(e) {
     return null == s
         ? null
         : (0, r.jsxs)('div', {
-              className: R.listeningTimeline,
+              className: w.listeningTimeline,
               children: [
                   (0, r.jsx)(T.x3, { entry: n }),
                   (0, r.jsx)('div', {
-                      className: R.seekBarContainer,
+                      className: w.seekBarContainer,
                       children: (0, r.jsx)('div', {
-                          className: R.seekBarFill,
+                          className: w.seekBarFill,
                           style: s
                       })
                   }),
                   (0, r.jsx)(l.Text, {
-                      className: R.timestamp,
+                      className: w.timestamp,
                       variant: 'text-xs/normal',
                       tabularNumbers: !0,
                       color: void 0,
@@ -89,64 +89,64 @@ function x(e) {
     let n,
         m,
         T,
-        { channel: R, entry: x, closePopout: M, onReaction: k, onVoiceChannelPreview: j } = e,
+        { channel: w, entry: x, closePopout: k, onReaction: j, onVoiceChannelPreview: M } = e,
         { largeImage: U } = (0, g.rv)({ entry: x }),
-        { activity: G, currentEntry: B, artist: V, title: F, user: Z } = (0, v.pi)(x),
+        { activity: G, currentEntry: B, artist: Z, title: F, user: V } = (0, v.pi)(x),
         { primaryColor: H, secondaryColor: Y } = (0, O.Z)(null == U ? void 0 : U.src),
         W = (0, y.Z)(A.ABu.SPOTIFY),
-        K = (0, o.e7)([u.Z, p.default], () => ((null == G ? void 0 : G.type) === A.IIU.LISTENING && null != Z ? (0, f.Z)(u.Z, p.default, Z, G) : void 0), [G, Z], s.Z),
+        K = (0, o.e7)([u.Z, p.default], () => ((null == G ? void 0 : G.type) === A.IIU.LISTENING && null != V ? (0, f.Z)(u.Z, p.default, V, G) : void 0), [G, V], s.Z),
         z = i.useCallback(() => {
             var e;
-            if (null == R || null == Z) return;
+            if (null == w || null == V) return;
             let t = null == (e = G.timestamps) ? void 0 : e.start,
                 n = (0, E.T_)(null != t ? { start: t } : x, Date.now());
             return (0, b.CR)({
-                user: Z,
-                channel: R,
+                user: V,
+                channel: w,
                 mediaImageSrc: null == U ? void 0 : U.src,
-                artist: V,
+                artist: Z,
                 description: D(
                     {
-                        artist: V,
+                        artist: Z,
                         media: F
                     },
-                    R,
-                    Z
+                    w,
+                    V
                 ),
                 colors: [H, Y],
                 badges: (0, b.jE)({ timestamp: n })
             });
-        }, [G, V, R, x, null == U ? void 0 : U.src, H, Y, F, Z]);
+        }, [G, Z, w, x, null == U ? void 0 : U.src, H, Y, F, V]);
     if (null == G || null == B) return null;
-    let q = V,
-        X = [];
+    let q = Z,
+        $ = [];
     if (B.media.provider === a.p.SPOTIFY) {
         ((m = () => {
             (0, c.aG)(G);
         }),
             (T = () => {
-                (0, c.Z5)(G, Z.id);
+                (0, c.Z5)(G, V.id);
             }),
             (n = () => {
                 var e;
                 null != (e = null == W ? void 0 : W()) || (0, c.aG)(G);
             }));
         let e = (e) => {
-            (0, c.d$)(G, Z.id, e);
+            (0, c.d$)(G, V.id, e);
         };
         if (
             ((q = (0, r.jsx)(d.Z, {
-                artists: V,
+                artists: Z,
                 canOpen: null != G.sync_id,
-                linkClassName: P.popoutTextSecondary,
+                linkClassName: R.popoutTextSecondary,
                 onOpenSpotifyArtist: e
             })),
             (null == K ? void 0 : K.syncDisabled) === !1)
         ) {
             let e = () => {
-                ((0, _.Z)(K, N.kG.USER_ACTIVITY_SYNC), M());
+                ((0, _.Z)(K, N.kG.USER_ACTIVITY_SYNC), k());
             };
-            X.push(
+            $.push(
                 (0, r.jsx)(
                     I.Ll,
                     {
@@ -159,9 +159,9 @@ function x(e) {
             );
         }
     }
-    let Q = (0, r.jsx)(I.wG, {
+    let X = (0, r.jsx)(I.wG, {
         onClickThumbnail: T,
-        channel: R,
+        channel: w,
         entry: x,
         headerIcons:
             B.media.provider === a.p.SPOTIFY
@@ -180,17 +180,17 @@ function x(e) {
     });
     return (0, r.jsxs)(I.yR, {
         children: [
-            Q,
+            X,
             (0, r.jsx)(I.St, {
                 children: (0, r.jsx)(I.WT, {
-                    onReaction: k,
-                    onVoiceChannelPreview: j,
-                    user: Z,
-                    channel: R,
+                    onReaction: j,
+                    onVoiceChannelPreview: M,
+                    user: V,
+                    channel: w,
                     generateReactionImage: z,
-                    reactionImageAltText: w(V, Z),
+                    reactionImageAltText: P(Z, V),
                     entry: x,
-                    buttons: X
+                    buttons: $
                 })
             })
         ]

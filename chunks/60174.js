@@ -1,30 +1,30 @@
-(n.d(t, { X: () => P }), n(997841), n(388685));
+(n.d(t, { X: () => D }), n(997841), n(388685));
 var r = n(255367),
     i = n(73800),
-    l = n(120356),
-    a = n.n(l),
-    o = n(954955),
-    s = n.n(o),
+    a = n(120356),
+    o = n.n(a),
+    s = n(954955),
+    l = n.n(s),
     c = n(507274),
     u = n(481060),
     d = n(255963),
-    p = n(387188),
-    m = n(466794),
-    f = n(659215),
-    g = n(222677),
-    _ = n(995774),
-    h = n(931651),
-    b = n(594174),
-    E = n(630388),
-    C = n(74538),
-    v = n(566006),
-    O = n(981631),
-    x = n(185923),
-    y = n(474936),
-    I = n(388032),
-    j = n(92254),
-    S = n(588429);
-function T(e, t, n) {
+    f = n(387188),
+    _ = n(466794),
+    p = n(659215),
+    h = n(222677),
+    m = n(995774),
+    g = n(931651),
+    E = n(594174),
+    b = n(630388),
+    y = n(74538),
+    O = n(566006),
+    v = n(981631),
+    I = n(185923),
+    T = n(474936),
+    S = n(388032),
+    A = n(92254),
+    N = n(588429);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function T(e, t, n) {
         e
     );
 }
-function N(e) {
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,75 +48,82 @@ function N(e) {
                 })
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                C(e, t, n[t]);
             }));
     }
     return e;
 }
-class P extends i.Component {
+function R(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function P(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : R(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+class D extends i.Component {
     render() {
-        let { type: e, message: t, className: n, children: i, useChatFontScaling: l, tabIndex: o = 0 } = this.props,
-            { isReactionPickerActive: s } = this.state,
-            c = t.state === O.yb.SENDING,
-            f = e === v.O.BURST;
-        if (c || (0, E.yE)(t.flags, O.iLy.EPHEMERAL)) return null;
-        let g = b.default.getCurrentUser(),
-            _ = (0, C.I5)(g),
-            h = f ? I.intl.string(I.t.Kfcszs) : I.intl.string(I.t.lfIHs7);
-        !_ && f && (h = (0, r.jsx)(m.X, { tooltipText: I.intl.string(I.t.Kfcszs) }));
-        let y = l ? S : j,
-            T = {
+        let { type: e, message: t, className: n, children: i, useChatFontScaling: a, tabIndex: s = 0 } = this.props,
+            { isReactionPickerActive: l } = this.state,
+            c = t.state === v.yb.SENDING,
+            p = e === O.O.BURST;
+        if (c || (0, b.yE)(t.flags, v.iLy.EPHEMERAL)) return null;
+        let h = E.default.getCurrentUser(),
+            m = (0, y.I5)(h),
+            g = p ? S.intl.string(S.t.Kfcszs) : S.intl.string(S.t.lfIHs7);
+        !m && p && (g = (0, r.jsx)(_.X, { tooltipText: S.intl.string(S.t.Kfcszs) }));
+        let T = a ? N : A,
+            C = {
                 size: 'sm',
                 color: 'currentColor',
-                className: y.icon
+                className: T.icon
             };
-        return t.type === O.uaV.EMOJI_ADDED && 0 === t.reactions.length
-            ? (0, r.jsx)(p.e, {
+        return t.type === v.uaV.EMOJI_ADDED && 0 === t.reactions.length
+            ? (0, r.jsx)(f.e, {
                   message: t,
-                  className: a()(y.reactionBtn, n)
+                  className: o()(T.reactionBtn, n)
               })
             : (0, r.jsx)(u.yRy, {
                   targetElementRef: this.ref,
-                  shouldShow: s,
+                  shouldShow: l,
                   onRequestClose: this.handleReactionPickerToggle,
                   renderPopout: this.renderReactionPopout,
                   position: 'right',
                   children: (e, t) => {
-                      var l, s;
-                      let { isShown: c } = t;
+                      let { isShown: a } = t;
                       return (0, r.jsx)(u.DY3, {
-                          text: h,
+                          text: g,
                           color: u.FGA.PRIMARY,
-                          'aria-label': f ? I.intl.string(I.t.Kfcszs) : I.intl.string(I.t.lfIHs7),
-                          tooltipClassName: y.__invalid_addReactionTooltip,
+                          'aria-label': p ? S.intl.string(S.t.Kfcszs) : S.intl.string(S.t.lfIHs7),
+                          tooltipClassName: T.__invalid_addReactionTooltip,
                           children: (0, r.jsxs)(
                               u.P3F,
-                              ((l = N({}, e)),
-                              (s = s =
-                                  {
-                                      innerRef: this.ref,
-                                      tabIndex: o,
-                                      onClick: (e) => {
-                                          this.handleAddReactionClick(e);
-                                      },
-                                      onMouseEnter: () => (0, d.x)(x.qR.AddReactionPopoutMouseEntered),
-                                      onFocus: () => (0, d.x)(x.qR.AddReactionPopoutFocused),
-                                      className: a()(y.reactionBtn, { [y.active]: c }, n),
-                                      children: [f ? (0, r.jsx)(u.Pt5, N({}, T)) : (0, r.jsx)(u.EO4, N({}, T)), i]
-                                  }),
-                              Object.getOwnPropertyDescriptors
-                                  ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
-                                  : (function (e, t) {
-                                        var n = Object.keys(e);
-                                        if (Object.getOwnPropertySymbols) {
-                                            var r = Object.getOwnPropertySymbols(e);
-                                            n.push.apply(n, r);
-                                        }
-                                        return n;
-                                    })(Object(s)).forEach(function (e) {
-                                        Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(s, e));
-                                    }),
-                              l)
+                              P(w({}, e), {
+                                  innerRef: this.ref,
+                                  tabIndex: s,
+                                  onClick: (e) => {
+                                      this.handleAddReactionClick(e);
+                                  },
+                                  onMouseEnter: () => (0, d.x)(I.qR.AddReactionPopoutMouseEntered),
+                                  onFocus: () => (0, d.x)(I.qR.AddReactionPopoutFocused),
+                                  className: o()(T.reactionBtn, { [T.active]: a }, n),
+                                  children: [p ? (0, r.jsx)(u.Pt5, w({}, C)) : (0, r.jsx)(u.EO4, w({}, C)), i]
+                              })
                           )
                       });
                   }
@@ -124,63 +131,63 @@ class P extends i.Component {
     }
     constructor(...e) {
         (super(...e),
-            T(this, 'state', { isReactionPickerActive: !1 }),
-            T(this, 'ref', i.createRef()),
-            T(this, 'onAddReaction', (e, t) => {
+            C(this, 'state', { isReactionPickerActive: !1 }),
+            C(this, 'ref', i.createRef()),
+            C(this, 'onAddReaction', (e, t) => {
                 if (null == e) return;
                 let { channel: n, message: r, isForumToolbar: i } = this.props;
-                (0, g.rU)(n.id, r.id, (0, _.g1)(e), i ? g.TW.FORUM_TOOLBAR : g.TW.MESSAGE_INLINE_BUTTON, { burst: t });
+                (0, h.rU)(n.id, r.id, (0, m.g1)(e), i ? h.TW.FORUM_TOOLBAR : h.TW.MESSAGE_INLINE_BUTTON, { burst: t });
             }),
-            T(this, 'handleReactionPickerToggle', () => {
+            C(this, 'handleReactionPickerToggle', () => {
                 this.setState((e) => ({ isReactionPickerActive: !e.isReactionPickerActive }));
             }),
-            T(this, 'handleAddReactionClick', (e) => {
+            C(this, 'handleAddReactionClick', (e) => {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
-                let r = b.default.getCurrentUser();
-                (t !== v.O.BURST ||
-                    (0, C.I5)(r) ||
-                    (0, f.m)({
+                let r = E.default.getCurrentUser();
+                (t !== O.O.BURST ||
+                    (0, y.I5)(r) ||
+                    (0, p.m)({
                         analytics: {
-                            type: y.cd.BURST_REACTION_UPSELL,
-                            page: null != n.getGuildId() ? O.ZY5.GUILD_CHANNEL : O.ZY5.DM_CHANNEL,
-                            section: (0, _.s4)(n),
-                            object: O.qAy.INLINE_REACTION_PICKER_UPSELL
+                            type: T.cd.BURST_REACTION_UPSELL,
+                            page: null != n.getGuildId() ? v.ZY5.GUILD_CHANNEL : v.ZY5.DM_CHANNEL,
+                            section: (0, m.s4)(n),
+                            object: v.qAy.INLINE_REACTION_PICKER_UPSELL
                         }
                     }),
                     this.handleReactionPickerToggle());
             }),
-            T(this, 'renderReactionPopout', (e) => {
+            C(this, 'renderReactionPopout', (e) => {
                 let { closePopout: t } = e,
-                    { type: n, channel: i, message: l } = this.props,
-                    a = N(
+                    { type: n, channel: i, message: a } = this.props,
+                    o = w(
                         { openPopoutType: 'message_reaction_emoji_picker' },
-                        n === v.O.BURST && {
+                        n === O.O.BURST && {
                             openPopoutType: 'message_super_reaction_emoji_picker',
-                            page: null != i.getGuildId() ? O.ZY5.GUILD_CHANNEL : O.ZY5.DM_CHANNEL,
-                            section: (0, _.s4)(i),
-                            object: O.qAy.REACTION_RAIL
+                            page: null != i.getGuildId() ? v.ZY5.GUILD_CHANNEL : v.ZY5.DM_CHANNEL,
+                            section: (0, m.s4)(i),
+                            object: v.qAy.REACTION_RAIL
                         }
                     ),
-                    o = (0, r.jsx)(h.$, {
+                    s = (0, r.jsx)(g.$, {
                         closePopout: t,
                         channel: i,
                         onSelectEmoji: (e) => {
                             let { emoji: n, willClose: r, isBurst: i } = e;
-                            (this.onAddReaction(n, i), r && (i ? s()(t, 150)() : t()));
+                            (this.onAddReaction(n, i), r && (i ? l()(t, 150)() : t()));
                         },
-                        analyticsOverride: a,
-                        messageId: l.id
+                        analyticsOverride: o,
+                        messageId: a.id
                     });
                 return (0, r.jsx)(c.M.Consumer, {
                     children: (e) => {
                         let { inDialog: t } = e;
                         return t
                             ? (0, r.jsx)(u.VqE, {
-                                  'aria-label': I.intl.string(I.t['7Xqzdn']),
-                                  children: o
+                                  'aria-label': S.intl.string(S.t['7Xqzdn']),
+                                  children: s
                               })
-                            : o;
+                            : s;
                     }
                 });
             }));

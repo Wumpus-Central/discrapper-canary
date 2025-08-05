@@ -90,12 +90,12 @@ function y(e, t, n) {
         C = null != n ? n : t,
         N = null != n ? y : o,
         S = i.useMemo(() => (null != _ ? _ : O({}, null != N ? N : {})), [_, N]),
-        Z = i.useMemo(() => Object.keys(S).length, [S]),
-        I = i.useMemo(() => (null == N || null == S ? null : !a().isEqual(N, S)), [N, S]);
+        I = i.useMemo(() => Object.keys(S).length, [S]),
+        w = i.useMemo(() => (null == N || null == S ? null : !a().isEqual(N, S)), [N, S]);
     return (
         i.useEffect(() => {
-            C === t && (I ? c.Z.startEditingCommandPermissions(C) : c.Z.stopEditingCommandPermissions(C));
-        }, [t, I, C]),
+            C === t && (w ? c.Z.startEditingCommandPermissions(C) : c.Z.stopEditingCommandPermissions(C));
+        }, [t, w, C]),
         {
             originalApplicationPermissions: o,
             originalCommandPermissions: y,
@@ -201,8 +201,8 @@ function y(e, t, n) {
                     return l;
                 }, [y, n, r, a, t, _, C]);
             })(e, S),
-            hasChanges: I,
-            selectedPermissionCount: Z
+            hasChanges: w,
+            selectedPermissionCount: I
         }
     );
 }

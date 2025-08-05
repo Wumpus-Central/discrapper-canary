@@ -1,82 +1,90 @@
 n.d(t, {
-    Am: () => u,
-    ZP: () => d,
-    s$: () => c
+    Am: () => h,
+    ZP: () => m,
+    s$: () => _
 });
 var r = n(255367);
 n(73800);
-var l = n(442837),
-    o = n(481060),
-    i = n(485386),
-    a = n(275759),
-    s = n(388032);
-let c = 'guild-connection-roles';
-function u(e) {
-    (0, o.ZDy)(
-        async () => {
-            let { default: t } = await n.e('40897').then(n.bind(n, 507294));
-            return (n) => {
-                var l, o;
-                return (0, r.jsx)(
-                    t,
-                    ((l = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
-                                )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    ((r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: r,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0
-                                              })
-                                            : (e[t] = r));
-                                }));
-                        }
-                        return e;
-                    })({}, n)),
-                    (o = o = { guildId: e }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
-                              }
-                              return n;
-                          })(Object(o)).forEach(function (e) {
-                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
-                          }),
-                    l)
-                );
-            };
-        },
-        {
-            modalKey: c,
-            contextKey: o.z1l,
-            onCloseRequest: () => {
-                (0, o.Mr3)(c, o.z1l);
-            }
-        }
+var i = n(442837),
+    a = n(481060),
+    o = n(485386),
+    s = n(275759),
+    l = n(388032);
+function c(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
     );
 }
-function d(e) {
-    return (0, l.e7)([i.Z], () => (0, a.kQ)(i.Z.getSortedRoles(e.id)), [e])
-        ? (0, r.jsx)(o.sNh, {
+function u(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                c(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function d(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function f(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : d(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let _ = 'guild-connection-roles';
+function p() {
+    return {
+        modalKey: _,
+        contextKey: a.z1l,
+        onCloseRequest: () => {
+            (0, a.Mr3)(_, a.z1l);
+        }
+    };
+}
+function h(e) {
+    (0, a.ZDy)(async () => {
+        let { default: t } = await n.e('40897').then(n.bind(n, 507294));
+        return (n) => (0, r.jsx)(t, f(u({}, n), { guildId: e }));
+    }, p());
+}
+function m(e) {
+    return (0, i.e7)([o.Z], () => (0, s.kQ)(o.Z.getSortedRoles(e.id)), [e])
+        ? (0, r.jsx)(a.sNh, {
               id: 'guild-connection-roles',
-              label: s.intl.string(s.t.ghtnsr),
-              icon: o.xPt,
-              action: () => u(e.id)
+              label: l.intl.string(l.t.ghtnsr),
+              icon: a.xPt,
+              action: () => h(e.id)
           })
         : null;
 }

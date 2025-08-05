@@ -1,102 +1,102 @@
-(n.d(t, { default: () => T }), n(953529));
-var o = n(255367),
-    i = n(73800),
-    r = n(772848),
-    s = n(755721),
-    l = n(481060),
+(n.d(o, { default: () => T }), n(953529));
+var e = n(255367),
+    r = n(73800),
+    s = n(772848),
+    l = n(755721),
+    i = n(481060),
     a = n(138201),
-    c = n(63063),
-    d = n(168107),
-    _ = n(480916),
-    u = n(81643),
-    E = n(981631),
-    m = n(800530),
-    I = n(388032),
-    N = n(579474);
-let T = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: T } = e,
-        { loading: x, initiateAgeVerification: L } = (0, u.WD)(T, !0),
-        C = i.useMemo(() => (0, r.Z)(), []);
-    i.useEffect(() => {
-        (0, _.lA)(C, _.d_.RETRY, n);
-    }, [C, n]);
-    let S = i.useMemo(
+    d = n(63063),
+    c = n(168107),
+    u = n(480916),
+    R = n(81643),
+    _ = n(981631),
+    x = n(800530),
+    E = n(388032),
+    m = n(579474);
+let T = function (t) {
+    let { transitionState: o, entryPoint: n, onClose: T } = t,
+        { loading: h, initiateAgeVerification: C } = (0, R.WD)(T, !0),
+        b = r.useMemo(() => (0, s.Z)(), []);
+    r.useEffect(() => {
+        (0, u.lA)(b, u.d_.RETRY, n);
+    }, [b, n]);
+    let p = r.useMemo(
         () => [
             {
-                title: I.intl.string(I.t.FYkioq),
-                description: I.intl.string(I.t.xMfbR0),
-                buttonText: I.intl.string(I.t.RtOE1t),
-                buttonColor: s.zx.Colors.BRAND,
-                buttonIcon: l.Gr1,
-                buttonIconColor: l.TVs.colors.WHITE,
-                buttonLoading: x,
+                title: E.intl.string(E.t.FYkioq),
+                description: E.intl.string(E.t.xMfbR0),
+                buttonText: E.intl.string(E.t.RtOE1t),
+                buttonColor: l.zx.Colors.BRAND,
+                buttonIcon: i.Gr1,
+                buttonIconColor: i.TVs.colors.WHITE,
+                buttonLoading: h,
                 onPress: () => {
-                    (L(), (0, _.x3)(C, _.d_.RETRY, _.sU.GET_STARTED));
+                    (C(), (0, u.x3)(b, u.d_.RETRY, u.sU.GET_STARTED));
                 }
             },
             {
-                title: I.intl.string(I.t['LZO+HR']),
-                description: I.intl.string(I.t.N2mHaG),
-                buttonText: I.intl.string(I.t['LZO+HR']),
-                buttonColor: s.zx.Colors.PRIMARY,
-                buttonIcon: l.Gr1,
-                buttonIconColor: l.TVs.colors.TEXT_PRIMARY,
+                title: E.intl.string(E.t['LZO+HR']),
+                description: E.intl.string(E.t.N2mHaG),
+                buttonText: E.intl.string(E.t['LZO+HR']),
+                buttonColor: l.zx.Colors.PRIMARY,
+                buttonIcon: i.Gr1,
+                buttonIconColor: i.TVs.colors.TEXT_PRIMARY,
                 onPress: () => {
-                    (d.Z.openUrl(m.sQ.APPEALS_LINK), (0, _.x3)(C, _.d_.RETRY, _.sU.MANUAL_REVIEW_REQUEST));
+                    (c.Z.openUrl(x.sQ.APPEALS_LINK), (0, u.x3)(b, u.d_.RETRY, u.sU.MANUAL_REVIEW_REQUEST));
                 }
             }
         ],
-        [L, C, x]
+        [C, b, h]
     );
-    return (0, o.jsx)(l.Y0X, {
-        transitionState: t,
-        className: N.root,
+    return (0, e.jsx)(i.Y0X, {
+        transitionState: o,
+        className: m.root,
         parentComponent: 'AgeVerificationRetryModal',
-        children: (0, o.jsxs)(l.hzk, {
-            className: N.content,
+        children: (0, e.jsxs)(i.hzk, {
+            className: m.content,
             children: [
-                (0, o.jsxs)('div', {
-                    className: N.headersContainer,
+                (0, e.jsxs)('div', {
+                    className: m.headersContainer,
                     children: [
-                        (0, o.jsx)(l.X6q, {
+                        (0, e.jsx)(i.X6q, {
                             variant: 'heading-xl/bold',
-                            children: I.intl.string(I.t['5l3R/v'])
+                            children: E.intl.string(E.t['5l3R/v'])
                         }),
-                        (0, o.jsx)(l.X6q, {
+                        (0, e.jsx)(i.X6q, {
                             variant: 'heading-md/medium',
                             color: 'text-default',
-                            children: I.intl.string(I.t.O7SO0N)
+                            children: E.intl.string(E.t.O7SO0N)
                         }),
-                        (0, o.jsx)(l.olH, {
-                            className: N.modalClose,
+                        (0, e.jsx)(i.olH, {
+                            className: m.modalClose,
                             onClick: T
                         })
                     ]
                 }),
-                S.map((e, t) => {
-                    let { title: n, description: i, buttonText: r, buttonColor: s, buttonIcon: l, buttonIconColor: c, buttonLoading: d, onPress: _ } = e;
-                    return (0, o.jsx)(
+                p.map((t, o) => {
+                    let { title: n, description: r, buttonText: s, buttonColor: l, buttonIcon: i, buttonIconColor: d, buttonLoading: c, onPress: u } = t;
+                    return (0, e.jsx)(
                         a.ZP,
                         {
                             title: n,
-                            description: i,
-                            buttonText: r,
-                            buttonColor: s,
-                            onButtonPress: _,
-                            buttonIcon: l,
-                            buttonIconColor: c.css,
-                            buttonLoading: d
+                            description: r,
+                            buttonText: s,
+                            buttonColor: l,
+                            onButtonPress: u,
+                            buttonIcon: i,
+                            buttonIconColor: d.css,
+                            buttonLoading: c
                         },
-                        t
+                        o
                     );
                 }),
-                (0, o.jsx)(l.Text, {
+                (0, e.jsx)(i.Text, {
                     variant: 'text-xs/medium',
                     color: 'text-muted',
-                    className: N.learnMore,
-                    children: I.intl.format(I.t['L+FgkZ'], {
+                    className: m.learnMore,
+                    children: E.intl.format(E.t['L+FgkZ'], {
                         handleOnHelpUrlHook: () => {
-                            (d.Z.openUrl(c.Z.getArticleURL(E.BhN.TIGGER_PAWTECT_LEARN_MORE)), (0, _.x3)(C, _.d_.RETRY, _.sU.LEARN_MORE));
+                            (c.Z.openUrl(d.Z.getArticleURL(_.BhN.TIGGER_PAWTECT_LEARN_MORE)), (0, u.x3)(b, u.d_.RETRY, u.sU.LEARN_MORE));
                         }
                     })
                 })

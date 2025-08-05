@@ -4,8 +4,8 @@ n(73800);
 var i = n(755721),
     l = n(388905),
     s = n(671533),
-    a = n(63063),
-    o = n(981631),
+    o = n(63063),
+    a = n(981631),
     c = n(388032),
     u = n(963650);
 let d = () =>
@@ -24,7 +24,7 @@ let d = () =>
                 (0, r.jsxs)(i.zx, {
                     className: u.button,
                     innerClassName: u.buttonWithIcon,
-                    onClick: () => window.open(a.Z.getArticleURL(o.BhN.AGE_GATE), '_blank'),
+                    onClick: () => window.open(o.Z.getArticleURL(a.BhN.AGE_GATE), '_blank'),
                     children: [
                         (0, r.jsx)('div', { children: c.intl.string(c.t.hvVgAQ) }),
                         (0, r.jsx)(s.Z, {

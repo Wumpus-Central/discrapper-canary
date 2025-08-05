@@ -1,4 +1,4 @@
-(n.d(t, { default: () => w }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529));
+(n.d(t, { default: () => P }), n(388685), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(953529));
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -128,13 +128,13 @@ function C(e) {
         }
     });
 }
-class R extends i.Component {
+class w extends i.Component {
     render() {
         var e;
         return this.props.upload.item.platform !== d.ow.WEB ? null : this.props.upload.isImage ? (0, r.jsx)(C, { file: this.props.upload.item.file }) : (0, r.jsx)('div', { className: o()(y.icon, { [y[null != (e = this.props.upload.classification) ? e : '']]: !0 }) });
     }
 }
-class P extends i.Component {
+class R extends i.Component {
     componentDidMount() {
         var e;
         ((null == (e = this.props.upload) ? void 0 : e.showLargeMessageDialog) &&
@@ -168,7 +168,7 @@ class P extends i.Component {
                         (0, r.jsxs)('div', {
                             className: o()(y.file, { [y.expandable]: e.isImage }),
                             children: [
-                                (0, r.jsx)(R, { upload: e }),
+                                (0, r.jsx)(w, { upload: e }),
                                 (0, r.jsxs)('div', {
                                     className: y.description,
                                     children: [
@@ -293,12 +293,12 @@ class P extends i.Component {
         });
     }
 }
-function w(e) {
+function P(e) {
     let t = (0, _.Z)();
     return e.upload.item.platform !== d.ow.WEB
         ? null
         : (0, r.jsx)(
-              P,
+              R,
               S(I({}, e), {
                   file: e.upload.item.file,
                   messageMaxLength: t

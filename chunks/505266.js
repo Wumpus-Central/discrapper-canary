@@ -1,6 +1,6 @@
 n.d(t, {
     Ji: () => L,
-    O_: () => w,
+    O_: () => P,
     qA: () => c,
     uR: () => x
 });
@@ -498,7 +498,7 @@ function C(e) {
         }
     })(f(f({}, e), { valueType: 'Vector3' }));
 }
-function R(e, t, n, r, i) {
+function w(e, t, n, r, i) {
     var a = (function (e, t) {
             return f(f({ id: t }, l), e);
         })(t, e),
@@ -544,7 +544,7 @@ function R(e, t, n, r, i) {
         spriteHeight: n.spriteHeight
     });
 }
-function P() {
+function R() {
     var e = r.useRef(!1),
         t = r.useRef({}),
         n = r.useCallback(function (e) {
@@ -579,7 +579,7 @@ function P() {
         )
     );
 }
-var w = r.forwardRef(function (e, t) {
+var P = r.forwardRef(function (e, t) {
         var o = e.className,
             s = e.environment,
             l = e.onClick,
@@ -602,7 +602,7 @@ var w = r.forwardRef(function (e, t) {
                 return n;
             })(e, ['className', 'environment', 'onClick', 'onMouseDown', 'onMouseMove', 'onMouseUp', 'onBeforeRender', 'onAfterRender', 'requestAnimationFrame', 'cancelAnimationFrame']),
             y = r.useRef(null),
-            O = P(),
+            O = R(),
             v = O.isReady,
             I = O.addReadyListener,
             T = O.removeReadyListener,
@@ -610,7 +610,7 @@ var w = r.forwardRef(function (e, t) {
             A = r.useRef(new Map()),
             N = r.useRef(null),
             C = r.useRef(0),
-            w = r.useRef(0),
+            P = r.useRef(0),
             D = r.useCallback(
                 function () {
                     var e = y.current;
@@ -627,7 +627,7 @@ var w = r.forwardRef(function (e, t) {
                                 null == p || p(t),
                                 A.current.size > 0 ? (N.current = m(D)) : (t.clearRect(0, 0, e.width, e.height), (N.current = null)));
                             var n = Date.now();
-                            (0 !== C.current && (w.current = 1000 / (n - C.current)), (C.current = n));
+                            (0 !== C.current && (P.current = 1000 / (n - C.current)), (C.current = n));
                         }
                     }
                 },
@@ -652,18 +652,18 @@ var w = r.forwardRef(function (e, t) {
             x = r.useCallback(
                 function (e, t, n, r, a) {
                     var o,
-                        s = R(null != (o = e.id) ? o : (0, i.Z)(), e, n, r, a);
+                        s = w(null != (o = e.id) ? o : (0, i.Z)(), e, n, r, a);
                     return (L(s, t), s);
                 },
                 [L]
             ),
-            M = r.useCallback(function (e) {
+            k = r.useCallback(function (e) {
                 A.current.delete(e);
             }, []),
-            k = r.useCallback(function () {
+            j = r.useCallback(function () {
                 return A.current.clear();
             }, []),
-            j = r.useCallback(function () {
+            M = r.useCallback(function () {
                 return y.current;
             }, []);
         r.useImperativeHandle(
@@ -672,15 +672,15 @@ var w = r.forwardRef(function (e, t) {
                 return {
                     createConfetti: x,
                     addConfetti: L,
-                    deleteConfetti: M,
-                    clearConfetti: k,
-                    getCanvas: j,
+                    deleteConfetti: k,
+                    clearConfetti: j,
+                    getCanvas: M,
                     addReadyListener: I,
                     removeReadyListener: T,
                     isReady: v
                 };
             },
-            [x, L, M, k, j, I, T, v]
+            [x, L, k, j, M, I, T, v]
         );
         var U = r.useCallback(
                 function (e, t) {
@@ -709,7 +709,7 @@ var w = r.forwardRef(function (e, t) {
                             ) {
                                 if (null != o) return o(e);
                                 if (null != i) {
-                                    var u = (-1000 / w.current) * 2,
+                                    var u = (-1000 / P.current) * 2,
                                         d = (function (e, t) {
                                             for (var n = 0, r = Array.from(e.values()); n < r.length; n++) {
                                                 var i = r[n];
@@ -746,7 +746,7 @@ var w = r.forwardRef(function (e, t) {
                 },
                 [U, c]
             ),
-            V = r.useCallback(
+            Z = r.useCallback(
                 function (e) {
                     return U(e, { mouseHandler: u });
                 },
@@ -767,14 +767,14 @@ var w = r.forwardRef(function (e, t) {
                     return (
                         e('click', G, l),
                         e('mousedown', B, c),
-                        e('mousemove', V, u),
+                        e('mousemove', Z, u),
                         e('mouseup', F, d),
                         function () {
-                            (window.removeEventListener('click', G), window.removeEventListener('mousedown', B), window.removeEventListener('mousemove', V), window.removeEventListener('mouseup', V));
+                            (window.removeEventListener('click', G), window.removeEventListener('mousedown', B), window.removeEventListener('mousemove', Z), window.removeEventListener('mouseup', Z));
                         }
                     );
                 },
-                [G, B, V, F, l, c, u, d]
+                [G, B, Z, F, l, c, u, d]
             ),
             r.useEffect(
                 function () {
@@ -825,7 +825,7 @@ var w = r.forwardRef(function (e, t) {
             c = e.spriteHeight,
             u = r.useRef(null),
             d = r.useRef([]),
-            f = P(),
+            f = R(),
             h = f.isReady,
             m = f.addReadyListener,
             g = f.removeReadyListener,

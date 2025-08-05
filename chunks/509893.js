@@ -1,13 +1,13 @@
-r.d(t, { K: () => b });
-var n = r(255367),
-    o = r(73800),
-    i = r(521548),
-    a = r(573654),
-    s = r(136954),
-    c = r(401251),
-    u = r(528302),
-    d = r(26095),
-    p = r.n(d);
+n.d(t, { K: () => R });
+var r = n(255367),
+    i = n(73800),
+    a = n(521548),
+    o = n(573654),
+    s = n(136954),
+    l = n(401251),
+    c = n(528302),
+    u = n(26095),
+    d = n.n(u);
 function f(e) {
     return (f =
         'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
@@ -18,112 +18,166 @@ function f(e) {
                   return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
               })(e);
 }
-function l(e, t) {
-    (null == t || t > e.length) && (t = e.length);
-    for (var r = 0, n = Array(t); r < t; r++) n[r] = e[r];
-    return n;
+function _(e, t) {
+    return E(e) || g(e, t) || h(e, t) || p();
+}
+function p() {
+    throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
 }
 function h(e, t) {
-    return (h =
+    if (e) {
+        if ('string' == typeof e) return m(e, t);
+        var n = Object.prototype.toString.call(e).slice(8, -1);
+        if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
+        if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return m(e, t);
+    }
+}
+function m(e, t) {
+    (null == t || t > e.length) && (t = e.length);
+    for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
+    return r;
+}
+function g(e, t) {
+    var n,
+        r,
+        i = null == e ? null : ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
+    if (null != i) {
+        var a = [],
+            o = !0,
+            s = !1;
+        try {
+            for (i = i.call(e); !(o = (n = i.next()).done) && (a.push(n.value), !t || a.length !== t); o = !0);
+        } catch (e) {
+            ((s = !0), (r = e));
+        } finally {
+            try {
+                o || null == i.return || i.return();
+            } finally {
+                if (s) throw r;
+            }
+        }
+        return a;
+    }
+}
+function E(e) {
+    if (Array.isArray(e)) return e;
+}
+function b(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
+}
+function y(e, t) {
+    for (var n = 0; n < t.length; n++) {
+        var r = t[n];
+        ((r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r));
+    }
+}
+function O(e, t, n) {
+    return (t && y(e.prototype, t), n && y(e, n), e);
+}
+function v(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function');
+    ((e.prototype = Object.create(t && t.prototype, {
+        constructor: {
+            value: e,
+            writable: !0,
+            configurable: !0
+        }
+    })),
+        t && I(e, t));
+}
+function I(e, t) {
+    return (I =
         Object.setPrototypeOf ||
         function (e, t) {
             return ((e.__proto__ = t), e);
         })(e, t);
 }
-function v(e) {
+function T(e) {
+    var t = N();
+    return function () {
+        var n,
+            r = C(e);
+        return ((n = t ? Reflect.construct(r, arguments, C(this).constructor) : r.apply(this, arguments)), S(this, n));
+    };
+}
+function S(e, t) {
+    if (t && ('object' === f(t) || 'function' == typeof t)) return t;
+    if (void 0 !== t) throw TypeError('Derived constructors may only return object or undefined');
+    return A(e);
+}
+function A(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return e;
 }
-function y(e) {
-    return (y = Object.setPrototypeOf
+function N() {
+    if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
+    if ('function' == typeof Proxy) return !0;
+    try {
+        return (Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0);
+    } catch (e) {
+        return !1;
+    }
+}
+function C(e) {
+    return (C = Object.setPrototypeOf
         ? Object.getPrototypeOf
         : function (e) {
               return e.__proto__ || Object.getPrototypeOf(e);
           })(e);
 }
-function g(e, t, r) {
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: r,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = r),
+            : (e[t] = n),
         e
     );
 }
-function b(e) {
+function R(e) {
     var t = e.DecoratedComponent,
-        r = e.createHandler,
-        d = e.createMonitor,
-        b = e.createConnector,
-        m = e.registerHandler,
-        D = e.containerDisplayName,
-        k = e.getType,
-        w = e.collect,
-        j = e.options.arePropsEqual,
-        x = void 0 === j ? i.w : j,
-        C = t.displayName || t.name || 'Component',
-        O = (function (e) {
-            if ('function' != typeof e && null !== e) throw TypeError('Super expression must either be null or a function');
-            ((O.prototype = Object.create(e && e.prototype, {
-                constructor: {
-                    value: O,
-                    writable: !0,
-                    configurable: !0
-                }
-            })),
-                e && h(O, e));
-            var p,
-                D,
-                j =
-                    ((p = (function () {
-                        if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
-                        if ('function' == typeof Proxy) return !0;
-                        try {
-                            return (Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})), !0);
-                        } catch (e) {
-                            return !1;
-                        }
-                    })()),
-                    function () {
-                        var e,
-                            t = y(O);
-                        return (
-                            (e = p ? Reflect.construct(t, arguments, y(this).constructor) : t.apply(this, arguments)),
-                            (function (e, t) {
-                                if (t && ('object' === f(t) || 'function' == typeof t)) return t;
-                                if (void 0 !== t) throw TypeError('Derived constructors may only return object or undefined');
-                                return v(e);
-                            })(this, e)
-                        );
-                    });
-            function O(e) {
-                var t;
-                if (!(this instanceof O)) throw TypeError('Cannot call a class as a function');
+        n = e.createHandler,
+        u = e.createMonitor,
+        f = e.createConnector,
+        p = e.registerHandler,
+        h = e.containerDisplayName,
+        m = e.getType,
+        g = e.collect,
+        E = e.options.arePropsEqual,
+        y = void 0 === E ? a.w : E,
+        I = t,
+        S = t.displayName || t.name || 'Component',
+        N = (function (e) {
+            v(d, e);
+            var t = T(d);
+            function d(e) {
+                var n;
                 return (
-                    g(v((t = j.call(this, e))), 'decoratedRef', (0, o.createRef)()),
-                    g(v(t), 'handlerId', void 0),
-                    g(v(t), 'manager', void 0),
-                    g(v(t), 'handlerMonitor', void 0),
-                    g(v(t), 'handlerConnector', void 0),
-                    g(v(t), 'handler', void 0),
-                    g(v(t), 'disposable', void 0),
-                    g(v(t), 'currentType', void 0),
-                    g(v(t), 'handleChange', function () {
-                        var e = t.getCurrentState();
-                        (0, i.w)(e, t.state) || t.setState(e);
+                    b(this, d),
+                    w(A((n = t.call(this, e))), 'decoratedRef', (0, i.createRef)()),
+                    w(A(n), 'handlerId', void 0),
+                    w(A(n), 'manager', void 0),
+                    w(A(n), 'handlerMonitor', void 0),
+                    w(A(n), 'handlerConnector', void 0),
+                    w(A(n), 'handler', void 0),
+                    w(A(n), 'disposable', void 0),
+                    w(A(n), 'currentType', void 0),
+                    w(A(n), 'handleChange', function () {
+                        var e = n.getCurrentState();
+                        (0, a.w)(e, n.state) || n.setState(e);
                     }),
-                    (t.disposable = new c.M$()),
-                    t.receiveProps(e),
-                    t.dispose(),
-                    t
+                    (n.disposable = new l.M$()),
+                    n.receiveProps(e),
+                    n.dispose(),
+                    n
                 );
             }
             return (
-                (D = [
+                O(d, [
                     {
                         key: 'getHandlerId',
                         value: function () {
@@ -133,25 +187,25 @@ function b(e) {
                     {
                         key: 'getDecoratedComponentInstance',
                         value: function () {
-                            return ((0, a.k)(this.decoratedRef.current, 'In order to access an instance of the decorated component, it must either be a class component or use React.forwardRef()'), this.decoratedRef.current);
+                            return ((0, o.k)(this.decoratedRef.current, 'In order to access an instance of the decorated component, it must either be a class component or use React.forwardRef()'), this.decoratedRef.current);
                         }
                     },
                     {
                         key: 'shouldComponentUpdate',
                         value: function (e, t) {
-                            return !x(e, this.props) || !(0, i.w)(t, this.state);
+                            return !y(e, this.props) || !(0, a.w)(t, this.state);
                         }
                     },
                     {
                         key: 'componentDidMount',
                         value: function () {
-                            ((this.disposable = new c.M$()), (this.currentType = void 0), this.receiveProps(this.props), this.handleChange());
+                            ((this.disposable = new l.M$()), (this.currentType = void 0), this.receiveProps(this.props), this.handleChange());
                         }
                     },
                     {
                         key: 'componentDidUpdate',
                         value: function (e) {
-                            x(this.props, e) || (this.receiveProps(this.props), this.handleChange());
+                            y(this.props, e) || (this.receiveProps(this.props), this.handleChange());
                         }
                     },
                     {
@@ -163,7 +217,7 @@ function b(e) {
                     {
                         key: 'receiveProps',
                         value: function (e) {
-                            this.handler && (this.handler.receiveProps(e), this.receiveType(k(e)));
+                            this.handler && (this.handler.receiveProps(e), this.receiveType(m(e)));
                         }
                     },
                     {
@@ -171,49 +225,14 @@ function b(e) {
                         value: function (e) {
                             if (this.handlerMonitor && this.manager && this.handlerConnector && e !== this.currentType) {
                                 this.currentType = e;
-                                var t,
-                                    r =
-                                        (function (e) {
-                                            if (Array.isArray(e)) return e;
-                                        })((t = m(e, this.handler, this.manager))) ||
-                                        (function (e, t) {
-                                            var r,
-                                                n,
-                                                o = null == e ? null : ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
-                                            if (null != o) {
-                                                var i = [],
-                                                    a = !0,
-                                                    s = !1;
-                                                try {
-                                                    for (o = o.call(e); !(a = (r = o.next()).done) && (i.push(r.value), i.length !== t); a = !0);
-                                                } catch (e) {
-                                                    ((s = !0), (n = e));
-                                                } finally {
-                                                    try {
-                                                        a || null == o.return || o.return();
-                                                    } finally {
-                                                        if (s) throw n;
-                                                    }
-                                                }
-                                                return i;
-                                            }
-                                        })(t, 2) ||
-                                        (function (e, t) {
-                                            if (e) {
-                                                if ('string' == typeof e) return l(e, 2);
-                                                var r = Object.prototype.toString.call(e).slice(8, -1);
-                                                if (('Object' === r && e.constructor && (r = e.constructor.name), 'Map' === r || 'Set' === r)) return Array.from(e);
-                                                if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return l(e, t);
-                                            }
-                                        })(t, 2) ||
-                                        (function () {
-                                            throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
-                                        })(),
-                                    n = r[0],
-                                    o = r[1];
-                                ((this.handlerId = n), this.handlerMonitor.receiveHandlerId(n), this.handlerConnector.receiveHandlerId(n));
-                                var i = this.manager.getMonitor().subscribeToStateChange(this.handleChange, { handlerIds: [n] });
-                                this.disposable.setDisposable(new c.Xz(new c.JT(i), new c.JT(o)));
+                                var t = p(e, this.handler, this.manager),
+                                    n = _(t, 2),
+                                    r = n[0],
+                                    i = n[1];
+                                ((this.handlerId = r), this.handlerMonitor.receiveHandlerId(r), this.handlerConnector.receiveHandlerId(r));
+                                var a = this.manager.getMonitor(),
+                                    o = a.subscribeToStateChange(this.handleChange, { handlerIds: [r] });
+                                this.disposable.setDisposable(new l.Xz(new l.JT(o), new l.JT(i)));
                             }
                         }
                     },
@@ -226,26 +245,26 @@ function b(e) {
                     {
                         key: 'getCurrentState',
                         value: function () {
-                            return this.handlerConnector ? w(this.handlerConnector.hooks, this.handlerMonitor, this.props) : {};
+                            return this.handlerConnector ? g(this.handlerConnector.hooks, this.handlerMonitor, this.props) : {};
                         }
                     },
                     {
                         key: 'render',
                         value: function () {
                             var e = this;
-                            return (0, n.jsx)(
+                            return (0, r.jsx)(
                                 s.L.Consumer,
                                 {
-                                    children: function (r) {
-                                        var o = r.dragDropManager;
+                                    children: function (t) {
+                                        var n = t.dragDropManager;
                                         return (
-                                            e.receiveDragDropManager(o),
+                                            e.receiveDragDropManager(n),
                                             'undefined' != typeof requestAnimationFrame &&
                                                 requestAnimationFrame(function () {
                                                     var t;
                                                     return null == (t = e.handlerConnector) ? void 0 : t.reconnect();
                                                 }),
-                                            (0, n.jsx)(t, Object.assign({}, e.props, e.getCurrentState(), { ref: (0, u.J7)(t) ? e.decoratedRef : null }), void 0)
+                                            (0, r.jsx)(I, Object.assign({}, e.props, e.getCurrentState(), { ref: (0, c.J7)(I) ? e.decoratedRef : null }), void 0)
                                         );
                                     }
                                 },
@@ -256,18 +275,12 @@ function b(e) {
                     {
                         key: 'receiveDragDropManager',
                         value: function (e) {
-                            void 0 === this.manager && ((0, a.k)(void 0 !== e, 'Could not find the drag and drop manager in the context of %s. Make sure to render a DndProvider component in your top-level component. Read more: http://react-dnd.github.io/react-dnd/docs/troubleshooting#could-not-find-the-drag-and-drop-manager-in-the-context', C, C), void 0 !== e && ((this.manager = e), (this.handlerMonitor = d(e)), (this.handlerConnector = b(e.getBackend())), (this.handler = r(this.handlerMonitor, this.decoratedRef))));
+                            void 0 === this.manager && ((0, o.k)(void 0 !== e, 'Could not find the drag and drop manager in the context of %s. Make sure to render a DndProvider component in your top-level component. Read more: http://react-dnd.github.io/react-dnd/docs/troubleshooting#could-not-find-the-drag-and-drop-manager-in-the-context', S, S), void 0 !== e && ((this.manager = e), (this.handlerMonitor = u(e)), (this.handlerConnector = f(e.getBackend())), (this.handler = n(this.handlerMonitor, this.decoratedRef))));
                         }
                     }
                 ]),
-                (function (e, t) {
-                    for (var r = 0; r < t.length; r++) {
-                        var n = t[r];
-                        ((n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n));
-                    }
-                })(O.prototype, D),
-                O
+                d
             );
-        })(o.Component);
-    return (g(O, 'DecoratedComponent', t), g(O, 'displayName', ''.concat(D, '(').concat(C, ')')), p()(O, t));
+        })(i.Component);
+    return (w(N, 'DecoratedComponent', t), w(N, 'displayName', ''.concat(h, '(').concat(S, ')')), d()(N, t));
 }

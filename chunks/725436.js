@@ -1,8 +1,21 @@
-n.d(t, { m: () => u });
+n.d(t, { m: () => f });
 var r = n(454585),
-    l = n(551452),
-    i = n(532901);
-function a(e) {
+    i = n(551452),
+    a = n(532901);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -13,54 +26,50 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                var r;
-                ((r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r));
+                o(e, t, n[t]);
             }));
     }
     return e;
 }
-function s(e, t) {
+function l(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : l(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let c = s(a({}, r.Z.guildEventRules.link), {
-        react: (0, i.Z)({
+let u = c(s({}, r.Z.guildEventRules.link), {
+        react: (0, a.Z)({
             enableBuildOverrides: !1,
             mustConfirmExternalLink: !0
         }).react
     }),
-    o = s(a({}, r.Z.guildEventRules.channelMention), {
-        react: (0, l.Z)({
+    d = c(s({}, r.Z.guildEventRules.channelMention), {
+        react: (0, i.Z)({
             enableBuildOverrides: !1,
             shouldCloseDefaultModals: !0,
             shouldStopPropagation: !0
         }).react
     }),
-    u = r.Z.reactParserFor(
-        s(a({}, r.Z.guildEventRules), {
-            link: c,
-            channelMention: o
+    f = r.Z.reactParserFor(
+        c(s({}, r.Z.guildEventRules), {
+            link: u,
+            channelMention: d
         })
     );

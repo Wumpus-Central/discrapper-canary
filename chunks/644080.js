@@ -118,7 +118,7 @@ let I = r.memo(function (e) {
                                                 text: b.intl.string(b.t.VINpSE),
                                                 onClick: () =>
                                                     (0, c.ZDy)(async () => {
-                                                        let { default: e } = await Promise.all([t.e('7654'), t.e('34946')]).then(t.bind(t, 560114));
+                                                        let { default: e } = await Promise.all([t.e('7654'), t.e('17439')]).then(t.bind(t, 560114));
                                                         return (t) => {
                                                             var r, a;
                                                             return (0, l.jsx)(

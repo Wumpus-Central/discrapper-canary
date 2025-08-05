@@ -1,86 +1,86 @@
-e.d(n, { default: () => y });
-var i = e(255367);
-e(73800);
-var r = e(481060),
-    l = e(239091),
-    a = e(108843),
-    o = e(100527),
-    s = e(299206),
-    d = e(895563),
-    u = e(32750),
-    c = e(109764),
-    f = e(323597),
-    h = e(461535),
-    v = e(438536),
-    g = e(251746),
-    Z = e(193987),
-    b = e(933793),
-    p = e(765483),
-    m = e(13736),
-    O = e(732393),
-    _ = e(214906),
-    j = e(612856),
-    C = e(137591),
-    E = e(388032);
-let y = (0, a.Z)(
-    function (t) {
-        let { channel: n, onSelect: e } = t,
-            a = (0, c.Z)(n),
+t.d(n, { default: () => x });
+var r = t(255367);
+t(73800);
+var i = t(481060),
+    l = t(239091),
+    a = t(108843),
+    o = t(100527),
+    c = t(299206),
+    s = t(895563),
+    u = t(32750),
+    d = t(109764),
+    f = t(323597),
+    h = t(461535),
+    b = t(438536),
+    p = t(251746),
+    j = t(193987),
+    Z = t(933793),
+    O = t(765483),
+    g = t(13736),
+    y = t(732393),
+    v = t(214906),
+    m = t(612856),
+    P = t(137591),
+    _ = t(388032);
+let x = (0, a.Z)(
+    function (e) {
+        let { channel: n, onSelect: t } = e,
+            a = (0, d.Z)(n),
             o = (0, h.Z)(n),
-            y = (0, _.Z)(n),
+            x = (0, v.Z)(n),
             N = (0, u.Z)(n),
-            P = (0, Z.Z)(n),
-            A = (0, f.Z)(n),
-            T = (0, s.Z)({
+            E = (0, j.Z)(n),
+            w = (0, f.Z)(n),
+            C = (0, c.Z)({
                 id: n.id,
-                label: E.intl.string(E.t.DQ797u)
+                label: _.intl.string(_.t.DQ797u)
             }),
-            R = (0, v.Z)(n, 'Context Menu'),
-            x = (0, b.Z)(n),
-            S = (0, j.Z)(n),
-            I = (0, m.Z)(n),
-            k = (0, O.Z)(n.id),
-            M = (0, g.Z)(n),
-            U = (0, C.Z)(n),
-            F = (0, d.l)(n),
-            w = (0, d.P)(n),
-            D = (0, p.Z)(n);
-        return (0, i.jsxs)(r.v2r, {
+            k = (0, b.Z)(n, 'Context Menu'),
+            S = (0, Z.Z)(n),
+            A = (0, m.Z)(n),
+            D = (0, g.Z)(n),
+            T = (0, y.Z)(n.id),
+            U = (0, p.Z)(n),
+            M = (0, P.Z)(n),
+            G = (0, s.l)(n),
+            I = (0, s.P)(n),
+            L = (0, O.Z)(n);
+        return (0, r.jsxs)(i.v2r, {
             navId: 'thread-context',
             onClose: l.Zy,
-            'aria-label': E.intl.string(E.t['1NBjqa']),
-            onSelect: e,
+            'aria-label': _.intl.string(_.t['1NBjqa']),
+            onSelect: t,
             children: [
-                (0, i.jsxs)(
-                    r.kSQ,
+                (0, r.jsxs)(
+                    i.kSQ,
                     {
-                        children: [o, F]
+                        children: [o, G]
                     },
                     'mark-as-read-or-favorite'
                 ),
-                (0, i.jsxs)(
-                    r.kSQ,
+                (0, r.jsxs)(
+                    i.kSQ,
                     {
-                        children: [R, M, N, P, I, k, a]
+                        children: [k, U, N, E, D, T, a]
                     },
                     'thread-actions'
                 ),
-                (0, i.jsxs)(
-                    r.kSQ,
+                (0, r.jsxs)(
+                    i.kSQ,
                     {
-                        children: [y, S]
+                        children: [x, A]
                     },
                     'notifications'
                 ),
-                (0, i.jsx)(r.kSQ, { children: w }),
-                (0, i.jsxs)(
-                    r.kSQ,
+                (0, r.jsx)(i.kSQ, { children: I }),
+                (0, r.jsxs)(
+                    i.kSQ,
                     {
-                        children: [U, x, A, D]
+                        children: [M, S, w, L]
                     },
                     'admin-actions'
                 ),
-                (0, i.jsx)(r.kSQ, { children: T }, 'developer-actions')
+                (0, r.jsx)(i.kSQ, { children: C }, 'developer-actions')
             ]
         });
     },

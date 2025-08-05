@@ -175,18 +175,18 @@ let b = i.forwardRef(function (e, t) {
             };
         }, [o, _, a]),
         [A, N] = i.useState(0),
-        [C, R] = i.useState(0);
+        [C, w] = i.useState(0);
     if (
         (i.useLayoutEffect(() => {
             if (null == T || null == S || null == f.current) return;
             let e = f.current.getBoundingClientRect();
-            (R(e.width / 2), N(e.height + 12));
+            (w(e.width / 2), N(e.height + 12));
         }, [T, S]),
         null == T || null == S)
     )
         return null;
-    let P = null == (n = a.current) ? void 0 : n.getSlateEditor();
-    return null == P
+    let R = null == (n = a.current) ? void 0 : n.getSlateEditor();
+    return null == R
         ? null
         : (0, r.jsx)(u.ZP, {
               children: (0, r.jsxs)('div', {
@@ -204,7 +204,7 @@ let b = i.forwardRef(function (e, t) {
                       e.stopPropagation();
                   },
                   children: [
-                      (0, r.jsx)(v, { slateEditor: P }),
+                      (0, r.jsx)(v, { slateEditor: R }),
                       (0, r.jsx)(E, {
                           editorRef: a,
                           options: l

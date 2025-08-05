@@ -1,25 +1,25 @@
-(n.d(t, { k: () => p }), n(704826), n(35282));
+(n.d(t, { k: () => f }), n(704826), n(35282));
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    l = n(481060),
-    a = n(430824),
-    o = n(914010),
-    s = n(388032),
+    a = n(481060),
+    o = n(430824),
+    s = n(914010),
+    l = n(388032),
     c = n(502764);
 let u = () =>
         (0, r.jsx)(r.Fragment, {
-            children: s.intl.format(s.t.ymkBtr, {
-                shareIcon: s.intl.string(s.t.VINpSE),
-                shareIconHook: () => (0, r.jsx)(l.ejJ, { className: c.icon }, 'icon')
+            children: l.intl.format(l.t.ymkBtr, {
+                shareIcon: l.intl.string(l.t.VINpSE),
+                shareIconHook: () => (0, r.jsx)(a.ejJ, { className: c.icon }, 'icon')
             })
         }),
     d = () => {
-        let e = (0, i.e7)([a.Z, o.Z], () => a.Z.getGuild(o.Z.getGuildId()), []),
+        let e = (0, i.e7)([o.Z, s.Z], () => o.Z.getGuild(s.Z.getGuildId()), []),
             t = null == e ? void 0 : e.name;
-        return (0, r.jsx)(r.Fragment, { children: s.intl.format(s.t.oQuG3N, { serverName: t }) });
+        return (0, r.jsx)(r.Fragment, { children: l.intl.format(l.t.oQuG3N, { serverName: t }) });
     },
-    p = (e) => {
+    f = (e) => {
         var t, n;
         let i =
             null !=
@@ -27,51 +27,51 @@ let u = () =>
                 VOICE_CONVERSATIONS: {
                     title: (0, r.jsx)('div', {
                         className: c.voiceChannelsTitle,
-                        children: s.intl.string(s.t.w5HAlp)
+                        children: l.intl.string(l.t.w5HAlp)
                     }),
-                    body: s.intl.string(s.t.Ww4hho)
+                    body: l.intl.string(l.t.Ww4hho)
                 },
                 WRITING_MESSAGES: {
                     title: (0, r.jsx)('div', {
                         className: c.writingMessagesTitle,
-                        children: s.intl.string(s.t.nkP0l5)
+                        children: l.intl.string(l.t.nkP0l5)
                     }),
                     body: (0, r.jsx)(d, {})
                 },
                 ORGANIZE_BY_TOPIC: {
                     title: (0, r.jsx)('div', {
                         className: c.channelsTitle,
-                        children: s.intl.string(s.t['j/5+IS'])
+                        children: l.intl.string(l.t['j/5+IS'])
                     }),
-                    body: s.intl.string(s.t.mufH2N)
+                    body: l.intl.string(l.t.mufH2N)
                 },
                 WHOS_ONLINE: {
-                    title: s.intl.string(s.t.l2nSoK),
-                    body: s.intl.format(s.t.y6tbBA, {})
+                    title: l.intl.string(l.t.l2nSoK),
+                    body: l.intl.format(l.t.y6tbBA, {})
                 },
                 INSTANT_INVITE: {
-                    title: s.intl.string(s.t.XcehY2),
+                    title: l.intl.string(l.t.XcehY2),
                     body: (0, r.jsx)(u, {})
                 },
                 SERVER_SETTINGS: {
-                    title: s.intl.string(s.t.wc8wi4),
-                    body: s.intl.format(s.t.mIfDhY, {})
+                    title: l.intl.string(l.t.wc8wi4),
+                    body: l.intl.format(l.t.mIfDhY, {})
                 },
                 DIRECT_MESSAGES: {
-                    title: s.intl.string(s.t['V07x5+']),
-                    body: s.intl.format(s.t.GEBBe3, {})
+                    title: l.intl.string(l.t['V07x5+']),
+                    body: l.intl.format(l.t.GEBBe3, {})
                 },
                 CREATE_MORE_SERVERS: {
-                    title: s.intl.string(s.t['50FORk']),
-                    body: s.intl.format(s.t.zVL4qa, {})
+                    title: l.intl.string(l.t['50FORk']),
+                    body: l.intl.format(l.t.zVL4qa, {})
                 },
                 CREATE_FIRST_SERVER: {
-                    title: s.intl.string(s.t.CtOX9f),
-                    body: s.intl.format(s.t.TflqTU, {})
+                    title: l.intl.string(l.t.CtOX9f),
+                    body: l.intl.format(l.t.TflqTU, {})
                 },
                 FRIENDS_LIST: {
-                    title: s.intl.string(s.t.Fnk9Ly),
-                    body: s.intl.format(s.t.NTq0AQ, {})
+                    title: l.intl.string(l.t.Fnk9Ly),
+                    body: l.intl.format(l.t.NTq0AQ, {})
                 }
             }[e.replace(/-/g, '_').toUpperCase()])
                 ? t

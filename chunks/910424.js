@@ -1,21 +1,34 @@
-(n.d(t, { Z: () => y }), n(388685));
+(n.d(t, { Z: () => v }), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    l = n(481060),
-    a = n(572691),
-    o = n(287734),
-    s = n(872810),
+    a = n(481060),
+    o = n(572691),
+    s = n(287734),
+    l = n(872810),
     c = n(40851),
     u = n(102172),
     d = n(199902),
     f = n(592125),
-    p = n(585483),
-    m = n(915863),
-    g = n(981631),
-    h = n(388032),
-    b = n(128746);
-function v(e) {
+    _ = n(585483),
+    p = n(915863),
+    h = n(981631),
+    m = n(388032),
+    g = n(128746);
+function E(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,112 +39,108 @@ function v(e) {
                 })
             )),
             r.forEach(function (t) {
-                var r;
-                ((r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r));
+                E(e, t, n[t]);
             }));
     }
     return e;
 }
-function _(e, t) {
+function y(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : y(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y(e) {
-    let { isCurrentUser: t, color: n, look: y, applicationStream: O, onAction: S } = e,
-        { activeStream: I, watchingOtherStream: j } = (0, i.cj)([d.Z], () => ({
-            activeStream: d.Z.getActiveStreamForApplicationStream(O),
+function v(e) {
+    let { isCurrentUser: t, color: n, look: E, applicationStream: y, onAction: v } = e,
+        { activeStream: I, watchingOtherStream: T } = (0, i.cj)([d.Z], () => ({
+            activeStream: d.Z.getActiveStreamForApplicationStream(y),
             watchingOtherStream:
-                null != O &&
-                d.Z.getAllActiveStreamsForChannel(O.channelId).filter((e) => {
+                null != y &&
+                d.Z.getAllActiveStreamsForChannel(y.channelId).filter((e) => {
                     let { ownerId: t } = e;
-                    return t !== O.ownerId;
+                    return t !== y.ownerId;
                 }).length > 0
         })),
-        x = (0, i.e7)([f.Z], () => f.Z.getChannel(null == O ? void 0 : O.channelId)),
-        [E, P] = (0, u.wq)(x),
+        S = (0, i.e7)([f.Z], () => f.Z.getChannel(null == y ? void 0 : y.channelId)),
+        [A, N] = (0, u.wq)(S),
         C = (0, c.Aq)(),
-        T = null != I && null != O && I.state !== g.jm8.ENDED && I.ownerId === O.ownerId,
-        N = (e) => {
-            null != O && (null == S || S(), o.default.selectVoiceChannel(O.channelId), T || (0, s.iV)(O, { forceMultiple: e }), C.dispatch(g.CkL.POPOUT_CLOSE), p.S.dispatch(g.CkL.MODAL_CLOSE), a.Z.popAll());
+        w = null != I && null != y && I.state !== h.jm8.ENDED && I.ownerId === y.ownerId,
+        R = (e) => {
+            null != y && (null == v || v(), s.default.selectVoiceChannel(y.channelId), w || (0, l.iV)(y, { forceMultiple: e }), C.dispatch(h.CkL.POPOUT_CLOSE), _.S.dispatch(h.CkL.MODAL_CLOSE), o.Z.popAll());
         };
-    if (null == O) return null;
-    let A = (0, u.P9)(P);
-    t ? (A = h.intl.string(h.t.XvBdeX)) : T && (A = h.intl.string(h.t.JH1SJy));
-    let w = {
+    if (null == y) return null;
+    let P = (0, u.P9)(N);
+    t ? (P = m.intl.string(m.t.XvBdeX)) : w && (P = m.intl.string(m.t.JH1SJy));
+    let D = {
         color: n,
-        look: y
+        look: E
     };
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(
-                m.Z,
-                _(
-                    v(
+                p.Z,
+                O(
+                    b(
                         {
-                            disabled: t || T || !E,
-                            onClick: () => N(!1)
+                            disabled: t || w || !A,
+                            onClick: () => R(!1)
                         },
-                        w
+                        D
                     ),
                     {
                         fullWidth: !0,
                         children: [
-                            (0, r.jsx)(l.hGI, {
+                            (0, r.jsx)(a.hGI, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: b.streamIcon
+                                className: g.streamIcon
                             }),
-                            A
+                            P
                         ]
                     }
                 ),
                 'play'
             ),
-            j && !T
-                ? (0, r.jsx)(l.ua7, {
-                      text: h.intl.string(h.t.wCrzur),
+            T && !w
+                ? (0, r.jsx)(a.ua7, {
+                      text: m.intl.string(m.t.wCrzur),
                       children: (e) =>
                           (0, r.jsx)(
-                              m.Z,
-                              _(
-                                  v(
-                                      _(v({}, e), {
+                              p.Z,
+                              O(
+                                  b(
+                                      O(b({}, e), {
                                           onClick: () => {
                                               var t;
-                                              (null == (t = e.onClick) || t.call(e), N(!0));
+                                              (null == (t = e.onClick) || t.call(e), R(!0));
                                           }
                                       }),
-                                      w
+                                      D
                                   ),
                                   {
-                                      className: b.iconButton,
-                                      size: b.iconButtonSize,
-                                      children: (0, r.jsx)(l.OgY, {
+                                      className: g.iconButton,
+                                      size: g.iconButtonSize,
+                                      children: (0, r.jsx)(a.OgY, {
                                           size: 'xs',
                                           color: 'currentColor',
-                                          className: b.iconSize
+                                          className: g.iconSize
                                       })
                                   }
                               )

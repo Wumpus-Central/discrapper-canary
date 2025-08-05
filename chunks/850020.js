@@ -1,17 +1,17 @@
-n.d(t, { K: () => s });
-var r = n(73800),
-    i = n(442837),
+n.d(t, { K: () => o });
+var i = n(73800),
+    r = n(442837),
     l = n(271383),
     a = n(346811),
-    o = n(4242);
-function s(e) {
-    let { user: t, guildId: n, location: s = '' } = e,
-        { enabled: c } = a.Z.useConfig({ location: s }),
-        u = (0, i.e7)([l.ZP], () => (null != n && null != t ? l.ZP.getMember(n, t.id) : null));
-    return (0, r.useMemo)(() => {
+    s = n(4242);
+function o(e) {
+    let { user: t, guildId: n, location: o = '' } = e,
+        { enabled: c } = a.Z.useConfig({ location: o }),
+        d = (0, r.e7)([l.ZP], () => (null != n && null != t ? l.ZP.getMember(n, t.id) : null));
+    return (0, i.useMemo)(() => {
         var e;
         if (null == t) return;
-        let r = (0, o.Pb)(null == u || null == (e = u.collectibles) ? void 0 : e.nameplate);
-        return null != n && c && null != r ? r : t.nameplate;
-    }, [u, n, c, t]);
+        let i = (0, s.Pb)(null == d || null == (e = d.collectibles) ? void 0 : e.nameplate);
+        return null != n && c && null != i ? i : t.nameplate;
+    }, [d, n, c, t]);
 }

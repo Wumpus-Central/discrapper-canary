@@ -86,8 +86,8 @@ function y(e, t) {
 }
 let O = 'apply-guild-boost-modal';
 async function v(e) {
-    let { analyticsLocations: t, analyticsLocation: h, analyticsSourceLocation: g, numberOfBoostsToAdd: y, onClose: v, closeLayer: I, onSubscriptionConfirmation: T, onSubscribeComplete: S, guild: A, handleSubscribeModalClose: N, disablePremiumUpsell: C, inPopout: R, applicationId: P, intent: w } = e,
-        D = R ? i.u1M : i.z1l,
+    let { analyticsLocations: t, analyticsLocation: h, analyticsSourceLocation: g, numberOfBoostsToAdd: y, onClose: v, closeLayer: I, onSubscriptionConfirmation: T, onSubscribeComplete: S, guild: A, handleSubscribeModalClose: N, disablePremiumUpsell: C, inPopout: w, applicationId: R, intent: P } = e,
+        D = w ? i.u1M : i.z1l,
         L = l.default.getCurrentUser();
     if (null == L) return;
     if (!L.verified)
@@ -104,9 +104,9 @@ async function v(e) {
         );
     let x = [];
     (u.Z.isLoadedForPremiumSKUs() || x.push((0, s.Y2)()), c.Z.hasFetched || (x.push(a.jg()), x.push((0, o.X8)())), x.length > 0 && (await Promise.allSettled(x)));
-    let M = (0, f.vx)(c.Z.boostSlots),
-        k = M.length,
-        j = (e) => {
+    let k = (0, f.vx)(c.Z.boostSlots),
+        j = k.length,
+        M = (e) => {
             (null == v || v(), null == N || N(e));
         },
         U = () => {
@@ -117,9 +117,9 @@ async function v(e) {
                     location_section: h.section
                 }));
         };
-    if (k > 0 && (null == y || k >= y)) {
+    if (j > 0 && (null == y || j >= y)) {
         let e;
-        (1 === k ? (e = M.slice(0, 1)) : null != y && (e = M.slice(0, y)),
+        (1 === j ? (e = k.slice(0, 1)) : null != y && (e = k.slice(0, y)),
             await (0, i.ZDy)(
                 async () => {
                     let { default: t } = await Promise.all([n.e('8016'), n.e('22646'), n.e('30419'), n.e('35761')]).then(n.bind(n, 760558));
@@ -130,7 +130,7 @@ async function v(e) {
                             t,
                             E(m({}, a), {
                                 onClose: (e) => {
-                                    (i(), j(e));
+                                    (i(), M(e));
                                 },
                                 selectedGuild: A,
                                 locationSection: p.ZY5.PREMIUM_GUILD_USER_MODAL,
@@ -142,7 +142,7 @@ async function v(e) {
                 {
                     modalKey: O,
                     onCloseRequest: () => {
-                        ((0, i.Mr3)(O), j(!1));
+                        ((0, i.Mr3)(O), M(!1));
                     },
                     contextKey: D
                 }
@@ -155,12 +155,12 @@ async function v(e) {
             guildId: A.id,
             closeLayer: U,
             totalNumberOfSlotsToAssign: null != y ? y : 1,
-            onCloseModal: j,
+            onCloseModal: M,
             disablePremiumUpsell: C,
             onSubscriptionConfirmation: T,
             onSubscribeComplete: S,
-            inPopout: R,
-            applicationId: P,
-            intent: w
+            inPopout: w,
+            applicationId: R,
+            intent: P
         });
 }

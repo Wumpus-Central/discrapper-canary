@@ -1,6 +1,6 @@
 (n.d(t, {
-    default: () => X,
-    m: () => Q
+    default: () => $,
+    m: () => X
 }),
     n(457542),
     n(388685));
@@ -30,15 +30,15 @@ var r = n(255367),
     A = n(509212),
     N = n(272008),
     C = n(113434),
-    R = n(497505),
-    P = n(475595),
-    w = n(566078),
+    w = n(497505),
+    R = n(475595),
+    P = n(566078),
     D = n(968435),
     L = n(114732),
     x = n(46140),
-    M = n(981631),
-    k = n(675654),
-    j = n(474936),
+    k = n(981631),
+    j = n(675654),
+    M = n(474936),
     U = n(388032),
     G = n(335626);
 function B(e, t, n) {
@@ -54,7 +54,7 @@ function B(e, t, n) {
         e
     );
 }
-function V(e) {
+function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -82,7 +82,7 @@ function F(e, t) {
     }
     return n;
 }
-function Z(e, t) {
+function V(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -99,7 +99,7 @@ function H() {
     return (0, d.Mn)(t).finally(d.si);
 }
 function Y() {
-    f.Z.open(M.oAB.PREMIUM, null, {});
+    f.Z.open(k.oAB.PREMIUM, null, {});
 }
 function W(e) {
     let { product: t, isFetching: n } = (0, g.T)(e),
@@ -125,17 +125,17 @@ function K(e) {
     i.useEffect(() => {
         S ||
             !0 === m ||
-            (0, N.QB)(l.id, R.y$.CROSS_PLATFORM, d)
+            (0, N.QB)(l.id, w.y$.CROSS_PLATFORM, d)
                 .then(() => C('claimed'))
                 .catch(() => C('error'));
     }, [l, d, S, m]);
-    let P = () => {
+    let R = () => {
             (C('applying'), h().finally(a));
         },
-        w = !0 === m && null === p && (null == f ? void 0 : f.skuId) !== '',
+        P = !0 === m && null === p && (null == f ? void 0 : f.skuId) !== '',
         D = null == p && !0 !== m,
-        x = null == I || D || w || 'loading' === A,
-        M = !v && !S && 'claimed' === A;
+        x = null == I || D || P || 'loading' === A,
+        k = !v && !S && 'claimed' === A;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.O_, {
@@ -165,24 +165,24 @@ function K(e) {
                                     decoration: p,
                                     isSaving: 'applying' === A,
                                     onClose: a,
-                                    onConfirm: P
+                                    onConfirm: R
                                 })
                 })
             }),
-            M &&
+            k &&
                 (0, r.jsx)(E.Z, {
                     confettiTarget: g.current,
                     confettiCanvas: b,
-                    sprites: k.CA,
-                    colors: k.Br
+                    sprites: j.CA,
+                    colors: j.Br
                 })
         ]
     });
 }
 function z(e) {
     let { quest: t } = e,
-        n = i.useMemo(() => (0, P.fh)(t, P.eC.LOGO_TYPE, 'dark'), [t]),
-        a = w.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[R.y$.CROSS_PLATFORM];
+        n = i.useMemo(() => (0, R.fh)(t, R.eC.LOGO_TYPE, 'dark'), [t]),
+        a = P.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[w.y$.CROSS_PLATFORM];
     return (0, r.jsxs)('div', {
         className: G.additionalRedemptionInstructions,
         children: [
@@ -201,10 +201,10 @@ function z(e) {
 }
 function q(e) {
     let { quest: t, user: n, decoration: i, isSaving: a, onClose: o, onConfirm: s } = e,
-        l = (0, P.fh)(t, P.eC.REWARD).url,
+        l = (0, R.fh)(t, R.eC.REWARD).url,
         c = (0, A.f$)(t.config),
         { fractionalState: d } = (0, m.Z)(),
-        f = d === j.a$.FP_ONLY,
+        f = d === M.a$.FP_ONLY,
         _ = (0, C.Qy)(t.config),
         p = c && !f;
     return (0, r.jsxs)('div', {
@@ -273,7 +273,7 @@ function q(e) {
                                         (Y(), o());
                                     }
                                 }),
-                                buttonAnalyticsObject: { section: M.jXE.PERMADECOS_MARKETING_UPSELL }
+                                buttonAnalyticsObject: { section: k.jXE.PERMADECOS_MARKETING_UPSELL }
                             })
                     ]
                 })
@@ -281,7 +281,7 @@ function q(e) {
         ]
     });
 }
-function X(e) {
+function $(e) {
     var t, n;
     let { quest: a, location: o, onClose: s, transitionState: l, preview: c } = e,
         u = i.useMemo(() => (0, A.xn)(a.config), [a]),
@@ -307,13 +307,13 @@ function X(e) {
                 preview: c
             });
 }
-function Q(e, t, i) {
+function X(e, t, i) {
     (0, u.ZDy)(async () => {
         let { default: a } = await Promise.resolve().then(n.bind(n, 920916));
         return (n) =>
             (0, r.jsx)(
                 a,
-                Z(V({}, n), {
+                V(Z({}, n), {
                     quest: e,
                     location: t,
                     preview: i

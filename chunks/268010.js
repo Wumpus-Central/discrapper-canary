@@ -40,9 +40,9 @@ let I = (e, t, n) => {
         let { channel: t, entry: n, onReaction: u, onVoiceChannelPreview: S } = e,
             A = (0, a.e7)([l.default], () => l.default.getUser(n.author_id)),
             { largeImage: N } = (0, f.rv)({ entry: n }),
-            { primaryColor: C, secondaryColor: R } = (0, m.Z)(null == N ? void 0 : N.src),
-            P = (0, a.e7)([s.default], () => s.default.locale),
-            w = (0, h.Z)(O.ABu.CRUNCHYROLL),
+            { primaryColor: C, secondaryColor: w } = (0, m.Z)(null == N ? void 0 : N.src),
+            R = (0, a.e7)([s.default], () => s.default.locale),
+            P = (0, h.Z)(O.ABu.CRUNCHYROLL),
             D = (0, _.ap)(n.extra.media_assets_large_text),
             L = i.useCallback(
                 (e) => {
@@ -52,13 +52,13 @@ let I = (e, t, n) => {
                             mediaImageSrc: null == N ? void 0 : N.src,
                             avatarSrc: A.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
                             description: I(n, t, A),
-                            timestamp: (0, _.yh)(n, P),
+                            timestamp: (0, _.yh)(n, R),
                             episodeDescription: D,
-                            colors: [C, R],
+                            colors: [C, w],
                             channelId: e
                         });
                 },
-                [t, n, D, P, null == N ? void 0 : N.src, C, R, A]
+                [t, n, D, R, null == N ? void 0 : N.src, C, w, A]
             ),
             x = () => {
                 if (null == n.extra.url) return;
@@ -82,7 +82,7 @@ let I = (e, t, n) => {
                           title: n.extra.media_title,
                           subtitle: n.extra.media_subtitle,
                           headerIcons: (0, r.jsx)(y.Z, {
-                              onClick: w,
+                              onClick: P,
                               Icon: o.omf,
                               'aria-label': v.intl.string(v.t.jdJYX1)
                           }),

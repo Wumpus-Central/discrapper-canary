@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    l = n.n(a),
+    l = n(120356),
+    a = n.n(l),
     s = n(66546),
     o = n(442837),
     c = n(780384),
@@ -17,19 +17,19 @@ var r = n(255367),
     b = n(430824),
     j = n(63063),
     v = n(595433),
-    _ = n(981631),
-    C = n(388032),
+    C = n(981631),
+    _ = n(388032),
     y = n(461238),
-    w = n(906739),
-    T = n(965358),
-    O = n(420196),
+    O = n(906739),
+    w = n(965358),
+    P = n(420196),
     S = n(433075);
-function N(e) {
+function T(e) {
     let { handleHide: t } = e;
     return (0, r.jsx)(d.P3F, {
         onClick: t,
         className: y.closeButton,
-        'aria-label': C.intl.string(C.t.WAI6xs),
+        'aria-label': _.intl.string(_.t.WAI6xs),
         children: (0, r.jsx)(d.Dio, {
             size: 'md',
             color: 'currentColor',
@@ -37,10 +37,10 @@ function N(e) {
         })
     });
 }
-function P(e) {
-    let { username: t, title: n, videoSrc: i, messageCount: a, reaction: s, reactionCount: o, classname: c } = e;
+function N(e) {
+    let { username: t, title: n, videoSrc: i, messageCount: l, reaction: s, reactionCount: o, classname: c } = e;
     return (0, r.jsxs)('div', {
-        className: l()(y.videoPreview, c),
+        className: a()(y.videoPreview, c),
         children: [
             (0, r.jsx)('div', {
                 className: y.authorRow,
@@ -57,7 +57,7 @@ function P(e) {
                             variant: 'text-xs/normal',
                             color: 'header-secondary',
                             className: y.postCreationTimestamp,
-                            children: C.intl.string(C.t.mA0IvL)
+                            children: _.intl.string(_.t.mA0IvL)
                         })
                     ]
                 })
@@ -96,7 +96,7 @@ function P(e) {
                                 (0, r.jsx)(d.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'interactive-normal',
-                                    children: a
+                                    children: l
                                 })
                             ]
                         }),
@@ -123,31 +123,31 @@ function P(e) {
 }
 let I = (e) => {
     var t, n;
-    let { channel: a } = e,
+    let { channel: l } = e,
         m = (0, u.ZP)(),
         I = (0, c.wj)(m),
-        E = (0, o.e7)([b.Z], () => b.Z.getGuild(a.guild_id)),
-        R = (0, o.e7)([h.Z], () => h.Z.hasHidden(a.id)),
+        E = (0, o.e7)([b.Z], () => b.Z.getGuild(l.guild_id)),
+        R = (0, o.e7)([h.Z], () => h.Z.hasHidden(l.id)),
         M = (0, x.C)({
-            guildId: a.guild_id,
-            channelId: a.id
+            guildId: l.guild_id,
+            channelId: l.id
         }),
         { transitions: Z, setVisible: k } = (0, v.H)(),
         A = i.useCallback(() => {
-            (k(!1), g.Z.hideAdminOnboarding(a.id, !0));
-        }, [a, k]);
+            (k(!1), g.Z.hideAdminOnboarding(l.id, !0));
+        }, [l, k]);
     i.useEffect(() => {
-        (0, f.c)(a.id) || k(!R);
-    }, [a, k, R]);
-    let L = i.useMemo(() => [C.intl.string(C.t['8pEGAw']), C.intl.string(C.t.jwfgDQ), C.intl.string(C.t.mPKs29), C.intl.string(C.t.StRbvL)], []),
-        F = i.useMemo(() => [C.intl.string(C.t['m/b58P']), C.intl.string(C.t.MuJSKy), C.intl.string(C.t['d/Wqvr']), C.intl.string(C.t.GJklAw)], []),
+        (0, f.c)(l.id) || k(!R);
+    }, [l, k, R]);
+    let L = i.useMemo(() => [_.intl.string(_.t['8pEGAw']), _.intl.string(_.t.jwfgDQ), _.intl.string(_.t.mPKs29), _.intl.string(_.t.StRbvL)], []),
+        F = i.useMemo(() => [_.intl.string(_.t['m/b58P']), _.intl.string(_.t.MuJSKy), _.intl.string(_.t['d/Wqvr']), _.intl.string(_.t.GJklAw)], []),
         D = () => {
-            p.Z.open(a.guild_id, _.pNK.ROLE_SUBSCRIPTIONS);
+            p.Z.open(l.guild_id, C.pNK.ROLE_SUBSCRIPTIONS);
         },
-        z = null != (t = null == E ? void 0 : E.features.has(_.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && t ? C.intl.string(C.t.n0q7sL) : C.intl.string(C.t.QoYdiY),
-        B = null != (n = (null == E ? void 0 : E.features.has(_.oNc.CREATOR_MONETIZABLE)) || (null == E ? void 0 : E.features.has(_.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && n,
-        H = B ? C.intl.string(C.t['G/7ciY']) : C.intl.string(C.t.IFOiio),
-        U = B ? C.intl.string(C.t.GjgQOz) : C.intl.string(C.t.E7AO6u);
+        z = null != (t = null == E ? void 0 : E.features.has(C.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && t ? _.intl.string(_.t.n0q7sL) : _.intl.string(_.t.QoYdiY),
+        B = null != (n = (null == E ? void 0 : E.features.has(C.oNc.CREATOR_MONETIZABLE)) || (null == E ? void 0 : E.features.has(C.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && n,
+        H = B ? _.intl.string(_.t['G/7ciY']) : _.intl.string(_.t.IFOiio),
+        U = B ? _.intl.string(_.t.GjgQOz) : _.intl.string(_.t.E7AO6u);
     return (0, r.jsx)(r.Fragment, {
         children: Z((e, t) =>
             t
@@ -167,45 +167,45 @@ let I = (e) => {
                                               color: 'currentColor',
                                               className: y.icon
                                           }),
-                                          C.intl.string(C.t.znhX2d)
+                                          _.intl.string(_.t.znhX2d)
                                       ]
                                   }),
-                                  (0, r.jsx)(N, { handleHide: A })
+                                  (0, r.jsx)(T, { handleHide: A })
                               ]
                           }),
                           (0, r.jsxs)('div', {
                               className: y.contentContainer,
                               children: [
                                   (0, r.jsxs)('div', {
-                                      className: l()(y.contentRow, B && y.contentRowOne),
+                                      className: a()(y.contentRow, B && y.contentRowOne),
                                       children: [
                                           (0, r.jsx)('div', {
                                               className: y.contentMediaContainer,
                                               children: (0, r.jsxs)('div', {
                                                   className: y.contentVideoContainer,
                                                   children: [
-                                                      (0, r.jsx)(P, {
-                                                          username: C.intl.string(C.t.AkORcn),
+                                                      (0, r.jsx)(N, {
+                                                          username: _.intl.string(_.t.AkORcn),
                                                           videoSrc: 'https://cdn.discordapp.com/assets/media_channel/admin_edu_discord_birthday.mp4',
-                                                          title: C.intl.string(C.t.yO6Fxs),
+                                                          title: _.intl.string(_.t.yO6Fxs),
                                                           messageCount: '34',
                                                           reaction: '\u26A1️',
                                                           reactionCount: '724',
                                                           classname: y.backgroundVideo
                                                       }),
-                                                      (0, r.jsx)(P, {
-                                                          username: C.intl.string(C.t.DPg3YG),
+                                                      (0, r.jsx)(N, {
+                                                          username: _.intl.string(_.t.DPg3YG),
                                                           videoSrc: 'https://cdn.discordapp.com/assets/media_channel/admin_edu_wumpus_onboarding.mp4',
-                                                          title: C.intl.string(C.t.R5XnCw),
+                                                          title: _.intl.string(_.t.R5XnCw),
                                                           messageCount: '34',
                                                           reactionCount: '84',
                                                           reaction: '\uD83D\uDC9E',
                                                           classname: y.backgroundVideo
                                                       }),
-                                                      (0, r.jsx)(P, {
-                                                          username: C.intl.string(C.t.KIele3),
+                                                      (0, r.jsx)(N, {
+                                                          username: _.intl.string(_.t.KIele3),
                                                           videoSrc: 'https://cdn.discordapp.com/assets/media_channel/admin_edu_scientist_wumpus.mp4',
-                                                          title: C.intl.string(C.t.pt88VV),
+                                                          title: _.intl.string(_.t.pt88VV),
                                                           messageCount: '7,103',
                                                           reaction: '\u26A1️',
                                                           reactionCount: '724',
@@ -230,13 +230,13 @@ let I = (e) => {
                                                   }),
                                                   (0, r.jsx)(d.LZC, { size: 16 }),
                                                   (0, r.jsxs)(d.P3F, {
-                                                      onClick: () => open(j.Z.getCreatorSupportArticleURL(_.BhN.MEDIA_CHANNEL)),
+                                                      onClick: () => open(j.Z.getCreatorSupportArticleURL(C.BhN.MEDIA_CHANNEL)),
                                                       className: y.helpCenterLink,
                                                       children: [
                                                           (0, r.jsx)(d.Text, {
                                                               variant: 'text-sm/medium',
                                                               color: 'text-link',
-                                                              children: C.intl.string(C.t.OahzBQ)
+                                                              children: _.intl.string(_.t.OahzBQ)
                                                           }),
                                                           (0, r.jsx)(d.rgF, {
                                                               size: 'xs',
@@ -267,7 +267,7 @@ let I = (e) => {
                                   }),
                                   B &&
                                       (0, r.jsxs)('div', {
-                                          className: l()(y.contentRow, y.contentRowTwo),
+                                          className: a()(y.contentRow, y.contentRowTwo),
                                           children: [
                                               (0, r.jsx)('div', {
                                                   className: y.contentMediaContainer,
@@ -275,12 +275,12 @@ let I = (e) => {
                                                       className: y.contentImageContainer,
                                                       children: [
                                                           (0, r.jsx)('img', {
-                                                              src: I ? O : S,
+                                                              src: I ? P : S,
                                                               alt: '',
                                                               className: y.previewEmbedImage
                                                           }),
                                                           (0, r.jsx)('img', {
-                                                              src: I ? w : T,
+                                                              src: I ? O : w,
                                                               alt: '',
                                                               className: y.previewEmbedImage
                                                           })
@@ -294,7 +294,7 @@ let I = (e) => {
                                                           variant: 'text-xxs/bold',
                                                           className: y.serverSubPill,
                                                           children: [
-                                                              C.intl.string(C.t.NChGw8),
+                                                              _.intl.string(_.t.NChGw8),
                                                               ' ',
                                                               (0, r.jsx)('span', {
                                                                   role: 'img',
@@ -307,13 +307,13 @@ let I = (e) => {
                                                       (0, r.jsx)(d.X6q, {
                                                           variant: 'heading-lg/semibold',
                                                           color: 'header-primary',
-                                                          children: C.intl.string(C.t['N/TRra'])
+                                                          children: _.intl.string(_.t['N/TRra'])
                                                       }),
                                                       (0, r.jsx)(d.LZC, { size: 8 }),
                                                       (0, r.jsx)(d.Text, {
                                                           variant: 'text-md/normal',
                                                           color: 'text-muted',
-                                                          children: C.intl.string(C.t.t3yWxM)
+                                                          children: _.intl.string(_.t.t3yWxM)
                                                       }),
                                                       (0, r.jsx)(d.LZC, { size: 16 }),
                                                       (0, r.jsx)('div', {

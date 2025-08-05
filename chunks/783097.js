@@ -1,19 +1,19 @@
 (n.d(t, {
-    $d: () => w,
-    BQ: () => P,
-    Cb: () => V,
+    $d: () => P,
+    BQ: () => R,
+    Cb: () => Z,
     Hu: () => F,
     L1: () => K,
     Ow: () => W,
     PZ: () => z,
-    WA: () => k,
-    Wx: () => R,
+    WA: () => j,
+    Wx: () => w,
     XZ: () => H,
     Y$: () => G,
-    Yn: () => Z,
-    dF: () => j,
+    Yn: () => V,
+    dF: () => M,
     jD: () => D,
-    lf: () => M,
+    lf: () => k,
     pF: () => Y,
     sl: () => B,
     vJ: () => x,
@@ -119,29 +119,29 @@ function C(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let R = { id: O.bi.BUILT_IN };
-function P(e) {
+let w = { id: O.bi.BUILT_IN };
+function R(e) {
     return e.id !== O.bi.BUILT_IN;
 }
-function w(e) {
-    return P(e) ? e.name : v.intl.string(v.t.UB2gGx);
+function P(e) {
+    return R(e) ? e.name : v.intl.string(v.t.UB2gGx);
 }
 function D(e) {
-    return P(e) ? e.description : v.intl.string(v.t.X9fusr);
+    return R(e) ? e.description : v.intl.string(v.t.X9fusr);
 }
 function L(e) {
     var t;
-    return P(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.EMBEDDED);
+    return R(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.EMBEDDED);
 }
 function x(e) {
     var t;
-    return P(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PARTNER);
-}
-function M(e) {
-    var t;
-    return P(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PROMOTED);
+    return R(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PARTNER);
 }
 function k(e) {
+    var t;
+    return R(e) && (0, m.yE)(null != (t = e.flags) ? t : 0, y.udG.PROMOTED);
+}
+function j(e) {
     let t = U(e),
         n = null == t ? void 0 : t.client_platform_config[(0, s.Z)((0, g.getOS)())],
         r = Date.now();
@@ -151,8 +151,8 @@ function k(e) {
     }
     return o.ww.NONE;
 }
-function j(e) {
-    switch (k(e)) {
+function M(e) {
+    switch (j(e)) {
         case o.ww.NEW:
             return 'New';
         case o.ww.UPDATED:
@@ -162,7 +162,7 @@ function j(e) {
     }
 }
 function U(e) {
-    return P(e) && L(e) ? (e instanceof p.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+    return R(e) && L(e) ? (e instanceof p.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function G(e) {
     let { command: t, optionValues: n, context: r, commandTargetId: o, maxSizeCallback: s, sectionName: l, commandOrigin: u = c.bB.APPLICATION_LAUNCHER } = e,
@@ -202,7 +202,7 @@ function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { fakeAppIconURL: n } = t,
         r = N(t, ['fakeAppIconURL']);
-    return P(e)
+    return R(e)
         ? {
               iconURL: h.ZP.getApplicationIconURL(
                   A(T({}, r), {
@@ -219,14 +219,14 @@ function B(e) {
               description: v.intl.string(v.t.X9fusr)
           };
 }
-function V(e) {
-    return !!P(e) && (e instanceof p.ZP ? e.isMonetized : e.is_monetized);
+function Z(e) {
+    return !!R(e) && (e instanceof p.ZP ? e.isMonetized : e.is_monetized);
 }
 function F(e) {
     let t = U(e);
     return null != t && t.displays_advertisements;
 }
-function Z(e) {
+function V(e) {
     return e === b._b.TEXT;
 }
 function H(e) {

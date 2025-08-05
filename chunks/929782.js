@@ -2,7 +2,7 @@
     n.d(t, {
         enable: () => N,
         isNotSupported: () => S,
-        trackToggleSelfDeaf: () => R,
+        trackToggleSelfDeaf: () => w,
         trackToggleSelfMute: () => C
     }));
 var r = n(255367);
@@ -165,7 +165,7 @@ function C(e) {
         location: n
     });
 }
-function R(e) {
+function w(e) {
     let { usedKeybind: t = !1, location: n } = e,
         r = d.ZP.getKeybindForAction(m.kg4.TOGGLE_DEAFEN, !1, !0),
         i = u.Z.getVoiceChannelId(),

@@ -1,24 +1,24 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(255367),
     i = n(73800),
     l = n(780384),
     a = n(481060),
-    o = n(410030),
-    s = n(367907),
+    s = n(410030),
+    o = n(367907),
     c = n(984370),
-    u = n(981631),
-    d = n(388032),
-    p = n(578148),
-    h = n(66737),
+    d = n(981631),
+    u = n(388032),
+    h = n(578148),
+    p = n(66737),
     f = n(525377);
-let m = () => {
-    let e = (0, o.ZP)();
+let g = () => {
+    let e = (0, s.ZP)();
     i.useEffect(() => {
-        s.ZP.trackWithMetadata(u.rMx.GUILD_OUTAGE_VIEWED, {});
+        o.ZP.trackWithMetadata(d.rMx.GUILD_OUTAGE_VIEWED, {});
     }, []);
-    let t = (0, l.wj)(e) ? h : f;
+    let t = (0, l.wj)(e) ? p : f;
     return (0, r.jsxs)('div', {
-        className: p.container,
+        className: h.container,
         children: [
             (0, r.jsxs)(c.Z, {
                 toolbar: (0, r.jsx)(i.Fragment, {}),
@@ -27,26 +27,26 @@ let m = () => {
                         icon: a.VL1,
                         'aria-hidden': !0
                     }),
-                    (0, r.jsx)(c.Z.Title, { children: d.intl.string(d.t['8LKcho']) })
+                    (0, r.jsx)(c.Z.Title, { children: u.intl.string(u.t['8LKcho']) })
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: p.content,
+                className: h.content,
                 children: [
                     (0, r.jsx)('img', {
                         alt: '',
-                        className: p.splashImage,
+                        className: h.splashImage,
                         src: t
                     }),
                     (0, r.jsx)(a.X6q, {
-                        className: p.splashHeader,
+                        className: h.splashHeader,
                         variant: 'heading-lg/medium',
-                        children: d.intl.string(d.t.m9gRVF)
+                        children: u.intl.string(u.t.m9gRVF)
                     }),
                     (0, r.jsx)(a.Text, {
-                        className: p.splashText,
+                        className: h.splashText,
                         variant: 'text-md/normal',
-                        children: d.intl.string(d.t['wC3j5+'])
+                        children: u.intl.string(u.t['wC3j5+'])
                     })
                 ]
             })

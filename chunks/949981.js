@@ -1,94 +1,94 @@
-(n.d(t, { Z: () => C }), n(539854));
+(n.d(t, { Z: () => y }), n(539854));
 var r = n(255367),
     i = n(73800),
-    l = n(512722),
-    a = n.n(l),
-    o = n(442837),
-    s = n(447543),
+    a = n(512722),
+    o = n.n(a),
+    s = n(442837),
+    l = n(447543),
     c = n(100527),
     u = n(906732),
     d = n(955415),
-    p = n(131704),
-    m = n(592125),
-    f = n(594174),
-    g = n(823379),
-    _ = n(358595),
-    h = n(981631),
-    b = n(388032),
-    E = n(273254);
-function C(e) {
+    f = n(131704),
+    _ = n(592125),
+    p = n(594174),
+    h = n(823379),
+    m = n(358595),
+    g = n(981631),
+    E = n(388032),
+    b = n(273254);
+function y(e) {
     let t,
-        { invite: n, message: l, currentUserId: C, onTransitionToInviteChannel: v, onAcceptInstantInvite: O } = e,
-        x = C === l.author.id,
-        y = n.state === h.r2o.ACCEPTING,
-        I = (0, o.e7)([m.Z], () => (null != n.channel ? m.Z.getChannel(n.channel.id) : null), [n]);
-    a()(null == I || I.isPrivate(), 'must be a private channel');
-    let { analyticsLocations: j } = (0, u.ZP)(c.Z.INVITE_EMBED),
-        S = null != I,
-        T = i.useCallback(() => {
+        { invite: n, message: a, currentUserId: y, onTransitionToInviteChannel: O, onAcceptInstantInvite: v } = e,
+        I = y === a.author.id,
+        T = n.state === g.r2o.ACCEPTING,
+        S = (0, s.e7)([_.Z], () => (null != n.channel ? _.Z.getChannel(n.channel.id) : null), [n]);
+    o()(null == S || S.isPrivate(), 'must be a private channel');
+    let { analyticsLocations: A } = (0, u.ZP)(c.Z.INVITE_EMBED),
+        N = null != S,
+        C = i.useCallback(() => {
             let e = 'noop';
-            (S ? (v(), (e = 'transition')) : (O(), (e = 'accept')),
-                (0, s.r$)(
+            (N ? (O(), (e = 'transition')) : (v(), (e = 'accept')),
+                (0, l.r$)(
                     {
                         invite: n,
                         action: e,
-                        inviter_id: l.author.id,
-                        invite_message_id: l.id
+                        inviter_id: a.author.id,
+                        invite_message_id: a.id
                     },
-                    j
+                    A
                 ));
-        }, [n, l, j, S, v, O]);
-    if (null == I) {
-        if (null == n.channel) return (0, r.jsx)(_.Z, {});
-        ((I = (0, p.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []));
+        }, [n, a, A, N, O, v]);
+    if (null == S) {
+        if (null == n.channel) return (0, r.jsx)(m.Z, {});
+        ((S = (0, f.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []));
     } else {
-        t = I.recipients.reduce((e, t) => {
-            let n = f.default.getUser(t);
+        t = S.recipients.reduce((e, t) => {
+            let n = p.default.getUser(t);
             return (null != n && e.push(n), e);
         }, []);
-        let e = f.default.getCurrentUser();
-        S && null != e && t.push(e);
+        let e = p.default.getCurrentUser();
+        N && null != e && t.push(e);
     }
-    let N = I.name;
-    (null == N || '' === N) &&
-        (N =
+    let w = S.name;
+    (null == w || '' === w) &&
+        (w =
             t.length > 0
                 ? t
-                      .filter(g.lm)
+                      .filter(h.lm)
                       .map((e) => e.username)
                       .join(', ')
-                : b.intl.string(b.t.LJpTRE));
-    let P = b.intl.string(b.t.XpeFYm),
-        A = d.Z.Button.Colors.GREEN;
-    S && ((P = b.intl.string(b.t.cEnaW1)), (A = d.Z.Button.Colors.PRIMARY));
-    let w = b.intl.string(b.t['3p3/BA']);
+                : E.intl.string(E.t.LJpTRE));
+    let R = E.intl.string(E.t.XpeFYm),
+        P = d.Z.Button.Colors.GREEN;
+    N && ((R = E.intl.string(E.t.cEnaW1)), (P = d.Z.Button.Colors.PRIMARY));
+    let D = E.intl.string(E.t['3p3/BA']);
     return (
-        x && (w = b.intl.string(b.t.qmtuXF)),
+        I && (D = E.intl.string(E.t.qmtuXF)),
         (0, r.jsxs)(d.Z, {
             children: [
-                (0, r.jsx)(d.Z.Header, { text: w }),
+                (0, r.jsx)(d.Z.Header, { text: D }),
                 (0, r.jsxs)(d.Z.Body, {
                     children: [
                         (0, r.jsxs)('div', {
-                            className: E.headerLine,
+                            className: b.headerLine,
                             children: [
                                 (0, r.jsx)(d.Z.Icon, {
-                                    channel: I,
-                                    onClick: S ? T : void 0
+                                    channel: S,
+                                    onClick: N ? C : void 0
                                 }),
                                 (0, r.jsx)(d.Z.Info, {
-                                    title: N,
-                                    onClick: S ? T : void 0,
+                                    title: w,
+                                    onClick: N ? C : void 0,
                                     children: (0, r.jsx)(d.Z.Data, { members: t.length })
                                 })
                             ]
                         }),
                         (0, r.jsx)(d.Z.Button, {
-                            onClick: T,
-                            submitting: y,
-                            isDisabled: S,
-                            color: A,
-                            children: P
+                            onClick: C,
+                            submitting: T,
+                            isDisabled: N,
+                            color: P,
+                            children: R
                         })
                     ]
                 })

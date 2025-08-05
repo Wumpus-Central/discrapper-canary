@@ -1,12 +1,12 @@
-t.d(n, { Z: () => c });
+t.d(n, { Z: () => d });
 var l = t(255367);
 t(73800);
 var r = t(481060),
     i = t(493683),
     o = t(475413),
     s = t(388032);
-function c(e) {
-    var { type: n, userId: t, onClose: c } = e,
+function d(e) {
+    var { type: n, userId: t, onClose: d } = e,
         a = (function (e, n) {
             if (null == e) return {};
             var t,
@@ -26,9 +26,9 @@ function c(e) {
             }
             return r;
         })(e, ['type', 'userId', 'onClose']);
-    let u = n === o.j8.TEXT ? o.tG : o.ef;
+    let c = n === o.j8.TEXT ? o.tG : o.ef;
     return (0, l.jsx)(
-        u,
+        c,
         (function (e) {
             for (var n = 1; n < arguments.length; n++) {
                 var t = null != arguments[n] ? arguments[n] : {},
@@ -60,7 +60,7 @@ function c(e) {
                 text: s.intl.string(s.t.zROXER),
                 tooltipText: s.intl.string(s.t.zROXER),
                 onClick: () => {
-                    (i.Z.openPrivateChannel({ recipientIds: t }), null == c || c());
+                    (i.Z.openPrivateChannel({ recipientIds: t }), null == d || d());
                 }
             },
             a

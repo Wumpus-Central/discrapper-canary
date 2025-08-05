@@ -93,30 +93,30 @@ function S(e, t, n, g) {
     var E = String(e),
         O = String(t),
         v = (0, p.j)(),
-        S = null != (R = null != (P = null == g ? void 0 : g.locale) ? P : v.locale) ? R : r.Z;
+        S = null != (w = null != (R = null == g ? void 0 : g.locale) ? R : v.locale) ? w : r.Z;
     if (!S.match) throw RangeError('locale must contain match property');
-    var N = (0, u.Z)(null != (w = null != (D = null != (L = null != (x = null == g ? void 0 : g.firstWeekContainsDate) ? x : null == g || null == (M = g.locale) || null == (k = M.options) ? void 0 : k.firstWeekContainsDate) ? L : v.firstWeekContainsDate) ? D : null == (j = v.locale) || null == (U = j.options) ? void 0 : U.firstWeekContainsDate) ? w : 1);
+    var N = (0, u.Z)(null != (P = null != (D = null != (L = null != (x = null == g ? void 0 : g.firstWeekContainsDate) ? x : null == g || null == (k = g.locale) || null == (j = k.options) ? void 0 : j.firstWeekContainsDate) ? L : v.firstWeekContainsDate) ? D : null == (M = v.locale) || null == (U = M.options) ? void 0 : U.firstWeekContainsDate) ? P : 1);
     if (!(N >= 1 && N <= 7)) throw RangeError('firstWeekContainsDate must be between 1 and 7 inclusively');
-    var C = (0, u.Z)(null != (G = null != (B = null != (V = null != (F = null == g ? void 0 : g.weekStartsOn) ? F : null == g || null == (Z = g.locale) || null == (H = Z.options) ? void 0 : H.weekStartsOn) ? V : v.weekStartsOn) ? B : null == (Y = v.locale) || null == (W = Y.options) ? void 0 : W.weekStartsOn) ? G : 0);
+    var C = (0, u.Z)(null != (G = null != (B = null != (Z = null != (F = null == g ? void 0 : g.weekStartsOn) ? F : null == g || null == (V = g.locale) || null == (H = V.options) ? void 0 : H.weekStartsOn) ? Z : v.weekStartsOn) ? B : null == (Y = v.locale) || null == (W = Y.options) ? void 0 : W.weekStartsOn) ? G : 0);
     if (!(C >= 0 && C <= 6)) throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
     if ('' === O)
         if ('' === E) return (0, a.default)(n);
         else return new Date(NaN);
-    var R,
+    var w,
+        R,
         P,
-        w,
         D,
         L,
         x,
-        M,
         k,
         j,
+        M,
         U,
         G,
         B,
-        V,
-        F,
         Z,
+        F,
+        V,
         H,
         Y,
         W,
@@ -127,17 +127,17 @@ function S(e, t, n, g) {
             locale: S
         },
         q = [new f.GT()],
-        X = O.match(y)
+        $ = O.match(y)
             .map(function (e) {
                 var t = e[0];
                 return t in s.Z ? (0, s.Z[t])(e, S.formatLong) : e;
             })
             .join('')
             .match(b),
-        Q = [],
-        J = m(X);
+        X = [],
+        Q = m($);
     try {
-        var $ = function () {
+        var J = function () {
             var t = K.value;
             (!(null != g && g.useAdditionalWeekYearTokens) && (0, c.Do)(t) && (0, c.qp)(t, O, e), !(null != g && g.useAdditionalDayOfYearTokens) && (0, c.Iu)(t) && (0, c.qp)(t, O, e));
             var n = t[0],
@@ -145,12 +145,12 @@ function S(e, t, n, g) {
             if (r) {
                 var i = r.incompatibleTokens;
                 if (Array.isArray(i)) {
-                    var a = Q.find(function (e) {
+                    var a = X.find(function (e) {
                         return i.includes(e.token) || e.token === n;
                     });
                     if (a) throw RangeError("The format string mustn't contain `".concat(a.fullToken, '` and `').concat(t, '` at the same time'));
-                } else if ('*' === r.incompatibleTokens && Q.length > 0) throw RangeError("The format string mustn't contain `".concat(t, '` and any other token at the same time'));
-                Q.push({
+                } else if ('*' === r.incompatibleTokens && X.length > 0) throw RangeError("The format string mustn't contain `".concat(t, '` and any other token at the same time'));
+                X.push({
                     token: n,
                     fullToken: t
                 });
@@ -163,14 +163,14 @@ function S(e, t, n, g) {
                 E = E.slice(t.length);
             }
         };
-        for (J.s(); !(K = J.n()).done; ) {
-            var ee = $();
+        for (Q.s(); !(K = Q.n()).done; ) {
+            var ee = J();
             if ('object' === h(ee)) return ee.v;
         }
     } catch (e) {
-        J.e(e);
+        Q.e(e);
     } finally {
-        J.f();
+        Q.f();
     }
     if (E.length > 0 && I.test(E)) return new Date(NaN);
     var et = q

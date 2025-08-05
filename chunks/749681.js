@@ -1,106 +1,96 @@
-(a.r(t),
-    a.d(t, {
-        transitionToGlobalDiscovery: () =>
-            function e(t) {
-                var a, h, b;
-                let f = t.tab;
-                switch ((d.Z.setState({ selectedTab: f }), f)) {
-                    case u.GlobalDiscoveryTab.SERVERS:
-                        let v = t.selectedServersTab;
-                        return (
-                            null != v
-                                ? l.Z.setState({
-                                      selectedTab: v,
-                                      entrypoint: null != (a = t.entrypoint) ? a : p.Qq.UNKNOWN
-                                  })
-                                : l.Z.setState({ entrypoint: null != (h = t.entrypoint) ? h : p.Qq.UNKNOWN }),
-                            (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_SERVERS, t.extra)
-                        );
-                    case u.GlobalDiscoveryTab.APPS:
-                        if (null != t.newSessionState) {
-                            let a = (0, r.PM)(),
-                                { guildId: l, entrypoint: i } = t.newSessionState;
-                            if (
-                                (n.z8.setState({
-                                    sessionId: a,
-                                    guildId: null != l ? l : null,
-                                    entrypoint: i,
-                                    trackedOpenedFromExternalEntrypoint: !1
-                                }),
-                                c.default.track(m.rMx.APP_DIRECTORY_OPENED, {
-                                    source: null == i ? void 0 : i.name,
-                                    session_id: a,
-                                    guild_id: l,
-                                    user_id: null == (b = o.default.getCurrentUser()) ? void 0 : b.id
-                                }),
-                                t.newSessionState.restorePreviousView)
-                            )
-                                return e(
-                                    (function () {
-                                        let { lastItem: e } = n.aQ.getState();
-                                        if (null != e)
-                                            switch (e.type) {
-                                                case n.m_.APPLICATION:
-                                                    return {
-                                                        tab: u.GlobalDiscoveryTab.APPS,
-                                                        applicationId: e.applicationId,
-                                                        section: e.section
-                                                    };
-                                                case n.m_.CATEGORY:
-                                                    return {
-                                                        tab: u.GlobalDiscoveryTab.APPS,
-                                                        categoryId: Number(e.categoryId)
-                                                    };
-                                                case n.m_.SEARCH:
-                                                    var t;
-                                                    return {
-                                                        tab: u.GlobalDiscoveryTab.APPS,
-                                                        query: null != (t = e.query) ? t : '',
-                                                        page: e.page,
-                                                        categoryId: null != e.categoryId ? Number(e.categoryId) : void 0
-                                                    };
-                                            }
-                                        return { tab: u.GlobalDiscoveryTab.APPS };
-                                    })()
-                                );
-                        }
-                        if (null != t.applicationId) {
-                            if (t.section === x.GlobalDiscoveryAppsSections.STORE)
-                                if (null != t.skuId) return (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.applicationId, t.skuId));
-                                else return (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(t.applicationId, x.GlobalDiscoveryAppsSections.STORE));
-                            return (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(t.applicationId));
-                        }
-                        if (null != t.query) {
-                            let e = new URLSearchParams();
-                            return ('' !== t.query && e.set('q', t.query), null != t.categoryId && e.set('category_id', t.categoryId.toString()), null != t.page && e.set('page', t.page.toString()), (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, { search: e.toString() }));
-                        }
-                        if (null != t.categoryId) return (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(t.categoryId.toString()));
-                        else return (0, s.uL)(m.Z5c.GLOBAL_DISCOVERY_APPS);
-                    case u.GlobalDiscoveryTab.QUESTS:
-                        return (0, i.navigateToQuestHome)({
-                            fromContent: t.questContent,
-                            questId: t.questId
-                        });
-                    default:
-                        throw Error('[transitionToGlobalDiscovery] Unhandled tab type: '.concat(f));
-                }
+(n.r(t), n.d(t, { transitionToGlobalDiscovery: () => h }), n(65234), n(111804), n(490233), n(97749), n(388685), n(415506));
+var r = n(258971),
+    i = n(726115),
+    a = n(859921),
+    o = n(110560),
+    s = n(703656),
+    l = n(594174),
+    c = n(626135),
+    u = n(836768),
+    d = n(49898),
+    f = n(981631),
+    _ = n(979007),
+    p = n(128449);
+function h(e) {
+    var t, n, g;
+    let E = e.tab;
+    switch ((u.Z.setState({ selectedTab: E }), E)) {
+        case d.GlobalDiscoveryTab.SERVERS:
+            let b = e.selectedServersTab;
+            return (
+                null != b
+                    ? a.Z.setState({
+                          selectedTab: b,
+                          entrypoint: null != (t = e.entrypoint) ? t : p.Qq.UNKNOWN
+                      })
+                    : a.Z.setState({ entrypoint: null != (n = e.entrypoint) ? n : p.Qq.UNKNOWN }),
+                (0, s.uL)(f.Z5c.GLOBAL_DISCOVERY_SERVERS, e.extra)
+            );
+        case d.GlobalDiscoveryTab.APPS:
+            if (null != e.newSessionState) {
+                let t = (0, i.PM)(),
+                    { guildId: n, entrypoint: a } = e.newSessionState;
+                if (
+                    (r.z8.setState({
+                        sessionId: t,
+                        guildId: null != n ? n : null,
+                        entrypoint: a,
+                        trackedOpenedFromExternalEntrypoint: !1
+                    }),
+                    c.default.track(f.rMx.APP_DIRECTORY_OPENED, {
+                        source: null == a ? void 0 : a.name,
+                        session_id: t,
+                        guild_id: n,
+                        user_id: null == (g = l.default.getCurrentUser()) ? void 0 : g.id
+                    }),
+                    e.newSessionState.restorePreviousView)
+                )
+                    return h(m());
             }
-    }),
-    a(65234),
-    a(111804),
-    a(490233),
-    a(97749),
-    a(388685),
-    a(415506));
-var n = a(258971),
-    r = a(726115),
-    l = a(859921),
-    i = a(110560),
-    s = a(703656),
-    o = a(594174),
-    c = a(626135),
-    d = a(836768),
-    u = a(49898),
-    m = a(981631),
-    x = a(979007),
-    p = a(128449);
+            if (null != e.applicationId) {
+                if (e.section === _.GlobalDiscoveryAppsSections.STORE)
+                    if (null != e.skuId) return (0, s.uL)(f.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(e.applicationId, e.skuId));
+                    else return (0, s.uL)(f.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(e.applicationId, _.GlobalDiscoveryAppsSections.STORE));
+                return (0, s.uL)(f.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(e.applicationId));
+            }
+            if (null != e.query) {
+                let t = new URLSearchParams();
+                return ('' !== e.query && t.set('q', e.query), null != e.categoryId && t.set('category_id', e.categoryId.toString()), null != e.page && t.set('page', e.page.toString()), (0, s.uL)(f.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, { search: t.toString() }));
+            }
+            if (null != e.categoryId) return (0, s.uL)(f.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(e.categoryId.toString()));
+            else return (0, s.uL)(f.Z5c.GLOBAL_DISCOVERY_APPS);
+        case d.GlobalDiscoveryTab.QUESTS:
+            return (0, o.navigateToQuestHome)({
+                fromContent: e.questContent,
+                questId: e.questId
+            });
+        default:
+            throw Error('[transitionToGlobalDiscovery] Unhandled tab type: '.concat(E));
+    }
+}
+function m() {
+    let { lastItem: e } = r.aQ.getState();
+    if (null != e)
+        switch (e.type) {
+            case r.m_.APPLICATION:
+                return {
+                    tab: d.GlobalDiscoveryTab.APPS,
+                    applicationId: e.applicationId,
+                    section: e.section
+                };
+            case r.m_.CATEGORY:
+                return {
+                    tab: d.GlobalDiscoveryTab.APPS,
+                    categoryId: Number(e.categoryId)
+                };
+            case r.m_.SEARCH:
+                var t;
+                return {
+                    tab: d.GlobalDiscoveryTab.APPS,
+                    query: null != (t = e.query) ? t : '',
+                    page: e.page,
+                    categoryId: null != e.categoryId ? Number(e.categoryId) : void 0
+                };
+        }
+    return { tab: d.GlobalDiscoveryTab.APPS };
+}

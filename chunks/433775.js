@@ -8,36 +8,36 @@ var r = n(73800),
     c = n(981631);
 let u = { can_broadcast: !1 };
 function d(e, t, n) {
-    let [d, x] = r.useState(u),
-        [m, g] = r.useState(!1),
-        v = r.useRef(!1),
-        h = null == e ? void 0 : e.id,
-        f = null == e ? void 0 : e.features.has(c.oNc.HAS_DIRECTORY_ENTRY);
+    let [d, m] = r.useState(u),
+        [x, g] = r.useState(!1),
+        h = r.useRef(!1),
+        v = null == e ? void 0 : e.id,
+        p = null == e ? void 0 : e.features.has(c.oNc.HAS_DIRECTORY_ENTRY);
     (r.useEffect(() => {
-        if (!f) return void x(u);
-        v.current ||
-            null == h ||
+        if (!p) return void m(u);
+        h.current ||
+            null == v ||
             (async () => {
-                v.current = !0;
+                h.current = !0;
                 try {
-                    let e = await (0, s.X)(h, o.C2.GUILD_SCHEDULED_EVENT, t);
-                    x(e);
+                    let e = await (0, s.X)(v, o.C2.GUILD_SCHEDULED_EVENT, t);
+                    m(e);
                 } catch (e) {
-                    x(u);
+                    m(u);
                 }
-                v.current = !1;
+                h.current = !1;
             })();
-    }, [h, f, t]),
+    }, [v, p, t]),
         r.useEffect(() => {
             var e;
             if (!d.can_broadcast) return void g(!1);
             g(null == (e = d.has_broadcast) || e);
         }, [d]));
-    let p = (0, l.e7)([a.Z], () => (0, i.wg)(n, [a.Z]));
+    let f = (0, l.e7)([a.Z], () => (0, i.wg)(n, [a.Z]));
     return {
         broadcastInfo: d,
-        broadcastToDirectoryChannels: p && m,
+        broadcastToDirectoryChannels: f && x,
         setBroadcastToDirectoryChannels: g,
-        canEveryoneRoleViewEvent: p
+        canEveryoneRoleViewEvent: f
     };
 }

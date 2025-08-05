@@ -1,57 +1,57 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => O });
 var r = n(255367),
     i = n(73800),
-    l = n(704215),
-    a = n(481060),
-    o = n(475179),
-    s = n(561472),
+    a = n(704215),
+    o = n(481060),
+    s = n(475179),
+    l = n(561472),
     c = n(287746),
     u = n(325708),
     d = n(541716),
-    p = n(266454),
-    h = n(665149),
-    f = n(703558),
-    m = n(585483),
-    g = n(909820),
-    b = n(981631),
-    _ = n(921944),
-    y = n(388032),
-    C = n(591837);
-let x = function (e) {
-    let { channel: t, guild: n, maxWidth: x } = e;
+    f = n(266454),
+    _ = n(665149),
+    p = n(703558),
+    h = n(585483),
+    m = n(909820),
+    g = n(981631),
+    E = n(921944),
+    b = n(388032),
+    y = n(591837);
+let O = function (e) {
+    let { channel: t, guild: n, maxWidth: O } = e;
     i.useEffect(() => {
-        (0, p.Q3)(l.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: _.L.AUTO });
+        (0, f.Q3)(a.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: E.L.AUTO });
     }, []);
     let v = i.useCallback(() => {
-            (o.Z.updateChatOpen(t.id, !1), m.S.safeDispatch(b.CkL.FOCUS_CHAT_BUTTON));
+            (s.Z.updateChatOpen(t.id, !1), h.S.safeDispatch(g.CkL.FOCUS_CHAT_BUTTON));
         }, [t.id]),
-        j = (0, r.jsx)(h.ZP.Icon, {
-            icon: a.Dio,
-            tooltip: y.intl.string(y.t.cpT0Cg),
+        I = (0, r.jsx)(_.ZP.Icon, {
+            icon: o.Dio,
+            tooltip: b.intl.string(b.t.cpT0Cg),
             onClick: v
         });
     return (0, r.jsxs)(u.Z, {
         sidebarType: u.y.CallChatSidebar,
-        maxWidth: x,
-        floatingLayer: g.ZP,
+        maxWidth: O,
+        floatingLayer: m.ZP,
         children: [
-            (0, r.jsx)(s.Z, {
+            (0, r.jsx)(l.Z, {
                 channel: t,
-                draftType: f.d.ChannelMessage
+                draftType: p.d.ChannelMessage
             }),
-            (0, r.jsxs)(h.ZP, {
-                toolbar: j,
-                'aria-label': y.intl.string(y.t.BIYAqa),
+            (0, r.jsxs)(_.ZP, {
+                toolbar: I,
+                'aria-label': b.intl.string(b.t.BIYAqa),
                 children: [
-                    (0, r.jsx)(h.ZP.ChannelIcon, {
-                        icon: a.kBi,
-                        'aria-label': y.intl.string(y.t.Kx5kCA)
+                    (0, r.jsx)(_.ZP.ChannelIcon, {
+                        icon: o.kBi,
+                        'aria-label': b.intl.string(b.t.Kx5kCA)
                     }),
-                    (0, r.jsx)(h.ZP.Title, { children: t.name })
+                    (0, r.jsx)(_.ZP.Title, { children: t.name })
                 ]
             }),
             (0, r.jsx)('div', {
-                className: C.chat,
+                className: y.chat,
                 children: (0, r.jsx)(
                     c.Z,
                     {

@@ -1,6 +1,6 @@
 (n.d(t, {
     V: () => G,
-    Z: () => V
+    Z: () => Z
 }),
     n(415506),
     n(358797),
@@ -31,8 +31,8 @@ var r = n(990547),
     A = n(573261),
     N = n(668781),
     C = n(981631),
-    R = n(388032);
-function P(e, t, n) {
+    w = n(388032);
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,7 +45,7 @@ function P(e, t, n) {
         e
     );
 }
-function w(e) {
+function P(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -56,7 +56,7 @@ function w(e) {
                 })
             )),
             r.forEach(function (t) {
-                P(e, t, n[t]);
+                R(e, t, n[t]);
             }));
     }
     return e;
@@ -88,14 +88,14 @@ function x(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = M(e, t);
+        i = k(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function M(e, t) {
+function k(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -104,13 +104,13 @@ function M(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let k = (e) => {
+let j = (e) => {
         N.Z.show({
-            title: R.intl.string(R.t.cTaRxM),
-            body: R.intl.formatToPlainString(R.t['VSd+Ag'], { quantity: e })
+            title: w.intl.string(w.t.cTaRxM),
+            body: w.intl.formatToPlainString(w.t['VSd+Ag'], { quantity: e })
         });
     },
-    j = (e) => {
+    M = (e) => {
         o.Z.dispatch({
             type: 'GUILD_DELETE',
             guild: { id: e }
@@ -118,8 +118,8 @@ let k = (e) => {
     },
     U = () => {
         N.Z.show({
-            title: R.intl.string(R.t.ZZlox8),
-            body: R.intl.string(R.t.ZUEGFh)
+            title: w.intl.string(w.t.ZZlox8),
+            body: w.intl.string(w.t.ZUEGFh)
         });
     };
 function G(e) {
@@ -133,7 +133,7 @@ function G(e) {
 function B(e, t) {
     return null != t ? t : (0, _.V)(e);
 }
-let V = {
+let Z = {
     joinGuild: async function (e) {
         var t, r, i, s, l;
         let c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -201,18 +201,18 @@ let V = {
         } catch (t) {
             if ((null == (i = t.body) ? void 0 : i.code) === C.evJ.TOO_MANY_USER_GUILDS) {
                 let e = v.default.getCurrentUser();
-                S.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? k(C.tHP) : k(C.DZw);
+                S.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? j(C.tHP) : j(C.DZw);
             }
-            throw ((null == (s = t.body) ? void 0 : s.code) === C.evJ.GUILD_AT_CAPACITY && U(), h && (null == (l = t.body) ? void 0 : l.code) === C.evJ.UNKNOWN_GUILD && j(e), t);
+            throw ((null == (s = t.body) ? void 0 : s.code) === C.evJ.GUILD_AT_CAPACITY && U(), h && (null == (l = t.body) ? void 0 : l.code) === C.evJ.UNKNOWN_GUILD && M(e), t);
         }
     },
     waitForGuild: G,
     async transitionToGuildSync(e, t, n, r) {
         let i = B((await G(e)).id, n),
             a = t;
-        ((null == t ? void 0 : t.hasOwnProperty('welcomeModalChannelId')) && null == t.welcomeModalChannelId && (a = L(w({}, t), { welcomeModalChannelId: null != i ? i : void 0 })), (0, u.Z)(C.Z5c.CHANNEL(e, i, r), a), await new Promise(setImmediate));
+        ((null == t ? void 0 : t.hasOwnProperty('welcomeModalChannelId')) && null == t.welcomeModalChannelId && (a = L(P({}, t), { welcomeModalChannelId: null != i ? i : void 0 })), (0, u.Z)(C.Z5c.CHANNEL(e, i, r), a), await new Promise(setImmediate));
     },
-    deleteGuild: j,
+    deleteGuild: M,
     selectGuild(e) {
         (0, d.a)(e);
     },
@@ -324,7 +324,7 @@ let V = {
         }),
     async createRole(e, t, n, r) {
         let l = {
-            name: null != t && '' !== t ? t : R.intl.string(R.t.QBMHvL),
+            name: null != t && '' !== t ? t : w.intl.string(w.t.QBMHvL),
             color: null != n ? n : 0,
             colors:
                 null != r
@@ -364,7 +364,7 @@ let V = {
             s = null === r || (null == r ? void 0 : r.startsWith('data:')) ? r : void 0,
             l = await a.tn.patch({
                 url: C.ANM.GUILD_ROLE(e, t),
-                body: L(w({}, o), {
+                body: L(P({}, o), {
                     icon: s,
                     unicode_emoji: i
                 }),

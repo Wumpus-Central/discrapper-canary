@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => w,
-    j: () => P
+    Z: () => P,
+    j: () => R
 });
 var r = n(526167),
     i = n(621554),
@@ -28,12 +28,12 @@ var r = n(526167),
     A = n(213921),
     N = n(34721),
     C = n(410693),
-    R = n(235731);
-function P() {
+    w = n(235731);
+function R() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return e ? R : i;
+    return e ? w : i;
 }
-let w = {
+let P = {
     DEFAULT_AVATARS: [o, s, l, c, u, d],
     DEFAULT_PROVISIONAL_AVATARS: [I, T, S, A, N, C],
     DEFAULT_GROUP_DM_AVATARS: [f, _, p, h, m, g, E, b],

@@ -1,6 +1,6 @@
 (n.d(t, {
     Y: () => N,
-    Z: () => P
+    Z: () => R
 }),
     n(388685));
 var r = n(255367),
@@ -96,10 +96,10 @@ function A(e) {
     e.currentTarget.scrollTo(0, 0);
 }
 let N = i.memo(function (e) {
-    let { maxBodyLines: t, expand: n = !1, onNotificationShow: a, onDismissClick: d, onConfirmClick: p, onCancelClick: m, onNotificationClick: y, hint: O, cancelText: v, confirmText: I, icon: T, body: S, title: N, renderFooter: C, contentOpacity: R, status: P, containerRef: w, className: D, wrapperClassName: L } = e,
-        [x, M] = i.useState(!1),
-        k = n || x || P === g._1z.FOCUSED,
-        j = (0, l.e7)([h.ZP], () => h.ZP.isInputLocked((0, f.getPID)()));
+    let { maxBodyLines: t, expand: n = !1, onNotificationShow: a, onDismissClick: d, onConfirmClick: p, onCancelClick: m, onNotificationClick: y, hint: O, cancelText: v, confirmText: I, icon: T, body: S, title: N, renderFooter: C, contentOpacity: w, status: R, containerRef: P, className: D, wrapperClassName: L } = e,
+        [x, k] = i.useState(!1),
+        j = n || x || R === g._1z.FOCUSED,
+        M = (0, l.e7)([h.ZP], () => h.ZP.isInputLocked((0, f.getPID)()));
     i.useEffect(() => {
         null == a || a();
     }, [a]);
@@ -121,13 +121,13 @@ let N = i.memo(function (e) {
             },
             [m]
         ),
-        V = i.useCallback(() => {
-            M(!0);
+        Z = i.useCallback(() => {
+            k(!0);
         }, []),
         F = i.useCallback(() => {
-            M(!1);
+            k(!1);
         }, []);
-    function Z() {
+    function V() {
         return (0, r.jsx)(_.Z, {
             className: b.dismissButton,
             onDismiss: U,
@@ -135,7 +135,7 @@ let N = i.memo(function (e) {
         });
     }
     function H() {
-        let e = 'function' == typeof O ? O(k, j) : O;
+        let e = 'function' == typeof O ? O(j, M) : O;
         return null != O
             ? (0, r.jsx)(u.Text, {
                   className: b.hint,
@@ -189,12 +189,12 @@ let N = i.memo(function (e) {
                 });
     }
     function K() {
-        let e = null == C ? void 0 : C(k, j);
+        let e = null == C ? void 0 : C(j, M);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)(s.animated.div, {
                     className: b.iconAndDetails,
-                    style: { opacity: R },
+                    style: { opacity: w },
                     children: [
                         W(),
                         (0, r.jsxs)('div', {
@@ -210,7 +210,7 @@ let N = i.memo(function (e) {
                                     ? (0, r.jsx)(u.Text, {
                                           color: 'interactive-normal',
                                           variant: 'text-sm/normal',
-                                          lineClamp: null != t ? t * (k ? 2 : 1) : void 0,
+                                          lineClamp: null != t ? t * (j ? 2 : 1) : void 0,
                                           children: S
                                       })
                                     : null,
@@ -236,16 +236,16 @@ let N = i.memo(function (e) {
                 className: o()(b.overflowWrapper, L),
                 onScroll: A,
                 children: (0, r.jsx)(u.P3F, {
-                    innerRef: w,
+                    innerRef: P,
                     ignoreKeyPress: !0,
-                    onMouseOver: V,
+                    onMouseOver: Z,
                     onMouseLeave: F,
                     onClick: y,
                     className: o()(b.container, { [b.clickable]: null != y }, D),
                     children: K()
                 })
             }),
-            Z()
+            V()
         ]
     });
 });
@@ -271,7 +271,7 @@ function C(e) {
         children: c
     });
 }
-function R(e) {
+function w(e) {
     let { observe: t, children: n } = e;
     return t
         ? (0, r.jsx)(p.Z, {
@@ -280,7 +280,7 @@ function R(e) {
           })
         : n;
 }
-function P(e) {
+function R(e) {
     let { notification: t, index: n, locked: a, pinned: o, transitionState: s, cleanUp: l } = e,
         {
             id: c,
@@ -313,23 +313,23 @@ function P(e) {
             },
             [h, c]
         ),
-        P = i.useCallback((e, t) => (null == g ? void 0 : g(e, c, t)), [g, c]),
+        R = i.useCallback((e, t) => (null == g ? void 0 : g(e, c, t)), [g, c]),
         {
-            props: { onNotificationShow: w, onDismissClick: D, renderFooter: L, onNotificationClick: x, onConfirmClick: M, onCancelClick: k, disableClickableRegions: j = !1 },
+            props: { onNotificationShow: P, onDismissClick: D, renderFooter: L, onNotificationClick: x, onConfirmClick: k, onCancelClick: j, disableClickableRegions: M = !1 },
             status: U
         } = t,
         G = T(t.props, ['onNotificationShow', 'onDismissClick', 'renderFooter', 'onNotificationClick', 'onConfirmClick', 'onCancelClick', 'disableClickableRegions']),
         B = !o && a,
-        V = 0 === n && !j && !B,
-        { ref: F, springs: Z } = (0, m.X4)(t.id, s, l);
+        Z = 0 === n && !M && !B,
+        { ref: F, springs: V } = (0, m.X4)(t.id, s, l);
     return (0, r.jsx)(C, {
         transitionState: s,
-        springs: Z,
+        springs: V,
         index: n,
         locked: a,
         animationWrapperClassName: E,
-        children: (0, r.jsx)(R, {
-            observe: V,
+        children: (0, r.jsx)(w, {
+            observe: Z,
             children: (0, r.jsx)(
                 N,
                 I(O({}, G), {
@@ -341,12 +341,12 @@ function P(e) {
                     onNotificationClick: null != _ ? v : void 0,
                     onConfirmClick: null != p ? S : void 0,
                     onCancelClick: null != h ? A : void 0,
-                    renderFooter: P,
+                    renderFooter: R,
                     expand: !1,
                     index: n,
                     locked: a,
                     status: U,
-                    contentOpacity: Z.contentOpacity
+                    contentOpacity: V.contentOpacity
                 })
             )
         })

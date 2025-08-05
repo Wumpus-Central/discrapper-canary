@@ -1,24 +1,24 @@
-(t.d(n, { Z: () => y }), t(388685));
+(t.d(n, { Z: () => Z }), t(388685));
 var l = t(255367),
     r = t(73800),
     i = t(442837),
     o = t(706898),
     s = t(481060),
-    c = t(246946),
+    d = t(246946),
     a = t(785717),
-    u = t(786366),
-    d = t(323090),
+    c = t(786366),
+    u = t(323090),
     f = t(116906),
     p = t(384816),
-    j = t(389190),
+    h = t(389190),
     g = t(428927),
-    h = t(228168),
-    v = t(388032),
+    v = t(228168),
+    j = t(388032),
     m = t(301150),
     b = t(923243);
 function x(e) {
-    let { section: n, subsection: t, user: r, currentUser: i, displayProfile: o, guildId: s, channelId: c, onClose: a } = e;
-    return n === h.oh.ACTIVITY
+    let { section: n, subsection: t, user: r, currentUser: i, displayProfile: o, guildId: s, channelId: d, onClose: a } = e;
+    return n === v.oh.ACTIVITY
         ? (0, l.jsx)(f.Z, {
               user: r,
               currentUser: i,
@@ -26,22 +26,22 @@ function x(e) {
               guildId: s,
               onClose: a
           })
-        : n === h.oh.MUTUAL_FRIENDS
-          ? (0, l.jsx)(j.Z, {
+        : n === v.oh.MUTUAL_FRIENDS
+          ? (0, l.jsx)(h.Z, {
                 user: r,
                 guildId: s,
-                channelId: c,
+                channelId: d,
                 onClose: a
             })
-          : n === h.oh.MUTUAL_GUILDS
+          : n === v.oh.MUTUAL_GUILDS
             ? (0, l.jsx)(g.Z, {
                   user: r,
                   onClose: a
               })
-            : n === h.oh.BOT_DATA_ACCESS
-              ? (0, l.jsx)(u.Z, { user: r })
-              : n === h.oh.BOT_INFO
-                ? (0, l.jsx)(d.Z, {
+            : n === v.oh.BOT_DATA_ACCESS
+              ? (0, l.jsx)(c.Z, { user: r })
+              : n === v.oh.BOT_INFO
+                ? (0, l.jsx)(u.Z, {
                       user: r,
                       currentUser: i,
                       displayProfile: o,
@@ -57,27 +57,27 @@ function x(e) {
                       onClose: a
                   });
 }
-function y(e) {
-    var n, t, u;
-    let { user: d, currentUser: f, displayProfile: p, guildId: j, items: g, initialSection: y = h.oh.USER_INFO, initialSubsection: O, onClose: Z } = e,
+function Z(e) {
+    var n, t, c;
+    let { user: u, currentUser: f, displayProfile: p, guildId: h, items: g, initialSection: Z = v.oh.USER_INFO, initialSubsection: y, onClose: O } = e,
         { trackUserProfileAction: I } = (0, a.KZ)(),
-        P = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
+        P = (0, i.e7)([d.Z], () => d.Z.hidePersonalInformation),
         [{ section: E, subsection: T }, S] = r.useState({
             section:
                 null !=
-                (u =
+                (c =
                     null ==
                     (n = g.find((e) => {
                         let { section: n } = e;
-                        return n === y;
+                        return n === Z;
                     }))
                         ? void 0
                         : n.section)
-                    ? u
+                    ? c
                     : null == (t = g[0])
                       ? void 0
                       : t.section,
-            subsection: O
+            subsection: y
         });
     r.useEffect(() => {
         null == g.find((e) => e.section === E) &&
@@ -108,7 +108,7 @@ function y(e) {
                       (0, l.jsx)('div', { className: m.emptyIconStreamerMode }),
                       (0, l.jsx)('div', {
                           className: m.emptyText,
-                          children: v.intl.string(v.t.Br1ls7)
+                          children: j.intl.string(j.t.Br1ls7)
                       })
                   ]
               })
@@ -142,11 +142,11 @@ function y(e) {
                       items: g,
                       section: E,
                       subsection: T,
-                      user: d,
+                      user: u,
                       currentUser: f,
                       displayProfile: p,
-                      guildId: j,
-                      onClose: Z
+                      guildId: h,
+                      onClose: O
                   })
               ]
           });

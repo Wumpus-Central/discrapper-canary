@@ -1,6 +1,6 @@
 (n.d(t, {
     CR: () => L,
-    DD: () => P
+    DD: () => R
 }),
     n(953529),
     n(388685));
@@ -258,12 +258,12 @@ let C = (e) => {
         return (E.error('Failed to convert ASTNode to string', e), '');
     }
 };
-function R(e) {
+function w(e) {
     var t;
     let n = N(g(h({}, e), { currentUser: null != (t = e.currentUser) ? t : a.default.getCurrentUser() }));
     return e.withoutMarkdown ? C(n) : n;
 }
-function P(e) {
+function R(e) {
     let { quest: t, questContent: n, sourceQuestContent: r } = e,
         o = (0, l.uA)({
             quest: t,
@@ -272,7 +272,7 @@ function P(e) {
         }),
         s = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
         c = (0, l.Jf)(t);
-    return R(
+    return w(
         g(h({}, e), {
             connectedConsoleLinkOnClick: o,
             withoutMarkdown: !1,
@@ -281,11 +281,11 @@ function P(e) {
         })
     );
 }
-function w(e) {
+function P(e) {
     return (0, s.$J)(e) || (0, s.pO)(e) ? 0 : (0, s.Dr)({ quest: e }) ? 1 : (0, s.q8)(e) ? 2 : 3 * !!(0, s.Vl)(e);
 }
 function D(e) {
-    return r.useMemo(() => w(e), [e]);
+    return r.useMemo(() => P(e), [e]);
 }
 function L(e) {
     let { quest: t } = e;

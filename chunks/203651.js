@@ -305,7 +305,7 @@ for (var N = 0, C = ['GET', 'POST', 'OPTIONS', 'PATCH', 'PUT', 'DELETE']; N < C.
         return (this._setDefaults(r), n && r.end(n), r);
     };
 }
-function R(e, t, n) {
+function w(e, t, n) {
     let r = E('DELETE', e);
     return ('function' == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r);
 }
@@ -322,8 +322,8 @@ function R(e, t, n) {
         let r = E('OPTIONS', e);
         return ('function' == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r);
     }),
-    (E.del = R),
-    (E.delete = R),
+    (E.del = w),
+    (E.delete = w),
     (E.patch = (e, t, n) => {
         let r = E('PATCH', e);
         return ('function' == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r);

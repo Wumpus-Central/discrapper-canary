@@ -22,33 +22,33 @@ function m(e) {
         A = null == t ? void 0 : t.state,
         N = I ? (0, c.Z)(t) : null,
         C = null != N ? ''.concat((0, u.Z)(N), ': ') : null,
-        R = null != A && '' !== A,
-        P = R || null != N,
-        w = null;
+        w = null != A && '' !== A,
+        R = w || null != N,
+        P = null;
     null != E && T
-        ? (w = (0, r.jsx)(d.Z, {
+        ? (P = (0, r.jsx)(d.Z, {
               className: a()(i, h.hangStatusIcon),
               hangStatusActivity: E
           }))
         : null == S ||
           O ||
-          (w = (0, r.jsx)(_.Z, {
+          (P = (0, r.jsx)(_.Z, {
               emoji: S,
               animate: y,
               className: i,
-              hideTooltip: v || P
+              hideTooltip: v || R
           }));
-    let D = R && (null != w ? ' '.concat(A) : A),
+    let D = w && (null != P ? ' '.concat(A) : A),
         L = () => {
-            let e = null != S && !O && !R && null == N;
+            let e = null != S && !O && !w && null == N;
             return v || e
                 ? (0, r.jsxs)(r.Fragment, {
-                      children: [C, w, D]
+                      children: [C, P, D]
                   })
                 : (0, r.jsxs)(s.Z, {
                       delay: p.X,
                       tooltipClassName: m,
-                      children: [C, w, D]
+                      children: [C, P, D]
                   });
         };
     return (0, r.jsx)(o.Text, {

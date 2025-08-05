@@ -1,7 +1,7 @@
 (n.d(t, {
     M9: () => C,
     aW: () => D,
-    wu: () => w
+    wu: () => P
 }),
     n(388685));
 var r = n(997945),
@@ -30,7 +30,7 @@ var r = n(997945),
     A = n(473974),
     N = n(563856);
 let C = 60;
-function R() {
+function w() {
     return {
         id: r.aH.DEFAULT,
         iconSource: o,
@@ -38,7 +38,7 @@ function R() {
         isPremium: !1
     };
 }
-function P() {
+function R() {
     return [
         {
             id: r.Ru.BRAND_DARK,
@@ -174,9 +174,9 @@ function P() {
         }
     ];
 }
-function w() {
-    return [R(), ...P()];
+function P() {
+    return [w(), ...R()];
 }
 function D(e) {
-    return w().find((t) => t.id === e);
+    return P().find((t) => t.id === e);
 }

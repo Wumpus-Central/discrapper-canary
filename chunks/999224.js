@@ -28,19 +28,19 @@ var r = n(771356),
     A = n(48500),
     N = n(711814),
     C = n(149334),
-    R = n(409863),
-    P = n(357196),
-    w = n(183145),
+    w = n(409863),
+    R = n(357196),
+    P = n(183145),
     D = n(691545),
     L = n(58587),
     x = n(912609),
-    M = n(565792),
-    k = n(583498),
-    j = n(442866),
+    k = n(565792),
+    j = n(583498),
+    M = n(442866),
     U = n(263984),
     G = n(591501),
     B = n(595867),
-    V = n(345272);
+    Z = n(345272);
 function F(e, t, n) {
     return (
         t in e
@@ -54,7 +54,7 @@ function F(e, t, n) {
         e
     );
 }
-function Z(e) {
+function V(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -96,7 +96,7 @@ function Y(e, t) {
 let W = {
         skye: {
             name: A.default.tzvUKy,
-            iconURL: j.Z,
+            iconURL: M.Z,
             splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(242, 96, 195, 0.50) 0%, rgba(242, 96, 195, 0.00) 100%)',
             baseColor: '#380527',
             styleKey: 'skye',
@@ -120,7 +120,7 @@ let W = {
         },
         sebastien: {
             name: A.default.NmbfHx,
-            iconURL: k.Z,
+            iconURL: j.Z,
             splashGradient: 'radial-gradient(9% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(100% 555.56% at 0% 100%, rgba(92, 119, 31, 0.50) 0%, rgba(92, 119, 31, 0.00) 100%)',
             baseColor: '#25300D',
             styleKey: 'sebastien',
@@ -136,7 +136,7 @@ let W = {
         },
         robot: {
             name: A.default.anBE8f,
-            iconURL: M.Z,
+            iconURL: k.Z,
             splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(61, 72, 79, 0.50) 0%, rgba(61, 72, 79, 0.00) 100%)',
             baseColor: '#1B1F23',
             styleKey: 'robot',
@@ -152,7 +152,7 @@ let W = {
         },
         ghost: {
             name: A.default.lFIyMz,
-            iconURL: P.Z,
+            iconURL: R.Z,
             splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(110, 73, 156, 0.50) 0%, rgba(110, 73, 156, 0.00) 100%)',
             baseColor: '#1D142A',
             styleKey: 'ghost',
@@ -176,7 +176,7 @@ let W = {
         },
         harper: {
             name: A.default.vIrxZW,
-            iconURL: w.Z,
+            iconURL: P.Z,
             splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(125, 87, 179, 0.50) 0%, rgba(125, 87, 179, 0.00) 100%)',
             baseColor: '#1D132A',
             styleKey: 'harper',
@@ -184,7 +184,7 @@ let W = {
         },
         villain: {
             name: A.default.kHmvdn,
-            iconURL: V.Z,
+            iconURL: Z.Z,
             splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(100% 555.56% at 0% 100%, rgba(219, 2, 34, 0.50) 0%, rgba(219, 2, 34, 0.00) 100%)',
             baseColor: '#3D0109',
             styleKey: 'villain',
@@ -208,7 +208,7 @@ let W = {
         },
         deepfried: {
             name: A.default.qRFFLC,
-            iconURL: R.Z,
+            iconURL: w.Z,
             splashGradient: 'radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.00) 25%), radial-gradient(89% 494.44% at 11% 100%, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.10) 15%, rgba(255, 255, 255, 0.05) 30%, rgba(255, 255, 255, 0.03) 45%, rgba(255, 255, 255, 0.01) 60%, rgba(255, 255, 255, 0.00) 75%), radial-gradient(84.38% 468.75% at 15.63% 100%, rgba(253, 177, 45, 0.50) 0%, rgba(253, 177, 45, 0.00) 100%)',
             baseColor: '#3D2701',
             styleKey: 'deepfried',
@@ -217,8 +217,8 @@ let W = {
     },
     K = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return Z(
-            Y(Z({}, e), {
+        return V(
+            Y(V({}, e), {
                 previewSoundURLs: [],
                 underDevelopment: !0
             }),

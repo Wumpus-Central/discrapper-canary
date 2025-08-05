@@ -2,7 +2,7 @@ n.d(t, {
     I8: () => N,
     Kt: () => y,
     RW: () => A,
-    T5: () => R,
+    T5: () => w,
     Yt: () => E,
     a1: () => O,
     aC: () => C,
@@ -84,7 +84,7 @@ function C(e) {
         n = l.Z.getGuild(t);
     return e.isNSFW() || (null != n && (0, o.Y2)(n));
 }
-function R() {
+function w() {
     let e = c.default.getCurrentUser();
     return null != e && null == e.nsfwAllowed;
 }

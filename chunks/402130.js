@@ -3,16 +3,16 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     a = n(481060),
-    o = n(365943),
-    s = n(594174),
+    s = n(365943),
+    o = n(594174),
     c = n(5192),
-    u = n(788111),
-    d = n(60577),
-    p = n(184301),
-    h = n(124823),
+    d = n(788111),
+    u = n(60577),
+    h = n(184301),
+    p = n(124823),
     f = n(550818),
-    m = n(983559),
-    g = n(388032);
+    g = n(983559),
+    m = n(388032);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -41,16 +41,16 @@ function b(e) {
 function _(e) {
     let { channel: t } = e,
         [n] = t.recipients,
-        _ = (0, l.e7)([s.default], () => s.default.getUser(n)),
-        y = (0, l.e7)([s.default], () => s.default.getCurrentUser()),
-        C = (0, d.Z)(),
-        [x, v] = (0, u.Z)(n);
+        _ = (0, l.e7)([o.default], () => o.default.getUser(n)),
+        y = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
+        j = (0, u.Z)(),
+        [O, x] = (0, d.Z)(n);
     if (
         (i.useEffect(() => {
-            (0, o.t)();
+            (0, s.t)();
         }, []),
         i.useEffect(() => {
-            (0, p.Z)(null != _ ? _ : n, {
+            (0, h.Z)(null != _ ? _ : n, {
                 type: 'sidebar',
                 withMutualFriendsCount: (null == _ ? void 0 : _.bot) !== !0,
                 withMutualFriends: !1,
@@ -58,35 +58,35 @@ function _(e) {
                 channelId: t.id
             });
         }, [_, n, t.id]),
-        null == _ || null == y || !C)
+        null == _ || null == y || !j)
     )
         return null;
-    let j = 'user-profile-sidebar-heading-'.concat(_.id),
-        O = c.ZP.getName(null, t.id, _);
+    let v = 'user-profile-sidebar-heading-'.concat(_.id),
+        C = c.ZP.getName(null, t.id, _);
     return (0, r.jsx)('aside', {
-        'aria-labelledby': j,
+        'aria-labelledby': v,
         children: (0, r.jsx)(a.y5t, {
             component: (0, r.jsx)(a.nn4, {
                 children: (0, r.jsx)(a.H, {
-                    id: j,
-                    children: g.intl.format(g.t.KRe1Fh, { name: O })
+                    id: v,
+                    children: m.intl.format(m.t.KRe1Fh, { name: C })
                 })
             }),
-            children: x
+            children: O
                 ? (0, r.jsx)(
                       f.Z,
                       b(
                           {
                               user: _,
                               currentUser: y,
-                              onHide: v
+                              onHide: x
                           },
                           e
                       )
                   )
                 : _.isNonUserBot()
                   ? (0, r.jsx)(
-                        h.Z,
+                        p.Z,
                         b(
                             {
                                 user: _,
@@ -96,7 +96,7 @@ function _(e) {
                         )
                     )
                   : (0, r.jsx)(
-                        m.Z,
+                        g.Z,
                         b(
                             {
                                 user: _,

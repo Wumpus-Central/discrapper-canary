@@ -56,7 +56,7 @@ function N(e) {
 function C(e) {
     var t, n, r, i, a, o;
     let s = l.default.getCurrentUser();
-    if (null == s) return R();
+    if (null == s) return w();
     ((p = null != (t = e.section) ? t : p),
         (S = null != (n = e.section) ? n : p),
         null != e.subsection && null != p && (h[p] = e.subsection),
@@ -84,14 +84,14 @@ function C(e) {
         (T = null != (a = e.analyticsLocations) ? a : []),
         (A = null != (o = e.impressionSource) ? o : null));
 }
-function R() {
+function w() {
     ((f = c.QZA.CLOSED), (y = !1), (E = null), (S = null), (b = null), (_ = null), (p = null), (h = {}), (m = {}), (v = null), (I = null), (T = []), (A = null));
 }
-function P(e) {
+function R(e) {
     var t;
     ((_ = p), (p = e.section), (I = null), (T = null != (t = e.analyticsLocations) ? t : []), null != e.subsection && (h[p] = e.subsection));
 }
-function w(e) {
+function P(e) {
     let { forSection: t } = e;
     null != t ? delete h[t] : null != p && delete h[p];
 }
@@ -108,9 +108,9 @@ function L(e) {
 function x() {
     f = c.QZA.SUBMITTING;
 }
-function M() {
+function k() {
     let e = l.default.getCurrentUser();
-    (k(),
+    (j(),
         null != e &&
             (b = d(
                 {},
@@ -128,10 +128,10 @@ function M() {
                 })
             )));
 }
-function k() {
+function j() {
     ((f = c.QZA.OPEN), (g = {}));
 }
-function j(e) {
+function M(e) {
     var t;
     if (f !== c.QZA.SUBMITTING) return !1;
     ((f = c.QZA.OPEN), (p = c.oAB.ACCOUNT), (g = null != (t = e.errors) ? t : {}));
@@ -185,14 +185,14 @@ u(U, 'displayName', 'UserSettingsModalStore');
 let G = new U(s.Z, {
     USER_SETTINGS_MODAL_OPEN: N,
     USER_SETTINGS_MODAL_INIT: C,
-    USER_SETTINGS_MODAL_CLOSE: R,
-    LOGOUT: R,
+    USER_SETTINGS_MODAL_CLOSE: w,
+    LOGOUT: w,
     USER_SETTINGS_MODAL_SUBMIT: x,
-    USER_SETTINGS_MODAL_SUBMIT_FAILURE: j,
-    USER_SETTINGS_MODAL_SET_SECTION: P,
-    USER_SETTINGS_MODAL_CLEAR_SUBSECTION: w,
+    USER_SETTINGS_MODAL_SUBMIT_FAILURE: M,
+    USER_SETTINGS_MODAL_SET_SECTION: R,
+    USER_SETTINGS_MODAL_CLEAR_SUBSECTION: P,
     USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: D,
     USER_SETTINGS_MODAL_UPDATE_ACCOUNT: L,
-    USER_SETTINGS_MODAL_SUBMIT_COMPLETE: k,
-    USER_SETTINGS_MODAL_RESET: M
+    USER_SETTINGS_MODAL_SUBMIT_COMPLETE: j,
+    USER_SETTINGS_MODAL_RESET: k
 });

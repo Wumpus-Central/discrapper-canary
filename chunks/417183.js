@@ -138,7 +138,7 @@ class m extends i.PureComponent {
                     (0, u.jW)(
                         e,
                         async () => {
-                            let { default: e } = await Promise.all([n.e('79695'), n.e('69220'), n.e('86423')]).then(n.bind(n, 881351));
+                            let { default: e } = await Promise.all([n.e('79695'), n.e('69220')]).then(n.bind(n, 881351));
                             return (n) => (0, r.jsx)(e, g(f({}, n), { user: t }));
                         },
                         {

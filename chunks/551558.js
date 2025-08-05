@@ -1,5 +1,6 @@
-var e = {};
-t.exports = function () {
-    for (var t; void 0 === t || e.hasOwnProperty(t) || !isNaN(+t); ) t = Math.floor(16777216 * Math.random()).toString(32);
-    return ((e[t] = !0), t);
+var t = {},
+    n = 16777216;
+e.exports = function () {
+    for (var e; void 0 === e || t.hasOwnProperty(e) || !isNaN(+e); ) e = Math.floor(Math.random() * n).toString(32);
+    return ((t[e] = !0), e);
 };

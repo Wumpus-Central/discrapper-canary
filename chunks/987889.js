@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(442837),
     o = n(481060),
-    a = n(570140),
-    s = n(45114),
+    s = n(570140),
+    a = n(45114),
     c = n(110255),
     u = n(268623),
     d = n(324701),
@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(993609),
     m = n(982183),
     b = n(981631),
-    _ = n(388032),
-    O = n(539499);
+    O = n(388032),
+    _ = n(539499);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -75,7 +75,7 @@ let v = {
         }, [e, t, n]);
     };
 function E(e) {
-    let { label: t, onClick: n, message: l, Icon: a, interactionType: s } = e,
+    let { label: t, onClick: n, message: l, Icon: s, interactionType: a } = e,
         [c, u] = (0, i.useState)(!1),
         d = (0, p.fJ)();
     return (0, r.jsx)(o.ua7, {
@@ -88,30 +88,30 @@ function E(e) {
             (0, r.jsx)(
                 o.P3F,
                 C(y({}, e), {
-                    className: O.action,
+                    className: _.action,
                     onClick: (e) => {
                         ((0, p.Qz)({
                             message: l,
-                            interactionType: s,
+                            interactionType: a,
                             viewId: d
                         }),
                             e.stopPropagation(),
                             n(l));
                     },
-                    children: (0, r.jsx)(a, {
+                    children: (0, r.jsx)(s, {
                         size: c ? 'sm' : 'xs',
-                        className: O.actionIcon
+                        className: _.actionIcon
                     })
                 })
             )
     });
 }
 function S(e) {
-    let { channel: t, message: n, label: l, Icon: a, Menu: s, interactionType: c, actionType: u } = e,
+    let { channel: t, message: n, label: l, Icon: s, Menu: a, interactionType: c, actionType: u } = e,
         d = (0, p.fJ)(),
         [h, f] = (0, i.useState)(!1),
         [m, b] = (0, i.useState)(!1),
-        _ = (0, i.useRef)(null),
+        O = (0, i.useRef)(null),
         { openMenu: v, closeMenu: j } = (0, g.z)(),
         E = () => {
             let e = !m;
@@ -123,15 +123,15 @@ function S(e) {
         position: 'right',
         align: 'top',
         autoInvert: !1,
-        targetElementRef: _,
+        targetElementRef: O,
         onRequestClose: () => {
             (b(!1), j(n.id, u));
         },
         renderPopout: (e) =>
             (0, r.jsx)(o.VqE, {
                 onClick: (e) => e.stopPropagation(),
-                returnRef: _,
-                children: (0, r.jsx)(s, {
+                returnRef: O,
+                children: (0, r.jsx)(a, {
                     renderPopoutProps: e,
                     channel: t,
                     message: n
@@ -148,8 +148,8 @@ function S(e) {
                     (0, r.jsx)(
                         o.P3F,
                         C(y({}, t), {
-                            innerRef: _,
-                            className: O.action,
+                            innerRef: O,
+                            className: _.action,
                             onClick: (e) => {
                                 ((0, p.Qz)({
                                     message: n,
@@ -160,11 +160,11 @@ function S(e) {
                                     E());
                             },
                             children: (0, r.jsx)(
-                                a,
+                                s,
                                 C(y({}, e), {
                                     message: n,
                                     'aria-label': l,
-                                    className: O.actionIcon,
+                                    className: _.actionIcon,
                                     size: h ? 'sm' : 'xs'
                                 })
                             )
@@ -177,14 +177,14 @@ let x = {
         [m.r0.ACK]: {
             type: 'standard',
             Icon: o.dz2,
-            label: _.intl.string(_.t.e6RscX),
+            label: O.intl.string(O.t.e6RscX),
             onClick: (e) => {
-                (a.Z.dispatch({
+                (s.Z.dispatch({
                     type: 'NOTIFICATIONS_INBOX_ITEM_ACK',
                     messageId: e.id,
                     channelId: e.channel_id
                 }),
-                    s.In(
+                    a.In(
                         e.channel_id,
                         {
                             object: b.qAy.MARK_MESSAGE_AS_READ_BUTTON,
@@ -199,13 +199,13 @@ let x = {
         },
         [m.r0.BOOKMARK]: {
             type: 'menu',
-            label: _.intl.string(_.t['9p3D9v']),
+            label: O.intl.string(O.t['9p3D9v']),
             Icon: (e) => (null != h.Z.getSavedMessage(e.message.channel_id, e.message.id) ? (0, r.jsx)(o.plf, y({}, e)) : (0, r.jsx)(o.gt9, y({}, e))),
             interactionType: p.s_.BOOKMARK,
             Menu: (e) => {
                 let { message: t, renderPopoutProps: n } = e,
                     i = (0, l.e7)([h.Z], () => h.Z.getSavedMessage(t.channel_id, t.id)),
-                    a = (0, u.x)({
+                    s = (0, u.x)({
                         message: t,
                         savedMessage: i
                     });
@@ -213,14 +213,14 @@ let x = {
                     o.v2r,
                     C(y({}, n), {
                         navId: 'message-reminder-create',
-                        'aria-label': _.intl.string(_.t.mJ3P0N),
+                        'aria-label': O.intl.string(O.t.mJ3P0N),
                         onClose: n.closePopout,
                         onSelect: () => null,
                         children: [
                             null != i
                                 ? (0, r.jsx)(o.sNh, {
                                       id: 'remove-from-for-later',
-                                      label: _.intl.string(_.t.SvXS1d),
+                                      label: O.intl.string(O.t.SvXS1d),
                                       icon: o.plf,
                                       action: () =>
                                           (0, d.x)({
@@ -232,7 +232,7 @@ let x = {
                                   })
                                 : (0, r.jsx)(o.sNh, {
                                       id: 'create-bookmark',
-                                      label: _.intl.string(_.t['9p3D9v']),
+                                      label: O.intl.string(O.t['9p3D9v']),
                                       icon: o.gt9,
                                       action: () =>
                                           (0, d.z)({
@@ -242,7 +242,7 @@ let x = {
                                           })
                                   }),
                             (0, r.jsx)(o.Clw, {}),
-                            a
+                            s
                         ]
                     })
                 );
@@ -251,7 +251,7 @@ let x = {
         [m.r0.SETTINGS]: {
             type: 'menu',
             Icon: o.Dkj,
-            label: _.intl.string(_.t.h850Sk),
+            label: O.intl.string(O.t.h850Sk),
             interactionType: p.s_.SETTINGS,
             Menu: (e) => {
                 let { channel: t, renderPopoutProps: n } = e;
@@ -260,7 +260,7 @@ let x = {
                     C(y({}, n), {
                         channel: t,
                         navId: 'channel-context',
-                        label: _.intl.string(_.t.Xm41aW)
+                        label: O.intl.string(O.t.Xm41aW)
                     })
                 );
             }
@@ -275,7 +275,7 @@ function P(e) {
         gap: 4,
         align: 'center',
         justify: 'center',
-        className: O.actions,
+        className: _.actions,
         children: l.map((e) => {
             let i = x[e];
             switch (i.type) {

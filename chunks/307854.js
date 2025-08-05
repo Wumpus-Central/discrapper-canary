@@ -116,7 +116,7 @@ class u {
         if (!t) return this;
         let e = 'function' == typeof t ? t(this) : t,
             [s, i] = e instanceof _ ? [e.getScopeData(), e.getRequestSession()] : (0, n.PO)(e) ? [t, t.requestSession] : [],
-            { tags: r, extra: o, user: a, contexts: c, level: h, fingerprint: u = [], propagationContext: d } = s || {};
+            { tags: r, extra: o, user: a, contexts: c, level: h, fingerprint: u = [], propagationContext: p } = s || {};
         return (
             (this._tags = {
                 ...this._tags,
@@ -133,7 +133,7 @@ class u {
             a && Object.keys(a).length && (this._user = a),
             h && (this._level = h),
             u.length && (this._fingerprint = u),
-            d && (this._propagationContext = d),
+            p && (this._propagationContext = p),
             i && (this._requestSession = i),
             this
         );

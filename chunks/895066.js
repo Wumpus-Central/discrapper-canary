@@ -338,9 +338,9 @@ class m extends a.Z {
                                     A = t.packetsReceived,
                                     N = t.packetsLost,
                                     C = t.bytesReceived,
-                                    R = t.nackCount,
-                                    P = null != (a = t.fecPacketsReceived) ? a : 0,
-                                    w = null != (o = t.fecPacketsDiscarded) ? o : 0,
+                                    w = t.nackCount,
+                                    R = null != (a = t.fecPacketsReceived) ? a : 0,
+                                    P = null != (o = t.fecPacketsDiscarded) ? o : 0,
                                     D = null != (s = t.jitterBuffer) ? s : 0,
                                     L = {
                                         audioJitterBuffer: t.audioJitterBuffer,
@@ -358,7 +358,7 @@ class m extends a.Z {
                                         preemptiveExpanded: t.opPreemptiveExpand,
                                         cng: t.opCNG
                                     },
-                                    M = {
+                                    k = {
                                         passthroughCount: null != (l = t.passthroughCount) ? l : 0,
                                         decryptSuccessCount: null != (c = t.decryptSuccessCount) ? c : 0,
                                         decryptFailureCount: null != (u = t.decryptFailureCount) ? u : 0,
@@ -373,16 +373,16 @@ class m extends a.Z {
                                         a = N - e.packetsLost,
                                         o = 0,
                                         s = e.mosBuckets,
-                                        l = null != (m = e.decryptFailureBeforeSuccessCount) ? m : M.decryptSuccessCount > 0 ? M.decryptFailureCount : void 0;
+                                        l = null != (m = e.decryptFailureBeforeSuccessCount) ? m : k.decryptSuccessCount > 0 ? k.decryptFailureCount : void 0;
                                     (r > 0 && a >= 0 && ((o = this.calculateMos(S + D, i().clamp(a / (r + a), 0, 1))), s[Math.floor(o)]++),
                                         (this.inboundStats[n] = d(
                                             {
                                                 packetsReceived: A,
                                                 bytesReceived: C,
                                                 packetsLost: N,
-                                                nackCount: null != R ? R : 0,
-                                                fecPacketsReceived: P,
-                                                fecPacketsDiscarded: w,
+                                                nackCount: null != w ? w : 0,
+                                                fecPacketsReceived: R,
+                                                fecPacketsDiscarded: P,
                                                 mos: o,
                                                 mosSum: e.mosSum + o,
                                                 mosCount: e.mosCount + +(o > 0),
@@ -391,7 +391,7 @@ class m extends a.Z {
                                                 frameOpStats: x,
                                                 decryptFailureBeforeSuccessCount: l
                                             },
-                                            M
+                                            k
                                         )),
                                         (this.periodicInboundStats[n] = {
                                             previousTimestampMs: this.periodicInboundStats[n].previousTimestampMs,
@@ -410,9 +410,9 @@ class m extends a.Z {
                                             packetsReceived: A,
                                             bytesReceived: C,
                                             packetsLost: N,
-                                            nackCount: null != R ? R : 0,
-                                            fecPacketsReceived: P,
-                                            fecPacketsDiscarded: w,
+                                            nackCount: null != w ? w : 0,
+                                            fecPacketsReceived: R,
+                                            fecPacketsDiscarded: P,
                                             mos: 0,
                                             mosSum: 0,
                                             mosCount: 0,
@@ -420,7 +420,7 @@ class m extends a.Z {
                                             bufferStats: L,
                                             frameOpStats: x
                                         },
-                                        M
+                                        k
                                     )),
                                         (this.periodicInboundStats[n] = {
                                             previousTimestampMs: performance.now(),

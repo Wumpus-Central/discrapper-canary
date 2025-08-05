@@ -40,33 +40,33 @@ let y = (e, t, n, r) => {
             { user: I, details: T, appName: S } = (0, g.n)(n),
             { primaryColor: A, secondaryColor: N } = (0, d.Z)(null == v ? void 0 : v.src),
             C = (0, c.yA)(n),
-            R = (0, c.Nq)(n),
-            P = i.useCallback(
+            w = (0, c.Nq)(n),
+            R = i.useCallback(
                 (e) => {
-                    if (null != t && null != I && null != C && null != R && (0, _.qy)(R))
+                    if (null != t && null != I && null != C && null != w && (0, _.qy)(w))
                         return (0, u.SO)({
                             entry: n,
                             applicationImageSrc: null == v ? void 0 : v.src,
                             avatarSrcs: [I.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
-                            description: y(n, t, I, R),
+                            description: y(n, t, I, w),
                             timestamp: E.intl.formatToPlainString(E.t.YL7UEx, { hours: Math.round(C / o.Z.Seconds.HOUR) }),
                             colors: [A, N],
                             channelId: e
                         });
                 },
-                [null == v ? void 0 : v.src, t, C, n, A, R, N, I]
+                [null == v ? void 0 : v.src, t, C, n, A, w, N, I]
             );
-        if (null == I || null == C || null == R || !(0, _.qy)(R)) return null;
-        let w = null != n.extra.platform ? f.v[n.extra.platform] : null;
+        if (null == I || null == C || null == w || !(0, _.qy)(w)) return null;
+        let P = null != n.extra.platform ? f.v[n.extra.platform] : null;
         return (0, r.jsxs)(h.yR, {
             children: [
                 (0, r.jsx)(h.wG, {
                     channel: t,
                     headerIcons:
-                        null == w
+                        null == P
                             ? null
                             : (0, r.jsx)(m.Z, {
-                                  Icon: w,
+                                  Icon: P,
                                   'aria-label': E.intl.string(E.t.YR4cHB)
                               }),
                     entry: n,
@@ -85,7 +85,7 @@ let y = (e, t, n, r) => {
                         onVoiceChannelPreview: b,
                         user: I,
                         channel: t,
-                        generateReactionImage: P,
+                        generateReactionImage: R,
                         reactionImageAltText: O(n, I),
                         entry: n
                     })

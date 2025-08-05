@@ -1,182 +1,187 @@
-n.d(t, { Z: () => V });
+n.d(t, { Z: () => H });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    l = n.n(i),
-    a = n(512722),
-    o = n.n(a),
-    s = n(442837),
+    a = n.n(i),
+    o = n(512722),
+    s = n.n(o),
+    l = n(442837),
     c = n(755721),
     u = n(730749),
     d = n(726542),
     f = n(40851),
-    p = n(600164),
-    m = n(750154),
-    g = n(892001),
-    h = n(592125),
-    b = n(594174),
-    v = n(979651),
-    _ = n(374129),
+    _ = n(600164),
+    p = n(750154),
+    h = n(892001),
+    m = n(592125),
+    g = n(594174),
+    E = n(979651),
+    b = n(374129),
     y = n(639351),
     O = n(503438),
-    S = n(802856),
+    v = n(802856),
     I = n(387903),
-    j = n(606925),
-    x = n(719216),
-    E = n(429589),
-    P = n(276149),
+    T = n(606925),
+    S = n(719216),
+    A = n(429589),
+    N = n(276149),
     C = n(636245),
-    T = n(697761),
-    N = n(611459),
-    A = n(544671),
-    w = n(757182),
-    D = n(910424),
-    Z = n(981631),
-    L = n(477839),
-    k = n(388032),
+    w = n(697761),
+    R = n(611459),
+    P = n(544671),
+    D = n(757182),
+    L = n(910424),
+    x = n(981631),
+    k = n(477839),
+    j = n(388032),
     M = n(603571),
     U = n(126485);
-let R = (e) => {
-        let { user: t, color: n, look: i, activity: l, onAction: a } = e,
-            o = (0, f.Aq)();
+function G(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function B(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                G(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function Z(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function F(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : Z(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let V = (e) => {
+        let { user: t, color: n, look: i, activity: a, onAction: o } = e,
+            s = (0, f.Aq)(),
+            l = () => {
+                (s.dispatch(x.CkL.POPOUT_CLOSE), (0, h.closeUserProfileModal)(), null == o || o());
+            };
         return (0, r.jsx)(
-            x.Z,
+            S.Z,
             {
                 user: t,
                 color: n,
                 look: i,
-                activity: l,
-                onAction: () => {
-                    (o.dispatch(Z.CkL.POPOUT_CLOSE), (0, g.closeUserProfileModal)(), null == a || a());
-                }
+                activity: a,
+                onAction: l
             },
             'custom-activity-button'
         );
     },
-    V = (0, u.Z)((e) => {
-        let { activity: t, embeddedActivity: n, user: i, applicationStream: a, className: u, guildId: f, channelId: g, source: V, color: F = c.zx.Colors.WHITE, look: G = c.zx.Looks.OUTLINED, type: B, onAction: W } = e,
-            H = (0, s.e7)([b.default], () => {
-                let e = b.default.getCurrentUser();
-                return (o()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e);
+    H = (0, u.Z)((e) => {
+        let { activity: t, embeddedActivity: n, user: i, applicationStream: o, className: u, guildId: f, channelId: h, source: G, color: Z = c.zx.Colors.WHITE, look: H = c.zx.Looks.OUTLINED, type: Y, onAction: W } = e,
+            K = (0, l.e7)([g.default], () => {
+                let e = g.default.getCurrentUser();
+                return (s()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e);
             }),
-            Y = B === I.Y.STREAM_PREVIEW || null != a,
-            z = (0, O.Z)(t),
-            J = z || Y ? p.Z.Direction.HORIZONTAL : p.Z.Direction.VERTICAL,
-            K = (null == t ? void 0 : t.type) === Z.IIU.HANG_STATUS,
-            q = (0, s.e7)([v.Z, h.Z], () => {
+            z = Y === I.Y.STREAM_PREVIEW || null != o,
+            q = (0, O.Z)(t),
+            $ = q || z ? _.Z.Direction.HORIZONTAL : _.Z.Direction.VERTICAL,
+            X = (null == t ? void 0 : t.type) === x.IIU.HANG_STATUS,
+            Q = (0, l.e7)([E.Z, m.Z], () => {
                 var e;
-                return K ? h.Z.getChannel(null == (e = v.Z.getVoiceStateForUser(i.id)) ? void 0 : e.channelId) : null;
+                return X ? m.Z.getChannel(null == (e = E.Z.getVoiceStateForUser(i.id)) ? void 0 : e.channelId) : null;
             });
-        if ((null == t ? void 0 : t.application_id) === L.bO) {
-            var X, Q;
+        if ((null == t ? void 0 : t.application_id) === k.bO)
             return (
-                (X = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            r = Object.keys(n);
-                        ('function' == typeof Object.getOwnPropertySymbols &&
-                            (r = r.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                })
-                            )),
-                            r.forEach(function (t) {
-                                var r;
-                                ((r = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
-                                              value: r,
-                                              enumerable: !0,
-                                              configurable: !0,
-                                              writable: !0
-                                          })
-                                        : (e[t] = r));
-                            }));
-                    }
-                    return e;
-                })({}, t)),
-                (Q = Q =
-                    {
-                        buttons: [k.intl.string(M.default['Fv/2Oz'])],
-                        metadata: { button_urls: [L.U8] }
-                    }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(X, Object.getOwnPropertyDescriptors(Q))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(Q)).forEach(function (e) {
-                          Object.defineProperty(X, e, Object.getOwnPropertyDescriptor(Q, e));
-                      }),
-                (t = X),
-                (0, r.jsx)(R, {
+                (t = F(B({}, t), {
+                    buttons: [j.intl.string(M.default['Fv/2Oz'])],
+                    metadata: { button_urls: [k.U8] }
+                })),
+                (0, r.jsx)(V, {
                     user: i,
-                    color: F,
-                    look: G,
+                    color: Z,
+                    look: H,
                     activity: t,
                     onAction: W
                 })
             );
-        }
-        let $ = J === p.Z.Direction.VERTICAL;
-        return (0, r.jsx)(p.Z, {
-            grow: 0,
-            align: p.Z.Align.STRETCH,
-            direction: J,
-            wrap: $ ? p.Z.Wrap.WRAP : p.Z.Wrap.NO_WRAP,
-            className: l()(u, U.buttonsWrapper, $ ? U.vertical : U.horizontal),
-            children: (() => {
-                if ((0, S.Z)(t))
+        let J = () => {
+                if ((0, v.Z)(t))
                     return (0, r.jsx)(
-                        j.Z,
+                        T.Z,
                         {
-                            platform: d.Z.get(Z.ABu.XBOX),
-                            look: G,
-                            color: F,
+                            platform: d.Z.get(x.ABu.XBOX),
+                            look: H,
+                            color: Z,
                             onAction: W,
                             Icon: y.Z
                         },
                         'ConnectPlatformActivityButton'
                     );
-                if ((null == t ? void 0 : t.platform) === Z.M7m.PS4 || (null == t ? void 0 : t.platform) === Z.M7m.PS5)
+                if ((null == t ? void 0 : t.platform) === x.M7m.PS4 || (null == t ? void 0 : t.platform) === x.M7m.PS5)
                     return (0, r.jsx)(
-                        j.Z,
+                        T.Z,
                         {
-                            look: G,
-                            color: F,
-                            platform: d.Z.get(Z.ABu.PLAYSTATION),
+                            look: H,
+                            color: Z,
+                            platform: d.Z.get(x.ABu.PLAYSTATION),
                             onAction: W,
-                            Icon: _.Z
+                            Icon: b.Z
                         },
                         'ConnectPlatformActivityButton'
                     );
-                if (z) {
+                if (q) {
                     let e = (0, r.jsx)(
-                            A.Z,
+                            P.Z,
                             {
                                 activity: t,
                                 user: i,
                                 guildId: f,
-                                channelId: g,
-                                source: V,
-                                look: G,
-                                color: F,
+                                channelId: h,
+                                source: G,
+                                look: H,
+                                color: Z,
                                 onAction: W
                             },
                             'spotify-activity-sync-button'
                         ),
                         n = (0, r.jsx)(
-                            N.Z,
+                            R.Z,
                             {
                                 activity: t,
                                 user: i,
-                                source: V,
-                                look: G,
-                                color: F,
+                                source: G,
+                                look: H,
+                                color: Z,
                                 onAction: W
                             },
                             'spotify-activity-play-button'
@@ -185,8 +190,8 @@ let R = (e) => {
                         children: [n, e]
                     });
                 }
-                if ((0, m.dS)(t)) {
-                    let e = (0, m.rq)(t);
+                if ((0, p.dS)(t)) {
+                    let e = (0, p.rq)(t);
                     return null == e
                         ? null
                         : (0, r.jsx)(
@@ -194,32 +199,32 @@ let R = (e) => {
                               {
                                   guildId: e.guildId,
                                   channelId: e.channelId,
-                                  color: F,
-                                  look: G,
+                                  color: Z,
+                                  look: H,
                                   onAction: W
                               },
                               e.channelId
                           );
                 }
-                return Y
+                return z
                     ? (0, r.jsx)(
-                          D.Z,
+                          L.Z,
                           {
-                              isCurrentUser: H.id === i.id,
-                              color: F,
-                              look: G,
-                              applicationStream: a,
+                              isCurrentUser: K.id === i.id,
+                              color: Z,
+                              look: H,
+                              applicationStream: o,
                               onAction: W
                           },
                           'watch-button'
                       )
-                    : K && null != q
+                    : X && null != Q
                       ? (0, r.jsx)(
-                            P.Z,
+                            N.Z,
                             {
-                                color: F,
-                                look: G,
-                                hangStatusChannel: q,
+                                color: Z,
+                                look: H,
+                                hangStatusChannel: Q,
                                 onAction: W
                             },
                             'hang-status-button'
@@ -227,44 +232,44 @@ let R = (e) => {
                       : (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(
-                                    w.Z,
+                                    D.Z,
                                     {
                                         activity: t,
-                                        color: F,
-                                        look: G,
+                                        color: Z,
+                                        look: H,
                                         onAction: W
                                     },
                                     'watch-button'
                                 ),
                                 (0, r.jsx)(
-                                    E.Z,
+                                    A.Z,
                                     {
                                         activity: t,
                                         embeddedActivity: n,
                                         user: i,
-                                        color: F,
-                                        look: G,
+                                        color: Z,
+                                        look: H,
                                         onAction: W
                                     },
                                     'join-activity-button'
                                 ),
                                 (0, r.jsx)(
-                                    T.Z,
+                                    w.Z,
                                     {
                                         activity: t,
                                         user: i,
-                                        color: F,
-                                        look: G,
+                                        color: Z,
+                                        look: H,
                                         onAction: W
                                     },
                                     'notify-button'
                                 ),
                                 (0, r.jsx)(
-                                    x.Z,
+                                    S.Z,
                                     {
                                         user: i,
-                                        color: F,
-                                        look: G,
+                                        color: Z,
+                                        look: H,
                                         activity: t,
                                         onAction: W
                                     },
@@ -272,6 +277,14 @@ let R = (e) => {
                                 )
                             ]
                         });
-            })()
+            },
+            ee = $ === _.Z.Direction.VERTICAL;
+        return (0, r.jsx)(_.Z, {
+            grow: 0,
+            align: _.Z.Align.STRETCH,
+            direction: $,
+            wrap: ee ? _.Z.Wrap.WRAP : _.Z.Wrap.NO_WRAP,
+            className: a()(u, U.buttonsWrapper, ee ? U.vertical : U.horizontal),
+            children: J()
         });
     });

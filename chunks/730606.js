@@ -1,7 +1,7 @@
 (n.d(t, {
     Qk: () => N,
-    WG: () => P,
-    ZP: () => w
+    WG: () => R,
+    ZP: () => P
 }),
     n(388685));
 var r = n(255367),
@@ -48,7 +48,7 @@ function N(e) {
 function C(e, t) {
     return ((e % t) + t) % t;
 }
-function R(e) {
+function w(e) {
     let { children: t, isObscured: n, src: a } = e,
         [s, c] = i.useState(!1),
         d = i.useCallback(() => {
@@ -76,7 +76,7 @@ function R(e) {
           })
         : (0, r.jsx)(r.Fragment, { children: t(!1) });
 }
-function P(e, t) {
+function R(e, t) {
     if ('IMAGE' === e.type) {
         if (!(0, m._H)(e)) return void (0, f.po)(e.url);
         N({
@@ -91,20 +91,20 @@ function P(e, t) {
         });
     }
 }
-function w(e) {
+function P(e) {
     let { items: t, onIndexChange: n, startIndex: a = 0, enabledContentHarmTypeFlags: l = 0, shouldHideMediaOptions: u = !1 } = e,
         [f, _] = i.useState(a),
         p = i.useRef(a),
         { zoomed: m, setZoomed: N } = (0, E.Y)(),
-        P = i.useCallback(
+        R = i.useCallback(
             (e) => {
                 (_((e = C(e, t.length))), (p.current = e), null == n || n(e), N(!1));
             },
             [n, t, N]
         );
     i.useEffect(() => {
-        let e = () => P(p.current + 1),
-            t = () => P(p.current - 1);
+        let e = () => R(p.current + 1),
+            t = () => R(p.current - 1);
         return (
             h.S.subscribe(T.CkL.MODAL_CAROUSEL_NEXT, e),
             h.S.subscribe(T.CkL.MODAL_CAROUSEL_PREV, t),
@@ -112,12 +112,12 @@ function w(e) {
                 (h.S.unsubscribe(T.CkL.MODAL_CAROUSEL_NEXT, e), h.S.unsubscribe(T.CkL.MODAL_CAROUSEL_PREV, t));
             }
         );
-    }, [P, N]);
-    let w = t[f],
+    }, [R, N]);
+    let P = t[f],
         D = (0, d.g4)(
             {
                 type: c.l.GenericMedia,
-                media: w
+                media: P
             },
             l
         ),
@@ -158,12 +158,12 @@ function w(e) {
                 items: t,
                 currentIndex: f,
                 children: (e, t) =>
-                    (0, r.jsx)(R, {
+                    (0, r.jsx)(w, {
                         isObscured: !m && D,
-                        src: w.url,
+                        src: P.url,
                         children: (n) =>
                             (0, r.jsx)(I.ZP, {
-                                media: w,
+                                media: P,
                                 maxWidth: e,
                                 maxHeight: t,
                                 obscured: n,
@@ -177,7 +177,7 @@ function w(e) {
                         (0, r.jsx)(O.Z, {
                             items: t,
                             currentIndex: f,
-                            onGalleryItemClick: P,
+                            onGalleryItemClick: R,
                             className: e
                         })
                 })

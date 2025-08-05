@@ -1,70 +1,72 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    l = n(144144),
-    a = n(955415),
-    o = n(665906),
-    s = n(314897),
+    a = n(144144),
+    o = n(955415),
+    s = n(665906),
+    l = n(314897),
     c = n(592125),
     u = n(496675),
     d = n(585483),
-    p = n(51144),
-    m = n(981631),
-    f = n(388032),
-    g = n(273254);
-function _(e) {
+    f = n(51144),
+    _ = n(981631),
+    p = n(388032),
+    h = n(273254);
+function m(e) {
     let t,
         n,
-        _,
-        { author: h, banned: b, channelId: E } = e,
-        C = (0, i.e7)([s.default], () => s.default.getId()),
-        v = p.ZP.useName(h),
-        O = C === h.id,
-        x = (0, i.e7)([c.Z, u.Z], () => {
-            let e = c.Z.getChannel(E);
+        m,
+        { author: g, banned: E, channelId: b } = e,
+        y = (0, i.e7)([l.default], () => l.default.getId()),
+        O = f.ZP.useName(g),
+        v = y === g.id,
+        I = (0, i.e7)([c.Z, u.Z], () => {
+            let e = c.Z.getChannel(b);
             if (null == e) return !1;
             if (e.isPrivate()) return !0;
             if (e.isThread()) {
-                let t = (0, o.xl)(e),
-                    n = u.Z.can(m.Plq.SEND_MESSAGES_IN_THREADS, e);
+                let t = (0, s.xl)(e),
+                    n = u.Z.can(_.Plq.SEND_MESSAGES_IN_THREADS, e);
                 return !t && n;
             }
-            return u.Z.can(m.Plq.SEND_MESSAGES, e);
+            return u.Z.can(_.Plq.SEND_MESSAGES, e);
         });
+    function T() {
+        let { id: e } = g,
+            t = '@'.concat(f.ZP.getUserTag(g, { decoration: 'never' })),
+            n = '<@'.concat(e, '>');
+        (d.S.dispatchToLastSubscribed(_.CkL.INSERT_TEXT, {
+            plainText: t,
+            rawText: n
+        }),
+            null != b && a.Z.startTyping(b));
+    }
     return (
-        O
-            ? ((t = f.intl.string(f.t['F/OLvL'])), (_ = f.intl.string(f.t.C89OLC)))
-            : ((_ = f.intl.string(f.t['YVub5+'])),
-              b
-                  ? (t = f.intl.string(f.t['57nBt7']))
-                  : null != v && x
-                    ? ((t = f.intl.formatToPlainString(f.t['9Akp1t'], { username: v })),
-                      (n = (0, r.jsx)(a.Z.Button, {
-                          onClick: function () {
-                              let { id: e } = h,
-                                  t = '@'.concat(p.ZP.getUserTag(h, { decoration: 'never' }));
-                              (d.S.dispatchToLastSubscribed(m.CkL.INSERT_TEXT, {
-                                  plainText: t,
-                                  rawText: '<@'.concat(e, '>')
-                              }),
-                                  null != E && l.Z.startTyping(E));
-                          },
-                          children: f.intl.string(f.t.P8tvKC)
+        v
+            ? ((t = p.intl.string(p.t['F/OLvL'])), (m = p.intl.string(p.t.C89OLC)))
+            : ((m = p.intl.string(p.t['YVub5+'])),
+              E
+                  ? (t = p.intl.string(p.t['57nBt7']))
+                  : null != O && I
+                    ? ((t = p.intl.formatToPlainString(p.t['9Akp1t'], { username: O })),
+                      (n = (0, r.jsx)(o.Z.Button, {
+                          onClick: T,
+                          children: p.intl.string(p.t.P8tvKC)
                       })))
-                    : (t = f.intl.string(f.t['SMJr+f']))),
-        (0, r.jsxs)(a.Z, {
+                    : (t = p.intl.string(p.t['SMJr+f']))),
+        (0, r.jsxs)(o.Z, {
             children: [
-                (0, r.jsx)(a.Z.Header, { text: _ }),
-                (0, r.jsxs)(a.Z.Body, {
+                (0, r.jsx)(o.Z.Header, { text: m }),
+                (0, r.jsxs)(o.Z.Body, {
                     children: [
                         (0, r.jsxs)('div', {
-                            className: g.headerLine,
+                            className: h.headerLine,
                             children: [
-                                (0, r.jsx)(a.Z.Icon, { expired: !0 }),
-                                (0, r.jsx)(a.Z.Info, {
+                                (0, r.jsx)(o.Z.Icon, { expired: !0 }),
+                                (0, r.jsx)(o.Z.Info, {
                                     expired: !0,
-                                    title: f.intl.string(f.t['Jhx/ub']),
+                                    title: p.intl.string(p.t['Jhx/ub']),
                                     children: t
                                 })
                             ]

@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => R,
+    ZP: () => w,
     ku: () => N
 });
 var r = n(255367),
@@ -131,7 +131,7 @@ function C(e) {
           })
         : null;
 }
-let R = function (e) {
+let w = function (e) {
     let { channelId: t, messageId: n, soundId: a, messageSounds: o, jumbo: c = !1 } = e,
         d = E.jU.useSetting(),
         y = (0, s.e7)([h.Z], () => h.Z.getSoundById(a), [a]),
@@ -141,14 +141,14 @@ let R = function (e) {
         }, [t, n, a, o, y]),
         T = (0, s.e7)([b.Z], () => b.Z.getChannel(t)),
         N = (0, u.X0)({ location: 'SoundboardMention' }),
-        R = i.useRef(null),
-        { isPlaying: P, playSound: w } = (0, p.Z)(v, T),
+        w = i.useRef(null),
+        { isPlaying: R, playSound: P } = (0, p.Z)(v, T),
         D = i.useCallback(async () => {
-            if (await w()) {
+            if (await P()) {
                 var e;
-                null == (e = R.current) || e.addAnimation();
+                null == (e = w.current) || e.addAnimation();
             }
-        }, [w]);
+        }, [P]);
     return N
         ? null == v
             ? (0, r.jsx)(A, { playSound: D })
@@ -161,13 +161,13 @@ let R = function (e) {
                         sound: v,
                         channel: T,
                         onSelectItem: D,
-                        isPlayingSoundOverride: P,
+                        isPlayingSoundOverride: R,
                         isSoundmoji: !0,
                         buttonOverlay: m.Pb.SOUNDMOJI,
                         tooltipClassName: O.tooltip,
                         tooltipContentClassName: O.tooltipContainer,
                         tooltipOverride: (0, r.jsx)(_.Dp, { sound: v }),
-                        soundmojiVisualEffectRef: R
+                        soundmojiVisualEffectRef: w
                     },
                     ''.concat(v.soundId)
                 )
@@ -185,7 +185,7 @@ let R = function (e) {
                                 children: (0, r.jsx)(C, {
                                     sound: v,
                                     playSound: D,
-                                    isPlaying: P
+                                    isPlaying: R
                                 })
                             })
                         )

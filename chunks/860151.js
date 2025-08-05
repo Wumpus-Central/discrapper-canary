@@ -1,44 +1,44 @@
 n.d(t, { Z: () => d });
-var l = n(255367);
+var r = n(255367);
 n(73800);
-var s = n(120356),
-    r = n.n(s),
-    i = n(481060),
-    u = n(192023),
-    o = n(373370),
-    a = n(644646),
-    c = n(817447);
+var i = n(120356),
+    a = n.n(i),
+    o = n(481060),
+    s = n(381176),
+    l = n(373370),
+    c = n(644646),
+    u = n(817447);
 let d = function (e) {
-    let { className: t, autoplay: n, quest: s, questContent: d, taskDetails: E, location: S, sourceQuestContent: m } = e,
-        T = (0, o.DD)({
-            quest: s,
-            taskDetails: E,
-            location: S,
+    let { className: t, autoplay: n, quest: i, questContent: d, taskDetails: f, location: _, sourceQuestContent: p } = e,
+        h = (0, l.DD)({
+            quest: i,
+            taskDetails: f,
+            location: _,
             questContent: d,
-            sourceQuestContent: m
+            sourceQuestContent: p
         }),
-        A = (0, u.h)({
-            location: S,
-            questConfig: s.config
+        m = (0, s.h)({
+            location: _,
+            questConfig: i.config
         });
-    return (0, l.jsxs)('div', {
-        className: r()(c.wrapper, t),
-        style: A ? void 0 : { color: s.config.colors.primary },
+    return (0, r.jsxs)('div', {
+        className: a()(u.wrapper, t),
+        style: m ? void 0 : { color: i.config.colors.primary },
         children: [
-            (0, l.jsx)(a.Z, {
+            (0, r.jsx)(c.Z, {
                 autoplay: n,
-                className: c.rewardTile,
-                quest: s,
+                className: u.rewardTile,
+                quest: i,
                 questContent: d,
-                location: S,
-                sourceQuestContent: m
+                location: _,
+                sourceQuestContent: p
             }),
-            (0, l.jsx)('div', {
-                className: c.copy,
-                children: (0, l.jsx)(i.Text, {
+            (0, r.jsx)('div', {
+                className: u.copy,
+                children: (0, r.jsx)(o.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-default',
-                    children: T
+                    children: h
                 })
             })
         ]

@@ -1,19 +1,19 @@
-(n.d(t, { Z: () => y }), n(388685), n(539854));
+(n.d(t, { Z: () => S }), n(388685), n(539854));
 var r = n(255367),
     i = n(73800),
-    l = n(120356),
-    a = n.n(l),
-    o = n(215569),
-    s = n(481060),
+    a = n(120356),
+    o = n.n(a),
+    s = n(215569),
+    l = n(481060),
     c = n(566006),
     u = n(60174),
     d = n(453687),
-    p = n(434624),
-    m = n(287151),
-    f = n(388032),
-    g = n(92254),
-    _ = n(588429);
-function h(e, t, n) {
+    f = n(434624),
+    _ = n(287151),
+    p = n(388032),
+    h = n(92254),
+    m = n(588429);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function h(e, t, n) {
         e
     );
 }
-function b(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,37 +37,42 @@ function b(e) {
                 })
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                g(e, t, n[t]);
             }));
     }
     return e;
 }
-function E(e, t) {
+function b(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : b(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let C = (e, t) => (null == e && null == t) || e === t,
-    v = (e, t) => e.findIndex((e) => C(e.emoji.id, null == t ? void 0 : t.id) && C(e.emoji.name, null == t ? void 0 : t.name)),
-    O = (e, t) => {
+let O = (e, t) => (null == e && null == t) || e === t,
+    v = (e, t) => e.findIndex((e) => O(e.emoji.id, null == t ? void 0 : t.id) && O(e.emoji.name, null == t ? void 0 : t.name)),
+    I = (e, t) => {
         if (null == t) return e;
         let n = v(e, t);
         return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
     };
-class x extends i.PureComponent {
+class T extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let n = e.message.reactions.length;
         return 0 === t.reactionsCount && n > 0
@@ -80,98 +85,98 @@ class x extends i.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: i, isGuest: l, isPendingMember: h, isForumToolbar: b, channel: E, className: C, forceAddReactions: v, reactionClassName: O, useChatFontScaling: x, forceHideReactionCreates: y, remainingReactions: I, combinedReactions: j, visibleReactionsCount: S } = this.props,
-            { disableTransitionAppear: T } = this.state,
-            N = x ? _ : g,
-            P = S > 0;
-        if (!P && !v) return null;
-        let A = v || P;
-        return (0, r.jsxs)(o.W, {
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: i, isGuest: a, isPendingMember: g, isForumToolbar: E, channel: b, className: y, forceAddReactions: O, reactionClassName: v, useChatFontScaling: I, forceHideReactionCreates: T, remainingReactions: S, combinedReactions: A, visibleReactionsCount: N } = this.props,
+            { disableTransitionAppear: C } = this.state,
+            w = I ? m : h,
+            R = N > 0;
+        if (!R && !O) return null;
+        let P = O || R;
+        return (0, r.jsxs)(s.W, {
             component: 'div',
-            className: a()(N.reactions, C),
-            transitionAppear: !T,
+            className: o()(w.reactions, y),
+            transitionAppear: !C,
             role: 'group',
             transitionLeave: !1,
             id: (0, d.bY)(e),
             onMouseEnter: () => this.setState({ isHovered: !0 }),
             onMouseLeave: () => this.setState({ isHovered: !1 }),
             children: [
-                (0, r.jsx)(p.l, {
-                    reactions: j,
+                (0, r.jsx)(f.l, {
+                    reactions: A,
                     message: e,
                     readOnly: n,
                     isLurking: i,
-                    isGuest: l,
-                    isPendingMember: h,
-                    isForumToolbar: b,
-                    useChatFontScaling: x,
-                    className: O
+                    isGuest: a,
+                    isPendingMember: g,
+                    isForumToolbar: E,
+                    useChatFontScaling: I,
+                    className: v
                 }),
-                I > 0 &&
-                    (0, r.jsx)(s.P3F, {
+                S > 0 &&
+                    (0, r.jsx)(l.P3F, {
                         onClick: (t) => {
-                            (t.stopPropagation(), (0, m.op)(E, e));
+                            (t.stopPropagation(), (0, _.op)(b, e));
                         },
-                        className: a()(N.reaction, O, N.remainingReactions),
-                        'aria-label': f.intl.string(f.t.lfIHs7),
-                        children: (0, r.jsxs)(s.Text, {
-                            className: N.reactionInner,
+                        className: o()(w.reaction, v, w.remainingReactions),
+                        'aria-label': p.intl.string(p.t.lfIHs7),
+                        children: (0, r.jsxs)(l.Text, {
+                            className: w.reactionInner,
                             variant: 'text-sm/normal',
-                            children: ['+', I]
+                            children: ['+', S]
                         })
                     }),
                 !t &&
-                    !y &&
+                    !T &&
                     (0, r.jsx)(u.X, {
-                        tabIndex: A || this.state.isHovered ? 0 : -1,
+                        tabIndex: P || this.state.isHovered ? 0 : -1,
                         type: c.O.NORMAL,
                         message: e,
-                        channel: E,
-                        useChatFontScaling: x,
+                        channel: b,
+                        useChatFontScaling: I,
                         isHovered: this.state.isHovered,
-                        className: a()({ [N.forceShow]: A })
+                        className: o()({ [w.forceShow]: P })
                     })
             ]
         });
     }
     constructor(...e) {
         (super(...e),
-            h(this, 'state', {
+            g(this, 'state', {
                 disableTransitionAppear: !0,
                 reactionsCount: this.props.message.reactions.length,
                 isHovered: !1
             }));
     }
 }
-let y = (e) => {
-    let { message: t, maxReactions: n, hoistReaction: l } = e,
+let S = (e) => {
+    let { message: t, maxReactions: n, hoistReaction: a } = e,
         {
-            combinedReactions: a,
-            remainingReactions: o,
-            visibleReactionsCount: s
+            combinedReactions: o,
+            remainingReactions: s,
+            visibleReactionsCount: l
         } = i.useMemo(() => {
             let e = [],
-                r = O(t.reactions, l),
+                r = I(t.reactions, a),
                 i = null != n && n < r.length ? r.slice(0, n) : r,
-                a = r.length - i.length,
-                o = r.length;
+                o = r.length - i.length,
+                s = r.length;
             return (
                 i.forEach((t) => {
-                    (t.burst_count > 0 && e.push(E(b({}, t), { type: c.O.BURST })), t.count > 0 && e.push(E(b({}, t), { type: c.O.NORMAL })), null != t.me_vote && --o);
+                    (t.burst_count > 0 && e.push(y(E({}, t), { type: c.O.BURST })), t.count > 0 && e.push(y(E({}, t), { type: c.O.NORMAL })), null != t.me_vote && --s);
                 }),
                 {
                     combinedReactions: e,
-                    visibleReactionsCount: o,
-                    remainingReactions: a
+                    visibleReactionsCount: s,
+                    remainingReactions: o
                 }
             );
-        }, [l, n, t.reactions]);
+        }, [a, n, t.reactions]);
     return (0, r.jsx)(
-        x,
-        E(b({}, e), {
-            visibleReactionsCount: s,
-            combinedReactions: a,
-            remainingReactions: o
+        T,
+        y(E({}, e), {
+            visibleReactionsCount: l,
+            combinedReactions: o,
+            remainingReactions: s
         })
     );
 };

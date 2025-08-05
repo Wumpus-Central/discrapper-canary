@@ -73,18 +73,18 @@ let T = (e) => {
         { onClose: n, channel: y, emojiDescriptor: v, pickerIntention: T, analyticsLocation: S, containerContext: A } = e,
         N = (0, a.e7)([f.Z], () => f.Z.theme) === m.BRd.LIGHT ? 'light' : 'dark',
         C = 'https://cdn.discordapp.com/assets/premium/roadblocks/emoji_'.concat(N, '.png'),
-        R = (0, c.Iu)((e) => e.searchQuery),
-        { analyticsLocations: P } = (0, l.ZP)(s.Z.EMOJI_PICKER);
+        w = (0, c.Iu)((e) => e.searchQuery),
+        { analyticsLocations: R } = (0, l.ZP)(s.Z.EMOJI_PICKER);
     t = T === g.Hz.REACTION ? E.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == v ? E.cd.EMOJI_PICKER_FLOATING_UPSELL : v.subCategory === h.t0.TOP_GUILD_EMOJI ? E.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : v.subCategory === h.t0.NEWLY_ADDED_EMOJI ? E.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : E.cd.EMOJI_PICKER_EMOJI_CLICKED;
-    let w = null != v ? v.emoji : void 0,
-        D = null != w && w.animated,
-        L = null != w && !_.ZP.isInternalEmojiForGuildId(w, null == y ? void 0 : y.getGuildId()),
-        x = null != w ? m.qAy.EMOJI : m.qAy.EMOJI_PICKER_FLOATING_UPSELL,
-        M = (0, a.e7)([u.Z], () => u.Z.hasFetched);
+    let P = null != v ? v.emoji : void 0,
+        D = null != P && P.animated,
+        L = null != P && !_.ZP.isInternalEmojiForGuildId(P, null == y ? void 0 : y.getGuildId()),
+        x = null != P ? m.qAy.EMOJI : m.qAy.EMOJI_PICKER_FLOATING_UPSELL,
+        k = (0, a.e7)([u.Z], () => u.Z.hasFetched);
     return (
         i.useEffect(() => {
-            M || o.MH();
-        }, [M]),
+            k || o.MH();
+        }, [k]),
         (0, r.jsx)(d.Z, {
             containerContext: A,
             image: {
@@ -101,9 +101,9 @@ let T = (e) => {
                 type: t,
                 is_external: L,
                 location: I(O({}, S), { object: x }),
-                location_stack: P,
+                location_stack: R,
                 sku_id: (0, p.Wz)(p.ZP.getSkuIdForPremiumType(E.p9.TIER_2)),
-                has_search_query: null != R && '' !== R,
+                has_search_query: null != w && '' !== w,
                 is_animated: D
             },
             isEmojiPickerOverlay: !0

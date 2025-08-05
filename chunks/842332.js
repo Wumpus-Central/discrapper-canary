@@ -1,13 +1,13 @@
-(n.d(t, { U: () => p }), n(388685), n(781311));
+(n.d(t, { U: () => h }), n(388685), n(781311));
 var r = n(255367),
     i = n(73800),
     l = n(544891),
     a = n(481060),
-    o = n(466721),
-    s = n(375954),
+    s = n(466721),
+    o = n(375954),
     c = n(981631),
-    u = n(388032);
-async function d(e) {
+    d = n(388032);
+async function u(e) {
     try {
         var t, n;
         let r = await l.tn.post({
@@ -21,11 +21,11 @@ async function d(e) {
         return null;
     }
 }
-function p(e) {
-    let { parentChannel: t, parentMessageId: n, updateThreadSettings: l, threadSettings: c, textAreaState: p } = e,
-        [h, f] = i.useState(!1),
-        [m, g] = i.useState(!1),
-        { enableAIFeatures: b } = o.C.useExperiment({ location: 'CreateThreadSidebar' }),
+function h(e) {
+    let { parentChannel: t, parentMessageId: n, updateThreadSettings: l, threadSettings: c, textAreaState: h } = e,
+        [p, f] = i.useState(!1),
+        [g, m] = i.useState(!1),
+        { enableAIFeatures: b } = s.C.useExperiment({ location: 'CreateThreadSidebar' }),
         _ = i.useCallback(async () => {
             if (b) {
                 f(!0);
@@ -33,30 +33,30 @@ function p(e) {
                     let r = null;
                     if (null != n) {
                         var e;
-                        let i = s.Z.getMessage(t.id, n);
+                        let i = o.Z.getMessage(t.id, n);
                         r = null != (e = null == i ? void 0 : i.content) ? e : null;
-                    } else p.textValue.trim().length >= 10 && (r = p.textValue);
+                    } else h.textValue.trim().length >= 10 && (r = h.textValue);
                     if (null != r) {
-                        let e = await d(r);
+                        let e = await u(r);
                         null != e && '' !== e.trim() && l({ name: e });
                     }
                 } finally {
                     f(!1);
                 }
             }
-        }, [t.id, n, l, b, p.textValue]);
+        }, [t.id, n, l, b, h.textValue]);
     (i.useEffect(() => {
-        (g(!1), f(!1), l({ name: '' }));
+        (m(!1), f(!1), l({ name: '' }));
     }, [n, l]),
         i.useEffect(() => {
-            (null == c.name || '' === c.name.trim()) && !m && b && null != n && (g(!0), _());
-        }, [t.id, n, l, c.name, m, b, _]));
+            (null == c.name || '' === c.name.trim()) && !g && b && null != n && (m(!0), _());
+        }, [t.id, n, l, c.name, g, b, _]));
     let y = i.useCallback(
         function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
             return b
                 ? (0, r.jsx)(a.ua7, {
-                      text: u.intl.string(u.t.ZF2oBg),
+                      text: d.intl.string(d.t.ZF2oBg),
                       children: (t) => {
                           var i, l;
                           return (0, r.jsx)(
@@ -91,10 +91,10 @@ function p(e) {
                                       icon: a.$2U,
                                       variant: 'secondary',
                                       size: 'sm',
-                                      'aria-label': u.intl.string(u.t.ZF2oBg),
+                                      'aria-label': d.intl.string(d.t.ZF2oBg),
                                       onClick: _,
-                                      disabled: e || h || (null == n && p.textValue.trim().length < 10),
-                                      loading: h,
+                                      disabled: e || p || (null == n && h.textValue.trim().length < 10),
+                                      loading: p,
                                       type: 'button'
                                   }),
                               Object.getOwnPropertyDescriptors
@@ -115,10 +115,10 @@ function p(e) {
                   })
                 : null;
         },
-        [b, h, n, p.textValue, _]
+        [b, p, n, h.textValue, _]
     );
     return {
-        isGeneratingAI: h,
+        isGeneratingAI: p,
         generateAIName: _,
         enableAIFeatures: b,
         renderAiGenerateButton: y

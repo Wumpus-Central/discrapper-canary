@@ -125,13 +125,13 @@ function C(e) {
     let t = a.Z.convert.toCodePoint(e);
     return null != t ? t : '';
 }
-function R(e) {
+function w(e) {
     c = null != e && '' !== e ? e : null;
 }
-function P() {
+function R() {
     return c;
 }
-function w() {
+function P() {
     return Object.keys(b);
 }
 function D(e) {
@@ -147,13 +147,13 @@ function x(e) {
     }
     return t;
 }
-function M(e) {
+function k(e) {
     return m.test(e);
 }
-function k(e) {
+function j(e) {
     return e.replace(_, (e, t) => H(t, e));
 }
-function j(e) {
+function M(e) {
     var t;
     let n = null == (t = S(e)) ? void 0 : t.names[0];
     return null != n
@@ -170,9 +170,9 @@ function j(e) {
 let U = String.fromCodePoint(917631),
     G = String.fromCodePoint(127988),
     B = RegExp('^[\\u{E0061}-\\u{E007A}]$', 'u');
-function V(e, t) {
+function Z(e, t) {
     var n;
-    if (!0 !== t && !M(e))
+    if (!0 !== t && !k(e))
         return [
             {
                 type: 'text',
@@ -189,12 +189,12 @@ function V(e, t) {
             else if (B.test(t)) {
                 r += t;
                 continue;
-            } else (i.push(j(r)), (r = ''));
+            } else (i.push(M(r)), (r = ''));
         else if (t === G) {
             r = t;
             continue;
         }
-        let n = j(t);
+        let n = M(t);
         if (i.length > 0) {
             let e = i[i.length - 1];
             if ('text' === n.type && 'text' === e.type) {
@@ -204,16 +204,16 @@ function V(e, t) {
         }
         i.push(n);
     }
-    return (null != r && '' !== r && i.push(j(r)), i);
+    return (null != r && '' !== r && i.push(M(r)), i);
 }
 function F(e) {
-    return V(e)
+    return Z(e)
         .map((e) => ('text' === e.type ? e.text : e.emojiName))
         .join('');
 }
-function Z(e) {
-    if (!M(e)) return null;
-    let t = V(e, !0)
+function V(e) {
+    if (!k(e)) return null;
+    let t = Z(e, !0)
         .map((e) => ('text' === e.type ? e.text : e.emojiName))
         .join('');
     return t === e ? null : t;
@@ -239,15 +239,15 @@ function W(e) {
     );
 }
 let K = {
-    getDefaultDiversitySurrogate: P,
-    setDefaultDiversitySurrogate: R,
-    getCategories: w,
+    getDefaultDiversitySurrogate: R,
+    setDefaultDiversitySurrogate: w,
+    getCategories: P,
     getByName: D,
     getByCategory: x,
-    contentHasUnicodeOrEmoji: M,
-    translateInlineEmojiToSurrogates: k,
-    maybeTranslateSurrogatesToInlineEmoji: Z,
-    findInlineEmojisFromSurrogates: V,
+    contentHasUnicodeOrEmoji: k,
+    translateInlineEmojiToSurrogates: j,
+    maybeTranslateSurrogatesToInlineEmoji: V,
+    findInlineEmojisFromSurrogates: Z,
     translateSurrogatesToInlineEmoji: F,
     convertNameToSurrogate: H,
     convertSurrogateToName: Y,

@@ -1,73 +1,80 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => u });
 var r = n(255367);
 n(73800);
 var i = n(562129),
-    l = n(871499);
-function a(e) {
-    var { isActivityActive: t, onMouseEnter: n, onMouseLeave: a, onClick: o } = e,
-        s = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                r,
-                i = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
-                    return i;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
-            }
-            return i;
-        })(e, ['isActivityActive', 'onMouseEnter', 'onMouseLeave', 'onClick']);
-    let { Component: c, events: u, play: d } = (0, i.Z)('ActivityButton');
+    a = n(871499);
+function o(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                o(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function l(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = c(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+    }
+    return i;
+}
+function c(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    return i;
+}
+function u(e) {
+    var { isActivityActive: t, onMouseEnter: n, onMouseLeave: o, onClick: c } = e,
+        u = l(e, ['isActivityActive', 'onMouseEnter', 'onMouseLeave', 'onClick']);
+    let { Component: d, events: f, play: _ } = (0, i.Z)('ActivityButton');
     return (0, r.jsx)(
-        l.d,
-        (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
-                    )),
-                    r.forEach(function (t) {
-                        var r;
-                        ((r = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: r,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0
-                                  })
-                                : (e[t] = r));
-                    }));
-            }
-            return e;
-        })(
+        a.d,
+        s(
             {
                 isTrayButton: !0,
                 isActive: t,
                 color: t ? 'green' : void 0,
-                iconComponent: c,
+                iconComponent: d,
                 onMouseEnter: (e) => {
-                    (null == n || n(e), u.onMouseEnter());
+                    (null == n || n(e), f.onMouseEnter());
                 },
                 onMouseLeave: (e) => {
-                    (null == a || a(e), u.onMouseLeave());
+                    (null == o || o(e), f.onMouseLeave());
                 },
                 onClick: (e) => {
-                    (null == o || o(e), d());
+                    (null == c || c(e), _());
                 }
             },
-            s
+            u
         )
     );
 }

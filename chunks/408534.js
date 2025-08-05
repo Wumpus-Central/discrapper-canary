@@ -1,61 +1,61 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => T });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    l = n(481060),
-    a = n(40851),
-    o = n(812206),
-    s = n(420529),
+    a = n(481060),
+    o = n(40851),
+    s = n(812206),
+    l = n(420529),
     c = n(831002),
     u = n(430824),
     d = n(358221),
-    p = n(843638),
-    h = n(441061),
-    f = n(167675),
-    m = n(532239),
-    g = n(811423),
-    b = n(418469),
-    _ = n(673539),
-    y = n(589049),
-    C = n(354459),
-    x = n(981631),
+    f = n(843638),
+    _ = n(441061),
+    p = n(167675),
+    h = n(532239),
+    m = n(811423),
+    g = n(418469),
+    E = n(673539),
+    b = n(589049),
+    y = n(354459),
+    O = n(981631),
     v = n(388032),
-    j = n(292538);
-function O(e) {
-    let { onClose: t, onSelect: n, channel: O, remoteMode: E, onInteraction: S } = e,
-        P = (0, a.bp)(),
-        { id: I, type: Z } = O,
-        T = (0, i.e7)([u.Z], () => u.Z.getGuild(O.guild_id), [O.guild_id]),
-        N = (0, i.e7)([d.Z], () => d.Z.getSelectedParticipant(I)),
-        A = (null == N ? void 0 : N.type) === C.fO.STREAM ? N.stream : null,
-        w = (0, i.e7)([o.Z], () => ((null == N ? void 0 : N.type) === C.fO.ACTIVITY ? o.Z.getApplication(N.applicationId) : void 0)),
-        R = (0, h.Z)(I),
-        M = (0, _.Z)(I),
-        D = (0, m.Z)(O, T, null == A ? void 0 : A.ownerId, null == w ? void 0 : w.id),
-        k = (0, p.Z)(I),
-        L = (0, y.Z)(),
-        U = (0, c.$A)(I),
-        B = (0, c.j8)(I),
-        F = (0, b.Z)(A, P),
-        H = (0, g.Z)(w, I),
-        G = (0, f.Z)(),
-        V = (0, s.Z)(O);
-    return (0, r.jsxs)(l.v2r, {
-        className: j.menu,
+    I = n(292538);
+function T(e) {
+    let { onClose: t, onSelect: n, channel: T, remoteMode: S, onInteraction: A } = e,
+        N = (0, o.bp)(),
+        { id: C, type: w } = T,
+        R = (0, i.e7)([u.Z], () => u.Z.getGuild(T.guild_id), [T.guild_id]),
+        P = (0, i.e7)([d.Z], () => d.Z.getSelectedParticipant(C)),
+        D = (null == P ? void 0 : P.type) === y.fO.STREAM ? P.stream : null,
+        L = (0, i.e7)([s.Z], () => ((null == P ? void 0 : P.type) === y.fO.ACTIVITY ? s.Z.getApplication(P.applicationId) : void 0)),
+        x = (0, _.Z)(C),
+        k = (0, E.Z)(C),
+        j = (0, h.Z)(T, R, null == D ? void 0 : D.ownerId, null == L ? void 0 : L.id),
+        M = (0, f.Z)(C),
+        U = (0, b.Z)(),
+        G = (0, c.$A)(C),
+        B = (0, c.j8)(C),
+        Z = (0, g.Z)(D, N),
+        F = (0, m.Z)(L, C),
+        V = (0, p.Z)(),
+        H = (0, l.Z)(T);
+    return (0, r.jsxs)(a.v2r, {
+        className: I.menu,
         onClose: t,
         onSelect: n,
-        onInteraction: S,
+        onInteraction: A,
         navId: 'more-settings-context',
         'aria-label': v.intl.string(v.t.FTLzdX),
         children: [
-            (0, r.jsx)(l.kSQ, { children: Z !== x.d4z.GUILD_STAGE_VOICE ? D : null }),
-            (0, r.jsxs)(l.kSQ, {
-                children: [Z === x.d4z.GUILD_STAGE_VOICE ? U : null, Z === x.d4z.GUILD_STAGE_VOICE ? B : null, E || Z === x.d4z.GUILD_STAGE_VOICE ? null : k, G, Z !== x.d4z.GUILD_STAGE_VOICE ? R : null, Z === x.d4z.GUILD_STAGE_VOICE || Z === x.d4z.GUILD_VOICE ? M : null]
+            (0, r.jsx)(a.kSQ, { children: w !== O.d4z.GUILD_STAGE_VOICE ? j : null }),
+            (0, r.jsxs)(a.kSQ, {
+                children: [w === O.d4z.GUILD_STAGE_VOICE ? G : null, w === O.d4z.GUILD_STAGE_VOICE ? B : null, S || w === O.d4z.GUILD_STAGE_VOICE ? null : M, V, w !== O.d4z.GUILD_STAGE_VOICE ? x : null, w === O.d4z.GUILD_STAGE_VOICE || w === O.d4z.GUILD_VOICE ? k : null]
             }),
-            (0, r.jsx)(l.kSQ, { children: V }),
-            (0, r.jsx)(l.kSQ, { children: L }),
-            (0, r.jsxs)(l.kSQ, {
-                children: [null != A ? F : null, null != w ? H : null]
+            (0, r.jsx)(a.kSQ, { children: H }),
+            (0, r.jsx)(a.kSQ, { children: U }),
+            (0, r.jsxs)(a.kSQ, {
+                children: [null != D ? Z : null, null != L ? F : null]
             })
         ]
     });

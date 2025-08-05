@@ -64,7 +64,7 @@ function d(e, t) {
 function f(e) {
     let { eventId: t, parentGuildId: a, recurrenceId: o } = e;
     (0, i.ZD)(async () => {
-        let { default: e } = await Promise.all([n.e('44421'), n.e('22347'), n.e('70657')]).then(n.bind(n, 697849));
+        let { default: e } = await Promise.all([n.e('22347'), n.e('61494')]).then(n.bind(n, 697849));
         return (n) =>
             (0, r.jsx)(
                 e,
@@ -90,7 +90,7 @@ async function _(e, t) {
 function p(e, t) {
     (0, i.ZD)(
         async () => {
-            let { default: t } = await Promise.all([n.e('42743'), n.e('22569')]).then(n.bind(n, 312757));
+            let { default: t } = await n.e('21395').then(n.bind(n, 312757));
             return (n) => (0, r.jsx)(t, d(c({}, n), { channel: e }));
         },
         { contextKey: t === o.IlC.POPOUT ? s.u1 : s.z1 }

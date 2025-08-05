@@ -1,60 +1,61 @@
 n.d(t, {
-    HR: () => h,
-    L5: () => b,
-    ZP: () => O
+    HR: () => E,
+    L5: () => m,
+    ZP: () => b
 });
 var r = n(255367),
-    l = n(73800),
-    o = n(120356),
-    i = n.n(o),
-    a = n(653603),
-    s = n.n(a),
+    i = n(73800),
+    a = n(120356),
+    o = n.n(a),
+    s = n(653603),
+    l = n.n(s),
     c = n(902704),
     u = n(453687),
     d = n(328966),
-    p = n(981631),
-    m = n(388032),
-    g = n(848697),
-    f = n(73433);
-function b(e, t) {
-    return e.type === p.uaV.VOICE_HANGOUT_INVITE ? '' : e.hasFlag(p.iLy.SOURCE_MESSAGE_DELETED) ? m.intl.string(m.t.JOtgS0) : t;
+    f = n(981631),
+    _ = n(388032),
+    p = n(848697),
+    h = n(73433);
+function m(e, t) {
+    return e.type === f.uaV.VOICE_HANGOUT_INVITE ? '' : e.hasFlag(f.iLy.SOURCE_MESSAGE_DELETED) ? _.intl.string(_.t.JOtgS0) : t;
 }
-function h(e, t) {
-    var n, r;
-    let { message: l } = t,
-        { message: o } = e;
-    return (0, c.Z)(e, t, ['message']) && l.content === o.content && l.state === o.state && (null == (n = l.editedTimestamp) ? void 0 : n.toString()) === (null == (r = o.editedTimestamp) ? void 0 : r.toString());
-}
-let O = l.memo(function (e) {
+function g(e) {
     var t;
-    let { className: n, message: o, children: a, content: c, onUpdate: m, contentRef: h, compact: O } = e,
-        y = o.state === p.yb.SEND_FAILED,
-        v = o.state === p.yb.SENDING,
-        j = o.isCommandType(),
-        P = null == (t = o.editedTimestamp) ? void 0 : t.toString(),
-        x = l.useRef(!1);
+    let { className: n, message: a, children: s, content: c, onUpdate: _, contentRef: g, compact: E } = e,
+        b = a.state === f.yb.SEND_FAILED,
+        y = a.state === f.yb.SENDING,
+        O = a.isCommandType(),
+        v = null == (t = a.editedTimestamp) ? void 0 : t.toString(),
+        I = i.useRef(!1);
     return (
-        l.useLayoutEffect(() => {
-            x.current ? null != m && m() : (x.current = !0);
-        }, [m, o.content, c, P, a]),
+        i.useLayoutEffect(() => {
+            I.current ? null != _ && _() : (I.current = !0);
+        }, [_, a.content, c, v, s]),
         (0, r.jsxs)('div', {
-            id: (0, u.ut)(o),
-            ref: h,
-            className: i()(n, f.markup, {
-                [g.messageContent]: !0,
-                [g.isSending]: v && !j,
-                [g.markupRtl]: 'rtl' === s()(o.content),
-                [g.isFailed]: y,
-                [g.isUnsupported]: o.isUnsupported
+            id: (0, u.ut)(a),
+            ref: g,
+            className: o()(n, h.markup, {
+                [p.messageContent]: !0,
+                [p.isSending]: y && !O,
+                [p.markupRtl]: 'rtl' === l()(a.content),
+                [p.isFailed]: b,
+                [p.isUnsupported]: a.isUnsupported
             }),
             children: [
-                null != a ? a : b(o, c),
+                null != s ? s : m(a, c),
                 (0, r.jsx)(d.Z, {
-                    message: o,
-                    compact: O,
+                    message: a,
+                    compact: E,
                     location: d.H.WITH_CONTENT
                 })
             ]
         })
     );
-}, h);
+}
+function E(e, t) {
+    var n, r;
+    let { message: i } = t,
+        { message: a } = e;
+    return (0, c.Z)(e, t, ['message']) && i.content === a.content && i.state === a.state && (null == (n = i.editedTimestamp) ? void 0 : n.toString()) === (null == (r = a.editedTimestamp) ? void 0 : r.toString());
+}
+let b = i.memo(g, E);

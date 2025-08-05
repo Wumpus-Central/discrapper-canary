@@ -1,11 +1,23 @@
 n.d(t, {
-    I: () => s,
-    n: () => c
+    I: () => c,
+    n: () => u
 });
-var r,
-    i = n(97519),
-    l = n(731965);
-function a(e) {
+var r = n(97519),
+    i = n(731965);
+function a(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -16,45 +28,43 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                var r;
-                ((r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r));
+                a(e, t, n[t]);
             }));
     }
     return e;
 }
-function o(e, t) {
+function s(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function l(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : s(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-var s = (((r = {})[(r.ALL_CHANNELS_ACCESS = 0)] = 'ALL_CHANNELS_ACCESS'), (r[(r.SOME_CHANNELS_ACCESS = 1)] = 'SOME_CHANNELS_ACCESS'), r);
-let c = (0, i.U)((e) => ({
+var c = (function (e) {
+    return ((e[(e.ALL_CHANNELS_ACCESS = 0)] = 'ALL_CHANNELS_ACCESS'), (e[(e.SOME_CHANNELS_ACCESS = 1)] = 'SOME_CHANNELS_ACCESS'), e);
+})({});
+let u = (0, r.U)((e) => ({
     listings: {},
-    setListing: (t, n) => (0, l.j)(() => e((e) => ({ listings: o(a({}, e.listings), { [t]: n(e.listings[t]) }) }))),
+    setListing: (t, n) => (0, i.j)(() => e((e) => ({ listings: l(o({}, e.listings), { [t]: n(e.listings[t]) }) }))),
     editStateIdsForGroup: {},
     setEditStateIdsForGroup: (t, n) =>
-        (0, l.j)(() => {
-            e((e) => ({ editStateIdsForGroup: o(a({}, e.editStateIdsForGroup), { [t]: n(e.editStateIdsForGroup[t]) }) }));
+        (0, i.j)(() => {
+            e((e) => ({ editStateIdsForGroup: l(o({}, e.editStateIdsForGroup), { [t]: n(e.editStateIdsForGroup[t]) }) }));
         })
 }));

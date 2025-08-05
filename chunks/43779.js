@@ -29,8 +29,8 @@ function S(e) {
         Q = D.defaultRewardName,
         V = D.defaultRewardNameWithArticle,
         L = (null == (t = P.userStatus) ? void 0 : t.enrolledAt) != null,
-        { ref: M, scrollHeight: W } = (0, u.kE)(),
-        Z = 104 !== W,
+        { ref: M, scrollHeight: Z } = (0, u.kE)(),
+        W = 104 !== Z,
         { onAssetLoadComplete: U } = s.useContext(b.k),
         { expansionSpring: H } = (0, c.q_F)({
             expansionSpring: +!!N,
@@ -140,7 +140,7 @@ function S(e) {
         children: [
             (0, r.jsxs)(i.animated.div, {
                 style: {
-                    maxHeight: H.to([0, 1], [104, (null != W ? W : 0) + 12])
+                    maxHeight: H.to([0, 1], [104, (null != Z ? Z : 0) + 12])
                 },
                 className: O.rewardDescriptionContainer,
                 children: [
@@ -200,7 +200,7 @@ function S(e) {
                     }),
                     (0, r.jsxs)('div', {
                         ref: M,
-                        className: a()(O.textContainer, { [O.justifyCenter]: !Z }),
+                        className: a()(O.textContainer, { [O.justifyCenter]: !W }),
                         children: [
                             (0, r.jsx)(c.X6q, {
                                 variant: 'eyebrow',
@@ -217,7 +217,7 @@ function S(e) {
                             ee
                         ]
                     }),
-                    Z &&
+                    W &&
                         (0, r.jsx)(i.animated.div, {
                             style: {
                                 opacity: H.to([0, 1], [1, 0])

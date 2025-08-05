@@ -41,12 +41,13 @@ class f {
                 this.messageIds.has(e.id) || (this.messageIds.add(e.id), c.push(e), u.push(e));
             }),
             (this.messages = c),
+            (this.hasNextPage = null != this.cursor),
             (this.totalResults = o),
             u
         );
     }
     constructor() {
-        (d(this, 'isIndexing', !1), d(this, 'isHistoricalIndexing', !1), d(this, 'isFetching', !1), d(this, 'analyticsId', null), d(this, 'error', null), d(this, 'rawMessages', null), d(this, 'messages', null), d(this, 'documentsIndexed', 0), d(this, 'totalResults', null), d(this, 'messageIds', new Set()), d(this, 'isInitialFetchComplete', !1), d(this, 'cursor', null));
+        (d(this, 'isIndexing', !1), d(this, 'isHistoricalIndexing', !1), d(this, 'isFetching', !1), d(this, 'analyticsId', null), d(this, 'error', null), d(this, 'rawMessages', null), d(this, 'messages', null), d(this, 'documentsIndexed', 0), d(this, 'totalResults', null), d(this, 'hasNextPage', !1), d(this, 'messageIds', new Set()), d(this, 'isInitialFetchComplete', !1), d(this, 'cursor', null));
     }
 }
 let _ = new Map(),
@@ -127,12 +128,12 @@ function C(e) {
         g(e).handleSearchIndexing();
     });
 }
-function R(e) {
+function w(e) {
     e.ids.forEach((t) => {
         g(t).handleSearchFailure(e.error);
     });
 }
-function P(e) {
+function R(e) {
     let t = _.get(e.id);
     if (null == t) return !1;
     (t.messageIds.forEach((e) => {
@@ -142,7 +143,7 @@ function P(e) {
     }),
         _.delete(e.id));
 }
-function w(e) {
+function P(e) {
     ((_ = new Map()), (p = new Map()), (h = new Map()));
 }
 class D extends (r = i.ZP.Store) {
@@ -170,6 +171,9 @@ class D extends (r = i.ZP.Store) {
     getIsFetching(e) {
         return b(e, (e) => e.isFetching);
     }
+    getHasNextPage(e) {
+        return b(e, (e) => e.hasNextPage);
+    }
     getError(e) {
         return b(e, (e) => e.error);
     }
@@ -194,9 +198,9 @@ let L = new D(a.Z, {
     SEARCH_MESSAGES_START: O,
     SEARCH_MESSAGES_SUCCESS: v,
     SEARCH_MESSAGES_INDEXING: C,
-    SEARCH_MESSAGES_FAILURE: R,
-    SEARCH_MESSAGES_CLEAR: P,
-    SEARCH_MESSAGES_CLEAR_ALL: w,
+    SEARCH_MESSAGES_FAILURE: w,
+    SEARCH_MESSAGES_CLEAR: R,
+    SEARCH_MESSAGES_CLEAR_ALL: P,
     MESSAGE_UPDATE: I,
     MESSAGE_REACTION_ADD: T,
     MESSAGE_REACTION_ADD_MANY: S,

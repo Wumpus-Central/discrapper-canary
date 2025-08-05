@@ -1,21 +1,21 @@
-(n.d(t, { Z: () => u }), n(388685));
-var r,
-    i = n(442837),
-    l = n(570140);
-function s(e, t, n) {
+(t.d(n, { Z: () => d }), t(388685));
+var l,
+    i = t(442837),
+    r = t(570140);
+function a(e, n, t) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: t,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[n] = t),
         e
     );
 }
-let o = {
+let u = {
         enable_recently_active: 'Enable recently active channels',
         theme_setting_in_account_sheet: 'Show theme settings in the Account action sheet',
         nav_experiment_server_drawer_enabled: '[NavI] Enable expandable server drawer',
@@ -23,38 +23,38 @@ let o = {
         show_icymi_debug_scores: 'Show ICYMI debug scores',
         channel_list_scrim: 'Dim the channel list when chat appears'
     },
-    a = {};
-class c extends (r = i.ZP.DeviceSettingsStore) {
+    s = {};
+class o extends (l = i.ZP.DeviceSettingsStore) {
     getUserAgnosticState() {
-        return { toggleStates: a };
+        return { toggleStates: s };
     }
     initialize(e) {
-        for (var t in o) {
-            var n, r;
-            let i = null != (r = null == e || null == (n = e.toggleStates) ? void 0 : n[t]) && r;
-            a[t] = i;
+        for (var n in u) {
+            var t, l;
+            let i = null != (l = null == e || null == (t = e.toggleStates) ? void 0 : t[n]) && l;
+            s[n] = i;
         }
     }
     get(e) {
-        var t;
-        return null != (t = a[e]) && t;
+        var n;
+        return null != (n = s[e]) && n;
     }
-    set(e, t) {
-        return ((a[e] = t), t);
+    set(e, n) {
+        return ((s[e] = n), n);
     }
     all() {
-        return a;
+        return s;
     }
     allWithDescriptions() {
-        return Object.entries(a).map((e) => {
-            let [t, n] = e;
-            return [t, n, o[t]];
+        return Object.entries(s).map((e) => {
+            let [n, t] = e;
+            return [n, t, u[n]];
         });
     }
 }
-(s(c, 'displayName', 'DevToolsDesignTogglesStore'), s(c, 'persistKey', 'DevToolsDesignTogglesStore'));
-let u = new c(l.Z, {
+(a(o, 'displayName', 'DevToolsDesignTogglesStore'), a(o, 'persistKey', 'DevToolsDesignTogglesStore'));
+let d = new o(r.Z, {
     DEV_TOOLS_DESIGN_TOGGLE_SET: function (e) {
-        a[e.toggle] = e.value;
+        s[e.toggle] = e.value;
     }
 });

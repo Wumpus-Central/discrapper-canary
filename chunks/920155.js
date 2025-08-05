@@ -92,7 +92,7 @@ function O(e) {
             caretPosition: (null == I ? void 0 : I.position) != null ? I.position : N(p),
             onExitComplete: A
         }),
-        R = (e) =>
+        w = (e) =>
             C((i, a) => {
                 if (!a) return null;
                 let c = (0, r.jsx)(
@@ -129,7 +129,7 @@ function O(e) {
         fixed: !1,
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
-        renderPopout: R,
+        renderPopout: w,
         children: y
     });
 }

@@ -117,15 +117,15 @@ function C() {
         m[e] = {};
     });
 }
-function R() {
+function w() {
     null != S && (S.destroy(), (S = null));
 }
-function P(e) {
+function R(e) {
     var t;
     h = null != (t = e.section) ? t : p;
 }
-function w() {
-    R();
+function P() {
+    w();
 }
 function D(e) {
     null != e.channelId && (C(), g.clear());
@@ -139,7 +139,7 @@ function L(e) {
 function x(e) {
     h = e.section;
 }
-function M(e) {
+function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
         r = {};
@@ -152,12 +152,12 @@ function M(e) {
                 for (let e = 0; e < a.length; e++) {
                     let r = t[e],
                         i = 'object' == typeof r ? r : {};
-                    o.push(M(a[e], i, n));
+                    o.push(k(a[e], i, n));
                 }
             } else r[i] = a;
         else if ('object' == typeof a && null !== a) {
             let t = 'object' == typeof e && null !== e ? e : {};
-            r[i] = M(a, t, n);
+            r[i] = k(a, t, n);
         } else if (i in E && 'number' == typeof a) {
             let t = (r[i] = Array.isArray(e) ? e : []);
             (t.push({
@@ -169,14 +169,14 @@ function M(e) {
     }
     return r;
 }
-function k(e) {
+function j(e) {
     let { connectionStats: t } = e;
     Object.values(d.Yn).forEach((e) => {
         t.filter((t) => {
             let { context: n } = t;
             return n === e;
         }).forEach((t, n) => {
-            j({
+            M({
                 context: e,
                 stats: t.stats,
                 index: n
@@ -184,7 +184,7 @@ function k(e) {
         });
     });
 }
-function j(e) {
+function M(e) {
     let { context: t, stats: n, index: r } = e,
         i = m[t];
     if (null != n) {
@@ -195,7 +195,7 @@ function j(e) {
             } = n;
             Object.keys(e).includes(a) || (h = p);
         }
-        i[r] = M(n, i[r]);
+        i[r] = k(n, i[r]);
     } else delete i[r];
 }
 function U(e) {
@@ -204,7 +204,7 @@ function U(e) {
 function G(e) {
     let { path: t } = e,
         n = l.Z.getMediaEngine();
-    if ((R(), !n.supports(d.AN.CONNECTION_REPLAY) || 0 === t.length)) return;
+    if ((w(), !n.supports(d.AN.CONNECTION_REPLAY) || 0 === t.length)) return;
     let r = n.createReplayConnection(d.Yn.DEFAULT, t);
     null != r &&
         ((S = r),
@@ -222,7 +222,7 @@ function G(e) {
 function B(e) {
     I = I.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
 }
-function V(e) {
+function Z(e) {
     let { value: t } = e;
     T = t;
 }
@@ -231,7 +231,7 @@ function F(e) {
     g.set(O(t, n), r);
 }
 C();
-class Z extends (r = i.ZP.Store) {
+class V extends (r = i.ZP.Store) {
     getSection() {
         return h;
     }
@@ -276,17 +276,17 @@ class Z extends (r = i.ZP.Store) {
         return g.has(n) ? g.get(n) : d.Z.NO_OVERRIDE;
     }
 }
-f(Z, 'displayName', 'RTCDebugStore');
-let H = new Z(o.Z, {
-    RTC_DEBUG_MODAL_OPEN: P,
-    RTC_DEBUG_MODAL_CLOSE: w,
+f(V, 'displayName', 'RTCDebugStore');
+let H = new V(o.Z, {
+    RTC_DEBUG_MODAL_OPEN: R,
+    RTC_DEBUG_MODAL_CLOSE: P,
     RTC_DEBUG_MODAL_SET_SECTION: x,
     RTC_DEBUG_MODAL_OPEN_REPLAY: U,
     RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH: G,
     RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT: B,
-    RTC_DEBUG_SET_RECORDING_FLAG: V,
+    RTC_DEBUG_SET_RECORDING_FLAG: Z,
     RTC_DEBUG_SET_SIMULCAST_OVERRIDE: F,
     VOICE_CHANNEL_SELECT: D,
     RTC_CONNECTION_VIDEO: L,
-    MEDIA_ENGINE_CONNECTION_STATS: k
+    MEDIA_ENGINE_CONNECTION_STATS: j
 });

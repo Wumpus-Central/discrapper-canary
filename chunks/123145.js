@@ -1,13 +1,65 @@
-n.d(t, { Z: () => c });
-var a = n(255367);
+n.d(t, { Z: () => d });
+var r = n(255367);
 n(73800);
-var r = n(739566),
-    i = n(421399),
+var i = n(739566),
+    a = n(421399),
     o = n(47930);
-function c(e) {
-    var t, n, c, l;
-    let s = (0, r.ZP)(e.message),
-        u = (0, o.x)({
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function l(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                s(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function c(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function u(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : c(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+function d(e) {
+    var t, n;
+    let s = (0, i.ZP)(e.message),
+        c = (0, o.x)({
             message: e.message,
             channel: e.channel,
             user: null != (n = null == (t = e.message) ? void 0 : t.author) ? n : e.userOverride,
@@ -16,52 +68,13 @@ function c(e) {
         }),
         d = {};
     return (
-        null != u && (d[i.a.SYSTEM_TAG] = u),
-        (0, a.jsx)(
-            i.Z,
-            ((c = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        a = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
-                        (a = a.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
-                        )),
-                        a.forEach(function (t) {
-                            var a;
-                            ((a = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: a,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0
-                                      })
-                                    : (e[t] = a));
-                        }));
-                }
-                return e;
-            })({}, e)),
-            (l = l =
-                {
-                    author: s,
-                    decorations: d
-                }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(l))
-                : (function (e, t) {
-                      var n = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var a = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, a);
-                      }
-                      return n;
-                  })(Object(l)).forEach(function (e) {
-                      Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(l, e));
-                  }),
-            c)
+        null != c && (d[a.a.SYSTEM_TAG] = c),
+        (0, r.jsx)(
+            a.Z,
+            u(l({}, e), {
+                author: s,
+                decorations: d
+            })
         )
     );
 }

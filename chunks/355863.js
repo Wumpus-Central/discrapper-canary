@@ -420,11 +420,11 @@ function C(e) {
     let { widgetId: t, anchor: n, size: r, opacity: i, minSize: a } = e;
     return N(t, (e, t) => x(e, n, r, i, a));
 }
-function R(e) {
+function w(e) {
     let { widgetId: t } = e;
-    return N(t, (e, t) => P(t, e.id));
+    return N(t, (e, t) => R(t, e.id));
 }
-function P(e, t) {
+function R(e, t) {
     let n = B(e);
     n.sort((e, t) => e.zIndex - t.zIndex);
     let r = n.findIndex((e) => e.id === t);
@@ -433,7 +433,7 @@ function P(e, t) {
     for (let e = 0; e < n.length; e++) U(n[e], e);
     return !0;
 }
-function w(e) {
+function P(e) {
     let { widgetId: t, meta: n } = e;
     return N(t, (e, t) => {
         D(e, n);
@@ -459,7 +459,7 @@ function x(e, t, n, r, a) {
         })
     });
 }
-function M(e) {
+function k(e) {
     let { widgetId: t } = e;
     ((i = E({}, i)),
         delete i[t],
@@ -472,7 +472,7 @@ function M(e) {
             }
         }));
 }
-function k(e) {
+function j(e) {
     let { layoutId: t } = e,
         n = r[t];
     if (null == n) return !1;
@@ -481,7 +481,7 @@ function k(e) {
     }),
         (r = y(E({}, r), { [n.id]: n.set('widgets', []) })));
 }
-function j(e) {
+function M(e) {
     let { widgetConfigs: t } = e;
     t.forEach((e) => {
         let t = new _.Z(e),
@@ -508,7 +508,7 @@ function B(e) {
         t
     );
 }
-function V(e) {
+function Z(e) {
     let t = {};
     return (
         s().forEach(e, (e, n) => {
@@ -526,13 +526,13 @@ function F(e) {
         t
     );
 }
-function Z(e) {
+function V(e) {
     let t = T[e];
     if (null != t) return t.defaultSettings;
 }
 class H extends (a = c.ZP.PersistedStore) {
     initialize(e) {
-        null != e && null != e.layouts && null != e.widgets ? ((r = V(e.layouts)), (i = F(e.widgets))) : ((r = {}), (i = {}));
+        null != e && null != e.layouts && null != e.widgets ? ((r = Z(e.layouts)), (i = F(e.widgets))) : ((r = {}), (i = {}));
         let t = !1,
             n = [];
         (s().forEach(T, (e, t) => {
@@ -546,7 +546,7 @@ class H extends (a = c.ZP.PersistedStore) {
                     if (null != n || T[r].version !== e.version) continue;
                     s = t = !0;
                     let c = (0, l.Z)(),
-                        u = Z(r);
+                        u = V(r);
                     if (null == u) return;
                     ((n = new _.Z(
                         y(E({}, u), {
@@ -621,7 +621,7 @@ class H extends (a = c.ZP.PersistedStore) {
         return T[e];
     }
     getWidgetDefaultSettings(e) {
-        return Z(e);
+        return V(e);
     }
     getWidgetType(e) {
         let t = i[e];
@@ -640,7 +640,7 @@ class H extends (a = c.ZP.PersistedStore) {
                     case 'OPTIONAL_DEFAULT':
                         var a;
                         if ((null != (a = r.version) ? a : 0) === t) {
-                            let t = Z(i);
+                            let t = V(i);
                             if (null == t) return;
                             n.push(
                                 y(E({}, t), {
@@ -729,7 +729,7 @@ class H extends (a = c.ZP.PersistedStore) {
                         return;
                     let o = (0, l.Z)();
                     n.widgets = [a, o];
-                    let s = Z(h.Odu.GUILDS_TEXT);
+                    let s = V(h.Odu.GUILDS_TEXT);
                     null != s &&
                         i.push([
                             o,
@@ -777,9 +777,9 @@ let Y = new H(d.Z, {
     LAYOUT_CREATE: S,
     LAYOUT_SET_PINNED: L,
     LAYOUT_UPDATE_WIDGET: C,
-    LAYOUT_SET_TOP_WIDGET: R,
-    LAYOUT_DELETE_WIDGET: M,
-    LAYOUT_DELETE_ALL_WIDGETS: k,
-    LAYOUT_CREATE_WIDGETS: j,
-    LAYOUT_SET_WIDGET_META: w
+    LAYOUT_SET_TOP_WIDGET: w,
+    LAYOUT_DELETE_WIDGET: k,
+    LAYOUT_DELETE_ALL_WIDGETS: j,
+    LAYOUT_CREATE_WIDGETS: M,
+    LAYOUT_SET_WIDGET_META: P
 });

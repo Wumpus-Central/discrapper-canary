@@ -1,7 +1,7 @@
 (n.d(t, {
     Dp: () => N,
     Hh: () => C,
-    ZP: () => R,
+    ZP: () => w,
     hq: () => S
 }),
     n(388685));
@@ -227,7 +227,7 @@ function C(e) {
             })
     });
 }
-function R(e) {
+function w(e) {
     let { sound: t, channel: n, setTooltipShowing: i } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [

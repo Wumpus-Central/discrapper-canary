@@ -1,5 +1,5 @@
 let r;
-(n.r(t), n.d(t, { default: () => eR }), n(388685), n(415506));
+(n.r(t), n.d(t, { default: () => ew }), n(388685), n(415506));
 var i,
     a = n(442837),
     o = n(433517),
@@ -73,18 +73,18 @@ function C(e, t) {
         e
     );
 }
-function R(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = P(e, t);
+        i = R(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function P(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -93,7 +93,7 @@ function P(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let w = Object.freeze({
+let P = Object.freeze({
         selectedGuildId: null,
         selectedChannelId: null,
         displayUserMode: I.OYC.ALWAYS,
@@ -112,18 +112,18 @@ let w = Object.freeze({
     D = null,
     L = {},
     x = null,
-    M = new Set(),
-    k = !1,
+    k = new Set(),
     j = !1,
+    M = !1,
     U = !1,
     G = new Set(),
     B = !1,
-    V = new u.Z('OverlayStore');
+    Z = new u.Z('OverlayStore');
 function F(e) {
     let t = L[e];
-    return (null == t && (t = L[e] = A({}, w)), t);
+    return (null == t && (t = L[e] = A({}, P)), t);
 }
-let Z = A({}, w),
+let V = A({}, P),
     H = new Set(['AUDIO_SET_INPUT_DEVICE', 'AUDIO_SET_INPUT_VOLUME', 'AUDIO_SET_LOCAL_VIDEO_DISABLED', 'AUDIO_SET_LOCAL_VOLUME', 'AUDIO_SET_MODE', 'AUDIO_SET_NOISE_CANCELLATION', 'AUDIO_SET_NOISE_SUPPRESSION', 'AUDIO_SET_OUTPUT_DEVICE', 'AUDIO_SET_OUTPUT_VOLUME', 'AUDIO_TOGGLE_LOCAL_MUTE', 'AUDIO_TOGGLE_SELF_DEAF', 'AUDIO_TOGGLE_SELF_MUTE', 'BILLING_SUBSCRIPTION_UPDATE_SUCCESS', 'CATEGORY_COLLAPSE', 'CATEGORY_EXPAND', 'CHANNEL_ACK', 'CHANNEL_PRELOAD', 'GIFT_CODE_REDEEM', 'GIFT_CODE_REDEEM_FAILURE', 'GIFT_CODE_REDEEM_SUCCESS', 'HOTSPOT_HIDE', 'INVITE_MODAL_CLOSE', 'LAYOUT_CREATE', 'LAYOUT_CREATE_WIDGETS', 'LAYOUT_DELETE_ALL_WIDGETS', 'LAYOUT_DELETE_WIDGET', 'LAYOUT_SET_PINNED', 'LAYOUT_SET_TOP_WIDGET', 'LAYOUT_UPDATE_WIDGET', 'LOAD_MESSAGES', 'LOAD_MESSAGES_FAILURE', 'LOAD_MESSAGES_SUCCESS', 'MEDIA_ENGINE_SET_GO_LIVE_SOURCE', 'OVERLAY_ACTIVATE_REGION', 'OVERLAY_DEACTIVATE_ALL_REGIONS', 'OVERLAY_MESSAGE_EVENT_ACTION', 'OVERLAY_SET_AVATAR_SIZE_MODE', 'OVERLAY_SET_CLICK_ZONES', 'OVERLAY_SET_DISPLAY_NAME_MODE', 'OVERLAY_SET_DISPLAY_USER_MODE', 'OVERLAY_SET_INPUT_LOCKED', 'OVERLAY_SET_NOTIFICATION_POSITION_MODE', 'OVERLAY_SET_DISABLE_CLICKABLE_REGIONS', 'OVERLAY_SET_SHOW_KEYBIND_INDICATORS', 'OVERLAY_SET_GAME_INVITE_NOTIFICATION', 'OVERLAY_SET_INVITE_MESSAGE', 'OVERLAY_SET_TEXT_WIDGET_OPACITY', 'OVERLAY_SET_ENABLED', 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', 'OVERLAY_TRACKED_GAME_UPDATE', 'PREMIUM_PAYMENT_ERROR_CLEAR', 'PREMIUM_PAYMENT_MODAL_CLOSE', 'PREMIUM_PAYMENT_MODAL_OPEN', 'PREMIUM_PAYMENT_SUBSCRIBE_FAIL', 'PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS', 'PREMIUM_PAYMENT_UPDATE_FAIL', 'PREMIUM_PAYMENT_UPDATE_SUCCESS', 'PREMIUM_REQUIRED_MODAL_CLOSE', 'PREMIUM_REQUIRED_MODAL_OPEN', 'PURCHASE_CONFIRMATION_MODAL_CLOSE', 'PURCHASE_CONFIRMATION_MODAL_OPEN', 'SKU_PURCHASE_CLEAR_ERROR', 'SKU_PURCHASE_FAIL', 'SKU_PURCHASE_MODAL_CLOSE', 'SKU_PURCHASE_MODAL_OPEN', 'SKU_PURCHASE_PREVIEW_FETCH_SUCCESS', 'SKU_PURCHASE_SHOW_CONFIRMATION_STEP', 'SKU_PURCHASE_START', 'SKU_PURCHASE_SUCCESS', 'STREAM_CLOSE', 'STREAM_START', 'VOICE_CHANNEL_SELECT', 'USER_SETTINGS_PROTO_ENQUEUE_UPDATE', 'USER_SETTINGS_PROTO_LOAD_IF_NECESSARY']),
     Y = new Set([...H.values(), 'ACTIVITY_INVITE_MODAL_CLOSE', 'CALL_DELETE', 'CHANNEL_COLLAPSE', 'CHANNEL_SELECT', 'GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY', 'OVERLAY_CALL_PRIVATE_CHANNEL', 'OVERLAY_JOIN_GAME', 'OVERLAY_NOTIFICATION_EVENT', 'OVERLAY_SELECT_CALL', 'OVERLAY_SET_NOT_IDLE', 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', 'OVERLAY_WIDGET_CHANGED', 'SOUNDBOARD_SET_OVERLAY_ENABLED', 'STREAM_STOP']);
 function W(e) {
@@ -196,10 +196,10 @@ function z(e) {
 function q(e) {
     e.userId in L && delete L[e.userId];
 }
-function X() {
-    M.clear();
+function $() {
+    k.clear();
 }
-function Q(e) {
+function X(e) {
     let { focusedPID: t, trackedGames: n, overlayStoredSettings: r } = e;
     ((D = t),
         __OVERLAY__ &&
@@ -211,25 +211,25 @@ function Q(e) {
                 oopEnabled: r.oopEnabled
             })));
 }
-function J() {
-    let e = Z.selectedGuildId,
-        t = Z.selectedChannelId;
+function Q() {
+    let e = V.selectedGuildId,
+        t = V.selectedChannelId;
     if ((null == e || (m.ZP.hasChannels(e) && (null == t || m.ZP.hasSelectableChannel(e, t))) || ((e = null), (t = null)), null != t && null == h.Z.getChannel(t) && ((e = null), (t = null)), null == e && null == t && (e = E.Z.getGuildId()), null != e && null == t)) {
         let n = m.ZP.getDefaultChannel(e);
         null != n && (t = n.id);
     }
-    ((Z.selectedGuildId = e), (Z.selectedChannelId = t));
+    ((V.selectedGuildId = e), (V.selectedChannelId = t));
 }
-function $() {
+function J() {
     if (!__OVERLAY__) return !1;
     let e = D === (0, y.getPID)(),
-        t = M.has((0, y.getPID)()) || G.size > 0;
+        t = k.has((0, y.getPID)()) || G.size > 0;
     e && t ? (0, l.T_)(window, !0) : (0, l.T_)(window, !1);
 }
 function ee() {}
 function et(e) {
     let { locked: t, pid: n } = e;
-    (t ? M.delete(n) : M.add(n), er(), $(), (B = !1));
+    (t ? k.delete(n) : k.add(n), er(), J(), (B = !1));
 }
 function en(e) {
     let { region: t } = e;
@@ -242,11 +242,11 @@ function er() {
 }
 function ei(e) {
     let { pid: t } = e;
-    ((D = t), $());
+    ((D = t), J());
 }
 function ea(e) {
     let { guildId: t, channelId: n } = e;
-    ((Z.selectedGuildId = t), (Z.selectedChannelId = n));
+    ((V.selectedGuildId = t), (V.selectedChannelId = n));
 }
 function eo(e) {
     let { callId: t } = e;
@@ -266,52 +266,52 @@ function ec(e) {
 }
 function eu(e) {
     let { mode: t } = e;
-    Z.displayNameMode = t;
+    V.displayNameMode = t;
 }
 function ed(e) {
     let { mode: t } = e;
-    Z.displayUserMode = t;
+    V.displayUserMode = t;
 }
 function ef(e) {
     let { mode: t } = e;
-    Z.avatarSizeMode = t;
+    V.avatarSizeMode = t;
 }
 function e_(e) {
     let { mode: t } = e;
-    Z.notificationPositionMode = t;
+    V.notificationPositionMode = t;
 }
 function ep(e) {
     let { disable: t } = e;
-    Z.disableClickableRegions = t;
+    V.disableClickableRegions = t;
 }
 function eh(e) {
     let { shouldShow: t } = e;
-    Z.showKeybindIndicators = t;
+    V.showKeybindIndicators = t;
 }
 function em(e) {
     let { message: t } = e,
-        n = Z.customInviteMessage !== t;
-    return ((Z.customInviteMessage = t), n);
+        n = V.customInviteMessage !== t;
+    return ((V.customInviteMessage = t), n);
 }
 function eg(e) {
     let { opacity: t } = e,
-        n = Z.textWidgetOpacity !== t;
-    return ((Z.textWidgetOpacity = t), n);
+        n = V.textWidgetOpacity !== t;
+    return ((V.textWidgetOpacity = t), n);
 }
 function eE(e) {
     let { shouldShow: t } = e,
-        n = Z.showGameInviteNotification !== t;
-    return ((Z.showGameInviteNotification = t), n);
+        n = V.showGameInviteNotification !== t;
+    return ((V.showGameInviteNotification = t), n);
 }
 function eb() {
-    Z.disableExternalLinkAlert = !0;
+    V.disableExternalLinkAlert = !0;
 }
 function ey() {
-    k = !0;
+    j = !0;
 }
 function eO() {
     s.Z.addInterceptor((e) => {
-        if (j || !Y.has(e.type)) return !1;
+        if (M || !Y.has(e.type)) return !1;
         if ('CHANNEL_SELECT' === e.type) {
             let { guildId: t, channelId: n } = e;
             return (
@@ -356,7 +356,7 @@ function ev(e) {
                 a.ZP.PersistedStore.initializeAll(e.states);
                 break;
             case I.BmY.DISPATCH:
-                null != e.payloads && ((j = !0), e.payloads.forEach((e) => K(e)), (j = !1));
+                null != e.payloads && ((M = !0), e.payloads.forEach((e) => K(e)), (M = !1));
         }
 }
 function eI() {
@@ -381,7 +381,7 @@ function eA(e) {
         });
 }
 function eN(e) {
-    M.delete(e.previousAssociatedGamePID);
+    k.delete(e.previousAssociatedGamePID);
 }
 class eC extends (i = a.ZP.PersistedStore) {
     initialize(e) {
@@ -389,30 +389,30 @@ class eC extends (i = a.ZP.PersistedStore) {
             (this.waitFor(p.default),
             this.syncWith([p.default], () => {
                 let e = p.default.getId();
-                Z = null != e ? F(e) : A({}, w);
+                V = null != e ? F(e) : A({}, P);
             }),
             __OVERLAY__)
         ) {
             if (b.isPlatformEmbedded) {
                 let e = (0, O.M)();
-                (null == e && V.error('Overlay module failed loaded'), (r = e));
+                (null == e && Z.error('Overlay module failed loaded'), (r = e));
             }
-            M.delete((0, y.getPID)());
+            k.delete((0, y.getPID)());
         }
         if (null != e) {
             L = e;
             let t = p.default.getId();
-            null != t && (null == (Z = F(t)).textChatNotifications && (Z.textChatNotifications = w.textChatNotifications), null == Z.textWidgetOpacity && (Z.textWidgetOpacity = w.textWidgetOpacity), null == Z.disableClickableRegions && (Z.disableClickableRegions = w.disableClickableRegions));
+            null != t && (null == (V = F(t)).textChatNotifications && (V.textChatNotifications = P.textChatNotifications), null == V.textWidgetOpacity && (V.textWidgetOpacity = P.textWidgetOpacity), null == V.disableClickableRegions && (V.disableClickableRegions = P.disableClickableRegions));
         }
     }
     getState() {
         return L;
     }
     isLocked(e) {
-        return !M.has(e);
+        return !k.has(e);
     }
     isInstanceLocked() {
-        return !M.has((0, y.getPID)());
+        return !k.has((0, y.getPID)());
     }
     isInstanceFocused() {
         return D === (0, y.getPID)();
@@ -432,43 +432,43 @@ class eC extends (i = a.ZP.PersistedStore) {
         );
     }
     getSelectedGuildId() {
-        return Z.selectedGuildId;
+        return V.selectedGuildId;
     }
     getSelectedChannelId() {
-        return Z.selectedChannelId;
+        return V.selectedChannelId;
     }
     getSelectedCallId() {
         return x;
     }
     getDisplayUserMode() {
-        return Z.displayUserMode;
+        return V.displayUserMode;
     }
     getDisplayNameMode() {
-        return Z.displayNameMode;
+        return V.displayNameMode;
     }
     getAvatarSizeMode() {
-        return Z.avatarSizeMode;
+        return V.avatarSizeMode;
     }
     getNotificationPositionMode() {
-        return Z.notificationPositionMode;
+        return V.notificationPositionMode;
     }
     getTextChatNotificationMode() {
-        return Z.textChatNotifications;
+        return V.textChatNotifications;
     }
     get showKeybindIndicators() {
-        return null == Z.showKeybindIndicators || Z.showKeybindIndicators;
+        return null == V.showKeybindIndicators || V.showKeybindIndicators;
     }
     get showInviteNotification() {
-        return null == Z.showGameInviteNotification || Z.showGameInviteNotification;
+        return null == V.showGameInviteNotification || V.showGameInviteNotification;
     }
     get disableClickableRegions() {
-        return null != Z.disableClickableRegions && Z.disableClickableRegions;
+        return null != V.disableClickableRegions && V.disableClickableRegions;
     }
     get customInviteMessage() {
-        return Z.customInviteMessage;
+        return V.customInviteMessage;
     }
     getDisableExternalLinkAlert() {
-        return Z.disableExternalLinkAlert;
+        return V.disableExternalLinkAlert;
     }
     getFocusedPID() {
         return D;
@@ -477,13 +477,13 @@ class eC extends (i = a.ZP.PersistedStore) {
         return U;
     }
     get incompatibleApp() {
-        return k;
+        return j;
     }
     getActiveRegions() {
         return G;
     }
     getTextWidgetOpacity() {
-        return Z.textWidgetOpacity;
+        return V.textWidgetOpacity;
     }
     isPreviewingInGame() {
         return B;
@@ -499,21 +499,21 @@ class eC extends (i = a.ZP.PersistedStore) {
         () => {
             let e = A({}, o.K.get('OverlayStore')),
                 { pinnedWidgets: t, positions: n, sizes: r, v: i } = e,
-                a = R(e, ['pinnedWidgets', 'positions', 'sizes', 'v']);
-            return A({}, w, 5 === i ? a : null);
+                a = w(e, ['pinnedWidgets', 'positions', 'sizes', 'v']);
+            return A({}, P, 5 === i ? a : null);
         },
         (e) => {
             let t = p.default.getId();
             return null == e || null == t ? {} : { [t]: A({}, e) };
         }
     ]));
-let eR = new eC(s.Z, {
+let ew = new eC(s.Z, {
     LOGOUT: z,
     MULTI_ACCOUNT_REMOVE_ACCOUNT: q,
-    CONNECTION_CLOSED: X,
+    CONNECTION_CLOSED: $,
     OVERLAY_START_SESSION: eI,
-    OVERLAY_INITIALIZE: Q,
-    OVERLAY_READY: J,
+    OVERLAY_INITIALIZE: X,
+    OVERLAY_READY: Q,
     OVERLAY_FOCUSED: ei,
     OVERLAY_SELECT_CHANNEL: ea,
     OVERLAY_SELECT_CALL: eo,

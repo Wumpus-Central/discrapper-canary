@@ -125,7 +125,7 @@ function S(e) {
                 null != _ && _(t);
             }
         },
-        R = [...(null != a ? [a] : []), ...n, v].map((e, t) => {
+        w = [...(null != a ? [a] : []), ...n, v].map((e, t) => {
             if (e instanceof f.ZP) {
                 let { brand: t, label: n } = I(e, u),
                     i = e === v || null == A || (null == A ? void 0 : A.includes(e.paymentGateway));
@@ -153,7 +153,7 @@ function S(e) {
                 })
             };
         }),
-        P = T(
+        R = T(
             h,
             i.useMemo(() => n.find((e) => e.id === t), [n, t])
         );
@@ -171,11 +171,11 @@ function S(e) {
                       text: m.intl.string(m.t.eQ2bLi)
                   })
                 : (0, r.jsx)(c.q4e, {
-                      options: R,
+                      options: w,
                       value: t,
                       onChange: C,
                       isDisabled: E,
-                      className: o()({ [g.paymentSourceHasWarning]: null != P }, b),
+                      className: o()({ [g.paymentSourceHasWarning]: null != R }, b),
                       optionClassName: y,
                       placeholder: m.intl.string(m.t['8lqkf3']),
                       renderOptionValue: (e) => {
@@ -183,7 +183,7 @@ function S(e) {
                           return S ? (0, r.jsx)(c.$jN, { type: c.RAz.SPINNING_CIRCLE }) : t.label;
                       }
                   }),
-            null != P
+            null != R
                 ? (0, r.jsxs)('div', {
                       className: g.paymentSourceWarning,
                       children: [
@@ -196,7 +196,7 @@ function S(e) {
                           }),
                           (0, r.jsx)(c.Text, {
                               variant: 'text-xs/normal',
-                              children: P
+                              children: R
                           })
                       ]
                   })

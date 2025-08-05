@@ -1,64 +1,64 @@
-function r(e, t, i) {
+function n(t, e, i) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
+        e in t
+            ? Object.defineProperty(t, e, {
                   value: i,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = i),
-        e
+            : (t[e] = i),
+        t
     );
 }
-(i.d(t, { Z: () => n }), i(388685), i(415506));
-class n {
-    drawInto(e, t, i, r) {
-        ((t %= this.frameCount), this.requireFrame(t));
-        let [n, s, o, h] = a(t, this.frameWidth, this.frameHeight, this.cells);
-        e.drawImage(this.canvas, n, s, o, h, 0, 0, i, r);
+(i.d(e, { Z: () => r }), i(388685), i(415506));
+class r {
+    drawInto(t, e, i, n) {
+        ((e %= this.frameCount), this.requireFrame(e));
+        let [r, s, h, o] = a(e, this.frameWidth, this.frameHeight, this.cells);
+        t.drawImage(this.canvas, r, s, h, o, 0, 0, i, n);
     }
     drop() {
-        var e;
-        (null == (e = this.native) || e.drop(), (this.native = null));
+        var t;
+        (null == (t = this.native) || t.drop(), (this.native = null));
     }
-    requireFrame(e) {
-        null != this.native && (this.renderedFrames.has(e) || (this.paint(e), this.renderedFrames.add(e)), this.renderedFrames.size === this.frameCount && this.drop());
+    requireFrame(t) {
+        null != this.native && (this.renderedFrames.has(t) || (this.paint(t), this.renderedFrames.add(t)), this.renderedFrames.size === this.frameCount && this.drop());
     }
-    paint(e) {
+    paint(t) {
         if (null != this.native) {
-            var t;
-            let i = new ImageData(this.native.get_bgra(e, this.frameWidth, this.frameHeight), this.frameWidth, this.frameHeight),
-                [r, n, s, o] = a(e, this.frameWidth, this.frameHeight, this.cells);
-            null == (t = this.context) || t.putImageData(i, r, n, 0, 0, s, o);
+            var e;
+            let i = new ImageData(this.native.get_bgra(t, this.frameWidth, this.frameHeight), this.frameWidth, this.frameHeight),
+                [n, r, s, h] = a(t, this.frameWidth, this.frameHeight, this.cells);
+            null == (e = this.context) || e.putImageData(i, n, r, 0, 0, s, h);
         }
     }
-    constructor(e, t, i, n) {
-        (r(this, 'key', void 0), r(this, 'canvas', void 0), r(this, 'context', void 0), r(this, 'cells', void 0), r(this, 'native', void 0), r(this, 'renderedFrames', void 0), r(this, 'frameWidth', void 0), r(this, 'frameHeight', void 0), r(this, 'frameRate', void 0), r(this, 'frameCount', void 0));
-        let [a, s, o] = (function (e, t, i) {
-            let r = Math.ceil(Math.sqrt(i));
-            return [r, r * e, r * t];
-        })(i, n, e.frames);
+    constructor(t, e, i, r) {
+        (n(this, 'key', void 0), n(this, 'canvas', void 0), n(this, 'context', void 0), n(this, 'cells', void 0), n(this, 'native', void 0), n(this, 'renderedFrames', void 0), n(this, 'frameWidth', void 0), n(this, 'frameHeight', void 0), n(this, 'frameRate', void 0), n(this, 'frameCount', void 0));
+        let [a, s, h] = (function (t, e, i) {
+            let n = Math.ceil(Math.sqrt(i));
+            return [n, n * t, n * e];
+        })(i, r, t.frames);
         if (
-            ((this.key = t),
-            (this.canvas = (function (e, t) {
-                if ('function' == typeof OffscreenCanvas) return new OffscreenCanvas(e, t);
+            ((this.key = e),
+            (this.canvas = (function (t, e) {
+                if ('function' == typeof OffscreenCanvas) return new OffscreenCanvas(t, e);
                 let i = document.createElement('canvas');
-                return ((i.width = e), (i.height = t), i);
-            })(s, o)),
+                return ((i.width = t), (i.height = e), i);
+            })(s, h)),
             (this.context = this.canvas.getContext('2d')),
             (this.cells = a),
-            (this.native = e),
+            (this.native = t),
             (this.renderedFrames = new Set()),
             (this.frameWidth = i),
-            (this.frameHeight = n),
-            (this.frameRate = e.fps),
-            (this.frameCount = e.frames),
+            (this.frameHeight = r),
+            (this.frameRate = t.fps),
+            (this.frameCount = t.frames),
             null == this.context)
         )
             throw Error("couldn't create 2d canvas context.");
     }
 }
-function a(e, t, i, r) {
-    return [Math.floor(e / r) * t, (e % r) * i, t, i];
+function a(t, e, i, n) {
+    return [Math.floor(t / n) * e, (t % n) * i, e, i];
 }

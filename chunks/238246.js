@@ -1,6 +1,6 @@
 (n.d(t, {
     Y: () => K,
-    Z: () => X
+    Z: () => $
 }),
     n(388685));
 var r,
@@ -30,21 +30,21 @@ var r,
     N = n(686546),
     C = n(950796);
 n(151851);
-var R = n(587061),
-    P = n(280049),
-    w = n(314910),
+var w = n(587061),
+    R = n(280049),
+    P = n(314910),
     D = n(22205),
     L = n(746106),
     x = n(892071),
-    M = n(358085),
-    k = n(62883),
-    j = n(998502),
+    k = n(358085),
+    j = n(62883),
+    M = n(998502),
     U = n(473159),
     G = n(928518),
     B = n(981631),
-    V = n(501787),
+    Z = n(501787),
     F = n(728294);
-function Z(e, t, n) {
+function V(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -68,7 +68,7 @@ function H(e) {
                 })
             )),
             r.forEach(function (t) {
-                Z(e, t, n[t]);
+                V(e, t, n[t]);
             }));
     }
     return e;
@@ -98,13 +98,13 @@ function W(e, t) {
 }
 function K(e) {
     let { withTitleBar: t, isFullScreen: n } = e;
-    return t && M.isPlatformEmbedded && !n;
+    return t && k.isPlatformEmbedded && !n;
 }
 class z extends (r = a.Component) {
     componentDidMount() {
         let { guestWindow: e } = this.props,
             t = e.document;
-        (null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateClientTheme(), (0, U.O)(e), e.addEventListener('blur', this.handleBlur), M.isPlatformEmbedded ? t.addEventListener('contextmenu', k.contextMenuCallbackNative, !1) : t.addEventListener('contextmenu', k.contextMenuCallbackWeb, !1), e.addEventListener('beforeunload', this.beforeUnload), this.registerPopoutGlobalKeybinds());
+        (null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateClientTheme(), (0, U.O)(e), e.addEventListener('blur', this.handleBlur), k.isPlatformEmbedded ? t.addEventListener('contextmenu', j.contextMenuCallbackNative, !1) : t.addEventListener('contextmenu', j.contextMenuCallbackWeb, !1), e.addEventListener('beforeunload', this.beforeUnload), this.registerPopoutGlobalKeybinds());
     }
     componentDidUpdate(e) {
         let { title: t, clientThemesCSS: n } = this.props;
@@ -113,7 +113,7 @@ class z extends (r = a.Component) {
     componentWillUnmount() {
         let { guestWindow: e } = this.props,
             t = e.document;
-        (this.unregisterPopoutGlobalKeybinds(), e.removeEventListener('blur', this.handleBlur), M.isPlatformEmbedded ? t.removeEventListener('contextmenu', k.contextMenuCallbackNative) : t.removeEventListener('contextmenu', k.contextMenuCallbackWeb), (0, f.j)(() => p.s9z.setState((e) => W(H({}, e), { [p.u1M]: [] }))), e.removeEventListener('beforeunload', this.beforeUnload));
+        (this.unregisterPopoutGlobalKeybinds(), e.removeEventListener('blur', this.handleBlur), k.isPlatformEmbedded ? t.removeEventListener('contextmenu', j.contextMenuCallbackNative) : t.removeEventListener('contextmenu', j.contextMenuCallbackWeb), (0, f.j)(() => p.s9z.setState((e) => W(H({}, e), { [p.u1M]: [] }))), e.removeEventListener('beforeunload', this.beforeUnload));
     }
     updateTitle() {
         let { title: e, guestWindow: t } = this.props,
@@ -138,19 +138,19 @@ class z extends (r = a.Component) {
         var e;
         let { guestWindow: t } = this.props,
             n = t.document;
-        for (let t of ((this._combokeys = (0, P.r)(n.documentElement)), [g.iN, g.oV, m.f, ...(null != (e = this.props.keybinds) ? e : [])])) if (t.comboKeysBindGlobal) for (let e of t.binds) this._combokeys.bindGlobal(e, (e, n) => ('function' == typeof t.action && t.action(e, n), !1));
+        for (let t of ((this._combokeys = (0, R.r)(n.documentElement)), [g.iN, g.oV, m.f, ...(null != (e = this.props.keybinds) ? e : [])])) if (t.comboKeysBindGlobal) for (let e of t.binds) this._combokeys.bindGlobal(e, (e, n) => ('function' == typeof t.action && t.action(e, n), !1));
     }
     unregisterPopoutGlobalKeybinds() {
         null != this._combokeys && this._combokeys.reset();
     }
     render() {
         let { focused: e, forcedColors: t, children: n, windowKey: r, isFullScreen: a, withTitleBar: o, guestWindow: c, clientThemesClassName: u, contentClassName: f, hideModals: _ = !1 } = this.props;
-        (0, M.getPlatform)();
+        (0, k.getPlatform)();
         let m = K({
                 withTitleBar: o,
                 isFullScreen: a
             }),
-            g = r === V.$J ? D.Z : A.Z;
+            g = r === Z.$J ? D.Z : A.Z;
         return (0, i.jsx)(d.VK, {
             children: (0, i.jsx)(
                 L.w,
@@ -170,7 +170,7 @@ class z extends (r = a.Component) {
                                                 appContext: B.IlC.POPOUT,
                                                 renderWindow: c,
                                                 children: (0, i.jsx)(S.m, {
-                                                    children: (0, i.jsxs)(w.yP, {
+                                                    children: (0, i.jsxs)(P.yP, {
                                                         children: [
                                                             (0, i.jsxs)('div', {
                                                                 className: F.popout,
@@ -189,7 +189,7 @@ class z extends (r = a.Component) {
                                                             }),
                                                             !_ && (0, i.jsx)(p.nKe, {}),
                                                             (0, i.jsx)(h.Z, {}),
-                                                            (0, i.jsx)(w.Un, {})
+                                                            (0, i.jsx)(P.Un, {})
                                                         ]
                                                     })
                                                 })
@@ -208,13 +208,13 @@ class z extends (r = a.Component) {
     }
     constructor(...e) {
         (super(...e),
-            Z(this, 'rootRef', a.createRef()),
-            Z(this, '_cleanupWindowActionCreators', void 0),
-            Z(this, '_combokeys', null),
-            Z(this, 'beforeUnload', (e) => {
+            V(this, 'rootRef', a.createRef()),
+            V(this, '_cleanupWindowActionCreators', void 0),
+            V(this, '_combokeys', null),
+            V(this, 'beforeUnload', (e) => {
                 let { onBeforeUnload: t } = this.props,
                     n = () => {
-                        (G.Z.unmountWindow(this.props.windowKey), M.isPlatformEmbedded && j.ZP.close(this.props.windowKey));
+                        (G.Z.unmountWindow(this.props.windowKey), k.isPlatformEmbedded && M.ZP.close(this.props.windowKey));
                     };
                 null != t
                     ? t({
@@ -223,13 +223,13 @@ class z extends (r = a.Component) {
                       })
                     : n();
             }),
-            Z(this, 'handleBlur', () => {
+            V(this, 'handleBlur', () => {
                 var e, t;
                 null == (e = (t = this.props).onBlur) || e.call(t);
             }));
     }
 }
-Z(z, 'defaultProps', { withTitleBar: !0 });
+V(z, 'defaultProps', { withTitleBar: !0 });
 let q = a.forwardRef(function (e, t) {
         let { guestWindow: n, className: r, children: o } = e,
             { lang: l, style: c, className: d } = (0, x.vP)();
@@ -250,7 +250,7 @@ let q = a.forwardRef(function (e, t) {
             })
         );
     }),
-    X = a.forwardRef(function (e, t) {
+    $ = a.forwardRef(function (e, t) {
         let {
             guestWindow: n,
             focused: r,
@@ -265,7 +265,7 @@ let q = a.forwardRef(function (e, t) {
             forcedColors: b.Z.useForcedColors ? 'yes' : 'no',
             connectedEmbeddedActivity: O.ZP.getCurrentEmbeddedActivity()
         }));
-        (0, R.Z)(n, !1);
+        (0, w.Z)(n, !1);
         let { analyticsLocations: l } = (0, I.ZP)(v.Z.POPOUT_WINDOW),
             { clientThemesClassName: c, clientThemesCSS: d } = (0, T.ZP)();
         return null == n

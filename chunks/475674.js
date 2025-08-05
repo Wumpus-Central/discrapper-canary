@@ -1,25 +1,25 @@
-(n.d(t, { Z: () => o }), n(388685), n(642613));
+(n.d(t, { Z: () => s }), n(388685), n(642613));
 var r = n(442837),
-    l = n(458725),
-    i = n(915525);
-let a = {
-    [l.u.STREAM_SOUNDSHARE_FAILED]: 0,
-    [l.u.STREAM_SEND_HIGH_PACKET_LOSS]: 1,
-    [l.u.STREAM_VIEW_HIGH_PACKET_LOSS]: 1,
-    [l.u.STREAM_SEND_LOW_FPS]: 2,
-    [l.u.STREAM_VIEW_LOW_FPS]: 2,
-    [l.u.STREAM_BAD_NETWORK_QUALITY]: 3
+    i = n(458725),
+    a = n(915525);
+let o = {
+    [i.u.STREAM_SOUNDSHARE_FAILED]: 0,
+    [i.u.STREAM_SEND_HIGH_PACKET_LOSS]: 1,
+    [i.u.STREAM_VIEW_HIGH_PACKET_LOSS]: 1,
+    [i.u.STREAM_SEND_LOW_FPS]: 2,
+    [i.u.STREAM_VIEW_LOW_FPS]: 2,
+    [i.u.STREAM_BAD_NETWORK_QUALITY]: 3
 };
-function o(e) {
+function s(e) {
     let t = e.id;
     return (0, r.e7)(
-        [i.Z],
+        [a.Z],
         () => {
-            let e = Array.from(i.Z.getActiveErrors().values())
-                .filter((e) => 'streamKey' in e && e.streamKey === t && null != a[e.type])
+            let e = Array.from(a.Z.getActiveErrors().values())
+                .filter((e) => 'streamKey' in e && e.streamKey === t && null != o[e.type])
                 .sort((e, t) => {
                     var n, r;
-                    return (null != (n = a[e.type]) ? n : 0) - (null != (r = a[t.type]) ? r : 0);
+                    return (null != (n = o[e.type]) ? n : 0) - (null != (r = o[t.type]) ? r : 0);
                 })[0];
             return null == e ? void 0 : e.type;
         },

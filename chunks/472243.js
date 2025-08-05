@@ -73,19 +73,19 @@ function I(e) {
     let { type: O, textValue: I, maxCharacterCount: T, showRemainingCharsAfterCount: S, className: A } = e,
         N = (0, o.e7)([f.default], () => _.ZP.canUseIncreasedMessageLength(f.default.getCurrentUser())),
         C = (0, u.Z)(),
-        R = null != T ? T : C,
-        P = null != (b = null != S ? S : T) ? b : C / 10,
-        w = I.length,
-        D = null != O.upsellLongMessages && (null != w ? w : 0) > h.J6R && N,
+        w = null != T ? T : C,
+        R = null != (b = null != S ? S : T) ? b : C / 10,
+        P = I.length,
+        D = null != O.upsellLongMessages && (null != P ? P : 0) > h.J6R && N,
         L = null != O.upsellLongMessages && !N,
         x = (null == (n = (0, d.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === m.Si.TIER_2,
-        M = R - w,
-        k = M > P,
-        j = M < 0 && x,
-        U = 0 === M ? g.intl.string(g.t.tU6YQ0) : M > 0 ? g.intl.formatToPlainString(g.t.qH8uFR, { count: M }) : g.intl.string(g.t.YSRIqa),
+        k = w - P,
+        j = k > R,
+        M = k < 0 && x,
+        U = 0 === k ? g.intl.string(g.t.tU6YQ0) : k > 0 ? g.intl.formatToPlainString(g.t.qH8uFR, { count: k }) : g.intl.string(g.t.YSRIqa),
         { analyticsLocations: G } = (0, c.ZP)(l.Z.CHARACTER_COUNT);
-    if (!((D && M >= 0) || !k || (L && !k))) return null;
-    let B = M >= 0;
+    if (!((D && k >= 0) || !j || (L && !j))) return null;
+    let B = k >= 0;
     return (0, r.jsx)(c.Gt, {
         value: G,
         children: (0, r.jsxs)('div', {
@@ -96,7 +96,7 @@ function I(e) {
                     children: [
                         D && B
                             ? (0, r.jsx)(s.ua7, {
-                                  text: g.intl.formatToPlainString(g.t.vcvHa2, { maxLength: R }),
+                                  text: g.intl.formatToPlainString(g.t.vcvHa2, { maxLength: w }),
                                   position: 'top',
                                   children: (e) =>
                                       (0, r.jsx)(
@@ -112,7 +112,7 @@ function I(e) {
                                       )
                               })
                             : null,
-                        k || j
+                        j || M
                             ? null
                             : (0, r.jsx)(s.ua7, {
                                   text: U,
@@ -131,19 +131,19 @@ function I(e) {
                                               ),
                                               {
                                                   color: B ? 'text-default' : 'text-danger',
-                                                  children: M
+                                                  children: k
                                               }
                                           )
                                       )
                               })
                     ]
                 }),
-                (0, r.jsx)(s.nn4, { children: g.intl.format(g.t.qH8uFR, { count: M }) }),
-                L && !k
+                (0, r.jsx)(s.nn4, { children: g.intl.format(g.t.qH8uFR, { count: k }) }),
+                L && !j
                     ? (0, r.jsx)(p.Z, {
                           className: E.upsell,
                           iconOnly: (null == (i = O.upsellLongMessages) ? void 0 : i.iconOnly) || !1,
-                          remaining: M
+                          remaining: k
                       })
                     : null
             ]

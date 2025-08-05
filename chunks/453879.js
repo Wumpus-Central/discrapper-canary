@@ -12,19 +12,19 @@ function a(e, t) {
         ];
     let n = [],
         a = (0, r.Lz)(e),
-        o = new Set(a.map((e) => e.guildId));
+        s = new Set(a.map((e) => e.guildId));
     a.length > 0 &&
         n.push({
             header: l.intl.string(l.t.CbaapK),
             entries: a,
             appendEndCard: !1
         });
-    let s = e.filter((e) => !o.has(e.guildId));
+    let o = e.filter((e) => !s.has(e.guildId));
     return (
-        (s = (0, r.Th)(s)).length > 0 &&
+        (o = (0, r.Th)(o)).length > 0 &&
             n.push({
                 header: l.intl.string(l.t.wxbhER),
-                entries: s,
+                entries: o,
                 appendEndCard: !0
             }),
         n

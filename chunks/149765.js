@@ -8,8 +8,8 @@
     e$: () => S,
     fS: () => I,
     hX: () => b,
-    r0: () => R,
-    ug: () => P,
+    r0: () => w,
+    ug: () => R,
     vB: () => g
 }),
     n(368063));
@@ -209,14 +209,14 @@ function N(e, t) {
 function C(e, t) {
     return t === E ? e : O(e, b(e, t));
 }
-let R = p
+let w = p
         ? function (e) {
               return BigInt(1) << BigInt(e);
           }
         : function (e) {
               return _.fromBit(e);
           },
-    P = p
+    R = p
         ? function (e, t) {
               return Number(BigInt.asUintN(e, t));
           }

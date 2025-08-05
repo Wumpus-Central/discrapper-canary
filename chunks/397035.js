@@ -1,81 +1,93 @@
-r.d(t, { Z: () => d });
-var n = r(73800),
-    l = r(835473),
-    i = r(81063),
-    o = r(591759),
-    a = r(561308),
-    c = r(206583),
-    s = r(701488),
-    u = r(388032);
-function d(e) {
-    var t, r;
-    let d,
-        { entry: p, baseEntryData: f } = e,
-        b = (0, l.q)(p.extra.application_id),
-        m = null == b ? void 0 : b.getIconURL(128),
-        O = (0, i.xF)(p.extra.application_id, p.extra.media_assets_large_image, [s.Si.LARGE, s.Si.LARGE]),
-        y = p.extra.media_title,
-        j = p.extra.media_subtitle,
-        g = (0, a.Jg)(p) ? u.t['LH+Z39'] : u.t.YuKgmp,
-        h = { type: c.kG.CRUNCHYROLL },
-        v = n.useMemo(() => {
-            if (null == p.extra.url) return;
-            let e = o.Z.safeParseWithQuery(p.extra.url);
-            if (null != e && null != e.protocol && null != e.hostname) return e;
-        }, [p.extra.url]);
+n.d(t, { Z: () => h });
+var r = n(73800),
+    i = n(835473),
+    a = n(81063),
+    o = n(591759),
+    s = n(561308),
+    l = n(206583),
+    c = n(701488),
+    u = n(388032);
+function d(e, t, n) {
     return (
-        null != v &&
-            (d = {
-                href: o.Z.format(v),
-                ariaDescription: u.intl.formatToPlainString(u.t.aFFQ3t, { title: y })
-            }),
-        (t = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var r = null != arguments[t] ? arguments[t] : {},
-                    n = Object.keys(r);
-                ('function' == typeof Object.getOwnPropertySymbols &&
-                    (n = n.concat(
-                        Object.getOwnPropertySymbols(r).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(r, e).enumerable;
-                        })
-                    )),
-                    n.forEach(function (t) {
-                        var n;
-                        ((n = r[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: n,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0
-                                  })
-                                : (e[t] = n));
-                    }));
-            }
-            return e;
-        })({}, f)),
-        (r = r =
-            {
-                thumbnailUrl: null != O ? O : m,
-                title: y,
-                titleClickable: d,
-                thumbnailClickable: d,
-                subtitle: j,
-                userDescription: g,
-                providerIconProps: h
-            }),
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function f(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                d(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function _(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function p(e, t) {
+    return (
+        (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
-            : (function (e, t) {
-                  var r = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
-                  }
-                  return r;
-              })(Object(r)).forEach(function (e) {
-                  Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : _(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
-        t
+        e
+    );
+}
+function h(e) {
+    let t,
+        { entry: n, baseEntryData: d } = e,
+        _ = (0, i.q)(n.extra.application_id),
+        h = null == _ ? void 0 : _.getIconURL(128),
+        m = (0, a.xF)(n.extra.application_id, n.extra.media_assets_large_image, [c.Si.LARGE, c.Si.LARGE]),
+        g = n.extra.media_title,
+        E = n.extra.media_subtitle,
+        b = (0, s.Jg)(n) ? u.t['LH+Z39'] : u.t.YuKgmp,
+        y = { type: l.kG.CRUNCHYROLL },
+        O = r.useMemo(() => {
+            if (null == n.extra.url) return;
+            let e = o.Z.safeParseWithQuery(n.extra.url);
+            if (null != e && null != e.protocol && null != e.hostname) return e;
+        }, [n.extra.url]);
+    return (
+        null != O &&
+            (t = {
+                href: o.Z.format(O),
+                ariaDescription: u.intl.formatToPlainString(u.t.aFFQ3t, { title: g })
+            }),
+        p(f({}, d), {
+            thumbnailUrl: null != m ? m : h,
+            title: g,
+            titleClickable: t,
+            thumbnailClickable: t,
+            subtitle: E,
+            userDescription: b,
+            providerIconProps: y
+        })
     );
 }

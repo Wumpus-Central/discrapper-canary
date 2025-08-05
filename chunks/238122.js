@@ -1,22 +1,22 @@
 (n.d(t, { Z: () => m }), n(388685), n(413496), n(433524), n(35282));
 var r = n(255367),
-    a = n(73800),
+    l = n(73800),
     i = n(481060),
-    o = n(454585),
-    l = n(273744),
-    s = n(388032),
+    a = n(454585),
+    s = n(273744),
+    o = n(388032),
     c = n(232890),
     d = n(20493);
 let u = (e) => {
         var t, n;
         let {
-                data: { title: u, subtitle: m, placeholder: p, rows: _, character_limit: g, pattern: b },
-                onChange: x,
+                data: { title: u, subtitle: m, placeholder: p, rows: g, character_limit: x, pattern: _ },
+                onChange: b,
                 initialText: h,
                 isRequired: f
             } = e,
-            v = a.useRef(
-                o.Z.reactParserFor(
+            v = l.useRef(
+                a.Z.reactParserFor(
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -41,8 +41,8 @@ let u = (e) => {
                                 }));
                         }
                         return e;
-                    })({}, o.Z.defaultRules)),
-                    (n = n = { link: l.s }),
+                    })({}, a.Z.defaultRules)),
+                    (n = n = { link: s.s }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                         : (function (e, t) {
@@ -58,30 +58,30 @@ let u = (e) => {
                     t)
                 )
             ),
-            [j, y] = a.useState(''),
-            [C, I] = a.useState(null);
-        a.useEffect(() => {
+            [j, y] = l.useState(''),
+            [O, Z] = l.useState(null);
+        l.useEffect(() => {
             var e;
             y(null != (e = null == h ? void 0 : h.value) ? e : '');
         }, [h]);
-        let O = a.useCallback(
+        let I = l.useCallback(
             (e) => {
-                let t = null != b ? new RegExp(b) : null;
+                let t = null != _ ? new RegExp(_) : null;
                 null == t || t.test(e)
                     ? null != e &&
-                      (I(null),
+                      (Z(null),
                       y(e),
-                      x({
+                      b({
                           value: e,
                           isValid: !0
                       }))
-                    : (I(s.intl.string(s.t['24xrGR'])),
-                      x({
+                    : (Z(o.intl.string(o.t['24xrGR'])),
+                      b({
                           value: e,
                           isValid: !1
                       }));
             },
-            [x, b]
+            [b, _]
         );
         return (0, r.jsxs)('div', {
             className: d.marginBottom8,
@@ -102,11 +102,11 @@ let u = (e) => {
                         })
                     }),
                 (0, r.jsx)(i.Kx8, {
-                    maxLength: g,
-                    onChange: O,
+                    maxLength: x,
+                    onChange: I,
                     value: j,
-                    error: C,
-                    rows: _,
+                    error: O,
+                    rows: g,
                     placeholder: p,
                     autoFocus: !0
                 }),
@@ -121,7 +121,7 @@ let u = (e) => {
         });
     },
     m = (e) => {
-        let { elements: t, onChange: n, state: a } = e,
+        let { elements: t, onChange: n, state: l } = e,
             i = t.map((e) => {
                 var t;
                 let i = e.name;
@@ -130,7 +130,7 @@ let u = (e) => {
                     {
                         data: e.data,
                         onChange: (e) => n(i, e.value, e.isValid),
-                        initialText: null != (t = null == a ? void 0 : a[i]) ? t : void 0,
+                        initialText: null != (t = null == l ? void 0 : l[i]) ? t : void 0,
                         isRequired: e.should_submit_data
                     },
                     i

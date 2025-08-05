@@ -1,27 +1,27 @@
-(n.d(t, { Z: () => s }), n(388685));
+(n.d(t, { Z: () => l }), n(388685));
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    l = n.n(i),
-    a = n(479099),
-    o = n(33976);
-function s(e) {
+    a = n.n(i),
+    o = n(479099),
+    s = n(33976);
+function l(e) {
     let { appliedTags: t, setAppliedTags: n, wrap: i } = e,
-        s =
+        l =
             null != n
                 ? (e) => {
                       t.has(e) && (t.delete(e), n(new Set(t)));
                   }
                 : void 0;
     return (0, r.jsx)('div', {
-        className: l()(o.tags, { [o.wrap]: i }),
+        className: a()(s.tags, { [s.wrap]: i }),
         children: Array.from(t).map((e) =>
             (0, r.jsx)(
-                a.Z,
+                o.Z,
                 {
                     tag: e,
-                    onRemove: s,
-                    size: null == s ? a.Z.Sizes.SMALL : a.Z.Sizes.MEDIUM
+                    onRemove: l,
+                    size: null == l ? o.Z.Sizes.SMALL : o.Z.Sizes.MEDIUM
                 },
                 e.id
             )

@@ -108,37 +108,37 @@ let S = new u.Z('ApexExperimentStore'),
         guild: {}
     },
     C = {},
+    w = {},
     R = {},
     P = {},
-    w = {},
     D = 'apexTrackedExposures',
     L = 1,
     x = 7 * _.Z.Millis.DAY,
-    M = {},
-    k = {};
-function j(e) {
-    let t = k[e];
-    return (null == t && ((t = a().v3(e)), (k[e] = t)), t);
+    k = {},
+    j = {};
+function M(e) {
+    let t = j[e];
+    return (null == t && ((t = a().v3(e)), (j[e] = t)), t);
 }
 class U extends (r = o.ZP.PersistedStore) {
     initialize(e) {
-        (this.waitFor(d.default), null != e && 1 === e.version && ((R = e.clientOverrides), (N = e.evaluatedExperiments)));
+        (this.waitFor(d.default), null != e && 1 === e.version && ((w = e.clientOverrides), (N = e.evaluatedExperiments)));
         let t = (0, c._S)();
-        for (let e in ((P = {}), t)) {
-            let n = j(e);
-            P[e] = {
+        for (let e in ((R = {}), t)) {
+            let n = M(e);
+            R[e] = {
                 hashedName: n,
                 variantId: t[e],
                 isOverride: !0
             };
         }
-        M = this.loadTrackedExposures();
+        k = this.loadTrackedExposures();
     }
     getState() {
         return {
             version: 1,
             evaluatedExperiments: N,
-            clientOverrides: R
+            clientOverrides: w
         };
     }
     processExperimentsMessage(e) {
@@ -166,9 +166,9 @@ class U extends (r = o.ZP.PersistedStore) {
         }
     }
     handleApexExperimentOverrideCreate(e) {
-        ((R = b(g({}, R), {
+        ((w = b(g({}, w), {
             [e.experimentName]: {
-                hashedName: j(e.experimentName),
+                hashedName: M(e.experimentName),
                 variantId: e.variantId,
                 isOverride: !0
             }
@@ -177,37 +177,37 @@ class U extends (r = o.ZP.PersistedStore) {
     }
     handleApexExperimentOverrideDelete(e) {
         let t = e.experimentName,
-            { [t]: n } = R;
-        R = y(R, [t].map(I));
+            { [t]: n } = w;
+        w = y(w, [t].map(I));
     }
     handleApexExperimentsMetadataFetchSuccess(e) {
-        w = g({}, w, Object.fromEntries(e.experiments.map((e) => [e.name, e])));
+        P = g({}, P, Object.fromEntries(e.experiments.map((e) => [e.name, e])));
     }
     getExperimentsMetadata() {
-        return w;
+        return P;
     }
     getClientOverrides() {
-        return R;
+        return w;
     }
     getExperimentClientOverride(e) {
-        return R[e];
+        return w[e];
     }
     handleLogout(e) {
         (e.isSwitchingAccount || this.clearAllServerAssignments(), s.K.remove(D), this.clearAllTrackedExposures());
     }
     registerExperiment(e) {
-        ((C[e.name] = e), null != P[e.name] && this.trackExposureSuppression(e.name, 'cookie_override'));
+        ((C[e.name] = e), null != R[e.name] && this.trackExposureSuppression(e.name, 'cookie_override'));
     }
     getRegisteredExperiments() {
         return C;
     }
     getAssignment(e, t, n) {
         var r;
-        let i = null != (r = R[n]) ? r : P[n];
+        let i = null != (r = w[n]) ? r : R[n];
         return null != i ? i : this.getServerAssignment(e, t, n);
     }
     getServerAssignment(e, t, n) {
-        let r = j(n),
+        let r = M(n),
             i = N[e][t];
         if (null != i) return i.assignments[r];
     }
@@ -217,13 +217,13 @@ class U extends (r = o.ZP.PersistedStore) {
     }
     getEvaluationAndAssignment(e, t, n) {
         var r;
-        let i = null != (r = R[n]) ? r : P[n];
+        let i = null != (r = w[n]) ? r : R[n];
         if (null != i) return [void 0, i];
         let a = N[e][t];
-        return null == a ? [void 0, void 0] : [a.evaluationId, a.assignments[j(n)]];
+        return null == a ? [void 0, void 0] : [a.evaluationId, a.assignments[M(n)]];
     }
     trackExperimentExposure(e, t, n, r, i, a) {
-        let o = j(''.concat(t, '|').concat(i, '|').concat(a, '|').concat(n));
+        let o = M(''.concat(t, '|').concat(i, '|').concat(a, '|').concat(n));
         this.shouldTrackExposure(o) &&
             'user' === r &&
             (f.default.track(h.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
@@ -232,20 +232,20 @@ class U extends (r = o.ZP.PersistedStore) {
                 exposure_location: n,
                 unit_type: r
             }),
-            (M[o] = Date.now()),
-            this.saveTrackedExposures(M));
+            (k[o] = Date.now()),
+            this.saveTrackedExposures(k));
     }
     trackCommonTriggerPointExposures(e) {
         for (let t of this.evaluationIds('user')) {
-            let n = j(''.concat(t, '|').concat(e));
+            let n = M(''.concat(t, '|').concat(e));
             this.shouldTrackExposure(n) &&
                 (f.default.track(h.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
                     evaluation_id: t,
                     exposure_location: e,
                     unit_type: 'user'
                 }),
-                (M[n] = Date.now()),
-                this.saveTrackedExposures(M));
+                (k[n] = Date.now()),
+                this.saveTrackedExposures(k));
         }
     }
     trackExposureSuppression(e, t) {
@@ -264,7 +264,7 @@ class U extends (r = o.ZP.PersistedStore) {
             .filter((e) => null != e);
     }
     shouldTrackExposure(e) {
-        let t = M[e];
+        let t = k[e];
         return null == t || Date.now() - t > x;
     }
     loadTrackedExposures() {
@@ -297,13 +297,13 @@ class U extends (r = o.ZP.PersistedStore) {
         };
     }
     clearAllOverrides() {
-        ((R = {}), (P = {}));
+        ((w = {}), (R = {}));
     }
     clearAllTrackedExposures() {
-        M = {};
+        k = {};
     }
     getHash(e) {
-        return j(e);
+        return M(e);
     }
     constructor() {
         super(

@@ -1,17 +1,17 @@
-n.d(t, { I: () => s });
+n.d(t, { I: () => a });
 var i = n(255367),
-    a = n(471141),
-    o = n(851005);
-function s(e) {
+    o = n(471141),
+    l = n(851005);
+function a(e) {
     let { node: t } = e,
-        { useValue: n, setValue: s, useTitle: l, useSubtitle: r } = t.data,
-        c = l(),
-        u = null == r ? void 0 : r(),
+        { useValue: n, setValue: a, useTitle: r, useSubtitle: s } = t,
+        c = r(),
+        u = null == s ? void 0 : s(),
         d = n();
-    return (0, i.jsx)(a.j, {
+    return (0, i.jsx)(o.j, {
         value: d,
-        onChange: (e) => s(e),
-        className: o.toggle,
+        onChange: (e) => a(e),
+        className: l.toggle,
         note: u,
         hideBorder: !0,
         children: c

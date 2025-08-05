@@ -1,10 +1,9 @@
 n.d(t, {
-    M: () => s,
-    Z: () => p
+    M: () => u,
+    Z: () => b
 });
 var r,
-    i,
-    l = n(442837),
+    i = n(442837),
     a = n(570140);
 function o(e, t, n) {
     return (
@@ -19,70 +18,85 @@ function o(e, t, n) {
         e
     );
 }
-var s = (((r = {})[(r.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (r[(r.FETCHING = 1)] = 'FETCHING'), (r[(r.FETCHED = 2)] = 'FETCHED'), (r[(r.FAILED = 3)] = 'FAILED'), r);
-let c = {},
-    u = {};
-class d extends (i = l.ZP.Store) {
+function s(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                o(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function l(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function c(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : l(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+var u = (function (e) {
+    return ((e[(e.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), (e[(e.FAILED = 3)] = 'FAILED'), e);
+})({});
+let d = {},
+    f = {};
+function _() {
+    ((d = {}), (f = {}));
+}
+function p(e) {
+    let { threadId: t } = e;
+    f[t] = 1;
+}
+function h(e) {
+    let { threadId: t, mediaPostEmbed: n } = e;
+    ((d = c(s({}, d), { [t]: n })), (f[t] = 2));
+}
+function m(e) {
+    let { threadId: t } = e;
+    f[t] = 3;
+}
+function g(e) {
+    e.isSwitchingAccount || ((d = {}), (f = {}));
+}
+class E extends (r = i.ZP.Store) {
     getMediaPostEmbed(e) {
-        if (null != e) return c[e];
+        if (null != e) return d[e];
     }
     getEmbedFetchState(e) {
         var t;
-        return null != (t = u[e]) ? t : 0;
+        return null != (t = f[e]) ? t : 0;
     }
     getMediaPostEmbeds() {
-        return c;
+        return d;
     }
 }
-o(d, 'displayName', 'MediaPostEmbedStore');
-let p = new d(a.Z, {
-    CONNECTION_OPEN: function () {
-        ((c = {}), (u = {}));
-    },
-    MEDIA_POST_EMBED_FETCH: function (e) {
-        let { threadId: t } = e;
-        u[t] = 1;
-    },
-    MEDIA_POST_EMBED_FETCH_SUCCESS: function (e) {
-        var t, n;
-        let { threadId: r, mediaPostEmbed: i } = e;
-        ((t = (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
-                ('function' == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
-                    )),
-                    r.forEach(function (t) {
-                        o(e, t, n[t]);
-                    }));
-            }
-            return e;
-        })({}, c)),
-            (n = n = { [r]: i }),
-            Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                : (function (e, t) {
-                      var n = Object.keys(e);
-                      if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
-                      }
-                      return n;
-                  })(Object(n)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                  }),
-            (c = t),
-            (u[r] = 2));
-    },
-    MEDIA_POST_EMBED_FETCH_FAILURE: function (e) {
-        let { threadId: t } = e;
-        u[t] = 3;
-    },
-    LOGOUT: function (e) {
-        e.isSwitchingAccount || ((c = {}), (u = {}));
-    }
+o(E, 'displayName', 'MediaPostEmbedStore');
+let b = new E(a.Z, {
+    CONNECTION_OPEN: _,
+    MEDIA_POST_EMBED_FETCH: p,
+    MEDIA_POST_EMBED_FETCH_SUCCESS: h,
+    MEDIA_POST_EMBED_FETCH_FAILURE: m,
+    LOGOUT: g
 });

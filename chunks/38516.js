@@ -1,74 +1,74 @@
-(r.d(t, { Z: () => f }), r(415506), r(642613));
+(r.d(t, { Z: () => p }), r(415506), r(642613));
 var n = r(255367);
 r(73800);
-var i = r(120356),
-    a = r.n(i),
+var a = r(120356),
+    i = r.n(a),
     l = r(643872),
-    s = r(481060),
-    o = r(810568),
+    o = r(481060),
+    s = r(810568),
     c = r(388032),
-    u = r(263930),
-    d = r(242177);
+    d = r(263930),
+    u = r(242177);
 let m = [l.p.OFFICIAL, l.p.TWITTER, l.p.YOUTUBE];
 function g(e) {
     let { website: t, trackClick: r } = e,
         {
-            action: i,
-            icon: a,
-            title: u
+            action: a,
+            icon: i,
+            title: d
         } = (function (e) {
             switch (e.category) {
                 case l.p.OFFICIAL:
                     return {
-                        icon: (0, n.jsx)(s.enf, { colorClass: d.linkIcon }),
-                        action: o.as.WebsiteLink,
+                        icon: (0, n.jsx)(o.enf, { colorClass: u.linkIcon }),
+                        action: s.as.WebsiteLink,
                         title: c.intl.string(c.t.fOUKvr)
                     };
                 case l.p.TWITTER:
                     return {
-                        icon: (0, n.jsx)(s.TAi, { colorClass: d.linkIcon }),
-                        action: o.as.XLink,
+                        icon: (0, n.jsx)(o.TAi, { colorClass: u.linkIcon }),
+                        action: s.as.XLink,
                         title: c.intl.string(c.t['INic4+'])
                     };
                 case l.p.YOUTUBE:
                     return {
-                        action: o.as.YouTubeLink,
-                        icon: (0, n.jsx)(s.$5w, { colorClass: d.linkIcon }),
+                        action: s.as.YouTubeLink,
+                        icon: (0, n.jsx)(o.$5w, { colorClass: u.linkIcon }),
                         title: c.intl.string(c.t.lNmxbG)
                     };
                 default:
                     throw Error('Unknown IGDB website category');
             }
         })(t);
-    return (0, n.jsx)(s.ua7, {
+    return (0, n.jsx)(o.ua7, {
         text: t.url,
-        tooltipClassName: d.tooltip,
-        tooltipContentClassName: d.tooltipContent,
+        tooltipClassName: u.tooltip,
+        tooltipContentClassName: u.tooltipContent,
         children: (e) => {
             var l,
-                o,
+                s,
                 { onClick: c } = e,
                 m = (function (e, t) {
                     if (null == e) return {};
                     var r,
                         n,
-                        i = (function (e, t) {
+                        a = (function (e, t) {
                             if (null == e) return {};
                             var r,
                                 n,
-                                i = {},
-                                a = Object.keys(e);
-                            for (n = 0; n < a.length; n++) ((r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]));
-                            return i;
+                                a = {},
+                                i = Object.keys(e);
+                            for (n = 0; n < i.length; n++) ((r = i[n]), t.indexOf(r) >= 0 || (a[r] = e[r]));
+                            return a;
                         })(e, t);
                     if (Object.getOwnPropertySymbols) {
-                        var a = Object.getOwnPropertySymbols(e);
-                        for (n = 0; n < a.length; n++) ((r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (i[r] = e[r]));
+                        var i = Object.getOwnPropertySymbols(e);
+                        for (n = 0; n < i.length; n++) ((r = i[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]));
                     }
-                    return i;
+                    return a;
                 })(e, ['onClick']);
             return (0, n.jsx)(
-                s.eee,
+                o.eee,
                 ((l = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var r = null != arguments[t] ? arguments[t] : {},
@@ -94,19 +94,19 @@ function g(e) {
                     }
                     return e;
                 })({}, m)),
-                (o = o =
+                (s = s =
                     {
-                        className: d.linkAnchor,
-                        title: u,
+                        className: u.linkAnchor,
+                        title: d,
                         href: t.url,
                         onClick: () => {
-                            (r(i), null == c || c());
+                            (r(a), null == c || c());
                         },
                         target: '_blank',
-                        children: a
+                        children: i
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
                     : (function (e, t) {
                           var r = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -114,36 +114,36 @@ function g(e) {
                               r.push.apply(r, n);
                           }
                           return r;
-                      })(Object(o)).forEach(function (e) {
-                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                      })(Object(s)).forEach(function (e) {
+                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(s, e));
                       }),
                 l)
             );
         }
     });
 }
-let f = function (e) {
+let p = function (e) {
     let { detectedGame: t, trackClick: r } = e;
     if (null == t.websites) return null;
-    let i = t.websites
+    let a = t.websites
         .filter((e) => {
             let { category: t } = e;
             return m.includes(t);
         })
         .sort((e, t) => e.category - t.category);
-    return 0 === i.length
+    return 0 === a.length
         ? null
         : (0, n.jsxs)('div', {
               children: [
-                  (0, n.jsx)(s.X6q, {
-                      className: u.sectionHeader,
+                  (0, n.jsx)(o.X6q, {
+                      className: d.sectionHeader,
                       variant: 'text-xs/semibold',
                       color: 'header-secondary',
                       children: c.intl.string(c.t.Oj3o19)
                   }),
                   (0, n.jsx)('div', {
-                      className: a()(u.row, u.gapMd),
-                      children: i.map((e) =>
+                      className: i()(d.row, d.gapMd),
+                      children: a.map((e) =>
                           (0, n.jsx)(
                               g,
                               {

@@ -4,12 +4,12 @@ n(73800);
 var i = n(120356),
     l = n.n(i),
     o = n(793030),
-    a = n(442837),
-    s = n(607070),
+    s = n(442837),
+    a = n(607070),
     c = n(803595);
 function u(e) {
     let { withHeader: t = !0, size: n = 15 } = e,
-        i = (0, a.e7)([s.Z], () => s.Z.useReducedMotion);
+        i = (0, s.e7)([a.Z], () => a.Z.useReducedMotion);
     return (0, r.jsxs)(o.Kq, {
         gap: 4,
         children: [
@@ -31,7 +31,7 @@ function d(e) {
     return (0, r.jsx)('div', { className: l()(c.line, t) });
 }
 function h() {
-    let e = (0, a.e7)([s.Z], () => s.Z.useReducedMotion);
+    let e = (0, s.e7)([a.Z], () => a.Z.useReducedMotion);
     return (0, r.jsxs)('div', {
         style: {
             display: 'flex',

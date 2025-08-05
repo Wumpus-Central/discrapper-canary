@@ -1,31 +1,33 @@
-(l.d(t, { Z: () => E }), l(388685));
+(n.d(t, { Z: () => d }), n(388685));
 var r,
-    n,
-    o,
-    i = l(442837),
-    a = l(570140),
-    s = l(430824);
-let u = new Map();
-class c extends (r = i.ZP.Store) {
+    i = n(442837),
+    a = n(570140),
+    o = n(430824);
+function s(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+let l = new Map(),
+    c = (e) => {
+        let { roleId: t, roleConnectionConfigurations: n } = e;
+        l.set(t, n);
+    };
+class u extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z);
+        this.waitFor(o.Z);
     }
     getGuildRoleConnectionsConfiguration(e) {
-        return u.get(e);
+        return l.get(e);
     }
 }
-((o = 'GuildRoleConnectionsConfigurationStore'),
-    (n = 'displayName') in c
-        ? Object.defineProperty(c, n, {
-              value: o,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (c[n] = o));
-let E = new c(a.Z, {
-    GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: (e) => {
-        let { roleId: t, roleConnectionConfigurations: l } = e;
-        u.set(t, l);
-    }
-});
+s(u, 'displayName', 'GuildRoleConnectionsConfigurationStore');
+let d = new u(a.Z, { GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: c });

@@ -38,11 +38,11 @@ function E(e) {
 }
 let b = i.forwardRef(function (e, t) {
     let { title: n, titleIcon: i, titleId: a, description: f, children: g, className: b, errors: y, disabled: O = !1, hideDivider: v = !1, showBorder: I = !1, borderType: T, hasBackground: S = !1, forcedDivider: A = !1, showPremiumIcon: N = !1, showViewFullProfileButton: C = !1 } = e,
-        R = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
-        P = () => {
-            null != R &&
+        w = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
+        R = () => {
+            null != w &&
                 (0, u.openUserProfileModal)({
-                    userId: R.id,
+                    userId: w.id,
                     disableActionsForPreview: !0
                 });
         };
@@ -69,13 +69,13 @@ let b = i.forwardRef(function (e, t) {
                         N && (0, r.jsx)(_.Z, {}),
                         i,
                         C &&
-                            null != R &&
+                            null != w &&
                             (0, r.jsx)(l.zx, {
                                 look: l.zx.Looks.LINK,
                                 color: l.zx.Colors.TRANSPARENT,
                                 size: l.zx.Sizes.TINY,
                                 className: m.viewFullProfileButton,
-                                onClick: P,
+                                onClick: R,
                                 children: (0, r.jsx)(c.Text, {
                                     variant: 'text-xs/normal',
                                     children: h.intl.string(h.t['+Xp3ho'])

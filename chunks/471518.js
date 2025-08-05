@@ -1,11 +1,11 @@
 (n.d(t, {
     CP: () => C,
-    T4: () => R,
+    T4: () => w,
     XK: () => D,
     g5: () => L,
     gZ: () => A,
     i6: () => N,
-    yC: () => P
+    yC: () => R
 }),
     n(388685));
 var r = n(261470),
@@ -120,7 +120,7 @@ async function C() {
         categories: n.body
     });
 }
-async function R(e) {
+async function w(e) {
     var t;
     let { applicationId: n, guildId: r, options: i } = e,
         { page: a } = null != i ? i : {},
@@ -173,7 +173,7 @@ async function R(e) {
         }
     }
 }
-async function P(e) {
+async function R(e) {
     var t;
     let { query: n, guildId: r, options: i, onSuccessCallback: a } = e,
         { page: o, pageSize: d, categoryId: f, integrationType: _, minUserInstallCommandCount: p, excludeAppsWithCustomInstallUrl: h, excludeNonEmbeddedApps: g, excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: E, source: y = s.F.APP_DIRECTORY } = null != i ? i : {},
@@ -273,7 +273,7 @@ async function P(e) {
         }
     }
 }
-function w() {
+function P() {
     return (0, f.isAndroid)() ? a.R.ANDROID : (0, f.isIOS)() ? a.R.IOS : a.R.WEB;
 }
 async function D() {
@@ -302,7 +302,7 @@ async function D() {
                 query: {
                     surface: e,
                     active_state: t,
-                    platform: w(),
+                    platform: P(),
                     locale: u.default.locale,
                     cache: f
                 },

@@ -120,23 +120,23 @@ function A(e) {
                 e
             );
         }),
-        R = d.ZP.canUseSoundboardEverywhere(o),
-        P = (0, i.e7)([s.Z], () => s.Z.getGuild(null == e ? void 0 : e.guild_id)),
-        w = (0, i.e7)(
+        w = d.ZP.canUseSoundboardEverywhere(o),
+        R = (0, i.e7)([s.Z], () => s.Z.getGuild(null == e ? void 0 : e.guild_id)),
+        P = (0, i.e7)(
             [l.Z],
             () => {
-                let { canCreateExpressions: e } = (0, a.Gw)(P);
+                let { canCreateExpressions: e } = (0, a.Gw)(R);
                 return e;
             },
-            [P]
+            [R]
         ),
         { canSeeRecentlyHeard: D, canSeeFrequentlyPlayed: L } = (0, _.k)({
             location: 'soundboard-useSoundGrid',
             autoTrackExposure: !0
         }),
         x = C(),
-        M = (0, i.Wu)([h.Z], () => h.Z.recentlyHeardSoundIds),
-        k = p.C.useExperiment({ location: 'useSoundGrid' });
+        k = (0, i.Wu)([h.Z], () => h.Z.recentlyHeardSoundIds),
+        j = p.C.useExperiment({ location: 'useSoundGrid' });
     return r.useMemo(() => {
         let e = 0,
             r = 0,
@@ -168,7 +168,7 @@ function A(e) {
                     sections: i,
                     guildIds: A,
                     allSounds: f,
-                    potentialSoundIdsForSection: M,
+                    potentialSoundIdsForSection: k,
                     sectionType: g.bg.RECENTLY_HEARD,
                     sortById: !1
                 }),
@@ -181,19 +181,19 @@ function A(e) {
                     sectionType: g.bg.FREQUENTLY_USED,
                     sortById: !1
                 }),
-            void 0 !== P &&
-                T(i, P, {
-                    currentGuildHasAddPermissions: w,
+            void 0 !== R &&
+                T(i, R, {
+                    currentGuildHasAddPermissions: P,
                     allSounds: f,
                     filterOutEmptyCurrentGuild: t
                 }));
-        let a = R || k.moveDefaultToBottom;
+        let a = w || j.moveDefaultToBottom;
         return (
             a || S(i, f),
             I({
                 sections: i,
                 guilds: N,
-                currentGuildId: null == P ? void 0 : P.id,
+                currentGuildId: null == R ? void 0 : R.id,
                 allSounds: f,
                 hasNitro: u
             }),
@@ -212,7 +212,7 @@ function A(e) {
                 }
             }
         );
-    }, [A, f, b, M, x, L, D, P, w, t, R, N, n, O, u, k.moveDefaultToBottom]);
+    }, [A, f, b, k, x, L, D, R, P, t, w, N, n, O, u, j.moveDefaultToBottom]);
 }
 function N(e, t, n) {
     return r.useMemo(

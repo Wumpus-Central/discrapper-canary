@@ -56,21 +56,21 @@ let v = (e) => {
         (0, E.Z)(g);
         let [S, A] = i.useState(0),
             [N, C] = i.useState(0),
-            { accessibilityLabel: R } = g,
-            [P, w] = i.useState(-O),
+            { accessibilityLabel: w } = g,
+            [R, P] = i.useState(-O),
             {
                 stop: D,
                 reset: L,
                 ticking: x
             } = (0, _.Z)((e) => {
-                w((t) => t + e);
+                P((t) => t + e);
             }),
-            M = i.useRef(O);
+            k = i.useRef(O);
         (i.useEffect(() => {
-            M.current = O;
+            k.current = O;
         }),
             i.useEffect(() => {
-                (w(-M.current), T((0, h.H)(g.effects)));
+                (P(-k.current), T((0, h.H)(g.effects)));
             }, [g]),
             i.useEffect(() => {
                 let e = 0,
@@ -82,15 +82,15 @@ let v = (e) => {
                     A(t),
                     C(e));
             }, [C, I]));
-        let [k, j] = i.useState(!1);
+        let [j, M] = i.useState(!1);
         return (
             i.useEffect(() => {
-                (!0 === c || s || (D(), w(0)), !s && k && x.current && (D(), w(0)), a && s && !x.current && (L(), g.animationType === f.Q.PERSISTENT ? w(u === f.j.FromStart ? 0 : S) : w(0)));
-            }, [s, k, S, a, D, L, x, g.animationType, c, u]),
+                (!0 === c || s || (D(), P(0)), !s && j && x.current && (D(), P(0)), a && s && !x.current && (L(), g.animationType === f.Q.PERSISTENT ? P(u === f.j.FromStart ? 0 : S) : P(0)));
+            }, [s, j, S, a, D, L, x, g.animationType, c, u]),
             (0, r.jsx)('div', {
                 ref: v,
                 className: o()(b.profileEffects, { [b.hovered]: s && l }),
-                'aria-label': R,
+                'aria-label': w,
                 role: 'img',
                 children: (0, r.jsx)('div', {
                     className: y ? b.innerNoRadius : b.inner,
@@ -119,9 +119,9 @@ let v = (e) => {
                                 layerConfig: e,
                                 animationType: g.animationType,
                                 ticking: x.current,
-                                time: P,
-                                hasPlayedThrough: k,
-                                setHasPlayedThrough: j,
+                                time: R,
+                                hasPlayedThrough: j,
+                                setHasPlayedThrough: M,
                                 urlQueryString: p,
                                 maxLoops: n,
                                 loopEnd: N,

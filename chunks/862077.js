@@ -48,9 +48,9 @@ function I(e) {
     return e;
 }
 function T(e) {
-    let { user: t, guildId: n, setPopoutRef: v, channelId: T, messageId: S, roleId: A, openedAt: N, onHide: C, newAnalyticsLocations: R = [], disableAutoFocus: P = !1 } = e,
-        w = (0, a.e7)([c.Z], () => c.Z.isBlocked(t.id)),
-        { analyticsLocations: D } = (0, l.ZP)([...R, w ? s.Z.BLOCKED_PROFILE_POPOUT : s.Z.IGNORED_PROFILE_POPOUT]),
+    let { user: t, guildId: n, setPopoutRef: v, channelId: T, messageId: S, roleId: A, openedAt: N, onHide: C, newAnalyticsLocations: w = [], disableAutoFocus: R = !1 } = e,
+        P = (0, a.e7)([c.Z], () => c.Z.isBlocked(t.id)),
+        { analyticsLocations: D } = (0, l.ZP)([...w, P ? s.Z.BLOCKED_PROFILE_POPOUT : s.Z.IGNORED_PROFILE_POPOUT]),
         L = (0, d.ZB)({
             layout: 'POPOUT',
             userId: t.id,
@@ -60,26 +60,26 @@ function T(e) {
             roleId: A
         }),
         x = i.useRef(null),
-        M = (0, _.ZP)(t.id, n);
+        k = (0, _.ZP)(t.id, n);
     i.useEffect(() => {
         null == v || v(null == x ? void 0 : x.current);
     }, [x, v]);
-    let k = w ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
-        j = P ? 'div' : o.VqE;
+    let j = P ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
+        M = R ? 'div' : o.VqE;
     return (0, r.jsx)(l.Gt, {
         value: D,
         children: (0, r.jsx)(d.Mt, {
             value: L,
             openedAt: N,
-            fetchStartedAt: null == M ? void 0 : M.fetchStartedAt,
-            fetchEndedAt: null == M ? void 0 : M.fetchEndedAt,
-            isLoaded: null == M ? void 0 : M.isLoaded,
-            children: (0, r.jsx)(j, {
+            fetchStartedAt: null == k ? void 0 : k.fetchStartedAt,
+            fetchEndedAt: null == k ? void 0 : k.fetchEndedAt,
+            isLoaded: null == k ? void 0 : k.isLoaded,
+            children: (0, r.jsx)(M, {
                 ref: x,
                 'aria-label': t.username,
                 children: (0, r.jsx)(h.Z, {
                     user: t,
-                    displayProfile: M,
+                    displayProfile: k,
                     themeType: E.lY.POPOUT,
                     children: (0, r.jsxs)('div', {
                         className: y.container,
@@ -106,7 +106,7 @@ function T(e) {
                                             }),
                                             (0, r.jsx)(o.Text, {
                                                 variant: 'text-sm/medium',
-                                                children: b.intl.format(w ? b.t['8F+WNz'] : b.t['/cZp5u'], { username: u.ZP.getName(n, T, t) })
+                                                children: b.intl.format(P ? b.t['8F+WNz'] : b.t['/cZp5u'], { username: u.ZP.getName(n, T, t) })
                                             })
                                         ]
                                     }),
@@ -114,13 +114,13 @@ function T(e) {
                                         align: 'center',
                                         children: [
                                             (0, r.jsx)(g.Z, {
-                                                isBlocked: w,
+                                                isBlocked: P,
                                                 onClick: () => {
                                                     (C(),
                                                         (0, f.pQ)(
                                                             I(
                                                                 {
-                                                                    action: k,
+                                                                    action: j,
                                                                     analyticsLocations: D
                                                                 },
                                                                 L

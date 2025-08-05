@@ -1,5 +1,5 @@
 (n.d(t, {
-    ZP: () => k,
+    ZP: () => j,
     wU: () => D
 }),
     n(388685));
@@ -151,24 +151,24 @@ function C(e) {
                                             multiplier: 1
                                         })
                                     ),
-                                    M.emitChange()));
-                        } else (C(E(m({}, e), { value: e.value - 1 })), M.emitChange());
+                                    k.emitChange()));
+                        } else (C(E(m({}, e), { value: e.value - 1 })), k.emitChange());
                     }
                 })));
 }
-function R(e) {
+function w(e) {
     A.set(e.messageId, e);
 }
-function P(e) {
+function R(e) {
     var { type: t } = e,
         n = b(e, ['type']);
     if (!d.Z.isEnabled()) return !1;
     C(n);
 }
-function w(e) {
+function P(e) {
     let { comboMessage: t } = e;
     if (!d.Z.isEnabled()) return !1;
-    R(t);
+    w(t);
 }
 function D(e, t, n, r) {
     return !(e !== t || null == n || r.has(n)) && (r.add(n), !0);
@@ -240,9 +240,9 @@ class x extends (r = i.ZP.Store) {
     }
 }
 h(x, 'displayName', 'PoggermodeStore');
-let M = new x(s.Z, {
-        POGGERMODE_UPDATE_COMBO: P,
-        POGGERMODE_UPDATE_MESSAGE_COMBO: w,
+let k = new x(s.Z, {
+        POGGERMODE_UPDATE_COMBO: R,
+        POGGERMODE_UPDATE_MESSAGE_COMBO: P,
         MESSAGE_CREATE: L
     }),
-    k = M;
+    j = k;

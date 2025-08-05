@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    a = n(442837),
-    s = n(481060),
+    s = n(442837),
+    a = n(481060),
     c = n(100527),
     u = n(434479),
     d = n(819640),
@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(933104),
     m = n(332538),
     b = n(921944),
-    _ = n(93841),
-    O = n(388032),
+    O = n(93841),
+    _ = n(388032),
     y = n(388298);
 function C(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -74,36 +74,36 @@ let v = {
                         return (0, r.jsx)('div', {});
                 }
             }, [t, null == j ? void 0 : j.popout]),
-            x = (0, s.s9z)(s.JQI),
-            I = (0, a.e7)([d.Z], () => d.Z.hasLayers()),
+            x = (0, a.s9z)(a.JQI),
+            I = (0, s.e7)([d.Z], () => d.Z.hasLayers()),
             [P, N] = i.useState(null),
             w = null == P ? 'animation' : 'LOOP';
         i.useEffect(() => {
             (null == j ? void 0 : j.popout) == null && N(null);
         }, [null == j ? void 0 : j.popout]);
-        let T = i.useCallback((e) => {
+        let Z = i.useCallback((e) => {
                 N(e);
             }, []),
-            Z = i.useRef(null);
-        return (0, r.jsx)(s.yRy, {
-            targetElementRef: Z,
+            T = i.useRef(null);
+        return (0, r.jsx)(a.yRy, {
+            targetElementRef: T,
             shouldShow: (null == j ? void 0 : j.popout) != null && !(x || I),
             nudgeAlignIntoViewport: !0,
             animationPosition: 'bottom',
             position: 'right',
             renderPopout: S,
             children: (e) => {
-                var i, a;
+                var i, s;
                 return (0, r.jsx)(
                     u.m,
                     ((i = C({}, e)),
-                    (a = a =
+                    (s = s =
                         {
-                            ref: Z,
+                            ref: T,
                             className: y.container,
                             id: 'skill-trees-'.concat(t),
                             renderIcon: (e) =>
-                                (0, r.jsx)(s.$Eu, {
+                                (0, r.jsx)(a.$Eu, {
                                     size: 'md',
                                     className: e,
                                     color: 'currentColor'
@@ -112,18 +112,18 @@ let v = {
                                 (null == j ? void 0 : j.popout) != null &&
                                 (0, r.jsx)('div', {
                                     className: y.lottieContainer,
-                                    children: (0, r.jsx)(s.kci, {
+                                    children: (0, r.jsx)(a.kci, {
                                         nextScene: w,
                                         className: y.lottie,
                                         sceneSegments: v,
                                         importData: () => n.e('50821').then(n.t.bind(n, 548421, 19)),
-                                        onScenePlay: T,
+                                        onScenePlay: Z,
                                         rendererSettings: { preserveAspectRatio: 'xMidYMid slice' }
                                     })
                                 }),
                             text: (0, r.jsx)('span', {
                                 className: o()({ [y.textImportant]: (null == j ? void 0 : j.showUnread) === !0 }),
-                                children: O.intl.string(_.default.yv3DJC)
+                                children: _.intl.string(O.default.yv3DJC)
                             }),
                             selected: l,
                             onClick: E,
@@ -131,7 +131,7 @@ let v = {
                             trailing: null == j ? void 0 : j.trailing
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -139,8 +139,8 @@ let v = {
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(a)).forEach(function (e) {
-                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                          })(Object(s)).forEach(function (e) {
+                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
                           }),
                     i)
                 );

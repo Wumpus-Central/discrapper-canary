@@ -1,6 +1,6 @@
 let r, i;
 (n.d(t, {
-    Z: () => R,
+    Z: () => w,
     q: () => m
 }),
     n(539854));
@@ -199,7 +199,7 @@ class C extends (a = s.ZP.PersistedStore) {
             };
         }
     ]));
-let R = new C(l.Z, {
+let w = new C(l.Z, {
     CONNECTION_OPEN: b,
     LOGOUT: y,
     MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: (e) => I(e.userId, 1),

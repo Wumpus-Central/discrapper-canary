@@ -5,34 +5,34 @@ var r = t(442837),
     i = t(481060),
     o = t(666520),
     s = t(246016),
-    c = t(189156),
+    d = t(189156),
     a = t(706454),
-    u = t(914010),
-    d = t(246946),
+    c = t(914010),
+    u = t(246946),
     f = t(785717),
     p = t(250822),
-    j = t(771362),
+    h = t(771362),
     g = t(280885),
-    h = t(819602),
-    v = t(78806),
+    v = t(819602),
+    j = t(78806),
     m = t(900927),
     b = t(678738),
     x = t(179828),
-    y = t(228168),
-    O = t(388032),
-    Z = t(349966);
+    Z = t(228168),
+    y = t(388032),
+    O = t(349966);
 function I(e) {
     let { user: n, currentUser: t, displayProfile: I, subsection: P, onClose: E } = e,
         { trackUserProfileAction: T } = (0, f.KZ)(),
-        S = (0, r.e7)([u.Z], () => u.Z.getGuildId()),
+        S = (0, r.e7)([c.Z], () => c.Z.getGuildId()),
         N = (0, s.Y)({ userId: n.id }),
-        A = (0, r.e7)([d.Z], () => d.Z.hidePersonalInformation),
+        A = (0, r.e7)([u.Z], () => u.Z.hidePersonalInformation),
         C = (0, r.e7)([a.default], () => a.default.locale),
-        w = (0, j.Z)(n.id),
-        _ = (0, p.Z)(n.id);
+        _ = (0, h.Z)(n.id),
+        M = (0, p.Z)(n.id);
     return (0, l.jsxs)(i.zJl, {
         fade: !0,
-        className: Z.scroller,
+        className: O.scroller,
         children: [
             (null == I ? void 0 : I.bio) != null &&
                 (null == I ? void 0 : I.bio) !== '' &&
@@ -46,50 +46,50 @@ function I(e) {
                     user: n,
                     currentUser: t,
                     guildId: I.guildId,
-                    scrollIntoView: P === y.Tb.ROLES
+                    scrollIntoView: P === Z.Tb.ROLES
                 }),
             n.isProvisional &&
                 (0, l.jsx)(b.Z, {
-                    heading: O.intl.string(O.t.Iyka0d),
+                    heading: y.intl.string(y.t.Iyka0d),
                     headingIcon: (0, l.jsx)(i.Mgn, {
                         size: 'xxs',
                         color: i.TVs.colors.HEADER_PRIMARY
                     }),
                     headingColor: 'header-secondary',
-                    children: (0, l.jsx)(c.n, { userId: n.id })
+                    children: (0, l.jsx)(d.n, { userId: n.id })
                 }),
             N.length > 0 &&
                 (0, l.jsx)(b.Z, {
-                    heading: O.intl.string(O.t['Uv/eT0']),
-                    children: (0, l.jsx)(v.Z, { applicationIds: N })
+                    heading: y.intl.string(y.t['Uv/eT0']),
+                    children: (0, l.jsx)(j.Z, { applicationIds: N })
                 }),
             (0, l.jsx)(b.Z, {
-                heading: O.intl.string(O.t.a6XYDw),
+                heading: y.intl.string(y.t.a6XYDw),
                 children: (0, l.jsx)(m.Z, {
                     userId: n.id,
                     guildId: null == I ? void 0 : I.guildId,
-                    tooltipDelay: y.vB
+                    tooltipDelay: Z.vB
                 })
             }),
-            w.length > 0 &&
+            _.length > 0 &&
                 (0, l.jsx)(b.Z, {
-                    heading: O.intl.string(O.t['3fe7U1']),
-                    scrollIntoView: P === y.Tb.CONNECTIONS,
-                    children: (0, l.jsx)(h.ZP, {
-                        connectedAccounts: w,
-                        className: Z.connections,
+                    heading: y.intl.string(y.t['3fe7U1']),
+                    scrollIntoView: P === Z.Tb.CONNECTIONS,
+                    children: (0, l.jsx)(v.ZP, {
+                        connectedAccounts: _,
+                        className: O.connections,
                         userId: n.id,
                         locale: C
                     })
                 }),
-            _.length > 0 &&
+            M.length > 0 &&
                 (0, l.jsx)(b.Z, {
-                    heading: O.intl.string(O.t.PHjkRE),
-                    children: _.map((e) =>
+                    heading: y.intl.string(y.t.PHjkRE),
+                    children: M.map((e) =>
                         (0, l.jsx)(
-                            h.tH,
+                            v.tH,
                             {
-                                className: Z.appsConnections,
+                                className: O.appsConnections,
                                 applicationRoleConnection: e,
                                 locale: C,
                                 onApplicationClicked: () => {
@@ -102,12 +102,12 @@ function I(e) {
                     )
                 }),
             (0, l.jsx)(b.Z, {
-                heading: O.intl.string(O.t['mQKv+v']),
-                scrollIntoView: P === y.Tb.NOTE,
+                heading: y.intl.string(y.t['mQKv+v']),
+                scrollIntoView: P === Z.Tb.NOTE,
                 children: (0, l.jsx)(o.Z, {
                     userId: n.id,
-                    className: Z.note,
-                    autoFocus: P === y.Tb.NOTE,
+                    className: O.note,
+                    autoFocus: P === Z.Tb.NOTE,
                     onUpdate: () => T({ action: 'SET_NOTE' })
                 })
             })

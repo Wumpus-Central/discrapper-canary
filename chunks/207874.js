@@ -17,7 +17,7 @@ function d(e) {
             ((0, c.QH)(!1), (0, c.yN)(''));
         }, []),
         p = i.useRef(null),
-        g = (0, l.e7)([o.Z], () => o.Z.getSection());
+        b = (0, l.e7)([o.Z], () => o.Z.getSection());
     return (
         i.useEffect(() => {
             let e = (e) => {
@@ -26,7 +26,7 @@ function d(e) {
                 (null == (t = (0, a.uB)(e)) ? void 0 : t.activeElement) === document.body && (null == n || n.focus());
             };
             return (window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e));
-        }, [g]),
+        }, [b]),
         (0, r.jsx)('div', {
             style: { marginBottom: '8px' },
             children: (0, r.jsx)(s.E1j, {

@@ -1,83 +1,90 @@
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(73800),
-    l = n(906732),
-    a = n(628581),
-    o = n(522651),
-    s = n(8404),
+    a = n(906732),
+    o = n(628581),
+    s = n(522651),
+    l = n(8404),
     c = n(871499);
-function u(e) {
-    var { selfMute: t, serverMute: n, suppress: u, centerButton: d = !1, awaitingRemote: p, onMouseEnter: h, onMouseLeave: f, onClick: m } = e,
-        g = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                r,
-                i = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) ((n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
-                    return i;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) ((n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
-            }
-            return i;
-        })(e, ['selfMute', 'serverMute', 'suppress', 'centerButton', 'awaitingRemote', 'onMouseEnter', 'onMouseLeave', 'onClick']);
-    let { parentAnalyticsLocation: b } = (0, l.ZP)(),
-        _ = t || n || u,
-        y = d ? c.d : c.Z,
-        C = (0, a.Z)(t, n, u, p),
-        { events: x, play: v, Component: j } = (0, s.b)(_);
+function u(e, t, n) {
     return (
-        i.useEffect(() => () => v(), [v, _]),
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function d(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                u(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function f(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = _(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
+    }
+    return i;
+}
+function _(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
+    return i;
+}
+function p(e) {
+    var { selfMute: t, serverMute: n, suppress: u, centerButton: _ = !1, awaitingRemote: p, onMouseEnter: h, onMouseLeave: m, onClick: g } = e,
+        E = f(e, ['selfMute', 'serverMute', 'suppress', 'centerButton', 'awaitingRemote', 'onMouseEnter', 'onMouseLeave', 'onClick']);
+    let { parentAnalyticsLocation: b } = (0, a.ZP)(),
+        y = t || n || u,
+        O = _ ? c.d : c.Z,
+        v = (0, o.Z)(t, n, u, p),
+        { events: I, play: T, Component: S } = (0, l.b)(y);
+    return (
+        i.useEffect(() => () => T(), [T, y]),
         (0, r.jsx)(
-            y,
-            (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
-                    ('function' == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                            })
-                        )),
-                        r.forEach(function (t) {
-                            var r;
-                            ((r = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
-                                          value: r,
-                                          enumerable: !0,
-                                          configurable: !0,
-                                          writable: !0
-                                      })
-                                    : (e[t] = r));
-                        }));
-                }
-                return e;
-            })(
+            O,
+            d(
                 {
-                    iconComponent: j,
+                    iconComponent: S,
                     isTrayButton: !0,
-                    caretColor: _ ? 'red' : 'primaryDark',
-                    color: _ ? 'red' : void 0,
-                    label: C,
+                    caretColor: y ? 'red' : 'primaryDark',
+                    color: y ? 'red' : void 0,
+                    label: v,
                     onMouseEnter: (e) => {
-                        (null == h || h(e), x.onMouseEnter());
+                        (null == h || h(e), I.onMouseEnter());
                     },
                     onMouseLeave: (e) => {
-                        (null == f || f(e), x.onMouseLeave());
+                        (null == m || m(e), I.onMouseLeave());
                     },
                     onClick: (e) => {
-                        (null == m || m(e), (0, o.v)(b, o.d.MIC, t));
+                        (null == g || g(e), (0, s.v)(b, s.d.MIC, t));
                     }
                 },
-                g
+                E
             )
         )
     );

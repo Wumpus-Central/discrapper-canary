@@ -60,11 +60,11 @@ function u(e) {
     return t;
 }
 function d(e, t) {
-    var n, i, a, o, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A, N, C, R, P, w, D;
+    var n, i, a, o, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, T, S, A, N, C, w, R, P, D;
     let L = e.substreams.find((e) => !e.isRTX && !e.isFlexFEC);
     if (null == L) return;
     let x = e.substreams.reduce((e, t) => e + s(t.rtpStats), 0),
-        M = e.substreams.reduce((e, t) => e + l(t.rtpStats), 0);
+        k = e.substreams.reduce((e, t) => e + l(t.rtpStats), 0);
     return {
         type: 'video',
         ssrc: L.ssrc,
@@ -76,7 +76,7 @@ function d(e, t) {
         },
         keyFrameInterval: e.keyFrameInterval,
         bytesSent: x,
-        packetsSent: M,
+        packetsSent: k,
         packetsLost: null != (O = null == (n = L.rtcpStats) ? void 0 : n.packetsLost) ? O : 0,
         fractionLost: null != (v = null == (i = L.rtcpStats) ? void 0 : i.fractionLost) ? v : 0,
         bitrate: e.mediaBitrate,
@@ -106,9 +106,9 @@ function d(e, t) {
         encoderQualityVmaf: null != (A = null == (u = L.encoderQualityStats) ? void 0 : u.imageQualityVmaf_v061) ? A : void 0,
         encoderQualityPsnr: null != (N = null == (d = L.encoderQualityStats) ? void 0 : d.imageQualityWebrtcPsnrDb) ? N : void 0,
         qualityDecodeErrors: null != (C = null == (f = L.encoderQualityStats) ? void 0 : f.decodeErrors) ? C : void 0,
-        qualityDecoderReboots: null != (R = null == (_ = L.encoderQualityStats) ? void 0 : _.decoderReboots) ? R : void 0,
-        qualityScoreErrors: null != (P = null == (p = L.encoderQualityStats) ? void 0 : p.scoreErrors) ? P : void 0,
-        qualityFrameDrops: null != (w = null == (h = L.encoderQualityStats) ? void 0 : h.frameDrops) ? w : void 0,
+        qualityDecoderReboots: null != (w = null == (_ = L.encoderQualityStats) ? void 0 : _.decoderReboots) ? w : void 0,
+        qualityScoreErrors: null != (R = null == (p = L.encoderQualityStats) ? void 0 : p.scoreErrors) ? R : void 0,
+        qualityFrameDrops: null != (P = null == (h = L.encoderQualityStats) ? void 0 : h.frameDrops) ? P : void 0,
         qualitySizeMismatches: null != (D = null == (m = L.encoderQualityStats) ? void 0 : m.sizeMismatches) ? D : void 0,
         filter: e.filter,
         passthroughCount: e.passthroughCount,

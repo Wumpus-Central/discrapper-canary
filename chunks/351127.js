@@ -1,60 +1,60 @@
-(t.d(e, {
-    B2: () => C,
-    Ov: () => d,
-    Qn: () => E,
-    _o: () => u,
-    pd: () => h
+(n.d(t, {
+    B2: () => m,
+    Ov: () => g,
+    Qn: () => T,
+    _o: () => I,
+    pd: () => A
 }),
-    t(388685),
-    t(415506),
-    t(539854));
-var n = t(149765),
-    r = t(399606),
-    l = t(601964),
-    i = t(345162),
-    s = t(271383),
-    a = t(485386),
-    o = t(430824),
-    g = t(594174),
-    f = t(700785),
-    v = t(981631),
-    c = t(135899);
-let h = Object.keys(v.Plq),
-    E = Array.from(new Set([...c.$X, ...v.yYS, v.Plq.ADMINISTRATOR, v.Plq.KICK_MEMBERS, v.Plq.BAN_MEMBERS, v.Plq.MANAGE_GUILD, v.Plq.MANAGE_CHANNELS, v.Plq.MANAGE_ROLES, v.Plq.MANAGE_MESSAGES, v.Plq.MANAGE_THREADS, v.Plq.MANAGE_GUILD_EXPRESSIONS, v.Plq.CREATE_GUILD_EXPRESSIONS, v.Plq.MANAGE_EVENTS, v.Plq.CREATE_EVENTS, v.Plq.MODERATE_MEMBERS, v.Plq.MENTION_EVERYONE, v.Plq.MANAGE_WEBHOOKS])).map((A) => {
-        let e = h.find((e) => v.Plq[e] === A);
-        if (null == e) throw Error('Permission '.concat(A, ' not found in Permissions'));
-        return e;
+    n(388685),
+    n(415506),
+    n(539854));
+var r = n(149765),
+    l = n(399606),
+    i = n(601964),
+    s = n(345162),
+    a = n(271383),
+    o = n(485386),
+    u = n(430824),
+    c = n(594174),
+    E = n(700785),
+    d = n(981631),
+    _ = n(135899);
+let A = Object.keys(d.Plq),
+    T = Array.from(new Set([..._.$X, ...d.yYS, d.Plq.ADMINISTRATOR, d.Plq.KICK_MEMBERS, d.Plq.BAN_MEMBERS, d.Plq.MANAGE_GUILD, d.Plq.MANAGE_CHANNELS, d.Plq.MANAGE_ROLES, d.Plq.MANAGE_MESSAGES, d.Plq.MANAGE_THREADS, d.Plq.MANAGE_GUILD_EXPRESSIONS, d.Plq.CREATE_GUILD_EXPRESSIONS, d.Plq.MANAGE_EVENTS, d.Plq.CREATE_EVENTS, d.Plq.MODERATE_MEMBERS, d.Plq.MENTION_EVERYONE, d.Plq.MANAGE_WEBHOOKS])).map((e) => {
+        let t = A.find((t) => d.Plq[t] === e);
+        if (null == t) throw Error('Permission '.concat(e, ' not found in Permissions'));
+        return t;
     }),
-    u = new Set(v.yYS);
-function d(A, e) {
-    return A === e;
+    I = new Set(d.yYS);
+function g(e, t) {
+    return e === t;
 }
-function C(A, e, t) {
-    let c = (0, r.e7)([o.Z], () => o.Z.getGuild(e), [e]);
-    return (0, r.e7)(
-        [s.ZP, g.default, a.Z],
+function m(e, t, n) {
+    let _ = (0, l.e7)([u.Z], () => u.Z.getGuild(t), [t]);
+    return (0, l.e7)(
+        [a.ZP, c.default, o.Z],
         () => {
-            let r = {},
-                o = s.ZP.getMember(e, A),
-                h = g.default.getUser(A);
-            if (null == c || null == o || null == h) return r;
-            let E = a.Z.getEveryoneRole(c),
-                u = f.uB({
-                    user: h,
-                    context: c
+            let l = {},
+                u = a.ZP.getMember(t, e),
+                A = c.default.getUser(e);
+            if (null == _ || null == u || null == A) return l;
+            let T = o.Z.getEveryoneRole(_),
+                I = E.uB({
+                    user: A,
+                    context: _
                 });
-            for (let A of t) {
-                let e = v.Plq[A];
-                if (n.e$(u, e)) {
-                    for (let t of ((r[A] = []), o.roles)) {
-                        let n = a.Z.getRole(c.id, t);
-                        null != n && ((0, i.Fs)(n, v.Plq.ADMINISTRATOR) || (0, i._N)(n, e)) && r[A].push(n.id);
+            for (let e of n) {
+                let t = d.Plq[e];
+                if (r.e$(I, t)) {
+                    for (let n of ((l[e] = []), u.roles)) {
+                        let r = o.Z.getRole(_.id, n);
+                        null != r && ((0, s.Fs)(r, d.Plq.ADMINISTRATOR) || (0, s._N)(r, t)) && l[e].push(r.id);
                     }
-                    (((0, i.Fs)(E, v.Plq.ADMINISTRATOR) || (0, i._N)(E, e)) && r[A].push(E.id), (0, l.eM)(c, h) && r[A].push(h.id));
+                    (((0, s.Fs)(T, d.Plq.ADMINISTRATOR) || (0, s._N)(T, t)) && l[e].push(T.id), (0, i.eM)(_, A) && l[e].push(A.id));
                 }
             }
-            return r;
+            return l;
         },
-        [c, e, t, A]
+        [_, t, n, e]
     );
 }

@@ -1,235 +1,250 @@
-(n.d(t, { z: () => j }), n(388685));
+(n.d(t, { z: () => N }), n(388685));
 var r = n(255367),
-    l = n(73800),
-    i = n(120356),
-    a = n.n(i),
+    i = n(73800),
+    a = n(120356),
+    o = n.n(a),
     s = n(913527),
-    c = n.n(s),
-    o = n(692547),
+    l = n.n(s),
+    c = n(692547),
     u = n(481060),
     d = n(894017),
-    p = n(854698),
-    m = n(849464),
-    f = n(765305),
-    v = n(388032),
-    g = n(923167);
-function b() {
+    f = n(854698),
+    _ = n(849464),
+    p = n(765305),
+    h = n(388032),
+    m = n(923167);
+function g(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function E(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        ('function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                g(e, t, n[t]);
+            }));
+    }
+    return e;
+}
+function b(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function y(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : b(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let O = 20;
+function v(e, t) {
+    let n = t.toDate(),
+        r = n.toLocaleString(h.intl.currentLocale, { weekday: 'long' });
+    switch (e) {
+        case _.z.WEEKLY:
+            return h.intl.formatToPlainString(h.t.xQM9X1, { weekday: r });
+        case _.z.BIWEEKLY:
+            return h.intl.formatToPlainString(h.t.RYscaW, { weekday: r });
+        case _.z.MONTHLY:
+            let i = Math.ceil(n.getDate() / 7);
+            return h.intl.formatToPlainString(h.t['4ZN9Ag'], {
+                weekday: r,
+                nth: i
+            });
+        case _.z.YEARLY:
+            return h.intl.formatToPlainString(h.t['rXUS+v'], {
+                date: n.toLocaleString(h.intl.currentLocale, {
+                    month: 'short',
+                    day: '2-digit'
+                })
+            });
+        case _.z.WEEKDAY_ONLY:
+            return h.intl.string(h.t['2BX6bG']);
+        case _.z.WEEKEND_ONLY:
+            return h.intl.string(h.t['IEi+R0']);
+        default:
+            return null;
+    }
+}
+function I(e, t, n, i, a) {
+    switch (e) {
+        case 1:
+            return a > 0 ? h.intl.formatToPlainString(h.t.PQlCWl, { minutes: a }) : h.intl.string(h.t.WINqKS);
+        case 2:
+            return h.intl.string(h.t.WINqKS);
+        case 3:
+            return null != i && '' !== i
+                ? h.intl.format(h.t.vHYgJS, {
+                      start: n,
+                      startHook: (e) =>
+                          (0, r.jsx)(u.Text, {
+                              color: 'text-feedback-positive',
+                              variant: 'text-sm/semibold',
+                              className: m.liveEventEndTime,
+                              children: e
+                          }),
+                      end: i
+                  })
+                : null != n
+                  ? n
+                  : '';
+        default:
+            return t;
+    }
+}
+function T(e) {
+    let t,
+        { timeStatus: n, textBrand: r, textPositive: i, textDanger: a, endDateTimeString: o, startDateTimeString: s } = e,
+        l = u.Que,
+        c = r,
+        d = 'header-secondary';
+    switch (n) {
+        case 3:
+            ((c = i), (d = null != o ? void 0 : 'text-feedback-positive'));
+            break;
+        case 4:
+            l = u.T39;
+            break;
+        case 2:
+        case 1:
+            ((d = 'text-brand'), (t = s));
+            break;
+        case 5:
+            c = a;
+    }
+    return {
+        Icon: l,
+        iconColor: c,
+        textColor: d,
+        tooltipText: t
+    };
+}
+function S() {
     return (0, r.jsx)(u.IGR, {
-        className: g.newBadge,
-        color: o.Z.unsafe_rawColors.BRAND_260.css,
+        className: m.newBadge,
+        color: c.Z.unsafe_rawColors.BRAND_260.css,
         text: (0, r.jsx)(u.Text, {
-            className: g.newBadgeText,
+            className: m.newBadgeText,
             variant: 'text-xs/bold',
-            children: v.intl.string(v.t.y2b7CA)
+            children: h.intl.string(h.t.y2b7CA)
         })
     });
 }
-function h(e) {
-    let { children: t, className: n, tooltipText: l } = e;
+function A(e) {
+    let { children: t, className: n, tooltipText: i } = e;
     return (0, r.jsx)('div', {
-        className: a()(g.eventStatusContainer, n),
+        className: o()(m.eventStatusContainer, n),
         children: (0, r.jsx)(u.ua7, {
             position: 'right',
-            text: l,
-            shouldShow: null != l,
-            children: (e) => {
-                var l, i;
-                return (0, r.jsx)(
+            text: i,
+            shouldShow: null != i,
+            children: (e) =>
+                (0, r.jsx)(
                     'div',
-                    ((l = (function (e) {
-                        for (var t = 1; t < arguments.length; t++) {
-                            var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
-                            ('function' == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
-                                    Object.getOwnPropertySymbols(n).filter(function (e) {
-                                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                    })
-                                )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    ((r = n[t]),
-                                        t in e
-                                            ? Object.defineProperty(e, t, {
-                                                  value: r,
-                                                  enumerable: !0,
-                                                  configurable: !0,
-                                                  writable: !0
-                                              })
-                                            : (e[t] = r));
-                                }));
-                        }
-                        return e;
-                    })({}, e)),
-                    (i = i =
-                        {
-                            className: a()(g.eventStatusContainer, n),
-                            children: t
-                        }),
-                    Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
-                        : (function (e, t) {
-                              var n = Object.keys(e);
-                              if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
-                              }
-                              return n;
-                          })(Object(i)).forEach(function (e) {
-                              Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
-                          }),
-                    l)
-                );
-            }
+                    y(E({}, e), {
+                        className: o()(m.eventStatusContainer, n),
+                        children: t
+                    })
+                )
         })
     });
 }
-function j(e) {
-    let { startTime: t, status: n, eventType: i, className: s, endTime: j, liveText: O, textVariant: y = 'text-sm/semibold', isNew: x, recurrenceRule: N, guildEventId: E, recurrenceId: w } = e,
-        P = (0, u.dQu)(o.Z.colors.TEXT_BRAND).hex(),
-        S = (0, u.dQu)(o.Z.colors.TEXT_FEEDBACK_POSITIVE).hex(),
-        I = (0, u.dQu)(o.Z.colors.TEXT_DANGER).hex();
-    null == O && (O = i === f.WX.EXTERNAL ? v.intl.string(v.t.IyZxjI) : v.intl.string(v.t['X2K3//']));
-    let C = (0, d.Z)(w, E),
-        [{ startDateTimeString: T, endDateTimeString: D, currentOrPastEvent: Z, upcomingEvent: k, diffMinutes: R }, B] = l.useState((0, p.ub)(t, j));
-    l.useEffect(() => {
-        B((0, p.ub)(t, j));
-        let e = setInterval(() => B((0, p.ub)(t, j)), 1000);
+function N(e) {
+    let { startTime: t, status: n, eventType: a, className: s, endTime: _, liveText: g, textVariant: E = 'text-sm/semibold', isNew: b, recurrenceRule: y, guildEventId: N, recurrenceId: C } = e,
+        w = (0, u.dQu)(c.Z.colors.TEXT_BRAND).hex(),
+        R = (0, u.dQu)(c.Z.colors.TEXT_FEEDBACK_POSITIVE).hex(),
+        P = (0, u.dQu)(c.Z.colors.TEXT_DANGER).hex();
+    null == g && (g = a === p.WX.EXTERNAL ? h.intl.string(h.t.IyZxjI) : h.intl.string(h.t['X2K3//']));
+    let D = (0, d.Z)(C, N),
+        [{ startDateTimeString: L, endDateTimeString: x, currentOrPastEvent: k, upcomingEvent: j, diffMinutes: M }, U] = i.useState((0, f.ub)(t, _));
+    i.useEffect(() => {
+        U((0, f.ub)(t, _));
+        let e = setInterval(() => U((0, f.ub)(t, _)), 1000);
         return () => {
             clearInterval(e);
         };
-    }, [t, j]);
-    let _ = T;
-    null != D &&
-        '' !== D &&
-        (_ = v.intl.formatToPlainString(v.t.tXbu7O, {
-            start: T,
-            end: D
+    }, [t, _]);
+    let G = L;
+    null != x &&
+        '' !== x &&
+        (G = h.intl.formatToPlainString(h.t.tXbu7O, {
+            start: L,
+            end: x
         }));
-    let L = l.useMemo(() => (n === f.p1.CANCELED || (null == C ? void 0 : C.is_canceled) ? 5 : n === f.p1.ACTIVE ? 3 : f.$I.has(n) ? 4 : Z ? 2 : +!!k), [n, null == C ? void 0 : C.is_canceled, Z, k]),
-        z = (function (e, t, n, l, i) {
-            switch (e) {
-                case 1:
-                    return i > 0 ? v.intl.formatToPlainString(v.t.PQlCWl, { minutes: i }) : v.intl.string(v.t.WINqKS);
-                case 2:
-                    return v.intl.string(v.t.WINqKS);
-                case 3:
-                    return null != l && '' !== l
-                        ? v.intl.format(v.t.vHYgJS, {
-                              start: n,
-                              startHook: (e) =>
-                                  (0, r.jsx)(u.Text, {
-                                      color: 'text-feedback-positive',
-                                      variant: 'text-sm/semibold',
-                                      className: g.liveEventEndTime,
-                                      children: e
-                                  }),
-                              end: l
-                          })
-                        : null != n
-                          ? n
-                          : '';
-                default:
-                    return t;
-            }
-        })(L, _, O, D, R),
+    let B = i.useMemo(() => (n === p.p1.CANCELED || (null == D ? void 0 : D.is_canceled) ? 5 : n === p.p1.ACTIVE ? 3 : p.$I.has(n) ? 4 : k ? 2 : +!!j), [n, null == D ? void 0 : D.is_canceled, k, j]),
+        Z = I(B, G, g, x, M),
         {
-            Icon: A,
-            iconColor: K,
-            textColor: X,
-            tooltipText: G
-        } = l.useMemo(
+            Icon: F,
+            iconColor: V,
+            textColor: H,
+            tooltipText: Y
+        } = i.useMemo(
             () =>
-                (function (e) {
-                    let t,
-                        { timeStatus: n, textBrand: r, textPositive: l, textDanger: i, endDateTimeString: a, startDateTimeString: s } = e,
-                        c = u.Que,
-                        o = r,
-                        d = 'header-secondary';
-                    switch (n) {
-                        case 3:
-                            ((o = l), (d = null != a ? void 0 : 'text-feedback-positive'));
-                            break;
-                        case 4:
-                            c = u.T39;
-                            break;
-                        case 2:
-                        case 1:
-                            ((d = 'text-brand'), (t = s));
-                            break;
-                        case 5:
-                            o = i;
-                    }
-                    return {
-                        Icon: c,
-                        iconColor: o,
-                        textColor: d,
-                        tooltipText: t
-                    };
-                })({
-                    timeStatus: L,
-                    textBrand: P,
-                    textPositive: S,
-                    textDanger: I,
-                    endDateTimeString: D,
-                    startDateTimeString: T
+                T({
+                    timeStatus: B,
+                    textBrand: w,
+                    textPositive: R,
+                    textDanger: P,
+                    endDateTimeString: x,
+                    startDateTimeString: L
                 }),
-            [L, P, S, I, D, T]
+            [B, w, R, P, x, L]
         ),
         W = null;
-    if (null != N) {
-        let e = (0, p.Ho)(N);
-        W = v.intl.formatToPlainString(v.t.HmKEqa, { recurrenceRule: e.toText() });
-        let n = c()(t);
-        W = (function (e, t) {
-            let n = t.toDate(),
-                r = n.toLocaleString(v.intl.currentLocale, { weekday: 'long' });
-            switch (e) {
-                case m.z.WEEKLY:
-                    return v.intl.formatToPlainString(v.t.xQM9X1, { weekday: r });
-                case m.z.BIWEEKLY:
-                    return v.intl.formatToPlainString(v.t.RYscaW, { weekday: r });
-                case m.z.MONTHLY:
-                    let l = Math.ceil(n.getDate() / 7);
-                    return v.intl.formatToPlainString(v.t['4ZN9Ag'], {
-                        weekday: r,
-                        nth: l
-                    });
-                case m.z.YEARLY:
-                    return v.intl.formatToPlainString(v.t['rXUS+v'], {
-                        date: n.toLocaleString(v.intl.currentLocale, {
-                            month: 'short',
-                            day: '2-digit'
-                        })
-                    });
-                case m.z.WEEKDAY_ONLY:
-                    return v.intl.string(v.t['2BX6bG']);
-                case m.z.WEEKEND_ONLY:
-                    return v.intl.string(v.t['IEi+R0']);
-                default:
-                    return null;
-            }
-        })((0, p.zi)(n, N), n);
+    if (null != y) {
+        let e = (0, f.Ho)(y);
+        W = h.intl.formatToPlainString(h.t.HmKEqa, { recurrenceRule: e.toText() });
+        let n = l()(t);
+        W = v((0, f.zi)(n, y), n);
     }
-    return (0, r.jsxs)(h, {
-        className: a()(s, { [g.isRecurring]: null != W }),
-        tooltipText: G,
+    return (0, r.jsxs)(A, {
+        className: o()(s, { [m.isRecurring]: null != W }),
+        tooltipText: Y,
         children: [
-            x && n === f.p1.SCHEDULED
-                ? (0, r.jsx)(b, {})
-                : (0, r.jsx)(A, {
-                      color: K,
+            b && n === p.p1.SCHEDULED
+                ? (0, r.jsx)(S, {})
+                : (0, r.jsx)(F, {
+                      color: V,
                       size: 'custom',
-                      width: 20,
-                      height: 20
+                      width: O,
+                      height: O
                   }),
             (0, r.jsxs)('div', {
-                className: g.eventStatusLabel,
+                className: m.eventStatusLabel,
                 children: [
                     (0, r.jsx)(u.Text, {
-                        color: X,
-                        variant: y,
-                        children: z
+                        color: H,
+                        variant: E,
+                        children: Z
                     }),
                     null != W &&
                         (0, r.jsx)(u.Text, {

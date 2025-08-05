@@ -1,21 +1,21 @@
-n.d(t, {
-    u: () => i,
-    y: () => o
+t.d(r, {
+    u: () => o,
+    y: () => i
 });
-var r = n(73800);
-function i(e) {
-    return (0, r.useMemo)(
+var e = t(73800);
+function o(n) {
+    return (0, e.useMemo)(
         function () {
-            return e.hooks.dragSource();
+            return n.hooks.dragSource();
         },
-        [e]
+        [n]
     );
 }
-function o(e) {
-    return (0, r.useMemo)(
+function i(n) {
+    return (0, e.useMemo)(
         function () {
-            return e.hooks.dragPreview();
+            return n.hooks.dragPreview();
         },
-        [e]
+        [n]
     );
 }

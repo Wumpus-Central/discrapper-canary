@@ -1,21 +1,21 @@
-var n = r(172367),
-    i = r(733359),
-    o = r(802801),
-    a = r(473297);
-t.exports = function (t) {
-    var e = a(
-        t,
-        function (t) {
-            var e = t.getSelection(),
-                r = t.getCurrentContent(),
-                n = e.getAnchorKey(),
-                a = e.getAnchorOffset(),
-                u = r.getBlockForKey(n).getText()[a];
-            return o(t, u ? i.getUTF16Length(u, 0) : 1);
+var r = n(172367),
+    i = n(733359),
+    a = n(802801),
+    o = n(473297);
+e.exports = function (e) {
+    var t = o(
+        e,
+        function (e) {
+            var t = e.getSelection(),
+                n = e.getCurrentContent(),
+                r = t.getAnchorKey(),
+                o = t.getAnchorOffset(),
+                s = n.getBlockForKey(r).getText()[o];
+            return a(e, s ? i.getUTF16Length(s, 0) : 1);
         },
         'forward'
     );
-    if (e === t.getCurrentContent()) return t;
-    var r = t.getSelection();
-    return n.push(t, e.set('selectionBefore', r), r.isCollapsed() ? 'delete-character' : 'remove-range');
+    if (t === e.getCurrentContent()) return e;
+    var n = e.getSelection();
+    return r.push(e, t.set('selectionBefore', n), n.isCollapsed() ? 'delete-character' : 'remove-range');
 };

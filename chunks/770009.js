@@ -1,81 +1,90 @@
-r.d(t, { Z: () => m });
-var n = r(255367);
-r(73800);
-var l = r(512722),
-    i = r.n(l),
-    o = r(442837),
-    a = r(52396),
-    c = r(592125),
-    s = r(970184),
-    u = r(151200),
-    d = r(96513);
-function p(e) {
+n.d(t, { Z: () => g });
+var r = n(255367);
+n(73800);
+var i = n(512722),
+    a = n.n(i),
+    o = n(442837),
+    s = n(52396),
+    l = n(592125),
+    c = n(970184),
+    u = n(151200),
+    d = n(96513);
+function f(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var r = null != arguments[t] ? arguments[t] : {},
-            n = Object.keys(r);
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (n = n.concat(
-                Object.getOwnPropertySymbols(r).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            n.forEach(function (t) {
-                var n;
-                ((n = r[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: n,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = n));
+            r.forEach(function (t) {
+                f(e, t, n[t]);
             }));
     }
     return e;
 }
-function f(e, t) {
+function p(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        (t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r));
+    }
+    return n;
+}
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var r = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var n = Object.getOwnPropertySymbols(e);
-                      r.push.apply(r, n);
-                  }
-                  return r;
-              })(Object(t)).forEach(function (r) {
-                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+            : p(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function b(e) {
-    let { contentInventoryEntry: t, channel: r } = e,
-        { parsedEntry: l } = (0, a.B)();
-    return (0, n.jsx)(
+function m(e) {
+    let { contentInventoryEntry: t, channel: n } = e,
+        { parsedEntry: i } = (0, s.B)();
+    return (0, r.jsx)(
         u.Z,
-        f(p({}, l), {
+        h(_({}, i), {
             entry: t,
-            channel: r
+            channel: n
         })
     );
 }
-function m(e) {
-    let t = (0, s.CJ)();
-    i()(null != t, 'Component context is not defined. Did you forget to wrap your component in a ComponentStateContextProvider?');
-    let { channelId: r } = t,
-        l = (0, o.e7)([c.Z], () => c.Z.getChannel(r));
+function g(e) {
+    let t = (0, c.CJ)();
+    a()(null != t, 'Component context is not defined. Did you forget to wrap your component in a ComponentStateContextProvider?');
+    let { channelId: n } = t,
+        i = (0, o.e7)([l.Z], () => l.Z.getChannel(n));
     return (
-        i()(null != l, 'channel must be defined'),
-        (0, n.jsx)(a.r, {
+        a()(null != i, 'channel must be defined'),
+        (0, r.jsx)(s.r, {
             location: d._.EMBED,
             entry: e.contentInventoryEntry,
-            channel: l,
+            channel: i,
             errorFallback: null,
-            children: (0, n.jsx)(b, f(p({}, e), { channel: l }))
+            children: (0, r.jsx)(m, h(_({}, e), { channel: i }))
         })
     );
 }

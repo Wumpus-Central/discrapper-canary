@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => M });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -76,14 +76,14 @@ function C(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = R(e, t);
+        i = w(e, t);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
         for (r = 0; r < a.length; r++) ((n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]));
     }
     return i;
 }
-function R(e, t) {
+function w(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -92,8 +92,8 @@ function R(e, t) {
     for (r = 0; r < a.length; r++) ((n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]));
     return i;
 }
-let P = [8, 8, 8, 8],
-    w = 40;
+let R = [8, 8, 8, 8],
+    P = 40;
 function D(e) {
     var { icon: t, isSelected: n, onClick: i, listItemProps: a } = e,
         s = C(e, ['icon', 'isSelected', 'onClick', 'listItemProps']);
@@ -190,7 +190,7 @@ function x(e) {
             return v.intl.string(v.t.Rtvk9f);
     }
 }
-function M(e) {
+function k(e) {
     switch (e.categoryInfo.type) {
         case g.bg.FAVORITES:
             return v.intl.string(v.t.k8fFjo);
@@ -204,18 +204,18 @@ function M(e) {
             return v.intl.string(v.t.Rtvk9f);
     }
 }
-function k(e) {
+function j(e) {
     let { category: t, categoryIndex: n, onClick: i, isSelected: a, isNitroLocked: o } = e,
         l = (0, s.JA)('soundboard_guild_'.concat(n));
     return (0, r.jsx)(c.ua7, {
         text: x(t),
-        'aria-label': M(t),
+        'aria-label': k(t),
         position: 'right',
         children: (e) => L(t, i, a, e, l, o)
     });
 }
-function j(e) {
-    let { soundboardListRef: t, categories: n, shouldUpsellLockedCategories: a, listPadding: o = P, guildId: s, inExpressionPicker: c } = e,
+function M(e) {
+    let { soundboardListRef: t, categories: n, shouldUpsellLockedCategories: a, listPadding: o = R, guildId: s, inExpressionPicker: c } = e,
         u = i.useRef(null),
         _ = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         g = (0, m.I5)(_, O.p9.TIER_2),
@@ -233,7 +233,7 @@ function j(e) {
                         }),
                             n());
                     };
-                return (0, r.jsx)(k, {
+                return (0, r.jsx)(j, {
                     category: e,
                     categoryIndex: t,
                     onClick: l,
@@ -252,6 +252,6 @@ function j(e) {
         listPadding: o,
         renderCategoryListItem: v,
         rowCount: n.length,
-        categoryHeight: w
+        categoryHeight: P
     });
 }

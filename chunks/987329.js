@@ -1,47 +1,47 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(73800),
-    l = n(481060),
-    a = n(906732),
-    o = n(408534),
-    s = n(522651),
+    a = n(481060),
+    o = n(906732),
+    s = n(408534),
+    l = n(522651),
     c = n(795318),
     u = n(390322),
     d = n(871499),
-    p = n(354459),
-    h = n(388032);
-let f = (e) => {
+    f = n(354459),
+    _ = n(388032);
+let p = (e) => {
     let { channel: t, remoteMode: n = !1 } = e,
-        { parentAnalyticsLocation: f } = (0, a.ZP)(),
-        m = i.useRef(null);
-    return (0, r.jsx)(l.yRy, {
-        targetElementRef: m,
+        { parentAnalyticsLocation: p } = (0, o.ZP)(),
+        h = i.useRef(null);
+    return (0, r.jsx)(a.yRy, {
+        targetElementRef: h,
         renderPopout: (e) => {
             let { closePopout: i } = e;
             return (0, r.jsx)(u.Z, {
-                children: (0, r.jsx)(o.Z, {
+                children: (0, r.jsx)(s.Z, {
                     onClose: i,
                     channel: t,
                     remoteMode: n,
-                    onInteraction: (0, c.u)('MoreSettingsMenu', f, { entrypoint: p.A5.THREE_DOT })
+                    onInteraction: (0, c.u)('MoreSettingsMenu', p, { entrypoint: f.A5.THREE_DOT })
                 })
             });
         },
         align: 'right',
         position: 'top',
-        animation: l.yRy.Animation.FADE,
+        animation: a.yRy.Animation.FADE,
         spacing: 16,
         children: (e, t) => {
             let { onClick: n } = e,
                 { isShown: i } = t;
             return (0, r.jsx)(d.d, {
-                ref: m,
+                ref: h,
                 isTrayButton: !0,
                 onClick: (e) => {
-                    ((0, s.v)(f, s.d.MORE), n(e));
+                    ((0, l.v)(p, l.d.MORE), n(e));
                 },
-                label: h.intl.string(h.t.PdRCRk),
-                iconComponent: l.xhG,
+                label: _.intl.string(_.t.PdRCRk),
+                iconComponent: a.xhG,
                 color: 'primaryDark',
                 isActive: i
             });

@@ -3,8 +3,8 @@ var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
-    a = n(442837),
-    s = n(493683),
+    s = n(442837),
+    a = n(493683),
     c = n(239091),
     u = n(146773),
     d = n(201895),
@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(496675),
     m = n(98597),
     b = n(473403),
-    _ = n(981631),
-    O = n(490897),
+    O = n(981631),
+    _ = n(490897),
     y = n(915887);
 function C(e, t, n) {
     return (
@@ -49,12 +49,12 @@ function v(e) {
 function j(e, t) {
     let n = t.getGuildId();
     if (null == n) throw Error('TextChannel, preloadChannel: Channel does not have a guildId');
-    s.Z.preload(n, t.id);
+    a.Z.preload(n, t.id);
 }
 class E extends m.ZP {
     render() {
-        let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: i, connectDragPreview: l, canReorderChannel: a } = this.props,
-            s = (0, r.jsx)('li', {
+        let { channel: e, selected: t, connectChannelDropTarget: n, connectChannelDragSource: i, connectDragPreview: l, canReorderChannel: s } = this.props,
+            a = (0, r.jsx)('li', {
                 className: o()(this.getClassName(), { [y.disabled]: this.isDisabled() }),
                 'data-dnd-name': e.name,
                 children: (0, r.jsxs)(b.ZP, {
@@ -64,13 +64,13 @@ class E extends m.ZP {
                     onClick: this.handleClick,
                     onMouseDown: j,
                     onContextMenu: this.handleContextMenu,
-                    connectDragPreview: a ? l : null,
+                    connectDragPreview: s ? l : null,
                     'aria-label': (0, d.ZP)({ channel: e }),
-                    resolvedUnreadSetting: O.i.ONLY_MENTIONS,
+                    resolvedUnreadSetting: _.i.ONLY_MENTIONS,
                     children: [this.renderInviteButton(), this.renderEditButton()]
                 })
             });
-        return a ? n(i(s)) : s;
+        return s ? n(i(a)) : a;
     }
     constructor(...e) {
         (super(...e),
@@ -110,12 +110,12 @@ class E extends m.ZP {
             C(this, 'handleClick', (e) => {
                 let t = e.getGuildId();
                 if (null == t) throw Error('TextChannel, transitionTo: Channel does not have a guildId');
-                (0, h.uL)(_.Z5c.CHANNEL(t, e.id), {
+                (0, h.uL)(O.Z5c.CHANNEL(t, e.id), {
                     state: {
                         analyticsSource: {
-                            page: _.ZY5.GUILD_CHANNEL,
-                            section: _.jXE.CHANNEL_LIST,
-                            object: _.qAy.CHANNEL
+                            page: O.ZY5.GUILD_CHANNEL,
+                            section: O.jXE.CHANNEL_LIST,
+                            object: O.qAy.CHANNEL
                         }
                     }
                 });
@@ -125,11 +125,11 @@ class E extends m.ZP {
 let S = (0, u.B)(E),
     x = i.memo(function (e) {
         let { channel: t, guild: n, disableSorting: i } = e,
-            l = (0, a.cj)([p.Z, g.Z], () => {
+            l = (0, s.cj)([p.Z, g.Z], () => {
                 let e = p.Z.getChannel(t.parent_id);
                 return {
-                    canManageChannel: g.Z.can(_.Plq.MANAGE_CHANNELS, t),
-                    canReorderChannel: !0 !== i && null != e ? g.Z.can(_.Plq.MANAGE_CHANNELS, e) : g.Z.can(_.Plq.MANAGE_CHANNELS, n)
+                    canManageChannel: g.Z.can(O.Plq.MANAGE_CHANNELS, t),
+                    canReorderChannel: !0 !== i && null != e ? g.Z.can(O.Plq.MANAGE_CHANNELS, e) : g.Z.can(O.Plq.MANAGE_CHANNELS, n)
                 };
             });
         return (0, r.jsx)(S, v({}, l, e));

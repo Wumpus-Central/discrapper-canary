@@ -1,111 +1,117 @@
-(n.d(t, { Z: () => p }), n(704826), n(35282), n(539854), n(388685));
-var i = n(255367);
+(n.d(t, { Z: () => E }), n(704826), n(35282), n(539854), n(388685));
+var r = n(255367);
 n(73800);
-var l = n(481060),
-    r = n(296182),
-    s = n(976853),
-    a = n(902676),
-    o = n(626135),
+var i = n(481060),
+    a = n(296182),
+    o = n(976853),
+    s = n(902676),
+    l = n(626135),
     c = n(49012),
-    d = n(358085),
-    u = n(998502),
-    g = n(36998),
-    h = n(981631),
-    f = n(388032);
+    u = n(358085),
+    d = n(998502),
+    f = n(36998),
+    _ = n(981631),
+    p = n(388032);
+function h(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
 function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         ('function' == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            i.forEach(function (t) {
-                var i;
-                ((i = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: i,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = i));
+            r.forEach(function (t) {
+                h(e, t, n[t]);
             }));
     }
     return e;
 }
-let E = /^(tel|sms|mailto):([^?;]+)/;
-function p(e, t, n, p) {
-    let v = (0, s.Z)(null == n ? void 0 : n.getChannelId());
-    if (!d.isPlatformEmbedded || null == e || '' === e || v || (null == p ? void 0 : p.shouldHideMediaOptions) === !0 || !(0, r.Jj)(e)) return null;
-    let N = (0, a.F)(e),
-        O = (e) => {
-            (o.default.track(h.rMx.CONTEXT_MENU_LINK_COPIED, m({ hostname: N }, (0, g.v)())), u.ZP.copy(e), (0, l.showToast)((0, l.createToast)(f.intl.string(f.t['L/PwZW']), l.ToastType.SUCCESS)));
+let g = /^(tel|sms|mailto):([^?;]+)/;
+function E(e, t, n, h) {
+    let E = (0, o.Z)(null == n ? void 0 : n.getChannelId());
+    if (!u.isPlatformEmbedded || null == e || '' === e || E || (null == h ? void 0 : h.shouldHideMediaOptions) === !0 || !(0, a.Jj)(e)) return null;
+    let b = (0, s.F)(e),
+        y = (e) => {
+            (l.default.track(_.rMx.CONTEXT_MENU_LINK_COPIED, m({ hostname: b }, (0, f.v)())), d.ZP.copy(e), (0, i.showToast)((0, i.createToast)(p.intl.string(p.t['L/PwZW']), i.ToastType.SUCCESS)));
         },
-        S = (n, i) => {
-            let l = !0 === i ? e.replace('tel:', 'sms:') : e;
-            (o.default.track(h.rMx.CONTEXT_MENU_LINK_OPENED, m({ hostname: N }, (0, g.v)())),
+        O = () => {
+            y(e);
+        },
+        v = (n, r) => {
+            let i = !0 === r ? e.replace('tel:', 'sms:') : e;
+            (l.default.track(_.rMx.CONTEXT_MENU_LINK_OPENED, m({ hostname: b }, (0, f.v)())),
                 (0, c.q)(
                     {
-                        href: l,
+                        href: i,
                         trusted: (0, c.r)(e, t),
                         shouldConfirm: !0
                     },
                     n
                 ));
         },
-        x = [],
-        D = e.match(E);
-    if (null != D) {
-        let e = f.intl.string('mailto' === D[1] ? f.t.ZYLVKi : f.t['3zozoa']);
-        (x.push(
-            (0, i.jsx)(
-                l.sNh,
+        I = [],
+        T = e.match(g);
+    if (null != T) {
+        let e = () => {
+                y(T[2]);
+            },
+            t = p.intl.string('mailto' === T[1] ? p.t.ZYLVKi : p.t['3zozoa']);
+        (I.push(
+            (0, r.jsx)(
+                i.sNh,
                 {
                     id: 'copy-native-contact',
-                    label: e,
-                    action: () => {
-                        O(D[2]);
-                    }
+                    label: t,
+                    action: e
                 },
                 'copy-native-contact'
             )
         ),
-            'tel' === D[1] &&
-                x.push(
-                    (0, i.jsx)(
-                        l.sNh,
+            'tel' === T[1] &&
+                I.push(
+                    (0, r.jsx)(
+                        i.sNh,
                         {
                             id: 'native-send-sms',
-                            label: f.intl.string(f.t['+wbjMT']),
-                            action: (e) => S(e, !0)
+                            label: p.intl.string(p.t['+wbjMT']),
+                            action: (e) => v(e, !0)
                         },
                         'native-send-sms'
                     )
                 ));
     }
     return [
-        (0, i.jsx)(
-            l.sNh,
+        (0, r.jsx)(
+            i.sNh,
             {
                 id: 'copy-native-link',
-                label: f.intl.string(f.t.WqhZsr),
-                action: () => {
-                    O(e);
-                }
+                label: p.intl.string(p.t.WqhZsr),
+                action: O
             },
             'copy-native-link'
         ),
-        ...x,
-        (0, i.jsx)(
-            l.sNh,
+        ...I,
+        (0, r.jsx)(
+            i.sNh,
             {
                 id: 'open-native-link',
-                label: f.intl.string(f.t.wuRE8P),
-                action: (e) => S(e)
+                label: p.intl.string(p.t.wuRE8P),
+                action: (e) => v(e)
             },
             'open-native-link'
         )

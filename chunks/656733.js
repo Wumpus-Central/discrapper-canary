@@ -126,12 +126,12 @@ function C(e) {
             };
         })));
 }
-function R(e) {
+function w(e) {
     let { query: t } = e;
     if (null == t) return !1;
     ((b = t), (y = []));
 }
-function P(e) {
+function R(e) {
     let t = e.trendingCategories;
     O = [
         ...(null != e.trendingGIFPreview
@@ -153,7 +153,7 @@ function P(e) {
         )
     ];
 }
-function w(e) {
+function P(e) {
     let { items: t } = e;
     v = t;
 }
@@ -192,8 +192,8 @@ let x = new L(o.Z, {
     GIF_PICKER_INITIALIZE: T,
     GIF_PICKER_QUERY: S,
     GIF_PICKER_QUERY_SUCCESS: C,
-    GIF_PICKER_QUERY_FAILURE: R,
-    GIF_PICKER_TRENDING_FETCH_SUCCESS: P,
-    GIF_PICKER_SUGGESTIONS_SUCCESS: w,
+    GIF_PICKER_QUERY_FAILURE: w,
+    GIF_PICKER_TRENDING_FETCH_SUCCESS: R,
+    GIF_PICKER_SUGGESTIONS_SUCCESS: P,
     GIF_PICKER_TRENDING_SEARCH_TERMS_SUCCESS: D
 });
