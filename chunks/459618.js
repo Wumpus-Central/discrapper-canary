@@ -82,7 +82,8 @@ function b(e) {
                 channel_type: t.type,
                 guild_id: t.guild_id,
                 guild_size: c.Z.getMemberCount(t.guild_id),
-                mobile_network_type: u.Z.getType()
+                mobile_network_type: u.Z.getType(),
+                num_attachments: e.attachmentCount
             }),
             null != i && { mobile_signal_strength_level: i }
         )
@@ -95,13 +96,17 @@ function y(e) {
 }
 class O extends r.ZP.Store {
     recordMessageSendAttempt(e, t) {
-        let n = {
-            initialSendTimestamp: Date.now(),
-            apiResponseTimestamp: null,
-            gatewaySeenTimestamp: null,
-            channelId: e
-        };
-        (this.pendingMessages.set(t, n),
+        var n, r, i, a;
+        let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            s = (null != (i = null == (n = o.attachments) ? void 0 : n.length) ? i : 0) + (null != (a = null == (r = o.attachmentsToUpload) ? void 0 : r.length) ? a : 0),
+            l = {
+                initialSendTimestamp: Date.now(),
+                apiResponseTimestamp: null,
+                gatewaySeenTimestamp: null,
+                channelId: e,
+                attachmentCount: s
+            };
+        (this.pendingMessages.set(t, l),
             setTimeout(() => {
                 let e = this.pendingMessages.get(t);
                 null != e && (b(e), this.pendingMessages.delete(t));

@@ -8,8 +8,8 @@
     IN: () => b,
     If: () => y,
     KW: () => v,
+    NL: () => R,
     NO: () => u,
-    O5: () => R,
     Q1: () => E,
     Rx: () => A,
     T1: () => g,
@@ -17,6 +17,7 @@
     XW: () => _,
     ad: () => p,
     d5: () => T,
+    os: () => P,
     uc: () => I
 }),
     n(388685));
@@ -134,6 +135,10 @@ var N = (function (e) {
         return ((e.INACTIVE = 'inactive'), (e.POWERUP_ACTIVATED = 'powerup_activated'), (e.LEVEL_ACTIVATED = 'level_activated'), (e.TIER_OVERRIDE_ACTIVATED = 'tier_override_activated'), e);
     })({}),
     C = (function (e) {
-        return ((e[(e.VANITY_URL = 1)] = 'VANITY_URL'), e);
+        return ((e[(e.VANITY_URL = 1)] = 'VANITY_URL'), (e[(e.GUILD_TAG_BADGE_PACKS_WAVE_ONE = 2)] = 'GUILD_TAG_BADGE_PACKS_WAVE_ONE'), e);
     })({});
-let R = { 1: r.A$ };
+let R = new Set([r.MB, r.Vk]),
+    P = {
+        1: new Set([r.A$]),
+        2: R
+    };

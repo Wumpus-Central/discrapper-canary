@@ -1,5 +1,6 @@
 var r = {
     combo: 'combo_fcddc1',
+    systemFont: 'systemFont_fcddc1',
     key: 'key_fcddc1',
     bindArrow: 'bindArrow_fcddc1',
     up: 'up_fcddc1',

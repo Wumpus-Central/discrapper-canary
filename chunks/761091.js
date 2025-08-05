@@ -32,10 +32,13 @@ function O(e) {
         w = e.features.has(_.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
         T = (0, g.Z)(e.id);
     if ((I && x.push(b.z.GUILD_HUB_HEADER_OPTIONS), !E && C && j && null != v && v.length > 0 ? x.push(b.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR) : e.premiumProgressBarEnabled && x.push(b.z.GUILD_PREMIUM_PROGRESS_BAR), !I && C && x.push(b.z.GUILD_HOME), t && x.push(b.z.GUILD_SCHEDULED_EVENTS), !I && P && N && x.push(b.z.CHANNELS_AND_ROLES), O && x.push(b.z.GUILD_ROLE_SUBSCRIPTIONS), y && x.push(b.z.GUILD_SHOP), (S && (P || w)) || (n && e.features.has(_.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)))) {
-        let { enabled: t } = l.Z.getCurrentConfig({
-            guildId: e.id,
-            location: 'useGuildActionRows'
-        });
+        let { enabled: t } = l.Z.getCurrentConfig(
+            {
+                guildId: e.id,
+                location: 'useGuildActionRows'
+            },
+            { autoTrackExposure: !0 }
+        );
         x.push(b.z.GUILD_MOD_DASH_MEMBER_SAFETY);
     }
     return (T && x.push(b.z.GUILD_BOOSTS), x);

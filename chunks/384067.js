@@ -1,26 +1,26 @@
 (r.d(t, { Z: () => b }), r(388685));
 var n = r(255367),
     l = r(73800),
-    i = r(120356),
-    a = r.n(i),
+    a = r(120356),
+    i = r.n(a),
     o = r(622535),
     s = r(481060),
     c = r(63063),
     u = r(597688),
     d = r(297651),
     p = r(215023),
-    f = r(981631),
-    g = r(388032),
+    g = r(981631),
+    f = r(388032),
     h = r(806734);
 let b = (e) => {
-    var t, r, i;
-    let { wideBannerBlock: b, handleTransition: m, tab: _ } = e,
-        O = null == (t = u.Z.getCategoryByStoreListingId(b.categoryStoreListingId)) ? void 0 : t.skuId,
-        v = l.useRef(null),
+    var t, r, a;
+    let { wideBannerBlock: b, handleTransition: _, tab: m } = e,
+        v = null == (t = u.Z.getCategoryByStoreListingId(b.categoryStoreListingId)) ? void 0 : t.skuId,
         C = l.useRef(null),
+        O = l.useRef(null),
         [E, S] = l.useState();
     l.useEffect(() => {
-        let e = C.current;
+        let e = O.current;
         if (null == e) return;
         let t = () => {
             e.naturalWidth > 0 && e.naturalHeight > 0 && S(1080 * (e.naturalHeight / e.naturalWidth));
@@ -32,26 +32,26 @@ let b = (e) => {
             }
         );
     }, []);
-    let y = null != O ? O : '',
+    let y = null != v ? v : '',
         { handleCardVisibilityChange: x } = (0, d.E)(y, 'home', 'marketing wide banner'),
         j = b.bannerUrl;
     if (null == j) return null;
-    let P = _ === p.AW.ORBS;
+    let P = m === p.AW.ORBS;
     return (0, n.jsx)(o.$, {
-        innerRef: v,
+        innerRef: C,
         onChange: x,
         threshold: 0,
         children: (0, n.jsxs)('div', {
-            ref: v,
-            className: a()(h.row, h.between, h.bannerBlockContainer, h.centeredSection, { [h.extraRounded]: P }),
+            ref: C,
+            className: i()(h.row, h.between, h.bannerBlockContainer, h.centeredSection, { [h.extraRounded]: P }),
             children: [
                 (0, n.jsx)('div', {
-                    className: a()(h.wideBannerBackgroundImg, { [h.extraRounded]: P }),
+                    className: i()(h.wideBannerBackgroundImg, { [h.extraRounded]: P }),
                     children: (0, n.jsx)('img', {
-                        ref: C,
+                        ref: O,
                         src: j,
                         alt: b.title,
-                        className: a()(h.wideBannerArt, { [h.wideBannerArtOrbs]: P }),
+                        className: i()(h.wideBannerArt, { [h.wideBannerArtOrbs]: P }),
                         style: { height: null != E ? ''.concat(E, 'px') : 'auto' }
                     })
                 }),
@@ -68,10 +68,10 @@ let b = (e) => {
                                 children: b.title
                             }),
                             (0, n.jsx)(s.Text, {
-                                style: { color: null != (i = b.bannerTextColor) ? i : 'var(--text-muted)' },
+                                style: { color: null != (a = b.bannerTextColor) ? a : 'var(--text-muted)' },
                                 lineClamp: 2,
                                 variant: P ? 'text-md/medium' : 'text-sm/medium',
-                                children: P ? g.intl.format(g.t.SFFP7O, { helpdeskArticle: c.Z.getArticleURL(f.BhN.VIRTUAL_CURRENCY_LEARN_MORE) }) : b.body
+                                children: P ? f.intl.format(f.t.SFFP7O, { helpdeskArticle: c.Z.getArticleURL(g.BhN.VIRTUAL_CURRENCY_LEARN_MORE) }) : b.body
                             })
                         ]
                     })
@@ -81,8 +81,8 @@ let b = (e) => {
                         className: h.wideBannerBlockButton,
                         children: (0, n.jsx)(s.zxk, {
                             variant: 'overlay-primary',
-                            onClick: () => m('shop wide banner', y),
-                            text: g.intl.string(g.t.jVcuVV)
+                            onClick: () => _('shop wide banner', y),
+                            text: f.intl.string(f.t.jVcuVV)
                         })
                     })
             ]

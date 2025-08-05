@@ -746,7 +746,7 @@ let eG = {
             i = eC(eA({}, i), { nonce: o });
             let s = () => eB._sendMessage(e, t, i),
                 l = x.ZP.backgroundify(s, void 0);
-            return (k.Z.recordMessageSendAttempt(e, o), es.Z.isReady(e))
+            return (k.Z.recordMessageSendAttempt(e, o, i), es.Z.isReady(e))
                 ? l()
                 : r && e !== E.V
                   ? (ew.info('Waiting for channel '.concat(e, ' to be ready before sending.')),

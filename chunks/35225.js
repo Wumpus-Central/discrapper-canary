@@ -10,9 +10,12 @@ function u(e) {
     var t;
     let n = l.Z.getChannelId(e),
         u = null == (t = s.ZP.getDefaultChannel(e)) ? void 0 : t.id,
-        { enabled: d } = r.Z.getCurrentConfig({
-            guildId: e,
-            location: 'getChannelIdForGuildTransition'
-        });
+        { enabled: d } = r.Z.getCurrentConfig(
+            {
+                guildId: e,
+                location: 'getChannelIdForGuildTransition'
+            },
+            { autoTrackExposure: !1 }
+        );
     return (n !== c.oC.GUILD_ONBOARDING || i.ZP.shouldShowOnboarding(e)) && (n !== c.oC.GUILD_HOME || (0, a.s)(e)) ? (null == o.Z.getChannel(n) ? u : n) : u;
 }

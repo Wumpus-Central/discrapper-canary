@@ -1,197 +1,240 @@
-r.d(t, { Z: () => _ });
+r.d(t, { Z: () => O });
 var n = r(255367),
     l = r(73800),
-    i = r(120356),
-    a = r.n(i),
+    a = r(120356),
+    i = r.n(a),
     o = r(990705),
     s = r(335818),
     c = r(255835),
     u = r(481060),
     d = r(410030),
     p = r(822857),
-    f = r(501431),
-    g = r(215023),
-    h = r(231338),
-    b = r(388032),
-    m = r(590305);
-function _() {
-    let { onToggleOrbEligible: e, orbEligible: t, reset: r, hasFilters: l } = (0, f.S)(),
-        i = l(),
-        { enabled: o } = (0, p.WX)({ location: 'Shop' });
+    g = r(626135),
+    f = r(381585),
+    h = r(501431),
+    b = r(215023),
+    _ = r(981631),
+    m = r(231338),
+    v = r(388032),
+    C = r(590305);
+function O() {
+    let { onToggleOrbEligible: e, orbEligible: t, reset: r, hasFilters: a } = (0, h.S)(),
+        o = a(),
+        { enabled: s } = (0, p.WX)({ location: 'Shop' }),
+        c = (0, f.sp)(),
+        d = l.useCallback(
+            (e) => {
+                g.default.track(_.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    collectibles_shop_session_id: null == c ? void 0 : c.sessionId,
+                    page_section: null == c ? void 0 : c.pageSection,
+                    page_category: null == c ? void 0 : c.pageCategory,
+                    page_index: null == c ? void 0 : c.pageIndex,
+                    page_size: null == c ? void 0 : c.pageSize,
+                    cta_name: e,
+                    page_type: 'catalog'
+                });
+            },
+            [c]
+        );
     return (0, n.jsxs)('div', {
-        className: m.filterBar,
+        className: C.filterBar,
         children: [
             (0, n.jsxs)('div', {
-                className: a()(m.filterSection, m.itemType),
+                className: i()(C.filterSection, C.itemType),
                 children: [
                     (0, n.jsx)(u.Text, {
                         variant: 'text-md/semibold',
-                        className: m.filterTitle,
-                        children: b.intl.string(b.t.Qk6r1d)
+                        className: C.filterTitle,
+                        children: v.intl.string(v.t.Qk6r1d)
                     }),
-                    g.xg.map((e) => (0, n.jsx)(O, { filter: e }, e)),
-                    o &&
+                    b.xg.map((e) =>
+                        (0, n.jsx)(
+                            E,
+                            {
+                                filter: e,
+                                trackFilterAction: d
+                            },
+                            e
+                        )
+                    ),
+                    s &&
                         (0, n.jsx)(u.XZJ, {
                             value: t,
-                            onChange: e,
+                            onChange: () => {
+                                (d('filter orb eligible '.concat(!1 === t ? 'on' : 'off')), e());
+                            },
                             children: (0, n.jsx)(u.Text, {
                                 variant: 'text-md/normal',
-                                children: b.intl.string(b.t.AHHHgI)
+                                children: v.intl.string(v.t.AHHHgI)
                             })
                         })
                 ]
             }),
-            (0, n.jsx)(v, {}),
-            (0, n.jsx)(S, {}),
-            i &&
+            (0, n.jsx)(S, { trackFilterAction: d }),
+            (0, n.jsx)(j, { trackFilterAction: d }),
+            o &&
                 (0, n.jsx)(u.zxk, {
                     variant: 'secondary',
-                    onClick: r,
-                    text: b.intl.string(b.t.jwH6KS),
+                    onClick: () => {
+                        (d('filter reset'), r());
+                    },
+                    text: v.intl.string(v.t.jwH6KS),
                     fullWidth: !0
                 })
         ]
     });
 }
-let O = (e) => {
+let E = (e) => {
         var t;
-        let { filter: r } = e,
-            l = {
-                [s.G.AVATAR_DECORATION]: b.intl.string(b.t.dRZYND),
-                [s.G.PROFILE_EFFECT]: b.intl.string(b.t['1cNjt7']),
-                [s.G.NAMEPLATE]: b.intl.string(b.t.V68Fq6),
-                [s.G.BUNDLE]: b.intl.string(b.t.FYFppq)
+        let { filter: r, trackFilterAction: l } = e,
+            a = {
+                [s.G.AVATAR_DECORATION]: v.intl.string(v.t.dRZYND),
+                [s.G.PROFILE_EFFECT]: v.intl.string(v.t['1cNjt7']),
+                [s.G.NAMEPLATE]: v.intl.string(v.t.V68Fq6),
+                [s.G.BUNDLE]: v.intl.string(v.t.FYFppq)
             },
-            { itemTypeFilters: i, onToggleItemType: a } = (0, f.S)();
+            { itemTypeFilters: i, onToggleItemType: o } = (0, h.S)();
         return (0, n.jsx)(u.XZJ, {
             value: i.has(r),
-            onChange: () => a(r),
+            onChange: () => {
+                var e;
+                let t = (null == (e = a[r]) ? void 0 : e.toLowerCase()) != null ? a[r].toLowerCase() : r;
+                (l('filter item type '.concat(t, ' ').concat(!1 === i.has(r) ? 'on' : 'off')), o(r));
+            },
             children: (0, n.jsx)(u.Text, {
                 variant: 'text-md/normal',
-                children: null != (t = l[r]) ? t : ''
+                children: null != (t = a[r]) ? t : ''
             })
         });
     },
-    v = () => {
-        let e = l.useMemo(
+    S = (e) => {
+        let { trackFilterAction: t } = e,
+            r = l.useMemo(
                 () => [
                     {
                         color: '#9B59B6',
-                        label: b.intl.string(b.t.kqUD4O),
+                        label: v.intl.string(v.t.kqUD4O),
                         enum: o.x.PURPLE
                     },
                     {
                         color: '#3498DB',
-                        label: b.intl.string(b.t.qQTRaW),
+                        label: v.intl.string(v.t.qQTRaW),
                         enum: o.x.BLUE
                     },
                     {
                         color: '#2ECC71',
-                        label: b.intl.string(b.t['f/Ylk5']),
+                        label: v.intl.string(v.t['f/Ylk5']),
                         enum: o.x.GREEN
                     },
                     {
                         color: '#A0522D',
-                        label: b.intl.string(b.t['Sd/BMT']),
+                        label: v.intl.string(v.t['Sd/BMT']),
                         enum: o.x.BROWN
                     },
                     {
                         color: '#F1C40F',
-                        label: b.intl.string(b.t['0fevY2']),
+                        label: v.intl.string(v.t['0fevY2']),
                         enum: o.x.YELLOW
                     }
                 ],
                 []
             ),
-            t = l.useMemo(
+            a = l.useMemo(
                 () => [
                     {
                         color: '#E67E22',
-                        label: b.intl.string(b.t.ZE7weH),
+                        label: v.intl.string(v.t.ZE7weH),
                         enum: o.x.ORANGE
                     },
                     {
                         color: '#E74C3C',
-                        label: b.intl.string(b.t.hKJGOD),
+                        label: v.intl.string(v.t.hKJGOD),
                         enum: o.x.RED
                     },
                     {
                         color: '#EC407A',
-                        label: b.intl.string(b.t.HvLEGB),
+                        label: v.intl.string(v.t.HvLEGB),
                         enum: o.x.PINK
                     },
                     {
                         color: '#FFFFFF',
-                        label: b.intl.string(b.t['CB+lND']),
+                        label: v.intl.string(v.t['CB+lND']),
                         enum: o.x.WHITE
                     },
                     {
                         color: '#262626',
-                        label: b.intl.string(b.t['dMey+v']),
+                        label: v.intl.string(v.t['dMey+v']),
                         enum: o.x.BLACK
                     }
                 ],
                 []
             );
         return (0, n.jsxs)('div', {
-            className: m.filterSection,
+            className: C.filterSection,
             children: [
                 (0, n.jsx)(u.Text, {
                     variant: 'text-md/semibold',
-                    className: m.filterTitle,
-                    children: b.intl.string(b.t.K1xGoK)
+                    className: C.filterTitle,
+                    children: v.intl.string(v.t.K1xGoK)
                 }),
-                (0, n.jsx)(C, { colors: e }),
-                (0, n.jsx)(C, { colors: t })
+                (0, n.jsx)(y, {
+                    colors: r,
+                    trackFilterAction: t
+                }),
+                (0, n.jsx)(y, {
+                    colors: a,
+                    trackFilterAction: t
+                })
             ]
         });
     },
-    C = (e) => {
-        let { colors: t } = e,
-            { colorFilters: r, onToggleColor: l } = (0, f.S)();
+    y = (e) => {
+        let { colors: t, trackFilterAction: r } = e,
+            { colorFilters: l, onToggleColor: a } = (0, h.S)();
         return (0, n.jsx)('div', {
-            className: m.colorSwatchRow,
+            className: C.colorSwatchRow,
             children: t.map((e) => {
-                let { color: t, label: i, enum: a } = e;
+                let { color: t, label: i, enum: o } = e;
                 return (0, n.jsx)(
-                    E,
+                    x,
                     {
                         color: t,
                         label: i,
-                        enum: a,
-                        isToggled: r.has(a),
-                        onToggleColor: l
+                        enum: o,
+                        isToggled: l.has(o),
+                        onToggleColor: a,
+                        trackFilterAction: r
                     },
-                    a
+                    o
                 );
             })
         });
     },
-    E = (e) => {
-        let { color: t, label: r, enum: l, isToggled: i, onToggleColor: o } = e;
+    x = (e) => {
+        let { color: t, label: r, enum: l, isToggled: a, onToggleColor: o, trackFilterAction: s } = e;
         return (0, n.jsx)(
             u.ua7,
             {
                 text: r,
                 children: (e) => {
-                    let { onMouseEnter: s, onMouseLeave: c } = e;
+                    let { onMouseEnter: c, onMouseLeave: d } = e;
                     return (0, n.jsx)(
                         u.P3F,
                         {
-                            onMouseEnter: s,
-                            onMouseLeave: c,
-                            onFocus: s,
-                            onBlur: c,
-                            className: a()(m.circle, { [m.circleToggled]: i }),
+                            onMouseEnter: c,
+                            onMouseLeave: d,
+                            onFocus: c,
+                            onBlur: d,
+                            className: i()(C.circle, { [C.circleToggled]: a }),
                             style: { backgroundColor: t },
                             'aria-label': r,
                             onClick: () => {
-                                o(l);
+                                (s('filter color '.concat(r.toLowerCase(), ' ').concat(a ? 'off' : 'on')), o(l));
                             },
                             children:
-                                i &&
+                                a &&
                                 (0, n.jsx)('div', {
-                                    className: m.checkIcon,
+                                    className: C.checkIcon,
                                     children: (0, n.jsx)(u.sV5, {
                                         size: 'xs',
                                         color: u.TVs.colors.WHITE
@@ -205,122 +248,126 @@ let O = (e) => {
             r
         );
     },
-    S = () => {
-        let { themeFilters: e, onToggleTheme: t } = (0, f.S)(),
-            r = (0, d.ZP)() === h.BR.DARK,
-            i = l.useCallback(
-                (t) => {
-                    if (e.has(t) || r) return 'always-white';
+    j = (e) => {
+        let { trackFilterAction: t } = e,
+            { themeFilters: r, onToggleTheme: a } = (0, h.S)(),
+            o = (0, d.ZP)() === m.BR.DARK,
+            s = l.useCallback(
+                (e) => {
+                    if (r.has(e) || o) return 'always-white';
                 },
-                [e, r]
+                [r, o]
             ),
-            o = l.useCallback((t) => (e.has(t) || r ? u.TVs.colors.WHITE : u.TVs.colors.INTERACTIVE_NORMAL), [e, r]),
-            s = l.useMemo(
+            p = l.useCallback((e) => (r.has(e) || o ? u.TVs.colors.WHITE : u.TVs.colors.INTERACTIVE_NORMAL), [r, o]),
+            g = l.useMemo(
                 () => [
                     {
-                        name: b.intl.string(b.t.aVBOKi),
+                        name: v.intl.string(v.t.aVBOKi),
                         icon: (0, n.jsx)(u.wGt, {
                             size: 'xs',
-                            color: o(c.h.ANIME)
+                            color: p(c.h.ANIME)
                         }),
                         enum: c.h.ANIME
                     },
                     {
-                        name: b.intl.string(b.t['3WoZBQ']),
+                        name: v.intl.string(v.t['3WoZBQ']),
                         icon: (0, n.jsx)(u.iWm, {
                             size: 'xs',
-                            color: o(c.h.GAMING)
+                            color: p(c.h.GAMING)
                         }),
                         enum: c.h.GAMING
                     },
                     {
-                        name: b.intl.string(b.t.yuEmLi),
+                        name: v.intl.string(v.t.yuEmLi),
                         icon: (0, n.jsx)(u.h_8, {
                             size: 'xs',
-                            color: o(c.h.CUTE_COZY)
+                            color: p(c.h.CUTE_COZY)
                         }),
                         enum: c.h.CUTE_COZY
                     },
                     {
-                        name: b.intl.string(b.t.mMvCHh),
+                        name: v.intl.string(v.t.mMvCHh),
                         icon: (0, n.jsx)(u.lqV, {
                             size: 'xs',
-                            color: o(c.h.SCI_FI)
+                            color: p(c.h.SCI_FI)
                         }),
                         enum: c.h.SCI_FI
                     },
                     {
-                        name: b.intl.string(b.t.TlhOQE),
+                        name: v.intl.string(v.t.TlhOQE),
                         icon: (0, n.jsx)(u.ED8, {
                             size: 'xs',
-                            color: o(c.h.FOOD_DRINKS)
+                            color: p(c.h.FOOD_DRINKS)
                         }),
                         enum: c.h.FOOD_DRINKS
                     },
                     {
-                        name: b.intl.string(b.t['4IaUIC']),
+                        name: v.intl.string(v.t['4IaUIC']),
                         icon: (0, n.jsx)(u.HI3, {
                             size: 'xs',
-                            color: o(c.h.FANTASY)
+                            color: p(c.h.FANTASY)
                         }),
                         enum: c.h.FANTASY
                     },
                     {
-                        name: b.intl.string(b.t.w0nSGx),
+                        name: v.intl.string(v.t.w0nSGx),
                         icon: (0, n.jsx)(u.Ffc, {
                             size: 'xs',
-                            color: o(c.h.ANIMALS_PETS)
+                            color: p(c.h.ANIMALS_PETS)
                         }),
                         enum: c.h.ANIMALS_PETS
                     },
                     {
-                        name: b.intl.string(b.t.cJng7u),
+                        name: v.intl.string(v.t.cJng7u),
                         icon: (0, n.jsx)(u.hg2, {
                             size: 'xs',
-                            color: o(c.h.NATURE)
+                            color: p(c.h.NATURE)
                         }),
                         enum: c.h.NATURE
                     },
                     {
-                        name: b.intl.string(b.t['5mUvyM']),
+                        name: v.intl.string(v.t['5mUvyM']),
                         icon: (0, n.jsx)(u.Roe, {
                             size: 'xs',
-                            color: o(c.h.MOVIES_TV_SHOWS)
+                            color: p(c.h.MOVIES_TV_SHOWS)
                         }),
                         enum: c.h.MOVIES_TV_SHOWS
                     },
                     {
-                        name: b.intl.string(b.t.MB9H5e),
+                        name: v.intl.string(v.t.MB9H5e),
                         icon: (0, n.jsx)(u.Z6G, {
                             size: 'xs',
-                            color: o(c.h.DARK_MOODY)
+                            color: p(c.h.DARK_MOODY)
                         }),
                         enum: c.h.DARK_MOODY
                     }
                 ],
-                [o]
+                [p]
             );
         return (0, n.jsxs)('div', {
-            className: m.filterSection,
+            className: C.filterSection,
             children: [
                 (0, n.jsx)(u.Text, {
                     variant: 'text-md/semibold',
-                    className: m.filterTitle,
-                    children: b.intl.string(b.t.t1Ztrq)
+                    className: C.filterTitle,
+                    children: v.intl.string(v.t.t1Ztrq)
                 }),
                 (0, n.jsx)('div', {
-                    className: m.themeRow,
-                    children: s.map((r) => {
-                        let { name: l, icon: o, enum: s } = r;
+                    className: C.themeRow,
+                    children: g.map((e) => {
+                        let { name: l, icon: o, enum: c } = e;
                         return (0, n.jsxs)(
                             u.P3F,
                             {
-                                className: a()(m.theme, { [m.themeToggled]: e.has(s) }),
-                                onClick: () => t(s),
+                                className: i()(C.theme, { [C.themeToggled]: r.has(c) }),
+                                onClick: () => {
+                                    let e = r.has(c);
+                                    (t('filter theme '.concat(l.toLowerCase(), ' ').concat(e ? 'off' : 'on')), a(c));
+                                },
                                 children: [
                                     o,
                                     (0, n.jsx)(u.Text, {
-                                        color: i(s),
+                                        color: s(c),
                                         variant: 'text-sm/medium',
                                         children: l
                                     })

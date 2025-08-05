@@ -1,57 +1,57 @@
-t.d(n, { x: () => f });
-var i = t(255367);
-t(73800);
-var r = t(512722),
-    l = t.n(r),
-    s = t(780384),
-    a = t(755721),
-    o = t(410030),
-    C = t(807163),
-    d = t(74538),
-    c = t(987209),
-    u = t(563132),
-    p = t(409813),
-    x = t(614223),
-    h = t(388032),
-    j = t(959803);
-function f(e) {
-    let { handleStepChange: n, handleClose: t } = e,
+n.d(t, { x: () => j });
+var i = n(255367);
+n(73800);
+var r = n(512722),
+    l = n.n(r),
+    s = n(780384),
+    a = n(755721),
+    o = n(410030),
+    C = n(807163),
+    d = n(74538),
+    c = n(987209),
+    u = n(563132),
+    p = n(409813),
+    x = n(614223),
+    h = n(388032),
+    f = n(959803);
+function j(e) {
+    let { handleStepChange: t, handleClose: n } = e,
         r = (0, o.ZP)(),
-        { activeSubscription: f, selectedSkuId: m, setSelectedPlanId: _, startedPaymentFlowWithPaymentSourcesRef: L } = (0, u.JL)(),
-        { isGift: g } = (0, c.wD)(),
-        y = null != f ? (0, d.Af)(f) : null,
-        E = null != y ? (0, d.gq)(y.planId) : null,
-        S = null != y ? (0, d.Rd)(y.planId) : null,
-        v = (0, x.Kp)({
+        { activeSubscription: j, selectedSkuId: m, setSelectedPlanId: _, startedPaymentFlowWithPaymentSourcesRef: L } = (0, u.JL)(),
+        { isGift: y } = (0, c.wD)(),
+        E = null != j ? (0, d.Af)(j) : null,
+        g = null != E ? (0, d.gq)(E.planId) : null,
+        b = null != E ? (0, d.Rd)(E.planId) : null,
+        S = (0, x.Kp)({
             isTrial: !1,
-            isGift: g,
+            isGift: y,
             selectedSkuId: m,
             startedPaymentFlowWithPaymentSources: L.current
         });
     return (
-        l()(null != S, 'Expected premium type'),
+        l()(null != b, 'Expected premium type'),
         (0, i.jsx)(C.Z, {
-            premiumType: S,
+            premiumType: b,
             titleText: h.intl.string(h.t['7VcWW1']),
-            subtitleText: h.intl.format(h.t.Qk34Ii, { subscriptionName: E }),
+            subtitleText: h.intl.format(h.t.Qk34Ii, { subscriptionName: g }),
             footer: (0, i.jsxs)('div', {
-                className: j.whatYouLoseButtonContainer,
+                className: f.whatYouLoseButtonContainer,
                 children: [
                     (0, i.jsx)(a.zx, {
                         onClick: () => {
-                            v ? (_((0, x.nA)(m, f)), n(p.h8.REVIEW)) : n(p.h8.PLAN_SELECT);
+                            S ? (_((0, x.nA)(m, j)), t(p.h8.REVIEW)) : t(p.h8.PLAN_SELECT);
                         },
                         children: h.intl.string(h.t['3PatS0'])
                     }),
                     (0, i.jsx)(a.zx, {
                         look: a.zx.Looks.LINK,
                         color: (0, s.wj)(r) ? a.zx.Colors.WHITE : a.zx.Colors.PRIMARY,
-                        onClick: t,
+                        onClick: n,
                         children: h.intl.string(h.t.h9tkAA)
                     })
                 ]
             }),
-            onClose: t,
+            onClose: n,
             isDowngrade: !0
         })
     );

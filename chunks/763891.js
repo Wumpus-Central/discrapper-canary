@@ -1,120 +1,122 @@
-(r.d(t, { Z: () => I }), r(388685));
+(r.d(t, { Z: () => N }), r(388685));
 var n = r(255367),
     l = r(73800),
-    i = r(979554),
-    a = r(399606),
+    a = r(979554),
+    i = r(399606),
     o = r(780384),
     s = r(481060),
     c = r(410030),
     u = r(594174),
-    d = r(381585),
-    p = r(597688),
+    d = r(626135),
+    p = r(381585),
+    g = r(597688),
     f = r(370039),
-    g = r(937510),
-    h = r(303952),
-    b = r(38900),
+    h = r(937510),
+    b = r(303952),
+    _ = r(38900),
     m = r(709999),
-    _ = r(81136),
-    O = r(215023),
-    v = r(388032),
-    C = r(484920),
-    E = r(558513),
-    S = r(662128),
-    y = r(676790),
-    x = r(665195),
-    j = r(42742),
-    P = r(283727),
-    T = r(266058),
-    L = r(719138);
-function I(e) {
+    v = r(81136),
+    C = r(215023),
+    O = r(981631),
+    E = r(388032),
+    S = r(484920),
+    y = r(558513),
+    x = r(662128),
+    j = r(676790),
+    P = r(665195),
+    T = r(42742),
+    L = r(283727),
+    I = r(266058),
+    k = r(719138);
+function N(e) {
     var t;
-    let { isFetchingCategories: r, isFullScreen: I, scrollerRef: k, tab: N } = e,
-        A = (0, d.sp)(),
-        w = null != (t = null == A ? void 0 : A.sessionId) ? t : '',
-        { noCache: B, includeUnpublished: R } = (0, _.Z)(),
-        Z = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
-        D = (0, a.e7)([p.Z], () => p.Z.productsWithVariantsAsGroup),
-        [F, M] = l.useState(1),
-        H = () => {
+    let { isFetchingCategories: r, isFullScreen: N, scrollerRef: A, tab: w } = e,
+        B = (0, p.sp)(),
+        R = null != (t = null == B ? void 0 : B.sessionId) ? t : '',
+        { noCache: Z, includeUnpublished: D } = (0, v.Z)(),
+        F = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
+        M = (0, i.e7)([g.Z], () => g.Z.productsWithVariantsAsGroup),
+        [H, W] = l.useState(1),
+        V = () => {
             var e;
-            null == k || null == (e = k.current) || e.scrollToTop({ animate: !0 });
+            null == A || null == (e = A.current) || e.scrollToTop({ animate: !0 });
         },
-        W = (0, c.Fg)(),
-        V = (0, o.ap)(W),
-        [U, G, z] = l.useMemo(() => {
-            switch (N) {
-                case O.AW.AVATAR_DECORATIONS:
-                    return [v.intl.string(v.t.dRZYND), V ? x.Z : y.Z, i.Z.AVATAR_DECORATION];
-                case O.AW.PROFILE_EFFECTS:
-                    return [v.intl.string(v.t['1cNjt7']), V ? L.Z : T.Z, i.Z.PROFILE_EFFECT];
-                case O.AW.NAMEPLATES:
-                    return [v.intl.string(v.t.V68Fq6), V ? P.Z : j.Z, i.Z.NAMEPLATE];
-                case O.AW.BUNDLES:
-                    return [v.intl.string(v.t.FYFppq), V ? S.Z : E.Z, i.Z.BUNDLE];
+        U = (0, c.Fg)(),
+        z = (0, o.ap)(U),
+        [G, q, K] = l.useMemo(() => {
+            switch (w) {
+                case C.AW.AVATAR_DECORATIONS:
+                    return [E.intl.string(E.t.dRZYND), z ? P.Z : j.Z, a.Z.AVATAR_DECORATION];
+                case C.AW.PROFILE_EFFECTS:
+                    return [E.intl.string(E.t['1cNjt7']), z ? k.Z : I.Z, a.Z.PROFILE_EFFECT];
+                case C.AW.NAMEPLATES:
+                    return [E.intl.string(E.t.V68Fq6), z ? L.Z : T.Z, a.Z.NAMEPLATE];
+                case C.AW.BUNDLES:
+                    return [E.intl.string(E.t.FYFppq), z ? x.Z : y.Z, a.Z.BUNDLE];
             }
-        }, [N, V]),
-        q = (0, f.a)(),
-        K = l.useMemo(
+        }, [w, z]),
+        Y = (0, f.a)(),
+        X = l.useMemo(
             () =>
-                q(
-                    D.filter((e) => {
+                Y(
+                    M.filter((e) => {
                         var t;
-                        return e.type === z || (e.type === i.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === z)) === !0);
+                        return e.type === K || (e.type === a.Z.VARIANTS_GROUP && (null == (t = e.variants) ? void 0 : t.some((e) => e.type === K)) === !0);
                     })
                 ),
-            [D, z, q]
+            [M, K, Y]
         ),
-        Y = (0, g.l)(K);
+        J = (0, h.l)(X);
     return (l.useEffect(() => {
-        (0, h.n)({
-            sessionId: w,
-            checkpoint: h.a.SHOP_MOUNTED,
-            tab: N,
-            isFullScreen: I,
-            unpublishedCategoriesShown: R,
-            cacheDisabled: B
+        (0, b.n)({
+            sessionId: R,
+            checkpoint: b.a.SHOP_MOUNTED,
+            tab: w,
+            isFullScreen: N,
+            unpublishedCategoriesShown: D,
+            cacheDisabled: Z
         });
     }, []),
     l.useEffect(() => {
         r ||
-            (0, h.n)({
-                sessionId: w,
-                checkpoint: h.a.SHOP_RENDERED,
-                tab: N,
-                isFullScreen: I,
-                unpublishedCategoriesShown: R,
-                cacheDisabled: B
+            (0, b.n)({
+                sessionId: R,
+                checkpoint: b.a.SHOP_RENDERED,
+                tab: w,
+                isFullScreen: N,
+                unpublishedCategoriesShown: D,
+                cacheDisabled: Z
             });
-    }, [w, I, R, B, r, N]),
-    r || null == Z)
-        ? (0, n.jsx)(b.Z, {})
+    }, [R, N, D, Z, r, w]),
+    r || null == F)
+        ? (0, n.jsx)(_.Z, {})
         : (0, n.jsxs)(n.Fragment, {
               children: [
                   (0, n.jsx)('div', {
-                      style: { backgroundImage: 'url('.concat(G, ')') },
-                      className: C.bannerContainer,
+                      style: { backgroundImage: 'url('.concat(q, ')') },
+                      className: S.bannerContainer,
                       children: (0, n.jsx)(s.X6q, {
                           variant: 'heading-xxl/extrabold',
-                          children: U
+                          children: G
                       })
                   }),
                   (0, n.jsx)('div', {
-                      className: C.products,
-                      children: Y.slice(40 * (F - 1), 40 * F).map((e, t) => {
-                          let r = p.Z.getCategory(e.categorySkuId);
+                      className: S.products,
+                      children: J.slice(40 * (H - 1), 40 * H).map((e, t) => {
+                          let r = g.Z.getCategory(e.categorySkuId);
                           return null == r
                               ? null
                               : (0, n.jsx)(
-                                    d.k0,
+                                    p.k0,
                                     {
                                         newValue: { tilePosition: t },
                                         children: (0, n.jsx)(
                                             m.Z,
                                             {
                                                 product: e,
-                                                user: Z,
+                                                user: F,
                                                 category: r,
-                                                tab: N
+                                                tab: w
                                             },
                                             e.skuId
                                         )
@@ -123,16 +125,26 @@ function I(e) {
                                 );
                       })
                   }),
-                  Y.length > 40 &&
+                  J.length > 40 &&
                       (0, n.jsx)('div', {
-                          className: C.paginationContainer,
+                          className: S.paginationContainer,
                           children: (0, n.jsx)('div', {
                               children: (0, n.jsx)(s.DsT, {
-                                  currentPage: F,
-                                  totalCount: Y.length,
+                                  currentPage: H,
+                                  totalCount: J.length,
                                   pageSize: 40,
                                   onPageChange: (e) => {
-                                      (M(e), H());
+                                      (d.default.track(O.rMx.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                          collectibles_shop_session_id: null == B ? void 0 : B.sessionId,
+                                          page_section: null == B ? void 0 : B.pageSection,
+                                          page_category: null == B ? void 0 : B.pageCategory,
+                                          page_index: e,
+                                          page_size: 40,
+                                          cta_name: ''.concat(w, ' page ').concat(e),
+                                          page_type: w
+                                      }),
+                                          W(e),
+                                          V());
                                   },
                                   disablePaginationGap: !0
                               })

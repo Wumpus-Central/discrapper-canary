@@ -1,21 +1,22 @@
 (n.d(t, {
-    M: () => u,
-    c: () => c
+    M: () => f,
+    c: () => d
 }),
     n(35282));
 var r = n(255367);
 n(73800);
 var i = n(120356),
     a = n.n(i),
-    o = n(714338),
-    s = n(890797);
-function l(e) {
+    o = n(358085),
+    s = n(388032),
+    l = n(890797);
+function c(e) {
     let { direction: t = 'up' } = e;
     return (0, r.jsx)('svg', {
         width: '10',
         height: '10',
         xmlns: 'http://www.w3.org/2000/svg',
-        className: a()(s.bindArrow, s[t]),
+        className: a()(l.bindArrow, l[t]),
         children: (0, r.jsx)('g', {
             fill: '#FFFFFF',
             children: (0, r.jsx)('polygon', {
@@ -25,31 +26,122 @@ function l(e) {
         })
     });
 }
-let c = {
-    mod: () => o.Z.modKey,
-    alt: () => o.Z.altKey,
-    up: () => (0, r.jsx)(l, { direction: 'up' }),
-    down: () => (0, r.jsx)(l, { direction: 'down' }),
-    left: () => (0, r.jsx)(l, { direction: 'left' }),
-    right: () => (0, r.jsx)(l, { direction: 'right' }),
-    pageup: () => 'page up',
-    pagedown: () => 'page down',
-    'any-character': () => 'any key',
-    plus: () => '+',
-    return: () => o.Z.returnKey
-};
 function u(e) {
+    let { children: t, text: n, macText: i, label: a, macLabel: s } = e,
+        c = (0, o.isMac)() || (0, o.isMacWeb)(),
+        u = c && null != i ? l.systemFont : void 0,
+        d = c && null != s ? s : a,
+        f = c && null != i ? i : null != t ? t : n;
+    return (0, r.jsx)('span', {
+        className: u,
+        role: null != d ? 'img' : void 0,
+        'aria-label': null != d ? d : void 0,
+        children: f
+    });
+}
+let d = {
+    ctrl: () =>
+        (0, r.jsx)(u, {
+            macText: '\u2303',
+            text: 'ctrl',
+            label: s.intl.string(s.t.jm6v8v)
+        }),
+    cmd: () =>
+        (0, r.jsx)(u, {
+            macText: '\u2318',
+            text: 'cmd',
+            label: s.intl.string(s.t.pYkiQk)
+        }),
+    mod: () =>
+        (0, r.jsx)(u, {
+            macText: '\u2318',
+            text: 'ctrl',
+            label: s.intl.string(s.t.jm6v8v),
+            macLabel: s.intl.string(s.t.pYkiQk)
+        }),
+    alt: () =>
+        (0, r.jsx)(u, {
+            macText: '\u2325',
+            text: 'alt',
+            label: s.intl.string(s.t.R2n7d3),
+            macLabel: s.intl.string(s.t.FMYSJS)
+        }),
+    shift: () =>
+        (0, r.jsx)(u, {
+            macText: '\u21E7',
+            text: s.intl.string(s.t['L+jWo6']),
+            label: s.intl.string(s.t['q+/2+f'])
+        }),
+    up: () =>
+        (0, r.jsx)(u, {
+            label: s.intl.string(s.t.HxzHDQ),
+            children: (0, r.jsx)(c, { direction: 'up' })
+        }),
+    down: () =>
+        (0, r.jsx)(u, {
+            label: s.intl.string(s.t['a+iRlJ']),
+            children: (0, r.jsx)(c, { direction: 'down' })
+        }),
+    left: () =>
+        (0, r.jsx)(u, {
+            label: s.intl.string(s.t.xFjIVF),
+            children: (0, r.jsx)(c, { direction: 'left' })
+        }),
+    right: () =>
+        (0, r.jsx)(u, {
+            label: s.intl.string(s.t.BT3jf3),
+            children: (0, r.jsx)(c, { direction: 'right' })
+        }),
+    pageup: () => s.intl.string(s.t.VdCWGB),
+    pagedown: () => s.intl.string(s.t.gpSh3d),
+    'any-character': () => s.intl.string(s.t.CkGpcX),
+    plus: () => '+',
+    return: () =>
+        (0, r.jsx)(u, {
+            macText: '\u23CE',
+            text: s.intl.string(s.t.SUweGx),
+            label: s.intl.string(s.t.yLNalZ),
+            macLabel: s.intl.string(s.t.V7nPj4)
+        }),
+    enter: () =>
+        (0, r.jsx)(u, {
+            macText: '\u23CE',
+            text: s.intl.string(s.t.SUweGx),
+            label: s.intl.string(s.t.yLNalZ),
+            macLabel: s.intl.string(s.t.V7nPj4)
+        }),
+    escape: () =>
+        (0, r.jsx)(u, {
+            macText: '\u238B',
+            text: s.intl.string(s.t.cQmsQE),
+            label: s.intl.string(s.t['2qsw5+'])
+        }),
+    esc: () =>
+        (0, r.jsx)(u, {
+            macText: '\u238B',
+            text: s.intl.string(s.t.cQmsQE),
+            label: s.intl.string(s.t['2qsw5+'])
+        }),
+    backspace: () =>
+        (0, r.jsx)(u, {
+            macText: '\u232B',
+            text: s.intl.string(s.t['L+36+v']),
+            label: s.intl.string(s.t['9c/Ikp']),
+            macLabel: s.intl.string(s.t.BTFDmp)
+        })
+};
+function f(e) {
     let { shortcut: t, dim: n = !1, className: i, keyClassName: o } = e,
-        l = Array.isArray(t) ? t : t.split('+');
+        s = Array.isArray(t) ? t : t.split('+');
     return (0, r.jsx)('div', {
-        className: a()(s.combo, i, { [s.dim]: n }),
-        children: l
-            .map((e) => (null != c[e] ? c[e]() : e))
+        className: a()(l.combo, i, { [l.dim]: n }),
+        children: s
+            .map((e) => (null != d[e] ? d[e]() : e))
             .map((e, t) =>
                 (0, r.jsx)(
                     'span',
                     {
-                        className: a()(s.key, o),
+                        className: a()(l.key, o),
                         children: e
                     },
                     t
