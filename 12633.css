@@ -61828,7 +61828,7 @@ html .progress__61462 {
 }
 
 .thumbnail_b5010b {
-    border-radius: 8px;
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
     height: 120px;
     margin: -16px -16px 16px;
     width: calc(100% + 32px)
