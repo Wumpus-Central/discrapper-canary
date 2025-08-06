@@ -43130,25 +43130,6 @@ body .headerAnimation_b54a5b {
     margin-top: 8px
 }
 
-.viewFullBioColor_f5f93a {
-    color: var(--interactive-normal)
-}
-
-.viewFullBioColor_f5f93a:focus-visible,
-.viewFullBioColor_f5f93a:hover {
-    color: var(--interactive-hover);
-    text-decoration: underline
-}
-
-.viewFullBioColor_f5f93a:active {
-    color: var(--interactive-active);
-    text-decoration: underline
-}
-
-.viewFullBioDisabled_f5f93a {
-    opacity: .5
-}
-
 .descriptionClamp_f5f93a {
     display: -webkit-box;
     -webkit-box-orient: vertical;
